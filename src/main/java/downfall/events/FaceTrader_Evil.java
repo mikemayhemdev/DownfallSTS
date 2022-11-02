@@ -72,7 +72,7 @@ public class FaceTrader_Evil extends AbstractImageEvent {
                     case 0:
                         logMetric(ID, "Fight");
                         this.screen = CurScreen.FIGHT;
-                        //SlimeboundMod.logger.info("fight");
+                        //downfallMod.logger.info("fight");
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:FaceTrader");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new CloakOfManyFaces());

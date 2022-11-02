@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
-import theHexaghost.actions.LimboToHandAction;
+import downfall.actions.LimboToHandAction;
 
 @SpirePatch(
         clz = UseCardAction.class,

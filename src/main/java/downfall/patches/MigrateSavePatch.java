@@ -1,6 +1,5 @@
 package downfall.patches;
 
-import automaton.FunctionHelper;
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
@@ -20,7 +19,7 @@ public class MigrateSavePatch {
             q = q + "preferences";
             System.out.println(q);
             new File(q).mkdirs();
-            String result = q.split(String.format(FunctionHelper.WITH_DELIMITER, "common"))[0] + "common\\";
+            String result = q.split(String.format("((?<=%1$s)|(?=%1$s))", "common"))[0] + "common\\";
             System.out.println(result);
             String path = result + "SlayTheSpire\\preferences";
             System.out.println(path);

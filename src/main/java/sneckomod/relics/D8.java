@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.patches.BottledD8Patch;
@@ -58,7 +59,7 @@ public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
-            if (c.hasTag(SneckoMod.RNG)) {
+            if (c.hasTag(downfallMod.RNG)) {
                 tmp.addToTop(c);
             }
         }

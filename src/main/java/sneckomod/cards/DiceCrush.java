@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
@@ -15,7 +16,7 @@ public class DiceCrush extends AbstractSneckoCard {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 16;
         baseMagicNumber = magicNumber = 10;
-        tags.add(SneckoMod.RNG);
+        tags.add(downfallMod.RNG);
         SneckoMod.loadJokeCardImage(this, "DiceCrush.png");
     }
 

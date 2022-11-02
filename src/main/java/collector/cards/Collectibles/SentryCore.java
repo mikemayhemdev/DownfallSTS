@@ -2,7 +2,6 @@ package collector.cards.Collectibles;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import guardian.actions.PlaceCardsInHandIntoStasisAction;
 
 public class SentryCore extends AbstractCollectibleCard {
     public final static String ID = makeID("SentryCore");
@@ -15,7 +14,7 @@ public class SentryCore extends AbstractCollectibleCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new PlaceCardsInHandIntoStasisAction(p, magicNumber, false));
+        //atb(new PlaceCardsInHandIntoStasisAction(p, magicNumber, false));
     }
 
     @Override

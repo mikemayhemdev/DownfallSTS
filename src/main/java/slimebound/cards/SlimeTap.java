@@ -48,7 +48,7 @@ public class SlimeTap extends AbstractSlimeboundCard {
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
 
-        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(downfallMod.BANNEDFORSNECKO);
 
     }
 

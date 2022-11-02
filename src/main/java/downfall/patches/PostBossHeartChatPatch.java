@@ -33,16 +33,16 @@ public class PostBossHeartChatPatch {
         public static class InitPortals {
             @SpirePostfixPatch
             public static void Postfix(TreasureRoomBoss instance) {
-                //SlimeboundMod.logger.info("heart chat patch hit init" + AbstractDungeon.actNum + EvilModeCharacterSelect.evilMode);
+                //downfallMod.logger.info("heart chat patch hit init" + AbstractDungeon.actNum + EvilModeCharacterSelect.evilMode);
                 if (AbstractDungeon.actNum == 1 && EvilModeCharacterSelect.evilMode) {
-                    //SlimeboundMod.logger.info("heart chat patch hit create act 1");
+                    //downfallMod.logger.info("heart chat patch hit create act 1");
                     heart = new CustomAnimatedNPC(1600.0F * Settings.scale, AbstractDungeon.floorY + 300.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true, 0, false, 0.75F);
                     behindPlayerPortal = new CustomAnimatedNPC(AbstractDungeon.player.hb.cX + (450F * Settings.scale), AbstractDungeon.player.hb.cY, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true, 1, true, 1F);
                     heart.changeBorderColor(Color.MAROON);
                     behindPlayerPortal.changeBorderColor(Color.MAROON);
                 }
                 if (AbstractDungeon.actNum == 2 && EvilModeCharacterSelect.evilMode) {
-                    //SlimeboundMod.logger.info("heart chat patch hit create act 2");
+                    //downfallMod.logger.info("heart chat patch hit create act 2");
                     heart = new CustomAnimatedNPC(1600.0F * Settings.scale, AbstractDungeon.floorY + 300.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true, 0, false, 0.75F);
                     behindPlayerPortal = new CustomAnimatedNPC(AbstractDungeon.player.hb.cX + (450F * Settings.scale), AbstractDungeon.player.hb.cY, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true, 0, true, 1F);
                     heart.changeBorderColor(Color.MAROON);
@@ -62,9 +62,9 @@ public class PostBossHeartChatPatch {
         public static class TriggerOnUpdate {
             @SpirePostfixPatch
             public static void Postfix(TreasureRoomBoss instance) {
-                ////SlimeboundMod.logger.info("heart chat patch hit update");
+                ////downfallMod.logger.info("heart chat patch hit update");
                 if (AbstractDungeon.screen != AbstractDungeon.CurrentScreen.BOSS_REWARD && instance.chest.isOpen && heart != null && !activated) {
-                    ////SlimeboundMod.logger.info("heart chat patch hit activate");
+                    ////downfallMod.logger.info("heart chat patch hit activate");
                     activated = true;
                     int Rand = AbstractDungeon.cardRng.random(0, 4);
                     String msg = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("HeartProceed")).TEXT[Rand];
@@ -116,10 +116,10 @@ public class PostBossHeartChatPatch {
         public static class Dispose {
             @SpirePostfixPatch
             public static void Postfix(AbstractRoom instance) {
-                //SlimeboundMod.logger.info("disposing a");
+                //downfallMod.logger.info("disposing a");
                 {
                     if (heart != null) {
-                        //SlimeboundMod.logger.info("disposing heart");
+                        //downfallMod.logger.info("disposing heart");
                         heart.dispose();
                         heart = null;
                         activated = false;
@@ -130,7 +130,7 @@ public class PostBossHeartChatPatch {
                         behindPlayerPortal = null;
                     }
 
-                    //SlimeboundMod.logger.info("disposing text");
+                    //downfallMod.logger.info("disposing text");
                     Iterator var1 = AbstractDungeon.topLevelEffects.iterator();
                     while (var1.hasNext()) {
                         AbstractGameEffect e = (AbstractGameEffect) var1.next();

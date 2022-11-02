@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
+import downfall.downfallMod;
 import downfall.util.OctopusCard;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
@@ -23,7 +24,7 @@ public class Float extends AbstractHexaCard implements OctopusCard {
     public Float() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "Float.png");
     }
 

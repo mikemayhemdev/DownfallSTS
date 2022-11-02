@@ -14,7 +14,7 @@ public class ForLoop extends AbstractBronzeCard {
 
     public ForLoop() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //   this.tags.add(downfallMod.BANNEDFORSNECKO);
         exhaust = true;
         baseMagicNumber = magicNumber = 0;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("ForLoop.png"));

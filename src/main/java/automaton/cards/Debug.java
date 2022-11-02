@@ -5,6 +5,7 @@ import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 
@@ -22,7 +23,7 @@ public class Debug extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractCard q : FunctionHelper.held.group) {
-            if (q.hasTag(AutomatonMod.BAD_COMPILE) && q instanceof AbstractBronzeCard) {
+            if (q.hasTag(downfallMod.BAD_COMPILE) && q instanceof AbstractBronzeCard) {
                 ((AbstractBronzeCard) q).turnOffCompileStuff();
             }
         }

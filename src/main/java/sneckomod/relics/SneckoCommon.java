@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.UnknownClass;
@@ -48,12 +49,12 @@ public class SneckoCommon extends CustomRelic implements CustomSavable<AbstractC
             CardGroup c = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard q : CardLibrary.getAllCards()) {
                 if (q instanceof UnknownClass) {
-                    if (SneckoMod.validColors.contains(((UnknownClass) q).myColor) || SneckoMod.pureSneckoMode) {
+                    if (downfallMod.validColors.contains(((UnknownClass) q).myColor) || downfallMod.pureSneckoMode) {
                         c.addToTop(q.makeCopy());
                     }
                 }
             }
-            if (SneckoMod.pureSneckoMode) {
+            if (downfallMod.pureSneckoMode) {
                 c.shuffle();
                 CardGroup r = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
                 for (int i = 0; i < 3; i++) {

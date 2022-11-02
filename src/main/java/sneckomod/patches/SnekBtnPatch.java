@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
@@ -30,7 +30,7 @@ public class SnekBtnPatch {
 
                 sb.setColor(Color.WHITE);
                 sb.draw(ImageMaster.CHECKBOX, challengeDownHitbox.cX - 32.0f + allTextInfoX, challengeDownHitbox.cY - 32.0f, 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
-                if (SneckoMod.pureSneckoMode) {
+                if (downfallMod.pureSneckoMode) {
                     sb.draw(ImageMaster.TICK, challengeDownHitbox.cX - 32.0f + allTextInfoX, challengeDownHitbox.cY - 32.0f, 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
                 }
                 FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], challengeDownHitbox.cX + 25f * Settings.scale + allTextInfoX, challengeDownHitbox.cY, Settings.BLUE_TEXT_COLOR);
@@ -58,7 +58,7 @@ public class SnekBtnPatch {
                         challengeDownHitbox.clickStarted = true;
                     }
                     if (challengeDownHitbox.clicked) {
-                        SneckoMod.pureSneckoMode = !SneckoMod.pureSneckoMode;
+                        downfallMod.pureSneckoMode = !downfallMod.pureSneckoMode;
                         challengeDownHitbox.clicked = false;
                     }
                 }

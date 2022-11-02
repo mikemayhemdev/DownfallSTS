@@ -1,11 +1,12 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
-import automaton.cardmods.PlayMeTwiceCardmod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.cardmods.PlayMeTwiceCardmod;
+import downfall.downfallMod;
 
 public class Terminator extends AbstractBronzeCard {
 
@@ -17,8 +18,8 @@ public class Terminator extends AbstractBronzeCard {
     public Terminator() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         thisEncodes();
-        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
+        //this.tags.add(downfallMod.BANNEDFORSNECKO);
+        tags.add(downfallMod.ADDS_NO_CARDTEXT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

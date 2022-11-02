@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import theHexaghost.powers.BurnPower;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
@@ -20,7 +21,7 @@ public class Explode extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = 15;
         baseAuto = auto = 2;
         thisEncodes();
-        tags.add(AutomatonMod.BAD_COMPILE);
+        tags.add(downfallMod.BAD_COMPILE);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Explode.png"));
     }
 

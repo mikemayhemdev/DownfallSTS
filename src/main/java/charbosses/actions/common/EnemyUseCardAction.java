@@ -69,18 +69,18 @@ public class EnemyUseCardAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == 0.15f) {
-            //SlimeboundMod.logger.info("using card" + this.reboundCard);
+            //downfallMod.logger.info("using card" + this.reboundCard);
             if (AbstractCharBoss.boss != null) {
                 for (final AbstractPower p : AbstractCharBoss.boss.powers) {
                     if (!this.targetCard.dontTriggerOnUseCard && p.type != PowerType.DEBUFF) {
-                        //SlimeboundMod.logger.info(p);
+                        //downfallMod.logger.info(p);
                         if (p instanceof EnemyReboundPower) {
-                            //SlimeboundMod.logger.info("detected rebound power");
+                            //downfallMod.logger.info("detected rebound power");
                             EnemyReboundPower eP = (EnemyReboundPower) p;
                             eP.onAfterUse(this.targetCard, this);
                         }
 
-                        //SlimeboundMod.logger.info("using normal on after use");
+                        //downfallMod.logger.info("using normal on after use");
                         p.onAfterUseCard(this.targetCard, this.makeNormalCardAction());
                     }
                 }
@@ -112,15 +112,15 @@ public class EnemyUseCardAction extends AbstractGameAction {
                 if (this.exhaustCard && AbstractCharBoss.boss.hasRelic("Strange Spoon") && this.targetCard.type != AbstractCard.CardType.POWER) {
                     spoonProc = AbstractDungeon.cardRandomRng.randomBoolean();
                 }
-                //SlimeboundMod.logger.info("before spoon check");
-                //SlimeboundMod.logger.info("using card" + this.reboundCard);
+                //downfallMod.logger.info("before spoon check");
+                //downfallMod.logger.info("using card" + this.reboundCard);
                 if (!this.exhaustCard || spoonProc) {
                     if (spoonProc) {
                         AbstractCharBoss.boss.getRelic("Strange Spoon").flash();
                     }
                     if (this.reboundCard) {
 
-                        //SlimeboundMod.logger.info("detected rebound card");
+                        //downfallMod.logger.info("detected rebound card");
                         AbstractCharBoss.boss.hand.moveToDeck(this.targetCard, false);
                     } else if (this.targetCard.shuffleBackIntoDrawPile) {
                         AbstractCharBoss.boss.hand.moveToDeck(this.targetCard, true);

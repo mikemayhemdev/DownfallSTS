@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
@@ -18,7 +19,7 @@ public class SkipABeat extends AbstractHexaCard {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         tags.add(HexaMod.GHOSTWHEELCARD);
         // exhaust = true;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

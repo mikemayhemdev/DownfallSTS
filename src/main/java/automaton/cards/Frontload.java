@@ -1,10 +1,10 @@
 package automaton.cards;
 
+import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.cardmods.RetainCardMod;
 
 public class Frontload extends AbstractBronzeCard {
 
@@ -27,7 +27,7 @@ public class Frontload extends AbstractBronzeCard {
 
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
-        CardModifierManager.addModifier(function, new RetainCardMod());
+        CardModifierManager.addModifier(function, new RetainMod());
     }
 
     public void upp() {

@@ -26,8 +26,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import downfall.ui.campfire.WheelSpinButton;
 import downfall.util.CardIgnore;
+import downfall.util.TextureLoader;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.potions.BossPotion;
@@ -98,7 +100,7 @@ public class expansionContentMod implements
             ((AbstractExpansionCard) card).betaArtPath = img;
         }
         Texture cardTexture;
-        cardTexture = hermit.util.TextureLoader.getTexture(getModID() + "Resources/images/betacards/" + img);
+        cardTexture = TextureLoader.getTexture(getModID() + "Resources/images/betacards/" + img);
         cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         int tw = cardTexture.getWidth();
         int th = cardTexture.getHeight();
@@ -127,7 +129,7 @@ public class expansionContentMod implements
     }
 
     public static String getModID() {
-        return modID;
+        return downfallMod.expansioncontentModID;
     }
 
     public static void initialize() {

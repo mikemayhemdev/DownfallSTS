@@ -1,15 +1,9 @@
 {
-  "bronze:SpecificCardReward": {
+  "downfall:SpecificCardReward": {
     "TEXT": [
       "將 ",
       " 加入牌組",
       "選擇一張牌"
-    ]
-  },
-  "bronze:UnplayableMod": {
-    "TEXT": [
-      " 不能被打出 。 NL ",
-      " ERR_NULL_PTR "
     ]
   },
   "bronze:EncodeAndShuffleMod": {

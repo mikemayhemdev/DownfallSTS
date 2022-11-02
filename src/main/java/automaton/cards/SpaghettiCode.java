@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import downfall.util.SelectCardsCenteredAction;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class SpaghettiCode extends AbstractBronzeCard {
     public static AbstractCard getRandomEncodeWithCost(int cost) {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL) {
+            if (c.hasTag(downfallMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL) {
                 if (c.cost == cost) {
                     eligibleCardsList.add(c.makeCopy());
                 }
@@ -40,7 +41,7 @@ public class SpaghettiCode extends AbstractBronzeCard {
     public static AbstractCard getRandomEncode() {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL && c.rarity != CardRarity.BASIC) {
+            if (c.hasTag(downfallMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL && c.rarity != CardRarity.BASIC) {
                 eligibleCardsList.add(c.makeCopy());
             }
         }
@@ -51,7 +52,7 @@ public class SpaghettiCode extends AbstractBronzeCard {
     public static AbstractCard getRandomEncode(ArrayList<AbstractCard> exceptions) {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL && c.rarity != CardRarity.BASIC) {
+            if (c.hasTag(downfallMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL && c.rarity != CardRarity.BASIC) {
                 eligibleCardsList.add(c.makeCopy());
             }
         }

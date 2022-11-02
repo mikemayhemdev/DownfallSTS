@@ -1,0 +1,202 @@
+package slimebound.patches;
+
+import automaton.potions.BurnAndBuffPotion;
+import automaton.relics.BronzeIdol;
+import automaton.relics.DecasWashers;
+import automaton.relics.DonusWashers;
+import automaton.relics.MakeshiftBattery;
+import champ.potions.CounterstrikePotion;
+import champ.relics.Barbells;
+import champ.relics.DeflectingBracers;
+import champ.relics.DuelingGlove;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PotionHelper;
+import downfall.cards.curses.*;
+import downfall.downfallMod;
+import downfall.events.HeartEvent;
+import downfall.patches.EvilModeCharacterSelect;
+import expansioncontent.actions.RandomCardWithTagAction;
+import expansioncontent.cards.*;
+import expansioncontent.potions.BossPotion;
+import expansioncontent.relics.StudyCardRelic;
+import gremlin.potions.WizPotion;
+import gremlin.relics.ImpeccablePecs;
+import gremlin.relics.PricklyShields;
+import gremlin.relics.SupplyScroll;
+import guardian.potions.BlockOnCardUsePotion;
+import guardian.relics.BottledAnomaly;
+import guardian.relics.GemstoneGun;
+import guardian.relics.PocketSentry;
+import slimebound.cards.PrepareCrushBossCard;
+import slimebound.potions.ThreeZeroPotion;
+import slimebound.relics.PreparedRelic;
+import slimebound.relics.StickyStick;
+import sneckomod.cards.unknowns.UnknownClass;
+import sneckomod.potions.MuddlingPotion;
+import sneckomod.relics.BlankCard;
+import sneckomod.relics.SneckoTalon;
+import sneckomod.relics.SuperSneckoEye;
+import theHexaghost.potions.SoulburnPotion;
+import theHexaghost.relics.BolsterEngine;
+import theHexaghost.relics.CandleOfCauterizing;
+import theHexaghost.relics.Sixitude;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class BanSharedContentPatch {
+    private static final Map<AbstractPlayer.PlayerClass, List<String>> runLockedPotions = new HashMap<>();
+
+    public static void registerRunLockedPotion(AbstractPlayer.PlayerClass playerClass, String potionId) {
+        runLockedPotions.computeIfAbsent(playerClass, _ignore -> new ArrayList<>()).add(potionId);
+    }
+
+    @SpirePatch(
+            clz = AbstractDungeon.class,
+            method = "initializeCardPools"
+    )
+    public static class CardPatch {
+        public static void Postfix(AbstractDungeon __instance) {
+            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_colorlessCards) {
+                AbstractDungeon.colorlessCardPool.removeCard(AwakenDeath.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(Chronoboost.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(DashGenerateEvil.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(HyperBeam.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(LastStand.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(ShapePower.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(PrepareCrushBossCard.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(QuickStudy.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(StudyTheSpire.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(YouAreMine.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(InvincibleStrength.ID);
+
+                AbstractDungeon.srcColorlessCardPool.removeCard(AwakenDeath.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(Chronoboost.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(DashGenerateEvil.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(GuardianWhirl.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(Hexaburn.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(HyperBeam.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(LastStand.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(ShapePower.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(PrepareCrushBossCard.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(QuickStudy.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(StudyTheSpire.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(YouAreMine.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(InvincibleStrength.ID);
+
+                AbstractDungeon.curseCardPool.removeCard(Aged.ID);
+                AbstractDungeon.curseCardPool.removeCard(Icky.ID);
+                AbstractDungeon.curseCardPool.removeCard(Bewildered.ID);
+                AbstractDungeon.curseCardPool.removeCard(Haunted.ID);
+                AbstractDungeon.curseCardPool.removeCard(PrideStandard.ID);
+                AbstractDungeon.curseCardPool.removeCard(Malfunctioning.ID);
+                AbstractDungeon.curseCardPool.removeCard(Scatterbrained.ID);
+
+                AbstractDungeon.srcCurseCardPool.removeCard(Aged.ID);
+                AbstractDungeon.srcCurseCardPool.removeCard(Icky.ID);
+                AbstractDungeon.srcCurseCardPool.removeCard(Bewildered.ID);
+                AbstractDungeon.srcCurseCardPool.removeCard(Haunted.ID);
+                AbstractDungeon.srcCurseCardPool.removeCard(PrideStandard.ID);
+                AbstractDungeon.srcCurseCardPool.removeCard(Malfunctioning.ID);
+                AbstractDungeon.srcCurseCardPool.removeCard(Scatterbrained.ID);
+            }
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
+                AbstractDungeon.colorlessCardPool.removeCard(PrepareCrushBossCard.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(PrepareCrushBossCard.ID);
+            }
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SPIRIT) || RandomCardWithTagAction.hexaLocked()) {
+                AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(Hexaburn.ID);
+            }
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN) || RandomCardWithTagAction.guardianLocked()) {
+                AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(GuardianWhirl.ID);
+            }
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP) || RandomCardWithTagAction.champLocked()) {
+                AbstractDungeon.colorlessCardPool.removeCard(LastStand.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(LastStand.ID);
+            }
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_AUTOMATON) || RandomCardWithTagAction.autoLocked()) {
+                AbstractDungeon.colorlessCardPool.removeCard(HyperBeam.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(HyperBeam.ID);
+            }
+
+
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SNECKO)) {
+                if (downfallMod.validColors != null && !downfallMod.pureSneckoMode) {
+                    AbstractDungeon.commonCardPool.group.removeIf(c -> c instanceof UnknownClass && !downfallMod.validColors.contains(((UnknownClass) c).myColor));
+                    AbstractDungeon.srcCommonCardPool.group.removeIf(c -> c instanceof UnknownClass && !downfallMod.validColors.contains(((UnknownClass) c).myColor));
+                }
+            }
+        }
+    }
+
+
+    @SpirePatch(
+            clz = AbstractDungeon.class,
+            method = "initializeRelicList"
+    )
+    public static class RelicPatch {
+
+        public static void Prefix(AbstractDungeon __instance) {
+            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_relics) {
+                AbstractDungeon.relicsToRemoveOnStart.add(GemstoneGun.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(PocketSentry.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(BottledAnomaly.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(PreparedRelic.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(StickyStick.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(StudyCardRelic.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(SuperSneckoEye.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(SneckoTalon.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(BlankCard.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(BolsterEngine.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(CandleOfCauterizing.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(Sixitude.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(Barbells.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(DeflectingBracers.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(DuelingGlove.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(DecasWashers.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(DonusWashers.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(BronzeIdol.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(MakeshiftBattery.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(SupplyScroll.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(ImpeccablePecs.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(PricklyShields.ID);
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = PotionHelper.class,
+            method = "initialize"
+    )
+    public static class PotionPatch {
+        public static void Postfix(AbstractPlayer.PlayerClass chosenClass) {
+            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
+                PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
+                PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
+                PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
+                PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
+                PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
+                PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
+                PotionHelper.potions.remove(WizPotion.POTION_ID);
+                PotionHelper.potions.remove(BossPotion.POTION_ID);
+            }
+            // Ban shared potions from other classes if you haven't played as that class before
+            runLockedPotions.forEach((playerClass, potionIds) -> {
+                // Shared potions will never be banned from their base class
+                if (chosenClass != playerClass) {
+                    if (!HeartEvent.hasPlayedRun(playerClass)) {
+                        PotionHelper.potions.removeAll(potionIds);
+                    }
+                }
+            });
+        }
+    }
+}

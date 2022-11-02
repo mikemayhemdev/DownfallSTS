@@ -1,4 +1,11 @@
 {
+  "downfall:SpecificCardReward": {
+    "TEXT": [
+      "Add ",
+      " to your deck",
+      "Pick a Card."
+    ]
+  },
   "downfall:EvilMenuPanel": {
     "TEXT": [
       "Downfall",
@@ -157,6 +164,11 @@
       "base Slay the Spire on",
       "Steam Workshop.",
       "Click here to learn how!"
+    ]
+  },
+  "downfall:UnplayableModifier": {
+    "TEXT": [
+      "Unplayable. NL "
     ]
   }
 }

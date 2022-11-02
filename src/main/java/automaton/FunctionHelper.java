@@ -170,13 +170,13 @@ public class FunctionHelper {
         boolean justDoNoun = false;
         boolean foundExactlyOne = false;
         for (AbstractCard u : held.group) {
-            if (!u.hasTag(AutomatonMod.NO_TEXT)) {
+            if (!u.hasTag(downfallMod.NO_TEXT)) {
                 justDoNoun = !foundExactlyOne;
                 foundExactlyOne = true;
             }
         }
         for (AbstractCard c : held.group) { // Apply the card effect mods
-            if (c.hasTag(AutomatonMod.NO_TEXT)) {
+            if (c.hasTag(downfallMod.NO_TEXT)) {
                 CardModifierManager.addModifier(function, new CardEffectsCardMod(c, -99));
             } else {
                 if (justDoNoun) {

@@ -18,18 +18,22 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.dailymods.Wizzardry;
 import downfall.downfallMod;
-import downfall.patches.BanSharedContentPatch;
+import slimebound.patches.BanSharedContentPatch;
 import gremlin.cards.*;
 import gremlin.characters.GremlinCharacter;
 import gremlin.events.BackToBasicsGremlin;
@@ -60,7 +64,7 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 @SpireInitializer
 public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscriber,
         EditRelicsSubscriber, EditCardsSubscriber, OnStartBattleSubscriber, PostBattleSubscriber,
-        PostInitializeSubscriber, SetUnlocksSubscriber, StartGameSubscriber {
+        PostInitializeSubscriber, SetUnlocksSubscriber, StartGameSubscriber, PostDungeonInitializeSubscriber {
     private static final String modID = "gremlin";
 
     private static final Color GREMLIN_COLOR = CardHelper.getColor(205.0f, 92.0f, 92.0f);
@@ -119,7 +123,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
     }
 
     public static String getModID() {
-        return modID;
+        return downfallMod.gremlinModID;
     }
 
     public static void initialize() {
@@ -297,6 +301,19 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 //        BaseMod.addCard(new SkullBash());
         BaseMod.addCard(new Ward());
 
+    }
+
+    @Override
+    public void receivePostDungeonInitialize() {
+
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Wizzardry.ID) || ModHelper.isModEnabled(Wizzardry.ID)) {
+            RelicLibrary.getRelic(WizardHat.ID).makeCopy().instantObtain();
+            RelicLibrary.getRelic(WizardStaff.ID).makeCopy().instantObtain();
+            AbstractCard c = new Wizardry();
+            c.upgrade();
+            AbstractDungeon.player.masterDeck.addToBottom(c);
+
+        }
     }
 
     @Override

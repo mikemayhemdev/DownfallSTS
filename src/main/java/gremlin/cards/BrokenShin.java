@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import gremlin.powers.AgonyPower;
 import sneckomod.SneckoMod;
 
@@ -31,7 +32,7 @@ public class BrokenShin extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         this.tags.add(FAT_GREMLIN);
         this.exhaust = true;
         setBackgrounds();

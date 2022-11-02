@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.downfallMod;
 
 public class ScryEncodeCardsAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
@@ -57,7 +58,7 @@ public class ScryEncodeCardsAction extends AbstractGameAction {
             } else if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 for (int i = AbstractDungeon.gridSelectScreen.selectedCards.size() - 1; i >= 0; i--) {
                     AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(i);
-                    if (c.hasTag(AutomatonMod.ENCODES)) {
+                    if (c.hasTag(downfallMod.ENCODES)) {
                         AbstractDungeon.player.drawPile.removeCard(c);
                         addToTop(new AddToFuncAction(c, AbstractDungeon.player.drawPile));
                     } else {

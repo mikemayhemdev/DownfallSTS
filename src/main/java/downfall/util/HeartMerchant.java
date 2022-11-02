@@ -45,7 +45,7 @@ public class HeartMerchant implements Disposable {
     }
 
     public HeartMerchant(float x, float y, int newShopScreen) {
-        // //SlimeboundMod.logger.info("New Heart Merchant made");
+        // //downfallMod.logger.info("New Heart Merchant made");
         this.cards1 = new ArrayList();
         this.cards2 = new ArrayList();
         this.idleMessages = new ArrayList();
@@ -161,13 +161,13 @@ public class HeartMerchant implements Disposable {
             this.hb.render(sb);
         }
 
-        ////SlimeboundMod.logger.info("Heart Merchant render tick.");
+        ////downfallMod.logger.info("Heart Merchant render tick.");
     }
 
     public void dispose() {
         if (this.anim != null) {
             this.anim.dispose();
-            // //SlimeboundMod.logger.info("Heart Merchant disposed.");
+            // //downfallMod.logger.info("Heart Merchant disposed.");
         }
 
     }

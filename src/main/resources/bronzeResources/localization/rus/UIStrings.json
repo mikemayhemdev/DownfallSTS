@@ -1,15 +1,9 @@
 {
-  "bronze:SpecificCardReward": {
+  "downfall:SpecificCardReward": {
     "TEXT": [
       "Добавьте карту «",
       "» в колоду",
       "Добавьте карту."
-    ]
-  },
-  "bronze:UnplayableMod": {
-    "TEXT": [
-      "Неиграбельная. NL ",
-      "ERR_NULL_PTR"
     ]
   },
   "bronze:EncodeAndShuffleMod": {

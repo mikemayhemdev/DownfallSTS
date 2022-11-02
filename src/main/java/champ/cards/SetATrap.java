@@ -23,7 +23,7 @@ public class SetATrap extends AbstractChampCard {
         baseBlock = block = 6;
         baseMagicNumber = magicNumber = MAGIC;
         //   tags.add(ChampMod.OPENER);
-        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        // this.tags.add(downfallMod.BANNEDFORSNECKO);
         //   this.tags.add(ChampMod.OPENERDEFENSIVE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);

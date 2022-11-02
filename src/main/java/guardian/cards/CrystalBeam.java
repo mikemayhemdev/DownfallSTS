@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.vfx.CrystalRayEffect;
@@ -62,7 +63,7 @@ public class CrystalBeam extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
 
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("CrystalBeam.png"));
 
     }

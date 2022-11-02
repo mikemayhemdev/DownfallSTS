@@ -15,14 +15,13 @@ import downfall.events.Cleric_Evil;
 import downfall.monsters.FleeingMerchant;
 import downfall.monsters.NeowBossFinal;
 import downfall.patches.EvilModeCharacterSelect;
+import downfall.patches.ModHelperPatch;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.relics.BrokenWingStatue;
 import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import sneckomod.OffclassHelper;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -117,10 +116,10 @@ public class SaveData {
             System.out.println(act2BossSlain);
             System.out.println(act3BossSlain);
 
-            saveCacheColors = SneckoMod.validColors;
-            pureSneckoMode = SneckoMod.pureSneckoMode;
+            saveCacheColors = downfallMod.validColors;
+            pureSneckoMode = downfallMod.pureSneckoMode;
 
-            identifyRngCount = SneckoMod.identifyRng.counter;
+            identifyRngCount = downfallMod.identifyRng.counter;
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
@@ -271,12 +270,13 @@ public class SaveData {
             downfallMod.Act2BossFaced = act2BossSlain;
             downfallMod.Act3BossFaced = act3BossSlain;
 
-            SneckoMod.validColors = saveCacheColors;
-            SneckoMod.pureSneckoMode = pureSneckoMode;
+            downfallMod.validColors = saveCacheColors;
+            downfallMod.pureSneckoMode = pureSneckoMode;
 
-            SneckoMod.identifyRng = new Random(file.seed, identifyRngCount);
+            downfallMod.identifyRng = new Random(file.seed, identifyRngCount);
 
-            OffclassHelper.updateAllUnknownReplacements();
+            //TODO- This one might be harder to move.
+            //OffclassHelper.updateAllUnknownReplacements();
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here

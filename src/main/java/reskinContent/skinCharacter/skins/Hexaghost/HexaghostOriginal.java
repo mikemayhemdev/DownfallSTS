@@ -3,13 +3,12 @@ package reskinContent.skinCharacter.skins.Hexaghost;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import reskinContent.skinCharacter.AbstractSkin;
-import theHexaghost.TheHexaghost;
 
 public class HexaghostOriginal extends AbstractSkin {
 
     public HexaghostOriginal() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkin").TEXT[1];
-        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(TheHexaghost.ID).TEXT[0];
+        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString("hexamod:theHexaghost").TEXT[0];
         this.portraitStatic_IMG = ImageMaster.loadImage("hexamodResources/images/charSelect/charBG.png");
 
         this.SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";

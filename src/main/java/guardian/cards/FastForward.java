@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.actions.ReduceRightMostStasisAction;
 import guardian.patches.AbstractCardEnum;
@@ -47,7 +48,7 @@ public class FastForward extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
         this.magicNumber = this.baseMagicNumber = 3;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("FastForward.png"));
     }
 

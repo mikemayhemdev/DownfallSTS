@@ -50,7 +50,7 @@ public class CalledShot extends AbstractChampCard {
         rawDescription = UPGRADE_DESCRIPTION;
         upgradeMagicNumber(1);
         initializeDescription();
-        tags.add(SneckoMod.BANNEDFORSNECKO);
+        tags.add(downfallMod.BANNEDFORSNECKO);
 
     }
 }

@@ -13,8 +13,8 @@ public class EnemyNotStanceCheckAction extends AbstractGameAction {
     }
 
     public void update() {
-        //SlimeboundMod.logger.info(AbstractCharBoss.boss.stance);
-        //SlimeboundMod.logger.info(AbstractCharBoss.boss.stance instanceof EnNeutralStance);
+        //downfallMod.logger.info(AbstractCharBoss.boss.stance);
+        //downfallMod.logger.info(AbstractCharBoss.boss.stance instanceof EnNeutralStance);
         if (!(AbstractCharBoss.boss.stance instanceof EnNeutralStance)) {
             this.addToBot(this.actionToBuffer);
         }

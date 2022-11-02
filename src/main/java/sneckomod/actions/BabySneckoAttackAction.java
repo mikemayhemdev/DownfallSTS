@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import gremlin.actions.PseudoDamageRandomEnemyAction;
+import downfall.actions.PseudoDamageRandomEnemyAction;
 import sneckomod.relics.BabySnecko;
 
 public class BabySneckoAttackAction extends AbstractGameAction {

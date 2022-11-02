@@ -45,7 +45,7 @@ public class GemFinder extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        // this.tags.add(downfallMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
     }
 

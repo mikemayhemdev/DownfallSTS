@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
+import downfall.downfallMod;
 import gremlin.powers.WizPower;
 import sneckomod.SneckoMod;
 
@@ -36,7 +37,7 @@ public class ShowStopper extends AbstractGremlinCard {
         this.baseDamage = POWER;
 
         this.isMultiDamage = true;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
     }

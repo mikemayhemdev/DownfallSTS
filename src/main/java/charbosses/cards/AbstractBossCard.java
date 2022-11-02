@@ -490,14 +490,14 @@ public abstract class AbstractBossCard extends AbstractCard {
     public void bossDarken() {
         if (!this.bossDarkened) {
             this.bossDarkened = true;
-            //SlimeboundMod.logger.info(this.name + " darkened.");
+            //downfallMod.logger.info(this.name + " darkened.");
         }
     }
 
     public void bossLighten() {
         if (this.bossDarkened) {
             this.bossDarkened = false;
-            //SlimeboundMod.logger.info(this.name + " lightened.");
+            //downfallMod.logger.info(this.name + " lightened.");
         }
     }
 
@@ -786,7 +786,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.updateIntentTip();
         this.showIntent = true;
         intentActive = true;
-        ////SlimeboundMod.logger.info(this.name + " intent made.");
+        ////downfallMod.logger.info(this.name + " intent made.");
     }
 
     public int customIntentModifiedDamage() {
@@ -802,7 +802,7 @@ public abstract class AbstractBossCard extends AbstractCard {
             this.showIntent = false;
             this.intentParticleTimer = 0F;
             this.tipIntent = null;
-            //SlimeboundMod.logger.info(this.name + " intent destroyed.");
+            //downfallMod.logger.info(this.name + " intent destroyed.");
         }
     }
 

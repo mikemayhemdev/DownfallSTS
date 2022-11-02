@@ -2,7 +2,6 @@ package automaton.cards;
 
 import automaton.AutomatonTextHelper;
 import automaton.FunctionHelper;
-import automaton.cardmods.EncodeMod;
 import automaton.vfx.FineTuningEffect;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
@@ -25,6 +24,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import automaton.cardmods.EncodeMod;
 import downfall.downfallMod;
 
 import java.util.ArrayList;

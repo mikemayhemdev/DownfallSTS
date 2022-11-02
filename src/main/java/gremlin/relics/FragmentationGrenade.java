@@ -11,7 +11,6 @@ public class FragmentationGrenade extends AbstractGremlinRelic {
     private static final String IMG = "relics/fragmentation_grenade.png";
     private static final AbstractRelic.LandingSound SOUND = LandingSound.CLINK;
 
-    public static final int OOMPH = 3;
 
     public FragmentationGrenade() {
         super(ID, IMG, TIER, SOUND);
@@ -19,7 +18,7 @@ public class FragmentationGrenade extends AbstractGremlinRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return strings.DESCRIPTIONS[0] + OOMPH + strings.DESCRIPTIONS[1];
+        return strings.DESCRIPTIONS[0] + 3 + strings.DESCRIPTIONS[1];
     }
 }
 

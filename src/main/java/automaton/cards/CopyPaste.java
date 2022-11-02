@@ -14,7 +14,7 @@ public class CopyPaste extends AbstractBronzeCard {
 
     public CopyPaste() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

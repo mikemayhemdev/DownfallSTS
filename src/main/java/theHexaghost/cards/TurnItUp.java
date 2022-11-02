@@ -20,7 +20,7 @@ public class TurnItUp extends AbstractHexaCard {
         baseMagicNumber = magicNumber = 1;
         this.exhaust = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "TurnItUp.png");
     }
 

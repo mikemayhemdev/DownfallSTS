@@ -15,9 +15,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 import expansioncontent.expansionContentMod;
-import gremlin.actions.PseudoDamageRandomEnemyAction;
+import downfall.actions.PseudoDamageRandomEnemyAction;
 
 
 public class PretendHexWheelPower extends TwoAmountPower implements NonStackablePower, OnPowersModifiedSubscriber {
@@ -25,8 +26,8 @@ public class PretendHexWheelPower extends TwoAmountPower implements NonStackable
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyHexaghost84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyHexaghost32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(downfallMod.expansioncontentModID + "Resources/images/powers/StudyHexaghost84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(downfallMod.expansioncontentModID + "Resources/images/powers/StudyHexaghost32.png");
 
     public PretendHexWheelPower(int amount) {
         this.name = NAME;

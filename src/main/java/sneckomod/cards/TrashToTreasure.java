@@ -3,7 +3,7 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.defect.RecycleAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 
 public class TrashToTreasure extends AbstractSneckoCard {
 
@@ -13,7 +13,7 @@ public class TrashToTreasure extends AbstractSneckoCard {
 
     public TrashToTreasure() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
+        tags.add(downfallMod.SNEKPROOF);
         this.exhaust = true;
     }
 

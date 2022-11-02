@@ -1,6 +1,6 @@
 package charbosses;
 
-import automaton.EasyInfoDisplayPanel;
+import downfall.EasyInfoDisplayPanel;
 
 public class BossMechanicDisplayPanel extends EasyInfoDisplayPanel {
 

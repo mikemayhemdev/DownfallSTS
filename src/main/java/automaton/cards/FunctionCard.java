@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
 
 import java.lang.reflect.Field;
@@ -30,7 +31,7 @@ public class FunctionCard extends AbstractBronzeCard {
 
     public FunctionCard() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ALL);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         this.setPortraitTextures("bronzeResources/images/512/frame_function.png", "bronzeResources/images/1024/frame_function.png");
         this.setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
         doNothingSpecificInParticular();

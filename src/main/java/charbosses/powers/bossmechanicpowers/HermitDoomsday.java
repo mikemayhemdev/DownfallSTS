@@ -5,13 +5,13 @@
 
 package charbosses.powers.bossmechanicpowers;
 
+import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import downfall.cardmods.RetainCardMod;
 import hermit.cards.ImpendingDoom;
 
 public class HermitDoomsday extends AbstractBossMechanicPower {
@@ -39,7 +39,7 @@ public class HermitDoomsday extends AbstractBossMechanicPower {
     public void atStartOfTurnPostDraw() {
         flash();
         AbstractCard q = new ImpendingDoom();
-        CardModifierManager.addModifier(q, new RetainCardMod());
+        CardModifierManager.addModifier(q, new RetainMod());
         addToBot(new MakeTempCardInHandAction(q));
     }
 

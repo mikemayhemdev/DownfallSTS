@@ -158,5 +158,11 @@
       "Steam Workshop.",
       "Click here to learn how!"
     ]
+  },
+  "downfall:UnplayableMod": {
+    "TEXT": [
+      "Injouable. NL ",
+      "ERR_NULL_PTR"
+    ]
   }
 }

@@ -23,7 +23,7 @@ import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
 import downfall.actions.NeowRezAction;
 import downfall.downfallMod;
-import guardian.vfx.SmallLaserEffectColored;
+import downfall.vfx.SmallLaserEffectColored;
 
 import java.util.ArrayList;
 

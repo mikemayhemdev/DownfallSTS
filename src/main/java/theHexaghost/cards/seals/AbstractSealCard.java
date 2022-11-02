@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import theHexaghost.cards.AbstractHexaCard;
 import theHexaghost.relics.TheBrokenSeal;
 import theHexaghost.vfx.BrokenSealEffect;
@@ -15,6 +16,7 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
     public AbstractSealCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, cost, type, rarity, target);
         tags.add(CardTags.HEALING);
+        tags.add(downfallMod.SEAL);
         isEthereal = true;
     }
 

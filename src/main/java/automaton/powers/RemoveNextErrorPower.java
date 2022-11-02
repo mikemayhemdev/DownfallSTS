@@ -1,11 +1,11 @@
 package automaton.powers;
 
-import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.downfallMod;
 
 public class RemoveNextErrorPower extends AbstractAutomatonPower implements OnAddToFuncPower {
     public static final String NAME = "RemoveNextError";
@@ -19,7 +19,7 @@ public class RemoveNextErrorPower extends AbstractAutomatonPower implements OnAd
 
     @Override
     public void receiveAddToFunc(AbstractCard addition) {
-        if (addition instanceof AbstractBronzeCard && addition.hasTag(AutomatonMod.BAD_COMPILE)) {
+        if (addition instanceof AbstractBronzeCard && addition.hasTag(downfallMod.BAD_COMPILE)) {
             ((AbstractBronzeCard) addition).turnOffCompileStuff();
             flash();
             addToTop(new ReducePowerAction(owner, owner, this.ID, 1));

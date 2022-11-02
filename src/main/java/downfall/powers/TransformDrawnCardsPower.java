@@ -22,8 +22,8 @@ public class TransformDrawnCardsPower extends TwoAmountPower implements Cloneabl
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/TransformDrawnCards84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/TransformDrawnCards32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(downfallMod.sneckoModID + "Resources/images/powers/TransformDrawnCards84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(downfallMod.sneckoModID + "Resources/images/powers/TransformDrawnCards32.png");
 
     public TransformDrawnCardsPower(final AbstractCreature owner, final int amount) {
         this.ID = POWER_ID;

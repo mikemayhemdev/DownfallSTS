@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 
@@ -25,7 +26,7 @@ public class Break extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 3;
         thisEncodes();
-        tags.add(AutomatonMod.BAD_COMPILE);
+        tags.add(downfallMod.BAD_COMPILE);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Break.png"));
     }
 

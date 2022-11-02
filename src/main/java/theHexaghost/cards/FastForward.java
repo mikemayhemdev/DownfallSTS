@@ -18,7 +18,7 @@ public class FastForward extends AbstractHexaCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         isEthereal = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

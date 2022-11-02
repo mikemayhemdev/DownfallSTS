@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
@@ -22,7 +22,7 @@ public class SoulExchange extends AbstractSneckoCard {
 
     public SoulExchange() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
+        tags.add(downfallMod.SNEKPROOF);
         baseMagicNumber = magicNumber = 1;
     }
 

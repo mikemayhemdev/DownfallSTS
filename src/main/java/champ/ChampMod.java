@@ -4,6 +4,7 @@ import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
+import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import champ.actions.FatigueHpLossAction;
@@ -15,6 +16,7 @@ import champ.potions.OpenerPotion;
 import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
+import champ.powers.LastStandModPower;
 import champ.powers.ResolvePower;
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
@@ -23,6 +25,7 @@ import champ.stances.DefensiveStance;
 import champ.util.CardFilter;
 import champ.util.CoolVariable;
 import champ.util.OnOpenerSubscriber;
+import champ.util.TechniqueMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -32,22 +35,27 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.events.city.TheLibrary;
+import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
+import downfall.dailymods.*;
 import downfall.downfallMod;
-import downfall.patches.BanSharedContentPatch;
+import slimebound.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
 import javassist.CtClass;
@@ -78,7 +86,8 @@ public class ChampMod implements
         OnCardUseSubscriber,
         PreMonsterTurnSubscriber,
         OnPlayerLoseBlockSubscriber,
-        PostUpdateSubscriber {
+        PostUpdateSubscriber,
+PostDungeonInitializeSubscriber{
     public static final String SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "champResources/images/char/mainChar/corpse.png";
@@ -153,12 +162,14 @@ public class ChampMod implements
 
     }
 
+
+
     public static void loadJokeCardImage(AbstractCard card, String img) {
         if (card instanceof AbstractChampCard) {
             ((AbstractChampCard) card).betaArtPath = img;
         }
         Texture cardTexture;
-        cardTexture = hermit.util.TextureLoader.getTexture(getModID() + "Resources/images/betacards/" + img);
+        cardTexture = TextureLoader.getTexture(getModID() + "Resources/images/betacards/" + img);
         cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         int tw = cardTexture.getWidth();
         int th = cardTexture.getHeight();
@@ -187,7 +198,7 @@ public class ChampMod implements
     }
 
     public static String getModID() {
-        return modID;
+        return downfallMod.champModID;
     }
 
     public static void initialize() {
@@ -316,6 +327,18 @@ public class ChampMod implements
         enteredBerserkerThisTurn = false;
         enteredDefensiveThisTurn = false;
         enteredGladiatorThisTurn = false;
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID)) || ModHelper.isModEnabled(ChampStances.ID)) {
+
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new ModFinisher()));
+        }
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Enraging.ID)) || ModHelper.isModEnabled(Enraging.ID)) {
+            for (AbstractMonster m : abstractRoom.monsters.monsters) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
+            }
+        }
+
     }
 
     @Override
@@ -347,6 +370,22 @@ public class ChampMod implements
 
     }
 
+    @Override
+    public void receivePostDungeonInitialize() {
+
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID) || ModHelper.isModEnabled(ChampStances.ID)) {
+            RelicLibrary.getRelic("champ:ChampStancesModRelic").makeCopy().instantObtain();
+
+            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+
+                if (!c.hasTag(ChampMod.TECHNIQUE))
+                    CardModifierManager.addModifier(c, new TechniqueMod());
+
+            }
+
+        }
+
+    }
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {

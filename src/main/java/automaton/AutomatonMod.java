@@ -9,8 +9,7 @@ import automaton.potions.BurnAndBuffPotion;
 import automaton.potions.CleanCodePotion;
 import automaton.potions.FreeFunctionsPotion;
 import automaton.relics.*;
-import automaton.util.AutoVar;
-import automaton.util.CardFilter;
+import automaton.util.*;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomUnlockBundle;
@@ -25,23 +24,32 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.status.*;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
+import com.megacrit.cardcrawl.relics.MedicalKit;
+import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.EasyInfoDisplayPanel;
+import automaton.cardmods.EncodeMod;
 import downfall.cardmods.EtherealMod;
 import downfall.cardmods.ExhaustMod;
+import downfall.dailymods.Analytical;
+import downfall.dailymods.StatusAbuse;
 import downfall.downfallMod;
+import downfall.patches.BottledStasisPatch;
+import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.CardIgnore;
-import guardian.patches.BottledStasisPatch;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -66,7 +74,8 @@ public class AutomatonMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         StartGameSubscriber,
-        PostDrawSubscriber {
+        PostDrawSubscriber,
+PostDungeonInitializeSubscriber{
     public static final String SHOULDER1 = "bronzeResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "bronzeResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "bronzeResources/images/char/mainChar/corpse.png";
@@ -91,20 +100,6 @@ public class AutomatonMod implements
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
 
-    @SpireEnum
-    public static AbstractCard.CardTags ENCODES;
-    @SpireEnum
-    public static AbstractCard.CardTags BAD_COMPILE;
-    @SpireEnum
-    public static AbstractCard.CardTags MODIFIES_OUTPUT;
-    @SpireEnum
-    public static AbstractCard.CardTags GOOD_STATUS;
-    @SpireEnum
-    public static AbstractCard.CardTags NO_TEXT;
-    @SpireEnum
-    public static AbstractCard.CardTags ADDS_NO_CARDTEXT;
-    @SpireEnum
-    public static AbstractCard.CardTags SPECIAL_COMPILE_TEXT;
 
     public AutomatonMod() {
         BaseMod.subscribe(this);
@@ -160,7 +155,7 @@ public class AutomatonMod implements
     }
 
     public static String getModID() {
-        return modID;
+        return downfallMod.automatonModID;
     }
 
     public static void initialize() {
@@ -314,8 +309,74 @@ public class AutomatonMod implements
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
+
+
+        //Init save stuff for custom rewards.
+        //Automaton
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.DAZINGPULSE, (rewardSave) -> new DazingPulseReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.DECABEAM, (rewardSave) -> new DecaBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.DONUBEAM, (rewardSave) -> new DonuBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.EXPLODE, (rewardSave) -> new ExplodeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SPIKE, (rewardSave) -> new SpikeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
     }
 
+    @Override
+    public void receivePostDungeonInitialize() {
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(StatusAbuse.ID)) || ModHelper.isModEnabled(StatusAbuse.ID)) {
+            RelicLibrary.getRelic(MakeshiftBattery.ID).makeCopy().instantObtain();
+            RelicLibrary.getRelic(MedicalKit.ID).makeCopy().instantObtain();
+            RelicLibrary.getRelic(DonusWashers.ID).makeCopy().instantObtain();
+            RelicLibrary.getRelic(DecasWashers.ID).makeCopy().instantObtain();
+            RelicLibrary.getRelic(BronzeIdol.ID).makeCopy().instantObtain();
+
+            AbstractDungeon.commonRelicPool.clear();
+            AbstractDungeon.bossRelicPool.clear();
+            AbstractDungeon.uncommonRelicPool.clear();
+            AbstractDungeon.rareRelicPool.clear();
+            AbstractDungeon.shopRelicPool.clear();
+
+        }
+
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Analytical.ID)) || ModHelper.isModEnabled(Analytical.ID)) {
+            RelicLibrary.getRelic(AnalyticalCore.ID).makeCopy().instantObtain();
+
+            ArrayList<AbstractCard> cardsToRemove = new ArrayList<>();
+            ArrayList<AbstractCard> strikes = new ArrayList<>();
+            ArrayList<AbstractCard> defends = new ArrayList<>();
+            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
+                    AbstractCard c2 = new Strike();
+                    if (c.upgraded) c2.upgrade();
+                    CardModifierManager.addModifier(c2, new EncodeMod());
+                    cardsToRemove.add(c);
+                    strikes.add(c2);
+                }
+                if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+                    AbstractCard c2 = new Defend();
+                    if (c.upgraded) c2.upgrade();
+                    CardModifierManager.addModifier(c2, new EncodeMod());
+                    cardsToRemove.add(c);
+                    defends.add(c2);
+                }
+            }
+            for (AbstractCard c : cardsToRemove) {
+                AbstractDungeon.player.masterDeck.removeCard(c);
+            }
+
+            for (AbstractCard c : defends) {
+                AbstractDungeon.player.masterDeck.addToBottom(c);
+            }
+            for (AbstractCard c : strikes) {
+                AbstractDungeon.player.masterDeck.addToBottom(c);
+            }
+        }
+    }
 
     @Override
     public void receiveSetUnlocks() {
@@ -389,11 +450,13 @@ public class AutomatonMod implements
         return retVal;
     }
 
+
+
     @Override
     public void receivePostDraw(AbstractCard abstractCard) {
         if (abstractCard.type == AbstractCard.CardType.STATUS) {
             if (AbstractDungeon.player.hasRelic(BronzeIdol.ID)) {
-                if (!abstractCard.hasTag(GOOD_STATUS)) {
+                if (!abstractCard.hasTag(downfallMod.GOOD_STATUS)) {
 
                     AbstractCard newStatus = getGoodStatus(abstractCard);
 

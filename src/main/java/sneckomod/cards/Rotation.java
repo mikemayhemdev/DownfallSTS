@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
@@ -18,7 +18,7 @@ public class Rotation extends AbstractSneckoCard {
     public Rotation() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 0;
-        tags.add(SneckoMod.SNEKPROOF);
+        tags.add(downfallMod.SNEKPROOF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

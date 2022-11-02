@@ -41,7 +41,7 @@ public class Necromancy extends AbstractGremlinCard {
 
         this.exhaust = true;
         this.tags.add(AbstractCard.CardTags.HEALING);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
     }

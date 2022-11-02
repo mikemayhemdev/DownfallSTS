@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
+import downfall.downfallMod;
 import downfall.util.OctopusCard;
 import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
@@ -31,7 +32,7 @@ public class FlameSwitch extends AbstractHexaCard implements OctopusCard {
         exhaust = true;
         isEthereal = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {

@@ -1,6 +1,5 @@
 package collector;
 
-import automaton.util.CardFilter;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
@@ -21,6 +20,7 @@ import collector.powers.GainBlockPower;
 import collector.powers.SoulMark;
 import collector.powers.Suffering;
 import collector.relics.EmeraldTorch;
+import collector.util.CardFilter;
 import collector.util.CollectorSecondDamage;
 import collector.util.TargetMarker;
 import collector.vars.*;
@@ -45,8 +45,6 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import slimebound.powers.SlimedPower;
-import theHexaghost.powers.BurnPower;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -145,7 +143,7 @@ public class CollectorMod implements
     }
 
     public static String getModID() {
-        return modID;
+        return downfallMod.collectorModID;
     }
 
     public static void initialize() {
@@ -209,119 +207,22 @@ public class CollectorMod implements
         BaseMod.addRelicToCustomPool(new EmeraldTorch(), downfallMod.Enums.COLLECTOR);
     }
 
+    //THESE ARE ALL DEAD
     public static void ApplyRandomAffliciton(AbstractCreature target, boolean upgraded) {
-        String AfflictionftoApply = Afflictions.get((AbstractDungeon.cardRandomRng.random(Afflictions.size() - 1)));
-        if (!upgraded) {
-            if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(0))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new WeakPower(target, 1, false)));
-            } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(1))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new VulnerablePower(target, 1, false)));
-            } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(2))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new PoisonPower(target, target, 3)));
-            } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(3))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new SlimedPower(target, target, 4)));
-            } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(4))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new BurnPower(target, 8)));
-            } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(5))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new Suffering(2, target)));
-            } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(6))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new SoulMark(2, target)));
-            }
-        } else {
-            if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(0))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new WeakPower(target, 2, false)));
-            } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(1))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new VulnerablePower(target, 2, false)));
-            } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(2))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new PoisonPower(target, target, 4)));
-            } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(3))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new SlimedPower(target, target, 6)));
-            } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(4))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new BurnPower(target, 11)));
-            } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(5))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new Suffering(4, target)));
-            }
-        }
     }
 
-
     public static boolean AfflictionMatch(String stringtocompare) {
-        return stringtocompare.equals(Afflictions.get(0)) || stringtocompare.equals(Afflictions.get(1)) ||
-                stringtocompare.equals(Afflictions.get(2)) || stringtocompare.equals(Afflictions.get(3)) ||
-                stringtocompare.equals(Afflictions.get(4)) || stringtocompare.equals(Afflictions.get(5))
-                || stringtocompare.equals(Afflictions.get(6));
+        return false;
     }
 
     public void ApplyRandomBoon(AbstractCreature target, boolean upgraded) {
-        String BoontoApply = Boons.get((AbstractDungeon.cardRandomRng.random(Boons.size() - 1)));
-        if (!upgraded) {
-            if (BoontoApply.equals(CollectorMod.Boons.get(0))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new StrengthPower(target, 2)));
-            } else if (BoontoApply.equals(CollectorMod.Boons.get(1))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new DexterityPower(target, 1)));
-            } else if (BoontoApply.equals(CollectorMod.Boons.get(2))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new ArtifactPower(target, 1)));
-            } else if (BoontoApply.equals(CollectorMod.Boons.get(3))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new PlatedArmorPower(target, 3)));
-            } else if (BoontoApply.equals(CollectorMod.Boons.get(4))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new VigorPower(target, 6)));
-            } else if (BoontoApply.equals(CollectorMod.Boons.get(5))) {
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(target, 10));
-            }
-        } else {
-            if (BoontoApply.equals(CollectorMod.Boons.get(0))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new StrengthPower(target, 3)));
-            } else if (BoontoApply.equals(CollectorMod.Boons.get(1))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new DexterityPower(target, 2)));
-            } else if (BoontoApply.equals(CollectorMod.Boons.get(2))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new ArtifactPower(target, 2)));
-            } else if (BoontoApply.equals(CollectorMod.Boons.get(3))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new PlatedArmorPower(target, 4)));
-            } else if (BoontoApply.equals(CollectorMod.Boons.get(4))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new VigorPower(target, 9)));
-            } else if (BoontoApply.equals(CollectorMod.Boons.get(5))) {
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(target, 15));
-            }
-        }
     }
 
     public static AbstractPower GetRandomBoon(AbstractCreature target, boolean upgraded) {
-        String BoontoApply = Boons.get((AbstractDungeon.cardRandomRng.random(Boons.size() - 1)));
-        if (BoontoApply.equals(CollectorMod.Boons.get(0))) {
-            return new StrengthPower(target, upgraded ? 3 : 2);
-        } else if (BoontoApply.equals(CollectorMod.Boons.get(1))) {
-            return new DexterityPower(target, upgraded ? 2 : 1);
-        } else if (BoontoApply.equals(CollectorMod.Boons.get(2))) {
-            return new ArtifactPower(target, upgraded ? 2 : 1);
-        } else if (BoontoApply.equals(CollectorMod.Boons.get(3))) {
-            return new PlatedArmorPower(target, upgraded ? 4 : 3);
-        } else if (BoontoApply.equals(CollectorMod.Boons.get(4))) {
-            return new VigorPower(target, upgraded ? 9 : 6);
-        } else if (BoontoApply.equals(CollectorMod.Boons.get(5))) {
-            return new GainBlockPower(upgraded ? 15 : 10, target);
-        }
-        System.out.println("Invalid Value in Boons Array, Defaulting to 10 Block. please report this to the mod developer");
         return new GainBlockPower(10, target);
     }
 
     public static AbstractPower GetRandomAffliction(AbstractCreature target, boolean upgraded) {
-        String AfflictiontoApply = Afflictions.get((AbstractDungeon.cardRandomRng.random(Afflictions.size() - 1)));
-        if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(0))) {
-            return new WeakPower(target, upgraded ? 2 : 1, false);
-        } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(1))) {
-            return new VulnerablePower(target, upgraded ? 2 : 1, false);
-        } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(2))) {
-            return new PoisonPower(target, AbstractDungeon.player, upgraded ? 4 : 3);
-        } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(3))) {
-            return new SlimedPower(target, AbstractDungeon.player, upgraded ? 6 : 4);
-        } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(4))) {
-            return new BurnPower(target, upgraded ? 11 : 8);
-        } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(5))) {
-            return new Suffering(upgraded ? 4 : 2, target);
-        } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(6))) {
-            return new SoulMark(upgraded ? 3 : 2, target);
-        }
-        System.out.println("Invalid Value in Boons Array, Defaulting to 10 Block. please report this to the mod developer");
         return new GainBlockPower(10, target);
     }
 
@@ -468,21 +369,6 @@ public class CollectorMod implements
 
     @Override
     public void receiveStartGame() {
-        Afflictions.add(WeakPower.POWER_ID);
-        Afflictions.add(VulnerablePower.POWER_ID);
-        Afflictions.add(PoisonPower.POWER_ID);
-        Afflictions.add(SlimedPower.POWER_ID);
-        Afflictions.add(BurnPower.POWER_ID);
-        Afflictions.add(Suffering.POWER_ID);
-        Afflictions.add(SoulMark.POWER_ID);
-
-        Boons.add(StrengthPower.POWER_ID);
-        Boons.add(DexterityPower.POWER_ID);
-        Boons.add(ArtifactPower.POWER_ID);
-        Boons.add(PlatedArmorPower.POWER_ID);
-        Boons.add(VigorPower.POWER_ID);
-        Boons.add("Block");
-
         CollectorCollection.init();
         //CollectorChar.TorchHeadHelper = new TorchHeadHelper();
         //System.out.println("Torch Friend!");

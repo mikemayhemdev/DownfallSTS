@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import slimebound.SlimeboundMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
@@ -27,7 +27,7 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
         maxHPModifier += 102;
         actNum = 1;
-        SlimeboundMod.logger.info("Archetype act num: " + actNum);
+        downfallMod.logger.info("Archetype act num: " + actNum);
         bossMechanicName = DefectVoidPower.NAME;
         bossMechanicDesc = DefectVoidPower.DESC[0];
     }

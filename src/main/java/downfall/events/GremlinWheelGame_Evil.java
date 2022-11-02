@@ -37,7 +37,6 @@ import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 import downfall.relics.GremlinWheel;
-import gremlin.characters.GremlinCharacter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -263,7 +262,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        //SlimeboundMod.logger.info(this.screen);
+        //downfallMod.logger.info(this.screen);
 
         switch (this.screen) {
             case INTRO:
@@ -311,7 +310,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                     } else {
 
                         this.screen = GremlinWheelGame_Evil.CUR_SCREEN.FIGHT;
-                        //SlimeboundMod.logger.info("fight");
+                        //downfallMod.logger.info("fight");
                         logMetric(ID, "Fight");
                         MonsterGroup monsters = new MonsterGroup(new GremlinThief(-400F, 0F));
                         monsters.add(new GremlinNob(0F, 0F));
@@ -362,8 +361,9 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
             case 2:
                 logMetricHeal(ID, "Full Heal", AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
                 AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+                //TODO - Gremlin Damage
                 if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
-                    ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                  //  ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
                 }
                 this.hasFocus = false;
                 break;

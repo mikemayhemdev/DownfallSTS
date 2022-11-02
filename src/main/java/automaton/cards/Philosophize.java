@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 
@@ -22,7 +23,7 @@ public class Philosophize extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = MAGIC;
         baseAuto = auto = 1;
         thisEncodes();
-        tags.add(AutomatonMod.BAD_COMPILE);
+        tags.add(downfallMod.BAD_COMPILE);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Philosophize.png"));
     }
 

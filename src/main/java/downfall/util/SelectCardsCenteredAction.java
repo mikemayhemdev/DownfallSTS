@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import expansioncontent.patches.CenterGridCardSelectScreen;
+import com.evacipated.cardcrawl.mod.stslib.patches.CenterGridCardSelectScreen;
 
 import java.util.ArrayList;
 import java.util.List;

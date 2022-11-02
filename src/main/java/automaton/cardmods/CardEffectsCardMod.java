@@ -17,6 +17,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.cardmods.BronzeCardMod;
+import downfall.downfallMod;
 
 public class CardEffectsCardMod extends BronzeCardMod {
 
@@ -109,7 +111,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
             if (c instanceof CardEffectsCardMod) {
                 if (c == this) {
                     yesIAmTheFinalCardWoo = true;
-                } else if (((CardEffectsCardMod) c).stored().hasTag(AutomatonMod.ADDS_NO_CARDTEXT) && yesIAmTheFinalCardWoo) {
+                } else if (((CardEffectsCardMod) c).stored().hasTag(downfallMod.ADDS_NO_CARDTEXT) && yesIAmTheFinalCardWoo) {
                 } else {
                     yesIAmTheFinalCardWoo = false;
                 }

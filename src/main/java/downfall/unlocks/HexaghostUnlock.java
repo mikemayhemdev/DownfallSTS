@@ -2,7 +2,6 @@ package downfall.unlocks;
 
 import com.megacrit.cardcrawl.core.Settings;
 import downfall.downfallMod;
-import theHexaghost.TheHexaghost;
 
 public class HexaghostUnlock extends com.megacrit.cardcrawl.unlock.AbstractUnlock {
     public static final String KEY = "Hexaghost";
@@ -17,9 +16,14 @@ public class HexaghostUnlock extends com.megacrit.cardcrawl.unlock.AbstractUnloc
         this.player = com.megacrit.cardcrawl.core.CardCrawlGame.characterManager.getCharacter(downfallMod.Enums.THE_SPIRIT);
         this.player.drawX = (Settings.WIDTH / 2.0F + 20.0f * Settings.scale);
         this.player.drawY = (Settings.HEIGHT / 2.0F - 235.0F * Settings.scale);
+
+        //TODO - Hexaghost unlock I don't think can stay here?
+        /*
         TheHexaghost hP = (TheHexaghost) this.player;
         hP.myBody.XOffset = 485F * Settings.scale;
         hP.myBody.YOffset = -40F * Settings.scale;
+
+         */
 
 
     }

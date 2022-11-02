@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
+import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.LoseThornsPower;
@@ -51,7 +52,7 @@ public class Gem_Lightblue extends AbstractGemCard {
         this.baseMagicNumber = this.magicNumber = Thorns;
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = LIGHTBLUE;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
     }
 

@@ -19,7 +19,7 @@ public class DancingMaster extends AbstractChampCard {
     public DancingMaster() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //  this.tags.add(downfallMod.BANNEDFORSNECKO);
         postInit();
         loadJokeCardImage(this, "DancingMaster.png");
     }

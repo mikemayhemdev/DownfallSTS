@@ -3,11 +3,11 @@ package downfall.patches;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.events.exordium.Mushrooms;
 import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
+import downfall.downfallMod;
 import javassist.CannotCompileException;
 import javassist.NotFoundException;
 import javassist.expr.ExprEditor;
 import javassist.expr.Instanceof;
-import slimebound.SlimeboundMod;
 
 @SpirePatch(clz = ProceedButton.class, method = "update")
 
@@ -35,7 +35,7 @@ public class CombatEventPatch {
                                 "currentRoom.event instanceof automaton.events.AncientFactory;");
                     }
                 } catch (NotFoundException e) {
-                    SlimeboundMod.logger.error("Combat proceed button patch broken.", e);
+                    downfallMod.logger.error("Combat proceed button patch broken.", e);
                 }
             }
         };

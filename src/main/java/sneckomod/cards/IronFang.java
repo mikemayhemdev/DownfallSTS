@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
 public class IronFang extends AbstractSneckoCard {
@@ -20,7 +20,7 @@ public class IronFang extends AbstractSneckoCard {
         baseBlock = 8;
         baseMagicNumber = magicNumber = 3;
         baseSilly = silly = 3;
-        tags.add(SneckoMod.RNG);
+        tags.add(downfallMod.RNG);
     }
 
     @Override

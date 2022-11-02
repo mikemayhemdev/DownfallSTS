@@ -21,7 +21,7 @@ public class GhostflameInferno extends AbstractHexaCard {
         selfRetain = true;
         exhaust = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

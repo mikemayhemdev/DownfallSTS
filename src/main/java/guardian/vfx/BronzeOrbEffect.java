@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.vfx.SmallLaserEffectColored;
 
 
 public class BronzeOrbEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {

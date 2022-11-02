@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import downfall.downfallMod;
 import downfall.potions.CursedFountainPotion;
-import gremlin.characters.GremlinCharacter;
 
 import java.util.Collections;
 
@@ -100,8 +99,10 @@ public class CursedFountain extends AbstractImageEvent {
                     this.imageEventText.updateDialogOption(2, OPTIONS[6], true);
                     logMetricHeal(ID, "Drink", AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
                     AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+
+                    //TODO - Gremlin Damage
                     if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
-                        ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                       // ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
                     }
                     return;
                 case 3:

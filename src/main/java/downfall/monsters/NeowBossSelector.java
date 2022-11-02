@@ -3,7 +3,6 @@ package downfall.monsters;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
 import downfall.monsters.gauntletbosses.*;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -51,7 +50,7 @@ public class NeowBossSelector {
 
         ArrayList<String> results = new ArrayList<>();
         ArrayList<String> bosses = new ArrayList<>();
-        SlimeboundMod.logger.info("Bosses! " + downfallMod.Act1BossFaced + " " + validClass(downfallMod.Act1BossFaced) +
+        downfallMod.logger.info("Bosses! " + downfallMod.Act1BossFaced + " " + validClass(downfallMod.Act1BossFaced) +
                 downfallMod.Act2BossFaced + " " + validClass(downfallMod.Act2BossFaced) +
                 downfallMod.Act3BossFaced + " " + validClass(downfallMod.Act3BossFaced));
         if (validClass(downfallMod.Act1BossFaced) && validClass(downfallMod.Act2BossFaced) && validClass(downfallMod.Act3BossFaced)) {

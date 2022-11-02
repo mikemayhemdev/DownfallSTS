@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 import sneckomod.cards.unknowns.UnknownClass;
 
@@ -115,7 +115,7 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                         if (c instanceof AbstractUnknownCard) {
                             if (c instanceof UnknownClass) {
                                 UnknownClass cU = (UnknownClass) c;
-                                if (SneckoMod.validColors.contains(cU.myColor)) {
+                                if (downfallMod.validColors.contains(cU.myColor)) {
                                     list.add(c);
                                 }
                             } else {

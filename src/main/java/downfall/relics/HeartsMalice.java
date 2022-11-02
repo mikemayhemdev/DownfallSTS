@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.actions.WaitForEscapeAction;
 import downfall.downfallMod;
-import gremlin.characters.GremlinCharacter;
 
 public class HeartsMalice extends CustomRelic {
 
@@ -48,8 +47,9 @@ public class HeartsMalice extends CustomRelic {
 
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
+            //TODO - Gremlin Damage
             if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
-                ((GremlinCharacter) AbstractDungeon.player).mobState.startOfBattle((GremlinCharacter) AbstractDungeon.player);
+             //   ((GremlinCharacter) AbstractDungeon.player).mobState.startOfBattle((GremlinCharacter) AbstractDungeon.player);
             }
         }
 

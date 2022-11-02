@@ -115,9 +115,9 @@ public class BanditIOUEffect extends AbstractGameEffect {
         this.romeo.skeleton.setX(0F);
         this.romeo.skeleton.setY(this.pointyStartY);
 
-        //SlimeboundMod.logger.info(IntroDialog);
-        // SlimeboundMod.logger.info(BearDialog);
-        // SlimeboundMod.logger.info(OutroDialog);
+        //downfallMod.logger.info(IntroDialog);
+        // downfallMod.logger.info(BearDialog);
+        // downfallMod.logger.info(OutroDialog);
     }
 
 

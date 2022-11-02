@@ -2,7 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import sneckomod.actions.PureSneckoAction;
 
 public class PureSnecko extends AbstractSneckoCard {
@@ -13,7 +13,7 @@ public class PureSnecko extends AbstractSneckoCard {
 
     public PureSnecko() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
+        tags.add(downfallMod.SNEKPROOF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

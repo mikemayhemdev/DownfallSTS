@@ -1,7 +1,6 @@
 package automaton.cards.goodstatus;
 
 
-import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import downfall.util.CardIgnore;
 
 @CardIgnore
@@ -40,7 +40,7 @@ public class UsefulSlime extends AbstractCard {
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
 
-        tags.add(AutomatonMod.GOOD_STATUS);
+        tags.add(downfallMod.GOOD_STATUS);
 
     }
 

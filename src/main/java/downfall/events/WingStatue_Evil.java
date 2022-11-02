@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import downfall.relics.BrokenWingStatue;
-import downfall.relics.ShatteredFragment;
+import guardian.relics.ShatteredFragment;
 
 public class WingStatue_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:WingStatue";

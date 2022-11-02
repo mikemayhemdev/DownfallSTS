@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
-import guardian.vfx.SmallLaserEffectColored;
+import downfall.vfx.SmallLaserEffectColored;
 
 
 public class PrimingBeam extends AbstractGuardianCard {

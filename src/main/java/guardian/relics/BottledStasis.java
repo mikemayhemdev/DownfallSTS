@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import guardian.GuardianMod;
 import guardian.orbs.StasisOrb;
-import guardian.patches.BottledStasisPatch;
+import downfall.patches.BottledStasisPatch;
 
 import java.util.function.Predicate;
 

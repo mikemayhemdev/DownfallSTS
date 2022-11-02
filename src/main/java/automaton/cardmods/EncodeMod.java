@@ -1,9 +1,10 @@
 package automaton.cardmods;
 
-import automaton.AutomatonMod;
 import automaton.AutomatonTextHelper;
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import downfall.cardmods.BronzeCardMod;
+import downfall.downfallMod;
 
 public class EncodeMod extends BronzeCardMod {
 
@@ -17,8 +18,8 @@ public class EncodeMod extends BronzeCardMod {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        if (!card.hasTag(AutomatonMod.ENCODES)) {
-            card.tags.add(AutomatonMod.ENCODES);
+        if (!card.hasTag(downfallMod.ENCODES)) {
+            card.tags.add(downfallMod.ENCODES);
         }
     }
 

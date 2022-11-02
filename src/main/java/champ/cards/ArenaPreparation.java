@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import downfall.cardmods.RetainCardMod;
 
 public class ArenaPreparation extends AbstractChampCard {
 
@@ -30,7 +29,7 @@ public class ArenaPreparation extends AbstractChampCard {
             c.isSeen = true;
             UnlockTracker.markCardAsSeen(c.cardID);
             if (!c.selfRetain) {
-                CardModifierManager.addModifier(c, new RetainCardMod());
+                CardModifierManager.addModifier(c, new RetainMod());
             }
             makeInHand(c);
         }

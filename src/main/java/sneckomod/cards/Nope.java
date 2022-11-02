@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
 import sneckomod.actions.NopeAction;
 
@@ -13,7 +14,7 @@ public class Nope extends AbstractSneckoCard {
 
     public Nope() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
+        tags.add(downfallMod.SNEKPROOF);
         SneckoMod.loadJokeCardImage(this, "Nope.png");
     }
 

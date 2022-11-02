@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
-import expansioncontent.patches.CenterGridCardSelectScreen;
+import com.evacipated.cardcrawl.mod.stslib.patches.CenterGridCardSelectScreen;
 
 import java.util.ArrayList;
 

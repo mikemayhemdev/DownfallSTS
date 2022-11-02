@@ -4,6 +4,7 @@ import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 
 public class Separator extends AbstractBronzeCard {
 
@@ -19,7 +20,7 @@ public class Separator extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = DAMAGE;
         thisEncodes();
-        tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
+        tags.add(downfallMod.SPECIAL_COMPILE_TEXT);
     }
 
     @Override

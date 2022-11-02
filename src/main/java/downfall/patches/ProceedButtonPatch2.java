@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
-import slimebound.SlimeboundMod;
+import downfall.downfallMod;
 
 @SpirePatch(
         clz = ProceedButton.class,
@@ -19,7 +19,7 @@ public class ProceedButtonPatch2 {
 
     public static SpireReturn Prefix(ProceedButton __instance) {
         if (EvilModeCharacterSelect.evilMode) {
-            SlimeboundMod.logger.info("HIT THE DOUBLE BOSS PATCH!");
+            downfallMod.logger.info("HIT THE DOUBLE BOSS PATCH!");
             AbstractDungeon.bossList.clear();
             AbstractDungeon.bossList.add(CharBossMerchant.ID); // This and clear - just for safety.
             AbstractDungeon.bossKey = CharBossMerchant.ID;

@@ -12,11 +12,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import gremlin.actions.PseudoDamageRandomEnemyAction;
+import downfall.actions.PseudoDamageRandomEnemyAction;
 import guardian.GuardianMod;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
-import guardian.vfx.SmallLaserEffectColored;
+import downfall.vfx.SmallLaserEffectColored;
 
 public class GatlingBeam extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("GatlingBeam");

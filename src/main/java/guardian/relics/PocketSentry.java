@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
-import gremlin.actions.PseudoDamageRandomEnemyAction;
+import downfall.actions.PseudoDamageRandomEnemyAction;
 import guardian.GuardianMod;
 
 public class PocketSentry extends CustomRelic {

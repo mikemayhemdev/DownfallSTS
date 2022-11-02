@@ -2,13 +2,13 @@ package automaton.cards;
 
 import automaton.FunctionHelper;
 import basemod.BaseMod;
+import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.cardmods.RetainCardMod;
 
 import java.util.ArrayList;
 
@@ -22,7 +22,7 @@ public class BitShift extends AbstractBronzeCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = 1;
-        //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //   this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     @Override
@@ -53,7 +53,7 @@ public class BitShift extends AbstractBronzeCard {
                 public void update() {
                     isDone = true;
                     q.superFlash();
-                    CardModifierManager.addModifier(q, new RetainCardMod());
+                    CardModifierManager.addModifier(q, new RetainMod());
                 }
             });
             att(new AbstractGameAction() {

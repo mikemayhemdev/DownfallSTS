@@ -3,8 +3,8 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import sneckomod.OffclassHelper;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
@@ -16,7 +16,7 @@ public class SoulDraw extends AbstractSneckoCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
-        tags.add(SneckoMod.SNEKPROOF);
+        tags.add(downfallMod.SNEKPROOF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -38,7 +38,7 @@ public class GoopArmor extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 3;
 
 
-        //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //  this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
