@@ -1,12 +1,9 @@
-package sneckomod.actions;
+package downfall.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
-import sneckomod.powers.MudshieldPower;
-import sneckomod.relics.CleanMud;
-import sneckomod.relics.CrystallizedMud;
 
 import java.util.ArrayList;
 
@@ -27,17 +24,17 @@ public class MuddleAction extends AbstractGameAction {
     public void update() {
         isDone = true;
         if (card.cost >= 0 && !card.hasTag(downfallMod.SNEKPROOF)) {// 32
-            if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {
-                AbstractDungeon.player.getPower(MudshieldPower.POWER_ID).onSpecificTrigger();
+            if (AbstractDungeon.player.hasPower("sneckomod:MudshieldPower")) {
+                AbstractDungeon.player.getPower("sneckomod:MudshieldPower").onSpecificTrigger();
             }
             card.superFlash();
             ArrayList<Integer> numList = new ArrayList<>();
-            if (!AbstractDungeon.player.hasRelic(CrystallizedMud.ID)) {
+            if (!AbstractDungeon.player.hasRelic("sneckomod:CrystallizedMud")) {
                 if (card.costForTurn != 0) numList.add(0);
             }
             if (card.costForTurn != 1) numList.add(1);
             if (card.costForTurn != 2) numList.add(2);
-            if (!AbstractDungeon.player.hasRelic(CleanMud.ID)) {
+            if (!AbstractDungeon.player.hasRelic("sneckomod:CleanMud")) {
                 if (!this.no3) {
                     if (card.costForTurn != 3) numList.add(3);
                 }

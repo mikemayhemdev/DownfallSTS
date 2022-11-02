@@ -29,9 +29,9 @@ import downfall.downfallMod;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import static automaton.AutomatonMod.makeCardPath;
 import static collector.CollectorChar.getTorchHead;
 import static collector.CollectorChar.isFrontTorchHead;
+import static collector.CollectorMod.makeCardPath;
 
 public abstract class AbstractCollectorCard extends CustomCard {
     public enum CollectorCardSource {

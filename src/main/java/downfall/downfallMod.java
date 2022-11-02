@@ -70,7 +70,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.actions.MessageCaller;
-import downfall.cardmods.EtherealMod;
+import basemod.cardmods.EtherealMod;
 import downfall.cards.curses.*;
 import downfall.dailymods.*;
 import downfall.events.*;
@@ -88,7 +88,6 @@ import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
 import downfall.util.*;
-import guardian.relics.ShatteredFragment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

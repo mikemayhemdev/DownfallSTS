@@ -1,4 +1,4 @@
-package guardian.relics;
+package downfall.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
-import guardian.cards.CrystalShiv;
+import downfall.cards.CrystalShiv;
 
 public class ShatteredFragment extends CustomRelic {
 

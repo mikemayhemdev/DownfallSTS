@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import sneckomod.SneckoMod;
-import sneckomod.actions.MuddleHandAction;
+import downfall.actions.MuddleHandAction;
 
 public class SoulRoll extends AbstractSneckoCard {
 

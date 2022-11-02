@@ -1,6 +1,7 @@
-package guardian.cards;
+package downfall.cards;
 
 
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,12 +12,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AccuracyPower;
-import guardian.GuardianMod;
+import downfall.downfallMod;
 
-import static guardian.GuardianMod.makeBetaCardPath;
-
-public class CrystalShiv extends AbstractGuardianCard {
-    public static final String ID = GuardianMod.makeID("CrystalShiv");
+public class CrystalShiv extends CustomCard {
+    public static final String ID = downfallMod.makeID("CrystalShiv");
     public static final String NAME;
     public static final String IMG_PATH = "cards/crystalShiv.png";
     private static final CardType TYPE = CardType.ATTACK;
@@ -44,7 +43,7 @@ public class CrystalShiv extends AbstractGuardianCard {
 
 
     public CrystalShiv() {
-        super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
+        super(ID, NAME, "guardianResources/GuardianImages/cards/CrystalShiv.png", COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
         this.baseDamage = DAMAGE;
 
@@ -54,14 +53,10 @@ public class CrystalShiv extends AbstractGuardianCard {
             this.baseDamage = DAMAGE;
         }
 
-//this.sockets.add(GuardianMod.socketTypes.RED);
 
         this.exhaust = true;
-        this.socketCount = SOCKETS;
-        updateDescription();
-        loadGemMisc();
 
-        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("CrystalShiv.png"));
+        //GuardianMod.loadJokeCardImage(this, makeBetaCardPath("CrystalShiv.png"));
     }
 
     @Override
@@ -73,7 +68,6 @@ public class CrystalShiv extends AbstractGuardianCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
     }
@@ -91,17 +85,6 @@ public class CrystalShiv extends AbstractGuardianCard {
 
     }
 
-    public void updateDescription() {
-
-        if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
-            } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
-            }
-        }
-        this.initializeDescription();
-    }
 }
 
 

@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
-import sneckomod.SneckoMod;
 
 public class Syncronize extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowSyncronize");
@@ -39,7 +38,8 @@ public class Syncronize extends AbstractBossMechanicPower {
 
     @Override
     public void atStartOfTurn() {
-        this.addToBot(new MakeTempCardInDiscardAction(SneckoMod.getRandomStatus().makeStatEquivalentCopy(), 1));
+        //TODO - Random Status should be moved to Downfall package anyway
+       // this.addToBot(new MakeTempCardInDiscardAction(SneckoMod.getRandomStatus().makeStatEquivalentCopy(), 1));
 
     }
 

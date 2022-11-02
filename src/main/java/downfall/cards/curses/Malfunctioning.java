@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
-import sneckomod.OffclassHelper;
 
 
 public class Malfunctioning extends CustomCard {
@@ -52,7 +51,9 @@ public class Malfunctioning extends CustomCard {
         this.superFlash();
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(OffclassHelper.getARandomStatus(), 1));
+
+            //TODO - Tricky one.  OffclassHelper is a problem.
+            //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(OffclassHelper.getARandomStatus(), 1));
         }
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));

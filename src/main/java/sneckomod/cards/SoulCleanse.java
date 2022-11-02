@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import sneckomod.SneckoMod;
-import sneckomod.actions.MuddleHandAction;
+import downfall.actions.MuddleHandAction;
 
 public class SoulCleanse extends AbstractSneckoCard {
 

@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
-import sneckomod.actions.MuddleAction;
+import downfall.actions.MuddleAction;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
 public class RainOfDice extends AbstractSneckoCard {

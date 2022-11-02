@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.actions.MuddleAction;
 
 public class DrawThenMuddleAction extends AbstractGameAction {
     private final int bruh;
