@@ -14,7 +14,7 @@ public class EnManifest extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Manifest.ID);
 
     public EnManifest() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/manifest.png", 2, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/manifest.png", 2, cardStrings.DESCRIPTION, CardType.SKILL, downfallMod.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 13;
         baseMagicNumber = magicNumber = 2;
     }

@@ -32,7 +32,7 @@ public class ShadowCloak extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
+    public static final CardColor COLOR = downfallMod.Enums.COLOR_YELLOW;
 
     private static final int COST = 1;
 

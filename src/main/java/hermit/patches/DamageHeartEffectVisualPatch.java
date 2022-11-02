@@ -18,7 +18,7 @@ public class DamageHeartEffectVisualPatch {
     public static SpireReturn<TextureAtlas.AtlasRegion> Prefix(DamageHeartEffect __instance) {
         boolean choose_sound;
 
-        if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT) {
+        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.HERMIT) {
 
             AbstractGameAction.AttackEffect effect;
             choose_sound = MathUtils.randomBoolean();

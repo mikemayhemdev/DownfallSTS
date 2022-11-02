@@ -218,9 +218,9 @@ public class HermitMod implements
 
         System.out.println("Done subscribing");
 
-        System.out.println("Creating the color " + hermit.Enums.COLOR_YELLOW.toString());
+        System.out.println("Creating the color " + downfallMod.Enums.COLOR_YELLOW.toString());
 
-        BaseMod.addColor(hermit.Enums.COLOR_YELLOW, HERMIT_YELLOW, HERMIT_YELLOW, HERMIT_YELLOW,
+        BaseMod.addColor(downfallMod.Enums.COLOR_YELLOW, HERMIT_YELLOW, HERMIT_YELLOW, HERMIT_YELLOW,
                 HERMIT_YELLOW, HERMIT_YELLOW, HERMIT_YELLOW, HERMIT_YELLOW,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
@@ -318,13 +318,13 @@ public class HermitMod implements
 
     @Override
     public void receiveEditCharacters() {
-        System.out.println("Beginning to edit characters. " + "Add " + hermit.Enums.HERMIT.toString());
+        System.out.println("Beginning to edit characters. " + "Add " + downfallMod.Enums.HERMIT.toString());
 
-        BaseMod.addCharacter(new hermit("the Hermit", hermit.Enums.HERMIT),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, hermit.Enums.HERMIT);
+        BaseMod.addCharacter(new hermit("the Hermit",downfallMod.Enums.HERMIT),
+                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, downfallMod.Enums.HERMIT);
 
         receiveEditPotions();
-        System.out.println("Added " + hermit.Enums.HERMIT.toString());
+        System.out.println("Added " + downfallMod.Enums.HERMIT.toString());
     }
 
     // =============== /LOAD THE CHARACTER/ =================
@@ -395,9 +395,9 @@ public class HermitMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(Tonic.class, null, null, null, Tonic.POTION_ID, hermit.Enums.HERMIT);
-        BaseMod.addPotion(BlackBile.class, null, null, null, BlackBile.POTION_ID, hermit.Enums.HERMIT);
-        BaseMod.addPotion(Eclipse.class, Color.SCARLET.cpy(), Color.BLACK.cpy(), null, Eclipse.POTION_ID, hermit.Enums.HERMIT);
+        BaseMod.addPotion(Tonic.class, null, null, null, Tonic.POTION_ID, downfallMod.Enums.HERMIT);
+        BaseMod.addPotion(BlackBile.class, null, null, null, BlackBile.POTION_ID, downfallMod.Enums.HERMIT);
+        BaseMod.addPotion(Eclipse.class, Color.SCARLET.cpy(), Color.BLACK.cpy(), null, Eclipse.POTION_ID, downfallMod.Enums.HERMIT);
 
         System.out.println("Done editing potions");
     }
@@ -413,17 +413,17 @@ public class HermitMod implements
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
 
-        BaseMod.addRelicToCustomPool(new Memento(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelicToCustomPool(new RyeStalk(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelicToCustomPool(new Spyglass(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelicToCustomPool(new StraightRazor(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelicToCustomPool(new CharredGlove(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelicToCustomPool(new RedScarf(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelicToCustomPool(new BlackPowder(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelicToCustomPool(new ClaspedLocket(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelicToCustomPool(new BartenderGlass(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelicToCustomPool(new DentedPlate(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelicToCustomPool(new PetGhost(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new Memento(), downfallMod.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new RyeStalk(), downfallMod.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new Spyglass(), downfallMod.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new StraightRazor(), downfallMod.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new CharredGlove(), downfallMod.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new RedScarf(), downfallMod.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new BlackPowder(), downfallMod.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new ClaspedLocket(), downfallMod.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new BartenderGlass(), downfallMod.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new DentedPlate(), downfallMod.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new PetGhost(), downfallMod.Enums.COLOR_YELLOW);
 
 
         BaseMod.addRelic(new BrassTacks(), RelicType.SHARED);
@@ -680,7 +680,7 @@ public class HermitMod implements
                 FromBeyond.ID,
                 DeadMansHand.ID,
 
-                hermit.Enums.HERMIT
+                downfallMod.Enums.HERMIT
         );
     }
 }

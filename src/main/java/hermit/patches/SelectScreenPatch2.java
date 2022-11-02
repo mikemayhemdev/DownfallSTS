@@ -21,7 +21,7 @@ public class SelectScreenPatch2 {
 
     @SpirePrefixPatch
     public static SpireReturn SelectionPrePatch(HandCardSelectScreen reg) {
-        if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT) {
+        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.HERMIT) {
             SelectScreenPatch.handClone = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
             Iterator var1 = AbstractDungeon.player.hand.group.iterator();

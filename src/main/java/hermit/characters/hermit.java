@@ -9,7 +9,6 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.esotericsoftware.spine.Slot;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -19,13 +18,13 @@ import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import downfall.downfallMod;
 import hermit.cards.Covet;
 import hermit.cards.Defend_Hermit;
 import hermit.cards.Snapshot;
@@ -42,7 +41,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static hermit.HermitMod.*;
-import static hermit.characters.hermit.Enums.COLOR_YELLOW;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
 //and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
@@ -57,16 +55,6 @@ public class hermit extends CustomPlayer {
     // These are all necessary for creating a character. If you want to find out where and how exactly they are used
     // in the basegame (for fun and education) Ctrl+click on the PlayerClass, CardColor and/or LibraryType below and go down the
     // Ctrl+click rabbit hole
-
-    public static class Enums {
-        @SpireEnum
-        public static AbstractPlayer.PlayerClass HERMIT;
-        @SpireEnum(name = "HERMIT_YELLOW") // These two HAVE to have the same absolutely identical name.
-        public static AbstractCard.CardColor COLOR_YELLOW;
-        @SpireEnum(name = "HERMIT_YELLOW")
-        @SuppressWarnings("unused")
-        public static CardLibrary.LibraryType LIBRARY_COLOR;
-    }
 
     // =============== CHARACTER ENUMERATORS  =================
 
@@ -235,7 +223,7 @@ public class hermit extends CustomPlayer {
     // Should return the card color enum to be associated with your character.
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return COLOR_YELLOW;
+        return downfallMod.Enums.COLOR_YELLOW;
     }
 
     // Should return a color object to be used to color the trail of moving cards

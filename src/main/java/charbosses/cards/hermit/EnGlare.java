@@ -16,7 +16,7 @@ public class EnGlare extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Glare.ID);
 
     public EnGlare() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/glare.png", 0, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEBUFF);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/glare.png", 0, cardStrings.DESCRIPTION, CardType.SKILL, downfallMod.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEBUFF);
         baseMagicNumber = magicNumber = 1;
     }
 

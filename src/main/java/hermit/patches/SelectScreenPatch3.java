@@ -18,7 +18,7 @@ public class SelectScreenPatch3 {
             localvars = {}
     )
     public static void Insert() {
-        if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT) {
+        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.HERMIT) {
             SelectScreenPatch.ResetHand();
         }
     }

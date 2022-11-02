@@ -39,7 +39,7 @@ public class Manifest extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
+    public static final CardColor COLOR = downfallMod.Enums.COLOR_YELLOW;
     public static final int UPGRADE_PLUS_BLOCK = 4;
 
 

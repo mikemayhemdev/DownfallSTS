@@ -16,7 +16,7 @@ public class EnMaintenance extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("hermit:BossMaintenance");
 
     public EnMaintenance() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/maintenance.png", 2, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/maintenance.png", 2, cardStrings.DESCRIPTION, CardType.SKILL, downfallMod.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         baseMagicNumber = magicNumber = 3;
     }
 

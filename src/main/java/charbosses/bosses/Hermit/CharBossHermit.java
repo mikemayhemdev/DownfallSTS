@@ -38,7 +38,7 @@ public class CharBossHermit extends AbstractCharBoss {
     private float fireTimer = 0.0F;
 
     public CharBossHermit() {
-        super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, -20.0f, hermit.Enums.HERMIT);
+        super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, -20.0f, downfallMod.Enums.HERMIT);
         this.energyOrb = new EnergyOrbHermit();
         this.energy = new EnemyEnergyManager(3);
         loadAnimation(

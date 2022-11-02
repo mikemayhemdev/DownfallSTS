@@ -108,8 +108,6 @@ public class ChampMod implements
     @SpireEnum
     public static AbstractCard.CardTags FINISHER;
     @SpireEnum
-    public static AbstractCard.CardTags TECHNIQUE;
-    @SpireEnum
     public static AbstractCard.CardTags COMBO;
     @SpireEnum
     public static AbstractCard.CardTags COMBODEFENSIVE;

@@ -16,7 +16,7 @@ import static hermit.HermitMod.makeID;
 
 public class DamageHeartEffectAudioPatch {
     public static SpireReturn<Void> Prefix(DamageHeartEffect __instance) {
-        if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT) {
+        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.HERMIT) {
             CardCrawlGame.sound.playV(makeID("GUN1"), 1.25f); // Sound Effect
 
             return SpireReturn.Return();

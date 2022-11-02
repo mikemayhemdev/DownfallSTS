@@ -18,7 +18,7 @@ public class EnGhostlyPresence extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(GhostlyPresence.ID);
 
     public EnGhostlyPresence() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/ghostly_presence.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_DEBUFF);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/ghostly_presence.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, downfallMod.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_DEBUFF);
         this.baseBlock = 8;
         baseMagicNumber = magicNumber = 1;
     }

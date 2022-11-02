@@ -33,7 +33,6 @@ public class EvilModeCharacterOption {
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, CharacterOption.TEXT[0], TEXT[3] + TEXT[0]);
                 }
-                //TODO - This should be fine if we move the Enums to DownfallMod.
             } else if (__instance.c.chosenClass == downfallMod.Enums.THE_CHAMP) {
                 if (UnlockTracker.isCharacterLocked("Hexaghost")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, CharacterOption.TEXT[0], TEXT[4] + TEXT[0]);

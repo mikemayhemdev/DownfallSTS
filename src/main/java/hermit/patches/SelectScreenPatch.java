@@ -24,7 +24,7 @@ public class SelectScreenPatch {
 
     @SpirePostfixPatch
     public static void SelectionPostPatch(HandCardSelectScreen reg) {
-        if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT && (InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed())) {
+        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.HERMIT && (InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed())) {
             //SelectScreenPatch.ResetHand();
         }
     }

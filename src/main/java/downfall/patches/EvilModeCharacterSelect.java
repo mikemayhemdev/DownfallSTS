@@ -24,7 +24,6 @@ import java.util.List;
 
 import static downfall.downfallMod.crossoverCharacters;
 import static downfall.downfallMod.crossoverModCharacters;
-import static hermit.characters.hermit.Enums.HERMIT;
 
 public class EvilModeCharacterSelect {
     public static boolean evilMode = false;
@@ -62,7 +61,7 @@ public class EvilModeCharacterSelect {
                             basegameOptions.add(o);
                         break;
                     default:
-                        if (o.c.chosenClass == HERMIT) {
+                        if (o.c.chosenClass == downfallMod.Enums.HERMIT) {
                             if (crossoverCharacters)
                                 basegameOptions.add(o);
                             break;

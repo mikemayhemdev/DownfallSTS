@@ -16,7 +16,7 @@ public class EnLowProfile extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(LowProfile.ID);
 
     public EnLowProfile() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/low_profile.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/low_profile.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, downfallMod.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 7;
         baseMagicNumber = magicNumber = 4;
     }

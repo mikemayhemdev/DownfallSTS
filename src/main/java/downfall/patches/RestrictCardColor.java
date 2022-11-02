@@ -10,7 +10,7 @@ import hermit.characters.hermit;
 
 @SpirePatch(clz = CardLibrary.class, method = "getAnyColorCard", paramtypez = {AbstractCard.CardRarity.class})
 public class RestrictCardColor {
-    public static AbstractCard.CardColor[] vanillaColors = new AbstractCard.CardColor[]{AbstractCard.CardColor.RED, AbstractCard.CardColor.GREEN, AbstractCard.CardColor.BLUE, AbstractCard.CardColor.PURPLE, AbstractCard.CardColor.COLORLESS, AbstractCard.CardColor.CURSE, hermit.Enums.COLOR_YELLOW};
+    public static AbstractCard.CardColor[] vanillaColors = new AbstractCard.CardColor[]{AbstractCard.CardColor.RED, AbstractCard.CardColor.GREEN, AbstractCard.CardColor.BLUE, AbstractCard.CardColor.PURPLE, AbstractCard.CardColor.COLORLESS, AbstractCard.CardColor.CURSE, downfallMod.Enums.COLOR_YELLOW};
 
     @SpireInsertPatch(rloc = 10, localvars = {"anyCard"})
     public static void Insert(AbstractCard.CardRarity rarity, CardGroup anyCard) {

@@ -6,8 +6,6 @@ Evil Mode alternate gameplay run.  This includes Bosses, Events,
 Event Override patches, and other things that only appear during Evil Runs.
  */
 
-import automaton.AutomatonChar;
-import automaton.AutomatonMod;
 import automaton.EasyInfoDisplayPanel;
 import automaton.SuperTip;
 import automaton.cardmods.EncodeMod;
@@ -25,7 +23,6 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import champ.ChampChar;
 import champ.ChampMod;
 import champ.cards.ModFinisher;
 import champ.powers.LastStandModPower;
@@ -38,7 +35,6 @@ import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
-import collector.CollectorMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -104,38 +100,25 @@ import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
 import downfall.util.*;
-import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
-import gremlin.GremlinMod;
 import gremlin.cards.Wizardry;
-import gremlin.characters.GremlinCharacter;
 import gremlin.relics.WizardHat;
 import gremlin.relics.WizardStaff;
-import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
-import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
-import hermit.HermitMod;
 import hermit.actions.MessageCaller;
 import slimebound.SlimeboundMod;
-import slimebound.characters.SlimeboundCharacter;
-import sneckomod.SneckoMod;
-import sneckomod.TheSnecko;
 import sneckomod.cards.unknowns.*;
 import sneckomod.util.ColorfulCardReward;
 import sneckomod.util.UpgradedUnknownReward;
 import theHexaghost.HexaMod;
-import theHexaghost.TheHexaghost;
 import theHexaghost.util.SealSealReward;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static reskinContent.reskinContent.unlockAllReskin;
@@ -518,19 +501,30 @@ public class downfallMod implements
 
     @Override
     public void receiveEditKeywords() {
-        loadModKeywords(HexaMod.getModID(), otherPackagePaths.PACKAGE_HEXAGHOST);
-        loadModKeywords(expansionContentMod.getModID(), otherPackagePaths.PACKAGE_EXPANSION);
-        loadModKeywords(SneckoMod.getModID(), otherPackagePaths.PACKAGE_SNECKO);
-        loadModKeywords(SlimeboundMod.getModID(), otherPackagePaths.PACKAGE_SLIME);
-        loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
-        //TODO - Migrate ModID declarations to Downfall Package?
-        loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
-        loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
-        loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
-        loadModKeywords(CollectorMod.getModID(), otherPackagePaths.PACKAGE_COLLECTOR);
-        loadModKeywords(HermitMod.getModID(), otherPackagePaths.PACKAGE_HERMIT);
+        loadModKeywords(hexaModID, otherPackagePaths.PACKAGE_HEXAGHOST);
+        loadModKeywords(expansionContentModID, otherPackagePaths.PACKAGE_EXPANSION);
+        loadModKeywords(sneckoModID, otherPackagePaths.PACKAGE_SNECKO);
+        loadModKeywords(slimeboundModID, otherPackagePaths.PACKAGE_SLIME);
+        loadModKeywords(guardianModID, otherPackagePaths.PACKAGE_GUARDIAN);
+        // These dupes of the mod IDs can be used anywhere we currently import. They're hardcoded since we'll never change them.
+        loadModKeywords(champModID, otherPackagePaths.PACKAGE_CHAMP);
+        loadModKeywords(automatonModID, otherPackagePaths.PACKAGE_AUTOMATON);
+        loadModKeywords(gremlinsModID, otherPackagePaths.PACKAGE_GREMLIN);
+        loadModKeywords(collectorModID, otherPackagePaths.PACKAGE_COLLECTOR);
+        loadModKeywords(hermitModID, otherPackagePaths.PACKAGE_HERMIT);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
     }
+
+    public static String hexaModID = "hexamod";
+    public static String expansionContentModID = "expansioncontent";
+    public static String sneckoModID = "sneckomod";
+    public static String slimeboundModID = "slimeboundmod";
+    public static String guardianModID = "guardianmod";
+    public static String champModID = "champ";
+    public static String automatonModID = "bronze";
+    public static String gremlinsModID = "gremlin";
+    public static String collectorModID = "collector";
+    public static String hermitModID = "hermit";
 
 
     public static AbstractCard getRandomDownfallCurse() {
@@ -1061,8 +1055,6 @@ public class downfallMod implements
                 .create());
 
 
-        //TODO - How can we check the ChampChar here without loading the package?  ID?  Move ALL character enums into DownfallMod?
-
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil.ID, Colosseum_Evil.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode && !(AbstractDungeon.player.chosenClass.equals(Enums.THE_CHAMP)))
@@ -1500,16 +1492,20 @@ public class downfallMod implements
 
     }
 
+    private static AbstractPlayer.PlayerClass downfallClasses[] = {
+            Enums.SLIMEBOUND,
+            Enums.GUARDIAN,
+            Enums.THE_SPIRIT,
+            Enums.THE_CHAMP,
+            Enums.THE_AUTOMATON,
+            Enums.THE_COLLECTOR,
+            Enums.THE_SNECKO,
+            Enums.GREMLIN,
+            Enums.HERMIT
+    };
 
     public static boolean isDownfallCharacter(AbstractPlayer p) {
-        return p instanceof SlimeboundCharacter ||
-                p instanceof TheHexaghost ||
-                p instanceof GuardianCharacter ||
-                p instanceof TheSnecko ||
-                //TODO - Need to be able to check this without loading package
-                p instanceof ChampChar ||
-                p instanceof AutomatonChar ||
-                p instanceof GremlinCharacter || p instanceof hermit.characters.hermit;
+        return Arrays.stream(downfallClasses).anyMatch(q -> q.equals(p.chosenClass));
     }
 
 
@@ -1957,5 +1953,16 @@ public class downfallMod implements
         @SpireEnum(name = "HEXA_GHOST_PURPLE")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR5;
+
+        @SpireEnum
+        public static AbstractPlayer.PlayerClass HERMIT;
+        @SpireEnum(name = "HERMIT_YELLOW") // These two HAVE to have the same absolutely identical name.
+        public static AbstractCard.CardColor COLOR_YELLOW;
+        @SpireEnum(name = "HERMIT_YELLOW")
+        @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_COLOR6;
     }
+
+    @SpireEnum
+    public static AbstractCard.CardTags TECHNIQUE;
 }

@@ -18,7 +18,7 @@ public class EnWideOpen extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(WideOpen.ID);
 
     public EnWideOpen() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/wide_open.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/wide_open.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, downfallMod.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
         this.baseDamage = 6;
         baseMagicNumber = magicNumber = 1;
     }

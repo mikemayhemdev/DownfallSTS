@@ -13,7 +13,7 @@ public class EnCovet extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Covet.ID);
 
     public EnCovet() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/covet.png", 0, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.NONE);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/covet.png", 0, cardStrings.DESCRIPTION, CardType.SKILL, downfallMod.Enums.COLOR_YELLOW, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.NONE);
         baseMagicNumber = magicNumber = 1;
     }
 

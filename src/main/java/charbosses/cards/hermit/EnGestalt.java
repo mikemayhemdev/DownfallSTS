@@ -18,7 +18,7 @@ public class EnGestalt extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Gestalt.ID);
 
     public EnGestalt() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/gestalt.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/gestalt.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, downfallMod.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         baseMagicNumber = magicNumber = 2;
     }
 

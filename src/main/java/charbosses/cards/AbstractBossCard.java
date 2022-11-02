@@ -137,7 +137,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.intent = intent;
 
         if (isCustomCard) {
-            if (color == hermit.Enums.COLOR_YELLOW) {
+            if (color == downfallMod.Enums.COLOR_YELLOW) {
                 this.portrait = new TextureAtlas.AtlasRegion(new Texture(img), 0, 0, 250, 190);
                 this.portraitImg = new Texture(img);
             } else {

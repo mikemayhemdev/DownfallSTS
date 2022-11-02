@@ -13,7 +13,7 @@ public class EnLoneWolf extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(LoneWolf.ID);
 
     public EnLoneWolf() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/lone_wolf.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.NONE);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/lone_wolf.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, downfallMod.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.NONE);
     }
 
     @Override

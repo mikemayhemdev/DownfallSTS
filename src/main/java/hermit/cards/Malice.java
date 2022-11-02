@@ -53,7 +53,7 @@ public class Malice extends AbstractHermitCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
+    public static final CardColor COLOR = downfallMod.Enums.COLOR_YELLOW;
 
     private static final int COST = 2;
     private static final int DAMAGE = 16;

@@ -15,7 +15,7 @@ public class SelectScreenPatch5 {
 
     @SpirePostfixPatch
     public static void SelectionPostPatch(HandCardSelectScreen reg) {
-        if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT) {
+        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.HERMIT) {
             SelectScreenPatch.ResetHand();
         }
     }
