@@ -23,9 +23,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import downfall.util.TextureLoader;
-import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -39,9 +39,9 @@ public class EnSummonMushrooms extends AbstractBossCard {
     }
 
     public EnSummonMushrooms() {
-        super(ID, cardStrings.NAME, expansionContentMod.makeCardPath("SummonMushrooms.png"), 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
-        portrait = TextureLoader.getTextureAsAtlasRegion(expansionContentMod.makeCardPath("SummonMushrooms.png"));
-        portraitImg = TextureLoader.getTexture(expansionContentMod.makeCardPath("SummonMushrooms.png"));
+        super(ID, cardStrings.NAME, downfallMod.makeCardPath("SummonMushrooms.png"), 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+        portrait = TextureLoader.getTextureAsAtlasRegion(downfallMod.makeCardPath("SummonMushrooms.png"));
+        portraitImg = TextureLoader.getTexture(downfallMod.makeCardPath("SummonMushrooms.png"));
 
     }
 

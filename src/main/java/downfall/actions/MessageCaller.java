@@ -7,7 +7,7 @@ import downfall.downfallMod;
 import downfall.tutorials.CharbossTutorials;
 import downfall.tutorials.GuardianTutorials;
 import downfall.tutorials.HexaghostTutorials;
-import hermit.util.HermitTutorials;
+import downfall.util.HermitTutorials;
 
 import java.io.IOException;
 

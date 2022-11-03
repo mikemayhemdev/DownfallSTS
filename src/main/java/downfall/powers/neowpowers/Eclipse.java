@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import basemod.cardmods.EtherealMod;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
-import hermit.cards.ImpendingDoom;
 
 public class Eclipse extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowEclipse");
@@ -39,9 +38,13 @@ public class Eclipse extends AbstractBossMechanicPower {
     @Override
     public void atStartOfTurn() {
         flash();
+        //TODO - we can pluck this from the Cardlibrary and make a copy right?
+        /*
         AbstractCard q = new ImpendingDoom();
         CardModifierManager.addModifier(q, new EtherealMod());
         addToBot(new MakeTempCardInHandAction(q));
+
+         */
     }
 
     @Override

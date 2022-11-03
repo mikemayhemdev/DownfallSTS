@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
 import downfall.patches.RewardItemTypeEnumPatch;
-import expansioncontent.expansionContentMod;
-import expansioncontent.patches.ShopBossPatch;
 
 import java.util.ArrayList;
 
@@ -51,7 +49,7 @@ public class BossCardReward extends CustomReward {
     public static AbstractCard getBossCard() {
         ArrayList<AbstractCard> potentialCardsList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.hasTag(expansionContentMod.STUDY) && ShopBossPatch.okayToSpawn(q)) {
+            if (q.hasTag(downfallMod.STUDY)) {
                 potentialCardsList.add(q);
             }
         }

@@ -3,7 +3,7 @@ package expansioncontent.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import expansioncontent.expansionContentMod;
+import downfall.downfallMod;
 import expansioncontent.powers.VexVinciblePower;
 
 import static expansioncontent.expansionContentMod.loadJokeCardImage;
@@ -15,7 +15,7 @@ public class InvincibleStrength extends AbstractExpansionCard {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_heart.png", "expansioncontentResources/images/1024/bg_boss_heart.png");
 
-        tags.add(expansionContentMod.STUDY);
+        tags.add(downfallMod.STUDY);
         loadJokeCardImage(this, "InvincibleStrength.png");
     }
 

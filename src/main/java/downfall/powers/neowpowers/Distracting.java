@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
+import downfall.powers.DeEnergizedPower;
 import downfall.util.TextureLoader;
-import expansioncontent.powers.DeEnergizedPower;
 
 public class Distracting extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowDistracting");

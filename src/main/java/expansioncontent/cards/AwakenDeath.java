@@ -4,7 +4,7 @@ package expansioncontent.cards;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import expansioncontent.expansionContentMod;
+import downfall.downfallMod;
 import expansioncontent.powers.AwakenDeathPower;
 
 
@@ -16,8 +16,8 @@ public class AwakenDeath extends AbstractExpansionCard {
 
     public AwakenDeath() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        tags.add(expansionContentMod.STUDY_AWAKENEDONE);
-        tags.add(expansionContentMod.STUDY);
+        tags.add(downfallMod.STUDY_AWAKENEDONE);
+        tags.add(downfallMod.STUDY);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_awakenedone.png", "expansioncontentResources/images/1024/bg_boss_awakenedone.png");
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(CardTags.HEALING);

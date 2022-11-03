@@ -2,7 +2,6 @@ package downfall.events;
 
 
 import charbosses.bosses.Defect.CharBossDefect;
-import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
@@ -94,8 +93,8 @@ public class Colosseum_Evil extends AbstractImageEvent implements CombatEvent {
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
                                 break;
                             case "downfall:Hermit":
-                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossHermit.ID);
-                                AbstractDungeon.lastCombatMetricKey = CharBossHermit.ID;
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:Hermit");
+                                AbstractDungeon.lastCombatMetricKey = "downfall:Hermit";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
                                 break;
                             default:

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
-import expansioncontent.expansionContentMod;
+import downfall.downfallMod;
 import expansioncontent.powers.StudyTheSpirePower;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class StudyTheSpire extends AbstractExpansionCard {
     private ArrayList<AbstractCard> getList() {
         ArrayList<AbstractCard> myList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.rarity != CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
+            if (q.rarity != CardRarity.SPECIAL && q.hasTag(downfallMod.STUDY)) {
                 AbstractCard r = q.makeCopy();
                 if (upgraded) {
                     r.upgrade();

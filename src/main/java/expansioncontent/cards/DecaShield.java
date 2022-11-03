@@ -68,13 +68,13 @@ public class DecaShield extends AbstractExpansionCard {
             if (this.upgraded) partner.upgrade();
             setPartner(partner);
             applyToSelf(new AddSameInstancePower(1, this.partner,
-                    downfallMod.expansioncontentModID + "Resources/images/powers/Donu84.png",
-                    downfallMod.expansioncontentModID + "Resources/images/powers/Donu32.png"));
+                    expansionContentMod.getModID() + "Resources/images/powers/Donu84.png",
+                    expansionContentMod.getModID() + "Resources/images/powers/Donu32.png"));
         } else {
             this.partner.setPartner(this);
             applyToSelf(new NextTurnExhumePower(1, this.partner,
-                    downfallMod.expansioncontentModID + "Resources/images/powers/Donu84.png",
-                    downfallMod.expansioncontentModID + "Resources/images/powers/Donu32.png"));
+                    expansionContentMod.getModID() + "Resources/images/powers/Donu84.png",
+                    expansionContentMod.getModID() + "Resources/images/powers/Donu32.png"));
         }
     }
 

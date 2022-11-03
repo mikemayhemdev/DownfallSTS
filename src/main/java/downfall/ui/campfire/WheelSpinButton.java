@@ -15,7 +15,6 @@ import downfall.downfallMod;
 import downfall.events.GremlinWheelGame_Rest;
 import downfall.relics.GremlinWheel;
 import downfall.util.TextureLoader;
-import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;
 
@@ -73,7 +72,7 @@ public class WheelSpinButton extends AbstractCampfireOption {
 
     @Override
     public void useOption() {
-        expansionContentMod.teleportToWheelTime = true;
+        downfallMod.teleportToWheelTime = true;
     }
 
     @Override

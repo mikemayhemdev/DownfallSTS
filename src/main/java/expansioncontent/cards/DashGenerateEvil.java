@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
+import downfall.downfallMod;
 import expansioncontent.actions.RandomCardWithTagAction;
-import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;
 
@@ -28,7 +28,7 @@ public class DashGenerateEvil extends AbstractExpansionCard {
     private ArrayList<AbstractCard> getList() {
         ArrayList<AbstractCard> myList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.rarity != CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
+            if (q.rarity != CardRarity.SPECIAL && q.hasTag(downfallMod.STUDY)) {
                 AbstractCard r = q.makeCopy();
                 if (upgraded) {
                     r.upgrade();
@@ -59,7 +59,7 @@ public class DashGenerateEvil extends AbstractExpansionCard {
         //  atb(new GainBlockAction(p, p, this.block));
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
-        atb(new RandomCardWithTagAction(upgraded, expansionContentMod.STUDY, true));
+        atb(new RandomCardWithTagAction(upgraded, downfallMod.STUDY, true));
 
 
     }

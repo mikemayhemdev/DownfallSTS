@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.screens.CardRewardScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
-import expansioncontent.expansionContentMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -59,7 +59,7 @@ public class DiscoverBossAction extends AbstractGameAction {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         ArrayList<AbstractCard> selectionsList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.rarity != AbstractCard.CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
+            if (q.rarity != AbstractCard.CardRarity.SPECIAL && q.hasTag(downfallMod.STUDY)) {
                 AbstractCard r = q.makeCopy();
                 cardsList.add(r);
             }

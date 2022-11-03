@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import expansioncontent.expansionContentMod;
+import downfall.downfallMod;
 
 public class GuardianWhirl extends AbstractExpansionCard {
     public final static String ID = makeID("GuardianWhirl");
@@ -18,8 +18,8 @@ public class GuardianWhirl extends AbstractExpansionCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
 
-        tags.add(expansionContentMod.STUDY_GUARDIAN);
-        tags.add(expansionContentMod.STUDY);
+        tags.add(downfallMod.STUDY_GUARDIAN);
+        tags.add(downfallMod.STUDY);
 
         baseDamage = DAMAGE;
         this.isMultiDamage = true;

@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
-import hermit.powers.Rugged;
 
 public class OnDeathEveryoneRuggedVuln extends AbstractPower {
     public static final String POWER_ID = downfallMod.makeID("OnDeathEveryoneRuggedVuln");
@@ -39,6 +38,8 @@ public class OnDeathEveryoneRuggedVuln extends AbstractPower {
     @Override
     public void onDeath() {
         flash();
+        //TODO - Can't we make a power by ID?
+        /*
         addToBot(new ApplyPowerAction(AbstractDungeon.player, this.owner, new Rugged(AbstractDungeon.player, amount), amount));
         addToBot(new ApplyPowerAction(AbstractDungeon.player, this.owner, new VulnerablePower(AbstractDungeon.player, amount, true), amount));
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
@@ -47,6 +48,8 @@ public class OnDeathEveryoneRuggedVuln extends AbstractPower {
                 addToBot(new ApplyPowerAction(m, this.owner, new VulnerablePower(AbstractDungeon.player, amount, true), amount));
             }
         }
+
+         */
     }
 
     @Override

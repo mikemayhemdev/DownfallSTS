@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
-import expansioncontent.expansionContentMod;
-import expansioncontent.powers.DeEnergizedPower;
+import downfall.downfallMod;
+import downfall.powers.DeEnergizedPower;
 
 import static expansioncontent.expansionContentMod.loadJokeCardImage;
 
@@ -26,8 +26,8 @@ public class HyperBeam extends AbstractExpansionCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_automaton.png", "expansioncontentResources/images/1024/bg_boss_automaton.png");
 
-        tags.add(expansionContentMod.STUDY_AUTOMATON);
-        tags.add(expansionContentMod.STUDY);
+        tags.add(downfallMod.STUDY_AUTOMATON);
+        tags.add(downfallMod.STUDY);
 
         baseDamage = DAMAGE;
         this.exhaust = true;

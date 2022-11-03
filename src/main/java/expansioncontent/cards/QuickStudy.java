@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import downfall.util.SelectCardsCenteredAction;
-import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,7 +24,7 @@ public class QuickStudy extends AbstractExpansionCard {
     private ArrayList<AbstractCard> getList() {
         ArrayList<AbstractCard> myList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.rarity != CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
+            if (q.rarity != CardRarity.SPECIAL && q.hasTag(downfallMod.STUDY)) {
                 AbstractCard r = q.makeCopy();
                 if (upgraded) {
                     r.upgrade();

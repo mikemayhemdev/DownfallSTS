@@ -1,6 +1,6 @@
 package hermit.effects;
 
-import charbosses.bosses.Hermit.CharBossHermit;
+import charbossHermit.Hermit.CharBossHermit;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;

@@ -40,7 +40,7 @@ public class NeowBossSelector {
             case "downfall:Watcher":
                 return Watcher.ID;
             case "downfall:Hermit":
-                return Hermit.ID;
+                return "downfall:GauntletHermit";
 
         }
         return "";
@@ -72,7 +72,7 @@ public class NeowBossSelector {
             bosses.add(Silent.ID);
             bosses.add(Defect.ID);
             bosses.add(Watcher.ID);
-            bosses.add(Hermit.ID);
+            bosses.add("downfall:GauntletHermit");
             Collections.shuffle(bosses, AbstractDungeon.cardRandomRng.random);
             for (int i = 0; i < 3; i++) {
                 results.add(bosses.get(i));

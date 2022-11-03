@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
+import downfall.downfallMod;
 import downfall.util.BossCardReward;
-import expansioncontent.expansionContentMod;
 
 
 public class SensoryStone_Evil extends AbstractImageEvent {
@@ -112,15 +112,15 @@ public class SensoryStone_Evil extends AbstractImageEvent {
         if (c != null) {
             if (!debug) {
                 //  //downfallMod.logger.info("searching tags for " + c.name);
-                if (c.hasTag(expansionContentMod.STUDY_SLIMEBOSS)) memory = MEMORY_SLIME_TEXT;
-                else if (c.hasTag(expansionContentMod.STUDY_AUTOMATON)) memory = MEMORY_AUTOMATON_TEXT;
-                else if (c.hasTag(expansionContentMod.STUDY_AWAKENEDONE)) memory = MEMORY_ANCIENTONE_TEXT;
-                else if (c.hasTag(expansionContentMod.STUDY_CHAMP)) memory = MEMORY_CHAMP_TEXT;
-                else if (c.hasTag(expansionContentMod.STUDY_COLLECTOR)) memory = MEMORY_COLLECTOR_TEXT;
-                else if (c.hasTag(expansionContentMod.STUDY_GUARDIAN)) memory = MEMORY_GUARDIAN_TEXT;
-                else if (c.hasTag(expansionContentMod.STUDY_HEXAGHOST)) memory = MEMORY_HEXA_TEXT;
-                else if (c.hasTag(expansionContentMod.STUDY_SHAPES)) memory = MEMORY_DONUDECA_TEXT;
-                else if (c.hasTag(expansionContentMod.STUDY_TIMEEATER)) memory = MEMORY_TIMEEATER_TEXT;
+                if (c.hasTag(downfallMod.STUDY_SLIMEBOSS)) memory = MEMORY_SLIME_TEXT;
+                else if (c.hasTag(downfallMod.STUDY_AUTOMATON)) memory = MEMORY_AUTOMATON_TEXT;
+                else if (c.hasTag(downfallMod.STUDY_AWAKENEDONE)) memory = MEMORY_ANCIENTONE_TEXT;
+                else if (c.hasTag(downfallMod.STUDY_CHAMP)) memory = MEMORY_CHAMP_TEXT;
+                else if (c.hasTag(downfallMod.STUDY_COLLECTOR)) memory = MEMORY_COLLECTOR_TEXT;
+                else if (c.hasTag(downfallMod.STUDY_GUARDIAN)) memory = MEMORY_GUARDIAN_TEXT;
+                else if (c.hasTag(downfallMod.STUDY_HEXAGHOST)) memory = MEMORY_HEXA_TEXT;
+                else if (c.hasTag(downfallMod.STUDY_SHAPES)) memory = MEMORY_DONUDECA_TEXT;
+                else if (c.hasTag(downfallMod.STUDY_TIMEEATER)) memory = MEMORY_TIMEEATER_TEXT;
                 else {
                     //SHOULD NEVER HAPPEN
                     memory = DESCRIPTIONSALT[AbstractDungeon.cardRng.random(0, 8)];

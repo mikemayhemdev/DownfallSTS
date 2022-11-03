@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.city.Champ;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
-import expansioncontent.expansionContentMod;
+import downfall.downfallMod;
 
 
 public class LastStand extends AbstractExpansionCard {
@@ -27,8 +27,8 @@ public class LastStand extends AbstractExpansionCard {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_champ.png", "expansioncontentResources/images/1024/bg_boss_champ.png");
 
-        tags.add(expansionContentMod.STUDY_CHAMP);
-        tags.add(expansionContentMod.STUDY);
+        tags.add(downfallMod.STUDY_CHAMP);
+        tags.add(downfallMod.STUDY);
 
         baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;

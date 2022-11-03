@@ -26,8 +26,8 @@ public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPowe
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(downfallMod.expansioncontentModID + "Resources/images/powers/AwakenDeath84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(downfallMod.expansioncontentModID + "Resources/images/powers/AwakenDeath32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/AwakenDeath84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/AwakenDeath32.png");
 
 
     public AwakenDeathPower(AbstractCreature owner, AbstractCreature source, int amount) {

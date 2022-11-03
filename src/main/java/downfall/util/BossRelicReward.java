@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
-import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;
 
@@ -47,7 +46,7 @@ public class BossRelicReward extends RewardItem {
                 d = q.replaceAll("(.)([A-Z])", "$1 $2").substring(q.indexOf(":") + 1);
                 d = d.trim();
             }
-            tmp.add(new OctoChoiceCard(q, d, expansionContentMod.makeCardPath("QuickGuardian.png"), TEXT[1] + d + TEXT[2]));
+            tmp.add(new OctoChoiceCard(q, d, downfallMod.makeCardPath("QuickGuardian.png"), TEXT[1] + d + TEXT[2]));
         }
 
         CardGroup qqq = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);

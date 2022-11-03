@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
+import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CardColorEnumPatch;
 
 import java.util.ArrayList;
@@ -87,7 +88,7 @@ public abstract class AbstractExpansionCard extends CustomCard {
     }
 
     private static String getCorrectPlaceholderImage(String id) {
-        return makeCardPath(id.replaceAll((downfallMod.expansioncontentModID + ":"), "")) + ".png";
+        return makeCardPath(id.replaceAll((expansionContentMod.getModID() + ":"), "")) + ".png";
     }
 
     public static String makeID(String name) {
@@ -156,7 +157,7 @@ public abstract class AbstractExpansionCard extends CustomCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (hasTag(STUDY)) {
+        if (hasTag(downfallMod.STUDY)) {
             if (!downfallMod.playedBossCardThisTurn)
                 return super.canUse(p, m);
             else {

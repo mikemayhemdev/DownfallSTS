@@ -23,8 +23,8 @@ public class StudyTheSpirePower extends AbstractPower implements NonStackablePow
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 
-    private static final Texture tex84 = TextureLoader.getTexture(downfallMod.expansioncontentModID + "Resources/images/powers/StudyAutomaton84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(downfallMod.expansioncontentModID + "Resources/images/powers/StudyAutomaton32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAutomaton84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAutomaton32.png");
     public static PowerType POWER_TYPE = PowerType.BUFF;
 
     private final boolean upgraded;
@@ -68,7 +68,7 @@ public class StudyTheSpirePower extends AbstractPower implements NonStackablePow
 
     public void atStartOfTurn() {
         flash();
-        AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(this.upgraded, expansionContentMod.STUDY));
+        AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(this.upgraded, downfallMod.STUDY));
         if (this.amount <= 1) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, StudyTheSpirePower.POWER_ID));
         } else {

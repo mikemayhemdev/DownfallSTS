@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import expansioncontent.expansionContentMod;
+import downfall.downfallMod;
 
 
 public class CorruptAction extends AbstractGameAction {
@@ -53,7 +53,7 @@ public class CorruptAction extends AbstractGameAction {
                 for (int q = 0; q < i; ++q) {
                     AbstractCard c = this.p.hand.getTopCard();
                     this.p.hand.moveToExhaustPile(c);
-                    AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(upgraded, expansionContentMod.STUDY, false, true));
+                    AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(upgraded, downfallMod.STUDY, false, true));
                 }
 
                 CardCrawlGame.dungeon.checkForPactAchievement();
@@ -77,7 +77,7 @@ public class CorruptAction extends AbstractGameAction {
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 this.p.hand.moveToExhaustPile(c);
-                AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(upgraded, expansionContentMod.STUDY, false, true));
+                AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(upgraded, downfallMod.STUDY, false, true));
 
             }
 

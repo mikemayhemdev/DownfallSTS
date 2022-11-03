@@ -19,7 +19,6 @@ import basemod.interfaces.*;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.CharBossDefect;
-import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
@@ -101,7 +100,6 @@ import java.util.List;
 import java.util.Properties;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
-import static reskinContent.reskinContent.unlockAllReskin;
 
 @SpireInitializer
 public class downfallMod implements
@@ -152,6 +150,27 @@ public class downfallMod implements
     public static ArrayList<AbstractCard.CardColor> validColors = new ArrayList<>();
     @SpireEnum
     public static AbstractCard.CardTags SEAL;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_HEXAGHOST;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_AWAKENEDONE;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_TIMEEATER;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_CHAMP;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_COLLECTOR;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_SHAPES;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_GUARDIAN;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_AUTOMATON;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY_SLIMEBOSS;
+    @SpireEnum
+    public static AbstractCard.CardTags STUDY;
+    public static boolean teleportToWheelTime = false;
 
     //Config Menu Stuff
     private ModPanel settingsPanel;
@@ -281,6 +300,31 @@ public class downfallMod implements
 
     }
 
+
+    public static String getModID() {
+        return "downfall";
+    }
+
+    public static String makeCardPath(String resourcePath) {
+        return getModID() + "Resources/images/cards/" + resourcePath;
+    }
+
+    public static String makeUIPath(String resourcePath) {
+        return getModID() + "Resources/images/ui/" + resourcePath;
+    }
+
+    public static String makeRelicPath(String resourcePath) {
+        return getModID() + "Resources/images/relics/" + resourcePath;
+    }
+
+    public static String makeRelicOutlinePath(String resourcePath) {
+        return getModID() + "Resources/images/relics/outline/" + resourcePath;
+    }
+
+    public static String makePowerPath(String resourcePath) {
+        return getModID() + "Resources/images/powers/" + resourcePath;
+    }
+
     public static void initialize() {
         new downfallMod();
 
@@ -408,6 +452,9 @@ public class downfallMod implements
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_COLLECTOR));
 
             /*
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
+
 
             //downfallMod.logger.info("loading loc:" + language + " PACKAGE_GUARDIAN" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GUARDIAN));
@@ -429,9 +476,6 @@ public class downfallMod implements
 
             //downfallMod.logger.info("loading loc:" + language + " PACKAGE_GREMLIN" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GREMLIN));
-
-            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
-            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
 
              */
         } else {
@@ -525,10 +569,11 @@ public class downfallMod implements
 
     @Override
     public void receiveEditKeywords() {
-        loadModKeywords(downfallMod.expansioncontentModID, otherPackagePaths.PACKAGE_EXPANSION);
         loadModKeywords(downfallMod.collectorModID, otherPackagePaths.PACKAGE_COLLECTOR);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
         /*
+        loadModKeywords(expansionContentMod.getModID(), otherPackagePaths.PACKAGE_EXPANSION);
+        loadModKeywords(downfallMod.hermitModID, otherPackagePaths.PACKAGE_HERMIT);
         loadModKeywords(downfallMod.hexaghostModID, otherPackagePaths.PACKAGE_HEXAGHOST);
         loadModKeywords(downfallMod.sneckoModID, otherPackagePaths.PACKAGE_SNECKO);
         loadModKeywords(downfallMod.slimeboundModID, otherPackagePaths.PACKAGE_SLIME);
@@ -536,7 +581,6 @@ public class downfallMod implements
         loadModKeywords(downfallMod.champModID, otherPackagePaths.PACKAGE_CHAMP);
         loadModKeywords(downfallMod.automatonModID, otherPackagePaths.PACKAGE_AUTOMATON);
         loadModKeywords(downfallMod.gremlinModID, otherPackagePaths.PACKAGE_GREMLIN);
-        loadModKeywords(downfallMod.hermitModID, otherPackagePaths.PACKAGE_HERMIT);
 
          */
 
@@ -703,6 +747,7 @@ public class downfallMod implements
                 saveData();
             });
 
+            /*  TODO - Uncomment when building.  this one is tough to enable without the reskincontent package.
             configPos -= configStep;
             ModLabeledToggleButton unlockAllSkinBtn = new ModLabeledToggleButton(configStrings.TEXT[12],
                     350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
@@ -711,6 +756,9 @@ public class downfallMod implements
                 unlockAllReskin = button.enabled;
                 unlockAllReskin();
             });
+
+            settingsPanel.addUIElement(unlockAllSkinBtn);
+             */
 
             settingsPanel.addUIElement(contentSharingBtnCurses);
             settingsPanel.addUIElement(contentSharingBtnEvents);
@@ -722,7 +770,6 @@ public class downfallMod implements
             settingsPanel.addUIElement(sneckoNoModConfig);
             settingsPanel.addUIElement(unlockAllBtn);
             settingsPanel.addUIElement(noMusicBtn);
-            settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
 
             configPos = 750;
@@ -1242,7 +1289,8 @@ public class downfallMod implements
                         //   new Silent(),
                         new Defect(x1, y1),
                         new Watcher(x2, y2),
-                        new Hermit(x3, y3),
+                    //TODO - uncomment these when building, but can we do better?
+                        // new Hermit(x3, y3),
                 }));
 
         BaseMod.addMonster(makeID("Gauntlet2"), "Gauntlet", () -> new MonsterGroup(
@@ -1251,7 +1299,7 @@ public class downfallMod implements
                         new Silent(x1, y1),
                         //   new Defect(),
                         new Watcher(x2, y2),
-                        new Hermit(x3, y3),
+                     //   new Hermit(x3, y3),
                 }));
 
         BaseMod.addMonster(makeID("Gauntlet3"), "Gauntlet", () -> new MonsterGroup(
@@ -1260,7 +1308,7 @@ public class downfallMod implements
                         new Silent(x1, y1),
                         new Defect(x2, y2),
                         //   new Watcher(),
-                        new Hermit(x3, y3),
+                      //  new Hermit(x3, y3),
                 }));
 
         BaseMod.addMonster(makeID("Gauntlet4"), "Gauntlet", () -> new MonsterGroup(
@@ -1287,7 +1335,7 @@ public class downfallMod implements
                         //new Silent(),
                         //new Defect(),
                         new Watcher(x2, y2),
-                        new Hermit(x3, y3),
+                        //new Hermit(x3, y3),
                 }));
 
         BaseMod.addMonster(makeID("Gauntlet7"), "Gauntlet", () -> new MonsterGroup(
@@ -1314,7 +1362,7 @@ public class downfallMod implements
                         new Silent(x2, y2),
                         //new Defect(),
                         //new Watcher(),
-                        new Hermit(x3, y3),
+                        //new Hermit(x3, y3),
                 }));
 
         BaseMod.addMonster(makeID("Gauntlet10"), "Gauntlet", () -> new MonsterGroup(
@@ -1339,7 +1387,8 @@ public class downfallMod implements
         BaseMod.addMonster(CharBossSilent.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
         BaseMod.addMonster(CharBossDefect.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster(CharBossWatcher.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
-        BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
+
+       // BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
 
         BaseMod.addMonster(NeowBoss.ID, () -> new MonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
@@ -1427,7 +1476,7 @@ public class downfallMod implements
         possEncounterList.add(CharBossSilent.ID);
         possEncounterList.add(CharBossDefect.ID);
         possEncounterList.add(CharBossWatcher.ID);
-        possEncounterList.add(CharBossHermit.ID);
+       // possEncounterList.add(CharBossHermit.ID);
     }
 
     @Override

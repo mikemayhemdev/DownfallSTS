@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
-import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -66,15 +65,15 @@ public class RandomCardWithTagAction extends AbstractGameAction {
             if (c.getValue().rarity != AbstractCard.CardRarity.SPECIAL &&
                     !c.getValue().hasTag(AbstractCard.CardTags.HEALING) &&
                     c.getValue().hasTag(tag)
-                    && (!(c.getValue().hasTag(expansionContentMod.STUDY_SLIMEBOSS)
+                    && (!(c.getValue().hasTag(downfallMod.STUDY_SLIMEBOSS)
                     && AbstractDungeon.player.chosenClass == downfallMod.Enums.SLIMEBOUND))
-                    && (!(c.getValue().hasTag(expansionContentMod.STUDY_GUARDIAN)
+                    && (!(c.getValue().hasTag(downfallMod.STUDY_GUARDIAN)
                     && (AbstractDungeon.player.chosenClass == downfallMod.Enums.GUARDIAN || guardianLocked())))
-                    && (!(c.getValue().hasTag(expansionContentMod.STUDY_HEXAGHOST)
+                    && (!(c.getValue().hasTag(downfallMod.STUDY_HEXAGHOST)
                     && (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_SPIRIT || hexaLocked())))
-                    && (!(c.getValue().hasTag(expansionContentMod.STUDY_CHAMP)
+                    && (!(c.getValue().hasTag(downfallMod.STUDY_CHAMP)
                     && (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_CHAMP || champLocked())))
-                    && (!(c.getValue().hasTag(expansionContentMod.STUDY_AUTOMATON)
+                    && (!(c.getValue().hasTag(downfallMod.STUDY_AUTOMATON)
                     && (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_AUTOMATON || autoLocked())))
             ) {
                 tmp.add(c.getKey());

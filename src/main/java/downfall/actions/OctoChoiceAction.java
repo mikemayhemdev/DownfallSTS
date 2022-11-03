@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
-import expansioncontent.expansionContentMod;
-import expansioncontent.patches.CenterGridCardSelectScreen;
 
 public class OctoChoiceAction extends AbstractGameAction {
     private boolean pickCard = false;
@@ -27,6 +25,7 @@ public class OctoChoiceAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        /*  TODO - This has a lot of expansioncontentmod references and is the old OctoChoice.  Probably can just be rebuilt.
         if (funCard instanceof AbstractCard) {
             ((AbstractCard) funCard).applyPowers();
             ((AbstractCard) funCard).calculateCardDamage((AbstractMonster) target);
@@ -53,5 +52,7 @@ public class OctoChoiceAction extends AbstractGameAction {
             isDone = true;
         }
         tickDuration();
+
+         */
     }
 }

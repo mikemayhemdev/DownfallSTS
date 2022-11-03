@@ -124,9 +124,15 @@ public class NeowRezAction extends AbstractGameAction {
             return new Defect(found, -20);
         } else if (name.equals(Watcher.ID)) {
             return new Watcher(found, -20);
-        } else if (name.equals(Hermit.ID)) {
+        }
+        /*  TODO - Comment this back in for building, not sure how else we can make a new Hermit
+        else if (name.equals("downfall:GauntletHermit")) {
             return new Hermit(found, -20);
-        } else {
+        }
+
+         */
+
+        else {
             return new Ironclad(found, -20);
         }
     }

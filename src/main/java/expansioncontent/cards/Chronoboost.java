@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import expansioncontent.expansionContentMod;
+import downfall.downfallMod;
 import expansioncontent.powers.ChronoBoostPower;
 
 
@@ -16,8 +16,8 @@ public class Chronoboost extends AbstractExpansionCard {
 
     public Chronoboost() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        tags.add(expansionContentMod.STUDY_TIMEEATER);
-        tags.add(expansionContentMod.STUDY);
+        tags.add(downfallMod.STUDY_TIMEEATER);
+        tags.add(downfallMod.STUDY);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_timeeater.png", "expansioncontentResources/images/1024/bg_boss_timeeater.png");
     }
 

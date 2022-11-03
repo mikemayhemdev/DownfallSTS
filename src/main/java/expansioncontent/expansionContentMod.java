@@ -18,7 +18,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -57,27 +56,6 @@ public class expansionContentMod implements
         //EditKeywordsSubscriber,
         PostUpdateSubscriber {
 
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_HEXAGHOST;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_AWAKENEDONE;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_TIMEEATER;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_CHAMP;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_COLLECTOR;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_SHAPES;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_GUARDIAN;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_AUTOMATON;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_SLIMEBOSS;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY;
-    public static boolean teleportToWheelTime = false;
     private static String modID;
 
     public static Color BOSS_CARD_COLOR = new Color(0.443F, 0.231F, 0.286F, 1);
@@ -129,7 +107,7 @@ public class expansionContentMod implements
     }
 
     public static String getModID() {
-        return downfallMod.expansioncontentModID;
+        return "expansioncontent";
     }
 
     public static void initialize() {
@@ -185,9 +163,9 @@ public class expansionContentMod implements
 
     @Override
     public void receivePostUpdate() {
-        if (teleportToWheelTime) {
+        if (downfallMod.teleportToWheelTime) {
             WheelSpinButton.doStuff();
-            teleportToWheelTime = false;
+            downfallMod.teleportToWheelTime = false;
         }
     }
 

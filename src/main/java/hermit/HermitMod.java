@@ -246,7 +246,7 @@ public class HermitMod implements
 
 
     public static String getModID() { // NO
-        return downfallMod.hermitModID; // DOUBLE NO
+        return "hermit"; // DOUBLE NO
     } // NU-UH
 
     /*

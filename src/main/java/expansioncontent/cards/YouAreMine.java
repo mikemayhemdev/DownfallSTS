@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
-import expansioncontent.expansionContentMod;
+import downfall.downfallMod;
 
 import static expansioncontent.expansionContentMod.loadJokeCardImage;
 
@@ -25,8 +25,8 @@ public class YouAreMine extends AbstractExpansionCard {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_collector.png", "expansioncontentResources/images/1024/bg_boss_collector.png");
 
-        tags.add(expansionContentMod.STUDY_COLLECTOR);
-        tags.add(expansionContentMod.STUDY);
+        tags.add(downfallMod.STUDY_COLLECTOR);
+        tags.add(downfallMod.STUDY);
 
         baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;

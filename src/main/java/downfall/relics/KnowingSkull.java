@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
-import expansioncontent.cards.KnowingSkullWish;
+import downfall.cards.KnowingSkullWish;
 
 public class KnowingSkull extends CustomRelic {
 
