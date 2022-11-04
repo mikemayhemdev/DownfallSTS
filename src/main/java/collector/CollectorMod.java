@@ -1,51 +1,30 @@
 package collector;
 
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
-import collector.actions.FreezeAggroAction;
-import collector.cards.Collectibles.*;
-import collector.cards.CollectorCards.Attacks.*;
-import collector.cards.CollectorCards.Powers.Miser;
-import collector.cards.CollectorCards.Powers.Omen;
-import collector.cards.CollectorCards.Powers.SelfDestruct;
-import collector.cards.CollectorCards.Skills.*;
+import collector.cards.AbstractCollectorCard;
 import collector.patches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
 import collector.patches.TorchHeadPatches.MonsterIntentPatch;
 import collector.patches.TorchHeadPatches.MonsterPowerPatch;
 import collector.patches.TorchHeadPatches.MonsterTargetPatch;
 import collector.patches.TorchHeadPatches.StanceChangeParticlePatch;
-import collector.powers.GainBlockPower;
 import collector.relics.EmeraldTorch;
-import collector.util.CardFilter;
-import collector.util.CollectorSecondDamage;
 import collector.util.TargetMarker;
-import collector.vars.*;
 import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
-import downfall.util.CardIgnore;
-import javassist.CtClass;
-import javassist.Modifier;
-import javassist.NotFoundException;
-import org.clapper.util.classutil.*;
 
-import java.io.File;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
@@ -53,17 +32,13 @@ import java.util.HashMap;
 public class CollectorMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
-        // EditStringsSubscriber,
-        //EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         SetUnlocksSubscriber,
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         StartGameSubscriber,
-        PostDrawSubscriber,
-        OnPowersModifiedSubscriber,
-        PostEnergyRechargeSubscriber {
+        OnPowersModifiedSubscriber {
     public static final String SHOULDER1 = "collectorResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "collectorResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "collectorResources/images/char/mainChar/corpse.png";
@@ -149,49 +124,6 @@ public class CollectorMod implements
         return getModID() + ":" + idText;
     }
 
-    private static void autoAddCards()
-            throws URISyntaxException, IllegalAccessException, InstantiationException, NotFoundException, ClassNotFoundException {
-        ClassFinder finder = new ClassFinder();
-        URL url = CollectorMod.class.getProtectionDomain().getCodeSource().getLocation();
-        finder.add(new File(url.toURI()));
-
-        ClassFilter filter =
-                new AndClassFilter(
-                        new NotClassFilter(new InterfaceOnlyClassFilter()),
-                        new NotClassFilter(new AbstractClassFilter()),
-                        new ClassModifiersClassFilter(Modifier.PUBLIC),
-                        new CardFilter()
-                );
-        Collection<ClassInfo> foundClasses = new ArrayList<>();
-        finder.findClasses(foundClasses, filter);
-
-        for (ClassInfo classInfo : foundClasses) {
-            CtClass cls = Loader.getClassPool().get(classInfo.getClassName());
-            if (cls.hasAnnotation(CardIgnore.class)) {
-                continue;
-            }
-            boolean isCard = false;
-            CtClass superCls = cls;
-            while (superCls != null) {
-                superCls = superCls.getSuperclass();
-                if (superCls == null) {
-                    break;
-                }
-                if (superCls.getName().equals(AbstractCard.class.getName())) {
-                    isCard = true;
-                    break;
-                }
-            }
-            if (!isCard) {
-                continue;
-            }
-            System.out.println(classInfo.getClassName());
-            AbstractCard card = (AbstractCard) Loader.getClassPool().getClassLoader().loadClass(cls.getName()).newInstance();
-            BaseMod.addCard(card);
-
-        }
-    }
-
     @Override
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new CollectorChar("The Collector", downfallMod.Enums.THE_COLLECTOR), CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, downfallMod.Enums.THE_COLLECTOR);
@@ -200,137 +132,6 @@ public class CollectorMod implements
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new EmeraldTorch(), downfallMod.Enums.COLLECTOR);
-    }
-
-    //THESE ARE ALL DEAD
-    public static void ApplyRandomAffliciton(AbstractCreature target, boolean upgraded) {
-    }
-
-    public static boolean AfflictionMatch(String stringtocompare) {
-        return false;
-    }
-
-    public void ApplyRandomBoon(AbstractCreature target, boolean upgraded) {
-    }
-
-    public static AbstractPower GetRandomBoon(AbstractCreature target, boolean upgraded) {
-        return new GainBlockPower(10, target);
-    }
-
-    public static AbstractPower GetRandomAffliction(AbstractCreature target, boolean upgraded) {
-        return new GainBlockPower(10, target);
-    }
-
-    @Override
-    public void receiveEditCards() {
-        BaseMod.addDynamicVariable(new CollectorSecondDamage());
-        BaseMod.addDynamicVariable(new DuoDamage());
-        BaseMod.addDynamicVariable(new DuoBlock());
-        BaseMod.addDynamicVariable(new FrontDamage());
-        BaseMod.addDynamicVariable(new FrontBlock());
-        BaseMod.addDynamicVariable(new BackDamage());
-        BaseMod.addDynamicVariable(new BackBlock());
-        BaseMod.addDynamicVariable(new DuoMagic());
-
-        BaseMod.addCard(new Strike());
-        BaseMod.addCard(new Defend());
-        BaseMod.addCard(new Contemplate());
-        BaseMod.addCard(new SoulStitch());
-        BaseMod.addCard(new SoulHarvest());
-        BaseMod.addCard(new Bargain());
-        BaseMod.addCard(new Consign());
-        BaseMod.addCard(new CullingBlow());
-        BaseMod.addCard(new DarkSuffusion());
-        BaseMod.addCard(new Forgery());
-        BaseMod.addCard(new Fever());
-        BaseMod.addCard(new SoulForge());
-        BaseMod.addCard(new DancingLight());
-        BaseMod.addCard(new Bonfire());
-        BaseMod.addCard(new Combustibles());
-        BaseMod.addCard(new Fireball());
-        BaseMod.addCard(new Hellfire());
-        BaseMod.addCard(new FlameLash());
-        BaseMod.addCard(new FelsteelAegis());
-        BaseMod.addCard(new SelfDestruct());
-        BaseMod.addCard(new Miser());
-        BaseMod.addCard(new Omen());
-        BaseMod.addCard(new Wrack());
-        BaseMod.addCard(new TagTeam());
-        BaseMod.addCard(new Mindflare());
-        BaseMod.addCard(new ScorchingRay());
-        BaseMod.addCard(new HighStakes());
-        BaseMod.addCard(new FingerofDeath());
-        BaseMod.addCard(new PainSiphon());
-        BaseMod.addCard(new StakingAClaim());
-
-        BaseMod.addCard(new LuckyWick());
-        BaseMod.addCard(new CrookedStaff());
-        BaseMod.addCard(new CrudeShield());
-        BaseMod.addCard(new CultistFeather());
-        BaseMod.addCard(new CurledHorns());
-        BaseMod.addCard(new DefectCore());
-        BaseMod.addCard(new GremlinPoker());
-        BaseMod.addCard(new IroncladMask());
-        BaseMod.addCard(new JarWormTooth());
-        BaseMod.addCard(new LagavullinShell());
-        BaseMod.addCard(new LouseSegment());
-        BaseMod.addCard(new NobsBoneClub());
-        BaseMod.addCard(new SentryCore());
-        BaseMod.addCard(new SilentTrophy());
-        BaseMod.addCard(new SlimeSample());
-        BaseMod.addCard(new VialofOoze());
-        BaseMod.addCard(new ViciousClaws());
-        BaseMod.addCard(new WatchersStaff());
-
-        UnlockTracker.unlockCard(Strike.ID);
-        UnlockTracker.unlockCard(Defend.ID);
-        UnlockTracker.unlockCard(Contemplate.ID);
-        UnlockTracker.unlockCard(SoulStitch.ID);
-        UnlockTracker.unlockCard(SoulHarvest.ID);
-        UnlockTracker.unlockCard(Bargain.ID);
-        UnlockTracker.unlockCard(DancingLight.ID);
-        UnlockTracker.unlockCard(Consign.ID);
-        UnlockTracker.unlockCard(CullingBlow.ID);
-        UnlockTracker.unlockCard(DarkSuffusion.ID);
-        UnlockTracker.unlockCard(Combustibles.ID);
-        UnlockTracker.unlockCard(Forgery.ID);
-        UnlockTracker.unlockCard(Fever.ID);
-        UnlockTracker.unlockCard(Fireball.ID);
-        UnlockTracker.unlockCard(Hellfire.ID);
-        UnlockTracker.unlockCard(FelsteelAegis.ID);
-        UnlockTracker.unlockCard(Bonfire.ID);
-        UnlockTracker.unlockCard(SoulForge.ID);
-        UnlockTracker.unlockCard(FlameLash.ID);
-        UnlockTracker.unlockCard(Miser.ID);
-        UnlockTracker.unlockCard(SelfDestruct.ID);
-        UnlockTracker.unlockCard(Omen.ID);
-        UnlockTracker.unlockCard(Wrack.ID);
-        UnlockTracker.unlockCard(TagTeam.ID);
-        UnlockTracker.unlockCard(Mindflare.ID);
-        UnlockTracker.unlockCard(ScorchingRay.ID);
-        UnlockTracker.unlockCard(HighStakes.ID);
-        UnlockTracker.unlockCard(FingerofDeath.ID);
-        UnlockTracker.unlockCard(PainSiphon.ID);
-        UnlockTracker.unlockCard(StakingAClaim.ID);
-
-        UnlockTracker.unlockCard(LuckyWick.ID);
-        UnlockTracker.unlockCard(CrookedStaff.ID);
-        UnlockTracker.unlockCard(CrudeShield.ID);
-        UnlockTracker.unlockCard(CultistFeather.ID);
-        UnlockTracker.unlockCard(CurledHorns.ID);
-        UnlockTracker.unlockCard(DefectCore.ID);
-        UnlockTracker.unlockCard(GremlinPoker.ID);
-        UnlockTracker.unlockCard(IroncladMask.ID);
-        UnlockTracker.unlockCard(JarWormTooth.ID);
-        UnlockTracker.unlockCard(LagavullinShell.ID);
-        UnlockTracker.unlockCard(LouseSegment.ID);
-        UnlockTracker.unlockCard(NobsBoneClub.ID);
-        UnlockTracker.unlockCard(SentryCore.ID);
-        UnlockTracker.unlockCard(SilentTrophy.ID);
-        UnlockTracker.unlockCard(SlimeSample.ID);
-        UnlockTracker.unlockCard(VialofOoze.ID);
-        UnlockTracker.unlockCard(ViciousClaws.ID);
-        UnlockTracker.unlockCard(WatchersStaff.ID);
     }
 
     public void addPotions() {
@@ -345,15 +146,6 @@ public class CollectorMod implements
     public void receivePostInitialize() {
         addPotions();
         targetMarker = new TargetMarker();
-        //BaseMod.addEvent(new AddEventParams.Builder(AccursedBlacksmithAutomaton.ID, AccursedBlacksmithAutomaton.class) //Event ID//
-        //Event Character//
-        // .playerClass(AutomatonChar.Enums.THE_AUTOMATON)
-        //Existing Event to Override//
-        // .overrideEvent(AccursedBlacksmith.ID)
-        //Event Type//
-        // .eventType(EventUtils.EventType.FULL_REPLACE)
-        // .create());
-
         BaseMod.addTopPanelItem(new TopPanelExtraDeck());
     }
 
@@ -365,8 +157,6 @@ public class CollectorMod implements
     @Override
     public void receiveStartGame() {
         CollectorCollection.init();
-        //CollectorChar.TorchHeadHelper = new TorchHeadHelper();
-        //System.out.println("Torch Friend!");
     }
 
     @Override
@@ -399,15 +189,6 @@ public class CollectorMod implements
         MonsterIntentPatch.prevPlayer = null;
         MonsterPowerPatch.prevPlayer = null;
         MonsterTargetPatch.prevPlayer = null;
-
-        FreezeAggroAction.frozen = false;
-
-        receivePostEnergyRecharge();
-    }
-
-    @Override
-    public void receivePostEnergyRecharge() {
-        CollectorChar.frontChangedThisTurn = false;
     }
 
     public static CardGroup getRareCards() {
@@ -423,8 +204,10 @@ public class CollectorMod implements
     }
 
     @Override
-    public void receivePostDraw(AbstractCard abstractCard) {
-
+    public void receiveEditCards() {
+        new AutoAdd(modID)
+                .packageFilter(AbstractCollectorCard.class)
+                .setDefaultSeen(true)
+                .cards();
     }
-
 }

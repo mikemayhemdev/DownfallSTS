@@ -4,7 +4,6 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomPlayer;
 import basemod.abstracts.CustomSavable;
 import basemod.animations.SpineAnimation;
-import collector.actions.FaintAction;
 import collector.util.DuoUtils.GreyscaleShader;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;

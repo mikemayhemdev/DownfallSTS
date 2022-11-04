@@ -24,28 +24,6 @@ public class CollectorCollection implements CustomSavable<ArrayList<AbstractCard
 
     public static void init() {
         cardsList = new HashMap<>();
-        cardsList.put(GremlinWizard.ID, new CrookedStaff());
-        cardsList.put(GremlinWarrior.ID, new CrudeShield());
-        cardsList.put(Cultist.ID, new CultistFeather());
-        cardsList.put(GremlinFat.ID, new CurledHorns());
-        cardsList.put(CharBossDefect.ID, new DefectCore());
-        cardsList.put(GremlinThief.ID, new GremlinPoker());
-        cardsList.put(CharBossIronclad.ID, new IroncladMask());
-        cardsList.put(JawWorm.ID, new JarWormTooth());
-        cardsList.put(Lagavulin.ID, new LagavullinShell());
-        cardsList.put(LouseNormal.ID, new LouseSegment());
-        cardsList.put(LouseDefensive.ID, new LouseSegment());
-        cardsList.put(GremlinNob.ID, new NobsBoneClub());
-        cardsList.put(Sentry.ID, new SentryCore());
-        cardsList.put(CharBossSilent.ID, new SilentTrophy());
-        cardsList.put(AcidSlime_L.ID, new SlimeSample());
-        cardsList.put(AcidSlime_M.ID, new SlimeSample());
-        cardsList.put(AcidSlime_S.ID, new SlimeSample());
-        cardsList.put(SpikeSlime_L.ID, new VialofOoze());
-        cardsList.put(SpikeSlime_M.ID, new VialofOoze());
-        cardsList.put(SpikeSlime_S.ID, new VialofOoze());
-        cardsList.put(GremlinTsundere.ID, new ViciousClaws());
-        cardsList.put(CharBossWatcher.ID, new WatchersStaff());
         collection = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         combatCollection = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         if (collection.isEmpty()) {
@@ -74,7 +52,7 @@ public class CollectorCollection implements CustomSavable<ArrayList<AbstractCard
         if (cardsList.containsKey(collectedMonster.id)) {
             AbstractCard NewCollectible = cardsList.get(collectedMonster.id).makeStatEquivalentCopy();
             CollectionReward.collectPool.add(NewCollectible);
-        } else CollectionReward.collectPool.add(new LuckyWick());
+        }
     }
 
     @Override

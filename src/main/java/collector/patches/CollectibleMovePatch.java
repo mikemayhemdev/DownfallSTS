@@ -19,9 +19,6 @@ public class CollectibleMovePatch {
         if (q instanceof AbstractCollectibleCard && __instance.duration < 0.0F) {
             AbstractDungeon.player.masterDeck.removeCard(q);
             CollectorCollection.collection.addToBottom(q);
-            if (q instanceof SentryCore && AbstractDungeon.player.maxOrbs < 3) {
-                AbstractDungeon.player.maxOrbs += 3;
-            }
         }
     }
 }

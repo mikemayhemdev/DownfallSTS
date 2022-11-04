@@ -2,9 +2,7 @@ package collector;
 
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomPlayer;
-import collector.actions.AddAggroAction;
-import collector.actions.ApplyAggroAction;
-import collector.cards.CollectorCards.AbstractCollectorCard;
+import collector.cards.AbstractCollectorCard;
 import collector.cards.CollectorCards.Attacks.SoulHarvest;
 import collector.cards.CollectorCards.Attacks.SoulStitch;
 import collector.cards.CollectorCards.Attacks.Strike;
@@ -67,9 +65,7 @@ public class CollectorChar extends CustomPlayer {
     private final String atlasURL = "collectorResources/images/char/mainChar/skeleton.atlas";
     private final String jsonURL = "collectorResources/images/char/mainChar/skeleton.json";
     public static TorchChar torch;
-    public AbstractCreature front = this;
     private float fireTimer = 0.0F;
-    public static boolean frontChangedThisTurn = false;
 
     // The aggro of Dragon
     public int aggro;
@@ -120,15 +116,7 @@ public class CollectorChar extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            retVal.add(Strike.ID);
-        }
-        for (int i = 0; i < 4; i++) {
-            retVal.add(Defend.ID);
-        }
-        retVal.add(Contemplate.ID);
-        retVal.add(SoulStitch.ID);
-        retVal.add(SoulHarvest.ID);
+
         return retVal;
     }
 
@@ -273,39 +261,6 @@ public class CollectorChar extends CustomPlayer {
         }
     }
 
-    public void renderOnlyDT(SpriteBatch sb) {
-        renderHealth(sb);
-
-        sb.setColor(Color.WHITE);
-        sb.draw(img, drawX - img.getWidth() * Settings.scale / 2.0F + animX, drawY, img.getWidth() * Settings.scale, img.getHeight() * Settings.scale, 0, 0, img.getWidth(), img.getHeight(), flipHorizontal, flipVertical);
-        hb.render(sb);
-        healthHb.render(sb);
-    }
-
-    @Override
-    public void renderReticle(SpriteBatch sb) {
-        if (isReticleAttackIcon) {
-            this.reticleRendered = true;
-            attackIconColor.a = this.reticleAlpha;
-            sb.setColor(attackIconColor);
-            sb.draw(getAttackIcon(), this.hb.cX - 64, this.hb.cY - 64, 64.0F, 64.0F, 128.0F, 128.0F, Settings.scale, Settings.scale, 0.0F, 0, 0, 128, 128, false, false);
-        }
-    }
-
-    @Override
-    public void renderHand(SpriteBatch sb) {
-        super.renderHand(sb);
-        if (this.hoveredCard != null && (this.isDraggingCard || this.inSingleTargetMode) && this.isHoveringDropZone) {
-            if (hoveredCard instanceof AbstractCollectorCard) {
-                isReticleAttackIcon = hoveredCard.type == AbstractCard.CardType.ATTACK;
-            } else {
-                isReticleAttackIcon = false;
-            }
-        } else {
-            isReticleAttackIcon = false;
-        }
-    }
-
     @Override
     public void renderPlayerBattleUi(SpriteBatch sb) {
         super.renderPlayerBattleUi(sb);
@@ -316,55 +271,6 @@ public class CollectorChar extends CustomPlayer {
     public void preBattlePrep() {
         super.preBattlePrep();
         torch.preBattlePrep();
-        front = this;
-        setAggro(1);
-        if (AbstractDungeon.player.hasRelic(EmeraldTorch.ID)) {
-            AbstractDungeon.actionManager.addToBottom(new AddAggroAction(1));
-        }
-        frontChangedThisTurn = false;
-    }
-
-    public void setFront(AbstractCreature newTarget) {
-        if (front != newTarget) {
-            front = newTarget;
-            PowerBuffEffect effect = new PowerBuffEffect(front.hb.cX - front.animX, front.hb.cY + front.hb.height / 2.0F + 60.0f * Settings.scale,
-                    ApplyAggroAction.TEXT[front == this ? 2 : 3]);
-            ReflectionHacks.setPrivate(effect, PowerBuffEffect.class, "targetColor", new Color(0.7f, 0.75f, 0.7f, 1.0f));
-            AbstractDungeon.effectsQueue.add(effect);
-            MonsterGroup group = AbstractDungeon.getMonsters();
-            if (group != null) {
-                for (AbstractMonster m : group.monsters) {
-                    if (!m.isDeadOrEscaped()) {
-                        AbstractDungeon.effectsQueue.add(new FlashTargetArrowEffect(m, getCurrentTarget(m)));
-                    }
-                }
-            }
-
-            updateIntents();
-            CollectorMod.targetMarker.move(newTarget);
-            CollectorMod.targetMarker.flash();
-
-            frontChangedThisTurn = true;
-            AbstractDungeon.player.hand.applyPowers();
-            AbstractDungeon.player.hand.glowCheck();
-        }
-    }
-
-
-    public void setAggro(int aggro) {
-        TorchAggro = aggro;
-        if (TorchAggro > 0) {
-            setFront(torch);
-        } else {
-            setFront(this);
-        }
-        if (AbstractDungeon.player != null) {
-            AbstractDungeon.player.hand.applyPowers();
-        }
-    }
-
-    public void addAggro(int delta) {
-        setAggro(TorchAggro + delta);
     }
 
     public void updateIntents() {
@@ -373,26 +279,6 @@ public class CollectorChar extends CustomPlayer {
                 m.applyPowers();
             }
         }
-    }
-
-    @Override
-    public void useCard(AbstractCard c, AbstractMonster monster, int energyOnUse) {
-        attackAnimation = true;
-        dragonAttackAnimation = false;
-        super.useCard(c, monster, energyOnUse);
-        attackAnimation = true;
-        dragonAttackAnimation = false;
-    }
-
-    @Override
-    public void useFastAttackAnimation() {
-        if (dragonAttackAnimation) {
-            torch.useFastAttackAnimation();
-        }
-        if (attackAnimation) {
-            super.useFastAttackAnimation();
-        }
-        attackAnimation = true;
     }
 
     @Override
@@ -437,70 +323,5 @@ public class CollectorChar extends CustomPlayer {
     public void onVictory() {
         super.onVictory();
         torch.onVictory();
-    }
-
-    public Texture getAttackIcon() {
-        if (attackerIcon == null) {
-            attackerIcon = new Texture(CollectorMod.makePath("ui/Attacker.png"));
-        }
-        return attackerIcon;
-    }
-
-    public static TorchChar getTorchHead() {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
-            return torch;
-        }
-        return null;
-    }
-
-    public static TorchChar getLivingTorchHead() {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
-            TorchChar dragon = torch;
-            if (dragon.isDead) return null;
-            return dragon;
-        }
-        return null;
-    }
-
-    public static boolean isFrontTorchHead() {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
-            if (torch.isDead) return false;
-            return ((CollectorChar) AbstractDungeon.player).front == torch;
-        }
-        return false;
-    }
-
-    public static boolean isRearYou() {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
-            TorchChar dragon = torch;
-            if (dragon.isDead) return true;
-            return ((CollectorChar) AbstractDungeon.player).front != AbstractDungeon.player;
-        }
-        return true;
-    }
-
-    public static AbstractCreature getCurrentTarget(AbstractCreature monster) {
-
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR) && !torch.isDead) {
-            return ((CollectorChar) AbstractDungeon.player).front;
-        } else {
-            return AbstractDungeon.player;
-        }
-    }
-
-    public static boolean isSolo() {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
-            return torch.isDead;
-        } else {
-            return true;
-        }
-    }
-
-    public static int getAggro() {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
-            return TorchAggro;
-        } else {
-            return 0;
-        }
     }
 }
