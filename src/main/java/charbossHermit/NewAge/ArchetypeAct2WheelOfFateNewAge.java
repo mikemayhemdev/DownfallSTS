@@ -9,7 +9,6 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnNecronomicurse;
-import charbossHermit.Hermit.hermit.*;
 import charbosses.relics.CBR_Necronomicon;
 import charbosses.relics.CBR_NeowsBlessing;
 import charbosses.relics.CBR_PenNib;

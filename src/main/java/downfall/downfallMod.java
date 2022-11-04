@@ -451,11 +451,11 @@ public class downfallMod implements
             //downfallMod.logger.info("loading loc:" + language + " PACKAGE_COLLECTOR" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_COLLECTOR));
 
-            /*
             //downfallMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
 
 
+            /*
             //downfallMod.logger.info("loading loc:" + language + " PACKAGE_GUARDIAN" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GUARDIAN));
 

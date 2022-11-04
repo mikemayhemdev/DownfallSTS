@@ -7,7 +7,6 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.colorless.EnMadness;
 import charbosses.cards.curses.EnInjury;
-import charbossHermit.Hermit.hermit.*;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;

@@ -9,7 +9,6 @@ import charbosses.cards.colorless.EnMasterOfStrategy;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.curses.EnPain;
-import charbossHermit.Hermit.hermit.*;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
