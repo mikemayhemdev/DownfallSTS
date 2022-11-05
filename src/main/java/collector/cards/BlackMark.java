@@ -22,6 +22,7 @@ public class BlackMark extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        super.use(p,m);
         order();
         applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
 

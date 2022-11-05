@@ -18,6 +18,7 @@ public class SoulStitch extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        super.use(p,m);
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         applySuffering(m, magicNumber);
 

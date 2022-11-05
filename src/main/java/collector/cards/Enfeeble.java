@@ -21,6 +21,7 @@ public class Enfeeble extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        super.use(p,m);
         applyToEnemy(m, new WeakPower(m, 1, false));
         applyToEnemy(m, new VulnerablePower(m, 1, false));
         atb(new DrawCardAction(magicNumber));
