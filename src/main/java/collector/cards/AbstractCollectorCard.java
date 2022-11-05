@@ -17,9 +17,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 
-import static automaton.AutomatonMod.getModID;
-import static automaton.AutomatonMod.makeCardPath;
-import static collector.util.Wiz.atb;
+import static collector.CollectorMod.getModID;
+import static collector.CollectorMod.makeCardPath;
+import static collector.util.Wiz.*;
 import static collector.util.Wiz.att;
 
 public abstract class AbstractCollectorCard extends CustomCard {
@@ -91,6 +91,16 @@ public abstract class AbstractCollectorCard extends CustomCard {
             upgradeName();
             upp();
         }
+    }
+
+    public void kindlingEffect(){
+
+    }
+
+    @Override
+    public void triggerOnExhaust() {
+        super.triggerOnExhaust();
+        kindlingEffect();
     }
 
     public abstract void upp();

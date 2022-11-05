@@ -1,5 +1,6 @@
 package collector.powers;
 
+import collector.CollectorMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -13,7 +14,6 @@ import downfall.util.TextureLoader;
 import java.util.HashMap;
 import java.util.Map;
 
-import static automaton.AutomatonMod.getModID;
 
 
 public abstract class AbstractCollectorPower extends AbstractPower {
@@ -103,6 +103,6 @@ public abstract class AbstractCollectorPower extends AbstractPower {
     }
 
     public static String makeID(String idText) {
-        return getModID() + ":" + idText;
+        return CollectorMod.getModID() + ":" + idText;
     }
 }

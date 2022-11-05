@@ -1,7 +1,5 @@
 package collector.powers;
 
-import automaton.powers.AbstractAutomatonPower;
-import automaton.powers.OnCompilePower;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,8 +14,11 @@ public class SoulSnarePower extends AbstractCollectorPower {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, amount);
     }
 
+    /*
     @Override
     public void onDeath() {
         Collector
     }
+
+     */
 }

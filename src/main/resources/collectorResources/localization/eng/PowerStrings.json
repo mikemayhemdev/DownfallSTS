@@ -2,8 +2,8 @@
   "collector:Suffering": {
     "NAME": "Suffering",
     "DESCRIPTIONS": [
-      "When Soul Snare is applied to this, it loses #b",
-      " HP. Whenever you apply an #yAffliction to this increase this by 1."
+      "When Suffering, Vulnerable, or Weak is applied to this, it loses #b",
+      " HP."
     ]
   },
   "collector:SoulMark": {

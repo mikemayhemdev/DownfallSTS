@@ -1,15 +1,44 @@
 {
   "collector:Strike": {
     "NAME": "Strike",
-    "DESCRIPTION": "collector:Front deals !collector:FrontDamage! damage."
+    "DESCRIPTION": "Deal !D! damage."
   },
   "collector:Defend": {
     "NAME": "Defend",
-    "DESCRIPTION": "collector:Front gains !collector:FrontBlock! Block."
+    "DESCRIPTION": "Gain !Bl! Block."
+  },
+  "collector:BlackMark": {
+    "NAME": "Black Mark",
+    "DESCRIPTION": "collector:Order. NL Apply !M! Vulnerable."
+  },
+  "collector:Enfeeble": {
+    "NAME": "Enfeeble",
+    "DESCRIPTION": "Apply 1 Weak and 1 Vulnerable. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Apply 1 Weak and 1 Vulnerable. NL Draw !M! cards."
+  },
+  "collector:Extricate": {
+    "NAME": "Extricate",
+    "DESCRIPTION": "Deal !D! Damage. NL If the enemy is collector:Afflicted, gain !B! Block."
   },
   "collector:SoulStitch": {
     "NAME": "Soul Stitch",
-    "DESCRIPTION": "*Collector deals !D! damage. NL Apply !M! collector:Suffering."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! collector:Suffering."
+  },
+  "collector:SpiritLeech": {
+    "NAME": "Spirit Leech",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, gain [E] and draw 1 card."
+  },
+  "collector:SuckerPunch": {
+    "NAME": "Sucker Punch",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  },
+  "collector:ThornWhip": {
+    "NAME": "Thorn Whip",
+    "DESCRIPTION": "Deal !D! damage twice. NL collector:Kindling - collector:Order twice."
+  },
+  "collector:WaveOfMalice": {
+    "NAME": "Wave of Malice",
+    "DESCRIPTION": "Deal !D! damage to ALL collector:Afflicted enemies."
   },
   "collector:SoulHarvest": {
     "NAME": "Soul Harvest",
