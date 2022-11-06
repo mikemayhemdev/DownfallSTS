@@ -1,5 +1,6 @@
 package collector.powers;
 
+import collector.CollectorCollection;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class SoulSnarePower extends AbstractCollectorPower {
@@ -12,11 +13,9 @@ public class SoulSnarePower extends AbstractCollectorPower {
         super(NAME, TYPE, TURN_BASED, target, null, amount);
     }
 
-    /*
     @Override
     public void onDeath() {
-
+        flash();
+        CollectorCollection.collect((AbstractMonster) owner);
     }
-
-     */
 }

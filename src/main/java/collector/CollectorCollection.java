@@ -16,7 +16,7 @@ public class CollectorCollection {
     private static ArrayList<String> collectedCardsThisCombat = new ArrayList<>();
 
     static {
-        // TODO: Populate Collection Pool
+        //TODO: Populate Collection Pool
     }
 
     public static void init() {
