@@ -20,5 +20,17 @@
       "Collection",
       "View all cards in your Collection."
     ]
+  },
+  "collector:CombatCollectionPileButton": {
+    "TEXT": [
+      "Collection Pile",
+      "This contains collection cards blah blah",
+      "I don't have any Collected cards!"
+    ]
+  },
+  "collector:CombatCollectionViewScreen": {
+    "TEXT": [
+      "Combat collection view screen"
+    ]
   }
 }

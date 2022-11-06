@@ -39,7 +39,8 @@ public class CollectorMod implements
         SetUnlocksSubscriber,
         OnStartBattleSubscriber,
         PostBattleSubscriber,
-        StartGameSubscriber {
+        StartGameSubscriber,
+        PostDungeonUpdateSubscriber {
     public static final String SHOULDER1 = "collectorResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "collectorResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "collectorResources/images/char/mainChar/corpse.png";
@@ -151,6 +152,7 @@ public class CollectorMod implements
     @Override
     public void receiveStartGame() {
         CollectorCollection.init();
+        combatCollectionPileButton = new CombatCollectionPileButton();
     }
 
     @Override
@@ -219,6 +221,13 @@ public class CollectorMod implements
                 combatCollectionPileButton.setX(AbstractDungeon.overlayMenu.combatDeckPanel.current_x);
                 combatCollectionPileButton.render(sb);
             }
+        }
+    }
+
+    @Override
+    public void receivePostDungeonUpdate() {
+        if (combatCollectionPileButton != null) {
+            combatCollectionPileButton.update();
         }
     }
 }

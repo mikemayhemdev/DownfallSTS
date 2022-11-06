@@ -1,7 +1,6 @@
 package collector.patches.ExtraDeckButtonPatches;
 
 import basemod.ReflectionHacks;
-import chefmod.ChefMod;
 import collector.CollectorCollection;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -13,7 +12,6 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.ExhaustPileViewScreen;
 import javassist.CtBehavior;
 
-import static chefmod.ChefMod.makeID;
 import static collector.CollectorMod.makeID;
 
 public class ExhaustPileViewScreenPatches {
@@ -27,7 +25,7 @@ public class ExhaustPileViewScreenPatches {
             method = "open"
     )
     public static class OpenExhaustPileViewScreenPatch {
-        @SpireInsertPatch( locator = OpenExhaustPileViewScreenPatchLocator.class )
+        @SpireInsertPatch(locator = OpenExhaustPileViewScreenPatchLocator.class)
         public static void Insert(ExhaustPileViewScreen _instance) {
             if (showCollection) {
                 CardGroup group = ReflectionHacks.getPrivate(_instance, ExhaustPileViewScreen.class, "exhaustPileCopy");
@@ -54,7 +52,7 @@ public class ExhaustPileViewScreenPatches {
             method = "render"
     )
     public static class RenderExhaustPileViewScreenPatch {
-        @SpireInsertPatch( locator = RenderExhaustPileViewScreenPatchLocator.class )
+        @SpireInsertPatch(locator = RenderExhaustPileViewScreenPatchLocator.class)
         public static SpireReturn<Void> Insert(ExhaustPileViewScreen _instance, SpriteBatch sb) {
             if (showingCollection) {
                 FontHelper.renderDeckViewTip(sb, uiStrings.TEXT[0], 96.0F * Settings.scale, Settings.CREAM_COLOR);// 311

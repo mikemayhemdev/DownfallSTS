@@ -33,7 +33,7 @@ public class CombatCollectionPileButton extends ClickableUIElement {
     private static final float COUNT_OFFSET_Y = -18.0F * Settings.scale;
     private static final float DECK_TIP_X = 0F * Settings.scale;
     private static final float DECK_TIP_Y = 128.0F * Settings.scale;
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("CombatCollectionPile"));
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("CombatCollectionPileButton"));
     public static final String[] TEXT = uiStrings.TEXT;
 
     private final BobEffect bob;
