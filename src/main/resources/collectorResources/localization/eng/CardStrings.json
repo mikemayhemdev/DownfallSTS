@@ -9,7 +9,8 @@
   },
   "collector:Contemplate": {
     "NAME": "Contemplate",
-    "DESCRIPTION": "Put a random card from your Collection into your hand."
+    "DESCRIPTION": "Draw a card from the Collection.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 cards from your Collection to draw."
   },
   "collector:SoulSnare": {
     "NAME": "Soul Snare",

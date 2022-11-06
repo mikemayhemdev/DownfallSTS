@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Circlet;
 import downfall.cards.OctoChoiceCard;
-import downfall.util.SelectCardsCenteredAction;
 
 import java.util.ArrayList;
 import java.util.Collections;

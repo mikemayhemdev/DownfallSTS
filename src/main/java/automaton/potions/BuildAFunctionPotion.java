@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import downfall.util.SelectCardsCenteredAction;
 
 import java.util.ArrayList;
 

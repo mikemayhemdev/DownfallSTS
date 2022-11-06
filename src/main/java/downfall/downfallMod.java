@@ -11,6 +11,7 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.Pair;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.cardmods.EtherealMod;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
@@ -69,7 +70,6 @@ import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.actions.MessageCaller;
-import basemod.cardmods.EtherealMod;
 import downfall.cards.curses.*;
 import downfall.dailymods.*;
 import downfall.events.*;
@@ -78,7 +78,10 @@ import downfall.events.shrines_evil.PurificationShrineEvil;
 import downfall.events.shrines_evil.TransmogrifierEvil;
 import downfall.events.shrines_evil.UpgradeShrineEvil;
 import downfall.monsters.*;
-import downfall.monsters.gauntletbosses.*;
+import downfall.monsters.gauntletbosses.Defect;
+import downfall.monsters.gauntletbosses.Ironclad;
+import downfall.monsters.gauntletbosses.Silent;
+import downfall.monsters.gauntletbosses.Watcher;
 import downfall.patches.DailyModeEvilPatch;
 import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
@@ -449,7 +452,6 @@ public class downfallMod implements
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_COLLECTOR));
 
 
-            /*
 
             //downfallMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
@@ -457,6 +459,7 @@ public class downfallMod implements
             //downfallMod.logger.info("loading loc:" + language + " PACKAGE_EXPANSION" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_EXPANSION));
 
+            /*
             //downfallMod.logger.info("loading loc:" + language + " PACKAGE_GUARDIAN" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GUARDIAN));
 
@@ -1290,7 +1293,7 @@ public class downfallMod implements
                         //   new Silent(),
                         new Defect(x1, y1),
                         new Watcher(x2, y2),
-                    //TODO - uncomment these when building, but can we do better?
+                        //TODO - uncomment these when building, but can we do better?
                         // new Hermit(x3, y3),
                 }));
 
@@ -1300,7 +1303,7 @@ public class downfallMod implements
                         new Silent(x1, y1),
                         //   new Defect(),
                         new Watcher(x2, y2),
-                     //   new Hermit(x3, y3),
+                        //   new Hermit(x3, y3),
                 }));
 
         BaseMod.addMonster(makeID("Gauntlet3"), "Gauntlet", () -> new MonsterGroup(
@@ -1309,7 +1312,7 @@ public class downfallMod implements
                         new Silent(x1, y1),
                         new Defect(x2, y2),
                         //   new Watcher(),
-                      //  new Hermit(x3, y3),
+                        //  new Hermit(x3, y3),
                 }));
 
         BaseMod.addMonster(makeID("Gauntlet4"), "Gauntlet", () -> new MonsterGroup(
@@ -1389,7 +1392,7 @@ public class downfallMod implements
         BaseMod.addMonster(CharBossDefect.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster(CharBossWatcher.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
 
-       // BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
+        // BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
 
         BaseMod.addMonster(NeowBoss.ID, () -> new MonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
@@ -1477,7 +1480,7 @@ public class downfallMod implements
         possEncounterList.add(CharBossSilent.ID);
         possEncounterList.add(CharBossDefect.ID);
         possEncounterList.add(CharBossWatcher.ID);
-       // possEncounterList.add(CharBossHermit.ID);
+        // possEncounterList.add(CharBossHermit.ID);
     }
 
     @Override
