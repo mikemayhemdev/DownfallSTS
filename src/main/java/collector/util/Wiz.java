@@ -1,5 +1,7 @@
 package collector.util;
 
+import collector.actions.OrderAction;
+import collector.powers.SufferingPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -12,6 +14,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
@@ -150,5 +154,16 @@ public class Wiz {
 
     public static void applyToSelfTop(AbstractPower po) {
         att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
+    }
+    public static boolean isAfflicted(AbstractMonster m) {
+        return (m.hasPower(VulnerablePower.POWER_ID) && m.hasPower(WeakPower.POWER_ID));
+    }
+
+    public static void applySuffering(AbstractMonster m, int count) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new SufferingPower(m, count)));
+    }
+
+    public static void order() {
+        atb(new OrderAction());
     }
 }

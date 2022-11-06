@@ -78,17 +78,7 @@ public class CollectorMod implements
                 "collectorResources/images/1024/bg_power_colorless.png", CARD_ENERGY_L, TEXT_ENERGY);
     }
 
-    public static boolean isAfflicted(AbstractMonster m) {
-        return (m.hasPower(VulnerablePower.POWER_ID) && m.hasPower(WeakPower.POWER_ID));
-    }
 
-    public static void applySuffering(AbstractMonster m, int count) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new SufferingPower(m, count)));
-    }
-
-    public static void order() {
-        atb(new OrderAction());
-    }
 
 
     public static String makePath(String resourcePath) {

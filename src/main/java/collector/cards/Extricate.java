@@ -21,12 +21,10 @@ public class Extricate extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p,m);
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         if (CollectorMod.isAfflicted(m)){
             addToBot(new GainBlockAction(p, block));
         }
-
     }
 
     public void upp() {
