@@ -1,15 +1,15 @@
 package collector.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.CardModifierManager;
+import collector.cardmods.PyreMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -27,8 +27,6 @@ import static collector.util.Wiz.att;
 public abstract class AbstractCollectorCard extends CustomCard {
     public String betaArtPath;
 
-    public boolean pyre;
-
     protected final CardStrings cardStrings;
 
     public AbstractCollectorCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
@@ -44,7 +42,6 @@ public abstract class AbstractCollectorCard extends CustomCard {
         initializeTitle();
         initializeDescription();
     }
-
 
 
     @Override
@@ -70,22 +67,6 @@ public abstract class AbstractCollectorCard extends CustomCard {
             }
         }
         return super.getPortraitImage();
-    }
-
-    public void pyreCost(){
-        if (pyre){
-            att(new ExhaustAction(1, false, false, false));
-        }
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (pyre){
-            if (p.hand.size() <= 1){
-                return false;
-            }
-        }
-        return super.canUse(p, m);
     }
 
     public static String getCorrectPlaceholderImage(CardType type, String id) {
@@ -135,5 +116,9 @@ public abstract class AbstractCollectorCard extends CustomCard {
 
     protected void blck() {
         atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
+    }
+
+    protected void isPyre() {
+        CardModifierManager.addModifier(this, new PyreMod(1));
     }
 }

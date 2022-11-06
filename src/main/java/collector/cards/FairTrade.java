@@ -1,7 +1,9 @@
 package collector.cards;
 
+import basemod.helpers.CardModifierManager;
 import collector.CollectorMod;
 import collector.actions.DrawCardFromCollectionAction;
+import collector.cardmods.PyreMod;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,11 +21,10 @@ public class FairTrade extends AbstractCollectorCard {
     public FairTrade() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
-        pyre = true;
+        isPyre();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        pyreCost();
         for (int i = 0; i < magicNumber; i++) {
             atb(new DrawCardFromCollectionAction());
         }

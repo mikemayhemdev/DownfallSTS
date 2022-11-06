@@ -1,5 +1,7 @@
 package collector.cards;
 
+import basemod.helpers.CardModifierManager;
+import collector.cardmods.PyreMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -15,11 +17,10 @@ public class PlatePact extends AbstractCollectorCard {
 
     public PlatePact() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        pyre = true;
+        isPyre();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        pyreCost();
         //TODO: Order - Torchhead attacks a random enemy. Gain Block equal to unblocked damage dealt.
     }
 

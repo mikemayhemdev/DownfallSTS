@@ -1,5 +1,7 @@
 package collector.cards;
 
+import basemod.helpers.CardModifierManager;
+import collector.cardmods.PyreMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,14 +20,11 @@ public class Fireball extends AbstractCollectorCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 4;
-        pyre = true;
+        isPyre();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        pyreCost();
-
         dmg(m, FIRE);
-
         atb(new AbstractGameAction() {
             @Override
             public void update() {

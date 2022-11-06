@@ -32,5 +32,11 @@
     "TEXT": [
       "Combat collection view screen"
     ]
+  },
+  "collector:PyreInfo": {
+    "TEXT": [
+      "Pyre",
+      "To play this card, pay the additional cost of Exhausting cards from your hand."
+    ]
   }
 }

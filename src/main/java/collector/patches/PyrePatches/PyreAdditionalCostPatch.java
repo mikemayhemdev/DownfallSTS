@@ -1,4 +1,4 @@
-package collector.patches;
+package collector.patches.PyrePatches;
 
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;

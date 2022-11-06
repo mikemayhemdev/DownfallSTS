@@ -1,4 +1,4 @@
-package collector.patches;
+package collector.patches.CollectiblesPatches;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
