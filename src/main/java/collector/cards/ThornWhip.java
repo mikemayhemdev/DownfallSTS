@@ -23,7 +23,7 @@ public class ThornWhip extends AbstractCollectorCard {
 
     @Override
     public void triggerOnExhaust() {
-        order();
+        order();  //TODO - The new Order system that uses multiple types of intents
         order();
     }
 

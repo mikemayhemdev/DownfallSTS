@@ -97,5 +97,12 @@
       "kindling"
     ],
     "DESCRIPTION": "An effect that triggers when this card is Exhausted by any means."
+  },
+  {
+    "PROPER_NAME": "Order",
+    "NAMES": [
+      "order"
+    ],
+    "DESCRIPTION": "Adds an attack to your Torch Head's attack queue, which will all be executed at the end of the turn."
   }
 ]
