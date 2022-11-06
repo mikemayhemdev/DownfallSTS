@@ -45,6 +45,22 @@
     "NAME": "Thorn Whip",
     "DESCRIPTION": "Deal !D! damage twice. NL collector:Kindling - collector:Order twice."
   },
+  "collector:Fireball": {
+    "NAME": "Fireball",
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage, then increase this card's damage by !M!."
+  },
+  "collector:FairTrade": {
+    "NAME": "Fair Trade",
+    "DESCRIPTION": "collector:Pyre. NL Gain [E] and draw !M! card from the *Collect pile."
+  },
+  "collector:PlatePact": {
+    "NAME": "Plate Pact",
+    "DESCRIPTION": "collector:Pyre. NL collector:Order - *Torchhead attacks a random enemy. Gain Block equal to unblocked damage dealt."
+  },
+  "collector:SpiritWave": {
+    "NAME": "Spirit Wave",
+    "DESCRIPTION": "collector:Pyre. NL *Torchhead heals !M! HP. NL Draw 2 cards."
+  },
   "collector:WaveOfMalice": {
     "NAME": "Wave of Malice",
     "DESCRIPTION": "Deal !D! damage to ALL collector:Afflicted enemies."
