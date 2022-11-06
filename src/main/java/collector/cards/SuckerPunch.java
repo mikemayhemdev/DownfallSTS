@@ -9,7 +9,7 @@ import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
 
 public class SuckerPunch extends AbstractCollectorCard {
-    public final static String ID = makeID("SuckerPunch");
+    public final static String ID = makeID(SuckerPunch.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public SuckerPunch() {

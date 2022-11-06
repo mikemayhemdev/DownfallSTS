@@ -9,7 +9,7 @@ import static collector.util.Wiz.applyToEnemy;
 import static collector.util.Wiz.order;
 
 public class BlackMark extends AbstractCollectorCard {
-    public final static String ID = makeID("BlackMark");
+    public final static String ID = makeID(BlackMark.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public BlackMark() {

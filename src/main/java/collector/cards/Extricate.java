@@ -9,7 +9,7 @@ import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.isAfflicted;
 
 public class Extricate extends AbstractCollectorCard {
-    public final static String ID = makeID("Extricate");
+    public final static String ID = makeID(Extricate.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public Extricate() {

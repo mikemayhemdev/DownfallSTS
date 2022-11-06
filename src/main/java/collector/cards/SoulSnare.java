@@ -9,7 +9,7 @@ import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
 
 public class SoulSnare extends AbstractCollectorCard {
-    public final static String ID = makeID("SoulSnare");
+    public final static String ID = makeID(SoulSnare.class.getSimpleName());
     // intellij stuff skill, enemy, basic, , , , , 1, 1
 
     public SoulSnare() {

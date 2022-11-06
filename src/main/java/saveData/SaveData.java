@@ -118,7 +118,11 @@ public class SaveData {
             saveCacheColors = downfallMod.validColors;
             pureSneckoMode = downfallMod.pureSneckoMode;
 
-            identifyRngCount = downfallMod.identifyRng.counter;
+            if (downfallMod.identifyRng == null) {
+                identifyRngCount = 0;
+            } else {
+                identifyRngCount = downfallMod.identifyRng.counter;
+            }
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }

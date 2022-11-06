@@ -7,6 +7,10 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "collector:Contemplate": {
+    "NAME": "Contemplate",
+    "DESCRIPTION": "Put a random card from your Collection into your hand."
+  },
   "collector:SoulSnare": {
     "NAME": "Soul Snare",
     "DESCRIPTION": "Retain. NL Apply !M! Vulnerable. NL If the enemy dies this turn, collector:Collect it.",
@@ -44,5 +48,17 @@
   "collector:WaveOfMalice": {
     "NAME": "Wave of Malice",
     "DESCRIPTION": "Deal !D! damage to ALL collector:Afflicted enemies."
+  },
+  "collector:TestCollectible1": {
+    "NAME": "Test Collectible 1",
+    "DESCRIPTION": "Testing the Collection - card 1"
+  },
+  "collector:TestCollectible2": {
+    "NAME": "Test Collectible 2",
+    "DESCRIPTION": "Testing the Collection - card 2"
+  },
+  "collector:TestCollectible3": {
+    "NAME": "Test Collectible 3",
+    "DESCRIPTION": "Testing the Collection - card 3"
   }
 }

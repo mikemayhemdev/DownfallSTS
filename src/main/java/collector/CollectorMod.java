@@ -1,18 +1,29 @@
 package collector;
 
-import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
-import collector.cards.AbstractCollectorCard;
 import collector.patches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
 import collector.relics.EmeraldTorch;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
+import downfall.util.CardIgnore;
+import javassist.CtClass;
+import javassist.Modifier;
+import javassist.NotFoundException;
+import org.clapper.util.classutil.*;
+
+import java.io.File;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -52,8 +63,6 @@ public class CollectorMod implements
 
     public CollectorMod() {
         BaseMod.subscribe(this);
-
-        modID = "collector";
 
         BaseMod.addColor(downfallMod.Enums.COLLECTOR, characterColor, characterColor, characterColor,
                 characterColor, characterColor, characterColor, characterColor,
@@ -147,9 +156,54 @@ public class CollectorMod implements
 
     @Override
     public void receiveEditCards() {
-        new AutoAdd(modID)
-                .packageFilter(AbstractCollectorCard.class)
-                .setDefaultSeen(true)
-                .cards();
+        try {
+            autoAddCards();
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException |
+                 ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static void autoAddCards()
+            throws URISyntaxException, IllegalAccessException, InstantiationException, NotFoundException, ClassNotFoundException {
+        ClassFinder finder = new ClassFinder();
+        URL url = CollectorMod.class.getProtectionDomain().getCodeSource().getLocation();
+        finder.add(new File(url.toURI()));
+
+        ClassFilter filter =
+                new AndClassFilter(
+                        new NotClassFilter(new InterfaceOnlyClassFilter()),
+                        new NotClassFilter(new AbstractClassFilter()),
+                        new ClassModifiersClassFilter(Modifier.PUBLIC),
+                        (classInfo, classFinder) -> classInfo.getClassName().startsWith("collector.cards")
+                );
+        Collection<ClassInfo> foundClasses = new ArrayList<>();
+        finder.findClasses(foundClasses, filter);
+
+        for (ClassInfo classInfo : foundClasses) {
+            CtClass cls = Loader.getClassPool().get(classInfo.getClassName());
+            if (cls.hasAnnotation(CardIgnore.class)) {
+                continue;
+            }
+            boolean isCard = false;
+            CtClass superCls = cls;
+            while (superCls != null) {
+                superCls = superCls.getSuperclass();
+                if (superCls == null) {
+                    break;
+                }
+                if (superCls.getName().equals(AbstractCard.class.getName())) {
+                    isCard = true;
+                    break;
+                }
+            }
+            if (!isCard) {
+                continue;
+            }
+            System.out.println(classInfo.getClassName());
+            AbstractCard card = (AbstractCard) Loader.getClassPool().getClassLoader().loadClass(cls.getName()).newInstance();
+            BaseMod.addCard(card);
+
+        }
     }
 }

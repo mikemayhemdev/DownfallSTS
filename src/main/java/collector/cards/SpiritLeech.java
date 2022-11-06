@@ -10,7 +10,7 @@ import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.isAfflicted;
 
 public class SpiritLeech extends AbstractCollectorCard {
-    public final static String ID = makeID("SpiritLeech");
+    public final static String ID = makeID(SpiritLeech.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public SpiritLeech() {

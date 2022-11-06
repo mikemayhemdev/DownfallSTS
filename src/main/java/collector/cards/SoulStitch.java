@@ -8,7 +8,7 @@ import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applySuffering;
 
 public class SoulStitch extends AbstractCollectorCard {
-    public final static String ID = makeID("SoulStitch");
+    public final static String ID = makeID(SoulStitch.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public SoulStitch() {

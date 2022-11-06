@@ -11,7 +11,7 @@ import static collector.util.Wiz.isAfflicted;
 import static com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.FIRE;
 
 public class WaveOfMalice extends AbstractCollectorCard {
-    public final static String ID = makeID("WaveOfMalice");
+    public final static String ID = makeID(WaveOfMalice.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public WaveOfMalice() {

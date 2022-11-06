@@ -11,7 +11,7 @@ import static collector.util.Wiz.applyToEnemy;
 import static collector.util.Wiz.atb;
 
 public class Enfeeble extends AbstractCollectorCard {
-    public final static String ID = makeID("Enfeeble");
+    public final static String ID = makeID(Enfeeble.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public Enfeeble() {
