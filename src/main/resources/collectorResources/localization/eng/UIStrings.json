@@ -12,13 +12,13 @@
   "collector:CollectionScreen": {
     "TEXT": [
       "Hide",
-      "Start-of-combat Collection"
+      "Your Collection starts combat with all cards here."
     ]
   },
   "collector:CollectionUITopPanel": {
     "TEXT": [
       "Collection",
-      "View all cards in your Collection"
+      "View all cards in your Collection."
     ]
   }
 }

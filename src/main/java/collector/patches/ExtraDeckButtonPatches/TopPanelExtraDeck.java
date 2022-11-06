@@ -13,8 +13,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.screens.DiscardPileViewScreen;
+import com.megacrit.cardcrawl.screens.MasterDeckViewScreen;
 import downfall.downfallMod;
 
 public class TopPanelExtraDeck extends TopPanelItem {
@@ -24,7 +23,7 @@ public class TopPanelExtraDeck extends TopPanelItem {
     private static final Texture ICON = ImageMaster.DECK_ICON;
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
-    public static DiscardPileViewScreen backup;
+    public static MasterDeckViewScreen backup;
 
     public TopPanelExtraDeck() {
         super(ICON, ID);
@@ -33,7 +32,7 @@ public class TopPanelExtraDeck extends TopPanelItem {
 
     @Override
     public void render(SpriteBatch sb) {
-        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_COLLECTOR && AbstractDungeon.floorNum > 1) {
+        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_COLLECTOR) {
             super.render(sb);
             if (getHitbox().hovered) {
                 TipHelper.renderGenericTip(getHitbox().x, getHitbox().y, uiStrings.TEXT[0], uiStrings.TEXT[1]);
@@ -43,19 +42,25 @@ public class TopPanelExtraDeck extends TopPanelItem {
 
     @Override
     protected void onClick() {
-        if (AbstractDungeon.floorNum > 1) {
-            if (!CollectorCollection.collection.isEmpty() && AbstractDungeon.screen != AbstractDungeon.CurrentScreen.DISCARD_VIEW && !(CardCrawlGame.isInARun() && AbstractDungeon.currMapNode != null && AbstractDungeon.getCurrRoom() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)) {
-                CardCrawlGame.sound.play("STAB_BOOK_DEATH");
-                CardGroup CardsToLookAt = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-                for (AbstractCard c : CollectorCollection.collection.group) {
-                    CardsToLookAt.addToTop(CardLibrary.getCopy(c.cardID));
-                }
-
-                AbstractDungeon.previousScreen = AbstractDungeon.screen;
-                backup = AbstractDungeon.discardPileViewScreen;
-                AbstractDungeon.discardPileViewScreen = new ViewCardScreen(CardsToLookAt.group);
-                AbstractDungeon.discardPileViewScreen.open();
+        if (AbstractDungeon.screen == AbstractDungeon.CurrentScreen.MASTER_DECK_VIEW) {
+            AbstractDungeon.screenSwap = false;
+            if (AbstractDungeon.previousScreen == AbstractDungeon.CurrentScreen.MASTER_DECK_VIEW) {
+                AbstractDungeon.previousScreen = null;
             }
+
+            AbstractDungeon.closeCurrentScreen();
+            CardCrawlGame.sound.play("DECK_CLOSE", 0.05F);
+        } else {
+            CardCrawlGame.sound.play("STAB_BOOK_DEATH");
+            CardGroup CardsToLookAt = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+            for (AbstractCard c : CollectorCollection.collection.group) {
+                CardsToLookAt.addToTop(CardLibrary.getCopy(c.cardID));
+            }
+
+            AbstractDungeon.previousScreen = AbstractDungeon.screen;
+            backup = AbstractDungeon.deckViewScreen;
+            AbstractDungeon.deckViewScreen = new ViewCardScreen(CardsToLookAt.group);
+            AbstractDungeon.deckViewScreen.open();
         }
     }
 
