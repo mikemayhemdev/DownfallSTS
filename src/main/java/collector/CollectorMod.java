@@ -8,31 +8,20 @@ import collector.actions.OrderAction;
 import collector.cards.AbstractCollectorCard;
 import collector.patches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
-import collector.patches.TorchHeadPatches.MonsterIntentPatch;
-import collector.patches.TorchHeadPatches.MonsterPowerPatch;
-import collector.patches.TorchHeadPatches.MonsterTargetPatch;
-import collector.patches.TorchHeadPatches.StanceChangeParticlePatch;
 import collector.powers.SufferingPower;
 import collector.relics.EmeraldTorch;
-import collector.util.TargetMarker;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import static collector.util.Wiz.*;
+import static collector.util.Wiz.atb;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -44,8 +33,7 @@ public class CollectorMod implements
         SetUnlocksSubscriber,
         OnStartBattleSubscriber,
         PostBattleSubscriber,
-        StartGameSubscriber,
-        OnPowersModifiedSubscriber {
+        StartGameSubscriber {
     public static final String SHOULDER1 = "collectorResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "collectorResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "collectorResources/images/char/mainChar/corpse.png";
@@ -69,12 +57,7 @@ public class CollectorMod implements
     private CustomUnlockBundle unlocks2;
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
-    public static ArrayList<String> Afflictions = new ArrayList<>();
-    public static ArrayList<String> Boons = new ArrayList<>();
-    public static HashMap<String, AbstractCard> cardsList;
     public static Color COLLECTIBLE_CARD_COLOR = CardHelper.getColor(13, 158, 153);
-    public static int TorchAggro = 0;
-    public static TargetMarker targetMarker;
 
     public CollectorMod() {
         BaseMod.subscribe(this);
@@ -95,16 +78,17 @@ public class CollectorMod implements
                 "collectorResources/images/1024/bg_power_colorless.png", CARD_ENERGY_L, TEXT_ENERGY);
     }
 
-    public static boolean isAfflicted (AbstractMonster m){
+    public static boolean isAfflicted(AbstractMonster m) {
         return (m.hasPower(VulnerablePower.POWER_ID) && m.hasPower(WeakPower.POWER_ID));
     }
 
-    public static void applySuffering (AbstractMonster m, int count){
+    public static void applySuffering(AbstractMonster m, int count) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new SufferingPower(m, count)));
     }
 
-    public static void order (){
-        atb(new OrderAction());}
+    public static void order() {
+        atb(new OrderAction());
+    }
 
 
     public static String makePath(String resourcePath) {
@@ -154,17 +138,16 @@ public class CollectorMod implements
     }
 
     public void addPotions() {
+        //TODO: Set this up
     }
 
     @Override
     public void receiveSetUnlocks() {
         //TODO: Set this up
-
     }
 
     public void receivePostInitialize() {
         addPotions();
-        targetMarker = new TargetMarker();
         BaseMod.addTopPanelItem(new TopPanelExtraDeck());
     }
 
@@ -179,47 +162,8 @@ public class CollectorMod implements
     }
 
     @Override
-    public void receivePowersModified() {
-        if (AbstractDungeon.currMapNode != null &&
-                AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT &&
-                AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)
-        ) {
-            ArrayList<PowerTip> tips = new ArrayList<>();
-            TorchChar d = CollectorChar.torch;
-            if (d.isDead) {
-                tips.add(new PowerTip(TorchChar.characterStrings.NAMES[0], TorchChar.characterStrings.TEXT[0]));
-            } else {
-                for (AbstractPower p : d.powers) {
-                    if (p.region48 != null) {
-                        tips.add(new PowerTip(p.name, p.description, p.region48));
-                    } else {
-                        tips.add(new PowerTip(p.name, p.description, p.img));
-                    }
-                }
-            }
-        }
-    }
-
-    @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         CollectorCollection.atBattleStart();
-        StanceChangeParticlePatch.ParticleGeneratorRenderPatch.prevPlayer = null;
-        StanceChangeParticlePatch.WrathParticleRenderPatch.prevPlayer = null;
-        MonsterIntentPatch.prevPlayer = null;
-        MonsterPowerPatch.prevPlayer = null;
-        MonsterTargetPatch.prevPlayer = null;
-    }
-
-    public static CardGroup getRareCards() {
-        CardGroup retVal = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.rarity == AbstractCard.CardRarity.RARE) {
-                retVal.group.add(c);
-            }
-        }
-
-        return retVal;
     }
 
     @Override
