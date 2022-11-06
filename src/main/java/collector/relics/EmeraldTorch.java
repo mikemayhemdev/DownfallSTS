@@ -14,14 +14,7 @@ public class EmeraldTorch extends CustomRelic {
 
     public EmeraldTorch() {
         super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
-
-
     }
 
-    public void atBattleStart() {
-        this.flash();
-        this.addToTop(new RelicAboveCreatureAction(CollectorChar.torch, this));
-        this.addToBot(new GainBlockAction(CollectorChar.torch, 5));
-    }
 }
 

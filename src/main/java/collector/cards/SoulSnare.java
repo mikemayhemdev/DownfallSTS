@@ -1,5 +1,6 @@
 package collector.cards;
 
+import collector.powers.SoulSnarePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -19,6 +20,7 @@ public class SoulSnare extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
+        applyToEnemy(m, new SoulSnarePower(m, magicNumber));
     }
 
     public void upp() {

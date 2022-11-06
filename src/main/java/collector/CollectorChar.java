@@ -1,15 +1,11 @@
 package collector;
 
-import basemod.ReflectionHacks;
 import basemod.abstracts.CustomPlayer;
-import collector.cards.AbstractCollectorCard;
-import collector.cards.CollectorCards.Attacks.SoulHarvest;
-import collector.cards.CollectorCards.Attacks.SoulStitch;
-import collector.cards.CollectorCards.Attacks.Strike;
-import collector.cards.CollectorCards.Skills.Contemplate;
-import collector.cards.CollectorCards.Skills.Defend;
+import collector.cards.Contemplate;
+import collector.cards.Defend;
+import collector.cards.SoulSnare;
+import collector.cards.Strike;
 import collector.relics.EmeraldTorch;
-import collector.util.FlashTargetArrowEffect;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -20,23 +16,19 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.GlowyFireEyesEffect;
 import com.megacrit.cardcrawl.vfx.StaffFireEffect;
-import com.megacrit.cardcrawl.vfx.combat.PowerBuffEffect;
 import downfall.downfallMod;
 
 import java.util.ArrayList;
@@ -66,17 +58,6 @@ public class CollectorChar extends CustomPlayer {
     private final String jsonURL = "collectorResources/images/char/mainChar/skeleton.json";
     public static TorchChar torch;
     private float fireTimer = 0.0F;
-
-    // The aggro of Dragon
-    public int aggro;
-
-    public boolean isReticleAttackIcon;
-    public Color attackIconColor = CardHelper.getColor(48, 160, 108);
-    public static Texture attackerIcon = null;
-
-    public boolean dragonAttackAnimation;
-    public boolean attackAnimation;
-    private static final float ORB_IMG_SCALE = 1.15f * Settings.scale;
 
     public CollectorChar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "collectorResources/images/char/mainChar/orb/vfx.png", null, (String) null);
@@ -116,7 +97,14 @@ public class CollectorChar extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-
+        for (int i = 0; i < 4; i++){
+            retVal.add(Strike.ID);
+        }
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Defend.ID);
+        }
+        retVal.add(SoulSnare.ID);
+        retVal.add(Contemplate.ID);
         return retVal;
     }
 

@@ -1,9 +1,9 @@
 {
   "collector:EmeraldTorch": {
     "NAME": "Emerald Torch",
-    "FLAVOR": "Sustained by the Fires of envy",
+    "FLAVOR": "Sustained by the fires of envy.",
     "DESCRIPTIONS": [
-      "Your #bTorch #bHead starts each combat with #b1 #yAggro and #b5 #yBlock."
+      "At the start of combat, #gTorch #gHead heals #b10 HP."
     ]
   }
 }
