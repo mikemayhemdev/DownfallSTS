@@ -4,8 +4,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static collector.CollectorMod.applySuffering;
 import static collector.CollectorMod.makeID;
+import static collector.util.Wiz.applySuffering;
 
 public class SoulStitch extends AbstractCollectorCard {
     public final static String ID = makeID("SoulStitch");
@@ -18,10 +18,8 @@ public class SoulStitch extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p,m);
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         applySuffering(m, magicNumber);
-
     }
 
     public void upp() {

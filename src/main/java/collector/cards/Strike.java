@@ -16,7 +16,6 @@ public class Strike extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p,m);
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 

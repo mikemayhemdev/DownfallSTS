@@ -15,7 +15,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-
 public abstract class AbstractCollectorPower extends AbstractPower {
     private static PowerStrings getPowerStrings(String ID) {
         return CardCrawlGame.languagePack.getPowerStrings(ID);

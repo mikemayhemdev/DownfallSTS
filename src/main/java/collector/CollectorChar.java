@@ -56,7 +56,6 @@ public class CollectorChar extends CustomPlayer {
     public float renderscale = 1.2F;
     private final String atlasURL = "collectorResources/images/char/mainChar/skeleton.atlas";
     private final String jsonURL = "collectorResources/images/char/mainChar/skeleton.json";
-    public static TorchChar torch;
     private float fireTimer = 0.0F;
 
     public CollectorChar(String name, PlayerClass setClass) {
@@ -68,10 +67,7 @@ public class CollectorChar extends CustomPlayer {
                 getLoadout(), 0.0F, -40.0F, 300.0F, 390.0F, new EnergyManager(3));
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
-        torch = new TorchChar(TorchChar.characterStrings.NAMES[0], 0.0f, 0.0f, 220.0f, 290.0f, this);
-        torch.initializeClass();
         this.reloadAnimation();
-
     }
 
     public void reloadAnimation() {
@@ -97,7 +93,7 @@ public class CollectorChar extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 4; i++){
+        for (int i = 0; i < 4; i++) {
             retVal.add(Strike.ID);
         }
         for (int i = 0; i < 4; i++) {
@@ -205,18 +201,8 @@ public class CollectorChar extends CustomPlayer {
     }
 
     @Override
-    public void movePosition(float x, float y) {
-        super.movePosition(x, y);
-        torch.move();
-    }
-
-    @Override
     public void update() {
         super.update();
-        if (getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            CollectorMod.targetMarker.update();
-            torch.update();
-        }
         if (!this.isDying && getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             this.fireTimer -= Gdx.graphics.getDeltaTime();
             if (this.fireTimer < 0.0F) {
@@ -226,90 +212,5 @@ public class CollectorChar extends CustomPlayer {
                 AbstractDungeon.effectList.add(new StaffFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() - 120.0F * Settings.scale, this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 390.0F * Settings.scale));
             }
         }
-    }
-
-    @Override
-    public void combatUpdate() {
-        torch.combatUpdate();
-        super.combatUpdate();
-    }
-
-    @Override
-    public void showHealthBar() {
-        torch.showHealthBar();
-        super.showHealthBar();
-    }
-
-    @Override
-    public void render(SpriteBatch sb) {
-        torch.render(sb);
-        super.render(sb);
-        if (getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            CollectorMod.targetMarker.render(sb);
-        }
-    }
-
-    @Override
-    public void renderPlayerBattleUi(SpriteBatch sb) {
-        super.renderPlayerBattleUi(sb);
-        torch.renderPlayerBattleUi(sb);
-    }
-
-    @Override
-    public void preBattlePrep() {
-        super.preBattlePrep();
-        torch.preBattlePrep();
-    }
-
-    public void updateIntents() {
-        if (getCurrRoom().monsters != null) {
-            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-                m.applyPowers();
-            }
-        }
-    }
-
-    @Override
-    public void updateAnimations() {
-        super.updateAnimations();
-        torch.updateAnimations();
-    }
-
-    @Override
-    public void applyStartOfCombatLogic() {
-        super.applyStartOfCombatLogic();
-        torch.applyStartOfCombatLogic();
-    }
-
-    @Override
-    public void applyStartOfTurnPowers() {
-        super.applyStartOfTurnPowers();
-        if (!torch.isDead) {
-            AbstractDungeon.player = torch; // To make FlameBarrierPower wear off on Dragon. Are you serious devs?
-            torch.applyStartOfTurnPowers();
-            AbstractDungeon.player = this;
-        }
-    }
-
-    @Override
-    public void applyStartOfTurnPostDrawPowers() {
-        super.applyStartOfTurnPostDrawPowers();
-        if (!torch.isDead) {
-            torch.applyStartOfTurnPostDrawPowers();
-        }
-    }
-
-    @Override
-    public void applyEndOfTurnTriggers() {
-        super.applyEndOfTurnTriggers();
-        if (!torch.isDead) {
-            torch.applyEndOfTurnTriggers();
-        }
-    }
-
-    @Override
-    public void onVictory() {
-        super.onVictory();
-        torch.onVictory();
     }
 }

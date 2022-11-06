@@ -4,24 +4,15 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
-import collector.actions.OrderAction;
 import collector.cards.AbstractCollectorCard;
 import collector.patches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
-import collector.powers.SufferingPower;
 import collector.relics.EmeraldTorch;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
-
-import static collector.util.Wiz.atb;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -77,8 +68,6 @@ public class CollectorMod implements
                 "collectorResources/images/1024/bg_attack_colorless.png", "collectorResources/images/1024/bg_skill_colorless.png",
                 "collectorResources/images/1024/bg_power_colorless.png", CARD_ENERGY_L, TEXT_ENERGY);
     }
-
-
 
 
     public static String makePath(String resourcePath) {

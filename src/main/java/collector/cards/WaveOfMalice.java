@@ -1,20 +1,13 @@
 package collector.cards;
 
-import basemod.abstracts.cardbuilder.CardBasic;
-import basemod.abstracts.cardbuilder.actionbuilder.ActionBuilder;
-import basemod.abstracts.cardbuilder.actionbuilder.AllEnemyActionBuilder;
-import collector.CollectorMod;
 import collector.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
-import static collector.CollectorMod.isAfflicted;
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.atb;
+import static collector.util.Wiz.isAfflicted;
 import static com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.FIRE;
 
 public class WaveOfMalice extends AbstractCollectorCard {
@@ -27,19 +20,18 @@ public class WaveOfMalice extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p,m);
         dmg(m, FIRE);
-
         Wiz.forAllMonstersLiving(this::applyEffects);
-
     }
 
-    public void applyEffects(AbstractMonster m){
+    public void applyEffects(AbstractMonster m) {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                if (isAfflicted(m)) {dmg(m, FIRE);}
+                if (isAfflicted(m)) {
+                    dmg(m, FIRE);
+                }
             }
         });
     }

@@ -3,11 +3,9 @@ package collector.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static collector.CollectorMod.makeID;
-import static collector.CollectorMod.order;
-import static collector.util.Wiz.applyToEnemy;
+import static collector.util.Wiz.order;
 
 public class ThornWhip extends AbstractCollectorCard {
     public final static String ID = makeID("ThornWhip");
@@ -19,13 +17,12 @@ public class ThornWhip extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p,m);
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
     }
 
     @Override
-    public void kindlingEffect() {
+    public void triggerOnExhaust() {
         order();
         order();
     }

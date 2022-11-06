@@ -2,10 +2,8 @@ package collector.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import collector.cards.AbstractCollectorCard;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.*;
 
 public class Contemplate extends AbstractCollectorCard {
     public final static String ID = makeID("Contemplate");

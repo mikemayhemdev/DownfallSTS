@@ -1,16 +1,12 @@
 package collector.cards;
 
-import collector.actions.OrderAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static collector.CollectorMod.makeID;
-import static collector.CollectorMod.order;
 import static collector.util.Wiz.applyToEnemy;
-import static collector.util.Wiz.atb;
+import static collector.util.Wiz.order;
 
 public class BlackMark extends AbstractCollectorCard {
     public final static String ID = makeID("BlackMark");

@@ -19,7 +19,6 @@ public class SoulSnare extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p,m);
         applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
         applyToEnemy(m, new SoulSnarePower(m, magicNumber));
     }

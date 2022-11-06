@@ -1,14 +1,12 @@
 package collector.cards;
 
-import collector.CollectorMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
+import static collector.util.Wiz.isAfflicted;
 
 public class Extricate extends AbstractCollectorCard {
     public final static String ID = makeID("Extricate");
@@ -22,7 +20,7 @@ public class Extricate extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        if (CollectorMod.isAfflicted(m)){
+        if (isAfflicted(m)) {
             addToBot(new GainBlockAction(p, block));
         }
     }

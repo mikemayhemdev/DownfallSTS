@@ -1,17 +1,12 @@
 package collector;
 
 import basemod.abstracts.CustomSavable;
-import charbosses.bosses.Defect.CharBossDefect;
-import charbosses.bosses.Ironclad.CharBossIronclad;
-import charbosses.bosses.Silent.CharBossSilent;
-import charbosses.bosses.Watcher.CharBossWatcher;
 import collector.cards.Collectibles.*;
 import collector.util.CollectionReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.exordium.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
