@@ -2,7 +2,6 @@ package collector.cards.collectibles;
 
 import collector.cards.AbstractCollectorCard;
 import collector.patches.CollectibleCardColorEnumPatch;
-import downfall.downfallMod;
 
 public abstract class AbstractCollectibleCard extends AbstractCollectorCard {
     public AbstractCollectibleCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target) {

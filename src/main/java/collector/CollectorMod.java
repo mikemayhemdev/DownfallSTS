@@ -6,10 +6,14 @@ import basemod.interfaces.*;
 import collector.patches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
 import collector.relics.EmeraldTorch;
+import collector.ui.CombatCollectionPileButton;
+import collector.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
@@ -53,7 +57,7 @@ public class CollectorMod implements
 
     public static Color characterColor = CardHelper.getColor(13, 158, 131);
     public static Color potionLabColor = CardHelper.getColor(113, 158, 131);
-    private static String modID = "collector";
+    private static final String modID = "collector";
     private CustomUnlockBundle unlocks0; // TODO: Set this up
     private CustomUnlockBundle unlocks1;
     private CustomUnlockBundle unlocks2;
@@ -204,6 +208,17 @@ public class CollectorMod implements
             AbstractCard card = (AbstractCard) Loader.getClassPool().getClassLoader().loadClass(cls.getName()).newInstance();
             BaseMod.addCard(card);
 
+        }
+    }
+
+    private static CombatCollectionPileButton combatCollectionPileButton;
+
+    public static void renderCombatUiElements(SpriteBatch sb) {
+        if (Wiz.isInCombat()) {
+            if (combatCollectionPileButton != null) {
+                combatCollectionPileButton.setX(AbstractDungeon.overlayMenu.combatDeckPanel.current_x);
+                combatCollectionPileButton.render(sb);
+            }
         }
     }
 }
