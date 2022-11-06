@@ -145,9 +145,6 @@ public class CollectorMod implements
     public void receivePostInitialize() {
         addPotions();
         BaseMod.addTopPanelItem(new TopPanelExtraDeck());
-
-        heartOrb = TextureLoader.getTexture("collectorResources/images/heartOrb.png");
-        UIAtlas.addRegion("heartOrb", heartOrb, 0, 0, heartOrb.getWidth(), heartOrb.getHeight());
     }
 
     @Override
@@ -236,8 +233,4 @@ public class CollectorMod implements
             combatCollectionPileButton.update();
         }
     }
-
-    public static final TextureAtlas UIAtlas = new TextureAtlas();
-    public static Texture heartOrb;
-
 }

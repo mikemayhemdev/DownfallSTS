@@ -28,6 +28,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.mod.stslib.patches.CenterGridCardSelectScreen;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
@@ -635,6 +636,10 @@ public class downfallMod implements
 
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.UPGRADECARD, (rewardSave) -> new UpgradeCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
+        heartOrb = TextureLoader.getTexture("downfallResources/images/heartOrb.png");
+        crown = TextureLoader.getTexture("downfallResources/images/cardicons/crown.png");
+        UIAtlas.addRegion("heartOrb", heartOrb, 0, 0, heartOrb.getWidth(), heartOrb.getHeight());
+        UIAtlas.addRegion("crown", crown, 0, 0, crown.getWidth(), crown.getHeight());
     }
 
     private void initializeConfig() {
@@ -1893,4 +1898,9 @@ public class downfallMod implements
 
     @SpireEnum
     public static AbstractCard.CardTags TECHNIQUE;
+
+
+    public static final TextureAtlas UIAtlas = new TextureAtlas();
+    public static Texture heartOrb;
+    public static Texture crown;
 }
