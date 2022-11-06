@@ -2,7 +2,7 @@ package collector.patches;
 
 import basemod.ReflectionHacks;
 import collector.CollectorCollection;
-import collector.cards.Collectibles.AbstractCollectibleCard;
+import collector.cards.collectibles.AbstractCollectibleCard;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;

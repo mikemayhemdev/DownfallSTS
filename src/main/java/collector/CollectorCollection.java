@@ -1,7 +1,6 @@
 package collector;
 
 import basemod.abstracts.CustomSavable;
-import collector.cards.Collectibles.*;
 import collector.util.CollectionReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -21,9 +20,6 @@ public class CollectorCollection implements CustomSavable<ArrayList<AbstractCard
         cardsList = new HashMap<>();
         collection = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         combatCollection = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        if (collection.isEmpty()) {
-            collection.addToBottom(new LuckyWick());
-        }
     }
 
     public static void atBattleStart() {
