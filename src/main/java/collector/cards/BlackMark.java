@@ -1,31 +1,34 @@
 package collector.cards;
 
-import collector.powers.SoulSnarePower;
+import collector.actions.OrderAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static collector.CollectorMod.makeID;
+import static collector.CollectorMod.order;
 import static collector.util.Wiz.applyToEnemy;
+import static collector.util.Wiz.atb;
 
-public class SoulSnare extends AbstractCollectorCard {
-    public final static String ID = makeID("SoulSnare");
-    // intellij stuff skill, enemy, basic, , , , , 1, 1
+public class BlackMark extends AbstractCollectorCard {
+    public final static String ID = makeID("BlackMark");
+    // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
-    public SoulSnare() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
+    public BlackMark() {
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
-        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p,m);
+        order();
         applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
-        applyToEnemy(m, new SoulSnarePower(m, magicNumber));
+
     }
 
     public void upp() {
         upgradeMagicNumber(1);
-        uDesc();
     }
 }

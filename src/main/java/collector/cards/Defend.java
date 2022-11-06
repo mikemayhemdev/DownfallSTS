@@ -15,6 +15,7 @@ public class Defend extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        super.use(p,m);
         blck();
     }
 

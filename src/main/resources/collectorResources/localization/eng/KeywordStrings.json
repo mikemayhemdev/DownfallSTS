@@ -1,12 +1,10 @@
 [
   {
-    "PROPER_NAME": "Affliction",
+    "PROPER_NAME": "Afflicted",
     "NAMES": [
-      "affliction",
-      "afflictions",
       "afflicted"
     ],
-    "DESCRIPTION": "Creatures are Afflicted when they have 1 or more of the following effects, #yWeak, #yVulnerable, #yPoison, #yGoop, #ySoulfire, #ySuffering, #ySoul #ySnare"
+    "DESCRIPTION": "Creatures are Afflicted when they are both #yVulnerable and #yWeak."
   },
   {
     "PROPER_NAME": "Suffering",
@@ -14,7 +12,7 @@
       "Suffering",
       "suffering"
     ],
-    "DESCRIPTION": "When Applied, enemy loses HP equal to their current #ySuffering NL Increase this by 1 whenever another #yAffliction is applied."
+    "DESCRIPTION": "When Suffering, Vulnerable, or Weak are applied, enemy loses HP equal to their current #ySuffering."
   },
   {
     "PROPER_NAME": "Soul Snare",
@@ -91,29 +89,13 @@
     "NAMES": [
       "pyre"
     ],
-    "DESCRIPTION": "You may #yexhaust a card in your hand to trigger an extra effect."
+    "DESCRIPTION": "Requires exhausting a card in hand in addition to paying its energy cost."
   },
   {
+    "PROPER_NAME": "Kindling",
     "NAMES": [
-      "stasis"
+      "kindling"
     ],
-    "PROPER_NAME": "Stasis",
-    "DESCRIPTION": "A card in #yStasis gains a turn counter equal to its cost plus #b1. NL Turn counter is reduced by #b1 at the start of your turn. NL When the counter reaches #b0, it is returned to your hand and costs #b0 until played."
-  },
-  {
-    "NAMES": [
-      "goop",
-      "gooped"
-    ],
-    "PROPER_NAME": "Goop",
-    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, removing all #yGoop and triggering any #yConsume effects."
-  },
-  {
-    "PROPER_NAME": "Boon",
-    "NAMES": [
-      "boon",
-      "boons"
-    ],
-    "DESCRIPTION": "Boons are the following effects, #yStrength, #yDexterity, #yArtifact, #yPlated #yArmor, #yVigor, #yBlock."
+    "DESCRIPTION": "An effect that triggers when this card is Exhausted by any means."
   }
 ]

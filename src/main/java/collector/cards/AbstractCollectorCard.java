@@ -6,8 +6,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,14 +19,16 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 
-import static automaton.AutomatonMod.getModID;
-import static automaton.AutomatonMod.makeCardPath;
-import static collector.util.Wiz.atb;
+import static collector.CollectorMod.getModID;
+import static collector.CollectorMod.makeCardPath;
+import static collector.util.Wiz.*;
 import static collector.util.Wiz.att;
 
 public abstract class AbstractCollectorCard extends CustomCard {
 
     public String betaArtPath;
+
+    public boolean pyre;
 
     protected final CardStrings cardStrings;
 
@@ -67,6 +71,23 @@ public abstract class AbstractCollectorCard extends CustomCard {
         return super.getPortraitImage();
     }
 
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (pyre){
+            if (p.hand.size() <= 1){
+                return false;
+            }
+        }
+        return super.canUse(p, m);
+    }
+
+    @Override
+    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        if (pyre){
+            att(new ExhaustAction(1, false, false, false));
+        }
+    }
+
     public static String getCorrectPlaceholderImage(CardType type, String id) {
         String img = makeCardPath(id.replaceAll((getModID() + ":"), "") + ".png");
         if ((!Gdx.files.internal(img).exists()))
@@ -91,6 +112,16 @@ public abstract class AbstractCollectorCard extends CustomCard {
             upgradeName();
             upp();
         }
+    }
+
+    public void kindlingEffect(){
+
+    }
+
+    @Override
+    public void triggerOnExhaust() {
+        super.triggerOnExhaust();
+        kindlingEffect();
     }
 
     public abstract void upp();
