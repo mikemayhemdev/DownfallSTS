@@ -31,12 +31,14 @@
     "DESCRIPTION": "Assists the Collector in battle by taking hits while they have #yAggro and being the source or target of different card effects. NL Cards that utilize an Ally explicitly cannot be played without one or without a living ally."
   },
   {
-    "PROPER_NAME": "Front",
+    "PROPER_NAME": "Guarded",
     "NAMES": [
-      "Front",
-      "front"
+      "Guarded",
+      "guarded",
+      "Guarding",
+      "guarding"
     ],
-    "DESCRIPTION": "The Leading charater is the charater to be targeted by enemy Attacks."
+    "DESCRIPTION": "Collector is considered Guarded if Torchhead is in front and taking enemy attacks. This occurs whenever Collector uses a non-Attack card."
   },
   {
     "PROPER_NAME": "Back",

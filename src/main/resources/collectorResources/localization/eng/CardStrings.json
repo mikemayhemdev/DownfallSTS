@@ -66,6 +66,38 @@
     "NAME": "Wave of Malice",
     "DESCRIPTION": "Deal !D! damage to ALL collector:Afflicted enemies."
   },
+  "collector:Mindflare": {
+    "NAME": "Mindflare",
+    "DESCRIPTION": "Deal !D! damage. NL If collector:Guarded, draw !M! cards from your *Collect pile."
+  },
+  "collector:Ember": {
+    "NAME": "Ember",
+    "DESCRIPTION": "Retain. Unplayable. NL If Exhausted, gain [E].",
+    "UPGRADE_DESCRIPTION": "Retain. Unplayable. NL If Exhausted, gain [E] [E]."
+  },
+  "collector:FlameLash": {
+    "NAME": "Flame Lash",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. Repeat for each *Ember in your hand."
+  },
+  "collector:Bonfire": {
+    "NAME": "Bonfire",
+    "DESCRIPTION": "Add !M! *Embers to your hand."
+  },
+  "collector:VoidArmor": {
+    "NAME": "VoidArmor",
+    "DESCRIPTION": "Gain Block equal to the number of cards in your *Exhaust pile.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Current: !B! Block.)"
+    ]
+  },
+  "collector:Vanguard": {
+    "NAME": "Vanguard",
+    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Gain 1 Blur."
+  },
+  "collector:Slayer": {
+    "NAME": "Slayer",
+    "DESCRIPTION": "Can only target Soul Snared enemies. NL Deal !D! damage."
+  },
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."

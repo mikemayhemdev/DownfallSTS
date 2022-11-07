@@ -87,6 +87,11 @@ public class CollectorMod implements
     }
 
 
+    public static boolean isGuarded(){
+        //TODO - When Torchhead mechanics are in
+        return true;
+    }
+
     public static String makePath(String resourcePath) {
         return modID + "Resources/" + resourcePath;
     }

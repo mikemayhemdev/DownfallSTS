@@ -20,7 +20,7 @@ public class FairTrade extends AbstractCollectorCard {
 
     public FairTrade() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 3;
         isPyre();
     }
 
