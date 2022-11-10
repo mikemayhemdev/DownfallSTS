@@ -31,5 +31,11 @@
     "TEXT": [
       " NL guardianmod:Renforcez de 2."
     ]
+  },
+  "Guardian:gemDescriptor": {
+    "TEXT": [
+      "Gemme",
+      "guardianmod:Gemme. NL "
+    ]
   }
 }

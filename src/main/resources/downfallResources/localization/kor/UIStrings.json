@@ -62,7 +62,8 @@
       "투사의 상단 자세 설명창을 표시하지 않습니다.",
       "Prevent Snecko from using card pools from other mods.",
       "음악을 끕니다.(재시작이 필요합니다.)",
-      "Downfall 모드 캐릭터의 모든 잠긴 교체 스킨을 해금합니다."
+      "Downfall 모드 캐릭터의 모든 잠긴 교체 스킨을 해금합니다.",
+      "Allow display card's subtype next to main type."
     ]
   },
   "downfall:EnergyPanelTip": {

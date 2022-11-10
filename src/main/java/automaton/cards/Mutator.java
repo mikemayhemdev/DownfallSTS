@@ -19,7 +19,7 @@ public class Mutator extends AbstractBronzeCard {
 
     public Mutator() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Mutator.png"));
+        //AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Mutator.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -11,5 +11,17 @@
     "TEXT": [
       " NL slimeboundmod:Приказывает."
     ]
+  },
+  "slimeboundmod:lickDescriptor": {
+    "TEXT": [
+      "Лизь",
+      "slimeboundmod:Лизь. NL "
+    ]
+  },
+  "slimeboundmod:tackleDescriptor": {
+    "TEXT": [
+      "Рывок",
+      "slimeboundmod:Рывок. NL "
+    ]
   }
 }

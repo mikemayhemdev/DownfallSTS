@@ -31,5 +31,11 @@
     "TEXT": [
       " NL guardianmod:提防 2。"
     ]
+  },
+  "Guardian:gemDescriptor": {
+    "TEXT": [
+      "寶石",
+      "guardianmod:寶石. NL "
+    ]
   }
 }
