@@ -48,7 +48,7 @@ public class EvilModeCharacterSelect {
 
             ArrayList<CharacterOption> basegameOptions = new ArrayList<>(), moddedOptions = new ArrayList<>();
             //CharacterOption[] villainOptions = new CharacterOption[8];
-            CharacterOption[] villainOptions = new CharacterOption[1];
+            CharacterOption[] villainOptions = new CharacterOption[2];
 
             int i = 0;
             while (options.hasNext()) {

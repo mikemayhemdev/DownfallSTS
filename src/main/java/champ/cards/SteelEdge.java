@@ -1,10 +1,10 @@
 package champ.cards;
 
-import automaton.actions.EasyXCostAction;
 import champ.ChampChar;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.actions.EasyXCostAction;
 
 public class SteelEdge extends AbstractChampCard {
 

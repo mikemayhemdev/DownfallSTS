@@ -1,6 +1,7 @@
 package champ.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
 import champ.cards.Defend;
@@ -11,7 +12,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import downfall.cardmods.ExhaustMod;
 import downfall.util.TextureLoader;
 
 import static champ.ChampMod.makeRelicOutlinePath;

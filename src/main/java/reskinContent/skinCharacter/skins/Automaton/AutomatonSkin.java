@@ -1,8 +1,10 @@
-package reskinContent.skinCharacter;
+package reskinContent.skinCharacter.skins.Automaton;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
+import reskinContent.skinCharacter.AbstractSkin;
+import reskinContent.skinCharacter.AbstractSkinCharacter;
 import reskinContent.skinCharacter.skins.Automaton.AutomationOriginal;
 import reskinContent.skinCharacter.skins.Automaton.BetaAutomaton;
 import reskinContent.vfx.ReskinUnlockedTextEffect;

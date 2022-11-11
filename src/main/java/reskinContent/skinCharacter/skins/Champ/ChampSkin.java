@@ -1,8 +1,10 @@
-package reskinContent.skinCharacter;
+package reskinContent.skinCharacter.skins.Champ;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
+import reskinContent.skinCharacter.AbstractSkin;
+import reskinContent.skinCharacter.AbstractSkinCharacter;
 import reskinContent.skinCharacter.skins.Champ.BetaChamp;
 import reskinContent.skinCharacter.skins.Champ.ChampOriginal;
 import reskinContent.skinCharacter.skins.Champ.ChampSister;

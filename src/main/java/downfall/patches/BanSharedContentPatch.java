@@ -1,4 +1,8 @@
-package slimebound.patches;
+/*
+
+//TODO - Uncomment this on full pacakages.  This is a hell of a beast to decouple.
+
+package downfall.patches;
 
 import automaton.potions.BurnAndBuffPotion;
 import automaton.relics.BronzeIdol;
@@ -61,6 +65,7 @@ public class BanSharedContentPatch {
     )
     public static class CardPatch {
         public static void Postfix(AbstractDungeon __instance) {
+
             if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_colorlessCards) {
                 AbstractDungeon.colorlessCardPool.removeCard(AwakenDeath.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(Chronoboost.ID);
@@ -200,3 +205,5 @@ public class BanSharedContentPatch {
         }
     }
 }
+
+ */

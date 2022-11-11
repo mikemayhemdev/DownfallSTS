@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import downfall.downfallMod;
-import guardian.vfx.DefensiveModeStanceParticleEffect;
+import downfall.vfx.DefensiveModeStanceParticleEffect;
 
 import static champ.ChampMod.vigor;
 

@@ -25,7 +25,6 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.downfallMod;
-import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
 
@@ -73,10 +72,15 @@ public class ChampChar extends CustomPlayer {
     public ChampChar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "champResources/images/char/mainChar/orb/vfx.png", null, (String) null);
 
+
+        String SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
+        String SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";
+        String CORPSE = "champResources/images/char/mainChar/corpse.png";
+
         initializeClass(null,
-                CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].SHOULDER1,
-                CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].SHOULDER2,
-                CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].CORPSE,
+                SHOULDER1,
+                SHOULDER2,
+                CORPSE,
                 getLoadout(), -15.0F, -30.0F, 250.0F, 300.0F, new EnergyManager(3));
 
 
@@ -105,10 +109,15 @@ public class ChampChar extends CustomPlayer {
     }
 
     public void reloadAnimation() {
+
+        String atlasURL = "champResources/images/char/mainChar/champ.atlas";
+        String jsonURL = "champResources/images/char/mainChar/champ.json";
+        float renderscale = 1.2f;
+
         this.loadAnimation(
-                CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].atlasURL,
-                CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].jsonURL,
-                CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].renderscale);
+                atlasURL,
+                jsonURL,
+                renderscale);
 //
 //        if (!CharacterSelectScreenPatches.characters[4].isOriginal() && CharacterSelectScreenPatches.characters[4].reskinUnlock) {
 //            this.loadAnimation(atlasURL2, this.jsonURL2, renderscale2);

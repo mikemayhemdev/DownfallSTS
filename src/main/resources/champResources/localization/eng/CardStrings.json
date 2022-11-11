@@ -395,5 +395,45 @@
   "champ:Headbutt": {
     "NAME": "Headbutt",
     "DESCRIPTION": "Deal !D! damage. NL Put a card from your discard pile on top of your draw pile."
+  },
+  "champ:AdoringFans": {
+    "NAME": "Adoring Fans",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:Enrage": {
+    "NAME": "Enrage",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:Invigorate": {
+    "NAME": "Invigorate",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:QuickStep": {
+    "NAME": "QuickStep",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:TheTrophy": {
+    "NAME": "TheTrophy",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:VictorsPose": {
+    "NAME": "VictorsPose",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:CalculateMove": {
+    "NAME": "CalculateMove",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:ShieldWall": {
+    "NAME": "ShieldWall",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
   }
 }

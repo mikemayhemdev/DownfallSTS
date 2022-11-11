@@ -104,7 +104,6 @@ import java.util.List;
 import java.util.Properties;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
-import static reskinContent.reskinContent.unlockAllReskin;
 
 @SpireInitializer
 public class downfallMod implements
@@ -755,7 +754,7 @@ public class downfallMod implements
                 saveData();
             });
 
-
+/*  //TOOO - UNCOMMENT FOR PACKAGING
             configPos -= configStep;
             ModLabeledToggleButton unlockAllSkinBtn = new ModLabeledToggleButton(configStrings.TEXT[12],
                     350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
@@ -767,6 +766,8 @@ public class downfallMod implements
 
             settingsPanel.addUIElement(unlockAllSkinBtn);
 
+
+ */
 
             settingsPanel.addUIElement(contentSharingBtnCurses);
             settingsPanel.addUIElement(contentSharingBtnEvents);

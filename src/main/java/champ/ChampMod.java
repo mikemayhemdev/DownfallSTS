@@ -63,7 +63,6 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import slimebound.patches.BanSharedContentPatch;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -301,7 +300,7 @@ public class ChampMod implements
         BaseMod.addPotion(TechPotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, TechPotion.POTION_ID, downfallMod.Enums.THE_CHAMP);
         BaseMod.addPotion(UltimateStancePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, UltimateStancePotion.POTION_ID, downfallMod.Enums.THE_CHAMP);
 
-        BanSharedContentPatch.registerRunLockedPotion(downfallMod.Enums.THE_CHAMP, CounterstrikePotion.POTION_ID);
+        //BanSharedContentPatch.registerRunLockedPotion(downfallMod.Enums.THE_CHAMP, CounterstrikePotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(CounterstrikePotion.POTION_ID);

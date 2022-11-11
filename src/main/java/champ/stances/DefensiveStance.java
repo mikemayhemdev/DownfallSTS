@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import downfall.downfallMod;
-import guardian.vfx.DefensiveModeStanceParticleEffect;
+import downfall.vfx.DefensiveModeStanceParticleEffect;
 
 public class DefensiveStance extends AbstractChampStance {
 

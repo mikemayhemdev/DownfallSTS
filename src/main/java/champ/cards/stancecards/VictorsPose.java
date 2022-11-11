@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.actions.unique.IncreaseMaxHpAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import hermit.relics.DentedPlate;
 
 public class VictorsPose extends AbstractChampCard {
 

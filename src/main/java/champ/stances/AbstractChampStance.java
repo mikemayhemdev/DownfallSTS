@@ -15,8 +15,6 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import downfall.util.TextureLoader;
-import theHexaghost.GhostflameHelper;
-import theHexaghost.HexaMod;
 
 public abstract class AbstractChampStance extends AbstractStance {
 
@@ -39,7 +37,7 @@ public abstract class AbstractChampStance extends AbstractStance {
 
     public static final float whiteOverlayTimer = .4F;
 
-    private final Texture whiteOverlay = TextureLoader.getTexture(HexaMod.makeUIPath("whiteOverlay.png"));
+    private final Texture whiteOverlay = TextureLoader.getTexture(ChampMod.makeUIPath("whiteOverlay.png"));
 
     private static final long sfxId = -1L;
     public String STANCE_ID = "guardianmod:AbstractMode";
@@ -207,7 +205,7 @@ public abstract class AbstractChampStance extends AbstractStance {
     public void renderTechniqueTriggerUI(SpriteBatch sb) {
         int slots = 3;
 
-        float allSlotXOffset = GhostflameHelper.globalX + -20F * Settings.scale;
+        float allSlotXOffset = -25F * Settings.scale + -20F * Settings.scale;
 
         float triggerSlot1x = AbstractDungeon.player.drawX - (100.0F * Settings.scale) + allSlotXOffset;
         float triggerSlot1y = AbstractDungeon.player.drawY + (380.0F * Settings.scale);

@@ -1,8 +1,10 @@
-package reskinContent.skinCharacter;
+package reskinContent.skinCharacter.skins.Hexaghost;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
+import reskinContent.skinCharacter.AbstractSkin;
+import reskinContent.skinCharacter.AbstractSkinCharacter;
 import reskinContent.skinCharacter.skins.Hexaghost.BetaHexaghost;
 import reskinContent.skinCharacter.skins.Hexaghost.HexaghostOriginal;
 import reskinContent.skinCharacter.skins.Hexaghost.Hexago;

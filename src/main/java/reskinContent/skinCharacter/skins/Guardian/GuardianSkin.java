@@ -1,8 +1,10 @@
-package reskinContent.skinCharacter;
+package reskinContent.skinCharacter.skins.Guardian;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
+import reskinContent.skinCharacter.AbstractSkin;
+import reskinContent.skinCharacter.AbstractSkinCharacter;
 import reskinContent.skinCharacter.skins.Guardian.BetaGuardian;
 import reskinContent.skinCharacter.skins.Guardian.GuardianChan;
 import reskinContent.skinCharacter.skins.Guardian.GuardianOriginal;

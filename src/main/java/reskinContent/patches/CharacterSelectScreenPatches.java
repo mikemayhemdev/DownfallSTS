@@ -19,6 +19,12 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import javassist.CtBehavior;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.*;
+import reskinContent.skinCharacter.skins.Automaton.AutomatonSkin;
+import reskinContent.skinCharacter.skins.Champ.ChampSkin;
+import reskinContent.skinCharacter.skins.Guardian.GuardianSkin;
+import reskinContent.skinCharacter.skins.Hexaghost.HexaghostSkin;
+import reskinContent.skinCharacter.skins.Slimebound.SlimeBoundSkin;
+import reskinContent.skinCharacter.skins.Snecko.SneckoSkin;
 
 import java.util.ArrayList;
 
