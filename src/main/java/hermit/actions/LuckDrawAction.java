@@ -35,6 +35,13 @@ public class LuckDrawAction extends AbstractGameAction {
                 return;
             }
 
+            if (AbstractDungeon.player.hasPower("No Draw"))
+            {
+                AbstractDungeon.player.getPower("No Draw").flash();
+                this.isDone = true;
+                return;
+            }
+
             if (!p.drawPile.isEmpty()) {
                 AbstractCard c = (AbstractCard) AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - 1);
                 if (c.cost > 0)

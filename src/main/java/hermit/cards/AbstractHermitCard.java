@@ -8,12 +8,15 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.Hologram;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.HermitMod;
+import hermit.actions.ComboAction;
 import hermit.patches.EndOfTurnPatch;
 import hermit.patches.VigorPatch;
 import hermit.powers.BigShotPower;
@@ -152,17 +155,23 @@ public abstract class AbstractHermitCard extends CustomCard {
                 }
             }
 
-            if (AbstractDungeon.player.hasPower(ComboPower.POWER_ID)) {
+            EndOfTurnPatch.deadon_counter++;
+        }
+
+        if (AbstractDungeon.player.hasPower(ComboPower.POWER_ID)) {
+            ComboPower comb = (ComboPower)AbstractDungeon.player.getPower(ComboPower.POWER_ID);
+
+            if (comb.uses < comb.amount)
+            {
+                comb.uses++;
+
                 if (!doneInit)
                     init();
-                AbstractDungeon.player.getPower(ComboPower.POWER_ID).flash();
 
-                for (int i = 0; i < AbstractDungeon.player.getPower(ComboPower.POWER_ID).amount; i++) {
-                    this.addToBot(new MakeTempCardInHandAction(hermit.HermitMod.deadList.getRandomCard(true).makeCopy(), 1));
-                }
+                comb.flash();
+
+                this.addToBot(new ComboAction(false, this));
             }
-
-            EndOfTurnPatch.deadon_counter++;
         }
 
         if (AbstractDungeon.player.hasPower(SnipePower.POWER_ID))

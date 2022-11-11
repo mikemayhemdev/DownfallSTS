@@ -1,6 +1,8 @@
 package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.curses.Decay;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -52,7 +54,8 @@ public class Manifest extends AbstractDynamicCard {
     public Manifest() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = 2;
-        baseBlock = block = 13;
+        baseBlock = block = 16;
+        this.cardsToPreview = new Decay();
         loadJokeCardImage(this, "manifest.png");
     }
 
@@ -60,7 +63,8 @@ public class Manifest extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        this.addToBot(new ManifestAction(magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Decay(), 1));
+        //this.addToBot(new ManifestAction(magicNumber));
     }
 
     //Upgraded stats.

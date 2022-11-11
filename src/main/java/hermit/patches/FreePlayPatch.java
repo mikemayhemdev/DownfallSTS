@@ -1,4 +1,3 @@
-/*
 package hermit.patches;
 
 import basemod.devcommands.power.Power;
@@ -21,6 +20,7 @@ import hermit.relics.Memento;
 
 public class FreePlayPatch {
 
+    /*
     @SpirePrefixPatch
     public static SpireReturn FreePlay(AbstractCard c)
     {
@@ -35,6 +35,5 @@ public class FreePlayPatch {
         }
         return SpireReturn.Continue();
     }
-
+    */
 }
-*/

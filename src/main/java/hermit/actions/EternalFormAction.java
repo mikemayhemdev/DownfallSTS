@@ -21,6 +21,7 @@ public class EternalFormAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
+
             Iterator var1 = AbstractDungeon.player.hand.group.iterator();
 
             while(var1.hasNext()) {
