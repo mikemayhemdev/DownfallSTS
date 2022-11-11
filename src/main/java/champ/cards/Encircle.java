@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -13,14 +14,13 @@ public class Encircle extends AbstractChampCard {
 
     //stupid intellij stuff attack, all_enemy, uncommon
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 5;
 
     public Encircle() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
-        // tags.add(ChampMod.COMBO);
-        // tags.add(ChampMod.COMBOBERSERKER);
+        tags.add(ChampMod.COMBO);
         postInit();
     }
 
@@ -31,9 +31,8 @@ public class Encircle extends AbstractChampCard {
         atb(new VFXAction(new WhirlwindEffect(), 0.0F));
         allDmg(AbstractGameAction.AttackEffect.NONE);
 
-        for (AbstractMonster q : monsterList()) {
-            techique();
-        }
+        combo();
+
 
     }
 

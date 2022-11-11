@@ -13,9 +13,9 @@ import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
 
 import static champ.ChampMod.loadJokeCardImage;
 
-public class Duel extends AbstractChampCard {
+public class Challenge extends AbstractChampCard {
 
-    public final static String ID = makeID("Duel");
+    public final static String ID = makeID("Challenge");
 
     //stupid intellij stuff attack, enemy, uncommon
 
@@ -25,11 +25,10 @@ public class Duel extends AbstractChampCard {
     private static final int BLOCK = 8;
     private static final int UPG_BLOCK = 3;
 
-    public Duel() {
+    public Challenge() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
-        tags.add(ChampMod.TECHNIQUE);
 
         postInit();
         loadJokeCardImage(this, "Challenge.png");
@@ -70,7 +69,7 @@ public class Duel extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
-        upgradeBlock(3);
+        upgradeDamage(UPG_DAMAGE);
+        upgradeBlock(UPG_BLOCK);
     }
 }

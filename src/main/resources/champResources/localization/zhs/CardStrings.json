@@ -35,7 +35,7 @@
     "NAME": "打脸",
     "DESCRIPTION": "造成 !D! 点伤害， NL 两次若目标已被 易伤 。 NL champ:战狂 champ:连段 ： NL 给予 !M! 层 易伤 。"
   },
-  "champ:FlashCut": {
+  "champ:FlashStrike": {
     "NAME": "拔刀打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL champ:防守 champ:连段 ： NL 获得 !M! 层 champ:反击 。 NL 获得 !B! 点 格挡 。"
   },
@@ -43,15 +43,15 @@
     "NAME": "防卫嘲讽",
     "DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 进入 champ:防守 。"
   },
-  "champ:ShieldSigil": {
+  "champ:ChainLash": {
     "NAME": "铁链鞭击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合 champ:技术 奖励额外提供 !M! 层。"
   },
-  "champ:FocusedDefense": {
+  "champ:BobAndWeave": {
     "NAME": "下潜摇摆",
     "DESCRIPTION": "进入 champ:战狂 。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 层 活力 。"
   },
-  "champ:FocusedBerserking": {
+  "champ:AllOut": {
     "NAME": "全力以赴",
     "DESCRIPTION": "消耗 。 NL 连续触发 !M! 次， NL 且不退出 姿态 。"
   },
@@ -70,7 +70,7 @@
     "NAME": "战斗怒吼",
     "DESCRIPTION": "获得 !M! 层 活力 。 NL 进入 champ:战狂 。"
   },
-  "champ:RageSigil": {
+  "champ:BattlePlan": {
     "NAME": "战斗计划",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 预见 !M! 。"
   },
@@ -105,7 +105,7 @@
     "NAME": "待命",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若 格挡 被打破， NL 下回合再获得 !B! 点。"
   },
-  "champ:ShieldSlam": {
+  "champ:MomentOfTruth": {
     "NAME": "决胜时刻",
     "DESCRIPTION": "保留 。 NL 抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "保留 。 NL 抽 !M! 张牌。"
@@ -129,12 +129,12 @@
     "DESCRIPTION": "造成你当前 格挡 值点伤害两次。 NL 获得2层 脆弱 。 NL champ:防守 champ:连段 ： NL 不获得 脆弱 。",
     "EXTENDED_DESCRIPTION": ["造成你当前 格挡 值(!D!)点伤害两次。 NL 获得2层 脆弱 。 NL champ:防守 champ:连段 ： NL 不获得 脆弱 。"]
   },
-  "champ:FalseCounter": {
+  "champ:RopeADope": {
     "NAME": "以逸待劳",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得 [E] 并抽两张牌。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得 [E] [E] 并抽两张牌。"
   },
-  "champ:IronFortress": {
+  "champ:TechnicalJig": {
     "NAME": "战斗跃舞",
     "DESCRIPTION": "进入不同 姿态 时， NL 获得其 champ:技术 奖励两次。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 进入不同 姿态 时， NL 获得其 champ:技术 奖励两次。"
@@ -147,11 +147,11 @@
     "NAME": "固守",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL 获得 1 层 bronze:残影 。"
   },
-  "champ:ShieldWall": {
+  "champ:IronFortress": {
     "NAME": "钢铁要塞",
     "DESCRIPTION": "获得 2 点 敏捷 。 NL 回合结束时， NL 获得 !M! 点 格挡 。"
   },
-  "champ:Haymaker": {
+  "champ:Piledriver": {
     "NAME": "螺旋打桩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 2 层 易伤 。 NL 给予 2 层 虚弱 。"
   },
@@ -182,7 +182,7 @@
       "我不必强化"
     ]
   },
-  "champ:BladeFlurry": {
+  "champ:FlurryOfStrikes": {
     "NAME": "乱舞打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合下张 *打击 牌将打出两次。"
   },
@@ -195,7 +195,7 @@
     "NAME": "刽子打击",
     "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 打出 *技能 牌时， NL 本场战斗伤害加 !M! 。"
   },
-  "champ:HeavySlash": {
+  "champ:MasterfulSlash": {
     "NAME": "大师斩击",
     "DESCRIPTION": " 造成 !D! 点伤害。 NL 随机获得 *技能 牌。 NL 其耗能为0。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得 *技能 牌+。 NL 其耗能为0。"
@@ -312,7 +312,7 @@
     "NAME": "角斗形态",
     "DESCRIPTION": "回合开始时， NL 返还上回合所耗 !M! /3层 活力 与 champ:反击 。"
   },
-  "champ:Duel": {
+  "champ:Challenge": {
     "NAME": "挑战",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若目标有 力量 ， NL 再打出一次。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若目标有 力量 ， NL 再打出一次。"

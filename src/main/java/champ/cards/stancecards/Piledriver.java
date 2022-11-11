@@ -1,28 +1,28 @@
-package champ.cards;
+package champ.cards.stancecards;
 
 import champ.ChampMod;
 import champ.actions.AnimateSuplexAction;
+import champ.cards.AbstractChampCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.loadJokeCardImage;
 
-public class Haymaker extends AbstractChampCard {
+public class Piledriver extends AbstractChampCard {
 
-    public final static String ID = makeID("Haymaker");
+    public final static String ID = makeID("Piledriver");
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 4;
+    private static final int DAMAGE = 8;
+    private static final int UPG_DAMAGE = 3;
 
-    public Haymaker() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+    public Piledriver() {
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-
+        exhaust = true;
         tags.add(ChampMod.FINISHER);
-        postInit();
         loadJokeCardImage(this, "Haymaker.png");
     }
 

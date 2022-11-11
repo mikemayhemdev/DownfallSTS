@@ -34,7 +34,7 @@
     "NAME": "안면 강타",
     "DESCRIPTION": "피해를 !D! 줍니다. 적이 취약을 보유하고 있다면 피해를 두 번 줍니다. NL *광폭화 champ:연계: 취약을 !M! 부여합니다."
   },
-  "champ:FlashCut": {
+  "champ:FlashStrike": {
     "NAME": "순간 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL *수비 champ:연계: champ:반격을 !M! 얻고 방어도를 !B! 얻습니다."
   },
@@ -53,15 +53,15 @@
     "NAME": "수비 함성",
     "DESCRIPTION": "champ:반격을 !M! 얻습니다. champ:수비 자세를 취합니다."
   },
-  "champ:ShieldSigil": {
+  "champ:ChainLash": {
     "NAME": "쇠사슬 채찍",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴 동안 *스킬 *카드 *보너스를 !M! 증가시킵니다."
   },
-  "champ:FocusedDefense": {
+  "champ:BobAndWeave": {
     "NAME": "상하좌우",
     "DESCRIPTION": "champ:광폭화 자세를 취합니다. NL 방어도를 !B! 얻습니다. NL 활력 을 !M! 얻습니다."
   },
-  "champ:FocusedBerserking": {
+  "champ:AllOut": {
     "NAME": "총력전",
     "DESCRIPTION": "소멸. NL champ:자세에서 벗어나지 않습니다. 이 효과를 !M! 번 발동합니다:"
   },
@@ -91,7 +91,7 @@
     "NAME": "광폭화 함성",
     "DESCRIPTION": "활력 을 !M! 얻습니다. NL champ:광폭화 자세를 취합니다."
   },
-  "champ:RageSigil": {
+  "champ:BattlePlan": {
     "NAME": "싸움 계획",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 예지 !M! ."
   },
@@ -137,7 +137,7 @@
     "NAME": "준비 시작!",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 방어도를 모두 잃으면 다음 턴에 방어도를 !B! 얻습니다."
   },
-  "champ:ShieldSlam": {
+  "champ:MomentOfTruth": {
     "NAME": "최후의 순간",
     "DESCRIPTION": "보존. NL 카드를 !M! 장 뽑습니다.",
     "UPGRADE_DESCRIPTION": "보존. NL 카드를 !M! 장 뽑습니다."
@@ -163,12 +163,12 @@
       "현재 방어도 !D! 만큼 피해를 2번 줍니다. NL 손상을 2 얻습니다. NL *수비 champ:연계: 손상을 2 잃습니다"
     ]
   },
-  "champ:FalseCounter": {
+  "champ:RopeADope": {
     "NAME": "손 풀기",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] 를 얻고 카드를 2장 뽑습니다.",
     "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] [E] 를 얻고 카드를 2장 뽑습니다."
   },
-  "champ:IronFortress": {
+  "champ:TechnicalJig": {
     "NAME": "현란한 꺾기",
     "DESCRIPTION": "champ:자세를 취할 때마다 취한 champ:자세의 *스킬 *카드 *효과를 2번 발동시킵니다.",
     "UPGRADE_DESCRIPTION": "선천성. NL champ:자세를 취할 때마다 취한 champ:자세의 *스킬 *카드 *효과를 2번 발동시킵니다."
@@ -181,11 +181,11 @@
     "NAME": "버티기",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL champ:반격을 !M! 얻습니다. NL bronze:흐릿함을 1 얻습니다."
   },
-  "champ:ShieldWall": {
+  "champ:IronFortress": {
     "NAME": "철의 요새",
     "DESCRIPTION": "민첩을 2 얻습니다. NL 매 턴 종료 시 방어도를 !M! 얻습니다."
   },
-  "champ:Haymaker": {
+  "champ:Piledriver": {
     "NAME": "맹타",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 2 부여합니다. NL 약화를 2 부여합니다."
   },
@@ -216,7 +216,7 @@
       "그건 어리석은 짓이다."
     ]
   },
-  "champ:BladeFlurry": {
+  "champ:FlurryOfStrikes": {
     "NAME": "타격 돌풍",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용하는 다음 *타격 카드가 2번 사용됩니다."
   },
@@ -228,7 +228,7 @@
     "NAME": "죽이는 타격",
     "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 이번 전투 동안 *스킬 *카드 *보너스를 얻을 때마다 이 카드의 피해량을 !M! 증가시킵니다."
   },
-  "champ:HeavySlash": {
+  "champ:MasterfulSlash": {
     "NAME": "숙달된 베기",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 스킬 카드를 1장 얻습니다. NL 그 카드의 비용은 0이 됩니다.",
     "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 강화된 스킬 카드를 1장 얻습니다. NL 그 카드의 비용은 0이 됩니다."
@@ -345,7 +345,7 @@
     "NAME": "검투사의 형상",
     "DESCRIPTION": "매 턴 시작 시 저번 턴에 소모한 활력 3당 활력 과 champ:반격을 !M! 얻습니다."
   },
-  "champ:Duel": {
+  "champ:Challenge": {
     "NAME": "도전",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 대상이 힘을 가지고 있다면 이 카드를 두 번 사용합니다.",
     "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 대상이 힘을 가지고 있다면 이 카드를 두 번 사용합니다."

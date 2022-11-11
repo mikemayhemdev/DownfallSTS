@@ -11,28 +11,22 @@ public class DefensiveShout extends AbstractChampCard {
 
     public DefensiveShout() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
-        //tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERDEFENSIVE);
-        // myHpLossCost = magicNumber;
         postInit();
+        baseBlock = 0;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // techique();
         defenseOpen();
-        applyToSelf(new CounterPower(magicNumber));
-
-        //  AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
-        //if (upgraded) techique();
+        applyToSelf(new CounterPower(1));
+        if (upgraded) blck();
     }
 
 
     public void upp() {
-        //   tags.add(ChampMod.TECHNIQUE);
-        //    postInit();
-        //   initializeDescription();
-        upgradeMagicNumber(4);
+        upgradeBlock(2);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

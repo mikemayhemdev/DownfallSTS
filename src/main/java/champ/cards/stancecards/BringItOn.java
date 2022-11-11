@@ -1,6 +1,7 @@
-package champ.cards;
+package champ.cards.stancecards;
 
 import champ.ChampMod;
+import champ.cards.AbstractChampCard;
 import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -11,27 +12,19 @@ public class BringItOn extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int MAGIC = 9;
-
     public BringItOn() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
-        baseBlock = 9;
-        //exhaust = true;
-        tags.add(ChampMod.FINISHER);
-        postInit();
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        baseBlock = 7;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //finisher();
         blck();
-        applyToSelf(new CounterPower(magicNumber));
+        applyToSelf(new CounterPower(1));
 
-        finisher();
     }
 
     public void upp() {
         upgradeBlock(3);
-        upgradeMagicNumber(3);
     }
 }

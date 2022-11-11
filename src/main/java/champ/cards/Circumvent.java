@@ -17,24 +17,14 @@ public class Circumvent extends AbstractChampCard {
     public Circumvent() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        // tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBODEFENSIVE);
-        baseMagicNumber = magicNumber = 2;
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //  techique();
         blck();
-        if (dcombo() || bcombo()) {
-            atb(new DrawCardAction(magicNumber));
-        }
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = dcombo() || bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        atb(new DrawCardAction(1));
+        combo();
     }
 
     public void upp() {

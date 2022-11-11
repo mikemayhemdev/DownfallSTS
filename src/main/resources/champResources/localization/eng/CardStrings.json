@@ -34,7 +34,7 @@
     "NAME": "Face Slap",
     "DESCRIPTION": "Deal !D! damage, twice if enemy is Vulnerable. NL *Berserker champ:Combo: Apply !M! Vulnerable."
   },
-  "champ:FlashCut": {
+  "champ:FlashStrike": {
     "NAME": "Flash Strike",
     "DESCRIPTION": "Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block."
   },
@@ -42,15 +42,15 @@
     "NAME": "Defensive Shout",
     "DESCRIPTION": "Gain !M! champ:Counter. NL Enter champ:Defensive."
   },
-  "champ:ShieldSigil": {
+  "champ:ChainLash": {
     "NAME": "Chain Lash",
     "DESCRIPTION": "Deal !D! damage. NL This turn, your Skill Bonus effects are increased by !M!."
   },
-  "champ:FocusedDefense": {
+  "champ:BobAndWeave": {
     "NAME": "Bob and Weave",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vigor. NL Enter champ:Berserker."
   },
-  "champ:FocusedBerserking": {
+  "champ:AllOut": {
     "NAME": "All Out",
     "DESCRIPTION": "Exhaust. NL Perform !M! times without exiting your Stance: "
   },
@@ -66,7 +66,7 @@
     "NAME": "Berserker's Shout",
     "DESCRIPTION": "Gain !M! Vigor. NL Enter champ:Berserker."
   },
-  "champ:RageSigil": {
+  "champ:BattlePlan": {
     "NAME": "Battle Plan",
     "DESCRIPTION": "Gain !B! Block. NL Scry !M!."
   },
@@ -101,7 +101,7 @@
     "NAME": "En Garde",
     "DESCRIPTION": "Gain !B! Block. NL If your Block is broken this turn, gain !B! Block next turn."
   },
-  "champ:ShieldSlam": {
+  "champ:MomentOfTruth": {
     "NAME": "Moment of Truth",
     "DESCRIPTION": "Retain. NL Draw !M! card.",
     "UPGRADE_DESCRIPTION": "Retain. NL Draw !M! cards."
@@ -127,12 +127,12 @@
       "Deal damage equal to your Block ( !D! ) twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Lose 2 Frail."
     ]
   },
-  "champ:FalseCounter": {
+  "champ:RopeADope": {
     "NAME": "Rope-a-dope",
     "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] and draw 2 cards.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] and draw 2 cards."
   },
-  "champ:IronFortress": {
+  "champ:TechnicalJig": {
     "NAME": "Technical Jig",
     "DESCRIPTION": "Whenever you enter a Stance, trigger its *Skill *Bonus twice.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance, trigger *Skill *Bonus twice."
@@ -145,11 +145,11 @@
     "NAME": "Hold Firm",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL Gain 1 bronze:Blur."
   },
-  "champ:ShieldWall": {
+  "champ:IronFortress": {
     "NAME": "Iron Fortress",
     "DESCRIPTION": "Gain 2 Dexterity. NL At the end of each turn, gain !M! Block."
   },
-  "champ:Haymaker": {
+  "champ:Piledriver": {
     "NAME": "Piledriver",
     "DESCRIPTION": "Deal !D! damage. NL Apply 2 Vulnerable. NL Apply 2 Weak."
   },
@@ -180,7 +180,7 @@
       "A poor time for that move."
     ]
   },
-  "champ:BladeFlurry": {
+  "champ:FlurryOfStrikes": {
     "NAME": "Flurry of Strikes",
     "DESCRIPTION": "Deal !D! damage. NL The next \"Strike\" card you play this turn is played twice."
   },
@@ -192,7 +192,7 @@
     "NAME": "Murder Strike",
     "DESCRIPTION": "Retain. NL Deal !D! damage. NL When you use a Skill, this deals !M! more damage this combat."
   },
-  "champ:HeavySlash": {
+  "champ:MasterfulSlash": {
     "NAME": "Masterful Slash",
     "DESCRIPTION": "Deal !D! damage. NL Gain a random Skill. NL It costs 0.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a random Upgraded Skill. NL It costs 0."
@@ -305,7 +305,7 @@
     "NAME": "Gladiator Form",
     "DESCRIPTION": "At the start of each turn, gain !M! Vigor for every 3 Vigor spent last turn. Then do the same for champ:Counter."
   },
-  "champ:Duel": {
+  "champ:Challenge": {
     "NAME": "Challenge",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If the target has Strength, repeat these effects once.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If the target has Strength, repeat these effects once."

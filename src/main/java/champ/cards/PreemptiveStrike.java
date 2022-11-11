@@ -6,54 +6,31 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import org.w3c.dom.css.Counter;
 
 public class PreemptiveStrike extends AbstractChampCard {
 
     public final static String ID = makeID("PreemptiveStrike");
 
+    private static final int DAMAGE = 8;
+
     public PreemptiveStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 0;
+        baseDamage = DAMAGE;
         isMultiDamage = true;
         tags.add(CardTags.STRIKE);
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        allDmg(AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         if (p.hasPower(CounterPower.POWER_ID)) {
-            addToTop(new ReducePowerAction(p, p, CounterPower.POWER_ID, p.getPower(CounterPower.POWER_ID).amount / 2));
+            for (int i = 0; i < p.getPower(CounterPower.POWER_ID).amount; i++) {
+                allDmg(AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+            }
         }
-    }
-
-    public void calculateCardDamage(AbstractMonster mo) {
-        int realBaseDamage = this.baseDamage;
-        if (AbstractDungeon.player.hasPower(CounterPower.POWER_ID)) {
-            this.baseDamage += AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount;
-        }
-        super.calculateCardDamage(mo);
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = this.damage != this.baseDamage;
-    }
-
-    public void applyPowers() {
-        int realBaseDamage = this.baseDamage;
-        if (AbstractDungeon.player.hasPower(CounterPower.POWER_ID)) {
-            this.baseDamage += AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount;
-        }
-        super.applyPowers();
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = this.damage != this.baseDamage;
-        this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];
-        initializeDescription();
-    }
-
-    public void onMoveToDiscard() {
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.initializeDescription();
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeDamage(3);
     }
 }

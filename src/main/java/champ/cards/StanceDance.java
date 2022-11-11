@@ -3,6 +3,7 @@ package champ.cards;
 import champ.ChampMod;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
+import champ.stances.GladiatorStance;
 import champ.stances.UltimateStance;
 import champ.vfx.StanceDanceEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -34,7 +35,6 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        //if (upgraded) techique();
         atb(new OctoChoiceAction(m, this));
         postInit();
 
@@ -44,6 +44,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
         cardList.add(new OctoChoiceCard("octo:OctoBerserk", this.name, ChampMod.makeCardPath("OctoStanceBerserker.png"), this.EXTENDED_DESCRIPTION[0]));
         cardList.add(new OctoChoiceCard("octo:OctoDefense", this.name, ChampMod.makeCardPath("OctoStanceDefensive.png"), this.EXTENDED_DESCRIPTION[1]));
+        cardList.add(new OctoChoiceCard("octo:OctoGladiator", this.name, ChampMod.makeCardPath("OctoStanceGladiator.png"), this.EXTENDED_DESCRIPTION[2]));
         return cardList;
     }
 
@@ -53,7 +54,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
                 if (upgraded || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(champ.stances.UltimateStance.STANCE_ID)) {
                     ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
                     for (AbstractCard t : CardLibrary.getAllCards()) {
-                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBOBERSERKER) && !t.hasTag(CardTags.HEALING))
+                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBO) && !t.hasTag(CardTags.HEALING))
                             rCardList.add(t);
                     }
                     AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
@@ -67,7 +68,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
                 if (upgraded || AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)) {
                     ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
                     for (AbstractCard t : CardLibrary.getAllCards()) {
-                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBODEFENSIVE) && !t.hasTag(CardTags.HEALING))
+                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBO) && !t.hasTag(CardTags.HEALING))
                             rCardList.add(t);
                     }
                     AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
@@ -75,6 +76,19 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
                     makeInHand(r);
                 }
                 ChampMod.defenseOpen();
+                break;
+            case "octo:OctoGladiator":
+                if (upgraded || AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)) {
+                    ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
+                    for (AbstractCard t : CardLibrary.getAllCards()) {
+                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBO) && !t.hasTag(CardTags.HEALING))
+                            rCardList.add(t);
+                    }
+                    AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
+                    UnlockTracker.markCardAsSeen(r.cardID);
+                    makeInHand(r);
+                }
+                ChampMod.gladiatorOpen();
                 break;
         }
 

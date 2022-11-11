@@ -4,6 +4,7 @@ import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 
 public class PreciseThrust extends AbstractChampCard {
 
@@ -11,25 +12,16 @@ public class PreciseThrust extends AbstractChampCard {
 
     //stupid intellij stuff attack, self_and_enemy, uncommon
 
-    private static final int DAMAGE = 6;
-    private static final int BLOCK = 6;
+    private static final int DAMAGE = 8;
 
     public PreciseThrust() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseBlock = BLOCK;
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBODEFENSIVE);
-        tags.add(ChampMod.COMBOBERSERKER);
-        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        if (dcombo()) {
-            blck();
-        }
-        if (bcombo()) {
+        if (p.stance.ID.equals(NeutralStance.STANCE_ID)) {
             dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         }
 
@@ -37,11 +29,10 @@ public class PreciseThrust extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = (bcombo() || dcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = (nostance()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeBlock(2);
+        upgradeDamage(3);
     }
 }

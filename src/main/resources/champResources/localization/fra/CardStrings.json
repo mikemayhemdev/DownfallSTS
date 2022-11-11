@@ -43,7 +43,7 @@
     "NAME": "Gifle",
     "DESCRIPTION": "Infligez !D! dégâts, deux fois si l'ennemi est Vulnérable. NL champ:Combo Pose du *Destructeur: Appliquez !M! de Vulnérabilité."
   },
-  "champ:FlashCut": {
+  "champ:FlashStrike": {
     "NAME": "Frappe éclair",
     "DESCRIPTION": "Infligez !D! damage. NL champ:Combo Pose *Défensive: Gagnez !M! de champ:Contre et !B! d'Armure."
   },
@@ -62,15 +62,15 @@
     "NAME": "Cri de défense",
     "DESCRIPTION": "Gagnez !M! de champ:Contre. NL Adoptez la pose champ:Défensive."
   },
-  "champ:ShieldSigil": {
+  "champ:ChainLash": {
     "NAME": "Fouet de chaînes",
     "DESCRIPTION": "Infligez !D! dégâts. NL Ce tour, vos Bonus de Compétences sont augmentés de !M!."
   },
-  "champ:FocusedDefense": {
+  "champ:BobAndWeave": {
     "NAME": "Bob and Weave",
     "DESCRIPTION": "Adoptez la pose du champ:Destructeur. NL Gagnez !B! d'Armure. NL Gagnez !M! de Vigueur."
   },
-  "champ:FocusedBerserking": {
+  "champ:AllOut": {
     "NAME": "Tout donner",
     "DESCRIPTION": "Épuisement. Déclenchez !M! fois sans quitter votre pose: "
 	
@@ -101,7 +101,7 @@
     "NAME": "Cri du Destructeur",
     "DESCRIPTION": "Gagnez !M! de Vigueur. NL Adoptez la Pose du champ:Destructeur."
   },
-  "champ:RageSigil": {
+  "champ:BattlePlan": {
     "NAME": "Plan de bataille",
     "DESCRIPTION": "Gagnez !B! d'Armure. NL Scrutez !M! cartes."
   },
@@ -147,7 +147,7 @@
     "NAME": "En Garde",
     "DESCRIPTION": "Gagnez !B! d'Armure. NL Si votre Armure est cassée ce tour, gagnez !B! d'Armure au prochain tour."
   },
-  "champ:ShieldSlam": {
+  "champ:MomentOfTruth": {
     "NAME": "Moment de vérité",
     "DESCRIPTION": "Retenue. NL Piochez !M! carte.",
     "UPGRADE_DESCRIPTION": "Retenue. NL Piochez !M! cartes."
@@ -173,12 +173,12 @@
       "Infligez des dégâts égaux à votre Armure ( !D! ) deux fois. NL Gagnez 2 de Fragilité. champ:Combo Pose *Défensive: Perdez 2 de Fragilité."
       ]
   },
-  "champ:FalseCounter": {
+  "champ:RopeADope": {
     "NAME": "Contre les cordes",
     "DESCRIPTION": "Gagnez !B! d'Armure. Au prochain tour, gagnez [E] et piochez 3 cartes.",
     "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. Au prochain tour, gagnez [E] [E] et piochez 3 cartes."
   },
-  "champ:IronFortress": {
+  "champ:TechnicalJig": {
     "NAME": "Dispositif technique",
     "DESCRIPTION": "Lorsque vous adoptez une Pose, déclenchez ses *Bonus de *Compétences deux fois.",
     "UPGRADE_DESCRIPTION": "Inné. NL Lorsque vous adoptez une Pose, déclenchez ses *Bonus de *Compétences deux fois."
@@ -191,11 +191,11 @@
     "NAME": "Tenir bon",
     "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagnez !M! de champ:Contre. NL Gagnez 1 bronze:Flou."
   },
-  "champ:ShieldWall": {
+  "champ:IronFortress": {
     "NAME": "Forteresse d'acier",
     "DESCRIPTION": "Gagnez 2 de Dextérité. NL À la fin de chaque tour, gagnez !M! d'Armure."
   },
-  "champ:Haymaker": {
+  "champ:Piledriver": {
     "NAME": "Pilon",
     "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez 2 de Vulnérabilité. NL Appliquez 2 de Faiblesse."
   },
@@ -231,7 +231,7 @@
       "Un mauvais moment pour cette carte."
     ]
   },
-  "champ:BladeFlurry": {
+  "champ:FlurryOfStrikes": {
     "NAME": "Frappes en rafale",
     "DESCRIPTION": "Infligez !D! dégâts. NL La prochaine *Frappe que vous jouez ce tour est jouée deux fois."
   },
@@ -243,7 +243,7 @@
     "NAME": "Frappe meurtrière",
     "DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Lorsque vous utilisez une Compétence, cette carte inflige !M! dégâts supplémentaires ce combat."
   },
-  "champ:HeavySlash": {
+  "champ:MasterfulSlash": {
     "NAME": "Taillade magistrale",
     "DESCRIPTION": "Infligez !D! dégâts. NL Obtenez une Compétence aléatoire. Elle coûte 0.",
     "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Obtenez une Compétence aléatoire Améliorée. Elle coûte 0."
@@ -360,7 +360,7 @@
     "NAME": "Forme gladiatrice",
     "DESCRIPTION": "Au début de chaque tour, gagnez !M! de Vigueur pour chaque 3 de Vigueur dépensés au tour précédent. Puis faites-la même chose pour le champ:Contre."
   },
-  "champ:Duel": {
+  "champ:Challenge": {
     "NAME": "Challenge",
     "DESCRIPTION": "Gagnez !B! d'Armure. NL Infligez !D! dégâts. NL Si la cible possède de la Force, répétez ces effets.",
     "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Infligez !D! dégâts. NL Si la cible possède de la Force, répétez ces effets."

@@ -2,6 +2,7 @@ package champ;
 
 import basemod.abstracts.CustomPlayer;
 import champ.cards.*;
+import champ.cards.stancecards.Execute;
 import champ.relics.ChampionCrown;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;

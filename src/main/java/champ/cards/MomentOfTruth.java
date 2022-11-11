@@ -7,13 +7,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.loadJokeCardImage;
 
-public class ShieldSlam extends AbstractChampCard {
+public class MomentOfTruth extends AbstractChampCard {
 
-    public final static String ID = makeID("ShieldSlam");
+    public final static String ID = makeID("MomentOfTruth");
 
     //stupid intellij stuff attack, enemy, rare
 
-    public ShieldSlam() {
+    public MomentOfTruth() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         selfRetain = true;
         tags.add(ChampMod.FINISHER);

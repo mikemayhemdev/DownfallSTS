@@ -22,6 +22,7 @@ import champ.relics.*;
 import champ.stances.AbstractChampStance;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
+import champ.stances.GladiatorStance;
 import champ.util.CardFilter;
 import champ.util.CoolVariable;
 import champ.util.OnOpenerSubscriber;
@@ -69,6 +70,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 
 import static downfall.downfallMod.TECHNIQUE;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
@@ -112,6 +114,10 @@ public class ChampMod implements
     public static AbstractCard.CardTags OPENER;
     @SpireEnum
     public static AbstractCard.CardTags OPENERDEFENSIVE;
+    @SpireEnum
+    public static AbstractCard.CardTags OPENERGLADIATOR;
+    @SpireEnum
+    public static AbstractCard.CardTags OPENERULTIMATE;
     @SpireEnum
     public static AbstractCard.CardTags OPENERNOTIN;
     @SpireEnum
@@ -336,8 +342,8 @@ public class ChampMod implements
                 ViciousMockery.ID,
                 DefensiveStyle.ID,
 
-                RageSigil.ID,
-                ShieldSigil.ID,
+                BattlePlan.ID,
+                ChainLash.ID,
                 SwordSigil.ID,
 
                 EnchantShield.ID,
@@ -493,16 +499,30 @@ public class ChampMod implements
         if (abstractCard.hasTag(ChampMod.OPENERDEFENSIVE)) {
             defenseOpen();
         }
+        if (abstractCard.hasTag(ChampMod.OPENERGLADIATOR)) {
+            gladiatorOpen();
+        }
         if (abstractCard.hasTag(ChampMod.OPENERNOTIN)) {
-            if (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID)) {
-                berserkOpen();
-            } else if (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
-                defenseOpen();
-            } else if (AbstractDungeon.cardRandomRng.randomBoolean()) {
-                berserkOpen();
-            } else {
-                defenseOpen();
+            ArrayList<String> stances = new ArrayList<>();
+
+            if (!AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID)){
+                stances.add(DefensiveStance.STANCE_ID);
             }
+            if (!AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)){
+                stances.add(BerserkerStance.STANCE_ID);
+            }
+            if (!AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID)){
+                stances.add(GladiatorStance.STANCE_ID);
+            }
+
+            Collections.shuffle(stances);
+
+            switch (stances.get(0)){
+                case DefensiveStance.STANCE_ID: { defenseOpen();}
+                case BerserkerStance.STANCE_ID: { berserkOpen();}
+                case GladiatorStance.STANCE_ID: { gladiatorOpen();}
+            }
+
         }
 
     }
@@ -517,6 +537,11 @@ public class ChampMod implements
     public static void defenseOpen() {
 
         AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+    }
+    public static void gladiatorOpen() {
+
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(GladiatorStance.STANCE_ID));
         triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 

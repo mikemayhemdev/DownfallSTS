@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
-public class HeavySlash extends AbstractChampCard {
+public class MasterfulSlash extends AbstractChampCard {
 
-    public final static String ID = makeID("HeavySlash");
+    public final static String ID = makeID("MasterfulSlash");
 
     //stupid intellij stuff attack, enemy, rare
 
@@ -17,7 +17,7 @@ public class HeavySlash extends AbstractChampCard {
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
-    public HeavySlash() {
+    public MasterfulSlash() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
@@ -26,15 +26,14 @@ public class HeavySlash extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //finisher();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        //TODO Change this from Skill to random card with Combo
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL);
         c.isSeen = true;
         UnlockTracker.markCardAsSeen(c.cardID);
         c.modifyCostForCombat(-99);
         if (upgraded) c.upgrade();
         makeInHand(c);
-        //   techique();
     }
 
 

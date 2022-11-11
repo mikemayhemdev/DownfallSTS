@@ -4,11 +4,11 @@ import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class RageSigil extends AbstractChampCard {
+public class BattlePlan extends AbstractChampCard {
 
-    public final static String ID = makeID("RageSigil");
+    public final static String ID = makeID("BattlePlan");
 
-    public RageSigil() {
+    public BattlePlan() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 2;
         baseMagicNumber = magicNumber = 3;

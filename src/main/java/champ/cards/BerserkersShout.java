@@ -18,26 +18,18 @@ public class BerserkersShout extends AbstractChampCard {
     public BerserkersShout() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        //tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
-        // myHpLossCost = magicNumber;
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // techique();
         berserkOpen();
         vigor(magicNumber);
-        //AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
-        //  if (upgraded) techique();
     }
 
 
     public void upp() {
-        // tags.add(ChampMod.TECHNIQUE);
-        //postInit();
-        //  initializeDescription();
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(2);
     }
 }

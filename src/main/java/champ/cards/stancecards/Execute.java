@@ -1,6 +1,7 @@
-package champ.cards;
+package champ.cards.stancecards;
 
 import champ.ChampMod;
+import champ.cards.AbstractChampCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,12 +16,10 @@ public class Execute extends AbstractChampCard {
     public final static String ID = makeID("Execute");
 
     public Execute() {
-        super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = 6;
-        baseCool = cool = 2;
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        baseDamage = 8;
+        exhaust = true;
         tags.add(ChampMod.FINISHER);
-        tags.add(downfallMod.BANNEDFORSNECKO);
-        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,8 +32,6 @@ public class Execute extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeDamage(2);
     }
 }

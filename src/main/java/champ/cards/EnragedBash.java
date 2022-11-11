@@ -3,9 +3,12 @@ package champ.cards;
 import champ.ChampMod;
 import champ.actions.ModifyMagicAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class EnragedBash extends AbstractChampCard {
 
@@ -13,42 +16,23 @@ public class EnragedBash extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 7;
-    private static final int MAGIC = 1;
+    private static final int DAMAGE = 10;
+    private static final int MAGIC = 2;
 
     public EnragedBash() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOBERSERKER);
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        int chosen = 0;
-        for (int i = 0; i < magicNumber; i++) {
-            chosen = AbstractDungeon.cardRng.random(0, 2);
-            switch (chosen) {
-                case 0: {
-                    dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-                    break;
-                }
-                case 1: {
-                    dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-                    break;
-                }
-                case 2: {
-                    dmg(m, AbstractGameAction.AttackEffect.SMASH);
-                    break;
-                }
-            }
-        }
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+
         if (bcombo()) {
-            atb(new ModifyMagicAction(this.uuid, 1));
-            this.rawDescription = this.EXTENDED_DESCRIPTION[0];
-            initializeDescription();
+            this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+            this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
         }
 
     }
@@ -60,5 +44,6 @@ public class EnragedBash extends AbstractChampCard {
 
     public void upp() {
         upgradeDamage(3);
+        upgradeMagicNumber(1);
     }
 }

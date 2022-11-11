@@ -104,6 +104,7 @@ import java.util.List;
 import java.util.Properties;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
+import static reskinContent.reskinContent.unlockAllReskin;
 
 @SpireInitializer
 public class downfallMod implements
@@ -452,6 +453,9 @@ public class downfallMod implements
             //downfallMod.logger.info("loading loc:" + language + " PACKAGE_COLLECTOR" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_COLLECTOR));
 
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_CHAMP" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_CHAMP));
+
             /*
             //downfallMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
@@ -470,9 +474,6 @@ public class downfallMod implements
 
             //downfallMod.logger.info("loading loc:" + language + " PACKAGE_SNECKO" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_SNECKO));
-
-            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_CHAMP" + stringType);
-            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_CHAMP));
 
             //downfallMod.logger.info("loading loc:" + language + " PACKAGE_AUTOMATON" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_AUTOMATON));
@@ -574,6 +575,7 @@ public class downfallMod implements
     public void receiveEditKeywords() {
         loadModKeywords(downfallMod.collectorModID, otherPackagePaths.PACKAGE_COLLECTOR);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
+        loadModKeywords(downfallMod.champModID, otherPackagePaths.PACKAGE_CHAMP);
         /*
         loadModKeywords(expansionContentMod.getModID(), otherPackagePaths.PACKAGE_EXPANSION);
         loadModKeywords(downfallMod.hermitModID, otherPackagePaths.PACKAGE_HERMIT);
@@ -581,7 +583,6 @@ public class downfallMod implements
         loadModKeywords(downfallMod.sneckoModID, otherPackagePaths.PACKAGE_SNECKO);
         loadModKeywords(downfallMod.slimeboundModID, otherPackagePaths.PACKAGE_SLIME);
         loadModKeywords(downfallMod.guardianModID, otherPackagePaths.PACKAGE_GUARDIAN);
-        loadModKeywords(downfallMod.champModID, otherPackagePaths.PACKAGE_CHAMP);
         loadModKeywords(downfallMod.automatonModID, otherPackagePaths.PACKAGE_AUTOMATON);
         loadModKeywords(downfallMod.gremlinModID, otherPackagePaths.PACKAGE_GREMLIN);
 
@@ -754,7 +755,7 @@ public class downfallMod implements
                 saveData();
             });
 
-            /*  TODO - Uncomment when building.  this one is tough to enable without the reskincontent package.
+
             configPos -= configStep;
             ModLabeledToggleButton unlockAllSkinBtn = new ModLabeledToggleButton(configStrings.TEXT[12],
                     350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
@@ -765,7 +766,7 @@ public class downfallMod implements
             });
 
             settingsPanel.addUIElement(unlockAllSkinBtn);
-             */
+
 
             settingsPanel.addUIElement(contentSharingBtnCurses);
             settingsPanel.addUIElement(contentSharingBtnEvents);

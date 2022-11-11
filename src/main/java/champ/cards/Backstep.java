@@ -12,29 +12,15 @@ public class Backstep extends AbstractChampCard {
 
     public Backstep() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        tags.add(ChampMod.OPENER);
 
         baseBlock = 6;
+        tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERDEFENSIVE);
-        //tags.add(ChampMod.COMBO);
-        //tags.add(ChampMod.COMBOBERSERKER);
-        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         defenseOpen();
         blck();
-    }
-
-    @Override
-    protected void applyPowersToBlock() {
-        int realBaseBlock = this.baseBlock;
-        if (AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
-            baseBlock += AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
-        }
-        super.applyPowersToBlock();
-        this.baseBlock = realBaseBlock;
-        this.isBlockModified = block != baseBlock;
     }
 
     public void upp() {

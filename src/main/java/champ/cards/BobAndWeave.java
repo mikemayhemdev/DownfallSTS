@@ -6,17 +6,17 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.loadJokeCardImage;
 
-public class FocusedDefense extends AbstractChampCard {
+public class BobAndWeave extends AbstractChampCard {
 
-    public final static String ID = makeID("FocusedDefense");
+    public final static String ID = makeID("BobAndWeave");
 
     //stupid intellij stuff skill, self, common
 
-    public FocusedDefense() {
+    public BobAndWeave() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
 
-        baseBlock = 4;
-        baseMagicNumber = magicNumber = 4;
+        baseBlock = 3;
+        baseMagicNumber = magicNumber = 2;
 
         tags.add(ChampMod.OPENER);
         tags.add(ChampMod.OPENERBERSERKER);

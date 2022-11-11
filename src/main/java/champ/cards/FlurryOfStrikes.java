@@ -11,15 +11,15 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.loadJokeCardImage;
 
-public class BladeFlurry extends AbstractChampCard {
+public class FlurryOfStrikes extends AbstractChampCard {
 
-    public final static String ID = makeID("BladeFlurry");
+    public final static String ID = makeID("FlurryOfStrikes");
 
     //stupid intellij stuff attack, enemy, common
 
     private static final int DAMAGE = 6;
 
-    public BladeFlurry() {
+    public FlurryOfStrikes() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);

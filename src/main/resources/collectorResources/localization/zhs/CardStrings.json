@@ -44,7 +44,7 @@
     "NAME": "打脸",
     "DESCRIPTION": "champ:角斗 champ:起手 。 NL 造成 !D! 点伤害。 NL champ:狂战 champ:连段 ：给予 !M! 层 易伤 。"
   },
-  "champ:FlashCut": {
+  "champ:FlashStrike": {
     "NAME": "拔刀打击",
     "DESCRIPTION": "champ:角斗 champ:起手 。 NL 造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 !M! 层 champ:反击 。"
   },
@@ -63,15 +63,15 @@
     "NAME": "防卫嘲讽",
     "DESCRIPTION": "champ:防守 champ:起手 。 NL 获得 !M! 层 champ:反击 。"
   },
-  "champ:ShieldSigil": {
+  "champ:ChainLash": {
     "NAME": "防守印记",
     "DESCRIPTION": "champ:防守 champ:连段 ：重复 !M! 次并 消耗 。"
   },
-  "champ:FocusedDefense": {
+  "champ:BobAndWeave": {
     "NAME": "防反家",
     "DESCRIPTION": "champ:防守 champ:起手 。 NL 直到你退出 champ:防守 前， champ:战术 将额外获得3层 champ:反击 。"
   },
-  "champ:FocusedBerserking": {
+  "champ:AllOut": {
     "NAME": "狂战士",
     "DESCRIPTION": "champ:狂战 champ:起手 。 NL 直到你退出 champ:狂战 前， champ:战术 将额外获得2点 champ:决心 。"
   },
@@ -100,7 +100,7 @@
     "NAME": "怒吼",
     "DESCRIPTION": "champ:狂战 champ:起手 。 NL champ:疲劳 !M! 。"
   },
-  "champ:RageSigil": {
+  "champ:BattlePlan": {
     "NAME": "愤怒印记",
     "DESCRIPTION": "champ:狂战 champ:连段 ：重复 !M! 次并 消耗 。"
   },
@@ -147,7 +147,7 @@
     "DESCRIPTION": "champ:防守 champ:连段 ：翻倍你的 champ:反击 。",
     "UPGRADE_DESCRIPTION": "获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ：翻倍你的 champ:反击 。"
   },
-  "champ:ShieldSlam": {
+  "champ:MomentOfTruth": {
     "NAME": "盾牌猛击",
     "DESCRIPTION": "有至少20点 格挡 时才能被打出。 NL 造成 !D! 点伤害。"
   },
@@ -165,11 +165,11 @@
     "DESCRIPTION": " 获得 !B! 点 格挡 。 NL 造成你当前 格挡 值的伤害。 NL 除非 champ:防守 champ:连段 ：下回合不能获得 格挡 。",
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）"
   },
-  "champ:FalseCounter": {
+  "champ:RopeADope": {
     "NAME": "伪反",
     "DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，失去一半 champ:反击 而不是移除。"
   },
-  "champ:IronFortress": {
+  "champ:TechnicalJig": {
     "NAME": "钢铁要塞",
     "DESCRIPTION": "每当你进入 姿态 时，获得 !M! 点 格挡 和 !M! 层 champ:反击 。"
   },
@@ -183,11 +183,11 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 格挡 在 !M! 个回合开始时不会移除。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 格挡 在 !M! 个回合开始时不会移除。"
   },
-  "champ:ShieldWall": {
+  "champ:IronFortress": {
     "NAME": "盾墙",
     "DESCRIPTION": "你的回合结束时每有一张牌，获得 !M! 层 champ:反击 。"
   },
-  "champ:Haymaker": {
+  "champ:Piledriver": {
     "NAME": "刺拳",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予2层 虚弱 。 NL champ:角斗 champ:连段 ：给予2层 易伤 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予2层 虚弱 。 NL champ:角斗 champ:连段 ：给予2层 易伤 。"
@@ -220,7 +220,7 @@
     "DESCRIPTION": "获得2点 力量 。 NL 不处于 champ:狂战 时 消耗 。",
     "UPGRADE_DESCRIPTION": "获得2点 力量 。 NL 不处于 champ:狂战 时 消耗 。"
   },
-  "champ:BladeFlurry": {
+  "champ:FlurryOfStrikes": {
     "NAME": "剑刃乱舞",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有一张 champ:战术 牌重复一次。 NL champ:角斗 champ:连段 ：再重复 !M! 次。"
   },
@@ -232,7 +232,7 @@
     "NAME": "刽子打击",
     "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 打出 champ:战术 牌时如果这张牌耗能不为0，本场战斗这张牌的耗能减少1并提高 !M! 点伤害。 NL 消耗 。"
   },
-  "champ:HeavySlash": {
+  "champ:MasterfulSlash": {
     "NAME": "大师斩击",
     "DESCRIPTION": " 造成 !D! 点伤害。 NL 你的牌组每有一张已 升级 的牌伤害提高 !M! 。"
   },
@@ -337,7 +337,7 @@
     "NAME": "完美形态",
     "DESCRIPTION": "接下来的 !M! 个回合，进入 champ:终极 。"
   },
-  "champ:Duel": {
+  "champ:Challenge": {
     "NAME": "决斗",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 如果只有一名敌人，打出两次。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 如果只有一名敌人，打出两次。"

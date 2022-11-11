@@ -24,9 +24,7 @@ public class CrownThrow extends AbstractChampCard {
     public CrownThrow() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void returned() {
@@ -39,24 +37,18 @@ public class CrownThrow extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        combo();
         // First you throw a crown...
         AbstractDungeon.effectList.add(new VfxBuilder(TextureLoader.getTexture("champResources/images/relics/ChampionCrown.png"), p.hb.x + p.hb.width, p.hb.cY, 1.5F)
                 .moveX(p.hb.x + p.hb.width, Settings.WIDTH + (128 * Settings.scale))
                 .rotate(-300F)
                 .build());
 
-        if (bcombo()) atb(new DrawPileToHandAction(this.magicNumber, CardType.ATTACK));
+        //TODO - Returning Crown mechanic
     }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
-
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(1);
     }
 }
 

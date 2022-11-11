@@ -4,27 +4,23 @@ import champ.ChampMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class FocusedBerserking extends AbstractChampCard {
+public class AllOut extends AbstractChampCard {
 
-    public final static String ID = makeID("FocusedBerserking");
+    public final static String ID = makeID("AllOut");
 
     //stupid intellij stuff skill, self, common
 
-    public FocusedBerserking() {
+    public AllOut() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
-        baseMagicNumber = magicNumber = 2;
-        tags.add(ChampMod.FINISHER);
-        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++) {
-            finisher(true);
-        }
+
+        //TODO - Create a copy of current Stance's finisher.
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(0);
     }
 }

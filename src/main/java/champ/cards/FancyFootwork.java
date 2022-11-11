@@ -28,7 +28,6 @@ public class FancyFootwork extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-
         applyToSelf(new FocusedBerPower(magicNumber));
         p.useHopAnimation();
         atb(new VFXAction(new StanceDanceEffect(p, false, false, true), 0.7F));

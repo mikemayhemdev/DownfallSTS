@@ -8,12 +8,11 @@ import champ.ChampTextHelper;
 import champ.powers.CalledShotPower;
 import champ.powers.DancingMasterPower;
 import champ.relics.SignatureFinisher;
-import champ.stances.AbstractChampStance;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
+import champ.stances.*;
 import champ.stances.UltimateStance;
 import champ.util.OnFinisherSubscriber;
 import champ.util.OnOpenerSubscriber;
+import champ.util.TextureLoader;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -35,7 +34,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
-import hermit.util.TextureLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,19 +103,26 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     public static boolean bcombo() {
-        return (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID));
+        return (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID));
     }
 
     public static boolean dcombo() {
-        return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID));
+        return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID));
+    }
+    public static boolean nostance() {
+        return (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
     public static boolean inBerserker() {
-        return AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID);
+        return AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID);
     }
 
     public static boolean inDefensive() {
-        return AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID);
+        return AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID);
+    }
+
+    public static void combo(){
+        //TODO - New age stance combo effects
     }
 
     public void displayUpgrades() {
@@ -225,11 +230,11 @@ public abstract class AbstractChampCard extends CustomCard {
         atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
     }
 
-    WeakPower autoWeak(AbstractMonster m, int i) {
+    public WeakPower autoWeak(AbstractMonster m, int i) {
         return new WeakPower(m, i, false);
     }
 
-    VulnerablePower autoVuln(AbstractMonster m, int i) {
+    public VulnerablePower autoVuln(AbstractMonster m, int i) {
         return new VulnerablePower(m, i, false);
     }
 
@@ -268,6 +273,11 @@ public abstract class AbstractChampCard extends CustomCard {
     protected void ultimateStance() {
         //SlimeboundMod.logger.info("Switching to THE ULTIMATE STANCE!!! (Abstract)");
         atb(new ChangeStanceAction(UltimateStance.STANCE_ID));
+    }
+
+    protected void gladiatorStance() {
+        //SlimeboundMod.logger.info("Switching to Gladiator (Abstract)");
+        atb(new ChangeStanceAction(GladiatorStance.STANCE_ID));
     }
 
     public void exitStance() {
