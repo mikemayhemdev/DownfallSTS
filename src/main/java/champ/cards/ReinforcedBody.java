@@ -4,9 +4,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
-public class Lariat extends AbstractChampCard {
+public class ReinforcedBody extends AbstractChampCard {
 
-    public final static String ID = makeID("Lariat");
+    public final static String ID = makeID("ReinforcedBody");
 
     //stupid intellij stuff skill, self, uncommon
 
@@ -16,7 +16,7 @@ public class Lariat extends AbstractChampCard {
     private static final int MAGIC = 4;
     private static final int UPG_MAGIC = 1;
 
-    public Lariat() {
+    public ReinforcedBody() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         //tags.add(ChampMod.TECHNIQUE);

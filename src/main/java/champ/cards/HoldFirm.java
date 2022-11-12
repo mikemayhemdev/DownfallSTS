@@ -14,7 +14,7 @@ public class HoldFirm extends AbstractChampCard {
     //stupid intellij stuff skill, self, rare
 
     private static final int BLOCK = 12;
-    private static final int UPG_BLOCK = 5;
+    private static final int UPG_BLOCK = 6;
 
     public HoldFirm() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
@@ -28,12 +28,11 @@ public class HoldFirm extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // techique();
         blck();
-        applyToSelf(new CounterPower(magicNumber));
+        applyToSelf(new CounterPower(1));
         applyToSelf(new BlurPower(p, 1));
     }
 
     public void upp() {
-        upgradeMagicNumber(4);
         upgradeBlock(UPG_BLOCK);
     }
 }

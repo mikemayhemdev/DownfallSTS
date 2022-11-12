@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -28,7 +29,7 @@ public class MurderStrike extends AbstractChampCard {
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
         super.onPlayCard(c, m);
-        if (c.type == CardType.SKILL && AbstractDungeon.player.hand.group.contains(this)) {
+        if (c.hasTag(ChampMod.COMBO) && AbstractDungeon.player.hand.group.contains(this)) {
             {
                 //  updateCost(-1);
                 baseDamage += magicNumber;

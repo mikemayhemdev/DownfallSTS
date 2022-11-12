@@ -124,11 +124,6 @@
       "我不處於那個姿態。"
     ]
   },
-  "champ:ShieldThrow": {
-    "NAME": "爆甲",
-    "DESCRIPTION": "造成你當前 格擋 值點傷害兩次。 NL 獲得2層 脆弱 。 NL champ:防守 champ:連段 ： NL 不獲得 脆弱 。",
-    "EXTENDED_DESCRIPTION": ["造成你當前 格擋 值(!D!)點傷害兩次。 NL 獲得2層 脆弱 。 NL champ:防守 champ:連段 ： NL 不獲得 脆弱 。"]
-  },
   "champ:RopeADope": {
     "NAME": "以逸待勞",
     "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 下回合獲得 [E] 並抽兩張牌。",
@@ -139,7 +134,7 @@
     "DESCRIPTION": "進入不同 姿態 時，獲得其 champ:技術 獎勵兩次。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 進入不同 姿態 時，獲得其 champ:技術 獎勵兩次。"
   },
-  "champ:Lariat": {
+  "champ:ReinforcedBody": {
     "NAME": "強身健體",
     "DESCRIPTION": "獲得 !B! 點 格擋 X次。"
   },
@@ -220,7 +215,7 @@
       "造成 !D! 點傷害 !M! 次。 NL champ:戰狂 champ:連段 ：攻擊次數加1。"
     ]
   },
-  "champ:VampiricStrike": {
+  "champ:ShieldThrow": {
     "NAME": "重擊",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 獲得未被 格擋 傷害 點 格擋 。"
   },

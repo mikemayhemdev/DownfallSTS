@@ -173,7 +173,7 @@
     "NAME": "钢铁要塞",
     "DESCRIPTION": "每当你进入 姿态 时，获得 !M! 点 格挡 和 !M! 层 champ:反击 。"
   },
-  "champ:Lariat": {
+  "champ:ReinforcedBody": {
     "NAME": "套索",
     "DESCRIPTION": "重复X次。 NL 获得 !B! 点 格挡 。 champ:Technique",
     "UPGRADE_DESCRIPTION": "获得 [E] 。NL 重复X次。 NL 获得 !B! 点 格挡 。 champ:Technique"
@@ -253,7 +253,7 @@
     "NAME": "怒斩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL champ:疲劳 !M! 。 NL champ:狂战 champ:连段 ：本场战斗中这张牌的伤害和 champ:疲劳 提高 !cool! 点。"
   },
-  "champ:VampiricStrike": {
+  "champ:ShieldThrow": {
     "NAME": "饮血打击",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 回复未被 格挡 伤害 的生命。 NL 消耗 。"
   },

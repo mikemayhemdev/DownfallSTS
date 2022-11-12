@@ -120,13 +120,6 @@
       "I am not in a Stance."
     ]
   },
-  "champ:ShieldThrow": {
-    "NAME": "Shield Throw",
-    "DESCRIPTION": "Deal damage equal to your Block, twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Don't gain Frail.",
-    "EXTENDED_DESCRIPTION": [
-      "Deal damage equal to your Block ( !D! ) twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Lose 2 Frail."
-    ]
-  },
   "champ:RopeADope": {
     "NAME": "Rope-a-dope",
     "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] and draw 2 cards.",
@@ -137,7 +130,7 @@
     "DESCRIPTION": "Whenever you enter a Stance, trigger its *Skill *Bonus twice.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance, trigger *Skill *Bonus twice."
   },
-  "champ:Lariat": {
+  "champ:ReinforcedBody": {
     "NAME": "Reinforced Body",
     "DESCRIPTION": "Gain !B! Block X times."
   },
@@ -217,7 +210,7 @@
       "Deal !D! damage !M! times. NL *Berserker champ:Combo: This card hits an additional time this combat."
     ]
   },
-  "champ:VampiricStrike": {
+  "champ:ShieldThrow": {
     "NAME": "Clobber",
     "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to unblocked damage dealt."
   },
@@ -443,6 +436,26 @@
   },
   "champ:Hamstring": {
     "NAME": "Hamstring",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:FlawlessTechnique": {
+    "NAME": "Flawless Technique",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:PumpIron": {
+    "NAME": "Pump Iron",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:StandYourGround": {
+    "NAME": "Stand Your Ground",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:BattleCry": {
+    "NAME": "Battle Cry",
     "DESCRIPTION": "",
     "UPGRADE_DESCRIPTION": ""
   }

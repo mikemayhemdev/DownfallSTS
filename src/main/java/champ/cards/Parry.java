@@ -12,22 +12,15 @@ public class Parry extends AbstractChampCard {
 
     public Parry() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 6;
-        baseMagicNumber = magicNumber = 10;
-        AbstractCard c = new Riposte();
-        c.rawDescription = UPGRADE_DESCRIPTION;
-        c.initializeDescription();
-        cardsToPreview = c;
-        postInit();
+        baseBlock = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        applyToSelf(new CounterPower(magicNumber));
-        applyToSelf(new ParryPower(1));
+        applyToSelf(new ParryPower(1)); //TODO - Change this to If you create a Riposte this turn, it costs 0.
     }
 
     public void upp() {
-        upgradeMagicNumber(6);
+        upgradeBlock(3);
     }
 }

@@ -166,13 +166,6 @@
       "Je ne suis pas dans une Pose."
     ]
   },
-  "champ:ShieldThrow": {
-    "NAME": "Lancer de bouclier",
-    "DESCRIPTION": "Infligez des dégâts égaux à votre Armure, deux fois. NL Gagnez 2 de Fragilité. champ:Combo Pose *Défensive: Ne gagnez pas de Fragilité.",
-    "EXTENDED_DESCRIPTION": [
-      "Infligez des dégâts égaux à votre Armure ( !D! ) deux fois. NL Gagnez 2 de Fragilité. champ:Combo Pose *Défensive: Perdez 2 de Fragilité."
-      ]
-  },
   "champ:RopeADope": {
     "NAME": "Contre les cordes",
     "DESCRIPTION": "Gagnez !B! d'Armure. Au prochain tour, gagnez [E] et piochez 3 cartes.",
@@ -183,7 +176,7 @@
     "DESCRIPTION": "Lorsque vous adoptez une Pose, déclenchez ses *Bonus de *Compétences deux fois.",
     "UPGRADE_DESCRIPTION": "Inné. NL Lorsque vous adoptez une Pose, déclenchez ses *Bonus de *Compétences deux fois."
   },
-  "champ:Lariat": {
+  "champ:ReinforcedBody": {
     "NAME": "Corps renforcé",
     "DESCRIPTION": "Gagnez !B! d'Armure X fois."
   },
@@ -268,7 +261,7 @@
       "Inflligez !D! dégâts !M! fois. NL champ:Combo Pose du *Destructeur: Cette carte touche une fois supplémentaire ce combat."
     ]
   },
-  "champ:VampiricStrike": {
+  "champ:ShieldThrow": {
     "NAME": "Démolition",
     "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez de l'Armure égale aux dégâts non-bloqués infligés."
   },

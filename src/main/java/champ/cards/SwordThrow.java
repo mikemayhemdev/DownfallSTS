@@ -13,14 +13,16 @@ public class SwordThrow extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 2;
-        tags.add(ChampMod.COMBOBERSERKER);
-        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.OPENERBERSERKER);
+        tags.add(ChampMod.OPENER);
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++) dmg(m, AbstractGameAction.AttackEffect.SMASH);
-        if (!bcombo()) applyToSelf(new WeakPower(p, 2, false));
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+
+        berserkOpen();
+        //TODO - upgrade stance
         // if (bcombo()) atb(new ReducePowerAction(p,p,WeakPower.POWER_ID,2));
     }
 

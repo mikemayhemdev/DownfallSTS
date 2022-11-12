@@ -26,7 +26,7 @@ import champ.stances.GladiatorStance;
 import champ.util.CardFilter;
 import champ.util.CoolVariable;
 import champ.util.OnOpenerSubscriber;
-import champ.util.TechniqueMod;
+import champ.util.ComboMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -337,9 +337,9 @@ public class ChampMod implements
     public void receiveSetUnlocks() {
 
         downfallMod.registerUnlockSuite(
-                BerserkerStyle.ID,
                 ViciousMockery.ID,
-                DefensiveStyle.ID,
+                ViciousMockery.ID,
+                ViciousMockery.ID,
 
                 BattlePlan.ID,
                 ChainLash.ID,
@@ -371,7 +371,7 @@ public class ChampMod implements
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
 
                 if (!c.hasTag(TECHNIQUE))
-                    CardModifierManager.addModifier(c, new TechniqueMod());
+                    CardModifierManager.addModifier(c, new ComboMod());
 
             }
 
