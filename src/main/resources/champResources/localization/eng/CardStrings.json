@@ -26,8 +26,8 @@
       "Enter champ:Defensive."
     ]
   },
-  "champ:SwordSigil": {
-    "NAME": "Sigil of Victory",
+  "champ:SigilOfWar": {
+    "NAME": "Sigil of War",
     "DESCRIPTION": "Trigger your current Stance's *Skill *Bonus !M! times. NL Exhaust."
   },
   "champ:FaceSlap": {
@@ -201,7 +201,7 @@
     "NAME": "Cheap Shot",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy is a Boss, deal damage two more times. If not, hermit:Stun it. NL Exhaust."
   },
-  "champ:RisingSlash": {
+  "champ:RisingStrike": {
     "NAME": "Rising Strike",
     "DESCRIPTION": "Deal !D! damage. NL If the last played card this combat was a champ:Finisher, deal !D! damage again."
   },
@@ -249,7 +249,7 @@
       "@DEFEAT??@ NL @IMPOSSIBLE!!@"
     ]
   },
-  "champ:RecklessLeap": {
+  "champ:RecklessStrike": {
     "NAME": "Reckless Strike",
     "DESCRIPTION": "Deal !D! damage. NL Gain 2 Strength. NL Lose 1 Dexterity. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Strength. NL Lose 1 Dexterity.",
@@ -286,7 +286,7 @@
     "NAME": "Improvising",
     "DESCRIPTION": "The first time you play a champ:Combo each turn, return it to your hand. NL It costs 0 until played."
   },
-  "champ:CalledShot": {
+  "champ:Refreshment": {
     "NAME": "Refreshment",
     "DESCRIPTION": "*Berserker champ:Combo: Gain [E] [E] , then Exhaust this. NL *Defensive champ:Combo: Draw !M! cards.",
     "UPGRADE_DESCRIPTION": "*Berserker champ:Combo: Gain [E] [E] [E] , then Exhaust this. NL *Defensive champ:Combo: Draw !M! cards.",
@@ -433,6 +433,16 @@
   },
   "champ:ShieldWall": {
     "NAME": "ShieldWall",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:Hammerblow": {
+    "NAME": "Hammerblow",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "champ:Hamstring": {
+    "NAME": "Hamstring",
     "DESCRIPTION": "",
     "UPGRADE_DESCRIPTION": ""
   }

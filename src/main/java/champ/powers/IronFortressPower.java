@@ -5,6 +5,7 @@ import champ.ChampMod;
 import champ.stances.AbstractChampStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
@@ -43,10 +44,7 @@ public class IronFortressPower extends AbstractPower implements CloneablePowerIn
         if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
             flash();
             //addToBot(new ApplyPowerAction(owner, owner, new CounterPower(amount), amount));
-            if (newStance instanceof AbstractChampStance)
-                for (int x = 0; x < this.amount; x++) {
-                    ((AbstractChampStance) newStance).technique();
-                }
+            addToBot(new GainBlockAction(owner, this.amount));
         }
     }
 

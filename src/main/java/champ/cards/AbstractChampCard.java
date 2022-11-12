@@ -116,6 +116,9 @@ public abstract class AbstractChampCard extends CustomCard {
     public static boolean inBerserker() {
         return AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID);
     }
+    public static boolean inGladiator() {
+        return AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID);
+    }
 
     public static boolean inDefensive() {
         return AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID);

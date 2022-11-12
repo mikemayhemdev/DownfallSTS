@@ -343,7 +343,7 @@ public class ChampMod implements
 
                 BattlePlan.ID,
                 ChainLash.ID,
-                SwordSigil.ID,
+                SigilOfWar.ID,
 
                 EnchantShield.ID,
                 EnchantSword.ID,

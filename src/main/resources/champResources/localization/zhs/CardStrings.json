@@ -26,7 +26,7 @@
       " 进入 champ:防守 。"
     ]
   },
-  "champ:SwordSigil": {
+  "champ:SigilOfWar": {
     "NAME": "胜利旌旗",
     "DESCRIPTION": "获得 champ:技术 奖励 !M! 次。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 champ:技术 奖励 !M! 次。 NL 消耗 。"
@@ -204,7 +204,7 @@
     "NAME": "偷袭",
     "DESCRIPTION": " 造成 !D! 点伤害。 NL 对首领则造成三次。 NL hermit:击晕 非首领目标。 NL 消耗 。"
   },
-  "champ:RisingSlash": {
+  "champ:RisingStrike": {
     "NAME": "狂烈打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若打出的上张牌为 champ:终结技 ，再造成一次。"
   },
@@ -252,7 +252,7 @@
       "@败北？@ NL @不可能！！@ "
     ]
   },
-  "champ:RecklessLeap": {
+  "champ:RecklessStrike": {
     "NAME": "无谋打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得2点 力量 。 NL 失去1点 敏捷 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得2点 力量 。 NL 失去1点 敏捷 。",
@@ -293,7 +293,7 @@
     "NAME": "触类旁通",
     "DESCRIPTION": "每回合首次 champ:连段 时， NL 将该牌返回手牌。 NL 其下次耗能为0。"
   },
-  "champ:CalledShot": {
+  "champ:Refreshment": {
     "NAME": "畅饮",
     "DESCRIPTION": " champ:战狂 champ:连段 ： NL 获得 [E] [E] 并 消耗 。 NL champ:防守 champ:连段 ： NL 抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "champ:战狂 champ:连段 ： NL 获得 [E] [E] [E] 并 消耗 。 NL champ:防守 champ:连段 ： NL 抽 !M! 张牌。",

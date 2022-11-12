@@ -31,7 +31,7 @@
     "DESCRIPTION": "Adoptez la pose du champ:Gladiateur. NL Piochez 1 carte.",
     "UPGRADE_DESCRIPTION": "Adoptez la pose du champ:Gladiateur. NL Piochez 2 cartes."
   },
-  "champ:SwordSigil": {
+  "champ:SigilOfWar": {
     "NAME": "Sigle de la victoire",
     "DESCRIPTION": "Déclenchez le *Bonus de *Compétence de votre Pose !M! fois. NL Épuisement"
   },
@@ -252,7 +252,7 @@
     "NAME": "Coup bas",
     "DESCRIPTION": "Infligez !D! dégâts. NL Si l'ennemi est un Boss, Infligez ces dégâts deux fois supplémentaires. Sinon, étourdissez l'ennemi. NL Épuisement."
   },
-  "champ:RisingSlash": {
+  "champ:RisingStrike": {
     "NAME": "Frappe ascendante",
     "DESCRIPTION": "Infligez !D! dégâts. NL Si la dernière carte jouée était un champ:Finisher, infligez !D! dégâts à nouveau."
   },
@@ -300,7 +300,7 @@
       "@UNE@ @DÉFAITE??@ NL @IMPOSSIBLE!!@"
     ]
   },
-  "champ:RecklessLeap": {
+  "champ:RecklessStrike": {
     "NAME": "Frappe téméraire",
     "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez 2 de Force. NL Perdez 1 de Dextérité. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Gagnez 2 de Force. NL Perdez 1 de Dextérité.",
@@ -341,7 +341,7 @@
     "NAME": "Improvisation",
     "DESCRIPTION": "La première fois que vous utilisez un champ:Combo chaque tour, remettez-la dans votre main. NL Il coûte 0 jusqu'à ce qu'il soit joué."
   },
-  "champ:CalledShot": {
+  "champ:Refreshment": {
     "NAME": "Rafraîchissement",
     "DESCRIPTION": "champ:Combo Pose du *Destructeur: Gagnez [E] [E] , puis Épuisez-ceci. NL Pose *Défensive champ:Combo: Piochez !M! cartes.",
     "UPGRADE_DESCRIPTION": "champ:Combo Pose du *Destructeur: Gagnez [E] [E] [E] , puis Épuisez-ceci. NL champ:Combo Pose *Défensive: Piochez !M! cartes.",

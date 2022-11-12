@@ -26,7 +26,7 @@
       "champ:수비 자세를 취합니다."
     ]
   },
-  "champ:SwordSigil": {
+  "champ:SigilOfWar": {
     "NAME": "승리의 인장",
     "DESCRIPTION": "현재 자세의 *스킬 *카드 *보너스를 !M! 번 얻습니다. NL 소멸."
   },
@@ -237,7 +237,7 @@
     "NAME": "비열한 일격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 보스라면 피해를 3번 줍니다. 아니라면 적을 hermit:기절시킵니다. NL 소멸."
   },
-  "champ:RisingSlash": {
+  "champ:RisingStrike": {
     "NAME": "수직 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 직전에 champ:마무리 카드를 사용했다면 피해를 2번 줍니다."
   },
@@ -285,7 +285,7 @@
       "@패배??@ NL @말도@ @안돼!!@"
     ]
   },
-  "champ:RecklessLeap": {
+  "champ:RecklessStrike": {
     "NAME": "무모한 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 힘을 2 얻습니다. NL 민첩을 1 잃습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 힘을 2 얻습니다. NL 민첩을 1 잃습니다.",
@@ -326,7 +326,7 @@
     "NAME": "증강",
     "DESCRIPTION": "매 턴 처음으로 champ:연계 카드를 사용하면 그 카드를 가져옵니다. NL 그 카드의 비용은 사용하기 전까지 0이 됩니다."
   },
-  "champ:CalledShot": {
+  "champ:Refreshment": {
     "NAME": "원기 회복",
     "DESCRIPTION": "*광폭화 champ:연계: [E] [E] 를 얻고 이 카드를 소멸시킵니다. NL *수비 champ:연계: 카드를 !M! 장 뽑습니다.",
     "UPGRADE_DESCRIPTION": "*광폭화 champ:연계: [E] [E] [E] 를 얻고 이 카드를 소멸시킵니다. NL *수비 champ:연계: 카드를 !M! 장 뽑습니다.",
