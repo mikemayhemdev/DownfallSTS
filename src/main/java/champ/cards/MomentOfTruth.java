@@ -24,9 +24,9 @@ public class MomentOfTruth extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
+        combo();
         atb(new DrawCardAction(magicNumber));
 
-        finisher();
     }
 
     public void upp() {
