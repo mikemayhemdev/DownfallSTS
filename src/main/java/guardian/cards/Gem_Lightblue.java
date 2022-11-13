@@ -16,6 +16,7 @@ import guardian.patches.AbstractCardEnum;
 import guardian.powers.LoseThornsPower;
 import sneckomod.SneckoMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.LIGHTBLUE;
 import static guardian.GuardianMod.socketTypes.LIGHTBLUE;
 
@@ -56,6 +57,7 @@ public class Gem_Lightblue extends AbstractGemCard {
         this.thisGemsType = LIGHTBLUE;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Tourmaline.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
