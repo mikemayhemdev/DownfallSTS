@@ -37,13 +37,17 @@ public class ParryPower extends AbstractPower implements CloneablePowerInterface
     }
 
     @Override
-    public void onSpecificTrigger() {
-        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+    public void stackPower(int stackAmount) {
     }
 
     @Override
-    public void atEndOfRound() {
+    public void atStartOfTurnPostDraw() {
         onSpecificTrigger();
+    }
+
+    @Override
+    public void onSpecificTrigger() {
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override

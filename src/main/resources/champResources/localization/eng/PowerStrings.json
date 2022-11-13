@@ -2,8 +2,8 @@
   "champ:CounterPower": {
     "NAME": "Counter",
     "DESCRIPTIONS": [
-      "The next time you receive #yAttack damage, deal #b",
-      " damage back."
+      "Next turn, add Riposte to your hand. It deals damage equal the amount of damage blocked this turn. Lasts #b",
+      " more turn(s)."
     ]
   },
   "champ:FocusedDefPower": {
@@ -23,8 +23,8 @@
   "champ:ShieldWallPower": {
     "NAME": "Shield Wall",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain #b",
-      " #yCounter."
+      "When you are attacked this turn and block all damage, gain #b",
+      " #yVigor."
     ]
   },
   "champ:EntangleNextTurnPower": {
@@ -67,12 +67,12 @@
       " times each turn you play a #yCombo, return it to your hand and it costs #b0 until played. #b"
     ]
   },
-  "champ:CalledShotPower": {
-    "NAME": "Called Shot",
+  "champ:TrophyPower": {
+    "NAME": "Trophy",
     "DESCRIPTIONS": [
-      "The next time you play a #yFinisher, do not leave your #yStance.",
+      "The next card you play is permanently #yUpgraded.",
       "The next #b",
-      " times you play a #yFinisher, do not leave your #yStance."
+      " cards you play are permanently #yUpgraded."
     ]
   },
   "champ:DancingMasterPower": {
@@ -102,18 +102,18 @@
       " random #yupgraded \"Strike\"s. They cost #b0 until played and Exhaust."
     ]
   },
-  "champ:DefensiveStylePower": {
-    "NAME": "Defensive Style",
+  "champ:FlawlessTechniquePower": {
+    "NAME": "Flawless Technique",
     "DESCRIPTIONS": [
-      "#yDefensive #ySkill Bonuses grant #b",
-      " additional #yCounter."
+      "#yRiposte grants #b",
+      " [E] upon use."
     ]
   },
   "champ:GladiatorStylePower": {
-    "NAME": "Good Clean Fight",
+    "NAME": "Warmup Routine",
     "DESCRIPTIONS": [
       "If you start your turn in no #yStance, gain #b",
-      " temporary #yStrength and #yDexterity."
+      " #yStrength."
     ]
   },
   "champ:BerserkerStylePower": {
@@ -204,7 +204,7 @@
   "champ:ParryPower": {
     "NAME": "Parrying",
     "DESCRIPTIONS": [
-      "If your Counter is used this turn, gain Riposte."
+      "If Counter is used this turn, the resulting Riposte will cost 0."
     ]
   },
   "champ:BoomerangPower": {
@@ -214,10 +214,11 @@
       " to your hand. It costs #b0 and no longer returns."
     ]
   },
-  "champ:ResolvePower": {
-    "NAME": "Fatigue",
+  "champ:PumpIronPower": {
+    "NAME": "Pumping Iron",
     "DESCRIPTIONS": [
-      "At the end of combat, restore your Fatigued HP."
+      "At the start of each turn, gain #b",
+      " #yVigor."
     ]
   },
   "champ:DualPlaySrikePower": {

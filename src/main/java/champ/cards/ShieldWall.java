@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.powers.ShieldWallPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,11 +23,12 @@ public class ShieldWall extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
 
-        //TODO - new Power: For each hit fully Blocked this turn, gain 2 Vigor.
+        applyToSelf(new ShieldWallPower(magicNumber));
     }
 
 
     public void upp() {
         upgradeBlock(3);
+        upgradeMagicNumber(1);
     }
 }

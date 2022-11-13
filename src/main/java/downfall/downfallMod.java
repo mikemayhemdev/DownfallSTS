@@ -639,7 +639,6 @@ public class downfallMod implements
         UIAtlas.addRegion("heartOrb", heartOrb, 0, 0, heartOrb.getWidth(), heartOrb.getHeight());
         UIAtlas.addRegion("crown", crown, 0, 0, crown.getWidth(), crown.getHeight());
     }
-
     private void initializeConfig() {
         UIStrings configStrings = CardCrawlGame.languagePack.getUIString("downfall:ConfigMenuText");
 

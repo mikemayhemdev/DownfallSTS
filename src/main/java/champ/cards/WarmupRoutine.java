@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.powers.GladiatorStylePower;
 import champ.powers.IronFortressPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,10 +17,11 @@ public class WarmupRoutine extends AbstractChampCard {
         //tags.add(ChampMod.TECHNIQUE);
         //techniqueLast = true;
         //postInit();
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO - Actual power When you end your turn while not in a Stance, gain 1 Strength.
+        applyToSelf(new GladiatorStylePower(magicNumber));
     }
 
     public void upp() {

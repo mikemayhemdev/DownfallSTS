@@ -71,7 +71,7 @@
   },
   "champ:PowerArmor": {
     "NAME": "Power Armor",
-    "FLAVOR": "Bought used.",
+    "FLAVOR": "Bought used. Has the name 'Kova' etched into the inside collar.",
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b10."
     ]

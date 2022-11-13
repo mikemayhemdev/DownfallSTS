@@ -3,7 +3,7 @@ package champ.stances;
 import champ.ChampChar;
 import champ.ChampMod;
 import champ.powers.CounterPower;
-import champ.powers.DefensiveStylePower;
+import champ.powers.FlawlessTechniquePower;
 import champ.powers.DoubleStyleThisTurnPower;
 import champ.relics.DefensiveTrainingManual;
 import com.badlogic.gdx.Gdx;
@@ -70,8 +70,8 @@ public class DefensiveStance extends AbstractChampStance {
 
     public static int amount() {
         int x = 3;
-        if (AbstractDungeon.player.hasPower(DefensiveStylePower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(DefensiveStylePower.POWER_ID).amount;
+        if (AbstractDungeon.player.hasPower(FlawlessTechniquePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(FlawlessTechniquePower.POWER_ID).amount;
         }
         if (AbstractDungeon.player.hasPower(DoubleStyleThisTurnPower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(DoubleStyleThisTurnPower.POWER_ID).amount;

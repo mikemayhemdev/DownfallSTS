@@ -2,6 +2,7 @@ package champ.cards;
 
 import basemod.helpers.VfxBuilder;
 import champ.ChampMod;
+import champ.powers.BoomerangPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.DrawPileToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,6 +26,7 @@ public class CrownThrow extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(ChampMod.COMBO);
+        cardsToPreview = new CrownThrowReturn();
     }
 
     public void returned() {
@@ -44,11 +46,12 @@ public class CrownThrow extends AbstractChampCard {
                 .rotate(-300F)
                 .build());
 
-        //TODO - Returning Crown mechanic
+        applyToSelf(new BoomerangPower());
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
+        cardsToPreview.upgrade();
     }
 }
 

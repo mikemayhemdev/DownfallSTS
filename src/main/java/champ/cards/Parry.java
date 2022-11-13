@@ -11,13 +11,13 @@ public class Parry extends AbstractChampCard {
     public final static String ID = makeID("Parry");
 
     public Parry() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        applyToSelf(new ParryPower(1)); //TODO - Change this to If you create a Riposte this turn, it costs 0.
+        applyToSelf(new ParryPower(1));
     }
 
     public void upp() {

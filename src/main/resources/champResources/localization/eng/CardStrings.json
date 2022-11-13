@@ -13,8 +13,7 @@
   },
   "champ:Execute": {
     "NAME": "Execute",
-    "DESCRIPTION": "Deal !D! damage !M! times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times."
+    "DESCRIPTION": "Deal !D! damage 2 times."
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
@@ -109,7 +108,7 @@
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter.",
+    "DESCRIPTION": "Gain !B! Block. NL Gain 1 champ:Counter.",
     "EXTENDED_DESCRIPTION": [
       "I am not in a Stance."
     ]
@@ -205,7 +204,11 @@
   },
   "champ:CrownThrow": {
     "NAME": "Crownarang",
-    "DESCRIPTION": "Deal !D! damage. NL champ:Combo. NL Gain a Returning Crown next turn."
+    "DESCRIPTION": "Deal !D! damage. NL champ:Combo. NL Gain a *Returning *Crown next turn."
+  },
+  "champ:CrownThrowReturn": {
+    "NAME": "Returning Crown",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL champ:Combo. Exhaust."
   },
   "champ:Encircle": {
     "NAME": "Encircle",
@@ -346,9 +349,14 @@
     "NAME": "QuickStep",
     "DESCRIPTION": "Draw !M! cards. NL Exhaust."
   },
+  "champ:Posture": {
+    "NAME": "Posture",
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+  },
   "champ:TheTrophy": {
     "NAME": "TheTrophy",
-    "DESCRIPTION": "champ:Finisher. NL The next card you play is upgraded permanently. Exhaust."
+    "DESCRIPTION": "champ:Finisher. NL The next card you play is upgraded permanently. Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL The next !M! cards you play are upgraded permanently. Exhaust."
   },
   "champ:VictorsPose": {
     "NAME": "VictorsPose",
@@ -359,7 +367,7 @@
     "DESCRIPTION": "Draw !M! cards, then discard 1. NL champ:Combo."
   },
   "champ:ShieldWall": {
-    "NAME": "ShieldWall",
+    "NAME": "Shield Wall",
     "DESCRIPTION": "Gain !B! Block. NL For each hit fully Blocked this turn, gain !M! Vigor."
   },
   "champ:Hammerblow": {
@@ -380,10 +388,15 @@
   },
   "champ:StandYourGround": {
     "NAME": "Stand Your Ground",
-    "DESCRIPTION": "Gain !B! Block. NL Enter champ:Defensive. Until you leave it, cards gained from C*ombo are upgraded."
+    "DESCRIPTION": "Gain !B! Block. NL Enter champ:Defensive. Until you leave it, cards gained from *Combo are upgraded."
   },
   "champ:BattleCry": {
     "NAME": "Battle Cry",
     "DESCRIPTION": "Draw !M! cards. NL Enter champ:Gladiator. Until you leave it, cards gained from *Combo are upgraded."
+  },
+  "champ:WarmupRoutine": {
+    "NAME": "Warmup Routine",
+    "DESCRIPTION": "When you start your turn while not in a Stance, gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL When you start your turn while not in a Stance, gain 1 Strength."
   }
 }

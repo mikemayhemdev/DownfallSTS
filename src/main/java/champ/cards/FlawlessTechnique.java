@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.powers.FlawlessTechniquePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -18,7 +19,7 @@ public class FlawlessTechnique extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO - Gain E after playing Riposte.
+        applyToSelf(new FlawlessTechniquePower(1));
     }
 
     public void upp() {

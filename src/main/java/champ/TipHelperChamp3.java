@@ -5,7 +5,6 @@
 
 package champ;
 
-import champ.powers.CalledShotPower;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
@@ -96,8 +95,7 @@ public class TipHelperChamp3 {
             if (rememberedCard != null) {
                 if (rememberedCard.hasTag(ChampMod.FINISHER)) {
                     if ((AbstractDungeon.player.stance instanceof BerserkerStance ||
-                            AbstractDungeon.player.stance instanceof DefensiveStance || AbstractDungeon.player.stance instanceof UltimateStance) &&
-                            !AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)
+                            AbstractDungeon.player.stance instanceof DefensiveStance || AbstractDungeon.player.stance instanceof UltimateStance)
                     ) {
                         currentColor = new Color(0.5F, TipHelperChamp2.greenValue, 0.5F, 1F);
                     }

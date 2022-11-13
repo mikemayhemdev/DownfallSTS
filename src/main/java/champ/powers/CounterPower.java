@@ -2,6 +2,7 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
+import champ.cards.Parry;
 import champ.cards.Riposte;
 import champ.relics.PowerArmor;
 import com.badlogic.gdx.graphics.Texture;
@@ -27,6 +28,7 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
     private static final Texture tex32 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/Counterstrike32.png");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
+    private int blockedDamage;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public CounterPower(final int amount) {
@@ -44,45 +46,32 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
-            this.flash();
-            if (owner.hasPower(FalseCounterPower.POWER_ID)) {
-                owner.getPower(FalseCounterPower.POWER_ID).onSpecificTrigger();
-                addToTop(new ReducePowerAction(owner, owner, this, amount / 2));
-                if (AbstractDungeon.player.hasPower(ParryPower.POWER_ID)) {
-                    for (int i = 0; i < AbstractDungeon.player.getPower(ParryPower.POWER_ID).amount; i++) {
-                        AbstractCard c = new Riposte();
-                        c.baseDamage = amount / 2;
-                        addToBot(new MakeTempCardInHandAction(c));
-                    }
-                    AbstractDungeon.player.getPower(ParryPower.POWER_ID).onSpecificTrigger();
-                }
+        if (owner.currentBlock > 0 && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
+            if (info.output >= owner.currentBlock){
+                blockedDamage = owner.currentBlock;
             } else {
-                addToTop(new RemoveSpecificPowerAction(owner, owner, this));
-                if (AbstractDungeon.player.hasPower(ParryPower.POWER_ID)) {
-                    for (int i = 0; i < AbstractDungeon.player.getPower(ParryPower.POWER_ID).amount; i++) {
-                        AbstractCard c = new Riposte();
-                        c.baseDamage = amount;
-                        addToBot(new MakeTempCardInHandAction(c));
-                    }
-                    AbstractDungeon.player.getPower(ParryPower.POWER_ID).onSpecificTrigger();
-                }
+                blockedDamage = info.output;
             }
-            this.addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
-            if (owner.hasPower(GladiatorFormPower.POWER_ID)) {
-                owner.getPower(GladiatorFormPower.POWER_ID).onSpecificTrigger();
-            }
+
         }
 
         return damageAmount;
     }
 
     @Override
-    public void stackPower(int stackAmount) {
-        if (AbstractDungeon.player.hasRelic(PowerArmor.ID))
-            if (amount + stackAmount > PowerArmor.CAP_RESOLVE_ETC)
-                stackAmount = (PowerArmor.CAP_RESOLVE_ETC - amount);
-        super.stackPower(stackAmount);
+    public void atStartOfTurn() {
+        if (blockedDamage > 0){
+            AbstractCard c = new Riposte();
+            c.baseDamage = blockedDamage;
+            addToBot(new MakeTempCardInHandAction(c));
+            if (owner.hasPower(ParryPower.POWER_ID)){
+                c.freeToPlay();
+                owner.getPower(ParryPower.POWER_ID).onSpecificTrigger();
+            }
+
+        }
+        addToBot(new ReducePowerAction(owner,owner,this,1));
+        super.atStartOfTurn();
     }
 
     @Override

@@ -2,6 +2,7 @@ package champ.cards.stancecards;
 
 import champ.ChampMod;
 import champ.cards.AbstractChampCard;
+import champ.powers.TrophyPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.ChangeGoldAction;
@@ -14,13 +15,17 @@ public class TheTrophy extends AbstractChampCard {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         exhaust = true;
         tags.add(ChampMod.FINISHER);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO - Special Trophy Power - The next card you play is upgraded permanently.
+        applyToSelf(new TrophyPower(magicNumber));
     }
 
     public void upp() {
-        upgradeMagicNumber(5);
+        upgradeMagicNumber(1);
+
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
