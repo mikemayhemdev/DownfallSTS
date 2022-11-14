@@ -1,7 +1,7 @@
 package champ.cards;
 
 import basemod.helpers.CardModifierManager;
-import champ.util.TechniqueMod;
+import champ.util.ComboMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,7 +22,7 @@ public class TripleStrike extends AbstractChampCard {
         exhaust = true;
         AbstractCard r = new Strike();
         r.updateCost(-999);
-        CardModifierManager.addModifier(r, new TechniqueMod());
+        CardModifierManager.addModifier(r, new ComboMod());
         cardsToPreview = r;
         //  CardModifierManager.addModifier(this, new TechniqueMod());
         tags.add(CardTags.STRIKE);
@@ -37,7 +37,7 @@ public class TripleStrike extends AbstractChampCard {
             r.upgrade();
         }
         r.updateCost(-999);
-        CardModifierManager.addModifier(r, new TechniqueMod());
+        CardModifierManager.addModifier(r, new ComboMod());
         makeInHand(r, 2);
     }
 

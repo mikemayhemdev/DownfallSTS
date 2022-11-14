@@ -9,23 +9,23 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class TechniqueMod extends AbstractCardModifier {
+public class ComboMod extends AbstractCardModifier {
 
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + CardCrawlGame.languagePack.getUIString(ChampMod.makeID("TechniqueMod")).TEXT[0];
+        return rawDescription + CardCrawlGame.languagePack.getUIString(ChampMod.makeID("ComboMod")).TEXT[0];
     }
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         super.onUse(card, target, action);
-        if (AbstractDungeon.player.stance instanceof AbstractChampStance)
-            ((AbstractChampStance) AbstractDungeon.player.stance).techique();
+
+        //TODO - Make this work when stance mechanics are in
     }
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new TechniqueMod();
+        return new ComboMod();
     }
 }

@@ -5,11 +5,15 @@ import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import downfall.util.TextureLoader;
+
+import static collector.util.Wiz.applyToSelf;
 
 public class ShieldWallPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -35,10 +39,16 @@ public class ShieldWallPower extends AbstractPower implements CloneablePowerInte
         this.updateDescription();
     }
 
-    @Override
-    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
-        flash();
-        this.addToTop(new ApplyPowerAction(owner, owner, new CounterPower(amount), amount));
+
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        if (owner.currentBlock > 0 && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
+            if (info.output <= owner.currentBlock){
+                applyToSelf(new VigorPower(owner, amount));
+            }
+
+        }
+
+        return damageAmount;
     }
 
     @Override

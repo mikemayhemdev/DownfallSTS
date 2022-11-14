@@ -15,7 +15,7 @@ public class RopeADope extends AbstractChampCard {
 
     public RopeADope() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.FINISHER);
         baseBlock = block = 10;
     }

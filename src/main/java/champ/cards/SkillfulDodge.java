@@ -13,12 +13,8 @@ public class SkillfulDodge extends AbstractChampCard {
     public final static String ID = makeID("SkillfulDodge");
 
     public SkillfulDodge() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 4;
-        baseMagicNumber = magicNumber = 4;
-        baseCool = cool = 3;
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBODEFENSIVE);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseBlock = 10;
         postInit();
         loadJokeCardImage(this, "SkillfulDodge.png");
     }
@@ -27,7 +23,7 @@ public class SkillfulDodge extends AbstractChampCard {
         blck();
         applyToSelf(new CounterPower(magicNumber));
         if (dcombo())
-            atb(new ModifyBlockAndMagicAction(uuid, cool));
+            applyToSelf(new CounterPower(magicNumber));
     }
 
     @Override
@@ -36,8 +32,6 @@ public class SkillfulDodge extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeBlock(1);
-        upgradeMagicNumber(1);
-        upgradeCool(1);
+        upgradeBlock(4);
     }
 }

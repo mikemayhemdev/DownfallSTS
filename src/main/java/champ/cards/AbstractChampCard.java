@@ -5,7 +5,6 @@ import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.ChampMod;
 import champ.ChampTextHelper;
-import champ.powers.CalledShotPower;
 import champ.powers.DancingMasterPower;
 import champ.relics.SignatureFinisher;
 import champ.stances.*;
@@ -115,6 +114,9 @@ public abstract class AbstractChampCard extends CustomCard {
 
     public static boolean inBerserker() {
         return AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID);
+    }
+    public static boolean inGladiator() {
+        return AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID);
     }
 
     public static boolean inDefensive() {
@@ -302,19 +304,7 @@ public abstract class AbstractChampCard extends CustomCard {
         ChampMod.finishersThisCombat++; //If there is a finishers this combat problem, maybe look here
 
         if (!AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-            boolean leaveStance = !noExit && !AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID);
-            if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
-                SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
-                if (s.card.uuid == this.uuid) {
-                    leaveStance = false;
-                }
-            }
-            if (leaveStance) {
                 exitStance();
-            }
-            if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
-                ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
-            }
             for (AbstractPower p : AbstractDungeon.player.powers) {
                 if (p instanceof OnFinisherSubscriber) {
                     ((OnFinisherSubscriber) p).onFinisher();

@@ -14,7 +14,7 @@
     "NAMES": [
       "combo"
     ],
-    "DESCRIPTION": "Extra effect when played in the listed #yStance."
+    "DESCRIPTION": "Gain the next card provided by your Stance and advance it one stage."
   },
   {
     "PROPER_NAME": "Finisher",
@@ -24,14 +24,14 @@
       "[fist_icon]",
       "champ:[fist_icon]"
     ],
-    "DESCRIPTION": "Requires being in a Stance. NL After playing a Finisher, exit your Stance and trigger its Finisher bonus."
+    "DESCRIPTION": "When this card is generated via Combo, exit your Stance."
   },
   {
     "PROPER_NAME": "Counter",
     "NAMES": [
       "counter"
     ],
-    "DESCRIPTION": "The next time you take #yAttack damage, deal damage back."
+    "DESCRIPTION": "Next turn, gain Riposte, an Attack which costs 1 and deals damage equal to the amount of damage you blocked this turn."
   },
   {
     "PROPER_NAME": "Defensive",

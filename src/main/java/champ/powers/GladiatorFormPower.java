@@ -26,7 +26,6 @@ public class GladiatorFormPower extends AbstractPower implements CloneablePowerI
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     int remainingVigor = 3;
-    int remainingCounter = 3;
 
     public GladiatorFormPower(final int amount) {
         this.name = NAME;
@@ -40,7 +39,6 @@ public class GladiatorFormPower extends AbstractPower implements CloneablePowerI
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         this.updateDescription();
-        priority = -99; // This might need some fiddling. It's either this or 99 haha
     }
 
     @Override
@@ -56,23 +54,6 @@ public class GladiatorFormPower extends AbstractPower implements CloneablePowerI
             if (remainingVigor <= 0) {
                 remainingVigor = 3;
                 addToBot(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new VigorPower(owner, amount)), amount));
-            }
-        }
-    }
-
-    @Override
-    public void onSpecificTrigger() {
-        if (owner.hasPower(CounterPower.POWER_ID)) {
-            this.flash();
-            int found = AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount;
-            int totaled = found / 3;
-            int remainder = found % 3;
-            int finalized = totaled * amount;
-            addToBot(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new CounterPower(finalized)), finalized));
-            remainingCounter -= remainder;
-            if (remainingCounter <= 0) {
-                remainingCounter = 3;
-                addToBot(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new CounterPower(amount)), amount));
             }
         }
     }

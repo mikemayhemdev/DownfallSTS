@@ -26,7 +26,7 @@ import champ.stances.GladiatorStance;
 import champ.util.CardFilter;
 import champ.util.CoolVariable;
 import champ.util.OnOpenerSubscriber;
-import champ.util.TechniqueMod;
+import champ.util.ComboMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -337,13 +337,13 @@ public class ChampMod implements
     public void receiveSetUnlocks() {
 
         downfallMod.registerUnlockSuite(
-                BerserkerStyle.ID,
                 ViciousMockery.ID,
-                DefensiveStyle.ID,
+                ViciousMockery.ID,
+                ViciousMockery.ID,
 
                 BattlePlan.ID,
                 ChainLash.ID,
-                SwordSigil.ID,
+                SigilOfWar.ID,
 
                 EnchantShield.ID,
                 EnchantSword.ID,
@@ -371,7 +371,7 @@ public class ChampMod implements
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
 
                 if (!c.hasTag(TECHNIQUE))
-                    CardModifierManager.addModifier(c, new TechniqueMod());
+                    CardModifierManager.addModifier(c, new ComboMod());
 
             }
 
@@ -609,35 +609,4 @@ public class ChampMod implements
         }
     }
 
-    public static int fatigue(int begone) {
-
-        int y = AbstractDungeon.player.currentHealth;
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
-                if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
-                    if (x + AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
-                        x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount;
-                    }
-                }
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
-                AbstractDungeon.actionManager.addToTop(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
-            }
-        });
-
-        /*atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (y - AbstractDungeon.player.currentHealth > 0) {
-                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(y - AbstractDungeon.player.currentHealth), y - AbstractDungeon.player.currentHealth));
-                }
-            }
-        });
-        */ //This unused method makes it so the player only gains Resolve equal to lost HP. Fixes some breakable things, but also unfun.
-
-        return Math.min(begone, AbstractDungeon.player.currentHealth - 1);
-    }
 }

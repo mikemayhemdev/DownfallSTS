@@ -9,7 +9,7 @@
       "将一张容器牌加入牌组。"
     ]
   },
-  "champ:TechniqueMod": {
+  "champ:ComboMod": {
     "TEXT": [
       " NL 获得 champ:技术 奖励。"
     ]

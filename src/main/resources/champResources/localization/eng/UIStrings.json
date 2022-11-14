@@ -9,16 +9,16 @@
       "Add a Seal to your deck"
     ]
   },
-  "champ:TechniqueMod": {
+  "champ:ComboMod": {
     "TEXT": [
-      " NL Trigger *Stance *Skill *Bonus."
+      " NL champ:Combo."
     ]
   },
   "champ:OpenerMod": {
     "TEXT": [
       " NL Enter champ:Berserker.",
       " NL Enter champ:Defensive.",
-      "Enter champ:Gladiator NL "
+      " NL Enter champ:Gladiator."
     ]
   },
   "champ:RetainCardMod": {

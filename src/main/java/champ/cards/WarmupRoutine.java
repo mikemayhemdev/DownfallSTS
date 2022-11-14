@@ -1,29 +1,27 @@
 package champ.cards;
 
-import champ.ChampMod;
-import champ.powers.DefensiveStylePower;
+import champ.powers.GladiatorStylePower;
+import champ.powers.IronFortressPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class DefensiveStyle extends AbstractChampCard {
+public class WarmupRoutine extends AbstractChampCard {
 
-    public final static String ID = makeID("DefensiveStyle");
+    public final static String ID = makeID("WarmupRoutine");
 
     //stupid intellij stuff power, self, uncommon
 
-    public DefensiveStyle() {
+    public WarmupRoutine() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.tags.add(ChampMod.OPENER);
-        this.tags.add(ChampMod.OPENERDEFENSIVE);
+
+        //tags.add(ChampMod.TECHNIQUE);
+        //techniqueLast = true;
+        //postInit();
         baseMagicNumber = magicNumber = 1;
-        //myHpLossCost = 5;
-        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        defenseOpen();
-        //  fatigue(5);
-        applyToSelf(new DefensiveStylePower(magicNumber));
+        applyToSelf(new GladiatorStylePower(magicNumber));
     }
 
     public void upp() {

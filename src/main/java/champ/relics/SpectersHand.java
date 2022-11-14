@@ -10,12 +10,12 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.util.TextureLoader;
 
-import static champ.ChampMod.makeRelicOutlinePath;
-import static champ.ChampMod.makeRelicPath;
+import static champ.ChampMod.*;
 
 public class SpectersHand extends CustomRelic {
 
@@ -29,22 +29,24 @@ public class SpectersHand extends CustomRelic {
 
 
     @Override
-    public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
-            flash();
-            if (AbstractDungeon.cardRng.randomBoolean()) {
-                AbstractCard c2 = new Strike();
-                CardModifierManager.addModifier(c2, new ExhaustMod());
-                c2.freeToPlayOnce = true;
-                addToBot(new MakeTempCardInHandAction(c2));
-            } else {
-                AbstractCard c2 = new Defend();
-                CardModifierManager.addModifier(c2, new ExhaustMod());
-                c2.freeToPlayOnce = true;
-                addToBot(new MakeTempCardInHandAction(c2));
+    public void onPlayCard(AbstractCard c, AbstractMonster m) {
+        if (c.hasTag(COMBO)){
+            if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
+                flash();
+                if (AbstractDungeon.cardRng.randomBoolean()) {
+                    AbstractCard c2 = new Strike();
+                    CardModifierManager.addModifier(c2, new ExhaustMod());
+                    c2.freeToPlayOnce = true;
+                    addToBot(new MakeTempCardInHandAction(c2));
+                } else {
+                    AbstractCard c2 = new Defend();
+                    CardModifierManager.addModifier(c2, new ExhaustMod());
+                    c2.freeToPlayOnce = true;
+                    addToBot(new MakeTempCardInHandAction(c2));
+
+                }
 
             }
-
         }
     }
 

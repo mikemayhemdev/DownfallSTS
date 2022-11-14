@@ -13,7 +13,7 @@ public class Taunt extends AbstractChampCard {
     //stupid intellij stuff ATTACK, ENEMY, STARTER
 
     public Taunt() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = 1;
         loadJokeCardImage(this, "Taunt.png");
     }

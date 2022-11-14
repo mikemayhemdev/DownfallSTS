@@ -31,7 +31,7 @@
     "DESCRIPTION": "Adoptez la pose du champ:Gladiateur. NL Piochez 1 carte.",
     "UPGRADE_DESCRIPTION": "Adoptez la pose du champ:Gladiateur. NL Piochez 2 cartes."
   },
-  "champ:SwordSigil": {
+  "champ:SigilOfWar": {
     "NAME": "Sigle de la victoire",
     "DESCRIPTION": "Déclenchez le *Bonus de *Compétence de votre Pose !M! fois. NL Épuisement"
   },
@@ -166,13 +166,6 @@
       "Je ne suis pas dans une Pose."
     ]
   },
-  "champ:ShieldThrow": {
-    "NAME": "Lancer de bouclier",
-    "DESCRIPTION": "Infligez des dégâts égaux à votre Armure, deux fois. NL Gagnez 2 de Fragilité. champ:Combo Pose *Défensive: Ne gagnez pas de Fragilité.",
-    "EXTENDED_DESCRIPTION": [
-      "Infligez des dégâts égaux à votre Armure ( !D! ) deux fois. NL Gagnez 2 de Fragilité. champ:Combo Pose *Défensive: Perdez 2 de Fragilité."
-      ]
-  },
   "champ:RopeADope": {
     "NAME": "Contre les cordes",
     "DESCRIPTION": "Gagnez !B! d'Armure. Au prochain tour, gagnez [E] et piochez 3 cartes.",
@@ -183,7 +176,7 @@
     "DESCRIPTION": "Lorsque vous adoptez une Pose, déclenchez ses *Bonus de *Compétences deux fois.",
     "UPGRADE_DESCRIPTION": "Inné. NL Lorsque vous adoptez une Pose, déclenchez ses *Bonus de *Compétences deux fois."
   },
-  "champ:Lariat": {
+  "champ:ReinforcedBody": {
     "NAME": "Corps renforcé",
     "DESCRIPTION": "Gagnez !B! d'Armure X fois."
   },
@@ -252,7 +245,7 @@
     "NAME": "Coup bas",
     "DESCRIPTION": "Infligez !D! dégâts. NL Si l'ennemi est un Boss, Infligez ces dégâts deux fois supplémentaires. Sinon, étourdissez l'ennemi. NL Épuisement."
   },
-  "champ:RisingSlash": {
+  "champ:RisingStrike": {
     "NAME": "Frappe ascendante",
     "DESCRIPTION": "Infligez !D! dégâts. NL Si la dernière carte jouée était un champ:Finisher, infligez !D! dégâts à nouveau."
   },
@@ -268,7 +261,7 @@
       "Inflligez !D! dégâts !M! fois. NL champ:Combo Pose du *Destructeur: Cette carte touche une fois supplémentaire ce combat."
     ]
   },
-  "champ:VampiricStrike": {
+  "champ:ShieldThrow": {
     "NAME": "Démolition",
     "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez de l'Armure égale aux dégâts non-bloqués infligés."
   },
@@ -300,7 +293,7 @@
       "@UNE@ @DÉFAITE??@ NL @IMPOSSIBLE!!@"
     ]
   },
-  "champ:RecklessLeap": {
+  "champ:RecklessStrike": {
     "NAME": "Frappe téméraire",
     "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez 2 de Force. NL Perdez 1 de Dextérité. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Gagnez 2 de Force. NL Perdez 1 de Dextérité.",
@@ -341,7 +334,7 @@
     "NAME": "Improvisation",
     "DESCRIPTION": "La première fois que vous utilisez un champ:Combo chaque tour, remettez-la dans votre main. NL Il coûte 0 jusqu'à ce qu'il soit joué."
   },
-  "champ:CalledShot": {
+  "champ:Refreshment": {
     "NAME": "Rafraîchissement",
     "DESCRIPTION": "champ:Combo Pose du *Destructeur: Gagnez [E] [E] , puis Épuisez-ceci. NL Pose *Défensive champ:Combo: Piochez !M! cartes.",
     "UPGRADE_DESCRIPTION": "champ:Combo Pose du *Destructeur: Gagnez [E] [E] [E] , puis Épuisez-ceci. NL champ:Combo Pose *Défensive: Piochez !M! cartes.",

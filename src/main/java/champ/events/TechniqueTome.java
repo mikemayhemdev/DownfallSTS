@@ -6,7 +6,7 @@
 package champ.events;
 
 import basemod.helpers.CardModifierManager;
-import champ.util.TechniqueMod;
+import champ.util.ComboMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -67,7 +67,7 @@ public class TechniqueTome extends AbstractImageEvent {
         super.update();
         if (this.pickCard && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            CardModifierManager.addModifier(c, new TechniqueMod());
+            CardModifierManager.addModifier(c, new ComboMod());
             AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
             AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();

@@ -32,7 +32,7 @@
     "DESCRIPTION": "champ:角斗 champ:起手 。 NL 抽 1 张牌。",
     "UPGRADE_DESCRIPTION": "champ:角斗 champ:起手 。 NL 抽 2 张牌。"
   },
-  "champ:SwordSigil": {
+  "champ:SigilOfWar": {
     "NAME": "剑纹",
     "DESCRIPTION": "champ:角斗 champ:连段 ：重复 !M! 次并 消耗 。"
   },
@@ -173,7 +173,7 @@
     "NAME": "钢铁要塞",
     "DESCRIPTION": "每当你进入 姿态 时，获得 !M! 点 格挡 和 !M! 层 champ:反击 。"
   },
-  "champ:Lariat": {
+  "champ:ReinforcedBody": {
     "NAME": "套索",
     "DESCRIPTION": "重复X次。 NL 获得 !B! 点 格挡 。 champ:Technique",
     "UPGRADE_DESCRIPTION": "获得 [E] 。NL 重复X次。 NL 获得 !B! 点 格挡 。 champ:Technique"
@@ -240,7 +240,7 @@
     "NAME": "偷袭",
     "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果敌人的意图是强化或负面效果且不是首领， 击晕 敌人。"
   },
-  "champ:RisingSlash": {
+  "champ:RisingStrike": {
     "NAME": "狂烈打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 如果本场战斗中打出的上一张牌是 champ:战术 牌，打出两次"
   },
@@ -253,7 +253,7 @@
     "NAME": "怒斩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL champ:疲劳 !M! 。 NL champ:狂战 champ:连段 ：本场战斗中这张牌的伤害和 champ:疲劳 提高 !cool! 点。"
   },
-  "champ:VampiricStrike": {
+  "champ:ShieldThrow": {
     "NAME": "饮血打击",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 回复未被 格挡 伤害 的生命。 NL 消耗 。"
   },
@@ -290,7 +290,7 @@
     "NAME": "最后一战",
     "DESCRIPTION": " 只能在半血以下才能被打出。 NL 移除所有负面效果。 NL 获得6点 力量 。"
   },
-  "champ:RecklessLeap": {
+  "champ:RecklessStrike": {
     "NAME": "无谋跃斩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL champ:疲劳 5。 NL 获得 !M! 点 champ:决心 。 NL 消耗 。"
   },
@@ -324,7 +324,7 @@
     "NAME": "触类旁通",
     "DESCRIPTION": "每回合第一次打出 champ:连段 牌时，返回手牌。 NL 它直到打出前费用为0。"
   },
-  "champ:CalledShot": {
+  "champ:Refreshment": {
     "NAME": "宣告",
     "DESCRIPTION": "你打出的下 !M! 张 champ:终结技 将不会退出 姿态 或结束你的回合。",
 	"UPGRADE_DESCRIPTION": "你打出的下 !M! 张 champ:终结技 将不会退出 姿态 或结束你的回合。"

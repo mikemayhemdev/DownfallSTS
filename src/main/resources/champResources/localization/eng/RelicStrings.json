@@ -10,7 +10,7 @@
     "NAME": "Black Knight's Helm",
     "FLAVOR": "Only a flesh wound.",
     "DESCRIPTIONS": [
-      "The first time you enter each Stance each combat: NL #bDefensive: Gain #b2 Dexterity and lose #b1 Strength. NL #rBerserker: Gain #b2 Strength and lose #b1 Dexterity."
+      "The first time you enter these Stances each combat: NL #bDefensive: Gain #b2 Dexterity and lose #b1 Strength. NL #rBerserker: Gain #b2 Strength and lose #b1 Dexterity."
     ]
   },
   "champ:Barbells": {
@@ -31,7 +31,7 @@
     "NAME": "Victorious Crown",
     "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
-      "Replaces #rChampion's #rCrown. NL Start each combat in #ychamp:Ultimate #yStance, which lasts for #b1 turn."
+      "Replaces #rChampion's #rCrown. NL At the start of each combat, enter #ychamp:Gladiator #yStance, then draw 2 cards and gain [E]."
     ]
   },
   "champ:DefensiveTrainingManual": {
@@ -45,7 +45,7 @@
     "NAME": "Deflecting Bracers",
     "FLAVOR": "If you thought blocking was good then...",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #ychamp:Counter equal to half the amount of expired #yBlock."
+      "At the end of your turn, if you have no #ychamp:Counter, gain 1 #ychamp:Counter."
     ]
   },
   "champ:DuelingGlove": {
@@ -66,14 +66,14 @@
     "NAME": "Gladiators Manual",
     "FLAVOR": "Try everything - something will stick.",
     "DESCRIPTIONS": [
-      "Whenever you play a #yCombo, a #yFinisher, and enter a #yStance in the same turn, gain #b1 #yStrength and #yDexterity."
+      "Whenever you play a #yFinisher, gain #b1 #yStrength or #yDexterity (chosen at random)."
     ]
   },
   "champ:PowerArmor": {
     "NAME": "Power Armor",
-    "FLAVOR": "Bought used.",
+    "FLAVOR": "Bought used. Has the name 'Kova' etched into the inside collar.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b10."
+      "Gain [E] at the start of your turn. NL Your maximum #yVigor is #b10. Your maximum hand size is reduced by 2."
     ]
   },
   "champ:SignatureFinisher": {
@@ -89,7 +89,7 @@
     "NAME": "Spectre's Hand",
     "FLAVOR": "Some victories stay with you.",
     "DESCRIPTIONS": [
-      "Whenever you Enter a Stance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust."
+      "Whenever you play a #yCombo while not in a #Stance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust."
     ]
   },
   "champ:LiftRelic": {

@@ -17,23 +17,9 @@ public class UltimateStance extends AbstractChampCard {
         exhaust = true;
     }
 
-    /*
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.stance.ID.equals(champ.stances.UltimateStance.STANCE_ID) ||AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
-            return super.canUse(p, m);
-        }
-        cantUseMessage = EXTENDED_DESCRIPTION[0];
-        return false;
-    }
-
-     */
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // techique();
-        //   triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
-        //ultimateStance();
-        applyToSelf(new UltimateFormNextTurnPower(1));
+        ultimateStance();
     }
 
     public void upp() {

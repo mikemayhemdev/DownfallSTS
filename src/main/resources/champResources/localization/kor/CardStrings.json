@@ -26,7 +26,7 @@
       "champ:수비 자세를 취합니다."
     ]
   },
-  "champ:SwordSigil": {
+  "champ:SigilOfWar": {
     "NAME": "승리의 인장",
     "DESCRIPTION": "현재 자세의 *스킬 *카드 *보너스를 !M! 번 얻습니다. NL 소멸."
   },
@@ -156,13 +156,6 @@
       "자세를 취하고 있지 않다."
     ]
   },
-  "champ:ShieldThrow": {
-    "NAME": "방패 투척",
-    "DESCRIPTION": "현재 방어도 만큼 피해를 2번 줍니다. NL 손상을 2 얻습니다. NL *수비 champ:연계: 손상을 2 잃습니다.",
-    "EXTENDED_DESCRIPTION": [
-      "현재 방어도 !D! 만큼 피해를 2번 줍니다. NL 손상을 2 얻습니다. NL *수비 champ:연계: 손상을 2 잃습니다"
-    ]
-  },
   "champ:RopeADope": {
     "NAME": "손 풀기",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] 를 얻고 카드를 2장 뽑습니다.",
@@ -173,7 +166,7 @@
     "DESCRIPTION": "champ:자세를 취할 때마다 취한 champ:자세의 *스킬 *카드 *효과를 2번 발동시킵니다.",
     "UPGRADE_DESCRIPTION": "선천성. NL champ:자세를 취할 때마다 취한 champ:자세의 *스킬 *카드 *효과를 2번 발동시킵니다."
   },
-  "champ:Lariat": {
+  "champ:ReinforcedBody": {
     "NAME": "강화된 몸체",
     "DESCRIPTION": "방어도를 !B! 만큼 X번 얻습니다."
   },
@@ -237,7 +230,7 @@
     "NAME": "비열한 일격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 보스라면 피해를 3번 줍니다. 아니라면 적을 hermit:기절시킵니다. NL 소멸."
   },
-  "champ:RisingSlash": {
+  "champ:RisingStrike": {
     "NAME": "수직 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 직전에 champ:마무리 카드를 사용했다면 피해를 2번 줍니다."
   },
@@ -253,7 +246,7 @@
       "피해를 !D! 만큼 !M! 번 줍니다. NL *광폭화 champ:연계: 이번 전투에서 피해 횟수가 1 증가합니다. 자세를 바꿔도 유지됩니다."
     ]
   },
-  "champ:VampiricStrike": {
+  "champ:ShieldThrow": {
     "NAME": "구타",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 막히지 않은 피해만큼 방어도를 얻습니다."
   },
@@ -285,7 +278,7 @@
       "@패배??@ NL @말도@ @안돼!!@"
     ]
   },
-  "champ:RecklessLeap": {
+  "champ:RecklessStrike": {
     "NAME": "무모한 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 힘을 2 얻습니다. NL 민첩을 1 잃습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 힘을 2 얻습니다. NL 민첩을 1 잃습니다.",
@@ -326,7 +319,7 @@
     "NAME": "증강",
     "DESCRIPTION": "매 턴 처음으로 champ:연계 카드를 사용하면 그 카드를 가져옵니다. NL 그 카드의 비용은 사용하기 전까지 0이 됩니다."
   },
-  "champ:CalledShot": {
+  "champ:Refreshment": {
     "NAME": "원기 회복",
     "DESCRIPTION": "*광폭화 champ:연계: [E] [E] 를 얻고 이 카드를 소멸시킵니다. NL *수비 champ:연계: 카드를 !M! 장 뽑습니다.",
     "UPGRADE_DESCRIPTION": "*광폭화 champ:연계: [E] [E] [E] 를 얻고 이 카드를 소멸시킵니다. NL *수비 champ:연계: 카드를 !M! 장 뽑습니다.",

@@ -22,11 +22,12 @@ public class GutPunch extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //berserkOpen();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         applyToSelf(new CounterPower(1));
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
     }
 
 
