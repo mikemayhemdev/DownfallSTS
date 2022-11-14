@@ -1,8 +1,10 @@
 package champ.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.util.TextureLoader;
 
@@ -23,10 +25,14 @@ public class PowerArmor extends CustomRelic {
 
     public void onEquip() {
         ++AbstractDungeon.player.energy.energyMaster;
+        --BaseMod.MAX_HAND_SIZE;
+        --BaseMod.MAX_HAND_SIZE;
     }
 
     public void onUnequip() {
         --AbstractDungeon.player.energy.energyMaster;
+        ++BaseMod.MAX_HAND_SIZE;
+        ++BaseMod.MAX_HAND_SIZE;
     }
 
     @Override

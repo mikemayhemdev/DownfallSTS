@@ -19,10 +19,6 @@ public class GladiatorsBookOfMartialProwess extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("GladiatorsHandbook.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("GladiatorsHandbook.png"));
 
-    private boolean hasPlayedOpener;
-    private boolean hasPlayedTechnique;
-    private boolean hasPlayedCombo;
-    private boolean hasPlayedFinisher;
 
     public GladiatorsBookOfMartialProwess() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
@@ -30,33 +26,17 @@ public class GladiatorsBookOfMartialProwess extends CustomRelic {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (c.hasTag(OPENER)) {
-            hasPlayedOpener = true;
-        }
+
         if (c.hasTag(FINISHER)) {
-            hasPlayedFinisher = true;
+
+            if (AbstractDungeon.cardRandomRng.randomBoolean()) {
+
+                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
+            } else {
+                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 1), 1));
+
+            }
         }
-        if (c.hasTag(COMBO)) {
-            hasPlayedCombo = true;
-        }
-        if (hasPlayedFinisher && hasPlayedCombo && hasPlayedOpener) {
-
-            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
-
-            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 1), 1));
-
-            hasPlayedOpener = false;
-            hasPlayedFinisher = false;
-            hasPlayedCombo = false;
-        }
-    }
-
-    @Override
-    public void atTurnStart() {
-        hasPlayedOpener = false;
-        hasPlayedTechnique = false;
-        hasPlayedFinisher = false;
-        hasPlayedCombo = false;
     }
 
     @Override

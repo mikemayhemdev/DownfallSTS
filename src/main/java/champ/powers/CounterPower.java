@@ -31,7 +31,7 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
     private int blockedDamage;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public CounterPower(final int amount) {
+    public CounterPower(int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
