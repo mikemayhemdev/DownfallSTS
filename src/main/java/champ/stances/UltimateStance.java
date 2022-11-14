@@ -1,13 +1,16 @@
 package champ.stances;
 
+import basemod.patches.whatmod.WhatMod;
 import champ.ChampChar;
-import champ.ChampMod;
-import com.megacrit.cardcrawl.stances.AbstractStance;
+import collector.util.Wiz;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+
+import java.util.ArrayList;
 
 public class UltimateStance extends AbstractChampStance {
 
     public static final String STANCE_ID = "champ:UltimateStance";
-    private static final long sfxId = -1L;
 
     public UltimateStance() {
         this.ID = STANCE_ID;
@@ -21,48 +24,15 @@ public class UltimateStance extends AbstractChampStance {
     }
 
     @Override
-    public String getDescription() {
-        return ChampChar.characterStrings.TEXT[8] + ": " +
-                ChampChar.characterStrings.TEXT[12] + //Gain #B
-                BerserkerStance.amount() +
-                ChampChar.characterStrings.TEXT[46] + //#y Vigor
-                " NL " +
-                ChampChar.characterStrings.TEXT[12] + //Gain #B
-                DefensiveStance.amount() +
-                ChampChar.characterStrings.TEXT[47] + //#y Counter
-                " NL " +
-                ChampChar.characterStrings.TEXT[62] + //"Charges Remaining:
-                getRemainingChargeCount() +
-                ChampChar.characterStrings.TEXT[55]; //"."
-    }
-
-
-    @Override
-    public String getKeywordString() {
-        return "champ:ultimate";
+    public ArrayList<AbstractCard> getCards() {
+        ArrayList<AbstractCard> retVal = new ArrayList<>();
+        Wiz.getCardsMatchingPredicate(c -> c.rarity.equals(AbstractCard.CardRarity.SPECIAL) && WhatMod.findModID(c.getClass()) == null, true).forEach(s -> retVal.add(CardLibrary.getCard(s).makeCopy()));
+        return retVal;
     }
 
     @Override
     public void onEnterStance() {
         super.onEnterStance();
-        ChampMod.enteredBerserkerThisTurn = true;
-        ChampMod.enteredDefensiveThisTurn = true;
-    }
-
-    @Override
-    public void updateDescription() {
-        this.description = ChampChar.characterStrings.TEXT[21];
-    }
-
-    @Override
-    public void technique() {
-        ((BerserkerStance) AbstractStance.getStanceFromName(BerserkerStance.STANCE_ID)).technique();
-        ((DefensiveStance) AbstractStance.getStanceFromName(DefensiveStance.STANCE_ID)).technique();
-    }
-
-    @Override
-    public void finisher() {
-        ((BerserkerStance) AbstractStance.getStanceFromName(BerserkerStance.STANCE_ID)).finisher();
-        ((DefensiveStance) AbstractStance.getStanceFromName(DefensiveStance.STANCE_ID)).finisher();
+        //TODO: entered victorious this turn
     }
 }

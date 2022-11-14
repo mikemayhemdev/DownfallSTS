@@ -11,16 +11,25 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.Sunder;
+import com.megacrit.cardcrawl.cards.green.AllOutAttack;
+import com.megacrit.cardcrawl.cards.green.Footwork;
+import com.megacrit.cardcrawl.cards.purple.Protect;
+import com.megacrit.cardcrawl.cards.red.Impervious;
+import com.megacrit.cardcrawl.cards.red.Inflame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import downfall.downfallMod;
 import downfall.vfx.DefensiveModeStanceParticleEffect;
 
+import java.util.ArrayList;
+
 public class DefensiveStance extends AbstractChampStance {
 
     public static final String STANCE_ID = "champ:DefensiveStance";
-    private static final long sfxId = -1L;
 
     public DefensiveStance() {
         this.ID = STANCE_ID;
@@ -34,21 +43,12 @@ public class DefensiveStance extends AbstractChampStance {
     }
 
     @Override
-    public String getDescription() {
-        return ChampChar.characterStrings.TEXT[8] + ": " +
-                ChampChar.characterStrings.TEXT[12] + //Gain #B
-                DefensiveStance.amount() +
-                ChampChar.characterStrings.TEXT[47] + //#y Vigor
-                ChampChar.characterStrings.TEXT[63] +
-                " NL " +
-                ChampChar.characterStrings.TEXT[62] + //"Charges Remaining:
-                getRemainingChargeCount() +
-                ChampChar.characterStrings.TEXT[55]; //"."
-    }
-
-    @Override
-    public String getKeywordString() {
-        return "champ:defensive";
+    public ArrayList<AbstractCard> getCards() {
+        ArrayList<AbstractCard> retVal = new ArrayList<>();
+        retVal.add(CardLibrary.getCard(Footwork.ID).makeCopy());
+        retVal.add(CardLibrary.getCard(Protect.ID).makeCopy());
+        retVal.add(CardLibrary.getCard(Impervious.ID).makeCopy());
+        return retVal;
     }
 
     @Override
@@ -56,48 +56,6 @@ public class DefensiveStance extends AbstractChampStance {
         super.onEnterStance();
         ChampMod.enteredDefensiveThisTurn = true;
     }
-
-    @Override
-    public void updateDescription() {
-        this.description = ChampChar.characterStrings.TEXT[8] + ": " +
-                ChampChar.characterStrings.TEXT[12] +
-                DefensiveStance.amount() +
-                ChampChar.characterStrings.TEXT[47] + " NL " +
-                ChampChar.characterStrings.TEXT[9] + ": " +
-                ChampChar.characterStrings.TEXT[12] + finisherAmount() +
-                ChampChar.characterStrings.TEXT[56];
-    }
-
-    public static int amount() {
-        int x = 3;
-        if (AbstractDungeon.player.hasPower(DefensiveStylePower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(DefensiveStylePower.POWER_ID).amount;
-        }
-        if (AbstractDungeon.player.hasPower(DoubleStyleThisTurnPower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(DoubleStyleThisTurnPower.POWER_ID).amount;
-        }
-        return x;
-    }
-
-    public static int finisherAmount() {
-        int x = 10;
-        if (AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID)) {
-            x += 5;
-        }
-        return x;
-    }
-
-    @Override
-    public void technique() {
-        int x = amount();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(x), x));
-    }
-
-    @Override
-    public void finisher() {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, finisherAmount()));
-    }
-
 
     @Override
     public void updateAnimation() {
@@ -111,7 +69,6 @@ public class DefensiveStance extends AbstractChampStance {
                 }
             }
 
-
             this.particleTimer2 -= Gdx.graphics.getDeltaTime();
             if (this.particleTimer2 < 0.0F) {
                 this.particleTimer2 = MathUtils.random(0.45F, 0.55F);
@@ -119,5 +76,4 @@ public class DefensiveStance extends AbstractChampStance {
             }
         }
     }
-
 }
