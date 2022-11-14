@@ -3,13 +3,9 @@ package champ.cards;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
-import champ.ChampMod;
-import champ.ChampTextHelper;
-import champ.powers.DancingMasterPower;
 import champ.relics.SignatureFinisher;
 import champ.stances.*;
 import champ.stances.UltimateStance;
-import champ.util.OnFinisherSubscriber;
 import champ.util.OnOpenerSubscriber;
 import champ.util.TextureLoader;
 import com.badlogic.gdx.Gdx;
@@ -285,58 +281,6 @@ public abstract class AbstractChampCard extends CustomCard {
     public void exitStance() {
         //SlimeboundMod.logger.info("Switching to Neutral (Abstract)");
         atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
-    }
-
-    public void techique() {
-        if (AbstractDungeon.player.stance instanceof AbstractChampStance)
-            ((AbstractChampStance) AbstractDungeon.player.stance).techique();
-    }
-
-    public void finisher(boolean noExit) {
-
-        if (AbstractDungeon.player.hasPower(DancingMasterPower.POWER_ID)) {
-            if (finishersThisTurn == 0) {
-                AbstractDungeon.player.getPower(DancingMasterPower.POWER_ID).onSpecificTrigger();
-            }
-        }
-
-        ChampMod.finishersThisTurn++;
-        ChampMod.finishersThisCombat++; //If there is a finishers this combat problem, maybe look here
-
-        if (!AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-                exitStance();
-            for (AbstractPower p : AbstractDungeon.player.powers) {
-                if (p instanceof OnFinisherSubscriber) {
-                    ((OnFinisherSubscriber) p).onFinisher();
-                }
-            }
-        }
-    }
-
-    public void finisher() {
-        finisher(false);
-    }
-
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        ChampTextHelper.colorCombos(this, false);
-    }
-
-    @Override
-    public void onMoveToDiscard() {
-        super.onMoveToDiscard();
-        ChampTextHelper.colorCombos(this, true);
-    }
-
-    public void postInit() {
-        if (baseDamage > 0) techniqueLast = true;
-    }
-
-    @Override
-    public void initializeDescription() {
-        ChampTextHelper.calculateTagText(this);
-        super.initializeDescription();
     }
 
     @Override
