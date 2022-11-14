@@ -497,7 +497,7 @@
     "UPGRADE_DESCRIPTION": "打出 bronze:方法 时，抽2张牌。"
   },
   "bronze:HardenedForm": {
-    "NAME": "圆球召唤",
+    "NAME": "铜球召唤",
     "DESCRIPTION": " bronze:编译 或打出 bronze:方法 时： NL 获得 !M! 点 格挡 。 NL 随机造成 !M! 点伤害。"
   },
   "bronze:LegacyCode": {
