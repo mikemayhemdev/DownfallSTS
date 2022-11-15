@@ -6,6 +6,7 @@ import champ.cards.stancecards.Execute;
 import champ.relics.ChampionCrown;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
+import champ.stances.GladiatorStance;
 import champ.stances.UltimateStance;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -189,6 +190,13 @@ public class ChampChar extends CustomPlayer {
                 this.state.setAnimation(0, "IdleBerserker", true);
                 this.stateData.setMix("HitBerserker", "IdleBerserker", 0.5F);
                 currentIdle = "IdleBerserker";
+                break;
+            }
+            case GladiatorStance
+                    .STANCE_ID: {
+                this.stateData.setMix(currentIdle, "IdleGladiator", 0.5F);
+                this.state.setAnimation(0, "IdleGladiator", true);
+                currentIdle = "IdleGladiator";
                 break;
             }
             case NeutralStance

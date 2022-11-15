@@ -2,6 +2,7 @@ package champ.patches;
 
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
+import champ.stances.GladiatorStance;
 import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -29,6 +30,9 @@ public class StancePatch {
             }
             if (name.equals(BerserkerStance.STANCE_ID)) {
                 return SpireReturn.Return(new BerserkerStance());
+            }
+            if (name.equals(GladiatorStance.STANCE_ID)) {
+                return SpireReturn.Return(new GladiatorStance());
             }
             if (name.equals(UltimateStance.STANCE_ID)) {
                 return SpireReturn.Return(new UltimateStance());

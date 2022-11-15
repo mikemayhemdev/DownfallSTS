@@ -17,9 +17,10 @@ public class BattleCry extends AbstractChampCard {
     //stupid intellij stuff attack, enemy, rare
 
     public BattleCry() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         tags.add(ChampMod.OPENERGLADIATOR);
         tags.add(ChampMod.OPENER);
+        baseMagicNumber = magicNumber = 2;
 
         loadJokeCardImage(this, "ShieldThrow.png");
     }

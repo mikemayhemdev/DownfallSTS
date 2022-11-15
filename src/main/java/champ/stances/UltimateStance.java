@@ -2,6 +2,9 @@ package champ.stances;
 
 import basemod.patches.whatmod.WhatMod;
 import champ.ChampChar;
+import champ.cards.stancecards.AdoringFans;
+import champ.cards.stancecards.TheTrophy;
+import champ.cards.stancecards.VictorsPose;
 import collector.util.Wiz;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -26,13 +29,10 @@ public class UltimateStance extends AbstractChampStance {
     @Override
     public ArrayList<AbstractCard> getCards() {
         ArrayList<AbstractCard> retVal = new ArrayList<>();
-        Wiz.getCardsMatchingPredicate(c -> c.rarity.equals(AbstractCard.CardRarity.SPECIAL) && WhatMod.findModID(c.getClass()) == null, true).forEach(s -> retVal.add(CardLibrary.getCard(s).makeCopy()));
+        retVal.add(CardLibrary.getCard(VictorsPose.ID).makeCopy());
+        retVal.add(CardLibrary.getCard(AdoringFans.ID).makeCopy());
+        retVal.add(CardLibrary.getCard(TheTrophy.ID).makeCopy());
         return retVal;
     }
 
-    @Override
-    public void onEnterStance() {
-        super.onEnterStance();
-        //TODO: entered victorious this turn, if necessary
-    }
 }

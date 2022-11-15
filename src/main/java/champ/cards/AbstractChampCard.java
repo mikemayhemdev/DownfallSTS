@@ -162,14 +162,6 @@ public abstract class AbstractChampCard extends CustomCard {
         return tips;
     }
 
-
-    @Override
-    public void triggerOnGlowCheck() {
-        if (this.hasTag(FINISHER)) {
-            this.glowColor = AbstractDungeon.player.stance instanceof AbstractChampStance ? Color.RED.cpy() : BLUE_BORDER_GLOW_COLOR;
-        }
-    }
-
     public abstract void upp();
 
     protected void atb(AbstractGameAction action) {

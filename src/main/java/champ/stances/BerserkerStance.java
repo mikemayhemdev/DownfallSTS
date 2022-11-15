@@ -2,6 +2,9 @@ package champ.stances;
 
 import champ.ChampChar;
 import champ.ChampMod;
+import champ.cards.stancecards.Enrage;
+import champ.cards.stancecards.Execute;
+import champ.cards.stancecards.FanOfKnives;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -36,16 +39,10 @@ public class BerserkerStance extends AbstractChampStance {
     @Override
     public ArrayList<AbstractCard> getCards() {
         ArrayList<AbstractCard> retVal = new ArrayList<>();
-        retVal.add(CardLibrary.getCard(Inflame.ID).makeCopy());
-        retVal.add(CardLibrary.getCard(AllOutAttack.ID).makeCopy());
-        retVal.add(CardLibrary.getCard(Sunder.ID).makeCopy());
+        retVal.add(CardLibrary.getCard(Enrage.ID).makeCopy());
+        retVal.add(CardLibrary.getCard(FanOfKnives.ID).makeCopy());
+        retVal.add(CardLibrary.getCard(Execute.ID).makeCopy());
         return retVal;
-    }
-
-    @Override
-    public void onEnterStance() {
-        super.onEnterStance();
-        ChampMod.enteredBerserkerThisTurn = true; // TODO: check if we still need these
     }
 
     @Override

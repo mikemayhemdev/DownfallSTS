@@ -2,6 +2,9 @@ package champ.stances;
 
 import champ.ChampChar;
 import champ.ChampMod;
+import champ.cards.stancecards.BringItOn;
+import champ.cards.stancecards.Posture;
+import champ.cards.stancecards.RopeADope;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -36,16 +39,10 @@ public class DefensiveStance extends AbstractChampStance {
     @Override
     public ArrayList<AbstractCard> getCards() {
         ArrayList<AbstractCard> retVal = new ArrayList<>();
-        retVal.add(CardLibrary.getCard(Footwork.ID).makeCopy());
-        retVal.add(CardLibrary.getCard(Protect.ID).makeCopy());
-        retVal.add(CardLibrary.getCard(Impervious.ID).makeCopy());
+        retVal.add(CardLibrary.getCard(Posture.ID).makeCopy());
+        retVal.add(CardLibrary.getCard(BringItOn.ID).makeCopy());
+        retVal.add(CardLibrary.getCard(RopeADope.ID).makeCopy());
         return retVal;
-    }
-
-    @Override
-    public void onEnterStance() {
-        super.onEnterStance();
-        ChampMod.enteredDefensiveThisTurn = true;
     }
 
     @Override
