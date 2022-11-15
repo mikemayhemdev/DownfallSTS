@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class Terminator extends AbstractBronzeCard {
 
     public final static String ID = makeID("Terminator");
@@ -20,6 +22,7 @@ public class Terminator extends AbstractBronzeCard {
         thisEncodes();
         //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Terminator.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
