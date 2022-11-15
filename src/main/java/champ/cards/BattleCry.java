@@ -2,6 +2,7 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.stances.AbstractChampStance;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -29,9 +30,15 @@ public class BattleCry extends AbstractChampCard {
         atb(new DrawCardAction(magicNumber));
 
         gladiatorOpen();
-        if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
-            ((AbstractChampStance) AbstractDungeon.player.stance).upgradeStance();
-        }
+
+        addToBot(new AbstractGameAction() {
+            public void update() {
+                if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+                    ((AbstractChampStance) AbstractDungeon.player.stance).upgradeStance();
+                }
+                this.isDone = true;
+            }
+        });
     }
 
     public void upp() {

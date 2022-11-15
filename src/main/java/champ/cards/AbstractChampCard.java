@@ -288,26 +288,6 @@ public abstract class AbstractChampCard extends CustomCard {
         super.update();
     }
 
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean bottled = false;
-        if (hasTag(FINISHER)) {
-            if (p.hasRelic(SignatureFinisher.ID)) {
-                if ((((SignatureFinisher) p.getRelic(SignatureFinisher.ID)).card.uuid == this.uuid)) {
-                    bottled = true;
-                }
-            }
-            if (!bottled) {
-                if ((AbstractDungeon.player.stance instanceof NeutralStance)) {
-                    this.cantUseMessage = ChampChar.characterStrings.TEXT[61];
-                    return false;
-                }
-            }
-        }
-        return super.canUse(p, m);
-    }
-
     @Override
     protected Texture getPortraitImage() {
         if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {

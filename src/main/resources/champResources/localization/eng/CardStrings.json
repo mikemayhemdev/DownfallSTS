@@ -120,7 +120,8 @@
   },
   "champ:TechnicalJig": {
     "NAME": "Technical Jig",
-    "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block."
+    "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance, gain !M! Block."
   },
   "champ:ReinforcedBody": {
     "NAME": "Reinforced Body",
@@ -144,7 +145,7 @@
   },
   "champ:PreciseThrust": {
     "NAME": "Precise Thrust",
-    "DESCRIPTION": "Deal !D! damage. NL If the last card played was a *Finisher, deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL If not in a Stance, deal !D! damage."
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
@@ -171,7 +172,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When you use a *Combo, this deals !M! more damage this combat."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When you *Combo, this deals !M! more damage this combat."
   },
   "champ:MasterfulSlash": {
     "NAME": "Masterful Slash",
@@ -184,7 +185,7 @@
   },
   "champ:RisingStrike": {
     "NAME": "Rising Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If the last played card this combat was a champ:Finisher, deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL If the last played card was a champ:Finisher, gain [E] and draw a card."
   },
   "champ:Shatter": {
     "NAME": "Shatter",
@@ -209,7 +210,7 @@
   },
   "champ:CrownThrowReturn": {
     "NAME": "Returning Crown",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL champ:Combo. Exhaust."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL champ:Combo. NL Exhaust."
   },
   "champ:Encircle": {
     "NAME": "Encircle",
@@ -246,7 +247,7 @@
   },
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
-    "DESCRIPTION": "Deal !D! damage X times. NL champ:Combo X times."
+    "DESCRIPTION": "Deal !D! damage X times. NL champ:Combo X times. NL If this generates a *Finisher, immediately re-enter your current Stance."
   },
   "champ:Improvising": {
     "NAME": "Improvising",
@@ -335,16 +336,16 @@
   },
   "champ:AdoringFans": {
     "NAME": "Adoring Fans",
-    "DESCRIPTION": "",
-    "UPGRADE_DESCRIPTION": "Gain !M! Gold. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Gold. NL Exhaust."
   },
   "champ:Enrage": {
     "NAME": "Enrage",
-    "DESCRIPTION": "Gain 3 Vigor. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Vigor. NL Exhaust."
   },
   "champ:Invigorate": {
     "NAME": "Invigorate",
-    "DESCRIPTION": "Gain [E]. NL Exhaust."
+    "DESCRIPTION": "Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw a card. NL Gain [E]. NL Exhaust."
   },
   "champ:QuickStep": {
     "NAME": "QuickStep",
@@ -355,9 +356,9 @@
     "DESCRIPTION": "Gain !B! Block. NL Exhaust."
   },
   "champ:TheTrophy": {
-    "NAME": "TheTrophy",
-    "DESCRIPTION": "champ:Finisher. NL The next card you play is upgraded permanently. Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL The next !M! cards you play are upgraded permanently. Exhaust."
+    "NAME": "The Trophy",
+    "DESCRIPTION": "champ:Finisher. NL The next card you play is upgraded permanently. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL The next !M! cards you play are upgraded permanently. NL Exhaust."
   },
   "champ:VictorsPose": {
     "NAME": "VictorsPose",

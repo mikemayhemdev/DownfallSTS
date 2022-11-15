@@ -17,8 +17,8 @@ public class CrownThrow extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 7;
+    private static final int UPG_DAMAGE = 3;
 
     private boolean returned;
 

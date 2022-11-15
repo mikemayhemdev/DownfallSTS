@@ -24,9 +24,14 @@ public class SwordThrow extends AbstractChampCard {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
 
         berserkOpen();
-        if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
-            ((AbstractChampStance) AbstractDungeon.player.stance).upgradeStance();
-        }
+        addToBot(new AbstractGameAction() {
+            public void update() {
+                if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+                    ((AbstractChampStance) AbstractDungeon.player.stance).upgradeStance();
+                }
+                this.isDone = true;
+            }
+        });
     }
 
     @Override

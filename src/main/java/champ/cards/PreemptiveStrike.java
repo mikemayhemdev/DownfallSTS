@@ -15,7 +15,7 @@ public class PreemptiveStrike extends AbstractChampCard {
     private static final int DAMAGE = 8;
 
     public PreemptiveStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
         tags.add(CardTags.STRIKE);

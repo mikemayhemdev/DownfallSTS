@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -16,6 +17,8 @@ public class Taunt extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = 1;
         loadJokeCardImage(this, "Taunt.png");
+        tags.add(ChampMod.COMBO);
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

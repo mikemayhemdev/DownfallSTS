@@ -36,7 +36,6 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
-        this.amount = -1;
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
 

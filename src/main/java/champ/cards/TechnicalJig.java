@@ -16,10 +16,11 @@ public class TechnicalJig extends AbstractChampCard {
         //tags.add(ChampMod.TECHNIQUE);
         //techniqueLast = true;
         //;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new IronFortressPower(2));
+        applyToSelf(new IronFortressPower(magicNumber));
     }
 
     public void upp() {

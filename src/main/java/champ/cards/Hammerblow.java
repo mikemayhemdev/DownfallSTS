@@ -20,6 +20,7 @@ public class Hammerblow extends AbstractChampCard {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
+        tags.add(ChampMod.COMBO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

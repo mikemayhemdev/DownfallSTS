@@ -17,7 +17,7 @@ public class StandYourGround extends AbstractChampCard {
     //stupid intellij stuff attack, enemy, rare
 
     public StandYourGround() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         //  tags.add(ChampMod.FINISHER);
         baseBlock = block = 10;
         tags.add(ChampMod.OPENERDEFENSIVE);
@@ -30,9 +30,14 @@ public class StandYourGround extends AbstractChampCard {
         blck();
 
         defenseOpen();
-        if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
-            ((AbstractChampStance) AbstractDungeon.player.stance).upgradeStance();
-        }
+        addToBot(new AbstractGameAction() {
+            public void update() {
+                if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+                    ((AbstractChampStance) AbstractDungeon.player.stance).upgradeStance();
+                }
+                this.isDone = true;
+            }
+        });
     }
 
     public void upp() {

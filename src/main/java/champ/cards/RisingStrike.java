@@ -2,6 +2,8 @@ package champ.cards;
 
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,7 +28,8 @@ public class RisingStrike extends AbstractChampCard {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() > 1)
             if (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).hasTag(ChampMod.FINISHER) && !this.purgeOnUse) {
-                blck();
+                atb(new GainEnergyAction(1));
+                atb(new DrawCardAction(1));
             }
     }
 

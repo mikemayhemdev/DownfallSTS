@@ -13,7 +13,7 @@ public class PumpIron extends AbstractChampCard {
     public PumpIron() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
 
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         //tags.add(ChampMod.TECHNIQUE);
         //techniqueLast = true;
         //;
@@ -24,6 +24,6 @@ public class PumpIron extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

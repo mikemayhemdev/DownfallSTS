@@ -22,7 +22,7 @@ public class VictorsPose extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new AbstractGameAction() {
             public void update() {
-                p.increaseMaxHp(2, true);
+                p.increaseMaxHp(magicNumber, true);
                 this.isDone = true;
             }
         });
