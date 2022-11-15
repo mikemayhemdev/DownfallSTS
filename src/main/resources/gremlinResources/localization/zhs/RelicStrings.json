@@ -67,7 +67,7 @@
     "NAME": "魔槌",
     "FLAVOR": "手柄翻倍加固。",
     "DESCRIPTIONS": [
-      "每当你给予 #y虚弱 时，获得 #b1 点 #y法力 。每回合最多 #b3 次。"
+      "每当你给予 #y虚弱 时，获得 #b1 层 #y法力 。每回合最多 #b3 次。"
     ]
   },
   "Gremlin:PricklyShields": {
