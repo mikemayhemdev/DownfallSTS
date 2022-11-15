@@ -14,7 +14,7 @@ public class VictorsPose extends AbstractChampCard {
     public final static String ID = makeID("VictorsPose");
 
     public VictorsPose() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
     }

@@ -12,7 +12,7 @@ public class TheTrophy extends AbstractChampCard {
     public final static String ID = makeID("TheTrophy");
 
     public TheTrophy() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         exhaust = true;
         tags.add(ChampMod.FINISHER);
         baseMagicNumber = magicNumber = 1;

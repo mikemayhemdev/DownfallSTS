@@ -2,12 +2,13 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
-import champ.util.OnFinisherSubscriber;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -15,7 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.util.TextureLoader;
 
-public class FocusedBerPower extends AbstractPower implements CloneablePowerInterface, OnFinisherSubscriber {
+public class FocusedBerPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = ChampMod.makeID("FocusedBerPower");
 
@@ -45,12 +46,14 @@ public class FocusedBerPower extends AbstractPower implements CloneablePowerInte
     }
 
     @Override
-    public void onFinisher() {
-        flash();
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            addToBot(new LoseHPAction(m, m, amount, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (card.hasTag(ChampMod.FINISHER)) {
+            flash();
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                addToBot(new LoseHPAction(m, m, amount, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+            }
+            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }
-        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override

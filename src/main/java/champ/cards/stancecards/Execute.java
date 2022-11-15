@@ -16,7 +16,7 @@ public class Execute extends AbstractChampCard {
     public final static String ID = makeID("Execute");
 
     public Execute() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 8;
         exhaust = true;
         tags.add(ChampMod.FINISHER);

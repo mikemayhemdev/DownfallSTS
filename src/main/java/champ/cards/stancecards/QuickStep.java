@@ -11,7 +11,7 @@ public class QuickStep extends AbstractChampCard {
     public final static String ID = makeID("QuickStep");
 
     public QuickStep() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
     }

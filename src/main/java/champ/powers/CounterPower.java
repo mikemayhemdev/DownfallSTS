@@ -7,7 +7,9 @@ import champ.cards.Riposte;
 import champ.relics.PowerArmor;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnLoseBlockPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -20,7 +22,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.util.TextureLoader;
 
-public class CounterPower extends AbstractPower implements CloneablePowerInterface {
+public class CounterPower extends AbstractPower implements CloneablePowerInterface, OnLoseBlockPower {
 
     public static final String POWER_ID = ChampMod.makeID("CounterPower");
 
@@ -28,7 +30,7 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
     private static final Texture tex32 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/Counterstrike32.png");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
-    private int blockedDamage;
+    private int blockedDamage = 0;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public CounterPower(int amount) {
@@ -45,22 +47,16 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
         this.updateDescription();
     }
 
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (owner.currentBlock > 0 && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
-            if (info.output >= owner.currentBlock){
-                blockedDamage = owner.currentBlock;
-            } else {
-                blockedDamage = info.output;
-            }
-
-        }
-
-        return damageAmount;
+    @Override
+    public int onLoseBlock(DamageInfo damageInfo, int i) {
+        blockedDamage += Math.min(AbstractDungeon.player.currentBlock, i);
+        return i;
     }
 
     @Override
     public void atStartOfTurn() {
         if (blockedDamage > 0){
+            flash();
             AbstractCard c = new Riposte();
             c.baseDamage = blockedDamage;
             addToBot(new MakeTempCardInHandAction(c));
@@ -68,10 +64,9 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
                 c.freeToPlay();
                 owner.getPower(ParryPower.POWER_ID).onSpecificTrigger();
             }
-
         }
         addToBot(new ReducePowerAction(owner,owner,this,1));
-        super.atStartOfTurn();
+        blockedDamage = 0;
     }
 
     @Override

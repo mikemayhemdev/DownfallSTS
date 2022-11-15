@@ -22,7 +22,7 @@ public class FanOfKnives extends AbstractChampCard {
     private static final int UPG_DAMAGE = 2;
 
     public FanOfKnives() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
         isMultiDamage = true;
         loadJokeCardImage(this, "FanOfKnives.png");

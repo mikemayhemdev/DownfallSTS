@@ -11,7 +11,7 @@ public class AdoringFans extends AbstractChampCard {
     public final static String ID = makeID("AdoringFans");
 
     public AdoringFans() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 10;
         exhaust = true;
     }

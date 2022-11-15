@@ -19,7 +19,7 @@ public class Piledriver extends AbstractChampCard {
     private static final int UPG_DAMAGE = 3;
 
     public Piledriver() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
         exhaust = true;
         tags.add(ChampMod.FINISHER);

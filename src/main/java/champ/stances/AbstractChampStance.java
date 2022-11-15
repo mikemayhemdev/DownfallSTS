@@ -97,7 +97,7 @@ public abstract class AbstractChampStance extends AbstractStance {
         AbstractCard get = cards.get(stage);
         makeInHand(get.makeStatEquivalentCopy());
         stage += 1;
-        if (stage == cards.size() - 1) {
+        if (stage == cards.size()) {
             atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
         }
         // TODO: any visuals as necessary

@@ -1,17 +1,19 @@
 package champ.cards;
 
 import champ.ChampMod;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
+import champ.stances.GladiatorStance;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.actions.OctoChoiceAction;
-import downfall.cards.OctoChoiceCard;
-import downfall.util.OctopusCard;
+import downfall.cards.EasyModalChoiceCard;
 
 import java.util.ArrayList;
 
-public class WindUp extends AbstractChampCard implements OctopusCard {
+public class WindUp extends AbstractChampCard {
 
     public final static String ID = makeID("WindUp");
 
@@ -21,45 +23,17 @@ public class WindUp extends AbstractChampCard implements OctopusCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
         tags.add(ChampMod.OPENER);
-       
     }
-
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        this.tags.remove(ChampMod.OPENERBERSERKER);
-        this.tags.remove(ChampMod.OPENERDEFENSIVE);
-        this.tags.remove(ChampMod.OPENERGLADIATOR);
-        //if (upgraded) techique();
-        atb(new OctoChoiceAction(m, this));
-       
-
+        ArrayList<AbstractCard> modalChoices = new ArrayList<>();
+        modalChoices.add(new EasyModalChoiceCard("champ:EnterDefensive", cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1], () -> atb(new ChangeStanceAction(DefensiveStance.STANCE_ID))));
+        modalChoices.add(new EasyModalChoiceCard("champ:EnterBerserker", cardStrings.EXTENDED_DESCRIPTION[2], cardStrings.EXTENDED_DESCRIPTION[3], () -> atb(new ChangeStanceAction(BerserkerStance.STANCE_ID))));
+        modalChoices.add(new EasyModalChoiceCard("champ:EnterGladiator", cardStrings.EXTENDED_DESCRIPTION[4], cardStrings.EXTENDED_DESCRIPTION[5], () -> atb(new ChangeStanceAction(GladiatorStance.STANCE_ID))));
+        atb(new SelectCardsCenteredAction(modalChoices, 1, cardStrings.EXTENDED_DESCRIPTION[6], (cards) -> {
+            cards.get(0).onChoseThisOption();
+        }));
     }
-
-    public ArrayList<OctoChoiceCard> choiceList() {
-        ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        cardList.add(new OctoChoiceCard("octo:OctoBerserk", this.name, ChampMod.makeCardPath("OctoStanceBerserker.png"), this.EXTENDED_DESCRIPTION[0]));
-        cardList.add(new OctoChoiceCard("octo:OctoDefense", this.name, ChampMod.makeCardPath("OctoStanceDefensive.png"), this.EXTENDED_DESCRIPTION[1]));
-        cardList.add(new OctoChoiceCard("octo:OctoGladiator", this.name, ChampMod.makeCardPath("OctoStanceGladiator.png"), this.EXTENDED_DESCRIPTION[2]));
-        return cardList;
-    }
-
-    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
-        switch (card.cardID) {
-            case "octo:OctoBerserk":
-                ChampMod.berserkOpen();
-                break;
-            case "octo:OctoDefense":
-                ChampMod.defenseOpen();
-                break;
-            case "octo:OctoGladiator":
-                ChampMod.gladiatorOpen();
-                break;
-        }
-
-        atb(new FetchAction(AbstractDungeon.player.drawPile, c -> (c.hasTag(ChampMod.COMBO))));
-    }
-
 
     public void upp() {
         exhaust = false;

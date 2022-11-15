@@ -15,7 +15,7 @@ public class Enrage extends AbstractChampCard {
     public final static String ID = makeID("Enrage");
 
     public Enrage() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 3;
         exhaust = true;
     }

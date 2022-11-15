@@ -14,7 +14,7 @@
   },
   "champ:Execute": {
     "NAME": "Execute",
-    "DESCRIPTION": "Deal !D! damage 2 times."
+    "DESCRIPTION": "Deal !D! damage 2 times. NL Exhaust."
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
@@ -73,7 +73,7 @@
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies twice."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL Exhaust."
   },
   "champ:Devastate": {
     "NAME": "Devastate",
@@ -109,14 +109,14 @@
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
-    "DESCRIPTION": "Gain !B! Block. NL Gain 1 champ:Counter.",
+    "DESCRIPTION": "Gain !B! Block. NL Gain 1 champ:Counter. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I am not in a Stance."
     ]
   },
   "champ:RopeADope": {
     "NAME": "Rope-a-dope",
-    "DESCRIPTION": "champ:Finisher. NL Gain !B! Block. NL Next turn, draw !M! cards."
+    "DESCRIPTION": "champ:Finisher. NL Gain !B! Block. NL Next turn, draw !M! cards. NL Exhaust."
   },
   "champ:TechnicalJig": {
     "NAME": "Technical Jig",
@@ -137,7 +137,7 @@
   },
   "champ:Piledriver": {
     "NAME": "Piledriver",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Apply 2 Vulnerable. NL Apply 2 Weak."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Apply 2 Weak. NL Apply 2 Vulnerable. NL Exhaust."
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
@@ -325,9 +325,13 @@
     "DESCRIPTION": "Choose a Stance to Enter. NL Fetch a champ:Combo from your draw pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Fetch a champ:Combo from your draw pile.",
     "EXTENDED_DESCRIPTION": [
+      "Berserker",
       "Enter champ:Berserker.",
+      "Defensive",
       "Enter champ:Defensive.",
-      "Enter champ:Gladiator."
+      "Gladiator",
+      "Enter champ:Gladiator.",
+      "Choose a Stance to Enter."
     ]
   },
   "champ:Headbutt": {

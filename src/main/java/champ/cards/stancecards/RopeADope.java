@@ -14,7 +14,7 @@ public class RopeADope extends AbstractChampCard {
     public final static String ID = makeID("RopeADope");
 
     public RopeADope() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.FINISHER);
         baseBlock = block = 10;

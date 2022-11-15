@@ -12,7 +12,7 @@ public class Invigorate extends AbstractChampCard {
     public final static String ID = makeID("Invigorate");
 
     public Invigorate() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         exhaust = true;
     }
 

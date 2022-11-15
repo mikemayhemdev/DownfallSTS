@@ -10,7 +10,7 @@ public class Posture extends AbstractChampCard {
     public final static String ID = makeID("Posture");
 
     public Posture() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = 4;
         exhaust = true;
     }

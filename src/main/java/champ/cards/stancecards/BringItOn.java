@@ -13,7 +13,7 @@ public class BringItOn extends AbstractChampCard {
     //stupid intellij stuff skill, self, common
 
     public BringItOn() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = 7;
         exhaust = true;
     }

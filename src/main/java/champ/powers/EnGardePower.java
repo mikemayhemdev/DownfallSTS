@@ -4,10 +4,9 @@ import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnLoseBlockPower;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnMyBlockBrokenPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -15,7 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import downfall.util.TextureLoader;
 
-public class EnGardePower extends AbstractPower implements CloneablePowerInterface, OnLoseBlockPower {
+public class EnGardePower extends AbstractPower implements CloneablePowerInterface, OnMyBlockBrokenPower {
 
     public static final String POWER_ID = ChampMod.makeID("EnGardePower");
 
@@ -40,12 +39,10 @@ public class EnGardePower extends AbstractPower implements CloneablePowerInterfa
     }
 
     @Override
-    public int onLoseBlock(DamageInfo damageInfo, int i) {
-        if (i >= owner.currentBlock) {
-            addToBot(new ApplyPowerAction(owner, owner, new NextTurnBlockPower(owner, amount), amount));
-            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
-        }
-        return i;
+    public void onMyBlockBroken() {
+        flash();
+        addToBot(new ApplyPowerAction(owner, owner, new NextTurnBlockPower(owner, amount), amount));
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override
