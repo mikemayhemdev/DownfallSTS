@@ -33,6 +33,6 @@ public class UltimateStance extends AbstractChampStance {
     @Override
     public void onEnterStance() {
         super.onEnterStance();
-        //TODO: entered victorious this turn
+        //TODO: entered victorious this turn, if necessary
     }
 }

@@ -4,8 +4,8 @@ import basemod.abstracts.CustomCard;
 import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.relics.SignatureFinisher;
-import champ.stances.*;
 import champ.stances.UltimateStance;
+import champ.stances.*;
 import champ.util.OnOpenerSubscriber;
 import champ.util.TextureLoader;
 import com.badlogic.gdx.Gdx;
@@ -104,6 +104,7 @@ public abstract class AbstractChampCard extends CustomCard {
     public static boolean dcombo() {
         return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID));
     }
+
     public static boolean nostance() {
         return (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
@@ -111,6 +112,7 @@ public abstract class AbstractChampCard extends CustomCard {
     public static boolean inBerserker() {
         return AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID);
     }
+
     public static boolean inGladiator() {
         return AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID);
     }
@@ -119,8 +121,10 @@ public abstract class AbstractChampCard extends CustomCard {
         return AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID);
     }
 
-    public static void combo(){
-        //TODO - New age stance combo effects
+    public static void combo() {
+        if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+            ((AbstractChampStance) AbstractDungeon.player.stance).combo();
+        }
     }
 
     public void displayUpgrades() {

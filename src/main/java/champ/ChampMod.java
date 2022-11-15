@@ -315,7 +315,6 @@ public class ChampMod implements
         finishersThisTurn = 0;
         finishersThisCombat = 0;
         techniquesThisTurn = 0;
-        StanceHelper.init();
         enteredBerserkerThisTurn = false;
         enteredDefensiveThisTurn = false;
         enteredGladiatorThisTurn = false;
@@ -528,18 +527,16 @@ public class ChampMod implements
 
 
     public static void berserkOpen() {
-
         AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(BerserkerStance.STANCE_ID));
         triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
     public static void defenseOpen() {
-
         AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveStance.STANCE_ID));
         triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
-    public static void gladiatorOpen() {
 
+    public static void gladiatorOpen() {
         AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(GladiatorStance.STANCE_ID));
         triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }

@@ -17,7 +17,7 @@ public class Shatter extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 10;
         baseMagicNumber = magicNumber = 1;
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

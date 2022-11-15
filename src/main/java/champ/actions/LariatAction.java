@@ -21,10 +21,6 @@ public class LariatAction extends AbstractXAction {
     public void update() {
         AbstractPlayer p = AbstractDungeon.player;
         for (int i = 0; i < amount; i++) {
-
-            if (AbstractDungeon.player.stance instanceof AbstractChampStance)
-                ((AbstractChampStance) AbstractDungeon.player.stance).techique();
-            //addToTop(new ApplyPowerAction(p, p, new CounterPower(boom), boom));
             addToTop(new GainBlockAction(p, boom2));
         }
         this.isDone = true;

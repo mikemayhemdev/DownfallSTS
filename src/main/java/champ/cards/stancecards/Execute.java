@@ -28,7 +28,6 @@ public class Execute extends AbstractChampCard {
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         atb(new VFXAction(new GoldenSlashEffect(m.hb.cX - 30.0F * Settings.scale, m.hb.cY, true), 0.1F));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        finisher();
     }
 
     public void upp() {

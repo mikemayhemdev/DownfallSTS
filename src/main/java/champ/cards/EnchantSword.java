@@ -15,18 +15,14 @@ public class EnchantSword extends AbstractChampCard {
     public EnchantSword() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
-        //  myHpLossCost = 5;
         magicNumber = baseMagicNumber = 8;
-        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         atb(new SelectCardsInHandAction(1, CardCrawlGame.languagePack.getUIString("champ:EnchantUI").TEXT[1], c -> c.baseDamage > 0, (cards) -> {
             cards.get(0).baseDamage += magicNumber;
 
         }));
-        //    fatigue(5);
     }
 
     @Override
@@ -46,7 +42,6 @@ public class EnchantSword extends AbstractChampCard {
     }
 
     public void upp() {
-        //  tags.add(ChampMod.TECHNIQUE);
         upgradeBaseCost(0);
     }
 }

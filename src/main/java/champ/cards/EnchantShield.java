@@ -17,7 +17,7 @@ public class EnchantShield extends AbstractChampCard {
         exhaust = true;
         //  myHpLossCost = 5;
         magicNumber = baseMagicNumber = 8;
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

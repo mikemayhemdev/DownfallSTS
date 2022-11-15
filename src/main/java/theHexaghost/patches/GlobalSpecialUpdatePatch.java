@@ -1,7 +1,6 @@
 package theHexaghost.patches;
 
 import automaton.FunctionHelper;
-import champ.StanceHelper;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theHexaghost.GhostflameHelper;

@@ -1,7 +1,8 @@
 package champ.cards;
 
-import champ.ChampMod;
+import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class AllOut extends AbstractChampCard {
@@ -16,8 +17,9 @@ public class AllOut extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        //TODO - Create a copy of current Stance's finisher.
+        if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+            makeInHand(((AbstractChampStance) AbstractDungeon.player.stance).getFinalCard());
+        }
     }
 
     public void upp() {

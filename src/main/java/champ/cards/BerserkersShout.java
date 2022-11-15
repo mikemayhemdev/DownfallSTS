@@ -20,7 +20,7 @@ public class BerserkersShout extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

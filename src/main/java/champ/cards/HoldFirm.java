@@ -21,7 +21,7 @@ public class HoldFirm extends AbstractChampCard {
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = 12;
         // tags.add(ChampMod.TECHNIQUE);
-        postInit();
+       
         loadJokeCardImage(this, "HoldFirm.png");
     }
 

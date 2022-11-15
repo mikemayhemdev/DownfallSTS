@@ -18,7 +18,7 @@ public class MomentOfTruth extends AbstractChampCard {
         selfRetain = true;
         tags.add(ChampMod.FINISHER);
         baseMagicNumber = magicNumber = 1;
-        postInit();
+       
         loadJokeCardImage(this, "ShieldSlam.png");
     }
 

@@ -17,7 +17,7 @@ public class IronFortress extends AbstractChampCard {
     public IronFortress() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

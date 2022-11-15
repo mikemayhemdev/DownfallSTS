@@ -15,7 +15,7 @@ public class SkillfulDodge extends AbstractChampCard {
     public SkillfulDodge() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 10;
-        postInit();
+       
         loadJokeCardImage(this, "SkillfulDodge.png");
     }
 

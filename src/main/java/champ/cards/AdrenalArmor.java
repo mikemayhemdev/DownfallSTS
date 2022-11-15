@@ -31,7 +31,6 @@ public class AdrenalArmor extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-
         atb(new AbstractGameAction() {
             @Override
             public void update() {

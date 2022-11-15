@@ -21,13 +21,10 @@ public class MasterfulSlash extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        // tags.add(ChampMod.TECHNIQUE);
-        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        //TODO Change this from Skill to random card with Combo
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL);
         c.isSeen = true;
         UnlockTracker.markCardAsSeen(c.cardID);

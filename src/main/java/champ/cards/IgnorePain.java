@@ -17,7 +17,7 @@ public class IgnorePain extends AbstractChampCard {
         exhaust = true;
         // tags.add(ChampMod.TECHNIQUE);
         //  myHpLossCost = 5;
-        postInit();
+       
         loadJokeCardImage(this, "IgnorePain.png");
 
     }

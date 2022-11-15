@@ -9,7 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "Apply !M! Weak. NL champ:Combo."
+    "DESCRIPTION": "Apply !M! Weak. NL champ:Combo.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL champ:Combo."
   },
   "champ:Execute": {
     "NAME": "Execute",

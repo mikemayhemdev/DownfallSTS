@@ -18,7 +18,7 @@ public class SteelEdge extends AbstractChampCard {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         //   this.tags.add(downfallMod.BANNEDFORSNECKO);
-        postInit();
+       
     }
 
     @Override

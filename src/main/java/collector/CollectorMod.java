@@ -6,12 +6,11 @@ import basemod.interfaces.*;
 import collector.patches.CollectiblesPatches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
 import collector.relics.EmeraldTorch;
+import collector.torchhead.PetTorch;
 import collector.ui.CombatCollectionPileButton;
 import collector.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,7 +19,6 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
-import downfall.util.TextureLoader;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -87,11 +85,6 @@ public class CollectorMod implements
     }
 
 
-    public static boolean isGuarded(){
-        //TODO - When Torchhead mechanics are in
-        return true;
-    }
-
     public static String makePath(String resourcePath) {
         return modID + "Resources/" + resourcePath;
     }
@@ -155,12 +148,6 @@ public class CollectorMod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         CollectorCollection.atBattleEnd();
-    }
-
-    @Override
-    public void receiveStartGame() {
-        CollectorCollection.init();
-        combatCollectionPileButton = new CombatCollectionPileButton();
     }
 
     @Override
@@ -237,5 +224,21 @@ public class CollectorMod implements
         if (combatCollectionPileButton != null) {
             combatCollectionPileButton.update();
         }
+    }
+
+    public static PetTorch pet;
+
+    public static boolean isGuarded() {
+        //TODO - When Torchhead mechanics are in
+        return true;
+    }
+
+
+    @Override
+    public void receiveStartGame() {
+        CollectorCollection.init();
+        combatCollectionPileButton = new CombatCollectionPileButton();
+
+        pet = new PetTorch(50, 50);
     }
 }

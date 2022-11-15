@@ -43,10 +43,6 @@ public class IronFortressVigorPower extends AbstractPower implements CloneablePo
         if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
             flash();
             //addToBot(new ApplyPowerAction(owner, owner, new VigorPower(owner, amount), amount));
-            BerserkerStance bs = new BerserkerStance();
-            for (int x = 0; x < this.amount; x++) {
-                bs.technique();
-            }
         }
     }
 

@@ -16,7 +16,7 @@ public class PumpIron extends AbstractChampCard {
         baseMagicNumber = magicNumber = 2;
         //tags.add(ChampMod.TECHNIQUE);
         //techniqueLast = true;
-        //postInit();
+        //;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

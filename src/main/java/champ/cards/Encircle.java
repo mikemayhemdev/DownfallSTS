@@ -21,7 +21,7 @@ public class Encircle extends AbstractChampCard {
         baseDamage = DAMAGE;
         isMultiDamage = true;
         tags.add(ChampMod.COMBO);
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

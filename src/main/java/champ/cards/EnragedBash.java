@@ -23,7 +23,7 @@ public class EnragedBash extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

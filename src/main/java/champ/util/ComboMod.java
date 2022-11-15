@@ -21,7 +21,9 @@ public class ComboMod extends AbstractCardModifier {
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         super.onUse(card, target, action);
 
-        //TODO - Make this work when stance mechanics are in
+        if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+            ((AbstractChampStance) AbstractDungeon.player.stance).combo();
+        }
     }
 
     @Override

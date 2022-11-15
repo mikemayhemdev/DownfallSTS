@@ -19,7 +19,7 @@ public class CalculateMove extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.COMBO);
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

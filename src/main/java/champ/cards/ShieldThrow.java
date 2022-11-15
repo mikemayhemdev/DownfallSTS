@@ -18,7 +18,7 @@ public class ShieldThrow extends AbstractChampCard {
         // tags.add(ChampMod.COMBO);
         //  tags.add(ChampMod.COMBOBERSERKER);
         //  tags.add(ChampMod.COMBODEFENSIVE);
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

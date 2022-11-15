@@ -22,7 +22,7 @@ public class FancyFootwork extends AbstractChampCard {
         //exhaust = true;
         tags.add(ChampMod.OPENER);
         tags.add(ChampMod.OPENERNOTIN);
-        postInit();
+       
     }
 
 

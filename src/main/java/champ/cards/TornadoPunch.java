@@ -26,7 +26,7 @@ public class TornadoPunch extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseBlock = block = BLOCK;
         isMultiDamage = true;
-        postInit();
+       
         loadJokeCardImage(this, "TornadoPunch.png");
     }
 

@@ -18,9 +18,7 @@ public class ArenaPreparation extends AbstractChampCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
-        // tags.add(ChampMod.TECHNIQUE);
-//         tags.add(CardTags.HEALING);
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -20,7 +20,7 @@ public class BobAndWeave extends AbstractChampCard {
 
         tags.add(ChampMod.OPENER);
         tags.add(ChampMod.OPENERBERSERKER);
-        postInit();
+       
         loadJokeCardImage(this, "BobAndWeave.png");
     }
 

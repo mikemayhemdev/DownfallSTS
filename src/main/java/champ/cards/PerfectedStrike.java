@@ -22,7 +22,7 @@ public class PerfectedStrike extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(CardTags.STRIKE);
-        postInit();
+       
         loadJokeCardImage(this, "PerfecterStrike.png");
     }
 

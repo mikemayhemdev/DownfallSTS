@@ -20,7 +20,7 @@ public class Strike extends AbstractChampCard {
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
-        postInit();
+       
         loadJokeCardImage(this, "Strike.png");
     }
 

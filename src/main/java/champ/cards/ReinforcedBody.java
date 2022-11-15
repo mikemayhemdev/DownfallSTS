@@ -22,7 +22,7 @@ public class ReinforcedBody extends AbstractChampCard {
         //tags.add(ChampMod.TECHNIQUE);
         //techniqueLast = true;
         //baseMagicNumber = magicNumber = MAGIC;
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

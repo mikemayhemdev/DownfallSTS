@@ -1,8 +1,10 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
@@ -15,15 +17,16 @@ public class SwordThrow extends AbstractChampCard {
         baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.OPENER);
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
 
         berserkOpen();
-        //TODO - upgrade stance
-        // if (bcombo()) atb(new ReducePowerAction(p,p,WeakPower.POWER_ID,2));
+        if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+            ((AbstractChampStance) AbstractDungeon.player.stance).upgradeStance();
+        }
     }
 
     @Override

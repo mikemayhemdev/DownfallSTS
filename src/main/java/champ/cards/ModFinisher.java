@@ -20,12 +20,11 @@ public class ModFinisher extends AbstractChampCard {
         this.selfRetain = true;
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.FINISHER);
-        postInit();
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        finisher();
     }
 
     public void upp() {

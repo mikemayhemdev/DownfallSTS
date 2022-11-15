@@ -15,7 +15,7 @@ public class DeathBlow extends AbstractChampCard {
         baseDamage = 15;
         baseMagicNumber = magicNumber = 8;
         isMultiDamage = true;
-        postInit();
+       
         exhaust = true;
     }
 

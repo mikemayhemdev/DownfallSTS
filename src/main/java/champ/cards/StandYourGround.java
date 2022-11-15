@@ -1,6 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,17 +22,17 @@ public class StandYourGround extends AbstractChampCard {
         baseBlock = block = 10;
         tags.add(ChampMod.OPENERDEFENSIVE);
         tags.add(ChampMod.OPENER);
-        postInit();
+       
         loadJokeCardImage(this, "ShieldThrow.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //finisher();
         blck();
 
         defenseOpen();
-        //TODO "upgrade stance"
-
+        if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+            ((AbstractChampStance) AbstractDungeon.player.stance).upgradeStance();
+        }
     }
 
     public void upp() {

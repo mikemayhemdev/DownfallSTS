@@ -1,9 +1,10 @@
 package champ.cards;
 
-import basemod.devcommands.draw.Draw;
 import champ.ChampMod;
+import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.gladiatorOpen;
@@ -17,20 +18,19 @@ public class BattleCry extends AbstractChampCard {
 
     public BattleCry() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        //  tags.add(ChampMod.FINISHER);
         tags.add(ChampMod.OPENERGLADIATOR);
         tags.add(ChampMod.OPENER);
-        postInit();
+
         loadJokeCardImage(this, "ShieldThrow.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //finisher();
         atb(new DrawCardAction(magicNumber));
 
         gladiatorOpen();
-        //TODO "upgrade stance"
-
+        if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+            ((AbstractChampStance) AbstractDungeon.player.stance).upgradeStance();
+        }
     }
 
     public void upp() {

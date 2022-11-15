@@ -21,7 +21,7 @@ public class WindUp extends AbstractChampCard implements OctopusCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
         tags.add(ChampMod.OPENER);
-        postInit();
+       
     }
 
 
@@ -32,7 +32,7 @@ public class WindUp extends AbstractChampCard implements OctopusCard {
         this.tags.remove(ChampMod.OPENERGLADIATOR);
         //if (upgraded) techique();
         atb(new OctoChoiceAction(m, this));
-        postInit();
+       
 
     }
 

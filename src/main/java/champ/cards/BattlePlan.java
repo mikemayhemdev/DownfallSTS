@@ -12,7 +12,7 @@ public class BattlePlan extends AbstractChampCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 2;
         baseMagicNumber = magicNumber = 3;
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

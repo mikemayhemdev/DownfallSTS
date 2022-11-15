@@ -25,7 +25,7 @@ public class FlashStrike extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
         tags.add(ChampMod.OPENERGLADIATOR);
         tags.add(CardTags.STRIKE);
-        postInit();
+       
         loadJokeCardImage(this, "FlashCut.png");
     }
 

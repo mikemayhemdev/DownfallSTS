@@ -16,7 +16,7 @@ public class WarmupRoutine extends AbstractChampCard {
 
         //tags.add(ChampMod.TECHNIQUE);
         //techniqueLast = true;
-        //postInit();
+        //;
         baseMagicNumber = magicNumber = 1;
     }
 

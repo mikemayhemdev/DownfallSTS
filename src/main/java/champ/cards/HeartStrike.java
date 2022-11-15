@@ -13,7 +13,7 @@ public class HeartStrike extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 9;
         baseMagicNumber = magicNumber = 50;
-        postInit();
+       
     }
 
 

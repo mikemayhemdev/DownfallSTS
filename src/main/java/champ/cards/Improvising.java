@@ -12,9 +12,6 @@ public class Improvising extends AbstractChampCard {
 
     public Improvising() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-
-        //  this.tags.add(downfallMod.BANNEDFORSNECKO);
-        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -13,7 +13,7 @@ public class DefensiveShout extends AbstractChampCard {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERDEFENSIVE);
-        postInit();
+       
         baseBlock = 0;
     }
 

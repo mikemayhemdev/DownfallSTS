@@ -16,7 +16,7 @@ public class GutPunch extends AbstractChampCard {
     public GutPunch() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -15,7 +15,7 @@ public class Riposte extends AbstractChampCard {
         baseDamage = 0;
         isEthereal = true;
         exhaust = true;
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

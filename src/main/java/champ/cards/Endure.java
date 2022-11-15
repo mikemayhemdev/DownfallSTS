@@ -15,12 +15,10 @@ public class Endure extends AbstractChampCard {
     public Endure() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = block = 8;
-        postInit();
         loadJokeCardImage(this, "Endure.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
         blck();
     }
 

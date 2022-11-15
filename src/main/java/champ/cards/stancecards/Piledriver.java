@@ -33,8 +33,6 @@ public class Piledriver extends AbstractChampCard {
         //if (dcombo())
         applyToEnemy(m, autoVuln(m, 2));
         applyToEnemy(m, autoWeak(m, 2));
-
-        finisher();
     }
 
 

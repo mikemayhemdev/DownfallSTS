@@ -18,7 +18,7 @@ public class Defend extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseBlock = BLOCK;
         tags.add(CardTags.STARTER_DEFEND);
-        postInit();
+       
         loadJokeCardImage(this, "Defend.png");
     }
 

@@ -20,7 +20,7 @@ public class RapidStrikes extends AbstractChampCard {
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         baseMagicNumber = magicNumber = 2;
-        postInit();
+       
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

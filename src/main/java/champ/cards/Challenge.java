@@ -30,7 +30,7 @@ public class Challenge extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
 
-        postInit();
+       
         loadJokeCardImage(this, "Challenge.png");
     }
 

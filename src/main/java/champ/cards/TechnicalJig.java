@@ -15,7 +15,7 @@ public class TechnicalJig extends AbstractChampCard {
 
         //tags.add(ChampMod.TECHNIQUE);
         //techniqueLast = true;
-        //postInit();
+        //;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

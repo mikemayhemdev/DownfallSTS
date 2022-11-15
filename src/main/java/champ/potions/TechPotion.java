@@ -36,10 +36,7 @@ public class TechPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        for (int i = 0; i < potency; i++) {
-            if (AbstractDungeon.player.stance instanceof AbstractChampStance)
-                ((AbstractChampStance) AbstractDungeon.player.stance).techique();
-        }
+
     }
 
     public CustomPotion makeCopy() {

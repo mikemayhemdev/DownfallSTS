@@ -23,7 +23,7 @@ public class MurderStrike extends AbstractChampCard {
         //  exhaust = true;
         tags.add(CardTags.STRIKE);
         baseMagicNumber = magicNumber = 2;
-        postInit();
+       
     }
 
     @Override
