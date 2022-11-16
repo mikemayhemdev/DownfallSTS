@@ -18,6 +18,7 @@ public class RopeADope extends AbstractChampCard {
         baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.FINISHER);
         baseBlock = block = 10;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -26,6 +26,11 @@ public class WindUp extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        //TODO - Crashes on use.Caused by: java.lang.NullPointerException
+        //	at downfall.cards.AbstractDownfallCard.<clinit>(AbstractDownfallCard.java:32)
+        //	Caused by: java.lang.ExceptionInInitializerError
+        //	at champ.cards.WindUp.use(WindUp.java:30)
+        //	at com.megacrit.cardcrawl.characters.AbstractPlayer.useCard(AbstractPlayer.java:1698)
         ArrayList<AbstractCard> modalChoices = new ArrayList<>();
         modalChoices.add(new EasyModalChoiceCard("champ:EnterDefensive", cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1], () -> atb(new ChangeStanceAction(DefensiveStance.STANCE_ID))));
         modalChoices.add(new EasyModalChoiceCard("champ:EnterBerserker", cardStrings.EXTENDED_DESCRIPTION[2], cardStrings.EXTENDED_DESCRIPTION[3], () -> atb(new ChangeStanceAction(BerserkerStance.STANCE_ID))));

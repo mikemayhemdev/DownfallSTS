@@ -31,6 +31,7 @@ public abstract class AbstractChampStance extends AbstractStance {
     public String STANCE_ID = "guardianmod:AbstractMode";
 
     public AbstractChampStance() {
+        //TODO - Stance should preserve stage when changing from stance to stance
         this.ID = STANCE_ID;
         this.name = ChampChar.characterStrings.TEXT[3];
         this.updateDescription();
