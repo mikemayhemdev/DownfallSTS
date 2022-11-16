@@ -12,9 +12,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.green.Footwork;
 import com.megacrit.cardcrawl.cards.purple.Protect;
 import com.megacrit.cardcrawl.cards.red.Impervious;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import downfall.downfallMod;
 import downfall.vfx.DefensiveModeStanceParticleEffect;
@@ -25,15 +27,17 @@ public class DefensiveStance extends AbstractChampStance {
 
     public static final String STANCE_ID = "champ:DefensiveStance";
 
+    public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(STANCE_ID);
+
     public DefensiveStance() {
         this.ID = STANCE_ID;
-        this.name = ChampChar.characterStrings.TEXT[4];
-        this.updateDescription();
+        this.name = uiStrings.TEXT[0];
+        updateDescription();
     }
 
     @Override
-    public String getName() {
-        return name;
+    public void updateDescription() {
+        description = uiStrings.TEXT[1];
     }
 
     @Override

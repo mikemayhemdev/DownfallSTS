@@ -12,9 +12,11 @@ import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.cards.colorless.Panacea;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.cards.status.Wound;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import downfall.downfallMod;
 import downfall.vfx.DefensiveModeStanceParticleEffect;
@@ -25,15 +27,17 @@ public class GladiatorStance extends AbstractChampStance {
 
     public static final String STANCE_ID = "champ:GladiatorStance";
 
+    public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(STANCE_ID);
+
     public GladiatorStance() {
         this.ID = STANCE_ID;
-        this.name = ChampChar.characterStrings.TEXT[5];
+        this.name = uiStrings.TEXT[0];
         this.updateDescription();
     }
 
     @Override
-    public String getName() {
-        return name;
+    public void updateDescription() {
+        description = uiStrings.TEXT[1];
     }
 
     @Override

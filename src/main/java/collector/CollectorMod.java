@@ -211,7 +211,7 @@ public class CollectorMod implements
     private static CombatCollectionPileButton combatCollectionPileButton;
 
     public static void renderCombatUiElements(SpriteBatch sb) {
-        if (Wiz.isInCombat()) {
+        if (Wiz.isInCombat() && AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
             if (combatCollectionPileButton != null) {
                 combatCollectionPileButton.setX(AbstractDungeon.overlayMenu.combatDeckPanel.current_x);
                 combatCollectionPileButton.render(sb);
@@ -228,17 +228,11 @@ public class CollectorMod implements
 
     public static PetTorch pet;
 
-    public static boolean isGuarded() {
-        //TODO - When Torchhead mechanics are in
-        return true;
-    }
-
-
     @Override
     public void receiveStartGame() {
         CollectorCollection.init();
         combatCollectionPileButton = new CombatCollectionPileButton();
 
-        pet = new PetTorch(50, 50);
+        pet = new PetTorch(-800, 50);
     }
 }

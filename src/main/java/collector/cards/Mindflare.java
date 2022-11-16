@@ -4,11 +4,8 @@ import collector.actions.DrawCardFromCollectionAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
-import static collector.CollectorMod.isGuarded;
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.applyToEnemy;
 import static collector.util.Wiz.atb;
 
 public class Mindflare extends AbstractCollectorCard {
@@ -23,10 +20,8 @@ public class Mindflare extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SMASH);
-        if (isGuarded()) {
-            for (int i = 0; i < magicNumber; i++) {
-                atb(new DrawCardFromCollectionAction());
-            }
+        for (int i = 0; i < magicNumber; i++) {
+            atb(new DrawCardFromCollectionAction());
         }
     }
 

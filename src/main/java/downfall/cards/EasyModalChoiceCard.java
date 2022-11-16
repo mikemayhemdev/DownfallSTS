@@ -1,12 +1,13 @@
 package downfall.cards;
 
 import basemod.AutoAdd;
+import champ.cards.AbstractChampCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 @AutoAdd.Ignore
-public class EasyModalChoiceCard extends AbstractDownfallCard {
+public class EasyModalChoiceCard extends AbstractChampCard {
 
     private Runnable onUseOrChosen;
     private String passedName;
@@ -37,7 +38,7 @@ public class EasyModalChoiceCard extends AbstractDownfallCard {
     }
 
     @Override
-    public void upgrade() {
+    public void upp() {
 
     }
 

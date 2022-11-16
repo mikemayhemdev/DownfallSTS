@@ -1,6 +1,5 @@
 package champ.stances;
 
-import champ.ChampChar;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
@@ -10,18 +9,20 @@ import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import static collector.util.Wiz.atb;
 import static collector.util.Wiz.makeInHand;
 
 public abstract class AbstractChampStance extends AbstractStance {
 
-    int stage = 0;
+    public static HashMap<String, Integer> stages = new HashMap<>();
 
     public static final float HEIGHT_SEQUENCE = 800f * Settings.yScale; //TODO: Merge this with auto's and put it in downfallmod
-    public static final float SEQUENCED_CARD_SIZE = 0.225f;
+    public static final float SEQUENCED_CARD_SIZE = 0.25f;
+    public static final float USED_CARD_SIZE = 0.2F;
     public static final float START_POS = 281f * Settings.xScale;
-    public static final float SPACE_BETWEEN_CARDS = 75F * Settings.xScale;
+    public static final float SPACE_BETWEEN_CARDS = 100F * Settings.xScale;
     private ArrayList<AbstractCard> cards;
     private AbstractCard stancePreviewCard;
     private float previewCard_x;
@@ -31,10 +32,7 @@ public abstract class AbstractChampStance extends AbstractStance {
     public String STANCE_ID = "guardianmod:AbstractMode";
 
     public AbstractChampStance() {
-        //TODO - Stance should preserve stage when changing from stance to stance
         this.ID = STANCE_ID;
-        this.name = ChampChar.characterStrings.TEXT[3];
-        this.updateDescription();
         cards = getCards();
         for (int i = 0; i < cards.size(); i++) {
             AbstractCard c = cards.get(i);
@@ -85,23 +83,22 @@ public abstract class AbstractChampStance extends AbstractStance {
         }
     }
 
-
-    public abstract String getName();
-
-    public void updateDescription() {
-        this.description = "temp!"; //TODO: Description code
-    }
-
     public abstract ArrayList<AbstractCard> getCards();
 
     public void combo() {
-        AbstractCard get = cards.get(stage);
+        AbstractCard get = cards.get(stages.get(this.ID));
+        get.targetDrawScale = USED_CARD_SIZE;
+        get.targetTransparency = 0.5F;
         makeInHand(get.makeStatEquivalentCopy());
-        stage += 1;
-        if (stage == cards.size()) {
+        stages.merge(this.ID, 1, Integer::sum);
+        if (stages.get(this.ID) == cards.size()) {
             atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
+            stages.put(this.ID, 0);
+            for (AbstractCard c : cards) {
+                c.targetDrawScale = SEQUENCED_CARD_SIZE;
+                get.targetTransparency = 1F;
+            }
         }
-        // TODO: any visuals as necessary
     }
 
     public AbstractCard getFinalCard() {

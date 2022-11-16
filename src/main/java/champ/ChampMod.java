@@ -7,7 +7,6 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import champ.actions.FatigueHpLossAction;
 import champ.cards.*;
 import champ.events.*;
 import champ.monsters.BlackKnight;
@@ -17,16 +16,13 @@ import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
 import champ.powers.LastStandModPower;
-import champ.powers.ResolvePower;
 import champ.relics.*;
-import champ.stances.AbstractChampStance;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
+import champ.stances.UltimateStance;
+import champ.stances.*;
 import champ.util.CardFilter;
+import champ.util.ComboMod;
 import champ.util.CoolVariable;
 import champ.util.OnOpenerSubscriber;
-import champ.util.ComboMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -330,6 +326,12 @@ public class ChampMod implements
             }
         }
 
+        AbstractChampStance.stages.clear();
+        AbstractChampStance.stages.put(BerserkerStance.STANCE_ID, 0);
+        AbstractChampStance.stages.put(DefensiveStance.STANCE_ID, 0);
+        AbstractChampStance.stages.put(GladiatorStance.STANCE_ID, 0);
+        AbstractChampStance.stages.put(UltimateStance.STANCE_ID, 0);
+
     }
 
     @Override
@@ -503,22 +505,28 @@ public class ChampMod implements
         if (abstractCard.hasTag(ChampMod.OPENERNOTIN)) {
             ArrayList<String> stances = new ArrayList<>();
 
-            if (!AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID)){
+            if (!AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID)) {
                 stances.add(DefensiveStance.STANCE_ID);
             }
-            if (!AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)){
+            if (!AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
                 stances.add(BerserkerStance.STANCE_ID);
             }
-            if (!AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID)){
+            if (!AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID)) {
                 stances.add(GladiatorStance.STANCE_ID);
             }
 
             Collections.shuffle(stances);
 
-            switch (stances.get(0)){
-                case DefensiveStance.STANCE_ID: { defenseOpen();}
-                case BerserkerStance.STANCE_ID: { berserkOpen();}
-                case GladiatorStance.STANCE_ID: { gladiatorOpen();}
+            switch (stances.get(0)) {
+                case DefensiveStance.STANCE_ID: {
+                    defenseOpen();
+                }
+                case BerserkerStance.STANCE_ID: {
+                    berserkOpen();
+                }
+                case GladiatorStance.STANCE_ID: {
+                    gladiatorOpen();
+                }
             }
 
         }

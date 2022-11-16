@@ -66,6 +66,7 @@ public class CollectorChar extends CustomPlayer {
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
         this.reloadAnimation();
+        flipHorizontal = false;
     }
 
     public void reloadAnimation() {

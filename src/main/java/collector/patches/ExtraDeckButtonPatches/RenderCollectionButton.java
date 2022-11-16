@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.ui.panels.DrawPilePanel;
         clz = DrawPilePanel.class,
         method = "render"
 )
-public class RenderFrozenButtonHook {
+public class RenderCollectionButton {
     public static void Postfix(DrawPilePanel __instance, SpriteBatch spriteBatch) {
         CollectorMod.renderCombatUiElements(spriteBatch);
     }

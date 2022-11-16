@@ -40,5 +40,29 @@
       "*Defensive champ:Combo:",
       "[#5ebf2a]Defensive champ:Combo:"
     ]
+  },
+  "champ:BerserkerStance": {
+    "TEXT": [
+      "#rBerserker",
+      "Provides offensive multi-hits and #yVigor."
+    ]
+  },
+  "champ:DefensiveStance": {
+    "TEXT": [
+      "#bDefensive",
+      "Provides #yBlock and #yCounter."
+    ]
+  },
+  "champ:GladiatorStance": {
+    "TEXT": [
+      "#gGladiator",
+      "Provides [E] , card draw, and utility."
+    ]
+  },
+  "champ:VictoriousStance": {
+    "TEXT": [
+      "#pVictorious",
+      "Provides PERMANENT bonuses."
+    ]
   }
 }

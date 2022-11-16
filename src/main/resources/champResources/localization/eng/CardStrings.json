@@ -404,5 +404,17 @@
     "NAME": "Warmup Routine",
     "DESCRIPTION": "When you start your turn while not in a Stance, gain 1 Strength.",
     "UPGRADE_DESCRIPTION": "Innate. NL When you start your turn while not in a Stance, gain 1 Strength."
+  },
+  "champ:EnterBerserker": {
+    "NAME": "Enter Berserker",
+    "DESCRIPTION": "Enter Berserker."
+  },
+  "champ:EnterDefensive": {
+    "NAME": "Enter Defensive",
+    "DESCRIPTION": "Enter Defensive."
+  },
+  "champ:EnterGladiator": {
+    "NAME": "Enter Gladiator",
+    "DESCRIPTION": "Enter Gladiator."
   }
 }

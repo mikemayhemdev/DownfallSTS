@@ -1,7 +1,6 @@
 package champ.stances;
 
 import champ.ChampChar;
-import champ.ChampMod;
 import champ.cards.stancecards.Enrage;
 import champ.cards.stancecards.Execute;
 import champ.cards.stancecards.FanOfKnives;
@@ -9,12 +8,11 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Sunder;
-import com.megacrit.cardcrawl.cards.green.AllOutAttack;
-import com.megacrit.cardcrawl.cards.red.Inflame;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import downfall.downfallMod;
 import downfall.vfx.DefensiveModeStanceParticleEffect;
@@ -25,15 +23,12 @@ public class BerserkerStance extends AbstractChampStance {
 
     public static final String STANCE_ID = "champ:BerserkerStance";
 
+    public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(STANCE_ID);
+
     public BerserkerStance() {
         this.ID = STANCE_ID;
-        this.name = ChampChar.characterStrings.TEXT[3];
+        this.name = uiStrings.TEXT[0];
         this.updateDescription();
-    }
-
-    @Override
-    public String getName() {
-        return name;
     }
 
     @Override
@@ -63,5 +58,10 @@ public class BerserkerStance extends AbstractChampStance {
                 AbstractDungeon.effectsQueue.add(new StanceAuraEffect(STANCE_ID));
             }
         }
+    }
+
+    @Override
+    public void updateDescription() {
+        description = uiStrings.TEXT[1];
     }
 }
