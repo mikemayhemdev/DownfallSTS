@@ -20,11 +20,11 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import downfall.downfallMod;
+import downfall.vfx.DefensiveModeStanceParticleEffect;
 import guardian.GuardianMod;
 import guardian.characters.GuardianCharacter;
 import guardian.powers.DefensiveModeBooster;
 import guardian.powers.DontLeaveDefensiveModePower;
-import guardian.vfx.DefensiveModeStanceParticleEffect;
 
 public class DefensiveMode extends AbstractStance {
 

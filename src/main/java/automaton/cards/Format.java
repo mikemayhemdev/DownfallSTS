@@ -1,11 +1,11 @@
 package automaton.cards;
 
 import automaton.actions.AddToFuncAction;
-import automaton.actions.EasyXCostAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.actions.EasyXCostAction;
 
 public class Format extends AbstractBronzeCard {
 

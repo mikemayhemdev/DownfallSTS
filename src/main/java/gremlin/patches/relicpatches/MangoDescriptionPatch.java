@@ -17,7 +17,7 @@ public class MangoDescriptionPatch {
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings("Gremlin:PatchFixes");
 
     public static SpireReturn<String> Prefix(Mango __instance) {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+        if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             return SpireReturn.Return(strings.DESCRIPTIONS[0] + 3 + LocalizedStrings.PERIOD);
         }
         return SpireReturn.Continue();

@@ -39,6 +39,7 @@ import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
+import downfall.cards.CrystalShiv;
 import downfall.dailymods.Jewelcrafting;
 import downfall.downfallMod;
 import downfall.patches.BottledStasisPatch;

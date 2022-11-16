@@ -2,6 +2,7 @@ package sneckomod.cards.unknowns;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
 import sneckomod.SneckoMod;
 
@@ -17,7 +18,7 @@ public class UnknownBoss extends AbstractUnknownCard {
 
     @Override
     public Predicate<AbstractCard> myNeeds() {
-        return c -> c.rarity != CardRarity.SPECIAL && c.hasTag(expansionContentMod.STUDY);
+        return c -> c.rarity != CardRarity.SPECIAL && c.hasTag(downfallMod.STUDY);
     }
 
     @Override

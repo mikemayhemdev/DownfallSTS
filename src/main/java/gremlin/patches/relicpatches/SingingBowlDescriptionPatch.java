@@ -16,7 +16,7 @@ public class SingingBowlDescriptionPatch {
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings("Gremlin:PatchFixes");
 
     public static SpireReturn<String> Prefix(SingingBowl __instance) {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+        if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             return SpireReturn.Return(strings.DESCRIPTIONS[1]);
         }
         return SpireReturn.Continue();

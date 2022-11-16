@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
+import downfall.downfallMod;
 import downfall.powers.NextTurnGainSlimeCrush;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
@@ -27,8 +28,8 @@ public class PrepareCrushBossCard extends AbstractExpansionCard {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_slime.png", "expansioncontentResources/images/1024/bg_boss_slime.png");
 
-        tags.add(expansionContentMod.STUDY_SLIMEBOSS);
-        tags.add(expansionContentMod.STUDY);
+        tags.add(downfallMod.STUDY_SLIMEBOSS);
+        tags.add(downfallMod.STUDY);
 
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;

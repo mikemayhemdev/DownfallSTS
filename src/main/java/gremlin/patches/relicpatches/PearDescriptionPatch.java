@@ -17,7 +17,7 @@ public class PearDescriptionPatch {
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings("Gremlin:PatchFixes");
 
     public static SpireReturn<String> Prefix(Pear __instance) {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+        if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             return SpireReturn.Return(strings.DESCRIPTIONS[0] + 2 + LocalizedStrings.PERIOD);
         }
         return SpireReturn.Continue();

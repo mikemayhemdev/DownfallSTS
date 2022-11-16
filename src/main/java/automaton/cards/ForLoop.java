@@ -1,10 +1,10 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
-import automaton.actions.EasyXCostAction;
 import automaton.powers.CloningPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.actions.EasyXCostAction;
 
 public class ForLoop extends AbstractBronzeCard {
 

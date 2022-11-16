@@ -8,7 +8,7 @@ public class GuardianOriginal extends AbstractSkin {
 
     public GuardianOriginal() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkin").TEXT[1];
-        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString("guardianmod:Guardian").TEXT[0];
+        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString("Guardian").TEXT[0];
         this.portraitStatic_IMG = ImageMaster.loadImage("guardianResources/GuardianImages/charSelect/portrait.png");
 
         this.SHOULDER1 = "guardianResources/GuardianImages/char/shoulder.png";

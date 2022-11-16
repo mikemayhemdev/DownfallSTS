@@ -8,7 +8,7 @@ public class SlimeBoundOriginal extends AbstractSkin {
 
     public SlimeBoundOriginal() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkin").TEXT[1];
-        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString("slimeboundmod:Slimebound").TEXT[0];
+        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString("Slimebound").TEXT[0];
         this.portraitStatic_IMG = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/charSelect/portrait.png");
 
         this.SHOULDER1 = "slimeboundResources/SlimeboundImages/char/shoulder.png";

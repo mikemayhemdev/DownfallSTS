@@ -20,6 +20,5 @@ public class GlobalRenderSpecialHookPatch {
             HexaMod.renderGhostflames(sb);
         }
         SuperTip.render(sb, EasyInfoDisplayPanel.RENDER_TIMING.TIMING_PLAYER_RENDER);
-        StanceHelper.render(sb);
     }
 }

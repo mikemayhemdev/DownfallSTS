@@ -11,7 +11,7 @@ import downfall.downfallMod;
 )
 public class FaceOfClericConstructorPatch {
     public static void Postfix(FaceOfCleric __instance) {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+        if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             __instance.counter = 0;
         }
     }

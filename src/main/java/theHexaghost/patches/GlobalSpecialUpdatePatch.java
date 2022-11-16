@@ -18,7 +18,5 @@ public class GlobalSpecialUpdatePatch {
         if (FunctionHelper.doStuff) {
             FunctionHelper.update();
         }
-        if (StanceHelper.hitboxStance == null) StanceHelper.init();
-        StanceHelper.update();
     }
 }

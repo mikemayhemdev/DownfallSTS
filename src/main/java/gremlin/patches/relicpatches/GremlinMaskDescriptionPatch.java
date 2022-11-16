@@ -16,7 +16,7 @@ public class GremlinMaskDescriptionPatch {
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings("Gremlin:GremlinMask");
 
     public static SpireReturn<String> Prefix(GremlinMask __instance) {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+        if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             return SpireReturn.Return(strings.DESCRIPTIONS[0]);
         }
         return SpireReturn.Continue();

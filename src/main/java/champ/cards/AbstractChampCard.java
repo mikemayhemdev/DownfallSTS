@@ -44,13 +44,9 @@ public abstract class AbstractChampCard extends CustomCard {
     public int baseCool;
     public boolean upgradedCool;
     public boolean isCoolModified;
-    public int myHpLossCost;
     public String DESCRIPTION;
     public String UPGRADE_DESCRIPTION;
     public String[] EXTENDED_DESCRIPTION;
-    public boolean reInitDescription = true;
-
-    public boolean techniqueLast = true;
 
 
     public AbstractChampCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
@@ -277,15 +273,6 @@ public abstract class AbstractChampCard extends CustomCard {
     public void exitStance() {
         //SlimeboundMod.logger.info("Switching to Neutral (Abstract)");
         atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
-    }
-
-    @Override
-    public void update() {
-        if (this.reInitDescription) {
-            initializeDescription();
-            this.reInitDescription = false;
-        }
-        super.update();
     }
 
     @Override

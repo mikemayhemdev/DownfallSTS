@@ -14,7 +14,7 @@
   },
   "champ:Execute": {
     "NAME": "Execute",
-    "DESCRIPTION": "Deal !D! damage 2 times. NL Exhaust."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage 2 times. NL Exhaust."
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",

@@ -39,7 +39,6 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import slimebound.patches.BanSharedContentPatch;
 import sneckomod.cards.*;
 import sneckomod.cards.unknowns.*;
 import sneckomod.events.BackToBasicsSnecko;
@@ -377,7 +376,7 @@ public class SneckoMod implements
         BaseMod.addPotion(CheatPotion.class, Color.GRAY, Color.WHITE, Color.BLACK, CheatPotion.POTION_ID, downfallMod.Enums.THE_SNECKO);
         BaseMod.addPotion(DiceRollPotion.class, Color.CYAN, Color.WHITE, Color.BLACK, DiceRollPotion.POTION_ID, downfallMod.Enums.THE_SNECKO);
         BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, downfallMod.Enums.THE_SNECKO);
-        BanSharedContentPatch.registerRunLockedPotion(downfallMod.Enums.THE_SNECKO, MuddlingPotion.POTION_ID);
+        //TODO: Re-implement BanSharedContentPatch.registerRunLockedPotion(downfallMod.Enums.THE_SNECKO, MuddlingPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(MuddlingPotion.POTION_ID);

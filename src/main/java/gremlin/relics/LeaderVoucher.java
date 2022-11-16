@@ -23,7 +23,8 @@ public class LeaderVoucher extends AbstractGremlinRelic {
     }
 
     public void updateEnslavedTooltip() {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+        //TODO: Fix
+        if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             GremlinCharacter g = (GremlinCharacter) AbstractDungeon.player;
             String enslaved = g.mobState.getVoucher();
             if (enslaved.equals("")) {

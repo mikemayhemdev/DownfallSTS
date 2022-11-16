@@ -50,7 +50,6 @@ import gremlin.powers.AbstractGremlinPower;
 import gremlin.relics.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.patches.BanSharedContentPatch;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -463,7 +462,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         BaseMod.addPotion(GremlinPotion.class, Color.RED, Color.YELLOW, Color.BLUE, GremlinPotion.POTION_ID, downfallMod.Enums.GREMLIN);
         BaseMod.addPotion(NecromancyPotion.class, Color.RED, Color.YELLOW, Color.BLUE, NecromancyPotion.POTION_ID, downfallMod.Enums.GREMLIN);
         BaseMod.addPotion(WizPotion.class, Color.PURPLE, Color.PINK, Color.PURPLE, WizPotion.POTION_ID);
-        BanSharedContentPatch.registerRunLockedPotion(downfallMod.Enums.GREMLIN, WizPotion.POTION_ID);
+        //TODO: Re-enable eventuall: BanSharedContentPatch.registerRunLockedPotion(downfallMod.Enums.GREMLIN, WizPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(GremlinPotion.POTION_ID);

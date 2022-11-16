@@ -43,7 +43,7 @@ public class CrystalShiv extends CustomCard {
 
 
     public CrystalShiv() {
-        super(ID, NAME, "guardianResources/GuardianImages/cards/CrystalShiv.png", COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
+        super(ID, NAME, "guardianResources/GuardianImages/cards/crystalShiv.png", COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
         this.baseDamage = DAMAGE;
 
