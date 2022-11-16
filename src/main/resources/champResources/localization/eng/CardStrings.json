@@ -18,8 +18,8 @@
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
-    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, gain a champ:Combo of that Stance.",
-    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Gain a champ:Combo of that Stance.",
+    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, champ:Combo.",
+    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL champ:Combo.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Berserker.",
       "Enter champ:Defensive.",
