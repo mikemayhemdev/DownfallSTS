@@ -82,9 +82,5 @@
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Всеведущий череп",
     "DESCRIPTION": "Эфирная. NL Отнимает ОЗ, выберите 1: *Запросить *души, *Успех или *Выбери *меня. NL Сжигается."
-  },
-  "expansioncontent:Antidote": {
-    "NAME": "Антидот",
-    "DESCRIPTION": "Снимает весь Яд."
   }
 }

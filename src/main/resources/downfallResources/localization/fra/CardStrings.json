@@ -26,5 +26,9 @@
   "downfall:Scatterbrained": {
     "NAME": "Écervellé",
     "DESCRIPTION": "Injouable. NL Quand cette carte est piochée, si c'est votre tour, remplissez votre main avec des gremlin:Échos de cette carte."
+  },
+  "downfall:Antidote": {
+    "NAME": "Antidote",
+    "DESCRIPTION": "Perdez tout votre Poison."
   }
 }

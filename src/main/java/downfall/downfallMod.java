@@ -24,6 +24,7 @@ import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
+import charbosses.cards.other.Antidote;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -508,7 +509,7 @@ public class downfallMod implements
     @Override
     public void receiveEditCards() {
         //BaseMod.addCard(new KnowingSkullWish());
-        // BaseMod.addCard(new Antidote());
+        BaseMod.addCard(new Antidote());
         // BaseMod.addCard(new ShieldSmash());
         // BaseMod.addCard(new Debug());
         //BaseMod.addCard(new PeaceOut());

@@ -26,5 +26,9 @@
   "downfall:Scatterbrained": {
     "NAME": "Рассеяность",
     "DESCRIPTION": "Неиграбельная. NL Заполняет руку своими gremlin:Эхо, когда вы берёте эту карту в свой ход."
+  },
+  "downfall:Antidote": {
+    "NAME": "Антидот",
+    "DESCRIPTION": "Снимает весь Яд."
   }
 }

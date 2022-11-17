@@ -26,5 +26,9 @@
   "downfall:Scatterbrained": {
     "NAME": "주의산만",
     "DESCRIPTION": "사용불가. NL 뽑으면 이 카드의 gremlin:메아리를 손에 가득 차게 만듭니다."
+  },
+  "downfall:Antidote": {
+    "NAME": "해독제",
+    "DESCRIPTION": "모든 중독을 잃습니다."
   }
 }

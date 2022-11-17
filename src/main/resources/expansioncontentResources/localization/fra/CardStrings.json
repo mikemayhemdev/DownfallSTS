@@ -82,9 +82,5 @@
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Crâne savant",
     "DESCRIPTION": "Éthérée. NL Dépensez des PV pour obtenir des Âmes, du Succès ou un Remontant. NL Épuisement."
-  },
-  "expansioncontent:Antidote": {
-    "NAME": "Antidote",
-    "DESCRIPTION": "Perdez tout votre Poison."
   }
 }
