@@ -365,11 +365,11 @@
     "UPGRADE_DESCRIPTION": "champ:Finisher. NL The next !M! cards you play are upgraded permanently. NL Exhaust."
   },
   "champ:VictorsPose": {
-    "NAME": "VictorsPose",
+    "NAME": "Victor's Pose",
     "DESCRIPTION": "Gain !M! Max HP. NL Exhaust."
   },
   "champ:CalculateMove": {
-    "NAME": "CalculateMove",
+    "NAME": "Calculate Move",
     "DESCRIPTION": "Draw !M! cards, then discard 1. NL champ:Combo."
   },
   "champ:ShieldWall": {

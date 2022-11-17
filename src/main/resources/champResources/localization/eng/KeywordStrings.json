@@ -39,7 +39,7 @@
       "defensive",
       "defensive."
     ],
-    "DESCRIPTION": "#yStance. NL #ySkill Bonus: Gain #b3 #yCounter. NL #yFinisher Effect: Gain #b10 #yBlock."
+    "DESCRIPTION": "#yStance. Provides these effects, in order, when #yCombo is triggered: NL Gain 4 Block. NL Gain 7 Block and 1 Counter. NL Gain 10 Block and draw 2 more cards next turn."
   },
   {
     "PROPER_NAME": "Berserker",
@@ -47,7 +47,7 @@
       "berserker",
       "berserker."
     ],
-    "DESCRIPTION": "#yStance.  NL #ySkill Bonus: Gain #b2 #yVigor. NL #yFinisher Effect: Gain #b1 #yStrength."
+    "DESCRIPTION": "#yStance. Provides these effects, in order, when #yCombo is triggered: NL Gain 3 Vigor. NL Deal 4 damage to ALL enemies twice. NL Deal 8 damage twice."
   },
   {
     "PROPER_NAME": "Gladiator",
@@ -55,7 +55,7 @@
       "gladiator",
       "gladiator."
     ],
-    "DESCRIPTION": "#yStance. NL #ySkill Bonus: Draw a card. NL #yFinisher Bonus: Next turn, draw #b1 card and gain [E] . End your turn."
+    "DESCRIPTION": "#yStance. Provides these effects, in order, when #yCombo is triggered: NL Gain [E]. NL Draw 2 cards. NL Deal 8 damage. Apply 2 Weak and 2 Vulnerable."
   },
   {
     "PROPER_NAME": "Ultimate Stance",
@@ -63,7 +63,7 @@
       "ultimate",
       "ultimate."
     ],
-    "DESCRIPTION": "#yStance. Counts as both #yDefensive and #yBerserker #yStances. NL If you leave this #yStance before it expires, immediately re-enter it."
+    "DESCRIPTION": "#yStance. Provides these effects, in order, when #yCombo is triggered: NL Gain 1 Max HP. NL Gain 10 Gold. NL Upgrade the next card you play permanently."
   },
   {
     "PROPER_NAME": "Fatigue",

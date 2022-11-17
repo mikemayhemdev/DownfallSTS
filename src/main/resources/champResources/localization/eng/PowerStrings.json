@@ -210,8 +210,8 @@
   "champ:BoomerangPower": {
     "NAME": "Boomerang",
     "DESCRIPTIONS": [
-      "At the start of your next turn, return ",
-      " to your hand. It costs #b0 and no longer returns."
+      "At the start of your next turn, add ",
+      " Returning Crown(s) to your hand."
     ]
   },
   "champ:PumpIronPower": {
