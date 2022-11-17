@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -29,7 +30,7 @@ public abstract class AbstractDownfallCard extends CustomCard {
     protected final String NAME;
     protected final String DESCRIPTION;
     protected final String[] EXTENDED_DESCRIPTION;
-    public static final String CannotUseBossCardMessage = CardCrawlGame.languagePack.getUIString(makeID("CannotUseBossCardMessage")).TEXT[0];
+    public static final UIStrings CannotUseBossCardMessage = CardCrawlGame.languagePack.getUIString(makeID("CannotUseBossCardMessage"));
 
     public AbstractDownfallCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
@@ -144,7 +145,7 @@ public abstract class AbstractDownfallCard extends CustomCard {
             if (!downfallMod.playedBossCardThisTurn)
                 return super.canUse(p, m);
             else {
-                cantUseMessage = CannotUseBossCardMessage;
+                cantUseMessage = CannotUseBossCardMessage.TEXT[0];
                 return false;
             }
         }
