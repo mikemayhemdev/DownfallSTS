@@ -30,7 +30,7 @@ public class DefensiveStance extends AbstractChampStance {
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(STANCE_ID);
 
     public DefensiveStance() {
-        this.ID = STANCE_ID;
+        super(STANCE_ID);
         this.name = uiStrings.TEXT[0];
         updateDescription();
     }

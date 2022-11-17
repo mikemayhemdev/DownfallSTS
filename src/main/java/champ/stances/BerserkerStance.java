@@ -26,7 +26,7 @@ public class BerserkerStance extends AbstractChampStance {
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(STANCE_ID);
 
     public BerserkerStance() {
-        this.ID = STANCE_ID;
+        super(STANCE_ID);
         this.name = uiStrings.TEXT[0];
         this.updateDescription();
     }

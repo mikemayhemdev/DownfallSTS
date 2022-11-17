@@ -326,7 +326,6 @@ public class ChampMod implements
             }
         }
 
-        AbstractChampStance.stages.clear();
         AbstractChampStance.stages.put(BerserkerStance.STANCE_ID, 0);
         AbstractChampStance.stages.put(DefensiveStance.STANCE_ID, 0);
         AbstractChampStance.stages.put(GladiatorStance.STANCE_ID, 0);

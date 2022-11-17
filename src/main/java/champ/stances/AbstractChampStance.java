@@ -18,6 +18,13 @@ public abstract class AbstractChampStance extends AbstractStance {
 
     public static HashMap<String, Integer> stages = new HashMap<>();
 
+    static {
+        AbstractChampStance.stages.put(BerserkerStance.STANCE_ID, 0);
+        AbstractChampStance.stages.put(DefensiveStance.STANCE_ID, 0);
+        AbstractChampStance.stages.put(GladiatorStance.STANCE_ID, 0);
+        AbstractChampStance.stages.put(UltimateStance.STANCE_ID, 0);
+    }
+
     public static final float HEIGHT_SEQUENCE = 800f * Settings.yScale; //TODO: Merge this with auto's and put it in downfallmod
     public static final float SEQUENCED_CARD_SIZE = 0.25f;
     public static final float USED_CARD_SIZE = 0.2F;
@@ -29,16 +36,21 @@ public abstract class AbstractChampStance extends AbstractStance {
     private boolean showPreviewCard = false;
     private boolean upgraded = false;
 
-    public String STANCE_ID = "guardianmod:AbstractMode";
-
-    public AbstractChampStance() {
-        this.ID = STANCE_ID;
+    public AbstractChampStance(String ID) {
+        this.ID = ID;
         cards = getCards();
+        int savedStage = stages.get(this.ID);
         for (int i = 0; i < cards.size(); i++) {
             AbstractCard c = cards.get(i);
             c.target_x = START_POS + (SPACE_BETWEEN_CARDS * i);
             c.target_y = HEIGHT_SEQUENCE;
-            c.targetDrawScale = SEQUENCED_CARD_SIZE;
+            if (i < savedStage) {
+                c.targetDrawScale = USED_CARD_SIZE;
+                c.targetTransparency = 0.5F;
+            } else {
+                c.targetDrawScale = SEQUENCED_CARD_SIZE;
+                c.targetTransparency = 1F;
+            }
         }
         previewCard_x = START_POS + (SPACE_BETWEEN_CARDS * (cards.size() + 3));
     }
