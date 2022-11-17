@@ -54,7 +54,7 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
                 .build());
         // Then it flies back!
 
-        addToBot(new MakeTempCardInHandAction(new CrownThrowReturn(), 1));
+        addToBot(new MakeTempCardInHandAction(new CrownThrowReturn(), amount));
 
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }

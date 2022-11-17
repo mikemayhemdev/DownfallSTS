@@ -66,6 +66,9 @@ public class Gym extends AbstractImageEvent {
                 case BERSERKER:
                     CardModifierManager.addModifier(c, new OpenerModBerserker());
                     break;
+                case GLADIATOR:
+                    CardModifierManager.addModifier(c, new OpenerModBerserker());
+                    break;
             }
             AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
             AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
@@ -96,6 +99,7 @@ public class Gym extends AbstractImageEvent {
                         // this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[5]);
+                        this.imageEventText.setDialogOption(OPTIONS[6]);
                         this.imageEventText.setDialogOption(OPTIONS[7]);
                         this.screen = CurScreen.STANCECHOICE;
                         return;
@@ -124,6 +128,11 @@ public class Gym extends AbstractImageEvent {
                         this.pickCard = true;
                         stance = StanceChosen.BERSERKER;
                         AbstractDungeon.gridSelectScreen.open(getNonOpenerCards(), 1, OPTIONS[7], false, false, false, false);
+                        return;
+                    case 2:
+                        this.pickCard = true;
+                        stance = StanceChosen.BERSERKER;
+                        AbstractDungeon.gridSelectScreen.open(getNonOpenerCards(), 1, OPTIONS[6], false, false, false, false);
                         return;
                     default:
                         return;
