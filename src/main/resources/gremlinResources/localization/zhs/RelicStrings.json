@@ -33,7 +33,7 @@
     "NAME": "首领之角",
     "FLAVOR": "在地精小队这种，谁有这个角，谁就是首领。直到这玩意下一次被人偷走。",
     "DESCRIPTIONS": [
-      "战斗开始时，获得 [E] 并抽 #b1 张牌。 NL #ygremlin:切换 至下只地精。"
+      "战斗开始时，获得 [E] 并抽 #b1 张牌。 #ygremlin:切换 至下只地精。"
     ]
   },
   "Gremlin:GremlinKnobUpgrade": {
