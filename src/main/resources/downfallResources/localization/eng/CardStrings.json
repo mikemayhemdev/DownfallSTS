@@ -26,5 +26,9 @@
   "downfall:Scatterbrained": {
     "NAME": "Scatterbrained",
     "DESCRIPTION": "Unplayable. NL When drawn, if it is your turn, fill your hand with gremlin:Echoes of this card."
+  },
+  "downfall:Antidote": {
+    "NAME": "Antidote",
+    "DESCRIPTION": "Lose all Poison."
   }
 }
