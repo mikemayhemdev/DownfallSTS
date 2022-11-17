@@ -263,7 +263,7 @@
     "DESCRIPTION": "本牌每 guardianmod:镶嵌 一颗 guardianmod:宝石 ，造成 !D! 点伤害。"
   },
   "Guardian:PrismaticBarrier": {
-    "NAME": "缤纷炫盾",
+    "NAME": "缤纷眩盾",
     "DESCRIPTION": "本牌每 guardianmod:镶嵌 一颗 guardianmod:宝石 ，获得 !B! 点 格挡 。"
   },
   "Guardian:TemporalStrike": {
