@@ -43,8 +43,8 @@
   },
   "Guardian:DonusPower": {
     "NAME": "过载",
-    "DESCRIPTION": "抽四张牌。 NL 下1回合少抽两张牌。",
-    "UPGRADE_DESCRIPTION": "抽四张牌。 NL 下1回合少抽两张牌。 NL 失去所有负面效果1层。"
+    "DESCRIPTION": "抽四张牌。 NL 下回合少抽2张牌。",
+    "UPGRADE_DESCRIPTION": "抽四张牌。 NL 下回合少抽2张牌。 NL 失去所有负面效果1层。"
   },
   "Guardian:DecasProtection": {
     "NAME": "先古之力",
