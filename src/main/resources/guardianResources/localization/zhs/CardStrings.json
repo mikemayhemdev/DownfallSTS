@@ -90,7 +90,7 @@
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 力量 本次发挥 !M! 倍效果。 NL 跳过你的下回合。"
   },
   "Guardian:BronzeArmor": {
-    "NAME": "弹性护甲",
+    "NAME": "弹性鳞甲",
     "DESCRIPTION": "失去所有负面效果 !M! 层。 NL guardianmod:提防 8。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "失去所有负面效果 !M! 层。 NL guardianmod:提防 8。"
   },
