@@ -199,7 +199,7 @@
   },
   "Guardian:GemFinder": {
     "NAME": "宝石发现",
-    "DESCRIPTION": "战斗胜利后， NL 额外获得一次 guardianmod:宝石 奖励。"
+    "DESCRIPTION": "战斗胜利后， NL 额外获得普通 guardianmod:宝石 奖励。"
   },
   "Guardian:StasisField": {
     "NAME": "凝滞屏障",
