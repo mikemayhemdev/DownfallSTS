@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.actions.TimedVFXAction;
 import basemod.helpers.VfxBuilder;
 import com.badlogic.gdx.graphics.Color;
@@ -13,6 +14,8 @@ import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class FormatEncoded extends AbstractBronzeCard {
     public final static String ID = makeID("FormatEncoded");
 
@@ -21,6 +24,7 @@ public class FormatEncoded extends AbstractBronzeCard {
         baseBlock = 4;
         baseDamage = 4;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("FormatEncoded.png"));
     }
 
     public static Color getRandomColor() {
