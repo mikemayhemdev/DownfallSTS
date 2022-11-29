@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,6 +16,8 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import guardian.vfx.SmallLaserEffectColored;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class DonuBeam extends AbstractBronzeCard {
     public final static String ID = makeID("DonuBeam");
 
@@ -24,6 +27,7 @@ public class DonuBeam extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = 1;
         baseAuto = auto = 1;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("DonuBeam.png"));
     }
 
     @Override

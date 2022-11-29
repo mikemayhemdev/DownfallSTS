@@ -20,6 +20,7 @@ public class AdvancingGuard extends AbstractHexaCard {
         baseBlock = BLOCK;
 
         tags.add(HexaMod.GHOSTWHEELCARD);
+        HexaMod.loadJokeCardImage(this, "AdvancingGuard.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

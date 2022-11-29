@@ -22,6 +22,7 @@ public class Again extends AbstractHexaCard {
         baseMagicNumber = magicNumber = 1;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "Again.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

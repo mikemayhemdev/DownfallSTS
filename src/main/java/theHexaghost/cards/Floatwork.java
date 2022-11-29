@@ -14,6 +14,7 @@ public class Floatwork extends AbstractHexaCard {
         baseMagicNumber = magicNumber = 3;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
+        HexaMod.loadJokeCardImage(this, "Floatwork.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

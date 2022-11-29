@@ -1,9 +1,12 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Batch extends AbstractBronzeCard {
 
@@ -14,6 +17,7 @@ public class Batch extends AbstractBronzeCard {
     public Batch() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         exhaust = true;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Batch.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
