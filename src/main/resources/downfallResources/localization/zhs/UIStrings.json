@@ -62,7 +62,8 @@
       "隐藏第一勇士的姿态提示 - 给第一勇士老手。",
       "禁止异蛇使用其他Mod的角色牌池。",
       "禁用音乐替换（需要重启游戏）。",
-      "解锁所有崩坠角色的皮肤。"
+      "解锁所有崩坠角色的皮肤。",
+      "Allow display card's subtype next to main type."
     ]
   },
   "downfall:EnergyPanelTip": {

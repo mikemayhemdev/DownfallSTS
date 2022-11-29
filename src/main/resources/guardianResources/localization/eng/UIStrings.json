@@ -31,5 +31,11 @@
     "TEXT": [
       " NL guardianmod:Brace 2."
     ]
+  },
+  "Guardian:gemDescriptor": {
+    "TEXT": [
+      "Gem",
+      "guardianmod:Gem. NL "
+    ]
   }
 }

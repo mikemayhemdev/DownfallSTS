@@ -61,8 +61,9 @@
       "Unlock all locked cards and relics for Downfall characters (requires game restart)",
       "Disable Champ's Stance Helper - for experienced Champions",
       "Prevent Snecko from using card pools from other mods.",
-      "Disable main menu overrides (requires game restart)",
-      "Unlock all locked alternative skin for Downfall characters"
+      "Disable music overrides (requires game restart)",
+      "Unlock all locked alternative skin for Downfall characters",
+      "Allow display card's subtype next to main type."
     ]
   },
   "downfall:EnergyPanelTip": {

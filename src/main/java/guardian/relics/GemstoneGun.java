@@ -154,7 +154,7 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
         for (AbstractCard q : gems) {
             group.addToTop(q);
         }
-        AbstractDungeon.gridSelectScreen.open(group, 1, "Choose a Gem to load the Gem Gun.", false, false, false, false);
+        AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[1], false, false, false, false);
     }
 
     @Override

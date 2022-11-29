@@ -31,5 +31,11 @@
     "TEXT": [
       " NL guardianmod:Подготовка 2."
     ]
+  },
+  "Guardian:gemDescriptor": {
+    "TEXT": [
+      "Самоцвет",
+      "guardianmod:Самоцвет. NL "
+    ]
   }
 }
