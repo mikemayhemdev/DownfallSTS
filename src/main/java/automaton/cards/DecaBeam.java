@@ -1,11 +1,14 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class DecaBeam extends AbstractBronzeCard {
     public final static String ID = makeID("DecaBeam");
@@ -16,6 +19,7 @@ public class DecaBeam extends AbstractBronzeCard {
         thisEncodes();
         magicNumber = baseMagicNumber = 4;
         baseAuto = auto = 2;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("DecaBeam.png"));
     }
 
     @Override

@@ -4,6 +4,8 @@ import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class Constructor extends AbstractBronzeCard {
 
     public final static String ID = makeID("Constructor");
@@ -19,6 +21,7 @@ public class Constructor extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = BLOCK;
         thisEncodes();
         tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Constructor.png"));
     }
 
     @Override

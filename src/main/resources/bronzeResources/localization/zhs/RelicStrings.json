@@ -17,14 +17,14 @@
     "NAME": "八体垫片",
     "FLAVOR": "真不知道八体为何收藏这些。",
     "DESCRIPTIONS": [
-      "战斗开始时，抽 #b3 张牌并将 #b1 张 #y晕眩 加入抽牌堆。"
+      "战斗开始时，额外抽 #b3 张牌并将 #b1 张 #y晕眩 加入抽牌堆。"
     ]
   },
   "bronze:Timepiece": {
     "NAME": "冷凝漆",
     "FLAVOR": "据说海豹的女儿由此制成。",
     "DESCRIPTIONS": [
-      "你 #ybronze:编译 的 #ybronze:方法 附带 #y保留 。"
+      " #ybronze:编译 的 #ybronze:方法 附带 #y保留 。"
     ]
   },
   "bronze:Mallet": {
@@ -84,7 +84,7 @@
     "NAME": "甜圈垫片",
     "FLAVOR": "这显然是甜甜圈的藏品。",
     "DESCRIPTIONS": [
-      "战斗开始时，获得 [E] [E] 并将 #b1 张 #y虚空 加入抽牌堆。"
+      "战斗开始时，额外获得 [E] [E] 并将 #b1 张 #y虚空 加入抽牌堆。"
     ]
   },
   "bronze:BronzeIdol": {
@@ -98,7 +98,7 @@
     "NAME": "悖论制品",
     "FLAVOR": "你从未见过如此意义不明的人工制品。",
     "DESCRIPTIONS": [
-      "每回合开始时，随机将 #b1 张 #y虚无 #ybronze:编码 牌加入手牌。"
+      "回合开始时，随机将 #b1 张 #y虚无 #ybronze:编码 牌加入手牌。"
     ]
   }
 }

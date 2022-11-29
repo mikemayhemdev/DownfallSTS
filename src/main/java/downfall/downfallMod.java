@@ -162,7 +162,7 @@ public class downfallMod implements
         PostDeathSubscriber {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = true;
+    public static final boolean STEAM_MODE = false;
 
     public static boolean neowtextoverride = false;
 
@@ -1521,6 +1521,7 @@ public class downfallMod implements
         l.add(new CustomMod(StatusAbuse.ID, "r", true));
         l.add(new CustomMod(TooManyShivs.ID, "r", true));
         l.add(new CustomMod(Wizzardry.ID, "g", true));
+        l.add(new CustomMod(TransformRewards.ID, "g", true));
     }
 
     @Override

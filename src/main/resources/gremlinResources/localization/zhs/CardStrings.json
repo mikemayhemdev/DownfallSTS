@@ -23,7 +23,7 @@
   },
   "Gremlin:BrokenShin": {
     "NAME": "破胫",
-    "DESCRIPTION": "目标每有 !M! 层 虚弱 ， NL 给予1层 gremlin:苦痛 。 NL 消耗 。"
+    "DESCRIPTION": "目标每有 !M! 层 虚弱 ， NL 给予1层 gremlin:剧痛 。 NL 消耗 。"
   },
   "Gremlin:BubbleBarrier": {
     "NAME": "气泡屏障",
