@@ -50,5 +50,9 @@
   "downfall:Wizzardry": {
     "NAME": "Wizzardry",
     "DESCRIPTION": "Start with a Wizard Hat, a Wizard Staff, and an Upgraded copy of Wizardry."
+  },
+  "downfall:TransformRewards": {
+    "NAME": "Transformed",
+    "DESCRIPTION": "All card rewards become \"Transform a card\"."
   }
 }

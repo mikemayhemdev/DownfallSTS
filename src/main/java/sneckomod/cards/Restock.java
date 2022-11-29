@@ -17,6 +17,7 @@ public class Restock extends AbstractSneckoCard {
         tags.add(SneckoMod.SNEKPROOF);
         tags.add(SneckoMod.RNG);
         this.exhaust = true;
+        SneckoMod.loadJokeCardImage(this, "Restock.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1536,6 +1536,7 @@ public class downfallMod implements
         l.add(new CustomMod(StatusAbuse.ID, "r", true));
         l.add(new CustomMod(TooManyShivs.ID, "r", true));
         l.add(new CustomMod(Wizzardry.ID, "g", true));
+        l.add(new CustomMod(TransformRewards.ID, "g", true));
     }
 
     @Override

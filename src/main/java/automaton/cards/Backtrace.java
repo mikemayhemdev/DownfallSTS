@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cardmods.ExhaustMod;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class Backtrace extends AbstractBronzeCard {
 
     public final static String ID = makeID("Backtrace");
@@ -23,6 +25,7 @@ public class Backtrace extends AbstractBronzeCard {
         isInnate = true;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Backtrace.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

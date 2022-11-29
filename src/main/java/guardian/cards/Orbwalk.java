@@ -13,6 +13,8 @@ import guardian.GuardianMod;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class Orbwalk extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("Orbwalk");
     public static final String NAME;
@@ -48,6 +50,7 @@ public class Orbwalk extends AbstractGuardianCard implements InStasisCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Orbwalk.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

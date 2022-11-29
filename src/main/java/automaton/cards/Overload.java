@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.actions.RepeatCardAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -8,6 +9,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Overload extends AbstractBronzeCard {
 
@@ -18,6 +21,7 @@ public class Overload extends AbstractBronzeCard {
     public Overload() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Overload.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
