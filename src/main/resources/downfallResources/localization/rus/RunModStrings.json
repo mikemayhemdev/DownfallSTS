@@ -52,7 +52,7 @@
     "DESCRIPTION": "Вы начинаете вылазку с «Шляпой мага», «Посохом мага» и Улучшенной картой «Колдовство»."
   },
   "downfall:TransformRewards": {
-    "NAME": "Transformed",
-    "DESCRIPTION": "All card rewards become \"Transform a card\"."
+    "NAME": "Преобразование",
+    "DESCRIPTION": "Все награды с картами заменяются на \"Преобразовать карту\"."
   }
 }
