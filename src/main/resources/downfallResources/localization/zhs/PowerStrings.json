@@ -55,7 +55,7 @@
   "downfall:WatcherAngryPower": {
     "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      " #y观者 的回合结束时，如果其生命不高于 #b50% ，她将永久进入 #y愤怒 。 NL #y愤怒 时造成和受到的伤害增加 #b50% 而非 #b100% 。"
+      " #y观者 的回合结束时，若其生命不高于 #b50% ，她将永久进入 #y愤怒 。 NL #y愤怒 时造成与受到的伤害增加 #b50% 而非 #b100% 。"
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -143,7 +143,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "战斗开始时， #y故障机器人 将召唤 #b2 个 #y铜制圆球 。 NL 敌方回合结束时如果其没有 #y人工制品 ，获得 #b1 层。"
+      "战斗开始时， #y故障机器人 将召唤 #b2 个 #y铜制圆球 。 NL 敌方回合结束时，若其无 #y人工制品 ，获得 #b1 层。"
     ]
   },
   "downfall:NeowAncientConstruct": {
@@ -272,7 +272,7 @@
     "NAME": "奄息：不屈决心",
     "DESCRIPTIONS": [
       "该单位死亡时，所有单位获得 #b",
-      " 层 #y坚固 和 #b",
+      " 层 #y坚固 与 #b",
       " 层 #y易伤 。"
     ]
   },

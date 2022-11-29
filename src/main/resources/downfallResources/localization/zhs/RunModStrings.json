@@ -5,7 +5,7 @@
   },
   "downfall:Hexed": {
     "NAME": "六咒",
-    "DESCRIPTION": "起始获得天鹅绒项圈。每当你抽一张牌，使其获得虚无。"
+    "DESCRIPTION": "开局获得天鹅绒项圈。每当你抽一张牌，使其获得虚无。"
   },
   "downfall:Improvised": {
     "NAME": "即兴发挥",
@@ -13,7 +13,7 @@
   },
   "downfall:Jewelcrafting": {
     "NAME": "珠宝加工",
-    "DESCRIPTION": "起始拥有两张宝石利用与一把星光公司采矿镐。"
+    "DESCRIPTION": "开局拥有2张宝石利用与一把星光公司采矿镐。"
   },
   "downfall:EvilRun": {
     "NAME": "崩坠",
@@ -21,38 +21,38 @@
   },
   "downfall:ExchangeController": {
     "NAME": "手柄互换",
-    "DESCRIPTION": "起始获得涅奥的祝福。"
+    "DESCRIPTION": "开局获得3件涅奥的祝福。"
   },
   "downfall:Lament": {
     "NAME": "悲恸",
-    "DESCRIPTION": "起始获得涅奥的悲恸。"
+    "DESCRIPTION": "开局获得涅奥的悲恸。"
   },
   "downfall:ChampStances": {
     "NAME": "新晋者",
-    "DESCRIPTION": "每场战斗开始时，进入随机一种第一勇士姿态并获得一张终结打击。所有初始牌获得战术。"
+    "DESCRIPTION": "每场战斗开始时，随机进入一种第一勇士姿态并获得一张终结打击，所有初始牌获得技术。"
   },
   "downfall:Enraging": {
-    "NAME": "最后一战",
-    "DESCRIPTION": "所有敌人如果在回合开始时半血以下，清除所有负面效果并获得力量。"
+    "NAME": "背水一战",
+    "DESCRIPTION": "回合开始时若有敌人如果处于半血以下，其清除所有负面效果并获得力量。"
   },
     "downfall:Analytical": {
     "NAME": "分析",
-    "DESCRIPTION": "每回合开始时，将一张带有虚无的随机编码牌加入手牌。基础打击防御带有编码。"
+    "DESCRIPTION": "每回合开始时，将一张带有虚无的随机编码牌加入手牌。基础打击防御附带编码。"
   },
   "downfall:StatusAbuse": {
     "NAME": "强加",
-    "DESCRIPTION": "初始拥有备用电池、甜圈垫片、八体垫片、医疗箱和铜制神像。所有其他遗物将变为头环。"
+    "DESCRIPTION": "开局拥有备用电池、甜圈垫片、八体垫片、医疗箱和铜制神像。所有其他遗物将变为头环。"
   },
   "downfall:TooManyShivs": {
     "NAME": "超量小刀",
-    "DESCRIPTION": "初始拥有天鹅绒颈圈，虚无结晶和10张小刀。"
+    "DESCRIPTION": "开局拥有天鹅绒颈圈，虚无结晶与10张小刀。"
   },
   "downfall:Wizzardry": {
     "NAME": "巫术",
-    "DESCRIPTION": "初始拥有巫师帽，法师杖和一张升级的巫术。"
+    "DESCRIPTION": "开局拥有巫师帽，法师杖和一张升级的巫术。"
   },
   "downfall:TransformRewards": {
-    "NAME": "Transformed",
-    "DESCRIPTION": "All card rewards become \"Transform a card\"."
+    "NAME": "变化化",
+    "DESCRIPTION": "所有卡牌奖励变成变化一张牌。"
   }
 }
