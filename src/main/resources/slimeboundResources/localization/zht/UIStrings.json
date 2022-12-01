@@ -14,14 +14,14 @@
   },
   "slimeboundmod:lickDescriptor": {
     "TEXT": [
-      "Lick",
-      "slimeboundmod:Lick. NL "
+      "舔舔",
+      "slimeboundmod:舔舔 NL "
     ]
   },
   "slimeboundmod:tackleDescriptor": {
     "TEXT": [
-      "Tackle",
-      "slimeboundmod:Tackle. NL "
+      "衝撞",
+      "slimeboundmod:衝撞 NL "
     ]
   }
 }
