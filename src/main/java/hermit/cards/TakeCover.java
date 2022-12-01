@@ -1,9 +1,12 @@
 package hermit.cards;
 
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.DamageHooks;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.red.SearingBlow;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
@@ -31,6 +34,7 @@ public class TakeCover extends AbstractDynamicCard {
     // /TEXT DECLARATION/
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final CardStrings defendStrings = CardCrawlGame.languagePack.getCardStrings(Defend_Hermit.ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -58,6 +62,37 @@ public class TakeCover extends AbstractDynamicCard {
 
     }
 
+    @Override
+    public void applyPowers() {
+        if (this.energyOnUse < EnergyPanel.totalCount) {
+            this.energyOnUse = EnergyPanel.totalCount;
+        }
+
+        cardsToPreview.baseBlock = 5;
+
+        int num = energyOnUse;
+
+        if (AbstractDungeon.player.hasRelic("Chemical X")) {
+            num += 2;
+            AbstractDungeon.player.getRelic("Chemical X").flash();
+        }
+
+        if (this.upgraded)
+            num++;
+
+        for(int a=0;a<num;a++)
+        {
+            cardsToPreview.baseBlock += 3;
+            cardsToPreview.upgradedBlock = true;
+            cardsToPreview.upgraded = true;
+
+            if (num > 1)
+                cardsToPreview.name = defendStrings.NAME + "+" + num;
+            else
+                cardsToPreview.name = defendStrings.NAME + "+";
+        }
+    }
+
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -73,14 +108,27 @@ public class TakeCover extends AbstractDynamicCard {
         }
 
         AbstractCard s = (new Defend_Hermit()).makeCopy();
+
         if (this.upgraded)
-            s.upgrade();
+            num++;
+
+        for(int a=0;a<num;a++)
+        {
+            s.baseBlock += 3;
+            s.upgradedBlock = true;
+            s.upgraded = true;
+
+            if (num > 1)
+                s.name = defendStrings.NAME + "+" + num;
+            else
+                s.name = defendStrings.NAME + "+";
+        }
 
 
         s.cost = 0;
         s.costForTurn = 0;
         s.isCostModified = true;
-        this.addToTop(new MakeTempCardInHandAction(s, num));
+        this.addToTop(new MakeTempCardInHandAction(s, 1));
 
         if (!this.freeToPlayOnce) {
             p.energy.use(EnergyPanel.totalCount);

@@ -34,7 +34,7 @@ public class Combo extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
 
     // /STAT DECLARATION/
@@ -43,13 +43,15 @@ public class Combo extends AbstractDynamicCard {
     public Combo() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         loadJokeCardImage(this, "combo.png");
+
+        magicNumber=baseMagicNumber=1;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new ComboPower(p, 1), 1));
+                new ApplyPowerAction(p, p, new ComboPower(p, this.magicNumber), this.magicNumber));
     }
 
 
@@ -59,7 +61,8 @@ public class Combo extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeMagicNumber(1);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

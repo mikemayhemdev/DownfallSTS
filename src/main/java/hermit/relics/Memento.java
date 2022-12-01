@@ -1,8 +1,6 @@
 package hermit.relics;
 
-import automaton.cards.WhirlingStrike;
 import basemod.abstracts.CustomRelic;
-import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -45,7 +43,6 @@ public class Memento extends CustomRelic {
 
     public Memento() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.FLAT);
-        tips.add(new CardPowerTip(new MementoCard()));
     }
     // Gain 1 Strength on on equip.
 

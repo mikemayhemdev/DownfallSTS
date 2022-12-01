@@ -36,8 +36,8 @@ public class ShadowCloak extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int MAGIC_NUMBER = 6;
-    private static final int UP_MAGIC = 3;
+    private static final int MAGIC_NUMBER = 4;
+    private static final int UP_MAGIC = 2;
 
     // /STAT DECLARATION/
 
