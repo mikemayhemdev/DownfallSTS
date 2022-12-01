@@ -124,8 +124,8 @@
   },
   "Slimebound:Recycling": {
     "NAME": "循环再生",
-    "DESCRIPTION": "回合开始时， NL 随机 expansioncontent:发掘 一张 slimeboundmod:掠舔 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时， NL 随机 expansioncontent:发掘 一张 slimeboundmod:掠舔 。"
+    "DESCRIPTION": "回合开始时， NL 随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时， NL 随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 。"
   },
   "Slimebound:Repurpose": {
     "NAME": "重分裂",
