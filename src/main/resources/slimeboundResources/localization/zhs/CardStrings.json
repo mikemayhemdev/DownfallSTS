@@ -173,7 +173,7 @@
   },
   "Slimebound:TongueLash": {
     "NAME": "舌鞭",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 消耗 的 slimeboundmod:舔舔 ， NL 伤害增加 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 消耗 的 slimeboundmod:舔舔 ， NL 本场战斗伤害加 !M! 。"
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "垂涎欲滴",
