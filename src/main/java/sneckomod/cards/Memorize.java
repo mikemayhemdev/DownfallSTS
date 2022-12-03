@@ -20,6 +20,7 @@ public class Memorize extends AbstractSneckoCard {
         tags.add(SneckoMod.SNEKPROOF);
         tags.add(CardTags.HEALING);
         FleetingField.fleeting.set(this, true);
+        SneckoMod.loadJokeCardImage(this, "Memorize.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
