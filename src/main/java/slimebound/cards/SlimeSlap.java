@@ -41,6 +41,7 @@ public class SlimeSlap extends AbstractSlimeboundCard {
     public SlimeSlap() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         baseDamage = damage = 8;
+        SlimeboundMod.loadJokeCardImage(this, "SlimeSlap.png");
 
 
     }
