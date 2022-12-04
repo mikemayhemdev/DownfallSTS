@@ -53,6 +53,7 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 0;
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "Split.png");
 
 
             cardList.add(new OctoChoiceCard("Slimebound:SplotBruiser",
