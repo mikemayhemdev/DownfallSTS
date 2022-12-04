@@ -39,6 +39,7 @@ public class LeechLife extends AbstractSlimeboundCard {
         this.isEthereal = true;
         this.exhaust = true;
         tags.add(CardTags.HEALING);
+        SlimeboundMod.loadJokeCardImage(this, "LeechLife.png");
     }
 
     @Override
