@@ -3,7 +3,6 @@ package slimebound.cards;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import downfall.downfallMod;
 import slimebound.SlimeboundMod;
 
