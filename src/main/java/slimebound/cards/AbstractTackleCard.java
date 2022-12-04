@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import downfall.downfallMod;
 import slimebound.SlimeboundMod;
+import theHexaghost.HexaMod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,7 @@ public abstract class AbstractTackleCard extends AbstractSlimeboundCard {
     @Override
     public List<TooltipInfo> getCustomTooltipsTop() {
         List<TooltipInfo> tips = new ArrayList<>();
-        if (!downfallMod.disableDescriptors)
+        if (!downfallMod.disableDescriptors && !keywords.contains(SlimeboundMod.makeID(descriptorStrings[0]).toLowerCase()))
             tips.add(new TooltipInfo(BaseMod.getKeywordTitle("slimeboundmod:tackle"), BaseMod.getKeywordDescription("slimeboundmod:tackle")));
         return tips;
     }

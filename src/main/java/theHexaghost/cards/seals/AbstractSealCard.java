@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cardmods.EtherealMod;
 import downfall.downfallMod;
+import guardian.GuardianMod;
 import theHexaghost.HexaMod;
 import theHexaghost.cards.AbstractHexaCard;
 import theHexaghost.relics.TheBrokenSeal;
@@ -98,7 +99,7 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
     @Override
     public List<TooltipInfo> getCustomTooltipsTop() {
         List<TooltipInfo> tips = new ArrayList<>();
-        if (!downfallMod.disableDescriptors) {
+        if (!downfallMod.disableDescriptors && !keywords.contains(HexaMod.makeID(descriptorStrings[0]).toLowerCase())) {
             tips.add(new TooltipInfo(BaseMod.getKeywordTitle("hexamod:seal"), BaseMod.getKeywordDescription("hexamod:seal")));
         }
         return tips;

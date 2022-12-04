@@ -34,7 +34,7 @@ public abstract class AbstractGemCard extends AbstractGuardianCard {
     @Override
     public List<TooltipInfo> getCustomTooltipsTop() {
         List<TooltipInfo> tips = new ArrayList<>();
-        if (!downfallMod.disableDescriptors) {
+        if (!downfallMod.disableDescriptors && !keywords.contains(("guardianmod:" + descriptorStrings[0]).toLowerCase())) {
             tips.add(new TooltipInfo(BaseMod.getKeywordTitle("guardianmod:gem"), BaseMod.getKeywordDescription("guardianmod:gem")));
         }
         return tips;

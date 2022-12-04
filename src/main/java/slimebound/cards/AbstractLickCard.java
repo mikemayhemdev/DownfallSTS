@@ -32,7 +32,7 @@ public abstract class AbstractLickCard extends AbstractSlimeboundCard {
     @Override
     public List<TooltipInfo> getCustomTooltipsTop() {
         List<TooltipInfo> tips = new ArrayList<>();
-        if (!downfallMod.disableDescriptors)
+        if (!downfallMod.disableDescriptors && !keywords.contains(SlimeboundMod.makeID(descriptorStrings[0]).toLowerCase()))
             tips.add(new TooltipInfo(BaseMod.getKeywordTitle("slimeboundmod:lick"), BaseMod.getKeywordDescription("slimeboundmod:lick")));
         return tips;
     }
