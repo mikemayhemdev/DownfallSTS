@@ -31,5 +31,11 @@
     "TEXT": [
       " NL guardianmod:대비를 2 만큼 합니다."
     ]
+  },
+  "Guardian:gemDescriptor": {
+    "TEXT": [
+      "보석",
+      "guardianmod:보석. NL "
+    ]
   }
 }

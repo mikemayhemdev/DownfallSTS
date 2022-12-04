@@ -112,7 +112,8 @@
   {
     "NAMES": [
       "舔舔",
-      "舔"
+      "舔",
+      "lick"
     ],
     "PROPERNAME": "舔舔",
     "DESCRIPTION": "一系列给予 #y黏液 的 #b0 耗能 #y消 #y耗 牌，带有各种额外效果。"
@@ -135,7 +136,9 @@
   },
   {
     "NAMES": [
-      "冲撞"
+      "冲撞",
+      "tackle",
+      "tackles"
     ],
     "PROPERNAME": "冲撞",
     "DESCRIPTION": "一类高伤害 #y攻击 牌，会对自己造成少量伤害。"
