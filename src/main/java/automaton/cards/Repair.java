@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class Repair extends AbstractBronzeCard {
 
     public final static String ID = makeID("Repair");
@@ -24,6 +26,7 @@ public class Repair extends AbstractBronzeCard {
         tags.add(CardTags.HEALING);
        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         baseBlock = 4;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Repair.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

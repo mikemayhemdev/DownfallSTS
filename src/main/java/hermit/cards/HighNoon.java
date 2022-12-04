@@ -17,6 +17,7 @@ import static hermit.HermitMod.makeCardPath;
 public class HighNoon extends AbstractDynamicCard {
 
 
+    
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(HighNoon.class.getSimpleName());

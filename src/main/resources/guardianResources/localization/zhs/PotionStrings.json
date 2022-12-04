@@ -24,7 +24,7 @@
   "Guardian:StasisDiscoveryPotion": {
     "NAME": "量子万灵药",
     "DESCRIPTIONS": [
-      "获得 #y凝滞 #y栏位 直到你有 #b",
+      "获得 #y凝滞 栏位直到你有 #b",
       " 个。 NL 重复 #b",
       " 次：从 #b3 张牌中选择 #b1 张牌 #y凝滞 。"
     ]

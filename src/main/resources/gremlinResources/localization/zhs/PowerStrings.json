@@ -18,14 +18,14 @@
   "Gremlin:Bashed": {
     "NAME": "重击",
     "DESCRIPTIONS": [
-      "本回合每当你获得 #y格挡 时，其失去 #b",
+      "本回合每当你获得 #y格挡 时，该单位失去 #b",
       " 点生命。"
     ]
   },
   "Gremlin:BubbleBarrier": {
     "NAME": "气泡屏障",
     "DESCRIPTIONS": [
-      "你这一回合每打出一张牌， 获得 #b",
+      "本回合每打出一张牌， 获得 #b",
       " 点 #y格挡 。"
     ]
   },
@@ -39,7 +39,7 @@
   "Gremlin:Crippled": {
     "NAME": "致残",
     "DESCRIPTIONS": [
-      "其 #y虚弱 不会消失。敌方回合结束时，其失去 #y虚弱 层数点生命。"
+      "该单位的 #y虚弱 层数不随回合结束降低。敌方回合结束时，其失去 #y虚弱 层数点生命。"
     ]
   },
   "Gremlin:Encore": {
@@ -60,21 +60,21 @@
   "Gremlin:FatGremlin": {
     "NAME": "胖地精",
     "DESCRIPTIONS": [
-      "每当你攻击时，给予目标 #b",
+      "每当你攻击时，先给予目标 #b",
       " 层 #y虚弱 。"
     ]
   },
   "Gremlin:Flex": {
     "NAME": "力量下降",
     "DESCRIPTIONS": [
-      "回合结束时，失去 #b",
+      "你的回合结束时，失去 #b",
       " 点 #y力量 。"
     ]
   },
   "Gremlin:Furious": {
     "NAME": "发疯",
     "DESCRIPTIONS": [
-      "本回合每当你获得 #y格挡 时， 变为对所有敌人造成等量伤害。"
+      "本回合每当你获得 #y格挡 时，变为对所有敌人造成等量伤害。"
     ]
   },
   "Gremlin:GremlinNob": {
@@ -86,7 +86,7 @@
   "Gremlin:GremlinWizard": {
     "NAME": "地精法师",
     "DESCRIPTIONS": [
-      "每当你打出 #y技能牌 时， 获得 #b",
+      "每当你打出 #y技能牌 时，获得 #b",
       " 层 #y法力 。"
     ]
   },
@@ -125,22 +125,22 @@
     "NAME": "获得法力",
     "DESCRIPTIONS": [
       "下回合开始时， 将 #b",
-      " 张 #y砰 的加入手牌。",
-      " 张 #y砰 的加入手牌。"
+      " 张 #y砰 加入手牌。",
+      " 张 #y砰 加入手牌。"
     ]
   },
   "Gremlin:MakingMoreMagic": {
     "NAME": "获得法力+",
     "DESCRIPTIONS": [
       "下回合开始时, 将 #b",
-      " 张 #y砰+ 的加入手牌。",
-      " 张 #y砰+ 的加入手牌。"
+      " 张 #y砰+ 加入手牌。",
+      " 张 #y砰+ 加入手牌。"
     ]
   },
   "Gremlin:Polish": {
     "NAME": "磨亮",
     "DESCRIPTIONS": [
-      " #y小刀 和 #y守卫 的数值增加 #b",
+      " #y小刀 与 #y守卫 的数值增加 #b",
       " 点。"
     ]
   },
@@ -184,7 +184,7 @@
   "Gremlin:Unforgiving": {
     "NAME": "无情",
     "DESCRIPTIONS": [
-      "你不会失去力量。"
+      "你不再失去 #y力量 。"
     ]
   },
   "Gremlin:Wiz": {
@@ -193,7 +193,7 @@
       " 充能 。 NL 还需要 #b",
       " 层充能。",
       " 层充能。",
-      "准备开火。"
+      "就绪。"
     ]
   },
   "Gremlin:Wizardry": {

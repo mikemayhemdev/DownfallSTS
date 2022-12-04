@@ -20,6 +20,7 @@ public class Hexaguard extends AbstractHexaCard {
         baseBlock = BLOCK;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
+        HexaMod.loadJokeCardImage(this, "Hexaguard.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
