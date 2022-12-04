@@ -37,6 +37,7 @@ public class Grow extends AbstractSlimeboundCard {
     public Grow() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 2;
+        SlimeboundMod.loadJokeCardImage(this, "Grow.png");
 
 
     }
