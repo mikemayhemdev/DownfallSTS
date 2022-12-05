@@ -15,13 +15,13 @@
   "slimeboundmod:lickDescriptor": {
     "TEXT": [
       "핥기",
-      "slimeboundmod:핥기 NL "
+      "slimeboundmod:핥기. NL "
     ]
   },
   "slimeboundmod:tackleDescriptor": {
     "TEXT": [
       "태클",
-      "slimeboundmod:태클 NL "
+      "slimeboundmod:태클. NL "
     ]
   }
 }
