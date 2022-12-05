@@ -52,7 +52,7 @@
     "DESCRIPTION": "마법사 모자, 마법사 지팡이, 복사한 마법 기술 1장을 가진 채 시작합니다."
   },
   "downfall:TransformRewards": {
-    "NAME": "Transformed",
-    "DESCRIPTION": "All card rewards become \"Transform a card\"."
+    "NAME": "변화됨",
+    "DESCRIPTION": "모든 카드 보상이 \"변화 카드\" 가 됩니다."
   }
 }
