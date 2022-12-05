@@ -187,13 +187,14 @@
     ]
   },
   "champ:UltimateFormNextTurnPower": {
-    "NAME": "Preparing Ultimate",
+    "NAME": "궁극의 준비",
     "DESCRIPTIONS": [
-      "At the start of your next turn, enter #yUltimate #yStance.",
-      " NL It will persist for #b",
-      " turns."
+      "내 다음 턴 시작 시 #y궁극의 #y자세를 취합니다.",
+      " NL #b",
+      " 턴 동안 지속됩니다."
     ]
   },
+
   "champ:EnGardePower": {
     "NAME": "준비!",
     "DESCRIPTIONS": [
