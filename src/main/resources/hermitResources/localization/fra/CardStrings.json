@@ -191,7 +191,8 @@
   },
   "hermit:Combo": {
     "NAME": "Combo",
-    "DESCRIPTION": "Lorsque vouus déclenchez un effet hermit:Dans_Le_Mille, ajoutez une carte aléatoire avec un effet hermit:Dans_Le_Mille dans votre main."
+    "DESCRIPTION": "Lorsque vouus déclenchez un effet hermit:Dans_Le_Mille, ajoutez une carte aléatoire avec un effet hermit:Dans_Le_Mille dans votre main.",
+    "UPGRADE_DESCRIPTION": "Put the first !M! hermit:Dead_On cards triggered each turn back into your hand."
   },
   "hermit:BigShot": {
     "NAME": "Baril de fumée",

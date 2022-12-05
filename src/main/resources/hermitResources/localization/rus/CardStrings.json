@@ -40,7 +40,8 @@
   },
   "hermit:Combo": {
     "NAME": "Комбо",
-    "DESCRIPTION": "Когда вы разыгрываете эффект hermit:В_яблочко, добавляет в руку случ. карту с эффектом hermit:В_яблочко."
+    "DESCRIPTION": "Когда вы разыгрываете эффект hermit:В_яблочко, добавляет в руку случ. карту с эффектом hermit:В_яблочко.",
+    "UPGRADE_DESCRIPTION": "Put the first !M! hermit:Dead_On cards triggered each turn back into your hand."
   },
   "hermit:Covet": {
     "NAME": "Возжелать",

@@ -191,7 +191,8 @@
   },
   "hermit:Combo": {
     "NAME": "Combo",
-    "DESCRIPTION": "Quando você ativar um efeito hermit:Na_Mira, adicione uma carta aleatória com hermit:Na_Mira na sua mão."
+    "DESCRIPTION": "Quando você ativar um efeito hermit:Na_Mira, adicione uma carta aleatória com hermit:Na_Mira na sua mão.",
+    "UPGRADE_DESCRIPTION": "Put the first !M! hermit:Dead_On cards triggered each turn back into your hand."
   },
   "hermit:BigShot": {
     "NAME": "Cano Quente",

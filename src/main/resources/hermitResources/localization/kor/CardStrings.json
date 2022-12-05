@@ -191,7 +191,8 @@
   },
   "hermit:Combo": {
     "NAME": "연계",
-    "DESCRIPTION": "hermit:정조준 효과를 발동할 때마다, 무작위 hermit:정조준 카드를 손으로 가져옵니다."
+    "DESCRIPTION": "hermit:정조준 효과를 발동할 때마다, 무작위 hermit:정조준 카드를 손으로 가져옵니다.",
+    "UPGRADE_DESCRIPTION": "Put the first !M! hermit:Dead_On cards triggered each turn back into your hand."
   },
   "hermit:BigShot": {
     "NAME": "달궈진 총구",
