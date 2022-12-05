@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class DelayedSlice extends AbstractBronzeCard {
 
     public final static String ID = makeID("DelayedSlice");
@@ -18,6 +20,7 @@ public class DelayedSlice extends AbstractBronzeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
         baseDamage = 9;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("DelayedSlice.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
