@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.relics.AncientTeaSet;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.ObtainPotionEffect;
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 import hermit.HermitMod;
 import hermit.powers.RyeStalkPower;
 import hermit.util.TextureLoader;

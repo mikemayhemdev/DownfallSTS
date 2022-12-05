@@ -20,7 +20,7 @@ import slimebound.vfx.LickEffect;
 import slimebound.vfx.SlimeDripsEffect;
 
 
-public class PoisonLick extends AbstractLickCard {
+public class PoisonLick extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:PoisonLick";
     public static final String NAME;
     public static final String DESCRIPTION;
