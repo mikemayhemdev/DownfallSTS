@@ -21,7 +21,7 @@ public class BuggyMess extends AbstractBronzeCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         thisEncodes();
         baseMagicNumber = magicNumber = 1;
-        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("ChosenStrike.png"));
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("BuggyMess.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
