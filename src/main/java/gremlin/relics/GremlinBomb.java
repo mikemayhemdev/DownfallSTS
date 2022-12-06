@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 public class GremlinBomb extends AbstractGremlinRelic {
     public static final String ID = getID("GremlinBomb");
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
-    private static final AbstractRelic.RelicTier TIER = RelicTier.UNCOMMON;
+    private static final AbstractRelic.RelicTier TIER = RelicTier.RARE;
     private static final String IMG = "relics/gremlin_bomb.png";
     private static final AbstractRelic.LandingSound SOUND = LandingSound.SOLID;
 
