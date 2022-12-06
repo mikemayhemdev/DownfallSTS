@@ -16,7 +16,7 @@ public class GremlinBomb extends AbstractGremlinRelic {
     private static final String IMG = "relics/gremlin_bomb.png";
     private static final AbstractRelic.LandingSound SOUND = LandingSound.SOLID;
 
-    private static final int DMG_AMT = 40;
+    private static final int DMG_AMT = 30;
 
     public GremlinBomb() {
         super(ID, IMG, TIER, SOUND);
