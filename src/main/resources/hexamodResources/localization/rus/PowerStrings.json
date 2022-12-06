@@ -135,10 +135,10 @@
   "hexamod:LoseEnhanceInTurnsPower": {
     "NAME": "Перегрев",
     "DESCRIPTIONS": [
-      "Отнимает #b в конце вашего хода",
+      "Отнимает #b",
       "Через #b",
       " хода(-ов), отнимает #b",
-      " #yИнтенсивности."
+      " #yИнтенсивности в конце вашего хода."
     ]
   },
   "hexamod:ParanormalFormPower": {
