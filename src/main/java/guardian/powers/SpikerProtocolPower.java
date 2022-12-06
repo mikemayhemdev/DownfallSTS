@@ -18,7 +18,7 @@ public class SpikerProtocolPower extends AbstractGuardianPower implements Defens
 
         this.ID = POWER_ID;
         this.owner = owner;
-        this.setImage("OffenseModePower84.png", "OffenseModePower32.png");
+        this.setImage("SpikerProtocolPower84.png", "SpikerProtocolPower32.png");
         this.type = POWER_TYPE;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
