@@ -191,8 +191,8 @@
   },
   "hermit:Combo": {
     "NAME": "连击",
-    "DESCRIPTION": "每回合首次 hermit:精准 时， NL 将其返回手牌。",
-    "UPGRADE_DESCRIPTION": "每回合前 !M! 次 hermit:精准 时， NL 将其返回手牌。"
+    "DESCRIPTION": "每回合首次 hermit:精准 时， NL 将该 *精准 牌返回手牌。",
+    "UPGRADE_DESCRIPTION": "每回合前 !M! 次 hermit:精准 时， NL 将 *精准 牌返回手牌。"
   },
   "hermit:BigShot": {
     "NAME": "冒烟枪管",
