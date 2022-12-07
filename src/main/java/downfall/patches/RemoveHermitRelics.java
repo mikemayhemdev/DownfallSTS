@@ -19,7 +19,7 @@ public class RemoveHermitRelics {
         localvars={"tmp"}
     )
     public static void Prefix(AbstractDungeon __instance) {
-        if (AbstractDungeon.player.chosenClass.name() != "HERMIT" && !contentSharing_relics) {
+        if ((AbstractDungeon.player.chosenClass.name() != "HERMIT" && !EvilModeCharacterSelect.evilMode) && !contentSharing_relics) {
             for (String i : hermitRelics) {
                 AbstractDungeon.relicsToRemoveOnStart.add(i);
             }
