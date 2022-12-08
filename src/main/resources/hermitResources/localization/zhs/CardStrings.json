@@ -108,7 +108,7 @@
   },
   "hermit:Roulette": {
     "NAME": "轮转",
-    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 丢弃其他手牌。 NL 抽等量的牌。"
+    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 丢弃其他手牌， NL 抽等量的牌。"
   },
   "hermit:Midnight": {
     "NAME": "午夜时分",
