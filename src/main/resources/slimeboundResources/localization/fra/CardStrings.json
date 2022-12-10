@@ -131,7 +131,7 @@
   },
   "Slimebound:LeechLife": {
     "NAME": "Soin parasite",
-    "DESCRIPTION": "Infligez !D! dégâts. NL slimeboundmod:Consumez - Soignez-vous d'autant de PV que le slimeboundmod:Goop de l'ennemi, au maximum de !M!. NL Épuisement."
+    "DESCRIPTION": "Éthérée. Infligez !D! dégâts. Soignez-vous d'autant de PV que de dégâts non-bloqués. NL Épuisement."
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Frappe vampirique",
