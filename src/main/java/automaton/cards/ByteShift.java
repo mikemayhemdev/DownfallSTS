@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import basemod.BaseMod;
 import basemod.helpers.CardModifierManager;
@@ -8,6 +9,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cardmods.RetainCardMod;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class ByteShift extends AbstractBronzeCard {
 
@@ -18,6 +21,7 @@ public class ByteShift extends AbstractBronzeCard {
     public ByteShift() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         exhaust = true;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("ByteShift.png"));
         //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 

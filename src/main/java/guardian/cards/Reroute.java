@@ -15,6 +15,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.ClonePower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class Reroute extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Reroute");
@@ -54,6 +56,7 @@ public class Reroute extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath(".png"));
 
 
     }
