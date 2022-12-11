@@ -13,6 +13,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import hermit.actions.ReduceDebuffsAction;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class DecasProtection extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("DecasProtection");
@@ -42,6 +44,7 @@ public class DecasProtection extends AbstractGuardianCard {
 
         baseMagicNumber = magicNumber = 4;
         exhaust = true;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("DecasProtection.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
