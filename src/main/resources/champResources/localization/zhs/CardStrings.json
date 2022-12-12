@@ -112,7 +112,7 @@
   },
   "champ:EnchantShield": {
     "NAME": "附魔坚盾",
-    "DESCRIPTION": "选择一张手牌。 NL 其 格挡 增加 !M! 点。 NL 消耗 。",
+    "DESCRIPTION": "选择一张手牌， NL 其 格挡 增加 !M! 点。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我没有能够强化的牌"
     ]
@@ -177,7 +177,7 @@
   },
   "champ:EnchantSword": {
     "NAME": "附魔利剑",
-    "DESCRIPTION": "选择一张手牌。 NL 其伤害增加 !M! 点。 NL 消耗 。",
+    "DESCRIPTION": "选择一张手牌， NL 其伤害增加 !M! 点。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我不必强化"
     ]
@@ -364,7 +364,7 @@
   },
   "champ:EnchantCrown": {
     "NAME": "附魔金冠",
-    "DESCRIPTION": "选择一张手牌。 NL 其耗能变为0。 NL 消耗 。",
+    "DESCRIPTION": "选择一张手牌， NL 其耗能变为0。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我没有能强化的牌"
     ]
