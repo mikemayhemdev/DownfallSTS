@@ -264,7 +264,7 @@
     "DESCRIPTION": "获得一张 bronze:编码 牌。 NL 其首次耗能为0。 NL 消耗 。"
   },
   "bronze:Flail": {
-    "NAME": "乱斗",
+    "NAME": "乱摆",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !bauto! 次。 NL 获得 !M! 层 人工制品 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "狂乱",
