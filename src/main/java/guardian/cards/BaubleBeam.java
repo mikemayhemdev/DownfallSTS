@@ -19,6 +19,7 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import sneckomod.SneckoMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 
 public class BaubleBeam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("BaubleBeam");
@@ -63,6 +64,7 @@ public class BaubleBeam extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("BaubleBeam.png"));
 
     }
 
