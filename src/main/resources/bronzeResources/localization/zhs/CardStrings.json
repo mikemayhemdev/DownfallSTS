@@ -511,7 +511,7 @@
     "UPGRADE_DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时， 消耗 其并抽一张牌。"
   },
   "bronze:Debug": {
-    "NAME": "调试",
+    "NAME": "错误调试",
     "DESCRIPTION": "移除 bronze:编码 中牌的 bronze:编译 *错误 。 NL 消耗 。"
   },
   "bronze:HyperBeam": {
