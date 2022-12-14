@@ -318,7 +318,7 @@
     "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 다음으로 bronze:부호화하는 카드를 복사해 bronze:부호화합니다."
   },
   "bronze:FollowUp": {
-    "NAME": "맞춤형 체험",
+    "NAME": "뒤따르기",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 마지막으로 사용했던 카드가 함수라면 이 카드를 다시 사용합니다."
   },
   "bronze:ForceShield": {
