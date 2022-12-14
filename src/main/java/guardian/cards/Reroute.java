@@ -56,7 +56,7 @@ public class Reroute extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        GuardianMod.loadJokeCardImage(this, makeBetaCardPath(".png"));
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Reroute.png"));
 
 
     }
