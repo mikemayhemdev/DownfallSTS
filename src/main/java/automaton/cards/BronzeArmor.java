@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class BronzeArmor extends AbstractBronzeCard {
 
     public final static String ID = makeID("BronzeArmor");
@@ -22,6 +24,7 @@ public class BronzeArmor extends AbstractBronzeCard {
         baseAuto = auto = 1;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("BronzeArmor.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

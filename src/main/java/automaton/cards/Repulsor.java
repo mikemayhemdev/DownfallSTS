@@ -1,9 +1,12 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.powers.ExhaustStatusesPower;
 import sneckomod.SneckoMod;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Repulsor extends AbstractBronzeCard {
 
@@ -13,6 +16,7 @@ public class Repulsor extends AbstractBronzeCard {
 
     public Repulsor() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Repulsor.png"));
      //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
