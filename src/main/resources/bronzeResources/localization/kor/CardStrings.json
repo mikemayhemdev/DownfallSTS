@@ -198,7 +198,7 @@
     ]
   },
   "bronze:Deprecate": {
-    "NAME": "비난",
+    "NAME": "구식화",
     "DESCRIPTION": "약화를 !M! 부여합니다.",
     "EXTENDED_DESCRIPTION": [
       "오랜",
