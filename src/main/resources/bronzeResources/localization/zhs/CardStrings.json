@@ -318,7 +318,7 @@
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 下张 bronze:编码 牌 bronze:编码 两次。"
   },
   "bronze:FollowUp": {
-    "NAME": "数据追踪",
+    "NAME": "追踪",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若上张打出牌为 bronze:方法 ，再打出一次。"
   },
   "bronze:ChosenStrike": {
