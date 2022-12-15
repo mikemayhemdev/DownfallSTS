@@ -345,7 +345,7 @@
   },
   "Slimebound:SlimeSlap": {
     "NAME": "黏液斩击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 不会移除 slimeboundmod:黏液 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 不移除 slimeboundmod:黏液 。"
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "一二连击",
