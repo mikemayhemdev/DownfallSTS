@@ -1,11 +1,14 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Flail extends AbstractBronzeCard {
 
@@ -27,6 +30,7 @@ public class Flail extends AbstractBronzeCard {
        // thisEncodes();
         baseAuto = auto = 2;
         exhaust = true;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Flail.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
