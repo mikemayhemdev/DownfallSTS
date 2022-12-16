@@ -1,6 +1,6 @@
 {
   "bronze:DazingPulse": {
-    "NAME": "晕眩反冲",
+    "NAME": "晕眩脉冲",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 ： bronze:插入 !M! 张 *晕眩 。",
     "EXTENDED_DESCRIPTION": [
       "晕眩",
