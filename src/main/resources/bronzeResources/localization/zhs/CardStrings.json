@@ -488,8 +488,8 @@
   },
   "bronze:Verify": {
     "NAME": "感知形态",
-    "DESCRIPTION": "虚无 。 NL 抽到 bronze:方法 时， NL 提高其各项数值1点。",
-    "UPGRADE_DESCRIPTION": "抽到 bronze:方法 时， NL 提高其各项数值1点。"
+    "DESCRIPTION": "虚无 。 NL 抽到 bronze:方法 时， NL 其各项数值加1。",
+    "UPGRADE_DESCRIPTION": "抽到 bronze:方法 时， NL 其各项数值加1。"
   },
   "bronze:BronzeHeatsink": {
     "NAME": "铜制散热器",
