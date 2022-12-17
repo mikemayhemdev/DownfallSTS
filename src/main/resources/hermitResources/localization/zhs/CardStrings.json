@@ -243,7 +243,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "孤狼",
-    "DESCRIPTION": "选择一张手牌。 NL 本回合其下次耗能为0。 NL 丢弃其他手牌。"
+    "DESCRIPTION": "选择一张手牌， NL 本回合其下次耗能为0。 NL 丢弃其他手牌。"
   },
   "hermit:HighNoon": {
     "NAME": "午时已到",
