@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 import static champ.ChampMod.fatigue;
 
 public class GladiatorStyle extends AbstractChampCard {
@@ -22,6 +24,7 @@ public class GladiatorStyle extends AbstractChampCard {
       baseMagicNumber = magicNumber = 2;
        // this.tags.add(ChampMod.OPENERGLADIATOR);
         postInit();
+        loadJokeCardImage(this, "GladiatorStyle.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
