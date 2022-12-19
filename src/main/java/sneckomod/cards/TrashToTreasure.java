@@ -15,6 +15,7 @@ public class TrashToTreasure extends AbstractSneckoCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
         this.exhaust = true;
+        SneckoMod.loadJokeCardImage(this, "TrashToTreasure.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
