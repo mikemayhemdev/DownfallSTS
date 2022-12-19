@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
+import theHexaghost.powers.EnhancePower;
 import theHexaghost.powers.HexalevelPower;
 
 public class HexaLevel extends AbstractHexaCard {
@@ -21,16 +22,20 @@ public class HexaLevel extends AbstractHexaCard {
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         tags.add(BaseModCardTags.FORM);
+        HexaMod.loadJokeCardImage(this, "HexaLevel.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new HexalevelPower(magicNumber));
+        if (upgraded) applyToSelf(new EnhancePower(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

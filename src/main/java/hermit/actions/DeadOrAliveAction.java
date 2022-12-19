@@ -57,9 +57,9 @@ public class DeadOrAliveAction extends AbstractGameAction {
                         amount = 100;
                 }
 
-                AbstractDungeon.player.gainGold(this.amount);
+                AbstractDungeon.player.gainGold(amount);
 
-                for(int i = 0; i < this.amount; ++i) {
+                for(int i = 0; i < amount; ++i) {
                     AbstractDungeon.effectList.add(new GainPennyEffect(this.source, this.target.hb.cX, this.target.hb.cY, this.source.hb.cX, this.source.hb.cY, true));
                 }
 

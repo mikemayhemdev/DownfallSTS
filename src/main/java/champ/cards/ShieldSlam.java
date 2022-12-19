@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class ShieldSlam extends AbstractChampCard {
 
     public final static String ID = makeID("ShieldSlam");
@@ -17,6 +19,7 @@ public class ShieldSlam extends AbstractChampCard {
         tags.add(ChampMod.FINISHER);
         baseMagicNumber = magicNumber = 1;
         postInit();
+        loadJokeCardImage(this, "ShieldSlam.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

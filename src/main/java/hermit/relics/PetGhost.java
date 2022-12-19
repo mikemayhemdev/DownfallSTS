@@ -51,7 +51,7 @@ public class PetGhost extends CustomRelic implements OnPlayerDeathRelic {
             this.canDie = true;
             AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             flash();
-            p.heal(1,false);
+            p.currentHealth = 1;
             return false;
         }
         return true;

@@ -1,5 +1,6 @@
 package gremlin.actions;
 
+import automaton.AutomatonMod;
 import basemod.BaseMod;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.AlwaysRetainField;
@@ -46,8 +47,12 @@ public class MakeEchoAction extends AbstractGameAction {
     private AbstractCard echoCard(){
         AbstractCard card = this.c.makeStatEquivalentCopy();
         card.name = CardCrawlGame.languagePack.getUIString("Gremlin:MakeEchoAction").TEXT[0] + card.name;
-        if (!card.exhaust) card.rawDescription = card.rawDescription + CardCrawlGame.languagePack.getUIString(ExhaustMod.ID).TEXT[0];
-        card.exhaust = true;
+        if (!card.exhaust) {
+            if(!card.hasTag(AutomatonMod.ENCODES)) {
+                card.rawDescription = card.rawDescription + CardCrawlGame.languagePack.getUIString(ExhaustMod.ID).TEXT[0];
+                card.exhaust = true;
+            }
+        }
         if (!card.isEthereal) card.rawDescription = CardCrawlGame.languagePack.getUIString(EtherealMod.ID).TEXT[0] + card.rawDescription;
         card.isEthereal = true;
         if (card.retain) card.rawDescription = card.rawDescription.replace(CardCrawlGame.languagePack.getUIString(RetainCardMod.ID).TEXT[0], "");

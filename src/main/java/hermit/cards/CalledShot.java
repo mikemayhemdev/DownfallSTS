@@ -84,7 +84,7 @@ public class CalledShot extends AbstractDynamicCard {
             int DeadOnTimes = DeadOnAmount();
 
             for (int a = 0; a < DeadOnTimes; a++) {
-                this.addToBot(new CalledShotAction(magicNumber));
+                this.addToBot(new CalledShotAction(this.magicNumber));
             }
 
             this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));

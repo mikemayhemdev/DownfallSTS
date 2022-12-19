@@ -75,9 +75,9 @@ public class EyeOfTheStorm extends AbstractDynamicCard {
 
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        if (isDeadOnPos()) {
-            this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        }
+//         if (isDeadOnPos()) {
+//             this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
+//         }
     }
 
     private static int getLogicalCardCost(AbstractCard ccc) {

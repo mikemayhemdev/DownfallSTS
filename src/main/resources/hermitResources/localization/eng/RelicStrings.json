@@ -10,7 +10,7 @@
     "NAME": "Rye Stalk",
     "FLAVOR": "Still in mint condition, despite being chewed on for so long.",
     "DESCRIPTIONS": [
-      "At the end of your turn, ALL enemies lose HP equal to their #yhermit:Bruise."
+      "At the start of each combat, all enemies lose #b2 #yStrength."
     ]
   },
   "hermit:BartenderGlass": {
@@ -75,7 +75,7 @@
     "NAME": "Straight Razor",
     "FLAVOR": "For a cleaner shave...",
     "DESCRIPTIONS": [
-      "Whenever you remove a card from your deck, heal #b15 HP."
+      "Whenever you remove or Transform a card from your deck, heal #b15 HP."
     ]
   },
   "hermit:BrassTacks": {

@@ -9,5 +9,11 @@
       "将一张容器加入牌组",
       "选择一张牌"
     ]
+  },
+  "hexamod:SealDescriptor": {
+    "TEXT": [
+      "容器",
+      "hexamod:容器 。 NL "
+    ]
   }
 }

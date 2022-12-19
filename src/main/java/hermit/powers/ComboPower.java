@@ -17,6 +17,7 @@ import static hermit.HermitMod.makePowerPath;
 
 public class ComboPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
+    public int uses = 0;
 
     public static final String POWER_ID = HermitMod.makeID(ComboPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -35,6 +36,7 @@ public class ComboPower extends AbstractPower implements CloneablePowerInterface
 
         this.owner = owner;
         this.amount = amount;
+        this.uses = 0;
 
         type = PowerType.BUFF;
 
@@ -56,6 +58,11 @@ public class ComboPower extends AbstractPower implements CloneablePowerInterface
         } else if (amount > 1) {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
         }
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        this.uses = 0;
     }
 
     @Override

@@ -53,6 +53,12 @@ public class ShadowCloakPower extends AbstractPower implements CloneablePowerInt
 
     }
 
+    public void onExhaust(AbstractCard card){
+        if (card.color == AbstractCard.CardColor.CURSE) {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, amount));
+        }
+    }
+
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override

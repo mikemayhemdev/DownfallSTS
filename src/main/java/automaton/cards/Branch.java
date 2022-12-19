@@ -8,8 +8,10 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
@@ -39,8 +41,14 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        cardList.add(new OctoChoiceCard("bronze:BranchHit", EXTENDED_DESCRIPTION[0], "bronzeResources/images/cards/BranchHit.png", EXTENDED_DESCRIPTION[1], damage, -1, CardType.ATTACK));
-        cardList.add(new OctoChoiceCard("bronze:BranchBlock", EXTENDED_DESCRIPTION[2], "bronzeResources/images/cards/BranchBlock.png", EXTENDED_DESCRIPTION[3], -1, block, CardType.SKILL));
+        String pathNormalHit = "bronzeResources/images/cards/BranchHit.png";
+        String pathJokeHit = "bronzeResources/images/cards/joke/BranchAttack.png";
+        String pathNormalBlock = "bronzeResources/images/cards/BranchBlock.png";
+        String pathJokeBlock = "bronzeResources/images/cards/BranchBlock.png";
+        String pathHit = (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(ID, false)) ? pathJokeHit : pathNormalHit;
+        String pathBlock = (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(ID, false)) ? pathJokeBlock : pathNormalBlock;
+        cardList.add(new OctoChoiceCard("bronze:BranchHit", EXTENDED_DESCRIPTION[0], pathHit, EXTENDED_DESCRIPTION[1], damage, -1, CardType.ATTACK));
+        cardList.add(new OctoChoiceCard("bronze:BranchBlock", EXTENDED_DESCRIPTION[2], pathBlock, EXTENDED_DESCRIPTION[3], -1, block, CardType.SKILL));
         return cardList;
     }
 

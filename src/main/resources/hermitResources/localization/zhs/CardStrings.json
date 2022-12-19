@@ -34,8 +34,8 @@
   },
   "hermit:HighCaliber": {
     "NAME": "大口径",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *打击 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *打击+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *打击 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *打击+ 。 NL 消耗 。"
   },
   "hermit:BodyArmor": {
     "NAME": "全身护甲",
@@ -67,12 +67,12 @@
   },
   "hermit:ShadowCloak": {
     "NAME": "暗影斗篷",
-    "DESCRIPTION": "抽到一张 诅咒 时， NL 获得 !M! 点 格挡 。"
+    "DESCRIPTION": "抽到或 消耗 诅咒 时， NL 获得 !M! 点 格挡 。"
   },
   "hermit:FatalDesire": {
     "NAME": "自弑之欲",
-    "DESCRIPTION": "回合开始时，抽2张牌并获得1张 *受伤 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，抽2张牌并获得1张 *受伤 。"
+    "DESCRIPTION": "回合开始时，抽两张牌并获得一张 *受伤 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，抽两张牌并获得一张 *受伤 。"
   },
   "hermit:Gambit": {
     "NAME": "开场白",
@@ -122,8 +122,8 @@
   },
   "hermit:TakeCover": {
     "NAME": "快找掩护",
-    "DESCRIPTION": "获得X张 *防御 。 NL 其耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得X张 *防御+ 。 NL 其耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "获得一张 *防御+X 。 NL 其耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得一张 *防御+X+1 。 NL 其耗能为0。 NL 消耗 。"
   },
   "hermit:Misfire": {
     "NAME": "擦枪走火",
@@ -159,7 +159,7 @@
   },
   "hermit:Manifest": {
     "NAME": "恶灵现身",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张 诅咒 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得一张 *腐朽 。"
   },
   "hermit:Feint": {
     "NAME": "佯攻",
@@ -191,7 +191,8 @@
   },
   "hermit:Combo": {
     "NAME": "连击",
-    "DESCRIPTION": "触发 hermit:精准 效果时， NL 随机获得一张 hermit:精准 牌。"
+    "DESCRIPTION": "每回合首次 hermit:精准 时， NL 将其返回手牌。",
+    "UPGRADE_DESCRIPTION": "每回合前 !M! 次 hermit:精准 时， NL 将其返回手牌。"
   },
   "hermit:BigShot": {
     "NAME": "冒烟枪管",
@@ -207,8 +208,8 @@
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
-    "DESCRIPTION": "虚无 。 NL 回合开始时，本回合初始手牌首次耗能减1。",
-    "UPGRADE_DESCRIPTION": "回合开始时，本回合初始手牌首次耗能减1。"
+    "DESCRIPTION": "虚无 。 NL 每回合所抽前四张可打出牌首次耗能减1。",
+    "UPGRADE_DESCRIPTION": "每回合所抽前四张可打出牌首次耗能减1。"
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
@@ -268,7 +269,7 @@
   },
   "hermit:Showdown": {
     "NAME": "决战",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 打出手中所有 *打击 。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 随机打出手中 *打击 。 NL 消耗 。"
   },
   "hermit:LuckOfTheDraw": {
     "NAME": "神抽",

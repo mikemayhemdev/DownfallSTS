@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import guardian.cards.*;
 import theHexaghost.powers.SealPostCombatPower;
 
@@ -25,6 +26,7 @@ public class FifthSeal extends AbstractSealCard {
         cardsList.add(new ThirdSeal());
         cardsList.add(new FourthSeal());
         cardsList.add(new SixthSeal());
+        HexaMod.loadJokeCardImage(this, "FifthSeal.png");
     }
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {

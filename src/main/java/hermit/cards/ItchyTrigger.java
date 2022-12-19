@@ -1,5 +1,6 @@
 package hermit.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -131,7 +132,7 @@ public class ItchyTrigger extends AbstractDynamicCard {
 
             while(var4.hasNext()) {
                 AbstractCard c = (AbstractCard)var4.next();
-                if (c.cost > 0 && c.costForTurn > 0 && !c.freeToPlayOnce) {
+                if (c.costForTurn > 0 && !c.freeToPlayOnce) {
                     groupCopy.add(c);
                 }
             }
@@ -158,7 +159,8 @@ public class ItchyTrigger extends AbstractDynamicCard {
             }
 
             if (c != null) {
-                c.setCostForTurn(Math.max(c.cost-this.magicNumber,0));
+                c.setCostForTurn(Math.max(c.costForTurn-this.magicNumber,0));
+                c.superFlash(Color.GOLD.cpy());
             }
 
 

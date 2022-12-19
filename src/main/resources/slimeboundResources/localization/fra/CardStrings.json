@@ -192,8 +192,8 @@
   },
   "Slimebound:Prepare": {
     "NAME": "Préparation",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, gagnez [E] [E] et piochez !M! cartes. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Au prochain tour, gagnez [E] [E] et piochez !M! cartes. NL Retenez jusqu'à !M! cartes ce tour. Épuisement."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, gagnez [E] et piochez !M! cartes. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Au prochain tour, gagnez [E] et piochez !M! cartes. NL Retenez jusqu'à !M! cartes ce tour. Épuisement."
   },
   "Slimebound:PrepareCrush": {
     "NAME": "Préparation : Crush",

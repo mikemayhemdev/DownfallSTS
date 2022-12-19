@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AccuracyPower;
 import guardian.GuardianMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 
 public class CrystalShiv extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("CrystalShiv");
@@ -60,7 +61,7 @@ public class CrystalShiv extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
 
-
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("CrystalShiv.png"));
     }
 
     @Override

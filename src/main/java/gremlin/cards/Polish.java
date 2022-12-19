@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AccuracyPower;
+import gremlin.GremlinMod;
 import gremlin.powers.PolishPower;
 
 import java.util.ArrayList;
@@ -42,6 +43,7 @@ public class Polish extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
         this.tags.add(SHIELD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Polish.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

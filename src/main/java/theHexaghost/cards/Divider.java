@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.TorchHeadFireEffect;
 import sneckomod.SneckoMod;
+import theHexaghost.HexaMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.powers.BurnPower;
@@ -23,6 +24,7 @@ public class Divider extends AbstractHexaCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 3;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "Divider.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

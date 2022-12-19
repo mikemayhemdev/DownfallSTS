@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import sneckomod.actions.MuddleRandomCardAction;
 
@@ -15,6 +16,7 @@ public class SnekBite extends AbstractSneckoCard {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = 7;
         baseMagicNumber = magicNumber = 1;
+        SneckoMod.loadJokeCardImage(this, "SnekBite.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -3,6 +3,7 @@ package theHexaghost.cards.seals;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.powers.RepairPower;
 
 public class FirstSeal extends AbstractSealCard {
@@ -17,6 +18,7 @@ public class FirstSeal extends AbstractSealCard {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(AbstractCard.CardTags.HEALING);
+        HexaMod.loadJokeCardImage(this, "FirstSeal.png");
     }
 
     @Override

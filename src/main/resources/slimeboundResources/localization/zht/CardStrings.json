@@ -198,8 +198,8 @@
   },
   "Slimebound:Prepare": {
     "NAME": "伺機待發",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 下一回合獲得 [E] [E] 並抽 !M! 張牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "下一回合獲得 [E] [E] 並抽 !M! 張牌。 至多 保留 !M! 張牌。 NL 消耗 。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 下一回合獲得 [E] 並抽 !M! 張牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "下一回合獲得 [E] 並抽 !M! 張牌。 至多 保留 !M! 張牌。 NL 消耗 。"
   },
   "Slimebound:Grow": {
     "NAME": "生長",
@@ -288,7 +288,7 @@
     "DESCRIPTION": "下回合： NL 獲得 [E] [E] [E] 。 NL 獲得 !M! 點 力量 。 NL 獲得 *史萊姆猛擊 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "下回合： NL 獲得 [E] [E] [E] [E] 。 NL 獲得 !M! 點 力量 。 NL 獲得 *史萊姆猛擊+ 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "~Slime...~ NL #r~CRUSH!!!~" // 551 string in monsters.json
+      "~Slime...~ NL #r~CRUSH!!!~"
     ]
   },
   "Slimebound:SlimeCrush": {

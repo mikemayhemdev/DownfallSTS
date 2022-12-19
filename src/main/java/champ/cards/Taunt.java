@@ -13,6 +13,8 @@ import downfall.util.OctopusCard;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Taunt extends AbstractChampCard {
 
     public final static String ID = makeID("Taunt");
@@ -23,6 +25,7 @@ public class Taunt extends AbstractChampCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         //tags.add(ChampMod.OPENER);
         this.magicNumber = this.baseMagicNumber = 1;
+        loadJokeCardImage(this, "Taunt.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

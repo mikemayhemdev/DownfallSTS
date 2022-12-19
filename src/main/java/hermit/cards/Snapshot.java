@@ -46,7 +46,7 @@ public class Snapshot extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 2;
 
     int prev_cost = COST;

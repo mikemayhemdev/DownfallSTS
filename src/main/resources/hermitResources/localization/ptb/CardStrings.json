@@ -9,11 +9,11 @@
   },
   "hermit:Snapshot": {
     "NAME": "Tiro Rápido",
-    "DESCRIPTION": "Cause !D! de dano. hermit:Na_Mira\: Ganhe !B! de Proteção."
+    "DESCRIPTION": "Cause !D! de dano. hermit:Na_Mira: Ganhe Proteção igual ao dano desbloqueado causado."
   },
   "hermit:Desperado": {
     "NAME": "Bandido",
-    "DESCRIPTION": "Cause !D! de dano. NL Ganhe !M! Fragilizado."
+    "DESCRIPTION": "Cause !D! de dano. NL Dobre o dano dessa carta neste combate. Ela custa 1 a mais."
   },
   "hermit:Headshot": {
     "NAME": "Tiro na Cabeça",
@@ -63,11 +63,11 @@
   },
   "hermit:Purgatory": {
     "NAME": "Purgatório",
-    "DESCRIPTION": "Etéreo. NL Cause 30 de dano a TODOS os inimigos"
+    "DESCRIPTION": "Etéreo. NL Cause !D! de dano a TODOS os inimigos"
   },
   "hermit:ShadowCloak": {
     "NAME": "Capa Sombria",
-    "DESCRIPTION": "Quando você comprar uma Maldição, ganhe !M! de Proteção."
+    "DESCRIPTION": "Toda vez que você comprar ou Exaurir uma Maldição, ganhe !M! de Proteção."
   },
   "hermit:FatalDesire": {
     "NAME": "Desejo Fatal",
@@ -76,7 +76,7 @@
   },
   "hermit:Gambit": {
     "NAME": "Gambito",
-    "DESCRIPTION": "Coloque !M! Ataques aleatórios da sua pilha de descarte na sua mão. Exaurir."
+    "DESCRIPTION": "Coloque !M! Ataques aleatórios da sua pilha de descarte na sua mão. Eles custam 1 a menos neste turno. NL Exaurir."
   },
   "hermit:Roughhouse": {
     "NAME": "Alvoroço",
@@ -88,7 +88,7 @@
   },
   "hermit:Deadeye": {
     "NAME": "Olho-Morto",
-    "DESCRIPTION": "Cause !D! de dano. NL hermit:Na_Mira\: NL Ganhe !M! de Força."
+    "DESCRIPTION": "Cause !D! de dano. NL hermit:Na_Mira: NL Ganhe !M! de Força."
   },
   "hermit:GhostlyPresence": {
     "NAME": "Presença Fantasmagórica",
@@ -118,12 +118,12 @@
   "hermit:Glare": {
     "NAME": "Olhar Penetrante",
     "DESCRIPTION": "Aplique !M! de Fraqueza e Vulnerabilidade.",
-    "UPGRADE_DESCRIPTION": "Aplique !M! de Fraqueza e !hermit:SecondMagic! Vulnerabilidade."
+    "UPGRADE_DESCRIPTION": "Reter. NL Aplique !M! de Fraqueza e Vulnerabilidade."
   },
   "hermit:TakeCover": {
     "NAME": "Tomar Cobertura",
-    "DESCRIPTION": "Adicione X *Defender na sua mão. NL Eles custam 0 nesse combate. NL Exaurir.",
-    "UPGRADE_DESCRIPTION": "Adicione X *Defender+ na sua mão. NL Eles custam 0 nesse combate. NL Exaurir."
+    "DESCRIPTION": "Adicione uma carta *Defender de custo 0 à sua mão e a Melhore X vezes. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Adicione uma carta *Defender de custo 0 à sua mão e a Melhore X+1 vezes. NL Exaurir."
   },
   "hermit:Misfire": {
     "NAME": "Tiro Falho",
@@ -155,11 +155,11 @@
   },
   "hermit:Spite": {
     "NAME": "Contrariar",
-    "DESCRIPTION": "Compre !M! *Maldições. NL Cause !D! de dano duas vezes."
+    "DESCRIPTION": "Cause !D! de dano duas vezes. NL Compre !M! *Maldições."
   },
   "hermit:Manifest": {
     "NAME": "Manifestar",
-    "DESCRIPTION": "Ganhe !B! de Proteção. NL compre !M! *Maldições."
+    "DESCRIPTION": "Ganhe !B! de Proteção . NL Adicione um *Decair à sua mão."
   },
   "hermit:Feint": {
     "NAME": "Fingir",
@@ -191,7 +191,8 @@
   },
   "hermit:Combo": {
     "NAME": "Combo",
-    "DESCRIPTION": "Quando você ativar um efeito hermit:Na_Mira, adicione uma carta aleatória com hermit:Na_Mira na sua mão."
+    "DESCRIPTION": "Coloque a primeira carta com hermit:Na_Mira ativado a cada turno de volta na sua mão.",
+    "UPGRADE_DESCRIPTION": "Coloque as primeiras !M! cartas com hermit:Na_Mira ativadas a cada turno de volta em sua mão."
   },
   "hermit:BigShot": {
     "NAME": "Cano Quente",
@@ -203,12 +204,12 @@
   },
   "hermit:Maintenance": {
     "NAME": "Manutenção",
-    "DESCRIPTION": "Ganhe 2 de Força. NL Ganhe 2 de Destreza. NL Aumente o custo dessa carta por 1 neste combate."
+    "DESCRIPTION": "*Golpes causam !M! de dano adicional neste combate. NL Ganhe !hermit:SecondMagic! de Destreza. NL Isso custa 1 a mais neste combate."
   },
   "hermit:EternalForm": {
     "NAME": "Forma Eterna",
-    "DESCRIPTION": "Etéreo. NL No inicio do seu turno, reduza o custo de todas as cartas na sua mão por 1 neste turno.",
-    "UPGRADE_DESCRIPTION": "No inicio do seu turno, reduza o custo de todas as cartas na sua mão por 1 neste turno."
+    "DESCRIPTION": "Etéreo. NL As primeiras 4 cartas jogáveis compradas no início de cada turno custam 1 a menos neste turno.",
+    "UPGRADE_DESCRIPTION": "As primeiras 4 cartas jogáveis compradas no início de cada turno custam 1 a menos neste turno."
   },
   "hermit:FullyLoaded": {
     "NAME": "Completamente Carregado",
@@ -255,7 +256,7 @@
   "hermit:TakeAim": {
     "NAME": "Mirar",
     "DESCRIPTION": "No início do seu turno, ganhe hermit:Concentrar.",
-	"UPGRADE_DESCRIPTION": "Ganhe hermit:Concentrar. NL No inicio do seu turno, ganhe hermit:Concentrar."
+    "UPGRADE_DESCRIPTION": "Ganhe hermit:Concentrar. NL No inicio do seu turno, ganhe hermit:Concentrar."
   },
   "hermit:Magnum": {
     "NAME": "Magnum",
@@ -304,8 +305,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "Olho da Tempestade",
-    "DESCRIPTION": "Ganhe Energia até sua Energia máxima. NL Exaurir.",
-    "UPGRADE_DESCRIPTION": "Compre uma carta. NL hermit:Na_Mira: NL Ganhe Energia até sua Energia máxima. NL Exaurir."
+    "DESCRIPTION": "Ganhe Energia até sua Energia máxima. NL Exaurir."
   },
   "hermit:FinalCanter": {
     "NAME": "Trote Final",
@@ -323,9 +323,5 @@
   "hermit:Virtue": {
     "NAME": "Virtude",
     "DESCRIPTION": "Reter. NL Reduz cada debuff seu por !M!."
-  },
-  "hermit:BossMaintenance": {
-    "NAME": "Manutenção",
-    "DESCRIPTION": "Ganhe 2 de Força. NL Ganhe 2 de Destreza. NL Aumente o custo dessa carta por 1 neste combate."
   }
 }

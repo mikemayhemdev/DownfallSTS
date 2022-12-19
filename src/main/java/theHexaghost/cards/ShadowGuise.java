@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 
 public class ShadowGuise extends AbstractHexaCard {
@@ -20,6 +21,7 @@ public class ShadowGuise extends AbstractHexaCard {
         exhaust = true;
         isEthereal = true;
         setParent(parent);
+        HexaMod.loadJokeCardImage(this, "ShadowGuise.png");
     }
 
     public ShadowGuise() {

@@ -48,6 +48,7 @@ public class LeechEnergy extends AbstractSlimeboundCard {
 
         this.baseDamage = 5;
         baseMagicNumber = magicNumber = 1;
+        SlimeboundMod.loadJokeCardImage(this, "LeechEnergy.png");
 
     }
 

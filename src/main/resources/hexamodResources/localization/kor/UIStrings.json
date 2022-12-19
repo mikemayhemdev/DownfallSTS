@@ -9,5 +9,11 @@
       "덱에 봉인을 추가",
       "카드를 선택하십시오."
     ]
+  },
+  "hexamod:SealDescriptor": {
+    "TEXT": [
+      "봉인을",
+      "hexamod:봉인을. NL "
+    ]
   }
 }

@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.actions.AddToFuncAction;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -8,6 +9,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class RecursiveStrike extends AbstractBronzeCard {
 
@@ -23,6 +26,7 @@ public class RecursiveStrike extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = 2;
         tags.add(CardTags.STRIKE);
         cardsToPreview = new Strike();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("RecursiveStrike.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

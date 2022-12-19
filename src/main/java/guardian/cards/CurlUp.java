@@ -17,6 +17,8 @@ import guardian.actions.ReduceRightMostStasisAction;
 import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class CurlUp extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("CurlUp");
     public static final String NAME;
@@ -52,6 +54,7 @@ public class CurlUp extends AbstractGuardianCard {
         baseMagicNumber = magicNumber = 10;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("CurlUp.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
