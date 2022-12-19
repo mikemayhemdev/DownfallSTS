@@ -21,7 +21,7 @@
   },
   "downfall:Malfunctioning": {
     "NAME": "결함",
-    "DESCRIPTION": "휘발성. NL 내 턴 종료 시 손에 있는 모든 카드를 무작위 상태이상 카드로 변환합니다. NL 소멸."
+    "DESCRIPTION": "내 턴 종료 시 손에 있는 모든 카드를 무작위 상태이상 카드로 변환합니다. NL 소멸."
   },
   "downfall:Scatterbrained": {
     "NAME": "주의산만",
