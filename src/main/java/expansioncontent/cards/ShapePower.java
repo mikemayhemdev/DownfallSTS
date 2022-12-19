@@ -11,6 +11,8 @@ import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
 import expansioncontent.expansionContentMod;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
 import java.util.ArrayList;
 
 public class ShapePower extends AbstractExpansionCard implements OctopusCard {
@@ -23,6 +25,7 @@ public class ShapePower extends AbstractExpansionCard implements OctopusCard {
         tags.add(expansionContentMod.STUDY);
         baseMagicNumber = magicNumber = 2;
         baseBlock = block = 5;
+        loadJokeCardImage(this, "ShapePower.png");
         //partner is null until this card is played in combat
         //expansionContentMod.loadJokeCardImage(this, "PolyBeam.png");
     }

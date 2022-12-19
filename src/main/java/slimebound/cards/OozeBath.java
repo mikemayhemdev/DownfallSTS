@@ -49,6 +49,7 @@ public class OozeBath extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 6;
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "OozeBath.png");
 
 
     }

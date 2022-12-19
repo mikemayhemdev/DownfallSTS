@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Encircle extends AbstractChampCard {
 
     public final static String ID = makeID("Encircle");
@@ -23,6 +25,7 @@ public class Encircle extends AbstractChampCard {
         // tags.add(ChampMod.COMBO);
         // tags.add(ChampMod.COMBOBERSERKER);
         postInit();
+        loadJokeCardImage(this, "Encircle.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

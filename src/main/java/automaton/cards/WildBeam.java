@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
@@ -25,6 +27,7 @@ public class WildBeam extends AbstractBronzeCard {
     public WildBeam() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("WildBeam.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

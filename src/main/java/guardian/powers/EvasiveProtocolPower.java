@@ -18,7 +18,7 @@ public class EvasiveProtocolPower extends AbstractGuardianPower implements Defen
 
         this.ID = POWER_ID;
         this.owner = owner;
-        this.setImage("OffenseModePower84.png", "OffenseModePower32.png");
+        this.setImage("EvasiveProtocolPower84.png", "EvasiveProtocolPower32.png");
         this.type = POWER_TYPE;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 

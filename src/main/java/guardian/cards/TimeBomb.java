@@ -13,6 +13,8 @@ import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class TimeBomb extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("TimeBomb");
     public static final String NAME;
@@ -52,6 +54,7 @@ public class TimeBomb extends AbstractGuardianCard implements InStasisCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("TimeBomb.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,10 +1,13 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Turbo extends AbstractBronzeCard {
 
@@ -16,6 +19,7 @@ public class Turbo extends AbstractBronzeCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         this.cardsToPreview = new VoidCard();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Turbo.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

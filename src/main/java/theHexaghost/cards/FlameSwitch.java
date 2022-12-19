@@ -37,6 +37,7 @@ public class FlameSwitch extends AbstractHexaCard implements OctopusCard {
         isEthereal = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "FlameSwitch.png");
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {

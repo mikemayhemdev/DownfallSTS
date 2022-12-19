@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class Deprecate extends AbstractBronzeCard {
 
     public final static String ID = makeID("Deprecate");
@@ -21,6 +23,7 @@ public class Deprecate extends AbstractBronzeCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Deprecate.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

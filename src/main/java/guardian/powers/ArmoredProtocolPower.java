@@ -20,7 +20,7 @@ public class ArmoredProtocolPower extends AbstractGuardianPower {
 
         this.ID = POWER_ID;
         this.owner = owner;
-        this.setImage("OffenseModePower84.png", "OffenseModePower32.png");
+        this.setImage("ArmoredProtocolPower84.png", "ArmoredProtocolPower32.png");
         this.type = POWER_TYPE;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
