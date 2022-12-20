@@ -319,7 +319,7 @@
   },
   "bronze:FollowUp": {
     "NAME": "数迹追踪",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若上张打出牌为 bronze:方法 ，再打出一次。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若上张打出牌为 bronze:方法 ，本牌再打出一次。"
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
