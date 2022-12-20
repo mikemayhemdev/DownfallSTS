@@ -178,7 +178,7 @@
   "Slimebound:ItLooksTasty": {
     "NAME": "垂涎欲滴",
     "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ：获得 *掠舔 。 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ：获得 *掠舔+ 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ：获得 *掠舔 +。"
   },
   "Slimebound:AcidTongue": {
     "NAME": "黏液蔓延",
