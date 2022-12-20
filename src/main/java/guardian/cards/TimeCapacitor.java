@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class TimeCapacitor extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("TimeCapacitor");
     public static final String NAME;
@@ -45,6 +47,7 @@ public class TimeCapacitor extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("TimeCapacitor.png"));
 
     }
 

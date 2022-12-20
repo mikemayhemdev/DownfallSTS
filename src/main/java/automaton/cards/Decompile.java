@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -8,6 +9,8 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Decompile extends AbstractBronzeCard {
 
@@ -18,6 +21,7 @@ public class Decompile extends AbstractBronzeCard {
     public Decompile() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         exhaust = true;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Decompile.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

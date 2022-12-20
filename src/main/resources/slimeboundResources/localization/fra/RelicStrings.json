@@ -18,7 +18,7 @@
     "NAME": "Queue de slime",
     "FLAVOR": "Une fausse queue pour feinter les ennemis durant le combat, totalement recouverte de slime.",
     "DESCRIPTIONS": [
-      "Lorsque vous tombez à moins de #b50% de vos PV Maximum ,#yslimeboundmod:Divisez-vous en #yslimeboundmod:Slime Guerrier, et la prochaine fois que vous vous prenez des dégâts, votre slime en tête est #yslimeboundmod:Absorbé à la place. (ne marche qu'une fois par combat).",
+      "Lorsque vous tombez à moins de #b50% de vos PV Maximum, #yslimeboundmod:Divisez-vous en #yslimeboundmod:Slime Guerrier , et la prochaine fois que vous vous prenez des dégâts, votre slime en tête est #yslimeboundmod:Absorbé à la place. (ne marche qu'une fois par combat).",
       "Cette relique a été utilisée pendant ce combat. Elle redeviendra active au prochain combat."
     ]
   },

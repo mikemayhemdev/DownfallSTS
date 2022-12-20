@@ -13,6 +13,8 @@ import guardian.GuardianMod;
 import guardian.actions.PolyBeamAction;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class PolyBeam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PolyBeam");
@@ -57,6 +59,7 @@ public class PolyBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PolyBeam.png"));
 
     }
 

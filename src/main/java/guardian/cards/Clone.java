@@ -12,6 +12,8 @@ import guardian.actions.CloneAction;
 import guardian.actions.ReduceRightMostStasisAction;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class Clone extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Clone");
     public static final String NAME;
@@ -49,6 +51,9 @@ public class Clone extends AbstractGuardianCard {
         loadGemMisc();
 
         this.exhaust = true;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Clone.png"));
+
+        
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

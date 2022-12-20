@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import theHexaghost.HexaMod;
@@ -28,6 +29,7 @@ public class SpectersWail extends AbstractHexaCard {
         isEthereal = true;
         isMultiDamage = true;
         tags.add(HexaMod.AFTERLIFE);
+        HexaMod.loadJokeCardImage(this, "SpectersWail.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

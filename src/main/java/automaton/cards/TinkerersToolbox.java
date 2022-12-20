@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -11,6 +12,8 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
 import sneckomod.SneckoMod;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 import java.util.ArrayList;
 
@@ -33,6 +36,7 @@ public class TinkerersToolbox extends AbstractBronzeCard {
         cardsList.add(new Batch());
         cardsList.add(new Decompile());
         cardsList.add(new ByteShift());
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("TinkerersToolbox.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

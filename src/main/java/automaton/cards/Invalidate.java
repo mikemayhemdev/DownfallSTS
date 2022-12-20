@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class Invalidate extends AbstractBronzeCard {
 
     public final static String ID = makeID("Invalidate");
@@ -20,6 +22,7 @@ public class Invalidate extends AbstractBronzeCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Invalidate.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

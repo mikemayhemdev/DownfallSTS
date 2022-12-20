@@ -46,6 +46,7 @@ public class LeechingTouch extends AbstractSlimeboundCard {
 
         this.baseDamage = 5;
         this.tags.add(AbstractCard.CardTags.STRIKE);
+        SlimeboundMod.loadJokeCardImage(this, "LeechingTouch.png");
 
     }
 

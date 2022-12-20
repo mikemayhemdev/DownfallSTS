@@ -190,8 +190,8 @@
   },
   "Guardian:Emergency": {
     "NAME": "긴급 상황",
-    "DESCRIPTION": "guardianmod:정지장에 있는 카드 1장을 가져올 때까지 guardianmod:가속합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "guardianmod:정지장에 있는 카드 1장을 가져올 때까지 guardianmod:가속합니다."
+    "DESCRIPTION": "guardianmod:정지장에 있는 카드 1장이 벗어날 때까지 guardianmod:가속합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "guardianmod:정지장에 있는 카드 1장이 벗어날 때까지 guardianmod:가속합니다."
   },
   "Guardian:Clone": {
     "NAME": "복제",
