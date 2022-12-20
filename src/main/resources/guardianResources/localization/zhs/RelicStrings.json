@@ -46,7 +46,7 @@
     "NAME": "机械宝典",
     "FLAVOR": "尖塔最早原型的设计和图表。",
     "DESCRIPTIONS": [
-      "回合结束时如果没有被 #y凝滞 的牌，从 #b3 张随机牌中选择 #b1 张牌 #yguardianmod:凝滞 。"
+      "回合结束时若无被 #y凝滞 的牌，从 #b3 张随机牌中选择 #b1 张牌 #yguardianmod:凝滞 。"
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
