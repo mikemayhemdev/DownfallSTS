@@ -3,6 +3,7 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class Strike extends AbstractSneckoCard {
 
@@ -18,6 +19,7 @@ public class Strike extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
+        SneckoMod.loadJokeCardImage(this, "Strike.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

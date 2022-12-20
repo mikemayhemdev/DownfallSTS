@@ -55,6 +55,7 @@ public class MegaLick extends AbstractLickCard {
 
         this.slimed = this.baseSlimed = 4;
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "MegaLick.png");
 
 
     }
