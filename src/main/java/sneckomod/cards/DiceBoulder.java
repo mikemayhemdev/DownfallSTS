@@ -17,6 +17,7 @@ public class DiceBoulder extends AbstractSneckoCard {
         baseDamage = 27;
         baseMagicNumber = magicNumber = 1;
         tags.add(SneckoMod.RNG);
+        SneckoMod.loadJokeCardImage(this, "DiceBoulder.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
