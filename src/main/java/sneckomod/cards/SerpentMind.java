@@ -20,6 +20,7 @@ public class SerpentMind extends AbstractSneckoCard {
 
         tags.add(BaseModCardTags.FORM);
         tags.add(SneckoMod.SNEKPROOF);
+        SneckoMod.loadJokeCardImage(this, "SerpentMind.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

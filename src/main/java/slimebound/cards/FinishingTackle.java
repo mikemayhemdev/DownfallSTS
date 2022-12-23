@@ -49,6 +49,7 @@ public class FinishingTackle extends AbstractTackleCard {
         this.baseDamage = 11;
         baseSelfDamage = this.selfDamage = 3;
         baseMagicNumber = magicNumber = 2;
+        SlimeboundMod.loadJokeCardImage(this, "FinishingTackle.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

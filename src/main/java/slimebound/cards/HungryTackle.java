@@ -51,6 +51,7 @@ public class HungryTackle extends AbstractTackleCard {
 
 
         this.magicNumber = this.baseMagicNumber = 1;
+        SlimeboundMod.loadJokeCardImage(this, "HungryTackle.png");
 
     }
 

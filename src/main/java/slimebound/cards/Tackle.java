@@ -41,6 +41,7 @@ public class Tackle extends AbstractTackleCard {
         tags.add(SlimeboundMod.TACKLE);
         this.baseDamage = 12;
         baseSelfDamage = this.selfDamage = 3;
+        SlimeboundMod.loadJokeCardImage(this, "Tackle.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

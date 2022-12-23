@@ -19,6 +19,7 @@ public class Rotation extends AbstractSneckoCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 0;
         tags.add(SneckoMod.SNEKPROOF);
+        SneckoMod.loadJokeCardImage(this, "Rotation.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
