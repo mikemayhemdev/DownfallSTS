@@ -21,6 +21,7 @@ public class IronFang extends AbstractSneckoCard {
         baseMagicNumber = magicNumber = 3;
         baseSilly = silly = 3;
         tags.add(SneckoMod.RNG);
+        SneckoMod.loadJokeCardImage(this, "IronFang.png");
     }
 
     @Override
