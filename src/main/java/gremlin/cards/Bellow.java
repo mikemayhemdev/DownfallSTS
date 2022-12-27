@@ -37,6 +37,7 @@ public class Bellow extends AbstractGremlinCard {
         this.exhaust = true;
         this.tags.add(NOB_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Bellow.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

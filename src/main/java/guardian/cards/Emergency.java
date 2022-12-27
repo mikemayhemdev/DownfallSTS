@@ -13,6 +13,8 @@ import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 import sneckomod.SneckoMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class Emergency extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Emergency");
     public static final String NAME;
@@ -45,6 +47,7 @@ public class Emergency extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Emergency.png"));
        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
