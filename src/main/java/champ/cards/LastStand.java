@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -23,6 +25,7 @@ public class LastStand extends AbstractChampCard {
     public LastStand() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 6;
+        loadJokeCardImage(this, "LastStand.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
