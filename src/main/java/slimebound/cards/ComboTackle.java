@@ -45,6 +45,7 @@ public class ComboTackle extends AbstractSlimeboundCard {
         this.baseDamage = 11;
         this.baseSelfDamage = this.selfDamage = 3;
         this.magicNumber = this.baseMagicNumber = 2;
+        SlimeboundMod.loadJokeCardImage(this, "ComboTackle.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class RageSigil extends AbstractChampCard {
 
     public final static String ID = makeID("RageSigil");
@@ -14,6 +16,7 @@ public class RageSigil extends AbstractChampCard {
         baseBlock = 2;
         baseMagicNumber = magicNumber = 3;
         postInit();
+        loadJokeCardImage(this, "RageSigil.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theHexaghost.actions.EmbersAction;
@@ -18,6 +19,7 @@ public class RainOfEmbers extends AbstractHexaCard {
         baseDamage = 6;
         baseBurn = burn = 6;
         baseMagicNumber = magicNumber = 0;
+        HexaMod.loadJokeCardImage(this, "RainOfEmbers.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

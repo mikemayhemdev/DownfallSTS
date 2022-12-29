@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
@@ -24,6 +25,7 @@ public class SnekBeam extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         isMultiDamage = true;
         this.exhaust = true;
+        SneckoMod.loadJokeCardImage(this, "SnekBeam.png");
     }
 
     public static int countCards() {

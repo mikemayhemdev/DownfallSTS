@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class Defend extends AbstractSneckoCard {
 
@@ -16,6 +17,7 @@ public class Defend extends AbstractSneckoCard {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseBlock = BLOCK;
         tags.add(CardTags.STARTER_DEFEND);
+        SneckoMod.loadJokeCardImage(this, "Defend.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -53,6 +53,7 @@ public class ViciousTackle extends AbstractSlimeboundCard {
 
         this.baseDamage = 16;
         this.baseSelfDamage = this.selfDamage = 3;
+        SlimeboundMod.loadJokeCardImage(this, "ViciousTackle.png");
 
     }
 

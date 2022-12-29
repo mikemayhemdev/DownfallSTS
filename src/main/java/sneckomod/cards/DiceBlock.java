@@ -18,6 +18,7 @@ public class DiceBlock extends AbstractSneckoCard {
         baseBlock = 12;
         baseMagicNumber = magicNumber = 8;
         tags.add(SneckoMod.RNG);
+        SneckoMod.loadJokeCardImage(this, "DiceBlock.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

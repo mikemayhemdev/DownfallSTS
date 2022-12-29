@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PotionSlot;
 
@@ -17,6 +18,7 @@ public class MixItUp extends AbstractSneckoCard {
         this.magicNumber = this.baseMagicNumber = 2;
         exhaust = true;
         tags.add(CardTags.HEALING);
+        SneckoMod.loadJokeCardImage(this, "MixItUp.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

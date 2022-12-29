@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class VampiricStrike extends AbstractChampCard {
 
     public final static String ID = makeID("VampiricStrike");
@@ -22,6 +24,7 @@ public class VampiricStrike extends AbstractChampCard {
       //  tags.add(ChampMod.COMBOBERSERKER);
       //  tags.add(ChampMod.COMBODEFENSIVE);
         postInit();
+        loadJokeCardImage(this, "VampiricStrike.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

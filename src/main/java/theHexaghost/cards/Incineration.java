@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import gremlin.actions.PseudoDamageRandomEnemyAction;
 import theHexaghost.powers.BurnPower;
 
@@ -18,6 +19,7 @@ public class Incineration extends AbstractHexaCard {
         baseDamage = 4;
         baseBurn = burn = 4;
         baseMagicNumber = magicNumber = 3;
+        HexaMod.loadJokeCardImage(this, "Incineration.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

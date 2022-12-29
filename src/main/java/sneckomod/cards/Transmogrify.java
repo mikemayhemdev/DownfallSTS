@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Circlet;
 import downfall.cards.OctoChoiceCard;
@@ -26,6 +27,7 @@ public class Transmogrify extends AbstractSneckoCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         tags.add(CardTags.HEALING);
+        SneckoMod.loadJokeCardImage(this, "Transmogrify.png");
     }
 
     public static AbstractRelic returnTrueRandomScreenlessRelic(AbstractRelic.RelicTier tier) {

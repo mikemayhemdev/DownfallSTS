@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import expansioncontent.expansionContentMod;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
 public class GuardianWhirl extends AbstractExpansionCard {
     public final static String ID = makeID("GuardianWhirl");
 
@@ -24,6 +26,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
         baseDamage = DAMAGE;
         this.isMultiDamage = true;
         this.exhaust = true;
+        loadJokeCardImage(this, "GuardianWhirl.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

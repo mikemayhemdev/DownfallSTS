@@ -52,6 +52,7 @@ public class GoopTackle extends AbstractSlimeboundCard {
 
         this.baseDamage = 12;
         baseSelfDamage = this.selfDamage = 3;
+        SlimeboundMod.loadJokeCardImage(this, "GoopTackle.png");
 
 
     }
