@@ -66,7 +66,7 @@
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "史莱姆乱战",
-    "DESCRIPTION": "打出抽牌堆顶部的牌。 NL 每有一只史莱姆， NL 再打出一次。 NL 消耗 。"
+    "DESCRIPTION": "打出抽牌堆顶部的牌。 NL 每有一只史莱姆， NL 再打出一张。 NL 消耗 。"
   },
   "Slimebound:SpikyOuterGoop": {
     "NAME": "黏液装甲",
@@ -138,8 +138,8 @@
   },
   "Slimebound:MassRepurpose": {
     "NAME": "回炉重造",
-    "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL slimeboundmod:分裂 等量 slimeboundmod:专家史莱姆 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL slimeboundmod:分裂 等量 slimeboundmod:专家史莱姆 。 NL slimeboundmod:命令 。 NL 消耗 。"
+    "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆， NL slimeboundmod:分裂 等量 slimeboundmod:专家史莱姆 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:吸收 所有史莱姆， NL slimeboundmod:分裂 等量 slimeboundmod:专家史莱姆 。 NL slimeboundmod:命令 。 NL 消耗 。"
   },
   "Slimebound:Lick": {
     "NAME": "掠舔",
@@ -178,7 +178,7 @@
   "Slimebound:ItLooksTasty": {
     "NAME": "垂涎欲滴",
     "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ：获得 *掠舔 。 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ：获得 *掠舔+ 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ：获得 *掠舔 +。"
   },
   "Slimebound:AcidTongue": {
     "NAME": "黏液蔓延",
@@ -298,11 +298,11 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "分而治之",
-    "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每有一只就随机造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆， NL 每有一只就随机造成 !D! 点伤害。 NL 消耗 。"
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "统而御之",
-    "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每有一只就获得 !B! 点 格挡 与1层 bronze:残影 。 NL 消耗 。"
+    "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆， NL 每有一只就获得 !B! 点 格挡 与1层 bronze:残影 。 NL 消耗 。"
   },
   "Slimebound:SplitBruiser": {
     "NAME": "分裂：好斗",
@@ -345,7 +345,7 @@
   },
   "Slimebound:SlimeSlap": {
     "NAME": "黏液斩击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 不会移除 slimeboundmod:黏液 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 不移除 slimeboundmod:黏液 。"
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "一二连击",
