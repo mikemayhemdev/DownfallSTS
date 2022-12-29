@@ -122,7 +122,7 @@
   },
   "Gremlin:FeelTheAudience": {
     "NAME": "察言观色",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每有一名意图攻击的敌人，获得 !M! 层 gremlin:法力 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每有敌人意图攻击， NL 获得 !M! 层 gremlin:法力 。"
   },
   "Gremlin:FightChoice": {
     "NAME": "战斗",
@@ -146,12 +146,12 @@
     ]
   },
   "Gremlin:FollowThrough": {
-    "NAME": "坚持到底",
+    "NAME": "永远别放弃",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 guardianmod:临时 力量 。"
   },
   "Gremlin:Fury": {
     "NAME": "狂怒",
-    "DESCRIPTION": "造成 !D! 点伤害三次。 NL 每有2点 力量 ，本牌耗能减少 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害三次。 NL 每有2点 力量 ， NL 本牌耗能减1。"
   },
   "Gremlin:Glimmer": {
     "NAME": "黯光",
@@ -212,7 +212,7 @@
   },
   "Gremlin:IrksomeBlow": {
     "NAME": "烦扰一击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 力量 在本牌发挥 !M! 倍效果 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 力量 本次发挥 !M! 倍效果。"
   },
   "Gremlin:Irritability": {
     "NAME": "易怒",
@@ -223,7 +223,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有负面效果， NL 获得 !M! 层 临时生命 。"
   },
   "Gremlin:Kablamo": {
-    "NAME": "强无敌！",
+    "NAME": "轰天响",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 本牌不移除 gremlin:法力 。"
   },
   "Gremlin:LeaderChoice": {
@@ -254,7 +254,7 @@
   },
   "Gremlin:Nob": {
     "NAME": "大块头",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 临时生命 用完之前， gremlin:地精大块头 将强制 NL gremlin:领队 。"
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 临时生命 用完之前， NL gremlin:大块头 将强制 gremlin:领队 。"
   },
   "Gremlin:NobChoice": {
     "NAME": "做选择",
@@ -278,8 +278,8 @@
   },
   "Gremlin:PinNeedle": {
     "NAME": "缝衣针",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺 加入抽牌堆 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺+ 加入抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺 加入抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺 +加入抽牌堆。 NL 消耗 。"
   },
   "Gremlin:Pinprick": {
     "NAME": "针刺",
@@ -330,7 +330,7 @@
   },
   "Gremlin:Scatter": {
     "NAME": "散开！",
-    "DESCRIPTION": "下次失去生命时，免疫伤害并随机 gremlin:切换 。 NL 消耗 。"
+    "DESCRIPTION": "下次失去生命时， NL 免疫伤害并随机 gremlin:切换 。 NL 消耗 。"
   },
   "Gremlin:SecondVolley": {
     "NAME": "余波",
@@ -348,7 +348,7 @@
   },
   "Gremlin:ShankStone": {
     "NAME": "刀石",
-    "DESCRIPTION": " 不能被打出 。 NL 抽到时，获得 !M! 张 *小刀 。",
+    "DESCRIPTION": " 不能被打出 。 NL 抽到时， NL 获得 !M! 张 *小刀 。",
     "EXTENDED_DESCRIPTION": [
       "我不能打出这张牌。"
     ]
@@ -411,7 +411,7 @@
   },
   "Gremlin:Tricksy": {
     "NAME": "狡猾",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 丢弃其中非 *攻击 牌。 NL gremlin:切换 至 gremlin:卑鄙地精 。"
+    "DESCRIPTION": "抽 !M! 张牌， NL 丢弃其中非 *攻击 牌。 NL gremlin:切换 至 gremlin:卑鄙地精 。"
   },
   "Gremlin:TwistTheKnife": {
     "NAME": "捻刀",
