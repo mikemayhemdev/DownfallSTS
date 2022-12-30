@@ -92,7 +92,7 @@
   "hexamod:StopFromAdvancingPower": {
     "NAME": "此刻",
     "DESCRIPTIONS": [
-      "你的回合结束时不会自动 #y步进 。"
+      "你的回合结束时，不会自动跳至下枚鬼火。"
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
