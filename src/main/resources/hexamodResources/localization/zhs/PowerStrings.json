@@ -96,9 +96,9 @@
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
-    "NAME": "鬼火屏障",
+    "NAME": "亡魂屏障",
     "DESCRIPTIONS": [
-      "每当受到攻击时，给予攻击者 #b",
+      "本回合每当你受到攻击，给予攻击者 #b",
       " 层 #y灼魂 。"
     ]
   },
