@@ -84,7 +84,7 @@
   },
   "hermit:Malice": {
     "NAME": "怨恨",
-    "DESCRIPTION": "消耗 一張手牌。 NL 造成 !D! 點傷害。 NL 若 消耗 一張 詛咒 ， NL 變為全體攻擊。"
+    "DESCRIPTION": "消耗 一張手牌。 NL 造成 !D! 點傷害。 NL 若 消耗 一張 詛咒 ， NL 變為群體攻擊。"
   },
   "hermit:Deadeye": {
     "NAME": "死神之眼",
@@ -108,7 +108,7 @@
   },
   "hermit:Roulette": {
     "NAME": "輪轉",
-    "DESCRIPTION": "隨機造成 !D! 點傷害。 NL 丟棄其他手牌。 NL 抽等量的牌。"
+    "DESCRIPTION": "隨機造成 !D! 點傷害。 NL 丟棄其他手牌， NL 抽等量的牌。"
   },
   "hermit:Midnight": {
     "NAME": "午夜時分",
@@ -191,8 +191,8 @@
   },
   "hermit:Combo": {
     "NAME": "連擊",
-    "DESCRIPTION": "每回合首次 hermit:精準 時， NL 將其返回手牌。",
-    "UPGRADE_DESCRIPTION": "每回合前 !M! 次 hermit:精準 時， NL 將其返回手牌。"
+    "DESCRIPTION": "每回合首次 hermit:精準 時， NL 將該 *精準 牌返回手牌。",
+    "UPGRADE_DESCRIPTION": "每回合前 !M! 次 hermit:精準 時， NL 將 *精準 牌返回手牌。"
   },
   "hermit:BigShot": {
     "NAME": "冒煙槍管",
@@ -243,7 +243,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "孤狼",
-    "DESCRIPTION": "選擇一張手牌。 NL 本回合其下次耗能為0。 NL 丟棄其他手牌。"
+    "DESCRIPTION": "選擇一張手牌， NL 本回合其下次耗能為0。 NL 丟棄其他手牌。"
   },
   "hermit:HighNoon": {
     "NAME": "午時已到",
