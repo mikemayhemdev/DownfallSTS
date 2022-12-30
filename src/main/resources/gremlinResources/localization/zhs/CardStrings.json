@@ -80,7 +80,7 @@
   },
   "Gremlin:Defend": {
     "NAME": "防御",
-    "DESCRIPTION": "获得 !B! 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "Gremlin:Duplicate": {
     "NAME": "复刻",
@@ -262,8 +262,8 @@
   },
   "Gremlin:PartyStick": {
     "NAME": "荧光棒",
-    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 本牌在手时 gremlin:切换 就获得 [E] 。",
-    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 本牌在手时 gremlin:切换 就获得 [E] 。",
+    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 本牌在手时， NL gremlin:切换 时获得 [E] 。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 本牌在手时， NL gremlin:切换 时获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
       "任何人都不准玩荧光棒。"
     ]
@@ -279,7 +279,7 @@
   "Gremlin:PinNeedle": {
     "NAME": "缝衣针",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺 加入抽牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺 +加入抽牌堆。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺+ 加入抽牌堆。 NL 消耗 。"
   },
   "Gremlin:Pinprick": {
     "NAME": "针刺",
@@ -329,7 +329,7 @@
     "DESCRIPTION": " 虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。"
   },
   "Gremlin:Scatter": {
-    "NAME": "散开！",
+    "NAME": "散开",
     "DESCRIPTION": "下次失去生命时， NL 免疫伤害并随机 gremlin:切换 。 NL 消耗 。"
   },
   "Gremlin:SecondVolley": {
@@ -396,7 +396,7 @@
     "DESCRIPTION": "随机获得 !M! 张 *小刀 或 *守卫 。 NL 消耗 。"
   },
   "Gremlin:Tadah": {
-    "NAME": "嗒哒！",
+    "NAME": "嗒哒",
     "DESCRIPTION": "随机获得一张技能牌的 gremlin:回响 。 NL gremlin:切换 至 gremlin:地精法师 。",
     "UPGRADE_DESCRIPTION": "随机获得一张技能牌的 gremlin:回响 。 NL 其能耗减1。 NL gremlin:切换 至 gremlin:地精法师 。"
   },
