@@ -105,7 +105,7 @@
   "hexamod:GiftsFromTheDeadPower": {
     "NAME": "深处馈赠",
     "DESCRIPTIONS": [
-      "你的回合开始时， #y取回 随机 #b",
+      "你的回合开始时，随机 #y取回 #b",
       " 张 #y阴世",
       " 牌。",
       " 牌。"
