@@ -120,7 +120,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "查找策略",
-    "DESCRIPTION": "隨機獲得4張 slimeboundmod:沖撞 牌。 NL 本場戰鬥其耗能減1。 NL 消耗 。"
+    "DESCRIPTION": "隨機獲得4張 slimeboundmod:衝撞 牌。 NL 本場戰鬥其耗能減1。 NL 消耗 。"
   },
   "Slimebound:Recycling": {
     "NAME": "循環再生",
@@ -134,7 +134,7 @@
   },
   "Slimebound:RollThrough": {
     "NAME": "翻滾碾壓",
-    "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 NL 接下來 !M! 張 slimeboundmod:沖撞 牌不會使你受到傷害。"
+    "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 NL 接下來 !M! 張 slimeboundmod:衝撞 牌不會使你受到傷害。"
   },
   "Slimebound:MassRepurpose": {
     "NAME": "回爐重造",
@@ -206,12 +206,12 @@
     "DESCRIPTION": "失去1個史萊姆欄位。 NL 獲得 !M! 點 力量 。 NL 獲得 !M! 點 敏捷 。"
   },
   "Slimebound:HungryTackle": {
-    "NAME": "饑餓沖撞",
+    "NAME": "饑餓衝撞",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL 隨機 expansioncontent:發掘 1張 slimeboundmod:舔舔 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL 隨機 expansioncontent:發掘 2張 slimeboundmod:舔舔 。"
   },
   "Slimebound:FinishingTackle": {
-    "NAME": "開幕沖撞",
+    "NAME": "開幕衝撞",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL slimeboundmod:吞食黏液 ： NL 給予 !M! 層 易傷 。"
   },
   "Slimebound:LivingWall": {
@@ -219,17 +219,17 @@
     "DESCRIPTION": "獲得 !B! 格擋 。 NL 本回合被攻擊時， NL 給予對方 !slime! 層 slimeboundmod:黏液 。"
   },
   "Slimebound:ComboTackle": {
-    "NAME": "長矛沖撞",
+    "NAME": "長矛衝撞",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL 抽 !M! 張牌。"
   },
   "Slimebound:Tackle": {
-    "NAME": "沖撞",
+    "NAME": "衝撞",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。"
   },
   "Slimebound:GoopTackle": {
-    "NAME": "連續沖撞",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL 隨機獲得1張 slimeboundmod:沖撞 牌。 NL 本回合其耗能為0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL 隨機獲得1張 slimeboundmod:沖撞 牌+。 NL 本回合其耗能為0。"
+    "NAME": "連續衝撞",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL 隨機獲得1張 slimeboundmod:衝撞 牌。 NL 本回合其耗能為0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL 隨機獲得1張 slimeboundmod:衝撞 牌+。 NL 本回合其耗能為0。"
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "腐蝕噴吐",
@@ -237,16 +237,16 @@
   },
   "Slimebound:Chomp": {
     "NAME": "啃噬",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 隨機將手中一張 slimeboundmod:沖撞 牌的耗能本回合變為0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 隨機將手中一張 slimeboundmod:沖撞 牌的耗能變為0。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 隨機將手中一張 slimeboundmod:衝撞 牌的耗能本回合變為0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 隨機將手中一張 slimeboundmod:衝撞 牌的耗能變為0。"
   },
   "Slimebound:DouseInSlime": {
     "NAME": "浸入黏液",
     "DESCRIPTION": "給予 !slime! 層 slimeboundmod:黏液 。 NL 下次對該目標的攻擊不會移除 slimeboundmod:黏液 。"
   },
   "Slimebound:FlameTackle": {
-    "NAME": "烈焰沖撞",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL 本場戰鬥 slimeboundmod:沖撞 牌的傷害增加 !M! 點。"
+    "NAME": "烈焰衝撞",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL 本場戰鬥 slimeboundmod:衝撞 牌的傷害增加 !M! 點。"
   },
   "Slimebound:RainOfGoop": {
     "NAME": "黏液雨",
@@ -262,7 +262,7 @@
     "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 NL 斬殺 時， NL 獲得 !M! 點最大生命。 NL 消耗 。"
   },
   "Slimebound:ViciousTackle": {
-    "NAME": "狂暴沖撞",
+    "NAME": "狂暴衝撞",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL 本次 slimeboundmod:黏液 提供的額外傷害翻倍。",
     "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL 本次 slimeboundmod:黏液 提供的額外傷害與回復翻倍。"
   },
@@ -336,7 +336,7 @@
   },
   "Slimebound:BestDefense": {
     "NAME": "魯莽",
-    "DESCRIPTION": "slimeboundmod:沖撞 牌： NL 額外造成 !M! 點傷害。 NL 使你額外受到1點傷害。"
+    "DESCRIPTION": "slimeboundmod:衝撞 牌： NL 額外造成 !M! 點傷害。 NL 使你額外受到1點傷害。"
   },
   "Slimebound:Darklings": {
     "NAME": "黝黑二人組",
@@ -353,7 +353,7 @@
     "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL slimeboundmod:命令 。 NL slimeboundmod:分裂 時， NL 本牌從棄牌堆返回手牌。"
   },
   "Slimebound:ForwardTackle": {
-    "NAME": "進軍沖撞",
+    "NAME": "進軍衝撞",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL slimeboundmod:命令 兩次。",
     "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 受到 !SlimeboundSelfharm! 點傷害。 NL slimeboundmod:命令 三次。"
   },
