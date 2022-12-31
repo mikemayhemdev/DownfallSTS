@@ -28,6 +28,7 @@ public class EnhancePower extends AbstractPower implements CloneablePowerInterfa
         this.owner = AbstractDungeon.player;
         this.amount = amount;
         this.type = PowerType.BUFF;
+        this.canGoNegative = true;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
@@ -36,15 +37,31 @@ public class EnhancePower extends AbstractPower implements CloneablePowerInterfa
     }
 
     public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
         this.amount += stackAmount;// 39
         if (this.amount == 0) {// 41
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));// 42
         }
     }// 52
 
+    public void reducePower(int reduceAmount) {
+        this.fontScale = 8.0F;
+        this.amount -= reduceAmount;
+        if (this.amount == 0) {
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+        }
+    }
+
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+
+        if(this.amount<0){
+            this.type = PowerType.DEBUFF;
+            description = DESCRIPTIONS[2] + amount*(-1) + DESCRIPTIONS[1];
+        }else{
+            this.type = PowerType.BUFF;
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        }
     }
 
     @Override
