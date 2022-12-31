@@ -98,7 +98,7 @@
   "hexamod:GhostFlameBarrierPower": {
     "NAME": "Ghostflame Barrier",
     "DESCRIPTIONS": [
-      "When attacked, applies #b",
+      "When attacked this turn, applies #b",
       " #ySoulburn to the attacker."
     ]
   },
