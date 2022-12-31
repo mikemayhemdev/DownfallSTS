@@ -122,7 +122,7 @@
   },
   "bronze:ClassDefault": {
     "NAME": "Class Default",
-    "DESCRIPTION": "Next !M! times you create a Function, bronze:Encode a copy of current card in first slot."
+    "DESCRIPTION": "Next !M! times you create a Function, bronze:Encode a copy of current card in the first slot."
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",
