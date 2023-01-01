@@ -1,6 +1,7 @@
 package awakenedOne.ui;
 
 import awakenedOne.powers.AwakenedPower;
+import awakenedOne.powers.OnAwakenPower;
 import awakenedOne.relics.OnAwakenRelic;
 import awakenedOne.util.ImageHelper;
 import awakenedOne.util.TexLoader;
@@ -8,6 +9,7 @@ import basemod.ClickableUIElement;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
@@ -46,11 +48,20 @@ public class AwakenButton extends ClickableUIElement {
         if (canBeClicked() && EnergyPanel.totalCount > 0) {
             int amount = EnergyPanel.totalCount;
             AbstractDungeon.player.energy.use(amount);
-            applyToSelf(new AwakenedPower(amount));
-            for (AbstractRelic r : AbstractDungeon.player.relics) {
-                if (r instanceof OnAwakenRelic) {
-                    ((OnAwakenRelic) r).onAwaken(amount);
-                }
+            awaken(amount);
+        }
+    }
+
+    public static void awaken(int amount) {
+        applyToSelf(new AwakenedPower(amount));
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r instanceof OnAwakenRelic) {
+                ((OnAwakenRelic) r).onAwaken(amount);
+            }
+        }
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof OnAwakenPower) {
+                ((OnAwakenPower) p).onAwaken(amount);
             }
         }
     }

@@ -16,9 +16,63 @@
   },
   "awakened:InResponsePower": {
     "NAME": "In Response...",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "Whenever you play a Spell, gain #b",
       " #yBlock."
+    ]
+  },
+  "awakened:ToxinWingPower": {
+    "NAME": "Toxin Wing",
+    "DESCRIPTIONS": [
+      "#yFeathers apply #b",
+      " #yPoison."
+    ]
+  },
+  "awakened:AboveItAllPower": {
+    "NAME": "Above It All",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yAwakened, also gain #b",
+      " #yBlock."
+    ]
+  },
+  "awakened:CrowsCallPower": {
+    "NAME": "Crow's Call",
+    "DESCRIPTIONS": [
+      "At the end of your turn, ALL enemies lose #b",
+      " HP for each #rCurse or #yStatus card in your hand."
+    ]
+  },
+  "awakened:FromNothingPower": {
+    "NAME": "From Nothing",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " random cost #b0 card into your hand.",
+      " random cost #b0 cards into your hand."
+    ]
+  },
+  "awakened:BigSpenderPower": {
+    "NAME": "Big Spender",
+    "DESCRIPTIONS": [
+      "The first time you play a card that costs more than #b1 each turn, gain [E] . NL ",
+      "The first #b",
+      " times you play a card that costs more than #b1 each turn, gain [E] . NL ",
+      " Activations left this turn: #b",
+      "."
+    ]
+  },
+  "awakened:ThoughthsieldPower": {
+    "NAME": "Thoughtshield",
+    "DESCRIPTIONS": [
+      "Enemies can't create cards this turn.",
+      "Enemies can't create cards for the next #b",
+      " turns."
+    ]
+  },
+  "awakened:EnemyHexedPower": {
+    "NAME": "Hexed",
+    "DESCRIPTIONS": [
+      "Whenever you play a non-Attack card, loses #b",
+      " HP."
     ]
   }
 }

@@ -93,7 +93,7 @@
   },
   "awakened:MiracleWorker": {
     "NAME": "Miracle Worker",
-    "DESCRIPTION": "Gain !B! Block. NL Put a *Miracle on top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Put a *Miracle on top of your draw pile.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put a *Miracle+ on top of your draw pile."
   },
   "awakened:Intensify": {
@@ -160,5 +160,67 @@
   "awakened:BookOfTricks": {
     "NAME": "Book of Tricks",
     "DESCRIPTION": "Gain !M! Plated Armor. NL [awakened:icon] 1: And !awakened:m2! Artifact. NL [awakened:icon] 3: And !awakened:m3! Thorns."
+  },
+  "awakened:ToxinWing": {
+    "NAME": "Toxin Wing",
+    "DESCRIPTION": "awakened:Flying. NL *Feathers apply !M! Poison."
+  },
+  "awakened:AboveItAll": {
+    "NAME": "Above It All",
+    "DESCRIPTION": "Whenever you gain [awakened:icon] , also gain !M! Block."
+  },
+  "awakened:CrowsCall": {
+    "NAME": "Crow's Call",
+    "DESCRIPTION": "At the end of your turn, ALL enemies lose !M! HP for each Curse or Status card in your hand."
+  },
+  "awakened:StudyGigantify": {
+    "NAME": "Study Gigantify",
+    "DESCRIPTION": "Gain !M! Strength and Dexterity. NL Add a *Greater *Gigantify to your Spells."
+  },
+  "awakened:FromNothing": {
+    "NAME": "From Nothing",
+    "DESCRIPTION": "At the start of your turn, add a random cost 0 card into your hand."
+  },
+  "awakened:BigSpender": {
+    "NAME": "Big Spender",
+    "DESCRIPTION": "The first time you play a card that costs more than 1 each turn, gain [E] .",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you play a card that costs more than 1 each turn, gain [E] ."
+  },
+  "awakened:Flourish": {
+    "NAME": "Flourish",
+    "DESCRIPTION": "[awakened:icon] 2: Draw !M! cards."
+  },
+  "awakened:CoolMagnet": {
+    "NAME": "Magnetic Personality",
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Return the lowest cost card from your discard pile to your hand."
+  },
+  "awakened:Thoughtshield": {
+    "NAME": "Thoughtshield",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! [awakened:icon] . NL Enemies can't create cards this turn."
+  },
+  "awakened:Curiosity": {
+    "NAME": "Curiosity",
+    "DESCRIPTION": "If the enemy doesn't intend to attack, gain !M! Strength."
+  },
+  "awakened:Hex": {
+    "NAME": "Hex",
+    "DESCRIPTION": "Apply !M! Weak. NL Whenever you play a non-Attack card, enemy loses !awakened:m2! HP. NL Exhaust."
+  },
+  "awakened:DamperWave": {
+    "NAME": "Damper Wave",
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL ALL enemies lose HP equal to their Weak."
+  },
+  "awakened:PrimedCasting": {
+    "NAME": "Primed Casting",
+    "DESCRIPTIONS": "Gain !B! Block. NL awakened:Conjure !M!. NL Upgrade the Conjured Spell."
+  },
+  "awakened:LifeLeech": {
+    "NAME": "Life Leech",
+    "DESCRIPTIONS": "Enemy loses !M! Strength this turn. NL [awakened:icon] 2: Gain that same Strength this turn."
+  },
+  "awakened:Beacon": {
+    "NAME": "Beacon",
+    "DESCRIPTION": "Unplayable. NL Startup: Add a *Miracle into your hand.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Unplayable. NL Startup: Add a *Miracle into your hand."
   }
 }
