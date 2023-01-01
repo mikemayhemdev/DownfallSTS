@@ -1,146 +1,17 @@
 {
-  "bronze:Cloning": {
-    "NAME": "Merge",
+  "awakened:AwakenedPower": {
+    "NAME": "Awakened",
     "DESCRIPTIONS": [
-      "The next time you #yEncode a card, #yEncode an extra copy of it.",
-      "The next time you #yEncode a card, #yEncode #b",
-      " extra copies of it."
+      "You are currently at #yAwakened #b",
+      "."
     ]
   },
-  "bronze:Default": {
-    "NAME": "Class Default",
+  "awakened:IntensifyPower": {
+    "NAME": "Intensify",
     "DESCRIPTIONS": [
-      "Next time you create a Function, #yEncode a copy of current card in the first slot.",
-      "Next #b",
-      " times you create a Function, #yEncode a copy of current card in the first slot."
-    ]
-  },
-  "bronze:Feature": {
-    "NAME": "It's A Feature",
-    "DESCRIPTIONS": [
-      "Whenever you draw a #rCurse or #yStatus card, gain #b",
-      " temporary #yStrength and #b",
-      " temporary #yDexterity."
-    ]
-  },
-  "bronze:InfiniteBeams": {
-    "NAME": "Infinite Beams",
-    "DESCRIPTIONS": [
-      "At the start of your turn, Gain #b1 #yMinor #yBeam.",
-      "At the start of your turn, Gain #b1 #yMinor #yBeam+.",
-      "At the start of your turn, gain #b",
-      " #yMinor #yBeams.",
-      "At the start of your turn, gain #b",
-      " #yMinor #yBeam+s."
-    ]
-  },
-  "bronze:Optimize": {
-    "NAME": "Optimized",
-    "DESCRIPTIONS": [
-      "#yUpgrade the next #Upgradable card you #yEncode.",
-      "#yUpgrade the next #b",
-      " #Upgradable cards you #yEncode."
-    ]
-  },
-  "bronze:MaxOutput": {
-    "NAME": "Max Output",
-    "DESCRIPTIONS": [
-      "Draw #b1 additional card and add #b1 #yDazed into your draw pile each turn.",
-      "Draw #b",
-      " additional cards and add #b",
-      " #yDazed into your draw pile each turn."
-    ]
-  },
-  "bronze:Return": {
-    "NAME": "Returning",
-    "DESCRIPTIONS": [
-      "At the start of your next turn, gain [E] and draw #b1 card.",
-      "At the start of your next #b",
-      " turns, gain [E] and draw #b1 card."
-    ]
-  },
-  "bronze:Library": {
-    "NAME": "Library",
-    "DESCRIPTIONS": [
-      "At the start of your turn, gain a random card with #yEncode, it costs #b0 until played.",
-      "At the start of your turn, gain #b",
-      " random cards with #yEncode, they cost #b0 until played."
-    ]
-  },
-  "bronze:LibraryMod": {
-    "NAME": "External Library",
-    "DESCRIPTIONS": [
-      "At the start of your turn, gain a random card with #yEncode and give it #yEthereal."
-    ]
-  },
-  "bronze:BronzeHeatsink": {
-    "NAME": "Bronze Heatsink",
-    "DESCRIPTIONS": [
-      "Whenever you play a #yFunction, draw #b1 card.",
-      "Whenever you play a #yFunction, draw #b",
-      " cards."
-    ]
-  },
-  "bronze:HardenedForm": {
-    "NAME": "Summon Orb",
-    "DESCRIPTIONS": [
-      "Whenever you create or play a Function, gain #b",
-      " #yBlock and deal #b",
-      " damage to a random enemy."
-    ]
-  },
-  "bronze:Hardcode": {
-    "NAME": "Hardcoding",
-    "DESCRIPTIONS": [
-      "Next time you create a Function, it goes into your deck instead of your hand, removing all cards used.",
+      "The next Colorless card you play this turn is played twice.",
       "The next #b",
-      " times you create a Function, it goes into your deck instead of your hand, removing all cards used."
-    ]
-  },
-  "bronze:Verify": {
-    "NAME": "Sentient Form",
-    "DESCRIPTIONS": [
-      "Whenever you draw a Function, increase all numbers on it by #b1.",
-      "Whenever you draw a Function, increase all numbers on it by #b",
-      " except for cost."
-    ]
-  },
-  "bronze:FreeFunction": {
-    "NAME": "Free Function",
-    "DESCRIPTIONS": [
-      "The next Function you create costs #b0.",
-      "The next #b",
-      " Functions you create cost #b0."
-    ]
-  },
-  "bronze:CleanCode": {
-    "NAME": "Clean Code",
-    "DESCRIPTIONS": [
-      "Remove all #yCompile #yError effects from Encoded cards. Lasts for #b1 more Function.",
-      "Remove all #yCompile #yError effects from Encoded cards. Lasts for #b",
-      " Functions."
-    ]
-  },
-  "bronze:CopyPaste": {
-    "NAME": "Copy Paste",
-    "DESCRIPTIONS": [
-      "Your next Function is played twice this turn.",
-      "Your next #b",
-      " Functions are played twice this turn."
-    ]
-  },
-  "bronze:FullRelease": {
-    "NAME": "Full Release",
-    "DESCRIPTIONS": [
-      "At the start of your turn, NL "
-    ]
-  },
-  "bronze:RemoveNextError": {
-    "NAME": "Remove Errors",
-    "DESCRIPTIONS": [
-      "Remove the next #yCompile #yError #yEncoded.",
-      "Remove the next #b",
-      " #yCompile #yErrors #yEncoded."
+      " Colorless cards you play this turn are played twice."
     ]
   }
 }

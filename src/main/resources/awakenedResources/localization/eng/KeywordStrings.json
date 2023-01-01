@@ -5,5 +5,20 @@
       "flying"
     ],
     "DESCRIPTION": "At the end of your turn, if this is in your hand, it flies back into your draw pile and leaves a #yFeather in your hand."
+  },
+  {
+    "PROPER_NAME": "Conjure",
+    "NAMES": [
+      "conjure"
+    ],
+    "DESCRIPTION": "Choose #b1 of X Spells to add into your hand. If you have none, draw #b1 card and refresh your Spells."
+  },
+  {
+    "PROPER_NAME": "[awakened:icon] Awakened",
+    "NAMES": [
+      "awaken",
+      "awakened"
+    ],
+    "DESCRIPTION": "At any time, you may spend all your [E] and gain that much #yAwakened."
   }
 ]

@@ -86,5 +86,35 @@
   "awakened:LastResort": {
     "NAME": "Last Resort",
     "DESCRIPTION": "Gain !B! Block X times. NL If X is 0, gain [E] and Exhaust."
+  },
+  "awakened:FlyAway": {
+    "NAME": "Fly Away",
+    "DESCRIPTION": "awakened:Flying. NL Gain !B! Block."
+  },
+  "awakened:MiracleWorker": {
+    "NAME": "Miracle Worker",
+    "DESCRIPTION": "Gain !B! Block. NL Put a *Miracle on top of your draw pile."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put a *Miracle+ on top of your draw pile."
+  },
+  "awakened:Intensify": {
+    "NAME": "Intensify",
+    "DESCRIPTION": "Gain !B! Block. NL Your next Colorless card this turn is played twice."
+  },
+  "awakened:SpeedySpelling": {
+    "NAME": "Quick Runes",
+    "DESCRIPTION": "awakened:Conjure 1.",
+    "UPGRADE_DESCRIPTION": "Retain. NL awakened:Conjure 1."
+  },
+  "awakened:TrashBarrier": {
+    "NAME": "Thoughtless",
+    "DESCRIPTION": "Exhaust 1 card. NL Gain !B! Block."
+  },
+  "awakened:Distract": {
+    "NAME": "Distract",
+    "DESCRIPTION": "Apply !M! Weak. NL Gain !B! Block. NL Put the next card you play this turn on top of your draw pile."
+  },
+  "awakened:PeerThrough": {
+    "NAME": "Peer Through",
+    "DESCRIPTION": "Scry !M!. NL Draw 1 card. NL It costs 0 this turn."
   }
 }
