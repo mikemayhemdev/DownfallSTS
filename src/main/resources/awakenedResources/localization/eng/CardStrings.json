@@ -34,6 +34,57 @@
     "UPGRADE_DESCRIPTION": "Next turn, NL gain [E] [E] ."
   },
   "awakened:Chromatics": {
-    "NAME": "Gain !B! Block. NL Discard your hand, then awakened:Conjure !M!."
+    "NAME": "Chromatics",
+    "DESCRIPTION": "Gain !B! Block. NL Discard your hand, then awakened:Conjure !M!."
+  },
+  "awakened:AwokenStrike": {
+    "NAME": "Awoken Strike",
+    "DESCRIPTION": "Deal !D! damage. NL [awakened:icon] 1: to ALL enemies. NL [awakened:icon] 3: twice."
+  },
+  "awakened:MagicStrike": {
+    "NAME": "Magic Strike",
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure !M!."
+  },
+  "awakened:OneForOne": {
+    "NAME": "One for One",
+    "DESCRIPTION": "Deal !D! damage. NL Put !M! random cost 0 card from your draw pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put !M! random cost 0 cards from your draw pile into your hand."
+  },
+  "awakened:MultiMagic": {
+    "NAME": "Multi-Magic",
+    "DESCRIPTION": "Deal !D! damage. NL [awakened:icon] 1: Gain !B! Block. NL [awakened:icon] 3: Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL [awakened:icon] 1: Gain !B! Block. NL [awakened:icon] 3: Draw !M! cards."
+  },
+  "awakened:StudyPyromancy": {
+    "NAME": "Study Pyromancy",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Add a *Greater *Pyromancy to your Spells."
+  },
+  "awakened:GreaterPyromancy": {
+    "NAME": "Greater Pyromancy",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Exhaust."
+  },
+  "awakened:WingAttack": {
+    "NAME": "Wing Attack",
+    "DESCRIPTION": "awakened:Flying. NL Deal !D! damage. NL Apply !M! Weak."
+  },
+  "awakened:SmartStrike": {
+    "NAME": "Smart Strike",
+    "DESCRIPTION": "Deal !D! damage. NL If your hand contains at least 5 other cards, deal !D! damage again."
+  },
+  "awakened:Shadow": {
+    "NAME": "Shadow",
+    "DESCRIPTION": "Unplayable. NL Retain. NL Cannot be removed from your deck."
+  },
+  "awakened:ShadowShock": {
+    "NAME": "Shadow Shock",
+    "DESCRIPTION": "Comes with a *Shadow. NL Gain !B! Block. NL Deal !D! damage."
+  },
+  "awakened:CursedClamor": {
+    "NAME": "Cursed Clamor",
+    "DESCRIPTION": "Deal !D! damage. NL If you still have Energy after playing this, gain [E] [E] [E] ."
+  },
+  "awakened:LastResort": {
+    "NAME": "Last Resort",
+    "DESCRIPTION": "Gain !B! Block X times. NL If X is 0, gain [E] and Exhaust."
   }
 }

@@ -10,7 +10,7 @@ import java.util.List;
 import static awakenedOne.AwakenedOneMod.makeID;
 
 public class AwakenedIcon extends AbstractCustomIcon {
-    public static final String ID = "awakened";
+    public static final String ID = "awakened:icon";
     private static AwakenedIcon singleton;
     private static final Texture iconTex = TexLoader.getTexture("awakenedResources/images/ui/AwesomeIcon.png");
 

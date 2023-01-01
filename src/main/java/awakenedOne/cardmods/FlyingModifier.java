@@ -16,6 +16,11 @@ public class FlyingModifier extends AbstractCardModifier {
     public static String MOD_ID = "awakened:Flying";
 
     @Override
+    public void onInitialApplication(AbstractCard card) {
+        card.cardsToPreview = new Feather();
+    }
+
+    @Override
     public boolean isInherent(AbstractCard card) {
         return true;
     }

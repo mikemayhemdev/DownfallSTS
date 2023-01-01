@@ -1,12 +1,14 @@
 package awakenedOne.ui;
 
 import awakenedOne.powers.AwakenedPower;
+import awakenedOne.relics.OnAwakenRelic;
 import awakenedOne.util.ImageHelper;
 import awakenedOne.util.TexLoader;
 import basemod.ClickableUIElement;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static awakenedOne.util.Wiz.applyToSelf;
@@ -24,13 +26,14 @@ public class AwakenButton extends ClickableUIElement {
     public void update() {
         super.update();
         if (hitbox.hovered) {
-            ImageHelper.tipBoxAtMousePos("#yAwesome", "Click this to spend all your [E] and become that #yAwesome."); //TODO: Loc
+            ImageHelper.tipBoxAtMousePos("#yAwaken", "Click this to spend all your [E] and gain that much Awakened."); //TODO: Loc
         }
     }
 
     @Override
     protected void onHover() {
-        this.image = tex_hovered;
+        if (canBeClicked())
+            this.image = tex_hovered;
     }
 
     @Override
@@ -44,6 +47,11 @@ public class AwakenButton extends ClickableUIElement {
             int amount = EnergyPanel.totalCount;
             AbstractDungeon.player.energy.use(amount);
             applyToSelf(new AwakenedPower(amount));
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                if (r instanceof OnAwakenRelic) {
+                    ((OnAwakenRelic) r).onAwaken(amount);
+                }
+            }
         }
     }
 

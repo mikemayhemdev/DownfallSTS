@@ -3,8 +3,12 @@ package awakenedOne;
 import automaton.cards.AbstractBronzeCard;
 import automaton.util.AutoVar;
 import automaton.util.CardFilter;
+import awakenedOne.cards.cardvars.SecondDamage;
+import awakenedOne.cards.cardvars.SecondMagicNumber;
+import awakenedOne.cards.cardvars.ThirdMagicNumber;
 import awakenedOne.relics.FinalFeather;
 import awakenedOne.ui.AwakenButton;
+import awakenedOne.ui.AwakenedIcon;
 import awakenedOne.ui.OrbitingSpells;
 import awakenedOne.util.Wiz;
 import basemod.BaseMod;
@@ -14,6 +18,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -179,7 +184,12 @@ public class AwakenedOneMod implements
 
     @Override
     public void receiveEditCards() {
-        BaseMod.addDynamicVariable(new AutoVar());
+        CustomIconHelper.addCustomIcon(AwakenedIcon.get());
+
+        BaseMod.addDynamicVariable(new SecondMagicNumber());
+        BaseMod.addDynamicVariable(new ThirdMagicNumber());
+        BaseMod.addDynamicVariable(new SecondDamage());
+
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException |
