@@ -15,6 +15,7 @@ import automaton.cards.Defend;
 import automaton.cards.Strike;
 import automaton.relics.*;
 import automaton.util.*;
+import awakenedOne.AwakenedOneMod;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -337,6 +338,8 @@ public class downfallMod implements
                 return "gremlinResources/" + path;
             case PACKAGE_HERMIT:
                 return "hermitResources/" + path;
+            case PACKAGE_AWAKENED:
+                return "awakenedResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -428,6 +431,9 @@ public class downfallMod implements
 
             //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
+
+            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_AWAKENED));
         } else {
 
             //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
@@ -528,6 +534,7 @@ public class downfallMod implements
         loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
         loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
         loadModKeywords(HermitMod.getModID(), otherPackagePaths.PACKAGE_HERMIT);
+        loadModKeywords(AwakenedOneMod.getModID(), otherPackagePaths.PACKAGE_AWAKENED);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
     }
 
@@ -1740,7 +1747,7 @@ public class downfallMod implements
         PACKAGE_AUTOMATON,
         PACKAGE_GREMLIN,
         PACKAGE_HERMIT,
-        PACKAGE_DOWNFALL;
+        PACKAGE_DOWNFALL, PACKAGE_AWAKENED;
 
         otherPackagePaths() {
         }

@@ -1,0 +1,34 @@
+{
+  "bronze:FreeFunctionsPotion": {
+    "NAME": "机油",
+    "DESCRIPTIONS": [
+      "提高 #y编码 中牌的数值 #b",
+      " 点。"
+    ]
+  },
+  "bronze:CleanCodePotion": {
+    "NAME": "碱式制剂",
+    "DESCRIPTIONS": [
+      "移除下张 #y方法 中的 #y编译错误 。其首次耗能为 #b0 。",
+      "移除下 #b",
+      " 张 #y方法 中的 #y编译错误 。其首次耗能为 #b0 。"
+    ]
+  },
+  "bronze:BurnAndBuffPotion": {
+    "NAME": "恼人饮品",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      " 点 #y力量 和 #b",
+      " 点 #y敏捷 。 NL 将两张 #y灼伤+ 加入弃牌堆。"
+    ]
+  },
+  "bronze:BuildAFunctionPotion": {
+    "NAME": "Kio快乐水",
+    "DESCRIPTIONS": [
+      "随机从 #b3 张 #y编码 牌中选择 #b1 张 #y编码 直到 #y编译 。",
+      "随机从 #b3 张 #y编码 牌中选择 #b1 张 #y编码 直到 #y编译 。并将 #b",
+      " 张该 #y方法 的复制品加入手牌。",
+      " 张该 #y方法 的复制品加入手牌。"
+    ]
+  }
+}

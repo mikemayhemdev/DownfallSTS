@@ -1,0 +1,104 @@
+{
+  "bronze:BronzeCore": {
+    "NAME": "Bronze Core",
+    "FLAVOR": "Replace once every 50,000 years.",
+    "DESCRIPTIONS": [
+      "The first time you create a Function each combat, gain [E] ."
+    ]
+  },
+  "bronze:ProtectiveGoggles": {
+    "NAME": "Protective Goggles",
+    "FLAVOR": "Look closely.",
+    "DESCRIPTIONS": [
+      "If you end your turn with no #yEncoded cards, gain #b4 #yBlock."
+    ]
+  },
+  "bronze:DecasWashers": {
+    "NAME": "Deca's Washers",
+    "FLAVOR": "It is unclear why Deca collects these.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, draw #b3 additional cards and add a #yDazed into your draw pile."
+    ]
+  },
+  "bronze:Timepiece": {
+    "NAME": "Frost Primer",
+    "FLAVOR": "22 ounces of the chemical compound Ar22, shelf life: 22 years. Best stored in a mahogany fridge.",
+    "DESCRIPTIONS": [
+      "All Functions you create gain #yRetain."
+    ]
+  },
+  "bronze:Mallet": {
+    "NAME": "Mallet",
+    "FLAVOR": "That's it! I'm gettin me mallet!",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add #b2 copies of #yFine #yTuning+ to your hand."
+    ]
+  },
+  "bronze:SilverBullet": {
+    "NAME": "Silver Bullet",
+    "FLAVOR": "Spirewolves are long gone.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add a copy of #yPiercing #yShot to your hand. It costs #b0 ."
+    ]
+  },
+  "bronze:MakeshiftBattery": {
+    "NAME": "Makeshift Battery",
+    "FLAVOR": "It's an 8.9 volt.",
+    "DESCRIPTIONS": [
+      "Gain [E] and add a #ySlimed into your discard pile at the start of your turn."
+    ]
+  },
+  "bronze:CableSpool": {
+    "NAME": "Cable Spool",
+    "FLAVOR": "Tangled...",
+    "DESCRIPTIONS": [
+      "#yEncode a copy of the first #yEncodable card you play each combat."
+    ]
+  },
+  "bronze:ElectromagneticCoil": {
+    "NAME": "Electromagnetic Coil",
+    "FLAVOR": "An inefficient but entertaining power source.",
+    "DESCRIPTIONS": [
+      "Functions are now made up of #b4 cards."
+    ]
+  },
+  "bronze:PlatinumCore": {
+    "NAME": "Platinum Core",
+    "FLAVOR": "Changelog: Improved user experience.",
+    "DESCRIPTIONS": [
+      "Replaces ",
+      ".[] NL The first #b3 Functions you create each combat cost #b0 until played."
+    ]
+  },
+  "bronze:BottledCode": {
+    "NAME": "Bottled Code",
+    "FLAVOR": "Actually, I have code for that exact thing...",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose a card with #yEncode. Start each combat with this card #yEncoded.",
+      "Choose a card for ",
+      "Start each combat with #yEncoded ",
+      "."
+    ]
+  },
+  "bronze:DonusWashers": {
+    "NAME": "Donu's Washers",
+    "FLAVOR": "It is rather clear why Donu collects these.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain [E] [E] and add #b1 #yVoid into your draw pile."
+    ]
+  },
+  "bronze:BronzeIdol": {
+    "NAME": "Bronze Idol",
+    "FLAVOR": "An ancient, weaponised antivirus - who knows who made it, and why?",
+    "DESCRIPTIONS": [
+      "#yStatus cards may now be played for useful effects."
+    ]
+  },
+  "bronze:AnalyticalCore": {
+    "NAME": "Paradox Artifact",
+    "FLAVOR": "You've never seen a coding frenzy like this before.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, add a random card with #yEncode to your hand and give it #yEthereal."
+    ]
+  }
+}

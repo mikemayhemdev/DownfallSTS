@@ -1,0 +1,662 @@
+{
+  "bronze:DazingPulse": {
+    "NAME": "暈眩反沖",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 造成 !D! 點傷害。 NL bronze:編譯 *錯誤 - bronze:插入 !M! 張 *暈眩 。",
+    "EXTENDED_DESCRIPTION": [
+      "暈眩",
+      "脈沖"
+    ]
+  },
+  "bronze:Spike": {
+    "NAME": "護體尖刺",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL bronze:編譯 -獲得 !M! 層 荊棘 。",
+    "EXTENDED_DESCRIPTION": [
+      "尖刺",
+      "突起"
+    ]
+  },
+  "bronze:Explode": {
+    "NAME": "爆炸",
+    "DESCRIPTION": "給予所有敵人 !M! 層 hexamod:灼魂 。 NL bronze:編譯 *錯誤 - bronze:插入 !bauto! 張 *灼傷 。",
+    "EXTENDED_DESCRIPTION": [
+      "非穩",
+      "爆炸"
+    ]
+  },
+  "bronze:DonuBeam": {
+    "NAME": "原型射線",
+    "DESCRIPTION": "造成 !D! 點傷害 !M! 次。 NL bronze:編譯 -獲得 !M! 點 力量 。",
+    "EXTENDED_DESCRIPTION": [
+      "平滑",
+      "爆裂"
+    ]
+  },
+  "bronze:DecaBeam": {
+    "NAME": "原型護盾",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL bronze:編譯 -獲得 !M! 層 多層護甲 並 bronze:插入 !bauto! 張 *暈眩 。",
+    "EXTENDED_DESCRIPTION": [
+      "鋸齒",
+      "屏障"
+    ]
+  },
+  "bronze:Strike": {
+    "NAME": "打擊",
+    "DESCRIPTION": "造成 !D! 點傷害。",
+    "EXTENDED_DESCRIPTION": [
+      "簡易",
+      "打擊"
+    ]
+  },
+  "bronze:Defend": {
+    "NAME": "防禦",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。",
+    "EXTENDED_DESCRIPTION": [
+      "基礎",
+      "防禦"
+    ]
+  },
+  "bronze:FunctionCard": {
+    "NAME": "()",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [
+      "方法()",
+      "完美()",
+      "()"
+    ]
+  },
+  "bronze:Goto": {
+    "NAME": "跳轉",
+    "DESCRIPTION": "抽 !M! 張牌。 NL bronze:編譯 -下回合抽 !M! 張牌。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 張牌。 NL bronze:編譯 -下回合抽 !M! 張牌。",
+    "EXTENDED_DESCRIPTION": [
+      "奔跑",
+      "沖刺"
+    ]
+  },
+  "bronze:Replicate": {
+    "NAME": "副本",
+    "DESCRIPTION": "造成 !D! 點傷害。 \u202F NL bronze:編碼 時將本牌的復製品加入棄牌堆。",
+    "EXTENDED_DESCRIPTION": [
+      "反復",
+      "拷貝"
+    ]
+  },
+  "bronze:Branch": {
+    "NAME": "分支",
+    "DESCRIPTION": "選擇 -造成 !D! 點傷害 或 獲得 !B! 點 格擋 。 NL bronze:編碼 另一張牌。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "分支: 攻擊",
+      "造成 !D! 點傷害。",
+      "分支: 格擋",
+      "獲得 !B! 點 格擋 。"
+    ]
+  },
+  "bronze:DelayedSlice": {
+    "NAME": "機械臂",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 下回合額外抽 !M! 張牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 下回合額外抽 !M! 張牌。",
+    "EXTENDED_DESCRIPTION": [
+      "延時",
+      "切割"
+    ]
+  },
+  "bronze:WhirlingStrike": {
+    "NAME": "穿透射擊",
+    "DESCRIPTION": "對所有敵人造成 !D! 點傷害。",
+    "EXTENDED_DESCRIPTION": [
+      "穿透",
+      "射擊"
+    ]
+  },
+  "bronze:Iterate": {
+    "NAME": "叠代",
+    "DESCRIPTION": "造成 !D! 點傷害 !M! 次。",
+    "EXTENDED_DESCRIPTION": [
+      "解析",
+      "叠代"
+    ]
+  },
+  "bronze:Separator": {
+    "NAME": "分隔符",
+    "DESCRIPTION": "造成 !D! 點傷害。 \u202F NL bronze:編碼 時若在中間槽位，傷害增加 !M! 點。",
+    "EXTENDED_DESCRIPTION": [
+      "分離",
+      "分割"
+    ]
+  },
+  "bronze:WildStrike": {
+    "NAME": "狂野打擊",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL bronze:插入 傷口 。"
+  },
+  "bronze:Overheat": {
+    "NAME": "過熱",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 移除下張 bronze:編碼 牌中的 bronze:編譯 *錯誤 。"
+  },
+  "bronze:CutThrough": {
+    "NAME": "剪枝",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 預見 !M! 。 NL bronze:編譯 -抽一張牌。",
+    "EXTENDED_DESCRIPTION": [
+      "斬破",
+      "切割"
+    ]
+  },
+  "bronze:RecursiveStrike": {
+    "NAME": "遞歸打擊",
+    "DESCRIPTION": "造成 !D! 點傷害 !M! 次。 NL bronze:編碼 !M! 張 *打擊 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害 !M! 次。 NL bronze:編碼 !M! 張 *打擊+ 。",
+    "EXTENDED_DESCRIPTION": [
+      "遞歸",
+      "循環"
+    ]
+  },
+  "bronze:DarkDash": {
+    "NAME": "暗影沖刺",
+    "DESCRIPTION": "獲得 !B! 點 格擋。 NL 造成 !D! 點傷害。 NL bronze:編譯 *錯誤 - bronze:插入 *虛空 。",
+    "EXTENDED_DESCRIPTION": [
+      "暗影",
+      "沖刺"
+    ]
+  },
+  "bronze:OilSpill": {
+    "NAME": "機油溢出",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 給予 !M! 層 中毒 。 NL bronze:編譯 *錯誤 - bronze:插入 *黏液 。",
+    "EXTENDED_DESCRIPTION": [
+      "機油",
+      "溢出"
+    ]
+  },
+  "bronze:WildBeam": {
+    "NAME": "清理",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 隨機 消耗 抽牌堆一張 狀態牌 。",
+    "EXTENDED_DESCRIPTION": [
+      "狂野",
+      "射線"
+    ]
+  },
+  "bronze:Frontload": {
+    "NAME": "預載",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL bronze:編譯 - bronze:方法 附帶 保留 。",
+    "EXTENDED_DESCRIPTION": [
+      "堅固",
+      "防護"
+    ]
+  },
+  "bronze:DelayedGuard": {
+    "NAME": "延遲防護",
+    "DESCRIPTION": "下回合獲得 !B! 點 格擋 。",
+    "EXTENDED_DESCRIPTION": [
+      "延緩",
+      "防衛"
+    ]
+  },
+  "bronze:Shield": {
+    "NAME": "黏性護盾",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL bronze:插入 *黏液 。",
+    "EXTENDED_DESCRIPTION": [
+      "黏黏",
+      "護盾"
+    ]
+  },
+  "bronze:Deprecate": {
+    "NAME": "屏蔽",
+    "DESCRIPTION": "給予 !M! 層 虛弱 。",
+    "EXTENDED_DESCRIPTION": [
+      "舊版",
+      "羞辱"
+    ]
+  },
+  "bronze:Invalidate": {
+    "NAME": "無效化",
+    "DESCRIPTION": "給予 !M! 層 易傷 。",
+    "EXTENDED_DESCRIPTION": [
+      "無效",
+      "錯誤"
+    ]
+  },
+  "bronze:Shell": {
+    "NAME": "區塊鏈",
+    "DESCRIPTION": "獲得 !M! 層 bronze:殘影 。",
+    "UPGRADE_DESCRIPTION": "獲得 !M! 層 bronze:殘影 。 NL bronze:編譯 -獲得 !M! 層 bronze:殘影 。",
+    "EXTENDED_DESCRIPTION": [
+      "區塊",
+      "鏈接"
+    ]
+  },
+  "bronze:BitShift": {
+    "NAME": "位元位移",
+    "DESCRIPTION": "選擇一張 bronze:編碼 中的牌返回手牌。 NL 其獲得 保留 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 選擇一張 bronze:編碼 中的牌返回手牌。 NL 其獲得 保留 。 NL 消耗 。"
+  },
+  "bronze:ByteShift": {
+    "NAME": "字節位移",
+    "DESCRIPTION": "將所有 bronze:編碼 中的牌返回手牌。 NL 其獲得 保留 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 將所有 bronze:編碼 中的牌返回手牌。 NL 其獲得 保留 。 NL 消耗 。"
+  },
+  "bronze:Batch": {
+    "NAME": "批處理",
+    "DESCRIPTION": "立即 bronze:編譯 bronze:編碼 中的牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "立即 bronze:編譯 bronze:編碼 中的牌。"
+  },
+  "bronze:Constructor": {
+    "NAME": "起始符",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 \u202F NL bronze:編碼 時若在首個槽位， 格擋 增加 !M! 點 。",
+    "EXTENDED_DESCRIPTION": [
+      "構造",
+      "失落",
+      "偉大"
+    ]
+  },
+  "bronze:Terminator": {
+    "NAME": "終止符",
+    "DESCRIPTION": " bronze:編譯 -若在 bronze:隊列 最後， bronze:方法 附帶再打出一次。",
+    "EXTENDED_DESCRIPTION": [
+      "哭泣",
+      "終結"
+    ]
+  },
+  "bronze:Overload": {
+    "NAME": "復製粘貼",
+    "DESCRIPTION": "觸發 bronze:編碼 中牌的效果。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "觸發 bronze:編碼 中牌的效果。"
+  },
+  "bronze:GetLatest": {
+    "NAME": "最新素材",
+    "DESCRIPTION": "獲得一張 bronze:編碼 牌。 NL 其耗能為0。 NL 消耗 。"
+  },
+  "bronze:Flail": {
+    "NAME": "亂鬥",
+    "DESCRIPTION": "對所有敵人造成 !D! 點傷害 !bauto! 次。 NL 獲得 !M! 層 人工製品 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "狂亂",
+      "鏈枷"
+    ]
+  },
+  "bronze:DigitalCarnage": {
+    "NAME": "數碼殘殺",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL bronze:編譯 - bronze:方法 附帶 虛無 。",
+    "EXTENDED_DESCRIPTION": [
+      "數碼",
+      "殘殺"
+    ]
+  },
+  "bronze:NullPointer": {
+    "NAME": "空指針",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 造成 !D! 點傷害。 NL bronze:編譯 *錯誤 - bronze:方法 附帶 不能被打出 。",
+    "EXTENDED_DESCRIPTION": [
+      "無效",
+      "指針"
+    ]
+  },
+  "bronze:Fortify": {
+    "NAME": "加固",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL bronze:編譯 -獲得 !M! 點 敏捷 。",
+    "EXTENDED_DESCRIPTION": [
+      "固化",
+      "鞏固"
+    ]
+  },
+  "bronze:BronzeOrb": {
+    "NAME": "銅製圓球",
+    "DESCRIPTION": " 固有 。 NL 造成 !D! 點傷害。 NL 隨機 bronze:編碼 一張抽牌堆中的 bronze:編碼 牌。 NL 消耗 。"
+  },
+  "bronze:Virus": {
+    "NAME": "病毒",
+    "DESCRIPTION": "保留 。 NL 造成 !D! 點傷害。 NL 手牌變為 *微 *光 *射 *線 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 點傷害。 NL 手牌變為 *微 *光 *射 *線 *+ 。"
+  },
+  "bronze:Backtrace": {
+    "NAME": "回溯",
+    "DESCRIPTION": " 固有 。 NL 造成 !D! 點傷害。 NL bronze:編譯 - bronze:方法 附帶 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "暗中",
+      "追溯"
+    ]
+  },
+  "bronze:CloningBeam": {
+    "NAME": "合並沖突",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 下張 bronze:編碼 牌 bronze:編碼 兩次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 下張 bronze:編碼 牌 bronze:編碼 兩次。"
+  },
+  "bronze:FollowUp": {
+    "NAME": "數據追蹤",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 造成 !D! 點傷害。 NL 若上張打出牌為 bronze:方法 ，再打出一次。"
+  },
+  "bronze:ChosenStrike": {
+    "NAME": "邪教打擊",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL bronze:編譯 -本局傷害加 !M! 。",
+    "EXTENDED_DESCRIPTION": [
+      "邪教",
+      "哢哢"
+    ]
+  },
+  "bronze:ClassDefault": {
+    "NAME": "默認類",
+    "DESCRIPTION": "將 bronze:隊列 首張牌加入下 !M! 個 *隊列 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 將 bronze:隊列 首張牌加入下 !M! 個 *隊列 。"
+  },
+  "bronze:ItsAFeature": {
+    "NAME": "此為特性",
+    "DESCRIPTION": "抽到 詛咒 或 狀態牌 時，獲得 1 點 guardianmod:臨時 力量 與 敏捷 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 抽到 詛咒 或 狀態牌 時，獲得 1 點 guardianmod:臨時 力量 與 敏捷 。"
+  },
+  "bronze:MinorBeam": {
+    "NAME": "微光射線",
+    "DESCRIPTION": "造成 !D! 點傷害。",
+    "EXTENDED_DESCRIPTION": [
+      "微弱",
+      "刮擦"
+    ]
+  },
+  "bronze:InfiniteBeams": {
+    "NAME": "無盡射線",
+    "DESCRIPTION": "回合開始時獲得 *微光射線 。",
+    "UPGRADE_DESCRIPTION": "回合開始時獲得 *微光射線+ 。"
+  },
+  "bronze:Optimize": {
+    "NAME": "優化",
+    "DESCRIPTION": " 升級 下 !M! 張 bronze:編碼 的牌。"
+  },
+  "bronze:MaxOutput": {
+    "NAME": "極限功率",
+    "DESCRIPTION": "抽 !M! 張牌。 NL 每回合額外抽1張牌並 bronze:插入 *暈眩 。"
+  },
+  "bronze:Mutator": {
+    "NAME": "賦值",
+    "DESCRIPTION": "獲得 1 點 力量 。 NL 將手中一張 狀態牌 變為本牌的復製品。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 獲得 1 點 力量 。 NL 將手中一張 狀態牌 變為本牌的復製品。"
+  },
+  "bronze:Allocate": {
+    "NAME": "分配",
+    "DESCRIPTION": "抽牌堆每有一張 狀態牌 ，獲得 [E] 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （獲得 ",
+      " [E] ）"
+    ]
+  },
+  "bronze:Decompile": {
+    "NAME": "反編譯",
+    "DESCRIPTION": " 消耗  bronze:編碼 中的牌。 NL 每 消耗 一張獲得 [E] 並抽一張牌 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 消耗 bronze:編碼 中的牌。 NL 每 消耗 一張獲得 [E] 並抽一張牌 。 NL 消耗 。"
+  },
+  "bronze:ChildClass": {
+    "NAME": "調用",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL bronze:編譯 -獲得 bronze:編碼 中牌的總耗能 [E] 。",
+    "EXTENDED_DESCRIPTION": [
+      "援引",
+      "能量"
+    ]
+  },
+  "bronze:Repair": {
+    "NAME": "維修",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL bronze:編譯 -回復 !M! 點生命。",
+    "EXTENDED_DESCRIPTION": [
+      "修補",
+      "扳手"
+    ]
+  },
+  "bronze:Boost": {
+    "NAME": "蓄能增壓",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL bronze:編譯 -獲得 !M! 點 力量 。",
+    "EXTENDED_DESCRIPTION": [
+      "升壓",
+      "強化"
+    ]
+  },
+  "bronze:Safeguard": {
+    "NAME": "安全衛士",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。",
+    "EXTENDED_DESCRIPTION": [
+      "防護",
+      "格擋"
+    ]
+  },
+  "bronze:BronzeArmor": {
+    "NAME": "銅製鎧甲",
+    "DESCRIPTION": "獲得 !bauto! 層 人工製品 。 NL bronze:編譯 *錯誤 -所有敵人獲得 !M! 點 格擋 。",
+    "EXTENDED_DESCRIPTION": [
+      "銅製",
+      "鎧甲"
+    ]
+  },
+  "bronze:ForLoop": {
+    "NAME": "循環",
+    "DESCRIPTION": "下張 bronze:編碼 牌再 *編碼 X次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "下張 bronze:編碼 牌再 *編碼 X+1次。 NL 消耗 。"
+  },
+  "bronze:Philosophize": {
+    "NAME": "哲理化",
+    "DESCRIPTION": "獲得 !bauto! 點 力量 。 NL bronze:編譯 *錯誤 -所有敵人獲得 !M! 點 力量 。",
+    "EXTENDED_DESCRIPTION": [
+      "智能",
+      "想法"
+    ]
+  },
+  "bronze:Return": {
+    "NAME": "返回",
+    "DESCRIPTION": "將一張棄牌堆牌放入抽牌堆頂部。 NL 下回合獲得 [E] 。",
+    "UPGRADE_DESCRIPTION": "將一張棄牌堆牌放入抽牌堆頂部。 NL 下回合獲得 [E] [E] 。"
+  },
+  "bronze:ForceShield": {
+    "NAME": "力場護盾",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 本場戰鬥每 bronze:編譯 過一張 bronze:方法 ，耗能減少 [E] 。"
+  },
+  "bronze:Format": {
+    "NAME": "格式化",
+    "DESCRIPTION": " bronze:編碼 X 張 *碎片 。 NL 獲得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " bronze:編碼 X+1 張 *碎片 。 NL 獲得 [E] 。 NL 消耗 。"
+  },
+  "bronze:FormatEncoded": {
+    "NAME": "碎片",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 造成 !D! 點傷害。",
+    "EXTENDED_DESCRIPTION": [
+      "簡潔",
+      "碎片"
+    ]
+  },
+  "bronze:BurnOut": {
+    "NAME": "燃燒殆盡",
+    "DESCRIPTION": " 消耗 所有 狀態牌 ，每張隨機造成 !D! 點傷害。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "消耗 所有 狀態牌 (",
+      "張)，每張隨機造成 !D! 點傷害。 NL 消耗 。"
+    ]
+  },
+  "bronze:ShipIt": {
+    "NAME": "廢能轉換",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 每有一張 狀態牌 傷害增加 !M! 點。"
+  },
+  "bronze:Break": {
+    "NAME": "打斷",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL bronze:編譯 *錯誤 - bronze:插入 *灼傷 、 *傷口 與 *黏液 。",
+    "EXTENDED_DESCRIPTION": [
+      "打斷",
+      "粉碎"
+    ]
+  },
+  "bronze:InfiniteLoop": {
+    "NAME": "無限循環",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL bronze:編譯 -獲得本牌的復製品，其傷害增加 !M! 點。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 點傷害。 NL bronze:編譯 -獲得本牌的復製品，其傷害增加 !M! 點。",
+    "EXTENDED_DESCRIPTION": [
+      "無限",
+      "循環"
+    ]
+  },
+  "bronze:Library": {
+    "NAME": "數據庫",
+    "DESCRIPTION": "回合開始時獲得 bronze:編碼 牌。 NL 其耗能為0。"
+  },
+  "bronze:Verify": {
+    "NAME": "感知形態",
+    "DESCRIPTION": "虛無 。 NL 抽到 bronze:方法 時，提高其數值1點。",
+    "UPGRADE_DESCRIPTION": "抽到 bronze:方法 時，提高其數值1點。"
+  },
+  "bronze:BronzeHeatsink": {
+    "NAME": "銅製散熱器",
+    "DESCRIPTION": "打出 bronze:方法 時，抽1張牌。",
+    "UPGRADE_DESCRIPTION": "打出 bronze:方法 時，抽2張牌。"
+  },
+  "bronze:HardenedForm": {
+    "NAME": "圓球召喚",
+    "DESCRIPTION": " bronze:編譯 或打出 bronze:方法 時： NL 獲得 !M! 點 格擋 。 NL 隨機造成 !M! 點傷害。"
+  },
+  "bronze:LegacyCode": {
+    "NAME": "歷史代碼",
+    "DESCRIPTION": " 保留 。 NL 將 !M! 張牌從棄牌堆加入手牌。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 將 !M! 張牌從棄牌堆加入手牌。"
+  },
+  "bronze:Repulsor": {
+    "NAME": "反沖器",
+    "DESCRIPTION": "消耗 每回合抽到的首張 狀態牌 或 詛咒 並抽一張牌。",
+    "UPGRADE_DESCRIPTION": "消耗 每回合抽到的首張 狀態牌 或 詛咒 並抽一張牌。"
+  },
+  "bronze:Debug": {
+    "NAME": "調試",
+    "DESCRIPTION": "移除 bronze:編碼 中牌的 bronze:編譯 *錯誤 。 NL 消耗 。"
+  },
+  "bronze:HyperBeam": {
+    "NAME": "超能射線",
+    "DESCRIPTION": " 對所有敵人造成 !D! 點傷害。 NL 將5張 *虛空 加入抽牌堆頂部。"
+  },
+  "bronze:Hardcode": {
+    "NAME": "硬編碼",
+    "DESCRIPTION": "將 bronze:編譯 的下張 bronze:方法 加入牌組。 NL 從牌組中移除構成 bronze:方法 的牌與本牌。"
+  },
+  "bronze:SpaghettiCode": {
+    "NAME": "意面代碼",
+    "DESCRIPTION": "從3張隨機 *編碼 牌中選擇1張 bronze:編碼 直至 bronze:編譯 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "棄用"
+  },
+  "bronze:Assembly": {
+    "NAME": "裝配",
+    "DESCRIPTION": " 預見 !M! 。 NL bronze:編碼 丟棄的可 bronze:編碼 牌。 NL 消耗 。"
+  },
+  "bronze:FineTuning": {
+    "NAME": "性能調整",
+    "DESCRIPTION": "提高 bronze:編碼 中牌的數值 !M! 點。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 提高 bronze:編碼 中牌的數值 !M! 點。 NL 消耗 。"
+  },
+  "bronze:CleanCode": {
+    "NAME": "簡明代碼",
+    "DESCRIPTION": "移除下 !M! 張 bronze:編碼 牌中的 bronze:編譯 *錯誤 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 移除下 !M! 張 bronze:編碼 牌中的 bronze:編譯 *錯誤 。"
+  },
+  "bronze:BranchBlock": {
+    "NAME": "分支： 格擋",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。",
+    "EXTENDED_DESCRIPTION": [
+      "分叉",
+      "分支"
+    ]
+  },
+  "bronze:BranchHit": {
+    "NAME": "分支： 攻擊",
+    "DESCRIPTION": "造成 !D! 點 傷害 。",
+    "EXTENDED_DESCRIPTION": [
+      "分叉",
+      "分支"
+    ]
+  },
+  "bronze:Ignite": {
+    "NAME": "點燃",
+    "DESCRIPTION": "給予 !M! 層 hexamod:灼魂 。 NL 回合結束時，受到 2 點傷害。",
+    "UPGRADE_DESCRIPTION": "給予 !M! 層 hexamod:灼魂 。 NL 回合結束時，受到 4 點傷害。"
+  },
+  "bronze:IntoTheVoid": {
+    "NAME": "遁入虛空",
+    "DESCRIPTION": "虛無 。 NL 本回合敵人失去 !M! 力量 。 NL 抽到這張牌時，失去 [E] 。 NL 消耗 。"
+  },
+  "bronze:Lubricant": {
+    "NAME": "潤滑劑",
+    "DESCRIPTION": "抽 !M! 張牌。 NL 消耗 。"
+  },
+  "bronze:GrievousWound": {
+    "NAME": "重傷",
+    "DESCRIPTION": "給予 !M! 層 易傷 。"
+  },
+  "bronze:Daze": {
+    "NAME": "暈眩",
+    "DESCRIPTION": "虛無 。 NL 給予 !M! 層 虛弱 。 NL 消耗 。"
+  },
+  "bronze:UnknownStatus": {
+    "NAME": "迷惑",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。"
+  },
+  "bronze:TinkerersToolbox": {
+    "NAME": "開發工具",
+    "DESCRIPTION": "保留 。 NL 選擇獲得一張 *調 *試 、 *批 *處 *理 、 *反 *編 *譯 或 *字 *節 *位 *移 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 選擇獲得一張 *調 *試 、 *批 *處 *理 、 *反 *編 *譯 或 *字 *節 *位 *移 。"
+  },
+  "bronze:Refactor": {
+    "NAME": "重構",
+    "DESCRIPTION": " 預見 !M! 。 NL 消耗 丟棄的牌。 NL 每 消耗 一張 狀態牌 ，獲得 !B! 點 格擋 。"
+  },
+  "bronze:Turbo": {
+    "NAME": "內核加速",
+    "DESCRIPTION": "獲得 [E] [E] 。 NL 將一張 *虛空 加入棄牌堆。",
+    "UPGRADE_DESCRIPTION": "獲得 [E] [E] [E] 。 NL 將一張 *虛空 加入棄牌堆。"
+  },
+  "bronze:BugBarrage": {
+    "NAME": "錯誤齊射",
+    "DESCRIPTION": "獲得1張 *傷口 。 NL bronze:循環 手中 狀態牌 。 NL 每張造成 !D! 點傷害。",
+    "UPGRADE_DESCRIPTION": "獲得 !M! 張 *傷口 。 NL bronze:循環 手中 狀態牌 。 NL 每張造成 !D! 點傷害。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （攻擊 ",
+      " 次）"
+    ]
+  },
+  "bronze:BuggyMess": {
+    "NAME": "多重錯誤",
+    "DESCRIPTION": " bronze:插入 暈眩 。 NL 獲得 [E] 。",
+    "EXTENDED_DESCRIPTION": [
+      "錯誤",
+      "混亂"
+    ]
+  },
+  "bronze:FindAndReplace": {
+    "NAME": "查找替換",
+    "DESCRIPTION": "將一張抽或棄牌堆牌加入手牌。 NL 在其原位添加 *暈眩 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "將一張抽或棄牌堆牌加入手牌。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "選擇一張牌加入手牌並在其原位添加暈眩"
+    ]
+  },
+  "bronze:ThunderWave": {
+    "NAME": "雷霆",
+    "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 NL 獲得1層 guardianmod:緩沖 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （攻擊 ",
+      " 次）"
+    ]
+  },
+  "bronze:AlphaBuild": {
+    "NAME": "搶先體驗",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL bronze:插入 隨機 狀態牌 。 NL bronze:編譯 - bronze:插入 *貝塔測試 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 造成 !D! 點傷害。 NL bronze:插入 隨機 狀態牌 。 NL bronze:編譯 - bronze:插入 *貝塔測試 。",
+    "EXTENDED_DESCRIPTION": [
+      "粗略",
+      "初版"
+    ]
+  },
+  "bronze:BetaBuild": {
+    "NAME": "貝塔測試",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL bronze:插入 隨機 狀態牌 。 NL bronze:編譯 - bronze:插入 *完全公開 。",
+    "EXTENDED_DESCRIPTION": [
+      "早期",
+      "內測"
+    ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "完全公開",
+    "DESCRIPTION": " bronze:編譯 - bronze:方法 變為能力，回合開始時觸發效果。",
+    "EXTENDED_DESCRIPTION": [
+      "完全",
+      "公開",
+      "1.0"
+    ]
+  },
+  "bronze:Undervolt": {
+    "NAME": "低壓",
+    "DESCRIPTION": "所有敵人失去 !M! 點 力量。 NL 獲得兩張 灼傷 。 NL 消耗 。"
+  }
+}

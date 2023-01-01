@@ -1,0 +1,46 @@
+[
+  {
+    "PROPER_NAME": "編碼",
+    "NAMES": [
+      "encode",
+      "encoded",
+      "編碼",
+      "隊列",
+      "方法"
+    ],
+    "DESCRIPTION": "將牌移入銅球 #y隊列 。 NL 當 #y隊列 中有 #b3 張牌時, 它們的效果被融合， #y編譯 成一張新的 #y方法 牌移入手牌，其耗能為 #b1 點。"
+  },
+  {
+    "PROPER_NAME": "編譯",
+    "NAMES": [
+      "編譯",
+      "compile",
+      "compiled"
+    ],
+    "DESCRIPTION": "當被 #y編碼 的牌融合成 #y方法 時觸發其中所有 #y編譯 效果。 NL #y編譯錯誤 將是一些 #r負面效果 。"
+  },
+  {
+    "PROPER_NAME": "殘影",
+    "NAMES": [
+      "殘影",
+      "blur"
+    ],
+    "DESCRIPTION": " #y格擋 不會在回合結束時消失。"
+  },
+  {
+    "PROPER_NAME": "插入",
+    "NAMES": [
+      "插入",
+      "insert"
+    ],
+    "DESCRIPTION": "將 #b1 張牌加入抽牌堆。"
+  },
+  {
+    "PROPER_NAME": "循環",
+    "NAMES": [
+      "循環",
+      "cycle"
+    ],
+    "DESCRIPTION": "丟棄 #b1 張牌，抽 #b1 張牌替換其原來的位置。"
+  }
+]

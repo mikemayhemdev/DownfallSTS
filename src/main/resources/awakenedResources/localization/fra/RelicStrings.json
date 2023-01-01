@@ -1,0 +1,104 @@
+{
+  "bronze:BronzeCore": {
+    "NAME": "Noyau de bronze",
+    "FLAVOR": "Remplacez ceci tous les 50 000 ans.",
+    "DESCRIPTIONS": [
+      "La première fois que vous #yCompilez une #yFonction chaque combat, gagnez [E] ."
+    ]
+  },
+  "bronze:ProtectiveGoggles": {
+    "NAME": "Lunettes de protection",
+    "FLAVOR": "Regardez attentivement.",
+    "DESCRIPTIONS": [
+      "Si vous finissez votre tour sans cartes dans la #ySéquence, gagnez #b4 d'#yArmure."
+    ]
+  },
+  "bronze:DecasWashers": {
+    "NAME": "Rondelles de Deca",
+    "FLAVOR": "Ce n'est pas très clair sur le pourquoi Deca les collecte.",
+    "DESCRIPTIONS": [
+      "Au début de chaque combat, piochez #b3 cartes supplémentaires et ajoutez un #yHébétement dans votre pioche."
+    ]
+  },
+  "bronze:Timepiece": {
+    "NAME": "Fragment de temps",
+    "FLAVOR": "Vient de sa collection d'anciennes horloges.",
+    "DESCRIPTIONS": [
+      "Toutes les #yFonctions que vous #yCompilez gagnent #yRetenue."
+    ]
+  },
+  "bronze:Mallet": {
+    "NAME": "Maillet",
+    "FLAVOR": "Ça y est! Ça me rend marteau!",
+    "DESCRIPTIONS": [
+      "Au début de chaque combat, ajoutez #b2 copies de #yRéglage #yPrécis+ dans votre main."
+    ]
+  },
+  "bronze:SilverBullet": {
+    "NAME": "Balle argentée",
+    "FLAVOR": "Les loups de la tour se sont enfuis.",
+    "DESCRIPTIONS": [
+      "Au début de chaque combat, ajoutez une copie de #yTir #yperçant dans votre main. Elle coûte #b0."
+    ]
+  },
+  "bronze:MakeshiftBattery": {
+    "NAME": "Batterie de fortune",
+    "FLAVOR": "C'est une 8,9 volts.",
+    "DESCRIPTIONS": [
+      "Gagnez [E] et ajoutez un #yEnglué dans votre défausse au début de votre tour."
+    ]
+  },
+  "bronze:CableSpool": {
+    "NAME": "Bobine de fil",
+    "FLAVOR": "Emmêlée...",
+    "DESCRIPTIONS": [
+      "Ajoutez une copie de la première carte que vous jouez avec #yEncode chaque combat dans la Séquence."
+    ]
+  },
+  "bronze:ElectromagneticCoil": {
+    "NAME": "Bobine électromagnétique",
+    "FLAVOR": "Une source d'électricité inefficace mais divertissante.",
+    "DESCRIPTIONS": [
+      "Les #yFonctions sont maintenant faites de #b4 cartes."
+    ]
+  },
+  "bronze:PlatinumCore": {
+    "NAME": "Noyau de platine",
+    "FLAVOR": "Changelog: Expérience de l'utilisateur améliorée.",
+    "DESCRIPTIONS": [
+      "Remplace ",
+      ".[] NL Les #b3 premières #yFonctions que vous créez chaque combat coûtent #b0 jusqu'à ce qu'elles soient jouées."
+    ]
+  },
+  "bronze:BottledCode": {
+    "NAME": "Code embouteillée",
+    "FLAVOR": "En fait, j'ai du code pour cette même chose...",
+    "DESCRIPTIONS": [
+      "Lorsque vous la ramassez, choisissez une carte avec #yEncode. Commencez chaque combat avec cette carte dans la #ySéquence.",
+      "Choissisez une carte pour ",
+      "Commencez chaque combat avec ",
+      " dans la #ySéquence."
+    ]
+  },
+  "bronze:DonusWashers": {
+    "NAME": "Rondelles de Donu",
+    "FLAVOR": "C'est plutôt clair sur le pourquoi Donu les collecte.",
+    "DESCRIPTIONS": [
+      "Au début de chaque combat, gagnez [E] [E] et ajoutez #b1 #Néant dans votre pioche."
+    ]
+  },
+  "bronze:BronzeIdol": {
+    "NAME": "Idole de bronze",
+    "FLAVOR": "Un antivirus armé et antique - qui sait par qui il a été créé, et pourquoi?",
+    "DESCRIPTIONS": [
+      "Les cartes #yStatut peuvent maintenant être jouées pour des effets utiles."
+    ]
+  },
+  "bronze:AnalyticalCore": {
+    "NAME": "Artéfact paradoxe",
+    "FLAVOR": "Vous n'avez jamais vu un fou du codage comme celui-là auparavant.",
+    "DESCRIPTIONS": [
+      "Au début de chaque tour, ajoutez une carte aléatoire with #yEncode dans votre main et rendez-la #yEtherée."
+    ]
+  }
+}

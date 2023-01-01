@@ -1,0 +1,55 @@
+{
+  "bronze:SpecificCardReward": {
+    "TEXT": [
+      "Add ",
+      " to your deck",
+      "Pick a Card."
+    ]
+  },
+  "bronze:UnplayableMod": {
+    "TEXT": [
+      "Unplayable. NL ",
+      "ERR_NULL_PTR"
+    ]
+  },
+  "bronze:EncodeAndShuffleMod": {
+    "TEXT": [
+      " NL bronze:Encode, then add a copy of this into your discard pile."
+    ]
+  },
+  "bronze:DoublePlayModifier": {
+    "TEXT": [
+      " NL Play this again."
+    ]
+  },
+  "bronze:MiscStrings": {
+    "TEXT": [
+      "Choose a card to return to your hand. It gains Retain.",
+      " - Increase #yCultist #yStrike's damage by #b",
+      " permanently.",
+      "ERR: SEQUENCE_EMPTY",
+      " - Gain a copy of #yInfinite #yLoop with #b",
+      " more damage.",
+      " to Mutate.",
+      " to Encode.",
+      ""
+    ]
+  },
+  "bronze:AutoTextHelper": {
+    "TEXT": [
+      " NL bronze:Compile",
+      "bronze:Compile",
+      " NL bronze:Encode.",
+      "bronze:Encode. NL ",
+      "\u202F When bronze:Encoded,",
+      "LOCALIZATION NOTE: The text above must be equal to the start of Replicate's extra description line.",
+      "ERR - NO_DUPE_FULL_RELEASES"
+    ]
+  },
+  "bronze:CompileDisplayPanel": {
+    "TEXT": [
+      "When Compiled:",
+      "bronze:Compile"
+    ]
+  }
+}
