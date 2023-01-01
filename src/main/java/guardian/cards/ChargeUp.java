@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import guardian.GuardianMod;
-import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 

@@ -17,6 +17,7 @@ import guardian.actions.ReturnStasisCardToHandAction;
 import guardian.actions.StasisEvokeIfRoomInHandAction;
 import guardian.cards.AbstractGuardianCard;
 import guardian.cards.InStasisCard;
+import guardian.cards.ChargeUp;
 import guardian.relics.StasisUpgradeRelic;
 import guardian.vfx.AddCardToStasisEffect;
 
@@ -74,6 +75,9 @@ public class StasisOrb extends AbstractOrb {
         if (AbstractDungeon.player != null) {
             if (AbstractDungeon.player.hasRelic(StasisUpgradeRelic.ID)) {
                 card.upgrade();
+                if (card instanceof ChargeUp) {
+                   card.costForTurn = 0 ;
+                }
             }
         }
         this.stasisCard.tags.add(GuardianMod.STASISGLOW);
