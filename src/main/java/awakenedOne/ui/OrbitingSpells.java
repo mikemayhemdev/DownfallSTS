@@ -1,5 +1,9 @@
 package awakenedOne.ui;
 
+import awakenedOne.cards.tokens.spells.BurningStudy;
+import awakenedOne.cards.tokens.spells.Cryostasis;
+import awakenedOne.cards.tokens.spells.Darkleech;
+import awakenedOne.cards.tokens.spells.Thunderbolt;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -26,7 +30,10 @@ public class OrbitingSpells {
 
     static {
         // Populate Spells
-
+        spells.add(BurningStudy.ID);
+        spells.add(Cryostasis.ID);
+        spells.add(Thunderbolt.ID);
+        spells.add(Darkleech.ID);
     }
 
     public static void refreshSpells() {
