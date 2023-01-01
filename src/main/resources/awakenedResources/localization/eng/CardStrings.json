@@ -116,5 +116,49 @@
   "awakened:PeerThrough": {
     "NAME": "Peer Through",
     "DESCRIPTION": "Scry !M!. NL Draw 1 card. NL It costs 0 this turn."
+  },
+  "awakened:PiercingCall": {
+    "NAME": "Piercing Call",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure !M!. NL It costs 0 this turn."
+  },
+  "awakened:DualRitual": {
+    "NAME": "Dual Ritual",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+  },
+  "awakened:CultDaggers": {
+    "NAME": "Cult Daggers",
+    "DESCRIPTION": "Deal !D! damage for each other cost 0 card in your hand."
+  },
+  "awakened:ShadowStrike": {
+    "NAME": "Shadow Strike",
+    "DESCRIPTION": "Comes with a *Shadow. NL Deal !D! damage. NL Apply !M! Vulnerable."
+  },
+  "awakened:QuickMove": {
+    "NAME": "Peck",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+  },
+  "awakened:LocusStrike": {
+    "NAME": "Locus Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each time you awakened:Conjured this combat."
+  },
+  "awakened:Punishment": {
+    "NAME": "Punishment",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is Weak and Vulnerable, steal !M! Strength."
+  },
+  "awakened:Manifestation": {
+    "NAME": "Manifestation",
+    "DESCRIPTION": "[awakened:icon] 3: Deal !D! damage."
+  },
+  "awakened:FlamingSummons": {
+    "NAME": "Flaming Summons",
+    "DESCRIPTION": "Deal !D! damage to a random enemy X times."
+  },
+  "awakened:InResponse": {
+    "NAME": "In Response...",
+    "DESCRIPTION": "Conjure !M!. NL Whenever you play a Spell, gain !awakened:m2! Block."
+  },
+  "awakened:BookOfTricks": {
+    "NAME": "Book of Tricks",
+    "DESCRIPTION": "Gain !M! Plated Armor. NL [awakened:icon] 1: And !awakened:m2! Artifact. NL [awakened:icon] 3: And !awakened:m3! Thorns."
   }
 }

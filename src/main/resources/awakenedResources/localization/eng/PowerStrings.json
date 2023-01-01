@@ -13,5 +13,12 @@
       "The next #b",
       " Colorless cards you play this turn are played twice."
     ]
+  },
+  "awakened:InResponsePower": {
+    "NAME": "In Response...",
+    "DESCRIPTION": [
+      "Whenever you play a Spell, gain #b",
+      " #yBlock."
+    ]
   }
 }

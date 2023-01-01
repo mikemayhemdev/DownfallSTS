@@ -9,7 +9,8 @@
   {
     "PROPER_NAME": "Conjure",
     "NAMES": [
-      "conjure"
+      "conjure",
+      "conjured"
     ],
     "DESCRIPTION": "Choose #b1 of X Spells to add into your hand. If you have none, draw #b1 card and refresh your Spells."
   },

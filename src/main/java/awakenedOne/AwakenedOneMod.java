@@ -1,8 +1,8 @@
 package awakenedOne;
 
 import automaton.cards.AbstractBronzeCard;
-import automaton.util.AutoVar;
 import automaton.util.CardFilter;
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.cardvars.SecondDamage;
 import awakenedOne.cards.cardvars.SecondMagicNumber;
 import awakenedOne.cards.cardvars.ThirdMagicNumber;
@@ -204,6 +204,7 @@ public class AwakenedOneMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         OrbitingSpells.atBattleStart();
+        ConjureAction.conjuresThisCombat = 0;
     }
 
     @Override
