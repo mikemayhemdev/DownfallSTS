@@ -30,7 +30,7 @@ import static hermit.HermitMod.makePowerPath;
 
 //Gain 1 dex for the turn for each card played.
 
-public class Bruise extends AbstractPower implements CloneablePowerInterface, HealthBarRenderPower {
+public class Bruise extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
     public static final String POWER_ID = HermitMod.makeID("Bruise");
@@ -87,10 +87,6 @@ public class Bruise extends AbstractPower implements CloneablePowerInterface, He
 
     public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            if (AbstractDungeon.player.hasRelic(RyeStalk.ID)) {
-                this.flashWithoutSound();
-                this.addToBot(new PoisonLoseHpAction(this.owner, this.source, this.amount, EnumPatch.HERMIT_GHOSTFIRE));
-            }
             if (!this.owner.hasPower(HorrorPower.POWER_ID))
             {
                 this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
@@ -104,16 +100,6 @@ public class Bruise extends AbstractPower implements CloneablePowerInterface, He
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
-    @Override
-    public int getHealthBarAmount(){
-        if (AbstractDungeon.player.hasRelic(RyeStalk.ID)) {
-            return this.amount;
-        }
-        else
-            return 0;
-    }
-
-    @Override
     public Color getColor()
     {
         return Color.CYAN;
