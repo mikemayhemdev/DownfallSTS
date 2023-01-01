@@ -1,10 +1,7 @@
 package awakenedOne;
 
-import automaton.cards.Defend;
 import automaton.cards.Goto;
-import automaton.cards.Replicate;
-import automaton.cards.Strike;
-import automaton.relics.BronzeCore;
+import awakenedOne.relics.FinalFeather;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -26,8 +23,8 @@ import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
 
-import static automaton.AutomatonMod.makeID;
-import static automaton.AutomatonMod.placeholderColor;
+import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.placeholderColor;
 
 public class AwakenedOneChar extends CustomPlayer {
     public static final String ID = makeID("awakenedOne");
@@ -89,26 +86,18 @@ public class AwakenedOneChar extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
-            retVal.add(Strike.ID);
-        }
-        for (int i = 0; i < 4; i++) {
-            retVal.add(Defend.ID);
-        }
-        retVal.add(Replicate.ID);
-        retVal.add(Goto.ID);
+
         return retVal;
     }
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(BronzeCore.ID);
+        retVal.add(FinalFeather.ID);
         return retVal;
     }
 
     @Override
     public void doCharSelectScreenSelectEffect() {
-
         if (MathUtils.randomBoolean()) {
             CardCrawlGame.sound.play("MONSTER_AUTOMATON_SUMMON", 0.1F);
         } else {
@@ -120,7 +109,6 @@ public class AwakenedOneChar extends CustomPlayer {
 
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-
         if (MathUtils.randomBoolean()) {
             return "MONSTER_AUTOMATON_SUMMON";
         } else {
