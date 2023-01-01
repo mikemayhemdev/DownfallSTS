@@ -1,6 +1,10 @@
 package awakenedOne;
 
 import automaton.cards.Goto;
+import awakenedOne.cards.Chromatics;
+import awakenedOne.cards.Defend;
+import awakenedOne.cards.Strike;
+import awakenedOne.cards.VoidChannel;
 import awakenedOne.relics.FinalFeather;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -79,14 +83,21 @@ public class AwakenedOneChar extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                70, 70, 0, 99, 5, this, getStartingRelics(),
+                73, 73, 0, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Strike.ID);
+        }
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Defend.ID);
+        }
+        retVal.add(VoidChannel.ID);
+        retVal.add(Chromatics.ID);
         return retVal;
     }
 

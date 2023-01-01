@@ -15,5 +15,25 @@
     "NAME": "Darkleech",
     "DESCRIPTION": "ALL enemies lose !M! HP. NL Draw !awakened:m2! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "ALL enemies lose !M! HP. NL Draw !awakened:m2! cards. NL Exhaust."
+  },
+  "awakened:Feather": {
+    "NAME": "Feather",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
+  },
+  "awakened:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "awakened:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "awakened:VoidChannel": {
+    "NAME": "Void Channel",
+    "DESCRIPTION": "Next turn, NL gain [E] .",
+    "UPGRADE_DESCRIPTION": "Next turn, NL gain [E] [E] ."
+  },
+  "awakened:Chromatics": {
+    "NAME": "Gain !B! Block. NL Discard your hand, then awakened:Conjure !M!."
   }
 }
