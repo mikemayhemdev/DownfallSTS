@@ -46,7 +46,7 @@ public class ConjureAction extends AbstractGameAction {
                 ArrayList<OrbitingSpells.CardRenderInfo> possCards = new ArrayList<>();
                 possCards.addAll(OrbitingSpells.spellCards);
                 ArrayList<OrbitingSpells.CardRenderInfo> availableCards = new ArrayList<>();
-                while (availableCards.size() < amount && !possCards.isEmpty()) {
+                while (!possCards.isEmpty()) {
                     availableCards.add(possCards.remove(AbstractDungeon.cardRandomRng.random(possCards.size() - 1)));
                 }
                 ArrayList<AbstractCard> actualChoices = new ArrayList<>();
