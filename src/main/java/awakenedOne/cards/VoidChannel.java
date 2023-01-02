@@ -24,6 +24,6 @@ public class VoidChannel extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeBaseCost(1);
     }
 }
