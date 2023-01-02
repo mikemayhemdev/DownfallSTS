@@ -231,5 +231,4 @@ public class AwakenedOneMod implements
             becomeAwesomeButton.update();
         }
     }
-
 }

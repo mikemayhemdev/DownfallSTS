@@ -304,7 +304,7 @@
   },
   "awakened:Uncaged": {
     "NAME": "Uncaged",
-    "DESCRIPTION": "Can only be played if you played a Power this turn. Deal !D! damage."
+    "DESCRIPTION": "Can only be played if you played a Power this turn. NL Deal !D! damage."
   },
   "awakened:MazalethsMadness": {
     "NAME": "Mazaleth's Madness",
