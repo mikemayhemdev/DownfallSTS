@@ -227,7 +227,9 @@ public class AwakenedOneMod implements
 
     @Override
     public void receivePostDungeonUpdate() {
-        becomeAwesomeButton.update();
+        if (Wiz.isInCombat() && AbstractDungeon.player.chosenClass.equals(AwakenedOneChar.Enums.AWAKENED_ONE)) {
+            becomeAwesomeButton.update();
+        }
     }
 
 }

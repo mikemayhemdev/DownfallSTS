@@ -85,7 +85,7 @@
   },
   "awakened:LastResort": {
     "NAME": "Last Resort",
-    "DESCRIPTION": "Gain !B! Block X times. NL If X is 0, gain [E] and Exhaust."
+    "DESCRIPTION": "Gain !B! Block X times. NL If X is 0, NL gain [E] and Exhaust."
   },
   "awakened:FlyAway": {
     "NAME": "Fly Away",
