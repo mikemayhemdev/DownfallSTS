@@ -12,11 +12,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 
-public class Bryds extends AbstractAwakenedCard {
-    public final static String ID = makeID(Bryds.class.getSimpleName());
+public class Byrds extends AbstractAwakenedCard {
+    public final static String ID = makeID(Byrds.class.getSimpleName());
     // intellij stuff attack, enemy, rare, 1, , , , 5, 1
 
-    public Bryds() {
+    public Byrds() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 1;
         baseMagicNumber = magicNumber = 5;

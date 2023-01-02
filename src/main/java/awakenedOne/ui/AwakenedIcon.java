@@ -11,7 +11,7 @@ import java.util.List;
 import static awakenedOne.AwakenedOneMod.makeID;
 
 public class AwakenedIcon extends AbstractCustomIcon {
-    public static final String ID = "awakened:icon";
+    public static final String ID = "awakened";
     private static AwakenedIcon singleton;
     private static final Texture iconTex = TexLoader.getTexture("awakenedResources/images/ui/AwesomeIcon.png");
 
@@ -28,6 +28,6 @@ public class AwakenedIcon extends AbstractCustomIcon {
 
     @Override
     public List<String> keywordLinks() {
-        return Collections.singletonList(makeID("awesome"));
+        return Collections.singletonList(makeID("awakened"));
     }
 }

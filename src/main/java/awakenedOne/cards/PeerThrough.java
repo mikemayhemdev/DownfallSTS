@@ -1,6 +1,5 @@
-package awakenedOne.cards.tokens;
+package awakenedOne.cards;
 
-import awakenedOne.cards.AbstractAwakenedCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;

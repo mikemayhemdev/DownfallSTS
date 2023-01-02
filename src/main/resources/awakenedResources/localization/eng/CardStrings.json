@@ -39,7 +39,7 @@
   },
   "awakened:AwokenStrike": {
     "NAME": "Awoken Strike",
-    "DESCRIPTION": "Deal !D! damage. NL [awakened:icon] 1: to ALL enemies. NL [awakened:icon] 3: twice."
+    "DESCRIPTION": "Deal !D! damage. NL [awakenedIcon] 1: to ALL enemies. NL [awakenedIcon] 3: twice."
   },
   "awakened:MagicStrike": {
     "NAME": "Magic Strike",
@@ -52,8 +52,8 @@
   },
   "awakened:MultiMagic": {
     "NAME": "Multi-Magic",
-    "DESCRIPTION": "Deal !D! damage. NL [awakened:icon] 1: Gain !B! Block. NL [awakened:icon] 3: Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL [awakened:icon] 1: Gain !B! Block. NL [awakened:icon] 3: Draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL [awakenedIcon] 1: Gain !B! Block. NL [awakenedIcon] 3: Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL [awakenedIcon] 1: Gain !B! Block. NL [awakenedIcon] 3: Draw !M! cards."
   },
   "awakened:StudyPyromancy": {
     "NAME": "Study Pyromancy",
@@ -152,7 +152,7 @@
   },
   "awakened:Manifestation": {
     "NAME": "Manifestation",
-    "DESCRIPTION": "[awakened:icon] 3: Deal !D! damage."
+    "DESCRIPTION": "[awakenedIcon] 3: Deal !D! damage."
   },
   "awakened:FlamingSummons": {
     "NAME": "Flaming Summons",
@@ -164,7 +164,7 @@
   },
   "awakened:BookOfTricks": {
     "NAME": "Book of Tricks",
-    "DESCRIPTION": "Gain !M! Plated Armor. NL [awakened:icon] 1: And !awakened:m2! Artifact. NL [awakened:icon] 3: And !awakened:m3! Thorns."
+    "DESCRIPTION": "Gain !M! Plated Armor. NL [awakenedIcon] 1: And !awakened:m2! Artifact. NL [awakenedIcon] 3: And !awakened:m3! Thorns."
   },
   "awakened:ToxinWing": {
     "NAME": "Toxin Wing",
@@ -172,7 +172,7 @@
   },
   "awakened:AboveItAll": {
     "NAME": "Above It All",
-    "DESCRIPTION": "Whenever you gain [awakened:icon] , also gain !M! Block."
+    "DESCRIPTION": "Whenever you gain [awakenedIcon] , also gain !M! Block."
   },
   "awakened:CrowsCall": {
     "NAME": "Crow's Call",
@@ -193,7 +193,7 @@
   },
   "awakened:Flourish": {
     "NAME": "Flourish",
-    "DESCRIPTION": "[awakened:icon] 2: Draw !M! cards."
+    "DESCRIPTION": "[awakenedIcon] 2: Draw !M! cards."
   },
   "awakened:CoolMagnet": {
     "NAME": "Magnetic Personality",
@@ -201,7 +201,7 @@
   },
   "awakened:Thoughtshield": {
     "NAME": "Thoughtshield",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! [awakened:icon] . NL Enemies can't create cards this turn."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! [awakenedIcon] . NL Enemies can't create cards this turn."
   },
   "awakened:Curiosity": {
     "NAME": "Curiosity",
@@ -221,7 +221,7 @@
   },
   "awakened:LifeLeech": {
     "NAME": "Life Leech",
-    "DESCRIPTION": "Enemy loses !M! Strength this turn. NL [awakened:icon] 2: Gain that same Strength this turn."
+    "DESCRIPTION": "Enemy loses !M! Strength this turn. NL [awakenedIcon] 2: Gain that same Strength this turn."
   },
   "awakened:Beacon": {
     "NAME": "Beacon",
@@ -251,13 +251,13 @@
   },
   "awakened:TheDivineGem": {
     "NAME": "The Divine Gem",
-    "DESCRIPTION": "Deal !D! damage. NL [awakened:icon] 1: Apply !M! Vulnerable. NL [awakened:icon] 3: Gain [E] and draw 1 card. NL [awakened:icon] 5: Gain !M! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL [awakenedIcon] 1: Apply !M! Vulnerable. NL [awakenedIcon] 3: Gain [E] and draw 1 card. NL [awakenedIcon] 5: Gain !M! Strength."
   },
   "awakened:ForeverFrozen": {
     "NAME": "Frozen Forever",
     "DESCRIPTION": "Deal !D! damage. NL Apply Weak equal to unblocked damage dealt."
   },
-  "awakened:FlightOFFancy": {
+  "awakened:FlightOfFancy": {
     "NAME": "Flight of Fancy",
     "DESCRIPTION": "Give the first !M! cards you draw each turn awakened:Flying.",
     "UPGRADE_DESCRIPTION": "Innate. NL Give the first !M! cards you draw each turn awakened:Flying."
@@ -268,7 +268,7 @@
   },
   "awakened:TowerOfEndings": {
     "NAME": "Tower of Endings",
-    "DESCRIPTION": "Ethereal. NL When you reach [awakened:icon] 12, kill ALL enemies."
+    "DESCRIPTION": "Ethereal. NL When you reach [awakenedIcon] 12, kill ALL enemies."
   },
   "awakened:SpellMastery": {
     "NAME": "Spell Mastery",
@@ -304,5 +304,13 @@
   "awakened:Uncaged": {
     "NAME": "Uncaged",
     "DESCRIPTION": "Can only be played if you played a Power this turn. Deal !D! damage."
+  },
+  "awakened:MazalethsMadness": {
+    "NAME": "Mazaleth's Madness",
+    "DESCRIPTION": "Whenever you play a Spell, deal !M! damage to a random enemy."
+  },
+  "awakened:Brightblind": {
+    "NAME": "Brightblind",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Weak and Vulnerable to a random enemy."
   }
 }

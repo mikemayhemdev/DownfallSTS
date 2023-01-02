@@ -12,7 +12,7 @@ public class Feather extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, special, 3, 2, , , , 
 
     public Feather() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 3;
         selfRetain = true;
         exhaust = true;
