@@ -127,7 +127,12 @@
   },
   "awakened:CultDaggers": {
     "NAME": "Cult Daggers",
-    "DESCRIPTION": "Deal !D! damage for each other cost 0 card in your hand."
+    "DESCRIPTION": "Deal !D! damage for each other cost 0 card in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (You have ",
+      " cost 0 card).",
+      " cost 0 cards)."
+    ]
   },
   "awakened:ShadowStrike": {
     "NAME": "Shadow Strike",
@@ -212,15 +217,40 @@
   },
   "awakened:PrimedCasting": {
     "NAME": "Primed Casting",
-    "DESCRIPTIONS": "Gain !B! Block. NL awakened:Conjure !M!. NL Upgrade the Conjured Spell."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure !M!. NL Upgrade the Conjured Spell."
   },
   "awakened:LifeLeech": {
     "NAME": "Life Leech",
-    "DESCRIPTIONS": "Enemy loses !M! Strength this turn. NL [awakened:icon] 2: Gain that same Strength this turn."
+    "DESCRIPTION": "Enemy loses !M! Strength this turn. NL [awakened:icon] 2: Gain that same Strength this turn."
   },
   "awakened:Beacon": {
     "NAME": "Beacon",
     "DESCRIPTION": "Unplayable. NL Startup: Add a *Miracle into your hand.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Unplayable. NL Startup: Add a *Miracle into your hand."
+  },
+  "awakened:Byrds": {
+    "NAME": "BYRDS!!!",
+    "DESCRIPTION": "awakened:Flying. NL Deal !D! damage !M! times. NL Deals 1 additional damage for each *Feather played this turn."
+  },
+  "awakened:SoulStrike": {
+    "NAME": "Soul Strike",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies for each Curse in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (You have ",
+      " Curse).",
+      " Curses)."
+    ]
+  },
+  "awakened:DarkEcho": {
+    "NAME": "Dark Echo",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL They lose !M! Strength. NL Exhaust."
+  },
+  "awakened:RitualDagger": {
+    "NAME": "Ritual Dagger",
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal, permanently increase this card's damage by !M!. NL Exhaust."
+  },
+  "awakened:TheDivineGem": {
+    "NAME": "The Divine Gem",
+    "DESCRIPTION": "Deal !D! damage. NL [awakened:icon] 1: Apply !M! Weak and Vulnerable. NL [awakened:icon] 3: Gain [E] and draw 1 card."
   }
 }
