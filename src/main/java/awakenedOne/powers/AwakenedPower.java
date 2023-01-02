@@ -1,8 +1,5 @@
 package awakenedOne.powers;
 
-import awakenedOne.cards.ReceiveAwakenCard;
-import awakenedOne.util.Wiz;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class AwakenedPower extends AbstractAwakenedPower {
