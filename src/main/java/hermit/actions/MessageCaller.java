@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
+import downfall.tutorials.AwakenedOneTutorials;
 import downfall.tutorials.CharbossTutorials;
 import downfall.tutorials.GuardianTutorials;
 import downfall.tutorials.HexaghostTutorials;
@@ -40,6 +41,9 @@ public class MessageCaller extends AbstractGameAction {
                     break;
                 case 3:
                     AbstractDungeon.ftue = new CharbossTutorials();
+                    break;
+                case 4:
+                    AbstractDungeon.ftue = new AwakenedOneTutorials();
                     break;
             }
             downfallMod.unseenTutorials[code] = false;

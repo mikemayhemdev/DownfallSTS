@@ -38,6 +38,19 @@
       ")"
     ]
   },
+  "HermitMod:AwakenedTutorials": {
+    "TEXT": [
+      "The Awakened One can Conjure Spells from its Spellbook.",
+      "It can also Awaken at any time by spending Energy."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "Awakened One",
+      "(Page: ",
+      ")"
+    ]
+  },
   "HermitMod:CharbossTutorials": {
     "TEXT": [
       "The enemy Heroes have powerful abilities that may require you to alter your strategies.",

@@ -67,10 +67,8 @@ public class AwakenedOneChar extends CustomPlayer {
 
     public void reloadAnimation() {
         this.loadAnimation(
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].atlasURL,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].jsonURL,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].renderscale);
-        this.state.setAnimation(0, "idle", true);
+                "images/monsters/theForest/awakenedOne/skeleton.atlas", "images/monsters/theForest/awakenedOne/skeleton.json", 0.7F);
+        this.state.setAnimation(0, "Idle_1", true);
     }
 
 

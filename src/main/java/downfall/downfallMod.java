@@ -219,7 +219,8 @@ public class downfallMod implements
             true, // Hermit
             true, // Guardian
             true, // Hexa
-            true // Charboss Info
+            true, // Charboss Info
+            true // Awakened One info
     };
 
     public static Properties tutorialSaves = new Properties();
@@ -1789,6 +1790,12 @@ public class downfallMod implements
         if (AbstractDungeon.player instanceof TheHexaghost) {
             if (downfallMod.unseenTutorials[2]) {
                 AbstractDungeon.actionManager.addToBottom(new MessageCaller(2));
+            }
+        }
+
+        if (AbstractDungeon.player instanceof AwakenedOneChar) {
+            if (downfallMod.unseenTutorials[4]) {
+                AbstractDungeon.actionManager.addToBottom(new MessageCaller(4));
             }
         }
 
