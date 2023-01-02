@@ -21,6 +21,7 @@ public class ShadowStrike extends AbstractAwakenedCard implements OnObtainCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 12;
         baseMagicNumber = magicNumber = 2;
+        cardsToPreview = new Shadow();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

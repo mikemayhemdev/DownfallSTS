@@ -251,6 +251,58 @@
   },
   "awakened:TheDivineGem": {
     "NAME": "The Divine Gem",
-    "DESCRIPTION": "Deal !D! damage. NL [awakened:icon] 1: Apply !M! Weak and Vulnerable. NL [awakened:icon] 3: Gain [E] and draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL [awakened:icon] 1: Apply !M! Vulnerable. NL [awakened:icon] 3: Gain [E] and draw 1 card. NL [awakened:icon] 5: Gain !M! Strength."
+  },
+  "awakened:ForeverFrozen": {
+    "NAME": "Frozen Forever",
+    "DESCRIPTION": "Deal !D! damage. NL Apply Weak equal to unblocked damage dealt."
+  },
+  "awakened:FlightOFFancy": {
+    "NAME": "Flight of Fancy",
+    "DESCRIPTION": "Give the first !M! cards you draw each turn awakened:Flying.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Give the first !M! cards you draw each turn awakened:Flying."
+  },
+  "awakened:CawCaw": {
+    "NAME": "Caw Caw!",
+    "DESCRIPTION": "awakened:Flying. NL Gain !M! Ritual."
+  },
+  "awakened:TowerOfEndings": {
+    "NAME": "Tower of Endings",
+    "DESCRIPTION": "Ethereal. NL When you reach [awakened:icon] 12, kill ALL enemies."
+  },
+  "awakened:SpellMastery": {
+    "NAME": "Spell Mastery",
+    "DESCRIPTION": "Choose a card in your hand. NL Add 3 copies that cost 0 to your Spells."
+  },
+  "awakened:AsShadow": {
+    "NAME": "As Shadow",
+    "DESCRIPTION": "Comes with 2 *Shadows. Ethereal. NL Gain 1 Intangible. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Comes with 2 *Shadows. NL Gain 1 Intangible. NL Exhaust."
+  },
+  "awakened:Ascend": {
+    "NAME": "Ascend",
+    "DESCRIPTION": "Discard your hand. NL Gain [E] [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Discard your hand. NL Gain [E] [E] [E] [E] [E] ."
+  },
+  "awakened:DrainToDust": {
+    "NAME": "Drain to Dust",
+    "DESCRIPTION": "Enemy loses !M! HP. NL Increase this card's HP loss by !awakened:m2! for the rest of combat."
+  },
+  "awakened:Rebirth": {
+    "NAME": "Rebirth",
+    "DESCRIPTION": "Heal !M! HP. NL Add 1 *Miracle into your hand. NL Gain !awakened:m2! Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Heal !M! HP. NL Add 1 *Miracle+ into your hand. NL Gain !awakened:m2! Strength. NL Exhaust."
+  },
+  "awakened:BlotOut": {
+    "NAME": "Blot Out",
+    "DESCRIPTION": "Enemy can't buff themselves or debuff you for !M! turns. NL Add this into your Spells."
+  },
+  "awakened:FinalizeFate": {
+    "NAME": "Finalize Fate",
+    "DESCRIPTION": "Deal !D! damage. NL Discard your hand. NL If you still have Energy, deal !D! damage again."
+  },
+  "awakened:Uncaged": {
+    "NAME": "Uncaged",
+    "DESCRIPTION": "Can only be played if you played a Power this turn. Deal !D! damage."
   }
 }

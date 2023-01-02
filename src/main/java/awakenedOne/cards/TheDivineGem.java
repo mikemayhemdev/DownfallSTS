@@ -5,8 +5,8 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.*;
@@ -25,12 +25,14 @@ public class TheDivineGem extends AbstractAwakenedCard {
         int amt = awakenedAmount();
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         if (amt >= 1) {
-            applyToEnemy(m, new WeakPower(m, magicNumber, false));
             applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
         }
         if (amt >= 3) {
             atb(new GainEnergyAction(1));
             atb(new DrawCardAction(1));
+        }
+        if (amt >= 5) {
+            applyToSelf(new StrengthPower(p, magicNumber));
         }
     }
 

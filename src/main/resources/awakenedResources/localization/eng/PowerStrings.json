@@ -74,5 +74,42 @@
       "Whenever you play a non-Attack card, loses #b",
       " HP."
     ]
+  },
+  "awakened:FlightOfFancyPower": {
+    "NAME": "Flight of Fancy",
+    "DESCRIPTIONS": [
+      "Give the first #b",
+      " cards you draw each turn #yFlying."
+    ]
+  },
+  "awakened:MazalethsMadnessPower": {
+    "NAME": "Mazaleth's Madness",
+    "DESCRIPTIONS": [
+      "Whenever you play a Spell, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "awakened:ZeroToHeroPower": {
+    "NAME": "Zero to Hero",
+    "DESCRIPTIONS": [
+      "Cost #b0 cards are played twice.",
+      "Cost #b0 cards are played #b",
+      " times."
+    ]
+  },
+  "awakened:TowerOfEndingsPower": {
+    "NAME": "Tower of Endings",
+    "DESCRIPTIONS": [
+      "When you reach #yAwakened #b",
+      " #rkill #rALL #renemies."
+    ]
+  },
+  "awakened:BlotOutPower": {
+    "NAME": "Blotted Out",
+    "DESCRIPTIONS": [
+      "Can't buff itself or debuff you this turn.",
+      "Can't buff itself or debuff you for the next #b",
+      " turns."
+    ]
   }
 }
