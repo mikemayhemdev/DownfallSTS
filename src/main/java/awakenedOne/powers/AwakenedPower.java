@@ -1,5 +1,8 @@
 package awakenedOne.powers;
 
+import awakenedOne.cards.ReceiveAwakenCard;
+import awakenedOne.util.Wiz;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class AwakenedPower extends AbstractAwakenedPower {
@@ -9,6 +12,16 @@ public class AwakenedPower extends AbstractAwakenedPower {
 
     public AwakenedPower(int amount) {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        for (AbstractCard q : Wiz.getAllCardsInCardGroups(true, true)) {
+            if (q instanceof ReceiveAwakenCard) {
+                ((ReceiveAwakenCard) q).receiveAwaken(amount);
+            }
+        }
     }
 
     @Override

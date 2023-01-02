@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.awakenedAmount;
 
-public class AwokenStrike extends AbstractAwakenedCard {
+public class AwokenStrike extends AbstractAwakenedCard implements ReceiveAwakenCard {
     public final static String ID = makeID(AwokenStrike.class.getSimpleName());
     // intellij stuff attack, enemy, common, 5, 3, , , , 
 
@@ -27,6 +27,15 @@ public class AwokenStrike extends AbstractAwakenedCard {
             if (amt >= 3) {
                 allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
             }
+        }
+    }
+
+    @Override
+    public void receiveAwaken(int total) {
+        if (total >= 1) {
+            target = CardTarget.ALL_ENEMY;
+        } else {
+            target = CardTarget.ENEMY;
         }
     }
 

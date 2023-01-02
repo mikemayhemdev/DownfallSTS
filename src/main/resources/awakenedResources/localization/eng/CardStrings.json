@@ -176,11 +176,12 @@
   },
   "awakened:CrowsCall": {
     "NAME": "Crow's Call",
-    "DESCRIPTION": "Comes with a *Shadow. At the end of your turn, ALL enemies lose !M! HP for each Curse or Status card in your hand."
+    "DESCRIPTION": "At the end of your turn, ALL enemies lose !M! HP for each Curse or Status card in your hand."
   },
   "awakened:StudyGigantify": {
-    "NAME": "Study Gigantify",
-    "DESCRIPTION": "Gain !M! Strength and Dexterity. NL Add a *Greater *Gigantify to your Spells."
+    "NAME": "Study Gigantomancy",
+    "DESCRIPTION": "Add a *Greater *Gigantomancy to your Spells.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add a *Greater *Gigantomancy to your Spells."
   },
   "awakened:FromNothing": {
     "NAME": "From Nothing",
@@ -321,5 +322,10 @@
   "awakened:ZeroToHero": {
     "NAME": "Zero to Hero",
     "DESCRIPTION": "Cost 0 cards are played twice."
+  },
+  "awakened:ShadowSight": {
+    "NAME": "Shadow Sight",
+    "DESCRIPTION": "Comes with a *Shadow. NL Put 1 card from your draw pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Comes with a *Shadow. NL Retain. NL Put 1 card from your draw pile into your hand. NL Exhaust."
   }
 }
