@@ -524,7 +524,9 @@ public class ChampMod implements
 
     @Override
     public int receiveOnPlayerLoseBlock(int i) {
-        if(AbstractDungeon.player.stance instanceof DefensiveMode)
+        if(AbstractDungeon.player.stance instanceof DefensiveMode){
+            return i;
+        }
         if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
             int counter = Math.min(i, AbstractDungeon.player.currentBlock / 2);
             if (counter > 0) {
