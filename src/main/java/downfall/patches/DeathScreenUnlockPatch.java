@@ -15,6 +15,7 @@ import gremlin.patches.GremlinEnum;
 import guardian.patches.GuardianEnum;
 import javassist.CtBehavior;
 import slimebound.patches.SlimeboundEnum;
+import sneckomod.TheSnecko;
 import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
@@ -75,6 +76,11 @@ public class DeathScreenUnlockPatch {
                         AbstractDungeon.unlocks.add(new SneckoUnlock());
                         AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                         ////SlimeboundMod.logger.info("Triggered Snecko Unlock screen!");
+                        return SpireReturn.Return(null);
+                    } else if ((UnlockTracker.isCharacterLocked("Awakened")) && AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO) {
+                        AbstractDungeon.unlocks.add(new AwakenedOneUnlock());
+                        AbstractDungeon.unlockScreen.open(AbstractDungeon.unlocks.remove(0));
+
                         return SpireReturn.Return(null);
                     }
                 }

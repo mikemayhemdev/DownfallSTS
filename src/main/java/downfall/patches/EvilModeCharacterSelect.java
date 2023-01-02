@@ -1,6 +1,7 @@
 package downfall.patches;
 
 import automaton.AutomatonChar;
+import awakenedOne.AwakenedOneChar;
 import basemod.CustomCharacterSelectScreen;
 import basemod.ReflectionHacks;
 import champ.ChampChar;
@@ -112,6 +113,12 @@ public class EvilModeCharacterSelect {
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
                                 villainOptions[6] = o;
+                            } else if (o.c.chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE) {
+                                if (UnlockTracker.isCharacterLocked("Awakened")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[7] = o;
                             } else {
                                 isVillain = false;
                                 moddedOptions.add(o);
