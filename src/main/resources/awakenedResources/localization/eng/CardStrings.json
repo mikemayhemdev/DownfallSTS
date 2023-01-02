@@ -30,8 +30,7 @@
   },
   "awakened:VoidChannel": {
     "NAME": "Void Channel",
-    "DESCRIPTION": "Next turn, NL gain [E] .",
-    "UPGRADE_DESCRIPTION": "Next turn, NL gain [E] [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, NL gain [E] ."
   },
   "awakened:Chromatics": {
     "NAME": "Chromatics",
@@ -108,10 +107,6 @@
   "awakened:TrashBarrier": {
     "NAME": "Thoughtless",
     "DESCRIPTION": "Exhaust 1 card. NL Gain !B! Block."
-  },
-  "awakened:Distract": {
-    "NAME": "Distract",
-    "DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile."
   },
   "awakened:PeerThrough": {
     "NAME": "Peer Through",
@@ -225,18 +220,13 @@
     "NAME": "Life Leech",
     "DESCRIPTION": "Enemy loses !M! Strength this turn. NL [awakenedIcon] 2: Gain that same Strength this turn."
   },
-  "awakened:Beacon": {
-    "NAME": "Beacon",
-    "DESCRIPTION": "Unplayable. NL Startup: Add a *Miracle into your hand.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Unplayable. NL Startup: Add a *Miracle into your hand."
-  },
   "awakened:Byrds": {
     "NAME": "BYRDS!!!",
     "DESCRIPTION": "awakened:Flying. NL Deal !D! damage !M! times. NL Deals 1 additional damage for each *Feather played this turn."
   },
   "awakened:SoulStrike": {
     "NAME": "Soul Strike",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies for each Curse in your hand.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Repeat for each Curse in your hand.",
     "EXTENDED_DESCRIPTION": [
       " NL (You have ",
       " Curse).",
@@ -327,5 +317,9 @@
     "NAME": "Shadow Sight",
     "DESCRIPTION": "Comes with a *Shadow. NL Put 1 card from your draw pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Comes with a *Shadow. NL Retain. NL Put 1 card from your draw pile into your hand. NL Exhaust."
+  },
+  "awakened:PanickedRitual": {
+    "NAME": "Panicked Ritual",
+    "DESCRIPTION": "Gain a random card. NL It costs 0 this turn. NL [awakenedIcon] 1: Upgrade it. NL [awakenedIcon] 3: Gain another copy. NL Exhaust."
   }
 }

@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
-import static awakenedOne.util.Wiz.awakenedAmount;
+import static awakenedOne.util.Wiz.awakenedAmt;
 
 public class BookOfTricks extends AbstractAwakenedCard {
     public final static String ID = makeID(BookOfTricks.class.getSimpleName());
@@ -22,7 +22,7 @@ public class BookOfTricks extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int amt = awakenedAmount();
+        int amt = awakenedAmt();
         applyToSelf(new PlatedArmorPower(p, magicNumber));
         if (amt >= 1) {
             applyToSelf(new ArtifactPower(p, secondMagic));

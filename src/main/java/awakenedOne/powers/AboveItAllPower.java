@@ -18,7 +18,7 @@ public class AboveItAllPower extends AbstractAwakenedPower implements OnAwakenPo
     }
 
     @Override
-    public void onAwaken(int amount) {
+    public void onAwaken(int gained) {
         flash();
         addToBot(new GainBlockAction(owner, amount));
     }

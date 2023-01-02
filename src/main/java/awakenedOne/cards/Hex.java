@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import awakenedOne.powers.EnemyHexedPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -19,6 +20,7 @@ public class Hex extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToEnemy(m, new WeakPower(m, magicNumber, false));
+        applyToEnemy(m, new EnemyHexedPower(secondMagic));
     }
 
     public void upp() {

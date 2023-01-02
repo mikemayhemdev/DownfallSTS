@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -20,10 +21,16 @@ public class DamperWave extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, magicNumber, false)));
         forAllMonstersLiving(q -> {
-            if (q.hasPower(WeakPower.POWER_ID)) {
-                int x = q.getPower(WeakPower.POWER_ID).amount;
-                att(new LoseHPAction(q, p, x));
-            }
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    if (q.hasPower(WeakPower.POWER_ID)) {
+                        int x = q.getPower(WeakPower.POWER_ID).amount;
+                        att(new LoseHPAction(q, p, x));
+                    }
+                }
+            });
         });
     }
 

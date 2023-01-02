@@ -18,7 +18,7 @@ public class OrbitingSpells {
     private static final float X_DIST = 300F;
     private static final float Y_DIST = 80F;
     private static final float DIST_BETWEEN_CARDS = MathUtils.PI2;
-    private static final float TIME_MULT = MathUtils.PI2 * 0.1F;
+    private static final float TIME_MULT = MathUtils.PI2 * 0.075F;
     private static final float SPELL_SIZE = 0.5F;
     private static final float SPELL_SIZE_MOD = 0.166F;
     private static final float SPELL_TRANSPARENCY = 0.5F;
@@ -29,7 +29,6 @@ public class OrbitingSpells {
     public static float time;
 
     static {
-        // Populate Spells
         spells.add(BurningStudy.ID);
         spells.add(Cryostasis.ID);
         spells.add(Thunderbolt.ID);
@@ -113,7 +112,7 @@ public class OrbitingSpells {
         }
 
         public void updatePositions() {
-            card.target_x = (float) (X_DIST * Math.cos(time + timeOffset)) + (AbstractDungeon.player.drawX + (AbstractDungeon.player.hb.width / 4));
+            card.target_x = (float) (X_DIST * Math.cos(time + timeOffset)) + (AbstractDungeon.player.drawX + (AbstractDungeon.player.hb.width / 5));
             card.target_y = (float) (Y_DIST * Math.sin(time + timeOffset)) + (AbstractDungeon.player.drawY + (AbstractDungeon.player.hb.height / 2));
             boolean isBehind = ((time + timeOffset) / MathUtils.PI) % 2 < 1;
             renderBehind = isBehind;

@@ -22,7 +22,8 @@ public class ForeverFrozen extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DamageCallbackAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE, (dealt -> {
-            applyToEnemyTop(m, new WeakPower(m, dealt, false));
+            if (dealt > 0)
+                applyToEnemyTop(m, new WeakPower(m, dealt, false));
         })));
     }
 

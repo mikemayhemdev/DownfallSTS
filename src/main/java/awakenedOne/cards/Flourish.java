@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.atb;
-import static awakenedOne.util.Wiz.awakenedAmount;
+import static awakenedOne.util.Wiz.awakenedAmt;
 
 public class Flourish extends AbstractAwakenedCard {
     public final static String ID = makeID(Flourish.class.getSimpleName());
@@ -18,7 +18,7 @@ public class Flourish extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int amt = awakenedAmount();
+        int amt = awakenedAmt();
         if (amt >= 2) {
             atb(new DrawCardAction(magicNumber));
         }

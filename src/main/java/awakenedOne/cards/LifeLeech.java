@@ -20,7 +20,7 @@ public class LifeLeech extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int amt = awakenedAmount();
+        int amt = awakenedAmt();
         applyToEnemy(m, new StrengthPower(m, -magicNumber));
         if (m != null && !m.hasPower(ArtifactPower.POWER_ID)) {
             applyToEnemy(m, new GainStrengthPower(m, magicNumber));

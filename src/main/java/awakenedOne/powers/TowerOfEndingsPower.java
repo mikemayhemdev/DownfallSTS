@@ -25,7 +25,7 @@ public class TowerOfEndingsPower extends AbstractAwakenedPower implements OnAwak
 
     @Override
     public void onAwaken(int amount) {
-        int currentAwokenness = awakenedAmount();
+        int currentAwokenness = awakenedAmt();
         if (currentAwokenness + amount == NEEDED_AWAKEN) {
             flash();
             forAllMonstersLiving(q -> atb(new KillEnemyAction(q)));

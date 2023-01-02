@@ -15,16 +15,6 @@ public class AwakenedPower extends AbstractAwakenedPower {
     }
 
     @Override
-    public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
-        for (AbstractCard q : Wiz.getAllCardsInCardGroups(true, true)) {
-            if (q instanceof ReceiveAwakenCard) {
-                ((ReceiveAwakenCard) q).receiveAwaken(amount);
-            }
-        }
-    }
-
-    @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }

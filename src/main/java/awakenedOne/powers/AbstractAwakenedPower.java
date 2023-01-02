@@ -1,5 +1,6 @@
 package awakenedOne.powers;
 
+import awakenedOne.util.TexLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -8,7 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import downfall.util.TextureLoader;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,8 +45,8 @@ public abstract class AbstractAwakenedPower extends AbstractPower {
         this.amount = amount;
         this.type = powerType;
 
-        Texture normalTexture = TextureLoader.getTexture("bronzeResources/images/powers/" + NAME + "32.png");
-        Texture hiDefImage = TextureLoader.getTexture("bronzeResources/images/powers/" + NAME + "84.png");
+        Texture normalTexture = TexLoader.getTexture("awakenedResources/images/powers/" + NAME + "32.png");
+        Texture hiDefImage = TexLoader.getTexture("awakenedResources/images/powers/" + NAME + "84.png");
         if (hiDefImage != null) {
             region128 = new TextureAtlas.AtlasRegion(hiDefImage, 0, 0, hiDefImage.getWidth(), hiDefImage.getHeight());
             if (normalTexture != null)
@@ -75,8 +75,8 @@ public abstract class AbstractAwakenedPower extends AbstractPower {
         this.type = powerType;
 
         if (loadImage) {
-            Texture normalTexture = TextureLoader.getTexture("bronzeResources/images/powers/" + NAME + "32.png");
-            Texture hiDefImage = TextureLoader.getTexture("bronzeResources/images/powers/" + NAME + "84.png");
+            Texture normalTexture = TexLoader.getTexture("awakenedResources/images/powers/" + NAME + "32.png");
+            Texture hiDefImage = TexLoader.getTexture("awakenedResources/images/powers/" + NAME + "84.png");
             if (hiDefImage != null) {
                 region128 = new TextureAtlas.AtlasRegion(hiDefImage, 0, 0, hiDefImage.getWidth(), hiDefImage.getHeight());
                 if (normalTexture != null)

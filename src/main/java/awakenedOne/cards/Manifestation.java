@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.awakenedAmount;
+import static awakenedOne.util.Wiz.awakenedAmt;
 
 public class Manifestation extends AbstractAwakenedCard {
     public final static String ID = makeID(Manifestation.class.getSimpleName());
@@ -17,7 +17,7 @@ public class Manifestation extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int amt = awakenedAmount();
+        int amt = awakenedAmt();
         if (amt >= 3) {
             dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         }

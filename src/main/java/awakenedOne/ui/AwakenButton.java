@@ -45,7 +45,7 @@ public class AwakenButton extends ClickableUIElement {
 
     @Override
     protected void onClick() {
-        if (canBeClicked() && EnergyPanel.totalCount > 0) {
+        if (canBeClicked()) {
             int amount = EnergyPanel.totalCount;
             AbstractDungeon.player.energy.use(amount);
             awaken(amount);
@@ -67,7 +67,7 @@ public class AwakenButton extends ClickableUIElement {
     }
 
     private boolean canBeClicked() {
-        return !AbstractDungeon.isScreenUp && AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.actionManager.currentAction == null;
+        return !AbstractDungeon.isScreenUp && AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.actionManager.currentAction == null && EnergyPanel.totalCount > 0;
     }
 
 }

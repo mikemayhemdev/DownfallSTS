@@ -1,13 +1,15 @@
 package awakenedOne.cards;
 
+import awakenedOne.powers.AwakenedPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.awakenedAmount;
+import static awakenedOne.util.Wiz.awakenedAmt;
 
-public class AwokenStrike extends AbstractAwakenedCard implements ReceiveAwakenCard {
+public class AwokenStrike extends AbstractAwakenedCard {
     public final static String ID = makeID(AwokenStrike.class.getSimpleName());
     // intellij stuff attack, enemy, common, 5, 3, , , , 
 
@@ -17,7 +19,7 @@ public class AwokenStrike extends AbstractAwakenedCard implements ReceiveAwakenC
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int amt = awakenedAmount();
+        int amt = awakenedAmt();
         if (amt == 0) {
             dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         } else {
@@ -31,8 +33,9 @@ public class AwokenStrike extends AbstractAwakenedCard implements ReceiveAwakenC
     }
 
     @Override
-    public void receiveAwaken(int total) {
-        if (total >= 1) {
+    public void applyPowers() {
+        super.applyPowers();
+        if (AbstractDungeon.player.hasPower(AwakenedPower.POWER_ID)) {
             target = CardTarget.ALL_ENEMY;
         } else {
             target = CardTarget.ENEMY;

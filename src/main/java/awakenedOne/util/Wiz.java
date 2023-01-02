@@ -192,7 +192,7 @@ public class Wiz {
         return 0;
     }
 
-    public static int awakenedAmount() {
+    public static int awakenedAmt() {
         return pwrAmt(AbstractDungeon.player, AwakenedPower.POWER_ID);
     }
 }

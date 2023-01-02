@@ -22,7 +22,7 @@ public class TheDivineGem extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int amt = awakenedAmount();
+        int amt = awakenedAmt();
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         if (amt >= 1) {
             applyToEnemy(m, new VulnerablePower(m, magicNumber, false));

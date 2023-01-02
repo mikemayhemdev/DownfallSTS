@@ -19,6 +19,7 @@ public class SoulStrike extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        allDmg(AbstractGameAction.AttackEffect.FIRE);
         AbstractCard ref = this;
         addToBot(new AbstractGameAction() {
             @Override

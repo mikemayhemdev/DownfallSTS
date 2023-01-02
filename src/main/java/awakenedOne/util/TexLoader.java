@@ -15,7 +15,7 @@ public class TexLoader {
             try {
                 loadTexture(textureString, true);
             } catch (GdxRuntimeException e) {
-                return getTexture("casterResources/images/ui/missing.png");
+                return getTexture("awakenedResources/images/ui/missing.png");
             }
         }
         return textures.get(textureString);
@@ -37,7 +37,7 @@ public class TexLoader {
         public static void DisposeListenerPatch(final Texture __instance) {
             textures.entrySet().removeIf(entry -> {
                 if (entry.getValue().equals(__instance))
-                    System.out.println("TextureLoader | Removing Texture: " + entry.getKey());
+                    System.out.println("TexLoader | Removing Texture: " + entry.getKey());
                 return entry.getValue().equals(__instance);
             });
         }

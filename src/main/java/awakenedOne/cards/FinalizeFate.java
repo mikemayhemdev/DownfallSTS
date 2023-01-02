@@ -16,7 +16,7 @@ public class FinalizeFate extends AbstractAwakenedCard {
 
     public FinalizeFate() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 11;
+        baseDamage = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

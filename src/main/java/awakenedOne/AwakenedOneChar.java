@@ -34,27 +34,27 @@ public class AwakenedOneChar extends CustomPlayer {
     public static final String ID = makeID("awakenedOne");
     public static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] orbTextures = {
-            "bronzeResources/images/char/mainChar/orb/layer1.png",
-            "bronzeResources/images/char/mainChar/orb/layer2.png",
-            "bronzeResources/images/char/mainChar/orb/layer3.png",
-            "bronzeResources/images/char/mainChar/orb/layer4.png",
-            "bronzeResources/images/char/mainChar/orb/layer5.png",
-            "bronzeResources/images/char/mainChar/orb/layer6.png",
-            "bronzeResources/images/char/mainChar/orb/layer1d.png",
-            "bronzeResources/images/char/mainChar/orb/layer2d.png",
-            "bronzeResources/images/char/mainChar/orb/layer3d.png",
-            "bronzeResources/images/char/mainChar/orb/layer4d.png",
-            "bronzeResources/images/char/mainChar/orb/layer5d.png",};
+            "awakenedResources/images/mainChar/orb/layer1.png",
+            "awakenedResources/images/mainChar/orb/layer2.png",
+            "awakenedResources/images/mainChar/orb/layer3.png",
+            "awakenedResources/images/mainChar/orb/layer4.png",
+            "awakenedResources/images/mainChar/orb/layer5.png",
+            "awakenedResources/images/mainChar/orb/layer6.png",
+            "awakenedResources/images/mainChar/orb/layer1d.png",
+            "awakenedResources/images/mainChar/orb/layer2d.png",
+            "awakenedResources/images/mainChar/orb/layer3d.png",
+            "awakenedResources/images/mainChar/orb/layer4d.png",
+            "awakenedResources/images/mainChar/orb/layer5d.png",};
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
     public float renderscale = 1.2F;
 
-    private final String atlasURL = "bronzeResources/images/char/mainChar/bronze.atlas";
-    private final String jsonURL = "bronzeResources/images/char/mainChar/bronze.json";
+    private final String atlasURL = "awakenedResources/images/mainChar/awakened.atlas";
+    private final String jsonURL = "awakenedResources/images/mainChar/awakened.json";
 
     public AwakenedOneChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "bronzeResources/images/char/mainChar/orb/vfx.png", null, (String) null);
+        super(name, setClass, orbTextures, "awakenedResources/images/mainChar/orb/vfx.png", null, (String) null);
         initializeClass(null,
                 CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER1,
                 CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER2,
