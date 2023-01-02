@@ -111,7 +111,7 @@
   },
   "awakened:Distract": {
     "NAME": "Distract",
-    "DESCRIPTION": "Apply !M! Weak. NL Gain !B! Block. NL Put the next card you play this turn on top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile."
   },
   "awakened:PeerThrough": {
     "NAME": "Peer Through",
@@ -119,7 +119,7 @@
   },
   "awakened:PiercingCall": {
     "NAME": "Piercing Call",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure !M!. NL It costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure !M!. NL The awakened:Conjured Spell costs 0 this turn."
   },
   "awakened:DualRitual": {
     "NAME": "Dual Ritual",
@@ -160,7 +160,7 @@
   },
   "awakened:InResponse": {
     "NAME": "In Response...",
-    "DESCRIPTION": "Conjure !M!. NL Whenever you play a Spell, gain !awakened:m2! Block."
+    "DESCRIPTION": "awakened:Conjure !M!. NL Whenever you play a Spell, gain !awakened:m2! Block."
   },
   "awakened:BookOfTricks": {
     "NAME": "Book of Tricks",
@@ -176,7 +176,7 @@
   },
   "awakened:CrowsCall": {
     "NAME": "Crow's Call",
-    "DESCRIPTION": "At the end of your turn, ALL enemies lose !M! HP for each Curse or Status card in your hand."
+    "DESCRIPTION": "Comes with a *Shadow. At the end of your turn, ALL enemies lose !M! HP for each Curse or Status card in your hand."
   },
   "awakened:StudyGigantify": {
     "NAME": "Study Gigantify",
@@ -201,7 +201,8 @@
   },
   "awakened:Thoughtshield": {
     "NAME": "Thoughtshield",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! [awakenedIcon] . NL Enemies can't create cards this turn."
+    "DESCRIPTION": "Gain !B! Block. NL Gain [awakenedIcon] . NL Enemies can't create cards this turn.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain [awakenedIcon] [awakenedIcon] . NL Enemies can't create cards this turn."
   },
   "awakened:Curiosity": {
     "NAME": "Curiosity",
@@ -217,7 +218,7 @@
   },
   "awakened:PrimedCasting": {
     "NAME": "Primed Casting",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure !M!. NL Upgrade the Conjured Spell."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure !M!. NL Upgrade the awakened:Conjured Spell."
   },
   "awakened:LifeLeech": {
     "NAME": "Life Leech",
@@ -276,7 +277,7 @@
   },
   "awakened:AsShadow": {
     "NAME": "As Shadow",
-    "DESCRIPTION": "Comes with 2 *Shadows. Ethereal. NL Gain 1 Intangible. NL Exhaust.",
+    "DESCRIPTION": "Comes with 2 *Shadows. NL Ethereal. NL Gain 1 Intangible. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Comes with 2 *Shadows. NL Gain 1 Intangible. NL Exhaust."
   },
   "awakened:Ascend": {
@@ -312,5 +313,13 @@
   "awakened:Brightblind": {
     "NAME": "Brightblind",
     "DESCRIPTION": "Deal !D! damage and apply !M! Weak and Vulnerable to a random enemy."
+  },
+  "awakened:GreaterGigantify": {
+    "NAME": "Greater Gigantify",
+    "DESCRIPTION": "Gain !M! Strength and Dexterity."
+  },
+  "awakened:ZeroToHero": {
+    "NAME": "Zero to Hero",
+    "DESCRIPTION": "Cost 0 cards are played twice."
   }
 }

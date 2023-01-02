@@ -15,18 +15,15 @@ public class Distract extends AbstractAwakenedCard {
 
     public Distract() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        baseBlock = 3;
-        baseMagicNumber = magicNumber = 1;
+        baseBlock = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new WeakPower(m, magicNumber, false));
         blck();
         applyToSelf(new ReboundPower(p));
     }
 
     public void upp() {
-        upgradeBlock(1);
-        upgradeMagicNumber(1);
+        upgradeBlock(3);
     }
 }
