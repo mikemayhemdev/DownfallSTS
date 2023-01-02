@@ -63,11 +63,12 @@ public class AwakenedOneChar extends CustomPlayer {
 
         this.reloadAnimation();
 
+        flipHorizontal = true;
     }
 
     public void reloadAnimation() {
         this.loadAnimation(
-                "images/monsters/theForest/awakenedOne/skeleton.atlas", "images/monsters/theForest/awakenedOne/skeleton.json", 0.7F);
+                "images/monsters/theForest/awakenedOne/skeleton.atlas", "images/monsters/theForest/awakenedOne/skeleton.json", 1.4F);
         this.state.setAnimation(0, "Idle_1", true);
     }
 
