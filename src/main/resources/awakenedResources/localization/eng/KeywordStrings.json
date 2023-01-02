@@ -12,7 +12,7 @@
       "conjure",
       "conjured"
     ],
-    "DESCRIPTION": "Choose #b1 of X Spells to add into your hand. If you have none, draw #b1 card and refresh your Spells."
+    "DESCRIPTION": "Move a card from your Spell pile into your hand. If you have none, draw a card and refresh your Spells."
   },
   {
     "PROPER_NAME": "[awakenedIcon] Awakened",

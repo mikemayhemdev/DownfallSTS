@@ -15,16 +15,14 @@ public class MagicStrike extends AbstractAwakenedCard {
     public MagicStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
-        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        atb(new ConjureAction(magicNumber));
+        atb(new ConjureAction(false));
     }
 
     public void upp() {
         upgradeDamage(3);
-        upgradeMagicNumber(1);
     }
 }

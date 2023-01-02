@@ -14,17 +14,15 @@ public class InResponse extends AbstractAwakenedCard {
 
     public InResponse() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
         baseSecondMagic = secondMagic = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ConjureAction(magicNumber));
+        addToBot(new ConjureAction(true));
         applyToSelf(new InResponsePower(secondMagic));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
+        upgradeSecondMagic(2);
     }
 }

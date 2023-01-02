@@ -111,5 +111,13 @@
       "Can't buff itself or debuff you for the next #b",
       " turns."
     ]
+  },
+  "awakened:LibrarianPower": {
+    "NAME": "Librarian",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yConjure at random.",
+      "At the start of your turn, #yConjure at random #b",
+      " times."
+    ]
   }
 }

@@ -16,13 +16,14 @@ public class ConjureAction extends AbstractGameAction {
     public static ArrayList<AbstractCard> conjuredCards = new ArrayList();
 
     public static int conjuresThisCombat = 0;
+    private boolean choose;
 
-    public ConjureAction(int amount) {
-        this(amount, null);
+    public ConjureAction(boolean choose) {
+        this(choose, null);
     }
 
-    public ConjureAction(int amount, AbstractGameAction action) {
-        this.amount = amount;
+    public ConjureAction(boolean choose, AbstractGameAction action) {
+        this.choose = choose;
         followUpAction = action;
     }
 
@@ -35,7 +36,7 @@ public class ConjureAction extends AbstractGameAction {
             addToTop(new DrawCardAction(1));
             addToTop(new RefreshSpellsAction());
         } else {
-            if (amount == 1 || OrbitingSpells.spellCards.size() == 1) {
+            if (!choose) {
                 AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
                 conjuredCards.add(tar);
                 endActionWithFollowUp();

@@ -14,6 +14,7 @@ public class BlotOut extends AbstractAwakenedCard {
     public BlotOut() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -29,7 +29,6 @@ public class TheDivineGem extends AbstractAwakenedCard {
         }
         if (amt >= 3) {
             atb(new GainEnergyAction(1));
-            atb(new DrawCardAction(1));
         }
         if (amt >= 5) {
             applyToSelf(new StrengthPower(p, magicNumber));

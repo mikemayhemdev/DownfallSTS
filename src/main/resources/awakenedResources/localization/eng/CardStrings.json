@@ -34,7 +34,7 @@
   },
   "awakened:Chromatics": {
     "NAME": "Chromatics",
-    "DESCRIPTION": "Gain !B! Block. NL Discard your hand, then awakened:Conjure !M!."
+    "DESCRIPTION": "Gain !B! Block. NL Discard your hand, then choose a Spell to awakened:Conjure."
   },
   "awakened:AwokenStrike": {
     "NAME": "Awoken Strike",
@@ -42,7 +42,7 @@
   },
   "awakened:MagicStrike": {
     "NAME": "Magic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure !M!."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure at random."
   },
   "awakened:OneForOne": {
     "NAME": "One for One",
@@ -99,11 +99,6 @@
     "NAME": "Intensify",
     "DESCRIPTION": "Gain !B! Block. NL Your next Colorless card this turn is played twice."
   },
-  "awakened:SpeedySpelling": {
-    "NAME": "Quick Runes",
-    "DESCRIPTION": "awakened:Conjure 1.",
-    "UPGRADE_DESCRIPTION": "Retain. NL awakened:Conjure 1."
-  },
   "awakened:TrashBarrier": {
     "NAME": "Thoughtless",
     "DESCRIPTION": "Exhaust 1 card. NL Gain !B! Block."
@@ -114,7 +109,7 @@
   },
   "awakened:PiercingCall": {
     "NAME": "Piercing Call",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure !M!. NL The awakened:Conjured Spell costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure at random. NL The awakened:Conjured Spell costs 0 this turn."
   },
   "awakened:DualRitual": {
     "NAME": "Dual Ritual",
@@ -155,7 +150,7 @@
   },
   "awakened:InResponse": {
     "NAME": "In Response...",
-    "DESCRIPTION": "awakened:Conjure !M!. NL Whenever you play a Spell, gain !awakened:m2! Block."
+    "DESCRIPTION": "Choose a Spell to awakened:Conjure. NL Whenever you play a Spell, gain !awakened:m2! Block."
   },
   "awakened:BookOfTricks": {
     "NAME": "Book of Tricks",
@@ -214,7 +209,7 @@
   },
   "awakened:PrimedCasting": {
     "NAME": "Primed Casting",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure !M!. NL Upgrade the awakened:Conjured Spell."
+    "DESCRIPTION": "Gain !B! Block. NL Choose a spell to awakened:Conjure. NL Upgrade the awakened:Conjured Spell."
   },
   "awakened:LifeLeech": {
     "NAME": "Life Leech",
@@ -243,7 +238,7 @@
   },
   "awakened:TheDivineGem": {
     "NAME": "The Divine Gem",
-    "DESCRIPTION": "Deal !D! damage. NL [awakenedIcon] 1: Apply !M! Vulnerable. NL [awakenedIcon] 3: Gain [E] and draw 1 card. NL [awakenedIcon] 5: Gain !M! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL [awakenedIcon] 1: Apply !M! Vulnerable. NL [awakenedIcon] 3: Gain [E] . NL [awakenedIcon] 5: Gain !M! Strength."
   },
   "awakened:ForeverFrozen": {
     "NAME": "Frozen Forever",
@@ -287,7 +282,7 @@
   },
   "awakened:BlotOut": {
     "NAME": "Blot Out",
-    "DESCRIPTION": "Enemy can't buff themselves or debuff you for !M! turns. NL Add this into your Spells."
+    "DESCRIPTION": "Enemy can't buff themselves or debuff you for !M! turns. NL Exhaust."
   },
   "awakened:FinalizeFate": {
     "NAME": "Finalize Fate",
@@ -306,7 +301,7 @@
     "DESCRIPTION": "Deal !D! damage and apply !M! Weak and Vulnerable to a random enemy."
   },
   "awakened:GreaterGigantify": {
-    "NAME": "Greater Gigantify",
+    "NAME": "Greater Gigantomancy",
     "DESCRIPTION": "Gain !M! Strength and Dexterity."
   },
   "awakened:ZeroToHero": {
@@ -321,5 +316,10 @@
   "awakened:PanickedRitual": {
     "NAME": "Panicked Ritual",
     "DESCRIPTION": "Gain a random card. NL It costs 0 this turn. NL [awakenedIcon] 1: Upgrade it. NL [awakenedIcon] 3: Gain another copy. NL Exhaust."
+  },
+  "awakened:Librarian": {
+    "NAME": "Librarian",
+    "DESCRIPTION": "At the start of your turn, awakened:Conjure at random.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, awakened:Conjure at random."
   }
 }

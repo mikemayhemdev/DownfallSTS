@@ -16,13 +16,12 @@ public class PiercingCall extends AbstractAwakenedCard {
     public PiercingCall() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 12;
-        baseMagicNumber = magicNumber = 1;
         isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.FIRE);
-        atb(new ConjureAction(magicNumber, new AbstractGameAction() {
+        atb(new ConjureAction(false, new AbstractGameAction() {
             @Override
             public void update() {
                 for (AbstractCard q : ConjureAction.conjuredCards) {
@@ -35,6 +34,5 @@ public class PiercingCall extends AbstractAwakenedCard {
 
     public void upp() {
         upgradeDamage(4);
-        upgradeMagicNumber(1);
     }
 }

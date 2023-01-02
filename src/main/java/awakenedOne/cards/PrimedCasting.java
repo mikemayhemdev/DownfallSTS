@@ -16,12 +16,11 @@ public class PrimedCasting extends AbstractAwakenedCard {
     public PrimedCasting() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 3;
-        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new ConjureAction(magicNumber, new AbstractGameAction() {
+        atb(new ConjureAction(true, new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
@@ -34,7 +33,6 @@ public class PrimedCasting extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBlock(1);
-        upgradeMagicNumber(1);
+        upgradeBlock(3);
     }
 }

@@ -16,17 +16,15 @@ public class Chromatics extends AbstractAwakenedCard {
     public Chromatics() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseBlock = 6;
-        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         atb(new DiscardAction(p, p, BaseMod.MAX_HAND_SIZE, true));
-        atb(new ConjureAction(magicNumber));
+        atb(new ConjureAction(true));
     }
 
     public void upp() {
-        upgradeBlock(2);
-        upgradeMagicNumber(1);
+        upgradeBlock(3);
     }
 }
