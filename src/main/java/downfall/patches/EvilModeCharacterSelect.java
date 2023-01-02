@@ -55,7 +55,7 @@ public class EvilModeCharacterSelect {
             Iterator<CharacterOption> options = __instance.options.iterator();
 
             ArrayList<CharacterOption> basegameOptions = new ArrayList<>(), moddedOptions = new ArrayList<>();
-            CharacterOption[] villainOptions = new CharacterOption[7];
+            CharacterOption[] villainOptions = new CharacterOption[8];
 
             while (options.hasNext()) {
                 CharacterOption o = options.next();
