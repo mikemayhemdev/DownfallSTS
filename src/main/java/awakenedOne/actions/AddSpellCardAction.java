@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class AddSpellCardAction extends AbstractGameAction {
-    private AbstractCard cardToAdd;
+    private final AbstractCard cardToAdd;
 
     public AddSpellCardAction(AbstractCard cardToAdd) {
         this.cardToAdd = cardToAdd;

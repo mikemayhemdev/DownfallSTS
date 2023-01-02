@@ -1,7 +1,6 @@
 package awakenedOne.cards;
 
 import awakenedOne.actions.EasyXCostAction;
-import awakenedOne.cards.AbstractAwakenedCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,7 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.att;
 
 public class FlamingSummons extends AbstractAwakenedCard {
     public final static String ID = makeID(FlamingSummons.class.getSimpleName());

@@ -23,7 +23,7 @@ public class OrbitingSpells {
     private static final float SPELL_SIZE_MOD = 0.166F;
     private static final float SPELL_TRANSPARENCY = 0.5F;
 
-    private static ArrayList<String> spells = new ArrayList<>();
+    private static final ArrayList<String> spells = new ArrayList<>();
 
     public static ArrayList<CardRenderInfo> spellCards = new ArrayList<>();
     public static float time;

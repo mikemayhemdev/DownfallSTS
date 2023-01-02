@@ -1,6 +1,5 @@
 package awakenedOne.cards;
 
-import awakenedOne.cards.AbstractAwakenedCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -9,7 +8,8 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.applyToEnemy;
+import static awakenedOne.util.Wiz.applyToSelf;
 
 public class Punishment extends AbstractAwakenedCard {
     public final static String ID = makeID(Punishment.class.getSimpleName());

@@ -1,13 +1,13 @@
 {
-  "bronze:theAutomaton": {
+  "awakened:awakenedOne": {
     "NAMES": [
-      "The Automaton",
-      "the Automaton"
+      "The Awakened One",
+      "the Awakened One"
     ],
     "TEXT": [
-      "The City's mechanical guardian. NL Adapts to any combat situation.",
-      "NL ALL WEAPONS -> 100%",
-      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~bronze~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+      "The Cult's triumph. NL Dark magics bring flying fury.",
+      "NL Caw caw!",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~corrupted~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
     ]
   }
 }

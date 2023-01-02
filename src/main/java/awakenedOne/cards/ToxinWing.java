@@ -1,14 +1,13 @@
 package awakenedOne.cards;
 
 import awakenedOne.cardmods.FlyingModifier;
-import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.powers.ToxinWingPower;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.applyToSelf;
 
 public class ToxinWing extends AbstractAwakenedCard {
     public final static String ID = makeID(ToxinWing.class.getSimpleName());

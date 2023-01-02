@@ -15,6 +15,7 @@ import automaton.cards.Defend;
 import automaton.cards.Strike;
 import automaton.relics.*;
 import automaton.util.*;
+import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
@@ -73,8 +74,6 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.monsters.exordium.LouseNormal;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.relics.MedicalKit;
@@ -750,7 +749,7 @@ public class downfallMod implements
             settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
             settingsPanel.addUIElement(disableDescriptorsBtn);
-            
+
             configPos = 750;
         }
 
@@ -763,7 +762,6 @@ public class downfallMod implements
             CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
             saveData();
         });
-
 
 
         settingsPanel.addUIElement(characterCrossoverBtn);
@@ -1522,7 +1520,7 @@ public class downfallMod implements
                 p instanceof TheSnecko ||
                 p instanceof ChampChar ||
                 p instanceof AutomatonChar ||
-                p instanceof GremlinCharacter || p instanceof hermit.characters.hermit) {
+                p instanceof GremlinCharacter || p instanceof hermit.characters.hermit || p instanceof AwakenedOneChar) {
             return true;
         }
         return false;

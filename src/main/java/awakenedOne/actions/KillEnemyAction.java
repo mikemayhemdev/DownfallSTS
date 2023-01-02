@@ -3,21 +3,18 @@ package awakenedOne.actions;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.beyond.Darkling;
 import com.megacrit.cardcrawl.vfx.combat.*;
 
 
 public class KillEnemyAction extends AbstractGameAction {
-    private AbstractMonster m;
+    private final AbstractMonster m;
 
-    public KillEnemyAction(AbstractMonster m)
-    {
+    public KillEnemyAction(AbstractMonster m) {
         this.m = m;
     }
 
@@ -36,7 +33,7 @@ public class KillEnemyAction extends AbstractGameAction {
         if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             AbstractDungeon.actionManager.cleanCardQueue();
             AbstractDungeon.effectList.add(new DeckPoofEffect(64.0F * Settings.scale, 64.0F * Settings.scale, true));
-            AbstractDungeon.effectList.add(new DeckPoofEffect((float)Settings.WIDTH - 64.0F * Settings.scale, 64.0F * Settings.scale, false));
+            AbstractDungeon.effectList.add(new DeckPoofEffect((float) Settings.WIDTH - 64.0F * Settings.scale, 64.0F * Settings.scale, false));
             AbstractDungeon.overlayMenu.hideCombatPanels();
         }
 
@@ -47,8 +44,7 @@ public class KillEnemyAction extends AbstractGameAction {
     }
 
 
-    private void loseHP(int damageAmount)
-    {
+    private void loseHP(int damageAmount) {
         boolean hadBlock = m.currentBlock != 0;
 
         boolean weakenedToZero = damageAmount == 0;
@@ -80,8 +76,7 @@ public class KillEnemyAction extends AbstractGameAction {
     }
 
 
-    private int decrementBlock(int damageAmount)
-    {
+    private int decrementBlock(int damageAmount) {
         if (m.currentBlock > 0) {
             CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
             if (damageAmount > m.currentBlock) {
@@ -102,7 +97,7 @@ public class KillEnemyAction extends AbstractGameAction {
                 CardCrawlGame.sound.play("BLOCK_ATTACK");
                 m.loseBlock(damageAmount);
 
-                for(int i = 0; i < 18; ++i) {
+                for (int i = 0; i < 18; ++i) {
                     AbstractDungeon.effectList.add(new BlockImpactLineEffect(m.hb.cX, m.hb.cY));
                 }
 

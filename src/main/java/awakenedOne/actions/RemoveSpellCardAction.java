@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class RemoveSpellCardAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public RemoveSpellCardAction(AbstractCard card) {
         this.card = card;

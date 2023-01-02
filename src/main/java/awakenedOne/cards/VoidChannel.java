@@ -1,12 +1,11 @@
 package awakenedOne.cards;
 
-import awakenedOne.cards.AbstractAwakenedCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.applyToSelf;
 
 public class VoidChannel extends AbstractAwakenedCard {
     public final static String ID = makeID(VoidChannel.class.getSimpleName());

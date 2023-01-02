@@ -2,9 +2,11 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.util.CardArtRoller;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -23,6 +25,8 @@ import static awakenedOne.util.Wiz.att;
 public abstract class AbstractAwakenedCard extends CustomCard {
 
     protected final CardStrings cardStrings;
+    public String betaArtPath;
+    private boolean needsArtRefresh = false;
 
     public int secondMagic;
     public int baseSecondMagic = -1;
@@ -51,13 +55,29 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         name = originalName = cardStrings.NAME;
         initializeTitle();
         initializeDescription();
+
+        if (textureImg.contains("ui/missing.png")) {
+            if (CardLibrary.getAllCards() != null && !CardLibrary.getAllCards().isEmpty()) {
+                CardArtRoller.computeCard(this);
+            } else
+                needsArtRefresh = true;
+        }
+    }
+
+    @Override
+    protected Texture getPortraitImage() {
+        if (textureImg.contains("ui/missing.png")) {
+            return CardArtRoller.getPortraitTexture(this);
+        } else {
+            return super.getPortraitImage();
+        }
     }
 
     public static String getCardTextureString(final String cardName, final CardType cardType) {
-        String textureString = "casterResources/images/cards/" + cardName + ".png";
+        String textureString = "awakenedResources/images/cards/" + cardName + ".png";
         FileHandle h = Gdx.files.internal(textureString);
         if (!h.exists()) {
-            textureString = "casterResources/images/ui/missing.png";
+            textureString = "awakenedResources/images/ui/missing.png";
         }
         return textureString;
     }
@@ -186,5 +206,12 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         AbstractCard q = CardLibrary.getCard(ID).makeCopy();
         if (upgraded) q.upgrade();
         return q;
+    }
+
+    public void update() {
+        super.update();
+        if (needsArtRefresh) {
+            CardArtRoller.computeCard(this);
+        }
     }
 }

@@ -1,8 +1,7 @@
 package awakenedOne;
 
-import automaton.cards.AbstractBronzeCard;
-import automaton.util.CardFilter;
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.cards.cardvars.SecondDamage;
 import awakenedOne.cards.cardvars.SecondMagicNumber;
 import awakenedOne.cards.cardvars.ThirdMagicNumber;
@@ -10,6 +9,7 @@ import awakenedOne.relics.FinalFeather;
 import awakenedOne.ui.AwakenButton;
 import awakenedOne.ui.AwakenedIcon;
 import awakenedOne.ui.OrbitingSpells;
+import awakenedOne.util.CardFilter;
 import awakenedOne.util.Wiz;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
@@ -83,8 +83,8 @@ public class AwakenedOneMod implements
     }
 
     public static void loadJokeCardImage(AbstractCard card, String img) {
-        if (card instanceof AbstractBronzeCard) {
-            ((AbstractBronzeCard) card).betaArtPath = img;
+        if (card instanceof AbstractAwakenedCard) {
+            ((AbstractAwakenedCard) card).betaArtPath = img;
         }
         Texture cardTexture;
         cardTexture = ImageMaster.loadImage(img);

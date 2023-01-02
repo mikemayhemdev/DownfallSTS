@@ -50,11 +50,11 @@ public class AwakenedOneChar extends CustomPlayer {
 
     public float renderscale = 1.2F;
 
-    private String atlasURL = "bronzeResources/images/char/mainChar/bronze.atlas";
-    private String jsonURL = "bronzeResources/images/char/mainChar/bronze.json";
+    private final String atlasURL = "bronzeResources/images/char/mainChar/bronze.atlas";
+    private final String jsonURL = "bronzeResources/images/char/mainChar/bronze.json";
 
     public AwakenedOneChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "bronzeResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
+        super(name, setClass, orbTextures, "bronzeResources/images/char/mainChar/orb/vfx.png", null, (String) null);
         initializeClass(null,
                 CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER1,
                 CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER2,

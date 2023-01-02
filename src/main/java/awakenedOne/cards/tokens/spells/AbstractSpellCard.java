@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static awakenedOne.AwakenedOneMod.makeID;
@@ -20,6 +21,6 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
 
     @Override
     public List<String> getCardDescriptors() {
-        return Arrays.asList(uiStrings.TEXT[0]);
+        return Collections.singletonList(uiStrings.TEXT[0]);
     }
 }

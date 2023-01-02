@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.ArrayList;
 
 public class ConjureAction extends AbstractGameAction {
-    private AbstractGameAction followUpAction;
+    private final AbstractGameAction followUpAction;
     public static ArrayList<AbstractCard> conjuredCards = new ArrayList();
 
     public static int conjuresThisCombat = 0;

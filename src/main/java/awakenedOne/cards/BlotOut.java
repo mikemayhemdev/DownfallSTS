@@ -1,13 +1,11 @@
 package awakenedOne.cards;
 
-import awakenedOne.actions.AddSpellCardAction;
 import awakenedOne.powers.BlotOutPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToEnemy;
-import static awakenedOne.util.Wiz.atb;
 
 public class BlotOut extends AbstractAwakenedCard {
     public final static String ID = makeID(BlotOut.class.getSimpleName());

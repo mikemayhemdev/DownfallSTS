@@ -1,12 +1,11 @@
 package awakenedOne.cards.tokens.spells;
 
-import awakenedOne.cards.AbstractSpellCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.applyToSelf;
 
 public class Cryostasis extends AbstractSpellCard {
     public final static String ID = makeID(Cryostasis.class.getSimpleName());

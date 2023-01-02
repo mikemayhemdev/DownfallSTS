@@ -8,7 +8,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import java.util.HashMap;
 
 public class TexLoader {
-    private static HashMap<String, Texture> textures = new HashMap<>();
+    private static final HashMap<String, Texture> textures = new HashMap<>();
 
     public static Texture getTexture(final String textureString) {
         if (textures.get(textureString) == null) {

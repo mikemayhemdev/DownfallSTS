@@ -1,13 +1,11 @@
 package awakenedOne.cards;
 
-import awakenedOne.cards.AbstractAwakenedCard;
 import com.megacrit.cardcrawl.actions.unique.RitualDaggerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.*;
 
 public class RitualDagger extends AbstractAwakenedCard {
     public final static String ID = makeID(RitualDagger.class.getSimpleName());

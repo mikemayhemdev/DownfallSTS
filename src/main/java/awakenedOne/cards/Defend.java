@@ -1,11 +1,9 @@
 package awakenedOne.cards;
 
-import awakenedOne.cards.AbstractAwakenedCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.*;
 
 public class Defend extends AbstractAwakenedCard {
     public final static String ID = makeID(Defend.class.getSimpleName());

@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.icons.AbstractCustomIcon;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static awakenedOne.AwakenedOneMod.makeID;
@@ -27,6 +28,6 @@ public class AwakenedIcon extends AbstractCustomIcon {
 
     @Override
     public List<String> keywordLinks() {
-        return Arrays.asList(makeID("awesome"));
+        return Collections.singletonList(makeID("awesome"));
     }
 }
