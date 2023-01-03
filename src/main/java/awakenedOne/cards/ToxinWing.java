@@ -15,7 +15,7 @@ public class ToxinWing extends AbstractAwakenedCard {
 
     public ToxinWing() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         CardModifierManager.addModifier(this, new FlyingModifier());
     }
 
