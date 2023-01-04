@@ -26,7 +26,7 @@ public class CursedClamor extends AbstractAwakenedCard {
             public void update() {
                 isDone = true;
                 if (EnergyPanel.totalCount > 0) {
-                    att(new GainEnergyAction(3));
+                    att(new GainEnergyAction(2));
                 }
             }
         });

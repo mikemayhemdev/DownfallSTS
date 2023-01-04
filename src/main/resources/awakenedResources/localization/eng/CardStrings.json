@@ -79,8 +79,8 @@
     "DESCRIPTION": "Comes with a *Shadow. NL Gain !B! Block. NL Deal !D! damage."
   },
   "awakened:CursedClamor": {
-    "NAME": "Cursed Clamor",
-    "DESCRIPTION": "Deal !D! damage. NL If you still have Energy after playing this, gain [E] [E] [E] ."
+    "NAME": "Chaos Clamor",
+    "DESCRIPTION": "Deal !D! damage. NL If you still have Energy after playing this, gain [E] [E] ."
   },
   "awakened:LastResort": {
     "NAME": "Last Resort",
@@ -254,7 +254,7 @@
     "DESCRIPTION": "awakened:Flying. NL Gain !M! Ritual."
   },
   "awakened:TowerOfEndings": {
-    "NAME": "Tower of Endings",
+    "NAME": "Super Nova",
     "DESCRIPTION": "Ethereal. NL When you reach [awakenedIcon] 12, kill ALL enemies."
   },
   "awakened:SpellMastery": {
