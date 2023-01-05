@@ -13,6 +13,8 @@ import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class StasisField extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("StasisField");
     public static final String NAME;
@@ -63,6 +65,7 @@ public class StasisField extends AbstractGuardianCard implements InStasisCard {
         this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("StasisField.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

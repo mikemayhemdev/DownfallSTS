@@ -20,6 +20,8 @@ import guardian.actions.ModifyMagicNumberAction;
 import guardian.patches.AbstractCardEnum;
 import guardian.vfx.SmallLaserEffectColored;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class RefractedBeam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("RefractedBeam");
@@ -60,6 +62,7 @@ public class RefractedBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("RefractedBeam.png"));
        // exhaust = true;
         //this.sockets.add(GuardianMod.socketTypes.RED);
     }

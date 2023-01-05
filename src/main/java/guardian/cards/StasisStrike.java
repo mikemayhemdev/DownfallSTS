@@ -15,6 +15,8 @@ import guardian.GuardianMod;
 import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class StasisStrike extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("StasisStrike");
     public static final String NAME;
@@ -59,6 +61,7 @@ public class StasisStrike extends AbstractGuardianCard {
       //  this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("StasisStrike.png"));
 
     }
 
