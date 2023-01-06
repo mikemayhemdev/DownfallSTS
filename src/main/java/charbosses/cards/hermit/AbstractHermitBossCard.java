@@ -54,24 +54,4 @@ public abstract class AbstractHermitBossCard extends AbstractBossCard {
         ReflectionHacks.setPrivate(this, AbstractCard.class, "jokePortrait", cardImg);
     }
 
-//    public void getPortraitImage() {
-//        if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {
-//            if (this.textureImg == null) {
-//                return null;
-//            } else {
-//                if (this.assetUrl != null) {
-//
-//                    System.out.println("Finding texture: " + this.assetUrl);
-//
-//                    Texture portraitTexture;
-//                    portraitTexture = TextureLoader.getTexture(this.assetUrl);
-//
-//                    return portraitTexture;
-//                }
-//            }
-//        }
-//        return super.getPortraitImage();
-//    }
-
-
 }
