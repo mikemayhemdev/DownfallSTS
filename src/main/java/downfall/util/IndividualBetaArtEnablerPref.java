@@ -11,7 +11,7 @@ public class IndividualBetaArtEnablerPref extends Prefs { //To make character bo
     @Override
     public boolean getBoolean(String key,boolean def) {
         if (isBossCard(key)) {
-            return super.getBoolean(key.substring(18,key.length()),def );
+            return super.getBoolean(key.substring(18),def );
         }
         return super.getBoolean(key,def);
     }
