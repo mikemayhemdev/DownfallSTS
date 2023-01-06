@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Necronomicon;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.util.TextureLoader;
 
 public abstract class AbstractHermitBossCard extends AbstractBossCard {
