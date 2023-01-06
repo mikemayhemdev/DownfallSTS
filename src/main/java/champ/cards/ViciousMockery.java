@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 import java.util.ArrayList;
 
 public class ViciousMockery extends AbstractChampCard {
@@ -29,6 +31,7 @@ public class ViciousMockery extends AbstractChampCard {
       //  tags.add(ChampMod.COMBOBERSERKER);
        // tags.add(ChampMod.COMBODEFENSIVE);
         postInit();
+        loadJokeCardImage(this, "ViciousMockery.png");
     }
 
     /*

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import com.megacrit.cardcrawl.vfx.FlameAnimationEffect;
 
 import static gremlin.GremlinMod.MAD_GREMLIN;
@@ -34,6 +35,7 @@ public class RageBreak extends AbstractGremlinCard {
         this.exhaust = true;
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "RageBreak.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

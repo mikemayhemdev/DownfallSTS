@@ -23,7 +23,7 @@ public class WideSting extends AbstractSneckoCard {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        //SneckoMod.loadJokeCardImage(this, "WideSting.png");
+        SneckoMod.loadJokeCardImage(this, "WideSting.png");
     }
 
     @Override
