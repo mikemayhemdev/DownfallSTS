@@ -117,6 +117,7 @@ public class DuplicatedFormPower extends AbstractPower {
             }
 
             tmp.purgeOnUse = true;
+            tmp.applyPowers();
             AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmp, m, card.energyOnUse));
         }
     }
