@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import gremlin.actions.MakeEchoAction;
 import sneckomod.SneckoMod;
 import downfall.util.TextureLoader;
+import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.ArrayList;
 
@@ -38,6 +39,9 @@ public class BlankCard extends CustomRelic {
             AbstractCard card2 = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1)).makeStatEquivalentCopy();
 //            AbstractMonster m = AbstractDungeon.getRandomMonster();
             flash();
+            if(card2 instanceof AbstractUnknownCard){
+                card2=((AbstractUnknownCard) card2).generateFromPoolButNotIntoHand();
+            }
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(card2.makeStatEquivalentCopy()));
             card2.freeToPlayOnce = true;
