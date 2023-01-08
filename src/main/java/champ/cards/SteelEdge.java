@@ -2,11 +2,16 @@ package champ.cards;
 
 import automaton.actions.EasyXCostAction;
 import champ.ChampChar;
+import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import sneckomod.SneckoMod;
 
 public class SteelEdge extends AbstractChampCard {
@@ -17,6 +22,7 @@ public class SteelEdge extends AbstractChampCard {
 
     private static final int DAMAGE = 8;
     private static final int BLOCK = 8;
+    private int addBackVigor = 0;
 
     public SteelEdge() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
@@ -24,6 +30,14 @@ public class SteelEdge extends AbstractChampCard {
         baseBlock = BLOCK;
      //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
         postInit();
+    }
+
+    public void applyPowers() {
+        super.applyPowers();
+        if(AbstractDungeon.player.hasPower(VigorPower.POWER_ID)){
+            AbstractPower pr = AbstractDungeon.player.getPower( VigorPower.POWER_ID);
+            this.addBackVigor = pr.amount;
+        }
     }
 
     @Override
@@ -47,7 +61,11 @@ public class SteelEdge extends AbstractChampCard {
                 for (int i = 0; i < effect; i++) {
                     blck();
                 }
-
+                if(!AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)){
+                    if (this.addBackVigor>0) {
+                        att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, this.addBackVigor), this.addBackVigor));
+                    }
+                }
             }
             return true;
         }));
