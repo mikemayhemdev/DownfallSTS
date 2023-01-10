@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPerTurnPower;
 
 public class HeatMetal extends AbstractHexaCard {
@@ -21,6 +22,7 @@ public class HeatMetal extends AbstractHexaCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        HexaMod.loadJokeCardImage(this, "HeatMetal.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
