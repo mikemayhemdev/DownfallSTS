@@ -17,6 +17,8 @@ import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.RevengePower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class RevengeProtocol extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("RevengeProtocol");
     public static final String NAME;
@@ -51,6 +53,7 @@ public class RevengeProtocol extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("RevengeProtocol.png"));
 
     }
 

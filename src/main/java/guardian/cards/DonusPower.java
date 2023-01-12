@@ -19,6 +19,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import hermit.actions.ReduceDebuffsAction;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class DonusPower extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("DonusPower");
@@ -48,6 +50,7 @@ public class DonusPower extends AbstractGuardianCard {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
         baseMagicNumber = magicNumber = 4;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("DonusPower.png"));
 
     }
 

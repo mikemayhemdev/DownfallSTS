@@ -14,6 +14,7 @@ public class FlamesFromBeyond extends AbstractHexaCard {
         baseBurn = burn = 18;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
+        HexaMod.loadJokeCardImage(this, "FlamesFromBeyond.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
