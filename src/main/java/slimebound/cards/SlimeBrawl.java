@@ -45,6 +45,7 @@ public class SlimeBrawl extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 2;
 
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "SlimeBrawl.png");
 
     }
 

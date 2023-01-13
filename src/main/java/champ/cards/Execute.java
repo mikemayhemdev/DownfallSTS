@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 import sneckomod.SneckoMod;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Execute extends AbstractChampCard {
 
     public final static String ID = makeID("Execute");
@@ -21,6 +23,7 @@ public class Execute extends AbstractChampCard {
         tags.add(ChampMod.FINISHER);
         tags.add(SneckoMod.BANNEDFORSNECKO);
         postInit();
+        loadJokeCardImage(this, "Execute.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

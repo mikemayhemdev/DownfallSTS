@@ -9,6 +9,8 @@ import expansioncontent.expansionContentMod;
 import expansioncontent.powers.ChronoBoostPlusPower;
 import expansioncontent.powers.ChronoBoostPower;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
 
 public class Chronoboost extends AbstractExpansionCard {
     public final static String ID = makeID("Chronoboost");
@@ -20,6 +22,7 @@ public class Chronoboost extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY_TIMEEATER);
         tags.add(expansionContentMod.STUDY);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_timeeater.png", "expansioncontentResources/images/1024/bg_boss_timeeater.png");
+        loadJokeCardImage(this, "Chronoboost.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
