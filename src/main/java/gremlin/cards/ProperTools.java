@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.actions.ProperToolsAction;
 
 import java.util.ArrayList;
@@ -50,6 +51,7 @@ public class ProperTools extends AbstractGremlinCard {
         this.cardsToPreview = new Shiv();
         this.tags.add(SNEAKY_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "ProperTools.png");
     }
 
     @Override
