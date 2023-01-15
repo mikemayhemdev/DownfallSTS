@@ -63,10 +63,9 @@
   "hexamod:EnhancePower": {
     "NAME": "극열",
     "DESCRIPTIONS": [
-      "유령불꽃의 #y점화 시 피해량, #y영혼화상, #y방어도가 #b",
-      " 증가합니다.",
-      "Decrease the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when Ignited by #b"
-
+      "유령불꽃의 #y점화 시 피해량, #y영혼화상, #y방어도 증가: #b",
+      " .",
+      "유령불꽃의 #y점화 시 피해량, #y영혼화상, #y방어도 감소: #b"
     ]
   },
   "hexamod:EtherealRefundPower": {
