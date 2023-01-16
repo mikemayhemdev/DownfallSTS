@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class ShieldWall extends AbstractChampCard {
 
     public final static String ID = makeID("ShieldWall");
@@ -19,6 +21,7 @@ public class ShieldWall extends AbstractChampCard {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         postInit();
+        loadJokeCardImage(this, "ShieldWall.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
