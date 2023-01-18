@@ -46,6 +46,7 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
 
         this.baseDamage = 8;
         this.magicNumber = this.baseMagicNumber = 2;
+        SlimeboundMod.loadJokeCardImage(this, "SlimeBarrage.png");
 
         //this.exhaust = true;
 

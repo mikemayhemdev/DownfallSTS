@@ -19,6 +19,7 @@ public class FastForward extends AbstractHexaCard {
         isEthereal = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "FastForward.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
