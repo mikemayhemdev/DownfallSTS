@@ -33,8 +33,8 @@
   },
   "expansioncontent:Chronoboost": {
     "NAME": "时空加速",
-    "DESCRIPTION": "每打出12张牌， NL 获得1点 力量 。",
-    "UPGRADE_DESCRIPTION": "获得1点 力量 。 NL 每打出12张牌， NL 获得1点 力量 。"
+    "DESCRIPTION": "每打出12张牌， NL 获得2点 力量 。",
+    "UPGRADE_DESCRIPTION": "获得2点 力量 。 NL 每打出12张牌， NL 获得2点 力量 。"
   },
   "expansioncontent:PolyBeam": {
     "NAME": "甜圈爆破",
