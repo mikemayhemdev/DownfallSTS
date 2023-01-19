@@ -1,5 +1,8 @@
 package charbosses.cards.red;
 
+import basemod.ReflectionHacks;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import downfall.util.TextureLoader;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
@@ -40,6 +43,7 @@ public class EnSummonMushrooms extends AbstractBossCard {
         super(ID, cardStrings.NAME, expansionContentMod.makeCardPath("SummonMushrooms.png"), 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         portrait = TextureLoader.getTextureAsAtlasRegion(expansionContentMod.makeCardPath("SummonMushrooms.png"));
         portraitImg = TextureLoader.getTexture(expansionContentMod.makeCardPath("SummonMushrooms.png"));
+        this.loadJokeCardImage();
 
     }
 
@@ -85,4 +89,15 @@ public class EnSummonMushrooms extends AbstractBossCard {
     public AbstractCard makeCopy() {
         return new EnSummonMushrooms();
     }
+
+    public void loadJokeCardImage() {
+        Texture cardTexture;
+        cardTexture = hermit.util.TextureLoader.getTexture(this.assetUrl.replace("cards","betacards"));
+        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        int tw = cardTexture.getWidth();
+        int th = cardTexture.getHeight();
+        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
+        ReflectionHacks.setPrivate(this, AbstractCard.class, "jokePortrait", cardImg);
+    }
+
 }
