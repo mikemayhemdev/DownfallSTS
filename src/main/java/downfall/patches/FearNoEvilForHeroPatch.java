@@ -1,6 +1,5 @@
 package downfall.patches;
 
-import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.actions.watcher.FearNoEvilAction;
@@ -9,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 
-public class FearNoEvilForHeroPatch {
+public class FearNoEvilForHeroPatch {// Make Fear No Evil work against Character Boss
 
     static AbstractMonster boss;
 
