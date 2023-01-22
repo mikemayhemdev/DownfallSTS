@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.actions.MakeEchoAction;
 import gremlin.orbs.GremlinWizard;
@@ -29,6 +30,7 @@ public class Tadah extends AbstractGremlinCard {
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
         baseMagicNumber = magicNumber = 0;
+        GremlinMod.loadJokeCardImage(this, "Tadah.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
