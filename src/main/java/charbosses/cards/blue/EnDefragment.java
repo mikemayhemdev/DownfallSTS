@@ -2,19 +2,13 @@ package charbosses.cards.blue;
 
 import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import charbosses.cards.AbstractBossCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.blue.BeamCell;
-import com.megacrit.cardcrawl.cards.blue.Defragment;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FocusPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import java.util.ArrayList;
 
@@ -31,13 +25,14 @@ public class EnDefragment extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                ArchetypeAct3OrbsNewAge.resetPretendFocus();
-                isDone = true;
-            }
-        });
+        ArchetypeAct3OrbsNewAge.resetPretendFocus();
+//        addToBot(new AbstractGameAction() {
+//            @Override
+//            public void update() {
+//                ArchetypeAct3OrbsNewAge.resetPretendFocus();
+//                isDone = true;
+//            }
+//        });
         this.addToBot(new ApplyPowerAction(m, m, new FocusPower(m, this.magicNumber), this.magicNumber));
     }
 
