@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Necronomicon;
 import hermit.util.TextureLoader;
 
+// Created purely to load beta art, because custom ones are loaded in a different way than vanilla ones. 
 public abstract class AbstractHermitBossCard extends AbstractBossCard {
     public AbstractHermitBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
                                   CardColor color, CardRarity rarity, CardTarget target, AbstractMonster.Intent intent) {

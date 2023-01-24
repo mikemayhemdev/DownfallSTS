@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import javassist.CtBehavior;
 
-// Make the Green poison bar on player shrinks into shortest like how is's performed on enemies.
+// Make the Green poison bar on player shrinks into shortest like how is's performed on enemies when the player gets intangible.
 public class ShrinksPoinsonBarOnPlayerPatch {
 
     @SpirePatch(
