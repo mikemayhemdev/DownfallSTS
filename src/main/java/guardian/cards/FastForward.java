@@ -1,21 +1,16 @@
 package guardian.cards;
 
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import guardian.GuardianMod;
 import guardian.actions.ReduceRightMostStasisAction;
-import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 import sneckomod.SneckoMod;
-
-import static guardian.GuardianMod.makeBetaCardPath;
 
 public class FastForward extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("FastForward");
