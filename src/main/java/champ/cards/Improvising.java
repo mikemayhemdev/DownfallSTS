@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Improvising extends AbstractChampCard {
 
     public final static String ID = makeID("Improvising");
@@ -16,6 +18,7 @@ public class Improvising extends AbstractChampCard {
 
       //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
         postInit();
+        loadJokeCardImage(this, ".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

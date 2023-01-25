@@ -46,6 +46,7 @@ public class RollThrough extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 2;
         this.selfDamage = 2;
         this.isMultiDamage = true;
+        SlimeboundMod.loadJokeCardImage(this, "RollThrough.png");
 
 
     }

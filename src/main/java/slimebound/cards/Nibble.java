@@ -55,6 +55,7 @@ public class Nibble extends AbstractLickCard {
        // this.slimed = this.baseSlimed = 4;
         this.exhaust = true;
         this.cardsToPreview = new Lick();
+        SlimeboundMod.loadJokeCardImage(this, "Nibble.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

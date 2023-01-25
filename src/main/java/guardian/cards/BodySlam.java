@@ -15,6 +15,8 @@ import guardian.GuardianMod;
 import guardian.actions.BraceAction;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class BodySlam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("BodySlam");
@@ -52,6 +54,7 @@ public class BodySlam extends AbstractGuardianCard {
         this.rawDescription = DESCRIPTION;
         initializeDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("BodySlam.png"));
 
     }
 

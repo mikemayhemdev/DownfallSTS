@@ -49,6 +49,7 @@ public class SamplingLick extends AbstractLickCard {
         this.slimed = this.baseSlimed = 4;
         this.baseBlock = 4;
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "SamplingLick.png");
 
 
     }
