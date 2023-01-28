@@ -374,8 +374,9 @@ public class hermit extends CustomPlayer {
             this.fireTimer -= Gdx.graphics.getDeltaTime();
             if (this.fireTimer < 0.0F) {
                 this.fireTimer = 0.1F;
-                HermitEyeParticle shine = new HermitEyeParticle(this.skeleton.getX() + this.eye.getBone().getWorldX(), this.skeleton.getY() + this.eye.getBone().getWorldY(), this, this.skeleton);
-
+                HermitEyeParticle shine = new HermitEyeParticle(this.skeleton.getX() + this.eye.getBone().getWorldX(), this.skeleton.getY() + this.eye.getBone().getWorldY());
+                shine.parent = this;
+                shine.skeleton = this.skeleton;
                 AbstractDungeon.effectList.add(shine);
             }
         }
