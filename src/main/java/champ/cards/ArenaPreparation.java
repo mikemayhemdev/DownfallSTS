@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.cardmods.RetainCardMod;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 import java.util.ArrayList;
 
 public class ArenaPreparation extends AbstractChampCard {
@@ -24,6 +26,7 @@ public class ArenaPreparation extends AbstractChampCard {
         // tags.add(ChampMod.TECHNIQUE);
 //         tags.add(CardTags.HEALING);
         postInit();
+        loadJokeCardImage(this, "ArenaPreparation.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

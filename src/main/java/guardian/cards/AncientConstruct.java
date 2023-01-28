@@ -13,6 +13,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.ConstructPower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class AncientConstruct extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("AncientConstruct");
     public static final String NAME;
@@ -47,6 +49,7 @@ public class AncientConstruct extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("AncientConstruct.png"));
 
     }
 

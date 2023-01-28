@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Devastate extends AbstractChampCard {
 
     public final static String ID = makeID("Devastate");
@@ -15,6 +17,8 @@ public class Devastate extends AbstractChampCard {
 
         this.baseDamage = 6;
         this.magicNumber = this.baseMagicNumber = 3;
+        loadJokeCardImage(this, "Devastate.png");
+
     }
 
     public void triggerOnCardPlayed(AbstractCard c) {
