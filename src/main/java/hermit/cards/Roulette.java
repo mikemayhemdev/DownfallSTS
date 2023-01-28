@@ -1,7 +1,8 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.unique.CalculatedGambleAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -14,24 +15,15 @@ import static hermit.HermitMod.*;
 
 public class Roulette extends AbstractDynamicCard {
 
-
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
-
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Roulette.class.getSimpleName());
     public static final String IMG = makeCardPath("roulette.png");
 
-    // /TEXT DECLARATION/
-
-
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -39,7 +31,7 @@ public class Roulette extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int DAMAGE = 18;
+    private static final int DAMAGE = 16;
     private static final int UPGRADE_PLUS_DMG = 4;
 
     // /STAT DECLARATION/
@@ -53,11 +45,10 @@ public class Roulette extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new AttackDamageRandomEnemyAction(this, EnumPatch.HERMIT_GUN2));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), EnumPatch.HERMIT_GUN2));
         CardCrawlGame.sound.playAV(makeID("SPIN"), 1.0f, 1.25f); // Sound Effect
-        addToBot(new CalculatedGambleAction(false));
+        this.addToBot(new CalculatedGambleAction(false));
     }
-
 
     //Upgraded stats.
     @Override
