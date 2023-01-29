@@ -78,7 +78,7 @@
       "카드를 선택하세요: ",
       "매 전투 시작 시 ",
       " 카드를 #yguardianmod:정지장에 넣습니다.",
-      "The bottled card has been #rremoved from your deck, the relic no longer functions."
+      "병에 담긴 카드가 덱에서 제거되어 유물의 효과가 발동하지 않습니다."
     ]
   },
   "Guardian:StasisEgg": {
@@ -121,7 +121,7 @@
       "카드를 선택하세요: ",
       "매 전투 시작 시 선택한 ",
       " 카드를 뽑을 카드 더미에서 제거합니다. #b3 턴 후, 턴 시작 시 제거한 카드를 얻습니다. NL 그 카드의 비용은 #b0 입니다.",
-      "The bottled card has been #rremoved from your deck, the relic no longer functions."
+      "병에 담긴 카드가 덱에서 제거되어 유물의 효과가 발동하지 않습니다."
     ]
   }
 }
