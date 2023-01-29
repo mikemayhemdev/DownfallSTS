@@ -1,8 +1,8 @@
 package hermit.actions;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.unique.ArmamentsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -10,8 +10,12 @@ import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.NoDrawPower;
+import hermit.util.Wiz;
 
 import java.util.Iterator;
+
+// DEPRECATED IN THE FUTURE
 
 public class CalledShotAction extends AbstractGameAction {
     private AbstractPlayer p;
@@ -55,12 +59,14 @@ public class CalledShotAction extends AbstractGameAction {
                     tmp.shuffle();
                     card = tmp.getBottomCard();
                     tmp.removeCard(card);
-                    if (this.p.hand.size() == 10) {
+                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                         this.p.createHandIsFullDialog();
                     } else {
-                        p.drawPile.group.remove(card);
-                        p.drawPile.addToTop(card);
-                        this.addToTop(new DrawCardAction(1));
+                        if (!Wiz.p().hasPower(NoDrawPower.POWER_ID)) {
+                            p.drawPile.group.remove(card);
+                            p.drawPile.addToTop(card);
+                            this.addToTop(new DrawCardAction(1));
+                        }
                     }
                 }
             }
@@ -71,3 +77,4 @@ public class CalledShotAction extends AbstractGameAction {
         this.tickDuration();
     }
 }
+

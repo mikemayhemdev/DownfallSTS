@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.Bruise;
@@ -20,19 +19,10 @@ import static hermit.HermitMod.makeCardPath;
 
 public class PistolWhip extends AbstractDynamicCard {
 
-
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
-
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(PistolWhip.class.getSimpleName());
     public static final String IMG = makeCardPath("pistol_whip.png");
-
-    // /TEXT DECLARATION/
-
 
     // STAT DECLARATION
 
@@ -66,15 +56,13 @@ public class PistolWhip extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(m, p, new Bruise(m, this.magicNumber), this.magicNumber));
     }
 
-
-
     //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
         }
     }
 }

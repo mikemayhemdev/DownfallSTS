@@ -16,7 +16,6 @@ import static hermit.HermitMod.makeCardPath;
 
 public class FatalDesire extends AbstractDynamicCard {
 
-
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(FatalDesire.class.getSimpleName());

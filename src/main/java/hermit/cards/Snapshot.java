@@ -1,13 +1,8 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.purple.Wallop;
-import com.megacrit.cardcrawl.cards.red.IronWave;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -23,19 +18,10 @@ import static hermit.HermitMod.makeCardPath;
 
 public class Snapshot extends AbstractDynamicCard {
 
-
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
-
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Snapshot.class.getSimpleName());
     public static final String IMG = makeCardPath("card_snapshot.png");
-
-    // /TEXT DECLARATION/
-
 
     // STAT DECLARATION
 
@@ -48,8 +34,6 @@ public class Snapshot extends AbstractDynamicCard {
 
     private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 2;
-
-    int prev_cost = COST;
 
     // /STAT DECLARATION/
 

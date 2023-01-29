@@ -20,9 +20,8 @@ public class EternalPower extends AbstractPower implements CloneablePowerInterfa
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static int total = 4;
+    public static int total=4;
 
-    // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     private static final Texture tex84 = TextureLoader.getTexture("hermitResources/images/powers/power_eternal_p.png");
     private static final Texture tex32 = TextureLoader.getTexture("hermitResources/images/powers/power_eternal.png");
 
@@ -50,47 +49,20 @@ public class EternalPower extends AbstractPower implements CloneablePowerInterfa
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        if (!PreDrawPatch.DRAWN_DURING_TURN && total > 0 && card.costForTurn > 0) { // && card.canUse(AbstractDungeon.player,null)
+        if(!PreDrawPatch.DRAWN_DURING_TURN && total>0){
             total--;
 
             if (card.costForTurn > 0) {
-                card.costForTurn = Math.max(card.costForTurn - this.amount, 0);
+                card.costForTurn = Math.max(card.costForTurn - this.amount,0);
                 card.isCostModifiedForTurn = true;
                 card.superFlash(Color.GOLD.cpy());
             }
         }
     }
 
-    /*
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (amount>0) {
-            this.flash();
-            updateDescription();
-        }
-    }
-    */
-
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-         /*
-        this.amount=total-AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
-        if (amount <= 0)
-            description = DESCRIPTIONS[3];
-        else if (amount == 1) {
-            description = DESCRIPTIONS[0] + (amount) + DESCRIPTIONS[1];
-        } else {
-            description = DESCRIPTIONS[0] + (amount) + DESCRIPTIONS[2];
-        }
-        */
     }
-
-    /*
-    public void stackPower(int stackAmount) {
-        this.fontScale = 8.0F;
-        this.total += stackAmount;
-        this.updateDescription();
-    }
-    */
 
     @Override
     public AbstractPower makeCopy() {
