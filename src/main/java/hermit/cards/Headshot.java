@@ -17,19 +17,10 @@ import static hermit.HermitMod.makeCardPath;
 
 public class Headshot extends AbstractDynamicCard {
 
-
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
-
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Headshot.class.getSimpleName());
     public static final String IMG = makeCardPath("headshot.png");
-
-    // /TEXT DECLARATION/
-
 
     // STAT DECLARATION
 

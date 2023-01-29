@@ -1,7 +1,5 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -11,7 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import hermit.HermitMod;
 import hermit.characters.hermit;
@@ -23,19 +20,10 @@ import static hermit.HermitMod.makeCardPath;
 
 public class Showdown extends AbstractDynamicCard {
 
-    //
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
-
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Showdown.class.getSimpleName());
     public static final String IMG = makeCardPath("showdown.png");
-
-    // /TEXT DECLARATION/
-
 
     // STAT DECLARATION
 
@@ -72,8 +60,6 @@ public class Showdown extends AbstractDynamicCard {
             }
         }
     }
-
-
 
     //Upgraded stats.
     @Override
