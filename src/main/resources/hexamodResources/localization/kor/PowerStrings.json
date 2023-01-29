@@ -1,6 +1,6 @@
 {
   "hexamod:AgainPower": {
-    "NAME": "다시!",
+    "NAME": "지금 당장",
     "DESCRIPTIONS": [
       "이번 턴 종료 시 #y팽창하지 않습니다.",
       "다음 #b",
@@ -99,7 +99,7 @@
   "hexamod:GhostFlameBarrierPower": {
     "NAME": "유령불꽃 장벽",
     "DESCRIPTIONS": [
-      "공격을 받을 때마다 공격한 대상에게 #y영혼화상을 #b",
+      "이번 턴 동안 공격을 받을 때마다 공격한 대상에게 #y영혼화상을 #b",
       " 부여합니다."
     ]
   },
