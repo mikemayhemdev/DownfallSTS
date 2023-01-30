@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import gremlin.powers.ModifiedLoseStrengthPower;
 
@@ -34,6 +35,7 @@ public class GremlinMeal extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "GremlinMeal.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

@@ -15,6 +15,8 @@ import guardian.actions.ReduceRightMostStasisAction;
 import guardian.patches.AbstractCardEnum;
 import theHexaghost.powers.BurnPower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class Incinerate extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Incinerate");
@@ -56,6 +58,7 @@ public class Incinerate extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Incinerate.png"));
 
 
     }

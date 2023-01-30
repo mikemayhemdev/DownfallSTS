@@ -4,6 +4,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Headbutt extends AbstractChampCard {
 
     public final static String ID = makeID("Headbutt");
@@ -13,6 +15,7 @@ public class Headbutt extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 3;
         baseDamage = 9;
+        loadJokeCardImage(this, "Headbutt.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

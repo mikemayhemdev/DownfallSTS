@@ -41,6 +41,7 @@ public class FormOfPuddle extends AbstractSlimeboundCard {
 
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 1;
+        SlimeboundMod.loadJokeCardImage(this, "FormOfPuddle.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
