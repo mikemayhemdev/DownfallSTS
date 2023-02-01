@@ -19,6 +19,7 @@ public class BacktrackSmack extends AbstractHexaCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(HexaMod.GHOSTWHEELCARD);
+        HexaMod.loadJokeCardImage(this, "BacktrackSmack.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

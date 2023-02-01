@@ -19,6 +19,8 @@ import guardian.patches.AbstractCardEnum;
 import guardian.powers.BeamBuffPower;
 import guardian.vfx.SmallLaserEffectColored;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class PrimingBeam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PrimingBeam");
@@ -61,6 +63,7 @@ public class PrimingBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PrimingBeam.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

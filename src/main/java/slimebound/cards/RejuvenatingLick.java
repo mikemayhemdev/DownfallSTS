@@ -53,6 +53,7 @@ public class RejuvenatingLick extends AbstractLickCard {
 
         this.slimed = this.baseSlimed = 4;
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "RejuvenatingLick.png");
         //this.magicNumber = this.baseMagicNumber = 2;
 
 
