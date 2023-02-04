@@ -16,6 +16,8 @@ import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class ChargeUp extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("ChargeUp");
     public static final String NAME;
@@ -59,6 +61,7 @@ public class ChargeUp extends AbstractGuardianCard implements InStasisCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("ChargeUp.png"));
 
     }
 
