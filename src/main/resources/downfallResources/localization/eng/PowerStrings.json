@@ -320,28 +320,27 @@
   "downfall:HermitConcentrateAdder": {
     "NAME": "Deadly Focus",
     "DESCRIPTIONS": [
-      "Hermit has Concentration, which adds special #yDead #yOn effects to his cards. Dealing #b10 unblocked damage to him breaks the concentration, causing his cards to lose their #yDead #yOn effects."
+      "Hermit's cards get bonus #yDead #yOn effects while he is #yConcentrated. After receiving #b10 damage, #yConcentration is broken for the turn."
     ]
   },
   "downfall:HermitConcentrationPower": {
     "NAME": "Concentrated",
     "DESCRIPTIONS": [
-      "Hermit's cards get bonus #yDead #yOn effects while he is concentrated. Deal #b",
-      " more unblocked damage to break his Concentration this turn.",
-      "Hermit's concentration is broken and #yDead #yOn effects don't trigger this turn."
+      "Hermit's cards get bonus #yDead #yOn effects while he is concentrated. After receiving #b",
+      " more damage, Hermit's #yConcentration is broken for this turn.",
+      "Hermit's #yConcentration is broken and #yDead #yOn effects don't trigger this turn."
     ]
   },
   "downfall:HermitWheelOfFortune": {
     "NAME": "Wheel of Fortune",
     "DESCRIPTIONS": [
-      "Whenever you strike Hermit with an Attack, its leftmost card is discarded and it draws a card. Every #b",
-      " times this happens, Hermit gains #b1 #yStrength."
+      "Fixed card costs. Whenever you play an #yAttack, Hermit discards his leftmost card and draws #b1 card. When he draws #yNecronomicurse, he gains #b2 Strength."
     ]
   },
   "downfall:HermitDoomsday": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain an #rImpending #rDoom with #yRetain."
+      "Hermit starts with #b1 #yRitual. At the start of your turn, gain an #rImpending #rDoom with #yRetain."
     ]
   },
   "downfall:NeowEclipse": {
