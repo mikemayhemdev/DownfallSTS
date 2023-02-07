@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class BringItOn extends AbstractChampCard {
 
     public final static String ID = makeID("BringItOn");
@@ -24,6 +26,7 @@ public class BringItOn extends AbstractChampCard {
         //exhaust = true;
         tags.add(ChampMod.FINISHER);
         postInit();
+        loadJokeCardImage(this, "BringItOn.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
