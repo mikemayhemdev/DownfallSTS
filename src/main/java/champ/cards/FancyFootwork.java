@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class FancyFootwork extends AbstractChampCard {
 
     public final static String ID = makeID("FancyFootwork");
@@ -28,6 +30,7 @@ public class FancyFootwork extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
         tags.add(ChampMod.OPENERNOTIN);
         postInit();
+        loadJokeCardImage(this, "FancyFootwork.png");
     }
 
 
