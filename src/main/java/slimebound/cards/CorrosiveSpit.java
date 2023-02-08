@@ -49,6 +49,7 @@ public class CorrosiveSpit extends AbstractSlimeboundCard {
 
 
         this.slimed = this.baseSlimed = 6;
+        SlimeboundMod.loadJokeCardImage(this, "CorrosiveSpit.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class SteelEdge extends AbstractChampCard {
 
     public final static String ID = makeID("SteelEdge");
@@ -24,6 +26,7 @@ public class SteelEdge extends AbstractChampCard {
         baseBlock = BLOCK;
      //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
         postInit();
+        loadJokeCardImage(this, "SteelEdge.png");
     }
 
     @Override

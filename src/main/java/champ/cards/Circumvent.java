@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Circumvent extends AbstractChampCard {
 
     public final static String ID = makeID("Circumvent");
@@ -26,6 +28,7 @@ public class Circumvent extends AbstractChampCard {
         tags.add(ChampMod.COMBODEFENSIVE);
         baseMagicNumber = magicNumber = 2;
         postInit();
+        loadJokeCardImage(this, "Circumvent.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
