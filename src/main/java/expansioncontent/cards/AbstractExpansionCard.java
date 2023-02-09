@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
@@ -16,19 +17,51 @@ import static expansioncontent.expansionContentMod.*;
 public abstract class AbstractExpansionCard extends AbstractDownfallCard {
     public static final String CannotUseBossCardMessage = CardCrawlGame.languagePack.getUIString(makeID("CannotUseBossCardMessage")).TEXT[0];
     public String betaArtPath;
+    protected final String UPGRADE_DESCRIPTION;
+    protected final CardStrings cardStrings;
+    protected final String NAME;
+    protected final String DESCRIPTION;
+    protected final String[] EXTENDED_DESCRIPTION;
 
     public AbstractExpansionCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        super(id, getCorrectPlaceholderImage(id), cost, type, rarity, target, CardColorEnumPatch.CardColorPatch.BOSS);
+        super(id, "ERROR", getCorrectPlaceholderImage(id),
+                cost, "ERROR", type, CardColorEnumPatch.CardColorPatch.BOSS, rarity, target);
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
+        name = NAME = cardStrings.NAME;
+        originalName = NAME;
+        rawDescription = DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+        initializeTitle();
+        initializeDescription();
         setFrame();
     }
 
     public AbstractExpansionCard(final String id, final String img, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        super(id, getCorrectPlaceholderImage(img), cost, type, rarity, target, CardColorEnumPatch.CardColorPatch.BOSS);
+        super(id, "ERROR", getCorrectPlaceholderImage(img),
+                cost, "ERROR", type, CardColorEnumPatch.CardColorPatch.BOSS, rarity, target);
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
+        name = NAME = cardStrings.NAME;
+        originalName = NAME;
+        rawDescription = DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+        initializeTitle();
+        initializeDescription();
         setFrame();
     }
 
     public AbstractExpansionCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
-        super(id, getCorrectPlaceholderImage(id), cost, type, rarity, target, color);
+        super(id, "ERROR", getCorrectPlaceholderImage(id),
+                cost, "ERROR", type, color, rarity, target);
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
+        name = NAME = cardStrings.NAME;
+        originalName = NAME;
+        rawDescription = DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+        initializeTitle();
+        initializeDescription();
         setFrame();
     }
 
@@ -84,7 +117,4 @@ public abstract class AbstractExpansionCard extends AbstractDownfallCard {
         }
         return super.getPortraitImage();
     }
-
-    @Override
-    public void upp() {} //TODO Remove me later
 }

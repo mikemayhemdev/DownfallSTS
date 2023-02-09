@@ -12,11 +12,10 @@ public class StasisUpgradeRelic extends CustomRelic {
     public static final String IMG_PATH = "relics/cryoChamber.png";
     public static final String OUTLINE_IMG_PATH = "relics/cryoChamberOutline.png";
     public static final String LARGE_IMG_PATH = "relics/cryoChamberLarge.png";
-    private static final int HP_PER_CARD = 1;
 
     public StasisUpgradeRelic() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.SHOP, LandingSound.FLAT);
+                RelicTier.RARE, LandingSound.FLAT);
         this.largeImg = ImageMaster.loadImage(GuardianMod.getResourcePath(LARGE_IMG_PATH));
     }
 

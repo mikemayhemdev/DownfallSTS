@@ -3,7 +3,7 @@
     "NAME": "Bronze Gear",
     "FLAVOR": "Protection where you need it most.",
     "DESCRIPTIONS": [
-      "The first time you enter #yguardianmod:Defensive_Mode each combat, gain an additional #b10 #yBlock. NL Guardian starts the run with a random common #yGem."
+      "At the start of each combat, gain #yGear #yUp. NL Guardian starts the run with a random common #yGem."
     ]
   },
   "Guardian:ModeShifterPlus": {
@@ -60,7 +60,7 @@
     "NAME": "Wander Bots",
     "FLAVOR": "These drones find the most wonderful salvage, but require processing power to maintain.",
     "DESCRIPTIONS": [
-      "On pickup, lose #b2 Stasis slots. NL Gain [E] at the start of your turn."
+      "On pickup, lose #b1 Stasis slot. NL Gain [E] at the start of your turn."
     ]
   },
   "Guardian:StasisUpgradeRelic": {

@@ -57,7 +57,7 @@ public class Clone extends AbstractGuardianCard {
 
         AbstractDungeon.actionManager.addToBottom(new CloneAction(p));
         if (upgraded) AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ReduceRightMostStasisAction(false));
+        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ReduceRightMostStasisAction());
         super.useGems(p, m);
     }
 

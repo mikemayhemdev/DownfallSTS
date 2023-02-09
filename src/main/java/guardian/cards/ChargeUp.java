@@ -1,72 +1,36 @@
 package guardian.cards;
 
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import guardian.GuardianMod;
-import guardian.actions.PlaceActualCardIntoStasis;
-import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
+import guardian.powers.NextTurnGainTemporaryStrengthPower;
 
-public class ChargeUp extends AbstractGuardianCard implements InStasisCard {
+public class ChargeUp extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("ChargeUp");
-    public static final String NAME;
-    public static final String DESCRIPTION;
-    public static final String[] EXTENDED_DESCRIPTION;
-    public static final String IMG_PATH = "cards/chargeup.png";
+    public static final String IMG_PATH = GuardianMod.getResourcePath("cards/chargeup.png");
     private static final CardStrings cardStrings;
-    private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
-
-    //TUNING CONSTANTS
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_BLOCK = 3;
-    private static final int STRENGTH = 1;
-    private static final int UPGRADE_STRENGTH = 1;
-    private static final int SOCKETS = 0;
-    private static final boolean SOCKETSAREAFTER = true;
-    public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    }
 
     public ChargeUp() {
-        super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-
-
-        this.baseBlock = BLOCK;
-        this.baseMagicNumber = this.magicNumber = STRENGTH;
-        this.tags.add(GuardianMod.TICK);
-        this.tags.add(GuardianMod.VOLATILE);
-        this.tags.add(GuardianMod.SELFSTASIS);
-        this.socketCount = SOCKETS;
+        super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.GUARDIAN, CardRarity.COMMON, CardTarget.SELF);
+        this.baseBlock = 6;
+        this.baseMagicNumber = this.magicNumber = 2;
+        this.socketCount = 0;
         updateDescription();
         loadGemMisc();
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-
-        AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_GUARDIAN_DESTROY"));
-
+        addToBot(new SFXAction("MONSTER_GUARDIAN_DESTROY"));
+        addToBot(new GainBlockAction(p, block));
+        addToBot(new ApplyPowerAction(p, p, new NextTurnGainTemporaryStrengthPower(p, magicNumber)));
         super.useGems(p, m);
     }
 
@@ -77,36 +41,24 @@ public class ChargeUp extends AbstractGuardianCard implements InStasisCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            //upgradeBlock(UPGRADE_BLOCK);
-            this.cost = 1;
-            this.costForTurn = 1;
-            this.upgradedCost = true;
-
+            upgradeBlock(2);
+            upgradeMagicNumber(1);
         }
     }
 
     public void updateDescription() {
-
         if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
+            if (upgraded && cardStrings.UPGRADE_DESCRIPTION != null) {
+                this.rawDescription = this.updateGemDescription(cardStrings.UPGRADE_DESCRIPTION, true);
             } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
+                this.rawDescription = this.updateGemDescription(cardStrings.DESCRIPTION, true);
             }
         }
         this.initializeDescription();
     }
 
-    @Override
-    public void onStartOfTurn(StasisOrb orb) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
-
-    }
-
-    @Override
-    public void onEvoke(StasisOrb orb) {
-
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 }
 

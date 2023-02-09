@@ -1,9 +1,8 @@
 package guardian.cards;
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,36 +12,35 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
-public class StasisStrike extends AbstractGuardianCard {
-    public static final String ID = GuardianMod.makeID("StasisStrike");
-    public static final String IMG_PATH = GuardianMod.getResourcePath("cards/stasisStrike.png");
+public class StrikeForStrike extends AbstractGuardianCard {
+    public static final String ID = GuardianMod.makeID("StrikeForStrike");
     private static final CardStrings cardStrings;
 
-    public StasisStrike() {
-        super(ID, cardStrings.NAME, IMG_PATH, 2, cardStrings.DESCRIPTION, CardType.ATTACK, AbstractCardEnum.GUARDIAN, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = 15;
-        this.socketCount = 0;
+    public StrikeForStrike() {
+        super(ID, cardStrings.NAME, GuardianMod.getResourcePath("cards/StrikeForStrike.png"), 1, cardStrings.DESCRIPTION, CardType.ATTACK, AbstractCardEnum.GUARDIAN, CardRarity.COMMON, CardTarget.ENEMY);
+        this.baseDamage = 13;
+        this.baseMagicNumber = magicNumber = 3;
+        this.socketCount = 1;
         this.tags.add(CardTags.STRIKE);
         updateDescription();
         loadGemMisc();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p, m);
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        addToBot(new IncreaseMaxOrbAction(1));
+        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        addToBot(new DamageAction(p, new DamageInfo(m, this.magicNumber, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         this.useGems(p, m);
-    }
-
-    public AbstractCard makeCopy() {
-        return new StasisStrike();
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(5);
+            upgradeDamage(4);
         }
+    }
+
+    public AbstractCard makeCopy() {
+        return new StrikeForStrike();
     }
 
     public void updateDescription() {

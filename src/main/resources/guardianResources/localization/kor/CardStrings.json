@@ -104,7 +104,8 @@
   },
   "Guardian:Incinerate": {
     "NAME": "소각",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL guardianmod:가속합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL guardianmod:가속합니다.",
+    "UPGRADE_DESCRIPTION":"피해를 !D! 줍니다. NL guardianmod:가속합니다 x2. NL Translation required."
   },
   "Guardian:Orbwalk": {
     "NAME": "구체 순찰기",

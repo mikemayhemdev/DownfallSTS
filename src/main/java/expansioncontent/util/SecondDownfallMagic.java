@@ -27,6 +27,6 @@ public class SecondDownfallMagic extends DynamicVariable {
     }
 
     public boolean upgraded(AbstractCard abstractCard) {
-        return ((AbstractDownfallCard) abstractCard).upgradedSecondDownfall;
+        return ((AbstractDownfallCard) abstractCard).isSecondDownfallUpgraded;
     }
 }
