@@ -16,7 +16,9 @@
   },
   {
     "NAMES": [
-      "寶石"
+      "寶石",
+      "gem",
+      "gems"
     ],
     "PROPER_NAME": "寶石",
     "DESCRIPTION": " #y寶石 能在 #y休息處 被 #y鑲嵌 至有 #y孔位 的牌上。不能被 #y升級 。"

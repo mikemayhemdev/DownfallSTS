@@ -17,9 +17,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import sneckomod.SneckoMod;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 @CardIgnore
@@ -127,6 +127,12 @@ public class FunctionCard extends AbstractBronzeCard {
     public void upgrade() {
     }
 
+    private TextureAtlas.AtlasRegion getEncodablePortrait(AbstractCard c) {
+        if (UnlockTracker.betaCardPref.getBoolean(c.cardID, false) || Settings.PLAYTESTER_ART_MODE)
+            return c.jokePortrait;
+        return c.portrait;
+    }
+
     //Welcome to the tough part
     @SpireOverride
     protected void renderPortrait(SpriteBatch sb) {
@@ -140,15 +146,7 @@ public class FunctionCard extends AbstractBronzeCard {
                 float drawX;
                 float drawY;
 
-                TextureAtlas.AtlasRegion portrait0 = null;
-                try {
-                    Field f = AbstractCard.class.getDeclaredField("portrait");
-                    f.setAccessible(true);
-
-                    portrait0 = (TextureAtlas.AtlasRegion) f.get(cards().get(0));
-                } catch (IllegalAccessException | NoSuchFieldException e) {
-                    e.printStackTrace();
-                }
+                TextureAtlas.AtlasRegion portrait0 = getEncodablePortrait(cards().get(0));
 
                 if (portrait0 != null) {
 
@@ -176,17 +174,8 @@ public class FunctionCard extends AbstractBronzeCard {
                 float drawX;
                 float drawY;
 
-                TextureAtlas.AtlasRegion portrait0 = null;
-                TextureAtlas.AtlasRegion portrait1 = null;
-                try {
-                    Field f = AbstractCard.class.getDeclaredField("portrait");
-                    f.setAccessible(true);
-
-                    portrait0 = (TextureAtlas.AtlasRegion) f.get(cards().get(0));
-                    portrait1 = (TextureAtlas.AtlasRegion) f.get(cards().get(1));
-                } catch (IllegalAccessException | NoSuchFieldException e) {
-                    e.printStackTrace();
-                }
+                TextureAtlas.AtlasRegion portrait0 = getEncodablePortrait(cards().get(0));
+                TextureAtlas.AtlasRegion portrait1 = getEncodablePortrait(cards().get(1));
 
                 if (portrait0 != null && portrait1 != null) {
                     portrait0 = new TextureAtlas.AtlasRegion(portrait0);
@@ -230,19 +219,9 @@ public class FunctionCard extends AbstractBronzeCard {
                 float drawX;
                 float drawY;
 
-                TextureAtlas.AtlasRegion portrait0 = null;
-                TextureAtlas.AtlasRegion portrait1 = null;
-                TextureAtlas.AtlasRegion portrait2 = null;
-                try {
-                    Field f = AbstractCard.class.getDeclaredField("portrait");
-                    f.setAccessible(true);
-
-                    portrait0 = (TextureAtlas.AtlasRegion) f.get(cards().get(0));
-                    portrait1 = (TextureAtlas.AtlasRegion) f.get(cards().get(1));
-                    portrait2 = (TextureAtlas.AtlasRegion) f.get(cards().get(2));
-                } catch (IllegalAccessException | NoSuchFieldException e) {
-                    e.printStackTrace();
-                }
+                TextureAtlas.AtlasRegion portrait0 = getEncodablePortrait(cards().get(0));
+                TextureAtlas.AtlasRegion portrait1 = getEncodablePortrait(cards().get(1));
+                TextureAtlas.AtlasRegion portrait2 = getEncodablePortrait(cards().get(2));
 
                 if (portrait0 != null && portrait1 != null) {
                     portrait0 = new TextureAtlas.AtlasRegion(portrait0);
@@ -304,21 +283,10 @@ public class FunctionCard extends AbstractBronzeCard {
                 float drawX;
                 float drawY;
 
-                TextureAtlas.AtlasRegion portrait0 = null;
-                TextureAtlas.AtlasRegion portrait1 = null;
-                TextureAtlas.AtlasRegion portrait2 = null;
-                TextureAtlas.AtlasRegion portrait3 = null;
-                try {
-                    Field f = AbstractCard.class.getDeclaredField("portrait");
-                    f.setAccessible(true);
-
-                    portrait0 = (TextureAtlas.AtlasRegion) f.get(cards().get(0));
-                    portrait1 = (TextureAtlas.AtlasRegion) f.get(cards().get(1));
-                    portrait2 = (TextureAtlas.AtlasRegion) f.get(cards().get(2));
-                    portrait3 = (TextureAtlas.AtlasRegion) f.get(cards().get(3));
-                } catch (IllegalAccessException | NoSuchFieldException e) {
-                    e.printStackTrace();
-                }
+                TextureAtlas.AtlasRegion portrait0 = getEncodablePortrait(cards().get(0));
+                TextureAtlas.AtlasRegion portrait1 = getEncodablePortrait(cards().get(1));
+                TextureAtlas.AtlasRegion portrait2 = getEncodablePortrait(cards().get(2));
+                TextureAtlas.AtlasRegion portrait3 = getEncodablePortrait(cards().get(3));
 
                 if (portrait0 != null && portrait1 != null) {
                     portrait0 = new TextureAtlas.AtlasRegion(portrait0);

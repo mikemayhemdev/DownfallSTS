@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static champ.ChampMod.fatigue;
 import static champ.ChampMod.vigor;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class DeathBlow extends AbstractChampCard {
 
     public final static String ID = makeID("DeathBlow");
@@ -21,6 +23,7 @@ public class DeathBlow extends AbstractChampCard {
        // tags.add(ChampMod.FINISHER);
         postInit();
         exhaust = true;
+        loadJokeCardImage(this, "DeathBlow.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

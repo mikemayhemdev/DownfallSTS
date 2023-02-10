@@ -12,6 +12,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.FloatingOrbsPower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class FloatingOrbs extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("FloatingOrbs");
     public static final String NAME;
@@ -37,6 +39,7 @@ public class FloatingOrbs extends AbstractGuardianCard {
         this.socketCount = 0;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("FloatingOrbs.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

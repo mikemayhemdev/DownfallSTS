@@ -11,6 +11,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.FuturePlansPower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class FuturePlans extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("FuturePlans");
     public static final String IMG_PATH = GuardianMod.getResourcePath("cards/futurePlans.png");
@@ -22,6 +24,7 @@ public class FuturePlans extends AbstractGuardianCard {
         this.socketCount = 0;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("FuturePlans.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

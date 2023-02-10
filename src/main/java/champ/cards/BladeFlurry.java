@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ThrowDaggerEffect;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class BladeFlurry extends AbstractChampCard {
 
     public final static String ID = makeID("BladeFlurry");
@@ -25,6 +27,7 @@ public class BladeFlurry extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
+        loadJokeCardImage(this, "BladeFlurry.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

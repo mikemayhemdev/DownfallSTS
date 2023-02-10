@@ -62,7 +62,8 @@
       "Désactive l'aide pour les poses du Champion - pour les Champions expérimentés",
       "Prevent Snecko from using card pools from other mods.",
       "Désactive le remplacement de la musique (requiert un restart du jeu)",
-      "Débloque tous les déguisements alternatifs des personnages Downfall"
+      "Débloque tous les déguisements alternatifs des personnages Downfall",
+      "Allow display card's subtype next to main type."
     ]
   },
   "downfall:EnergyPanelTip": {

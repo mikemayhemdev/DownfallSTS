@@ -9,5 +9,11 @@
       "Ajoutez un Sceau dans votre deck",
       "Choisissez une carte."
     ]
+  },
+  "hexamod:SealDescriptor": {
+    "TEXT": [
+      "Sceau",
+      "hexamod:Sceau. NL "
+    ]
   }
 }

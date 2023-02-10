@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import sneckomod.powers.UnknownUpgradedPostCombatPower;
 
 public class MorePower extends AbstractSneckoCard {
@@ -13,6 +14,7 @@ public class MorePower extends AbstractSneckoCard {
     public MorePower() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         tags.add(CardTags.HEALING);
+        SneckoMod.loadJokeCardImage(this, "MorePower.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

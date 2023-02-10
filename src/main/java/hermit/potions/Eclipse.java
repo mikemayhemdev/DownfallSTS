@@ -1,8 +1,7 @@
 package hermit.potions;
 
 import basemod.ReflectionHacks;
-import com.badlogic.gdx.Gdx;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,13 +10,9 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.vfx.FlashPotionEffect;
 import hermit.HermitMod;
-import hermit.actions.EclipseAction;
-import hermit.powers.Rugged;
 import hermit.util.TextureLoader;
-
-import java.util.Iterator;
+import hermit.util.Wiz;
 
 public class Eclipse extends AbstractPotion {
 
@@ -66,25 +61,16 @@ public class Eclipse extends AbstractPotion {
         tips.clear();
         tips.add(new PowerTip(name, description));
     }
-    // See that description? It has DESCRIPTIONS[1] instead of just hard-coding the "text " + potency + " more text" inside.
-    // DO NOT HARDCODE YOUR STRINGS ANYWHERE, it's really bad practice to have "Strings" in your code:
-
-    /*
-     * 1. It's bad for if somebody likes your mod enough (or if you decide) to translate it.
-     * Having only the JSON files for translation rather than 15 different instances of "Dexterity" in some random cards is A LOT easier.
-     *
-     * 2. You don't have a centralised file for all strings for easy proof-reading. If you ever want to change a string
-     * you don't have to go through all your files individually/pray that a mass-replace doesn't screw something up.
-     *
-     * 3. Without hardcoded strings, editing a string doesn't require a compile, saving you time (unless you clean+package).
-     *
-     */
 
     @Override
     public void use(AbstractCreature target) {
-        // If you are in combat, gain strength and the "lose strength at the end of your turn" power, equal to the potency of this potion.
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            AbstractDungeon.actionManager.addToBottom(new EclipseAction(potency));
+            Wiz.atb(new FetchAction(Wiz.p().exhaustPile,card -> true,this.potency, list -> {
+                for (AbstractCard c : list)
+                {
+                    c.setCostForTurn(0);
+                }
+            }));
         }
     }
     
@@ -101,7 +87,7 @@ public class Eclipse extends AbstractPotion {
 
     public void upgradePotion()
     {
-      potency += 1;
+      this.potency += 1;
       tips.clear();
       tips.add(new PowerTip(name, description));
     }

@@ -43,6 +43,7 @@ public class Schlurp extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 2;
         this.cardsToPreview = new Lick();
         baseBlock = block = 6;
+        SlimeboundMod.loadJokeCardImage(this, "Schlurp.png");
 
     }
 

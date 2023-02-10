@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
@@ -9,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.Lightning;
 import com.megacrit.cardcrawl.powers.BufferPower;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 import java.util.Iterator;
 
@@ -26,6 +29,7 @@ public class ThunderWave extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         isMultiDamage = true;
         exhaust = true;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("ThunderWave.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

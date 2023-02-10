@@ -19,7 +19,7 @@ import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
 
-public class ComboTackle extends AbstractTackleCard {
+public class ComboTackle extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:ComboTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -45,6 +45,7 @@ public class ComboTackle extends AbstractTackleCard {
         this.baseDamage = 11;
         this.baseSelfDamage = this.selfDamage = 3;
         this.magicNumber = this.baseMagicNumber = 2;
+        SlimeboundMod.loadJokeCardImage(this, "ComboTackle.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

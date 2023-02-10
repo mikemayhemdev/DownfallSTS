@@ -22,7 +22,7 @@ import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
 
-public class FlameTackle extends AbstractTackleCard {
+public class FlameTackle extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:FlameTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -48,6 +48,7 @@ public class FlameTackle extends AbstractTackleCard {
         this.baseDamage = 16;
         baseSelfDamage = this.selfDamage = 3;
         this.magicNumber = this.baseMagicNumber = 3;
+        SlimeboundMod.loadJokeCardImage(this, "FlameTackle.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

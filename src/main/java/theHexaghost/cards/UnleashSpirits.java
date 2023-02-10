@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 
 public class UnleashSpirits extends AbstractHexaCard {
 
@@ -19,6 +20,7 @@ public class UnleashSpirits extends AbstractHexaCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         exhaust = true;
+        HexaMod.loadJokeCardImage(this, "UnleashSpirits.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

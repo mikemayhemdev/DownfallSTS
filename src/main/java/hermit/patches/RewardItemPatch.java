@@ -1,19 +1,9 @@
 package hermit.patches;
 
-import basemod.ReflectionHacks;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.relics.CursedKey;
 import com.megacrit.cardcrawl.rewards.RewardItem;
-import hermit.relics.BartenderGlass;
-import hermit.relics.ClaspedLocket;
-import hermit.relics.Memento;
 
-import java.util.Iterator;
+// Another patch that can be deleted?
 
 public class RewardItemPatch {
     @SpirePatch(clz = RewardItem.class, method = SpirePatch.CONSTRUCTOR, paramtypez = {})

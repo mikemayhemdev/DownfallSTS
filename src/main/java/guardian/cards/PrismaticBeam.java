@@ -17,6 +17,8 @@ import guardian.patches.AbstractCardEnum;
 import guardian.vfx.SmallLaserEffectColored;
 import sneckomod.SneckoMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class PrismaticBeam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PrismaticBeam");
@@ -62,6 +64,7 @@ public class PrismaticBeam extends AbstractGuardianCard {
         
         tags.add(AbstractCard.CardTags.HEALING);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PrismaticBeam.png"));
     }
 
     @Override

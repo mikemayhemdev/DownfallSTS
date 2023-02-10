@@ -17,8 +17,6 @@ import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makePowerPath;
 
-//Gain 1 dex for the turn for each card played.
-
 public class DeterminationPower extends AbstractPower implements CloneablePowerInterface, OnReceivePowerPower {
     public AbstractCreature source;
 
@@ -27,8 +25,6 @@ public class DeterminationPower extends AbstractPower implements CloneablePowerI
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
-    // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("determination_p.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("determination.png"));
 

@@ -14,6 +14,7 @@ public class PureSnecko extends AbstractSneckoCard {
     public PureSnecko() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
+        SneckoMod.loadJokeCardImage(this, "PureSnecko.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -20,6 +20,7 @@ public class RainOfDice extends AbstractSneckoCard {
         baseDamage = 12;
         this.returnToHand = true;
         tags.add(SneckoMod.RNG);
+        SneckoMod.loadJokeCardImage(this, "RainOfDice.png");
     }
 
     @Override

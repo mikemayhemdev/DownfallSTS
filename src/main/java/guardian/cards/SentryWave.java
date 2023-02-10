@@ -19,6 +19,8 @@ import guardian.GuardianMod;
 import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class SentryWave extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("SentryWave");
     public static final String NAME;
@@ -60,6 +62,7 @@ public class SentryWave extends AbstractGuardianCard {
         if (!this.noHover) this.cardsToPreview = new SentryBeam(true);
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("SentryWave.png"));
     }
 
     public SentryWave(){

@@ -162,7 +162,7 @@ public class downfallMod implements
         PostDeathSubscriber {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = false;
+    public static final boolean STEAM_MODE = true;
 
     public static boolean neowtextoverride = false;
 
@@ -191,9 +191,10 @@ public class downfallMod implements
     public static boolean crossoverModCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = true;
+    public static boolean normalMapLayout = false;
     public static boolean champDisableStanceHelper = false;
     public static boolean sneckoNoModCharacters = false;
+    public static boolean disableDescriptors = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
@@ -208,6 +209,7 @@ public class downfallMod implements
     public static final String PROP_CHAMP_PRO = "champDisableStanceHelper";
     public static final String PROP_SNECKO_MODLESS = "sneckoNoModCharacters";
     public static final String PROP_NO_MUSIC = "disableMusicOverride";
+    public static final String PROP_NO_DESCRIPTORS = "disableCardDescriptors";
 
     public static String Act1BossFaced = "";
     public static String Act2BossFaced = "";
@@ -273,6 +275,7 @@ public class downfallMod implements
         configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
         configDefault.setProperty(PROP_CHAMP_PRO, "FALSE");
         configDefault.setProperty(PROP_NO_MUSIC, "FALSE");
+        configDefault.setProperty(PROP_NO_DESCRIPTORS, "FALSE");
 
 
         loadConfigData();
@@ -358,6 +361,7 @@ public class downfallMod implements
             config.setBool(PROP_CHAMP_PRO, champDisableStanceHelper);
             config.setBool(PROP_SNECKO_MODLESS, sneckoNoModCharacters);
             config.setBool(PROP_NO_MUSIC, noMusic);
+            config.setBool(PROP_NO_DESCRIPTORS, disableDescriptors);
             config.save();
             GoldenIdol_Evil.save();
         } catch (IOException e) {
@@ -717,6 +721,15 @@ public class downfallMod implements
                 unlockAllReskin();
             });
 
+            configPos -= configStep;
+            ModLabeledToggleButton disableDescriptorsBtn = new ModLabeledToggleButton(configStrings.TEXT[13],
+                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    disableDescriptors, settingsPanel, (label) -> {
+            }, (button) -> {
+                disableDescriptors = button.enabled;
+                saveData();
+            });
+
             settingsPanel.addUIElement(contentSharingBtnCurses);
             settingsPanel.addUIElement(contentSharingBtnEvents);
             settingsPanel.addUIElement(contentSharingBtnPotions);
@@ -729,6 +742,7 @@ public class downfallMod implements
             settingsPanel.addUIElement(noMusicBtn);
             settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
+            settingsPanel.addUIElement(disableDescriptorsBtn);
             
             configPos = 750;
         }
@@ -766,6 +780,7 @@ public class downfallMod implements
                 sneckoNoModCharacters = config.getBool(PROP_SNECKO_MODLESS);
                 unlockEverything = config.getBool(PROP_UNLOCK_ALL);
                 noMusic = config.getBool(PROP_NO_MUSIC);
+                disableDescriptors = config.getBool((PROP_NO_DESCRIPTORS));
             }
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
             crossoverModCharacters = config.getBool(PROP_MOD_CHAR_CROSSOVER);
@@ -1521,6 +1536,7 @@ public class downfallMod implements
         l.add(new CustomMod(StatusAbuse.ID, "r", true));
         l.add(new CustomMod(TooManyShivs.ID, "r", true));
         l.add(new CustomMod(Wizzardry.ID, "g", true));
+        l.add(new CustomMod(TransformRewards.ID, "g", true));
     }
 
     @Override

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.red.Rampage;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
@@ -24,6 +25,7 @@ public class BurningQuestion extends AbstractHexaCard {
         baseMagicNumber = magicNumber = 3;
         isMultiDamage = true;
         isEthereal = true;
+        HexaMod.loadJokeCardImage(this, "BurningQuestion.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

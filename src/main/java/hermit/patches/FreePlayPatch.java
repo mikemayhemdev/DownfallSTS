@@ -1,26 +1,19 @@
-/*
 package hermit.patches;
 
-import basemod.devcommands.power.Power;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.curses.Pain;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import hermit.powers.EternalPower;
-import hermit.relics.Memento;
 
 @SpirePatch(
         clz= AbstractCard.class,
         method="freeToPlay"
 )
 
+// I dont know if this patch is necessary anymore, but I'm also not sure if I can just remove it.
+// Chances are yes.
+
 public class FreePlayPatch {
 
+    /*
     @SpirePrefixPatch
     public static SpireReturn FreePlay(AbstractCard c)
     {
@@ -35,6 +28,5 @@ public class FreePlayPatch {
         }
         return SpireReturn.Continue();
     }
-
+    */
 }
-*/

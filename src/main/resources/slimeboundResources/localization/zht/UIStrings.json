@@ -11,5 +11,17 @@
     "TEXT": [
       " NL slimeboundmod:命令 。"
     ]
+  },
+  "slimeboundmod:lickDescriptor": {
+    "TEXT": [
+      "舔舔",
+      "slimeboundmod:舔舔 NL "
+    ]
+  },
+  "slimeboundmod:tackleDescriptor": {
+    "TEXT": [
+      "衝撞",
+      "slimeboundmod:衝撞 NL "
+    ]
   }
 }

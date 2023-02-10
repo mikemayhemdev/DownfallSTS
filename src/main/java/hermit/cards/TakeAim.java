@@ -9,14 +9,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.Concentration;
-import hermit.powers.ShadowCloakPower;
 import hermit.powers.TakeAimPower;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class TakeAim extends AbstractDynamicCard {
-
 
     // TEXT DECLARATION
 
@@ -43,7 +41,6 @@ public class TakeAim extends AbstractDynamicCard {
 
     // /STAT DECLARATION/
 
-
     public TakeAim() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
@@ -66,8 +63,6 @@ public class TakeAim extends AbstractDynamicCard {
             }
         }
     }
-
-
 
     //Upgraded stats.
     @Override

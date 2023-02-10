@@ -37,6 +37,7 @@ public class RallyTheTroops extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         baseDamage = 7;
         this.baseMagicNumber = this.magicNumber = 2;
+        SlimeboundMod.loadJokeCardImage(this, "RallyTheTroops.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -54,6 +54,7 @@ public class CrystalRayEffect extends AbstractGameEffect {
         if(this.gems.size() > 2) {
             int idx = (int) ((this.duration / this.startingDuration) * (this.gems.size() - 1));
             if (idx >= this.gems.size() - 1) idx -= 1;
+            if (idx < 0) idx++;
             a = this.gems.get(idx).color;
             b = this.gems.get(idx + 1).color;
             steps = this.gems.size() - 1;

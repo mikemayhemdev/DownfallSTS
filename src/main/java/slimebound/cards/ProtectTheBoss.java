@@ -41,6 +41,7 @@ public class ProtectTheBoss extends AbstractSlimeboundCard {
 
         //this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 1;
+        SlimeboundMod.loadJokeCardImage(this, "ProtectTheBoss.png");
 
 
      //   this.tags.add(SneckoMod.BANNEDFORSNECKO);

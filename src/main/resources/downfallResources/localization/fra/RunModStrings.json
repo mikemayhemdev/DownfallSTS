@@ -50,5 +50,9 @@
   "downfall:Wizzardry": {
     "NAME": "Sorcelllllerie",
     "DESCRIPTION": "Commencez avec un Chapeau de sorcier, un Bâton de sorcier, et une copie améliorée de Sorcellerie."
+  },
+  "downfall:TransformRewards": {
+    "NAME": "Transformed",
+    "DESCRIPTION": "All card rewards become \"Transform a card\"."
   }
 }

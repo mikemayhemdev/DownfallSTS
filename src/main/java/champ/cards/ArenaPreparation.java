@@ -22,7 +22,7 @@ public class ArenaPreparation extends AbstractChampCard {
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
         // tags.add(ChampMod.TECHNIQUE);
-        tags.add(CardTags.HEALING);
+//         tags.add(CardTags.HEALING);
         postInit();
     }
 

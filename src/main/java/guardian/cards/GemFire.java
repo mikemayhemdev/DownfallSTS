@@ -13,6 +13,8 @@ import guardian.actions.GemFireAction;
 import guardian.patches.AbstractCardEnum;
 import sneckomod.SneckoMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class GemFire extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("GemFire");
@@ -52,6 +54,7 @@ public class GemFire extends AbstractGuardianCard {
         loadGemMisc();
         //this.sockets.add(GuardianMod.socketTypes.RED);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("GemFire.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

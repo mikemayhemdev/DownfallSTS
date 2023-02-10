@@ -43,13 +43,13 @@
   },
   "Guardian:DonusPower": {
     "NAME": "过载",
-    "DESCRIPTION": "抽四张牌。 NL 下1回合少抽两张牌。",
-    "UPGRADE_DESCRIPTION": "抽四张牌。 NL 下1回合少抽两张牌。 NL 失去所有负面效果1层。"
+    "DESCRIPTION": "抽四张牌。 NL 下回合少抽2张牌。",
+    "UPGRADE_DESCRIPTION": "抽四张牌。 NL 下回合少抽2张牌。 NL 失去所有负面效果1层。"
   },
   "Guardian:DecasProtection": {
     "NAME": "先古之力",
-    "DESCRIPTION": "获得 4 层 guardianmod:临时 力量 与 敏捷 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 4 层 guardianmod:临时 力量 与 敏捷 。 NL 失去所有负面效果1层。 NL 消耗 。"
+    "DESCRIPTION": "获得4层 guardianmod:临时 力量 。 NL 获得4层 guardianmod:临时 敏捷 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得4层 guardianmod:临时 力量 。 NL 获得4层 guardianmod:临时 敏捷 。 NL 失去所有负面效果1层。 NL 消耗 。"
   },
   "Guardian:FierceBash": {
     "NAME": "猛烈痛击",
@@ -62,7 +62,7 @@
   "Guardian:TwinSlam": {
     "NAME": "双斩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 *再斩 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 *再斩 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 *再斩+ 。"
   },
   "Guardian:GuardianWhirl": {
     "NAME": "守护者旋风",
@@ -90,7 +90,7 @@
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 力量 本次发挥 !M! 倍效果。 NL 跳过你的下回合。"
   },
   "Guardian:BronzeArmor": {
-    "NAME": "弹性护甲",
+    "NAME": "弹性鳞甲",
     "DESCRIPTION": "失去所有负面效果 !M! 层。 NL guardianmod:提防 8。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "失去所有负面效果 !M! 层。 NL guardianmod:提防 8。"
   },
@@ -143,38 +143,38 @@
   },
   "Guardian:PackageShapes": {
     "NAME": "组件: 机械",
-    "DESCRIPTION": "获得 *时间炸弹 、 *荆棘协议 与 *反冲协议 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *时间炸弹+ 、 *荆棘协议+ 与 *反冲协议+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *时 *间 *炸 *弹 、 *荆 *棘 *协 *议 与 *反 *冲 *协 *议 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *时 *间 *炸 *弹 *+ 、 *荆 *棘 *协 *议 *+ 与 *反 *冲 *协 *议 *+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "组件: 先古",
-    "DESCRIPTION": "获得 *过载 、 *先古之力 与 *先古造物 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *过载+ 、 *先古之力+ 与 *先古造物+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *过 *载 、 *先 *古 *之 *力 与 *先 *古 *造 *物 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *过 *载 *+ 、 *先 *古 *之 *力 *+ 与 *先 *古 *造 *物 *+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageSphere": {
     "NAME": "组件: 圆球",
-    "DESCRIPTION": "获得 *球形护盾 、 *硬化 与 *浮动圆球 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *球形护盾+ 、 *硬化+ 与 *浮动圆球+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *球 *形 *护 *盾 、 *硬 *化 与 *浮 *动 *圆 *球 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *球 *形 *护 *盾 *+ 、 *硬 *化 *+ 与 *浮 *动 *圆 *球 *+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageSentry": {
     "NAME": "组件: 哨卫",
-    "DESCRIPTION": "获得1张 *哨卫射线 与2张 *哨卫震荡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得1张 *哨卫射线+ 与2张 *哨卫震荡+ 。 NL 消耗 。"
+    "DESCRIPTION": "获得1张 *哨 *卫 *射 *线 与2张 *哨 *卫 *震 *荡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得1张 *哨 *卫 *射 *线 *+ 与2张 *哨 *卫 *震 *荡 *+ 。 NL 消耗 。"
   },
   "Guardian:PackageWalker": {
     "NAME": "组件: 行者",
-    "DESCRIPTION": "获得 *行者圆球 、 *行者爪击 与 *焚烧 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *行者圆球+ 、 *行者爪击+ 与 *焚烧+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *行 *者 *圆 *球 、 *行 *者 *爪 *击 与 *焚 *烧 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *行 *者 *圆 *球 *+ 、 *行 *者 *爪 *击 *+ 与 *焚 *烧 *+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageAutomaton": {
     "NAME": "组件: 铜制",
-    "DESCRIPTION": "获得 *究极射线 、 *铜制圆球 与 *弹性护甲 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *究极射线+ 、 *铜制圆球+ 与 *弹性护甲+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *究 *极 *射 *线 、 *铜 *制 *圆 *球 与 *弹 *性 *护 *甲 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *究 *极 *射 *线 *+ 、 *铜 *制 *圆 *球 *+ 与 *弹 *性 *护 *甲 *+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageDefect": {
     "NAME": "组件: 故障",
-    "DESCRIPTION": "获得 *重连 ， *预编程 与 *时间电容器 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *重连+ ， *预编程+ 与 *时间电容器+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *重 *连 ， *预 *编 *程 与 *时 *间 *电 *容 *器 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *重 *连 *+ ， *预 *编 *程 *+ 与 *时 *间 *电 *容 *器 *+ 各1张。 NL 消耗 。"
   },
   "Guardian:Planning": {
     "NAME": "规划",
@@ -196,11 +196,11 @@
   },
   "Guardian:Preprogram": {
     "NAME": "预编程",
-    "DESCRIPTION": "查看抽牌堆顶部 !M! 张牌。 NL 可 guardianmod:凝滞 其中一张。"
+    "DESCRIPTION": "查看抽牌堆顶部 !M! 张牌， NL 可 guardianmod:凝滞 其中一张。"
   },
   "Guardian:GemFinder": {
     "NAME": "宝石发现",
-    "DESCRIPTION": "战斗胜利后， NL 额外获得一次 guardianmod:宝石 奖励。"
+    "DESCRIPTION": "战斗胜利后， NL 额外获得普通 guardianmod:宝石 奖励。"
   },
   "Guardian:StasisField": {
     "NAME": "凝滞屏障",
@@ -236,7 +236,7 @@
   },
   "Guardian:RollAttack": {
     "NAME": "蜷身攻击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若处于 guardianmod:防御模式 ， NL 变为全体攻击。 NL 否则 guardianmod:提防 8 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若处于 guardianmod:防御模式 ， NL 变为群体攻击。 NL 否则 guardianmod:提防 8 。"
   },
   "Guardian:GemFire": {
     "NAME": "宝石加农炮",
@@ -260,11 +260,11 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若处于 guardianmod:防御模式 ， NL 获得 !M! 层 guardianmod:临时 荆棘 。 NL 否则 guardianmod:提防 8。"
   },
   "Guardian:PrismaticBeam": {
-    "NAME": "棱镜射线",
+    "NAME": "缤纷碎块",
     "DESCRIPTION": "本牌每 guardianmod:镶嵌 一颗 guardianmod:宝石 ，造成 !D! 点伤害。"
   },
   "Guardian:PrismaticBarrier": {
-    "NAME": "棱镜屏障",
+    "NAME": "缤纷眩盾",
     "DESCRIPTION": "本牌每 guardianmod:镶嵌 一颗 guardianmod:宝石 ，获得 !B! 点 格挡 。"
   },
   "Guardian:TemporalStrike": {
@@ -317,7 +317,7 @@
   "Guardian:AncientConstruct": {
     "NAME": "先古造物",
     "DESCRIPTION": "回合开始时若无 人工制品 ，获得 !M! 层。",
-	"UPGRADE_DESCRIPTION": "获得1层 人工制品 。 NL 回合开始时若无 人工制品 ，获得 !M! 层。"
+	"UPGRADE_DESCRIPTION": "获得2层 人工制品 。 NL 回合开始时若无 人工制品 ，获得 !M! 层。"
   },
   "Guardian:CrystalBeam": {
     "NAME": "水晶射线",

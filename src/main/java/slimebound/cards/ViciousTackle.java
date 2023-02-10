@@ -21,7 +21,7 @@ import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
 
-public class ViciousTackle extends AbstractTackleCard {
+public class ViciousTackle extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:ViciousTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -53,6 +53,7 @@ public class ViciousTackle extends AbstractTackleCard {
 
         this.baseDamage = 16;
         this.baseSelfDamage = this.selfDamage = 3;
+        SlimeboundMod.loadJokeCardImage(this, "ViciousTackle.png");
 
     }
 

@@ -1,30 +1,25 @@
 package hermit.cards;
 
-import com.badlogic.gdx.Gdx;
+import basemod.BaseMod;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import guardian.cards.PackageAutomaton;
-import guardian.cards.PackageDonuDeca;
 import hermit.HermitMod;
-import hermit.actions.FullyLoadedAction;
 import hermit.actions.SoundAction;
 import hermit.characters.hermit;
+import hermit.util.Wiz;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 import static hermit.HermitMod.*;
 
 public class FullyLoaded extends AbstractDynamicCard {
-
-
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
 
     // TEXT DECLARATION
 
@@ -49,17 +44,13 @@ public class FullyLoaded extends AbstractDynamicCard {
 
 
     private static final int COST = 0;
-    private float rotationTimer;
-    private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+
 
     // /STAT DECLARATION/
 
     public FullyLoaded() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust=true;
-        cardsList.add(new Strike_Hermit());
-        cardsList.add(new Defend_Hermit());
         loadJokeCardImage(this, "fully_loaded.png");
     }
 
@@ -67,7 +58,21 @@ public class FullyLoaded extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardCrawlGame.sound.playAV(makeID("SPIN"), 1.0f, 1.25f); // Sound Effect
-        this.addToBot(new FullyLoadedAction());
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+                tmp.group = (ArrayList<AbstractCard>) Wiz.p().drawPile.group.stream()
+                        .filter(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND))
+                        .collect(Collectors.toList());
+                for (AbstractCard c : tmp.group) {
+                    if (!tmp.isEmpty() && Wiz.hand().size() < BaseMod.MAX_HAND_SIZE) {
+                        Wiz.att(new FetchAction(Wiz.p().drawPile,card -> card == c));
+                    }
+                }
+                isDone = true;
+            }
+        });
         this.addToBot(new SoundAction(makeID("RELOAD")));
     }
 
@@ -80,28 +85,6 @@ public class FullyLoaded extends AbstractDynamicCard {
             this.selfRetain = true;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
-        }
-    }
-
-    @Override
-    public void update() {
-        super.update();
-        if (hb.hovered) {
-            if (rotationTimer <= 0F) {
-                rotationTimer = 2F;
-                if (cardsList.size() == 0) {
-                    cardsToPreview = CardLibrary.cards.get("Madness");
-                } else {
-                    cardsToPreview = cardsList.get(previewIndex);
-                }
-                if (previewIndex == cardsList.size() - 1) {
-                    previewIndex = 0;
-                } else {
-                    previewIndex++;
-                }
-            } else {
-                rotationTimer -= Gdx.graphics.getDeltaTime();
-            }
         }
     }
 }

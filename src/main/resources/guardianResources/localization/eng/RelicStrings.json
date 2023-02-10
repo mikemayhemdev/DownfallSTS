@@ -77,7 +77,8 @@
       "Upon pickup, choose a card. Start each combat with this card in #yguardianmod:Stasis.",
       "Choose a card for ",
       "Start each combat with ",
-      " in #yguardianmod:Stasis."
+      " in #yguardianmod:Stasis.",
+      "The bottled card has been #rremoved from your deck, the relic no longer functions."
     ]
   },
   "Guardian:StasisEgg": {
@@ -119,7 +120,8 @@
       "Upon pickup, choose a card. At the start of each combat, remove it from your draw pile. At the start of turn #b3, add it into your hand. It costs #b0.",
       "Choose a card for ",
       "Start each combat with ",
-      " removed from your draw pile. At the start of turn #b3, add it into your hand. NL It costs #b0."
+      " removed from your draw pile. At the start of turn #b3, add it into your hand. NL It costs #b0.",
+      "The bottled card has been #rremoved from your deck, the relic no longer functions."
     ]
   }
 }

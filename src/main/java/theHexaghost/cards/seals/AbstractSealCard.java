@@ -1,21 +1,26 @@
 package theHexaghost.cards.seals;
 
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.RepairPower;
+import downfall.downfallMod;
+import theHexaghost.HexaMod;
 import theHexaghost.cards.AbstractHexaCard;
-import theHexaghost.powers.RemoveMeBabey;
 import theHexaghost.relics.TheBrokenSeal;
 import theHexaghost.vfx.BrokenSealEffect;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class AbstractSealCard extends AbstractHexaCard {
+    private String[] descriptorStrings = CardCrawlGame.languagePack.getUIString(HexaMod.makeID("SealDescriptor")).TEXT;
+    private String EtherealStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("EtherealMod")).TEXT[0];
+
     public AbstractSealCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, cost, type, rarity, target);
         tags.add(CardTags.HEALING);

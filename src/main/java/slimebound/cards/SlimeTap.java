@@ -48,6 +48,7 @@ public class SlimeTap extends AbstractSlimeboundCard {
 
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
+        SlimeboundMod.loadJokeCardImage(this, "SlimeTap.png");
 
         //this.tags.add(SneckoMod.BANNEDFORSNECKO);
 

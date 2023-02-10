@@ -1,11 +1,14 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.actions.AddToFuncAction;
 import automaton.actions.EasyXCostAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Format extends AbstractBronzeCard {
 
@@ -25,6 +28,7 @@ public class Format extends AbstractBronzeCard {
         cardsToPreview = new FormatEncoded();
         exhaust = true;
         baseMagicNumber = magicNumber = 0;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Format.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

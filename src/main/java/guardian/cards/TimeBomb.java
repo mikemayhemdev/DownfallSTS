@@ -7,15 +7,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.AccelerateAllCardsInStasisAction;
-import guardian.actions.DestroyOrbSlotForDamageAction;
-import guardian.actions.PlaceActualCardIntoStasis;
-import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
+
+import static guardian.GuardianMod.makeBetaCardPath;
 
 public class TimeBomb extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("TimeBomb");
@@ -48,6 +46,7 @@ public class TimeBomb extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("TimeBomb.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

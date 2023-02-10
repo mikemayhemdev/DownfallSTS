@@ -21,6 +21,8 @@ import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class CrystalBeam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("CrystalBeam");
@@ -63,6 +65,7 @@ public class CrystalBeam extends AbstractGuardianCard {
         loadGemMisc();
 
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("CrystalBeam.png"));
 
     }
 

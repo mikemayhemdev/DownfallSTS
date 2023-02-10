@@ -1,6 +1,5 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -20,19 +19,10 @@ import static hermit.HermitMod.makeCardPath;
 
 public class Enervate extends AbstractDynamicCard {
 
-
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
-
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Enervate.class.getSimpleName());
     public static final String IMG = makeCardPath("enervate.png");
-
-    // /TEXT DECLARATION/
-
 
     // STAT DECLARATION
 

@@ -1,9 +1,12 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.powers.InfiniteBeamsPower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class InfiniteBeams extends AbstractBronzeCard {
 
@@ -14,6 +17,7 @@ public class InfiniteBeams extends AbstractBronzeCard {
     public InfiniteBeams() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         cardsToPreview = new MinorBeam();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("InfiniteBeams.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

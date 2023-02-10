@@ -4,15 +4,16 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
-import charbosses.cards.curses.EnInjury;
+import charbosses.cards.colorless.EnGoodInstincts;
+import charbosses.cards.colorless.EnHandOfGreed;
+import charbosses.cards.colorless.EnPanacea;
 import charbosses.cards.curses.EnNecronomicurse;
 import charbosses.cards.hermit.*;
 import charbosses.powers.bossmechanicpowers.HermitWheelOfFortune;
 import charbosses.relics.CBR_Necronomicon;
 import charbosses.relics.CBR_NeowsBlessing;
-import charbosses.relics.CBR_PenNib;
 import charbosses.relics.CBR_PhilosopherStone;
+import charbosses.relics.CBR_StrangeSpoon;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -33,9 +34,9 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         super("HERMIT_WHEEL_ARCHETYPE", "Wheel of Fortune");
 
         maxHPModifier += 195;
-        actNum = 1;
+        actNum = 2;
         bossMechanicName = HermitWheelOfFortune.NAME;
-        bossMechanicDesc = HermitWheelOfFortune.DESC[0] + HermitWheelOfFortune.CARDS_TO_STR + HermitWheelOfFortune.DESC[1];
+        bossMechanicDesc = HermitWheelOfFortune.DESC[0];
     }
 
     @Override
@@ -48,7 +49,6 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitWheelOfFortune(p), 1));
     }
 
-    public boolean usedGestalt = false;
     public int maintenanceLevels = 0;
 
     private void reshuffle() {
@@ -57,45 +57,45 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         show.upgrade();
         mockDeck.add(show);
         AbstractCard strik = new EnStrikeHermit();
-        strik.upgrade();
         mockDeck.add(strik);
-        AbstractCard strik2 = new EnStrikeHermit();
-        mockDeck.add(strik2);
-
         mockDeck.add(new EnDefendHermit());
-        mockDeck.add(new EnHeadshot());
+
+
+        mockDeck.add(new EnDesperado());
+        AbstractCard strike2 = new EnStrikeHermit();
+        strike2.upgrade();
+        mockDeck.add(strike2);
+        AbstractCard powder = new EnFlashPowder();
+        powder.upgrade();
+        mockDeck.add(powder);
+
         AbstractCard wide = new EnWideOpen();
         wide.upgrade();
         mockDeck.add(wide);
-
-        mockDeck.add(new EnHoleUp());
-        if (usedGestalt) {
-            mockDeck.add(new EnInjury());
-        } else {
-            AbstractCard flash = new EnFlashPowder();
-            flash.upgrade();
-            mockDeck.add(flash);
-        }
-        mockDeck.add(new EnShortFuse());
-
-        mockDeck.add(new EnHandOfGreedHermitNecro());
-        AbstractCard virt = new EnVirtue();
-        virt.upgrade();
-        mockDeck.add(virt);
         AbstractCard maint = new EnMaintenance();
         maint.upgrade();
         mockDeck.add(maint);
+        mockDeck.add(new EnGoodInstincts());
 
+        mockDeck.add(new EnHandOfGreed());
+        AbstractCard cure = new EnPanacea();
+        cure.upgrade();
+        mockDeck.add(cure);
+        mockDeck.add(new EnShortFuse());
         mockDeck.add(new EnNecronomicurse());
+
+        //TODO: Extra upgrades implement
+        //TODO: Lots of calculation stuff. 'Fixed card costs' function.
     }
 
     public void initialize() {
 
         /////   RELICS   /////
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_PenNib());
         addRelic(new CBR_PhilosopherStone());
         addRelic(new CBR_Necronomicon());
+        addRelic(new CBR_StoneCalendar()); //TODO: Calendar Implementation
+        addRelic(new CBR_StrangeSpoon());
     }
 
     public static void upgradeStrikeOrDefendManually(AbstractCard c) {
@@ -126,16 +126,8 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         for (int i = 0; i < 3; i++) {
             AbstractCard target = getNextCard();
             cardsList.add(target);
-        }
-        for (int i = 0; i < 3; i++) {
-            if (cardsList.get(i) instanceof EnShortFuse) {
-                int reduction = 3;
-                for (int itr2 = 0; itr2 < i; itr2++) {
-                    if (cardsList.get(i) instanceof EnStrikeHermit) {
-                        reduction -= 1;
-                    }
-                }
-                ((EnShortFuse) cardsList.get(i)).updateCostToSpecific(reduction);
+            if (target.cardID.equals(EnNecronomicurse.ID)) {
+                AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
             }
         }
         if (AbstractCharBoss.boss instanceof CharBossHermit) {
@@ -164,15 +156,10 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
                     if (bot instanceof EnShowdown || bot instanceof EnItchyTriggerAct2) {
                         ((AbstractHermitBossCard) bot).onSpecificTrigger();
                     }
-                    AbstractCharBoss.boss.hand.addToTop(getNextCard());
-                    if (AbstractCharBoss.boss.hand.getTopCard() instanceof EnShortFuse) {
-                        int reduction = 3;
-                        for (int itr2 = 0; itr2 < 3; itr2++) {
-                            if (AbstractCharBoss.boss.hand.group.get(itr2) instanceof EnStrikeHermit) {
-                                reduction -= 1;
-                            }
-                        }
-                        ((EnShortFuse) AbstractCharBoss.boss.hand.getTopCard()).updateCostToSpecific(reduction);
+                    AbstractCard next = getNextCard();
+                    AbstractCharBoss.boss.hand.addToTop(next);
+                    if (next.cardID.equals(EnNecronomicurse.ID)) {
+                        AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
                     }
                     AbstractCharBoss.boss.hand.refreshHandLayout();
                     AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
@@ -214,6 +201,6 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
 
     @Override
     public void initializeBonusRelic() {
-
+        addRelic(new EnLuckyHorseshoe()); //TODO: Enemy lucky horseshoe
     }
 }

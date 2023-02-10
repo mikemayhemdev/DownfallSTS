@@ -30,7 +30,7 @@ public class MainMenuColorPatch {
 
         @SpirePostfixPatch
         public static void downfallTitleBackgroundAtlasReplacer(TitleBackground __instance) {
-            if (downfallMod.replaceMenuColor) {
+            if (downfallMod.replaceMenuColor && !downfallMod.noMusic) {
                 setMainMenuBG(__instance);
             }
         }

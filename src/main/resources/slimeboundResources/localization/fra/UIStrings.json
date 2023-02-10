@@ -11,5 +11,17 @@
     "TEXT": [
       " NL slimeboundmod:Commandez."
     ]
+  },
+  "slimeboundmod:lickDescriptor": {
+    "TEXT": [
+      "Léchouille",
+      "slimeboundmod:Léchouille. NL "
+    ]
+  },
+  "slimeboundmod:tackleDescriptor": {
+    "TEXT": [
+      "Tacle",
+      "slimeboundmod:Tacle. NL "
+    ]
   }
 }

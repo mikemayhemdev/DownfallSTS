@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class Separator extends AbstractBronzeCard {
 
     public final static String ID = makeID("Separator");
@@ -20,6 +22,7 @@ public class Separator extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = DAMAGE;
         thisEncodes();
         tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Separator.png"));
     }
 
     @Override

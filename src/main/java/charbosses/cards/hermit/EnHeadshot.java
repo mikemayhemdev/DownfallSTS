@@ -22,7 +22,7 @@ public class EnHeadshot extends AbstractHermitBossCard {
 
     public EnHeadshot() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/headshot.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 8;
+        this.baseDamage = 7;
     }
 
     @Override
@@ -38,14 +38,12 @@ public class EnHeadshot extends AbstractHermitBossCard {
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
-        int oldBaseDamage = baseDamage;
+        super.calculateCardDamage(mo);
         AbstractPower concentration = this.owner.getPower(HermitConcentrationPower.POWER_ID);
         if (concentration != null && concentration.amount > 0) {
-            baseDamage *= 2;
+            damage *= 2;
         }
-        super.calculateCardDamage(mo);
-        baseDamage = oldBaseDamage;
-        if (this.damage != baseDamage) isDamageModified = true;
+        isDamageModified = damage != baseDamage;
     }
 
     @Override

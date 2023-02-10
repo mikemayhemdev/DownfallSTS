@@ -21,7 +21,7 @@ import slimebound.vfx.LickEffect;
 import slimebound.vfx.SlimeDripsEffect;
 
 
-public class RejuvenatingLick extends AbstractLickCard {
+public class RejuvenatingLick extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:RejuvenatingLick";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -48,7 +48,7 @@ public class RejuvenatingLick extends AbstractLickCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.LICK);
-        tags.add(CardTags.HEALING);
+//         tags.add(CardTags.HEALING);
 
 
         this.slimed = this.baseSlimed = 4;

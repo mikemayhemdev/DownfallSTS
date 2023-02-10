@@ -22,7 +22,7 @@ import slimebound.vfx.SlimeDripsEffect;
 import static com.badlogic.gdx.graphics.Color.ROYAL;
 
 
-public class HauntingLick extends AbstractLickCard {
+public class HauntingLick extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:HauntingLick";
     public static final String NAME;
     public static final String DESCRIPTION;

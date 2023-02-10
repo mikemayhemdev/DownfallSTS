@@ -50,5 +50,9 @@
   "downfall:Wizzardry": {
     "NAME": "巫術",
     "DESCRIPTION": "初始擁有巫師帽，法師杖和一張升級的巫術。"
+  },
+  "downfall:TransformRewards": {
+    "NAME": "Transformed",
+    "DESCRIPTION": "All card rewards become \"Transform a card\"."
   }
 }

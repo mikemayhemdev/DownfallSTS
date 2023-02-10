@@ -26,6 +26,7 @@ public class QuickBite extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(SneckoMod.RNG);
+        SneckoMod.loadJokeCardImage(this, "QuickBite.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

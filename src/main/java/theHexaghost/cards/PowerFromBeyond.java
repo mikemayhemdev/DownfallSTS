@@ -21,6 +21,7 @@ public class PowerFromBeyond extends AbstractHexaCard {
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
+        HexaMod.loadJokeCardImage(this, "PowerFromBeyond.png");
     }
 
     @Override

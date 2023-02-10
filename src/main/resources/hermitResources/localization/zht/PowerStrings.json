@@ -9,11 +9,11 @@
 },
 "hermit:FatalDesirePower": {
         "NAME": "自弒之欲",
-        "DESCRIPTIONS": ["你的回合開始時，抽 #b", " 張牌並將 #b", " 張 #y受傷 加入手牌。", " 張 #y受傷 加入手牌。"]
+        "DESCRIPTIONS": ["你的回合開始時，額外抽 #b", " 張牌並將 #b", " 張 #y受傷 加入手牌。", " 張 #y受傷 加入手牌。"]
 },
 "hermit:ShadowCloakPower": {
         "NAME": "暗影鬥篷",
-        "DESCRIPTIONS": ["每當你抽到詛咒牌時，獲得 #b", " 點 #y格擋 。"]
+        "DESCRIPTIONS": ["每當你抽到 #y詛咒 時，獲得 #b", " 點 #y格擋 。"]
 },
 "hermit:TakeAimPower": {
         "NAME": "舉槍瞄準",
@@ -25,19 +25,19 @@
 },
 "hermit:Bruise": {
         "NAME": "瘀傷",
-        "DESCRIPTIONS": ["本回合內，目標額外受到 #b", " 點攻擊傷害。"]
+        "DESCRIPTIONS": ["本回合目標額外受到 #b", " 點攻擊傷害。"]
 },
 "hermit:HorrorPower": {
         "NAME": "恐懼",
-        "DESCRIPTIONS": ["#y淤傷 在 #b", " 回合內不會消失。", " 回合內不會消失。"]
+        "DESCRIPTIONS": ["#y瘀傷 在 #b", " 回合內不會消失。", " 回合內不會消失。"]
 },
 "hermit:ComboPower": {
         "NAME": "連擊",
-        "DESCRIPTIONS": ["每當你觸發 #y精準 效果時，隨機將 #b", " 張 #y精準 牌加入手牌。", " 張 #y精準 牌加入手牌。"]
+        "DESCRIPTIONS": ["每回合前 #b", " 次觸發 #y精準 時，將該牌返回手牌最右端。", " 次觸發 #y精準 時，將該牌返回手牌最右端。"]
 },
 "hermit:BigShotPower": {
         "NAME": "冒煙槍管",
-        "DESCRIPTIONS": ["每當你觸發 #y精準 效果時，你的下一張攻擊牌額外造成 #b", " 點傷害。"]
+        "DESCRIPTIONS": ["每當你觸發 #y精準 效果時，獲得 #b", " 層 #y活力 。"]
 },
 "hermit:BrawlPower": {
         "NAME": "鬥毆",
@@ -49,11 +49,11 @@
 },
 "hermit:EternalPower": {
         "NAME": "永恒形態",
-        "DESCRIPTIONS": ["你的回合開始時，降低所有手牌的耗能 #b", " 點。"]
+        "DESCRIPTIONS": ["每回合抽到的前 #b4 張牌該回合首次耗能減 #b", " 。"]
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "壓倒性力量",
-                "DESCRIPTIONS": ["若回合結束時你的能量為 #b0 ，失去 #b"," 點生命。"]
+        "DESCRIPTIONS": ["若回合結束時你的 #y能量 為 #b0 ，失去 #b"," 點生命。"]
 },
 "hermit:Bounty": {
         "NAME": "賞金",
@@ -65,7 +65,7 @@
 },
 "hermit:DeterminationPower": {
         "NAME": "決心",
-        "DESCRIPTIONS": ["每當你獲得負面狀態時，獲得 #b", " #y力量 。"]
+        "DESCRIPTIONS": ["每當你獲得負面狀態時，獲得 #b", " 點 #y力量 。"]
 },
 "hermit:RyeStalkPower": {
         "NAME": "黑麥莖",
@@ -81,7 +81,7 @@
 },
 "hermit:CoalescencePower": {
         "NAME": "愈合",
-        "DESCRIPTIONS": ["回合結束時，可 #y保留 #b", " 張牌。", " 張牌。"]
+        "DESCRIPTIONS": ["你的回合結束時，可 #y保留 #b", " 張牌。", " 張牌。"]
 },
 "hermit:ReprievePower": {
         "NAME": "延緩死刑",

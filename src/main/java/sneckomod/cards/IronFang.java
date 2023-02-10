@@ -21,6 +21,7 @@ public class IronFang extends AbstractSneckoCard {
         baseMagicNumber = magicNumber = 3;
         baseSilly = silly = 3;
         tags.add(SneckoMod.RNG);
+        SneckoMod.loadJokeCardImage(this, "IronFang.png");
     }
 
     @Override
@@ -62,9 +63,10 @@ public class IronFang extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new GainBlockAction(p, getRandomNum(magicNumber, block, this)));
         atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// 117
         atb(new NoApplyRandomDamageAction(m, silly, damage, 1, AbstractGameAction.AttackEffect.NONE, this, DamageInfo.DamageType.NORMAL));
-        atb(new GainBlockAction(p, getRandomNum(magicNumber, block, this)));
+
     }
 
     public void upgrade() {

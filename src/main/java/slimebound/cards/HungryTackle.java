@@ -20,7 +20,7 @@ import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
 
-public class HungryTackle extends AbstractTackleCard {
+public class HungryTackle extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:HungryTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -51,6 +51,7 @@ public class HungryTackle extends AbstractTackleCard {
 
 
         this.magicNumber = this.baseMagicNumber = 1;
+        SlimeboundMod.loadJokeCardImage(this, "HungryTackle.png");
 
     }
 

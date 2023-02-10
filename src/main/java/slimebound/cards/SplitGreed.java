@@ -40,6 +40,7 @@ public class SplitGreed extends AbstractSlimeboundCard {
 
         this.exhaust = true;
         this.selfRetain = true;
+        SlimeboundMod.loadJokeCardImage(this, "SplitGreed.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

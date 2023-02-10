@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleRandomCardAction;
 
 public class QuickMove extends AbstractSneckoCard {
@@ -20,6 +21,7 @@ public class QuickMove extends AbstractSneckoCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
+        SneckoMod.loadJokeCardImage(this, "QuickMove.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -191,8 +191,8 @@
   },
   "Guardian:Emergency": {
     "NAME": "긴급 상황",
-    "DESCRIPTION": "guardianmod:정지장에 있는 카드 1장을 가져올 때까지 guardianmod:가속합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "guardianmod:정지장에 있는 카드 1장을 가져올 때까지 guardianmod:가속합니다."
+    "DESCRIPTION": "guardianmod:정지장에 있는 카드 1장이 벗어날 때까지 guardianmod:가속합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "guardianmod:정지장에 있는 카드 1장이 벗어날 때까지 guardianmod:가속합니다."
   },
   "Guardian:Clone": {
     "NAME": "복제",
@@ -322,7 +322,7 @@
   "Guardian:AncientConstruct": {
     "NAME": "고대의 구조",
     "DESCRIPTION": "내 턴 시작 시 인공물이 없다면 인공물을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "인공물을 1 얻습니다. NL 내 턴 시작 시 인공물이 없다면 인공물을 !M! 얻습니다."
+    "UPGRADE_DESCRIPTION": "인공물을 2 얻습니다. NL 내 턴 시작 시 인공물이 없다면 인공물을 !M! 얻습니다."
   },
   "Guardian:CrystalBeam": {
     "NAME": "크리스탈 광선",

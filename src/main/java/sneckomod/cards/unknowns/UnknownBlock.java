@@ -16,6 +16,7 @@ public class UnknownBlock extends AbstractUnknownCard {
 
     public UnknownBlock() {
         super(ID, CardType.SKILL, CardRarity.COMMON);
+        //SneckoMod.loadJokeCardImage(this, "UnknownBlock.png");
     }
 
     public boolean useCheck(AbstractCard card) {

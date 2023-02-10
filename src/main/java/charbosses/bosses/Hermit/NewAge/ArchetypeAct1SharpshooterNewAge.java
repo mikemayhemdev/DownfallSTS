@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.exordium.LouseNormal;
+import com.megacrit.cardcrawl.powers.CurlUpPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;
@@ -41,6 +42,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
         tangerine.maxHealth += 24;
         tangerine.currentHealth += 24;
         tangerine.powers.add(new StrengthPower(tangerine, 2));
+        tangerine.powers.add(new CurlUpPower(tangerine, 12));
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(tangerine, true));
     }
 
@@ -51,7 +53,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_Abacus());
         addRelic(new CBR_OddlySmoothStone());
-        addRelic(new CBR_Calipers());
+        addRelic(new CBR_BrassTacks()); //TODO: Enemy brass tacks
     }
 
     @Override

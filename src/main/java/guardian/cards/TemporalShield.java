@@ -11,6 +11,8 @@ import guardian.GuardianMod;
 import guardian.actions.ReduceRightMostStasisAction;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class TemporalShield extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("TemporalShield");
     public static final String IMG_PATH = GuardianMod.getResourcePath("cards/temporalShield.png");
@@ -22,6 +24,7 @@ public class TemporalShield extends AbstractGuardianCard {
         this.socketCount = 0;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("TemporalShield.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

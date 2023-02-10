@@ -34,6 +34,7 @@ public class Darklings extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
         exhaust = true;
         baseMagicNumber = magicNumber = 2;
+        SlimeboundMod.loadJokeCardImage(this, "Darklings.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -10,7 +10,7 @@
     "NAME": "黑麦茎",
     "FLAVOR": "即使嚼的时间久，也依旧能保持薄荷的新鲜感。",
     "DESCRIPTIONS": [
-      "你的回合结束时，被 #yhermit:瘀伤 的敌人失去同等层数点生命。"
+      "战斗开始时，所有敌人失去 #b2 点 #y力量 。"
     ]
   },
   "hermit:BartenderGlass": {
@@ -75,7 +75,7 @@
     "NAME": "刮胡刀",
     "FLAVOR": "干净利落。。。",
     "DESCRIPTIONS": [
-      "移除一张牌时，回复 #b15 点生命。"
+      "移除或变化一张牌时，回复 #b15 点生命。"
     ]
   },
   "hermit:BrassTacks": {

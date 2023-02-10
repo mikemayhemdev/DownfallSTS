@@ -62,7 +62,8 @@
       "隱藏第一勇士的姿態提示 - 給第一勇士老手。",
       "禁止異蛇使用其他Mod的角色牌池。",
       "禁用音樂替換（需要重啟遊戲）。",
-      "解鎖所有崩墜角色的皮膚。"
+      "解鎖所有崩墜角色的皮膚。",
+      "Allow display card's subtype next to main type."
     ]
   },
   "downfall:EnergyPanelTip": {

@@ -13,6 +13,8 @@ import guardian.patches.AbstractCardEnum;
 import guardian.powers.AutomayhemPower;
 import sneckomod.SneckoMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class TimeSifter extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("TimeSifter");
     public static final String NAME;
@@ -34,6 +36,7 @@ public class TimeSifter extends AbstractGuardianCard {
 
     public TimeSifter() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("TimeSifter.png"));
 
     }
 

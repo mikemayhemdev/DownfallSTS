@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import expansioncontent.expansionContentMod;
 import expansioncontent.powers.StudyTheSpirePower;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
 import java.util.ArrayList;
 
 
@@ -41,6 +43,7 @@ public class StudyTheSpire extends AbstractExpansionCard {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_power.png", "expansioncontentResources/images/1024/bg_boss_power.png");
+        loadJokeCardImage(this, "StudyTheSpire.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
