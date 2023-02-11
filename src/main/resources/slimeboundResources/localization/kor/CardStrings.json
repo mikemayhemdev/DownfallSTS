@@ -92,7 +92,8 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "가벼운 식사",
-    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 카드를 1장 소멸시킵니다. 소멸시킨 카드의 비용만큼 *핥기 카드를 얻습니다. NL 소멸."
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 카드를 1장 소멸시킵니다. 소멸시킨 카드의 비용만큼 *핥기 카드를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 카드를 1장 소멸시킵니다. 소멸시킨 카드의 비용만큼 *핥기 카드를 얻습니다. NL 소멸."
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "복제의 형상",
@@ -373,7 +374,8 @@
   },
   "Slimebound:Schlurp": {
     "NAME": "핥짝",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *핥기 카드를 !M! 장 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *핥기 카드를 !M! 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL *핥기 카드를 !M! 장 얻습니다."
   },
   "Slimebound:SplitGreed": {
     "NAME": "되살아나는 욕심쟁이",

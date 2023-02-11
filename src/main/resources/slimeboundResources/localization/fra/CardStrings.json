@@ -39,7 +39,8 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Casse-croûte",
-    "DESCRIPTION": "Piochez !M! cartes, puis Épuisez une carte dans votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement."
+    "DESCRIPTION": "Piochez !M! cartes, puis Épuisez une carte dans votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Piochez !M! cartes, puis Épuisez une carte dans votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Diviser et Conquérir",

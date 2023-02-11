@@ -92,7 +92,8 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "黏質快餐",
-    "DESCRIPTION": "抽 !M! 張牌。 NL 消耗一張手牌。 NL 獲得其耗能張 *掠舔 。 NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 張牌。 NL 消耗一張手牌。 NL 獲得其耗能張 *掠舔 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 張牌。 NL 消耗一張手牌。 NL 獲得其耗能張 *掠舔 。 NL 消耗 。"
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "增殖形態",
@@ -373,7 +374,8 @@
   },
   "Slimebound:Schlurp": {
     "NAME": "咀嚼",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 獲得 !M! 張 *掠舔 。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 獲得 !M! 張 *掠舔 。",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 。 NL 獲得 !M! 張 *掠舔 。"
   },
   "Slimebound:SplitGreed": {
     "NAME": "貪婪復生",
