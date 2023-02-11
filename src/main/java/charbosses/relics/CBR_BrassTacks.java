@@ -1,0 +1,31 @@
+package charbosses.relics;
+
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import hermit.relics.BrassTacks;
+
+public class CBR_BrassTacks extends AbstractCharbossRelic {
+    public static final String ID = "BrassTacks";
+
+    public CBR_BrassTacks() {
+        super(new BrassTacks());
+    }
+
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0];
+    }
+
+
+    public void atBattleStart() {
+        this.flash();
+        this.addToTop(new ApplyPowerAction(this.owner, this.owner, new MetallicizePower(this.owner, 2)));
+        this.addToTop(new RelicAboveCreatureAction(this.owner, this));
+    }
+
+    @Override
+    public AbstractRelic makeCopy() {
+        return new CBR_BrassTacks();
+    }
+}

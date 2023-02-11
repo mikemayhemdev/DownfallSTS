@@ -26,6 +26,9 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         super("HERMIT_DOOMSDAY_ARCHETYPE", "Doomsday");
 
         maxHPModifier += 315; //TODO: High ascension bonus HP from periapt
+        if (AbstractDungeon.ascensionLevel >= 19) {
+            maxHPModifier += 18;
+        }
         actNum = 3;
         bossMechanicName = HermitDoomsday.NAME;
         bossMechanicDesc = HermitDoomsday.DESC[0];
@@ -46,7 +49,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_CursedKey());
         addRelic(new CBR_CharredGlove());
-        addRelic(new CBR_BrassTacks()); //TODO: En Brass Tacks because Red Scarf will be mega annoying
+        addRelic(new CBR_BrassTacks());
         addRelic(new CBR_Omamori()); //TODO: Make sure it's 0
     }
 
@@ -107,6 +110,6 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_DarkstonePeriapt()); //TODO: En darkstone periapt (no need for functionality)
+        addRelic(new CBR_DarkstonePeriapt());
     }
 }
