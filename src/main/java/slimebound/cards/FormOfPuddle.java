@@ -16,31 +16,13 @@ import slimebound.patches.AbstractCardEnum;
 
 public class FormOfPuddle extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:FormOfPuddle";
-    public static final String NAME;
-    public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/formofpuddle.png";
-    private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    public static final String IMG_PATH = SlimeboundMod.getResourcePath("cards/formofpuddle.png");
     private static final CardStrings cardStrings;
-    private static final int COST = 3;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_BONUS = 3;
-    public static String UPGRADED_DESCRIPTION;
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    }
 
     public FormOfPuddle() {
-        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
-
-        this.exhaust = true;
+        super(ID, cardStrings.NAME, IMG_PATH, 3, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.SLIMEBOUND, CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -48,11 +30,6 @@ public class FormOfPuddle extends AbstractSlimeboundCard {
         if (p instanceof SlimeboundCharacter) {
             ((SlimeboundCharacter) p).puddleForm();
         }
-
-    }
-
-    public AbstractCard makeCopy() {
-        return new FormOfPuddle();
     }
 
     public void upgrade() {
@@ -60,6 +37,14 @@ public class FormOfPuddle extends AbstractSlimeboundCard {
             upgradeName();
             upgradeBaseCost(2);
         }
+    }
+
+    public AbstractCard makeCopy() {
+        return new FormOfPuddle();
+    }
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 }
 
