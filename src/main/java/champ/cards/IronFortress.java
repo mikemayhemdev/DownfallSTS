@@ -6,6 +6,8 @@ import champ.powers.IronFortressVigorPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class IronFortress extends AbstractChampCard {
 
     public final static String ID = makeID("IronFortress");
@@ -14,6 +16,7 @@ public class IronFortress extends AbstractChampCard {
 
     public IronFortress() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        loadJokeCardImage(this, "IronFortress.png");
 
         //tags.add(ChampMod.TECHNIQUE);
         //techniqueLast = true;

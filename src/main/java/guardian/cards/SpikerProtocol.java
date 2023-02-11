@@ -17,6 +17,8 @@ import guardian.patches.AbstractCardEnum;
 import guardian.powers.DontLeaveDefensiveModePower;
 import guardian.powers.SpikerProtocolPower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class SpikerProtocol extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("SpikerProtocol");
     public static final String NAME;
@@ -52,6 +54,7 @@ public class SpikerProtocol extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("SpikerProtocol.png"));
 
     }
 
