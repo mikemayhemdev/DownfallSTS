@@ -22,7 +22,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
 
         maxHPModifier += 315;
         if (AbstractDungeon.ascensionLevel >= 19) {
-            maxHPModifier += 18;
+            maxHPModifier += 24;
         }
         actNum = 3;
         bossMechanicName = HermitDoomsday.NAME;
