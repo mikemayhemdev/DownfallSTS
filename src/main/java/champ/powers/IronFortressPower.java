@@ -6,6 +6,7 @@ import champ.stances.AbstractChampStance;
 import champ.stances.DefensiveStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
@@ -16,7 +17,6 @@ import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.util.TextureLoader;
 
 public class IronFortressPower extends AbstractPower implements CloneablePowerInterface {
-
     public static final String POWER_ID = ChampMod.makeID("IronFortressPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/IronFortress84.png");
@@ -43,21 +43,13 @@ public class IronFortressPower extends AbstractPower implements CloneablePowerIn
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
         if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
             flash();
-            //addToBot(new ApplyPowerAction(owner, owner, new CounterPower(amount), amount));
-            if (newStance instanceof AbstractChampStance)
-                for (int x = 0; x < this.amount; x++) {
-                    ((AbstractChampStance) newStance).technique();
-                }
+            addToBot(new GainBlockAction(owner, amount));
         }
     }
 
     @Override
     public void updateDescription() {
-        if (this.amount == 1) {
-            description = DESCRIPTIONS[0] + LocalizedStrings.PERIOD;
-        } else {
-            description = DESCRIPTIONS[0] + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
-        }
+        description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override
