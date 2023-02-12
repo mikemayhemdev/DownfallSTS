@@ -2,18 +2,13 @@ package charbosses.bosses.Hermit.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
-import charbosses.cards.colorless.EnBandage;
-import charbosses.cards.colorless.EnMasterOfStrategy;
-import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.curses.EnInjury;
-import charbosses.cards.curses.EnPain;
 import charbosses.cards.hermit.*;
 import charbosses.powers.bossmechanicpowers.HermitDoomsday;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.curses.Injury;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.RitualPower;
@@ -42,7 +37,6 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RitualPower(p, 1, false), 1));
     }
 
-
     public void initialize() {
 
         /////   RELICS   /////
@@ -50,11 +44,8 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         addRelic(new CBR_CursedKey());
         addRelic(new CBR_CharredGlove());
         addRelic(new CBR_BrassTacks());
-        addRelic(new CBR_Omamori()); //TODO: Make sure it's 0
+        addRelic(new CBR_Omamori());
     }
-
-    //TODO: Grudge counter that goes up over time? Or check how Malice is working. Oh no, Malice exhausts doubt
-    //TODO:
 
     @Override
     public ArrayList<AbstractCard> getThisTurnCards() {
@@ -66,7 +57,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnShadowCloak());
-                    addToList(cardsList, new EnGrudge());
+                    addToList(cardsList, new EnGrudge(15));
                     addToList(cardsList, new EnGlare());
                     turn++;
                     break;
@@ -88,13 +79,17 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnInjury());
-                    addToList(cardsList, new EnGrudge());
+                    addToList(cardsList, new EnGrudge(17));
                     addToList(cardsList, new EnSprayNPray());
+                    turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnMalice());
+                    EnMalice mal = new EnMalice();
+                    addToList(cardsList, mal);
                     addToList(cardsList, new EnGlare());
-                    addToList(cardsList, new EnDoubt());
+                    AbstractCard doubt = new EnDoubt();
+                    mal.setExhaust(doubt);
+                    addToList(cardsList, doubt);
                     turn++;
                     break;
                 case 2:

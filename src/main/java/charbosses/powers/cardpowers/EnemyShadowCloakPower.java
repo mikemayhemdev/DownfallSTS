@@ -60,7 +60,7 @@ public class EnemyShadowCloakPower extends AbstractPower implements CloneablePow
                 for (AbstractCard q : AbstractCharBoss.boss.hand.group) {
                     if (q.type == AbstractCard.CardType.CURSE || q.color == AbstractCard.CardColor.CURSE) {
                         flash();
-                        addToTop(new GainBlockAction(owner, owner, amount));
+                        addToTop(new GainBlockAction(owner, owner, EnemyShadowCloakPower.this.amount));
                     }
                 }
             }

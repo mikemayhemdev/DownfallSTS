@@ -21,6 +21,7 @@ public class EnGrudge extends AbstractHermitBossCard {
     public EnGrudge(int damage) {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/grudge.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = damage;
+        this.baseMagicNumber = this.magicNumber - 2;
     }
 
     public EnGrudge() {
@@ -37,8 +38,7 @@ public class EnGrudge extends AbstractHermitBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 

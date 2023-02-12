@@ -324,7 +324,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             c.resetAttributes();
         }
         addToBot(new DelayedActionAction(new CharbossTurnstartDrawAction()));
-
     }
 
 
@@ -416,6 +415,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                             AbstractBossCard cB = (AbstractBossCard) c;
                             cB.refreshIntentHbLocation();
                         }
+
+                        //TODO Add a way for create a hidden attack intent for the Boss if it intends to play an Attack.
                     }
                 });
             }
