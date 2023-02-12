@@ -27,7 +27,7 @@ public class CBR_StoneCalendar extends AbstractCharbossRelic {
     @Override
     public void atTurnStart() {
         ++this.counter;
-        if (this.counter == 7) {
+        if (this.counter == 6) {
             this.beginLongPulse();
         }
     }

@@ -1,7 +1,10 @@
 package charbosses.cards.hermit;
 
+import charbosses.actions.common.EnemyMakeTempCardInHandAction;
 import charbosses.actions.common.EnemyUseCardAction;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.cards.AbstractBossCard;
+import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
 import charbosses.relics.CBR_Necronomicon;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -23,18 +26,24 @@ import hermit.cards.GhostlyPresence;
 import hermit.cards.Shortfuse;
 import hermit.characters.hermit;
 
-public class EnShortFuse extends AbstractHermitBossCard {
+public class EnShortFuseNecro extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:ShortFuse";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Shortfuse.ID);
 
-    public EnShortFuse() {
+    public EnShortFuseNecro() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/short_fuse.png", 3, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 18;
+        this.isMultiDamage = true;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         addToBot(new DamageAction(p, new DamageInfo(m, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+        AbstractBossCard copy = new EnShortFuse();
+        copy.purgeOnUse = true;
+        if (this.upgraded) copy.upgrade();
+        copy.freeToPlayOnce = true;
+        this.addToBot(new EnemyMakeTempCardInHandAction(copy, 1));
     }
 
     public void updateCostToSpecific(int specific) {
@@ -52,6 +61,6 @@ public class EnShortFuse extends AbstractHermitBossCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new EnShortFuse();
+        return new EnShortFuseNecro();
     }
 }

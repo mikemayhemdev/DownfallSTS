@@ -57,7 +57,6 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
         addRelic(new CBR_Kunai());
         addRelic(new CBR_RedMask());
         addRelic(new CBR_Turnip());
-        //addRelic(new CBR_BlueCandle());
 
     }
 

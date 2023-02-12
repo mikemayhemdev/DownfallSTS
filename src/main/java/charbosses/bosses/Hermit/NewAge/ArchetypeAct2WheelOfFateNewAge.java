@@ -5,7 +5,7 @@ import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnGoodInstincts;
-import charbosses.cards.colorless.EnHandOfGreed;
+import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
 import charbosses.cards.colorless.EnPanacea;
 import charbosses.cards.curses.EnNecronomicurse;
 import charbosses.cards.hermit.*;
@@ -17,16 +17,16 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import hermit.cards.Strike_Hermit;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.UUID;
 
 import static charbosses.cards.EnemyCardGroup.HAND_HEIGHT_OFFSET;
 import static charbosses.cards.EnemyCardGroup.HAND_ROW_LENGTH;
 
 public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
-    public ArrayList<AbstractCard> mockDeck = new ArrayList<>();
-    public boolean usedGestalt = false;
+    public ArrayList<AbstractBossCard> mockDeck = new ArrayList<>();
 
     public ArchetypeAct2WheelOfFateNewAge() {
         super("HERMIT_WHEEL_ARCHETYPE", "Wheel of Fortune");
@@ -47,43 +47,65 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitWheelOfFortune(p), 1));
     }
 
-    public int maintenanceLevels = 0;
-
     private void reshuffle() {
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
-        AbstractCard show = new EnStrikeHermit();
+        AbstractBossCard show = new EnStrikeHermit();
         show.upgrade();
         mockDeck.add(show);
-        AbstractCard strik = new EnStrikeHermit();
+        AbstractBossCard strik = new EnStrikeHermit();
         mockDeck.add(strik);
         mockDeck.add(new EnDefendHermit());
 
 
         mockDeck.add(new EnDesperado());
-        AbstractCard strike2 = new EnStrikeHermit();
+        AbstractBossCard strike2 = new EnStrikeHermit();
         strike2.upgrade();
         mockDeck.add(strike2);
-        AbstractCard powder = new EnFlashPowder();
+        AbstractBossCard powder = new EnFlashPowder();
         powder.upgrade();
         mockDeck.add(powder);
 
-        AbstractCard wide = new EnWideOpen();
+        AbstractBossCard wide = new EnWideOpen();
         wide.upgrade();
         mockDeck.add(wide);
-        AbstractCard maint = new EnMaintenance();
+        AbstractBossCard maint = new EnMaintenance();
         maint.upgrade();
         mockDeck.add(maint);
         mockDeck.add(new EnGoodInstincts());
 
-        mockDeck.add(new EnHandOfGreed());
-        AbstractCard cure = new EnPanacea();
+        mockDeck.add(new EnHandOfGreedHermitNecro());
+        AbstractBossCard cure = new EnPanacea();
         cure.upgrade();
         mockDeck.add(cure);
-        mockDeck.add(new EnShortFuse());
+        mockDeck.add(new EnShortFuseNecro());
         mockDeck.add(new EnNecronomicurse());
 
         //TODO: Extra upgrades implement
-        //TODO: Lots of calculation stuff. 'Fixed card costs' function.
+        //TODO: Lots of calculation stuff.
+    }
+
+    public void removeCardFromDeck(UUID cardUuid) {
+        Iterator<AbstractBossCard> var = mockDeck.iterator();
+        AbstractBossCard c;
+        while (var.hasNext()) {
+            c = var.next();
+            if (c.uuid == cardUuid) {
+                mockDeck.remove(c);
+                return;
+            }
+        }
+    }
+
+    public AbstractBossCard getCardFromDeck(UUID cardUuid) {
+        Iterator<AbstractBossCard> var = mockDeck.iterator();
+        AbstractBossCard c;
+        while (var.hasNext()) {
+            c = var.next();
+            if (c.uuid == cardUuid) {
+                return c;
+            }
+        }
+        return null;
     }
 
     public void initialize() {
@@ -92,30 +114,8 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_PhilosopherStone());
         addRelic(new CBR_Necronomicon());
-        addRelic(new CBR_StoneCalendar());
         addRelic(new CBR_StrangeSpoon());
-    }
-
-    public static void upgradeStrikeOrDefendManually(AbstractCard c) {
-        if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
-            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
-                c.baseDamage += 3;
-                c.upgradedDamage = true;
-            }
-            String NAME;
-            if (c instanceof EnStrikeHermit || c instanceof EnFreeStrikeHermit) {
-                NAME = Strike_Hermit.NAME;
-            } else {
-                NAME = EnDefendHermit.cardStrings.NAME;
-            }
-            c.timesUpgraded++;
-            c.upgraded = true;
-            if (c.timesUpgraded > 1)
-                c.name = NAME + "+" + c.timesUpgraded;
-            else
-                c.name = NAME + "+";
-            c.applyPowers();
-        }
+        addRelic(new CBR_RedMask());
     }
 
     @Override
@@ -135,8 +135,8 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
     }
 
     protected AbstractCard getNextCard() {
-        AbstractCard q = mockDeck.remove(0);
-        AbstractCard x = q.makeStatEquivalentCopy();
+        AbstractBossCard q = mockDeck.remove(0);
+        AbstractCard x = q.makeSameInstanceOf();
         mockDeck.add(mockDeck.size(), q);
         int cardsinrow = Math.min(AbstractCharBoss.boss.hand.group.size() - HAND_ROW_LENGTH * (int) Math.floor((float) AbstractCharBoss.boss.hand.group.size() / (float) HAND_ROW_LENGTH), HAND_ROW_LENGTH);
         float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
@@ -155,7 +155,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
 
         AbstractCard bot = AbstractCharBoss.boss.hand.getBottomCard();
         AbstractCharBoss.boss.hand.removeCard(bot);
-        if (bot instanceof EnShowdown || bot instanceof EnItchyTriggerAct2) {
+        if (bot instanceof EnShowdown) {
             ((AbstractHermitBossCard) bot).onSpecificTrigger();
         }
         AbstractCard next = getNextCard();
@@ -200,6 +200,6 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_BronzeScales());
+        addRelic(new CBR_StoneCalendar());
     }
 }
