@@ -25,7 +25,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
     public ArchetypeAct3DoomsdayNewAge() {
         super("HERMIT_DOOMSDAY_ARCHETYPE", "Doomsday");
 
-        maxHPModifier += 315; //TODO: High ascension bonus HP from periapt
+        maxHPModifier += 315;
         if (AbstractDungeon.ascensionLevel >= 19) {
             maxHPModifier += 18;
         }

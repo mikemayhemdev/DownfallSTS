@@ -49,39 +49,28 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
 
     private void reshuffle() {
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
-        AbstractBossCard show = new EnStrikeHermit();
-        show.upgrade();
-        mockDeck.add(show);
-        AbstractBossCard strik = new EnStrikeHermit();
-        mockDeck.add(strik);
-        mockDeck.add(new EnDefendHermit());
 
+        addCardToDeck(new EnStrikeHermit(), true);
+        addCardToDeck(new EnStrikeHermit(), false);
+        addCardToDeck(new EnDefendHermit(), false);
 
-        mockDeck.add(new EnDesperado());
-        AbstractBossCard strike2 = new EnStrikeHermit();
-        strike2.upgrade();
-        mockDeck.add(strike2);
-        AbstractBossCard powder = new EnFlashPowder();
-        powder.upgrade();
-        mockDeck.add(powder);
+        addCardToDeck(new EnDesperado(), extraUpgrades);
+        addCardToDeck(new EnStrikeHermit(), true);
+        addCardToDeck(new EnFlashPowder(), true);
 
-        AbstractBossCard wide = new EnWideOpen();
-        wide.upgrade();
-        mockDeck.add(wide);
-        AbstractBossCard maint = new EnMaintenance();
-        maint.upgrade();
-        mockDeck.add(maint);
-        mockDeck.add(new EnGoodInstincts());
+        addCardToDeck(new EnWideOpen(), extraUpgrades);
+        addCardToDeck(new EnMaintenance(), true);
+        addCardToDeck(new EnGoodInstincts(), false);
 
-        mockDeck.add(new EnHandOfGreedHermitNecro());
-        AbstractBossCard cure = new EnPanacea();
-        cure.upgrade();
-        mockDeck.add(cure);
-        mockDeck.add(new EnShortFuseNecro());
-        mockDeck.add(new EnNecronomicurse());
+        addCardToDeck(new EnHandOfGreedHermitNecro(), false);
+        addCardToDeck(new EnPanacea(), true);
+        addCardToDeck(new EnShortFuseNecro(), false);
+        addCardToDeck(new EnNecronomicurse(), false);
+    }
 
-        //TODO: Extra upgrades implement
-        //TODO: Lots of calculation stuff.
+    private void addCardToDeck(AbstractBossCard card, boolean upgrade) {
+        if (upgrade) card.upgrade();
+        mockDeck.add(card);
     }
 
     public void removeCardFromDeck(UUID cardUuid) {

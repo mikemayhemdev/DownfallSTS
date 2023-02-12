@@ -1,5 +1,6 @@
 package charbosses.cards.hermit;
 
+import charbosses.powers.cardpowers.EnemyShadowCloakPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -21,7 +22,7 @@ public class EnShadowCloak extends AbstractHermitBossCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(m, m, new ShadowCloakPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(m, m, new EnemyShadowCloakPower(m, magicNumber), magicNumber));
     }
 
     @Override
