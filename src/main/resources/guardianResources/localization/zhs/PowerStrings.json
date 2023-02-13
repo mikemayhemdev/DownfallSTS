@@ -1,9 +1,9 @@
 {
-  "Guardian:NextTurnGainStrengthPower": {
+  "Guardian:NextTurnGainTemporaryStrengthPower": {
     "NAME": "充能",
     "DESCRIPTIONS": [
-      "下一回合获得 #b",
-      " 点 #y力量 。"
+      "你的下回合开始时，获得 #b",
+      " 层 #y临时 #y力量 。"
     ]
   },
   "Guardian:StunnedPower": {
@@ -17,9 +17,8 @@
   "Guardian:FloatingOrbsPower": {
     "NAME": "浮动圆球",
     "DESCRIPTIONS": [
-      "你的回合开始时, 将 #b1 张 #y圆球撞击 加入手牌。",
-      "你的回合开始时，将 #b",
-      " 张 #y圆球撞击 加入手牌。"
+      "每当你打出一张 #b0 耗能牌，随机对一名敌人造成 #b",
+      " 点伤害。"
     ]
   },
   "Guardian:OrbwalkPower": {
@@ -32,9 +31,9 @@
   "Guardian:ClonePower": {
     "NAME": "重连",
     "DESCRIPTIONS": [
-      "将打出的下张非消耗 #y攻击 或 #y技能 牌 #y凝滞 。",
-      "将打出的下 #b",
-      " 张非消耗 #y攻击 或 #y技能 牌 #y凝滞 。"
+      "将本回合打出的下张牌 #y凝滞 。",
+      "将本回合打出的下 #b",
+      " 张牌 #y凝滞 。"
     ]
   },
   "Guardian:GemFinderPower": {

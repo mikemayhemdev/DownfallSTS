@@ -18,7 +18,7 @@
     "NAME": "Floating Orbs",
     "DESCRIPTIONS": [
       "Whenever you play a #y0-Cost card, deal #b",
-      " damage to a random enemy"
+      " damage to a random enemy."
     ]
   },
   "Guardian:OrbwalkPower": {

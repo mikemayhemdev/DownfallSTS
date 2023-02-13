@@ -32,10 +32,7 @@
   "champ:ImprovisingPower": {
     "NAME": "触类旁通",
     "DESCRIPTIONS": [
-      "每回合首次打出 #y连段 牌时，将其返回手牌且它下次耗能为 #b0 。还能触发 #b",
-      " 次。",
-      "每回合前 #b",
-      " 次打出 #y连段 牌时，将其返回手牌且它下次耗能为 #b0 。还能触发 #b"
+      "你的回合开始时，若未处于 #y姿态 ，随机进入 #y战狂 或 #y防守 。 "
     ]
   },
   "champ:CalledShotPower": {
@@ -107,9 +104,8 @@
   "champ:IronFortressPower": {
     "NAME": "战斗跃舞",
     "DESCRIPTIONS": [
-      "每当你进入 #y姿态 时，获得其 #y技术 奖励 #b",
-      " #b",
-      " 次。"
+      "每当你进入 #y姿态 时，获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "champ:IronFortressVigorPower": {
