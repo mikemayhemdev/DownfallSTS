@@ -45,6 +45,7 @@ public class SupplyScrollCard extends CustomCard {
         this.exhaust = true;
 
         this.baseMagicNumber = this.magicNumber = SUPPLY;
+        GremlinMod.loadJokeCardImage(this, "SupplyScrollCard.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

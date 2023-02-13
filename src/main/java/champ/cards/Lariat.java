@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import downfall.actions.PerformXAction;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Lariat extends AbstractChampCard {
 
     public final static String ID = makeID("Lariat");
@@ -31,6 +33,7 @@ public class Lariat extends AbstractChampCard {
         //techniqueLast = true;
         //baseMagicNumber = magicNumber = MAGIC;
         postInit();
+        loadJokeCardImage(this, "Lariat.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
