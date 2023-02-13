@@ -395,7 +395,7 @@
     "UPGRADE_DESCRIPTION": " NL 消耗 。"
   },
     "Guardian:BodySlam": {
-    "NAME": "全身猛击",
+    "NAME": "全身猛撞",
     "DESCRIPTION": "获得 !B! 点 格挡 ， NL 造成当前 格挡 值点伤害 。",
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害）"
   },
