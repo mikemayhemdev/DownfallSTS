@@ -204,7 +204,7 @@
   },
   "hermit:Maintenance": {
     "NAME": "유지보수",
-    "DESCRIPTION": "이번 전투 동안 *타격의 피해량을 !M! 증가시키고 이 카드의 비용이 [E] 증가합니다. NL 민첩을 !hermit:SecondMagic! 얻습니다."
+    "DESCRIPTION": "이번 전투 동안 *타격의 피해량을 !M! 증가시키고 이 카드의 비용을 [E] 증가시킵니다. NL 민첩을 !hermit:SecondMagic! 얻습니다."
   },
   "hermit:EternalForm": {
     "NAME": "영겁의 형상",
