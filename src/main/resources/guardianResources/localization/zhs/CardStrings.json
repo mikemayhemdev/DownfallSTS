@@ -247,7 +247,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 ：抽一张牌。 guardianmod:消散 。"
   },
   "Guardian:Reroute": {
-    "NAME": "重连",
+    "NAME": "重分配",
     "DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:凝滞 打出的下一张非 消耗 攻击或技能牌。"
   },
   "Guardian:PiercingHide": {
