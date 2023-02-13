@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.scene.SilentVictoryStarEffect;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.BrawlPower;
@@ -15,9 +14,6 @@ import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Brawl extends AbstractDynamicCard {
-
-
-    // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Brawl.class.getSimpleName());
     public static final String IMG = makeCardPath("brawl.png");

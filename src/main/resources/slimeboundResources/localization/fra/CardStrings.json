@@ -39,7 +39,8 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Casse-croûte",
-    "DESCRIPTION": "Piochez !M! cartes, puis Épuisez une carte dans votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement."
+    "DESCRIPTION": "Piochez !M! cartes, puis Épuisez une carte dans votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Piochez !M! cartes, puis Épuisez une carte dans votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Diviser et Conquérir",
@@ -265,7 +266,8 @@
   },
   "Slimebound:Schlurp": {
     "NAME": "Sslurp",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez !M! *Léchouille dans votre main."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez !M! *Léchouille dans votre main.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez !M! *Léchouille dans votre main."
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "Reformation",

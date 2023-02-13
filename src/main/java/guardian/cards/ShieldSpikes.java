@@ -32,10 +32,9 @@ public class ShieldSpikes extends AbstractGuardianCard {
     //TUNING CONSTANTS
     private static final int BLOCK = 12;
     private static final int UPGRADE_BLOCK = 3;
-    private static final int THORNS = 4;
-    private static final int UPGRADE_THORNS = 2;
+    private static final int THORNS = 3;
+    private static final int UPGRADE_THORNS = 1;
     private static final int SOCKETS = 0;
-    private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
     //END TUNING CONSTANTS
@@ -49,8 +48,6 @@ public class ShieldSpikes extends AbstractGuardianCard {
 
     public ShieldSpikes() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-
-
         this.baseBlock = BLOCK;
         this.baseMagicNumber = this.magicNumber = THORNS;
         this.socketCount = SOCKETS;
@@ -65,8 +62,7 @@ public class ShieldSpikes extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 
         if (p.stance instanceof DefensiveMode) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, this.magicNumber), this.magicNumber));
+            addToBot(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
         } else {
             brace(8);
         }
@@ -89,7 +85,6 @@ public class ShieldSpikes extends AbstractGuardianCard {
     }
 
     public void updateDescription() {
-
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
                 this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);

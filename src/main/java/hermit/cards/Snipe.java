@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.Concentration;
@@ -25,9 +23,6 @@ public class Snipe extends AbstractDynamicCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
-    // /TEXT DECLARATION/
-
-
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
@@ -41,11 +36,11 @@ public class Snipe extends AbstractDynamicCard {
 
     // /STAT DECLARATION/
 
-
     public Snipe() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = SnipeAmount;
         loadJokeCardImage(this, "snipe.png");
+        exhaust = true;
     }
 
     // Actions the card should do.

@@ -3,7 +3,6 @@ package charbosses.bosses.Defect.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.bosses.Defect.CharBossDefect;
-import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnPanicButton;
 import charbosses.cards.colorless.EnSwiftStrike;
@@ -13,7 +12,6 @@ import charbosses.cards.curses.EnShame;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
-import charbosses.powers.bossmechanicpowers.DefectVoidPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
@@ -21,7 +19,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.NoBlockPower;
-import guardian.powers.ConstructPower;
 
 import java.util.ArrayList;
 
@@ -57,7 +54,6 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
         addRelic(new CBR_Kunai());
         addRelic(new CBR_RedMask());
         addRelic(new CBR_Turnip());
-        //addRelic(new CBR_BlueCandle());
 
     }
 
@@ -178,6 +174,6 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Ginger());
+        addRelic(new CBR_Boot());
     }
 }

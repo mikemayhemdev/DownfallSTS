@@ -324,9 +324,5 @@
   "hermit:Virtue": {
     "NAME": "Virtue",
     "DESCRIPTION": "Retain. NL Reduce each of your debuffs by !M!."
-  },
-  "hermit:BossMaintenance": {
-    "NAME": "Maintenance",
-    "DESCRIPTION": "*Strikes deal !M! more damage this combat. NL Gain 2 Dexterity. NL This costs 1 more this combat."
   }
 }

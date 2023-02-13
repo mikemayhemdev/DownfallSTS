@@ -1,51 +1,33 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import slimebound.SlimeboundMod;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import slimebound.cards.Lick;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
 
 public class DissolveAction extends AbstractGameAction {
     public static final String[] TEXT;
     private static final UIStrings uiStrings;
     public static int numExhausted;
 
-    static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
-        TEXT = uiStrings.TEXT;
-    }
-
-    private AbstractPlayer p;
-    private boolean isRandom;
-    private boolean anyNumber;
-    private boolean canPickZero;
-    private int block;
-    private int extraCards;
+    private final AbstractPlayer p;
+    private final boolean isRandom;
+    private final boolean anyNumber;
+    private final boolean canPickZero;
+    private final int extraCards;
 
     public DissolveAction(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom, int block, int blockUnc) {
         this(target, source, amount, isRandom, false, false, block, blockUnc);
     }
 
     public DissolveAction(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom, boolean anyNumber, boolean canPickZero, int block, int extraCards) {
-        this.canPickZero = false;
         this.anyNumber = anyNumber;
         this.canPickZero = canPickZero;
         this.p = (AbstractPlayer) target;
@@ -53,7 +35,6 @@ public class DissolveAction extends AbstractGameAction {
         this.setValues(target, source, amount);
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
-        this.block = block;
         this.extraCards = extraCards;
     }
 
@@ -99,10 +80,7 @@ public class DissolveAction extends AbstractGameAction {
         }
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-            Iterator var4 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator();
-
-            while (var4.hasNext()) {
-                AbstractCard c = (AbstractCard) var4.next();
+            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 this.p.hand.moveToExhaustPile(c);
                 dissolveEffect(c);
             }
@@ -115,22 +93,20 @@ public class DissolveAction extends AbstractGameAction {
     }
 
     public void dissolveEffect(AbstractCard c2) {
-
-        if (c2.isCostModifiedForTurn) {
-            this.extraCards += c2.costForTurn;
+        int cards;
+        if (c2.costForTurn == -2) {
+            cards = EnergyPanel.getCurrentEnergy();
+        } else if (c2.costForTurn == -1 || c2.freeToPlayOnce) {
+            cards = 0;
         } else {
-            this.extraCards += c2.cost;
+            cards = c2.costForTurn;
         }
 
-        if (c2.cost < 0) c2.cost = 0;
-        if (c2.cost + this.extraCards == 0) {
-            return;
-        }
+        cards += this.extraCards;
 
-        for (int i = 0; i < (this.extraCards); i++) {
+        for (int i = 0; i < cards; i++) {
             AbstractCard c = new Lick();
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
-
         }
 
         /*
@@ -167,5 +143,10 @@ public class DissolveAction extends AbstractGameAction {
 
         }
         */
+    }
+
+    static {
+        uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
+        TEXT = uiStrings.TEXT;
     }
 }

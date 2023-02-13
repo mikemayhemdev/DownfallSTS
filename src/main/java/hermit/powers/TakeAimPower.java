@@ -4,11 +4,6 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.curses.Injury;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,8 +14,6 @@ import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makePowerPath;
 
-//Gain 1 dex for the turn for each card played.
-
 public class TakeAimPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
@@ -29,8 +22,6 @@ public class TakeAimPower extends AbstractPower implements CloneablePowerInterfa
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
-    // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("take_aim_p.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("take_aim.png"));
 
@@ -51,7 +42,7 @@ public class TakeAimPower extends AbstractPower implements CloneablePowerInterfa
     }
 
     @Override
-    public void atStartOfTurn() { // At the start of your turn
+    public void atStartOfTurn() {
         this.flash();
         if (!AbstractDungeon.player.hasPower(Concentration.POWER_ID))
         {
@@ -59,13 +50,9 @@ public class TakeAimPower extends AbstractPower implements CloneablePowerInterfa
         }
     }
 
-
-    // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-
         description = DESCRIPTIONS[0];
-
     }
 
     @Override

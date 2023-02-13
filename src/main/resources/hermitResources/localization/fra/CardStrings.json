@@ -324,9 +324,5 @@
   "hermit:Virtue": {
     "NAME": "Vertu",
     "DESCRIPTION": "Retenue. NL Réduisez chacun de vos débuffs de !M!."
-  },
-  "hermit:BossMaintenance": {
-    "NAME": "Entretien",
-    "DESCRIPTION": "Vos *Frappes infligent !M! dégâts supplémentaires ce combat. NL Gagnez 2 de Dexterité. NL Cette carte coûte 1 [E] de plus ce combat."
   }
 }

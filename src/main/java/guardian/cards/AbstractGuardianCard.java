@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import guardian.GuardianMod;
 import guardian.actions.BraceAction;
 import guardian.orbs.StasisOrb;
+
 import guardian.powers.ModeShiftPower;
 
 import java.util.ArrayList;
@@ -72,14 +73,6 @@ public abstract class AbstractGuardianCard extends CustomCard {
             }
         }
         return super.getPortraitImage();
-    }
-
-    public void whenEnteredStasis(StasisOrb orb) {
-
-    }
-
-    public void whenReturnedFromStasis() {
-
     }
 
     protected void upgradeSecondaryM(int amount) {
@@ -211,7 +204,7 @@ public abstract class AbstractGuardianCard extends CustomCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (this.hasTag(GuardianMod.STASISGLOW)) this.tags.remove(GuardianMod.STASISGLOW);
 
-        GuardianMod.logger.info("New card played: " + this.name + " misc = " + this.misc);
+        //GuardianMod.logger.info("New card played: " + this.name + " misc = " + this.misc);
     }
 
     public static void brace(int modeShiftValue) {
@@ -227,7 +220,6 @@ public abstract class AbstractGuardianCard extends CustomCard {
 
             if (AbstractDungeon.player.masterDeck.contains(this)) {
 
-                this.misc = 0;
                 this.misc = 10 + this.socketCount;
                 //     GuardianMod.logger.info("New misc gem save in progress: " + this.name + " new misc = " + this.misc);
 
