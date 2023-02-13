@@ -38,8 +38,7 @@
   },
   "Slimebound:Split": {
     "NAME": "分裂",
-    "DESCRIPTION": "隨機 slimeboundmod:分裂 兩種史萊姆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "選擇 slimeboundmod:分裂 兩種史萊姆。 NL 消耗 。"
+    "DESCRIPTION": "隨機 slimeboundmod:分裂 一只史萊姆。"
   },
   "Slimebound:LeadByExample": {
     "NAME": "身先士卒",
@@ -74,8 +73,7 @@
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "革新",
-    "DESCRIPTION": "slimeboundmod:吸收 時額外獲得 !M! 點 力量 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:吸收 時額外獲得 !M! 點 力量 與 敏捷 。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 選擇將棄牌堆一張牌放回抽牌堆頂部。"
   },
   "Slimebound:OozeBath": {
     "NAME": "黏液浴",
@@ -256,7 +254,7 @@
   },
   "Slimebound:GoopSpray": {
     "NAME": "黏液噴射",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 給予所有敵人 !slime! 層 slimeboundmod:黏液 與 !M! 層 虛弱 。"
+    "DESCRIPTION": "給予所有敵人 !slime! 層 slimeboundmod:黏液 與 !M! 層 虛弱 。"
   },
   "Slimebound:MassFeed": {
     "NAME": "同質化",
@@ -374,8 +372,8 @@
   },
   "Slimebound:Schlurp": {
     "NAME": "咀嚼",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 獲得 !M! 張 *掠舔 。",
-    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 。 NL 獲得 !M! 張 *掠舔 。"
+    "DESCRIPTION": "給予 !slime! 層 slimeboundmod:黏液 。 NL 獲得 !M! 張 *掠舔 。",
+    "UPGRADE_DESCRIPTION": "給予 !slime! 層 slimeboundmod:黏液 。 NL 獲得 !M! 張 *掠舔 。"
   },
   "Slimebound:SplitGreed": {
     "NAME": "貪婪復生",
