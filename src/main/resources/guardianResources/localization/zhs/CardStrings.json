@@ -172,8 +172,8 @@
   },
   "Guardian:PackageDefect": {
     "NAME": "组件: 故障",
-    "DESCRIPTION": "获得 *重 *连 ， *预 *编 *程 与 *时 *间 *电 *容 *器 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *重 *连 *+ ， *预 *编 *程 *+ 与 *时 *间 *电 *容 *器 *+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *重 *分 *配 ， *预 *编 *程 与 *时 *间 *电 *容 *器 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *重 *分 *配 *+ ， *预 *编 *程 *+ 与 *时 *间 *电 *容 *器 *+ 各1张。 NL 消耗 。"
   },
   "Guardian:Planning": {
     "NAME": "规划",
@@ -195,7 +195,7 @@
   },
   "Guardian:Preprogram": {
     "NAME": "预编程",
-    "DESCRIPTION": "查看抽牌堆顶部 !M! 张牌， NL 可 guardianmod:凝滞 其中一张。"
+    "DESCRIPTION": "查看抽牌堆顶部 !M! 张牌。 NL 可 guardianmod:凝滞 其中一张。"
   },
   "Guardian:GemFinder": {
     "NAME": "宝石发现",
@@ -247,7 +247,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 ：抽一张牌。 guardianmod:消散 。"
   },
   "Guardian:Reroute": {
-    "NAME": "重连",
+    "NAME": "重分配",
     "DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:凝滞 打出的下一张非 消耗 攻击或技能牌。"
   },
   "Guardian:PiercingHide": {
@@ -395,7 +395,7 @@
     "UPGRADE_DESCRIPTION": " NL 消耗 。"
   },
     "Guardian:BodySlam": {
-    "NAME": "全身猛击",
+    "NAME": "全身猛撞",
     "DESCRIPTION": "获得 !B! 点 格挡 ， NL 造成当前 格挡 值点伤害 。",
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害）"
   },
