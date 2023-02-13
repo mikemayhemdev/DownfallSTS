@@ -19,7 +19,7 @@
   },
   "hexamod:BacktrackSmack": {
     "NAME": "되짚어 치기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL hexamod:수축합니다."
+    "DESCRIPTION": "피해를 !D! 만큼 2 번 줍니다. NL hexamod:수축합니다."
   },
   "hexamod:BurningQuestion": {
     "NAME": "불타는 의문",
@@ -31,7 +31,8 @@
   },
   "hexamod:CatchUp": {
     "NAME": "따라잡기",
-    "DESCRIPTION": "이전 유령불꽃을 !M! 번 hexamod:점화합니다."
+    "DESCRIPTION": "이전 유령불꽃을 !M! 번 hexamod:점화합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "이전 유령불꽃을 !M! 번 hexamod:점화합니다."
   },
   "hexamod:ChargedBarrage": {
     "NAME": "충전된 일제 공격",
@@ -68,7 +69,7 @@
   },
   "hexamod:FastForward": {
     "NAME": "빨리 감기",
-    "DESCRIPTION": "휘발성. NL 현재 유령불꽃을 hexamod:점화합니다. NL hexamod:팽창합니다.",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL hexamod:팽창합니다.",
     "UPGRADE_DESCRIPTION": "현재 유령불꽃을 hexamod:점화합니다. NL hexamod:팽창합니다."
   },
   "hexamod:Firestarter": {
@@ -81,7 +82,7 @@
   },
   "hexamod:FlameSwitch": {
     "NAME": "흉조",
-    "DESCRIPTION": "휘발성. NL 현재 유령불꽃을 선택한 유령불꽃으로 변경합니다. NL 소멸.",
+    "DESCRIPTION": "hexamod:영혼화상을 !burny! 부여합니다. NL hexamod:영혼화상 턴 수를 !M! 증가시킵니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "보존. NL 현재 유령불꽃을 선택한 유령불꽃으로 변경합니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "현재 유령 불꽃을 hexamod:부채 유령불꽃으로 변경합니다.",
@@ -157,7 +158,7 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "열기 금속",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상이 hexamod:영혼화상으로 체력을 잃고 hexamod:영혼화상을 제거한다면 hexamod:영혼화상을 !M! 부여합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL hexamod:영혼화상을 !burny! 부여합니다. NL 취약을 !M! 부여합니다."
   },
   "hexamod:HeatShield": {
     "NAME": "열기 방패",
@@ -250,8 +251,8 @@
   },
   "hexamod:Rewind": {
     "NAME": "되감기",
-    "DESCRIPTION": "hexamod:수축합니다. NL [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "hexamod:수축합니다. NL [E] 를 얻고 카드를 1장 뽑습니다."
+    "DESCRIPTION": "hexamod:수축합니다. NL 버린 카드 더미에서 카드 1 장을 골라 손으로 가져옵니다.NL 소멸.",
+    "UPGRADE_DESCRIPTION": "hexamod:수축합니다. NL 버린 카드 더미에서 카드 !M! 장을 골라 손으로 가져옵니다.NL 소멸."
   },
   "hexamod:Sear": {
     "NAME": "그을음",
