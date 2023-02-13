@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.util.CardIgnore;
 
+@Deprecated
 @CardIgnore
 public class PhantomCloak extends AbstractHexaCard {
 

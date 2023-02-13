@@ -324,9 +324,5 @@
   "hermit:Virtue": {
     "NAME": "高尚",
     "DESCRIPTION": "保留 。 NL 失去所有負面效果 !M! 層。"
-  },
-  "hermit:BossMaintenance": {
-    "NAME": "維護",
-    "DESCRIPTION": "*打擊 額外造成 !M! 點傷害。 NL 獲得2點 敏捷 。 NL 本場戰鬥耗能加1。"
   }
 }

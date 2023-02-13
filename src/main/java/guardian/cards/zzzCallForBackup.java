@@ -12,6 +12,7 @@ import guardian.GuardianMod;
 import guardian.actions.RandomProtocolAction;
 import guardian.patches.AbstractCardEnum;
 
+@Deprecated
 public class zzzCallForBackup extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("zzzCallForBackup");
     public static final String NAME;

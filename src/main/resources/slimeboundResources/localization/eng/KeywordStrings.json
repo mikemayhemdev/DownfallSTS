@@ -14,7 +14,7 @@
       "splitting"
     ],
     "PROPER_NAME": "Split",
-    "DESCRIPTION": "Spawn a #ySlime minion, who attacks at the start of each turn. NL NL If you have no empty slots, your oldest Slime is automatically #yAbsorbed to make room, granting you 1 #yStrength."
+    "DESCRIPTION": "Spawn a #ySlime minion, who attacks at the start of each turn. NL If you have no empty slots, your oldest Slime is automatically #yAbsorbed to make room, granting you 1 #yStrength."
   },
   {
     "NAMES": [

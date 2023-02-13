@@ -149,7 +149,7 @@ public abstract class AbstractHermitCard extends CustomCard {
                 }
             }
 
-            AbstractHermitCard.deadOnThisTurn.set(AbstractHermitCard.deadOnThisTurn.size()-1,true);
+            //AbstractHermitCard.deadOnThisTurn.set(AbstractHermitCard.deadOnThisTurn.size()-1,true); TODO - Fix this crashing mess
             EndOfTurnPatch.deadon_counter++;
         }
 

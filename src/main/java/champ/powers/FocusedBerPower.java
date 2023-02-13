@@ -6,11 +6,10 @@ import champ.util.OnFinisherSubscriber;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.green.Finisher;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -19,7 +18,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import downfall.util.TextureLoader;
 
-public class FocusedBerPower extends AbstractPower implements CloneablePowerInterface, OnFinisherSubscriber {
+public class FocusedBerPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = ChampMod.makeID("FocusedBerPower");
 
@@ -49,12 +48,14 @@ public class FocusedBerPower extends AbstractPower implements CloneablePowerInte
     }
 
     @Override
-    public void onFinisher() {
-        flash();
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            addToBot(new LoseHPAction(m,m,amount,AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+    public void onAfterCardPlayed(AbstractCard card) {
+        if (card.hasTag(ChampMod.FINISHER)) {
+            flash();
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                addToBot(new DamageAction(m, new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+            }
+            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }
-        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override
