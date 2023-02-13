@@ -16,12 +16,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import sneckomod.SneckoMod;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 
+@CardIgnore
 public class FunctionCard extends AbstractBronzeCard {
     public final static String ID = makeID("FunctionCard");
 

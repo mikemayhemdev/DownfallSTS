@@ -12,6 +12,7 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.TargetedPower;
 
+@Deprecated
 public class WeakpointTargeting extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("WeakpointTargeting");
     public static final String NAME;

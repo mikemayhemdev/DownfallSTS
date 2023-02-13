@@ -19,7 +19,7 @@ public class SackOfGems extends CustomRelic {
 
     public SackOfGems() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.RARE, LandingSound.FLAT);
+                RelicTier.SHOP, LandingSound.FLAT);
     }
 
     @Override

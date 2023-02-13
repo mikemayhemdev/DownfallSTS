@@ -33,7 +33,7 @@ public class CrystalBeam extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 12;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 4;
@@ -110,28 +110,20 @@ public class CrystalBeam extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new CrystalRayEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY, listGems()), Settings.FAST_MODE ? 0.25f : 0.5f));
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-
     }
 
     public AbstractCard makeCopy() {
-
         return new CrystalBeam();
-
     }
 
     public void upgrade() {
-
         if (!this.upgraded) {
-
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
-
         }
-
     }
 
     public void updateDescription() {
-
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
                 this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);

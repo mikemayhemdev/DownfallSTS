@@ -23,7 +23,7 @@ public class Gem_Blue extends AbstractGemCard {
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemBlue.png";
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 0;

@@ -53,7 +53,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_Abacus());
         addRelic(new CBR_OddlySmoothStone());
-        addRelic(new CBR_BrassTacks()); //TODO: Enemy brass tacks
+        addRelic(new CBR_BrassTacks());
     }
 
     @Override

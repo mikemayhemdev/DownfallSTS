@@ -12,6 +12,7 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.zzz.MultiBoostPower;
 
+@Deprecated
 public class zzzMultiBoost extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("zzzMultiBoost");
     public static final String NAME;

@@ -26,9 +26,12 @@ public class EnGestalt extends AbstractHermitBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, m, new Rugged(m, 2), 2));
         addToBot(new ApplyPowerAction(m, m, new VulnerablePower(m, magicNumber, true), magicNumber));
-        if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
-            ((ArchetypeAct2WheelOfFateNewAge) AbstractCharBoss.boss.chosenArchetype).usedGestalt = true;
-        }
+    }
+
+    @Override
+    public void triggerOnExhaust() {
+        if (AbstractCharBoss.boss != null && AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge)
+            ((ArchetypeAct2WheelOfFateNewAge) AbstractCharBoss.boss.chosenArchetype).removeCardFromDeck(uuid);
     }
 
     @Override
