@@ -254,7 +254,7 @@
   },
   "Gremlin:Nob": {
     "NAME": "大块头",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 临时生命 耗尽之前， NL gremlin:大块头 将强制 gremlin:领队 。"
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 临时生命 耗尽之前， NL gremlin:大块头 强制 gremlin:领队 。"
   },
   "Gremlin:NobChoice": {
     "NAME": "做选择",

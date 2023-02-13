@@ -17,7 +17,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import guardian.patches.BottledStasisPatch;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
 import sneckomod.cards.AbstractSneckoCard;
@@ -357,6 +356,22 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             AbstractDungeon.player.hand.refreshHandLayout();
             AbstractDungeon.player.hand.applyPowers();
         }
+    }
+
+    public AbstractCard generateFromPoolButNotIntoHand() {
+        AbstractCard cUnknown;
+
+        if (myList().size() > 0) {
+            cUnknown = CardLibrary.cards.get(myList().get(AbstractDungeon.cardRng.random(0, myList().size() - 1))).makeStatEquivalentCopy();
+        } else {
+            cUnknown = new Madness();
+        }
+
+        if (this.upgraded) cUnknown.upgrade();
+
+        UnknownExtraUiPatch.parentCard.set(cUnknown, this);
+
+        return cUnknown;
     }
 
     @Override

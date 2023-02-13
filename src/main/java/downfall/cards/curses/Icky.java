@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
-import slimebound.SlimeboundMod;
-import slimebound.cards.AbstractSlimeboundCard;
 
 
 public class Icky extends CustomCard {

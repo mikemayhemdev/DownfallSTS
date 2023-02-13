@@ -73,10 +73,10 @@ public class BackToBasicsAutomaton extends AbstractImageEvent {
         cardsToRemove = new ArrayList<>();
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
+            if (c instanceof automaton.cards.Strike) {
                 cardsToRemove.add(c);
             }
-            if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+            if (c instanceof automaton.cards.Defend) {
                 cardsToRemove.add(c);
             }
         }

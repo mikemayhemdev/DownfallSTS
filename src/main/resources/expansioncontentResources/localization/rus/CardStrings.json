@@ -33,8 +33,8 @@
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Хроно-ускорение",
-    "DESCRIPTION": "Даёт 1 Силы, когда вы разыгрываете *12-ую карту.",
-    "UPGRADE_DESCRIPTION": "Даёт 1 Силы. NL Даёт 1 Силы, когда вы разыгрываете *12-ую карту."
+    "DESCRIPTION": "Даёт 2 Силы, когда вы разыгрываете *12-ую карту.",
+    "UPGRADE_DESCRIPTION": "Даёт 2 Силы. NL Даёт 2 Силы, когда вы разыгрываете *12-ую карту."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Взрыв Дону",

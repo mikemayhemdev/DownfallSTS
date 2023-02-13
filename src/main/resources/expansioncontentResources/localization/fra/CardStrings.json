@@ -33,8 +33,8 @@
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Chrono-Boost",
-    "DESCRIPTION": "Gagnez 1 de Force pour chaque 12ème carte que vous jouez.",
-    "UPGRADE_DESCRIPTION": "Gagnez 1 de Force. NL Gagnez 1 de Force pour chaque 12ème carte que vous jouez."
+    "DESCRIPTION": "Gagnez 2 de Force pour chaque 12ème carte que vous jouez.",
+    "UPGRADE_DESCRIPTION": "Gagnez 2 de Force. NL Gagnez 2 de Force pour chaque 12ème carte que vous jouez."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Canon Donu",
