@@ -84,8 +84,8 @@
   },
   "Gremlin:Duplicate": {
     "NAME": "复刻",
-    "DESCRIPTION": "获得手中一张攻击牌的 !M! 张 gremlin:回响 。 NL 其耗能减1。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得手中一张攻击牌的 !M! 张 gremlin:回响 。 NL 其耗能减1。"
+    "DESCRIPTION": "获得手中一张攻击的两张 gremlin:回响 ，它们耗能减1。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得手中一张攻击的两张 gremlin:回响 ，它们耗能减1。"
   },
   "Gremlin:EdibleArmor": {
     "NAME": "食用护甲",
@@ -279,7 +279,7 @@
   "Gremlin:PinNeedle": {
     "NAME": "缝衣针",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆加入 !M! 张 *针刺 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆加入 !M! 张 *针刺+ 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆加入 !M! 张 *针刺 +。 NL 消耗 。"
   },
   "Gremlin:Pinprick": {
     "NAME": "针刺",
@@ -322,7 +322,7 @@
   },
   "Gremlin:Rhythm": {
     "NAME": "节奏",
-    "DESCRIPTION": "gremlin:切换 至下只地精。 NL 从抽牌堆 检索 一张基础牌，本回合其耗能为0。"
+    "DESCRIPTION": "gremlin:切换 至下只地精。 NL 检索 抽牌堆一张基础牌，本回合其耗能为0。"
   },
   "Gremlin:Rush": {
     "NAME": "冲锋",
@@ -407,7 +407,7 @@
   },
   "Gremlin:TargetWeakness": {
     "NAME": "瞄准伤口",
-    "DESCRIPTION": "攻击已被 虚弱 的目标时， NL 额外造成 !M! 点伤害。"
+    "DESCRIPTION": "攻击被 虚弱 的目标时， NL 额外造成 !M! 点伤害。"
   },
   "Gremlin:Tricksy": {
     "NAME": "狡猾",
