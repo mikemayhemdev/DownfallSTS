@@ -343,8 +343,8 @@
   },
   "Guardian:Gem_Blue": {
     "NAME": "蓝宝石",
-    "DESCRIPTION": " guardianmod:宝石 。 NL guardianmod:提防 3 。",
-    "UPGRADE_DESCRIPTION": "guardianmod:提防 3。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL guardianmod:提防 4。",
+    "UPGRADE_DESCRIPTION": "guardianmod:提防 4。"
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "宝石碎片",

@@ -29,11 +29,11 @@
     ]
   },
   "Guardian:ClonePower": {
-    "NAME": "重连",
+    "NAME": "重分配",
     "DESCRIPTIONS": [
-      "将本回合打出的下张牌 #y凝滞 。",
+      "将本回合打出的下张打出后会进入弃牌堆的牌 #y凝滞 。",
       "将本回合打出的下 #b",
-      " 张牌 #y凝滞 。"
+      " 张牌打出后会进入弃牌堆的牌 #y凝滞 。"
     ]
   },
   "Guardian:GemFinderPower": {
