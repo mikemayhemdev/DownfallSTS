@@ -172,8 +172,8 @@
   },
   "Guardian:PackageDefect": {
     "NAME": "组件: 故障",
-    "DESCRIPTION": "获得 *重 *连 ， *预 *编 *程 与 *时 *间 *电 *容 *器 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *重 *连 *+ ， *预 *编 *程 *+ 与 *时 *间 *电 *容 *器 *+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *重 *分 *配 ， *预 *编 *程 与 *时 *间 *电 *容 *器 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *重 *分 *配 *+ ， *预 *编 *程 *+ 与 *时 *间 *电 *容 *器 *+ 各1张。 NL 消耗 。"
   },
   "Guardian:Planning": {
     "NAME": "规划",
