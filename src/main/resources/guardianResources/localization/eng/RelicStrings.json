@@ -31,8 +31,7 @@
     "NAME": "Arumba's Pocket Sentry",
     "FLAVOR": "Sentry Mode active. Target acquired. No hard feelings.",
     "DESCRIPTIONS": [
-      "At the start of each turn, alternates between: NL Deal #b",
-      " damage to a random enemy. NL Apply #b1 #yWeak to ALL enemies."
+      "Every 3 turns, apply #b1 #yWeak to ALL enemies."
     ]
   },
   "Guardian:SackOfGems": {
@@ -60,14 +59,14 @@
     "NAME": "Wander Bots",
     "FLAVOR": "These drones find the most wonderful salvage, but require processing power to maintain.",
     "DESCRIPTIONS": [
-      "On pickup, lose #b1 Stasis slot. NL Gain [E] at the start of your turn."
+      "At the start of each combat, lose #b1 Stasis slot. NL Gain [E] at the start of your turn."
     ]
   },
   "Guardian:StasisUpgradeRelic": {
     "NAME": "Cryo Chamber",
     "FLAVOR": "Things always seem better coming out than they did going in.",
     "DESCRIPTIONS": [
-      "Gain #b1 Stasis slot. Whenever a card enters #yguardianmod:Stasis, #yUpgrade it."
+      "At the start of each combat, gain #b1 Stasis slot. Whenever a card enters #yguardianmod:Stasis, #yUpgrade it."
     ]
   },
   "Guardian:BottledStasis": {

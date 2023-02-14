@@ -1,28 +1,22 @@
 package gremlin.relics;
 
-import basemod.helpers.CardPowerTip;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import gremlin.cards.SupplyScrollCard;
-import gremlin.cards.Ward;
 
 public class SupplyScroll extends AbstractGremlinRelic {
     public static final String ID = getID("SupplyScroll");
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
-    private static final AbstractRelic.RelicTier TIER = RelicTier.COMMON;
+    private static final AbstractRelic.RelicTier TIER = RelicTier.RARE;
     private static final String IMG = "relics/supply_scroll.png";
     private static final AbstractRelic.LandingSound SOUND = LandingSound.FLAT;
 
-    public static final int SUPPLY = 4;
-
     public SupplyScroll() {
         super(ID, IMG, TIER, SOUND);
-        this.tips.add(new CardPowerTip(new SupplyScrollCard()));
     }
 
     @Override
@@ -42,7 +36,8 @@ public class SupplyScroll extends AbstractGremlinRelic {
         if (this.counter == 3) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new SupplyScrollCard()));
+            addToBot(new GainEnergyAction(1));
+            addToBot(new DrawCardAction(2));
 
             this.counter = -1;
             this.grayscale = true;
