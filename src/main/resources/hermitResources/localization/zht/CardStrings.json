@@ -43,14 +43,13 @@
   },
   "hermit:Snipe": {
     "NAME": "狙擊",
-    "DESCRIPTION": "本回合下次 hermit:精準 效果觸發兩次。",
-    "UPGRADE_DESCRIPTION": "hermit:專註 。 NL 本回合下次 hermit:精準 效果觸發兩次。"
+    "DESCRIPTION": "本回合下次 hermit:精準 效果觸發兩次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "hermit:專註 。 NL 本回合下次 hermit:精準 效果觸發兩次。 NL 消耗 。"
   },
   "hermit:CalledShot": {
     "NAME": "空氣炮",
-    "DESCRIPTION": "造成手牌數量點傷害。 NL hermit:精準 ：抽 !M! 張攻擊牌。",
-    "UPGRADE_DESCRIPTION": " NL （造成 !D! 點傷害。）",
-    "EXTENDED_DESCRIPTION": ["造成手牌數量點傷害。 NL hermit:精準 ：抽 !M! 張攻擊牌。"]
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 若本回合上張牌觸發 hermit:精準 ，抽一張牌。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 點傷害。 NL 若本回合上張牌觸發 hermit:精準 ，抽一張牌。"
   },
   "hermit:Dissolve": {
     "NAME": "溶解",
@@ -108,12 +107,11 @@
   },
   "hermit:Roulette": {
     "NAME": "輪轉",
-    "DESCRIPTION": "隨機造成 !D! 點傷害。 NL 丟棄其他手牌， NL 抽等量的牌。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 丟棄其他手牌， NL 抽等量的牌。"
   },
   "hermit:Midnight": {
     "NAME": "午夜時分",
-    "DESCRIPTION": "虛無 。 NL 獲得 !B! 點 格擋 。 NL 獲得一張 *末日將臨 。",
-    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 。 NL 獲得一張 *末日將臨 。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 獲得一張 *末日將臨 。"
   },
   "hermit:Glare": {
     "NAME": "凝視",
@@ -122,16 +120,16 @@
   },
   "hermit:TakeCover": {
     "NAME": "快找掩護",
-    "DESCRIPTION": "獲得一張 *防禦+X 。 NL 其耗能為0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "獲得一張 *防禦+X+1 。 NL 其耗能為0。 NL 消耗 。"
+    "DESCRIPTION": "獲得一張 *防禦+X ， NL 其耗能為0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "獲得一張 *防禦+X+1 ， NL 其耗能為0。 NL 消耗 。"
   },
   "hermit:Misfire": {
     "NAME": "擦槍走火",
-    "DESCRIPTION": "隨機造成 !D! 點傷害。 NL 將一張 *笨拙 加入抽牌堆。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 將一張 *笨拙 加入抽牌堆。"
   },
   "hermit:SprayPray": {
     "NAME": "傾瀉火力",
-    "DESCRIPTION": "隨機造成 !D! 點傷害三次 NL 將一張 *疑慮 加入抽牌堆。"
+    "DESCRIPTION": "隨機造成 !D! 點傷害三次。 NL 將一張 *疑慮 加入抽牌堆。"
   },
   "hermit:Scavenge": {
     "NAME": "戰利品",
@@ -155,7 +153,7 @@
   },
   "hermit:Spite": {
     "NAME": "惡意",
-    "DESCRIPTION": "造成 !D! 點傷害兩次。 NL 抽 !M! 張 詛咒 。"
+    "DESCRIPTION": "造成 !D! 點傷害兩次。 NL 手中每有一張 詛咒 ， NL 抽 !M! 張牌。"
   },
   "hermit:Manifest": {
     "NAME": "惡靈現身",
@@ -183,7 +181,8 @@
   },
   "hermit:Vantage": {
     "NAME": "優勢",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL hermit:精準 ： NL 隨機 升級 !M! 張手牌。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL hermit:精準 ： NL 抽 !M! 張牌並將其 升級 。",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 。 NL hermit:精準 ： NL 抽 !M! 張牌並將其 升級 。"
   },
   "hermit:Brawl": {
     "NAME": "鬥毆",
@@ -310,8 +309,8 @@
   },
   "hermit:FinalCanter": {
     "NAME": "最終手段",
-    "DESCRIPTION": "保留 。 NL 手中每有一張 詛咒 ， NL 造成 !D! 點傷害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " NL （有 !M! 張詛咒牌）"
+    "DESCRIPTION": "保留 。 NL 消耗 手中所有 詛咒 ， NL 每張造成 !D! 點傷害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " NL （造成 !M! 次）"
   },
   "hermit:HeroicBravado": {
     "NAME": "逞能英雄",

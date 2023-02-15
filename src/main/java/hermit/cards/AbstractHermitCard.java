@@ -46,7 +46,7 @@ public abstract class AbstractHermitCard extends CustomCard {
     public boolean upgradedDefaultSecondMagicNumber;
     public boolean isDefaultSecondMagicNumberModified;
     public static boolean lastCardDeadOn = false;
-    public static ArrayList deadOnThisTurn = new ArrayList();
+    public static ArrayList<Boolean> deadOnThisTurn = new ArrayList<>();
 
     public AbstractHermitCard(final String id,
                               final String name,
@@ -145,11 +145,12 @@ public abstract class AbstractHermitCard extends CustomCard {
                 if (c.relicId.equals(BlackPowder.ID))
                 {
                     ((BlackPowder)c).PowderCharge += 2;
-                    ((BlackPowder)c).counter = ((BlackPowder)c).PowderCharge;
+                    c.counter = ((BlackPowder)c).PowderCharge;
                 }
             }
 
-            //AbstractHermitCard.deadOnThisTurn.set(AbstractHermitCard.deadOnThisTurn.size()-1,true); TODO - Fix this crashing mess
+            if (deadOnThisTurn.size() > 0)
+                AbstractHermitCard.deadOnThisTurn.set(deadOnThisTurn.size() - 1,true);
             EndOfTurnPatch.deadon_counter++;
         }
 

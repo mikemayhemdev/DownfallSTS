@@ -50,13 +50,13 @@ public class CalledShot extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), EnumPatch.HERMIT_GUN2));
-        if (deadOnThisTurn.size() >= 2 && deadOnThisTurn.get(deadOnThisTurn.size() - 2).equals(true))
+        if (deadOnThisTurn.size() >= 2 && deadOnThisTurn.get(deadOnThisTurn.size() - 2))
             Wiz.atb(new DrawCardAction(1));
     }
 
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        if (!deadOnThisTurn.isEmpty() && deadOnThisTurn.get(deadOnThisTurn.size() - 1).equals(true))
+        if (!deadOnThisTurn.isEmpty() && deadOnThisTurn.get(deadOnThisTurn.size() - 1))
             this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
     }
 
