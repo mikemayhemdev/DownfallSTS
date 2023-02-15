@@ -29,10 +29,9 @@
   },
   "Guardian:PocketSentry": {
     "NAME": "便攜哨兵",
-    "FLAVOR": "哨兵模式啟動。 獲得目標。無慈悲。",
+    "FLAVOR": "哨兵模式啟動。獲取目標成功。無慈悲。",
     "DESCRIPTIONS": [
-      "回合開始時，以下行動交替進行: NL 隨機造成 #b",
-      " 點傷害。 NL 給予所有敵人 #b1 層 #y虛弱 。"
+      "每 #3 個回合，給予所有敵人 #b1 層 #y虛弱 。"
     ]
   },
   "Guardian:SackOfGems": {
@@ -60,14 +59,14 @@
     "NAME": "懸浮機",
     "FLAVOR": "這些自動機搜尋最棒的遺寶，但需要占用處理能力來維持運轉。",
     "DESCRIPTIONS": [
-      "回合開始時獲得 [E] 。 NL 失去 #b1 個 #yguardianmod:凝滯 欄位。"
+      "回合開始時獲得 [E] 。 NL 戰鬥開始時，失去 #b1 個 #yguardianmod:凝滯 欄位。"
     ]
   },
   "Guardian:StasisUpgradeRelic": {
     "NAME": "低溫瓶",
     "FLAVOR": "出來的東西總是比進去的好。",
     "DESCRIPTIONS": [
-      "提供 #b1 個 #yguardianmod:凝滯 欄位。當牌被 #yguardianmod:凝滯 時， #y升級 這張牌。"
+      "戰鬥開始時，獲得 #b1 個 #yguardianmod:凝滯 欄位。當牌被 #yguardianmod:凝滯 時， #y升級 這張牌。"
     ]
   },
   "Guardian:BottledStasis": {
