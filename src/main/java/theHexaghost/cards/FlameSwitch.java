@@ -28,7 +28,7 @@ public class FlameSwitch extends AbstractHexaCard {
     public final static String ID = makeID("FlameSwitch");
 
     public FlameSwitch() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseBurn = burn = 16;
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
@@ -44,6 +44,7 @@ public class FlameSwitch extends AbstractHexaCard {
                 AbstractPower po = m.getPower(BurnPower.POWER_ID);
                 if (po != null) {
                     ((TwoAmountPower) po).amount2 += magicNumber;
+                    po.updateDescription();
                 }
             }
         });

@@ -41,6 +41,8 @@ public class SlimedTailRelic extends CustomRelic implements OnChannelRelic {
     @Override
     public void onChannel(AbstractOrb abstractOrb) {
         if (abstractOrb instanceof SpawnedSlime) {
+            flash();
+            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             addToBot(new GainBlockAction(AbstractDungeon.player, BLOCK_PER_TRIGGER));
         }
     }
