@@ -49,7 +49,7 @@ public class FloatingOrbsPower extends AbstractGuardianPower {
 
     @Override
     public void onAfterCardPlayed(AbstractCard card) {
-        if (card.cost == 0 || card.freeToPlayOnce) {
+        if (card.cost == 0 || card.freeToPlayOnce || card.costForTurn == 0 ) {
             flash();
             orbVFX.attackAnim();
             addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));

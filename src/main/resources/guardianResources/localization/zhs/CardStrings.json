@@ -39,7 +39,7 @@
   },
   "Guardian:ChargeUp": {
     "NAME": "充能",
-    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 ： NL 获得 !B! 点 格挡 。 NL 获得 !M! 点 力量 。 NL guardianmod:消散 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得 !M! 层 guardianmod:临时 力量 。"
   },
   "Guardian:DonusPower": {
     "NAME": "过载",
@@ -48,8 +48,7 @@
   },
   "Guardian:DecasProtection": {
     "NAME": "先古之力",
-    "DESCRIPTION": "获得4层 guardianmod:临时 力量 。 NL 获得4层 guardianmod:临时 敏捷 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得4层 guardianmod:临时 力量 。 NL 获得4层 guardianmod:临时 敏捷 。 NL 失去所有负面效果1层。 NL 消耗 。"
+    "DESCRIPTION": "获得 !M! 层 guardianmod:临时 力量 。 NL 获得 !M! 层 guardianmod:临时 敏捷 。"
   },
   "Guardian:FierceBash": {
     "NAME": "猛烈痛击",
@@ -83,7 +82,7 @@
   },
   "Guardian:TimeBomb": {
     "NAME": "时间炸弹",
-    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:凝滞 结束时，对所有敌人造成 !M! 点伤害。 NL guardianmod:消散 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL guardianmod:加速 所有 guardianmod:凝滞 中的牌。"
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "究极射线",
@@ -96,7 +95,7 @@
   },
   "Guardian:FloatingOrbs": {
     "NAME": "浮游圆球",
-    "DESCRIPTION": "回合开始时， NL 获得 *圆球撞击 。"
+    "DESCRIPTION": "打出0耗能牌时， NL 随机造成 !M! 点伤害。"
   },
   "Guardian:OrbSlam": {
     "NAME": "圆球撞击",
@@ -104,8 +103,8 @@
   },
   "Guardian:Incinerate": {
     "NAME": "焚烧",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:加速 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:加速 x2。 NL Translation required"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:加速 1次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:加速 2次。"
   },
   "Guardian:Orbwalk": {
     "NAME": "行者圆球",
@@ -153,8 +152,8 @@
   },
   "Guardian:PackageSphere": {
     "NAME": "组件: 圆球",
-    "DESCRIPTION": "获得 *球 *形 *护 *盾 、 *硬 *化 与 *浮 *动 *圆 *球 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *球 *形 *护 *盾 *+ 、 *硬 *化 *+ 与 *浮 *动 *圆 *球 *+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *球 *形 *护 *盾 、 *金 *属 *化 与 *浮 *动 *圆 *球 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *球 *形 *护 *盾 *+ 、 *金 *属 *化 *+ 与 *浮 *动 *圆 *球 *+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageSentry": {
     "NAME": "组件: 哨卫",
@@ -173,8 +172,8 @@
   },
   "Guardian:PackageDefect": {
     "NAME": "组件: 故障",
-    "DESCRIPTION": "获得 *重 *连 ， *预 *编 *程 与 *时 *间 *电 *容 *器 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *重 *连 *+ ， *预 *编 *程 *+ 与 *时 *间 *电 *容 *器 *+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *重 *分 *配 ， *预 *编 *程 与 *时 *间 *电 *容 *器 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *重 *分 *配 *+ ， *预 *编 *程 *+ 与 *时 *间 *电 *容 *器 *+ 各1张。 NL 消耗 。"
   },
   "Guardian:Planning": {
     "NAME": "规划",
@@ -196,7 +195,7 @@
   },
   "Guardian:Preprogram": {
     "NAME": "预编程",
-    "DESCRIPTION": "查看抽牌堆顶部 !M! 张牌， NL 可 guardianmod:凝滞 其中一张。"
+    "DESCRIPTION": "查看抽牌堆顶部 !M! 张牌。 NL 可 guardianmod:凝滞 其中一张。"
   },
   "Guardian:GemFinder": {
     "NAME": "宝石发现",
@@ -248,7 +247,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 ：抽一张牌。 guardianmod:消散 。"
   },
   "Guardian:Reroute": {
-    "NAME": "重连",
+    "NAME": "重分配",
     "DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:凝滞 打出的下一张非 消耗 攻击或技能牌。"
   },
   "Guardian:PiercingHide": {
@@ -257,7 +256,7 @@
 },
   "Guardian:ShieldSpikes": {
     "NAME": "荆棘装甲",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若处于 guardianmod:防御模式 ， NL 获得 !M! 层 guardianmod:临时 荆棘 。 NL 否则 guardianmod:提防 8。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若处于 guardianmod:防御模式 ， NL 获得 !M! 层 荆棘 ， NL 否则 guardianmod:提防 8。"
   },
   "Guardian:PrismaticBeam": {
     "NAME": "缤纷碎块",
@@ -268,14 +267,13 @@
     "DESCRIPTION": "本牌每 guardianmod:镶嵌 一颗 guardianmod:宝石 ，获得 !B! 点 格挡 。"
   },
   "Guardian:TemporalStrike": {
-    "NAME": "质朴打击",
+    "NAME": "时流打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若有牌被 guardianmod:凝滞 ， NL 获得 [E] 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 若有牌被 guardianmod:凝滞 ， NL 获得 [E] 。"
   },
   "Guardian:TemporalShield": {
-    "NAME": "质朴屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若有牌被 guardianmod:凝滞 ， NL 抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 若有牌被 guardianmod:凝滞 ， NL 抽 !M! 张牌。"
+    "NAME": "时流屏障",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL guardianmod:加速 。"
   },
   "Guardian:ExploitGems": {
     "NAME": "宝石利用",
@@ -345,8 +343,8 @@
   },
   "Guardian:Gem_Blue": {
     "NAME": "蓝宝石",
-    "DESCRIPTION": " guardianmod:宝石 。 NL guardianmod:提防 3 。",
-    "UPGRADE_DESCRIPTION": "guardianmod:提防 3。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL guardianmod:提防 4。",
+    "UPGRADE_DESCRIPTION": "guardianmod:提防 4。"
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "宝石碎片",
@@ -372,11 +370,11 @@
   },
   "Guardian:SphericShield": {
     "NAME": "球形护盾",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL guardianmod:提防 !M! 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 进入 guardianmod:防御模式 。 NL 消耗 。"
   },
   "Guardian:RevengeProtocol": {
     "NAME": "复仇协议",
-    "DESCRIPTION": "处于 guardianmod:防御模式 时， NL 拥有 !M! 层 力量 。 NL 回合开始时 guardianmod:提防 5。"
+    "DESCRIPTION": "处于 guardianmod:防御模式 时， NL 拥有 !M! 层 力量 。 NL 回合开始时 guardianmod:提防 !GuardianSecondM! 。"
   },
   "Guardian:GatlingBeam": {
     "NAME": "炮塔射线",
@@ -397,8 +395,8 @@
     "UPGRADE_DESCRIPTION": " NL 消耗 。"
   },
     "Guardian:BodySlam": {
-    "NAME": "全身撞击",
-    "DESCRIPTION": "造成当前 格挡 值点伤害 。",
+    "NAME": "全身猛撞",
+    "DESCRIPTION": "获得 !B! 点 格挡 ， NL 造成当前 格挡 值点伤害 。",
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害）"
   },
   "Guardian:SecondStrike": {
@@ -408,6 +406,18 @@
   "Guardian:SecondStrikePreviewCard": {
     "NAME": "再斩",
     "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 触发 *双斩 中的 *宝石 效果。 NL 消耗 。"
+  },
+  "Guardian:StrikeForStrike": {
+    "NAME": "以击应击",
+    "DESCRIPTION": "造成 !D! 点伤害， NL 目标以 !M! 点伤害攻击你。"
+  },
+  "Guardian:GearUp": {
+    "NAME": "预防",
+    "DESCRIPTION": "保留 。 NL guardianmod:提防 !M! 。 NL 消耗 。"
+  },
+  "Guardian:Metallicize": {
+  "NAME": "金属化",
+  "DESCRIPTION": "回合结束时， NL 获得 !M! 点 格挡 。"
   },
   "Guardian:PackageConstruct": {
     "NAME": "    ！！！！！！！！！！！！   以下为疑似弃用文本，为了保险起见防止游戏崩溃，暂未删除。    ！！！！！！！！！！！！  ",

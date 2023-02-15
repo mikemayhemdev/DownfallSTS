@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public abstract class AbstractBossDeckArchetype {
     public static final Logger logger = LogManager.getLogger(downfallMod.class.getName());
 
-    public static MonsterStrings bossMechanicString = CardCrawlGame.languagePack.getMonsterStrings("downfall:BossMechanics");
+//    public static MonsterStrings bossMechanicString = CardCrawlGame.languagePack.getMonsterStrings("downfall:BossMechanics");
 
     public String bossMechanicName;
     public String bossMechanicDesc;
@@ -77,7 +77,7 @@ public abstract class AbstractBossDeckArchetype {
     private ArrayList<String> blacklistedCards;
     */
 
-    private AbstractCharBoss currentBoss;
+//    private AbstractCharBoss currentBoss;
 
     /*
     public boolean upgradeAllPowers = false;

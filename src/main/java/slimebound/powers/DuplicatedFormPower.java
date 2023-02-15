@@ -20,6 +20,8 @@ import slimebound.characters.SlimeboundCharacter;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.vfx.DoubleSlimeParticle;
 
+import static com.megacrit.cardcrawl.cards.AbstractCard.CardTarget.*;
+
 
 public class DuplicatedFormPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:DuplicatedFormPower";
@@ -95,30 +97,36 @@ public class DuplicatedFormPower extends AbstractPower {
 
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if ((!card.purgeOnUse) && (this.amount > 0) && (card.target == AbstractCard.CardTarget.ENEMY || card.target == AbstractCard.CardTarget.ALL_ENEMY) && this.cardsDoubledThisTurn < this.amount) {
-            this.cardsDoubledThisTurn += 1;
-            flash();
-            AbstractMonster m = null;
+        if  (
+            (!card.purgeOnUse) &&
+            (this.amount > 0) &&
+            (card.target == ENEMY || card.target == ALL_ENEMY || card.target == SELF_AND_ENEMY ) &&
+            this.cardsDoubledThisTurn < this.amount
+            ){
+                this.cardsDoubledThisTurn += 1;
+                flash();
+                AbstractMonster m = null;
 
-            if (action.target != null) {
-                m = (AbstractMonster) action.target;
+                if (action.target != null) {
+                    m = (AbstractMonster) action.target;
+                }
+
+                AbstractCard tmp = card.makeSameInstanceOf();
+                AbstractDungeon.player.limbo.addToBottom(tmp);
+                tmp.current_x = card.current_x;
+                tmp.current_y = card.current_y;
+                tmp.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
+                tmp.target_y = (Settings.HEIGHT / 2.0F);
+                tmp.freeToPlayOnce = true;
+
+                if (m != null) {
+                    tmp.calculateCardDamage(m);
+                }
+
+                tmp.purgeOnUse = true;
+                tmp.applyPowers();
+                AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmp, m, card.energyOnUse));
             }
-
-            AbstractCard tmp = card.makeSameInstanceOf();
-            AbstractDungeon.player.limbo.addToBottom(tmp);
-            tmp.current_x = card.current_x;
-            tmp.current_y = card.current_y;
-            tmp.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
-            tmp.target_y = (Settings.HEIGHT / 2.0F);
-            tmp.freeToPlayOnce = true;
-
-            if (m != null) {
-                tmp.calculateCardDamage(m);
-            }
-
-            tmp.purgeOnUse = true;
-            AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmp, m, card.energyOnUse));
-        }
     }
 
     public void onDeath() {

@@ -20,7 +20,6 @@ import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.util.OnOpenerSubscriber;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
@@ -51,13 +50,11 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
-import guardian.cards.AbstractGuardianCard;
-import hermit.cards.AbstractHermitCard;
+import guardian.stances.DefensiveMode;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import theHexaghost.cards.AbstractHexaCard;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -527,6 +524,9 @@ public class ChampMod implements
 
     @Override
     public int receiveOnPlayerLoseBlock(int i) {
+        if(AbstractDungeon.player.stance instanceof DefensiveMode){
+            return i;
+        }
         if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
             int counter = Math.min(i, AbstractDungeon.player.currentBlock / 2);
             if (counter > 0) {

@@ -105,9 +105,9 @@
       "The spirits hungrily consume your offering! They gorge themselves on souls, burning brighter as the fire @doubles@ in strength. NL The spirits dance around you excitedly before ~merging~ ~into~ ~your~ ~form,~ filling you with warmth and strength. NL Your Max HP increases and you are #ghealed to full HP."
     ],
     "OPTIONS": [
-      "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP.",
+      "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP #gand #gFully #gHeal.",
       "[Locked] Requires 150 Souls.",
-      "[Donate] #rLose #r150 #rSouls. #gEach #gGremlin #gGains #g2 #gMax #gHP."
+      "[Donate] #rLose #r150 #rSouls. #gEach #gGremlin #gGains #g2 #gMax #gHP #gand #the #gAlive #gOnes #gFully #gHeal."
     ]
   },
   "downfall:FaceTrader": {
@@ -154,7 +154,7 @@
       "#gGain #g3 #gPotions.",
       "#gGain ",
       " #ySouls.",
-      "#gGain #ga #yRare #gCard.",
+      "#gGain #ga #gRandom #yRare #gCard.",
       "[Leave]",
       "[Locked] No Relic to give.",
       "#gGain #g2 #gPotions."

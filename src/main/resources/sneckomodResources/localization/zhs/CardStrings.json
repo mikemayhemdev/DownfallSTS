@@ -257,7 +257,7 @@
   },
   "sneckomod:MorePower": {
     "NAME": "更多力量！",
-    "DESCRIPTION": "战斗结束时， NL 获得 *未知 卡牌奖励+。"
+    "DESCRIPTION": "战斗结束时， NL 获得 *未知 卡牌+奖励。"
   },
   "sneckomod:UnknownStrength": {
     "NAME": "？？？",

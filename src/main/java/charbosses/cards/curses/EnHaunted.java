@@ -1,6 +1,7 @@
 package charbosses.cards.curses;
 
 import basemod.helpers.CardModifierManager;
+import charbosses.cards.AbstractCustomBossCard;
 import downfall.util.TextureLoader;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
@@ -14,9 +15,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cardmods.EtherealMod;
 import downfall.downfallMod;
-import theHexaghost.HexaMod;
 
-public class EnHaunted extends AbstractBossCard {
+public class EnHaunted extends AbstractCustomBossCard {
     public static final String ID = "downfall_Charboss:Haunted";
     private static final CardStrings cardStrings;
     public static final String IMG_PATH = downfallMod.assetPath("images/cards/haunted.png");

@@ -12,8 +12,6 @@ import guardian.actions.ReduceRightMostStasisAction;
 import guardian.patches.AbstractCardEnum;
 import sneckomod.SneckoMod;
 
-import static guardian.GuardianMod.makeBetaCardPath;
-
 public class FastForward extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("FastForward");
     public static final String IMG_PATH = GuardianMod.getResourcePath("cards/accelerate.png");
@@ -26,7 +24,7 @@ public class FastForward extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("FastForward.png"));
+//        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("FastForward.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

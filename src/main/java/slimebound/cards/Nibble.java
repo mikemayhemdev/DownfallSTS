@@ -1,31 +1,21 @@
 package slimebound.cards;
 
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.SlimedPower;
-import slimebound.vfx.LickEffect;
 import slimebound.vfx.SlimeDripsEffect;
 
-import java.util.ArrayList;
-
-import static com.badlogic.gdx.graphics.Color.GREEN;
 
 
 public class Nibble extends AbstractSlimeboundCard {
@@ -50,7 +40,7 @@ public class Nibble extends AbstractSlimeboundCard {
 
     public Nibble() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        baseDamage = damage = 1;
+        baseDamage = damage = 4;
         tags.add(SlimeboundMod.LICK);
        // this.slimed = this.baseSlimed = 4;
         this.exhaust = true;
