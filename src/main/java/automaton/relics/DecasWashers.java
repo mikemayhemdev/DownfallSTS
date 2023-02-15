@@ -1,6 +1,7 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardPowerTip;
@@ -22,15 +23,30 @@ public class DecasWashers extends CustomRelic {
 
     public DecasWashers() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
-        tips.add(new CardPowerTip(new Dazed()));
     }
 
-    @Override
     public void atBattleStart() {
-        flash();
-        addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToBot(new DrawCardAction(AbstractDungeon.player, 3));
-        addToBot(new MakeTempCardInDrawPileAction(new Dazed(), 1, true, true));
+        this.counter = 0;
+        this.grayscale = false;
+    }
+
+    public void atTurnStart() {
+        if (!this.grayscale) {
+            this.flash();
+            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+            ++this.counter;
+        }
+
+        if (this.counter == 3) {
+            this.counter = -1;
+            this.grayscale = true;
+        }
+    }
+
+    public void onVictory() {
+        this.counter = -1;
+        this.grayscale = false;
     }
 
     @Override
