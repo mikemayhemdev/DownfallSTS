@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static gremlin.GremlinMod.NOB_GREMLIN;
@@ -41,6 +42,7 @@ public class SkullBash extends AbstractGremlinCard {
         this.exhaust = true;
         this.tags.add(NOB_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "SkullBash.png");
     }
 
     @Override

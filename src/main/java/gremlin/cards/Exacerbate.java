@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.powers.CrippledPower;
 
 import static gremlin.GremlinMod.FAT_GREMLIN;
@@ -36,6 +37,7 @@ public class Exacerbate extends AbstractGremlinCard {
         this.exhaust = true;
         this.tags.add(FAT_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Exacerbate.png");
     }
 
     @Override
