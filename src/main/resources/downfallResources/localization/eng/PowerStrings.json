@@ -393,7 +393,7 @@
       " NL Gains #b2 Thorns. #y(Silent)",
       " NL Gains #b2 Buffer. #y(Defect)",
       " NL Gains #b5 Mantra. #y(Watcher)",
-      " NL Adds #b2 random #rCurses to your draw pile. #y(Hermit)"
+      " NL Adds a #yDecay to your draw pile. #y(Hermit)"
     ]
   }
 }
