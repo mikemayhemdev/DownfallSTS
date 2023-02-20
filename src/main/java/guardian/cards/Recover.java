@@ -13,6 +13,8 @@ import guardian.GuardianMod;
 import guardian.actions.DiscardPileToStasisAction;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class Recover extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Recover");
     public static final String NAME;
@@ -49,6 +51,7 @@ public class Recover extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Recover.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

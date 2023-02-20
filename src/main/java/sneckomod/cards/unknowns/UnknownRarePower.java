@@ -13,6 +13,7 @@ public class UnknownRarePower extends AbstractUnknownCard {
 
     public UnknownRarePower() {
         super(ID, CardType.POWER, CardRarity.RARE);
+        SneckoMod.loadJokeCardImage(this, "UnknownRarePower.png");
     }
 
     @Override
