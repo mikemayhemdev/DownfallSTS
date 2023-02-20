@@ -43,8 +43,8 @@
   },
   "hermit:Snipe": {
     "NAME": "Snipe",
-    "DESCRIPTION": "Your next hermit:Dead_On effect triggers twice. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hermit:Concentrate. NL Your next hermit:Dead_On effect triggers twice. NL Exhaust."
+    "DESCRIPTION": "Your next hermit:Dead_On effect this turn triggers twice. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hermit:Concentrate. NL Your next hermit:Dead_On effect this turn triggers twice. NL Exhaust."
   },
   "hermit:CalledShot": {
     "NAME": "Called Shot",

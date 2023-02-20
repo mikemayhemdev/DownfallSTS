@@ -42,7 +42,6 @@ public class FloatingOrbsPower extends AbstractGuardianPower {
 
     @Override
     public void onInitialApplication() {
-        super.onInitialApplication();
         this.orbVFX = new FloatingOrbsEffect(this.owner, this.owner.hb.cX, this.owner.hb.cY + yOffset);
         addToBot(new VFXAction(this.orbVFX));
     }
@@ -54,6 +53,16 @@ public class FloatingOrbsPower extends AbstractGuardianPower {
             orbVFX.attackAnim();
             addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         }
+    }
+
+    @Override
+    public void onVictory() {
+        orbVFX.dispose();
+    }
+
+    @Override
+    public void onRemove() {
+        orbVFX.dispose();
     }
 }
 

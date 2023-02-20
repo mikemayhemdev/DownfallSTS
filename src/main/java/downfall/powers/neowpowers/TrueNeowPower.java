@@ -70,9 +70,7 @@ public class TrueNeowPower extends AbstractBossMechanicPower {
             addToBot(new ApplyPowerAction(this.owner, this.owner, new NeowMantraPower(owner, 5), 5));
         }
         if (hermit){
-            AbstractCard curse = new Decay();
-//            ArrayList<AbstractCard> ac = downfallMod.getRandomDownfallCurse(2);
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(curse.makeStatEquivalentCopy(), 1, true, false, false, (float) Settings.WIDTH * 0.5F, (float) Settings.HEIGHT / 2.0F));
+            addToBot(new MakeTempCardInDrawPileAction(new Decay(), 1, true, false, false, (float) Settings.WIDTH * 0.35F, (float) Settings.HEIGHT / 2.0F));
         }
     }
 

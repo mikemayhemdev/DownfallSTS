@@ -50,6 +50,11 @@ public class SlimeSlap extends AbstractSlimeboundCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        slimedGlowCheck();
+    }
+
     public AbstractCard makeCopy() {
         return new SlimeSlap();
     }

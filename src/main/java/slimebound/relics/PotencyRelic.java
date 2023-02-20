@@ -3,6 +3,7 @@ package slimebound.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -29,7 +30,8 @@ public class PotencyRelic extends CustomRelic {
     }
 
     public void atBattleStartPreDraw() {
-        this.flash();
+        flash();
+        addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
     }
 

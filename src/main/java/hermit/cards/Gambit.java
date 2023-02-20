@@ -57,11 +57,18 @@ public class Gambit extends AbstractDynamicCard {
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
+                int counter = 0;
+
                 CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+
                 tmp.group = (ArrayList<AbstractCard>) Wiz.p().discardPile.group.stream()
                         .filter(c -> c.type == CardType.ATTACK)
                         .collect(Collectors.toList());
+
                 for (AbstractCard c : tmp.group) {
+                    if (counter >= Gambit.this.magicNumber)
+                        break;
+
                     if (!tmp.isEmpty() && Wiz.hand().size() < BaseMod.MAX_HAND_SIZE) {
                         c.unhover();
                         c.lighten(true);
@@ -76,6 +83,7 @@ public class Gambit extends AbstractDynamicCard {
                         AbstractDungeon.player.hand.refreshHandLayout();
                         AbstractDungeon.player.hand.applyPowers();
                         this.addToTop( new ReduceCostForTurnAction(c,1));
+                        counter++;
                     }
                 }
                 isDone = true;

@@ -1,6 +1,5 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,10 +8,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import hermit.HermitMod;
 import hermit.characters.hermit;
+
+import java.util.Iterator;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -36,7 +36,7 @@ public class Shortfuse extends AbstractDynamicCard {
     private static final int DAMAGE = 18;
     private static final int UPGRADE_PLUS_DMG = 4;
 
-    private int cost_revert = 0;
+    public int cost_revert = 0;
 
     // /STAT DECLARATION/
 
@@ -44,6 +44,10 @@ public class Shortfuse extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         loadJokeCardImage(this, "short_fuse.png");
+
+        if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null) {
+            this.configureCostsOnNewCard();
+        }
     }
 
     // Actions the card should do.
@@ -52,6 +56,20 @@ public class Shortfuse extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(m.hb.cX, m.hb.cY), 0.1F));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
+    }
+
+    public void configureCostsOnNewCard() {
+        Iterator var1 = AbstractDungeon.actionManager.cardsPlayedThisTurn.iterator();
+
+        while(var1.hasNext()) {
+            AbstractCard c = (AbstractCard)var1.next();
+            if (c.hasTag(CardTags.STARTER_STRIKE) || c.hasTag(CardTags.STARTER_DEFEND)) {
+                if (this.cost > 0) {
+                    this.updateCost(-1);
+                    this.cost_revert++;
+                }
+            }
+        }
     }
 
     @Override
@@ -79,15 +97,4 @@ public class Shortfuse extends AbstractDynamicCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
     }
-
-    @Override
-    public AbstractCard makeCopy() {
-        AbstractCard tmp = new Shortfuse();
-        if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            this.setCostForTurn(this.cost - GameActionManager.totalDiscardedThisTurn);
-        }
-
-        return tmp;
-    }
-
 }
