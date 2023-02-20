@@ -32,7 +32,7 @@
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
-    "DESCRIPTION": "Deal !D! damage, twice if enemy is Vulnerable. NL *Berserker champ:Combo: Apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply !M! Vulnerable."
   },
   "champ:FlashCut": {
     "NAME": "Flash Strike",
@@ -56,7 +56,7 @@
   },
   "champ:SetATrap": {
     "NAME": "Set A Trap",
-    "DESCRIPTION": "Gain !B! Block, twice if any enemy is Weak. NL *Defensive champ:Combo: Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Gain !B! Block. NL *Defensive champ:Combo: Apply !M! Weak to ALL enemies."
   },
   "champ:Backstep": {
     "NAME": "Backstep",
@@ -81,12 +81,11 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less [E] for each Finisher played this combat."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less [E] for each *Finisher played this combat."
   },
   "champ:Circumvent": {
     "NAME": "Circumvent",
-    "DESCRIPTION": "Gain !B! Block. NL *Any *Stance champ:Combo: Draw !M! cards.",
-    "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL Gain !B! Block. NL *Defensive champ:Combo: Gain Block equal to your champ:Counter."
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! cards. NL Discard !M! cards."
   },
   "champ:SkillfulDodge": {
     "NAME": "Skillful Dodge",
@@ -134,8 +133,7 @@
   },
   "champ:IronFortress": {
     "NAME": "Technical Jig",
-    "DESCRIPTION": "Whenever you enter a Stance, trigger its *Skill *Bonus twice.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance, trigger *Skill *Bonus twice."
+    "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block."
   },
   "champ:Lariat": {
     "NAME": "Reinforced Body",
@@ -155,7 +153,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "Target enemy gains 1 Strength. NL Gain !M! Vigor.",
+    "DESCRIPTION": "Gain !M! Vigor. NL Apply !DM! Weak.",
     "EXTENDED_DESCRIPTION": [
       "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
       "Defensive champ:Combo: Gain !M! temporary Dexterity."
@@ -272,8 +270,7 @@
   },
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
-    "DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X times. NL *Defensive champ:Combo: Gain !B! Block X times.",
-    "UPGRADE_DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X+1 times. NL *Defensive champ:Combo: Gain !B! Block X+1 times.",
+    "DESCRIPTION": "Deal !D! damage X times.",
     "EXTENDED_DESCRIPTION": [
       "Berserker champ:Combo: Deal !D! damage X times. NL ",
       "Defensive champ:Combo: Gain !B! Block X times.",
@@ -284,7 +281,7 @@
   },
   "champ:Improvising": {
     "NAME": "Improvising",
-    "DESCRIPTION": "The first time you play a champ:Combo each turn, return it to your hand. NL It costs 0 until played."
+    "DESCRIPTION": "At the start of the turn, if you are not in a Stance, enter a random Stance."
   },
   "champ:CalledShot": {
     "NAME": "Refreshment",
@@ -312,7 +309,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "Dancing Master",
-    "DESCRIPTION": "The first time you use a champ:Finisher each turn, gain [E] and draw 1 card."
+    "DESCRIPTION": "The first time you use a *Finisher each turn, gain [E] and draw 1 card."
   },
   "champ:StrikeOfGenius": {
     "NAME": "Strike of Genius",
@@ -326,7 +323,7 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "Good Clean Fight",
-    "DESCRIPTION": "Gain !M! Strength. NL ALL enemies gain 1 Strength."
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
@@ -339,8 +336,8 @@
   },
   "champ:Endure": {
     "NAME": "Endure",
-    "DESCRIPTION": "Gain !B! Block. NL This card's Block is increased by Strength instead of Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL This card's Block is increased by Strength."
+    "DESCRIPTION": "Gain !B! Block. NL This card's *Block is increased by *Strength instead of *Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL This card's *Block is increased by *Strength."
   },
   "champ:PreemptiveStrike": {
     "NAME": "Preemptive Strike",
@@ -381,7 +378,7 @@
   "champ:TripleStrike": {
     "NAME": "Triple Strike",
     "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strikes. They cost 0 and trigger *Skill *Bonuses. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strikes. They cost 0 and trigger *Skill *Bonuses. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strikes. They cost 0 and trigger *Skill *Bonuses. Exhaust."
   },
   "champ:WindUp": {
     "NAME": "Wind Up",

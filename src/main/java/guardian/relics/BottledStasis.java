@@ -25,6 +25,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
     public static final String OUTLINE_IMG_PATH = "relics/bottledStasisOutline.png";
     public AbstractCard card = null;
     private boolean cardSelected = true;
+    private boolean cardRemoved = false;
 
     public BottledStasis() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
@@ -109,6 +110,13 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
     }
 
     private void setDescriptionAfterLoading() {
+        if(cardRemoved){
+            tips.clear();
+            this.description = this.DESCRIPTIONS[4];
+            tips.add(new PowerTip(name, description));
+            initializeTips();
+            return ;
+        }
         this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
         tips.clear();
         tips.add(new PowerTip(name, description));
@@ -123,6 +131,25 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
     @Override
     public void atBattleStartPreDraw() {
         super.atBattleStartPreDraw();
+        if (!cardRemoved && cardSelected){
+            boolean cardExists = false;
+            for(AbstractCard c :AbstractDungeon.player.masterDeck.group){
+                if (c.uuid==card.uuid){
+                    cardExists = true;
+                    break;
+                }
+            }
+            if (!cardExists){
+                cardRemoved = true;
+                tips.clear();
+                this.description = this.DESCRIPTIONS[4];
+                tips.add(new PowerTip(name, description));
+                initializeTips();
+            }
+        }
+        if (cardRemoved) {
+            return;
+        }
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c.uuid == card.uuid) {
                 AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(c, AbstractDungeon.player.drawPile)));

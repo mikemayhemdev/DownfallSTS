@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
-import hermit.patches.EndOfTurnPatch;
 import hermit.powers.Bruise;
 
 
@@ -20,12 +19,6 @@ import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Feint extends AbstractDynamicCard {
-
-
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
 
     // TEXT DECLARATION
 
@@ -47,8 +40,6 @@ public class Feint extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
-
-
     private static final int COST = 0;
 
 
@@ -65,10 +56,7 @@ public class Feint extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        Iterator var4 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-        while(var4.hasNext()) {
-            AbstractMonster mo = (AbstractMonster)var4.next();
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             this.addToBot(new ApplyPowerAction(mo, p, new Bruise(mo, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         }
 

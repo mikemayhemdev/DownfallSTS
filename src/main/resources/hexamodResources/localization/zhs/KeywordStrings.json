@@ -57,7 +57,7 @@
     "NAMES": [
       "阴世"
     ],
-    "DESCRIPTION": "被 #y消耗 时触发效果。"
+    "DESCRIPTION": "被 #y消耗 时也能触发效果。"
   },
   {
     "PROPER_NAME": "碾压",

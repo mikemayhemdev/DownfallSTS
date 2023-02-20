@@ -67,7 +67,7 @@
   },
   "hermit:ShadowCloak": {
     "NAME": "Cape obscure",
-    "DESCRIPTION": "Lorsque vous piochez une Malédiction, gagnez !M! d'Armure."
+    "DESCRIPTION": "Lorsque vous piochez ou Épuisez une Malédiction, gagnez !M! d'Armure."
   },
   "hermit:FatalDesire": {
     "NAME": "Désir fatal",
@@ -122,8 +122,8 @@
   },
   "hermit:TakeCover": {
     "NAME": "À couvert",
-    "DESCRIPTION": "Ajoutez X *Défenses dans votre main. NL Elles coûtent 0 pendant ce combat. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Ajoutez X *Défenses+ dans votre main. NL Elles coûtent 0 pendant ce combat. NL Épuisement."
+    "DESCRIPTION": "Ajoutez une *Défense coûtant 0 dans votre main et améliorez-la X fois. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une *Défense coûtant 0 dans votre main et améliorez-la X+1 fois. NL Épuisement."
   },
   "hermit:Misfire": {
     "NAME": "Rater son coup",
@@ -155,11 +155,11 @@
   },
   "hermit:Spite": {
     "NAME": "Dépit",
-    "DESCRIPTION": "Piochez !M! *Malédictions. NL Infligez !D! dégâts deux fois."
+    "DESCRIPTION": "Infligez !D! dégâts deux fois. NL Piochez !M! *Malédictions."
   },
   "hermit:Manifest": {
     "NAME": "Manifeste",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Piochez !M! *Malédictions."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Obtenez un *Déclin."
   },
   "hermit:Feint": {
     "NAME": "Feinte",
@@ -191,7 +191,8 @@
   },
   "hermit:Combo": {
     "NAME": "Combo",
-    "DESCRIPTION": "Lorsque vouus déclenchez un effet hermit:Dans_Le_Mille, ajoutez une carte aléatoire avec un effet hermit:Dans_Le_Mille dans votre main."
+    "DESCRIPTION": "Remettez dans votre main la première carte hermit:Dans_Le_Mille déclenchée à chaque tour",
+    "UPGRADE_DESCRIPTION": "Remettez dans votre main les !M! premières cartes hermit:Dans_Le_Mille cards déclenchées à chaque tour."
   },
   "hermit:BigShot": {
     "NAME": "Baril de fumée",
@@ -207,8 +208,8 @@
    },
   "hermit:EternalForm": {
     "NAME": "Forme éternelle",
-    "DESCRIPTION": "Éthérée. NL Au début de votre tour, réduisez le coût de toutes les cartes dans votre main de 1 pour ce tour.",
-    "UPGRADE_DESCRIPTION": "Au début de votre tour, réduisez le coût de toutes les cartes dans votre main de 1 pour ce tour."
+    "DESCRIPTION": "Éthérée. NL Les 4 premières cartes jouables piochées au début de chaque tour coûtent 1 [E] de moins.",
+    "UPGRADE_DESCRIPTION": "Les 4 premières cartes jouables piochées au début de chaque tour coûtent 1 [E] de moins."
   },
   "hermit:FullyLoaded": {
     "NAME": "Pleine charge",
@@ -323,9 +324,5 @@
   "hermit:Virtue": {
     "NAME": "Vertu",
     "DESCRIPTION": "Retenue. NL Réduisez chacun de vos débuffs de !M!."
-  },
-  "hermit:BossMaintenance": {
-    "NAME": "Entretien",
-    "DESCRIPTION": "Vos *Frappes infligent !M! dégâts supplémentaires ce combat. NL Gagnez 2 de Dexterité. NL Cette carte coûte 1 [E] de plus ce combat."
   }
 }

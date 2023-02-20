@@ -13,7 +13,7 @@
 },
 "hermit:ShadowCloakPower": {
         "NAME": "Shadow Cloak",
-        "DESCRIPTIONS": ["Whenever you draw a curse, gain #b", " Block."]
+        "DESCRIPTIONS": ["Whenever you draw or #yExhaust a curse, gain #b", " Block."]
 },
 "hermit:TakeAimPower": {
         "NAME": "Take Aim",
@@ -33,7 +33,7 @@
 },
 "hermit:ComboPower": {
         "NAME": "Combo",
-        "DESCRIPTIONS": ["Whenever you activate a #yDead #yOn effect, add #b", " random card with #yDead #yOn to your hand.", "  random cards with #yDead #yOn to your hand."]
+        "DESCRIPTIONS": ["The first #b", " #yDead #yOn card triggered this turn will be put back into your hand.", " #yDead #yOn cards triggered this turn will be put back into your hand."]
 },
 "hermit:BigShotPower": {
         "NAME": "Smoking Barrel",
@@ -49,7 +49,7 @@
 },
 "hermit:EternalPower": {
         "NAME": "Power Eternal",
-        "DESCRIPTIONS": ["At the start of your turn, reduce the cost of all cards in hand by #b", "."]
+        "DESCRIPTIONS": ["The first #b4 cards drawn at the start of each turn cost #b", " less that turn."]
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "Overwhelming Power",

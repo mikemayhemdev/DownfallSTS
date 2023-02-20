@@ -1,61 +1,46 @@
 package slimebound.cards;
 
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.unique.DiscardPileToTopOfDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.SelfFormingGooPower;
-import slimebound.powers.SelfFormingGooPowerPlus;
 
 
 public class SelfFormingGoo extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:SelfFormingGoo";
-    public static final String NAME;
-    public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/straygoop.png";
+    public static final String IMG_PATH = SlimeboundMod.getResourcePath("cards/Reformation.png");
     private static final CardStrings cardStrings;
-    private static final CardType TYPE = CardType.POWER;
-    private static final CardRarity RARITY = CardRarity.RARE;
-    private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
-    public static String UPGRADED_DESCRIPTION;
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    }
 
     public SelfFormingGoo() {
-        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        baseMagicNumber = magicNumber = 1;
+        super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.SLIMEBOUND, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 8;
         SlimeboundMod.loadJokeCardImage(this, "SelfFormingGoo.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SelfFormingGooPower(p, 1), 1));
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SelfFormingGooPowerPlus(p, 1), 1));
+        addToBot(new GainBlockAction(p, block));
+        addToBot(new DiscardPileToTopOfDeckAction(p));
+    }
 
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeBlock(3);
+        }
     }
 
     public AbstractCard makeCopy() {
         return new SelfFormingGoo();
     }
 
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
-
-        }
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 }
 

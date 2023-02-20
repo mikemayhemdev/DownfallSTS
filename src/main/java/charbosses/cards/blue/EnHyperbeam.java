@@ -43,7 +43,7 @@ public class EnHyperbeam extends AbstractBossCard {
             }
         });
         this.addToBot(new SFXAction("ATTACK_HEAVY"));
-        this.addToBot(new VFXAction(p, new MindblastEffect(m.dialogX, m.dialogY, m.flipHorizontal), 0.1F));
+        this.addToBot(new VFXAction(m, new MindblastEffect(m.dialogX, m.dialogY, m.flipHorizontal), 0.1F));
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
 
         this.addToBot(new ApplyPowerAction(m, m, new FocusPower(m, -this.magicNumber), -this.magicNumber));

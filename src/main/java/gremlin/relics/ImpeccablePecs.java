@@ -22,6 +22,8 @@ public class ImpeccablePecs extends AbstractGremlinRelic {
         super(ID, IMG, TIER, SOUND);
     }
 
+    //TODO Rework this Relic at some point
+
     @Override
     public String getUpdatedDescription() {
         return strings.DESCRIPTIONS[0];

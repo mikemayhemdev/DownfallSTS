@@ -135,7 +135,7 @@
     ]
   },
   "Guardian:ExhaustStatusesPower": {
-    "NAME": "反冲",
+    "NAME": "反冲协议",
     "DESCRIPTIONS": [
       "消耗每回合抽到的第一张 状态牌 或 诅咒 并抽一张牌。",
       "消耗每回合抽到的前 #b",

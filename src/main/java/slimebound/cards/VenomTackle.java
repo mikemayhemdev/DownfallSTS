@@ -21,7 +21,7 @@ import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
 
-public class VenomTackle extends AbstractTackleCard {
+public class VenomTackle extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:VenomTackle";
     public static final String NAME;
     public static final String DESCRIPTION;

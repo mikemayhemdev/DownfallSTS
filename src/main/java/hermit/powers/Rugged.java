@@ -15,8 +15,6 @@ import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makePowerPath;
 
-//Gain 1 dex for the turn for each card played.
-
 public class Rugged extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
@@ -25,8 +23,6 @@ public class Rugged extends AbstractPower implements CloneablePowerInterface {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
-    // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("rugged_p.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("rugged.png"));
 
@@ -50,8 +46,8 @@ public class Rugged extends AbstractPower implements CloneablePowerInterface {
         updateDescription();
     }
 
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount >= 1) {
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount > 0) {
             this.flash();
             this.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
             return Math.min(damageAmount,2);
@@ -60,7 +56,6 @@ public class Rugged extends AbstractPower implements CloneablePowerInterface {
         }
     }
 
-    // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
         if (amount > 1)
