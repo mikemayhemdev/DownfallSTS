@@ -43,14 +43,13 @@
   },
   "hermit:Snipe": {
     "NAME": "Snipe",
-    "DESCRIPTION": "Your next hermit:Dead_On effect this turn triggers twice.",
-    "UPGRADE_DESCRIPTION": "hermit:Concentrate. NL Your next hermit:Dead_On effect this turn triggers twice."
+    "DESCRIPTION": "Your next hermit:Dead_On effect this turn triggers twice. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hermit:Concentrate. NL Your next hermit:Dead_On effect this turn triggers twice. NL Exhaust."
   },
   "hermit:CalledShot": {
     "NAME": "Called Shot",
-    "DESCRIPTION": "Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! Attack.",
-    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)",
-    "EXTENDED_DESCRIPTION": ["Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! Attacks."]
+    "DESCRIPTION": "Deal !D! damage. NL If the last card played this turn triggered *Dead *On, draw a card.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL If the last card played this turn triggered *Dead *On, draw a card."
   },
   "hermit:Dissolve": {
     "NAME": "Dissolve",
@@ -108,11 +107,11 @@
   },
   "hermit:Roulette": {
     "NAME": "Roulette",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand. NL Draw that many cards."
+    "DESCRIPTION": "Deal !D! damage. NL Discard your hand. NL Draw that many cards."
   },
   "hermit:Midnight": {
     "NAME": "Midnight",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Add an *Impending *Doom to your hand.",
+    "DESCRIPTION": "Gain !B! Block. NL Add an *Impending *Doom to your hand.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add an *Impending *Doom to your hand."
   },
   "hermit:Glare": {
@@ -127,7 +126,7 @@
   },
   "hermit:Misfire": {
     "NAME": "Misfire",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Shuffle a *Clumsy into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle a *Clumsy into your draw pile."
   },
   "hermit:SprayPray": {
     "NAME": "Spray n' Pray",
@@ -155,11 +154,11 @@
   },
   "hermit:Spite": {
     "NAME": "Spite",
-    "DESCRIPTION": "Deal !D! damage twice. NL Draw !M! *Curses."
+    "DESCRIPTION": "Deal !D! damage. NL Draw a card for each *Curse in your hand."
   },
   "hermit:Manifest": {
     "NAME": "Manifest",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a *Decay."
+    "DESCRIPTION": "Gain !B! Block. NL Add a *Decay to your hand."
   },
   "hermit:Feint": {
     "NAME": "Feint",
@@ -183,7 +182,8 @@
   },
   "hermit:Vantage": {
     "NAME": "Vantage",
-    "DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On: NL Upgrade !M! random cards in your hand for the rest of combat."
+    "DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On: NL Draw !M! card and Upgrade it for the rest of combat.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On: NL Draw !M! cards and Upgrade them for the rest of combat."
   },
   "hermit:Brawl": {
     "NAME": "Brawl",
@@ -310,7 +310,7 @@
   },
   "hermit:FinalCanter": {
     "NAME": "Final Canter",
-    "DESCRIPTION": "Retain. NL Deal !D! damage for each Curse in hand. NL Exhaust.",
+    "DESCRIPTION": "Retain. NL Exhaust all Curses in hand. Deal !D! damage for each. Exhaust.",
     "UPGRADE_DESCRIPTION": " NL (You have !M! Curse(s))"
   },
   "hermit:HeroicBravado": {
