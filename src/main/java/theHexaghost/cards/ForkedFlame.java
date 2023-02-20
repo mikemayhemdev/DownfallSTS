@@ -12,10 +12,15 @@ import theHexaghost.actions.*;
 import theHexaghost.cards.AbstractHexaCard;
 
 public class ForkedFlame extends AbstractHexaCard {
+
     public final static String ID = makeID("ForkedFlame");
+
+    //stupid intellij stuff SKILL, SELF, COMMON
 
     public ForkedFlame() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         baseDamage = 5;
         HexaMod.loadJokeCardImage(this, "ForkedFlame.png");
     }
@@ -31,7 +36,8 @@ public class ForkedFlame extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(5);
+            initializeDescription();
         }
     }
 }

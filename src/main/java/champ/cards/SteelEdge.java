@@ -1,36 +1,73 @@
 package champ.cards;
 
 import automaton.actions.EasyXCostAction;
-import champ.ChampMod;
+import champ.ChampChar;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 
 public class SteelEdge extends AbstractChampCard {
+
     public final static String ID = makeID("SteelEdge");
+
+    //stupid intellij stuff attack, enemy, uncommon
+
+    private static final int DAMAGE = 8;
+    private static final int BLOCK = 8;
 
     public SteelEdge() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 8;
-        this.tags.add(ChampMod.FINISHER);
+        baseDamage = DAMAGE;
+        baseBlock = BLOCK;
+     //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
         postInit();
         loadJokeCardImage(this, "SteelEdge.png");
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (!(bcombo()) && !dcombo()) {
+            this.cantUseMessage = ChampChar.characterStrings.TEXT[61];
+            return false;
+        }
+        return super.canUse(p, m);
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
-            for (int i = 0; i < effect; i++) {
-                dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+            if (bcombo()) {
+                for (int i = 0; i < effect; i++) {
+                    dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+                }
+            }
+            if (dcombo()) {
+                for (int i = 0; i < effect; i++) {
+                    blck();
+                }
+
             }
             return true;
         }));
-        finisher();
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = (bcombo() || dcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
         upgradeDamage(3);
+        upgradeBlock(3);
+        /*
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
+
+         */
     }
 }

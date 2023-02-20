@@ -1,94 +1,94 @@
 {
-        "hermit:Concentration": {
-                "NAME": "Concentração",
-                "DESCRIPTIONS": ["A próxima carta com #yNa #yMira que você jogar neste turno ativa seu efeito independentemente de posição."]
-        },
-        "hermit:HighNoonPower": {
-                "NAME": "Meio Dia",
-                "DESCRIPTIONS": ["Quando você jogar uma carta #yGolpe ou #yDefender, compre #b", " carta.", " cartas."]
-        },
-        "hermit:FatalDesirePower": {
-                "NAME": "Desejo Fatal",
-                "DESCRIPTIONS": ["No inicio do seu turno, compre #b", " cartas e adicione #b", " Ferimento à sua mão", "Ferimentos à sua mão"]
-        },
-        "hermit:ShadowCloakPower": {
-                "NAME": "Capa Sombria",
-                "DESCRIPTIONS": ["Quando você comprar uma maldição, ganhe #b", " de Proteção."]
-        },
-        "hermit:TakeAimPower": {
-                "NAME": "Tomar Mira",
-                "DESCRIPTIONS": ["No inicio of your turn, ganhe #yConcentração."]
-        },
-        "hermit:AdaptPower": {
-                "NAME": "Adaptar",
-                "DESCRIPTIONS": ["No inicio do seu turno, #yExaura até #b", " carta para ganhar #b6 de Proteção." , " cartas. Ganhe #b6 de Proteção por cada."]
-        },
-        "hermit:Bruise": {
-                "NAME": "Hematoma",
-                "DESCRIPTIONS": ["Nesse turno, alvo toma #b", " dano adicional de ataques."]
-        },
-        "hermit:HorrorPower": {
-                "NAME": "Horror",
-                "DESCRIPTIONS": ["Hematoma não decairá por #b", " turno.", " turnos."]
-        },
-        "hermit:ComboPower": {
-                "NAME": "Combo",
-                "DESCRIPTIONS": ["A(s) primeira(s) #b", " carta com #yNa #yMira ativada neste turno será colocadas novamente em sua mão.", " cartas com #yNa #yMira ativadas neste turno serão colocadas novamente em sua mão."]
-        },
-        "hermit:BigShotPower": {
-                "NAME": "Cano Quente",
-                "DESCRIPTIONS": ["Quando você ativar um efeito de #yNa #yMira, seu próximo ataque causa #b", " a mais de dano."]
-        },
-        "hermit:BrawlPower": {
-                "NAME": "Briga",
-                "DESCRIPTIONS": ["No inicio do seu turno, aplique #b", " Hematoma à TODOS inimigos."]
-        },
-        "hermit:Rugged": {
-                "NAME": "Inflexível",
-                "DESCRIPTIONS": ["As próximas", " vezes em que você tomaria dano de ataque não-bloqueado, o reduza á #b2.", " vez em que você tomaria dano de ataque não-bloqueado, o reduza á #b2."]
-        },
-        "hermit:EternalPower": {
-                "NAME": "Poder Eterno",
-                "DESCRIPTIONS": ["As primeiras #b4 cartas compradas no início de cada turno custam #b", " a menos neste turno."]
-        },
-        "hermit:OverwhelmingPowerPower": {
-                "NAME": "Poder Esmagador",
-                "DESCRIPTIONS": ["Perca #b"," PV se você acabar seu turno com 0 de Energia."]
-        },
-        "hermit:Bounty": {
-                "NAME": "Recompensa",
-                "DESCRIPTIONS": ["Recompensa Atual: "]
-        },
-        "hermit:Drained": {
-                "NAME": "Drenado",
-                "DESCRIPTIONS": ["Ganhe #b", " menos energia no próximo turno."]
-        },
-        "hermit:DeterminationPower": {
-                "NAME": "Determinação",
-                "DESCRIPTIONS": ["Quando um debuff for aplicado em você, ganhe #b", " #yForça."]
-        },
-        "hermit:RyeStalkPower": {
-                "NAME": "Espiga de Centeio",
-                "DESCRIPTIONS": ["No final desse turno, #yRetenha qualquer número de cartas."]
-        },
-        "hermit:PetGhostPower": {
-                "NAME": "Fantasma de Estimação",
-                "DESCRIPTIONS": ["Você não pode morrer. Morra no fim", " do seu próximo turno.", " desse turno."]
-        },
-        "hermit:SnipePower": {
-                "NAME": "Tiro Franco",
-                "DESCRIPTIONS": ["O próximo efeito de #b", " #yNa #yMira neste turno ativa duas vezes.", " Efeitos de #yNa #yMira neste turno ativam duas vezes."]
-        },
-        "hermit:CoalescencePower": {
-                "NAME": "Coalescência",
-                "DESCRIPTIONS": ["No fim do seu turno, #yRetenha até #b", " Carta.", " Cartas."]
-        },
-        "hermit:ReprievePower": {
-                "NAME": "Prorrogação",
-                "DESCRIPTIONS": ["Realize #b", " turno extra após este.", " turnos extra após este."]
-        },
-        "hermit:MaintenanceStrikePower": {
-                "NAME": "Manutenção",
-                "DESCRIPTIONS": ["Seus #yGolpes causam #b", " mais de dano."]
-        }
+"hermit:Concentration": {
+        "NAME": "Concentração",
+        "DESCRIPTIONS": ["A próxima carta com #yNa #yMira que você jogar neste turno ativa seu efeito independentemente de posição."]
+},
+"hermit:HighNoonPower": {
+        "NAME": "Meio Dia",
+        "DESCRIPTIONS": ["Quando você jogar uma carta #yGolpe ou #yDefender, compre #b", " carta.", " cartas."]
+},
+"hermit:FatalDesirePower": {
+        "NAME": "Desejo Fatal",
+        "DESCRIPTIONS": ["No inicio do seu turno, compre #b", " cartas e adicione #b", " Ferimento à sua mão", "Ferimentos à sua mão"]
+},
+"hermit:ShadowCloakPower": {
+        "NAME": "Capa Sombria",
+        "DESCRIPTIONS": ["Quando você comprar uma maldição, ganhe #b", " de Proteção."]
+},
+"hermit:TakeAimPower": {
+        "NAME": "Tomar Mira",
+        "DESCRIPTIONS": ["No inicio of your turn, ganhe #yConcentração."]
+},
+"hermit:AdaptPower": {
+        "NAME": "Adaptar",
+        "DESCRIPTIONS": ["No inicio do seu turno, #yExaura até #b", " carta para ganhar #b6 de Proteção." , " cartas. Ganhe #b6 de Proteção por cada."]
+},
+"hermit:Bruise": {
+        "NAME": "Hematoma",
+        "DESCRIPTIONS": ["Nesse turno, alvo toma #b", " dano adicional de ataques."]
+},
+"hermit:HorrorPower": {
+        "NAME": "Horror",
+        "DESCRIPTIONS": ["Hematoma não decairá por #b", " turno.", " turnos."]
+},
+"hermit:ComboPower": {
+        "NAME": "Combo",
+        "DESCRIPTIONS": ["Toda vez que você ativar um efeito #yNa #yMira, adicione #b", " carta aleatória com #yNa #yMira para sua mão.", " cartas aleatórias com #yNa #yMira para sua mão."]
+},
+"hermit:BigShotPower": {
+        "NAME": "Cano Quente",
+        "DESCRIPTIONS": ["Quando você ativar um efeito de #yNa #yMira, seu próximo ataque causa #b", " a mais de dano."]
+},
+"hermit:BrawlPower": {
+        "NAME": "Briga",
+        "DESCRIPTIONS": ["No inicio do seu turno, aplique #b", " Hematoma à TODOS inimigos."]
+},
+"hermit:Rugged": {
+        "NAME": "Inflexível",
+        "DESCRIPTIONS": ["As próximas", " vezes em que você tomaria dano de ataque não-bloqueado, o reduza á #b2.", " vez em que você tomaria dano de ataque não-bloqueado, o reduza á #b2."]
+},
+"hermit:EternalPower": {
+        "NAME": "Poder Eterno",
+        "DESCRIPTIONS": ["No inicio do seu turno, reduza o custo de todas as cartas na sua mão por #b", "."]
+},
+"hermit:OverwhelmingPowerPower": {
+        "NAME": "Poder Esmagador",
+        "DESCRIPTIONS": ["Perca #b"," PV se você acabar seu turno com 0 de Energia."]
+},
+"hermit:Bounty": {
+        "NAME": "Recompensa",
+        "DESCRIPTIONS": ["Recompensa Atual: "]
+},
+"hermit:Drained": {
+        "NAME": "Drenado",
+        "DESCRIPTIONS": ["Ganhe #b", " menos energia no próximo turno."]
+},
+"hermit:DeterminationPower": {
+        "NAME": "Determinação",
+        "DESCRIPTIONS": ["Quando um debuff for aplicado em você, ganhe #b", " #yForça."]
+},
+"hermit:RyeStalkPower": {
+        "NAME": "Espiga de Centeio",
+        "DESCRIPTIONS": ["No final desse turno, #yRetenha qualquer número de cartas."]
+},
+"hermit:PetGhostPower": {
+        "NAME": "Fantasma de Estimação",
+        "DESCRIPTIONS": ["Você não pode morrer. Morra no fim", " do seu próximo turno.", " desse turno."]
+},
+"hermit:SnipePower": {
+        "NAME": "Tiro Franco",
+        "DESCRIPTIONS": ["O próximo efeito de #b", " #yNa #yMira neste turno ativa duas vezes.", " Efeitos de #yNa #yMira neste turno ativam duas vezes."]
+},
+"hermit:CoalescencePower": {
+        "NAME": "Coalescência",
+        "DESCRIPTIONS": ["No fim do seu turno, #yRetenha até #b", " Carta.", " Cartas."]
+},
+"hermit:ReprievePower": {
+        "NAME": "Prorrogação",
+        "DESCRIPTIONS": ["Realize #b", " turno extra após este.", " turnos extra após este."]
+},
+"hermit:MaintenanceStrikePower": {
+        "NAME": "Manutenção",
+        "DESCRIPTIONS": ["Seus #yGolpes causam #b", " mais de dano."]
+}
 }

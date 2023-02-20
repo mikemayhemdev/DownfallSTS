@@ -2,6 +2,7 @@ package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,6 +19,13 @@ import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Horror extends AbstractDynamicCard {
+
+    /*
+     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
+     *
+     * Defend Gain 5 (8) block.
+     */
+
 
     // TEXT DECLARATION
 
@@ -41,7 +49,9 @@ public class Horror extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
+
     // /STAT DECLARATION/
+
 
     public Horror() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -55,6 +65,9 @@ public class Horror extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         int total_bruise = this.magicNumber;
+
+        Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
         for(AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters){
             this.addToBot(new ApplyPowerAction(mo, p, new Bruise(mo, total_bruise), total_bruise, true, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
             this.addToBot(new ApplyPowerAction(mo, p, new HorrorPower(mo, 1), 1, true));

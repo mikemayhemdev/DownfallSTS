@@ -1,24 +1,29 @@
 package hermit.cards;
 
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import com.megacrit.cardcrawl.vfx.combat.HealVerticalLineEffect;
 import hermit.HermitMod;
+import hermit.actions.ReduceDebuffsAction;
+import hermit.actions.ReprieveAction;
 import hermit.characters.hermit;
-import hermit.util.Wiz;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Virtue extends AbstractDynamicCard {
+
+
+    /*
+     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
+     */
+
 
     // TEXT DECLARATION
 
@@ -32,6 +37,7 @@ public class Virtue extends AbstractDynamicCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
+
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
@@ -40,6 +46,7 @@ public class Virtue extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
     private static final int COST = 0;
+
 
     // /STAT DECLARATION/
 
@@ -71,16 +78,7 @@ public class Virtue extends AbstractDynamicCard {
         for(int i = 0; i < 18; ++i) {
             AbstractDungeon.effectsQueue.add(new HealVerticalLineEffect((p.hb.cX - p.animX) + MathUtils.random(-X_JITTER * 1.5F, X_JITTER * 1.5F),  p.hb.cY + OFFSET_Y + MathUtils.random(-Y_JITTER, Y_JITTER)));
         }
-
-        Wiz.atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                Wiz.p().powers.stream()
-                        .filter(p -> p.type == AbstractPower.PowerType.DEBUFF)
-                        .forEach(p -> Wiz.att(new ReducePowerAction(p.owner, p.owner, p.ID, Virtue.this.magicNumber)));
-                isDone = true;
-            }
-        });
+        this.addToBot(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));
     }
 
     //Upgraded stats.

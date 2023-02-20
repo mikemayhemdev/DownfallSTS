@@ -1,32 +1,44 @@
 package champ.cards;
 
+import champ.ChampChar;
 import champ.ChampMod;
 import champ.powers.CounterPower;
+import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 
 import static champ.ChampMod.loadJokeCardImage;
 
 public class BringItOn extends AbstractChampCard {
+
     public final static String ID = makeID("BringItOn");
+
+    //stupid intellij stuff skill, self, common
+
+    private static final int MAGIC = 9;
 
     public BringItOn() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 8;
-        baseMagicNumber = magicNumber = 8;
+        baseMagicNumber = magicNumber = MAGIC;
+        baseBlock = 9;
+        //exhaust = true;
         tags.add(ChampMod.FINISHER);
         postInit();
         loadJokeCardImage(this, "BringItOn.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        //finisher();
         blck();
         applyToSelf(new CounterPower(magicNumber));
+
         finisher();
     }
 
     public void upp() {
-        upgradeBlock(2);
-        upgradeMagicNumber(2);
+        upgradeBlock(3);
+        upgradeMagicNumber(3);
     }
 }

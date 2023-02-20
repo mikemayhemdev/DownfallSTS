@@ -15,6 +15,13 @@ import static hermit.HermitMod.makeCardPath;
 
 public class Midnight extends AbstractDynamicCard {
 
+    /*
+     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
+     *
+     * Defend Gain 5 (8) block.
+     */
+
+
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Midnight.class.getSimpleName());
@@ -38,7 +45,7 @@ public class Midnight extends AbstractDynamicCard {
     private static final int COST = 1;
 
     private static final int BLOCK = 12;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+    private static final int UPGRADE_PLUS_BLOCK = 1;
 
 
     // /STAT DECLARATION/
@@ -48,6 +55,7 @@ public class Midnight extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         this.cardsToPreview = new ImpendingDoom();
+        this.isEthereal = true;
         loadJokeCardImage(this, "midnight.png");
     }
 
@@ -64,7 +72,9 @@ public class Midnight extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.isEthereal=false;
             upgradeBlock(UPGRADE_PLUS_BLOCK);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

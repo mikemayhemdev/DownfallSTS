@@ -17,6 +17,8 @@ import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.RevengePower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class RevengeProtocol extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("RevengeProtocol");
     public static final String NAME;
@@ -27,24 +29,41 @@ public class RevengeProtocol extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
+
+    //TUNING CONSTANTS
+    private static final int STRENGTHFORTURN = 2;
+    private static final int BRACE_PER_TURN = 5;
+    private static final int SOCKETS = 0;
+    private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
+
+    //END TUNING CONSTANTS
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
 
     public RevengeProtocol() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
-        this.secondaryM = 4;
-        this.socketCount = 0;
+        this.magicNumber = this.baseMagicNumber = STRENGTHFORTURN;
+        this.secondaryM = BRACE_PER_TURN;
+        this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("RevengeProtocol.png"));
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        addToBot(new ApplyPowerAction(p, p, new RevengePower(p, p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RevengePower(p, p, magicNumber), magicNumber));
         if (p.stance instanceof DefensiveMode) {
-            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
         }
-        addToBot(new ApplyPowerAction(p, p, new BracePerTurnPower(p, secondaryM)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BracePerTurnPower(p, 5)));
     }
 
     public AbstractCard makeCopy() {
@@ -55,11 +74,11 @@ public class RevengeProtocol extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
-            upgradeSecondaryM(1);
         }
     }
 
     public void updateDescription() {
+
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
                 this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
@@ -68,12 +87,5 @@ public class RevengeProtocol extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 }

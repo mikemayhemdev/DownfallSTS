@@ -13,10 +13,12 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
+import gremlin.powers.PolishPower;
 
 import java.util.ArrayList;
 
-@Deprecated
+import static gremlin.relics.SupplyScroll.SUPPLY;
+
 public class SupplyScrollCard extends CustomCard {
     public static final String ID = "Gremlin:SupplyScrollCard";
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -42,7 +44,8 @@ public class SupplyScrollCard extends CustomCard {
         this.cardsToPreview = new Shiv();
         this.exhaust = true;
 
-        this.baseMagicNumber = this.magicNumber = 4;
+        this.baseMagicNumber = this.magicNumber = SUPPLY;
+        GremlinMod.loadJokeCardImage(this, "SupplyScrollCard.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

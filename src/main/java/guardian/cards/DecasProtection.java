@@ -26,23 +26,36 @@ public class DecasProtection extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
+
+    //TUNING CONSTANTS
     public static String UPGRADED_DESCRIPTION;
+
+    //END TUNING CONSTANTS
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
 
     public DecasProtection() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        baseMagicNumber = magicNumber = 3;
-        socketCount = 1;
-        updateDescription();
-        loadGemMisc();
+
+        baseMagicNumber = magicNumber = 4;
+        exhaust = true;
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("DecasProtection.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, magicNumber), magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber), magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new LoseDexterityPower(p, magicNumber), magicNumber));
-        super.useGems(p, m);
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseStrengthPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseDexterityPower(p, magicNumber), magicNumber));
+        if (upgraded){
+            AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, 1));
+        }
+
     }
 
     public AbstractCard makeCopy() {
@@ -52,27 +65,11 @@ public class DecasProtection extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
-    public void updateDescription() {
-        if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
-            } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
-            }
-        }
-        this.initializeDescription();
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    }
 }
 
 

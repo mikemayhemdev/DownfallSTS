@@ -43,13 +43,14 @@
   },
   "hermit:Snipe": {
     "NAME": "Snipe",
-    "DESCRIPTION": "Your next hermit:Dead_On effect this turn triggers twice. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hermit:Concentrate. NL Your next hermit:Dead_On effect this turn triggers twice. NL Exhaust."
+    "DESCRIPTION": "Your next hermit:Dead_On effect this turn triggers twice.",
+    "UPGRADE_DESCRIPTION": "hermit:Concentrate. NL Your next hermit:Dead_On effect this turn triggers twice."
   },
   "hermit:CalledShot": {
     "NAME": "Called Shot",
-    "DESCRIPTION": "Deal !D! damage. NL If the last card played this turn triggered *Dead *On, draw a card.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL If the last card played this turn triggered *Dead *On, draw a card."
+    "DESCRIPTION": "Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! Attack.",
+    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)",
+    "EXTENDED_DESCRIPTION": ["Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! Attacks."]
   },
   "hermit:Dissolve": {
     "NAME": "Dissolve",
@@ -66,7 +67,7 @@
   },
   "hermit:ShadowCloak": {
     "NAME": "Shadow Cloak",
-    "DESCRIPTION": "Whenever you draw or Exhaust a Curse, gain !M! Block."
+    "DESCRIPTION": "Whenever you draw a Curse, gain !M! Block."
   },
   "hermit:FatalDesire": {
     "NAME": "Fatal Desire",
@@ -107,11 +108,11 @@
   },
   "hermit:Roulette": {
     "NAME": "Roulette",
-    "DESCRIPTION": "Deal !D! damage. NL Discard your hand. NL Draw that many cards."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Discard your hand. NL Draw that many cards."
   },
   "hermit:Midnight": {
     "NAME": "Midnight",
-    "DESCRIPTION": "Gain !B! Block. NL Add an *Impending *Doom to your hand.",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Add an *Impending *Doom to your hand.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add an *Impending *Doom to your hand."
   },
   "hermit:Glare": {
@@ -121,12 +122,12 @@
   },
   "hermit:TakeCover": {
     "NAME": "Take Cover",
-    "DESCRIPTION": "Add a 0-cost *Defend to your hand and Upgrade it X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a 0-cost *Defend+ to your hand and Upgrade it X times. NL Exhaust."
+    "DESCRIPTION": "Add X *Defends to your hand. NL They cost 0 this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add X *Defends+ to your hand. NL They cost 0 this combat. NL Exhaust."
   },
   "hermit:Misfire": {
     "NAME": "Misfire",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle a *Clumsy into your draw pile."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Shuffle a *Clumsy into your draw pile."
   },
   "hermit:SprayPray": {
     "NAME": "Spray n' Pray",
@@ -154,11 +155,11 @@
   },
   "hermit:Spite": {
     "NAME": "Spite",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a card for each *Curse in your hand."
+    "DESCRIPTION": "Deal !D! damage twice. NL Draw !M! *Curses."
   },
   "hermit:Manifest": {
     "NAME": "Manifest",
-    "DESCRIPTION": "Gain !B! Block. NL Add a *Decay to your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! *Curses."
   },
   "hermit:Feint": {
     "NAME": "Feint",
@@ -182,8 +183,7 @@
   },
   "hermit:Vantage": {
     "NAME": "Vantage",
-    "DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On: NL Draw !M! card and Upgrade it for the rest of combat.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On: NL Draw !M! cards and Upgrade them for the rest of combat."
+    "DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On: NL Upgrade !M! random cards in your hand for the rest of combat."
   },
   "hermit:Brawl": {
     "NAME": "Brawl",
@@ -191,8 +191,7 @@
   },
   "hermit:Combo": {
     "NAME": "Combo",
-    "DESCRIPTION": "Put the first hermit:Dead_On card triggered each turn back into your hand.",
-    "UPGRADE_DESCRIPTION": "Put the first !M! hermit:Dead_On cards triggered each turn back into your hand."
+    "DESCRIPTION": "Whenever you trigger a hermit:Dead_On effect, add a random card with hermit:Dead_On to your hand."
   },
   "hermit:BigShot": {
     "NAME": "Smoking Barrel",
@@ -208,8 +207,8 @@
   },
   "hermit:EternalForm": {
     "NAME": "Eternal Form",
-    "DESCRIPTION": "Ethereal. NL First 4 playable cards drawn at the start of each turn cost 1 less that turn.",
-    "UPGRADE_DESCRIPTION": "First 4 playable cards drawn at the start of each turn cost 1 less that turn."
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, reduce the cost of all cards in hand by 1 this turn.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, reduce the cost of all cards in hand by 1 this turn."
   },
   "hermit:FullyLoaded": {
     "NAME": "Fully Loaded",
@@ -310,7 +309,7 @@
   },
   "hermit:FinalCanter": {
     "NAME": "Final Canter",
-    "DESCRIPTION": "Retain. NL Exhaust all Curses in hand. Deal !D! damage for each. Exhaust.",
+    "DESCRIPTION": "Retain. NL Deal !D! damage for each Curse in hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": " NL (You have !M! Curse(s))"
   },
   "hermit:HeroicBravado": {
@@ -324,5 +323,9 @@
   "hermit:Virtue": {
     "NAME": "Virtue",
     "DESCRIPTION": "Retain. NL Reduce each of your debuffs by !M!."
+  },
+  "hermit:BossMaintenance": {
+    "NAME": "Maintenance",
+    "DESCRIPTION": "*Strikes deal !M! more damage this combat. NL Gain 2 Dexterity. NL This costs 1 more this combat."
   }
 }

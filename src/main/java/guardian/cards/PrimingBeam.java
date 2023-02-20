@@ -31,6 +31,14 @@ public class PrimingBeam extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
+    private static final int DAMAGE = 8;
+
+    //TUNING CONSTANTS
+    private static final int UPGRADE_DAMAGE = 3;
+    private static final int BEAMBUFF = 1;
+    private static final int UPGRADE_BEAMBUFF = 1;
+    private static final int SOCKETS = 1;
+    private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
 
@@ -46,10 +54,13 @@ public class PrimingBeam extends AbstractGuardianCard {
 
     public PrimingBeam() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        this.baseDamage = 8;
-        this.baseMagicNumber = this.magicNumber = 4;
-        this.socketCount = 1;
+
+        this.baseDamage = DAMAGE;
         this.tags.add(GuardianMod.BEAM);
+
+        this.baseMagicNumber = this.magicNumber = 3;
+        //this.sockets.add(GuardianMod.socketTypes.RED);
+        this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PrimingBeam.png"));
@@ -65,6 +76,16 @@ public class PrimingBeam extends AbstractGuardianCard {
         this.useGems(p, m);
     }
 
+    @Override
+    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
+        return tmp + calculateBeamDamage();
+    }
+
+    @Override
+    public float calculateModifiedCardDamage(AbstractPlayer player, float tmp) {
+        return tmp + calculateBeamDamage();
+    }
+
     public AbstractCard makeCopy() {
         return new PrimingBeam();
     }
@@ -72,12 +93,16 @@ public class PrimingBeam extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(2);
-            upgradeMagicNumber(2);
+            upgradeDamage(UPGRADE_DAMAGE);
+            upgradeMagicNumber(1);
+            //upgradeMagicNumber(UPGRADE_BEAMBUFF);
         }
+
+
     }
 
     public void updateDescription() {
+
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
                 this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);

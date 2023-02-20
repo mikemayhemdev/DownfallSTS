@@ -1,8 +1,8 @@
 package hermit.actions;
 
-import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.unique.ArmamentsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -12,8 +12,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.Iterator;
-
-// DEPRECATED
 
 public class ManifestAction extends AbstractGameAction {
     private AbstractPlayer p;
@@ -57,7 +55,7 @@ public class ManifestAction extends AbstractGameAction {
                     tmp.shuffle();
                     card = tmp.getBottomCard();
                     tmp.removeCard(card);
-                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
+                    if (this.p.hand.size() == 10) {
                         this.p.createHandIsFullDialog();
                     } else {
                         p.drawPile.group.remove(card);

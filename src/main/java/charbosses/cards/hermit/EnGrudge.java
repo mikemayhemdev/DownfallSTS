@@ -1,13 +1,16 @@
 package charbosses.cards.hermit;
 
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.cards.Grudge;
+import hermit.cards.Malice;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
@@ -18,7 +21,6 @@ public class EnGrudge extends AbstractHermitBossCard {
     public EnGrudge(int damage) {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/grudge.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = damage;
-        this.baseMagicNumber = this.magicNumber = 2;
     }
 
     public EnGrudge() {
@@ -35,7 +37,8 @@ public class EnGrudge extends AbstractHermitBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            upgradeMagicNumber(1);
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

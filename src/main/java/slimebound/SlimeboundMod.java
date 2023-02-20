@@ -636,7 +636,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     }
 
     public static void spawnNormalSlime() {
-        int o = AbstractDungeon.cardRng.random(0, 3);
+        Integer o = AbstractDungeon.cardRng.random(0, 3);
 
         switch (o) {
             case 0:

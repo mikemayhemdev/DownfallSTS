@@ -3,30 +3,38 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPerTurnPower;
 
 public class HeatMetal extends AbstractHexaCard {
+
     public final static String ID = makeID("HeatMetal");
+
+    //stupid intellij stuff ATTACK, ENEMY, COMMON
+
+    private static final int DAMAGE = 9;
+    private static final int UPG_DAMAGE = 3;
+
+    private static final int MAGIC = 12;
+    private static final int UPG_MAGIC = 4;
 
     public HeatMetal() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 4;
-        baseBurn = burn = 4;
-        baseMagicNumber = magicNumber = 1;
+        baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC;
+        HexaMod.loadJokeCardImage(this, "HeatMetal.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        burn(m, burn);
-        applyToEnemy(m, autoVuln(m, magicNumber));
+        applyToEnemy(m, new BurnPerTurnPower(m, magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(1);
-            upgradeBurn(1);
-            upgradeMagicNumber(1);
+            upgradeDamage(UPG_DAMAGE);
+            upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

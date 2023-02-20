@@ -11,12 +11,16 @@ import charbosses.actions.util.CharbossDoNextCardAction;
 import charbosses.actions.util.CharbossMakePlayAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
+import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.cards.blue.EnThunderStrike;
 import charbosses.cards.green.EnBladeDance;
 import charbosses.cards.green.EnCloakAndDagger;
+import charbosses.cards.hermit.EnDesperado;
+import charbosses.cards.hermit.EnHoleUp;
+import charbosses.cards.hermit.EnItchyTrigger;
 import charbosses.cards.red.EnBodySlam;
 import charbosses.cards.red.EnSecondWind;
 import charbosses.core.EnemyEnergyManager;
@@ -61,9 +65,12 @@ import com.megacrit.cardcrawl.vfx.combat.DeckPoofEffect;
 import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import downfall.downfallMod;
+import downfall.monsters.NeowBoss;
+import hermit.cards.HoleUp;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -324,6 +331,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             c.resetAttributes();
         }
         addToBot(new DelayedActionAction(new CharbossTurnstartDrawAction()));
+
     }
 
 
@@ -415,8 +423,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                             AbstractBossCard cB = (AbstractBossCard) c;
                             cB.refreshIntentHbLocation();
                         }
-
-                        //TODO Add a way for create a hidden attack intent for the Boss if it intends to play an Attack.
                     }
                 });
             }
@@ -1179,11 +1185,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         }
 
-
-        chosenArchetype = null;
         AbstractCharBoss.boss = null;
         AbstractCharBoss.finishedSetup = false;
-        relics.clear();
         hand.clear();
         /*
         drawPile.clear();

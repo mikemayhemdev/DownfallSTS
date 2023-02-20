@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
-@Deprecated
 public class zzzRepulsorProtocol extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("zzzRepulsorProtocol");
     public static final String NAME;

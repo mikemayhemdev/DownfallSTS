@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 import theHexaghost.powers.BurnvenomPower;
 
-@Deprecated
 @CardIgnore
 public class WildfireWeapon extends AbstractHexaCard {
 

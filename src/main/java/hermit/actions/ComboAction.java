@@ -1,11 +1,16 @@
 package hermit.actions;
 
-import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
+import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
+import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import java.util.Iterator;
 
 public class ComboAction extends AbstractGameAction {
     private AbstractPlayer p;
@@ -25,7 +30,7 @@ public class ComboAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_MED) {
 
             if (this.actual) {
-                if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE && AbstractDungeon.player.discardPile.group.contains(card)) {
+                if (AbstractDungeon.player.hand.size() < 10 && AbstractDungeon.player.discardPile.group.contains(card)) {
                     AbstractDungeon.player.hand.addToHand(this.card);
                     AbstractDungeon.player.discardPile.removeCard(this.card);
                 }

@@ -10,7 +10,7 @@
     "NAME": "Rye Stalk",
     "FLAVOR": "Still in mint condition, despite being chewed on for so long.",
     "DESCRIPTIONS": [
-      "At the start of each combat, all enemies lose #b2 #yStrength."
+      "At the end of your turn, ALL enemies lose HP equal to their #yhermit:Bruise."
     ]
   },
   "hermit:BartenderGlass": {

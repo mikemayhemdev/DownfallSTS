@@ -9,8 +9,9 @@
   "Guardian:DefensiveModePotion": {
     "NAME": "Polishing Oil",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yBlock. Enter #yDefensive #yMode."
+      "Enter #yDefensive #yMode for #b",
+      " round.",
+      " rounds."
     ]
   },
   "Guardian:BlockOnCardUsePotion": {

@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.powers.ShieldWallPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
@@ -8,11 +9,17 @@ import com.megacrit.cardcrawl.powers.MetallicizePower;
 import static champ.ChampMod.loadJokeCardImage;
 
 public class ShieldWall extends AbstractChampCard {
+
     public final static String ID = makeID("ShieldWall");
+
+    //stupid intellij stuff power, self, uncommon
+
+    private static final int MAGIC = 3;
+    private static final int UPG_MAGIC = 3;
 
     public ShieldWall() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = MAGIC;
         postInit();
         loadJokeCardImage(this, "ShieldWall.png");
     }
@@ -23,6 +30,6 @@ public class ShieldWall extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(UPG_MAGIC);
     }
 }

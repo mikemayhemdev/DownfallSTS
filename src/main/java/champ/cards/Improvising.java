@@ -8,19 +8,24 @@ import sneckomod.SneckoMod;
 import static champ.ChampMod.loadJokeCardImage;
 
 public class Improvising extends AbstractChampCard {
+
     public final static String ID = makeID("Improvising");
 
+    //stupid intellij stuff power, self, rare
+
     public Improvising() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+
+      //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
         postInit();
         loadJokeCardImage(this, ".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new ImprovisingPower());
+        applyToSelf(new ImprovisingPower(1));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBaseCost(1);
     }
 }

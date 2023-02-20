@@ -9,11 +9,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.DeterminationPower;
+import hermit.powers.EternalPower;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Determination extends AbstractDynamicCard {
+
 
     // TEXT DECLARATION
 
@@ -37,6 +39,7 @@ public class Determination extends AbstractDynamicCard {
 
     // /STAT DECLARATION/
 
+
     public Determination() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         loadJokeCardImage(this, "determination.png");
@@ -48,6 +51,7 @@ public class Determination extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new DeterminationPower(p, 1), 1));
     }
+
 
 
     //Upgraded stats.

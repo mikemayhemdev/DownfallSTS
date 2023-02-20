@@ -1,17 +1,19 @@
 package charbosses.cards.hermit;
 
-import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
-import charbosses.cards.AbstractBossCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.FrailPower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import hermit.cards.Desperado;
+import hermit.cards.GhostlyPresence;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
@@ -20,31 +22,22 @@ public class EnDesperado extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Desperado.ID);
 
     public EnDesperado() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/desperado.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 10;
-        this.baseMagicNumber = this.magicNumber = 1;
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/desperado.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.ATTACK);
+        this.baseDamage = 14;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         addToBot(new DamageAction(p, new DamageInfo(m, damage, damageTypeForTurn), EnumPatch.HERMIT_GUN2));
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
-                    AbstractBossCard c = ((ArchetypeAct2WheelOfFateNewAge) AbstractCharBoss.boss.chosenArchetype).getCardFromDeck(uuid);
-                    if (c != null) c.baseDamage *= 2;
-                }
-                isDone = true;
-            }
-        });
+        addToBot(new ApplyPowerAction(m, m, new FrailPower(m, magicNumber, true), magicNumber));
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(2);
+            this.upgradeDamage(4);
         }
     }
 

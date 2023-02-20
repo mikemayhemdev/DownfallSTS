@@ -13,7 +13,7 @@
 },
 "hermit:ShadowCloakPower": {
         "NAME": "暗影斗篷",
-        "DESCRIPTIONS": ["每当你抽到或 #y消耗 #y诅咒 时，获得 #b", " 点 #y格挡 。"]
+        "DESCRIPTIONS": ["每当你抽到 #y诅咒 时，获得 #b", " 点 #y格挡 。"]
 },
 "hermit:TakeAimPower": {
         "NAME": "举枪瞄准",

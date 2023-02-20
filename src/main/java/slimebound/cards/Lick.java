@@ -24,7 +24,7 @@ import static automaton.AutomatonMod.makeBetaCardPath;
 import static com.badlogic.gdx.graphics.Color.GREEN;
 
 
-public class Lick extends AbstractSlimeboundCard {
+public class Lick extends AbstractLickCard {
     public static final String ID = "Slimebound:Lick";
     public static final String NAME;
     public static final String DESCRIPTION;

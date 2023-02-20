@@ -1,11 +1,15 @@
 package hermit.patches;
 
+import basemod.ReflectionHacks;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import hermit.characters.hermit;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.DamageHeartEffect;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 import static hermit.HermitMod.makeID;
 

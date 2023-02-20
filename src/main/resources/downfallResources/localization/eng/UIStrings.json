@@ -63,7 +63,7 @@
       "Prevent Snecko from using card pools from other mods.",
       "Disable music overrides (requires game restart)",
       "Unlock all locked alternative skin for Downfall characters",
-      "Disable displaying cards' subtype next to their main type."
+      "Allow display card's subtype next to main type."
     ]
   },
   "downfall:EnergyPanelTip": {

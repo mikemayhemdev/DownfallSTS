@@ -320,7 +320,7 @@
   "Gremlin:Pinprick": {
     "NAME": "성가신 구멍",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "이 카드를 뽑을 때 이 카드의 gremlin:메아리를 1장 얻습니다. NL 피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "이 카드를 뽑을 때마다 이 카드의 gremlin:메아리를 1장 얻습니다. NL 피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL 소멸."
   },
 
   "Gremlin:Polish": {

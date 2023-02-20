@@ -4,6 +4,7 @@ package slimebound.cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
@@ -13,34 +14,51 @@ import slimebound.patches.AbstractCardEnum;
 
 public class RainOfGoop extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:RainOfGoop";
-    public static final String IMG_PATH = SlimeboundMod.getResourcePath("cards/rainofgoop.png");
+    public static final String NAME;
+    public static final String DESCRIPTION;
+    public static final String IMG_PATH = "cards/rainofgoop.png";
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
+    private static final int COST = 1;
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
 
 
     public RainOfGoop() {
-        super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.SLIMEBOUND, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.slimed = this.baseSlimed = 4;
-        this.magicNumber = this.baseMagicNumber = 3;
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        this.slimed = this.baseSlimed = 3;
+        this.magicNumber = this.baseMagicNumber = 4;
         SlimeboundMod.loadJokeCardImage(this, "RainOfGoop.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new TendrilFlailAction(p, null, this.magicNumber, this.slimed));
-    }
-
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            this.upgradeMagicNumber(1);
-        }
+        AbstractDungeon.actionManager.addToBottom(new TendrilFlailAction(p,
+                AbstractDungeon.getMonsters().getRandomMonster(true), this.magicNumber, this.slimed));
     }
 
     public AbstractCard makeCopy() {
+
         return new RainOfGoop();
+
     }
 
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public void upgrade() {
+
+        if (!this.upgraded) {
+
+            upgradeName();
+            this.upgradeMagicNumber(2);
+        }
+
     }
 }
 

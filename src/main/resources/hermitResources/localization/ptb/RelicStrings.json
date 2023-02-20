@@ -10,7 +10,7 @@
     "NAME": "Espiga de Centeio",
     "FLAVOR": "Ainda em condições perfeitas, apesar de ser mastigado por tanto tempo.",
     "DESCRIPTIONS": [
-      "No início de cada combate, todos os inimigos perdem #b2 de #yForça."
+      "#yhermit:Hematoma não é mais redusido por dano."
     ]
   },
   "hermit:BartenderGlass": {
@@ -67,7 +67,7 @@
     "NAME": "Medalhão Fechado",
     "FLAVOR": "Não abrirá novamente.",
     "DESCRIPTIONS": [
-      "Substitui #yVelho #yMedalhão. Na primeira vez que você comprar uma maldição a cada turno, o #yExaura e compre #b2 cartas.  Após pegar, obtenha #b2 #rFerimentos.",
+      "Substitui #yVelho #yMedalhão. No início de cada combate, ganhe [E] para cada #rMaldição em seu baralho. Quando obtido, ganhe #b2 #rFerimentos.",
       "Nunca mais..."
     ]
   },

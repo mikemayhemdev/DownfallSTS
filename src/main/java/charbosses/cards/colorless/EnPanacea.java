@@ -1,7 +1,5 @@
 package charbosses.cards.colorless;
 
-import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,12 +29,6 @@ public class EnPanacea extends AbstractBossCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(m, m, new ArtifactPower(m, this.magicNumber), this.magicNumber));
-    }
-
-    @Override
-    public void triggerOnExhaust() {
-        if (AbstractCharBoss.boss != null && AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge)
-            ((ArchetypeAct2WheelOfFateNewAge) AbstractCharBoss.boss.chosenArchetype).removeCardFromDeck(uuid);
     }
 
     public void upgrade() {

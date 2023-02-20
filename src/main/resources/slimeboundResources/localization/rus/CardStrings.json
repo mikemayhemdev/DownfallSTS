@@ -39,8 +39,7 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Быстрый перекус",
-    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 카드를 1장 소멸시킵니다. 소멸시킨 카드의 비용만큼 *핥기 카드를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 카드를 1장 소멸시킵니다. 소멸시킨 카드의 비용만큼 *핥기 카드를 얻습니다. NL 소멸."
+    "DESCRIPTION": "Вы берёте !M! карты и сжигаете карту в руке. NL Добавляет в руку N карт *Лизь, где N - стоимость сожжёной карты. NL Сжигается."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Разделяй и властвуй",
@@ -266,8 +265,7 @@
   },
   "Slimebound:Schlurp": {
     "NAME": "Втянуть",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Добавляет в руку !M! *Лизя.",
-    "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL Добавляет в руку !M! *Лизя."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Добавляет в руку !M! *Лизя."
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "Реформация",

@@ -10,7 +10,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import guardian.GuardianMod;
+
+import java.util.ArrayList;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -35,7 +38,7 @@ public class PackageSphere extends AbstractGuardianCard {
 
     public AbstractGuardianCard constPrev1 = new SphericShield();
     public AbstractGuardianCard constPrev2 = new FloatingOrbs();
-    public AbstractGuardianCard constPrev3 = new Metallicize();
+    public AbstractGuardianCard constPrev3 = new Harden();
 
     public AbstractGuardianCard prev1;
     public AbstractGuardianCard prev2;
@@ -85,18 +88,29 @@ public class PackageSphere extends AbstractGuardianCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        super.use(p, m);
+
+        ArrayList derp = new ArrayList();
         AbstractCard tmp;
+
         tmp = new SphericShield();
         if (upgraded) tmp.upgrade();
-        addToBot(new MakeTempCardInHandAction(tmp, true));
+        derp.add(tmp);
+     //   tmp.modifyCostForCombat(-1);
 
         tmp = new FloatingOrbs();
         if (upgraded) tmp.upgrade();
-        addToBot(new MakeTempCardInHandAction(tmp, true));
+        derp.add(tmp);
+     //   tmp.modifyCostForCombat(-1);
 
-        tmp = new Metallicize();
+        tmp = new Harden();
         if (upgraded) tmp.upgrade();
-        addToBot(new MakeTempCardInHandAction(tmp, true));
+        derp.add(tmp);
+     //   tmp.modifyCostForCombat(-1);
+
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard)derp.get(0), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(1), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(2), true));
     }
 
     public AbstractCard makeCopy() {

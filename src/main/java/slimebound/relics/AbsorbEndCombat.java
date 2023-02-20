@@ -2,7 +2,6 @@ package slimebound.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -34,9 +33,8 @@ public class AbsorbEndCombat extends CustomRelic {
     public void onTrigger() {
         int realAmount = Math.min(HP_PER_SLURP, counter);
         if (realAmount > 0) {
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(AbstractDungeon.player, AbstractDungeon.player, realAmount));
             flash();
-            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToBot(new com.megacrit.cardcrawl.actions.common.HealAction(AbstractDungeon.player, AbstractDungeon.player, realAmount));
             counter -= realAmount;
             if (counter == 0) {
                 grayscale = true;

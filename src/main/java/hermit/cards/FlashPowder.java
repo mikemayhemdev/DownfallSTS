@@ -19,6 +19,13 @@ import static hermit.HermitMod.makeCardPath;
 
 public class FlashPowder extends AbstractDynamicCard {
 
+    /*
+     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
+     *
+     * Defend Gain 5 (8) block.
+     */
+
+
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(FlashPowder.class.getSimpleName());
@@ -60,7 +67,10 @@ public class FlashPowder extends AbstractDynamicCard {
 
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
 
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+        Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+        while(var3.hasNext()) {
+            AbstractMonster mo = (AbstractMonster)var3.next();
             this.addToBot(new ApplyPowerAction(mo, p, new StrengthPower(mo, -this.magicNumber), -this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
         }
     }
@@ -70,6 +80,7 @@ public class FlashPowder extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            //upgradeBlock(UPGRADE_PLUS_BLOCK);
             upgradeMagicNumber(1);
             initializeDescription();
         }

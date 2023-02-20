@@ -21,19 +21,48 @@ public class BlankCard extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("BlankCard.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("BlankCard.png"));
 
+    private boolean activated;
+
     public BlankCard() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
-    @Override
-    public void atBattleStart() {
-        ArrayList<AbstractCard> possCardsList = new ArrayList<>(AbstractDungeon.player.drawPile.group);
-        AbstractCard card2 = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1)).makeStatEquivalentCopy();
+    public void start() {
 
-        flash();
-        addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        card2.freeToPlayOnce = true;
-        addToBot(new MakeEchoAction(card2));
+    }
+
+    @Override
+    public void atTurnStartPostDraw() {
+        if (!this.activated) {
+            ArrayList<AbstractCard> possCardsList = new ArrayList<>(AbstractDungeon.player.drawPile.group);
+            AbstractCard card2 = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1)).makeStatEquivalentCopy();
+//            AbstractMonster m = AbstractDungeon.getRandomMonster();
+            flash();
+            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(card2.makeStatEquivalentCopy()));
+            card2.freeToPlayOnce = true;
+            AbstractDungeon.actionManager.addToBottom(new MakeEchoAction(card2));
+
+//            card2.purgeOnUse = true;
+
+
+
+
+//            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+//                @Override
+//                public void update() {
+//                    card2.applyPowers();
+//                    isDone = true;
+//                }
+//            });
+//            AbstractDungeon.actionManager.addToBottom(new NewQueueCardAction(card2, m));
+            this.activated = true;
+        }
+    }
+
+    @Override
+    public void onVictory() {
+        this.activated = false;
     }
 
     public String getUpdatedDescription() {
