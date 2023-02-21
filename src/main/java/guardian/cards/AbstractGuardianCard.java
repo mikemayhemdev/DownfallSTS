@@ -81,6 +81,14 @@ public abstract class AbstractGuardianCard extends CustomCard {
     }
 
 
+    public void whenEnteredStasis(StasisOrb orb) {
+
+    }
+
+    public void whenReturnedFromStasis() {
+
+    }
+
 
     /*
 
