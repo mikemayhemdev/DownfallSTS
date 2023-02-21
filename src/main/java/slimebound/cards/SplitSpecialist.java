@@ -86,6 +86,7 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
                 NAMES[19],
                 expansionContentMod.makeCardPath("QuickTimeEater.png"),
                 TEXT[19] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:time_slime").replaceAll("#b","").replaceAll("#y","")));
+        SlimeboundMod.loadJokeCardImage(this, "SplitSpecialist.png");
 
     }
 

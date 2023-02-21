@@ -3,11 +3,11 @@ package guardian.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import guardian.cards.InStasisCard;
+import guardian.cards.AbstractGuardianCard;
 
 
 public class ReturnStasisCardToHandAction extends AbstractGameAction {
-    private final AbstractCard card;
+    private AbstractCard card;
 
     public ReturnStasisCardToHandAction(AbstractCard card) {
         this.card = card;
@@ -17,8 +17,8 @@ public class ReturnStasisCardToHandAction extends AbstractGameAction {
     public void update() {
         if (!AbstractDungeon.player.hand.contains(this.card)) {
             AbstractDungeon.player.hand.addToHand(this.card);
-            if (this.card instanceof InStasisCard) {
-                ((InStasisCard) this.card).whenReturnedFromStasis();
+            if (this.card instanceof AbstractGuardianCard) {
+                ((AbstractGuardianCard) this.card).whenReturnedFromStasis();
             }
             this.card.update();
             AbstractDungeon.player.hand.refreshHandLayout();

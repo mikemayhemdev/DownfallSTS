@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.powers.ScatterPower;
 import sneckomod.SneckoMod;
 
@@ -29,6 +30,7 @@ public class Scatter extends AbstractGremlinCard {
 
         this.exhaust = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        GremlinMod.loadJokeCardImage(this, "Scatter.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

@@ -77,8 +77,7 @@
       "Lorsque vous le récupérez, choisissez une carte. Commencez chaque combat avec cette carte en #yguardianmod:Stase.",
       "Choisissez une carte pour ",
       "Commencez chaque combat avec ",
-      " en #yguardianmod:Stase.",
-      "La carte embouteillée a été #rretirée de votre deck, la relique ne fonctionne plus."
+      " en #yguardianmod:Stase."
     ]
   },
   "Guardian:StasisEgg": {
@@ -120,8 +119,7 @@
       "Lorsque vous la récupérez, choisissez une carte. Au début de chaque combat, celle-ci est enlevée de votre pioche. Au début du #b3e tour, elle est ajoutée à votre main et coûte #b0.",
       "Choisissez une carte pour ",
       "Commencez chaque combat avec ",
-      " retirée de votre pioche. Au début du #b3e tour, elle est ajoutée à votre main et coûte #b0.",
-      "La carte embouteillée a été #rretirée de votre deck, la relique ne fonctionne plus."
+      " retirée de votre pioche. Au début du #b3e tour, elle est ajoutée à votre main et coûte #b0."
     ]
   }
 }

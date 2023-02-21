@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class StrikeOfGenius extends AbstractChampCard {
 
     public final static String ID = makeID("StrikeOfGenius");
@@ -17,6 +19,7 @@ public class StrikeOfGenius extends AbstractChampCard {
         tags.add(CardTags.STRIKE);
      //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
         postInit();
+        loadJokeCardImage(this, "StrikeOfGenius.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

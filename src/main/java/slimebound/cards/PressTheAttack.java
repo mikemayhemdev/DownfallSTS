@@ -43,6 +43,7 @@ public class PressTheAttack extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.baseDamage = 9;
+        SlimeboundMod.loadJokeCardImage(this, "PressTheAttack.png");
 
 
     }

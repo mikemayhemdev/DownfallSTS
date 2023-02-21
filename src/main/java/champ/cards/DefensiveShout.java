@@ -5,6 +5,8 @@ import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class DefensiveShout extends AbstractChampCard {
 
     public final static String ID = makeID("DefensiveShout");
@@ -17,6 +19,7 @@ public class DefensiveShout extends AbstractChampCard {
         this.tags.add(ChampMod.OPENERDEFENSIVE);
         // myHpLossCost = magicNumber;
         postInit();
+        loadJokeCardImage(this, "DefensiveShout.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

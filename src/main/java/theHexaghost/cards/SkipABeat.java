@@ -21,6 +21,7 @@ public class SkipABeat extends AbstractHexaCard {
         tags.add(HexaMod.GHOSTWHEELCARD);
        // exhaust = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "SkipABeat.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

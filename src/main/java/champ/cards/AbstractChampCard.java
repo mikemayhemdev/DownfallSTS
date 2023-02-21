@@ -1,5 +1,6 @@
 package champ.cards;
 
+import basemod.abstracts.CustomCard;
 import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.ChampMod;
@@ -16,27 +17,34 @@ import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import expansioncontent.cards.AbstractDownfallCard;
 import hermit.util.TextureLoader;
 
+import java.security.Signature;
 import java.util.ArrayList;
 import java.util.List;
 
 import static champ.ChampMod.*;
 
 
-public abstract class AbstractChampCard extends AbstractDownfallCard {
+public abstract class AbstractChampCard extends CustomCard {
     protected final CardStrings cardStrings;
     public String betaArtPath;
     protected final String NAME;
@@ -128,6 +136,15 @@ public abstract class AbstractChampCard extends AbstractDownfallCard {
     }
 
     @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upp();
+        }
+    }
+
+
+    @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tips = new ArrayList<>();
         if (this.rawDescription.contains("[crown_icon]") && !this.rawDescription.contains("champ:Technique")) {
@@ -139,11 +156,82 @@ public abstract class AbstractChampCard extends AbstractDownfallCard {
         return tips;
     }
 
+
     @Override
     public void triggerOnGlowCheck() {
         if (this.hasTag(FINISHER)) {
             this.glowColor = AbstractDungeon.player.stance instanceof AbstractChampStance ? Color.RED.cpy() : BLUE_BORDER_GLOW_COLOR;
         }
+    }
+
+    public abstract void upp();
+
+    protected void atb(AbstractGameAction action) {
+        addToBot(action);
+    }
+
+    protected void att(AbstractGameAction action) {
+        addToTop(action);
+    }
+
+    protected DamageInfo makeInfo() {
+        return makeInfo(damageTypeForTurn);
+    }
+
+    private DamageInfo makeInfo(DamageInfo.DamageType type) {
+        return new DamageInfo(AbstractDungeon.player, damage, type);
+    }
+
+    public void dmg(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
+        atb(new DamageAction(m, makeInfo(), fx));
+    }
+
+    public void allDmg(AbstractGameAction.AttackEffect fx) {
+        atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
+    }
+
+    public void blck() {
+        atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
+    }
+
+    public void makeInHand(AbstractCard c, int i) {
+        atb(new MakeTempCardInHandAction(c, i));
+    }
+
+    public void makeInHand(AbstractCard c) {
+        makeInHand(c, 1);
+    }
+
+    void shuffleIn(AbstractCard c, int i) {
+        atb(new MakeTempCardInDrawPileAction(c, i, false, true));
+    }
+
+    public void shuffleIn(AbstractCard c) {
+        shuffleIn(c, 1);
+    }
+
+    public ArrayList<AbstractMonster> monsterList() {
+        ArrayList<AbstractMonster> q = new ArrayList<>();
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            if (!m.isDeadOrEscaped()) q.add(m);
+        }
+        return q;
+    }
+
+    public void applyToEnemy(AbstractMonster m, AbstractPower po) {
+        atb(new ApplyPowerAction(m, AbstractDungeon.player, po, po.amount));
+    }
+
+    public void applyToSelf(AbstractPower po) {
+        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
+    }
+
+    WeakPower autoWeak(AbstractMonster m, int i) {
+        return new WeakPower(m, i, false);
+    }
+
+    VulnerablePower autoVuln(AbstractMonster m, int i) {
+        return new VulnerablePower(m, i, false);
     }
 
     public void triggerOpenerRelics(boolean fromNeutral) {

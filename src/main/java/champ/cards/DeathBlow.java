@@ -1,10 +1,13 @@
 package champ.cards;
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.fatigue;
 import static champ.ChampMod.vigor;
+
 import static champ.ChampMod.loadJokeCardImage;
 
 public class DeathBlow extends AbstractChampCard {
@@ -13,9 +16,11 @@ public class DeathBlow extends AbstractChampCard {
 
     public DeathBlow() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL);
-        baseDamage = 12;
+        baseDamage = 15;
         baseMagicNumber = magicNumber = 8;
         isMultiDamage = true;
+       // myHpLossCost = 10;
+       // tags.add(ChampMod.FINISHER);
         postInit();
         exhaust = true;
         loadJokeCardImage(this, "DeathBlow.png");
@@ -29,7 +34,7 @@ public class DeathBlow extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(5);
         upgradeMagicNumber(2);
     }
 }

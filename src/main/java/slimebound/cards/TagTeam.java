@@ -47,6 +47,7 @@ public class TagTeam extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         baseDamage = 12;
         baseMagicNumber = magicNumber = 2;
+        SlimeboundMod.loadJokeCardImage(this, "TagTeam.png");
 
     }
 

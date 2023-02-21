@@ -11,11 +11,11 @@
     "TEXT": [
       "영혼",
       "영혼이 얼마나 많은지 보여줍니다. 영혼은 심장의 보상으로도 주어집니다.",
-      "상인 상태",
-      "체력",
-      "사망!",
-      "힘",
-      "영혼 강탈"
+      "Merchant Status",
+      "HP",
+      "Dead!",
+      "Strength",
+      "Souls stolen"
     ]
   },
   "downfall:BustKeyButton": {
@@ -55,15 +55,15 @@
       "일반 도전에서 Downfall 모드의 이벤트가 출현합니다.",
       "일반 도전에서 Downfall 모드의 보스 카드가 출현합니다.",
       "일반 캐릭터로 몰락을 도전하고 몰락의 악당 캐릭터로 일반을 도전합니다.",
-      "모드 캐릭터로 몰락을 도전합니다.",
+      "Allow modded characters to play Downfall runs.",
       "일반 도전에서 Downfall 모드의 저주가 출현합니다.",
       "Downfall 도전에서 원래 지도 형식을 사용합니다. 시작을 모닥불에서 하지 않습니다.",
-      "Downfall 모드 캐릭터의 모든 잠긴 카드와 유물을 해금합니다(재시작 필요).",
+      "Downfall 모드 캐릭터의 모든 잠긴 카드와 유물을 해금합니다(재시작이 필요합니다.).",
       "투사의 상단 자세 설명창을 표시하지 않습니다.",
-      "스네코가 다른 모드의 카드를 사용하지 않게 합니다.",
-      "음악을 끕니다(재시작 필요).",
+      "Prevent Snecko from using card pools from other mods.",
+      "음악을 끕니다.(재시작이 필요합니다.)",
       "Downfall 모드 캐릭터의 모든 잠긴 교체 스킨을 해금합니다.",
-      "카드의 메인 유형 옆에 있는 하위 유형을 표시합니다."
+      "Allow display card's subtype next to main type."
     ]
   },
   "downfall:EnergyPanelTip": {

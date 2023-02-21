@@ -37,9 +37,9 @@ public class EnReprogram extends AbstractBossCard {
                 isDone = true;
             }
         });
-        this.addToBot(new ApplyPowerAction(m, m, new FocusPower(m, -this.magicNumber), -this.magicNumber));
-        this.addToBot(new ApplyPowerAction(m, m, new StrengthPower(m, this.magicNumber), 1));
-        this.addToBot(new ApplyPowerAction(m, m, new DexterityPower(m, this.magicNumber), 1));
+        this.addToBot(new ApplyPowerAction(m, m, new FocusPower(p, -this.magicNumber), -this.magicNumber));
+        this.addToBot(new ApplyPowerAction(m, m, new StrengthPower(p, this.magicNumber), 1));
+        this.addToBot(new ApplyPowerAction(m, m, new DexterityPower(p, this.magicNumber), 1));
     }
 
     public AbstractCard makeCopy() {

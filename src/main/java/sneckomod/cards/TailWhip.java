@@ -3,6 +3,7 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class TailWhip extends AbstractSneckoCard {
 
@@ -18,6 +19,7 @@ public class TailWhip extends AbstractSneckoCard {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        SneckoMod.loadJokeCardImage(this, "TailWhip.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

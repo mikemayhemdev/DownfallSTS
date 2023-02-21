@@ -105,8 +105,7 @@
   },
   "Guardian:Incinerate": {
     "NAME": "Incinération",
-    "DESCRIPTION": "Infligez !D! dégâts. NL guardianmod:Accélérez.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL guardianmod:Accélérez 2 fois."
+    "DESCRIPTION": "Infligez !D! dégâts. NL guardianmod:Accélérez."
   },
   "Guardian:Orbwalk": {
     "NAME": "Puissance orbitale",

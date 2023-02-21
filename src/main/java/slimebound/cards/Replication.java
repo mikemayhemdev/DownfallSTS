@@ -31,6 +31,7 @@ public class Replication extends AbstractSlimeboundCard {
     public Replication() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), 1, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, CardRarity.UNCOMMON, CardTarget.NONE);
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "Replication.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

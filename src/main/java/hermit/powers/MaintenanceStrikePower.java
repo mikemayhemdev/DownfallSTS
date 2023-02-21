@@ -15,6 +15,8 @@ import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makePowerPath;
 
+//Gain 1 dex for the turn for each card played.
+
 public class MaintenanceStrikePower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
@@ -23,6 +25,8 @@ public class MaintenanceStrikePower extends AbstractPower implements CloneablePo
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
+    // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("maintenance_p.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("maintenance.png"));
 
@@ -51,6 +55,7 @@ public class MaintenanceStrikePower extends AbstractPower implements CloneablePo
         return super.atDamageGive(card.hasTag(AbstractCard.CardTags.STARTER_STRIKE) ? damage + this.amount : damage, type, card);
     }
 
+    // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

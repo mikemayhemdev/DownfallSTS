@@ -1,19 +1,27 @@
 package hermit.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.devcommands.power.Power;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.OnPlayerDeathRelic;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import hermit.HermitMod;
+import hermit.cards.MementoCard;
+import hermit.powers.Concentration;
+import hermit.powers.PetGhostPower;
 import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makeRelicOutlinePath;
 import static hermit.HermitMod.makeRelicPath;
 
 public class PetGhost extends CustomRelic implements OnPlayerDeathRelic {
+
+    // ID, images, text.
     public static final String ID = HermitMod.makeID("PetGhost");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("pet_ghost.png"));
@@ -25,6 +33,8 @@ public class PetGhost extends CustomRelic implements OnPlayerDeathRelic {
 
     public boolean canDie = false;
 
+
+    // Description
     @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];

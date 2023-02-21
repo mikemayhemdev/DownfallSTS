@@ -61,7 +61,10 @@
   "champ:ImprovisingPower": {
     "NAME": "Improvising",
     "DESCRIPTIONS": [
-      "At the start of your turn, if you are not in a Stance, enter a random Stance."
+      "The first time each turn you play a #yCombo, return it to your hand and it costs #b0 until played. #b",
+      " uses left.",
+      "The first #b",
+      " times each turn you play a #yCombo, return it to your hand and it costs #b0 until played. #b"
     ]
   },
   "champ:CalledShotPower": {
@@ -140,8 +143,9 @@
   "champ:IronFortressPower": {
     "NAME": "Technical Jig",
     "DESCRIPTIONS": [
-      "Whenever you enter a Stance, gain #b",
-      " #yBlock."
+      "Whenever you enter a Stance, trigger its #ySkill Bonus",
+      " #b",
+      " times."
     ]
   },
   "champ:IronFortressVigorPower": {

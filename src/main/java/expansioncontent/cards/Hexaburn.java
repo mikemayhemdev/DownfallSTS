@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
 import expansioncontent.powers.PretendHexWheelPower;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
 
 public class Hexaburn extends AbstractExpansionCard {
     public final static String ID = makeID("Hexaburn");
@@ -17,6 +19,7 @@ public class Hexaburn extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY);
         baseMagicNumber = magicNumber = 3;
         baseDamage = 6;
+        loadJokeCardImage(this, "Hexaburn.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

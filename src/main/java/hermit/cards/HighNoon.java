@@ -9,12 +9,15 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.HighNoonPower;
+import hermit.powers.ShadowCloakPower;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class HighNoon extends AbstractDynamicCard {
 
+
+    
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(HighNoon.class.getSimpleName());
@@ -37,6 +40,7 @@ public class HighNoon extends AbstractDynamicCard {
 
     // /STAT DECLARATION/
 
+
     public HighNoon() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
@@ -49,6 +53,8 @@ public class HighNoon extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new HighNoonPower(p, 1), 1));
     }
+
+
 
     //Upgraded stats.
     @Override

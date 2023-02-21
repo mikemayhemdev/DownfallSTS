@@ -14,6 +14,8 @@ import guardian.GuardianMod;
 import guardian.actions.PreprogramAction;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class Preprogram extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Preprogram");
     public static final String NAME;
@@ -48,6 +50,7 @@ public class Preprogram extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Preprogram.png"));
 
     }
 

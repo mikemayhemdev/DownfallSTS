@@ -20,6 +20,7 @@ public class EmpoweredFlame extends AbstractHexaCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "EmpoweredFlame.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

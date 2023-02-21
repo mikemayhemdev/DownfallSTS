@@ -10,6 +10,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import hermit.actions.ReduceDebuffsAction;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class BronzeArmor extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("BronzeArmor");
     public static final String NAME;
@@ -46,6 +48,7 @@ public class BronzeArmor extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("BronzeArmor.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

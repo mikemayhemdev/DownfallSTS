@@ -84,8 +84,6 @@ public class HermitMod implements
         PostInitializeSubscriber,
         AddAudioSubscriber,
         OnStartBattleSubscriber,
-        OnPlayerTurnStartSubscriber,
-        OnCardUseSubscriber,
         SetUnlocksSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
@@ -116,6 +114,13 @@ public class HermitMod implements
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
     public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
     public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
+
+    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
+    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
+    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
+    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
+    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
+    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
 
     // Card backgrounds - The actual rectangular card.
     private static final String ATTACK_DEFAULT_GRAY = "hermitResources/images/512/bg_attack_default_gray.png";
@@ -186,8 +191,30 @@ public class HermitMod implements
         System.out.println("Subscribe to BaseMod hooks");
 
         BaseMod.subscribe(this);
+        
+      /*
+           (   ( /(  (     ( /( (            (  `   ( /( )\ )    )\ ))\ )
+           )\  )\()) )\    )\()))\ )   (     )\))(  )\()|()/(   (()/(()/(
+         (((_)((_)((((_)( ((_)\(()/(   )\   ((_)()\((_)\ /(_))   /(_))(_))
+         )\___ _((_)\ _ )\ _((_)/(_))_((_)  (_()((_) ((_|_))_  _(_))(_))_
+        ((/ __| || (_)_\(_) \| |/ __| __| |  \/  |/ _ \|   \  |_ _||   (_)
+         | (__| __ |/ _ \ | .` | (_ | _|  | |\/| | (_) | |) |  | | | |) |
+          \___|_||_/_/ \_\|_|\_|\___|___| |_|  |_|\___/|___/  |___||___(_)
+      */
 
         modID = ("hermit");
+        // cool
+        // TODO: NOW READ THIS!!!!!!!!!!!!!!!:
+
+        // 1. Go to your resources folder in the project panel, and refactor> rename hermitResources to
+        // yourModIDResources.
+
+        // 2. Click on the localization > eng folder and press ctrl+shift+r, then select "Directory" (rather than in Project)
+        // replace all instances of theDefault with yourModID.
+        // Because your mod ID isn't the default. Your cards (and everything else) should have Your mod id. Not mine.
+
+        // 3. FINALLY and most importantly: Scroll up a bit. You may have noticed the image locations above don't use getModID()
+        // Change their locations to reflect your actual ID rather than theDefault. They get loaded before getID is a thing.
 
         System.out.println("Done subscribing");
 
@@ -578,18 +605,7 @@ public class HermitMod implements
 
      */
 
-    @Override
-    public void receiveCardUsed(AbstractCard abstractCard) {
-        AbstractHermitCard.deadOnThisTurn.add(false);
-    }
-
-    @Override
-    public void receiveOnPlayerTurnStart() {
-        AbstractHermitCard.deadOnThisTurn.clear();
-    }
-
     public void receiveOnBattleStart(AbstractRoom room) {
-        AbstractHermitCard.deadOnThisTurn.clear();
         tackybypass = true;
         if (AbstractDungeon.player instanceof hermit) {
             if (downfallMod.unseenTutorials[0]) {

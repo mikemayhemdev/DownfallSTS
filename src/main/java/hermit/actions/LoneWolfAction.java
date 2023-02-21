@@ -3,13 +3,23 @@ package hermit.actions;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.unique.ForethoughtAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import hermit.util.Wiz;
+
+import java.util.Iterator;
+
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 
 public class LoneWolfAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
@@ -68,18 +78,20 @@ public class LoneWolfAction extends AbstractGameAction {
             if (!AbstractDungeon.handCardSelectScreen.selectedCards.group.isEmpty()) {
                 c = AbstractDungeon.handCardSelectScreen.selectedCards.group.get(0);
                 p.hand.removeCard(c);
+                Iterator var4 = p.hand.group.iterator();
 
                 if (c.cost > 0) {
                     c.freeToPlayOnce = true;
                     c.superFlash(Color.GOLD.cpy());
                 }
 
-                int amt = Wiz.p().hand.size();
-                for (int i = 0; i < amt; ++i) {
-                    AbstractCard cc = Wiz.p().hand.getTopCard();
-                    Wiz.p().hand.moveToDiscardPile(cc);
-                    cc.triggerOnManualDiscard();
-                    GameActionManager.incrementDiscard(false);
+                AbstractCard card;
+
+                while (var4.hasNext()) {
+                    card = (AbstractCard) var4.next();
+
+                    this.addToTop(new DiscardSpecificCardAction(card, AbstractDungeon.player.hand));
+
                 }
 
                 p.hand.addToTop(c);

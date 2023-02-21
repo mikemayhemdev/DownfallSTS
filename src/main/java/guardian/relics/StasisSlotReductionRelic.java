@@ -10,6 +10,7 @@ public class StasisSlotReductionRelic extends CustomRelic {
     public static final String ID = "Guardian:StasisSlotReductionRelic";
     public static final String IMG_PATH = "relics/bots.png";
     public static final String OUTLINE_IMG_PATH = "relics/botsOutline.png";
+    private static final int HP_PER_CARD = 1;
 
     public StasisSlotReductionRelic() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
@@ -22,14 +23,18 @@ public class StasisSlotReductionRelic extends CustomRelic {
     }
 
     public void onEquip() {
+
         ++AbstractDungeon.player.energy.energyMaster;
+        --AbstractDungeon.player.masterMaxOrbs;
         --AbstractDungeon.player.masterMaxOrbs;
     }
 
     public void onUnequip() {
         --AbstractDungeon.player.energy.energyMaster;
         ++AbstractDungeon.player.masterMaxOrbs;
+        ++AbstractDungeon.player.masterMaxOrbs;
     }
+
 
     @Override
     public AbstractRelic makeCopy() {

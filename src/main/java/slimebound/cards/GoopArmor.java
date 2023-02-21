@@ -37,6 +37,7 @@ public class GoopArmor extends AbstractSlimeboundCard {
     public GoopArmor() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 3;
+        SlimeboundMod.loadJokeCardImage(this, "SpikyOuterGoop.png");
 
 
       //  this.tags.add(SneckoMod.BANNEDFORSNECKO);

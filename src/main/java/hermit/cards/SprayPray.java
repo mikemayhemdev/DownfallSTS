@@ -1,5 +1,6 @@
 package hermit.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
@@ -17,10 +18,16 @@ import static hermit.HermitMod.makeCardPath;
 
 public class SprayPray extends AbstractDynamicCard {
 
+
+
+
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(SprayPray.class.getSimpleName());
     public static final String IMG = makeCardPath("spray_and_pray.png");
+
+    // /TEXT DECLARATION/
+
 
     // STAT DECLARATION
 
@@ -53,6 +60,8 @@ public class SprayPray extends AbstractDynamicCard {
         }
         this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true));
     }
+
+
 
     //Upgraded stats.
     @Override

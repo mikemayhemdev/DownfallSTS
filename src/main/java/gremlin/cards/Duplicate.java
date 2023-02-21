@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.actions.DuplicateAction;
 
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
@@ -32,6 +33,7 @@ public class Duplicate extends AbstractGremlinCard {
         this.exhaust = true;
         this.tags.add(SNEAKY_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Duplicate.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

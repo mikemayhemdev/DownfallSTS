@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
 
 public class SearingWound extends AbstractHexaCard {
@@ -16,6 +17,7 @@ public class SearingWound extends AbstractHexaCard {
     public SearingWound() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.exhaust = true;
+        HexaMod.loadJokeCardImage(this, "SearingWound.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

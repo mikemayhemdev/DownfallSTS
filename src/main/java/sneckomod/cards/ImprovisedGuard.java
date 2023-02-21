@@ -15,6 +15,7 @@ public class ImprovisedGuard extends AbstractSneckoCard {
     public ImprovisedGuard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 8;
+        SneckoMod.loadJokeCardImage(this, "ImprovisedGuard.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

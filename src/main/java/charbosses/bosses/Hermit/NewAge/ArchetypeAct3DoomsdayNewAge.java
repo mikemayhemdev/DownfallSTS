@@ -2,8 +2,11 @@ package charbosses.bosses.Hermit.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
+import charbosses.cards.colorless.EnBandage;
+import charbosses.cards.colorless.EnMasterOfStrategy;
+import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDoubt;
-import charbosses.cards.curses.EnInjury;
+import charbosses.cards.curses.EnPain;
 import charbosses.cards.hermit.*;
 import charbosses.powers.bossmechanicpowers.HermitDoomsday;
 import charbosses.relics.*;
@@ -11,7 +14,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.RitualPower;
 
 import java.util.ArrayList;
 
@@ -21,10 +23,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         super("HERMIT_DOOMSDAY_ARCHETYPE", "Doomsday");
 
         maxHPModifier += 315;
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            maxHPModifier += 24;
-        }
-        actNum = 3;
+        actNum = 1;
         bossMechanicName = HermitDoomsday.NAME;
         bossMechanicDesc = HermitDoomsday.DESC[0];
     }
@@ -34,17 +33,18 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitDoomsday(p), 1));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RitualPower(p, 1, false), 1));
     }
+
 
     public void initialize() {
 
         /////   RELICS   /////
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_CursedKey());
-        addRelic(new CBR_CharredGlove());
-        addRelic(new CBR_BrassTacks());
+        addRelic(new CBR_CallingBell());
         addRelic(new CBR_Omamori());
+        addRelic(new CBR_ArtOfWar());
+        addRelic(new CBR_MaskGremlin());
+        addRelic(new CBR_CharredGlove());
     }
 
     @Override
@@ -56,21 +56,47 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         if (!looped) {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnShadowCloak());
-                    addToList(cardsList, new EnGrudge(15));
-                    addToList(cardsList, new EnGlare());
+                    addToList(cardsList, new EnCovet(), true);
+                    addToList(cardsList, new EnDefendHermit());
+                    addToList(cardsList, new EnPain());
+                    addToList(cardsList, new EnClumsy());
+                    addToList(cardsList, new EnSpite());
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnInjury());
-                    addToList(cardsList, new EnInjury());
-                    addToList(cardsList, new EnDoubt());
+                    addToList(cardsList, new EnMisfire(), extraUpgrades);
+                    addToList(cardsList, new EnGlare());
+                    addToList(cardsList, new EnGhostlyPresence());
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnPurgatory());
+                    addToList(cardsList, new EnMisfire());
+                    addToList(cardsList, new EnMasterOfStrategy());
+                    addToList(cardsList, new EnLoneWolf());
+                    addToList(cardsList, new EnBandage());
+                    AbstractCard wide = new EnWideOpen();
+                    wide.modifyCostForCombat(-99);
+                    addToList(cardsList, wide);
                     addToList(cardsList, new EnMalice());
+                    turn++;
+                    break;
+                case 3:
                     addToList(cardsList, new EnSprayNPray());
+                    addToList(cardsList, new EnEnervate());
+                    addToList(cardsList, new EnLowProfile());
+                    addToList(cardsList, new EnGlare());
+                    turn++;
+                    break;
+                case 4:
+                    addToList(cardsList, new EnClumsy());
+                    addToList(cardsList, new EnClumsy());
+                    addToList(cardsList, new EnDoubt());
+                    turn++;
+                    break;
+                case 5:
+                    addToList(cardsList, new EnPurgatory());
+                    addToList(cardsList, new EnGrudge());
+                    addToList(cardsList, new EnGrudge());
                     turn = 0;
                     looped = true;
                     break;
@@ -78,25 +104,43 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnInjury());
-                    addToList(cardsList, new EnGrudge(17));
-                    addToList(cardsList, new EnSprayNPray());
+                    AbstractCard q = new EnDoubt();
+                    AbstractCard m = new EnMalice();
+                    ((EnMalice) m).setExhaust(q);
+                    addToList(cardsList, m);
+                    addToList(cardsList, q);
+                    AbstractCard wide = new EnWideOpen();
+                    wide.modifyCostForCombat(-99);
+                    addToList(cardsList, wide);
                     turn++;
                     break;
                 case 1:
-                    EnMalice mal = new EnMalice();
-                    addToList(cardsList, mal);
-                    addToList(cardsList, new EnGlare());
-                    AbstractCard doubt = new EnDoubt();
-                    mal.setExhaust(doubt);
-                    addToList(cardsList, doubt);
+                    addToList(cardsList, new EnMisfire(), extraUpgrades);
+                    addToList(cardsList, new EnSpite());
+                    addToList(cardsList, new EnClumsy());
+                    addToList(cardsList, new EnPain());
+                    addToList(cardsList, new EnGrudge(12));
                     turn++;
                     break;
                 case 2:
+                    addToList(cardsList, new EnSprayNPray());
+                    addToList(cardsList, new EnLowProfile());
+                    addToList(cardsList, new EnMisfire());
+                    turn++;
+                    break;
+                case 3:
+                    addToList(cardsList, new EnCovet(), true);
+                    addToList(cardsList, new EnDefendHermit());
+                    addToList(cardsList, new EnGlare());
+                    addToList(cardsList, new EnGlare());
+                    addToList(cardsList, new EnGhostlyPresence());
+                    turn++;
+                    break;
+                case 4:
                     addToList(cardsList, new EnPurgatory());
-                    addToList(cardsList, new EnDoubt());
-                    addToList(cardsList, new EnInjury());
-                    turn=0;
+                    addToList(cardsList, new EnEnervate());
+                    addToList(cardsList, new EnGrudge(12));
+                    turn = 0;
                     break;
             }
         }
@@ -105,6 +149,6 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_DarkstonePeriapt());
+        addRelic(new CBR_Orichalcum());
     }
 }

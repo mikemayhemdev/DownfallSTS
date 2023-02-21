@@ -44,6 +44,7 @@ public class SlimeSpikes extends AbstractSlimeboundCard {
 
         this.baseBlock = 7;
         this.magicNumber = this.baseMagicNumber = 3;
+        SlimeboundMod.loadJokeCardImage(this, "SlimeSpikes.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

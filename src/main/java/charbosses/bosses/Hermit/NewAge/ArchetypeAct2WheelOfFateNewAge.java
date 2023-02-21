@@ -4,37 +4,38 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.colorless.EnGoodInstincts;
 import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
-import charbosses.cards.colorless.EnPanacea;
+import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnNecronomicurse;
 import charbosses.cards.hermit.*;
 import charbosses.powers.bossmechanicpowers.HermitWheelOfFortune;
-import charbosses.relics.*;
+import charbosses.relics.CBR_Necronomicon;
+import charbosses.relics.CBR_NeowsBlessing;
+import charbosses.relics.CBR_PenNib;
+import charbosses.relics.CBR_PhilosopherStone;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import hermit.cards.Strike_Hermit;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.UUID;
 
 import static charbosses.cards.EnemyCardGroup.HAND_HEIGHT_OFFSET;
 import static charbosses.cards.EnemyCardGroup.HAND_ROW_LENGTH;
 
 public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
-    public ArrayList<AbstractBossCard> mockDeck = new ArrayList<>();
+    public ArrayList<AbstractCard> mockDeck = new ArrayList<>();
 
     public ArchetypeAct2WheelOfFateNewAge() {
         super("HERMIT_WHEEL_ARCHETYPE", "Wheel of Fortune");
 
         maxHPModifier += 195;
-        actNum = 2;
+        actNum = 1;
         bossMechanicName = HermitWheelOfFortune.NAME;
-        bossMechanicDesc = HermitWheelOfFortune.DESC[0];
+        bossMechanicDesc = HermitWheelOfFortune.DESC[0] + HermitWheelOfFortune.CARDS_TO_STR + HermitWheelOfFortune.DESC[1];
     }
 
     @Override
@@ -47,64 +48,76 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitWheelOfFortune(p), 1));
     }
 
+    public boolean usedGestalt = false;
+    public int maintenanceLevels = 0;
+
     private void reshuffle() {
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        AbstractCard show = new EnStrikeHermit();
+        show.upgrade();
+        mockDeck.add(show);
+        AbstractCard strik = new EnStrikeHermit();
+        strik.upgrade();
+        mockDeck.add(strik);
+        AbstractCard strik2 = new EnStrikeHermit();
+        mockDeck.add(strik2);
 
-        addCardToDeck(new EnStrikeHermit(), true);
-        addCardToDeck(new EnStrikeHermit(), false);
-        addCardToDeck(new EnDefendHermit(), false);
+        mockDeck.add(new EnDefendHermit());
+        mockDeck.add(new EnHeadshot());
+        AbstractCard wide = new EnWideOpen();
+        wide.upgrade();
+        mockDeck.add(wide);
 
-        addCardToDeck(new EnDesperado(), extraUpgrades);
-        addCardToDeck(new EnStrikeHermit(), true);
-        addCardToDeck(new EnFlashPowder(), true);
-
-        addCardToDeck(new EnWideOpen(), extraUpgrades);
-        addCardToDeck(new EnMaintenance(), true);
-        addCardToDeck(new EnGoodInstincts(), false);
-
-        addCardToDeck(new EnHandOfGreedHermitNecro(), false);
-        addCardToDeck(new EnPanacea(), true);
-        addCardToDeck(new EnShortFuseNecro(), false);
-        addCardToDeck(new EnNecronomicurse(), false);
-    }
-
-    private void addCardToDeck(AbstractBossCard card, boolean upgrade) {
-        if (upgrade) card.upgrade();
-        mockDeck.add(card);
-    }
-
-    public void removeCardFromDeck(UUID cardUuid) {
-        Iterator<AbstractBossCard> var = mockDeck.iterator();
-        AbstractBossCard c;
-        while (var.hasNext()) {
-            c = var.next();
-            if (c.uuid == cardUuid) {
-                mockDeck.remove(c);
-                return;
-            }
+        mockDeck.add(new EnHoleUp());
+        if (usedGestalt) {
+            mockDeck.add(new EnInjury());
+        } else {
+            AbstractCard flash = new EnFlashPowder();
+            flash.upgrade();
+            mockDeck.add(flash);
         }
-    }
+        mockDeck.add(new EnShortFuse());
 
-    public AbstractBossCard getCardFromDeck(UUID cardUuid) {
-        Iterator<AbstractBossCard> var = mockDeck.iterator();
-        AbstractBossCard c;
-        while (var.hasNext()) {
-            c = var.next();
-            if (c.uuid == cardUuid) {
-                return c;
-            }
-        }
-        return null;
+        mockDeck.add(new EnHandOfGreedHermitNecro());
+        AbstractCard virt = new EnVirtue();
+        virt.upgrade();
+        mockDeck.add(virt);
+        AbstractCard maint = new EnMaintenance();
+        maint.upgrade();
+        mockDeck.add(maint);
+
+        mockDeck.add(new EnNecronomicurse());
     }
 
     public void initialize() {
 
         /////   RELICS   /////
         addRelic(new CBR_NeowsBlessing());
+        addRelic(new CBR_PenNib());
         addRelic(new CBR_PhilosopherStone());
         addRelic(new CBR_Necronomicon());
-        addRelic(new CBR_StrangeSpoon());
-        addRelic(new CBR_RedMask());
+    }
+
+    public static void upgradeStrikeOrDefendManually(AbstractCard c) {
+        if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
+            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
+                c.baseDamage += 3;
+                c.upgradedDamage = true;
+            }
+            String NAME;
+            if (c instanceof EnStrikeHermit || c instanceof EnFreeStrikeHermit) {
+                NAME = Strike_Hermit.NAME;
+            } else {
+                NAME = EnDefendHermit.cardStrings.NAME;
+            }
+            c.timesUpgraded++;
+            c.upgraded = true;
+            if (c.timesUpgraded > 1)
+                c.name = NAME + "+" + c.timesUpgraded;
+            else
+                c.name = NAME + "+";
+            c.applyPowers();
+        }
     }
 
     @Override
@@ -113,8 +126,16 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         for (int i = 0; i < 3; i++) {
             AbstractCard target = getNextCard();
             cardsList.add(target);
-            if (target.cardID.equals(EnNecronomicurse.ID)) {
-                AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
+        }
+        for (int i = 0; i < 3; i++) {
+            if (cardsList.get(i) instanceof EnShortFuse) {
+                int reduction = 3;
+                for (int itr2 = 0; itr2 < i; itr2++) {
+                    if (cardsList.get(i) instanceof EnStrikeHermit) {
+                        reduction -= 1;
+                    }
+                }
+                ((EnShortFuse) cardsList.get(i)).updateCostToSpecific(reduction);
             }
         }
         if (AbstractCharBoss.boss instanceof CharBossHermit) {
@@ -124,8 +145,8 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
     }
 
     protected AbstractCard getNextCard() {
-        AbstractBossCard q = mockDeck.remove(0);
-        AbstractCard x = q.makeSameInstanceOf();
+        AbstractCard q = mockDeck.remove(0);
+        AbstractCard x = q.makeStatEquivalentCopy();
         mockDeck.add(mockDeck.size(), q);
         int cardsinrow = Math.min(AbstractCharBoss.boss.hand.group.size() - HAND_ROW_LENGTH * (int) Math.floor((float) AbstractCharBoss.boss.hand.group.size() / (float) HAND_ROW_LENGTH), HAND_ROW_LENGTH);
         float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
@@ -135,60 +156,64 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
     }
 
     public void reInitializeHand() {
-        if (AbstractCharBoss.boss.isDeadOrEscaped()) {
-            return;
-        }
-        if (AbstractCharBoss.boss.hand == null || AbstractCharBoss.boss.hand.size() == 0) {
-            return;
-        }
-
-        AbstractCard bot = AbstractCharBoss.boss.hand.getBottomCard();
-        AbstractCharBoss.boss.hand.removeCard(bot);
-        if (bot instanceof EnShowdown) {
-            ((AbstractHermitBossCard) bot).onSpecificTrigger();
-        }
-        AbstractCard next = getNextCard();
-        AbstractCharBoss.boss.hand.addToTop(next);
-        if (next.cardID.equals(EnNecronomicurse.ID)) {
-            AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
-        }
-        AbstractCharBoss.boss.hand.refreshHandLayout();
-        AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (AbstractCharBoss.boss != null && !AbstractCharBoss.boss.isDead && !AbstractCharBoss.boss.isDying) {
-                    if (AbstractCharBoss.boss.hand != null) {
-                        AbstractCharBoss.boss.hand.group.stream().forEach(q -> ((AbstractBossCard) q).bossDarken());
-                        int budget = AbstractCharBoss.boss.energyPanel.getCurrentEnergy();
-                        for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-                            if (c.costForTurn <= budget && c.costForTurn != -2 && c instanceof AbstractBossCard) {
-                                ((AbstractBossCard) c).createIntent();
-                                ((AbstractBossCard) c).bossLighten();
-                                budget -= c.costForTurn;
-                                budget += ((AbstractBossCard) c).energyGeneratedIfPlayed;
-                                if (budget < 0) budget = 0;
-                            } else if (c.costForTurn == -2 && c.type == AbstractCard.CardType.CURSE && c.color == AbstractCard.CardColor.CURSE) {
-                                ((AbstractBossCard) c).bossLighten();
+        if (!AbstractCharBoss.boss.isDeadOrEscaped()) {
+            if (AbstractCharBoss.boss.hand != null) {
+                if (AbstractCharBoss.boss.hand.size() > 0) {
+                    AbstractCard bot = AbstractCharBoss.boss.hand.getBottomCard();
+                    AbstractCharBoss.boss.hand.removeCard(bot);
+                    if (bot instanceof EnShowdown || bot instanceof EnItchyTriggerAct2) {
+                        ((AbstractHermitBossCard) bot).onSpecificTrigger();
+                    }
+                    AbstractCharBoss.boss.hand.addToTop(getNextCard());
+                    if (AbstractCharBoss.boss.hand.getTopCard() instanceof EnShortFuse) {
+                        int reduction = 3;
+                        for (int itr2 = 0; itr2 < 3; itr2++) {
+                            if (AbstractCharBoss.boss.hand.group.get(itr2) instanceof EnStrikeHermit) {
+                                reduction -= 1;
                             }
                         }
-                        for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-                            AbstractBossCard cB = (AbstractBossCard) c;
-                            cB.refreshIntentHbLocation();
-                            c.applyPowers();
+                        ((EnShortFuse) AbstractCharBoss.boss.hand.getTopCard()).updateCostToSpecific(reduction);
+                    }
+                    AbstractCharBoss.boss.hand.refreshHandLayout();
+                    AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            if (AbstractCharBoss.boss != null && !AbstractCharBoss.boss.isDead && !AbstractCharBoss.boss.isDying) {
+                                if (AbstractCharBoss.boss.hand != null) {
+                                    AbstractCharBoss.boss.hand.group.stream().forEach(q -> ((AbstractBossCard) q).bossDarken());
+                                    int budget = AbstractCharBoss.boss.energyPanel.getCurrentEnergy();
+                                    for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                                        if (c.costForTurn <= budget && c.costForTurn != -2 && c instanceof AbstractBossCard) {
+                                            ((AbstractBossCard) c).createIntent();
+                                            ((AbstractBossCard) c).bossLighten();
+                                            budget -= c.costForTurn;
+                                            budget += ((AbstractBossCard) c).energyGeneratedIfPlayed;
+                                            if (budget < 0) budget = 0;
+                                        } else if (c.costForTurn == -2 && c.type == AbstractCard.CardType.CURSE && c.color == AbstractCard.CardColor.CURSE) {
+                                            ((AbstractBossCard) c).bossLighten();
+                                        }
+                                    }
+                                    for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                                        AbstractBossCard cB = (AbstractBossCard) c;
+                                        cB.refreshIntentHbLocation();
+                                        c.applyPowers();
+                                    }
+                                    AbstractCharBoss.boss.hand.refreshHandLayout();
+                                }
+                            }
                         }
-                        AbstractCharBoss.boss.hand.refreshHandLayout();
+                    });
+                    if (AbstractCharBoss.boss instanceof CharBossHermit) {
+                        CharBossHermit.previewCard = mockDeck.get(0).makeStatEquivalentCopy();
                     }
                 }
             }
-        });
-        if (AbstractCharBoss.boss instanceof CharBossHermit) {
-            CharBossHermit.previewCard = mockDeck.get(0).makeStatEquivalentCopy();
         }
     }
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_StoneCalendar());
+
     }
 }

@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class PreciseThrust extends AbstractChampCard {
 
     public final static String ID = makeID("PreciseThrust");
@@ -25,6 +27,7 @@ public class PreciseThrust extends AbstractChampCard {
         tags.add(ChampMod.COMBODEFENSIVE);
         tags.add(ChampMod.COMBOBERSERKER);
         postInit();
+        loadJokeCardImage(this, "PreciseThrust.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -26,6 +26,7 @@ public class PocketSentry extends CustomRelic {
     public static final String IMG_PATH = "relics/pocketSentry.png";
     public static final String OUTLINE_IMG_PATH = "relics/pocketSentryOutline.png";
     public static final String LARGE_IMG_PATH = "relics/pocketSentryLarge.png";
+    private static final int DAMAGE = 7;
 
     public PocketSentry() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
@@ -35,23 +36,32 @@ public class PocketSentry extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0] + DAMAGE + this.DESCRIPTIONS[1];
     }
 
-    public void onEquip() {
-        this.counter = 0;
-    }
+    @Override
+    public void atTurnStartPostDraw() {
+        super.atTurnStartPostDraw();
+        this.flash();
+        if (counter == 0) {
+            counter = 1;
+            AbstractRelic r = this;
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(null,true,AbstractDungeon.relicRng);
+                    if(m != null){
+                        AbstractDungeon.actionManager.addToTop(new PseudoDamageRandomEnemyAction(m, new DamageInfo(AbstractDungeon.player, DAMAGE, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                        AbstractDungeon.actionManager.addToTop(new VFXAction(new SmallLaserEffect(r.hb.cX - (5F * Settings.scale), r.hb.cY + (10F * Settings.scale), m.hb.cX, m.hb.cY), 0.3F));
+                        AbstractDungeon.actionManager.addToTop(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+                    }
+                }
+            });
 
-    public void atTurnStart() {
-        if (this.counter == -1) {
-            this.counter += 2;
+
         } else {
-            ++this.counter;
-        }
-
-        if (this.counter == 3) {
-            this.counter = 0;
-            this.flash();
+            counter = 0;
             AbstractRelic r = this;
             addToBot(new AbstractGameAction() {
                 @Override

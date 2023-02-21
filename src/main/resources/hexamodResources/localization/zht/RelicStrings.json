@@ -25,7 +25,7 @@
     "NAME": "幽靈雪花",
     "FLAVOR": "我感覺……好冷。",
     "DESCRIPTIONS": [
-      "回合開始時獲得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才引爆，失去 #b1 點 #yhexamod:熱烈 。"
+      "回合開始時獲得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才引爆。"
     ]
   },
   "hexamod:SoulConsumer": {

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.actions.TricksyFollowUpAction;
 import gremlin.orbs.SneakyGremlin;
@@ -36,6 +37,7 @@ public class Tricksy extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
         this.tags.add(SNEAKY_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Tricksy.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

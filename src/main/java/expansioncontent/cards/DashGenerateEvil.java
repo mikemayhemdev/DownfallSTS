@@ -15,6 +15,8 @@ import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.expansionContentMod;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
 import java.util.ArrayList;
 
 
@@ -50,6 +52,7 @@ public class DashGenerateEvil extends AbstractExpansionCard {
         baseBlock = BLOCK;
         baseDamage = DAMAGE;
         this.exhaust = true;
+        loadJokeCardImage(this, "DashGenerateEvil.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

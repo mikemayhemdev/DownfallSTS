@@ -7,20 +7,35 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
+import hermit.powers.Bruise;
 import hermit.powers.SnipePower;
-import hermit.util.Wiz;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
+
+import java.util.Iterator;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class GhostlyPresence extends AbstractDynamicCard {
+
+    //
+    /*
+     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
+     */
+
+
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(GhostlyPresence.class.getSimpleName());
     public static final String IMG = makeCardPath("ghostly_presence.png");
+
+    // /TEXT DECLARATION/
+
 
     // STAT DECLARATION
 
@@ -54,8 +69,11 @@ public class GhostlyPresence extends AbstractDynamicCard {
             int DeadOnTimes = DeadOnAmount();
 
             for (int a = 0; a < DeadOnTimes; a++) {
-                for(AbstractMonster mo: Wiz.getEnemies()) {
-                    this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                Iterator var4 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+                while (var4.hasNext()) {
+                    AbstractMonster mo = (AbstractMonster) var4.next();
+                    this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, magicNumber, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
                 }
             }
 

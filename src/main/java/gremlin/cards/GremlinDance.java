@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import gremlin.actions.ShackleAction;
@@ -60,6 +61,7 @@ public class GremlinDance extends AbstractGremlinCard {
         cardsList.add(new GremlinDance("sneak"));
         cardsList.add(new GremlinDance("wizard"));
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        GremlinMod.loadJokeCardImage(this, "GremlinDance.png");
     }
 
     public GremlinDance(String gremlin) {

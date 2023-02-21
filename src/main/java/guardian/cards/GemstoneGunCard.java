@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class GemstoneGunCard extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("GemstoneGunCard");
     public static final String NAME;
@@ -42,6 +44,7 @@ public class GemstoneGunCard extends AbstractGuardianCard {
         loadGemMisc();
         this.selfRetain = true;
         this.exhaust = true;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("GemstoneGunCard.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

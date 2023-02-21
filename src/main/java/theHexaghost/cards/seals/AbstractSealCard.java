@@ -23,6 +23,11 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
 
     public AbstractSealCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, cost, type, rarity, target);
+        if (downfallMod.disableDescriptors && !this.rawDescription.contains(descriptorStrings[1])) {
+            // if translators delete only "Seal" it would add another Ethereal
+            this.rawDescription = this.rawDescription.replace(EtherealStrings, EtherealStrings.replace("NL ", "") + descriptorStrings[1]);
+            initializeDescription();
+        }
         tags.add(CardTags.HEALING);
         isEthereal = true;
     }
@@ -32,6 +37,8 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
             upgradeName();
             isEthereal = false;
             rawDescription = UPGRADE_DESCRIPTION;
+            if (downfallMod.disableDescriptors && !this.rawDescription.contains(descriptorStrings[1]))
+                rawDescription = descriptorStrings[1] + rawDescription;
             initializeDescription();
         }
     }
@@ -77,4 +84,22 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
     }
 
     public abstract void realUse(AbstractPlayer p, AbstractMonster m);
+
+    @Override
+    public List<String> getCardDescriptors() {
+        List<String> tags = new ArrayList<>();
+        if (!downfallMod.disableDescriptors) {
+            tags.add(descriptorStrings[0]);
+        }
+        return tags;
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltipsTop() {
+        List<TooltipInfo> tips = new ArrayList<>();
+        if (!downfallMod.disableDescriptors && !keywords.contains(HexaMod.makeID(descriptorStrings[0]).toLowerCase())) {
+            tips.add(new TooltipInfo(BaseMod.getKeywordTitle("hexamod:seal"), BaseMod.getKeywordDescription("hexamod:seal")));
+        }
+        return tips;
+    }
 }

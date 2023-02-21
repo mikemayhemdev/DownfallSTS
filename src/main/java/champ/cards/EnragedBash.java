@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 import static champ.ChampMod.fatigue;
 
 public class EnragedBash extends AbstractChampCard {
@@ -25,6 +27,7 @@ public class EnragedBash extends AbstractChampCard {
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
         postInit();
+        loadJokeCardImage(this, "EnragedBash.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

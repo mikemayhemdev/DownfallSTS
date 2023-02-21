@@ -79,7 +79,7 @@ public class DefensiveStance extends AbstractChampStance {
     }
 
     public static int finisherAmount() {
-        int x = 8;
+        int x = 10;
         if (AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID)) {
             x += 5;
         }

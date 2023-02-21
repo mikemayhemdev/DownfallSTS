@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.SlimeboundMod;
 
 public class Defend_Slimebound extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:Defend_Slimebound";
@@ -36,6 +37,7 @@ public class Defend_Slimebound extends AbstractSlimeboundCard {
 
         this.baseBlock = 5;
         this.tags.add(CardTags.STARTER_DEFEND);
+        SlimeboundMod.loadJokeCardImage(this, "Defend_R.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

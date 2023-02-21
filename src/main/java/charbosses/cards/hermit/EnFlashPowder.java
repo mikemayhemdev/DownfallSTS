@@ -35,12 +35,9 @@ public class EnFlashPowder extends AbstractHermitBossCard {
 
         addToBot(new GainBlockAction(m, m, this.block));
         this.addToBot(new ApplyPowerAction(p, m, new StrengthPower(p, -this.magicNumber), -this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
-    }
-
-    @Override
-    public void triggerOnExhaust() {
-        if (AbstractCharBoss.boss != null && AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge)
-            ((ArchetypeAct2WheelOfFateNewAge) AbstractCharBoss.boss.chosenArchetype).removeCardFromDeck(uuid);
+        if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
+            ((ArchetypeAct2WheelOfFateNewAge) AbstractCharBoss.boss.chosenArchetype).usedGestalt = true;
+        }
     }
 
     @Override

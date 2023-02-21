@@ -25,7 +25,6 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
     public static final String OUTLINE_IMG_PATH = "relics/bottledAnomalyOutline.png";
     public AbstractCard card = null;
     private boolean cardSelected = true;
-    private boolean cardRemoved = false;
 
     public BottledAnomaly() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
@@ -104,17 +103,9 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             setDescriptionAfterLoading();
         }
-
     }
 
     private void setDescriptionAfterLoading() {
-        if(cardRemoved){
-            tips.clear();
-            this.description = this.DESCRIPTIONS[4];
-            tips.add(new PowerTip(name, description));
-            initializeTips();
-            return ;
-        }
         this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
         tips.clear();
         tips.add(new PowerTip(name, description));
@@ -128,25 +119,6 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
 
     @Override
     public void atBattleStartPreDraw() {
-        if (!cardRemoved && cardSelected){
-            boolean cardExists = false;
-            for(AbstractCard c :AbstractDungeon.player.masterDeck.group){
-                if (c.uuid==card.uuid){
-                    cardExists = true;
-                    break;
-                }
-            }
-            if (!cardExists){
-                cardRemoved = true;
-                tips.clear();
-                this.description = this.DESCRIPTIONS[4];
-                tips.add(new PowerTip(name, description));
-                initializeTips();
-            }
-        }
-        if (cardRemoved) {
-            return;
-        }
         super.atBattleStartPreDraw();
         counter = 0;
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
@@ -159,9 +131,6 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
 
     @Override
     public void atTurnStartPostDraw() {
-        if (cardRemoved) {
-            return;
-        }
         if (!this.grayscale) {// 26
             ++this.counter;// 27
         }
@@ -187,5 +156,4 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
         counter = -1;
         grayscale = false;
     }
-
 }

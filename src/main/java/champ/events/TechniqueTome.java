@@ -1,6 +1,12 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package champ.events;
 
 import basemod.helpers.CardModifierManager;
+import champ.ChampMod;
 import champ.util.TechniqueMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,9 +22,12 @@ import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import downfall.cards.curses.Haunted;
 import downfall.cards.curses.PrideStandard;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class TechniqueTome extends AbstractImageEvent {
     public static final String ID = "champ:TechniqueTome";
@@ -138,11 +147,15 @@ public class TechniqueTome extends AbstractImageEvent {
 
     public static CardGroup getNonTechniqueCards() {
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.type == AbstractCard.CardType.ATTACK && !CardModifierManager.hasModifier(c, TechniqueMod.ID)) {
+        Iterator var2 = AbstractDungeon.player.masterDeck.group.iterator();
+
+        while (var2.hasNext()) {
+            AbstractCard c = (AbstractCard) var2.next();
+            if (c.type == AbstractCard.CardType.ATTACK) {
                 retVal.group.add(c);
             }
         }
+        //SlimeboundMod.logger.info("Non Technique card count: " + retVal.group.size());
         return retVal;
     }
 }

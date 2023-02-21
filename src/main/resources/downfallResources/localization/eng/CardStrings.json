@@ -1,4 +1,8 @@
 {
+  "downfall:SummonMushrooms": {
+    "NAME": "Fungus Among Us",
+    "DESCRIPTION": "Kill all Mushrooms. Heal HP equal to their remaining HP. NL Summon two Mushrooms."
+  },
   "downfall:Aged": {
     "NAME": "Aged",
     "DESCRIPTION": "Unplayable. Ethereal. NL At the end of your turn, add a *Void to the top of your draw pile."
@@ -22,13 +26,5 @@
   "downfall:Scatterbrained": {
     "NAME": "Scatterbrained",
     "DESCRIPTION": "Unplayable. NL When drawn, if it is your turn, fill your hand with gremlin:Echoes of this card."
-  },
-  "downfall:SummonMushrooms": {
-    "NAME": "Fungus Among Us",
-    "DESCRIPTION": "Kill all Mushrooms. Heal HP equal to their remaining HP. NL Summon two Mushrooms."
-  },
-  "downfall:BossMaintenance": {
-    "NAME": "Maintenance",
-    "DESCRIPTION": "*Strikes deal !M! more damage this combat. NL Gain !B! Dexterity. NL This costs 1 more this combat."
   }
 }

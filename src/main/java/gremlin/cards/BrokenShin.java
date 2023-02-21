@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.powers.AgonyPower;
 import sneckomod.SneckoMod;
 
@@ -37,6 +38,7 @@ public class BrokenShin extends AbstractGremlinCard {
         this.tags.add(FAT_GREMLIN);
         this.exhaust = true;
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "BrokenShin.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

@@ -58,7 +58,7 @@ public class Gem_Yellow extends AbstractGemCard {
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(0.5F));
-        AbstractDungeon.actionManager.addToBottom(new ReduceRightMostStasisAction());
+        AbstractDungeon.actionManager.addToBottom(new ReduceRightMostStasisAction(false));
 
     }
 

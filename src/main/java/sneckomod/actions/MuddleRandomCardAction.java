@@ -3,14 +3,15 @@ package sneckomod.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
 
 public class MuddleRandomCardAction extends AbstractGameAction {
-    private final boolean onlyHighest;
-    private boolean cannotCost3 = false;
+
+    private boolean onlyHighest = false;
+
+    private boolean modifiedCost = false;
 
     public MuddleRandomCardAction(int i) {
         this(i, false);
@@ -24,14 +25,14 @@ public class MuddleRandomCardAction extends AbstractGameAction {
     public MuddleRandomCardAction(int i, boolean highest, boolean no3s) {
         amount = i;
         onlyHighest = highest;
-        cannotCost3 = no3s;
+        modifiedCost = no3s;
     }
 
 
     public void update() {
         isDone = true;
         ArrayList<AbstractCard> myCardList = new ArrayList<>(AbstractDungeon.player.hand.group);
-        myCardList.removeIf(c -> c.hasTag(SneckoMod.SNEKPROOF));
+
 
         for (int i = 0; i < this.amount; ++i) {// 101
             if (!myCardList.isEmpty()) {
@@ -58,7 +59,7 @@ public class MuddleRandomCardAction extends AbstractGameAction {
                 }
 
                 if (card != null)
-                    addToTop(new MuddleAction(card, cannotCost3));
+                    addToTop(new MuddleAction(card, modifiedCost));
             }
         }
     }

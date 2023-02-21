@@ -1,15 +1,28 @@
 package hermit.cards;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
+import com.megacrit.cardcrawl.actions.utility.ScryAction;
+import com.megacrit.cardcrawl.cards.curses.Shame;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.actions.CheatAction;
 import hermit.characters.hermit;
+import hermit.powers.Concentration;
+
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Cheat extends AbstractDynamicCard {
+
+
+    /*
+     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
+     */
+
 
     // TEXT DECLARATION
 

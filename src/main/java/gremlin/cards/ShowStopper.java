@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 import gremlin.powers.WizPower;
 import sneckomod.SneckoMod;
@@ -40,6 +41,7 @@ public class ShowStopper extends AbstractGremlinCard {
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "ShowStopper.png");
     }
 
     @Override

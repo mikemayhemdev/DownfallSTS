@@ -44,6 +44,7 @@ public class TongueLash extends AbstractSlimeboundCard {
 
         this.baseDamage = 6;
         this.magicNumber = this.baseMagicNumber = 2;
+        SlimeboundMod.loadJokeCardImage(this, "TongueLash.png");
 
 
        // this.tags.add(SneckoMod.BANNEDFORSNECKO);

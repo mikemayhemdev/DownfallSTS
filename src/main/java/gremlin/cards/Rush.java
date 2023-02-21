@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 
 import static gremlin.GremlinMod.NOB_GREMLIN;
 
@@ -36,6 +37,7 @@ public class Rush extends AbstractGremlinCard {
         this.exhaust = true;
         this.tags.add(NOB_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Rush.png");
     }
 
     @Override

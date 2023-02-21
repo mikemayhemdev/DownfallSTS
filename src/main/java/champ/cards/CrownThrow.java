@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class CrownThrow extends AbstractChampCard {
 
     public final static String ID = makeID("CrownThrow");
@@ -31,6 +33,7 @@ public class CrownThrow extends AbstractChampCard {
         baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
+        loadJokeCardImage(this, "CrownThrow.png");
     }
 
     public void returned() {
