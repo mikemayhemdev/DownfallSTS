@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -92,9 +93,11 @@ public class Preprogram extends AbstractGuardianCard {
     @Override //zhs card text thing
     public void initializeDescriptionCN() {
         super.initializeDescriptionCN();
-        StringBuilder first_line = new StringBuilder();
-        this.description.get(0).text=first_line.append(this.description.get(0).text).append("，").toString();
-        this.description.remove(1);
+        if(Settings.language == Settings.GameLanguage.ZHS) {
+            StringBuilder first_line = new StringBuilder();
+            this.description.get(0).text = first_line.append(this.description.get(0).text).append("，").toString();
+            this.description.remove(1);
+        }
     }
 }
 
