@@ -81,11 +81,13 @@
   "reskinContent:ReSkinBronze": {
     "TEXT": [
       "Automaton",
-      "\"Automaton\""
+      "\"Automaton\"",
+      "The Perfect"
     ],
     "EXTRA_TEXT": [
       "",
-      "C'est ça ! De la tête aux pieds, c'est bien l'Automaton ! NL Je n'ai jamais rien vu qui ressemble autant à l'Automate!"
+      "C'est ça ! De la tête aux pieds, c'est bien l'Automaton ! NL Je n'ai jamais rien vu qui ressemble autant à l'Automate!",
+      "[BOOT] Initializing... Core Systems Online - No Faults Detected NL [OBJECTIVE] BALANCE will be ENFORCED"
     ]
   }
 }
