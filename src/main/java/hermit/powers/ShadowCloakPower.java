@@ -15,8 +15,6 @@ import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makePowerPath;
 
-//Gain 1 dex for the turn for each card played.
-
 public class ShadowCloakPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
@@ -25,8 +23,6 @@ public class ShadowCloakPower extends AbstractPower implements CloneablePowerInt
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
-    // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("shadow_cloak_p.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("shadow_cloak.png"));
 
@@ -50,7 +46,6 @@ public class ShadowCloakPower extends AbstractPower implements CloneablePowerInt
         if (card.color == AbstractCard.CardColor.CURSE) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, amount));
         }
-
     }
 
     public void onExhaust(AbstractCard card){
@@ -59,13 +54,9 @@ public class ShadowCloakPower extends AbstractPower implements CloneablePowerInt
         }
     }
 
-
-    // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-
     }
 
     @Override

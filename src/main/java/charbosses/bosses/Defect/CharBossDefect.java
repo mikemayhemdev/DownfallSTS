@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
+import com.megacrit.cardcrawl.core.Settings;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 
@@ -34,6 +35,9 @@ public class CharBossDefect extends AbstractCharBoss {
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         this.stateData.setMix("Hit", "Idle", 0.1f);
         this.flipHorizontal = true;
+
+        this.dialogX = this.drawX + 0.0F * Settings.scale;
+        this.dialogY = this.drawY + 170.0F * Settings.scale;
         e.setTimeScale(0.9f);
         this.energyString = "[B]";
 

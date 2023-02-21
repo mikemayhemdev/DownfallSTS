@@ -11,6 +11,7 @@ import theHexaghost.GhostflameHelper;
 import theHexaghost.powers.BurnPower;
 
 @CardIgnore
+@Deprecated
 public class DynamicBlow extends AbstractHexaCard {
 
     public final static String ID = makeID("DynamicBlow");

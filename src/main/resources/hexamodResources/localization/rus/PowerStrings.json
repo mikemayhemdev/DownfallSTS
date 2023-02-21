@@ -64,7 +64,8 @@
     "NAME": "Интенсивность",
     "DESCRIPTIONS": [
       "Увеличивает кол-во урона, #yОжога #yдуши и #yЗащиты, накладываемых Огоньками при #yЗажигании на #b",
-      "."
+      ".",
+      "Decrease the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when Ignited by #b"
     ]
   },
   "hexamod:EtherealRefundPower": {
@@ -135,10 +136,10 @@
   "hexamod:LoseEnhanceInTurnsPower": {
     "NAME": "Перегрев",
     "DESCRIPTIONS": [
-      "Отнимает #b в конце вашего хода",
+      "Отнимает #b",
       "Через #b",
       " хода(-ов), отнимает #b",
-      " #yИнтенсивности."
+      " #yИнтенсивности в конце вашего хода."
     ]
   },
   "hexamod:ParanormalFormPower": {

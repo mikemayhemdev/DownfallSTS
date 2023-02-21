@@ -25,7 +25,7 @@
     "NAME": "자나토스의 얼음 부적",
     "FLAVOR": "차가움이... 느껴집니다.",
     "DESCRIPTIONS": [
-      "내 턴 시작 시 [E] 를 얻습니다. #yhexamod:영혼화상의 효과가 #b4 턴 후에 발동하게 됩니다."
+      "내 턴 시작 시 [E] 를 얻습니다. #yhexamod:영혼화상의 효과가 #b4 턴 후에 발동하게 됩니다, Start each combat with #b1 less #yhexamod:Intensity."
     ]
   },
   "hexamod:SoulConsumer": {
@@ -71,8 +71,8 @@
     ]
   },
   "hexamod:BolsterEngine": {
-    "NAME": "부채질의 막대기",
-    "FLAVOR": "화염 방패! 불이 더 거세져 버렸습니다.",
+    "NAME": "까다로운 부채질 막대기",
+    "FLAVOR": "천 권의 연구가 뒷받침해주고 있습니다. 아는 것이 힘이다!",
     "DESCRIPTIONS": [
       "매 전투 시 처음으로 #y파워 카드를 사용하면 #y힘을 #b1 얻고 #y방어도를 #b6 얻습니다."
     ]

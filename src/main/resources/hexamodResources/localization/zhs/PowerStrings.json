@@ -8,7 +8,7 @@
     ]
   },
   "hexamod:ApocalypticArmorPower": {
-    "NAME": "决战末世",
+    "NAME": "末日",
     "DESCRIPTIONS": [
       "下一次你 #y点燃 狱焱鬼火且所有的 #b",
       " 枚鬼火已 #y点燃 ，回合结束时额外获得一回合。",
@@ -32,10 +32,10 @@
   "hexamod:BurnPower": {
     "NAME": "灼魂",
     "DESCRIPTIONS": [
-      "在 #b",
-      " 个回合后，失去 #b",
-      " 个回合后，失去 #b",
-      " 点生命，移除本效果。"
+      "#b",
+      " 个回合后，该单位失去 #b",
+      " 个回合后，该单位失去 #b",
+      " 点生命，并移除所有 #y灼魂 层数。"
     ]
   },
   "hexamod:BurnvenomPower": {
@@ -64,7 +64,8 @@
     "NAME": "热烈",
     "DESCRIPTIONS": [
       "提高 #y鬼火 点燃效果提供的伤害 、 #y灼魂 与 #y格挡 #b",
-      " 点。"
+      " 点。",
+      "降低 #y鬼火 点燃效果提供的伤害 、 #y灼魂 与 #y格挡 #b"
     ]
   },
   "hexamod:EtherealRefundPower": {
@@ -92,20 +93,20 @@
   "hexamod:StopFromAdvancingPower": {
     "NAME": "此刻",
     "DESCRIPTIONS": [
-      "你的回合结束时不会自动 #y步进 。"
+      "你的回合结束时，不会自动跳至下枚鬼火。"
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
-    "NAME": "鬼火屏障",
+    "NAME": "亡魂屏障",
     "DESCRIPTIONS": [
-      "每当受到攻击时，给予攻击者 #b",
+      "本回合每当你受到攻击，给予攻击者 #b",
       " 层 #y灼魂 。"
     ]
   },
   "hexamod:GiftsFromTheDeadPower": {
     "NAME": "深处馈赠",
     "DESCRIPTIONS": [
-      "你的回合开始时， #y取回 随机 #b",
+      "你的回合开始时，随机 #y取回 #b",
       " 张 #y阴世",
       " 牌。",
       " 牌。"

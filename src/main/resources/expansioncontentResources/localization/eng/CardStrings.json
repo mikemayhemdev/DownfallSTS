@@ -46,14 +46,12 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "Shaper's Blessing",
-    "DESCRIPTION": "Choose - Gain !M! Strength or 5 Plated Armor.",
-    "UPGRADE_DESCRIPTION": "Choose - Gain !M! Strength or 8 Plated Armor.",
+    "DESCRIPTION": "Choose - Gain !M! Strength or !DM! Plated Armor.",
     "EXTENDED_DESCRIPTION": [
       "Donu's Power",
       "Gain !M! Strength.",
       "Deca's Shield",
-      "Gain 5 Plated Armor.",
-      "Gain 8 Plated Armor."
+      "Gain !M! Plated Armor."
     ]
   },
   "expansioncontent:PrepareCrush": {

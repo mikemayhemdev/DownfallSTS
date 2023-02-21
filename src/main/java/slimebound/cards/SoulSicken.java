@@ -15,6 +15,7 @@ import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
 
 
+@Deprecated
 public class SoulSicken extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:SoulSicken";
     public static final String NAME;

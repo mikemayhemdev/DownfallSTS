@@ -10,9 +10,9 @@
   "bronze:Default": {
     "NAME": "Class Default",
     "DESCRIPTIONS": [
-      "Next time you create a Function, #yEncode a copy of the first card in it.",
+      "Next time you create a Function, #yEncode a copy of current card in the first slot.",
       "Next #b",
-      " times you create a Function, #yEncode a copy of the first card in it."
+      " times you create a Function, #yEncode a copy of current card in the first slot."
     ]
   },
   "bronze:Feature": {

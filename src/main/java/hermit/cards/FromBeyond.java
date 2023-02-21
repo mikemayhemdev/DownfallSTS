@@ -1,7 +1,6 @@
 package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,20 +8,14 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.actions.FastLoseHPAction;
-import hermit.actions.FromBeyondAction;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
+import hermit.util.Wiz;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class FromBeyond extends AbstractDynamicCard {
-
-
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
 
     // TEXT DECLARATION
 
@@ -61,8 +54,20 @@ public class FromBeyond extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        for (int i = 0; i<p.exhaustPile.size();i++){
-            this.addToBot(new FromBeyondAction(this, this.magicNumber));
+        int dameg = this.magicNumber;
+
+        for (int i = 0; i<p.exhaustPile.size();i++) {
+            Wiz.atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    target = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
+                    if (this.target != null && !isDeadOrEscaped(this.target)) {
+                        this.addToTop(new FastLoseHPAction(this.target, AbstractDungeon.player, dameg, EnumPatch.HERMIT_GHOSTFIRE));
+                    }
+
+                    isDone = true;
+                }
+            });
         }
     }
 

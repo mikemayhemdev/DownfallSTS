@@ -17,19 +17,10 @@ import static hermit.HermitMod.makeCardPath;
 
 public class Scavenge extends AbstractDynamicCard {
 
-
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
-
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Scavenge.class.getSimpleName());
     public static final String IMG = makeCardPath("scavenge.png");
-
-    // /TEXT DECLARATION/
-
 
     // STAT DECLARATION
 
@@ -74,8 +65,6 @@ public class Scavenge extends AbstractDynamicCard {
 
             this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
-
-
     }
 
     public void triggerOnGlowCheck() {
