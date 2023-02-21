@@ -68,7 +68,6 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
             Method loadAnimationMethod = AbstractCreature.class.getDeclaredMethod("loadAnimation", new Class[] { String.class, String.class, float.class });
             loadAnimationMethod.setAccessible(true);
             loadAnimationMethod.invoke(AbstractCharBoss.boss, new Object[] { "expansioncontentResources/images/bosses/defect/2/clockworkDefect.atlas", "expansioncontentResources/images/bosses/defect/2/clockworkDefect.json", 1.0f });
-            //ReflectionHacks.privateMethod(AbstractCharBoss.class, "loadAnimation", String.class, String.class, float.class).invoke(AbstractCharBoss.boss, "expansioncontentResources/images/bosses/ironclad/2/mushroomclad.atlas", "expansioncontentResources/images/bosses/ironclad/2/mushroomclad.json", 1.0f);
             AnimationState.TrackEntry e = AbstractCharBoss.boss.state.setAnimation(0, "Idle", true);
             ((AnimationStateData)ReflectionHacks.getPrivate(AbstractCharBoss.boss, AbstractCharBoss.class, "stateData")).setMix("Hit", "Idle", 0.1f);
             e.setTimeScale(0.9f);
