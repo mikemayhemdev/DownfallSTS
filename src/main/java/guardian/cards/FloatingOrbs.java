@@ -52,7 +52,7 @@ public class FloatingOrbs extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FloatingOrbsPower(p), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FloatingOrbsPower(p,1), 1));
     }
 
     public AbstractCard makeCopy() {
