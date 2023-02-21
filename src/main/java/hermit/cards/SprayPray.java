@@ -11,7 +11,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
-
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
@@ -62,4 +61,11 @@ public class SprayPray extends AbstractDynamicCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
     }
+
+    @Override //zhs card text thing
+    public void initializeDescriptionCN() {
+        super.initializeDescriptionCN();
+        this.description.remove(1);
+    }
+
 }
