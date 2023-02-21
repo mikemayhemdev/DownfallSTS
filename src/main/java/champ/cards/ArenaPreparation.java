@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.cardmods.RetainCardMod;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class ArenaPreparation extends AbstractChampCard {
     public final static String ID = makeID("ArenaPreparation");
 
@@ -16,6 +18,7 @@ public class ArenaPreparation extends AbstractChampCard {
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
         postInit();
+        loadJokeCardImage(this, "ArenaPreparation.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

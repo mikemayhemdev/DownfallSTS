@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class StrikeForStrike extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("StrikeForStrike");
     private static final CardStrings cardStrings;
@@ -24,6 +26,7 @@ public class StrikeForStrike extends AbstractGuardianCard {
         this.tags.add(CardTags.STRIKE);
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("StasisStrike.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

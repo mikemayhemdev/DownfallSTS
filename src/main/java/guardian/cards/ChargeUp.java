@@ -12,6 +12,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.NextTurnGainTemporaryStrengthPower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class ChargeUp extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("ChargeUp");
     public static final String IMG_PATH = GuardianMod.getResourcePath("cards/chargeup.png");
@@ -24,6 +26,7 @@ public class ChargeUp extends AbstractGuardianCard {
         this.socketCount = 0;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("ChargeUp.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

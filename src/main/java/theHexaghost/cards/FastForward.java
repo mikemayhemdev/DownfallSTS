@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 
 public class FastForward extends AbstractHexaCard {
@@ -11,6 +12,7 @@ public class FastForward extends AbstractHexaCard {
     public FastForward() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 2;
+        HexaMod.loadJokeCardImage(this, "FastForward.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

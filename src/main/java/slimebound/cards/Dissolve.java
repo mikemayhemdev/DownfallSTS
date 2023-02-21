@@ -22,6 +22,7 @@ public class Dissolve extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
         this.cardsToPreview = new Lick();
+        SlimeboundMod.loadJokeCardImage(this, "Dissolve.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

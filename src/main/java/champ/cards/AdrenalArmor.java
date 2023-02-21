@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class AdrenalArmor extends AbstractChampCard {
     public final static String ID = makeID("AdrenalArmor");
 
@@ -12,6 +14,7 @@ public class AdrenalArmor extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 7;
         baseMagicNumber = magicNumber = 2;
+        loadJokeCardImage(this, "AdrenalArmor.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
