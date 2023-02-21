@@ -60,8 +60,8 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
 
-        // animation
-        try {
+        // animation (dragonbones broke it)
+        /*try {
             Method loadAnimationMethod = AbstractCreature.class.getDeclaredMethod("loadAnimation", new Class[] { String.class, String.class, float.class });
             loadAnimationMethod.setAccessible(true);
             loadAnimationMethod.invoke(AbstractCharBoss.boss, new Object[] { "expansioncontentResources/images/bosses/ironclad/2/Mushroomskeleton.atlas", "expansioncontentResources/images/bosses/ironclad/2/Mushroomskeleton.json", 1.0f });
@@ -71,7 +71,7 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
             e.setTimeScale(0.6f);
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     @Override
