@@ -15,6 +15,7 @@ import static hermit.HermitMod.makeCardPath;
 
 public class ShadowCloak extends AbstractDynamicCard {
 
+
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(ShadowCloak.class.getSimpleName());
@@ -24,6 +25,7 @@ public class ShadowCloak extends AbstractDynamicCard {
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
 
     // STAT DECLARATION
 
@@ -39,6 +41,7 @@ public class ShadowCloak extends AbstractDynamicCard {
 
     // /STAT DECLARATION/
 
+
     public ShadowCloak() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
@@ -52,6 +55,8 @@ public class ShadowCloak extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new ShadowCloakPower(p, magicNumber), magicNumber));
     }
+
+
 
     //Upgraded stats.
     @Override

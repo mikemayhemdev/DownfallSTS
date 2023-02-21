@@ -1,26 +1,25 @@
 package hermit.cards;
 
-import basemod.BaseMod;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
+import hermit.actions.FullyLoadedAction;
 import hermit.actions.SoundAction;
 import hermit.characters.hermit;
-import hermit.util.Wiz;
-
-import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 import static hermit.HermitMod.*;
 
 public class FullyLoaded extends AbstractDynamicCard {
 
+
+    /*
+     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
+     */
+
+
+    
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(FullyLoaded.class.getSimpleName());
@@ -58,21 +57,7 @@ public class FullyLoaded extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardCrawlGame.sound.playAV(makeID("SPIN"), 1.0f, 1.25f); // Sound Effect
-        Wiz.atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-                tmp.group = (ArrayList<AbstractCard>) Wiz.p().drawPile.group.stream()
-                        .filter(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND))
-                        .collect(Collectors.toList());
-                for (AbstractCard c : tmp.group) {
-                    if (!tmp.isEmpty() && Wiz.hand().size() < BaseMod.MAX_HAND_SIZE) {
-                        Wiz.att(new FetchAction(Wiz.p().drawPile,card -> card == c));
-                    }
-                }
-                isDone = true;
-            }
-        });
+        this.addToBot(new FullyLoadedAction());
         this.addToBot(new SoundAction(makeID("RELOAD")));
     }
 

@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -8,12 +9,19 @@ import static champ.ChampMod.loadJokeCardImage;
 import static com.megacrit.cardcrawl.cards.red.PerfectedStrike.countCards;
 
 public class PerfectedStrike extends AbstractChampCard {
+
     public final static String ID = makeID("PerfectedStrike");
+
+    //stupid intellij stuff attack, enemy, common
+
+    private static final int DAMAGE = 8;
+    private static final int MAGIC = 3;
+    private static final int UPG_MAGIC = 1;
 
     public PerfectedStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
-        baseMagicNumber = magicNumber = 2;
+        baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC;
         tags.add(CardTags.STRIKE);
         postInit();
         loadJokeCardImage(this, "PerfecterStrike.png");
@@ -40,6 +48,6 @@ public class PerfectedStrike extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(UPG_MAGIC);
     }
 }

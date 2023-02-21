@@ -11,7 +11,7 @@
     "NAME": "黏液",
     "DESCRIPTIONS": [
       "对该敌人的下次 #y攻击 造成额外 #b",
-      " 点伤害，并移除所有 #y黏液 。"
+      " 点伤害，并消耗所有 #y黏液 。"
     ]
   },
     "Slimebound:PreventTackleDamagePower": {
@@ -191,9 +191,9 @@
   "Slimebound:GluttonyPower": {
     "NAME": "暴食",
     "DESCRIPTIONS": [
-      "每回合首次 #y吞食黏液 时，将一张 #y舔舔 加入手牌。",
+      "每回合首次 #y消耗黏液 时，将一张 #y舔舔 加入手牌。",
       "每回合前 ",
-      " 次 #y吞食黏液 时，将一张 #y舔舔 加入手牌。",
+      " 次 #y消耗黏液 时，将一张 #y舔舔 加入手牌。",
       " NL 本回合还能触发 ",
       " 次。",
       " 次。",
@@ -506,7 +506,7 @@
   "Slimebound:GoopArmorPower": {
     "NAME": "黏液护甲",
     "DESCRIPTIONS": [
-      "每当你 #y吞食黏液 时，获得 #b",
+      "每当你 #y消耗黏液 时，获得 #b",
       " 点 #y格挡 。"
     ]
   },

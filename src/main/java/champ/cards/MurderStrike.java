@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class MurderStrike extends AbstractChampCard {
 
     public final static String ID = makeID("MurderStrike");
@@ -24,6 +26,7 @@ public class MurderStrike extends AbstractChampCard {
         tags.add(CardTags.STRIKE);
         baseMagicNumber = magicNumber = 2;
         postInit();
+        loadJokeCardImage(this, "MurderStrike.png");
     }
 
     @Override

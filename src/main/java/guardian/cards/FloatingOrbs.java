@@ -24,7 +24,14 @@ public class FloatingOrbs extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
+
+    //TUNING CONSTANTS
+    private static final int UPGRADE_COST = 0;
+    private static final int SOCKETS = 0;
+    private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
+
+    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -35,16 +42,17 @@ public class FloatingOrbs extends AbstractGuardianCard {
 
     public FloatingOrbs() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        this.baseMagicNumber = magicNumber = 4;
-        this.socketCount = 0;
+
+        this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        cardsToPreview = new OrbSlam();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("FloatingOrbs.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        addToBot(new ApplyPowerAction(p, p, new FloatingOrbsPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FloatingOrbsPower(p), 1));
     }
 
     public AbstractCard makeCopy() {
@@ -54,11 +62,12 @@ public class FloatingOrbs extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeBaseCost(UPGRADE_COST);
         }
     }
 
     public void updateDescription() {
+
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
                 this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);

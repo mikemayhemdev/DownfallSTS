@@ -47,6 +47,7 @@ public class Recollect extends AbstractSlimeboundCard {
 
         this.baseBlock = 8;
         this.magicNumber = this.baseMagicNumber = 1;
+        SlimeboundMod.loadJokeCardImage(this, "Recollect.png");
         //this.exhaust = true;
 
 

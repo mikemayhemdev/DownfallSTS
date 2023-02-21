@@ -17,10 +17,19 @@ import static hermit.HermitMod.makeCardPath;
 
 public class Dive extends AbstractDynamicCard {
 
+
+    /*
+     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
+     */
+
+
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Dive.class.getSimpleName());
     public static final String IMG = makeCardPath("dive.png");
+
+    // /TEXT DECLARATION/
+
 
     // STAT DECLARATION
 

@@ -1,14 +1,20 @@
 package hermit.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.defect.IncreaseMiscAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.colorless.RitualDagger;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
+import hermit.actions.SoundAction;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 import hermit.util.IncreaseMiscActionHermit;
@@ -16,6 +22,10 @@ import hermit.util.IncreaseMiscActionHermit;
 import static hermit.HermitMod.*;
 
 public class CursedWeapon extends AbstractDynamicCard {
+
+
+
+
 
     // TEXT DECLARATION
 

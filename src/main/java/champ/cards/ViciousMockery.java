@@ -13,23 +13,59 @@ import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 import java.util.ArrayList;
 
 public class ViciousMockery extends AbstractChampCard {
+
     public final static String ID = makeID("ViciousMockery");
+
+    //stupid intellij stuff skill, enemy, uncommon
 
     public ViciousMockery() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 5;
-        baseDownfallMagic = downfallMagic = 1;
+        baseMagicNumber = magicNumber = 10;
+        //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
+      //  tags.add(ChampMod.COMBO);
+      //  tags.add(ChampMod.COMBOBERSERKER);
+       // tags.add(ChampMod.COMBODEFENSIVE);
         postInit();
+        loadJokeCardImage(this, "ViciousMockery.png");
     }
 
+    /*
+    @Override
+    public void onMoveToDiscard() {
+        rawDescription = DESCRIPTION;
+        initializeDescription();
+    }
+
+     */
+
     public void use(AbstractPlayer p, AbstractMonster m) {
+        applyToEnemy(m, new StrengthPower(m, 1));
+
         ChampMod.vigor(magicNumber);
-        applyToEnemy(m, autoWeak(m, cool));
         atb(new SFXAction("VO_CHAMP_2A"));
         atb(new TalkAction(true, getTaunt(), 2.0F, 2.0F));
+        /*
+        boolean triggeredAnyEffect = false;
+        if (dcombo()) {
+            triggeredAnyEffect = true;
+            applyToSelf(new DexterityPower(p, magicNumber));
+            applyToSelf(new LoseDexterityPower(p, magicNumber));
+        }
+        if (bcombo()) {
+            if (!triggeredAnyEffect) {
+                atb(new SFXAction("VO_CHAMP_2A"));
+                atb(new TalkAction(true, getTaunt(), 2.0F, 2.0F));
+            }
+            applyToSelf(new StrengthPower(p, magicNumber));
+            applyToSelf(new LoseStrengthPower(p, magicNumber));
+        }
+
+         */
     }
 
     private String getTaunt() {
@@ -42,7 +78,6 @@ public class ViciousMockery extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeDownfall(1);
+        upgradeMagicNumber(4);
     }
 }

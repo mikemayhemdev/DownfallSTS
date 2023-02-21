@@ -47,6 +47,7 @@ public class LivingWall extends AbstractSlimeboundCard {
 
         this.slimed = this.baseSlimed = 4;
         this.baseBlock = 12;
+        SlimeboundMod.loadJokeCardImage(this, "LivingWall.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -24,7 +24,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 
-public class GoopTackle extends AbstractSlimeboundCard {
+public class GoopTackle extends AbstractTackleCard {
     public static final String ID = "Slimebound:GoopTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -45,15 +45,22 @@ public class GoopTackle extends AbstractSlimeboundCard {
     }
 
     public GoopTackle() {
+
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        tags.add(SlimeboundMod.TACKLE);
+
+
         this.baseDamage = 12;
         baseSelfDamage = this.selfDamage = 3;
-        tags.add(SlimeboundMod.TACKLE);
         SlimeboundMod.loadJokeCardImage(this, "GoopTackle.png");
+
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+
+
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         if (!AbstractDungeon.player.hasPower(PreventTackleDamagePower.POWER_ID))
             addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
 
@@ -63,20 +70,41 @@ public class GoopTackle extends AbstractSlimeboundCard {
                 qCardList.add(q.makeCopy());
             }
         }
+
+
         AbstractCard cTackle = qCardList.get(AbstractDungeon.cardRng.random(0, qCardList.size() - 1));
+        if (upgraded) {
+            cTackle.upgrade();
+        }
+
         cTackle.setCostForTurn(0);
-        addToBot(new MakeTempCardInHandAction(cTackle));
+
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cTackle));
+
+        //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
+
+
     }
 
     public AbstractCard makeCopy() {
+
         return new GoopTackle();
+
     }
 
     public void upgrade() {
+
         if (!this.upgraded) {
+
             upgradeName();
-            upgradeDamage(4);
+
+            upgradeDamage(3);
+
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
+
         }
+
     }
 }
 

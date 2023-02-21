@@ -11,7 +11,6 @@ import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
 
-@Deprecated
 @CardIgnore
 public class ApocalypseNow extends AbstractHexaCard {
 

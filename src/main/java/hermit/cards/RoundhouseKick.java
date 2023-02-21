@@ -3,15 +3,20 @@ package hermit.cards;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import hermit.HermitMod;
 import hermit.characters.hermit;
+import hermit.powers.Bruise;
 
 import java.util.Iterator;
 
@@ -19,6 +24,13 @@ import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class RoundhouseKick extends AbstractDynamicCard {
+
+    /*
+     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
+     *
+     * Defend Gain 5 (8) block.
+     */
+
 
     // TEXT DECLARATION
 
@@ -42,7 +54,9 @@ public class RoundhouseKick extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
+
     // /STAT DECLARATION/
+
 
     public RoundhouseKick() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

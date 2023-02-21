@@ -81,7 +81,7 @@
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "뭐든지 아는 해골",
-    "DESCRIPTION": "휘발성. NL 체력을 잃고 *영혼, *정신자극제, *성공하는 *법을 구합니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 체력을 잃고 영혼, 정신자극제, 성공하는 법을 구합니다. NL 소멸."
   },
   "expansioncontent:Antidote": {
     "NAME": "해독제",

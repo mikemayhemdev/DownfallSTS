@@ -58,6 +58,7 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = baseHealthCost;
         tags.add(BaseModCardTags.FORM);
+        SlimeboundMod.loadJokeCardImage(this, "DuplicatedForm.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -5,6 +5,8 @@ import champ.powers.GladiatorFormPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class GladiatorForm extends AbstractChampCard {
 
     public final static String ID = makeID("GladiatorForm");
@@ -16,6 +18,7 @@ public class GladiatorForm extends AbstractChampCard {
         tags.add(BaseModCardTags.FORM);
         baseMagicNumber = magicNumber = 1;
         postInit();
+        loadJokeCardImage(this, "GladiatorForm.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Backstep extends AbstractChampCard {
 
     public final static String ID = makeID("Backstep");
@@ -19,6 +21,7 @@ public class Backstep extends AbstractChampCard {
         //tags.add(ChampMod.COMBO);
         //tags.add(ChampMod.COMBOBERSERKER);
         postInit();
+        loadJokeCardImage(this, "Backstep.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

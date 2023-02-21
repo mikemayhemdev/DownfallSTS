@@ -9,12 +9,23 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 public class FaceSlap extends AbstractChampCard {
+
     public final static String ID = makeID("FaceSlap");
+
+    //stupid intellij stuff attack, enemy, uncommon
+
+    private static final int DAMAGE = 9;
+    private static final int UPG_DAMAGE = 2;
+
+    private static final int MAGIC = 2;
+    private static final int UPG_MAGIC = 1;
 
     public FaceSlap() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
-        baseMagicNumber = magicNumber = 2;
+        baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC;
+     //   tags.add(ChampMod.OPENER);
+       // tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
         postInit();
@@ -22,7 +33,17 @@ public class FaceSlap extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (m.hasPower(VulnerablePower.POWER_ID)) {
+                    addToTop(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.BLUNT_HEAVY));
+                }
+            }
+        });
         if (bcombo()) applyToEnemy(m, autoVuln(m, magicNumber));
+   //     berserkOpen();
     }
 
     @Override
@@ -31,7 +52,7 @@ public class FaceSlap extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(1);
+        upgradeDamage(UPG_DAMAGE);
+        upgradeMagicNumber(UPG_MAGIC);
     }
 }

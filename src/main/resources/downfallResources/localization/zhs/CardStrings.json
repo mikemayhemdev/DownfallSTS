@@ -26,9 +26,5 @@
   "downfall:Scatterbrained": {
     "NAME": "漫不经心",
     "DESCRIPTION": "不能被打出 。 NL 你的回合中抽到时，将本牌的 gremlin:回响 充满手牌。"
-  },
-  "downfall:BossMaintenance": {
-    "NAME": "维护",
-    "DESCRIPTION": "*打击 额外造成 !M! 点伤害。 NL 获得2点 敏捷 。 NL 本场战斗耗能加1。"
   }
 }

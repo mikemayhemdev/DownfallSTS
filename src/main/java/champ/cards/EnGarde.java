@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class EnGarde extends AbstractChampCard {
 
     public final static String ID = makeID("EnGarde");
@@ -18,6 +20,7 @@ public class EnGarde extends AbstractChampCard {
     public EnGarde() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 7;
+        loadJokeCardImage(this, "EnGarde.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

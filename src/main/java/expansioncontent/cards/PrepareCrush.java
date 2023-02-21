@@ -17,6 +17,8 @@ import guardian.cards.SentryWave;
 import slimebound.cards.SlimeCrush;
 import slimebound.powers.NextTurnGainSlimeCrush;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
 public class PrepareCrush extends AbstractExpansionCard {
     public final static String ID = makeID("PrepareCrush");
 
@@ -36,6 +38,7 @@ public class PrepareCrush extends AbstractExpansionCard {
         baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;
         cardsToPreview = new SlimeCrush();
+        loadJokeCardImage(this, "PrepareCrush.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

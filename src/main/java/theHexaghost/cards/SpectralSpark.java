@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
@@ -24,6 +25,7 @@ public class SpectralSpark extends AbstractHexaCard {
     //    baseBurn = burn = MAGIC;
         magicNumber = baseMagicNumber = 1;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "SpectralSpark.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

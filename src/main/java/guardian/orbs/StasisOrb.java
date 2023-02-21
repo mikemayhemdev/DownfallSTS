@@ -3,7 +3,6 @@ package guardian.orbs;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.UpgradeSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -16,8 +15,8 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import guardian.GuardianMod;
 import guardian.actions.ReturnStasisCardToHandAction;
 import guardian.actions.StasisEvokeIfRoomInHandAction;
+import guardian.cards.AbstractGuardianCard;
 import guardian.cards.InStasisCard;
-import guardian.cards.ChargeUp;
 import guardian.relics.StasisUpgradeRelic;
 import guardian.vfx.AddCardToStasisEffect;
 
@@ -26,6 +25,11 @@ public class StasisOrb extends AbstractOrb {
     public static final String[] DESC;
     private static final OrbStrings orbString;
     public static final String ID = GuardianMod.makeID("StasisOrb");
+
+    static {
+        orbString = CardCrawlGame.languagePack.getOrbString(ID);
+        DESC = orbString.DESCRIPTION;
+    }
 
     public AbstractCard stasisCard;
     private AbstractGameEffect stasisStartEffect;
@@ -59,13 +63,17 @@ public class StasisOrb extends AbstractOrb {
             this.basePassiveAmount = this.passiveAmount = 1;
         }
 
+//        if(card.cost == -1 && AbstractDungeon.player != null){
+//            this.basePassiveAmount = this.passiveAmount = AbstractDungeon.player.energy.energy + 1;
+//        }
+
         this.baseEvokeAmount = this.basePassiveAmount;
         this.evokeAmount = this.passiveAmount;
         card.targetAngle = 0F;
 
         if (AbstractDungeon.player != null) {
             if (AbstractDungeon.player.hasRelic(StasisUpgradeRelic.ID)) {
-                AbstractDungeon.actionManager.addToBottom(new UpgradeSpecificCardAction(card));
+                card.upgrade();
             }
         }
         this.stasisCard.tags.add(GuardianMod.STASISGLOW);
@@ -73,8 +81,9 @@ public class StasisOrb extends AbstractOrb {
 
         initialize(source, selfStasis);
 
-        if(stasisCard instanceof InStasisCard) {
-            ((InStasisCard) stasisCard).whenEnteredStasis(this);
+        if(stasisCard instanceof AbstractGuardianCard) {
+            AbstractGuardianCard agc = (AbstractGuardianCard) stasisCard;
+            agc.whenEnteredStasis(this);
         }
     }
 
@@ -147,6 +156,7 @@ public class StasisOrb extends AbstractOrb {
             this.stasisCard.superFlash(Color.GOLDENROD);
 
         }
+        //GuardianMod.updateStasisCount();
     }
 
     public void triggerEvokeAnimation() {
@@ -234,10 +244,5 @@ public class StasisOrb extends AbstractOrb {
         so.passiveAmount = so.basePassiveAmount = this.passiveAmount;
         so.evokeAmount = so.baseEvokeAmount = this.evokeAmount;
         return so;
-    }
-
-    static {
-        orbString = CardCrawlGame.languagePack.getOrbString(ID);
-        DESC = orbString.DESCRIPTION;
     }
 }

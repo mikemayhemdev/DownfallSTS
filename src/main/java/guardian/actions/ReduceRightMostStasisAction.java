@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package guardian.actions;
 
 import com.badlogic.gdx.graphics.Color;
@@ -12,15 +17,14 @@ import guardian.orbs.StasisOrb;
 import guardian.powers.AutomayhemPower;
 
 public class ReduceRightMostStasisAction extends AbstractGameAction {
+    private final boolean fromAutomayhem;
 
-    public ReduceRightMostStasisAction() {
-        this.actionType = ActionType.CARD_MANIPULATION;
+    public ReduceRightMostStasisAction(boolean fromAutomayhem) {
+        this.actionType = ActionType.DAMAGE;
+        this.attackEffect = AttackEffect.SLASH_HORIZONTAL;
         this.duration = this.startDuration = 0.05F;
-    }
+        this.fromAutomayhem = false;  //no longer actually needs to accept the input with new Time Sifter/Stasis/accelerate design from Downfall.
 
-    @Deprecated
-    public ReduceRightMostStasisAction(boolean unnecessary) {
-        this();
     }
 
     public void update() {
@@ -29,9 +33,12 @@ public class ReduceRightMostStasisAction extends AbstractGameAction {
             AbstractOrb theOrb = null;
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
                 if (o instanceof StasisOrb) {
-                    o.onStartOfTurn();
-                    theOrb = o;
-                    break;
+                    if (!this.fromAutomayhem || ((StasisOrb) o).passiveAmount > 1) {
+                        o.onStartOfTurn();
+                        if (this.fromAutomayhem && AbstractDungeon.player.hasPower(AutomayhemPower.POWER_ID)) AbstractDungeon.player.getPower(AutomayhemPower.POWER_ID).flash();
+                        theOrb = o;
+                        break;
+                    }
                 }
             }
             if (theOrb != null) {
@@ -42,4 +49,5 @@ public class ReduceRightMostStasisAction extends AbstractGameAction {
         }
         this.tickDuration();
     }
+
 }

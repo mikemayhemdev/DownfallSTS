@@ -38,12 +38,14 @@ public class EnHeadshot extends AbstractHermitBossCard {
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
+        int oldBaseDamage = baseDamage;
         AbstractPower concentration = this.owner.getPower(HermitConcentrationPower.POWER_ID);
         if (concentration != null && concentration.amount > 0) {
-            damage *= 2;
+            baseDamage *= 2;
         }
-        isDamageModified = damage != baseDamage;
+        super.calculateCardDamage(mo);
+        baseDamage = oldBaseDamage;
+        if (this.damage != baseDamage) isDamageModified = true;
     }
 
     @Override

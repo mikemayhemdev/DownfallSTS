@@ -15,7 +15,7 @@ import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PreventTackleDamagePower;
 
 
-public class Tackle extends AbstractSlimeboundCard {
+public class Tackle extends AbstractTackleCard {
     public static final String ID = "Slimebound:Tackle";
     public static final String NAME;
     public static final String DESCRIPTION;

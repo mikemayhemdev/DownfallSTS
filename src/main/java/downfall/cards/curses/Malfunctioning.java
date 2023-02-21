@@ -51,12 +51,12 @@ public class Malfunctioning extends CustomCard {
         this.flash();
         this.superFlash();
         for (AbstractCard c:AbstractDungeon.player.hand.group){
-            addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
-            addToBot(new MakeTempCardInDiscardAction(OffclassHelper.getARandomStatus(), 1));
+            AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(OffclassHelper.getARandomStatus(), 1));
         }
-        addToBot(new WaitAction(0.1F));
-        addToBot(new WaitAction(0.1F));
-        addToBot(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
     }
 
     public AbstractCard makeCopy() {

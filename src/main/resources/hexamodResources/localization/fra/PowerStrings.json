@@ -64,9 +64,7 @@
     "NAME": "Intensité",
     "DESCRIPTIONS": [
       "Augmentez les dégâts, la #yBrûlure, et l'Armure appliqué par les Feu Follets lorsqu'ils sont Enflammés par #b",
-      ".",
-      "Diminuez les dégâts, la #yBrûlure, et l'Armure appliqué par les Feu Follets lorsqu'ils sont Enflammés par #b"
-
+      "."
     ]
   },
   "hexamod:EtherealRefundPower": {

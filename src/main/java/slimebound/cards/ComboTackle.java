@@ -19,7 +19,7 @@ import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
 
-public class ComboTackle extends AbstractSlimeboundCard {
+public class ComboTackle extends AbstractTackleCard {
     public static final String ID = "Slimebound:ComboTackle";
     public static final String NAME;
     public static final String DESCRIPTION;

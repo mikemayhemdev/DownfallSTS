@@ -20,7 +20,7 @@ import slimebound.vfx.LickEffect;
 import slimebound.vfx.SlimeDripsEffect;
 
 
-public class SamplingLick extends AbstractSlimeboundCard {
+public class SamplingLick extends AbstractLickCard {
     public static final String ID = "Slimebound:SamplingLick";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -49,6 +49,7 @@ public class SamplingLick extends AbstractSlimeboundCard {
         this.slimed = this.baseSlimed = 4;
         this.baseBlock = 4;
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "SamplingLick.png");
 
 
     }

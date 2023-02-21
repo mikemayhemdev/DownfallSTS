@@ -1,16 +1,22 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.HermitMod;
 import hermit.actions.FinalCanterAction;
 import hermit.actions.ManifestAction;
+import hermit.actions.SpiteAction;
 import hermit.characters.hermit;
-import hermit.util.Wiz;
+import hermit.powers.Concentration;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -25,6 +31,9 @@ public class Spite extends AbstractDynamicCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
+    // /TEXT DECLARATION/
+
+
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
@@ -36,37 +45,20 @@ public class Spite extends AbstractDynamicCard {
 
     // /STAT DECLARATION/
 
+
     public Spite() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage=7;
+        baseDamage=5;
+        magicNumber=baseMagicNumber=2;
         loadJokeCardImage(this, "spite.png");
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new FinalCanterAction(m,p,this.damage,this));
-
-        int drawcards = 0;
-        for(AbstractCard c : Wiz.p().hand.group)
-        {
-            if (c.color == CardColor.CURSE)
-                drawcards++;
-        }
-        if (drawcards > 0)
-        Wiz.atb(new DrawCardAction(drawcards));
-    }
-
-    public void triggerOnGlowCheck() {
-        this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();
-
-        for(AbstractCard c : Wiz.p().hand.group)
-        {
-            if (c.color == CardColor.CURSE) {
-                this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
-                return;
-            }
-        }
+        for (int i=0;i<2;i++)
+            this.addToBot(new FinalCanterAction(m,p,this.damage,this));
+        this.addToBot(new ManifestAction(magicNumber));
     }
 
     //Upgraded stats.
@@ -74,7 +66,8 @@ public class Spite extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(1);
+            upgradeMagicNumber(1);
             initializeDescription();
         }
     }

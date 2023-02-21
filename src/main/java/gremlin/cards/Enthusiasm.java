@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.powers.EnthusiasmPower;
 import sneckomod.SneckoMod;
 
@@ -27,6 +28,7 @@ public class Enthusiasm extends AbstractGremlinCard {
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        GremlinMod.loadJokeCardImage(this, "Enthusiasm.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

@@ -2,18 +2,25 @@ package hermit.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.actions.LoneWolfAction;
+import hermit.actions.MaintenanceAction;
 import hermit.characters.hermit;
-import hermit.util.Wiz;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class LoneWolf extends AbstractDynamicCard {
+
+
+    /*
+     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
+     */
+
+
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(LoneWolf.class.getSimpleName());
@@ -33,7 +40,8 @@ public class LoneWolf extends AbstractDynamicCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
-    public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("hermit:LoneWolfAction");
+
+
 
     private static final int COST = 1;
 
@@ -48,8 +56,7 @@ public class LoneWolf extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        Wiz.atb( new LoneWolfAction());
+        AbstractDungeon.actionManager.addToBottom(new LoneWolfAction());
     }
 
     //Upgraded stats.

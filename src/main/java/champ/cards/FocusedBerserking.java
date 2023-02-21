@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class FocusedBerserking extends AbstractChampCard {
 
     public final static String ID = makeID("FocusedBerserking");
@@ -19,6 +21,7 @@ public class FocusedBerserking extends AbstractChampCard {
         baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.FINISHER);
         postInit();
+        loadJokeCardImage(this, "FocusedBerserking.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

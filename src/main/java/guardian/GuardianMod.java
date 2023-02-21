@@ -335,14 +335,16 @@ public class GuardianMod implements PostDrawSubscriber,
         allGemCards.add("GREEN");
         allGemCards.add("LIGHTBLUE");
         if (!onlyCommon) allGemCards.add("ORANGE");
-        if (!onlyCommon) allGemCards.add("CYAN");
+        allGemCards.add("CYAN");
         if (!onlyCommon) allGemCards.add("WHITE");
-        allGemCards.add("BLUE");
+        if (!onlyCommon) allGemCards.add("BLUE");
         if (!onlyCommon) allGemCards.add("CRIMSON");
         if (!onlyCommon) allGemCards.add("FRAGMENTED");
         if (!onlyCommon) allGemCards.add("PURPLE");
         if (!onlyCommon) allGemCards.add("SYNTHETIC");
-        if (!onlyCommon) allGemCards.add("YELLOW");
+        if (!UnlockTracker.isCardLocked(Gem_Yellow.ID)) {
+            if (!onlyCommon) allGemCards.add("YELLOW");
+        }
 
         int rando;
         String ID;
@@ -458,8 +460,10 @@ public class GuardianMod implements PostDrawSubscriber,
     }
 
     public void receiveEditCharacters() {
+
         guardianCharacter = new GuardianCharacter("TheGuardian", GuardianEnum.GUARDIAN);
         BaseMod.addCharacter(guardianCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), GuardianEnum.GUARDIAN, getResourcePath("charSelect/leaderboard.png"));
+
     }
 
 
@@ -535,6 +539,7 @@ public static void saveData() {
 
     @Override
     public void receiveSetUnlocks() {
+
         downfallMod.registerUnlockSuite(
                 GatlingBeam.ID,
                 Orbwalk.ID,
@@ -562,6 +567,8 @@ public static void saveData() {
 
 
     public void receiveEditRelics() {
+
+
         BaseMod.addRelicToCustomPool(new ModeShifter(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new ModeShifterPlus(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new BottledStasis(), AbstractCardEnum.GUARDIAN);
@@ -578,11 +585,16 @@ public static void saveData() {
         BaseMod.addRelic(new PocketSentry(), RelicType.SHARED);
         BaseMod.addRelic(new BottledAnomaly(), RelicType.SHARED);
         BaseMod.registerBottleRelic(BottledStasisPatch.inBottledAnomaly, new BottledAnomaly());
+
+
     }
 
     public void receiveEditCards() {
+
+
         BaseMod.addDynamicVariable(new MultihitVariable());
         BaseMod.addDynamicVariable(new SecondaryMagicVariable());
+
 
         BaseMod.addCard(new Strike_Guardian());
         BaseMod.addCard(new Defend_Guardian());
@@ -602,7 +614,7 @@ public static void saveData() {
         BaseMod.addCard(new FloatingOrbs());
         BaseMod.addCard(new OrbSlam());
         BaseMod.addCard(new SphericShield());
-        //BaseMod.addCard(new Harden());
+        BaseMod.addCard(new Harden());
         BaseMod.addCard(new SentryWave());
         BaseMod.addCard(new SentryBeam());
         BaseMod.addCard(new WalkerClaw());
@@ -653,9 +665,7 @@ public static void saveData() {
         BaseMod.addCard(new MultiBeam());
         BaseMod.addCard(new RefractedBeam());
         BaseMod.addCard(new SpikerProtocol());
-        //BaseMod.addCard(new ArmoredProtocol());
-        BaseMod.addCard(new Metallicize());
-        BaseMod.addCard(new StrikeForStrike());
+        BaseMod.addCard(new ArmoredProtocol());
         BaseMod.addCard(new EvasiveProtocol());
         BaseMod.addCard(new TimeSifter());
         BaseMod.addCard(new CrystalBeam());
@@ -671,8 +681,7 @@ public static void saveData() {
         BaseMod.addCard(new ShieldCharger());
         BaseMod.addCard(new StasisEngine());
         BaseMod.addCard(new Gem_Purple());
-
-        BaseMod.addCard(new GearUp());
+        
         BaseMod.addCard(new CrystalShiv());
         BaseMod.addCard(new CrystalWard());
 
@@ -1053,7 +1062,7 @@ public static void saveData() {
         if (!stasisDelay) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
                 if (o instanceof StasisOrb) {
-                    if (o.passiveAmount == 1) {
+                    if (((StasisOrb) o).passiveAmount == 1) {
                         stasisDelay = true;
                     }
                 }

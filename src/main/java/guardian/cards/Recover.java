@@ -1,15 +1,19 @@
 package guardian.cards;
 
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.DiscardPileToStasisAction;
 import guardian.patches.AbstractCardEnum;
+
+import static guardian.GuardianMod.makeBetaCardPath;
 
 public class Recover extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Recover");
@@ -47,13 +51,23 @@ public class Recover extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Recover.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        addToBot(new GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         brace(magicNumber);
-        addToBot((new DiscardPileToStasisAction(1)));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (AbstractDungeon.player.discardPile.size() > 0) {
+                    AbstractDungeon.actionManager.addToTop(new DiscardPileToStasisAction(1));
+                }
+            }
+        });
+
         super.useGems(p, m);
     }
 

@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class ModFinisher extends AbstractChampCard {
 
     public final static String ID = makeID("ModFinisherStrike");
@@ -21,6 +23,7 @@ public class ModFinisher extends AbstractChampCard {
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.FINISHER);
         postInit();
+        loadJokeCardImage(this, "ModFinisherStrike.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

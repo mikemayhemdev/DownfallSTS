@@ -1,9 +1,8 @@
 package hermit.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Clumsy;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,15 +16,21 @@ import static hermit.HermitMod.*;
 
 public class Misfire extends AbstractDynamicCard {
 
+
+
+
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Misfire.class.getSimpleName());
     public static final String IMG = makeCardPath("misfire.png");
 
+    // /TEXT DECLARATION/
+
+
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -33,7 +38,7 @@ public class Misfire extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 13;
     private static final int UPGRADE_PLUS_DMG = 4;
 
     // /STAT DECLARATION/
@@ -48,9 +53,11 @@ public class Misfire extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), EnumPatch.HERMIT_GUN2));
+        this.addToBot(new AttackDamageRandomEnemyAction(this, EnumPatch.HERMIT_GUN2));
         this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true));
     }
+
+
 
     //Upgraded stats.
     @Override

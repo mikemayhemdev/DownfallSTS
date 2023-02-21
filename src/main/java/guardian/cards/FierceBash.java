@@ -17,6 +17,8 @@ import guardian.GuardianMod;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class FierceBash extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("FierceBash");
@@ -57,6 +59,7 @@ public class FierceBash extends AbstractGuardianCard implements InStasisCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("FierceBash.png"));
 
     }
 

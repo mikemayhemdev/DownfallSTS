@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class SwordThrow extends AbstractChampCard {
     public final static String ID = makeID("SwordThrow");
 
@@ -18,6 +20,7 @@ public class SwordThrow extends AbstractChampCard {
         tags.add(ChampMod.COMBOBERSERKER);
         tags.add(ChampMod.COMBO);
         postInit();
+        loadJokeCardImage(this, "SwordThrow.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

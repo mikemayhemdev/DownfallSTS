@@ -1,7 +1,9 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.actions.FinalCanterAction;
 import hermit.characters.hermit;
-import hermit.util.Wiz;
 
 
 import java.util.Iterator;
@@ -20,10 +21,19 @@ import static hermit.HermitMod.makeCardPath;
 
 public class FinalCanter extends AbstractDynamicCard {
 
+
+    /*
+     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
+     */
+
+
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(FinalCanter.class.getSimpleName());
     public static final String IMG = makeCardPath("final_canter.png");
+
+    // /TEXT DECLARATION/
+
 
     // STAT DECLARATION
 
@@ -37,41 +47,6 @@ public class FinalCanter extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    // /STAT DECLARATION/
-
-    public FinalCanter() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=10;
-        magicNumber = baseMagicNumber = 0;
-        this.selfRetain = true;
-        exhaust=true;
-        loadJokeCardImage(this, "final_canter.png");
-    }
-
-    // Actions the card should do.
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        magicNumber = countCards();
-
-        for (AbstractCard c: AbstractDungeon.player.hand.group)
-            if (c.color==CardColor.CURSE)
-                Wiz.atb(new ExhaustSpecificCardAction(c,Wiz.p().hand));
-
-        for (int ii=0; ii < magicNumber; ii++)
-            Wiz.atb(new FinalCanterAction(m,p,this.damage,this));
-
-
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.initializeDescription();
-    }
-
-    public void applyPowers() {
-        baseMagicNumber = magicNumber = countCards();
-        super.applyPowers();
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.initializeDescription();
-    }
-
     public static int countCards() {
         int count = 0;
 
@@ -82,6 +57,37 @@ public class FinalCanter extends AbstractDynamicCard {
         }
 
         return count;
+    }
+
+
+    // /STAT DECLARATION/
+
+    public FinalCanter() {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.baseDamage=13;
+        magicNumber = baseMagicNumber = 0;
+        this.selfRetain = true;
+        exhaust=true;
+        loadJokeCardImage(this, "final_canter.png");
+    }
+
+    // Actions the card should do.
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        magicNumber = countCards();
+        for (int i = 0; i<magicNumber;i++)
+        this.addToBot(new FinalCanterAction(m,p,this.damage,this));
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
+    }
+
+    public void applyPowers() {
+        baseMagicNumber = magicNumber = countCards();
+        super.applyPowers();
+        this.rawDescription = cardStrings.DESCRIPTION;
+        //this.rawDescription = this.rawDescription + cardStrings.UPGRADE_DESCRIPTION;
+        this.initializeDescription();
+
     }
 
     //Upgraded stats.

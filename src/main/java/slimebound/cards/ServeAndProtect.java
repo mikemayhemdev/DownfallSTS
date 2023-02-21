@@ -55,6 +55,7 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
         baseMagicNumber = magicNumber = 1;
         baseBlock = block = 10;
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "ServeAndProtect.png");
 
     }
 

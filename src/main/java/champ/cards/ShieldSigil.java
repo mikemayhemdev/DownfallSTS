@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class ShieldSigil extends AbstractChampCard {
 
     public final static String ID = makeID("ShieldSigil");
@@ -15,6 +17,7 @@ public class ShieldSigil extends AbstractChampCard {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
         baseDamage = 3;
+        loadJokeCardImage(this, "ShieldSigil.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

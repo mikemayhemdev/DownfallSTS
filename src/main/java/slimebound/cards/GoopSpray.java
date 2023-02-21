@@ -22,47 +22,86 @@ import slimebound.vfx.SlimeProjectileEffect;
 
 public class GoopSpray extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:GoopSpray";
-    public static final String IMG_PATH = SlimeboundMod.getResourcePath("cards/goopspray.png");
+    public static final String NAME;
+    public static final String DESCRIPTION;
+    public static final String IMG_PATH = "cards/goopspray.png";
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
+    private static final int COST = 1;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 3;
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
+
 
     public GoopSpray() {
-        super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.SLIMEBOUND, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        this.slimed = this.baseSlimed = 5;
+
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+
         this.magicNumber = this.baseMagicNumber = 1;
+        this.slimed = this.baseSlimed = 4;
+        baseBlock = 4;
         SlimeboundMod.loadJokeCardImage(this, "GoopSpray.png");
+
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+
+
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
-                    addToBot(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, monster.hb.cX, monster.hb.cY, 3F, false, 0.6F), 0.01F));
+                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, monster.hb.cX, monster.hb.cY, 3F, false, 0.6F), 0.01F));
+
+
                 }
-                addToBot(new WaitAction(0.2F));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2F));
             }
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
-                    addToBot(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
-                    addToBot(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+
+
                 }
+
             }
         }
-    }
 
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            upgradeSlimed(3);
-        }
+
     }
 
     public AbstractCard makeCopy() {
+
         return new GoopSpray();
+
     }
 
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public void upgrade() {
+
+        if (!this.upgraded) {
+
+            upgradeName();
+           // upgradeBlock(1);
+            //upgradeSlimed(1);
+            upgradeMagicNumber(1);
+
+        }
+
     }
 }
 

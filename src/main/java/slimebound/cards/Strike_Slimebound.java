@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -38,6 +39,7 @@ public class Strike_Slimebound extends AbstractSlimeboundCard {
         this.baseDamage = 6;
         this.tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(AbstractCard.CardTags.STRIKE);
+        SlimeboundMod.loadJokeCardImage(this, "Strike_Slimebound.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

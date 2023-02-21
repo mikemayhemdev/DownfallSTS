@@ -1,6 +1,7 @@
 package hermit.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -25,7 +26,10 @@ public class SelectScreenPatch2 {
         if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT) {
             SelectScreenPatch.handClone = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
-            for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            Iterator var1 = AbstractDungeon.player.hand.group.iterator();
+
+            while (var1.hasNext()) {
+                AbstractCard c = (AbstractCard) var1.next();
                 SelectScreenPatch.handClone.addToBottom(c);
             }
 

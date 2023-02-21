@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.actions.DamagePerCardPlayedAction;
 
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
@@ -34,6 +35,7 @@ public class Flurry extends AbstractGremlinCard {
         this.exhaust = true;
         this.tags.add(SNEAKY_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Flurry.png");
     }
 
     @Override

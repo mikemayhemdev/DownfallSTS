@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
+import hermit.actions.ManifestAction;
 import hermit.characters.hermit;
 
 
@@ -16,6 +17,12 @@ import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Manifest extends AbstractDynamicCard {
+
+
+    /*
+     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
+     */
+
 
     // TEXT DECLARATION
 
@@ -57,6 +64,7 @@ public class Manifest extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Decay(), 1));
+        //this.addToBot(new ManifestAction(magicNumber));
     }
 
     //Upgraded stats.

@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class PreemptiveStrike extends AbstractChampCard {
 
     public final static String ID = makeID("PreemptiveStrike");
@@ -19,6 +21,7 @@ public class PreemptiveStrike extends AbstractChampCard {
         isMultiDamage = true;
         tags.add(CardTags.STRIKE);
         postInit();
+        loadJokeCardImage(this, "PreemptiveStrike.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

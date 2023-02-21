@@ -18,17 +18,12 @@ public class ExhaustMod extends AbstractCardModifier {
     }
 
     public boolean shouldApply(AbstractCard card) {
-        return !card.exhaust;
+        return !CardModifierManager.hasModifier(card, ID);
     }
 
     @Override
     public void onInitialApplication(AbstractCard card) {
         card.exhaust = true;
-    }
-
-    @Override
-    public void onRemove(AbstractCard card) {
-        card.exhaust = false;
     }
 
     @Override
