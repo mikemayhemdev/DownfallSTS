@@ -350,8 +350,8 @@
   },
   "Guardian:Gem_Blue": {
     "NAME": "Saphir",
-    "DESCRIPTION": "guardianmod:Gemme. NL guardianmod:Renforcez de 3.",
-    "UPGRADE_DESCRIPTION": "guardianmod:Renforcez de 3."
+    "DESCRIPTION": "guardianmod:Gemme. NL guardianmod:Renforcez de 4.",
+    "UPGRADE_DESCRIPTION": "guardianmod:Renforcez de 4."
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "Gemme fragmentée",

@@ -167,8 +167,8 @@
   },
   "sneckomod:MasterEye": {
     "NAME": "主宰之眼",
-    "DESCRIPTION": "获得 混乱 。 NL 回合开始时抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "获得 混乱 。 NL 回合开始时抽 !M! 张牌。"
+    "DESCRIPTION": "获得 混乱 。 NL 回合开始时， NL 额外抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 混乱 。 NL 回合开始时， NL 额外抽 !M! 张牌。"
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "即兴攻击",
@@ -257,7 +257,7 @@
   },
   "sneckomod:MorePower": {
     "NAME": "更多力量！",
-    "DESCRIPTION": "战斗结束时， NL 获得 *未知 卡牌奖励+。"
+    "DESCRIPTION": "战斗结束时， NL 获得 *未知 卡牌+奖励。"
   },
   "sneckomod:UnknownStrength": {
     "NAME": "？？？",

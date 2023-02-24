@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import guardian.GuardianMod;
 import guardian.orbs.StasisOrb;
 import guardian.patches.BottledStasisPatch;
+import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.function.Predicate;
 
@@ -125,7 +126,11 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
         super.atBattleStartPreDraw();
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c.uuid == card.uuid) {
-                AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(c, AbstractDungeon.player.drawPile)));
+                if(c instanceof AbstractUnknownCard){
+                    AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(((AbstractUnknownCard)c).generateFromPoolButNotIntoHand(), AbstractDungeon.player.drawPile)));
+                }else {
+                    AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(c, AbstractDungeon.player.drawPile)));
+                }
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
                 break;
             }

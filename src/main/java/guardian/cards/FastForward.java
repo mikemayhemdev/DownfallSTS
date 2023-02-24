@@ -15,8 +15,6 @@ import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 import sneckomod.SneckoMod;
 
-import static guardian.GuardianMod.makeBetaCardPath;
-
 public class FastForward extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("FastForward");
     public static final String NAME;
@@ -51,7 +49,7 @@ public class FastForward extends AbstractGuardianCard {
         loadGemMisc();
         this.magicNumber = this.baseMagicNumber = 3;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("FastForward.png"));
+//        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("FastForward.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,7 +1,8 @@
 {
   "champ:SealCommonReward": {
     "TEXT": [
-      "将一张普通牌加入牌组。"
+      "将一张普通牌加入牌组。",
+      "test"
     ]
   },
   "champ:SealSealReward": {

@@ -349,8 +349,8 @@
   },
   "Guardian:Gem_Blue": {
     "NAME": "사파이어",
-    "DESCRIPTION": "guardianmod:보석. NL guardianmod:대비를 3 합니다.",
-    "UPGRADE_DESCRIPTION": "guardianmod:대비를 3 합니다."
+    "DESCRIPTION": "guardianmod:보석. NL guardianmod:대비를 4 합니다.",
+    "UPGRADE_DESCRIPTION": "guardianmod:대비를 4 합니다."
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "보석 파편",

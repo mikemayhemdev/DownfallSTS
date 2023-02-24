@@ -114,12 +114,12 @@ public class FunctionHelper {
             doStuff = true;
         }
 
-        if (c instanceof FullRelease) {
-            if (held.group.stream().anyMatch(q -> q.cardID.equals(FullRelease.ID))) {
-                AbstractDungeon.actionManager.addToTop(new MakeTempCardInDiscardAction(c.makeSameInstanceOf(), 1));
-                AbstractDungeon.actionManager.addToTop(new TalkAction(true, AutomatonTextHelper.uiStrings.TEXT[6], 2.0F, 1.5F));
-            }
-        }
+//        if (c instanceof FullRelease) {
+//            if (held.group.stream().anyMatch(q -> q.cardID.equals(FullRelease.ID))) {
+//                AbstractDungeon.actionManager.addToTop(new MakeTempCardInDiscardAction(c.makeSameInstanceOf(), 1));
+//                AbstractDungeon.actionManager.addToTop(new TalkAction(true, AutomatonTextHelper.uiStrings.TEXT[6], 2.0F, 1.5F));
+//            }
+//        }
 
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnAddToFuncPower) {

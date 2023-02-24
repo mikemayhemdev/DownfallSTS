@@ -22,7 +22,7 @@ public class Defend_Hermit extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(Defend_Hermit.class.getSimpleName());
-    public static final String IMG = makeCardPath("card_defend.png");
+    public static final String IMG = makeCardPath("defend.png");
 
     // /TEXT DECLARATION/
 

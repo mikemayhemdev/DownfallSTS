@@ -23,17 +23,17 @@
   },
   "hexamod:BacktrackSmack": {
     "NAME": "回身擊",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL hexamod:回退 。"
+    "DESCRIPTION": "造成 !D! 點傷害兩次。 NL hexamod:回退 。"
   },
   "hexamod:FastForward": {
     "NAME": "快進",
-    "DESCRIPTION": "虛無 。 NL hexamod:點燃 當前鬼火 。 NL hexamod:步進 。",
+    "DESCRIPTION": "抽 !M! 張 牌。 NL hexamod:步進 。",
     "UPGRADE_DESCRIPTION": "hexamod:點燃 當前鬼火 。 NL hexamod:步進 。"
   },
   "hexamod:Rewind": {
     "NAME": "重返",
-    "DESCRIPTION": "hexamod:回退 。 NL 獲得 [E] 。",
-    "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 獲得 [E] 並抽一張牌。"
+    "DESCRIPTION": "hexamod:回退 。 NL 從棄牌堆 檢索 !M! 張牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 從棄牌堆 檢索 !M! 張牌。 NL 消耗 。"
   },
   "hexamod:SkipABeat": {
     "NAME": "引燃",
@@ -42,11 +42,12 @@
   },
   "hexamod:CatchUp": {
     "NAME": "及時",
-    "DESCRIPTION": "hexamod:點燃 上枚鬼火 !M! 次 。"
+    "DESCRIPTION": "hexamod:點燃 上枚鬼火 !M! 次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "hexamod:點燃 上枚鬼火 !M! 次。"
   },
   "hexamod:TimeWarp": {
     "NAME": "時間扭曲",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL hexamod:步進 或 hexamod:回退 時， NL 將本牌從棄牌堆返回手牌。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL hexamod:步進 或 hexamod:回退 時， NL 本牌從棄牌堆返回手牌。"
   },
   "hexamod:EmpoweredFlame": {
     "NAME": "高漲",
@@ -54,8 +55,8 @@
   },
   "hexamod:HexaLevel": {
     "NAME": "地獄形態",
-    "DESCRIPTION": "回合開始時獲得 !M! 點 hexamod:熱烈 。",
-    "UPGRADE_DESCRIPTION": "獲得 !M! 點 hexamod:熱烈 。 NL 回合開始時獲得 !M! 點 hexamod:熱烈 。"
+    "DESCRIPTION": "回合開始時， NL 獲得 !M! 點 hexamod:熱烈 。",
+    "UPGRADE_DESCRIPTION": "獲得 !M! 點 hexamod:熱烈 。 NL 回合開始時， NL 獲得 !M! 點 hexamod:熱烈 。"
   },
   "hexamod:UnlimitedPower": {
     "NAME": "無限潛力",
@@ -68,8 +69,8 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "疾進",
-    "DESCRIPTION": " hexamod:步進 時，獲得 !M! 層 guardianmod:臨時 力量 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL hexamod:步進 時，獲得 !M! 層 guardianmod:臨時 力量 。"
+    "DESCRIPTION": " hexamod:步進 時， NL 獲得 !M! 層 guardianmod:臨時 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL hexamod:步進 時， NL 獲得 !M! 層 guardianmod:臨時 力量 。"
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "此刻",
@@ -94,18 +95,18 @@
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "黑夜之劍",
-    "DESCRIPTION": "若當前鬼火未 hexamod:點燃 ， NL 獲得 [E] 。 NL 造成 !D! 點傷害。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 若當前鬼火未 hexamod:點燃 ， NL 獲得 [E] 。"
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "黑夜之盾",
-    "DESCRIPTION": "若當前鬼火未 hexamod:點燃 ， NL 獲得 [E] 。 NL 獲得 !B! 點 格擋 。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 若當前鬼火未 hexamod:點燃 ， NL 獲得 [E] 。"
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "鮮焰儀式",
-    "DESCRIPTION": "hexamod:熄滅 hexamod:點燃 的鬼火。 NL 每熄滅一枚獲得 [E] NL 並抽一張牌 。 NL 消耗 。"
+    "DESCRIPTION": "hexamod:熄滅 hexamod:點燃 的鬼火。 NL 每熄滅一枚， NL 獲得 [E] 並抽一張牌 。 NL 消耗 。"
   },
   "hexamod:StepThrough": {
-    "NAME": "逐步",
+    "NAME": "焰影迷步",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 每有一枚 hexamod:點燃 的鬼火，抽一張牌。"
   },
   "hexamod:InspiringFlames": {
@@ -134,7 +135,7 @@
   },
   "hexamod:RecurringNightmare": {
     "NAME": "夢魘幻象",
-    "DESCRIPTION": "expansioncontent:發掘 1張 虛無 牌。 NL 消耗 。",
+    "DESCRIPTION": "expansioncontent:發掘 !M! 張 虛無 牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "expansioncontent:發掘 !M! 張 虛無 牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "發掘一張虛無牌",
@@ -151,7 +152,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "詭異探險",
-    "DESCRIPTION": "虛無 。 NL 隨機獲得一張 虛無 牌。 NL 其耗能本回合為0。 NL 消耗 。"
+    "DESCRIPTION": "虛無 。 NL 隨機獲得一張 虛無 牌， NL 本回合其耗能為0。 NL 消耗 。"
   },
   "hexamod:PhantomCloak": {
     "NAME": "幽靈披風",
@@ -163,17 +164,17 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "釋魂",
-    "DESCRIPTION": "隨機造成 !D! 點傷害。 NL 消耗 堆每有一張 虛無 牌再造成一次。 NL 消耗 。"
+    "DESCRIPTION": "隨機造成 !D! 點傷害。 NL 消耗 堆每有 虛無 牌， NL 再造成一次。 NL 消耗 。"
   },
   "hexamod:NightmareStrike": {
     "NAME": "夢魘打擊",
-    "DESCRIPTION": "虛無 。 NL 造成 !D! 點傷害。 NL 消耗 時，獲得 *暗影打擊 。",
-    "UPGRADE_DESCRIPTION": "虛無 。 NL 造成 !D! 點傷害。 NL 消耗 時，獲得 *暗影打擊+ 。"
+    "DESCRIPTION": "虛無 。 NL 造成 !D! 點傷害。 NL 消耗 時獲得 *暗影打擊 。",
+    "UPGRADE_DESCRIPTION": "虛無 。 NL 造成 !D! 點傷害。 NL 消耗 時獲得 *暗影打擊 +。"
   },
   "hexamod:NightmareGuise": {
     "NAME": "夢魘偽裝",
-    "DESCRIPTION": "虛無 。 NL 獲得 !B! 點 格擋 。 NL 消耗 時，獲得 *暗影偽裝 。",
-    "UPGRADE_DESCRIPTION": "虛無 。 NL 獲得 !B! 點 格擋 。 NL 消耗 時，獲得 *暗影偽裝+ 。"
+    "DESCRIPTION": "虛無 。 NL 獲得 !B! 點 格擋 。 NL 消耗 時獲得 *暗影偽裝 。",
+    "UPGRADE_DESCRIPTION": "虛無 。 NL 獲得 !B! 點 格擋 。 NL 消耗 時獲得 *暗影偽裝 +。"
   },
   "hexamod:ShadowStrike": {
     "NAME": "暗影打擊",
@@ -185,12 +186,12 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "深處之力",
-    "DESCRIPTION": "虛無 。 hexamod:陰世 。 NL 下回合獲得 [E] 並抽 !M! 張牌。",
-    "UPGRADE_DESCRIPTION": "虛無 。 hexamod:陰世 。 NL 下回合獲得 [E] 並抽 !M! 張牌。"
+    "DESCRIPTION": "虛無 。 hexamod:陰世 。 NL 下回合， NL 獲得 [E] 並抽 !M! 張牌。",
+    "UPGRADE_DESCRIPTION": "虛無 。 hexamod:陰世 。 NL 下回合， NL 獲得 [E] 並抽 !M! 張牌。"
   },
   "hexamod:BurningTouch": {
     "NAME": "灼燒之觸",
-    "DESCRIPTION": "給予 !burny! 層 hexamod:灼魂 。 NL 若敵人已有 hexamod:灼魂 ， NL 再給予一次。"
+    "DESCRIPTION": "給予 !burny! 層 hexamod:灼魂 。 NL 若目標已有 hexamod:灼魂 ， NL 再給予一次。"
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
@@ -212,7 +213,7 @@
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "亡魂屏障",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 本回合被攻擊時，給予攻擊者 !burny! 層 hexamod:灼魂 。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 本回合被攻擊時， NL 給予對方 !burny! 層 hexamod:灼魂 。"
   },
   "hexamod:Toasty": {
     "NAME": "烘焙！",
@@ -223,12 +224,12 @@
     "DESCRIPTION": "造成 !D! 點傷害。 NL 若目標有 hexamod:灼魂 ， NL 獲得 !B! 點 格擋 。"
   },
   "hexamod:HeatCrush": {
-    "NAME": "高熱撞擊",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 敵人的 hexamod:灼魂 提高本牌的傷害。"
+    "NAME": "高熱碾壓",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 傷害受目標 hexamod:灼魂 加成。"
   },
   "hexamod:HeatShield": {
     "NAME": "高熱護盾",
-    "DESCRIPTION": "獲得所有 hexamod:灼魂 層數點 格擋 並移除它們。",
+    "DESCRIPTION": "移除所有 hexamod:灼魂 ， NL 獲得等量 格擋 。",
     "EXTENDED_DESCRIPTION": [
     " NL （當前： !B! 點 格擋 。）"
     ]
@@ -240,12 +241,12 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "高熱金屬",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 引爆後給予目標 !M! 層 hexamod:灼魂 。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 給予 !burny! 層 hexamod:灼魂 。 NL 給予 !M! 層 易傷 。"
   },
   "hexamod:RainOfEmbers": {
     "NAME": "焰燼雨",
-    "DESCRIPTION": "造成 !D! 點傷害並給 NL 予 !burny! 層 hexamod:灼魂 X 次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害，給 NL 予 !burny! 層 hexamod:灼魂 與 1層 虛弱 X 次。"
+    "DESCRIPTION": "重復X次： NL 造成 !D! 點傷害。 NL 給予 !burny! 層 hexamod:灼魂 。",
+    "UPGRADE_DESCRIPTION": "重復X次： NL 造成 !D! 點傷害。 NL 給予 !burny! 層 hexamod:灼魂 。 NL 給予1層 虛弱 。"
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
@@ -257,11 +258,11 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "幻影火球",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 引爆敵人的 hexamod:灼魂 。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 引爆目標的 hexamod:灼魂 。"
   },
   "hexamod:SpectralSpark": {
     "NAME": "幽靈火花",
-    "DESCRIPTION": "NL 若當前鬼火已 hexamod:點燃 ， hexamod:熄滅 它並獲得 !M! 點 hexamod:熱烈 。"
+    "DESCRIPTION": "若當前鬼火已 hexamod:點燃 ， NL hexamod:熄滅 並獲得 !M! 點 hexamod:熱烈 。"
   },
   "hexamod:GhostflameInferno": {
     "NAME": "此即地獄",
@@ -316,13 +317,13 @@
   },
   "hexamod:FifthSeal": {
     "NAME": "第六容器",
-    "DESCRIPTION": "虛無 hexamod:容器 。 NL 戰鬥結束時，額外獲得一張 *容器 牌。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 戰鬥結束時，額外獲得一張 *容器 牌。"
+    "DESCRIPTION": "虛無 hexamod:容器 。 NL 戰鬥結束時， NL 額外獲得一次 *容器 獎勵。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 戰鬥結束時， NL 額外獲得一次 *容器 獎勵。"
   },
   "hexamod:SixthSeal": {
     "NAME": "第五容器",
-    "DESCRIPTION": "虛無 hexamod:容器 。 NL 戰鬥結束時，隨機 升級 牌組中一張牌。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 戰鬥結束時，隨機 升級 牌組中一張牌。"
+    "DESCRIPTION": "虛無 hexamod:容器 。 NL 戰鬥結束時， NL 隨機 升級 牌組中一張牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 戰鬥結束時， NL 隨機 升級 牌組中一張牌。"
   },
   "hexamod:SoulSteal": {
     "NAME": "活體炸彈",
@@ -339,7 +340,7 @@
   },
   "hexamod:FlameSwitch": {
     "NAME": "惡兆",
-    "DESCRIPTION": "虛無 。 NL 將當前鬼火替換為 hexamod:灼熱 、 hexamod:碾壓 或 hexamod:高熱 鬼火。 NL 消耗 。",
+    "DESCRIPTION": "給予 !burny! 層 hexamod:灼魂 ， NL 其引爆所需回合加 !M! 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "保留 。 NL 將當前鬼火替換為 hexamod:灼熱 、 hexamod:碾壓 或 hexamod:高熱 鬼火。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "將當前鬼火替換為 hexamod:高熱 鬼火。",
@@ -359,7 +360,7 @@
   },
   "hexamod:Premonition": {
     "NAME": "預兆",
-    "DESCRIPTION": "選擇一張手牌打出並 消耗 它。 NL 消耗 。",
+    "DESCRIPTION": "選擇一張手牌， NL 打出並 消耗 它。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "選擇打出並消耗"
     ]

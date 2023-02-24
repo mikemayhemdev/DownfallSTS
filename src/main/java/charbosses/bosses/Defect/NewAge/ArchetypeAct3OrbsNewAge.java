@@ -135,7 +135,11 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnStorm(), false);
                     AbstractBossCard.fakeStormPower = true;
                     addToList(cardsList, new EnDefragment(), extraUpgrades);
-                    increasePretendFocus(2);
+                    if (extraUpgrades) {
+                        increasePretendFocus(2);
+                    }else {
+                        increasePretendFocus(1);
+                    }
                     //Lightning Frost Lightning
                     addToList(cardsList, new EnBlind(), false);
                     turn = 0;
