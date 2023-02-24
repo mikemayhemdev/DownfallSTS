@@ -1,6 +1,9 @@
 package guardian.cards;
 
 
+import automaton.cards.Batch;
+import automaton.cards.Debug;
+import automaton.cards.Decompile;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

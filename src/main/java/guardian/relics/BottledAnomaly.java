@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import guardian.GuardianMod;
 import guardian.patches.BottledStasisPatch;
-import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.function.Predicate;
 
@@ -137,15 +136,9 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
         if (counter == 3) {
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-
-            if (card instanceof AbstractUnknownCard) {
-                AbstractCard unknowncard = ( (AbstractUnknownCard)card ).generateFromPoolButNotIntoHand();
-                unknowncard.modifyCostForCombat(-999);
-                addToBot( new MakeTempCardInHandAction( unknowncard ) );
-            }else {
-                card.modifyCostForCombat(-999);
-                addToBot(new MakeTempCardInHandAction(card));
-            }
+            //addToBot(new MakeTempCardInHandActionReduceCost(card, 1, -2));
+            card.modifyCostForCombat(-999);
+            addToBot(new MakeTempCardInHandAction(card));
             this.grayscale = true;
             this.counter = -1;
         }

@@ -23,17 +23,17 @@
   },
   "hexamod:BacktrackSmack": {
     "NAME": "回身击",
-    "DESCRIPTION": "造成 !D! 点伤害两次。 NL hexamod:回退 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:回退 。"
   },
   "hexamod:FastForward": {
     "NAME": "快进",
-    "DESCRIPTION": "抽 !M! 张 牌。 NL hexamod:步进 。",
+    "DESCRIPTION": "虚无 。 NL hexamod:点燃 当前鬼火 。 NL hexamod:步进 。",
     "UPGRADE_DESCRIPTION": "hexamod:点燃 当前鬼火 。 NL hexamod:步进 。"
   },
   "hexamod:Rewind": {
     "NAME": "重返",
-    "DESCRIPTION": "hexamod:回退 。 NL 从弃牌堆 检索 !M! 张牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 从弃牌堆 检索 !M! 张牌。 NL 消耗 。"
+    "DESCRIPTION": "hexamod:回退 。 NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 获得 [E] 并抽一张牌。"
   },
   "hexamod:SkipABeat": {
     "NAME": "引燃",
@@ -42,8 +42,7 @@
   },
   "hexamod:CatchUp": {
     "NAME": "及时",
-    "DESCRIPTION": "hexamod:点燃 上枚鬼火 !M! 次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "hexamod:点燃 上枚鬼火 !M! 次。"
+    "DESCRIPTION": "hexamod:点燃 上枚鬼火 !M! 次 。"
   },
   "hexamod:TimeWarp": {
     "NAME": "时间扭曲",
@@ -152,7 +151,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "诡异探险",
-    "DESCRIPTION": "虚无 。 NL 随机获得一张 虚无 牌， NL 本回合其耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 随机获得一张 虚无 牌。 NL 本回合其耗能为0。 NL 消耗 。"
   },
   "hexamod:PhantomCloak": {
     "NAME": "幽灵披风",
@@ -241,7 +240,7 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "高热金属",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。 NL 给予 !M! 层 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 引爆后给予目标 !M! 层 hexamod:灼魂 。"
   },
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
@@ -340,7 +339,7 @@
   },
   "hexamod:FlameSwitch": {
     "NAME": "恶兆",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 ， NL 其引爆所需回合加 !M! 。 NL 消耗 。",
+    "DESCRIPTION": "虚无 。 NL 将当前鬼火替换为 hexamod:灼热 、 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "保留 。 NL 将当前鬼火替换为 hexamod:灼热 、 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "将当前鬼火替换为 hexamod:高热 鬼火。",

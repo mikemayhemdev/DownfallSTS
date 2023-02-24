@@ -72,6 +72,8 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.exordium.LouseNormal;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.relics.MedicalKit;
@@ -546,7 +548,6 @@ public class downfallMod implements
     }
 
     public void receivePostInitialize() {
-        UnlockTracker.betaCardPref = new IndividualBetaArtEnablerPref(UnlockTracker.betaCardPref);
         soulsImage = ImageMaster.loadImage(downfallMod.assetPath("images/ui/Souls.png"));
 
         loadOtherData();
@@ -595,9 +596,6 @@ public class downfallMod implements
 
         //Hexaghost
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SEALCARD, (rewardSave) -> new SealSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
-
-
-
     }
 
     private void initializeConfig() {

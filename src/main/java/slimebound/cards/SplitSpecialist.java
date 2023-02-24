@@ -3,10 +3,13 @@ package slimebound.cards;
 
 import basemod.BaseMod;
 import com.badlogic.gdx.Gdx;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
@@ -100,7 +103,7 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> realList = new ArrayList<>();
-        Collections.shuffle(cardList, AbstractDungeon.cardRng.random);
+        Collections.shuffle(cardList);
         for (int i = 0; i < 3; i++) {
             realList.add(cardList.get(i));
         }

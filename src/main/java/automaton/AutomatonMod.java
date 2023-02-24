@@ -42,7 +42,6 @@ import downfall.cardmods.EtherealMod;
 import downfall.cardmods.ExhaustMod;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
-import downfall.util.TextureLoader;
 import guardian.patches.BottledStasisPatch;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -133,7 +132,7 @@ public class AutomatonMod implements
             ((AbstractBronzeCard) card).betaArtPath = img;
         }
         Texture cardTexture;
-        cardTexture = TextureLoader.getTexture(img);
+        cardTexture = ImageMaster.loadImage(img);
         cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         int tw = cardTexture.getWidth();
         int th = cardTexture.getHeight();

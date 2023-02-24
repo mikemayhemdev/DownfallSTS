@@ -42,8 +42,7 @@
       " NL bronze:編碼 。",
       " bronze:編碼 。 NL ",
       "\u202F bronze:編碼 時",
-      "LOCALIZATION NOTE: 上方文本需和副本最後一行一致。",
-      "錯誤 - 檢測到完全公開非法遞歸調用"
+      "LOCALIZATION NOTE: 上方文本需和副本最後一行一致。"
     ]
   },
   "bronze:CompileDisplayPanel": {

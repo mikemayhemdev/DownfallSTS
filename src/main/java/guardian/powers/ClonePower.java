@@ -9,6 +9,9 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import guardian.GuardianMod;
+import guardian.actions.PlaceActualCardIntoStasis;
+import guardian.cards.StasisField;
+import guardian.cards.StasisStrike;
 
 
 public class ClonePower extends AbstractGuardianPower {

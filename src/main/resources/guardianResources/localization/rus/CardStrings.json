@@ -349,8 +349,8 @@
   },
   "Guardian:Gem_Blue": {
     "NAME": "Сапфир",
-    "DESCRIPTION": "guardianmod:Подготовка 4.",
-    "UPGRADE_DESCRIPTION": "guardianmod:Подготовка 4."
+    "DESCRIPTION": "guardianmod:Подготовка 3.",
+    "UPGRADE_DESCRIPTION": "guardianmod:Подготовка 3."
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "Разбитый самоцвет",
