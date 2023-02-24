@@ -55,7 +55,7 @@ public class LeaderVoucher extends AbstractGremlinRelic {
 
     @Override
     public String getUpdatedDescription() {
-        if (gremIndex <= 0) {
+        if (gremIndex < 0) {
             return strings.DESCRIPTIONS[0];
         }
         return strings.DESCRIPTIONS[0] + strings.DESCRIPTIONS[gremIndex];

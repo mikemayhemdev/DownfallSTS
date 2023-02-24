@@ -1,27 +1,20 @@
 package charbosses.cards.hermit;
 
-import basemod.ReflectionHacks;
-import basemod.abstracts.CustomCard;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.relics.CBR_Necronomicon;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Necronomicon;
-import hermit.util.TextureLoader;
 
-// Created purely to load beta art, because custom ones are loaded in a different way than vanilla ones. 
 public abstract class AbstractHermitBossCard extends AbstractBossCard {
     public AbstractHermitBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
                                   CardColor color, CardRarity rarity, CardTarget target, AbstractMonster.Intent intent) {
-        super(id.replace("downfall_Charboss:","downfall_Charboss:hermit:"), name, img, cost, rawDescription, type, color, rarity, target, intent, true);
-        this.loadJokeCardImage();
+        super(id, name, img, cost, rawDescription, type, color, rarity, target, intent, true);
     }
 
     protected void renderHelperU(SpriteBatch sb, Color color, TextureAtlas.AtlasRegion img, float drawX, float drawY) {
@@ -43,15 +36,4 @@ public abstract class AbstractHermitBossCard extends AbstractBossCard {
             nCon.render(sb);
         }
     }
-
-    public void loadJokeCardImage() {
-        Texture cardTexture;
-        cardTexture = TextureLoader.getTexture(this.assetUrl.replace("cards","betacards"));
-        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        int tw = cardTexture.getWidth();
-        int th = cardTexture.getHeight();
-        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
-        ReflectionHacks.setPrivate(this, AbstractCard.class, "jokePortrait", cardImg);
-    }
-
 }

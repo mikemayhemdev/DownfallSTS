@@ -20,7 +20,7 @@ public class EnDefendHermit extends AbstractHermitBossCard {
     public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Defend_Hermit.ID);
 
     public EnDefendHermit() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/defend.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/card_defend.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 5;
         this.tags.add(CardTags.STARTER_DEFEND);
     }

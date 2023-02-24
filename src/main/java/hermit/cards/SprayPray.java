@@ -6,12 +6,12 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
+
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -71,13 +71,4 @@ public class SprayPray extends AbstractDynamicCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
     }
-
-    @Override //zhs card text thing
-    public void initializeDescriptionCN() {
-        super.initializeDescriptionCN();
-        if(Settings.language == Settings.GameLanguage.ZHS) {
-            this.description.remove(1);
-        }
-    }
-
 }

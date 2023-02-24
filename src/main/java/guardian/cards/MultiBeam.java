@@ -3,6 +3,7 @@ package guardian.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,6 +17,9 @@ import com.megacrit.cardcrawl.vfx.combat.SweepingBeamEffect;
 import guardian.GuardianMod;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
+import guardian.powers.BeamBuffPower;
+
+import static guardian.GuardianMod.makeBetaCardPath;
 
 
 public class MultiBeam extends AbstractGuardianCard implements InStasisCard {
@@ -60,7 +64,7 @@ public class MultiBeam extends AbstractGuardianCard implements InStasisCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-//        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("MultiBeam.png"));
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("MultiBeam.png"));
     }
 
     @Override

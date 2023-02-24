@@ -1,8 +1,12 @@
 package guardian.cards;
 
+import automaton.FunctionHelper;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,8 +18,9 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import guardian.GuardianMod;
 import guardian.actions.BraceAction;
 import guardian.orbs.StasisOrb;
-
+import guardian.powers.BeamBuffPower;
 import guardian.powers.ModeShiftPower;
+import guardian.relics.DefensiveModeMoreBlock;
 
 import java.util.ArrayList;
 
@@ -35,7 +40,6 @@ public abstract class AbstractGuardianCard extends CustomCard {
     public boolean isSecondaryMModified;
 
     public boolean flipPreviewMode = false;
-    public StasisOrb belongedOrb = null;
 
     public AbstractGuardianCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color,
                                 CardRarity rarity, CardTarget target) {
@@ -75,12 +79,6 @@ public abstract class AbstractGuardianCard extends CustomCard {
         return super.getPortraitImage();
     }
 
-    protected void upgradeSecondaryM(int amount) {
-        this.secondaryM += amount;
-        this.upgradesecondaryM = true;
-    }
-
-
     public void whenEnteredStasis(StasisOrb orb) {
 
     }
@@ -88,6 +86,12 @@ public abstract class AbstractGuardianCard extends CustomCard {
     public void whenReturnedFromStasis() {
 
     }
+
+    protected void upgradeSecondaryM(int amount) {
+        this.secondaryM += amount;
+        this.upgradesecondaryM = true;
+    }
+
 
 
     /*
@@ -212,7 +216,7 @@ public abstract class AbstractGuardianCard extends CustomCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (this.hasTag(GuardianMod.STASISGLOW)) this.tags.remove(GuardianMod.STASISGLOW);
 
-        //GuardianMod.logger.info("New card played: " + this.name + " misc = " + this.misc);
+        GuardianMod.logger.info("New card played: " + this.name + " misc = " + this.misc);
     }
 
     public static void brace(int modeShiftValue) {
@@ -228,6 +232,7 @@ public abstract class AbstractGuardianCard extends CustomCard {
 
             if (AbstractDungeon.player.masterDeck.contains(this)) {
 
+                this.misc = 0;
                 this.misc = 10 + this.socketCount;
                 //     GuardianMod.logger.info("New misc gem save in progress: " + this.name + " new misc = " + this.misc);
 

@@ -1,14 +1,12 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
-import com.megacrit.cardcrawl.core.Settings;
 import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theHexaghost.HexaMod;
 
 import static automaton.AutomatonMod.makeRelicOutlinePath;
 import static automaton.AutomatonMod.makeRelicPath;
@@ -69,16 +67,12 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
         // Colorize the starter relic's name
         String name = new BronzeCore().name;
         StringBuilder sb = new StringBuilder();
-        if(Settings.language==Settings.language.ZHS||Settings.language==Settings.language.ZHT){
-            sb.append("[#").append(AutomatonMod.placeholderColor.toString()).append("]").append(name).append("[]");
-
-        }else {
-            for (String word : name.split(" ")) {
-                sb.append("[#").append(AutomatonMod.placeholderColor.toString()).append("]").append(word).append("[] ");
-            }
-            sb.setLength(sb.length() - 1);
-            sb.append("[#").append(AutomatonMod.placeholderColor.toString()).append("]");
+        for (String word : name.split(" ")) {
+            sb.append("[#").append(AutomatonMod.placeholderColor.toString()).append("]").append(word).append("[] ");
         }
+        sb.setLength(sb.length() - 1);
+        sb.append("[#").append(AutomatonMod.placeholderColor.toString()).append("]");
+
         return DESCRIPTIONS[0] + sb.toString() + DESCRIPTIONS[1];
     }
 

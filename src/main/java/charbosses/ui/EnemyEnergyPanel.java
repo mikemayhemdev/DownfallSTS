@@ -162,17 +162,15 @@ public class EnemyEnergyPanel extends AbstractPanel {
 
     @Override
     public void render(final SpriteBatch sb) {
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            this.tipHitbox.move(this.current_x, this.current_y);
-            this.renderOrb(sb);
-            this.renderVfx(sb);
-            final String energyMsg = EnemyEnergyPanel.totalCount + "/" + this.owner.energy.energy;
-            AbstractDungeon.player.getEnergyNumFont().getData().setScale(EnemyEnergyPanel.fontScale);
-            FontHelper.renderFontCentered(sb, energyNumFont, energyMsg, this.current_x, this.current_y, EnemyEnergyPanel.ENERGY_TEXT_COLOR);
-            this.tipHitbox.render(sb);
-            if (this.tipHitbox.hovered && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.isScreenUp) {
-                TipHelper.renderGenericTip(1550.0F * Settings.scale, 750.0F * Settings.scale, EnemyEnergyPanel.LABEL[0], EnemyEnergyPanel.MSG[0]);
-            }
+        this.tipHitbox.move(this.current_x, this.current_y);
+        this.renderOrb(sb);
+        this.renderVfx(sb);
+        final String energyMsg = EnemyEnergyPanel.totalCount + "/" + this.owner.energy.energy;
+        AbstractDungeon.player.getEnergyNumFont().getData().setScale(EnemyEnergyPanel.fontScale);
+        FontHelper.renderFontCentered(sb, energyNumFont, energyMsg, this.current_x, this.current_y, EnemyEnergyPanel.ENERGY_TEXT_COLOR);
+        this.tipHitbox.render(sb);
+        if (this.tipHitbox.hovered && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.isScreenUp) {
+            TipHelper.renderGenericTip(1550.0F * Settings.scale, 750.0F * Settings.scale, EnemyEnergyPanel.LABEL[0], EnemyEnergyPanel.MSG[0]);
         }
     }
 

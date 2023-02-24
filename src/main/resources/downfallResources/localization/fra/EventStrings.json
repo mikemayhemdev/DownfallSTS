@@ -105,9 +105,9 @@
       "Les esprits affamés consomment votre offrande ! Ils se régalent des âmes, brûlant intensément alors que le feu @double@ de force. NL Les esprits dansent autour de vous, excités avant ~de~ ~fusionner~ ~avec~ ~vous,~ vous réchauffant et vous renforçant. NL Vos PV max augmentent de 10 et vous êtes #gsoigné totalement."
     ],
     "OPTIONS": [
-      "[Offrir] #rPerdez #r150 #rÂmes. #gGagnez #g10 #gPV #gMax #get #gGuérissez #gComplètement.",
+      "[Offrir] #rPerdez #r150 #rÂmes. #gGagnez #g10 #gPV #gMax.",
       "[Verrouillé] Requiert 150 Âmes.",
-      "[Offrir] #rPerdez #r150 #rÂmes. #gChaque #gDiablotin #gGagne #g2 #gPV #gMax #get #gGuérissez #gComplètement."
+      "[Offrir] #rPerdez #r150 #rÂmes. #gChaque #gDiablotin #gGagne #g2 #gPV #gMax."
     ]
   },
   "downfall:FaceTrader": {

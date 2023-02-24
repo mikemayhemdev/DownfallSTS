@@ -33,7 +33,6 @@ public class StasisOrb extends AbstractOrb {
 
     public AbstractCard stasisCard;
     private AbstractGameEffect stasisStartEffect;
-    public boolean cardExhausted = false; // Becomes true when single gem in stasis is exhausted by Gem Cannon, so that the orb is instantly set anew.
 
     public StasisOrb(AbstractCard card) {
         this(card, null);
@@ -45,9 +44,6 @@ public class StasisOrb extends AbstractOrb {
 
     public StasisOrb(AbstractCard card, CardGroup source, boolean selfStasis) {
         this.stasisCard = card;
-        if(this.stasisCard instanceof AbstractGuardianCard){
-            ((AbstractGuardianCard) this.stasisCard).belongedOrb=this;
-        }
         GuardianMod.logger.info("New Stasis Orb made");
         this.stasisCard.beginGlowing();
         this.name = orbString.NAME + stasisCard.name;
@@ -139,8 +135,6 @@ public class StasisOrb extends AbstractOrb {
     }
 
     public void onEvoke() {
-        if(cardExhausted){return;}
-
         if (this.stasisCard instanceof InStasisCard) {
             ((InStasisCard) this.stasisCard).onEvoke(this);
         }
