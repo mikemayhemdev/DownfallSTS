@@ -46,6 +46,13 @@
       "매 턴 이 효과가 발동하는 동안 공격 카드를 사용할 때마다 이 적은 #y힘을 #b"," 얻습니다. 현재 #y힘을 #b", " 얻습니다."
     ]
   },
+  "downfall:FearNoEvil": {
+    "NAME": "무외",
+    "DESCRIPTIONS": [
+      "이번 턴 동안 내 #y공격 카드를 사용하면 #y무외를 사용해 #y명상할 것입니다.",
+      "#y무외를 사용해 #y명상할 것입니다."
+    ]
+  },
   "downfall:PoisonResist": {
     "NAME": "중독 저항",
     "DESCRIPTIONS": [
@@ -76,6 +83,20 @@
       "와쳐가 체력을 #b",
       " 잃으면 #y라그나로크를 사용하거나 #y강림한 턴에만 #y힘을 #b4 잃습니다.",
       "와쳐가 #y라그나로크를 사용하거나 #y강림한 턴에만 #y힘을 #b4 잃습니다."
+    ]
+  },
+  "downfall:WatcherSkillPower": {
+    "NAME": "부조화한 기도",
+    "DESCRIPTIONS": [
+      "#y스킬 카드를 사용할 때마다 와쳐는 임시로 #y힘을 #b",
+      " 얻고 턴 종료시 얻은 #y힘을 잃습니다.",
+      "#y스킬 카드를 사용할 때마다 와쳐는 임시로 #y힘을 얻고 턴 종료시 얻은 #y힘을 잃습니다."
+    ]
+  },
+  "downfall:WrathNextTurnPower": {
+    "NAME": "다음 턴 진노",
+    "DESCRIPTIONS": [
+      "와쳐의 턴 시작 시 #y진노합니다."
     ]
   },
   "downfall:NeowBlasphemersDemise": {
@@ -163,6 +184,13 @@
     "DESCRIPTIONS": [
       "내 #y파워 카드를 1장 사용할 때마다 디펙트는 #y밀집을 #b",
       " 얻습니다."
+    ]
+  },
+  "downfall:DefectCuriosityLighning": {
+    "NAME": "Unbiased Cognition",
+    "DESCRIPTIONS": [
+      "내 #y파워 카드를 사용할 때마다 디펙트가 #y번개 #y구체를 #b",
+      " 영창합니다."
     ]
   },
   "downfall:NeowUnbiasedCognition": {
@@ -298,7 +326,7 @@
   "downfall:HermitConcentrationPower": {
     "NAME": "집중 중",
     "DESCRIPTIONS": [
-      "집중하는 동안 허밋의 카드에 #y정조준 효과가 적용됩니다. 이번 턴에 피해를 #b",
+      "집중하는 동안 허밋의 카드에 #y정조준 효과가 적용됩니다. 이번 턴에 막히지 않은 피해를 #b",
       " 주면 집중이 깨집니다.",
       "허밋의 집중이 깨져 이번 턴에 #y정조준 효과가 발동하지 않습니다."
     ]
@@ -361,7 +389,7 @@
   "downfall:NeowSpirit": {
     "NAME": "영웅의 혼",
     "DESCRIPTIONS": [
-      "니오우가 이로운 효과를 사용한다면 힘을 #b6 얻고... ",
+      "니오우가 이로운 효과를 사용한다면 #y힘을 #b6 얻고... ",
       " NL 악마의 형상을 1 얻습니다. #r(아이언클래드)",
       " NL 가시를 2 얻습니다. #g(사일런트)",
       " NL 버퍼를 2 얻습니다. #b(디펙트)",

@@ -1,7 +1,7 @@
 package hermit.actions;
 
+import basemod.BaseMod;
 import com.badlogic.gdx.utils.Array;
-import com.esotericsoftware.spine.Event;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
@@ -10,13 +10,11 @@ import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.RarePotionParticleEffect;
 
 import java.util.Iterator;
 
 public class DeadManAction extends AbstractGameAction {
     private AbstractPlayer p;
-    private CardType typeToCheck;
 
     public DeadManAction(int amount) {
         this.p = AbstractDungeon.player;
@@ -68,7 +66,7 @@ public class DeadManAction extends AbstractGameAction {
                     card = groups.get(group).getBottomCard();
                     groups.get(group).removeCard(card);
                     p.drawPile.removeCard(card);
-                    if (this.p.hand.size() == 10) {
+                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                         this.p.createHandIsFullDialog();
                     } else {
                         card.unhover();

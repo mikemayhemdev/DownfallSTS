@@ -9,20 +9,16 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.stances.DivinityStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
-import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceChangeParticleGenerator;
 import hermit.HermitMod;
 import hermit.characters.hermit;
-import hermit.powers.EternalPower;
 import hermit.powers.OverwhelmingPowerPower;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class OverwhelmingPower extends AbstractDynamicCard {
-
 
     // TEXT DECLARATION
 

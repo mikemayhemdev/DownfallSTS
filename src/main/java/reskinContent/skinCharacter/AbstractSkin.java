@@ -27,6 +27,7 @@ public abstract class AbstractSkin {
     public String NAME;
 
     public int portraitAnimationType = 0;
+    public boolean forcePortraitAnimationType = false;
     public String SHOULDER1;
     public String SHOULDER2;
     public String CORPSE;

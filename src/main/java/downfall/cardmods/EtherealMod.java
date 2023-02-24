@@ -16,7 +16,7 @@ public class EtherealMod extends AbstractCardModifier {
     }
 
     public boolean shouldApply(AbstractCard card) {
-        return !CardModifierManager.hasModifier(card, ID);
+        return !(card.isEthereal || card.selfRetain);
     }
 
     @Override

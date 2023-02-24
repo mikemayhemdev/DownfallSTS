@@ -1,9 +1,6 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -17,11 +14,6 @@ import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class DeadMansHand extends AbstractDynamicCard {
-
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
 
     // TEXT DECLARATION
 

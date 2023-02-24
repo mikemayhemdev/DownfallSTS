@@ -5,6 +5,8 @@ import basemod.abstracts.CustomCard;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
+import charbosses.cards.hermit.EnShortFuse;
+import charbosses.cards.hermit.EnShortFuseNecro;
 import charbosses.cards.purple.AbstractStanceChangeCard;
 import charbosses.cards.purple.EnCarveReality;
 import charbosses.cards.purple.EnSmite;
@@ -777,7 +779,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         if ((!lockIntentValues) && this.damage > -1) {
             if (this.isMultiDamage) {
                 this.intentMultiAmt = this.magicNumber;
-                if (this instanceof EnHandOfGreedHermitNecro) {
+                if (this instanceof EnHandOfGreedHermitNecro || this instanceof EnShortFuseNecro) {
                     this.intentMultiAmt = 2;
                 }
             } else {

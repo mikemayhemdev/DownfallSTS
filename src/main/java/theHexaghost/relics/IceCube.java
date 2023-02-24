@@ -2,9 +2,11 @@ package theHexaghost.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
+import theHexaghost.powers.EnhancePower;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;
@@ -26,6 +28,11 @@ public class IceCube extends CustomRelic {
     public void onUnequip() {
         --AbstractDungeon.player.energy.energyMaster;// 42
     }// 43
+
+    @Override
+    public void atBattleStart() {
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(-1), -1));
+    }
 
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];

@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import guardian.GuardianMod;
+import guardian.actions.AccelerateAllCardsInStasisAction;
 import guardian.characters.GuardianCharacter;
 import guardian.orbs.StasisOrb;
 
@@ -40,21 +41,8 @@ public class AcceleratePotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-
-        CardCrawlGame.sound.play("POWER_TIME_WARP", 0.05F);
-        AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
-        AbstractDungeon.topLevelEffectsQueue.add(new com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect());
-
-        for (int i = 0; i < this.potency; i++) {
-            for (AbstractOrb o : AbstractDungeon.player.orbs) {
-                if (o instanceof StasisOrb) {
-                    o.onStartOfTurn();
-                    ((StasisOrb) o).stasisCard.superFlash(Color.GOLDENROD);
-                }
-            }
-        }
-
-
+        for (int i = 0; i < this.potency; i++)
+            addToBot(new AccelerateAllCardsInStasisAction());
     }
 
 

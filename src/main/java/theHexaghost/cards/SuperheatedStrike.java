@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 
+@Deprecated
 @CardIgnore
 public class SuperheatedStrike extends AbstractHexaCard {
 

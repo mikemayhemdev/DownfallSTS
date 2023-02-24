@@ -2,6 +2,7 @@ package automaton.relics;
 
 import automaton.AutomatonMod;
 import automaton.actions.AddToFuncAction;
+import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -38,7 +39,7 @@ public class CableSpool extends CustomRelic {
         if (!grayscale && c.hasTag(ENCODES)) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractCard c2 = c.makeCopy();
+            AbstractCard c2 = c.makeStatEquivalentCopy();
             addToBot(new AddToFuncAction(c2, null));
             grayscale = true;
         }

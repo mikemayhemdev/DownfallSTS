@@ -22,7 +22,7 @@ import guardian.powers.DontLeaveDefensiveModePower;
 import guardian.stances.DefensiveMode;
 import guardian.vfx.IronWaveEffectBlue;
 
-
+@Deprecated
 public class Harden extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Harden");
     public static final String NAME;

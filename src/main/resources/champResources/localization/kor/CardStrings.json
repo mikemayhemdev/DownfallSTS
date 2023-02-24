@@ -38,17 +38,6 @@
     "NAME": "순간 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL *수비 champ:연계: champ:반격을 !M! 얻고 방어도를 !B! 얻습니다."
   },
-  "champ:Balance": {
-    "NAME": "균형",
-    "DESCRIPTION": "champ:수비 또는 champ:검투사 자세를 취합니다. NL 선택한 champ:자세의 무작위 champ:연계 카드를 1장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "champ:수비 또는 champ:검투사 자세를 취합니다. NL 선택한 champ:자세의 무작위 강화된 champ:연계 카드를 1장 얻습니다.",
-    "EXTENDED_DESCRIPTION": [
-      "champ:수비 자세를 취합니다. NL 무작위 *수비 champ:연계 카드를 1장 얻습니다.",
-      "champ:검투사 자세를 취합니다. NL 무작위 *검투사 champ:연계 카드를 1장 얻습니다.",
-      "champ:수비 자세를 취합니다. NL 무작위 강화된 *검투사 champ:연계 카드를 1장 얻습니다.",
-      "champ:검투사 자세를 취합니다. NL 무작위 강화된 *검투사 champ:연계 카드를 1장 얻습니다."
-    ]
-  },
   "champ:DefensiveShout": {
     "NAME": "수비 함성",
     "DESCRIPTION": "champ:반격을 !M! 얻습니다. champ:수비 자세를 취합니다."
@@ -76,17 +65,6 @@
       " NL (방어도를 !B! 얻습니다.)"
     ]
   },
-  "champ:Aggression": {
-    "NAME": "공격성",
-    "DESCRIPTION": "champ:광폭화 또는 champ:검투사 자세를 취합니다. NL 선택한 champ:자세의 무작위 champ:연계 카드를 1장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "champ:광폭화 또는 champ:검투사 자세를 취합니다. NL 선택한 champ:자세의 무작위 강화된 champ:연계 카드를 1장 얻습니다.",
-    "EXTENDED_DESCRIPTION": [
-      "champ:광폭화 자세를 취합니다. NL 무작위 *광폭화 champ:연계 카드를 1장 얻습니다.",
-      "champ:검투사 자세를 취합니다. NL 무작위 *검투사 champ:연계 카드를 1장 얻습니다.",
-      "champ:광폭화 자세를 취합니다. NL 무작위 강화된 *광폭화 champ:연계 카드를 1장 얻습니다.",
-      "champ:검투사 자세를 취합니다. NL 무작위 강화된 *검투사 champ:연계 카드를 1장 얻습니다."
-    ]
-  },
   "champ:BerserkersShout": {
     "NAME": "광폭화 함성",
     "DESCRIPTION": "활력 을 !M! 얻습니다. NL champ:광폭화 자세를 취합니다."
@@ -107,17 +85,6 @@
   "champ:Devastate": {
     "NAME": "완파",
     "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. 이번 전투에 사용된 champ:마무리 카드의 수만큼 이 카드의 비용이 [E] 감소합니다."
-  },
-  "champ:Control": {
-    "NAME": "제어",
-    "DESCRIPTION": "champ:수비 또는 champ:광폭화 자세를 취합니다. NL 선택한 champ:자세의 무작위 champ:연계 카드를 1장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "champ:수비 또는 champ:광폭화 자세를 취합니다. NL 선택한 champ:자세의 무작위 강화된 champ:연계 카드를 1장 얻습니다.",
-    "EXTENDED_DESCRIPTION": [
-      "champ:수비 자세를 취합니다. NL 무작위 *수비 champ:연계 카드를 1장 얻습니다.",
-      "champ:광폭화 자세를 취합니다. NL 무작위 *광폭화 champ:연계 카드를 1장 얻습니다.",
-      "champ:수비 자세를 취합니다. NL 무작위 강화된 *수비 champ:연계 카드를 1장 얻습니다.",
-      "champ:광폭화 자세를 취합니다. NL 무작위 강화된 *광폭화 champ:연계 카드를 1장 얻습니다."
-    ]
   },
   "champ:Circumvent": {
     "NAME": "우회",
@@ -207,7 +174,7 @@
   },
   "champ:RapidStrikes": {
     "NAME": "재빠른 타격",
-    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL 이번 턴 동안 손에 있는 *타격 카드의 비용을 0으로 낮춥니다."
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL 이번 턴 동안 손에 있는 \"타격\" 이 포함된 카드의 비용을 0으로 낮춥니다."
   },
   "champ:EnchantSword": {
     "NAME": "검 강화",
@@ -218,7 +185,7 @@
   },
   "champ:BladeFlurry": {
     "NAME": "타격 돌풍",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용하는 다음 *타격 카드가 2번 사용됩니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 다음으로 사용하는 \"타격\" 이 포함된 카드가 2번 사용됩니다."
   },
   "champ:SwordThrow": {
     "NAME": "검 투척",
@@ -305,10 +272,6 @@
   "champ:ArenaPreparation": {
     "NAME": "아레나 준비",
     "DESCRIPTION": "무작위 스킬 카드를 !M! 장 얻습니다. NL 그 카드들을 보존합니다. NL 소멸."
-  },
-  "champ:EndlessRage": {
-    "NAME": "끝없는 분노",
-    "DESCRIPTION": "champ:자세를 취할 때마다 효과를 얻습니다."
   },
   "champ:SteelEdge": {
     "NAME": "강철 칼날",
@@ -408,7 +371,7 @@
   },
   "champ:UltimateStance": {
     "NAME": "궁극의 자세",
-    "DESCRIPTION": "*수비 또는 *광폭화 자세를 취해야 사용할 수 있습니다. NL !M! 턴 동안 champ:궁극의 자세를 취합니다. NL 소멸.",
+    "DESCRIPTION": "다음 턴 동안 champ:궁극의 자세를 취합니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "*수비 또는 *광폭화 자세를 사용할 수 있습니다. NL !M! 턴 동안 champ:궁극의 자세를 취합니다.",
     "EXTENDED_DESCRIPTION": [
       "자세를 취하고 있지 않다."

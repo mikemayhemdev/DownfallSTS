@@ -10,14 +10,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import hermit.patches.EnumPatch;
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
 
 import java.util.Iterator;
 import java.util.UUID;
 
 public class GoldenBulletAction extends AbstractGameAction {
-    //private static final Logger logger = LogManager.getLogger(AbstractCard.class.getName());
     private DamageInfo info;
     private UUID uuid;
     int amount;
