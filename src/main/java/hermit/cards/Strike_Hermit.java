@@ -21,7 +21,7 @@ public class Strike_Hermit extends AbstractHermitCard {
     public static final String ID = HermitMod.makeID(Strike_Hermit.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("card_strike.png");
+    public static final String IMG = makeCardPath("strike.png");
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
