@@ -3,6 +3,7 @@ package automaton.cards;
 import automaton.AutomatonMod;
 import automaton.actions.AddToFuncAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,6 +12,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
@@ -26,6 +29,7 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
 
     private static final int DAMAGE = 7;
     private static final int BLOCK = 6;
+    private int addBackVigor = 0;
 
     public Branch() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
@@ -33,6 +37,14 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
         baseBlock = BLOCK;
         exhaust = true;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Branch.png"));
+    }
+
+    public void applyPowers() {
+        super.applyPowers();
+        if(AbstractDungeon.player.hasPower(VigorPower.POWER_ID)){
+            AbstractPower pr = AbstractDungeon.player.getPower( VigorPower.POWER_ID);
+            this.addBackVigor = pr.amount;
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -64,6 +76,9 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
             case "bronze:BranchBlock": {
                 AbstractCard q = new BranchHit();
                 if (upgraded) q.upgrade();
+                if (this.addBackVigor>0) {
+                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, this.addBackVigor), this.addBackVigor));
+                }
                 att(new AddToFuncAction(q, null));
                 att(new GainBlockAction(AbstractDungeon.player, card.baseBlock));
             }

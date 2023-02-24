@@ -1,6 +1,6 @@
 package automaton;
 
-import automaton.cards.Separator;
+import automaton.cards.Terminator;
 import automaton.cards.*;
 import automaton.cards.goodstatus.*;
 import automaton.events.*;
@@ -30,18 +30,17 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.status.*;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.cardmods.EtherealMod;
 import downfall.cardmods.ExhaustMod;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
+import downfall.util.TextureLoader;
 import guardian.patches.BottledStasisPatch;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -132,7 +131,7 @@ public class AutomatonMod implements
             ((AbstractBronzeCard) card).betaArtPath = img;
         }
         Texture cardTexture;
-        cardTexture = ImageMaster.loadImage(img);
+        cardTexture = TextureLoader.getTexture(img);
         cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         int tw = cardTexture.getWidth();
         int th = cardTexture.getHeight();
