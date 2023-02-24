@@ -81,11 +81,13 @@
   "reskinContent:ReSkinBronze": {
     "TEXT": [
       "자동인형",
-      "\"자동인형\""
+      "\"자동인형\"",
+      "The Perfect"
     ],
     "EXTRA_TEXT": [
       "",
-      "예아! 머리부터 발끝까지 완전 자동인형입니다! NL 내 생에 저런 자동인형은 처음 봅니다!"
+      "예아! 머리부터 발끝까지 완전 자동인형입니다! NL 내 생에 저런 자동인형은 처음 봅니다!",
+      "[BOOT] Initializing... Core Systems Online - No Faults Detected NL [OBJECTIVE] BALANCE will be ENFORCED"
     ]
   }
 }

@@ -11,7 +11,8 @@ public class AutomatonSkin extends AbstractSkinCharacter {
     public static final String ID = CardCrawlGame.languagePack.getCharacterString("bronze:theAutomaton").NAMES[0];
     public static final AbstractSkin[] SKINS = new AbstractSkin[]{
             new AutomationOriginal(),
-            new BetaAutomaton()
+            new BetaAutomaton(),
+            new ThePerfect()
     };
 
     public AutomatonSkin() {

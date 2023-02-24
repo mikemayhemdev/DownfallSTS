@@ -81,11 +81,13 @@
   "reskinContent:ReSkinBronze": {
     "TEXT": [
       "Автоматон",
-      "\"Автоматон\""
+      "\"Автоматон\"",
+      "The Perfect"
     ],
     "EXTRA_TEXT": [
       "",
-      "Да! С ног до головы, это Автоматон, точно при точно! NL Никогда не видел ничего более похожего на Автоматона!"
+      "Да! С ног до головы, это Автоматон, точно при точно! NL Никогда не видел ничего более похожего на Автоматона!",
+      "[BOOT] Initializing... Core Systems Online - No Faults Detected NL [OBJECTIVE] BALANCE will be ENFORCED"
     ]
   }
 }
