@@ -1,5 +1,6 @@
 package charbosses.bosses.Defect.NewAge;
 
+import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.bosses.Defect.CharBossDefect;
@@ -13,6 +14,8 @@ import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.relics.*;
+import com.esotericsoftware.spine.AnimationState;
+import com.esotericsoftware.spine.AnimationStateData;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,6 +23,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.NoBlockPower;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
@@ -55,6 +59,17 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
         addRelic(new CBR_RedMask());
         addRelic(new CBR_Turnip());
 
+        // animation
+        try {
+            Method loadAnimationMethod = AbstractCreature.class.getDeclaredMethod("loadAnimation", new Class[] { String.class, String.class, float.class });
+            loadAnimationMethod.setAccessible(true);
+            loadAnimationMethod.invoke(AbstractCharBoss.boss, new Object[] { "expansioncontentResources/images/bosses/defect/2/clockworkDefect.atlas", "expansioncontentResources/images/bosses/defect/2/clockworkDefect.json", 1.0f });
+            AnimationState.TrackEntry e = AbstractCharBoss.boss.state.setAnimation(0, "Idle", true);
+            ((AnimationStateData)ReflectionHacks.getPrivate(AbstractCharBoss.boss, AbstractCharBoss.class, "stateData")).setMix("Hit", "Idle", 0.1f);
+            e.setTimeScale(0.9f);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
