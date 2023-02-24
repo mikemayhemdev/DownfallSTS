@@ -152,7 +152,7 @@
     "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 一张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
     "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽 !M! 张牌并 消耗 一张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
     "EXTENDED_DESCRIPTION": [
-      "来消耗以交换灵魂。"
+      "消耗以交换灵魂。"
     ]
   },
   "sneckomod:CheapStock": {
