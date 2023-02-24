@@ -1,5 +1,6 @@
 package charbosses.bosses.Silent.NewAge;
 
+import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
@@ -13,6 +14,8 @@ import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.SilentShivTimeEaterPower;
 import charbosses.powers.general.PoisonProtectionPower;
 import charbosses.relics.*;
+import com.esotericsoftware.spine.AnimationState;
+import com.esotericsoftware.spine.AnimationStateData;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,6 +24,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.monsters.gauntletbosses.Silent;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
@@ -52,6 +56,16 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
         addRelic(new CBR_TwistedFunnel());
         addRelic(new CBR_HornCleat());
 
+        // animation
+        try {
+            Method loadAnimationMethod = AbstractCreature.class.getDeclaredMethod("loadAnimation", new Class[] { String.class, String.class, float.class });
+            loadAnimationMethod.setAccessible(true);
+            loadAnimationMethod.invoke(AbstractCharBoss.boss, new Object[] { "expansioncontentResources/images/bosses/silent/1/Poison_Silent.atlas", "expansioncontentResources/images/bosses/silent/1/Poison_Silent.json", 1.0f });
+            AnimationState.TrackEntry e = AbstractCharBoss.boss.state.setAnimation(0, "Idle", true);
+            e.setTimeScale(0.9f);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
