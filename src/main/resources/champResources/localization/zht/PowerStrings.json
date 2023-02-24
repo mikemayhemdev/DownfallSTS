@@ -14,7 +14,7 @@
     ]
   },
   "champ:DrawLessNextTurnPower": {
-    "NAME": "限製抽牌",
+    "NAME": "限制抽牌",
     "DESCRIPTIONS": [
       "下回合少抽 #b",
       " 張牌。",
@@ -32,10 +32,7 @@
   "champ:ImprovisingPower": {
     "NAME": "觸類旁通",
     "DESCRIPTIONS": [
-      "每回合首次打出 #y連段 牌時，將其返回手牌且它下次耗能為 #b0 。還能觸發 #b",
-      " 次。",
-      "每回合前 #b",
-      " 次打出 #y連段 牌時，將其返回手牌且它下次耗能為 #b0 。還能觸發 #b"
+      "你的回合開始時，若未處於 #y姿態 ，隨機進入 #y戰狂 或 #y防守 。 "
     ]
   },
   "champ:CalledShotPower": {
@@ -107,9 +104,8 @@
   "champ:IronFortressPower": {
     "NAME": "戰鬥躍舞",
     "DESCRIPTIONS": [
-      "每當你進入 #y姿態 時，獲得其 #y技術 獎勵 #b",
-      " #b",
-      " 次。"
+      "每當你進入 #y姿態 時，獲得 #b",
+      " 點 #y格擋 。"
     ]
   },
   "champ:IronFortressVigorPower": {
