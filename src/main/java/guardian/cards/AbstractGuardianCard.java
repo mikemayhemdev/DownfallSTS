@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.util.TextureLoader;
 import guardian.GuardianMod;
 import guardian.actions.BraceAction;
 import guardian.orbs.StasisOrb;
@@ -62,7 +63,7 @@ public abstract class AbstractGuardianCard extends CustomCard {
 
                     Texture portraitTexture;
                     try {
-                        portraitTexture = ImageMaster.loadImage(newPath);
+                        portraitTexture = TextureLoader.getTexture(newPath);
                     } catch (Exception var5) {
                         portraitTexture = null;
                     }

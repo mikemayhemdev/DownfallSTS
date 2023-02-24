@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.daily.mods.AbstractDailyMod;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RunModStrings;
 import downfall.downfallMod;
+import downfall.util.TextureLoader;
 
 public class TransformRewards extends AbstractDailyMod {
     public static final String ID = downfallMod.makeID("TransformRewards");
@@ -20,6 +21,6 @@ public class TransformRewards extends AbstractDailyMod {
 
     public TransformRewards() {
         super(ID, NAME, DESC, null, false);
-        this.img = ImageMaster.loadImage("downfallResources/images/dailies/transformrewards.png");
+        this.img = TextureLoader.getTexture("downfallResources/images/dailies/transformrewards.png");
     }
 }

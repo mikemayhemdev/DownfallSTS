@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.*;
 import downfall.downfallMod;
+import downfall.util.TextureLoader;
 
 public class RelicOverrides {
 
@@ -36,8 +37,8 @@ public class RelicOverrides {
         public static void Prefix(OldCoin _instance) {
             if (EvilModeCharacterSelect.evilMode && _instance.name != CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[1]) {
                 //ReflectionHacks.setPrivateStaticFinal(OldCoin.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[1]);
-                _instance.img = ImageMaster.loadImage(downfallMod.assetPath("images/relics/oldCoinEvil.png"));
-                _instance.outlineImg = ImageMaster.loadImage(downfallMod.assetPath("images/relics/Outline/oldCoinEvil.png"));
+                _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/oldCoinEvil.png"));
+                _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/oldCoinEvil.png"));
                 _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[2];
             }
 
@@ -55,8 +56,8 @@ public class RelicOverrides {
         public static void Prefix(MembershipCard _instance) {
             if (EvilModeCharacterSelect.evilMode && _instance.name != CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[3]) {
                 //ReflectionHacks.setPrivateStaticFinal(MembershipCard.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[3]);
-                _instance.img = ImageMaster.loadImage(downfallMod.assetPath("images/relics/membershipCardEvil.png"));
-                _instance.outlineImg = ImageMaster.loadImage(downfallMod.assetPath("images/relics/Outline/membershipCardEvil.png"));
+                _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/membershipCardEvil.png"));
+                _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/membershipCardEvil.png"));
                 _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[4];
 
             }
@@ -75,8 +76,8 @@ public class RelicOverrides {
             if (EvilModeCharacterSelect.evilMode && _instance.name != CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]) {
                 //ReflectionHacks.setPrivateStaticFinal(Courier.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]);
                 _instance.imgUrl = null;
-                _instance.img = ImageMaster.loadImage(downfallMod.assetPath("images/relics/courierEvil.png"));
-                _instance.outlineImg = ImageMaster.loadImage(downfallMod.assetPath("images/relics/Outline/courierEvil.png"));
+                _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/courierEvil.png"));
+                _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/courierEvil.png"));
                 _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[5];
 
             }
@@ -110,8 +111,8 @@ public class RelicOverrides {
             if (EvilModeCharacterSelect.evilMode) {
                 //ReflectionHacks.setPrivateStaticFinal(Courier.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]);
                 _instance.imgUrl = null;
-                _instance.img = ImageMaster.loadImage(downfallMod.assetPath("images/relics/ectoplasmEvil.png"));
-                _instance.outlineImg = ImageMaster.loadImage(downfallMod.assetPath("images/relics/Outline/ectoplasmEvil.png"));
+                _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/ectoplasmEvil.png"));
+                _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/ectoplasmEvil.png"));
                 _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[9];
             }
 

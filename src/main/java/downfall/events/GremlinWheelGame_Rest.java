@@ -37,6 +37,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 import downfall.relics.GremlinWheel;
 import downfall.rooms.HeartShopRoom;
+import downfall.util.TextureLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
@@ -115,9 +116,9 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
         this.wheelAngle = 0.0F;
         this.color = new Color(1.0F, 1.0F, 1.0F, 0.0F);
         this.hpLossPercent = 0.1F;
-        this.wheelImg = ImageMaster.loadImage("images/events/wheel.png");
-        this.arrowImg = ImageMaster.loadImage("images/events/wheelArrow.png");
-        this.buttonImg = ImageMaster.loadImage("images/events/spinButton.png");
+        this.wheelImg = TextureLoader.getTexture("images/events/wheel.png");
+        this.arrowImg = TextureLoader.getTexture("images/events/wheelArrow.png");
+        this.buttonImg = TextureLoader.getTexture("images/events/spinButton.png");
         this.noCardsInRewards = true;
         if (AbstractDungeon.ascensionLevel >= 15) {
             this.hpLossPercent = 0.15F;

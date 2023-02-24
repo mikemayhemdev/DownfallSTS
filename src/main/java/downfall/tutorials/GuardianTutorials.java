@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.TutorialStrings;
 import com.megacrit.cardcrawl.ui.FtueTip;
+import downfall.util.TextureLoader;
 
 public class GuardianTutorials extends FtueTip {
 
@@ -40,8 +41,8 @@ public class GuardianTutorials extends FtueTip {
 
     public GuardianTutorials() {
 
-        this.img1 = ImageMaster.loadImage("hermitResources/images/tip/guardian_t1.png");
-        this.img2 = ImageMaster.loadImage("hermitResources/images/tip/guardian_t2.png");
+        this.img1 = TextureLoader.getTexture("hermitResources/images/tip/guardian_t1.png");
+        this.img2 = TextureLoader.getTexture("hermitResources/images/tip/guardian_t2.png");
 
         txt1 = txt[0];
         txt2 = txt[1];

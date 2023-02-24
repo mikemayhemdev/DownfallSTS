@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.daily.mods.AbstractDailyMod;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RunModStrings;
+import downfall.util.TextureLoader;
 
 
 public class AllSplit extends AbstractDailyMod {
@@ -20,6 +21,6 @@ public class AllSplit extends AbstractDailyMod {
 
     public AllSplit() {
         super("Slimebound:AllSplit", NAME, DESC, null, false);
-        this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/relics/heartofgoo.png");
+        this.img = TextureLoader.getTexture("slimeboundResources/SlimeboundImages/relics/heartofgoo.png");
     }
 }

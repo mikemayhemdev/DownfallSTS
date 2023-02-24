@@ -26,6 +26,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import hermit.util.TextureLoader;
 
 import java.util.ArrayList;
 
@@ -93,7 +94,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
                     Texture portraitTexture;
                     try {
-                        portraitTexture = ImageMaster.loadImage(newPath);
+                        portraitTexture = TextureLoader.getTexture(newPath);
                     } catch (Exception var5) {
                         portraitTexture = null;
                     }

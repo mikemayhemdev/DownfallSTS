@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 
@@ -49,7 +50,7 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
 
     public SlimeSpawnProjectileDeath(float srcX, float srcY, AbstractOrb o, AbstractPlayer p, float scale, Color color, boolean mute) {
         if (img == null) {
-            img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/vfx/slimeballWhite.png");
+            img = TextureLoader.getTexture("slimeboundResources/SlimeboundImages/vfx/slimeballWhite.png");
         }
         if (o == null && p == null) {
             this.duration = 0F;

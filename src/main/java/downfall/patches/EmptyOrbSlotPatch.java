@@ -8,12 +8,13 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import guardian.characters.GuardianCharacter;
+import hermit.util.TextureLoader;
 import slimebound.characters.SlimeboundCharacter;
 
 @SpirePatch(clz = EmptyOrbSlot.class, method = "updateDescription")
 public class EmptyOrbSlotPatch {
     public static Texture NORMAL_ORB = ImageMaster.ORB_SLOT_1;
-    public static Texture SLIME_ORB = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/orbs/empty1.png");
+    public static Texture SLIME_ORB = TextureLoader.getTexture("slimeboundResources/SlimeboundImages/orbs/empty1.png");
     public static final OrbStrings normalOrbString = CardCrawlGame.languagePack.getOrbString("Empty");
     public static final OrbStrings slimeOrbString = CardCrawlGame.languagePack.getOrbString("Slimebound:EmptySlimeSlot");
     public static final OrbStrings guardianOrbString = CardCrawlGame.languagePack.getOrbString("Guardian:EmptyStasisSlot");

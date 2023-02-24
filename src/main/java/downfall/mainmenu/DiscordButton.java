@@ -8,12 +8,13 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.scenes.TitleBackground;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import downfall.downfallMod;
+import downfall.util.TextureLoader;
 
 import java.awt.*;
 import java.net.URL;
 
 public class DiscordButton {
-    static public Button discordButton = new Button(1400.0F * Settings.xScale, Settings.HEIGHT / 2 - 200f * Settings.yScale, "", ImageMaster.loadImage("downfallResources/images/discord.png"));
+    static public Button discordButton = new Button(1400.0F * Settings.xScale, Settings.HEIGHT / 2 - 200f * Settings.yScale, "", TextureLoader.getTexture("downfallResources/images/discord.png"));
 
     public static void openWebpage(String urlString) {
         try {

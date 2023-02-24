@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.EvolvePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.util.TextureLoader;
 
 public class StickyStick extends CustomRelic {
     public static final String ID = "Slimebound:StickyStick";
@@ -19,7 +20,7 @@ public class StickyStick extends CustomRelic {
     public StickyStick() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.UNCOMMON, LandingSound.SOLID);
-        this.largeImg = ImageMaster.loadImage(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
+        this.largeImg = TextureLoader.getTexture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
 
     }
 

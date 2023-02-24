@@ -6,6 +6,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import guardian.characters.GuardianCharacter;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
@@ -17,8 +18,8 @@ public class GuardianChan extends AbstractSkin {
     private static boolean guardianWhirl_played = false;
 
     public GuardianChan() {
-        this.portraitStatic_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/GuardianMod/GuardianChan/portrait_waifu.png"));
-        this.portraitAnimation_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/GuardianMod/GuardianChan/portrait_waifu2.png"));
+        this.portraitStatic_IMG = TextureLoader.getTexture(reskinContent.assetPath("img/GuardianMod/GuardianChan/portrait_waifu.png"));
+        this.portraitAnimation_IMG = TextureLoader.getTexture(reskinContent.assetPath("img/GuardianMod/GuardianChan/portrait_waifu2.png"));
 
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinGuardian").TEXT[0];
         this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinGuardian").EXTRA_TEXT[0];

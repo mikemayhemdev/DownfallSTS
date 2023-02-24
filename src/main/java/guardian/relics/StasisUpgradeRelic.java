@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.util.TextureLoader;
 import guardian.GuardianMod;
 
 public class StasisUpgradeRelic extends CustomRelic {
@@ -16,7 +17,7 @@ public class StasisUpgradeRelic extends CustomRelic {
     public StasisUpgradeRelic() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.RARE, LandingSound.FLAT);
-        this.largeImg = ImageMaster.loadImage(GuardianMod.getResourcePath(LARGE_IMG_PATH));
+        this.largeImg = TextureLoader.getTexture(GuardianMod.getResourcePath(LARGE_IMG_PATH));
     }
 
     public void onEquip() {

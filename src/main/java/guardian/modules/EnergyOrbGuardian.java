@@ -9,11 +9,12 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import guardian.characters.GuardianCharacter;
 
 public class EnergyOrbGuardian extends CustomEnergyOrb {
     private static final float ORB_IMG_SCALE = 1.15F * Settings.scale;
-    private static final Texture inheritOrbCover = ImageMaster.loadImage("guardian/img/ui/topPanel/Inherit/ballBg.png");
+    private static final Texture inheritOrbCover = TextureLoader.getTexture("guardian/img/ui/topPanel/Inherit/ballBg.png");
     private float angle4;
     private float angle3;
     private float angle2;

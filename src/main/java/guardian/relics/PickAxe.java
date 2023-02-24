@@ -4,6 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.util.TextureLoader;
 import guardian.GuardianMod;
 
 public class PickAxe extends CustomRelic {
@@ -35,7 +36,7 @@ public class PickAxe extends CustomRelic {
         this.counter = counter;
         if (counter == 0) {
             this.counter = -2;
-            this.img = ImageMaster.loadImage(GuardianMod.getResourcePath("relics/pickUsed.png"));
+            this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("relics/pickUsed.png"));
             this.usedUp();
         } else {
 

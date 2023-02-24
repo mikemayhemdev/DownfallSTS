@@ -2,6 +2,7 @@ package reskinContent.skinCharacter.skins.Snecko;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
 
@@ -10,7 +11,7 @@ public class BetaSnecko extends AbstractSkin {
     public BetaSnecko() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSnecko").TEXT[1];
         this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSnecko").EXTRA_TEXT[1];
-        this.portraitStatic_IMG = ImageMaster.loadImage(getAssetPath("portrait_beta_snecko.png"));
+        this.portraitStatic_IMG = TextureLoader.getTexture(getAssetPath("portrait_beta_snecko.png"));
 
         this.SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
         this.SHOULDER2 = "sneckomodResources/images/char/shoulderR.png";

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.TextureLoader;
 
 
 public class BronzeOrbEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
@@ -33,7 +34,7 @@ public class BronzeOrbEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
     public BronzeOrbEffect(AbstractPlayer p, AbstractMonster m) {
         this.duration = 0.5F;
         this.entering = true;
-        this.img = ImageMaster.loadImage("images/monsters/theCity/automaton/orb.png");
+        this.img = TextureLoader.getTexture("images/monsters/theCity/automaton/orb.png");
         W = img.getWidth();
         this.p = p;
         this.m = m;

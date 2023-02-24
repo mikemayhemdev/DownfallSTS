@@ -4,6 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.util.TextureLoader;
 import guardian.GuardianMod;
 
 public class DefensiveModeMoreBlock extends CustomRelic {
@@ -16,7 +17,7 @@ public class DefensiveModeMoreBlock extends CustomRelic {
     public DefensiveModeMoreBlock() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.COMMON, LandingSound.FLAT);
-        this.largeImg = ImageMaster.loadImage(GuardianMod.getResourcePath(LARGE_IMG_PATH));
+        this.largeImg = TextureLoader.getTexture(GuardianMod.getResourcePath(LARGE_IMG_PATH));
 
     }
 

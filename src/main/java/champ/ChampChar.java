@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.stances.NeutralStance;
+import downfall.util.TextureLoader;
 import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
@@ -117,7 +118,7 @@ public class ChampChar extends CustomPlayer {
 
     @Override
     public Texture getCustomModeCharacterButtonImage() {
-        return ImageMaster.loadImage(ChampMod.getModID() + "Resources/images/charSelect/leaderboard.png");
+        return TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
 
 

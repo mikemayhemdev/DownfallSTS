@@ -2,6 +2,7 @@ package reskinContent.skinCharacter.skins.Automaton;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
 
@@ -10,7 +11,7 @@ public class BetaAutomaton extends AbstractSkin {
     public BetaAutomaton() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinBronze").TEXT[1];
         this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinBronze").EXTRA_TEXT[1];
-        this.portraitStatic_IMG = ImageMaster.loadImage(getAssetPath("portrait_beta_automaton.png"));
+        this.portraitStatic_IMG = TextureLoader.getTexture(getAssetPath("portrait_beta_automaton.png"));
 
         this.SHOULDER1 = "bronzeResources/images/char/mainChar/shoulder.png";
         this.SHOULDER2 = "bronzeResources/images/char/mainChar/shoulderR.png";

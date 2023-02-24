@@ -549,7 +549,7 @@ public class downfallMod implements
 
     public void receivePostInitialize() {
         UnlockTracker.betaCardPref = new IndividualBetaArtEnablerPref(UnlockTracker.betaCardPref);
-        soulsImage = ImageMaster.loadImage(downfallMod.assetPath("images/ui/Souls.png"));
+        soulsImage = TextureLoader.getTexture(downfallMod.assetPath("images/ui/Souls.png"));
 
         loadOtherData();
 

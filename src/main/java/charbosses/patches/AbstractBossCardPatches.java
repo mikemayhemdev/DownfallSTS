@@ -10,6 +10,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import hermit.util.TextureLoader;
 import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
@@ -36,19 +37,19 @@ public class AbstractBossCardPatches {
                 switch (__instance.type) {
                     case POWER:
                         if (BaseMod.getPowerBgTexture(color) == null) {
-                            BaseMod.savePowerBgTexture(color, ImageMaster.loadImage(BaseMod.getPowerBg(color)));
+                            BaseMod.savePowerBgTexture(color, TextureLoader.getTexture(BaseMod.getPowerBg(color)));
                         }
                         texture = BaseMod.getPowerBgTexture(color);
                         break;
                     case ATTACK:
                         if (BaseMod.getAttackBgTexture(color) == null) {
-                            BaseMod.saveAttackBgTexture(color, ImageMaster.loadImage(BaseMod.getAttackBg(color)));
+                            BaseMod.saveAttackBgTexture(color, TextureLoader.getTexture(BaseMod.getAttackBg(color)));
                         }
                         texture = BaseMod.getAttackBgTexture(color);
                         break;
                     case SKILL:
                         if (BaseMod.getSkillBgTexture(color) == null) {
-                            BaseMod.saveSkillBgTexture(color, ImageMaster.loadImage(BaseMod.getSkillBg(color)));
+                            BaseMod.saveSkillBgTexture(color, TextureLoader.getTexture(BaseMod.getSkillBg(color)));
                         }
                         texture = BaseMod.getSkillBgTexture(color);
                         break;
@@ -119,7 +120,7 @@ public class AbstractBossCardPatches {
                     return ImageMaster.CARD_COLORLESS_ORB;
             }
 
-            Texture texture = ImageMaster.loadImage(BaseMod.getEnergyOrb(card.color));
+            Texture texture = TextureLoader.getTexture(BaseMod.getEnergyOrb(card.color));
             BaseMod.saveEnergyOrbTexture(card.color, texture);
             return new TextureAtlas.AtlasRegion(texture, 0, 0, texture.getWidth(), texture.getHeight());
         }

@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 
@@ -44,7 +45,7 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
 
     public SlimeProjectileEffect(float srcX, float srcY, float destX, float destY, float scale, boolean rain, float duration, boolean mute, boolean bigHeight) {
         if (img == null) {
-            img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/vfx/slimeballWhite.png");
+            img = TextureLoader.getTexture("slimeboundResources/SlimeboundImages/vfx/slimeballWhite.png");
         }
         ////SlimeboundMod.logger.info("Slime normal projectile firing");
 

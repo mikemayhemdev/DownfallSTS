@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.HeartAnimListener;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import hermit.util.TextureLoader;
 
 import java.util.ArrayList;
 
@@ -95,10 +96,10 @@ public class CustomAnimatedNPC {
         this.heartCenterY = y;
 
         if (portalType == 0){
-            portalImage = ImageMaster.loadImage("downfallResources/images/vfx/beyondPortal.png");
+            portalImage = TextureLoader.getTexture("downfallResources/images/vfx/beyondPortal.png");
         }
         if (portalType == 1){
-            portalImage = ImageMaster.loadImage("downfallResources/images/vfx/cityPortal.png");
+            portalImage = TextureLoader.getTexture("downfallResources/images/vfx/cityPortal.png");
         }
 
         if (this.portalRender) {

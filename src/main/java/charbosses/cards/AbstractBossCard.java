@@ -50,6 +50,7 @@ import com.megacrit.cardcrawl.vfx.combat.BuffParticleEffect;
 import com.megacrit.cardcrawl.vfx.combat.StunStarEffect;
 import com.megacrit.cardcrawl.vfx.combat.UnknownParticleEffect;
 import hermit.characters.hermit;
+import hermit.util.TextureLoader;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -987,7 +988,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         if (imgMap.containsKey(img)) {
             cardTexture = (Texture) imgMap.get(img);
         } else {
-            cardTexture = ImageMaster.loadImage(img);
+            cardTexture = TextureLoader.getTexture(img);
             imgMap.put(img, cardTexture);
         }
 

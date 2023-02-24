@@ -1,6 +1,7 @@
 package slimebound.characters;
 
 import com.megacrit.cardcrawl.helpers.*;
+import downfall.util.TextureLoader;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
@@ -154,7 +155,7 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     @Override
     public Texture getCutsceneBg() {
-        return ImageMaster.loadImage("images/scenes/greenBg.jpg");
+        return TextureLoader.getTexture("images/scenes/greenBg.jpg");
 
     }
 
