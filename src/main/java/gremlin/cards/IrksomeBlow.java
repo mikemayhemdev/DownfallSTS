@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
@@ -36,6 +37,7 @@ public class IrksomeBlow extends AbstractGremlinCard implements StrengthAffected
         this.magicNumber = baseMagicNumber;
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "IrksomeBlow.png");
     }
 
     @Override

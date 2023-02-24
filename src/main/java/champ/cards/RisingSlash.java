@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class RisingSlash extends AbstractChampCard {
     public final static String ID = makeID("RisingSlash");
 
@@ -14,6 +16,7 @@ public class RisingSlash extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
         tags.add(CardTags.STRIKE);
+        loadJokeCardImage(this, "RisingSlash.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
