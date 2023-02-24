@@ -104,7 +104,8 @@
   },
   "Guardian:Incinerate": {
     "NAME": "Поджечь",
-    "DESCRIPTION": "Наносит !D! урона. NL guardianmod:Разгон."
+    "DESCRIPTION": "Наносит !D! урона. NL guardianmod:Разгон.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL guardianmod:Разгон дважды."
   },
   "Guardian:Orbwalk": {
     "NAME": "Круговорот",

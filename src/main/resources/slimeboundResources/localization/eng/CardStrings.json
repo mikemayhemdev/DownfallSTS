@@ -5,16 +5,16 @@
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
-    "DESCRIPTION": "slimeboundmod:Tackles deal !M! more damage to enemies, and 1 more damage to you."
+    "DESCRIPTION": "Your \"Tackle\" cards deal !M! more damage to enemies, and 1 more damage to you."
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consult Playbook",
-    "DESCRIPTION": "Gain 4 random slimeboundmod:Tackles. They cost 1 less this combat. NL Exhaust."
+    "DESCRIPTION": "Gain 4 random \"Tackle\" cards. They cost 1 less this combat. NL Exhaust."
   },
   "Slimebound:Chomp": {
     "NAME": "Chomp",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle in your hand to 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle in your hand to 0 this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random \"Tackle\" in your hand to 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random \"Tackle\" in your hand to 0 this combat."
   },
   "Slimebound:ComboTackle": {
     "NAME": "Spear Tackle",
@@ -35,11 +35,12 @@
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "Just Desserts",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL expansioncontent:Exhume !M! random *Lick cards."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL expansioncontent:Exhume !M! random \"Lick\" cards."
   },
   "Slimebound:Dissolve": {
     "NAME": "Quick Snack",
-    "DESCRIPTION": "Draw !M! cards. NL Exhaust a card. Gain *Licks equal to its cost. NL Exhaust."
+    "DESCRIPTION": "Draw !M! card. NL Exhaust a card. Gain *Licks equal to its cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust a card. Gain *Licks equal to its cost. NL Exhaust."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
@@ -71,7 +72,7 @@
   },
   "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL slimeboundmod:Tackles deal !M! more damage this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Your \"Tackle\" cards deal !M! more damage this combat."
   },
   "Slimebound:FormOfPuddle": {
     "NAME": "Shape of Puddle",
@@ -89,12 +90,12 @@
   },
   "Slimebound:GoopSpray": {
     "NAME": "Goop Spray",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !slime! slimeboundmod:Goop and !M! Weak to ALL enemies."
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop and !M! Weak to ALL enemies."
   },
   "Slimebound:GoopTackle": {
     "NAME": "Combo Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Gain a random slimeboundmod:Tackle. It costs 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Gain a random Upgraded slimeboundmod:Tackle. It costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Gain a random \"Tackle\" card. It costs 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Gain a random Upgraded \"Tackle\" card. It costs 0 this turn."
   },
   "Slimebound:Grow": {
     "NAME": "Grow",
@@ -111,8 +112,8 @@
   },
   "Slimebound:HungryTackle": {
     "NAME": "Hungry Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL expansioncontent:Exhume a random *Lick.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damageNL Take !SlimeboundSelfharm! damage. NL expansioncontent:Exhume 2 random *Licks."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL expansioncontent:Exhume a random \"Lick\" card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL expansioncontent:Exhume 2 random \"Lick\" cards."
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "It Looks Tasty",
@@ -224,16 +225,16 @@
   },
   "Slimebound:Recollect": {
     "NAME": "Recollect",
-    "DESCRIPTION": "Gain !B! Block. NL expansioncontent:Exhume a random *Lick card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL expansioncontent:Exhume 2 random *Lick cards.",
+    "DESCRIPTION": "Gain !B! Block. NL expansioncontent:Exhume a random \"Lick\" card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL expansioncontent:Exhume 2 random \"Lick\" cards.",
     "EXTENDED_DESCRIPTION": [
       "Not... Exhausted..."
     ]
   },
   "Slimebound:Recycling": {
     "NAME": "Recycling",
-    "DESCRIPTION": "At the start of your turn, expansioncontent:Exhume a random *Lick card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, expansioncontent:Exhume a random *Lick card."
+    "DESCRIPTION": "At the start of your turn, expansioncontent:Exhume a random \"Lick\" card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, expansioncontent:Exhume a random \"Lick\" card."
   },
   "Slimebound:RejuvenatingLick": {
     "NAME": "Double Lick",
@@ -256,7 +257,7 @@
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! slimeboundmod:Tackles."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! \"Tackle\" cards."
   },
   "Slimebound:SamplingLick": {
     "NAME": "Sampling Lick",
@@ -265,12 +266,12 @@
   },
   "Slimebound:Schlurp": {
     "NAME": "Schlurp",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! *Licks."
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Gain !M! *Lick.",
+    "UPGRADE_DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Gain !M! *Licks."
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "Reformation",
-    "DESCRIPTION": "Whenever you slimeboundmod:Absorb a Slime, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Whenever you slimeboundmod:Absorb a Slime, gain !M! Strength and !M! Dexterity."
+    "DESCRIPTION": "Gain !B! Block. NL Put a card from your discard pile on top of the draw pile."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",
@@ -292,7 +293,7 @@
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Does not remove slimeboundmod:Goop."
+    "DESCRIPTION": "Deal !D! damage. NL Does not remove slimeboundmod:Goop."
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
@@ -312,8 +313,7 @@
   },
   "Slimebound:Split": {
     "NAME": "Split",
-    "DESCRIPTION": "slimeboundmod:Split into 2 random Slimes. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 2 of 4 Slimes to slimeboundmod:Split into. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a random Slime."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Split: Guerilla",
@@ -368,7 +368,7 @@
   },
   "Slimebound:TongueLash": {
     "NAME": "Tongue Lash",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each Exhausted card containing \"Lick\"."
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each Exhausted \"Lick\" card."
   },
   "Slimebound:ViciousTackle": {
     "NAME": "Vicious Tackle",
@@ -377,8 +377,8 @@
   },
   "Slimebound:WasteNot": {
     "NAME": "Waste Not",
-    "DESCRIPTION": "expansioncontent:Exhume all *Lick cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Exhume all *Lick cards.",
+    "DESCRIPTION": "expansioncontent:Exhume all \"Lick\" cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Exhume all \"Lick\" cards.",
     "EXTENDED_DESCRIPTION": [
       "Not... Exhausted..."
     ]

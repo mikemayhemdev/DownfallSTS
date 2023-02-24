@@ -1,6 +1,5 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -14,25 +13,15 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
-
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class WideOpen extends AbstractDynamicCard {
 
-
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
-
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(WideOpen.class.getSimpleName());
     public static final String IMG = makeCardPath("wide_open.png");
-
-    // /TEXT DECLARATION/
-
 
     // STAT DECLARATION
 
@@ -65,8 +54,6 @@ public class WideOpen extends AbstractDynamicCard {
                         EnumPatch.HERMIT_GUN2));
         this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
     }
-
-
 
     //Upgraded stats.
     @Override

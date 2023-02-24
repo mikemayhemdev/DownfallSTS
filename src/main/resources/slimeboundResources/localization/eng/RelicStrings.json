@@ -18,15 +18,15 @@
     "NAME": "Slimed Tail",
     "FLAVOR": "A fake tail to trick enemies during combat, completely covered in slime.",
     "DESCRIPTIONS": [
-      "When you fall below #b50% of your Maximum HP, #yslimeboundmod:Split into a #yslimeboundmod:Guerilla #ySlime, and the next time you take damage, your leading slime is #yslimeboundmod:Absorbed instead. (works once per combat).",
-      "This relic has been used this combat. It will become active again next combat."
+      "Whenever you #ySplit, gain #b.",
+      " Block."
     ]
   },
   "Slimebound:PotencyRelic": {
     "NAME": "Stone of Nomakk",
     "FLAVOR": "When presented to one of your Goop Gang, it seems to make the blob dance.",
     "DESCRIPTIONS": [
-      "At the start of combat, #ySplit into a #yslimeboundmod:Mire #ySlime and gain #b1 #yslimeboundmod:Potency."
+      "At the start of combat, gain #b1 #yslimeboundmod:Potency."
     ]
   },
   "Slimebound:DailySplitRelic": {
@@ -79,7 +79,7 @@
     "NAME": "Jeremiah's Banner",
     "FLAVOR": "You and ooze army.",
     "DESCRIPTIONS": [
-      "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Leeching #ySlime and gain #b1 Slime slot."
+      "At the start of combat, gain #b1 Slime slot and #yslimeboundmod:Split into a random #ySlime."
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {

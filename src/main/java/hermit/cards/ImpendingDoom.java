@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,19 +21,10 @@ import static hermit.HermitMod.makeCardPath;
 
 public class ImpendingDoom extends AbstractDynamicCard {
 
-
-    /*
-     * SNAPSHOT: Deals 12/16 damage, Dead-On makes it free.
-     */
-
-
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(ImpendingDoom.class.getSimpleName());
     public static final String IMG = makeCardPath("impending_doom.png");
-
-    // /TEXT DECLARATION/
-
 
     // STAT DECLARATION
 
@@ -77,7 +67,6 @@ public class ImpendingDoom extends AbstractDynamicCard {
         this.dontTriggerOnUseCard = false;
 
         if (isDeadOnPos()) {
-            //System.out.println("Impending doom trigger, cards in hand: " + AbstractDungeon.player.hand.size() + " Position: " + AbstractDungeon.player.hand.group.indexOf(this));
             onDeadOn();
             AbstractDungeon.player.powers.removeIf(pow -> pow.ID == Concentration.POWER_ID);
             this.dontTriggerOnUseCard = true;

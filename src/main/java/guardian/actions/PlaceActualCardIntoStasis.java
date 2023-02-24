@@ -6,36 +6,41 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import guardian.GuardianMod;
-import guardian.characters.GuardianCharacter;
 import guardian.orbs.StasisOrb;
 
 
 public class PlaceActualCardIntoStasis extends AbstractGameAction {
     private final AbstractCard card;
     private final CardGroup source;
-
+    private boolean skipWait;
     private final boolean hadRetain;
 
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
 
-    public PlaceActualCardIntoStasis(AbstractCard card) {
-        this(card, null);
-    }
-  
     public PlaceActualCardIntoStasis(AbstractCard card, CardGroup source) {
         this.card = card;
         this.source = source;
         this.actionType = ActionType.DAMAGE;
-
+        skipWait = false;
         hadRetain = card.retain;
         if (source != null && source.type == CardGroup.CardGroupType.HAND)
         {
             card.retain = true;
         }
+    }
+
+    public PlaceActualCardIntoStasis(AbstractCard card) {
+        this(card, null);
+    }
+
+    public PlaceActualCardIntoStasis(AbstractCard card, CardGroup source, boolean skipWait) {
+        this(card, source);
+        this.skipWait = skipWait;
     }
 
     public void update() {
@@ -52,8 +57,8 @@ public class PlaceActualCardIntoStasis extends AbstractGameAction {
                     }
                 }
             }
-            AbstractDungeon.actionManager.addToTop(new WaitAction(0.1F));
-            AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(card, source)));
+            if (!skipWait && !Settings.FAST_MODE) addToTop(new WaitAction(0.1F));
+            addToTop(new ChannelAction(new StasisOrb(card, source)));
         } else {
             card.retain = hadRetain;
             if (!AbstractDungeon.player.hasEmptyOrb()) {

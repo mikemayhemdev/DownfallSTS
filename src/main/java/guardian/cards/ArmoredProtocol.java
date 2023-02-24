@@ -17,8 +17,7 @@ import guardian.patches.AbstractCardEnum;
 import guardian.powers.ArmoredProtocolPower;
 import guardian.powers.DontLeaveDefensiveModePower;
 
-import static guardian.GuardianMod.makeBetaCardPath;
-
+@Deprecated
 public class ArmoredProtocol extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("ArmoredProtocol");
     public static final String NAME;
@@ -53,7 +52,6 @@ public class ArmoredProtocol extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("ArmoredProtocol.png"));
 
     }
 
