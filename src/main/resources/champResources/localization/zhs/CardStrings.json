@@ -33,7 +33,7 @@
   },
   "champ:FaceSlap": {
     "NAME": "打脸",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：给予 !M! 层 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ： NL 给予 !M! 层 易伤 。"
   },
   "champ:FlashCut": {
     "NAME": "拔刀打击",

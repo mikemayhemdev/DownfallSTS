@@ -179,7 +179,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机获得一张 sneckomod:异色 技能牌并 sneckomod:混淆 它。"
   },
   "sneckomod:QuickMove": {
-    "NAME": "快速移动",
+    "NAME": "快动作",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL sneckomod:混淆 手中耗能最高的牌。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL sneckomod:混淆 手中耗能最高的 !M! 张牌。"
   },
