@@ -20,6 +20,8 @@ import slimebound.characters.SlimeboundCharacter;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.vfx.DoubleSlimeParticle;
 
+import static com.megacrit.cardcrawl.cards.AbstractCard.CardTarget.*;
+
 
 public class DuplicatedFormPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:DuplicatedFormPower";
@@ -95,7 +97,12 @@ public class DuplicatedFormPower extends AbstractPower {
 
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if ((!card.purgeOnUse) && (this.amount > 0) && (card.target == AbstractCard.CardTarget.ENEMY || card.target == AbstractCard.CardTarget.ALL_ENEMY) && this.cardsDoubledThisTurn < this.amount) {
+        if  (
+                (!card.purgeOnUse) &&
+                        (this.amount > 0) &&
+                        (card.target == ENEMY || card.target == ALL_ENEMY || card.target == SELF_AND_ENEMY ) &&
+                        this.cardsDoubledThisTurn < this.amount
+        ){
             this.cardsDoubledThisTurn += 1;
             flash();
             AbstractMonster m = null;
@@ -117,6 +124,7 @@ public class DuplicatedFormPower extends AbstractPower {
             }
 
             tmp.purgeOnUse = true;
+            tmp.applyPowers();
             AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmp, m, card.energyOnUse));
         }
     }
