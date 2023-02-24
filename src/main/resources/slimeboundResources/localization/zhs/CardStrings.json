@@ -38,8 +38,7 @@
   },
   "Slimebound:Split": {
     "NAME": "分裂",
-    "DESCRIPTION": "随机 slimeboundmod:分裂 两种史莱姆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择 slimeboundmod:分裂 两种史莱姆。 NL 消耗 。"
+    "DESCRIPTION": "随机 slimeboundmod:分裂 一只史莱姆。"
   },
   "Slimebound:LeadByExample": {
     "NAME": "身先士卒",
@@ -61,8 +60,8 @@
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "蜂拥齐上",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:命令 所有史莱姆。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:命令 所有史莱姆两次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:命令 所有史莱姆1次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:命令 所有史莱姆2次。"
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "史莱姆乱战",
@@ -74,8 +73,7 @@
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "革新",
-    "DESCRIPTION": "slimeboundmod:吸收 时额外获得 !M! 点 力量 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:吸收 时额外获得 !M! 点 力量 与 敏捷 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择将弃牌堆一张牌放回抽牌堆顶部。"
   },
   "Slimebound:OozeBath": {
     "NAME": "黏液浴",
@@ -169,8 +167,8 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "强攻",
-    "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ： slimeboundmod:命令 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ： slimeboundmod:命令 两次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ： slimeboundmod:命令 1次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ： slimeboundmod:命令 2次。"
   },
   "Slimebound:TongueLash": {
     "NAME": "舌鞭",
@@ -256,7 +254,7 @@
   },
   "Slimebound:GoopSpray": {
     "NAME": "黏液喷射",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !slime! 层 slimeboundmod:黏液 与 !M! 层 虚弱 。"
+    "DESCRIPTION": "给予所有敌人 !slime! 层 slimeboundmod:黏液 与 !M! 层 虚弱 。"
   },
   "Slimebound:MassFeed": {
     "NAME": "同质化",
@@ -355,8 +353,8 @@
   },
   "Slimebound:ForwardTackle": {
     "NAME": "进军冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 两次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 三次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 2次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 3次。"
   },
   "Slimebound:TagTeam": {
     "NAME": "搭档",
@@ -374,8 +372,8 @@
   },
   "Slimebound:Schlurp": {
     "NAME": "咀嚼",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 张 *掠舔 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 张 *掠舔 。"
+    "DESCRIPTION": "给予 !slime! 层 slimeboundmod:黏液 。 NL 获得 !M! 张 *掠舔 。",
+    "UPGRADE_DESCRIPTION": "给予 !slime! 层 slimeboundmod:黏液 。 NL 获得 !M! 张 *掠舔 。"
   },
   "Slimebound:SplitGreed": {
     "NAME": "贪婪复生",

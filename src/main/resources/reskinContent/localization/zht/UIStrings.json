@@ -80,13 +80,11 @@
   "reskinContent:ReSkinBronze": {
     "TEXT": [
       "童製機械人偶",
-      "愚人節",
-      "The Perfect"
+      "愚人節"
     ],
     "EXTRA_TEXT": [
       "揮舞著與身形完全不相符的巨劍看似滑稽。 NL 實際上有著旁人想象不到的巨大力量。",
-      "相挾天子， NL 以令諸侯。",
-      "[BOOT] Initializing... Core Systems Online - No Faults Detected NL [OBJECTIVE] BALANCE will be ENFORCED"
+      "相挾天子， NL 以令諸侯。"
     ]
   }
 }

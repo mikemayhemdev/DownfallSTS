@@ -18,15 +18,15 @@
     "NAME": "黏质断尾",
     "FLAVOR": "一条完全由黏液包裹的断尾，战斗时可以迷惑敌人。",
     "DESCRIPTIONS": [
-      "生命值低于 #b50% 时， #yslimeboundmod:分裂 一只 #yslimeboundmod:游击史莱姆 。下次受到攻击伤害时， 变为 #yslimeboundmod:吸收 。 NL（每场战斗只生效一次）",
-      " NL 本场战斗已被使用。"
+      "#yslimeboundmod:分裂 时，获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "Slimebound:PotencyRelic": {
     "NAME": "黏黏石",
     "FLAVOR": "据说它能根据你的情绪获得力量",
     "DESCRIPTIONS": [
-      "战斗开始时， #yslimeboundmod:分裂 一只 #yslimeboundmod:污泥史莱姆 并获得 #b1 点 #yslimeboundmod:潜力 。"
+      "战斗开始时，获得 #b1 点 #yslimeboundmod:潜力 。"
     ]
   },
   "Slimebound:DailySplitRelic": {
@@ -79,7 +79,7 @@
     "NAME": "陆军旗",
     "FLAVOR": "你和你的黏黏军团。",
     "DESCRIPTIONS": [
-      "战斗开始时， #yslimeboundmod:分裂 一只 #yslimeboundmod:水蛭史莱姆 并获得 #b1 个史莱姆栏位。"
+      "战斗开始时，获得 #b1 个史莱姆栏位并随机 #yslimeboundmod:分裂 #b1 只 #y史莱姆 。"
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {

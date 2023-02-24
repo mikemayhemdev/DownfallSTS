@@ -84,8 +84,8 @@
   },
   "Gremlin:Duplicate": {
     "NAME": "复刻",
-    "DESCRIPTION": "获得手中一张攻击牌的 !M! 张 gremlin:回响 。 NL 其耗能减1。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得手中一张攻击牌的 !M! 张 gremlin:回响 。 NL 其耗能减1。"
+    "DESCRIPTION": "获得手中一张攻击的两张 gremlin:回响 ，它们耗能减1。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得手中一张攻击的两张 gremlin:回响 ，它们耗能减1。"
   },
   "Gremlin:EdibleArmor": {
     "NAME": "食用护甲",
@@ -134,7 +134,7 @@
   },
   "Gremlin:FlipOut": {
     "NAME": "发疯",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每获得 格挡 ， NL 变为对所有敌人造成等量伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每获得 格挡 ， NL 变为造成等量群体伤害。"
   },
   "Gremlin:Flurry": {
     "NAME": "乱舞",
@@ -165,7 +165,7 @@
   },
   "Gremlin:GremlinArms": {
     "NAME": "地精武器",
-    "DESCRIPTION": "随机获得 !M! 张 *小刀 或 *守卫 。"
+    "DESCRIPTION": "随机获得一张 *小刀 或 *守卫 !M! 次。"
   },
   "Gremlin:GremlinMeal": {
     "NAME": "活动肌肉",
@@ -207,8 +207,8 @@
   },
   "Gremlin:InfiniteBlocks": {
     "NAME": "无限护甲",
-    "DESCRIPTION": "回合开始时获得 *守卫 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时获得 *守卫 。"
+    "DESCRIPTION": "回合开始时， NL 获得一张 *守卫 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时， NL 获得一张 *守卫 。"
   },
   "Gremlin:IrksomeBlow": {
     "NAME": "烦扰一击",
@@ -254,7 +254,7 @@
   },
   "Gremlin:Nob": {
     "NAME": "大块头",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 临时生命 耗尽之前， NL gremlin:大块头 将强制 gremlin:领队 。"
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 临时生命 耗尽之前， NL gremlin:大块头 强制 gremlin:领队 。"
   },
   "Gremlin:NobChoice": {
     "NAME": "做选择",
@@ -262,8 +262,8 @@
   },
   "Gremlin:PartyStick": {
     "NAME": "荧光棒",
-    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 本牌在手时， NL gremlin:切换 时获得 [E] 。",
-    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 本牌在手时， NL gremlin:切换 时获得 [E] 。",
+    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 本牌在手时， NL gremlin:切换 就获得 [E] 。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 本牌在手时， NL gremlin:切换 就获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
       "任何人都不准玩荧光棒。"
     ]
@@ -278,17 +278,17 @@
   },
   "Gremlin:PinNeedle": {
     "NAME": "缝衣针",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺 加入抽牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺+ 加入抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆加入 !M! 张 *针刺 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆加入 !M! 张 *针刺 +。 NL 消耗 。"
   },
   "Gremlin:Pinprick": {
     "NAME": "针刺",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽到时获得本牌的 gremlin:回响 。 NL 造成 !D! 点伤害。 NL 抽一张牌。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "抽到时获得本牌 gremlin:回响 。 NL 造成 !D! 点伤害。 NL 抽一张牌。 NL 消耗 。"
   },
   "Gremlin:Polish": {
     "NAME": "磨亮",
-    "DESCRIPTION": "*小刀 与 *守卫 的数值 增加 !M! 点 。"
+    "DESCRIPTION": "*小刀 与 *守卫 数值 加 !M! 。"
   },
   "Gremlin:PourSalt": {
     "NAME": "撒盐",
@@ -322,7 +322,7 @@
   },
   "Gremlin:Rhythm": {
     "NAME": "节奏",
-    "DESCRIPTION": "gremlin:切换 至下只地精。 NL 从抽牌堆选择取出一张基础牌。 NL 本回合其耗能为0。"
+    "DESCRIPTION": "gremlin:切换 至下只地精。 NL 检索 抽牌堆一张基础牌，本回合其耗能为0。"
   },
   "Gremlin:Rush": {
     "NAME": "冲锋",
@@ -369,7 +369,7 @@
   },
   "Gremlin:ShowStopper": {
     "NAME": "炫耀",
-    "DESCRIPTION": "恰好有7层 gremlin:法力 才能打出。 NL 对所有敌人造成 !D! 点伤害五次。",
+    "DESCRIPTION": "恰有7层 gremlin:法力 才能打出。 NL 对所有敌人造成 !D! 点伤害五次。",
     "EXTENDED_DESCRIPTION": [
       "时机未到。",
       "时机已过。"
@@ -398,7 +398,7 @@
   "Gremlin:Tadah": {
     "NAME": "嗒哒",
     "DESCRIPTION": "随机获得一张技能牌的 gremlin:回响 。 NL gremlin:切换 至 gremlin:地精法师 。",
-    "UPGRADE_DESCRIPTION": "随机获得一张技能牌的 gremlin:回响 。 NL 其能耗减1。 NL gremlin:切换 至 gremlin:地精法师 。"
+    "UPGRADE_DESCRIPTION": "随机获得一张技能牌的 gremlin:回响 ，其能耗减1。 NL gremlin:切换 至 gremlin:地精法师 。"
   },
   "Gremlin:TagTeam": {
     "NAME": "配合",
@@ -407,7 +407,7 @@
   },
   "Gremlin:TargetWeakness": {
     "NAME": "瞄准伤口",
-    "DESCRIPTION": "对已被 虚弱 的目标额外造成 !M! 点伤害。"
+    "DESCRIPTION": "攻击被 虚弱 的目标时， NL 额外造成 !M! 点伤害。"
   },
   "Gremlin:Tricksy": {
     "NAME": "狡猾",
