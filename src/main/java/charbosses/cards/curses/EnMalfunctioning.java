@@ -2,6 +2,7 @@ package charbosses.cards.curses;
 
 import charbosses.actions.util.CharbossDoCardQueueAction;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.cards.AbstractCustomBossCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SetDontTriggerAction;
 import com.megacrit.cardcrawl.cards.status.Wound;
@@ -20,7 +21,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 
-public class EnMalfunctioning extends AbstractBossCard {
+public class EnMalfunctioning extends AbstractCustomBossCard {
     public static final String ID = "downfall_Charboss:Malfunctioning";
     private static final CardStrings cardStrings;
     public static final String IMG_PATH = downfallMod.assetPath("images/cards/malfunctioning.png");
