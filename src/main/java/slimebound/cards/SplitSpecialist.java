@@ -103,7 +103,7 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> realList = new ArrayList<>();
-        Collections.shuffle(cardList);
+        Collections.shuffle(cardList, AbstractDungeon.cardRng.random);
         for (int i = 0; i < 3; i++) {
             realList.add(cardList.get(i));
         }

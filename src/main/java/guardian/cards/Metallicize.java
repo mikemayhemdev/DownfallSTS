@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
@@ -35,6 +36,10 @@ public class Metallicize extends AbstractGuardianCard {
     }
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Metallicize");
+        if(  Settings.language == Settings.GameLanguage.ZHS  ||  Settings.language == Settings.GameLanguage.ZHT  ){
+            cardStrings = CardCrawlGame.languagePack.getCardStrings(GuardianMod.makeID("Metallicize"));
+        }else{
+            cardStrings = CardCrawlGame.languagePack.getCardStrings("Metallicize");
+        }
     }
 }

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.daily.mods.AbstractDailyMod;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RunModStrings;
 import downfall.downfallMod;
+import downfall.util.TextureLoader;
 
 
 public class Jewelcrafting extends AbstractDailyMod {
@@ -21,6 +22,6 @@ public class Jewelcrafting extends AbstractDailyMod {
 
     public Jewelcrafting() {
         super(ID, NAME, DESC, null, true);
-        this.img = ImageMaster.loadImage("downfallResources/images/dailies/gems.png");
+        this.img = TextureLoader.getTexture("downfallResources/images/dailies/gems.png");
     }
 }

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.daily.mods.AbstractDailyMod;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RunModStrings;
 import downfall.downfallMod;
+import downfall.util.TextureLoader;
 
 
 public class WorldOfGoo extends AbstractDailyMod {
@@ -21,6 +22,6 @@ public class WorldOfGoo extends AbstractDailyMod {
 
     public WorldOfGoo() {
         super(ID, NAME, DESC, null, false);
-        this.img = ImageMaster.loadImage("downfallResources/images/dailies/slime.png");
+        this.img = TextureLoader.getTexture("downfallResources/images/dailies/slime.png");
     }
 }

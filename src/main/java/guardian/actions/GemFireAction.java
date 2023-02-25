@@ -23,9 +23,11 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import guardian.GuardianMod;
-import guardian.cards.AbstractGuardianCard;
+import guardian.cards.*;
+import guardian.orbs.StasisOrb;
 import org.lwjgl.opengl.GL11;
 
 import java.util.ArrayList;
@@ -169,6 +171,7 @@ public class GemFireAction extends AbstractGameAction {
             addGemsFromGroup(AbstractDungeon.player.hand);
             addGemsFromGroup(AbstractDungeon.player.drawPile);
             addGemsFromGroup(AbstractDungeon.player.discardPile);
+            addGemsFromGroup(this.gatherStasisCards());
             int i = 0;
             for (GuardianMod.socketTypes socket : shots) {
                 AbstractDungeon.effectsQueue.add(new GemShootEffect(socket, i++));
@@ -177,6 +180,16 @@ public class GemFireAction extends AbstractGameAction {
         }
         this.tickDuration();
 
+    }
+
+    public CardGroup gatherStasisCards(){ // Make Gem Cannon exhaust gems from cards in Stasis too.
+        CardGroup stasiscards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (o instanceof StasisOrb) {
+                stasiscards.group.add( ((StasisOrb) o).stasisCard );
+            }
+        }
+        return stasiscards;
     }
 
     private void addGemsFromGroup(CardGroup group) {
@@ -193,6 +206,11 @@ public class GemFireAction extends AbstractGameAction {
 
                     }
                     if (gc.hasTag(GuardianMod.GEM)) {
+                        if(gc.belongedOrb!=null) {
+                            gc.belongedOrb.cardExhausted = true;
+                            AbstractDungeon.actionManager.addToTop(new StasisEvokeIfRoomInHandAction(gc.belongedOrb));
+                            gc.belongedOrb = null;
+                        }
                         exhaustCount++;
                         exhaustCard(group, c);
                         shots.add(gc.thisGemsType);
@@ -220,6 +238,7 @@ public class GemFireAction extends AbstractGameAction {
 
         @Override
         public void update() {
+            CardGroup gemsToBeExhausted =new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             if (this.duration == this.startDuration && this.group.contains(this.card) && card.hasTag(GuardianMod.GEM)) {
                 card.current_y = -200.0F * Settings.scale;
                 card.target_x = (float)Settings.WIDTH / 2.0F + 200F - 40F * hitNo * Settings.xScale;
@@ -241,6 +260,71 @@ public class GemFireAction extends AbstractGameAction {
                     card.lighten(false);
                     card.drawScale = 0.12F;
                     card.targetDrawScale = 0.75F;
+                    for(GuardianMod.socketTypes s : ((AbstractGuardianCard)this.card).sockets){ // Gems in sockets actually go into exhaust pile.
+                        AbstractGuardianCard gem;
+                        switch (s){
+                            case RED:
+                                gem = new Gem_Red();
+                                gemsToBeExhausted.group.add(gem);
+                                gemsToBeExhausted.moveToExhaustPile(gem);
+                                break;
+                            case GREEN:
+                                gem = new Gem_Green();
+                                gemsToBeExhausted.group.add(gem);
+                                gemsToBeExhausted.moveToExhaustPile(gem);
+                                break;
+                            case LIGHTBLUE:
+                                gem = new Gem_Lightblue();
+                                gemsToBeExhausted.group.add(gem);
+                                gemsToBeExhausted.moveToExhaustPile(gem);
+                                break;
+                            case ORANGE:
+                                gem = new Gem_Orange();
+                                gemsToBeExhausted.group.add(gem);
+                                gemsToBeExhausted.moveToExhaustPile(gem);
+                                break;
+                            case WHITE:
+                                gem = new Gem_White();
+                                gemsToBeExhausted.group.add(gem);
+                                gemsToBeExhausted.moveToExhaustPile(gem);
+                                break;
+                            case CYAN:
+                                gem = new Gem_Cyan();
+                                gemsToBeExhausted.group.add(gem);
+                                gemsToBeExhausted.moveToExhaustPile(gem);
+                                break;
+                            case BLUE:
+                                gem = new Gem_Blue();
+                                gemsToBeExhausted.group.add(gem);
+                                gemsToBeExhausted.moveToExhaustPile(gem);
+                                break;
+                            case CRIMSON:
+                                gem = new Gem_Crimson();
+                                gemsToBeExhausted.group.add(gem);
+                                gemsToBeExhausted.moveToExhaustPile(gem);
+                                break;
+                            case FRAGMENTED:
+                                gem = new Gem_Fragmented();
+                                gemsToBeExhausted.group.add(gem);
+                                gemsToBeExhausted.moveToExhaustPile(gem);
+                                break;
+                            case PURPLE:
+                                gem = new Gem_Purple();
+                                gemsToBeExhausted.group.add(gem);
+                                gemsToBeExhausted.moveToExhaustPile(gem);
+                                break;
+                            case SYNTHETIC:
+                                gem = new Gem_Synthetic();
+                                gemsToBeExhausted.group.add(gem);
+                                gemsToBeExhausted.moveToExhaustPile(gem);
+                                break;
+                            case YELLOW:
+                                gem = new Gem_Yellow();
+                                gemsToBeExhausted.group.add(gem);
+                                gemsToBeExhausted.moveToExhaustPile(gem);
+                                break;
+                        }
+                    }
                     ((AbstractGuardianCard)card).sockets.clear();
                     ((AbstractGuardianCard)card).updateDescription();
                     CardCrawlGame.dungeon.checkForPactAchievement();

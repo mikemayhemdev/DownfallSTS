@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import com.megacrit.cardcrawl.vfx.campfire.CampfireTokeEffect;
+import downfall.util.TextureLoader;
 import guardian.ui.EnhanceBonfireOption;
 import slimebound.SlimeboundMod;
 
@@ -35,11 +36,11 @@ public class ScrapBonfireOption extends AbstractCampfireOption {
         this.usable = active;
         if (active) {
             this.description = DESCRIPTIONS[1];
-            this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/ui/scrapcampfire.png");
+            this.img = TextureLoader.getTexture("slimeboundResources/SlimeboundImages/ui/scrapcampfire.png");
 
         } else {
             this.description = DESCRIPTIONS[2];
-            this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/ui/scrapcampfiredisabled.png");
+            this.img = TextureLoader.getTexture("slimeboundResources/SlimeboundImages/ui/scrapcampfiredisabled.png");
         }
     }
 

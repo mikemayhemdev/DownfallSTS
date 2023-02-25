@@ -2,6 +2,7 @@ package reskinContent.skinCharacter.skins.Slimebound;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
 import slimebound.characters.SlimeboundCharacter;
@@ -11,7 +12,7 @@ public class BetaSlimeBoss extends AbstractSkin {
     public BetaSlimeBoss() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSlime").TEXT[1];
         this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSlime").EXTRA_TEXT[1];
-        this.portraitStatic_IMG = ImageMaster.loadImage("reskinContent/img/Slimebound/BetaSlimeBoss/portrait_beta_slimeboss.png");
+        this.portraitStatic_IMG = TextureLoader.getTexture("reskinContent/img/Slimebound/BetaSlimeBoss/portrait_beta_slimeboss.png");
 
         this.SHOULDER1 = "slimeboundResources/SlimeboundImages/char/shoulder.png";
         this.SHOULDER2 = "slimeboundResources/SlimeboundImages/char/shoulderR.png";

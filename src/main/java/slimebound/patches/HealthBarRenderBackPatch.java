@@ -12,6 +12,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import slimebound.powers.DuplicatedFormNoHealPower;
 
 @SpirePatch(
@@ -48,7 +49,7 @@ public class HealthBarRenderBackPatch {
                         }
                         */
 
-            sb.draw(ImageMaster.loadImage("slimeboundResources/SlimeboundImages/ui/body7.png"), x, y + HEALTH_BAR_OFFSET_Y, w, HEALTH_BAR_HEIGHT);
+            sb.draw(TextureLoader.getTexture("slimeboundResources/SlimeboundImages/ui/body7.png"), x, y + HEALTH_BAR_OFFSET_Y, w, HEALTH_BAR_HEIGHT);
             sb.draw(ImageMaster.HEALTH_BAR_R, x + w, y + HEALTH_BAR_OFFSET_Y, HEALTH_BAR_HEIGHT, HEALTH_BAR_HEIGHT);
 
 

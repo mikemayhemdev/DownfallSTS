@@ -31,13 +31,7 @@ public class EnDefragment extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                ArchetypeAct3OrbsNewAge.resetPretendFocus();
-                isDone = true;
-            }
-        });
+        ArchetypeAct3OrbsNewAge.resetPretendFocus();
         this.addToBot(new ApplyPowerAction(m, m, new FocusPower(m, this.magicNumber), this.magicNumber));
     }
 

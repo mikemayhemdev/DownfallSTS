@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import downfall.util.TextureLoader;
 import reskinContent.helpers.PortraitHexaghostOrb;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
@@ -39,9 +40,9 @@ public class Hexago extends AbstractSkin {
     public boolean maskClicked = false;
 
     public Hexago() {
-        this.portraitStatic_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/Hexago/portrait_waifu.png"));
-        this.portraitAnimation_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/Hexago/portrait_waifu2.png"));
-        this.hexaghostTextureMask = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/Hexago/portrait_waifu_m.png"));
+        this.portraitStatic_IMG = TextureLoader.getTexture(reskinContent.assetPath("img/HexaghostMod/Hexago/portrait_waifu.png"));
+        this.portraitAnimation_IMG = TextureLoader.getTexture(reskinContent.assetPath("img/HexaghostMod/Hexago/portrait_waifu2.png"));
+        this.hexaghostTextureMask = TextureLoader.getTexture(reskinContent.assetPath("img/HexaghostMod/Hexago/portrait_waifu_m.png"));
 
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinHexaghost").TEXT[0];
         this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinHexaghost").EXTRA_TEXT[0];

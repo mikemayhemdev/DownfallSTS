@@ -1,7 +1,6 @@
 package charbosses.cards.hermit;
 
 import charbosses.bosses.AbstractCharBoss;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -15,7 +14,7 @@ public class EnFreeStrikeHermit extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:Strike_Hermit";
 
     public EnFreeStrikeHermit() {
-        super(ID, Strike_Hermit.NAME, "hermitResources/images/cards/card_strike.png", 1, Strike_Hermit.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.BASIC, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
+        super(ID, Strike_Hermit.NAME, "hermitResources/images/cards/strike.png", 1, Strike_Hermit.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.BASIC, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 6;
         this.tags.add(CardTags.STRIKE);
         this.tags.add(CardTags.STARTER_STRIKE);

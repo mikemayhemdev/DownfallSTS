@@ -9,6 +9,7 @@ import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
@@ -37,8 +38,8 @@ public class SSSSnecko extends AbstractSkin {
 
     public SSSSnecko() {
         super();
-        this.portraitStatic_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/SneckoMod/SSSSnecko/portrait_waifu.png"));
-        this.portraitAnimation_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/SneckoMod/SSSSnecko/portrait_waifu2.png"));
+        this.portraitStatic_IMG = TextureLoader.getTexture(reskinContent.assetPath("img/SneckoMod/SSSSnecko/portrait_waifu.png"));
+        this.portraitAnimation_IMG = TextureLoader.getTexture(reskinContent.assetPath("img/SneckoMod/SSSSnecko/portrait_waifu2.png"));
 
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSnecko").TEXT[0];
         this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSnecko").EXTRA_TEXT[0];

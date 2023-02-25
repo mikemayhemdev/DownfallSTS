@@ -329,6 +329,22 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         }
     }
 
+    public AbstractCard generateFromPoolButNotIntoHand() { // used for some relics, so when generating cards, pull cards from this's unknwon pool instead of generating a meaningless unknowncard
+        AbstractCard cUnknown;
+
+        if (myList().size() > 0) {
+            cUnknown = CardLibrary.cards.get(myList().get(AbstractDungeon.cardRng.random(0, myList().size() - 1))).makeStatEquivalentCopy();
+        } else {
+            cUnknown = new Madness();
+        }
+
+        if (this.upgraded) cUnknown.upgrade();
+
+        UnknownExtraUiPatch.parentCard.set(cUnknown, this);
+
+        return cUnknown;
+    }
+
     public void replaceUnknownFromHand() {
         AbstractPlayer p = AbstractDungeon.player;
 

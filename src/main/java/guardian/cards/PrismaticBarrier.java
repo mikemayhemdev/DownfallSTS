@@ -27,7 +27,7 @@ public class PrismaticBarrier extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int BLOCK = 2;
-    private static final int UPGRADE_BONUS = 2;
+    private static final int UPGRADE_BONUS = 1;
     private static final int MULTICOUNT = 1;
     private static final int SOCKETS = 3;
     private static final boolean SOCKETSAREAFTER = true;

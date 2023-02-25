@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
+import downfall.util.TextureLoader;
 import guardian.GuardianMod;
 import guardian.vfx.SocketGemEffect;
 
@@ -35,10 +36,10 @@ public class EnhanceBonfireOption extends AbstractCampfireOption {
         this.usable = active;
         if (active) {
             this.description = DESCRIPTIONS[1];
-            this.img = ImageMaster.loadImage(GuardianMod.getResourcePath("ui/scrapcampfire.png"));
+            this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("ui/scrapcampfire.png"));
         } else {
             this.description = DESCRIPTIONS[2];
-            this.img = ImageMaster.loadImage(GuardianMod.getResourcePath("ui/scrapcampfiredisabled.png"));
+            this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("ui/scrapcampfiredisabled.png"));
         }
     }
 
@@ -60,10 +61,10 @@ public class EnhanceBonfireOption extends AbstractCampfireOption {
         }
         if (this.usable) {
             this.description = DESCRIPTIONS[1];
-            this.img = ImageMaster.loadImage(GuardianMod.getResourcePath("ui/scrapcampfire.png"));
+            this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("ui/scrapcampfire.png"));
         } else {
             this.description = DESCRIPTIONS[2];
-            this.img = ImageMaster.loadImage(GuardianMod.getResourcePath("ui/scrapcampfiredisabled.png"));
+            this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("ui/scrapcampfiredisabled.png"));
         }
 
     }

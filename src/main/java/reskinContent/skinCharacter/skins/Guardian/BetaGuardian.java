@@ -2,6 +2,7 @@ package reskinContent.skinCharacter.skins.Guardian;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import guardian.GuardianMod;
 import guardian.characters.GuardianCharacter;
 import reskinContent.reskinContent;
@@ -12,7 +13,8 @@ public class BetaGuardian extends AbstractSkin {
     public BetaGuardian() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinGuardian").TEXT[1];
         this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinGuardian").EXTRA_TEXT[1];
-        this.portraitStatic_IMG = ImageMaster.loadImage(getAssetPath("portrait_beta_guardian.png"));
+        this.portraitStatic_IMG =
+                TextureLoader.getTexture(getAssetPath("portrait_beta_guardian.png"));
 
         this.SHOULDER1 = "guardianResources/GuardianImages/char/shoulder.png";
         this.SHOULDER2 = "guardianResources/GuardianImages/char/shoulderR.png";

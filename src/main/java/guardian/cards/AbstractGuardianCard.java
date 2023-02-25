@@ -11,8 +11,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.util.TextureLoader;
 import guardian.GuardianMod;
 import guardian.actions.BraceAction;
+import guardian.orbs.StasisOrb;
 import guardian.powers.ModeShiftPower;
 
 import java.util.ArrayList;
@@ -33,6 +35,7 @@ public abstract class AbstractGuardianCard extends CustomCard {
     public boolean isSecondaryMModified;
 
     public boolean flipPreviewMode = false;
+    public StasisOrb belongedOrb = null;
 
     public AbstractGuardianCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color,
                                 CardRarity rarity, CardTarget target) {
@@ -60,7 +63,7 @@ public abstract class AbstractGuardianCard extends CustomCard {
 
                     Texture portraitTexture;
                     try {
-                        portraitTexture = ImageMaster.loadImage(newPath);
+                        portraitTexture = TextureLoader.getTexture(newPath);
                     } catch (Exception var5) {
                         portraitTexture = null;
                     }

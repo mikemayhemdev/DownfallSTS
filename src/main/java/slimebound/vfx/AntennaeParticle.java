@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import slimebound.orbs.SlowingSlime;
 
 
@@ -21,7 +22,7 @@ public class AntennaeParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEff
 
     public AntennaeParticle(SlowingSlime p) {
         this.duration = 0.05F;
-        this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/vfx/antennae.png");
+        this.img = TextureLoader.getTexture("slimeboundResources/SlimeboundImages/vfx/antennae.png");
         W = img.getWidth();
         this.p = p;
         this.renderBehind = false;

@@ -33,8 +33,8 @@
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Chrono-Boost",
-    "DESCRIPTION": "Gain 1 Strength for every 12th card you play.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength. NL Gain 1 Strength for every 12th card you play."
+    "DESCRIPTION": "Gain 2 Strength for every 12th card you play.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Strength. NL Gain 2 Strength for every 12th card you play."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Donu Blast",

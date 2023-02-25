@@ -2,6 +2,7 @@ package reskinContent.skinCharacter.skins.Champ;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import hermit.util.TextureLoader;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
 
@@ -10,7 +11,7 @@ public class BetaChamp extends AbstractSkin {
     public BetaChamp() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinChamp").TEXT[1];
         this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinChamp").EXTRA_TEXT[1];
-        this.portraitStatic_IMG = ImageMaster.loadImage(getAssetPath("portrait_beta_champ.png"));
+        this.portraitStatic_IMG = TextureLoader.getTexture(getAssetPath("portrait_beta_champ.png"));
 
         this.SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
         this.SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";

@@ -3,6 +3,7 @@ package slimebound.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.SlimeboundMod;
@@ -76,11 +77,16 @@ public class AbsorbEndCombatUpgraded extends CustomRelic {
         // Colorize the starter relic's name
         String name = new AbsorbEndCombat().name;
         StringBuilder sb = new StringBuilder();
-        for (String word : name.split(" ")) {
-            sb.append("[#").append(SlimeboundMod.placeholderColor.toString()).append("]").append(word).append("[] ");
+        if(Settings.language== Settings.GameLanguage.ZHS ||Settings.language== Settings.GameLanguage.ZHT){
+            sb.append("[#").append(SlimeboundMod.placeholderColor.toString()).append("]").append(name).append("[]");
+
+        }else {
+            for (String word : name.split(" ")) {
+                sb.append("[#").append(SlimeboundMod.placeholderColor.toString()).append("]").append(word).append("[] ");
+            }
+            sb.setLength(sb.length() - 1);
+            sb.append("[#").append(SlimeboundMod.placeholderColor.toString()).append("]");
         }
-        sb.setLength(sb.length() - 1);
-        sb.append("[#").append(SlimeboundMod.placeholderColor.toString()).append("]");
 
         return DESCRIPTIONS[0] + sb.toString() + DESCRIPTIONS[1];
     }

@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.util.TextureLoader;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.orbs.SpawnedSlime;
@@ -29,7 +30,7 @@ public class SlimedTailRelic extends CustomRelic implements OnChannelRelic {
     public SlimedTailRelic() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.RARE, LandingSound.SOLID);
-        this.largeImg = ImageMaster.loadImage(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
+        this.largeImg = TextureLoader.getTexture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
 
     }
 

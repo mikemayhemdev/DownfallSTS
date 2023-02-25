@@ -52,6 +52,7 @@ import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
 import guardian.cards.AbstractGuardianCard;
+import guardian.stances.DefensiveMode;
 import hermit.cards.AbstractHermitCard;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -527,6 +528,9 @@ public class ChampMod implements
 
     @Override
     public int receiveOnPlayerLoseBlock(int i) {
+        if(AbstractDungeon.player.stance instanceof DefensiveMode){
+            return i;
+        }
         if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
             int counter = Math.min(i, AbstractDungeon.player.currentBlock / 2);
             if (counter > 0) {

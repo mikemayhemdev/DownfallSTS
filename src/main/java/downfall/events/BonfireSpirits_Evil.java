@@ -135,6 +135,10 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.loseGold(150);
                         AbstractDungeon.player.increaseMaxHp(10, false);
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+                        if(AbstractDungeon.player instanceof GremlinCharacter ){
+                            GremlinCharacter gremlinMob = (GremlinCharacter)(AbstractDungeon.player);
+                            gremlinMob.mobState.campfireHeal(1000000, gremlinMob.maxHealth);
+                        }
                         logMetric(ID, "Donate", null, null, null, null, null, null, null,
                                 0, 10, 0, 10, 0, 150);
                         this.screen = CUR_SCREEN.COMPLETE;

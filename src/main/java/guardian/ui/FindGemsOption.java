@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
+import downfall.util.TextureLoader;
 import guardian.GuardianMod;
 import guardian.relics.PickAxe;
 import guardian.vfx.CampfireFindGemsEffect;
@@ -31,10 +32,10 @@ public class FindGemsOption extends AbstractCampfireOption {
         this.usable = active;
         if (active) {
             this.description = DESCRIPTIONS[1];
-            this.img = ImageMaster.loadImage(GuardianMod.getResourcePath("ui/minecampfire.png"));
+            this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("ui/minecampfire.png"));
         } else {
             this.description = DESCRIPTIONS[2];
-            this.img = ImageMaster.loadImage(GuardianMod.getResourcePath("ui/minecampfiredisabled.png"));
+            this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("ui/minecampfiredisabled.png"));
         }
     }
 

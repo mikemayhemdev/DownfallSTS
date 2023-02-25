@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
+import downfall.util.TextureLoader;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class CutsceneChangePatches {
     public static void patch(Cutscene __instance, AbstractPlayer.PlayerClass chosenClass) {
         if (EvilModeCharacterSelect.evilMode) {
 
-            Texture customBg = ImageMaster.loadImage("images/scenes/redBg.jpg");;
+            Texture customBg = TextureLoader.getTexture("images/scenes/redBg.jpg");;
             if (customBg != null) {
                 try {
                     Field f = Cutscene.class.getDeclaredField("bgImg");

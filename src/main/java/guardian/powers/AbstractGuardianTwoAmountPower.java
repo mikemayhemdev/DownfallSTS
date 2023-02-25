@@ -3,6 +3,7 @@ package guardian.powers;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import guardian.GuardianMod;
 
 public abstract class AbstractGuardianTwoAmountPower extends TwoAmountPower {
@@ -17,8 +18,8 @@ public abstract class AbstractGuardianTwoAmountPower extends TwoAmountPower {
         String path128 = path + "powers/" + bigImageName;
         String path48 = path + "powers/" + smallImageName;
 
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path128), 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path48), 0, 0, 32, 32);
+        this.region128 = new TextureAtlas.AtlasRegion(TextureLoader.getTexture(path128), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(TextureLoader.getTexture(path48), 0, 0, 32, 32);
     }
 
     /**
@@ -26,6 +27,6 @@ public abstract class AbstractGuardianTwoAmountPower extends TwoAmountPower {
      */
     public void setTinyImage(String imgName) {
         String path = GuardianMod.getResourcePath("powers/");
-        this.img = ImageMaster.loadImage(path + imgName);
+        this.img = TextureLoader.getTexture(path + imgName);
     }
 }

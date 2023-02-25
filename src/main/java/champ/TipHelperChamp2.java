@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import hermit.util.TextureLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -76,9 +77,9 @@ public class TipHelperChamp2 {
 
 
     private static void initalize() {
-        KEYWORD_TOP = ImageMaster.loadImage("champResources/images/ui/tipTop.png");
-        KEYWORD_BODY = ImageMaster.loadImage("champResources/images/ui/tipMid.png");
-        KEYWORD_BOT = ImageMaster.loadImage("champResources/images/ui/tipBot.png");
+        KEYWORD_TOP = TextureLoader.getTexture("champResources/images/ui/tipTop.png");
+        KEYWORD_BODY = TextureLoader.getTexture("champResources/images/ui/tipMid.png");
+        KEYWORD_BOT = TextureLoader.getTexture("champResources/images/ui/tipBot.png");
     }
 
     public static void render(SpriteBatch sb) {

@@ -9,6 +9,7 @@ import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
@@ -31,8 +32,8 @@ public class Slaifu extends AbstractSkin {
     private static boolean slimeHitSFX = false;
 
     public Slaifu() {
-        this.portraitStatic_IMG = ImageMaster.loadImage(getAssetPath("portrait_waifu.png"));
-        this.portraitAnimation_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/Slimebound/Slaifu/portrait_waifu2.png"));
+        this.portraitStatic_IMG = TextureLoader.getTexture(getAssetPath("portrait_waifu.png"));
+        this.portraitAnimation_IMG = TextureLoader.getTexture(reskinContent.assetPath("img/Slimebound/Slaifu/portrait_waifu2.png"));
 
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSlime").TEXT[0];
         this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSlime").EXTRA_TEXT[0];

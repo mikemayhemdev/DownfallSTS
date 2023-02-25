@@ -8,6 +8,7 @@ import com.esotericsoftware.spine.Bone;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
 
@@ -18,7 +19,7 @@ public class ThePerfect extends AbstractSkin {
     public ThePerfect() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinBronze").TEXT[2];
         this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinBronze").EXTRA_TEXT[2];
-        this.portraitAnimation_IMG = ImageMaster.loadImage(getAssetPath("portrait_beta_automaton_BG.png"));
+        this.portraitAnimation_IMG = TextureLoader.getTexture(getAssetPath("portrait_beta_automaton_BG.png"));
         this.portraitAnimationType = 1;
         this.forcePortraitAnimationType = true;
 

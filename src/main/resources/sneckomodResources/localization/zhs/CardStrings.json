@@ -152,7 +152,7 @@
     "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 一张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
     "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽 !M! 张牌并 消耗 一张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
     "EXTENDED_DESCRIPTION": [
-      "来消耗以交换灵魂。"
+      "消耗以交换灵魂。"
     ]
   },
   "sneckomod:CheapStock": {
@@ -167,8 +167,8 @@
   },
   "sneckomod:MasterEye": {
     "NAME": "主宰之眼",
-    "DESCRIPTION": "获得 混乱 。 NL 回合开始时抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "获得 混乱 。 NL 回合开始时抽 !M! 张牌。"
+    "DESCRIPTION": "获得 混乱 。 NL 回合开始时， NL 额外抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 混乱 。 NL 回合开始时， NL 额外抽 !M! 张牌。"
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "即兴攻击",
@@ -179,7 +179,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机获得一张 sneckomod:异色 技能牌并 sneckomod:混淆 它。"
   },
   "sneckomod:QuickMove": {
-    "NAME": "快速移动",
+    "NAME": "快动作",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL sneckomod:混淆 手中耗能最高的牌。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL sneckomod:混淆 手中耗能最高的 !M! 张牌。"
   },
@@ -257,7 +257,7 @@
   },
   "sneckomod:MorePower": {
     "NAME": "更多力量！",
-    "DESCRIPTION": "战斗结束时， NL 获得 *未知 卡牌奖励+。"
+    "DESCRIPTION": "战斗结束时， NL 获得 *未知 卡牌+奖励。"
   },
   "sneckomod:UnknownStrength": {
     "NAME": "？？？",

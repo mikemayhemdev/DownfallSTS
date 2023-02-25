@@ -64,7 +64,6 @@ public class MultiBeam extends AbstractGuardianCard implements InStasisCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("MultiBeam.png"));
     }
 
     @Override
