@@ -43,8 +43,8 @@
   },
   "hermit:Snipe": {
     "NAME": "Snipe",
-    "DESCRIPTION": "Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois.",
-    "UPGRADE_DESCRIPTION": "hermit:Concentrez-vous. NL Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois."
+    "DESCRIPTION": "Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "hermit:Concentrez-vous. NL Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois. NL Épuisement."
   },
   "hermit:CalledShot": {
     "NAME": "Tir contrôlé",
