@@ -48,9 +48,8 @@
   },
   "hermit:CalledShot": {
     "NAME": "Tir contrôlé",
-    "DESCRIPTION": "Infligez des dégâts égaux à la taille de votre main. NL hermit:Dans_Le_Mille: NL Piochez !M! Attaque.",
-    "UPGRADE_DESCRIPTION": " NL (Inflige !D! dégâts.)",
-	"EXTENDED_DESCRIPTION":["Infligez des dégâts égaux à la taille de votre main. NL hermit:Dans_Le_Mille: NL Piochez !M! Attaques."]
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si la dernière carte jouée a déclenché hermit:Dans_Le_Mille, Piochez une carte.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Si la dernière carte jouée a déclenché hermit:Dans_Le_Mille, Piochez une carte."
   },
   "hermit:Dissolve": {
     "NAME": "Dissolution",
