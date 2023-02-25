@@ -183,7 +183,7 @@
   },
   "hermit:Vantage": {
     "NAME": "Avantage",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille: NL Améliorez !M! cartes aléatoires dans votre main pour le restant du combat."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille: NL Piochez !M! cartes et les Améliorez pour le restant du combat."
   },
   "hermit:Brawl": {
     "NAME": "Pugilat",
