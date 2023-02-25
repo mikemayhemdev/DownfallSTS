@@ -112,7 +112,7 @@
   },
   "hermit:Midnight": {
     "NAME": "Minuit",
-    "DESCRIPTION": "Éthérée. NL Gagnez !B! d'Armure. NL Ajoutez *Destin *Imminent à votre main.",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez *Destin *Imminent à votre main.",
     "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez *Destin *Imminent à votre main."
   },
   "hermit:Glare": {
@@ -155,7 +155,7 @@
   },
   "hermit:Spite": {
     "NAME": "Dépit",
-    "DESCRIPTION": "Infligez !D! dégâts deux fois. NL Piochez !M! *Malédictions."
+    "DESCRIPTION": "Infligez !D! dégâts deux fois. NL Piochez une carte pour chaque Malédiction dans votre main."
   },
   "hermit:Manifest": {
     "NAME": "Manifeste",
