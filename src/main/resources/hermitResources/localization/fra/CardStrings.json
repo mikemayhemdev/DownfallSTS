@@ -108,7 +108,7 @@
   },
   "hermit:Roulette": {
     "NAME": "Roulette",
-    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire. NL Défaussez votre main. NL Piochez autant de cartes."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Défaussez votre main. NL Piochez autant de cartes."
   },
   "hermit:Midnight": {
     "NAME": "Minuit",
