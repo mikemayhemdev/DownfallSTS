@@ -31,8 +31,7 @@
     "NAME": "Sentinelle de poche de Arumba",
     "FLAVOR": "Sentinelle activée. Cible acquise. Pas de rancune.",
     "DESCRIPTIONS": [
-      "Au début de chaque tour, alterne entre: NL Infligez #b",
-      " dégâts à un ennemi aléatoire. NL Appliquez #b1 de #yFaiblesse à TOUS les ennemis."
+      "Chaque 3 tours, appliquez #b1 de #yFaiblesse à TOUS les ennemis."
     ]
   },
   "Guardian:SackOfGems": {
@@ -60,14 +59,14 @@
     "NAME": "Drones errants",
     "FLAVOR": "Ces drones trouvent les meilleures pièces de récupération, mais requiert de la puissance pour se maintenir.",
     "DESCRIPTIONS": [
-      "Lorsque vous récupérez cette relique, perdez #b2 emplacements de #yguardianmod:Stase. NL Gagnez [E] au début de votre tour."
+      "Au début de chaque combat, perdez #b2 emplacements de #yguardianmod:Stase. NL Gagnez [E] au début de votre tour."
     ]
   },
   "Guardian:StasisUpgradeRelic": {
     "NAME": "Cryo-chambre",
     "FLAVOR": "Les choses semblent toujours meilleures lorsqu'elles en sortent que lorsqu'elles en entrent.",
     "DESCRIPTIONS": [
-      "Gagnez #b1 emplacement de #yguardianmod:Stase. Quand une carte entre en #yguardianmod:Stase, #yAméliorez-la."
+      "Au début de chaque combat, gagnez #b1 emplacement de #yguardianmod:Stase. Quand une carte entre en #yguardianmod:Stase, #yAméliorez-la."
     ]
   },
   "Guardian:BottledStasis": {
