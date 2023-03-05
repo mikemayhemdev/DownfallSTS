@@ -48,8 +48,8 @@
   },
   "hermit:CalledShot": {
     "NAME": "Tir contrôlé",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Si la dernière carte jouée a déclenché hermit:Dans_Le_Mille, Piochez une carte.",
-    "UPGRADE_DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Si la dernière carte jouée a déclenché hermit:Dans_Le_Mille, Piochez une carte."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si la dernière carte jouée a déclenché hermit:Dans_Le_Mille, piochez une carte.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Si la dernière carte jouée a déclenché hermit:Dans_Le_Mille, piochez une carte."
   },
   "hermit:Dissolve": {
     "NAME": "Dissolution",
