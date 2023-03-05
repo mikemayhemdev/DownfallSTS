@@ -31,7 +31,7 @@
     "NAME": "Sentinelle de poche de Arumba",
     "FLAVOR": "Sentinelle activée. Cible acquise. Pas de rancune.",
     "DESCRIPTIONS": [
-      "Chaque 3 tours, appliquez #b1 de #yFaiblesse à TOUS les ennemis."
+      "Chaque #b3 tours, appliquez #b1 de #yFaiblesse à TOUS les ennemis."
     ]
   },
   "Guardian:SackOfGems": {
