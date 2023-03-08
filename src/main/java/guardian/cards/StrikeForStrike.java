@@ -26,7 +26,7 @@ public class StrikeForStrike extends AbstractGuardianCard {
         this.tags.add(CardTags.STRIKE);
         updateDescription();
         loadGemMisc();
-        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("StasisStrike.png"));
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("StrikeForStrike.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

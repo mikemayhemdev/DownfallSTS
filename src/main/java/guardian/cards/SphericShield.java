@@ -15,6 +15,8 @@ import guardian.powers.DontLeaveDefensiveModePower;
 import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class SphericShield extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("SphericShield");
     public static final String NAME;
@@ -41,6 +43,7 @@ public class SphericShield extends AbstractGuardianCard {
         exhaust = true;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("SphericShield.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
