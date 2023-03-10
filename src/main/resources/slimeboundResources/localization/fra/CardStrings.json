@@ -39,7 +39,7 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Casse-croûte",
-    "DESCRIPTION": "Piochez !M! cartes, puis Épuisez une carte dans votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement.",
+    "DESCRIPTION": "Piochez !M! carte, puis Épuisez une carte dans votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Piochez !M! cartes, puis Épuisez une carte dans votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement."
   },
   "Slimebound:DivideAndConquer": {
@@ -90,7 +90,7 @@
   },
   "Slimebound:GoopSpray": {
     "NAME": "Spray visqueux",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Appliquez !slime! de slimeboundmod:Goop et !M! de Faiblesse à TOUS les ennemis."
+    "DESCRIPTION": "Appliquez !slime! de slimeboundmod:Goop et !M! de Faiblesse à TOUS les ennemis."
   },
   "Slimebound:GoopTackle": {
     "NAME": "Tacle combo",
@@ -271,8 +271,7 @@
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "Reformation",
-    "DESCRIPTION": "Lorsque vous slimeboundmod:Absorbez un Slime, gagnez !M! de Force.",
-    "UPGRADE_DESCRIPTION": "Lorsque vous slimeboundmod:Absorbez un Slime, gagnez !M! de Force et !M! de Dextérité."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Placez une carte de votre défausse sur le haut de la pioche."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Servir et Protéger",
@@ -294,7 +293,7 @@
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Picots gluants",
-    "DESCRIPTION": "Gagnez !B! d'Armure et !M! d'Épines Temporaires."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Cette carte ne supprime pas slimeboundmod:Goop."
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
@@ -314,8 +313,7 @@
   },
   "Slimebound:Split": {
     "NAME": "Invocation",
-    "DESCRIPTION": "slimeboundmod:Divisez-vous en 2 Slimes aléatoires. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Choisissez 2 Slimes parmi 4 et slimeboundmod:Divisez-vous en ceux-ci. NL Épuisement."
+    "DESCRIPTION": "slimeboundmod:Divisez-vous en un Slime aléatoire."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Invocation: Guerrier",
