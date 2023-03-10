@@ -293,7 +293,7 @@
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Picots gluants",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Cette carte ne retire pas le slimeboundmod:Goop."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Cette carte ne retire pas slimeboundmod:Goop."
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
