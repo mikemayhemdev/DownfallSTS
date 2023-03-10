@@ -9,9 +9,8 @@
   "Guardian:DefensiveModePotion": {
     "NAME": "Полировочное масло",
     "DESCRIPTIONS": [
-      "Перейти в #yОборонительный #yРежим на #b",
-      " ход.",
-      " хода(-ов)."
+      "Даёт #b",
+      "#yЗащиты. Перейти в #yОборонительный #yРежим"
     ]
   },
   "Guardian:BlockOnCardUsePotion": {

@@ -39,7 +39,7 @@
   },
   "Guardian:ChargeUp": {
     "NAME": "Зарядить",
-    "DESCRIPTION": "Помещается в guardianmod:Стазис. NL guardianmod:Тик - Даёт !B! Защиты и !M! Силы. NL guardianmod:Нестабильная."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Даёт !M! временной Силы в начале след. хода."
   },
   "Guardian:DonusPower": {
     "NAME": "Перегрузка",
@@ -48,8 +48,7 @@
   },
   "Guardian:DecasProtection": {
     "NAME": "Древняя сила",
-    "DESCRIPTION": "Даёт 4 временной Силы и 4 временной Ловкости. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Даёт 4 временной Силы и 4 временной Ловкости. Уменьшает каждый из ваших отриц. эффектов на 1. NL Сжигается."
+    "DESCRIPTION": "Даёт !M! временной Силы и Ловкости."
   },
   "Guardian:FierceBash": {
     "NAME": "Яростный удар",
@@ -82,7 +81,7 @@
   },
   "Guardian:TimeBomb": {
     "NAME": "Часовая бомба",
-    "DESCRIPTION": "Помещается в guardianmod:Стазис. NL Наносит !M! урона ВСЕМ врагам при выходе из guardianmod:Стазиса. NL guardianmod:Нестабильная."
+    "DESCRIPTION": "Наносит !M! урона ВСЕМ врагам. NL guardianmod:Разгоняет ВСЕ карты в guardianmod:Стазисе. NL Сжигается."
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "Гига-луч",
@@ -95,8 +94,7 @@
   },
   "Guardian:FloatingOrbs": {
     "NAME": "Парящие сферы",
-    "DESCRIPTION": "Добавляет в руку *Залп *сфер, в начале каждого вашего хода.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Добавляет в руку *Залп *сфер, в начале каждого вашего хода."
+    "DESCRIPTION": "Наносит !M! урона случ. врагу, когда вы разыгрываете карту стоимостью 0."
   },
   "Guardian:OrbSlam": {
     "NAME": "Залп сфер",
@@ -105,7 +103,7 @@
   "Guardian:Incinerate": {
     "NAME": "Поджечь",
     "DESCRIPTION": "Наносит !D! урона. NL guardianmod:Разгон.",
-    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL guardianmod:Разгон дважды."
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL guardianmod:Разгоняет дважды."
   },
   "Guardian:Orbwalk": {
     "NAME": "Круговорот",
@@ -119,7 +117,7 @@
   },
   "Guardian:SphericShield": {
     "NAME": "Сферический щит",
-    "DESCRIPTION": "Даёт !B! Защиты. NL guardianmod:Подготовка !M!. NL Сжигается."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Перейти в guardianmod:Оборонительный_режим. NL Сжигается."
   },
   "Guardian:Harden": {
     "NAME": "Укрепить",
@@ -158,8 +156,8 @@
   },
   "Guardian:PackageSphere": {
     "NAME": "Пак: Сферичность",
-    "DESCRIPTION": "Добавляет в руку *Сферический *щит, *Укрепить и *Парящие *сферы. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Добавляет в руку *Сферический *щит+, *Укрепить+ и *Парящие *сферы+. NL Сжигается."
+    "DESCRIPTION": "Добавляет в руку *Сферический *щит, *Парящие *сферы и *Металлизация. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Добавляет в руку *Сферический *щит+, *Парящие *сферы+ и *Металлизация+. NL Сжигается."
   },
   "Guardian:PackageSentry": {
     "NAME": "Пак: Часовой",
@@ -232,7 +230,7 @@
   },
   "Guardian:TimeCapacitor": {
     "NAME": "Конденсатор времени",
-    "DESCRIPTION": "Даёт !M! слота для Стазиса."
+    "DESCRIPTION": "Даёт !M! слот для Стазиса."
   },
   "Guardian:ConstructionForm": {
     "NAME": "Облик конструкта",
@@ -261,7 +259,7 @@
   },
   "Guardian:ShieldSpikes": {
     "NAME": "Уйти в оборону",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Даёт !M! временных Шипов, если в guardianmod:Оборонительном_режиме. Если нет: guardianmod:Подготовка 8."
+    "DESCRIPTION": "Даёт !B! Защиты. NL guardianmod:Разгон."
   },
   "Guardian:PrismaticBeam": {
     "NAME": "Призматический всплеск",
@@ -377,7 +375,7 @@
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Протокол мести",
-    "DESCRIPTION": "Даёт !M! Силы, пока в guardianmod:Оборонительном_режиме. NL guardianmod:Подготовка 5 в начале каждого вашего хода."
+    "DESCRIPTION": "Даёт !M! Силы, пока в guardianmod:Оборонительном_режиме. NL guardianmod:Подготовка !GuardianSecondM! в начале каждого вашего хода."
   },
   "Guardian:GatlingBeam": {
     "NAME": "Лазерная турель",
@@ -435,7 +433,7 @@
   },
   "Guardian:BodySlam": {
     "NAME": "Бросок",
-    "DESCRIPTION": "Наносит урон, равный кол-ву вашей Защиты.",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Наносит урон, равный кол-ву вашей Защиты.",
     "UPGRADE_DESCRIPTION": " NL (Наносит !D! урона.)"
   },
   "Guardian:SecondStrike": {
@@ -445,5 +443,13 @@
   "Guardian:SecondStrikePreviewCard": {
     "NAME": "Второй бросок",
     "DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Копирует guardianmod:Самоцветы *Первого *броска. NL Сжигается."
+  },
+  "Guardian:StrikeForStrike": {
+    "NAME": "Удар за удар",
+    "DESCRIPTION": "Наносит !D! урона. NL Заставляет врага атаковать вас на !M! урона."
+  },
+  "Guardian:GearUp": {
+    "NAME": "Ускориться",
+    "DESCRIPTION": "Оставляется. NL guardianmod:Подготовка !M!. NL Сжигается."
   }
 }

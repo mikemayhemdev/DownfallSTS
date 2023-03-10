@@ -39,8 +39,8 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Быстрый перекус",
-    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 카드를 1장 소멸시킵니다. 소멸시킨 카드의 비용만큼 *핥기 카드를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 카드를 1장 소멸시킵니다. 소멸시킨 카드의 비용만큼 *핥기 카드를 얻습니다. NL 소멸."
+    "DESCRIPTION": "Вы берёте !M! карту и сжигаете карту в руке. NL Добавляет в руку N карт *Лизь, где N - стоимость сожжёной карты. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Вы берёте !M! карты и сжигаете карту в руке. NL Добавляет в руку N карт *Лизь, где N - стоимость сожжёной карты. NL Сжигается."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Разделяй и властвуй",
@@ -90,7 +90,7 @@
   },
   "Slimebound:GoopSpray": {
     "NAME": "Раскидать слизь",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Накладывает !slime! slimeboundmod:Липкости и !M! Слабости на ВСЕХ врагов."
+    "DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости и !M! Слабости на ВСЕХ врагов."
   },
   "Slimebound:GoopTackle": {
     "NAME": "Комбо-рывок",
@@ -266,13 +266,12 @@
   },
   "Slimebound:Schlurp": {
     "NAME": "Втянуть",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Добавляет в руку !M! *Лизя.",
-    "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL Добавляет в руку !M! *Лизя."
+    "DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости. NL Добавляет в руку !M! *Лизь.",
+    "UPGRADE_DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости. NL Добавляет в руку !M! *Лизя."
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "Реформация",
-    "DESCRIPTION": "Даёт !M! Силы, когда вы slimeboundmod:Поглощаете слизня.",
-    "UPGRADE_DESCRIPTION": "Даёт !M! Силы и !M! Ловкости, когда вы slimeboundmod:Поглощаете слизня."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Вы кладёте карту из стопки сброса на верх стопки добора."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Служить и защищать",
@@ -294,7 +293,7 @@
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Липкая пощечина",
-    "DESCRIPTION": "Наносит !D! урона. NL При slimeboundmod:Пожирании - не отнимает slimeboundmod:Липкость у врага."
+    "DESCRIPTION": "Наносит !D! урона. NL Не отнимает slimeboundmod:Липкость у врага."
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "Липкие шипы",
@@ -314,8 +313,7 @@
   },
   "Slimebound:Split": {
     "NAME": "Призыв",
-    "DESCRIPTION": "slimeboundmod:Призывает 2 случ. Слизня. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Призывает 2 из 4 выбранных Слизней. NL Сжигается."
+    "DESCRIPTION": "slimeboundmod:Призывает случ. Слизня."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Призыв: Громила",
