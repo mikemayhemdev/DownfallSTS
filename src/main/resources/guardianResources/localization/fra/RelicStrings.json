@@ -3,8 +3,7 @@
     "NAME": "Engrenage de bronze",
     "FLAVOR": "De la protection lorsque vous en avez le plus besoin.",
     "DESCRIPTIONS": [
-      "La première fois que vous entrez en #yguardianmod:Mode_Défensif, gagnez #b10 #bd'Armure #ysupplémentaires. NL Le Gardien commence la run avec une #yGemme commune aléatoire."
-    ]
+      "Au début de chaque combat, obtenez #yEngrenage NL Le Gardien commence la run avec une #yGemme commune aléatoire."    ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "Engrenage de gardien",
