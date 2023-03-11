@@ -182,8 +182,8 @@
   },
   "hermit:Vantage": {
     "NAME": "Avantage",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille: NL Piochez !M! carte et la Améliorez pour le restant du combat.",
-    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille: NL Piochez !M! cartes et les Améliorez pour le restant du combat."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille: NL Piochez !M! carte et Améliorez-la pour le reste du combat.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille: NL Piochez !M! cartes et Améliorez-les pour le reste du combat."
   },
   "hermit:Brawl": {
     "NAME": "Pugilat",
