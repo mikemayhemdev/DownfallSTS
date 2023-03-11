@@ -41,7 +41,7 @@
   },
   "champ:FaceSlap": {
     "NAME": "Gifle",
-    "DESCRIPTION": "Infligez !D! dégâts, deux fois si l'ennemi est Vulnérable. NL champ:Combo Pose du *Destructeur: Appliquez !M! de Vulnérabilité."
+    "DESCRIPTION": "Infligez !D! dégâts. NL champ:Combo Pose du *Destructeur: Appliquez !M! de Vulnérabilité."
   },
   "champ:FlashCut": {
     "NAME": "Frappe éclair",
@@ -77,7 +77,7 @@
   },
   "champ:SetATrap": {
     "NAME": "Piège",
-    "DESCRIPTION": "Gagnez !B! d'Armure, deux fois si l'ennemi est Faible. NL champ:Combo Pose *Défensive: Appliquez !M! de Faiblesse à TOUS les ennemis."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL champ:Combo Pose *Défensive: Appliquez !M! de Faiblesse à TOUS les ennemis."
   },
   "champ:Backstep": {
     "NAME": "Marche arrière",
@@ -116,7 +116,7 @@
   },
   "champ:Devastate": {
     "NAME": "Dévastation",
-    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL Coûte 1 [E] de moins pour chaque Finisher joué ce combat."
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL Coûte 1 [E] de moins pour chaque *Finisher joué ce combat."
   },
   "champ:Control": {
     "NAME": "Contrôle",
@@ -131,8 +131,7 @@
   },
   "champ:Circumvent": {
     "NAME": "Contournement",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL champ:Combo de *n'importe *quelle *Pose: Piochez !M! cartes.",
-    "UPGRADE_DESCRIPTION": "Gagnez !M! de champ:Contre. NL Gagnez !B! d'Armure. NL Pose *Défensive champ:Combo: Gagnez autant d'armure que votre champ:Contre."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Piochez !M! cartes. NL Défaussez !M! cartes."
   },
   "champ:SkillfulDodge": {
     "NAME": "Esquive habile",
@@ -180,8 +179,7 @@
   },
   "champ:IronFortress": {
     "NAME": "Dispositif technique",
-    "DESCRIPTION": "Lorsque vous adoptez une Pose, déclenchez ses *Bonus de *Compétences deux fois.",
-    "UPGRADE_DESCRIPTION": "Inné. NL Lorsque vous adoptez une Pose, déclenchez ses *Bonus de *Compétences deux fois."
+    "DESCRIPTION": "Lorsque vous adoptez une Pose, gagnez !M! d'Armure."
   },
   "champ:Lariat": {
     "NAME": "Corps renforcé",
@@ -201,7 +199,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Moquerie vicieuse",
-    "DESCRIPTION": "L'ennemi gagne 1 de Force. NL Gagnez !M! de Vigueur.",
+    "DESCRIPTION": "Gagnez !M! de Vigueur. NL Appliquez !DM! de Faiblesse.",
     "EXTENDED_DESCRIPTION": [
       "Pose du Destructeur champ:Combo: Gagnez !M! de Force temporaire. NL ",
       "Pose *Défensive champ:Combo: Gain !M! de Dextérité temporaire."
@@ -209,11 +207,7 @@
   },
   "champ:PreciseThrust": {
     "NAME": "Poussée précise",
-    "DESCRIPTION": "Infligez !D! dégâts. NL champ:Combo Pose du *Destructeur: Infligez !D! dégâts. NL champ:Combo Pose *Défensive: Gagnez !B! d'Armure.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ",
-    "EXTENDED_DESCRIPTION": [
-      "champ:Combo Pose du *Destructeur: Infligez !D! dégâts NL ",
-      "champ:Combo Pose *Défensive: Gagnez !B! d'Armure."
+    "DESCRIPTION": "Infligez !D! dégâts. NL champ:Combo Pose du *Destructeur: Infligez !D! dégâts. NL champ:Combo Pose *Défensive: Gagnez !B! d'Armure."
     ]
   },
   "champ:CrookedStrike": {
@@ -222,7 +216,7 @@
   },
   "champ:RapidStrikes": {
     "NAME": "Frappes rapides",
-    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL Réduisez le coût d'une carte *Frappe aléatoire dans votre main à 0 ce tour."
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL Une carte \"Frappe\" aléatoire dans votre main coûte 0 ce tour."
   },
   "champ:EnchantSword": {
     "NAME": "Enchantement d'épée",
@@ -327,8 +321,7 @@
   },
   "champ:SteelEdge": {
     "NAME": "Lame de l'épée",
-    "DESCRIPTION": "champ:Combo Pose du *Destructeur: Infligez !D! dégâts X fois. NL champ:Combo Pose *Défensive: Gagnez !B! d'Armure X fois.",
-    "UPGRADE_DESCRIPTION": "champ:Combo Pose du *Destructeur: Infligez !D! dégâts X+1 fois. NL Pose *Défensive: Gagnez !B! d'Armure X+1 fois.",
+    "DESCRIPTION": "Infligez !D! dégâts X fois.",
     "EXTENDED_DESCRIPTION": [
       "champ:Combo Pose du *Destructeur: Infligez !D! dégâts X fois. NL ",
       "champ:Combo Pose *Défensive: Gagnez !B! d'Armure X fois.",
@@ -339,7 +332,7 @@
   },
   "champ:Improvising": {
     "NAME": "Improvisation",
-    "DESCRIPTION": "La première fois que vous utilisez un champ:Combo chaque tour, remettez-la dans votre main. NL Il coûte 0 jusqu'à ce qu'il soit joué."
+    "DESCRIPTION": "Au début de votre tour, si vous n'êtes pas dans une Pose, entrez dans une Pose aléatoire."
   },
   "champ:CalledShot": {
     "NAME": "Rafraîchissement",
@@ -367,7 +360,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "Maître de la danse",
-    "DESCRIPTION": "La prmière fois que vous utilisez un champ:Finisher chaque tour, gagnez [E] et piochez 1 carte."
+    "DESCRIPTION": "La prmière fois que vous utilisez un *Finisher chaque tour, gagnez [E] et piochez 1 carte."
   },
   "champ:StrikeOfGenius": {
     "NAME": "Frappé de génie",
@@ -381,7 +374,7 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "Combat propre",
-    "DESCRIPTION": "Gagnez !M! de Force. NL Tous les ennemis gagnent 1 de Force."
+    "DESCRIPTION": "Gagnez !M! de Force. NL Gagnez !M! de Dextérité."
   },
   "champ:BerserkerStyle": {
     "NAME": "Style destructeur",
@@ -394,8 +387,8 @@
   },
   "champ:Endure": {
     "NAME": "Endurance",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL L'Armure de cette carte est augmentée par la Force et non la Dextérité.",
-    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL L'Armure de cette carte est augmentée également par la Force."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL L'*Armure de cette carte est augmentée par la *Force et non la *Dextérité.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL L'*Armure de cette carte est augmentée également par la Force."
   },
   "champ:PreemptiveStrike": {
     "NAME": "Frappe préventive",
@@ -436,7 +429,7 @@
   "champ:TripleStrike": {
     "NAME": "Triple frappe",
     "DESCRIPTION": "Infligez !D! dégâts. NL Obtenez 2 *Frappes. Elles coûtent 0 et déclenchent les *Bonus de *Compétence. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez 2 *Frappes Améliorées dans votre main. Elles coûtent 0 et déclenchent les *Bonus de *Compétence. NL Épuisement."
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Obtenez 2 *Frappes+. Elles coûtent 0 et déclenchent les *Bonus de *Compétence. NL Épuisement."
   },
   "champ:WindUp": {
     "NAME": "Pose éphémère",
