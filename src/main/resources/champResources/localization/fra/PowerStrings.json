@@ -61,10 +61,7 @@
   "champ:ImprovisingPower": {
     "NAME": "Improvisation",
     "DESCRIPTIONS": [
-      "La première fois que vous utilisez un #yCombo, remettez-le dans votre main et il coûte #0 jusqu'à ce qu'il soit joué. #b",
-      " utilisations restantes.",
-      "Les #b",
-      " premières fois que vous utilisez un #yCombo chaque tour, remettez-le dans votre main et il coûte #0 jusqu'à ce qu'il soit joué. #b"
+      "At the start of your turn, if you are not in a Stance, enter a random Stance."
     ]
   },
   "champ:CalledShotPower": {
@@ -136,15 +133,15 @@
     "DESCRIPTIONS": [
       "Gagnez [E] au début de votre tour.",
       "Gagnez [E] au début de vos #b",
-      " prochains tours."
+      " prochains tours.",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
     ]
   },
   "champ:IronFortressPower": {
-    "NAME": "Gabarit technique : Défensive",
+    "NAME": "Dispositif technique",
     "DESCRIPTIONS": [
-      "Lorsque vous adoptez une Pose, déclenchez la technique de la Pose Défensive",
-      " #b",
-      " fois."
+      "Lorsque vous adoptez une Pose, gagnez #b",
+      " #yd'Armure."
     ]
   },
   "champ:IronFortressVigorPower": {
@@ -165,34 +162,32 @@
   "champ:GladiatorFormPower": {
     "NAME": "Forme gladiatrice",
     "DESCRIPTIONS": [
-      "Lorsque vous utilisez un #yBonus de #yTechnique, piochez #b",
-      " carte. Lorsque vous utilisez un #yBonus de #yFinisher, gagnez [E] au prochain tour.",
-      " cartes. Lorsque vous utilisez un #yBonus de #yFinisher, gagnez #b",
-      " [E] au prochain tour."
+      "Au début de votre tour, gagnez #b",
+      " de #yVigueur lorsque vous en dépensez 3 ce tour, puis faites la même chose pour le #yContre."
     ]
   },
   "champ:NoBlockNextTurnPower": {
     "NAME": "Bouclier lancé",
     "DESCRIPTIONS": [
       "Vous ne pouvez pas gagner d'Armure au prochain tour.",
-      "Vous ne pouvez pas gagner d'Armure aux #b",
-      "^prochains tours."
+      "Vous ne pouvez pas gagner d'Armure pendant les #b",
+      " prochains tours."
     ]
   },
   "champ:UltimateStancePower": {
     "NAME": "Drainage ultime",
     "DESCRIPTIONS": [
-      "La Pose Ultime expirera ce tour will expire this turn.",
-      "La Pose Ultime expirera dans #b",
+      "La Pose Ultime s'épuisera ce tour.",
+      "La Pose Ultime s'épuisera dans #b",
       " tours."
     ]
   },
   "champ:UltimateFormNextTurnPower": {
     "NAME": "Preparing Ultimate",
     "DESCRIPTIONS": [
-      "At the start of your next turn, enter #yUltimate #yStance.",
-      " NL It will persist for #b",
-      " turns."
+      "Au début de votre prochain tour, entrez en #yPose #yUltime.",
+      " NL Elle persistera pendant #b",
+      " tours."
     ]
   },
   "champ:EnGardePower": {
@@ -227,6 +222,22 @@
       "Votre prochaine #yFrappe est jouée deux fois ce tour.",
       "Vos ",
       " prochaines #yFrappes sont jouées deux fois ce tour."
+    ]
+  },
+  "champ:LastStandPower": {
+    "NAME": "Last Stand",
+    "DESCRIPTIONS": [
+      "Une fois que vous êtes en dessous de 50% de vos PV, retirez tous vos Débuffs et gagnez #b",
+      " de Force.",
+      "~Vous~ ~allez~ ~le~ ~regretter...~",
+      "@UNE@ @DÉFAITE??@ NL @IMPOSSIBLE!!@"
+    ]
+  },
+  "champ:DoubleStyleThisTurnPower": {
+    "NAME": "Fouet de chaînes",
+    "DESCRIPTIONS": [
+      "Pendant ce tour, les Bonus de #yCompétence accordent #b",
+      " d'effet supplémentaire."
     ]
   }
 }
