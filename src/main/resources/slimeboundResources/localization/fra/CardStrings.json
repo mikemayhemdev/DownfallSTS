@@ -292,12 +292,12 @@
     "UPGRADE_DESCRIPTION": "Éthérée. NL Infligez !D! dégâts à TOUS les ennemis. NL Épuisement."
   },
   "Slimebound:SlimeSlap": {
-    "NAME": "Picots gluants",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Cette carte ne retire pas slimeboundmod:Goop."
+    "NAME": "Claque de slime",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Cette carte ne retire pas le slimeboundmod:Goop."
   },
   "Slimebound:SlimeSpikes": {
-    "NAME": "Slime Spikes",
-    "DESCRIPTION": "Gain !B! Block and !M! temporary Thorns."
+    "NAME": "Picots gluants",
+    "DESCRIPTION": "Gagnez !B! d'Armure et !M! d'Épines Temporaires."
   },
   "Slimebound:SlimeTap": {
     "NAME": "Tapotage baveux",
