@@ -35,11 +35,11 @@
     "NAMES": [
       "Mode défensif",
       "mode_défensif",
-      "defensive mode",
-      "defensive_mode"
+      "défensif",
+      "defensive_mode",
+      "defensive"
     ],
-    "DESCRIPTION": "#yPose. NL Gagnez #b10 #yd'Armure lorsque vous entrez en Mode défensif. NL Lorsque vous êtes en Mode défensif , vous avez #b3 #yd'Épines, gagnez #b10 #yd'Armure au début de votre tour, et votre Armure n'expire pas."
-  },
+    "DESCRIPTION": "#yPose. NL Lorsque vous êtes en Mode défensif , vous avez #b3 #yd'Épines, gagnez #b10 #yd'Armure au début de votre tour, et votre #yArmure n'expire pas."  },
   {
     "NAMES": [
       "accélérez",
@@ -55,7 +55,7 @@
       "packages"
     ],
     "PROPER_NAME": "Colis",
-    "DESCRIPTION": "Une #yCompétence #ys'Épuisant qui génère trois cartes inspirées d'un Gardien de la Tour, et réduit leurs coûts de #b1 pour ce combat."
+    "DESCRIPTION": "Une #yCompétence #ys'Épuisant qui génère trois cartes inspirées d'un Gardien de la Tour."
   },
   {
     "NAMES": [
