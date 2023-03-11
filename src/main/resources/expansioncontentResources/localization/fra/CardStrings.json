@@ -46,14 +46,12 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "Béndiction de la Forme",
-    "DESCRIPTION": "Choisissez - Gagnez !M! de Force ou 5 d'Armure Plaquée.",
-    "UPGRADE_DESCRIPTION": "Choisissez - Gagnez !M! de Force ou 8 d'Armure Plaquée.",
+    "DESCRIPTION": "Choisissez - Gagnez !M! de Force ou !DM! d'Armure Plaquée.",
     "EXTENDED_DESCRIPTION": [
       "Pouvoir de Donu",
       "Gagnez !M! de Force.",
       "Bouclier de Déca",
-      "Gagnez 5 d'Armure Plaquée.",
-      "Gagnez 8 d'Armure Plaquée."
+      "Gagnez !M! d'Armure Plaquée."
     ]
   },
   "expansioncontent:PrepareCrush": {
