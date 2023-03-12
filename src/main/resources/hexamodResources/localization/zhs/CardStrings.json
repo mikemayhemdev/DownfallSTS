@@ -224,7 +224,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 hexamod:灼魂 ， NL 获得 !B! 点 格挡 。"
   },
   "hexamod:HeatCrush": {
-    "NAME": "高热碾压",
+    "NAME": "高热撞击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 伤害受目标 hexamod:灼魂 加成。"
   },
   "hexamod:HeatShield": {
