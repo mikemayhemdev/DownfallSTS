@@ -32,7 +32,7 @@
   },
   "champ:FaceSlap": {
     "NAME": "안면 강타",
-    "DESCRIPTION": "피해를 !D! 줍니다. 적이 취약을 보유하고 있다면 피해를 두 번 줍니다. NL *광폭화 champ:연계: 취약을 !M! 부여합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *광폭화 champ:연계: 취약을 !M! 부여합니다."
   },
   "champ:FlashCut": {
     "NAME": "순간 타격",
@@ -56,7 +56,7 @@
   },
   "champ:SetATrap": {
     "NAME": "함정 설치",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. 적이 약화를 보유하고 있다면 방어도를 두 번 얻습니다. NL *수비 champ:연계: 적 전체에게 약화를 !M! 부여합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *수비 champ:연계: 적 전체에게 약화를 !M! 부여합니다."
   },
   "champ:Backstep": {
     "NAME": "뒷걸음",
@@ -88,8 +88,7 @@
   },
   "champ:Circumvent": {
     "NAME": "우회",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *자세 champ:연계: 카드를 !M! 장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "champ:반격을 !M! 얻습니다. NL 방어도를 !B! 얻습니다. NL *수비 champ:연계: 현재 champ:반격만큼 방어도를 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 !M! 장 뽑습니다. NL 카드를 !M! 장 버립니다."
   },
   "champ:SkillfulDodge": {
     "NAME": "능숙한 회피",
@@ -137,8 +136,7 @@
   },
   "champ:IronFortress": {
     "NAME": "현란한 꺾기",
-    "DESCRIPTION": "champ:자세를 취할 때마다 취한 champ:자세의 *스킬 *카드 *효과를 2번 발동시킵니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL champ:자세를 취할 때마다 취한 champ:자세의 *스킬 *카드 *효과를 2번 발동시킵니다."
+    "DESCRIPTION": "champ:자세를 취할 때마다 방어도를 !M! 얻습니다."
   },
   "champ:Lariat": {
     "NAME": "강화된 몸체",
@@ -158,7 +156,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "악랄한 조롱",
-    "DESCRIPTION": "적이 힘을 1 얻습니다. NL 활력을 !M! 얻습니다.",
+    "DESCRIPTION": "활력을 !M! 얻습니다. NL 취약을 !DM! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "광폭화 champ:연계: 힘을 !M! 얻습니다. 이번 턴이 끝날 때 힘을 !M! 잃습니다. NL ",
       "수비 champ:연계: 민첩을 !M! 얻습니다. 이번 턴이 끝날 때 민첩을 !M! 잃습니다."
@@ -275,8 +273,7 @@
   },
   "champ:SteelEdge": {
     "NAME": "강철 칼날",
-    "DESCRIPTION": "*광폭화 champ:연계: 피해를 !D! 만큼 X번 줍니다. NL *수비 champ:연계: 방어도를 !B! 만큼 X번 얻습니다.",
-    "UPGRADE_DESCRIPTION": "*광폭화 champ:연계: 피해를 !D! 만큼 X+1번 줍니다. NL *수비 champ:연계: 방어도를 !B! 만큼 X+1번 얻습니다.",
+    "DESCRIPTION": "피해를 !D! 만큼 X번 줍니다.",
     "EXTENDED_DESCRIPTION": [
       "광폭화 champ:연계: 피해를 !D! 만큼 X번 줍니다. NL ",
       "수비 champ:연계: 방어도를 X번 !B! 얻습니다.",
@@ -287,7 +284,7 @@
   },
   "champ:Improvising": {
     "NAME": "증강",
-    "DESCRIPTION": "매 턴 처음으로 champ:연계 카드를 사용하면 그 카드를 가져옵니다. NL 그 카드의 비용은 사용하기 전까지 0이 됩니다."
+    "DESCRIPTION": "턴 시작 시 자세를 취하고 있지 않다면 무작위 자세를 취합니다."
   },
   "champ:CalledShot": {
     "NAME": "원기 회복",
@@ -304,6 +301,7 @@
     "NAME": "완벽해진 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 보유 중인 카드 중 이름에 \"타격\" 이 포함된 카드 하나당 피해량이 !M! 증가합니다."
   },
+
   "champ:GladiatorForm": {
     "NAME": "검투사의 형상",
     "DESCRIPTION": "매 턴 시작 시 저번 턴에 소모한 활력 3당 활력 과 champ:반격을 !M! 얻습니다."
@@ -315,7 +313,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "춤 전문가",
-    "DESCRIPTION": "매 턴 처음으로 champ:마무리 카드를 사용한다면 [E] 를 얻고 카드를 1장 뽑습니다."
+    "DESCRIPTION": "매 턴 처음으로 *마무리 카드를 사용한다면 [E] 를 얻고 카드를 1장 뽑습니다."
   },
   "champ:StrikeOfGenius": {
     "NAME": "천재적인 타격",
@@ -329,7 +327,7 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "건투",
-    "DESCRIPTION": "힘을 !M! 얻습니다. NL 적 전체가 힘을 1 얻습니다."
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 민첩을 !M! 얻습니다."
   },
   "champ:BerserkerStyle": {
     "NAME": "광폭화 태세",
