@@ -3,7 +3,7 @@
     "NAME": "청동 톱니바퀴",
     "FLAVOR": "수호가 가장 중요합니다.",
     "DESCRIPTIONS": [
-      "매 전투 시 처음 #yguardianmod:수비_모드로 진입할 때 #y방어도를 #b10 추가로 얻습니다. NL 도전 시작 시 무작위 일반 #y보석을 하나 얻습니다."
+      "매 전투 시작 시 #y정비를 얻습니다. NL 도전 시작 시 무작위 일반 #y보석을 하나 얻습니다."
     ]
   },
   "Guardian:ModeShifterPlus": {
@@ -58,9 +58,9 @@
   },
   "Guardian:StasisSlotReductionRelic": {
     "NAME": "헤메는 로봇",
-    "FLAVOR": "이 무인 정찰기들은 아주 훌륭한 회수품을 찾아내지만 계속 찾기엔 처리 능력이 필요합니다.",
+    "FLAVOR": "이 무인 정찰기들은 아주 훌륭한 회수품을 찾아내지만 계속 찾으려면 처리 용량이 필요합니다.",
     "DESCRIPTIONS": [
-      "획득 시 정지장 슬롯을 #b2 개 잃습니다. NL 내 턴 시작 시 [E] 를 얻습니다."
+      "획득 시 정지장 슬롯을 #b1 개 잃습니다. NL 내 턴 시작 시 [E] 를 얻습니다."
     ]
   },
   "Guardian:StasisUpgradeRelic": {
@@ -78,7 +78,7 @@
       "카드를 선택하세요: ",
       "매 전투 시작 시 ",
       " 카드를 #yguardianmod:정지장에 넣습니다.",
-      "The bottled card has been #rremoved from your deck, the relic no longer functions."
+      "병에 담긴 카드가 덱에서 제거되어 유물의 효과가 발동하지 않습니다."
     ]
   },
   "Guardian:StasisEgg": {
@@ -121,7 +121,7 @@
       "카드를 선택하세요: ",
       "매 전투 시작 시 선택한 ",
       " 카드를 뽑을 카드 더미에서 제거합니다. #b3 턴 후, 턴 시작 시 제거한 카드를 얻습니다. NL 그 카드의 비용은 #b0 입니다.",
-      "The bottled card has been #rremoved from your deck, the relic no longer functions."
+      "병에 담긴 카드가 덱에서 제거되어 유물의 효과가 발동하지 않습니다."
     ]
   }
 }
