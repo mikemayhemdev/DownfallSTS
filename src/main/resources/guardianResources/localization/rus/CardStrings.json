@@ -9,32 +9,32 @@
   },
   "Guardian:Gem_Red": {
     "NAME": "Рубин",
-    "DESCRIPTION": "Даёт 2 временной Силы.",
+    "DESCRIPTION": "guardianmod:Самоцвет. NL Даёт 2 временной Силы.",
     "UPGRADE_DESCRIPTION": "Даёт 2 временной Силы."
   },
   "Guardian:Gem_Green": {
     "NAME": "Изумруд",
-    "DESCRIPTION": "Даёт 2 временной Ловкости.",
+    "DESCRIPTION": "guardianmod:Самоцвет. NL Даёт 2 временной Ловкости.",
     "UPGRADE_DESCRIPTION": "Даёт 2 временной Ловкости."
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "Турмалин",
-    "DESCRIPTION": "Даёт 4 временных Шипов.",
+    "DESCRIPTION": "guardianmod:Самоцвет. NL Даёт 4 временных Шипов.",
     "UPGRADE_DESCRIPTION": "Даёт 4 временных Шипов."
   },
   "Guardian:Gem_White": {
     "NAME": "Кварц",
-    "DESCRIPTION": "Вы берёте карту.",
+    "DESCRIPTION": "guardianmod:Самоцвет. NL Вы берёте карту.",
     "UPGRADE_DESCRIPTION": "Вы берёте карту."
   },
   "Guardian:Gem_Orange": {
     "NAME": "Цитрин",
-    "DESCRIPTION": "Даёт [E].",
+    "DESCRIPTION": "guardianmod:Самоцвет. NL Даёт [E].",
     "UPGRADE_DESCRIPTION": "Даёт [E]."
   },
   "Guardian:Gem_Cyan": {
     "NAME": "Аквамарин",
-    "DESCRIPTION": "Добавляет в руку *Кристаллическую *защиту.",
+    "DESCRIPTION": "guardianmod:Самоцвет. NL Добавляет в руку *Кристаллическую *защиту.",
     "UPGRADE_DESCRIPTION": "Добавляет в руку *Кристаллическую *защиту."
   },
   "Guardian:ChargeUp": {
@@ -81,7 +81,7 @@
   },
   "Guardian:TimeBomb": {
     "NAME": "Часовая бомба",
-    "DESCRIPTION": "Наносит !M! урона ВСЕМ врагам. NL guardianmod:Разгоняет ВСЕ карты в guardianmod:Стазисе. NL Сжигается."
+    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. NL guardianmod:Разгоняет ВСЕ карты в guardianmod:Стазисе. NL Сжигается."
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "Гига-луч",
@@ -259,7 +259,7 @@
   },
   "Guardian:ShieldSpikes": {
     "NAME": "Уйти в оборону",
-    "DESCRIPTION": "Даёт !B! Защиты. NL guardianmod:Разгон."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Даёт !M! временных Шипов, если в guardianmod:Оборонительном_режиме. Если нет: guardianmod:Подготовка 8."
   },
   "Guardian:PrismaticBeam": {
     "NAME": "Призматический всплеск",
@@ -276,8 +276,7 @@
   },
   "Guardian:TemporalShield": {
     "NAME": "Темпоральный щит",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Вы берёте !M! карту, если у вас есть карты в guardianmod:Стазисе.",
-    "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL Вы берёте !M! карты, если у вас есть карты в guardianmod:Стазисе."
+    "DESCRIPTION": "Даёт !B! Защиты. NL guardianmod:Разгон."
   },
   "Guardian:ExploitGems": {
     "NAME": "Разрядить самоцветы",
@@ -328,32 +327,32 @@
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "Оникс",
-    "DESCRIPTION": "Уменьшает каждый из ваших отриц. эффектов на 1.",
+    "DESCRIPTION": "guardianmod:Самоцвет. NL Уменьшает каждый из ваших отриц. эффектов на 1.",
     "UPGRADE_DESCRIPTION": "Уменьшает каждый из ваших отриц. эффектов на 1."
   },
   "Guardian:Gem_Yellow": {
     "NAME": "Янтарь",
-    "DESCRIPTION": "guardianmod:Разгон.",
+    "DESCRIPTION": "guardianmod:Самоцвет. NL guardianmod:Разгон.",
     "UPGRADE_DESCRIPTION": "guardianmod:Разгон."
   },
   "Guardian:Gem_Purple": {
     "NAME": "Аметист",
-    "DESCRIPTION": "ВСЕ враги теряют 2 Силы в этом ходу.",
+    "DESCRIPTION": "guardianmod:Самоцвет. NL ВСЕ враги теряют 2 Силы в этом ходу.",
     "UPGRADE_DESCRIPTION": "ВСЕ враги теряют 2 Силы в этом ходу."
   },
   "Guardian:Gem_Crimson": {
     "NAME": "Гранат",
-    "DESCRIPTION": "Накладывает 1 Уязвимости на ВСЕХ врагов.",
+    "DESCRIPTION": "guardianmod:Самоцвет. NL Накладывает 1 Уязвимости на ВСЕХ врагов.",
     "UPGRADE_DESCRIPTION": "Накладывает 1 Уязвимости на ВСЕХ врагов."
   },
   "Guardian:Gem_Blue": {
     "NAME": "Сапфир",
-    "DESCRIPTION": "guardianmod:Подготовка 4.",
+    "DESCRIPTION": "guardianmod:Самоцвет. NL guardianmod:Подготовка 4.",
     "UPGRADE_DESCRIPTION": "guardianmod:Подготовка 4."
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "Разбитый самоцвет",
-    "DESCRIPTION": "Добавляет в руку *Кристаллическую *заточку.",
+    "DESCRIPTION": "guardianmod:Самоцвет. NL Добавляет в руку *Кристаллическую *заточку.",
     "UPGRADE_DESCRIPTION": "Добавляет в руку *Кристаллическую *заточку."
   },
   "Guardian:CrystalShiv": {
