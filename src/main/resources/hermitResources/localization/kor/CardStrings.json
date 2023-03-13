@@ -154,7 +154,7 @@
   },
   "hermit:Spite": {
     "NAME": "앙심",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 저주 1장마다 카드를 뽑습니다. "
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 저주 한 장당 카드를 뽑습니다. "
   },
   "hermit:Manifest": {
     "NAME": "현현",
