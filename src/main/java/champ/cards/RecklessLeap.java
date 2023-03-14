@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class RecklessLeap extends AbstractChampCard {
 
     public final static String ID = makeID("RecklessLeap");
@@ -28,6 +30,7 @@ public class RecklessLeap extends AbstractChampCard {
         //myHpLossCost = MAGIC;
         tags.add(CardTags.STRIKE);
         exhaust = true;
+        loadJokeCardImage(this, "RecklessLeap.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

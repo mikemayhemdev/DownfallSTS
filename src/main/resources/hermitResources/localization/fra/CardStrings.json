@@ -200,7 +200,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "Puissance écrasante",
-    "DESCRIPTION": "Gagnez [E] [E] [E]. NL Piochez 3 cartes. NL Lorsque vous finissez votre tour avec 0 d'Énergie, perdez !M! PV."
+    "DESCRIPTION": "Gagnez [E] [E] [E]. NL Piochez !hermit:SecondMagic! cartes. NL Lorsque vous finissez votre tour avec 0 d'Énergie, perdez !M! PV."
   },
   "hermit:Maintenance": {
     "NAME": "Maintenance",

@@ -13,7 +13,7 @@ public class Improvising extends AbstractChampCard {
     public Improvising() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         postInit();
-        loadJokeCardImage(this, ".png");
+        loadJokeCardImage(this, "Improvising.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

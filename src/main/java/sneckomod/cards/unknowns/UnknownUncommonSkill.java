@@ -13,6 +13,7 @@ public class UnknownUncommonSkill extends AbstractUnknownCard {
 
     public UnknownUncommonSkill() {
         super(ID, CardType.SKILL, CardRarity.UNCOMMON);
+        SneckoMod.loadJokeCardImage(this, "UnknownUncommonSkill.png");
     }
 
     @Override

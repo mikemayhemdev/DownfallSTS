@@ -201,7 +201,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "Überwältigende Macht",
-    "DESCRIPTION": "Erhalte [E] [E] [E]. NL Ziehe 3 Karten. NL Immer wenn du dein Zug mit 0 Energie beendest, verliere !M! TP."
+    "DESCRIPTION": "Erhalte [E] [E] [E]. NL Ziehe !hermit:SecondMagic! Karten. NL Immer wenn du dein Zug mit 0 Energie beendest, verliere !M! TP."
   },
   "hermit:Maintenance": {
     "NAME": "Wartung",

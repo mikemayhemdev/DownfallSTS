@@ -18,6 +18,8 @@ import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.LoseThornsPower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class ShieldSpikes extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("ShieldSpikes");
     public static final String NAME;
@@ -53,6 +55,7 @@ public class ShieldSpikes extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("ShieldSpikes.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
