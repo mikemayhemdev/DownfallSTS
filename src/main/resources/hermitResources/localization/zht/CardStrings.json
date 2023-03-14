@@ -199,7 +199,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "壓倒性力量",
-    "DESCRIPTION": "獲得 [E] [E] [E] 。 NL 抽三張牌。 NL 回合結束時若無 [E] ， NL 失去 !M! 點生命。"
+    "DESCRIPTION": "獲得 [E] [E] [E] 。 NL 抽 !hermit:SecondMagic! 張牌。 NL 回合結束時若無 [E] ， NL 失去 !M! 點生命。"
   },
   "hermit:Maintenance": {
     "NAME": "維護",

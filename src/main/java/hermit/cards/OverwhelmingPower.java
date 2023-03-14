@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -75,6 +76,10 @@ public class OverwhelmingPower extends AbstractDynamicCard {
 
     @Override
     public float getTitleFontSize() {
-        return 20.0F;
+        if(Settings.language== Settings.GameLanguage.ZHS || Settings.language== Settings.GameLanguage.KOR || Settings.language== Settings.GameLanguage.ZHT ) {
+            return -1.0F;
+        }else {
+            return 20.0F;
+        }
     }
 }
