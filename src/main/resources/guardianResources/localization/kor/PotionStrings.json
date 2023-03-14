@@ -9,9 +9,8 @@
   "Guardian:DefensiveModePotion": {
     "NAME": "연마유",
     "DESCRIPTIONS": [
-      "#y수비 #y모드로 #b",
-      " 턴 동안 진입합니다.",
-      " 턴 동안 진입합니다."
+      "#y방어도를 #b",
+      " 얻습니다. #y수비 #y모드로 전환합니다."
     ]
   },
   "Guardian:BlockOnCardUsePotion": {

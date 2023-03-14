@@ -1,8 +1,8 @@
 {
-  "Guardian:NextTurnGainStrengthPower": {
+  "Guardian:NextTurnGainTemporaryStrengthPower": {
     "NAME": "충전 중",
     "DESCRIPTIONS": [
-      "내 다음 턴에 #y힘을 #b",
+      "다음 턴 동안 #y힘을 #b",
       " 얻습니다."
     ]
   },
@@ -15,11 +15,10 @@
     ]
   },
   "Guardian:FloatingOrbsPower": {
-    "NAME": "떠다니는 구체",
+    "NAME": "부유 구체",
     "DESCRIPTIONS": [
-      "내 턴 시작 시 #y구체 #y강타를 #b1 장 얻습니다.",
-      "내 턴 시작 시 #y구체 #y강타를 #b",
-      " 장 얻습니다."
+      "비용이 0인 카드를 사용할 때마다 무작위 적에게 피해를 #b",
+      " 줍니다."
     ]
   },
   "Guardian:OrbwalkPower": {
@@ -32,8 +31,8 @@
   "Guardian:ClonePower": {
     "NAME": "재설계",
     "DESCRIPTIONS": [
-      "이번 턴에 다음으로 사용하는 소멸하지 않는 #y공격 또는 #y스킬 카드를 #y정지장에 넣습니다.",
-      "이번 턴에 다음으로 사용하는 소멸하지 않는 #y공격 또는 #y스킬 카드를 #b",
+      "이번 턴에 다음으로 사용하는 카드를 #y정지장에 넣습니다.",
+      "이번 턴에 다음으로 사용하는 카드를 #b",
       " 장 #y정지장에 넣습니다."
     ]
   },
