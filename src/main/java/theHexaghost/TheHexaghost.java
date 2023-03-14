@@ -237,7 +237,7 @@ public class TheHexaghost extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 7;
+        return 4;
     }
 
     @Override

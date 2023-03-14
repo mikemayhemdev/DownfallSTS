@@ -127,7 +127,7 @@ public class AutomatonChar extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 7;
+        return 4;
     }
 
     @Override

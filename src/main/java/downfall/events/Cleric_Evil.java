@@ -37,7 +37,7 @@ public class Cleric_Evil extends AbstractImageEvent {
         if (AbstractDungeon.ascensionLevel >= 15) {
             this.gold = 50;
         } else {
-            this.gold = 100;
+            this.gold = 75;
         }
 
         this.imageEventText.setDialogOption(OPTIONS[0] + this.gold + OPTIONS[4]);

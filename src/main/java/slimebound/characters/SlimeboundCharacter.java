@@ -236,7 +236,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public int getAscensionMaxHPLoss() {
-        return 6;
+        return 4;
     }
 
     public BitmapFont getEnergyNumFont() {

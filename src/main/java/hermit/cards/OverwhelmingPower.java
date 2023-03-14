@@ -46,6 +46,7 @@ public class OverwhelmingPower extends AbstractDynamicCard {
     public OverwhelmingPower() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 4;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 3;
         loadJokeCardImage(this, "overwhelming_power.png");
     }
 
@@ -57,7 +58,7 @@ public class OverwhelmingPower extends AbstractDynamicCard {
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.RED, true));
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new OverwhelmingPowerPower(p, p, magicNumber), magicNumber));
-        this.addToBot(new GainEnergyAction(3));
+        this.addToBot(new GainEnergyAction(defaultSecondMagicNumber));
         this.addToBot(new DrawCardAction(3));
     }
 
@@ -68,7 +69,8 @@ public class OverwhelmingPower extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(-2);
+            upgradeDefaultSecondMagicNumber(1);
+            upgradeMagicNumber(-1);
             initializeDescription();
         }
     }

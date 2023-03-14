@@ -18,15 +18,15 @@
     "NAME": "슬라임 꼬리",
     "FLAVOR": "전투 중에 적을 속이기 위한 가짜 꼬리로 점액으로 뒤덮여 있습니다.",
     "DESCRIPTIONS": [
-      "전투마다 한 번, 체력이 #b50% 이하일 때 #yslimeboundmod:특공대_슬라임으로 #yslimeboundmod:분열합니다. 그 후 피해를 입는다면 대신해서 가장 최근에 생성된 슬라임을 #yslimeboundmod:흡수 합니다.",
-      "사용된 유물입니다. 다음 전투에서 다시 사용 가능합니다."
+      "#y분열할 때마다 #y방어도를 #b",
+      " 얻습니다."
     ]
   },
   "Slimebound:PotencyRelic": {
     "NAME": "노막의 돌",
     "FLAVOR": "당신의 점액질 군단에게 선물하면 슬라임들이 춤추듯 움직입니다.",
     "DESCRIPTIONS": [
-      "전투 시작 시 #yslimeboundmod:진흙탕_슬라임으로 #y분열하고 #yslimeboundmod:잠재력을 #b1 얻습니다."
+      "전투 시작 시 #yslimeboundmod:잠재력을 #b1 얻습니다."
     ]
   },
   "Slimebound:DailySplitRelic": {
@@ -79,7 +79,7 @@
     "NAME": "예레미아의 현수막",
     "FLAVOR": "당신과 끈끈이 군단의 상징입니다.",
     "DESCRIPTIONS": [
-      "전투 시작 시 #yslimeboundmod:거머리_슬라임으로 #yslimeboundmod:분열하고 슬라임 슬롯을 #b하나 얻습니다."
+      "전투 시작 시 슬라임 슬롯을 #b1 개 얻고 무작위 슬라임으로 #yslimeboundmod:분열합니다."
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {

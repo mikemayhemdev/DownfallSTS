@@ -38,8 +38,7 @@
   },
   "Slimebound:Split": {
     "NAME": "분열",
-    "DESCRIPTION": "무작위 슬라임 2마리로 slimeboundmod:분열합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "슬라임 4종류 중 2가지를 선택해 slimeboundmod:분열합니다. NL 소멸."
+    "DESCRIPTION": "무작위 슬라임으로 slimeboundmod:분열합니다."
   },
   "Slimebound:LeadByExample": {
     "NAME": "시범을 보여주지",
@@ -74,8 +73,7 @@
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "재형성",
-    "DESCRIPTION": "슬라임을 slimeboundmod:흡수할 때마다 힘을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "슬라임을 slimeboundmod:흡수할 때마다 힘을 !M! 얻고 민첩을 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 버린 카드 더미 카드 하나를 뽑을 카드 더미 맨 위에 둡니다."
   },
   "Slimebound:OozeBath": {
     "NAME": "점액 목욕",
@@ -164,8 +162,8 @@
   },
   "Slimebound:Gluttony": {
     "NAME": "폭식",
-    "DESCRIPTION": "매 턴 처음으로 slimeboundmod:소비하면 *핥기 카드를 1장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 처음으로 slimeboundmod:소비하면 *핥기 카드를 1장 얻습니다."
+    "DESCRIPTION": "매 턴 처음으로 slimeboundmod:소비하면 *핥기를 1장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 처음으로 slimeboundmod:소비하면 *핥기를 1장 얻습니다."
   },
   "Slimebound:PressTheAttack": {
     "NAME": "계속 공격해",
@@ -178,8 +176,8 @@
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "맜있겠군",
-    "DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비하면 *핥기 카드를 1장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비하면 *핥기+ 카드를 1장 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비하면 *핥기를 1장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비하면 *핥기+를 1장 얻습니다."
   },
   "Slimebound:AcidTongue": {
     "NAME": "점액 흩뿌리기",
@@ -256,7 +254,7 @@
   },
   "Slimebound:GoopSpray": {
     "NAME": "끈적이 스프레이",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 적 전체에게 slimeboundmod:점액을 !slime! 부여하고 약화를 !M! 부여합니다."
+    "DESCRIPTION": "적 전체에게 slimeboundmod:점액을 !slime! 부여하고 약화를 !M! 부여합니다."
   },
   "Slimebound:MassFeed": {
     "NAME": "대량 섭취",
@@ -346,7 +344,7 @@
   },
   "Slimebound:SlimeSlap": {
     "NAME": "슬라임 찰싹!",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL slimeboundmod:소비 시 slimeboundmod:점액을 소모하지 않습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드는 slimeboundmod:점액을 소모하지 않습니다."
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "하나둘 얍",
@@ -374,8 +372,8 @@
   },
   "Slimebound:Schlurp": {
     "NAME": "핥짝",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *핥기 카드를 !M! 장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL *핥기 카드를 !M! 장 얻습니다."
+    "DESCRIPTION": "점액을 !slime! 부여합니다. NL *핥기를 !M! 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "점액을 !slime! 부여합니다. NL *핥기를 !M! 장 얻습니다."
   },
   "Slimebound:SplitGreed": {
     "NAME": "되살아나는 욕심쟁이",

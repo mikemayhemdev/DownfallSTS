@@ -98,7 +98,11 @@ public class Augmenter_Evil extends AbstractImageEvent {
 
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:Augmenter");
                         AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+                        if (Settings.isDailyRun) {
+                            AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(30));
+                        } else {
+                            AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(25, 35));
+                        }
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new MutagenicStrength());
                         AbstractDungeon.getCurrRoom().rewards.add(new TransformCardReward());
                         AbstractDungeon.getCurrRoom().rewards.add(new TransformCardReward());
