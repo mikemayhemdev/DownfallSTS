@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class HeavySlash extends AbstractChampCard {
     public final static String ID = makeID("HeavySlash");
 
@@ -14,6 +16,7 @@ public class HeavySlash extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 10;
         postInit();
+        loadJokeCardImage(this, "HeavySlash.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

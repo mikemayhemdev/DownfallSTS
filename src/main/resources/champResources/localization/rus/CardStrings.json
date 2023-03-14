@@ -32,7 +32,7 @@
   },
   "champ:FaceSlap": {
     "NAME": "Пощёчина",
-    "DESCRIPTION": "Наносит !D! урона. Дважды, если у врага есть Уязвимость. NL champ:Комбо champ:Берсерка - накладывает !M! Уязвимости."
+    "DESCRIPTION": "Наносит !D! урона. NL champ:Комбо champ:Берсерка - накладывает !M! Уязвимости."
   },
   "champ:FlashCut": {
     "NAME": "Мгновенный удар",
@@ -56,7 +56,7 @@
   },
   "champ:SetATrap": {
     "NAME": "Расставить ловушки",
-    "DESCRIPTION": "Даёт !B! Защиты. Дважды, если у врагов есть Слабость. NL champ:Комбо champ:Рыцаря - накладывает !M! Слабости на ВСЕХ врагов."
+    "DESCRIPTION": "Даёт !B! Защиты. NL champ:Комбо champ:Рыцаря - накладывает !M! Слабости на ВСЕХ врагов."
   },
   "champ:Backstep": {
     "NAME": "Шаг назад",
@@ -85,8 +85,7 @@
   },
   "champ:Circumvent": {
     "NAME": "Избежать",
-    "DESCRIPTION": "Даёт !B! Защиты. NL champ:Комбо любой стойки - вы берёте !M! карты.",
-    "UPGRADE_DESCRIPTION": "Даёт !M! champ:Контратаки. NL Даёт !B! Защиты. NL champ:Комбо champ:Рыцаря - даёт Защиту равную вашей champ:Контратаке."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Вы берёте и сбрасываете !M! карты."
   },
   "champ:SkillfulDodge": {
     "NAME": "Искусный уворот",
@@ -134,8 +133,7 @@
   },
   "champ:IronFortress": {
     "NAME": "Техничная джига",
-    "DESCRIPTION": "Вы получаете champ:Бонус *Навыка дважды, при каждом переходе в стойку.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Вы получаете champ:Бонус *Навыка дважды, при каждом переходе в стойку."
+    "DESCRIPTION": "Даёт !M! Защиты, при каждом переходе в Стойку."
   },
   "champ:Lariat": {
     "NAME": "Укрепление тела",
@@ -155,7 +153,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Жестокая насмешка",
-    "DESCRIPTION": "Даёт врагу 1 Силы. NL Вы получаете !M! champ:Бодрости.",
+    "DESCRIPTION": "Даёт !M! champ:Бодрости. NL Накладывает !DM! Слабости.",
     "EXTENDED_DESCRIPTION": [
       "champ:Комбо champ:Берсерка - даёт !M! временной Силы. NL ",
       "champ:Комбо champ:Рыцаря - даёт !M! временной Ловкости."
@@ -272,8 +270,7 @@
   },
   "champ:SteelEdge": {
     "NAME": "Стальное лезвие",
-    "DESCRIPTION": "champ:Комбо champ:Берсерка - наносит !D! урона X раз. NL champ:Комбо champ:Рыцаря - даёт !B! Защиты X раз.",
-    "UPGRADE_DESCRIPTION": "champ:Комбо champ:Берсерка - наносит !D! урона X+1 раз. NL champ:Комбо champ:Рыцаря - даёт !B! Защиты X+1 раз.",
+    "DESCRIPTION": "Наносит !D! урона X раз.",
     "EXTENDED_DESCRIPTION": [
       "champ:Комбо champ:Берсерка - наносит !D! урона X раз. NL ",
       "champ:Комбо champ:Рыцаря - даёт !B! Защиты X раз.",
@@ -284,7 +281,7 @@
   },
   "champ:Improvising": {
     "NAME": "Импровизация",
-    "DESCRIPTION": "Возвращает первое разыгранное champ:Комбо за ход в руку. NL Оно стоит 0, пока не разыграно."
+    "DESCRIPTION": "В начале каждого вашего хода вы переходите в случайную Стойку, если у вас не было Стойки."
   },
   "champ:CalledShot": {
     "NAME": "Освежиться",
@@ -326,7 +323,7 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "Честный бой",
-    "DESCRIPTION": "Даёт !M! Силы. NL Даёт 1 Силы ВСЕМ врагам."
+    "DESCRIPTION": "Даёт !M! Силы. NL Даёт !M! Ловкости."
   },
   "champ:BerserkerStyle": {
     "NAME": "Стиль берсерка",

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
 
 public class Patsy extends AbstractGremlinCard {
@@ -28,6 +29,7 @@ public class Patsy extends AbstractGremlinCard {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseBlock = BLOCK;
+        GremlinMod.loadJokeCardImage(this, "Patsy.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

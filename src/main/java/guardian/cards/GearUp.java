@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.BraceAction;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class GearUp extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("GearUp");
     public static final String IMG_PATH = GuardianMod.getResourcePath("cards/GearUp.png");
@@ -20,6 +22,7 @@ public class GearUp extends AbstractGuardianCard {
         this.exhaust = true;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("GearUp.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

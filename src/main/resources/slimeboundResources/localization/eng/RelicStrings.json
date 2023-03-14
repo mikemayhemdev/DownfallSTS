@@ -19,7 +19,7 @@
     "FLAVOR": "A fake tail to trick enemies during combat, completely covered in slime.",
     "DESCRIPTIONS": [
       "Whenever you #ySplit, gain #b.",
-      " Block."
+      " #yBlock."
     ]
   },
   "Slimebound:PotencyRelic": {
