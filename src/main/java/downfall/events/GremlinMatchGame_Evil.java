@@ -357,7 +357,11 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                             GremlinSack r = new GremlinSack();
                             r.onTrigger();
                             AbstractDungeon.getCurrRoom().addRelicToRewards(r);
-                            AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+                            if (Settings.isDailyRun) {
+                                AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(25));
+                            } else {
+                                AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(20, 30));
+                            }
 
                             AbstractDungeon.getCurrRoom().eliteTrigger = true;
                             AbstractDungeon.lastCombatMetricKey = "Match Game Nob";

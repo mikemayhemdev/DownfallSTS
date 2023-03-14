@@ -230,7 +230,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "Ошеломляющая мощь",
-    "DESCRIPTION": "Даёт [E] [E] [E]. NL Вы берёте 3 карты. NL Вы теряете !M! ОЗ, когда заканчиваете ход без [E]."
+    "DESCRIPTION": "Даёт [E] [E] [E]. NL Вы берёте !hermit:SecondMagic! карты. NL Вы теряете !M! ОЗ, когда заканчиваете ход без [E]."
   },
   "hermit:PistolWhip": {
     "NAME": "Удар прикладом",

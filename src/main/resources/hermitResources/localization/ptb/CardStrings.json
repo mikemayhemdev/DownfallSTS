@@ -200,7 +200,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "Poder Esmagador",
-    "DESCRIPTION": "Ganhe [E] [E] [E]. Compre 3 cartas. Quando você acabar seu turno com 0 de Energia, perca 4 PV."
+    "DESCRIPTION": "Ganhe [E] [E] [E]. Compre !hermit:SecondMagic! cartas. Quando você acabar seu turno com 0 de Energia, perca 4 PV."
   },
   "hermit:Maintenance": {
     "NAME": "Manutenção",

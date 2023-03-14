@@ -200,7 +200,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "압도적인 힘",
-    "DESCRIPTION": "[E] [E] [E] 를 얻습니다. NL 카드를 3장 뽑습니다. NL  [E] 가 0인 상태로 내 턴을 끝날 때마다 체력을 !M! 잃습니다."
+    "DESCRIPTION": "[E] [E] [E] 를 얻습니다. NL 카드를 !hermit:SecondMagic! 장 뽑습니다. NL  [E] 가 0인 상태로 내 턴을 끝날 때마다 체력을 !M! 잃습니다."
   },
   "hermit:Maintenance": {
     "NAME": "유지보수",
