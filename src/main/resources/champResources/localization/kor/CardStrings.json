@@ -153,7 +153,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "악랄한 조롱",
-    "DESCRIPTION": "활력을 !M! 얻습니다. NL 약화를 !DM! 얻습니다.",
+    "DESCRIPTION": "활력을 !M! 얻습니다. NL 약화를 !DM! 부여합니다.",
     "EXTENDED_DESCRIPTION": [
       "광폭화 champ:연계: 힘을 !M! 얻습니다. 이번 턴이 끝날 때 힘을 !M! 잃습니다. NL ",
       "수비 champ:연계: 민첩을 !M! 얻습니다. 이번 턴이 끝날 때 민첩을 !M! 잃습니다."
