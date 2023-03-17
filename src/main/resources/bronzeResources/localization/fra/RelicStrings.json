@@ -17,7 +17,7 @@
     "NAME": "Rondelles de Deca",
     "FLAVOR": "Ce n'est pas très clair sur le pourquoi Deca les collecte.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, piochez #b3 cartes supplémentaires et ajoutez un #yHébétement dans votre pioche."
+      "Au début des #b3 premièrs tours, piochez une carte supplémentaire."
     ]
   },
   "bronze:Timepiece": {

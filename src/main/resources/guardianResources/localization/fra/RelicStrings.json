@@ -3,8 +3,7 @@
     "NAME": "Engrenage de bronze",
     "FLAVOR": "De la protection lorsque vous en avez le plus besoin.",
     "DESCRIPTIONS": [
-      "La première fois que vous entrez en #yguardianmod:Mode_Défensif, gagnez #b10 #bd'Armure #ysupplémentaires. NL Le Gardien commence la run avec une #yGemme commune aléatoire."
-    ]
+      "Au début de chaque combat, obtenez #yEngrenage NL Le Gardien commence la run avec une #yGemme commune aléatoire."    ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "Engrenage de gardien",
@@ -31,8 +30,7 @@
     "NAME": "Sentinelle de poche de Arumba",
     "FLAVOR": "Sentinelle activée. Cible acquise. Pas de rancune.",
     "DESCRIPTIONS": [
-      "Au début de chaque tour, alterne entre: NL Infligez #b",
-      " dégâts à un ennemi aléatoire. NL Appliquez #b1 de #yFaiblesse à TOUS les ennemis."
+      "Tous les #b3 tours, appliquez #b1 de #yFaiblesse à TOUS les ennemis."
     ]
   },
   "Guardian:SackOfGems": {
@@ -60,14 +58,14 @@
     "NAME": "Drones errants",
     "FLAVOR": "Ces drones trouvent les meilleures pièces de récupération, mais requiert de la puissance pour se maintenir.",
     "DESCRIPTIONS": [
-      "Lorsque vous récupérez cette relique, perdez #b2 emplacements de #yguardianmod:Stase. NL Gagnez [E] au début de votre tour."
+      "Au début de chaque combat, perdez #b2 emplacements de #yguardianmod:Stase. NL Gagnez [E] au début de votre tour."
     ]
   },
   "Guardian:StasisUpgradeRelic": {
     "NAME": "Cryo-chambre",
     "FLAVOR": "Les choses semblent toujours meilleures lorsqu'elles en sortent que lorsqu'elles en entrent.",
     "DESCRIPTIONS": [
-      "Gagnez #b1 emplacement de #yguardianmod:Stase. Quand une carte entre en #yguardianmod:Stase, #yAméliorez-la."
+      "Au début de chaque combat, gagnez #b1 emplacement de #yguardianmod:Stase. Quand une carte entre en #yguardianmod:Stase, #yAméliorez-la."
     ]
   },
   "Guardian:BottledStasis": {

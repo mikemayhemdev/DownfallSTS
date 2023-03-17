@@ -95,7 +95,7 @@
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "增殖形态",
-	  "DESCRIPTION": "每回合首张指向牌打出两次。",
+    "DESCRIPTION": "每回合首张指向牌打出两次。",
     "UPGRADE_DESCRIPTION": "每回合获得 [E] 且首张指向牌打出两次。",
     "EXTENDED_DESCRIPTION": [
       "需要…… 生命……"
@@ -147,8 +147,8 @@
   },
   "Slimebound:HauntingLick": {
     "NAME": "恶臭之舔",
-    "DESCRIPTION": "给予 !M! 层 易伤 与 !slime! 层 slimeboundmod:黏液 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 易伤 与 !slime! 层 slimeboundmod:黏液 。 NL 抽一张牌。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 易伤 。 NL 给予 !slime! 层 slimeboundmod:黏液 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 易伤 。 NL 给予 !slime! 层 slimeboundmod:黏液 。 NL 抽一张牌。 NL 消耗 。"
   },
   "Slimebound:MegaLick": {
     "NAME": "大舔特舔",

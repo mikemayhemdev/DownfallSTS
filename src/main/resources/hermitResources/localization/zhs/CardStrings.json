@@ -153,7 +153,7 @@
   },
   "hermit:Spite": {
     "NAME": "恶意",
-    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 手中每有一张 诅咒 ， NL 抽一张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 手中每有一张 诅咒 ， NL 抽一张牌。"
   },
   "hermit:Manifest": {
     "NAME": "恶灵现身",
@@ -199,7 +199,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "压倒性力量",
-    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽三张牌。 NL 回合结束时若无 [E] ， NL 失去 !M! 点生命。"
+    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽 !hermit:SecondMagic! 张牌。 NL 回合结束时若无 [E] ， NL 失去 !M! 点生命。"
   },
   "hermit:Maintenance": {
     "NAME": "维护",

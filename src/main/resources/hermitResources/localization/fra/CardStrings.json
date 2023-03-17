@@ -43,14 +43,13 @@
   },
   "hermit:Snipe": {
     "NAME": "Snipe",
-    "DESCRIPTION": "Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois.",
-    "UPGRADE_DESCRIPTION": "hermit:Concentrez-vous. NL Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois."
+    "DESCRIPTION": "Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "hermit:Concentrez-vous. NL Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois. NL Épuisement."
   },
   "hermit:CalledShot": {
     "NAME": "Tir contrôlé",
-    "DESCRIPTION": "Infligez des dégâts égaux à la taille de votre main. NL hermit:Dans_Le_Mille: NL Piochez !M! Attaque.",
-    "UPGRADE_DESCRIPTION": " NL (Inflige !D! dégâts.)",
-	"EXTENDED_DESCRIPTION":["Infligez des dégâts égaux à la taille de votre main. NL hermit:Dans_Le_Mille: NL Piochez !M! Attaques."]
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si la dernière carte jouée a déclenché hermit:Dans_Le_Mille, piochez une carte.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Si la dernière carte jouée a déclenché hermit:Dans_Le_Mille, piochez une carte."
   },
   "hermit:Dissolve": {
     "NAME": "Dissolution",
@@ -108,11 +107,11 @@
   },
   "hermit:Roulette": {
     "NAME": "Roulette",
-    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire. NL Défaussez votre main. NL Piochez autant de cartes."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Défaussez votre main. NL Piochez autant de cartes."
   },
   "hermit:Midnight": {
     "NAME": "Minuit",
-    "DESCRIPTION": "Éthérée. NL Gagnez !B! d'Armure. NL Ajoutez *Destin *Imminent à votre main.",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez *Destin *Imminent à votre main.",
     "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez *Destin *Imminent à votre main."
   },
   "hermit:Glare": {
@@ -155,7 +154,7 @@
   },
   "hermit:Spite": {
     "NAME": "Dépit",
-    "DESCRIPTION": "Infligez !D! dégâts deux fois. NL Piochez !M! *Malédictions."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Piochez une carte pour chaque Malédiction dans votre main."
   },
   "hermit:Manifest": {
     "NAME": "Manifeste",
@@ -183,7 +182,8 @@
   },
   "hermit:Vantage": {
     "NAME": "Avantage",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille: NL Améliorez !M! cartes aléatoires dans votre main pour le restant du combat."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille: NL Piochez !M! carte et Améliorez-la pour le reste du combat.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille: NL Piochez !M! cartes et Améliorez-les pour le reste du combat."
   },
   "hermit:Brawl": {
     "NAME": "Pugilat",
@@ -310,7 +310,7 @@
   },
   "hermit:FinalCanter": {
     "NAME": "Galop final",
-    "DESCRIPTION": "Retenue. NL Infligez !D! dégâts pour chaque Malédiction dans votre main. NL Épuisement.",
+    "DESCRIPTION": "Retenue. NL Épuisez toutes les Malédictions dans votre main, infligez !D! dégâts pour chaque Malédiction Épuisée. NL Épuisement.",
     "UPGRADE_DESCRIPTION": " NL (Vous avez !M! Malédiciton(s))"
   },
   "hermit:HeroicBravado": {

@@ -23,17 +23,17 @@
   },
   "hexamod:BacktrackSmack": {
     "NAME": "Baffe arrière",
-    "DESCRIPTION": "Infligez !D! dégâts. NL hexamod:Rétractez."
+    "DESCRIPTION": "Infligez !D! dégâts deux fois. NL hexamod:Rétractez."
   },
   "hexamod:FastForward": {
     "NAME": "Avance rapide",
-    "DESCRIPTION": "Éthérée. hexamod:Enflammez le Feu Follet actuel. NL hexamod:Avancez.",
+    "DESCRIPTION": "Piochez !M! cartes. NL hexamod:Avancez.",
     "UPGRADE_DESCRIPTION": "hexamod:Enflammez le Feu Follet actuel. NL hexamod:Avancez."
   },
   "hexamod:Rewind": {
     "NAME": "Rembobinage",
-    "DESCRIPTION": "hexamod:Rétractez. NL Gain [E] .",
-    "UPGRADE_DESCRIPTION": "hexamod:Rétractez. NL Gagnez [E] et piochez 1 carte."
+    "DESCRIPTION": "hexamod:Rétractez. NL Récupérez une carte de votre défausse. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "hexamod:Rétractez. NL Récupérez !M! cartes de votre défausse. NL Épuisement."
   },
   "hexamod:SkipABeat": {
     "NAME": "Allumage",
@@ -42,7 +42,8 @@
   },
   "hexamod:CatchUp": {
     "NAME": "Temps perdu",
-    "DESCRIPTION": "hexamod:Enflammez le Feu Follet précédent !M! fois."
+    "DESCRIPTION": "hexamod:Enflammez le Feu Follet précédent !M! fois. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "hexamod:Enflammez le Feu Follet précédent !M! fois."
   },
   "hexamod:TimeWarp": {
     "NAME": "Distorsion temporelle",
@@ -247,7 +248,7 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "Métal chaud",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Après que la hexamod:Brûlure s'active sur cet ennemi, appliquez !M! de hexamod:Brûlure."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !burny! de hexamod:Brûlure. NL Appliquez !M! de Vulnérabilité."
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Pluie de braises",
@@ -354,7 +355,7 @@
   },
   "hexamod:FlameSwitch": {
     "NAME": "Mauvais Omen",
-    "DESCRIPTION": "Éthérée. NL Choisissez un type de Feu Follet pour remplacer le Feu Follet actuel. NL Épuisement.",
+    "DESCRIPTION": "Appliquez !burny! de hexamod:Brûlure NL Augmentez de !M! le nombre de tours nécessaires à la détonation. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Retenue. NL Choisissez un type de Feu Follet pour remplacer le Feu Follet actuel. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "Remplacez le Feu Follet actuel avec un Feu Follet hexamod:Renforceur",

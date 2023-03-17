@@ -1,9 +1,9 @@
 {
-  "Guardian:NextTurnGainStrengthPower": {
+  "Guardian:NextTurnGainTemporaryStrengthPower": {
     "NAME": "Recharge",
     "DESCRIPTIONS": [
       "Gagnez #b",
-      " de #yForce à votre prochain tour."
+      " de #yForce temporaire lors de votre prochain tour."
     ]
   },
   "Guardian:StunnedPower": {
@@ -17,9 +17,8 @@
   "Guardian:FloatingOrbsPower": {
     "NAME": "Orbes flottants",
     "DESCRIPTIONS": [
-      "Au début de votre tour, ajoutez #yClaque #yorbitale dans votre main.",
-      "Au début de votre tour, ajoutez #b",
-      " #yClaques #yorbitales dans votre main."
+      "Lorsque vous jouez une carte #yCoûtant #y0, infligez #b",
+      "dégâts à un ennemi aléatoire"
     ]
   },
   "Guardian:OrbwalkPower": {
@@ -32,9 +31,9 @@
   "Guardian:ClonePower": {
     "NAME": "Détournement",
     "DESCRIPTIONS": [
-      "Placez la prochaine #yAttaque ou #yCompétence que vous jouez et qui ne s'Épuise pas en #yStase.",
+      "Placez la prochaine carte que vous jouez en #yStase.",
       "Placez les #b",
-      " prochaines #yAttaques ou #yCompétences que vous jouez et qui ne s'Épuisent pas en #yStase."
+      " prochaines cartes que vous jouez en #yStase."
     ]
   },
   "Guardian:GemFinderPower": {
