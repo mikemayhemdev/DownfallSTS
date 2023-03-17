@@ -40,7 +40,7 @@
   },
   "reskinContent:ReSkinSlime": {
     "TEXT": [
-      "슬라이푸",
+      "슬라임내아내",
       "대왕 슬라임?"
     ],
     "EXTRA_TEXT": [
@@ -82,12 +82,12 @@
     "TEXT": [
       "자동인형",
       "\"자동인형\"",
-      "The Perfect"
+      "퍼펙트"
     ],
     "EXTRA_TEXT": [
       "",
       "예아! 머리부터 발끝까지 완전 자동인형입니다! NL 내 생에 저런 자동인형은 처음 봅니다!",
-      "[BOOT] Initializing... Core Systems Online - No Faults Detected NL [OBJECTIVE] BALANCE will be ENFORCED"
+      "[작동] 초깃값 설정... 핵심 시스템 활성화 - 결함 비감지 NL [목적] 균형은 유지되어야만 한다"
     ]
   }
 }
