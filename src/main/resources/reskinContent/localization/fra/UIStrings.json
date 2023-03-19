@@ -51,11 +51,13 @@
   "reskinContent:ReSkinHexaghost": {
     "TEXT": [
       "Hexago",
-      "Ghostagon"
+      "Ghostagon",
+      "Lampghost"
     ],
     "EXTRA_TEXT": [
       "Un esprit maudit de la Spire. NL Scellé à un destin éternel de protecteur.",
-      "Aime chasser les cercles jaunes pendant ses jours de repos. NL  A une peur bleue des granulés de bois."
+      "Aime chasser les cercles jaunes pendant ses jours de repos. NL  A une peur bleue des granulés de bois.",
+      "Hexaghost's old partner. NL Decided to stop slaying adventurers for a more stable job selling wishes."
     ]
   },
   "reskinContent:ReSkinSnecko": {

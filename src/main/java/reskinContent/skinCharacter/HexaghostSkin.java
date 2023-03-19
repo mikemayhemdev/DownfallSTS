@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import reskinContent.skinCharacter.skins.Hexaghost.BetaHexaghost;
 import reskinContent.skinCharacter.skins.Hexaghost.HexaghostOriginal;
 import reskinContent.skinCharacter.skins.Hexaghost.Hexago;
+import reskinContent.skinCharacter.skins.Hexaghost.Lampghost;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
 import theHexaghost.TheHexaghost;
 
@@ -14,7 +15,8 @@ public class HexaghostSkin extends AbstractSkinCharacter {
     public static final AbstractSkin[] SKINS = new AbstractSkin[]{
             new HexaghostOriginal(),
             new Hexago(),
-            new BetaHexaghost()
+            new BetaHexaghost(),
+            new Lampghost(),
     };
 
     public HexaghostSkin() {

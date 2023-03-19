@@ -50,11 +50,13 @@
   "reskinContent:ReSkinHexaghost": {
     "TEXT": [
       "六子",
-      "愚人節"
+      "愚人節",
+      "Lampghost"
     ],
     "EXTRA_TEXT": [
       "充滿了冤魂的容器中也有不一樣的個體。 NL 具現化使得力量更為強勁？",
-      "白袍加身， NL 苦痛面具。"
+      "白袍加身， NL 苦痛面具。",
+      "Hexaghost's old partner. NL Decided to stop slaying adventurers for a more stable job selling wishes."
     ]
   },
   "reskinContent:ReSkinSnecko": {
