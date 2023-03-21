@@ -34,6 +34,8 @@ public class EnDesperado extends AbstractHermitBossCard {
                 if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
                     AbstractBossCard c = ((ArchetypeAct2WheelOfFateNewAge) AbstractCharBoss.boss.chosenArchetype).getCardFromDeck(uuid);
                     if (c != null) c.baseDamage *= 2;
+                    c.costForTurn = c.cost;
+                    c.modifyCostForCombat(1);
                 }
                 isDone = true;
             }
