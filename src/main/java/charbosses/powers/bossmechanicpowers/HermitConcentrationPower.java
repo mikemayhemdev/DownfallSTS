@@ -53,6 +53,12 @@ public class HermitConcentrationPower extends AbstractBossMechanicPower {
     public void atEndOfTurn(boolean isPlayer) {
         this.amount = damageThreshold;
         this.updateDescription();
+
+        if (this.owner instanceof CharBossHermit) {
+            for (AbstractCard bc : ((CharBossHermit) this.owner).hand.group) {
+                ((AbstractBossCard) bc).onSpecificTrigger();
+            }
+        }
     }
 
     public void updateDescription() {
