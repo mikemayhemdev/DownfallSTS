@@ -507,7 +507,7 @@
   },
   "bronze:Repulsor": {
     "NAME": "反冲器",
-    "DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时， 消耗 其并抽一张牌。",
+    "DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时，将其 消耗 并抽一张牌。",
     "UPGRADE_DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时， 消耗 其并抽一张牌。"
   },
   "bronze:Debug": {
