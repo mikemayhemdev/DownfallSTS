@@ -361,7 +361,7 @@
   },
   "Guardian:Repulse": {
     "NAME": "反冲协议",
-    "DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时， 消耗 其并抽一张牌。",
+    "DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时，将其 消耗 并抽一张牌。",
     "UPGRADE_DESCRIPTION": "消耗 每回合抽到的首张 状态牌 或 诅咒 并抽一张牌。"
   },
   "Guardian:BronzeOrb": {
