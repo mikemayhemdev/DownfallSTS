@@ -226,7 +226,7 @@
   },
   "hermit:CursedWeapon": {
     "NAME": "Arme maudite",
-    "DESCRIPTION": "Perdez !M! PV. NL Infligez !D! dégâts. NL Cette carte gagne 3 dégâts de façon permanente. NL Épuisement."
+    "DESCRIPTION": "Perdez !M! PV. NL Infligez !D! dégâts. NL Toutes les *Arme *maudite gagnent !hermit:SecondMagic! dégâts de façon permanente. NL Épuisement."
   },
   "hermit:Enervate": {
     "NAME": "Énervement",
