@@ -3,7 +3,9 @@ package charbosses.patches;
 
 import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.relics.CBR_NeowsBlessing;
 import com.badlogic.gdx.Gdx;
+import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
@@ -16,6 +18,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.NoDrawPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+
+import java.util.Objects;
 
 @SpirePatch(clz = ApplyPowerAction.class, method = "update")
 
@@ -53,7 +57,14 @@ public class ApplyPowerPatch {
                         return SpireReturn.Return(null);
                     }
 
-
+                    //Stop Stuns
+                    if (cB.hasRelic(CBR_NeowsBlessing.ID) && Objects.equals(powerToApply.ID, StunMonsterPower.POWER_ID)) {
+                        cB.getRelic(CBR_NeowsBlessing.ID).flash();
+                        AbstractDungeon.actionManager.addToTop(new TextAboveCreatureAction(instance.target, instance.TEXT[1]));
+                        float newDuration = duration -= Gdx.graphics.getDeltaTime();
+                        ReflectionHacks.setPrivate(instance, AbstractGameAction.class, "duration", newDuration);
+                        return SpireReturn.Return();
+                    }
                 }
             }
 

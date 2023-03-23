@@ -156,7 +156,7 @@ public class TheHexaghost extends CustomPlayer {
 
     @Override
     public void render(SpriteBatch sb) {
-        if (!(AbstractDungeon.getCurrRoom() instanceof RestRoom) && !isDead)
+        if (!(AbstractDungeon.getCurrRoom() instanceof RestRoom) && !isDead && CharacterSelectScreenPatches.characters[2].reskinCount != 3)
             myBody.render(sb);
         super.render(sb);
     }
