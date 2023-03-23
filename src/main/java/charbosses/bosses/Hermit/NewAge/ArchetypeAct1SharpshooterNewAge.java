@@ -39,10 +39,10 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitConcentrationPower(p), damageThreshold));
 
         AbstractMonster tangerine = new LouseNormal(-400F, 0);
+        //tangerine.name = //Localized Name //TODO Give this louse a name.
         tangerine.maxHealth += 24;
         tangerine.currentHealth += 24;
         tangerine.powers.add(new StrengthPower(tangerine, 2));
-        tangerine.powers.add(new CurlUpPower(tangerine, 12));
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(tangerine, true));
     }
 

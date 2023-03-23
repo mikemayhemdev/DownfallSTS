@@ -1,0 +1,62 @@
+
+Lampghost.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+O_tail
+  rotate: false
+  xy: 135, 358
+  size: 133, 114
+  orig: 133, 114
+  offset: 0, 0
+  index: -1
+O_ring
+  rotate: false
+  xy: 1, 1
+  size: 342, 355
+  orig: 342, 355
+  offset: 0, 0
+  index: -1
+Lamp
+  rotate: false
+  xy: 270, 413
+  size: 119, 86
+  orig: 119, 86
+  offset: 0, 0
+  index: -1
+I_tail
+  rotate: false
+  xy: 345, 245
+  size: 200, 166
+  orig: 200, 166
+  offset: 0, 0
+  index: -1
+I_ring
+  rotate: false
+  xy: 345, 1
+  size: 262, 242
+  orig: 262, 242
+  offset: 0, 0
+  index: -1
+Core
+  rotate: false
+  xy: 1, 358
+  size: 132, 120
+  orig: 132, 120
+  offset: 0, 0
+  index: -1
+Turban
+  rotate: false
+  xy: 547, 245
+  size: 110, 100
+  orig: 110, 100
+  offset: 0, 0
+  index: -1
+String
+  rotate: false
+  xy: 270, 358
+  size: 29, 48
+  orig: 29, 48
+  offset: 0, 0
+  index: -1

@@ -51,11 +51,13 @@
   "reskinContent:ReSkinHexaghost": {
     "TEXT": [
       "Hexago",
-      "Ghostagon"
+      "Plasmasque",
+      "Lamplasme"
     ],
     "EXTRA_TEXT": [
       "Un esprit maudit de la Spire. NL Scellé à un destin éternel de protecteur.",
-      "Aime chasser les cercles jaunes pendant ses jours de repos. NL  A une peur bleue des granulés de bois."
+      "Aime chasser les cercles jaunes pendant ses jours de repos. NL  A une peur bleue des granulés de bois.",
+      "Le vieux partenaire de l'Hexaplasme. NL A decidé d'arrêter le meurtre d'aventuriers pour un job plus stable en tant que vendeur de voeux."
     ]
   },
   "reskinContent:ReSkinSnecko": {
@@ -80,14 +82,15 @@
   },
   "reskinContent:ReSkinBronze": {
     "TEXT": [
-      "Automaton",
-      "\"Automaton\"",
-      "The Perfect"
+      "Automate",
+      "\"Automate\"",
+      "Le Parfait"
     ],
     "EXTRA_TEXT": [
       "",
-      "C'est ça ! De la tête aux pieds, c'est bien l'Automaton ! NL Je n'ai jamais rien vu qui ressemble autant à l'Automate!",
+      "C'est ça ! De la tête aux pieds, c'est bien l'Automate ! NL Je n'ai jamais rien vu qui ressemble autant à l'Automate!",
       "[BOOT] Initialisation... Systèmes Centraux Online - Aucun défaut détecté NL [OBJECTIF] L'ÉQUILIBRE sera EXÉCUTÉ"
     ]
   }
 }
+
