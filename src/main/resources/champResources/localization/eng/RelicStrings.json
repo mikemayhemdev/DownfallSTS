@@ -3,14 +3,14 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "At the start of combat, enter #bDefensive or #rBerserker Stance."
+      "At the start of combat, enter #bDefensive or #rBerserker #yStance."
     ]
   },
   "champ:BlackKnightHelmet": {
     "NAME": "Black Knight's Helm",
     "FLAVOR": "Only a flesh wound.",
     "DESCRIPTIONS": [
-      "The first time you enter each Stance each combat: NL #bDefensive: Gain #b2 Dexterity and lose #b1 Strength. NL #rBerserker: Gain #b2 Strength and lose #b1 Dexterity."
+      "The first time you enter each #yStance each combat: NL #bDefensive: Gain #b2 #yDexterity and lose #b1 #yStrength. NL #rBerserker: Gain #b2 #yStrength and lose #b1 #yDexterity."
     ]
   },
   "champ:Barbells": {
@@ -89,7 +89,7 @@
     "NAME": "Spectre's Hand",
     "FLAVOR": "Some victories stay with you.",
     "DESCRIPTIONS": [
-      "Whenever you Enter a Stance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust."
+      "Whenever you enter a #yStance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust."
     ]
   },
   "champ:LiftRelic": {

@@ -37,9 +37,9 @@
   "bronze:Optimize": {
     "NAME": "Optimized",
     "DESCRIPTIONS": [
-      "#yUpgrade the next #Upgradable card you #yEncode.",
+      "#yUpgrade the next #yUpgradable card you #yEncode.",
       "#yUpgrade the next #b",
-      " #Upgradable cards you #yEncode."
+      " #yUpgradable cards you #yEncode."
     ]
   },
   "bronze:MaxOutput": {
