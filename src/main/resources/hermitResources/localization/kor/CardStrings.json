@@ -226,7 +226,7 @@
   },
   "hermit:CursedWeapon": {
     "NAME": "저주받은 무기",
-    "DESCRIPTION": "체력을 !M! 잃습니다. NL 피해를 !D! 줍니다. NL 영구적으로 이 카드의 피해량을 3 증가시킵니다. NL 소멸."
+    "DESCRIPTION": "체력을 !M! 잃습니다. NL 피해를 !D! 줍니다. NL 모든 *저주받은 *무기의 피해량이 영구적으로 !hermit:SecondMagic! 상승합니다. 소멸."
   },
   "hermit:Enervate": {
     "NAME": "쇠약",

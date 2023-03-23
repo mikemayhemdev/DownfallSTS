@@ -2,6 +2,7 @@ package hermit;
 
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
+import basemod.abstracts.CustomSavable;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
@@ -12,6 +13,7 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -31,6 +33,7 @@ import hermit.relics.*;
 import hermit.rewards.BountyGold;
 import hermit.util.CardFilter;
 import hermit.util.TextureLoader;
+import hermit.util.Wiz;
 import hermit.variables.DefaultCustomVariable;
 import hermit.variables.DefaultSecondMagicNumber;
 import javassist.CtClass;
@@ -83,6 +86,7 @@ public class HermitMod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         AddAudioSubscriber,
+        StartGameSubscriber,
         OnStartBattleSubscriber,
         OnPlayerTurnStartSubscriber,
         OnCardUseSubscriber,
@@ -335,7 +339,7 @@ public class HermitMod implements
         // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
         //BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
 
-        // Dead On card list addition.
+        initializeSavedData();
 
         // WIDE pots
 
@@ -344,6 +348,8 @@ public class HermitMod implements
             WidePotionsMod.whitelistSimplePotion(BlackBile.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(Eclipse.POTION_ID);
         }
+
+        // Dead On card list addition.
 
         deadList = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
@@ -607,6 +613,32 @@ public class HermitMod implements
         config.save();
     */
     }
+
+
+    public void receiveStartGame() {
+        if (!CardCrawlGame.loadingSave) {
+            CursedWeapon.BONUS = 0;
+        }
+    }
+
+    private void initializeSavedData() {
+        BaseMod.addSaveField("HermitCursedWeaponDamage", new CustomSavable<Integer>() {
+            @Override
+            public Integer onSave() {
+                return CursedWeapon.BONUS;
+            }
+
+            @Override
+            public void onLoad(Integer s) {
+                CursedWeapon.BONUS = s;
+
+                for(AbstractCard c : Wiz.p().masterDeck.group)
+                    if (c instanceof CursedWeapon)
+                        c.baseDamage += CursedWeapon.BONUS;
+            }
+        });
+    }
+
 
 
     public static void loadJokeCardImage(AbstractCard card, String img) {

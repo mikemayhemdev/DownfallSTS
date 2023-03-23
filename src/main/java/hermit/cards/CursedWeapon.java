@@ -1,7 +1,9 @@
 package hermit.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,6 +14,7 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 import hermit.util.IncreaseMiscActionHermit;
+import hermit.util.Wiz;
 
 import static hermit.HermitMod.*;
 
@@ -22,9 +25,6 @@ public class CursedWeapon extends AbstractDynamicCard {
     public static final String ID = HermitMod.makeID(CursedWeapon.class.getSimpleName());
     public static final String IMG = makeCardPath("cursed_weapon.png");
 
-    // /TEXT DECLARATION/
-
-
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
@@ -34,36 +34,52 @@ public class CursedWeapon extends AbstractDynamicCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
+    public static int BONUS = 0;
     private static final int COST = 0;
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 6;
 
     // /STAT DECLARATION/
 
     public CursedWeapon() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
-        magicNumber = this.baseMagicNumber = 4;
-        misc = this.baseDamage;
-        this.exhaust=true;
+        baseDamage = DAMAGE + BONUS;
+        magicNumber = this.baseMagicNumber = 2;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 1;
+        this.exhaust = true;
+        tags.add(CardTags.HEALING);
         loadJokeCardImage(this, "cursed_weapon.png");
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new LoseHPAction(p, p, this.magicNumber));
-        this.addToBot(new IncreaseMiscActionHermit(this.uuid, this.misc, 3));
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                        EnumPatch.HERMIT_GHOSTFIRE));
+        Wiz.atb(new LoseHPAction(p, p, magicNumber));
+        Wiz.atb(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), EnumPatch.HERMIT_GHOSTFIRE));
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                // Update all cursed weapons in exhaust pile.
+                for(AbstractCard c : Wiz.p().exhaustPile.group)
+                    if (c instanceof CursedWeapon)
+                        c.baseDamage += defaultSecondMagicNumber;
+
+                // Update all cursed weapons in deck.
+                for(AbstractCard c : Wiz.p().masterDeck.group)
+                    if (c instanceof CursedWeapon)
+                        c.baseDamage += defaultSecondMagicNumber;
+
+                // Update BONUS for future cursed weapons.
+                CursedWeapon.BONUS += defaultSecondMagicNumber;
+                isDone = true;
+            }
+        });
     }
 
-
-    public void applyPowers() {
-        this.baseDamage = this.misc;
-        super.applyPowers();
-        this.initializeDescription();
+    public void triggerOnCardPlayed(AbstractCard c) {
+        if (c instanceof CursedWeapon) {
+            baseDamage += ((CursedWeapon)c).defaultSecondMagicNumber;
+        }
     }
 
     //Upgraded stats.
@@ -71,7 +87,7 @@ public class CursedWeapon extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(-1);
+            upgradeDefaultSecondMagicNumber(1);
         }
     }
 }

@@ -226,7 +226,7 @@
   },
   "hermit:CursedWeapon": {
     "NAME": "Cursed Weapon",
-    "DESCRIPTION": "Lose !M! HP. NL Deal !D! damage. NL This card permanently gains 3 damage. NL Exhaust."
+    "DESCRIPTION": "Lose !M! HP. NL Deal !D! damage. NL *Cursed *Weapons permanently deal !hermit:SecondMagic! more damage. Exhaust."
   },
   "hermit:Enervate": {
     "NAME": "Enervate",

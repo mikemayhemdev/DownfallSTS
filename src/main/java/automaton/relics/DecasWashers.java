@@ -30,7 +30,7 @@ public class DecasWashers extends CustomRelic {
         this.grayscale = false;
     }
 
-    public void atTurnStart() {
+    public void atTurnStartPostDraw() {
         if (!this.grayscale) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
