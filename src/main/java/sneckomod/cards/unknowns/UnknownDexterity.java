@@ -22,6 +22,7 @@ public class UnknownDexterity extends AbstractUnknownCard {
 
     public UnknownDexterity() {
         super(ID, CardType.SKILL, CardRarity.UNCOMMON);
+        SneckoMod.loadJokeCardImage(this, "UnknownDexterity.png");
     }
 
     public boolean useCheck(AbstractCard card) {
