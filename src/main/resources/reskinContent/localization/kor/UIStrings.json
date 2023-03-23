@@ -51,11 +51,13 @@
   "reskinContent:ReSkinHexaghost": {
     "TEXT": [
       "육각이",
-      "유령형"
+      "유령형",
+      "Lampghost"
     ],
     "EXTRA_TEXT": [
       "첨탑의 저주받은 유령입니다. NL 첨탑의 수호자로서 영원한 운명에 봉인되어 있습니다.",
-      "쉬는 날 노란 링 쫓아다니길 좋아합니다. NL 파워 펠릿을 매우 무서워합니다."
+      "쉬는 날 노란 링 쫓아다니길 좋아합니다. NL 파워 펠릿을 매우 무서워합니다.",
+      "Hexaghost's old partner. NL Decided to stop slaying adventurers for a more stable job selling wishes."
     ]
   },
   "reskinContent:ReSkinSnecko": {

@@ -50,11 +50,13 @@
   "reskinContent:ReSkinHexaghost": {
     "TEXT": [
       "六子",
-      "愚人节"
+      "愚人节",
+      "灯魂"
     ],
     "EXTRA_TEXT": [
       "充满了冤魂的容器中也有不一样的个体。 NL 具现化使得力量更为强劲？",
-      "白袍加身， NL 苦痛面具。"
+      "白袍加身， NL 苦痛面具。",
+      "六火亡魂的老朋友。 NL 它决定停止伤害冒险者，转而寻求一份能更稳定地售卖愿望的职业。"
     ]
   },
   "reskinContent:ReSkinSnecko": {
