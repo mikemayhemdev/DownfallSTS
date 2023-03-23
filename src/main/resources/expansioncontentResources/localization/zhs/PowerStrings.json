@@ -27,8 +27,8 @@
   "expansioncontent:ChronoBoostPower": {
     "NAME": "时间加速",
     "DESCRIPTIONS": [
-      "每当你打出 #b",
-      " 张牌时，获得 #b",
+      "再打出 #b",
+      " 张牌后，获得 #b",
       " 点 #y力量 。"
     ]
   },
