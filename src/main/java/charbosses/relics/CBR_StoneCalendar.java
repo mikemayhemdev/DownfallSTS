@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.StoneCalendar;
+import downfall.downfallMod;
+import downfall.util.TextureLoader;
 
 public class CBR_StoneCalendar extends AbstractCharbossRelic {
     public static final String ID = "Darkstone Periapt";
@@ -25,12 +27,22 @@ public class CBR_StoneCalendar extends AbstractCharbossRelic {
     }
 
     @Override
-    public void atTurnStart() {
+    public void atTurnStartPostDraw() {
         ++this.counter;
-        if (this.counter == 6) {
+        if (this.counter == 7) {
+            this.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/RedStoneCalendar.png"));
             this.beginLongPulse();
         }
     }
+
+//    @Override
+//    public void atTurnStart() {
+//        ++this.counter;
+//        if (this.counter == 6) {
+//            this.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/RedStoneCalendar.png"));
+//            this.beginLongPulse();
+//        }
+//    }
 
     public void onPlayerEndTurn() {
         if (this.counter == 7) {
