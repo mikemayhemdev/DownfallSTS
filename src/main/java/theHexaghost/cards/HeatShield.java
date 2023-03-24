@@ -29,7 +29,7 @@ public class HeatShield extends AbstractHexaCard {
                 super.applyPowersToBlock();
                 this.magicNumber = this.baseMagicNumber = this.block;
                 for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                    if (mo.hasPower(BurnPower.POWER_ID))
+                    if (!mo.isDead && !mo.isDeadOrEscaped() &&  mo.hasPower(BurnPower.POWER_ID))
                         baseBlock += mo.getPower(BurnPower.POWER_ID).amount;
                 }
                 super.applyPowersToBlock();
@@ -55,7 +55,6 @@ public class HeatShield extends AbstractHexaCard {
             for (AbstractMonster m2 : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (!m2.isDeadOrEscaped() && m2.hasPower(BurnPower.POWER_ID)) {
                     atb(new RemoveSpecificPowerAction(m2, m2, m2.getPower(BurnPower.POWER_ID)));
-                    break;// 43
                 }
             }
     }
