@@ -1,0 +1,118 @@
+
+skeleton_2.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/shadow
+  rotate: false
+  xy: 1, 118
+  size: 140, 22
+  orig: 140, 22
+  offset: 0, 0
+  index: -1
+images/seg5c
+  rotate: false
+  xy: 1, 142
+  size: 38, 29
+  orig: 38, 29
+  offset: 0, 0
+  index: -1
+images/seg5
+  rotate: false
+  xy: 1, 223
+  size: 32, 26
+  orig: 32, 26
+  offset: 0, 0
+  index: -1
+images/seg4
+  rotate: false
+  xy: 1, 176
+  size: 48, 45
+  orig: 48, 45
+  offset: 0, 0
+  index: -1
+images/seg4c
+  rotate: false
+  xy: 51, 188
+  size: 37, 45
+  orig: 37, 45
+  offset: 0, 0
+  index: -1
+images/leftant
+  rotate: false
+  xy: 198, 112
+  size: 46, 54
+  orig: 46, 54
+  offset: 0, 0
+  index: -1
+images/seg3c
+  rotate: false
+  xy: 173, 68
+  size: 62, 42
+  orig: 62, 42
+  offset: 0, 0
+  index: -1
+images/seg3
+  rotate: false
+  xy: 198, 168
+  size: 49, 50
+  orig: 49, 50
+  offset: 0, 0
+  index: -1
+holster
+  rotate: false
+  xy: 112, 1
+  size: 73, 55
+  orig: 73, 55
+  offset: 0, 0
+  index: -1
+images/seg2c
+  rotate: false
+  xy: 143, 118
+  size: 53, 56
+  orig: 53, 56
+  offset: 0, 0
+  index: -1
+images/seg2
+  rotate: false
+  xy: 112, 58
+  size: 59, 58
+  orig: 59, 58
+  offset: 0, 0
+  index: -1
+images/seg1c
+  rotate: false
+  xy: 1, 74
+  size: 48, 35
+  orig: 48, 35
+  offset: 0, 0
+  index: -1
+images/seg1
+  rotate: false
+  xy: 51, 142
+  size: 44, 44
+  orig: 44, 44
+  offset: 0, 0
+  index: -1
+Hat
+  rotate: false
+  xy: 1, 1
+  size: 109, 71
+  orig: 109, 71
+  offset: 0, 0
+  index: -1
+images/rightant
+  rotate: false
+  xy: 187, 1
+  size: 56, 65
+  orig: 56, 65
+  offset: 0, 0
+  index: -1
+images/antc
+  rotate: false
+  xy: 97, 142
+  size: 34, 53
+  orig: 34, 53
+  offset: 0, 0
+  index: -1

@@ -1,5 +1,6 @@
 package charbosses.bosses.Hermit.NewAge;
 
+import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.colorless.EnMadness;
@@ -18,6 +19,7 @@ import com.megacrit.cardcrawl.monsters.exordium.LouseNormal;
 import com.megacrit.cardcrawl.powers.CurlUpPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
@@ -39,6 +41,14 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitConcentrationPower(p), damageThreshold));
 
         AbstractMonster tangerine = new LouseNormal(-400F, 0);
+        try {
+            Method loadAnimationMethod = AbstractCreature.class.getDeclaredMethod("loadAnimation", new Class[] { String.class, String.class, float.class });
+            loadAnimationMethod.setAccessible(true);
+            loadAnimationMethod.invoke(tangerine, new Object[] { "expansioncontentResources/images/bosses/hermit/1/tangerine/skeleton_2.atlas", "expansioncontentResources/images/bosses/hermit/1/tangerine/skeleton_2.json", 1.0F });
+            tangerine.state.setAnimation(0, "idle", true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         //tangerine.name = //Localized Name //TODO Give this louse a name.
         tangerine.maxHealth += 24;
         tangerine.currentHealth += 24;
