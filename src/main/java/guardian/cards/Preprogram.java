@@ -96,7 +96,7 @@ public class Preprogram extends AbstractGuardianCard {
     @Override //zhs card text thing
     public void initializeDescriptionCN() {
         super.initializeDescriptionCN();
-        if(Settings.language == Settings.GameLanguage.ZHS) {
+        if(Settings.language == Settings.GameLanguage.ZHS && this.description!=null && this.description.size()>=1 ) {
             StringBuilder first_line = new StringBuilder();
             this.description.get(0).text = first_line.append(this.description.get(0).text).append("，").toString();
             this.description.remove(1);
