@@ -46,7 +46,7 @@
     "NAME": "Plaque cabossée",
     "FLAVOR": "Plusieures balles sont restées logées à l'intérieur.",
     "DESCRIPTIONS": [
-      "Lorsque vous êtes à 50% ou moins de vos PV maximum, gagnez [E] et piochez #b1 carte au début de votre tour."
+      "Lorsque vous êtes à #b50% ou moins de vos PV maximum, gagnez [E] et piochez #b1 carte au début de votre tour."
     ]
   },
   "hermit:PetGhost": {
