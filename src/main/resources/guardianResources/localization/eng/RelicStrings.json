@@ -59,7 +59,7 @@
     "NAME": "Wander Bots",
     "FLAVOR": "These drones find the most wonderful salvage, but require processing power to maintain.",
     "DESCRIPTIONS": [
-      "At the start of each combat, lose #b1 Stasis slot. NL Gain [E] at the start of your turn."
+      "At the start of each combat, lose #b1 #yStasis slot. NL Gain [E] at the start of your turn."
     ]
   },
   "Guardian:StasisUpgradeRelic": {

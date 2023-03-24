@@ -17,7 +17,7 @@
     "NAME": "Army in a Bottle",
     "DESCRIPTIONS": [
       "Spawn #b",
-      " random Slimes (Normal or Specialist)."
+      " random #ySlimes (Normal or #ySpecialist )."
     ]
   },
   "Slimebound:ThreeZeroPotion": {
