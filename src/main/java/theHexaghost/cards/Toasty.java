@@ -18,7 +18,7 @@ public class Toasty extends AbstractHexaCard {
     private static final int UPG_DAMAGE = 4;
 
     public Toasty() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         HexaMod.loadJokeCardImage(this, "Toasty.png");
     }
