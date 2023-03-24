@@ -10,7 +10,7 @@
     "NAME": "Tige de seigle",
     "FLAVOR": "Toujours en parfait état, malgré le fait qu'il ait été mâchouillé pendant si longtemps.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, TOUS les ennemis perdent #b2 de Force."
+      "Au début de chaque combat, TOUS les ennemis perdent #b2 de #yForce."
     ]
   },
   "hermit:BartenderGlass": {
