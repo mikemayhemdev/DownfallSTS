@@ -18,7 +18,7 @@ public class EnSprayNPray extends AbstractHermitBossCard {
 
     public EnSprayNPray() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/spray_and_pray.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 3;
+        this.baseDamage = 4;
         isMultiDamage = true;
         baseMagicNumber = magicNumber = 3;
     }
