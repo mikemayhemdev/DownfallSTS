@@ -15,7 +15,7 @@ public class Incineration extends AbstractHexaCard {
     public final static String ID = makeID("Incineration");
 
     public Incineration() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 4;
         baseBurn = burn = 4;
         baseMagicNumber = magicNumber = 3;
