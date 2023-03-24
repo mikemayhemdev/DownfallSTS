@@ -10,9 +10,11 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -59,6 +61,15 @@ public class AutomatonChar extends CustomPlayer {
 
         this.reloadAnimation();
 
+    }
+
+    public void damage(DamageInfo info) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0 && CharacterSelectScreenPatches.characters[5].reskinCount == 2) {
+            this.state.setAnimation(0, "Hit", false);
+            this.state.addAnimation(0, "idle", true, 0.0F);
+        }
+
+        super.damage(info);
     }
 
     public void reloadAnimation() {
