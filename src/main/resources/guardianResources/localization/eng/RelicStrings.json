@@ -59,14 +59,14 @@
     "NAME": "Wander Bots",
     "FLAVOR": "These drones find the most wonderful salvage, but require processing power to maintain.",
     "DESCRIPTIONS": [
-      "At the start of each combat, lose #b1 Stasis slot. NL Gain [E] at the start of your turn."
+      "At the start of each combat, lose #b1 #yguardianmod:Stasis slot. NL Gain [E] at the start of your turn."
     ]
   },
   "Guardian:StasisUpgradeRelic": {
     "NAME": "Cryo Chamber",
     "FLAVOR": "Things always seem better coming out than they did going in.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain #b1 Stasis slot. Whenever a card enters #yguardianmod:Stasis, #yUpgrade it."
+      "At the start of each combat, gain #b1 #yguardianmod:Stasis slot. Whenever a card enters #yguardianmod:Stasis, #yUpgrade it."
     ]
   },
   "Guardian:BottledStasis": {

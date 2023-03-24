@@ -33,6 +33,7 @@ public class DefensiveModePotion extends CustomPotion {
 
 
     public void initializeData() {
+        this.potency = getPotency(0);
         this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
