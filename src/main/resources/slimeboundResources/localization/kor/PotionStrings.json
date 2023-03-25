@@ -16,7 +16,7 @@
   "Slimebound:SpawnSlimePotion": {
     "NAME": "병 속의 군단",
     "DESCRIPTIONS": [
-      "전문가를 포함한 무작위 슬라임을 #b",
+      "#y전문가를 포함한 무작위 슬라임을 #b",
       " 마리 생성합니다."
     ]
   },
