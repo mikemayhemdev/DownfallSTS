@@ -448,21 +448,21 @@
     "NAME": "심장의 축복받은 루비",
     "FLAVOR": "심장이 강해졌습니다. 심장은 기뻐할 것입니다.",
     "DESCRIPTIONS": [
-      "매 전투 시작 시 #y힘을 #b1 얻습니다."
+      "보스와 전투 동안 매 전투 시작 시 #y힘을 #b1 얻습니다."
     ]
   },
   "downfall:HeartBlessingBlue": {
     "NAME": "심장의 축복받은 사파이어",
     "FLAVOR": "심장이 기뻐할 것입니다.",
     "DESCRIPTIONS": [
-      "획득 시 최대 체력이 #b10 증가합니다."
+      "보스와 전투 동안 획득 시 최대 체력이 #b10 증가합니다."
     ]
   },
   "downfall:HeartBlessingGreen": {
     "NAME": "심장의 축복받은 에메랄드",
     "FLAVOR": "심장은 모든 것입니다.",
     "DESCRIPTIONS": [
-      "매 전투 시작 시 #y민첩을 #b1 얻습니다."
+      "보스와 전투 동안 매 전투 시작 시 #y민첩을 #b1 얻습니다."
     ]
   },
   "downfall:TeleportStone": {
