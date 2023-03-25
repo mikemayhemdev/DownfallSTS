@@ -94,9 +94,9 @@ public class DissolveAction extends AbstractGameAction {
 
     public void dissolveEffect(AbstractCard c2) {
         int cards;
-        if (c2.costForTurn == -2) {
+        if (c2.costForTurn == -1) {
             cards = EnergyPanel.getCurrentEnergy();
-        } else if (c2.costForTurn == -1 || c2.freeToPlayOnce) {
+        } else if (c2.costForTurn == -2 || c2.freeToPlayOnce) {
             cards = 0;
         } else {
             cards = c2.costForTurn;

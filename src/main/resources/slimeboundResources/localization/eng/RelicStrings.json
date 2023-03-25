@@ -79,7 +79,7 @@
     "NAME": "Jeremiah's Banner",
     "FLAVOR": "You and ooze army.",
     "DESCRIPTIONS": [
-      "At the start of combat, gain #b1 Slime slot and #yslimeboundmod:Split into a random #ySlime."
+      "At the start of combat, gain #b1 Slime slot and #yslimeboundmod:Split into a random Slime."
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {

@@ -23,7 +23,7 @@
   "Guardian:StasisDiscoveryPotion": {
     "NAME": "Quantum Elixir",
     "DESCRIPTIONS": [
-      "Gain #yStasis slots until you have #b",
+      "Gain Stasis slots until you have #b",
       ". NL Repeat #b",
       " times: choose #b1 of #b3 cards to place into #yStasis."
     ]
