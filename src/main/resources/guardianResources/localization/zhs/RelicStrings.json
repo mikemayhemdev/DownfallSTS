@@ -66,7 +66,7 @@
     "NAME": "低温瓶",
     "FLAVOR": "出来的东西总是比进去的好。",
     "DESCRIPTIONS": [
-      "战斗开始时，获得 #b1 个 #yguardianmod:凝滞 栏位。当牌被 #yguardianmod:凝滞 时， #y升级 这张牌。"
+      "战斗开始时，获得 #b1 个 #yguardianmod:凝滞 栏位。 #yguardianmod:凝滞 一张牌时，将其 #y升级 。"
     ]
   },
   "Guardian:BottledStasis": {
