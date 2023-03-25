@@ -455,7 +455,7 @@
     "NAME": "Bénédiction de Saphir du Cœur",
     "FLAVOR": "Le Cœur est satisfait.",
     "DESCRIPTIONS": [
-      "Durant les combats de Boss, augmentez vos PV Max de #b10."
+      "Durant les combats de Boss, augmentez vos PV Temporaires de #b10."
     ]
   },
   "downfall:HeartBlessingGreen": {
