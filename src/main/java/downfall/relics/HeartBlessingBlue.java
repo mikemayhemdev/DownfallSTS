@@ -1,12 +1,10 @@
 package downfall.relics;
 
 import basemod.abstracts.CustomRelic;
-import charbosses.bosses.AbstractCharBoss;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 
 public class HeartBlessingBlue extends CustomRelic {
@@ -24,8 +22,11 @@ public class HeartBlessingBlue extends CustomRelic {
         return DESCRIPTIONS[0];
     }
 
-    public void onEquip() {
-        AbstractDungeon.player.increaseMaxHp(10, true);
+    @Override
+    public void atBattleStart() {
+        if (AbstractDungeon.getCurrRoom().monsters.monsters.stream().anyMatch(q -> q.type == AbstractMonster.EnemyType.BOSS)) {
+            flash();
+            addToBot(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, 10));
+        }
     }
-
 }
