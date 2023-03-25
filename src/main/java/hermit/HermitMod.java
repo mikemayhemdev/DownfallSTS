@@ -448,7 +448,8 @@ public class HermitMod implements
 
         try {
             autoAddCards();
-        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException |
+                 ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
 
@@ -630,15 +631,16 @@ public class HermitMod implements
 
             @Override
             public void onLoad(Integer s) {
-                CursedWeapon.BONUS = s;
+                if (s != null) {
+                    CursedWeapon.BONUS = s;
 
-                for(AbstractCard c : Wiz.p().masterDeck.group)
-                    if (c instanceof CursedWeapon)
-                        c.baseDamage += CursedWeapon.BONUS;
+                    for (AbstractCard c : Wiz.p().masterDeck.group)
+                        if (c instanceof CursedWeapon)
+                            c.baseDamage += CursedWeapon.BONUS;
+                }
             }
         });
     }
-
 
 
     public static void loadJokeCardImage(AbstractCard card, String img) {
@@ -655,7 +657,7 @@ public class HermitMod implements
     }
 
 
-    // ================ /LOAD THE KEYWORDS/ ===================    
+    // ================ /LOAD THE KEYWORDS/ ===================
 
     // this adds "ModName:" before the ID of any card/relic/power etc.
     // in order to avoid conflicts if any other mod uses the same ID.
