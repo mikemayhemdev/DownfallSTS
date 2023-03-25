@@ -94,7 +94,7 @@ public class MainMenuAdPatch {
 
         private Color tint = new Color(1, 1, 1, 0);
         private Color btnTint = new Color(1, 1, 1, 0);
-        private float xPos = Settings.WIDTH * 0.66F;
+        private float xPos = Settings.WIDTH * 0.75F;
         private float yPos = Settings.HEIGHT / 2F;
         private float angle = 0.0f;
         private float scale = 0.5f;
