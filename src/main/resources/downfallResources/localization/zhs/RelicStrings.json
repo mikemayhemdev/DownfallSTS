@@ -448,21 +448,21 @@
     "NAME": "红宝石心脏的祝福",
     "FLAVOR": "腐化之心很强大。它很欣慰。",
     "DESCRIPTIONS": [
-      "在Boss战中，战斗开始时，获得 #b1 点 #y力量 。"
+      "首领战斗开始时，获得 #b1 点 #y力量 。"
     ]
   },
   "downfall:HeartBlessingBlue": {
     "NAME": "蓝宝石心脏的祝福",
     "FLAVOR": "心脏很欣慰。",
     "DESCRIPTIONS": [
-      "在Boss战中，拾起时，获得 #b10 点最大生命值。"
+      "首领战斗开始时，获得 #b10 层 #y临时生命 。"
     ]
   },
   "downfall:HeartBlessingGreen": {
     "NAME": "绿宝石心脏的祝福",
     "FLAVOR": "心脏就是一切。",
     "DESCRIPTIONS": [
-      "在Boss战中，战斗开始时，获得 #b1 点 #y敏捷 。"
+      "首领战斗开始时，获得 #b1 点 #y敏捷 。"
     ]
   },
   "downfall:TeleportStone": {
