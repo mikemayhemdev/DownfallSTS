@@ -3,6 +3,7 @@ package hermit.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -50,19 +51,26 @@ public class Malice extends AbstractHermitCard {
         baseDamage = DAMAGE;
         loadJokeCardImage(this, "malice.png");
     }
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {
+        Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {}, list -> {
+            boolean isCurse = false;
+
             for (AbstractCard c : list)
             {
+                Wiz.p().hand.addToTop(c);
+                Wiz.att(new ExhaustSpecificCardAction(c,Wiz.p().hand,true));
                 if (c.color == CardColor.CURSE)
-                    Wiz.att(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.baseDamage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
-                else
-                    Wiz.att(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+                    isCurse = true;
             }
-        }, null, uiStrings.TEXT[0],false,false,false,false));
+            list.clear();
+
+            if (isCurse)
+                Wiz.att(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.baseDamage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
+            else
+                Wiz.att(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+
+        }, uiStrings.TEXT[0],false,false,false,true));
     }
 
     // Upgraded stats.
