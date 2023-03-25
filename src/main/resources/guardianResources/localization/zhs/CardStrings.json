@@ -408,7 +408,7 @@
     "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 触发 *双斩 中的 *宝石 效果。 NL 消耗 。"
   },
   "Guardian:StrikeForStrike": {
-    "NAME": "以击应击",
+    "NAME": "应击打击",
     "DESCRIPTION": "造成 !D! 点伤害， NL 目标以 !M! 点伤害攻击你。"
   },
   "Guardian:GearUp": {
