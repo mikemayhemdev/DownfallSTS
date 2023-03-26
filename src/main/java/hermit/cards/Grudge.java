@@ -51,21 +51,36 @@ public class Grudge extends AbstractDynamicCard {
         this.addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, EnumPatch.HERMIT_GHOSTFIRE, true));
     }
 
-    public void applyPowers() {
-        int counter=0;
-        int bas = baseDamage;
+    @Override
+    public void calculateCardDamage(AbstractMonster mo)
+    {
+        int counter = 0;
+        int realBaseDamage = baseDamage;
 
-        counter+=countCursesinGroup(AbstractDungeon.player.drawPile);
-        counter+=countCursesinGroup(AbstractDungeon.player.discardPile);
-        counter+=countCursesinGroup(AbstractDungeon.player.hand);
-        this.baseDamage += counter*magicNumber;
+        counter += countCursesinGroup(AbstractDungeon.player.drawPile);
+        counter += countCursesinGroup(AbstractDungeon.player.discardPile);
+        counter += countCursesinGroup(AbstractDungeon.player.hand);
+        baseDamage += counter*magicNumber;
+
+        super.calculateCardDamage(mo);
+
+        baseDamage = realBaseDamage;
+        isDamageModified = damage != baseDamage;
+    }
+
+    public void applyPowers() {
+        int counter = 0;
+        int realBaseDamage = baseDamage;
+
+        counter += countCursesinGroup(AbstractDungeon.player.drawPile);
+        counter += countCursesinGroup(AbstractDungeon.player.discardPile);
+        counter += countCursesinGroup(AbstractDungeon.player.hand);
+        baseDamage += counter*magicNumber;
 
         super.applyPowers();
 
-        isDamageModified = baseDamage == bas;
-        baseDamage = bas;
-
-        this.initializeDescription();
+        baseDamage = realBaseDamage;
+        isDamageModified = damage != baseDamage;
     }
 
     //Upgraded stats.
