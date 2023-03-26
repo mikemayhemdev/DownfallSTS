@@ -1,7 +1,6 @@
 package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,10 +9,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
-import hermit.util.IncreaseMiscActionHermit;
 import hermit.util.Wiz;
 
 import static hermit.HermitMod.*;
@@ -55,22 +54,35 @@ public class CursedWeapon extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.atb(new LoseHPAction(p, p, magicNumber));
-        Wiz.atb(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), EnumPatch.HERMIT_GHOSTFIRE));
-        Wiz.atb(new AbstractGameAction() {
+        Wiz.atb(new AbstractGameAction(){
             @Override
-            public void update() {
-                // Update all cursed weapons in exhaust pile.
-                for(AbstractCard c : Wiz.p().exhaustPile.group)
-                    if (c instanceof CursedWeapon)
-                        c.baseDamage += defaultSecondMagicNumber;
+            public void update()
+            {
+                actionType = ActionType.DAMAGE;
+                DamageInfo info = new DamageInfo(p, damage, damageTypeForTurn);
+                setValues(m, info);
 
-                // Update all cursed weapons in deck.
-                for(AbstractCard c : Wiz.p().masterDeck.group)
-                    if (c instanceof CursedWeapon)
-                        c.baseDamage += defaultSecondMagicNumber;
+                if (target != null) {
+                    AbstractDungeon.effectList.add(new FlashAtkImgEffect(target.hb.cX, target.hb.cY, EnumPatch.HERMIT_GHOSTFIRE));
+                    target.damage(info);
 
-                // Update BONUS for future cursed weapons.
-                CursedWeapon.BONUS += defaultSecondMagicNumber;
+                    for(AbstractCard c : Wiz.p().exhaustPile.group)
+                        if (c instanceof CursedWeapon)
+                            c.baseDamage += defaultSecondMagicNumber;
+
+                    // Update all cursed weapons in deck.
+                    for(AbstractCard c : Wiz.p().masterDeck.group)
+                        if (c instanceof CursedWeapon)
+                            c.baseDamage += defaultSecondMagicNumber;
+
+                    // Update BONUS for future cursed weapons.
+                    CursedWeapon.BONUS += defaultSecondMagicNumber;
+
+                    if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+                        AbstractDungeon.actionManager.clearPostCombatActions();
+                    }
+                }
+
                 isDone = true;
             }
         });
