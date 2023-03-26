@@ -37,6 +37,8 @@ public class Colosseum_Evil extends AbstractImageEvent {
         this.imageEventText.setDialogOption(OPTIONS[4]);
     }
 
+    private boolean startFight = false;
+
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case PRE:
@@ -60,6 +62,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.UNCOMMON);
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                        startFight = true;
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         AbstractDungeon.lastCombatMetricKey = "Colosseum Nobs";
@@ -108,7 +111,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.RARE);
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.UNCOMMON);
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
-                        AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                        startFight = true;
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         return;
@@ -125,7 +128,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
             case FIGHT:
                 switch (buttonPressed) {
                     case 0:
-                        if (AbstractDungeon.getCurrRoom().eliteTrigger) {
+                        if (startFight) {
                             this.enterCombatFromImage();
                             break;
                         } else {
