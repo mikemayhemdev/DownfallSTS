@@ -26,6 +26,7 @@ public class FastForward extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("FastForward.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

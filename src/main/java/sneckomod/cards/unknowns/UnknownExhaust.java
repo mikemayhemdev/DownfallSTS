@@ -16,6 +16,7 @@ public class UnknownExhaust extends AbstractUnknownCard {
 
     public UnknownExhaust() {
         super(ID, CardType.SKILL, CardRarity.UNCOMMON);
+        SneckoMod.loadJokeCardImage(this, "UnknownExhaust.png");
     }
 
 

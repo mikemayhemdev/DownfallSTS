@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 import static champ.ChampMod.fatigue;
 
 public class EnchantShield extends AbstractChampCard {
@@ -21,6 +23,7 @@ public class EnchantShield extends AbstractChampCard {
       //  myHpLossCost = 5;
         magicNumber = baseMagicNumber = 8;
         postInit();
+        loadJokeCardImage(this, "EnchantShield.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
