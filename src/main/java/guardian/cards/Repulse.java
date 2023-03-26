@@ -12,6 +12,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.ExhaustStatusesPower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class Repulse extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Repulse");
     public static final String NAME;
@@ -45,6 +47,7 @@ public class Repulse extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Repulse.png"));
 
     }
 

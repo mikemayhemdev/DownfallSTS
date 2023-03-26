@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 import static champ.ChampMod.fatigue;
 
 public class EnchantCrown extends AbstractChampCard {
@@ -20,6 +22,7 @@ public class EnchantCrown extends AbstractChampCard {
         //    tags.add(ChampMod.FINISHER);
         exhaust = true;
         postInit();
+        loadJokeCardImage(this, "EnchantCrown.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

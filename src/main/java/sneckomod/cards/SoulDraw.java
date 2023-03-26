@@ -17,6 +17,7 @@ public class SoulDraw extends AbstractSneckoCard {
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
         tags.add(SneckoMod.SNEKPROOF);
+        SneckoMod.loadJokeCardImage(this, "SoulDraw.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.powers.MetallicizePower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class Metallicize extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Metallicize");
     private static final CardStrings cardStrings;
@@ -18,6 +20,7 @@ public class Metallicize extends AbstractGuardianCard {
     public Metallicize() {
         super(ID, cardStrings.NAME, GuardianMod.getResourcePath("cards/Metallicize.png"), 1, cardStrings.DESCRIPTION, CardType.POWER, AbstractCardEnum.GUARDIAN, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = magicNumber = 3;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Metallicize.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
