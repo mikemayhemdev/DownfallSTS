@@ -18,7 +18,7 @@ public class UnlimitedPower extends AbstractHexaCard {
 
 
     public UnlimitedPower() {
-        super(ID, 5, CardType.SKILL, CardRarity.RARE, CardTarget.ALL);
+        super(ID, 4, CardType.SKILL, CardRarity.RARE, CardTarget.ALL);
         exhaust = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
@@ -35,7 +35,7 @@ public class UnlimitedPower extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(4);
+            upgradeBaseCost(3);
         }
     }
 }
