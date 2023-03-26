@@ -21,7 +21,7 @@ import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makePowerPath;
 
-public class Bruise extends AbstractPower implements CloneablePowerInterface, HealthBarRenderPower {
+public class Bruise extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
     public static final String POWER_ID = HermitMod.makeID("Bruise");
@@ -85,21 +85,6 @@ public class Bruise extends AbstractPower implements CloneablePowerInterface, He
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-    }
-
-    @Override
-    public int getHealthBarAmount(){
-        if (AbstractDungeon.player.hasRelic(RyeStalk.ID)) {
-            return this.amount;
-        }
-        else
-            return 0;
-    }
-
-    @Override
-    public Color getColor()
-    {
-        return Color.CYAN;
     }
 
     @Override
