@@ -212,7 +212,7 @@
   },
   "Guardian:StasisStrike": {
     "NAME": "Frappe statique",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez 1 Emplacement de guardianmod:Stase. NL Quand cette carte quitte sa Stase, augmentez ses dégâts de !M! et remettez son coût à 1."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez 1 Emplacement de guardianmod:Stase."
   },
   "Guardian:FuturePlans": {
     "NAME": "Plans futurs",
@@ -277,7 +277,7 @@
   },
   "Guardian:TemporalShield": {
     "NAME": "Bouclier temporel",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL guardianmod:Accélerez."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL guardianmod:Accélérez."
   },
   "Guardian:ExploitGems": {
     "NAME": "Exploitation de gemmes",
