@@ -35,7 +35,7 @@ public class UnlimitedPower extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(4);
+            upgradeBaseCost(3);
         }
     }
 }
