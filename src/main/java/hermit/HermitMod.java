@@ -631,16 +631,19 @@ public class HermitMod implements
 
             @Override
             public void onLoad(Integer s) {
+                // Reduce cursed weapons to baseline.
+                for (AbstractCard c : Wiz.p().masterDeck.group)
+                    if (c instanceof CursedWeapon)
+                        c.baseDamage -= CursedWeapon.BONUS;
+
                 if (s != null) {
-                    // Only do this if BONUS hasn't already been modified.
-                    // This way it won't apply it again if it's already set in current session.
-                    if (CursedWeapon.BONUS == 0) {
+                        // Override Bonus.
                         CursedWeapon.BONUS = s;
 
+                        // Apply it.
                         for (AbstractCard c : Wiz.p().masterDeck.group)
                             if (c instanceof CursedWeapon)
                                 c.baseDamage += CursedWeapon.BONUS;
-                    }
                 }
             }
         });
