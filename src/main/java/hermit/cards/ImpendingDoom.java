@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
-import hermit.powers.Concentration;
 import hermit.powers.SnipePower;
+import hermit.util.Wiz;
 
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -38,7 +38,6 @@ public class ImpendingDoom extends AbstractDynamicCard {
     private static final int COST = -2;
 
     private static final int DAMAGE = 13;
-    private static final int UPGRADE_PLUS_DMG = 1;
 
     // /STAT DECLARATION/
 
@@ -53,12 +52,17 @@ public class ImpendingDoom extends AbstractDynamicCard {
         if (this.dontTriggerOnUseCard) {
             int DeadOnTimes = DeadOnAmount();
 
+            trig_deadon = true;
+            onDeadOn();
+
+            CardCrawlGame.sound.playA("BELL", -0.5f);
+
             for (int a = 0; a < DeadOnTimes; a++) {
-                this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 13, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-                this.addToBot(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(13, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+                Wiz.atb(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 13, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                Wiz.atb(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(13, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
             }
 
-            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
+            Wiz.att(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
 
     }
@@ -67,9 +71,7 @@ public class ImpendingDoom extends AbstractDynamicCard {
         this.dontTriggerOnUseCard = false;
 
         if (isDeadOnPos()) {
-            onDeadOn();
-            AbstractDungeon.player.powers.removeIf(pow -> pow.ID == Concentration.POWER_ID);
-            this.dontTriggerOnUseCard = true;
+            dontTriggerOnUseCard = true;
             AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
         }
 
