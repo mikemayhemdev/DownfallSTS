@@ -208,7 +208,7 @@
   },
   "Guardian:StasisField": {
     "NAME": "정지장 방어막",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL guardianmod:정지장에 넣습니다. NL 이 카드가 guardianmod:정지장에서 벗어날 때 방어도를 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL guardianmod:정지장에 넣습니다. NL 이 카드가 guardianmod:정지장에서 벗어날 때 방어도를 !B! 얻습니다."
   },
   "Guardian:StasisStrike": {
     "NAME": "정지장 타격",
