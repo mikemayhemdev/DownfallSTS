@@ -26,7 +26,7 @@ public class GearUp extends AbstractGuardianCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new BraceAction(10));
+        addToBot(new BraceAction(magicNumber));
         this.useGems(p, m);
     }
 
