@@ -306,8 +306,7 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Roue de la Fortune",
     "DESCRIPTIONS": [
-      "Lorsque vous attaquez l'Ermite, sa carte la plus à gauche est défaussée et il pioche une carte. Tous les #b",
-      " fois que cela se passe, l'Ermite gagne #b1 de #yForce."
+      "Lorsque vous attaquez l'Ermite, sa carte la plus à gauche est défaussée et il pioche une carte."
     ]
   },
   "downfall:HermitDoomsday": {

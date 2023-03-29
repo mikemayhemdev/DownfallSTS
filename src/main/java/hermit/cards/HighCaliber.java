@@ -1,5 +1,6 @@
 package hermit.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
+import hermit.util.Wiz;
 
 import static hermit.HermitMod.*;
 
@@ -21,6 +23,7 @@ public class HighCaliber extends AbstractDynamicCard {
 
     public static final String ID = HermitMod.makeID(HighCaliber.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final CardStrings strikeStrings = CardCrawlGame.languagePack.getCardStrings(Strike_Hermit.ID);
 
     public static final String IMG = makeCardPath("high_caliber.png");
 
@@ -36,7 +39,7 @@ public class HighCaliber extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 3;
 
     // /STAT DECLARATION/
@@ -45,25 +48,69 @@ public class HighCaliber extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseDamage = DAMAGE;
-        this.cardsToPreview = new Strike_Hermit();
-        this.exhaust = true;
+        cardsToPreview = new Strike_Hermit();
+
+        cardsToPreview.baseDamage += 6;
+        cardsToPreview.upgradedDamage = true;
+        cardsToPreview.upgraded = true;
+
+        cardsToPreview.name = strikeStrings.NAME + "+" + 2;
+
+        cardsToPreview.initializeDescription();
+
+        exhaust = true;
         loadJokeCardImage(this, "heavy_caliber.png");
+    }
+
+    @Override
+    public void applyPowers() {
+        int num = 2;
+        cardsToPreview.baseDamage = 6;
+
+        if (upgraded)
+            num++;
+
+        for(int a=0;a<num;a++)
+        {
+            cardsToPreview.baseDamage += 3;
+            cardsToPreview.upgradedDamage = true;
+            cardsToPreview.upgraded = true;
+
+            cardsToPreview.name = strikeStrings.NAME + "+" + num;
+        }
+
+        cardsToPreview.initializeDescription();
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        Wiz.atb(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), EnumPatch.HERMIT_GUN));
+        Wiz.atb(new AbstractGameAction(){
+            @Override
+            public void update()
+            {
+                AbstractCard s = (new Strike_Hermit()).makeCopy();
 
-        if (this.upgraded) {
-            AbstractCard s = (new Strike_Hermit()).makeCopy();
-            s.upgrade();
-            this.addToTop(new MakeTempCardInHandAction(s, 1));
-        } else {
-            this.addToTop(new MakeTempCardInHandAction(new Strike_Hermit(), 1));
-        }
+                int num = 2;
+                s.baseDamage = 6;
 
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), EnumPatch.HERMIT_GUN));
+                if (upgraded)
+                    num++;
+
+                for(int a=0;a<num;a++)
+                {
+                    s.baseDamage += 3;
+                    s.upgradedDamage = true;
+                    s.upgraded = true;
+
+                    s.name = strikeStrings.NAME + "+" + num;
+                }
+                Wiz.att(new MakeTempCardInHandAction(s, 1));
+
+                isDone = true;
+            }
+        });
     }
 
     // Upgraded stats.
@@ -73,7 +120,9 @@ public class HighCaliber extends AbstractDynamicCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             rawDescription = UPGRADE_DESCRIPTION;
-            this.cardsToPreview.upgrade();
+            cardsToPreview.baseDamage += 3;
+            cardsToPreview.name = strikeStrings.NAME + "+" + 3;
+            cardsToPreview.initializeDescription();
             initializeDescription();
         }
     }

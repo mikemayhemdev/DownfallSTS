@@ -34,8 +34,8 @@
   },
   "hermit:HighCaliber": {
     "NAME": "Gros calibre",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une *Frappe dans votre défausse. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une *Frappe+ dans votre défausse. NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une *Frappe+2　 dans votre défausse. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une *Frappe+3　 dans votre défausse. NL Épuisement."
   },
   "hermit:BodyArmor": {
     "NAME": "Gilet pare-balles",
