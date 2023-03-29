@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
+import hermit.powers.Concentration;
 import hermit.powers.SnipePower;
 import hermit.util.Wiz;
 
@@ -69,6 +70,8 @@ public class ImpendingDoom extends AbstractDynamicCard {
 
     public void triggerOnEndOfTurnForPlayingCard() {
         this.dontTriggerOnUseCard = false;
+
+        AbstractDungeon.player.powers.removeIf(pow -> pow.ID == Concentration.POWER_ID);
 
         if (isDeadOnPos()) {
             dontTriggerOnUseCard = true;
