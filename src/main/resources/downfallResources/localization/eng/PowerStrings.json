@@ -334,7 +334,7 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Wheel of Fortune",
     "DESCRIPTIONS": [
-      "Fixed card costs. Whenever you play an #yAttack, Hermit discards his leftmost card and draws #b1 card."
+      "Hermit's card cost can't change. Whenever you play an #yAttack, Hermit discards his leftmost card and draws #b1 card."
     ]
   },
   "downfall:HermitDoomsday": {
