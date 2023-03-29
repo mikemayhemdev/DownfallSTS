@@ -53,7 +53,7 @@
     "NAME": "火种",
     "FLAVOR": "火使一切更美好。",
     "DESCRIPTIONS": [
-      "战斗开始时获得 #b1 点 #yhexamod:热烈 。"
+      "战斗开始时，获得 #b1 点 #yhexamod:热烈 。"
     ]
   },
   "hexamod:SoulOfChaos": {
