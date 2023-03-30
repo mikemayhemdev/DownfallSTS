@@ -1,22 +1,13 @@
 package hermit.cards;
 
 import basemod.abstracts.CustomCard;
-import basemod.interfaces.OnCardUseSubscriber;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Hologram;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import hermit.HermitMod;
 import hermit.actions.ComboAction;
 import hermit.patches.EndOfTurnPatch;
 import hermit.patches.VigorPatch;
@@ -149,9 +140,11 @@ public abstract class AbstractHermitCard extends CustomCard {
                 }
             }
 
-            if (deadOnThisTurn.size() > 0)
-                AbstractHermitCard.deadOnThisTurn.set(deadOnThisTurn.size() - 1,true);
-            EndOfTurnPatch.deadon_counter++;
+            if (!dontTriggerOnUseCard) {
+                if (deadOnThisTurn.size() > 0)
+                    AbstractHermitCard.deadOnThisTurn.set(deadOnThisTurn.size() - 1, true);
+                EndOfTurnPatch.deadon_counter++;
+            }
         }
 
         if (AbstractDungeon.player.hasPower(ComboPower.POWER_ID)) {

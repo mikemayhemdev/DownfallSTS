@@ -7,6 +7,7 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnGoodInstincts;
 import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
 import charbosses.cards.colorless.EnPanacea;
+import charbosses.cards.colorless.EnSwiftStrike;
 import charbosses.cards.curses.EnNecronomicurse;
 import charbosses.cards.hermit.*;
 import charbosses.powers.bossmechanicpowers.HermitWheelOfFortune;
@@ -56,13 +57,13 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
 
         addCardToDeck(new EnDesperado(), extraUpgrades);
         addCardToDeck(new EnStrikeHermit(), true);
-        addCardToDeck(new EnFlashPowder(), true);
+        addCardToDeck(new EnFlashPowder(), false);
 
-        addCardToDeck(new EnWideOpen(), extraUpgrades);
-        addCardToDeck(new EnMaintenance(), true);
+        addCardToDeck(new EnWideOpen(), false);
+        addCardToDeck(new EnMaintenance(), extraUpgrades);
         addCardToDeck(new EnGoodInstincts(), false);
 
-        addCardToDeck(new EnHandOfGreedHermitNecro(), false);
+        addCardToDeck(new EnSwiftStrike(), false);
         addCardToDeck(new EnPanacea(), true);
         addCardToDeck(new EnShortFuseNecro(), false);
         addCardToDeck(new EnNecronomicurse(), false);
@@ -113,9 +114,12 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         for (int i = 0; i < 3; i++) {
             AbstractCard target = getNextCard();
             cardsList.add(target);
+            // No strength gain for now.
+            /*
             if (target.cardID.equals(EnNecronomicurse.ID)) {
                 AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
             }
+             */
         }
         if (AbstractCharBoss.boss instanceof CharBossHermit) {
             CharBossHermit.previewCard = mockDeck.get(0).makeStatEquivalentCopy();
@@ -149,9 +153,12 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         }
         AbstractCard next = getNextCard();
         AbstractCharBoss.boss.hand.addToTop(next);
+        // Not here either.
+        /*
         if (next.cardID.equals(EnNecronomicurse.ID)) {
             AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
         }
+         */
         AbstractCharBoss.boss.hand.refreshHandLayout();
         AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
             @Override
