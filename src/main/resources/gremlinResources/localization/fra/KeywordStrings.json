@@ -19,20 +19,13 @@
   {
     "NAMES": [
       "écho",
+      "échos",
       "echo",
       "echoes"
     ],
     "PROPER_NAME": "Écho",
     "DESCRIPTION": "Un écho est une copie d'une carte avec Éthérée et Épuisement."
   },
-  {
-    "NAMES": [
-      "Échos"
-    ],
-    "PROPER_NAME": "Échos",
-    "DESCRIPTION": "Des échos sont des copies d'une carte avec Éthérée et Épuisement."
-  },
-  {
     "NAMES": [
       "gros diablotin",
       "gros_diablotin",
