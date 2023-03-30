@@ -38,7 +38,7 @@
     "NAME": "宝石袋",
     "FLAVOR": "噢……闪闪发光！",
     "DESCRIPTIONS": [
-      "拾起时，向牌组中加入5张随机 #yguardianmod:宝石 。"
+      "拾起时，向牌组中加入 #b5 张随机 #yguardianmod:宝石 。"
     ]
   },
   "Guardian:StasisCodex": {
