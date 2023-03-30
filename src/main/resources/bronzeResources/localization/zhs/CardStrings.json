@@ -261,7 +261,7 @@
   },
   "bronze:GetLatest": {
     "NAME": "最新素材",
-    "DESCRIPTION": "获得一张 bronze:编码 牌。 NL 其首次耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "获得一张 bronze:编码 牌， NL 其首次耗能为0。 NL 消耗 。"
   },
   "bronze:Flail": {
     "NAME": "乱击",

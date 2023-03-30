@@ -334,7 +334,7 @@
     "DESCRIPTION": "造成 !D! 點傷害。 NL 每張 消耗 的 *靈體 提高傷害 !M! 點。 NL 消耗 。"
   },
   "hexamod:ForkedFlame": {
-    "NAME": "歧路火焰",
+    "NAME": "歧岔火焰",
     "DESCRIPTION": "造成 !D! 點傷害。 NL hexamod:點燃 前後枚鬼火。",
     "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL hexamod:點燃 前一個、當前的、下一個鬼火。"
   },
