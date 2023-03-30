@@ -93,7 +93,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnMadness());
+                    addToList(cardsList, new EnLoneWolf());
                     addToList(cardsList, new EnRoughhouse());
                     addToList(cardsList, new EnInjury());
                     turn++;
@@ -127,7 +127,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnInjury());
+                    addToList(cardsList, new EnLoneWolf());
                     addToList(cardsList, new EnRoughhouse());
                     addToList(cardsList, new EnInjury());
                     turn++;
