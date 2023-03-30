@@ -29,6 +29,6 @@
   },
   "downfall:BossMaintenance": {
     "NAME": "維護",
-    "DESCRIPTION": "*打擊 額外造成 !M! 點傷害。 NL 獲得2點 敏捷 。 NL 本場戰鬥耗能加1。"
+    "DESCRIPTION": "*打擊 額外造成 !M! 點傷害。 NL 獲得!B!點 敏捷 。 NL 本場戰鬥耗能加1。"
   }
 }
