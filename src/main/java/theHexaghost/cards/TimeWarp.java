@@ -14,7 +14,7 @@ public class TimeWarp extends AbstractHexaCard implements OnAdvanceOrRetractSubs
 
     //stupid intellij stuff ATTACK, ALL_ENEMY, COMMON
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 4;
     private static final int UPG_DAMAGE = 2;
 
     public TimeWarp() {
