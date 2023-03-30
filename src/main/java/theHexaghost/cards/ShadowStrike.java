@@ -18,7 +18,7 @@ public class ShadowStrike extends AbstractHexaCard {
 
     public ShadowStrike(AbstractCard parent) {
         super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 10;
+        baseDamage = 8;
         exhaust = true;
         isEthereal = true;
         tags.add(CardTags.STRIKE);
