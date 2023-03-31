@@ -29,8 +29,8 @@
   {
     "PROPER_NAME": "Identification",
     "NAMES": [
-	    "identifiez-la",
-	    "identifiez",
+      "identifiez-la",
+      "identifiez",
       "identify"
     ],
     "DESCRIPTION": "Remplace une carte #yInconnue par sa carte aléatoire actuelle de façon permanente."
