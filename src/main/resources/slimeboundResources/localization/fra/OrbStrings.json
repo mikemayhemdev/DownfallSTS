@@ -2,7 +2,7 @@
   "Slimebound:EmptySlimeSlot": {
     "NAME": "Emplacement de slime",
     "DESCRIPTION": [
-      "Des sbires slimes peuvent être placés dans ces emplacements en se #yDivisant."
+      "Des sbires slimes peuvent être placés dans ces emplacements en vous #yDivisant."
     ]
   },
   "Slimebound:BronzeSlime": {
@@ -24,21 +24,21 @@
     "NAME": "Slime ferrailleux",
     "DESCRIPTION": [
       "Inflige #b",
-      " dégâts au début de votre tour. NL Peut être ranimé si #yAbsorbé."
+      " dégâts au début de votre tour. NL Ranimable si #yAbsorbé."
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "Slime cupide",
     "DESCRIPTION": [
       "Inflige #b",
-      " dégâts au début de votre tour. NL  Peut être ranimé si #yAbsorbé."
+      " dégâts au début de votre tour. NL Ranimable si #yAbsorbé."
     ]
   },
   "Slimebound:TorchHeadSlime": {
     "NAME": "Slime torche",
     "DESCRIPTION": [
       "Inflige #b",
-      " dégâts au début de votre tour. Fait des dégâts supplémentaires selon votre #yForce."
+      " dégâts au début de votre tour. Sa puissance est affectée par votre #yForce."
     ]
   },
   "Slimebound:CultistSlime": {
@@ -107,7 +107,7 @@
     "NAME": "Slime antique",
     "DESCRIPTION": [
       "Inflige #b",
-      " dégâts au début de votre tour rt vous fait piocher #b",
+      " dégâts au début de votre tour et vous fait piocher #b",
       " carte(s)."
     ]
   },
@@ -115,7 +115,7 @@
     "NAME": "Slime ténébreux",
     "DESCRIPTION": [
       "Inflige #b",
-      " dégâts au début de votre tour. Quand vous Commandez, tous les Ténébreux attaquent (peu importe la position)."
+      " dégâts au début de votre tour. Quand vous Commandez, tous les Ténébreux attaquent (peu importe leur position)."
     ]
   }
 }
