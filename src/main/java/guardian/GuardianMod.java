@@ -20,7 +20,9 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
@@ -29,7 +31,6 @@ import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.events.shrines.PurificationShrine;
 import com.megacrit.cardcrawl.events.shrines.Transmogrifier;
 import com.megacrit.cardcrawl.events.shrines.UpgradeShrine;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -62,6 +63,7 @@ import guardian.rewards.GemReward;
 import guardian.rewards.GemRewardAllRarities;
 import guardian.stances.DefensiveMode;
 import guardian.ui.EnhanceBonfireOption;
+import guardian.vfx.AddGemToStartingDeckEffect;
 import guardian.vfx.SocketGemEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -83,7 +85,8 @@ public class GuardianMod implements PostDrawSubscriber,
         EditCardsSubscriber,
         PostBattleSubscriber,
         AddAudioSubscriber,
-        OnPlayerLoseBlockSubscriber
+        OnPlayerLoseBlockSubscriber,
+        PostCreateStartingDeckSubscriber
         //basemod.interfaces.EditKeywordsSubscriber
         //EditStringsSubscriber
 {
@@ -300,8 +303,7 @@ public class GuardianMod implements PostDrawSubscriber,
     }
 
     public static String makeID(String input) {
-        String concat = "Guardian:" + input;
-        return concat;
+        return "Guardian:" + input;
     }
 
     public static String printString(String s) {
@@ -1075,6 +1077,19 @@ public static void saveData() {
                     e.flash();
                 }
             }
+        }
+    }
+
+    @Override
+    public void receivePostCreateStartingDeck(AbstractPlayer.PlayerClass playerClass, CardGroup cardGroup) {
+        if ( AbstractDungeon.player instanceof GuardianCharacter ) {
+            AbstractGemCard starter_gem = (AbstractGemCard) GuardianMod.getRewardGemCards(true, 1).get(0).makeStatEquivalentCopy();
+            cardGroup.addToTop(starter_gem);
+            // this adds the real save&load friendly gem on floor 0, sentences below enable the
+            // show-card-and-card-flies-to-deck visual effect ,by adding a dummy card and remove it instantly
+
+            AbstractGemCard dummy_starter_gem_to_be_removed = (AbstractGemCard) starter_gem.makeStatEquivalentCopy();
+            AbstractDungeon.effectList.add(new AddGemToStartingDeckEffect(dummy_starter_gem_to_be_removed, (Settings.WIDTH * 0.5F), (Settings.HEIGHT * 0.5F)));
         }
     }
 

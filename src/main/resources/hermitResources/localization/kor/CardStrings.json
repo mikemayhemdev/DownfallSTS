@@ -34,8 +34,8 @@
   },
   "hermit:HighCaliber": {
     "NAME": "대구경",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL *타격을 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *타격+을 얻습니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *타격+2　 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *타격+3　 얻습니다. NL 소멸."
   },
   "hermit:BodyArmor": {
     "NAME": "방탄복",

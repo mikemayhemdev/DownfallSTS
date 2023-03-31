@@ -30,10 +30,14 @@ public class ModeShifter extends CustomRelic {
         addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
 
-    @Override
-    public void onEquip() {
-        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(GuardianMod.getRewardGemCards(true, 1).get(0).makeStatEquivalentCopy(), (Settings.WIDTH * 0.5F), (Settings.HEIGHT * 0.5F)));
-    }
+//    @Override
+//    public void onEquip() {
+//        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(GuardianMod.getRewardGemCards(true, 1).get(0).makeStatEquivalentCopy(), (Settings.WIDTH * 0.5F), (Settings.HEIGHT * 0.5F)));
+//    }
+
+//    Add gem feature moved to GuardianMod.receivePostCreateStartingDeck , because under current way if you save&load
+//    on floor one, the gem disappears,  remember to delete that too if the random add gem feature is changed someday
+
 
     @Override
     public String getUpdatedDescription() {
