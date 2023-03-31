@@ -39,8 +39,8 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Casse-croûte",
-    "DESCRIPTION": "Piochez !M! carte, puis Épuisez une carte de votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Piochez !M! cartes, puis Épuisez une carte de votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement."
+    "DESCRIPTION": "Piochez !M! carte, puis Épuisez une carte. Ajoutez à votre main un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Piochez !M! cartes, puis Épuisez une carte. Ajoutez à votre main un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Diviser pour régner",
@@ -94,7 +94,7 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "Tacle combo",
-    "DESCRIPTION": "Infligez !D! dégâts. Subissez !SlimeboundSelfharm! dégâts. NL Ajoutez une carte \"Tacle\" aléatoire à votre main. Elle coûte 0 ce tour-ci."
+    "DESCRIPTION": "Infligez !D! dégâts. Subissez !SlimeboundSelfharm! dégâts. NL Ajoutez une carte \"Tacle\" aléatoire à votre main. Elle coûte 0 ce tour-ci.",
     "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Subissez !SlimeboundSelfharm! dégâts. NL Ajoutez une carte \"Tacle\" aléatoire Améliorée à votre main. Elle coûte 0 ce tour-ci."
   },
   "Slimebound:Grow": {
@@ -112,8 +112,8 @@
   },
   "Slimebound:HungryTackle": {
     "NAME": "Tacle affamé",
-    "DESCRIPTION": "Infligez !D! dégâts. Subissez !SlimeboundSelfharm! dégâts. NL expansioncontent:Exhumez une carte \"Léchouille\# aléatoire.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Subissez !SlimeboundSelfharm! dégâts. NL expansioncontent:Exhumez 2 cartes \#Léchouille\# aléatoires."
+    "DESCRIPTION": "Infligez !D! dégâts. Subissez !SlimeboundSelfharm! dégâts. NL expansioncontent:Exhumez une carte \"Léchouille\" aléatoire.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Subissez !SlimeboundSelfharm! dégâts. NL expansioncontent:Exhumez 2 cartes \"Léchouille\" aléatoires."
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "Ça a l'air bon",

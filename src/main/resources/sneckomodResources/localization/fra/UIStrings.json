@@ -3,10 +3,10 @@
     "TEXT": [
       "Inconnue",
       " Améliorée ",
-      "Au début du combat, les cartes Inconnues se transforment en autres cartes aléatoires de classes choisies et qui satisfont certaines contraintes.",
-      " NL Classes choisies:",
-      "Au début du combat, les cartes Inconnues se transforment en autres cartes aléatoires de N'IMPORTE quelle classe (autre que les Frappes et Défenses basiques) et qui satisfont certaines contraintes.",
-      "Au début du combat, les cartes Inconnues se transforment en autres cartes aléatoires d'autres classes (autre que les Frappes et Défenses basiques) et qui satisfont certaines contraintes."
+      "Au début du combat, les cartes Inconnues se transforment en cartes aléatoires des classes choisies (sauf Frappe et Défense) selon certaines contraintes.",
+      " NL Classes choisies :",
+      "Au début du combat, les cartes Inconnues se transforment en autres cartes aléatoires de N'IMPORTE QUELLE classe (sauf Frappe et Défense) selon certaines contraintes.",
+      "Au début du combat, les cartes Inconnues se transforment en cartes aléatoires d'autres classes (sauf Frappe et Défense) selon certaines contraintes."
     ]
   },
   "sneckomod:UnknownNames": {
@@ -44,7 +44,7 @@
   "sneckomod:ChallengeMode": {
     "TEXT": [
       "Mode Challenge - Geckobra pur",
-      "Les cartes Inconnues peuvent être de n'importe quelle carte. Recommandé pour les joueurs de Geckobra experts."
+      "Les cartes Inconnues peuvent être de n'importe quelle classe. Recommandé pour les joueurs de Geckobra experts."
     ]
   },
   "sneckomod:LockInBonfireOptions": {
@@ -59,9 +59,9 @@
   "sneckomod:AtGameStart": {
     "TEXT": [
       "",
-      " Cartes",
-      "Les cartes Inconnues peuvent devenir des cartes de ",
-      " cette run.",
+      "",
+      "Les cartes Inconnues peuvent devenir des cartes pour ",
+      " durant cette partie.",
       "Choisissez."
     ]
   }

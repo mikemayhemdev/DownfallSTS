@@ -5,7 +5,7 @@
       "gekoproof",
       "snekproof"
     ],
-    "DESCRIPTION": "Les cartes Gekoproof ne sont pas affectées par #yConfusion et ne peuvent pas être #yConfondues."
+    "DESCRIPTION": "Les cartes Gekoproof ne sont pas affectées par la #yConfusion et ne peuvent pas être #yConfondues."
   },
   {
     "PROPER_NAME": "Confondre",
@@ -15,7 +15,7 @@
       "muddle",
       "muddled"
     ],
-    "DESCRIPTION": "Confondre une carte fait varier son coût entre 0 et 3."
+    "DESCRIPTION": "Confondre une carte fait varier son coût aléatoirement entre #b0 et #b3 jusqu'à la fin du tour."
   },
   {
     "PROPER_NAME": "Hors-classe",
@@ -24,15 +24,16 @@
       "hors-classe",
       "offclass"
     ],
-    "DESCRIPTION": "Une carte Hors-classe est n'importe quelle carte obtenable qui est d'une autre classe de la vôtre (ceci inclut les cartes Incolores, les Malédictions et les Statuts)."
+    "DESCRIPTION": "Une carte Hors-classe est n'importe quelle carte obtensible d'une classe autre que la vôtre (y compris les cartes Incolores, les Malédictions et les Statuts)."
   },
   {
     "PROPER_NAME": "Identification",
     "NAMES": [
-      "Identifiez-la",
+      "identifiez-la",
+      "identifiez",
       "identify"
     ],
-    "DESCRIPTION": "Remplace une carte #yInconnue, avec sa carte aléatoire actuelle de façon permanente."
+    "DESCRIPTION": "Remplace une carte #yInconnue par sa carte aléatoire actuelle de façon permanente."
   },
   {
     "PROPER_NAME": "Chanceux",
@@ -40,6 +41,6 @@
       "chanceux",
       "lucky"
     ],
-    "DESCRIPTION": "Les cartes qui choisissent un nombre aléatoire dans le texte de leur carte choisissent le nombre maximal possible. (N'affecte pas l'action de Confondre)"
+    "DESCRIPTION": "Les cartes qui génèrent un nombre aléatoire pour leurs effets choisissent le nombre maximal possible. (N'affecte pas l'action de Confondre)"
   }
 ]

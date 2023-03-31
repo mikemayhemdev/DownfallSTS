@@ -40,7 +40,7 @@
     "NAME": "Slime ferrailleux",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, faites apparaître le #ySlime #yferrailleux. (Ranimable si #yAbsorbé.) NL Aux feux de camp, vous pouvez donner une carte au Slime ferrailleux, modifiant ses dégâts : NL #b+1 dégât pour les #gPeu #gcommunes NL #b+2 dégâts pour les #yRares NL #b-1 dégât pour les Communes NL #b-2 dégâts pour les #rMalédictions",
+      "Au début de chaque combat, faites apparaître le #ySlime #yferrailleux. Il est ranimable si #yAbsorbé. NL Aux feux de camp, vous pouvez donner une carte au Slime ferrailleux, modifiant ses dégâts : NL #b+1 dégât pour les #gPeu #gcommunes NL #b+2 dégâts pour les #yRares NL #b-1 dégât pour les Communes NL #b-2 dégâts pour les #rMalédictions",
       "Retirez une carte de votre deck et modifiez les dégâts du Slime ferrailleux.",
       "Rien à donner au Slime ferrailleux.",
       "Donner au Ferrailleux"
@@ -50,7 +50,7 @@
     "NAME": "Slime cupide",
     "FLAVOR": "Un ami trouvé dans la Tour qui adore les âmes et l'or.",
     "DESCRIPTIONS": [
-      "Au début du combat, faites apparaître le #ySlime #ycupide. (Ranimable si #yAbsorbé.) NL Aux feux de camp, le #ySlime #ycupide vous prendra #b50 de vos âmes, augmentant ses dégâts de #b1."
+      "Au début du combat, faites apparaître le #ySlime #ycupide. Il est ranimable si #yAbsorbé. NL Aux feux de camp, le #ySlime #ycupide vous prendra #b50 de vos âmes, augmentant ses dégâts de #b1."
     ]
   },
   "Slimebound:PreparedRelic": {
@@ -62,7 +62,7 @@
   },
   "Slimebound:AggressiveSlimeRelic": {
     "NAME": "Squatteur visqueux",
-    "FLAVOR": "Il m'a suivi jusqu'à la maison. Je peux le garder?",
+    "FLAVOR": "Il m'a suivi jusqu'à la maison. Je peux le garder ?",
     "DESCRIPTIONS": [
       "Au début de chaque combat, #yslimeboundmod:Divisez-vous en #yslimeboundmod:Slime_cogneur."
     ]
