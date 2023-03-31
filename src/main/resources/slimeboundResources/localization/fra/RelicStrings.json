@@ -57,7 +57,7 @@
     "NAME": "Soupe de slime",
     "FLAVOR": "Elle a un goût horrible, mais elle est incroyablement saine pour le corps.",
     "DESCRIPTIONS": [
-      "Lorsque vous accédez à un feu de camp, commencez le prochain combat avec une carte #yPréparation qui coûte #b0"
+      "Lorsque vous accédez à un feu de camp, commencez le prochain combat avec une carte #yPréparation qui coûte #b0."
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {
