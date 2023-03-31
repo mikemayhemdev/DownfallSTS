@@ -7,7 +7,7 @@
       "Vous vous débarrassez facilement du Parrain Slime, récupérant ses possessions pour vous-même. C'est un chapeau très élégant, après tout."
     ],
     "OPTIONS": [
-      "[Confront] #rCombattez #rle #rParrain #rSlime. Récompense: #gPetit #gchapeau #gmelon.",
+      "[Confronter] #rCombattez #rle #rParrain #rSlime. Récompense: #gPetit #gchapeau #gmelon.",
       "[Fuir] #rMaudit #r- #rHonte."
     ]
   },
@@ -43,7 +43,7 @@
     ]
   },
   "Slimebound:ScrapOoze": {
-    "NAME": "Scrap Ooze",
+    "NAME": "Slime ferrailleux",
     "DESCRIPTIONS": [
       "N'importe quel slime est un allié dans votre quête.  Avec des offres de nouvelles ferrailles et de nouveaux trésors, le Slime ferrailleux se joint à votre quête."
     ],
@@ -56,7 +56,7 @@
     ]
   },
   "Slimebound:ArtOfSlimeWar": {
-    "NAME": "The Art of Slime War",
+    "NAME": "Art de la guerre des Slimes",
     "DESCRIPTIONS": [
       "Vous tombez sur un piédestal dégoûtant sur lequel se trouve un #glivre #gbrillant. Il semblerait que ce livre contienne les techniques de combat compliquées et avancées utilisées par les ancêtres du #gParrain #gSlime et de ses sbires.",
       "En prenant le livre, vous entendez plusieurs pièges s'activer.  Vous ne pourrez pas tous les éviter.",
@@ -99,7 +99,7 @@
     ],
     "OPTIONS": [
       "[Inspiration] #gAjoutez #gCommandez à toutes vos #gFrappes et #gDéfenses.",
-      "[Locked] Requiert une Frappe ou une Défense."
+      "[Verrouillé] Requiert une Frappe ou une Défense."
     ]
   }
 }
