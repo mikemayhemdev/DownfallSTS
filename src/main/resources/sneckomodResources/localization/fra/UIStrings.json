@@ -17,12 +17,12 @@
   "sneckomod:UnknownClass": {
     "TEXT": [
       "???",
-      "Carte ",
-      " *Inconnue.",
-      "Personnage",
+      "Personnage ",
+      " Améliorée.",
+      "*Inconnue",
       " ",
       "Vous n'auriez jamais dû voir ça. Reportez ceci à Vex",
-      "Améliorez "
+      "Carte "
     ]
   },
   "sneckomod:UpgradedUnknownReward": {
