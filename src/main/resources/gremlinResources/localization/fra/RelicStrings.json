@@ -24,7 +24,7 @@
     "NAME": "Pierre tombale de Diablotin",
     "FLAVOR": "Où vont les Diablotins lorsqu'ils meurent ? Pas assez loin, bon sang.",
     "DESCRIPTIONS": [
-      "Les Diablotins morts peuvent être ressucités dans les Sites de Repos en tant qu'Action Gratuite."
+      "Les Diablotins morts peuvent être ressucités aux feux de camp en tant qu'Action Gratuite."
     ]
   },
   "Gremlin:GremlinKnob": {
