@@ -41,6 +41,6 @@
       "chanceux",
       "lucky"
     ],
-    "DESCRIPTION": "Les cartes qui génèrent un nombre aléatoire dans leur texte choisissent le nombre maximal possible. (N'affecte pas l'action de Confondre)"
+    "DESCRIPTION": "Les cartes qui génèrent un nombre aléatoire pour leurs effets choisissent le nombre maximal possible. (N'affecte pas l'action de Confondre)"
   }
 ]
