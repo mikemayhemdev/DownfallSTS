@@ -40,7 +40,7 @@
     "NAME": "Slime ferrailleux",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, faites apparaître le #ySlime #yferrailleux. NL Aux feux de camp, vous pouvez donner une carte au Slime ferrailleux, modifiant ses dégâts: NL #b+1 dégât pour les #gNon-communes NL #b+2 dégâts pour les #yRares NL #b-1 dégât pour les Communes NL #b-2 dégâts pour les #rMalédictions",
+      "Au début de chaque combat, faites apparaître le #ySlime #yferrailleux. (Ranimable si #yAbsorbé.) NL Aux feux de camp, vous pouvez donner une carte au Slime ferrailleux, modifiant ses dégâts : NL #b+1 dégât pour les #gPeu #gcommunes NL #b+2 dégâts pour les #yRares NL #b-1 dégât pour les Communes NL #b-2 dégâts pour les #rMalédictions",
       "Retirez une carte de votre deck et modifiez les dégâts du Slime ferrailleux.",
       "Rien à donner au Slime ferrailleux.",
       "Donner au Ferrailleux"
@@ -50,14 +50,14 @@
     "NAME": "Slime cupide",
     "FLAVOR": "Un ami trouvé dans la Tour qui adore l'or.",
     "DESCRIPTIONS": [
-      "Au début du combat, faites apparaître le #ySlime #ycupide. NL Aux feux de camp, le #ySlime #ycupide vous prendra #b50 de votre or, augmentant son dégât de #b1."
+      "Au début du combat, faites apparaître le #ySlime #ycupide. (Ranimable si #yAbsorbé.) NL Aux feux de camp, le #ySlime #ycupide vous prendra #b50 de vos âmes, augmentant ses dégâts de #b1."
     ]
   },
   "Slimebound:PreparedRelic": {
     "NAME": "Soupe de slime",
     "FLAVOR": "Elle a un goût horrible, mais elle est incroyablement saine pour le corps.",
     "DESCRIPTIONS": [
-      "Lorsque vous atteignez un feu de camp, commencez le prochain combat avec une carte #yPréparation qui coûte 0."
+      "Lorsque vous accédez à un feu de camp, commencez le prochain combat avec une carte #yPréparation qui coûte #b0"
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {
