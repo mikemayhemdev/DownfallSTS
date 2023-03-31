@@ -7,7 +7,7 @@
     ]
   },
   "sneckomod:SuperSneckoSoul": {
-    "NAME": "Super âme de Geckobra",
+    "NAME": "Super Âme de Geckobra",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
       "Remplace [#407B93]Âme de Geckobra[]. NL La première fois que vous jouez une carte #ysneckomod:Hors-classe chaque tour, gagnez [E]."
@@ -38,11 +38,11 @@
     "NAME": "Dé pipé",
     "FLAVOR": "Garantit d'arnaquer les plus naïfs.",
     "DESCRIPTIONS": [
-      "Les cartes qui génèrent des nombres aléatoires ont au minimum +1."
+      "Les cartes qui génèrent des nombres aléatoires ont +1 à leur minimum."
     ]
   },
   "sneckomod:RareBoosterPack": {
-    "NAME": "Boîte de booster rare",
+    "NAME": "Boîte de cartes rares",
     "FLAVOR": "Excellent état.",
     "DESCRIPTIONS": [
       "Lorsque vous la récupérez, obtenez une carte #yInconnue #yRare de chaque type."
@@ -57,23 +57,23 @@
   },
   "sneckomod:UnknownEgg": {
     "NAME": "Œuf inconnu",
-    "FLAVOR": "Que fera-t-il éclore? Payez 1000€ pour le voir.",
+    "FLAVOR": "Qu'en sortira-t-il ? Payez 1000€ pour le voir.",
     "DESCRIPTIONS": [
       "#yIdentifier devient une action gratuite. NL Les cartes #yInconnues dans les récompenses sont #yAméliorées."
     ]
   },
   "sneckomod:SuperSneckoEye": {
-    "NAME": "Super œil de Geckobra",
+    "NAME": "Super Œil de Geckobra",
     "FLAVOR": "0121012",
     "DESCRIPTIONS": [
-      "Remplace œil de Geckobra. Au début de votre tour, piochez #b2 cartes supplémentaires. Commencez chaque combat avec #yConfusion. La première fois que vous piochez une carte qui coûte #b3 chaque combat, réduisez son coût à #b0."
+      "Remplace #yŒil #yde #yGeckobra. Au début de votre tour, piochez #b2 cartes supplémentaires. Commencez chaque combat avec #yConfusion. La première fois que vous piochez une carte qui coûte #b3 chaque combat, réduisez son coût à #b0."
     ]
   },
   "sneckomod:SneckoTalon": {
     "NAME": "Idole de Rétromission",
-    "FLAVOR": "On l'appelle Idole de Rétro pour faire plus court.",
+    "FLAVOR": "On l'appelle Idole Rétro pour faire plus court.",
     "DESCRIPTIONS": [
-      "Au début de votre tour, réduisez le coût de votre carte la plus chère de #b1 pour ce tour uniquement."
+      "Au début de votre tour, réduisez de #b1 le coût de la carte la plus chère de votre main pour le reste du tour."
     ]
   },
   "sneckomod:BlankCard": {
@@ -87,10 +87,10 @@
     "NAME": "Octaèdre mystique",
     "FLAVOR": "Il semble pencher d'un côté.",
     "DESCRIPTIONS": [
-      "Lorsque vous le récupérez, choisissez une carte qui génère un nombre aléatoire pour ses effets. Désormais, cette carte génère toujours le nombre maximum possible.",
+      "Lorsque vous le ramassez, choisissez une carte qui génère un nombre aléatoire pour ses effets. Désormais, cette carte choisit toujours le nombre maximum possible.",
       "Choisissez une carte pour ",
       "Lorsque ",
-      " est jouée, elle génère toujours le nombre maximum possible pour ses effets."
+      " est jouée, elle choisit toujours le nombre maximum possible pour ses effets."
     ]
   },
   "sneckomod:BabySnecko": {
@@ -104,18 +104,18 @@
     "NAME": "Sceau d'approbation",
     "FLAVOR": "Je suis le Soldat de Fer et ceci est ma Relique favorite de la Tour.  -Brochure de publicité pour le Marchand",
     "DESCRIPTIONS": [
-      "Lorsque vous le récupérez, choisissez #b1 parmi #b3 Personnages pour des cartes #yInconnues. Toutes les cartes Inconnues dans les récompenses futures seront de ce personnage.",
-      "Toutes les cartes Inconnues dans les récompenses futures seront des cartes du/de ",
+      "Lorsque vous le ramassez, choisissez #b1 parmi #b3 cartes #yInconnues #yd'un #yPersonnage. Les cartes #Inconnues d'autres Personnages n'apparaissent plus.",
+      "Toutes les cartes Inconnues dans les récompenses futures seront des cartes de ",
       " ."
     ]
   },
   "sneckomod:SneckoBoss": {
-    "NAME": "Fer à cheval chanceux",
+    "NAME": "Fer à cheval porte-bonheur",
     "FLAVOR": "Moi je fabrique ma chance - Vieux monsieur.",
     "DESCRIPTIONS": [
-      "Lorsque vous le récupérez, choisissez #b1 carte Inconnue de Personnage parmi #b3 #yUnknown. Ajoutez #b5 copies de celle-ci dans votre deck. Tous les combats donnent une carte récompense supplémentaire de ce personnage.",
-      "Lorsque vous le récupérez, obtenez #b5 cartes #yInconnues du/de ",
-      " . Tous les combats donnent une carte récompense supplémentaire du/de combats ",
+      "Lorsque vous le ramassez, choisissez #b1 parmi #b3 cartes #yInconnues #yd'un #yPersonnage. Ajoutez #b5 copies de celle-ci à votre deck. Tous les combats donnent en récompense supplémentaire une carte de ce personnage.",
+      "Lorsque vous le ramassez, obtenez #b5 cartes #yInconnues de ",
+      " . Tous les combats donnent une carte récompense supplémentaire de ",
       " ."
     ]
   }
