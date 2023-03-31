@@ -112,8 +112,8 @@
   },
   "Slimebound:HungryTackle": {
     "NAME": "Tacle affamé",
-    "DESCRIPTION": "Infligez !D! dégâts. Subissez !SlimeboundSelfharm! dégâts. NL expansioncontent:Exhumez une carte \"Léchouille\# aléatoire.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Subissez !SlimeboundSelfharm! dégâts. NL expansioncontent:Exhumez 2 cartes \#Léchouille\# aléatoires."
+    "DESCRIPTION": "Infligez !D! dégâts. Subissez !SlimeboundSelfharm! dégâts. NL expansioncontent:Exhumez une carte \"Léchouille\" aléatoire.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Subissez !SlimeboundSelfharm! dégâts. NL expansioncontent:Exhumez 2 cartes \"Léchouille\" aléatoires."
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "Ça a l'air bon",
