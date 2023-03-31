@@ -8,11 +8,11 @@
     ]
   },
   "sneckomod:CheatPower": {
-    "NAME": "Tricheur",
+    "NAME": "Triche",
     "DESCRIPTIONS": [
-      "Ce tour, les cartes qui choisissent un nombre aléatoire pour leurs effets choisissent le nombre maximum possible.",
+      "Ce tour, les cartes qui génèrent un nombre aléatoire pour leurs effets choisissent le nombre maximum possible.",
       "Pour les #b",
-      " prochains tours, les cartes qui choisissent un nombre aléatoire pour leurs effets choisissent le nombre maximum possible."
+      " prochains tours, les cartes qui génèrent un nombre aléatoire pour leurs effets choisissent le nombre maximum possible."
     ]
   },
   "sneckomod:MuddleDrawnCardsPower": {
