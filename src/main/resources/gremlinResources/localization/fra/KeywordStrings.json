@@ -19,18 +19,18 @@
   {
     "NAMES": [
       "écho",
-      "echo",
-      "echoes"
+      "echo"
     ],
     "PROPER_NAME": "Écho",
-    "DESCRIPTION": "Un écho est une copie d'une carte avec Éthérée et Épuisement."
+    "DESCRIPTION": "Un écho est une copie d'une carte avec #yÉthérée et #yÉpuisement."
   },
   {
     "NAMES": [
-      "Échos"
+      "échos",
+      "echoes"
     ],
     "PROPER_NAME": "Échos",
-    "DESCRIPTION": "Des échos sont des copies d'une carte avec Éthérée et Épuisement."
+    "DESCRIPTION": "Des échos sont des copies d'une carte avec #yÉthérée et #yÉpuisement."
   },
   {
     "NAMES": [
@@ -107,3 +107,4 @@
     "DESCRIPTION": "La cible perd une quantité spécifiée de ressources. Vous gagnez le montant qui a été perdu."
   }
 ]
+

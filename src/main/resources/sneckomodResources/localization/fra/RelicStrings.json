@@ -38,7 +38,7 @@
     "NAME": "Dé pipé",
     "FLAVOR": "Garantit d'arnaquer les plus naïfs.",
     "DESCRIPTIONS": [
-      "Les cartes qui choisissent des nombres aléatoires ont au minimum +1."
+      "Les cartes qui génèrent des nombres aléatoires ont au minimum +1."
     ]
   },
   "sneckomod:RareBoosterPack": {
@@ -87,10 +87,10 @@
     "NAME": "Octaèdre mystique",
     "FLAVOR": "Il semble pencher d'un côté.",
     "DESCRIPTIONS": [
-      "Lorsque vous le récupérez, choisissez une carte qui choisit un nombre aléatoire pour ses effets. Désormais, cette carte choisit toujours le nombre maximum possible.",
+      "Lorsque vous le récupérez, choisissez une carte qui génère un nombre aléatoire pour ses effets. Désormais, cette carte génère toujours le nombre maximum possible.",
       "Choisissez une carte pour ",
       "Lorsque ",
-      " est jouée, elle choisit toujour le nombre maximum possible pour ses effets."
+      " est jouée, elle génère toujours le nombre maximum possible pour ses effets."
     ]
   },
   "sneckomod:BabySnecko": {
