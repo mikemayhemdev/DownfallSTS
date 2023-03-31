@@ -151,8 +151,8 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "Échange de l'âme",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Piochez 1 carte, et choisissez une carte de votre main. NL *Transformez toute votre main cartes aléatoires de sa classe.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Piochez !M! cartes, et choisissez une carte de votre main. NL *Transformez toute votre main cartes aléatoires de sa classe.",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Piochez 1 carte, et choisissez une carte de votre main. *Transformez toute votre main cartes aléatoires de sa classe.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Piochez !M! cartes, et choisissez une carte de votre main. *Transformez toute votre main cartes aléatoires de sa classe.",
     "EXTENDED_DESCRIPTION": [
       "à Épuiser pour Échange de l'âme."
     ]
