@@ -90,8 +90,8 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "黏质快餐",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗一张手牌。 NL 获得其耗能张 *掠舔 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗一张手牌。 NL 获得其耗能张 *掠舔 。 NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗一张手牌， NL 获得其耗能张 *掠舔 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗一张手牌， NL 获得其耗能张 *掠舔 。 NL 消耗 。"
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "增殖形态",
@@ -227,8 +227,8 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "连续冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌。 NL 本回合其耗能为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌+。 NL 本回合其耗能为0。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌， NL 本回合其耗能为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌+， NL 本回合其耗能为0。"
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "腐蚀喷吐",

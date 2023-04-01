@@ -564,7 +564,7 @@
   },
   "bronze:IntoTheVoid": {
     "NAME": "遁入虚空",
-    "DESCRIPTION": "虚无 。 NL 本回合目标失去 !M! 点 力量 。 NL 抽到时， NL 失去 [E] 。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 本回合目标失去 !M! 点 力量 。 NL 抽到时失去 [E] 。 NL 消耗 。"
   },
   "bronze:Lubricant": {
     "NAME": "润滑剂",

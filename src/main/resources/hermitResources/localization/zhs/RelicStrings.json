@@ -89,7 +89,7 @@
     "NAME": "黑火药",
     "FLAVOR": "谨慎处理。",
     "DESCRIPTIONS": [
-      "回合结束时，本回合每触发过一次 #yhermit:精准 效果就对所有敌人造成 #b2 点伤害。"
+      "回合结束时，本回合每触发过一次 #yhermit:精准 效果，对所有敌人造成 #b2 点伤害。"
     ]
   },
   "hermit:BloodyTooth": {

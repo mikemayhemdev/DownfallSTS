@@ -38,7 +38,7 @@
     "NAME": "銀色子彈",
     "FLAVOR": "尖塔裏的狼都絕跡了。",
     "DESCRIPTIONS": [
-      "戰鬥開始時，將 #b1 張 #y穿透射擊 加入手牌。其耗能為 #b0 。"
+      "戰鬥開始時，將 #b1 張 #y穿透射擊 加入手牌，其耗能為 #b0 。"
     ]
   },
   "bronze:MakeshiftBattery": {

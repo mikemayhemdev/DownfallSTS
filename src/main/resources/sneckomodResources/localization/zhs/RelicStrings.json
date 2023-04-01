@@ -80,7 +80,7 @@
     "NAME": "空牌",
     "FLAVOR": "拟牌妖。",
     "DESCRIPTIONS": [
-      "战斗开始时，随机将牌组中 #b1 张牌的 #ygremlin:回响 加入手牌。其耗能为 #b0 。"
+      "战斗开始时，随机将牌组中 #b1 张牌的 #ygremlin:回响 加入手牌，其耗能为 #b0 。"
     ]
   },
   "sneckomod:D8": {
