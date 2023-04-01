@@ -43,7 +43,7 @@ public class BronzeIdol extends CustomRelic {
             if (rotationTimer <= 0F ) {
                 rotationTimer = 2F;
                 card_tip.card = card_list.get(previewIndex);
-                if (++previewIndex == card_list.size()) {
+                if (++previewIndex >= card_list.size()) {
                     previewIndex = 0;
                 }
             } else {
