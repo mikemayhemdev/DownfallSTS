@@ -14,7 +14,7 @@ public class SuperTip {
     private static final float SHADOW_DIST_Y = 14.0F * Settings.scale;
     private static final float SHADOW_DIST_X = 9.0F * Settings.scale;
     private static final float BOX_EDGE_H = 32.0F * Settings.scale;
-    private static final float BOX_BODY_H = 64.0F * Settings.scale;
+    private static final float BOX_BODY_H = 57.0F * Settings.scale;
     private static final float TEXT_OFFSET_X = 20.0F * Settings.scale;
     private static final float HEADER_OFFSET_Y = 12.0F * Settings.scale;
     private static final float BODY_OFFSET_Y = -20.0F * Settings.scale;
@@ -37,7 +37,7 @@ public class SuperTip {
 
     private static void renderTipBox(float x, float y, float width, SpriteBatch sb, String title, String description) {
         float ourWidth = width - (15 * Settings.scale);
-        float h = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, description, ourWidth, TIP_DESC_LINE_SPACING) + 20.0F * Settings.scale;
+        float h = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, description, ourWidth-(PADDING_WIDTH_WRAP + TEXT_OFFSET_X), TIP_DESC_LINE_SPACING);
         sb.setColor(TOP_PANEL_SHADOW_COLOR);
         sb.draw(ImageMaster.KEYWORD_TOP, x + SHADOW_DIST_X, y - SHADOW_DIST_Y, ourWidth, BOX_EDGE_H);
         sb.draw(ImageMaster.KEYWORD_BODY, x + SHADOW_DIST_X, y - h - BOX_EDGE_H - SHADOW_DIST_Y, ourWidth, h + BOX_EDGE_H);
