@@ -31,9 +31,9 @@
     "ID": "bruise",
     "PROPER_NAME": "Meurtri",
     "NAMES": [
+      "bruise",
       "meurtri",
       "meurtris",
-      "bruise",
       "bruised"
     ],
   "DESCRIPTION": "Les cibles meurtries prennent plus de dégâts des attaques. Chaque coup, le taux de Meurtri est réduit de #b1. S'estompe à la fin du tour."
@@ -42,8 +42,8 @@
     "ID": "rugged",
     "PROPER_NAME": "Robustesse",
     "NAMES": [
-      "robustesse",
-      "rugged"
+      "rugged",
+      "robustesse"
     ],
   "DESCRIPTION": "Réduit les dégâts de la prochaine attaque ennemie à #b3."
 },

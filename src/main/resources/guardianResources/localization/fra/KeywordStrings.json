@@ -14,8 +14,8 @@
   },
   {
     "NAMES": [
-      "stase",
-      "stasis"
+      "stasis",
+      "stase"
     ],
     "PROPER_NAME": "Stase",
     "DESCRIPTION": "Une carte en #yStase gagne un compteur de tour égal à son coût plus #b1. NL Le compteur de tour est réduit de #b1 au début de votre tour. NL Lorsque le compteur atteint #b0, elle retourne dans votre main et coûte #b0 jusqu'à ce qu'elle soit jouée."
@@ -33,17 +33,18 @@
   {
     "PROPER_NAME": "Mode défensif",
     "NAMES": [
+      "defensive mode",
+      "defensive_mode",
       "Mode défensif",
       "mode_défensif",
       "défensif",
-      "defensive_mode",
       "defensive"
     ],
     "DESCRIPTION": "#yPose. NL Lorsque vous êtes en Mode défensif , vous avez #b3 #yd'Épines, gagnez #b10 #yd'Armure au début de votre tour, et votre #yArmure n'expire pas."  },
   {
     "NAMES": [
-      "accélérez",
-      "accelerate"
+      "accelerate",
+      "accélérez"
     ],
     "PROPER_NAME": "Accélérer",
     "DESCRIPTION": "Réduisez le compteur de tours de 1 de la carte la plus à droite en #yStase de #b1. Si le compteur de la carte est maintenant à #b0, remettez-la dans votre main. Elle coûte #b0 jusqu'à ce qu'elle soit jouée."

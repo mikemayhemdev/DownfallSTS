@@ -2,12 +2,12 @@
   {
     "PROPER_NAME": "Encode",
     "NAMES": [
+      "encode",
       "encodé",
       "encodée",
       "encodées",
       "encodez",
       "encoder",
-      "encode",
       "encoded"
     ],
     "DESCRIPTION": "Ajoutez la carte à la Séquence. NL Quand 3 cartes sont dans la Séquence, leurs effets (autre que Encode) sont fusionnés en une Fonction dont le coût est égal au coût de la carte la plus chère."
