@@ -1,5 +1,6 @@
 package hermit.cards;
 
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -53,13 +54,17 @@ public class Covet extends AbstractDynamicCard {
         Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {
             for (AbstractCard c : list)
             {
-                Wiz.p().hand.addToTop(c);
                 if (c.color == AbstractCard.CardColor.CURSE)
-                    Wiz.att(new ExhaustSpecificCardAction(c,Wiz.p().hand,false));
+                    Wiz.p().hand.moveToExhaustPile(c);
                 else
-                    Wiz.att(new DiscardSpecificCardAction(c,Wiz.p().hand));}
+                {
+                    Wiz.p().hand.moveToDiscardPile(c);
+                    c.triggerOnManualDiscard();
+                    GameActionManager.incrementDiscard(false);
+                }
+            }
             list.clear();
-        }, null, uiStrings.TEXT[0],false,false,false,true));
+        }, null, uiStrings.TEXT[0],false,false,false));
         Wiz.atb(new DrawCardAction(magicNumber));
     }
 
