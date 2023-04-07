@@ -20,7 +20,7 @@ public class SealSealReward extends CustomReward {
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public SealSealReward() {
-        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardItemTypeEnumPatch.SEALCARD);
+        super(TextureLoader.getTexture("downfallResources/images/rewards/seal_reward.png"), TEXT[0], RewardItemTypeEnumPatch.SEALCARD);
         cards.clear();
         cards.addAll(getCards());
     }
