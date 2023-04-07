@@ -18,7 +18,7 @@ public class UpgradedUnknownReward extends CustomReward {
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public UpgradedUnknownReward() {
-        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardItemTypeEnumPatch.UPGRADEDUNKNOWNCARD);
+        super(TextureLoader.getTexture("downfallResources/images/rewards/unknown_card_reward.png"), TEXT[0], RewardItemTypeEnumPatch.UPGRADEDUNKNOWNCARD);
         cards.clear();
         cards.addAll(getCards());
     }
