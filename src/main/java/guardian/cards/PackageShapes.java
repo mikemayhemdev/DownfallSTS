@@ -123,12 +123,9 @@ public class PackageShapes extends AbstractGuardianCard {
             this.rawDescription = UPGRADED_DESCRIPTION;
 
             this.initializeDescription();
-            if (prev1 != null)
-                prev1.upgrade();
-            if (prev2 != null)
-                prev2.upgrade();
-            if (prev3 != null)
-                prev3.upgrade();
+            constPrev1.upgrade();
+            constPrev2.upgrade();
+            constPrev3.upgrade();
         }
     }
 
