@@ -44,6 +44,7 @@ public class Watcher extends GauntletBoss {
         this.loadAnimation("images/characters/watcher/idle/skeleton.atlas", "images/characters/watcher/idle/skeleton.json", 1.0f);
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         this.flipHorizontal = true;
+        this.skeleton.setFlip(this.flipHorizontal, this.flipVertical);
         this.stateData.setMix("Hit", "Idle", 0.1F);
         e.setTimeScale(0.7F);
 

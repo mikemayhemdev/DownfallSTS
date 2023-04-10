@@ -1,5 +1,6 @@
 package downfall.vfx;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -13,6 +14,7 @@ public class NeowBossRezEffect extends AbstractGameEffect {
     public float cX;
     public float cY;
     public float angle;
+    public boolean timed = false;
 
     public Color borderColor = Color.CYAN;
 
@@ -30,6 +32,13 @@ public class NeowBossRezEffect extends AbstractGameEffect {
         AbstractDungeon.effectsQueue.add(new NeowRezFlareParticleEffect(this.cX + MathUtils.random(-100F,100F), this.cY + MathUtils.random(-100F,100F), borderColor, this.angle, this));
         AbstractDungeon.effectsQueue.add(new NeowRezFlareParticleEffect(this.cX + MathUtils.random(-100F,100F), this.cY + MathUtils.random(-100F,100F), borderColor, this.angle, this));
 
+        if (timed)
+        {
+            this.duration -= Gdx.graphics.getDeltaTime();
+            if (this.duration < 0.0F) {
+                this.isDone = true;
+            }
+        }
     }
 
     public void render(SpriteBatch sb) {
