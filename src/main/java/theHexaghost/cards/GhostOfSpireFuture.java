@@ -17,7 +17,7 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new FuturePower(2));
+        applyToSelf(new FuturePower(magicNumber));
     }
 
     public void upgrade() {
