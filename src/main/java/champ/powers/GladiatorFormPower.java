@@ -25,8 +25,7 @@ public class GladiatorFormPower extends AbstractPower implements CloneablePowerI
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    int remainingVigor = 3;
-    int remainingCounter = 3;
+    int remainingCounter = 0;
 
     public GladiatorFormPower(final int amount) {
         this.name = NAME;
@@ -45,35 +44,37 @@ public class GladiatorFormPower extends AbstractPower implements CloneablePowerI
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK && owner.hasPower(VigorPower.POWER_ID)) {
-            this.flash();
-            int found = AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
-            int totaled = found / 3;
-            int remainder = found % 3;
-            int finalized = totaled * amount;
-            addToBot(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new VigorPower(owner, finalized)), finalized));
-            remainingVigor -= remainder;
-            if (remainingVigor <= 0) {
-                remainingVigor = 3;
-                addToBot(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new VigorPower(owner, amount)), amount));
-            }
-        }
+        if (card.type == AbstractCard.CardType.ATTACK && owner.hasPower(VigorPower.POWER_ID))
+            addNextTurnPower();
     }
 
     @Override
     public void onSpecificTrigger() {
-        if (owner.hasPower(CounterPower.POWER_ID)) {
-            this.flash();
-            int found = AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount;
-            int totaled = found / 3;
-            int remainder = found % 3;
-            int finalized = totaled * amount;
+        if (owner.hasPower(CounterPower.POWER_ID))
+            addNextTurnPower();
+    }
+
+    public void atTurnStart()
+    {
+        remainingCounter = 0;
+    }
+
+    public void addNextTurnPower()
+    {
+        int found = AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount;
+        int totaled = found / 3;
+        int finalized = totaled * amount;
+
+        remainingCounter += found % 3;
+
+        if (remainingCounter >= 3) {
+            remainingCounter -= 3;
+            finalized += amount;
+        }
+
+        if (finalized > 0) {
+            flash();
             addToBot(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new CounterPower(finalized)), finalized));
-            remainingCounter -= remainder;
-            if (remainingCounter <= 0) {
-                remainingCounter = 3;
-                addToBot(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new CounterPower(amount)), amount));
-            }
         }
     }
 
