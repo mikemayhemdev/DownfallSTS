@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import downfall.powers.NextTurnPowerPower;
 import downfall.util.TextureLoader;
+import hermit.util.Wiz;
 
 public class GladiatorFormPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -25,6 +26,7 @@ public class GladiatorFormPower extends AbstractPower implements CloneablePowerI
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    int remainingVigor = 0;
     int remainingCounter = 0;
 
     public GladiatorFormPower(final int amount) {
@@ -45,36 +47,53 @@ public class GladiatorFormPower extends AbstractPower implements CloneablePowerI
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK && owner.hasPower(VigorPower.POWER_ID))
-            addNextTurnPower();
+            addNextTurnPower(AbstractDungeon.player.getPower(VigorPower.POWER_ID));
     }
 
     @Override
     public void onSpecificTrigger() {
         if (owner.hasPower(CounterPower.POWER_ID))
-            addNextTurnPower();
+            addNextTurnPower(AbstractDungeon.player.getPower(CounterPower.POWER_ID));
     }
 
     public void atTurnStart()
     {
+        remainingVigor = 0;
         remainingCounter = 0;
     }
 
-    public void addNextTurnPower()
+    public void addNextTurnPower(AbstractPower power)
     {
-        int found = AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount;
+        int found = power.amount;
         int totaled = found / 3;
         int finalized = totaled * amount;
+        boolean isVigor = (VigorPower.POWER_ID.equals(power.ID));
+        boolean isCounter = (CounterPower.POWER_ID.equals(power.ID));
 
-        remainingCounter += found % 3;
+        // Add remainder.
+        if (isVigor)
+            remainingVigor += found % 3;
+        if (isCounter)
+            remainingCounter += found % 3;
 
+        // If remainder is beyond threshold, add to total and subtract.
+        if (remainingVigor >= 3) {
+            remainingVigor -= 3;
+            finalized += amount;
+        }
         if (remainingCounter >= 3) {
             remainingCounter -= 3;
             finalized += amount;
         }
 
+        // Only do anything if the amount is greater than 0.
         if (finalized > 0) {
             flash();
-            addToBot(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new CounterPower(finalized)), finalized));
+
+            if (isVigor)
+            Wiz.atb(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new VigorPower(owner,finalized)), finalized));
+            if (isCounter)
+            Wiz.atb(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new CounterPower(finalized)), finalized));
         }
     }
 
