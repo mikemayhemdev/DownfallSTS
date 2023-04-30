@@ -1,0 +1,9 @@
+{
+  "collector:EmeraldTorch": {
+    "NAME": "Emerald Torch",
+    "FLAVOR": "Sustained by the fires of envy.",
+    "DESCRIPTIONS": [
+      "At the start of combat, #gTorch #gHead heals #b10 HP."
+    ]
+  }
+}

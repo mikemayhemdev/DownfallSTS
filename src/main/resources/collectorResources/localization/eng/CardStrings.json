@@ -1,0 +1,105 @@
+{
+  "collector:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "collector:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "collector:Contemplate": {
+    "NAME": "Contemplate",
+    "DESCRIPTION": "Draw a card from the Collection.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 cards from your Collection to draw."
+  },
+  "collector:SoulSnare": {
+    "NAME": "Soul Snare",
+    "DESCRIPTION": "Retain. NL Apply !M! Vulnerable. NL If the enemy dies this turn, collector:Collect it.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Apply !M! Vulnerable. NL If the enemy dies this turn or next, collector:Collect it."
+  },
+  "collector:BlackMark": {
+    "NAME": "Black Mark",
+    "DESCRIPTION": "collector:Order. NL Apply !M! Vulnerable."
+  },
+  "collector:Enfeeble": {
+    "NAME": "Enfeeble",
+    "DESCRIPTION": "Apply 1 Weak and 1 Vulnerable. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Apply 1 Weak and 1 Vulnerable. NL Draw !M! cards."
+  },
+  "collector:Extricate": {
+    "NAME": "Extricate",
+    "DESCRIPTION": "Deal !D! Damage. NL If the enemy is collector:Afflicted, gain !B! Block."
+  },
+  "collector:SoulStitch": {
+    "NAME": "Soul Stitch",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! collector:Suffering."
+  },
+  "collector:SpiritLeech": {
+    "NAME": "Spirit Leech",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, gain [E] and draw 1 card."
+  },
+  "collector:SuckerPunch": {
+    "NAME": "Sucker Punch",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  },
+  "collector:ThornWhip": {
+    "NAME": "Thorn Whip",
+    "DESCRIPTION": "Deal !D! damage twice. NL collector:Kindling - collector:Order twice."
+  },
+  "collector:Fireball": {
+    "NAME": "Fireball",
+    "DESCRIPTION": "Deal !D! damage, then increase this card's damage by !M!."
+  },
+  "collector:FairTrade": {
+    "NAME": "Fair Trade",
+    "DESCRIPTION": "Gain [E] and draw !M! card from the *Collect pile."
+  },
+  "collector:PlatePact": {
+    "NAME": "Plate Pact",
+    "DESCRIPTION": "collector:Order - *Torchhead attacks a random enemy. Gain Block equal to unblocked damage dealt."
+  },
+  "collector:SpiritWave": {
+    "NAME": "Spirit Wave",
+    "DESCRIPTION": "*Torchhead heals !M! HP. NL Draw 2 cards."
+  },
+  "collector:WaveOfMalice": {
+    "NAME": "Wave of Malice",
+    "DESCRIPTION": "Deal !D! damage to ALL collector:Afflicted enemies."
+  },
+  "collector:Mindflare": {
+    "NAME": "Mindflare",
+    "DESCRIPTION": "Deal !D! damage. NL If collector:Guarded, draw !M! cards from your *Collect pile."
+  },
+  "collector:Ember": {
+    "NAME": "Ember",
+    "DESCRIPTION": "Retain. Unplayable. NL If Exhausted, gain [E].",
+    "UPGRADE_DESCRIPTION": "Retain. Unplayable. NL If Exhausted, gain [E] [E]."
+  },
+  "collector:FlameLash": {
+    "NAME": "Flame Lash",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. Repeat for each *Ember in your hand."
+  },
+  "collector:Bonfire": {
+    "NAME": "Bonfire",
+    "DESCRIPTION": "Add !M! *Embers to your hand."
+  },
+  "collector:VoidArmor": {
+    "NAME": "VoidArmor",
+    "DESCRIPTION": "Gain Block equal to the number of cards in your *Exhaust pile.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Current: !B! Block.)"
+    ]
+  },
+  "collector:Vanguard": {
+    "NAME": "Vanguard",
+    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Gain 1 Blur."
+  },
+  "collector:Slayer": {
+    "NAME": "Slayer",
+    "DESCRIPTION": "Can only target Soul Snared enemies. NL Deal !D! damage."
+  },
+  "collector:LuckyWick": {
+    "NAME": "Lucky Wick",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+  }
+}

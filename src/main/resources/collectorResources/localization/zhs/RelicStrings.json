@@ -1,0 +1,110 @@
+{
+  "champ:ChampionCrown": {
+    "NAME": "冠军金冠",
+    "FLAVOR": "你是冠军！",
+    "DESCRIPTIONS": [
+      " #y起手式 时如果不处于 #y姿态 中，将随机一张手牌本回合的耗能降低 #b1 。"
+    ]
+  },
+  "champ:BlackKnightHelmet": {
+    "NAME": "黑骑头盔",
+    "FLAVOR": "只受到一点擦伤。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次进入每种 #y姿态 时： NL #b防卫 -获得2点敏捷并失去1点力量。 NL #y角斗 -获得1点敏捷和力量。 NL #r狂战 -获得2点力量并失去1点敏捷。"
+    ]
+  },
+  "champ:Barbells": {
+    "NAME": "哑铃",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "每当你进入 #y休息处 ，如果你至少有 #b10 张未 #y升级 的牌，随机 #y升级 牌组中的一张牌。"
+    ]
+  },
+  "champ:BerserkersGuideToSlaughter": {
+    "NAME": "狂战指南",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "阻止每场战斗前10点生命损失。"
+    ]
+  },
+  "champ:ChampionCrownUpgraded": {
+    "NAME": "终极王冠",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "每场战斗开始时进入 #y终极 并持续 #b2 回合 。"
+    ]
+  },
+  "champ:DefensiveTrainingManual": {
+    "NAME": "防御训练手册",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      " #y防卫 中的 #y技术 将额外获得 #b3 层 #y反击 。"
+    ]
+  },
+  "champ:DeflectingBracers": {
+    "NAME": "偏折护腕",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "敌人的回合结束是，你获得你剩余格挡数的 #y反击 。"
+    ]
+  },
+  "champ:DuelingGlove": {
+    "NAME": "决斗手套",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "打出单体攻击牌后，如果敌人没有 #y易伤 ，给予 #b1 层 #y易伤 。"
+    ]
+  },
+  "champ:FightingForDummies": {
+    "NAME": "格斗假人",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "你的回合结束时没有处于 #y姿态 ，获得 #b6 点 #y格挡 。"
+    ]
+  },
+  "champ:GladiatorsBookOfMartialProwess": {
+    "NAME": "角斗技法",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "每当你一回合内打出 #y起手 、 #y技术 、 #y连段 和 #y终结技 ，随机获得 #b1 点 #y力量 或 #y敏捷 。"
+    ]
+  },
+  "champ:PowerArmor": {
+    "NAME": "力量铠甲",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "每回合开始时获得 [E] 。 NL 你的最大 #y决心 、 #y反击 为 #b15 ， #y手牌上限 为 #b8 。"
+    ]
+  },
+  "champ:SignatureFinisher": {
+    "NAME": "终结者",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "拾起时，选择一张 #y终结技 牌。这张牌将不会结束你的回合并退出 #y姿态 。",
+      "选一张牌 ",
+      "不会结束你的回合并退出姿态。"
+    ]
+  },
+  "champ:SpectersHand": {
+    "NAME": "幽灵之手",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "每当你不处于 #y姿态 打出一张 #y技术 ，将一张0耗能带 #y消耗 的打击或防御加入你的手牌。"
+    ]
+  },
+  "champ:LiftRelic": {
+    "NAME": "内在力量",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "每场战斗开始时获得 #b",
+      " 点 #y力量 。"
+    ]
+  },
+  "champ:ChampStancesModRelic": {
+    "NAME": "新晋者",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，进入随机一种第一勇士 #y姿态 。"
+    ]
+  }
+}

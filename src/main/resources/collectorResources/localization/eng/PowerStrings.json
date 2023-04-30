@@ -1,0 +1,60 @@
+{
+  "collector:Suffering": {
+    "NAME": "Suffering",
+    "DESCRIPTIONS": [
+      "When Suffering, Vulnerable, or Weak is applied to this, it loses #b",
+      " HP."
+    ]
+  },
+  "collector:SoulMark": {
+    "NAME": "Soul Snare",
+    "DESCRIPTIONS": [
+      "When you defeat this monster #yCollect it."
+    ]
+  },
+  "collector:SelfDestruct": {
+    "NAME": "Self Destruct",
+    "DESCRIPTIONS": [
+      "At the end of your turn, all enemies lose HP equal to your #yTorch #yHeads HP, Kill your #yTorch #yHead."
+    ]
+  },
+  "collector:AggroNegated": {
+    "NAME": "Distraction",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain #b"," #yAggro."
+    ]
+  },
+  "collector:ChaoticFlux": {
+    "NAME": "Chaotic Flux",
+    "DESCRIPTIONS": [
+      "At the start of your turn #yChannel #b",
+      " random Orbs."
+    ]
+  },
+  "collector:FalteringFocus": {
+    "NAME": "Faltering Focus",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, Exit your #yStance"
+    ]
+  },
+  "collector:CurlUp": {
+    "NAME": "Curl Up",
+    "DESCRIPTIONS": [
+      "The next time you take attack damage gain #b",
+      " #yBlock."
+    ]
+  },
+  "collector:Omen": {
+    "NAME": "Omen",
+    "DESCRIPTIONS": [
+      "Dealing Attack damage to an enemy with 6 #Afflictions they lose #b",
+      " HP."
+    ]
+  },
+  "collector:Miser": {
+    "NAME": "Miser",
+    "DESCRIPTIONS": [
+      "#yRetain cards that cost less then #b"
+    ]
+  }
+}
