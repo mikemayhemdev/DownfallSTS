@@ -12,6 +12,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,6 +20,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
@@ -27,7 +29,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.GlowyFireEyesEffect;
 import com.megacrit.cardcrawl.vfx.StaffFireEffect;
-import downfall.downfallMod;
 
 import java.util.ArrayList;
 
@@ -78,7 +79,7 @@ public class CollectorChar extends CustomPlayer {
 
     @Override
     public Texture getCustomModeCharacterButtonImage() {
-        return ImageMaster.loadImage(downfallMod.collectorModID + "Resources/images/charSelect/leaderboard.png");
+        return ImageMaster.loadImage(CollectorMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
 
 
@@ -138,7 +139,7 @@ public class CollectorChar extends CustomPlayer {
 
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return downfallMod.Enums.COLLECTOR;
+        return Enums.COLLECTOR;
     }
 
     @Override
@@ -211,5 +212,15 @@ public class CollectorChar extends CustomPlayer {
                 AbstractDungeon.effectList.add(new StaffFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() - 120.0F * Settings.scale, this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 390.0F * Settings.scale));
             }
         }
+    }
+
+    public static class Enums {
+        @SpireEnum
+        public static PlayerClass THE_COLLECTOR;
+        @SpireEnum(name = "THE_COLLECTOR")
+        public static AbstractCard.CardColor COLLECTOR;
+        @SpireEnum(name = "THE_COLLECTOR")
+        @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 }

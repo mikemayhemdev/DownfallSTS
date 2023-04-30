@@ -39,6 +39,8 @@ import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
+import collector.CollectorChar;
+import collector.CollectorMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -72,8 +74,6 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.monsters.exordium.LouseNormal;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.relics.MedicalKit;
@@ -337,6 +337,8 @@ public class downfallMod implements
                 return "gremlinResources/" + path;
             case PACKAGE_HERMIT:
                 return "hermitResources/" + path;
+            case PACKAGE_COLLECTOR:
+                return "collectorResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -428,6 +430,8 @@ public class downfallMod implements
 
             //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
+
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_COLLECTOR));
         } else {
 
             //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
@@ -528,6 +532,7 @@ public class downfallMod implements
         loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
         loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
         loadModKeywords(HermitMod.getModID(), otherPackagePaths.PACKAGE_HERMIT);
+        loadModKeywords(CollectorMod.getModID(), otherPackagePaths.PACKAGE_COLLECTOR);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
     }
 
@@ -744,7 +749,7 @@ public class downfallMod implements
             settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
             settingsPanel.addUIElement(disableDescriptorsBtn);
-            
+
             configPos = 750;
         }
 
@@ -757,7 +762,6 @@ public class downfallMod implements
             CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
             saveData();
         });
-
 
 
         settingsPanel.addUIElement(characterCrossoverBtn);
@@ -1516,7 +1520,7 @@ public class downfallMod implements
                 p instanceof TheSnecko ||
                 p instanceof ChampChar ||
                 p instanceof AutomatonChar ||
-                p instanceof GremlinCharacter || p instanceof hermit.characters.hermit) {
+                p instanceof GremlinCharacter || p instanceof hermit.characters.hermit || p instanceof CollectorChar) {
             return true;
         }
         return false;
@@ -1741,6 +1745,7 @@ public class downfallMod implements
         PACKAGE_AUTOMATON,
         PACKAGE_GREMLIN,
         PACKAGE_HERMIT,
+        PACKAGE_COLLECTOR,
         PACKAGE_DOWNFALL;
 
         otherPackagePaths() {

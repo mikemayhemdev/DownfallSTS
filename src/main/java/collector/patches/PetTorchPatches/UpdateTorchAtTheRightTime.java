@@ -1,6 +1,7 @@
 package collector.patches.PetTorchPatches;
 
 
+import collector.CollectorChar;
 import collector.CollectorMod;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
@@ -12,7 +13,7 @@ import downfall.downfallMod;
 public class UpdateTorchAtTheRightTime {
     @SpirePostfixPatch
     public static void Postfix(AbstractPlayer obj) {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
+        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
             if (CollectorMod.pet != null) {
                 //CollectorMod.pet.update();
             }

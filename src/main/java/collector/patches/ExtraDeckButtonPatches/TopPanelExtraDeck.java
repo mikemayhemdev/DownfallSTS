@@ -1,6 +1,7 @@
 package collector.patches.ExtraDeckButtonPatches;
 
 import basemod.TopPanelItem;
+import collector.CollectorChar;
 import collector.CollectorCollection;
 import collector.CollectorMod;
 import com.badlogic.gdx.graphics.Texture;
@@ -32,7 +33,7 @@ public class TopPanelExtraDeck extends TopPanelItem {
 
     @Override
     public void render(SpriteBatch sb) {
-        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_COLLECTOR) {
+        if (AbstractDungeon.player.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
             super.render(sb);
             if (getHitbox().hovered) {
                 TipHelper.renderGenericTip(getHitbox().x, getHitbox().y, uiStrings.TEXT[0], uiStrings.TEXT[1]);

@@ -1,6 +1,7 @@
 package collector.ui;
 
 import basemod.ClickableUIElement;
+import collector.CollectorChar;
 import collector.CollectorCollection;
 import collector.patches.ExtraDeckButtonPatches.ExhaustPileViewScreenPatches;
 import com.badlogic.gdx.graphics.Color;
@@ -88,7 +89,7 @@ public class CombatCollectionPileButton extends ClickableUIElement {
 
     @Override
     public void render(SpriteBatch sb) {
-        if (CollectorCollection.combatCollection != null && (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_COLLECTOR || CollectorCollection.combatCollection.size() > 0)) {
+        if (CollectorCollection.combatCollection != null && (AbstractDungeon.player.chosenClass == CollectorChar.Enums.THE_COLLECTOR || CollectorCollection.combatCollection.size() > 0)) {
             if (!AbstractDungeon.overlayMenu.combatDeckPanel.isHidden) {
                 float x = hitbox.x + hitbox.width / 2f;
                 float y = hitbox.y + hitbox.height / 2f;

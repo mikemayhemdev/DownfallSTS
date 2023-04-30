@@ -47,12 +47,12 @@ public class CollectorMod implements
     public static final String CORPSE = "collectorResources/images/char/mainChar/corpse.png";
     public static final String CARD_ENERGY_S = "collectorResources/images/512/card_collector_orb.png";
     public static final String TEXT_ENERGY = "collectorResources/images/512/card_small_orb.png";
-    private static final String ATTACK_S_ART = "collectorResources/images/512/bg_attack_.png";
-    private static final String SKILL_S_ART = "collectorResources/images/512/bg_skill_.png";
-    private static final String POWER_S_ART = "collectorResources/images/512/bg_power_.png";
-    private static final String ATTACK_L_ART = "collectorResources/images/1024/bg_attack_.png";
-    private static final String SKILL_L_ART = "collectorResources/images/1024/bg_skill_.png";
-    private static final String POWER_L_ART = "collectorResources/images/1024/bg_power_.png";
+    private static final String ATTACK_S_ART = "collectorResources/images/512/bg_attack_collector.png";
+    private static final String SKILL_S_ART = "collectorResources/images/512/bg_skill_collector.png";
+    private static final String POWER_S_ART = "collectorResources/images/512/bg_power_collector.png";
+    private static final String ATTACK_L_ART = "collectorResources/images/1024/bg_attack_collector.png";
+    private static final String SKILL_L_ART = "collectorResources/images/1024/bg_skill_collector.png";
+    private static final String POWER_L_ART = "collectorResources/images/1024/bg_power_collector.png";
     private static final String CARD_ENERGY_L = "collectorResources/images/1024/card_collector_orb.png";
     private static final String CHARSELECT_BUTTON = "collectorResources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = "collectorResources/images/charSelect/charBG.png";
@@ -70,7 +70,7 @@ public class CollectorMod implements
     public CollectorMod() {
         BaseMod.subscribe(this);
 
-        BaseMod.addColor(downfallMod.Enums.COLLECTOR, characterColor, characterColor, characterColor,
+        BaseMod.addColor(CollectorChar.Enums.COLLECTOR, characterColor, characterColor, characterColor,
                 characterColor, characterColor, characterColor, characterColor,
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
@@ -110,7 +110,7 @@ public class CollectorMod implements
     }
 
     public static String getModID() {
-        return downfallMod.collectorModID;
+        return modID;
     }
 
     public static void initialize() {
@@ -123,12 +123,12 @@ public class CollectorMod implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new CollectorChar("The Collector", downfallMod.Enums.THE_COLLECTOR), CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, downfallMod.Enums.THE_COLLECTOR);
+        BaseMod.addCharacter(new CollectorChar("The Collector", CollectorChar.Enums.THE_COLLECTOR), CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, CollectorChar.Enums.THE_COLLECTOR);
     }
 
     @Override
     public void receiveEditRelics() {
-        BaseMod.addRelicToCustomPool(new EmeraldTorch(), downfallMod.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new EmeraldTorch(), CollectorChar.Enums.COLLECTOR);
     }
 
     public void addPotions() {
@@ -211,7 +211,7 @@ public class CollectorMod implements
     private static CombatCollectionPileButton combatCollectionPileButton;
 
     public static void renderCombatUiElements(SpriteBatch sb) {
-        if (Wiz.isInCombat() && AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
+        if (Wiz.isInCombat() && AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
             if (combatCollectionPileButton != null) {
                 combatCollectionPileButton.setX(AbstractDungeon.overlayMenu.combatDeckPanel.current_x);
                 combatCollectionPileButton.render(sb);

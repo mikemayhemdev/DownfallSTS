@@ -2,6 +2,7 @@ package collector.cards;
 
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
+import collector.CollectorChar;
 import collector.cardmods.PyreMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -30,7 +31,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
     protected final CardStrings cardStrings;
 
     public AbstractCollectorCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        this(cardID, cost, type, rarity, target, downfallMod.Enums.COLLECTOR);
+        this(cardID, cost, type, rarity, target, CollectorChar.Enums.COLLECTOR);
     }
 
     public AbstractCollectorCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {

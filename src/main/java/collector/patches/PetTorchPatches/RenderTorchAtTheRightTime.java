@@ -1,6 +1,7 @@
 package collector.patches.PetTorchPatches;
 
 
+import collector.CollectorChar;
 import collector.CollectorMod;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -14,7 +15,7 @@ import downfall.downfallMod;
 public class RenderTorchAtTheRightTime {
     @SpirePostfixPatch
     public static void Postfix(AbstractPlayer obj, SpriteBatch sb) {
-        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR) && !(AbstractDungeon.getCurrRoom() instanceof RestRoom)) {
+        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR) && !(AbstractDungeon.getCurrRoom() instanceof RestRoom)) {
             if (CollectorMod.pet != null) {
                 //CollectorMod.pet.render(sb);
             }
