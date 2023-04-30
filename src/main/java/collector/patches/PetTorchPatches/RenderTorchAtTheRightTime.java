@@ -16,7 +16,7 @@ public class RenderTorchAtTheRightTime {
     public static void Postfix(AbstractPlayer obj, SpriteBatch sb) {
         if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR) && !(AbstractDungeon.getCurrRoom() instanceof RestRoom)) {
             if (CollectorMod.pet != null) {
-                CollectorMod.pet.render(sb);
+                //CollectorMod.pet.render(sb);
             }
         }
     }

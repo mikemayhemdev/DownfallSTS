@@ -233,6 +233,6 @@ public class CollectorMod implements
         CollectorCollection.init();
         combatCollectionPileButton = new CombatCollectionPileButton();
 
-        pet = new PetTorch(-800, 50);
+        pet = new PetTorch();
     }
 }

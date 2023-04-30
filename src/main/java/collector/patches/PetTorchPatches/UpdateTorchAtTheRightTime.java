@@ -14,7 +14,7 @@ public class UpdateTorchAtTheRightTime {
     public static void Postfix(AbstractPlayer obj) {
         if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
             if (CollectorMod.pet != null) {
-                CollectorMod.pet.update();
+                //CollectorMod.pet.update();
             }
         }
     }
