@@ -48,20 +48,6 @@ public class DownfallCustomCardRewardNormalFunctionPatch {
             }
         }
     }
-//    public static SpireReturn<?> plz(RewardItem __instance) {
-//        if (__instance instanceof ThirdSealReward || __instance instanceof GemReward || __instance instanceof SealSealReward) {
-//            return SpireReturn.Return();
-//        }
-//        return SpireReturn.Continue();
-//    }
-//
-//    public static class Locator extends SpireInsertLocator {
-//
-//        @Override
-//        public int[] Locate(CtBehavior ctBehavior) throws Exception {
-//            Matcher m = new Matcher.MethodCallMatcher(AbstractDungeon.class, "getRewardCards");
-//            return LineFinder.findInOrder(ctBehavior, m);
-//        }
-//    }
+
 }
 
