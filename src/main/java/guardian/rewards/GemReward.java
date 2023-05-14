@@ -2,17 +2,11 @@ package guardian.rewards;
 
 import basemod.abstracts.CustomReward;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.TextureLoader;
 import guardian.GuardianMod;
-import guardian.cards.*;
-
-import java.util.ArrayList;
-
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRng;
 
 public class GemReward extends CustomReward{
 

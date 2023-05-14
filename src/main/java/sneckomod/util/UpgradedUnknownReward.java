@@ -11,7 +11,7 @@ import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.ArrayList;
 
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRng;
 
 public class UpgradedUnknownReward extends CustomReward {
     public static final String ID = SneckoMod.makeID("UpgradedUnknownReward");
@@ -63,7 +63,7 @@ public class UpgradedUnknownReward extends CustomReward {
                 list.add(c);
             }
         }
-        return list.get(cardRandomRng.random(list.size() - 1));// 1217
+        return list.get(cardRng.random(list.size() - 1));// 1217
     }
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
