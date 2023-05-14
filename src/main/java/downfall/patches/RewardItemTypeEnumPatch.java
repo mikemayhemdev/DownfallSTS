@@ -30,4 +30,11 @@ public class RewardItemTypeEnumPatch {
 	public static RewardItem.RewardType UPGRADEDUNKNOWNCARD;
 	@SpireEnum
 	public static RewardItem.RewardType SEALCARD;
+	@SpireEnum
+	public static RewardItem.RewardType THIRDSEALCARDREWARD;
+	@SpireEnum
+	public static RewardItem.RewardType GEM;
+	@SpireEnum
+	public static RewardItem.RewardType GEMALLRARITIES;
+
 }

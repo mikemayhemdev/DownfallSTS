@@ -39,6 +39,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import downfall.downfallMod;
+import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.TextureLoader;
 import guardian.cards.*;
 import guardian.characters.GuardianCharacter;
@@ -51,7 +52,6 @@ import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 import guardian.patches.BottledStasisPatch;
 import guardian.patches.GuardianEnum;
-import guardian.patches.RewardItemTypePatch;
 import guardian.potions.AcceleratePotion;
 import guardian.potions.BlockOnCardUsePotion;
 import guardian.potions.DefensiveModePotion;
@@ -87,8 +87,6 @@ public class GuardianMod implements PostDrawSubscriber,
         AddAudioSubscriber,
         OnPlayerLoseBlockSubscriber,
         PostCreateStartingDeckSubscriber
-        //basemod.interfaces.EditKeywordsSubscriber
-        //EditStringsSubscriber
 {
 
     public static final Float stasisCardRenderScale = 0.2F;
@@ -814,29 +812,6 @@ public static void saveData() {
 
 
     public void receivePostInitialize() {
-
-        //UIStrings configStrings = CardCrawlGame.languagePack.getUIString("slimeboundConfigMenuText");
-
-        BaseMod.registerCustomReward(
-                RewardItemTypePatch.GEM,
-                (rewardSave) -> { //on load
-                    GuardianMod.logger.info("gems loaded");
-                    return new GemReward();
-                }, (customReward) -> { //on save
-                    GuardianMod.logger.info("gems saved");
-                    return new RewardSave(customReward.type.toString(), null);
-                });
-
-        BaseMod.registerCustomReward(
-                RewardItemTypePatch.GEMALLRARITIES,
-                (rewardSave) -> { //on load
-                    GuardianMod.logger.info("gems loaded");
-                    return new GemRewardAllRarities();
-                }, (customReward) -> { //on save
-                    GuardianMod.logger.info("gems saved");
-                    return new RewardSave(customReward.type.toString(), null);
-                });
-
 
         //logger.info("Load Badge Image and mod options");
         // Load the Mod Badge

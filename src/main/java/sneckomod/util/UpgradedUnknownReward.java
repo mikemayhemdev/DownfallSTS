@@ -19,8 +19,11 @@ public class UpgradedUnknownReward extends CustomReward {
 
     public UpgradedUnknownReward() {
         super(TextureLoader.getTexture("downfallResources/images/rewards/unknown_card_reward.png"), TEXT[0], RewardItemTypeEnumPatch.UPGRADEDUNKNOWNCARD);
-        cards.clear();
-        cards.addAll(getCards());
+    }
+
+    public void generate_reward_cards(){
+        this.cards.clear();
+        this.cards.addAll(UpgradedUnknownReward.getCards());
     }
 
     public static ArrayList<AbstractCard> getCards() {
