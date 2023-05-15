@@ -100,7 +100,7 @@
     "NAME": "Pioche de chez Rhapsody",
     "FLAVOR": "Avec toutes les pierres précieuses qui jonchent la Tour, il est difficile d'imaginer que quelqu'un soit si malchanceux qu'il ait eu besoin de cette pioche pour l'aider.",
     "DESCRIPTIONS": [
-      "Vous pouvez désormais #gMiner pour récupérer #b2 #yguardianmod:Gemmes sur les sites de Repos (jusqu'à #b3 fois)."
+      "Vous pouvez désormais #gMiner pour récupérer #b2 #yguardianmod:Gemmes aux feux de camp (jusqu'à #b3 fois)."
     ]
   },
   "Guardian:GemstoneGun": {

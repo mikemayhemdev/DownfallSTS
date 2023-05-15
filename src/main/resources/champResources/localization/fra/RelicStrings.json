@@ -17,7 +17,7 @@
     "NAME": "Haltères",
     "FLAVOR": "1000 pompes ? Pff. Je peux en faire 1001.",
     "DESCRIPTIONS": [
-      "Lorsque vous êtes dans un site de Repos, si vous avez au moins #b10 cartes non-Améliorées dans votre deck, #yAméliorez-en une aléatoirement."
+      "Lorsque vous êtes dans un feu de camp, si vous avez au moins #b10 cartes non-Améliorées dans votre deck, #yAméliorez-en une aléatoirement."
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
