@@ -30,9 +30,9 @@ public class NextTurnGainTemporaryStrengthPower extends AbstractGuardianPower {
 
     public void atStartOfTurn() {
         flash();
-        addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
-        addToBot(new ApplyPowerAction(this.owner, this.owner, new LoseStrengthPower(this.owner, this.amount), this.amount));
-        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        addToTop(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
+        addToTop(new ApplyPowerAction(this.owner, this.owner, new LoseStrengthPower(this.owner, this.amount), this.amount));
+        addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 }
 

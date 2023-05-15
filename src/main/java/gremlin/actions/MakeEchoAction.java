@@ -2,6 +2,7 @@ package gremlin.actions;
 
 import automaton.AutomatonMod;
 import basemod.BaseMod;
+import champ.ChampMod;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.AlwaysRetainField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,14 +16,12 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import downfall.cardmods.EtherealMod;
 import downfall.cardmods.ExhaustMod;
-import downfall.cardmods.RetainCardMod;
 
 public class MakeEchoAction extends AbstractGameAction {
     private static final float DURATION_PER_CARD = 0.35F;
-    private AbstractCard c;
+    private final AbstractCard c;
     private static final float PADDING = 25.0F * Settings.scale;
-
-    private int discount;
+    private final int discount;
 
     public MakeEchoAction(AbstractCard card)
     {
@@ -53,27 +52,26 @@ public class MakeEchoAction extends AbstractGameAction {
                 card.exhaust = true;
             }
         }
-        if (!card.isEthereal && card.rawDescription!=null ) card.rawDescription = CardCrawlGame.languagePack.getUIString(EtherealMod.ID).TEXT[0] + card.rawDescription;
+        if (!card.isEthereal && card.rawDescription != null)
+            card.rawDescription = CardCrawlGame.languagePack.getUIString(EtherealMod.ID).TEXT[0] + card.rawDescription;
         card.isEthereal = true;
-        if (card.retain && card.rawDescription!=null ) card.rawDescription = card.rawDescription.replace(CardCrawlGame.languagePack.getUIString(RetainCardMod.ID).TEXT[0], "");
+        if (card.retain && card.rawDescription != null)
+            card.rawDescription = card.rawDescription.replace(CardCrawlGame.languagePack.getUIString(ChampMod.makeID("RetainCardMod")).TEXT[0], "");
         AlwaysRetainField.alwaysRetain.set(card, false);
         card.retain = false;
-        if(card.cost >= 0 && this.discount>0)
-            card.updateCost(-1*this.discount);
+        if(card.cost >= 0 && this.discount > 0)
+            card.updateCost(this.discount * -1);
         return card;
     }
 
-    public void update()
-    {
-        if (this.amount == 0)
-        {
+    public void update() {
+        if (this.amount == 0) {
             this.isDone = true;
             return;
         }
         int discardAmount = 0;
         int handAmount = this.amount;
-        if (this.amount + AbstractDungeon.player.hand.size() > BaseMod.MAX_HAND_SIZE)
-        {
+        if (this.amount + AbstractDungeon.player.hand.size() > BaseMod.MAX_HAND_SIZE) {
             AbstractDungeon.player.createHandIsFullDialog();
             discardAmount = this.amount + AbstractDungeon.player.hand.size() - BaseMod.MAX_HAND_SIZE;
             handAmount -= discardAmount;
@@ -86,10 +84,8 @@ public class MakeEchoAction extends AbstractGameAction {
         this.isDone = true;
     }
 
-    private void addToHand(int handAmt)
-    {
-        switch (this.amount)
-        {
+    private void addToHand(int handAmt) {
+        switch (this.amount) {
             case 0:
                 break;
             case 1:

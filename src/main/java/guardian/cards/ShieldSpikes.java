@@ -22,47 +22,32 @@ import static guardian.GuardianMod.makeBetaCardPath;
 
 public class ShieldSpikes extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("ShieldSpikes");
-    public static final String NAME;
-    public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/sharpenScales.png";
+    public static final String IMG_PATH = GuardianMod.getResourcePath("cards/sharpenScales.png");
     private static final CardStrings cardStrings;
-    private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
-
-    //TUNING CONSTANTS
-    private static final int BLOCK = 12;
-    private static final int UPGRADE_BLOCK = 3;
-    private static final int THORNS = 3;
-    private static final int UPGRADE_THORNS = 1;
-    private static final int SOCKETS = 0;
-    public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    }
 
     public ShieldSpikes() {
-        super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        this.baseBlock = BLOCK;
-        this.baseMagicNumber = this.magicNumber = THORNS;
-        this.socketCount = SOCKETS;
+        super(ID, cardStrings.NAME, IMG_PATH, 2, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.GUARDIAN, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.baseBlock = 12;
+        this.baseMagicNumber = this.magicNumber = 3;
+        this.socketCount = 0;
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("ShieldSpikes.png"));
     }
 
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeBlock(4);
+            upgradeMagicNumber(1);
+        }
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SelfSpikesEffect(Color.CYAN, 5, true, 0.75F)));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        addToBot(new VFXAction(new SelfSpikesEffect(Color.CYAN, 5, true, 0.75F)));
+        addToBot(new GainBlockAction(p, p, this.block));
 
         if (p.stance instanceof DefensiveMode) {
             addToBot(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
@@ -72,30 +57,26 @@ public class ShieldSpikes extends AbstractGuardianCard {
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = AbstractDungeon.player.stance instanceof DefensiveMode ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
-    }// 68
+        this.glowColor = AbstractDungeon.player.stance instanceof DefensiveMode ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+    }
 
     public AbstractCard makeCopy() {
         return new ShieldSpikes();
     }
 
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            upgradeBlock(UPGRADE_BLOCK);
-            upgradeMagicNumber(UPGRADE_THORNS);
-        }
-    }
-
     public void updateDescription() {
         if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
+            if (upgraded && cardStrings.UPGRADE_DESCRIPTION != null) {
+                this.rawDescription = this.updateGemDescription(cardStrings.UPGRADE_DESCRIPTION, true);
             } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
+                this.rawDescription = this.updateGemDescription(cardStrings.DESCRIPTION, true);
             }
         }
         this.initializeDescription();
+    }
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 }
 
