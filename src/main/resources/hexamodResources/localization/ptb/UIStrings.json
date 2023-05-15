@@ -1,0 +1,19 @@
+{
+  "hexamod:SealCommonReward": {
+    "TEXT": [
+      "Adicionar uma carta comum ao seu baralho"
+    ]
+  },
+  "hexamod:SealSealReward": {
+    "TEXT": [
+      "Adicionar um selo ao seu baralho",
+      "Escolher uma carta."
+    ]
+  },
+  "hexamod:SealDescriptor": {
+    "TEXT": [
+      "Selo",
+      "hexamod:Selo. NL "
+    ]
+  }
+}

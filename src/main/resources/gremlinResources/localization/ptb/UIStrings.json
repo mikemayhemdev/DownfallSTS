@@ -1,0 +1,74 @@
+{
+  "Gremlin:NobFight": {
+    "TEXT": [
+      "GREMS FRACOS DÃO ALMAS!",
+      "Você, irritado. Agora é meu.",
+      "Você, Gordo. Agora é meu.",
+      "Você, Garotinha. Agora é minha.",
+      "Você, Nervosinho. Agora é meu.",
+      "Você, Sonolento. Agora é meu.",
+      "Você. Agora é meu.",
+      "Preciso escolher."
+    ]
+  },
+  "Gremlin:GremFight": {
+    "TEXT": [
+      "Esmague suas cabeças!",
+      "Mate-os!",
+      "Pegue suas coisas!"
+    ]
+  },
+  "Gremlin:ResurrectOption": {
+    "TEXT": [
+      "Ressuscitar",
+      "(Ação gratuita) Summon um Gremlin aleatório de volta dos mortos.",
+      "Requer um Gremlin morto.",
+      "O túmulo já foi profanado.",
+      "EU SOU RESSUSCITADO!",
+      "EU SOU RESSUSCITADO NOVAMENTE!",
+      "EU ESTOU DE VOLTA PARA MAIS PILHAGEM!"
+    ]
+  },
+  "Gremlin:RestOption": {
+    "TEXT": [
+      "Descansar",
+      "Cure todos os Gremlins para 100% de sua HP máxima (",
+      " HP de ",
+      "Cure todos os Gremlins para 30% de sua HP máxima (",
+      "Se algum Gremlin estiver morto, um deles ressuscitará aleatoriamente."
+    ]
+  },
+  "Gremlin:Swap": {
+    "TEXT": [
+      "SEM TROCA!",
+      "NOB LÍDER AGORA!",
+      "NOB LÍDER PARA SEMPRE!"
+    ]
+  },
+  "Gremlin:ArtMode": {
+    "TEXT": [
+      "Modo de Arte do Gremlin",
+      "Gremlins invadem as molduras do cartão. Apenas impacta esteticamente. Pode tornar mais fácil encontrar sinergias."
+    ]
+  },
+  "Gremlin:BonusGold": {
+    "TEXT": [
+       " Ouro (Bônus)"
+    ]
+  },
+  "Gremlin:MakeEchoAction": {
+    "TEXT": [
+      "Eco: "
+    ]
+  },
+  "Gremlin:EventReplacementStrings": {
+    "TEXT": [
+      "#rPerder #r",
+      " #rHP",
+      "#rTodos os #rGremlins #rperdem #r",
+      "#gGanhar #g",
+      " #gHP",
+      "#gTodos os #gGremlins #ganham #g"
+    ]
+  }
+}

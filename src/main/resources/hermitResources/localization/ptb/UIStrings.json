@@ -1,12 +1,12 @@
 {
   "hermit:bountygold": {
     "TEXT": [
-      "Ouro (Recompensa)"
+      " Gold (Bounty)"
     ]
   },
   "hermit:LoneWolfAction": {
     "TEXT": [
-      "mantenha."
+      "keep."
     ]
   }
 }

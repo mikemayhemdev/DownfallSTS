@@ -1,0 +1,163 @@
+{
+  "downfall:EvilMenuPanel": {
+    "TEXT": [
+      "Derrocada",
+      "Defenda o Coração dos intrusos aventureiros que pretendem derrotar a Torre.",
+      "Escolha seu Vilão",
+      "Campanha"
+    ]
+  },
+  "downfall:SoulToGoldChanges": {
+    "TEXT": [
+      "Almas",
+      "Mostra quantas almas você está carregando. As almas podem ser dadas ao Coração por recompensas.",
+      "Status do Mercador",
+      "HP",
+      "Morto!",
+      "Força",
+      "Almas roubadas"
+    ]
+  },
+  "downfall:BustKeyButton": {
+    "TEXT": [
+      "Quebrar Rubi",
+      "Quebrar Safira",
+      "Quebrar Esmeralda",
+      "(Ação Grátis) Gaste 50 almas: Destrua a chave para ",
+      "começar combates contra chefes com 1 de Força.",
+      "começar combates contra chefes com 10 de HP Temporário.",
+      "começar combates contra chefes com 1 de Destreza.",
+      "Chave destruída!",
+      "Requer ",
+      " almas.",
+      "(Ação Grátis) Destrua a chave para "
+    ]
+  },
+  "downfall:WheelSpinButton": {
+    "TEXT": [
+      "Girar a Roda",
+      "(Ação Grátis) Gire a roda.",
+      "Não pode girar novamente."
+    ]
+  },
+  "downfall:AscensionText": {
+    "TEXT": [
+      "19. Chefes têm uma relíquia extra.",
+      "20. O Chefe do Ato 3 tem a Cauda de Lagarto que cura todo o HP.",
+      "Obtenha a Chave de Rubi. Quebre-a mais tarde.",
+      "4. Chefes têm uma carta extra aprimorada."
+    ]
+  },
+  "downfall:ConfigMenuText": {
+   "TEXT": [
+      "Permitir que corridas padrão encontrem relíquias globais dos personagens de Downfall.",
+      "Permitir que corridas padrão encontrem poções globais de Downfall.",
+      "Permitir que corridas padrão encontrem eventos globais de Downfall.",
+      "Permitir que corridas padrão encontrem Cartas de Chefes de Downfall.",
+      "Permitir que personagens padrão joguem corridas de Downfall e Vilões joguem em corridas padrão.",
+      "Permitir que personagens modificados joguem corridas de Downfall.",
+      "Permitir que corridas padrão encontrem Cartas de Maldição de Downfall.",
+      "As corridas de Downfall usam o layout tradicional do Mapa - fogo antes do chefe, não no início.",
+      "Desbloquear todas as cartas e relíquias bloqueadas para personagens de Downfall (requer reinício do jogo)",
+      "Desativar a ajuda de postura do Campeão - para Campeões experientes",
+      "Impedir que Snecko use piscinas de cartas de outros mods.",
+      "Desativar substituições de música (requer reinício do jogo)",
+      "Desbloquear todas as skins alternativas bloqueadas para personagens de Downfall",
+      "Desativar a exibição do subtipo das cartas ao lado do tipo principal."
+    ]
+  },
+  "downfall:EnergyPanelTip": {
+   "TEXT": [
+      "Contagem de energia atual do inimigo. Cartas requerem energia para serem jogadas."
+    ],
+   "EXTRA_TEXT": [
+      "Energia"
+    ]
+  },
+  "downfall:RemoveCardReward": {
+   "TEXT": [
+      "Remover uma carta do seu baralho",
+      "Escolha uma carta para remover"
+    ]
+  },
+  "downfall:TransformCardReward": {
+   "TEXT": [
+      "Transformar uma carta do seu baralho",
+     "Escolha uma carta para transformar"
+    ]
+  },
+  "downfall:UpgradeCardReward": {
+   "TEXT": [
+      "Aprimorar uma carta do seu baralho",
+      "Escolha uma carta para aprimorar"
+    ]
+  },
+  "downfall:BossRelicReward": {
+   "TEXT": [
+      "Escolha 1 de 3 Relíquias de Chefe para obter.",
+      "Obtenha um(a) ",
+      ".",
+      "Escolha uma Relíquia... mais ou menos"
+    ]
+  },
+  "downfall:EtherealMod": {
+   "TEXT": [
+      "Etéreo. NL "
+    ]
+  },
+  "downfall:JaxReward": {
+   "TEXT": [
+      "Encontrou alguns JAX!"
+    ]
+  },
+  "downfall:RareCardReward": {
+    "TEXT": [
+      "Adicione uma Carta Rara ao seu deck"
+    ]
+  },
+  "downfall:OctoChoiceAction": {
+    "TEXT": [
+      "Escolha uma opção.",
+      "Você nunca deveria ver isso. Oops"
+    ]
+  },
+  "downfall:BossCardReward": {
+    "TEXT": [
+      "Adicione uma Carta de Chefe ao seu deck",
+      "Escolha uma carta."
+    ]
+  },
+  "downfall:ColorfulCardReward": {
+    "TEXT": [
+      "Adicione uma Carta ",
+      " ao seu deck",
+      "Escolha uma Carta."
+    ]
+  },
+  "downfall:RunHistoryMonsterNames": {
+    "TEXT": [
+      "Cabeças de Muro Vivo"
+    ]
+  },
+  "downfall:WhaleHunter": {
+    "TEXT": [
+      "Caçador de Baleias",
+      "Encerrou o ciclo."
+    ]
+  },
+  "downfall:SingleCardViewPopup": {
+    "TEXT": [
+      "Munição"
+    ]
+  },
+  "downfall:MainMenuAd": {
+    "TEXT": [
+      "Quer Mais?",
+      "Muitos mais mods, incluindo",
+      "Downfall, estão disponíveis para",
+      "o jogo base Slay the Spire na",
+      "Steam Workshop.",
+      "Clique aqui para saber mais!"
+    ]
+  }
+}

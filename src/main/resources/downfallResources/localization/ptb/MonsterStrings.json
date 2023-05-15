@@ -1,0 +1,85 @@
+{
+  "downfall:ChangingTotem": {
+    "MOVES": [
+      "Olhar Transformador"
+    ],
+    "NAME": "Cabeça da Mudança",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:ForgetfulTotem": {
+    "MOVES": [
+      "Olhar Esquecido"
+    ],
+    "NAME": "Cabeça Esquecida",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:GrowingTotem": {
+    "MOVES": [
+      "Feixe de Crescimento"
+    ],
+    "NAME": "Cabeça do Crescimento",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:FleeingMerchant": {
+    "MOVES": [
+      "Roubo de Alma"
+    ],
+    "NAME": "Cabeça do Comerciante em Fuga",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:LooterAlt": {
+    "MOVES": [
+    ],
+    "NAME": "Ladrão",
+    "DIALOG": [
+      "~Ei,~ você não tem dinheiro!",
+      "@NOOOoooo!@",
+      "Você vai morrer hoje, otário."
+    ]
+  },
+  "downfall:MuggerAlt": {
+    "MOVES": [
+	],
+    "NAME": "Ladrão",
+    "DIALOG": [
+      "Vamos ensinar uma lição a eles.",
+      "Ensine-os até o fim!"
+    ]
+  },
+  "downfall:Fortification": {
+    "MOVES": [
+	],
+    "NAME": "Fortificação",
+    "DIALOG": [
+	]
+  },
+  "downfall:MushroomRed": {
+    "MOVES": [
+	],
+    "NAME": "Porcini",
+    "DIALOG": [
+	]
+  },
+  "downfall:MushroomPurple": {
+    "MOVES": [
+	],
+    "NAME": "Actarius",
+    "DIALOG": [
+	]
+  },
+  "downfall:MushroomWhite": {
+    "MOVES": [
+	],
+    "NAME": "Puffball",
+    "DIALOG": [
+	]
+  }
+}

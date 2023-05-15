@@ -1,0 +1,32 @@
+{
+  "sneckomod:DiceRollPotion": {
+    "NAME": "Poção Potencialmente Potente",
+    "DESCRIPTIONS": [
+      "Inflige #b",
+      "-",
+      " de dano."
+    ]
+  },
+  "sneckomod:CheatPotion": {
+    "NAME": "Sorte Líquida",
+    "DESCRIPTIONS": [
+      "Ganhe #ySortudo por 1 turno.",
+      "Ganhe #ySortudo por #b",
+      " turnos."
+    ]
+  },
+  "sneckomod:MuddlingPotion": {
+    "NAME": "Bebida Energética com Efeito",
+    "DESCRIPTIONS": [
+      "#yConfunde as #b",
+      " cartas de maior custo na sua mão. Cartas #yConfundidas desta forma não podem custar 3."
+    ]
+  },
+  "sneckomod:OffclassReductionPotion": {
+    "NAME": "Bebida Exótica",
+    "DESCRIPTIONS": [
+      "Reduz o custo das cartas #yForaDaClasse na sua mão em #b",
+      "."
+    ]
+  }
+}

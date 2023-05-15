@@ -1,0 +1,236 @@
+{
+  "downfall:Heart Event": {
+    "NAMES": [
+      "O Coração"
+    ],
+    "TEXT": [
+      "~Sirva...~ NL ~a mim..~ ~agora...~",
+      "~Levante-se...~ NL ~Servo..~",
+      "~Levante-se...~",
+      "~Mate~ NL ~intrusos...~",
+      "~Chegue~ ~ao~ ~intruso...~ NL ~para~ ~receber~ ~mais..~ ~bênçãos...~",
+      "~Pelo~ ~menos...~ ~confronte~ NL ~o~ ~primeiro~ ~intruso...~",
+      "~Eu~ ~o~ ~trouxe~ ~de~ ~volta...~",
+      "~Escolha...~",
+      "~Concedido...~",
+      "~Sacrifique-se...~ NL ~...por~ ~poder....~",
+      "~PROVE~ ~o~ ~seu~ NL ~valor...~",
+      "Recompensas",
+      "~Continue~ ~por~ ~mim...~",
+      "~Desça...~ ~..na~ ~loucura...~",
+      "~Impressionante...~ ~mais...~",
+      "Amaldiçoado!",
+      "Cérebro de vento!",
+      "Transformação!"
+    ],
+    "OPTIONS": [
+      "[Continuar]",
+      "[Conversar]",
+      "[Pular]",
+      "[Sair]",
+      "Escolha 10 cartas para adicionar ao seu baralho.",
+      "[ #gInimigos #gem #gseu #gpróximo #gtrês #gcombates #gfugir #gem #gterror ]",
+      "[ Bloqueado - Não pode ser escolhido na primeira vez ]",
+      "[ #gTodos #gGremlins #grecebem #gHP #gMax #g+",
+      "#gTodos #gGremlins #grecebem #gHP #gMax #g+",
+      "[ #rTodos #rGremlins #rPerdem #r",
+      "[ #rTodos #rGremlins #rTomam #r"
+    ]
+  },
+  "downfall:Unlock": {
+    "TEXT": [
+      "Este personagem é desbloqueado ao completar uma corrida com o Slime Boss.",
+      "Este personagem é desbloqueado ao completar uma corrida com o segundo vilão.",
+      "Este personagem é desbloqueado ao completar uma corrida com o Guardião.",
+      "Este personagem é desbloqueado ao completar uma corrida com o terceiro vilão.",
+      "Este personagem é desbloqueado ao completar uma corrida com o Hexaghost.",
+      "Este personagem é desbloqueado ao completar uma corrida com o quarto vilão.",
+      "Este personagem é desbloqueado ao completar uma corrida com o Campeão.",
+      "Este personagem é desbloqueado ao completar uma corrida com o quinto vilão.",
+      "Este personagem é desbloqueado ao completar uma corrida com o Autômato.",
+      "Este personagem é desbloqueado ao completar uma corrida com o sexto vilão.",
+      "Este personagem é desbloqueado ao completar uma corrida com os Gremlins.",
+      " (As vitórias no ato 4 não contam)"
+    ]
+  },
+  "downfall:HeartMerchant": {
+  "NAMES": [
+    "Prosseguir",
+    "~Sacrifício...~"
+  ],
+  "TEXT": [
+    "~Você~ ~cresce...~ ~mais forte...~",
+    "~Nós~ ~crescemos...~ ~conforme~ ~você~ ~cresce...~",
+    "~Mate...~ ~e~ ~seja~ ~recompensado...~",
+    "~Mais...~ ~almas...~",
+    "~Nos~ ~alimente......~ NL ~NOS~ ~ALIMENTE......~",
+    "~Alimente...~ ~a~ ~corrupção...~",
+    "~Bênçãos...~ ~são~ ~merecidas...~",
+    "~Sem~ ~misericórdia...~",
+    "~Sempre...~ ~mais forte...~",
+    "~Nosso~ ~poder...~ ~é~ ~seu...~",
+    "~Mate~ ~todos...~ ~em~ ~seu~ ~caminho...~",
+    "~Lute...~ ~contra~ ~os~ ~maus...~ ~e~ ~alimente...~",
+    "~Somos~ ~legião...~",
+    "~Avance...~ ~e~ ~colha...~",
+    "~Deliciosas...~ ~almas...~",
+    "~Colha...~ ~os~ ~caídos...~"
+  ],
+  "OPTIONS": [
+    "~Neow...~ ~não~ ~pode~ ~vencer...~",
+    "~Não~ ~tenha~ ~medo...~",
+    "..... NL .... NL .........",
+    "~Acabe~ ~com~ ~eles...~",
+    "~Boa~ ~sorte...~",
+    "~Não~ ~morra...~",
+    "~Estaremos~ ~esperando...~",
+    "~Destrua~ ~todos~ ~eles...~"
+  ]
+},
+  "downfall:HeartProceed": {
+    "TEXT": [
+      "~Intrusos...~ NL ~...dentro~ ",
+      "~Você~ ~é~ ~necessário...~ NL ~...dentro~ ",
+      "~Eles~ ~alcançaram...~ NL ",
+      "~Retorne...~ NL ~Proteja~ ",
+      "~Mate~ ~todos~ ~eles...~ NL ~...dentro~ "
+    ],
+    "OPTIONS": [
+      "~a~ ~Cidade...~",
+      "~o~ ~Desconhecido...~"
+    ]
+  },
+  "downfall:NeowEnding": {
+    "TEXT": [
+      "Você... matou... todos...",
+      "...o ciclo... acabou.....",
+      "..e assim...... eu... NL ....também......"
+    ],
+    "OPTIONS": [
+      "~Eu~ ~trouxe...~ NL ~ELE...~ ~de volta...~",
+      "~Proteja-me...~ NL ~E~ ~seja...~ ~recompensado...~"
+    ]
+  },
+  "downfall:HeartMerchantScreen": {
+    "NAMES": [
+      "~Saudações~ NL ~servo...~",
+      "~Traga~ ~mais~ ~almas...~",
+      "~Eu~ ~preciso~ @mais...@",
+      "~Você~ ~não~ ~é~ NL @digno...@",
+      "~Não.~",
+      "~Colha~ ~mais~ NL ~para~ ~isso...~",
+      "~Sacrifício~ ~insuficiente...~",
+      "~Sim...~",
+      "~Mais...~ @Mais...!@",
+      "~Cresça~ ~forte...~",
+      "~Eu~ ~estou~ ~renovado...~",
+      "~Vá~ ~em~ ~frente...~",
+      "Sair",
+      "Selecione um carta para remover do seu deck."
+    ],
+    "TEXT": [
+      "~Você~ ~cresce...~ ~mais forte...~",
+      "~Nós~ ~crescemos...~ ~conforme~ ~você~ ~cresce...~",
+      "~Mate...~ ~e~ ~seja~ ~recompensado...~",
+      "~Mais...~ ~almas...~",
+      "~Nos~ ~alimente......~ NL ~ALIMENTE-NOS......~",
+      "~Alimente...~ ~a~ ~corrupção...~",
+      "~Bênçãos...~ ~são~ ~conquistadas...~",
+      "~Sem...~ ~misericórdia...~",
+      "~Sempre...~ ~mais forte...~",
+      "~Nosso~ ~poder...~ ~é~ ~seu...~",
+      "~Mate~ ~todos...~ ~em~ ~seu~ ~caminho...~",
+      "~Lute...~ ~implacável...~ ~e~ ~alimente-se...~",
+      "~Nós~ ~somos...~ ~legião...~",
+      "~Vá~ ~em~ ~frente...~ ~e~ ~colha...~",
+      "~Almas...~ ~deliciosas...~",
+      "~Colha...~ ~os~ ~Caidos...~"
+    ]
+  },
+  "downfall:OctoChoiceCards": {
+    "NAMES": [
+      "Almas",
+      "Sucesso",
+      "Uma Injeção de Ânimo",
+      "Guardião",
+      "Hexágono Fantasma",
+      "Lorde dos Slimes",
+      "Autômato",
+      "Campeão",
+      "Colecionador",
+      "Devorador de Tempo",
+      "Desperto",
+      "Antigos",
+      "Divisão: Bronze",
+      "Divisão: Chama Fantasma",
+      "Divisão: Cabeça de Tocha",
+      "Divisão: Cultista",
+      "Divisão: Protetor",
+      "Divisão: Insultante",
+      "Divisão: Antigo",
+      "Divisão: Tempo"
+    ],
+    "TEXT": [
+      "Perca 3 de HP. NL Ganhe 40 Almas.",
+      "Perca 1 de HP. NL Adicione uma carta aleatória Incolor à sua mão.",
+      "Perca 5 de HP. NL Ganhe uma Poção aleatória.",
+      "Obtenha cartas de Chefe Guardião.",
+      "Obtenha cartas de Chefe Hexágono Fantasma.",
+      "Obtenha cartas de Chefe Lorde dos Slimes.",
+      "Obtenha cartas de Chefe Autômato.",
+      "Obtenha cartas de Chefe Campeão.",
+      "Obtenha cartas de Chefe Colecionador.",
+      "Obtenha cartas de Chefe Devorador de Tempo.",
+      "Obtenha cartas de Chefe Desperto.",
+      "Obtenha cartas de Chefe Antigos.",
+      "Divida-se em um slimeboundmod:Bronze_Slime.",
+      "Divida-se em um slimeboundmod:Ghostflame_Slime.",
+      "Divida-se em um slimeboundmod:Torchhead_Slime.",
+      "Divida-se em um slimeboundmod:Cultist_Slime.",
+      "Divida-se em um slimeboundmod:Protector_Slime.",
+      "Divida-se em um slimeboundmod:Insulting_Slime.",
+      "Divida-se em um slimeboundmod:Ancient_Slime.",
+      "Divida-se em um slimeboundmod:Time_Slime.",
+      "Divida-se em um slimeboundmod:Bruiser_Slime.",
+      "Divida-se em um slimeboundmod:Guerilla_Slime.",
+      "Divida-se em um slimeboundmod:Mire_Slime.",
+      "Divida-se em um slimeboundmod:Leeching_Slime.",
+      "Perca 3 de HP. NL Ganhe 50 Almas.",
+      "Perca 1 de HP. NL Adicione uma carta aleatória Incolor aprimorada à sua mão.",
+      "Perca 2 de HP. NL Ganhe uma Poção aleatória."
+    ]
+  },
+  "downfall:lazyStorage": {
+    "NAMES": [
+
+    ],
+    "TEXT": [
+      "Escolha um Chefe para Estudar.",
+      "Escolha Avançar, Retrair ou Não Fazer Nada"
+    ]
+  },
+  "downfall:CharBossMerchant": {
+    "NAMES": [
+      "Comerciante"
+    ],
+    "TEXT": [
+    ]
+  },
+  "downfall:NeowBoss": {
+    "NAMES": [
+      "Neow"
+    ],
+    "TEXT": [
+      "~Surja...~",
+      "~Lute~ ~mais~ ~uma~ ~vez...~",
+      "~O~ ~ciclo~ ~deve~ ~acabar...~"
+    ]
+  },
+  "downfall:NeowBossFinal": {
+    "NAMES": [
+      "Neow"
+    ],
+    "TEXT": [
+    ]
+  }
+}

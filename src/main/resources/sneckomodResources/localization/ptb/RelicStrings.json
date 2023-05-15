@@ -1,0 +1,122 @@
+{
+  "sneckomod:SneckoSoul": {
+    "NAME": "Alma de Snecko",
+    "FLAVOR": "0...3...2...2...1",
+    "DESCRIPTIONS": [
+      "Na primeira vez que você jogar uma carta #ysneckomod:Offclass em um combate, ganhe [E] e compre uma carta."
+    ]
+  },
+  "sneckomod:SuperSneckoSoul": {
+    "NAME": "Super Alma de Snecko",
+    "FLAVOR": "3120231321230320",
+    "DESCRIPTIONS": [
+      "Substitui [#407B93]Alma de Snecko[]. NL Na primeira vez que você jogar uma carta #ysneckomod:Offclass por turno, ganhe [E]."
+    ]
+  },
+  "sneckomod:CleanMud": {
+    "NAME": "Flauta do Encantador de Cobras",
+    "FLAVOR": "Sssssss...",
+    "DESCRIPTIONS": [
+      "Cartas #ysneckomod:Muddled não podem custar #b3."
+    ]
+  },
+  "sneckomod:ConfusingCodex": {
+    "NAME": "Anel do Snek",
+    "FLAVOR": "Ilegível, ilegível, deve ser entregue até quinta-feira.",
+    "DESCRIPTIONS": [
+      "No início do combate, aplique #b0-2 #yFraco e #yVulnerável a TODOS os inimigos."
+    ]
+  },
+  "sneckomod:CrystallizedMud": {
+    "NAME": "Pingente Hipnotizante",
+    "FLAVOR": "Sujeira deslumbrante.",
+    "DESCRIPTIONS": [
+      "Ganhe [E] no início do seu turno. Cartas #ysneckomod:Muddled não podem custar #b0."
+    ]
+  },
+  "sneckomod:LoadedDie": {
+    "NAME": "Dado Viciado",
+    "FLAVOR": "Recheado de queijo.",
+    "DESCRIPTIONS": [
+      "Cartas que escolhem números aleatórios têm um mínimo de +1."
+    ]
+  },
+  "sneckomod:RareBoosterPack": {
+    "NAME": "Caixa de Reforço Rara",
+    "FLAVOR": "Em perfeitas condições.",
+    "DESCRIPTIONS": [
+      "Ao pegar, obtenha uma carta #yRara #yNãoIdentificada de cada tipo de carta."
+    ]
+  },
+  "sneckomod:SleevedAce": {
+    "NAME": "Ás com Manga",
+    "FLAVOR": "Todos somos ases.",
+    "DESCRIPTIONS": [
+      "No início de cada combate, ganhe um #yPuro #ySorte com #yRetenção."
+    ]
+  },
+  "sneckomod:UnknownEgg": {
+    "NAME": "Ovo Não Identificado",
+    "FLAVOR": "O que irá nascer? Pague $1000 para ver.",
+    "DESCRIPTIONS": [
+      "#yIdentificar se torna uma ação gratuita. NL As cartas #yNãoIdentificadas nas recompensas de cartas são #yAprimoradas."
+    ]
+  },
+  "sneckomod:SuperSneckoEye": {
+    "NAME": "Super Olho de Snecko",
+    "FLAVOR": "0121012",
+    "DESCRIPTIONS": [
+      "Substitui o #yOlho de Snecko. No início do seu turno, compre #b2 cartas adicionais. Comece cada combate #yConfuso. Na primeira vez que você comprar uma carta que custe #b3 em cada combate, seu custo é reduzido para #b0."
+    ]
+  },
+  "sneckomod:SneckoTalon": {
+    "NAME": "Ídolo da Retromação",
+    "FLAVOR": "Frequentemente chamado de Ídolo de Reto para abreviar.",
+    "DESCRIPTIONS": [
+      "No início do seu turno, reduza o custo da carta mais cara em sua mão em #b1 para este turno."
+    ]
+  },
+  "sneckomod:BlankCard": {
+    "NAME": "Carta em Branco",
+    "FLAVOR": "Imitação de Carta.",
+    "DESCRIPTIONS": [
+      "No início de cada combate, adicione um #ygremlin:Eco de uma carta aleatória do seu baralho à sua mão. Ela custa #b0 ."
+    ]
+  },
+  "sneckomod:D8": {
+    "NAME": "Octaedro Místico",
+    "FLAVOR": "Parece ter um lado mais pesado.",
+    "DESCRIPTIONS": [
+      "Ao pegar, escolha uma carta que selecione um número aleatório para seus efeitos. Essa carta sempre seleciona seu número máximo possível.",
+      "Escolha uma carta para ",
+      "Sempre que ",
+      " é jogada, ela escolhe seu número máximo possível para seu efeito."
+    ]
+  },
+  "sneckomod:BabySnecko": {
+    "NAME": "Filhote de Snecko",
+    "FLAVOR": "Adoravelmente confuso.",
+    "DESCRIPTIONS": [
+      "Causa #b5 de dano a um inimigo aleatório no início do seu turno."
+    ]
+  },
+  "sneckomod:SneckoCommon": {
+    "NAME": "Selo de Aprovação",
+    "FLAVOR": "Eu sou O Ferreiro e este é meu Relíquia favorito na Torre. -Folheto Publicitário do Mercador",
+    "DESCRIPTIONS": [
+      "Ao pegar, escolha #b1 de #b3 cartas #yDesconhecidas #yDo Personagem para adicionar ao seu baralho. Todas as futuras cartas #yDesconhecidas #yDo Personagem encontradas serão deste personagem.",
+      "Todas as cartas #yDesconhecidas Do Personagem encontradas serão ",
+      " cartas."
+    ]
+  },
+  "sneckomod:SneckoBoss": {
+    "NAME": "Ferradura da Sorte",
+    "FLAVOR": "Faça a sua própria sorte.",
+    "DESCRIPTIONS": [
+      "Após pegar, escolha #b1 de #b3 cartas #yDesconhecidas #yDo Personagem. Adicione #b5 cópias dela ao seu baralho. Todos os combates fornecem uma carta adicional da escolha de cartas deste personagem.",
+      "Após pegar, escolha #b5 cartas #yNãoIdentificadas ",
+	  " cartas. Todas as batalhas fornecem uma carta adicional ",
+      " recompensa de carta."
+	]
+  }
+}

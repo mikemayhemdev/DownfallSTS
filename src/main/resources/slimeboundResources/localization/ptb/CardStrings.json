@@ -1,0 +1,386 @@
+{
+  "Slimebound:AcidTongue": {
+    "NAME": "Slime  Espalhante",
+    "DESCRIPTION": "Efeitos que aplicam slimeboundmod:Gosma aplicam mais !M!."
+  },
+  "Slimebound:BestDefense": {
+    "NAME": "Imprudência",
+    "DESCRIPTION": "Seus cards \"Investida\" causam !M! pontos de dano adicionais aos inimigos, e 1 ponto de dano adicional a você."
+  },
+  "Slimebound:CheckThePlaybook": {
+    "NAME": "Consultar Livro de Jogadas",
+    "DESCRIPTION": "Ganhe 4 cards \"Investida\" aleatórios. Eles custam 1 a menos neste combate. NL Exaurir."
+  },
+  "Slimebound:Chomp": {
+    "NAME": "Mordida",
+    "DESCRIPTION": "Causa !D! pontos de dano. NL Reduz o custo de um card \"Investida\" aleatório em sua mão para 0 neste turno.",
+    "UPGRADE_DESCRIPTION": "Causa !D! pontos de dano. NL Reduz o custo de um card \"Investida\" aleatório em sua mão para 0 neste combate."
+  },
+  "Slimebound:ComboTackle": {
+    "NAME": "Investida de Lança",
+    "DESCRIPTION": "Causa !D! pontos de dano. NL Receba !SlimeboundSelfharm! pontos de dano. NL Compre !M! cards."
+  },
+  "Slimebound:CorrosiveSpit": {
+    "NAME": "Cuspe Corrosivo",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Gosma."
+  },
+  "Slimebound:Darklings": {
+    "NAME": "Duo Obscuro",
+    "DESCRIPTION": "slimeboundmod:Divide-se em um slimeboundmod:Slime_Sombrio !M! vezes. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Trio Obscuro"
+  },
+  "Slimebound:Defend_Slimebound": {
+    "NAME": "Defender",
+    "DESCRIPTION": "Ganhe !B! de Proteção."
+  },
+  "Slimebound:DisruptingSlam": {
+    "NAME": "Sobremesa Justa",
+    "DESCRIPTION": "Causa !D! pontos de dano a TODOS os inimigos. NL expansioncontent:Exaura !M! cards \"Lambida\" aleatórios."
+  },
+  "Slimebound:Dissolve": {
+    "NAME": "Lanche Rápido",
+    "DESCRIPTION": "Compre !M! card. NL Exauste um card. Ganhe *Lambidas iguais ao seu custo. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Compre !M! cards. NL Exauste um card. Ganhe *Lambidas iguais ao seu custo. NL Exaurir."
+  },
+  "Slimebound:DivideAndConquer": {
+    "NAME": "Dividir e Conquistar",
+    "DESCRIPTION": "Inflige !D! de dano a um inimigo aleatório para cada Slime. NL slimeboundmod:Absorve todos os Slimes. NL Exaurir."
+  },
+  "Slimebound:DouseInSlime": {
+    "NAME": "Mergulhar em Slime",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Gosma. NL O próximo Golpe usado neste inimigo não remove slimeboundmod:Gosma."
+  },
+  "Slimebound:DuplicatedForm": {
+    "NAME": "Forma Duplicada",
+    "DESCRIPTION": "A primeira carta que visa inimigos é jogada duas vezes a cada turno.",
+    "UPGRADE_DESCRIPTION": "Ganhe [E] a cada turno. NL A primeira carta que visa inimigos é jogada duas vezes a cada turno.",
+    "EXTENDED_DESCRIPTION": [
+      "Precisa de... Vida..."
+    ]
+  },
+  "Slimebound:Equalize": {
+    "NAME": "Equalizar",
+    "DESCRIPTION": "Inflige !D! de dano. NL Cura !M! de Vida. NL slimeboundmod:Consome - Jogue isso duas vezes. NL Exaurir."
+  },
+  "Slimebound:FinishingTackle": {
+    "NAME": "Investida de Abertura",
+    "DESCRIPTION": "Inflige !D! de dano. NL Recebe !SlimeboundSelfharm! de dano. slimeboundmod:Consome - Aplica !M! de Vulnerável."
+  },
+  "Slimebound:FirmFortitude": {
+    "NAME": "Liquidate",
+    "DESCRIPTION": "Injogável se você tiver Força negativa. NL Perde 2 de Força. NL Ganha !M! de slimeboundmod:Potência."
+  },
+  "Slimebound:FlameTackle": {
+    "NAME": "Investida de Chamas",
+    "DESCRIPTION": "Inflige !D! de dano. NL Recebe !SlimeboundSelfharm! de dano. NL Seus cartas de \"Investida\" infligem !M! de dano adicional neste combate."
+  },
+  "Slimebound:FormOfPuddle": {
+    "NAME": "Forma de Poça",
+    "DESCRIPTION": "Ganha 1 Intangível. NL Exaurir."
+  },
+  "Slimebound:ForwardTackle": {
+    "NAME": "Investida Avançado",
+    "DESCRIPTION": "Inflige !D! de dano. NL Recebe !SlimeboundSelfharm! de dano. NL slimeboundmod:Comande duas vezes.",
+    "UPGRADE_DESCRIPTION": "Inflige !D! de dano. NL Recebe !SlimeboundSelfharm! de dano. NL slimeboundmod:Comande três vezes."
+  },
+  "Slimebound:Gluttony": {
+    "NAME": "Gula",
+    "DESCRIPTION": "A primeira vez que você slimeboundmod:Consome cada turno, ganha um *Lambida.",
+    "UPGRADE_DESCRIPTION": "Inato. NL A primeira vez que você slimeboundmod:Consome cada turno, ganha um *Lambida."
+  },
+  "Slimebound:GoopSpray": {
+    "NAME": "Spray de Gosma",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Gosma e !M! Fraqueza a TODOS os inimigos."
+  },
+  "Slimebound:GoopTackle": {
+    "NAME": "Combo de Investida",
+    "DESCRIPTION": "Causa !D! de dano. NL Sofre !SlimeboundSelfharm! de dano. NL Ganha uma carta aleatória de 'Investida'. Ela custa 0 neste turno.",
+    "UPGRADE_DESCRIPTION": "Causa !D! de dano. NL Sofre !SlimeboundSelfharm! de dano. NL Ganha uma carta aleatória de 'Investida' aprimorada. Ela custa 0 neste turno."
+  },
+  "Slimebound:Grow": {
+    "NAME": "Crescer",
+    "DESCRIPTION": "Perde 1 espaço de Gosma em troca de !M! Força e !M! Destreza."
+  },
+  "Slimebound:GrowthPunch": {
+    "NAME": "Soco de Crescimento",
+    "DESCRIPTION": "Ganha !B! de Proteção. NL Causa !D! de dano. NL slimeboundmod:Consume - Aumenta os efeitos desta carta em !M! neste combate."
+  },
+  "Slimebound:HauntingLick": {
+    "NAME": "Lambida Assombrada",
+    "DESCRIPTION": "Aplica !M! Vulnerável e !slime! slimeboundmod:Gosma. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! Vulnerável e !slime! slimeboundmod:Gosma. NL Compra uma carta. NL Exaurir."
+  },
+  "Slimebound:HungryTackle": {
+    "NAME": "Investida Faminta",
+    "DESCRIPTION": "Causa !D! de dano. NL Sofre !SlimeboundSelfharm! de dano. NL expansioncontent:Exhume aleatoriamente uma carta de 'Lambida'.",
+    "UPGRADE_DESCRIPTION": "Causa !D! de dano. NL Sofre !SlimeboundSelfharm! de dano. NL expansioncontent:Exhume 2 cartas aleatórias de 'Lambida'."
+  },
+  "Slimebound:ItLooksTasty": {
+    "NAME": "Parece Saboroso",
+    "DESCRIPTION": "Causa !D! de dano. slimeboundmod:Consume - Ganha um *Lambida.",
+    "UPGRADE_DESCRIPTION": "Causa !D! de dano. slimeboundmod:Consume - Ganha um *Lambida+."
+  },
+  "Slimebound:LeadByExample": {
+    "NAME": "Liderar pelo Exemplo",
+    "DESCRIPTION": "A primeira carta que você jogar a cada turno que atinja inimigos também slimeboundmod:Comande.",
+    "UPGRADE_DESCRIPTION": "Os primeiros !M! cards que você jogar a cada turno que atinja inimigos também slimeboundmod:Comande-os."
+  },
+  "Slimebound:LeechEnergy": {
+    "NAME": "Energia de Sanguessuga",
+    "DESCRIPTION": "Inflige !D! de dano. slimeboundmod:Consome - Ganha [E] e compra !M! carta(s).",
+        "UPGRADE_DESCRIPTION": "Inflige !D! de dano. slimeboundmod:Consome - Ganha [E] e compra !M! carta(s)."
+  },
+  "Slimebound:LeechLife": {
+    "NAME": "Vida de Sanguessuga",
+    "DESCRIPTION": "Etereal. NL Inflige !D! de dano. Cura uma quantidade de PV igual ao dano não protegido. NL Exaurir."
+  },
+  "Slimebound:LeechingTouch": {
+    "NAME": "Golpe de Sanguessuga",
+    "DESCRIPTION": "Inflige !D! de dano. NL slimeboundmod:Consome - Ganha Proteção igual ao valor de slimeboundmod:Gosma do inimigo."
+  },
+  "Slimebound:LevelUp": {
+    "NAME": "Nível Acima",
+    "DESCRIPTION": "Ganha !M! slimeboundmod:Potência.",
+    "UPGRADE_DESCRIPTION": "Ganha !M! slimeboundmod:Potência e 1 espaço de Slime."
+  },
+  "Slimebound:Lick": {
+    "NAME": "Lambida",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Gosma. NL Exaurir - slimeboundmod:Enterrada.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! Fraqueza e !slime! slimeboundmod:Gosma. NL Compre uma carta. NL Exaurir - slimeboundmod:Enterrada."
+  },
+  "Slimebound:LivingWall": {
+    "NAME": "Muro Vivo",
+    "DESCRIPTION": "Ganha !B! Proteção. NL Aplica !slime! slimeboundmod:Gosma nos atacantes deste turno."
+  },
+  "Slimebound:MassFeed": {
+    "NAME": "Alimentação em Massa",
+    "DESCRIPTION": "Inflige !D! de dano em TODOS os inimigos. NL Se Fatal, aumenta seu PV Máximo em !M!. NL Exaurir."
+  },
+  "Slimebound:MassRepurpose": {
+    "NAME": "Reutilização em Massa",
+    "DESCRIPTION": "slimeboundmod:Absorve TODOS os Slimes. slimeboundmod:Divide em um slimeboundmod:Especialista aleatório para cada um. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorve TODOS os Slimes. slimeboundmod:Divide em um slimeboundmod:Especialista aleatório para cada um. slimeboundmod:Comande-os. NL Exaurir."
+  },
+  "Slimebound:MegaLick": {
+    "NAME": "Mega-Lambida",
+    "DESCRIPTION": "Aplica !M! Fraqueza e !slime! slimeboundmod:Gosma em TODOS os inimigos. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! Fraqueza e !slime! slimeboundmod:Gosma em TODOS os inimigos. NL Compre uma carta. NL Exaurir."
+  },
+  "Slimebound:MinionMaster": {
+    "NAME": "Mestre dos Lacaios",
+    "DESCRIPTION": "Sempre que você joga uma carta com slimeboundmod:Comande, jogue slimeboundmod:Comande novamente.",
+    "UPGRADE_DESCRIPTION": "Inato. NL Sempre que você joga uma carta com slimeboundmod:Comande, jogue slimeboundmod:Comande novamente."
+  },
+  "Slimebound:Nibble": {
+    "NAME": "Mordida e Lambida",
+    "DESCRIPTION": "Causa !D! de dano. NL Ganhe um *Lambida. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Causa !D! de dano. NL Ganhe um *Lambida. NL Compre um card. NL Exaurir."
+  },
+  "Slimebound:OneTwoCombo": {
+    "NAME": "Combo Um-Dois",
+    "DESCRIPTION": "Causa !D! de dano. NL Quando você slimeboundmod:Dividir, retorne esta carta do descarte para a sua mão.",
+    "UPGRADE_DESCRIPTION": "Causa !D! de dano. NL slimeboundmod:Comande. NL Quando você slimeboundmod:Dividir, retorne esta carta do descarte para a sua mão."
+  },
+  "Slimebound:OozeBath": {
+    "NAME": "Banho de Gosma",
+    "DESCRIPTION": "Aplica !M! slimeboundmod:Gosma em um inimigo alvo no início de cada turno dele. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Triplica o slimeboundmod:Gosma do inimigo. NL Exaurir."
+  },
+  "Slimebound:Overexert": {
+    "NAME": "Sobre-exertar",
+    "DESCRIPTION": "Ganhe 4 de slimeboundmod:Potência. NL Em !M! turnos, slimeboundmod:Absorva todos os Slimes.",
+    "UPGRADE_DESCRIPTION": "Ganhe 4 de slimeboundmod:Potência. NL slimeboundmod:Comande duas vezes. NL Em !M! turnos, slimeboundmod:Absorva todos os Slimes."
+  },
+  "Slimebound:Prepare": {
+    "NAME": "Preparar",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL No próximo turno, ganhe [E] e compre !M! cards. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "No próximo turno, ganhe [E] e compre !M! cards. NL Retenha até !M! cards neste turno. Exaurir."
+  },
+  "Slimebound:PrepareCrush": {
+    "NAME": "Preparar: Esmagar",
+    "DESCRIPTION": "No próximo turno, ganhe *SLIME *CRUSH, [E] [E] [E] e !M! de Força. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "No próximo turno, ganhe *SLIME *CRUSH+, [E] [E] [E] [E] e !M! de Força. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+      "~Slime...~ NL #r~ESMAGAR!!!~"
+    ]
+  },
+  "Slimebound:PressTheAttack": {
+    "NAME": "Golpe Feroz",
+    "DESCRIPTION": "Cause !D! de dano. slimeboundmod:Consumir - slimeboundmod:Comande.",
+    "UPGRADE_DESCRIPTION": "Cause !D! de dano. slimeboundmod:Consumir - slimeboundmod:Comande duas vezes."
+  },
+  "Slimebound:ProtectTheBoss": {
+    "NAME": "Proteger o Chefe",
+    "DESCRIPTION": "Impede o próximo ataque inimigo que causaria dano, slimeboundmod:Absorvendo seu Slime líder.",
+    "UPGRADE_DESCRIPTION": "Impede os próximos 2 ataques inimigos que causariam dano a você, slimeboundmod:Absorvendo seu Slime líder. slimeboundmod:Absorver."
+  },
+  "Slimebound:RainOfGoop": {
+    "NAME": "Chuva de Gosma",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Gosma em um inimigo aleatório !M! vezes.",
+    "UPGRADE_DESCRIPTION": "Aplica !slime! slimeboundmod:Gosma em um inimigo aleatório !M! vezes."
+  },
+  "Slimebound:RallyTheTroops": {
+    "NAME": "Encorajar as Tropas",
+    "DESCRIPTION": "Cause !D! de dano. NL As próximas !M! cartas jogadas neste turno desencadeiam o slimeboundmod:Comande."
+  },
+  "Slimebound:Recollect": {
+    "NAME": "Recordar",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL expansioncontent:Exume uma carta \"Lambida\" aleatória.",
+    "UPGRADE_DESCRIPTION": "Ganhe !B! de Proteção. NL expansioncontent:Exume 2 cartas \"Lambida\" aleatórias.",
+    "EXTENDED_DESCRIPTION": [
+        "Não... Exaurida..."
+    ]
+  },
+  "Slimebound:Recycling": {
+    "NAME": "Reciclagem",
+    "DESCRIPTION": "No início do seu turno, expansioncontent:Exume uma carta \"Lambida\" aleatória.",
+    "UPGRADE_DESCRIPTION": "Inato. NL No início do seu turno, expansioncontent:Exume uma carta \"Lambida\" aleatória."
+  },
+  "Slimebound:RejuvenatingLick": {
+    "NAME": "Lambida Revigorante",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Gosma duas vezes. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Aplica !slime! slimeboundmod:Gosma duas vezes. NL Compre uma carta. NL Exaurir."
+  },
+  "Slimebound:Replication": {
+    "NAME": "Replicação",
+    "DESCRIPTION": "Escolha uma carta. NL Coloque uma cópia no topo do seu baralho. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Escolha uma carta. NL Ganhe uma cópia dela. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+      "para adicionar uma cópia à sua mão.",
+      "para colocar uma cópia no topo do seu baralho."
+    ]
+  },
+  "Slimebound:Repurpose": {
+    "NAME": "Reutilização",
+    "DESCRIPTION": "slimeboundmod:Absorva - slimeboundmod:Divida-se em um slimeboundmod:Especialista aleatório. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorva - slimeboundmod:Divida-se em um slimeboundmod:Especialista aleatório. NL slimeboundmod:Comande. NL Exaurir."
+  },
+  "Slimebound:RollThrough": {
+    "NAME": "Rolar por cima",
+    "DESCRIPTION": "Causar !D! de dano a TODOS os inimigos. NL Você não recebe dano da próxima carta \"Investida\" !M! vezes."
+  },
+  "Slimebound:SamplingLick": {
+    "NAME": "Lambida Amostral",
+    "DESCRIPTION": "Aplicar !slime! slimeboundmod:Gosma. NL Ganhe !B! de Proteção. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Aplicar !slime! slimeboundmod:Gosma. NL Ganhe !B! de Proteção. NL Comprar uma carta. NL Exaurir."
+  },
+  "Slimebound:Schlurp": {
+    "NAME": "Schlurp",
+    "DESCRIPTION": "Aplicar !slime! slimeboundmod:Gosma. NL Ganhe !M! *Lambida.",
+    "UPGRADE_DESCRIPTION": "Aplicar !slime! slimeboundmod:Gosma. NL Ganhe !M! *Lambidas."
+  },
+  "Slimebound:SelfFormingGoo": {
+    "NAME": "Autoformação de Goo",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL Coloque uma carta do seu descarte no topo do seu baralho."
+  },
+  "Slimebound:ServeAndProtect": {
+    "NAME": "Servir e Proteger",
+    "DESCRIPTION": "Ganhe !B! de Proteção e 1 bronze:Desfoque para cada Slime. NL slimeboundmod:Absorva todos os Slimes. NL Exaurir."
+  },
+  "Slimebound:SlimeBarrage": {
+    "NAME": "Pilha de Slime!",
+    "DESCRIPTION": "Causar !D! de dano. slimeboundmod:Comande TODOS os slimes.",
+    "UPGRADE_DESCRIPTION": "Causar !D! de dano. slimeboundmod:Comande TODOS os slimes duas vezes."
+  },
+  "Slimebound:SlimeBrawl": {
+    "NAME": "Briga de Slime",
+    "DESCRIPTION": "Jogue a carta do topo do seu baralho. Repita para cada um dos seus Slimes gerados. NL Exaurir."
+  },
+  "Slimebound:SlimeCrush": {
+    "NAME": "ESMAGAMENTO DE SLIME!!!",
+    "DESCRIPTION": "Etereo. NL Causar !D! de dano. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Etereo. NL Causar !D! de dano a TODOS os inimigos. NL Exaurir."
+  },
+  "Slimebound:SlimeSlap": {
+    "NAME": "Tapa de Slime",
+    "DESCRIPTION": "Inflige !D! de dano. NL Não remove slimeboundmod:Gosma."
+  },
+  "Slimebound:SlimeSpikes": {
+    "NAME": "Espinhos de Slime",
+    "DESCRIPTION": "Ganhe !B! de Proteção e !M! de Espinhos temporários."
+  },
+  "Slimebound:SlimeTap": {
+    "NAME": "Toque de Slime",
+    "DESCRIPTION": "slimeboundmod:Absorver - Ganhe [E] e compre !M! cartas. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorver - Ganhe [E] [E] e compre !M! cartas. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+        "Precisa... de Slime..."
+    ]
+  },
+  "Slimebound:SpikyOuterGoop": {
+    "NAME": "Armadura de Slime",
+    "DESCRIPTION": "Ganhe !M! de Proteção sempre que você slimeboundmod:Consumir."
+  },
+  "Slimebound:Split": {
+    "NAME": "Divisão",
+    "DESCRIPTION": "slimeboundmod:Divida-se em um Slime aleatório."
+  },
+  "Slimebound:SplitAcid": {
+    "NAME": "Divisão: Guerrilha",
+    "DESCRIPTION": "slimeboundmod:Divida-se em um slimeboundmod:Slime_de_Guerrilha. NL slimeboundmod:Comande !M! vezes. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Divida-se em um slimeboundmod:Slime_de_Guerrilha. NL slimeboundmod:Comande três vezes. NL Exaurir."
+  },
+  "Slimebound:SplitBruiser": {
+    "NAME": "Divisão: Brigão",
+    "DESCRIPTION": "slimeboundmod:Divida-se em um slimeboundmod:Slime_Brigão. NL slimeboundmod:Comande !M! vezes. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Divida-se em um slimeboundmod:Slime_Brigão. NL slimeboundmod:Comande três vezes. NL Exaurir."
+  },
+  "Slimebound:SplitGreed": {
+    "NAME": "Reviver Ganância",
+    "DESCRIPTION": "Retenha. NL Chame um Ooze de Ganância. NL Exaurir."
+  },
+  "Slimebound:SplitLeeching": {
+    "NAME": "Divisão: Sugadora",
+    "DESCRIPTION": "slimeboundmod:Divida-se em um slimeboundmod:Slime_Sugador. NL slimeboundmod:Comande !M! vezes. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Divida-se em um slimeboundmod:Slime_Sugador. NL slimeboundmod:Comande três vezes. NL Exaurir."
+  },
+    "Slimebound:SplitMire": {
+    "NAME": "Dividir: Gosmento",
+    "DESCRIPTION": "slimeboundmod:Divide-se em um slimeboundmod:Slime_Gosmento. NL Comande !M! vezes. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Divide-se em um slimeboundmod:Slime_Gosmento. NL slimeboundmod:Comande três vezes. NL Exaurir."
+  },
+  "Slimebound:SplitScrap": {
+    "NAME": "Reviver Sucata",
+    "DESCRIPTION": "Retenção. NL Invocar Ooze Sucata. NL Exaurir."
+  },
+  "Slimebound:SplitSpecialist": {
+    "NAME": "Dividir: Especialista",
+    "DESCRIPTION": "Escolha 1 dos 3 slimeboundmod:Especialista para slimeboundmod:dividir-se. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Escolha 1 dos 3 slimeboundmod:Especialista para slimeboundmod:dividir-se. NL slimeboundmod:Comande. NL Exaurir."
+  },
+  "Slimebound:Strike_Slimebound": {
+    "NAME": "Golpe",
+    "DESCRIPTION": "Causar !D! de dano."
+  },
+  "Slimebound:Tackle": {
+    "NAME": "Investida",
+    "DESCRIPTION": "Causar !D! de dano. NL Sofrer !SlimeboundSelfharm! de dano."
+  },
+  "Slimebound:TagTeam": {
+    "NAME": "Corte de Geleia",
+    "DESCRIPTION": "Causar !D! de dano. NL slimeboundmod:Divide-se em um Slime aleatório. NL slimeboundmod:Comande !M! vezes.",
+    "UPGRADE_DESCRIPTION": "Causar !D! de dano. NL slimeboundmod:Divide-se em um Especialista aleatório. NL slimeboundmod:Comande !M! vezes."
+  },
+  "Slimebound:Teamwork": {
+    "NAME": "Trabalho em Equipe",
+    "DESCRIPTION": "slimeboundmod:Comande X vezes. NL Ganhar !B! de Proteção X vezes.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Comande X+1 vezes. NL Ganhar !B! de Proteção X+1 vezes."
+  },
+  "Slimebound:TongueLash": {
+    "NAME": "Chicotada de Língua",
+    "DESCRIPTION": "Causar !D! de dano. Causa !M! de dano adicional para cada carta \"Lambida\" Exaurida."
+  },
+  "Slimebound:ViciousTackle": {
+    "NAME": "Investida Viciosa",
+    "DESCRIPTION": "Causar !D! de dano. NL Sofrer !SlimeboundSelfharm! de dano. Isso ganha o dobro do bônus de dano do slimeboundmod:Gosma.",
+    "UPGRADE_DESCRIPTION": "Causar !D! de dano. NL Sofrer !SlimeboundSelfharm! de dano. Isso ganha o dobro do bônus de dano e cura do slimeboundmod:Gosma."
+  },
+  "Slimebound:WasteNot": {
+    "NAME": "Não Desperdice",
+    "DESCRIPTION": "expansioncontent:Exaura todas cartas \"Lambida\" . NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Exaura todas cartas \"Lambida\" .",
+    "EXTENDED_DESCRIPTION": [
+      "Não... Exaura..."
+    ]
+  }
+}

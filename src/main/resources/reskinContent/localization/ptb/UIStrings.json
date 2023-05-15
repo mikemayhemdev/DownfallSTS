@@ -1,0 +1,95 @@
+{
+  "reskinContent:ReSkin": {
+    "TEXT": [
+      "Pele",
+      "Original"
+    ]
+  },
+  "reskinContent:PortraitAnimation": {
+    "TEXT": [
+      "Tipo de Retrato"
+    ]
+  },
+  "reskinContent:PortraitAnimationType": {
+    "TEXT": [
+      "Estático",
+      "Animado",
+      "Efeito Completo"
+    ]
+  },
+  "reskinContent:BetaArtUnlockEffect": {
+    "TEXT": [
+      "Arte Alternativa Desbloqueada para o Guardião!",
+      "Arte Alternativa Desbloqueada para o Chefe de Slimes!",
+      "Arte Alternativa Desbloqueada para o Hexágono Fantasma!",
+      "Arte Alternativa Desbloqueada para o Snecko!",
+      "Arte Alternativa Desbloqueada para o Campeão!",
+      "Arte Alternativa Desbloqueada para o Autômato!"
+    ]
+  },
+  
+  "reskinContent:ReSkinGuardian": {
+    "TEXT": [
+      "Guardião Chan",
+      "Arte Conceitual"
+    ],
+    "EXTRA_TEXT": [
+      "Uma construção da Torre, programada para defendê-la. NL Capaz de se defender de danos por comando.",
+      "Uma das primeiras versões do Guardião. NL Funcionou melhor no papel."
+    ]
+  },
+  "reskinContent:ReSkinSlime": {
+    "TEXT": [
+      "Slaifu",
+      "Chefe de Slimes?"
+    ],
+    "EXTRA_TEXT": [
+      "Este slime incomum adora comer relíquias saborosas. NL Ele serve o Coração completamente por acidente.",
+      "Este é... o Chefe de Slimes? Parece extremamente amigável. NL Bem, seu chapéu é certamente o maior da Torre, então deve estar no comando..."
+    ]
+  },
+  "reskinContent:ReSkinHexaghost": {
+    "TEXT": [
+      "Hexago",
+      "Fantasma-Hexágono",
+      "Lâmpada Fantasma"
+    ],
+    "EXTRA_TEXT": [
+      "Um espírito amaldiçoado da Torre. NL Selado para um destino eterno como protetor.",
+      "Gosta de perseguir círculos amarelos em seus dias de folga. NL Tem um medo incapacitante de pílulas de poder.",
+      "Antigo parceiro de Hexaghost. NL Decidiu parar de matar aventureiros para um emprego mais estável vendendo desejos."
+    ]
+  },
+  "reskinContent:ReSkinSnecko": {
+    "TEXT": [
+      "SSSSnecko",
+      "Sneckdor"
+    ],
+    "EXTRA_TEXT": [
+      "Usa seus olhos para induzir desvio cognitivo, disfarçando sua verdadeira forma. NL Estudos mostram que criaturas confusas veem um mundo completamente diferente.",
+      "Buscando maior força, este Snecko ambicioso seguiu os passos de seu herói. NL Adotando muitos Vs consumados e um braço musculoso, ele se chama \"Sneckdor\"."
+    ]
+  },
+  "reskinContent:ReSkinChamp": {
+    "TEXT": [
+      "Chan-p",
+      "Campeã da Lavanderia"
+    ],
+    "EXTRA_TEXT": [
+      "Sua espada parece impossível de ser empunhada por ela, NL mas na verdade ela é a única forte o suficiente para levantá-la.",
+      "É dia de lavanderia."
+    ]
+  },
+  "reskinContent:ReSkinBronze": {
+    "TEXT": [
+      "Autômato",
+      "\"Autômato\"",
+      "O Perfeito"
+    ],
+    "EXTRA_TEXT": [
+      "",
+      "Sim! Do topo aos pés, esse é o Autômato, certo! NL Nunca vi nada que se parecesse mais com o Autômato!",
+      "[INICIALIZAÇÃO] Sistemas Principais Online - Sem Falhas Detectadas NL [OBJETIVO] BALANCE será IMPOSTO"
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+[  
+  {
+    "NAMES": [
+      "soquete",
+      "soquetes",
+      "encaixado"
+    ],
+    "PROPER_NAME": "Soquete",
+    "DESCRIPTION": "#yGemas podem ser colocadas neste Soquete em um local de descanso."
+  },
+  {
+    "NAMES": [
+      "stasis",
+	  "estase",
+	  "estases"
+    ],
+    "PROPER_NAME": "Estase",
+    "DESCRIPTION": "Um card em Estase fica lá por um número de turnos igual ao seu custo mais #b1. NL Quando ele sair, ele será retornado à sua mão e custará #b0 até ser jogado."
+  },
+  {
+    "NAMES": [
+      "gema",
+      "gemas",
+	  "gem",
+      "gems"
+    ],
+    "PROPER_NAME": "Gema",
+    "DESCRIPTION": "Gemas podem ser colocadas em #ySoquetes de cards em um local de descanso. Não pode ser #yAprimorada."
+  },
+  {
+    "PROPER_NAME": "Modo Defensivo",
+    "NAMES": [
+      "defensive_mode",
+      "modo_defensivo",
+      "defensivo",
+	  "modo"
+    ],
+    "DESCRIPTION": "#yPostura. NL Quando em Modo Defensivo, você tem #b3 #yEspinhos, ganha #b10 #yProteção no início do seu turno e seu #yProteção não expira."
+  },
+  {
+    "NAMES": [
+      "accelerate",
+	  "acelerar",
+	  "acelera",
+	  "acelere"
+    ],
+    "PROPER_NAME": "Acelerar",
+    "DESCRIPTION": "Reduza o contador de turno do card mais à direita na #yEstase em #b1."
+  },
+  {
+    "NAMES": [
+      "pacote",
+      "pacotes"
+    ],
+    "PROPER_NAME": "Pacote",
+    "DESCRIPTION": "Habilidade #yEsgotadora de custo 0 que gera três cards inspirados em um Construto escolhido da Torre."
+  },
+  {
+    "NAMES": [
+      "volátil"
+    ],
+    "PROPER_NAME": "Volátil",
+    "DESCRIPTION": "Quando este card sai da #yEstase, ele é #yExaurido."
+  },
+  {
+    "NAMES": [
+      "tick",
+	  "marca"
+    ],
+    "PROPER_NAME": "Marca",
+    "DESCRIPTION": "Quando o contador de turno da #yEstase acaba o custo da carta é reduzido..."
+  },
+  {
+    "NAMES": [
+      "buffer"
+    ],
+    "PROPER_NAME": "Buffer",
+    "DESCRIPTION": "Previne a próxima vez que você perderia PV."
+  },
+  {
+    "NAMES": [
+      "brace", "fortalecer"
+    ],
+    "PROPER_NAME": "Fortalecer",
+    "DESCRIPTION": "Reduza a perda de PV necessária para ativar a #yMudança de #yModo em X."
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "PROPER_NAME": "Snekproof",
+    "NAMES": [
+      "snekproof"
+    ],
+    "DESCRIPTION": "Cartas Snekproof não são afetadas por #yConfusão e não podem ser #yEmbaralhar."
+  },
+  {
+    "PROPER_NAME": "Embaralhar",
+    "NAMES": [
+      "embaralhadas",
+	  "embaralhe",
+	  "embaralhar",
+	  "misturar",
+      "misture-a",
+	  "misture-o",
+	  "confuso",
+	  "muddle",
+      "muddled"
+    ],
+    "DESCRIPTION": "Misturar uma carta muda seu custo neste turno para um valor entre #b0 e #b3 aleatoriamente."
+  },
+  {
+    "PROPER_NAME": "Fora de Classe",
+    "NAMES": [
+      "fora de classe",
+	  "fora_de_classe",
+	  "offclass"
+    ],
+    "DESCRIPTION": "Uma carta Fora de Classe é qualquer carta obtida de uma classe diferente da sua (incluindo cartas sem cor, Maldições e Estados)."
+  },
+  {
+    "PROPER_NAME": "Identificar",
+    "NAMES": [
+      "identificada",
+	  "identifica",
+	  "identificadas",
+	  "identificar",
+	  "identifique-a"
+    ],
+    "DESCRIPTION": "Substitui uma carta #yUnidentified por sua carta atual aleatoriamente permanentemente."
+  },
+  {
+    "PROPER_NAME": "Sortudo",
+    "NAMES": [
+      "lucky",
+	  "sortudo"
+    ],
+    "DESCRIPTION": "Cartas que escolhem um número aleatório como parte do texto da carta escolhem o número máximo possível. (Não afeta Embaralhar)"
+  }
+]

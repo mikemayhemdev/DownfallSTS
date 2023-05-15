@@ -240,7 +240,8 @@ public class downfallMod implements
             Settings.GameLanguage.KOR,
             Settings.GameLanguage.FRA,
             Settings.GameLanguage.ZHT,
-            Settings.GameLanguage.RUS
+            Settings.GameLanguage.RUS,
+            Settings.GameLanguage.PTB
     };
 
     public static String[] SupportedLanguagesStrings = {

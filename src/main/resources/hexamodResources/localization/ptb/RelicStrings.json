@@ -1,0 +1,94 @@
+{
+  "hexamod:SpiritBrand": {
+    "NAME": "Marca Espiritual",
+    "FLAVOR": "Um protetor aprisionado.",
+    "DESCRIPTIONS": [
+      "A primeira vez que você #yAtiva uma Chama Fantasma a cada turno, ganhe #b4 #yBloqueio."
+    ]
+  },
+  "hexamod:TheBrokenSeal": {
+    "NAME": "O Selo Quebrado",
+    "FLAVOR": "Poder ilimitado, desenfreado, inextinguível.",
+    "DESCRIPTIONS": [
+      "Ao pegar, aumente seu Max HP em #b10, então cure todos os seus HP. Comece cada combate com #b2 #yForça, #b2 #yDestreza e #b2 #yIntensidade. Você não pode receber #pO #pSelo #pQuebrado novamente."
+    ]
+  },
+  "hexamod:UnbrokenSoul": {
+    "NAME": "Marca do Éter",
+    "FLAVOR": "Vamos ver se podemos fazer... melhor.",
+    "DESCRIPTIONS": [
+      "Substitui ",
+      ".[] NL A primeira vez que você #yAtiva uma Chama Fantasma a cada turno, ganhe [E] ."
+    ]
+  },
+  "hexamod:IceCube": {
+    "NAME": "Amuleto de Gelo de Xanatos",
+    "FLAVOR": "Eu sinto... frio.",
+    "DESCRIPTIONS": [
+      "Ganhe [E] no início do seu turno. #yhexamod:QueimadeAlma leva #b4 turnos para se ativar. Comece cada combate com #b1 menos #yIntensidade."
+    ]
+  },
+  "hexamod:SoulConsumer": {
+    "NAME": "Pedra Térmica",
+    "FLAVOR": "Um fogo daria vida a isso!",
+    "DESCRIPTIONS": [
+      "Se #yhexamod:QueimadeAlma detonar, cure #b4 HP no final do combate."
+    ]
+  },
+  "hexamod:RecyclingMachine": {
+    "NAME": "Reciclador",
+    "FLAVOR": "Um dia, isso também será reciclado.",
+    "DESCRIPTIONS": [
+      "A primeira vez que um card #yEterno que não seja uma Condição ou Maldição for #yExaurido a cada combate, adicione uma cópia à sua mão que custa #b0 até ser jogada."
+    ]
+  },
+  "hexamod:MatchstickCase": {
+    "NAME": "Fósforo de Teca Sorrateiro",
+    "FLAVOR": "Acende em qualquer superfície!",
+    "DESCRIPTIONS": [
+      "No início de cada combate, #yhexamod:Ativar a Chama Fantasma atual e #yhexamod:Avançar."
+    ]
+  },
+  "hexamod:InflammatoryLetter": {
+    "NAME": "Pote de TOBSCo",
+    "FLAVOR": "Um pouco mais de calor torna tudo melhor.",
+    "DESCRIPTIONS": [
+      "Comece cada combate com #b1 #yhexamod:Intensidade."
+    ]
+  },
+  "hexamod:SoulOfChaos": {
+    "NAME": "Alma do Caos",
+    "FLAVOR": "O caos, tornado manifesto.",
+    "DESCRIPTIONS": [
+      "O quarto Ghostflame se torna uma #yMayhem #yGhostflame. NL #yMayhem #yGhostflame é ativada quando você termina o turno sobre ela. NL #yIgnição: Jogue a carta do topo do seu baralho de descarte."
+    ]
+  },
+  "hexamod:JarOfFuel": {
+    "NAME": "Escudo de Olexa",
+    "FLAVOR": "Proteção sob demanda.",
+    "DESCRIPTIONS": [
+      "Troque as posições do #yBolstering #yGhostflame e do primeiro #ySearing #yGhostflame."
+    ]
+  },
+  "hexamod:BolsterEngine": {
+    "NAME": "Haste de Reforço do Tricky",
+    "FLAVOR": "Respaldada pelo estudo de mil livros. O conhecimento é poder!",
+    "DESCRIPTIONS": [
+      "Na primeira vez que você jogar um carta de #yPower a cada combate, ganhe #b6 #yBlock e #b1 #yStrength."
+    ]
+  },
+  "hexamod:CandleOfCauterizing": {
+    "NAME": "Vela Vermelha",
+    "FLAVOR": "O fogo queima...",
+    "DESCRIPTIONS": [
+      "Sempre que um #yAttack causar dano não bloqueado, aplique #b2 #yhexamod:Soulburn."
+    ]
+  },
+  "hexamod:Sixitude": {
+    "NAME": "Marca de Seis Pontos",
+    "FLAVOR": "Fogo, fogo, fogo, fogo, fogo, FOGO!",
+    "DESCRIPTIONS": [
+      "Sempre que você jogar #b6 cartas, cause #b6 de dano a um inimigo aleatório."
+    ]
+  }
+}

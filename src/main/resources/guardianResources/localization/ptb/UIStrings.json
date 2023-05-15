@@ -1,0 +1,41 @@
+{
+  "Guardian:EnhanceBonfireOptions": {
+    "TEXT": [
+      "Aprimorar",
+      "(Ação Gratuita) Coloque uma Gema em um Soquete vazio.",
+      "Requer uma Gema e um Soquete vazio.",
+      "Selecione uma Gema.",
+      "Selecione um Carta para receber a Gema."
+    ]
+  },
+  "Guardian:UIOptions": {
+    "TEXT": [
+      "Escolha uma Carta para colocar em Estase.",
+      "Escolha uma Gema.",
+      "Adicione uma Gema Comum ao seu baralho",
+      "colocar em Estase.",
+      "~ERRO:~ Não é possível #rAtacar no Modo de Construção.",
+      "~ERRO:~ #rEstase em andamento.",
+      "Adicione uma Gema ao seu baralho",
+      ""
+    ]
+  },
+  "Guardian:FindGemsOption": {
+    "TEXT": [
+      "Minerar",
+      "Obtenha 2 Gemas aleatórias.",
+      "Escolha quebrada."
+    ]
+  },
+  "Guardian:BraceMod": {
+    "TEXT": [
+      " NL guardianmod:Brace 2."
+    ]
+  },
+  "Guardian:gemDescriptor": {
+    "TEXT": [
+      "Gema",
+      "guardianmod:Gema. NL "
+    ]
+  }
+}

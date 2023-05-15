@@ -60,12 +60,18 @@ public class FinalCanter extends AbstractDynamicCard {
         for (int ii=0; ii < magicNumber; ii++)
             Wiz.atb(new FinalCanterAction(m,p,this.damage,this));
 
+
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
     }
 
     public void applyPowers() {
         baseMagicNumber = magicNumber = countCards();
         super.applyPowers();
-        this.rawDescription = cardStrings.DESCRIPTION+UPGRADE_DESCRIPTION;
+        if (magicNumber == 1)
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.UPGRADE_DESCRIPTION;
+        else
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
 
