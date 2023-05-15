@@ -167,7 +167,8 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Esprits déchaînés",
-    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire. NL Répétez ceci pour chaque carte *Éthérée qui a été *Épuisée. NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire. NL Répétez ceci pour chaque carte *Éthérée qui a été *Épuisée. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": " NL (Hits !M! time(s).)"
   },
   "hexamod:NightmareStrike": {
     "NAME": "Frappe cauchemardesque",
