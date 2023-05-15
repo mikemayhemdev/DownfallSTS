@@ -1,0 +1,73 @@
+{
+  "bronze:ShapeFactory": {
+    "NAME": "Drone Factory",
+    "DESCRIPTIONS": [
+      "Você tropeça em uma das fábricas de drones abandonadas do Exordium - surpreendentemente, os controles ainda estão funcionando. Se você energizar e desmantelar algumas dessas máquinas em forma, poderá herdar algumas de suas armas.",
+      "Nenhum desses drones possui o que você precisa."
+    ],
+    "OPTIONS": [
+      "[Lutar contra Spiker] #gGanhe #gSpike como recompensa de combate.",
+      "[Lutar contra Repulsor] #gGanhe #gDazing #gPulse como recompensa de combate.",
+      "[Lutar contra Exploder] #gGanhe #gExplode como recompensa de combate.",
+      "[Sair]",
+      "[Iniciar combate]",
+      "[Também lutar contra Spiker] #gGanhe #gSpike como recompensa de combate.",
+      "[Também lutar contra Repulsor] #gGanhe #gDazing #gPulse como recompensa de combate.",
+      "[Também lutar contra Exploder] #gGanhe #gExplode como recompensa de combate."
+    ]
+  },
+  "bronze:AncientFactory": {
+    "NAME": "Ancient Factory",
+    "DESCRIPTIONS": [
+      "Conforme você continua sua descida incansável, você encontrou a fábrica ~original~. Você se lembra de ter estado aqui para sua própria montagem, quando conheceu o ~Shaper~ pela primeira vez. Cada um dos antigos construtos que eles criaram é tão #yperfect quanto você. Existem peças dos antigos protótipos que podem ser úteis para você, mas será necessário ativá-los.",
+      "Mesmo para protótipos inacabados, eles ainda são formidáveis - não há necessidade de riscos desnecessários."
+    ],
+    "OPTIONS": [
+      "[Lutar contra o Protótipo Donu] #gGanhe #gProto-Beam.",
+      "[Lutar contra o Protótipo Deca] #gGanhe #gProto-Shield.",
+      "[Lutar contra ambos] #gGanhe #gAmbas as #gCartas.",
+      "[Sair]"
+    ]
+  },
+  "bronze:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Não há força sem unidade."
+    ],
+    "OPTIONS": [
+      "[Unificação] Todos os #gStrikes e #gDefends ganham #gEncode.",
+      "[Bloqueado] Requer um Strike ou Defend."
+    ]
+  },
+  "bronze:AccursedBlacksmith": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Você decide usar a forja e... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...energiza seu arsenal com novas atualizações e servos."
+    ],
+    "OPTIONS": [
+      "[Mexer] #gAtualize #g3 #gCartas #gAleatórias #gcom #gEncode.",
+      "[Bloqueado] Requer uma carta não atualizada com Encode."
+    ]
+  },
+  "bronze:CrystalForge": {
+    "NAME": "Grim Forge",
+    "DESCRIPTIONS": [
+      "Através de passagens secretas conhecidas apenas pelos Construtos da Torre, você entra em uma câmara projetada para manutenção e reparos em modelos de Autômato. As ferramentas disponíveis aqui serão úteis para você.",
+      "Com as tenazes mágicas, você incorpora cuidadosamente uma arma diretamente em seu núcleo. #y@Bzzzt!@ Parece que programar a si mesmo não é tão fácil quanto você pensava.",
+      "Usando a bigorna encantada, você esmaga uma peça preciosa de equipamento em pedaços, apenas para forjá-los em uma explosão de energia pura. Ela se ~fundirá~ ~em~ ~sua~ ~forma,~ preenchendo-o com calor e força.",
+      "A habilidade da Forja em transmutar a matéria é imediatamente colocada em uso enquanto você joga uma peça de equipamento desnecessária. Alguns momentos depois, o material se dissolve e se comprime em um novo aprimoramento para sua armadura.",
+      "Você escapa pela mesma passagem secreta pela qual entrou, deixando a Forja Sombria para trás. Sua jornada continua em direção ao Amanhecer aguardando no topo da Torre.",
+      "Escolha um carta para remover."
+    ],
+    "OPTIONS": [
+      "[Forjar] #gObter #gCódigo #gEmbalsamado. #rPerder #r10 #rMáx #rHP.",
+      "[Transmutar] #rRemover uma carta. Obter uma carta #galeatória #gcom #gCódigo.",
+      "[Reforjar] #rRemover uma carta #yRara. #gObter #g10 #gMáx #gHP #ge #gCurar #gpara #gcheio.",
+      "[Bloqueado] Já usado.",
+      "[Sair]",
+      "[Bloqueado] Requer uma carta com Código.",
+      "[Bloqueado] Requer uma carta Rara.",
+      "Escolha uma carta para remover."
+    ]
+  }
+}

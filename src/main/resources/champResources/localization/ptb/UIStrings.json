@@ -1,0 +1,44 @@
+{
+  "champ:SealCommonReward": {
+    "TEXT": [
+      "Adicionar um card Comum ao seu deck"
+    ]
+  },
+  "champ:SealSealReward": {
+    "TEXT": [
+      "Adicionar um Selo ao seu deck"
+    ]
+  },
+  "champ:TechniqueMod": {
+    "TEXT": [
+      " NL Trigger *Stance *Skill *Bonus."
+    ]
+  },
+  "champ:OpenerMod": {
+    "TEXT": [
+      " NL Entrar em campeão:Berserker.",
+      " NL Entrar em campeão:Defensivo.",
+      "Entrar em campeão:Gladiador NL "
+    ]
+  },
+  "champ:RetainCardMod": {
+    "TEXT": [
+      "Manter. NL "
+    ]
+  },
+  "champ:EnchantUI": {
+    "TEXT": [
+      "custo 0.",
+      "aumentar dano.",
+      "aumentar Bloqueio."
+    ]
+  },
+  "champ:highlightCombos": {
+    "TEXT": [
+      "*Berserker campeão:Combo:",
+      "[#5ebf2a]Berserker campeão:Combo:",
+      "*Defensivo campeão:Combo:",
+      "[#5ebf2a]Defensivo campeão:Combo:"
+    ]
+  }
+}

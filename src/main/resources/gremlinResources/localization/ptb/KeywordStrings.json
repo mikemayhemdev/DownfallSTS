@@ -1,0 +1,87 @@
+[
+  {
+    "NAMES": [
+      "agonia"
+    ],
+    "PROPER_NAME": "Agonia",
+    "DESCRIPTION": "As criaturas em Agonia causam #b80% menos dano com Ataques."
+  },
+  {
+    "NAMES": [
+      "cegueira", "cegar", "cego"
+    ],
+    "PROPER_NAME": "Cegueira",
+    "DESCRIPTION": "Inimigos com Cegueira não podem mais perder #yFraqueza. Ao final do turno deles, eles perdem HP igual à sua #yFraqueza."
+  },
+  {
+    "NAMES": [
+      "eco",
+      "ecos"
+    ],
+    "PROPER_NAME": "Eco",
+    "DESCRIPTION": "Ecos são cópias de cartas com #yEterno e #yExaustão."
+  },
+  {
+    "NAMES": [
+      "gremlin gordo", "gremlin_gordo"
+    ],
+    "PROPER_NAME": "Gremlin Gordo",
+    "DESCRIPTION": "Após jogar um ataque, aplique #b1 #yFraqueza em todos os alvos."
+  },
+  {
+    "NAMES": [
+      "gremlin mago", "gremlin mago"
+    ],
+    "PROPER_NAME": "Mago Gremlin",
+    "DESCRIPTION": "Após jogar uma habilidade, ganhe #b1 #yMagia."
+  },
+  {
+    "NAMES": [
+      "gremlin maluco", "gremlin_maluco"
+    ],
+    "PROPER_NAME": "Gremlin Maluco",
+    "DESCRIPTION": "Ganhe #b2 #yForça #yTemporária quando for atacado."
+  },
+  {
+    "NAMES": [
+      "gremlin de escudo", "gremlin_de_escudo"
+    ],
+    "PROPER_NAME": "Gremlin Escudo",
+    "DESCRIPTION": "Após jogar uma habilidade, ganhe #b2 #yBloqueio."
+  },
+  {
+    "NAMES": [
+      "gremlin sorrateiro", "gremlin_sorrateiro"
+    ],
+    "PROPER_NAME": "Gremlin Sorrateiro",
+    "DESCRIPTION": "Após jogar um ataque, cause #b3 de dano a um inimigo aleatório."
+  },
+  {
+    "NAMES": [
+      "troca", "troque", "trocar"
+    ],
+    "PROPER_NAME": "Troca",
+    "DESCRIPTION": "Troque de lugar com outro personagem. Não faz nada se não houver um alvo válido."
+  },
+  {
+    "NAMES": [
+      "magia"
+    ],
+    "PROPER_NAME": "Magia",
+    "DESCRIPTION": "Quando você tiver pelo menos três pilhas de Magia, Ataques consomem todas as pilhas para causar #b10 de dano adicional."
+  },
+  {
+    "NAMES": [
+      "roubar", "rouba", "roubo", "roube"
+    ],
+    "PROPER_NAME": "Roubo",
+    "DESCRIPTION": "O alvo perde a quantidade especificada de recurso. Você ganha a quantidade que foi perdida."
+  },
+  {
+    "NAMES": [
+      "nob"
+    ],
+    "PROPER_NAME": "Nobre Gremlin",
+    "DESCRIPTION": "No início do seu turno, adicione #b1 #yBrado, #yCabeçada de Caveira e #yInvestida à sua mão."
+  }
+]

@@ -1,0 +1,213 @@
+{
+  "Guardian:NextTurnGainTemporaryStrengthPower": {
+    "NAME": "Carga Total",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " de #yForça temporária em seu próximo turno."
+    ]
+  },
+  "Guardian:StunnedPower": {
+    "NAME": "Atordoado",
+    "DESCRIPTIONS": [
+      "Pule sua próxima jogada.",
+      "Pule suas próximas #b",
+      " jogadas."
+    ]
+  },
+  "Guardian:FloatingOrbsPower": {
+    "NAME": "Orbes Flutuantes",
+    "DESCRIPTIONS": [
+      "Sempre que você jogar uma carta de custo #y0, cause #b",
+      " de dano a um inimigo aleatório."
+    ]
+  },
+  "Guardian:OrbwalkPower": {
+    "NAME": "Caminhada Orb",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " de #yForça no início de cada turno."
+    ]
+  },
+  "Guardian:ClonePower": {
+    "NAME": "Rerrotear",
+    "DESCRIPTIONS": [
+      "Coloque a próxima carta que você jogar neste turno em #yEstase.",
+      "Coloque as próximas #b",
+      " cartas que você jogar neste turno em #yEstase."
+    ]
+  },
+  "Guardian:GemFinderPower": {
+    "NAME": "Buscador de Gemas",
+    "DESCRIPTIONS": [
+      "Ao final do combate, escolha uma gema #yComum para adicionar ao seu baralho.",
+      "Ao final do combate, escolha #b",
+      " gemas #yComuns para adicionar ao seu baralho."
+    ]
+  },
+  "Guardian:FuturePlansPower": {
+    "NAME": "Planos Futuros",
+    "DESCRIPTIONS": [
+      "Ao final de seu turno, você pode colocar #b",
+      " carta em #yEstase.",
+      " cartas em #yEstase."
+    ]
+  },
+  "Guardian:DefenseModePower": {
+    "NAME": "Modo Defensivo",
+    "DESCRIPTIONS": [
+      "#yModo #yDefensivo permanecerá ativo por #b",
+      " jogadas. #yModo #yDefensivo concede #b",
+      " #yEspinhos, reduz o dano causado em #b25% e concede #b2 #yBloqueio quando você jogar uma carta."
+    ]
+  },
+  "Guardian:ConstructModePower": {
+    "NAME": "Modo de Construção",
+    "DESCRIPTIONS": [
+      "No início de cada turno, se você tiver Buffer, ganhe #b",
+	  "de Força."
+    ]
+  },
+  "Guardian:MultiBoostPower": {
+    "NAME": "Multi-reforço",
+    "DESCRIPTIONS": [
+      "Os ataques que causam dano várias vezes o fazem uma vez adicional.",
+      "Os ataques que causam dano várias vezes o fazem #b",
+	  " vezes adicionais."
+    ]
+  },
+  "Guardian:TargetedPower": {
+    "NAME": "Alvo",
+    "DESCRIPTIONS": [
+      "Cada vez que este inimigo sofre dano, ganhe #b",
+	  "de #yForça para este turno."
+    ]
+  },
+  "Guardian:LoseThornsPower": {
+    "NAME": "Espinhos em queda",
+    "DESCRIPTIONS": [
+      "Perca #b",
+	  "de #yEspinhos no início do seu próximo turno."
+    ]
+  },
+  "Guardian:BeamBuffPower": {
+    "NAME": "Pronto",
+    "DESCRIPTIONS": [
+      "As cartas de Raio causam #b",
+	  " mais de dano."
+    ]
+  },
+  "Guardian:DefensiveModeBuffsPower": {
+    "NAME": "Modo defensivo+",
+    "DESCRIPTIONS": [
+      "Além de seus efeitos normais, #yDefensivo #yMode aplicará: NL #b",
+	  "de #yEspinhos.",
+      "de #yDestreza.",
+      "de #yBloqueio no final de cada turno.",
+      "#yExaurir o primeiro #yStatus ou #yMaldição comprado a cada turno.",
+      "#yExaurir os primeiros #b",
+	  " #yStatus ou #yMaldição comprados a cada turno.",
+      "Ganhe #b",
+	  "de #yForça para cada turno em que #yDefensivo #yMode estava ativo quando termina."
+    ]
+  },
+  "Guardian:AutomayhemPower": {
+    "NAME": "Peneira do tempo",
+    "DESCRIPTIONS": [
+      "No início do seu turno, #yAceleração.",
+      "No início do seu turno, #yAceleração ",
+	  " vezes."
+    ]
+  },
+  "Guardian:ConstructPower": {
+    "NAME": "Construto Antigo",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " #yArtefato",
+      " no início do seu turno se você não tiver #yArtefato."
+    ]
+  },
+  "Guardian:ModeShiftPower": {
+    "NAME": "Mode Shift",
+    "DESCRIPTIONS": [
+      "Quando você perder #b",
+      " PV, ganhe #b10 #yBloqueio, entre em #yModo Defensivo até o próximo turno e aumente a quantidade necessária para ativar este efeito em 10, até um máximo de 50."
+    ]
+  },
+  "Guardian:ExhaustStatusesPower": {
+    "NAME": "Repulse",
+    "DESCRIPTIONS": [
+      "Quando você comprar a primeira carta de #yStatus ou #yMaldição a cada turno, #yEsgote-a e compre uma carta.",
+      "Quando você comprar as primeiras #b",
+      " cartas de #yStatus ou #yMaldição a cada turno, #yEsgote-as e compre uma carta."
+    ]
+  },
+  "Guardian:RevengePower": {
+    "NAME": "Revenge",
+    "DESCRIPTIONS": [
+      "Enquanto estiver em #yModo Defensivo, aumente seu #yForça em #b",
+      " ."
+    ]
+  },
+  "Guardian:StasisEnginePower": {
+    "NAME": "Stasis Engine",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " [E] e compre #b",
+      " carta",
+      " cartas",
+      " sempre que você jogar a 3ª carta de custo 0 em um único turno."
+    ]
+  },
+  "Guardian:EnergizedGuardianPower": {
+    "NAME": "Energizado",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " [E] adicional no próximo turno.",
+      " [E] adicionais no próximo turno.",
+      " - NOTA DO TRADUTOR: - A linha acima é para o plural, se necessário, para distinguir do singular."
+    ]
+  },
+  "Guardian:BlockOnCardUsePower": {
+    "NAME": "Óleo do Armeiro",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " #yBloqueio sempre que você jogar uma carta neste turno."
+    ]
+  },
+  "Guardian:EvasiveProtocolPower": {
+    "NAME": "Protocolo Evasivo",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " #yDestreza enquanto estiver em #yModo #yDefensivo."
+    ]
+  },
+  "Guardian:SpikerProtocolPower": {
+    "NAME": "Protocolo Espinhoso",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " #yEspinhos enquanto estiver em #yModo #yDefensivo."
+    ]
+  },
+  "Guardian:ArmoredProtocolPower": {
+    "NAME": "Protocolo Blindado",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " #yBloqueio quando encerrar seu turno enquanto estiver em #yModo #yDefensivo."
+    ]
+  },
+  "Guardian:DontLeaveDefensiveModePower": {
+    "NAME": "Modo Defensivo",
+    "DESCRIPTIONS": [
+      "Você sairá do #yModo #yDefensivo ao final desta rodada de combate.",
+      "#yModo #yDefensivo estará ativo por mais #b",
+      " rodadas."
+    ]
+  },
+  "Guardian:BracePerTurnPower": {
+    "NAME": "Apoio",
+    "DESCRIPTIONS": [
+      "No início de seu turno, #yApoio #b",
+      " ."
+    ]
+  }
+}

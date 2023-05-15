@@ -1,0 +1,70 @@
+{
+  "hexamod:SearingGhostflame": {
+    "NAME": "Chama Fantasma Ardente",
+    "DESCRIPTION": [
+      "#yIgnited.",
+      "#yIgnite quando #b",
+      "#yAtaque é jogado.",
+      " #yAtaques são jogados.",
+      "#yIgnite quando #b2 #yAtaques são jogados enquanto em cima dela.",
+      " NL NL #yIgnição: Aplica #b",
+      " #ySoulburn a um inimigo aleatório.",
+      " NL NL No final do seu turno, se isso estiver #yIgnitado, avança para a próxima Chama Fantasma."
+    ]
+  },
+  "hexamod:CrushingGhostflame": {
+    "NAME": "Chama Fantasma Esmagadora",
+    "DESCRIPTION": [
+      "#yIgnited.",
+      "#yIgnite quando #b",
+      "#yHabilidade é jogada.",
+      " #yHabilidades são jogadas.",
+      "#yIgnite quando #b2 #yHabilidades são jogadas enquanto em cima dela.",
+      " NL NL #yIgnição: Causa #b",
+      " de dano a um inimigo aleatório duas vezes.",
+      " NL NL No final do seu turno, se isso estiver #yIgnitado, avança para a próxima Chama Fantasma."
+    ]
+  },
+  "hexamod:BolsteringGhostflame": {
+    "NAME": "Chama Fantasma Reforçadora",
+    "DESCRIPTION": [
+      "#yIgnited.",
+      "#yIgnite quando um #yPoder é jogado.",
+      "#yIgnite quando um #yPoder é jogado enquanto em cima dela.",
+      " NL NL #yIgnição: Ganhe #b",
+      " #yBloqueio e #b1 #yForça.",
+      " NL NL No final do seu turno, se isso estiver #yIgnitado, avança para a próxima Chama Fantasma."
+    ]
+  },
+  "hexamod:InfernoGhostflame": {
+    "NAME": "Chama Fantasma Infernal",
+    "DESCRIPTION": [
+      "#yIgnited.",
+      "Ignite quando gastar [E] [E] [E].",
+      "Ignite quando gastar [E] [E].",
+      "Ignite quando gastar [E].",
+      "Erro. Por favor, informe ao desenvolvedor do mod:",
+      "Ignite quando gastar [E] [E] [E] enquanto em cima dela. #yExtingue no final de qualquer turno.",
+      " NL NL #yIgnição: Causa #b",
+      " de dano a um inimigo aleatório para cada #yChama Fantasma #yIgnitada, então #yExtingue as outras.",
+      " NL NL No final do seu turno, se isso estiver #yIgnitado, avança para a próxima #yChama Fantasma.",
+      " NL NL No final do seu turno, se isso estiver #yIgnitado, avança para a próxima #yChama Fantasma."
+    ]
+  },
+  "hexamod:MayhemGhostflame": {
+    "NAME": "Chama Fantasma Caótica",
+    "DESCRIPTION": [
+      "#yArdente. ",
+	  "#yArdente quando você encerra seu turno.",
+	  "#yArdente quando você encerra seu turno sobre ela.",
+	  " NL NL #yIgnição: Jogue a carta do topo do seu baralho de compra.",
+		" NL NL No final do seu turno, se isso estiver #yArdente, #yAvance para a próxima Chama Fantasma."
+    ]
+  }
+}
+
+
+
+
+
+

@@ -115,6 +115,8 @@ import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
 import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
+import guardian.rewards.GemReward;
+import guardian.rewards.GemRewardAllRarities;
 import hermit.HermitMod;
 import downfall.actions.MessageCaller;
 import slimebound.SlimeboundMod;
@@ -238,7 +240,8 @@ public class downfallMod implements
             Settings.GameLanguage.KOR,
             Settings.GameLanguage.FRA,
             Settings.GameLanguage.ZHT,
-            Settings.GameLanguage.RUS
+            Settings.GameLanguage.RUS,
+            Settings.GameLanguage.PTB
     };
 
     public static String[] SupportedLanguagesStrings = {
@@ -595,6 +598,31 @@ public class downfallMod implements
 
         //Hexaghost
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SEALCARD, (rewardSave) -> new SealSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.THIRDSEALCARDREWARD, (rewardSave) -> new ThirdSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        //Guardian
+        BaseMod.registerCustomReward(
+                RewardItemTypeEnumPatch.GEM,
+                (rewardSave) -> { //on load
+                    GuardianMod.logger.info("gems loaded");
+                    return new GemReward();
+                }, (customReward) -> { //on save
+                    GuardianMod.logger.info("gems saved");
+                    return new RewardSave(customReward.type.toString(), null);
+                });
+
+        BaseMod.registerCustomReward(
+                RewardItemTypeEnumPatch.GEMALLRARITIES,
+                (rewardSave) -> { //on load
+                    GuardianMod.logger.info("gems loaded");
+                    return new GemRewardAllRarities();
+                }, (customReward) -> { //on save
+                    GuardianMod.logger.info("gems saved");
+                    return new RewardSave(customReward.type.toString(), null);
+                });
+
+
     }
 
     private void initializeConfig() {

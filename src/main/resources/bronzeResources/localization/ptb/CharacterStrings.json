@@ -1,0 +1,13 @@
+{
+  "bronze:theAutomaton": {
+    "NAMES": [
+      "O Autômato",
+      "o Autômato"
+    ],
+    "TEXT": [
+      "O guardião mecânico da cidade. NL Adapta-se a qualquer situação de combate.",
+      "NL TODAS AS ARMAS -> 100%",
+      "Ao navegar por uma rua mal iluminada, você se depara com várias figuras encapuzadas em meio a um ritual sombrio. Ao se aproximar, eles se viram para você em uma sinistra uníssono. O mais alto entre eles mostra dentes pontiagudos e estende uma longa mão pálida em sua direção. NL ~\"Junte-se~ ~a~ ~nós,~ ~bronzeado~ ~um,~ ~e~ ~sinta~ ~o~ ~calor~ ~do~ ~Pináculo.\"~"
+    ]
+  }
+}

@@ -38,8 +38,9 @@
   {
     "PROPER_NAME": "Chanceux",
     "NAMES": [
-      "chanceux",
-      "lucky"
+      "lucky",
+      "Chanceux",
+      "chanceux"
     ],
     "DESCRIPTION": "Les cartes qui génèrent un nombre aléatoire pour leurs effets choisissent le nombre maximal possible. (N'affecte pas l'action de Confondre)"
   }

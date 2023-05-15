@@ -1,0 +1,11 @@
+{
+  "downfall:CursedFountainPotion": {
+    "NAME": "Líquido da Fonte Amaldiçoada",
+    "DESCRIPTONS": [
+      "Aplica #b",
+      " #yFraqueza, #b",
+      " #yVulnerabilidade, e reduz #yForça em #b",
+      "."
+    ]
+  }
+}

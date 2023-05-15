@@ -157,6 +157,14 @@ public class GemFireAction extends AbstractGameAction {
         }
     }
 
+    public int get_cards(){
+        addGemsFromGroup(AbstractDungeon.player.hand);
+        addGemsFromGroup(AbstractDungeon.player.drawPile);
+        addGemsFromGroup(AbstractDungeon.player.discardPile);
+        addGemsFromGroup(this.gatherStasisCards());
+        return exhaustCount;
+    }
+
     public void update() {
 
         if (this.duration == this.startingDuration) {
@@ -168,10 +176,7 @@ public class GemFireAction extends AbstractGameAction {
                     tickDuration();
                 }
             });
-            addGemsFromGroup(AbstractDungeon.player.hand);
-            addGemsFromGroup(AbstractDungeon.player.drawPile);
-            addGemsFromGroup(AbstractDungeon.player.discardPile);
-            addGemsFromGroup(this.gatherStasisCards());
+            this.get_cards();
             int i = 0;
             for (GuardianMod.socketTypes socket : shots) {
                 AbstractDungeon.effectsQueue.add(new GemShootEffect(socket, i++));

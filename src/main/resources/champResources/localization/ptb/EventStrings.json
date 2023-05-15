@@ -1,0 +1,103 @@
+{
+  "champ:ChampTalk": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "YOU WANT THIS BELT BACK?",
+      "COME AND GET IT!"
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "champ:Colosseum": {
+    "NAME": "The Colosseum",
+    "DESCRIPTIONS": [
+      "Ao continuar descendo a torre, você percebe um grupo de humanoides esperando em emboscada perto de um grande auditório. Quando se aproxima, os Escravistas ficam assustados, mas explicam rapidamente a si mesmos. NL NL \"CAMPEÃO! Você nos honra com sua presença! Você está aqui para enfrentar o novo desafiante?\"",
+      "Um novo desafiante? Que delícia! NL NL No entanto, o desafio pode ter que esperar. A plateia sempre gosta de ver o Campeão abater a mais recente captura...",
+      "Você entra no enorme estádio para encontrar uma plateia transbordante de #bEscravistas, #pCultistas e outros habitantes da Cidade. NL NL ",
+      "@\"QUEM@ @OUSARÁ@ @ME@ @DESAFIAR@?!\"@ você grita para a multidão, convocando este novo 'desafiante'. NL Um cavaleiro se aproxima, vestido com uma armadura surpreendentemente semelhante à sua, apenas encharcado em tinta preta. A multidão aplaude mais do que este impostor merece. NL NL Só pode haver um Campeão!",
+      "@\"O @PRÓXIMO @É @MEU!\"@ você grita para a multidão, que responde com um aplauso ensurdecedor. NL NL Não demora muito para que os Escravistas arrastem sua última captura. O desafiante desprevenido desperta, ~sonolento~ da emboscada, mas se prepara. NL NL Isso deve ser divertido.",
+      "Você decide que, embora seja tentador, lutar aqui seria uma distração desnecessária. Sua jornada continua, e você deixa os Escravistas para retomarem sua emboscada.",
+      "Cavaleiro Negro"
+    ],
+    "OPTIONS": [
+      "[Defender Título] #rLutar contra o Cavaleiro Negro. #gGanhe #gmuitas #grecompensas.",
+      "[Participar] #rLutar contra o Herói Cativo. #gGanhe #gmuitas #grecompensas.",
+      "[Sair]",
+      "[LUTAR!]",
+      "[Continuar]"
+    ]
+  },
+  "champ:Library": {
+    "NAME": "A Biblioteca",
+    "DESCRIPTIONS": [
+      "Você encontra o coração do conhecimento dentro da Cidade - a antiga Biblioteca. NL Lá dentro, você encontra inúmeras fileiras de pergaminhos, manuscritos e livros. NL Você poderia escolher um livro e acomodar-se em uma cadeira para um tempo de silêncio, ou usar este tempo para procurar por um manual mais específico de técnicas de luta.",
+      "Você passa muito tempo vasculhando os corredores de tomos e guias, até finalmente encontrar o livro que procura. NL NL Acomodando-se na confortável cadeira, você leva algum tempo para relembrar posturas e estilos esquecidos. Mesmo um espécime perfeito de luta como você sabe que a mente é tão importante quanto o corpo, e também deve ser exercitada."
+    ],
+    "OPTIONS": [
+      "[Procurar] Localize um #gLivro sobre Luta.",
+      "[Bloqueado] Já possui todos os tomos de Luta."
+    ]
+  },
+  "champ:TechniqueTome": {
+    "NAME": "Tomo da Técnica",
+    "DESCRIPTIONS": [
+      "Ao caminhar por um caminho lateral, você sente uma força invisível imensa guiando seus passos em direção a um novo destino. Logo à frente, você vê um pedestal com um enorme tomo, envolto em alguma energia sinistra e brilhante. NL NL À medida que você se aproxima, as páginas que estavam claramente em branco ganham vida, gravando novas combinações de ataques, posturas marciais, pontos fracos do inimigo - tudo o que você precisa saber sobre lutar. NL NL Parece quase bom demais para ser verdade, mas esse presente, essa oportunidade, esse conhecimento simplesmente não pode ser desperdiçado!",
+      "Inacreditável! As lições que este tomo oferece são de tirar o fôlego. Cada palavra e diagrama saltam da página para sua mente, concedendo-lhe novos métodos de abater seus oponentes. NL NL Infelizmente, tal conhecimento nunca vem sem um custo, e ele cobra um preço em sua psique. Mas há muito mais a aprender...",
+      "Sim. Muito mais. Você não pode parar agora. Com pouca hesitação, você se deixa levar pela riqueza de informações que o tomo tem a oferecer, descobrindo ainda mais vantagens de combate. NL NL Com o custo agora totalmente compreendido, você voluntariamente dá mais de sua energia vital para o livro em troca de sua sabedoria. Mas há muito mais a aprender...",
+      "Reunindo toda a sua força de vontade, você resistiu à tentação de ler o tomo amaldiçoado. Talvez um dia você volte, mas por enquanto - há trabalho a ser feito.",
+      "Qualquer preço que tenha que ser pago valeu a pena para obter este conhecimento precioso. Custa muito esforço se libertar do domínio do livro sobre você, mas você consegue fazê-lo. NL NL Com as lições do tomo frescas em sua mente, você parte em busca de uma nova vítima para testá-las."
+    ],
+    "OPTIONS": [
+      "[Ler] Escolha um Ataque para ganhar #y'acionar #yHabilidade #yBônus.' #rPerder #r",
+      " #rPV.",
+      "[Sair]",
+      "[Trancado] Requer um Cartão de Ataque.",
+      "Escolha um cartão para ganhar #y'acionar #yHabilidade #yBônus.'",
+      "[Ler] Escolha um Ataque para ganhar #y'acionar #yHabilidade #yBônus.' #rAmaldiçoado #r- #rOrgulho."
+    ]
+  }, 
+  "champ:Gym": {
+    "NAME": "Academia",
+    "DESCRIPTIONS": [
+      "Ao longo do caminho descendo a Torre, você se encontra na Academia do Exordium - um lugar que você visita frequentemente para manter a forma e aprimorar seu corpo. NL NL Seria uma oportunidade perdida não descansar um pouco e passar algum tempo aqui. Para se manter no topo, você precisa de todas as vantagens que puder obter.",
+      "O foco de hoje será na resistência. Mantendo a armadura completa, você corre na pista de corrida montada no centro da Academia, realizando uma série completa de várias voltas. NL NL Com uma descarga de adrenalina e energia, você sai da Academia, pronto para enfrentar a ameaça à Torre.",
+      "O foco de hoje será no combate. Você procura rapidamente alguém que pareça capaz de aguentar um golpe e, com pouco respeito pelo que eles tinham planejado fazer, arrasta-os pelo ombro para o ringue de treinamento. Eles não duram muito antes de desistir e encerrar a luta. NL NL Embora esta luta não tenha apresentado nenhum desafio, você percebeu um novo método para abrir um combate, o que certamente será útil para as batalhas que virão.",
+      "O foco de hoje será na tonificação muscular e na força do corpo superior. Você localiza os pesos e sistemas de tensão mais pesados, usando-os para completar vários ciclos de exercícios de tonificação. No final do treino, você já pode sentir que está levantando e puxando com um pouco mais de facilidade do que quando começou. NL NL Ao sair da Academia, você faz uma nota mental para se concentrar na força do corpo inferior na próxima vez que a visitar. Não pode ser ignorada."
+    ],
+    "OPTIONS": [
+      "[Cardio] #gGanhe #g",
+      " #gMax #gHP.",
+      "[Lutar] Escolha um card não-finalizador para ganhar a postura 'Entrar (Escolhido)'.",
+      "[Levantar] #gGanhe #g1 #gForça #gPermanentemente.",
+      "[Sair]",
+      "Escolha um card não-finalizador para dar 'Entrar Defensiva'.",
+      "Escolha um card não-finalizador para dar 'Entrar Gladiador'.",
+      "Escolha um card não-finalizador para dar 'Entrar Berserker'.",
+      "[Bloqueado] Requer um Card que não Entre em uma Postura."
+    ]
+  },
+  "champ:MinorLeagueArena": {
+    "NAME": "Arena da Liga Menor",
+    "DESCRIPTIONS": [
+      "Caminhando pelo Exordium, você encontra uma atração bem conhecida - o antigo local dos jogos brutais que agora acontecem no Coliseu da Cidade. Essa arena menor e menos atraente agora serve como um campo de treinamento e palco de batalha para desafiantes menores. NL NL Esse tipo de competição normalmente está abaixo de você, mas pode ser uma distração divertida.",
+      "Decidindo que seu tempo é melhor gasto em outro lugar, você deixa a arena. Você pode ouvir um suspiro de alívio dos lutadores conforme você parte - claramente, ninguém estava ansioso para morrer hoje em suas mãos."
+   ],
+    "OPTIONS": [
+      "[Lutar contra o Centurião e o Místico] #gGanhar #gManto #gPresilha",
+      "[Lutar contra o Nobre Gremlin] #gGanhar #gCampeão #gCinto",
+      "[Lutar contra a Dupla de Escravos] #gGanhar #gPulseira #gLâmina",
+      "[Sair]"
+    ]
+  },
+  "champ:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Habilidade e confiança formam uma combinação invencível."
+    ],
+    "OPTIONS": [
+      "[Intuição] #gAdicionar #y'desencadeador #yHabilidade #yBônus.' para todos os #gAtaques e #gDefesas.",
+      "[Bloqueado] Requer um Ataque ou Defesa."
+    ]
+  }
+}

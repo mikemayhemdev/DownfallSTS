@@ -185,7 +185,8 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Unleash Spirits",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each Ethereal card in your exhaust pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each Ethereal card in your exhaust pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " NL (Hits !M! time(s).)"
   },
   "hexamod:NightmareStrike": {
     "NAME": "Nightmare Strike",

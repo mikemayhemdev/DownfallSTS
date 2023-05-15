@@ -240,7 +240,7 @@
   "Guardian:GemFire": {
     "NAME": "寶石加農炮",
     "DESCRIPTION": " 消耗 所有 guardianmod:寶石 ，每顆隨機造成 !D! 點傷害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "棄用"
+    "UPGRADE_DESCRIPTION": " NL (造成 !M! 次)"
   },
   "Guardian:ChargeCore": {
     "NAME": "充能核心",

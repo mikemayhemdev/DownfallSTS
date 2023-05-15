@@ -1,0 +1,16 @@
+{
+  "Slimebound": {
+    "NAMES": [
+      "O Chefe Slime"
+    ],
+    "TEXT": [
+      "O general mais viscoso do Coração. NL Pode lutar como um, ou como muitos.",
+      "Precisa... absorver... o Coração...",
+      "Navegando em uma rua sem iluminação, você se depara com várias figuras encapuzadas em meio a um ritual sombrio. Conforme se aproxima, eles se voltam para você em uma sinistra unidade. O mais alto entre eles exibe dentes pontudos e estende uma mão pálida em sua direção. NL ~\"Junte-se~ ~a~ ~nós,~ ~senhor~ ~viscoso,~ ~e~ ~sinta~ ~o~ ~calor~ ~da~ ~Torre.\"~"
+    ],
+    "KEYWORDS": [
+      "O general mais viscoso do Coração.",
+      "Precisa... absorver... o Coração..."
+    ]
+  }
+}

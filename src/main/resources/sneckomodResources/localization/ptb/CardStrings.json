@@ -1,0 +1,334 @@
+{
+  "sneckomod:CheapStock": {
+    "NAME": "Estoque Barato",
+    "DESCRIPTION": "No início de seu turno, reduza o custo da carta sneckomod:Fora_de_Classe de maior custo em sua mão em 1.",
+    "UPGRADE_DESCRIPTION": "Inato. NL No início de seu turno, reduza o custo da carta sneckomod:Fora_de_Classe de maior custo em sua mão em 1."
+  },
+  "sneckomod:Cheat": {
+    "NAME": "Sorte Pura",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Ganhe sneckomod:Sortudo até o final do turno. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Ganhe sneckomod:Sortudo até o final do turno."
+  },
+  "sneckomod:DangerNoodle": {
+    "NAME": "Cobra Perigosa",
+    "DESCRIPTION": "Cause !D! de dano. NL Repita isso para cada carta sneckomod:Fora_de_Classe em sua mão, então Exaura essas cartas."
+  },
+  "sneckomod:Defend": {
+    "NAME": "Defender",
+    "DESCRIPTION": "Ganhe !B! de Proteção."
+  },
+  "sneckomod:DefensiveFlair": {
+    "NAME": "Estilo Defensivo",
+    "DESCRIPTION": "Ganhe !B! de Proteção, aumentado por !M! para cada carta sneckomod:Fora_de_Classe em sua mão."
+  },
+  "sneckomod:DiceBlock": {
+    "NAME": "Proteção de Dados",
+    "DESCRIPTION": "Ganhe !M! - !B! de Proteção."
+  },
+  "sneckomod:DiceBoulder": {
+    "NAME": "Pedra de Dados",
+    "DESCRIPTION": "Cause !M! - !D! de dano. NL Pode ser Aprimorado qualquer número de vezes."
+  },
+  "sneckomod:DiceCrush": {
+    "NAME": "Esmagamento de Dados",
+    "DESCRIPTION": "Cause !M! - !D! de dano."
+  },
+  "sneckomod:GlitteringGambit": {
+    "NAME": "Jogada Reluzente",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Ganhe !M! - 30 *Ouro. NL Exaurir."
+  },
+  "sneckomod:IronFang": {
+    "NAME": "Presas de Ferro",
+    "DESCRIPTION": "Ganhe !M! - !B! de Proteção. NL Cause !qqq! - !D! de dano."
+  },
+  "sneckomod:ImprovisedAttack": {
+    "NAME": "Golpe Improvisado",
+    "DESCRIPTION": "Cause !D! de dano. NL Ganhe um sneckomod:Fora_de_Classe Golpe aleatório e sneckomod:Embaralhe."
+  },
+  "sneckomod:ImprovisedGuard": {
+    "NAME": "Guarda Improvisada",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL Ganhe uma habilidade aleatória de sneckomod:Fora_de_Classe e sneckomod:Emabralhe."
+  },
+  "sneckomod:Nope": {
+    "NAME": "NÃO",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exaurir uma carta. Ganhe uma carta aleatória da mesma classe.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exaurir uma carta. Ganhe uma carta aleatória da mesma classe. NL Ela custa 1 a menos.",
+    "EXTENDED_DESCRIPTION": [
+      " para exaurir com NÃO."
+    ]
+  },
+  "sneckomod:MasterEye": {
+    "NAME": "Olho Mestre",
+    "DESCRIPTION": "Fique Confuso. NL Compre !M! carta adicional por turno.",
+    "UPGRADE_DESCRIPTION": "Fique Confuso. NL Compre !M! cartas adicionais por turno."
+  },
+  "sneckomod:Memorize": {
+    "NAME": "Memorizar",
+    "DESCRIPTION": "sneckomod:Snekproof. Efêmero. NL Escolha uma carta que começou como *Não *identificada. sneckomod:Identifique-a.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Efêmero. Mantenha. NL Escolha uma carta que começou como *Não *identificada. sneckomod:Identifique-a.",
+    "EXTENDED_DESCRIPTION": [
+      " para Identificar."
+    ]
+  },
+  "sneckomod:MixItUp": {
+    "NAME": "Misture Tudo!",
+    "DESCRIPTION": "*Transforme suas Poções. NL Cause !D! de dano !M! vezes. NL Exaurir."
+  },
+  "sneckomod:MorePower": {
+    "NAME": "Mais Poder!",
+    "DESCRIPTION": "Obtenha uma recompensa adicional de cartas *Não identificadas melhoradas no final do combate."
+  },
+  "sneckomod:Mudshield": {
+    "NAME": "Escudo de Lama",
+    "DESCRIPTION": "Sempre que você *Confundir uma carta, ganhe !M! Proteção.",
+    "UPGRADE_DESCRIPTION": "Inato. NL Sempre que você *Confundir uma carta, ganhe !M! Proteção."
+  },
+  "sneckomod:PureSnecko": {
+    "NAME": "Transformação",
+    "DESCRIPTION": "sneckomod:Snekproof. NL *Transforme todas as cartas sneckomod:Fora_de_Classe em sua mão.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL *Transforme todas as cartas sneckomod:Fora_de_Classe em sua mão. NL Elas custam 1 a menos."
+  },
+  "sneckomod:QuickBite": {
+    "NAME": "Mordida Rápida",
+    "DESCRIPTION": "Cause !D! de dano. NL Compre !M! - 2 cartas. NL sneckomod:Embaralhe a carta de maior custo em sua mão."
+  },
+  "sneckomod:QuickMove": {
+    "NAME": "Movimento Rápido",
+    "DESCRIPTION": "Ganhe !B! Proteção. NL sneckomod:Embaralhe a carta de maior custo em sua mão.",
+    "UPGRADE_DESCRIPTION": "Ganhe !B! de Proteção. NL sneckomod:Embaralhe as !M! cartas mais caras na sua mão."
+  },
+  "sneckomod:RainOfDice": {
+    "NAME": "Chuva de Dados",
+    "DESCRIPTION": "Cause !qqq! - !D! de dano a um inimigo aleatório. NL sneckomod:Emborrache ist"
+  },
+  "sneckomod:Restock": {
+    "NAME": "Reabastecer",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Descarte sua mão. NL Compre 5-10 cartas. NL Exaurir."
+  },
+  "sneckomod:Rotation": {
+    "NAME": "Rotação",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Descarte todos os cartões sneckomod:Fora_de_Classe. NL Compre a mesma quantidade de cartas.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Descarte todos os cartões sneckomod:Fora_de_Classe. NL Compre a mesma quantidade de cartas mais !M!."
+  },
+  "sneckomod:SerpentIdol": {
+    "NAME": "Ídolo da Serpente",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Escolha 1 de 3 cartas sneckomod:Fora_de_Classe aleatórias para ganhar. Custa 0 nesta rodada. NL Exaurir."
+  },
+  "sneckomod:SerpentMind": {
+    "NAME": "Forma Exótica",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Sempre que você jogar uma carta sneckomod:Fora_de_Classe, compre 1 carta.",
+    "UPGRADE_DESCRIPTION": "Sempre que você jogar uma carta sneckomod:Fora_de_Classe, compre 1 carta."
+  },
+  "sneckomod:SlitherStrike": {
+    "NAME": "Golpe Rastejante",
+    "DESCRIPTION": "Cause !D! de dano. NL Reduza o custo das cartas sneckomod:Fora_de_classe em sua mão em 1 nesta rodada."
+  },
+  "sneckomod:SnakeSap": {
+    "NAME": "Seiva da Cobra",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Cause !qqq! - !D! de dano. NL Ganhe 1 - !M! [E]. NL Exaurir."
+  },
+  "sneckomod:SnekBeam": {
+    "NAME": "Raio da Cobra",
+    "DESCRIPTION": "Cause dano a TODOS os inimigos igual ao número de cartas não identificadas em seu baralho. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Cause dano a TODOS os inimigos igual ao número de cartas não identificadas em seu baralho.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Causa !D! de dano.) NL Exaurir.",
+      " NL (Causa !D! de dano.)"
+    ]
+  },
+  "sneckomod:SnekBite": {
+    "NAME": "Mordida de Cobra",
+    "DESCRIPTION": "Causar !D! de dano. NL sneckomod:Embaralhar a carta de maior custo em sua mão.",
+    "UPGRADE_DESCRIPTION": "Causar !D! de dano. NL sneckomod:Embaralhar as !M! cartas de maior custo em sua mão."
+  },
+  "sneckomod:SoulCleanse": {
+    "NAME": "Limpeza da Alma",
+    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Embaralhar sua mão. Cartas sneckomod:Embaralhadas desta forma não podem custar 3. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Embaralhar sua mão. Cartas sneckomod:Embaralhadas desta forma não podem custar 3."
+  },
+  "sneckomod:SoulDraw": {
+    "NAME": "Atração da Alma",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Obter !M! carta aleatória sneckomod:Fora_de_Classe. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Comprar 1 - !M! cartas."
+  },
+  "sneckomod:SoulExchange": {
+    "NAME": "Troca de Almas",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Comprar 1 carta, NL Escolha uma carta, então *Transforme sua mão para a classe dessa carta.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Comprar !M! cartas, NL Escolha uma carta, então *Transforme sua mão para a classe dessa carta.",
+    "EXTENDED_DESCRIPTION": [
+      "para Exaurir com Troca de Almas."
+    ]
+  },
+  "sneckomod:SoulRoll": {
+    "NAME": "Rolo de Alma",
+    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Embaralhar sua mão.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Embaralhar sua mão. NL Comprar 1 carta."
+  },
+  "sneckomod:Strike": {
+    "NAME": "Golpe",
+    "DESCRIPTION": "Causar !D! de dano."
+  },
+  "sneckomod:TailWhip": {
+    "NAME": "Chicote de Cauda",
+    "DESCRIPTION": "Causar !D! de dano. NL Aplicar !M! - 2 Fraqueza. NL Aplicar !M! - 2 Vulnerável."
+  },
+  "sneckomod:Transmogrify": {
+    "NAME": "Transmutação",
+    "DESCRIPTION": "Escolha 1 de 2 Relíquias para perder. NL Obtenha uma Relíquia aleatória da mesma raridade. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+	  "Não tenho Relíquias para trocar.",
+	  "Escolha uma Relíquia para perder.",
+	  "Perca ",
+	  " e obtenha outra ",
+	  " Relíquia."
+	]
+  },
+  "sneckomod:TrashToTreasure": {
+    "NAME": "Lixo para Tesouro",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exaurir uma carta. NL Ganhe [E] igual ao seu custo. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exaurir uma carta. NL Ganhe [E] igual ao seu custo."
+  },
+  "sneckomod:UnendingSupply": {
+    "NAME": "Provisão Infinita",
+    "DESCRIPTION": "No início de cada turno, ganhe uma carta sneckomod:Fora_de_Classe aleatória."
+  },
+  "sneckomod:Unknown": {
+    "NAME": "??? Básico",
+    "DESCRIPTION": "*Carta Básica não identificada.",
+    "UPGRADE_DESCRIPTION": "Carta Básica não identificada aprimorada."
+  },
+  "sneckomod:Unknown0Cost": {
+    "NAME": "??? Custo 0",
+    "DESCRIPTION": "*Carta de Custo 0 não identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Custo 0 não identificada aprimorada."
+  },
+  "sneckomod:Unknown1Cost": {
+    "NAME": "??? Custo 1",
+    "DESCRIPTION": "*Carta de Custo 1 não identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Custo 1 não identificada aprimorada."
+  },
+  "sneckomod:Unknown2Cost": {
+    "NAME": "??? Custo 2",
+    "DESCRIPTION": "*Carta de Custo 2 não identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Custo 2 não identificada aprimorada."
+  },
+  "sneckomod:Unknown3Cost": {
+    "NAME": "??? Custo 3",
+    "DESCRIPTION": "*Carta de Custo 3 não identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Custo 3 não identificada aprimorada."
+  },
+  "sneckomod:UnknownBlock": {
+    "NAME": "??? Proteção",
+    "DESCRIPTION": "*Carta de Proteção não identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Proteção não identificada aprimorada."
+  },
+  "sneckomod:UnknownBoss": {
+    "NAME": "Chefão Desconhecido",
+    "DESCRIPTION": "*Carta de Chefe sem Cor Identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Chefe sem Cor Identificada aprimorada."
+  },
+  "sneckomod:UnknownClass": {
+    "NAME": "Classe Desconhecida",
+    "DESCRIPTION": "*Carta YouShouldNeverSeeThis-ReportToDev sem Identificação.",
+    "UPGRADE_DESCRIPTION": "Carta YouShouldNeverSeeThis-ReportToDev sem Identificação aprimorada."
+  },
+  "sneckomod:UnknownColorless": {
+    "NAME": "Cor Sem Identificação",
+    "DESCRIPTION": "*Carta sem Identificação de Cor.",
+    "UPGRADE_DESCRIPTION": "Carta sem Identificação de Cor aprimorada."
+  },
+  "sneckomod:UnknownCommonAttack": {
+    "NAME": "Golpe Comum Desconhecido",
+    "DESCRIPTION": "*Carta de Golpe Comum sem Identificação.",
+    "UPGRADE_DESCRIPTION": "Carta de Golpe Comum sem Identificação aprimorada."
+  },
+  "sneckomod:UnknownCommonSkill": {
+    "NAME": "Habilidade Comum Desconhecida",
+    "DESCRIPTION": "*Carta de Habilidade Comum sem Identificação.",
+    "UPGRADE_DESCRIPTION": "Carta de Habilidade Comum sem Identificação aprimorada."
+  },
+  "sneckomod:UnknownDexterity": {
+    "NAME": "Destreza Desconhecida",
+    "DESCRIPTION": "*Carta de Destreza sem Identificação.",
+    "UPGRADE_DESCRIPTION": "Carta de Destreza sem Identificação aprimorada."
+  },
+  "sneckomod:UnknownDraw": {
+    "NAME": "Compra Desconhecida",
+    "DESCRIPTION": "*Carta de Compra sem Identificação.",
+    "UPGRADE_DESCRIPTION": "Carta de Compra sem Identificação aprimorada."
+  },
+  "sneckomod:UnknownEthereal": {
+    "NAME": "Etereo Desconhecido",
+    "DESCRIPTION": "*Carta Etérea sem Identificação.",
+    "UPGRADE_DESCRIPTION": "Carta Etérea sem Identificação aprimorada."
+  },
+  "sneckomod:UnknownExhaust": {
+    "NAME": "Esgotamento Desconhecido",
+    "DESCRIPTION": "*Carta de Esgotamento sem Identificação.",
+    "UPGRADE_DESCRIPTION": "Carta de Esgotamento sem Identificação aprimorada."
+  },
+  "sneckomod:UnknownRareAttack": {
+    "NAME": "Golpe Raro Desconhecido",
+    "DESCRIPTION": "*Carta de Golpe Raro sem Identificação.",
+    "UPGRADE_DESCRIPTION": "Carta de Golpe Raro sem Identificação aprimorada."
+  },
+  "sneckomod:UnknownRarePower": {
+    "NAME": "Poder Raro Desconhecido",
+    "DESCRIPTION": "*Carta de Poder Raro Não Identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Poder Raro Não Identificada Aprimorada."
+  },
+  "sneckomod:UnknownRareSkill": {
+    "NAME": "Habilidade Rara Desconhecida",
+    "DESCRIPTION": "*Carta de Habilidade Rara Não Identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Habilidade Rara Não Identificada Aprimorada."
+  },
+  "sneckomod:UnknownStrength": {
+    "NAME": "Força Desconhecida",
+    "DESCRIPTION": "*Carta de Força Não Identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Força Não Identificada Aprimorada."
+  },
+  "sneckomod:UnknownStrike": {
+    "NAME": "Golpe Desconhecido",
+    "DESCRIPTION": "*Carta de Golpe Não Identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Golpe Não Identificada Aprimorada."
+  },
+  "sneckomod:UnknownUncommonAttack": {
+    "NAME": "Golpe Incomum Desconhecido",
+    "DESCRIPTION": "*Carta de Golpe Incomum Não Identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Golpe Incomum Não Identificada Aprimorada."
+  },
+  "sneckomod:UnknownUncommonPower": {
+    "NAME": "Poder Incomum Desconhecido",
+    "DESCRIPTION": "*Carta de Poder Incomum Não Identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Poder Incomum Não Identificada Aprimorada."
+  },
+  "sneckomod:UnknownUncommonSkill": {
+    "NAME": "Habilidade Incomum Desconhecida",
+    "DESCRIPTION": "*Carta de Habilidade Incomum Não Identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Habilidade Incomum Não Identificada Aprimorada."
+  },
+  "sneckomod:UnknownVulnerable": {
+    "NAME": "Vulnerabilidade Desconhecida",
+    "DESCRIPTION": "*Carta de Vulnerabilidade Não Identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Vulnerabilidade Não Identificada Aprimorada."
+  },
+  "sneckomod:UnknownWeak": {
+    "NAME": "Fraqueza Desconhecida",
+    "DESCRIPTION": "*Carta de Fraqueza Não Identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Fraqueza Não Identificada Aprimorada."
+  },
+  "sneckomod:UnknownX": {
+    "NAME": "Custo X Desconhecido",
+    "DESCRIPTION": "*Carta de Custo X Não Identificada.",
+    "UPGRADE_DESCRIPTION": "Carta de Custo X Não Identificada Aprimorada."
+  },
+  "sneckomod:UnlimitedRolls": {
+    "NAME": "Rolagens Ilimitadas",
+    "DESCRIPTION": "No início do seu turno, ganhe um eco gremlin de *Soul *Roll.",
+    "UPGRADE_DESCRIPTION": "Inato. NL No início do seu turno, ganhe um eco gremlin de *Soul *Roll."
+  },
+  "sneckomod:WideSting": {
+    "NAME": "Ferroada Larga",
+    "DESCRIPTION": "Cause !M! - !D! de dano a TODOS os inimigos. NL Melhore todas as cartas sneckomod:Fora_de_Classe na sua mão."
+  }
+}

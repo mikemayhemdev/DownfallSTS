@@ -1,0 +1,70 @@
+{
+  "sneckomod:CheapStockPower": {
+    "NAME": "Ações Baratas",
+    "DESCRIPTIONS": [
+      "No início do seu turno, reduz o custo da carta #yOffclass de maior custo na sua mão em #b1.",
+      "No início do seu turno, reduz o custo da carta #yOffclass de maior custo na sua mão em #b1 #b",
+	  " vezes."
+    ]
+  },
+  "sneckomod:CheatPower": {
+    "NAME": "Fraude",
+    "DESCRIPTIONS": [
+      "Neste turno, cartas que escolhem um número aleatório para seu efeito escolhem o número máximo possível.",
+      "Pelos próximos #b",
+      " turnos, cartas que escolhem um número aleatório para seu efeito escolhem o número máximo possível."
+    ]
+  },
+  "sneckomod:MuddleDrawnCardsPower": {
+    "NAME": "Cartas Embaralhadas",
+    "DESCRIPTIONS": [
+      "#yEmbaralhe a próxima carta que você comprar.",
+      "#yEmbaralhe as primeiras #b",
+      " cartas compradas neste turno. (",
+      " restantes)"
+    ]
+  },
+  "sneckomod:MudshieldPower": {
+    "NAME": "Escudo de Lama",
+    "DESCRIPTIONS": [
+      "Sempre que você #yEmbaralhar uma carta, ganhe #b",
+      " #yBloqueio."
+    ]
+  },
+  "sneckomod:SerpentMindPower": {
+    "NAME": "Mente de Serpente",
+    "DESCRIPTIONS": [
+      "Sempre que você joga uma carta #yOffclass, compre #b",
+      " carta.",
+      " cartas."
+    ]
+  },
+  "sneckomod:UnendingSupplyPower": {
+    "NAME": "Suprimento Infinito",
+    "DESCRIPTIONS": [
+      "No início do seu turno, adicione #b",
+      " cartas #yOffclass aleatórias em sua mão."
+    ]
+  },
+  "sneckomod:UnknownUpgradedPostCombatPower": {
+    "NAME": "Cartas Identificadas",
+    "DESCRIPTIONS": [
+      "No final do combate, obtenha #b",
+      " cartas #yMelhoradas #yIdentificadas adicionais.",
+      " carta #yMelhoradas #yIdentificada adicional."
+    ]
+  },
+  "sneckomod:UnlimitedRollsPower": {
+    "NAME": "Jogadas Ilimitadas",
+    "DESCRIPTIONS": [
+      "No início do seu turno, ganhe uma #yJogada #yAlma+ com #yEtérea e #yExaurir."
+    ]
+  },
+  "sneckomod:Transmogrifying": {
+    "NAME": "Transmutação",
+    "DESCRIPTIONS": [
+      " está sendo transformado em outro ",
+      " relíquia."
+    ]
+  }
+}

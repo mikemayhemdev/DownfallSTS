@@ -240,7 +240,7 @@
   "Guardian:GemFire": {
     "NAME": "宝石加农炮",
     "DESCRIPTION": " 消耗 所有 guardianmod:宝石 ，每颗随机造成 !D! 点伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "弃用"
+    "UPGRADE_DESCRIPTION": " NL (造成 !M! 次)"
   },
   "Guardian:ChargeCore": {
     "NAME": "充能核心",

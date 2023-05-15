@@ -1,0 +1,105 @@
+{
+  "Slimebound:Hunted": {
+    "NAME": "A Aproximação do Chefe",
+    "DESCRIPTIONS": [
+      "Uma voz forte ecoa pela torre... NL NL #r~SLIME ESMAGA!!!~ NL NL O grande slime rapidamente se aproxima de você, bloqueando seu caminho à frente. Parece que ele cresceu desde o Exordium, consumindo e fortalecendo-se enquanto seguia seu rastro pela Torre.",
+      "Será que é tão fácil assim?",
+      "Você derrota o Chefe Slime com facilidade, reivindicando sua preciosa recompensa para si mesmo. Afinal, é um chapéu muito elegante."
+    ],
+    "OPTIONS": [
+      "[Confrontar] #rLutar contra o #rChefe #rSlime. Recompensa: #gPequeno #gChapéu #gCoco.",
+      "[Fugir com terror] #rAmaldiçoado #r- #rVergonha."
+    ]
+  },
+  "Slimebound:WorldofGoop": {
+    "NAME": "Mundo de Goop",
+    "DESCRIPTIONS": [
+      "Você cai em uma poça. NL @ISTO@ @É@ @FEITO@ @DE@ #g@SLIME@ #g@GOOP!!@ NL Calmamente, você se banha enquanto se une ao goop, desfrutando de um momento de alívio. NL NL Ao sair, você percebe na poça as #yalmas de alguns aventureiros infelizes, lentamente sendo consumidos por uma criatura glutona.",
+      "Você sai do banho de slime revigorante, absorvendo as #yalmas, deixando a criatura com uma expressão triste em seu rosto amorfo.",
+      "Você consegue negociar um acordo com a criatura para fornecer a ela mais almas saborosas se ela ajudar você em sua busca. NL Você e seu novo #gamigo saem juntos do banho de slime."
+    ],
+    "OPTIONS": [
+      "[Coletar Almas] #gGanhar #g75 #gAlmas.",
+      "[Recrutar] #rPerder #r75 #rAlmas. #gGanhar #yGanância #yGosma.",
+      "[Sair]",
+      "[Bloqueado] Requer 75 Almas."
+    ]
+  },
+  "Slimebound:SlimeTalk": {
+    "NAME": "Conversas de Slime",
+    "DESCRIPTIONS": [
+      "~Não~ ~me~ ~absorva!~",
+      "~Tomando~ ~nossas~ ~almas?~",
+      "~Vai~ ~se~ ~alimentar~ ~de~ ~nós...~",
+      "~O~ ~Chefe!~",
+      "Aquele chapéu... NL #r~Eu~ #r~preciso~ #r~dele!~",
+      "~Por~ ~que~",
+      "~não~ ~deixa~",
+      "~a~ ~gente~ ~brincar?~",
+      "~Vai~ ~nos~ ~consumir...~",
+      "~É~ ~tão~ ~forte...~",
+      "~É~ ~como~ ~nós...~",
+      "~QUE~ ~CHAPÉU!!!~"
+    ]
+  },
+  "Slimebound:ScrapOoze": {
+    "NAME": "Lodo de Sucata",
+    "DESCRIPTIONS": [
+      "Qualquer slime é um amigo na sua causa. Com ofertas de sucata nova e tesouro, o Lodo de Sucata se junta à sua busca."
+    ],
+    "OPTIONS": [
+      "[Recrutar] #rPerder ",
+      ". Ganhar #gSucata #gLodo. #rTrancado se você Reach Inside.",
+      "[Recrutar] Trancado (Irritou o Lodo de Sucata)",
+      "[Sair]",
+      "[Recrutar] Trancado (Requer um Relic Comum ou Incomum)"
+    ]
+  },
+  "Slimebound:ArtOfSlimeWar": {
+    "NAME": "A Arte da Guerra de Slimes",
+    "DESCRIPTIONS": [
+      "Você se depara com um pedestal repugnante com um #glivro #gbrilhante em cima. Parece que este livro contém as técnicas de combate complicadas e avançadas usadas pelo #gChefe #gSlime e seus lacaios.",
+      "Ao alcançar o livro, você ouve vários dispositivos ativarem. Você não será capaz de evitar todos eles.",
+      "Você rouba o livro e consegue evitar as armadilhas, mas cai em uma poça horrível de gosma.",
+      "Pegar o livro revelou uma armadilha de espinhos abaixo do chão, da qual você escapa por pouco, mas não sem uma ferida grave.",
+      "Assim que o livro deixa o pedestal, você sente que ele está drenando sua própria essência vital. Espero que valha a pena.",
+      "Você decide deixar o livro onde ele está e continuar em frente.",
+      "Você não consegue entender como os lacaios do Slime são uma ameaça para alguém - parece que a única tática que eles usam é jogar seus corpos violentamente nos inimigos. Bem, se funciona para eles..."
+    ],
+	"OPTIONS": [
+      "[Ler] #gRemover #gTodos os ataques. #gReceber #g3 #gAparelhamentos aprimorados.",
+      "[Pegar] #gObter #gConsultar #gLivro de jogadas. #rAtivar #rouma #rarmadilha.",
+      "[Sair]",
+      "[Mergulhar] #rTornar-se #rAmaldiçoado #r- #rNojento.",
+      "[Ser paciente] #rReceber #r",
+      " #rDano.",
+      "[Agarrar e correr] #rPerder #r",
+      " #rMax #rPV."
+    ]
+  },
+  "Slimebound:Darklings": {
+    "NAME": "Darklings",
+    "DESCRIPTIONS": [
+      "Três slimes de aparência desconhecida estão em seu caminho. Eles parecem hostis, mas quando você se aproxima, eles notam que você tem consistência semelhante e olham para você com curiosidade.",
+      "Assim que você se prepara para a batalha, os slimes pretos como tinta também se preparam!",
+      "Depois de uma curta conversa, esses slimes companheiros também estão do seu lado, guardando contra intrusos. Eles podem deixar seu posto por um breve momento para ajudá-lo."
+    ],
+    "OPTIONS": [
+      "[Recrutar] #gObter #gDarklings. #rPerder ",
+      "[Lutar]",
+      "[Sair]",
+      ".",
+      "[Bloqueado] Requer um card Raro."
+    ]
+  },
+  "Slimebound:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Quando uma ovelha lidera o caminho, todas as outras seguem."
+    ],
+    "OPTIONS": [
+      "[Inspiração] #gAdicionar #gComando a todos os #gAtaques e #gDefesas.",
+      "[Bloqueado] Requer um Ataque ou Defesa."
+    ]
+  }
+}

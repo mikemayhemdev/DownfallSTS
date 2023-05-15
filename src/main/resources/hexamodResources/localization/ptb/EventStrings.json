@@ -1,0 +1,89 @@
+{
+  "hexamod:WanderingSpecter": {
+    "NAME": "Espectro Errante",
+    "DESCRIPTIONS": [
+      "Esta área da Torre parece ser um #pcemitério. Você continua cuidadosamente quando uma estranha e fraca ~aparição~ o impede. Ela se estende com as duas mãos, aparentemente oferecendo algum tipo de #rnegociação. NL NL Você pode ver que a aparição está segurando algum tipo de #bRelíquia preciosa em cada palma, mas você não consegue identificar o que são - com certeza um preço duro está sendo pedido em troca.",
+      "Você agradece ao espectro pela oferta. O #bFantasma dá a você um último e trabalhoso olhar antes de continuar em sua caminhada interminável. Você segue em frente também.",
+      "Ao pegar a caixa branca iridescente, ela se @QUEBRA@ em sua mão! Conforme você coleta as almas que se quebraram, um #pfragmento #pescuro emerge e se ~incrusta~ em seu corpo.",
+      "Você pega a estranha caixa #yDourada e sente uma #psombra fluir por você ao abri-la. Dentro, você encontra uma arma útil!",
+      "Você pega a caixa pulsante, batendo constantemente, e sente ela fluir para seu braço. Uma #pnáusea desagradável pulsa através de você, mas você se sente mais forte por isso...",
+      "Assim que você agarra o artefato da figura, #psombra envolve a sala. O espectro fala com você mais uma vez, suas palavras aparecendo em sua mente sem que você as ouça. NL NL #p'Uma #pEscolha #pSábia. #pO #pQue #pDiz #pPara #pOutra #pNegociação, #pAmigo? #pPegue #pQuantas #pDesejar...' ",
+      "Você sabe que as ofertas desta #paparição têm um preço alto demais. Você precisa lidar com ela e, como sorte a sua! Perto da parede! Uma #bVela #bAzul! NL NL Você agarra a vela na parede, #pchamuscando-se um pouco, e a arremessa em direção ao espectro, que se dissipa em uma tonalidade #bassombrosa. NL NL Ele não estará mais oferecendo nenhuma negociação.",
+      "Você sabe que as ofertas desta #paparição têm um preço alto demais. Você precisa lidar com ela e, como sorte a sua! Você trouxe uma #bVela #bAzul! NL NL Você arremessa a vela em direção ao espectro, que se dissipa em uma tonalidade #bassombrosa. NL NL Ele não estará mais oferecendo nenhuma negociação."
+    ],
+    "OPTIONS": [
+      "[Caixa Esquerda] #gObter uma #gboneca #gDu-Vu #gou #gPedra #gSombria #gPeriapt. #rAmaldiçoado #rDuasVezes #r- #rAssombrado.",
+      "[Comprar Mais]",
+      "[Caixa Direita] #gObter uma #gChave #gAmaldiçoada #gou um #gSino #gChamador. #rExtra #rAmaldiçoado.",
+      "[Espantar] #gObter uma #gVela #gAzul. #rPerder #r5 #rHP.",
+      "[Espantar] Sair.",
+      "[Trocar por Poder] #gObter um #gcarta #grara #yRara. #rTornar-se #rAmaldiçoado #r- #rAleatório.",
+      "[Trocar por Vida] #gObter #g5 #gHP #gMax. #rTornar-se #rAmaldiçoado #r- #rAleatório.",
+      "[Trocar por Almas] #gObter #g100 #gAlmas. #rTornar-se #rAmaldiçoado #r- #rAleatório.",
+      "[Bloqueado] Troca Completa.",
+      "[Sair]"
+    ]
+  },
+  "hexamod:SealChamber": {
+    "NAME": "Câmara de Selagem",
+    "DESCRIPTIONS": [
+      "Uma estrutura ameaçadora está diante de você. A maioria nunca se arriscaria a se aproximar dela, mas você sabe qual é o seu propósito e sabe que ela pode ser de grande utilidade. NL Você entra na câmara e se prepara para fazer um #rsacrifício...",
+      "Pagando com um pedaço de sua própria alma, você adquire o selo - mais um passo no caminho para o seu poder supremo.",
+      "Pesando suas opções, você decide não fazer um sacrifício na Câmara de Selagem. Você vai precisar de tudo o que tem para completar sua jornada.",
+      "Esses selos serão muito úteis nas batalhas que estão por vir."
+    ],
+    "OPTIONS": [
+      "[Oferecer] #rPerder ",
+      " HP. #gGanhar o #gPrimeiro #gSelo.",
+      " #yAlmas. #gGanhar o #gSegundo #gSelo.",
+      ". #gGanhar o #gTerceiro #gSelo.",
+      ". #gGanhar o #gQuarto #gSelo.",
+      "[Bloqueado] Requer mais Ouro.",
+      "[Bloqueado] Requer um Cartão Comum.",
+      "[Bloqueado] Requer uma Poção.",
+      "[Sair]",
+      "[Bloqueado] Oferta feita."
+    ]
+  },
+  "hexamod:HexaFalling": {
+    "NAME": "HexaQueda",
+    "DESCRIPTIONS": [
+      "Você, não estando sujeito às leis frágeis da gravidade, ~flutua~ sobre o abismo sem sofrer danos.",
+      "TODO..."
+    ],
+    "OPTIONS": [
+      "[Flutuar] #rNão perder nada...",
+      "[Sair]"
+    ]
+  },
+  "hexamod:CouncilOfGhosts": {
+    "NAME": "Conselho dos Fantasmas",
+    "DESCRIPTIONS": [
+      "Conforme você continua a descer, uma #p~fumaça~ #p~preta~ e #p~densa~ começa a sair do chão e das paredes ao seu redor, se reunindo em três formas mascaradas que começam a falar. NL NL ~\"Este~ ~está~ #r~condenado...\"~ NL \"Nós entendemos o seu problema, #pmaldito... Você gostaria de aprender os nossos #y~segredos?\"~ ",
+      "#y\"Excelente!\" NL Enquanto a forma fantasmagórica fala, você percebe que sua grande boca se abre cada vez mais. #p~Fumaça~ #p~preta~ e #p~densa~ jorra e envolve a sala. Você não consegue ver ou respirar...",
+      "Ainda envolto em #p~fumaça~ #p~preta~, seu corpo murcha, mas seu espírito #p~ardente~ #p~brilha~ mais do que nunca. NL Você entende como o corpóreo e o incorpóreo estão conectados, de formas que você nunca pensou ser possível.",
+      "Dentro da escuridão, você vê com olhos claros. Os espíritos mostraram-lhe como dominar sua forma, transitar entre este mundo e outro com facilidade.",
+      "\"Boa sorte, #pmaldito...\" NL ~\"Nós~ ~vamos~ ~ficar~ ~e~ ~ajudar~ ~outros...\"~ NL #r@\"HA@ #r@HA@ #r@HA@ #r@HAHAHA!\"@ NL NL Você não tem certeza do motivo pelo qual o último riu enquanto o Conselho desaparecia, mas está grato por ter adquirido seu conhecimento.",
+      "\"Que decepção...\" NL ~\"Você~ ~nunca~ ~escapará~ ~deste~ ~lugar...\"~ NL #r@\"HA@ #r@HA@ #r@HA@ #r@HAHAHA!\"@ NL NL As formas desvanecem, deixando apenas a risada perturbadora ecoando em seus ouvidos."
+    ],
+    "OPTIONS": [
+      "[Aceitar] #rPerder #r",
+      " #rMax #rHP. Desbloquear as opções Estudar e Aprender.",
+      "[Estudar] #rPerder #rtodos #rAtaques. #gGanhar #g3 #gJustiças do Conselho.",
+      "[Aprender] #rPerder #rtodos #rDefesas. #gGanhar #g3 #gAparições.",
+      "[Concluir]",
+      "[Sair]",
+      "[Bloqueado] Não pode sair ainda."
+    ]
+  },
+  "hexamod:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Espírito é a espada - e experiência, a pedra de amolar."
+    ],
+    "OPTIONS": [
+      "[Nostalgia] #gAdicionar #gEtereo a todos os #gAtaques e #gDefesas.",
+      "[Bloqueado] Requer um Ataque ou Defesa."
+    ]
+  }
+}

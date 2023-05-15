@@ -1,0 +1,618 @@
+{
+  "downfall:SolShrine": {
+    "NAME": "Santuário da Alma",
+    "DESCRIPTIONS": [
+      "Diante de você há um elaborado santuário dedicado a um antigo espírito do mal. ",
+      "Quando você toca o santuário, #ysouls jorram dele, ~banhando~ ~você~ ~em~ ~poder.~ ",
+      "Cada vez que você ataca o santuário, #ysouls explodem em rajadas, uma após a outra! NL NL Ao consumir a energia, você hesita, percebendo que este santuário poderia ter sido uma fonte interminável de poder. Você se pergunta se tomou a #rdecisão #rcerta.",
+      "Você ignora o santuário."
+    ]
+  },
+  "downfall:GremlinMatchGame": {
+    "NAME": "Combine e guarde!",
+    "DESCRIPTIONS": [
+      "\" ... #bDoze cartas! Combine-as para guardá-las! #bCinco tentativas... sem tentar de novo. NL Está pronto? Vamos começar!\"",
+      "Você completa o jogo do gremlin e olha para cima. NL Ele desapareceu?",
+      "Um gremlin está embaralhando loucamente cartas em uma mesa. Este monstro parece ser inofensivo. Ao se aproximar, ele perde a compostura por um momento, mas encontra coragem para falar com você.",
+      "Imediatamente, o gremlin grita! NL NL \"NOB!!!\" NL NL Um gremlin gigante emerge das sombras, pairando sobre o gremlin, a mesa e você. NL \"Tem certeza de que não quer jogar o jogo?\", pergunta o gremlin."
+    ],
+    "OPTIONS": [
+      "[Continuar]",
+      "[Sair]",
+      "[Jogar]",
+      "Tentativas restantes: #y",
+      "[Intimidar] Roubar 6 cartas.",
+      "[Socar] #rLutar. #gGanhar #g6 #gCartas."
+    ]
+  },
+  "downfall:WomanInBlue": {
+    "NAME": "A Mulher de Azul",
+    "DESCRIPTIONS": [
+      "À meia-luz, você vê uma pequena loja. Dentro, há uma mulher pálida com roupas elegantes gerenciando um inventário de poções, empilhadas ao longo de uma parede. Ela se assusta com sua aparência ameaçadora. NL \"Deixe eu e meus produtos em paz, cretino!\" ela grita.",
+      "Você sai cautelosamente da loja, não querendo provocar a mulher para uma luta.",
+      "#r@BAM@ NL O punho enluvado dela colide com seu rosto, quase te derrubando. NL \"Saia antes que eu espalhe suas entranhas pelo chão.\" Você leva a sério e sai com suas entranhas ainda intactas."
+    ],
+    "OPTIONS": [
+      "[Sair]",
+      "[Sair] #rReceber #r",
+      " #rDano.",
+      "[Socar] #rLutar. #gGanhar #guma #gPoção #gReliquia #gand #g3 #gPoções."
+	]
+  },
+  "downfall:GremlinWheelGame": {
+    "NAME": "Roda da Mudança",
+    "DESCRIPTIONS": [
+      "Você se depara com um gremlin elegante e animado. Apesar de sua aparência ameaçadora, ele parece não se importar, embora você o veja olhando hesitante para os bastidores. NL \"É hora de girar a roda! Você está pronto?\"",
+      "\"Você ganhou algumas #ySOULS! NL YAY!!!!\"",
+      "\"Ah, um #ggift! NL Aproveite!\"",
+      "\"Oooh, uma cura gratuita de #gHeal para você!\"",
+      "\"Parece que você ganhou uma #pCurse! NL Isso não é bom. NL Bem, melhor sorte na próxima vez!\"",
+      "\"Ohh, o poder da #r~escuridão...~ NL Escolha uma carta para remover do seu baralho!\"",
+      "\"Uh oh! NL Você perdeu!\" NL Você o vê se preparando com um punhal...",
+      "Você ataca o gremlin maluco, mas ele é simplesmente rápido demais! NL Ele acerta você algumas vezes com um punhal rudimentar. NL \"O preço foi pago!!\" NL E com isso, tanto o gremlin quanto sua roda desaparecem em uma nuvem de fumaça.",
+      "O gremlin olha nervosamente por cima do ombro, mas rapidamente relaxa. Você o vê gesticulando com a mão, mas ignora. NL \"Agora, agora, amigo, a roda decidiu justamente sua recompensa! Ninguém tem direito a uma segunda rodada.\"",
+      "Imediatamente, o gremlin grita! NL NL \"NOB!!!\" NL NL Um gremlin gigante emerge das sombras, sobrepujando o gremlin, a mesa e você. NL \"Meu amigo aqui sugere que você pegue o que a roda ofereceu.\".",
+      "Sentando-se perto do fogo, você decide ver se tem melhor sorte com a roda do que na última tentativa.",
+      "A roda escolheu um prêmio. NL NL Você só precisa estender a mão e pegá-lo.",
+      "Sucesso! Você encontrou o que estava procurando, e na hora certa! NL NL #r@CRACK!@ NL NL Talvez você tenha sido um pouco rude com a última rodada... a roda foi quebrada.",
+      "Você decide tentar a sorte em outro dia. NL NL Por enquanto, você precisa descansar e recuperar sua compostura.",
+      "Ele avança em sua direção, mas você está pronto. NL Você o atinge antes que ele possa atingi-lo com seu punhal. NL Você se presenteia com seu prêmio, mas infelizmente a roda desaparece antes que você possa saqueá-la também."
+    ],
+    "OPTIONS": [
+      "[Jogar]",
+      "[Prêmio!] YAY!!!!",
+      "[Prêmio!] #gObter #ga #gRelíquia.",
+      "[Prêmio!] #gCurar #gaté #gsaúde #gtotal.",
+      "[Prêmio?] #rMaldição #r- #rDecaimento.",
+      "[Prêmio!] #gRemover #gum #gcartão #gdo #gseu #gbaralho.",
+      "[Prêmio?] #rPerder #r",
+	  " #rPV.",
+      "[Sair]",
+      "Selecione um Cartão para Remover.",
+      "[Novamente!]",
+      "[DE NOVO!!]",
+      "[Soco] #rLuta. #gGanhe #gRoda #gde #gGoblin.",
+      "[Passar] Tente novamente mais tarde.",
+      "[Prêmio!] #gATAQUE #gPREVENTIVO!",
+      "[Saque]"
+    ]
+  },
+  "downfall:GremlinWheelGameRest": {
+    "NAME": "Roda da Mudança",
+    "DESCRIPTIONS": [
+    ],
+    "OPTIONS": [
+    ]
+  },
+  "downfall:LivingWall": {
+    "NAME": "Parede Viva",
+    "OPTIONS": [
+      "[Soco] #rLutar. #gUsar #gTodos #gos #g3 #gCabeças."
+    ]
+  },
+  "downfall:Augmenter": {
+    "NAME": "Aprimorador",
+    "DESCRIPTIONS": [
+      "Um homem com um tapa-olho e um sorriso diabólico se aproxima de você. NL \"Oh meu, que assunto aterrorizante! Você pode não se importar com a ciência, mas eu prometo a você - eu posso te tornar mais forte do que qualquer colheita de almas. Você vai precisar disso se for atrás de um desses \"heróis\".\" NL NL ~\"O que você diz?\"~"
+    ],
+    "OPTIONS": [
+      "[Soco] #rLutar. #gPegar #gTudo."
+    ]
+  },
+  "downfall:BonfireSpirits": {
+    "NAME": "Elemental da Fogueira",
+    "DESCRIPTIONS": [
+      "Os espíritos consomem vorazmente sua oferta! Eles se empanturram de almas, queimando mais brilhantes conforme o fogo @dobra@ em força. NL Os espíritos dançam ao seu redor animados antes de ~se~ ~fundir~ ~com~ ~o~ ~seu~ ~corpo,~ preenchendo-o com calor e força. NL Seu HP Máximo aumenta e você é #gcurado completamente."
+    ],
+    "OPTIONS": [
+      "[Doar] #rPerder #r150 #rAlmas. #gGanhar #g10 #gMax #gHP #ge #gCura #gCompleta.",
+      "[Trancado] Requer 150 Almas.",
+      "[Doar] #rPerder #r150 #rAlmas. #gCada #gGremlin #gGanha #g2 #gMax #gHP #ge #os #gvivos #gTotalmente #gCurados."
+    ]
+  },
+  "downfall:FaceTrader": {
+    "NAME": "Negociante de Máscaras",
+    "DESCRIPTIONS": [
+      " NL NL Ele não parece que iria resistir muito, mas ele sobreviveu neste lugar. Talvez essas máscaras possuam algum poder..."
+    ],
+    "OPTIONS": [
+      "[Soco] #rLutar. #g100%: #gTodas #gas #gMáscaras."
+    ]
+  },
+  "downfall:CursedFountain": {
+    "NAME": "A Fonte Amaldiçoada",
+    "DESCRIPTIONS": [
+      "Você encontra um líquido levemente tingido de roxo fluindo sem fim de uma fonte em uma parede próxima. É um líquido que você reconhece como letal para a maioria das criaturas, mas bastante benéfico para aqueles que estão amaldiçoados.",
+      "O líquido da fonte está fervilhando com as almas perdidas. Parece um desperdício não fazer uso delas. Você canaliza as almas para dentro de si, arrancando-as da magia amaldiçoada da fonte.",
+      "Pressentindo que este líquido pode ser útil, você decide capturá-lo em um frasco para usar mais tarde. Criaturas que não estão sintonizadas com a água escura certamente sofrerão quando molhadas por ela.",
+      "Ao beber o líquido, você sente uma aura escura envolver sua mente. Ela parece luxuosa e revigorante.",
+      "Deixando a fonte para trás, você continua seu caminho."
+    ],
+    "OPTIONS": [
+      "[Frasco] #gObtenha uma #gPoção #gde #gLíquido #gAmaldiçoado.",
+      "[Consumir] #gObtenha #g75 #yAlmas.",
+      "[Beber] #gCure-se #gcompletamente.",
+      "[Trancado] Requer uma maldição.",
+      "[Trancado] Requer 2 maldições.",
+      "[Trancado] Requer 3 maldições.",
+      "[Trancado] Já usado.",
+      "[Partir]"
+    ]
+  },
+  "downfall:WeMeetAgain": {
+    "NAME": "Nos Encontramos De Novo!!",
+    "DESCRIPTIONS": [
+      "\"CHEFE!\" Um sujeito alegre e desalinhado se aproxima de você, feliz da vida. Você conhece bem esse homem. NL \"Sou eu, #yRanwid! Você não acreditaria no que eu consegui dos heróis amaldiçoados! Tem mais tralha que você pode me dar para vender para eles?\" NL Você aprecia a simpatia dele e considera suas opções. Certamente tem algo que Ranwid possa usar em seu próximo \"negócio\"...",
+      "\"Ah, isso é perfeito! É lixo total! Aqui, pegue esses elixires que os últimos tolos me deram!\" NL Ranwid revira suas bolsas, produzindo três frascos para você, quase deixando-os cair no processo.",
+      "\"Magnífico! Isso será muito útil para meu próximo negócio. Ah, e eu tenho colhido os cadáveres, como você pediu!\" NL Ranwid lhe entrega uma pedra de alma e depois sai correndo, procurando um novo rosto para vender seus trinkets inúteis.",
+      "\"Exemplar! Com um pouco de trabalho, posso fazer isso parecer algo realmente especial.\" NL Ranwid parte, examinando a relíquia cuidadosamente, sem dúvida pensando em como exagerar sua utilidade para o próximo aventureiro que encontrar.",
+      "\"Nada hoje, chefe? Tudo bem!\" NL Ele sai correndo."
+    ],
+    "OPTIONS": [
+      "[Perder ",
+      "] ",
+      "#gGanhar #g3 #gPoções.",
+      "#gGanhar ",
+      " #yAlmas.",
+      "#gGanhar #ga #gCarta #yRara #gAleatória.",
+      "[Sair]",
+      "[Bloqueado] Nenhuma relíquia para dar.",
+      "#gGanhar #g2 #gPoções."
+    ]
+  },
+  "downfall:Designer": {
+    "NAME": "Designer In-Spire",
+    "DESCRIPTIONS": [
+      "Você descobre uma loja #g~colorida~ com a faixa \"IN-SPIRE\". Um #rBandido grita de dentro da entrada, ameaçando quem estiver dentro. NL NL @\"Dê-me@ @seu@ @dinheiro!\"@ NL NL O bandido não percebe você, distraído com seu saqueamento.",
+      "Não é difícil lidar com o ladrão, mas a luta não passa sem algum ferimento da sua parte. Um homem com roupas ridículas aparece na entrada da loja. NL \"Obrigado, bondoso senhor!\", diz o homem, chamando você para dentro.",
+      "Você não vê motivo para se envolver com isso. Há mortes importantes a serem feitas.",
+      "\"Oh, meu Deus, você é terrível! Isso não vai funcionar, não, não. Qual é esse estilo? Você deveria ser @amedrontador!@ Um #roverlord temido e intimidante da Spire! Você simplesmente ~deve~ me deixar fazer uma transformação adequada em você.\" NL NL Você não tem certeza se deve acreditar nesse homem e aceitar seus serviços ou se deve se sentir insultado com seu desprezo pelo seu estilo.",
+      "\"Ok, tchau agora! Conte para seus amigos #roverlord!\" NL NL Embora você estivesse apreensivo em relação à habilidade desse homem, você definitivamente se sente mais intimidador.",
+      "Você o soca. NL \"Meu @ROSTO!!@ Agora eu vou ter que...\" NL NL Ele desmaia. Talvez na próxima vez ele pense duas vezes antes de insultar uma criatura de seu status."
+    ],
+    "OPTIONS": [
+      "[Ajustes] ",
+      "[Limpeza] ",
+      "[Serviço Completo] ",
+      "[Ignorar] Sair.",
+      "[Soco] Sair.",
+      "[Entrar na Loja]",
+      " #gGanhar #ga #gRecompensa."
+    ]
+  },
+  "downfall:DeadGuy": {
+    "NAME": "Aventureiro Caído",
+    "DESCRIPTIONS": [
+      "Enquanto canaliza o ritual, você é pego de surpresa!",
+      "Você sai sem fazer barulho.",
+      "Você encontra um #rmorto #raventureiro no chão. NL Seu espírito ainda paira na área. Além disso, ",
+      "a armadura e o rosto parecem estar #r@limpos@ #r@por@ #r@chamas.@ ",
+      "parece que ele foi #r@cravado@ #r@e@ #r@pisoteado@ por uma fera de chifres. ",
+      "ele parece ter sido #r@eviscerado@ #r@e@ #r@cortado@ por garras gigantes. ",
+      "NL Um ritual de colheita de almas poderia ter resultados aqui, mas a criatura que matou este homem pode retornar em breve.",
+      "O ritual concede almas do cadáver! NL Continuar canalizando?",
+      "O feitiço não consegue puxar o espírito do homem caído... NL Continuar canalizando?",
+      "Sua magia faz o corpo tremer, e de seus bolsos cai um #yrelic! NL Continuar canalizando?",
+      "O ritual foi concluído!"
+    ],
+    "OPTIONS": [
+      "[Colheita de Almas] #gEncontre #gSaque. #r",
+      "[Sair]",
+      "[Lutar]",
+      "[Continuar] #gEncontre #gSaque. #r",
+      "%: #rmonstro #rretorna."
+    ]
+  },
+  "downfall:ShiningLight": {
+    "NAME": "Luz Radiante",
+    "DESCRIPTIONS": [
+      "Você encontra uma #ymassa #yde #yluz cintilante que envolve o centro da sala. NL NL Seu ~calor~ ~brilho~ e ~padrões~ ~encantadores~ fazem seu estômago se revirar, mas você sabe que essa luz carrega um imenso poder.",
+      "Ao caminhar pela luz, você faz careta enquanto ela é absorvida por você. NL É #r@escaldante@ #r@quente@ ! Você não sente dor, e embora esteja recém #binvigorado, a memória assombrada deste calor repugnante deixará cicatrizes.",
+      "Você anda em volta, imaginando o que poderia ter sido."
+    ],
+    "OPTIONS": [
+      "[Entrar] #gMelhore #g3 #gcartas #galeatórias. #rTorne-se #rAmaldiçoado #r- #rCom Falhas.",
+      "[Sair]",
+      "[Trancado] Requer: Cartas Melhoráveis"
+    ]
+  },
+  "downfall:WorldOfGoop": {
+    "NAME": "World of Goop",
+    "DESCRIPTIONS": [
+      "Você cai em uma poça. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL Você sente goop nos ouvidos, goop no nariz, goop em todo lugar. NL NL Ao escalar para fora, você percebe que está preso ao seu corpo uma criatura única de #yyellow Slime. Parece ter coletado #ySouls de aventureiros infelizes que caíram na poça. Que conveniente.",
+      "Não querendo que esse incidente infeliz da poça termine sem recompensa, você ataca a criatura de slime #yyellow. NL NL Ela @explode@ instantaneamente! NL NL Você não achou possível, mas agora está ainda mais coberto de goop do que antes.",
+      "Removendo o slime #yyellow, você continua sua jornada, embora ainda parcialmente coberto de goop. Certamente adiciona à sua estética ameaçadora."
+    ],
+    "OPTIONS": [
+      "[Colheita Completa] #gGanhe #g",
+      "[Drenar] #gGanhe #g",
+      "[Sap] #gGanhe #g",
+      " #gSouls. #rTorne-se #rAmaldiçoado #rTrês vezes #r- #rNojento.",
+      " #gSouls. #rTorne-se #rAmaldiçoado #rDuas vezes #r- #rNojento.",
+      " #gSouls. #rTorne-se #rAmaldiçoado #r- #rNojento.",
+      "[Sair]"
+    ]
+  },
+  "downfall:Serpent": {
+    "NAME": "A Ssssserpente",
+    "DESCRIPTIONS": [
+      "Você entra em uma sala e encontra um grande buraco no chão. Conforme você se aproxima do buraco, uma enorme criatura de serpente aparece de dentro. NL NL ~\"Ho~ ~hooo!~ ~Olá~ ~olá!~ ~o~ ~que~ ~temos~ ~aqui?~ Para você, meu soberano, eu faço uma pergunta simples. NL A vida mais gratificante é aquela em que você pode #r~socar~ #r~qualquer coisa!~ NL Você concorda?\"",
+      "~\"Hssssssssssss..~ ~..ssSSs.....~ ~ss...~ ~sssss....\"~",
+      "A serpente olha para você com uma expressão de extrema decepção.",
+      " NL NL A serpente ergue a cabeça e solta um grito horrível. Conforme seu corpo fica mole e cai na cova, a força vital da criatura se torna prontamente disponível para colheita. NL NL É impressionante, mas você não consegue deixar de se perguntar se a serpente estava falando metaforicamente. Talvez ela pretendesse ajudar e encorajá-lo a fazer violência com os outros, mas não consigo mesma..."
+    ],
+    "OPTIONS": [
+      "[Concordar] [Socar] #gGanhar #g",
+      " #gAlmas. #rSe tornar #rAmaldiçoado #r- #rDuvidar.",
+      "[Discordar]",
+      "[Sair]"
+    ]
+  },
+  "downfall:WingStatue": {
+    "NAME": "Estátua de Asa",
+    "DESCRIPTIONS": [
+      "Entre as pedras e rochas, você nota uma intricada grande estátua azul parecida com uma asa. NL Você nota #ymoedas #ybrilhantes saindo de suas rachaduras, mas isso não tem valor para você. A própria estátua, no entanto...",
+      "Sabendo que pode encontrar cultistas do Desperto, você leva a estátua quebrada com você. Pode ser útil para converter os membros do culto para a sua causa.",
+      "Com toda sua força, você ataca a estátua. NL Logo ela @desmorona,@ se esfarelando em um fragmento afiado e mortal. Você pega o fragmento e continua em frente.",
+      "Você passa pela estátua e continua em frente.",
+      "CA...Caw?! Presente para o DEUS PÁSSARO?",
+      "CA-CAAAW!!",
+      "Uma troca? Uma oferta justa...",
+      "O culto ficará satisfeito."
+    ],
+    "OPTIONS": [
+      "[Destruir] #rPerder #r",
+      " #rMax #rHP. #gGanhar #gFragmento #gAfiaado.",
+      "[Coletar] #gGanhar #gEstátua #gQuebrada #gde #gAsa.",
+      "[Sair]"
+    ]
+  },
+  "downfall:GoldenIdol": {
+    "NAME": "Ídolo Dourado",
+    "DESCRIPTIONS": [
+      "Você encontra um pedestal discreto com um #yídolo #ybrilhante sentado pacificamente em cima. Parece incrivelmente valioso. NL NL Aventureiros errantes certamente serão atraídos por este objeto. Pode valer a pena armar uma armadilha.",
+      "Você encontra um pedestal discreto com um #yídolo #ybrilhante sentado pacificamente em cima. Parece incrivelmente valioso. NL NL O corpo de um aventureiro jaz a uma curta distância no corredor, claramente esmagado por um objeto maciço. Sua alma ainda paira na área.",
+      "Usando o peso do ídolo como gatilho, você monta uma armadilha simples para fazer com que uma pedra gigante próxima desmorone na sala, caso alguém tente reivindicar o #y artefato brilhante. NL Satisfeito com a construção da sua armadilha, você decide seguir em frente.",
+      "Você canaliza o espírito do aventureiro em seu corpo, absorvendo sua energia na sua.",
+      "Você decide deixar o pedestal intacto. Armar uma armadilha está abaixo de você.",
+      "Você decide deixar a alma em paz e continuar seu caminho."
+    ],
+    "OPTIONS": [
+      "[Armar armadilha] #rPerder #ra #rCartada.",
+      "[Colher] #gGanhar #y",
+      " #yAlmas.",
+      "[Deixar]",
+      "[Bloqueado] Requer uma Cartada."
+    ]
+  },
+  "downfall:Cleric": {
+    "NAME": "O Clérigo",
+    "DESCRIPTIONS": [
+      "Um estranho humanoide azul com um capacete reluzente se aproxima de você com um enorme sorriso. NL Ao perceber o que você é, o sorriso radiante da criatura rapidamente se transforma em um olhar de puro terror. NL ~\"M-MONSTRO!!\"~ grita a figura, virando-se para fugir.",
+      "A criatura desaba com um único golpe, caindo em um amontoado de carne azul esmagada. Você absorve sua #yalma e continua seu caminho.",
+      "\"Clérigo ajuda! Clérigo ajuda!\" a criatura diz quando você se aproxima ameaçadoramente. NL Uma chama azul fria envolve seu corpo e se dissipa. NL Imediatamente depois, este \"Clérigo\" foge."
+    ],
+    "OPTIONS": [
+      "[Socar] #gGanhar #y",
+      "[Intimidar] #gRemover #uma #rcartada #rdo #raseu #rbaralho.",
+      "[Deixar]",
+      "Selecione uma Cartada para Remover.",
+      " #yAlmas."
+    ]
+  },
+  "downfall:Ghosts": {
+    "NAME": "Conselho de Fantasmas",
+    "DESCRIPTIONS": [
+      "À medida que você continua sua descida, uma fumaça espessa e negra começa a sair do chão e das paredes ao seu redor, se coalescendo em três formas mascaradas que começam a falar. NL NL ~\"Outra marionete do Coração, eu acho.\"~ NL #r@\"CONCORDO!@ #r@ELE@ #r@SEMPRE@ #r@ENVIA@ #r@AS@ #r@PEÇAS@ #r@MAIS@ #r@FORTES!\"@ NL NL Você nota um sorriso exagerado quando o terceiro se dirige a você. NL \"Ignore os outros... Você gostaria de experimentar o nosso #y~poder?\"~ ",
+      "\"Uma @oferta!@ Que ~tentador...\"~ NL NL Enquanto a forma fantasmagórica fala, você nota sua grande boca se abrindo cada vez mais. Dentro de seu corpo, você sente as #b~almas~ coletadas dos mortos sendo forçadas em uma espiral violenta para dentro da boca aberta do espírito. É preciso toda a sua força para manter o seu lugar e não ser puxado para dentro. NL NL Logo antes de sua resistência se esgotar, o vórtice fantasmagórico para, e os espíritos desaparecem no éter. NL NL Você continua em frente, se sentindo um pouco #bhueco."
+    ],
+    "OPTIONS": [
+      "[Oferta] #rPerca #r",
+      " Almas. #gReceba Aparição.",
+      "[Bloqueado] Requer ",
+      " Almas."
+    ]
+  },
+  "downfall:CursedTome": {
+    "NAME": "Tomo Amaldiçoado",
+    "DESCRIPTIONS": [
+      "Em um templo abandonado, você encontra um livro gigante, aberto e repleto de #p@escritos@ #p@crípticos.@ NL NL Você não precisa interpretar o elaborado roteiro, pois sabe o poder que há dentro dele - e o #rcusto que incide sobre o seu dono.",
+      "Compreendendo o custo, você decide levar o tomo consigo. Quando você alcança o pedestal, o transe do livro fala com você em uma #r@mil vozes@, arranhando sua própria alma! NL NL Com o livro seguro e sua mente ainda mais corrompida do que antes, você sai do templo se sentindo #b~exaurido...~"
+    ]
+  },
+  "downfall:ForgottenAltar": {
+    "NAME": "Altar Esquecido",
+    "DESCRIPTIONS": [
+      "Você fica no altar e canaliza a energia espiritual do seu ser interior. NL Conforme as #bsouls saem em oferta para a deusa, os braços da estátua se estendem e emanam uma #p~magia amaldiçoada~ #p~soothing.~ NL Tudo fica escuro. NL Você acorda pouco tempo depois, suas feridas e lesões da batalha curadas repentinamente.",
+      "Depois de dar um breve momento para admirar o mal que reside dentro da estátua, você parte, continuando pela Cidade."
+    ],
+    "OPTIONS": [
+      "[Oferecer Almas] #rPerder #r",
+      " #rAlmas. #gCurar #g",
+      " #gHP.",
+      "[Bloqueado] Requer ",
+      " Almas.",
+      "[Sair]"
+    ]
+  },
+  "downfall:Bandits": {
+    "NAME": "Bandidos Mascarrados",
+    "DESCRIPTIONS": [
+      "Você encontra um grupo de bandidos usando grandes máscaras #rvermelhas. NL \"Oi, pague aí - Oh, um ~monstro.~ Talvez precise dos nossos serviços?\"",
+      "Muito obrigado, doido! Você certamente não vai se arrepender disso..."
+    ],
+    "OPTIONS": [
+      "[Perder ",
+      "] #gContratar #gos #gBandidos.",
+      "[Bloqueado] Requer mais Relíquias."
+    ]
+  },
+  "downfall:Nloth": {
+    "NAME": "N'loth",
+    "DESCRIPTIONS": [
+      "Decidindo que esse ser inferior de criatura não pertence à Torre, você desfere um golpe rápido e poderoso diretamente no peito de N'loth. NL NL Conforme a criatura recua em agonia, seus tentáculos se @contorcem@ @para fora@ em reflexo, deixando uma #rdor~dor~osa ferida! NL NL Quando o corpo sem vida da criatura cai no chão, você ouve o chocalhar de amuletos e bugigangas. Vasculhando seu corpo, assim como já vasculhou a pilha de lixo, você descobre um item mágico potente."
+    ],
+    "OPTIONS": [
+      "[Soco] #gGanhar uma #gRelíquia #gAleatória. #rFicar #rAmaldiçoado #r- #rDor."
+    ]
+  },
+  "downfall:KnowingSkull": {
+    "NAME": "Knowing Skull",
+    "DESCRIPTIONS": [
+      "Você se encontra em uma antiga câmara decorada. No centro do quarto, um grande crânio repousa sobre um pedestal ornamentado. Conforme você se aproxima, o crânio #g@explode@ em chamas e se vira para encará-lo. NL NL \"O QUE VOCÊ PROCURA? O QUE VOCÊ OFERECE?\" NL Em sincronia com suas últimas palavras, a porta atrás de você @bate@ @fechada@.",
+      "\"Heyheyheyheysemãosnoossojaca-\" NL NL Ignorando as reclamações do crânio, você o arranca do pedestal, momentaneamente #rqueimando-se com suas chamas. Talvez seja útil mais tarde...",
+      "\"ATRÁS DE VOCÊ, MORTAL.\" NL Você dá uma olhada por trás do crânio. Com certeza, há uma porta."
+    ],
+    "OPTIONS": [
+      "[Você] #gObter #go #gCrânio. #rPerder #r",
+      "[Sair]",
+      " #rPV."
+    ]
+  },
+  "downfall:Vagrant": {
+    "NAME": "Mendigo Suplicante",
+    "DESCRIPTIONS": [
+      "Você mata o homem e colhe sua alma. ~Suspiros~ vêm da multidão atrás de você. NL \"Ele acabou de matar o Burgundy!\" uma figura diz, enquanto mais mendigos como o que você encontrou começam a se aproximar de você. NL NL Você escapa, mas não sem algumas #rgarras e #rmordidas.",
+      "Você arranca o precioso #yrelic das garras dele e se afasta. De trás de você, ouve-se, NL \"Você não tem vergonha? ~NENHUMA~ ~VERGONHA?!\"~ NL Você não tem #pnenhuma #pvergonha. É uma honra ser roubado por um Overlord da Spire!"
+    ],
+    "OPTIONS": [
+      "[Socar] #gGanhar #g85 #gAlmas. #rPerder #r",
+      " #rPV.",
+      "[Roubar] #gObter #gum #gRelic. #rTornar-se #rAmaldiçoado #r- #rOrgulho."
+    ]
+  },
+  "downfall:Beggar": {
+    "NAME": "Velho Mendigo",
+    "DESCRIPTIONS": [
+      "O mendigo tira sua capa, revelando uma forma humanoide azul com um elmo brilhante (?). NL Ao perceber o que você é, o sorriso radiante da criatura rapidamente se transforma em puro terror. NL ~\"M-MONSTRO!!\"~ o figura grita, virando-se para fugir.",
+      "O velho mendigo olha em volta, aparentemente confuso. Ele ignora você a princípio enquanto procura a área, e então olha em sua direção. NL \"Você viu um homem jovem de pele azul perto daqui? Ele usa um elmo brilhante e estranho? Ele costuma vir à Cidade, gastando seu dízimo em comida para nós...\" NL O mendigo deve estar se referindo àquele que você eliminou há pouco tempo, chamado #bCleric.",
+      "@\"Não@ @tema,@ @velho@ @homem.@ @Você@ @verá@ @seu@ @amigo@ @mais@ @cedo@ @do@ @que@ @pensa.\"@ NL NL O mendigo luta para fornecer qualquer defesa, e você o derruba facilmente. NL Deixando o beco para trás, você segue em frente, excessivamente #yproud do trabalho que fez neste dia.",
+      "Este homem já sofreu o suficiente como resultado de suas ações anteriores. Você decide poupar sua vida e seguir em frente.",
+      "O mendigo tira sua capa para revelar que ele é #bCleric! NL @\"Você é uma alma horrível. O Clérigo comprou proteção!\"@ ele grita. NL NL Duas figuras enormes emergem do beco, cada uma vestindo uma armadura completa. Antes que você tenha a chance de reagir, eles sacam suas espadas e avançam!",
+      "Tendo matado os guarda-costas deste #bCleric, você se vira para ele e o encurrala em um canto do beco. Ele está aterrorizado e tremendo.",
+      "A criatura desaba em um único golpe, caindo em uma pilha de carne azul amassada. Você absorve a sua #ysoul com felicidade e continua em frente. NL NL Enquanto sai, você percebe os outros mendigos espiando de trás de prédios e becos. Você se banha em seu medo - que isto sirva de lição para qualquer um que se atreva a desafiar um senhor supremo da Espiral.",
+      "\"Ajuda do Clérigo! Ajuda do Clérigo!\" a criatura diz mais uma vez, mal conseguindo falar enquanto se encolhe de medo. NL Uma chama azul fria envolve seu corpo e se dissipa. NL NL Decidindo que seus poderes podem ser úteis mais tarde, e que você pode facilmente eliminar qualquer guarda-costas que ele tente empregar no futuro, você deixa este \"Clérigo\" viver mais uma vez."
+    ],
+    "OPTIONS": [
+      " #rTornar-se #rAmaldiçoado #r- #rOrgulho.",
+      "[Lutar]",
+      "[Ameaçar] #gRemova #g2 #gcartas #gdo #gseu #gbaralho."
+    ]
+  },
+  "downfall:Mausoleum": {
+    "NAME": "O Mausoléu",
+    "DESCRIPTIONS": [
+      "Ao se aventurar através de uma série de túmulos, você se depara com um grande sarcófago ~cravejado~ ~de~ ~joias~ no centro de uma sala circular. NL Você não consegue entender a escrita no caixão, no entanto, você percebe a ~névoa~ ~preta~ #p~saindo~ pelas laterais. NL Você está familiarizado com essa névoa - um sinal claro de #y~espíritos.~",
+      "Você absorve a ~névoa~ #p~fantasmagórica~ em si mesmo, reunindo seus espíritos. No entanto, ao sair, você não consegue deixar de começar a sentir um ~calafrio~ #r@sentir@ #r@um@ #r@arrepio...@"
+    ],
+    "OPTIONS": [
+      "[Festejar] #gGanhe #g200 #gAlmas. #rTornar-se #rAmaldiçoado #r- #rAssombrado."
+    ]
+  },
+  "downfall:Nest": {
+    "NAME": "O Ninho",
+    "DESCRIPTIONS": [
+      "Uma longa fila de figuras encapuzadas pode ser vista entrando em uma catedral despretensiosa. Assim que você entra na catedral, as figuras se voltam para você! Seus ouvidos são instantaneamente preenchidos com uma cacofonia de suspiros, aplausos e grasnados. Um dos cultistas se aproxima de você com uma oferta.",
+      "Observando uma arma perigosa que está sobre um altar, você corta a fila de cultistas e simplesmente pega o seu prêmio. Você é rapidamente cercado por Cultistas! @\"ASSASSINATO!! MATEM!! ASSASSINATO!\"@ Os cultistas rapidamente sacam suas próprias adagas, fatiando e cortando enquanto você luta para sair do prédio.",
+      "Aceitando a oferta do cultista, você pega o estranho elixir em suas mãos. Os cultistas cantam e gritam por você! Você canta também. Por que não? Esses cultistas são um grupo estranho, mas servem bem a um de seus companheiros senhores.",
+      "@\"DEUS-PÁSSARO!! RETORNOU!!\"@ Passando pela multidão de cultistas em festa, você logo se depara com o líder. Um cultista bem-vestido entrega a você uma Adaga Ornamentada.",
+      "Você pega a adaga, sem saber exatamente o que está prestes a acontecer. O líder do culto coloca a mão em sua túnica e oferece uma mistura azul e viscosa.",
+      "Os cultistas que cercam o líder lhe fornecem substitutos e logo, com sua própria adaga e poção em mãos, ele faz um gesto para que você siga seus passos.",
+      "Imitando o processo ritualístico do líder do culto, você destampa a poção e despeja suavemente uma pequena quantidade dela sobre a lâmina. O aço parece brilhar com um tom estranho à luz da catedral. Sem uma única palavra ou gesto do líder do culto, dois cultistas se aproximam - um para você e outro para ele. Fica dolorosamente claro o que eles querem que você faça.",
+      "Você mergulha a adaga no coração do cultista! @\"CAW~ CAAW~ CAAAWW!\"@ O ritual está completo e os cultistas sobreviventes não poderiam estar mais felizes. Eles agitam seus paus em celebração e continuam a chamar por um caw de alegria enquanto você sai da catedral."
+    ],
+    "OPTIONS": [
+      "[Retornar Estátua] #rPerder #rQuebrada #rAsa #rEstátua. #gGanhar #gmuitas #grecompensas.",
+      "[Trancado] Requer Asa Quebrada Estátua.",
+      "[Aceitar] #gGanhar #gCultista #gPoção.",
+      "[Roubar] #gObter Adaga Ritualística. #rPerder #r",
+      " #rHP.",
+      "[Sair]",
+      "[Continuar]",
+      "[Pegar Adaga] #gGanhar #gAdaga #gRitualística.",
+      "[Ungir] #gMelhorar #gRitual #gAdaga.",
+      "[Sacrificar] #rMatar #rCultista com Adaga Ritualística+.",
+      "[Ser Louvado] #gGanhar #grecompensas por devolver a #gAsa #gQuebrada #gEstátua."
+    ]
+  },
+  "downfall:Colosseum": {
+    "NAME": "O Coliseu",
+    "DESCRIPTIONS": [
+      "Conforme você continua descendo a torre, você nota um grupo de humanoides esperando em emboscada perto de um grande auditório. Quando se aproxima, os Escravagistas ficam assustados, mas rapidamente se explicam. NL NL \"Nós aguardamos aqueles que irão atacar nossa cidade - aqueles que você procura destruir! Temos uma plateia aguardando uma nova captura. As pessoas adoram uma luta até a morte!\"",
+      "Os escravagistas não são uma ameaça para você e podem ser úteis se conseguirem retardar ou ferir sua presa. NL NL No entanto, esse esporte sanguinário pode ser muito tentador para resistir...",
+      "Você entra no enorme estádio para encontrar uma plateia lotada de #bEscravagistas, #pCultistas e outros habitantes da cidade. NL NL ",
+      "@\"TRAGAM@ @OS@ @SEUS@ @MELHORES!\"@ você grita para a multidão, lançando um desafio aos seus campeões. NL Dois desafiantes se aproximam, avisando que as regras da arena impedem que eles se segurem, apesar de sua posição como senhor da Torre. NL NL Você não esperaria menos.",
+      "@\"O@ @PRÓXIMO@ @É@ @MEU!\"@ você grita para a multidão, que responde com uma salva de palmas ensurdecedora. NL NL Não demora muito para que os escravagistas arrastem a nova captura para dentro. O desafiante desprevenido acorda, ~grogue~ do emboscada, mas se prepara. NL NL Isso vai ser divertido.",
+      "Você decide que, embora seja tentador, lutar aqui seria uma distração desnecessária. Sua jornada continua e você deixa os escravagistas retomarem sua emboscada."
+    ],
+    "OPTIONS": [
+      "[Desafiar] #rLutar com os Campeões da Arena. #gGanhe #gmuitas #grecompensas.",
+      "[Participar] #rLutar com o Herói Cativo. #gGanhe #gmuitas #grecompensas.",
+      "[Sair]",
+      "[LUTAR!]",
+      "[Continuar]"
+    ]
+  },
+  "downfall:MindBloom": {
+    "NAME": "Mind Bloom",
+    "DESCRIPTIONS": [
+      "Enquanto caminha e atravessa a beleza do Além, seus pensamentos de repente começam a se sentir muito... #p~real...~ NL NL Imaginações de #raventureiros #rmortos e #balmas #bacumuladas começam a se manifestar em realidade. NL A sensação é fugaz. O que você faz?",
+      "Você sabe que já esteve aqui antes. NL NL Caçando o mesmo aventureiro. NL NL Alguma disso é real? NL NL Quantas vezes você foi morto?",
+      "Tudo faz sentido agora. NL O propósito singular, a descida, o #pCoração. NL NL Este é o caminho que sempre foi. NL Este é o caminho que sempre será. NL Tudo será esquecido novamente em breve..."
+    ],
+    "OPTIONS": [
+      "[Sou um Eco] #rLute #rcontra si mesmo. #gObtenha #guma #gRelíquia #gRara.",
+      "[Estou Farto] #gGanhe #g999 #gAlmas. #rAmaldiçoado #r- #r2 #rNormalidade.",
+      "[Estou Completo] #gAtualize #gtodas as #gCartas. #rPerca #rBençãos #rdo #rCoração e #r10 #rMáx #rHP.",
+      "[Bloqueado] Requer todas as 3 Bençãos do Coração.",
+      "[Sair]",
+      "[Estou Completo] #gAtualize #gtodas as #gCartas. #rPerca #rBençãos #rdo #rCoração e #r2 #rMáx #rHP."
+    ]
+  },
+  "downfall:MoaiHead": {
+    "NAME": "A Cabeça de Moai",
+    "DESCRIPTIONS": [
+      "Você decide fazer um pequeno desvio para um dos maiores monumentos do Além - uma enorme cabeça de pedra emergindo de um grande segmento de parede. NL NL A boca da cabeça está escancarada, revelando grandes e intimidantes dentes manchados de sangue. A superfície da estátua está cheia de pictogramas que parecem indicar pessoas se jogando na boca dessa cabeça e sendo devoradas.",
+      "Você entra na boca da estátua, esperando que ela seja ativada, sabendo que terá que pagar o preço em sangue. Em pouco tempo, os enormes molares caem de cima, esmagando você inteiro. NL @Escuridão.@ NL Algum tempo depois, dentro do escuro, você vê um raio de luz e ouve o que agora percebe ser o som de dentes de pedra lentamente se levantando. NL NL Você sai restaurado, a magia da estátua fluindo através de você.",
+      "Você entra na boca da estátua e deixa fluir do seu corpo uma imensa quantidade de #bespírito #benergia. Os olhos da estátua brilham #b~em chamas~ e seus enormes molares caem sobre você. NL #b~Luz azul~ #b~está~ #b~em toda parte.~ NL NL À medida que os dentes se levantam, você se sente completamente revigorado e mais poderoso do que nunca.",
+      "Você sai, imaginando o que poderia ter sido."
+    ],
+    "OPTIONS": [
+      "[Oferecer Almas] #rPerca #r",
+      " #rAlmas. #gGanhe #g",
+      " #gMáximo de #gHP e #gCure-se #gcompletamente.",
+      "[Bloqueado] Requer ",
+      " Almas.",
+      " #rAlmas. #gCada #gGremlin #gganha #g",
+      "[Pular para Dentro] #gCure-se #gcompletamente. #rCada #rGremlin #rperde #r"
+    ]
+  },
+  "downfall:SensoryStone": {
+    "NAME": "Pedra Sensorial",
+    "DESCRIPTIONS": [
+      "#g~VAIDADE.~ NL NL A vida é uma coisa bonita e magnífica... mesmo para um #gslime. NL NL Você sempre soube que estava destinado a grandes coisas. Os outros se contentam com moedas e pedaços de sucata, mas não você. Você espera, como um predador, por algo especial. Algo único. Algo ~fabuloso.~ NL NL Dias... semanas... talvez anos passam... é difícil dizer na Torre. Até que, finalmente, você o avista. Você não será mais contado apenas entre as massas! Eles podem ter suas #ymoedas e #ybugigangas, mas você tem algo melhor... NL NL @A@ @TINY@ @BOWLER@ @HAT!@ Arrebatador!",
+      "#y~FRAGILIDADE.~ NL NL A #rlâmina entra em seu peito, e o aplauso da #bmultidão enche seus ouvidos... a última coisa que você sentirá será uma mão batendo em seu rosto, e seus olhos se fecham. NL NL Você acorda em um quarto desconhecido, @incapaz@ @de@ @se@ @mover.@ Você tenta falar, mas nenhuma palavra sai, e sua visão é obscurecida por uma #gneblina #gverde. Isso é um sonho? Isso é a vida após a morte? Você tenta se lembrar, mas seus pensamentos são tão desconexos quanto seus braços e pernas. NL NL Você ouve uma voz em sua mente - um único comando. #g\"O #gequilíbrio #gdeve #gser #gIMPOSTO. #gGUARDA #gExordium.\"",
+      "#p~DESESPERO.~ NL NL #yObservar. #yRecordar. #yViver. Essa é a missão do Observador. Sua tarefa é investigar uma Torre de origem desconhecida. Você entra em uma sala hexagonal e antes que possa reagir, a porta @desaba@ @atrás@ @de@ @você!@ NL NL Não há escapatória. O único caminho que pode levar para fora é ao pegar uma tabuleta, claramente imbuida de magia, que repousa sobre um pedestal. No momento em que sua pele toca o artefato, seu corpo ~se~ ~dissolve~ ~em~ ~nada,~ e sua #palma é puxada para a #ppedra. NL NL Seu destino sempre estará ligado à #ptabuleta, #amaldiçoado a vagar pela Torre pela eternidade.",
+      "#y~SEPARAÇÃO.~ NL NL Você é o primeiro. Você serve o ~Shaper.~ Você não nasceu, com fraqueza e fragilidade, mas foi criado. Perfeito. E em sua imagem você deve criar mais construtos. Os #yautômatos do legado do Criador. NL NL Cada um impecável em seu design, todos para servir a um propósito específico. Todos, exceto um. Aquele destinado a manter o equilíbrio na Cidade. NL NL Você joga o #yconstruto #ydefeituoso da janela mais alta, fazendo-o cair até o fundo do Pilar, e assume seu lugar como protetor da Cidade. NL NL O equilíbrio deve ser imposto.",
+      "#b~ORGULHO.~ NL NL Você está no centro de uma grande arena. Tudo pelo que você trabalhou culmina neste único combate singular. Você adota uma postura #bdefensiva, esgotando a resistência do seu inimigo, até que uma abertura se apresenta. Com o último fôlego de força, você #rmergulha #rsua #rlâmina no peito de seu oponente. A plateia irrompe em @aplausos trovejantes!@ NL NL Não satisfeito em apenas vencer, você levanta a mão aberta e golpeia seu adversário ~na~ ~cara,~ dando um golpe final insultuoso. NL NL Não há mais ninguém em seu caminho. Você é o novo #b@Campeão!@",
+      "#p~GANÂNCIA.~ NL NL Poucos homens podem resistir à #btentação #bdo #bpoder. Mas o poder tem um custo, e um grande poder um preço ainda maior. NL NL Você se senta em seu trono acima do Coliseu, assistindo homens #rlutarem #raté #ra #rmorte para sua diversão e pelo título de #bCampeão. O preço para entrar - a #g~chama~ #g~da~ #g~alma~ #g~eterna~ #g~deles~ em serviço a você. Cada nome gravado em uma placa, vinculando-os a você na vida após a morte. NL NL A multidão aplaude quando um lutador é derrubado com um golpe final na cara. Você vai para o seu cofre, mas alguém esteve aqui. Armadilhas foram disparadas, mas nenhum corpo foi encontrado... e a #p@placa@ @está@ @desaparecida!@",
+      "#g~TRISTEZA.~ NL NL Você está, finalmente, no topo do pico mais alto da Torre. Você passou anos trabalhando incansavelmente para construir essa colossal obra de arquitetura, um monumento ao Grande. Cada #gcurva arredondada à perfeição. Cada #yaresta meticulosamente colocada. NL NL \"Está feito, meu amor.\" Cobrindo a mão sem vida com a sua, você liga a máquina. Um zumbido suave preenche o ambiente e em breve você sente a sua própria #b~essência~ sendo puxada para a sua criação - rapidamente unida por outra. Vocês dois viverão eternamente neste lugar, exatamente como planejaram. NL NL Com um eco ressonante... o #pCoração ~bate~ pela primeira vez.",
+      "#b~RAIVA.~ NL NL Você é impotente para impedir a #yornamentada #yadaga que entra em seu peito. Em seu momento final, você reza para qualquer #pdivindade que governa esta Torre para lhe dar a força para viver, ~independente~ ~do~ ~custo.~ NL NL Seu #pcoração dá uma batida final forte, depois é silenciado... por um momento. Seus olhos brilham com #b@chamas@ #b@azuis@ enquanto você volta à vida com a força de dez homens, rompendo facilmente suas amarras e rugindo para a multidão de #bfiguras vestidas de vermelho que o cercam! NL NL À medida que você sente seu corpo começar a se transformar em uma #bforma monstruosa, as figuras se curvam diante de você.",
+      "#p~ARROGÂNCIA.~ NL NL Você despreza o #pcoração divino que controla este lugar, ditando seu destino. É #yhora de agir. NL NL O Além é a seção menos guardada da Torre, e você é capaz de deslizar para a sua #ytesouraria com facilidade. Há muitos artefatos de poder aqui, mas um em particular fala com você - um #y~relógio~ #y~brilhante.~ NL NL Com confiança inabalável, você estende a mão e agarra o relógio de bolso... @... awtekcop@ @eht@ @hctans@ @dna@ @tuo@ @hcaer@ @uoy@ @,conhecimento@ @guiando@ @com@ @independência@ @com@ NL NL Você despreza o #pcoração divino que controla este... lugar...?",
+      "Pensando melhor, talvez as lembranças sejam melhor deixadas no passado."
+    ],
+    "OPTIONS": [
+      "[Lembrar] #gAdicionar #g1 #gChefão #gcarta #gpara #gseu #gbaralho.",
+      "[Lembrar] #gAdicionar #g2 #gChefões #gcartas #gpara #gseu #gbaralho. #rPerder #r",
+      "[Lembrar] #gAdicionar #g3 #gChefões #gcartas #gpara #gseu #gbaralho. #rPerder #r"
+    ]
+  },
+  "downfall:SecretPortal": {
+    "NAME": "Portal Secreto",
+    "DESCRIPTIONS": [
+      "Before you is a welcome sight - in one of the living walls of the Beyond is an enclosed stone entrance filled with a #p~swirling~ #p~magical~ #p~portal.~ NL NL This portal allows for quick access to the Beyond's overlord. However, if you take the stone that powers it, your journey through the Spire would be hastened.",
+      "The portal can always be repaired later. You pry the runed stone that powers the gateway, and quickly contemplate where to head next. The stone will only remain useful for a brief moment."
+    ],
+    "OPTIONS": [
+      "[Take Stone] Skip to any non-Boss Room."
+    ]
+  },
+  "downfall:TombRedMask": {
+    "NAME": "Tumba do Senhor Máscara Vermelha",
+    "DESCRIPTIONS": [
+      "Uma tumba altamente ornamentada pode ser vista do outro lado de um caminho flutuante. Ao chegar na tumba, você percebe uma parede macia, provavelmente escondendo um compartimento secreto. Um golpe certeiro deve ser suficiente para derrubá-la.",
+      "Você veste a #rmask. Os bandidos que concordaram em ajudá-lo parecem ter uma conexão com este Lorde - talvez sejam inspirados por seu novo adorno.",
+      "Uma abertura aparece na tumba e desliza para fora uma pequena máscara vermelha com um bilhete anexado. \"Tome dos outros como eu tomei de você!\"",
+      "Decidindo não perturbar a tumba, você continua em frente.",
+      "Satisfeito em coletar a máscara, você continua em frente."
+    ],
+    "OPTIONS": [
+      "[Vestir a Máscara Vermelha] #gMelhoria #gBandido #gContrato.",
+      "[Bloqueado] Requer: Máscara Vermelha & Contrato de Bandido.",
+      "[Golpear] #rPerder ",
+      ". #gObter #gMáscara #gVermelha.",
+      "[Bloqueado] Requer um Ataque.",
+      "[Partir]"
+    ]
+  },
+  "downfall:WindingHalls": {
+    "NAME": "Passagens sinuosas",
+    "DESCRIPTIONS": [
+      "Conforme você lentamente faz seu caminho pelas passagens sinuosas, você se encontra nos infames corredores móveis do Além. Um ser inferior enlouqueceria tentando navegar por eles, mas para você, eles são tão familiares quanto um velho amigo. NL NL As constantes #p~sussurros~ #p~de vozes~ tranquilizam sua mente enquanto você decide qual caminho seguir."
+    ],
+    "OPTIONS": [
+      "[Esquerda] #gExplorar #gum #gEvento.",
+      "[Direita] #gProcurar #gno #gTesouro #gpor #guma #gRelíquia.",
+      "[Em frente] #gCaçar #ga #gMercadoria #gabaixo."
+    ]
+  },
+  "downfall:Joust": {
+    "NAME": "O Torneio",
+    "DESCRIPTIONS": [
+      "Conforme você faz seu caminho pelas grandes construções, você se depara com uma ponte longa e estreita e avista cavaleiros de ambos os lados, encarando um ao outro. Você se aproxima e eles se dispersam, encarando um ao outro com raiva. NL \"Monstro! VOCÊ luta contra ele, se é tão bom em matar coisas!\" NL \"Não, VOCÊ luta contra ele! Você conhece melhor os monstros, com aquele ~gato demoníaco~!\" NL NL Eles não vão parar de discutir. Você terá que decidir...",
+      "Este cavaleiro era claramente mais forte que o outro, e você tentou o seu melhor, mas acabou sendo espancado. NL \"Gostaria de ver você derrotar uma besta como essa!\" ele diz ao outro cavaleiro enquanto eles saem, discutindo.",
+      "Você evita impiedosamente os ataques do cavaleiro e o #rmata, sugando suas #galmas com alegria. O outro cavaleiro grita e foge. Que covarde...",
+      "O cavaleiro covarde lhe dá alguns arranhões chatos à distância com sua espada longa e foge gritando. O outro cavaleiro corre atrás dele, com raiva. Você volta ao seu trabalho, irritado.",
+      "Você ~paira~ sobre o cavaleiro, e em vez de tentar fugir, ele simplesmente se encolhe. Você o #rmata facilmente e pega suas #galmas, mas quando se vira para o outro cavaleiro, ele já havia fugido."
+    ],
+    "OPTIONS": [
+      "[Esquerda] #r50%: #rPerder #r",
+      " de HP.",
+      " #g50%: #gGanhar #g200 #gAlmas.",
+      "[Direita] #r25%: #rPerder #r",
+      " #g75%: #gGanhar #g100 #gAlmas."
+    ]
+  },
+  "downfall:BossTester": {
+    "NAME": "Preparação de Chefão de Depuração",
+    "DESCRIPTIONS": [
+      "Escolha um Ato para receber as recompensas simuladas para esse ato. Se você deseja testar um encontro do Ato 3, execute este evento 3 vezes - uma vez para o Ato 1, depois para o Ato 2 e, por fim, para o Ato 3.",
+      "Recompensas concluídas. Depois de comprar, execute este evento novamente se quiser simular as recompensas de outro ato. Caso contrário, siga para a luta contra o chefe. Não colete as recompensas dele."
+    ],
+    "OPTIONS": [
+      "[Ato 1]",
+      "[Ato 2]",
+      "[Ato 3]",
+      "[Ir para a Loja]"
+    ]
+  },
+  "downfall:BetterEnding": {
+    "NAME": "Coração do Pilar",
+    "DESCRIPTIONS": [
+      "@tu-thump@ ... @tu-thump@ ... @tu-thump@ ... NL Um confortante batimento cardíaco pode ser sentido em todo o ambiente... NL Você está no ~final~ ? Seu propósito está cumprido?",
+      "Você devolve #b",
+      " almas para o coração! NL O coração #b@se contorce@ de êxtase, pulsando para sempre mais.",
+      "Apesar de todos os seus esforços, a porta para a câmara do Coração permanece vulnerável. Então, você se pergunta, ~\"Você realmente fez o bastante?\"~  NL Você sente que deu um total de #b",
+      " almas para o coração.",
+      " NL Um total de #b",
+      " almas foram dadas por todos aqueles que foram convocados por ele.",
+      " NL O coração pulsa cada vez mais alto enquanto sua #y~consciência~ #y~se esvai...~",
+      "NL Você prepara sua lâmina...",
+      "NL Você prepara suas adagas...",
+      "NL Você carrega seu núcleo ao máximo...",
+      "Você se pergunta, ~\"Você realmente fez o bastante?\"~",
+      " NL O coração pulsa cada vez mais alto enquanto sua #p~consciência~ #p~começa~ #p~a desaparecer...~",
+      " NL Uma súbita explosão de #y@energia@ emana de dentro de você, #b@acordando@ você.",
+      " NL O coração #gretrocede, sentindo uma ameaça se aproximando! A luta ainda não acabou...",
+      "NL Você carrega seu cajado com energia divina...",
+      "Você sente #palgo #p@malévolo@ em seu núcleo..."
+    ],
+    "OPTIONS": [
+      "[Continuar]",
+      "[Dar] #b???",
+      "[Dormir]",
+      "[Aproximar-se da porta]"
+    ]
+  },
+  "downfall:EvilShrines": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Somente você deve possuir este poder. Você despedaça o santuário em pedaços. NL Um lamento sombrio ecoa ao seu redor, e você pode sentir a #p~magia~ #p~amaldiçoada~ do santuário se infiltrando em seus ossos."    ],
+    "OPTIONS": [
+      "[Profanar] #gDuplicar #g2 #gcartas. #rAmaldiçoado #r- #rAleatório.",
+      "[Profanar] #gRemover #g3 #gcartas. #rAmaldiçoado #r- #rAleatório.",
+      "[Profanar] #gTransformar #g3 #gcartas. #rAmaldiçoado #r- #rAleatório.",
+      "[Profanar] #gAprimorar #g2 #gcartas. #rAmaldiçoado #r- #rAleatório."
+    ]
+  }
+}

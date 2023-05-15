@@ -1,0 +1,27 @@
+{
+  "slimeboundConfigMenuText": {
+    "TEXT": [
+      "Permitir que outros personagens encontrem alguns dos artefatos do Slimebound.",
+      "Permitir que outros personagens encontrem algumas das poções do Slimebound.",
+      "Permitir que outros personagens encontrem alguns dos eventos do Slimebound.",
+      "Desbloquear tudo (não recomendado)"
+    ]
+  },
+  "slimeboundmod:CommandMod": {
+    "TEXT": [
+      " NL slimeboundmod:Command."
+    ]
+  },
+  "slimeboundmod:lickDescriptor": {
+    "TEXT": [
+      "Lamber",
+      "slimeboundmod:Lamber. NL "
+    ]
+  },
+  "slimeboundmod:tackleDescriptor": {
+    "TEXT": [
+      "Teckle",
+      "slimeboundmod:Teckle. NL "
+    ]
+  }
+}

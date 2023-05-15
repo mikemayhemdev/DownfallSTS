@@ -1,0 +1,514 @@
+{
+  "Gremlin:AggressiveDefense": {
+    "NAME": "Defesa Agressiva",
+    "DESCRIPTION": "Inflige !D! de dano. NL Sempre que você ganhar Proteção neste turno, o inimigo perde !M! PV."
+  },
+
+  "Gremlin:ArmsTheft": {
+    "NAME": "Roubo de Armas",
+    "DESCRIPTION": "gremlin:Rouba !M! de Força. NL Exaurir."
+  },
+
+  "Gremlin:Astound": {
+    "NAME": "Espanto",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL Se você tiver 3 ou mais gremlin:Magia, ganhe !M! *Proteção.",
+    "UPGRADE_DESCRIPTION": "Ganhe !B! de Proteção. NL Se você tiver 3 ou mais gremlin:Magia, ganhe !M! *Proteção melhoradas."
+  },
+
+  "Gremlin:Bang": {
+    "NAME": "Explosão",
+    "DESCRIPTION": "Inflige !D! de dano !M! vezes. Adiciona um *Whiz ao seu monte de descarte. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Inflige !D! de dano !M! vezes. Adiciona um *Whiz+ ao seu monte de descarte. NL Exaurir."
+  },
+
+  "Gremlin:Bellow": {
+    "NAME": "Rugido",
+    "DESCRIPTION": "Etéreo. NL Ganhe !M! de Força para cada inimigo que não pretende atacar. NL Exaurir."
+  },
+
+  "Gremlin:BrokenShin": {
+    "NAME": "Canela Quebrada",
+    "DESCRIPTION": "Aplica gremlin:Agonia para cada !M! pilhas de Fraqueza que o alvo tem. NL Exaurir."
+  },
+
+  "Gremlin:BubbleBarrier": {
+    "NAME": "Barreira de Bolhas",
+    "DESCRIPTION": "Sempre que você jogar uma carta neste turno, ganhe !M! de Proteção."
+  },
+
+  "Gremlin:BulkUp": {
+    "NAME": "Crescimento Muscular",
+    "DESCRIPTION": "Ganhe !M! de PV Temporário. NL gremlin:Troca para o gremlin:Gremlin_Gordo."
+  },
+
+  "Gremlin:BurlyBlow": {
+    "NAME": "Golpe Forte",
+    "DESCRIPTION": "Inflige !D! de dano. Repete para cada pilha de Fraqueza."
+  },
+
+  "Gremlin:CatScratch": {
+    "NAME": "Arranhão de Gato",
+    "DESCRIPTION": "Inflige !D! de dano !M! vezes."
+  },
+
+  "Gremlin:Changeo": {
+    "NAME": "Mudança!",
+    "DESCRIPTION": "Ganhe !B! de Proteção e !M! gremlin:Magia."
+  },
+
+  "Gremlin:CongaLine": {
+    "NAME": "Corda de Conga",
+    "DESCRIPTION": "No início do seu turno, ganhe [E] e gremlin:Troque para o próximo Gremlin.",
+    "UPGRADE_DESCRIPTION": "Inata. NL No início do seu turno, ganhe [E] e gremlin:Troque para o próximo Gremlin."
+  },
+
+  "Gremlin:CounterStrike": {
+    "NAME": "Contra-Ataque",
+    "DESCRIPTION": "Cause !D! de dano. Se o inimigo pretende atacar, ganhe !M! Blocos.",
+    "UPGRADE_DESCRIPTION": "Cause !D! de dano. Se o inimigo pretende atacar, ganhe !M! Blocos aprimorados."
+  },
+
+  "Gremlin:CowerChoice": {
+    "NAME": "Covarde",
+    "DESCRIPTION": "Perca todo o seu ouro.",
+    "EXTENDED_DESCRIPTION": ["GREMS COVARDES NÃO SÃO ESTÚPIDOS."]
+  },
+
+  "Gremlin:CowerChoiceB": {
+    "NAME": "Covarde",
+    "DESCRIPTION": "Perca permanentemente o seu Gremlin mais atrás.",
+    "EXTENDED_DESCRIPTION": ["Bom. Agora o resto de vocês, sumam!", "Sim! Sumam!"]
+  },
+
+  "Gremlin:DaggerDance": {
+    "NAME": "Dança da Estoque",
+    "DESCRIPTION": "Cause !D! de dano a TODOS os inimigos !M! vezes."
+  },
+
+  "Gremlin:Dazzle": {
+    "NAME": "Deslumbrar",
+    "DESCRIPTION": "Cause !D! de dano. NL Se você tiver 3 ou mais gremlin:Magia, gremlin:Roube 2 Forças. NL Exaurir."
+  },
+
+  "Gremlin:Defend": {
+    "NAME": "Defender",
+    "DESCRIPTION": "Ganhe !B! Proteção."
+  },
+
+  "Gremlin:Duplicate": {
+    "NAME": "Duplicar",
+    "DESCRIPTION": "Ganhe !M! gremlin:Ecos de um Golpe na sua mão. Eles custam 1 a menos. Exaurir.",
+    "UPGRADE_DESCRIPTION": "Ganhe !M! gremlin:Ecos de um Golpe na sua mão. Eles custam 1 a menos."
+  },
+
+  "Gremlin:EdibleArmor": {
+    "NAME": "Armadura Comestível",
+    "DESCRIPTION": "Converta sua Proteção em PV Temporários."
+  },
+
+  "Gremlin:Encore": {
+    "NAME": "Bis",
+    "DESCRIPTION": "Ganhe 3 gremlin:Magia. NL Sempre que você consumir gremlin:Magia, cause !M! de dano a TODOS os inimigos."
+  },
+
+  "Gremlin:Enthusiasm": {
+    "NAME": "Entusiasmo",
+    "DESCRIPTION": "Sempre que você gremlin:Trocar, compre uma carta."
+  },
+
+  "Gremlin:Erupt": {
+    "NAME": "Erupção",
+    "DESCRIPTION": "Ganhe !M! Força Temporária. NL Exaurir."
+  },
+
+  "Gremlin:Exacerbate": {
+    "NAME": "Exacerbar",
+    "DESCRIPTION": "Cause !D! de dano. gremlin:Cegar o inimigo. NL Exaurir."
+  },
+
+  "Gremlin:FairyDust": {
+    "NAME": "Pó de Fada",
+    "DESCRIPTION": "Ganhe !M! *Escudos e compre !M! cartas. NL Exaurir."
+  },
+
+  "Gremlin:SleeveOfAces": {
+    "NAME": "Manga de Ases",
+    "DESCRIPTION": "Cause !D! de dano. NL Ganhe 1 Estoque para cada pilha de gremlin:Magia que você tem.",
+    "UPGRADE_DESCRIPTION": "Cause !D! de dano. NL Ganhe 1 Estoque Aprimorado para cada pilha de gremlin:Magia que você tem."
+  },
+
+  "Gremlin:FatGremlin": {
+    "NAME": "Gremlin Gordo",
+    "DESCRIPTION": "gremlin: Trocar para gremlin:Gremlin_Gordo."
+  },
+
+  "Gremlin:FeelTheAudience": {
+    "NAME": "Sinta a Audiência",
+    "DESCRIPTION": "Cause !D! de dano a TODOS os inimigos. NL Ganhe !M! gremlin:Magia para cada um que pretende atacar."
+  },
+
+  "Gremlin:FightChoice": {
+    "NAME": "Lutar",
+    "DESCRIPTION": "Iniciar Combate. NL Inimigo ganha !M! Força.",
+    "EXTENDED_DESCRIPTION": ["GREMS MORRAM AGORA!", "Alguém está pedindo para apanhar!"]
+  },
+
+  "Gremlin:FlipOut": {
+    "NAME": "Perder a Cabeça",
+    "DESCRIPTION": "Cause !D! de dano. NL Sempre que você ganharia Proteção neste turno, em vez disso cause esse tanto de dano a TODOS os inimigos."
+  },
+
+  "Gremlin:Flurry": {
+    "NAME": "Rajada",
+    "DESCRIPTION": "Cause !D! de dano para cada carta jogada neste turno. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " carta jogada.)",
+      " cartas jogadas.)"
+    ]
+  },
+
+  "Gremlin:FollowThrough": {
+    "NAME": "Pelo Líder!",
+    "DESCRIPTION": "Cause !D! de dano. NL Ganhe !M! Força Temporária."
+  },
+
+  "Gremlin:Fury": {
+    "NAME": "Fúria",
+    "DESCRIPTION": "Custa 1 a menos de [E] para cada 2 de Força que você tem. NL Cause !D! de dano 3 vezes."
+  },
+
+  "Gremlin:Glimmer": {
+    "NAME": "Brilho",
+    "DESCRIPTION": "Causa !D! de dano. Ganhe 2 *Proteções.",
+    "UPGRADE_DESCRIPTION": "Causa !D! de dano. Ganhe 2 *Proteções Aprimoradas."
+  },
+
+  "Gremlin:GlitterGuard": {
+    "NAME": "Guarda de Glitter",
+    "DESCRIPTION": "Ganhe !M! *Proteções. NL gremlin:Troque para gremlin:Gremlin_de_Escudo.",
+    "UPGRADE_DESCRIPTION": "Ganhe !M! *Proteções Aprimoradas. NL gremlin:Troque para gremlin:Gremlin_de_Escudo."
+  },
+
+  "Gremlin:GremlinArms": {
+    "NAME": "Braços de Gremlin",
+    "DESCRIPTION": "Ganhe uma seleção aleatória de !M! Estiletes e *Proteções."
+  },
+
+  "Gremlin:GremlinMeal": {
+    "NAME": "Flex",
+    "DESCRIPTION": "Ganhe !M! Força Temporária."
+  },
+
+  "Gremlin:GremlinDance": {
+    "NAME": "Dança de Gremlin",
+    "DESCRIPTION": "Causa !D! de dano. NL Possui um efeito bônus com base no Gremlin que você é.",
+    "EXTENDED_DESCRIPTION": ["Causa !D! de dano",
+    " a TODOS os inimigos.", ". NL Inimigo perde !M! Força neste turno.", 
+	". NL Ganhe !B! Proteção.", ". NL Compre !M! cartas.", ". NL Ganhe !M! gremlin:Magia.", ". NL Ganhe !M! Força."]
+  },
+
+  "Gremlin:GremlinOffensive": {
+    "NAME": "Gremlin Ofensivo",
+    "DESCRIPTION": "Causa !D! de dano. NL Ganhe um *Gremlin *Ofensivo. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Causa !D! de dano. NL Ganhe um *Gremlin *Ofensivo Aprimorado. NL Exaurir."
+  },
+
+  "Gremlin:GremlinToss": {
+    "NAME": "Arremesso de Gremlin",
+    "DESCRIPTION": "Causa dano igual ao seu Proteção e HP_Temporário atual.",
+    "UPGRADE_DESCRIPTION": "Ganhe !M! HP_Temporário. NL Causa dano igual ao seu Proteção e HP_Temporário atual.",
+    "EXTENDED_DESCRIPTION": [" NL (Causa !D! de dano.)"]
+  },
+
+  "Gremlin:GremlinWizard": {
+    "NAME": "Mago Gremlin",
+    "DESCRIPTION": "gremlin:Troque para gremlin:Gremlin_Mago."
+  },
+
+  "Gremlin:Heckle": {
+    "NAME": "Provocação",
+    "DESCRIPTION": "Sempre que você aplicar uma penalidade a um inimigo, ganhe !M! PV Temporário."
+  },
+
+  "Gremlin:InfiniteBlocks": {
+    "NAME": "Blocos Infinitos",
+    "DESCRIPTION": "No início do seu turno, ganhe uma *Proteção.",
+    "UPGRADE_DESCRIPTION": "Inata. NL No início do seu turno, ganhe uma *Proteção."
+  },
+
+  "Gremlin:IrksomeBlow": {
+    "NAME": "Golpe Irritante",
+    "DESCRIPTION": "Cause !D! de dano. NL Força afeta esta carta !M! vezes"
+  },
+
+  "Gremlin:Irritability": {
+    "NAME": "Irritabilidade",
+    "DESCRIPTION": "Ganhe !B! Proteção. NL Ganhe !M! Espinhos Temporários. NL Troque para gremlin:Gremlin_Maluco."
+  },
+
+  "Gremlin:Jeer": {
+    "NAME": "Zombar",
+    "DESCRIPTION": "Causar !D! de dano. Se o inimigo tiver um debuff, ganhe !M! de PV temporário."
+  },
+
+  "Gremlin:Kablamo": {
+    "NAME": "Kablamo!",
+    "DESCRIPTION": "Cause !D! de dano a TODOS os inimigos. NL Este ataque não consome gremlin:Magia."
+  },
+
+  "Gremlin:LeaderChoice": {
+    "NAME": "Fazer Escolha",
+    "DESCRIPTION": "Entregar seu amigo?"
+  },
+
+  "Gremlin:MadGremlin": {
+    "NAME": "Gremlin Maluco",
+    "DESCRIPTION": "Mudar para gremlin:Gremlin_Maluco."
+  },
+
+  "Gremlin:MakeshiftArmor": {
+    "NAME": "Armadura improvisada",
+    "DESCRIPTION": "Sempre que você jogar 7 ataques, ganhe 1 Artefato.",
+    "UPGRADE_DESCRIPTION": "Ganhe !M! Artefato. NL Sempre que você jogar 7 ataques, ganhe 1 Artefato."
+  },
+
+  "Gremlin:Mockery": {
+    "NAME": "Zombaria",
+    "DESCRIPTION": "Aplique !M! Fraqueza. NL Se o inimigo tiver 3 ou mais Fraqueza, ganhe !B! Proteção."
+  },
+
+  "Gremlin:Necromancy": {
+    "NAME": "Necromancia",
+    "DESCRIPTION": "Requer 3 Magia. NL Consuma toda a gremlin:Magia para ressuscitar um Gremlin aleatório com !M! PV. Exaurir.",
+    "EXTENDED_DESCRIPTION": ["Não há mojo suficiente.", "Ninguém morreu ainda.", "Não há espaço suficiente."]
+  },
+
+  "Gremlin:Nob": {
+    "NAME": "NOB",
+    "DESCRIPTION": "Ganhe !M! PV_Temporário. NL Transforme-se em *Gremlin gremlin:Nob até que você fique sem PV_Temporário."
+  },
+
+  "Gremlin:NobChoice": {
+    "NAME": "Fazer uma Escolha",
+    "DESCRIPTION": "Pequenos Grems dão Ouro?"
+  },
+
+  "Gremlin:PartyStick": {
+    "NAME": "Bastão da Festa",
+    "DESCRIPTION": "Eterno. Não pode ser jogado. NL Sempre que você gremlin:Trocar, ganhe [E]",
+    "UPGRADE_DESCRIPTION": "Não pode ser jogado. NL Sempre que você gremlin:Trocar, ganhe [E]",
+    "EXTENDED_DESCRIPTION": ["Ninguém pode brincar com o Bastão da Festa."]
+  },
+
+  "Gremlin:Patsy": {
+    "NAME": "Patsy",
+    "DESCRIPTION": "Ganhe !B! Proteção. NL Troque para o próximo Gremlin."
+  },
+
+  "Gremlin:Pickpocket": {
+    "NAME": "Batedor de Carteira",
+    "DESCRIPTION": "gremlin:Roube todos os Artefatos. NL Cause !D! de dano. NL Exaurir."
+  },
+
+  "Gremlin:PinNeedle": {
+    "NAME": "Agulha de Pino",
+    "DESCRIPTION": "Cause !D! de dano. NL bronze:Insira !M! *Pequenos Furos. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Cause !D! de dano. NL bronze:Insira !M! *Pequenos Furos Melhorados. NL Exaurir."
+  },
+
+  "Gremlin:Pinprick": {
+    "NAME": "Pequenos Furos",
+    "DESCRIPTION": "Cause !D! de dano. NL Compre uma carta. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Quando comprado, ganhe um gremlin:Eco disso. NL Cause !D! de dano. NL Compre uma carta. NL Exaurir."
+  },
+
+  "Gremlin:Polish": {
+    "NAME": "Polimento",
+    "DESCRIPTION": "Estoques causam !M! de dano adicional. NL *Proteções concedem !M! de Proteção adicional."
+  },
+
+  "Gremlin:PourSalt": {
+    "NAME": "Despejar Sal",
+    "DESCRIPTION": "Cause !D! de dano. Se o inimigo estiver Fraqueza, remova uma pilha para ganhar !M! Estoques."
+  },
+
+  "Gremlin:Presto": {
+    "NAME": "Presto!",
+    "DESCRIPTION": "Cause !D! de dano. Ganhe !M! gremlin:Magia."
+  },
+
+  "Gremlin:Pretaliation": {
+    "NAME": "Pretilação",
+    "DESCRIPTION": "Cause !D! de dano se o inimigo tiver a intenção de atacar. NL Cause !blamage! de dano caso contrário."
+  },
+
+  "Gremlin:ProperTools": {
+    "NAME": "Ferramentas Adequadas",
+    "DESCRIPTION": "Inflige !D! de dano. Se o inimigo pretende atacar, ganha !M! *Escudos. Caso contrário, ganha !M! Estoques."
+  },
+
+  "Gremlin:RageBreak": {
+    "NAME": "Quebrar Fúria",
+    "DESCRIPTION": "Dobre sua Força. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Ganhe !B! Proteção. NL Dobre sua Força. NL Exaurir."
+  },
+
+  "Gremlin:Raid": {
+    "NAME": "Incursão",
+    "DESCRIPTION": "Compre uma carta para cada Gremlin vivo. NL Descarte !M! cartas.",
+    "UPGRADE_DESCRIPTION": "Compre uma carta para cada Gremlin vivo. NL Descarte !M! cartas."
+  },
+
+  "Gremlin:Revel": {
+    "NAME": "Revelação",
+    "DESCRIPTION": "Ganhe [E] para cada Gremlin vivo."
+  },
+
+  "Gremlin:Rhythm": {
+    "NAME": "Ritmo",
+    "DESCRIPTION": "gremlin:Troque para o próximo Gremlin. NL Busque uma carta Básica em seu baralho. Ele custa 0 nesta rodada."
+  },
+
+  "Gremlin:Rush": {
+    "NAME": "Corrida",
+    "DESCRIPTION": "Etereo. NL Inflige !D! de dano. NL Exaurir."
+  },
+
+  "Gremlin:Scatter": {
+    "NAME": "Dispersão!",
+    "DESCRIPTION": "Na próxima vez que você perder PV, em vez disso gremlin:Troque para um Gremlin aleatório. NL Exaurir."
+  },
+
+  "Gremlin:SecondVolley": {
+    "NAME": "Segunda Salva",
+    "DESCRIPTION": "Inflige !D! de dano. Ganhe um Estoque para cada carta jogada nesta rodada.",
+    "UPGRADE_DESCRIPTION": "Inflige !D! de dano. Ganhe um Estoque aprimorado para cada carta jogada nesta rodada.",
+    "EXTENDED_DESCRIPTION": [
+        "NL (",
+        " carta jogada.)",
+        " cartas jogadas.)"
+    ]
+  },
+
+  "Gremlin:ShadowShiv": {
+    "NAME": "Estoque Sombrio",
+    "DESCRIPTION": "Sempre que você jogar um Golpe que não é Exaurir, ganhe um Estoque."
+  },
+
+  "Gremlin:ShankStone": {
+    "NAME": "Pedra de Estoque",
+    "DESCRIPTION": "Não jogável. NL Sempre que você comprar esta carta, ganhe !M! Estoques.",
+    "EXTENDED_DESCRIPTION": ["Não posso jogar esta carta."]
+  },
+
+  "Gremlin:SharpenBlades": {
+    "NAME": "Afiação de Lâminas",
+    "DESCRIPTION": "Reduz o custo de todos os Golpes em sua mão para 0 neste turno.",
+    "UPGRADE_DESCRIPTION": "Compre uma carta. NL Reduz o custo de todos os Golpes em sua mão para 0 neste turno."
+  },
+
+  "Gremlin:ShieldGremlin": {
+    "NAME": "Gremlin de Escudo",
+    "DESCRIPTION": "gremlin:Troque para gremlin:Gremlin_de_Escudo."
+  },
+
+  "Gremlin:ShowOfHands": {
+    "NAME": "Mostrar as Cartas",
+    "DESCRIPTION": "Obtenha !M! de Proteção para cada carta em sua mão.",
+    "UPGRADE_DESCRIPTION": "Compre uma carta. NL Obtenha !M! de Proteção para cada carta em sua mão."
+  },
+
+  "Gremlin:ShowStopper": {
+    "NAME": "Show Stopper",
+    "DESCRIPTION": "Só pode ser jogado se você tiver exatamente 7 gremlin:Magia. NL Cause !D! de dano a TODOS os inimigos 5 vezes.",
+    "EXTENDED_DESCRIPTION": ["Não há suspense suficiente.", "O timing está arruinado."]
+  },
+
+  "Gremlin:SkullBash": {
+    "NAME": "Golpe de Crânio",
+    "DESCRIPTION": "Etereo. NL Cause !D! de dano. NL Aplique !M! de Vulnerabilidade. NL Exaurir."
+  },
+
+  "Gremlin:SneakyGremlin": {
+    "NAME": "Gremlin Sorrateiro",
+    "DESCRIPTION": "gremlin:Troque para gremlin:Gremlin_Sorrateiro."
+  },
+
+  "Gremlin:Strike": {
+    "NAME": "Golpe",
+    "DESCRIPTION": "Cause !D! de dano."
+  },
+
+  "Gremlin:Stupend": {
+    "NAME": "Estupendo",
+    "DESCRIPTION": "Obtenha !B! de Proteção. NL Cause !D! de dano. NL O Proteção é afetado por gremlin:Magia."
+  },
+
+  "Gremlin:SupplyScrollCard": {
+    "NAME": "Rolo de Suprimento",
+    "DESCRIPTION": "Obtenha uma variedade aleatória de !M! Estoques e *Proteções. NL Exaurir."
+  },
+
+  "Gremlin:Tadah": {
+    "NAME": "Tadah!",
+    "DESCRIPTION": "Obtenha um Echo de uma Habilidade aleatória. NL gremlin:Troque para o gremlin:Gremlin_Mago.",
+    "UPGRADE_DESCRIPTION": "Obtenha um gremlin:Echo de uma Habilidade aleatória. Ela custa 1 a menos. NL gremlin:Troque para gremlin:Gremlin_Mago."
+  },
+
+  "Gremlin:TagTeam": {
+    "NAME": "Time de Marcação",
+    "DESCRIPTION": "gremlin:Troque para um Gremlin vivo de sua escolha.",
+    "UPGRADE_DESCRIPTION": "Retenha. NL gremlin:Troque para um Gremlin vivo de sua escolha."
+  },
+
+  "Gremlin:TargetWeakness": {
+    "NAME": "Feridas Alvo",
+    "DESCRIPTION": "Causa !M! de dano adicional a inimigos enfraquecidos."
+  },
+
+  "Gremlin:Tricksy": {
+    "NAME": "Esperto",
+    "DESCRIPTION": "Compre !M! cartas e descarte aquelas que não são Golpes. NL Troque para o gremlin:Gremlin_Sorrateiro."
+  },
+
+  "Gremlin:TwistTheKnife": {
+    "NAME": "Girar a Faca",
+    "DESCRIPTION": "Causa !D! de dano. NL Ganha 1 Estoque.",
+    "UPGRADE_DESCRIPTION": "Causa !D! de dano. NL Ganha 1 Estoque melhorada."
+  },
+
+  "Gremlin:ToeStub": {
+    "NAME": "Pisada no Dedão",
+    "DESCRIPTION": "Causa !D! de dano. Se o inimigo estiver enfraquecido, aplica !M! de Vulnerável."
+  },
+
+  "Gremlin:Unforgiving": {
+    "NAME": "Implacável",
+    "DESCRIPTION": "Não pode perder Força."
+  },
+
+  "Gremlin:Ward": {
+    "NAME": "Proteção",
+    "DESCRIPTION": "Ganha !B! de Proteção. NL Exaurir."
+  },
+
+  "Gremlin:Whiz": {
+    "NAME": "Gênio",
+    "DESCRIPTION": "Ganha !M! gremlin:Magia. Próximo turno, ganha um *Explosão. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Ganha !M! gremlin:Magia. Próximo turno, ganha um *Explosão melhorado. NL Exaurir."
+  },
+
+  "Gremlin:Wizardry": {
+    "NAME": "Magia",
+    "DESCRIPTION": "No início do seu turno, ganha !M! gremlin:Magia.",
+    "UPGRADE_DESCRIPTION": "Inato. NL No início do seu turno, ganha !M!gremlin:Magia."
+  },
+
+  "Gremlin:Placeholder": {
+    "NAME": "",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [""]
+  }
+}

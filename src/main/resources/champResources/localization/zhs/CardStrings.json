@@ -195,8 +195,8 @@
   },
   "champ:HeavySlash": {
     "NAME": "大师斩击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 随机获得 *技能 牌。 NL 其耗能为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得 *技能 牌+。 NL 其耗能为0。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 随机获得 *技能 牌， NL 其耗能为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得 *技能 牌+， NL 其耗能为0。"
   },
   "champ:CheapShot": {
     "NAME": "偷袭",
@@ -215,7 +215,7 @@
     "NAME": "怒锤",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ： NL 本场战斗次数加1。",
     "EXTENDED_DESCRIPTION": [
-      "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ：攻击次数加1。"
+      "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ： NL 本场战斗次数加1。"
     ]
   },
   "champ:VampiricStrike": {
@@ -384,8 +384,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "三重打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击 。 NL 其耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击+ 。 NL 其耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击 ， NL 其耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击+ ， NL 其耗能为0。 NL 消耗 。"
   },
   "champ:WindUp": {
     "NAME": "挑衅",

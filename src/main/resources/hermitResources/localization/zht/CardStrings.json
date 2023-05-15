@@ -34,8 +34,8 @@
   },
   "hermit:HighCaliber": {
     "NAME": "大口徑",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 獲得一張 *打擊+2　 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 獲得一張 *打擊+3　 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 獲得一張 *打擊+2 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 獲得一張 *打擊+3 。 NL 消耗 。"
   },
   "hermit:BodyArmor": {
     "NAME": "全身護甲",

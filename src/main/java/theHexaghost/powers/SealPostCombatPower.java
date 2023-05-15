@@ -47,7 +47,7 @@ public class SealPostCombatPower extends AbstractPower implements CloneablePower
     @Override
     public void onVictory() {
         for (int i = 0; i < amount; i++)
-            AbstractDungeon.getCurrRoom().addCardReward(new SealSealReward());
+            AbstractDungeon.getCurrRoom().rewards.add(new SealSealReward());
     }
 
     @Override

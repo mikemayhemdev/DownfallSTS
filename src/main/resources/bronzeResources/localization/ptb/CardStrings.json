@@ -1,0 +1,661 @@
+{
+  "bronze:Allocate": {
+    "NAME": "Alocar",
+    "DESCRIPTION": "Ganhe [E] para cada Estado em seu baralho de descarte.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Ganhe ",
+      " [E] .)"
+    ]
+  },
+  "bronze:AlphaBuild": {
+    "NAME": "Acesso Antecipado",
+    "DESCRIPTION": "Cause !D! de dano. NL bronze:Inserir Estado aleatório. NL bronze:Compilar - bronze:Inserir *Beta *Construção.",
+    "UPGRADE_DESCRIPTION": "Inato. NL \u00A0 Cause !D! de dano. NL bronze:Inserir Estado aleatório. NL bronze:Compilar - bronze:Inserir *Beta *Construção.",
+    "EXTENDED_DESCRIPTION": [
+      "rudimentar",
+      "Alfa"
+    ]
+  },
+  "bronze:Assembly": {
+    "NAME": "Montagem",
+    "DESCRIPTION": "Espiar !M!. NL bronze:Codificar todos os cartões *Codificáveis descartados (em ordem selecionada). NL Exaurir."
+  },
+  "bronze:Backtrace": {
+    "NAME": "Retroceder",
+    "DESCRIPTION": "Inato. NL \u00A0 Cause !D! de dano. NL bronze:Compilar *Erro - Função exausta.",
+    "EXTENDED_DESCRIPTION": [
+      "furtivo",
+      "Rastro"
+    ]
+  },
+  "bronze:BetaBuild": {
+    "NAME": "Beta Construção",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL bronze:Inserir Estado aleatório. NL bronze:Compilar - bronze:Inserir *Lançamento *Completo.",
+    "EXTENDED_DESCRIPTION": [
+      "cedo",
+      "Beta"
+    ]
+  },
+  "bronze:BitShift": {
+    "NAME": "Deslocamento de Bits",
+    "DESCRIPTION": "Escolha um cartão Codificado para retornar para sua mão. Ele ganha retenção. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Retenção. NL Escolha um cartão Codificado para retornar para sua mão. Ele ganha retenção. NL Exaurir."
+  },
+  "bronze:Boost": {
+    "NAME": "Impulso",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL bronze:Compilar - Ganhe !M! de Força.",
+    "EXTENDED_DESCRIPTION": [
+      "impulsionado",
+      "Impulso"
+    ]
+  },
+  "bronze:Branch": {
+    "NAME": "Ramo",
+    "DESCRIPTION": "Cause !D! de dano ou ganhe !B! de Proteção. NL A opção não escolhida é bronze:Codificada. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+      "Ramo: Golpe",
+      "Cause !D! de dano.",
+      "Ramo: Proteção",
+      "Ganhe !B! de Proteção."
+    ]
+  },
+  "bronze:Break": {
+    "NAME": "Quebrar",
+    "DESCRIPTION": "Cause !D! de dano. NL bronze:Compilar *Erro - bronze:Inserir um *Queimadura, um *Ferida e um *Slimed.",
+    "EXTENDED_DESCRIPTION": [
+      "quebrado",
+      "Esmagar"
+    ]
+  },
+  "bronze:BronzeArmor": {
+    "NAME": "Armadura de Bronze",
+    "DESCRIPTION": "Ganhe !bauto! Artefato. NL bronze:Compilar *Erro - TODOS os inimigos ganham !M! Proteção.",
+    "EXTENDED_DESCRIPTION": [
+      "bronze",
+      "Armadura"
+    ]
+  },
+  "bronze:BronzeOrb": {
+    "NAME": "Orbe de Bronze",
+    "DESCRIPTION": "Inato. NL Cause !D! de dano. NL bronze:Codificar uma carta aleatória com *Codificar em seu baralho de compra. Exaurir."
+  },
+  "bronze:BugBarrage": {
+    "NAME": "Barragem de Insetos",
+    "DESCRIPTION": "Ganhe 1 *Ferida. NL bronze:Ciclo cada Estado, causando !D! de dano para cada um.",
+    "UPGRADE_DESCRIPTION": "Ganhe !M! *Wounds. NL bronze:Ciclo cada Estado, causando !D! de dano para cada um.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Ataques ",
+      " vezes.)"
+    ]
+  },
+  "bronze:BuggyMess": {
+    "NAME": "Bagunça de Insetos",
+    "DESCRIPTION": "bronze:Inserir um *Dazed. NL Ganhe !M! [E].",
+    "EXTENDED_DESCRIPTION": [
+      "buggy",
+      "Mess"
+    ]
+  },
+  "bronze:BurnOut": {
+    "NAME": "Esgotamento",
+    "DESCRIPTION": "Cause !D! de dano a um inimigo aleatório para TODAS as suas cartas de Estado e, em seguida, as Exaura. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+      "Cause !D! de dano a um inimigo aleatório para TODAS as suas cartas de Estado (",
+      "), em seguida, as Exaura. NL Exaurir."
+    ]
+  },
+  "bronze:ChildClass": {
+    "NAME": "Invocar",
+    "DESCRIPTION": "Ganhe !B! Proteção. NL bronze:Compilar - Ganhe [E] igual ao custo total das cartas Codificadas.",
+    "EXTENDED_DESCRIPTION": [
+      "invocado",
+      "Energia"
+    ]
+  },
+  "bronze:ChosenStrike": {
+    "NAME": "Golpe do Cultista",
+    "DESCRIPTION": "Cause !D! de dano. NL bronze:Compilar - Aumente permanentemente o dano desta carta em !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "cultista",
+      "Caw"
+    ]
+  },
+  "bronze:ClassDefault": {
+    "NAME": "Classe Padrão",
+    "DESCRIPTION": "Na próxima vez que você criar uma Função !M!, bronze:codifique uma cópia do card atual no primeiro slot."
+  },
+  "bronze:CleanCode": {
+    "NAME": "Código Limpo",
+    "DESCRIPTION": "Remova os próximos !M! *Erros de Compilação que você iria *Codificar.",
+    "UPGRADE_DESCRIPTION": "Inato. NL Remova os próximos !M! *Erros de Compilação que você iria *Codificar."
+  },
+  "bronze:CloningBeam": {
+    "NAME": "Conflito de Mesclagem",
+    "DESCRIPTION": "Cause !D! de dano. NL Na próxima vez que você bronze:Codificar um card, bronze:codifique uma cópia dele. NL Esgote.",
+    "UPGRADE_DESCRIPTION": "Cause !D! de dano. NL Na próxima vez que você bronze:Codificar um card, bronze:codifique uma cópia dele."
+  },
+  "bronze:Constructor": {
+    "NAME": "Construtor",
+    "DESCRIPTION": "Ganhe !B! de Proteção. \u202F Quando *Codificado como o primeiro card, aumente seu Proteção em !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "construir",
+      "Tristeza",
+      "Grandeza"
+    ]
+  },
+  "bronze:CopyPaste": {
+    "NAME": "Copiar e Colar",
+    "DESCRIPTION": "Nesta rodada, sua próxima Função é jogada duas vezes.",
+    "UPGRADE_DESCRIPTION": "Mantenha. NL Nesta rodada, sua próxima Função é jogada duas vezes."
+  },
+  "bronze:CutThrough": {
+    "NAME": "Cortar",
+    "DESCRIPTION": "Cause !D! de dano. NL Explore !M!. NL bronze:Compilar - Compre !bauto! cartas.",
+    "EXTENDED_DESCRIPTION": [
+      "cortando",
+      "Corte"
+    ]
+  },
+  "bronze:DarkDash": {
+    "NAME": "Corrida Escura",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL Cause !D! de dano. NL bronze:Compilar *Erro - bronze:Inserir um *Vazio.",
+    "EXTENDED_DESCRIPTION": [
+      "escuro",
+      "Corrida"
+    ]
+  },
+  "bronze:Defend": {
+    "NAME": "Defender",
+    "DESCRIPTION": "Ganhe !B! de Proteção.",
+    "EXTENDED_DESCRIPTION": [
+      "básico",
+      "Defender"
+    ]
+  },
+  "bronze:DelayedGuard": {
+    "NAME": "Guarda Atrasada",
+    "DESCRIPTION": "Próxima rodada, ganhe !B! de Proteção.",
+    "EXTENDED_DESCRIPTION": [
+      "atrasado",
+      "Guarda"
+    ]
+  },
+  "bronze:DelayedSlice": {
+    "NAME": "Robo-Fatiador",
+    "DESCRIPTION": "Inflige !D! de dano. NL No próximo turno, compre !M! carta adicional.",
+    "UPGRADE_DESCRIPTION": "Inflige !D! de dano. NL No próximo turno, compre !M! cartas adicionais.",
+    "EXTENDED_DESCRIPTION": [
+      "atrasado",
+      "Fatiar"
+    ]
+  },
+  "bronze:Deprecate": {
+    "NAME": "Obsoletar",
+    "DESCRIPTION": "Aplica !M! Fraco.",
+    "EXTENDED_DESCRIPTION": [
+      "antigo",
+      "Insulto"
+    ]
+  },
+  "bronze:DigitalCarnage": {
+    "NAME": "Carnificina Digital",
+    "DESCRIPTION": "Inflige !D! de dano. NL bronze:Compile *Erro - Função é Eterea.",
+    "EXTENDED_DESCRIPTION": [
+      "digital",
+      "Carnificina"
+    ]
+  },
+  "bronze:FindAndReplace": {
+    "NAME": "Encontrar e Substituir",
+    "DESCRIPTION": "Obtenha uma carta do seu baralho de compra ou descarte. NL Adicione um *Atordoado onde estava. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Obtenha uma carta do seu baralho de compra ou descarte. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+      "Escolha."
+    ]
+  },
+  "bronze:FineTuning": {
+    "NAME": "Ajuste Fino",
+    "DESCRIPTION": "Aumenta todos os números nas cartas codificadas em !M! exceto o custo. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Retenha. NL Aumenta todos os números nas cartas codificadas em !M! exceto o custo. NL Exaurir."
+  },
+  "bronze:Flail": {
+    "NAME": "Chicote",
+    "DESCRIPTION": "Inflige !D! de dano a TODOS os inimigos !bauto! vezes. NL Ganha !M! Artefato. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+      "chicotear",
+      "Chicote"
+    ]
+  },
+  "bronze:FollowUp": {
+    "NAME": "Seguir em Frente",
+    "DESCRIPTION": "Ganha !B! Proteção. NL Inflige !D! de dano. NL Se o último card jogado foi uma Função, jogue isso de novo."
+  },
+  "bronze:ForceShield": {
+    "NAME": "Escudo de Força",
+    "DESCRIPTION": "Custa 1 a menos [E] para cada Função criada nesta luta. NL Ganha !B! Proteção."
+  },
+  "bronze:ForLoop": {
+    "NAME": "Laço For",
+    "DESCRIPTION": "O próximo card que você bronze:Codificar causa X cópias adicionais a serem bronze:Codificadas. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "O próximo card que você bronze:Codificar causa X+1 cópias adicionais a serem bronze:Codificadas. NL Exaurir."
+  },
+  "bronze:Format": {
+    "NAME": "Formato",
+    "DESCRIPTION": "bronze:Codifica X cópias de *Fragmento. NL Ganha [E]. NL Esgotado.",
+    "UPGRADE_DESCRIPTION": "bronze:Codifica X+1 cópias de *Fragmento. NL Ganha [E]. NL Esgotado."
+  },
+  "bronze:FormatEncoded": {
+    "NAME": "Fragmento",
+    "DESCRIPTION": "Ganha !B! de Proteção. NL Causa !D! de dano.",
+    "EXTENDED_DESCRIPTION": [
+      "limpo",
+      "Fragmento"
+    ]
+  },
+  "bronze:Fortify": {
+    "NAME": "Fortificar",
+    "DESCRIPTION": "Causa !D! de dano. NL bronze:Compilar - Ganha !M! de Destreza.",
+    "EXTENDED_DESCRIPTION": [
+      "sólido",
+      "Fortaleza"
+    ]
+  },
+  "bronze:Frontload": {
+    "NAME": "Carga Frontal",
+    "DESCRIPTION": "Ganha !B! de Proteção. NL bronze:Compilar - A função ganha Persistir.",
+    "EXTENDED_DESCRIPTION": [
+      "resistente",
+      "Muralha"
+    ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "Lançamento Completo",
+    "DESCRIPTION": "bronze:Compilar - A função se torna um Poder com 'No início do seu turno...'",
+    "EXTENDED_DESCRIPTION": [
+      "completo",
+      "Lançamento",
+      "1.0"
+    ]
+  },
+  "bronze:GetLatest": {
+    "NAME": "Obter Mais Recente",
+    "DESCRIPTION": "Ganha uma carta aleatória com bronze:Codificar, custa 0 até ser jogada. NL Esgotado."
+  },
+  "bronze:Goto": {
+    "NAME": "Ir para",
+    "DESCRIPTION": "Compre !M! cartas. NL bronze:Compilar - No próximo turno, compre !M! cartas.",
+    "UPGRADE_DESCRIPTION": "Compre !M! cartas. NL bronze:Compilar - No próximo turno, compre !M! cartas.",
+    "EXTENDED_DESCRIPTION": [
+      "correndo",
+      "Sprint"
+    ]
+  },
+  "bronze:Hardcode": {
+    "NAME": "Codificar Duro",
+    "DESCRIPTION": "Na próxima vez que você criar uma função, adicione-a ao seu baralho. NL Remova as cartas usadas para criá-la (incluindo esta)."
+  },
+  "bronze:HardenedForm": {
+    "NAME": "Orbe Invocado",
+    "DESCRIPTION": "Sempre que você criar ou jogar uma função, ganha !M! de Proteção e causa !M! de dano a um inimigo aleatório."
+  },
+  "bronze:HyperBeam": {
+    "NAME": "HYPER BEAM",
+    "DESCRIPTION": "Causa !D! de dano a TODOS os inimigos. NL Coloque 5 *Vazio no topo do seu baralho de compra."
+  },
+  "bronze:InfiniteBeams": {
+    "NAME": "Feixes Infinitos",
+    "DESCRIPTION": "No início de cada turno, ganhe um *Feixe *Menor.",
+    "UPGRADE_DESCRIPTION": "No início de cada turno, ganhe um *Feixe *Menor+."
+  },
+  "bronze:InfiniteLoop": {
+    "NAME": "Loop Infinito",
+    "DESCRIPTION": "Cause !D! de dano. NL bronze:Compilar - Ganhe uma cópia disso e aumente seu dano em !M!.",
+    "UPGRADE_DESCRIPTION": "Mantenha. NL Cause !D! de dano. NL bronze:Compilar - Ganhe uma cópia disso e aumente seu dano em !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "infinito",
+      "Loop"
+    ]
+  },
+  "bronze:Invalidate": {
+    "NAME": "Invalidar",
+    "DESCRIPTION": "Aplica !M! Vulnerável.",
+    "EXTENDED_DESCRIPTION": [
+      "inválido",
+      "Erro"
+    ]
+  },
+  "bronze:Iterate": {
+    "NAME": "Iterar",
+    "DESCRIPTION": "Cause !D! de dano !M! vezes.",
+    "EXTENDED_DESCRIPTION": [
+      "analisado",
+      "Iterar"
+    ]
+  },
+  "bronze:ItsAFeature": {
+    "NAME": "É uma Característica",
+    "DESCRIPTION": "Sempre que você comprar um card de Maldição ou Estado, ganhe 1 Força e Destreza temporárias.",
+    "UPGRADE_DESCRIPTION": "Inato. NL Sempre que você comprar um card de Maldição ou Estado, ganhe 1 Força e Destreza temporárias."
+  },
+  "bronze:Library": {
+    "NAME": "Biblioteca",
+    "DESCRIPTION": "No início do seu turno, ganhe um card aleatório com bronze:Codificar, custa 0 até ser jogado."
+  },
+  "bronze:MaxOutput": {
+    "NAME": "Saída Máxima",
+    "DESCRIPTION": "Compre !M! cards. NL No início de cada turno, compre 1 card adicional e bronze:Inserir 1 *Atordoado."
+  },
+  "bronze:Mutator": {
+    "NAME": "Mutador",
+    "DESCRIPTION": "Ganhe 1 Força. NL Transforme um Estado em uma cópia disso.",
+    "UPGRADE_DESCRIPTION": "Mantenha. NL Ganhe 1 Força. NL Transforme um Estado em uma cópia disso."
+  },
+  "bronze:NullPointer": {
+    "NAME": "Ponteiro Nulo",
+    "DESCRIPTION": "Ganhe !B! Proteção. NL Cause !D! de dano. NL bronze:Compilar *Erro - A função é inexecutável.",
+    "EXTENDED_DESCRIPTION": [
+      "nulo",
+      "Ponteiro"
+    ]
+  },
+  "bronze:OilSpill": {
+    "NAME": "Derramar Óleo",
+    "DESCRIPTION": "Cause !D! damage and apply !M! Poison. NL bronze:Compile *Error - bronze:Insert a *Slimed.",
+    "EXTENDED_DESCRIPTION": [
+      "oily",
+      "Spill"
+    ]
+  },
+  "bronze:Optimize": {
+    "NAME": "Optimize",
+    "DESCRIPTION": "Melhore as próximas !M! cartas que você bronze:Encode que podem ser melhoradas."
+  },
+  "bronze:Overheat": {
+    "NAME": "Sobreaquecer",
+    "DESCRIPTION": "Cause !D! de dano. NL Remova o próximo *Compile *Error que você iria *Encode."
+  },
+  "bronze:Overload": {
+    "NAME": "Copiar e Colar",
+    "DESCRIPTION": "Jogue uma cópia de cada carta codificada. Elas não Codificam. NL Esgotado.",
+    "UPGRADE_DESCRIPTION": "Jogue uma cópia de cada carta codificada. Elas não Codificam."
+  },
+  "bronze:Philosophize": {
+    "NAME": "Filosofar",
+    "DESCRIPTION": "Ganhe !bauto! Força. NL bronze:Compile *Error - TODOS os inimigos ganham !M! Força.",
+    "EXTENDED_DESCRIPTION": [
+      "inteligente",
+      "Idea"
+    ]
+  },
+  "bronze:RecursiveStrike": {
+    "NAME": "Golpe Recursivo",
+    "DESCRIPTION": "Cause !D! de dano !M! vezes. NL bronze:Encode !M! cópias de *Golpe.",
+    "UPGRADE_DESCRIPTION": "Cause !D! de dano !M! vezes. NL bronze:Encode !M! cópias de *Golpe+.",
+    "EXTENDED_DESCRIPTION": [
+      "recursivo",
+      "Recur"
+    ]
+  },
+  "bronze:Refactor": {
+    "NAME": "Reorganizar",
+    "DESCRIPTION": "Observar !M!. NL Exaurir todas as cartas descartadas. NL Ganhe !B! Proteção para cada carta de Estado Exaurida."
+  },
+  "bronze:Repair": {
+    "NAME": "Repair",
+    "DESCRIPTION": "Ganhe !B! Proteção. NL bronze:Compile - Cure !M! PV.",
+    "EXTENDED_DESCRIPTION": [
+      "ferramentas",
+      "Chave inglesa"
+    ]
+  },
+  "bronze:Replicate": {
+    "NAME": "Replicate",
+    "DESCRIPTION": "Cause !D! de dano. \u202F Quando *Codificado, adicione uma cópia ao seu monte de descarte.",
+    "EXTENDED_DESCRIPTION": [
+      "copiando",
+      "Cópia"
+    ]
+  },
+  "bronze:Repulsor": {
+    "NAME": "Repulsor",
+    "DESCRIPTION": "Quando você compra a primeira carta de Estado ou Maldição a cada turno, exausta-a e compra uma carta.",
+    "UPGRADE_DESCRIPTION": "Inato. NL Quando você compra a primeira carta de Estado ou Maldição a cada turno, exausta-a e compra uma carta."
+  },
+  "bronze:Return": {
+    "NAME": "Retorno",
+    "DESCRIPTION": "Coloca uma carta do seu monte de descarte no topo do seu monte de compra. NL Próximo turno, ganha [E].",
+    "UPGRADE_DESCRIPTION": "Coloca uma carta do seu monte de descarte no topo do seu monte de compra. NL Próximo turno, ganha [E] [E]."
+  },
+  "bronze:Safeguard": {
+    "NAME": "Proteção",
+    "DESCRIPTION": "Ganha !B! Proteção.",
+    "EXTENDED_DESCRIPTION": [
+      "seguro",
+      "Guardião"
+    ]
+  },
+  "bronze:Separator": {
+    "NAME": "Separador",
+    "DESCRIPTION": "Causa !D! de dano. Quando bronze:Encoded no meio, aumenta seu dano em !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "dividir",
+      "Filho"
+    ]
+  },
+  "bronze:Shell": {
+    "NAME": "Blockchain",
+    "DESCRIPTION": "Ganha !M! bronze:Desfoque.",
+    "UPGRADE_DESCRIPTION": "Ganha !M! bronze:Desfoque. NL bronze:Compile - Ganha !M! bronze:Desfoque.",
+    "EXTENDED_DESCRIPTION": [
+      "bloco",
+      "Cadeia"
+    ]
+  },
+  "bronze:Shield": {
+    "NAME": "Escudo Pegajoso",
+    "DESCRIPTION": "Ganha !B! Proteção. NL bronze:Insert 1 *Lambuzado.",
+    "EXTENDED_DESCRIPTION": [
+      "pegajoso",
+      "Escudo"
+    ]
+  },
+  "bronze:ShipIt": {
+    "NAME": "Envia Isso",
+    "DESCRIPTION": "Causa !D! de dano. NL Causa !M! de dano adicional para TODAS as suas cartas de Estado."
+  },
+  "bronze:SpaghettiCode": {
+    "NAME": "Código Espaguete",
+    "DESCRIPTION": "Escolha 1 de 3 cartas aleatórias para bronze:Encode. Repita até criar uma Função. NL Exaura.",
+    "UPGRADE_DESCRIPTION": "Escolha 1 de 3 cartas aleatórias para bronze:Encode. Repita até criar uma Função."
+  },
+  "bronze:Strike": {
+    "NAME": "Golpe",
+    "DESCRIPTION": "Causa !D! de dano.",
+    "EXTENDED_DESCRIPTION": [
+      "simples",
+      "Golpe"
+    ]
+  },
+  "bronze:Terminator": {
+    "NAME": "Terminator",
+    "DESCRIPTION": "bronze:Compilar - Se esta for a última carta da Função, ela ganha 'Jogue isso novamente'.",
+    "EXTENDED_DESCRIPTION": [
+      "triste",
+      "Fim"
+    ]
+  },
+  "bronze:ThunderWave": {
+    "NAME": "Onda de Trovão",
+    "DESCRIPTION": "Cause !D! de dano em TODOS os inimigos. NL Ganhe 1 guardianmod: Buffer. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Acerta ",
+      " vezes.)"
+    ]
+  },
+  "bronze:TinkerersToolbox": {
+    "NAME": "Ferramentas do Desenvolvedor",
+    "DESCRIPTION": "Manter. NL Ganhe *Debug, *Batch, *Decompile ou *Byte *Shift. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Manter. NL Ganhe *Debug, *Batch, *Decompile ou *Byte *Shift."
+  },
+  "bronze:Turbo": {
+    "NAME": "Turbo",
+    "DESCRIPTION": "Ganhe [E] [E] . NL Adicione um *Void ao seu monte de descarte.",
+    "UPGRADE_DESCRIPTION": "Ganhe [E] [E] [E]. NL Adicione um *Void ao seu monte de descarte."
+  },
+  "bronze:Undervolt": {
+    "NAME": "Subtensão",
+    "DESCRIPTION": "TODOS os inimigos perdem !M! Força. NL Ganhe 2 Queimaduras. NL Exaurir."
+  },
+  "bronze:Verify": {
+    "NAME": "Forma Sentiente",
+    "DESCRIPTION": "Eterno. NL Sempre que você comprar uma Função, aumente todos os números nela em 1, exceto o custo.",
+    "UPGRADE_DESCRIPTION": "Sempre que você comprar uma Função, aumente todos os números nela em 1, exceto o custo."
+  },
+  "bronze:Virus": {
+    "NAME": "Vírus",
+    "DESCRIPTION": "Manter. NL Cause !D! de dano. NL *Transforme todas as cartas na mão em *Raio *Menor.",
+    "UPGRADE_DESCRIPTION": "Manter. NL Cause !D! de dano. NL *Transforme todas as cartas na mão em *Raio *Menor+."
+  },
+  "bronze:WhirlingStrike": {
+    "NAME": "Disparo Perfurante",
+    "DESCRIPTION": "Inflige !D! de dano a TODOS os inimigos.",
+    "EXTENDED_DESCRIPTION": [
+      "perfuração",
+      "Disparo"
+    ]
+  },
+  "bronze:WildBeam": {
+    "NAME": "Limpeza",
+    "DESCRIPTION": "Inflige !D! de dano. NL Exaurir uma carta de Estado aleatória em seu baralho de compra.",
+    "EXTENDED_DESCRIPTION": [
+      "selvagem",
+      "Raio"
+    ]
+  },
+  "bronze:WildStrike": {
+    "NAME": "Golpe Selvagem",
+    "DESCRIPTION": "Inflige !D! de dano. NL bronze:Insere uma *Ferida."
+  },
+  
+  
+  
+  
+  
+  "bronze:Batch": {
+    "NAME": "Lote",
+    "DESCRIPTION": "Cria imediatamente uma função com as cartas atualmente Codificadas. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Cria imediatamente uma função com as cartas atualmente Codificadas."
+  },
+  "bronze:BranchBlock": {
+    "NAME": "Ramificação: Proteção",
+    "DESCRIPTION": "Ganha !B! de Proteção.",
+    "EXTENDED_DESCRIPTION": [
+      "bifurcada",
+      "Ramificação"
+    ]
+  },
+  "bronze:BranchHit": {
+    "NAME": "Ramificação: Golpe",
+    "DESCRIPTION": "Inflige !D! de dano.",
+    "EXTENDED_DESCRIPTION": [
+      "bifurcada",
+      "Ramificação"
+    ]
+  },
+  "bronze:ByteShift": {
+    "NAME": "Deslocamento de Byte",
+    "DESCRIPTION": "Retorna todas as cartas Codificadas para sua mão. NL Elas ganham Retenção. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Retenção. NL Retorna todas as cartas Codificadas para sua mão. NL Elas ganham Retenção. NL Exaurir."
+  },
+  "bronze:DazingPulse": {
+    "NAME": "Pulso Atordoante",
+    "DESCRIPTION": "Ganha !B! de Proteção NL Inflige !D! de dano. NL bronze:Compila *Erro - bronze:Insere !M! *Atordoado.",
+    "EXTENDED_DESCRIPTION": [
+      "atordoante",
+      "Pulso"
+    ]
+  },
+  "bronze:Debug": {
+    "NAME": "Depurar",
+    "DESCRIPTION": "Remove todos os efeitos *Compile *Error das cartas Codificadas. NL Exaurir."
+  },
+  "bronze:DecaBeam": {
+    "NAME": "Proto-Escudo",
+    "DESCRIPTION": "Ganhe !B! Proteção. NL bronze:Compile - Ganhe !M! Armadura Reforçada e bronze:Inserir !bauto! *Atordoado.",
+    "EXTENDED_DESCRIPTION": [
+      "jagged",
+      "Barreira"
+    ]
+  },
+  "bronze:Decompile": {
+    "NAME": "Descompilar",
+    "DESCRIPTION": "Esgote todas as cartas Codificadas. Ganhe [E] e compre uma carta para cada carta Exaurida. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Retenção. NL Esgote todas as cartas Codificadas. Ganhe [E] e compre uma carta para cada carta Exaurida. NL Exaurir."
+  },
+  "bronze:DonuBeam": {
+    "NAME": "Proto-Raio",
+    "DESCRIPTION": "Inflige !D! de dano !M! vezes. NL bronze:Compile - Ganhe !M! Força.",
+    "EXTENDED_DESCRIPTION": [
+      "suave",
+      "Explosão"
+    ]
+  },
+  "bronze:Explode": {
+    "NAME": "Explodir",
+    "DESCRIPTION": "Aplique !M! hexamod:Soulburn a TODOS os inimigos. NL bronze:Compile *Error - bronze:Inserir !bauto! *Queimar.",
+    "EXTENDED_DESCRIPTION": [
+      "instável",
+      "Bomba"
+    ]
+  },
+  "bronze:FunctionCard": {
+    "NAME": "()",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [
+      "função()",
+      "Perfeição()",
+      "()"
+    ]
+  },
+  "bronze:MinorBeam": {
+    "NAME": "Raio Menor",
+    "DESCRIPTION": "Causa !D! de dano.",
+    "EXTENDED_DESCRIPTION": [
+      "menor",
+      "Arranhão"
+    ]
+  },
+  "bronze:Spike": {
+    "NAME": "Espinho",
+    "DESCRIPTION": "Causa !D! de dano. NL bronze:Compilar - Ganhe !M! Espinhos.",
+    "EXTENDED_DESCRIPTION": [
+	  "espinhoso",
+	  "Espinho"
+	]
+  },
+  "bronze:Ignite": {
+    "NAME": "Ignição",
+    "DESCRIPTION": "Aplica !M! hexamod:Queimadura de Alma. NL No final do seu turno, sofra 2 de dano.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! hexamod:Queimadura de Alma. NL No final do seu turno, sofra 4 de dano."
+  },
+  "bronze:IntoTheVoid": {
+    "NAME": "Para o Vazio",
+    "DESCRIPTION": "Ethereal. NL Inimigo perde !M! de Força neste turno. NL Quando desenhado, perca 1 de Energia. NL Exaurir."
+  },
+  "bronze:Lubricant": {
+    "NAME": "Lubrificante",
+    "DESCRIPTION": "Compre !M! cartas. NL Exaurir."
+  },
+  "bronze:GrievousWound": {
+    "NAME": "Ferimento Grave",
+    "DESCRIPTION": "Aplica !M! Vulnerável."
+  },
+  "bronze:Daze": {
+    "NAME": "Atordoado",
+    "DESCRIPTION": "Ethereal. NL Aplica !M! Fraco. NL Exaurir."
+  },
+  "bronze:UnknownStatus": {
+    "NAME": "Perplexo",
+    "DESCRIPTION": "Ganhe !B! de Proteção."
+  }
+}

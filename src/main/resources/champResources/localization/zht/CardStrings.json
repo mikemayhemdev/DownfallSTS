@@ -195,8 +195,8 @@
   },
   "champ:HeavySlash": {
     "NAME": "大師斬擊",
-    "DESCRIPTION": " 造成 !D! 點傷害。 NL 隨機獲得 *技能 牌。 NL 其耗能為0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 隨機獲得 *技能 牌+。 NL 其耗能為0。"
+    "DESCRIPTION": " 造成 !D! 點傷害。 NL 隨機獲得 *技能 牌， NL 其耗能為0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 隨機獲得 *技能 牌+， NL 其耗能為0。"
   },
   "champ:CheapShot": {
     "NAME": "偷襲",
@@ -384,8 +384,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "三重打擊",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 獲得兩張 champ:技術 *打擊 。 NL 其耗能為0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 獲得兩張 champ:技術 *打擊+ 。 NL 其耗能為0。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 獲得兩張 champ:技術 *打擊 ， NL 其耗能為0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 獲得兩張 champ:技術 *打擊+ ， NL 其耗能為0。 NL 消耗 。"
   },
   "champ:WindUp": {
     "NAME": "挑釁",

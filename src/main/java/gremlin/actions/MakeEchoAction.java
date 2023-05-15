@@ -53,9 +53,9 @@ public class MakeEchoAction extends AbstractGameAction {
                 card.exhaust = true;
             }
         }
-        if (!card.isEthereal) card.rawDescription = CardCrawlGame.languagePack.getUIString(EtherealMod.ID).TEXT[0] + card.rawDescription;
+        if (!card.isEthereal && card.rawDescription!=null ) card.rawDescription = CardCrawlGame.languagePack.getUIString(EtherealMod.ID).TEXT[0] + card.rawDescription;
         card.isEthereal = true;
-        if (card.retain) card.rawDescription = card.rawDescription.replace(CardCrawlGame.languagePack.getUIString(RetainCardMod.ID).TEXT[0], "");
+        if (card.retain && card.rawDescription!=null ) card.rawDescription = card.rawDescription.replace(CardCrawlGame.languagePack.getUIString(RetainCardMod.ID).TEXT[0], "");
         AlwaysRetainField.alwaysRetain.set(card, false);
         card.retain = false;
         if(card.cost >= 0 && this.discount>0)

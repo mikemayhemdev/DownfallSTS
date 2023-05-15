@@ -1,0 +1,116 @@
+[
+  {
+    "PROPER_NAME": "Ativa",
+    "NAMES": [
+      "ativa",
+	  "ativo",
+	  "active"
+	],
+    "DESCRIPTION": "A #yAtiva Chama-Fantasma pode ser #yAcendida ao cumprir os requisitos de Ignição listados."
+  },
+  {
+    "PROPER_NAME": "Avanço",
+    "NAMES": [
+      "avance",
+	  "avançar",
+	  "avanço",
+      "avançado",
+      "avançando"
+    ],
+    "DESCRIPTION": "Avança para a próxima Chama-Fantasma. Ao passar por uma Chama-Fantasma, ela é #yExtinguida."
+  },
+  {
+    "PROPER_NAME": "Retração",
+    "NAMES": [
+      "retrair",
+	  "retração",
+      "retraído",
+      "retraindo"
+    ],
+    "DESCRIPTION": "Retrocede para a Chama-Fantasma anterior. Ao passar por uma Chama-Fantasma, ela é #yExtinguida."
+  },
+  {
+    "PROPER_NAME": "Intensidade",
+    "NAMES": [
+      "intensidade",
+	  "itensity"
+    ],
+    "DESCRIPTION": "A intensidade aumenta a quantidade de dano, #yAngústia, e #yProteção aplicado pelas Chamas-Fantasmas quando #yAcendida."
+  },
+  {
+    "PROPER_NAME": "Angústia",
+    "NAMES": [
+      "angústia",
+	  "angústiado",
+	  "soulburn",
+      "soulburned"
+    ],
+    "DESCRIPTION": "Após #b3 turnos, um inimigo com #yAngústia perde PV, removendo o efeito de Angústia."
+  },
+  {
+    "PROPER_NAME": "Extinguir",
+    "NAMES": [
+      "exaurida",
+	  "extingua",
+	  "extinguida",
+	  "extinguir",
+      "extinto"
+    ],
+    "DESCRIPTION": "Permite que a Chama-Fantasma seja #yAcendida novamente, redefinindo seus requisitos de Ignição."
+  },
+  {
+    "PROPER_NAME": "Ignição",
+    "NAMES": [
+      "ignite",
+      "force-ignite",
+	  "acendida",
+	  "acenda",
+	  "acendido",
+	  "acender",
+	  "acende",
+	  "ignição",
+	  "ignitado",
+	  "forçar-ignição"
+    ],
+    "DESCRIPTION": "Ativa o efeito de Ignição descrito em uma Chama-Fantasma."
+  },
+  {
+    "PROPER_NAME": "Selo",
+    "NAMES": [
+      "selo",
+	  "seal"
+	],
+    "DESCRIPTION": "Se todos os #b6 Selos foram jogados neste combate (sem redundâncias), obtenha #pO #pSelo #pQuebrado e remova os Selos de seu deck."
+  },
+  {
+    "PROPER_NAME": "Pós-vida",
+    "NAMES": [
+      "pós-vida"
+    ],
+    "DESCRIPTION": "Se este cartão estiver #yExaurido, seus efeitos são ativados."
+  },
+  {
+    "PROPER_NAME": "Esmagador",
+    "NAMES": [
+      "esmagador",
+	  "esmagadora"
+    ],
+    "DESCRIPTION": "#yChama-Fantasma. #yIgnite quando #b2 #yHabilidades são jogadas enquanto #yAtivo. #yIgnição: Quando #yAcendida, cause #b3 de dano duas vezes a um inimigo aleatório."
+  },
+  {
+    "PROPER_NAME": "Fortalecedor",
+    "NAMES": [
+      "fortalecedor",
+	  "fortalecida"
+ 	],
+    "DESCRIPTION": "#yChama-Fantasma. entra em #yIgnição quando um #yPoder é jogado enquanto #yAtivo. #yIgnição: Quando #yAcendida, ganhe #b4 #yProteção e #b1 #yForça."
+  },
+  {
+    "PROPER_NAME": "Ardente",
+    "NAMES": [
+      "calcinação",
+	  "ardente"
+    ],
+    "DESCRIPTION": "#yChama-Fantasma. #yIgnite quando #b2 #yAtaques são jogados enquanto #yAtivo. #yIgnição: Quando #yAcendida, aplique #b4 #yAngústia a um inimigo aleatório."
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "bronze:SpecificCardReward": {
+    "TEXT": [
+      "Adicione ",
+      " ao seu baralho",
+      "Escolha uma carta."
+    ]
+  },
+  "bronze:UnplayableMod": {
+    "TEXT": [
+      "Não jogável. NL ",
+      "ERR_NULL_PTR"
+    ]
+  },
+  "bronze:EncodeAndShuffleMod": {
+    "TEXT": [
+      " NL bronze:Codifique e, em seguida, adicione uma cópia disso ao seu descarte."
+    ]
+  },
+  "bronze:DoublePlayModifier": {
+    "TEXT": [
+      " NL Jogue isso novamente."
+    ]
+  },
+  "bronze:MiscStrings": {
+    "TEXT": [
+      "Escolha uma carta para retornar à sua mão. Ela ganha Manter.",
+      " - Aumente o dano de #yGolpe #yCultista em #b",
+      " permanentemente.",
+      "ERR: SEQUÊNCIA_VAZIA",
+      " - Ganhe uma cópia de #yLoop #yInfinito com #b",
+      " mais dano.",
+      " para Mutação.",
+      " para Codificação.",
+      ""
+    ]
+  },
+  "bronze:AutoTextHelper": {
+    "TEXT": [
+      " NL bronze:Compilar",
+      "bronze:Compilar",
+      " NL bronze:Codificar.",
+      "bronze:Codificar. NL ",
+      "\u202F Quando bronze:Codificado,",
+      "NOTA DE LOCALIZAÇÃO: O texto acima deve ser igual ao início da linha de descrição extra de Replicar.",
+      "ERR - NO_DUPE_FULL_RELEASES"
+    ]
+  },
+  "bronze:CompileDisplayPanel": {
+    "TEXT": [
+      "Quando compilado:",
+      "bronze:Compilar"
+    ]
+  }
+}
