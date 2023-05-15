@@ -245,7 +245,7 @@
   "Guardian:GemFire": {
     "NAME": "Canon gemme",
     "DESCRIPTION": "Épuisez toutes les guardianmod:Gemmes, également celles qui sont encastrées. Infligez !D! dégâts à un ennemi aléatoire pour chaque guardianmod:Gemme. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": " NL (Hits !M! time(s).)"
+    "UPGRADE_DESCRIPTION": " NL (Touche !M! fois.)"
   },
   "Guardian:ChargeCore": {
     "NAME": "Noyau chargé",
