@@ -310,7 +310,8 @@
   "hermit:FinalCanter": {
     "NAME": "Trote Final",
     "DESCRIPTION": "Reter. NL Cause !D! de dano por cada Maldição em sua mão. NL Exaurir.",
-    "UPGRADE_DESCRIPTION": " NL (Você têm !M! Maldição(ões))"
+    "UPGRADE_DESCRIPTION": " NL (Você têm !M! Maldição.)",
+    "EXTENDED_DESCRIPTION": [" NL (Você têm !M! Maldiçãoões.)"]
   },
   "hermit:HeroicBravado": {
     "NAME": "Bravata Heróica",

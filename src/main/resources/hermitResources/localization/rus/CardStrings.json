@@ -110,7 +110,8 @@
   "hermit:FinalCanter": {
     "NAME": "Последний галоп",
     "DESCRIPTION": "Оставляется. NL Наносит !D! урона за каждое Проклятие в руке и сжигает их. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": " NL (Проклятий в руке: !M! )"
+    "UPGRADE_DESCRIPTION": " NL (В руке !M! Проклятие.)",
+    "EXTENDED_DESCRIPTION": [" NL (В руке !M! Проклятия.)"]
   },
   "hermit:FlashPowder": {
     "NAME": "Ослепляющий порошок",

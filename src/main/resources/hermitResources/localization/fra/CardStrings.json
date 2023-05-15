@@ -311,7 +311,8 @@
   "hermit:FinalCanter": {
     "NAME": "Galop final",
     "DESCRIPTION": "Retenue. NL Épuisez toutes les Malédictions dans votre main, infligez !D! dégâts pour chaque Malédiction Épuisée. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": " NL (Vous avez !M! Malédiciton(s))"
+    "UPGRADE_DESCRIPTION": " NL (Vous avez !M! Malédiciton.)",
+    "EXTENDED_DESCRIPTION": [" NL (Vous avez !M! Malédicitons.)"]
   },
   "hermit:HeroicBravado": {
     "NAME": "Bravado héroïque",

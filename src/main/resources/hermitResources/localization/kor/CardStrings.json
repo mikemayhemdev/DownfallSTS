@@ -311,7 +311,8 @@
   "hermit:FinalCanter": {
     "NAME": "최후의 위선",
     "DESCRIPTION": "보존. NL 손에 있는 모든 저주를 소멸시킵니다. *소멸시킨 저주 한 장당 피해를 !D! 줍니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": " NL (저주가 !M! 장 있습니다.)"
+    "UPGRADE_DESCRIPTION": " NL (저주가 !M! 장 있습니다.)",
+    "EXTENDED_DESCRIPTION": [" NL (저주가 !M! 장 있습니다.)"]
   },
   "hermit:HeroicBravado": {
     "NAME": "영웅적 객기",
