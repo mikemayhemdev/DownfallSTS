@@ -313,7 +313,8 @@
   "hermit:FinalCanter": {
     "NAME": "Letzter Kanter",
     "DESCRIPTION": "Behalten. NL Füge für jedes Fluch in der Hand !D! Schaden zu. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": " NL (Du hast !M! Fluch(e).)"
+    "UPGRADE_DESCRIPTION": " NL (Du hast !M! Fluch.)",
+    "EXTENDED_DESCRIPTION": [" NL (Du hast !M! Flüche.)"]
   },
   "hermit:HeroicBravado": {
     "NAME": "Heldenhafte Tapferkeit",

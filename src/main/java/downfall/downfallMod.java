@@ -118,7 +118,7 @@ import guardian.relics.PickAxe;
 import guardian.rewards.GemReward;
 import guardian.rewards.GemRewardAllRarities;
 import hermit.HermitMod;
-import hermit.actions.MessageCaller;
+import downfall.actions.MessageCaller;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 import sneckomod.SneckoMod;

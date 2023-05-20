@@ -14,8 +14,8 @@ public class DiceBoulder extends AbstractSneckoCard {
 
     public DiceBoulder() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 27;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 1; //Min damage
+        baseDamage = 27; //Max damage
         tags.add(SneckoMod.RNG);
         SneckoMod.loadJokeCardImage(this, "DiceBoulder.png");
     }

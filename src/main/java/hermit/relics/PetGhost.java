@@ -33,15 +33,18 @@ public class PetGhost extends CustomRelic implements OnPlayerDeathRelic {
     @Override
     public void atBattleStart() {
         canDie = false;
+        grayscale = false;
     }
 
     @Override
     public boolean onPlayerDeath(AbstractPlayer p, DamageInfo damageInfo) {
-        if (!this.canDie && p.currentHealth <= 0) {
-            this.canDie = true;
+        if (!canDie && p.currentHealth <= 0) {
+            canDie = true;
+            grayscale = true;
             AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             flash();
             p.currentHealth = 1;
+            p.healthBarUpdatedEvent();
             return false;
         }
         return true;

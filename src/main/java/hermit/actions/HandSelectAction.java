@@ -23,9 +23,8 @@ public class HandSelectAction extends AbstractGameAction {
     private boolean returnSelected;
     private boolean anyAmount;
     private boolean canPickZero;
-    private boolean dontRefresh;
 
-    public HandSelectAction(int amount, Predicate<AbstractCard> requirement, Consumer<ArrayList<AbstractCard>> process, Consumer<ArrayList<AbstractCard>> finale, String selectionText, boolean returnSelected, boolean anyAmount, boolean canPickZero, boolean dontRefresh)
+    public HandSelectAction(int amount, Predicate<AbstractCard> requirement, Consumer<ArrayList<AbstractCard>> process, Consumer<ArrayList<AbstractCard>> finale, String selectionText, boolean returnSelected, boolean anyAmount, boolean canPickZero)
     {
         this.p = AbstractDungeon.player;
 
@@ -42,12 +41,11 @@ public class HandSelectAction extends AbstractGameAction {
         this.returnSelected = returnSelected;
         this.anyAmount = anyAmount;
         this.canPickZero = canPickZero;
-        this.dontRefresh = dontRefresh;
     }
 
     public HandSelectAction(int amount, Predicate<AbstractCard> requirement, Consumer<ArrayList<AbstractCard>> process, String selectionText)
     {
-        this(amount, requirement, process, null, selectionText, true, false, false, false);
+        this(amount, requirement, process, null, selectionText, true, false, false);
     }
 
     @Override
@@ -136,7 +134,6 @@ public class HandSelectAction extends AbstractGameAction {
             this.p.hand.addToTop(c);
         }
 
-        if (!dontRefresh)
         this.p.hand.refreshHandLayout();
     }
 }

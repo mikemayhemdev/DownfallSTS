@@ -310,7 +310,8 @@
   "hermit:FinalCanter": {
     "NAME": "最終手段",
     "DESCRIPTION": "保留 。 NL 消耗 手中所有 詛咒 ， NL 每張造成 !D! 點傷害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " NL （造成 !M! 次）"
+    "UPGRADE_DESCRIPTION": " NL （造成 !M! 次）",
+    "EXTENDED_DESCRIPTION": [" NL （造成 !M! 次）"]
   },
   "hermit:HeroicBravado": {
     "NAME": "逞能英雄",

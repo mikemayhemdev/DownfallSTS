@@ -43,6 +43,7 @@ public class Defect extends GauntletBoss {
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         this.stateData.setMix("Hit", "Idle", 0.1f);
         this.flipHorizontal = true;
+        this.skeleton.setFlip(this.flipHorizontal, this.flipVertical);
         e.setTimeScale(0.9f);
         type = EnemyType.ELITE;
 
