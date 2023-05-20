@@ -15,20 +15,20 @@ public class PyreMod extends AbstractCardModifier {
         return ID;
     }
 
-    public int exhaustAmt;
+    //public int exhaustAmt;
 
-    public PyreMod(int exhaustAmt) {
-        this.exhaustAmt = exhaustAmt;
+    public PyreMod() {
+        //this.exhaustAmt = exhaustAmt;
     }
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new PyreMod(exhaustAmt);
+        return new PyreMod();
     }
 
     @Override
     public boolean canPlayCard(AbstractCard card) {
-        return AbstractDungeon.player.hand.size() - 1 >= exhaustAmt;
+        return AbstractDungeon.player.hand.size() - 1 >= 1;
     }
 
     @Override

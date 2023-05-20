@@ -1,0 +1,29 @@
+package collector.cards;
+
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+
+import static collector.CollectorMod.makeID;
+import static collector.util.Wiz.applyToEnemy;
+import static collector.util.Wiz.forAllMonstersLiving;
+
+public class Feint extends AbstractCollectorCard {
+    public final static String ID = makeID(Feint.class.getSimpleName());
+    // intellij stuff , , , , , 6, , 1, 1
+
+    public Feint() {
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        baseBlock = 6;
+        baseMagicNumber = magicNumber = 1;
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
+        forAllMonstersLiving(q -> applyToEnemy(q, new VulnerablePower(q, magicNumber, false)));
+    }
+
+    public void upp() {
+        upgradeMagicNumber(1);
+    }
+}

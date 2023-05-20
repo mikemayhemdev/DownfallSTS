@@ -33,6 +33,7 @@ public class Contemplate extends AbstractCollectorCard {
                 options.addAll(CollectorCollection.combatCollection.group);
                 ArrayList<AbstractCard> toShow = new ArrayList<>();
                 for (int i = 0; i < 3; i++) {
+                    if (options.isEmpty()) break;
                     toShow.add(options.remove(AbstractDungeon.cardRandomRng.random(options.size() - 1)));
                 }
                 atb(new SelectCardsCenteredAction(toShow, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {

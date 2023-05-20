@@ -22,5 +22,85 @@
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+  },
+  "collector:Fireball": {
+    "NAME": "Fireball",
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Increase this card's damage by !M! this combat."
+  },
+  "collector:SpiritLeech": {
+    "NAME": "Spirit Leech",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, apply !M! collector:Soulbind."
+  },
+  "collector:ScorchingRay": {
+    "NAME": "Scorching Ray",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL At the start of your next turn, gain 1 collector:Reserve."
+  },
+  "collector:SuckerPunch": {
+    "NAME": "Sucker Punch",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  },
+  "collector:Ember": {
+    "NAME": "Ember",
+    "DESCRIPTION": "Unplayable. NL Retain. NL If this card is Exhausted, gain !M! collector:Reserve.",
+    "EXTENDED_DESCRIPTION": [
+      "These embers must be lit, not played."
+    ]
+  },
+  "collector:SparkStrike": {
+    "NAME": "Spark Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Add 1 *Ember into your hand."
+  },
+  "collector:Agonize": {
+    "NAME": "Agonize",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is not collector:Afflicted, apply 1 Weak and Vulnerable."
+  },
+  "collector:GreenGaze": {
+    "NAME": "Green Gaze",
+    "DESCRIPTION": "Deal !D! damage. NL If you played a Collected card this turn, gain !B! Block."
+  },
+  "collector:Greatflame": {
+    "NAME": "Greatflame",
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage."
+  },
+  "collector:ShadowWrappings": {
+    "NAME": "Shadow Wrappings",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Apply collector:Soulbind equal to damage dealt."
+  },
+  "collector:Feint": {
+    "NAME": "Feint",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Vulnerable to ALL enemies."
+  },
+  "collector:FairTrade": {
+    "NAME": "Fair Trade",
+    "DESCRIPTION": "collector:Pyre. NL Draw !M! cards from the Collection."
+  },
+  "collector:Summoning": {
+    "NAME": "Summoning",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! card from the Collection."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! cards from the Collection."
+  },
+  "collector:Forgery": {
+    "NAME": "Forgery",
+    "DESCRIPTION": "Choose 1 of 3 cards from your Collection. Add it and !M! copy into your hand."
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 cards from your Collection. Add it and !M! copies into your hand."
+  },
+  "collector:DarkwoodKindling": {
+    "NAME": "Darkwood Kindling",
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, ALL enemies lose !M! HP.",
+    "EXTENDED_DESCRIPTION": [
+      "I must light this kindling to use it."
+    ]
+  },
+  "collector:Hoard": {
+    "NAME": "Hoard",
+    "DESCRIPTION": "Draw !M! cards. NL This turn, they Retain and are Unplayable."
+  },
+  "collector:Coerce": {
+    "NAME": "Coerce",
+    "DESCRIPTION": "collector:Pyre. NL Apply !M! collector:Soulbind."
+  },
+  "collector:Torchbearer": {
+    "NAME": "Torchbearer",
+    "DESCRIPTION": "Gain !M! Temporary_HP. NL Exhaust."
   }
 }

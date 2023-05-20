@@ -120,6 +120,6 @@ public abstract class AbstractCollectorCard extends CustomCard {
     }
 
     protected void isPyre() {
-        CardModifierManager.addModifier(this, new PyreMod(1));
+        CardModifierManager.addModifier(this, new PyreMod());
     }
 }
