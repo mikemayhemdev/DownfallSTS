@@ -1,25 +1,24 @@
 package collector;
 
 import collector.cards.collectibles.LuckyWick;
-import collector.util.CollectionReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import java.util.ArrayList;
 import java.util.HashMap;
+
+import static collector.util.Wiz.makeInHand;
 
 public class CollectorCollection {
     public static CardGroup collection;
     public static CardGroup combatCollection;
     private static HashMap<String, String> collectionPool;
-    private static ArrayList<String> collectedCardsThisCombat = new ArrayList<>();
 
     static {
         collectionPool = new HashMap<>();
-        //TODO: Populate Collection Pool
+        //TODO: Populate Collection Pool. Monster ID -> Card.
     }
 
     public static void init() {
@@ -39,11 +38,6 @@ public class CollectorCollection {
 
     public static void atBattleEnd() {
         combatCollection.clear();
-
-        if (!collectedCardsThisCombat.isEmpty())
-            AbstractDungeon.getCurrRoom().rewards.add(new CollectionReward(collectedCardsThisCombat));
-
-        collectedCardsThisCombat.clear();
     }
 
     //TODO: Save/load
@@ -58,10 +52,13 @@ public class CollectorCollection {
 //    }
 
     public static void collect(AbstractMonster m) {
+        AbstractCard tar;
         if (collectionPool.containsKey(m.id)) {
-            collectedCardsThisCombat.add(collectionPool.get(m.id));
+            tar = CardLibrary.getCard(collectionPool.get(m.id));
         } else {
-            collectedCardsThisCombat.add(Madness.ID);
+            tar = new Madness();
         }
+        collection.addToBottom(tar.makeCopy());
+        makeInHand(tar.makeCopy());
     }
 }

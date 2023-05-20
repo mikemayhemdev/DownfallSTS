@@ -1,6 +1,5 @@
 package collector.util;
 
-import collector.powers.SufferingPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -160,14 +159,6 @@ public class Wiz {
 
     public static boolean isAfflicted(AbstractMonster m) {
         return (m.hasPower(VulnerablePower.POWER_ID) && m.hasPower(WeakPower.POWER_ID));
-    }
-
-    public static void applySuffering(AbstractMonster m, int count) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new SufferingPower(m, count)));
-    }
-
-    public static void order() {
-        atb(new OrderAction());
     }
 
     public static void drawTextureScaled(SpriteBatch sb, Texture tex, float x, float y) {
