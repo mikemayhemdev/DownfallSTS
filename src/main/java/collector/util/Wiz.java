@@ -1,6 +1,5 @@
 package collector.util;
 
-import collector.actions.OrderAction;
 import collector.powers.SufferingPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;

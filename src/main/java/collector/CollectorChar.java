@@ -1,9 +1,7 @@
 package collector;
 
 import basemod.abstracts.CustomPlayer;
-import collector.cards.Contemplate;
 import collector.cards.Defend;
-import collector.cards.SoulSnare;
 import collector.cards.Strike;
 import collector.relics.EmeraldTorch;
 import com.badlogic.gdx.Gdx;

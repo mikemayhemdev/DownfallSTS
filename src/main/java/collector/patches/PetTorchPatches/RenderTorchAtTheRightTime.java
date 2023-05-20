@@ -15,10 +15,8 @@ import downfall.downfallMod;
 public class RenderTorchAtTheRightTime {
     @SpirePostfixPatch
     public static void Postfix(AbstractPlayer obj, SpriteBatch sb) {
-        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR) && !(AbstractDungeon.getCurrRoom() instanceof RestRoom)) {
-            if (CollectorMod.pet != null) {
-                //CollectorMod.pet.render(sb);
-            }
+        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
+            //TODO: During combat, if have temp hp, show torch head
         }
     }
 }

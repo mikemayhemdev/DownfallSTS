@@ -14,9 +14,7 @@ public class UpdateTorchAtTheRightTime {
     @SpirePostfixPatch
     public static void Postfix(AbstractPlayer obj) {
         if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
-            if (CollectorMod.pet != null) {
-                //CollectorMod.pet.update();
-            }
+            //TODO: During combat, if have temp hp, show torch head
         }
     }
 }
