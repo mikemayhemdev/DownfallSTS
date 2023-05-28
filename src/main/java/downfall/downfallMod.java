@@ -1435,9 +1435,9 @@ public class downfallMod implements
         }
         if (choosingUpgradeCard && AbstractDungeon.gridSelectScreen.selectedCards.size() == 1) {
             AbstractCard card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            AbstractDungeon.effectsQueue.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 54
+            AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 54
             card.upgrade();
-            AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));// 59
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));// 59
             choosingUpgradeCard = false;
             CenterGridCardSelectScreen.centerGridSelect = false;
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
@@ -1459,7 +1459,7 @@ public class downfallMod implements
             AbstractDungeon.player.masterDeck.removeCard(c);// 79
             AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);// 80
             AbstractCard transCard = AbstractDungeon.getTransformedCard();// 81
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(transCard, c.current_x, c.current_y));// 82
+            AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(transCard, c.current_x, c.current_y));// 82
             choosingTransformCard = false;
             CenterGridCardSelectScreen.centerGridSelect = false;
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;

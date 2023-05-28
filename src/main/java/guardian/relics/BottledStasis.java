@@ -134,10 +134,12 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
         super.atBattleStartPreDraw();
         if (!cardRemoved && cardSelected){
             boolean cardExists = false;
-            for(AbstractCard c :AbstractDungeon.player.masterDeck.group){
-                if (c.uuid==card.uuid){
-                    cardExists = true;
-                    break;
+            if(card!=null){
+                for(AbstractCard c :AbstractDungeon.player.masterDeck.group){
+                    if (c.uuid==card.uuid){
+                        cardExists = true;
+                        break;
+                    }
                 }
             }
             if (!cardExists){

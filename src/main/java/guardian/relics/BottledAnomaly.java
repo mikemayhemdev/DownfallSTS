@@ -130,10 +130,12 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
     public void atBattleStartPreDraw() {
         if (!cardRemoved && cardSelected){
             boolean cardExists = false;
-            for(AbstractCard c :AbstractDungeon.player.masterDeck.group){
-                if (c.uuid==card.uuid){
-                    cardExists = true;
-                    break;
+            if(card!=null){
+                for(AbstractCard c :AbstractDungeon.player.masterDeck.group){
+                    if (c.uuid==card.uuid){
+                        cardExists = true;
+                        break;
+                    }
                 }
             }
             if (!cardExists){
@@ -162,8 +164,8 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
         if (cardRemoved) {
             return;
         }
-        if (!this.grayscale) {// 26
-            ++this.counter;// 27
+        if (!this.grayscale) {
+            ++this.counter;
         }
         if (counter == 3) {
             flash();
