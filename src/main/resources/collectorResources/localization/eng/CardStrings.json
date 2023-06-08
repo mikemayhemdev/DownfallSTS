@@ -81,8 +81,7 @@
   },
   "collector:Forgery": {
     "NAME": "Forgery",
-    "DESCRIPTION": "Choose 1 of 3 cards from your Collection. Add it and !M! copy into your hand."
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 cards from your Collection. Add it and !M! copies into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Choose a card in your hand. NL Add an Ethereal copy into your hand."
   },
   "collector:DarkwoodKindling": {
     "NAME": "Darkwood Kindling",
@@ -102,5 +101,25 @@
   "collector:Torchbearer": {
     "NAME": "Torchbearer",
     "DESCRIPTION": "Gain !M! Temporary_HP. NL Exhaust."
+  },
+  "collector:IllTakeThat": {
+    "NAME": "I'll Take That",
+    "DESCRIPTION": "Deal !D! damage. NL Steal the enemy's Block."
+  },
+  "collector:Prayer": {
+    "NAME": "Prayer",
+    "DESCRIPTION": "Deal !D! damage. NL Discard 1 card. NL If it was named Prayer, ALL enemies lose !M! HP."
+  },
+  "collector:FeelMyPain": {
+    "NAME": "Feel My Pain",
+    "DESCRIPTION": "Whenever you Exhaust a card, a random enemy loses !M! HP."
+  },
+  "collector:DanseMacabre": {
+    "NAME": "Danse Macabre",
+    "DESCRIPTION": "At the end of your turn, enemies with Weak or Vulnerable lose !M! HP. NL Enemies with both lose !clm2!."
+  },
+  "collector:VoidArmor": {
+    "NAME": "Void Armor",
+    "DESCRIPTION": "EVERYONE gains !B! Block."
   }
 }

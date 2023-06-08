@@ -18,7 +18,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import downfall.downfallMod;
 
 import static collector.CollectorMod.getModID;
 import static collector.CollectorMod.makeCardPath;
@@ -29,6 +28,11 @@ public abstract class AbstractCollectorCard extends CustomCard {
     public String betaArtPath;
 
     protected final CardStrings cardStrings;
+
+    public int magic2;
+    public int basemagic2;
+    public boolean upgradedmagic2;
+    public boolean ismagic2Modified;
 
     public AbstractCollectorCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, CollectorChar.Enums.COLLECTOR);
@@ -121,5 +125,20 @@ public abstract class AbstractCollectorCard extends CustomCard {
 
     protected void isPyre() {
         CardModifierManager.addModifier(this, new PyreMod());
+    }
+
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradedmagic2) {
+            magic2 = basemagic2;
+            ismagic2Modified = true;
+        }
+
+    }
+
+    void upgradeAuto(int amount) {
+        basemagic2 += amount;
+        magic2 = basemagic2;
+        upgradedmagic2 = true;
     }
 }

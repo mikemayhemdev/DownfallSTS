@@ -7,6 +7,7 @@ import collector.patches.CollectiblesPatches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
 import collector.relics.EmeraldTorch;
 import collector.ui.CombatCollectionPileButton;
+import collector.util.CollectorSecondMagic;
 import collector.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -155,6 +156,7 @@ public class CollectorMod implements
 
     @Override
     public void receiveEditCards() {
+        BaseMod.addDynamicVariable(new CollectorSecondMagic());
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException |
