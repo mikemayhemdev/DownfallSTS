@@ -97,8 +97,6 @@ public class CollectorChar extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(SoulSnare.ID);
-        retVal.add(Contemplate.ID);
         return retVal;
     }
 

@@ -14,7 +14,7 @@ public class DanseMacabre extends AbstractCollectorCard {
     public DanseMacabre() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 8;
-        basemagic2 = magic2 = 16;
+        baseSecondMagic = secondMagic = 16;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

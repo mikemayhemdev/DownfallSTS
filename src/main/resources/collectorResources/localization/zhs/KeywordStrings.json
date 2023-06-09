@@ -1,86 +1,110 @@
 [
   {
-    "PROPER_NAME": "战术",
+    "PROPER_NAME": "Afflicted",
     "NAMES": [
-      "战术",
-	  "champ:[crown_icon]",
-      "[crown_icon]"
+      "afflicted"
     ],
-    "DESCRIPTION": "如果你处于某个 #y姿态 ，触发该 #y姿态 的 #y战术奖励 。"
-  },
-    {
-    "PROPER_NAME": "起手式",
-    "NAMES": [
-      "起手式",
-	  "起手"
-    ],
-    "DESCRIPTION": "切换 #y姿态 。"
+    "DESCRIPTION": "Creatures are Afflicted when they are both #yVulnerable and #yWeak."
   },
   {
-    "PROPER_NAME": "连段",
+    "PROPER_NAME": "Suffering",
     "NAMES": [
-      "连段",
-      "combo"
+      "Suffering",
+      "suffering"
     ],
-    "DESCRIPTION": "处于特定 #y姿态 时打出后获得额外效果。"
+    "DESCRIPTION": "When Suffering, Vulnerable, or Weak are applied, enemy loses HP equal to their current #ySuffering."
   },
   {
-    "PROPER_NAME": "终结技",
+    "PROPER_NAME": "Soul Snare",
     "NAMES": [
-      "终结技",
-	  "[fist_icon]",
-      "champ:[fist_icon]"
+      "Soul Snare",
+      "soul_snare"
     ],
-    "DESCRIPTION": "打出终结技后如果处于 #y姿态 ，退出姿态并触发 #y终结技奖励 。 #r结束你的回合 。"
+    "DESCRIPTION": "If the target dies while #ySoul #ySnared, #yCollect them."
   },
   {
-    "PROPER_NAME": "反击",
+    "PROPER_NAME": "Torch Head",
     "NAMES": [
-      "反击"
+      "Torch Head",
+      "torch_head"
     ],
-    "DESCRIPTION": "下次你受到 #y攻击 伤害时，对攻击者造成层数的伤害并移除。"
+    "DESCRIPTION": "Assists the Collector in battle by taking hits while they have #yAggro and being the source or target of different card effects. NL Cards that utilize an Ally explicitly cannot be played without one or without a living ally."
   },
   {
-    "PROPER_NAME": "决心",
+    "PROPER_NAME": "Guarded",
     "NAMES": [
-      "决心",
-      "fatigue"
+      "Guarded",
+      "guarded",
+      "Guarding",
+      "guarding"
     ],
-    "DESCRIPTION": "每有 #b5 层 #y决心 拥有 #b1 点 #y力量 。战斗结束时，回复 #y决心 层数等量的生命。"
+    "DESCRIPTION": "Collector is considered Guarded if Torchhead is in front and taking enemy attacks. This occurs whenever Collector uses a non-Attack card."
   },
   {
-    "PROPER_NAME": "防守",
+    "PROPER_NAME": "Back",
     "NAMES": [
-      "防守"
+      "Back",
+      "back"
     ],
-    "DESCRIPTION": "#y姿态 ： NL #y战术 -获得 #b6 层 #y反击 。 NL #y终结技 -获得 #b12 点 #y格挡 。"
+    "DESCRIPTION": "The Back charater is the charater not being targeted by enemy Attacks currently."
   },
   {
-    "PROPER_NAME": "狂战",
+    "PROPER_NAME": "Collect",
     "NAMES": [
-      "狂战"
+      "Collected",
+      "collected"
     ],
-    "DESCRIPTION": "#y姿态 ： NL #y战术 - #y疲劳 #b3 。 NL #y终结技 -失去所有 #y决心 并回复等量生命（保留 #y力量 ）。"
+    "DESCRIPTION": "When a #yCollected Monster dies, after combat it's #yCollectible will appear in a separate card reward, no more then 3 #yCollectibles can appear."
   },
   {
-    "PROPER_NAME": "角斗",
+    "PROPER_NAME": "Aggro",
     "NAMES": [
-      "角斗"
+      "Aggro",
+      "aggro"
     ],
-    "DESCRIPTION": "#y姿态 ： #y战术 -抽 #b1 张牌。 NL #y终结技 -下回合抽 #b1 张牌并获得 [E] 。"
+    "DESCRIPTION": "#yAggro causes your #yTorch #yHead to be attacked instead of you so long as it's greater than 0. NL your #yTorch #yHead loses #b1 #yAggro whenever they lose HP."
   },
   {
-    "PROPER_NAME": "终极姿态",
+    "PROPER_NAME": "Collection",
     "NAMES": [
-      "终极"
+      "collect",
+      "collection"
     ],
-    "DESCRIPTION": "#y姿态 。视为同时拥有 #r狂战 、 #b防守 和 #y角斗 。不能切换 #y姿态 。 #y终结技 将不会结束回合并退出姿态。"
+    "DESCRIPTION": "#yCollectibles are placed here in combat. Contains 4 #yLucky #yWick at the start of a run."
   },
   {
-    "PROPER_NAME": "疲劳",
+    "PROPER_NAME": "Collectible",
     "NAMES": [
-      "疲劳"
+      "collectible"
     ],
-    "DESCRIPTION": "失去生命并获得等量的 #y决心 。"
+    "DESCRIPTION": "This card starts in the #yCollection in combat"
+  },
+  {
+    "PROPER_NAME": "Perpetual",
+    "NAMES": [
+      "perpetual"
+    ],
+    "DESCRIPTION": "This card shuffles into the Collect pile in when played instead of going to the Discard pile, increasing Damage and Block Gain by the shown value."
+  },
+  {
+    "PROPER_NAME": "Pyre",
+    "NAMES": [
+      "pyre"
+    ],
+    "DESCRIPTION": "Requires exhausting a card in hand in addition to paying its energy cost."
+  },
+  {
+    "PROPER_NAME": "Kindling",
+    "NAMES": [
+      "kindling"
+    ],
+    "DESCRIPTION": "An effect that triggers when this card is Exhausted by any means."
+  },
+  {
+    "PROPER_NAME": "Order",
+    "NAMES": [
+      "order"
+    ],
+    "DESCRIPTION": "Adds an attack to your Torch Head's attack queue, which will all be executed at the end of the turn."
   }
 ]

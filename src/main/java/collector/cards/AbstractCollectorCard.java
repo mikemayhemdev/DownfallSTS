@@ -29,10 +29,10 @@ public abstract class AbstractCollectorCard extends CustomCard {
 
     protected final CardStrings cardStrings;
 
-    public int magic2;
-    public int basemagic2;
-    public boolean upgradedmagic2;
-    public boolean ismagic2Modified;
+    public int secondMagic;
+    public int baseSecondMagic;
+    public boolean upgradedsecondMagic;
+    public boolean issecondMagicModified;
 
     public AbstractCollectorCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, CollectorChar.Enums.COLLECTOR);
@@ -129,16 +129,16 @@ public abstract class AbstractCollectorCard extends CustomCard {
 
     public void displayUpgrades() {
         super.displayUpgrades();
-        if (upgradedmagic2) {
-            magic2 = basemagic2;
-            ismagic2Modified = true;
+        if (upgradedsecondMagic) {
+            secondMagic = baseSecondMagic;
+            issecondMagicModified = true;
         }
 
     }
 
-    void upgradeAuto(int amount) {
-        basemagic2 += amount;
-        magic2 = basemagic2;
-        upgradedmagic2 = true;
+    void upgradeSecondMagic(int amount) {
+        baseSecondMagic += amount;
+        secondMagic = baseSecondMagic;
+        upgradedsecondMagic = true;
     }
 }

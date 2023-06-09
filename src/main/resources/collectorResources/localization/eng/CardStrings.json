@@ -76,7 +76,7 @@
   },
   "collector:Summoning": {
     "NAME": "Summoning",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! card from the Collection."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! card from the Collection.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! cards from the Collection."
   },
   "collector:Forgery": {
