@@ -1,5 +1,6 @@
 package charbosses.bosses.Defect.NewAge;
 
+import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.blue.*;
@@ -9,6 +10,8 @@ import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.DefectVoidPower;
 import charbosses.relics.*;
+import com.esotericsoftware.spine.AnimationState;
+import com.esotericsoftware.spine.AnimationStateData;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -16,6 +19,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import guardian.powers.ConstructPower;
 import slimebound.SlimeboundMod;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
@@ -36,6 +40,18 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectVoidPower(p)));
+
+        try {
+            Method loadAnimationMethod = AbstractCreature.class.getDeclaredMethod("loadAnimation", new Class[] { String.class, String.class, float.class });
+            loadAnimationMethod.setAccessible(true);
+            loadAnimationMethod.invoke(AbstractCharBoss.boss, new Object[] { "expansioncontentResources/images/bosses/defect/1/Defect_thief.atlas", "expansioncontentResources/images/bosses/defect/1/Defect_thief.json", 1.0f });
+            AnimationState.TrackEntry e = AbstractCharBoss.boss.state.setAnimation(0, "Idle", true);
+            ((AnimationStateData) ReflectionHacks.getPrivate(AbstractCharBoss.boss, AbstractCharBoss.class, "stateData")).setMix("Hit", "Idle", 0.1f);
+            e.setTimeScale(0.9f);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     private int steamBarrierCasts;
