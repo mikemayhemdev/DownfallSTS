@@ -144,5 +144,33 @@
   "collector:Arrogance": {
     "NAME": "Arrogance",
     "DESCRIPTION": "Gain !B! Block. NL Your next Attack this turn applies !M! collector:Doom."
+  },
+  "collector:Flamestrike": {
+    "NAME": "Flamestrike",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust all Unplayable cards in your hand and apply !M! collector:Doom for each."
+  },
+  "collector:AshesAndDust": {
+    "NAME": "Ashes and Dust",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL If you've Exhausted a card this turn, gain !M! collector:Reserve."
+  },
+  "collector:SapStrength": {
+    "NAME": "Sap Strength",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Strength, steal 1 Strength."
+  },
+  "collector:ShadowDaggers": {
+    "NAME": "Shadow Daggers",
+    "DESCRIPTION": "Deal !D! damage for each Collected card played this combat."
+  },
+  "collector:LanternFlare": {
+    "NAME": "Lantern Flare",
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage and apply !M! collector:Doom to a random enemy."
+  },
+  "collector:WhirlingFlame": {
+    "NAME": "Whirling Flame",
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage to ALL enemies. NL Draw !M! cards."
+  },
+  "collector:Heatwave": {
+    "NAME": "Heat Wave",
+    "DESCRIPTION": "Deal !D! damage to collector:Afflicted enemies. NL Gain an *Ember."
   }
 }

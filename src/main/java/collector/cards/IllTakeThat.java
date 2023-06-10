@@ -22,7 +22,7 @@ public class IllTakeThat extends AbstractCollectorCard {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         if (m.currentBlock > 0) {
             int held = m.currentBlock;
-            atb(new RemoveAllBlockAction(m, p));
+            atb(new RemoveAllBlockAction(m, p)); //TODO: Change to up to 10(14)
             atb(new GainBlockAction(p, held));
         }
     }
