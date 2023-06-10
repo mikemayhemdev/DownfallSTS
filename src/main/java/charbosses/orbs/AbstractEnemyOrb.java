@@ -29,7 +29,8 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
     public int pretendFocus = 0;
 
     public static int masterPretendFocus = 0;
-
+    // Pretend focus are used to make orb value correct when the character boss uses a card that modifies focus, since the focus value only changes
+    // exactly after the card is played, the orb value wouldn't be correct without adding coressponding value before hand, this variable serves that
     public AbstractEnemyOrb() {
         pretendFocus = masterPretendFocus;
     }

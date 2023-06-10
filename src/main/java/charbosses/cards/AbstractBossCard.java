@@ -75,7 +75,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     public boolean showIntent = false;
     public int energyGeneratedIfPlayed = 0;
-    public int strengthGeneratedIfPlayed = 0;
+    public int strengthGeneratedIfPlayed = 0; //used to increase intent damage for cards on the right of this card, when it provides strength
     public int damageMultGeneratedIfPlayed = 1;
     public int damageMultIfPlayed = 1;
     public int focusGeneratedIfPlayed = 0;

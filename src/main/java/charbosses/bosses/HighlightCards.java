@@ -25,6 +25,7 @@ import downfall.powers.neowpowers.BagOfKnives;
 import downfall.powers.neowpowers.UnbiasedCognition;
 
 //Implementation taken from MintySpire
+//Used to make hint icons appear on specific cards for some boss fights, including the shiv icon and focus up icon
 @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
 public class HighlightCards {
     private static Texture shivTexture = new Texture(Gdx.files.internal("downfallResources/images/powers/infinite_blades_marker.png"));
