@@ -2,7 +2,9 @@ package collector.cards;
 
 import collector.powers.ReservePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToSelf;
@@ -28,7 +30,7 @@ public class Ember extends AbstractCollectorCard {
 
     @Override
     public void triggerOnExhaust() {
-        applyToSelf(new ReservePower(magicNumber));
+        applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
     }
 
     public void upp() {

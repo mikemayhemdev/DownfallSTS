@@ -17,7 +17,7 @@
   },
   "collector:SoulSnare": {
     "NAME": "Soul Snare",
-    "DESCRIPTION": "Apply 10 collector:Soulbind. NL Gain !M! collector:Reserve. NL Exhaust."
+    "DESCRIPTION": "Apply 15 collector:Doom. NL Exhaust."
   },
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",
@@ -29,11 +29,11 @@
   },
   "collector:SpiritLeech": {
     "NAME": "Spirit Leech",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, apply !M! collector:Soulbind."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL If the enemy is collector:Afflicted, deal !D! damage again."
   },
   "collector:ScorchingRay": {
     "NAME": "Scorching Ray",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL At the start of your next turn, gain 1 collector:Reserve."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
   },
   "collector:SuckerPunch": {
     "NAME": "Sucker Punch",
@@ -41,7 +41,7 @@
   },
   "collector:Ember": {
     "NAME": "Ember",
-    "DESCRIPTION": "Unplayable. NL Retain. NL If this card is Exhausted, gain !M! collector:Reserve.",
+    "DESCRIPTION": "Unplayable. NL Retain. NL If this card is Exhausted, gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [
       "These embers must be lit, not played."
     ]
@@ -64,10 +64,10 @@
   },
   "collector:ShadowWrappings": {
     "NAME": "Shadow Wrappings",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Apply collector:Soulbind equal to damage dealt."
+    "DESCRIPTION": "Apply !M! collector:Doom."
   },
-  "collector:Feint": {
-    "NAME": "Feint",
+  "collector:ActOfAggression": {
+    "NAME": "Act of Aggression",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! Vulnerable to ALL enemies."
   },
   "collector:FairTrade": {
@@ -76,8 +76,14 @@
   },
   "collector:Summoning": {
     "NAME": "Summoning",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! card from the Collection.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! cards from the Collection."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, add *Dark *Gaze into your hand."
+  },
+  "collector:DarkGaze": {
+    "NAME": "Dark Gaze",
+    "DESCRIPTION": "Apply collector:Doom equal to unused Block last turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Applies !M! collector:Doom.)"
+    ]
   },
   "collector:Forgery": {
     "NAME": "Forgery",
@@ -96,7 +102,7 @@
   },
   "collector:Coerce": {
     "NAME": "Coerce",
-    "DESCRIPTION": "collector:Pyre. NL Apply !M! collector:Soulbind."
+    "DESCRIPTION": "collector:Pyre. NL Apply !M! collector:Doom to ALL enemies."
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer",
@@ -121,5 +127,22 @@
   "collector:VoidArmor": {
     "NAME": "Void Armor",
     "DESCRIPTION": "EVERYONE gains !B! Block."
+  },
+  "collector:FuelTheFire": {
+    "NAME": "Fuel the Fire",
+    "DESCRIPTION": "collector:Pyre. NL Gain !M! collector:Reserve."
+  },
+  "collector:Invocation": {
+    "NAME": "Invocation",
+    "DESCRIPTION": "Next turn, gain 1 collector:Reserve. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain 1 collector:Reserve."
+  },
+  "collector:FleetingEmbers": {
+    "NAME": "Fleeting Embers",
+    "DESCRIPTION": "Add !M! *Embers into your hand."
+  },
+  "collector:Arrogance": {
+    "NAME": "Arrogance",
+    "DESCRIPTION": "Gain !B! Block. NL Your next Attack this turn applies !M! collector:Doom."
   }
 }

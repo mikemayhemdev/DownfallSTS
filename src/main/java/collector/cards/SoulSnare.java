@@ -1,13 +1,11 @@
 package collector.cards;
 
-import collector.powers.ReservePower;
-import collector.powers.SoulbindPower;
+import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
-import static collector.util.Wiz.applyToSelf;
 
 public class SoulSnare extends AbstractCollectorCard {
     public final static String ID = makeID(SoulSnare.class.getSimpleName());
@@ -15,15 +13,15 @@ public class SoulSnare extends AbstractCollectorCard {
 
     public SoulSnare() {
         super(ID, 3, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 15;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new SoulbindPower(m, 10));
-        applyToSelf(new ReservePower(magicNumber));
+        applyToEnemy(m, new DoomPower(m, magicNumber));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(5);
     }
 }

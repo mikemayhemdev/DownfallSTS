@@ -20,7 +20,7 @@ public class RetaliationSoulbindPower extends AbstractCollectorPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != AbstractDungeon.player) {
             flash();
-            applyToEnemyTop((AbstractMonster) info.owner, new SoulbindPower((AbstractMonster) info.owner, amount));
+            applyToEnemyTop((AbstractMonster) info.owner, new DoomPower((AbstractMonster) info.owner, amount));
         }
         return damageAmount;
     }

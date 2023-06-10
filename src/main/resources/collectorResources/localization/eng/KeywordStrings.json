@@ -15,12 +15,11 @@
     "DESCRIPTION": "When Suffering, Vulnerable, or Weak are applied, enemy loses HP equal to their current #ySuffering."
   },
   {
-    "PROPER_NAME": "Soul Snare",
+    "PROPER_NAME": "Doom",
     "NAMES": [
-      "Soul Snare",
-      "soul_snare"
+      "doom"
     ],
-    "DESCRIPTION": "If the target dies while #ySoul #ySnared, #yCollect them."
+    "DESCRIPTION": "If the enemy has more Doom than HP, kill them and add their card to your Collection."
   },
   {
     "PROPER_NAME": "Torch Head",

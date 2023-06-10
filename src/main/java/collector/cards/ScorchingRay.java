@@ -16,18 +16,17 @@ public class ScorchingRay extends AbstractCollectorCard {
 
     public ScorchingRay() {
         super(ID, 3, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 4;
-        baseMagicNumber = magicNumber = 4;
+        baseDamage = 9;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
         }
-        applyToSelf(new NextTurnReservePower(1));
     }
 
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(2);
     }
 }

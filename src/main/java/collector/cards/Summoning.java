@@ -1,6 +1,6 @@
 package collector.cards;
 
-import collector.powers.NextTurnDrawFromCollectionPower;
+import collector.powers.AddCopyNextTurnPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -14,16 +14,14 @@ public class Summoning extends AbstractCollectorCard {
     public Summoning() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 12;
-        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        applyToSelf(new NextTurnDrawFromCollectionPower(magicNumber));
+        applyToSelf(new AddCopyNextTurnPower(new DarkGaze()));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        uDesc();
+        upgradeBlock(4);
     }
 }

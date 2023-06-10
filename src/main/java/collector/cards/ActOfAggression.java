@@ -8,11 +8,11 @@ import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
 import static collector.util.Wiz.forAllMonstersLiving;
 
-public class Feint extends AbstractCollectorCard {
-    public final static String ID = makeID(Feint.class.getSimpleName());
+public class ActOfAggression extends AbstractCollectorCard {
+    public final static String ID = makeID(ActOfAggression.class.getSimpleName());
     // intellij stuff , , , , , 6, , 1, 1
 
-    public Feint() {
+    public ActOfAggression() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseBlock = 6;
         baseMagicNumber = magicNumber = 1;

@@ -13,7 +13,7 @@ public class DarkwoodKindling extends AbstractCollectorCard {
 
     public DarkwoodKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 11;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
