@@ -64,7 +64,7 @@ public class AutomatonChar extends CustomPlayer {
     }
 
     public void damage(DamageInfo info) {
-        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0 && CharacterSelectScreenPatches.characters[5].reskinCount == 2) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0 && skeleton.getData().findAnimation("Hit") != null) {
             this.state.setAnimation(0, "Hit", false);
             this.state.addAnimation(0, "idle", true, 0.0F);
         }
