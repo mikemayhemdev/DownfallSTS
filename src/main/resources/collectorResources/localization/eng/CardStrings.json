@@ -301,5 +301,25 @@
   "collector:SunbloomKindling": {
     "NAME": "Sunbloom Kindling",
     "DESCRIPTION": "Unplayable. NL If this card is Exhausted, gain !M! Strength and add !M! *Embers into your hand."
+  },
+  "collector:ReceiveTribute": {
+    "NAME": "Receive Tribute",
+    "DESCRIPTION": "collector:Pyre. NL Choose 1 of !M! Boss cards and add it into your hand. NL Exhaust."
+  },
+  "collector:Extricate": {
+    "NAME": "Extricate",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, play the top card of your draw pile."
+  },
+  "collector:DarkBindings": {
+    "NAME": "Dark Bindings",
+    "DESCRIPTION": "Apply !M! Weak. NL Apply !clm2! collector:Doom."
+  },
+  "collector:RagingCall": {
+    "NAME": "Raging Call",
+    "DESCRIPTION": "Gain !M! Temporary_HP. NL At the end of your turn, if you have Temporary_HP, deal !clm2! damage to ALL enemies."
+  },
+  "collector:DarkGrasp": {
+    "NAME": "Dark Grasp",
+    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain a copy of the exhausted card."
   }
 }

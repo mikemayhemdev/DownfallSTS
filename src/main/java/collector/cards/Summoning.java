@@ -14,6 +14,7 @@ public class Summoning extends AbstractCollectorCard {
     public Summoning() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 12;
+        cardsToPreview = new DarkGaze();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

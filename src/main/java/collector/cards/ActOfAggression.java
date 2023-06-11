@@ -13,7 +13,7 @@ public class ActOfAggression extends AbstractCollectorCard {
     // intellij stuff , , , , , 6, , 1, 1
 
     public ActOfAggression() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseBlock = 6;
         baseMagicNumber = magicNumber = 1;
     }

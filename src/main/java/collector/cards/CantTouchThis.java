@@ -1,5 +1,6 @@
 package collector.cards;
 
+import collector.powers.CantTouchThisPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
@@ -19,7 +20,7 @@ public class CantTouchThis extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new DexterityPower(p, magicNumber));
-        applyToSelf(new CantTouchThisPower(p, secondMagic));
+        applyToSelf(new CantTouchThisPower(secondMagic));
     }
 
     public void upp() {

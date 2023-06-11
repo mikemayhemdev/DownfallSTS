@@ -1,3 +1,4 @@
+/*
 package collector.patches.PyrePatches;
 
 import basemod.BaseMod;
@@ -37,3 +38,4 @@ public class PyreTooltips2 {
         }
     }
 }
+*/

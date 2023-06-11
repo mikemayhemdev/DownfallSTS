@@ -25,7 +25,7 @@ public class TorchlightTackle extends AbstractCollectorCard {
     }
 
     public void applyPowers() {
-        this.baseDamage = TempHPField.tempHp.get(p);
+        this.baseDamage = TempHPField.tempHp.get(AbstractDungeon.player);
         super.applyPowers();
         this.rawDescription = cardStrings.DESCRIPTION;
         this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];

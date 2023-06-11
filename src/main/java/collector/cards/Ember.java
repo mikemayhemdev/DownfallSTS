@@ -14,7 +14,7 @@ public class Ember extends AbstractCollectorCard {
     // intellij stuff skill, none, special, , , , , 1, 1
 
     public Ember() {
-        super(ID, -2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE);
+        super(ID, -2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 1;
         selfRetain = true;
     }

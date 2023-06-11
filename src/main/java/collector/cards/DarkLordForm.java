@@ -1,6 +1,7 @@
 package collector.cards;
 
 import collector.cards.AbstractCollectorCard;
+import collector.powers.DarkLordFormPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
