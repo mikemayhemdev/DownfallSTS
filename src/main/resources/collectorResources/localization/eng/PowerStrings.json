@@ -134,5 +134,20 @@
       "Whenever you apply #yWeak or #yVulnerable, the target loses #b",
       " HP."
     ]
+  },
+  "collector:AlwaysMore": {
+    "NAME": "Always More",
+    "DESCRIPTIONS": [
+      "Draw #b1 additional Collected card each turn.",
+      "Draw #b",
+      " additional Collected cards each turn."
+    ]
+  },
+  "collector:MastersCall": {
+    "NAME": "Master's Call",
+    "DESCRIPTIONS": [
+      "Whenever you play an Attack, if you have #yTemporary #yHP, deal #b",
+      " damage to a random enemy."
+    ]
   }
 }

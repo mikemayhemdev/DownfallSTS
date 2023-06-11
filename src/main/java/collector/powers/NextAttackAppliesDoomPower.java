@@ -10,7 +10,7 @@ import static collector.util.Wiz.applyToEnemy;
 import static collector.util.Wiz.atb;
 
 public class NextAttackAppliesDoomPower extends AbstractCollectorPower {
-    public static final String NAME = "FeelMyPain";
+    public static final String NAME = "NextAttackAppliesDoom";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
     public static final boolean TURN_BASED = false;

@@ -333,5 +333,21 @@
   "collector:DarkGrasp": {
     "NAME": "Dark Grasp",
     "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain a copy of the exhausted card."
+  },
+  "collector:AlwaysMore": {
+    "NAME": "Always More",
+    "DESCRIPTION": "Draw 1 additional Collected card each turn."
+  },
+  "collector:MastersCall": {
+    "NAME": "Master's Call",
+    "DESCRIPTION": "Gain !M! Temporary_HP. NL Whenever you play an Attack, if you have Temporary_HP, deal !clm2! damage to a random enemy."
+  },
+  "collector:GrabBag": {
+    "NAME": "Grab Bag",
+    "DESCRIPTION": "Draw 3 Collected cards. NL Gain !M! collector:Reserve. NL Exhaust."
+  },
+  "collector:HoardersStrike": {
+    "NAME": "Hoarder's Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Gain collector:Reserve equal to its cost."
   }
 }
