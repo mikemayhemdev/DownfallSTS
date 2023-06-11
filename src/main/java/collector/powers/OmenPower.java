@@ -26,6 +26,10 @@ public class OmenPower extends AbstractCollectorPower {
             addToBot(new ReducePowerAction(target, owner, VulnerablePower.POWER_ID, 1));
             addToBot(new LoseHPAction(target, owner, amount));
         }
+    }
 
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

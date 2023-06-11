@@ -23,4 +23,9 @@ public class ProtectingCallPower extends AbstractCollectorPower {
             atb(new GainBlockAction(owner, amount));
         }
     }
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+    }
 }

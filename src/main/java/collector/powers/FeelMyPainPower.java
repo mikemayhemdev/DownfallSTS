@@ -33,4 +33,9 @@ public class FeelMyPainPower extends AbstractCollectorPower {
             }
         });
     }
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+    }
 }

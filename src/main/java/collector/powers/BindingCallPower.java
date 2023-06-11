@@ -26,4 +26,9 @@ public class BindingCallPower extends AbstractCollectorPower implements OnLoseTe
         }
         return i;
     }
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+    }
 }

@@ -1,60 +1,138 @@
 {
-  "collector:Suffering": {
-    "NAME": "Suffering",
+  "collector:AddCopyNextTurn": {
+    "NAME": "Gaining Card",
     "DESCRIPTIONS": [
-      "When Suffering, Vulnerable, or Weak is applied to this, it loses #b",
+      "At the start of your next turn, add ",
+      " into your hand."
+    ]
+  },
+  "collector:BindingCall": {
+    "NAME": "Binding Call",
+    "DESCRIPTIONS": [
+      "Whenever you lose all your #yTemporary #yHP, apply #b",
+      " #yDoom to ALL enemies."
+    ]
+  },
+  "collector:CantTouchThis": {
+    "NAME": "Can't Touch This",
+    "DESCRIPTIONS": [
+      "Whenever you fully block an attack, apply #b",
+      " #yDoom to the attacker."
+    ]
+  },
+  "collector:Crackle": {
+    "NAME": "Crackle",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b1 #yReserve.",
+      "At the start of your turn, gain #b",
+      " #yReserves."
+    ]
+  },
+  "collector:DarkLordForm": {
+    "NAME": "Dark Lord Form",
+    "DESCRIPTIONS": [
+      "Collected cards are played twice.",
+      "Collected cards are played #b",
+      " additional times."
+    ]
+  },
+  "collector:Doom": {
+    "NAME": "Doom",
+    "DESCRIPTIONS": [
+      "If ",
+      " has less than #b",
+      " HP, kill and Collect it."
+    ]
+  },
+  "collector:FeelMyPain": {
+    "NAME": "Feel My Pain",
+    "DESCRIPTIONS": [
+      "Whenever you #yExhaust a card, ALL enemies lose #b",
       " HP."
     ]
   },
-  "collector:SoulMark": {
-    "NAME": "Soul Snare",
+  "collector:HealIfDieThisTurn": {
+    "NAME": "Finalized",
     "DESCRIPTIONS": [
-      "When you defeat this monster #yCollect it."
+      "If ",
+      " dies this turn, heal #b",
+      " HP."
     ]
   },
-  "collector:SelfDestruct": {
-    "NAME": "Self Destruct",
+  "collector:NextAttackAppliesDoom": {
+    "NAME": "Next Attack Dooms",
     "DESCRIPTIONS": [
-      "At the end of your turn, all enemies lose HP equal to your #yTorch #yHeads HP, Kill your #yTorch #yHead."
+      "Your next Attack this turn applies #b",
+      " #yDoom."
     ]
   },
-  "collector:AggroNegated": {
-    "NAME": "Distraction",
+  "collector:NextCollectedTwice": {
+    "NAME": "Double Up",
     "DESCRIPTIONS": [
-      "At the start of your turn gain #b"," #yAggro."
+      "Your next Collected card this turn is played twice.",
+      "Your next #b",
+      " Collected cards this turn are played twice."
     ]
   },
-  "collector:ChaoticFlux": {
-    "NAME": "Chaotic Flux",
+  "collector:NextTurnReserve": {
+    "NAME": "Next Turn Reserve",
     "DESCRIPTIONS": [
-      "At the start of your turn #yChannel #b",
-      " random Orbs."
-    ]
-  },
-  "collector:FalteringFocus": {
-    "NAME": "Faltering Focus",
-    "DESCRIPTIONS": [
-      "At the start of your next turn, Exit your #yStance"
-    ]
-  },
-  "collector:CurlUp": {
-    "NAME": "Curl Up",
-    "DESCRIPTIONS": [
-      "The next time you take attack damage gain #b",
-      " #yBlock."
+      "At the start of your next turn, gain #b1 #yReserve.",
+      "At the start of your next turn, gain #b",
+      " #yReserves."
     ]
   },
   "collector:Omen": {
     "NAME": "Omen",
     "DESCRIPTIONS": [
-      "Dealing Attack damage to an enemy with 6 #Afflictions they lose #b",
+      "Whenever you attack an #yAfflicted enemy, consume #b1 #yWeak and #yVulnerable and they lose #b",
       " HP."
     ]
   },
-  "collector:Miser": {
-    "NAME": "Miser",
+  "collector:ProtectingCall": {
+    "NAME": "Protecting Call",
     "DESCRIPTIONS": [
-      "#yRetain cards that cost less then #b"
+      "At the start of your turn, if you have #yTemporary #yHP, gain #b",
+      " #yBlock."
+    ]
+  },
+  "collector:RagingCall": {
+    "NAME": "Raging Call",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if you have #yTemporary #yHP, deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "collector:Reserve": {
+    "NAME": "Reserves",
+    "DESCRIPTIONS": [
+      "You have #b1 #yReserve.",
+      "You have #b",
+      " #yReserves."
+    ]
+  },
+  "collector:Soulforge": {
+    "NAME": "Soulforge",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b1 #yEmber into your hand.",
+      "At the start of your turn, add #b",
+      " #yEmbers into your hand."
+    ]
+  },
+  "collector:StrengthOverTurns": {
+    "NAME": "Empower",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, gain #b",
+      " #yStrength.",
+      "At the start of your next #b",
+      " turns, gain #b"
+    ]
+  },
+  "collector:Suffering": {
+    "NAME": "Suffering",
+    "DESCRIPTIONS": [
+      "Whenever you apply #yWeak or #yVulnerable, the target loses #b",
+      " HP."
     ]
   }
 }

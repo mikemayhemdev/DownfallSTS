@@ -28,5 +28,12 @@ public class StrengthOverTurnsPower extends AbstractCollectorPower {
         }
     }
 
-    //TODO: Update description to reflect duration
+    @Override
+    public void updateDescription() {
+        if (duration == 1) {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        } else {
+            description = DESCRIPTIONS[2] + duration + DESCRIPTIONS[3] + amount + DESCRIPTIONS[1];
+        }
+    }
 }

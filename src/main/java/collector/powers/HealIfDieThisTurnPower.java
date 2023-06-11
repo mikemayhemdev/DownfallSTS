@@ -3,6 +3,7 @@ package collector.powers;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.util.Wiz.atb;
@@ -26,5 +27,10 @@ public class HealIfDieThisTurnPower extends AbstractCollectorPower {
     @Override
     public void atEndOfRound() {
         atb(new RemoveSpecificPowerAction(owner, owner, this));
+    }
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + FontHelper.colorString(owner.name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 }

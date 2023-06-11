@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 
 import static collector.util.Wiz.atb;
 import static collector.util.Wiz.makeInHand;
@@ -20,6 +21,7 @@ public class AddCopyNextTurnPower extends AbstractCollectorPower implements NonS
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, -1);
         canGoNegative = false;
         this.tar = tar;
+        updateDescription();
     }
 
     @Override
@@ -27,5 +29,10 @@ public class AddCopyNextTurnPower extends AbstractCollectorPower implements NonS
         flash();
         makeInHand(tar.makeStatEquivalentCopy());
         atb(new RemoveSpecificPowerAction(owner, owner, this));
+    }
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + FontHelper.colorString(tar.name, "y") + DESCRIPTIONS[1];
     }
 }

@@ -1,15 +1,13 @@
 package collector.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static collector.util.Wiz.*;
+import static collector.util.Wiz.applyToEnemy;
+import static collector.util.Wiz.atb;
 
 public class NextAttackAppliesDoomPower extends AbstractCollectorPower {
     public static final String NAME = "FeelMyPain";
@@ -29,4 +27,11 @@ public class NextAttackAppliesDoomPower extends AbstractCollectorPower {
             atb(new RemoveSpecificPowerAction(owner, owner, this));
         }
     }
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+    }
+
+    //TODO: Figure out how it works with aoe cards. Check against Bard's Magical Weapon power
 }

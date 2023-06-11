@@ -6,9 +6,10 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPowe
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static collector.util.Wiz.att;
+import static collector.util.Wiz.atb;
 
 public class DoomPower extends AbstractCollectorPower implements HealthBarRenderPower {
     public static final String NAME = "Doom";
@@ -21,18 +22,28 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
     }
 
     @Override
-    public void atStartOfTurn() {
+    public void onInitialApplication() {
+        checkInstakill();
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        checkInstakill();
+    }
+
+    public void checkInstakill() {
         if (this.owner.currentHealth <= this.amount && owner.currentHealth > 0) {
             flash();
-            att(new HideHealthBarAction(owner));
-            att(new AbstractGameAction() {
+            atb(new HideHealthBarAction(owner));
+            atb(new InstantKillAction(owner));
+            atb(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
                     CollectorCollection.collect((AbstractMonster) owner);
                 }
             });
-            att(new InstantKillAction(owner));
         }
     }
 
@@ -44,5 +55,10 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
     @Override
     public Color getColor() {
         return Color.PURPLE.cpy();
+    }
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + FontHelper.colorString(owner.name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 }
