@@ -118,28 +118,28 @@ mantle
   index: -1
 L_farm
   rotate: false
-  xy: 212, 201
+  xy: 51, 181
   size: 27, 47
   orig: 27, 47
   offset: 0, 0
   index: -1
 bag
   rotate: false
-  xy: 51, 181
+  xy: 212, 201
   size: 27, 47
   orig: 27, 47
   offset: 0, 0
   index: -1
 L_hand
   rotate: false
-  xy: 231, 96
+  xy: 138, 217
   size: 22, 21
   orig: 22, 21
   offset: 0, 0
   index: -1
 bag_end
   rotate: false
-  xy: 138, 217
+  xy: 231, 96
   size: 22, 21
   orig: 22, 21
   offset: 0, 0
