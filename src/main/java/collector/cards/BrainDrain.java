@@ -3,7 +3,6 @@ package collector.cards;
 import collector.CollectorCollection;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
@@ -18,7 +17,7 @@ public class BrainDrain extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard q = CardLibrary.getCopy(CollectorCollection.collectionPool.get(m.id));
+        AbstractCard q = CollectorCollection.getCollectedCard(m);
         q.setCostForTurn(0);
         makeInHand(q);
     }
