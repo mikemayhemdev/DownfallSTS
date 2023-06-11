@@ -28,8 +28,13 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
     }
 
     @Override
-    public void wasHPLost(DamageInfo info, int damageAmount) {
-        checkInstakill();
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+
+        if (owner.currentHealth - damageAmount <= amount) {
+            instakill();
+        }
+
+        return damageAmount;
     }
 
     @Override
@@ -38,19 +43,23 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         checkInstakill();
     }
 
-    public void checkInstakill() {
+    private void checkInstakill() {
         if (this.owner.currentHealth <= this.amount && owner.currentHealth > 0) {
-            flash();
-            atb(new HideHealthBarAction(owner));
-            atb(new InstantKillAction(owner));
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    CollectorCollection.collect((AbstractMonster) owner);
-                }
-            });
+            instakill();
         }
+    }
+
+    private void instakill() {
+        flash();
+        atb(new HideHealthBarAction(owner));
+        atb(new InstantKillAction(owner));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                CollectorCollection.collect((AbstractMonster) owner);
+            }
+        });
     }
 
     @Override
