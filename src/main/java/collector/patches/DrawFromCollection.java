@@ -1,5 +1,6 @@
 package collector.patches;
 
+import collector.CollectorCollection;
 import collector.actions.DrawCardFromCollectionAction;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +15,8 @@ public class DrawFromCollection {
     )
     public static class AbstractPlayerApplyStartOfTurnPostDrawRelicsPatch {
         public static void Prefix(AbstractPlayer __instance) {
-            atb(new DrawCardFromCollectionAction());
+            if (!CollectorCollection.collection.isEmpty())
+                atb(new DrawCardFromCollectionAction());
         }
     }
 }
