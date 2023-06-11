@@ -19,13 +19,11 @@ public class CollectorCollection {
     static {
         collectionPool = new HashMap<>();
         //TODO: Populate Collection Pool. Monster ID -> Card.
+        //TODO: Finding from this will need a wrapper method since we need to default for modded foes
     }
 
     public static void init() {
         collection = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        for (int i = 0; i < 3; i++)
-            collection.addToRandomSpot(new LuckyWick());
-
         combatCollection = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
     }
 
@@ -53,7 +51,7 @@ public class CollectorCollection {
 
     public static void collect(AbstractMonster m) {
         AbstractCard tar;
-        if (collectionPool.containsKey(m.id)) {
+        if (collectionPool.containsKey(m.id)) { // Wrap into a method
             tar = CardLibrary.getCard(collectionPool.get(m.id));
         } else {
             tar = new Madness();
