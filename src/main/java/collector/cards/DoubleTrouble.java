@@ -1,6 +1,7 @@
 package collector.cards;
 
 import collector.cards.AbstractCollectorCard;
+import collector.powers.NextCollectedTwicePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -18,9 +19,10 @@ public class DoubleTrouble extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+        applyToSelf(new NextCollectedTwicePower());
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(4);
     }
 }

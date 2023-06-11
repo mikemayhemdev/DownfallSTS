@@ -172,5 +172,134 @@
   "collector:Heatwave": {
     "NAME": "Heat Wave",
     "DESCRIPTION": "Deal !D! damage to collector:Afflicted enemies. NL Gain an *Ember."
+  },
+  "collector:Suffering": {
+    "NAME": "Suffering",
+    "DESCRIPTION": "When you apply Weak or Vulnerable to an enemy, also apply !M! collector:Doom to them."
+  },
+  "collector:ProtectingCall": {
+    "NAME": "Protecting Call",
+    "DESCRIPTION": "Gain !M! Temporary_HP. At the start of your turn, if you have Temporary_HP, gain !clm2! Block."
+  },
+  "collector:BindingCall": {
+    "NAME": "Binding Call",
+    "DESCRIPTION": "Gain !M! Temporary_HP. Whenever you lose all your Temporary_HP, apply !clm2! collector:Doom to ALL enemies."
+  },
+  "collector:CantTouchThis": {
+    "NAME": "Can't Touch This",
+    "DESCRIPTION": "Gain !M! Dexterity. NL When you fully block an enemy attack, apply !clm2! collector:Doom to the attacker."
+  },
+  "collector:Empower": {
+    "NAME": "Empower",
+    "DESCRIPTION": "Gain X Strength at the start of your next !M! turns."
+  },
+  "collector:VolatileKindling": {
+    "NAME": "Volatile Kindling",
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, add a *Strike into your hand and upgrade it !M! times."
+  },
+  "collector:MiniCurse": {
+    "NAME": "Mini-Curse",
+    "DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable to ALL enemies."
+  },
+  "collector:Finalize": {
+    "NAME": "Finalize",
+    "DESCRIPTION": "If the enemy dies this turn, heal !clm2! HP. NL Apply !M! collector:Doom."
+  },
+  "collector:MysteryWeaving": {
+    "NAME": "Mystery Weaving",
+    "DESCRIPTION": "Gain !B! Block. NL Grants 2 less Block for each other card in your hand."
+  },
+  "collector:CursedWail": {
+    "NAME": "Cursed Wail",
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL collector:Afflicted enemies lose 1 Strength. NL Exhaust."
+  },
+  "collector:CursedKindling": {
+    "NAME": "Cursed Kindling",
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, apply !M! Vulnerable to ALL enemies."
+  },
+  "collector:Bonfire": {
+    "NAME": "Bonfire",
+    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block."
+  },
+  "collector:EndlessKindling": {
+    "NAME": "Endless Kindling",
+    "DESCRIPTION": "Unplayable. If this card is Exhausted, draw !M! cards."
+  },
+  "collector:DoubleTrouble": {
+    "NAME": "Double Trouble",
+    "DESCRIPTION": "Gain !B! Block. NL Your next Collected card this turn is played twice."
+  },
+  "collector:BrainDrain": {
+    "NAME": "Brain Drain",
+    "DESCRIPTION": "Add the enemy's Collected card into your hand. NL It costs 0 this turn. NL Exhaust."
+  },
+  "collector:DarkstormBarrage": {
+    "NAME": "Darkstorm Barrage",
+    "DESCRIPTION": "Apply !M! collector:Doom. NL Whenever a card is Exhausted, if this is in your hand, increase its collector:Doom by !clm2!."
+  },
+  "collector:StashAway": {
+    "NAME": "Stash Away",
+    "DESCRIPTION": "Gain 1 collector:Reserve. NL Double your collector:Reserve. NL Exhaust."
+  },
+  "collector:CoffinNail": {
+    "NAME": "Coffin Nail",
+    "DESCRIPTION": "Deal !D! damage. NL If this card is Exhausted, return it to your hand with !M! more damage."
+  },
+  "collector:Kill": {
+    "NAME": "Power Word: Kill",
+    "DESCRIPTION": "Only collector:Reserves may be spent on this. NL Deal !D! damage."
+  },
+  "collector:MegaWallop": {
+    "NAME": "MegaWallop",
+    "DESCRIPTION": "Deal !D! damage. NL Gain Temporary_HP equal to unblocked damage dealt. NL Exhaust."
+  },
+  "collector:TorchlightTackle": {
+    "NAME": "Torchlight Tackle",
+    "DESCRIPTION": "Deal damage equal to your Temporary_HP.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)"
+    ]
+  },
+  "collector:Butcher": {
+    "NAME": "Butcher",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, repeat this twice.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL If the enemy is collector:Afflicted, repeat this twice."
+  },
+  "collector:Crackle": {
+    "NAME": "Crackle",
+    "DESCRIPTION": "At the start of your turn, gain 1 collector:Reserve.",
+    "UPGRADE_DESCRIPTION": "Retain. NL At the start of your turn, gain 1 collector:Reserve."
+  },
+  "collector:Omen": {
+    "NAME": "Omen",
+    "DESCRIPTION": "Attacking an collector:Afflicted enemy consumes 1 Weak and Vulnerable. When it does, they lose !M! HP."
+  },
+  "collector:DarkLordForm": {
+    "NAME": "Dark Lord Form",
+    "DESCRIPTION": "Ethereal. NL Your Collected cards are played twice.",
+    "UPGRADE_DESCRIPTION": "Your Collected cards are played twice."
+  },
+  "collector:Soulforge": {
+    "NAME": "Soulforge",
+    "DESCRIPTION": "At the start of your turn, add an *Ember into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add an *Ember into your hand."
+  },
+  "collector:YouAreMine": {
+    "NAME": "You Are Mine!",
+    "DESCRIPTION": "Steal the target's Block and Artifact. NL Apply !M! Weak, Vulnerable, and collector:Doom."
+  },
+  "collector:DarkApotheosis": {
+    "NAME": "Dark Apotheosis",
+    "DESCRIPTION": "Upgrade the Collection for the rest of combat. NL Exhaust."
+  },
+  "collector:Goodbye": {
+    "NAME": "Goodbye",
+    "DESCRIPTION": "Double the enemy's collector:Doom. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple the enemy's collector:Doom. NL Exhaust."
+  },
+  "collector:SunbloomKindling": {
+    "NAME": "Sunbloom Kindling",
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, gain !M! Strength and add !M! *Embers into your hand."
   }
 }

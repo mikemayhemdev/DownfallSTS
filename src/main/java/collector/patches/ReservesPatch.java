@@ -1,5 +1,6 @@
 package collector.patches;
 
+import collector.cards.Kill;
 import collector.powers.ReservePower;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -20,6 +21,16 @@ public class ReservesPatch {
         public static SpireReturn<?> bePlayable(AbstractCard __instance) {
             AbstractPower power = AbstractDungeon.player.getPower(ReservePower.POWER_ID);
             if (power != null) {
+
+
+                // Kill Special Case
+                if (__instance.cardID.equals(Kill.ID)) {
+                    if (power.amount >= __instance.costForTurn) {
+                        return SpireReturn.Return(true);
+                    }
+                    return SpireReturn.Return(false);
+                }
+
                 if (EnergyPanel.totalCount + power.amount >= __instance.costForTurn) {
                     return SpireReturn.Return(true);
                 }
@@ -46,6 +57,7 @@ public class ReservesPatch {
                     att(new ReducePowerAction(__instance, __instance, ReservePower.POWER_ID, delta));
             }
         }
+
         public static class Locator extends SpireInsertLocator {
             @Override
             public int[] Locate(CtBehavior ctBehavior) throws Exception {

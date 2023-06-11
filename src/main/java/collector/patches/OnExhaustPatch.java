@@ -1,9 +1,11 @@
 package collector.patches;
 
 import collector.cards.AshesAndDust;
+import collector.cards.OnOtherCardExhaustInHand;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import javassist.CtBehavior;
 
 @SpirePatch(
@@ -19,6 +21,11 @@ public class OnExhaustPatch {
     @SpireInsertPatch(locator = OnExhaustPatch.Locator.class)
     public static void TriggerOnExhaust(CardGroup instance, AbstractCard c) {
         AshesAndDust.exhaustedThisTurn = true;
+        for (AbstractCard other : AbstractDungeon.player.hand.group) {
+            if (other instanceof OnOtherCardExhaustInHand) {
+                ((OnOtherCardExhaustInHand) other).onOtherCardExhaustWhileInHand(c);
+            }
+        }
     }
 
     private static class Locator extends SpireInsertLocator {

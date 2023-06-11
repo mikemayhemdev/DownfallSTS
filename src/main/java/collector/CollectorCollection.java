@@ -14,7 +14,7 @@ import static collector.util.Wiz.makeInHand;
 public class CollectorCollection {
     public static CardGroup collection;
     public static CardGroup combatCollection;
-    private static HashMap<String, String> collectionPool;
+    public static HashMap<String, String> collectionPool;
 
     static {
         collectionPool = new HashMap<>();
