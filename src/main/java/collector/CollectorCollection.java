@@ -1,6 +1,5 @@
 package collector;
 
-import collector.cards.collectibles.LuckyWick;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
@@ -8,8 +7,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.HashMap;
-
-import static collector.util.Wiz.makeInHand;
 
 public class CollectorCollection {
     public static CardGroup collection;
@@ -19,7 +16,14 @@ public class CollectorCollection {
     static {
         collectionPool = new HashMap<>();
         //TODO: Populate Collection Pool. Monster ID -> Card.
-        //TODO: Finding from this will need a wrapper method since we need to default for modded foes
+    }
+
+    public static AbstractCard getCollectedCard(AbstractMonster m) {
+        if (collectionPool.containsKey(m.id)) {
+            return CardLibrary.getCopy(collectionPool.get(m.id));
+        } else {
+            return new Madness(); //TODO: Special card for modded enemies
+        }
     }
 
     public static void init() {
@@ -50,13 +54,7 @@ public class CollectorCollection {
 //    }
 
     public static void collect(AbstractMonster m) {
-        AbstractCard tar;
-        if (collectionPool.containsKey(m.id)) { // Wrap into a method
-            tar = CardLibrary.getCard(collectionPool.get(m.id));
-        } else {
-            tar = new Madness();
-        }
-        collection.addToBottom(tar.makeCopy());
-        makeInHand(tar.makeCopy());
+        collection.addToBottom(getCollectedCard(m));
+        //TODO: Collected card flying into the top panel icon visual
     }
 }
