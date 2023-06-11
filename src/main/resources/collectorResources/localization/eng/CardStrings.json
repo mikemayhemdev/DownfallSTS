@@ -51,7 +51,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Add 1 *Ember into your hand."
   },
   "collector:Agonize": {
-    "NAME": "Agonize",
+    "NAME": "Inflict Agony",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy is not collector:Afflicted, apply 1 Weak and Vulnerable."
   },
   "collector:GreenGaze": {
@@ -187,7 +187,7 @@
   },
   "collector:CantTouchThis": {
     "NAME": "Can't Touch This",
-    "DESCRIPTION": "Gain !M! Dexterity. NL When you fully block an enemy attack, apply !clm2! collector:Doom to the attacker."
+    "DESCRIPTION": "Gain !M! Dexterity. NL When you fully block an attack, apply !clm2! collector:Doom to the attacker."
   },
   "collector:Empower": {
     "NAME": "Empower",
@@ -349,5 +349,9 @@
   "collector:HoardersStrike": {
     "NAME": "Hoarder's Strike",
     "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Gain collector:Reserve equal to its cost."
+  },
+  "collector:FiendFire": {
+    "NAME": "Fiend Fire",
+    "DESCRIPTION": "Exhaust all cards in your hand. NL Deal !D! damage for each Exhausted card. NL Exhaust."
   }
 }

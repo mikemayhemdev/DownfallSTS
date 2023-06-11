@@ -12,7 +12,7 @@ public class ShadowWrappings extends AbstractCollectorCard {
     // intellij stuff attack, enemy, common, 3, 1, , , 2, 
 
     public ShadowWrappings() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 8;
     }
 
