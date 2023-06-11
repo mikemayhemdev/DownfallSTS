@@ -1,9 +1,9 @@
 {
   "collector:EmeraldTorch": {
     "NAME": "Emerald Torch",
-    "FLAVOR": "Sustained by the fires of envy.",
+    "FLAVOR": "The fires of greed never fade.",
     "DESCRIPTIONS": [
-      "At the start of combat, #gTorch #gHead heals #b10 HP."
+      "Retain your hand on the first turn of each combat."
     ]
   }
 }

@@ -2,6 +2,8 @@ package collector;
 
 import basemod.abstracts.CustomPlayer;
 import collector.cards.Defend;
+import collector.cards.FuelTheFire;
+import collector.cards.SoulSnare;
 import collector.cards.Strike;
 import collector.relics.EmeraldTorch;
 import com.badlogic.gdx.Gdx;
@@ -97,6 +99,8 @@ public class CollectorChar extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
+        retVal.add(SoulSnare.ID);
+        retVal.add(FuelTheFire.ID);
         return retVal;
     }
 

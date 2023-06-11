@@ -17,7 +17,7 @@
   },
   "collector:SoulSnare": {
     "NAME": "Soul Snare",
-    "DESCRIPTION": "Apply 15 collector:Doom. NL Exhaust."
+    "DESCRIPTION": "Apply !M! collector:Doom. NL Exhaust."
   },
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",
@@ -195,7 +195,10 @@
   },
   "collector:VolatileKindling": {
     "NAME": "Volatile Kindling",
-    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, add a *Strike into your hand and upgrade it !M! times."
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, add a *Strike into your hand and upgrade it !M! times.",
+    "EXTENDED_DESCRIPTION": [
+      "I must light this kindling to use it."
+    ]
   },
   "collector:MiniCurse": {
     "NAME": "Mini-Curse",
@@ -216,7 +219,10 @@
   },
   "collector:CursedKindling": {
     "NAME": "Cursed Kindling",
-    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, apply !M! Vulnerable to ALL enemies."
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, apply !M! Vulnerable to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "I must light this kindling to use it."
+    ]
   },
   "collector:Bonfire": {
     "NAME": "Bonfire",
@@ -224,7 +230,10 @@
   },
   "collector:EndlessKindling": {
     "NAME": "Endless Kindling",
-    "DESCRIPTION": "Unplayable. If this card is Exhausted, draw !M! cards."
+    "DESCRIPTION": "Unplayable. If this card is Exhausted, draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "I must light this kindling to use it."
+    ]
   },
   "collector:DoubleTrouble": {
     "NAME": "Double Trouble",
@@ -300,7 +309,10 @@
   },
   "collector:SunbloomKindling": {
     "NAME": "Sunbloom Kindling",
-    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, gain !M! Strength and add !M! *Embers into your hand."
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, gain !M! Strength and add !M! *Embers into your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "I must light this kindling to use it."
+    ]
   },
   "collector:ReceiveTribute": {
     "NAME": "Receive Tribute",

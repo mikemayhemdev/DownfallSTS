@@ -1,6 +1,8 @@
 package collector.powers;
 
 import collector.CollectorCollection;
+import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
@@ -8,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.util.Wiz.att;
 
-public class DoomPower extends AbstractCollectorPower {
+public class DoomPower extends AbstractCollectorPower implements HealthBarRenderPower {
     public static final String NAME = "Doom";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.DEBUFF;
@@ -32,5 +34,15 @@ public class DoomPower extends AbstractCollectorPower {
             });
             att(new InstantKillAction(owner));
         }
+    }
+
+    @Override
+    public int getHealthBarAmount() {
+        return amount;
+    }
+
+    @Override
+    public Color getColor() {
+        return Color.PURPLE.cpy();
     }
 }
