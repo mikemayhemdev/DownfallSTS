@@ -6,6 +6,7 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPowe
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -23,6 +24,11 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
 
     @Override
     public void onInitialApplication() {
+        checkInstakill();
+    }
+
+    @Override
+    public void wasHPLost(DamageInfo info, int damageAmount) {
         checkInstakill();
     }
 

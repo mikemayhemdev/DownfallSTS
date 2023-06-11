@@ -33,6 +33,7 @@ public class AddCopyNextTurnPower extends AbstractCollectorPower implements NonS
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + FontHelper.colorString(tar.name, "y") + DESCRIPTIONS[1];
+        if (tar != null)
+            description = DESCRIPTIONS[0] + FontHelper.colorString(tar.name, "y") + DESCRIPTIONS[1];
     }
 }
