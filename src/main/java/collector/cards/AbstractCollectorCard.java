@@ -136,7 +136,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
 
     }
 
-    void upgradeSecondMagic(int amount) {
+    protected void upgradeSecondMagic(int amount) {
         baseSecondMagic += amount;
         secondMagic = baseSecondMagic;
         upgradedsecondMagic = true;

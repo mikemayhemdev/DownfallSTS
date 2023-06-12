@@ -179,5 +179,20 @@
       "Take #b50% less damage for the next #b",
       " turns."
     ]
+  },
+  "collector:BookofStabbingCard": {
+    "NAME": "Stabby",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage, apply #b",
+      " #yDoom."
+    ]
+  },
+  "collector:TransientCard": {
+    "NAME": "Fading",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #rdie.",
+      "In #b",
+      " turns, #rdie."
+    ]
   }
 }

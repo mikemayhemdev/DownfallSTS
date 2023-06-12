@@ -462,5 +462,73 @@
   "collector:SpireGrowthCard": {
     "NAME": "Spire Growth",
     "DESCRIPTION": "Apply !M! Constricted."
+  },
+  "collector:SentryCard": {
+    "NAME": "Sentry",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak to ALL enemies."
+  },
+  "collector:GremlinNobCard": {
+    "NAME": "Gremlin Nob",
+    "DESCRIPTION": "Whenever you play a Skill, gain 1 Strength."
+  },
+  "collector:LagavulinCard": {
+    "NAME": "Lagavulin",
+    "DESCRIPTION": "ALL enemies lose !M! Strength."
+  },
+  "collector:BookOfStabbingCard": {
+    "NAME": "Book of Stabbing",
+    "DESCRIPTION": "Whenever you deal unblocked attack damage, apply !M! collector:Doom."
+  },
+  "collector:GremlinLeaderCard": {
+    "NAME": "Gremlin Leader",
+    "DESCRIPTION": "Add !M! random Gremlin Collectibles into your hand."
+  },
+  "collector:BlueSlaverCard": {
+    "NAME": "Blue Slaver",
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Weak. NL Double the enemy's Weak."
+  },
+  "collector:RedSlaverCard": {
+    "NAME": "Red Slaver",
+    "DESCRIPTION": "Enemy loses !M! Strength this turn."
+  },
+  "collector:TaskmasterCard": {
+    "NAME": "Taskmaster",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Apply !clm2! collector:Doom."
+  },
+  "collector:RomeoCard": {
+    "NAME": "Romeo",
+    "DESCRIPTION": "Your next Attack this turn costs 0 and deals !M! additional damage."
+  },
+  "collector:PointyCard": {
+    "NAME": "Pointy",
+    "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card."
+  },
+  "collector:BearCard": {
+    "NAME": "Bear",
+    "DESCRIPTION": "Gain !B! Block. NL Remove the enemy's Block. NL Deal !D! damage."
+  },
+  "collector:GiantHeadCardStageOne": {
+    "NAME": "Tick",
+    "DESCRIPTION": "Next turn, gain a *Tock."
+  },
+  "collector:GiantHeadCardStageTwo": {
+    "NAME": "Tock",
+    "DESCRIPTION": "Next turn, gain a *Headcrush."
+  },
+  "collector:GiantHeadCardStageThree": {
+    "NAME": "Headcrush",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies."
+  },
+  "collector:NemesisCard": {
+    "NAME": "Nemesis",
+    "DESCRIPTION": "If the enemy intends to attack, gain 1 Intangible."
+  },
+  "collector:DaggerCard": {
+    "NAME": "Dagger",
+    "DESCRIPTION": "Lose !M! HP. NL Deal !D! damage."
+  },
+  "collector:TransientCard": {
+    "NAME": "Transient",
+    "DESCRIPTION": "Gain !M! Strength. NL Die in 6 turns."
   }
 }
