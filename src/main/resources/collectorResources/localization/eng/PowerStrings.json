@@ -149,5 +149,35 @@
       "Whenever you play an Attack, if you have #yTemporary #yHP, deal #b",
       " damage to a random enemy."
     ]
+  },
+  "collector:LouseCard": {
+    "NAME": "Curl Up",
+    "DESCRIPTIONS": [
+      "When you next receive unblocked attack damage, gain #b",
+      " #yBlock and #b1 #yBlur."
+    ]
+  },
+  "collector:MadGremlinCard": {
+    "NAME": "Angry",
+    "DESCRIPTIONS": [
+      "If you receive unblocked attack damage this turn, add a #yMad #yGremlin into your hand.",
+      "If you receive unblocked attack damage this turn, add #b",
+      " #yMad #yGremlins into your hand."
+    ]
+  },
+  "collector:GremlinWizardCard": {
+    "NAME": "Charging Up",
+    "DESCRIPTIONS": [
+      "Next turn, gain #b",
+      " #yVigor."
+    ]
+  },
+  "collector:ThievesCard": {
+    "NAME": "Dodgy",
+    "DESCRIPTIONS": [
+      "Take #b50% less damage this turn.",
+      "Take #b50% less damage for the next #b",
+      " turns."
+    ]
   }
 }

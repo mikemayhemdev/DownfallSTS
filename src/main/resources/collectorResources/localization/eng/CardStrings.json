@@ -353,5 +353,114 @@
   "collector:FiendFire": {
     "NAME": "Fiend Fire",
     "DESCRIPTION": "Exhaust all cards in your hand. NL Deal !D! damage for each Exhausted card. NL Exhaust."
+  },
+  "collector:CultistCard": {
+    "NAME": "Cultist",
+    "DESCRIPTION": "collector:Pyre. NL Gain 1 Ritual."
+  },
+  "collector:LouseCard": {
+    "NAME": "Louse",
+    "DESCRIPTION": "The next time you receive unblocked attack damage, gain !B! Block and 1 Blur."
+  },
+  "collector:AcidSlimeCard": {
+    "NAME": "Acid Slime",
+    "DESCRIPTION": "Choose a card in your hand. NL Add a copy of it into your hand."
+  },
+  "collector:SpikeSlimeCard": {
+    "NAME": "Spike Slime",
+    "DESCRIPTION": "Deal !D! damage. NL Add 1 *Slimed into your discard pile."
+  },
+  "collector:SneakyGremlinCard": {
+    "NAME": "Sneaky Gremlin",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card."
+  },
+  "collector:ShieldGremlinCard": {
+    "NAME": "Shield Gremlin",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "collector:MadGremlinCard": {
+    "NAME": "Mad Gremlin",
+    "DESCRIPTION": "Gain !M! Temporary Strength. NL If you receive unblocked attack damage this turn, add a copy of this into your hand."
+  },
+  "collector:GremlinWizardCard": {
+    "NAME": "Gremlin Wizard",
+    "DESCRIPTION": "Next turn, NL gain !M! Vigor."
+  },
+  "collector:FatGremlinCard": {
+    "NAME": "Fat Gremlin",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  },
+  "collector:JawWormCard": {
+    "NAME": "Jaw Worm",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength."
+  },
+  "collector:ThievesCard": {
+    "NAME": "Thieves",
+    "DESCRIPTION": "Take 50% less damage this turn.",
+    "UPGRADE_DESCRIPTION": "Take 50% less damage for the next !M! turns."
+  },
+  "collector:FungiBeastCard": {
+    "NAME": "Fungi Beast",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Apply 1 Vulnerable to ALL enemies."
+  },
+  "collector:ShelledParasiteCard": {
+    "NAME": "Shelled Parasite",
+    "DESCRIPTION": "Gain !M! Plated Armor."
+  },
+  "collector:SphericGuardianCard": {
+    "NAME": "Spheric Guardian",
+    "DESCRIPTION": "Block is not removed at the start of your turn."
+  },
+  "collector:ByrdCard": {
+    "NAME": "Byrd",
+    "DESCRIPTION": "Deal !D! damage 5 times."
+  },
+  "collector:ChosenCard": {
+    "NAME": "Chosen",
+    "DESCRIPTION": "If the enemy does not intend to attack, apply !M! Weak and Vulnerable."
+  },
+  "collector:SnakePlantCard": {
+    "NAME": "Snake Plant",
+    "DESCRIPTION": "Deal !D! damage 3 times."
+  },
+  "collector:SneckoCard": {
+    "NAME": "Snecko",
+    "DESCRIPTION": "Draw !M! cards. NL sneckomod:Muddle your hand."
+  },
+  "collector:CenturionCard": {
+    "NAME": "Centurion",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Dexterity."
+  },
+  "collector:MysticCard": {
+    "NAME": "Mystic",
+    "DESCRIPTION": "Gain !M! Temporary_HP."
+  },
+  "collector:DarklingsCard": {
+    "NAME": "Darklings",
+    "DESCRIPTION": "Your next 2 cards this turn are played twice."
+  },
+  "collector:OrbWalkerCard": {
+    "NAME": "Orb Walker",
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! *Embers into your hand."
+  },
+  "collector:SpikerCard": {
+    "NAME": "Spiker",
+    "DESCRIPTION": "Gain !M! Thorns."
+  },
+  "collector:RepulsorCard": {
+    "NAME": "Repulsor",
+    "DESCRIPTION": "collector:Pyre. NL Draw !M! cards."
+  },
+  "collector:MawCard": {
+    "NAME": "The Maw",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "collector:WrithingMassCard": {
+    "NAME": "Writhing Mass",
+    "DESCRIPTION": "Scry !M!. NL Play the top card of your draw pile."
+  },
+  "collector:SpireGrowthCard": {
+    "NAME": "Spire Growth",
+    "DESCRIPTION": "Apply !M! Constricted."
   }
 }
