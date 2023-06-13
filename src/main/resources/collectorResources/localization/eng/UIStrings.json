@@ -18,7 +18,8 @@
   "collector:CollectionUITopPanel": {
     "TEXT": [
       "Collection",
-      "View all cards in your Collection."
+      "View all cards in your Collection.",
+      "These cards start in your Collection each combat."
     ]
   },
   "collector:CombatCollectionPileButton": {

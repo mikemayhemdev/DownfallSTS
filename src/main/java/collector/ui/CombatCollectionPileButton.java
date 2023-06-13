@@ -24,7 +24,7 @@ import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.drawTextureScaled;
 
 public class CombatCollectionPileButton extends ClickableUIElement {
-    private static final float X_OFF = 0f; // 200f * Settings.scale;
+    private static final float X_OFF = 200f * Settings.scale;
     private static final float Y_OFF = 228f;
     private static final float HB_WIDTH = 128f;
     private static final float HB_HEIGHT = 128f;
@@ -94,11 +94,11 @@ public class CombatCollectionPileButton extends ClickableUIElement {
                 float x = hitbox.x + hitbox.width / 2f;
                 float y = hitbox.y + hitbox.height / 2f;
                 sb.setColor(Color.WHITE);
-                drawTextureScaled(sb, ImageMaster.DECK_ICON, x, y + bob.y);
+                draw(sb, ImageMaster.DECK_ICON, x, y+bob.y);
 
                 String msg = Integer.toString(CollectorCollection.combatCollection.size());
                 sb.setColor(Color.WHITE);
-                drawTextureScaled(sb,
+                draw(sb,
                         ImageMaster.DECK_COUNT_CIRCLE,
                         x + COUNT_OFFSET_X,
                         y + COUNT_OFFSET_Y);
@@ -111,4 +111,40 @@ public class CombatCollectionPileButton extends ClickableUIElement {
             }
         }
     }
+
+    public static void draw(SpriteBatch sb, Texture texture, float cX, float cY) {
+        drawScaledAndRotated(sb, texture, cX, cY, 1f, 0f);
+    }
+
+    public static void drawScaled(SpriteBatch sb, Texture texture, float cX, float cY, float scale) {
+        drawScaledAndRotated(sb, texture, cX, cY, scale, 0f);
+    }
+
+    public static void drawRotated(SpriteBatch sb, Texture texture, float cX, float cY, float rotation) {
+        drawScaledAndRotated(sb, texture, cX, cY, 1f, rotation);
+    }
+
+    public static void drawScaledAndRotated(SpriteBatch sb, Texture texture, float cX, float cY, float scale, float rotation) {
+        float w = texture.getWidth();
+        float h = texture.getHeight();
+        float halfW = w / 2f;
+        float halfH = h / 2f;
+        sb.draw(texture,
+                cX - halfW,
+                cY - halfH,
+                halfW,
+                halfH,
+                w,
+                h,
+                scale * Settings.scale,
+                scale * Settings.scale,
+                rotation,
+                0,
+                0,
+                (int) w,
+                (int) h,
+                false,
+                false);
+    }
+
 }

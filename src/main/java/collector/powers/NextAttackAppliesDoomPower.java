@@ -29,6 +29,11 @@ public class NextAttackAppliesDoomPower extends AbstractCollectorPower {
     }
 
     @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        atb(new RemoveSpecificPowerAction(owner, owner, this));
+    }
+
+    @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }

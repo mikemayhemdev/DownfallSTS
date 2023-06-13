@@ -87,7 +87,10 @@
   },
   "collector:Forgery": {
     "NAME": "Forgery",
-    "DESCRIPTION": "Deal !D! damage. NL Choose a card in your hand. NL Add an Ethereal copy into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Choose a card in your hand. NL Add an Ethereal copy into your hand.",
+    "EXTENDED_DESCRIPTION": [
+      " to create an Ethereal copy of."
+    ]
   },
   "collector:DarkwoodKindling": {
     "NAME": "Darkwood Kindling",

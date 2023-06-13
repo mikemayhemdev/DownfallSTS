@@ -13,6 +13,7 @@ public class CultistCard extends AbstractCollectibleCard {
 
     public CultistCard() {
         super(ID, 2, CardType.POWER, CardRarity.COMMON, CardTarget.SELF);
+        isPyre();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
