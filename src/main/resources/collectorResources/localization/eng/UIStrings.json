@@ -44,5 +44,11 @@
     "TEXT": [
       "collector:Collected. NL "
     ]
+  },
+  "collector:CollectibleCardReward": {
+    "TEXT": [
+      "Collected Card!",
+      "You may obtain this"
+    ]
   }
 }
