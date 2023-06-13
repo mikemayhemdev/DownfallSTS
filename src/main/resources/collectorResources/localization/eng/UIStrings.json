@@ -38,5 +38,10 @@
       "Pyre",
       "To play this card, pay the additional cost of Exhausting cards from your hand."
     ]
+  },
+  "collector:CollectedCardMod": {
+    "TEXT": [
+      "collector:Collected. NL "
+    ]
   }
 }

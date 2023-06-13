@@ -530,5 +530,41 @@
   "collector:TransientCard": {
     "NAME": "Transient",
     "DESCRIPTION": "Gain !M! Strength. NL Die in 6 turns."
+  },
+  "collector:ReptomancerCard": {
+    "NAME": "Reptomancer",
+    "DESCRIPTION": "Gain !M! Temporary_HP. NL At the end of your turn, if you have Temporary_HP, apply !clm2! Poison to a random enemy."
+  },
+  "collector:BronzeOrbCard": {
+    "NAME": "Bronze Orb",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL The top card of your draw pile costs 0 until played."
+  },
+  "collector:TorchHeadCard": {
+    "NAME": "Torch Head",
+    "DESCRIPTION": "Add a random Torchhead Call into your hand. NL It costs 0 this turn."
+  },
+  "collector:MushroomCard": {
+    "NAME": "Mushroom",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak or Vulnerable at random."
+  },
+  "collector:FaceTraderCard": {
+    "NAME": "Face Trader",
+    "DESCRIPTION": "Add !M! random cards of any color into your hand. NL They become Ethereal."
+  },
+  "collector:LivingWallCard": {
+    "NAME": "Living Wall",
+    "DESCRIPTION": "collector:Pyre. NL Gain a random Upgraded card. NL It costs 0 until played."
+  },
+  "collector:AugmenterCard": {
+    "NAME": "Augmenter",
+    "DESCRIPTION": "Lose 3 HP. NL Gain !M! Strength."
+  },
+  "collector:MerchantCard": {
+    "NAME": "Merchant",
+    "DESCRIPTION": "Add !M! random Colorless cards into your hand. NL They cost 0 this turn."
+  },
+  "collector:DefaultCollectibleCard": {
+    "NAME": "Default Collectible",
+    "DESCRIPTION": "This foe doesn't have a unique Collectible yet! NL Gain !M! Strength and Dexterity."
   }
 }

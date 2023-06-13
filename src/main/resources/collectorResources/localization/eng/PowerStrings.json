@@ -194,5 +194,12 @@
       "In #b",
       " turns, #rdie."
     ]
+  },
+  "collector:ReptomancerCard": {
+    "NAME": "Toxic Call",
+    "DESCRIPTION": [
+      "At the end of your turn, if you have #yTemporary #yHP, apply #b",
+      " #yPoison to a random enemy."
+    ]
   }
 }

@@ -35,6 +35,7 @@ import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
 import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.patches.CenterGridCardSelectScreen;
+import hermit.util.Wiz;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -60,8 +61,8 @@ import java.util.*;
 import java.util.function.Predicate;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.*;
-import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static downfall.downfallMod.sneckoNoModCharacters;
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -267,6 +268,20 @@ public class SneckoMod implements
         return OffclassHelper.getARandomOffclass();
     }
 
+    private static ArrayList<String> simplePossibilities;
+
+    public static AbstractCard getRandomAnyColorCard() {
+        if (simplePossibilities == null) {
+            simplePossibilities = new ArrayList<>();
+            for (AbstractCard q : CardLibrary.getAllCards()) {
+                if (!q.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !q.hasTag(AbstractCard.CardTags.STARTER_DEFEND) && q.color != AbstractCard.CardColor.CURSE && q.type != CURSE && q.type != STATUS && !q.hasTag(AbstractCard.CardTags.HEALING)) {
+                    simplePossibilities.add(q.cardID);
+                }
+            }
+        }
+        return CardLibrary.getCopy(Wiz.getRandomItem(simplePossibilities, AbstractDungeon.cardRandomRng));
+    }
+
     //TODO Make rarity matter in Offclass card gen.
     public static AbstractCard getOffClassCardMatchingPredicate(Predicate<AbstractCard> q) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
@@ -318,7 +333,8 @@ public class SneckoMod implements
         BaseMod.addDynamicVariable(new SneckoSilly());
         try {
             autoAddCards();
-        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException |
+                 ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
@@ -495,7 +511,7 @@ public class SneckoMod implements
 
     @Override
     public void receiveStartGame() {
-        if (!CardCrawlGame.loadingSave  || (validColors.isEmpty() && !pureSneckoMode)) {
+        if (!CardCrawlGame.loadingSave || (validColors.isEmpty() && !pureSneckoMode)) {
             openedStarterScreen = false;
             validColors = new ArrayList<>();
         }
@@ -504,7 +520,7 @@ public class SneckoMod implements
     public static int choosingCharacters = -1;
 
     public static CardGroup colorChoices;
-    
+
     public static String getClassFromColor(AbstractCard.CardColor c) {
         for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
             if (p.getCardColor() == c) {
