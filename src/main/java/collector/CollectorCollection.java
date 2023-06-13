@@ -11,12 +11,14 @@ import charbosses.monsters.MushroomRed;
 import charbosses.monsters.MushroomWhite;
 import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.*;
+import collector.util.CollectibleCardReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.blue.CoreSurge;
 import com.megacrit.cardcrawl.cards.green.DieDieDie;
 import com.megacrit.cardcrawl.cards.purple.Scrawl;
 import com.megacrit.cardcrawl.cards.red.LimitBreak;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.beyond.*;
@@ -129,7 +131,6 @@ public class CollectorCollection {
     }
 
     public static void collect(AbstractMonster m) {
-        collection.addToBottom(getCollectedCard(m));
-        //TODO: Switch to a reward item setup
+        AbstractDungeon.getCurrRoom().rewards.add(new CollectibleCardReward(getCollectedCard(m)));
     }
 }

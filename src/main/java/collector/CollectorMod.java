@@ -10,6 +10,7 @@ import collector.patches.CollectiblesPatches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
 import collector.relics.EmeraldTorch;
 import collector.ui.CombatCollectionPileButton;
+import collector.util.CollectibleCardReward;
 import collector.util.CollectorSecondMagic;
 import collector.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
@@ -45,7 +46,7 @@ public class CollectorMod implements
         PostBattleSubscriber,
         StartGameSubscriber,
         PostDungeonUpdateSubscriber,
-        CustomSavable<ArrayList<String>> {
+        CustomSavable<ArrayList<String>>, PostRenderSubscriber {
     public static final String SHOULDER1 = "collectorResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "collectorResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "collectorResources/images/char/mainChar/corpse.png";
@@ -252,6 +253,17 @@ public class CollectorMod implements
             AbstractCard found = CardLibrary.getCopy(s);
             CardModifierManager.addModifier(found, new CollectedCardMod());
             CollectorCollection.collection.addToBottom(found);
+        }
+    }
+
+    //Due to reward scrolling's orthographic camera and render order of rewards, the card needs to be rendered outside of the render method
+    public static CollectibleCardReward hoverRewardWorkaround;
+
+    @Override
+    public void receivePostRender(SpriteBatch sb) {
+        if (hoverRewardWorkaround != null) {
+            hoverRewardWorkaround.renderCardOnHover(sb);
+            hoverRewardWorkaround = null;
         }
     }
 }
