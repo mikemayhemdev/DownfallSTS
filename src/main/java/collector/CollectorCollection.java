@@ -128,17 +128,6 @@ public class CollectorCollection {
         combatCollection.clear();
     }
 
-    //TODO: Save/load
-//    public ArrayList<AbstractCard> onSave() {
-//        return collection.group;
-//    }
-//
-//    public void onLoad(ArrayList<AbstractCard> abstractCards) {
-//        for (AbstractCard c : abstractCards) {
-//            collection.addToTop(c);
-//        }
-//    }
-
     public static void collect(AbstractMonster m) {
         collection.addToBottom(getCollectedCard(m));
         //TODO: Switch to a reward item setup

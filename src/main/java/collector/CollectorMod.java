@@ -1,8 +1,11 @@
 package collector;
 
 import basemod.BaseMod;
+import basemod.abstracts.CustomSavable;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.helpers.CardModifierManager;
 import basemod.interfaces.*;
+import collector.cardmods.CollectedCardMod;
 import collector.patches.CollectiblesPatches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
 import collector.relics.EmeraldTorch;
@@ -16,6 +19,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
@@ -40,7 +44,8 @@ public class CollectorMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         StartGameSubscriber,
-        PostDungeonUpdateSubscriber {
+        PostDungeonUpdateSubscriber,
+        CustomSavable<ArrayList<String>> {
     public static final String SHOULDER1 = "collectorResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "collectorResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "collectorResources/images/char/mainChar/corpse.png";
@@ -230,5 +235,23 @@ public class CollectorMod implements
     public void receiveStartGame() {
         CollectorCollection.init();
         combatCollectionPileButton = new CombatCollectionPileButton();
+    }
+
+    @Override
+    public ArrayList<String> onSave() {
+        ArrayList<String> results = new ArrayList<>();
+        for (AbstractCard q : CollectorCollection.collection.group) {
+            results.add(q.cardID);
+        }
+        return results;
+    }
+
+    @Override
+    public void onLoad(ArrayList<String> strings) {
+        for (String s : strings) {
+            AbstractCard found = CardLibrary.getCopy(s);
+            CardModifierManager.addModifier(found, new CollectedCardMod());
+            CollectorCollection.collection.addToBottom(found);
+        }
     }
 }
