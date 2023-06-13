@@ -18,6 +18,8 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
     public static final PowerType TYPE = PowerType.DEBUFF;
     public static final boolean TURN_BASED = false;
 
+    private boolean instakilled = false;
+
     public DoomPower(AbstractMonster target, int amount) {
         super(NAME, TYPE, TURN_BASED, target, null, amount);
     }
@@ -50,16 +52,19 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
     }
 
     private void instakill() {
-        flash();
-        atb(new HideHealthBarAction(owner));
-        atb(new InstantKillAction(owner));
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                CollectorCollection.collect((AbstractMonster) owner);
-            }
-        });
+        if (!instakilled) {
+            instakilled = true;
+            flash();
+            atb(new HideHealthBarAction(owner));
+            atb(new InstantKillAction(owner));
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    CollectorCollection.collect((AbstractMonster) owner);
+                }
+            });
+        }
     }
 
     @Override

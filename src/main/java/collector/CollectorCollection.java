@@ -9,6 +9,7 @@ import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.monsters.MushroomPurple;
 import charbosses.monsters.MushroomRed;
 import charbosses.monsters.MushroomWhite;
+import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
