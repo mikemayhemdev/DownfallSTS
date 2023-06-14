@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.patches.RewardItemTypeEnumPatch;
 
 import static collector.CollectorMod.makeID;
 
@@ -33,13 +34,13 @@ public class CollectibleCardReward extends CustomReward {
     protected AbstractCard renderCard;
 
     public CollectibleCardReward(AbstractCard c) {
-        super((Texture) null, "", CustomRewardTypes.COLLECTOR_COLLECTIBLECARDREWARD);
+        super((Texture) null, "", RewardItemTypeEnumPatch.COLLECTOR_COLLECTIBLECARDREWARD);
         card = c;
         init();
     }
 
     public CollectibleCardReward(String... args) {
-        super((Texture) null, "", CustomRewardTypes.COLLECTOR_COLLECTIBLECARDREWARD);
+        super((Texture) null, "", RewardItemTypeEnumPatch.COLLECTOR_COLLECTIBLECARDREWARD);
 
         //Loading save
         if (args.length == 1 && args[0].contains("|")) {
@@ -125,7 +126,7 @@ public class CollectibleCardReward extends CustomReward {
         renderCard.drawScale = scale;
 
         FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, text, Settings.WIDTH * 0.434F, y + 5.0f * Settings.scale, 1000.0f * Settings.scale, 0.0f, col);
-        FontHelper.renderSmartText(sb, FontCreationPatches.tipFont, uiStrings.TEXT[1], REWARD_X_POS, this.y - FontHelper.getHeight(FontHelper.cardDescFont_N, text, Settings.scale) - 6f * Settings.scale, 1000.0f * Settings.scale, 0.0f, TIP_COL);
+        //FontHelper.renderSmartText(sb, FontCreationPatches.tipFont, uiStrings.TEXT[1], REWARD_X_POS, this.y - FontHelper.getHeight(FontHelper.cardDescFont_N, text, Settings.scale) - 6f * Settings.scale, 1000.0f * Settings.scale, 0.0f, TIP_COL);
 
         if (hb.hovered || hb.justHovered) {
             CollectorMod.hoverRewardWorkaround = this;

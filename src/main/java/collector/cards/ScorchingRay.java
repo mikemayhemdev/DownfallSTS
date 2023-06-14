@@ -15,7 +15,7 @@ public class ScorchingRay extends AbstractCollectorCard {
     // intellij stuff attack, enemy, common, 4, 1, , , 4, 
 
     public ScorchingRay() {
-        super(ID, 3, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 3, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 9;
         baseMagicNumber = magicNumber = 3;
     }

@@ -47,7 +47,7 @@
   },
   "collector:CollectibleCardReward": {
     "TEXT": [
-      "Collected Card!",
+      "Collected: ",
       "You may obtain this"
     ]
   }
