@@ -11,7 +11,7 @@ import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.atb;
 import static collector.util.Wiz.att;
 
-public class AcidSlimeCard extends AbstractCollectorCard {
+public class AcidSlimeCard extends AbstractCollectibleCard {
     public final static String ID = makeID(AcidSlimeCard.class.getSimpleName());
     // intellij stuff skill, enemy, common, , , , , , 
 

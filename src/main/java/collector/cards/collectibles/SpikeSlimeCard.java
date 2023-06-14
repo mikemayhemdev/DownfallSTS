@@ -1,6 +1,5 @@
 package collector.cards.collectibles;
 
-import collector.cards.AbstractCollectorCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.status.Slimed;
@@ -10,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.atb;
 
-public class SpikeSlimeCard extends AbstractCollectorCard {
+public class SpikeSlimeCard extends AbstractCollectibleCard {
     public final static String ID = makeID(SpikeSlimeCard.class.getSimpleName());
     // intellij stuff attack, enemy, common, 15, 5, , , , 
 

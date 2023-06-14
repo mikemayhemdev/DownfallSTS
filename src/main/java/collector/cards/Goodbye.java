@@ -15,7 +15,7 @@ public class Goodbye extends AbstractCollectorCard {
 
     public Goodbye() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
         exhaust = true;
     }
 

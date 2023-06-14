@@ -50,5 +50,11 @@
       "Collected: ",
       "You may obtain this"
     ]
+  },
+  "collector:HoardedMod": {
+    "TEXT": [
+      "Unplayable. NL ",
+      "Retain. NL "
+    ]
   }
 }

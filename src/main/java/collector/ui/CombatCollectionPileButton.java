@@ -89,7 +89,7 @@ public class CombatCollectionPileButton extends ClickableUIElement {
 
     @Override
     public void render(SpriteBatch sb) {
-        if (CollectorCollection.combatCollection != null && (AbstractDungeon.player.chosenClass == CollectorChar.Enums.THE_COLLECTOR || CollectorCollection.combatCollection.size() > 0)) {
+        if (CollectorCollection.combatCollection != null && (AbstractDungeon.player.chosenClass == CollectorChar.Enums.THE_COLLECTOR)) {
             if (!AbstractDungeon.overlayMenu.combatDeckPanel.isHidden) {
                 float x = hitbox.x + hitbox.width / 2f;
                 float y = hitbox.y + hitbox.height / 2f;

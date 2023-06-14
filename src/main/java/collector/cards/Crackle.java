@@ -22,5 +22,6 @@ public class Crackle extends AbstractCollectorCard {
 
     public void upp() {
         isInnate = true;
+        uDesc();
     }
 }
