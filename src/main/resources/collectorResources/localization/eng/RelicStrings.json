@@ -53,5 +53,26 @@
       "Start each combat with #b",
       " #yTemporary_HP. While you have #yTemporary_HP, cards grant #b1 additional #yBlock."
     ]
+  },
+  "collector:Incense": {
+    "NAME": "Incense",
+    "FLAVOR": "An antiquated form of mental clarification.",
+    "DESCRIPTIONS": [
+      "You cannot gain #yWeak, #yVulnerable or #yFrail while you are #yWeak, #yVulnerable or #yFrail."
+    ]
+  },
+  "collector:FuelCanister": {
+    "NAME": "Fuel Canister",
+    "FLAVOR": "Disgusting.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yRetain the highest-cost card in your hand."
+    ]
+  },
+  "collector:AutoCurser": {
+    "NAME": "Hexx Talisman",
+    "FLAVOR": "\"When I put this on, my rate of toe-stubbing increased drastically. I think it works!\" - Ranwid",
+    "DESCRIPTIONS": [
+      "At the start of combat, apply #b1 #yWeak and #yVulnerable to a random enemy."
+    ]
   }
 }
