@@ -74,5 +74,12 @@
     "DESCRIPTIONS": [
       "At the start of combat, apply #b1 #yWeak and #yVulnerable to a random enemy."
     ]
+  },
+  "collector:Bagpipes": {
+    "NAME": "The Bagpipes",
+    "FLAVOR": "This cursed, dreaded instrument is said to have driven Kublai the Great mad.",
+    "DESCRIPTIONS": [
+      "Whenever you apply #yWeak or #yVulnerable, increase the amount applied by #b1."
+    ]
   }
 }
