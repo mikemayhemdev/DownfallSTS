@@ -281,7 +281,7 @@
   "collector:Crackle": {
     "NAME": "Crackle",
     "DESCRIPTION": "At the start of your turn, gain 1 collector:Reserve.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 collector:Reserve.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 collector:Reserve."
   },
   "collector:Omen": {
     "NAME": "Omen",
@@ -319,7 +319,7 @@
   },
   "collector:ReceiveTribute": {
     "NAME": "Receive Tribute",
-    "DESCRIPTION": "collector:Pyre. NL Choose 1 of !M! Boss cards and add it into your hand. NL Exhaust."
+    "DESCRIPTION": "collector:Pyre. NL Choose 1 of !M! Boss cards and add it into your hand. NL It gains Retain. NL Exhaust."
   },
   "collector:Extricate": {
     "NAME": "Extricate",
@@ -569,5 +569,9 @@
   "collector:DefaultCollectibleCard": {
     "NAME": "Default Collectible",
     "DESCRIPTION": "This foe doesn't have a unique Collectible yet! NL Gain !M! Strength and Dexterity."
+  },
+  "collector:Hurting": {
+    "NAME": "Hurting",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, increase its cost by 1 and damage by !M! this combat."
   }
 }
