@@ -51,6 +51,14 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         }
     }
 
+    @Override
+    public void onDeath() {
+        if (!instakilled) {
+            flash();
+            CollectorCollection.collect((AbstractMonster) owner);
+        }
+    }
+
     private void instakill() {
         if (!instakilled) {
             instakilled = true;

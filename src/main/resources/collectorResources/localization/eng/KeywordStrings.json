@@ -9,7 +9,8 @@
   {
     "PROPER_NAME": "Doom",
     "NAMES": [
-      "doom"
+      "doom",
+      "doomed"
     ],
     "DESCRIPTION": "If the enemy has more Doom than HP, kill them and add their card to your Collection."
   },

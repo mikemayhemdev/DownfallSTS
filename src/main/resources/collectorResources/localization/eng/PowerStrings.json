@@ -201,5 +201,12 @@
       "At the end of your turn, if you have #yTemporary #yHP, apply #b",
       " #yPoison to a random enemy."
     ]
+  },
+  "collector:MoreBlockWithTempHP": {
+    "NAME": "Thimble Helm",
+    "DESCRIPTION": [
+      "While you have #yTemporary #yHP, gain #b",
+      " more #yBlock from cards."
+    ]
   }
 }
