@@ -8,8 +8,8 @@ Shadow
   rotate: false
   xy: 1, 345
   size: 196, 31
-  orig: 206, 39
-  offset: 2, 4
+  orig: 196, 31
+  offset: 0, 0
   index: -1
 Leg_r
   rotate: false
