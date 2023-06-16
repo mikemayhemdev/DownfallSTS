@@ -1,7 +1,9 @@
 package collector.util;
 
 import basemod.abstracts.CustomReward;
+import basemod.helpers.CardModifierManager;
 import collector.CollectorMod;
+import collector.cardmods.CollectedCardMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -36,6 +38,7 @@ public class CollectibleCardReward extends CustomReward {
     public CollectibleCardReward(AbstractCard c) {
         super((Texture) null, "", RewardItemTypeEnumPatch.COLLECTOR_COLLECTIBLECARDREWARD);
         card = c;
+        CardModifierManager.addModifier(card, new CollectedCardMod());
         init();
     }
 

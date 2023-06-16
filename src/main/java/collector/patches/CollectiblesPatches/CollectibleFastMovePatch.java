@@ -1,7 +1,9 @@
 package collector.patches.CollectiblesPatches;
 
 import basemod.ReflectionHacks;
+import basemod.helpers.CardModifierManager;
 import collector.CollectorCollection;
+import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.AbstractCollectibleCard;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,7 +17,7 @@ import com.megacrit.cardcrawl.vfx.FastCardObtainEffect;
 public class CollectibleFastMovePatch {
     public static void Postfix(FastCardObtainEffect __instance) {
         AbstractCard q = ReflectionHacks.getPrivate(__instance, FastCardObtainEffect.class, "card");
-        if (q instanceof AbstractCollectibleCard && __instance.duration < 0.0F) {
+        if (CardModifierManager.hasModifier(q, CollectedCardMod.ID) && __instance.duration < 0.0F) {
             AbstractDungeon.player.masterDeck.removeCard(q);
             CollectorCollection.collection.addToBottom(q);
         }

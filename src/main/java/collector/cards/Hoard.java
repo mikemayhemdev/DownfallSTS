@@ -37,7 +37,7 @@ public class Hoard extends AbstractCollectorCard {
                         }
                     }
                 });
-                att(new DrawCardAction(2));
+                att(new DrawCardAction(magicNumber));
             }
         });
     }
