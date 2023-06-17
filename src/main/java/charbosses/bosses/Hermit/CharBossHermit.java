@@ -5,7 +5,6 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct1SharpshooterNewAge;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct3DoomsdayNewAge;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
 import charbosses.ui.EnergyOrbHermit;
@@ -16,18 +15,13 @@ import com.esotericsoftware.spine.AnimationState;
 import com.esotericsoftware.spine.Slot;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbPurple;
 import downfall.downfallMod;
 import hermit.characters.hermit;
 import hermit.effects.HermitEyeParticle;
-import hermit.powers.Concentration;
-
 
 import static charbosses.cards.AbstractBossCard.HAND_SCALE;
 import static charbosses.cards.AbstractBossCard.HOVER_SCALE;
