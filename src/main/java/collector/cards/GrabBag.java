@@ -1,12 +1,11 @@
 package collector.cards;
 
 import collector.actions.DrawCardFromCollectionAction;
-import collector.powers.ReservePower;
+import collector.actions.GainReservesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.applyToSelf;
 import static collector.util.Wiz.atb;
 
 public class GrabBag extends AbstractCollectorCard {
@@ -23,7 +22,7 @@ public class GrabBag extends AbstractCollectorCard {
         for (int i = 0; i < 3; i++) {
             atb(new DrawCardFromCollectionAction());
         }
-        applyToSelf(new ReservePower(magicNumber));
+        atb(new GainReservesAction(magicNumber));
     }
 
     public void upp() {

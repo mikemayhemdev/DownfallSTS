@@ -2,10 +2,10 @@ package collector.relics;
 
 import basemod.abstracts.CustomRelic;
 import collector.CollectorMod;
-import collector.powers.ReservePower;
+import collector.actions.GainReservesAction;
 import com.badlogic.gdx.graphics.Texture;
 
-import static collector.util.Wiz.applyToSelf;
+import static collector.util.Wiz.atb;
 
 public class SoullitLamp extends CustomRelic {
     public static final String ID = CollectorMod.makeID(SoullitLamp.class.getSimpleName());
@@ -19,7 +19,7 @@ public class SoullitLamp extends CustomRelic {
     @Override
     public void atBattleStart() {
         flash();
-        applyToSelf(new ReservePower(1));
+        atb(new GainReservesAction(1));
     }
 
     @Override

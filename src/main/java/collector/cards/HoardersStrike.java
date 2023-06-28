@@ -1,6 +1,7 @@
 package collector.cards;
 
-import collector.powers.ReservePower;
+import collector.actions.GainReservesAction;
+import collector.util.NewReserves;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -27,7 +28,7 @@ public class HoardersStrike extends AbstractCollectorCard {
             public void update() {
                 isDone = true;
                 for (AbstractCard q : DrawCardAction.drawnCards) {
-                    applyToSelfTop(new ReservePower(q.costForTurn));
+                    addToTop(new GainReservesAction(q.costForTurn));
                 }
             }
         }));

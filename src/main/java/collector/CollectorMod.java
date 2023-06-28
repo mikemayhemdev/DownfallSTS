@@ -12,6 +12,7 @@ import collector.relics.EmeraldTorch;
 import collector.ui.CombatCollectionPileButton;
 import collector.util.CollectibleCardReward;
 import collector.util.CollectorSecondMagic;
+import collector.util.NewReserves;
 import collector.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -153,11 +154,13 @@ public class CollectorMod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         CollectorCollection.atBattleEnd();
+        NewReserves.resetReserves();
     }
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         CollectorCollection.atBattleStart();
+        NewReserves.resetReserves();
     }
 
     @Override
@@ -236,6 +239,7 @@ public class CollectorMod implements
     public void receiveStartGame() {
         CollectorCollection.init();
         combatCollectionPileButton = new CombatCollectionPileButton();
+        NewReserves.resetReserves();
     }
 
     @Override

@@ -1,6 +1,6 @@
 package collector.powers;
 
-import collector.util.Wiz;
+import collector.actions.GainReservesAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class CracklePower extends AbstractCollectorPower {
@@ -16,6 +16,6 @@ public class CracklePower extends AbstractCollectorPower {
     @Override
     public void atStartOfTurnPostDraw() {
         flash();
-        Wiz.applyToSelf(new ReservePower(amount));
+        addToBot(new GainReservesAction(amount));
     }
 }

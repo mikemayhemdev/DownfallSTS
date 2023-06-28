@@ -1,7 +1,8 @@
 package collector.patches;
 
+import collector.actions.GainReservesAction;
 import collector.cards.Kill;
-import collector.powers.ReservePower;
+import collector.util.NewReserves;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,19 +20,17 @@ public class ReservesPatch {
     public static class CardCostPatch {
         @SpireInsertPatch(locator = Locator.class)
         public static SpireReturn<?> bePlayable(AbstractCard __instance) {
-            AbstractPower power = AbstractDungeon.player.getPower(ReservePower.POWER_ID);
-            if (power != null) {
-
-
-                // Kill Special Case
-                if (__instance.cardID.equals(Kill.ID)) {
-                    if (power.amount >= __instance.costForTurn) {
-                        return SpireReturn.Return(true);
-                    }
-                    return SpireReturn.Return(false);
+            int found = NewReserves.reserveCount();
+            // Kill Special Case
+            if (__instance.cardID.equals(Kill.ID)) {
+                if (found >= __instance.costForTurn) {
+                    return SpireReturn.Return(true);
                 }
+                return SpireReturn.Return(false);
+            }
+            if (found > 0) {
 
-                if (EnergyPanel.totalCount + power.amount >= __instance.costForTurn) {
+                if (EnergyPanel.totalCount + found >= __instance.costForTurn) {
                     return SpireReturn.Return(true);
                 }
             }
@@ -51,10 +50,10 @@ public class ReservesPatch {
     public static class UseReserves {
         @SpireInsertPatch(locator = Locator.class)
         public static void spendReserves(AbstractPlayer __instance, AbstractCard c) {
-            if (__instance.hasPower(ReservePower.POWER_ID) && c.costForTurn > 0) {
+            if (NewReserves.reserveCount() > 0 && c.costForTurn > 0) {
                 int delta = c.costForTurn - EnergyPanel.getCurrentEnergy();
                 if (delta > 0)
-                    att(new ReducePowerAction(__instance, __instance, ReservePower.POWER_ID, delta));
+                    att(new GainReservesAction(-delta));
             }
         }
 

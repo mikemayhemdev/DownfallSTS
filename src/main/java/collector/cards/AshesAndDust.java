@@ -1,13 +1,12 @@
 package collector.cards;
 
 import automaton.actions.EasyXCostAction;
-import collector.powers.ReservePower;
+import collector.actions.GainReservesAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.applyToSelfTop;
 import static collector.util.Wiz.atb;
 
 public class AshesAndDust extends AbstractCollectorCard {
@@ -26,7 +25,7 @@ public class AshesAndDust extends AbstractCollectorCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
             if (exhaustedThisTurn) {
-                applyToSelfTop(new ReservePower(magicNumber));
+                addToTop(new GainReservesAction(magicNumber));
             }
             for (int i = 0; i < effect; i++) {
                 allDmgTop(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);

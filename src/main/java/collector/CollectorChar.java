@@ -6,6 +6,7 @@ import collector.cards.FuelTheFire;
 import collector.cards.SoulSnare;
 import collector.cards.Strike;
 import collector.relics.EmeraldTorch;
+import collector.util.DoubleEnergyOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -57,8 +58,10 @@ public class CollectorChar extends CustomPlayer {
     private final String jsonURL = "collectorResources/images/char/mainChar/skeleton.json";
     private float fireTimer = 0.0F;
 
+    public static final float[] layerSpeeds = {-20.0F, 20.0F, -40.0F, 40.0F, 360.0F};
+
     public CollectorChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "collectorResources/images/char/mainChar/orb/vfx.png", null, (String) null);
+        super(name, setClass, new DoubleEnergyOrb(orbTextures, "collectorResources/images/char/mainChar/orb/vfx.png", layerSpeeds), null, (String) null);
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,

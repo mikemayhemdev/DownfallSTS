@@ -1,5 +1,7 @@
 package collector.powers;
 
+import collector.actions.GainReservesAction;
+import collector.util.NewReserves;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,7 +19,7 @@ public class NextTurnReservePower extends AbstractCollectorPower {
 
     public void atStartOfTurn() {
         this.flash();
-        addToBot(new ApplyPowerAction(owner, owner, new ReservePower(amount), amount));
+        addToBot(new GainReservesAction(amount));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
