@@ -14,7 +14,11 @@ public class VolatileKindling extends AbstractCollectorCard {
     public VolatileKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 5;
-        //TODO: Annoying card to preview eventually
+        AbstractCard q = new Strike();
+        q.name = q.name + "+" + magicNumber;
+        q.upgraded = true;
+        q.baseDamage += 3 * magicNumber;
+        cardsToPreview = q;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,10 +36,15 @@ public class VolatileKindling extends AbstractCollectorCard {
         q.name = q.name + "+" + magicNumber;
         q.upgraded = true;
         q.baseDamage += 3 * magicNumber;
-        makeInHand(q.makeStatEquivalentCopy()); //TODO: Confirm this actually works; if not check against other implementations more carefully
+        makeInHand(q.makeStatEquivalentCopy()); // It works!
     }
 
     public void upp() {
         upgradeMagicNumber(2);
+        AbstractCard q = new Strike();
+        q.name = q.name + "+" + magicNumber;
+        q.upgraded = true;
+        q.baseDamage += 3 * magicNumber;
+        cardsToPreview = q;
     }
 }

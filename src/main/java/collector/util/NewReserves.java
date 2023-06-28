@@ -5,10 +5,9 @@ public class NewReserves {
 
     public static void addReserves(int amount) {
         curReserves += amount;
-    }
-
-    public static void spendReserves(int amount) {
-        curReserves += amount;
+        if (amount > 0) {
+            DoubleEnergyOrb.secondVfxTimer = 2.0F;
+        }
     }
 
     public static int reserveCount() {

@@ -6,15 +6,15 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Interpolation;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class DoubleEnergyOrb extends CustomEnergyOrb {
@@ -74,6 +74,17 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
                 this.secondAngles[i] -= Gdx.graphics.getDeltaTime() * this.secondLayerSpeeds[d - 1 - i];
             }
         }
+
+        if (secondVfxTimer != 0.0F) {
+            this.secondEnergyVfxColor.a = Interpolation.exp10In.apply(0.5F, 0.0F, 1.0F - secondVfxTimer / 2.0F);
+            this.secondEnergyVfxAngle += Gdx.graphics.getDeltaTime() * -30.0F;
+            this.secondEnergyVfxScale = Settings.scale * Interpolation.exp10In.apply(1.0F, 0.1F, 1.0F - secondVfxTimer / 2.0F);
+            secondVfxTimer -= Gdx.graphics.getDeltaTime();
+            if (secondVfxTimer < 0.0F) {
+                secondVfxTimer = 0.0F;
+                this.secondEnergyVfxColor.a = 0.0F;
+            }
+        }
     }
 
     public void renderOrb(SpriteBatch sb, boolean enabled, float current_x, float current_y) {
@@ -81,7 +92,7 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
         int i;
 
         if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR) || NewReserves.reserveCount() > 0) {
-            if (enabled) {
+            if (NewReserves.reserveCount() > 0) {
                 for (i = 0; i < this.secondEnergyLayers.length; ++i) {
                     sb.draw(this.secondEnergyLayers[i], current_x + X_OFFSET - SECOND_ORB_W / 2F, current_y + Y_OFFSET - SECOND_ORB_W / 2F, SECOND_ORB_W / 2F, SECOND_ORB_W / 2F, SECOND_ORB_W, SECOND_ORB_W, SECOND_ORB_IMG_SCALE, SECOND_ORB_IMG_SCALE, this.secondAngles[i], 0, 0, SECOND_ORB_W, SECOND_ORB_W, false, false);
                 }
@@ -95,11 +106,11 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
 
         if (enabled) {
             for (i = 0; i < this.energyLayers.length; ++i) {
-                sb.draw(this.energyLayers[i], current_x  - PRIMARY_ORB_W / 2F, current_y  - PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W, PRIMARY_ORB_W, PRIMARY_ORB_IMG_SCALE, PRIMARY_ORB_IMG_SCALE, this.angles[i], 0, 0, 128, 128, false, false);
+                sb.draw(this.energyLayers[i], current_x - PRIMARY_ORB_W / 2F, current_y - PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W, PRIMARY_ORB_W, PRIMARY_ORB_IMG_SCALE, PRIMARY_ORB_IMG_SCALE, this.angles[i], 0, 0, 128, 128, false, false);
             }
         } else {
             for (i = 0; i < this.noEnergyLayers.length; ++i) {
-                sb.draw(this.noEnergyLayers[i], current_x  - PRIMARY_ORB_W / 2F, current_y  - PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W, PRIMARY_ORB_W, PRIMARY_ORB_IMG_SCALE, PRIMARY_ORB_IMG_SCALE, this.angles[i], 0, 0, 128, 128, false, false);
+                sb.draw(this.noEnergyLayers[i], current_x - PRIMARY_ORB_W / 2F, current_y - PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W, PRIMARY_ORB_W, PRIMARY_ORB_IMG_SCALE, PRIMARY_ORB_IMG_SCALE, this.angles[i], 0, 0, 128, 128, false, false);
             }
         }
 
@@ -111,18 +122,22 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
         public static SpireField<Boolean> isDoubleOrb = new SpireField<>(() -> Boolean.FALSE);
     }
 
+    public static float secondVfxTimer = 0F;
+    private static float secondEnergyVfxAngle = 0F;
+    private static float secondEnergyVfxScale = Settings.scale;
+    private static Color secondEnergyVfxColor = Color.WHITE.cpy();
 
-    //TODO: Flash and highlight second orb on gaining Reserves, not energy
-    //TODO: Tooltip for hover
+    private static Hitbox hb = new Hitbox(SECOND_ORB_W * Settings.scale, SECOND_ORB_W * Settings.scale);
+
     @SpirePatch(clz = EnergyPanel.class, method = "renderVfx")
     public static class FlashSecondOrbPatch {
         @SpirePrefixPatch
         public static void flashSecondOrb(EnergyPanel __instance, SpriteBatch sb, Texture ___gainEnergyImg, Color ___energyVfxColor, float ___energyVfxScale, float ___energyVfxAngle) {
-            if (EnergyPanel.energyVfxTimer != 0.0F && DoubleOrbField.isDoubleOrb.get(AbstractDungeon.player)) {
+            if (DoubleOrbField.isDoubleOrb.get(AbstractDungeon.player) && secondVfxTimer > 0) {
                 sb.setBlendFunction(770, 1);
-                sb.setColor(___energyVfxColor);
-                sb.draw(___gainEnergyImg, __instance.current_x + X_OFFSET - SECOND_ORB_W, __instance.current_y + Y_OFFSET - SECOND_ORB_W, SECOND_ORB_W, SECOND_ORB_W, SECOND_ORB_W * 2F, SECOND_ORB_W * 2F, ___energyVfxScale * SECOND_ORB_IMG_SCALE / PRIMARY_ORB_IMG_SCALE, ___energyVfxScale * SECOND_ORB_IMG_SCALE / PRIMARY_ORB_IMG_SCALE, ___energyVfxAngle - 50.0F, 0, 0, SECOND_ORB_W * 2, SECOND_ORB_W * 2, true, false);
-                sb.draw(___gainEnergyImg, __instance.current_x + X_OFFSET - SECOND_ORB_W, __instance.current_y + Y_OFFSET - SECOND_ORB_W, SECOND_ORB_W, SECOND_ORB_W, SECOND_ORB_W * 2F, SECOND_ORB_W * 2F, ___energyVfxScale * SECOND_ORB_IMG_SCALE / PRIMARY_ORB_IMG_SCALE, ___energyVfxScale * SECOND_ORB_IMG_SCALE / PRIMARY_ORB_IMG_SCALE, -___energyVfxAngle, 0, 0, SECOND_ORB_W * 2, SECOND_ORB_W * 2, false, false);
+                sb.setColor(secondEnergyVfxColor);
+                sb.draw(___gainEnergyImg, __instance.current_x + X_OFFSET - SECOND_ORB_W, __instance.current_y + Y_OFFSET - SECOND_ORB_W, SECOND_ORB_W, SECOND_ORB_W, SECOND_ORB_W * 2F, SECOND_ORB_W * 2F, secondEnergyVfxScale * SECOND_ORB_IMG_SCALE / PRIMARY_ORB_IMG_SCALE, secondEnergyVfxScale * SECOND_ORB_IMG_SCALE / PRIMARY_ORB_IMG_SCALE, secondEnergyVfxAngle - 50.0F, 0, 0, SECOND_ORB_W * 2, SECOND_ORB_W * 2, true, false);
+                sb.draw(___gainEnergyImg, __instance.current_x + X_OFFSET - SECOND_ORB_W, __instance.current_y + Y_OFFSET - SECOND_ORB_W, SECOND_ORB_W, SECOND_ORB_W, SECOND_ORB_W * 2F, SECOND_ORB_W * 2F, secondEnergyVfxScale * SECOND_ORB_IMG_SCALE / PRIMARY_ORB_IMG_SCALE, secondEnergyVfxScale * SECOND_ORB_IMG_SCALE / PRIMARY_ORB_IMG_SCALE, -secondEnergyVfxAngle, 0, 0, SECOND_ORB_W * 2, SECOND_ORB_W * 2, false, false);
                 sb.setBlendFunction(770, 771);
             }
         }

@@ -30,7 +30,6 @@ public class EndOfTurnPatch {
                                 @Override
                                 public void update() {
                                     isDone = true;
-                                    AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(q, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
                                     cardGroup.moveToExhaustPile(q);
                                 }
                             });

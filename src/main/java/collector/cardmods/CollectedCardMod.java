@@ -13,6 +13,11 @@ public class CollectedCardMod extends AbstractCardModifier {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     @Override
+    public void onInitialApplication(AbstractCard card) {
+        card.exhaust = true;
+    }
+
+    @Override
     public String identifier(AbstractCard card) {
         return ID;
     }
