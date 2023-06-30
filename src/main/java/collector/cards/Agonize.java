@@ -16,7 +16,7 @@ public class Agonize extends AbstractCollectorCard {
 
     public Agonize() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 13;
+        baseDamage = 16;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,6 +28,6 @@ public class Agonize extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(6);
     }
 }

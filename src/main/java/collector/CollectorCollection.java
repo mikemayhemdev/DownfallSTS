@@ -51,7 +51,9 @@ public class CollectorCollection {
         collectionPool.put(GremlinFat.ID, FatGremlinCard.ID);
         collectionPool.put(JawWorm.ID, JawWormCard.ID);
         collectionPool.put(Looter.ID, ThievesCard.ID);
+        collectionPool.put(LooterAlt.ID, ThievesCard.ID);
         collectionPool.put(Mugger.ID, ThievesCard.ID);
+        collectionPool.put(MuggerAlt.ID, ThievesCard.ID);
         collectionPool.put(FungiBeast.ID, FungiBeastCard.ID);
         collectionPool.put(ShelledParasite.ID, ShelledParasiteCard.ID);
         collectionPool.put(SphericGuardian.ID, SphericGuardianCard.ID);
@@ -124,6 +126,7 @@ public class CollectorCollection {
         for (AbstractCard q : collection.group) {
             combatCollection.addToTop(q.makeSameInstanceOf());
         }
+        combatCollection.shuffle(AbstractDungeon.cardRandomRng);
     }
 
     public static void atBattleEnd() {

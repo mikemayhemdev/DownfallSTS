@@ -21,10 +21,10 @@ public class SufferingPower extends AbstractCollectorPower implements BetterOnAp
     }
 
     @Override
-    public boolean betterOnApplyPower(AbstractPower abstractPower, AbstractCreature source, AbstractCreature target) {
+    public boolean betterOnApplyPower(AbstractPower abstractPower, AbstractCreature target, AbstractCreature source) {
         if (abstractPower.ID.equals(WeakPower.POWER_ID) || abstractPower.ID.equals(VulnerablePower.POWER_ID)) {
             flash();
-            applyToEnemy((AbstractMonster) target, new DoomPower((AbstractMonster) target, amount)); //TODO: make sure 2nd param actually is target
+            applyToEnemy((AbstractMonster) target, new DoomPower((AbstractMonster) target, amount)); //Fixed!
         }
         return true;
     }

@@ -10,10 +10,7 @@ import collector.patches.CollectiblesPatches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
 import collector.relics.EmeraldTorch;
 import collector.ui.CombatCollectionPileButton;
-import collector.util.CollectibleCardReward;
-import collector.util.CollectorSecondMagic;
-import collector.util.NewReserves;
-import collector.util.Wiz;
+import collector.util.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -46,8 +43,7 @@ public class CollectorMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         StartGameSubscriber,
-        PostDungeonUpdateSubscriber,
-        CustomSavable<ArrayList<String>>, PostRenderSubscriber {
+        PostDungeonUpdateSubscriber, PostRenderSubscriber {
     public static final String SHOULDER1 = "collectorResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "collectorResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "collectorResources/images/char/mainChar/corpse.png";
@@ -148,6 +144,7 @@ public class CollectorMod implements
 
     public void receivePostInitialize() {
         addPotions();
+        initializeSavedData();
         BaseMod.addTopPanelItem(new TopPanelExtraDeck());
     }
 
@@ -240,24 +237,34 @@ public class CollectorMod implements
         CollectorCollection.init();
         combatCollectionPileButton = new CombatCollectionPileButton();
         NewReserves.resetReserves();
+        if (AbstractDungeon.player instanceof CollectorChar) {
+            ((CollectorChar) AbstractDungeon.player).torchHead = new RenderOnlyTorchHead();
+        }
     }
 
-    @Override
-    public ArrayList<String> onSave() {
-        ArrayList<String> results = new ArrayList<>();
-        for (AbstractCard q : CollectorCollection.collection.group) {
-            results.add(q.cardID);
-        }
-        return results;
-    }
+    private void initializeSavedData() {
+        BaseMod.addSaveField("CollectorCollection", new CustomSavable<ArrayList<String>>() {
+            @Override
+            public ArrayList<String> onSave() {
+                ArrayList<String> results = new ArrayList<>();
+                for (AbstractCard q : CollectorCollection.collection.group) {
+                    results.add(q.cardID);
+                }
+                System.out.println("Collector Saving Collection - cards: ");
+                results.stream().forEach(q -> System.out.println(q));
+                return results;
+            }
 
-    @Override
-    public void onLoad(ArrayList<String> strings) {
-        for (String s : strings) {
-            AbstractCard found = CardLibrary.getCopy(s);
-            CardModifierManager.addModifier(found, new CollectedCardMod());
-            CollectorCollection.collection.addToBottom(found);
-        }
+            @Override
+            public void onLoad(ArrayList<String> strings) {
+                for (String s : strings) {
+                    System.out.println("Collector Loading Collection Card: " + s);
+                    AbstractCard found = CardLibrary.getCopy(s);
+                    CardModifierManager.addModifier(found, new CollectedCardMod());
+                    CollectorCollection.collection.addToBottom(found);
+                }
+            }
+        });
     }
 
     //Due to reward scrolling's orthographic camera and render order of rewards, the card needs to be rendered outside of the render method

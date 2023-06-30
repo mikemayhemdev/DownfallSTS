@@ -7,12 +7,16 @@ import collector.cards.SoulSnare;
 import collector.cards.Strike;
 import collector.relics.EmeraldTorch;
 import collector.util.DoubleEnergyOrb;
+import collector.util.RenderOnlyTorchHead;
+import collector.util.Wiz;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
+import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -29,7 +33,6 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.GlowyFireEyesEffect;
-import com.megacrit.cardcrawl.vfx.StaffFireEffect;
 
 import java.util.ArrayList;
 
@@ -203,6 +206,11 @@ public class CollectorChar extends CustomPlayer {
         return TEXT[2];
     }
 
+
+    private static final float EYES_OFFSETX = 0 * Settings.scale;
+    private static final float EYES_DISTBETWEEN = 33F * Settings.scale;
+    private static final float EYES_OFFSETY = 315F * Settings.scale;
+
     @Override
     public void update() {
         super.update();
@@ -210,9 +218,9 @@ public class CollectorChar extends CustomPlayer {
             this.fireTimer -= Gdx.graphics.getDeltaTime();
             if (this.fireTimer < 0.0F) {
                 this.fireTimer = 0.07F;
-                AbstractDungeon.effectList.add(new GlowyFireEyesEffect(this.skeleton.getX() + this.skeleton.findBone("lefteyefireslot").getX(), this.skeleton.getY() + this.skeleton.findBone("lefteyefireslot").getY() + 140.0F * Settings.scale));
-                AbstractDungeon.effectList.add(new GlowyFireEyesEffect(this.skeleton.getX() + this.skeleton.findBone("righteyefireslot").getX(), this.skeleton.getY() + this.skeleton.findBone("righteyefireslot").getY() + 140.0F * Settings.scale));
-                AbstractDungeon.effectList.add(new StaffFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() - 120.0F * Settings.scale, this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 390.0F * Settings.scale));
+                AbstractDungeon.effectList.add(new GlowyFireEyesEffect(this.skeleton.getX() + EYES_OFFSETX, this.skeleton.getY() + EYES_OFFSETY));
+                AbstractDungeon.effectList.add(new GlowyFireEyesEffect(this.skeleton.getX() + EYES_OFFSETX + EYES_DISTBETWEEN, this.skeleton.getY() + EYES_OFFSETY));
+                //AbstractDungeon.effectList.add(new StaffFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() - 120.0F * Settings.scale, this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 390.0F * Settings.scale));
             }
         }
     }
@@ -225,5 +233,35 @@ public class CollectorChar extends CustomPlayer {
         @SpireEnum(name = "THE_COLLECTOR")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
+    }
+
+    // --- TORCH HEAD STUFF ---
+
+    public RenderOnlyTorchHead torchHead;
+
+    private static final float TORCHHEAD_XDIFF = 150F * Settings.scale;
+    private static final float TORCHHEAD_YDIFF = 0F * Settings.scale;
+
+    @Override
+    public void combatUpdate() {
+        super.combatUpdate();
+
+        if (torchHead != null) {
+            //torchHead.update();
+            torchHead.drawX = drawX + TORCHHEAD_XDIFF;
+            torchHead.drawY = drawY + TORCHHEAD_YDIFF;
+        }
+    }
+
+    @Override
+    public void render(SpriteBatch sb) {
+        super.render(sb);
+
+        if (torchHead != null) {
+            //TODO: Torch Head should always be 'present' but should only be 'active' with TEMP HP
+            if (Wiz.isInCombat() && TempHPField.tempHp.get(AbstractDungeon.player) > 0) {
+                torchHead.render(sb);
+            }
+        }
     }
 }

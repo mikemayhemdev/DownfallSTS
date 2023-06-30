@@ -233,7 +233,7 @@
   },
   "collector:EndlessKindling": {
     "NAME": "Endless Kindling",
-    "DESCRIPTION": "Unplayable. If this card is Exhausted, draw !M! cards.",
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]

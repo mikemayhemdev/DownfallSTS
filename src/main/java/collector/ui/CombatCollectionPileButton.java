@@ -18,14 +18,12 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
-import downfall.downfallMod;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.drawTextureScaled;
 
 public class CombatCollectionPileButton extends ClickableUIElement {
     private static final float X_OFF = 200f * Settings.scale;
-    private static final float Y_OFF = 228f;
+    private static final float Y_OFF = 500f * Settings.scale;
     private static final float HB_WIDTH = 128f;
     private static final float HB_HEIGHT = 128f;
     private static final float COUNT_X = 48.0F * Settings.scale;
@@ -94,7 +92,7 @@ public class CombatCollectionPileButton extends ClickableUIElement {
                 float x = hitbox.x + hitbox.width / 2f;
                 float y = hitbox.y + hitbox.height / 2f;
                 sb.setColor(Color.WHITE);
-                draw(sb, ImageMaster.DECK_ICON, x, y+bob.y);
+                draw(sb, ImageMaster.DECK_ICON, x, y + bob.y);
 
                 String msg = Integer.toString(CollectorCollection.combatCollection.size());
                 sb.setColor(Color.WHITE);
@@ -110,6 +108,7 @@ public class CombatCollectionPileButton extends ClickableUIElement {
                 }
             }
         }
+        this.hitbox.render(sb);
     }
 
     public static void draw(SpriteBatch sb, Texture texture, float cX, float cY) {
