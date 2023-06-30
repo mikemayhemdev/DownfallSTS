@@ -1,202 +1,251 @@
 
 skeleton.png
-size: 1024,1024
+size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Shadow1
   rotate: false
-  xy: 1, 723
-  size: 474, 115
-  orig: 479, 116
-  offset: 5, 0
+  xy: 1, 365
+  size: 237, 58
+  orig: 240, 58
+  offset: 3, -1
   index: -1
 Arm_R_B
   rotate: false
-  xy: 368, 957
-  size: 19, 35
-  orig: 19, 35
+  xy: 132, 341
+  size: 10, 18
+  orig: 10, 18
+  offset: 0, 0
+  index: -1
+Arm_R_B1
+  rotate: false
+  xy: 144, 341
+  size: 10, 18
+  orig: 10, 18
   offset: 0, 0
   index: -1
 Stick1
   rotate: false
-  xy: 477, 822
-  size: 473, 87
-  orig: 474, 88
+  xy: 240, 416
+  size: 237, 44
+  orig: 237, 44
   offset: 1, 0
   index: -1
-Arm_R_U
+Arm_R_U1
   rotate: false
-  xy: 116, 976
-  size: 33, 39
-  orig: 35, 40
-  offset: 0, 1
-  index: -1
-Body
-  rotate: false
-  xy: 354, 572
-  size: 100, 139
-  orig: 105, 140
-  offset: 5, 0
-  index: -1
-Arm_L_B
-  rotate: false
-  xy: 168, 912
-  size: 40, 59
-  orig: 42, 61
-  offset: 0, 1
-  index: -1
-Head_B
-  rotate: false
-  xy: 296, 941
-  size: 22, 49
-  orig: 22, 49
+  xy: 94, 341
+  size: 17, 20
+  orig: 18, 20
   offset: 0, 0
   index: -1
-Head
+Body1
   rotate: false
-  xy: 116, 840
-  size: 136, 70
-  orig: 137, 73
+  xy: 180, 285
+  size: 50, 70
+  orig: 53, 70
+  offset: 3, -1
+  index: -1
+Arm_L_B1
+  rotate: false
+  xy: 213, 95
+  size: 20, 30
+  orig: 21, 31
   offset: 0, 0
   index: -1
-images/staff
+Head_B1
   rotate: false
-  xy: 1, 840
-  size: 113, 177
-  orig: 113, 177
+  xy: 158, 1
+  size: 11, 25
+  orig: 11, 25
   offset: 0, 0
   index: -1
-images/armleft
+Head1
   rotate: false
-  xy: 168, 973
-  size: 64, 22
-  orig: 64, 22
+  xy: 112, 425
+  size: 68, 35
+  orig: 69, 37
   offset: 0, 0
   index: -1
-images/handleft
+staff
   rotate: false
-  xy: 389, 957
-  size: 20, 22
-  orig: 20, 22
+  xy: 1, 425
+  size: 57, 79
+  orig: 57, 79
   offset: 0, 0
   index: -1
-images/shoulderback
+armleft
   rotate: false
-  xy: 116, 912
-  size: 50, 62
-  orig: 50, 62
+  xy: 60, 497
+  size: 32, 11
+  orig: 32, 13
+  offset: 0, 0
+  index: -1
+handleft
+  rotate: false
+  xy: 94, 497
+  size: 10, 11
+  orig: 10, 11
+  offset: 0, 0
+  index: -1
+shoulderback
+  rotate: false
+  xy: 182, 477
+  size: 25, 26
+  orig: 25, 26
   offset: 0, 0
   index: -1
 Chair
   rotate: false
   xy: 1, 1
-  size: 310, 377
-  orig: 315, 382
-  offset: 1, 3
+  size: 155, 189
+  orig: 158, 191
+  offset: 1, 1
   index: -1
 Cushions
   rotate: false
-  xy: 184, 572
-  size: 168, 108
-  orig: 168, 108
+  xy: 94, 285
+  size: 84, 54
+  orig: 84, 54
   offset: 0, 0
   index: -1
-images/shadow
+shadow
   rotate: false
-  xy: 184, 380
-  size: 231, 190
-  orig: 231, 190
+  xy: 94, 192
+  size: 117, 91
+  orig: 117, 91
   offset: 0, 0
   index: -1
-images/legleft
+legleft
   rotate: false
-  xy: 254, 840
-  size: 71, 99
-  orig: 71, 99
+  xy: 182, 425
+  size: 36, 50
+  orig: 36, 50
   offset: 0, 0
   index: -1
-images/robeback
+robeback
   rotate: false
-  xy: 477, 380
-  size: 128, 351
-  orig: 128, 351
+  xy: 240, 192
+  size: 64, 176
+  orig: 64, 176
   offset: 0, 0
   index: -1
-images/handRight
+handRight
   rotate: false
-  xy: 411, 901
-  size: 30, 59
-  orig: 30, 59
+  xy: 213, 249
+  size: 15, 30
+  orig: 15, 30
+  offset: 0, 0
+  index: -1
+Arm_R_U
+  rotate: false
+  xy: 113, 341
+  size: 17, 20
+  orig: 18, 20
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 60, 425
+  size: 50, 70
+  orig: 53, 70
+  offset: 3, -1
+  index: -1
+Head_B
+  rotate: false
+  xy: 171, 1
+  size: 11, 25
+  orig: 11, 25
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 112, 462
+  size: 68, 35
+  orig: 69, 37
+  offset: 0, 0
+  index: -1
+Arm_L_B
+  rotate: false
+  xy: 213, 63
+  size: 20, 30
+  orig: 21, 31
   offset: 0, 0
   index: -1
 Stick
   rotate: false
-  xy: 477, 733
-  size: 473, 87
-  orig: 474, 88
+  xy: 240, 370
+  size: 237, 44
+  orig: 237, 44
   offset: 1, 0
   index: -1
 Arm_L_U
   rotate: false
-  xy: 368, 901
-  size: 41, 54
-  orig: 41, 54
+  xy: 213, 191
+  size: 21, 27
+  orig: 21, 27
   offset: 0, 0
   index: -1
-images/legright
+legright
   rotate: false
-  xy: 327, 840
-  size: 39, 140
-  orig: 39, 140
+  xy: 220, 425
+  size: 15, 70
+  orig: 15, 70
   offset: 0, 0
   index: -1
-images/robefront
+robefront
   rotate: false
-  xy: 1, 380
-  size: 181, 341
-  orig: 181, 341
+  xy: 1, 192
+  size: 91, 171
+  orig: 91, 171
   offset: 0, 0
   index: -1
 Hand
   rotate: false
-  xy: 151, 997
-  size: 23, 16
-  orig: 23, 16
+  xy: 156, 351
+  size: 12, 8
+  orig: 12, 8
   offset: 0, 0
   index: -1
 Leg_R
   rotate: false
-  xy: 210, 912
-  size: 41, 57
-  orig: 46, 57
-  offset: 4, 0
+  xy: 213, 32
+  size: 21, 29
+  orig: 23, 29
+  offset: 2, 0
   index: -1
 Leg_L
   rotate: false
-  xy: 368, 840
-  size: 39, 59
-  orig: 43, 60
-  offset: 2, 0
+  xy: 213, 159
+  size: 20, 30
+  orig: 22, 30
+  offset: 1, -1
   index: -1
 Hand1
   rotate: false
-  xy: 320, 982
-  size: 23, 16
-  orig: 23, 16
+  xy: 156, 341
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+Arm_L_U1
+  rotate: false
+  xy: 213, 220
+  size: 21, 27
+  orig: 21, 27
   offset: 0, 0
   index: -1
 Leg_L1
   rotate: false
-  xy: 409, 840
-  size: 39, 59
-  orig: 43, 60
-  offset: 2, 0
+  xy: 213, 127
+  size: 20, 30
+  orig: 22, 30
+  offset: 1, -1
   index: -1
 Leg_R1
   rotate: false
-  xy: 253, 941
-  size: 41, 57
-  orig: 46, 57
-  offset: 4, 0
+  xy: 213, 1
+  size: 21, 29
+  orig: 23, 29
+  offset: 2, 0
   index: -1
