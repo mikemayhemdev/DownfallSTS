@@ -208,8 +208,10 @@ public class CollectorChar extends CustomPlayer {
 
 
     private static final float EYES_OFFSETX = 0 * Settings.scale;
-    private static final float EYES_DISTBETWEEN = 33F * Settings.scale;
-    private static final float EYES_OFFSETY = 315F * Settings.scale;
+    private static final float EYES_DISTBETWEEN = 30F * Settings.scale;
+    private static final float EYES_OFFSETY = 150F * Settings.scale;
+
+    //TODO: Properly size eyes to figure
 
     @Override
     public void update() {

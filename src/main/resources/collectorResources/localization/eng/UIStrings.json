@@ -25,7 +25,7 @@
   "collector:CombatCollectionPileButton": {
     "TEXT": [
       "Collection Pile",
-      "This contains collection cards blah blah",
+      "This contains the Collected cards you have yet to draw this combat.",
       "I don't have any Collected cards!"
     ]
   },
@@ -55,6 +55,12 @@
     "TEXT": [
       "Unplayable. NL ",
       "Retain. NL "
+    ]
+  },
+  "collector:SecondEnergyOrb": {
+    "TEXT": [
+      "Reserves",
+      "A special kind of Energy that persists across turns."
     ]
   }
 }

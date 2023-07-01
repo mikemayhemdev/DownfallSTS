@@ -11,10 +11,14 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.TipHelper;
+import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class DoubleEnergyOrb extends CustomEnergyOrb {
@@ -22,8 +26,8 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
     public static final int PRIMARY_ORB_W = 128;
     public static final float SECOND_ORB_IMG_SCALE = 0.75F * Settings.scale;
     public static final float PRIMARY_ORB_IMG_SCALE = 1.15F * Settings.scale;
-    public static final float X_OFFSET = 80f * Settings.scale;
-    public static final float Y_OFFSET = 40f * Settings.scale;
+    public static final float X_OFFSET = 100f * Settings.scale;
+    public static final float Y_OFFSET = 0f * Settings.scale;
     protected Texture secondBaseLayer;
     protected Texture[] secondEnergyLayers;
     protected Texture[] secondNoEnergyLayers;
@@ -85,9 +89,11 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
                 this.secondEnergyVfxColor.a = 0.0F;
             }
         }
+        hb.update();
     }
 
     public void renderOrb(SpriteBatch sb, boolean enabled, float current_x, float current_y) {
+        hb.move(current_x + X_OFFSET, current_y + Y_OFFSET);
         sb.setColor(Color.WHITE);
         int i;
 
@@ -115,6 +121,10 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
         }
 
         sb.draw(this.baseLayer, current_x - PRIMARY_ORB_W / 2F, current_y - PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W, PRIMARY_ORB_W, PRIMARY_ORB_IMG_SCALE, PRIMARY_ORB_IMG_SCALE, 0.0F, 0, 0, 128, 128, false, false);
+        hb.render(sb);
+        if (hb.hovered && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.isScreenUp) {
+            TipHelper.renderGenericTip(50.0F * Settings.scale, 380.0F * Settings.scale, uiStrings.TEXT[0], uiStrings.TEXT[1]);
+        }
     }
 
     @SpirePatch(clz = AbstractPlayer.class, method = SpirePatch.CLASS)
@@ -127,7 +137,8 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
     private static float secondEnergyVfxScale = Settings.scale;
     private static Color secondEnergyVfxColor = Color.WHITE.cpy();
 
-    private static Hitbox hb = new Hitbox(SECOND_ORB_W * Settings.scale, SECOND_ORB_W * Settings.scale);
+    private static Hitbox hb = new Hitbox(80 * Settings.scale, 80 * Settings.scale);
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("collector:SecondEnergyOrb");
 
     @SpirePatch(clz = EnergyPanel.class, method = "renderVfx")
     public static class FlashSecondOrbPatch {

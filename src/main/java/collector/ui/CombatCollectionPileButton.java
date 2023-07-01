@@ -22,8 +22,8 @@ import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import static collector.CollectorMod.makeID;
 
 public class CombatCollectionPileButton extends ClickableUIElement {
-    private static final float X_OFF = 200f * Settings.scale;
-    private static final float Y_OFF = 500f * Settings.scale;
+    private static final float X_OFF = 0f * Settings.scale;
+    private static final float Y_OFF = 150f * Settings.scale;
     private static final float HB_WIDTH = 128f;
     private static final float HB_HEIGHT = 128f;
     private static final float COUNT_X = 48.0F * Settings.scale;
@@ -76,7 +76,7 @@ public class CombatCollectionPileButton extends ClickableUIElement {
 
     @Override
     public void setX(float x) {
-        super.setX(x - X_OFF);
+        super.setX(x + X_OFF);
     }
 
     @Override

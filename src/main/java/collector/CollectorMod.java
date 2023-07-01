@@ -16,6 +16,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -234,7 +235,9 @@ public class CollectorMod implements
 
     @Override
     public void receiveStartGame() {
-        CollectorCollection.init();
+        if (!CardCrawlGame.loadingSave) {
+            CollectorCollection.init();
+        }
         combatCollectionPileButton = new CombatCollectionPileButton();
         NewReserves.resetReserves();
         if (AbstractDungeon.player instanceof CollectorChar) {
@@ -261,6 +264,9 @@ public class CollectorMod implements
                     System.out.println("Collector Loading Collection Card: " + s);
                     AbstractCard found = CardLibrary.getCopy(s);
                     CardModifierManager.addModifier(found, new CollectedCardMod());
+                    if (CollectorCollection.collection == null) {
+                        CollectorCollection.init();
+                    }
                     CollectorCollection.collection.addToBottom(found);
                 }
             }
