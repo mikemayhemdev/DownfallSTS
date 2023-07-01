@@ -24,7 +24,7 @@
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
   },
   "collector:Fireball": {
-    "NAME": "Fireball",
+    "NAME": "Flame Lash",
     "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Increase this card's damage by !M! this combat."
   },
   "collector:SpiritLeech": {
@@ -59,11 +59,11 @@
     "DESCRIPTION": "Deal !D! damage. NL If you played a Collected card this turn, gain !B! Block."
   },
   "collector:Greatflame": {
-    "NAME": "Greatflame",
+    "NAME": "Roast",
     "DESCRIPTION": "collector:Pyre. NL Deal !D! damage."
   },
   "collector:ShadowWrappings": {
-    "NAME": "Shadow Wrappings",
+    "NAME": "Condemn",
     "DESCRIPTION": "Apply !M! collector:Doom."
   },
   "collector:ActOfAggression": {
@@ -75,11 +75,11 @@
     "DESCRIPTION": "collector:Pyre. NL Draw !M! cards from the Collection."
   },
   "collector:Summoning": {
-    "NAME": "Summoning",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, add *Dark *Gaze into your hand."
+    "NAME": "Billow",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, add *Bellow into your hand."
   },
   "collector:DarkGaze": {
-    "NAME": "Dark Gaze",
+    "NAME": "Bellow",
     "DESCRIPTION": "Apply collector:Doom equal to unused Block last turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (Applies !M! collector:Doom.)"
@@ -136,9 +136,8 @@
     "DESCRIPTION": "collector:Pyre. NL Gain !M! collector:Reserve."
   },
   "collector:Invocation": {
-    "NAME": "Invocation",
-    "DESCRIPTION": "Next turn, gain 1 collector:Reserve. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain 1 collector:Reserve."
+    "NAME": "Misdirect",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain 1 collector:Reserve."
   },
   "collector:FleetingEmbers": {
     "NAME": "Fleeting Embers",
@@ -149,7 +148,7 @@
     "DESCRIPTION": "Gain !B! Block. NL Your next Attack this turn applies !M! collector:Doom."
   },
   "collector:Flamestrike": {
-    "NAME": "Flamestrike",
+    "NAME": "Wildfire",
     "DESCRIPTION": "Deal !D! damage. NL Exhaust all Unplayable cards in your hand and apply !M! collector:Doom for each."
   },
   "collector:AshesAndDust": {
@@ -197,7 +196,7 @@
     "DESCRIPTION": "Gain X Strength at the start of your next !M! turns."
   },
   "collector:VolatileKindling": {
-    "NAME": "Volatile Kindling",
+    "NAME": "Bramblespar Kindling",
     "DESCRIPTION": "Unplayable. NL If this card is Exhausted, add a *Strike into your hand and upgrade it !M! times.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
@@ -221,7 +220,7 @@
     "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL collector:Afflicted enemies lose 1 Strength. NL Exhaust."
   },
   "collector:CursedKindling": {
-    "NAME": "Cursed Kindling",
+    "NAME": "Rotwood Kindling",
     "DESCRIPTION": "Unplayable. NL If this card is Exhausted, apply !M! Vulnerable to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
@@ -232,7 +231,7 @@
     "DESCRIPTION": "collector:Pyre. NL Gain !B! Block."
   },
   "collector:EndlessKindling": {
-    "NAME": "Endless Kindling",
+    "NAME": "Oakbrim Kindling",
     "DESCRIPTION": "Unplayable. NL If this card is Exhausted, draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
@@ -247,7 +246,7 @@
     "DESCRIPTION": "Add the enemy's Collected card into your hand. NL It costs 0 this turn. NL Exhaust."
   },
   "collector:DarkstormBarrage": {
-    "NAME": "Darkstorm Barrage",
+    "NAME": "Seed of Doubt",
     "DESCRIPTION": "Apply !M! collector:Doom. NL Whenever a card is Exhausted, if this is in your hand, increase its collector:Doom by !clm2!."
   },
   "collector:StashAway": {
@@ -274,12 +273,12 @@
     ]
   },
   "collector:Butcher": {
-    "NAME": "Butcher",
+    "NAME": "Thorn Whip",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, repeat this twice.",
     "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL If the enemy is collector:Afflicted, repeat this twice."
   },
   "collector:Crackle": {
-    "NAME": "Crackle",
+    "NAME": "Pyromancy",
     "DESCRIPTION": "At the start of your turn, gain 1 collector:Reserve.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 collector:Reserve."
   },
@@ -329,7 +328,7 @@
     "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, play the top card of your draw pile."
   },
   "collector:DarkBindings": {
-    "NAME": "Dark Bindings",
+    "NAME": "Black Bindings",
     "DESCRIPTION": "Apply !M! Weak. NL Apply !clm2! collector:Doom."
   },
   "collector:RagingCall": {
@@ -337,7 +336,7 @@
     "DESCRIPTION": "Gain !M! Temporary_HP. NL At the end of your turn, if you have Temporary_HP, deal !clm2! damage to ALL enemies."
   },
   "collector:DarkGrasp": {
-    "NAME": "Dark Grasp",
+    "NAME": "Somber Shield",
     "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain a copy of the exhausted card."
   },
   "collector:AlwaysMore": {
@@ -349,7 +348,7 @@
     "DESCRIPTION": "Gain !M! Temporary_HP. NL Whenever you play an Attack, if you have Temporary_HP, deal !clm2! damage to a random enemy."
   },
   "collector:GrabBag": {
-    "NAME": "Grab Bag",
+    "NAME": "Dragon's Hoard",
     "DESCRIPTION": "Draw 3 Collected cards. NL Gain !M! collector:Reserve. NL Exhaust."
   },
   "collector:HoardersStrike": {

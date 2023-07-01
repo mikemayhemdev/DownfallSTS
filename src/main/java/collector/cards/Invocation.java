@@ -13,15 +13,16 @@ public class Invocation extends AbstractCollectorCard {
 
     public Invocation() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 2;
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         applyToSelf(new NextTurnReservePower(1));
     }
 
     public void upp() {
-        exhaust = false;
-        uDesc();
+        upgradeBlock(3);
     }
 }
