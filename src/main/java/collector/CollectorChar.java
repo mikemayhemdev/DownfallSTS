@@ -33,6 +33,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.GlowyFireEyesEffect;
+import com.megacrit.cardcrawl.vfx.StaffFireEffect;
 
 import java.util.ArrayList;
 
@@ -207,12 +208,6 @@ public class CollectorChar extends CustomPlayer {
     }
 
 
-    private static final float EYES_OFFSETX = 0 * Settings.scale;
-    private static final float EYES_DISTBETWEEN = 30F * Settings.scale;
-    private static final float EYES_OFFSETY = 150F * Settings.scale;
-
-    //TODO: Properly size eyes to figure
-
     @Override
     public void update() {
         super.update();
@@ -220,11 +215,11 @@ public class CollectorChar extends CustomPlayer {
             this.fireTimer -= Gdx.graphics.getDeltaTime();
             if (this.fireTimer < 0.0F) {
                 this.fireTimer = 0.07F;
-                AbstractDungeon.effectList.add(new GlowyFireEyesEffect(this.skeleton.getX() + EYES_OFFSETX, this.skeleton.getY() + EYES_OFFSETY));
-                AbstractDungeon.effectList.add(new GlowyFireEyesEffect(this.skeleton.getX() + EYES_OFFSETX + EYES_DISTBETWEEN, this.skeleton.getY() + EYES_OFFSETY));
-                //AbstractDungeon.effectList.add(new StaffFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() - 120.0F * Settings.scale, this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 390.0F * Settings.scale));
-            }
+                AbstractDungeon.effectList.add(new GlowyFireEyesEffect(this.skeleton.getX() + this.skeleton.findBone("lefteyefireslot").getX(), this.skeleton.getY() + this.skeleton.findBone("lefteyefireslot").getY() + 140.0F * Settings.scale));
+                AbstractDungeon.effectList.add(new GlowyFireEyesEffect(this.skeleton.getX() + this.skeleton.findBone("righteyefireslot").getX(), this.skeleton.getY() + this.skeleton.findBone("righteyefireslot").getY() + 140.0F * Settings.scale));
+                AbstractDungeon.effectList.add(new StaffFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() - 120.0F * Settings.scale, this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 390.0F * Settings.scale));   }
         }
+
     }
 
     public static class Enums {
