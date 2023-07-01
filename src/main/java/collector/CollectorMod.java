@@ -81,10 +81,10 @@ public class CollectorMod implements
 
         BaseMod.addColor(CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE,
                 COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR,
-                "collectorResources/images/512/bg_attack_colorless.png", "collectorResources/images/512/bg_skill_colorless.png",
-                "collectorResources/images/512/bg_power_colorless.png", CARD_ENERGY_S,
-                "collectorResources/images/1024/bg_attack_colorless.png", "collectorResources/images/1024/bg_skill_colorless.png",
-                "collectorResources/images/1024/bg_power_colorless.png", CARD_ENERGY_L, TEXT_ENERGY);
+                "collectorResources/images/512/bg_attack_collection.png", "collectorResources/images/512/bg_skill_collection.png",
+                "collectorResources/images/512/bg_power_collection.png", CARD_ENERGY_S,
+                "collectorResources/images/1024/bg_attack_collection.png", "collectorResources/images/1024/bg_skill_collection.png",
+                "collectorResources/images/1024/bg_power_collection.png", CARD_ENERGY_L, TEXT_ENERGY);
     }
 
 
