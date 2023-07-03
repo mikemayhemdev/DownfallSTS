@@ -6,6 +6,7 @@ import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
+import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.monsters.MushroomPurple;
 import charbosses.monsters.MushroomRed;
 import charbosses.monsters.MushroomWhite;
@@ -90,6 +91,7 @@ public class CollectorCollection {
         collectionPool.put(Transient.ID, TransientCard.ID);
         collectionPool.put(Reptomancer.ID, ReptomancerCard.ID);
         collectionPool.put(BronzeOrb.ID, BronzeOrbCard.ID);
+        collectionPool.put(BronzeOrbWhoReallyLikesDefectForSomeReason.ID, BronzeOrbCard.ID);
         collectionPool.put(TorchHead.ID, TorchHeadCard.ID);
         collectionPool.put(MushroomPurple.ID, MushroomCard.ID);
         collectionPool.put(MushroomWhite.ID, MushroomCard.ID);

@@ -48,9 +48,14 @@ public class ReservesPatch {
         @SpireInsertPatch(locator = Locator.class)
         public static void spendReserves(AbstractPlayer __instance, AbstractCard c) {
             if (NewReserves.reserveCount() > 0 && c.costForTurn > 0) {
-                int delta = c.costForTurn - EnergyPanel.getCurrentEnergy();
-                if (delta > 0)
-                    att(new GainReservesAction(-delta));
+                if (c.cardID.equals(FingerOfDeath.ID)) {
+                    att(new GainReservesAction(-c.costForTurn));
+                } else {
+                    int delta = c.costForTurn - EnergyPanel.getCurrentEnergy();
+                    if (delta > 0) {
+                        att(new GainReservesAction(-delta));
+                    }
+                }
             }
         }
 

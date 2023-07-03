@@ -257,7 +257,12 @@
   },
   "collector:ShadowDaggers": {
     "NAME": "Shadow Daggers",
-    "DESCRIPTION": "Deal !D! damage for each Collected card played this combat. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage for each Collected card played this combat. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits ",
+      " time.)",
+      " times.)"
+    ]
   },
   "collector:SomberShield": {
     "NAME": "Somber Shield",
