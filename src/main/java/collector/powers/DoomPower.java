@@ -2,11 +2,13 @@ package collector.powers;
 
 import collector.CollectorCollection;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.monsters.FleeingMerchant;
@@ -80,6 +82,7 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
                 @Override
                 public void update() {
                     isDone = true;
+                    CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
                     CollectorCollection.collect((AbstractMonster) owner);
                 }
             });

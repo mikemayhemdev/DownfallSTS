@@ -1,6 +1,8 @@
 package collector.cards;
 
+import basemod.helpers.CardModifierManager;
 import collector.CollectorCollection;
+import collector.cardmods.CollectedCardMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,6 +27,7 @@ public class DarkApotheosis extends AbstractCollectorCard {
         ArrayList<AbstractCard> toCheck = new ArrayList<>();
         toCheck.addAll(CollectorCollection.combatCollection.group);
         toCheck.addAll(Wiz.getAllCardsInCardGroups(true, false));
+        toCheck.removeIf(q -> !CardModifierManager.hasModifier(q, CollectedCardMod.ID));
         atb(new AbstractGameAction() {
             @Override
             public void update() {
