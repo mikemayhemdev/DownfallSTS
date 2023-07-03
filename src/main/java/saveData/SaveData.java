@@ -38,6 +38,7 @@ public class SaveData {
     public static final String MERCHANT_HEALTH = "MERCHANT_HEALTH";
     public static final String MERCHANT_STRENGTH = "MERCHANT_STRENGTH";
     public static final String MERCHANT_SOULS = "MERCHANT_SOULS";
+    public static final String MERCHANT_DOOM = "MERCHANT_DOOM";
     public static final String MERCHANT_DEAD = "MERCHANT_DEAD";
     public static final String MERCHANT_ESCAPED = "MERCHANT_ESCAPED";
     public static final String WING_GIVEN = "WING_GIVEN";
@@ -65,6 +66,7 @@ public class SaveData {
     private static int merchantHealth;
     private static int merchantStrength;
     private static int merchantSouls;
+    private static int merchantDoom;
 
     private static boolean merchantDead;
     private static boolean merchantEscaped;
@@ -104,6 +106,7 @@ public class SaveData {
             merchantHealth = FleeingMerchant.CURRENT_HP;
             merchantStrength = FleeingMerchant.CURRENT_STRENGTH;
             merchantSouls = FleeingMerchant.CURRENT_SOULS;
+            merchantDoom = FleeingMerchant.CURRENT_DOOM;
 
             merchantDead = FleeingMerchant.DEAD;
             merchantEscaped = FleeingMerchant.ESCAPED;
@@ -147,6 +150,7 @@ public class SaveData {
             params.put(MERCHANT_HEALTH, merchantHealth);
             params.put(MERCHANT_STRENGTH, merchantStrength);
             params.put(MERCHANT_SOULS, merchantSouls);
+            params.put(MERCHANT_DOOM, merchantDoom);
             params.put(MERCHANT_DEAD, merchantDead);
             params.put(MERCHANT_ESCAPED, merchantEscaped);
             params.put(WING_GIVEN, brokenWingGiven);
@@ -195,6 +199,7 @@ public class SaveData {
                 merchantHealth = data.MERCHANT_HEALTH;
                 merchantStrength = data.MERCHANT_STRENGTH;
                 merchantSouls = data.MERCHANT_SOULS;
+                merchantDoom = data.MERCHANT_DOOM;
 
                 merchantDead = data.MERCHANT_DEAD;
                 merchantEscaped = data.MERCHANT_ESCAPED;
@@ -253,6 +258,7 @@ public class SaveData {
             FleeingMerchant.CURRENT_HP = merchantHealth;
             FleeingMerchant.CURRENT_STRENGTH = merchantStrength;
             FleeingMerchant.CURRENT_SOULS = merchantSouls;
+            FleeingMerchant.CURRENT_DOOM = merchantDoom;
 
             System.out.println(merchantDead);
             FleeingMerchant.DEAD = merchantDead;

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.monsters.FleeingMerchant;
 
 import static collector.util.Wiz.atb;
 
@@ -27,6 +28,7 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
     @Override
     public void onInitialApplication() {
         checkInstakill();
+        checkMerchant();
     }
 
     @Override
@@ -42,12 +44,21 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
+        checkMerchant();
         checkInstakill();
     }
 
     private void checkInstakill() {
         if (this.owner.currentHealth <= this.amount && owner.currentHealth > 0) {
             instakill();
+        }
+    }
+
+    private void checkMerchant() {
+        if (owner.id.equals(FleeingMerchant.ID)) {
+            if (amount > FleeingMerchant.CURRENT_DOOM) {
+                FleeingMerchant.CURRENT_DOOM = amount;
+            }
         }
     }
 
