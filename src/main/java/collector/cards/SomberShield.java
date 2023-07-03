@@ -8,11 +8,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToSelfTop;
 
-public class DarkGrasp extends AbstractCollectorCard implements OnPyreCard {
-    public final static String ID = makeID(DarkGrasp.class.getSimpleName());
+public class SomberShield extends AbstractCollectorCard implements OnPyreCard {
+    public final static String ID = makeID(SomberShield.class.getSimpleName());
     // intellij stuff skill, self, common, , , 7, 3, , 
 
-    public DarkGrasp() {
+    public SomberShield() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 7;
         isPyre();

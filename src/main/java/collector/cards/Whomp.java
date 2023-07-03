@@ -8,11 +8,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.atb;
 
-public class SpiritTransfer extends AbstractCollectorCard {
-    public final static String ID = makeID(SpiritTransfer.class.getSimpleName());
+public class Whomp extends AbstractCollectorCard {
+    public final static String ID = makeID(Whomp.class.getSimpleName());
     // intellij stuff attack, enemy, rare, 25, 5, , , , 
 
-    public SpiritTransfer() {
+    public Whomp() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 12;
         baseMagicNumber = magicNumber = 12;

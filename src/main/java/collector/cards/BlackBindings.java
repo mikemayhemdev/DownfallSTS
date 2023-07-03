@@ -8,11 +8,11 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
 
-public class DarkBindings extends AbstractCollectorCard {
-    public final static String ID = makeID(DarkBindings.class.getSimpleName());
+public class BlackBindings extends AbstractCollectorCard {
+    public final static String ID = makeID(BlackBindings.class.getSimpleName());
     // intellij stuff skill, enemy, uncommon, , , , , 2, 1
 
-    public DarkBindings() {
+    public BlackBindings() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
         baseSecondMagic = secondMagic = 4;

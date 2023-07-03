@@ -7,19 +7,19 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToSelf;
 
-public class Summoning extends AbstractCollectorCard {
-    public final static String ID = makeID(Summoning.class.getSimpleName());
+public class Billow extends AbstractCollectorCard {
+    public final static String ID = makeID(Billow.class.getSimpleName());
     // intellij stuff skill, self, common, , , 12, , 1, 1
 
-    public Summoning() {
+    public Billow() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 12;
-        cardsToPreview = new DarkGaze();
+        cardsToPreview = new Bellow();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        applyToSelf(new AddCopyNextTurnPower(new DarkGaze()));
+        applyToSelf(new AddCopyNextTurnPower(new Bellow()));
     }
 
     public void upp() {

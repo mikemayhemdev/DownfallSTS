@@ -1,6 +1,6 @@
 package collector.patches;
 
-import collector.cards.DarkGaze;
+import collector.cards.Bellow;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.actions.GameActionManager;
@@ -15,7 +15,7 @@ public class DarkGazePatch {
 
         @SpireInsertPatch(locator = Locator.class)
         public static void Insert(GameActionManager __instance) {
-            DarkGaze.BLOCK_AMT_LOST = AbstractDungeon.player.currentBlock;
+            Bellow.BLOCK_AMT_LOST = AbstractDungeon.player.currentBlock;
         }
 
         private static class Locator extends SpireInsertLocator {

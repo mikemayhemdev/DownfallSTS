@@ -7,11 +7,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.isAfflicted;
 
-public class Butcher extends AbstractCollectorCard {
-    public final static String ID = makeID(Butcher.class.getSimpleName());
+public class ThornWhip extends AbstractCollectorCard {
+    public final static String ID = makeID(ThornWhip.class.getSimpleName());
     // intellij stuff attack, enemy, rare, 11, 1, , , , 
 
-    public Butcher() {
+    public ThornWhip() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 11;
     }

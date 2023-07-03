@@ -7,11 +7,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
 
-public class Kill extends AbstractCollectorCard {
-    public final static String ID = makeID(Kill.class.getSimpleName());
+public class FingerOfDeath extends AbstractCollectorCard {
+    public final static String ID = makeID(FingerOfDeath.class.getSimpleName());
     // intellij stuff attack, enemy, rare, 50, , , , , 
 
-    public Kill() {
+    public FingerOfDeath() {
         super(ID, 4, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 60;
     }
