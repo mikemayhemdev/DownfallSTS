@@ -1,17 +1,18 @@
 package collector.cards;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.atb;
+import static collector.util.Wiz.applyToEnemy;
+import static collector.util.Wiz.forAllMonstersLiving;
 
-public class EndlessKindling extends AbstractCollectorCard {
-    public final static String ID = makeID(EndlessKindling.class.getSimpleName());
+public class RotwoodKindling extends AbstractCollectorCard {
+    public final static String ID = makeID(RotwoodKindling.class.getSimpleName());
     // intellij stuff skill, none, uncommon, , , , , 3, 2
 
-    public EndlessKindling() {
+    public RotwoodKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 3;
     }
@@ -21,7 +22,7 @@ public class EndlessKindling extends AbstractCollectorCard {
 
     @Override
     public void triggerOnExhaust() {
-        atb(new DrawCardAction(magicNumber));
+        forAllMonstersLiving(q -> applyToEnemy(q, new VulnerablePower(q, magicNumber, false)));
     }
 
     @Override
@@ -31,6 +32,6 @@ public class EndlessKindling extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

@@ -1,15 +1,12 @@
 package collector.patches;
 
 import collector.actions.GainReservesAction;
-import collector.cards.Kill;
+import collector.cards.FingerOfDeath;
 import collector.util.NewReserves;
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import javassist.CtBehavior;
 
@@ -22,7 +19,7 @@ public class ReservesPatch {
         public static SpireReturn<?> bePlayable(AbstractCard __instance) {
             int found = NewReserves.reserveCount();
             // Kill Special Case
-            if (__instance.cardID.equals(Kill.ID)) {
+            if (__instance.cardID.equals(FingerOfDeath.ID)) {
                 if (found >= __instance.costForTurn) {
                     return SpireReturn.Return(true);
                 }

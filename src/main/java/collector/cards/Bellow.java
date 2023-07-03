@@ -7,13 +7,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
 
-public class DarkGaze extends AbstractCollectorCard {
-    public final static String ID = makeID(DarkGaze.class.getSimpleName());
+public class Bellow extends AbstractCollectorCard {
+    public final static String ID = makeID(Bellow.class.getSimpleName());
     public static int BLOCK_AMT_LOST = 0;
     // intellij stuff attack, enemy, special, , , , , , 
 
-    public DarkGaze() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+    public Bellow() {
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         isEthereal = true;
         exhaust = true;
     }
