@@ -7,29 +7,17 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "collector:Contemplate": {
-    "NAME": "Contemplate",
-    "DESCRIPTION": "Draw a card from the Collection.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 cards from your Collection to draw.",
-    "EXTENDED_DESCRIPTION": [
-      " to draw."
-    ]
-  },
   "collector:SoulSnare": {
     "NAME": "Soul Snare",
     "DESCRIPTION": "Apply !M! collector:Doom. NL Exhaust."
   },
-  "collector:LuckyWick": {
-    "NAME": "Lucky Wick",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
-  },
-  "collector:Fireball": {
+  "collector:FlameLash": {
     "NAME": "Flame Lash",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Increase this card's damage by !M! this combat."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the Exhausted card's damage to this."
   },
   "collector:SpiritLeech": {
     "NAME": "Spirit Leech",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL If the enemy is collector:Afflicted, deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, draw !M! cards."
   },
   "collector:ScorchingRay": {
     "NAME": "Scorching Ray",
@@ -50,9 +38,9 @@
     "NAME": "Spark Strike",
     "DESCRIPTION": "Deal !D! damage. NL Add 1 *Ember into your hand."
   },
-  "collector:Agonize": {
+  "collector:InflictAgony": {
     "NAME": "Inflict Agony",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is not collector:Afflicted, apply 1 Weak and Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is not collector:Afflicted, apply 2 Weak and Vulnerable."
   },
   "collector:GreenGaze": {
     "NAME": "Green Gaze",
@@ -62,7 +50,7 @@
     "NAME": "Roast",
     "DESCRIPTION": "collector:Pyre. NL Deal !D! damage."
   },
-  "collector:ShadowWrappings": {
+  "collector:Condemn": {
     "NAME": "Condemn",
     "DESCRIPTION": "Apply !M! collector:Doom."
   },
@@ -72,7 +60,7 @@
   },
   "collector:FairTrade": {
     "NAME": "Fair Trade",
-    "DESCRIPTION": "collector:Pyre. NL Draw !M! cards from the Collection."
+    "DESCRIPTION": "collector:Pyre. NL Draw !M! cards from your Collected pile."
   },
   "collector:Summoning": {
     "NAME": "Billow",
@@ -87,9 +75,9 @@
   },
   "collector:Forgery": {
     "NAME": "Forgery",
-    "DESCRIPTION": "Deal !D! damage. NL Choose a card in your hand. NL Add an Ethereal copy into your hand.",
+    "DESCRIPTION": "Deal !D! damage. NL Choose 1 of !M! cards from your Collected pile to add into your hand.",
     "EXTENDED_DESCRIPTION": [
-      " to create an Ethereal copy of."
+      "to add into your hand."
     ]
   },
   "collector:DarkwoodKindling": {
@@ -103,9 +91,9 @@
     "NAME": "Hoard",
     "DESCRIPTION": "Draw !M! cards. NL This turn, they Retain and are Unplayable."
   },
-  "collector:Coerce": {
-    "NAME": "Coerce",
-    "DESCRIPTION": "collector:Pyre. NL Apply !M! collector:Doom to ALL enemies."
+  "collector:Invigorate": {
+    "NAME": "Invigorate",
+    "DESCRIPTION": "Now and next turn, NL gain !M! Vigor."
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer",
@@ -113,7 +101,7 @@
   },
   "collector:IllTakeThat": {
     "NAME": "I'll Take That",
-    "DESCRIPTION": "Deal !D! damage. NL Steal the enemy's Block."
+    "DESCRIPTION": "Steal up to !M! of the enemy's Block. NL Deal !D! damage."
   },
   "collector:Prayer": {
     "NAME": "Prayer",
@@ -133,9 +121,9 @@
   },
   "collector:FuelTheFire": {
     "NAME": "Fuel the Fire",
-    "DESCRIPTION": "collector:Pyre. NL Gain !M! collector:Reserve."
+    "DESCRIPTION": "collector:Pyre. NL Next turn, gain !M! collector:Reserve."
   },
-  "collector:Invocation": {
+  "collector:Misdirect": {
     "NAME": "Misdirect",
     "DESCRIPTION": "Gain !B! Block. NL Next turn, gain 1 collector:Reserve."
   },
@@ -147,21 +135,21 @@
     "NAME": "Arrogance",
     "DESCRIPTION": "Gain !B! Block. NL Your next Attack this turn applies !M! collector:Doom."
   },
-  "collector:Flamestrike": {
+  "collector:Wildfire": {
     "NAME": "Wildfire",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust all Unplayable cards in your hand and apply !M! collector:Doom for each."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust all Unplayable cards in your hand and gain !B! Block for each."
   },
   "collector:AshesAndDust": {
     "NAME": "Ashes and Dust",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL If you've Exhausted a card this turn, gain !M! collector:Reserve."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL If X is 5 or more, hits two additional times."
   },
   "collector:SapStrength": {
     "NAME": "Sap Strength",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Strength, steal 1 Strength."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Strength, steal up to 2 Strength."
   },
   "collector:ShadowDaggers": {
     "NAME": "Shadow Daggers",
-    "DESCRIPTION": "Deal !D! damage for each Collected card played this combat."
+    "DESCRIPTION": "Deal !D! damage for each Collected card played this combat. NL Exhaust."
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
@@ -169,7 +157,7 @@
   },
   "collector:WhirlingFlame": {
     "NAME": "Whirling Flame",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage to ALL enemies. NL Draw !M! cards."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage to ALL enemies. NL Put a card from your discard pile on top of your draw pile."
   },
   "collector:Heatwave": {
     "NAME": "Heat Wave",
@@ -195,7 +183,7 @@
     "NAME": "Empower",
     "DESCRIPTION": "Gain X Strength at the start of your next !M! turns."
   },
-  "collector:VolatileKindling": {
+  "collector:BramblesparKindling": {
     "NAME": "Bramblespar Kindling",
     "DESCRIPTION": "Unplayable. NL If this card is Exhausted, add a *Strike into your hand and upgrade it !M! times.",
     "EXTENDED_DESCRIPTION": [
@@ -245,7 +233,7 @@
     "NAME": "Brain Drain",
     "DESCRIPTION": "Add the enemy's Collected card into your hand. NL It costs 0 this turn. NL Exhaust."
   },
-  "collector:DarkstormBarrage": {
+  "collector:SeedOfDoubt": {
     "NAME": "Seed of Doubt",
     "DESCRIPTION": "Apply !M! collector:Doom. NL Whenever a card is Exhausted, if this is in your hand, increase its collector:Doom by !clm2!."
   },
@@ -255,15 +243,15 @@
   },
   "collector:CoffinNail": {
     "NAME": "Coffin Nail",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is Exhausted, return it to your hand with !M! more damage."
+    "DESCRIPTION": "Deal !D! damage. NL If this card is Exhausted, return it to your hand next turn with !M! more damage."
   },
   "collector:Kill": {
     "NAME": "Power Word: Kill",
-    "DESCRIPTION": "Only collector:Reserves may be spent on this. NL Deal !D! damage."
+    "DESCRIPTION": "Only collector:Reserves may be spent on this. NL Apply !M! collector:Doom."
   },
-  "collector:MegaWallop": {
-    "NAME": "MegaWallop",
-    "DESCRIPTION": "Deal !D! damage. NL Gain Temporary_HP equal to unblocked damage dealt. NL Exhaust."
+  "collector:SpiritTransfer": {
+    "NAME": "Spirit Transfer",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Temporary_HP. NL Exhaust."
   },
   "collector:TorchlightTackle": {
     "NAME": "Torchlight Tackle",
@@ -298,11 +286,11 @@
   },
   "collector:YouAreMine": {
     "NAME": "You Are Mine!",
-    "DESCRIPTION": "Steal the target's Block and Artifact. NL Apply !M! Weak, Vulnerable, and collector:Doom."
+    "DESCRIPTION": "Apply !M! Weak. NL Apply !M! Vulnerable. NL Apply !clm2! collector:Doom."
   },
   "collector:DarkApotheosis": {
     "NAME": "Dark Apotheosis",
-    "DESCRIPTION": "Upgrade the Collection for the rest of combat. NL Exhaust."
+    "DESCRIPTION": "Upgrade the Collected pile for the rest of combat. NL Exhaust."
   },
   "collector:Goodbye": {
     "NAME": "Goodbye",
@@ -311,14 +299,14 @@
   },
   "collector:SunbloomKindling": {
     "NAME": "Sunbloom Kindling",
-    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, gain !M! Strength and add !M! *Embers into your hand.",
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, gain !M! Strength and add 2 *Embers into your hand.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
   },
   "collector:ReceiveTribute": {
     "NAME": "Receive Tribute",
-    "DESCRIPTION": "collector:Pyre. NL Choose 1 of !M! Boss cards and add it into your hand. NL It gains Retain. NL Exhaust.",
+    "DESCRIPTION": "collector:Pyre. NL Choose 1 of !M! Boss cards and add it into your hand. It gains Retain. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to add into your hand."
     ]
@@ -341,19 +329,19 @@
   },
   "collector:AlwaysMore": {
     "NAME": "Always More",
-    "DESCRIPTION": "Draw 1 additional Collected card each turn."
+    "DESCRIPTION": "collector:Pyre. NL Gain !M! Gold."
   },
   "collector:MastersCall": {
     "NAME": "Master's Call",
     "DESCRIPTION": "Gain !M! Temporary_HP. NL Whenever you play an Attack, if you have Temporary_HP, deal !clm2! damage to a random enemy."
   },
-  "collector:GrabBag": {
-    "NAME": "Dragon's Hoard",
+  "collector:DragonsTrove": {
+    "NAME": "Dragon's Trove",
     "DESCRIPTION": "Draw 3 Collected cards. NL Gain !M! collector:Reserve. NL Exhaust."
   },
   "collector:HoardersStrike": {
     "NAME": "Hoarder's Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Gain collector:Reserve equal to its cost."
+    "DESCRIPTION": "Deal !D! damage. NL Play the top card of your Collected pile."
   },
   "collector:FiendFire": {
     "NAME": "Fiend Fire",
@@ -369,7 +357,10 @@
   },
   "collector:AcidSlimeCard": {
     "NAME": "Acid Slime",
-    "DESCRIPTION": "Choose a card in your hand. NL Add a copy of it into your hand."
+    "DESCRIPTION": "Choose a card in your hand. NL Add a copy of it into your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "to duplicate."
+    ]
   },
   "collector:SpikeSlimeCard": {
     "NAME": "Spike Slime",

@@ -12,7 +12,7 @@ public class DarkwoodKindling extends AbstractCollectorCard {
     // intellij stuff skill, none, common, , , , , 10, 4
 
     public DarkwoodKindling() {
-        super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
+        super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 11;
     }
 

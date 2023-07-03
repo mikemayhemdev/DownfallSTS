@@ -16,18 +16,26 @@ public class IllTakeThat extends AbstractCollectorCard {
     public IllTakeThat() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 10;
+        baseMagicNumber = magicNumber = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         if (m.currentBlock > 0) {
-            int held = m.currentBlock;
-            atb(new RemoveAllBlockAction(m, p)); //TODO: Change to up to 10(14)
-            atb(new GainBlockAction(p, held));
+            int toSteal = Math.min(magicNumber, m.currentBlock);
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    m.loseBlock(toSteal);
+                }
+            });
+            atb(new GainBlockAction(p, toSteal));
         }
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
+        upgradeMagicNumber(4);
     }
 }

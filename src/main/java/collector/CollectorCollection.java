@@ -15,6 +15,7 @@ import collector.util.CollectibleCardReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.blue.CoreSurge;
+import com.megacrit.cardcrawl.cards.colorless.TheBomb;
 import com.megacrit.cardcrawl.cards.green.DieDieDie;
 import com.megacrit.cardcrawl.cards.purple.Scrawl;
 import com.megacrit.cardcrawl.cards.red.LimitBreak;
@@ -49,6 +50,7 @@ public class CollectorCollection {
         collectionPool.put(GremlinTsundere.ID, ShieldGremlinCard.ID);
         collectionPool.put(GremlinWizard.ID, GremlinWizardCard.ID);
         collectionPool.put(GremlinFat.ID, FatGremlinCard.ID);
+        collectionPool.put(GremlinWarrior.ID, MadGremlinCard.ID);
         collectionPool.put(JawWorm.ID, JawWormCard.ID);
         collectionPool.put(Looter.ID, ThievesCard.ID);
         collectionPool.put(LooterAlt.ID, ThievesCard.ID);
@@ -67,6 +69,7 @@ public class CollectorCollection {
         collectionPool.put(OrbWalker.ID, OrbWalkerCard.ID);
         collectionPool.put(Spiker.ID, SpikerCard.ID);
         collectionPool.put(Repulsor.ID, RepulsorCard.ID);
+        collectionPool.put(Exploder.ID, TheBomb.ID);
         collectionPool.put(Maw.ID, MawCard.ID);
         collectionPool.put(WrithingMass.ID, WrithingMassCard.ID);
         collectionPool.put(SpireGrowth.ID, SpireGrowthCard.ID);

@@ -17,17 +17,17 @@ public class AshesAndDust extends AbstractCollectorCard {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 5;
         isMultiDamage = true;
-        baseMagicNumber = magicNumber = 1;
     }
 
     public static boolean exhaustedThisTurn = false;
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
-            if (exhaustedThisTurn) {
-                addToTop(new GainReservesAction(magicNumber));
+            int toDo = effect;
+            if (effect >= 5) {
+                toDo += 2;
             }
-            for (int i = 0; i < effect; i++) {
+            for (int i = 0; i < toDo; i++) {
                 allDmgTop(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
             }
             return true;
@@ -35,6 +35,6 @@ public class AshesAndDust extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeDamage(2);
     }
 }

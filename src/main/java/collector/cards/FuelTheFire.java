@@ -1,13 +1,11 @@
 package collector.cards;
 
-import collector.actions.GainReservesAction;
-import collector.util.NewReserves;
+import collector.powers.NextTurnReservePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToSelf;
-import static collector.util.Wiz.atb;
 
 public class FuelTheFire extends AbstractCollectorCard {
     public final static String ID = makeID(FuelTheFire.class.getSimpleName());
@@ -20,7 +18,7 @@ public class FuelTheFire extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new GainReservesAction(magicNumber));
+        applyToSelf(new NextTurnReservePower(magicNumber));
     }
 
     public void upp() {

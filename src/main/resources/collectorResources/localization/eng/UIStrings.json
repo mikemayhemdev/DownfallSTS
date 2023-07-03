@@ -25,7 +25,7 @@
   "collector:CombatCollectionPileButton": {
     "TEXT": [
       "Collection Pile",
-      "This contains the Collected cards you have yet to draw this combat.",
+      "This contains the Collected cards you have yet to draw this combat. You draw one card from this at the start of each turn.",
       "I don't have any Collected cards!"
     ]
   },

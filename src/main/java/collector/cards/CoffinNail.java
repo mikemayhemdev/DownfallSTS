@@ -2,6 +2,7 @@ package collector.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
+import com.megacrit.cardcrawl.actions.utility.ExhaustToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -26,13 +27,7 @@ public class CoffinNail extends AbstractCollectorCard {
     @Override
     public void triggerOnExhaust() {
         atb(new ModifyDamageAction(this.uuid, this.magicNumber));
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                AbstractDungeon.player.exhaustPile.moveToHand(CoffinNail.this);
-            }
-        });
+        atb(new ExhaustToHandAction(this));
     }
 
     public void upp() {

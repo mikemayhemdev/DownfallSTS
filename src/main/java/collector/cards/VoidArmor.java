@@ -23,6 +23,6 @@ public class VoidArmor extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(4);
     }
 }

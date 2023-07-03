@@ -1,12 +1,11 @@
 package collector.cards;
 
-import collector.cards.AbstractCollectorCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.*;
+import static collector.util.Wiz.applyToEnemy;
 
 public class Kill extends AbstractCollectorCard {
     public final static String ID = makeID(Kill.class.getSimpleName());
@@ -14,11 +13,11 @@ public class Kill extends AbstractCollectorCard {
 
     public Kill() {
         super(ID, 4, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 50;
+        baseMagicNumber = magicNumber = 60;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        applyToEnemy(m, new DoomPower(m, magicNumber));
     }
 
     public void upp() {

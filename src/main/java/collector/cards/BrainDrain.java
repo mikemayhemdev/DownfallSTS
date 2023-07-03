@@ -22,6 +22,8 @@ public class BrainDrain extends AbstractCollectorCard {
         makeInHand(q);
     }
 
+    //TODO: Preview system
+
     public void upp() {
         upgradeBaseCost(0);
     }

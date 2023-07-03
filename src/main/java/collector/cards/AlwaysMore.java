@@ -1,11 +1,11 @@
 package collector.cards;
 
-import collector.powers.AlwaysMorePower;
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.applyToSelf;
+import static collector.util.Wiz.atb;
 
 public class AlwaysMore extends AbstractCollectorCard {
     public final static String ID = makeID(AlwaysMore.class.getSimpleName());
@@ -13,13 +13,15 @@ public class AlwaysMore extends AbstractCollectorCard {
 
     public AlwaysMore() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 12;
+        isPyre();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new AlwaysMorePower());
+        atb(new GainGoldAction(magicNumber));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(4);
     }
 }

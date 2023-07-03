@@ -16,7 +16,7 @@ public class AcidSlimeCard extends AbstractCollectibleCard {
     // intellij stuff skill, enemy, common, , , , , , 
 
     public AcidSlimeCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

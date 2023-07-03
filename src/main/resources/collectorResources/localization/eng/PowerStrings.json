@@ -208,5 +208,12 @@
       "While you have #yTemporary #yHP, gain #b",
       " more #yBlock from cards."
     ]
+  },
+  "collector:NextTurnVigorPower": {
+    "NAME": "Vigor Next Turn",
+    "DESCRIPTION": [
+      "At the start of your next turn, gain #b",
+      " #yVigor."
+    ]
   }
 }

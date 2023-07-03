@@ -20,26 +20,18 @@ public class YouAreMine extends AbstractCollectorCard {
     public YouAreMine() {
         super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 4;
+        baseSecondMagic = secondMagic = 12;
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m.currentBlock > 0) {
-            int q = m.currentBlock;
-            atb(new RemoveAllBlockAction(m, p));
-            atb(new GainBlockAction(p, q));
-        }
-        if (m.hasPower(ArtifactPower.POWER_ID)) {
-            int q2 = m.getPower(ArtifactPower.POWER_ID).amount;
-            atb(new RemoveSpecificPowerAction(m, p, ArtifactPower.POWER_ID));
-            applyToSelf(new ArtifactPower(p, q2));
-        }
         applyToEnemy(m, new WeakPower(m, magicNumber, false));
         applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
-        applyToEnemy(m, new DoomPower(m, magicNumber));
+        applyToEnemy(m, new DoomPower(m, secondMagic));
     }
 
     public void upp() {
         upgradeMagicNumber(2);
+        upgradeSecondMagic(6);
     }
 }

@@ -1,16 +1,17 @@
 package collector.cards;
 
-import basemod.cardmods.EtherealMod;
-import basemod.helpers.CardModifierManager;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import collector.CollectorCollection;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.SelectCardsCenteredAction;
+
+import java.util.ArrayList;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.atb;
 import static collector.util.Wiz.att;
 
 public class Forgery extends AbstractCollectorCard {
@@ -20,18 +21,26 @@ public class Forgery extends AbstractCollectorCard {
     public Forgery() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
-            AbstractCard tar = cards.get(0).makeStatEquivalentCopy();
-            CardModifierManager.addModifier(tar, new EtherealMod());
-            att(new MakeTempCardInHandAction(tar));
-        }));
+        if (!CollectorCollection.combatCollection.isEmpty()) {
+            ArrayList<AbstractCard> possibilities = new ArrayList<>();
+            ArrayList<AbstractCard> toShow = new ArrayList<>();
+            possibilities.addAll(CollectorCollection.combatCollection.group);
+            for (int i = 0; i < Math.min(CollectorCollection.combatCollection.size(), magicNumber); i++) {
+                toShow.add(possibilities.remove(AbstractDungeon.cardRandomRng.random(possibilities.size() - 1)));
+            }
+            addToBot(new SelectCardsCenteredAction(toShow, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
+                att(new MakeTempCardInHandAction(cards.get(0), true));
+            }));
+        }
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 }

@@ -31,7 +31,7 @@ public class SunbloomKindling extends AbstractCollectorCard {
     @Override
     public void triggerOnExhaust() {
         applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
-        makeInHand(new Ember(), magicNumber);
+        makeInHand(new Ember(), 2);
     }
 
     public void upp() {

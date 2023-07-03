@@ -5,6 +5,9 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.util.Wiz;
+
+import java.util.ArrayList;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.atb;
@@ -14,16 +17,19 @@ public class DarkApotheosis extends AbstractCollectorCard {
     // intellij stuff skill, self, rare, , , , , , 
 
     public DarkApotheosis() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        ArrayList<AbstractCard> toCheck = new ArrayList<>();
+        toCheck.addAll(CollectorCollection.combatCollection.group);
+        toCheck.addAll(Wiz.getAllCardsInCardGroups(true, false));
         atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                for (AbstractCard q : CollectorCollection.combatCollection.group) {
+                for (AbstractCard q : toCheck) {
                     q.upgrade();
                 }
             }
@@ -31,6 +37,6 @@ public class DarkApotheosis extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }
