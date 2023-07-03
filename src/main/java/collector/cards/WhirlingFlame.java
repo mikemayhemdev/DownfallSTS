@@ -18,7 +18,6 @@ public class WhirlingFlame extends AbstractCollectorCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 12;
         baseMagicNumber = magicNumber = 2;
-        isPyre();
         isMultiDamage = true;
     }
 

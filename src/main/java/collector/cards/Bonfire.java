@@ -1,11 +1,11 @@
 package collector.cards;
 
-import collector.cards.AbstractCollectorCard;
+import collector.powers.NextTurnReservePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.*;
+import static collector.util.Wiz.applyToSelf;
 
 public class Bonfire extends AbstractCollectorCard {
     public final static String ID = makeID(Bonfire.class.getSimpleName());
@@ -13,12 +13,13 @@ public class Bonfire extends AbstractCollectorCard {
 
     public Bonfire() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 20;
+        baseBlock = 16;
         isPyre();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+        applyToSelf(new NextTurnReservePower(1));
     }
 
     public void upp() {

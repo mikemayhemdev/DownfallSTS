@@ -18,6 +18,7 @@ public class SapStrength extends AbstractCollectorCard {
     public SapStrength() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 27;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,7 +26,7 @@ public class SapStrength extends AbstractCollectorCard {
         AbstractPower enemyStr = m.getPower(StrengthPower.POWER_ID);
         if (enemyStr != null) {
             if (enemyStr.amount > 0) {
-                int toSteal = Math.min(2, enemyStr.amount);
+                int toSteal = Math.min(magicNumber, enemyStr.amount);
                 atb(new ReducePowerAction(m, p, StrengthPower.POWER_ID, toSteal));
                 applyToSelf(new StrengthPower(p, toSteal));
             }
@@ -33,6 +34,7 @@ public class SapStrength extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(8);
+        upgradeDamage(6);
+        upgradeMagicNumber(1);
     }
 }
