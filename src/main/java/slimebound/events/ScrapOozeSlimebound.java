@@ -50,7 +50,7 @@ public class ScrapOozeSlimebound extends AbstractImageEvent {
             if (r.tier == AbstractRelic.RelicTier.COMMON) {
                 playerCommonRelics.add(r);
             }
-            if (r.tier == AbstractRelic.RelicTier.COMMON) {
+            if (r.tier == AbstractRelic.RelicTier.UNCOMMON) {
                 playerUncommonRelics.add(r);
             }
         }
