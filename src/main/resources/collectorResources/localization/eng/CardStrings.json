@@ -150,7 +150,7 @@
   },
   "collector:GreaterHurting": {
     "NAME": "Greater Hurting",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greatest *Hurting."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greatest *Hurting.",
     "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greatest *Hurting+."
   },
   "collector:GreatestHurting": {
@@ -175,7 +175,7 @@
   },
   "collector:Hurting": {
     "NAME": "Hurting",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greater *Hurting."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greater *Hurting.",
     "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greater *Hurting+."
   },
   "collector:IllTakeThat": {
