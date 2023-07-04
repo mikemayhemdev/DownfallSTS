@@ -1,7 +1,7 @@
 {
   "collector:ActOfAggression": {
     "NAME": "Act of Aggression",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 易伤  。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 易伤 。"
   },
   "collector:AlwaysMore": {
     "NAME": "多多益善Always More",
@@ -9,255 +9,255 @@
   },
   "collector:Arrogance": {
     "NAME": "Arrogance",
-    "DESCRIPTION": "Gain !B! Block. NL Your next Attack this turn applies !M! collector:Doom."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张攻击会给予 !M! 层 collector:魂陷 。"
   },
   "collector:AshesAndDust": {
     "NAME": "Ashes and Dust",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL If X is 5 or more, hits two additional times."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害X次。 NL 若X大于4， NL 再造成2次。"
   },
   "collector:BindingCall": {
     "NAME": "Binding Call",
-    "DESCRIPTION": "Gain !M! Temporary_HP. Whenever you lose all your Temporary_HP, apply !clm2! collector:Doom to ALL enemies."
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 临时生命 耗尽时， 给予所有敌人 !clm2! 层 collector:魂陷 。"
   },
   "collector:Billow": {
     "NAME": "Billow",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, add *Bellow into your hand."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得一张 *Bellow 。"
   },
   "collector:Bellow": {
     "NAME": "Bellow",
-    "DESCRIPTION": "Apply collector:Doom equal to unused Block last turn.",
+    "DESCRIPTION": "给予你上回合余下的 格挡 层 collector:魂陷 。",
     "EXTENDED_DESCRIPTION": [
-      " NL ( Applies !M! collector:Doom )"
+      " NL (给予 !M! 层 collector:魂陷 )"
     ]
   },
   "collector:BlackBindings": {
     "NAME": "Black Bindings",
-    "DESCRIPTION": "Apply !M! Weak. NL Apply !clm2! collector:Doom."
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !clm2! 层 collector:魂陷 。"
   },
   "collector:Bonfire": {
-    "NAME": "Bonfire",
-    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain 1 collector:Reserve."
+    "NAME": "篝火Bonfire",
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得1 collector:储能 。"
   },
   "collector:BrainDrain": {
-    "NAME": "Brain Drain",
-    "DESCRIPTION": "Add the enemy's Collected card into your hand. NL It costs 0 this turn. NL Exhaust."
+    "NAME": "意识窥视Brain Drain",
+    "DESCRIPTION": "获得目标的 藏品 牌， NL 本回合其单次耗能为0。 NL 消耗 。"
   },
   "collector:BramblesparKindling": {
     "NAME": "Bramblespar Kindling",
-    "DESCRIPTION": "Unplayable. NL When Exhausted, add a *Strike into your hand and upgrade it !M! times.",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得一张打击+ !M! 。",
     "EXTENDED_DESCRIPTION": [
-      "I must light this kindling to use it."
+      "我必须点燃这份燃材才能发挥它的作用。"
     ]
   },
   "collector:CantTouchThis": {
-    "NAME": "Can't Touch This",
-    "DESCRIPTION": "Gain !M! Dexterity. NL When you fully block an attack, apply !clm2! collector:Doom to the attacker."
+    "NAME": "?不能触Can't Touch This",
+    "DESCRIPTION": "获得 !M! 点 敏捷 。 NL 防住攻击时， NL 给予对方 !clm2! 层 collector:魂陷 。"
   },
   "collector:CoffinNail": {
-    "NAME": "Coffin Nail",
-    "DESCRIPTION": "Deal !D! damage. NL When Exhausted, return it to your hand next turn with !M! more damage."
+    "NAME": "棺材钉Coffin Nail",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本牌被 消耗 时， NL 下回合返回手牌， NL 且伤害加 !M! 。"
   },
   "collector:Condemn": {
     "NAME": "Condemn",
-    "DESCRIPTION": "Apply !M! collector:Doom."
+    "DESCRIPTION": "给予 !M! 层 collector:魂陷 。"
   },
   "collector:CursedWail": {
     "NAME": "Cursed Wail",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL collector:Afflicted enemies lose 1 Strength. NL Exhaust."
+    "DESCRIPTION": "被 collector:折磨 的敌人失去1点 力量 。 NL 所有敌人本回合失去 !M! 层 力量 。 NL 消耗 。"
   },
   "collector:DarkApotheosis": {
-    "NAME": "Dark Apotheosis",
-    "DESCRIPTION": "Upgrade the Collected pile for the rest of combat. NL Exhaust."
+    "NAME": "黑化Dark Apotheosis",
+    "DESCRIPTION": "升级 *收藏堆 的牌。 NL 消耗 。"
   },
   "collector:DarkLordForm": {
-    "NAME": "Dark Lord Form",
-    "DESCRIPTION": "Ethereal. NL Your Collected cards are played twice.",
-    "UPGRADE_DESCRIPTION": "Your Collected cards are played twice."
+    "NAME": "暗主形态",
+    "DESCRIPTION": "虚无 。 NL 藏品牌额外打出一次。",
+    "UPGRADE_DESCRIPTION": "藏品牌额外打出一次。"
   },
   "collector:DarkwoodKindling": {
     "NAME": "Darkwood Kindling",
-    "DESCRIPTION": "Unplayable. NL When Exhausted, ALL enemies lose !M! HP.",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 所有敌人失去 !M! 点生命。",
     "EXTENDED_DESCRIPTION": [
-      "I must light this kindling to use it."
+      "我必须点燃这份燃材才能发挥它的作用。"
     ]
   },
   "collector:Defend": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "collector:DoubleTrouble": {
-    "NAME": "Double Trouble",
-    "DESCRIPTION": "Gain !B! Block. NL Your next Collected card this turn is played twice."
+    "NAME": "祸不单行Double Trouble",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张 collector:藏品 牌额外打出一次。"
   },
   "collector:DragonsTrove": {
-    "NAME": "Dragon's Trove",
-    "DESCRIPTION": "Draw 3 Collected cards. NL Gain !M! collector:Reserve. NL Exhaust."
+    "NAME": "龙之私藏Dragon's Trove",
+    "DESCRIPTION": "抽3张 collector:藏品 牌。 NL 获得 !M! collector:储能 。 NL 消耗 。"
   },
   "collector:Ember": {
-    "NAME": "Ember",
-    "DESCRIPTION": "Unplayable. NL Retain. NL When Exhausted, gain !M! Strength.",
+    "NAME": "余烬Ember",
+    "DESCRIPTION": "不能被打出 。 NL 保留 。 NL 本牌被 消耗 时， NL 获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
-      "These embers must be lit, not played."
+      "These embers must be lit, not played。"
     ]
   },
   "collector:Empower": {
     "NAME": "Empower",
-    "DESCRIPTION": "Gain X Strength at the start of your next !M! turns."
+    "DESCRIPTION": "接下来 !M! 个回合， NL 获得X点 力量 。"
   },
   "collector:Extricate": {
     "NAME": "Extricate",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, play the top card of your draw pile."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 中， NL 打出抽牌堆顶部的牌。"
   },
   "collector:FeelMyPain": {
-    "NAME": "Feel My Pain",
-    "DESCRIPTION": "Whenever you Exhaust a card, a random enemy loses !M! HP."
+    "NAME": "替受疼痛Feel My Pain",
+    "DESCRIPTION": "消耗 一张牌时， NL 随机敌人失去 !M! 点生命。"
   },
   "collector:FiendFire": {
     "NAME": "Fiend Fire",
-    "DESCRIPTION": "Exhaust all cards in your hand. NL Deal !D! damage for each Exhausted card. NL Exhaust."
+    "DESCRIPTION": "消耗 所有手牌， NL 每张造成 !D! 点伤害。 NL 消耗 。"
   },
   "collector:Finalize": {
     "NAME": "Finalize",
-    "DESCRIPTION": "If the enemy dies this turn, heal !clm2! HP. NL Apply !M! collector:Doom."
+    "DESCRIPTION": "给予 !M! 层 collector:魂陷 。 NL 若目标本回合死亡， NL 回复 !clm2! 点生命。"
   },
   "collector:FingerOfDeath": {
     "NAME": "Finger of Death",
-    "DESCRIPTION": "Only collector:Reserves may be spent on this. NL Apply !M! collector:Doom."
+    "DESCRIPTION": "只能使用 collector:储能 打出。 NL 给予 !M! 层 collector:魂陷 。"
   },
   "collector:FlameLash": {
     "NAME": "Flame Lash",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the Exhausted card's damage to this."
+    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 获得所 消耗 牌的伤害。"
   },
   "collector:FleetingEmbers": {
     "NAME": "Fleeting Embers",
-    "DESCRIPTION": "Add !M! *Embers into your hand."
+    "DESCRIPTION": "获得 !M! 张 *余烬 。"
   },
   "collector:Forgery": {
-    "NAME": "Forgery",
-    "DESCRIPTION": "Deal !D! damage. NL Choose 1 of !M! cards from your Collected pile to add into your hand.",
+    "NAME": "伪造Forgery",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 从 *收藏堆 !M! 张随机牌中选择获得一张。",
     "EXTENDED_DESCRIPTION": [
-      "to add into your hand."
+      "来加入手牌。"
     ]
   },
   "collector:FuelTheFire": {
     "NAME": "Fuel the Fire",
-    "DESCRIPTION": "collector:Pyre. NL Next turn, gain !M! collector:Reserve."
+    "DESCRIPTION": "collector:焰葬 。 NL 下回合， NL 获得 !M! collector:储能 。"
   },
   "collector:Goodbye": {
     "NAME": "Goodbye",
-    "DESCRIPTION": "Double the enemy's collector:Doom. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple the enemy's collector:Doom. NL Exhaust."
+    "DESCRIPTION": "翻倍目标的 collector:魂陷 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "三倍目标的 collector:魂陷 。 NL 消耗 。"
   },
   "collector:GreenGaze": {
     "NAME": "Green Gaze",
-    "DESCRIPTION": "Deal !D! damage. NL If you played a Collected card this turn, gain !B! Block."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If you played a collector:藏品 card this turn, 获得 !B! 点 格挡 。"
   },
   "collector:Heatwave": {
-    "NAME": "Heat Wave",
-    "DESCRIPTION": "Deal !D! damage to collector:Afflicted enemies. NL Gain an *Ember."
+    "NAME": "热波Heat Wave",
+    "DESCRIPTION": "对被 collector:折磨 的敌人造成 !D! 点伤害。 NL 获得一张 *余烬 。"
   },
   "collector:Hoard": {
-    "NAME": "Hoard",
-    "DESCRIPTION": "Draw !M! cards. NL This turn, they Retain and are Unplayable."
+    "NAME": "囤积Hoard",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 将其保留至下回合， NL 但本回合无法打出。"
   },
   "collector:HoardersStrike": {
     "NAME": "Hoarder's Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Play the top card of your Collected pile."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出 *收藏堆 顶部的牌。"
   },
   "collector:Hurting": {
     "NAME": "Hurting",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, increase its cost by 1 and damage by !M! this combat."
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL When Retained, increase its cost by 1 and damage by !M! this combat。"
   },
   "collector:IllTakeThat": {
     "NAME": "I'll Take That",
-    "DESCRIPTION": "Steal up to !M! of the enemy's Block. NL Deal !D! damage."
+    "DESCRIPTION": "Steal up to !M! of the enemy's Block. NL 造成 !D! 点伤害。"
   },
   "collector:InflictAgony": {
     "NAME": "Inflict Agony",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is not collector:Afflicted, apply 2 Weak and Vulnerable."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标 not collector:折磨, 给予 2 Weak and Vulnerable。"
   },
   "collector:Invigorate": {
     "NAME": "Invigorate",
-    "DESCRIPTION": "Gain !M! Vigor. NL Next turn, gain !M! Vigor."
+    "DESCRIPTION": "获得 !M! Vigor. NL 下回合， 获得 !M! Vigor。"
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage and apply !M! collector:Doom to a random enemy."
+    "DESCRIPTION": "collector:焰葬 。 NL Deal !D! damage and 给予 !M! collector:魂陷 to a random enemy。"
   },
   "collector:MastersCall": {
     "NAME": "Master's Call",
-    "DESCRIPTION": "Gain !M! Temporary_HP. NL Whenever you play an Attack, if you have Temporary_HP, deal !clm2! damage to a random enemy."
+    "DESCRIPTION": "获得 !M! Temporary_点生命。 NL Whenever you play an Attack, if you have Temporary_HP, deal !clm2! damage to a random enemy。"
   },
   "collector:MiniCurse": {
     "NAME": "Mini-Curse",
-    "DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable to ALL enemies."
+    "DESCRIPTION": "collector:焰葬 。 NL 给予 1 Weak and Vulnerable。",
+    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 给予 1 Weak and Vulnerable to ALL enemies。"
   },
   "collector:Misdirect": {
     "NAME": "Misdirect",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain 1 collector:Reserve."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， 获得 1 collector:储能 。"
   },
   "collector:MysteryWeaving": {
     "NAME": "Mystery Weaving",
-    "DESCRIPTION": "Gain !B! Block. NL Grants 2 less Block for each other card in your hand."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Grants 2 less Block for each other card in your hand。"
   },
   "collector:OakbrimKindling": {
     "NAME": "Oakbrim Kindling",
-    "DESCRIPTION": "Unplayable. NL When Exhausted, draw !M! cards.",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， draw !M! 牌。",
     "EXTENDED_DESCRIPTION": [
-      "I must light this kindling to use it."
+      "我必须点燃这份燃材才能发挥它的作用。"
     ]
   },
   "collector:Omen": {
     "NAME": "Omen",
-    "DESCRIPTION": "Attacking an collector:Afflicted enemy consumes 1 Weak and Vulnerable. When it does, they lose !M! HP."
+    "DESCRIPTION": "Attacking an collector:折磨 enemy consumes 1 Weak and Vulnerable. When it does, they lose !M! 点生命。"
   },
   "collector:ProtectingCall": {
     "NAME": "Protecting Call",
-    "DESCRIPTION": "Gain !M! Temporary_HP. At the start of your turn, if you have Temporary_HP, gain !clm2! Block."
+    "DESCRIPTION": "获得 !M! Temporary_点生命。 At the start of your turn, if you have Temporary_HP, 获得 !clm2! Block。"
   },
   "collector:Pyromancy": {
     "NAME": "Pyromancy",
-    "DESCRIPTION": "At the start of your turn, gain 1 collector:Reserve.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 collector:Reserve."
+    "DESCRIPTION": "At the start of your turn, 获得 1 collector:储能 。",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, 获得 1 collector:储能 。"
   },
   "collector:RagingCall": {
     "NAME": "Raging Call",
-    "DESCRIPTION": "Gain !M! Temporary_HP. NL At the end of your turn, if you have Temporary_HP, deal !clm2! damage to ALL enemies."
+    "DESCRIPTION": "获得 !M! Temporary_点生命。 NL At the end of your turn, if you have Temporary_HP, deal !clm2! damage to ALL enemies。"
   },
   "collector:ReceiveTribute": {
     "NAME": "Receive Tribute",
-    "DESCRIPTION": "collector:Pyre. NL Choose 1 of !M! Boss cards and add it into your hand. It gains Retain. NL Exhaust.",
+    "DESCRIPTION": "collector:焰葬 。 NL Choose 1 of !M! Boss cards and add it into your hand. It 获得s 保留 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "Choose a card to add into your hand."
+      "Choose a card to add into your hand。"
     ]
   },
   "collector:Roast": {
     "NAME": "Roast",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage."
+    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。"
   },
   "collector:RotwoodKindling": {
     "NAME": "Rotwood Kindling",
-    "DESCRIPTION": "Unplayable. NL When Exhausted, apply !M! Vulnerable to ALL enemies.",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， 给予 !M! Vulnerable to ALL enemies。",
     "EXTENDED_DESCRIPTION": [
-      "I must light this kindling to use it."
+      "我必须点燃这份燃材才能发挥它的作用。"
     ]
   },
   "collector:SapStrength": {
     "NAME": "Sap Strength",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Strength, steal up to 2 Strength."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If the enemy has Strength, steal up to 2 Strength。"
   },
   "collector:ScorchingRay": {
     "NAME": "Scorching Ray",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times。"
   },
   "collector:SeedOfDoubt": {
     "NAME": "Seed of Doubt",
-    "DESCRIPTION": "Apply !M! collector:Doom. NL Whenever a card is Exhausted, if this is in your hand, increase its collector:Doom by !clm2!."
+    "DESCRIPTION": "给予 !M! 层 collector:魂陷 。 NL Whenever a card is Exhausted, if this is in your hand, increase its collector:魂陷 by !clm2!。"
   },
   "collector:ShadowDaggers": {
     "NAME": "Shadow Daggers",
-    "DESCRIPTION": "Deal !D! damage for each Collected card played this combat. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage for each collector:藏品 card played this combat. NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " time.)",
@@ -266,75 +266,75 @@
   },
   "collector:SomberShield": {
     "NAME": "Somber Shield",
-    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain a copy of the exhausted card."
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， 获得 a copy of the exhausted card。"
   },
   "collector:SoulSnare": {
     "NAME": "Soul Snare",
-    "DESCRIPTION": "Apply !M! collector:Doom. NL Exhaust."
+    "DESCRIPTION": "给予 !M! 层 collector:魂陷 。 NL 消耗 。"
   },
   "collector:SparkStrike": {
     "NAME": "Spark Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 *Ember into your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add 1 *Ember into your hand。"
   },
   "collector:SpiritLeech": {
     "NAME": "Spirit Leech",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, draw !M! cards."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标 collector:折磨, draw !M! 牌。"
   },
   "collector:StashAway": {
     "NAME": "Stash Away",
-    "DESCRIPTION": "Gain 1 collector:Reserve. NL Double your collector:Reserve. NL Exhaust."
+    "DESCRIPTION": "获得 1 collector:储能 。 NL Double your collector:储能 。 NL 消耗 。"
   },
   "collector:Strike": {
     "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "collector:SuckerPunch": {
     "NAME": "Sucker Punch",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
   },
   "collector:Suffering": {
     "NAME": "Suffering",
-    "DESCRIPTION": "When you apply Weak or Vulnerable to an enemy, also apply !M! collector:Doom to them."
+    "DESCRIPTION": "When you 给予 Weak or Vulnerable to an enemy, also 给予 !M! collector:魂陷 to them。"
   },
   "collector:SunbloomKindling": {
     "NAME": "Sunbloom Kindling",
-    "DESCRIPTION": "Unplayable. NL When Exhausted, gain !M! Strength and add 2 *Embers into your hand.",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， 获得 !M! 点 力量 and add 2 *Embers into your hand。",
     "EXTENDED_DESCRIPTION": [
-      "I must light this kindling to use it."
+      "我必须点燃这份燃材才能发挥它的作用。"
     ]
   },
   "collector:ThornWhip": {
     "NAME": "Thorn Whip",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, repeat this twice.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL If the enemy is collector:Afflicted, repeat this twice."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标 collector:折磨, repeat this twice。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 若目标 collector:折磨, repeat this twice。"
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer",
-    "DESCRIPTION": "Gain !M! Temporary_HP. NL Exhaust."
+    "DESCRIPTION": "获得 !M! Temporary_点生命。 NL 消耗 。"
   },
   "collector:WhirlingFlame": {
     "NAME": "Whirling Flame",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a card from your discard pile on top of your draw pile."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a card from your discard pile on top of your draw pile。"
   },
   "collector:VoidArmor": {
     "NAME": "Void Armor",
-    "DESCRIPTION": "EVERYONE gains !B! Block."
+    "DESCRIPTION": "EVERYONE 获得s !B! Block。"
   },
   "collector:Wildfire": {
     "NAME": "Wildfire",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust all Unplayable cards in your hand and gain !B! Block for each."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Exhaust all Unplayable cards in your hand and 获得 !B! Block for each。"
   },
   "collector:YouAreMine": {
     "NAME": "You Are Mine!",
-    "DESCRIPTION": "Apply !M! Weak. NL Apply !M! Vulnerable. NL Enemy loses !M! Strength. NL Apply !clm2! collector:Doom. NL Exhaust."
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !M! Vulnerable. NL Enemy loses !M! Strength. NL 给予 !clm2! 层 collector:魂陷 。 NL 消耗 。"
   },
   "collector:Whomp": {
     "NAME": "Whomp",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Temporary_HP. NL Exhaust."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! Temporary_点生命。 NL 消耗 。"
   },
   "collector:LouseCard": {
     "NAME": "Louse",
-    "DESCRIPTION": "The next time you receive unblocked attack damage, gain !B! Block and 1 Blur."
+    "DESCRIPTION": "The next time you receive unblocked attack damage, 获得 !B! Block and 1 Blur。"
   },
 
 
@@ -345,218 +345,214 @@
 
   "collector:AcidSlimeCard": {
     "NAME": "Acid Slime",
-    "DESCRIPTION": "Choose a card in your hand. NL Add a copy of it into your hand.",
+    "DESCRIPTION": "Choose a card in your hand. NL Add a copy of it into your hand。",
     "EXTENDED_DESCRIPTION": [
-      "to duplicate."
+      "to duplicate。"
     ]
   },
   "collector:AugmenterCard": {
     "NAME": "Augmenter",
-    "DESCRIPTION": "Lose 3 HP. NL Gain !M! Strength."
+    "DESCRIPTION": "Lose 3 点生命。 NL 获得 !M! 点 力量 。"
   },
   "collector:BearCard": {
     "NAME": "Bear",
-    "DESCRIPTION": "Gain !B! Block. NL Remove the enemy's Block. NL Deal !D! damage."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Remove the enemy's Block. NL 造成 !D! 点伤害。"
   },
   "collector:BlueSlaverCard": {
     "NAME": "Blue Slaver",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Weak. NL Double the enemy's Weak."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 1 Weak. NL Double the enemy's Weak。"
   },
   "collector:BookOfStabbingCard": {
     "NAME": "Book of Stabbing",
-    "DESCRIPTION": "Whenever you deal unblocked attack damage, apply !M! collector:Doom."
+    "DESCRIPTION": "Whenever you deal unblocked attack damage, 给予 !M! 层 collector:魂陷 。"
   },
   "collector:BronzeOrbCard": {
     "NAME": "Bronze Orb",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL The top card of your draw pile costs 0 until played."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL The top card of your draw pile costs 0 until played。"
   },
   "collector:ByrdCard": {
     "NAME": "Byrd",
-    "DESCRIPTION": "Deal !D! damage 5 times."
+    "DESCRIPTION": "Deal !D! damage 5 times。"
   },
   "collector:CenturionCard": {
     "NAME": "Centurion",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Dexterity."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 敏捷 。"
   },
   "collector:ChosenCard": {
     "NAME": "Chosen",
-    "DESCRIPTION": "If the enemy does not intend to attack, apply !M! Weak and Vulnerable."
+    "DESCRIPTION": "If the enemy does not intend to attack, 给予 !M! Weak and Vulnerable。"
   },
   "collector:CultistCard": {
     "NAME": "Cultist",
-    "DESCRIPTION": "collector:Pyre. NL Gain 1 Ritual."
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 1 Ritual。"
   },
   "collector:DaggerCard": {
     "NAME": "Dagger",
-    "DESCRIPTION": "Lose !M! HP. NL Deal !D! damage."
+    "DESCRIPTION": "Lose !M! 点生命. NL 造成 !D! 点伤害。"
   },
   "collector:DarklingsCard": {
     "NAME": "Darklings",
-    "DESCRIPTION": "Your next 2 cards this turn are played twice."
+    "DESCRIPTION": "Your next 2 cards this turn are played twice。"
   },
   "collector:FaceTraderCard": {
     "NAME": "Face Trader",
-    "DESCRIPTION": "Add !M! random cards of any color into your hand. NL They become Ethereal."
+    "DESCRIPTION": "Add !M! random cards of any color into your hand. NL They become 虚无 。"
   },
   "collector:FatGremlinCard": {
     "NAME": "Fat Gremlin",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
   },
   "collector:FungiBeastCard": {
     "NAME": "Fungi Beast",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL Apply 1 Vulnerable to ALL enemies."
+    "DESCRIPTION": "给予 !M! Vulnerable. NL 给予 1 Vulnerable to ALL enemies。"
   },
   "collector:GiantHeadCardStageOne": {
     "NAME": "Tick",
-    "DESCRIPTION": "Next turn, gain a *Tock."
+    "DESCRIPTION": "下回合， 获得 a *Tock。"
   },
   "collector:GiantHeadCardStageTwo": {
     "NAME": "Tock",
-    "DESCRIPTION": "Next turn, gain a *Headcrush."
+    "DESCRIPTION": "下回合， 获得 a *Headcrush。"
   },
   "collector:GiantHeadCardStageThree": {
     "NAME": "Headcrush",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies。"
   },
   "collector:GremlinLeaderCard": {
     "NAME": "Gremlin Leader",
-    "DESCRIPTION": "Add !M! random Gremlin Collectibles into your hand."
+    "DESCRIPTION": "Add !M! random Gremlin Collectibles into your hand。"
   },
   "collector:GremlinNobCard": {
     "NAME": "Gremlin Nob",
-    "DESCRIPTION": "Whenever you play a Skill, gain 1 Strength."
+    "DESCRIPTION": "Whenever you play a Skill, 获得 1 Strength。"
   },
   "collector:GremlinWizardCard": {
     "NAME": "Gremlin Wizard",
-    "DESCRIPTION": "Next turn, NL gain !M! Vigor."
+    "DESCRIPTION": "下回合， NL 获得 !M! Vigor。"
   },
   "collector:JawWormCard": {
     "NAME": "Jaw Worm",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量 。"
   },
   "collector:LagavulinCard": {
     "NAME": "Lagavulin",
-    "DESCRIPTION": "ALL enemies lose !M! Strength."
+    "DESCRIPTION": "ALL enemies lose !M! Strength。"
   },
   "collector:LivingWallCard": {
     "NAME": "Living Wall",
-    "DESCRIPTION": "collector:Pyre. NL Gain a random Upgraded card. NL It costs 0 until played."
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 a random Upgraded card. NL It costs 0 until played。"
   },
   "collector:MadGremlinCard": {
     "NAME": "Mad Gremlin",
-    "DESCRIPTION": "Gain !M! Temporary Strength. NL If you receive unblocked attack damage this turn, add a copy of this into your hand."
+    "DESCRIPTION": "获得 !M! Temporary Strength. NL If you receive unblocked attack damage this turn, add a copy of this into your hand。"
   },
   "collector:MawCard": {
     "NAME": "The Maw",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "collector:MerchantCard": {
     "NAME": "Merchant",
-    "DESCRIPTION": "Add !M! random Colorless cards into your hand. NL They cost 0 this turn."
+    "DESCRIPTION": "Add !M! random Colorless cards into your hand. NL They cost 0 this turn。"
   },
   "collector:MushroomCard": {
     "NAME": "Mushroom",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak or Vulnerable at random."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Weak or Vulnerable at random。"
   },
   "collector:MysticCard": {
     "NAME": "Mystic",
-    "DESCRIPTION": "Gain !M! Temporary_HP."
+    "DESCRIPTION": "获得 !M! Temporary_HP。"
   },
   "collector:NemesisCard": {
     "NAME": "Nemesis",
-    "DESCRIPTION": "If the enemy intends to attack, gain 1 Intangible."
+    "DESCRIPTION": "If the enemy intends to attack, 获得 1 Intangible。"
   },
   "collector:OrbWalkerCard": {
     "NAME": "Orb Walker",
-    "DESCRIPTION": "Deal !D! damage. NL Add !M! *Embers into your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add !M! *Embers into your hand。"
   },
   "collector:PointyCard": {
     "NAME": "Pointy",
-    "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card."
+    "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card。"
   },
   "collector:RedSlaverCard": {
     "NAME": "Red Slaver",
-    "DESCRIPTION": "Enemy loses !M! Strength this turn."
+    "DESCRIPTION": "Enemy loses !M! Strength this turn。"
   },
   "collector:ReptomancerCard": {
     "NAME": "Reptomancer",
-    "DESCRIPTION": "Gain !M! Temporary_HP. NL At the end of your turn, if you have Temporary_HP, apply !clm2! Poison to a random enemy."
+    "DESCRIPTION": "获得 !M! Temporary_点生命。 NL At the end of your turn, if you have Temporary_HP, 给予 !clm2! Poison to a random enemy。"
   },
   "collector:RepulsorCard": {
     "NAME": "Repulsor",
-    "DESCRIPTION": "collector:Pyre. NL Draw !M! cards."
+    "DESCRIPTION": "collector:焰葬 。 NL Draw !M! 牌。"
   },
   "collector:RomeoCard": {
     "NAME": "Romeo",
-    "DESCRIPTION": "Your next Attack this turn costs 0 and deals !M! additional damage."
+    "DESCRIPTION": "Your next Attack this turn costs 0 and deals !M! additional damage。"
   },
   "collector:SentryCard": {
     "NAME": "Sentry",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Weak to ALL enemies。"
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Shelled Parasite",
-    "DESCRIPTION": "Gain !M! Plated Armor."
+    "DESCRIPTION": "获得 !M! Plated Armor。"
   },
   "collector:ShieldGremlinCard": {
     "NAME": "Shield Gremlin",
-    "DESCRIPTION": "Gain !B! Block."
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "collector:SnakePlantCard": {
     "NAME": "Snake Plant",
-    "DESCRIPTION": "Deal !D! damage 3 times."
+    "DESCRIPTION": "Deal !D! damage 3 times。"
   },
   "collector:SneakyGremlinCard": {
     "NAME": "Sneaky Gremlin",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Draw 1 card。"
   },
   "collector:SneckoCard": {
     "NAME": "Snecko",
-    "DESCRIPTION": "Draw !M! cards. NL sneckomod:Muddle your hand."
+    "DESCRIPTION": "Draw !M! 牌。 NL sneckomod:Muddle your hand。"
   },
   "collector:SphericGuardianCard": {
     "NAME": "Spheric Guardian",
-    "DESCRIPTION": "Block is not removed at the start of your turn."
+    "DESCRIPTION": "Block is not removed at the start of your turn。"
   },
   "collector:SpikerCard": {
     "NAME": "Spiker",
-    "DESCRIPTION": "Gain !M! Thorns."
+    "DESCRIPTION": "获得 !M! Thorns。"
   },
   "collector:SpikeSlimeCard": {
     "NAME": "Spike Slime",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 *Slimed into your discard pile."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add 1 *Slimed into your discard pile。"
   },
   "collector:SpireGrowthCard": {
     "NAME": "Spire Growth",
-    "DESCRIPTION": "Apply !M! Constricted."
+    "DESCRIPTION": "给予 !M! Constricted。"
   },
   "collector:TaskmasterCard": {
     "NAME": "Taskmaster",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Apply !clm2! collector:Doom."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 力量 . NL 给予 !clm2! 层 collector:魂陷 。"
   },
   "collector:ThievesCard": {
     "NAME": "Thieves",
-    "DESCRIPTION": "Take 50% less damage this turn.",
-    "UPGRADE_DESCRIPTION": "Take 50% less damage for the next !M! turns."
+    "DESCRIPTION": "Take 50% less damage this turn。",
+    "UPGRADE_DESCRIPTION": "Take 50% less damage for the next !M! turns。"
   },
   "collector:TorchHeadCard": {
     "NAME": "Torch Head",
-    "DESCRIPTION": "Add a random Torchhead Call into your hand. NL It costs 0 this turn."
+    "DESCRIPTION": "Add a random Torchhead Call into your hand. NL It costs 0 this turn。"
   },
   "collector:TransientCard": {
     "NAME": "Transient",
-    "DESCRIPTION": "Gain !M! Strength. NL Die in 6 turns."
+    "DESCRIPTION": "获得 !M! 点 力量 . NL Die in 6 turns。"
   },
   "collector:WrithingMassCard": {
     "NAME": "Writhing Mass",
-    "DESCRIPTION": "Scry !M!. NL Play the top card of your draw pile."
+    "DESCRIPTION": "Scry !M!. NL Play the top card of your draw pile。"
   },
-
-
-
-
   "collector:DefaultCollectibleCard": {
     "NAME": "Default Collectible",
-    "DESCRIPTION": "This foe doesn't have a unique Collectible yet! NL Gain !M! Strength and Dexterity."
+    "DESCRIPTION": "This foe doesn't have a unique Collectible yet! NL 获得 !M! 点 力量 and Dexterity。"
   }
 }
