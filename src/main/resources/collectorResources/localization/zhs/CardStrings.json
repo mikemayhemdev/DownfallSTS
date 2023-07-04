@@ -109,7 +109,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 中， NL 打出抽牌堆顶部的牌。"
   },
   "collector:FeelMyPain": {
-    "NAME": "替受疼痛Feel My Pain",
+    "NAME": "嫁祸疼痛Feel My Pain",
     "DESCRIPTION": "消耗 一张牌时， NL 随机敌人失去 !M! 点生命。"
   },
   "collector:FiendFire": {
