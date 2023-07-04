@@ -10,28 +10,25 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.att;
 
-public class Hurting extends AbstractCollectorCard {
-    public final static String ID = makeID(Hurting.class.getSimpleName());
+public class GreatestHurting extends AbstractCollectorCard {
+    public final static String ID = makeID(GreatestHurting.class.getSimpleName());
     // intellij stuff attack, enemy, uncommon, 10, 2, , , 14, 2
 
-    public Hurting() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 10;
+    public GreatestHurting() {
+        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 30;
         selfRetain = true;
-        cardsToPreview = new GreaterHurting();
+        cardsToPreview = new Ember();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE); //TODO: This should use varying levels of a purple variant of searing blow vfx
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 
     @Override
     public void onRetained() {
         AbstractCard prev = this;
-        AbstractCard replacement = new GreaterHurting();
-        if (upgraded) {
-            replacement.upgrade();
-        }
+        AbstractCard replacement = new Ember();
         att(new AbstractGameAction() {
             @Override
             public void update() {
@@ -45,7 +42,6 @@ public class Hurting extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
-        uDesc();
+        upgradeDamage(12);
     }
 }

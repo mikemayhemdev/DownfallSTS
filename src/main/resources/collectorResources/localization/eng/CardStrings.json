@@ -148,6 +148,15 @@
     "DESCRIPTION": "Double the enemy's collector:Doom. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple the enemy's collector:Doom. NL Exhaust."
   },
+  "collector:GreaterHurting": {
+    "NAME": "Greater Hurting",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greatest *Hurting."
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greatest *Hurting+."
+  },
+  "collector:GreatestHurting": {
+    "NAME": "Greatest Hurting",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with an *Ember."
+  },
   "collector:GreenGaze": {
     "NAME": "Green Gaze",
     "DESCRIPTION": "Deal !D! damage. NL If you played a collector:Collected card this turn, gain !B! Block."
@@ -166,7 +175,8 @@
   },
   "collector:Hurting": {
     "NAME": "Hurting",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, increase its cost by 1 and damage by !M! this combat."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greater *Hurting."
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greater *Hurting+."
   },
   "collector:IllTakeThat": {
     "NAME": "I'll Take That",
