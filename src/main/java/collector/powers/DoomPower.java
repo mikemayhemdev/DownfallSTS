@@ -69,6 +69,8 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
     public void onDeath() {
         if (!instakilled) {
             flash();
+            instakilled = true;
+            CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
             CollectorCollection.collect((AbstractMonster) owner);
         }
     }
@@ -76,17 +78,11 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
     private void instakill() {
         if (!instakilled) {
             flash();
+            instakilled = true;
+            CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
+            CollectorCollection.collect((AbstractMonster) owner);
             atb(new HideHealthBarAction(owner));
             atb(new InstantKillAction(owner));
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    instakilled = true;
-                    CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-                    CollectorCollection.collect((AbstractMonster) owner);
-                }
-            });
         }
     }
 
