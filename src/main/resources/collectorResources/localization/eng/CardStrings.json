@@ -314,7 +314,7 @@
   },
   "collector:WhirlingFlame": {
     "NAME": "Whirling Flame",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage to ALL enemies. NL Put a card from your discard pile on top of your draw pile."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a card from your discard pile on top of your draw pile."
   },
   "collector:VoidArmor": {
     "NAME": "Void Armor",
