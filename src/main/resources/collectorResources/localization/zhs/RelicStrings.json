@@ -1,9 +1,85 @@
 {
   "collector:EmeraldTorch": {
     "NAME": "Emerald Torch",
-    "FLAVOR": "Sustained by the fires of envy.",
+    "FLAVOR": "The fires of greed never fade.",
     "DESCRIPTIONS": [
-      "At the start of combat, #gTorch #gHead heals #b10 HP."
+      "At the start of each combat, add an #yEmber into your hand."
+    ]
+  },
+  "collector:PrismaticTorch": {
+    "NAME": "Prismatic Torch",
+    "FLAVOR": "The ever-changing flames reflect fortune's favor.",
+    "DESCRIPTIONS": [
+      "Replaces ",
+      ".[] At the start of each combat, add #b",
+      " #yEmbers into your hand."
+    ]
+  },
+  "collector:HolidayCoal": {
+    "NAME": "Krampian Coal",
+    "FLAVOR": "\"Intriguing! But why only these chimneys?\" - Ranwid",
+    "DESCRIPTIONS": [
+      "The first time you #yExhaust a card each turn, gain #b",
+      " #yBlock."
+    ]
+  },
+  "collector:BagOfTricks": {
+    "NAME": "Bag of Tricks",
+    "FLAVOR": "Tricky.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, draw #b",
+      " Collected cards."
+    ]
+  },
+  "collector:JadeRing": {
+    "NAME": "Jade Ring",
+    "FLAVOR": "Jade is the symbol of honesty.",
+    "DESCRIPTIONS": [
+      "Whenever a #ycollector:Doomed enemy dies, gain #b",
+      " Souls."
+    ]
+  },
+  "collector:SoullitLamp": {
+    "NAME": "Soul-lit Lamp",
+    "FLAVOR": "A ghoulish decoration. The crackles of fire are replaced by buzzing wails.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b1 #ycollector:Reserve."
+    ]
+  },
+  "collector:ThimbleHelm": {
+    "NAME": "Thimble Helm",
+    "FLAVOR": "Worn by the Spire's miniest heroes.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b",
+      " #yTemporary_HP. While you have #yTemporary_HP, cards grant #b1 additional #yBlock."
+    ]
+  },
+  "collector:Incense": {
+    "NAME": "Incense",
+    "FLAVOR": "An antiquated form of mental clarification.",
+    "DESCRIPTIONS": [
+      "You cannot gain #yWeak, #yVulnerable or #yFrail while you are #yWeak, #yVulnerable or #yFrail."
+    ]
+  },
+  "collector:FuelCanister": {
+    "NAME": "Fuel Canister",
+    "FLAVOR": "Disgusting.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yRetain the highest-cost card in your hand."
+    ]
+  },
+  "collector:AutoCurser": {
+    "NAME": "Hexx Talisman",
+    "FLAVOR": "\"When I put this on, my rate of toe-stubbing increased drastically. I think it works!\" - Ranwid",
+    "DESCRIPTIONS": [
+      "At the start of combat, apply #b1 #yWeak and #yVulnerable to a random enemy."
+    ]
+  },
+  "collector:Bagpipes": {
+    "NAME": "The Bagpipes",
+    "FLAVOR": "This cursed, dreaded instrument is said to have driven Kublai the Great mad.",
+    "DESCRIPTIONS": [
+      "Whenever you apply #yWeak or #yVulnerable, increase the amount applied by #b1."
     ]
   }
 }
