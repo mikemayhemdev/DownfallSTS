@@ -25,6 +25,7 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
 
     public DoomPower(AbstractMonster target, int amount) {
         super(NAME, TYPE, TURN_BASED, target, null, amount);
+        priority = 99;
     }
 
     @Override
@@ -74,7 +75,6 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
 
     private void instakill() {
         if (!instakilled) {
-            instakilled = true;
             flash();
             atb(new HideHealthBarAction(owner));
             atb(new InstantKillAction(owner));
@@ -82,6 +82,7 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
                 @Override
                 public void update() {
                     isDone = true;
+                    instakilled = true;
                     CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
                     CollectorCollection.collect((AbstractMonster) owner);
                 }
