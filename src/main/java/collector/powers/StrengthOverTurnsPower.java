@@ -16,6 +16,7 @@ public class StrengthOverTurnsPower extends AbstractCollectorPower {
     public StrengthOverTurnsPower(int duration, int strength) {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, strength);
         this.duration = duration;
+        updateDescription();
     }
 
     @Override

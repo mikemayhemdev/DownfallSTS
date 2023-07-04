@@ -35,4 +35,9 @@ public class PyreMod extends AbstractCardModifier {
     public boolean shouldApply(AbstractCard card) {
         return !CardModifierManager.hasModifier(card, ID);
     }
+
+    @Override
+    public boolean isInherent(AbstractCard card) {
+        return true;
+    }
 }

@@ -159,6 +159,10 @@ public class CollectorMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         CollectorCollection.atBattleStart();
         NewReserves.resetReserves();
+        if (AbstractDungeon.player instanceof CollectorChar) {
+            if (((CollectorChar) AbstractDungeon.player).torchHead == null)
+                ((CollectorChar) AbstractDungeon.player).torchHead = new RenderOnlyTorchHead();
+        }
     }
 
     @Override
@@ -240,9 +244,6 @@ public class CollectorMod implements
         }
         combatCollectionPileButton = new CombatCollectionPileButton();
         NewReserves.resetReserves();
-        if (AbstractDungeon.player instanceof CollectorChar) {
-            ((CollectorChar) AbstractDungeon.player).torchHead = new RenderOnlyTorchHead();
-        }
     }
 
     private void initializeSavedData() {
@@ -262,13 +263,11 @@ public class CollectorMod implements
 
             @Override
             public void onLoad(ArrayList<String> strings) {
+                CollectorCollection.init();
                 for (String s : strings) {
                     System.out.println("Collector Loading Collection Card: " + s);
                     AbstractCard found = CardLibrary.getCopy(s);
                     CardModifierManager.addModifier(found, new CollectedCardMod());
-                    if (CollectorCollection.collection == null) {
-                        CollectorCollection.init();
-                    }
                     CollectorCollection.collection.addToBottom(found);
                 }
             }

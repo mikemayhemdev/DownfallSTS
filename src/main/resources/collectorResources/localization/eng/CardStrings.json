@@ -150,7 +150,7 @@
   },
   "collector:GreenGaze": {
     "NAME": "Green Gaze",
-    "DESCRIPTION": "Deal !D! damage. NL If you played a Collected card this turn, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL If you played a collector:Collected card this turn, gain !B! Block."
   },
   "collector:Heatwave": {
     "NAME": "Heat Wave",
