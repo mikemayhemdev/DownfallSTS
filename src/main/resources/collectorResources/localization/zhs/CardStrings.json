@@ -174,7 +174,7 @@
   },
   "collector:InflictAgony": {
     "NAME": "Inflict Agony",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标 not collector:折磨, 给予 2 Weak and Vulnerable。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标不被 collector:折磨 中， NL 给予 2 虚弱 and 易伤 。"
   },
   "collector:Invigorate": {
     "NAME": "Invigorate",
@@ -190,8 +190,8 @@
   },
   "collector:MiniCurse": {
     "NAME": "Mini-Curse",
-    "DESCRIPTION": "collector:焰葬 。 NL 给予 1 Weak and Vulnerable。",
-    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 给予 1 Weak and Vulnerable to ALL enemies。"
+    "DESCRIPTION": "collector:焰葬 。 NL 给予 1 虚弱 and 易伤 。",
+    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 给予 1 虚弱 and 易伤 to ALL enemies。"
   },
   "collector:Misdirect": {
     "NAME": "Misdirect",
@@ -210,7 +210,7 @@
   },
   "collector:Omen": {
     "NAME": "Omen",
-    "DESCRIPTION": "Attacking an collector:折磨 enemy consumes 1 Weak and Vulnerable. When it does, they lose !M! 点生命。"
+    "DESCRIPTION": "Attacking an collector:折磨 enemy consumes 1 虚弱 and 易伤. When it does, they lose !M! 点生命。"
   },
   "collector:ProtectingCall": {
     "NAME": "Protecting Call",
@@ -238,7 +238,7 @@
   },
   "collector:RotwoodKindling": {
     "NAME": "Rotwood Kindling",
-    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， 给予 !M! Vulnerable to ALL enemies。",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， 给予 !M! 易伤 to ALL enemies。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -294,7 +294,7 @@
   },
   "collector:Suffering": {
     "NAME": "Suffering",
-    "DESCRIPTION": "When you 给予 Weak or Vulnerable to an enemy, also 给予 !M! collector:魂陷 to them。"
+    "DESCRIPTION": "When you 给予 虚弱 or 易伤 to an enemy, also 给予 !M! collector:魂陷 to them。"
   },
   "collector:SunbloomKindling": {
     "NAME": "Sunbloom Kindling",
@@ -326,7 +326,7 @@
   },
   "collector:YouAreMine": {
     "NAME": "You Are Mine!",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !M! Vulnerable. NL Enemy loses !M! Strength. NL 给予 !clm2! 层 collector:魂陷 。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !M! 易伤. NL Enemy loses !M! Strength. NL 给予 !clm2! 层 collector:魂陷 。 NL 消耗 。"
   },
   "collector:Whomp": {
     "NAME": "Whomp",
@@ -360,7 +360,7 @@
   },
   "collector:BlueSlaverCard": {
     "NAME": "Blue Slaver",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 1 Weak. NL Double the enemy's Weak。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予1层 虚弱 。 NL 翻倍目标的 虚弱 。"
   },
   "collector:BookOfStabbingCard": {
     "NAME": "Book of Stabbing",
@@ -380,7 +380,7 @@
   },
   "collector:ChosenCard": {
     "NAME": "Chosen",
-    "DESCRIPTION": "If the enemy does not intend to attack, 给予 !M! Weak and Vulnerable。"
+    "DESCRIPTION": "If the enemy does not intend to attack, 给予 !M! 虚弱 and 易伤 。"
   },
   "collector:CultistCard": {
     "NAME": "Cultist",
@@ -404,7 +404,7 @@
   },
   "collector:FungiBeastCard": {
     "NAME": "Fungi Beast",
-    "DESCRIPTION": "给予 !M! Vulnerable. NL 给予 1 Vulnerable to ALL enemies。"
+    "DESCRIPTION": "给予 !M! 易伤. NL 给予 1 易伤 to ALL enemies。"
   },
   "collector:GiantHeadCardStageOne": {
     "NAME": "Tick",
@@ -456,7 +456,7 @@
   },
   "collector:MushroomCard": {
     "NAME": "Mushroom",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Weak or Vulnerable at random。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 虚弱 or 易伤 at random。"
   },
   "collector:MysticCard": {
     "NAME": "Mystic",
@@ -492,7 +492,7 @@
   },
   "collector:SentryCard": {
     "NAME": "Sentry",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Weak to ALL enemies。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 虚弱 to ALL enemies。"
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Shelled Parasite",
@@ -551,6 +551,10 @@
     "NAME": "Writhing Mass",
     "DESCRIPTION": "Scry !M!. NL Play the top card of your draw pile。"
   },
+
+
+
+
   "collector:DefaultCollectibleCard": {
     "NAME": "Default Collectible",
     "DESCRIPTION": "This foe doesn't have a unique Collectible yet! NL 获得 !M! 点 力量 and Dexterity。"
