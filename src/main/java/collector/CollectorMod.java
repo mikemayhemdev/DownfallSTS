@@ -250,8 +250,10 @@ public class CollectorMod implements
             @Override
             public ArrayList<String> onSave() {
                 ArrayList<String> results = new ArrayList<>();
-                for (AbstractCard q : CollectorCollection.collection.group) {
-                    results.add(q.cardID);
+                if (CollectorCollection.collection != null) {
+                    for (AbstractCard q : CollectorCollection.collection.group) {
+                        results.add(q.cardID);
+                    }
                 }
                 System.out.println("Collector Saving Collection - cards: ");
                 results.stream().forEach(q -> System.out.println(q));
