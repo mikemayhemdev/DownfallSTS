@@ -1,11 +1,11 @@
 {
   "collector:ActOfAggression": {
     "NAME": "Act of Aggression",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Vulnerable to ALL enemies."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 易伤  。"
   },
   "collector:AlwaysMore": {
-    "NAME": "Always More",
-    "DESCRIPTION": "collector:Pyre. NL Gain !M! Gold."
+    "NAME": "多多益善Always More",
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 金币 。"
   },
   "collector:Arrogance": {
     "NAME": "Arrogance",
