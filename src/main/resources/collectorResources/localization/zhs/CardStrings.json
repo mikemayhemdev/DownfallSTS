@@ -30,6 +30,7 @@
       " NL (给予 !M! 层 collector:魂陷 )"
     ]
   },
+
   "collector:BlackBindings": {
     "NAME": "Black Bindings",
     "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !clm2! 层 collector:魂陷 。"
@@ -144,7 +145,7 @@
     "DESCRIPTION": "collector:焰葬 。 NL 下回合， NL 获得 !M! collector:储能 。"
   },
   "collector:Goodbye": {
-    "NAME": "Goodbye",
+    "NAME": "再幸Goodbye",
     "DESCRIPTION": "翻倍目标的 collector:魂陷 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "三倍目标的 collector:魂陷 。 NL 消耗 。"
   },
