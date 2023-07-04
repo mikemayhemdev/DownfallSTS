@@ -62,5 +62,10 @@
       "Reserves",
       "A special kind of Energy that persists across turns."
     ]
+  },
+  "collector:PyreCostSpendScreen": {
+    "TEXT": [
+      "to Exhaust for Pyre."
+    ]
   }
 }

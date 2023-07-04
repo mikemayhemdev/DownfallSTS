@@ -41,6 +41,7 @@ import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import collector.CollectorChar;
 import collector.CollectorMod;
+import collector.util.CollectibleCardReward;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -602,6 +603,12 @@ public class downfallMod implements
 
         //Hexaghost
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SEALCARD, (rewardSave) -> new SealSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        //Collector
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.COLLECTOR_COLLECTIBLECARDREWARD, (rewardSave) -> new CollectibleCardReward(rewardSave.id), reward -> {
+            String s = ((CollectibleCardReward) reward).card.cardID;
+            return new RewardSave(reward.type.toString(), s);
+        });
     }
 
     private void initializeConfig() {

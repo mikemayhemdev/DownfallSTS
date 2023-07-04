@@ -42,32 +42,9 @@ public class CollectibleCardReward extends CustomReward {
         init();
     }
 
-    public CollectibleCardReward(String... args) {
+    public CollectibleCardReward(String id) {
         super((Texture) null, "", RewardItemTypeEnumPatch.COLLECTOR_COLLECTIBLECARDREWARD);
-
-        //Loading save
-        if (args.length == 1 && args[0].contains("|")) {
-            String[] params = args[0].split("\\|");
-            if (params.length < 3) {
-                card = CardLibrary.getCopy(params[0], 0, 0);
-            } else {
-                card = CardLibrary.getCopy(params[0], Integer.parseInt(params[1]), Integer.parseInt(params[2]));
-            }
-        } else {
-            //Initializing a card
-            int i = 0, j = 0;
-            switch (args.length) {
-                case 3:
-                    i = Integer.parseInt(args[2]);
-                case 2:
-                    j = Integer.parseInt(args[1]);
-                case 1:
-                    card = CardLibrary.getCopy(args[0], j, i);
-                    break;
-                default:
-                    card = CardLibrary.getCard(Madness.ID);
-            }
-        }
+        card = CardLibrary.getCopy(id, 0, 0);
         init();
     }
 
