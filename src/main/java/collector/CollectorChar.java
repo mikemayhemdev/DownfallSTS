@@ -236,7 +236,7 @@ public class CollectorChar extends CustomPlayer {
 
     public RenderOnlyTorchHead torchHead;
 
-    private static final float TORCHHEAD_XDIFF = 150F * Settings.scale;
+    private static final float TORCHHEAD_XDIFF = 250F * Settings.scale;
     private static final float TORCHHEAD_YDIFF = 0F * Settings.scale;
 
     @Override

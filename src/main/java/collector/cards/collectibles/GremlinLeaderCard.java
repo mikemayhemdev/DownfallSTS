@@ -1,5 +1,7 @@
 package collector.cards.collectibles;
 
+import basemod.helpers.CardModifierManager;
+import collector.cardmods.CollectedCardMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -34,7 +36,9 @@ public class GremlinLeaderCard extends AbstractCollectibleCard {
         gremlinCards.add(MadGremlinCard.ID);
         gremlinCards.add(GremlinWizardCard.ID);
         gremlinCards.add(FatGremlinCard.ID);
-        return CardLibrary.getCopy(Wiz.getRandomItem(gremlinCards, AbstractDungeon.cardRandomRng));
+        AbstractCard result = CardLibrary.getCopy(Wiz.getRandomItem(gremlinCards, AbstractDungeon.cardRandomRng));
+        CardModifierManager.addModifier(result, new CollectedCardMod());
+        return result;
     }
 
     public void upp() {
