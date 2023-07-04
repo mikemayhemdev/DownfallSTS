@@ -18,13 +18,14 @@
   "collector:CollectionUITopPanel": {
     "TEXT": [
       "Collection",
-      "View all cards in your Collection."
+      "View all cards in your Collection.",
+      "These cards start in your Collected pile each combat."
     ]
   },
   "collector:CombatCollectionPileButton": {
     "TEXT": [
-      "Collection Pile",
-      "This contains collection cards blah blah",
+      "Collected Pile",
+      "This contains the Collected cards you have yet to draw this combat. You draw one card from this at the start of each turn.",
       "I don't have any Collected cards!"
     ]
   },
@@ -37,6 +38,34 @@
     "TEXT": [
       "Pyre",
       "To play this card, pay the additional cost of Exhausting cards from your hand."
+    ]
+  },
+  "collector:CollectedCardMod": {
+    "TEXT": [
+      "collector:Collected. NL "
+    ]
+  },
+  "collector:CollectibleCardReward": {
+    "TEXT": [
+      "Collected: ",
+      "You may obtain this"
+    ]
+  },
+  "collector:HoardedMod": {
+    "TEXT": [
+      "Unplayable. NL ",
+      "Retain. NL "
+    ]
+  },
+  "collector:SecondEnergyOrb": {
+    "TEXT": [
+      "Reserves",
+      "A special kind of Energy that persists across turns."
+    ]
+  },
+  "collector:PyreCostSpendScreen": {
+    "TEXT": [
+      "to Exhaust for Pyre."
     ]
   }
 }
