@@ -27,4 +27,9 @@ public class ThievesCardPower extends AbstractCollectorPower {
         flash();
         atb(new RemoveSpecificPowerAction(owner, owner, this));
     }
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+    }
 }

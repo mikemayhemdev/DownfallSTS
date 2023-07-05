@@ -175,9 +175,8 @@
   "collector:ThievesCard": {
     "NAME": "Dodgy",
     "DESCRIPTIONS": [
-      "Take #b50% less damage this turn.",
-      "Take #b50% less damage for the next #b",
-      " turns."
+      "Take #b",
+      " less damage from attacks this turn.",
     ]
   },
   "collector:BookofStabbingCard": {
