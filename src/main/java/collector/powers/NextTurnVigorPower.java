@@ -20,5 +20,8 @@ public class NextTurnVigorPower extends AbstractCollectorPower {
         applyToSelf(new VigorPower(owner, amount));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
-
+    @Override
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+    }
 }

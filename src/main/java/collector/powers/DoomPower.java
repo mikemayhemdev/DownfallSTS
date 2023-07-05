@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.beyond.AwakenedOne;
 import com.megacrit.cardcrawl.monsters.beyond.Darkling;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.monsters.FleeingMerchant;
@@ -92,7 +93,7 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
                 owner.halfDead = true;
                 FuckThisDarklings();
             }
-            else
+            if ( !(owner instanceof AwakenedOne) )
                 atb(new HideHealthBarAction(owner));
             atb(new InstantKillAction(owner));
         }
