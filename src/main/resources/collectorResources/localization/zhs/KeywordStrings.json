@@ -8,11 +8,11 @@
     "DESCRIPTION": "同时处于 #y易伤 与 #y虚弱 的单位视为处于 #y折磨 之中。"
   },
   {
-    "PROPER_NAME": "魂陷",
+    "PROPER_NAME": "魂灭",
     "NAMES": [
       "doom",
       "doomed",
-      "魂陷"
+      "魂灭"
     ],
     "DESCRIPTION": "若一名敌人的 #y魂陷 层数超过其当前生命值，将其击杀并获得其 #y藏品 。"
   },
