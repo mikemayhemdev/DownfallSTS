@@ -336,7 +336,7 @@
   },
   "collector:YouAreMine": {
     "NAME": "You Are Mine!",
-    "DESCRIPTION": "Apply !M! Weak, !M! Vulnerable, and !clm2! collector:Doom. NL Enemy loses !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak. NL Apply !M! Vulnerable. Apply !clm2! collector:Doom."
   },
   "collector:Whomp": {
     "NAME": "Whomp",
