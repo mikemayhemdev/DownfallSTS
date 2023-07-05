@@ -12,7 +12,7 @@ public class Billow extends AbstractCollectorCard {
     // intellij stuff skill, self, common, , , 12, , 1, 1
 
     public Billow() {
-        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 12;
         cardsToPreview = new Bellow();
     }

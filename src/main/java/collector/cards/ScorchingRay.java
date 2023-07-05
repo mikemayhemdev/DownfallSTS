@@ -16,7 +16,7 @@ public class ScorchingRay extends AbstractCollectorCard {
 
     public ScorchingRay() {
         super(ID, 3, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 9;
+        baseDamage = 8;
         baseMagicNumber = magicNumber = 3;
     }
 

@@ -3,6 +3,7 @@ package collector.cards.collectibles;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BarricadePower;
+import com.megacrit.cardcrawl.powers.BlurPower;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToSelf;
@@ -12,14 +13,14 @@ public class SphericGuardianCard extends AbstractCollectibleCard {
     // intellij stuff power, self, common, , , , , , 
 
     public SphericGuardianCard() {
-        super(ID, 2, CardType.POWER, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new BarricadePower(p));
+        applyToSelf(new BlurPower(p, 3));
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }

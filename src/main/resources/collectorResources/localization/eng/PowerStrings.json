@@ -215,5 +215,20 @@
       "At the start of your next turn, gain #b",
       " #yVigor."
     ]
+  },
+  "collector:AcidSlimeCard": {
+    "NAME": "Slimy Duplication",
+    "DESCRIPTIONS": [
+      "Your next #yAttack or #ySkill this turn is played twice.",
+      "Your next #b",
+      " #yAttacks or #ySkills this turn are played twice."
+    ]
+  },
+  "collector:GremlinNobCard": {
+    "NAME": "Angery",
+    "DESCRIPTIONS": [
+      "Whenever you play a #ySkill, gain #b",
+      " #yVigor."
+    ]
   }
 }

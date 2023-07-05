@@ -13,7 +13,7 @@ public class ThievesCard extends AbstractCollectibleCard {
 
     public ThievesCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,7 +21,6 @@ public class ThievesCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        uDesc();
+        upgradeMagicNumber(3);
     }
 }

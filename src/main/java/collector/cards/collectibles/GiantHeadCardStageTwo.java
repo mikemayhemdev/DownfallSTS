@@ -12,7 +12,7 @@ public class GiantHeadCardStageTwo extends AbstractCollectibleCard {
     // intellij stuff skill, self, uncommon, , , , , , 
 
     public GiantHeadCardStageTwo() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, CardColor.COLORLESS);
         cardsToPreview = new GiantHeadCardStageThree();
     }
 

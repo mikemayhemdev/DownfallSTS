@@ -5,14 +5,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.*;
+import static collector.util.Wiz.applyToSelf;
 
 public class Pyromancy extends AbstractCollectorCard {
     public final static String ID = makeID(Pyromancy.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , , 
 
     public Pyromancy() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -20,7 +20,6 @@ public class Pyromancy extends AbstractCollectorCard {
     }
 
     public void upp() {
-        isInnate = true;
-        uDesc();
+        upgradeBaseCost(1);
     }
 }
