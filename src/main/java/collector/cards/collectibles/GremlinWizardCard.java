@@ -12,7 +12,7 @@ public class GremlinWizardCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, common, , , , , 10, 5
 
     public GremlinWizardCard() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 10;
     }
 

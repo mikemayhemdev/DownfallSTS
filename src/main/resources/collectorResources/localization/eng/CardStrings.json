@@ -148,6 +148,15 @@
     "DESCRIPTION": "Double the enemy's collector:Doom. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple the enemy's collector:Doom. NL Exhaust."
   },
+  "collector:GreaterHurting": {
+    "NAME": "Greater Hurting",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greatest *Hurting.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greatest *Hurting+."
+  },
+  "collector:GreatestHurting": {
+    "NAME": "Greatest Hurting",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with an *Ember."
+  },
   "collector:GreenGaze": {
     "NAME": "Green Gaze",
     "DESCRIPTION": "Deal !D! damage. NL If you played a collector:Collected card this turn, gain !B! Block."
@@ -166,7 +175,8 @@
   },
   "collector:Hurting": {
     "NAME": "Hurting",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, increase its cost by 1 and damage by !M! this combat."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greater *Hurting.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greater *Hurting+."
   },
   "collector:IllTakeThat": {
     "NAME": "I'll Take That",
@@ -182,7 +192,7 @@
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage and apply !M! collector:Doom to a random enemy."
+    "DESCRIPTION": "collector:Pyre. NL Apply !M! collector:Doom and deal !D! damage to a random enemy."
   },
   "collector:MastersCall": {
     "NAME": "Master's Call",
@@ -227,7 +237,7 @@
   },
   "collector:ReceiveTribute": {
     "NAME": "Receive Tribute",
-    "DESCRIPTION": "collector:Pyre. NL Choose 1 of !M! Boss cards and add it into your hand. It gains Retain. NL Exhaust.",
+    "DESCRIPTION": "collector:Pyre. NL Choose 1 of !M! Boss cards and add it into your hand. It gains Retain. Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to add into your hand."
     ]
@@ -245,7 +255,7 @@
   },
   "collector:SapStrength": {
     "NAME": "Sap Strength",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Strength, steal up to 2 Strength."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Strength, steal up to !M! Strength."
   },
   "collector:ScorchingRay": {
     "NAME": "Scorching Ray",
@@ -326,7 +336,7 @@
   },
   "collector:YouAreMine": {
     "NAME": "You Are Mine!",
-    "DESCRIPTION": "Apply !M! Weak. NL Apply !M! Vulnerable. NL Enemy loses !M! Strength. NL Apply !clm2! collector:Doom. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak, !M! Vulnerable, and !clm2! collector:Doom. NL Enemy loses !M! Strength. NL Exhaust."
   },
   "collector:Whomp": {
     "NAME": "Whomp",
@@ -345,10 +355,7 @@
 
   "collector:AcidSlimeCard": {
     "NAME": "Acid Slime",
-    "DESCRIPTION": "Choose a card in your hand. NL Add a copy of it into your hand.",
-    "EXTENDED_DESCRIPTION": [
-      "to duplicate."
-    ]
+    "DESCRIPTION": "Your next Attack or Skill this turn is played twice."
   },
   "collector:AugmenterCard": {
     "NAME": "Augmenter",
@@ -384,7 +391,7 @@
   },
   "collector:CultistCard": {
     "NAME": "Cultist",
-    "DESCRIPTION": "collector:Pyre. NL Gain 1 Ritual."
+    "DESCRIPTION": "collector:Pyre. NL Gain 1 Strength at the start of your next 2 turns."
   },
   "collector:DaggerCard": {
     "NAME": "Dagger",
@@ -392,7 +399,10 @@
   },
   "collector:DarklingsCard": {
     "NAME": "Darklings",
-    "DESCRIPTION": "Your next 2 cards this turn are played twice."
+    "DESCRIPTION": "Choose a card in your hand. Add 2 copies of it into your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "to create 2 copies of."
+    ]
   },
   "collector:FaceTraderCard": {
     "NAME": "Face Trader",
@@ -424,7 +434,7 @@
   },
   "collector:GremlinNobCard": {
     "NAME": "Gremlin Nob",
-    "DESCRIPTION": "Whenever you play a Skill, gain 1 Strength."
+    "DESCRIPTION": "Whenever you play a Skill, gain !M! Vigor."
   },
   "collector:GremlinWizardCard": {
     "NAME": "Gremlin Wizard",
@@ -492,7 +502,7 @@
   },
   "collector:SentryCard": {
     "NAME": "Sentry",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak to ALL enemies. NL Repeat for each *Sentry in your exhaust pile."
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Shelled Parasite",
@@ -516,7 +526,7 @@
   },
   "collector:SphericGuardianCard": {
     "NAME": "Spheric Guardian",
-    "DESCRIPTION": "Block is not removed at the start of your turn."
+    "DESCRIPTION": "Gain !M! downfall:Blur."
   },
   "collector:SpikerCard": {
     "NAME": "Spiker",
@@ -528,16 +538,15 @@
   },
   "collector:SpireGrowthCard": {
     "NAME": "Spire Growth",
-    "DESCRIPTION": "Apply !M! Constricted."
+    "DESCRIPTION": "Enemy takes 10 damage at the end of each of its turns."
   },
   "collector:TaskmasterCard": {
     "NAME": "Taskmaster",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Apply !clm2! collector:Doom."
+    "DESCRIPTION": "Apply !clm2! collector:Doom. NL Deal !D! damage. NL Gain !M! Strength."
   },
   "collector:ThievesCard": {
     "NAME": "Thieves",
-    "DESCRIPTION": "Take 50% less damage this turn.",
-    "UPGRADE_DESCRIPTION": "Take 50% less damage for the next !M! turns."
+    "DESCRIPTION": "Take !M! less damage from attacks this turn."
   },
   "collector:TorchHeadCard": {
     "NAME": "Torch Head",
@@ -556,7 +565,7 @@
 
 
   "collector:DefaultCollectibleCard": {
-    "NAME": "Default Collectible",
+    "NAME": "Soulless Husk",
     "DESCRIPTION": "This foe doesn't have a unique Collectible yet! NL Gain !M! Strength and Dexterity."
   }
 }

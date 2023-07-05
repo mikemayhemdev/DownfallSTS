@@ -4,11 +4,12 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomSavable;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.helpers.CardModifierManager;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import collector.cardmods.CollectedCardMod;
 import collector.patches.CollectiblesPatches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
-import collector.relics.EmeraldTorch;
+import collector.relics.*;
 import collector.ui.CombatCollectionPileButton;
 import collector.util.*;
 import com.badlogic.gdx.graphics.Color;
@@ -132,6 +133,18 @@ public class CollectorMod implements
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new EmeraldTorch(), CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new BagOfTricks(), CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new HolidayCoal(), CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new JadeRing(), CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new PrismaticTorch(), CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new SoullitLamp(), CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new ThimbleHelm(), CollectorChar.Enums.COLLECTOR);
+
+        //Shared relics
+        BaseMod.addRelic(new AutoCurser(), RelicType.SHARED);
+        BaseMod.addRelic(new Incense(), RelicType.SHARED);
+        BaseMod.addRelic(new Bagpipes(), RelicType.SHARED);
+        BaseMod.addRelic(new FuelCanister(), RelicType.SHARED);
     }
 
     public void addPotions() {

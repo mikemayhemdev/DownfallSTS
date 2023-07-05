@@ -7,6 +7,7 @@ import collector.cards.Ember;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.util.TextureLoader;
 
 import static collector.util.Wiz.makeInHand;
 
@@ -18,7 +19,7 @@ public class PrismaticTorch extends CustomRelic {
     private static final int EMBER_COUNT = 3;
 
     public PrismaticTorch() {
-        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
         this.tips.add(new CardPowerTip(new Ember()));
     }
 

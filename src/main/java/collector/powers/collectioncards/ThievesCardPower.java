@@ -1,7 +1,6 @@
 package collector.powers.collectioncards;
 
 import collector.powers.AbstractCollectorPower;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,17 +19,12 @@ public class ThievesCardPower extends AbstractCollectorPower {
 
     @Override
     public float atDamageReceive(float damage, DamageInfo.DamageType damageType) {
-        return damage / 2F;
+        return damage - amount;
     }
 
     @Override
-    public void atEndOfRound()
-    {
+    public void atEndOfRound() {
         flash();
-        if (amount == 0) {
-            atb(new RemoveSpecificPowerAction(owner, owner, this));
-        } else {
-            atb(new ReducePowerAction(owner, owner, this, 1));
-        }
+        atb(new RemoveSpecificPowerAction(owner, owner, this));
     }
 }

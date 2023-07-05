@@ -12,8 +12,8 @@ public class SoulSnare extends AbstractCollectorCard {
     // intellij stuff skill, enemy, starter, , , , , 1, 1
 
     public SoulSnare() {
-        super(ID, 3, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 15;
+        super(ID, 3, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 20;
         exhaust = true;
     }
 

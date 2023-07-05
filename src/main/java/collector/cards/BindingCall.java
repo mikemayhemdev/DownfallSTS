@@ -15,7 +15,7 @@ public class BindingCall extends AbstractCollectorCard {
     public BindingCall() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 6;
-        baseSecondMagic = secondMagic = 10;
+        baseSecondMagic = secondMagic = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,6 +25,6 @@ public class BindingCall extends AbstractCollectorCard {
 
     public void upp() {
         upgradeMagicNumber(2);
-        upgradeSecondMagic(2);
+        upgradeSecondMagic(3);
     }
 }

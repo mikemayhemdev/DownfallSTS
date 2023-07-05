@@ -11,7 +11,7 @@ public class ByrdCard extends AbstractCollectibleCard {
     // intellij stuff attack, enemy, common, 1, 1, , , , 
 
     public ByrdCard() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 1;
     }
 

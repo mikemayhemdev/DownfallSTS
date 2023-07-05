@@ -1,5 +1,6 @@
 package collector.cards;
 
+import collector.powers.AddCopyNextTurnPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
 import com.megacrit.cardcrawl.actions.utility.ExhaustToHandAction;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
+import static collector.util.Wiz.applyToSelf;
 import static collector.util.Wiz.atb;
 
 public class CoffinNail extends AbstractCollectorCard {
@@ -27,7 +29,7 @@ public class CoffinNail extends AbstractCollectorCard {
     @Override
     public void triggerOnExhaust() {
         atb(new ModifyDamageAction(this.uuid, this.magicNumber));
-        atb(new ExhaustToHandAction(this));
+        applyToSelf(new AddCopyNextTurnPower(this));
     }
 
     public void upp() {

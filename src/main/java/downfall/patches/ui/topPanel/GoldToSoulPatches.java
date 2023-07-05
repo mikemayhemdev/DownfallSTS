@@ -4,14 +4,12 @@ import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.colorless.HandOfGreed;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
+import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.ui.panels.TopPanel;
@@ -283,10 +281,10 @@ public class GoldToSoulPatches {
 
     private static String filterString(String spireString) {
         String replacementString = spireString;
-        
+
         //This is still getting an exception sometimes on the "replacementString = replaceAll" line so that leaves one possibility.
-       if (replacementString == null)
-           return "";
+        if (replacementString == null)
+            return "";
 
         for (ReplaceData data : downfallMod.wordReplacements) {
             for (String phrase : data.KEYS) {
@@ -304,9 +302,13 @@ public class GoldToSoulPatches {
     }
 
     public static void UpdateMerchantTip() {
-        MerchantTip.body = uiStrings.TEXT[3] + ": " + (FleeingMerchant.DEAD ? uiStrings.TEXT[4] : FleeingMerchant.CURRENT_HP + "/" + FleeingMerchant.START_HP)
-        + " NL " + uiStrings.TEXT[5] + ": " + FleeingMerchant.CURRENT_STRENGTH
-        + " NL " + uiStrings.TEXT[6] + ": " + FleeingMerchant.CURRENT_SOULS;
+        String result = uiStrings.TEXT[3] + ": " + (FleeingMerchant.DEAD ? uiStrings.TEXT[4] : FleeingMerchant.CURRENT_HP + "/" + FleeingMerchant.START_HP)
+                + " NL " + uiStrings.TEXT[5] + ": " + FleeingMerchant.CURRENT_STRENGTH
+                + " NL " + uiStrings.TEXT[6] + ": " + FleeingMerchant.CURRENT_SOULS;
+        if (FleeingMerchant.CURRENT_DOOM > 0) {
+            result = result + " NL " + uiStrings.TEXT[7] + ": " + FleeingMerchant.CURRENT_DOOM;
+        }
+        MerchantTip.body = result;
     }
 
     @SpirePatch(clz = TopPanel.class, method = "renderGold")
@@ -338,9 +340,9 @@ public class GoldToSoulPatches {
         public static void Prefix(TopPanel __instance) {
             if (__instance.goldHb.hovered && EvilModeCharacterSelect.evilMode)
                 TipHelper.queuePowerTips(
-                    InputHelper.mX - (float)ReflectionHacks.getPrivateStatic(TopPanel.class, "TIP_OFF_X"),
-                    ReflectionHacks.getPrivateStatic(TopPanel.class, "TIP_Y"),
-                    new ArrayList<PowerTip>(Arrays.asList(SoulsTip, MerchantTip))
+                        InputHelper.mX - (float) ReflectionHacks.getPrivateStatic(TopPanel.class, "TIP_OFF_X"),
+                        ReflectionHacks.getPrivateStatic(TopPanel.class, "TIP_Y"),
+                        new ArrayList<PowerTip>(Arrays.asList(SoulsTip, MerchantTip))
                 );
         }
     }

@@ -197,22 +197,37 @@
   },
   "collector:ReptomancerCard": {
     "NAME": "Toxic Call",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "At the end of your turn, if you have #yTemporary #yHP, apply #b",
       " #yPoison to a random enemy."
     ]
   },
   "collector:MoreBlockWithTempHP": {
     "NAME": "Thimble Helm",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "While you have #yTemporary #yHP, gain #b",
       " more #yBlock from cards."
     ]
   },
-  "collector:NextTurnVigorPower": {
+  "collector:NextTurnVigor": {
     "NAME": "Vigor Next Turn",
     "DESCRIPTION": [
       "At the start of your next turn, gain #b",
+      " #yVigor."
+    ]
+  },
+  "collector:AcidSlimeCard": {
+    "NAME": "Slimy Duplication",
+    "DESCRIPTIONS": [
+      "Your next #yAttack or #ySkill this turn is played twice.",
+      "Your next #b",
+      " #yAttacks or #ySkills this turn are played twice."
+    ]
+  },
+  "collector:GremlinNobCard": {
+    "NAME": "Angery",
+    "DESCRIPTIONS": [
+      "Whenever you play a #ySkill, gain #b",
       " #yVigor."
     ]
   }

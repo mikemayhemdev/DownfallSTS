@@ -13,10 +13,11 @@ public class GremlinNobCard extends AbstractCollectibleCard {
 
     public GremlinNobCard() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new AngerPower(p, 1));
+        applyToSelf(new AngerPower(p, magicNumber));
     }
 
     public void upp() {

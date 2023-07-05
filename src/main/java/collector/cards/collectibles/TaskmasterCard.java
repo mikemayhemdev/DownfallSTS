@@ -22,9 +22,9 @@ public class TaskmasterCard extends AbstractCollectibleCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        applyToEnemy(m, new DoomPower(m, secondMagic));
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         applyToSelf(new StrengthPower(p, magicNumber));
-        applyToEnemy(m, new DoomPower(m, secondMagic));
     }
 
     public void upp() {

@@ -13,7 +13,7 @@ public class LivingWallCard extends AbstractCollectibleCard {
     // intellij stuff skil, self, uncommon, , , , , , 
 
     public LivingWallCard() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         isPyre();
     }
 
