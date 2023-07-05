@@ -95,9 +95,8 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
                 FuckThisDarklings();
             }
             att(new InstantKillAction(owner));
-            if ( !(owner instanceof AwakenedOne) )
+            if ( !(owner instanceof AwakenedOne) && !(owner instanceof Darkling) )
                 att(new HideHealthBarAction(owner));
-
         }
     }
 
