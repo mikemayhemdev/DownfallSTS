@@ -67,6 +67,7 @@ public class TopPanelExtraDeck extends TopPanelItem {
     public void render(SpriteBatch sb) {
         if (AbstractDungeon.player.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
             render(sb, isClickable() ? Color.WHITE : Color.DARK_GRAY);
+            FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelAmountFont, Integer.toString(CollectorCollection.collection.size()), this.x + 58.0F * Settings.scale, this.y + 25.0F * Settings.scale, Color.WHITE.cpy());
             if (getHitbox().hovered) {
                 TipHelper.renderGenericTip(getHitbox().x, tipYpos, uiStrings.TEXT[0], uiStrings.TEXT[1]);
             }
@@ -148,16 +149,13 @@ public class TopPanelExtraDeck extends TopPanelItem {
             clz = TopPanel.class,
             method = "updateDeckViewButtonLogic"
     )
-    public static class DefinitelyNotViewingPool
-    {
+    public static class DefinitelyNotViewingPool {
         @SpireInsertPatch(
                 locator = Locator.class,
-                localvars = { "clickedDeckButton" }
+                localvars = {"clickedDeckButton"}
         )
-        public static void viewingDeck(TopPanel __instance, boolean clickedDeckButton)
-        {
-            if (clickedDeckButton)
-            {
+        public static void viewingDeck(TopPanel __instance, boolean clickedDeckButton) {
+            if (clickedDeckButton) {
                 if (isActive && AbstractDungeon.screen == MASTER_DECK_VIEW) {
                     AbstractDungeon.closeCurrentScreen();
                 }
@@ -165,11 +163,9 @@ public class TopPanelExtraDeck extends TopPanelItem {
             }
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(InputAction.class, "isJustPressed");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -180,25 +176,20 @@ public class TopPanelExtraDeck extends TopPanelItem {
             clz = MasterDeckViewScreen.class,
             method = "updateControllerInput"
     )
-    public static class ControllerUseAlt
-    {
+    public static class ControllerUseAlt {
         @SpireInsertPatch(
                 locator = Locator.class,
-                localvars = { "deck" }
+                localvars = {"deck"}
         )
-        public static void viewAlt(MasterDeckViewScreen __instance, @ByRef(type="com.megacrit.cardcrawl.cards.CardGroup") Object[] deck)
-        {
-            if (isActive)
-            {
+        public static void viewAlt(MasterDeckViewScreen __instance, @ByRef(type = "com.megacrit.cardcrawl.cards.CardGroup") Object[] deck) {
+            if (isActive) {
                 deck[0] = specialGroup;
             }
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.FieldAccessMatcher(CardGroup.class, "group");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -209,25 +200,20 @@ public class TopPanelExtraDeck extends TopPanelItem {
             clz = MasterDeckViewScreen.class,
             method = "updatePositions"
     )
-    public static class UpdateAltPositions
-    {
+    public static class UpdateAltPositions {
         @SpireInsertPatch(
                 locator = Locator.class,
-                localvars = { "cards" }
+                localvars = {"cards"}
         )
-        public static void updateAlt(MasterDeckViewScreen __instance, @ByRef ArrayList<?>[] cards)
-        {
-            if (isActive)
-            {
+        public static void updateAlt(MasterDeckViewScreen __instance, @ByRef ArrayList<?>[] cards) {
+            if (isActive) {
                 cards[0] = specialGroup.group;
             }
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(ArrayList.class, "size");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -238,16 +224,13 @@ public class TopPanelExtraDeck extends TopPanelItem {
             clz = MasterDeckViewScreen.class,
             method = "updateClicking"
     )
-    public static class UpdateAltClick
-    {
+    public static class UpdateAltClick {
         @SpireInsertPatch(
                 locator = Locator.class,
-                localvars = { "hoveredCard", "clickStartedCard" }
+                localvars = {"hoveredCard", "clickStartedCard"}
         )
-        public static SpireReturn<?> openAlt(MasterDeckViewScreen __instance, AbstractCard hovered, @ByRef(type="com.megacrit.cardcrawl.cards.AbstractCard") Object[] clickStartedCard)
-        {
-            if (isActive)
-            {
+        public static SpireReturn<?> openAlt(MasterDeckViewScreen __instance, AbstractCard hovered, @ByRef(type = "com.megacrit.cardcrawl.cards.AbstractCard") Object[] clickStartedCard) {
+            if (isActive) {
                 CardCrawlGame.cardPopup.open(hovered, specialGroup);
                 clickStartedCard[0] = null;
                 return SpireReturn.Return(null);
@@ -255,11 +238,9 @@ public class TopPanelExtraDeck extends TopPanelItem {
             return SpireReturn.Continue();
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(SingleCardViewPopup.class, "open");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -270,20 +251,17 @@ public class TopPanelExtraDeck extends TopPanelItem {
             clz = MasterDeckViewScreen.class,
             method = "calculateScrollBounds"
     )
-    public static class CalcAltBounds
-    {
+    public static class CalcAltBounds {
         @SpirePrefixPatch
-        public static SpireReturn<?> calcAlt(MasterDeckViewScreen __instance)
-        {
-            if (isActive)
-            {
+        public static SpireReturn<?> calcAlt(MasterDeckViewScreen __instance) {
+            if (isActive) {
                 if (specialGroup.size() > 10) {
                     int scrollTmp = specialGroup.size() / 5 - 2;
                     if (specialGroup.size() % 5 != 0) {
                         ++scrollTmp;
                     }
 
-                    ReflectionHacks.setPrivate(__instance, MasterDeckViewScreen.class, "scrollUpperBound", Settings.DEFAULT_SCROLL_LIMIT + (float)scrollTmp * (AbstractCard.IMG_HEIGHT * 0.75F + Settings.CARD_VIEW_PAD_Y));
+                    ReflectionHacks.setPrivate(__instance, MasterDeckViewScreen.class, "scrollUpperBound", Settings.DEFAULT_SCROLL_LIMIT + (float) scrollTmp * (AbstractCard.IMG_HEIGHT * 0.75F + Settings.CARD_VIEW_PAD_Y));
                 } else {
                     ReflectionHacks.setPrivate(__instance, MasterDeckViewScreen.class, "scrollUpperBound", Settings.DEFAULT_SCROLL_LIMIT);
                 }
@@ -299,25 +277,20 @@ public class TopPanelExtraDeck extends TopPanelItem {
             clz = MasterDeckViewScreen.class,
             method = "hideCards"
     )
-    public static class HideAltCards
-    {
+    public static class HideAltCards {
         @SpireInsertPatch(
                 locator = Locator.class,
-                localvars = { "cards" }
+                localvars = {"cards"}
         )
-        public static void hideAlt(MasterDeckViewScreen __instance, @ByRef ArrayList<?>[] cards)
-        {
-            if (isActive)
-            {
+        public static void hideAlt(MasterDeckViewScreen __instance, @ByRef ArrayList<?>[] cards) {
+            if (isActive) {
                 cards[0] = specialGroup.group;
             }
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(ArrayList.class, "size");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -328,11 +301,9 @@ public class TopPanelExtraDeck extends TopPanelItem {
             clz = MasterDeckViewScreen.class,
             method = "render"
     )
-    public static class RenderAlt
-    {
+    public static class RenderAlt {
         @SpirePrefixPatch
-        public static SpireReturn<?> rendering(MasterDeckViewScreen __instance, SpriteBatch sb)
-        {
+        public static SpireReturn<?> rendering(MasterDeckViewScreen __instance, SpriteBatch sb) {
             if (isActive) {
                 AbstractCard hoveredCard = ReflectionHacks.getPrivate(__instance, MasterDeckViewScreen.class, "hoveredCard");
                 if (hoveredCard == null) {
@@ -345,8 +316,8 @@ public class TopPanelExtraDeck extends TopPanelItem {
 
                 specialGroup.renderTip(sb);
                 FontHelper.renderDeckViewTip(sb, uiStrings.TEXT[2], 96.0F * Settings.scale, Settings.CREAM_COLOR);
-                if ((float)ReflectionHacks.getPrivate(__instance, MasterDeckViewScreen.class, "scrollUpperBound") > 500.0F * Settings.scale) {
-                    ((ScrollBar)ReflectionHacks.getPrivate(__instance, MasterDeckViewScreen.class, "scrollBar")).render(sb);
+                if ((float) ReflectionHacks.getPrivate(__instance, MasterDeckViewScreen.class, "scrollUpperBound") > 500.0F * Settings.scale) {
+                    ((ScrollBar) ReflectionHacks.getPrivate(__instance, MasterDeckViewScreen.class, "scrollBar")).render(sb);
                 }
                 return SpireReturn.Return(null);
             }
