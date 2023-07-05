@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.monsters.FleeingMerchant;
 
 import static collector.util.Wiz.atb;
+import static collector.util.Wiz.att;
 
 public class DoomPower extends AbstractCollectorPower implements HealthBarRenderPower {
     public static final String NAME = "Doom";
@@ -93,9 +94,10 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
                 owner.halfDead = true;
                 FuckThisDarklings();
             }
+            att(new InstantKillAction(owner));
             if ( !(owner instanceof AwakenedOne) )
-                atb(new HideHealthBarAction(owner));
-            atb(new InstantKillAction(owner));
+                att(new HideHealthBarAction(owner));
+
         }
     }
 

@@ -25,7 +25,7 @@
   },
   "collector:Bellow": {
     "NAME": "Bellow",
-    "DESCRIPTION": "Apply collector:Doom equal to unused Block last turn.",
+    "DESCRIPTION": "Ethereal. NL Apply collector:Doom equal to unused Block last turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL ( Applies !M! collector:Doom )"
     ]
@@ -114,7 +114,7 @@
   },
   "collector:FiendFire": {
     "NAME": "Fiend Fire",
-    "DESCRIPTION": "Exhaust all cards in your hand. NL Deal !D! damage for each Exhausted card. NL Exhaust."
+    "DESCRIPTION": "Exhaust your hand. NL Deal !D! damage for each card Exhausted. NL Exhaust."
   },
   "collector:Finalize": {
     "NAME": "Finalize",
@@ -276,7 +276,7 @@
   },
   "collector:SomberShield": {
     "NAME": "Somber Shield",
-    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain a copy of the exhausted card."
+    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain a copy of the Exhausted card."
   },
   "collector:SoulSnare": {
     "NAME": "Soul Snare",

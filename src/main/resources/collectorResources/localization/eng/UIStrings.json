@@ -67,5 +67,10 @@
     "TEXT": [
       "to Exhaust for Pyre."
     ]
+  },
+  "collector:PyreModText": {
+    "TEXT": [
+      "I don't have a card to Exhaust!"
+    ]
   }
 }
