@@ -254,7 +254,7 @@
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
   },
-  "collector:Sap力量": {
+  "collector:SapStrength": {
     "NAME": "Sap 力量",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 力量 ，NL 窃取至多 !M! 点。"
   },
