@@ -29,7 +29,8 @@ public class FeelMyPainPower extends AbstractCollectorPower {
             public void update() {
                 isDone = true;
                 AbstractMonster tar = AbstractDungeon.getRandomMonster();
-                att(new LoseHPAction(tar, damageSource, damageAmount));
+                if ( tar != null && !tar.isDeadOrEscaped() )
+                    att(new LoseHPAction(tar, damageSource, damageAmount));
             }
         });
     }
