@@ -20,7 +20,7 @@ public class OmenPower extends AbstractCollectorPower {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL && target.hasPower(WeakPower.POWER_ID) && target.hasPower(VulnerablePower.POWER_ID)) {
+        if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL && target.hasPower(WeakPower.POWER_ID) && target.hasPower(VulnerablePower.POWER_ID) && !target.isDeadOrEscaped()) {
             this.flash();
             addToBot(new ReducePowerAction(target, owner, WeakPower.POWER_ID, 1));
             addToBot(new ReducePowerAction(target, owner, VulnerablePower.POWER_ID, 1));

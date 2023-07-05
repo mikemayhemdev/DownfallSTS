@@ -14,6 +14,7 @@ public class BrainDrain extends AbstractCollectorCard {
 
     public BrainDrain() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

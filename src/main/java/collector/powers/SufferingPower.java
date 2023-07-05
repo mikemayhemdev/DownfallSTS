@@ -1,6 +1,7 @@
 package collector.powers;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.BetterOnApplyPowerPower;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,9 +23,11 @@ public class SufferingPower extends AbstractCollectorPower implements BetterOnAp
 
     @Override
     public boolean betterOnApplyPower(AbstractPower abstractPower, AbstractCreature target, AbstractCreature source) {
-        if (abstractPower.ID.equals(WeakPower.POWER_ID) || abstractPower.ID.equals(VulnerablePower.POWER_ID)) {
-            flash();
-            applyToEnemy((AbstractMonster) target, new DoomPower((AbstractMonster) target, amount)); //Fixed!
+        if ( !(target instanceof AbstractPlayer) ) {
+            if (abstractPower.ID.equals(WeakPower.POWER_ID) || abstractPower.ID.equals(VulnerablePower.POWER_ID)) {
+                flash();
+                applyToEnemy((AbstractMonster) target, new DoomPower((AbstractMonster) target, amount)); // NOW fixed
+            }
         }
         return true;
     }
