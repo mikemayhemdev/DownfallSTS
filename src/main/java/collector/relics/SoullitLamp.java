@@ -4,6 +4,7 @@ import basemod.abstracts.CustomRelic;
 import collector.CollectorMod;
 import collector.actions.GainReservesAction;
 import com.badlogic.gdx.graphics.Texture;
+import downfall.util.TextureLoader;
 
 import static collector.util.Wiz.atb;
 
@@ -13,7 +14,7 @@ public class SoullitLamp extends CustomRelic {
     private static final String OUTLINE_IMG_PATH = SoullitLamp.class.getSimpleName() + ".png";
 
     public SoullitLamp() {
-        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
     @Override

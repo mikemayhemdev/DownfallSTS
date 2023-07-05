@@ -2,12 +2,12 @@ package collector.relics;
 
 import basemod.abstracts.CustomRelic;
 import collector.CollectorMod;
-import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.util.TextureLoader;
 
 import static collector.util.Wiz.applyToEnemy;
 import static collector.util.Wiz.atb;
@@ -18,7 +18,7 @@ public class AutoCurser extends CustomRelic {
     private static final String OUTLINE_IMG_PATH = AutoCurser.class.getSimpleName() + ".png";
 
     public AutoCurser() {
-        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
     @Override

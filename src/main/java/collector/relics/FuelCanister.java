@@ -5,6 +5,7 @@ import collector.CollectorMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.util.TextureLoader;
 import hermit.util.Wiz;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ public class FuelCanister extends CustomRelic {
     private static final String OUTLINE_IMG_PATH = FuelCanister.class.getSimpleName() + ".png";
 
     public FuelCanister() {
-        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.SHOP, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
     @Override

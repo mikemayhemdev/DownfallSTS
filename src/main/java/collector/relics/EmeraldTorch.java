@@ -5,6 +5,7 @@ import basemod.helpers.CardPowerTip;
 import collector.CollectorMod;
 import collector.cards.Ember;
 import com.badlogic.gdx.graphics.Texture;
+import downfall.util.TextureLoader;
 
 import static collector.util.Wiz.makeInHand;
 
@@ -14,7 +15,7 @@ public class EmeraldTorch extends CustomRelic {
     private static final String OUTLINE_IMG_PATH = "EmeraldTorch.png";
 
     public EmeraldTorch() {
-        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
         this.tips.add(new CardPowerTip(new Ember()));
     }
 

@@ -4,6 +4,7 @@ import basemod.abstracts.CustomRelic;
 import collector.CollectorMod;
 import collector.actions.DrawCardFromCollectionAction;
 import com.badlogic.gdx.graphics.Texture;
+import downfall.util.TextureLoader;
 
 import static collector.util.Wiz.atb;
 
@@ -15,7 +16,7 @@ public class BagOfTricks extends CustomRelic {
     private static final int EXTRA_CARDS = 2;
 
     public BagOfTricks() {
-        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
     @Override

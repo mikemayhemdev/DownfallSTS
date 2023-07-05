@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.util.TextureLoader;
 
 public class Incense extends CustomRelic implements OnReceivePowerRelic {
     public static final String ID = CollectorMod.makeID(Incense.class.getSimpleName());
@@ -18,7 +19,7 @@ public class Incense extends CustomRelic implements OnReceivePowerRelic {
     private static final String OUTLINE_IMG_PATH = Incense.class.getSimpleName() + ".png";
 
     public Incense() {
-        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
     @Override
