@@ -348,78 +348,78 @@
 
 
   "collector:LouseCard": {
-    "NAME": "Louse",
+    "NAME": "虱虫",
     "DESCRIPTION": "下次被攻击而失去生命时，获得 !B! 点 格挡 与1层 bronze:残影 。"
   },
   "collector:AcidSlimeCard": {
-    "NAME": "Acid Slime",
-    "DESCRIPTION": "Your next Attack or Skill this turn is played twice。"
+    "NAME": "酸液史莱姆",
+    "DESCRIPTION": "本回合下张攻击或技能额外打出一次。"
   },
   "collector:AugmenterCard": {
-    "NAME": "Augmenter",
+    "NAME": "增益研究者",
     "DESCRIPTION": "失去 3 点生命。 NL 获得 !M! 点 力量 。"
   },
   "collector:BearCard": {
-    "NAME": "Bear",
+    "NAME": "熊",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 移除目标的 格挡。 NL 造成 !D! 点伤害。"
   },
   "collector:BlueSlaverCard": {
-    "NAME": "Blue Slaver",
+    "NAME": "蓝衣奴贩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予1层 虚弱 。 NL 翻倍目标的 虚弱 。"
   },
   "collector:BookOfStabbingCard": {
-    "NAME": "Book of Stabbing",
-    "DESCRIPTION": "Whenever you 造成 un格挡ed attack 点伤害, 给予 !M! 层 collector:魂灭 。"
+    "NAME": "扎人之书",
+    "DESCRIPTION": "造成未被格挡的攻击伤害时，给予 !M! 层 collector:魂灭 。"
   },
   "collector:BronzeOrbCard": {
-    "NAME": "Bronze Orb",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL The top card of your 抽 pile costs 0 until played。"
+    "NAME": "铜制圆球",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 抽牌堆顶部的牌下次耗能变为0。"
   },
   "collector:ByrdCard": {
-    "NAME": "Byrd",
+    "NAME": "异鸟",
     "DESCRIPTION": "造成 !D! 点伤害5次。"
   },
   "collector:CenturionCard": {
-    "NAME": "Centurion",
+    "NAME": "百夫长",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 敏捷 。"
   },
   "collector:ChosenCard": {
-    "NAME": "Chosen",
+    "NAME": "被拣选者",
     "DESCRIPTION": "若目标不意图攻击， NL 给予 !M! 层 虚弱 与 易伤 。"
   },
   "collector:CultistCard": {
-    "NAME": "Cultist",
+    "NAME": "邪教徒",
     "DESCRIPTION": "collector:焰葬 。 NL 下2个回合获得1点 力量 。"
   },
   "collector:DaggerCard": {
-    "NAME": "Dagger",
+    "NAME": "匕首",
     "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。"
   },
   "collector:DarklingsCard": {
-    "NAME": "Darklings",
-    "DESCRIPTION": "Choose a card in your hand。 Add 2 copies of it into your hand。",
+    "NAME": "小黑",
+    "DESCRIPTION": "选择一张手牌， NL 获得其两张复制品。",
     "EXTENDED_DESCRIPTION": [
-      "to create 2 copies of。"
+      "生成两张复制品。"
     ]
   },
   "collector:FaceTraderCard": {
-    "NAME": "Face Trader",
-    "DESCRIPTION": "Add !M! random cards of any color into your hand。 NL They become 虚无 。"
+    "NAME": "换脸商",
+    "DESCRIPTION": "随机获得 !M! 张任意角色牌， NL 其附带 虚无 。"
   },
   "collector:FatGremlinCard": {
-    "NAME": "Fat Gremlin",
+    "NAME": "胖地精",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
   },
   "collector:FungiBeastCard": {
-    "NAME": "Fungi Beast",
+    "NAME": "真菌兽",
     "DESCRIPTION": "给予 !M! 层 易伤 。 NL 给予所有敌人1层 易伤 。"
   },
   "collector:GiantHeadCardStageOne": {
-    "NAME": "嘀Tick",
+    "NAME": "嘀",
     "DESCRIPTION": "下回合， NL 获得一张 *嗒 。"
   },
   "collector:GiantHeadCardStageTwo": {
-    "NAME": "嗒Tock",
+    "NAME": "嗒",
     "DESCRIPTION": "下回合， NL 获得一张 *头砸 。"
   },
   "collector:GiantHeadCardStageThree": {
@@ -427,135 +427,135 @@
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。"
   },
   "collector:GremlinLeaderCard": {
-    "NAME": "Gremlin Leader",
-    "DESCRIPTION": "Add !M! random Gremlin Collectibles into your hand。"
+    "NAME": "地精首领",
+    "DESCRIPTION": "随机获得 !M! 张地精 collector:藏品 牌。"
   },
   "collector:GremlinNobCard": {
-    "NAME": "Gremlin Nob",
+    "NAME": "地精大块头",
     "DESCRIPTION": "打出技能时， NL 获得 !M! 层 活力 。"
   },
   "collector:GremlinWizardCard": {
-    "NAME": "Gremlin Wizard",
+    "NAME": "地精法师",
     "DESCRIPTION": "下回合获得 !M! 层 活力 。"
   },
   "collector:JawWormCard": {
-    "NAME": "Jaw Worm",
+    "NAME": "大颚虫",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量 。"
   },
   "collector:LagavulinCard": {
-    "NAME": "Lagavulin",
+    "NAME": "乐加维林",
     "DESCRIPTION": "所有敌人 失去 !M! 力量 。"
   },
   "collector:LivingWallCard": {
-    "NAME": "Living Wall",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 a random Upgraded card。 NL It costs 0 until played。"
+    "NAME": "活墙壁Living Wall",
+    "DESCRIPTION": "collector:焰葬 。 NL 随机获得一张牌+， NL 其单次耗能为0。"
   },
   "collector:MadGremlinCard": {
-    "NAME": "Mad Gremlin",
-    "DESCRIPTION": "获得 !M! 层 Temporary 力量 。 NL If you receive un格挡ed attack 点伤害 this turn, add a copy of this into your hand。"
+    "NAME": "火大地精",
+    "DESCRIPTION": "获得 !M! 层 guardianmod:临时 力量 。 NL 若本回合受到未被格挡的攻击伤害，获得一张本牌的复制品。"
   },
   "collector:MawCard": {
-    "NAME": "The Maw",
+    "NAME": "巨口",
     "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "collector:MerchantCard": {
-    "NAME": "Merchant",
-    "DESCRIPTION": "Add !M! random Colorless cards into your hand。 NL They cost 0 this turn。"
+    "NAME": "商人",
+    "DESCRIPTION": "随机获得 !M! 张无色牌， NL 本回合其单次耗能为0。"
   },
   "collector:MushroomCard": {
-    "NAME": "Mushroom",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 or 易伤 at random。"
+    "NAME": "蘑菇",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机给予 !M! 层 虚弱 或 易伤 。"
   },
   "collector:MysticCard": {
-    "NAME": "Mystic",
-    "DESCRIPTION": "获得 !M! Temporary_HP。"
+    "NAME": "神秘术士",
+    "DESCRIPTION": "获得 !M! 层 临时生命 。"
   },
   "collector:NemesisCard": {
-    "NAME": "Nemesis",
-    "DESCRIPTION": "If the enemy intends to attack, 获得 1 Intangible。"
+    "NAME": "天罚",
+    "DESCRIPTION": "若目标意图攻击， NL 获得1层 无实体 。"
   },
   "collector:OrbWalkerCard": {
-    "NAME": "Orb Walker",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add !M! *余烬s into your hand。"
+    "NAME": "圆球行者",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 张 *余烬 。"
   },
   "collector:PointyCard": {
-    "NAME": "Pointy",
-    "DESCRIPTION": "造成 !D! 点伤害 twice。 NL 抽 1 card。"
+    "NAME": "尖尖",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 抽一张牌。"
   },
   "collector:RedSlaverCard": {
-    "NAME": "Red Slaver",
-    "DESCRIPTION": "Enemy 失去s !M! 力量 this turn。"
+    "NAME": "红衣奴贩",
+    "DESCRIPTION": "目标本回合 失去 !M! 点 力量 。"
   },
   "collector:ReptomancerCard": {
-    "NAME": "Reptomancer",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合结束时， if you have Temporary_HP, 给予 !clm2! Poison to a random enemy。"
+    "NAME": "拜蛇术士",
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合结束时，若有 临时生命 ，随机给予 !clm2! 层 中毒 。"
   },
   "collector:RepulsorCard": {
-    "NAME": "Repulsor",
+    "NAME": "反冲机",
     "DESCRIPTION": "collector:焰葬 。 NL 抽 !M! 张牌。"
   },
   "collector:RomeoCard": {
-    "NAME": "Romeo",
+    "NAME": "罗密欧",
     "DESCRIPTION": "Your next Attack this turn costs 0 and 造成s !M! additional 点伤害。"
   },
   "collector:SentryCard": {
-    "NAME": "Sentry",
+    "NAME": "哨卫",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予所有敌人 !M! 层 虚弱 。"
   },
   "collector:ShelledParasiteCard": {
-    "NAME": "Shelled Parasite",
+    "NAME": "带壳寄生怪",
     "DESCRIPTION": "获得 !M! 层 多层护甲 。"
   },
   "collector:ShieldGremlinCard": {
-    "NAME": "Shield Gremlin",
+    "NAME": "持盾地精",
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "collector:SnakePlantCard": {
-    "NAME": "Snake Plant",
+    "NAME": "蛇花",
     "DESCRIPTION": "造成 !D! 点伤害3次。"
   },
   "collector:SneakyGremlinCard": {
-    "NAME": "Sneaky Gremlin",
+    "NAME": "卑鄙地精",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张牌。"
   },
   "collector:SneckoCard": {
-    "NAME": "Snecko",
+    "NAME": "异蛇",
     "DESCRIPTION": "抽 !M! 张牌。 NL sneckomod:Muddle your hand。"
   },
   "collector:SphericGuardianCard": {
-    "NAME": "Spheric Guardian",
+    "NAME": "圆球守护者",
     "DESCRIPTION": "获得 !M! 层 bronze:残影 。"
   },
   "collector:SpikerCard": {
-    "NAME": "Spiker",
+    "NAME": "钉刺机",
     "DESCRIPTION": "获得 !M! 层 荆棘 。"
   },
   "collector:SpikeSlimeCard": {
-    "NAME": "Spike Slime",
+    "NAME": "尖刺史莱姆",
     "DESCRIPTION": "造成 !D! 点伤害。 NL Add 1 *Slimed into your discard pile。"
   },
   "collector:SpireGrowthCard": {
-    "NAME": "Spire Growth",
+    "NAME": "塔内增生组织",
     "DESCRIPTION": "回合结束时， NL 目标受到 !M! 点伤害。"
   },
   "collector:TaskmasterCard": {
-    "NAME": "Taskmaster",
+    "NAME": "奴隶头子",
     "DESCRIPTION": "给予 !clm2! 层 collector:魂灭 。 NL 造成 !D! 点伤害。 NL 获得 !M! 点 力量 。"
   },
   "collector:ThievesCard": {
-    "NAME": "Thieves",
+    "NAME": "盗贼",
     "DESCRIPTION": "Take !M! less damage from attacks this turn."
   },
   "collector:TorchHeadCard": {
-    "NAME": "Torch Head",
+    "NAME": "火炬头",
     "DESCRIPTION": "Add a random Torchhead Call into your hand。 NL It costs 0 this turn。"
   },
   "collector:TransientCard": {
-    "NAME": "Transient",
+    "NAME": "倏忽魔",
     "DESCRIPTION": "获得 !M! 点 力量 。 NL 六回合后死亡。"
   },
   "collector:WrithingMassCard": {
-    "NAME": "Writhing Mass",
+    "NAME": "扭曲团块",
     "DESCRIPTION": "预见 !M! 。 NL 打出抽牌堆顶部的牌。"
   },
 
