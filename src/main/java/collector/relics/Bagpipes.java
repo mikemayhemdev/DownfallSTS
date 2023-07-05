@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.util.TextureLoader;
 
 public class Bagpipes extends CustomRelic implements OnApplyPowerRelic {
     public static final String ID = CollectorMod.makeID(Bagpipes.class.getSimpleName());
@@ -16,7 +17,7 @@ public class Bagpipes extends CustomRelic implements OnApplyPowerRelic {
     private static final String OUTLINE_IMG_PATH = Bagpipes.class.getSimpleName() + ".png";
 
     public Bagpipes() {
-        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.RARE, LandingSound.MAGICAL);
     }
 
 

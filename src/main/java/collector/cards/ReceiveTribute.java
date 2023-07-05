@@ -24,6 +24,7 @@ public class ReceiveTribute extends AbstractCollectorCard {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         isPyre();
+        exhaust = true;
     }
 
     private static ArrayList<AbstractCard> possibilities;

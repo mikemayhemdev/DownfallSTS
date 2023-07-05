@@ -16,8 +16,7 @@ public class WhirlingFlame extends AbstractCollectorCard {
 
     public WhirlingFlame() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 12;
-        baseMagicNumber = magicNumber = 2;
+        baseDamage = 7;
         isMultiDamage = true;
     }
 
@@ -27,7 +26,6 @@ public class WhirlingFlame extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
     }
 }

@@ -9,8 +9,11 @@ import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.beyond.Darkling;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.monsters.FleeingMerchant;
 
 import static collector.util.Wiz.atb;
@@ -72,6 +75,10 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
             instakilled = true;
             CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
             CollectorCollection.collect((AbstractMonster) owner);
+            if ( owner instanceof Darkling ) {
+                owner.halfDead = true;
+                FuckThisDarklings();
+            }
         }
     }
 
@@ -81,8 +88,26 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
             instakilled = true;
             CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
             CollectorCollection.collect((AbstractMonster) owner);
-            atb(new HideHealthBarAction(owner));
+            if ( owner instanceof Darkling ) {
+                owner.halfDead = true;
+                FuckThisDarklings();
+            }
+            else
+                atb(new HideHealthBarAction(owner));
             atb(new InstantKillAction(owner));
+        }
+    }
+
+    private void FuckThisDarklings () {
+        boolean allIsDead = true;
+        for ( AbstractMonster m : AbstractDungeon.getMonsters().monsters )
+            if ( m.id.equals(Darkling.ID) && !m.halfDead)
+                allIsDead = false;
+
+        if ( allIsDead ) {
+            AbstractDungeon.getCurrRoom().cannotLose = false;
+            for ( AbstractMonster m : AbstractDungeon.getMonsters().monsters )
+                m.die();
         }
     }
 

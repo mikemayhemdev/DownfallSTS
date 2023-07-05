@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 public class NextCollectedTwicePower extends AbstractCollectorPower {
     public static final String NAME = "NextCollectedTwice";
     public static final String POWER_ID = makeID(NAME);
-    public static final PowerType TYPE = PowerType.DEBUFF;
+    public static final PowerType TYPE = PowerType.BUFF;
     public static final boolean TURN_BASED = false;
 
     public NextCollectedTwicePower() {

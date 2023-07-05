@@ -6,6 +6,7 @@ import collector.powers.DoomPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.TextureLoader;
 
 public class JadeRing extends CustomRelic {
     public static final String ID = CollectorMod.makeID(JadeRing.class.getSimpleName());
@@ -15,7 +16,7 @@ public class JadeRing extends CustomRelic {
     private static final int EXTRA_SOULS = 5;
 
     public JadeRing() {
-        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
     @Override

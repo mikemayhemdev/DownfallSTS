@@ -6,6 +6,7 @@ import collector.powers.MoreBlockWithTempHPPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.util.TextureLoader;
 
 import static collector.util.Wiz.applyToSelf;
 import static collector.util.Wiz.atb;
@@ -18,7 +19,7 @@ public class ThimbleHelm extends CustomRelic {
     private static final int STARTING_TEMP_HP = 3;
 
     public ThimbleHelm() {
-        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
     @Override

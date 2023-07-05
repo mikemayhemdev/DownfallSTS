@@ -197,19 +197,19 @@
   },
   "collector:ReptomancerCard": {
     "NAME": "Toxic Call",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "At the end of your turn, if you have #yTemporary #yHP, apply #b",
       " #yPoison to a random enemy."
     ]
   },
   "collector:MoreBlockWithTempHP": {
     "NAME": "Thimble Helm",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "While you have #yTemporary #yHP, gain #b",
       " more #yBlock from cards."
     ]
   },
-  "collector:NextTurnVigorPower": {
+  "collector:NextTurnVigor": {
     "NAME": "Vigor Next Turn",
     "DESCRIPTION": [
       "At the start of your next turn, gain #b",

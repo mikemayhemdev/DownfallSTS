@@ -15,7 +15,6 @@ public class FlameLash extends AbstractCollectorCard implements OnPyreCard {
     public FlameLash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
-        baseMagicNumber = magicNumber = 8;
         isPyre();
     }
 
@@ -23,9 +22,16 @@ public class FlameLash extends AbstractCollectorCard implements OnPyreCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        if (toAdd > 0) {
-            addToBot(new ModifyDamageAction(this.uuid, toAdd));
-        }
+        AbstractCard inst = this;
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (toAdd > 0) {
+                    addToTop(new ModifyDamageAction(inst.uuid, toAdd));
+                }
+            }
+        });
     }
 
     @Override
@@ -38,7 +44,6 @@ public class FlameLash extends AbstractCollectorCard implements OnPyreCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(2);
+        upgradeDamage(4);
     }
 }

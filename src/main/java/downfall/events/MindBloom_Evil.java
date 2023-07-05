@@ -4,6 +4,7 @@ package downfall.events;
 import automaton.AutomatonChar;
 import basemod.ReflectionHacks;
 import champ.ChampChar;
+import collector.CollectorChar;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,6 +22,7 @@ import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.city.BronzeAutomaton;
 import com.megacrit.cardcrawl.monsters.city.Champ;
 import com.megacrit.cardcrawl.monsters.city.GremlinLeader;
+import com.megacrit.cardcrawl.monsters.city.TheCollector;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic.RelicTier;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
@@ -42,7 +44,6 @@ import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -101,16 +102,16 @@ public class MindBloom_Evil extends AbstractImageEvent {
                             AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Slime Boss");
                         } else if (AbstractDungeon.player instanceof GuardianCharacter) {
                             if (Loader.isModLoaded("DownfallExtension"))
-                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("DownfallExtension:Crowbot");
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("DownfallExtension:Crowbot");
                             else
-                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("The Guardian");
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("The Guardian");
                         } else if (AbstractDungeon.player instanceof TheHexaghost) {
 
                             AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Hexaghost");
                         } else if (AbstractDungeon.player instanceof ChampChar) {
                             if (Loader.isModLoaded("DownfallExtension"))
                                 AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("DownfallExtension:Irondead");
-                            else{
+                            else {
                                 AbstractMonster m = new Champ();
                                 m.maxHealth = Math.round(m.maxHealth * .6F);
                                 m.currentHealth = m.maxHealth;
@@ -120,7 +121,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         } else if (AbstractDungeon.player instanceof AutomatonChar) {
                             if (Loader.isModLoaded("DownfallExtension"))
                                 AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("DownfallExtension:Crowbot");
-                            else{
+                            else {
                                 AbstractMonster m = new BronzeAutomaton();
                                 m.maxHealth = Math.round(m.maxHealth * .6F);
                                 m.currentHealth = m.maxHealth;
@@ -129,11 +130,16 @@ public class MindBloom_Evil extends AbstractImageEvent {
                                 AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
                             }
                         } else if (AbstractDungeon.player instanceof TheSnecko) {
-
                             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new SneckoMirror());
                         } else if (AbstractDungeon.player instanceof GremlinCharacter) {
                             lastCombatMetricKey = "Gremlin Mirror";
                             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new AbstractMonster[]{spawnGremlin(GremlinLeader.POSX[0], GremlinLeader.POSY[0]), spawnGremlin(GremlinLeader.POSX[1], GremlinLeader.POSY[1]), new GremlinMirror()});
+                        } else if (AbstractDungeon.player instanceof CollectorChar) {
+                            AbstractMonster m = new TheCollector();
+                            m.maxHealth = Math.round(m.maxHealth * .6F);
+                            m.currentHealth = m.maxHealth;
+                            m.powers.add(new StrengthPower(m, -3));
+                            AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
                         } else {
                             ArrayList<String> list = new ArrayList();
                             list.add("Slime Boss");
