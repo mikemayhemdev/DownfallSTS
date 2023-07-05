@@ -16,7 +16,7 @@ public class Bagpipes extends CustomRelic implements OnApplyPowerRelic {
     private static final String OUTLINE_IMG_PATH = Bagpipes.class.getSimpleName() + ".png";
 
     public Bagpipes() {
-        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.RARE, LandingSound.MAGICAL);
     }
 
 

@@ -18,7 +18,7 @@ public class PrismaticTorch extends CustomRelic {
     private static final int EMBER_COUNT = 3;
 
     public PrismaticTorch() {
-        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
         this.tips.add(new CardPowerTip(new Ember()));
     }
 

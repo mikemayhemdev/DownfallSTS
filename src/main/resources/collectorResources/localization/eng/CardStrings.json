@@ -546,8 +546,8 @@
   },
   "collector:ThievesCard": {
     "NAME": "Thieves",
-    "DESCRIPTION": "Take 50% less damage this turn.",
-    "UPGRADE_DESCRIPTION": "Take 50% less damage for the next !M! turns."
+    "DESCRIPTION": "Take 50% less damage from attacks this turn.",
+    "UPGRADE_DESCRIPTION": "Take 50% less damage from attacks for the next !M! turns."
   },
   "collector:TorchHeadCard": {
     "NAME": "Torch Head",

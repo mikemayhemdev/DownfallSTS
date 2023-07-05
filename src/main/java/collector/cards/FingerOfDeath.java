@@ -12,7 +12,7 @@ public class FingerOfDeath extends AbstractCollectorCard {
     // intellij stuff attack, enemy, rare, 50, , , , , 
 
     public FingerOfDeath() {
-        super(ID, 4, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 4, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 60;
     }
 

@@ -15,7 +15,7 @@ public class GreatestHurting extends AbstractCollectorCard {
     // intellij stuff attack, enemy, uncommon, 10, 2, , , 14, 2
 
     public GreatestHurting() {
-        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 30;
         selfRetain = true;
         cardsToPreview = new Ember();
