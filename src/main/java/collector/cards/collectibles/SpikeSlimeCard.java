@@ -15,7 +15,7 @@ public class SpikeSlimeCard extends AbstractCollectibleCard {
 
     public SpikeSlimeCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 15;
+        baseDamage = 13;
         cardsToPreview = new Slimed();
     }
 

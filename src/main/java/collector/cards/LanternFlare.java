@@ -27,8 +27,8 @@ public class LanternFlare extends AbstractCollectorCard {
             public void update() {
                 isDone = true;
                 AbstractMonster q = AbstractDungeon.getRandomMonster();
-                applyToEnemyTop(q, new DoomPower(q, magicNumber));
                 dmgTop(q, AttackEffect.FIRE);
+                applyToEnemyTop(q, new DoomPower(q, magicNumber));
             }
         });
     }

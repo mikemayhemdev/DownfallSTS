@@ -13,8 +13,8 @@ public class JawWormCard extends AbstractCollectibleCard {
 
     public JawWormCard() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 14;
-        baseMagicNumber = magicNumber = 2;
+        baseBlock = 10;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

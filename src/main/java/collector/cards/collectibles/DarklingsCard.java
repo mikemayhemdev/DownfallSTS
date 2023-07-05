@@ -1,11 +1,14 @@
 package collector.cards.collectibles;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DuplicationPower;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.applyToSelf;
+import static collector.util.Wiz.*;
 
 public class DarklingsCard extends AbstractCollectibleCard {
     public final static String ID = makeID(DarklingsCard.class.getSimpleName());
@@ -16,7 +19,12 @@ public class DarklingsCard extends AbstractCollectibleCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new DuplicationPower(p, 2));
+        atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
+            for (AbstractCard q : cards) {
+                att(new MakeTempCardInHandAction(q, true));
+                att(new MakeTempCardInHandAction(q, true));
+            }
+        }));
     }
 
     public void upp() {

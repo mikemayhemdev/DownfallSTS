@@ -12,7 +12,7 @@ public class SpikerCard extends AbstractCollectibleCard {
     // intellij stuff power, self, common, , , , , 5, 3
 
     public SpikerCard() {
-        super(ID, 0, CardType.POWER, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 5;
     }
 

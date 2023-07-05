@@ -13,7 +13,7 @@ public class RepulsorCard extends AbstractCollectibleCard {
 
     public RepulsorCard() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
         isPyre();
     }
 

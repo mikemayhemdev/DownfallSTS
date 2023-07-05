@@ -14,7 +14,7 @@ public class SneakyGremlinCard extends AbstractCollectibleCard {
 
     public SneakyGremlinCard() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 10;
+        baseDamage = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -23,6 +23,6 @@ public class SneakyGremlinCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(4);
     }
 }

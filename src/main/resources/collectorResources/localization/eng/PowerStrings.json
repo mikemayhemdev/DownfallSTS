@@ -175,9 +175,8 @@
   "collector:ThievesCard": {
     "NAME": "Dodgy",
     "DESCRIPTIONS": [
-      "Take #b50% less damage this turn.",
-      "Take #b50% less damage for the next #b",
-      " turns."
+      "Take #b",
+      " less damage from attacks this turn.",
     ]
   },
   "collector:BookofStabbingCard": {
@@ -213,6 +212,21 @@
     "NAME": "Vigor Next Turn",
     "DESCRIPTION": [
       "At the start of your next turn, gain #b",
+      " #yVigor."
+    ]
+  },
+  "collector:AcidSlimeCard": {
+    "NAME": "Slimy Duplication",
+    "DESCRIPTIONS": [
+      "Your next #yAttack or #ySkill this turn is played twice.",
+      "Your next #b",
+      " #yAttacks or #ySkills this turn are played twice."
+    ]
+  },
+  "collector:GremlinNobCard": {
+    "NAME": "Angery",
+    "DESCRIPTIONS": [
+      "Whenever you play a #ySkill, gain #b",
       " #yVigor."
     ]
   }
