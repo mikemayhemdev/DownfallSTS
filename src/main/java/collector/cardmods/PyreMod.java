@@ -18,9 +18,6 @@ public class PyreMod extends AbstractCardModifier {
         return ID;
     }
 
-    public PyreMod() {
-    }
-
     @Override
     public AbstractCardModifier makeCopy() {
         return new PyreMod();

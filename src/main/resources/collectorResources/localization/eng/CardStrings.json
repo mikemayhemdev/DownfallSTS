@@ -198,6 +198,14 @@
     "NAME": "Master's Call",
     "DESCRIPTION": "Gain !M! Temporary_HP. NL Whenever you play an Attack, if you have Temporary_HP, deal !clm2! damage to a random enemy."
   },
+  "collector:LensOfGreenpyre": {
+    "NAME": "Lens of Greenpyre",
+    "DESCRIPTION": "Put !M! card from your Collected pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your Collected pile into your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "to add into your hand."
+    ]
+  },
   "collector:MiniCurse": {
     "NAME": "Mini-Curse",
     "DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable.",
@@ -526,7 +534,7 @@
   },
   "collector:SphericGuardianCard": {
     "NAME": "Spheric Guardian",
-    "DESCRIPTION": "Gain !M! downfall:Blur."
+    "DESCRIPTION": "Gain 3 downfall:Blur."
   },
   "collector:SpikerCard": {
     "NAME": "Spiker",

@@ -17,7 +17,7 @@
   },
   "collector:HolidayCoal": {
     "NAME": "Krampian Coal",
-    "FLAVOR": "\"Intriguing! But why only these chimneys?\" - Ranwid",
+    "FLAVOR": "\"Intriguing! But why only specific chimneys?\" - Ranwid",
     "DESCRIPTIONS": [
       "The first time you #yExhaust a card each turn, gain #b",
       " #yBlock."
@@ -77,7 +77,7 @@
   },
   "collector:Bagpipes": {
     "NAME": "The Bagpipes",
-    "FLAVOR": "This cursed, dreaded instrument is said to have driven Kublai the Great mad.",
+    "FLAVOR": "This dreaded instrument is said to have driven Kublai the Great mad.",
     "DESCRIPTIONS": [
       "Whenever you apply #yWeak or #yVulnerable, increase the amount applied by #b1."
     ]
