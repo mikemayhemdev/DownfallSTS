@@ -159,7 +159,7 @@
     "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 an *余烬 。"
   },
   "collector:GreenGaze": {
-    "NAME": "绿凝",
+    "NAME": "绿眸",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合用过藏品牌， NL 获得 !B! 点 格挡 。"
   },
   "collector:Heatwave": {
