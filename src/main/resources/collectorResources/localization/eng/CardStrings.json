@@ -75,7 +75,7 @@
     "UPGRADE_DESCRIPTION": "Your Collected cards are played twice."
   },
   "collector:DarkwoodKindling": {
-    "NAME": "Darkwood Kindling",
+    "NAME": "Darkwillow Kindling",
     "DESCRIPTION": "Unplayable. NL When *Exhausted, ALL enemies lose !M! HP.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
