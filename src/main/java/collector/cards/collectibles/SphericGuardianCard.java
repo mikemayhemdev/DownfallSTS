@@ -14,10 +14,11 @@ public class SphericGuardianCard extends AbstractCollectibleCard {
 
     public SphericGuardianCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        this.baseMagicNumber = this.magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new BlurPower(p, 3));
+        applyToSelf(new BlurPower(p, this.magicNumber));
     }
 
     public void upp() {

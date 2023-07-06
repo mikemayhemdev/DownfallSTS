@@ -11,7 +11,7 @@ public class GiantHeadCardStageThree extends AbstractCollectibleCard {
     // intellij stuff attack, all_enemy, uncommon, 55, 11, , , , 
 
     public GiantHeadCardStageThree() {
-        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
+        super(ID, 3, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
         baseDamage = 70;
     }
 
