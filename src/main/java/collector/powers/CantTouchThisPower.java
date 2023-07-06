@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.util.Wiz.applyToEnemy;
+import static collector.util.Wiz.applyToEnemyTop;
 
 public class CantTouchThisPower extends AbstractCollectorPower {
     public static final String NAME = "CantTouchThis";
@@ -20,7 +21,7 @@ public class CantTouchThisPower extends AbstractCollectorPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (damageAmount <= owner.currentBlock && info.owner instanceof AbstractMonster && info.type == DamageInfo.DamageType.NORMAL) {
             flash();
-            applyToEnemy((AbstractMonster) info.owner, new DoomPower((AbstractMonster) info.owner, amount));
+            applyToEnemyTop((AbstractMonster) info.owner, new DoomPower((AbstractMonster) info.owner, amount));
         }
         return damageAmount;
     }

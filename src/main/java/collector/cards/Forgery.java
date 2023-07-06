@@ -34,6 +34,7 @@ public class Forgery extends AbstractCollectorCard {
                 toShow.add(possibilities.remove(AbstractDungeon.cardRandomRng.random(possibilities.size() - 1)));
             }
             addToBot(new SelectCardsCenteredAction(toShow, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
+                CollectorCollection.combatCollection.removeCard(cards.get(0));
                 att(new MakeTempCardInHandAction(cards.get(0), true));
             }));
         }

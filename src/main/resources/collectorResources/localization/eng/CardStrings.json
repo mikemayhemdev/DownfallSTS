@@ -9,7 +9,7 @@
   },
   "collector:Arrogance": {
     "NAME": "Arrogance",
-    "DESCRIPTION": "Gain !B! Block. NL Your next Attack this turn applies !M! collector:Doom."
+    "DESCRIPTION": "Gain !B! Block. NL This turn, Your next Attack also applies !M! collector:Doom."
   },
   "collector:AshesAndDust": {
     "NAME": "Ashes and Dust",
@@ -17,7 +17,7 @@
   },
   "collector:BindingCall": {
     "NAME": "Binding Call",
-    "DESCRIPTION": "Gain !M! Temporary_HP. Whenever you lose all your Temporary_HP, apply !clm2! collector:Doom to ALL enemies."
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. Whenever you lose all your expansioncontent:Temp_HP, apply !clm2! collector:Doom to ALL enemies."
   },
   "collector:Billow": {
     "NAME": "Billow",
@@ -25,7 +25,7 @@
   },
   "collector:Bellow": {
     "NAME": "Bellow",
-    "DESCRIPTION": "Apply collector:Doom equal to unused Block last turn.",
+    "DESCRIPTION": "Ethereal. NL Apply collector:Doom equal to unused Block last turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL ( Applies !M! collector:Doom )"
     ]
@@ -44,7 +44,7 @@
   },
   "collector:BramblesparKindling": {
     "NAME": "Bramblespar Kindling",
-    "DESCRIPTION": "Unplayable. NL When Exhausted, add a *Strike into your hand and upgrade it !M! times.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, add a *Strike into your hand and upgrade it !M! times.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
@@ -55,7 +55,7 @@
   },
   "collector:CoffinNail": {
     "NAME": "Coffin Nail",
-    "DESCRIPTION": "Deal !D! damage. NL When Exhausted, return it to your hand next turn with !M! more damage."
+    "DESCRIPTION": "Deal !D! damage. NL When *Exhausted, return it to your hand next turn with !M! more damage."
   },
   "collector:Condemn": {
     "NAME": "Condemn",
@@ -76,7 +76,7 @@
   },
   "collector:DarkwoodKindling": {
     "NAME": "Darkwood Kindling",
-    "DESCRIPTION": "Unplayable. NL When Exhausted, ALL enemies lose !M! HP.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, ALL enemies lose !M! HP.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
@@ -95,7 +95,7 @@
   },
   "collector:Ember": {
     "NAME": "Ember",
-    "DESCRIPTION": "Unplayable. NL Retain. NL When Exhausted, gain !M! Strength.",
+    "DESCRIPTION": "Unplayable. NL Retain. NL When *Exhausted, gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [
       "These embers must be lit, not played."
     ]
@@ -110,11 +110,11 @@
   },
   "collector:FeelMyPain": {
     "NAME": "Feel My Pain",
-    "DESCRIPTION": "Whenever you Exhaust a card, a random enemy loses !M! HP."
+    "DESCRIPTION": "Whenever you *Exhaust a card, a random enemy loses !M! HP."
   },
   "collector:FiendFire": {
     "NAME": "Fiend Fire",
-    "DESCRIPTION": "Exhaust all cards in your hand. NL Deal !D! damage for each Exhausted card. NL Exhaust."
+    "DESCRIPTION": "Exhaust your hand. NL Deal !D! damage for each card *Exhausted. NL Exhaust."
   },
   "collector:Finalize": {
     "NAME": "Finalize",
@@ -126,7 +126,7 @@
   },
   "collector:FlameLash": {
     "NAME": "Flame Lash",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the Exhausted card's damage to this."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the *Exhausted card's damage to this."
   },
   "collector:FleetingEmbers": {
     "NAME": "Fleeting Embers",
@@ -196,7 +196,15 @@
   },
   "collector:MastersCall": {
     "NAME": "Master's Call",
-    "DESCRIPTION": "Gain !M! Temporary_HP. NL Whenever you play an Attack, if you have Temporary_HP, deal !clm2! damage to a random enemy."
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL Whenever you play an Attack, if you have expansioncontent:Temp_HP, deal !clm2! damage to a random enemy."
+  },
+  "collector:LensOfGreenpyre": {
+    "NAME": "Lens of Greenpyre",
+    "DESCRIPTION": "Put !M! card from your Collected pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your Collected pile into your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "to add into your hand."
+    ]
   },
   "collector:MiniCurse": {
     "NAME": "Mini-Curse",
@@ -213,7 +221,7 @@
   },
   "collector:OakbrimKindling": {
     "NAME": "Oakbrim Kindling",
-    "DESCRIPTION": "Unplayable. NL When Exhausted, draw !M! cards.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
@@ -224,7 +232,7 @@
   },
   "collector:ProtectingCall": {
     "NAME": "Protecting Call",
-    "DESCRIPTION": "Gain !M! Temporary_HP. At the start of your turn, if you have Temporary_HP, gain !clm2! Block."
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL At the start of your turn, if you have expansioncontent:Temp_HP, gain !clm2! Block."
   },
   "collector:Pyromancy": {
     "NAME": "Pyromancy",
@@ -233,7 +241,7 @@
   },
   "collector:RagingCall": {
     "NAME": "Raging Call",
-    "DESCRIPTION": "Gain !M! Temporary_HP. NL At the end of your turn, if you have Temporary_HP, deal !clm2! damage to ALL enemies."
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL At the end of your turn, if you have expansioncontent:Temp_HP, deal !clm2! damage to ALL enemies."
   },
   "collector:ReceiveTribute": {
     "NAME": "Receive Tribute",
@@ -248,7 +256,7 @@
   },
   "collector:RotwoodKindling": {
     "NAME": "Rotwood Kindling",
-    "DESCRIPTION": "Unplayable. NL When Exhausted, apply !M! Vulnerable to ALL enemies.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, apply !M! Vulnerable to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
@@ -263,7 +271,7 @@
   },
   "collector:SeedOfDoubt": {
     "NAME": "Seed of Doubt",
-    "DESCRIPTION": "Apply !M! collector:Doom. NL Whenever a card is Exhausted, if this is in your hand, increase its collector:Doom by !clm2!."
+    "DESCRIPTION": "Apply !M! collector:Doom. NL Whenever a card is *Exhausted when this is in hand, increase its *Doom by !clm2!."
   },
   "collector:ShadowDaggers": {
     "NAME": "Shadow Daggers",
@@ -276,7 +284,7 @@
   },
   "collector:SomberShield": {
     "NAME": "Somber Shield",
-    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain a copy of the exhausted card."
+    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain a copy of the *Exhausted card."
   },
   "collector:SoulSnare": {
     "NAME": "Soul Snare",
@@ -304,11 +312,11 @@
   },
   "collector:Suffering": {
     "NAME": "Suffering",
-    "DESCRIPTION": "When you apply Weak or Vulnerable to an enemy, also apply !M! collector:Doom to them."
+    "DESCRIPTION": "Whenever you apply *Weak or *Vulnerable to an enemy, also apply !M! collector:Doom to them."
   },
   "collector:SunbloomKindling": {
     "NAME": "Sunbloom Kindling",
-    "DESCRIPTION": "Unplayable. NL When Exhausted, gain !M! Strength and add 2 *Embers into your hand.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, gain !M! Strength and add 2 *Embers into your hand.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
@@ -320,7 +328,7 @@
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer",
-    "DESCRIPTION": "Gain !M! Temporary_HP. NL Exhaust."
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL Exhaust."
   },
   "collector:WhirlingFlame": {
     "NAME": "Whirling Flame",
@@ -336,15 +344,11 @@
   },
   "collector:YouAreMine": {
     "NAME": "You Are Mine!",
-    "DESCRIPTION": "Apply !M! Weak, !M! Vulnerable, and !clm2! collector:Doom. NL Enemy loses !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak. NL Apply !M! Vulnerable. Apply !clm2! collector:Doom."
   },
   "collector:Whomp": {
     "NAME": "Whomp",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Temporary_HP. NL Exhaust."
-  },
-  "collector:LouseCard": {
-    "NAME": "Louse",
-    "DESCRIPTION": "The next time you receive unblocked attack damage, gain !B! Block and 1 Blur."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! expansioncontent:Temp_HP. NL Exhaust."
   },
 
 
@@ -452,6 +456,10 @@
     "NAME": "Living Wall",
     "DESCRIPTION": "collector:Pyre. NL Gain a random Upgraded card. NL It costs 0 until played."
   },
+  "collector:LouseCard": {
+    "NAME": "Louse",
+    "DESCRIPTION": "The next time you receive unblocked attack damage, gain !B! Block and 1 Blur."
+  },
   "collector:MadGremlinCard": {
     "NAME": "Mad Gremlin",
     "DESCRIPTION": "Gain !M! Temporary Strength. NL If you receive unblocked attack damage this turn, add a copy of this into your hand."
@@ -470,7 +478,7 @@
   },
   "collector:MysticCard": {
     "NAME": "Mystic",
-    "DESCRIPTION": "Gain !M! Temporary_HP."
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP."
   },
   "collector:NemesisCard": {
     "NAME": "Nemesis",
@@ -490,7 +498,7 @@
   },
   "collector:ReptomancerCard": {
     "NAME": "Reptomancer",
-    "DESCRIPTION": "Gain !M! Temporary_HP. NL At the end of your turn, if you have Temporary_HP, apply !clm2! Poison to a random enemy."
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL At the end of your turn, if you have expansioncontent:Temp_HP, apply !clm2! Poison to a random enemy."
   },
   "collector:RepulsorCard": {
     "NAME": "Repulsor",
@@ -526,7 +534,7 @@
   },
   "collector:SphericGuardianCard": {
     "NAME": "Spheric Guardian",
-    "DESCRIPTION": "Gain !M! downfall:Blur."
+    "DESCRIPTION": "Gain !M! expansioncontent:Blur."
   },
   "collector:SpikerCard": {
     "NAME": "Spiker",

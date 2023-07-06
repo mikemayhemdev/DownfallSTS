@@ -1,23 +1,17 @@
 package downfall.patches;
 
+import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
 import champ.cards.AbstractChampCard;
-import champ.cards.StanceDance;
-import champ.cards.Taunt;
-import champ.cards.WindUp;
-import champ.stances.BerserkerStance;
+import collector.cardmods.PyreMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import sneckomod.SneckoMod;
 import sneckomod.patches.UnknownExtraUiPatch;
 
@@ -33,6 +27,7 @@ public class GlobalExtraCardUIPatch {
     private static TextureAtlas.AtlasRegion openerYR = ChampMod.UIAtlas.findRegion("openerYR");
     private static TextureAtlas.AtlasRegion openerYB = ChampMod.UIAtlas.findRegion("openerYB");
     private static TextureAtlas.AtlasRegion openerRB = ChampMod.UIAtlas.findRegion("openerRB");
+    private static TextureAtlas.AtlasRegion pyreIcon = ChampMod.UIAtlas.findRegion("pyreIcon");//TODO: Move to Downfall
 
     @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
     public static class SecondEnergyRenderPatch {
@@ -85,6 +80,11 @@ public class GlobalExtraCardUIPatch {
             }
 
              */
+
+            if (CardModifierManager.hasModifier(__instance, PyreMod.ID)) {
+                FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
+                renderHelper(sb, pyreIcon, __instance.current_x, __instance.current_y, __instance);
+            }
         }
 
         private static void renderHelper(SpriteBatch sb, TextureAtlas.AtlasRegion img, float drawX, float drawY, AbstractCard C) {
