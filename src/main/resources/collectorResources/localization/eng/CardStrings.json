@@ -203,7 +203,7 @@
     "DESCRIPTION": "Put !M! card from your Collected pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Put !M! cards from your Collected pile into your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "to add into your hand."
+      "Choose a card to add into your hand."
     ]
   },
   "collector:MiniCurse": {
