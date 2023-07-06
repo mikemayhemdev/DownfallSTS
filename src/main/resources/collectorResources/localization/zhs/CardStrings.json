@@ -1,27 +1,27 @@
 {
   "collector:ActOfAggression": {
-    "NAME": "Act of Aggression",
+    "NAME": "侵犯举动",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 易伤 。"
   },
   "collector:AlwaysMore": {
-    "NAME": "多多益善Always More",
+    "NAME": "多多益善",
     "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 金币 。"
   },
   "collector:Arrogance": {
-    "NAME": "Arrogance",
+    "NAME": "巫傲",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张攻击会给予 !M! 层 collector:魂灭 。"
   },
   "collector:AshesAndDust": {
-    "NAME": "Ashes and Dust",
+    "NAME": "成灰成烬",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害X次。 NL 若X大于4， NL 再造成2次。"
   },
   "collector:BindingCall": {
-    "NAME": "Binding Call",
+    "NAME": "羁绊之唤",
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 临时生命 耗尽时， 给予所有敌人 !clm2! 层 collector:魂灭 。"
   },
   "collector:Billow": {
-    "NAME": "Billow",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得一张 *Bellow 。"
+    "NAME": "鼓起",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得一张 *鼓叫 。"
   },
   "collector:Bellow": {
     "NAME": "Bellow",
@@ -44,7 +44,7 @@
     "DESCRIPTION": "获得目标的 藏品 牌， NL 本回合其单次耗能为0。 NL 消耗 。"
   },
   "collector:BramblesparKindling": {
-    "NAME": "Bramblespar Kindling",
+    "NAME": "黑莓木柴",
     "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得一张打击+ !M! 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
@@ -59,7 +59,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 本牌被 消耗 时， NL 下回合返回手牌， NL 且伤害加 !M! 。"
   },
   "collector:Condemn": {
-    "NAME": "Condemn",
+    "NAME": "谴责",
     "DESCRIPTION": "给予 !M! 层 collector:魂灭 。"
   },
   "collector:CursedWail": {
@@ -126,40 +126,40 @@
     "DESCRIPTION": "只能使用 collector:储能 打出。 NL 给予 !M! 层 collector:魂灭 。"
   },
   "collector:FlameLash": {
-    "NAME": "Flame Lash",
+    "NAME": "焰鞭",
     "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 获得所 消耗 牌的伤害。"
   },
   "collector:FleetingEmbers": {
-    "NAME": "Fleeting Embers",
+    "NAME": "转瞬之烬",
     "DESCRIPTION": "获得 !M! 张 *余烬 。"
   },
   "collector:Forgery": {
-    "NAME": "伪造Forgery",
+    "NAME": "伪造",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 从 *收藏堆 !M! 张随机牌中选择获得一张。",
     "EXTENDED_DESCRIPTION": [
       "来加入手牌。"
     ]
   },
   "collector:FuelTheFire": {
-    "NAME": "Fuel the Fire",
+    "NAME": "供火",
     "DESCRIPTION": "collector:焰葬 。 NL 下回合， NL 获得 !M! collector:储能 。"
   },
   "collector:Goodbye": {
-    "NAME": "再幸Goodbye",
+    "NAME": "再幸",
     "DESCRIPTION": "翻倍目标的 collector:魂灭 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "三倍目标的 collector:魂灭 。 NL 消耗 。"
   },
   "collector:GreaterHurting": {
-    "NAME": "Greater Hurting",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *Greatest *Hurting。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *Greatest *Hurting+。"
+    "NAME": "伤魂",
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *伤命 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *伤命+ 。"
   },
   "collector:GreatestHurting": {
-    "NAME": "Greatest Hurting",
+    "NAME": "伤命",
     "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 an *余烬 。"
   },
   "collector:GreenGaze": {
-    "NAME": "Green Gaze",
+    "NAME": "绿凝",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合用过藏品牌， NL 获得 !B! 点 格挡 。"
   },
   "collector:Heatwave": {
@@ -167,28 +167,28 @@
     "DESCRIPTION": "对被 collector:折磨 的敌人造成 !D! 点伤害。 NL 获得一张 *余烬 。"
   },
   "collector:Hoard": {
-    "NAME": "囤积Hoard",
+    "NAME": "囤积",
     "DESCRIPTION": "抽 !M! 张牌。 NL 将其保留至下回合， NL 但本回合无法打出。"
   },
   "collector:HoardersStrike": {
-    "NAME": "Hoarder's Strike",
+    "NAME": "囤积者打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 打出 *收藏堆 顶部的牌。"
   },
   "collector:Hurting": {
-    "NAME": "Hurting",
-    "DESCRIPTION": "保留 。  NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *Greater *Hurting。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *Greater *Hurting+。"
+    "NAME": "伤体",
+    "DESCRIPTION": "保留 。  NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *伤魂 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *伤魂+ 。"
   },
   "collector:IllTakeThat": {
     "NAME": "I'll Take That",
     "DESCRIPTION": "窃取至多 !M! 点 格挡 。 NL 造成 !D! 点伤害。"
   },
   "collector:InflictAgony": {
-    "NAME": "Inflict Agony",
+    "NAME": "殃痛",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标不被 collector:折磨 ， NL 给予2层 虚弱 与 易伤 。"
   },
   "collector:Invigorate": {
-    "NAME": "Invigorate",
+    "NAME": "精神焕发",
     "DESCRIPTION": "获得 !M! 层 活力。 NL 下回合获得 !M! 层 活力 。"
   },
   "collector:LanternFlare": {
@@ -196,7 +196,7 @@
     "DESCRIPTION": "collector:焰葬 。 NL 随机造成 !D! 点伤害并给予 !M! 层 collector:魂灭 。"
   },
   "collector:MastersCall": {
-    "NAME": "Master's Call",
+    "NAME": "主宰之唤",
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 打出攻击时， NL 若有 临时生命 ， NL 随机造成 !clm2! 点伤害。"
   },
   "collector:LensOfGreenpyre": {
@@ -213,7 +213,7 @@
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 给予所有敌人1层 虚弱 与 易伤 。"
   },
   "collector:Misdirect": {
-    "NAME": "Misdirect",
+    "NAME": "误导",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得1 collector:储能 。"
   },
   "collector:MysteryWeaving": {
@@ -232,7 +232,7 @@
     "DESCRIPTION": "攻击 collector:折磨 中的敌人时，移除其1层 虚弱 与 易伤 ，来使其失去 !M! 点生命。"
   },
   "collector:ProtectingCall": {
-    "NAME": "Protecting Call",
+    "NAME": "佑护之唤",
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合开始时， NL 若有 临时生命 ， 获得 !clm2! 点 格挡 。"
   },
   "collector:Pyromancy": {
@@ -241,11 +241,11 @@
     "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得 1 collector:储能 。"
   },
   "collector:RagingCall": {
-    "NAME": "Raging Call",
+    "NAME": "暴怒之唤",
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合结束时， NL 若有 临时生命 ， NL 对所有敌人造成 !clm2! 点伤害 。"
   },
   "collector:ReceiveTribute": {
-    "NAME": "纳贡Receive Tribute",
+    "NAME": "纳贡",
     "DESCRIPTION": "collector:焰葬 。 NL 从 !M! 张随机首领牌中选择获得一张，其附带 保留 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌来加入手牌。"
@@ -267,7 +267,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 力量 ，NL 窃取至多 !M! 点。"
   },
   "collector:ScorchingRay": {
-    "NAME": "Scorching Ray",
+    "NAME": "灼烧光线",
     "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
   },
   "collector:SeedOfDoubt": {
@@ -284,19 +284,19 @@
     ]
   },
   "collector:SomberShield": {
-    "NAME": "Somber Shield",
+    "NAME": "阴沉护盾",
     "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得所 消耗 牌的复制品。"
   },
   "collector:SoulSnare": {
-    "NAME": "灵魂诱捕Soul Snare",
+    "NAME": "灵魂诱捕",
     "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 消耗 。"
   },
   "collector:SparkStrike": {
-    "NAME": "火花打击Spark Strike",
+    "NAME": "火花打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *余烬 。"
   },
   "collector:SpiritLeech": {
-    "NAME": "Spirit Leech",
+    "NAME": "汲灵",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 抽 !M! 张牌。"
   },
   "collector:StashAway": {
@@ -304,11 +304,11 @@
     "DESCRIPTION": "获得 1 collector:储能 。 NL 将 collector:储能 翻倍。 NL 消耗 。"
   },
   "collector:Strike": {
-    "NAME": "Strike",
+    "NAME": "打击",
     "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "collector:SuckerPunch": {
-    "NAME": "Sucker Punch",
+    "NAME": "突然一拳",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
   },
   "collector:Suffering": {
@@ -328,7 +328,7 @@
     "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 再造成两次。"
   },
   "collector:Torchbearer": {
-    "NAME": "火炬御者Torchbearer",
+    "NAME": "火炬御者",
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 消耗 。"
   },
   "collector:WhirlingFlame": {
@@ -344,8 +344,8 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 所有不可打出的手牌，每张获得 !B! 点 格挡 。"
   },
   "collector:YouAreMine": {
-    "NAME": "汝乃吾物！",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL 给予 !clm2! 层 collector:魂灭 。 NL 目标失去 !M! 点 力量 。 NL 消耗 。"
+    "NAME": "你是我的了",
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL 给予 !clm2! 层 collector:魂灭 。"
   },
   "collector:Whomp": {
     "NAME": "当头杖喝",
@@ -355,10 +355,6 @@
 
 
 
-  "collector:LouseCard": {
-    "NAME": "虱虫",
-    "DESCRIPTION": "下次被攻击而失去生命时，获得 !B! 点 格挡 与1层 bronze:残影 。"
-  },
   "collector:AcidSlimeCard": {
     "NAME": "酸液史莱姆",
     "DESCRIPTION": "本回合下张攻击或技能额外打出一次。"
@@ -454,8 +450,12 @@
     "NAME": "乐加维林",
     "DESCRIPTION": "所有敌人 失去 !M! 力量 。"
   },
+  "collector:LouseCard": {
+    "NAME": "虱虫",
+    "DESCRIPTION": "下次被攻击而失去生命时，获得 !B! 点 格挡 与1层 bronze:残影 。"
+  },
   "collector:LivingWallCard": {
-    "NAME": "活墙壁Living Wall",
+    "NAME": "活墙壁",
     "DESCRIPTION": "collector:焰葬 。 NL 随机获得一张牌+， NL 其单次耗能为0。"
   },
   "collector:MadGremlinCard": {
@@ -504,7 +504,7 @@
   },
   "collector:RomeoCard": {
     "NAME": "罗密欧",
-    "DESCRIPTION": "Your next Attack this turn costs 0 and 造成s !M! additional 点伤害。"
+    "DESCRIPTION": "本回合下张攻击耗能变为0且额外造成 !M! 点伤害。"
   },
   "collector:SentryCard": {
     "NAME": "哨卫",
@@ -528,11 +528,11 @@
   },
   "collector:SneckoCard": {
     "NAME": "异蛇",
-    "DESCRIPTION": "抽 !M! 张牌。 NL sneckomod:Muddle your hand。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL sneckomod:混淆 所有手牌。"
   },
   "collector:SphericGuardianCard": {
     "NAME": "圆球守护者",
-    "DESCRIPTION": "获得3层 bronze:残影 。"
+    "DESCRIPTION": "获得 !M! 层 bronze:残影 。"
   },
   "collector:SpikerCard": {
     "NAME": "钉刺机",
@@ -540,7 +540,7 @@
   },
   "collector:SpikeSlimeCard": {
     "NAME": "尖刺史莱姆",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add 1 *Slimed into your discard pile。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 *黏液 加入弃牌堆。"
   },
   "collector:SpireGrowthCard": {
     "NAME": "塔内增生组织",
@@ -552,11 +552,11 @@
   },
   "collector:ThievesCard": {
     "NAME": "盗贼",
-    "DESCRIPTION": "Take !M! less damage from attacks this turn."
+    "DESCRIPTION": "本回合少受到 !M! 点攻击伤害。"
   },
   "collector:TorchHeadCard": {
     "NAME": "火炬头",
-    "DESCRIPTION": "Add a random Torchhead Call into your hand。 NL It costs 0 this turn。"
+    "DESCRIPTION": "随机获得一张呼唤， NL 其本回合单次耗能为0。"
   },
   "collector:TransientCard": {
     "NAME": "倏忽魔",
@@ -566,8 +566,6 @@
     "NAME": "扭曲团块",
     "DESCRIPTION": "预见 !M! 。 NL 打出抽牌堆顶部的牌。"
   },
-
-
 
 
   "collector:DefaultCollectibleCard": {
