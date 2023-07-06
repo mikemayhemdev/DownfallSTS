@@ -7,10 +7,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.atb;
-import static collector.util.Wiz.att;
+import static collector.util.Wiz.*;
 
 public class Wildfire extends AbstractCollectorCard {
     public final static String ID = makeID(Wildfire.class.getSimpleName());
@@ -41,5 +42,16 @@ public class Wildfire extends AbstractCollectorCard {
     public void upp() {
         upgradeDamage(5);
         upgradeBlock(1);
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c.cost == -2) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+                return;
+            }
+        }
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 }

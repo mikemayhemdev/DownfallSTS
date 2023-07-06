@@ -2,11 +2,14 @@ package collector.cards.collectibles;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.atb;
+import static collector.util.Wiz.getEnemies;
 
 public class BearCard extends AbstractCollectibleCard {
     public final static String ID = makeID(BearCard.class.getSimpleName());
@@ -27,5 +30,16 @@ public class BearCard extends AbstractCollectibleCard {
     public void upp() {
         upgradeDamage(3);
         upgradeBlock(3);
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        for (AbstractMonster m : getEnemies()) {
+            if (m.currentBlock > 0) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+                return;
+            }
+        }
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 }

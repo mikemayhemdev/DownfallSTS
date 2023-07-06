@@ -47,5 +47,6 @@ public class GreaterHurting extends AbstractCollectorCard {
     public void upp() {
         upgradeDamage(8);
         uDesc();
+        cardsToPreview.upgrade();
     }
 }
