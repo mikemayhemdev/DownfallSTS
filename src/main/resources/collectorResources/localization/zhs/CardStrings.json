@@ -25,7 +25,7 @@
   },
   "collector:Bellow": {
     "NAME": "Bellow",
-    "DESCRIPTION": "给予你上回合余下的 格挡 层 collector:魂灭 。",
+    "DESCRIPTION": "虚无 。 NL 给予你上回合余下的 格挡 层 collector:魂灭 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL (给予 !M! 层 collector:魂灭 )"
     ]
