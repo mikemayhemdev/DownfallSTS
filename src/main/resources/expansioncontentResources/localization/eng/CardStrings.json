@@ -16,7 +16,7 @@
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E]. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Next turn, lose [E]. NL Exhaust."
   },
   "expansioncontent:LastStand": {
     "NAME": "Last Stand",

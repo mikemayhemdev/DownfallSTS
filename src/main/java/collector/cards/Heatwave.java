@@ -1,8 +1,11 @@
 package collector.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.*;
@@ -34,5 +37,16 @@ public class Heatwave extends AbstractCollectorCard {
 
     public void upp() {
         upgradeDamage(4);
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        for (AbstractMonster m : getEnemies()) {
+            if (m.hasPower(VulnerablePower.POWER_ID) && m.hasPower(WeakPower.POWER_ID)) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+                return;
+            }
+        }
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 }
