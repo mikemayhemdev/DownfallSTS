@@ -199,6 +199,14 @@
     "NAME": "Master's Call",
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 打出攻击时， NL 若有 临时生命 ， NL 随机造成 !clm2! 点伤害。"
   },
+  "collector:LensOfGreenpyre": {
+    "NAME": "Lens of Greenpyre",
+    "DESCRIPTION": "Put !M! card from your Collected pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your Collected pile into your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "to add into your hand."
+    ]
+  },
   "collector:MiniCurse": {
     "NAME": "Mini-Curse",
     "DESCRIPTION": "collector:焰葬 。 NL 给予1层 虚弱 与 易伤 。",
@@ -524,7 +532,7 @@
   },
   "collector:SphericGuardianCard": {
     "NAME": "圆球守护者",
-    "DESCRIPTION": "获得 !M! 层 bronze:残影 。"
+    "DESCRIPTION": "获得3层 bronze:残影 。"
   },
   "collector:SpikerCard": {
     "NAME": "钉刺机",
