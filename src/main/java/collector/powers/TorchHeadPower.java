@@ -1,6 +1,7 @@
 package collector.powers;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -10,11 +11,12 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static collector.util.Wiz.applyToEnemyTop;
 import static collector.util.Wiz.atb;
 
-public class TorchHeadPower extends AbstractCollectorPower {
+public class TorchHeadPower extends AbstractCollectorPower implements NonStackablePower {
     public static final String NAME = "TorchHead";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
@@ -41,6 +43,7 @@ public class TorchHeadPower extends AbstractCollectorPower {
                 System.out.println("Incorrect value for torchhead call power! Should be 0-2");
                 break;
         }
+        updateDescription();
     }
 
     @Override
@@ -76,7 +79,7 @@ public class TorchHeadPower extends AbstractCollectorPower {
         StringBuilder sb = new StringBuilder();
         sb.append(DESCRIPTIONS[0]);
         if (onAttackRandomDoom > 0) {
-            sb.append(DESCRIPTIONS[1] + amount + DESCRIPTIONS[2]);
+            sb.append(DESCRIPTIONS[1] + onAttackRandomDoom + DESCRIPTIONS[2]);
             if (onAttackAOE > 0 && onAttackRandomDoom > 0) {
                 sb.append(DESCRIPTIONS[3]);
             } else if (onAttackAOE > 0 || onAttackRandomDoom > 0) {
@@ -86,7 +89,7 @@ public class TorchHeadPower extends AbstractCollectorPower {
             }
         }
         if (onAttackAOE > 0) {
-            sb.append(DESCRIPTIONS[4] + amount + DESCRIPTIONS[5]);
+            sb.append(DESCRIPTIONS[4] + onAttackAOE + DESCRIPTIONS[5]);
             if (onAttackRandomDoom > 0 && onAttackBlock > 0) {
                 sb.append(DESCRIPTIONS[6]);
             } else if (onAttackBlock > 0) {
@@ -96,12 +99,23 @@ public class TorchHeadPower extends AbstractCollectorPower {
             }
         }
         if (onAttackBlock > 0) {
-            sb.append(DESCRIPTIONS[7] + amount + DESCRIPTIONS[8]);
+            sb.append(DESCRIPTIONS[7] + onAttackBlock + DESCRIPTIONS[8]);
         }
         description = sb.toString();
     }
 
     @Override
     public void stackPower(int stackAmount) {
+    }
+
+    @Override
+    public boolean isStackable(AbstractPower power) {
+        if (power instanceof TorchHeadPower) {
+            this.onAttackRandomDoom += ((TorchHeadPower) power).onAttackRandomDoom;
+            this.onAttackAOE += ((TorchHeadPower) power).onAttackAOE;
+            this.onAttackBlock += ((TorchHeadPower) power).onAttackBlock;
+            updateDescription();
+        }
+        return true;
     }
 }

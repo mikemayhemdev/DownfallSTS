@@ -1,7 +1,10 @@
 package collector;
 
 import basemod.abstracts.CustomPlayer;
-import collector.cards.*;
+import collector.cards.Defend;
+import collector.cards.FuelTheFire;
+import collector.cards.Strike;
+import collector.cards.YouAreMine;
 import collector.relics.EmeraldTorch;
 import collector.util.DoubleEnergyOrb;
 import collector.util.RenderOnlyTorchHead;
@@ -214,7 +217,8 @@ public class CollectorChar extends CustomPlayer {
                 this.fireTimer = 0.07F;
                 AbstractDungeon.effectList.add(new GlowyFireEyesEffect(this.skeleton.getX() + this.skeleton.findBone("lefteyefireslot").getX(), this.skeleton.getY() + this.skeleton.findBone("lefteyefireslot").getY() + 140.0F * Settings.scale));
                 AbstractDungeon.effectList.add(new GlowyFireEyesEffect(this.skeleton.getX() + this.skeleton.findBone("righteyefireslot").getX(), this.skeleton.getY() + this.skeleton.findBone("righteyefireslot").getY() + 140.0F * Settings.scale));
-                AbstractDungeon.effectList.add(new StaffFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() - 120.0F * Settings.scale, this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 390.0F * Settings.scale));   }
+                AbstractDungeon.effectList.add(new StaffFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() - 120.0F * Settings.scale, this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 390.0F * Settings.scale));
+            }
         }
 
     }
@@ -241,7 +245,9 @@ public class CollectorChar extends CustomPlayer {
         super.combatUpdate();
 
         if (torchHead != null) {
-            //torchHead.update();
+            if (Wiz.isInCombat() && TempHPField.tempHp.get(AbstractDungeon.player) > 0) {
+                torchHead.update();
+            }
             torchHead.drawX = drawX + TORCHHEAD_XDIFF;
             torchHead.drawY = drawY + TORCHHEAD_YDIFF;
         }

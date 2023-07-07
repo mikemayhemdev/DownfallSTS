@@ -559,7 +559,7 @@
   },
   "collector:SentryCard": {
     "NAME": "Sentry",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak to ALL enemies. NL Repeat for each *Sentry in your exhaust pile."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Repeat for each *Sentry in your exhaust pile."
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Shelled Parasite",
