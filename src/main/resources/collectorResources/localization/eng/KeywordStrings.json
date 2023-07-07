@@ -35,5 +35,12 @@
       "collected"
     ],
     "DESCRIPTION": "Collected cards move to the exhaust pile when played and at the end of your turn, no matter where they are."
+  },
+  {
+    "PROPER_NAME": "Torch Head",
+    "NAMES": [
+      "torchhead"
+    ],
+    "DESCRIPTION": "While you have #yTemporary #yHP, each Attack you play triggers Torchhead."
   }
 ]

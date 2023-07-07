@@ -1,6 +1,6 @@
 package collector.cards;
 
-import collector.powers.BindingCallPower;
+import collector.powers.TorchHeadPower;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,16 +15,16 @@ public class BindingCall extends AbstractCollectorCard {
     public BindingCall() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 6;
-        baseSecondMagic = secondMagic = 12;
+        baseSecondMagic = secondMagic = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new AddTemporaryHPAction(p, p, magicNumber));
-        applyToSelf(new BindingCallPower(secondMagic));
+        applyToSelf(new TorchHeadPower(0, secondMagic));
     }
 
     public void upp() {
         upgradeMagicNumber(2);
-        upgradeSecondMagic(3);
+        upgradeSecondMagic(2);
     }
 }
