@@ -13,7 +13,7 @@ public class FlameLash extends AbstractCollectorCard implements OnPyreCard {
     // intellij stuff attack, enemy, common, 8, 2, , , 8, 2
 
     public FlameLash() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
         isPyre();
     }

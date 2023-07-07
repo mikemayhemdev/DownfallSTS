@@ -1,6 +1,7 @@
 package collector.cards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -14,11 +15,7 @@ public class BramblesparKindling extends AbstractCollectorCard {
     public BramblesparKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 5;
-        AbstractCard q = new Strike();
-        q.name = q.name + "+" + magicNumber;
-        q.upgraded = true;
-        q.baseDamage += 3 * magicNumber;
-        cardsToPreview = q;
+        cardsToPreview = new BurningStrike();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,19 +29,17 @@ public class BramblesparKindling extends AbstractCollectorCard {
 
     @Override
     public void triggerOnExhaust() {
-        AbstractCard q = new Strike();
-        q.name = q.name + "+" + magicNumber;
-        q.upgraded = true;
-        q.baseDamage += 3 * magicNumber;
-        makeInHand(q.makeStatEquivalentCopy()); // It works!
+        AbstractCard q = new BurningStrike();
+        if (upgraded) {
+            q.upgrade();
+        }
+        makeInHand(q);
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
-        AbstractCard q = new Strike();
-        q.name = q.name + "+" + magicNumber;
-        q.upgraded = true;
-        q.baseDamage += 3 * magicNumber;
-        cardsToPreview = q;
+        AbstractCard tar = new BurningStrike();
+        tar.upgrade();
+        cardsToPreview = tar;
+        uDesc();
     }
 }

@@ -5,8 +5,10 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ThornsPower;
 
 import static collector.CollectorMod.makeID;
+import static collector.util.Wiz.applyToSelf;
 import static collector.util.Wiz.atb;
 
 public class SpikeSlimeCard extends AbstractCollectibleCard {
@@ -14,17 +16,15 @@ public class SpikeSlimeCard extends AbstractCollectibleCard {
     // intellij stuff attack, enemy, common, 15, 5, , , , 
 
     public SpikeSlimeCard() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 13;
-        cardsToPreview = new Slimed();
+        super(ID, 1, CardType.POWER, CardRarity.COMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        atb(new MakeTempCardInDiscardAction(new Slimed(), 1));
+        applyToSelf(new ThornsPower(p, magicNumber));
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeMagicNumber(2);
     }
 }

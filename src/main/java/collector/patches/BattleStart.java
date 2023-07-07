@@ -1,6 +1,5 @@
 package collector.patches;
 
-import collector.cards.AshesAndDust;
 import collector.cards.Bellow;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,6 +11,5 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 public class BattleStart {
     public static void Prefix(AbstractPlayer __instance) {
         Bellow.BLOCK_AMT_LOST = 0;
-        AshesAndDust.exhaustedThisTurn = false;
     }
 }

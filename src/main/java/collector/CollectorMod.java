@@ -232,7 +232,7 @@ public class CollectorMod implements
         }
     }
 
-    private static CombatCollectionPileButton combatCollectionPileButton;
+    public static CombatCollectionPileButton combatCollectionPileButton;
 
     public static void renderCombatUiElements(SpriteBatch sb) {
         if (Wiz.isInCombat() && AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {

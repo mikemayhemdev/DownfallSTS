@@ -1,10 +1,18 @@
 package collector.powers;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
+
+import java.util.ArrayList;
 
 import static collector.util.Wiz.applyToEnemy;
 import static collector.util.Wiz.atb;
@@ -20,11 +28,26 @@ public class NextAttackAppliesDoomPower extends AbstractCollectorPower {
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK && action.target != null && card.target == AbstractCard.CardTarget.ENEMY || card.target == AbstractCard.CardTarget.SELF_AND_ENEMY) {
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        if (card.type == AbstractCard.CardType.ATTACK) {
+            ArrayList<AbstractMonster> targets;
+            if (m != null) {
+                targets = new ArrayList<>();
+                targets.add(m);
+            } else {
+                targets = AbstractDungeon.getMonsters().monsters;
+            }
+            int toDamage = amount;
             flash();
-            applyToEnemy((AbstractMonster) action.target, new DoomPower((AbstractMonster) action.target, amount));
-            atb(new RemoveSpecificPowerAction(owner, owner, this));
+            for (AbstractMonster tar : targets) {
+                atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        applyToEnemy(tar, new DoomPower(tar, toDamage));
+                        isDone = true;
+                    }
+                });
+            }
         }
     }
 
@@ -38,5 +61,4 @@ public class NextAttackAppliesDoomPower extends AbstractCollectorPower {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
-    //TODO: Figure out how it works with aoe cards. Check against Bard's Magical Weapon power
 }
