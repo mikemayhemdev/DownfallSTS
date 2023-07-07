@@ -7,6 +7,11 @@
     "NAME": "Always More",
     "DESCRIPTION": "collector:Pyre. NL Gain !M! Gold."
   },
+  "collector:AshenStrike": {
+    "NAME": "Ashen Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle a *Spark into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle a *Spark+ into your draw pile."
+  },
   "collector:Arrogance": {
     "NAME": "Arrogance",
     "DESCRIPTION": "Gain !B! Block. NL Your next Attack this turn also applies !M! collector:Doom."
@@ -161,6 +166,10 @@
     "DESCRIPTION": "Double the enemy's collector:Doom. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple the enemy's collector:Doom. NL Exhaust."
   },
+  "collector:GourmandsGaze": {
+    "NAME": "Gourmand's Gaze",
+    "DESCRIPTION": "Deal !D! damage. NL If you played a collector:Collected card this turn, gain !B! Block."
+  },
   "collector:GreaterHurting": {
     "NAME": "Greater Hurting",
     "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greatest *Hurting.",
@@ -170,9 +179,13 @@
     "NAME": "Greatest Hurting",
     "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with an *Ember."
   },
-  "collector:GreenGaze": {
-    "NAME": "Green Gaze",
-    "DESCRIPTION": "Deal !D! damage. NL If you played a collector:Collected card this turn, gain !B! Block."
+  "collector:GreenpyreLocus": {
+    "NAME": "Greenpyre Locus",
+    "DESCRIPTION": "collector:Pyre. NL Put !M! card from your Collected pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Put !M! cards from your Collected pile into your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to add into your hand."
+    ]
   },
   "collector:Heatwave": {
     "NAME": "Heat Wave",
@@ -203,6 +216,14 @@
     "NAME": "Invigorate",
     "DESCRIPTION": "collector:Pyre. NL Gain !M! Vigor. NL Next turn, gain !M! Vigor."
   },
+  "collector:IronbarkKindling": {
+    "NAME": "Ironbark Kindling",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When *Exhausted, gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "I must light this kindling to use it."
+    ]
+  },
   "collector:ItMattersNot": {
     "NAME": "It Matters Not",
     "DESCRIPTION": "Gain !B! Block. NL Draw 1 card from your Collected pile."
@@ -220,14 +241,6 @@
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
     "DESCRIPTION": "collector:Pyre. NL Apply !M! collector:Doom and deal !D! damage to a random enemy."
-  },
-  "collector:LensOfGreenpyre": {
-    "NAME": "Lens of Greenpyre",
-    "DESCRIPTION": "Put !M! card from your Collected pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put !M! cards from your Collected pile into your hand. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Choose a card to add into your hand."
-    ]
   },
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",
@@ -306,7 +319,7 @@
   },
   "collector:ShadowDaggers": {
     "NAME": "Shadow Daggers",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each Collected card played this combat. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each Collected card played this combat. Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " time.)",
@@ -326,14 +339,9 @@
     "DESCRIPTION": "Gain 1 collector:Reserve. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain 1 collector:Reserve. NL Draw 1 card. NL Exhaust."
   },
-  "collector:SparkStrike": {
-    "NAME": "Spark Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle a *Spark into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle a *Spark+ into your draw pile."
-  },
   "collector:SpiritLeech": {
     "NAME": "Spirit Leech",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, gain 1 collector:Reserve next turn."
   },
   "collector:StashAway": {
     "NAME": "Stash Away",
@@ -365,7 +373,7 @@
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer",
-    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL Exhaust."
+    "DESCRIPTION": "If you have any expansioncontent:Temp_HP, Exhaust. NL Gain !M! expansioncontent:Temp_HP."
   },
   "collector:WhirlingFlame": {
     "NAME": "Whirling Flame",
