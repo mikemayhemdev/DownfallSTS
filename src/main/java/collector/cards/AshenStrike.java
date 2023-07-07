@@ -31,5 +31,6 @@ public class AshenStrike extends AbstractCollectorCard {
         AbstractCard q = new Spark();
         q.upgrade();
         cardsToPreview = q;
+        uDesc();
     }
 }

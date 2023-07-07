@@ -152,7 +152,7 @@
   },
   "collector:Forgery": {
     "NAME": "Forgery",
-    "DESCRIPTION": "Deal !D! damage. NL Choose 1 of !M! cards from your Collected pile to add into your hand.",
+    "DESCRIPTION": "Deal !D! damage. NL Choose 1 of !M! cards from your Collected pile to gain a copy of.",
     "EXTENDED_DESCRIPTION": [
       "to add into your hand."
     ]

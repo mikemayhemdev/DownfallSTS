@@ -1,6 +1,7 @@
 package collector.cards;
 
-import collector.actions.MakeTempCardInCollectionAction;
+import collector.CollectorCollection;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -21,7 +22,14 @@ public class Darkstorm extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         makeInHand(new Blightning());
-        atb(new MakeTempCardInCollectionAction(new Blightning(), magicNumber));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (int i = 0; i < magicNumber; i++)
+                    CollectorCollection.combatCollection.addToRandomSpot(new Blightning());
+            }
+        });
     }
 
     public void upp() {
