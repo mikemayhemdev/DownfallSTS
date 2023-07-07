@@ -163,7 +163,7 @@
   "collector:TorchHead": {
     "NAME": "Torch Head",
     "DESCRIPTIONS": [
-      "Whenever you play a #yAttack, if you have #yTemporary #yHP, Torch Head ",
+      "Whenever you play an #yAttack, if you have #yTemporary #yHP, Torch Head ",
       "applies #b",
       " #yDoom to a random enemy",
       ", ",
