@@ -91,7 +91,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张 collector:藏品 牌额外打出一次。"
   },
   "collector:DragonsTrove": {
-    "NAME": "龙之私藏Dragon's Trove",
+    "NAME": "龍之私藏Dragon's Trove",
     "DESCRIPTION": "抽3张 collector:藏品 牌。 NL 获得 !M! collector:储能 。 NL 消耗 。"
   },
   "collector:Ember": {
