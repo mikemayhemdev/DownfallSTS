@@ -250,7 +250,7 @@
   },
   "collector:NextTurnVigor": {
     "NAME": "Vigor Next Turn",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "At the start of your next turn, gain #b",
       " #yVigor."
     ]

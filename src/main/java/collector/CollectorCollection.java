@@ -37,7 +37,7 @@ public class CollectorCollection {
     public static CardGroup combatCollection;
     public static HashMap<String, String> collectionPool;
 
-    private static ArrayList<AbstractMonster> collectedAlready;
+    private static ArrayList<AbstractMonster> collectedAlready = new ArrayList<>();
 
     static {
         collectionPool = new HashMap<>();
