@@ -1,6 +1,6 @@
 package collector.cards;
 
-import collector.powers.RagingCallPower;
+import collector.powers.TorchHeadPower;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -20,7 +20,7 @@ public class RagingCall extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new AddTemporaryHPAction(p, p, magicNumber));
-        applyToSelf(new RagingCallPower(secondMagic));
+        applyToSelf(new TorchHeadPower(1, secondMagic));
     }
 
     public void upp() {

@@ -17,6 +17,7 @@ public class Finalize extends AbstractCollectorCard {
         baseMagicNumber = magicNumber = 25;
         baseSecondMagic = secondMagic = 8;
         tags.add(CardTags.HEALING);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

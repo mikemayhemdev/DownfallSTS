@@ -1,10 +1,7 @@
 package collector.cards;
 
 import collector.CollectorCollection;
-import collector.actions.GainReservesAction;
-import collector.util.NewReserves;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,15 +9,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.*;
+import static collector.util.Wiz.atb;
+import static collector.util.Wiz.att;
 
 public class HoardersStrike extends AbstractCollectorCard {
     public final static String ID = makeID(HoardersStrike.class.getSimpleName());
     // intellij stuff attack, enemy, rare, 12, 5, , , , 
 
     public HoardersStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 12;
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        baseDamage = 15;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

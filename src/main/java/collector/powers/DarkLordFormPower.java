@@ -1,47 +1,33 @@
 package collector.powers;
 
-import basemod.helpers.CardModifierManager;
-import collector.cardmods.CollectedCardMod;
-import collector.cards.collectibles.AbstractCollectibleCard;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
-import com.megacrit.cardcrawl.core.Settings;
+import automaton.actions.RepeatCardAction;
+import collector.cards.YouAreMine;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class DarkLordFormPower extends AbstractCollectorPower {
-    public static final String NAME = "NextCollectedTwice";
+    public static final String NAME = "DarkLordForm";
     public static final String POWER_ID = makeID(NAME);
-    public static final PowerType TYPE = PowerType.DEBUFF;
+    public static final PowerType TYPE = PowerType.BUFF;
     public static final boolean TURN_BASED = false;
 
     public DarkLordFormPower() {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, 1);
     }
 
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && CardModifierManager.hasModifier(card, CollectedCardMod.ID)) {
-            for (int i = 0; i < amount; i++) {
-                this.flash();
-                AbstractMonster m = null;
-                if (action.target != null) {
-                    m = (AbstractMonster) action.target;
+    @Override
+    public void atStartOfTurnPostDraw() {
+        flash();
+        for (int i = 0; i < amount; i++) {
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    AbstractMonster q = AbstractDungeon.getRandomMonster();
+                    addToTop(new RepeatCardAction(q, new YouAreMine()));
                 }
-
-                AbstractCard tmp = card.makeSameInstanceOf();
-                AbstractDungeon.player.limbo.addToBottom(tmp);
-                tmp.current_x = card.current_x;
-                tmp.current_y = card.current_y;
-                tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-                tmp.target_y = (float) Settings.HEIGHT / 2.0F;
-                if (m != null) {
-                    tmp.calculateCardDamage(m);
-                }
-
-                tmp.purgeOnUse = true;
-                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
-            }
+            });
         }
     }
 }

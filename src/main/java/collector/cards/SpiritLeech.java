@@ -1,5 +1,6 @@
 package collector.cards;
 
+import collector.powers.NextTurnReservePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,13 +25,12 @@ public class SpiritLeech extends AbstractCollectorCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         if (isAfflicted(m)) {
-            atb(new DrawCardAction(magicNumber));
+            applyToSelf(new NextTurnReservePower(1));
         }
     }
 
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
     }
 
     @Override

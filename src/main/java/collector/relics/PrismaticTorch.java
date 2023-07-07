@@ -3,12 +3,14 @@ package collector.relics;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardPowerTip;
 import collector.CollectorMod;
+import collector.actions.GainReservesAction;
 import collector.cards.Ember;
-import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.util.TextureLoader;
 
+import static collector.util.Wiz.atb;
 import static collector.util.Wiz.makeInHand;
 
 public class PrismaticTorch extends CustomRelic {
@@ -16,7 +18,7 @@ public class PrismaticTorch extends CustomRelic {
     private static final String IMG_PATH = PrismaticTorch.class.getSimpleName() + ".png";
     private static final String OUTLINE_IMG_PATH = PrismaticTorch.class.getSimpleName() + ".png";
 
-    private static final int EMBER_COUNT = 3;
+    private static final int EMBER_COUNT = 1;
 
     public PrismaticTorch() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
@@ -27,6 +29,14 @@ public class PrismaticTorch extends CustomRelic {
     public void atBattleStart() {
         flash();
         makeInHand(new Ember(), EMBER_COUNT);
+    }
+
+    @Override
+    public void onExhaust(AbstractCard card) {
+        if (card.cardID.equals(Ember.ID)) {
+            flash();
+            atb(new GainReservesAction(1));
+        }
     }
 
     @Override
@@ -65,7 +75,7 @@ public class PrismaticTorch extends CustomRelic {
             sb.append("[#").append(CollectorMod.characterColor.toString()).append("]");
         }
 
-        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1] + EMBER_COUNT + DESCRIPTIONS[2];
+        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
     }
 }
 

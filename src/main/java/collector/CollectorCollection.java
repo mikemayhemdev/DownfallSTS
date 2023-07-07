@@ -29,12 +29,15 @@ import com.megacrit.cardcrawl.monsters.exordium.*;
 import downfall.monsters.*;
 import hermit.cards.DeadOrAlive;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CollectorCollection {
     public static CardGroup collection;
     public static CardGroup combatCollection;
     public static HashMap<String, String> collectionPool;
+
+    private static ArrayList<AbstractMonster> collectedAlready = new ArrayList<>();
 
     static {
         collectionPool = new HashMap<>();
@@ -139,6 +142,9 @@ public class CollectorCollection {
     }
 
     public static void collect(AbstractMonster m) {
-        AbstractDungeon.getCurrRoom().rewards.add(new CollectibleCardReward(getCollectedCard(m)));
+        if (!collectedAlready.contains(m)) {
+            AbstractDungeon.getCurrRoom().rewards.add(new CollectibleCardReward(getCollectedCard(m)));
+            collectedAlready.add(m);
+        }
     }
 }

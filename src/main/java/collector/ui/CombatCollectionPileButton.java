@@ -7,6 +7,7 @@ import collector.patches.ExtraDeckButtonPatches.ExhaustPileViewScreenPatches;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -109,6 +110,10 @@ public class CombatCollectionPileButton extends ClickableUIElement {
             }
         }
         this.hitbox.render(sb);
+    }
+
+    public Vector2 getLocation() {
+        return new Vector2(x, y);
     }
 
     public static void draw(SpriteBatch sb, Texture texture, float cX, float cY) {

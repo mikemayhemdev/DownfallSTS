@@ -1,7 +1,6 @@
 package collector.cards.collectibles;
 
 import collector.cards.BindingCall;
-import collector.cards.MastersCall;
 import collector.cards.ProtectingCall;
 import collector.cards.RagingCall;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -32,7 +31,6 @@ public class TorchHeadCard extends AbstractCollectibleCard {
     private AbstractCard getRandomTorchheadCard() {
         ArrayList<String> torchheadCards = new ArrayList<>();
         torchheadCards.add(BindingCall.ID);
-        torchheadCards.add(MastersCall.ID);
         torchheadCards.add(ProtectingCall.ID);
         torchheadCards.add(RagingCall.ID);
         return CardLibrary.getCopy(Wiz.getRandomItem(torchheadCards));

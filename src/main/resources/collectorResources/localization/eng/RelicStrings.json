@@ -11,16 +11,14 @@
     "FLAVOR": "The ever-changing flames reflect fortune's favor.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] At the start of each combat, add #b",
-      " #yEmbers into your hand."
+      ".[] At the start of each combat, add an #yEmber into your hand. Whenever you #yExhaust an #yEmber, gain #b1 #ycollector:Reserve."
     ]
   },
   "collector:HolidayCoal": {
     "NAME": "Krampian Coal",
     "FLAVOR": "\"Intriguing! But why only specific chimneys?\" - Ranwid",
     "DESCRIPTIONS": [
-      "The first time you #yExhaust a card each turn, gain #b",
-      " #yBlock."
+      "When you would draw from an empty Collected pile, you instead draw a #yLucky #yWick."
     ]
   },
   "collector:BagOfTricks": {

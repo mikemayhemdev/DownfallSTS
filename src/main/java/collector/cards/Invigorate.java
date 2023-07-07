@@ -15,6 +15,7 @@ public class Invigorate extends AbstractCollectorCard {
     public Invigorate() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 4;
+        isPyre();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

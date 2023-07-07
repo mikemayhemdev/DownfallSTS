@@ -19,10 +19,10 @@ public class DragonsTrove extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < magicNumber; i++) {
             atb(new DrawCardFromCollectionAction());
         }
-        atb(new GainReservesAction(magicNumber));
+        atb(new GainReservesAction(2));
     }
 
     public void upp() {

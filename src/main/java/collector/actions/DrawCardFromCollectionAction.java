@@ -1,6 +1,8 @@
 package collector.actions;
 
 import collector.CollectorCollection;
+import collector.cards.collectibles.LuckyWick;
+import collector.relics.HolidayCoal;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,6 +22,13 @@ public class DrawCardFromCollectionAction extends AbstractGameAction {
             CollectorCollection.combatCollection.removeCard(tar);
             AbstractDungeon.player.drawPile.addToTop(tar);
             att(new DrawCardAction(1));
+        } else {
+            if (AbstractDungeon.player.hasRelic(HolidayCoal.ID)) {
+                AbstractDungeon.player.getRelic(HolidayCoal.ID).flash();
+                AbstractCard tar = new LuckyWick();
+                AbstractDungeon.player.drawPile.addToTop(tar);
+                att(new DrawCardAction(1));
+            }
         }
         this.isDone = true;
     }

@@ -19,7 +19,7 @@ public class ThimbleHelm extends CustomRelic {
     private static final int STARTING_TEMP_HP = 3;
 
     public ThimbleHelm() {
-        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.RARE, LandingSound.MAGICAL);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class ThimbleHelm extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + STARTING_TEMP_HP + DESCRIPTIONS[1];
     }
 }
 

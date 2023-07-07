@@ -17,7 +17,7 @@ public class ThornWhip extends AbstractCollectorCard {
 
     public ThornWhip() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 11;
+        baseDamage = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

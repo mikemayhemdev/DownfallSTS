@@ -31,9 +31,18 @@
   "collector:DarkLordForm": {
     "NAME": "Dark Lord Form",
     "DESCRIPTIONS": [
-      "Collected cards are played twice.",
-      "Collected cards are played #b",
-      " additional times."
+      "At the start of your turn, play a #yYou #yAre #yMine! on a random enemy.",
+      "At the start of your turn, play #b",
+      " copies of #yYou #yAre #yMine! on random enemies."
+    ]
+  },
+  "collector:DoMayhem": {
+    "NAME": "Do Mayhem",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if any enemy has #b",
+      " or more #yDoom, play the top card of your draw pile.",
+      " or more #yDoom, play the top #b",
+      " cards of your draw pile."
     ]
   },
   "collector:Doom": {
@@ -42,6 +51,14 @@
       "If ",
       " has less than #b",
       " HP, kill and Collect it."
+    ]
+  },
+  "collector:DoublePlayCollectibles": {
+    "NAME": "Multi-Play Collectibles",
+    "DESCRIPTIONS": [
+      "Collected cards are played twice.",
+      "Collected cards are played #b",
+      " additional times."
     ]
   },
   "collector:FeelMyPain": {
@@ -57,6 +74,14 @@
       "If ",
       " dies this turn, heal #b",
       " HP."
+    ]
+  },
+  "collector:Karma": {
+    "NAME": "Karma",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b",
+      " #yBlock for every #b",
+      " #yDoom on foes."
     ]
   },
   "collector:NextAttackAppliesDoom": {
@@ -135,8 +160,23 @@
       " HP."
     ]
   },
-  "collector:AlwaysMore": {
-    "NAME": "Always More",
+  "collector:TorchHead": {
+    "NAME": "Torch Head",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yAttack, if you have #yTemporary #yHP, Torch Head ",
+      "applies #b",
+      " #yDoom to a random enemy",
+      ", ",
+      "deals #b",
+      " damage to ALL enemies",
+      ", and ",
+      "grants you #b",
+      " #yBlock.",
+      " and "
+    ]
+  },
+  "collector:IncreasedCollectionDraw": {
+    "NAME": "Increased Collection Draw",
     "DESCRIPTIONS": [
       "Draw #b1 additional Collected card each turn.",
       "Draw #b",
@@ -176,7 +216,7 @@
     "NAME": "Dodgy",
     "DESCRIPTIONS": [
       "Take #b",
-      " less damage from attacks this turn.",
+      " less damage from attacks this turn."
     ]
   },
   "collector:BookofStabbingCard": {
@@ -210,7 +250,7 @@
   },
   "collector:NextTurnVigor": {
     "NAME": "Vigor Next Turn",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "At the start of your next turn, gain #b",
       " #yVigor."
     ]
