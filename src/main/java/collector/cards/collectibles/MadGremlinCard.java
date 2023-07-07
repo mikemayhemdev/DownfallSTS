@@ -1,6 +1,5 @@
 package collector.cards.collectibles;
 
-import collector.powers.collectioncards.MadGremlinCardPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
@@ -15,13 +14,12 @@ public class MadGremlinCard extends AbstractCollectibleCard {
 
     public MadGremlinCard() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new StrengthPower(p, magicNumber));
         applyToSelf(new LoseStrengthPower(p, magicNumber));
-        applyToSelf(new MadGremlinCardPower());
     }
 
     public void upp() {

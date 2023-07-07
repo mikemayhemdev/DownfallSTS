@@ -345,7 +345,7 @@
   },
   "collector:StashAway": {
     "NAME": "Stash Away",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain X collector:Reserve."
+    "DESCRIPTION": "Gain !B! Block X times. NL Next turn, gain X collector:Reserve."
   },
   "collector:Strike": {
     "NAME": "Strike",
@@ -511,7 +511,7 @@
   },
   "collector:MadGremlinCard": {
     "NAME": "Mad Gremlin",
-    "DESCRIPTION": "Gain !M! Temporary Strength. NL If you receive unblocked attack damage this turn, add a copy of this into your hand."
+    "DESCRIPTION": "Gain !M! Temporary Strength."
   },
   "collector:MawCard": {
     "NAME": "The Maw",
