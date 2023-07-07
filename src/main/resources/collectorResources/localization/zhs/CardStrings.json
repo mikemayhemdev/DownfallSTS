@@ -76,7 +76,7 @@
     "UPGRADE_DESCRIPTION": "藏品牌额外打出一次。"
   },
   "collector:DarkwoodKindling": {
-    "NAME": "Darkwood Kindling",
+    "NAME": "邪柳柴",
     "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 所有敌人失去 !M! 点生命。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
@@ -204,7 +204,7 @@
     "DESCRIPTION": "Put !M! card from your Collected pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Put !M! cards from your Collected pile into your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "to add into your hand."
+      "选择一张牌来加入手牌。"
     ]
   },
   "collector:MiniCurse": {
