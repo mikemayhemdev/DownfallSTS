@@ -12,8 +12,8 @@ public class LuckyWick extends AbstractCollectibleCard {
 
     public LuckyWick() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 2;
-        baseBlock = 2;
+        baseDamage = 3;
+        baseBlock = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
