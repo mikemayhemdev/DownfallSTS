@@ -18,16 +18,15 @@ public class DoMayhemPower extends AbstractCollectorPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atStartOfTurn() {
         boolean willActivate = Wiz.getEnemies().stream().anyMatch(q -> Wiz.pwrAmt(q, DoomPower.POWER_ID) >= REQUISITE_DOOM);
         if (willActivate) {
             flash();
-            for (int i = 0; i < amount; i++) {
-                addToBot(new AbstractGameAction() {
-                    @Override
+            for (int i = 0; i < this.amount; ++i) {
+                this.addToBot(new AbstractGameAction() {
                     public void update() {
-                        isDone = true;
-                        addToTop(new PlayTopCardAction(AbstractDungeon.getRandomMonster(), false));
+                        this.addToBot(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));
+                        this.isDone = true;
                     }
                 });
             }

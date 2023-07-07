@@ -105,7 +105,7 @@
   },
   "collector:DoMayhem": {
     "NAME": "Do Mayhem",
-    "DESCRIPTION": "At the end of your turn, if any enemy has 20 or more collector:Doom, play the top card of your draw pile."
+    "DESCRIPTION": "At the start of your turn, if any enemy has 20 or more collector:Doom, play the top card of your draw pile."
   },
   "collector:DragonsTrove": {
     "NAME": "Dragon's Trove",

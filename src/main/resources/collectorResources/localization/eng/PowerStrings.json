@@ -39,7 +39,7 @@
   "collector:DoMayhem": {
     "NAME": "Do Mayhem",
     "DESCRIPTIONS": [
-      "At the end of your turn, if any enemy has #b",
+      "At the start of your turn, if any enemy has #b",
       " or more #yDoom, play the top card of your draw pile.",
       " or more #yDoom, play the top #b",
       " cards of your draw pile."
