@@ -337,7 +337,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "虚空护甲Void Armor",
-    "DESCRIPTION": "所有单位 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "所有单位 获得 !B! 点 格挡 。 NL 被 collector:魂灭 的敌人失去 !M! 点生命。"
   },
   "collector:Wildfire": {
     "NAME": "野火Wildfire",
