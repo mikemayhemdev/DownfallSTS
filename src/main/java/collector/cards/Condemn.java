@@ -19,7 +19,7 @@ public class Condemn extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToEnemy(m, new DoomPower(m, magicNumber));
-        applyToEnemy(m, new VulnerablePower(m, 1));
+        applyToEnemy(m, new VulnerablePower(m, 1, false));
     }
 
     public void upp() {

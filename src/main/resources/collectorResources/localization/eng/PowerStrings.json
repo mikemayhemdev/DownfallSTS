@@ -160,6 +160,21 @@
       " HP."
     ]
   },
+  "collector:TorchHeadPower": {
+    "NAME": "Torch Head",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yAttack, if you have #yTemporary #yHP, Torch Head ",
+      "applies #b",
+      " #yDoom to a random enemy",
+      ", ",
+      "deals #b",
+      " damage to ALL enemies",
+      ", and ",
+      "grants you #b",
+      " #yBlock.",
+      " and "
+    ]
+  },
   "collector:IncreasedCollectionDraw": {
     "NAME": "Increased Collection Draw",
     "DESCRIPTIONS": [
@@ -201,7 +216,7 @@
     "NAME": "Dodgy",
     "DESCRIPTIONS": [
       "Take #b",
-      " less damage from attacks this turn.",
+      " less damage from attacks this turn."
     ]
   },
   "collector:BookofStabbingCard": {
