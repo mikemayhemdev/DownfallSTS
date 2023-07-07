@@ -31,10 +31,10 @@ public class JadedJabs extends AbstractCollectorCard implements OnPyreCard {
             @Override
             public void update() {
                 isDone = true;
-                if (toAdd > 0) {
+                if (toAdd >= 0) {
                     AbstractCard q = new Shiv();
                     if (upgraded) q.upgrade();
-                    att(new MakeTempCardInHandAction(q, toAdd, true));
+                    att(new MakeTempCardInHandAction(q, toAdd+1, true));
                 }
             }
         });
