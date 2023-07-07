@@ -32,5 +32,6 @@ public class IronbarkKindling extends AbstractCollectorCard {
 
     public void upp() {
         selfRetain=true;
+        uDesc();
     }
 }
