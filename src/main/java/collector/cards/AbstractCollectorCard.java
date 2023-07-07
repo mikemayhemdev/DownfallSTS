@@ -89,8 +89,10 @@ public abstract class AbstractCollectorCard extends CustomCard {
     }
 
     protected void uDesc() {
-        rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-        initializeDescription();
+        if (cardStrings.UPGRADE_DESCRIPTION != null) {
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
+        }
     }
 
     public void upgrade() {

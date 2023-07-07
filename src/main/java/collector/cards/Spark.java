@@ -13,7 +13,7 @@ public class Spark extends AbstractCollectorCard {
     // intellij stuff skill, self, special, , , , , , 
 
     public Spark() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         exhaust = true;
     }
 

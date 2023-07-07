@@ -15,7 +15,7 @@ public class Blightning extends AbstractCollectorCard {
     // intellij stuff attack, enemy, special, 8, 2, , , 8, 2
 
     public Blightning() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 8;
     }
