@@ -21,6 +21,6 @@ public class FleetingEmbers extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(0);
     }
 }
