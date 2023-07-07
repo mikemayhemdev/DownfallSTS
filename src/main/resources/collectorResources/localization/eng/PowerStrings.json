@@ -160,7 +160,7 @@
       " HP."
     ]
   },
-  "collector:TorchHeadPower": {
+  "collector:TorchHead": {
     "NAME": "Torch Head",
     "DESCRIPTIONS": [
       "Whenever you play a #yAttack, if you have #yTemporary #yHP, Torch Head ",
