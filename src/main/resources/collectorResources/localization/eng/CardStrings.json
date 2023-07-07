@@ -381,7 +381,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "Void Armor",
-    "DESCRIPTION": "EVERYONE gains !B! Block."
+    "DESCRIPTION": "EVERYONE gains !B! Block. NL Foes with collector:Doom lose !M! HP."
   },
   "collector:Wildfire": {
     "NAME": "Wildfire",
