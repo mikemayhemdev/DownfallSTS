@@ -8,11 +8,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
 
-public class GreenGaze extends AbstractCollectorCard {
-    public final static String ID = makeID(GreenGaze.class.getSimpleName());
+public class GourmandsGaze extends AbstractCollectorCard {
+    public final static String ID = makeID(GourmandsGaze.class.getSimpleName());
     // intellij stuff attack, enemy, common, 8, 2, 8, 2, , 
 
-    public GreenGaze() {
+    public GourmandsGaze() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
         baseBlock = 8;

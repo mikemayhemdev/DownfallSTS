@@ -8,11 +8,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.shuffleIn;
 
-public class SparkStrike extends AbstractCollectorCard {
-    public final static String ID = makeID(SparkStrike.class.getSimpleName());
+public class AshenStrike extends AbstractCollectorCard {
+    public final static String ID = makeID(AshenStrike.class.getSimpleName());
     // intellij stuff attack, enemy, common, 8, 4, , , , 
 
-    public SparkStrike() {
+    public AshenStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
         cardsToPreview = new Spark();

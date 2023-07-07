@@ -1,6 +1,8 @@
 package collector.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
+import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -14,10 +16,10 @@ public class Torchbearer extends AbstractCollectorCard {
     public Torchbearer() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 6;
-        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.exhaust = TempHPField.tempHp.get(p) > 0;
         atb(new AddTemporaryHPAction(p, p, magicNumber));
     }
 
