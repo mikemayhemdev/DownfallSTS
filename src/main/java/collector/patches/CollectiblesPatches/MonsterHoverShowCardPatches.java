@@ -25,11 +25,9 @@ public class MonsterHoverShowCardPatches {
         @SpireInsertPatch(locator = AddCardTipLocator.class)
         public static void Insert(AbstractMonster __instance, SpriteBatch sb) {
             if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR) || !CollectorCollection.collectionPool.isEmpty()) {
-                ArrayList<PowerTip> tips = ReflectionHacks.getPrivateInherited(__instance, AbstractCreature.class, "tips");
-                if (tips != null) {
-                    tips.add(new CardPowerTip(CollectorCollection.getCollectedCard(__instance)));
-                    ReflectionHacks.setPrivateInherited(__instance, AbstractCreature.class, "tips", tips);
-                }
+                ArrayList<PowerTip> tips = ReflectionHacks.getPrivateInherited(__instance, AbstractMonster.class, "tips");
+                tips.add(new CardPowerTip(CollectorCollection.getCollectedCard(__instance)));
+                ReflectionHacks.setPrivateInherited(__instance, AbstractCreature.class, "tips", tips);
             }
         }
     }
