@@ -235,8 +235,8 @@
   },
   "collector:Karma": {
     "NAME": "Karma",
-    "DESCRIPTION": "At the end of your turn, gain 1 Block for every 5 collector:Doom on foes.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, gain 1 Block for every 5 collector:Doom on foes."
+    "DESCRIPTION": "At the start of your turn, gain 1 Block for every 5 collector:Doom on foes.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 Block for every 5 collector:Doom on foes."
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",

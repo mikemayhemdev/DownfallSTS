@@ -79,7 +79,7 @@
   "collector:Karma": {
     "NAME": "Karma",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain #b",
+      "At the start of your turn, gain #b",
       " #yBlock for every #b",
       " #yDoom on foes."
     ]

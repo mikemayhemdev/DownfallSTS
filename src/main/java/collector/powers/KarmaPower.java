@@ -19,7 +19,7 @@ public class KarmaPower extends AbstractCollectorPower {
     private static final int DOOM_PER_BLOCK = 5;
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atStartOfTurnPostDraw() {
         int result = getTotalDoom() / DOOM_PER_BLOCK;
         if (result > 0) {
             flash();
