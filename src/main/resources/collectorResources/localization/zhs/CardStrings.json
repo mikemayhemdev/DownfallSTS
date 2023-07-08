@@ -9,8 +9,8 @@
   },
   "collector:AshenStrike": {
     "NAME": "Ashen Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle a *Spark into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle a *Spark+ into your draw pile."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *火花 洗入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *火花+ 洗入抽牌堆。"
   },
   "collector:Arrogance": {
     "NAME": "巫傲",
@@ -22,7 +22,7 @@
   },
   "collector:BindingCall": {
     "NAME": "羁绊之唤",
-    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL collector:Torchhead gains \"Apply !clm2! collector:Doom to a random enemy.\""
+    "DESCRIPTION": "获得 !M! 层 临时生命。 NL collector:火炬头 获得效果： NL \"随机给予 !clm2! 层 collector:魂灭 \""
   },
   "collector:Billow": {
     "NAME": "鼓起",
@@ -38,11 +38,11 @@
 
   "collector:BlackBindings": {
     "NAME": "Black Bindings",
-    "DESCRIPTION": "Apply !M! Weak, then apply !clm2! collector:Doom for each unique debuff on the enemy."
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 目标每有不同负面效果， NL 给予 !clm2! 层 collector:魂灭 。"
   },
   "collector:Blightning": {
     "NAME": "Blightning",
-    "DESCRIPTION": "Apply !M! collector:Doom. NL Deal !D! damage. NL Draw 1 card from your Collected pile."
+    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 造成 !D! 点伤害。 NL 从 *收藏堆 抽一张牌。"
   },
   "collector:Bonfire": {
     "NAME": "篝火",
@@ -54,8 +54,8 @@
   },
   "collector:BramblesparKindling": {
     "NAME": "黑莓木柴",
-    "DESCRIPTION": "Unplayable. NL When *Exhausted, add a *Burning *Strike into your hand.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL When *Exhausted, add a *Burning *Strike+ into your hand.",
+    "DESCRIPTION": "不能被打出。 NL 本牌被 消耗 时， NL 获得一张 *Burning *Strike 。",
+    "UPGRADE_DESCRIPTION": "不能被打出。 NL 本牌被 消耗 时， NL 获得一张 *Burning *Strike+ 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -82,12 +82,12 @@
   },
   "collector:DarkLordForm": {
     "NAME": "暗主形态",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, play *You *Are *Mine! on a random enemy.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, play *You *Are *Mine! on a random enemy."
+    "DESCRIPTION": "虚无 。 NL 回合开始时， NL 随机打出 *你是我的了 。",
+    "UPGRADE_DESCRIPTION": "回合开始时， NL 随机打出 *你是我的了 。"
   },
   "collector:Darkstorm": {
     "NAME": "Darkstorm",
-    "DESCRIPTION": "Gain a *Blightning. NL Shuffle !M! more into your Collected pile. NL Exhaust."
+    "DESCRIPTION": "获得一张 *Blightning ， NL 并将 !M! 张洗入 *收藏堆 。 NL 消耗 。"
   },
   "collector:DarkwoodKindling": {
     "NAME": "邪柳柴",
@@ -106,7 +106,7 @@
   },
   "collector:DoMayhem": {
     "NAME": "Do Mayhem",
-    "DESCRIPTION": "At the start of your turn, if any enemy has 20 or more collector:Doom, play the top card of your draw pile."
+    "DESCRIPTION": "回合开始时， NL 若有敌人有20层 collector:魂灭 ， NL 打出抽牌堆顶部的牌。"
   },
   "collector:DragonsTrove": {
     "NAME": "龍之私藏Dragon's Trove",
@@ -182,7 +182,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus",
-    "DESCRIPTION": "collector:Pyre. NL Put !M! card from your Collected pile into your hand. NL Exhaust.",
+    "DESCRIPTION": "collector:焰葬 。 NL Put !M! card from your Collected pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "collector:Pyre. NL Put !M! cards from your Collected pile into your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to add into your hand."
@@ -219,25 +219,25 @@
   },
   "collector:IronbarkKindling": {
     "NAME": "Ironbark Kindling",
-    "DESCRIPTION": "Unplayable. NL When *Exhausted, gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When *Exhausted, gain !B! Block.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, 获得 !B! Block.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When *Exhausted, 获得 !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
   },
   "collector:ItMattersNot": {
     "NAME": "It Matters Not",
-    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card from your Collected pile."
+    "DESCRIPTION": "获得 !B! Block. NL Draw 1 card from your Collected pile."
   },
   "collector:JadedJabs": {
     "NAME": "Jaded Jabs",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to the Exhausted card's cost+1.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shiv+s equal to the Exhausted card's cost+1."
+    "DESCRIPTION": "collector:Pyre. NL 造成 !D! 点伤害。 NL 获得 *Shivs equal to the Exhausted card's cost+1.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL 造成 !D! 点伤害。 NL 获得 *Shiv+s equal to the Exhausted card's cost+1."
   },
   "collector:Karma": {
     "NAME": "Karma",
-    "DESCRIPTION": "At the start of your turn, gain 1 Block for every 5 collector:Doom on foes.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 Block for every 5 collector:Doom on foes."
+    "DESCRIPTION": "At the start of your turn, 获得 1 Block for every 5 collector:Doom on foes.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, 获得 1 Block for every 5 collector:Doom on foes."
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
@@ -245,7 +245,7 @@
   },
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+    "DESCRIPTION": "获得 !B! Block. NL 造成 !D! 点伤害。"
   },
   "collector:MastersCall": {
     "NAME": "主宰之唤",
@@ -277,7 +277,7 @@
   },
   "collector:ProtectingCall": {
     "NAME": "佑护之唤",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合开始时， NL collector:Torchhead gains \"Gain !clm2! Block.\""
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合开始时， NL collector:Torchhead 获得s \"获得 !clm2! Block.\""
   },
   "collector:Pyromancy": {
     "NAME": "Pyromancy",
@@ -286,7 +286,7 @@
   },
   "collector:RagingCall": {
     "NAME": "暴怒之唤",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合结束时， NL collector:Torchhead gains \"Deal !clm2! damage to ALL enemies.\"."
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合结束时， NL collector:Torchhead 获得s \"Deal !clm2! damage to ALL enemies.\"."
   },
   "collector:ReceiveTribute": {
     "NAME": "纳贡",
@@ -337,8 +337,8 @@
   },
   "collector:Spark": {
     "NAME": "Spark",
-    "DESCRIPTION": "Gain 1 collector:Reserve. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 collector:Reserve. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "获得 1 collector:Reserve. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "获得 1 collector:Reserve. NL Draw 1 card. NL Exhaust."
   },
   "collector:SpiritLeech": {
     "NAME": "汲灵",
@@ -346,7 +346,7 @@
   },
   "collector:StashAway": {
     "NAME": "Stash Away",
-    "DESCRIPTION": "Gain !B! Block X times. NL Next turn, gain X collector:Reserve."
+    "DESCRIPTION": "获得 !B! Block X times. NL Next turn, 获得 X collector:Reserve."
   },
   "collector:Strike": {
     "NAME": "打击",
@@ -374,7 +374,7 @@
   },
   "collector:Torchbearer": {
     "NAME": "火炬御者",
-    "DESCRIPTION": "If you have any expansioncontent:Temp_HP, Exhaust. NL Gain !M! expansioncontent:Temp_HP."
+    "DESCRIPTION": "If you have any expansioncontent:Temp_HP, Exhaust. NL 获得 !M! expansioncontent:Temp_HP."
   },
   "collector:WhirlingFlame": {
     "NAME": "回溯之火Whirling Flame",
@@ -430,7 +430,7 @@
   },
   "collector:BurningStrike": {
     "NAME": "Burning Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "collector:CenturionCard": {
     "NAME": "百夫长",
@@ -509,7 +509,7 @@
   },
   "collector:MadGremlinCard": {
     "NAME": "火大地精",
-    "DESCRIPTION": "Gain !M! Temporary Strength."
+    "DESCRIPTION": "获得 !M! Temporary Strength."
   },
   "collector:MawCard": {
     "NAME": "巨口",
@@ -589,7 +589,7 @@
   },
   "collector:SpikeSlimeCard": {
     "NAME": "尖刺史莱姆",
-    "DESCRIPTION": "Gain !M! Thorns."
+    "DESCRIPTION": "获得 !M! 层 荆棘 。"
   },
   "collector:SpireGrowthCard": {
     "NAME": "塔内增生组织",
