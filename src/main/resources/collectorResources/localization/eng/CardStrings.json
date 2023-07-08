@@ -231,7 +231,7 @@
   "collector:JadedJabs": {
     "NAME": "Jaded Jabs",
     "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to the Exhausted card's cost + 1.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shiv+s equal to the Exhausted card's cost + 1."
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Upgraded *Shivs equal to the Exhausted card's cost + 1."
   },
   "collector:Karma": {
     "NAME": "Karma",
