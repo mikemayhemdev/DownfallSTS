@@ -100,19 +100,19 @@ public class TorchHeadPower extends AbstractCollectorPower implements NonStackab
             }
         }
         if (onAttackPoison > 0) {
-            sb.append(DESCRIPTIONS[1] + onAttackRandomDoom + DESCRIPTIONS[7]);
+            sb.append(DESCRIPTIONS[1] + onAttackPoison + DESCRIPTIONS[7]);
             if (onAttackAOE > 0 || onAttackBlock > 0){
                 sb.append(" NL ");
             }
         }
         if (onAttackAOE > 0) {
-            sb.append(DESCRIPTIONS[3] + onAttackRandomDoom + DESCRIPTIONS[4]);
+            sb.append(DESCRIPTIONS[3] + onAttackAOE + DESCRIPTIONS[4]);
             if (onAttackBlock > 0){
                 sb.append(" NL ");
             }
         }
         if (onAttackBlock > 0) {
-            sb.append(DESCRIPTIONS[5] + onAttackRandomDoom + DESCRIPTIONS[6]);
+            sb.append(DESCRIPTIONS[5] + onAttackBlock + DESCRIPTIONS[6]);
         }
         description = sb.toString();
     }
