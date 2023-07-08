@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.*;
@@ -44,8 +42,10 @@ public class SapStrength extends AbstractCollectorCard {
     public void triggerOnGlowCheck() {
         for (AbstractMonster m : getEnemies()) {
             if (m.hasPower(StrengthPower.POWER_ID)) {
-                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
-                return;
+                if (m.getPower(StrengthPower.POWER_ID).amount > 0) {
+                    this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+                    return;
+                }
             }
         }
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;

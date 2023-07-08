@@ -50,7 +50,8 @@
     "DESCRIPTIONS": [
       "If ",
       " has less than #b",
-      " HP, kill and Collect it."
+      " HP, kill and Collect it.",
+      "this foe"
     ]
   },
   "collector:DoublePlayCollectibles": {
