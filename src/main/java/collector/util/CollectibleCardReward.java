@@ -9,7 +9,6 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -45,12 +44,14 @@ public class CollectibleCardReward extends CustomReward {
     public CollectibleCardReward(String id) {
         super((Texture) null, "", RewardItemTypeEnumPatch.COLLECTOR_COLLECTIBLECARDREWARD);
         card = CardLibrary.getCopy(id, 0, 0);
+        CardModifierManager.addModifier(card, new CollectedCardMod());
         init();
     }
 
     protected void init() {
-        for (AbstractRelic r : AbstractDungeon.player.relics)
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
             r.onPreviewObtainCard(card);
+        }
 
         renderCard = card.makeStatEquivalentCopy();
         text = uiStrings.TEXT[0] + card.name;

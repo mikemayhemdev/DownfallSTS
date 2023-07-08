@@ -1,6 +1,5 @@
 package collector.cards.collectibles;
 
-import collector.powers.collectioncards.ReptomancerCardPower;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
