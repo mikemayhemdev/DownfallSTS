@@ -33,7 +33,11 @@
 
   "collector:BlackBindings": {
     "NAME": "Black Bindings",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !clm2! 层 collector:魂灭 。"
+    "DESCRIPTION": "Apply !M! Weak, then apply !clm2! collector:Doom for each unique debuff on the enemy."
+  },
+  "collector:Blightning": {
+    "NAME": "Blightning",
+    "DESCRIPTION": "Apply !M! collector:Doom. NL Deal !D! damage. NL Draw 1 card from your Collected pile."
   },
   "collector:Bonfire": {
     "NAME": "篝火",
@@ -45,7 +49,8 @@
   },
   "collector:BramblesparKindling": {
     "NAME": "黑莓木柴",
-    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得一张打击+ !M! 。",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, add a *Burning *Strike into your hand.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When *Exhausted, add a *Burning *Strike+ into your hand.",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -60,20 +65,24 @@
   },
   "collector:Condemn": {
     "NAME": "谴责",
-    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。"
+    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 给予1层 易伤 。 "
   },
   "collector:CursedWail": {
     "NAME": "Cursed Wail",
     "DESCRIPTION": "被 collector:折磨 的敌人失去1点 力量 。 NL 所有敌人本回合失去 !M! 层 力量 。 NL 消耗 。"
   },
   "collector:DarkApotheosis": {
-    "NAME": "黑化Dark Apotheosis",
+    "NAME": "黑化",
     "DESCRIPTION": "升级 *收藏堆 的牌。 NL 消耗 。"
   },
   "collector:DarkLordForm": {
     "NAME": "暗主形态",
-    "DESCRIPTION": "虚无 。 NL 藏品牌额外打出一次。",
-    "UPGRADE_DESCRIPTION": "藏品牌额外打出一次。"
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, play *You *Are *Mine! on a random enemy.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, play *You *Are *Mine! on a random enemy."
+  },
+  "collector:Darkstorm": {
+    "NAME": "Darkstorm",
+    "DESCRIPTION": "Gain a *Blightning. NL Shuffle !M! more into your Collected pile. NL Exhaust."
   },
   "collector:DarkwoodKindling": {
     "NAME": "邪柳柴",
@@ -90,9 +99,13 @@
     "NAME": "祸不单行Double Trouble",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张 collector:藏品 牌额外打出一次。"
   },
+  "collector:DoMayhem": {
+    "NAME": "Do Mayhem",
+    "DESCRIPTION": "At the end of your turn, if any enemy has 20 or more collector:Doom, play the top card of your draw pile."
+  },
   "collector:DragonsTrove": {
     "NAME": "龍之私藏Dragon's Trove",
-    "DESCRIPTION": "抽3张 collector:藏品 牌。 NL 获得 !M! collector:储能 。 NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张 collector:藏品 牌。 NL 获得 2 collector:储能 。 NL 消耗 。"
   },
   "collector:Ember": {
     "NAME": "余烬",
@@ -119,7 +132,7 @@
   },
   "collector:Finalize": {
     "NAME": "Finalize",
-    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 若目标本回合死亡， NL 回复 !clm2! 点生命。"
+    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 若目标本回合死亡， NL 回复 !clm2! 点生命。 NL 消耗 。"
   },
   "collector:FingerOfDeath": {
     "NAME": "Finger of Death",
@@ -189,15 +202,25 @@
   },
   "collector:Invigorate": {
     "NAME": "精神焕发",
-    "DESCRIPTION": "获得 !M! 层 活力。 NL 下回合获得 !M! 层 活力 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力。 NL 下回合获得 !M! 层 活力 。"
+  },
+  "collector:ItMattersNot": {
+    "NAME": "It Matters Not",
+    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card from your Collected pile."
+  },
+  "collector:JadedJabs": {
+    "NAME": "Jaded Jabs",
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to the Exhausted card's cost."
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shiv+s equal to the Exhausted card's cost."
+  },
+  "collector:Karma": {
+    "NAME": "Karma",
+    "DESCRIPTION": "At the end of your turn, gain 1 Block for every 5 collector:Doom on foes.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, gain 1 Block for every 5 collector:Doom on foes."
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
     "DESCRIPTION": "collector:焰葬 。 NL 随机造成 !D! 点伤害并给予 !M! 层 collector:魂灭 。"
-  },
-  "collector:MastersCall": {
-    "NAME": "主宰之唤",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 打出攻击时， NL 若有 临时生命 ， NL 随机造成 !clm2! 点伤害。"
   },
   "collector:LensOfGreenpyre": {
     "NAME": "Lens of Greenpyre",
@@ -206,6 +229,14 @@
     "EXTENDED_DESCRIPTION": [
       "选择一张牌来加入手牌。"
     ]
+  },
+  "collector:LuckyWick": {
+    "NAME": "Lucky Wick",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+  },
+  "collector:MastersCall": {
+    "NAME": "主宰之唤",
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 打出攻击时， NL 若有 临时生命 ， NL 随机造成 !clm2! 点伤害。"
   },
   "collector:MiniCurse": {
     "NAME": "Mini-Curse",
@@ -276,7 +307,7 @@
   },
   "collector:ShadowDaggers": {
     "NAME": "Shadow Daggers",
-    "DESCRIPTION": "每用过一张 collector:藏品 牌， NL 造成 !D! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每用过一张 collector:藏品 牌， NL 再造成 !M! 点伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL (造成 ",
       " 次)",
@@ -291,9 +322,15 @@
     "NAME": "灵魂诱捕",
     "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 消耗 。"
   },
+  "collector:Spark": {
+    "NAME": "Spark",
+    "DESCRIPTION": "Gain 1 collector:Reserve. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 1 collector:Reserve. NL Draw 1 card. NL Exhaust."
+  },
   "collector:SparkStrike": {
     "NAME": "火花打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *余烬 。"
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle a *Spark into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle a *Spark+ into your draw pile."
   },
   "collector:SpiritLeech": {
     "NAME": "汲灵",
@@ -301,7 +338,7 @@
   },
   "collector:StashAway": {
     "NAME": "Stash Away",
-    "DESCRIPTION": "获得 1 collector:储能 。 NL 将 collector:储能 翻倍。 NL 消耗 。"
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain X collector:Reserve."
   },
   "collector:Strike": {
     "NAME": "打击",
@@ -382,6 +419,10 @@
   "collector:ByrdCard": {
     "NAME": "异鸟",
     "DESCRIPTION": "造成 !D! 点伤害5次。"
+  },
+  "collector:BurningStrike": {
+    "NAME": "Burning Strike",
+    "DESCRIPTION": "Deal !D! damage."
   },
   "collector:CenturionCard": {
     "NAME": "百夫长",
@@ -540,7 +581,7 @@
   },
   "collector:SpikeSlimeCard": {
     "NAME": "尖刺史莱姆",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 *黏液 加入弃牌堆。"
+    "DESCRIPTION": "Gain !M! Thorns."
   },
   "collector:SpireGrowthCard": {
     "NAME": "塔内增生组织",
