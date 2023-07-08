@@ -1,5 +1,6 @@
 package collector.cards.collectibles;
 
+import collector.powers.TorchHeadPower;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,7 +20,7 @@ public class ReptomancerCard extends AbstractCollectibleCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new AddTemporaryHPAction(p, p, magicNumber));
-        applyToSelf(new ReptomancerCardPower(secondMagic));
+        applyToSelf(new TorchHeadPower(3, secondMagic));
     }
 
     public void upp() {
