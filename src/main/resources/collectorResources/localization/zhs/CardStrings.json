@@ -61,7 +61,7 @@
     ]
   },
   "collector:CantTouchThis": {
-    "NAME": "不可触及",
+    "NAME": "凶不可触",
     "DESCRIPTION": "获得 !M! 点 敏捷 。 NL 防住攻击时， NL 给予对方 !clm2! 层 collector:魂灭 。"
   },
   "collector:CoffinNail": {
