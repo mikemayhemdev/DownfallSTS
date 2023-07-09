@@ -60,6 +60,11 @@
       "I must light this kindling to use it."
     ]
   },
+  "collector:BurningStrike": {
+    "NAME": "Burning Strike",
+    "DESCRIPTION": "Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw a card."
+  },
   "collector:CantTouchThis": {
     "NAME": "Can't Touch This",
     "DESCRIPTION": "Gain !M! Dexterity. NL When you fully block an attack, apply !clm2! collector:Doom to the attacker."
@@ -267,6 +272,7 @@
   "collector:OakbrimKindling": {
     "NAME": "Oakbrim Kindling",
     "DESCRIPTION": "Unplayable. NL When *Exhausted, draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When *Exhausted, draw !M! cards, and gain 1 collector:Reserve next turn.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
@@ -431,10 +437,6 @@
   "collector:ByrdCard": {
     "NAME": "Byrd",
     "DESCRIPTION": "Deal !D! damage 5 times."
-  },
-  "collector:BurningStrike": {
-    "NAME": "Burning Strike",
-    "DESCRIPTION": "Deal !D! damage."
   },
   "collector:CenturionCard": {
     "NAME": "Centurion",
