@@ -1,11 +1,11 @@
 package collector.cards;
 
-import collector.cards.AbstractCollectorCard;
+import collector.powers.DoMayhemPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.*;
+import static collector.util.Wiz.applyToSelf;
 
 public class DoMayhem extends AbstractCollectorCard {
     public final static String ID = makeID(DoMayhem.class.getSimpleName());
@@ -16,7 +16,7 @@ public class DoMayhem extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        applyToSelf(new DoMayhemPower());
     }
 
     public void upp() {

@@ -4,7 +4,6 @@ import collector.CollectorCollection;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -14,10 +13,8 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.beyond.AwakenedOne;
 import com.megacrit.cardcrawl.monsters.beyond.Darkling;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.monsters.FleeingMerchant;
 
-import static collector.util.Wiz.atb;
 import static collector.util.Wiz.att;
 
 public class DoomPower extends AbstractCollectorPower implements HealthBarRenderPower {
@@ -77,7 +74,7 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
             instakilled = true;
             CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
             CollectorCollection.collect((AbstractMonster) owner);
-            if ( owner instanceof Darkling ) { // Retain it on case "some weird shit happened"
+            if (owner instanceof Darkling) { // Retain it on case "some weird shit happened"
                 owner.halfDead = true;
                 FuckThisDarklings();
             }
@@ -91,20 +88,20 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
             CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
             CollectorCollection.collect((AbstractMonster) owner);
             att(new InstantKillAction(owner));
-            if ( !(owner instanceof AwakenedOne) && !(owner instanceof Darkling) ) // All we were need this if
+            if (!(owner instanceof AwakenedOne) && !(owner instanceof Darkling)) // All we were need this if
                 att(new HideHealthBarAction(owner));
         }
     }
 
-    private void FuckThisDarklings () {
+    private void FuckThisDarklings() {
         boolean allIsDead = true;
-        for ( AbstractMonster m : AbstractDungeon.getMonsters().monsters )
-            if ( m.id.equals(Darkling.ID) && !m.halfDead)
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
+            if (m.id.equals(Darkling.ID) && !m.halfDead)
                 allIsDead = false;
 
-        if ( allIsDead ) {
+        if (allIsDead) {
             AbstractDungeon.getCurrRoom().cannotLose = false;
-            for ( AbstractMonster m : AbstractDungeon.getMonsters().monsters )
+            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
                 m.die();
         }
     }
@@ -121,6 +118,12 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + FontHelper.colorString(owner.name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        String name;
+        if (owner != null) {
+            name = owner.name;
+        } else {
+            name = DESCRIPTIONS[3];
+        }
+        description = DESCRIPTIONS[0] + FontHelper.colorString(name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 }

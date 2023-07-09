@@ -39,7 +39,7 @@
   "collector:DoMayhem": {
     "NAME": "Do Mayhem",
     "DESCRIPTIONS": [
-      "At the end of your turn, if any enemy has #b",
+      "At the start of your turn, if any enemy has #b",
       " or more #yDoom, play the top card of your draw pile.",
       " or more #yDoom, play the top #b",
       " cards of your draw pile."
@@ -50,7 +50,8 @@
     "DESCRIPTIONS": [
       "If ",
       " has less than #b",
-      " HP, kill and Collect it."
+      " HP, kill and Collect it.",
+      "this foe"
     ]
   },
   "collector:DoublePlayCollectibles": {
@@ -79,7 +80,7 @@
   "collector:Karma": {
     "NAME": "Karma",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain #b",
+      "At the start of your turn, gain #b",
       " #yBlock for every #b",
       " #yDoom on foes."
     ]
@@ -163,16 +164,14 @@
   "collector:TorchHead": {
     "NAME": "Torch Head",
     "DESCRIPTIONS": [
-      "Whenever you play a #yAttack, if you have #yTemporary #yHP, Torch Head ",
-      "applies #b",
-      " #yDoom to a random enemy",
-      ", ",
-      "deals #b",
-      " damage to ALL enemies",
-      ", and ",
-      "grants you #b",
+      "Whenever you play an #yAttack, if you have #yTemporary #yHP, Torch Head: NL ",
+      "Applies #b",
+      " #yDoom to a random enemy.",
+      "Deals #b",
+      " damage to ALL enemies.",
+      "Grants you #b.",
       " #yBlock.",
-      " and "
+      " #yPoison to a random enemy."
     ]
   },
   "collector:IncreasedCollectionDraw": {

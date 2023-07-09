@@ -23,11 +23,11 @@ public class SentryCard extends AbstractCollectibleCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //TODO: Vfx
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, magicNumber, false)));
+        applyToEnemy(m, new WeakPower(m, magicNumber, false));
 
         for (int i = 0; i < AbstractDungeon.player.exhaustPile.group.stream().filter(q -> q instanceof SentryCard).count(); i++) {
             dmg(m, AbstractGameAction.AttackEffect.NONE);
-            forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, magicNumber, false)));
+            applyToEnemy(m, new WeakPower(m, magicNumber, false));
         }
     }
 

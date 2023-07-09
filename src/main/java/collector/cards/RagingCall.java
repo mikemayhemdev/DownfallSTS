@@ -15,7 +15,7 @@ public class RagingCall extends AbstractCollectorCard {
     public RagingCall() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 6;
-        baseSecondMagic = secondMagic = 4;
+        baseSecondMagic = secondMagic = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

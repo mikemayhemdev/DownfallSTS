@@ -15,17 +15,20 @@ public class StashAway extends AbstractCollectorCard {
 
     public StashAway() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 4;
+        baseBlock = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
+            for (int i = 0; i < effect; i++) {
+                blck();
+            }
             applyToSelf(new NextTurnReservePower(effect));
             return true;
         }));
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
     }
 }

@@ -105,7 +105,7 @@
   },
   "collector:DoMayhem": {
     "NAME": "Do Mayhem",
-    "DESCRIPTION": "At the end of your turn, if any enemy has 20 or more collector:Doom, play the top card of your draw pile."
+    "DESCRIPTION": "At the start of your turn, if any enemy has 20 or more collector:Doom, play the top card of your draw pile."
   },
   "collector:DragonsTrove": {
     "NAME": "Dragon's Trove",
@@ -152,7 +152,7 @@
   },
   "collector:Forgery": {
     "NAME": "Forgery",
-    "DESCRIPTION": "Deal !D! damage. NL Choose 1 of !M! cards from your Collected pile to add into your hand.",
+    "DESCRIPTION": "Deal !D! damage. NL Choose 1 of !M! cards from your Collected pile to gain a copy of.",
     "EXTENDED_DESCRIPTION": [
       "to add into your hand."
     ]
@@ -230,13 +230,13 @@
   },
   "collector:JadedJabs": {
     "NAME": "Jaded Jabs",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to the Exhausted card's cost.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shiv+s equal to the Exhausted card's cost."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to the Exhausted card's cost + 1.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Upgraded *Shivs equal to the Exhausted card's cost + 1."
   },
   "collector:Karma": {
     "NAME": "Karma",
-    "DESCRIPTION": "At the end of your turn, gain 1 Block for every 5 collector:Doom on foes.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, gain 1 Block for every 5 collector:Doom on foes."
+    "DESCRIPTION": "At the start of your turn, gain 1 Block for every 5 collector:Doom on foes.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 Block for every 5 collector:Doom on foes."
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
@@ -345,7 +345,7 @@
   },
   "collector:StashAway": {
     "NAME": "Stash Away",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain X collector:Reserve."
+    "DESCRIPTION": "Gain !B! Block X times. NL Next turn, gain X collector:Reserve."
   },
   "collector:Strike": {
     "NAME": "Strike",
@@ -381,7 +381,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "Void Armor",
-    "DESCRIPTION": "EVERYONE gains !B! Block."
+    "DESCRIPTION": "EVERYONE gains !B! Block. NL Foes with collector:Doom lose !M! HP."
   },
   "collector:Wildfire": {
     "NAME": "Wildfire",
@@ -511,7 +511,7 @@
   },
   "collector:MadGremlinCard": {
     "NAME": "Mad Gremlin",
-    "DESCRIPTION": "Gain !M! Temporary Strength. NL If you receive unblocked attack damage this turn, add a copy of this into your hand."
+    "DESCRIPTION": "Gain !M! Temporary Strength."
   },
   "collector:MawCard": {
     "NAME": "The Maw",
@@ -559,7 +559,7 @@
   },
   "collector:SentryCard": {
     "NAME": "Sentry",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak to ALL enemies. NL Repeat for each *Sentry in your exhaust pile."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Repeat for each *Sentry in your exhaust pile."
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Shelled Parasite",

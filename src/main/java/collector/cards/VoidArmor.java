@@ -1,6 +1,8 @@
 package collector.cards;
 
+import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -14,15 +16,22 @@ public class VoidArmor extends AbstractCollectorCard {
 
     public VoidArmor() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL);
-        baseBlock = 12;
+        baseBlock = 10;
+        baseMagicNumber = magicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         forAllMonstersLiving(q -> atb(new GainBlockAction(q, block)));
+        forAllMonstersLiving(q -> {
+            if (q.hasPower(DoomPower.POWER_ID)) {
+                atb(new LoseHPAction(q, p, magicNumber));
+            }
+        });
     }
 
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(2);
+        upgradeMagicNumber(2);
     }
 }

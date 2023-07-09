@@ -14,7 +14,7 @@ public class Goodbye extends AbstractCollectorCard {
     // intellij stuff skill, enemy, rare, , , , , 2, 1
 
     public Goodbye() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
     }
@@ -33,7 +33,6 @@ public class Goodbye extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        uDesc();
+        upgradeBaseCost(1);
     }
 }

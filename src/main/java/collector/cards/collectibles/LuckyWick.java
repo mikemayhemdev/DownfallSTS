@@ -11,9 +11,9 @@ public class LuckyWick extends AbstractCollectibleCard {
     // intellij stuff attack, enemy, special, 2, 1, 2, 1, , 
 
     public LuckyWick() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 2;
-        baseBlock = 2;
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        baseDamage = 3;
+        baseBlock = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
