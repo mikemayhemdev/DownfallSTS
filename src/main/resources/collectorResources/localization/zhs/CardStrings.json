@@ -61,7 +61,7 @@
     ]
   },
   "collector:CantTouchThis": {
-    "NAME": "?不能触Can't Touch This",
+    "NAME": "不可触及",
     "DESCRIPTION": "获得 !M! 点 敏捷 。 NL 防住攻击时， NL 给予对方 !clm2! 层 collector:魂灭 。"
   },
   "collector:CoffinNail": {
@@ -315,7 +315,7 @@
     "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
   },
   "collector:SeedOfDoubt": {
-    "NAME": "疑虑之种Seed of Doubt",
+    "NAME": "疑虑之种",
     "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 消耗 牌时若本牌在手， NL 本牌 collector:魂灭 加 !clm2! 。"
   },
   "collector:ShadowDaggers": {
