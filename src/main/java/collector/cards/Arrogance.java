@@ -1,6 +1,7 @@
 package collector.cards;
 
 import collector.cards.AbstractCollectorCard;
+import collector.powers.AttacksApplyDoomPower;
 import collector.powers.NextAttackAppliesDoomPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,16 +16,21 @@ public class Arrogance extends AbstractCollectorCard {
     public Arrogance() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        applyToSelf(new NextAttackAppliesDoomPower(magicNumber));
+        if (upgraded){
+            applyToSelf(new AttacksApplyDoomPower(magicNumber));
+        }else {
+            applyToSelf(new NextAttackAppliesDoomPower(magicNumber));
+        }
+
     }
 
     public void upp() {
         upgradeBlock(2);
-        upgradeMagicNumber(3);
+        uDesc();
     }
 }

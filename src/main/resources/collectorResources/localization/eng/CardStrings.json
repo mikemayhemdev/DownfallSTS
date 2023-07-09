@@ -14,7 +14,8 @@
   },
   "collector:Arrogance": {
     "NAME": "Arrogance",
-    "DESCRIPTION": "Gain !B! Block. NL Your next Attack this turn also applies !M! collector:Doom."
+    "DESCRIPTION": "Gain !B! Block. NL Your next Attack this turn also applies !M! collector:Doom.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Each Attack this turn also applies !M! collector:Doom."
   },
   "collector:AshesAndDust": {
     "NAME": "Ashes and Dust",
@@ -45,7 +46,7 @@
   },
   "collector:Bonfire": {
     "NAME": "Bonfire",
-    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain 1 collector:Reserve."
+    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain !clm2! collector:Reserve."
   },
   "collector:BrainDrain": {
     "NAME": "Brain Drain",
@@ -69,11 +70,11 @@
   },
   "collector:Condemn": {
     "NAME": "Condemn",
-    "DESCRIPTION": "Apply !M! collector:Doom. NL Apply 1 Vulnerable."
+    "DESCRIPTION": "Apply !M! collector:Doom. NL Apply !clm2! Vulnerable."
   },
   "collector:CursedWail": {
     "NAME": "Cursed Wail",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL collector:Afflicted enemies lose 1 Strength. NL Exhaust."
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL collector:Afflicted enemies lose !clm2! Strength. NL Exhaust."
   },
   "collector:DarkApotheosis": {
     "NAME": "Dark Apotheosis",
@@ -144,7 +145,8 @@
   },
   "collector:FlameLash": {
     "NAME": "Flame Lash",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the *Exhausted card's damage to this."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the *Exhausted card's damage to this.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the *Exhausted card's damage plus !M! to this."
   },
   "collector:FleetingEmbers": {
     "NAME": "Fleeting Embers",
@@ -230,8 +232,7 @@
   },
   "collector:JadedJabs": {
     "NAME": "Jaded Jabs",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to the Exhausted card's cost + 1.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Upgraded *Shivs equal to the Exhausted card's cost + 1."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to the Exhausted card's cost + !M!."
   },
   "collector:Karma": {
     "NAME": "Karma",
@@ -373,7 +374,8 @@
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer",
-    "DESCRIPTION": "If you have any expansioncontent:Temp_HP, Exhaust. NL Gain !M! expansioncontent:Temp_HP."
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "If you have any expansioncontent:Temp_HP, Exhaust. NL Gain !M! expansioncontent:Temp_HP."
   },
   "collector:WhirlingFlame": {
     "NAME": "Whirling Flame",
