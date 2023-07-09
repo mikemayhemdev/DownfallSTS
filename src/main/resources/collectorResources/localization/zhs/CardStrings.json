@@ -50,7 +50,7 @@
   },
   "collector:BrainDrain": {
     "NAME": "意识窥视Brain Drain",
-    "DESCRIPTION": "获得目标的 藏品 牌， NL 本回合其单次耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "获得目标的 collector:藏品 牌， NL 本回合其单次耗能为0。 NL 消耗 。"
   },
   "collector:BramblesparKindling": {
     "NAME": "黑莓木柴",
