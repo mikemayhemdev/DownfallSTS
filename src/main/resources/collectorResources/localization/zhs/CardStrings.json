@@ -37,7 +37,7 @@
   },
 
   "collector:BlackBindings": {
-    "NAME": "Black Bindings",
+    "NAME": "黑缚咒",
     "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 目标每有不同负面效果， NL 给予 !clm2! 层 collector:魂灭 。"
   },
   "collector:Blightning": {
@@ -73,7 +73,7 @@
     "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 给予1层 易伤 。 "
   },
   "collector:CursedWail": {
-    "NAME": "Cursed Wail",
+    "NAME": "诅咒尖啸",
     "DESCRIPTION": "被 collector:折磨 的敌人失去1点 力量 。 NL 所有敌人本回合失去 !M! 层 力量 。 NL 消耗 。"
   },
   "collector:DarkApotheosis": {
@@ -218,7 +218,7 @@
     "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力。 NL 下回合获得 !M! 层 活力 。"
   },
   "collector:IronbarkKindling": {
-    "NAME": "Ironbark Kindling",
+    "NAME": "铁皮柴",
     "DESCRIPTION": "Unplayable. NL When *Exhausted, 获得 !B! Block.",
     "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When *Exhausted, 获得 !B! Block.",
     "EXTENDED_DESCRIPTION": [
@@ -300,7 +300,7 @@
     "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。"
   },
   "collector:RotwoodKindling": {
-    "NAME": "Rotwood Kindling",
+    "NAME": "腐木柴",
     "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， 给予所有敌人 !M! 层 易伤 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
