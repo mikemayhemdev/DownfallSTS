@@ -200,7 +200,7 @@
     "NAME": "Curl Up",
     "DESCRIPTIONS": [
       "When you next receive unblocked attack damage, gain #b",
-      " #yBlock and #b1 #yBlur."
+      " #yBlock."
     ]
   },
   "collector:MadGremlinCard": {

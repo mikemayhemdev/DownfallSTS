@@ -511,7 +511,7 @@
   },
   "collector:LouseCard": {
     "NAME": "Louse",
-    "DESCRIPTION": "The next time you receive unblocked attack damage, gain !B! Block and 1 Blur."
+    "DESCRIPTION": "Gain 1 bronze:Blur. NL The next time you receive unblocked attack damage, gain !B! Block."
   },
   "collector:MadGremlinCard": {
     "NAME": "Mad Gremlin",
