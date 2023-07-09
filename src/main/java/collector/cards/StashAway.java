@@ -23,7 +23,8 @@ public class StashAway extends AbstractCollectorCard {
             for (int i = 0; i < effect; i++) {
                 blck();
             }
-            applyToSelf(new NextTurnReservePower(effect));
+            if (effect > 0)
+                applyToSelf(new NextTurnReservePower(effect));
             return true;
         }));
     }

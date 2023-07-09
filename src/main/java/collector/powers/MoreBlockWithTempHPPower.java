@@ -18,7 +18,7 @@ public class MoreBlockWithTempHPPower extends AbstractCollectorPower {
         if (TempHPField.tempHp.get(owner) > 0) {
             return blockAmount + amount;
         }
-        return amount;
+        return blockAmount;
     }
 
     @Override

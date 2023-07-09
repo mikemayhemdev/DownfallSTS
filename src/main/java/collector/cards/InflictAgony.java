@@ -6,9 +6,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import hermit.util.Wiz;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.*;
+import static collector.util.Wiz.applyToEnemy;
+import static collector.util.Wiz.isAfflicted;
 
 public class InflictAgony extends AbstractCollectorCard {
     public final static String ID = makeID(InflictAgony.class.getSimpleName());
@@ -33,12 +35,6 @@ public class InflictAgony extends AbstractCollectorCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        for (AbstractMonster m : getEnemies()) {
-            if (m.hasPower(VulnerablePower.POWER_ID) && m.hasPower(WeakPower.POWER_ID)) {
-                this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
-                return;
-            }
-        }
-        this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+        this.glowColor = Wiz.getEnemies().stream().noneMatch(q -> (!q.hasPower(WeakPower.POWER_ID) || !q.hasPower(VulnerablePower.POWER_ID))) ? BLUE_BORDER_GLOW_COLOR : AbstractCard.GOLD_BORDER_GLOW_COLOR;
     }
 }

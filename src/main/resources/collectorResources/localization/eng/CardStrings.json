@@ -555,7 +555,7 @@
   },
   "collector:RomeoCard": {
     "NAME": "Romeo",
-    "DESCRIPTION": "Your next Attack this turn costs 0 and deals !M! additional damage."
+    "DESCRIPTION": "Your next Attack costs 0 and deals !M! additional damage."
   },
   "collector:SentryCard": {
     "NAME": "Sentry",
@@ -595,7 +595,7 @@
   },
   "collector:SpireGrowthCard": {
     "NAME": "Spire Growth",
-    "DESCRIPTION": "Enemy takes 10 damage at the end of each of its turns."
+    "DESCRIPTION": "Enemy takes !M! damage at the end of each of its turns."
   },
   "collector:TaskmasterCard": {
     "NAME": "Taskmaster",

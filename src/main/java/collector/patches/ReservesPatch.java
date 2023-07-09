@@ -20,13 +20,12 @@ public class ReservesPatch {
             int found = NewReserves.reserveCount();
             // Kill Special Case
             if (__instance.cardID.equals(FingerOfDeath.ID)) {
-                if (found >= __instance.costForTurn) {
+                if (found >= __instance.costForTurn || __instance.freeToPlay()) {
                     return SpireReturn.Return(true);
                 }
                 return SpireReturn.Return(false);
             }
             if (found > 0) {
-
                 if (EnergyPanel.totalCount + found >= __instance.costForTurn) {
                     return SpireReturn.Return(true);
                 }
@@ -46,10 +45,11 @@ public class ReservesPatch {
     @SpirePatch2(clz = AbstractPlayer.class, method = "useCard")
     public static class UseReserves {
         @SpireInsertPatch(locator = Locator.class)
-        public static void spendReserves(AbstractPlayer __instance, AbstractCard c) {
+        public static SpireReturn spendReserves(AbstractPlayer __instance, AbstractCard c) {
             if (NewReserves.reserveCount() > 0 && c.costForTurn > 0) {
                 if (c.cardID.equals(FingerOfDeath.ID)) {
                     att(new GainReservesAction(-c.costForTurn));
+                    return SpireReturn.Return();
                 } else {
                     int delta = c.costForTurn - EnergyPanel.getCurrentEnergy();
                     if (delta > 0) {
@@ -57,6 +57,7 @@ public class ReservesPatch {
                     }
                 }
             }
+            return SpireReturn.Continue();
         }
 
         public static class Locator extends SpireInsertLocator {

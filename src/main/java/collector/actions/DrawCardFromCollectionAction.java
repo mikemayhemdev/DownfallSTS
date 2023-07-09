@@ -1,6 +1,8 @@
 package collector.actions;
 
+import basemod.helpers.CardModifierManager;
 import collector.CollectorCollection;
+import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.LuckyWick;
 import collector.relics.HolidayCoal;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -26,6 +28,7 @@ public class DrawCardFromCollectionAction extends AbstractGameAction {
             if (AbstractDungeon.player.hasRelic(HolidayCoal.ID)) {
                 AbstractDungeon.player.getRelic(HolidayCoal.ID).flash();
                 AbstractCard tar = new LuckyWick();
+                CardModifierManager.addModifier(tar, new CollectedCardMod());
                 AbstractDungeon.player.drawPile.addToTop(tar);
                 att(new DrawCardAction(1));
             }
