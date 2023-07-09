@@ -551,7 +551,7 @@
   },
   "collector:ReptomancerCard": {
     "NAME": "Reptomancer",
-    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL At the end of your turn, if you have expansioncontent:Temp_HP, apply !clm2! Poison to a random enemy."
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL collector:Torchhead gains \"Apply !clm2! collector:Poison to a random enemy.\""
   },
   "collector:RepulsorCard": {
     "NAME": "Repulsor",
