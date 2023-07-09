@@ -19,6 +19,7 @@ public class JadedJabs extends AbstractCollectorCard implements OnPyreCard {
     public JadedJabs() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 10;
+        baseMagicNumber = magicNumber = 1;
         cardsToPreview = new Shiv();
         isPyre();
     }
@@ -34,7 +35,7 @@ public class JadedJabs extends AbstractCollectorCard implements OnPyreCard {
                 if (toAdd >= 0) {
                     AbstractCard q = new Shiv();
                     if (upgraded) q.upgrade();
-                    att(new MakeTempCardInHandAction(q, toAdd+1, true));
+                    att(new MakeTempCardInHandAction(q, toAdd+magicNumber, true));
                 }
             }
         });
@@ -47,10 +48,6 @@ public class JadedJabs extends AbstractCollectorCard implements OnPyreCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
-        AbstractCard q = new Shiv();
-        q.upgrade();
-        cardsToPreview = q;
-        uDesc();
+        upgradeMagicNumber(1);
     }
 }

@@ -1,6 +1,8 @@
 package collector.cards;
 
+import basemod.devcommands.draw.Draw;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -18,9 +20,10 @@ public class BurningStrike extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        if (upgraded) addToBot(new DrawCardAction(1));
     }
 
     public void upp() {
-        upgradeDamage(6);
+        uDesc();
     }
 }

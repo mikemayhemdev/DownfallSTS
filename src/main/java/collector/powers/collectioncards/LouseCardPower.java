@@ -23,7 +23,7 @@ public class LouseCardPower extends AbstractCollectorPower {
             this.flash();
 
             addToTop(new RemoveSpecificPowerAction(owner, owner, this));
-            addToTop(new ApplyPowerAction(owner, owner, new BlurPower(owner, 1), 1));
+           // addToTop(new ApplyPowerAction(owner, owner, new BlurPower(owner, 1), 1));
             addToTop(new GainBlockAction(owner, amount));
         }
 
