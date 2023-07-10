@@ -14,7 +14,8 @@
   },
   "collector:Arrogance": {
     "NAME": "巫傲",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张攻击会给予 !M! 层 collector:魂灭 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张攻击会给予 !M! 层 collector:魂灭 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合所有攻击会给予 !M! 层 collector:魂灭 。"
   },
   "collector:AshesAndDust": {
     "NAME": "成灰成烬",
@@ -46,7 +47,7 @@
   },
   "collector:Bonfire": {
     "NAME": "篝火",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得1 collector:储能 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得 !clm2! collector:储能 。"
   },
   "collector:BrainDrain": {
     "NAME": "意识窥视Brain Drain",
@@ -70,11 +71,11 @@
   },
   "collector:Condemn": {
     "NAME": "谴责",
-    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 给予1层 易伤 。 "
+    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 给予 !clm2! 层 易伤 。 "
   },
   "collector:CursedWail": {
     "NAME": "诅咒尖啸",
-    "DESCRIPTION": "被 collector:折磨 的敌人失去1点 力量 。 NL 所有敌人本回合失去 !M! 层 力量 。 NL 消耗 。"
+    "DESCRIPTION": "被 collector:折磨 的敌人失去1点 力量 。 NL 所有敌人本回合失去 !clm2! 层 力量 。 NL 消耗 。"
   },
   "collector:DarkApotheosis": {
     "NAME": "黑化",
@@ -145,7 +146,8 @@
   },
   "collector:FlameLash": {
     "NAME": "焰鞭",
-    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 获得所 消耗 牌的伤害。"
+    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 获得所 消耗 牌的伤害。",
+    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 本站战斗伤害加 !M! ， NL 再加所 消耗 牌的伤害。"
   },
   "collector:FleetingEmbers": {
     "NAME": "转瞬之烬",
@@ -231,8 +233,7 @@
   },
   "collector:JadedJabs": {
     "NAME": "Jaded Jabs",
-    "DESCRIPTION": "collector:Pyre. NL 造成 !D! 点伤害。 NL 获得 *Shivs equal to the Exhausted card's cost+1.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL 造成 !D! 点伤害。 NL 获得 *Shiv+s equal to the Exhausted card's cost+1."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to the Exhausted card's cost + !M!."
   },
   "collector:Karma": {
     "NAME": "Karma",
@@ -374,7 +375,8 @@
   },
   "collector:Torchbearer": {
     "NAME": "火炬御者",
-    "DESCRIPTION": "If you have any expansioncontent:Temp_HP, Exhaust. NL 获得 !M! expansioncontent:Temp_HP."
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "If you have any expansioncontent:Temp_HP, Exhaust. NL Gain !M! expansioncontent:Temp_HP."
   },
   "collector:WhirlingFlame": {
     "NAME": "回溯之火Whirling Flame",
