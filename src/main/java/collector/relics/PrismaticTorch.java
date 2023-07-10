@@ -29,6 +29,7 @@ public class PrismaticTorch extends CustomRelic {
     public void atBattleStart() {
         flash();
         makeInHand(new Ember(), EMBER_COUNT);
+        atb(new GainReservesAction(1));
     }
 
     @Override

@@ -14,7 +14,6 @@ public class BramblesparKindling extends AbstractCollectorCard {
 
     public BramblesparKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-        baseMagicNumber = magicNumber = 5;
         cardsToPreview = new BurningStrike();
     }
 

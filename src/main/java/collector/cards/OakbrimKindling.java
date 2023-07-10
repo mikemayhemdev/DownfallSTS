@@ -1,10 +1,12 @@
 package collector.cards;
 
+import collector.powers.NextTurnReservePower;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
+import static collector.util.Wiz.applyToSelf;
 import static collector.util.Wiz.atb;
 
 public class OakbrimKindling extends AbstractCollectorCard {
@@ -22,6 +24,8 @@ public class OakbrimKindling extends AbstractCollectorCard {
     @Override
     public void triggerOnExhaust() {
         atb(new DrawCardAction(magicNumber));
+        if (upgraded)
+            applyToSelf(new NextTurnReservePower(1));
     }
 
     @Override
@@ -31,6 +35,7 @@ public class OakbrimKindling extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+
+        uDesc();
     }
 }

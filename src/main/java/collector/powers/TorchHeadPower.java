@@ -82,7 +82,7 @@ public class TorchHeadPower extends AbstractCollectorPower implements NonStackab
                     public void update() {
                         isDone = true;
                         AbstractMonster tar = AbstractDungeon.getRandomMonster();
-                        applyToEnemy(tar, new PoisonPower(tar, AbstractDungeon.player, onAttackRandomDoom));
+                        applyToEnemy(tar, new PoisonPower(tar, AbstractDungeon.player, onAttackPoison));
                     }
                 });
             }

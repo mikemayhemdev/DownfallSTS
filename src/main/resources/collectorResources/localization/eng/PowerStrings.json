@@ -86,9 +86,16 @@
     ]
   },
   "collector:NextAttackAppliesDoom": {
-    "NAME": "Next Attack Dooms",
+    "NAME": "Doomed Attack",
     "DESCRIPTIONS": [
       "Your next Attack this turn applies #b",
+      " #yDoom."
+    ]
+  },
+  "collector:AttacksApplyDoomPower": {
+    "NAME": "Doomed Attacks",
+    "DESCRIPTIONS": [
+      "Attacks this turn applies #b",
       " #yDoom."
     ]
   },
@@ -193,7 +200,7 @@
     "NAME": "Curl Up",
     "DESCRIPTIONS": [
       "When you next receive unblocked attack damage, gain #b",
-      " #yBlock and #b1 #yBlur."
+      " #yBlock."
     ]
   },
   "collector:MadGremlinCard": {
