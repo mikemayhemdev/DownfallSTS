@@ -27,7 +27,7 @@ import sneckomod.patches.UnknownExtraUiPatch;
 import sneckomod.relics.UnknownEgg;
 
 public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("collector:StashAwayCampfireEffect");
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("collector:StashAwayCampfireOption");
     public static final String[] TEXT = uiStrings.TEXT;
 
     private static final float DUR = 1.5F;
