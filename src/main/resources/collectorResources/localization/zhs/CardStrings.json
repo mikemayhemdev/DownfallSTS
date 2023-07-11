@@ -61,6 +61,10 @@
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
   },
+  "collector:BurningStrike": {
+    "NAME": "Burning Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
   "collector:CantTouchThis": {
     "NAME": "凶不可触",
     "DESCRIPTION": "获得 !M! 点 敏捷 。 NL 防住攻击时， NL 给予对方 !clm2! 层 collector:魂灭 。"
@@ -268,6 +272,7 @@
   "collector:OakbrimKindling": {
     "NAME": "Oakbrim Kindling",
     "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 抽 !M! 张牌， 且下回合获得 1 collector:储能 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -430,10 +435,6 @@
     "NAME": "异鸟",
     "DESCRIPTION": "造成 !D! 点伤害5次。"
   },
-  "collector:BurningStrike": {
-    "NAME": "Burning Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。"
-  },
   "collector:CenturionCard": {
     "NAME": "百夫长",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 敏捷 。"
@@ -503,7 +504,7 @@
   },
   "collector:LouseCard": {
     "NAME": "虱虫",
-    "DESCRIPTION": "下次被攻击而失去生命时，获得 !B! 点 格挡 与1层 bronze:残影 。"
+    "DESCRIPTION": "获得1层 bronze:残影 。 NL 下次被攻击而失去生命时，获得 !B! 点 格挡 。"
   },
   "collector:LivingWallCard": {
     "NAME": "活墙壁",
@@ -547,7 +548,7 @@
   },
   "collector:ReptomancerCard": {
     "NAME": "拜蛇术士",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合结束时，若有 临时生命 ，随机给予 !clm2! 层 中毒 。"
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL \"随机给予 !clm2! 层 中毒 。\""
   },
   "collector:RepulsorCard": {
     "NAME": "反冲机",
@@ -555,7 +556,7 @@
   },
   "collector:RomeoCard": {
     "NAME": "罗密欧",
-    "DESCRIPTION": "本回合下张攻击耗能变为0且额外造成 !M! 点伤害。"
+    "DESCRIPTION": "下张攻击耗能变为0且额外造成 !M! 点伤害。"
   },
   "collector:SentryCard": {
     "NAME": "哨卫",
