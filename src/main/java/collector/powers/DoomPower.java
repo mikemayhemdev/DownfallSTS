@@ -73,7 +73,9 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
             flash();
             instakilled = true;
             CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-            CollectorCollection.collect((AbstractMonster) owner);
+            if (owner.maxHealth * 0.25F <= this.amount) {
+                CollectorCollection.collect((AbstractMonster) owner);
+            }
             if (owner instanceof Darkling) { // Retain it on case "some weird shit happened"
                 owner.halfDead = true;
                 FuckThisDarklings();
@@ -86,7 +88,9 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
             flash();
             instakilled = true;
             CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-            CollectorCollection.collect((AbstractMonster) owner);
+            if (owner.maxHealth * 0.25F <= this.amount) {
+                CollectorCollection.collect((AbstractMonster) owner);
+            }
             att(new InstantKillAction(owner));
             if (!(owner instanceof AwakenedOne) && !(owner instanceof Darkling)) // All we were need this if
                 att(new HideHealthBarAction(owner));
@@ -122,8 +126,8 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         if (owner != null) {
             name = owner.name;
         } else {
-            name = DESCRIPTIONS[3];
+            name = DESCRIPTIONS[4];
         }
-        description = DESCRIPTIONS[0] + FontHelper.colorString(name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + FontHelper.colorString(name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + owner.maxHealth * 0.25F + DESCRIPTIONS[3];
     }
 }
