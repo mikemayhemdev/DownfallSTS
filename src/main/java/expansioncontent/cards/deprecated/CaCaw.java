@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.monsters.city.Byrd;
 import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import downfall.util.CardIgnore;
-import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
+import expansioncontent.cards.AbstractExpansionCard;
 
 @CardIgnore
 public class CaCaw extends AbstractExpansionCard {

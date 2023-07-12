@@ -13,9 +13,9 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import downfall.cardmods.ExhaustMod;
+import expansioncontent.cardmods.ExhaustMod;
+import expansioncontent.cardmods.PropertiesMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
-import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
@@ -51,7 +51,7 @@ public class StrikeOfGeniusPower extends AbstractPower implements CloneablePower
                 if (r.color == AbstractDungeon.player.getCardColor() && !UnlockTracker.isCardLocked(r.cardID)&& !r.hasTag(AbstractCard.CardTags.HEALING) && r.hasTag(AbstractCard.CardTags.STRIKE) && r.type == AbstractCard.CardType.ATTACK && !(r instanceof AbstractUnknownCard)) qCardList.add(r);
             AbstractCard l = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();
             l.freeToPlayOnce = true;
-            if (!l.exhaust) CardModifierManager.addModifier(l, new ExhaustMod());
+            if (!l.exhaust) CardModifierManager.addModifier(l, new PropertiesMod(PropertiesMod.supportedProperties.EXHAUST, false));
             this.addToBot(new MakeTempCardInHandAction(l));
         }
     }

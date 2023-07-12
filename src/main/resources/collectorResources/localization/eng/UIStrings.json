@@ -72,5 +72,13 @@
     "TEXT": [
       "I don't have a card to Exhaust!"
     ]
+  },
+  "collector:StashAwayCampfireOption": {
+    "TEXT": [
+      "Release",
+      "[Free Action] Remove a Collected Card.",
+      "Requires a Collected card.",
+      "Select a Collected card to remove."
+    ]
   }
 }

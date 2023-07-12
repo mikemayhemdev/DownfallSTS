@@ -1,5 +1,8 @@
 package guardian.patches;
 
+import collector.CollectorChar;
+import collector.CollectorCollection;
+import collector.ui.StashAwayCampfireOption;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -42,6 +45,10 @@ public class AddEnhanceButtonPatch {
 
             if (AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player.hasRelic(UnknownEgg.ID)) {
                 ___buttons.add(new LockInCampfireOption());
+            }
+
+            if (AbstractDungeon.player instanceof CollectorChar || !CollectorCollection.collection.isEmpty()) {
+                ___buttons.add(new StashAwayCampfireOption());
             }
         }
     }

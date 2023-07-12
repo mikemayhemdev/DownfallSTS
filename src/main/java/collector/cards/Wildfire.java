@@ -7,8 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import expansioncontent.expansionContentMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.*;
@@ -30,7 +29,7 @@ public class Wildfire extends AbstractCollectorCard {
             public void update() {
                 isDone = true;
                 for (AbstractCard card : AbstractDungeon.player.hand.group) {
-                    if (card.cost == -2) {
+                    if (card.cost == -2 || card.hasTag(expansionContentMod.UNPLAYABLE)) {
                         att(new GainBlockAction(p, block));
                         att(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand, true));
                     }

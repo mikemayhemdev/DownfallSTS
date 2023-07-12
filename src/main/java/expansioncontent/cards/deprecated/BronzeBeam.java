@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
-import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
+import expansioncontent.cards.AbstractExpansionCard;
 import guardian.vfx.BronzeOrbEffect;
 
 @CardIgnore

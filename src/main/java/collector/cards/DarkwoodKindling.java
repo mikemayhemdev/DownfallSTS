@@ -3,6 +3,7 @@ package collector.cards;
 import collector.actions.AllEnemyLoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.expansionContentMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.atb;
@@ -14,6 +15,7 @@ public class DarkwoodKindling extends AbstractCollectorCard {
     public DarkwoodKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 12;
+        tags.add(expansionContentMod.UNPLAYABLE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

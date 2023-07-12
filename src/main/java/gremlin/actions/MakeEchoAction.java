@@ -1,9 +1,8 @@
 package gremlin.actions;
 
-import automaton.AutomatonMod;
 import basemod.BaseMod;
+import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.AlwaysRetainField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,9 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
-import downfall.cardmods.EtherealMod;
-import downfall.cardmods.ExhaustMod;
-import downfall.cardmods.RetainCardMod;
+import expansioncontent.cardmods.PropertiesMod;
 
 public class MakeEchoAction extends AbstractGameAction {
     private static final float DURATION_PER_CARD = 0.35F;
@@ -24,6 +21,7 @@ public class MakeEchoAction extends AbstractGameAction {
 
     private int discount;
 
+    //TODO: Rewrite this to be better
     public MakeEchoAction(AbstractCard card)
     {
         this(card, 1, 0);
@@ -44,20 +42,16 @@ public class MakeEchoAction extends AbstractGameAction {
         this.discount = discount;
     }
 
-    private AbstractCard echoCard(){
+    private AbstractCard echoCard() {
         AbstractCard card = this.c.makeStatEquivalentCopy();
-        card.name = CardCrawlGame.languagePack.getUIString("Gremlin:MakeEchoAction").TEXT[0] + card.name;
-        if (!card.exhaust) {
-            if(!card.hasTag(AutomatonMod.ENCODES)) {
-                card.rawDescription = card.rawDescription + CardCrawlGame.languagePack.getUIString(ExhaustMod.ID).TEXT[0];
-                card.exhaust = true;
-            }
-        }
-        if (!card.isEthereal) card.rawDescription = CardCrawlGame.languagePack.getUIString(EtherealMod.ID).TEXT[0] + card.rawDescription;
-        card.isEthereal = true;
-        if (card.retain) card.rawDescription = card.rawDescription.replace(CardCrawlGame.languagePack.getUIString(RetainCardMod.ID).TEXT[0], "");
-        AlwaysRetainField.alwaysRetain.set(card, false);
-        card.retain = false;
+
+        PropertiesMod mod = new PropertiesMod();
+        mod.addProperty(PropertiesMod.supportedProperties.ECHO, false);
+        mod.addProperty(PropertiesMod.supportedProperties.ETHEREAL, false);
+        mod.addProperty(PropertiesMod.supportedProperties.EXHAUST, false);
+
+        CardModifierManager.addModifier(card, mod);
+
         if(card.cost >= 0 && this.discount>0)
             card.updateCost(-1*this.discount);
         return card;

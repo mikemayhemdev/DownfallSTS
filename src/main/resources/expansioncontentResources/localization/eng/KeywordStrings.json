@@ -1,11 +1,11 @@
 [
   {
     "PROPER_NAME": "Blur",
-    "ID": "Blur",
+    "ID": "blur",
     "NAMES": [
       "blur"
     ],
-    "DESCRIPTION": "Block is not removed at the start of your turn."
+    "DESCRIPTION": "#yBlock is not removed at the start of your turn."
   },
   {
     "PROPER_NAME": "Boss",
@@ -13,6 +13,14 @@
       "boss"
     ],
     "DESCRIPTION": "You may only play #b1 #yBoss card in a turn."
+  },
+  {
+    "PROPER_NAME": "Echo",
+    "ID": "echo",
+    "NAMES": [
+      "echo"
+    ],
+    "DESCRIPTION": "Add an copy of a card to you hand, it is #yEthereal and #yExhausts. NL Echoes cannot be Echoed."
   },
   {
     "PROPER_NAME": "Exhume",
@@ -51,5 +59,13 @@
       "temp_hp"
     ],
     "DESCRIPTION": "Until end of combat, prevents damage to HP."
+  },
+  {
+    "PROPER_NAME": "Transform",
+    "ID": "transform",
+    "NAMES": [
+      "transform"
+    ],
+    "DESCRIPTION": "#yExhaust a card, replacing it with a different card."
   }
 ]
