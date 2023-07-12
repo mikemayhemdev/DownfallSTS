@@ -43,7 +43,7 @@ public class JadedJabs extends AbstractCollectorCard implements OnPyreCard {
 
     @Override
     public void onPyred(AbstractCard card) {
-        int result = Wiz.getLogicalCardCost(card);
+        int result = freeToPlay() ? 0 : card.costForTurn;
         toAdd = result > 0 ? result : -1;
     }
 

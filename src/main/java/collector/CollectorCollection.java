@@ -4,6 +4,7 @@ import basemod.helpers.CardModifierManager;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
@@ -110,6 +111,8 @@ public class CollectorCollection {
         collectionPool.put(CharBossDefect.ID, CoreSurge.ID);
         collectionPool.put(CharBossWatcher.ID, Scrawl.ID);
         collectionPool.put(CharBossHermit.ID, DeadOrAlive.ID);
+        collectionPool.put(CharBossMerchant.ID, MerchantCard.ID);
+
         //TODO: Too lazy after that to put in the boss and endgame cards, will do it later
     }
 
