@@ -9,7 +9,8 @@
   "bronze:UnplayableMod": {
     "TEXT": [
       "Unplayable. NL ",
-      "ERR_NULL_PTR"
+      "ERR_NULL_PTR",
+      "This is kept solely for the Null Pointer."
     ]
   },
   "bronze:EncodeAndShuffleMod": {

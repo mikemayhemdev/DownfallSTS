@@ -3,6 +3,7 @@ package collector.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import expansioncontent.expansionContentMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
@@ -15,6 +16,7 @@ public class RotwoodKindling extends AbstractCollectorCard {
     public RotwoodKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 3;
+        tags.add(expansionContentMod.UNPLAYABLE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

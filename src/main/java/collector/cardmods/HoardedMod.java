@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 
 import static collector.CollectorMod.makeID;
 
+@Deprecated
 public class HoardedMod extends AbstractCardModifier {
     public static final String ID = makeID("HoardedMod");
     private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);

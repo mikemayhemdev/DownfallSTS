@@ -16,7 +16,7 @@ import guardian.powers.FloatingOrbsPower;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
-
+@Deprecated
 public class OrbSlam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("OrbSlam");
     public static final String NAME;

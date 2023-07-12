@@ -32,6 +32,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.ui.campfire.WheelSpinButton;
 import downfall.util.CardIgnore;
+import downfall.util.TextureLoader;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.potions.BossPotion;
@@ -81,10 +82,21 @@ public class expansionContentMod implements
     public static AbstractCard.CardTags STUDY_SLIMEBOSS;
     @SpireEnum
     public static AbstractCard.CardTags STUDY;
+    @SpireEnum
+    public static AbstractCard.CardTags ECHO;
+    @SpireEnum
+    public static AbstractCard.CardTags UNPLAYABLE;
+
     public static boolean teleportToWheelTime = false;
     private static String modID;
 
     public static Color BOSS_CARD_COLOR = new Color(0.443F, 0.231F, 0.286F, 1);
+
+    public static final TextureAtlas UIAtlas = new TextureAtlas();
+    public static Texture etherealIcon;
+    public static Texture exhaustIcon;
+    public static Texture retainIcon;
+    public static Texture unplayableIcon;
 
     public expansionContentMod() {
         BaseMod.subscribe(this);
@@ -249,6 +261,16 @@ public class expansionContentMod implements
 
     public void receivePostInitialize() {
         addPotions();
+
+        etherealIcon = TextureLoader.getTexture("expansioncontentResources/images/ui/cardmods/Ethereal.png");
+        exhaustIcon = TextureLoader.getTexture("expansioncontentResources/images/ui/cardmods/Exhaust.png");
+        retainIcon = TextureLoader.getTexture("expansioncontentResources/images/ui/cardmods/Retain.png");
+        unplayableIcon = TextureLoader.getTexture("expansioncontentResources/images/ui/cardmods/Unplayable.png");
+
+        UIAtlas.addRegion("etherealIcon", etherealIcon, 0, 0, etherealIcon.getWidth(), etherealIcon.getHeight());
+        UIAtlas.addRegion("exhaustIcon", exhaustIcon, 0, 0, exhaustIcon.getWidth(), exhaustIcon.getHeight());
+        UIAtlas.addRegion("retainIcon", retainIcon, 0, 0, retainIcon.getWidth(), retainIcon.getHeight());
+        UIAtlas.addRegion("unplayableIcon", unplayableIcon, 0, 0, unplayableIcon.getWidth(), unplayableIcon.getHeight());
     }
 
 }

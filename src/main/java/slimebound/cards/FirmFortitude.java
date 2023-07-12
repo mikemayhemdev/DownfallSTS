@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
@@ -52,11 +53,14 @@ public class FirmFortitude extends AbstractSlimeboundCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)){
-            if (AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount < 0){
+        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+            if (AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount < 0) {
+                if (!this.hasTag(expansionContentMod.UNPLAYABLE))
+                    this.tags.add(expansionContentMod.UNPLAYABLE);
                 return false;
             }
         }
+        this.tags.remove(expansionContentMod.UNPLAYABLE);
         return super.canUse(p, m);
     }
 

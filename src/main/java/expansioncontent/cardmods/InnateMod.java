@@ -1,39 +1,37 @@
-package downfall.cardmods;
+package expansioncontent.cardmods;
 
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import downfall.downfallMod;
-import sneckomod.SneckoMod;
 
-public class ExhaustMod extends AbstractCardModifier {
+public class InnateMod  extends AbstractCardModifier {
+    public static String ID = "downfall:InnateMod";
 
-    public static String ID = SneckoMod.makeID("ExhaustMod");
-
+    //Don't use for temporary modification (why would you do that?), for that use PropertiesMod instead.
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + CardCrawlGame.languagePack.getUIString(SneckoMod.makeID("ExhaustMod")).TEXT[0];
+        return CardCrawlGame.languagePack.getUIString(ID).TEXT[0] + rawDescription;
     }
 
     public boolean shouldApply(AbstractCard card) {
-        return !card.exhaust;
+        return !CardModifierManager.hasModifier(card, ID);
     }
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        card.exhaust = true;
+        card.isInnate = true;
     }
 
     @Override
     public void onRemove(AbstractCard card) {
-        card.exhaust = false;
+        card.isInnate = false;
     }
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new ExhaustMod();
+        return new InnateMod();
     }
 
     @Override

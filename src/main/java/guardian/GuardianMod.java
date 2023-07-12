@@ -603,7 +603,7 @@ public static void saveData() {
         BaseMod.addCard(new HyperBeam_Guardian());
         BaseMod.addCard(new BronzeArmor());
         BaseMod.addCard(new FloatingOrbs());
-        BaseMod.addCard(new OrbSlam());
+        //BaseMod.addCard(new OrbSlam());
         BaseMod.addCard(new SphericShield());
         //BaseMod.addCard(new Harden());
         BaseMod.addCard(new SentryWave());

@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -29,16 +30,23 @@ public class Hurting extends AbstractCollectorCard {
     public void onRetained() {
         AbstractCard prev = this;
         AbstractCard replacement = new GreaterHurting();
-        if (upgraded) {
+        if (upgraded)
             replacement.upgrade();
-        }
+
         att(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
                 int idx = AbstractDungeon.player.hand.group.indexOf(prev);
                 AbstractDungeon.player.hand.removeCard(prev);
-                AbstractDungeon.player.hand.group.add(idx, replacement);
+
+                replacement.current_x = (float) Settings.WIDTH / 2.0F;
+                replacement.current_y = (float)Settings.HEIGHT / 2.0F;
+
+                if (idx > -1) //Crash prevention if the card leaves the hand between being Retained and this action.
+                    AbstractDungeon.player.hand.group.add(idx, replacement);
+                else
+                    AbstractDungeon.player.hand.group.add(replacement);
                 replacement.superFlash(Color.PURPLE.cpy());
             }
         });

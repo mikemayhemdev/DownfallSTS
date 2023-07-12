@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import expansioncontent.expansionContentMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToSelf;
@@ -16,6 +17,7 @@ public class Ember extends AbstractCollectorCard {
         super(ID, -2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 1;
         selfRetain = true;
+        tags.add(expansionContentMod.UNPLAYABLE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

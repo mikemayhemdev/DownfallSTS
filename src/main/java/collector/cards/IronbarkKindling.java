@@ -1,11 +1,10 @@
 package collector.cards;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.expansionContentMod;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.atb;
 
 public class IronbarkKindling extends AbstractCollectorCard {
     public final static String ID = makeID(IronbarkKindling.class.getSimpleName());
@@ -14,6 +13,7 @@ public class IronbarkKindling extends AbstractCollectorCard {
     public IronbarkKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseBlock = 10;
+        tags.add(expansionContentMod.UNPLAYABLE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -31,7 +31,7 @@ public class IronbarkKindling extends AbstractCollectorCard {
     }
 
     public void upp() {
-        selfRetain=true;
+        selfRetain = true;
         uDesc();
     }
 }
