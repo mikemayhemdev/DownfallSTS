@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import com.megacrit.cardcrawl.vfx.combat.DaggerSprayEffect;
 
 import static gremlin.GremlinMod.MAD_GREMLIN;
@@ -39,6 +40,7 @@ public class DaggerDance extends AbstractGremlinCard {
         this.isMultiDamage = true;
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "DaggerDance.png");
     }
 
     @Override

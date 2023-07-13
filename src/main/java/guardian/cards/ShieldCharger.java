@@ -14,6 +14,8 @@ import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class ShieldCharger extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("ShieldCharger");
     public static final String NAME;
@@ -55,6 +57,7 @@ public class ShieldCharger extends AbstractGuardianCard implements InStasisCard 
         this.baseMagicNumber = this.magicNumber = 4;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("ShieldCharger.png"));
 
     }
 

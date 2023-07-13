@@ -22,6 +22,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
         exhaust = true;
         tags.add(CardTags.HEALING);
         tags.add(SneckoMod.RNG);
+        SneckoMod.loadJokeCardImage(this, "GlitteringGambit.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

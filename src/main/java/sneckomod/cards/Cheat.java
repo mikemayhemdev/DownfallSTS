@@ -15,6 +15,7 @@ public class Cheat extends AbstractSneckoCard {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
         exhaust = true;
+        SneckoMod.loadJokeCardImage(this, "Cheat.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

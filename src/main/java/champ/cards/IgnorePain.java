@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.fatigue;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class IgnorePain extends AbstractChampCard {
 
     public final static String ID = makeID("IgnorePain");
@@ -20,6 +22,8 @@ public class IgnorePain extends AbstractChampCard {
        // tags.add(ChampMod.TECHNIQUE);
       //  myHpLossCost = 5;
         postInit();
+        loadJokeCardImage(this, "IgnorePain.png");
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -75,7 +75,7 @@
     "NAME": "刮胡刀",
     "FLAVOR": "干净利落。。。",
     "DESCRIPTIONS": [
-      "移除一张牌时，回复 #b15 点生命。"
+      "移除或变化一张牌时，回复 #b15 点生命。"
     ]
   },
   "hermit:BrassTacks": {

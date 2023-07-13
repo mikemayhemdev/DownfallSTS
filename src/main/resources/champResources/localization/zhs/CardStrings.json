@@ -27,7 +27,7 @@
     ]
   },
   "champ:SwordSigil": {
-    "NAME": "剑纹",
+    "NAME": "胜利旌旗",
     "DESCRIPTION": "获得 champ:技术 奖励 !M! 次。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 champ:技术 奖励 !M! 次。 NL 消耗 。"
   },
@@ -94,7 +94,7 @@
   },
   "champ:SkillfulDodge": {
     "NAME": "精巧闪避",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ： NL 本场战斗数值加 !cool! 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ： NL 本场战斗数值各加 !cool! 。"
   },
   "champ:TornadoPunch": {
     "NAME": "飓风拳",
@@ -111,7 +111,7 @@
     "UPGRADE_DESCRIPTION": "保留 。 NL 抽 !M! 张牌。"
   },
   "champ:EnchantShield": {
-    "NAME": "整备装甲",
+    "NAME": "附魔坚盾",
     "DESCRIPTION": "选择一张手牌。 NL 其 格挡 增加 !M! 点。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我没有能够强化的牌"
@@ -125,7 +125,7 @@
     ]
   },
   "champ:ShieldThrow": {
-    "NAME": "爆甲",
+    "NAME": "护盾猛掷",
     "DESCRIPTION": "造成你当前 格挡 值点伤害两次。 NL 获得2层 脆弱 。 NL champ:防守 champ:连段 ： NL 不获得 脆弱 。",
     "EXTENDED_DESCRIPTION": ["造成你当前 格挡 值(!D!)点伤害两次。 NL 获得2层 脆弱 。 NL champ:防守 champ:连段 ： NL 不获得 脆弱 。"]
   },
@@ -140,7 +140,7 @@
     "UPGRADE_DESCRIPTION": "固有 。 NL 进入不同 姿态 时， NL 获得其 champ:技术 奖励两次。"
   },
   "champ:Lariat": {
-    "NAME": "强身健体",
+    "NAME": "身强体健",
     "DESCRIPTION": "获得 !B! 点 格挡 X次。"
   },
   "champ:HoldFirm": {
@@ -176,7 +176,7 @@
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 随机一张 *打击 手牌 NL 本回合下次耗能变为0。"
   },
   "champ:EnchantSword": {
-    "NAME": "剑拔弩张",
+    "NAME": "附魔利剑",
     "DESCRIPTION": "选择一张手牌。 NL 其伤害增加 !M! 点。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我不必强化"
@@ -187,7 +187,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合下张 *打击 牌将打出两次。"
   },
   "champ:SwordThrow": {
-    "NAME": "投掷剑刃",
+    "NAME": "剑刃猛掷",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 获得2层 虚弱 。 NL champ:战狂 champ:连段 ： NL 不获得 虚弱 。"
     
   },
@@ -214,7 +214,7 @@
     "UPGRADE_DESCRIPTION": "移除目标的 格挡 与 人工制品 。 NL 造成 !D! 点伤害。"
   },
   "champ:EnragedBash": {
-    "NAME": "怒斩",
+    "NAME": "怒锤",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ： NL 本场战斗次数加1。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ：攻击次数加1。"
@@ -294,7 +294,7 @@
     "DESCRIPTION": "每回合首次 champ:连段 时， NL 将该牌返回手牌。 NL 其下次耗能为0。"
   },
   "champ:CalledShot": {
-    "NAME": "宣告",
+    "NAME": "畅饮",
     "DESCRIPTION": " champ:战狂 champ:连段 ： NL 获得 [E] [E] 并 消耗 。 NL champ:防守 champ:连段 ： NL 抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "champ:战狂 champ:连段 ： NL 获得 [E] [E] [E] 并 消耗 。 NL champ:防守 champ:连段 ： NL 抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [

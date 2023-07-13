@@ -66,7 +66,10 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Tourbillon du Gardien",
-    "DESCRIPTION": "Requiert 20 d'Armure ou plus. NL Infligez !D! dégâts à TOUS les ennemis !M! fois."
+    "DESCRIPTION": "Requiert 20 d'Armure ou plus. NL Infligez !D! dégâts à TOUS les ennemis !M! fois.",
+    "EXTENDED_DESCRIPTION": [
+        "Requiert plus d'Armure."
+    ]
   },
   "Guardian:VentSteam": {
     "NAME": "Vapeur d'eau",
@@ -120,7 +123,10 @@
   },
   "Guardian:Harden": {
     "NAME": "Durcissement",
-    "DESCRIPTION": "Requiert 20 d'Armure ou plus. NL guardianmod:Renforcez de !GuardianSecondM! et gagnez !M! d'Épines."
+    "DESCRIPTION": "Requiert 20 d'Armure ou plus. NL guardianmod:Renforcez de !GuardianSecondM! et gagnez !M! d'Épines.",
+    "EXTENDED_DESCRIPTION": [
+        "Requiert plus d'Armure."
+    ]
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentinelle laser",
@@ -316,7 +322,7 @@
   "Guardian:AncientConstruct": {
     "NAME": "Construction antique",
     "DESCRIPTION": "Au début de votre tour, si vous n'avez pas d'Artéfact, gagnez !M! Artéfact.",
-    "UPGRADE_DESCRIPTION": "Gagnez 1 Artéfact. NL Au début de votre tour, si vous n'avez pas d'Artéfact, gagnez !M! Artéfact."
+    "UPGRADE_DESCRIPTION": "Gagnez 2 Artéfact. NL Au début de votre tour, si vous n'avez pas d'Artéfact, gagnez !M! Artéfact."
   },
   "Guardian:CrystalBeam": {
     "NAME": "Rayon cristallin",

@@ -27,6 +27,7 @@ public class StepThrough extends AbstractHexaCard {
         baseDamage = DAMAGE;
         this.tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "StepThrough.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

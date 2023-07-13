@@ -44,6 +44,7 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
 
         this.baseDamage = 8;
         this.cardsToPreview = new Lick();
+        SlimeboundMod.loadJokeCardImage(this, "ItLooksTasty.png");
 
     }
 

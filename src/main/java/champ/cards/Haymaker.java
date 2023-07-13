@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Haymaker extends AbstractChampCard {
 
     public final static String ID = makeID("Haymaker");
@@ -23,6 +25,7 @@ public class Haymaker extends AbstractChampCard {
 
         tags.add(ChampMod.FINISHER);
         postInit();
+        loadJokeCardImage(this, "Haymaker.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -46,6 +46,7 @@ public class EnDive extends AbstractHermitBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.upgradeMagicNumber(1);
             this.upgradeBlock(2);
         }
     }

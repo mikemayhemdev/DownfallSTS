@@ -33,8 +33,8 @@
   },
   "Slimebound:Overexert": {
     "NAME": "超负荷",
-    "DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL !M! 回合后， NL slimeboundmod:吸收 所有史莱姆。",
-    "UPGRADE_DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL slimeboundmod:命令 两次。 NL !M! 回合后， NL slimeboundmod:吸收 所有史莱姆。"
+    "DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL 两回合后， NL slimeboundmod:吸收 所有史莱姆。",
+    "UPGRADE_DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL slimeboundmod:命令 两次。 NL 两回合后， NL slimeboundmod:吸收 所有史莱姆。"
   },
   "Slimebound:Split": {
     "NAME": "分裂",
@@ -66,7 +66,7 @@
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "史莱姆乱战",
-    "DESCRIPTION": "每有一只史莱姆， NL 打出抽牌堆顶部的牌。 NL 消耗 。"
+    "DESCRIPTION": "打出抽牌堆顶部的牌。 NL 每有一只史莱姆， NL 再打出一次。 NL 消耗 。"
   },
   "Slimebound:SpikyOuterGoop": {
     "NAME": "黏液装甲",
@@ -116,7 +116,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "成长拳",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL slimeboundmod:吞食黏液 ： NL 本场战斗数值加 !M! 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL slimeboundmod:吞食黏液 ： NL 本场战斗数值各加 !M! 。"
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "查找策略",
@@ -128,7 +128,7 @@
     "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时， NL 随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 系牌。"
   },
   "Slimebound:Repurpose": {
-    "NAME": "重新考虑",
+    "NAME": "重分裂",
     "DESCRIPTION": "slimeboundmod:吸收 后： NL slimeboundmod:分裂 slimeboundmod:专家史莱姆 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "slimeboundmod:吸收 后： NL slimeboundmod:分裂 slimeboundmod:专家史莱姆 。 NL slimeboundmod:命令 。 消耗 。"
   },
