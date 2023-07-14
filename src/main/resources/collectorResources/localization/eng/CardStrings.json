@@ -412,7 +412,7 @@
 
   "collector:AcidSlimeCard": {
     "NAME": "Acid Slime",
-    "DESCRIPTION": "Add !M! random 0 cost card into your hand."
+    "DESCRIPTION": "Add !M! random 0 cost card into your hand.",
     "UPGRADE_DESCRIPTION": "Add !M! random 0 cost cards into your hand."
   },
   "collector:AugmenterCard": {
