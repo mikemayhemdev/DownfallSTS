@@ -21,8 +21,8 @@ public class ChosenCard extends AbstractCollectibleCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        applyToEnemy(m, new WeakPower(m, magicNumber, false));
         if (m.getIntentBaseDmg() <= -1) {
-            applyToEnemy(m, new WeakPower(m, magicNumber, false));
             applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
         }
     }

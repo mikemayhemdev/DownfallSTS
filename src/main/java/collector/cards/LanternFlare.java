@@ -1,6 +1,7 @@
 package collector.cards;
 
 import collector.powers.DoomPower;
+import collector.powers.LanternFlarePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,8 +17,8 @@ public class LanternFlare extends AbstractCollectorCard {
 
     public LanternFlare() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 12;
         baseMagicNumber = magicNumber = 12;
+        baseSecondMagic = secondMagic = 4;
         isPyre();
     }
 
@@ -27,14 +28,14 @@ public class LanternFlare extends AbstractCollectorCard {
             public void update() {
                 isDone = true;
                 AbstractMonster q = AbstractDungeon.getRandomMonster();
-                dmgTop(q, AttackEffect.FIRE);
+                applyToEnemyTop(q, new LanternFlarePower(q, secondMagic));
                 applyToEnemyTop(q, new DoomPower(q, magicNumber));
             }
         });
     }
 
     public void upp() {
-        upgradeDamage(3);
         upgradeMagicNumber(3);
+        upgradeSecondMagic(1);
     }
 }

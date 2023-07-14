@@ -276,5 +276,12 @@
       "Whenever you play a #ySkill, gain #b",
       " #yVigor."
     ]
+  },
+  "collector:LanternFlare": {
+    "NAME": "Scorched",
+    "DESCRIPTIONS": [
+      "At the start of its turn, gains #b",
+      " #yDoom."
+    ]
   }
 }

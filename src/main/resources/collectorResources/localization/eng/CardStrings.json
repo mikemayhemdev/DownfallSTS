@@ -46,7 +46,7 @@
   },
   "collector:Bonfire": {
     "NAME": "Bonfire",
-    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain !clm2! collector:Reserve."
+    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain collector:Reserve equal to the Exhausted card's cost."
   },
   "collector:BrainDrain": {
     "NAME": "Brain Drain",
@@ -241,12 +241,12 @@
   },
   "collector:Karma": {
     "NAME": "Karma",
-    "DESCRIPTION": "At the start of your turn, gain 1 Block for every 5 collector:Doom on foes.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 Block for every 5 collector:Doom on foes."
+    "DESCRIPTION": "At the start of your turn, gain !M! Block. NL Gain !clm2! more if an enemy has 25 or more collector:Doom.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! Block. NL Gain !clm2! more if an enemy has 25 or more collector:Doom."
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
-    "DESCRIPTION": "collector:Pyre. NL Apply !M! collector:Doom and deal !D! damage to a random enemy."
+    "DESCRIPTION": "collector:Pyre. NL Apply !M! collector:Doom. NL Enemy gains !clm2! more at the start of each of its turns."
   },
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",
@@ -412,7 +412,8 @@
 
   "collector:AcidSlimeCard": {
     "NAME": "Acid Slime",
-    "DESCRIPTION": "Your next Attack or Skill this turn is played twice."
+    "DESCRIPTION": "Add !M! random 0 cost card into your hand."
+    "UPGRADE_DESCRIPTION": "Add !M! random 0 cost cards into your hand."
   },
   "collector:AugmenterCard": {
     "NAME": "Augmenter",
@@ -444,7 +445,7 @@
   },
   "collector:ChosenCard": {
     "NAME": "Chosen",
-    "DESCRIPTION": "If the enemy does not intend to attack, apply !M! Weak and Vulnerable."
+    "DESCRIPTION": "Apply !M! Weak. NL If the enemy does not intend to attack, apply !M! Vulnerable."
   },
   "collector:CultistCard": {
     "NAME": "Cultist",
@@ -456,7 +457,7 @@
   },
   "collector:DarklingsCard": {
     "NAME": "Darklings",
-    "DESCRIPTION": "Choose a card in your hand. Add 2 copies of it into your hand.",
+    "DESCRIPTION": "collector:Pyre. NL Add 3 copies of the Exhausted card into your hand.",
     "EXTENDED_DESCRIPTION": [
       "to create 2 copies of."
     ]
@@ -495,7 +496,7 @@
   },
   "collector:GremlinWizardCard": {
     "NAME": "Gremlin Wizard",
-    "DESCRIPTION": "Next turn, NL gain !M! Vigor."
+    "DESCRIPTION": "Next turn, NL gain !M! Vigor and 1 collector:Reserve."
   },
   "collector:JawWormCard": {
     "NAME": "Jaw Worm",
@@ -535,7 +536,7 @@
   },
   "collector:NemesisCard": {
     "NAME": "Nemesis",
-    "DESCRIPTION": "If the enemy intends to attack, gain 1 Intangible."
+    "DESCRIPTION": "Gain 1 Intangible."
   },
   "collector:OrbWalkerCard": {
     "NAME": "Orb Walker",

@@ -12,7 +12,7 @@ public class KarmaPower extends AbstractCollectorPower {
     public static final PowerType TYPE = PowerType.BUFF;
     public static final boolean TURN_BASED = false;
 
-    public KarmaPower(int amount) {
+    public KarmaPower(int amount, int amount2) {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, amount);
     }
 
