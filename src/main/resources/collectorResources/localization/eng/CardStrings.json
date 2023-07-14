@@ -75,7 +75,7 @@
   },
   "collector:Condemn": {
     "NAME": "Condemn",
-    "DESCRIPTION": "Apply !M! collector:Doom. NL Apply !clm2! Vulnerable."
+    "DESCRIPTION": "Apply !clm2! collector:Doom. NL Apply !m! Vulnerable."
   },
   "collector:CursedWail": {
     "NAME": "Cursed Wail",
@@ -596,7 +596,7 @@
   },
   "collector:SpikeSlimeCard": {
     "NAME": "Spike Slime",
-    "DESCRIPTION": "Gain !M! Thorns."
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, deal !M! damage back."
   },
   "collector:SpireGrowthCard": {
     "NAME": "Spire Growth",
