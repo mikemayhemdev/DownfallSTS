@@ -6,10 +6,7 @@ import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
-import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
-import charbosses.monsters.MushroomPurple;
-import charbosses.monsters.MushroomRed;
-import charbosses.monsters.MushroomWhite;
+import charbosses.monsters.*;
 import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.*;
 import collector.util.CollectibleCardReward;
@@ -127,7 +124,7 @@ public class CollectorCollection {
         collectionPool.put(Watcher.ID, TalkToTheHand.ID);
         collectionPool.put(Hermit.ID, ShadowCloak.ID);
 
-        //TODO: Too lazy after that to put in the boss and endgame cards, will do it later
+        collectionPool.put(Fortification.ID, SpireShieldCard.ID);
     }
 
     public static AbstractCard getCollectedCard(AbstractMonster m) {

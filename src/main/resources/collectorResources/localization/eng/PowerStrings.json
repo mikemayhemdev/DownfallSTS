@@ -179,7 +179,10 @@
       " damage to ALL enemies.",
       "Grants you #b.",
       " #yBlock.",
-      " #yPoison to a random enemy."
+      " #yPoison to a random enemy.",
+      "Draws you #b",
+      " card.",
+      " cards."
     ]
   },
   "collector:IncreasedCollectionDraw": {
@@ -282,6 +285,12 @@
     "DESCRIPTIONS": [
       "At the start of its turn, gains #b",
       " #yDoom."
+    ]
+  },
+  "collector:WomanInBlueCard": {
+    "NAME": "Woman in Blue",
+    "DESCRIPTIONS": [
+      "At the end of combat, lose all your Potions."
     ]
   }
 }

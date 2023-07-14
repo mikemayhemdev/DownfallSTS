@@ -427,6 +427,10 @@
     "NAME": "Blue Slaver",
     "DESCRIPTION": "Deal !D! damage. NL Apply 1 Weak. NL Double the enemy's Weak."
   },
+  "collector:BonfireSpiritsCard": {
+    "NAME": "Bonfire Spirits",
+    "DESCRIPTION": "collector:Pyre. NL Heal !M! HP. NL If the Exhausted card was Rare, raise your Max HP by 1."
+  },
   "collector:BookOfStabbingCard": {
     "NAME": "Book of Stabbing",
     "DESCRIPTION": "Whenever you deal unblocked attack damage, apply !M! collector:Doom."
@@ -447,6 +451,10 @@
     "NAME": "Chosen",
     "DESCRIPTION": "Apply !M! Weak. NL If the enemy does not intend to attack, apply !M! Vulnerable."
   },
+  "collector:ClericCard": {
+    "NAME": "Cleric",
+    "DESCRIPTION": "collector:Pyre. NL Gain !M! expansioncontent:Temp_HP."
+  },
   "collector:CultistCard": {
     "NAME": "Cultist",
     "DESCRIPTION": "collector:Pyre. NL Gain 1 Strength at the start of your next 2 turns."
@@ -461,6 +469,14 @@
     "EXTENDED_DESCRIPTION": [
       "to create 2 copies of."
     ]
+  },
+  "collector:DesignerInSpireCard": {
+    "NAME": "Designer-In-Spire",
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL collector:Torchhead gains \"Draw 1 card.\""
+  },
+  "collector:FinalBossCard": {
+    "NAME": "Endgame",
+    "DESCRIPTION": "Remove the enemy's Invincible buff and Stun them. NL Exhaust."
   },
   "collector:FaceTraderCard": {
     "NAME": "Face Trader",
@@ -502,6 +518,10 @@
     "NAME": "Jaw Worm",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength."
   },
+  "collector:JousterCard": {
+    "NAME": "Jouster",
+    "DESCRIPTION": "Deal !D! damage. NL If there's only one foe, gain !B! Block."
+  },
   "collector:LagavulinCard": {
     "NAME": "Lagavulin",
     "DESCRIPTION": "ALL enemies lose !M! Strength."
@@ -538,6 +558,11 @@
     "NAME": "Nemesis",
     "DESCRIPTION": "Gain 1 Intangible."
   },
+  "collector:NlothCard": {
+    "NAME": "N'Loth",
+    "DESCRIPTION": "collector:Pyre. NL Add a random Rare card into your hand. NL It costs 1 less.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Add a random Rare card into your hand. NL It costs 0."
+  },
   "collector:OrbWalkerCard": {
     "NAME": "Orb Walker",
     "DESCRIPTION": "Deal !D! damage. NL Add !M! *Embers into your hand."
@@ -545,6 +570,10 @@
   "collector:PointyCard": {
     "NAME": "Pointy",
     "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card."
+  },
+  "collector:RanwidCard": {
+    "NAME": "Ranwid",
+    "DESCRIPTION": "Gain an additional Potion and Card reward at the end of combat."
   },
   "collector:RedSlaverCard": {
     "NAME": "Red Slaver",
@@ -561,6 +590,10 @@
   "collector:RomeoCard": {
     "NAME": "Romeo",
     "DESCRIPTION": "Your next Attack costs 0 and deals !M! additional damage."
+  },
+  "collector:ScrapOozeCard": {
+    "NAME": "Scrap Ooze",
+    "DESCRIPTION": "collector:Pyre. NL Lose 3 HP. NL Add !M! random Attacks into your hand. NL They cost 0 this turn."
   },
   "collector:SentryCard": {
     "NAME": "Sentry",
@@ -602,6 +635,18 @@
     "NAME": "Spire Growth",
     "DESCRIPTION": "Enemy takes !M! damage at the end of each of its turns."
   },
+  "collector:SpireShieldCard": {
+    "NAME": "Spire Shield",
+    "DESCRIPTION": "Gain !M! Dexterity."
+  },
+  "collector:SpireSpearCard": {
+    "NAME": "Spire Spear",
+    "DESCRIPTION": "Gain !M! Strength."
+  },
+  "collector:SsserpentCard": {
+    "NAME": "Ssserpent",
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Doubt into your hand."
+  },
   "collector:TaskmasterCard": {
     "NAME": "Taskmaster",
     "DESCRIPTION": "Apply !clm2! collector:Doom. NL Deal !D! damage. NL Gain !M! Strength."
@@ -617,6 +662,14 @@
   "collector:TransientCard": {
     "NAME": "Transient",
     "DESCRIPTION": "Gain !M! Strength. NL Die in 6 turns."
+  },
+  "collector:VagrantCard": {
+    "NAME": "Vagrant",
+    "DESCRIPTION": "Gain !M! collector:Reserve. NL Add a *Shame into your hand."
+  },
+  "collector:WomanInBlueCard": {
+    "NAME": "Woman in Blue",
+    "DESCRIPTION": "Gain a random Potion. NL Lose ALL Potions at the end of combat."
   },
   "collector:WrithingMassCard": {
     "NAME": "Writhing Mass",
