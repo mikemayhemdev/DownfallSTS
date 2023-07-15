@@ -1,9 +1,10 @@
 package collector;
 
 import automaton.AutomatonChar;
-import automaton.cards.Terminator;
-import automaton.cards.*;
-import automaton.relics.*;
+import automaton.potions.BuildAFunctionPotion;
+import automaton.potions.BurnAndBuffPotion;
+import automaton.potions.CleanCodePotion;
+import automaton.potions.FreeFunctionsPotion;
 import basemod.BaseMod;
 import basemod.abstracts.CustomSavable;
 import basemod.abstracts.CustomUnlockBundle;
@@ -14,11 +15,16 @@ import collector.cardmods.CollectedCardMod;
 import collector.cards.*;
 import collector.patches.CollectiblesPatches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
+import collector.potions.DebuffDoublePotion;
+import collector.potions.MiniCursePotion;
+import collector.potions.ReservePotion;
+import collector.potions.TempHPPotion;
 import collector.relics.*;
 import collector.ui.CombatCollectionPileButton;
 import collector.util.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -154,7 +160,18 @@ public class CollectorMod implements
     }
 
     public void addPotions() {
-        //TODO: Set this up
+
+        BaseMod.addPotion(MiniCursePotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, BuildAFunctionPotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
+        BaseMod.addPotion(ReservePotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
+        BaseMod.addPotion(DebuffDoublePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, CleanCodePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
+        BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, FreeFunctionsPotion.POTION_ID);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(MiniCursePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(ReservePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(DebuffDoublePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(TempHPPotion.POTION_ID);
+        }
     }
 
     @Override
