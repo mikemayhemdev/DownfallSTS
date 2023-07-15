@@ -82,8 +82,8 @@
     "NAME": "Karma",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
-      " #yBlock for every #b",
-      " #yDoom on foes."
+      " #yBlock. If an enemy has #b25 or more #yDoom, gain #b",
+      " more #yBlock."
     ]
   },
   "collector:NextAttackAppliesDoom": {

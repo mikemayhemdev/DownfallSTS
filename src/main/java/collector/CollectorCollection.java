@@ -9,6 +9,7 @@ import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.monsters.*;
 import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.*;
+import collector.patches.CollectorBottleField;
 import collector.util.CollectibleCardReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -34,6 +35,9 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.beyond.*;
 import com.megacrit.cardcrawl.monsters.city.*;
+import com.megacrit.cardcrawl.monsters.ending.CorruptHeart;
+import com.megacrit.cardcrawl.monsters.ending.SpireShield;
+import com.megacrit.cardcrawl.monsters.ending.SpireSpear;
 import com.megacrit.cardcrawl.monsters.exordium.*;
 import downfall.monsters.*;
 import downfall.monsters.gauntletbosses.*;
@@ -125,6 +129,11 @@ public class CollectorCollection {
         collectionPool.put(Hermit.ID, ShadowCloak.ID);
 
         collectionPool.put(Fortification.ID, SpireShieldCard.ID);
+        collectionPool.put(LadyInBlue.ID, WomanInBlueCard.ID);
+        collectionPool.put(SpireShield.ID, SpireShieldCard.ID);
+        collectionPool.put(SpireSpear.ID, SpireSpearCard.ID);
+        collectionPool.put(NeowBossFinal.ID, FinalBossCard.ID);
+        collectionPool.put(CorruptHeart.ID, FinalBossCard.ID);
     }
 
     public static AbstractCard getCollectedCard(AbstractMonster m) {
@@ -216,6 +225,16 @@ public class CollectorCollection {
             combatCollection.addToTop(q.makeSameInstanceOf());
         }
         combatCollection.shuffle(AbstractDungeon.cardRandomRng);
+        ArrayList<AbstractCard> toTopdeck = new ArrayList<>();
+        for (AbstractCard q : combatCollection.group) {
+            if (CollectorBottleField.inCollectionBottle.get(q)) {
+                toTopdeck.add(q);
+            }
+        }
+        toTopdeck.forEach(q -> {
+            combatCollection.removeCard(q);
+            combatCollection.addToTop(q);
+        });
     }
 
     public static void atBattleEnd() {

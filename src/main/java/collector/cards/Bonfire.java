@@ -7,17 +7,17 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.*;
+import static collector.util.Wiz.applyToSelfTop;
+import static collector.util.Wiz.atb;
 
 public class Bonfire extends AbstractCollectorCard implements OnPyreCard {
     public final static String ID = makeID(Bonfire.class.getSimpleName());
     // intellij stuff skill, self, uncommon, , , 20, 5, , 
 
     public Bonfire() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 14;
+        super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseBlock = 16;
         isPyre();
-        baseMagicNumber = magicNumber = 1;
     }
 
     int toGrant;
@@ -41,6 +41,6 @@ public class Bonfire extends AbstractCollectorCard implements OnPyreCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBlock(4);
     }
 }

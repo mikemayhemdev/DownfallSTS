@@ -96,7 +96,7 @@
   },
   "collector:DarkwoodKindling": {
     "NAME": "Darkwillow Kindling",
-    "DESCRIPTION": "Unplayable. NL When *Exhausted, ALL enemies lose !M! HP.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, apply !M! collector:Doom to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
@@ -341,6 +341,10 @@
     "NAME": "Soul Snare",
     "DESCRIPTION": "Apply !M! collector:Doom. NL Exhaust."
   },
+  "collector:Soulforge": {
+    "NAME": "Soulforge",
+    "DESCRIPTION": "Upgrade !M! random cards in your hand."
+  },
   "collector:Spark": {
     "NAME": "Spark",
     "DESCRIPTION": "Gain 1 collector:Reserve. NL Exhaust.",
@@ -389,7 +393,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "Void Armor",
-    "DESCRIPTION": "EVERYONE gains !B! Block. NL Foes with collector:Doom lose !M! HP."
+    "DESCRIPTION": "EVERYONE gains !B! Block. NL Apply !M! collector:Doom to enemies with collector:Doom."
   },
   "collector:Wildfire": {
     "NAME": "Wildfire",

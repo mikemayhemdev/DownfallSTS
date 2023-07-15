@@ -2,13 +2,11 @@ package collector.cards;
 
 import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.atb;
-import static collector.util.Wiz.forAllMonstersLiving;
+import static collector.util.Wiz.*;
 
 public class VoidArmor extends AbstractCollectorCard {
     public final static String ID = makeID(VoidArmor.class.getSimpleName());
@@ -25,7 +23,7 @@ public class VoidArmor extends AbstractCollectorCard {
         forAllMonstersLiving(q -> atb(new GainBlockAction(q, block)));
         forAllMonstersLiving(q -> {
             if (q.hasPower(DoomPower.POWER_ID)) {
-                atb(new LoseHPAction(q, p, magicNumber));
+                applyToEnemy(q, new DoomPower(q, magicNumber));
             }
         });
     }

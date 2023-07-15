@@ -79,5 +79,36 @@
     "DESCRIPTIONS": [
       "Whenever you apply #yWeak or #yVulnerable, increase the amount applied by #b1."
     ]
+  },
+  "collector:BottledCollectible": {
+    "NAME": "Bottled Brain",
+    "FLAVOR": "Collected from a wizard's laboratory.",
+    "DESCRIPTIONS": [
+      "Upon pickup, #yUpgrade a card in your Collection. Start combats with it on top of your Collected pile.",
+      "Start combat with #y",
+      " on top of your Collected pile.",
+      "Select a card to bottle for "
+    ]
+  },
+  "collector:TheContract": {
+    "NAME": "The Contract",
+    "FLAVOR": "Sign in blood.",
+    "DESCRIPTIONS": [
+      "Upon pickup, gain #b200 Gold. NL At the start of combat, a random enemy gains #b1 #yStrength."
+    ]
+  },
+  "collector:ForbiddenFruit": {
+    "NAME": "Forbidden Fruit",
+    "FLAVOR": "This species of fruit looks completely unfamiliar.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. NL Gain #b8 Max HP."
+    ]
+  },
+  "collector:RoughDiamond": {
+    "NAME": "Rough Diamond",
+    "FLAVOR": "With the mines demolished, even this tarnished stone is valuable.",
+    "DESCRIPTIONS": [
+      "Rare cards in your deck and Collection start combat costing #b1 less, but not less than #b1."
+    ]
   }
 }

@@ -1,12 +1,13 @@
 package collector.cards;
 
-import collector.actions.AllEnemyLoseHPAction;
+import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
+import hermit.util.Wiz;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.atb;
+import static collector.util.Wiz.applyToEnemy;
 
 public class DarkwoodKindling extends AbstractCollectorCard {
     public final static String ID = makeID(DarkwoodKindling.class.getSimpleName());
@@ -29,7 +30,7 @@ public class DarkwoodKindling extends AbstractCollectorCard {
 
     @Override
     public void triggerOnExhaust() {
-        atb(new AllEnemyLoseHPAction(magicNumber));
+        Wiz.forAllMonstersLiving(q -> applyToEnemy(q, new DoomPower(q, magicNumber)));
     }
 
     public void upp() {

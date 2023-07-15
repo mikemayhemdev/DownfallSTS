@@ -14,7 +14,7 @@ public class BurningStrike extends AbstractCollectorCard {
 
     public BurningStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 21;
+        baseDamage = 18;
         tags.add(CardTags.STRIKE);
     }
 

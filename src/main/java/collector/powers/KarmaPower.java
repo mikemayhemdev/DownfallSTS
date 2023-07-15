@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class KarmaPower extends AbstractCollectorPower {
+public class KarmaPower extends AbstractCollectorTwoAmountPower {
     public static final String NAME = "Karma";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
@@ -14,32 +14,28 @@ public class KarmaPower extends AbstractCollectorPower {
 
     public KarmaPower(int amount, int amount2) {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, amount);
+        this.amount2 = amount2;
     }
-
-    private static final int DOOM_PER_BLOCK = 5;
 
     @Override
     public void atStartOfTurnPostDraw() {
-        int result = getTotalDoom() / DOOM_PER_BLOCK;
-        if (result > 0) {
-            flash();
-            addToBot(new GainBlockAction(owner, result * amount));
-        }
-    }
-
-    private int getTotalDoom() {
-        int result = 0;
-        for (AbstractMonster m : Wiz.getEnemies()) {
-            AbstractPower found = m.getPower(DoomPower.POWER_ID);
-            if (found != null) {
-                result += found.amount;
+        flash();
+        addToBot(new GainBlockAction(owner, amount));
+        if (Wiz.getEnemies().stream().anyMatch(q -> {
+            AbstractPower result = q.getPower(DoomPower.POWER_ID);
+            if (result != null) {
+                if (result.amount >= 25) {
+                    return true;
+                }
             }
+            return false;
+        })) {
+            addToBot(new GainBlockAction(owner, amount2));
         }
-        return result;
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DOOM_PER_BLOCK + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount2 + DESCRIPTIONS[2];
     }
 }

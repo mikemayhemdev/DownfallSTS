@@ -1,5 +1,9 @@
 package collector;
 
+import automaton.AutomatonChar;
+import automaton.cards.Terminator;
+import automaton.cards.*;
+import automaton.relics.*;
 import basemod.BaseMod;
 import basemod.abstracts.CustomSavable;
 import basemod.abstracts.CustomUnlockBundle;
@@ -7,6 +11,7 @@ import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import collector.cardmods.CollectedCardMod;
+import collector.cards.*;
 import collector.patches.CollectiblesPatches.CollectibleCardColorEnumPatch;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
 import collector.relics.*;
@@ -22,6 +27,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.downfallMod;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -153,7 +159,30 @@ public class CollectorMod implements
 
     @Override
     public void receiveSetUnlocks() {
-        //TODO: Set this up
+
+        downfallMod.registerUnlockSuite(
+                BrainDrain.ID,
+                DarkApotheosis.ID,
+                GreenpyreLocus.ID,
+
+                Omen.ID,
+                RotwoodKindling.ID,
+                BlackBindings.ID,
+
+                ReceiveTribute.ID,
+                DoubleTrouble.ID,
+                Extricate.ID,
+
+                ElectromagneticCoil.ID,
+                Timepiece.ID,
+                Mallet.ID,
+
+                BronzeIdol.ID,
+                DecasWashers.ID,
+                DonusWashers.ID,
+
+                CollectorChar.Enums.THE_COLLECTOR
+        );
     }
 
     public void receivePostInitialize() {
