@@ -106,7 +106,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "collector:DoubleTrouble": {
-    "NAME": "祸不单行Double Trouble",
+    "NAME": "祸不单行",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张 collector:藏品 牌额外打出一次。"
   },
   "collector:DoMayhem": {
@@ -114,7 +114,7 @@
     "DESCRIPTION": "回合开始时， NL 若有敌人有20层 collector:魂灭 ， NL 打出抽牌堆顶部的牌。"
   },
   "collector:DragonsTrove": {
-    "NAME": "龍之私藏Dragon's Trove",
+    "NAME": "龍之珍藏",
     "DESCRIPTION": "抽 !M! 张 collector:藏品 牌。 NL 获得 2 collector:储能 。 NL 消耗 。"
   },
   "collector:Ember": {
@@ -188,10 +188,10 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus",
-    "DESCRIPTION": "collector:焰葬 。 NL Put !M! card from your Collected pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Put !M! cards from your Collected pile into your hand. NL Exhaust.",
+    "DESCRIPTION": "collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "Choose a card to add into your hand."
+      "选择一张牌加入手牌。"
     ]
   },
   "collector:Heatwave": {
@@ -225,15 +225,15 @@
   },
   "collector:IronbarkKindling": {
     "NAME": "铁皮柴",
-    "DESCRIPTION": "Unplayable. NL When *Exhausted, 获得 !B! Block.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When *Exhausted, 获得 !B! Block.",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得 !B! 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 保留 。 NL 本牌被 消耗 时， NL 获得 !B! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
-      "I must light this kindling to use it."
+      "我必须点燃这份燃材才能发挥它的作用。"
     ]
   },
   "collector:ItMattersNot": {
     "NAME": "It Matters Not",
-    "DESCRIPTION": "获得 !B! Block. NL Draw 1 card from your Collected pile."
+    "DESCRIPTION": "获得 !B! Block. NL 从 *收藏堆 抽一张牌。"
   },
   "collector:JadedJabs": {
     "NAME": "Jaded Jabs",
@@ -413,8 +413,8 @@
 
   "collector:AcidSlimeCard": {
     "NAME": "酸液史莱姆",
-    "DESCRIPTION": "Add !M! random 0 cost card into your hand.",
-    "UPGRADE_DESCRIPTION": "Add !M! random 0 cost cards into your hand."
+    "DESCRIPTION": "随机获得 !M! 张0耗能牌。",
+    "UPGRADE_DESCRIPTION": "随机获得 !M! 张0耗能牌。"
   },
   "collector:AugmenterCard": {
     "NAME": "增益研究者",
@@ -430,7 +430,7 @@
   },
   "collector:BonfireSpiritsCard": {
     "NAME": "Bonfire Spirits",
-    "DESCRIPTION": "collector:Pyre. NL Heal !M! HP. NL If the Exhausted card was Rare, raise your Max HP by 1."
+    "DESCRIPTION": "collector:焰葬 。 NL 回复 !M! 点生命。 NL 若 消耗 一张稀有牌， NL 获得1点最大生命。"
   },
   "collector:BookOfStabbingCard": {
     "NAME": "扎人之书",
@@ -454,7 +454,7 @@
   },
   "collector:ClericCard": {
     "NAME": "Cleric",
-    "DESCRIPTION": "collector:Pyre. NL Gain !M! expansioncontent:Temp_HP."
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 临时生命 。"
   },
   "collector:CultistCard": {
     "NAME": "邪教徒",
@@ -473,11 +473,11 @@
   },
   "collector:DesignerInSpireCard": {
     "NAME": "Designer-In-Spire",
-    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL collector:Torchhead gains \"Draw 1 card.\""
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL  \"抽一张牌。\""
   },
   "collector:FinalBossCard": {
     "NAME": "Endgame",
-    "DESCRIPTION": "Remove the enemy's Invincible buff and Stun them. NL Exhaust."
+    "DESCRIPTION": "移除目标的坚不可摧， NL 并将其击晕。 NL 消耗 。"
   },
   "collector:FaceTraderCard": {
     "NAME": "换脸商",
@@ -521,7 +521,7 @@
   },
   "collector:JousterCard": {
     "NAME": "Jouster",
-    "DESCRIPTION": "Deal !D! damage. NL If there's only one foe, gain !B! Block."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若只有一名敌人， NL 获得 !B! 点 格挡 。"
   },
   "collector:LagavulinCard": {
     "NAME": "乐加维林",
@@ -557,12 +557,12 @@
   },
   "collector:NemesisCard": {
     "NAME": "天罚",
-    "DESCRIPTION": "若目标意图攻击， NL 获得1层 无实体 。"
+    "DESCRIPTION": "获得1层 无实体 。"
   },
   "collector:NlothCard": {
     "NAME": "N'Loth",
-    "DESCRIPTION": "collector:Pyre. NL Add a random Rare card into your hand. NL It costs 1 less.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Add a random Rare card into your hand. NL It costs 0."
+    "DESCRIPTION": "collector:焰葬 。 NL 随机获得一张稀有牌， NL 其首次耗能减1。",
+    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 随机获得一张稀有牌， NL 其首次耗能为0。"
   },
   "collector:OrbWalkerCard": {
     "NAME": "圆球行者",
@@ -594,7 +594,7 @@
   },
   "collector:ScrapOozeCard": {
     "NAME": "Scrap Ooze",
-    "DESCRIPTION": "collector:Pyre. NL Lose 3 HP. NL Add !M! random Attacks into your hand. NL They cost 0 this turn."
+    "DESCRIPTION": "collector:焰葬 。 NL 失去3点生命。 NL 随机获得 !M! 张攻击牌， NL 其本回合首次耗能为0。"
   },
   "collector:SentryCard": {
     "NAME": "哨卫",
@@ -638,15 +638,15 @@
   },
   "collector:SpireShieldCard": {
     "NAME": "Spire Shield",
-    "DESCRIPTION": "Gain !M! Dexterity."
+    "DESCRIPTION": "获得 !M! 点 敏捷 。"
   },
   "collector:SpireSpearCard": {
     "NAME": "Spire Spear",
-    "DESCRIPTION": "Gain !M! Strength."
+    "DESCRIPTION": "获得 !M! 点 力量 。"
   },
   "collector:SsserpentCard": {
-    "NAME": "Ssserpent",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Doubt into your hand."
+    "NAME": "~~~蛇",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *疑虑 。"
   },
   "collector:TaskmasterCard": {
     "NAME": "奴隶头子",
@@ -666,11 +666,11 @@
   },
   "collector:VagrantCard": {
     "NAME": "Vagrant",
-    "DESCRIPTION": "Gain !M! collector:Reserve. NL Add a *Shame into your hand."
+    "DESCRIPTION": "获得 !M! collector:储能 。 NL 获得一张 *Shame 。"
   },
   "collector:WomanInBlueCard": {
     "NAME": "Woman in Blue",
-    "DESCRIPTION": "Gain a random Potion. NL Lose ALL Potions at the end of combat."
+    "DESCRIPTION": "获得一瓶药水。 NL 战斗结束后， NL 失去所有药水。"
   },
   "collector:WrithingMassCard": {
     "NAME": "扭曲团块",
