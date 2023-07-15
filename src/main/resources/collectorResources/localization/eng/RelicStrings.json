@@ -110,5 +110,12 @@
     "DESCRIPTIONS": [
       "Rare cards in your deck and Collection start combat costing #b1 less, but not less than #b1."
     ]
+  },
+  "collector:BlockedChakra": {
+    "NAME": "Blocked Chakra",
+    "FLAVOR": "One pulled muscle is all it takes.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. You don't draw from your Collected pile until turn 4."
+    ]
   }
 }

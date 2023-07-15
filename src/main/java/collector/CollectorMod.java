@@ -173,13 +173,13 @@ public class CollectorMod implements
                 DoubleTrouble.ID,
                 Extricate.ID,
 
-                ElectromagneticCoil.ID,
-                Timepiece.ID,
-                Mallet.ID,
+                JadeRing.ID,
+                ThimbleHelm.ID,
+                BlockedChakra.ID,
 
-                BronzeIdol.ID,
-                DecasWashers.ID,
-                DonusWashers.ID,
+                ForbiddenFruit.ID,
+                Incense.ID,
+                RoughDiamond.ID,
 
                 CollectorChar.Enums.THE_COLLECTOR
         );
