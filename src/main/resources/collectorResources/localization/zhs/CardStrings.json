@@ -47,7 +47,7 @@
   },
   "collector:Bonfire": {
     "NAME": "篝火",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得 !clm2! collector:储能 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得所葬牌耗能点 collector:储能 。"
   },
   "collector:BrainDrain": {
     "NAME": "意识窥视Brain Drain",
@@ -75,7 +75,7 @@
   },
   "collector:Condemn": {
     "NAME": "谴责",
-    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 给予 !clm2! 层 易伤 。 "
+    "DESCRIPTION": "给予 !clm2! 层 collector:魂灭 。 NL 给予 !M! 层 易伤 。 "
   },
   "collector:CursedWail": {
     "NAME": "诅咒尖啸",
@@ -96,7 +96,7 @@
   },
   "collector:DarkwoodKindling": {
     "NAME": "邪柳柴",
-    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 所有敌人失去 !M! 点生命。",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 给予敌人 !M! 层 collector:魂灭 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -241,12 +241,12 @@
   },
   "collector:Karma": {
     "NAME": "Karma",
-    "DESCRIPTION": "At the start of your turn, 获得 1 Block for every 5 collector:Doom on foes.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, 获得 1 Block for every 5 collector:Doom on foes."
+    "DESCRIPTION": "At the start of your turn, gain !M! Block. NL Gain !clm2! more if an enemy has 25 or more collector:Doom.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! Block. NL Gain !clm2! more if an enemy has 25 or more collector:Doom."
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
-    "DESCRIPTION": "collector:焰葬 。 NL 随机造成 !D! 点伤害并给予 !M! 层 collector:魂灭 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 collector:魂灭 。 NL 每当敌方回合开始时， NL 再给予 !clm2!  层。"
   },
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",
@@ -341,6 +341,10 @@
     "NAME": "灵魂诱捕",
     "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 消耗 。"
   },
+  "collector:Soulforge": {
+    "NAME": "Soulforge",
+    "DESCRIPTION": "Upgrade !M! random cards in your hand."
+  },
   "collector:Spark": {
     "NAME": "Spark",
     "DESCRIPTION": "获得 1 collector:Reserve. NL Exhaust.",
@@ -389,7 +393,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "虚空护甲Void Armor",
-    "DESCRIPTION": "所有单位 获得 !B! 点 格挡 。 NL 被 collector:魂灭 的敌人失去 !M! 点生命。"
+    "DESCRIPTION": "所有单位 获得 !B! 点 格挡 。 NL 给予 collector:魂灭 中的敌人 !M! 层 *魂灭 。"
   },
   "collector:Wildfire": {
     "NAME": "野火Wildfire",
@@ -409,7 +413,8 @@
 
   "collector:AcidSlimeCard": {
     "NAME": "酸液史莱姆",
-    "DESCRIPTION": "本回合下张攻击或技能额外打出一次。"
+    "DESCRIPTION": "Add !M! random 0 cost card into your hand.",
+    "UPGRADE_DESCRIPTION": "Add !M! random 0 cost cards into your hand."
   },
   "collector:AugmenterCard": {
     "NAME": "增益研究者",
@@ -422,6 +427,10 @@
   "collector:BlueSlaverCard": {
     "NAME": "蓝衣奴贩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予1层 虚弱 。 NL 翻倍目标的 虚弱 。"
+  },
+  "collector:BonfireSpiritsCard": {
+    "NAME": "Bonfire Spirits",
+    "DESCRIPTION": "collector:Pyre. NL Heal !M! HP. NL If the Exhausted card was Rare, raise your Max HP by 1."
   },
   "collector:BookOfStabbingCard": {
     "NAME": "扎人之书",
@@ -441,7 +450,11 @@
   },
   "collector:ChosenCard": {
     "NAME": "被拣选者",
-    "DESCRIPTION": "若目标不意图攻击， NL 给予 !M! 层 虚弱 与 易伤 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 若目标不意图攻击， NL 给予 !M! 层 易伤 。"
+  },
+  "collector:ClericCard": {
+    "NAME": "Cleric",
+    "DESCRIPTION": "collector:Pyre. NL Gain !M! expansioncontent:Temp_HP."
   },
   "collector:CultistCard": {
     "NAME": "邪教徒",
@@ -453,10 +466,18 @@
   },
   "collector:DarklingsCard": {
     "NAME": "小黑",
-    "DESCRIPTION": "选择一张手牌， NL 获得其两张复制品。",
+    "DESCRIPTION": "collector:焰葬 ， NL 获得其三张复制品。",
     "EXTENDED_DESCRIPTION": [
-      "生成两张复制品。"
+      "生成三张复制品。"
     ]
+  },
+  "collector:DesignerInSpireCard": {
+    "NAME": "Designer-In-Spire",
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL collector:Torchhead gains \"Draw 1 card.\""
+  },
+  "collector:FinalBossCard": {
+    "NAME": "Endgame",
+    "DESCRIPTION": "Remove the enemy's Invincible buff and Stun them. NL Exhaust."
   },
   "collector:FaceTraderCard": {
     "NAME": "换脸商",
@@ -492,11 +513,15 @@
   },
   "collector:GremlinWizardCard": {
     "NAME": "地精法师",
-    "DESCRIPTION": "下回合获得 !M! 层 活力 。"
+    "DESCRIPTION": "下回合， NL 获得 !M! 层 活力 与 1 collector:储能 。"
   },
   "collector:JawWormCard": {
     "NAME": "大颚虫",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量 。"
+  },
+  "collector:JousterCard": {
+    "NAME": "Jouster",
+    "DESCRIPTION": "Deal !D! damage. NL If there's only one foe, gain !B! Block."
   },
   "collector:LagavulinCard": {
     "NAME": "乐加维林",
@@ -534,6 +559,11 @@
     "NAME": "天罚",
     "DESCRIPTION": "若目标意图攻击， NL 获得1层 无实体 。"
   },
+  "collector:NlothCard": {
+    "NAME": "N'Loth",
+    "DESCRIPTION": "collector:Pyre. NL Add a random Rare card into your hand. NL It costs 1 less.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Add a random Rare card into your hand. NL It costs 0."
+  },
   "collector:OrbWalkerCard": {
     "NAME": "圆球行者",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 张 *余烬 。"
@@ -541,6 +571,10 @@
   "collector:PointyCard": {
     "NAME": "尖尖",
     "DESCRIPTION": "造成 !D! 点伤害两次。 NL 抽一张牌。"
+  },
+  "collector:RanwidCard": {
+    "NAME": "兰伟德",
+    "DESCRIPTION": "战斗结束后， NL 获得一瓶药水与一张牌。"
   },
   "collector:RedSlaverCard": {
     "NAME": "红衣奴贩",
@@ -557,6 +591,10 @@
   "collector:RomeoCard": {
     "NAME": "罗密欧",
     "DESCRIPTION": "下张攻击耗能变为0且额外造成 !M! 点伤害。"
+  },
+  "collector:ScrapOozeCard": {
+    "NAME": "Scrap Ooze",
+    "DESCRIPTION": "collector:Pyre. NL Lose 3 HP. NL Add !M! random Attacks into your hand. NL They cost 0 this turn."
   },
   "collector:SentryCard": {
     "NAME": "哨卫",
@@ -592,11 +630,23 @@
   },
   "collector:SpikeSlimeCard": {
     "NAME": "尖刺史莱姆",
-    "DESCRIPTION": "获得 !M! 层 荆棘 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合被攻击时， NL 反弹对方 !M! 点伤害。"
   },
   "collector:SpireGrowthCard": {
     "NAME": "塔内增生组织",
     "DESCRIPTION": "回合结束时， NL 目标受到 !M! 点伤害。"
+  },
+  "collector:SpireShieldCard": {
+    "NAME": "Spire Shield",
+    "DESCRIPTION": "Gain !M! Dexterity."
+  },
+  "collector:SpireSpearCard": {
+    "NAME": "Spire Spear",
+    "DESCRIPTION": "Gain !M! Strength."
+  },
+  "collector:SsserpentCard": {
+    "NAME": "Ssserpent",
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Doubt into your hand."
   },
   "collector:TaskmasterCard": {
     "NAME": "奴隶头子",
@@ -613,6 +663,14 @@
   "collector:TransientCard": {
     "NAME": "倏忽魔",
     "DESCRIPTION": "获得 !M! 点 力量 。 NL 六回合后死亡。"
+  },
+  "collector:VagrantCard": {
+    "NAME": "Vagrant",
+    "DESCRIPTION": "Gain !M! collector:Reserve. NL Add a *Shame into your hand."
+  },
+  "collector:WomanInBlueCard": {
+    "NAME": "Woman in Blue",
+    "DESCRIPTION": "Gain a random Potion. NL Lose ALL Potions at the end of combat."
   },
   "collector:WrithingMassCard": {
     "NAME": "扭曲团块",
