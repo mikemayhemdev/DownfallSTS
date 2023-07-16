@@ -335,7 +335,7 @@
   },
   "collector:SomberShield": {
     "NAME": "阴沉护盾",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得所 消耗 牌的复制品。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得所葬牌的复制品。"
   },
   "collector:SoulSnare": {
     "NAME": "灵魂诱捕",
