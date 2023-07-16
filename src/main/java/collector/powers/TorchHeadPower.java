@@ -4,12 +4,12 @@ import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPF
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
@@ -26,6 +26,7 @@ public class TorchHeadPower extends AbstractCollectorPower implements NonStackab
     private int onAttackAOE = 0;
     private int onAttackBlock = 0;
     private int onAttackPoison = 0;
+    private int onAttackDraw = 0;
 
     public TorchHeadPower(int type, int toAdd) {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, -1);
@@ -42,6 +43,8 @@ public class TorchHeadPower extends AbstractCollectorPower implements NonStackab
             case 3:
                 onAttackPoison += toAdd;
                 break;
+            case 4:
+                onAttackDraw += toAdd;
             default:
                 onAttackRandomDoom += toAdd;
                 System.out.println("Incorrect value for torchhead call power! Should be 0-3");
@@ -53,7 +56,7 @@ public class TorchHeadPower extends AbstractCollectorPower implements NonStackab
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK && TempHPField.tempHp.get(owner) > 0) {
-            if (onAttackRandomDoom > 0 || onAttackAOE > 0 || onAttackBlock > 0 || onAttackPoison > 0) {
+            if (onAttackRandomDoom > 0 || onAttackAOE > 0 || onAttackBlock > 0 || onAttackPoison > 0 || onAttackDraw > 0) {
                 flash();
             }
 
@@ -86,6 +89,10 @@ public class TorchHeadPower extends AbstractCollectorPower implements NonStackab
                     }
                 });
             }
+
+            if (onAttackDraw > 0) {
+                atb(new DrawCardAction(onAttackDraw));
+            }
         }
     }
 
@@ -95,24 +102,30 @@ public class TorchHeadPower extends AbstractCollectorPower implements NonStackab
         sb.append(DESCRIPTIONS[0]);
         if (onAttackRandomDoom > 0) {
             sb.append(DESCRIPTIONS[1] + onAttackRandomDoom + DESCRIPTIONS[2]);
-            if (onAttackAOE > 0 || onAttackBlock > 0 || onAttackPoison > 0){
+            if (onAttackAOE > 0 || onAttackBlock > 0 || onAttackPoison > 0) {
                 sb.append(" NL ");
             }
         }
         if (onAttackPoison > 0) {
             sb.append(DESCRIPTIONS[1] + onAttackPoison + DESCRIPTIONS[7]);
-            if (onAttackAOE > 0 || onAttackBlock > 0){
+            if (onAttackAOE > 0 || onAttackBlock > 0) {
                 sb.append(" NL ");
             }
         }
         if (onAttackAOE > 0) {
             sb.append(DESCRIPTIONS[3] + onAttackAOE + DESCRIPTIONS[4]);
-            if (onAttackBlock > 0){
+            if (onAttackBlock > 0) {
                 sb.append(" NL ");
             }
         }
         if (onAttackBlock > 0) {
             sb.append(DESCRIPTIONS[5] + onAttackBlock + DESCRIPTIONS[6]);
+            if (onAttackDraw > 0) {
+                sb.append(" NL ");
+            }
+        }
+        if (onAttackDraw > 0) {
+            sb.append(DESCRIPTIONS[7] + onAttackDraw + (onAttackDraw == 1 ? DESCRIPTIONS[8] : DESCRIPTIONS[9]));
         }
         description = sb.toString();
     }
@@ -128,6 +141,7 @@ public class TorchHeadPower extends AbstractCollectorPower implements NonStackab
             this.onAttackAOE += ((TorchHeadPower) power).onAttackAOE;
             this.onAttackBlock += ((TorchHeadPower) power).onAttackBlock;
             this.onAttackPoison += ((TorchHeadPower) power).onAttackPoison;
+            this.onAttackDraw += ((TorchHeadPower) power).onAttackDraw;
             updateDescription();
         }
         return true;

@@ -48,14 +48,10 @@ public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.Abstract
 
         if (!AbstractDungeon.isScreenUp) {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
 
-                    AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(
-
-                            (AbstractCard) UnknownExtraUiPatch.parentCard.get(c), Settings.WIDTH * 0.35F, Settings.HEIGHT / 2));
-
-
-                }
+                AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                AbstractDungeon.effectList.add(new PurgeCardEffect(c));
+                AbstractDungeon.player.masterDeck.removeCard(c);
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
             } else if (this.openedScreen) {

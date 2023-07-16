@@ -9,8 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.util.Wiz;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.atb;
-import static collector.util.Wiz.att;
+import static collector.util.Wiz.*;
 
 public class JadedJabs extends AbstractCollectorCard implements OnPyreCard {
     public final static String ID = makeID(JadedJabs.class.getSimpleName());
@@ -28,14 +27,15 @@ public class JadedJabs extends AbstractCollectorCard implements OnPyreCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        AbstractCard q = new Shiv();
+        if (upgraded) q.upgrade();
+        makeInHand(q);
         atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
                 if (toAdd >= 0) {
-                    AbstractCard q = new Shiv();
-                    if (upgraded) q.upgrade();
-                    att(new MakeTempCardInHandAction(q, toAdd+magicNumber, true));
+                    att(new MakeTempCardInHandAction(q, toAdd, true));
                 }
             }
         });

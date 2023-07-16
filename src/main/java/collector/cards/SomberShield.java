@@ -13,8 +13,8 @@ public class SomberShield extends AbstractCollectorCard implements OnPyreCard {
     // intellij stuff skill, self, common, , , 7, 3, , 
 
     public SomberShield() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 7;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseBlock = 6;
         isPyre();
     }
 
