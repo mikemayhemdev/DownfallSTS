@@ -656,7 +656,7 @@
     "NAME": "盗贼",
     "DESCRIPTION": "本回合少受到 !M! 点攻击伤害。"
   },
-  "collector:火炬头Card": {
+  "collector:TorchHeadCard": {
     "NAME": "火炬头",
     "DESCRIPTION": "随机获得一张呼唤， NL 其本回合单次耗能为0。"
   },
