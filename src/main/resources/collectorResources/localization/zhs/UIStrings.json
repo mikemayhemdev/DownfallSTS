@@ -82,8 +82,8 @@
     ]
   },
   "collector:BonusEventOption": {
-    "TEXT": {
+    "TEXT": [
       "[Take]"
-    }
+    ]
   }
 }
