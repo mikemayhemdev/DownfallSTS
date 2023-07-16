@@ -8,7 +8,7 @@
     "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 金币 。"
   },
   "collector:AshenStrike": {
-    "NAME": "Ashen Strike",
+    "NAME": "化烬打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *火花 洗入抽牌堆。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *火花+ 洗入抽牌堆。"
   },
@@ -23,7 +23,7 @@
   },
   "collector:BindingCall": {
     "NAME": "羁绊之唤",
-    "DESCRIPTION": "获得 !M! 层 临时生命。 NL collector:火炬头 获得效果： NL \"随机给予 !clm2! 层 collector:魂灭 \""
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL \"随机给予 !clm2! 层 collector:魂灭 \""
   },
   "collector:Billow": {
     "NAME": "鼓起",
@@ -50,7 +50,7 @@
     "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得所葬牌耗能点 collector:储能 。"
   },
   "collector:BrainDrain": {
-    "NAME": "意识窥视Brain Drain",
+    "NAME": "意识窥视",
     "DESCRIPTION": "获得目标的 collector:藏品 牌， NL 本回合其单次耗能为0。 NL 消耗 。"
   },
   "collector:BramblesparKindling": {
@@ -70,7 +70,7 @@
     "DESCRIPTION": "获得 !M! 点 敏捷 。 NL 防住攻击时， NL 给予对方 !clm2! 层 collector:魂灭 。"
   },
   "collector:CoffinNail": {
-    "NAME": "棺材钉Coffin Nail",
+    "NAME": "棺材钉",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 本牌被 消耗 时， NL 下回合返回手牌， NL 且伤害加 !M! 。"
   },
   "collector:Condemn": {
@@ -96,7 +96,7 @@
   },
   "collector:DarkwoodKindling": {
     "NAME": "邪柳柴",
-    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 给予敌人 !M! 层 collector:魂灭 。",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时，给予所有敌人 !M! 层 collector:魂灭 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -133,7 +133,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 打出抽牌堆顶部的牌。"
   },
   "collector:FeelMyPain": {
-    "NAME": "转嫁疼痛Feel My Pain",
+    "NAME": "转嫁疼痛",
     "DESCRIPTION": "消耗 一张牌时， NL 随机敌人失去 !M! 点生命。"
   },
   "collector:FiendFire": {
@@ -141,7 +141,7 @@
     "DESCRIPTION": "消耗 所有手牌， NL 每张造成 !D! 点伤害。 NL 消耗 。"
   },
   "collector:Finalize": {
-    "NAME": "Finalize",
+    "NAME": "大功告成",
     "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 若目标本回合死亡， NL 回复 !clm2! 点生命。 NL 消耗 。"
   },
   "collector:FingerOfDeath": {
@@ -174,17 +174,17 @@
     "UPGRADE_DESCRIPTION": "三倍目标的 collector:魂灭 。 NL 消耗 。"
   },
   "collector:GourmandsGaze": {
-    "NAME": "Gourmand's Gaze",
+    "NAME": "贪魂绿眸",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合用过藏品牌， NL 获得 !B! 点 格挡 。"
   },
   "collector:GreaterHurting": {
     "NAME": "伤魂",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *伤命 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *伤命+ 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被 保留 时， NL 变为一张 *伤命 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被 保留 时， NL 变为一张 *伤命+ 。"
   },
   "collector:GreatestHurting": {
     "NAME": "伤命",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *余烬 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被 保留 时， NL 变为一张 *余烬 。"
   },
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus",
@@ -195,12 +195,12 @@
     ]
   },
   "collector:Heatwave": {
-    "NAME": "热波Heat Wave",
+    "NAME": "热波",
     "DESCRIPTION": "对被 collector:折磨 的敌人造成 !D! 点伤害。 NL 获得一张 *余烬 。"
   },
   "collector:Hoard": {
     "NAME": "囤积",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 将其保留至下回合， NL 但本回合无法打出。"
+    "DESCRIPTION": "抽 !M! 张牌， NL 将其保留至下回合， NL 但本回合无法打出。"
   },
   "collector:HoardersStrike": {
     "NAME": "囤积者打击",
@@ -208,8 +208,8 @@
   },
   "collector:Hurting": {
     "NAME": "伤体",
-    "DESCRIPTION": "保留 。  NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *伤魂 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被保留时， NL 变为一张 *伤魂+ 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被 保留 时， NL 变为一张 *伤魂 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被 保留 时， NL 变为一张 *伤魂+ 。"
   },
   "collector:IllTakeThat": {
     "NAME": "物归原主",
@@ -232,7 +232,7 @@
     ]
   },
   "collector:ItMattersNot": {
-    "NAME": "It Matters Not",
+    "NAME": "凝神无视",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 从 *收藏堆 抽一张牌。"
   },
   "collector:JadedJabs": {
@@ -245,8 +245,8 @@
     "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人有25层 collector:魂灭 ， NL 额外获得 !clm2! 点。"
   },
   "collector:LanternFlare": {
-    "NAME": "Lantern Flare",
-    "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 collector:魂灭 。 NL 每当敌方回合开始时， NL 再给予 !clm2!  层。"
+    "NAME": "提灯之耀",
+    "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 collector:魂灭 。 NL 每当敌方回合开始时， NL 再给予 !clm2! 层。"
   },
   "collector:LuckyWick": {
     "NAME": "幸运烛芯Lucky Wick",
@@ -257,7 +257,7 @@
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 打出攻击时， NL 若有 临时生命 ， NL 随机造成 !clm2! 点伤害。"
   },
   "collector:MiniCurse": {
-    "NAME": "Mini-Curse",
+    "NAME": "微咒",
     "DESCRIPTION": "collector:焰葬 。 NL 给予1层 虚弱 与 易伤 。",
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 给予所有敌人1层 虚弱 与 易伤 。"
   },
@@ -266,7 +266,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得1 collector:储能 。"
   },
   "collector:MysteryWeaving": {
-    "NAME": "Mystery Weaving",
+    "NAME": "神秘灵绪",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一张其他手牌， NL 少获得2点。"
   },
   "collector:OakbrimKindling": {
@@ -283,7 +283,7 @@
   },
   "collector:ProtectingCall": {
     "NAME": "佑护之唤",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合开始时， NL collector:火炬头 获得效果： NL \"获得 !clm2! 点 格挡 。\""
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL \"获得 !clm2! 点 格挡 \""
   },
   "collector:Pyromancy": {
     "NAME": "Pyromancy",
@@ -292,7 +292,7 @@
   },
   "collector:RagingCall": {
     "NAME": "暴怒之唤",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合结束时， NL collector:火炬头 获得效果： \"对所有敌人造成 !clm2! 点伤害。\"."
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： \"对所有敌人造成 !clm2! 点伤害\"."
   },
   "collector:ReceiveTribute": {
     "NAME": "纳贡",
@@ -313,7 +313,7 @@
     ]
   },
   "collector:SapStrength": {
-    "NAME": "Sap 力量",
+    "NAME": "竭力",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 力量 ，NL 窃取至多 !M! 点。"
   },
   "collector:ScorchingRay": {
@@ -325,7 +325,7 @@
     "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 消耗 牌时若本牌在手， NL 本牌 collector:魂灭 加 !clm2! 。"
   },
   "collector:ShadowDaggers": {
-    "NAME": "Shadow Daggers",
+    "NAME": "阴刃",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 每用过一张 collector:藏品 牌， NL 再造成 !M! 点伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL (造成 ",
@@ -346,7 +346,7 @@
     "DESCRIPTION": "随机 升级 !M! 张手牌。"
   },
   "collector:Spark": {
-    "NAME": "Spark",
+    "NAME": "火花",
     "DESCRIPTION": "获得 1 collector:储能 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 1 collector:储能 。 NL 抽一张牌。 NL 消耗 。"
   },
@@ -355,7 +355,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 下回合获得1 collector:储能 。"
   },
   "collector:StashAway": {
-    "NAME": "Stash Away",
+    "NAME": "藏存",
     "DESCRIPTION": "获得 !B! 点 格挡 X次。 NL 下回合， 获得 X collector:储能 。"
   },
   "collector:Strike": {
@@ -388,15 +388,15 @@
     "UPGRADE_DESCRIPTION": "若有 临时生命 ， NL 本牌 消耗 。 NL 获得 !M! 层 临时生命 。"
   },
   "collector:WhirlingFlame": {
-    "NAME": "回溯之火Whirling Flame",
+    "NAME": "回环之火",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 选择将弃牌堆一张牌放回抽牌堆顶部。"
   },
   "collector:VoidArmor": {
-    "NAME": "虚空护甲Void Armor",
+    "NAME": "虚空护甲",
     "DESCRIPTION": "所有单位 获得 !B! 点 格挡 。 NL 给予 collector:魂灭 中的敌人 !M! 层 *魂灭 。"
   },
   "collector:Wildfire": {
-    "NAME": "野火Wildfire",
+    "NAME": "野火",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 所有不可打出的手牌，每张获得 !B! 点 格挡 。"
   },
   "collector:YouAreMine": {
@@ -473,7 +473,7 @@
   },
   "collector:DesignerInSpireCard": {
     "NAME": "尖端设计师",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL  \"抽一张牌。\""
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL  \"抽一张牌\""
   },
   "collector:FinalBossCard": {
     "NAME": "终局",
@@ -481,7 +481,7 @@
   },
   "collector:FaceTraderCard": {
     "NAME": "换脸商",
-    "DESCRIPTION": "随机获得 !M! 张任意角色牌， NL 其附带 虚无 。"
+    "DESCRIPTION": "随机获得 !M! 张任意角色牌，其附带 虚无 。"
   },
   "collector:FatGremlinCard": {
     "NAME": "胖地精",
@@ -537,7 +537,7 @@
   },
   "collector:MadGremlinCard": {
     "NAME": "火大地精",
-    "DESCRIPTION": "获得 !M! Temporary Strength."
+    "DESCRIPTION": "获得 !M! 层 guardianmod:临时 力量 。"
   },
   "collector:MawCard": {
     "NAME": "巨口",
@@ -582,7 +582,7 @@
   },
   "collector:ReptomancerCard": {
     "NAME": "拜蛇术士",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL \"随机给予 !clm2! 层 中毒 。\""
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL \"随机给予 !clm2! 层 中毒 \""
   },
   "collector:RepulsorCard": {
     "NAME": "反冲机",
@@ -602,7 +602,7 @@
   },
   "collector:ShelledParasiteCard": {
     "NAME": "带壳寄生怪",
-    "DESCRIPTION": "获得 !M! 层 多层护甲 。"
+    "DESCRIPTION": "获得 !M! 层 *多层护甲 。"
   },
   "collector:ShieldGremlinCard": {
     "NAME": "持盾地精",
