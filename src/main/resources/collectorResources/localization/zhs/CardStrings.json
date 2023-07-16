@@ -233,24 +233,24 @@
   },
   "collector:ItMattersNot": {
     "NAME": "It Matters Not",
-    "DESCRIPTION": "获得 !B! Block. NL 从 *收藏堆 抽一张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 从 *收藏堆 抽一张牌。"
   },
   "collector:JadedJabs": {
     "NAME": "Jaded Jabs",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to the Exhausted card's cost + !M!."
+    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 获得所葬牌耗能+ !M! 张小刀。"
   },
   "collector:Karma": {
     "NAME": "Karma",
-    "DESCRIPTION": "At the start of your turn, gain !M! Block. NL Gain !clm2! more if an enemy has 25 or more collector:Doom.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! Block. NL Gain !clm2! more if an enemy has 25 or more collector:Doom."
+    "DESCRIPTION": "回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人有25层 collector:魂灭 ， NL 额外获得 !clm2! 点。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人有25层 collector:魂灭 ， NL 额外获得 !clm2! 点。"
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
     "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 collector:魂灭 。 NL 每当敌方回合开始时， NL 再给予 !clm2!  层。"
   },
   "collector:LuckyWick": {
-    "NAME": "Lucky Wick",
-    "DESCRIPTION": "获得 !B! Block. NL 造成 !D! 点伤害。"
+    "NAME": "幸运烛芯Lucky Wick",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。"
   },
   "collector:MastersCall": {
     "NAME": "主宰之唤",
@@ -270,7 +270,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一张其他手牌， NL 少获得2点。"
   },
   "collector:OakbrimKindling": {
-    "NAME": "Oakbrim Kindling",
+    "NAME": "橡缘柴",
     "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 抽 !M! 张牌， 且下回合获得 1 collector:储能 。",
     "EXTENDED_DESCRIPTION": [
@@ -283,7 +283,7 @@
   },
   "collector:ProtectingCall": {
     "NAME": "佑护之唤",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合开始时， NL collector:Torchhead 获得s \"获得 !clm2! Block.\""
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合开始时， NL collector:火炬头 获得效果： NL \"获得 !clm2! 点 格挡 。\""
   },
   "collector:Pyromancy": {
     "NAME": "Pyromancy",
@@ -292,7 +292,7 @@
   },
   "collector:RagingCall": {
     "NAME": "暴怒之唤",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合结束时， NL collector:Torchhead 获得s \"Deal !clm2! damage to ALL enemies.\"."
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 回合结束时， NL collector:火炬头 获得效果： \"对所有敌人造成 !clm2! 点伤害。\"."
   },
   "collector:ReceiveTribute": {
     "NAME": "纳贡",
@@ -343,12 +343,12 @@
   },
   "collector:Soulforge": {
     "NAME": "Soulforge",
-    "DESCRIPTION": "Upgrade !M! random cards in your hand."
+    "DESCRIPTION": "随机 升级 !M! 张手牌。"
   },
   "collector:Spark": {
     "NAME": "Spark",
-    "DESCRIPTION": "获得 1 collector:Reserve. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "获得 1 collector:Reserve. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "获得 1 collector:储能 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 1 collector:储能 。 NL 抽一张牌。 NL 消耗 。"
   },
   "collector:SpiritLeech": {
     "NAME": "汲灵",
@@ -356,7 +356,7 @@
   },
   "collector:StashAway": {
     "NAME": "Stash Away",
-    "DESCRIPTION": "获得 !B! Block X times. NL Next turn, 获得 X collector:Reserve."
+    "DESCRIPTION": "获得 !B! 点 格挡 X次。 NL 下回合， 获得 X collector:储能 。"
   },
   "collector:Strike": {
     "NAME": "打击",
@@ -371,7 +371,7 @@
     "DESCRIPTION": "给予 虚弱 或 易伤 时， NL 同时给予 !M! 层 collector:魂灭 。"
   },
   "collector:SunbloomKindling": {
-    "NAME": "Sunbloom Kindling",
+    "NAME": "日華材sunbloom",
     "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得2张 *余烬 ， NL 与 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
@@ -384,8 +384,8 @@
   },
   "collector:Torchbearer": {
     "NAME": "火炬御者",
-    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "If you have any expansioncontent:Temp_HP, Exhaust. NL Gain !M! expansioncontent:Temp_HP."
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "若有 临时生命 ， NL 本牌 消耗 。 NL 获得 !M! 层 临时生命 。"
   },
   "collector:WhirlingFlame": {
     "NAME": "回溯之火Whirling Flame",
@@ -429,7 +429,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予1层 虚弱 。 NL 翻倍目标的 虚弱 。"
   },
   "collector:BonfireSpiritsCard": {
-    "NAME": "Bonfire Spirits",
+    "NAME": "篝火精灵",
     "DESCRIPTION": "collector:焰葬 。 NL 回复 !M! 点生命。 NL 若 消耗 一张稀有牌， NL 获得1点最大生命。"
   },
   "collector:BookOfStabbingCard": {
@@ -453,7 +453,7 @@
     "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 若目标不意图攻击， NL 给予 !M! 层 易伤 。"
   },
   "collector:ClericCard": {
-    "NAME": "Cleric",
+    "NAME": "牧师",
     "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 临时生命 。"
   },
   "collector:CultistCard": {
@@ -472,11 +472,11 @@
     ]
   },
   "collector:DesignerInSpireCard": {
-    "NAME": "Designer-In-Spire",
+    "NAME": "尖端设计师",
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL  \"抽一张牌。\""
   },
   "collector:FinalBossCard": {
-    "NAME": "Endgame",
+    "NAME": "终局",
     "DESCRIPTION": "移除目标的坚不可摧， NL 并将其击晕。 NL 消耗 。"
   },
   "collector:FaceTraderCard": {
@@ -500,7 +500,7 @@
     "DESCRIPTION": "下回合， NL 获得一张 *头砸 。"
   },
   "collector:GiantHeadCardStageThree": {
-    "NAME": "头砸Headcrush",
+    "NAME": "头砸",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。"
   },
   "collector:GremlinLeaderCard": {
@@ -593,7 +593,7 @@
     "DESCRIPTION": "下张攻击耗能变为0且额外造成 !M! 点伤害。"
   },
   "collector:ScrapOozeCard": {
-    "NAME": "Scrap Ooze",
+    "NAME": "破烂史莱姆",
     "DESCRIPTION": "collector:焰葬 。 NL 失去3点生命。 NL 随机获得 !M! 张攻击牌， NL 其本回合首次耗能为0。"
   },
   "collector:SentryCard": {
@@ -637,11 +637,11 @@
     "DESCRIPTION": "回合结束时， NL 目标受到 !M! 点伤害。"
   },
   "collector:SpireShieldCard": {
-    "NAME": "Spire Shield",
+    "NAME": "尖塔之盾",
     "DESCRIPTION": "获得 !M! 点 敏捷 。"
   },
   "collector:SpireSpearCard": {
-    "NAME": "Spire Spear",
+    "NAME": "尖塔之矛",
     "DESCRIPTION": "获得 !M! 点 力量 。"
   },
   "collector:SsserpentCard": {
@@ -656,7 +656,7 @@
     "NAME": "盗贼",
     "DESCRIPTION": "本回合少受到 !M! 点攻击伤害。"
   },
-  "collector:TorchHeadCard": {
+  "collector:火炬头Card": {
     "NAME": "火炬头",
     "DESCRIPTION": "随机获得一张呼唤， NL 其本回合单次耗能为0。"
   },
@@ -665,11 +665,11 @@
     "DESCRIPTION": "获得 !M! 点 力量 。 NL 六回合后死亡。"
   },
   "collector:VagrantCard": {
-    "NAME": "Vagrant",
-    "DESCRIPTION": "获得 !M! collector:储能 。 NL 获得一张 *Shame 。"
+    "NAME": "流浪汉",
+    "DESCRIPTION": "获得 !M! collector:储能 。 NL 获得一张 *羞耻 。"
   },
   "collector:WomanInBlueCard": {
-    "NAME": "Woman in Blue",
+    "NAME": "蓝衣女子",
     "DESCRIPTION": "获得一瓶药水。 NL 战斗结束后， NL 失去所有药水。"
   },
   "collector:WrithingMassCard": {
