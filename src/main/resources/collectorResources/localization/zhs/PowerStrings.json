@@ -31,9 +31,18 @@
   "collector:DarkLordForm": {
     "NAME": "Dark Lord Form",
     "DESCRIPTIONS": [
-      "Collected cards are played twice.",
-      "Collected cards are played #b",
-      " additional times."
+      "At the start of your turn, play a #yYou #yAre #yMine! on a random enemy.",
+      "At the start of your turn, play #b",
+      " copies of #yYou #yAre #yMine! on random enemies."
+    ]
+  },
+  "collector:DoMayhem": {
+    "NAME": "Do Mayhem",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if any enemy has #b",
+      " or more #yDoom, play the top card of your draw pile.",
+      " or more #yDoom, play the top #b",
+      " cards of your draw pile."
     ]
   },
   "collector:Doom": {
@@ -41,7 +50,17 @@
     "DESCRIPTIONS": [
       "If ",
       " has less than #b",
-      " HP, kill and Collect it."
+      " HP, kill it. If #yDoom was greater than #b",
+      " (25% of Max HP), Collect it.",
+      "this foe"
+    ]
+  },
+  "collector:DoublePlayCollectibles": {
+    "NAME": "Multi-Play Collectibles",
+    "DESCRIPTIONS": [
+      "Collected cards are played twice.",
+      "Collected cards are played #b",
+      " additional times."
     ]
   },
   "collector:FeelMyPain": {
@@ -59,10 +78,25 @@
       " HP."
     ]
   },
+  "collector:Karma": {
+    "NAME": "Karma",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yBlock. If an enemy has #b25 or more #yDoom, gain #b",
+      " more #yBlock."
+    ]
+  },
   "collector:NextAttackAppliesDoom": {
-    "NAME": "Next Attack Dooms",
+    "NAME": "Doomed Attack",
     "DESCRIPTIONS": [
       "Your next Attack this turn applies #b",
+      " #yDoom."
+    ]
+  },
+  "collector:AttacksApplyDoomPower": {
+    "NAME": "Doomed Attacks",
+    "DESCRIPTIONS": [
+      "Attacks this turn applies #b",
       " #yDoom."
     ]
   },
@@ -135,8 +169,24 @@
       " HP."
     ]
   },
-  "collector:AlwaysMore": {
-    "NAME": "Always More",
+  "collector:TorchHead": {
+    "NAME": "Torch Head",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yAttack, if you have #yTemporary #yHP, Torch Head: NL ",
+      "Applies #b",
+      " #yDoom to a random enemy.",
+      "Deals #b",
+      " damage to ALL enemies.",
+      "Grants you #b.",
+      " #yBlock.",
+      " #yPoison to a random enemy.",
+      "Draws you #b",
+      " card.",
+      " cards."
+    ]
+  },
+  "collector:IncreasedCollectionDraw": {
+    "NAME": "Increased Collection Draw",
     "DESCRIPTIONS": [
       "Draw #b1 additional Collected card each turn.",
       "Draw #b",
@@ -154,7 +204,7 @@
     "NAME": "Curl Up",
     "DESCRIPTIONS": [
       "When you next receive unblocked attack damage, gain #b",
-      " #yBlock and #b1 #yBlur."
+      " #yBlock."
     ]
   },
   "collector:MadGremlinCard": {
@@ -175,9 +225,8 @@
   "collector:ThievesCard": {
     "NAME": "Dodgy",
     "DESCRIPTIONS": [
-      "Take #b50% less damage this turn.",
-      "Take #b50% less damage for the next #b",
-      " turns."
+      "Take #b",
+      " less damage from attacks this turn."
     ]
   },
   "collector:BookofStabbingCard": {
@@ -197,23 +246,51 @@
   },
   "collector:ReptomancerCard": {
     "NAME": "Toxic Call",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "At the end of your turn, if you have #yTemporary #yHP, apply #b",
       " #yPoison to a random enemy."
     ]
   },
   "collector:MoreBlockWithTempHP": {
     "NAME": "Thimble Helm",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "While you have #yTemporary #yHP, gain #b",
       " more #yBlock from cards."
     ]
   },
-  "collector:NextTurnVigorPower": {
+  "collector:NextTurnVigor": {
     "NAME": "Vigor Next Turn",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "At the start of your next turn, gain #b",
       " #yVigor."
+    ]
+  },
+  "collector:AcidSlimeCard": {
+    "NAME": "Slimy Duplication",
+    "DESCRIPTIONS": [
+      "Your next #yAttack or #ySkill this turn is played twice.",
+      "Your next #b",
+      " #yAttacks or #ySkills this turn are played twice."
+    ]
+  },
+  "collector:GremlinNobCard": {
+    "NAME": "Angery",
+    "DESCRIPTIONS": [
+      "Whenever you play a #ySkill, gain #b",
+      " #yVigor."
+    ]
+  },
+  "collector:LanternFlare": {
+    "NAME": "Scorched",
+    "DESCRIPTIONS": [
+      "At the start of its turn, gains #b",
+      " #yDoom."
+    ]
+  },
+  "collector:WomanInBlueCard": {
+    "NAME": "Woman in Blue",
+    "DESCRIPTIONS": [
+      "At the end of combat, lose all your Potions."
     ]
   }
 }
