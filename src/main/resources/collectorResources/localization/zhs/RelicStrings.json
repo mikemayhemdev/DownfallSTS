@@ -3,7 +3,7 @@
     "NAME": "Emerald Torch",
     "FLAVOR": "The fires of greed never fade.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add an #yEmber into your hand."
+      "At the start of each combat, add an #yEmber into your hand. The first time you #yExhaust an #yEmber each combat, gain #b1 #ycollector:Reserve."
     ]
   },
   "collector:PrismaticTorch": {
@@ -11,16 +11,14 @@
     "FLAVOR": "The ever-changing flames reflect fortune's favor.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] At the start of each combat, add #b",
-      " #yEmbers into your hand."
+      ".[] At the start of each combat, add an #yEmber into your hand and gain #b1 #ycollector:Reserve. Whenever you #yExhaust an #yEmber, gain #b1 #ycollector:Reserve."
     ]
   },
   "collector:HolidayCoal": {
     "NAME": "Krampian Coal",
-    "FLAVOR": "\"Intriguing! But why only these chimneys?\" - Ranwid",
+    "FLAVOR": "\"Intriguing! But why only specific chimneys?\" - Ranwid",
     "DESCRIPTIONS": [
-      "The first time you #yExhaust a card each turn, gain #b",
-      " #yBlock."
+      "When you would draw from an empty Collected pile, you instead draw a #yLucky #yWick."
     ]
   },
   "collector:BagOfTricks": {
@@ -77,9 +75,47 @@
   },
   "collector:Bagpipes": {
     "NAME": "The Bagpipes",
-    "FLAVOR": "This cursed, dreaded instrument is said to have driven Kublai the Great mad.",
+    "FLAVOR": "This dreaded instrument is said to have driven Kublai the Great mad.",
     "DESCRIPTIONS": [
       "Whenever you apply #yWeak or #yVulnerable, increase the amount applied by #b1."
+    ]
+  },
+  "collector:BottledCollectible": {
+    "NAME": "Bottled Brain",
+    "FLAVOR": "Collected from a wizard's laboratory.",
+    "DESCRIPTIONS": [
+      "Upon pickup, #yUpgrade a card in your Collection. Start combats with it on top of your Collected pile.",
+      "Start combat with #y",
+      " on top of your Collected pile.",
+      "Select a card to bottle for "
+    ]
+  },
+  "collector:TheContract": {
+    "NAME": "The Contract",
+    "FLAVOR": "Sign in blood.",
+    "DESCRIPTIONS": [
+      "Upon pickup, gain #b200 Gold. NL At the start of combat, a random enemy gains #b1 #yStrength."
+    ]
+  },
+  "collector:ForbiddenFruit": {
+    "NAME": "Forbidden Fruit",
+    "FLAVOR": "This species of fruit looks completely unfamiliar.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. NL Gain #b8 Max HP."
+    ]
+  },
+  "collector:RoughDiamond": {
+    "NAME": "Rough Diamond",
+    "FLAVOR": "With the mines demolished, even this tarnished stone is valuable.",
+    "DESCRIPTIONS": [
+      "Rare cards in your deck and Collection start combat costing #b1 less, but not less than #b1."
+    ]
+  },
+  "collector:BlockedChakra": {
+    "NAME": "Blocked Chakra",
+    "FLAVOR": "One pulled muscle is all it takes.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. You don't draw from your Collected pile until turn 4."
     ]
   }
 }
