@@ -54,7 +54,7 @@
     "DESCRIPTION": "获得目标的 collector:藏品 牌， NL 本回合其单次耗能为0。 NL 消耗 。"
   },
   "collector:BramblesparKindling": {
-    "NAME": "黑莓木柴",
+    "NAME": "黑莓柴",
     "DESCRIPTION": "不能被打出。 NL 本牌被 消耗 时， NL 获得一张 *Burning *Strike 。",
     "UPGRADE_DESCRIPTION": "不能被打出。 NL 本牌被 消耗 时， NL 获得一张 *Burning *Strike+ 。",
     "EXTENDED_DESCRIPTION": [
