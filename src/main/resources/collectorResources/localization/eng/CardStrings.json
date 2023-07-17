@@ -75,7 +75,7 @@
   },
   "collector:Condemn": {
     "NAME": "Condemn",
-    "DESCRIPTION": "Apply !clm2! collector:Doom. NL Apply !m! Vulnerable."
+    "DESCRIPTION": "Apply !clm2! collector:Doom. NL Apply !M! Vulnerable."
   },
   "collector:CursedWail": {
     "NAME": "Cursed Wail",
@@ -241,8 +241,8 @@
   },
   "collector:Karma": {
     "NAME": "Karma",
-    "DESCRIPTION": "At the start of your turn, gain !M! Block. NL Gain !clm2! more if an enemy has 25 or more collector:Doom.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! Block. NL Gain !clm2! more if an enemy has 25 or more collector:Doom."
+    "DESCRIPTION": "At the start of your turn, gain !M! Block. NL If an enemy has 25 or more collector:Doom, gain !clm2! more.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! Block. NL If an enemy has 25 or more collector:Doom, gain !clm2! more."
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",

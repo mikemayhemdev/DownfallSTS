@@ -151,12 +151,17 @@ public class CollectorMod implements
         BaseMod.addRelicToCustomPool(new PrismaticTorch(), CollectorChar.Enums.COLLECTOR);
         BaseMod.addRelicToCustomPool(new SoullitLamp(), CollectorChar.Enums.COLLECTOR);
         BaseMod.addRelicToCustomPool(new ThimbleHelm(), CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new BlockedChakra(), CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new BottledCollectible(), CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new TheContract(), CollectorChar.Enums.COLLECTOR);
 
         //Shared relics
         BaseMod.addRelic(new AutoCurser(), RelicType.SHARED);
         BaseMod.addRelic(new Incense(), RelicType.SHARED);
         BaseMod.addRelic(new Bagpipes(), RelicType.SHARED);
         BaseMod.addRelic(new FuelCanister(), RelicType.SHARED);
+        BaseMod.addRelic(new ForbiddenFruit(), RelicType.SHARED);
+        BaseMod.addRelic(new RoughDiamond(), RelicType.SHARED);
     }
 
     public void addPotions() {
