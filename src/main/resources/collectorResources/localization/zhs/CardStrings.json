@@ -9,8 +9,8 @@
   },
   "collector:AshenStrike": {
     "NAME": "化烬打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *火花 洗入抽牌堆。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *火花+ 洗入抽牌堆。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 *火花 洗入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 *火花+ 洗入抽牌堆。"
   },
   "collector:Arrogance": {
     "NAME": "巫傲",
