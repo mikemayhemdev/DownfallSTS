@@ -458,7 +458,7 @@
   },
   "collector:CultistCard": {
     "NAME": "邪教徒",
-    "DESCRIPTION": "collector:焰葬 。 NL 下2个回合获得1点 力量 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 下2个回合开始时， NL 获得1点 力量 。"
   },
   "collector:DaggerCard": {
     "NAME": "匕首",
@@ -525,7 +525,7 @@
   },
   "collector:LagavulinCard": {
     "NAME": "乐加维林",
-    "DESCRIPTION": "所有敌人 失去 !M! 力量 。"
+    "DESCRIPTION": "敌人全失去 !M! 点 力量 。"
   },
   "collector:LouseCard": {
     "NAME": "虱虫",
