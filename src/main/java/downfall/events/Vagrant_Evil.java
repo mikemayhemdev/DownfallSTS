@@ -1,8 +1,10 @@
 package downfall.events;
 
 
+import basemod.helpers.CardModifierManager;
 import collector.CollectorChar;
 import collector.CollectorCollection;
+import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.VagrantCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -47,7 +49,9 @@ public class Vagrant_Evil extends AbstractImageEvent {
         this.imageEventText.setDialogOption(OPTIONSALT[2], new PrideStandard());// 38
         this.imageEventText.setDialogOption(OPTIONS[5]);
         if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
-            imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, new VagrantCard());
+            AbstractCard card = new VagrantCard();
+            CardModifierManager.addModifier(card, new CollectedCardMod());
+            imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, card);
         }
     }
 
@@ -80,8 +84,9 @@ public class Vagrant_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
-
-                        CollectorCollection.collection.addToTop(new VagrantCard());
+                        AbstractCard card2 = new VagrantCard();
+                        CardModifierManager.addModifier(card2, new CollectedCardMod());
+                        CollectorCollection.collection.addToTop(card2);
 
                         logMetric(ID, "Take", null, null, null, null, null, null, null,
                                 0, 0, 0, 0, 0, 0);

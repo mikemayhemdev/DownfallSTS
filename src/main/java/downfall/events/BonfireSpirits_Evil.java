@@ -1,7 +1,9 @@
 package downfall.events;
 
+import basemod.helpers.CardModifierManager;
 import collector.CollectorChar;
 import collector.CollectorCollection;
+import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.BonfireSpiritsCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -51,7 +53,9 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
         this.cardSelect = false;
         this.imageEventText.setDialogOption(OPTIONS[0]);
         if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
-            this.imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, new BonfireSpiritsCard());
+            AbstractCard card = new BonfireSpiritsCard();
+            CardModifierManager.addModifier(card, new CollectedCardMod());
+            this.imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, card);
         }
     }
 
@@ -121,8 +125,9 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[1]);
-
-                        CollectorCollection.collection.addToTop(new BonfireSpiritsCard()); //TODO: Add to collection visuals
+                        AbstractCard card = new BonfireSpiritsCard();
+                        CardModifierManager.addModifier(card, new CollectedCardMod());
+                        CollectorCollection.collection.addToTop(card); //TODO: Add to collection visuals
 
                         logMetric(ID, "Take", null, null, null, null, null, null, null,
                                 0, 0, 0, 0, 0, 0);

@@ -1,8 +1,10 @@
 package downfall.events;
 
 
+import basemod.helpers.CardModifierManager;
 import collector.CollectorChar;
 import collector.CollectorCollection;
+import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.SsserpentCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
@@ -58,7 +60,9 @@ public class Serpent_Evil extends AbstractImageEvent {
         this.imageEventText.setDialogOption(OPTIONS[0] + this.goldReward + OPTIONS[1], CardLibrary.getCopy(this.curse.cardID));
         this.imageEventText.setDialogOption(OPTIONS[2]);
         if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
-            imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, new SsserpentCard());
+            AbstractCard card = new SsserpentCard();
+            CardModifierManager.addModifier(card, new CollectedCardMod());
+            imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, card);
         }
     }
 
@@ -94,8 +98,9 @@ public class Serpent_Evil extends AbstractImageEvent {
                     this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                     this.imageEventText.clearAllDialogs();
                     this.imageEventText.setDialogOption(OPTIONS[3]);
-
-                    CollectorCollection.collection.addToTop(new SsserpentCard());
+                    AbstractCard card = new SsserpentCard();
+                    CardModifierManager.addModifier(card, new CollectedCardMod());
+                    CollectorCollection.collection.addToTop(card);
 
                     logMetric(ID, "Take", null, null, null, null, null, null, null,
                             0, 0, 0, 0, 0, 0);

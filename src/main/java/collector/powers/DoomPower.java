@@ -128,6 +128,12 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         } else {
             name = DESCRIPTIONS[4];
         }
-        description = DESCRIPTIONS[0] + FontHelper.colorString(name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + Math.ceil(owner.maxHealth * 0.25F) + DESCRIPTIONS[3];
+        int toApply;
+        if (owner != null) {
+            toApply = (int) Math.ceil(owner.maxHealth * 0.25F);
+        } else {
+            toApply = 0;
+        }
+        description = DESCRIPTIONS[0] + FontHelper.colorString(name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + toApply + DESCRIPTIONS[3];
     }
 }

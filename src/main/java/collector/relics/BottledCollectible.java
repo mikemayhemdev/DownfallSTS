@@ -27,6 +27,8 @@ public class BottledCollectible extends CustomRelic implements CustomBottleRelic
     private static AbstractCard card;
     private boolean cardSelected = true;
 
+    private int idxToLoad = -1;
+
     public BottledCollectible() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.RARE, LandingSound.MAGICAL);
     }
@@ -47,11 +49,15 @@ public class BottledCollectible extends CustomRelic implements CustomBottleRelic
 
     @Override
     public void onLoad(Integer cardIndex) {
-        if (cardIndex == null) {
+        idxToLoad = cardIndex;
+    }
+
+    public void onLoadCollection() {
+        if (idxToLoad == -1) {
             return;
         }
-        if (cardIndex >= 0 && cardIndex < AbstractDungeon.player.masterDeck.group.size()) {
-            card = CollectorCollection.collection.group.get(cardIndex);
+        if (idxToLoad >= 0 && idxToLoad < AbstractDungeon.player.masterDeck.group.size()) {
+            card = CollectorCollection.collection.group.get(idxToLoad);
             if (card != null) {
                 CollectorBottleField.inCollectionBottle.set(card, true);
                 setDescriptionAfterLoading();
