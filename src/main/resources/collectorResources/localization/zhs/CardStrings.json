@@ -27,10 +27,10 @@
   },
   "collector:Billow": {
     "NAME": "鼓起",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得一张 *鼓叫 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得一张 *鼓噪 。"
   },
   "collector:Bellow": {
-    "NAME": "Bellow",
+    "NAME": "鼓噪",
     "DESCRIPTION": "虚无 。 NL 给予你上回合余下的 格挡 层 collector:魂灭 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL (给予 !M! 层 collector:魂灭 )"
@@ -145,7 +145,7 @@
     "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 若目标本回合死亡， NL 回复 !clm2! 点生命。 NL 消耗 。"
   },
   "collector:FingerOfDeath": {
-    "NAME": "Finger of Death",
+    "NAME": "死亡恶指",
     "DESCRIPTION": "只能使用 collector:储能 打出。 NL 给予 !M! 层 collector:魂灭 。"
   },
   "collector:FlameLash": {
@@ -371,7 +371,7 @@
     "DESCRIPTION": "给予 虚弱 或 易伤 时， NL 同时给予 !M! 层 collector:魂灭 。"
   },
   "collector:SunbloomKindling": {
-    "NAME": "日華材sunbloom",
+    "NAME": "日花柴",
     "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得2张 *余烬 ， NL 与 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
