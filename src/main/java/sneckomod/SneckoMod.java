@@ -274,7 +274,7 @@ public class SneckoMod implements
         if (simplePossibilities == null) {
             simplePossibilities = new ArrayList<>();
             for (AbstractCard q : CardLibrary.getAllCards()) {
-                if (!q.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !q.hasTag(AbstractCard.CardTags.STARTER_DEFEND) && q.color != AbstractCard.CardColor.CURSE && q.type != CURSE && q.type != STATUS && !q.hasTag(AbstractCard.CardTags.HEALING) && q.rarity != AbstractCard.CardRarity.SPECIAL) {
+                if (!q.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !q.hasTag(AbstractCard.CardTags.STARTER_DEFEND) && q.color != AbstractCard.CardColor.CURSE && q.type != CURSE && q.type != STATUS && !q.hasTag(AbstractCard.CardTags.HEALING)) {
                     simplePossibilities.add(q.cardID);
                 }
             }

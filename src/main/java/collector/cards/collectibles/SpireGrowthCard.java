@@ -12,7 +12,7 @@ public class SpireGrowthCard extends AbstractCollectibleCard {
     // intellij stuff skill, enemy, common, , , , , 10, 5
 
     public SpireGrowthCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 10;
     }
 

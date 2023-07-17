@@ -64,8 +64,6 @@ public class CollectorChar extends CustomPlayer {
 
     public static final float[] layerSpeeds = {-20.0F, 20.0F, -40.0F, 40.0F, 360.0F};
 
-    public static final String COLLECTORTAKE = CardCrawlGame.languagePack.getUIString("collector:BonusEventOption").TEXT[0];
-
     public CollectorChar(String name, PlayerClass setClass) {
         super(name, setClass, new DoubleEnergyOrb(orbTextures, "collectorResources/images/char/mainChar/orb/vfx.png", layerSpeeds), null, (String) null);
         initializeClass(null,

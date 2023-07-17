@@ -1,52 +1,110 @@
 [
   {
-    "PROPER_NAME": "折磨",
+    "PROPER_NAME": "Afflicted",
     "NAMES": [
-      "afflicted",
-      "折磨"
+      "afflicted"
     ],
-    "DESCRIPTION": "同时处于 #y易伤 与 #y虚弱 的单位视为处于 #y折磨 之中。"
+    "DESCRIPTION": "Creatures are Afflicted when they are both #yVulnerable and #yWeak."
   },
   {
-    "PROPER_NAME": "魂灭",
+    "PROPER_NAME": "Suffering",
     "NAMES": [
-      "doom",
-      "doomed",
-      "魂灭"
+      "Suffering",
+      "suffering"
     ],
-    "DESCRIPTION": "若一名敌人的 #y魂灭 层数超过其最大生命值的 #b25% ，将其击杀并获得其 #y藏品 牌。"
+    "DESCRIPTION": "When Suffering, Vulnerable, or Weak are applied, enemy loses HP equal to their current #ySuffering."
   },
   {
-    "PROPER_NAME": "焰葬",
+    "PROPER_NAME": "Soul Snare",
     "NAMES": [
-      "pyre",
-      "焰葬"
+      "Soul Snare",
+      "soul_snare"
     ],
-    "DESCRIPTION": "本牌需额外 #y消耗 一张手牌才能打出。"
+    "DESCRIPTION": "If the target dies while #ySoul #ySnared, #yCollect them."
   },
   {
-    "PROPER_NAME": "储能",
+    "PROPER_NAME": "Torch Head",
     "NAMES": [
-      "reserve",
-      "reserves",
-      "储能"
+      "Torch Head",
+      "torch_head"
     ],
-    "DESCRIPTION": "另一种类型的 #y能量 ，回合结束时不清零。"
+    "DESCRIPTION": "Assists the Collector in battle by taking hits while they have #yAggro and being the source or target of different card effects. NL Cards that utilize an Ally explicitly cannot be played without one or without a living ally."
   },
   {
-    "PROPER_NAME": "藏品",
+    "PROPER_NAME": "Guarded",
     "NAMES": [
-      "collected",
-      "藏品"
+      "Guarded",
+      "guarded",
+      "Guarding",
+      "guarding"
     ],
-    "DESCRIPTION": "回合开始时，额外从 #y收藏堆 抽一张 #y藏品 牌。 #y藏品 牌打出或回合结束时被 #y消耗 ，无论其位于 #y收藏堆 外的何处。"
+    "DESCRIPTION": "Collector is considered Guarded if Torchhead is in front and taking enemy attacks. This occurs whenever Collector uses a non-Attack card."
   },
   {
-    "PROPER_NAME": "火炬头",
+    "PROPER_NAME": "Back",
     "NAMES": [
-      "torchhead",
-      "火炬头"
+      "Back",
+      "back"
     ],
-    "DESCRIPTION": "若你有 #y临时生命 ,每次攻击时都会触发 #y火炬头 的效果。"
+    "DESCRIPTION": "The Back charater is the charater not being targeted by enemy Attacks currently."
+  },
+  {
+    "PROPER_NAME": "Collect",
+    "NAMES": [
+      "Collected",
+      "collected"
+    ],
+    "DESCRIPTION": "When a #yCollected Monster dies, after combat it's #yCollectible will appear in a separate card reward, no more then 3 #yCollectibles can appear."
+  },
+  {
+    "PROPER_NAME": "Aggro",
+    "NAMES": [
+      "Aggro",
+      "aggro"
+    ],
+    "DESCRIPTION": "#yAggro causes your #yTorch #yHead to be attacked instead of you so long as it's greater than 0. NL your #yTorch #yHead loses #b1 #yAggro whenever they lose HP."
+  },
+  {
+    "PROPER_NAME": "Collection",
+    "NAMES": [
+      "collect",
+      "collection"
+    ],
+    "DESCRIPTION": "#yCollectibles are placed here in combat. Contains 4 #yLucky #yWick at the start of a run."
+  },
+  {
+    "PROPER_NAME": "Collectible",
+    "NAMES": [
+      "collectible"
+    ],
+    "DESCRIPTION": "This card starts in the #yCollection in combat"
+  },
+  {
+    "PROPER_NAME": "Perpetual",
+    "NAMES": [
+      "perpetual"
+    ],
+    "DESCRIPTION": "This card shuffles into the Collect pile in when played instead of going to the Discard pile, increasing Damage and Block Gain by the shown value."
+  },
+  {
+    "PROPER_NAME": "Pyre",
+    "NAMES": [
+      "pyre"
+    ],
+    "DESCRIPTION": "Requires exhausting a card in hand in addition to paying its energy cost."
+  },
+  {
+    "PROPER_NAME": "Kindling",
+    "NAMES": [
+      "kindling"
+    ],
+    "DESCRIPTION": "An effect that triggers when this card is Exhausted by any means."
+  },
+  {
+    "PROPER_NAME": "Order",
+    "NAMES": [
+      "order"
+    ],
+    "DESCRIPTION": "Adds an attack to your Torch Head's attack queue, which will all be executed at the end of the turn."
   }
 ]

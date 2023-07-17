@@ -4,47 +4,31 @@ import basemod.helpers.CardModifierManager;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
-import charbosses.monsters.*;
+import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
+import charbosses.monsters.MushroomPurple;
+import charbosses.monsters.MushroomRed;
+import charbosses.monsters.MushroomWhite;
 import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.*;
-import collector.patches.CollectorBottleField;
 import collector.util.CollectibleCardReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.blue.Buffer;
 import com.megacrit.cardcrawl.cards.blue.CoreSurge;
-import com.megacrit.cardcrawl.cards.blue.Seek;
-import com.megacrit.cardcrawl.cards.blue.WhiteNoise;
 import com.megacrit.cardcrawl.cards.colorless.TheBomb;
-import com.megacrit.cardcrawl.cards.green.AfterImage;
-import com.megacrit.cardcrawl.cards.green.CorpseExplosion;
-import com.megacrit.cardcrawl.cards.green.Footwork;
-import com.megacrit.cardcrawl.cards.green.StormOfSteel;
-import com.megacrit.cardcrawl.cards.purple.ConjureBlade;
-import com.megacrit.cardcrawl.cards.purple.Omniscience;
-import com.megacrit.cardcrawl.cards.purple.Ragnarok;
-import com.megacrit.cardcrawl.cards.purple.TalkToTheHand;
-import com.megacrit.cardcrawl.cards.red.Barricade;
-import com.megacrit.cardcrawl.cards.red.Immolate;
-import com.megacrit.cardcrawl.cards.red.Inflame;
-import com.megacrit.cardcrawl.cards.red.Reaper;
+import com.megacrit.cardcrawl.cards.green.DieDieDie;
+import com.megacrit.cardcrawl.cards.purple.Scrawl;
+import com.megacrit.cardcrawl.cards.red.LimitBreak;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.beyond.*;
 import com.megacrit.cardcrawl.monsters.city.*;
-import com.megacrit.cardcrawl.monsters.ending.CorruptHeart;
-import com.megacrit.cardcrawl.monsters.ending.SpireShield;
-import com.megacrit.cardcrawl.monsters.ending.SpireSpear;
 import com.megacrit.cardcrawl.monsters.exordium.*;
 import downfall.monsters.*;
-import downfall.monsters.gauntletbosses.*;
-import hermit.cards.Adapt;
-import hermit.cards.FromBeyond;
-import hermit.cards.Magnum;
-import hermit.cards.ShadowCloak;
+import hermit.cards.DeadOrAlive;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -122,18 +106,14 @@ public class CollectorCollection {
         collectionPool.put(GrowingTotem.ID, LivingWallCard.ID);
         collectionPool.put(Augmenter.ID, AugmenterCard.ID);
         collectionPool.put(FleeingMerchant.ID, MerchantCard.ID);
-        collectionPool.put(Ironclad.ID, Inflame.ID);
-        collectionPool.put(Silent.ID, Footwork.ID);
-        collectionPool.put(Defect.ID, WhiteNoise.ID);
-        collectionPool.put(Watcher.ID, TalkToTheHand.ID);
-        collectionPool.put(Hermit.ID, ShadowCloak.ID);
+        collectionPool.put(CharBossIronclad.ID, LimitBreak.ID);
+        collectionPool.put(CharBossSilent.ID, DieDieDie.ID);
+        collectionPool.put(CharBossDefect.ID, CoreSurge.ID);
+        collectionPool.put(CharBossWatcher.ID, Scrawl.ID);
+        collectionPool.put(CharBossHermit.ID, DeadOrAlive.ID);
+        collectionPool.put(CharBossMerchant.ID, MerchantCard.ID);
 
-        collectionPool.put(Fortification.ID, SpireShieldCard.ID);
-        collectionPool.put(LadyInBlue.ID, WomanInBlueCard.ID);
-        collectionPool.put(SpireShield.ID, SpireShieldCard.ID);
-        collectionPool.put(SpireSpear.ID, SpireSpearCard.ID);
-        collectionPool.put(NeowBossFinal.ID, FinalBossCard.ID);
-        collectionPool.put(CorruptHeart.ID, FinalBossCard.ID);
+        //TODO: Too lazy after that to put in the boss and endgame cards, will do it later
     }
 
     public static AbstractCard getCollectedCard(AbstractMonster m) {
@@ -141,74 +121,7 @@ public class CollectorCollection {
         if (collectionPool.containsKey(m.id)) {
             returnValue = CardLibrary.getCopy(collectionPool.get(m.id));
         } else {
-            if (m instanceof CharBossIronclad) {
-                switch (((CharBossIronclad) m).chosenArchetype.actNum) {
-                    case 1:
-                        returnValue = CardLibrary.getCopy(Immolate.ID);
-                        break;
-                    case 2:
-                        returnValue = CardLibrary.getCopy(Reaper.ID);
-                        break;
-                    case 3:
-                    default:
-                        returnValue = CardLibrary.getCopy(Barricade.ID);
-                        break;
-                }
-            } else if (m instanceof CharBossSilent) {
-                switch (((CharBossSilent) m).chosenArchetype.actNum) {
-                    case 1:
-                        returnValue = CardLibrary.getCopy(CorpseExplosion.ID);
-                        break;
-                    case 2:
-                        returnValue = CardLibrary.getCopy(AfterImage.ID);
-                        break;
-                    case 3:
-                    default:
-                        returnValue = CardLibrary.getCopy(StormOfSteel.ID);
-                        break;
-                }
-            } else if (m instanceof CharBossDefect) {
-                switch (((CharBossDefect) m).chosenArchetype.actNum) {
-                    case 1:
-                        returnValue = CardLibrary.getCopy(Buffer.ID);
-                        break;
-                    case 2:
-                        returnValue = CardLibrary.getCopy(CoreSurge.ID);
-                        break;
-                    case 3:
-                    default:
-                        returnValue = CardLibrary.getCopy(Seek.ID);
-                        break;
-                }
-            } else if (m instanceof CharBossWatcher) {
-                switch (((CharBossWatcher) m).chosenArchetype.actNum) {
-                    case 1:
-                        returnValue = CardLibrary.getCopy(ConjureBlade.ID);
-                        break;
-                    case 2:
-                        returnValue = CardLibrary.getCopy(Ragnarok.ID);
-                        break;
-                    case 3:
-                    default:
-                        returnValue = CardLibrary.getCopy(Omniscience.ID);
-                        break;
-                }
-            } else if (m instanceof CharBossHermit) {
-                switch (((CharBossHermit) m).chosenArchetype.actNum) {
-                    case 1:
-                        returnValue = CardLibrary.getCopy(Adapt.ID);
-                        break;
-                    case 2:
-                        returnValue = CardLibrary.getCopy(Magnum.ID);
-                        break;
-                    case 3:
-                    default:
-                        returnValue = CardLibrary.getCopy(FromBeyond.ID);
-                        break;
-                }
-            } else {
-                returnValue = new DefaultCollectibleCard();
-            }
+            returnValue = new DefaultCollectibleCard();
         }
         CardModifierManager.addModifier(returnValue, new CollectedCardMod());
         return returnValue;
@@ -225,16 +138,6 @@ public class CollectorCollection {
             combatCollection.addToTop(q.makeSameInstanceOf());
         }
         combatCollection.shuffle(AbstractDungeon.cardRandomRng);
-        ArrayList<AbstractCard> toTopdeck = new ArrayList<>();
-        for (AbstractCard q : combatCollection.group) {
-            if (CollectorBottleField.inCollectionBottle.get(q)) {
-                toTopdeck.add(q);
-            }
-        }
-        toTopdeck.forEach(q -> {
-            combatCollection.removeCard(q);
-            combatCollection.addToTop(q);
-        });
     }
 
     public static void atBattleEnd() {

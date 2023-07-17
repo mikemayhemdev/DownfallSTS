@@ -20,16 +20,18 @@ public class StashAwayCampfireOption extends AbstractCampfireOption {
     public static final String[] DESCRIPTIONS;
     private static final UIStrings UI_STRINGS;
 
+    private ArrayList<AbstractCard> validCards = new ArrayList<>();
+
 
     static {
         UI_STRINGS = CardCrawlGame.languagePack.getUIString("collector:StashAwayCampfireOption");
         DESCRIPTIONS = UI_STRINGS.TEXT;
+
     }
 
     //private ArrayList<String> idleMessages;
     public StashAwayCampfireOption() {
         this.label = DESCRIPTIONS[0];
-        this.description = DESCRIPTIONS[1];
         boolean active = false;
         if (CollectorCollection.collection.size() > 0){
             active = true;

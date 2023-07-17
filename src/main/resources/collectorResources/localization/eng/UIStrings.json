@@ -80,10 +80,5 @@
       "Requires a Collected card.",
       "Select a Collected card to remove."
     ]
-  },
-  "collector:BonusEventOption": {
-    "TEXT": [
-      "[Take]"
-    ]
   }
 }

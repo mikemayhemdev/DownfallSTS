@@ -82,8 +82,8 @@
     "NAME": "Karma",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
-      " #yBlock. If an enemy has #b25 or more #yDoom, gain #b",
-      " more #yBlock."
+      " #yBlock for every #b",
+      " #yDoom on foes."
     ]
   },
   "collector:NextAttackAppliesDoom": {
@@ -179,10 +179,7 @@
       " damage to ALL enemies.",
       "Grants you #b.",
       " #yBlock.",
-      " #yPoison to a random enemy.",
-      "Draws you #b",
-      " card.",
-      " cards."
+      " #yPoison to a random enemy."
     ]
   },
   "collector:IncreasedCollectionDraw": {
@@ -278,19 +275,6 @@
     "DESCRIPTIONS": [
       "Whenever you play a #ySkill, gain #b",
       " #yVigor."
-    ]
-  },
-  "collector:LanternFlare": {
-    "NAME": "Scorched",
-    "DESCRIPTIONS": [
-      "At the start of its turn, gains #b",
-      " #yDoom."
-    ]
-  },
-  "collector:WomanInBlueCard": {
-    "NAME": "Woman in Blue",
-    "DESCRIPTIONS": [
-      "At the end of combat, lose all your Potions."
     ]
   }
 }

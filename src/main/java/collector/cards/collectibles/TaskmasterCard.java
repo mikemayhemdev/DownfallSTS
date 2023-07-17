@@ -16,9 +16,9 @@ public class TaskmasterCard extends AbstractCollectibleCard {
 
     public TaskmasterCard() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 10;
+        baseDamage = 7;
         baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 10;
+        baseSecondMagic = secondMagic = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,7 +28,7 @@ public class TaskmasterCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
         upgradeMagicNumber(1);
         upgradeSecondMagic(3);
     }

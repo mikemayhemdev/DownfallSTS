@@ -102,14 +102,12 @@
   "downfall:BonfireSpirits": {
     "NAME": "Bonfire Elemental",
     "DESCRIPTIONS": [
-      "The spirits hungrily consume your offering! They gorge themselves on souls, burning brighter as the fire @doubles@ in strength. NL The spirits dance around you excitedly before ~merging~ ~into~ ~your~ ~form,~ filling you with warmth and strength. NL Your Max HP increases and you are #ghealed to full HP.",
-      "You reach your hand out to #ptake... NL The spirits @shriek,@ ~swirling~ around the vortex that emerges from your palm in useless attempts to flee. NL Soon, their spirits themselves are nothing more than an item in the Collection."
+      "The spirits hungrily consume your offering! They gorge themselves on souls, burning brighter as the fire @doubles@ in strength. NL The spirits dance around you excitedly before ~merging~ ~into~ ~your~ ~form,~ filling you with warmth and strength. NL Your Max HP increases and you are #ghealed to full HP."
     ],
     "OPTIONS": [
       "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP #gand #gFully #gHeal.",
       "[Locked] Requires 150 Souls.",
-      "[Donate] #rLose #r150 #rSouls. #gEach #gGremlin #gGains #g2 #gMax #gHP #gand #the #gAlive #gOnes #gFully #gHeal.",
-      "[Take]"
+      "[Donate] #rLose #r150 #rSouls. #gEach #gGremlin #gGains #g2 #gMax #gHP #gand #the #gAlive #gOnes #gFully #gHeal."
     ]
   },
   "downfall:FaceTrader": {
@@ -170,8 +168,7 @@
       "You see no reason to get involved with this. There is important killing to be done.",
       "\"Oh my, you are just dreadful!! This will not do, no no. What is this style? You are to be @menacing!@ A feared and intimidating #roverlord of the Spire! You simply ~must~ let me give you a proper makeover.\" NL NL You aren't sure whether to take this man at his word and accept his services, or if you should be insulted at his disgust at your style.",
       "\"Okay, bye bye now! Tell your #roverlord friends!\" NL NL Though you were apprehensive of this man's ability, you definitely feel more intimidating.",
-      "You punch him. NL \"My @FACE!!@ Now I'll have to-\" NL NL He fainted. Perhaps next time he will give pause before insulting a creature of your status.",
-      "You shove the thief aside - your ~true~ ~quarry~ is that pitiful designer. He recoils as you approach, but you outstretch your #glantern, and soon his spirit is yours..."
+      "You punch him. NL \"My @FACE!!@ Now I'll have to-\" NL NL He fainted. Perhaps next time he will give pause before insulting a creature of your status."
     ],
     "OPTIONS": [
       "[Adjustments] ",
@@ -242,8 +239,7 @@
       "You walk into a room to find a large hole in the ground. As you approach the hole, an enormous serpent creature appears from within. NL NL ~\"Ho~ ~hooo!~ ~Hello~ ~hello!~ ~what~ ~have~ ~we~ ~got~ ~here?~ To you, my overlord, I ask a simple question. NL The most fulfilling of lives is that in which you can #r~punch~ #r~anything!~ NL Do you agree?\"",
       "~\"Hssssssssssss..~ ~..ssSSs.....~ ~ss...~ ~sssss....\"~",
       "The serpent stares at you with a look of extreme disappointment.",
-      " NL NL The serpent rears its head and cries an awful scream. As its body goes limp and falls into the pit, the life force of the creature becomes readily available for harvesting. NL NL It is awe-inspiring, but you can't help but wonder if the serpent was speaking metaphorically. Perhaps it intended to aid and encourage you to do violence on others, but not itself...",
-      "As you outstretch your hand, the serpent @rears@ @back,@ screeching in fear. ~\"Hssss - the Taker!\"~ NL NL ~\"Your greed outmatches my own. Pleasssssse, let me be...\"~ NL You pay the worm no mind. Its spirit yours, you continue onwards."
+      " NL NL The serpent rears its head and cries an awful scream. As its body goes limp and falls into the pit, the life force of the creature becomes readily available for harvesting. NL NL It is awe-inspiring, but you can't help but wonder if the serpent was speaking metaphorically. Perhaps it intended to aid and encourage you to do violence on others, but not itself..."
     ],
     "OPTIONS": [
       "[Agree] [Punch] #gGain #g",
@@ -377,8 +373,7 @@
     "NAME": "Pleading Vagrant",
     "DESCRIPTIONS": [
       "You kill the man and harvest his soul. ~Gasps~ come from the crowd behind you. NL \"He just killed Burgundy!\" a figure says, as more beggars just like the one you encountered begin to approach you. NL NL You escape, but not without some #rclaws and #rbites.",
-      "You snatch the precious #yrelic from his clutches and walk away. NL From behind you hear, NL \"Have you no shame? ~HAVE~ ~YOU~ ~NO~ ~SHAAAAAME?!\"~ NL You have #pabsolutely #pno #pshame. It is an honor to be robbed by an Overlord of the Spire!",
-      "You care not for the man's toys - his ~spirit~ is what will be most useful. The poor man whimpers as you @outstretch@ @your@ @arm...@"
+      "You snatch the precious #yrelic from his clutches and walk away. NL From behind you hear, NL \"Have you no shame? ~HAVE~ ~YOU~ ~NO~ ~SHAAAAAME?!\"~ NL You have #pabsolutely #pno #pshame. It is an honor to be robbed by an Overlord of the Spire!"
     ],
     "OPTIONS": [
       "[Punch] #gGain #g85 #gSouls. #rLose #r",

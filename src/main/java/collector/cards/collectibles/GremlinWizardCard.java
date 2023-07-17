@@ -1,6 +1,5 @@
 package collector.cards.collectibles;
 
-import collector.powers.NextTurnReservePower;
 import collector.powers.NextTurnVigorPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,15 +13,14 @@ public class GremlinWizardCard extends AbstractCollectibleCard {
 
     public GremlinWizardCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new NextTurnVigorPower(magicNumber));
-        applyToSelf(new NextTurnReservePower(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(4);
+        upgradeMagicNumber(5);
     }
 }
