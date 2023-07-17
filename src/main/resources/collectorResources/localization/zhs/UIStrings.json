@@ -47,7 +47,7 @@
   },
   "collector:CollectibleCardReward": {
     "TEXT": [
-      "Collected: ",
+      "藏品：",
       "You may obtain this"
     ]
   },
