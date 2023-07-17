@@ -1,6 +1,7 @@
 package collector.relics;
 
 import basemod.abstracts.CustomRelic;
+import collector.CollectorCollection;
 import collector.CollectorMod;
 import downfall.util.TextureLoader;
 
@@ -21,6 +22,11 @@ public class BlockedChakra extends CustomRelic {
     @Override
     public void onVictory() {
         counter = -1;
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return !CollectorCollection.collection.isEmpty();
     }
 
     @Override

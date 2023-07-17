@@ -78,7 +78,10 @@ public class BottledCollectible extends CustomRelic implements CustomBottleRelic
         AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[3] + name + DESCRIPTIONS[2], true, false, false, false);
     }
 
-
+    @Override
+    public boolean canSpawn() {
+        return !CollectorCollection.collection.isEmpty();
+    }
 
     @Override
     public void onUnequip() {
