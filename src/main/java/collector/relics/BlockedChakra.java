@@ -10,7 +10,7 @@ public class BlockedChakra extends CustomRelic {
     private static final String OUTLINE_IMG_PATH = BlockedChakra.class.getSimpleName() + ".png";
 
     public BlockedChakra() {
-        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
     @Override
