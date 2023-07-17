@@ -21,7 +21,7 @@ import static collector.util.Wiz.att;
 public class PyreAdditionalCostPatch {
     private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("collector:PyreCostSpendScreen");
     public static void Postfix(AbstractPlayer p, AbstractCard c, AbstractMonster m, int energyonuse) {
-        if (!c.freeToPlayOnce && CardModifierManager.hasModifier(c, PyreMod.ID)) {
+        if (CardModifierManager.hasModifier(c, PyreMod.ID)) {
             for (AbstractCardModifier r : CardModifierManager.getModifiers(c, PyreMod.ID)) {
                 if (r instanceof PyreMod) {
                     //TODO: Slightly gross code. Either make an exhaust callback action (iffy but not difficult) or always use the select (easy but uglier)

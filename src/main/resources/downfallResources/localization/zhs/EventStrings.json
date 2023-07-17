@@ -103,12 +103,14 @@
   "downfall:BonfireSpirits": {
     "NAME": "篝火精灵",
     "DESCRIPTIONS": [
-      "精灵们如饥似渴地享用着你献上的灵魂！他们以灵魂为食，火光亮了约有 @一倍@ 。 NL 精灵们在你身边兴奋地舞蹈着，然后 ~融入了你的躯体~ ，让你充满了温暖和力量。 NL 你的最大生命值增加了 #b10 ，你的生命 #g回复 到最大了。"
+      "精灵们如饥似渴地享用着你献上的灵魂！他们以灵魂为食，火光亮了约有 @一倍@ 。 NL 精灵们在你身边兴奋地舞蹈着，然后 ~融入了你的躯体~ ，让你充满了温暖和力量。 NL 你的最大生命值增加了 #b10 ，你的生命 #g回复 到最大了。",
+      "You reach your hand out to #ptake... NL The spirits @shriek@, ~swirling~ around the vortex that emerges from your palm in useless attempts to flee. NL Soon, their spirits themselves are nothing more than an item in the Collection."
     ],
     "OPTIONS": [
       "[献上] #r失去150灵魂。 #g获得10点最大生命并完全回复生命。",
       "[锁定] 需要至少150灵魂。",
-      "[献上] #r失去150灵魂。 #g每只地精获得2点最大生命且存活的地精完全回复生命。"
+      "[献上] #r失去150灵魂。 #g每只地精获得2点最大生命且存活的地精完全回复生命。",
+      "[Take]"
     ]
   },
   "downfall:FaceTrader": {
@@ -169,7 +171,8 @@
       "你没理由卷入这种小事，还有更重要的杀戮等着你。",
       "“我的天哪，您可太糟了！！不行不行，这怎么能行呢。哎呀，您这算是什么风格？您得有个 @凶狠@ 的样子！一个令人害怕畏惧的尖塔 #r领主 ！您 ~必须~ 让我给您打扮一下。” NL NL 你不确定应不应该接受这个男人的话语和服务，以及是否被他贬低你风格的语言侮辱了。",
       "“好啦，那下次再来哦。向你的 #r领主 朋友们宣传下小店吧!” NL NL 虽然你曾对这个男人的手艺感到担忧，现在你感到更多的是害怕。",
-      "你一拳揍了过去。 NL “我的 @脸@ 啊！！ 这下我要——” NL NL 他晕了过去，或许下次他在贬低别人品味前会懂得等一等了。"
+      "你一拳揍了过去。 NL “我的 @脸@ 啊！！ 这下我要——” NL NL 他晕了过去，或许下次他在贬低别人品味前会懂得等一等了。",
+      "You shove the thief aside - your ~true~ ~quarry~ is that pitiful designer. He recoils as you approach, but you outstretch your #glantern, and soon his spirit is yours..."
     ],
     "OPTIONS": [
       "[小修一下] ",
@@ -235,12 +238,13 @@
     ]
   },
   "downfall:Serpent": {
-    "NAME": "蛇～",
+    "NAME": "～～～蛇",
     "DESCRIPTIONS": [
       "你走进一间房间，看见地上有一个大洞。当你靠近洞时，一条巨大的蛇形生物从里面钻了出来。 NL NL “~嚯嚯嚯！你好，你好啊！这是谁呀？~ 哎呀呀，我的领主呀，我就问一个简单的问题。 NL 最幸福的生活当然就是 #y~什么东西都能打得倒~ 的霸王生活了！　 NL 你同意吗？”",
       "~“嘶……嘶～嘶……”~",
       "蛇非常失望地看着你。",
-      " NL NL 蛇抬起头，发出一阵瘆人的尖啸。这生物的身体瘫软下来，坠入大洞之中，而它的生命力已经可以被吸收了。 NL NL 这情景令人惊叹，但你止不住去想蛇是否话里有话。或许它想要支援并鼓励你去对别人施行暴力，而不是对它自己……"
+      " NL NL 蛇抬起头，发出一阵瘆人的尖啸。这生物的身体瘫软下来，坠入大洞之中，而它的生命力已经可以被吸收了。 NL NL 这情景令人惊叹，但你止不住去想蛇是否话里有话。或许它想要支援并鼓励你去对别人施行暴力，而不是对它自己……",
+      "As you outstretch your hand, the serpent @rears@ @back@, screeching in fear. ~\"Hssss - the Taker!\"~ NL NL ~\"Your greed outmatches my own. Pleasssssse, let me be...\"~ NL You pay the worm no mind. Its spirit yours, you continue onwards."
     ],
     "OPTIONS": [
       "[同意] [一拳过去] #g获得 #g",
@@ -374,7 +378,8 @@
     "NAME": "流浪汉的恳求",
     "DESCRIPTIONS": [
       "你杀死了这个人并收割了他的灵魂。身后的人群中传来一阵 ~骚动~ 。 NL “他杀了勃艮第！” 一个人喊道。更多与那人一样的瘾君子向你逼近。NL NL 你逃脱了，身上带着一些 #r抓痕 和 #r咬痕 。",
-      "你一把抓过他手中珍贵的 #y遗物 转身就走。 NL 身后传来他的声音： NL ~“你不知道什么是羞耻吗？”~ NL 你 #p当然没有羞耻心。 被高塔的霸主抢劫可是你的荣幸！"
+      "你一把抓过他手中珍贵的 #y遗物 转身就走。 NL 身后传来他的声音： NL ~“你不知道什么是羞耻吗？”~ NL 你 #p当然没有羞耻心。 被高塔的霸主抢劫可是你的荣幸！",
+      "You care not for the man's toys - his ~spirit~ is what will be most useful. The poor man whimpers as you @outstretch@ @your@ @arm...@"
     ],
     "OPTIONS": [
       "[一拳过去] #g获得85灵魂。 #r失去 #r",

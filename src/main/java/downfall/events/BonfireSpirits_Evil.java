@@ -1,12 +1,14 @@
 package downfall.events;
 
+import collector.CollectorChar;
+import collector.CollectorCollection;
+import collector.cards.collectibles.BonfireSpiritsCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.events.shrines.Bonfire;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.Circlet;
@@ -48,7 +50,9 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
         this.offeredCard = null;
         this.cardSelect = false;
         this.imageEventText.setDialogOption(OPTIONS[0]);
-
+        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
+            this.imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, new BonfireSpiritsCard());
+        }
     }
 
     public void onEnterRoom() {
@@ -113,10 +117,20 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
                         }
                         this.screen = CUR_SCREEN.CHOOSE;
                         break;
+                    case 1:
+                        this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[1]);
+
+                        CollectorCollection.collection.addToTop(new BonfireSpiritsCard()); //TODO: Add to collection visuals
+
+                        logMetric(ID, "Take", null, null, null, null, null, null, null,
+                                0, 0, 0, 0, 0, 0);
+                        this.screen = CUR_SCREEN.COMPLETE;
                 }
                 break;
             case CHOOSE:
-                switch (buttonPressed){
+                switch (buttonPressed) {
                     case 0: {
                         if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
                             AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[3], false, false, false, true);
@@ -135,8 +149,8 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.loseGold(150);
                         AbstractDungeon.player.increaseMaxHp(10, false);
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
-                        if(AbstractDungeon.player instanceof GremlinCharacter ){
-                            GremlinCharacter gremlinMob = (GremlinCharacter)(AbstractDungeon.player);
+                        if (AbstractDungeon.player instanceof GremlinCharacter) {
+                            GremlinCharacter gremlinMob = (GremlinCharacter) (AbstractDungeon.player);
                             gremlinMob.mobState.campfireHeal(1000000, gremlinMob.maxHealth);
                         }
                         logMetric(ID, "Donate", null, null, null, null, null, null, null,
@@ -146,8 +160,6 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
                     }
                 }
                 break;
-
-
 
 
             case COMPLETE:
