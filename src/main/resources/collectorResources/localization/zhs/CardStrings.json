@@ -257,7 +257,7 @@
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 打出攻击时， NL 若有 临时生命 ， NL 随机造成 !clm2! 点伤害。"
   },
   "collector:MiniCurse": {
-    "NAME": "微咒",
+    "NAME": "魔咒",
     "DESCRIPTION": "collector:焰葬 。 NL 给予1层 虚弱 与 易伤 。",
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 给予所有敌人1层 虚弱 与 易伤 。"
   },
