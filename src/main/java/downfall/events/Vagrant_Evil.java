@@ -1,15 +1,16 @@
 package downfall.events;
 
 
+import collector.CollectorChar;
+import collector.CollectorCollection;
+import collector.cards.collectibles.VagrantCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.curses.Shame;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
@@ -45,6 +46,9 @@ public class Vagrant_Evil extends AbstractImageEvent {
         this.imageEventText.setDialogOption(OPTIONSALT[0] + takeCost + OPTIONSALT[1]);
         this.imageEventText.setDialogOption(OPTIONSALT[2], new PrideStandard());// 38
         this.imageEventText.setDialogOption(OPTIONS[5]);
+        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
+            imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, new VagrantCard());
+        }
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -72,6 +76,16 @@ public class Vagrant_Evil extends AbstractImageEvent {
                         this.imageEventText.clearRemainingOptions();// 71
                         this.screenNum = 1;
                         return;// 73
+                    case 2:
+                        this.imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[3]);
+
+                        CollectorCollection.collection.addToTop(new VagrantCard());
+
+                        logMetric(ID, "Take", null, null, null, null, null, null, null,
+                                0, 0, 0, 0, 0, 0);
+                        this.screenNum = 1;
                     default:
                         logMetricIgnored(ID);
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);// 75

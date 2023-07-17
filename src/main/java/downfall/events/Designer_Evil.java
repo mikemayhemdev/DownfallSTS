@@ -1,5 +1,9 @@
 package downfall.events;
 
+import collector.CollectorChar;
+import collector.CollectorCollection;
+import collector.cards.collectibles.BonfireSpiritsCard;
+import collector.cards.collectibles.DesignerInSpireCard;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -57,6 +61,9 @@ public class Designer_Evil extends AbstractImageEvent {
 
         this.imageEventText.setDialogOption(OPTIONS[4] + this.hpLoss + OPTIONS[5] + OPTIONSALT[6]);
         this.imageEventText.setDialogOption(OPTIONSALT[3]);
+        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
+            imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE);
+        }
 
         int roll = MathUtils.random(2);
         if (roll == 0) {
@@ -208,6 +215,16 @@ public class Designer_Evil extends AbstractImageEvent {
                         this.curScreen = CurrentScreen.DONE;
                         logMetricIgnored(ID);
                         break;
+                    case 2:
+                        this.imageEventText.updateBodyText(DESC[6]);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[14]);
+
+                        CollectorCollection.collection.addToTop(new DesignerInSpireCard());
+
+                        logMetric(ID, "Take", null, null, null, null, null, null, null,
+                                0, 0, 0, 0, 0, 0);
+                        this.curScreen = CurrentScreen.DONE;
                 }
                 break;
             case INTRO:

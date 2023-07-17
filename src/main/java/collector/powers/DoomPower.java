@@ -87,8 +87,8 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         if (!instakilled) {
             flash();
             instakilled = true;
-            CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
             if (owner.maxHealth * 0.25F <= this.amount) {
+                CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
                 CollectorCollection.collect((AbstractMonster) owner);
             }
             att(new InstantKillAction(owner));
@@ -117,7 +117,7 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
 
     @Override
     public Color getColor() {
-        return Color.PURPLE.cpy();
+        return owner.maxHealth * 0.25F <= this.amount ? Color.PINK.cpy() : Color.PURPLE.cpy();
     }
 
     @Override
@@ -128,6 +128,6 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         } else {
             name = DESCRIPTIONS[4];
         }
-        description = DESCRIPTIONS[0] + FontHelper.colorString(name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + owner.maxHealth * 0.25F + DESCRIPTIONS[3];
+        description = DESCRIPTIONS[0] + FontHelper.colorString(name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + Math.ceil(owner.maxHealth * 0.25F) + DESCRIPTIONS[3];
     }
 }
