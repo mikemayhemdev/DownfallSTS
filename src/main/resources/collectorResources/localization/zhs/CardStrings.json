@@ -637,11 +637,11 @@
     "DESCRIPTION": "回合结束时， NL 目标受到 !M! 点伤害。"
   },
   "collector:SpireShieldCard": {
-    "NAME": "尖塔之盾",
+    "NAME": "高塔之盾",
     "DESCRIPTION": "获得 !M! 点 敏捷 。"
   },
   "collector:SpireSpearCard": {
-    "NAME": "尖塔之矛",
+    "NAME": "高塔之矛",
     "DESCRIPTION": "获得 !M! 点 力量 。"
   },
   "collector:SsserpentCard": {
