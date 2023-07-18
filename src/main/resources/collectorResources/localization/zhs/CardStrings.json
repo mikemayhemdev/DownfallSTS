@@ -240,7 +240,7 @@
     "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 获得所葬牌耗能+ !M! 张小刀。"
   },
   "collector:Karma": {
-    "NAME": "Karma",
+    "NAME": "报应",
     "DESCRIPTION": "回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人有25层 collector:魂灭 ， NL 额外获得 !clm2! 点。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人有25层 collector:魂灭 ， NL 额外获得 !clm2! 点。"
   },
