@@ -7,24 +7,15 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import slimebound.SlimeboundMod;
-import sneckomod.SneckoMod;
-import sneckomod.cards.unknowns.AbstractUnknownCard;
-import sneckomod.patches.UnknownExtraUiPatch;
-import sneckomod.relics.UnknownEgg;
 
 public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("collector:StashAwayCampfireOption");
@@ -50,8 +41,8 @@ public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.Abstract
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
 
                 AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-                AbstractDungeon.effectList.add(new PurgeCardEffect(c));
-                AbstractDungeon.player.masterDeck.removeCard(c);
+                AbstractDungeon.effectsQueue.add(new PurgeCardEffect(c));
+                CollectorCollection.collection.removeCard(c);
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
             } else if (this.openedScreen) {
@@ -64,12 +55,7 @@ public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.Abstract
         if ((this.duration < 1.0F) && (!this.openedScreen)) {
             this.openedScreen = true;
 
-            CardGroup cg = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-
-            for (AbstractCard c : CollectorCollection.collection.group) {
-                c.update();
-                cg.addToBottom(c);
-            }
+            CardGroup cg = CardGroup.getGroupWithoutBottledCards(CollectorCollection.collection);
 
             AbstractDungeon.overlayMenu.cancelButton.show(GridCardSelectScreen.TEXT[1]);
             AbstractDungeon.gridSelectScreen.open(cg, 1, TEXT[3], false, false, true, true);

@@ -1,6 +1,5 @@
 package collector;
 
-import automaton.AutomatonChar;
 import automaton.potions.BuildAFunctionPotion;
 import automaton.potions.BurnAndBuffPotion;
 import automaton.potions.CleanCodePotion;
@@ -32,6 +31,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
@@ -151,12 +151,17 @@ public class CollectorMod implements
         BaseMod.addRelicToCustomPool(new PrismaticTorch(), CollectorChar.Enums.COLLECTOR);
         BaseMod.addRelicToCustomPool(new SoullitLamp(), CollectorChar.Enums.COLLECTOR);
         BaseMod.addRelicToCustomPool(new ThimbleHelm(), CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new BlockedChakra(), CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new BottledCollectible(), CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new TheContract(), CollectorChar.Enums.COLLECTOR);
 
         //Shared relics
         BaseMod.addRelic(new AutoCurser(), RelicType.SHARED);
         BaseMod.addRelic(new Incense(), RelicType.SHARED);
         BaseMod.addRelic(new Bagpipes(), RelicType.SHARED);
         BaseMod.addRelic(new FuelCanister(), RelicType.SHARED);
+        BaseMod.addRelic(new ForbiddenFruit(), RelicType.SHARED);
+        BaseMod.addRelic(new RoughDiamond(), RelicType.SHARED);
     }
 
     public void addPotions() {
@@ -328,6 +333,11 @@ public class CollectorMod implements
                     AbstractCard found = CardLibrary.getCopy(s);
                     CardModifierManager.addModifier(found, new CollectedCardMod());
                     CollectorCollection.collection.addToBottom(found);
+                }
+                for (AbstractRelic r : AbstractDungeon.player.relics) {
+                    if (r instanceof BottledCollectible) {
+                        ((BottledCollectible) r).onLoadCollection();
+                    }
                 }
             }
         });

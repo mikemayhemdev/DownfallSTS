@@ -1,6 +1,7 @@
 package collector.relics;
 
 import basemod.abstracts.CustomRelic;
+import collector.CollectorCollection;
 import collector.CollectorMod;
 import downfall.util.TextureLoader;
 
@@ -10,7 +11,7 @@ public class BlockedChakra extends CustomRelic {
     private static final String OUTLINE_IMG_PATH = BlockedChakra.class.getSimpleName() + ".png";
 
     public BlockedChakra() {
-        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
     @Override
@@ -21,6 +22,11 @@ public class BlockedChakra extends CustomRelic {
     @Override
     public void onVictory() {
         counter = -1;
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return !CollectorCollection.collection.isEmpty();
     }
 
     @Override

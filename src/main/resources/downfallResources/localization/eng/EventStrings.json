@@ -103,7 +103,7 @@
     "NAME": "Bonfire Elemental",
     "DESCRIPTIONS": [
       "The spirits hungrily consume your offering! They gorge themselves on souls, burning brighter as the fire @doubles@ in strength. NL The spirits dance around you excitedly before ~merging~ ~into~ ~your~ ~form,~ filling you with warmth and strength. NL Your Max HP increases and you are #ghealed to full HP.",
-      "You reach your hand out to #ptake... NL The spirits @shriek@, ~swirling~ around the vortex that emerges from your palm in useless attempts to flee. NL Soon, their spirits themselves are nothing more than an item in the Collection."
+      "You reach your hand out to #ptake... NL The spirits @shriek,@ ~swirling~ around the vortex that emerges from your palm in useless attempts to flee. NL Soon, their spirits themselves are nothing more than an item in the Collection."
     ],
     "OPTIONS": [
       "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP #gand #gFully #gHeal.",
@@ -243,7 +243,7 @@
       "~\"Hssssssssssss..~ ~..ssSSs.....~ ~ss...~ ~sssss....\"~",
       "The serpent stares at you with a look of extreme disappointment.",
       " NL NL The serpent rears its head and cries an awful scream. As its body goes limp and falls into the pit, the life force of the creature becomes readily available for harvesting. NL NL It is awe-inspiring, but you can't help but wonder if the serpent was speaking metaphorically. Perhaps it intended to aid and encourage you to do violence on others, but not itself...",
-      "As you outstretch your hand, the serpent @rears@ @back@, screeching in fear. ~\"Hssss - the Taker!\"~ NL NL ~\"Your greed outmatches my own. Pleasssssse, let me be...\"~ NL You pay the worm no mind. Its spirit yours, you continue onwards."
+      "As you outstretch your hand, the serpent @rears@ @back,@ screeching in fear. ~\"Hssss - the Taker!\"~ NL NL ~\"Your greed outmatches my own. Pleasssssse, let me be...\"~ NL You pay the worm no mind. Its spirit yours, you continue onwards."
     ],
     "OPTIONS": [
       "[Agree] [Punch] #gGain #g",
@@ -308,7 +308,8 @@
     "NAME": "Council of Ghosts",
     "DESCRIPTIONS": [
       "As you continue your descent, #p~thick~ #p~black~ #p~smoke~ begins to billow out of the ground and walls around you, coalescing into three masked forms that start to speak. NL NL ~\"Another~ ~puppet~ ~of~ #r~the~ #r~Heart~ ~I~ ~think.\"~ NL #r@\"AGREED!@ #r@IT@ #r@ALWAYS@ #r@SENDS@ #r@THE@ #r@WEAKEST@ #r@PAWNS!\"@ NL NL You notice an over-sized grin as the third addresses you. NL \"Ignore the others... Would you like a taste of our #y~power?\"~ ",
-      "\"An @offering!@ How ~tempting...\"~ NL NL As the ghostly shape speaks, you notice its large mouth opening wider and wider. Within your body, you feel the #b~souls~ collected from the dead forced out in a violent spiral into the spirit's gaping maw. It takes all of your strength to maintain your ground and not be pulled in yourself. NL NL Just before your stamina gives out, the ghostly vortex stops, and the spirits fade into the ether. NL NL You continue on, feeling slightly #bhollow."
+      "\"An @offering!@ How ~tempting...\"~ NL NL As the ghostly shape speaks, you notice its large mouth opening wider and wider. Within your body, you feel the #b~souls~ collected from the dead forced out in a violent spiral into the spirit's gaping maw. It takes all of your strength to maintain your ground and not be pulled in yourself. NL NL Just before your stamina gives out, the ghostly vortex stops, and the spirits fade into the ether. NL NL You continue on, feeling slightly #bhollow.",
+      "The #p~ghosts~ cackle as you approach. NL NL #r@\"AH!@ #r@OUR@ #r@GOOD@ #r@FRIEND!@ NL Their #p~gaseous~ #p~forms~ billow to fill the room... NL NL \"Here for the ~usual,~ we presume?\""
     ],
     "OPTIONS": [
       "[Offer] #rLose #r",
