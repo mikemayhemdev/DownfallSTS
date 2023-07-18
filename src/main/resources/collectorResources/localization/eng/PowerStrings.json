@@ -10,7 +10,8 @@
     "NAME": "Binding Call",
     "DESCRIPTIONS": [
       "Whenever you lose all your #yTemporary #yHP, apply #b",
-      " #yDoom to ALL enemies."
+      " #yDoom to ALL enemies.",
+      "Translator Note: NOT USED"
     ]
   },
   "collector:CantTouchThis": {
@@ -127,14 +128,16 @@
     "NAME": "Protecting Call",
     "DESCRIPTIONS": [
       "At the start of your turn, if you have #yTemporary #yHP, gain #b",
-      " #yBlock."
+      " #yBlock.",
+      "Translator Note: NOT USED"
     ]
   },
   "collector:RagingCall": {
     "NAME": "Raging Call",
     "DESCRIPTIONS": [
       "At the end of your turn, if you have #yTemporary #yHP, deal #b",
-      " damage to ALL enemies."
+      " damage to ALL enemies.",
+      "Translator Note: NOT USED"
     ]
   },
   "collector:Reserve": {
@@ -197,7 +200,8 @@
     "NAME": "Master's Call",
     "DESCRIPTIONS": [
       "Whenever you play an Attack, if you have #yTemporary #yHP, deal #b",
-      " damage to a random enemy."
+      " damage to a random enemy.",
+      "Translator Note: NOT USED"
     ]
   },
   "collector:LouseCard": {
