@@ -1,296 +1,296 @@
 {
   "collector:AddCopyNextTurn": {
-    "NAME": "Gaining Card",
+    "NAME": "获得牌",
     "DESCRIPTIONS": [
-      "At the start of your next turn, add ",
-      " into your hand."
+      "下回合开始时，将一张 ",
+      " 加入手牌。"
     ]
   },
   "collector:BindingCall": {
-    "NAME": "Binding Call",
+    "NAME": "羁绊之唤",
     "DESCRIPTIONS": [
-      "Whenever you lose all your #yTemporary #yHP, apply #b",
-      " #yDoom to ALL enemies."
+      "每当你耗尽 #y临时生命 时，给予所有敌人 #b",
+      " 层 #y魂灭 。"
     ]
   },
   "collector:CantTouchThis": {
-    "NAME": "Can't Touch This",
+    "NAME": "凶不可触",
     "DESCRIPTIONS": [
-      "Whenever you fully block an attack, apply #b",
-      " #yDoom to the attacker."
+      "每当你完全格挡一次攻击时，给予攻击者 #b",
+      " 层 #y魂灭 。"
     ]
   },
   "collector:Crackle": {
-    "NAME": "Crackle",
+    "NAME": "焰咒术",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b1 #yReserve.",
-      "At the start of your turn, gain #b",
-      " #yReserves."
+      "你的回合开始时，获得 #b1 #y储能 。",
+      "你的回合开始时，获得 #b",
+      " #y储能。"
     ]
   },
   "collector:DarkLordForm": {
-    "NAME": "Dark Lord Form",
+    "NAME": "暗主形态",
     "DESCRIPTIONS": [
-      "At the start of your turn, play a #yYou #yAre #yMine! on a random enemy.",
-      "At the start of your turn, play #b",
-      " copies of #yYou #yAre #yMine! on random enemies."
+      "你的回合开始时，随机对一名敌人打出一张 #y你是我的了 。",
+      "你的回合开始时，随机打出 #b",
+      " 张 #y你是我的了 ，每次都对随机一名敌人。"
     ]
   },
   "collector:DoMayhem": {
-    "NAME": "Do Mayhem",
+    "NAME": "驭魂乱战",
     "DESCRIPTIONS": [
-      "At the start of your turn, if any enemy has #b",
-      " or more #yDoom, play the top card of your draw pile.",
-      " or more #yDoom, play the top #b",
-      " cards of your draw pile."
+      "你的回合开始时，若有任意一名敌人有 #b",
+      " 层级以上的 #y魂灭 ，打出抽牌堆顶部的牌。",
+      " 层级以上的 #y魂灭 ，打出抽牌堆顶部的 #b",
+      " 张牌。"
     ]
   },
   "collector:Doom": {
-    "NAME": "Doom",
+    "NAME": "魂灭",
     "DESCRIPTIONS": [
-      "If ",
-      " has less than #b",
-      " HP, kill it. If #yDoom was greater than #b",
-      " (25% of Max HP), Collect it.",
-      "this foe"
+      "若 ",
+      " 的生命值降至 #b",
+      " 点及以下，立即将其击杀。若此时其 #y魂灭 层数还高于 #b",
+      " 层(其25%的最大生命值)，战斗结束后获得其 #y藏品 牌。",
+      "这名敌人"
     ]
   },
   "collector:DoublePlayCollectibles": {
     "NAME": "Multi-Play Collectibles",
     "DESCRIPTIONS": [
-      "Collected cards are played twice.",
+      "Collected cards are played twice。",
       "Collected cards are played #b",
-      " additional times."
+      " additional times。"
     ]
   },
   "collector:FeelMyPain": {
-    "NAME": "Feel My Pain",
+    "NAME": "转嫁疼痛",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a card, ALL enemies lose #b",
-      " HP."
+      "每当你 #y消耗 一张牌时，随机一名敌人失去 #b",
+      " 点生命。"
     ]
   },
   "collector:HealIfDieThisTurn": {
-    "NAME": "Finalized",
+    "NAME": "大功告成",
     "DESCRIPTIONS": [
-      "If ",
-      " dies this turn, heal #b",
-      " HP."
+      "若 ",
+      " 本回合死亡，你回复 #b",
+      " 点生命。"
     ]
   },
   "collector:Karma": {
-    "NAME": "Karma",
+    "NAME": "报应",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yBlock. If an enemy has #b25 or more #yDoom, gain #b",
-      " more #yBlock."
+      "你的回合开始时， 获得 #b",
+      " 点 #y格挡 。若有任意一名敌人有 #b25 层级以上的 #y魂灭 ，额外获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "collector:NextAttackAppliesDoom": {
-    "NAME": "Doomed Attack",
+    "NAME": "诅咒攻击",
     "DESCRIPTIONS": [
-      "Your next Attack this turn applies #b",
-      " #yDoom."
+      "本回合下张攻击牌还会给予 #b",
+      " 层 #y魂灭 。"
     ]
   },
-  "collector:AttacksApplyDoomPower": {
-    "NAME": "Doomed Attacks",
+  "collector:Attacks给予DoomPower": {
+    "NAME": "诅咒攻击",
     "DESCRIPTIONS": [
-      "Attacks this turn applies #b",
-      " #yDoom."
+      "本回合所有攻击牌会给予 #b",
+      " 层 #y魂灭 。"
     ]
   },
   "collector:NextCollectedTwice": {
     "NAME": "Double Up",
     "DESCRIPTIONS": [
-      "Your next Collected card this turn is played twice.",
-      "Your next #b",
-      " Collected cards this turn are played twice."
+      "本回合下张 #y藏品 牌额外打出一次。",
+      "本回合接下来的 #b",
+      " 张 #y藏品 牌额外打出一次。"
     ]
   },
   "collector:NextTurnReserve": {
-    "NAME": "Next Turn Reserve",
+    "NAME": "能储",
     "DESCRIPTIONS": [
-      "At the start of your next turn, gain #b1 #yReserve.",
-      "At the start of your next turn, gain #b",
-      " #yReserves."
+      "下回合开始时， 获得 #b1 #y储能 。",
+      "下回合开始时， 获得 #b",
+      " #y储能 。"
     ]
   },
   "collector:Omen": {
-    "NAME": "Omen",
+    "NAME": "不祥",
     "DESCRIPTIONS": [
-      "Whenever you attack an #yAfflicted enemy, consume #b1 #yWeak and #yVulnerable and they lose #b",
-      " HP."
+      "每当你攻击被 #y折磨 中的敌人时，移除其 #b1 层 #y虚弱 与 #y易伤 来使其失去 #b",
+      " 点生命。"
     ]
   },
   "collector:ProtectingCall": {
-    "NAME": "Protecting Call",
+    "NAME": "佑护之唤",
     "DESCRIPTIONS": [
-      "At the start of your turn, if you have #yTemporary #yHP, gain #b",
-      " #yBlock."
+      "你的回合开始时，若你有 #y临时生命 , 获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "collector:RagingCall": {
-    "NAME": "Raging Call",
+    "NAME": "暴怒之唤",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you have #yTemporary #yHP, deal #b",
-      " damage to ALL enemies."
+      "你的回合结束时，若你有 #y临时生命 ，对所有敌人造成 #b",
+      " 点伤害。"
     ]
   },
   "collector:Reserve": {
-    "NAME": "Reserves",
+    "NAME": "储能",
     "DESCRIPTIONS": [
-      "You have #b1 #yReserve.",
-      "You have #b",
-      " #yReserves."
+      "你目前有 #b1 #y储能 。",
+      "你目前有 #b",
+      " #y储能 。"
     ]
   },
   "collector:Soulforge": {
     "NAME": "Soulforge",
     "DESCRIPTIONS": [
-      "At the start of your turn, add #b1 #yEmber into your hand.",
-      "At the start of your turn, add #b",
-      " #yEmbers into your hand."
+      "你的回合开始时， add #b1 #yEmber 加入手牌。",
+      "你的回合开始时， add #b",
+      " #yEmbers 加入手牌。"
     ]
   },
   "collector:StrengthOverTurns": {
-    "NAME": "Empower",
+    "NAME": "邪力",
     "DESCRIPTIONS": [
-      "At the start of your next turn, gain #b",
-      " #yStrength.",
-      "At the start of your next #b",
-      " turns, gain #b"
+      "下回合开始时，获得 #b",
+      " 点 #y力量 。",
+      "接下来的 #b",
+      " 个回合开始时，获得 #b"
     ]
   },
   "collector:Suffering": {
-    "NAME": "Suffering",
+    "NAME": "苦楚",
     "DESCRIPTIONS": [
-      "Whenever you apply #yWeak or #yVulnerable, the target loses #b",
-      " HP."
+      "每当你给予 #y虚弱 或 #y易伤 时，目标同时失去 #b",
+      " 点生命。"
     ]
   },
   "collector:TorchHead": {
     "NAME": "Torch Head",
     "DESCRIPTIONS": [
-      "Whenever you play an #yAttack, if you have #yTemporary #yHP, Torch Head: NL ",
-      "Applies #b",
-      " #yDoom to a random enemy.",
-      "Deals #b",
-      " damage to ALL enemies.",
-      "Grants you #b.",
-      " #yBlock.",
-      " #yPoison to a random enemy.",
-      "Draws you #b",
-      " card.",
-      " cards."
+      "每当你打出一张 #y攻击 牌时，若你有 #y临时生命 ， #y火炬头 会： NL ",
+      "随机给予一名敌人 #b",
+      " 层 #y魂灭 。",
+      "对所有敌人造成 #b",
+      " 点伤害。",
+      "给予你 #b ",
+      " 点 #y格挡 。",
+      " 层 #y中毒 。",
+      "使你抽 #b",
+      " 张牌。",
+      " 张牌。"
     ]
   },
   "collector:IncreasedCollectionDraw": {
     "NAME": "Increased Collection Draw",
     "DESCRIPTIONS": [
-      "Draw #b1 additional Collected card each turn.",
-      "Draw #b",
-      " additional Collected cards each turn."
+      "每回合额外从 #y收藏堆 抽 #b1 张 #y藏品 牌。",
+      "每回合额外从 #y收藏堆 抽 #b",
+      " 张 #y藏品 牌。"
     ]
   },
   "collector:MastersCall": {
     "NAME": "Master's Call",
     "DESCRIPTIONS": [
-      "Whenever you play an Attack, if you have #yTemporary #yHP, deal #b",
-      " damage to a random enemy."
+      "每当你 play an Attack, if you have #y临时生命 , deal #b",
+      " damage to a random enemy。"
     ]
   },
   "collector:LouseCard": {
-    "NAME": "Curl Up",
+    "NAME": "蜷起",
     "DESCRIPTIONS": [
-      "When you next receive unblocked attack damage, gain #b",
-      " #yBlock."
+      "你下次受到未被格挡的攻击伤害时，获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "collector:MadGremlinCard": {
-    "NAME": "Angry",
+    "NAME": "愤怒",
     "DESCRIPTIONS": [
-      "If you receive unblocked attack damage this turn, add a #yMad #yGremlin into your hand.",
-      "If you receive unblocked attack damage this turn, add #b",
-      " #yMad #yGremlins into your hand."
+      "若你本回合受到未被格挡的攻击伤害，将一张 #y火大地精 加入手牌。",
+      "若你本回合受到未被格挡的攻击伤害，将 #b",
+      " 张 #y火大地精 加入手牌。"
     ]
   },
   "collector:GremlinWizardCard": {
-    "NAME": "Charging Up",
+    "NAME": "要来了",
     "DESCRIPTIONS": [
-      "Next turn, gain #b",
-      " #yVigor."
+      "下回合开始时，获得 #b",
+      " 层 #y活力 。"
     ]
   },
   "collector:ThievesCard": {
-    "NAME": "Dodgy",
+    "NAME": "规避",
     "DESCRIPTIONS": [
-      "Take #b",
-      " less damage from attacks this turn."
+      "本回合少受到 #b",
+      " 点攻击伤害。"
     ]
   },
   "collector:BookofStabbingCard": {
     "NAME": "Stabby",
     "DESCRIPTIONS": [
-      "Whenever you deal unblocked attack damage, apply #b",
-      " #yDoom."
+      "每当你造成未被格挡的攻击伤害，给予目标 #b",
+      " 层 #y魂灭 。"
     ]
   },
   "collector:TransientCard": {
-    "NAME": "Fading",
+    "NAME": "消逝",
     "DESCRIPTIONS": [
-      "At the end of your turn, #rdie.",
-      "In #b",
-      " turns, #rdie."
+      "你的回合结束时， #r死亡 。",
+      " #b",
+      " 回合后， #r死亡 。"
     ]
   },
   "collector:ReptomancerCard": {
     "NAME": "Toxic Call",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you have #yTemporary #yHP, apply #b",
-      " #yPoison to a random enemy."
+      "你的回合结束时， if you have #y临时生命 , 给予 #b",
+      " #yPoison to a random enemy。"
     ]
   },
   "collector:MoreBlockWithTempHP": {
-    "NAME": "Thimble Helm",
+    "NAME": "顶针帽",
     "DESCRIPTIONS": [
-      "While you have #yTemporary #yHP, gain #b",
-      " more #yBlock from cards."
+      "若你有 #y临时生命 额外从卡牌中获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "collector:NextTurnVigor": {
-    "NAME": "Vigor Next Turn",
+    "NAME": "身轻",
     "DESCRIPTIONS": [
-      "At the start of your next turn, gain #b",
-      " #yVigor."
+      "下回合开始时，获得 #b",
+      " 层 #y活力 。"
     ]
   },
   "collector:AcidSlimeCard": {
-    "NAME": "Slimy Duplication",
+    "NAME": "史莱姆分裂",
     "DESCRIPTIONS": [
-      "Your next #yAttack or #ySkill this turn is played twice.",
-      "Your next #b",
-      " #yAttacks or #ySkills this turn are played twice."
+      "本回合下张 #y攻击 或 #y技能 牌额外打出一次。",
+      "本回合接下来 #b",
+      " 张 #y攻击 或 #y技能 牌额外打出一次。"
     ]
   },
   "collector:GremlinNobCard": {
-    "NAME": "Angery",
+    "NAME": "怒气",
     "DESCRIPTIONS": [
-      "Whenever you play a #ySkill, gain #b",
-      " #yVigor."
+      "每当你打出一张 #y技能 牌时，获得 #b",
+      " 层 #y活力 。"
     ]
   },
   "collector:LanternFlare": {
-    "NAME": "Scorched",
+    "NAME": "灼烧",
     "DESCRIPTIONS": [
-      "At the start of its turn, gains #b",
-      " #yDoom."
+      "敌方回合开始时，这名敌人获得 #b",
+      " 层 #y魂灭 。"
     ]
   },
   "collector:WomanInBlueCard": {
-    "NAME": "Woman in Blue",
+    "NAME": "蓝衣女子",
     "DESCRIPTIONS": [
-      "At the end of combat, lose all your Potions."
+      "你的回合结束时，失去当前所有药水。"
     ]
   }
 }
