@@ -1,16 +1,16 @@
 {
   "collector:EmeraldTorch": {
-    "NAME": "Emerald Torch",
+    "NAME": "翠绿火炬",
     "FLAVOR": "The fires of greed never fade.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add an #yEmber into your hand. The first time you #yExhaust an #yEmber each combat, gain #b1 #ycollector:Reserve."
+      "战斗开始时，获得一张 #y余烬 。 NL 每场战斗首次 #y消耗 一张 #y余烬 时，获得 #b1 #ycollector:储能 。"
     ]
   },
   "collector:PrismaticTorch": {
     "NAME": "Prismatic Torch",
     "FLAVOR": "The ever-changing flames reflect fortune's favor.",
     "DESCRIPTIONS": [
-      "Replaces ",
+      "替换 ",
       ".[] At the start of each combat, add an #yEmber into your hand and gain #b1 #ycollector:Reserve. Whenever you #yExhaust an #yEmber, gain #b1 #ycollector:Reserve."
     ]
   },
@@ -18,30 +18,30 @@
     "NAME": "Krampian Coal",
     "FLAVOR": "\"Intriguing! But why only specific chimneys?\" - Ranwid",
     "DESCRIPTIONS": [
-      "When you would draw from an empty Collected pile, you instead draw a #yLucky #yWick."
+      "从空的 #y收藏堆 抽牌时，抽出一张 #y幸运烛芯 。"
     ]
   },
   "collector:BagOfTricks": {
     "NAME": "Bag of Tricks",
     "FLAVOR": "Tricky.",
     "DESCRIPTIONS": [
-      "At the start of each combat, draw #b",
-      " Collected cards."
+      "战斗开始时，额外抽 #b",
+      " 张 #ycollector:藏品 牌。"
     ]
   },
   "collector:JadeRing": {
     "NAME": "Jade Ring",
     "FLAVOR": "Jade is the symbol of honesty.",
     "DESCRIPTIONS": [
-      "Whenever a #ycollector:Doomed enemy dies, gain #b",
-      " Souls."
+      "每当一名带 #ycollector:魂灭 的敌人死亡时，获得 #b",
+      " 灵魂。"
     ]
   },
   "collector:SoullitLamp": {
     "NAME": "Soul-lit Lamp",
     "FLAVOR": "A ghoulish decoration. The crackles of fire are replaced by buzzing wails.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #ycollector:Reserve."
+      "战斗开始时，获得 #b1 #ycollector:储能 。"
     ]
   },
   "collector:ThimbleHelm": {
