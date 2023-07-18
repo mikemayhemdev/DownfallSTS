@@ -45,7 +45,7 @@
     ]
   },
   "collector:ThimbleHelm": {
-    "NAME": "Thimble Helm",
+    "NAME": "顶针帽",
     "FLAVOR": "Worn by the Spire's miniest heroes.",
     "DESCRIPTIONS": [
       "战斗开始时，获得 #b",
