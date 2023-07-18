@@ -55,14 +55,14 @@
   },
   "collector:BramblesparKindling": {
     "NAME": "黑莓柴",
-    "DESCRIPTION": "不能被打出。 NL 本牌被 消耗 时， NL 获得一张 *Burning *Strike 。",
-    "UPGRADE_DESCRIPTION": "不能被打出。 NL 本牌被 消耗 时， NL 获得一张 *Burning *Strike+ 。",
+    "DESCRIPTION": "不能被打出。 NL 本牌被 消耗 时， NL 获得一张 *火炬打击 。",
+    "UPGRADE_DESCRIPTION": "不能被打出。 NL 本牌被 消耗 时， NL 获得一张 *火炬打击+ 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
   },
   "collector:BurningStrike": {
-    "NAME": "Burning Strike",
+    "NAME": "火炬打击",
     "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "collector:CantTouchThis": {
@@ -91,7 +91,7 @@
     "UPGRADE_DESCRIPTION": "回合开始时， NL 随机打出 *你是我的了 。"
   },
   "collector:Darkstorm": {
-    "NAME": "Darkstorm",
+    "NAME": "昏鸣",
     "DESCRIPTION": "获得一张 *Blightning ， NL 并将 !M! 张洗入 *收藏堆 。 NL 消耗 。"
   },
   "collector:DarkwoodKindling": {
@@ -110,7 +110,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张 collector:藏品 牌额外打出一次。"
   },
   "collector:DoMayhem": {
-    "NAME": "Do Mayhem",
+    "NAME": "驭魂乱战",
     "DESCRIPTION": "回合开始时， NL 若有敌人有20层 collector:魂灭 ， NL 打出抽牌堆顶部的牌。"
   },
   "collector:DragonsTrove": {
@@ -125,7 +125,7 @@
     ]
   },
   "collector:Empower": {
-    "NAME": "Empower",
+    "NAME": "邪力",
     "DESCRIPTION": "接下来 !M! 个回合， NL 获得X点 力量 。"
   },
   "collector:Extricate": {
@@ -137,7 +137,7 @@
     "DESCRIPTION": "消耗 一张牌时， NL 随机敌人失去 !M! 点生命。"
   },
   "collector:FiendFire": {
-    "NAME": "Fiend Fire",
+    "NAME": "恶魔之焰",
     "DESCRIPTION": "消耗 所有手牌， NL 每张造成 !D! 点伤害。 NL 消耗 。"
   },
   "collector:Finalize": {
@@ -200,7 +200,7 @@
   },
   "collector:Hoard": {
     "NAME": "囤积",
-    "DESCRIPTION": "抽 !M! 张牌， NL 将其保留至下回合， NL 但本回合无法打出。"
+    "DESCRIPTION": "抽 !M! 张牌， NL 将其 保留 至下回合， NL 但本回合无法打出。"
   },
   "collector:HoardersStrike": {
     "NAME": "囤积者打击",
@@ -236,7 +236,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 从 *收藏堆 抽一张牌。"
   },
   "collector:JadedJabs": {
-    "NAME": "Jaded Jabs",
+    "NAME": "魂玉迸割",
     "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 获得所葬牌耗能+ !M! 张小刀。"
   },
   "collector:Karma": {
@@ -278,7 +278,7 @@
     ]
   },
   "collector:Omen": {
-    "NAME": "Omen",
+    "NAME": "不祥",
     "DESCRIPTION": "攻击 collector:折磨 中的敌人时，移除其1层 虚弱 与 易伤 ，来使其失去 !M! 点生命。"
   },
   "collector:ProtectingCall": {
@@ -286,7 +286,7 @@
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL \"获得 !clm2! 点 格挡 \""
   },
   "collector:Pyromancy": {
-    "NAME": "Pyromancy",
+    "NAME": "焰咒术",
     "DESCRIPTION": "回合开始时， NL 获得 1 collector:储能 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得 1 collector:储能 。"
   },
@@ -314,7 +314,7 @@
   },
   "collector:SapStrength": {
     "NAME": "竭力",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 力量 ，NL 窃取至多 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 力量 ， NL 窃取至多 !M! 点。"
   },
   "collector:ScorchingRay": {
     "NAME": "灼烧光线",
@@ -367,7 +367,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
   },
   "collector:Suffering": {
-    "NAME": "Suffering",
+    "NAME": "苦楚",
     "DESCRIPTION": "给予 虚弱 或 易伤 时， NL 同时给予 !M! 层 collector:魂灭 。"
   },
   "collector:SunbloomKindling": {
@@ -378,7 +378,7 @@
     ]
   },
   "collector:ThornWhip": {
-    "NAME": "Thorn Whip",
+    "NAME": "荆棘抽绕",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 再造成两次。",
     "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 再造成两次。"
   },
