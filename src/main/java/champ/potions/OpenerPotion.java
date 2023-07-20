@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
@@ -33,7 +34,10 @@ public class OpenerPotion extends CustomPotion {
     public void initializeData() {
         this.potency = getPotency();
         if (AbstractDungeon.player != null && potency > 1) {
-            if (potency > 2) {
+            if (potency > 2 && (Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT) ) {
+                this.description = potionStrings.DESCRIPTIONS[1] + potency + potionStrings.DESCRIPTIONS[2];
+            }
+            else if (potency > 2) {
                 this.description = potionStrings.DESCRIPTIONS[0] + potionStrings.DESCRIPTIONS[1] + potency + potionStrings.DESCRIPTIONS[3];
             } else {
                 this.description = potionStrings.DESCRIPTIONS[0] + potionStrings.DESCRIPTIONS[1] + potency + potionStrings.DESCRIPTIONS[2];
