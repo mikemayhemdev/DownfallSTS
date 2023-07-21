@@ -2,162 +2,162 @@
   "downfall:EvilMenuPanel": {
     "TEXT": [
       "Downfall",
-      "Defend the Heart from adventuring intruders who intend to Slay the Spire.",
-      "Choose Your Villain",
-      "Campaign"
+      "Защищайте Сердце от искателей приключений, которые намереваются уничтожить Шпиль.",
+      "Выберите злодея",
+      "Кампания"
     ]
   },
   "downfall:SoulToGoldChanges": {
     "TEXT": [
-      "Souls",
-      "Shows how many Souls you are carrying. Souls can be given to the Heart for rewards.",
-      "Merchant Status",
-      "HP",
-      "Dead!",
-      "Strength",
-      "Souls stolen"
+      "Души",
+      "Количество душ, которое вы собрали. Души могут быть переданы в дар Сердцу для получения наград.",
+	  "Состояние Торговца",
+      "ОЗ",
+      "#rУбит!",
+      "Накоплено Силы",
+      "Душ украдено"
     ]
   },
   "downfall:BustKeyButton": {
     "TEXT": [
-      "Break Ruby",
-      "Break Sapphire",
-      "Break Emerald",
-      "(Free Action) Spend 50 Souls: Destroy key to ",
-      "start Boss combats with 1 Strength.",
-      "start Boss combats with 10 Temporary HP.",
-      "start Boss combats with 1 Dexterity.",
-      "Key shattered!",
-      "Requires ",
-      " Souls.",
-      "(Free Action) Destroy key to "
+      "Разбить ключ-Рубин",
+      "Разбить ключ-Сапфир",
+      "Разбить ключ-Изумруд",
+      "(Не тратит действие) Потратьте 50 душ: Разбейте ключ и ",
+      "получите #b1 #yСилы в начале боёв с Боссами.",
+      "получите #b10 #yВременного_ОЗ в начале боёв с Боссами.",
+      "получите #b1 #yЛовкости в начале боёв с Боссами.",
+      "Ключ уже разбит!",
+      "Требуется ",
+      " душ.",
+      "(Не тратит действие) Разбейте ключ и "
     ]
   },
   "downfall:WheelSpinButton": {
     "TEXT": [
-      "Spin Wheel",
-      "(Free Action) Spin the Wheel.",
-      "Can't Spin Again."
+      "Крутите колесо",
+      "(Не тратит действие) Крутите колесо.",
+      "Больше нельзя крутить."
     ]
   },
   "downfall:AscensionText": {
     "TEXT": [
-      "19. Bosses have an extra Relic.",
-      "20. Act 3 Boss has Lizard Tail which heals all HP.",
-      "Obtain the Ruby Key. Break it later.",
-      "4. Bosses have an extra card upgraded."
+      "19. Боссы имеют на 1 Реликвию больше.",
+      "20. У Босса 3-го Акта есть Хвост ящерицы, который восстанавливает всё ОЗ.",
+      "Получите ключ-Рубин. Разбейте его позже.",
+      "4. У Боссов есть дополнительная Улучшенная карта."
     ]
   },
   "downfall:ConfigMenuText": {
     "TEXT": [
-      "Allow Standard runs to encounter global relics from Downfall's characters.",
-      "Allow Standard runs to encounter global potions from Downfall.",
-      "Allow Standard runs to encounter global events from Downfall.",
-      "Allow Standard runs to encounter Boss Cards from Downfall.",
-      "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs.",
-      "Allow modded characters to play Downfall runs.",
-      "Allow Standard runs to encounter Downfall Curse cards.",
-      "Downfall runs use traditional Map layout - fire before boss, not at start.",
-      "Unlock all locked cards and relics for Downfall characters (requires game restart)",
-      "Disable Champ's Stance Helper - for experienced Champions",
-      "Prevent Snecko from using card pools from other mods.",
-      "Disable music overrides (requires game restart)",
-      "Unlock all locked alternative skin for Downfall characters",
-      "Disable displaying cards' subtype next to their main type."
+      "Разрешить появление реликвий Боссов-героев Downfall'а в стандартных вылазках.",
+      "Разрешить появление зелий из Downfall'а в стандартных вылазках.",
+      "Разрешить появление событий из Downfall'а в стандартных вылазках.",
+      "Разрешить появление карт Босса из Downfall'а в стандартных вылазках.",
+      "Разрешить прохождение Downfall'а Героями, и стандартные вылазки Злодеями.",
+      "Разрешить прохождение Downfall'а персонажами из сторонних модификаций.",
+      "Разрешить появление карт Проклятий из Downfall'а в стандартных вылазках.",
+      "Использовать стандартную схему карты в вылазках Downfall'а - Лагерь перед Боссом, а не в начале.",
+      "Разблокировать все карты и реликвии для Злодеев Downfall'а (требует перезапуск игры)",
+      "Отключить подсказки для стоек Чемпиона - для опытных Чемпионов.",
+      "Запретить Змекко использовать карты из сторонних модификаций.",
+      "Отключить замену музыки (требует перезапуск игры).",
+      "Разблокировать все альтернативные облики для Злодеев Downfall'а.",
+      "Отключить отображение подтипов карт рядом с основным типом."
     ]
   },
   "downfall:EnergyPanelTip": {
     "TEXT": [
-      "Enemy's current energy count. Cards require energy to play."
+      "Текущее количество энергии врага. Она требуется для разыгрывания карт."
     ],
     "EXTRA_TEXT": [
-      "Energy"
+      "Энергия"
     ]
   },
   "downfall:RemoveCardReward": {
   "TEXT": [
-    "Remove a card in your deck",
-    "Choose a Card to Remove"
+    "Удалить карту из колоды",
+    "Выберите карту для удаления"
   ]
 },
   "downfall:TransformCardReward": {
     "TEXT": [
-      "Transform a card in your deck",
-      "Choose a Card to Transform"
+      "Преобразовать карту из колоды",
+      "Выберите карту для преобразования"
     ]
   },
   "downfall:UpgradeCardReward": {
     "TEXT": [
-      "Upgrade a card in your deck",
-      "Choose a Card to Upgrade"
+      "Улучшить карту из колоды",
+      "Выберите карту для улучшения"
     ]
   },
   "downfall:BossRelicReward": {
     "TEXT": [
-      "Choose 1 of 3 Boss Relics to obtain.",
-      "Obtain a ",
+      "Выберите и получите 1 из 3 Реликвий Босса.",
+      "Получить ",
       ".",
-      "Choose a Relic.. sorta"
+      "Выберите.. ээ, Реликвию."
     ]
   },
   "downfall:EtherealMod": {
     "TEXT": [
-      "Ethereal. NL "
+      "Эфирная. NL "
     ]
   },
   "downfall:JaxReward": {
     "TEXT": [
-      "Found some JAX!"
+      "Найден К.А.Ч.!"
     ]
   },
   "downfall:RareCardReward": {
     "TEXT": [
-      "Add a Rare Card to your deck"
+      "Добавить Редкую карту в колоду"
     ]
   },
   "downfall:OctoChoiceAction": {
     "TEXT": [
-      "Choose an option.",
-      "You should never see this. Oops"
+      "Выберите 1:",
+      "Вы не должны были это увидеть. Упс."
     ]
   },
   "downfall:BossCardReward": {
     "TEXT": [
-      "Add a Boss Card to your deck",
-      "Pick a card."
+      "Добавить карту Босса в колоду",
+      "Выберите карту."
     ]
   },
   "downfall:ColorfulCardReward": {
     "TEXT": [
-      "Add a ",
-      " Card to your deck",
-      "Pick a Card."
+      "Добавить карту «",
+      "» в колоду",
+      "Выберите карту."
     ]
   },
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
-      "Living Wall Heads"
+      "Головы Живой стены"
     ]
   },
   "downfall:WhaleHunter": {
     "TEXT": [
-      "Whale Hunter",
-      "Ended the cycle."
+      "Китоубийца",
+      "Цикл завершён."
     ]
   },
   "downfall:SingleCardViewPopup": {
     "TEXT": [
-      "Ammo"
+      "Боезапас"
     ]
   },
   "downfall:MainMenuAd": {
     "TEXT": [
-      "Want More?",
-      "Many more mods, including",
-      "Downfall, are available for ",
-      "base Slay the Spire on",
-      "Steam Workshop.",
-      "Click here to learn how!"
+      "Хотите больше?",
+      "Множество других модов, включая",
+      "Downfall, доступны для оригинального",
+      "Slay the Spire в",
+      "Мастерской Steam.",
+      "Нажмите сюда, чтобы узнать больше!"
     ]
   }
 }
