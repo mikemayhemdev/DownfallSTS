@@ -31,7 +31,7 @@ public class Hoard extends AbstractCollectorCard {
                     PropertiesMod mod = new PropertiesMod();
                     if (!q.selfRetain)
                         mod.addProperty(PropertiesMod.supportedProperties.RETAIN, true);
-                    if (!q.hasTag(expansionContentMod.UNPLAYABLE))
+                    if (q.costForTurn != -2 && !q.hasTag(expansionContentMod.UNPLAYABLE))
                         mod.addProperty(PropertiesMod.supportedProperties.UNPLAYABLE, true);
                     if (!mod.bonusPropertiesForThisTurn.isEmpty())
                         CardModifierManager.addModifier(q, mod);

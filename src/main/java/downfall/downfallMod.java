@@ -193,9 +193,8 @@ public class downfallMod implements
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
     public static boolean normalMapLayout = false;
-    public static boolean champDisableStanceHelper = false;
     public static boolean sneckoNoModCharacters = false;
-    public static boolean disableDescriptors = false;
+    public static boolean useIconsForAppliedProperties = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
@@ -207,10 +206,9 @@ public class downfallMod implements
     public static final String PROP_MOD_CHAR_CROSSOVER = "crossover_mod_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
     public static final String PROP_NORMAL_MAP = "normalMapLayout";
-    public static final String PROP_CHAMP_PRO = "champDisableStanceHelper";
     public static final String PROP_SNECKO_MODLESS = "sneckoNoModCharacters";
     public static final String PROP_NO_MUSIC = "disableMusicOverride";
-    public static final String PROP_NO_DESCRIPTORS = "disableCardDescriptors";
+    public static final String PROP_ICONS_FOR_APPLIED_PROPERTIES = "useIconsForAppliedProperties";
 
     public static String Act1BossFaced = "";
     public static String Act2BossFaced = "";
@@ -274,14 +272,11 @@ public class downfallMod implements
         configDefault.setProperty(PROP_CHAR_CROSSOVER, "FALSE");
         configDefault.setProperty(PROP_NORMAL_MAP, "TRUE");
         configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
-        configDefault.setProperty(PROP_CHAMP_PRO, "FALSE");
         configDefault.setProperty(PROP_NO_MUSIC, "FALSE");
-        configDefault.setProperty(PROP_NO_DESCRIPTORS, "FALSE");
+        configDefault.setProperty(PROP_ICONS_FOR_APPLIED_PROPERTIES, "FALSE");
 
 
         loadConfigData();
-
-
     }
 
     public static void initialize() {
@@ -361,10 +356,9 @@ public class downfallMod implements
             config.setBool(PROP_NORMAL_MAP, normalMapLayout);
 
             config.setBool(PROP_UNLOCK_ALL, unlockEverything);
-            config.setBool(PROP_CHAMP_PRO, champDisableStanceHelper);
             config.setBool(PROP_SNECKO_MODLESS, sneckoNoModCharacters);
             config.setBool(PROP_NO_MUSIC, noMusic);
-            config.setBool(PROP_NO_DESCRIPTORS, disableDescriptors);
+            config.setBool(PROP_ICONS_FOR_APPLIED_PROPERTIES, useIconsForAppliedProperties);
             config.save();
             GoldenIdol_Evil.save();
         } catch (IOException e) {
@@ -619,12 +613,33 @@ public class downfallMod implements
         // Create the Mod Menu
 
         settingsPanel = new ModPanel();
-        int configPos = 800;
+        int configPos = 750;
         int configStep = 40;
 
-        if (!STEAM_MODE) {
+        ModLabeledToggleButton characterCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[4],
+                350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                crossoverCharacters, settingsPanel, (label) -> {
+        }, (button) -> {
+            crossoverCharacters = button.enabled;
+            CardCrawlGame.mainMenuScreen.charSelectScreen.options.clear();
+            CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
+            saveData();
+        });
 
-            configPos -= 90;
+        configPos -= configStep;
+        ModLabeledToggleButton useIconsForAppliedCardPropertiesBtn = new ModLabeledToggleButton(configStrings.TEXT[13],
+                350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                useIconsForAppliedProperties, settingsPanel, (label) -> {
+        }, (button) -> {
+            useIconsForAppliedProperties = button.enabled;
+            saveData();
+        });
+
+        settingsPanel.addUIElement(characterCrossoverBtn);
+        settingsPanel.addUIElement(useIconsForAppliedCardPropertiesBtn);
+
+        if (!STEAM_MODE) {
+            configPos -= configStep;
             ModLabeledToggleButton characterModCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[5],
                     350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     crossoverModCharacters, settingsPanel, (label) -> {
@@ -690,15 +705,6 @@ public class downfallMod implements
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton champProConfig = new ModLabeledToggleButton(configStrings.TEXT[9],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    champDisableStanceHelper, settingsPanel, (label) -> {
-            }, (button) -> {
-                champDisableStanceHelper = button.enabled;
-                saveData();
-            });
-
-            configPos -= configStep;
             ModLabeledToggleButton sneckoNoModConfig = new ModLabeledToggleButton(configStrings.TEXT[10],
                     350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     sneckoNoModCharacters, settingsPanel, (label) -> {
@@ -734,44 +740,18 @@ public class downfallMod implements
                 unlockAllReskin();
             });
 
-            configPos -= configStep;
-            ModLabeledToggleButton disableDescriptorsBtn = new ModLabeledToggleButton(configStrings.TEXT[13],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    disableDescriptors, settingsPanel, (label) -> {
-            }, (button) -> {
-                disableDescriptors = button.enabled;
-                saveData();
-            });
-
             settingsPanel.addUIElement(contentSharingBtnCurses);
             settingsPanel.addUIElement(contentSharingBtnEvents);
             settingsPanel.addUIElement(contentSharingBtnPotions);
             settingsPanel.addUIElement(contentSharingBtnRelics);
             settingsPanel.addUIElement(contentSharingBtnColorless);
             settingsPanel.addUIElement(normalMapBtn);
-            settingsPanel.addUIElement(champProConfig);
             settingsPanel.addUIElement(sneckoNoModConfig);
             settingsPanel.addUIElement(unlockAllBtn);
             settingsPanel.addUIElement(noMusicBtn);
             settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
-            settingsPanel.addUIElement(disableDescriptorsBtn);
-
-            configPos = 750;
         }
-
-        ModLabeledToggleButton characterCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[4],
-                350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                crossoverCharacters, settingsPanel, (label) -> {
-        }, (button) -> {
-            crossoverCharacters = button.enabled;
-            CardCrawlGame.mainMenuScreen.charSelectScreen.options.clear();
-            CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
-            saveData();
-        });
-
-
-        settingsPanel.addUIElement(characterCrossoverBtn);
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
 
@@ -788,14 +768,13 @@ public class downfallMod implements
                 contentSharing_potions = config.getBool(PROP_POTION_SHARING);
                 contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
                 normalMapLayout = config.getBool(PROP_NORMAL_MAP);
-                champDisableStanceHelper = config.getBool(PROP_CHAMP_PRO);
                 sneckoNoModCharacters = config.getBool(PROP_SNECKO_MODLESS);
                 unlockEverything = config.getBool(PROP_UNLOCK_ALL);
                 noMusic = config.getBool(PROP_NO_MUSIC);
-                disableDescriptors = config.getBool((PROP_NO_DESCRIPTORS));
             }
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
             crossoverModCharacters = config.getBool(PROP_MOD_CHAR_CROSSOVER);
+            useIconsForAppliedProperties = config.getBool(PROP_ICONS_FOR_APPLIED_PROPERTIES);
         } catch (Exception e) {
             e.printStackTrace();
             clearData();

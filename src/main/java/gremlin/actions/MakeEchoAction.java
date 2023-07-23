@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import expansioncontent.cardmods.PropertiesMod;
 
+@Deprecated
 public class MakeEchoAction extends AbstractGameAction {
     private static final float DURATION_PER_CARD = 0.35F;
     private AbstractCard c;
@@ -47,8 +48,10 @@ public class MakeEchoAction extends AbstractGameAction {
 
         PropertiesMod mod = new PropertiesMod();
         mod.addProperty(PropertiesMod.supportedProperties.ECHO, false);
-        mod.addProperty(PropertiesMod.supportedProperties.ETHEREAL, false);
-        mod.addProperty(PropertiesMod.supportedProperties.EXHAUST, false);
+        if (!card.isEthereal)
+            mod.addProperty(PropertiesMod.supportedProperties.ETHEREAL, false);
+        if (!card.exhaust)
+            mod.addProperty(PropertiesMod.supportedProperties.EXHAUST, false);
 
         CardModifierManager.addModifier(card, mod);
 
