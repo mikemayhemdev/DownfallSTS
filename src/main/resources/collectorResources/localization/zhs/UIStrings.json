@@ -36,8 +36,8 @@
   },
   "collector:PyreInfo": {
     "TEXT": [
-      "Pyre",
-      "To play this card, pay the additional cost of Exhausting cards from your hand."
+      "焰葬",
+      "打出本牌时，需额外消耗一张手牌才能打出。"
     ]
   },
   "collector:CollectedCardMod": {
@@ -48,7 +48,7 @@
   "collector:CollectibleCardReward": {
     "TEXT": [
       "藏品：",
-      "You may obtain this"
+      "可将本牌加入收藏堆。"
     ]
   },
   "collector:HoardedMod": {
@@ -66,7 +66,7 @@
   },
   "collector:PyreCostSpendScreen": {
     "TEXT": [
-      "to Exhaust for Pyre."
+      "消耗来进行焰葬。"
     ]
   },
   "collector:PyreModText": {
