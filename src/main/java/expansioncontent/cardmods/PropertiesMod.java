@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;
@@ -82,12 +83,14 @@ public class PropertiesMod extends AbstractCardModifier {
             if (!card.tags.contains(expansionContentMod.UNPLAYABLE))
                 card.tags.add(expansionContentMod.UNPLAYABLE);
         }
+
+        card.initializeDescription(); //Making sure stuff is in description
     }
 
     //I have no idea how LibGDX sb.draw works, so if there is a better way to write this code feel free to do update this method.
     private float renderIcon(AbstractCard card, SpriteBatch sb, TextureAtlas.AtlasRegion icon, float offset) {
         float cardScale = Settings.scale * card.drawScale * 0.45f; //0.45 because I want some space from the size, but technically 0.5 could also work.
-        float iconScale = Settings.scale * card.drawScale * 0.5f; //0.5 is to get the icon to correct size, as changing the dimensions of files affects it.
+        float iconScale = Settings.scale * card.drawScale * 0.35f; //0.35 is to get the icon to reasonable size. Note: changing the dimensions of files affects how big they are.
 
         sb.draw( icon,
                 card.current_x + AbstractCard.RAW_W * cardScale + (icon.offsetX - (float) icon.originalWidth) * iconScale,
@@ -105,6 +108,9 @@ public class PropertiesMod extends AbstractCardModifier {
 
     @Override
     public void onRender(AbstractCard card, SpriteBatch sb) {
+        if (!downfallMod.useIconsForAppliedProperties)
+            return;
+
         Color color = Color.WHITE.cpy();
         color.a = card.transparency;
         sb.setColor(color);
@@ -133,6 +139,9 @@ public class PropertiesMod extends AbstractCardModifier {
 
     @Override
     public List<TooltipInfo> additionalTooltips(AbstractCard card) {
+        if (!downfallMod.useIconsForAppliedProperties)
+            return null;
+
         if (bonusProperties.isEmpty() && bonusPropertiesForThisTurn.isEmpty())
             return null;
 
@@ -163,16 +172,6 @@ public class PropertiesMod extends AbstractCardModifier {
 
         if (properties.contains(supportedProperties.ECHO)) {
             description.append(uiStrings.TEXT[6]);
-            counter++;
-            if (properties.size() > counter)
-                description.append(uiStrings.TEXT[4]);
-            else {
-                description.append(uiStrings.TEXT[5]);
-                return;
-            }
-        }
-
-        if (properties.contains(supportedProperties.UNPLAYABLE)) {
             description.append(uiStrings.TEXT[7]);
             counter++;
             if (properties.size() > counter)
@@ -183,7 +182,8 @@ public class PropertiesMod extends AbstractCardModifier {
             }
         }
 
-        if (properties.contains(supportedProperties.ETHEREAL)) {
+        if (properties.contains(supportedProperties.UNPLAYABLE)) {
+            description.append(uiStrings.TEXT[6]);
             description.append(uiStrings.TEXT[8]);
             counter++;
             if (properties.size() > counter)
@@ -194,7 +194,8 @@ public class PropertiesMod extends AbstractCardModifier {
             }
         }
 
-        if (properties.contains(supportedProperties.RETAIN)) {
+        if (properties.contains(supportedProperties.ETHEREAL)) {
+            description.append(uiStrings.TEXT[6]);
             description.append(uiStrings.TEXT[9]);
             counter++;
             if (properties.size() > counter)
@@ -205,16 +206,70 @@ public class PropertiesMod extends AbstractCardModifier {
             }
         }
 
-        if (properties.contains(supportedProperties.EXHAUST)) {
+        if (properties.contains(supportedProperties.RETAIN)) {
+            description.append(uiStrings.TEXT[6]);
             description.append(uiStrings.TEXT[10]);
+            counter++;
+            if (properties.size() > counter)
+                description.append(uiStrings.TEXT[4]);
+            else {
+                description.append(uiStrings.TEXT[5]);
+                return;
+            }
+        }
+
+        if (properties.contains(supportedProperties.EXHAUST)) {
+            description.append(uiStrings.TEXT[6]);
+            description.append(uiStrings.TEXT[11]);
             description.append(uiStrings.TEXT[5]);
         }
+    }
+
+    @Override
+    public String modifyDescription(String rawDescription, AbstractCard card) {
+        if (downfallMod.useIconsForAppliedProperties)
+            return rawDescription;
+
+        StringBuilder thingsToAdd = new StringBuilder();
+
+        if (bonusProperties.contains(supportedProperties.UNPLAYABLE) || bonusPropertiesForThisTurn.contains(supportedProperties.UNPLAYABLE)) {
+            thingsToAdd.append(uiStrings.TEXT[8]); //"Unplayable"
+            thingsToAdd.append(uiStrings.TEXT[5]); //"."
+            thingsToAdd.append(uiStrings.TEXT[12]); //" "
+        }
+
+        if (bonusProperties.contains(supportedProperties.ETHEREAL) || bonusPropertiesForThisTurn.contains(supportedProperties.ETHEREAL)) {
+            thingsToAdd.append(uiStrings.TEXT[9]); //ETHEREAL
+            thingsToAdd.append(uiStrings.TEXT[5]); //"."
+            thingsToAdd.append(uiStrings.TEXT[12]); //" "
+        }
+
+        if (bonusProperties.contains(supportedProperties.RETAIN) || bonusPropertiesForThisTurn.contains(supportedProperties.RETAIN)) {
+            thingsToAdd.append(uiStrings.TEXT[10]); //RETAIN
+            thingsToAdd.append(uiStrings.TEXT[5]); //"."
+            thingsToAdd.append(uiStrings.TEXT[12]); //" "
+        }
+
+        if (thingsToAdd.length() > 0) {
+            thingsToAdd.append(uiStrings.TEXT[13]); //"NL "
+            rawDescription = thingsToAdd + rawDescription;
+        }
+
+        if (bonusProperties.contains(supportedProperties.EXHAUST) || bonusPropertiesForThisTurn.contains(supportedProperties.EXHAUST)) {thingsToAdd.append(uiStrings.TEXT[10]);
+            rawDescription = rawDescription
+                    + uiStrings.TEXT[12] //" "
+                    + uiStrings.TEXT[13] //"NL "
+                    + uiStrings.TEXT[11] //"Exhaust"
+                    + uiStrings.TEXT[5]; //"."
+        }
+
+        return rawDescription;
     }
 
     //This should be removed as soon as Echo gets a visual representation on the card.
     @Override
     public String modifyName(String cardName, AbstractCard card) {
-        return bonusProperties.contains(supportedProperties.ECHO) ? uiStrings.TEXT[11] + cardName : cardName;
+        return bonusProperties.contains(supportedProperties.ECHO) ? uiStrings.TEXT[14] + cardName : cardName;
     }
 
     @Override
@@ -279,6 +334,8 @@ public class PropertiesMod extends AbstractCardModifier {
                                 if (bonusPropertiesForThisTurn.remove(supportedProperties.UNPLAYABLE))
                                     if (!bonusProperties.contains(supportedProperties.UNPLAYABLE))
                                         card.tags.remove(expansionContentMod.UNPLAYABLE);
+
+                                card.initializeDescription(); //Cleaning this
                             }
                         });
                     }
