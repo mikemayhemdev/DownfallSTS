@@ -305,6 +305,7 @@ public class CollectorMod implements
     public void receiveStartGame() {
         if (!CardCrawlGame.loadingSave) {
             CollectorCollection.init();
+            EssenceSystem.resetEssence();
         }
         combatCollectionPileButton = new CombatCollectionPileButton();
         NewReserves.resetReserves();
@@ -339,6 +340,18 @@ public class CollectorMod implements
                         ((BottledCollectible) r).onLoadCollection();
                     }
                 }
+            }
+        });
+
+        BaseMod.addSaveField("CollectorEssences", new CustomSavable<Integer>() {
+            @Override
+            public Integer onSave() {
+                return EssenceSystem.essenceCount();
+            }
+
+            @Override
+            public void onLoad(Integer integer) {
+                EssenceSystem.setEssence(integer);
             }
         });
     }

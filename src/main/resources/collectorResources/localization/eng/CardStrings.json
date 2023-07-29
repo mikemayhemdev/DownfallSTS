@@ -46,7 +46,7 @@
   },
   "collector:Bonfire": {
     "NAME": "Bonfire",
-    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain collector:Reserve equal to the Exhausted card's cost."
+    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain 1 collector:Reserve."
   },
   "collector:BrainDrain": {
     "NAME": "Brain Drain",
@@ -115,7 +115,7 @@
   },
   "collector:DragonsTrove": {
     "NAME": "Dragon's Trove",
-    "DESCRIPTION": "Draw !M! Collected cards. NL Gain 2 collector:Reserve. NL Exhaust."
+    "DESCRIPTION": "Draw 2 Collected cards. NL Gain !M! collector:Reserve. NL Exhaust."
   },
   "collector:Ember": {
     "NAME": "Ember",
@@ -272,7 +272,6 @@
   "collector:OakbrimKindling": {
     "NAME": "Oakbrim Kindling",
     "DESCRIPTION": "Unplayable. NL When *Exhausted, draw !M! cards.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL When *Exhausted, draw !M! cards, and gain 1 collector:Reserve next turn.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
@@ -601,7 +600,7 @@
   },
   "collector:SentryCard": {
     "NAME": "Sentry",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Repeat for each *Sentry in your exhaust pile."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Repeat if there is a *Sentry in your exhaust pile."
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Shelled Parasite",

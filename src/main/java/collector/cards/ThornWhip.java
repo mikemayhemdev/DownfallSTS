@@ -29,8 +29,7 @@ public class ThornWhip extends AbstractCollectorCard {
     }
 
     public void upp() {
-        selfRetain = true;
-        upgradeDamage(1);
+        upgradeDamage(3);
         uDesc();
     }
 

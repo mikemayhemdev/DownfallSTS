@@ -20,6 +20,8 @@ public class StashAwayCampfireOption extends AbstractCampfireOption {
     public static final String[] DESCRIPTIONS;
     private static final UIStrings UI_STRINGS;
 
+    public static final int GOLD_GRANTED = 40;
+
 
     static {
         UI_STRINGS = CardCrawlGame.languagePack.getUIString("collector:StashAwayCampfireOption");
@@ -29,7 +31,7 @@ public class StashAwayCampfireOption extends AbstractCampfireOption {
     //private ArrayList<String> idleMessages;
     public StashAwayCampfireOption() {
         this.label = DESCRIPTIONS[0];
-        this.description = DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[1] + GOLD_GRANTED + DESCRIPTIONS[2];
         boolean active = false;
         if (CollectorCollection.collection.size() > 0){
             active = true;

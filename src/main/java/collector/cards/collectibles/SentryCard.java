@@ -25,7 +25,7 @@ public class SentryCard extends AbstractCollectibleCard {
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         applyToEnemy(m, new WeakPower(m, magicNumber, false));
 
-        for (int i = 0; i < AbstractDungeon.player.exhaustPile.group.stream().filter(q -> q instanceof SentryCard).count(); i++) {
+        if (AbstractDungeon.player.exhaustPile.group.stream().anyMatch(q -> q instanceof SentryCard)) {
             dmg(m, AbstractGameAction.AttackEffect.NONE);
             applyToEnemy(m, new WeakPower(m, magicNumber, false));
         }

@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
@@ -26,7 +27,7 @@ public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.Abstract
     private Color screenColor = AbstractDungeon.fadeColor.cpy();
 
     public StashAwayCampfireEffect() {
-        this.duration = 1.5F;
+        this.duration = DUR;
         this.screenColor.a = 0.0F;
         AbstractDungeon.overlayMenu.proceedButton.hide();
     }
@@ -43,6 +44,7 @@ public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.Abstract
                 AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                 AbstractDungeon.effectsQueue.add(new PurgeCardEffect(c));
                 CollectorCollection.collection.removeCard(c);
+                AbstractDungeon.player.gainGold(StashAwayCampfireOption.GOLD_GRANTED);
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
             } else if (this.openedScreen) {
@@ -65,10 +67,10 @@ public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.Abstract
 
         if (this.duration < 0.0F) {
             this.isDone = true;
-            if (com.megacrit.cardcrawl.rooms.CampfireUI.hidden) {
+            if (CampfireUI.hidden) {
                 AbstractRoom.waitTimer = 0.0F;
-                ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI.reopen();
-                ((RestRoom) AbstractDungeon.getCurrRoom()).cutFireSound();
+                AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+                ((RestRoom)AbstractDungeon.getCurrRoom()).cutFireSound();
             }
         }
 

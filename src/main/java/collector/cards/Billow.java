@@ -12,8 +12,8 @@ public class Billow extends AbstractCollectorCard {
     // intellij stuff skill, self, common, , , 12, , 1, 1
 
     public Billow() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 12;
+        super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseBlock = 20;
         cardsToPreview = new Bellow();
     }
 
@@ -23,6 +23,6 @@ public class Billow extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(5);
     }
 }

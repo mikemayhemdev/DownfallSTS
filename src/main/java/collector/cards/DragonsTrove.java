@@ -14,15 +14,15 @@ public class DragonsTrove extends AbstractCollectorCard {
 
     public DragonsTrove() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++) {
+        for (int i = 0; i < 2; i++) {
             atb(new DrawCardFromCollectionAction());
         }
-        atb(new GainReservesAction(2));
+        atb(new GainReservesAction(magicNumber));
     }
 
     public void upp() {
