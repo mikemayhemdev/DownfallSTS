@@ -29,6 +29,7 @@ public class BonfireSpiritsCard extends AbstractCollectibleCard implements OnPyr
         atb(new AbstractGameAction() {
             @Override
             public void update() {
+                isDone = true;
                 if (wasRare) {
                     att(new AbstractGameAction() {
                         @Override

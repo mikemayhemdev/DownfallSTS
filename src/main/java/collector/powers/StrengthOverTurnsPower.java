@@ -1,12 +1,13 @@
 package collector.powers;
 
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static collector.util.Wiz.atb;
 
-public class StrengthOverTurnsPower extends AbstractCollectorPower {
+public class StrengthOverTurnsPower extends AbstractCollectorPower implements NonStackablePower {
     public static final String NAME = "StrengthOverTurns";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;

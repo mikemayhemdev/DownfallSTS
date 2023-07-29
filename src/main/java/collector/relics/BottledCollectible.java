@@ -75,7 +75,7 @@ public class BottledCollectible extends CustomRelic implements CustomBottleRelic
         }
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CardGroup group = CardGroup.getGroupWithoutBottledCards(CollectorCollection.collection);
-        AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[3] + name + DESCRIPTIONS[2], true, false, false, false);
+        AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[3] + name + DESCRIPTIONS[2], false, false, false, false);
     }
 
     @Override
