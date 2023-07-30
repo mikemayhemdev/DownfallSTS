@@ -50,8 +50,7 @@
     "DESCRIPTIONS": [
       "If ",
       " has less than #b",
-      " HP, kill it. If #yDoom was greater than #b",
-      " (25% of Max HP), Collect it.",
+      " HP, kill it and gain #b1 #gEssence."
       "this foe"
     ]
   },
