@@ -25,7 +25,11 @@ import static collector.CollectorMod.makeID;
 
 public class CollectibleCardReward extends CustomReward {
 
-    //Thanks Packmaster!
+    //Thanks Packmaster! AND RORSTS!
+
+    private static final float GOLD_TEXT_X = 1135.0F * Settings.scale;
+    private static final float GOLD_IMG_X = GOLD_TEXT_X - 66.0f * Settings.scale;
+    private static final float GOLD_IMG_SIZE = (float) ImageMaster.UI_GOLD.getWidth() * Settings.scale;
 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("CollectibleCardReward"));
     private static final Color TIP_COL = Color.WHITE.cpy();
@@ -60,8 +64,14 @@ public class CollectibleCardReward extends CustomReward {
 
     @Override
     public boolean claimReward() {
-        AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(card, InputHelper.mX, InputHelper.mY));
-        return true;
+        if (EssenceSystem.essenceCount() >= 3) {
+            AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(card, InputHelper.mX, InputHelper.mY));
+            EssenceSystem.changeEssence(-3);
+            return true;
+        } else {
+            //TODO: Visual assistance
+            return false;
+        }
     }
 
     @Override
@@ -114,6 +124,13 @@ public class CollectibleCardReward extends CustomReward {
         }
 
         hb.render(sb);
+
+        sb.draw(ImageMaster.UI_GOLD, GOLD_IMG_X, this.y - 9.0F * Settings.scale, GOLD_IMG_SIZE, GOLD_IMG_SIZE); //TODO: Essence icon
+        Color c = Color.WHITE.cpy();
+        if (EssenceSystem.essenceCount() < 3) {
+            c = Color.SALMON.cpy();
+        }
+        FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, Integer.toString(3), GOLD_TEXT_X, this.y + 30.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, c);
     }
 
     //Due to reward scrolling's orthographic camera and render order of rewards, the card needs to be rendered outside of the render method

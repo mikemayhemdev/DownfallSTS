@@ -13,6 +13,7 @@ import basemod.interfaces.*;
 import collector.cardmods.CollectedCardMod;
 import collector.cards.*;
 import collector.patches.CollectiblesPatches.CollectibleCardColorEnumPatch;
+import collector.patches.EssencePatches.TopPanelEssence;
 import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
 import collector.potions.DebuffDoublePotion;
 import collector.potions.MiniCursePotion;
@@ -76,7 +77,7 @@ public class CollectorMod implements
     public static Color characterColor = CardHelper.getColor(13, 158, 131);
     public static Color potionLabColor = CardHelper.getColor(113, 158, 131);
     private static final String modID = "collector";
-    private CustomUnlockBundle unlocks0; // TODO: Set this up
+    private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
     private CustomUnlockBundle unlocks2;
     private CustomUnlockBundle unlocks3;
@@ -211,6 +212,7 @@ public class CollectorMod implements
         addPotions();
         initializeSavedData();
         BaseMod.addTopPanelItem(new TopPanelExtraDeck());
+        BaseMod.addTopPanelItem(new TopPanelEssence());
     }
 
     @Override
