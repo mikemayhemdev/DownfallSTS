@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.rooms.RestRoom;
-import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 
 public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
@@ -47,21 +46,13 @@ public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.Abstract
                 AbstractDungeon.player.gainGold(StashAwayCampfireOption.GOLD_GRANTED);
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
-            } else if (this.openedScreen) {
-                // Cancelled
-                isDone = true;
-                ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI.reopen();
             }
         }
 
         if ((this.duration < 1.0F) && (!this.openedScreen)) {
             this.openedScreen = true;
-
             CardGroup cg = CardGroup.getGroupWithoutBottledCards(CollectorCollection.collection);
-
-            AbstractDungeon.overlayMenu.cancelButton.show(GridCardSelectScreen.TEXT[1]);
             AbstractDungeon.gridSelectScreen.open(cg, 1, TEXT[3], false, false, true, true);
-
         }
 
 
@@ -70,7 +61,7 @@ public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.Abstract
             if (CampfireUI.hidden) {
                 AbstractRoom.waitTimer = 0.0F;
                 AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-                ((RestRoom)AbstractDungeon.getCurrRoom()).cutFireSound();
+                ((RestRoom) AbstractDungeon.getCurrRoom()).cutFireSound();
             }
         }
 

@@ -125,7 +125,7 @@ public class CollectibleCardReward extends CustomReward {
 
         hb.render(sb);
 
-        sb.draw(ImageMaster.UI_GOLD, GOLD_IMG_X, this.y - 9.0F * Settings.scale, GOLD_IMG_SIZE, GOLD_IMG_SIZE); //TODO: Essence icon
+        sb.draw(ImageMaster.ENDLESS_ICON, GOLD_IMG_X, this.y - 9.0F * Settings.scale, GOLD_IMG_SIZE, GOLD_IMG_SIZE); //TODO: Essence icon
         Color c = Color.WHITE.cpy();
         if (EssenceSystem.essenceCount() < 3) {
             c = Color.SALMON.cpy();

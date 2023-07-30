@@ -2,7 +2,6 @@ package collector.ui;
 
 import basemod.ReflectionHacks;
 import collector.CollectorCollection;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,10 +9,6 @@ import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import downfall.util.TextureLoader;
-import sneckomod.cards.unknowns.AbstractUnknownCard;
-import sneckomod.relics.UnknownEgg;
-
-import java.util.ArrayList;
 
 
 public class StashAwayCampfireOption extends AbstractCampfireOption {
@@ -33,11 +28,12 @@ public class StashAwayCampfireOption extends AbstractCampfireOption {
         this.label = DESCRIPTIONS[0];
         this.description = DESCRIPTIONS[1] + GOLD_GRANTED + DESCRIPTIONS[2];
         boolean active = false;
-        if (CollectorCollection.collection.size() > 0){
+        if (CollectorCollection.collection.size() > 0) {
             active = true;
         }
 
         updateImage(active);
+        this.usable = active;
 
     }
 
