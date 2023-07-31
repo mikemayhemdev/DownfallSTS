@@ -1,5 +1,6 @@
 package collector.patches;
 
+import collector.CollectorChar;
 import collector.CollectorCollection;
 import collector.actions.DrawCardFromCollectionAction;
 import collector.powers.IncreasedCollectionDrawPower;
@@ -8,7 +9,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import jdk.nashorn.internal.ir.Block;
 
 import static collector.util.Wiz.atb;
 
@@ -20,7 +20,7 @@ public class DrawFromCollection {
     )
     public static class AbstractPlayerApplyStartOfTurnPostDrawRelicsPatch {
         public static void Prefix(AbstractPlayer __instance) {
-            if (!CollectorCollection.collection.isEmpty()) {
+            if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR) || !CollectorCollection.collection.isEmpty()) {
                 if (AbstractDungeon.player.hasRelic(BlockedChakra.ID)) {
                     AbstractRelic r = AbstractDungeon.player.getRelic(BlockedChakra.ID);
                     if (r.counter > 0) {

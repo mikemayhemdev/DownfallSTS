@@ -26,8 +26,6 @@ public class OakbrimKindling extends AbstractCollectorCard {
     @Override
     public void triggerOnExhaust() {
         atb(new DrawCardAction(magicNumber));
-        if (upgraded)
-            applyToSelf(new NextTurnReservePower(1));
     }
 
     @Override
@@ -37,7 +35,6 @@ public class OakbrimKindling extends AbstractCollectorCard {
     }
 
     public void upp() {
-
-        uDesc();
+        upgradeMagicNumber(1);
     }
 }

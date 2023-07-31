@@ -3,6 +3,7 @@ package collector.relics;
 import basemod.abstracts.CustomRelic;
 import collector.CollectorCollection;
 import collector.CollectorMod;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.util.TextureLoader;
 
 public class BlockedChakra extends CustomRelic {
@@ -12,6 +13,16 @@ public class BlockedChakra extends CustomRelic {
 
     public BlockedChakra() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
+    }
+
+    @Override
+    public void onEquip() {
+        AbstractDungeon.player.energy.energyMaster++;
+    }
+
+    @Override
+    public void onUnequip() {
+        AbstractDungeon.player.energy.energyMaster--;
     }
 
     @Override

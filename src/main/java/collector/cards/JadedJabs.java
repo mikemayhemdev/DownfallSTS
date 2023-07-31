@@ -28,7 +28,7 @@ public class JadedJabs extends AbstractCollectorCard implements OnPyreCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         AbstractCard q = new Shiv();
-        makeInHand(q);
+        makeInHand(q, magicNumber);
         atb(new AbstractGameAction() {
             @Override
             public void update() {

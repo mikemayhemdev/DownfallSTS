@@ -29,6 +29,13 @@
       "I don't have any Collected cards!"
     ]
   },
+  "collector:EssenceCount": {
+    "TEXT": [
+      "Essences",
+      "Spend Essences on adding cards to your Collection. You have #b",
+      " Essences."
+    ]
+  },
   "collector:CombatCollectionViewScreen": {
     "TEXT": [
       "Combat collection view screen"
@@ -77,7 +84,8 @@
   "collector:StashAwayCampfireOption": {
     "TEXT": [
       "Release",
-      "[Free Action] Remove a Collected Card.",
+      "Remove a Collected Card. Gain ",
+      " Souls.",
       "Requires a Collected card.",
       "Select a Collected card to remove."
     ]

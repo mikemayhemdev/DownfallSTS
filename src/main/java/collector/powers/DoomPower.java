@@ -1,6 +1,7 @@
 package collector.powers;
 
 import collector.CollectorCollection;
+import collector.util.EssenceSystem;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
@@ -73,13 +74,11 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
             flash();
             instakilled = true;
             CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-            if (owner.maxHealth * 0.25F <= this.amount) {
-                CollectorCollection.collect((AbstractMonster) owner);
-            }
-            if (owner instanceof Darkling) { // Retain it on case "some weird shit happened"
-                owner.halfDead = true;
-                FuckThisDarklings();
-            }
+            EssenceSystem.changeEssence(getEssenceAmount());
+        }
+        if (owner instanceof Darkling) { // Retain it on case "some weird shit happened"
+            owner.halfDead = true;
+            FuckThisDarklings();
         }
     }
 
@@ -87,10 +86,8 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         if (!instakilled) {
             flash();
             instakilled = true;
-            if (owner.maxHealth * 0.25F <= this.amount) {
-                CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-                CollectorCollection.collect((AbstractMonster) owner);
-            }
+            CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
+            EssenceSystem.changeEssence(getEssenceAmount());
             att(new InstantKillAction(owner));
             if (!(owner instanceof AwakenedOne) && !(owner instanceof Darkling)) // All we were need this if
                 att(new HideHealthBarAction(owner));
@@ -120,20 +117,28 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         return owner.maxHealth * 0.25F <= this.amount ? Color.PINK.cpy() : Color.PURPLE.cpy();
     }
 
+    private int getEssenceAmount() {
+        if (owner instanceof AbstractMonster) {
+            switch (((AbstractMonster)owner).type) {
+                case NORMAL:
+                    return 1;
+                case ELITE:
+                    return 2;
+                case BOSS:
+                    return 3;
+            }
+        }
+        return 1;
+    }
+
     @Override
     public void updateDescription() {
         String name;
         if (owner != null) {
             name = owner.name;
         } else {
-            name = DESCRIPTIONS[4];
+            name = DESCRIPTIONS[3];
         }
-        int toApply;
-        if (owner != null) {
-            toApply = (int) Math.ceil(owner.maxHealth * 0.25F);
-        } else {
-            toApply = 0;
-        }
-        description = DESCRIPTIONS[0] + FontHelper.colorString(name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + toApply + DESCRIPTIONS[3];
+        description = DESCRIPTIONS[0] + FontHelper.colorString(name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 }
