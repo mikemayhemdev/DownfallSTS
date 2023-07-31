@@ -12,7 +12,7 @@
       "doom",
       "doomed"
     ],
-    "DESCRIPTION": "If the enemy has more Doom than HP, kill them. If Doom was equal to 25% of their Max HP or greater, add their card to your Collection."
+    "DESCRIPTION": "If the enemy has more Doom than HP, kill them and gain 1 #yEssence. Elites give 2 #Essence, Bosses give 3!"
   },
   {
     "PROPER_NAME": "Pyre",

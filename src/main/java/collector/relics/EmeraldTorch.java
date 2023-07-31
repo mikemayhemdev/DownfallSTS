@@ -16,7 +16,7 @@ public class EmeraldTorch extends CustomRelic {
 
     public EmeraldTorch() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
-        this.tips.add(new CardPowerTip(new Ember()));
+
     }
 
     @Override
