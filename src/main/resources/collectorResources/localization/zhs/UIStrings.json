@@ -29,6 +29,13 @@
       "我没有收藏任何牌！"
     ]
   },
+  "collector:EssenceCount": {
+    "TEXT": [
+      "魂粹",
+      "将藏品牌加入收藏堆时需要消耗魂粹，目前有 #b",
+      " 点魂粹。"
+    ]
+  },
   "collector:CombatCollectionViewScreen": {
     "TEXT": [
       "Combat collection view screen"
@@ -77,7 +84,8 @@
   "collector:StashAwayCampfireOption": {
     "TEXT": [
       "释放",
-      "[自由行动] 移除收藏堆一张牌。",
+      "移除收藏堆一张牌，获得",
+      " 灵魂。",
       "需要一张藏品牌。",
       "选择一张藏品牌来移除。"
     ]
