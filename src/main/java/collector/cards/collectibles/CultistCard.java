@@ -17,7 +17,7 @@ public class CultistCard extends AbstractCollectibleCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new StrengthOverTurnsPower(2, 1));
+        applyToSelf(new StrengthOverTurnsPower(3, 1));
     }
 
     public void upp() {

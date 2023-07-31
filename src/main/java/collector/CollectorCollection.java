@@ -141,7 +141,7 @@ public class CollectorCollection {
         if (collectionPool.containsKey(m.id)) {
             returnValue = CardLibrary.getCopy(collectionPool.get(m.id));
         } else {
-            if (m instanceof CharBossIronclad) {
+            if (m instanceof CharBossIronclad && ((CharBossIronclad) m).chosenArchetype != null) {
                 switch (((CharBossIronclad) m).chosenArchetype.actNum) {
                     case 1:
                         returnValue = CardLibrary.getCopy(Immolate.ID);
@@ -154,7 +154,7 @@ public class CollectorCollection {
                         returnValue = CardLibrary.getCopy(Barricade.ID);
                         break;
                 }
-            } else if (m instanceof CharBossSilent) {
+            } else if (m instanceof CharBossSilent && ((CharBossSilent) m).chosenArchetype != null) {
                 switch (((CharBossSilent) m).chosenArchetype.actNum) {
                     case 1:
                         returnValue = CardLibrary.getCopy(CorpseExplosion.ID);
@@ -167,7 +167,7 @@ public class CollectorCollection {
                         returnValue = CardLibrary.getCopy(StormOfSteel.ID);
                         break;
                 }
-            } else if (m instanceof CharBossDefect) {
+            } else if (m instanceof CharBossDefect && ((CharBossDefect) m).chosenArchetype != null) {
                 switch (((CharBossDefect) m).chosenArchetype.actNum) {
                     case 1:
                         returnValue = CardLibrary.getCopy(Buffer.ID);
@@ -180,7 +180,7 @@ public class CollectorCollection {
                         returnValue = CardLibrary.getCopy(Seek.ID);
                         break;
                 }
-            } else if (m instanceof CharBossWatcher) {
+            } else if (m instanceof CharBossWatcher && ((CharBossWatcher) m).chosenArchetype != null) {
                 switch (((CharBossWatcher) m).chosenArchetype.actNum) {
                     case 1:
                         returnValue = CardLibrary.getCopy(ConjureBlade.ID);
@@ -193,7 +193,7 @@ public class CollectorCollection {
                         returnValue = CardLibrary.getCopy(Omniscience.ID);
                         break;
                 }
-            } else if (m instanceof CharBossHermit) {
+            } else if (m instanceof CharBossHermit && ((CharBossHermit) m).chosenArchetype != null) {
                 switch (((CharBossHermit) m).chosenArchetype.actNum) {
                     case 1:
                         returnValue = CardLibrary.getCopy(Adapt.ID);

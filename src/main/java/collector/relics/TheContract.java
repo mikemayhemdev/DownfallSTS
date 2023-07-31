@@ -2,6 +2,7 @@ package collector.relics;
 
 import basemod.abstracts.CustomRelic;
 import collector.CollectorMod;
+import collector.util.EssenceSystem;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,26 +23,7 @@ public class TheContract extends CustomRelic {
 
     @Override
     public void onEquip() {
-        AbstractDungeon.player.gainGold(200);
-    }
-
-    @Override
-    public void atBattleStart() {
-        flash();
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                AbstractMonster q = AbstractDungeon.getRandomMonster();
-                applyToEnemyTop(q, new StrengthPower(q, 1));
-                att(new RelicAboveCreatureAction(q, TheContract.this));
-            }
-        });
-    }
-
-    @Override
-    public int getPrice() {
-        return 0;
+        EssenceSystem.changeEssence(10);
     }
 
     @Override

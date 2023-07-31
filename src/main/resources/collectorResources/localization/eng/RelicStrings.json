@@ -41,7 +41,7 @@
     "NAME": "Soul-lit Lamp",
     "FLAVOR": "A ghoulish decoration. The crackles of fire are replaced by buzzing wails.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #ycollector:Reserve."
+      "Upon pickup, gain #b3 #yEssence. At the start of combat, add an #yEmber into your hand."
     ]
   },
   "collector:ThimbleHelm": {
@@ -94,7 +94,7 @@
     "NAME": "The Contract",
     "FLAVOR": "Sign in blood.",
     "DESCRIPTIONS": [
-      "Upon pickup, gain #b200 Gold. NL At the start of combat, a random enemy gains #b1 #yStrength."
+      "Upon pickup, gain #b10 #yEssence."
     ]
   },
   "collector:ForbiddenFruit": {

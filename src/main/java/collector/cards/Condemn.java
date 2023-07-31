@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
+import static collector.util.Wiz.forAllMonstersLiving;
 
 public class Condemn extends AbstractCollectorCard {
     public final static String ID = makeID(Condemn.class.getSimpleName());
@@ -19,8 +20,8 @@ public class Condemn extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new DoomPower(m, secondMagic));
         applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
+        forAllMonstersLiving(q -> applyToEnemy(q, new DoomPower(q, secondMagic)));
     }
 
     public void upp() {

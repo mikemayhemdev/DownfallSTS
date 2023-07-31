@@ -75,7 +75,7 @@
   },
   "collector:Condemn": {
     "NAME": "Condemn",
-    "DESCRIPTION": "Apply !clm2! collector:Doom. NL Apply !M! Vulnerable."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Apply !clm2! collector:Doom to ALL enemies."
   },
   "collector:CursedWail": {
     "NAME": "Cursed Wail",
@@ -215,6 +215,10 @@
     "NAME": "I'll Take That",
     "DESCRIPTION": "Steal up to !M! of the enemy's Block. NL Deal !D! damage."
   },
+  "collector:InevitableDemise": {
+    "NAME": "Inevitable Demise",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has 20 or more collector:Doom, return this to your hand and increase its damage by !M!."
+  },
   "collector:InflictAgony": {
     "NAME": "Inflict Agony",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy is not collector:Afflicted, apply 2 Weak and Vulnerable."
@@ -342,7 +346,7 @@
   },
   "collector:Soulforge": {
     "NAME": "Soulforge",
-    "DESCRIPTION": "Upgrade !M! random cards in your hand."
+    "DESCRIPTION": "collector:Pyre. NL Upgrade !M! random cards in your hand."
   },
   "collector:Spark": {
     "NAME": "Spark",
@@ -460,7 +464,7 @@
   },
   "collector:CultistCard": {
     "NAME": "Cultist",
-    "DESCRIPTION": "collector:Pyre. NL Gain 1 Strength at the start of your next 2 turns."
+    "DESCRIPTION": "collector:Pyre. NL Gain 1 Strength at the start of your next 3 turns."
   },
   "collector:DaggerCard": {
     "NAME": "Dagger",
