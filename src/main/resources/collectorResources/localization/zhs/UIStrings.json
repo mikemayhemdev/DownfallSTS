@@ -11,22 +11,22 @@
   },
   "collector:CollectionScreen": {
     "TEXT": [
-      "Hide",
-      "Your Collection starts combat with all cards here."
+      "隐藏",
+      "每场战斗开始时，这些牌将会出现在你的收藏堆中。"
     ]
   },
   "collector:CollectionUITopPanel": {
     "TEXT": [
       "收藏堆",
-      "View all cards in your Collection.",
-      "These cards start in your Collected pile each combat."
+      "查看收藏堆中的牌。",
+      "每场战斗开始时，这些牌将会出现在你的收藏堆中。"
     ]
   },
   "collector:CombatCollectionPileButton": {
     "TEXT": [
       "收藏堆",
       "This contains the Collected cards you have yet to draw this combat. You draw one card from this at the start of each turn.",
-      "I don't have any Collected cards!"
+      "我没有收藏任何牌！"
     ]
   },
   "collector:CombatCollectionViewScreen": {
@@ -36,8 +36,8 @@
   },
   "collector:PyreInfo": {
     "TEXT": [
-      "Pyre",
-      "To play this card, pay the additional cost of Exhausting cards from your hand."
+      "焰葬",
+      "打出本牌时，需额外消耗一张手牌才能打出。"
     ]
   },
   "collector:CollectedCardMod": {
@@ -47,43 +47,44 @@
   },
   "collector:CollectibleCardReward": {
     "TEXT": [
-      "Collected: ",
-      "You may obtain this"
+      "藏品：",
+      "可将本牌加入收藏堆。"
     ]
   },
   "collector:HoardedMod": {
     "TEXT": [
+      "不能被打出 。 保留 。 NL ",
       "不能被打出 。 NL ",
       "保留 。 NL "
     ]
   },
   "collector:SecondEnergyOrb": {
     "TEXT": [
-      "Reserves",
-      "A special kind of Energy that persists across turns."
+      "储能",
+      "一种特殊的 #y能量 ，回合结束时不清零。"
     ]
   },
   "collector:PyreCostSpendScreen": {
     "TEXT": [
-      "to Exhaust for Pyre."
+      "消耗来进行焰葬。"
     ]
   },
   "collector:PyreModText": {
     "TEXT": [
-      "I don't have a card to Exhaust!"
+      "我没有牌可供消耗！"
     ]
   },
   "collector:StashAwayCampfireOption": {
     "TEXT": [
-      "Release",
-      "[Free Action] Remove a Collected Card.",
-      "Requires a Collected card.",
-      "Select a Collected card to remove."
+      "释放",
+      "[自由行动] 移除收藏堆一张牌。",
+      "需要一张藏品牌。",
+      "选择一张藏品牌来移除。"
     ]
   },
   "collector:BonusEventOption": {
     "TEXT": [
-      "[Take]"
+      "[捕获]"
     ]
   }
 }
