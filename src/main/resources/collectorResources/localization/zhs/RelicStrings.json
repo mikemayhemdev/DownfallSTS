@@ -1,121 +1,122 @@
 {
   "collector:EmeraldTorch": {
-    "NAME": "Emerald Torch",
+    "NAME": "翠绿火炬",
     "FLAVOR": "The fires of greed never fade.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add an #yEmber into your hand. The first time you #yExhaust an #yEmber each combat, gain #b1 #ycollector:Reserve."
+      "战斗开始时，获得 #b1 #ycollector:储能 。"
     ]
   },
   "collector:PrismaticTorch": {
     "NAME": "Prismatic Torch",
     "FLAVOR": "The ever-changing flames reflect fortune's favor.",
     "DESCRIPTIONS": [
-      "Replaces ",
-      ".[] At the start of each combat, add an #yEmber into your hand and gain #b1 #ycollector:Reserve. Whenever you #yExhaust an #yEmber, gain #b1 #ycollector:Reserve."
+      "替换 ",
+      " 。战斗开始时，获得一张 #y余烬 与 #b1 #ycollector:储能 。每当你 #y消耗 一张 #y余烬 时，获得 #b1 #ycollector:储能 。"
     ]
   },
   "collector:HolidayCoal": {
     "NAME": "Krampian Coal",
     "FLAVOR": "\"Intriguing! But why only specific chimneys?\" - Ranwid",
     "DESCRIPTIONS": [
-      "When you would draw from an empty Collected pile, you instead draw a #yLucky #yWick."
+      "从空的 #y收藏堆 抽牌时，抽出一张 #y幸运烛芯 。"
     ]
   },
   "collector:BagOfTricks": {
     "NAME": "Bag of Tricks",
     "FLAVOR": "Tricky.",
     "DESCRIPTIONS": [
-      "At the start of each combat, draw #b",
-      " Collected cards."
+      "战斗开始时，额外抽 #b",
+      " 张 #ycollector:藏品 牌。"
     ]
   },
   "collector:JadeRing": {
     "NAME": "Jade Ring",
     "FLAVOR": "Jade is the symbol of honesty.",
     "DESCRIPTIONS": [
-      "Whenever a #ycollector:Doomed enemy dies, gain #b",
-      " Souls."
+      "每当一名带 #ycollector:魂灭 的敌人死亡时，获得 #b",
+      " 灵魂。"
     ]
   },
   "collector:SoullitLamp": {
     "NAME": "Soul-lit Lamp",
     "FLAVOR": "A ghoulish decoration. The crackles of fire are replaced by buzzing wails.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #ycollector:Reserve."
+      "战斗开始时，获得 #b1 #ycollector:储能 。"
     ]
   },
   "collector:ThimbleHelm": {
-    "NAME": "Thimble Helm",
+    "NAME": "顶针帽",
     "FLAVOR": "Worn by the Spire's miniest heroes.",
     "DESCRIPTIONS": [
-      "Start each combat with #b",
-      " #yTemporary_HP. While you have #yTemporary_HP, cards grant #b1 additional #yBlock."
+      "战斗开始时，获得 #b",
+      " 层 #y临时生命 。拥有 #y临时生命 时，从卡牌中额外获得 #b1 点 #y格挡 。"
     ]
   },
   "collector:Incense": {
     "NAME": "Incense",
     "FLAVOR": "An antiquated form of mental clarification.",
     "DESCRIPTIONS": [
-      "You cannot gain #yWeak, #yVulnerable or #yFrail while you are #yWeak, #yVulnerable or #yFrail."
+      "已有 #y虚弱 、 #y易伤 ，或 #y脆弱 之中的任意一种 #r负面效果 时，不再积累新层数。"
     ]
   },
   "collector:FuelCanister": {
     "NAME": "Fuel Canister",
     "FLAVOR": "Disgusting.",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yRetain the highest-cost card in your hand."
+      "回合结束时， #y保留 耗能最高的手牌。"
     ]
   },
   "collector:AutoCurser": {
     "NAME": "Hexx Talisman",
     "FLAVOR": "\"When I put this on, my rate of toe-stubbing increased drastically. I think it works!\" - Ranwid",
     "DESCRIPTIONS": [
-      "At the start of combat, apply #b1 #yWeak and #yVulnerable to a random enemy."
+      "战斗开始时，随机给予一名敌人 #b1 层 #y虚弱 与 #y易伤 。"
     ]
   },
   "collector:Bagpipes": {
     "NAME": "The Bagpipes",
     "FLAVOR": "This dreaded instrument is said to have driven Kublai the Great mad.",
     "DESCRIPTIONS": [
-      "Whenever you apply #yWeak or #yVulnerable, increase the amount applied by #b1."
+      "每当你给予 #y虚弱 或 #y易伤 时，额外给予 #b1 层。"
     ]
   },
   "collector:BottledCollectible": {
     "NAME": "Bottled Brain",
     "FLAVOR": "Collected from a wizard's laboratory.",
     "DESCRIPTIONS": [
-      "Upon pickup, #yUpgrade a card in your Collection. Start combats with it on top of your Collected pile.",
-      "Start combat with #y",
-      " on top of your Collected pile.",
-      "Select a card to bottle for "
+      "拾起时，选择 #y升级 一张 #y收藏堆 的牌。每场战斗开始时其将被置于堆顶。",
+      "战斗开始时， #y",
+      " 将被置于 #y收藏堆 的顶部。",
+      "为",
+      " 选择一张牌来置于收藏堆顶部。"
     ]
   },
   "collector:TheContract": {
     "NAME": "The Contract",
     "FLAVOR": "Sign in blood.",
     "DESCRIPTIONS": [
-      "Upon pickup, gain #b200 Gold. NL At the start of combat, a random enemy gains #b1 #yStrength."
+      "拾起时，获得 #b200 金币 。 NL 战斗开始时，随机一名敌人获得 #b1 点 #y力量 。"
     ]
   },
   "collector:ForbiddenFruit": {
     "NAME": "Forbidden Fruit",
     "FLAVOR": "This species of fruit looks completely unfamiliar.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. NL Gain #b8 Max HP."
+      "拾起时，从所有可获得的牌中各选择 #b1 张普通、 #b罕见 ，及 #y稀有 牌。 NL 获得 #b8 点 最大生命。"
     ]
   },
   "collector:RoughDiamond": {
     "NAME": "Rough Diamond",
     "FLAVOR": "With the mines demolished, even this tarnished stone is valuable.",
     "DESCRIPTIONS": [
-      "Rare cards in your deck and Collection start combat costing #b1 less, but not less than #b1."
+      "战斗开始时，牌组与 #y收藏堆 中的 #y稀有 牌该场战斗耗能减 #b1 ，最低减至 #b1 点。"
     ]
   },
   "collector:BlockedChakra": {
     "NAME": "Blocked Chakra",
     "FLAVOR": "One pulled muscle is all it takes.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. You don't draw from your Collected pile until turn 4."
+      "回合开始时获得 [E] 。从第4回合开始才从 #y收藏堆 抽牌。"
     ]
   }
 }
