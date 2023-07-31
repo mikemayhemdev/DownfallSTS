@@ -47,7 +47,7 @@
   },
   "collector:Bonfire": {
     "NAME": "篝火",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得所葬牌耗能点 collector:储能 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得1 collector:储能 。"
   },
   "collector:BrainDrain": {
     "NAME": "意识窥视",
@@ -115,7 +115,7 @@
   },
   "collector:DragonsTrove": {
     "NAME": "龍之珍藏",
-    "DESCRIPTION": "抽 !M! 张 collector:藏品 牌。 NL 获得 2 collector:储能 。 NL 消耗 。"
+    "DESCRIPTION": "抽 2 张 collector:藏品 牌。 NL 获得 !M! collector:储能 。 NL 消耗 。"
   },
   "collector:Ember": {
     "NAME": "余烬",
@@ -272,7 +272,6 @@
   "collector:OakbrimKindling": {
     "NAME": "橡缘柴",
     "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 抽 !M! 张牌， 且下回合获得 1 collector:储能 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -598,7 +597,7 @@
   },
   "collector:SentryCard": {
     "NAME": "哨卫",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。 NL 消耗 堆每有一张 *哨卫 ， NL 上述效果重复一次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。 NL 若 消耗 堆有其他 *哨卫 ， NL 上述效果重复一次。"
   },
   "collector:ShelledParasiteCard": {
     "NAME": "带壳寄生怪",
