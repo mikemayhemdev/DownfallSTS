@@ -187,7 +187,7 @@
     "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被 保留 时， NL 变为一张 *余烬 。"
   },
   "collector:GreenpyreLocus": {
-    "NAME": "碧域",
+    "NAME": "诡域",
     "DESCRIPTION": "collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
