@@ -42,7 +42,7 @@
     "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 目标每有不同负面效果， NL 给予 !clm2! 层 collector:魂灭 。"
   },
   "collector:Blightning": {
-    "NAME": "Blightning",
+    "NAME": "惊萎",
     "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 造成 !D! 点伤害。 NL 从 *收藏堆 抽一张牌。"
   },
   "collector:Bonfire": {
@@ -92,7 +92,7 @@
   },
   "collector:Darkstorm": {
     "NAME": "昏鸣",
-    "DESCRIPTION": "获得一张 *Blightning ， NL 并将 !M! 张洗入 *收藏堆 。 NL 消耗 。"
+    "DESCRIPTION": "获得一张 *惊萎 ， NL 并将 !M! 张洗入 *收藏堆 。 NL 消耗 。"
   },
   "collector:DarkwoodKindling": {
     "NAME": "邪柳柴",
