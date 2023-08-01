@@ -75,7 +75,7 @@
   },
   "collector:Condemn": {
     "NAME": "谴责",
-    "DESCRIPTION": "给予 !clm2! 层 collector:魂灭 。 NL 给予 !M! 层 易伤 。 "
+    "DESCRIPTION": "给予 !M! 层 易伤 。 NL 给予所有敌人 !clm2! 层 collector:魂灭 。"
   },
   "collector:CursedWail": {
     "NAME": "诅咒尖啸",
@@ -173,9 +173,9 @@
     "DESCRIPTION": "翻倍目标的 collector:魂灭 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "三倍目标的 collector:魂灭 。 NL 消耗 。"
   },
-  "collector:GourmandsGaze": {
+  "collector:InevitableDemise": {
     "NAME": "贪魂绿眸",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合用过藏品牌， NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有20层 collector:魂灭 ， NL 本牌返回手牌， NL 且伤害加 !M! 。"
   },
   "collector:GreaterHurting": {
     "NAME": "伤魂",
@@ -341,8 +341,8 @@
     "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 消耗 。"
   },
   "collector:Soulforge": {
-    "NAME": "Soulforge",
-    "DESCRIPTION": "随机 升级 !M! 张手牌。"
+    "NAME": "铸魂",
+    "DESCRIPTION": "collector:焰葬 。 NL 随机 升级 !M! 张手牌。"
   },
   "collector:Spark": {
     "NAME": "火花",
@@ -457,7 +457,7 @@
   },
   "collector:CultistCard": {
     "NAME": "邪教徒",
-    "DESCRIPTION": "collector:焰葬 。 NL 下2个回合开始时， NL 获得1点 力量 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 下3个回合开始时， NL 获得1点 力量 。"
   },
   "collector:DaggerCard": {
     "NAME": "匕首",
