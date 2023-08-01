@@ -32,8 +32,8 @@
   "collector:EssenceCount": {
     "TEXT": [
       "魂粹",
-      "将藏品牌加入收藏堆时需要消耗魂粹，目前有 #b",
-      " 点魂粹。"
+      "将 #y藏品 牌加入 #y收藏堆 时需要消耗 #g魂粹 ，目前有 #b",
+      " 点 #g魂粹 。"
     ]
   },
   "collector:CombatCollectionViewScreen": {
