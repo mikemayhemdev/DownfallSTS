@@ -217,7 +217,7 @@
   },
   "collector:InevitableDemise": {
     "NAME": "Inevitable Demise",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has 20 or more collector:Doom, return this to your hand and increase its damage by !M!."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has 20 or more collector:Doom, return this to your hand with !M! more damage."
   },
   "collector:InflictAgony": {
     "NAME": "Inflict Agony",
