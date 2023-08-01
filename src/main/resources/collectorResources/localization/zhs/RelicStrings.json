@@ -41,7 +41,7 @@
     "NAME": "Soul-lit Lamp",
     "FLAVOR": "A ghoulish decoration. The crackles of fire are replaced by buzzing wails.",
     "DESCRIPTIONS": [
-      "战斗开始时，获得 #b1 #ycollector:储能 。"
+      "拾起时，获得 #b3 点 #g魂粹 。战斗开始时，获得 #b1 张 #y余烬 。"
     ]
   },
   "collector:ThimbleHelm": {
@@ -95,7 +95,7 @@
     "NAME": "The Contract",
     "FLAVOR": "Sign in blood.",
     "DESCRIPTIONS": [
-      "拾起时，获得 #b200 金币 。 NL 战斗开始时，随机一名敌人获得 #b1 点 #y力量 。"
+      "拾起时，获得 #b10 #g魂粹 。"
     ]
   },
   "collector:ForbiddenFruit": {
