@@ -32,7 +32,7 @@
   "collector:EssenceCount": {
     "TEXT": [
       "Essences",
-      "Spend Essences on adding cards to your Collection. You have #b",
+      "Spend Essences on adding cards to your Collection. Gain more by killing #yDoomed enemies. You have #b",
       " Essences."
     ]
   },

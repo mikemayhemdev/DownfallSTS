@@ -1,12 +1,13 @@
 package collector.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.CardPowerTip;
 import collector.CollectorMod;
-import collector.actions.GainReservesAction;
-import com.badlogic.gdx.graphics.Texture;
+import collector.cards.Ember;
+import collector.util.EssenceSystem;
 import downfall.util.TextureLoader;
 
-import static collector.util.Wiz.atb;
+import static collector.util.Wiz.makeInHand;
 
 public class SoullitLamp extends CustomRelic {
     public static final String ID = CollectorMod.makeID(SoullitLamp.class.getSimpleName());
@@ -15,12 +16,18 @@ public class SoullitLamp extends CustomRelic {
 
     public SoullitLamp() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        tips.add(new CardPowerTip(new Ember()));
     }
 
     @Override
     public void atBattleStart() {
         flash();
-        atb(new GainReservesAction(1));
+        makeInHand(new Ember());
+    }
+
+    @Override
+    public void onEquip() {
+        EssenceSystem.changeEssence(3);
     }
 
     @Override

@@ -14,6 +14,7 @@ public class Soulforge extends AbstractCollectorCard {
     public Soulforge() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        isPyre();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
