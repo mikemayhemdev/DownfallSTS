@@ -26,7 +26,7 @@
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL \"随机给予 !clm2! 层 collector:魂灭 \""
   },
   "collector:Billow": {
-    "NAME": "鼓起",
+    "NAME": "鼓动",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得一张 *鼓噪 。"
   },
   "collector:Bellow": {
@@ -47,7 +47,7 @@
   },
   "collector:Bonfire": {
     "NAME": "篝火",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得1 collector:储能 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合获得1 collector:储能 。"
   },
   "collector:BrainDrain": {
     "NAME": "意识窥视",
@@ -129,7 +129,7 @@
     "DESCRIPTION": "接下来 !M! 个回合， NL 获得X点 力量 。"
   },
   "collector:Extricate": {
-    "NAME": "Extricate",
+    "NAME": "解脱",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 打出抽牌堆顶部的牌。"
   },
   "collector:FeelMyPain": {
@@ -187,7 +187,7 @@
     "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被 保留 时， NL 变为一张 *余烬 。"
   },
   "collector:GreenpyreLocus": {
-    "NAME": "Greenpyre Locus",
+    "NAME": "碧域",
     "DESCRIPTION": "collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
@@ -196,7 +196,7 @@
   },
   "collector:Heatwave": {
     "NAME": "热波",
-    "DESCRIPTION": "对被 collector:折磨 的敌人造成 !D! 点伤害。 NL 获得一张 *余烬 。"
+    "DESCRIPTION": "对所有被 collector:折磨 的敌人造成 !D! 点伤害。 NL 获得一张 *余烬 。"
   },
   "collector:Hoard": {
     "NAME": "囤积",
@@ -291,7 +291,7 @@
   },
   "collector:RagingCall": {
     "NAME": "暴怒之唤",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： \"对所有敌人造成 !clm2! 点伤害\"."
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL \"造成 !clm2! 点群体伤害\""
   },
   "collector:ReceiveTribute": {
     "NAME": "纳贡",
@@ -355,7 +355,7 @@
   },
   "collector:StashAway": {
     "NAME": "藏存",
-    "DESCRIPTION": "获得 !B! 点 格挡 X次。 NL 下回合， 获得 X collector:储能 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 X次。 NL 下回合获得 X collector:储能 。"
   },
   "collector:Strike": {
     "NAME": "打击",
