@@ -75,7 +75,7 @@
   },
   "collector:Condemn": {
     "NAME": "谴责",
-    "DESCRIPTION": "给予 !M! 层 易伤 。 NL 给予所有敌人 !clm2! 层 collector:魂灭 。"
+    "DESCRIPTION": "给予 !M! 层 易伤 。 NL 给予 !clm2! 层 collector:魂灭 。"
   },
   "collector:CursedWail": {
     "NAME": "诅咒尖啸",
@@ -87,8 +87,8 @@
   },
   "collector:DarkLordForm": {
     "NAME": "暗主形态",
-    "DESCRIPTION": "虚无 。 NL 回合开始时， NL 随机打出 *你是我的了 。",
-    "UPGRADE_DESCRIPTION": "回合开始时， NL 随机打出 *你是我的了 。"
+    "DESCRIPTION": "虚无 。 NL 回合开始时， NL 随机打出 *贪魂绿眸 。",
+    "UPGRADE_DESCRIPTION": "回合开始时， NL 随机打出 *贪魂绿眸 。"
   },
   "collector:Darkstorm": {
     "NAME": "昏鸣",
@@ -155,7 +155,7 @@
   },
   "collector:FleetingEmbers": {
     "NAME": "转瞬之烬",
-    "DESCRIPTION": "获得 !M! 张 *余烬 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 张 *余烬 。"
   },
   "collector:Forgery": {
     "NAME": "伪造",
@@ -175,7 +175,7 @@
   },
   "collector:InevitableDemise": {
     "NAME": "贪魂绿眸",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有25层 collector:魂灭 ， NL 本牌返回手牌， NL 且伤害加 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! collector:魂灭 。"
   },
   "collector:GreaterHurting": {
     "NAME": "伤魂",
@@ -200,7 +200,7 @@
   },
   "collector:Hoard": {
     "NAME": "囤积",
-    "DESCRIPTION": "抽 !M! 张牌， NL 将其 保留 至下回合， NL 但本回合无法打出。"
+    "DESCRIPTION": "抽 !M! 张牌， NL 将其 保留 至下回合。"
   },
   "collector:HoardersStrike": {
     "NAME": "囤积者打击",
@@ -221,7 +221,7 @@
   },
   "collector:Invigorate": {
     "NAME": "精神焕发",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力 。 NL 下回合获得 !M! 层 活力 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力 。 NL 下回合获得 4 层 活力 。"
   },
   "collector:IronbarkKindling": {
     "NAME": "铁皮柴",
@@ -233,7 +233,7 @@
   },
   "collector:ItMattersNot": {
     "NAME": "凝神无视",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 从 *收藏堆 抽一张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 敌方 虚弱 与 易伤 层数全加 !M! 。"
   },
   "collector:JadedJabs": {
     "NAME": "魂玉迸割",
@@ -241,8 +241,8 @@
   },
   "collector:Karma": {
     "NAME": "报应",
-    "DESCRIPTION": "回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人有25层 collector:魂灭 ， NL 额外获得 !clm2! 点。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人有25层 collector:魂灭 ， NL 额外获得 !clm2! 点。"
+    "DESCRIPTION": "回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人被 collector:折磨 ， NL 额外获得 !clm2! 点。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人被 collector:折磨 ， NL 额外获得 !clm2! 点。"
   },
   "collector:LanternFlare": {
     "NAME": "提灯之耀",
@@ -351,7 +351,7 @@
   },
   "collector:SpiritLeech": {
     "NAME": "汲灵",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 下回合获得1 collector:储能 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 获得 !B! 点 格挡 。"
   },
   "collector:StashAway": {
     "NAME": "藏存",
@@ -396,7 +396,7 @@
   },
   "collector:Wildfire": {
     "NAME": "野火",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 所有不可打出的手牌，每张获得 !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标每有一种负面效果， NL 再造成一次。"
   },
   "collector:YouAreMine": {
     "NAME": "你是我的了",
