@@ -1,6 +1,5 @@
 package collector.powers;
 
-import collector.CollectorCollection;
 import collector.util.EssenceSystem;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -14,6 +13,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.beyond.AwakenedOne;
 import com.megacrit.cardcrawl.monsters.beyond.Darkling;
+import com.megacrit.cardcrawl.powers.MinionPower;
 import downfall.monsters.FleeingMerchant;
 
 import static collector.util.Wiz.att;
@@ -73,8 +73,10 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         if (!instakilled) {
             flash();
             instakilled = true;
-            CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-            EssenceSystem.changeEssence(getEssenceAmount());
+            if (!owner.hasPower(MinionPower.POWER_ID)) {
+                CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
+                EssenceSystem.changeEssence(getEssenceAmount());
+            }
         }
         if (owner instanceof Darkling) { // Retain it on case "some weird shit happened"
             owner.halfDead = true;
@@ -86,8 +88,10 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         if (!instakilled) {
             flash();
             instakilled = true;
-            CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-            EssenceSystem.changeEssence(getEssenceAmount());
+            if (!owner.hasPower(MinionPower.POWER_ID)) {
+                CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
+                EssenceSystem.changeEssence(getEssenceAmount());
+            }
             att(new InstantKillAction(owner));
             if (!(owner instanceof AwakenedOne) && !(owner instanceof Darkling)) // All we were need this if
                 att(new HideHealthBarAction(owner));
@@ -119,7 +123,7 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
 
     private int getEssenceAmount() {
         if (owner instanceof AbstractMonster) {
-            switch (((AbstractMonster)owner).type) {
+            switch (((AbstractMonster) owner).type) {
                 case NORMAL:
                     return 1;
                 case ELITE:

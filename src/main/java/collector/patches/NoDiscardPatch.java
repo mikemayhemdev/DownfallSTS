@@ -32,7 +32,10 @@ public class NoDiscardPatch {
 
     @SuppressWarnings("unused")
     public static boolean Do(AbstractCard card) {
-        if (card.cardID.equals(InevitableDemise.ID)) {
+        if (card instanceof InevitableDemise && ((InevitableDemise) card).returnToYou) {
+            card.cost = 1;
+            card.costForTurn = 1;
+            card.freeToPlayOnce = false;
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new LimboToHandAction(card));
             AbstractDungeon.actionManager.addToTop(new ModifyDamageAction(card.uuid, card.magicNumber));

@@ -3,6 +3,7 @@ package collector.cards;
 import collector.powers.KarmaPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToSelf;
@@ -18,7 +19,8 @@ public class Karma extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new KarmaPower(magicNumber, secondMagic));
+        applyToSelf(new MetallicizePower(p, magicNumber));
+        applyToSelf(new KarmaPower(secondMagic));
     }
 
     public void upp() {
