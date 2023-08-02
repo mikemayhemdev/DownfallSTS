@@ -161,7 +161,7 @@ public class CollectorMod implements
         BaseMod.addRelic(new Incense(), RelicType.SHARED);
         BaseMod.addRelic(new Bagpipes(), RelicType.SHARED);
         BaseMod.addRelic(new FuelCanister(), RelicType.SHARED);
-        BaseMod.addRelic(new ForbiddenFruit(), RelicType.SHARED);
+        //BaseMod.addRelic(new ForbiddenFruit(), RelicType.SHARED);
         BaseMod.addRelic(new RoughDiamond(), RelicType.SHARED);
     }
 

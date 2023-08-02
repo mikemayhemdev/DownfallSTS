@@ -18,11 +18,11 @@ public class InevitableDemise extends AbstractCollectorCard {
         baseMagicNumber = magicNumber = 2;
     }
 
-    boolean returnToHand = false;
+    public boolean returnToYou = false;
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        returnToHand = Wiz.pwrAmt(m, DoomPower.POWER_ID) >= 20;
+        returnToYou = Wiz.pwrAmt(m, DoomPower.POWER_ID) >= 25;
     }
 
     public void upp() {

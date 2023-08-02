@@ -111,7 +111,7 @@
   },
   "collector:DoMayhem": {
     "NAME": "Do Mayhem",
-    "DESCRIPTION": "At the start of your turn, if any enemy has 20 or more collector:Doom, play the top card of your draw pile."
+    "DESCRIPTION": "At the start of your turn, if any enemy has 25 or more collector:Doom, play the top card of your draw pile."
   },
   "collector:DragonsTrove": {
     "NAME": "Dragon's Trove",
@@ -217,7 +217,7 @@
   },
   "collector:InevitableDemise": {
     "NAME": "Inevitable Demise",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has 20 or more collector:Doom, return this to your hand with !M! more damage."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has 25 or more collector:Doom, return this to your hand with !M! more damage."
   },
   "collector:InflictAgony": {
     "NAME": "Inflict Agony",

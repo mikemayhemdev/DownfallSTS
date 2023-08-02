@@ -11,7 +11,7 @@ public class DoMayhemPower extends AbstractCollectorPower {
     public static final PowerType TYPE = PowerType.BUFF;
     public static final boolean TURN_BASED = false;
 
-    private static final int REQUISITE_DOOM = 20;
+    private static final int REQUISITE_DOOM = 25;
 
     public DoMayhemPower() {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, 1);
