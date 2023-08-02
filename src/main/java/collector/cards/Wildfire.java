@@ -20,7 +20,7 @@ public class Wildfire extends AbstractCollectorCard {
     // intellij stuff attack, enemy, uncommon, 16, 5, , , , 
 
     public Wildfire() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 4;
 
     }
