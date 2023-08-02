@@ -50,7 +50,7 @@
     "NAME": "Doom",
     "DESCRIPTIONS": [
       "Loses #b",
-      " HP at the end of its turn, removing all #yDoom. NL HP lost is increased by 50% for each other debuff on this enemy. NL (Current HP Loss: #b",
+      " HP at the end of its turn, removing all #yDoom. NL HP lost is increased by 25% for each other debuff on this enemy. NL (Current HP Loss: #b",
       ")."
     ]
   },

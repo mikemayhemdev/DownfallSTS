@@ -170,7 +170,7 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
 
         }
 
-        return Math.round(this.amount * (1 + (0.5F * otherDebuffCount)));
+        return Math.round(this.amount * (1 + (0.25F * otherDebuffCount)));
     }
 
     @Override

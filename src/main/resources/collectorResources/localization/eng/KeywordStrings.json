@@ -12,7 +12,7 @@
       "doom",
       "doomed"
     ],
-    "DESCRIPTION": "Doomed creatures lose HP at the end of their turn, then Doom is removed. HP loss is increased by 50% for each other debuff present."
+    "DESCRIPTION": "Doomed creatures lose HP at the end of their turn, then Doom is removed. HP loss is increased by 25% for each other debuff present."
   },
   {
     "PROPER_NAME": "Pyre",
