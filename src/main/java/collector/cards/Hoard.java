@@ -17,8 +17,8 @@ public class Hoard extends AbstractCollectorCard {
     public final static String ID = makeID(Hoard.class.getSimpleName());
 
     public Hoard() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -31,8 +31,6 @@ public class Hoard extends AbstractCollectorCard {
                     PropertiesMod mod = new PropertiesMod();
                     if (!q.selfRetain)
                         mod.addProperty(PropertiesMod.supportedProperties.RETAIN, true);
-                    if (q.costForTurn != -2 && !q.hasTag(expansionContentMod.UNPLAYABLE))
-                        mod.addProperty(PropertiesMod.supportedProperties.UNPLAYABLE, true);
                     if (!mod.bonusPropertiesForThisTurn.isEmpty())
                         CardModifierManager.addModifier(q, mod);
                 }

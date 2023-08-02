@@ -15,22 +15,19 @@ public class Arrogance extends AbstractCollectorCard {
 
     public Arrogance() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 8;
-        baseMagicNumber = magicNumber = 4;
+        baseBlock = 7;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (upgraded){
-            applyToSelf(new AttacksApplyDoomPower(magicNumber));
-        }else {
-            applyToSelf(new NextAttackAppliesDoomPower(magicNumber));
-        }
+
+        applyToSelf(new AttacksApplyDoomPower(magicNumber));
 
     }
 
     public void upp() {
         upgradeBlock(2);
-        uDesc();
+        upgradeMagicNumber(1);
     }
 }

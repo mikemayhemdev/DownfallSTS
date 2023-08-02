@@ -15,7 +15,7 @@ public class RotwoodKindling extends AbstractCollectorCard {
 
     public RotwoodKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
         tags.add(expansionContentMod.UNPLAYABLE);
     }
 
@@ -34,6 +34,6 @@ public class RotwoodKindling extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

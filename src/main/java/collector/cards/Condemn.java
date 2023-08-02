@@ -16,12 +16,12 @@ public class Condemn extends AbstractCollectorCard {
     public Condemn() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 6;
+        baseSecondMagic = secondMagic = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
-        forAllMonstersLiving(q -> applyToEnemy(q, new DoomPower(q, secondMagic)));
+        applyToEnemy(m, new DoomPower(m, secondMagic));
     }
 
     public void upp() {

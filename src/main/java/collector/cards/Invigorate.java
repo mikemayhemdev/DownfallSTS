@@ -20,7 +20,7 @@ public class Invigorate extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new VigorPower(p, magicNumber));
-        applyToSelf(new NextTurnVigorPower(magicNumber));
+        applyToSelf(new NextTurnVigorPower(4));
     }
 
     public void upp() {

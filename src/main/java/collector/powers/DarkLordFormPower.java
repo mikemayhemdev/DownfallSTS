@@ -1,6 +1,7 @@
 package collector.powers;
 
 import automaton.actions.RepeatCardAction;
+import collector.cards.InevitableDemise;
 import collector.cards.YouAreMine;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -25,7 +26,7 @@ public class DarkLordFormPower extends AbstractCollectorPower {
                 public void update() {
                     isDone = true;
                     AbstractMonster q = AbstractDungeon.getRandomMonster();
-                    addToTop(new RepeatCardAction(q, new YouAreMine()));
+                    addToTop(new RepeatCardAction(q, new InevitableDemise()));
                 }
             });
         }

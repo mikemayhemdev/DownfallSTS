@@ -27,6 +27,5 @@ public class Torchbearer extends AbstractCollectorCard {
 
     public void upp() {
         uDesc();
-        upgradeMagicNumber(2);
     }
 }

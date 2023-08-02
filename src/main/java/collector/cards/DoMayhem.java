@@ -1,3 +1,4 @@
+/*
 package collector.cards;
 
 import collector.powers.DoMayhemPower;
@@ -23,3 +24,5 @@ public class DoMayhem extends AbstractCollectorCard {
         upgradeBaseCost(0);
     }
 }
+
+ */

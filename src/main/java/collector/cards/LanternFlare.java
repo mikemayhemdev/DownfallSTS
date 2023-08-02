@@ -1,3 +1,4 @@
+/*
 package collector.cards;
 
 import collector.powers.DoomPower;
@@ -31,3 +32,5 @@ public class LanternFlare extends AbstractCollectorCard {
         upgradeSecondMagic(1);
     }
 }
+
+ */
