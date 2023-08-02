@@ -1,4 +1,4 @@
-/*
+
 package collector.cards;
 
 import collector.powers.DoomPower;
@@ -16,7 +16,7 @@ public class LanternFlare extends AbstractCollectorCard {
     // intellij stuff attack, all_enemy, uncommon, 12, 3, , , 12, 3
 
     public LanternFlare() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 12;
         baseSecondMagic = secondMagic = 4;
         isPyre();
@@ -33,4 +33,3 @@ public class LanternFlare extends AbstractCollectorCard {
     }
 }
 
- */
