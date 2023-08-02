@@ -111,7 +111,7 @@
   },
   "collector:DoMayhem": {
     "NAME": "驭魂乱战",
-    "DESCRIPTION": "回合开始时， NL 若有敌人有20层 collector:魂灭 ， NL 打出抽牌堆顶部的牌。"
+    "DESCRIPTION": "回合开始时， NL 若有敌人有25层 collector:魂灭 ， NL 打出抽牌堆顶部的牌。"
   },
   "collector:DragonsTrove": {
     "NAME": "龍之珍藏",
@@ -175,7 +175,7 @@
   },
   "collector:InevitableDemise": {
     "NAME": "贪魂绿眸",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有20层 collector:魂灭 ， NL 本牌返回手牌， NL 且伤害加 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有25层 collector:魂灭 ， NL 本牌返回手牌， NL 且伤害加 !M! 。"
   },
   "collector:GreaterHurting": {
     "NAME": "伤魂",
