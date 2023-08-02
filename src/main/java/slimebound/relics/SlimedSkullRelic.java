@@ -19,7 +19,7 @@ public class SlimedSkullRelic extends CustomRelic {
 
     public SlimedSkullRelic() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.RARE, LandingSound.SOLID);
+                RelicTier.COMMON, LandingSound.SOLID);
         this.largeImg = TextureLoader.getTexture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
 
     }
