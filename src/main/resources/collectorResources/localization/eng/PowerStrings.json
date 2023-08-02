@@ -49,10 +49,9 @@
   "collector:Doom": {
     "NAME": "Doom",
     "DESCRIPTIONS": [
-      "If ",
-      " has less than #b",
-      " HP, kill it and gain #b1 #gEssence.",
-      "this foe"
+      "Loses #b",
+      " HP at the end of its turn, removing all #yDoom. NL HP lost is increased by 50% for each other debuff on this enemy. NL (Current HP Loss: #b",
+      ")."
     ]
   },
   "collector:DoublePlayCollectibles": {

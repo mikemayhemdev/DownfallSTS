@@ -12,7 +12,7 @@
       "doom",
       "doomed"
     ],
-    "DESCRIPTION": "If the enemy has more Doom than HP, kill them and gain #b1 #yEssence. Elites give #b2 #yEssence, Bosses give #b3!"
+    "DESCRIPTION": "Doomed creatures lose HP at the end of their turn, then Doom is removed. HP loss is increased by 50% for each other debuff present."
   },
   {
     "PROPER_NAME": "Pyre",
