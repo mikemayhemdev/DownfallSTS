@@ -161,6 +161,7 @@ public class DoomPower extends AbstractCollectorTwoAmountPower implements Health
     public int getHealthBarAmount() {
         int result = getTrueHPLossValue();
         this.amount2 = result;
+        updateDescription();
         return result;
     }
 
