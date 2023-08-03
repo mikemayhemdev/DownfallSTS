@@ -1,41 +1,37 @@
 package collector.powers;
 
-import collector.util.EssenceSystem;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
-import com.megacrit.cardcrawl.actions.common.InstantKillAction;
-import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.beyond.AwakenedOne;
-import com.megacrit.cardcrawl.monsters.beyond.Darkling;
-import com.megacrit.cardcrawl.powers.MinionPower;
-import downfall.monsters.FleeingMerchant;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import static collector.util.Wiz.att;
+import static collector.util.Wiz.atb;
 
-public class DoomPower extends AbstractCollectorPower implements HealthBarRenderPower {
+public class DoomPower extends AbstractCollectorTwoAmountPower implements HealthBarRenderPower {
     public static final String NAME = "Doom";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.DEBUFF;
     public static final boolean TURN_BASED = false;
 
-    private boolean instakilled = false;
+    // private boolean instakilled = false;
 
     public DoomPower(AbstractMonster target, int amount) {
         super(NAME, TYPE, TURN_BASED, target, null, amount);
         priority = 99;
     }
 
+    /*
     @Override
     public void onInitialApplication() {
-        checkInstakill();
-        checkMerchant();
+      //  checkInstakill();
+      //  checkMerchant();
     }
+
+     */
+    /*
 
     @Override
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
@@ -47,6 +43,8 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         return damageAmount;
     }
 
+     */
+/*
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
@@ -54,6 +52,9 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         checkInstakill();
     }
 
+ */
+
+    /*
     private void checkInstakill() {
         if (this.owner.currentHealth <= this.amount && owner.currentHealth > 0) {
             instakill();
@@ -68,6 +69,9 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         }
     }
 
+     */
+
+    /*
     @Override
     public void onDeath() {
         if (!instakilled) {
@@ -111,15 +115,6 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         }
     }
 
-    @Override
-    public int getHealthBarAmount() {
-        return amount;
-    }
-
-    @Override
-    public Color getColor() {
-        return owner.maxHealth * 0.25F <= this.amount ? Color.PINK.cpy() : Color.PURPLE.cpy();
-    }
 
     private int getEssenceAmount() {
         if (owner instanceof AbstractMonster) {
@@ -135,14 +130,43 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         return 1;
     }
 
+     */
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        if (!isPlayer) {
+            this.addToBot(new LoseHPAction(this.owner, this.source, getTrueHPLossValue()));
+            atb(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
+    }
+
+    private int getTrueHPLossValue() {
+        int otherDebuffCount = 0;
+        for (AbstractPower p : this.owner.powers) {
+            if (p.type == PowerType.DEBUFF) {
+                if (p != this) {
+                    otherDebuffCount++;
+                }
+            }
+        }
+        return Math.round(this.amount * (1 + (0.25F * otherDebuffCount)));
+    }
+
     @Override
     public void updateDescription() {
-        String name;
-        if (owner != null) {
-            name = owner.name;
-        } else {
-            name = DESCRIPTIONS[3];
-        }
-        description = DESCRIPTIONS[0] + FontHelper.colorString(name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount2 + DESCRIPTIONS[2];
+    }
+
+    @Override
+    public int getHealthBarAmount() {
+        int result = getTrueHPLossValue();
+        this.amount2 = result;
+        updateDescription();
+        return result;
+    }
+
+    @Override
+    public Color getColor() {
+        return Color.PURPLE.cpy();
     }
 }

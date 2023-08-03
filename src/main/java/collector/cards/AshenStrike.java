@@ -14,7 +14,7 @@ public class AshenStrike extends AbstractCollectorCard {
 
     public AshenStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 10;
         cardsToPreview = new Spark();
         tags.add(CardTags.STRIKE);
     }

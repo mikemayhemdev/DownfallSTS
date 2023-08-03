@@ -14,7 +14,7 @@ public class MysteryWeaving extends AbstractCollectorCard {
 
     public MysteryWeaving() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 12;
+        baseBlock = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

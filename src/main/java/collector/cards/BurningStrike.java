@@ -14,16 +14,16 @@ public class BurningStrike extends AbstractCollectorCard {
 
     public BurningStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 18;
+        baseDamage = 14;
         tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        if (upgraded) addToBot(new DrawCardAction(1));
+        addToBot(new DrawCardAction(1));
     }
 
     public void upp() {
-        uDesc();
+        upgradeDamage(4);
     }
 }

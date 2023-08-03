@@ -11,16 +11,18 @@ public class FleetingEmbers extends AbstractCollectorCard {
     // intellij stuff skill, self, common, , , , , 2, 1
 
     public FleetingEmbers() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        baseBlock = 5;
         cardsToPreview = new Ember();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         makeInHand(new Ember(), magicNumber);
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBlock(3);
     }
 }

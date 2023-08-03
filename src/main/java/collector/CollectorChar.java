@@ -1,10 +1,7 @@
 package collector;
 
 import basemod.abstracts.CustomPlayer;
-import collector.cards.Defend;
-import collector.cards.FuelTheFire;
-import collector.cards.Strike;
-import collector.cards.YouAreMine;
+import collector.cards.*;
 import collector.relics.EmeraldTorch;
 import collector.util.DoubleEnergyOrb;
 import collector.util.RenderOnlyTorchHead;
@@ -108,7 +105,7 @@ public class CollectorChar extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(YouAreMine.ID);
+        retVal.add(InevitableDemise.ID);
         retVal.add(FuelTheFire.ID);
         return retVal;
     }

@@ -19,18 +19,19 @@ public class SpiritLeech extends AbstractCollectorCard {
     public SpiritLeech() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 9;
-        baseMagicNumber = magicNumber = 2;
+        baseBlock = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         if (isAfflicted(m)) {
-            applyToSelf(new NextTurnReservePower(1));
+            blck();
         }
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
+        upgradeBlock(2);
     }
 
     @Override

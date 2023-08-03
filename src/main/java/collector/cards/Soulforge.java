@@ -1,3 +1,4 @@
+
 package collector.cards;
 
 import com.megacrit.cardcrawl.actions.common.UpgradeRandomCardAction;
@@ -27,3 +28,4 @@ public class Soulforge extends AbstractCollectorCard {
         upgradeMagicNumber(1);
     }
 }
+

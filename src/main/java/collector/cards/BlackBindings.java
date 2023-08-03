@@ -17,7 +17,7 @@ public class BlackBindings extends AbstractCollectorCard {
     public BlackBindings() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 3;
+        baseSecondMagic = secondMagic = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -36,7 +36,6 @@ public class BlackBindings extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
+        upgradeSecondMagic(2);
     }
 }

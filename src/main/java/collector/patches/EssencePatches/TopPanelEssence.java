@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import hermit.util.TextureLoader;
 
 public class TopPanelEssence extends TopPanelItem {
 
@@ -21,7 +21,7 @@ public class TopPanelEssence extends TopPanelItem {
 
     public static final String ID = CollectorMod.makeID("EssenceCount");
 
-    private static final Texture ICON = ImageMaster.ENDLESS_ICON; //TODO: Special icon
+    public static final Texture ICON = TextureLoader.getTexture("collectorResources/images/ui/EssenceIcon.png");
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TopPanelEssence() {

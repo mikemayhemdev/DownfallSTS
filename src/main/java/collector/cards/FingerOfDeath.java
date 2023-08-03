@@ -13,7 +13,7 @@ public class FingerOfDeath extends AbstractCollectorCard {
 
     public FingerOfDeath() {
         super(ID, 4, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 60;
+        baseMagicNumber = magicNumber = 50;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

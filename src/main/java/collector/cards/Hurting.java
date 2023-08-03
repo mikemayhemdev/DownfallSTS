@@ -1,15 +1,12 @@
 package collector.cards;
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.att;
+import static collector.util.Wiz.makeInHand;
 
 public class Hurting extends AbstractCollectorCard {
     public final static String ID = makeID(Hurting.class.getSimpleName());
@@ -18,7 +15,7 @@ public class Hurting extends AbstractCollectorCard {
     public Hurting() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 10;
-        selfRetain = true;
+        isEthereal = true;
         cardsToPreview = new GreaterHurting();
     }
 
@@ -27,29 +24,10 @@ public class Hurting extends AbstractCollectorCard {
     }
 
     @Override
-    public void onRetained() {
-        AbstractCard prev = this;
-        AbstractCard replacement = new GreaterHurting();
-        if (upgraded)
-            replacement.upgrade();
-
-        att(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int idx = AbstractDungeon.player.hand.group.indexOf(prev);
-                AbstractDungeon.player.hand.removeCard(prev);
-
-                replacement.current_x = (float) Settings.WIDTH / 2.0F;
-                replacement.current_y = (float)Settings.HEIGHT / 2.0F;
-
-                if (idx > -1) //Crash prevention if the card leaves the hand between being Retained and this action.
-                    AbstractDungeon.player.hand.group.add(idx, replacement);
-                else
-                    AbstractDungeon.player.hand.group.add(replacement);
-                replacement.superFlash(Color.PURPLE.cpy());
-            }
-        });
+    public void triggerOnExhaust() {
+        AbstractCard toAdd = new GreaterHurting();
+        if (upgraded) toAdd.upgrade();
+        makeInHand(toAdd);
     }
 
     public void upp() {

@@ -32,9 +32,9 @@
   "collector:DarkLordForm": {
     "NAME": "Dark Lord Form",
     "DESCRIPTIONS": [
-      "At the start of your turn, play a #yYou #yAre #yMine! on a random enemy.",
+      "At the start of your turn, play an #yInevitable #yDemise on a random enemy.",
       "At the start of your turn, play #b",
-      " copies of #yYou #yAre #yMine! on random enemies."
+      " copies of #yInevitable #yDemise on random enemies."
     ]
   },
   "collector:DoMayhem": {
@@ -49,10 +49,9 @@
   "collector:Doom": {
     "NAME": "Doom",
     "DESCRIPTIONS": [
-      "If ",
-      " has less than #b",
-      " HP, kill it and gain #b1 #gEssence.",
-      "this foe"
+      "Loses #b",
+      " HP at the end of its turn, removing all #yDoom. NL HP lost is increased by 25% for each other debuff on this enemy. NL (Current HP Loss: #b",
+      ")."
     ]
   },
   "collector:DoublePlayCollectibles": {
@@ -82,7 +81,7 @@
     "NAME": "Karma",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
-      " #yBlock. If an enemy has #b25 or more #yDoom, gain #b",
+      " #yBlock. If an enemy is #yAfflicted, gain #b",
       " more #yBlock."
     ]
   },

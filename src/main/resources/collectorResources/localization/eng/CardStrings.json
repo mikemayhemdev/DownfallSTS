@@ -75,7 +75,7 @@
   },
   "collector:Condemn": {
     "NAME": "Condemn",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL Apply !clm2! collector:Doom to ALL enemies."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Apply !clm2! collector:Doom."
   },
   "collector:CursedWail": {
     "NAME": "Cursed Wail",
@@ -87,8 +87,8 @@
   },
   "collector:DarkLordForm": {
     "NAME": "Dark Lord Form",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, play *You *Are *Mine! on a random enemy.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, play *You *Are *Mine! on a random enemy."
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, play *Inevitable *Demise on a random enemy.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, play *Inevitable *Demise on a random enemy."
   },
   "collector:Darkstorm": {
     "NAME": "Darkstorm",
@@ -155,7 +155,7 @@
   },
   "collector:FleetingEmbers": {
     "NAME": "Fleeting Embers",
-    "DESCRIPTION": "Add !M! *Embers into your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Embers into your hand."
   },
   "collector:Forgery": {
     "NAME": "Forgery",
@@ -179,12 +179,12 @@
   },
   "collector:GreaterHurting": {
     "NAME": "Greater Hurting",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greatest *Hurting.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greatest *Hurting+."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, gain a *Greatest *Hurting.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, gain a *Greatest *Hurting+."
   },
   "collector:GreatestHurting": {
     "NAME": "Greatest Hurting",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with an *Ember."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, gain an *Ember."
   },
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus",
@@ -200,7 +200,7 @@
   },
   "collector:Hoard": {
     "NAME": "Hoard",
-    "DESCRIPTION": "Draw !M! cards. NL This turn, they Retain and are Unplayable."
+    "DESCRIPTION": "Draw !M! cards. NL This turn, they Retain."
   },
   "collector:HoardersStrike": {
     "NAME": "Hoarder's Strike",
@@ -208,8 +208,8 @@
   },
   "collector:Hurting": {
     "NAME": "Hurting",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greater *Hurting.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greater *Hurting+."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, gain a *Greater *Hurting.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, gain a *Greater *Hurting+."
   },
   "collector:IllTakeThat": {
     "NAME": "I'll Take That",
@@ -217,7 +217,7 @@
   },
   "collector:InevitableDemise": {
     "NAME": "Inevitable Demise",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has 25 or more collector:Doom, return this to your hand with !M! more damage."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! collector:Doom."
   },
   "collector:InflictAgony": {
     "NAME": "Inflict Agony",
@@ -225,7 +225,7 @@
   },
   "collector:Invigorate": {
     "NAME": "Invigorate",
-    "DESCRIPTION": "collector:Pyre. NL Gain !M! Vigor. NL Next turn, gain !M! Vigor."
+    "DESCRIPTION": "collector:Pyre. NL Gain !M! Vigor. NL Next turn, gain 4 Vigor."
   },
   "collector:IronbarkKindling": {
     "NAME": "Ironbark Kindling",
@@ -237,7 +237,7 @@
   },
   "collector:ItMattersNot": {
     "NAME": "It Matters Not",
-    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card from your Collected pile."
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! to ALL enemies' Weak and Vulnerable."
   },
   "collector:JadedJabs": {
     "NAME": "Jaded Jabs",
@@ -245,8 +245,8 @@
   },
   "collector:Karma": {
     "NAME": "Karma",
-    "DESCRIPTION": "At the start of your turn, gain !M! Block. NL If an enemy has 25 or more collector:Doom, gain !clm2! more.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! Block. NL If an enemy has 25 or more collector:Doom, gain !clm2! more."
+    "DESCRIPTION": "At the start of your turn, gain !M! Block. NL If an enemy is collector:Afflicted, gain !clm2! more.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! Block. NL If an enemy is collector:Afflicted, gain !clm2! more."
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
@@ -355,7 +355,7 @@
   },
   "collector:SpiritLeech": {
     "NAME": "Spirit Leech",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, gain 1 collector:Reserve next turn."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, gain !B! Block."
   },
   "collector:StashAway": {
     "NAME": "Stash Away",
@@ -400,7 +400,7 @@
   },
   "collector:Wildfire": {
     "NAME": "Wildfire",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust all Unplayable cards in your hand and gain !B! Block for each."
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique debuff on the enemy."
   },
   "collector:YouAreMine": {
     "NAME": "You Are Mine!",
@@ -410,13 +410,6 @@
     "NAME": "Whomp",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! expansioncontent:Temp_HP. NL Exhaust."
   },
-
-
-
-
-
-
-
   "collector:AcidSlimeCard": {
     "NAME": "Acid Slime",
     "DESCRIPTION": "Add !M! random 0 cost card into your hand.",
@@ -682,10 +675,6 @@
     "NAME": "Writhing Mass",
     "DESCRIPTION": "Scry !M!. NL Play the top card of your draw pile."
   },
-
-
-
-
   "collector:DefaultCollectibleCard": {
     "NAME": "Soulless Husk",
     "DESCRIPTION": "This foe doesn't have a unique Collectible yet! NL Gain !M! Strength and Dexterity."

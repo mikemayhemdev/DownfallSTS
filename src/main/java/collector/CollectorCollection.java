@@ -11,6 +11,7 @@ import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.*;
 import collector.patches.CollectorBottleField;
 import collector.util.CollectibleCardReward;
+import collector.util.EssenceSystem;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.blue.Buffer;
@@ -245,6 +246,24 @@ public class CollectorCollection {
         if (!collectedAlready.contains(m)) {
             AbstractDungeon.getCurrRoom().rewards.add(new CollectibleCardReward(getCollectedCard(m)));
             collectedAlready.add(m);
+
+            //TODO - Make this a custom reward
+            EssenceSystem.changeEssence(getEssenceAmount(m));
         }
+
+    }
+
+    private static int getEssenceAmount(AbstractMonster m) {
+        if (m instanceof AbstractMonster) {
+            switch (m.type) {
+                case NORMAL:
+                    return 1;
+                case ELITE:
+                    return 2;
+                case BOSS:
+                    return 3;
+            }
+        }
+        return 1;
     }
 }

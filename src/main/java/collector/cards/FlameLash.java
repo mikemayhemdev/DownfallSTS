@@ -38,15 +38,15 @@ public class FlameLash extends AbstractCollectorCard implements OnPyreCard {
     @Override
     public void onPyred(AbstractCard card) {
         if (card.baseDamage > 0) {
-            toAdd = card.baseDamage + this.magicNumber;
+            toAdd = card.baseDamage;
         } else {
             toAdd = -1;
         }
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(2);
-        uDesc();
+        upgradeDamage(4);
+        //upgradeMagicNumber(2);
+      //  uDesc();
     }
 }

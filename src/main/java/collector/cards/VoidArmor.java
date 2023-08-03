@@ -14,8 +14,8 @@ public class VoidArmor extends AbstractCollectorCard {
 
     public VoidArmor() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL);
-        baseBlock = 10;
-        baseMagicNumber = magicNumber = 5;
+        baseBlock = 9;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

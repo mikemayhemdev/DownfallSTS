@@ -4,6 +4,7 @@ import basemod.abstracts.CustomReward;
 import basemod.helpers.CardModifierManager;
 import collector.CollectorMod;
 import collector.cardmods.CollectedCardMod;
+import collector.patches.EssencePatches.TopPanelEssence;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -125,7 +126,7 @@ public class CollectibleCardReward extends CustomReward {
 
         hb.render(sb);
 
-        sb.draw(ImageMaster.ENDLESS_ICON, GOLD_IMG_X, this.y - 9.0F * Settings.scale, GOLD_IMG_SIZE, GOLD_IMG_SIZE); //TODO: Essence icon
+        sb.draw(TopPanelEssence.ICON, GOLD_IMG_X, this.y - 9.0F * Settings.scale, GOLD_IMG_SIZE, GOLD_IMG_SIZE);
         Color c = Color.WHITE.cpy();
         if (EssenceSystem.essenceCount() < 3) {
             c = Color.SALMON.cpy();

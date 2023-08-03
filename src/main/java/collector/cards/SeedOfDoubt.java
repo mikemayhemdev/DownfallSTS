@@ -15,7 +15,7 @@ public class SeedOfDoubt extends AbstractCollectorCard implements OnOtherCardExh
 
     public SeedOfDoubt() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
         baseSecondMagic = secondMagic = 1;
     }
 
