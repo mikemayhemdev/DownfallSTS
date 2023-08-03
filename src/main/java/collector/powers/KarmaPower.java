@@ -3,7 +3,6 @@ package collector.powers;
 import collector.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static collector.util.Wiz.isAfflicted;
 
@@ -18,14 +17,14 @@ public class KarmaPower extends AbstractCollectorPower {
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
-        flash();
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         if (Wiz.getEnemies().stream().anyMatch(q -> {
             if (isAfflicted(q)) {
                 return true;
             }
             return false;
         })) {
+            flash();
             addToBot(new GainBlockAction(owner, amount));
         }
     }

@@ -80,9 +80,8 @@
   "collector:Karma": {
     "NAME": "Karma",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yBlock. If an enemy is #yAfflicted, gain #b",
-      " more #yBlock."
+      "At the end of your turn, if an enemy is #yAfflicted, gain #b",
+      " #yBlock."
     ]
   },
   "collector:NextAttackAppliesDoom": {
