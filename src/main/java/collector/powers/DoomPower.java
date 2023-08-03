@@ -1,37 +1,22 @@
 package collector.powers;
 
-import collector.util.EssenceSystem;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
-import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.beyond.AwakenedOne;
-import com.megacrit.cardcrawl.monsters.beyond.Darkling;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.MinionPower;
-import downfall.monsters.FleeingMerchant;
-import javafx.scene.control.cell.MapValueFactory;
 
 import static collector.util.Wiz.atb;
-import static collector.util.Wiz.att;
 
-public class DoomPower extends AbstractCollectorPower implements HealthBarRenderPower {
+public class DoomPower extends AbstractCollectorTwoAmountPower implements HealthBarRenderPower {
     public static final String NAME = "Doom";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.DEBUFF;
     public static final boolean TURN_BASED = false;
 
-   // private boolean instakilled = false;
+    // private boolean instakilled = false;
 
     public DoomPower(AbstractMonster target, int amount) {
         super(NAME, TYPE, TURN_BASED, target, null, amount);
@@ -149,39 +134,34 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        if (!isPlayer){
-
+        if (!isPlayer) {
             this.addToBot(new LoseHPAction(this.owner, this.source, getTrueHPLossValue()));
-
             atb(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }
 
-    private int getTrueHPLossValue(){
-
+    private int getTrueHPLossValue() {
         int otherDebuffCount = 0;
-        for (AbstractPower p : this.owner.powers
-        ) {
-            if (p.type==PowerType.DEBUFF){
-                if (p!=this){
+        for (AbstractPower p : this.owner.powers) {
+            if (p.type == PowerType.DEBUFF) {
+                if (p != this) {
                     otherDebuffCount++;
                 }
             }
-
         }
-
         return Math.round(this.amount * (1 + (0.25F * otherDebuffCount)));
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + getTrueHPLossValue() + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount2 + DESCRIPTIONS[2];
     }
-
 
     @Override
     public int getHealthBarAmount() {
-        return getTrueHPLossValue();
+        int result = getTrueHPLossValue();
+        this.amount2 = result;
+        return result;
     }
 
     @Override

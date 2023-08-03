@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.att;
+import static collector.util.Wiz.makeInHand;
 
 public class GreaterHurting extends AbstractCollectorCard {
     public final static String ID = makeID(GreaterHurting.class.getSimpleName());
@@ -17,7 +18,7 @@ public class GreaterHurting extends AbstractCollectorCard {
     public GreaterHurting() {
         super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 20;
-        selfRetain = true;
+        isEthereal = true;
         cardsToPreview = new GreatestHurting();
     }
 
@@ -26,22 +27,10 @@ public class GreaterHurting extends AbstractCollectorCard {
     }
 
     @Override
-    public void onRetained() {
-        AbstractCard prev = this;
-        AbstractCard replacement = new GreatestHurting();
-        if (upgraded) {
-            replacement.upgrade();
-        }
-        att(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int idx = AbstractDungeon.player.hand.group.indexOf(prev);
-                AbstractDungeon.player.hand.removeCard(prev);
-                AbstractDungeon.player.hand.group.add(idx, replacement);
-                replacement.superFlash(Color.PURPLE.cpy());
-            }
-        });
+    public void triggerOnExhaust() {
+        AbstractCard toAdd = new GreatestHurting();
+        if (upgraded) toAdd.upgrade();
+        makeInHand(toAdd);
     }
 
     public void upp() {

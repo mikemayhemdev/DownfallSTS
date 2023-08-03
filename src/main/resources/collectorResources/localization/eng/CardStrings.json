@@ -179,12 +179,12 @@
   },
   "collector:GreaterHurting": {
     "NAME": "Greater Hurting",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greatest *Hurting.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greatest *Hurting+."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, gain a *Greatest *Hurting.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, gain a *Greatest *Hurting+."
   },
   "collector:GreatestHurting": {
     "NAME": "Greatest Hurting",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with an *Ember."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, gain an *Ember."
   },
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus",
@@ -208,8 +208,8 @@
   },
   "collector:Hurting": {
     "NAME": "Hurting",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greater *Hurting.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, replace this with *Greater *Hurting+."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, gain a *Greater *Hurting.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, gain a *Greater *Hurting+."
   },
   "collector:IllTakeThat": {
     "NAME": "I'll Take That",
@@ -410,13 +410,6 @@
     "NAME": "Whomp",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! expansioncontent:Temp_HP. NL Exhaust."
   },
-
-
-
-
-
-
-
   "collector:AcidSlimeCard": {
     "NAME": "Acid Slime",
     "DESCRIPTION": "Add !M! random 0 cost card into your hand.",
@@ -682,10 +675,6 @@
     "NAME": "Writhing Mass",
     "DESCRIPTION": "Scry !M!. NL Play the top card of your draw pile."
   },
-
-
-
-
   "collector:DefaultCollectibleCard": {
     "NAME": "Soulless Husk",
     "DESCRIPTION": "This foe doesn't have a unique Collectible yet! NL Gain !M! Strength and Dexterity."

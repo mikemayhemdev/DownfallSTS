@@ -1,14 +1,11 @@
 package collector.cards;
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.att;
+import static collector.util.Wiz.makeInHand;
 
 public class GreatestHurting extends AbstractCollectorCard {
     public final static String ID = makeID(GreatestHurting.class.getSimpleName());
@@ -17,7 +14,7 @@ public class GreatestHurting extends AbstractCollectorCard {
     public GreatestHurting() {
         super(ID, 3, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 30;
-        selfRetain = true;
+        isEthereal = true;
         cardsToPreview = new Ember();
     }
 
@@ -26,19 +23,8 @@ public class GreatestHurting extends AbstractCollectorCard {
     }
 
     @Override
-    public void onRetained() {
-        AbstractCard prev = this;
-        AbstractCard replacement = new Ember();
-        att(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int idx = AbstractDungeon.player.hand.group.indexOf(prev);
-                AbstractDungeon.player.hand.removeCard(prev);
-                AbstractDungeon.player.hand.group.add(idx, replacement);
-                replacement.superFlash(Color.PURPLE.cpy());
-            }
-        });
+    public void triggerOnExhaust() {
+        makeInHand(new Ember());
     }
 
     public void upp() {
