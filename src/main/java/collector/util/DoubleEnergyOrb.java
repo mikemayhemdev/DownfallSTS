@@ -4,8 +4,12 @@ import basemod.abstracts.CustomEnergyOrb;
 import collector.CollectorChar;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 import com.badlogic.gdx.math.Interpolation;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -20,6 +24,7 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import downfall.util.TextureLoader;
 
 public class DoubleEnergyOrb extends CustomEnergyOrb {
     public static final int SECOND_ORB_W = 128;
@@ -33,6 +38,9 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
     protected Texture[] secondNoEnergyLayers;
     protected float[] secondLayerSpeeds;
     protected float[] secondAngles;
+
+    private Texture mask;
+    private FrameBuffer fbo;
 
     public DoubleEnergyOrb(String[] orbTexturePaths, String orbVfxPath, float[] layerSpeeds) {
         super(orbTexturePaths, orbVfxPath, layerSpeeds);
@@ -61,6 +69,9 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
         this.secondAngles = new float[this.secondLayerSpeeds.length];
 
         assert this.secondEnergyLayers.length == this.secondLayerSpeeds.length;
+
+        fbo = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
+        mask = TextureLoader.getTexture("collectorResources/images/char/mainChar/orb/mask.png");
 
     }
 
@@ -110,6 +121,18 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
             sb.draw(this.secondBaseLayer, current_x + X_OFFSET - SECOND_ORB_W / 2F, current_y + Y_OFFSET - SECOND_ORB_W / 2F, SECOND_ORB_W / 2F, SECOND_ORB_W / 2F, SECOND_ORB_W, SECOND_ORB_W, SECOND_ORB_IMG_SCALE, SECOND_ORB_IMG_SCALE, 0.0F, 0, 0, SECOND_ORB_W, SECOND_ORB_W, false, false);
         }
 
+        sb.setColor(Color.WHITE);
+        sb.end();
+        fbo.begin();
+
+        Gdx.gl.glClearColor(0, 0, 0, 0);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+        Gdx.gl.glColorMask(true, true, true, true);
+        sb.begin();
+
+        sb.setColor(Color.WHITE);
+        sb.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
+
         if (enabled) {
             for (i = 0; i < this.energyLayers.length; ++i) {
                 sb.draw(this.energyLayers[i], current_x - PRIMARY_ORB_W / 2F, current_y - PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W, PRIMARY_ORB_W, PRIMARY_ORB_IMG_SCALE, PRIMARY_ORB_IMG_SCALE, this.angles[i], 0, 0, 128, 128, false, false);
@@ -120,11 +143,25 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
             }
         }
 
-        sb.draw(this.baseLayer, current_x - PRIMARY_ORB_W / 2F, current_y - PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W, PRIMARY_ORB_W, PRIMARY_ORB_IMG_SCALE, PRIMARY_ORB_IMG_SCALE, 0.0F, 0, 0, 128, 128, false, false);
-        hb.render(sb);
+
         if (hb.hovered && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.isScreenUp) {
             TipHelper.renderGenericTip(50.0F * Settings.scale, 380.0F * Settings.scale, uiStrings.TEXT[0], uiStrings.TEXT[1]);
         }
+
+        sb.setBlendFunction(0, GL20.GL_SRC_ALPHA);
+        sb.setColor(new Color(1, 1, 1, 1));
+        sb.draw(mask, current_x - 64, current_y - 64, 64, 64, 128, 128, 1F, 1F, 0, 0, 0, 128, 128, false, false);
+        sb.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
+
+        sb.end();
+
+        fbo.end();
+        sb.begin();
+        TextureRegion drawTex = new TextureRegion(fbo.getColorBufferTexture());
+        drawTex.flip(false, true);
+        sb.draw(drawTex, -Settings.VERT_LETTERBOX_AMT, -Settings.HORIZ_LETTERBOX_AMT);
+        sb.draw(this.baseLayer, current_x - PRIMARY_ORB_W / 2F, current_y - PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W / 2F, PRIMARY_ORB_W, PRIMARY_ORB_W, PRIMARY_ORB_IMG_SCALE, PRIMARY_ORB_IMG_SCALE, 0.0F, 0, 0, 128, 128, false, false);
+        hb.render(sb);
     }
 
     @SpirePatch(clz = AbstractPlayer.class, method = SpirePatch.CLASS)
