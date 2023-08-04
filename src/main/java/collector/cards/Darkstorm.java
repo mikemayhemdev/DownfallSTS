@@ -1,16 +1,14 @@
 package collector.cards;
 
 import basemod.helpers.CardModifierManager;
-import collector.CollectorCollection;
 import collector.cardmods.CollectedCardMod;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.atb;
 import static collector.util.Wiz.makeInHand;
+import static collector.util.Wiz.shuffleIn;
 
 public class Darkstorm extends AbstractCollectorCard {
     public final static String ID = makeID(Darkstorm.class.getSimpleName());
@@ -26,16 +24,8 @@ public class Darkstorm extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard q = new Blightning();
-        CardModifierManager.addModifier(q, new CollectedCardMod());
         makeInHand(q);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                for (int i = 0; i < magicNumber; i++)
-                    CollectorCollection.combatCollection.addToRandomSpot(q);
-            }
-        });
+        shuffleIn(q, magicNumber);
     }
 
     public void upp() {
