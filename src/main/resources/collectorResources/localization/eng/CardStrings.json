@@ -245,8 +245,8 @@
   },
   "collector:Karma": {
     "NAME": "Karma",
-    "DESCRIPTION": "At the start of your turn, gain !M! Block. NL If an enemy is collector:Afflicted, gain !clm2! more.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! Block. NL If an enemy is collector:Afflicted, gain !clm2! more."
+    "DESCRIPTION": "At the end of your turn, gain !M! Block. NL If an enemy is collector:Afflicted, gain !clm2! more.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, gain !M! Block. NL If an enemy is collector:Afflicted, gain !clm2! more."
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",

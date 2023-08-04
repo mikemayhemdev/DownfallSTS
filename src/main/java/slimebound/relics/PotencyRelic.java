@@ -15,7 +15,7 @@ import slimebound.powers.PotencyPower;
 public class PotencyRelic extends CustomRelic {
     public static final String ID = "Slimebound:PotencyRelic";
     public static final String IMG_PATH = "relics/oozeStone.png";
-    public static final String IMG_PATH_LARGE = "relics/oozeStonearge.png";
+    public static final String IMG_PATH_LARGE = "relics/oozeStoneLarge.png";
     public static final String OUTLINE_IMG_PATH = "relics/oozeStoneOutline.png";
 
     public PotencyRelic() {
