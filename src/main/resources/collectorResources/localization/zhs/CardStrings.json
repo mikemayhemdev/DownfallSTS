@@ -241,8 +241,8 @@
   },
   "collector:Karma": {
     "NAME": "报应",
-    "DESCRIPTION": "回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人被 collector:折磨 ， NL 额外获得 !clm2! 点。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人被 collector:折磨 ， NL 额外获得 !clm2! 点。"
+    "DESCRIPTION": "回合结束时， NL 获得 !M! 点 格挡 。 NL 若有敌人被 collector:折磨 ， NL 额外获得 !clm2! 点。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合结束时， NL 获得 !M! 点 格挡 。 NL 若有敌人被 collector:折磨 ， NL 额外获得 !clm2! 点。"
   },
   "collector:LanternFlare": {
     "NAME": "提灯之耀",
