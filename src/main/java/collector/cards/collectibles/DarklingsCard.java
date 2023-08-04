@@ -1,5 +1,7 @@
 package collector.cards.collectibles;
 
+import basemod.helpers.CardModifierManager;
+import collector.cardmods.CollectedCardMod;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,7 +24,7 @@ public class DarklingsCard extends AbstractCollectibleCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        atb(new SelectCardsAction(AbstractDungeon.player.exhaustPile.group, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
+        atb(new SelectCardsAction(AbstractDungeon.player.exhaustPile.group, cardStrings.EXTENDED_DESCRIPTION[0], (card) -> CardModifierManager.hasModifier(card, CollectedCardMod.ID), (cards) -> {
             for (AbstractCard c : cards) {
                 AbstractDungeon.player.exhaustPile.moveToHand(c);
             }

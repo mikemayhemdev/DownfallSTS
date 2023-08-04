@@ -465,7 +465,7 @@
   },
   "collector:DarklingsCard": {
     "NAME": "Darklings",
-    "DESCRIPTION": "collector:Pyre. NL Add 3 copies of the Exhausted card into your hand.",
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. expansioncontent:Exhume a Collected card.",
     "EXTENDED_DESCRIPTION": [
       "to create 2 copies of."
     ]
