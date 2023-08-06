@@ -42,7 +42,7 @@
   },
   "collector:Blightning": {
     "NAME": "Blightning",
-    "DESCRIPTION": "Apply !M! collector:Doom. NL Deal !D! damage. NL Draw 1 card from your Collected pile."
+    "DESCRIPTION": "Apply !M! collector:Doom. NL Deal !D! damage. NL Draw 1 card from your Collected pile. NL Exhaust."
   },
   "collector:Bonfire": {
     "NAME": "Bonfire",
@@ -92,7 +92,7 @@
   },
   "collector:Darkstorm": {
     "NAME": "Darkstorm",
-    "DESCRIPTION": "Gain a *Blightning. NL Shuffle !M! more into your Collected pile. NL Exhaust."
+    "DESCRIPTION": "Gain a *Blightning. NL Shuffle !M! more into your draw pile. NL Exhaust."
   },
   "collector:DarkwoodKindling": {
     "NAME": "Darkwillow Kindling",
@@ -317,7 +317,7 @@
   },
   "collector:SapStrength": {
     "NAME": "Sap Strength",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Strength, steal up to !M! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength this turn."
   },
   "collector:ScorchingRay": {
     "NAME": "Scorching Ray",
@@ -329,7 +329,7 @@
   },
   "collector:ShadowDaggers": {
     "NAME": "Shadow Daggers",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each Collected card played this combat. Exhaust.",
+    "DESCRIPTION": "Deal !D! damage for each Collected card played this combat. Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " time.)",
@@ -465,7 +465,7 @@
   },
   "collector:DarklingsCard": {
     "NAME": "Darklings",
-    "DESCRIPTION": "collector:Pyre. NL Add 3 copies of the Exhausted card into your hand.",
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. expansioncontent:Exhume a Collected card.",
     "EXTENDED_DESCRIPTION": [
       "to create 2 copies of."
     ]
