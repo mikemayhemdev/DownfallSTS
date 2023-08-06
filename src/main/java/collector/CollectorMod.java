@@ -353,7 +353,8 @@ public class CollectorMod implements
 
             @Override
             public void onLoad(Integer integer) {
-                EssenceSystem.setEssence(integer);
+                if (integer != null)
+                    EssenceSystem.setEssence(integer);
             }
         });
     }
