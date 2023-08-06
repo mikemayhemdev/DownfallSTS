@@ -43,7 +43,7 @@
   },
   "collector:Blightning": {
     "NAME": "惊萎",
-    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 造成 !D! 点伤害。 NL 从 *收藏堆 抽一张牌。"
+    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 造成 !D! 点伤害。 NL 从 *收藏堆 抽一张牌。 NL 消耗 。"
   },
   "collector:Bonfire": {
     "NAME": "篝火",
@@ -92,7 +92,7 @@
   },
   "collector:Darkstorm": {
     "NAME": "昏鸣",
-    "DESCRIPTION": "获得一张 *惊萎 ， NL 并将 !M! 张洗入 *收藏堆 。 NL 消耗 。"
+    "DESCRIPTION": "获得一张 *惊萎 ， NL 并将 !M! 张洗入抽牌堆 。 NL 消耗 。"
   },
   "collector:DarkwoodKindling": {
     "NAME": "邪柳柴",
@@ -313,7 +313,7 @@
   },
   "collector:SapStrength": {
     "NAME": "竭力",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 力量 ， NL 窃取至多 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合目标失去 !M! 点 力量 。"
   },
   "collector:ScorchingRay": {
     "NAME": "灼烧光线",
@@ -325,7 +325,7 @@
   },
   "collector:ShadowDaggers": {
     "NAME": "阴刃",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每用过一张 collector:藏品 牌， NL 再造成 !M! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": "每用过一张 collector:藏品 牌， NL 造成 !D! 点伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL (造成 ",
       " 次)",
@@ -465,7 +465,7 @@
   },
   "collector:DarklingsCard": {
     "NAME": "小黑",
-    "DESCRIPTION": "collector:焰葬 ， NL 获得其三张复制品。",
+    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL expansioncontent:发掘 一张 collector:藏品 牌。",
     "EXTENDED_DESCRIPTION": [
       "生成三张复制品。"
     ]
