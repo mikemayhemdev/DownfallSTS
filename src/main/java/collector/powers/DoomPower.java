@@ -4,7 +4,6 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -159,7 +158,7 @@ public class DoomPower extends AbstractCollectorTwoAmountPower implements Health
 
     @Override
     public int getHealthBarAmount() {
-        int result = getTrueHPLossValue();
+        int result = (int) Math.floor(getTrueHPLossValue());
         this.amount2 = result;
         updateDescription();
         return result;

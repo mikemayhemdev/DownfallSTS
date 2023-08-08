@@ -14,7 +14,7 @@
   },
   "collector:Arrogance": {
     "NAME": "Arrogance",
-    "DESCRIPTION": "Gain !B! Block. NL Your next Attack this turn also applies !M! collector:Doom.",
+    "DESCRIPTION": "Gain !B! Block. NL Each Attack this turn also applies !M! collector:Doom.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Each Attack this turn also applies !M! collector:Doom."
   },
   "collector:AshesAndDust": {
