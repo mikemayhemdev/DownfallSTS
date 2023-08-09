@@ -13,8 +13,7 @@
   },
   "collector:Arrogance": {
     "NAME": "巫傲",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张攻击会给予 !M! 层 collector:魂灭 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合所有攻击会给予 !M! 层 collector:魂灭 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张攻击会给予 !M! 层 collector:魂灭 。"
   },
   "collector:AshesAndDust": {
     "NAME": "成灰成烬",
