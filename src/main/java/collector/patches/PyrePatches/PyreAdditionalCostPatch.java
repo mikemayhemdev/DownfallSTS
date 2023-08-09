@@ -33,7 +33,7 @@ public class PyreAdditionalCostPatch {
                                 ((OnPyrePower) pow).onPyre(cards.get(0));
                             }
                         }
-                        if (cards.get(0) instanceof OnPyreCard)
+                        if (c instanceof OnPyreCard)
                             ((OnPyreCard) c).onPyred(cards.get(0));
                         att(new ExhaustSpecificCardAction(cards.get(0), AbstractDungeon.player.hand));
                     }));
