@@ -18,6 +18,11 @@ public class CollectedCardMod extends AbstractCardModifier {
     }
 
     @Override
+    public void onRemove(AbstractCard card) {
+        card.exhaust = false;
+    }
+
+    @Override
     public String identifier(AbstractCard card) {
         return ID;
     }

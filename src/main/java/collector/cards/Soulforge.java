@@ -13,7 +13,7 @@ public class Soulforge extends AbstractCollectorCard {
     // intellij stuff skill, self, uncommon, , , 8, 3, , 
 
     public Soulforge() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
     }
