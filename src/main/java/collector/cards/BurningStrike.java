@@ -19,12 +19,10 @@ public class BurningStrike extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        if (upgraded)
-            addToBot(new DrawCardAction(1));
+        addToBot(new DrawCardAction(1));
     }
 
     public void upp() {
         upgradeDamage(4);
-        uDesc();
     }
 }
