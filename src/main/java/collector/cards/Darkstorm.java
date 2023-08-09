@@ -18,7 +18,6 @@ public class Darkstorm extends AbstractCollectorCard {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         cardsToPreview = new Blightning();
-        CardModifierManager.addModifier(cardsToPreview, new CollectedCardMod());
         exhaust = true;
     }
 

@@ -15,22 +15,17 @@ public class AshenStrike extends AbstractCollectorCard {
     public AshenStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 10;
-        cardsToPreview = new Spark();
+        cardsToPreview = new Ember();
         tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        AbstractCard q = new Spark();
-        if (upgraded) q.upgrade();
+        AbstractCard q = new Ember();
         shuffleIn(q);
     }
 
     public void upp() {
-        upgradeDamage(1);
-        AbstractCard q = new Spark();
-        q.upgrade();
-        cardsToPreview = q;
-        uDesc();
+        upgradeDamage(3);
     }
 }

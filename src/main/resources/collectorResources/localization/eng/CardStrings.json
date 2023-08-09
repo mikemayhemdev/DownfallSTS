@@ -9,8 +9,7 @@
   },
   "collector:AshenStrike": {
     "NAME": "Ashen Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle a *Spark into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle a *Spark+ into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Gain an *Ember."
   },
   "collector:Arrogance": {
     "NAME": "Arrogance",
@@ -50,7 +49,8 @@
   },
   "collector:BrainDrain": {
     "NAME": "Brain Drain",
-    "DESCRIPTION": "Add the enemy's Collected card into your hand. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Add the enemy's Collected card into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add the enemy's Collected card into your hand. NL Upgrade it. NL Exhaust."
   },
   "collector:BramblesparKindling": {
     "NAME": "Bramblespar Kindling",
@@ -115,7 +115,7 @@
   },
   "collector:DragonsTrove": {
     "NAME": "Dragon's Trove",
-    "DESCRIPTION": "Draw 2 Collected cards. NL Gain !M! collector:Reserve. NL Exhaust."
+    "DESCRIPTION": "Draw 2 cards from your Collected pile. NL Gain !M! collector:Reserve. NL Exhaust."
   },
   "collector:Ember": {
     "NAME": "Ember",
@@ -150,8 +150,8 @@
   },
   "collector:FlameLash": {
     "NAME": "Flame Lash",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the *Exhausted card's damage to this.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the *Exhausted card's damage plus !M! to this."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the *Pyred card's damage to this.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the *Pyred card's damage plus !M! to this."
   },
   "collector:FleetingEmbers": {
     "NAME": "Fleeting Embers",
@@ -196,7 +196,7 @@
   },
   "collector:Heatwave": {
     "NAME": "Heat Wave",
-    "DESCRIPTION": "Deal !D! damage to collector:Afflicted enemies. NL Gain an *Ember."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain an *Ember."
   },
   "collector:Hoard": {
     "NAME": "Hoard",
@@ -241,7 +241,7 @@
   },
   "collector:JadedJabs": {
     "NAME": "Jaded Jabs",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to the Exhausted card's cost + !M!."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to the Pyred card's cost + !M!."
   },
   "collector:Karma": {
     "NAME": "Karma",
@@ -282,7 +282,7 @@
   },
   "collector:Omen": {
     "NAME": "Omen",
-    "DESCRIPTION": "Attacking an collector:Afflicted enemy consumes 1 Weak and Vulnerable. When it does, they lose !M! HP."
+    "DESCRIPTION": "Whenever you play a Collected card, ALL enemies lose !M! HP."
   },
   "collector:ProtectingCall": {
     "NAME": "Protecting Call",
@@ -346,7 +346,8 @@
   },
   "collector:Soulforge": {
     "NAME": "Soulforge",
-    "DESCRIPTION": "collector:Pyre. NL Upgrade !M! random cards in your hand."
+    "DESCRIPTION": "Draw !M! card from your Collected pile. Remove collector:Megathereal from it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards from your Collected pile. Remove collector:Megathereal from them. NL Exhaust."
   },
   "collector:Spark": {
     "NAME": "Spark",
@@ -359,7 +360,7 @@
   },
   "collector:StashAway": {
     "NAME": "Stash Away",
-    "DESCRIPTION": "Gain !B! Block X times. NL Next turn, gain X collector:Reserve."
+    "DESCRIPTION": "Gain !B! Block X times. NL Next turn, gain X collector:Reserve. NL Exhaust."
   },
   "collector:Strike": {
     "NAME": "Strike",
@@ -678,5 +679,9 @@
   "collector:DefaultCollectibleCard": {
     "NAME": "Soulless Husk",
     "DESCRIPTION": "This foe doesn't have a unique Collectible yet! NL Gain !M! Strength and Dexterity."
+  },
+  "collector:ShootingStar": {
+    "NAME": "Shooting Star",
+    "DESCRIPTION": "The first time you collector:Pyre a card each turn, return it to your hand. NL It costs 0 until played."
   }
 }
