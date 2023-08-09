@@ -1,7 +1,7 @@
 
 package collector.cards;
 
-import com.megacrit.cardcrawl.actions.common.UpgradeRandomCardAction;
+import collector.actions.DrawAndRemoveMegatherealFromCollectedCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -13,19 +13,20 @@ public class Soulforge extends AbstractCollectorCard {
     // intellij stuff skill, self, uncommon, , , 8, 3, , 
 
     public Soulforge() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
-        isPyre();
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            atb(new UpgradeRandomCardAction());
+            atb(new DrawAndRemoveMegatherealFromCollectedCardAction());
         }
     }
 
     public void upp() {
         upgradeMagicNumber(1);
+        uDesc();
     }
 }
 

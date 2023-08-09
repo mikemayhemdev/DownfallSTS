@@ -21,9 +21,7 @@ public class Arrogance extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-
-        applyToSelf(new AttacksApplyDoomPower(magicNumber));
-
+        applyToSelf(new NextAttackAppliesDoomPower(magicNumber));
     }
 
     public void upp() {

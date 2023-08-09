@@ -12,7 +12,7 @@
       "doom",
       "doomed"
     ],
-    "DESCRIPTION": "Doomed creatures lose HP at the end of their turn, then Doom is removed. HP loss is increased by 25% for each other debuff present."
+    "DESCRIPTION": "Doomed creatures lose HP at the start of their turn, then Doom is removed #bunless the creature is #yAfflicted (has both #yWeak and #yVulnerable)."
   },
   {
     "PROPER_NAME": "Pyre",
@@ -30,11 +30,11 @@
     "DESCRIPTION": "An alternate type of Energy that is stored across turns."
   },
   {
-    "PROPER_NAME": "Collected",
+    "PROPER_NAME": "MEGAthereal",
     "NAMES": [
-      "collected"
+      "megathereal"
     ],
-    "DESCRIPTION": "Collected cards move to the exhaust pile when played and at the end of your turn, no matter where they are."
+    "DESCRIPTION": "MEGAthereal cards move to the exhaust pile when played and at the end of your turn, no matter where they are."
   },
   {
     "PROPER_NAME": "Torch Head",

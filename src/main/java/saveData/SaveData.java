@@ -106,7 +106,7 @@ public class SaveData {
             merchantHealth = FleeingMerchant.CURRENT_HP;
             merchantStrength = FleeingMerchant.CURRENT_STRENGTH;
             merchantSouls = FleeingMerchant.CURRENT_SOULS;
-            merchantDoom = FleeingMerchant.CURRENT_DOOM;
+          //  merchantDoom = FleeingMerchant.CURRENT_DOOM;
 
             merchantDead = FleeingMerchant.DEAD;
             merchantEscaped = FleeingMerchant.ESCAPED;
@@ -258,7 +258,7 @@ public class SaveData {
             FleeingMerchant.CURRENT_HP = merchantHealth;
             FleeingMerchant.CURRENT_STRENGTH = merchantStrength;
             FleeingMerchant.CURRENT_SOULS = merchantSouls;
-            FleeingMerchant.CURRENT_DOOM = merchantDoom;
+            //FleeingMerchant.CURRENT_DOOM = merchantDoom;
 
             System.out.println(merchantDead);
             FleeingMerchant.DEAD = merchantDead;

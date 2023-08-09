@@ -13,19 +13,20 @@ public class BrainDrain extends AbstractCollectorCard {
     // intellij stuff skill, enemy, uncommon, , , , , , 
 
     public BrainDrain() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard q = CollectorCollection.getCollectedCard(m);
-        q.setCostForTurn(0);
+        if (upgraded)
+            q.upgrade();
         makeInHand(q);
     }
 
     //TODO: Preview system
 
     public void upp() {
-        upgradeBaseCost(0);
+        uDesc();
     }
 }

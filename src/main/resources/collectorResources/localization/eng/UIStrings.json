@@ -32,7 +32,7 @@
   "collector:EssenceCount": {
     "TEXT": [
       "Essences",
-      "Spend Essences on adding cards to your Collection. Slain enemies grant #b1 #yEssence. Elites give #b2 #yEssence, Bosses give #b3! You have #b",
+      "Spend Essences on adding cards to your Collection. Combat rooms grant #b1 #yEssence. Elites give #b2 #yEssence, Bosses give #b3! You have #b",
       " Essences."
     ]
   },
@@ -49,7 +49,7 @@
   },
   "collector:CollectedCardMod": {
     "TEXT": [
-      "collector:Collected. NL "
+      "collector:Megathereal. NL "
     ]
   },
   "collector:CollectibleCardReward": {
@@ -93,6 +93,12 @@
   "collector:BonusEventOption": {
     "TEXT": [
       "[Take]"
+    ]
+  },
+  "collector:EssenceReward": {
+    "TEXT": [
+      "Gain ",
+      " Essence."
     ]
   }
 }

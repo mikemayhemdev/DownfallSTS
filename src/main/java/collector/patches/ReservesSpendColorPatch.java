@@ -14,7 +14,7 @@ public class ReservesSpendColorPatch {
     @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
     public static class SpecialColor {
 
-        private static final Color SPENDING_RESERVES_COLOR = new Color(1.0F, 0.2F, 0.5F, 1);
+        private static final Color SPENDING_RESERVES_COLOR = new Color(1.0F, 0.9F, 0.5F, 1);
 
         @SpireInsertPatch(locator = Locator.class, localvars = {"costColor"})
         public static void Insert(AbstractCard __instance, SpriteBatch sb, @ByRef Color costColor[]) {

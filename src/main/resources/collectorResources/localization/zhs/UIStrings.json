@@ -94,5 +94,11 @@
     "TEXT": [
       "[捕获]"
     ]
+  },
+  "collector:EssenceReward": {
+    "TEXT": [
+      "Gain ",
+      " Essence."
+    ]
   }
 }

@@ -11,7 +11,7 @@ import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.*;
 import collector.patches.CollectorBottleField;
 import collector.util.CollectibleCardReward;
-import collector.util.EssenceSystem;
+import collector.util.EssenceReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.blue.Buffer;
@@ -40,6 +40,8 @@ import com.megacrit.cardcrawl.monsters.ending.CorruptHeart;
 import com.megacrit.cardcrawl.monsters.ending.SpireShield;
 import com.megacrit.cardcrawl.monsters.ending.SpireSpear;
 import com.megacrit.cardcrawl.monsters.exordium.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import downfall.monsters.*;
 import downfall.monsters.gauntletbosses.*;
 import hermit.cards.Adapt;
@@ -246,23 +248,16 @@ public class CollectorCollection {
         if (!collectedAlready.contains(m)) {
             AbstractDungeon.getCurrRoom().rewards.add(new CollectibleCardReward(getCollectedCard(m)));
             collectedAlready.add(m);
-
-            //TODO - Make this a custom reward
-            EssenceSystem.changeEssence(getEssenceAmount(m));
+            AbstractDungeon.getCurrRoom().rewards.add(new EssenceReward(getEssenceAmount(AbstractDungeon.getCurrRoom())));
         }
 
     }
 
-    private static int getEssenceAmount(AbstractMonster m) {
-        if (m instanceof AbstractMonster) {
-            switch (m.type) {
-                case NORMAL:
-                    return 1;
-                case ELITE:
-                    return 2;
-                case BOSS:
-                    return 3;
-            }
+    private static int getEssenceAmount(AbstractRoom room) {
+        if (room instanceof MonsterRoomBoss) {
+            return 3;
+        } else if (room.eliteTrigger) {
+            return 2;
         }
         return 1;
     }

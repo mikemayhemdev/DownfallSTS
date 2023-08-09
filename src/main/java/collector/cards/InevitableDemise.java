@@ -1,6 +1,7 @@
 
 package collector.cards;
 
+import collector.powers.DemisePower;
 import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,21 +16,21 @@ public class InevitableDemise extends AbstractCollectorCard {
     // intellij stuff attack, enemy, common, 8, 4, , , ,
 
     public InevitableDemise() {
-        super(ID, 3, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = 10;
-        baseMagicNumber = magicNumber = 10;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 9;
+       // baseMagicNumber = magicNumber = 1;
     }
 
     public boolean returnToYou = false;
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        applyToEnemy(m, new DoomPower(m, magicNumber));
+        applyToEnemy(m, new DemisePower(m, 1));
     }
 
     public void upp() {
         upgradeDamage(3);
-        upgradeMagicNumber(3);
+       // upgradeMagicNumber(3);
     }
 }
 

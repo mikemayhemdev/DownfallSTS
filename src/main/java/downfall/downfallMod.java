@@ -1450,7 +1450,7 @@ public class downfallMod implements
             FleeingMerchant.CURRENT_HP = FleeingMerchant.START_HP;
             FleeingMerchant.CURRENT_STRENGTH = 0;
             FleeingMerchant.CURRENT_SOULS = 0;
-            FleeingMerchant.CURRENT_DOOM = 0;
+           // FleeingMerchant.CURRENT_DOOM = 0;
             Cleric_Evil.encountered = false;
             Cleric_Evil.heDead = false;
             GoldToSoulPatches.UpdateMerchantTip();

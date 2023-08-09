@@ -47,11 +47,13 @@ public class Vagrant_Evil extends AbstractImageEvent {
         }
         this.imageEventText.setDialogOption(OPTIONSALT[0] + takeCost + OPTIONSALT[1]);
         this.imageEventText.setDialogOption(OPTIONSALT[2], new PrideStandard());// 38
-        this.imageEventText.setDialogOption(OPTIONS[5]);
         if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
             AbstractCard card = new VagrantCard();
             CardModifierManager.addModifier(card, new CollectedCardMod());
             imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, card);
+        }
+        else {
+            this.imageEventText.setDialogOption(OPTIONS[5]);
         }
     }
 

@@ -2,15 +2,18 @@ package collector.powers;
 
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import static collector.util.Wiz.atb;
+import static collector.util.Wiz.isAfflicted;
 
-public class DoomPower extends AbstractCollectorTwoAmountPower implements HealthBarRenderPower {
+public class DoomPower extends AbstractCollectorPower implements HealthBarRenderPower {
     public static final String NAME = "Doom";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.DEBUFF;
@@ -23,146 +26,39 @@ public class DoomPower extends AbstractCollectorTwoAmountPower implements Health
         priority = 99;
     }
 
-    /*
     @Override
-    public void onInitialApplication() {
-      //  checkInstakill();
-      //  checkMerchant();
+    public int getHealthBarAmount() {
+        return amount;
     }
 
-     */
-    /*
-
-    @Override
-    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-
-        if (owner.currentHealth - damageAmount <= amount) {
-            instakill();
+    public void atStartOfTurn() {
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            explode();
         }
+    }// 70
 
-        return damageAmount;
-    }
+    public void explode() {
+        this.flashWithoutSound();
 
-     */
-/*
-    @Override
-    public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
-        checkMerchant();
-        checkInstakill();
-    }
+        if (isAfflicted((AbstractMonster) this.owner)) {
 
- */
+        } else {
 
-    /*
-    private void checkInstakill() {
-        if (this.owner.currentHealth <= this.amount && owner.currentHealth > 0) {
-            instakill();
-        }
-    }
-
-    private void checkMerchant() {
-        if (owner.id.equals(FleeingMerchant.ID)) {
-            if (amount > FleeingMerchant.CURRENT_DOOM) {
-                FleeingMerchant.CURRENT_DOOM = amount;
+            if (this.owner.hasPower(DemisePower.POWER_ID)) {
+                atb(new ReducePowerAction(this.owner, this.owner, this, 1));
+            } else {
+                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
             }
         }
-    }
 
-     */
-
-    /*
-    @Override
-    public void onDeath() {
-        if (!instakilled) {
-            flash();
-            instakilled = true;
-            if (!owner.hasPower(MinionPower.POWER_ID)) {
-                CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-                EssenceSystem.changeEssence(getEssenceAmount());
-            }
-        }
-        if (owner instanceof Darkling) { // Retain it on case "some weird shit happened"
-            owner.halfDead = true;
-            FuckThisDarklings();
-        }
-    }
-
-    private void instakill() {
-        if (!instakilled) {
-            flash();
-            instakilled = true;
-            if (!owner.hasPower(MinionPower.POWER_ID)) {
-                CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-                EssenceSystem.changeEssence(getEssenceAmount());
-            }
-            att(new InstantKillAction(owner));
-            if (!(owner instanceof AwakenedOne) && !(owner instanceof Darkling)) // All we were need this if
-                att(new HideHealthBarAction(owner));
-        }
-    }
-
-    private void FuckThisDarklings() {
-        boolean allIsDead = true;
-        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
-            if (m.id.equals(Darkling.ID) && !m.halfDead)
-                allIsDead = false;
-
-        if (allIsDead) {
-            AbstractDungeon.getCurrRoom().cannotLose = false;
-            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
-                m.die();
-        }
-    }
+        this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.NONE));
 
 
-    private int getEssenceAmount() {
-        if (owner instanceof AbstractMonster) {
-            switch (((AbstractMonster) owner).type) {
-                case NORMAL:
-                    return 1;
-                case ELITE:
-                    return 2;
-                case BOSS:
-                    return 3;
-            }
-        }
-        return 1;
-    }
-
-     */
-
-    @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (!isPlayer) {
-            this.addToBot(new LoseHPAction(this.owner, this.source, getTrueHPLossValue()));
-            atb(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        }
-    }
-
-    private int getTrueHPLossValue() {
-        int otherDebuffCount = 0;
-        for (AbstractPower p : this.owner.powers) {
-            if (p.type == PowerType.DEBUFF) {
-                if (p != this) {
-                    otherDebuffCount++;
-                }
-            }
-        }
-        return Math.round(this.amount * (1 + (0.25F * otherDebuffCount)));
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount2 + DESCRIPTIONS[2];
-    }
-
-    @Override
-    public int getHealthBarAmount() {
-        int result = getTrueHPLossValue();
-        this.amount2 = result;
-        updateDescription();
-        return result;
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     @Override
