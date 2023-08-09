@@ -32,9 +32,9 @@
   "collector:DarkLordForm": {
     "NAME": "Dark Lord Form",
     "DESCRIPTIONS": [
-      "At the start of your turn, play an #yInevitable #yDemise on a random enemy.",
+      "At the start of your turn, play #yYou #yAre #yMine on a random enemy.",
       "At the start of your turn, play #b",
-      " copies of #yInevitable #yDemise on random enemies."
+      " copies of #yYou #yAre #yMine on random enemies."
     ]
   },
   "collector:DoMayhem": {
@@ -50,8 +50,7 @@
     "NAME": "Doom",
     "DESCRIPTIONS": [
       "Loses #b",
-      " HP at the end of its turn, removing all #yDoom. NL HP lost is increased by 25% for each other debuff on this enemy. NL (Current HP Loss: #b",
-      ")."
+      " HP at the start of its turn, removing all #yDoom unless they are #yAfflicted."
     ]
   },
   "collector:DoublePlayCollectibles": {
@@ -60,6 +59,14 @@
       "Collected cards are played twice.",
       "Collected cards are played #b",
       " additional times."
+    ]
+  },
+  "collector:DemisePower": {
+    "NAME": "Inevitable Demise",
+    "DESCRIPTIONS": [
+      "Prevent the next time #yDoom would be removed from this enemy.",
+      "Prevent the next #b",
+      " times #yDoom would be removed from this enemy."
     ]
   },
   "collector:FeelMyPain": {

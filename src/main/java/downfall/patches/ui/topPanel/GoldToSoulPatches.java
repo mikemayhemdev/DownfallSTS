@@ -305,9 +305,11 @@ public class GoldToSoulPatches {
         String result = uiStrings.TEXT[3] + ": " + (FleeingMerchant.DEAD ? uiStrings.TEXT[4] : FleeingMerchant.CURRENT_HP + "/" + FleeingMerchant.START_HP)
                 + " NL " + uiStrings.TEXT[5] + ": " + FleeingMerchant.CURRENT_STRENGTH
                 + " NL " + uiStrings.TEXT[6] + ": " + FleeingMerchant.CURRENT_SOULS;
-        if (FleeingMerchant.CURRENT_DOOM > 0) {
+      /*  if (FleeingMerchant.CURRENT_DOOM > 0) {
             result = result + " NL " + uiStrings.TEXT[7] + ": " + FleeingMerchant.CURRENT_DOOM;
         }
+
+       */
         MerchantTip.body = result;
     }
 

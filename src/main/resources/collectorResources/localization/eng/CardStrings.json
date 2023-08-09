@@ -87,8 +87,8 @@
   },
   "collector:DarkLordForm": {
     "NAME": "Dark Lord Form",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, play *Inevitable *Demise on a random enemy.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, play *Inevitable *Demise on a random enemy."
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, play *You *Are *Mine on a random enemy.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, play *You *Are *Mine on a random enemy."
   },
   "collector:Darkstorm": {
     "NAME": "Darkstorm",
@@ -217,7 +217,7 @@
   },
   "collector:InevitableDemise": {
     "NAME": "Inevitable Demise",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! collector:Doom."
+    "DESCRIPTION": "Deal !D! damage. NL Prevent the next time collector:Doom would be removed from the target."
   },
   "collector:InflictAgony": {
     "NAME": "Inflict Agony",

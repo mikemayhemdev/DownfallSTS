@@ -21,9 +21,9 @@ public class YouAreMine extends AbstractCollectorCard {
     // intellij stuff skill, enemy, rare, , , , , 4, 2
 
     public YouAreMine() {
-        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 3;
-        baseSecondMagic = secondMagic = 15;
+        super(ID, 3, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 1;
+        baseSecondMagic = secondMagic = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,6 +34,6 @@ public class YouAreMine extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeSecondMagic(5);
+        upgradeSecondMagic(3);
     }
 }

@@ -105,7 +105,7 @@ public class CollectorChar extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(InevitableDemise.ID);
+        retVal.add(YouAreMine.ID);
         retVal.add(FuelTheFire.ID);
         return retVal;
     }
