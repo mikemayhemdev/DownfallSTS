@@ -87,8 +87,8 @@
   },
   "collector:DarkLordForm": {
     "NAME": "暗主形态",
-    "DESCRIPTION": "虚无 。 NL 回合开始时， NL 随机打出 *贪魂绿眸 。",
-    "UPGRADE_DESCRIPTION": "回合开始时， NL 随机打出 *贪魂绿眸 。"
+    "DESCRIPTION": "虚无 。 NL 回合开始时， NL 随机打出 *你是我的了 。",
+    "UPGRADE_DESCRIPTION": "回合开始时， NL 随机打出 *你是我的了 。"
   },
   "collector:Darkstorm": {
     "NAME": "昏鸣",
@@ -175,7 +175,7 @@
   },
   "collector:InevitableDemise": {
     "NAME": "贪魂绿眸",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! collector:魂灭 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标下次 collector:魂灭 不清零。"
   },
   "collector:GreaterHurting": {
     "NAME": "伤魂",
