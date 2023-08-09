@@ -94,5 +94,11 @@
     "TEXT": [
       "[Take]"
     ]
+  },
+  "collector:EssenceReward": {
+    "TEXT": [
+      "Gain ",
+      " Essence."
+    ]
   }
 }

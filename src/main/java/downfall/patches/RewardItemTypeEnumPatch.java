@@ -32,4 +32,6 @@ public class RewardItemTypeEnumPatch {
 	public static RewardItem.RewardType SEALCARD;
 	@SpireEnum
 	public static RewardItem.RewardType COLLECTOR_COLLECTIBLECARDREWARD;
+	@SpireEnum
+	public static RewardItem.RewardType COLLECTOR_ESSENCE;
 }
