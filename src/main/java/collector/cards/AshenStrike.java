@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.shuffleIn;
+import static collector.util.Wiz.makeInHand;
 
 public class AshenStrike extends AbstractCollectorCard {
     public final static String ID = makeID(AshenStrike.class.getSimpleName());
@@ -22,7 +22,7 @@ public class AshenStrike extends AbstractCollectorCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         AbstractCard q = new Ember();
-        shuffleIn(q);
+        makeInHand(q);
     }
 
     public void upp() {
