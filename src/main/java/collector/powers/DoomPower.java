@@ -51,7 +51,7 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
             }
         }
 
-        this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
+        this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.NONE));
 
 
     }
