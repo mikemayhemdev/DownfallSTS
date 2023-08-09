@@ -288,7 +288,7 @@
   "collector:LanternFlare": {
     "NAME": "灼烧",
     "DESCRIPTIONS": [
-      "敌方回合开始时，这名敌人获得 #b",
+      "敌方回合结束时，这名敌人获得 #b",
       " 层 #y魂灭 。"
     ]
   },
