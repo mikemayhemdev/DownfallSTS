@@ -249,7 +249,7 @@
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
-    "DESCRIPTION": "collector:Pyre. NL Apply !M! collector:Doom. NL Enemy gains !clm2! more at the start of each of its turns."
+    "DESCRIPTION": "collector:Pyre. NL Apply !M! collector:Doom. NL Enemy gains !clm2! more at the end of each of its turns."
   },
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",

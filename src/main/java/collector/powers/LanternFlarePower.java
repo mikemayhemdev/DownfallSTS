@@ -17,7 +17,7 @@ public class LanternFlarePower extends AbstractCollectorPower {
     }
 
     @Override
-    public void atStartOfTurn() {
+    public void atEndOfTurn(boolean isPlayer) {
         flash();
         atb(new ApplyPowerAction(owner, owner, new DoomPower((AbstractMonster) owner, amount), amount));
     }
