@@ -32,9 +32,9 @@
   "collector:DarkLordForm": {
     "NAME": "暗主形态",
     "DESCRIPTIONS": [
-      "你的回合开始时，随机对一名敌人打出一张 #y贪魂绿眸 。",
+      "你的回合开始时，随机对一名敌人打出一张 #y你是我的了 。",
       "你的回合开始时，随机打出 #b",
-      " 张 #y贪魂绿眸 ，每次都对随机一名敌人。"
+      " 张 #y你是我的了 ，每次都对随机一名敌人。"
     ]
   },
   "collector:DoMayhem": {
@@ -50,8 +50,7 @@
     "NAME": "魂灭",
     "DESCRIPTIONS": [
       "敌方回合结束时，该单位失去 #b",
-      " 点生命与所有 #y魂灭 层数，其每有一种 #r负面效果 ，额外失去 #b25% 。 NL 本回合将失去 #b",
-      " 点生命。"
+      " 点生命与所有 #y魂灭 层数，若其处于 #y折磨 之中，则 #y魂灭 持续至下回合。"
     ]
   },
   "collector:DoublePlayCollectibles": {
@@ -60,6 +59,14 @@
       "Collected cards are played twice。",
       "Collected cards are played #b",
       " additional times。"
+    ]
+  },
+  "collector:DemisePower": {
+    "NAME": "命数已定",
+    "DESCRIPTIONS": [
+      "防止这名敌人下次失去 #y魂灭 层数。",
+      "防止这名敌人接下来 #b",
+      " 次失去 #y魂灭 层数。"
     ]
   },
   "collector:FeelMyPain": {
