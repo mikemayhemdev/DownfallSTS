@@ -291,7 +291,7 @@
   "collector:LanternFlare": {
     "NAME": "Scorched",
     "DESCRIPTIONS": [
-      "At the start of its turn, gains #b",
+      "At the end of its turn, gains #b",
       " #yDoom."
     ]
   },

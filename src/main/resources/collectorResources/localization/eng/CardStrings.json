@@ -13,8 +13,7 @@
   },
   "collector:Arrogance": {
     "NAME": "Arrogance",
-    "DESCRIPTION": "Gain !B! Block. NL Each Attack this turn also applies !M! collector:Doom.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Each Attack this turn also applies !M! collector:Doom."
+    "DESCRIPTION": "Gain !B! Block. NL Your next Attack this turn also applies !M! collector:Doom."
   },
   "collector:AshesAndDust": {
     "NAME": "Ashes and Dust",
@@ -62,8 +61,7 @@
   },
   "collector:BurningStrike": {
     "NAME": "Burning Strike",
-    "DESCRIPTION": "Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw a card."
+    "DESCRIPTION": "Deal !D! damage. NL Draw a card."
   },
   "collector:CantTouchThis": {
     "NAME": "Can't Touch This",
@@ -250,7 +248,7 @@
   },
   "collector:LanternFlare": {
     "NAME": "Lantern Flare",
-    "DESCRIPTION": "collector:Pyre. NL Apply !M! collector:Doom. NL Enemy gains !clm2! more at the start of each of its turns."
+    "DESCRIPTION": "collector:Pyre. NL Apply !M! collector:Doom. NL Enemy gains !clm2! more at the end of each of its turns."
   },
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",
