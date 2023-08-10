@@ -277,7 +277,8 @@
   },
   "collector:Omen": {
     "NAME": "不祥",
-    "DESCRIPTION": "打出 collector:藏品 牌时， NL 敌人全失去 !M! 点生命。"
+    "DESCRIPTION": "打出 collector:藏品 牌时， NL 敌人全失去 !M! 点生命。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 打出 collector:藏品 牌时， NL 敌人全失去 !M! 点生命。"
   },
   "collector:ProtectingCall": {
     "NAME": "佑护之唤",
@@ -333,7 +334,7 @@
   },
   "collector:ShootingStar": {
     "NAME": "流星",
-    "DESCRIPTION": "每回合首次 collector:焰葬 时， NL 将被葬牌返回手牌， NL 其单次耗能变为0。"
+    "DESCRIPTION": "虚无 。 NL 每回合首次 collector:焰葬 时， NL 将被葬牌返回手牌， NL 其单次耗能变为0。"
   },
   "collector:SomberShield": {
     "NAME": "阴沉护盾",
