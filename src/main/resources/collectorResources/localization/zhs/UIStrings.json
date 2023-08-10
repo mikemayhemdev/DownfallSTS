@@ -97,8 +97,8 @@
   },
   "collector:EssenceReward": {
     "TEXT": [
-      "获得 ",
-      " 魂粹。"
+      "",
+      " 魂粹"
     ]
   }
 }
