@@ -1,6 +1,6 @@
 {
   "collector:MiniCursePotion": {
-    "NAME": "Soul Extract",
+    "NAME": "灵魂提取物",
     "DESCRIPTIONS": [
       "给予 #b1 层 #y虚弱 、 #b1 层 #y易伤 ，与 #b6 层 #y魂灭 。",
       "给予 #b",
@@ -10,7 +10,7 @@
     ]
   },
   "collector:ReservePotion": {
-    "NAME": "Reserve Potion",
+    "NAME": "储能药水",
     "DESCRIPTIONS": [
       "获得 #b2 #y储能 。",
       "获得 #b",
@@ -18,7 +18,7 @@
     ]
   },
   "collector:DebuffDoublePotion": {
-    "NAME": "Embalming Oils",
+    "NAME": "防腐油",
     "DESCRIPTIONS": [
       "将目标的 #r负面效果 翻至 #b2 倍。",
       "将目标的 #r负面效果 翻至 #b",
