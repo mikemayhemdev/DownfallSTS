@@ -245,12 +245,13 @@ public class CollectorCollection {
     }
 
     public static void collect(AbstractMonster m) {
-        if (!collectedAlready.contains(m)) {
-            AbstractDungeon.getCurrRoom().rewards.add(new CollectibleCardReward(getCollectedCard(m)));
-            collectedAlready.add(m);
+        if (!collectedAlready.contains(m) && !m.id.equals(NeowBoss.ID)) {
             if (AbstractDungeon.getCurrRoom().rewards.stream().noneMatch(q -> q instanceof EssenceReward)) {
                 AbstractDungeon.getCurrRoom().rewards.add(new EssenceReward(getEssenceAmount(AbstractDungeon.getCurrRoom())));
             }
+
+            AbstractDungeon.getCurrRoom().rewards.add(new CollectibleCardReward(getCollectedCard(m)));
+            collectedAlready.add(m);
         }
 
     }
