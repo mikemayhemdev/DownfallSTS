@@ -248,7 +248,7 @@
     "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 collector:魂灭 。 NL 每当敌方回合结束时， NL 再给予 !clm2! 层。"
   },
   "collector:LuckyWick": {
-    "NAME": "幸运烛芯Lucky Wick",
+    "NAME": "幸运烛芯",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。"
   },
   "collector:MastersCall": {
