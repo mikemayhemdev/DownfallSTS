@@ -280,7 +280,8 @@
   },
   "collector:Omen": {
     "NAME": "Omen",
-    "DESCRIPTION": "Whenever you play a Collected card, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Whenever you play a Collected card, ALL enemies lose !M! HP.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a Collected card, ALL enemies lose !M! HP."
   },
   "collector:ProtectingCall": {
     "NAME": "Protecting Call",
@@ -680,6 +681,6 @@
   },
   "collector:ShootingStar": {
     "NAME": "Shooting Star",
-    "DESCRIPTION": "The first time you collector:Pyre a card each turn, return it to your hand. NL It costs 0 until played."
+    "DESCRIPTION": "Ethereal. NL The first time you collector:Pyre a card each turn, return it to your hand. NL It costs 0 until played."
   }
 }

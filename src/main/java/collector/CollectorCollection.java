@@ -248,7 +248,9 @@ public class CollectorCollection {
         if (!collectedAlready.contains(m)) {
             AbstractDungeon.getCurrRoom().rewards.add(new CollectibleCardReward(getCollectedCard(m)));
             collectedAlready.add(m);
-            AbstractDungeon.getCurrRoom().rewards.add(new EssenceReward(getEssenceAmount(AbstractDungeon.getCurrRoom())));
+            if (AbstractDungeon.getCurrRoom().rewards.stream().noneMatch(q -> q instanceof EssenceReward)) {
+                AbstractDungeon.getCurrRoom().rewards.add(new EssenceReward(getEssenceAmount(AbstractDungeon.getCurrRoom())));
+            }
         }
 
     }

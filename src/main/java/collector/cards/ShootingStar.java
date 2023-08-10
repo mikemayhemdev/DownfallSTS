@@ -13,7 +13,8 @@ public class ShootingStar extends AbstractCollectorCard {
     // intellij stuff power, self, rare, , , , , 20, 5
 
     public ShootingStar() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,6 +22,6 @@ public class ShootingStar extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(2);
     }
 }
