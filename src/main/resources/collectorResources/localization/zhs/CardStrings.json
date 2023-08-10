@@ -78,7 +78,7 @@
   },
   "collector:CursedWail": {
     "NAME": "诅咒尖啸",
-    "DESCRIPTION": "被 collector:折磨 的敌人失去1点 力量 。 NL 所有敌人本回合失去 !clm2! 层 力量 。 NL 消耗 。"
+    "DESCRIPTION": "敌人本回合全失去 !M! 层 力量 ，被 collector:折磨 的敌人本场战斗失去 !clm2! 点。 NL 消耗 。"
   },
   "collector:DarkApotheosis": {
     "NAME": "黑化",
