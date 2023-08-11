@@ -22,6 +22,7 @@
   },
   "collector:Crackle": {
     "NAME": "焰咒术",
+
     "DESCRIPTIONS": [
       "你的回合开始时，获得 #b1 #y储能 。",
       "你的回合开始时，获得 #b",
@@ -48,11 +49,8 @@
   "collector:Doom": {
     "NAME": "魂灭",
     "DESCRIPTIONS": [
-      "若 ",
-      " 的生命值降至 #b",
-      " 点及以下，立即将其击杀并获得 #b1 点 #g魂粹 。",
-      " 层(其25%的最大生命值)，战斗结束后获得其 #y藏品 牌。",
-      "这名敌人"
+      "敌方回合结束时，该单位失去 #b",
+      " 点生命与所有 #y魂灭 层数，若其处于 #y折磨 之中，则 #y魂灭 持续至下回合。"
     ]
   },
   "collector:DoublePlayCollectibles": {
@@ -61,6 +59,14 @@
       "Collected cards are played twice。",
       "Collected cards are played #b",
       " additional times。"
+    ]
+  },
+  "collector:DemisePower": {
+    "NAME": "命数已定",
+    "DESCRIPTIONS": [
+      "防止这名敌人下次失去 #y魂灭 层数。",
+      "防止这名敌人接下来 #b",
+      " 次失去 #y魂灭 层数。"
     ]
   },
   "collector:FeelMyPain": {
@@ -81,8 +87,7 @@
   "collector:Karma": {
     "NAME": "报应",
     "DESCRIPTIONS": [
-      "你的回合开始时， 获得 #b",
-      " 点 #y格挡 。若有任意一名敌人有 #b25 层级以上的 #y魂灭 ，额外获得 #b",
+      "你的回合开始时，若有任意一名敌人被 #y折磨 ，获得 #b",
       " 点 #y格挡 。"
     ]
   },
@@ -119,7 +124,7 @@
   "collector:Omen": {
     "NAME": "不祥",
     "DESCRIPTIONS": [
-      "每当你攻击被 #y折磨 中的敌人时，移除其 #b1 层 #y虚弱 与 #y易伤 来使其失去 #b",
+      "每当你打出 #y藏品 牌时，所有敌人失去 #b",
       " 点生命。"
     ]
   },
@@ -283,7 +288,7 @@
   "collector:LanternFlare": {
     "NAME": "灼烧",
     "DESCRIPTIONS": [
-      "敌方回合开始时，这名敌人获得 #b",
+      "敌方回合结束时，这名敌人获得 #b",
       " 层 #y魂灭 。"
     ]
   },
@@ -291,6 +296,14 @@
     "NAME": "蓝衣女子",
     "DESCRIPTIONS": [
       "你的回合结束时，失去当前所有药水。"
+    ]
+  },
+  "collector:ShootingStar": {
+    "NAME": "流星",
+    "DESCRIPTIONS": [
+      "每回合首次 #y焰葬 一张牌时，将该牌返回手牌，其耗能变为 #b0 一次。",
+      "每回合前 #b",
+      " 次 #y焰葬 一张牌时，将这些牌返回手牌，其耗能变为 #b0 一次。"
     ]
   }
 }

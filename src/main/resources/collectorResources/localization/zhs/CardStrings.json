@@ -9,13 +9,11 @@
   },
   "collector:AshenStrike": {
     "NAME": "化烬打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 *火花 洗入抽牌堆。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 *火花+ 洗入抽牌堆。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *余烬 。"
   },
   "collector:Arrogance": {
     "NAME": "巫傲",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张攻击会给予 !M! 层 collector:魂灭 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合所有攻击会给予 !M! 层 collector:魂灭 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张攻击会给予 !M! 层 collector:魂灭 。"
   },
   "collector:AshesAndDust": {
     "NAME": "成灰成烬",
@@ -26,7 +24,7 @@
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL \"随机给予 !clm2! 层 collector:魂灭 \""
   },
   "collector:Billow": {
-    "NAME": "鼓起",
+    "NAME": "鼓动",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得一张 *鼓噪 。"
   },
   "collector:Bellow": {
@@ -42,16 +40,17 @@
     "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 目标每有不同负面效果， NL 给予 !clm2! 层 collector:魂灭 。"
   },
   "collector:Blightning": {
-    "NAME": "Blightning",
-    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 造成 !D! 点伤害。 NL 从 *收藏堆 抽一张牌。"
+    "NAME": "惊萎",
+    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 造成 !D! 点伤害。 NL 从 *收藏堆 抽一张牌。 NL 消耗 。"
   },
   "collector:Bonfire": {
     "NAME": "篝火",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得1 collector:储能 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合获得1 collector:储能 。"
   },
   "collector:BrainDrain": {
     "NAME": "意识窥视",
-    "DESCRIPTION": "获得目标的 collector:藏品 牌， NL 本回合其单次耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "获得目标的 collector:藏品 牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得目标的 collector:藏品 牌+。 NL 消耗 。"
   },
   "collector:BramblesparKindling": {
     "NAME": "黑莓柴",
@@ -63,7 +62,7 @@
   },
   "collector:BurningStrike": {
     "NAME": "火炬打击",
-    "DESCRIPTION": "造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张牌。"
   },
   "collector:CantTouchThis": {
     "NAME": "凶不可触",
@@ -75,11 +74,11 @@
   },
   "collector:Condemn": {
     "NAME": "谴责",
-    "DESCRIPTION": "给予 !clm2! 层 collector:魂灭 。 NL 给予 !M! 层 易伤 。 "
+    "DESCRIPTION": "给予 !M! 层 易伤 。 NL 给予 !clm2! 层 collector:魂灭 。"
   },
   "collector:CursedWail": {
     "NAME": "诅咒尖啸",
-    "DESCRIPTION": "被 collector:折磨 的敌人失去1点 力量 。 NL 所有敌人本回合失去 !clm2! 层 力量 。 NL 消耗 。"
+    "DESCRIPTION": "敌人本回合全失去 !M! 层 力量 ，被 collector:折磨 的敌人本场战斗失去 !clm2! 点。 NL 消耗 。"
   },
   "collector:DarkApotheosis": {
     "NAME": "黑化",
@@ -92,7 +91,7 @@
   },
   "collector:Darkstorm": {
     "NAME": "昏鸣",
-    "DESCRIPTION": "获得一张 *Blightning ， NL 并将 !M! 张洗入 *收藏堆 。 NL 消耗 。"
+    "DESCRIPTION": "获得一张 *惊萎 ， NL 并将 !M! 张洗入抽牌堆 。 NL 消耗 。"
   },
   "collector:DarkwoodKindling": {
     "NAME": "邪柳柴",
@@ -111,11 +110,11 @@
   },
   "collector:DoMayhem": {
     "NAME": "驭魂乱战",
-    "DESCRIPTION": "回合开始时， NL 若有敌人有20层 collector:魂灭 ， NL 打出抽牌堆顶部的牌。"
+    "DESCRIPTION": "回合开始时， NL 若有敌人有25层 collector:魂灭 ， NL 打出抽牌堆顶部的牌。"
   },
   "collector:DragonsTrove": {
     "NAME": "龍之珍藏",
-    "DESCRIPTION": "抽 2 张 collector:藏品 牌。 NL 获得 !M! collector:储能 。 NL 消耗 。"
+    "DESCRIPTION": "抽2张 collector:藏品 牌。 NL 获得 !M! collector:储能 。 NL 消耗 。"
   },
   "collector:Ember": {
     "NAME": "余烬",
@@ -129,7 +128,7 @@
     "DESCRIPTION": "接下来 !M! 个回合， NL 获得X点 力量 。"
   },
   "collector:Extricate": {
-    "NAME": "Extricate",
+    "NAME": "解脱",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 打出抽牌堆顶部的牌。"
   },
   "collector:FeelMyPain": {
@@ -150,12 +149,12 @@
   },
   "collector:FlameLash": {
     "NAME": "焰鞭",
-    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 获得所 消耗 牌的伤害。",
-    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 本站战斗伤害加 !M! ， NL 再加所 消耗 牌的伤害。"
+    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 本牌附加所葬牌的伤害。",
+    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 本场战斗伤害加 !M! ， NL 再加所葬牌的伤害。"
   },
   "collector:FleetingEmbers": {
     "NAME": "转瞬之烬",
-    "DESCRIPTION": "获得 !M! 张 *余烬 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 张 *余烬 。"
   },
   "collector:Forgery": {
     "NAME": "伪造",
@@ -173,21 +172,21 @@
     "DESCRIPTION": "翻倍目标的 collector:魂灭 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "三倍目标的 collector:魂灭 。 NL 消耗 。"
   },
-  "collector:GourmandsGaze": {
+  "collector:InevitableDemise": {
     "NAME": "贪魂绿眸",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合用过藏品牌， NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标下次 collector:魂灭 不清零。"
   },
   "collector:GreaterHurting": {
     "NAME": "伤魂",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被 保留 时， NL 变为一张 *伤命 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被 保留 时， NL 变为一张 *伤命+ 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 若本牌被 消耗 ， NL 获得一张 *伤命 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 若本牌被 消耗 ， NL 获得一张 *伤命+ 。"
   },
   "collector:GreatestHurting": {
     "NAME": "伤命",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被 保留 时， NL 变为一张 *余烬 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 若本牌被 消耗 ， NL 获得一张 *余烬 。"
   },
   "collector:GreenpyreLocus": {
-    "NAME": "Greenpyre Locus",
+    "NAME": "诡域",
     "DESCRIPTION": "collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
@@ -196,11 +195,11 @@
   },
   "collector:Heatwave": {
     "NAME": "热波",
-    "DESCRIPTION": "对被 collector:折磨 的敌人造成 !D! 点伤害。 NL 获得一张 *余烬 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得一张 *余烬 。"
   },
   "collector:Hoard": {
     "NAME": "囤积",
-    "DESCRIPTION": "抽 !M! 张牌， NL 将其 保留 至下回合， NL 但本回合无法打出。"
+    "DESCRIPTION": "抽 !M! 张牌， NL 将其 保留 至下回合。"
   },
   "collector:HoardersStrike": {
     "NAME": "囤积者打击",
@@ -208,8 +207,8 @@
   },
   "collector:Hurting": {
     "NAME": "伤体",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被 保留 时， NL 变为一张 *伤魂 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本牌被 保留 时， NL 变为一张 *伤魂+ 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 若本牌被 消耗 ， NL 获得一张 *伤魂 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 若本牌被 消耗 ， NL 获得一张 *伤魂+ 。"
   },
   "collector:IllTakeThat": {
     "NAME": "物归原主",
@@ -221,7 +220,7 @@
   },
   "collector:Invigorate": {
     "NAME": "精神焕发",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力 。 NL 下回合获得 !M! 层 活力 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力 。 NL 下回合获得 4 层 活力 。"
   },
   "collector:IronbarkKindling": {
     "NAME": "铁皮柴",
@@ -233,7 +232,7 @@
   },
   "collector:ItMattersNot": {
     "NAME": "凝神无视",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 从 *收藏堆 抽一张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 敌方 虚弱 与 易伤 层数全加 !M! 。"
   },
   "collector:JadedJabs": {
     "NAME": "魂玉迸割",
@@ -241,15 +240,15 @@
   },
   "collector:Karma": {
     "NAME": "报应",
-    "DESCRIPTION": "回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人有25层 collector:魂灭 ， NL 额外获得 !clm2! 点。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得 !M! 点 格挡 。 NL 若有敌人有25层 collector:魂灭 ， NL 额外获得 !clm2! 点。"
+    "DESCRIPTION": "回合结束时， NL 获得 !M! 点 格挡 。 NL 若有敌人被 collector:折磨 ， NL 额外获得 !clm2! 点。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合结束时， NL 获得 !M! 点 格挡 。 NL 若有敌人被 collector:折磨 ， NL 额外获得 !clm2! 点。"
   },
   "collector:LanternFlare": {
     "NAME": "提灯之耀",
-    "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 collector:魂灭 。 NL 每当敌方回合开始时， NL 再给予 !clm2! 层。"
+    "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 collector:魂灭 。 NL 每当敌方回合结束时， NL 再给予 !clm2! 层。"
   },
   "collector:LuckyWick": {
-    "NAME": "幸运烛芯Lucky Wick",
+    "NAME": "幸运烛芯",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。"
   },
   "collector:MastersCall": {
@@ -278,7 +277,8 @@
   },
   "collector:Omen": {
     "NAME": "不祥",
-    "DESCRIPTION": "攻击 collector:折磨 中的敌人时，移除其1层 虚弱 与 易伤 ，来使其失去 !M! 点生命。"
+    "DESCRIPTION": "打出 collector:藏品 牌时， NL 敌人全失去 !M! 点生命。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 打出 collector:藏品 牌时， NL 敌人全失去 !M! 点生命。"
   },
   "collector:ProtectingCall": {
     "NAME": "佑护之唤",
@@ -291,7 +291,7 @@
   },
   "collector:RagingCall": {
     "NAME": "暴怒之唤",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： \"对所有敌人造成 !clm2! 点伤害\"."
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL \"造成 !clm2! 点群体伤害\""
   },
   "collector:ReceiveTribute": {
     "NAME": "纳贡",
@@ -313,7 +313,7 @@
   },
   "collector:SapStrength": {
     "NAME": "竭力",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 力量 ， NL 窃取至多 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合目标失去 !M! 点 力量 。"
   },
   "collector:ScorchingRay": {
     "NAME": "灼烧光线",
@@ -325,12 +325,16 @@
   },
   "collector:ShadowDaggers": {
     "NAME": "阴刃",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每用过一张 collector:藏品 牌， NL 再造成 !M! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": "每用过一张 collector:藏品 牌， NL 造成 !D! 点伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL (造成 ",
       " 次)",
       " 次)"
     ]
+  },
+  "collector:ShootingStar": {
+    "NAME": "流星",
+    "DESCRIPTION": "虚无 。 NL 每回合首次 collector:焰葬 时， NL 将被葬牌返回手牌， NL 其单次耗能变为0。"
   },
   "collector:SomberShield": {
     "NAME": "阴沉护盾",
@@ -341,8 +345,9 @@
     "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 消耗 。"
   },
   "collector:Soulforge": {
-    "NAME": "Soulforge",
-    "DESCRIPTION": "随机 升级 !M! 张手牌。"
+    "NAME": "铸魂",
+    "DESCRIPTION": "抽 !M! 张 collector:藏品 牌， NL 去除其 *超虚无 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张 collector:藏品 牌， NL 去除其 *超虚无 。 NL 消耗 。"
   },
   "collector:Spark": {
     "NAME": "火花",
@@ -351,11 +356,11 @@
   },
   "collector:SpiritLeech": {
     "NAME": "汲灵",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 下回合获得1 collector:储能 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 获得 !B! 点 格挡 。"
   },
   "collector:StashAway": {
     "NAME": "藏存",
-    "DESCRIPTION": "获得 !B! 点 格挡 X次。 NL 下回合， 获得 X collector:储能 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 X次。 NL 下回合获得 X collector:储能 。 NL 消耗 。"
   },
   "collector:Strike": {
     "NAME": "打击",
@@ -396,7 +401,7 @@
   },
   "collector:Wildfire": {
     "NAME": "野火",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 所有不可打出的手牌，每张获得 !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标每有一种负面效果， NL 再造成一次。"
   },
   "collector:YouAreMine": {
     "NAME": "你是我的了",
@@ -457,7 +462,7 @@
   },
   "collector:CultistCard": {
     "NAME": "邪教徒",
-    "DESCRIPTION": "collector:焰葬 。 NL 下2个回合开始时， NL 获得1点 力量 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 下3个回合开始时， NL 获得1点 力量 。"
   },
   "collector:DaggerCard": {
     "NAME": "匕首",
@@ -465,7 +470,7 @@
   },
   "collector:DarklingsCard": {
     "NAME": "小黑",
-    "DESCRIPTION": "collector:焰葬 ， NL 获得其三张复制品。",
+    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL expansioncontent:发掘 一张 collector:藏品 牌。",
     "EXTENDED_DESCRIPTION": [
       "生成三张复制品。"
     ]

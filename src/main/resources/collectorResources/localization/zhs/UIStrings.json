@@ -25,20 +25,20 @@
   "collector:CombatCollectionPileButton": {
     "TEXT": [
       "收藏堆",
-      "This contains the Collected cards you have yet to draw this combat. You draw one card from this at the start of each turn.",
+      "点击此处查看本场战斗中还处于收藏堆的牌。每回合开始时，你将从此处额外抽一张藏品牌。",
       "我没有收藏任何牌！"
     ]
   },
   "collector:EssenceCount": {
     "TEXT": [
       "魂粹",
-      "将藏品牌加入收藏堆时需要消耗魂粹，目前有 #b",
-      " 点魂粹。"
+      "将 #y藏品 牌加入 #y收藏堆 时需要消耗 #g魂粹 。战斗胜利时可获得 #b1 点，精英战斗为 #b2 点，首领战斗 #b3 点。目前有 #b",
+      " 点 #g魂粹 。"
     ]
   },
   "collector:CombatCollectionViewScreen": {
     "TEXT": [
-      "Combat collection view screen"
+      "收藏堆"
     ]
   },
   "collector:PyreInfo": {
@@ -85,7 +85,7 @@
     "TEXT": [
       "释放",
       "移除收藏堆一张牌，获得",
-      " 灵魂。",
+      "灵魂。",
       "需要一张藏品牌。",
       "选择一张藏品牌来移除。"
     ]
@@ -97,8 +97,8 @@
   },
   "collector:EssenceReward": {
     "TEXT": [
-      "Gain ",
-      " Essence."
+      "",
+      " 魂粹"
     ]
   }
 }
