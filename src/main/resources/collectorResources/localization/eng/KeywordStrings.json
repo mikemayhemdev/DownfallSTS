@@ -30,11 +30,11 @@
     "DESCRIPTION": "An alternate type of Energy that is stored across turns."
   },
   {
-    "PROPER_NAME": "MEGAthereal",
+    "PROPER_NAME": "Megathereal",
     "NAMES": [
       "megathereal"
     ],
-    "DESCRIPTION": "MEGAthereal cards move to the exhaust pile when played and at the end of your turn, no matter where they are."
+    "DESCRIPTION": "Megathereal cards move to the exhaust pile when played and at the end of your turn, no matter where they are."
   },
   {
     "PROPER_NAME": "Torch Head",

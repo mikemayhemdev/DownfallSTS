@@ -16,6 +16,7 @@ public class Torchbearer extends AbstractCollectorCard {
     public Torchbearer() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 6;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -32,7 +32,7 @@
   "collector:EssenceCount": {
     "TEXT": [
       "Essences",
-      "Spend Essences on adding cards to your Collection. Combat rooms grant #b1 #yEssence. Elites give #b2 #yEssence, Bosses give #b3! You have #b",
+      "Spend Essences on adding cards to your Collection. Combat rooms grant #b1 #yEssence. Elites give #b2 #yEssence, Bosses give #b3! NL You have #b",
       " Essences."
     ]
   },

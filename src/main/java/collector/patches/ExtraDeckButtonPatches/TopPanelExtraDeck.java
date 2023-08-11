@@ -60,6 +60,9 @@ public class TopPanelExtraDeck extends TopPanelItem {
 
     @Override
     public boolean isClickable() {
+        if (!AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
+            return false;
+        }
         return !AbstractDungeon.isScreenUp || (validScreens.contains(AbstractDungeon.screen) && !(AbstractDungeon.previousScreen == GRID || AbstractDungeon.previousScreen == BOSS_REWARD)) || isActive;
     }
 

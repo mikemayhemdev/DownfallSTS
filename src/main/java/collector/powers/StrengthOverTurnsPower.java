@@ -28,6 +28,7 @@ public class StrengthOverTurnsPower extends AbstractCollectorPower implements No
         if (duration == 0) {
             atb(new RemoveSpecificPowerAction(owner, owner, this));
         }
+        updateDescription();
     }
 
     @Override
