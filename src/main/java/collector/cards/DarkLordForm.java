@@ -14,7 +14,7 @@ public class DarkLordForm extends AbstractCollectorCard {
     public DarkLordForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         isEthereal = true;
-        cardsToPreview = new InevitableDemise();
+        cardsToPreview = new YouAreMine();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

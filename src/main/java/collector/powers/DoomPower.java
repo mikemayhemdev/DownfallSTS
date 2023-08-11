@@ -1,11 +1,13 @@
 package collector.powers;
 
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -39,21 +41,18 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
 
     public void explode() {
         this.flashWithoutSound();
-
         if (isAfflicted((AbstractMonster) this.owner)) {
-
         } else {
-
             if (this.owner.hasPower(DemisePower.POWER_ID)) {
-                atb(new ReducePowerAction(this.owner, this.owner, this, 1));
+                atb(new ReducePowerAction(this.owner, this.owner, DemisePower.POWER_ID, 1));
             } else {
                 this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
             }
         }
-
+        if (amount >= owner.currentHealth) {
+            CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
+        }
         this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.NONE));
-
-
     }
 
     @Override

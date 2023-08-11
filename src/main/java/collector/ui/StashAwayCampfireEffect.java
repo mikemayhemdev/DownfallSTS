@@ -38,7 +38,7 @@ public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.Abstract
         }
 
         if (!AbstractDungeon.isScreenUp) {
-            if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+            if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && AbstractDungeon.gridSelectScreen.forPurge) {
 
                 AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                 AbstractDungeon.effectsQueue.add(new PurgeCardEffect(c));

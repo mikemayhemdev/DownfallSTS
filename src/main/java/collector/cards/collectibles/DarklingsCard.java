@@ -17,7 +17,7 @@ public class DarklingsCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, common, , , , , , 
 
     public DarklingsCard() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         isPyre();
         baseDamage = 8;
     }
@@ -26,7 +26,11 @@ public class DarklingsCard extends AbstractCollectibleCard {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         atb(new SelectCardsAction(AbstractDungeon.player.exhaustPile.group, cardStrings.EXTENDED_DESCRIPTION[0], (card) -> CardModifierManager.hasModifier(card, CollectedCardMod.ID), (cards) -> {
             for (AbstractCard c : cards) {
-                AbstractDungeon.player.exhaustPile.moveToHand(c);
+                c.unfadeOut();
+                AbstractDungeon.player.hand.addToHand(c);
+                AbstractDungeon.player.exhaustPile.removeCard(c);
+                c.unhover();
+                c.fadingOut = false;
             }
         }));
     }

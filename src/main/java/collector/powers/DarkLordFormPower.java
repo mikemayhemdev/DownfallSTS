@@ -26,7 +26,7 @@ public class DarkLordFormPower extends AbstractCollectorPower {
                 public void update() {
                     isDone = true;
                     AbstractMonster q = AbstractDungeon.getRandomMonster();
-                    addToTop(new RepeatCardAction(q, new InevitableDemise()));
+                    addToTop(new RepeatCardAction(q, new YouAreMine()));
                 }
             });
         }
