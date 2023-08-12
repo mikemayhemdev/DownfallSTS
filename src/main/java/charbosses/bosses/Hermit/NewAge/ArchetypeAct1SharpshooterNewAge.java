@@ -16,7 +16,9 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.exordium.LouseNormal;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -26,6 +28,8 @@ import java.util.ArrayList;
 
 public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
     public static final int damageThreshold = 10;
+
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("hermit:SpecialFriend");
 
     public ArchetypeAct1SharpshooterNewAge() {
         super("HERMIT_SHARPSHOOTER_ARCHETYPE", "Dead On");
@@ -57,7 +61,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //tangerine.name = //Localized Name //TODO Give this louse a name.
+        tangerine.name = uiStrings.TEXT[0];
         tangerine.maxHealth += 24;
         tangerine.currentHealth += 24;
         tangerine.powers.add(new StrengthPower(tangerine, 2));

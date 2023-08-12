@@ -20,6 +20,7 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.Pair;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.cardmods.EtherealMod;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
@@ -107,7 +108,6 @@ import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
 import downfall.util.*;
-import expansioncontent.cardmods.EtherealMod;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import gremlin.GremlinMod;
@@ -165,7 +165,7 @@ public class downfallMod implements
         PostDeathSubscriber {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = false;
+    public static final boolean STEAM_MODE = true;
 
     public static boolean neowtextoverride = false;
 
@@ -662,7 +662,7 @@ public class downfallMod implements
         });
 
         settingsPanel.addUIElement(characterCrossoverBtn);
-        settingsPanel.addUIElement(useIconsForAppliedCardPropertiesBtn);
+        //settingsPanel.addUIElement(useIconsForAppliedCardPropertiesBtn);
 
         if (!STEAM_MODE) {
             configPos -= configStep;

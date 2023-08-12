@@ -1,6 +1,7 @@
 package champ.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
 import champ.cards.Defend;
@@ -12,7 +13,6 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import expansioncontent.cardmods.ExhaustMod;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;

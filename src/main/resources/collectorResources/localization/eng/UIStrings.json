@@ -100,5 +100,10 @@
       "Gain ",
       " Essence."
     ]
+  },
+  "collector:CharacterOption": {
+    "TEXT": [
+      "Essences: "
+    ]
   }
 }

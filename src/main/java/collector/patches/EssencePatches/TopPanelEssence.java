@@ -21,7 +21,7 @@ public class TopPanelEssence extends TopPanelItem {
 
     public static final String ID = CollectorMod.makeID("EssenceCount");
 
-    public static final Texture ICON = TextureLoader.getTexture("collectorResources/images/ui/EssenceIcon.png");
+    public static final Texture ICON = TextureLoader.getTexture("collectorResources/images/ui/esse.png");
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     public TopPanelEssence() {

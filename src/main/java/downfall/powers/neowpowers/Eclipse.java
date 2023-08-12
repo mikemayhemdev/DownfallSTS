@@ -1,5 +1,6 @@
 package downfall.powers.neowpowers;
 
+import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import com.badlogic.gdx.graphics.Texture;
@@ -8,7 +9,6 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import expansioncontent.cardmods.EtherealMod;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
 import hermit.cards.ImpendingDoom;

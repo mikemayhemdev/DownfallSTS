@@ -21,7 +21,6 @@ public class FuelTheFire extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.vfx(new FlashAtkImgEffect(p.hb.cX, p.hb.cY, AbstractGameAction.AttackEffect.FIRE));
         applyToSelf(new NextTurnReservePower(magicNumber));
     }
 

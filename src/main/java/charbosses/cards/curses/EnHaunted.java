@@ -1,5 +1,6 @@
 package charbosses.cards.curses;
 
+import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import charbosses.cards.AbstractCustomBossCard;
 import downfall.util.TextureLoader;
@@ -12,7 +13,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import expansioncontent.cardmods.EtherealMod;
 import downfall.downfallMod;
 
 public class EnHaunted extends AbstractCustomBossCard {

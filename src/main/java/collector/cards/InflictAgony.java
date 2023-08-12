@@ -24,7 +24,7 @@ public class InflictAgony extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new ViceCrushEffect(m.hb.cX, m.hb.cY)));
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
         if (!isAfflicted(m)) {
             applyToEnemy(m, new WeakPower(m, 2, false));
             applyToEnemy(m, new VulnerablePower(m, 2, false));

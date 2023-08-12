@@ -1,8 +1,6 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
-import automaton.actions.AddToFuncAction;
-import automaton.cards.Replicate;
 import automaton.cards.WhirlingStrike;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import downfall.util.TextureLoader;
@@ -11,7 +9,6 @@ import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import gremlin.actions.MakeEchoAction;
 
 import static automaton.AutomatonMod.makeRelicOutlinePath;
 import static automaton.AutomatonMod.makeRelicPath;

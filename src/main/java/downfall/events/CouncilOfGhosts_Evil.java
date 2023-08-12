@@ -4,7 +4,6 @@ import basemod.helpers.CardModifierManager;
 import collector.CollectorChar;
 import collector.CollectorCollection;
 import collector.cardmods.CollectedCardMod;
-import collector.cards.collectibles.VagrantCard;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Apparition;
@@ -72,10 +71,10 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
         if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
             AbstractCard card = new Apparition();
             CardModifierManager.addModifier(card, new CollectedCardMod());
-            imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, card);
+            this.imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, card);
+        } else {
+            this.imageEventText.setDialogOption(OPTIONS[2]);
         }
-
-        this.imageEventText.setDialogOption(OPTIONS[2]);
     }
 
     public void onEnterRoom() {
@@ -96,8 +95,7 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.loseGold(goldCost);
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);
                         this.imageEventText.clearRemainingOptions();
-                        logMetric(ID, "Purchased Apparition", Collections.singletonList(Apparition.ID), null, null, null, null, null, null,
-                                0, 0, 0, 0, 0, goldCost);
+                        logMetric(ID, "Purchased Apparition", Collections.singletonList(Apparition.ID), null, null, null, null, null, null, 0, 0, 0, 0, 0, goldCost);
                         return;
                     case 1:
                         this.imageEventText.updateBodyText(ACCEPT_BODY);
@@ -107,27 +105,28 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);
                         this.imageEventText.clearRemainingOptions();
                         return;
-                    case 2:
+                    default:
                         if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
 
                             this.imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
                             this.imageEventText.clearAllDialogs();
                             this.imageEventText.setDialogOption(OPTIONS[5]);
+                            screenNum = 1;
                             AbstractCard card = new Apparition();
                             CardModifierManager.addModifier(card, new CollectedCardMod());
                             CollectorCollection.collection.addToTop(card);
 
-                            logMetric(ID, "Take", null, null, null, null, null, null, null,
-                                    0, 0, 0, 0, 0, 0);
+                            logMetric(ID, "Take", null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0);
+                            return;
 
+                        } else {
+                            logMetricIgnored(ID);
+                            this.imageEventText.updateBodyText(EXIT_BODY);
+                            this.screenNum = 2;
+                            this.imageEventText.updateDialogOption(0, OPTIONS[5]);
+                            this.imageEventText.clearRemainingOptions();
+                            return;
                         }
-                    default:
-                        logMetricIgnored(ID);
-                        this.imageEventText.updateBodyText(EXIT_BODY);
-                        this.screenNum = 2;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[5]);
-                        this.imageEventText.clearRemainingOptions();
-                        return;
                 }
             default:
                 this.openMap();
