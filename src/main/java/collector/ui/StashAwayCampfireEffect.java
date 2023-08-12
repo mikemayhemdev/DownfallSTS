@@ -52,7 +52,7 @@ public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.Abstract
         if ((this.duration < 1.0F) && (!this.openedScreen)) {
             this.openedScreen = true;
             CardGroup cg = CardGroup.getGroupWithoutBottledCards(CollectorCollection.collection);
-            AbstractDungeon.gridSelectScreen.open(cg, 1, TEXT[3], false, false, true, true);
+            AbstractDungeon.gridSelectScreen.open(cg, 1, TEXT[4], false, false, true, true);
         }
 
 
