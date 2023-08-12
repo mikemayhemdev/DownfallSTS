@@ -46,19 +46,9 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
         super(orbTexturePaths, orbVfxPath, layerSpeeds);
 
 
-        this.secondEnergyLayers = new Texture[5];
-        this.secondNoEnergyLayers = new Texture[5];
-        this.secondBaseLayer = ImageMaster.ENERGY_RED_LAYER6;
-        this.secondEnergyLayers[0] = ImageMaster.ENERGY_RED_LAYER1;
-        this.secondEnergyLayers[1] = ImageMaster.ENERGY_RED_LAYER2;
-        this.secondEnergyLayers[2] = ImageMaster.ENERGY_RED_LAYER3;
-        this.secondEnergyLayers[3] = ImageMaster.ENERGY_RED_LAYER4;
-        this.secondEnergyLayers[4] = ImageMaster.ENERGY_RED_LAYER5;
-        this.secondNoEnergyLayers[0] = ImageMaster.ENERGY_RED_LAYER1;
-        this.secondNoEnergyLayers[1] = ImageMaster.ENERGY_RED_LAYER1;
-        this.secondNoEnergyLayers[2] = ImageMaster.ENERGY_RED_LAYER3D;
-        this.secondNoEnergyLayers[3] = ImageMaster.ENERGY_RED_LAYER4D;
-        this.secondNoEnergyLayers[4] = ImageMaster.ENERGY_RED_LAYER5D;
+        this.secondEnergyLayers = energyLayers;
+        this.secondNoEnergyLayers = noEnergyLayers;
+        secondBaseLayer = baseLayer;
         this.orbVfx = ImageMaster.loadImage(orbVfxPath);
 
         if (layerSpeeds == null) {
@@ -120,7 +110,6 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
             }
             sb.draw(this.secondBaseLayer, current_x + X_OFFSET - SECOND_ORB_W / 2F, current_y + Y_OFFSET - SECOND_ORB_W / 2F, SECOND_ORB_W / 2F, SECOND_ORB_W / 2F, SECOND_ORB_W, SECOND_ORB_W, SECOND_ORB_IMG_SCALE, SECOND_ORB_IMG_SCALE, 0.0F, 0, 0, SECOND_ORB_W, SECOND_ORB_W, false, false);
         }
-
         sb.setColor(Color.WHITE);
         sb.end();
         fbo.begin();
