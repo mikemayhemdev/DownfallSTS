@@ -4,13 +4,13 @@ import automaton.AutomatonMod;
 import automaton.cards.SpaghettiCode;
 import automaton.powers.LibraryModPower;
 import basemod.abstracts.CustomRelic;
+import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import expansioncontent.cardmods.EtherealMod;
 import downfall.util.TextureLoader;
 
 import static automaton.AutomatonMod.makeRelicOutlinePath;

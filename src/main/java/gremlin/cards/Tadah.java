@@ -1,5 +1,9 @@
 package gremlin.cards;
 
+import basemod.cardmods.EtherealMod;
+import basemod.cardmods.ExhaustMod;
+import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -8,7 +12,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
-import gremlin.actions.MakeEchoAction;
 import gremlin.orbs.GremlinWizard;
 
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
@@ -23,13 +26,12 @@ public class Tadah extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.COMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     public Tadah() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
-        baseMagicNumber = magicNumber = 0;
         GremlinMod.loadJokeCardImage(this, "Tadah.png");
     }
 
@@ -38,17 +40,16 @@ public class Tadah extends AbstractGremlinCard {
         while (skill.cost == -2) {
             skill = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL).makeCopy();
         }
-
-        AbstractDungeon.actionManager.addToBottom(new MakeEchoAction(skill, 1, magicNumber));
+        CardModifierManager.addModifier(skill, new EtherealMod());
+        CardModifierManager.addModifier(skill, new ExhaustMod());
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(skill));
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(new GremlinWizard(0)));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            this.rawDescription = strings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(0);
         }
     }
 }

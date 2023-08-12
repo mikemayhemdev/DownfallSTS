@@ -1,13 +1,13 @@
 package sneckomod.cards;
 
+import basemod.cardmods.EtherealMod;
+import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import expansioncontent.cardmods.EtherealMod;
 import sneckomod.SneckoMod;
 import sneckomod.powers.UnlimitedRollsPower;
-import expansioncontent.cardmods.ExhaustMod;
 
 public class UnlimitedRolls extends AbstractSneckoCard {
 

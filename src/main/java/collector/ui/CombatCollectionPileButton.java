@@ -62,18 +62,20 @@ public class CombatCollectionPileButton extends ClickableUIElement {
 
     @Override
     protected void onClick() {
-        if (isOpen && AbstractDungeon.screen == AbstractDungeon.CurrentScreen.EXHAUST_VIEW) {
-            isOpen = false;
-            CardCrawlGame.sound.play("DECK_CLOSE");
-            AbstractDungeon.closeCurrentScreen();
-        } else if (!AbstractDungeon.isScreenUp) {
-            if (CollectorCollection.combatCollection.isEmpty()) {
-                AbstractPlayer p = AbstractDungeon.player;
-                AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, TEXT[2], true));
-            } else {
-                ExhaustPileViewScreenPatches.showCollection = true;
-                AbstractDungeon.exhaustPileViewScreen.open();
-                isOpen = true;
+        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
+            if (isOpen && AbstractDungeon.screen == AbstractDungeon.CurrentScreen.EXHAUST_VIEW) {
+                isOpen = false;
+                CardCrawlGame.sound.play("DECK_CLOSE");
+                AbstractDungeon.closeCurrentScreen();
+            } else if (!AbstractDungeon.isScreenUp) {
+                if (CollectorCollection.combatCollection.isEmpty()) {
+                    AbstractPlayer p = AbstractDungeon.player;
+                    AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, TEXT[2], true));
+                } else {
+                    ExhaustPileViewScreenPatches.showCollection = true;
+                    AbstractDungeon.exhaustPileViewScreen.open();
+                    isOpen = true;
+                }
             }
         }
     }

@@ -452,8 +452,7 @@
 
   "Gremlin:Tadah": {
     "NAME": "Tadah!",
-    "DESCRIPTION": "expansioncontent:Echo a random Skill. NL gremlin:Swap to gremlin:Gremlin_Wizard.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Echo a random Skill. NL It costs 1 less. NL gremlin:Swap to gremlin:Gremlin_Wizard."
+    "DESCRIPTION": "expansioncontent:Echo a random Skill. NL It costs 0 until played. NL gremlin:Swap to gremlin:Gremlin_Wizard."
   },
 
   "Gremlin:TagTeam": {

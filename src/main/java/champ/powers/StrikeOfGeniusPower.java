@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import expansioncontent.cardmods.ExhaustMod;
 import expansioncontent.cardmods.PropertiesMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 import downfall.util.TextureLoader;
