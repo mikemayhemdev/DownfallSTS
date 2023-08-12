@@ -72,7 +72,7 @@
     ]
   },
   "Guardian:VentSteam": {
-    "NAME": "蒸汽喷射",
+    "NAME": "蒸汽释放",
     "DESCRIPTION": "给予 !M! 层 易伤 。"
   },
   "Guardian:CurlUp": {

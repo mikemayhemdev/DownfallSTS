@@ -165,7 +165,7 @@
   },
   "hermit:LowProfile": {
     "NAME": "低姿态",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一种负面效果， NL 额外获得 !M! 点。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 你每有一种负面效果， NL 额外获得 !M! 点。"
   },
   "hermit:Horror": {
     "NAME": "恐惧",

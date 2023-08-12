@@ -36,7 +36,7 @@
       "lucky",
       "幸运"
     ],
-    "DESCRIPTION": "牌面效果的随机值取最大值。"
+    "DESCRIPTION": "牌面与药水效果的随机值取最大值。"
   },
   {
     "PROPER_NAME": "即逝",

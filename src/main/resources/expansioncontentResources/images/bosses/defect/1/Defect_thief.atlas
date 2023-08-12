@@ -1,0 +1,188 @@
+
+Defect_thief.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shadow
+  rotate: false
+  xy: 1, 1
+  size: 250, 42
+  orig: 250, 42
+  offset: 0, 0
+  index: -1
+core
+  rotate: false
+  xy: 181, 45
+  size: 51, 49
+  orig: 51, 49
+  offset: 0, 0
+  index: -1
+R_hand
+  rotate: false
+  xy: 166, 213
+  size: 31, 30
+  orig: 31, 30
+  offset: 0, 0
+  index: -1
+R_farm
+  rotate: false
+  xy: 1, 169
+  size: 48, 30
+  orig: 48, 30
+  offset: 0, 0
+  index: -1
+R_arm
+  rotate: false
+  xy: 129, 177
+  size: 35, 38
+  orig: 35, 38
+  offset: 0, 0
+  index: -1
+L_thigh
+  rotate: false
+  xy: 44, 121
+  size: 33, 46
+  orig: 33, 46
+  offset: 0, 0
+  index: -1
+L_shin
+  rotate: false
+  xy: 166, 181
+  size: 44, 30
+  orig: 44, 30
+  offset: 0, 0
+  index: -1
+L_foot
+  rotate: false
+  xy: 40, 230
+  size: 35, 19
+  orig: 35, 19
+  offset: 0, 0
+  index: -1
+R_thigh
+  rotate: false
+  xy: 162, 141
+  size: 51, 34
+  orig: 51, 34
+  offset: 0, 0
+  index: -1
+R_shin
+  rotate: false
+  xy: 215, 141
+  size: 33, 51
+  orig: 33, 51
+  offset: 0, 0
+  index: -1
+R_foot
+  rotate: false
+  xy: 79, 121
+  size: 33, 25
+  orig: 33, 25
+  offset: 0, 0
+  index: -1
+L_arm
+  rotate: false
+  xy: 79, 149
+  size: 48, 30
+  orig: 48, 30
+  offset: 0, 0
+  index: -1
+neck
+  rotate: false
+  xy: 1, 121
+  size: 41, 42
+  orig: 41, 42
+  offset: 0, 0
+  index: -1
+cloth_1
+  rotate: false
+  xy: 1, 230
+  size: 37, 19
+  orig: 37, 19
+  offset: 0, 0
+  index: -1
+cloth_2
+  rotate: false
+  xy: 80, 181
+  size: 30, 28
+  orig: 30, 28
+  offset: 0, 0
+  index: -1
+mantle
+  rotate: false
+  xy: 1, 45
+  size: 114, 74
+  orig: 114, 74
+  offset: 0, 0
+  index: -1
+L_farm
+  rotate: false
+  xy: 51, 181
+  size: 27, 47
+  orig: 27, 47
+  offset: 0, 0
+  index: -1
+bag
+  rotate: false
+  xy: 212, 201
+  size: 27, 47
+  orig: 27, 47
+  offset: 0, 0
+  index: -1
+L_hand
+  rotate: false
+  xy: 138, 217
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+bag_end
+  rotate: false
+  xy: 231, 96
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 117, 45
+  size: 62, 57
+  orig: 62, 57
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 234, 45
+  size: 21, 21
+  orig: 31, 23
+  offset: 5, 1
+  index: -1
+Band
+  rotate: false
+  xy: 80, 217
+  size: 56, 16
+  orig: 62, 23
+  offset: 3, 4
+  index: -1
+void_o
+  rotate: false
+  xy: 181, 96
+  size: 48, 43
+  orig: 48, 43
+  offset: 0, 0
+  index: -1
+void
+  rotate: false
+  xy: 117, 104
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+void_i
+  rotate: false
+  xy: 129, 149
+  size: 21, 23
+  orig: 21, 23
+  offset: 0, 0
+  index: -1

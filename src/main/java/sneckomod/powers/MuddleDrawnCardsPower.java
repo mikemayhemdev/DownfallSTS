@@ -24,7 +24,7 @@ public class MuddleDrawnCardsPower extends TwoAmountPower implements CloneablePo
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-
+// seems this power isnt used any more
     public MuddleDrawnCardsPower(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;

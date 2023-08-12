@@ -33,7 +33,7 @@
     "NAME": "玉戒指",
     "FLAVOR": "Jade is the symbol of honesty.",
     "DESCRIPTIONS": [
-      "每当一名带 #ycollector:魂灭 的敌人死亡时，获得 #b",
+      "每当一名 #ycollector:魂劫 中的敌人死亡时，获得 #b",
       " 灵魂。"
     ]
   },

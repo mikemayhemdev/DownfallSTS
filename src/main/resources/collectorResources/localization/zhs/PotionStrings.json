@@ -2,11 +2,11 @@
   "collector:MiniCursePotion": {
     "NAME": "灵魂提取物",
     "DESCRIPTIONS": [
-      "给予 #b1 层 #y虚弱 、 #b1 层 #y易伤 ，与 #b6 层 #y魂灭 。",
+      "给予 #b1 层 #y虚弱 、 #b1 层 #y易伤 ，与 #b6 层 #y魂劫 。",
       "给予 #b",
       " 层 #y虚弱 、 #b",
       " 层 #y易伤 与 #b",
-      " 层 #y魂灭 。"
+      " 层 #y魂劫 。"
     ]
   },
   "collector:ReservePotion": {
@@ -26,7 +26,7 @@
     ]
   },
   "collector:TempHPPotion": {
-    "NAME": "Felwater",
+    "NAME": "魔水",
     "DESCRIPTIONS": [
       "获得 #b8 层 #y临时生命 。",
       "获得 #b",

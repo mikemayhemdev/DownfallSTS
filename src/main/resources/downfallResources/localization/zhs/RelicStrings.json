@@ -275,7 +275,7 @@
     ]
   },
   "downfall:PleadingVagrant": {
-      "NAME": "事件: 浪汉的恳求",
+      "NAME": "事件: 流浪汉的恳求",
     "FLAVOR": "能给我点儿什么吗，朋友？ 求求你了……一点 #y小钱 就好？",
     "DESCRIPTIONS": [
       "Boss抢劫了流浪汉，被 #p诅咒-羞耻 并 "
