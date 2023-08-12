@@ -22,6 +22,7 @@ public class AcidSlimeCardPower extends AbstractCollectorPower {
 
     public AcidSlimeCardPower(int amount) {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, amount);
+        this.loadRegion("split");
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {

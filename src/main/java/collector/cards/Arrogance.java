@@ -1,7 +1,5 @@
 package collector.cards;
 
-import collector.cards.AbstractCollectorCard;
-import collector.powers.AttacksApplyDoomPower;
 import collector.powers.NextAttackAppliesDoomPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
