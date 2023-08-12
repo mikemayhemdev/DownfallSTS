@@ -1,16 +1,17 @@
 package collector.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.vfx.combat.ViceCrushEffect;
 import hermit.util.Wiz;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.applyToEnemy;
-import static collector.util.Wiz.isAfflicted;
+import static collector.util.Wiz.*;
 
 public class InflictAgony extends AbstractCollectorCard {
     public final static String ID = makeID(InflictAgony.class.getSimpleName());
@@ -22,6 +23,7 @@ public class InflictAgony extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new VFXAction(new ViceCrushEffect(m.hb.cX, m.hb.cY)));
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (!isAfflicted(m)) {
             applyToEnemy(m, new WeakPower(m, 2, false));

@@ -114,8 +114,7 @@ public class EvilModeCharacterSelect {
                                 }
                                 villainOptions[6] = o;
                             } else if (o.c.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
-                                if (false) {
-                                //if (UnlockTracker.isCharacterLocked("Collector")) {
+                                if (UnlockTracker.isCharacterLocked("Collector")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }

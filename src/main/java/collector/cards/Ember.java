@@ -1,9 +1,11 @@
 package collector.cards;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import expansioncontent.expansionContentMod;
 
 import static collector.CollectorMod.makeID;
@@ -31,6 +33,7 @@ public class Ember extends AbstractCollectorCard {
 
     @Override
     public void triggerOnExhaust() {
+        this.addToBot(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.1F));
         applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
     }
 

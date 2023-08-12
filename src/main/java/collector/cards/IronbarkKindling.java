@@ -1,6 +1,7 @@
 package collector.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
 
@@ -21,6 +22,7 @@ public class IronbarkKindling extends AbstractCollectorCard {
 
     @Override
     public void triggerOnExhaust() {
+        CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
         blck();
     }
 

@@ -19,8 +19,8 @@ public class ForbiddenFruit extends CustomRelic {
     private static final String IMG_PATH = ForbiddenFruit.class.getSimpleName() + ".png";
     private static final String OUTLINE_IMG_PATH = ForbiddenFruit.class.getSimpleName() + ".png";
 
-    private int stage = 0;
-    private boolean selected = false;
+    private int stage = 2;
+    private boolean selected = true;
 
     public ForbiddenFruit() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);

@@ -88,8 +88,7 @@ import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import expansioncontent.expansionContentMod;
-import expansioncontent.cardmods.EtherealMod;
+import downfall.actions.MessageCaller;
 import downfall.cards.KnowingSkullWish;
 import downfall.cards.curses.*;
 import downfall.dailymods.*;
@@ -108,6 +107,8 @@ import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
 import downfall.util.*;
+import expansioncontent.cardmods.EtherealMod;
+import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import gremlin.GremlinMod;
 import gremlin.cards.Wizardry;
@@ -121,7 +122,6 @@ import guardian.relics.PickAxe;
 import guardian.rewards.GemReward;
 import guardian.rewards.GemRewardAllRarities;
 import hermit.HermitMod;
-import downfall.actions.MessageCaller;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 import sneckomod.SneckoMod;
@@ -220,7 +220,8 @@ public class downfallMod implements
             true, // Hermit
             true, // Guardian
             true, // Hexa
-            true // Charboss Info
+            true, // Charboss Info
+            true // COLLECTOR info. Wow, it's hard to believe how much has gone on since the last tutorial was made
     };
 
     public static Properties tutorialSaves = new Properties();
@@ -1475,7 +1476,7 @@ public class downfallMod implements
             FleeingMerchant.CURRENT_HP = FleeingMerchant.START_HP;
             FleeingMerchant.CURRENT_STRENGTH = 0;
             FleeingMerchant.CURRENT_SOULS = 0;
-           // FleeingMerchant.CURRENT_DOOM = 0;
+            // FleeingMerchant.CURRENT_DOOM = 0;
             Cleric_Evil.encountered = false;
             Cleric_Evil.heDead = false;
             GoldToSoulPatches.UpdateMerchantTip();
@@ -1802,6 +1803,12 @@ public class downfallMod implements
         if (AbstractDungeon.player instanceof TheHexaghost) {
             if (downfallMod.unseenTutorials[2]) {
                 AbstractDungeon.actionManager.addToBottom(new MessageCaller(2));
+            }
+        }
+
+        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
+            if (downfallMod.unseenTutorials[4]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(4));
             }
         }
 

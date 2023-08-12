@@ -1,11 +1,14 @@
 package collector.cards;
 
+import collector.effects.PurpleSearingBlowEffect;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
+import static collector.util.Wiz.atb;
 import static collector.util.Wiz.makeInHand;
 
 public class Hurting extends AbstractCollectorCard {
@@ -20,7 +23,8 @@ public class Hurting extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE); //TODO: This should use varying levels of a purple variant of searing blow vfx
+        atb(new VFXAction(new PurpleSearingBlowEffect(m.hb.cX, m.hb.cY, 3)));
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 
     @Override

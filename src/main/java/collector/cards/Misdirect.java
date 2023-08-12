@@ -1,11 +1,13 @@
 package collector.cards;
 
 import collector.powers.NextTurnReservePower;
+import com.megacrit.cardcrawl.actions.animations.AnimateJumpAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToSelf;
+import static collector.util.Wiz.atb;
 
 public class Misdirect extends AbstractCollectorCard {
     public final static String ID = makeID(Misdirect.class.getSimpleName());
@@ -17,6 +19,7 @@ public class Misdirect extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new AnimateJumpAction(p));
         blck();
         applyToSelf(new NextTurnReservePower(1));
     }
