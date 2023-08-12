@@ -100,5 +100,10 @@
       "",
       " 魂粹"
     ]
+  },
+  "collector:CharacterOption": {
+    "TEXT": [
+      "魂粹："
+    ]
   }
 }

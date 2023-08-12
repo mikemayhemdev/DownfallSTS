@@ -1,7 +1,7 @@
 package collector.util;
 
 public class EssenceSystem {
-    private static final int STARTING_ESSENCE = 5;
+    public static final int STARTING_ESSENCE = 5;
 
     private static int curEssence = STARTING_ESSENCE;
 
