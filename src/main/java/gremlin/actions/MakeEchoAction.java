@@ -1,8 +1,12 @@
 package gremlin.actions;
 
+import automaton.AutomatonMod;
 import basemod.BaseMod;
+import basemod.cardmods.EtherealMod;
+import basemod.cardmods.ExhaustMod;
 import champ.ChampMod;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.AlwaysRetainField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,8 +16,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
-import downfall.cardmods.EtherealMod;
-import downfall.cardmods.ExhaustMod;
 
 @Deprecated
 public class MakeEchoAction extends AbstractGameAction {
@@ -23,18 +25,15 @@ public class MakeEchoAction extends AbstractGameAction {
     private final int discount;
 
     //TODO: Rewrite this to be better
-    public MakeEchoAction(AbstractCard card)
-    {
+    public MakeEchoAction(AbstractCard card) {
         this(card, 1, 0);
     }
 
-    public MakeEchoAction(AbstractCard card, int amount)
-    {
+    public MakeEchoAction(AbstractCard card, int amount) {
         this(card, amount, 0);
     }
 
-    public MakeEchoAction(AbstractCard card, int amount, int discount)
-    {
+    public MakeEchoAction(AbstractCard card, int amount, int discount) {
         UnlockTracker.markCardAsSeen(card.cardID);
         this.amount = amount;
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
@@ -47,7 +46,7 @@ public class MakeEchoAction extends AbstractGameAction {
         AbstractCard card = this.c.makeStatEquivalentCopy();
         card.name = CardCrawlGame.languagePack.getUIString("Gremlin:MakeEchoAction").TEXT[0] + card.name;
         if (!card.exhaust) {
-            if(!card.hasTag(AutomatonMod.ENCODES)) {
+            if (!card.hasTag(AutomatonMod.ENCODES)) {
                 card.rawDescription = card.rawDescription + CardCrawlGame.languagePack.getUIString(ExhaustMod.ID).TEXT[0];
                 card.exhaust = true;
             }
@@ -59,7 +58,7 @@ public class MakeEchoAction extends AbstractGameAction {
             card.rawDescription = card.rawDescription.replace(CardCrawlGame.languagePack.getUIString(ChampMod.makeID("RetainCardMod")).TEXT[0], "");
         AlwaysRetainField.alwaysRetain.set(card, false);
         card.retain = false;
-        if(card.cost >= 0 && this.discount > 0)
+        if (card.cost >= 0 && this.discount > 0)
             card.updateCost(this.discount * -1);
         return card;
     }
@@ -94,13 +93,10 @@ public class MakeEchoAction extends AbstractGameAction {
                 }
                 break;
             case 2:
-                if (handAmt == 1)
-                {
+                if (handAmt == 1) {
                     AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(echoCard(),
                             Settings.WIDTH / 2.0F - (PADDING + AbstractCard.IMG_WIDTH * 0.5F), Settings.HEIGHT / 2.0F));
-                }
-                else if (handAmt == 2)
-                {
+                } else if (handAmt == 2) {
                     AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(echoCard(),
                             Settings.WIDTH / 2.0F + (PADDING + AbstractCard.IMG_WIDTH), Settings.HEIGHT / 2.0F));
 
@@ -109,21 +105,16 @@ public class MakeEchoAction extends AbstractGameAction {
                 }
                 break;
             case 3:
-                if (handAmt == 1)
-                {
+                if (handAmt == 1) {
                     AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(echoCard(),
                             Settings.WIDTH / 2.0F - (PADDING + AbstractCard.IMG_WIDTH), Settings.HEIGHT / 2.0F));
-                }
-                else if (handAmt == 2)
-                {
+                } else if (handAmt == 2) {
                     AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(echoCard(),
                             Settings.WIDTH / 2.0F + (PADDING + AbstractCard.IMG_WIDTH), Settings.HEIGHT / 2.0F));
 
                     AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(echoCard(),
                             Settings.WIDTH / 2.0F - (PADDING + AbstractCard.IMG_WIDTH), Settings.HEIGHT / 2.0F));
-                }
-                else if (handAmt == 3)
-                {
+                } else if (handAmt == 3) {
                     for (int i = 0; i < this.amount; i++) {
                         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(echoCard()));
                     }
@@ -138,10 +129,8 @@ public class MakeEchoAction extends AbstractGameAction {
         }
     }
 
-    private void addToDiscard(int discardAmt)
-    {
-        switch (this.amount)
-        {
+    private void addToDiscard(int discardAmt) {
+        switch (this.amount) {
             case 0:
                 break;
             case 1:
@@ -151,13 +140,10 @@ public class MakeEchoAction extends AbstractGameAction {
                 }
                 break;
             case 2:
-                if (discardAmt == 1)
-                {
+                if (discardAmt == 1) {
                     AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(echoCard(),
                             Settings.WIDTH * 0.5F - (PADDING + AbstractCard.IMG_WIDTH * 0.5F), Settings.HEIGHT * 0.5F));
-                }
-                else if (discardAmt == 2)
-                {
+                } else if (discardAmt == 2) {
                     AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(echoCard(),
                             Settings.WIDTH * 0.5F - (PADDING + AbstractCard.IMG_WIDTH * 0.5F), Settings.HEIGHT * 0.5F));
 
@@ -166,21 +152,16 @@ public class MakeEchoAction extends AbstractGameAction {
                 }
                 break;
             case 3:
-                if (discardAmt == 1)
-                {
+                if (discardAmt == 1) {
                     AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(echoCard(),
                             Settings.WIDTH * 0.5F + (PADDING + AbstractCard.IMG_WIDTH), Settings.HEIGHT * 0.5F));
-                }
-                else if (discardAmt == 2)
-                {
+                } else if (discardAmt == 2) {
                     AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(echoCard(),
                             Settings.WIDTH * 0.5F, Settings.HEIGHT * 0.5F));
 
                     AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(echoCard(),
                             Settings.WIDTH * 0.5F + (PADDING + AbstractCard.IMG_WIDTH), Settings.HEIGHT * 0.5F));
-                }
-                else if (discardAmt == 3)
-                {
+                } else if (discardAmt == 3) {
                     AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(echoCard(),
                             Settings.WIDTH * 0.5F, Settings.HEIGHT * 0.5F));
 
