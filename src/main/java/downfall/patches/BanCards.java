@@ -14,6 +14,7 @@ public class BanCards {
         public static void Postfix(AbstractDungeon __instance) {
             if (EvilModeCharacterSelect.evilMode) {
                 AbstractDungeon.colorlessCardPool.group.remove(SadisticNature.ID);
+                AbstractDungeon.srcColorlessCardPool.group.remove(SadisticNature.ID);
             }
         }
     }
