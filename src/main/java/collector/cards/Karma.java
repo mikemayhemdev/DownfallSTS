@@ -24,7 +24,7 @@ public class Karma extends AbstractCollectorCard {
     }
 
     public void upp() {
-        isInnate = true;
-        uDesc();
+        upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }

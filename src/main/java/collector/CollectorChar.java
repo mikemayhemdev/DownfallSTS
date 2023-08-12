@@ -52,6 +52,18 @@ public class CollectorChar extends CustomPlayer {
             "collectorResources/images/char/mainChar/orb/layer3d.png",
             "collectorResources/images/char/mainChar/orb/layer4d.png",
             "collectorResources/images/char/mainChar/orb/layer5d.png",};
+    private static final String[] orbTexturesAlt = {
+            "collectorResources/images/char/mainChar/orb/alt/layer1.png",
+            "collectorResources/images/char/mainChar/orb/alt/layer2.png",
+            "collectorResources/images/char/mainChar/orb/alt/layer3.png",
+            "collectorResources/images/char/mainChar/orb/alt/layer4.png",
+            "collectorResources/images/char/mainChar/orb/alt/layer5.png",
+            "collectorResources/images/char/mainChar/orb/alt/layer6.png",
+            "collectorResources/images/char/mainChar/orb/alt/layer1d.png",
+            "collectorResources/images/char/mainChar/orb/alt/layer2d.png",
+            "collectorResources/images/char/mainChar/orb/alt/layer3d.png",
+            "collectorResources/images/char/mainChar/orb/alt/layer4d.png",
+            "collectorResources/images/char/mainChar/orb/alt/layer5d.png",};
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
     public float renderscale = 1.2F;
@@ -64,7 +76,7 @@ public class CollectorChar extends CustomPlayer {
     public static final String COLLECTORTAKE = CardCrawlGame.languagePack.getUIString("collector:BonusEventOption").TEXT[0];
 
     public CollectorChar(String name, PlayerClass setClass) {
-        super(name, setClass, new DoubleEnergyOrb(orbTextures, "collectorResources/images/char/mainChar/orb/vfx.png", layerSpeeds), null, (String) null);
+        super(name, setClass, new DoubleEnergyOrb(orbTextures, "collectorResources/images/char/mainChar/orb/vfx.png", layerSpeeds, orbTexturesAlt, "collectorResources/images/char/mainChar/orb/alt/vfx.png"), null, (String) null);
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,

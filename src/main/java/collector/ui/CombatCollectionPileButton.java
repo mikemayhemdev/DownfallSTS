@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
+import downfall.util.TextureLoader;
 
 import static collector.CollectorMod.makeID;
 
@@ -39,6 +40,8 @@ public class CombatCollectionPileButton extends ClickableUIElement {
     private final BobEffect bob;
 
     private boolean isOpen = false;
+
+    private static Texture tex = TextureLoader.getTexture("collectorResources/images/ui/collect_deck.png");
 
     public CombatCollectionPileButton() {
         super((Texture) null,
@@ -86,6 +89,14 @@ public class CombatCollectionPileButton extends ClickableUIElement {
         bob.update();
     }
 
+    public float getRenderX() {
+        return hitbox.x + hitbox.width / 2F;
+    }
+
+    public float getRenderY() {
+        return hitbox.y + (hitbox.height / 2F) + bob.y;
+    }
+
     @Override
     public void render(SpriteBatch sb) {
         if (CollectorCollection.combatCollection != null && (AbstractDungeon.player.chosenClass == CollectorChar.Enums.THE_COLLECTOR)) {
@@ -93,7 +104,7 @@ public class CombatCollectionPileButton extends ClickableUIElement {
                 float x = hitbox.x + hitbox.width / 2f;
                 float y = hitbox.y + hitbox.height / 2f;
                 sb.setColor(Color.WHITE);
-                draw(sb, ImageMaster.DECK_ICON, x, y + bob.y);
+                draw(sb, tex, x, y + bob.y);
 
                 String msg = Integer.toString(CollectorCollection.combatCollection.size());
                 sb.setColor(Color.WHITE);

@@ -5,6 +5,7 @@ import automaton.cards.Replicate;
 import automaton.cards.Defend;
 import automaton.cards.Strike;
 import automaton.relics.BronzeCore;
+import automaton.vfx.CompileVictoryEffect;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -21,6 +22,8 @@ import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.scene.DefectVictoryNumberEffect;
 import downfall.util.TextureLoader;
 import reskinContent.patches.CharacterSelectScreenPatches;
 
@@ -192,6 +195,18 @@ public class AutomatonChar extends CustomPlayer {
                 AbstractGameAction.AttackEffect.FIRE,
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL,
                 AbstractGameAction.AttackEffect.SLASH_HORIZONTAL};
+    }
+
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+        if (effects.size() == 0)
+            effects.add(new CompileVictoryEffect());
+        else {
+            effects.addAll(CompileVictoryEffect.effects);
+            CompileVictoryEffect.effects.clear();
+            if (effects.stream().filter(e -> e instanceof DefectVictoryNumberEffect).count() < 8)
+                effects.add(new DefectVictoryNumberEffect());
+        }
     }
 
     @Override

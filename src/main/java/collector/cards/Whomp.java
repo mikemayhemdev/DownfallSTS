@@ -20,7 +20,7 @@ public class Whomp extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        dmg(m, AbstractGameAction.AttackEffect.SMASH);
         atb(new AddTemporaryHPAction(p, p, magicNumber));
     }
 

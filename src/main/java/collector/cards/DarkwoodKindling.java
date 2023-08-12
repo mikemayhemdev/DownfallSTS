@@ -2,6 +2,7 @@ package collector.cards;
 
 import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
 import hermit.util.Wiz;
@@ -30,6 +31,8 @@ public class DarkwoodKindling extends AbstractCollectorCard {
 
     @Override
     public void triggerOnExhaust() {
+        CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);
+        CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);
         Wiz.forAllMonstersLiving(q -> applyToEnemy(q, new DoomPower(q, magicNumber)));
     }
 

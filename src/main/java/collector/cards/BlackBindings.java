@@ -1,11 +1,18 @@
 package collector.cards;
 
 import collector.powers.DoomPower;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.vfx.combat.EntangleEffect;
+import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.*;
@@ -21,6 +28,7 @@ public class BlackBindings extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new EntangleEffect(p.hb.cX + 70.0F * Settings.scale, p.hb.cY + 10.0F * Settings.scale, m.hb.cX, m.hb.cY), 0.5F));
         applyToEnemy(m, new WeakPower(m, magicNumber, false));
         atb(new AbstractGameAction() {
             @Override

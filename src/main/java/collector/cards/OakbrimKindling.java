@@ -3,6 +3,7 @@ package collector.cards;
 import collector.powers.NextTurnReservePower;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
 
@@ -25,6 +26,7 @@ public class OakbrimKindling extends AbstractCollectorCard {
 
     @Override
     public void triggerOnExhaust() {
+        CardCrawlGame.sound.play("STAB_BOOK_DEATH");
         atb(new DrawCardAction(magicNumber));
     }
 

@@ -9,6 +9,7 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import collector.patches.CollectiblesPatches.CollectibleCardColorEnumPatch;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -553,7 +554,7 @@ public class SneckoMod implements
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
-                if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor() && r != AbstractCard.CardColor.COLORLESS && r != CardColorEnumPatch.CardColorPatch.BOSS && (!sneckoNoModCharacters || allowedColors.contains(r.name()))) {
+                if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor() && r != AbstractCard.CardColor.COLORLESS && r != CardColorEnumPatch.CardColorPatch.BOSS && r != CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE && (!sneckoNoModCharacters || allowedColors.contains(r.name()))) {
                     String s = getClassFromColor(r);
                     AbstractCard q = playerStartCardForEventFromColor(r);
                     String[] strings = CardCrawlGame.languagePack.getUIString("sneckomod:AtGameStart").TEXT;

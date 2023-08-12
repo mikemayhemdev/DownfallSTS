@@ -2,12 +2,13 @@ package collector.cards;
 
 import automaton.actions.EasyXCostAction;
 import collector.powers.StrengthOverTurnsPower;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.HeartBuffEffect;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.applyToSelfTop;
-import static collector.util.Wiz.atb;
+import static collector.util.Wiz.*;
 
 public class Empower extends AbstractCollectorCard {
     public final static String ID = makeID(Empower.class.getSimpleName());
@@ -20,6 +21,7 @@ public class Empower extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
+            att(new VFXAction(new HeartBuffEffect(Empower.this.hb.cX, Empower.this.hb.cY)));
             applyToSelfTop(new StrengthOverTurnsPower(magicNumber, effect));
             return true;
         }));

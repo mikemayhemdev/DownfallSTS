@@ -17,7 +17,7 @@ public class Roast extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE); //TODO: We'll need a lot more than just this one fire attack FX. Let's check out hermit's tricks and do some of our own in the long run
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 
     public void upp() {

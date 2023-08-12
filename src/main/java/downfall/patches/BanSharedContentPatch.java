@@ -11,20 +11,18 @@ import champ.potions.CounterstrikePotion;
 import champ.relics.Barbells;
 import champ.relics.DeflectingBracers;
 import champ.relics.DuelingGlove;
+import collector.CollectorChar;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
-import com.megacrit.cardcrawl.relics.Ectoplasm;
 import downfall.cards.curses.*;
 import downfall.downfallMod;
 import downfall.events.HeartEvent;
-import downfall.relics.Hecktoplasm;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
-import expansioncontent.cards.deprecated.*;
-import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.potions.BossPotion;
+import expansioncontent.relics.StudyCardRelic;
 import gremlin.potions.WizPotion;
 import gremlin.relics.ImpeccablePecs;
 import gremlin.relics.PricklyShields;
@@ -134,6 +132,10 @@ public class BanSharedContentPatch {
                 AbstractDungeon.colorlessCardPool.removeCard(HyperBeam.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(HyperBeam.ID);
             }
+            if (AbstractDungeon.player instanceof CollectorChar || RandomCardWithTagAction.collectorLocked()) {
+                AbstractDungeon.colorlessCardPool.removeCard(YouAreMine.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(YouAreMine.ID);
+            }
 
 
             if (AbstractDungeon.player instanceof TheSnecko) {
@@ -197,10 +199,10 @@ public class BanSharedContentPatch {
                 PotionHelper.potions.remove(BossPotion.POTION_ID);
             }
             // Ban shared potions from other classes if you haven't played as that class before
-            runLockedPotions.forEach((playerClass, potionIds) ->{
+            runLockedPotions.forEach((playerClass, potionIds) -> {
                 // Shared potions will never be banned from their base class
-                if (chosenClass!=playerClass) {
-                    if(!HeartEvent.hasPlayedRun(playerClass)) {
+                if (chosenClass != playerClass) {
+                    if (!HeartEvent.hasPlayedRun(playerClass)) {
                         PotionHelper.potions.removeAll(potionIds);
                     }
                 }

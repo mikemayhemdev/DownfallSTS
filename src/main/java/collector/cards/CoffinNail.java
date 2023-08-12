@@ -23,7 +23,7 @@ public class CoffinNail extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL); //TODO: Quick one-shot version of collector cast FX
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL); // Could have better VFX
     }
 
     @Override
