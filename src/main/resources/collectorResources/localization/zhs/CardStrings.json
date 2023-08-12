@@ -239,7 +239,7 @@
     "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 获得所葬牌耗能+ !M! 张小刀。"
   },
   "collector:Karma": {
-    "NAME": "报应",
+    "NAME": "业报",
     "DESCRIPTION": "回合结束时， NL 获得 !M! 点 格挡 。 NL 若有敌人被 collector:折磨 ， NL 额外获得 !clm2! 点。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 回合结束时， NL 获得 !M! 点 格挡 。 NL 若有敌人被 collector:折磨 ， NL 额外获得 !clm2! 点。"
   },
@@ -256,7 +256,7 @@
     "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 打出攻击时， NL 若有 临时生命 ， NL 随机造成 !clm2! 点伤害。"
   },
   "collector:MiniCurse": {
-    "NAME": "微咒",
+    "NAME": "寸孽",
     "DESCRIPTION": "collector:焰葬 。 NL 给予1层 虚弱 与 易伤 。",
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 给予所有敌人1层 虚弱 与 易伤 。"
   },
