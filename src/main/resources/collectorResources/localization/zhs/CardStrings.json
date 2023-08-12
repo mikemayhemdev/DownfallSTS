@@ -188,7 +188,7 @@
   "collector:GreenpyreLocus": {
     "NAME": "诡域",
     "DESCRIPTION": "collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌加入手牌。"
     ]
