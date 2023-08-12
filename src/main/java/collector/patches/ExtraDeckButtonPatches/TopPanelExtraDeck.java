@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputAction;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -23,6 +22,7 @@ import com.megacrit.cardcrawl.screens.MasterDeckViewScreen;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import com.megacrit.cardcrawl.screens.mainMenu.ScrollBar;
 import com.megacrit.cardcrawl.ui.panels.TopPanel;
+import downfall.util.TextureLoader;
 import javassist.CtBehavior;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class TopPanelExtraDeck extends TopPanelItem {
 
     public static final String ID = CollectorMod.makeID("CollectionUITopPanel");
 
-    private static final Texture ICON = ImageMaster.DECK_ICON;
+    private static final Texture ICON = TextureLoader.getTexture("collectorResources/images/ui/CollectionIcon.png");
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
 
     private static boolean isActive = false;
