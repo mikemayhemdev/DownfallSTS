@@ -42,13 +42,26 @@ public class DoubleEnergyOrb extends CustomEnergyOrb {
     private Texture mask;
     private FrameBuffer fbo;
 
-    public DoubleEnergyOrb(String[] orbTexturePaths, String orbVfxPath, float[] layerSpeeds) {
+    public DoubleEnergyOrb(String[] orbTexturePaths, String orbVfxPath, float[] layerSpeeds, String[] orbTexturePathsAlt, String orbVfxPathAlt) {
         super(orbTexturePaths, orbVfxPath, layerSpeeds);
 
+        int numLayers = 5;
+        secondEnergyLayers = new Texture[numLayers];
+        secondNoEnergyLayers = new Texture[numLayers];
+        assert orbTexturePathsAlt.length >= 3;
 
-        this.secondEnergyLayers = energyLayers;
-        this.secondNoEnergyLayers = noEnergyLayers;
-        secondBaseLayer = baseLayer;
+        assert orbTexturePathsAlt.length % 2 == 1;
+
+        int middleIdx = orbTexturePathsAlt.length / 2;
+        this.secondEnergyLayers = new Texture[middleIdx];
+        this.secondNoEnergyLayers = new Texture[middleIdx];
+
+        for(int i = 0; i < middleIdx; ++i) {
+            this.secondEnergyLayers[i] = ImageMaster.loadImage(orbTexturePathsAlt[i]);
+            this.secondNoEnergyLayers[i] = ImageMaster.loadImage(orbTexturePathsAlt[i + middleIdx + 1]);
+        }
+
+        secondBaseLayer = TextureLoader.getTexture("collectorResources/images/char/mainChar/orb/alt/layer6.png");
         this.orbVfx = ImageMaster.loadImage(orbVfxPath);
 
         if (layerSpeeds == null) {
