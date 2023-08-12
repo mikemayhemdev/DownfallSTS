@@ -2,6 +2,7 @@ package collector.cards.collectibles;
 
 import collector.powers.collectioncards.BookOfStabbingCardPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
@@ -17,6 +18,7 @@ public class BookOfStabbingCard extends AbstractCollectibleCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        CardCrawlGame.sound.play("STAB_BOOK_DEATH");
         applyToSelf(new BookOfStabbingCardPower(magicNumber));
     }
 

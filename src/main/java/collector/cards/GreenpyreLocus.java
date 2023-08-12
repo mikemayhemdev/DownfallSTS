@@ -23,7 +23,7 @@ public class GreenpyreLocus extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        selfRetain = true;
         uDesc();
     }
 }

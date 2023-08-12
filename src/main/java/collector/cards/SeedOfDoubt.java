@@ -2,9 +2,12 @@ package collector.cards;
 
 import collector.powers.DoomPower;
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
@@ -20,6 +23,7 @@ public class SeedOfDoubt extends AbstractCollectorCard implements OnOtherCardExh
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new VFXAction(new GiantEyeEffect(m.hb.cX, m.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
         applyToEnemy(m, new DoomPower(m, magicNumber));
     }
 

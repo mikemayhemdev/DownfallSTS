@@ -187,7 +187,7 @@
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus",
     "DESCRIPTION": "collector:Pyre. NL Put !M! card from your Collected pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Put !M! cards from your Collected pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL collector:Pyre. NL Put !M! card from your Collected pile into your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to add into your hand."
     ]

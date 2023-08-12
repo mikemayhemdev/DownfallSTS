@@ -1,6 +1,7 @@
 package collector.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -32,6 +33,7 @@ public class SunbloomKindling extends AbstractCollectorCard {
 
     @Override
     public void triggerOnExhaust() {
+        CardCrawlGame.sound.play("HEAL_1");
         applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
         makeInHand(new Ember(), 2);
     }

@@ -2,10 +2,14 @@ package collector.cards;
 
 import basemod.helpers.CardModifierManager;
 import collector.CollectorCollection;
+import collector.CollectorMod;
 import collector.cardmods.CollectedCardMod;
+import collector.effects.MiniUpgradeShine;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.util.Wiz;
 
@@ -37,6 +41,9 @@ public class DarkApotheosis extends AbstractCollectorCard {
                 }
             }
         });
+        if (toCheck.stream().anyMatch(q -> CollectorCollection.combatCollection.group.contains(q))) {
+            atb(new VFXAction(new MiniUpgradeShine(CollectorMod.combatCollectionPileButton.getRenderX(), CollectorMod.combatCollectionPileButton.getRenderY())));
+        }
     }
 
     public void upp() {

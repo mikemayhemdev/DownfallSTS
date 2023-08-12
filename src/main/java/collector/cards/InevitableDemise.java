@@ -21,8 +21,6 @@ public class InevitableDemise extends AbstractCollectorCard {
        // baseMagicNumber = magicNumber = 1;
     }
 
-    public boolean returnToYou = false;
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         applyToEnemy(m, new DemisePower(m, 1));

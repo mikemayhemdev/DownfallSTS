@@ -86,6 +86,14 @@ public class CombatCollectionPileButton extends ClickableUIElement {
         bob.update();
     }
 
+    public float getRenderX() {
+        return hitbox.x + hitbox.width / 2F;
+    }
+
+    public float getRenderY() {
+        return hitbox.y + (hitbox.height / 2F) + bob.y;
+    }
+
     @Override
     public void render(SpriteBatch sb) {
         if (CollectorCollection.combatCollection != null && (AbstractDungeon.player.chosenClass == CollectorChar.Enums.THE_COLLECTOR)) {

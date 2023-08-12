@@ -1,7 +1,10 @@
 package collector.cards;
 
+import collector.effects.GreenflameBarrierEffect;
 import collector.powers.NextTurnReservePower;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static collector.CollectorMod.makeID;
@@ -18,6 +21,11 @@ public class Bonfire extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (Settings.FAST_MODE) {
+            this.addToBot(new VFXAction(p, new GreenflameBarrierEffect(p.hb.cX, p.hb.cY), 0.1F));
+        } else {
+            this.addToBot(new VFXAction(p, new GreenflameBarrierEffect(p.hb.cX, p.hb.cY), 0.5F));
+        }
         blck();
         applyToSelf(new NextTurnReservePower(1));
     }

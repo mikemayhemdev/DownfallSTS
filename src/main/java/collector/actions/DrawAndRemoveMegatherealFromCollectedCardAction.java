@@ -5,6 +5,7 @@ import collector.CollectorCollection;
 import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.LuckyWick;
 import collector.relics.HolidayCoal;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,13 +25,29 @@ public class DrawAndRemoveMegatherealFromCollectedCardAction extends AbstractGam
             CollectorCollection.combatCollection.removeCard(tar);
             CardModifierManager.removeModifiersById(tar, CollectedCardMod.ID, true);
             AbstractDungeon.player.drawPile.addToTop(tar);
-            att(new DrawCardAction(1));
+            att(new DrawCardAction(1, new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    for (AbstractCard c : DrawCardAction.drawnCards) {
+                        c.superFlash(Color.GOLD.cpy());
+                    }
+                }
+            }));
         } else {
             if (AbstractDungeon.player.hasRelic(HolidayCoal.ID)) {
                 AbstractDungeon.player.getRelic(HolidayCoal.ID).flash();
                 AbstractCard tar = new LuckyWick();
                 AbstractDungeon.player.drawPile.addToTop(tar);
-                att(new DrawCardAction(1));
+                att(new DrawCardAction(1, new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        for (AbstractCard c : DrawCardAction.drawnCards) {
+                            c.superFlash(Color.GOLD.cpy());
+                        }
+                    }
+                }));
             }
         }
         this.isDone = true;

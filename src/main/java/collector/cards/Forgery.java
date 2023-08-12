@@ -25,7 +25,7 @@ public class Forgery extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         if (!CollectorCollection.combatCollection.isEmpty()) {
             ArrayList<AbstractCard> possibilities = new ArrayList<>();
             ArrayList<AbstractCard> toShow = new ArrayList<>();
