@@ -1,11 +1,7 @@
-/*
 package downfall.relics;
 
-import automaton.AutomatonChar;
-import automaton.actions.RepeatCardAction;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardPowerTip;
-import champ.ChampChar;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
@@ -15,10 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import downfall.downfallMod;
-import expansioncontent.patches.CardColorEnumPatch;
-import guardian.patches.AbstractCardEnum;
-import sneckomod.TheSnecko;
-import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 
@@ -59,7 +51,7 @@ public class TestRelic extends CustomRelic implements ClickableRelic {
         if (AbstractDungeon.getCurrRoom().monsters.monsters.get(0).maxHealth < 1000) {
             AbstractDungeon.getCurrRoom().monsters.monsters.get(0).increaseMaxHp(12345, true);
         }
-        for (AbstractCard c: AbstractDungeon.player.hand.group){
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
             addToTop(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
         }
         flash();
@@ -68,4 +60,3 @@ public class TestRelic extends CustomRelic implements ClickableRelic {
         setNextCard();
     }
 }
-*/

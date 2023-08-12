@@ -1,0 +1,12 @@
+{
+  "champ:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "The best solution is often the simplest one."
+    ],
+    "OPTIONS": [
+      "[Intuition] #gAdd #gTechnique to all #gStrikes and #gDefends.",
+      "[Locked] Requires a Strike or Defend."
+    ]
+  }
+}

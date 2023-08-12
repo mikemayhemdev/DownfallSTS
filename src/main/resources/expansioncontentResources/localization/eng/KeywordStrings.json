@@ -1,5 +1,13 @@
 [
   {
+    "PROPER_NAME": "Blur",
+    "ID": "blur",
+    "NAMES": [
+      "blur"
+    ],
+    "DESCRIPTION": "#yBlock is not removed at the start of your turn."
+  },
+  {
     "PROPER_NAME": "Boss",
     "NAMES": [
       "boss"
@@ -7,18 +15,27 @@
     "DESCRIPTION": "You may only play #b1 #yBoss card in a turn."
   },
   {
+    "PROPER_NAME": "Echo",
+    "ID": "echo",
+    "NAMES": [
+      "echo"
+    ],
+    "DESCRIPTION": "Add an copy of a card to you hand, it is #yEthereal and #yExhausts. NL Echoes cannot be Echoed."
+  },
+  {
+    "PROPER_NAME": "Exhume",
+    "ID": "exhume",
+    "NAMES": [
+      "exhume"
+    ],
+    "DESCRIPTION": "Put a card from your exhaust pile into your hand."
+  },
+  {
     "PROPER_NAME": "Invincible",
     "NAMES": [
       "invincible"
     ],
     "DESCRIPTION": "You cannot lose more than a given amount of HP in a single turn. NL At the end of any round in which Invincible prevented HP loss, remove it."
-  },
-  {
-    "PROPER_NAME": "Exhume",
-    "NAMES": [
-      "exhume"
-    ],
-    "DESCRIPTION": "Put a card from your exhaust pile into your hand."
   },
   {
     "PROPER_NAME": "Reclaim",
@@ -33,5 +50,22 @@
       "shackled"
     ],
     "DESCRIPTION": "Shackled creatures lose #yStrength for a turn."
+  },
+  {
+    "PROPER_NAME": "Temporary HP",
+    "ID": "temp_hp",
+    "NAMES": [
+      "temp hp",
+      "temp_hp"
+    ],
+    "DESCRIPTION": "Until end of combat, prevents damage to HP."
+  },
+  {
+    "PROPER_NAME": "Transform",
+    "ID": "transform",
+    "NAMES": [
+      "transform"
+    ],
+    "DESCRIPTION": "#yExhaust a card, replacing it with a different card."
   }
 ]

@@ -15,6 +15,7 @@ import hermit.util.Wiz;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
+import static hermit.util.Wiz.att;
 
 public class BodyArmor extends AbstractDynamicCard {
 

@@ -10,8 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import expansioncontent.expansionContentMod;
 
-import java.util.Iterator;
-
 
 public class CorruptAction extends AbstractGameAction {
     public static final String[] TEXT;

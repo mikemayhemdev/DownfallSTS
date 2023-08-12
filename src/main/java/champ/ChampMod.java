@@ -143,6 +143,7 @@ public class ChampMod implements
     public static Texture openerRB;
     public static Texture openerYR;
     public static Texture openerYB;
+    public static Texture pyreIcon;
 
     public ChampMod() {
         BaseMod.subscribe(this);
@@ -385,6 +386,7 @@ public class ChampMod implements
         openerYR = TextureLoader.getTexture("champResources/images/cardicons/openeryellowred.png");
         openerYB = TextureLoader.getTexture("champResources/images/cardicons/openerblueyellow.png");
         openerRB = TextureLoader.getTexture("champResources/images/cardicons/openerredblue.png");
+        pyreIcon = TextureLoader.getTexture("champResources/images/cardicons/pyreIcon.png");
 
         UIAtlas.addRegion("heartOrb", heartOrb, 0, 0, heartOrb.getWidth(), heartOrb.getHeight());
         UIAtlas.addRegion("openerAll", openerAll, 0, 0, openerAll.getWidth(), openerAll.getHeight());
@@ -396,6 +398,7 @@ public class ChampMod implements
         UIAtlas.addRegion("openerYR", openerYR, 0, 0, openerYR.getWidth(), openerYR.getHeight());
         UIAtlas.addRegion("openerYB", openerYB, 0, 0, openerYB.getWidth(), openerYB.getHeight());
         UIAtlas.addRegion("openerRB", openerRB, 0, 0, openerRB.getWidth(), openerRB.getHeight());
+        UIAtlas.addRegion("pyreIcon", pyreIcon, 0, 0, pyreIcon.getWidth(), pyreIcon.getHeight());
 
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil_Champ.ID, Colosseum_Evil_Champ.class) //Event ID//
                 //Event Spawn Condition//

@@ -4,14 +4,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.city.Snecko;
-import expansioncontent.expansionContentMod;
 import sneckomod.SneckoMod;
-import sneckomod.actions.MuddleAction;
 import sneckomod.actions.NoApplyRandomDamageAction;
-import theHexaghost.HexaMod;
-
-import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class DiceCrush extends AbstractSneckoCard {
 

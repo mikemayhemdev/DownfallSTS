@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import downfall.util.CardIgnore;
-import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
+import expansioncontent.cards.AbstractExpansionCard;
 import slimebound.powers.NextTurnGainStrengthPower;
 
 @CardIgnore
