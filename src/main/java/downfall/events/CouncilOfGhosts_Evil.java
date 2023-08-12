@@ -1,5 +1,10 @@
 package downfall.events;
 
+import basemod.helpers.CardModifierManager;
+import collector.CollectorChar;
+import collector.CollectorCollection;
+import collector.cardmods.CollectedCardMod;
+import collector.cards.collectibles.VagrantCard;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Apparition;
@@ -64,6 +69,11 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
             this.imageEventText.setDialogOption(OPTIONS[0] + this.hpLoss + OPTIONS[1], new Apparition());
         }
 
+        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
+            AbstractCard card = new Apparition();
+            CardModifierManager.addModifier(card, new CollectedCardMod());
+            imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, card);
+        }
 
         this.imageEventText.setDialogOption(OPTIONS[2]);
     }
@@ -98,6 +108,20 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
                         this.imageEventText.clearRemainingOptions();
                         return;
                     case 2:
+                        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
+
+                            this.imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
+                            this.imageEventText.clearAllDialogs();
+                            this.imageEventText.setDialogOption(OPTIONS[5]);
+                            AbstractCard card = new Apparition();
+                            CardModifierManager.addModifier(card, new CollectedCardMod());
+                            CollectorCollection.collection.addToTop(card);
+
+                            logMetric(ID, "Take", null, null, null, null, null, null, null,
+                                    0, 0, 0, 0, 0, 0);
+
+                        }
+                    default:
                         logMetricIgnored(ID);
                         this.imageEventText.updateBodyText(EXIT_BODY);
                         this.screenNum = 2;

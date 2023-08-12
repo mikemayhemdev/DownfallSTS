@@ -62,21 +62,23 @@ public class ViciousTackle extends AbstractSlimeboundCard {
         if (mo != null) {
             if (mo.hasPower(SlimedPower.POWER_ID)) {
 
-                bonus = mo.getPower(SlimedPower.POWER_ID).amount;
+                bonus += mo.getPower(SlimedPower.POWER_ID).amount;
             }
 
-            if (bonus > 0) {
-                this.isDamageModified = true;
-            }
         }
 
         if (player.hasPower(TackleBuffPower.POWER_ID)) {
-            bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
+            bonus += player.getPower(TackleBuffPower.POWER_ID).amount;
         }
         if (mo != null) {
             if (mo.hasPower(TackleDebuffPower.POWER_ID)) {
-                bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
+                bonus += mo.getPower(TackleDebuffPower.POWER_ID).amount;
             }
+        }
+
+
+        if (bonus > 0) {
+            this.isDamageModified = true;
         }
         return tmp + bonus;
 
@@ -86,7 +88,7 @@ public class ViciousTackle extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         if (!AbstractDungeon.player.hasPower(PreventTackleDamagePower.POWER_ID))
-        addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
+            addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
         //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
 

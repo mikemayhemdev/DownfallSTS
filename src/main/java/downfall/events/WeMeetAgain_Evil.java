@@ -1,5 +1,6 @@
 package downfall.events;
 
+import collector.CollectorChar;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -83,8 +84,7 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
         if (this.relicOffersAvailable >= 1) {
             if (AbstractDungeon.ascensionLevel >= 15) {
                 this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(0).name + OPTIONS[1] + OPTIONS[8]);
-            }
-            else {
+            } else {
                 this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(0).name + OPTIONS[1] + OPTIONS[2]);
             }
         } else {
@@ -103,6 +103,7 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
             this.imageEventText.setDialogOption(OPTIONS[7], true);
         }
 
+        //TODO: This will be more annoying than other Collector overrides
         this.imageEventText.setDialogOption(OPTIONS[6]);
     }
 

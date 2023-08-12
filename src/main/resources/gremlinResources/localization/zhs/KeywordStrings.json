@@ -18,7 +18,7 @@
       "回响"
     ],
     "PROPER_NAME": "回响",
-    "DESCRIPTION": " #y回响 是牌的复制品，带有 #y消耗 与 #y虚无 。"
+    "DESCRIPTION": "获得一张带有 #y消耗 与 #y虚无 的复制品， #y回响 牌自身无法再被 #y回响 。"
   },
   {
     "NAMES": [

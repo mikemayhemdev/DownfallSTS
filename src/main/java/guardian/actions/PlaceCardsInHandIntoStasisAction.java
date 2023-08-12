@@ -15,6 +15,7 @@ public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
     public static final String[] TEXT;
     private final boolean anyNumber;
     private final boolean endOfTurn;
+    private ArrayList<AbstractCard> invalidTargets = new ArrayList<>();
 
     public PlaceCardsInHandIntoStasisAction(AbstractCreature source, int amount, boolean anyNumber) {
         this(source, amount, anyNumber, false);
@@ -29,6 +30,15 @@ public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == 0.5F) {
+            // removing Ethereal cards for Future Plans for consistency with similar affects.
+            if (this.endOfTurn)
+                for (AbstractCard c: AbstractDungeon.player.hand.group) {
+                    if (c.isEthereal) {
+                        AbstractDungeon.player.hand.removeCard(c);
+                        invalidTargets.add(c);
+                    }
+                }
+
             if (this.amount > AbstractDungeon.player.hand.size())
                 this.amount = AbstractDungeon.player.hand.size();
 
@@ -50,20 +60,20 @@ public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
                 ArrayList<AbstractCard> cards = AbstractDungeon.handCardSelectScreen.selectedCards.group;
                 AbstractCard c;
                 //Making it look nice if you have a lot of stacks is hard.
-                //Refreshing the position of cards that weren't placed into Stasis (triggers last)
+                //Readding removed cards and refreshing the position of cards that weren't placed into Stasis (triggers last)
                 addToTop(new AbstractGameAction() {
                     @Override
                     public void update() {
                         isDone = true;
+                        for (AbstractCard c : invalidTargets)
+                            AbstractDungeon.player.hand.addToTop(c);
                         AbstractDungeon.player.hand.refreshHandLayout();
                     }
                 });
-                //Placing chosen cards (except Ethereal cards for Future Plans for consistency)
+                //Placing chosen cards
                 for (int i = cards.size() - 1; i >= 0; i--) {
                     c = cards.get(i);
-                    if (!(endOfTurn && c.isEthereal)) {
-                        addToTop(new PlaceActualCardIntoStasis(c, AbstractDungeon.player.hand, true));
-                    }
+                    addToTop(new PlaceActualCardIntoStasis(c, AbstractDungeon.player.hand, true));
                 }
                 //Returning cards to hand
                 for (AbstractCard card : cards) {

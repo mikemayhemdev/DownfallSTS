@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.actions.EchoACardAction;
 import gremlin.GremlinMod;
-import gremlin.actions.MakeEchoAction;
 
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 
@@ -59,7 +59,7 @@ public class Pinprick extends AbstractGremlinCard {
     @Override
     public void triggerWhenDrawn() {
         if(upgraded){
-            AbstractDungeon.actionManager.addToBottom(new MakeEchoAction(this));
+            AbstractDungeon.actionManager.addToBottom(new EchoACardAction(this, 1));
         }
     }
 }

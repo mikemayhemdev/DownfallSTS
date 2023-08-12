@@ -21,6 +21,7 @@ public class WildStrike extends AbstractBronzeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("WildStrike.png"));
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

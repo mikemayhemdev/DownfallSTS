@@ -195,7 +195,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     }
 
     public int autoPriority() {
-        AbstractCharBoss ownerBoss = (AbstractCharBoss) this.owner;
+        AbstractCharBoss ownerBoss = this.owner;
         boolean setupPhase = ownerBoss.onSetupTurn;
 
         float blockModifier = 1F;

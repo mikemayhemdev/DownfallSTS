@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.cardmods.EtherealMod;
+import expansioncontent.cardmods.PropertiesMod;
 import theHexaghost.HexaMod;
 
 public class Haunt extends AbstractHexaCard {
@@ -38,7 +38,7 @@ public class Haunt extends AbstractHexaCard {
                 isDone = true;
                 for (AbstractCard c : p.hand.group) {
                     if (!c.isEthereal) {
-                        CardModifierManager.addModifier(c, new EtherealMod());
+                        CardModifierManager.addModifier(c, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
                         c.superFlash(Color.PURPLE.cpy());
                     }
                 }
@@ -55,7 +55,7 @@ public class Haunt extends AbstractHexaCard {
                 isDone = true;
                 for (AbstractCard c : AbstractDungeon.player.hand.group) {
                     if (!c.isEthereal) {
-                        CardModifierManager.addModifier(c, new EtherealMod());
+                        CardModifierManager.addModifier(c, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
                         c.superFlash(Color.PURPLE.cpy());
                     }
                 }

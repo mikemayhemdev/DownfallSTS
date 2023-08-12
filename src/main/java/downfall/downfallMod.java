@@ -39,6 +39,9 @@ import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
+import collector.CollectorChar;
+import collector.CollectorMod;
+import collector.util.CollectibleCardReward;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -85,7 +88,8 @@ import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import downfall.cardmods.EtherealMod;
+import expansioncontent.expansionContentMod;
+import expansioncontent.cardmods.EtherealMod;
 import downfall.cards.KnowingSkullWish;
 import downfall.cards.curses.*;
 import downfall.dailymods.*;
@@ -104,7 +108,6 @@ import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
 import downfall.util.*;
-import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import gremlin.GremlinMod;
 import gremlin.cards.Wizardry;
@@ -162,7 +165,7 @@ public class downfallMod implements
         PostDeathSubscriber {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = true;
+    public static final boolean STEAM_MODE = false;
 
     public static boolean neowtextoverride = false;
 
@@ -192,9 +195,8 @@ public class downfallMod implements
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
     public static boolean normalMapLayout = false;
-    public static boolean champDisableStanceHelper = false;
     public static boolean sneckoNoModCharacters = false;
-    public static boolean disableDescriptors = false;
+    public static boolean useIconsForAppliedProperties = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
@@ -206,10 +208,9 @@ public class downfallMod implements
     public static final String PROP_MOD_CHAR_CROSSOVER = "crossover_mod_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
     public static final String PROP_NORMAL_MAP = "normalMapLayout";
-    public static final String PROP_CHAMP_PRO = "champDisableStanceHelper";
     public static final String PROP_SNECKO_MODLESS = "sneckoNoModCharacters";
     public static final String PROP_NO_MUSIC = "disableMusicOverride";
-    public static final String PROP_NO_DESCRIPTORS = "disableCardDescriptors";
+    public static final String PROP_ICONS_FOR_APPLIED_PROPERTIES = "useIconsForAppliedProperties";
 
     public static String Act1BossFaced = "";
     public static String Act2BossFaced = "";
@@ -274,14 +275,11 @@ public class downfallMod implements
         configDefault.setProperty(PROP_CHAR_CROSSOVER, "FALSE");
         configDefault.setProperty(PROP_NORMAL_MAP, "TRUE");
         configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
-        configDefault.setProperty(PROP_CHAMP_PRO, "FALSE");
         configDefault.setProperty(PROP_NO_MUSIC, "FALSE");
-        configDefault.setProperty(PROP_NO_DESCRIPTORS, "FALSE");
+        configDefault.setProperty(PROP_ICONS_FOR_APPLIED_PROPERTIES, "FALSE");
 
 
         loadConfigData();
-
-
     }
 
     public static void initialize() {
@@ -338,6 +336,8 @@ public class downfallMod implements
                 return "gremlinResources/" + path;
             case PACKAGE_HERMIT:
                 return "hermitResources/" + path;
+            case PACKAGE_COLLECTOR:
+                return "collectorResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -359,10 +359,9 @@ public class downfallMod implements
             config.setBool(PROP_NORMAL_MAP, normalMapLayout);
 
             config.setBool(PROP_UNLOCK_ALL, unlockEverything);
-            config.setBool(PROP_CHAMP_PRO, champDisableStanceHelper);
             config.setBool(PROP_SNECKO_MODLESS, sneckoNoModCharacters);
             config.setBool(PROP_NO_MUSIC, noMusic);
-            config.setBool(PROP_NO_DESCRIPTORS, disableDescriptors);
+            config.setBool(PROP_ICONS_FOR_APPLIED_PROPERTIES, useIconsForAppliedProperties);
             config.save();
             GoldenIdol_Evil.save();
         } catch (IOException e) {
@@ -429,6 +428,8 @@ public class downfallMod implements
 
             //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
+
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_COLLECTOR));
         } else {
 
             //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
@@ -529,6 +530,7 @@ public class downfallMod implements
         loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
         loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
         loadModKeywords(HermitMod.getModID(), otherPackagePaths.PACKAGE_HERMIT);
+        loadModKeywords(CollectorMod.getModID(), otherPackagePaths.PACKAGE_COLLECTOR);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
     }
 
@@ -599,6 +601,11 @@ public class downfallMod implements
         //Hexaghost
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SEALCARD, (rewardSave) -> new SealSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
+        //Collector
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.COLLECTOR_COLLECTIBLECARDREWARD, (rewardSave) -> new CollectibleCardReward(rewardSave.id), reward -> {
+            String s = ((CollectibleCardReward) reward).card.cardID;
+            return new RewardSave(reward.type.toString(), s);
+        });
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.THIRDSEALCARDREWARD, (rewardSave) -> new ThirdSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
         //Guardian
@@ -621,8 +628,6 @@ public class downfallMod implements
                     GuardianMod.logger.info("gems saved");
                     return new RewardSave(customReward.type.toString(), null);
                 });
-
-
     }
 
     private void initializeConfig() {
@@ -633,12 +638,33 @@ public class downfallMod implements
         // Create the Mod Menu
 
         settingsPanel = new ModPanel();
-        int configPos = 800;
+        int configPos = 750;
         int configStep = 40;
 
-        if (!STEAM_MODE) {
+        ModLabeledToggleButton characterCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[4],
+                350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                crossoverCharacters, settingsPanel, (label) -> {
+        }, (button) -> {
+            crossoverCharacters = button.enabled;
+            CardCrawlGame.mainMenuScreen.charSelectScreen.options.clear();
+            CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
+            saveData();
+        });
 
-            configPos -= 90;
+        configPos -= configStep;
+        ModLabeledToggleButton useIconsForAppliedCardPropertiesBtn = new ModLabeledToggleButton(configStrings.TEXT[13],
+                350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                useIconsForAppliedProperties, settingsPanel, (label) -> {
+        }, (button) -> {
+            useIconsForAppliedProperties = button.enabled;
+            saveData();
+        });
+
+        settingsPanel.addUIElement(characterCrossoverBtn);
+        settingsPanel.addUIElement(useIconsForAppliedCardPropertiesBtn);
+
+        if (!STEAM_MODE) {
+            configPos -= configStep;
             ModLabeledToggleButton characterModCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[5],
                     350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     crossoverModCharacters, settingsPanel, (label) -> {
@@ -704,15 +730,6 @@ public class downfallMod implements
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton champProConfig = new ModLabeledToggleButton(configStrings.TEXT[9],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    champDisableStanceHelper, settingsPanel, (label) -> {
-            }, (button) -> {
-                champDisableStanceHelper = button.enabled;
-                saveData();
-            });
-
-            configPos -= configStep;
             ModLabeledToggleButton sneckoNoModConfig = new ModLabeledToggleButton(configStrings.TEXT[10],
                     350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     sneckoNoModCharacters, settingsPanel, (label) -> {
@@ -748,45 +765,18 @@ public class downfallMod implements
                 unlockAllReskin();
             });
 
-            configPos -= configStep;
-            ModLabeledToggleButton disableDescriptorsBtn = new ModLabeledToggleButton(configStrings.TEXT[13],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    disableDescriptors, settingsPanel, (label) -> {
-            }, (button) -> {
-                disableDescriptors = button.enabled;
-                saveData();
-            });
-
             settingsPanel.addUIElement(contentSharingBtnCurses);
             settingsPanel.addUIElement(contentSharingBtnEvents);
             settingsPanel.addUIElement(contentSharingBtnPotions);
             settingsPanel.addUIElement(contentSharingBtnRelics);
             settingsPanel.addUIElement(contentSharingBtnColorless);
             settingsPanel.addUIElement(normalMapBtn);
-            settingsPanel.addUIElement(champProConfig);
             settingsPanel.addUIElement(sneckoNoModConfig);
             settingsPanel.addUIElement(unlockAllBtn);
             settingsPanel.addUIElement(noMusicBtn);
             settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
-            settingsPanel.addUIElement(disableDescriptorsBtn);
-            
-            configPos = 750;
         }
-
-        ModLabeledToggleButton characterCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[4],
-                350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                crossoverCharacters, settingsPanel, (label) -> {
-        }, (button) -> {
-            crossoverCharacters = button.enabled;
-            CardCrawlGame.mainMenuScreen.charSelectScreen.options.clear();
-            CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
-            saveData();
-        });
-
-
-
-        settingsPanel.addUIElement(characterCrossoverBtn);
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
 
@@ -803,14 +793,13 @@ public class downfallMod implements
                 contentSharing_potions = config.getBool(PROP_POTION_SHARING);
                 contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
                 normalMapLayout = config.getBool(PROP_NORMAL_MAP);
-                champDisableStanceHelper = config.getBool(PROP_CHAMP_PRO);
                 sneckoNoModCharacters = config.getBool(PROP_SNECKO_MODLESS);
                 unlockEverything = config.getBool(PROP_UNLOCK_ALL);
                 noMusic = config.getBool(PROP_NO_MUSIC);
-                disableDescriptors = config.getBool((PROP_NO_DESCRIPTORS));
             }
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
             crossoverModCharacters = config.getBool(PROP_MOD_CHAR_CROSSOVER);
+            useIconsForAppliedProperties = config.getBool(PROP_ICONS_FOR_APPLIED_PROPERTIES);
         } catch (Exception e) {
             e.printStackTrace();
             clearData();
@@ -1486,6 +1475,7 @@ public class downfallMod implements
             FleeingMerchant.CURRENT_HP = FleeingMerchant.START_HP;
             FleeingMerchant.CURRENT_STRENGTH = 0;
             FleeingMerchant.CURRENT_SOULS = 0;
+           // FleeingMerchant.CURRENT_DOOM = 0;
             Cleric_Evil.encountered = false;
             Cleric_Evil.heDead = false;
             GoldToSoulPatches.UpdateMerchantTip();
@@ -1542,7 +1532,7 @@ public class downfallMod implements
                 p instanceof TheSnecko ||
                 p instanceof ChampChar ||
                 p instanceof AutomatonChar ||
-                p instanceof GremlinCharacter || p instanceof hermit.characters.hermit) {
+                p instanceof GremlinCharacter || p instanceof hermit.characters.hermit || p instanceof CollectorChar) {
             return true;
         }
         return false;
@@ -1767,6 +1757,7 @@ public class downfallMod implements
         PACKAGE_AUTOMATON,
         PACKAGE_GREMLIN,
         PACKAGE_HERMIT,
+        PACKAGE_COLLECTOR,
         PACKAGE_DOWNFALL;
 
         otherPackagePaths() {

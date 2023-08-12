@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import downfall.util.CardIgnore;
-import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
+import expansioncontent.cards.AbstractExpansionCard;
 
 @CardIgnore
 public class FaceSlap extends AbstractExpansionCard {

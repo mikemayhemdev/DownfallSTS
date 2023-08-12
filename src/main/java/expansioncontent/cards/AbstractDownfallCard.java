@@ -34,15 +34,15 @@ abstract public class AbstractDownfallCard extends CustomCard {
     }
 
     private static String imgCheck(String imgPath, CardType type) {
-        if (Gdx.files.internal(imgPath).exists())
+        if (imgPath != null && Gdx.files.internal(imgPath).exists())
             return imgPath;
         switch (type) {
             case ATTACK:
-                return "expansioncontentResources/images/cards/Placeholder/Attack.png";
+                return "expansioncontentResources/images/cards/placeholder/Attack.png";
             case POWER:
-                return "expansioncontentResources/images/cards/Placeholder/Power.png";
+                return "expansioncontentResources/images/cards/placeholder/Power.png";
             default:
-                return "expansioncontentResources/images/cards/Placeholder/Skill.png";
+                return "expansioncontentResources/images/cards/placeholder/Skill.png";
         }
     }
 

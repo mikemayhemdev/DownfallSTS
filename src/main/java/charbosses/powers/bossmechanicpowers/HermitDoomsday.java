@@ -6,17 +6,12 @@
 package charbosses.powers.bossmechanicpowers;
 
 import basemod.helpers.CardModifierManager;
-import charbosses.bosses.Hermit.CharBossHermit;
-import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import downfall.cardmods.EtherealMod;
-import downfall.cardmods.RetainCardMod;
+import expansioncontent.cardmods.RetainCardMod;
 import hermit.cards.ImpendingDoom;
 
 public class HermitDoomsday extends AbstractBossMechanicPower {
