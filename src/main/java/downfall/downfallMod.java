@@ -662,7 +662,7 @@ public class downfallMod implements
         });
 
         settingsPanel.addUIElement(characterCrossoverBtn);
-        settingsPanel.addUIElement(useIconsForAppliedCardPropertiesBtn);
+        //settingsPanel.addUIElement(useIconsForAppliedCardPropertiesBtn);
 
         if (!STEAM_MODE) {
             configPos -= configStep;
