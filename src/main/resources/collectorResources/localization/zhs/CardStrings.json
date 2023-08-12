@@ -564,7 +564,7 @@
     "DESCRIPTION": "获得1层 无实体 。"
   },
   "collector:NlothCard": {
-    "NAME": "N'Loth",
+    "NAME": "恩洛斯",
     "DESCRIPTION": "collector:焰葬 。 NL 随机获得一张稀有牌， NL 其首次耗能减1。",
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 随机获得一张稀有牌， NL 其首次耗能为0。"
   },
