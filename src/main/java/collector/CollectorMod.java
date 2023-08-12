@@ -331,15 +331,17 @@ public class CollectorMod implements
             @Override
             public void onLoad(ArrayList<String> strings) {
                 CollectorCollection.init();
-                for (String s : strings) {
-                    System.out.println("Collector Loading Collection Card: " + s);
-                    AbstractCard found = CardLibrary.getCopy(s);
-                    CardModifierManager.addModifier(found, new CollectedCardMod());
-                    CollectorCollection.collection.addToBottom(found);
-                }
-                for (AbstractRelic r : AbstractDungeon.player.relics) {
-                    if (r instanceof BottledCollectible) {
-                        ((BottledCollectible) r).onLoadCollection();
+                if (strings != null) {
+                    for (String s : strings) {
+                        System.out.println("Collector Loading Collection Card: " + s);
+                        AbstractCard found = CardLibrary.getCopy(s);
+                        CardModifierManager.addModifier(found, new CollectedCardMod());
+                        CollectorCollection.collection.addToBottom(found);
+                    }
+                    for (AbstractRelic r : AbstractDungeon.player.relics) {
+                        if (r instanceof BottledCollectible) {
+                            ((BottledCollectible) r).onLoadCollection();
+                        }
                     }
                 }
             }

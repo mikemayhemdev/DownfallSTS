@@ -76,7 +76,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnPurgatory());
+                    addToList(cardsList, new EnPurgatory(), extraUpgrades);
                     addToList(cardsList, new EnMalice());
                     addToList(cardsList, new EnSprayNPray());
                     turn = 0;
