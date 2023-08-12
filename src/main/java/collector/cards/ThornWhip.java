@@ -30,7 +30,6 @@ public class ThornWhip extends AbstractCollectorCard {
 
     public void upp() {
         upgradeDamage(3);
-        uDesc();
     }
 
     @Override

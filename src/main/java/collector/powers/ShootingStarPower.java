@@ -1,7 +1,6 @@
 package collector.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.utility.ExhaustToHandAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -27,14 +26,9 @@ public class ShootingStarPower extends AbstractCollectorPower implements OnPyreP
         if (pyresThisTurn < amount) {
             flash();
             pyresThisTurn++;
-            addToBot(new ExhaustToHandAction(card));
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    card.freeToPlayOnce = true;
-                }
-            });
+            AbstractCard copy = card.makeStatEquivalentCopy();
+            copy.freeToPlayOnce = true;
+            addToBot(new MakeTempCardInHandAction(copy, true));
         }
     }
 
