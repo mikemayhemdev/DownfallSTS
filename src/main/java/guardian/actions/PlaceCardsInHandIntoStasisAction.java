@@ -1,7 +1,6 @@
 package guardian.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -31,16 +30,18 @@ public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
     public void update() {
         if (this.duration == 0.5F) {
             // removing Ethereal cards for Future Plans for consistency with similar affects.
-            if (this.endOfTurn)
-                for (AbstractCard c: AbstractDungeon.player.hand.group) {
+            if (this.endOfTurn) {
+                ArrayList<AbstractCard> toMove = new ArrayList<>();
+                toMove.addAll(AbstractDungeon.player.hand.group);
+                for (AbstractCard c : toMove) {
                     if (c.isEthereal) {
                         AbstractDungeon.player.hand.removeCard(c);
                         invalidTargets.add(c);
                     }
                 }
 
-            if (this.amount > AbstractDungeon.player.hand.size())
-                this.amount = AbstractDungeon.player.hand.size();
+            }
+            if (this.amount > AbstractDungeon.player.hand.size()) this.amount = AbstractDungeon.player.hand.size();
 
             if (this.amount == 0) {
                 this.isDone = true;
