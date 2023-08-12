@@ -15,8 +15,8 @@ public class DiceBlock extends AbstractSneckoCard {
 
     public DiceBlock() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 12;
-        baseMagicNumber = magicNumber = 8;
+        baseMagicNumber = magicNumber = 8; //Min Block
+        baseBlock = 12; //Max Block
         tags.add(SneckoMod.RNG);
         SneckoMod.loadJokeCardImage(this, "DiceBlock.png");
     }

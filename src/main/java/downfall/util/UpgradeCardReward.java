@@ -14,7 +14,7 @@ public class UpgradeCardReward extends CustomReward {
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public UpgradeCardReward() {
-        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardItemTypeEnumPatch.UPGRADECARD);
+        super(TextureLoader.getTexture("downfallResources/images/rewards/upgrade_card_reward.png"), TEXT[0], RewardItemTypeEnumPatch.UPGRADECARD);
     }
 
     @Override

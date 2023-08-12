@@ -1,0 +1,53 @@
+{
+  "sneckomod:D8": {
+    "NAME": "Octaedro Místico",
+    "DESCRIPTIONS": [
+   	  "Aproxime-se do octaedro místico.",
+	  "Relíquia explodiu.",
+	  "Pegou a relíquia.",
+	  "Decidiu sair."
+	],
+    "OPTIONS": [
+	  "[Quebrar] #rPerder #r",
+	  " #r HP. #gGanhar #g5 #gCartas #gNãoIdentificadas",
+	  "[Pegar] #gGanhar #gOctaedro #gMístico. #rAmaldiçoado #r- #rDor.",
+	  "[Sair]",
+	  "[Trancado] Requer uma carta que usa um número escolhido aleatoriamente."
+	]
+  },
+  "sneckomod:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+	  "A criatividade triunfa sobre o planejamento sempre."
+	],
+    "OPTIONS": [
+	  "[Improvisação] #gSubstitui todos os #gAtaques e #gDefesas por cartas #gNãoIdentificadas aleatórias.",
+  	  "[Trancado] Requer um Ataque ou Defesa."
+	]
+  },
+  "sneckomod:Serpent": {
+    "NAME": "A Serpente",
+    "DESCRIPTIONS": [
+	  "Você entra em uma sala e encontra um grande buraco no chão. Conforme você se aproxima do buraco, uma enorme criatura escamosa, não muito diferente de você, aparece de dentro. NL NL ~\"Ho~ ~hooo!~ ~Olá~ ~amigo~ ~cobra!~ Deixe-me te perguntar algo... NL NL Você ouve a serpente falar palavras, mas se encontra completamente perplexo, sem compreender nenhuma delas. NL NL \"Você concorda?\"",
+	  "~\"Excelente!\"~ NL NL Você ainda não tem ideia qual foi a pergunta, mas parece que você fez o dia da Serpente. NL A criatura oferece a você um trinket para ajudar em sua jornada, e então se arrasta de volta para o buraco.",
+	  "A serpente olha para você com um olhar de extrema decepção, mas no final sorri e deseja-lhe boa sorte em sua jornada."
+	],
+    "OPTIONS": [
+	  "[Concordar] #gGanhar #guma #gRelíquia #galeatória. #rAmaldiçoado #r- #rDesorientado.",
+	  "[Discordar]",
+	  "[Sair]"
+	]
+  },
+  "sneckomod:CasaSuspeita": {
+    "NAME": "Casa Suspeita",
+    "DESCRIPTIONS": [
+      "Viajando pela cidade, seus ouvidos são perfurados por um grito estridente e inumano vindo de uma casa próxima. Ao investigar, você encontra um habitante da cidade tentando silenciar uma pequena criatura serpentiforme presa em uma gaiola. O bichinho assustado não parece feliz aqui.",
+      "\"Você quer? Toma! Não vale o trabalho.\" Com um suspiro frustrado, o captor abre a gaiola e tenta pegar a serpente, mas é surpreendido por uma mordida da pequena criatura. Você intervém rapidamente, nocauteando o homem antes que ele possa fazer algo contra o animal. A criatura felizmente rasteja até a sua mão quando você a oferece, e vocês seguem juntos pela Spire. Você a chama de... Clementine.",
+      "A serpente olha para você com uma expressão de grande decepção, mas acaba sorrindo e desejando-lhe boa sorte em sua jornada."
+    ],
+    "OPTIONS": [
+      "[Resgatar] Ganhe um Jovem Snecko. Torne-se Amaldiçoado, confuso ou deslumbrado.",
+      "[Sair]"
+    ]
+  }
+}

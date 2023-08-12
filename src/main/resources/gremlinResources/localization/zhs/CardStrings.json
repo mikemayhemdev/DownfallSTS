@@ -134,7 +134,7 @@
   },
   "Gremlin:FlipOut": {
     "NAME": "发疯",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每获得 格挡 ， NL 变为造成等量群体伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每获得 格挡 ， NL 改为造成等量群体伤害。"
   },
   "Gremlin:Flurry": {
     "NAME": "乱舞",

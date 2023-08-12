@@ -1,0 +1,58 @@
+{
+  "downfall:WorldOfGoo": {
+    "NAME": "Mundo de Goo",
+    "DESCRIPTION": "Sempre que você receber dano não bloqueado, adicione um status Slimed ao seu baralho de descarte."
+  },
+  "downfall:Hexed": {
+    "NAME": "Hexado",
+    "DESCRIPTION": "Comece com um Veludo Choker. Quando você comprar uma carta, ela se torna Etérea."
+  },
+  "downfall:Improvised": {
+    "NAME": "Improvisado",
+    "DESCRIPTION": "Comece com 10 cartas Desconhecidas."
+  },
+  "downfall:Jewelcrafting": {
+    "NAME": "Joalheria",
+    "DESCRIPTION": "Comece com duas cópias de Gemas de Exploração e uma Picareta de Rapsódia."
+  },
+  "downfall:EvilRun": {
+    "NAME": "Corrida Maligna",
+    "DESCRIPTION": "Ativa o conteúdo da Corrida Maligna."
+  },
+  "downfall:ExchangeController": {
+    "NAME": "Abençoado Seja",
+    "DESCRIPTION": "Comece com a Benção de Neow."
+  },
+  "downfall:Lament": {
+    "NAME": "Lamento",
+    "DESCRIPTION": "Comece com o Lamento de Neow."
+  },
+  "downfall:ChampStances": {
+    "NAME": "Novo Desafiante",
+    "DESCRIPTION": "Comece cada combate em uma postura aleatória do Campeão e ganhe um Golpe Final. Todas as cartas iniciais ganham Técnica."
+  },
+  "downfall:Enraging": {
+    "NAME": "Última Resistência",
+    "DESCRIPTION": "Todos os inimigos ganham Força e removem debuffs na próxima rodada quando reduzidos a 50% de HP."
+  },
+  "downfall:Analytical": {
+    "NAME": "Analítico",
+    "DESCRIPTION": "No início de cada rodada, ganhe uma carta aleatória com Codificar e dê a ela a propriedade Etérea. Golpes e Defesas Básicas Codificam."
+  },
+  "downfall:StatusAbuse": {
+    "NAME": "Infligido",
+    "DESCRIPTION": "Comece com uma Bateria Improvisada, Lavadoras de Donu, Lavadoras de Deca, um Kit Médico e um Ídolo de Bronze. Todos os outros Relíquias são substituídos por Circletos."
+  },
+  "downfall:TooManyShivs": {
+    "NAME": "Muitas Facas",
+    "DESCRIPTION": "Comece com um Veludo Choker, Essência do Vazio e 10 Facas."
+  },
+  "downfall:Wizzardry": {
+    "NAME": "Feitiçaria",
+    "DESCRIPTION": "Comece com um Chapéu de Feiticeiro, um Bastão de Feiticeiro e uma cópia melhorada de Feitiçaria."
+  },
+  "downfall:TransformRewards": {
+    "NAME": "Transformado",
+    "DESCRIPTION": "Todas as recompensas de carta se tornam \"Transforme uma carta\"."
+  }
+}

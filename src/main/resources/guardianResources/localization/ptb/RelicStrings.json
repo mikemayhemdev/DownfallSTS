@@ -1,0 +1,126 @@
+{
+  "Guardian:ModeShifter": {
+    "NAME": "Cambiador de Modo do Guardião",
+    "FLAVOR": "Proteção quando você mais precisa.",
+    "DESCRIPTIONS": [
+      "No início de cada combate, obtenha #yEngrenagem. O Guardião começa a corrida com uma #yGema comum aleatória."
+    ]
+  },
+  "Guardian:ModeShifterPlus": {
+    "NAME": "Cambiador de Modo do Guardião Plus",
+    "FLAVOR": "Substitua isso a cada 3.000 andares.",
+    "DESCRIPTIONS": [
+      "Substitui #rEngrenagem #rde #rBronze. Comece cada combate no modo defensivo, que dura #b3 turnos."
+    ]
+  },
+  "Guardian:DefensiveModeMoreBlock": {
+    "NAME": "Placa Real de Baalor",
+    "FLAVOR": "Nunca é demais armadura.",
+    "DESCRIPTIONS": [
+      "Quando você #yFortalece, ganha mais #yFortalecer."
+    ]
+  },
+  "Guardian:guardianmod:GemCopier": {
+    "NAME": "Copo de Pedras Preciosas",
+    "FLAVOR": "Apenas as mais puras servem.",
+    "DESCRIPTIONS": [
+      "Quando você joga uma #yGema, jogue uma cópia dela."
+    ]
+  },
+  "Guardian:PocketSentry": {
+    "NAME": "Sentinela de Bolso de Arumba",
+    "FLAVOR": "Sentinela ativada. Alvo adquirido. Sem ressentimentos.",
+    "DESCRIPTIONS": [
+      "A cada #b3 turnos, aplique #b1 de #yFraqueza em TODOS os inimigos."
+    ]
+  },
+  "Guardian:SackOfGems": {
+    "NAME": "Bolsa de Pedras Preciosas",
+    "FLAVOR": "Ooh... brilhante!",
+    "DESCRIPTIONS": [
+      "Quando você obtém esta carta, adicione #b5 #yGemas aleatórias ao seu baralho."
+    ]
+  },
+  "Guardian:StasisCodex": {
+    "NAME": "Códice de Piloto",
+    "FLAVOR": "Designs e diagramas dos primeiros protótipos de controle manual da Torre, pelo mestre piloto David.",
+    "DESCRIPTIONS": [
+      "Se você não tiver nenhuma carta em #yEstase no final de seu turno, escolha #b1 entre #b3 cartas para colocar em #yEstase."
+    ]
+  },
+  "Guardian:StasisSlotIncreaseRelic": {
+    "NAME": "Pequena Caixa Policial",
+    "FLAVOR": "É maior por dentro...",
+    "DESCRIPTIONS": [
+      "Comece cada combate com #b2 espaços de #yEstase adicionais."
+    ]
+  },
+  "Guardian:StasisSlotReductionRelic": {
+    "NAME": "Drones Perdidos",
+    "FLAVOR": "Esses drones encontram as melhores peças de recuperação, mas requerem energia para se manterem.",
+    "DESCRIPTIONS": [
+      "No início de cada combate, ganhe #b1 espaço em #yguardianmod:Stase. Quando uma carta entrar em #yguardianmod:Stase, #yMelhore-a."
+	]
+  },
+  "Guardian:StasisUpgradeRelic": {
+    "NAME": "Câmara Criogênica",
+    "FLAVOR": "As coisas sempre parecem melhores ao sair do que quando entraram.",
+    "DESCRIPTIONS": [
+      "No início de cada combate, ganhe #b1 espaço de Estase. Sempre que uma carta entra em #yguardianmod:Estase, aprimore-a (#yUpgrade)."
+    ]
+  },
+  "Guardian:BottledStasis": {
+    "NAME": "Buraco Negro Engarrafado",
+    "FLAVOR": "Em algum lugar, algo incrível está esperando para ser conhecido.",
+    "DESCRIPTIONS": [
+      "Ao pegar, escolha uma carta. Comece cada combate com esta carta em #yguardianmod:Estase.",
+      "Escolha uma carta para ",
+      "Comece cada combate com ",
+      " em #yguardianmod:Estase.",
+      "A carta engarrafada foi #rremovida de seu baralho, a relíquia não funciona mais."
+    ]
+  },
+  "Guardian:StasisEgg": {
+    "NAME": "Câmara Quântica",
+    "FLAVOR": "Você consegue a galinha chocando o ovo, não esmagando-o.",
+    "DESCRIPTIONS": [
+      "Ao pegar, escolha uma carta. Comece cada combate com esta carta removida do seu baralho. No início do seu #b4º turno, retorne-a e #b2 cópias dela para a sua mão.",
+      "Escolha uma carta para ",
+      "Comece cada combate com ",
+      " removida do seu baralho. No início do seu #b4º turno, retorne-a e #b2 cópias dela para a sua mão."
+    ]
+  },
+  "Guardian:TickHelperRelic": {
+    "NAME": "Fluido de Refrigeração",
+    "FLAVOR": "Perigoso. Não consumir.",
+    "DESCRIPTIONS": [
+      "Comece cada combate com #b2 espaços adicionais de Estase. NL Quando uma carta entra em #yguardianmod:Estase, aumente o seu contador de turno em #b2."
+    ]
+  },
+  "Guardian:PickAxe": {
+    "NAME": "Escolha da Rapsódia",
+    "FLAVOR": "Com tantas pedras preciosas espalhadas pela Torre, é difícil imaginar alguém tão azarado a ponto de precisar desta escolha para ajudá-lo.",
+    "DESCRIPTIONS": [
+      "Agora você pode #gminerar #b2 #yguardianmod:Gemas em locais de descanso (até #b3 vezes)."
+    ]
+  },
+  "Guardian:GemstoneGun": {
+    "NAME": "Arma de Pedras Preciosas",
+    "FLAVOR": "Bang! Bang! Bang! Hey, eu acertei três!",
+    "DESCRIPTIONS": [
+      "Ao pegar, escolha #b3 #yguardianmod:Gemas. No início de cada combate, ganhe uma carta com #yRetenção, #yEsgotar e cada #yGema escolhida inserida.",
+      "Escolha uma Gema para carregar a Arma de Pedras Preciosas."
+    ]
+  },
+  "Guardian:BottledAnomaly": {
+    "NAME": "Anomalia Engarrafada",
+    "FLAVOR": "Girando e girando e finalmente quebrando.",
+    "DESCRIPTIONS": [
+      "Ao pegar, escolha uma carta. No início de cada combate, remova-a do seu baralho. No início do turno #b3, adicione-a à sua mão. Custa #b0.",
+      "Escolha uma carta para ",
+      "Comece cada combate com ",
+      " removido do seu baralho. No início do turno #b3, adicione-a à sua mão. NL Custa #b0.",
+      "A carta engarrafada foi #rremovida do seu baralho, o relicário não funciona mais."
+    ]
+  }
+}

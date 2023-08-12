@@ -1,0 +1,104 @@
+{
+  "bronze:BronzeCore": {
+    "NAME": "Núcleo de Bronze",
+    "FLAVOR": "Substitua uma vez a cada 50.000 anos.",
+    "DESCRIPTIONS": [
+      "Na primeira vez que você criar uma Função a cada combate, ganhe [E]."
+    ]
+  },
+  "bronze:ProtectiveGoggles": {
+    "NAME": "Óculos de Proteção",
+    "FLAVOR": "Observe com atenção.",
+    "DESCRIPTIONS": [
+      "Se você encerrar sua rodada sem cartas codificadas, ganhe #b4 #yBloqueio."
+    ]
+  },
+  "bronze:DecasWashers": {
+    "NAME": "Arruelas de Deca",
+    "FLAVOR": "Não está claro por que Deca coleciona essas arruelas.",
+    "DESCRIPTIONS": [
+      "No início dos primeiros #b3 turnos de cada combate, compre uma carta adicional."
+    ]
+  },
+  "bronze:Timepiece": {
+    "NAME": "Primer de Gelo",
+    "FLAVOR": "22 onças do composto químico Ar22, validade: 22 anos. Melhor armazenado em uma geladeira de mogno.",
+    "DESCRIPTIONS": [
+      "Todas as Funções que você criar ganham #yRetenção."
+    ]
+  },
+  "bronze:Mallet": {
+    "NAME": "Martelo",
+    "FLAVOR": "É isso! Eu vou pegar o meu martelo!",
+    "DESCRIPTIONS": [
+      "No início de cada combate, adicione #b2 cópias de #yAjuste Fino+ à sua mão."
+    ]
+  },
+  "bronze:SilverBullet": {
+    "NAME": "Bala de Prata",
+    "FLAVOR": "Os lobos do Spire já se foram.",
+    "DESCRIPTIONS": [
+      "No início de cada combate, adicione uma cópia de #yTiro Perfurante à sua mão. Custa #b0."
+    ]
+  },
+  "bronze:MakeshiftBattery": {
+    "NAME": "Bateria Improvisada",
+    "FLAVOR": "É um 8,9 volts.",
+    "DESCRIPTIONS": [
+      "Ganhe [E] e adicione um #yLamacento ao seu baralho de descarte no início da sua rodada."
+    ]
+  },
+  "bronze:CableSpool": {
+    "NAME": "Carretel de Cabo",
+    "FLAVOR": "Emaranhado...",
+    "DESCRIPTIONS": [
+      "#yEncode uma cópia do primeiro cartão #yEncodable que você jogar em cada combate."
+    ]
+  },
+  "bronze:ElectromagneticCoil": {
+    "NAME": "Bobina Eletromagnética",
+    "FLAVOR": "Uma fonte de energia ineficiente, mas divertida.",
+    "DESCRIPTIONS": [
+      "As funções agora são compostas por #b4 cartões."
+    ]
+  },
+  "bronze:PlatinumCore": {
+    "NAME": "Núcleo de Platina",
+    "FLAVOR": "Changelog: Experiência do usuário melhorada.",
+    "DESCRIPTIONS": [
+      "Substitui ",
+      ".[] NL As três primeiras funções #b3 que você criar em cada combate custam #b0 até serem jogadas."
+    ]
+  },
+  "bronze:BottledCode": {
+    "NAME": "Código Engarrafado",
+    "FLAVOR": "Na verdade, eu tenho um código exato para isso...",
+    "DESCRIPTIONS": [
+      "Ao pegar, escolha um cartão com #yEncode. Comece cada combate com este cartão #yEncoded.",
+      "Escolha um cartão para ",
+      "Comece cada combate com #yEncoded ",
+      "."
+    ]
+  },
+  "bronze:DonusWashers": {
+    "NAME": "Arruelas de Donu",
+    "FLAVOR": "É bastante claro por que Donu coleciona essas coisas.",
+    "DESCRIPTIONS": [
+      "No início do combate, ganhe [E] [E] e adicione #b1 #yVoid em seu baralho de compra."
+    ]
+  },
+  "bronze:BronzeIdol": {
+    "NAME": "Ídolo de Bronze",
+    "FLAVOR": "Um antivírus armado e antigo - quem sabe quem o criou e por quê?",
+    "DESCRIPTIONS": [
+      "Cartões de #yStatus agora podem ser jogados para efeitos úteis."
+    ]
+  },
+  "bronze:AnalyticalCore": {
+    "NAME": "Artefato Paradoxal",
+    "FLAVOR": "Você nunca viu uma frenesi de codificação como esta antes.",
+    "DESCRIPTIONS": [
+      "No início de cada turno, adicione um cartão aleatório com #yEncode em sua mão e dê-lhe #yEthereal."
+    ]
+  }
+}

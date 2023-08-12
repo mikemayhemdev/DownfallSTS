@@ -1,0 +1,18 @@
+{
+  "Guardian": {
+    "NAMES": [
+      "O Guardião"
+    ],
+    "TEXT": [
+      "Um construto da Torre, programado para defendê-la. NL Capaz de se defender de qualquer dano quando comandado.",
+      "PRIMEIRA DIRETIVA - #r~DESTRUIR~ #r~O CORAÇÃO.~",
+      "[ guardianmod:Soquete ]",
+      "Navegando por uma rua sem iluminação, você se depara com vários indivíduos encapuzados em meio a algum ritual sombrio. Ao se aproximar, eles se voltam para você com uma sinistra união. O mais alto entre eles mostra dentes afiados e estende uma mão pálida em sua direção. NL ~\"Junte-se a nós, antigo protetor, e sinta o calor da Torre.\"~",
+      "Modo Defensivo",
+      "Você possui #b3 #yEspinhos, ganha #b10 #yBloqueio no início do seu turno e seu Bloqueio não expira.",
+      "~ERRO:~ #rEstase em progresso."
+    ],
+    "KEYWORDS": [
+    ]
+  }
+}

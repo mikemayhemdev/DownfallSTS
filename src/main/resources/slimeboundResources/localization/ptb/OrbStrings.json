@@ -1,0 +1,121 @@
+{
+  "Slimebound:EmptySlimeSlot": {
+    "NAME": "Espaço Vazio para Slime",
+    "DESCRIPTION": [
+      "Slimes podem ser colocados nestes espaços através de #yDivisão."
+    ]
+  },
+  "Slimebound:BronzeSlime": {
+    "NAME": "Slime de Bronze",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano a TODOS os inimigos no início de seu turno e pula o próximo ataque.",
+      ""
+    ]
+  },
+  "Slimebound:AttackSlime": {
+    "NAME": "Slime de Ataque",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano no início de seu turno."
+    ]
+  },
+  "Slimebound:ScrapOozeSlime": {
+    "NAME": "Slime Sucata",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano no início de seu turno. Pode ser revivido se #yAbsorvido."
+    ]
+  },
+  "Slimebound:GreedOozeSlime": {
+    "NAME": "Slime de Ganância",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano no início de seu turno. Pode ser revivido se #yAbsorvido."
+    ]
+  },
+  "Slimebound:TorchHeadSlime": {
+    "NAME": "Slime Cabeça de Tocha",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano no início de seu turno. Ganha dano a partir de sua #yForça."
+    ]
+  },
+  "Slimebound:CultistSlime": {
+    "NAME": "Slime Cultista",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano no início de seu turno. Após atacar, aumenta seu dano em #b1."
+    ]
+  },
+  "Slimebound:ShieldSlime": {
+    "NAME": "Slime de Drenagem",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano no início de seu turno e concede #b",
+      " de #yBloqueio a você."
+    ]
+  },
+  "Slimebound:PoisonSlime": {
+    "NAME": "Slime Guerilheiro",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano a TODOS os inimigos no início do seu turno."
+    ]
+  },
+  "Slimebound:SlimingSlime": {
+    "NAME": "Slime Lamaçal",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano e aplica #b",
+      " #yGosma no início do seu turno."
+    ]
+  },
+  "Slimebound:HexSlime": {
+    "NAME": "Slime Chama Fantasma",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano e aplica #b",
+      " #yQueimadura da Alma no início do seu turno."
+    ]
+  },
+  "Slimebound:ChampSlime": {
+    "NAME": "Slime Insultante",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano e aplica #b",
+      " #yVulnerável no início do seu turno."
+    ]
+  },
+  "Slimebound:SlowingSlime": {
+    "NAME": "Slime Temporal",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano e aplica #b",
+      " #yFraco no início do seu turno."
+    ]
+  },
+  "Slimebound:ProtectorSlime": {
+    "NAME": "Slime Espinhoso",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano no início do seu turno e concede a você #b",
+      " Espinhos #yTemporários."
+    ]
+  },
+  "Slimebound:DrawingSlime": {
+    "NAME": "Slime Ancestral",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano no início do seu turno e faz você puxar #b",
+      " carta."
+    ]
+  },
+  "Slimebound:DarklingSlime": {
+    "NAME": "Slime Obscuro",
+    "DESCRIPTION": [
+      "Causa #b",
+      " de dano no início do seu turno. Quando você comanda, todos os Darklings atacam (independentemente da posição)."
+    ]
+  }
+}

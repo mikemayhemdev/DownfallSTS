@@ -1,0 +1,111 @@
+{
+  "Gremlin:CursedTome": {
+    "OPTIONS": [
+      "[Pegar] #gObter #go #gLivro. #rTodos #ro #rGremlins #rPerdem #r"
+    ]
+  },
+  "Gremlin:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Uma mente flexível não é sobrecarregada por dúvidas."
+    ],
+    "OPTIONS": [
+      "[Capricho] #gSubstituir todos os #gAtaques e #gDefesas por #gFarpas e #gProteções.",
+      "[Trancado] Requer um Ataque ou Defesa."
+    ]
+  },
+  "Gremlin:KnowingSkull": {
+    "OPTIONS": [
+      "[Informação?] #gRevelar #go #gChefão. #rTodos #ro #rGremlins #rPerdem #r",
+      "[Sucesso?] #gObter #gum #gCartão #gIncolor. #rTodos #ro #rGremlins #rPerdem #r",
+      "[Uma injeção de ânimo?] #gObter #guma #gPoção. #rTodos #ro #rGremlins #rPerdem #r",
+      " #gOuro. #rTodos #ro #rGremlins #rPerdem #r",
+      "[Como eu saio?] #rTodos #ro #rGremlins #rPerdem #r"
+
+    ]
+  },
+  "Gremlin:MatchingGame": {
+    "DESCRIPTIONS": [
+      "\" #bDoze cartas! Combine-as para mantê-las! #bCinco tentativas-\" NL NL \" #bDez tentativas!\" você interrompe. NL NL O gremlin faz uma careta. \" #bCinco tentativas!\" NL NL \" #bOito.\" NL NL \" #bSeis,\" ele cospe. \"E espero que você seja #pAmaldiçoado.\" NL NL Você espera que ele seja #pAmaldiçoado.",
+      "Você completa o jogo do gremlin e olha para cima. NL Ele fugiu antes que você pudesse conseguir mais #y~coisas~ #y~grátis!~ ",
+      "Um gremlin está embaralhando cartas loucamente em uma mesa. Parece que ele está oferecendo #y~coisas~ #y~grátis.~ Você quer #y~coisas~ #y~grátis.~ "
+    ]
+  },
+  "Gremlin:Nest": {
+    "OPTIONS": [
+      "[Fique na fila] #gObter Adaga Ritual. #rTodos #ro #rGremlins #rPerdem #r"
+    ]
+  },
+  "Gremlin:ScrapOoze": {
+    "OPTIONS": [
+      "[Alcance o interior] #rTodos #ro #rGremlins #rPerdem #r",
+      "[Mais Profundo] #rTodos #ro #rGremlins #rPerdem #r"
+    ]
+  },
+  "Gremlin:ScrapOozeReplacement": {
+    "NAME": "Lodo de Sucata",
+    "DESCRIPTIONS": [
+      "Ao entrar na sala, você ouve um ~borbulhar~ e o @rangido@ de metais. É um #yLodo #ySucateiro! Essas pequenas lesmas engraçadas sempre encontram #ytesouros. Melhor ainda, elas são lentas e fracas demais para impedi-lo de pegá-los! Você sabe as melhores maneiras de contornar seu ácido espinhoso. Infelizmente, isso é lento e requer algum #rfoque.",
+      "Cuidado, cuidado. Você evita os pedaços cortantes e pontiagudos. Se ao menos não fosse tão #r@entediante.@ NL Mas se você continuar, sabe que encontrará uma relíquia brilhante...",
+      "#gSucesso! NL Depois de vasculhar o metal e o ácido que queima, você finalmente agarra uma #yrelíquia e a arranca. NL Você se livra do lodo, agarrando seu novo brinquedo.",
+      "Isso é #rentediante demais. O que você estava fazendo mesmo?",
+      "Você decide sair da área. NL O lodo não presta atenção, contente com sua refeição."
+    ],
+    "OPTIONS": [
+      "[Alcance cuidadosamente] #r",
+      "%: #rSe torne #rAmaldiçoado #r- #rMente Vagante. #g",
+      "%: #gEncontre #guma #gRelíquia.",
+      "[Sair]",
+      "[Tenha cuidado] #r"
+    ]
+  },
+  "Gremlin:SensoryStone": {
+    "OPTIONS": [
+      "[Lembrar] #gAdicione #g2 #gcartas #gIncolores #gao #gseu #gdeck. #rTodos os #rGremlins #rPerdem #r",
+      "[Lembrar] #gAdicione #g3 #gcartas #gIncolores #gao #gseu #gdeck. #rTodos os #rGremlins #rPerdem #r"
+    ]
+  },
+  "Gremlin:Trenchcoat": {
+    "NAME": "Mercador Suspeito",
+    "DESCRIPTIONS": [
+      "Você se depara com uma figura estranha que se parece suspeitosamente com cinco gremlins em um sobretudo. NL \"Olá, viajante\", a voz estridente chama. NL \"Sou eu, o #yamigável #yMercador, que certamente não é cinco gremlins em um sobretudo. Você gostaria de comprar alguma das minhas ~belas~ ~mercadorias~ que definitivamente não são roubadas?\"",
+      "Você não consegue resistir a uma oferta, mesmo de um vendedor tão suspeito. NL Você faz a sua compra, mas assim que ela é concluída, o vendedor foge. NL NL Ao longe, você quase pode ouvir um grito de frustração: #r\"Malditos, #rgremlins #rladrões!\".",
+      "Você não tem necessidade de enriquecer o mercador desprezível. Você guardará o seu dinheiro para si mesmo. O mercador foge assim que fica claro que você não irá participar."
+    ],
+    "OPTIONS": [
+      "[Comprar] #rPerder #r",
+      " #rOuro",
+      ". #gObter #g1 carta #gSemCor aleatória.",
+      ". #gObter #g2 cartas #gSemCor aleatórias.",
+      ". #gObter #g3 cartas #gSemCor aleatórias.",
+      "[Sair]",
+      "[Trancado] Requer: Pelo menos ",
+      " Ouro.",
+      "[Recusar]"
+    ]
+  },
+  "Gremlin:Vampires": {
+    "DESCRIPTIONS": [
+      "Navegando por uma rua mal iluminada, você se depara com várias figuras encapuzadas em meio a algum ritual sombrio. Ao se aproximar, eles se voltam para você em uma sinistra uníssono. O mais alto entre eles mostra dentes pontiagudos e estende uma mão longa e pálida em sua direção. NL ~\"Junte-se~ ~a~ ~nós,~ ~gananciosos,~ ~e~ ~sinta~ ~o~ ~calor~ ~da~ ~Torre.\"~"
+    ]
+  },
+  "Gremlin:WheelGame": {
+    "DESCRIPTIONS": [
+      "Ele avança em sua direção, mas você está pronto. NL Você o golpeia antes que ele possa atingi-lo com seu punhal. NL Você se trata com seu prêmio, mas infelizmente a Roda desaparece antes que você possa saqueá-la também."
+    ],
+    "OPTIONS": [
+      "[Prêmio!] #gATAQUE #gANTES!",
+      "[Saquear]"
+    ]
+  },
+    "Gremlin:WingStatue": {
+    "OPTIONS": [
+      "[Rezar] #gRemova #gum #gcartão #gdo #gseu #gdeck. #rTodos #ros #rGremlins #rPerdem #r"
+    ]
+  },
+  "Gremlin:WorldOfGoop": {
+    "OPTIONS": [
+      " #gOuro. #rTodos #ros #rGremlins #rPerdem #r"
+    ]
+  }
+}

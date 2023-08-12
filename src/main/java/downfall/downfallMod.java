@@ -118,8 +118,10 @@ import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
 import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
+import guardian.rewards.GemReward;
+import guardian.rewards.GemRewardAllRarities;
 import hermit.HermitMod;
-import hermit.actions.MessageCaller;
+import downfall.actions.MessageCaller;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 import sneckomod.SneckoMod;
@@ -239,7 +241,8 @@ public class downfallMod implements
             Settings.GameLanguage.KOR,
             Settings.GameLanguage.FRA,
             Settings.GameLanguage.ZHT,
-            Settings.GameLanguage.RUS
+            Settings.GameLanguage.RUS,
+            Settings.GameLanguage.PTB
     };
 
     public static String[] SupportedLanguagesStrings = {
@@ -603,6 +606,28 @@ public class downfallMod implements
             String s = ((CollectibleCardReward) reward).card.cardID;
             return new RewardSave(reward.type.toString(), s);
         });
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.THIRDSEALCARDREWARD, (rewardSave) -> new ThirdSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        //Guardian
+        BaseMod.registerCustomReward(
+                RewardItemTypeEnumPatch.GEM,
+                (rewardSave) -> { //on load
+                    GuardianMod.logger.info("gems loaded");
+                    return new GemReward();
+                }, (customReward) -> { //on save
+                    GuardianMod.logger.info("gems saved");
+                    return new RewardSave(customReward.type.toString(), null);
+                });
+
+        BaseMod.registerCustomReward(
+                RewardItemTypeEnumPatch.GEMALLRARITIES,
+                (rewardSave) -> { //on load
+                    GuardianMod.logger.info("gems loaded");
+                    return new GemRewardAllRarities();
+                }, (customReward) -> { //on save
+                    GuardianMod.logger.info("gems saved");
+                    return new RewardSave(customReward.type.toString(), null);
+                });
     }
 
     private void initializeConfig() {
@@ -1399,9 +1424,9 @@ public class downfallMod implements
         }
         if (choosingUpgradeCard && AbstractDungeon.gridSelectScreen.selectedCards.size() == 1) {
             AbstractCard card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            AbstractDungeon.effectsQueue.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 54
+            AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 54
             card.upgrade();
-            AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));// 59
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));// 59
             choosingUpgradeCard = false;
             CenterGridCardSelectScreen.centerGridSelect = false;
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
@@ -1423,7 +1448,7 @@ public class downfallMod implements
             AbstractDungeon.player.masterDeck.removeCard(c);// 79
             AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);// 80
             AbstractCard transCard = AbstractDungeon.getTransformedCard();// 81
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(transCard, c.current_x, c.current_y));// 82
+            AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(transCard, c.current_x, c.current_y));// 82
             choosingTransformCard = false;
             CenterGridCardSelectScreen.centerGridSelect = false;
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;

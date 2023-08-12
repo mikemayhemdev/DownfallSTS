@@ -1,0 +1,274 @@
+[
+  {
+    "NAMES": [
+ 	  "absorve",
+	  "absorva",
+	  "absorver",
+   	  "absorvendo",
+      "absorvido",
+	  "absorb",
+      "absorbing",
+      "absorbed"
+    ],
+    "PROPER_NAME": "Absorver",
+    "DESCRIPTION": "Manualmente recombina com o seu Slime principal, concedendo 1 #yStrength."
+  },
+  {
+    "NAMES": [
+      "divide",
+	  "dividir",
+	  "divida-se",
+	  "divide-se",
+      "dividindo-se",
+	  "split",
+      "splitting"
+    ],
+    "PROPER_NAME": "Divida-se",
+    "DESCRIPTION": "Invoca um seguidor Slime, que ataca no início de cada turno. NL Se você não tiver espaços vazios, o seu Slime mais antigo é automaticamente #yAbsorvido para liberar espaço e conceder 1 #yForça."
+  },
+  {
+    "NAMES": [
+      "gosma",
+      "gosmento",
+	  "goop",
+      "gooped"
+    ],
+    "PROPER_NAME": "Gosma",
+    "DESCRIPTION": "O próximo ataque causa #b1 de dano adicional por #yGosma, removendo todos os #yGosma e acionando quaisquer efeitos de #yConsume."
+  },
+  {
+    "NAMES": [
+      "potência",
+	  "potency"
+    ],
+    "PROPER_NAME": "Potência",
+    "DESCRIPTION": "Aumenta o dano de TODOS os seus Slimes invocados. Efeitos secundários aumentam em 1 a cada 2 Potência."
+  },
+  {
+    "NAMES": [
+      "comande",
+      "comande-os",
+	  "command",
+      "commands"
+    ],
+    "PROPER_NAME": "Comande",
+    "DESCRIPTION": "Seu Slime principal ataca."
+  },
+  {
+    "NAMES": [
+      "slime cabeça de tocha",
+      "slime_cabeça_de_tocha",
+	  "torchhead slime",
+      "torchhead_slime"
+    ],
+    "PROPER_NAME": "Slime Cabeça de Tocha",
+    "DESCRIPTION": "Ataca por #b6 a cada turno. Ganha dano da sua #yStrength."
+  },
+  {
+    "NAMES": [
+      "slime brigão",
+      "slime_brigão",
+      "slimes_brigões",
+      "slimes_brigões",
+      "brigão",
+	  "bruiser slime",
+      "bruiser_slime",
+      "bruiser slimes",
+      "bruiser_slimes",
+      "bruiser"
+    ],
+    "PROPER_NAME": "Slime Brigão",
+    "DESCRIPTION": "Ataca por #b5 a cada turno."
+  },
+  {
+    "NAMES": [
+      "slime cultista",
+      "slime_cultista",
+	  "cultist slime",
+      "cultist_slime"
+    ],
+    "PROPER_NAME": "Slime Cultista",
+    "DESCRIPTION": "Ataca por #b6 cada turno, depois aumenta seu dano em #b1."
+  },
+  {
+    "NAMES": [
+      "slime sugador",
+      "slime_sugador",
+      "slimes sugadores",
+      "slimes_sugadores",
+      "sugador",
+	  "leeching slime",
+      "leeching_slime",
+      "leeching slimes",
+      "leeching_slimes",
+      "leeching"
+    ],
+    "PROPER_NAME": "Slime Sungador",
+    "DESCRIPTION": "Ataca por #b1 e concede #b3 #yBloqueio cada turno."
+  },
+  {
+    "NAMES": [
+      "slime de guerrilha",
+      "slime_de_guerrilha",
+      "slimes de guerrilhas",
+      "slimes_de_guerrilhas",
+      "guerrilha",
+	  "guerilla slime",
+      "guerilla_slime",
+      "guerilla slimes",
+      "guerilla_slimes",
+      "guerilla"
+    ],
+    "PROPER_NAME": "Slime de Guerrilha",
+    "DESCRIPTION": "Ataca por #b3 em TODOS os inimigos a cada turno."
+  },
+  {
+    "NAMES": [
+      "slime gosmento",
+      "slime_gosmento",
+      "slimes gosmentos",
+      "slimes_gosmentos",
+	  "mire slime",
+      "mire_slime",
+      "mire slimes",
+      "mire_slimes",
+      "mire"
+    ],
+    "PROPER_NAME": "Slime Gosmento",
+    "DESCRIPTION": "Ataca por #b2 e aplica #b2 #yGosma a cada turno."
+  },
+  {
+    "NAMES": [
+      "slime de bronze",
+      "slime_de_bronze",
+	  "bronze slime",
+      "bronze_slime"
+    ],
+    "PROPER_NAME": "Slime de Bronze",
+    "DESCRIPTION": "Ataca por #b10 em TODOS os inimigos a cada turno, mas pula cada segundo ataque."
+  },
+  {
+    "NAMES": [
+      "lambida",
+	  "lambidas",
+	  "lick"
+    ],
+    "PROPER_NAME": "Lambida",
+    "DESCRIPTION": "Cartas de custo 0 que aplicam #yGosma com uma variedade de efeitos secundários."
+  },
+  {
+    "NAMES": [
+      "slime de chama-fantasma",
+      "slime_de_chama-fantasma",
+	  "ghostflame slime",
+      "ghostflame_slime"
+    ],
+    "PROPER_NAME": "Slime de Chama-Fantasma",
+    "DESCRIPTION": "Ataca por #b3 e aplica #b5 #yQueima de Alma a cada turno."
+  },
+  {
+    "NAMES": [
+      "lento",
+	  "slow"
+    ],
+    "PROPER_NAME": "Lento",
+    "DESCRIPTION": "Recebe #b10% mais dano por carta jogada em um turno."
+  },
+  {
+    "NAMES": [
+      "investida",
+	  "investidas",
+	  "tackle",
+      "tackles"
+    ],
+    "PROPER_NAME": "Investida",
+    "DESCRIPTION": "Ataques de alto dano #y que também causam uma pequena quantidade de dano a você."
+  },
+  {
+    "NAMES": [
+      "chefão da torre",
+      "chefao_da_torre"
+    ],
+    "PROPER_NAME": "Chefão da Torre",
+    "DESCRIPTION": "Cartas poderosas de custo 0, inspiradas nos chefes da Torre."
+  },
+  {
+    "NAMES": [
+      "slime protetor",
+      "slime_protetor",
+	  "protector slime",
+      "protector_slime"
+    ],
+    "PROPER_NAME": "Slime Espinhoso",
+    "DESCRIPTION": "Ataca por #b4 e concede a você #b4 de #yEspinhos Temporários a cada turno."
+  },
+  {
+    "NAMES": [
+      "slime insultante",
+      "slime_insultante",
+	  "insulting slime",
+      "insulting_slime"
+    ],
+    "PROPER_NAME": "Slime Insultante",
+    "DESCRIPTION": "Ataca por #b4 e aplica #b1 #yVulnerável a cada turno."
+  },
+  {
+    "NAMES": [
+      "slime sombrio",
+      "slime_sombrio",
+	  "darkling slime",
+      "darkling_slime"
+    ],
+    "PROPER_NAME": "Slime Sombrio",
+    "DESCRIPTION": "Ataca por #b3 cada turno. Quando Comandado, outros Slimes Sombrios também atacam."
+  },
+  {
+    "NAMES": [
+  	  "slime antigo",
+      "slime_antigo",
+	  "ancient slime",
+      "ancient_slime"
+    ],
+    "PROPER_NAME": "Slime Antigo",
+    "DESCRIPTION": "Ataca por #b3 e faz você comprar #b1 carta por turno."
+  },
+  {
+    "NAMES": [
+      "slime temporal",
+      "slime_temporal",
+	  "time slime",
+      "time_slime"
+    ],
+    "PROPER_NAME": "Slime Temporal",
+    "DESCRIPTION": "Ataca por #b4 e aplica #b1 #yFraqueza a cada turno."
+  },
+  {
+    "NAMES": [
+      "consome",
+	  "consumir",
+	  "consume"
+    ],
+    "PROPER_NAME": "Consumir",
+    "DESCRIPTION": "Efeito bônus que é ativado quando um #yAtaque é usado em um inimigo que tem #yGosma."
+  },
+  {
+    "NAMES": [
+      "especialista",
+      "especialista",
+	  "specialist",
+      "specialist"
+    ],
+    "PROPER_NAME": "Especialista",
+    "DESCRIPTION": "Um slime único com um efeito mais poderoso do que os slimes normais."
+  },
+  {
+    "NAMES": [
+      "enterrada",
+	  "enterradas",
+	  "enterrado",
+	  "buried"
+    ],
+    "PROPER_NAME": "Enterrada",
+    "DESCRIPTION": "Cartas enterradas sempre serão escolhidas por último para efeitos aleatórios de #yExaurir."
+  }
+]

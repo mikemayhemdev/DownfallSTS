@@ -57,11 +57,12 @@ public class Magnum extends AbstractDynamicCard {
             for (AbstractCard c : list)
             {
                 Wiz.p().hand.moveToDiscardPile(c);
-                Wiz.att(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), EnumPatch.HERMIT_GUN));
                 c.triggerOnManualDiscard();
                 GameActionManager.incrementDiscard(false);
+
+                Wiz.att(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), EnumPatch.HERMIT_GUN));
             }
-        }, null, uiStrings.TEXT[0],false,false,false,false));
+        }, null, uiStrings.TEXT[0],false,false,false));
     }
 
     // Upgraded stats.

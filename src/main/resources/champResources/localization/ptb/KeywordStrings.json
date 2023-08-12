@@ -1,0 +1,81 @@
+[
+  {
+    "PROPER_NAME": "Técnica",
+    "NAMES": [
+	  "technique",
+	  "técnica",
+	  "técnicas",
+	  "champ:[crown_icon]",
+	  "[crown_icon]"
+    ],
+    "DESCRIPTION": "Se você estiver em uma #yPostura, ative seu Bônus de Habilidade."
+  },
+  {
+    "PROPER_NAME": "Combo",
+    "NAMES": [
+      "combo",
+	  "combo"
+    ],
+    "DESCRIPTION": "Efeito extra quando jogado na #yPostura listada."
+  },
+  {
+    "PROPER_NAME": "Finalizador",
+    "NAMES": [
+      "finisher",
+	  "finalizador",
+      "finalizadores",
+      "[fist_icon]",
+      "champ:[fist_icon]"
+    ],
+    "DESCRIPTION": "Requer estar em uma Postura. NL Depois de jogar um Finalizador, saia da sua Postura e ative seu bônus de Finalização."
+  },
+  {
+    "PROPER_NAME": "Contra-ataque",
+    "NAMES": [
+      "counter",
+	  "contra-ataque"
+    ],
+    "DESCRIPTION": "Na próxima vez que você sofrer dano de #yAtaque, cause dano de volta."
+  },
+  {
+    "PROPER_NAME": "Defensivo",
+    "NAMES": [
+      "defensive",
+      "defensivo."
+    ],
+    "DESCRIPTION": "#yPostura. NL #yBônus de Habilidade: Ganhe #b3 #yContra-ataque. NL Efeito de #yFinalizador: Ganhe #b8 #yBloqueio."
+  },  
+  {
+    "PROPER_NAME": "Berserker",
+    "NAMES": [
+	  "berserker",
+	  "berserker."
+    ],
+    "DESCRIPTION": "#yPostura. NL #yBônus de habilidade: Ganhe #b2 #yVigor. NL #yEfeito finalizador: Ganhe #b1 #yForça."
+  },
+  {
+    "PROPER_NAME": "Gladiador",
+    "NAMES": [
+	  "gladiator",
+	  "gladiador."
+    ],
+    "DESCRIPTION": "#yPostura. NL #yBônus de Habilidade: Compre uma carta. NL #yBônus de Finalização: No próximo turno, compre #b1 carta e ganhe [E]. Termine o seu turno."
+  },
+  {
+    "PROPER_NAME": "Postura Final",
+    "NAMES": [
+	  "ultimate",
+	  "final."
+    ],
+    "DESCRIPTION": "#yPostura. Conta como posturas #yDefensiva e #yBerserker. NL Se você deixar esta #yPostura antes que ela expire, entre nela imediatamente novamente."
+  },
+  {
+    "PROPER_NAME": "Fadiga",
+    "NAMES": [
+	  "fatigue",
+	  "fadiguado",
+	  "fadiga."
+    ],
+    "DESCRIPTION": "Perde HP. Restaura #yHP Fadigado ao final do combate. Você não morrerá de #yFadiga ."
+  }
+]

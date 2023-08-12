@@ -1,0 +1,46 @@
+[
+  {
+    "PROPER_NAME": "Codificar",
+    "NAMES": [
+      "codificar",
+      "codificado",
+	  "encode",
+      "encoded"
+    ],
+    "DESCRIPTION": "Codificar um cartão. NL Quando 3 cartões são codificados, seus efeitos (além de Codificar) são combinados em uma Função que custa #b1."
+  },
+  {
+    "PROPER_NAME": "Compilar",
+    "NAMES": [
+      "compilar",
+      "compilado",
+	  "compile",
+      "compiled"
+    ],
+    "DESCRIPTION": "Um efeito que é acionado quando este cartão é combinado em uma Função. NL Pode ser um efeito negativo, que é referido como um 'Erro'."
+  },
+  {
+    "PROPER_NAME": "Desfocado",
+    "NAMES": [
+      "desfocado",
+	  "blur"
+    ],
+    "DESCRIPTION": "Não perca Bloqueio no final do turno."
+  },
+  {
+    "PROPER_NAME": "Inserir",
+    "NAMES": [
+      "inserir",
+	  "insert"
+    ],
+    "DESCRIPTION": "Embaralhe um cartão em seu baralho de compra."
+  },
+  {
+    "PROPER_NAME": "Ciclo",
+    "NAMES": [
+      "ciclo",
+	  "cycle"
+    ],
+    "DESCRIPTION": "Descarte um cartão, sacando um novo cartão para substituí-lo."
+  }
+]

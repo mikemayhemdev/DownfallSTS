@@ -45,7 +45,7 @@
 },
 "hermit:Rugged": {
         "NAME": "Rugged",
-        "DESCRIPTIONS": ["The next", " times you would take unblocked attack damage, reduce it to #b2.", " time you would take unblocked damage, reduce it to #b2."]
+        "DESCRIPTIONS": ["The next", " times you would take unblocked attack damage, reduce it to #b2.", " time you would take unblocked attack damage, reduce it to #b2."]
 },
 "hermit:EternalPower": {
         "NAME": "Power Eternal",

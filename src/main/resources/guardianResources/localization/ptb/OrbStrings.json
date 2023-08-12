@@ -1,0 +1,25 @@
+{
+  "Guardian:EmptyStasisSlot": {
+    "NAME": "Slot de Estase",
+    "DESCRIPTION": [
+      "Cartas podem ser colocadas neste slot através de #yEstase."
+    ]
+  },
+  "Guardian:StasisOrb": {
+    "NAME": "Estase: ",
+    "DESCRIPTION": [
+      "retornará para sua mão com custo zero no início do próximo turno.",
+      "retornará para sua mão com custo zero em #b",
+      "turnos.",
+      "será #yExausta no início do próximo turno.",
+      "será #yExausta em #b",
+      "turnos."
+    ]
+  }
+}
+
+
+
+
+
+

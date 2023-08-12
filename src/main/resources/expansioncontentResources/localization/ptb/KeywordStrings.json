@@ -1,0 +1,39 @@
+[
+  {
+    "PROPER_NAME": "Chefe",
+    "NAMES": [
+      "chefe"
+    ],
+    "DESCRIPTION": "Você só pode jogar #b1 carta #yChefe por turno."
+  },
+  {
+    "PROPER_NAME": "Invencível",
+    "NAMES": [
+      "invencível"
+    ],
+    "DESCRIPTION": "Você não pode perder mais do que uma certa quantidade de pontos de vida em um único turno. NL No final de qualquer rodada em que Invencível preveniu a perda de pontos de vida, remova-o."
+  },
+  {
+    "PROPER_NAME": "Exumar",
+    "NAMES": [
+      "exumar",
+	  "exuma"
+    ],
+    "DESCRIPTION": "Coloque uma carta do seu monte de exaustão em sua mão."
+  },
+  {
+    "PROPER_NAME": "Recuperar",
+    "NAMES": [
+      "recuperar",
+	  "reivindique"
+    ],
+    "DESCRIPTION": "Coloque uma carta do seu monte de exaustão em seu monte de descarte."
+  },
+  {
+    "PROPER_NAME": "Acorrentado",
+    "NAMES": [
+      "acorrentado"
+    ],
+    "DESCRIPTION": "As criaturas acorrentadas perdem #yForça por um turno."
+  }
+]

@@ -34,8 +34,8 @@
   },
   "hermit:HighCaliber": {
     "NAME": "大口径",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *打击+2　 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *打击+3　 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *打击+2 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *打击+3 。 NL 消耗 。"
   },
   "hermit:BodyArmor": {
     "NAME": "全身护甲",
@@ -310,7 +310,8 @@
   "hermit:FinalCanter": {
     "NAME": "最终手段",
     "DESCRIPTION": "保留 。 NL 消耗 手中所有 诅咒 ， NL 每张造成 !D! 点伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " NL （造成 !M! 次）"
+    "UPGRADE_DESCRIPTION": " NL （造成 !M! 次）",
+    "EXTENDED_DESCRIPTION": [" NL （造成 !M! 次）"]
   },
   "hermit:HeroicBravado": {
     "NAME": "逞能英雄",

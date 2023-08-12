@@ -1,0 +1,14 @@
+[
+  {
+    "KEYS": [
+      "Ouro"
+    ],
+    "VALUE": "Almas"
+  },
+  {
+    "KEYS": [
+      "ouro"
+    ],
+    "VALUE": "almas"
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "sneckomod:Unknown": {
+    "TEXT": [
+      "Não identificado",
+      " Melhorado",
+      "No início do combate, cartas não identificadas se transformam em outras cartas aleatórias das classes escolhidas que atendam a certas restrições.",
+      " NL Classes escolhidas:",
+      "No início do combate, cartas não identificadas se transformam em outras cartas aleatórias de QUALQUER outra classe que atendam a certas restrições.",
+      "No início do combate, cartas não identificadas se transformam em outras cartas aleatórias de outras classes que atendam a certas restrições."
+    ]
+  },
+  "sneckomod:UnknownNames": {
+    "TEXT": [
+      "Não identificado"
+    ]
+  },
+  "sneckomod:UnknownClass": {
+    "TEXT": [
+      "???",
+      "*Carta",
+	  " não identificada.",
+      "Personagem",
+      "O ",
+      "Você nunca deveria ver isso. Reporte para Vex",
+      "Melhorado"
+    ]
+  },
+  "sneckomod:UpgradedUnknownReward": {
+    "TEXT": [
+      "Adicione um cartão Não Identificado+ ao seu deck",
+      "Escolha um cartão."
+    ]
+  },
+  "sneckomod:FreeRetainMod": {
+    "TEXT": [
+      "Retenha. NL "
+    ]
+  },
+  "sneckomod:ExhaustMod": {
+    "TEXT": [
+      " NL Esgotar."
+    ]
+  },
+  "sneckomod:ChallengeMode": {
+    "TEXT": [
+      "Modo Desafio - Puro Snecko",
+      "Cartões Não Identificados podem ser de qualquer classe. Recomendado para jogadores experientes com o Snecko."
+    ]
+  },
+  "sneckomod:LockInBonfireOptions": {
+    "TEXT": [
+      "Identificar",
+      "Trave um Não Identificado em um cartão permanente.",
+      "Requer um cartão Não Identificado.",
+      "Selecione um cartão para adicionar ao seu deck, removendo sua identificação.",
+      "[Ação Gratuita] Trave um Não Identificado em um cartão permanente."
+    ]
+  },
+  "sneckomod:AtGameStart": {
+    "TEXT": [
+      "",
+      " Cartões",
+      "Cartões Não Identificados podem se tornar ",
+      " cartões nesta jogada.",
+      "Escolha."
+    ]
+  }
+}

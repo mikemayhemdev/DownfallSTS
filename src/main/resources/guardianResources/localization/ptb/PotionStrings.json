@@ -1,0 +1,31 @@
+{
+  "Guardian:AcceleratePotion": {
+    "NAME": "Poção Temporal",
+    "DESCRIPTIONS": [
+      "#yAcelera todos os cards em #yEstase #b",
+	  " vezes."
+    ]
+  },
+  "Guardian:DefensiveModePotion": {
+    "NAME": "Óleo de Polimento",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+	  " #yBloqueio. Entre #yModo #yDefensivo."
+    ]
+  },
+  "Guardian:BlockOnCardUsePotion": {
+    "NAME": "Tintura do Armeiro",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+	  " #yBloqueio cada vez que você jogar um card neste turno."
+    ]
+  },
+  "Guardian:StasisDiscoveryPotion": {
+    "NAME": "Elixir Quântico",
+    "DESCRIPTIONS": [
+      "Ganhe espaços de Estase até ter #b",
+	  ". NL Repita #b",
+	  " vezes: escolha #b1 de #b3 cards para colocar em #yEstase."
+    ]
+  }
+}

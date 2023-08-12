@@ -1,0 +1,34 @@
+{
+  "bronze:FreeFunctionsPotion": {
+    "NAME": "Machine Oil",
+    "DESCRIPTIONS": [
+      "Aumenta todos os números nas cartas Codificadas em #b",
+      " exceto o custo."
+    ]
+  },
+  "bronze:CleanCodePotion": {
+    "NAME": "Alquímico Elixir",
+    "DESCRIPTIONS": [
+      "Remove todos os efeitos de #yErro de #yCompilação do próximo #yFunção que você criar; ela custará #b0 até ser jogada.",
+      "Remove todos os efeitos de #yErro de #yCompilação das próximas #b",
+      " #yFunções que você criar; elas custarão #b0 até serem jogadas."
+    ]
+  },
+  "bronze:BurnAndBuffPotion": {
+    "NAME": "Poção Vexatória",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " #yForça e #b",
+      " #yDestreza. NL Adicione duas cartas #yQueimar+ em seu descarte."
+    ]
+  },
+  "bronze:BuildAFunctionPotion": {
+    "NAME": "Concoção Inteligente de Kio",
+    "DESCRIPTIONS": [
+      "Escolha #b1 de #b3 cartas aleatórias para #yCodificar, repita até criar uma #yFunção.",
+      "Escolha #b1 de #b3 cartas aleatórias para #yCodificar, repita até criar uma #yFunção e ganhe #b",
+      " cópia dela.",
+      " cópias dela."
+    ]
+  }
+}

@@ -1,16 +1,15 @@
 package hermit.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
+import hermit.actions.HandSelectAction;
 import hermit.characters.hermit;
 import hermit.util.Wiz;
 
@@ -25,6 +24,7 @@ public class BodyArmor extends AbstractDynamicCard {
     public static final String ID = HermitMod.makeID(BodyArmor.class.getSimpleName());
     public static final String IMG = makeCardPath("body_armor.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardAction");
 
     // /TEXT DECLARATION/
 
@@ -55,15 +55,18 @@ public class BodyArmor extends AbstractDynamicCard {
     // Actions the card should actually unironically literally do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
-            for (AbstractCard c : cards) {
-                if (c.type != CardType.ATTACK) {
-                    att(new GainBlockAction(p, p, block));
-                }
-                att(new DiscardSpecificCardAction(c, AbstractDungeon.player.hand));
+        Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {
+            for (AbstractCard c : list)
+            {
+                Wiz.p().hand.moveToDiscardPile(c);
+                c.triggerOnManualDiscard();
+                GameActionManager.incrementDiscard(false);
+
+                if (c.type != CardType.ATTACK)
+                    Wiz.att(new GainBlockAction(p, p, block));
             }
-        }));
-        this.addToBot(new GainBlockAction(p, p, block));
+        }, null, uiStrings.TEXT[0],false,false,false));
+        Wiz.atb(new GainBlockAction(p, p, block));
     }
 
     //Upgraded stats.

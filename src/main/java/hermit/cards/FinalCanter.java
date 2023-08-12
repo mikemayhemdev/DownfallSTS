@@ -68,7 +68,10 @@ public class FinalCanter extends AbstractDynamicCard {
     public void applyPowers() {
         baseMagicNumber = magicNumber = countCards();
         super.applyPowers();
-        this.rawDescription = cardStrings.DESCRIPTION;
+        if (magicNumber == 1)
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.UPGRADE_DESCRIPTION;
+        else
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
 

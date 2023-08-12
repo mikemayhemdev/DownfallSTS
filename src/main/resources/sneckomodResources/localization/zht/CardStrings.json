@@ -83,7 +83,7 @@
   "sneckomod:Nope": {
     "NAME": "不行",
     "DESCRIPTION": "sneckomod:蛇證 。 NL 消耗 一張手牌。 NL 獲得同角色牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 消耗 一張手牌。 NL 獲得同角色牌。 NL 其耗能減1。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 消耗 一張手牌。 NL 獲得同角色牌， NL 其耗能減1。",
     "EXTENDED_DESCRIPTION": [
       " 選擇一張牌替換。"
     ]
@@ -204,7 +204,7 @@
   "sneckomod:PureSnecko": {
     "NAME": "易質",
     "DESCRIPTION": "sneckomod:蛇證 。 NL 變化所有 sneckomod:異色 手牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 變化所有 sneckomod:異色 手牌。 NL 其耗能減1。"
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 變化所有 sneckomod:異色 手牌， NL 其耗能減1。"
   },
   "sneckomod:Cheat": {
     "NAME": "作弊",
@@ -244,8 +244,8 @@
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "變廢為寶",
-    "DESCRIPTION": "sneckomod:蛇證 。 NL 消耗 一張手牌。 NL 獲得其耗能量 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 消耗 一張手牌。 NL 獲得其耗能量 [E] 。"
+    "DESCRIPTION": "sneckomod:蛇證 。 NL 消耗 一張手牌， NL 獲得其耗能量 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 消耗 一張手牌， NL 獲得其耗能量 [E] 。"
   },
   "sneckomod:DiceBlock": {
     "NAME": "骰子格擋",

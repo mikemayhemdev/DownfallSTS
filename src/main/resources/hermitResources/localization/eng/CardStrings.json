@@ -311,7 +311,8 @@
   "hermit:FinalCanter": {
     "NAME": "Final Canter",
     "DESCRIPTION": "Retain. NL Exhaust all Curses in hand. Deal !D! damage for each. Exhaust.",
-    "UPGRADE_DESCRIPTION": " NL (You have !M! Curse(s))"
+    "UPGRADE_DESCRIPTION": " NL (You have !M! Curse.)",
+    "EXTENDED_DESCRIPTION": [" NL (You have !M! Curses.)"]
   },
   "hermit:HeroicBravado": {
     "NAME": "Heroic Bravado",

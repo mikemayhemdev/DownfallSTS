@@ -34,7 +34,6 @@ import com.megacrit.cardcrawl.events.shrines.UpgradeShrine;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
@@ -51,7 +50,6 @@ import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 import guardian.patches.BottledStasisPatch;
 import guardian.patches.GuardianEnum;
-import guardian.patches.RewardItemTypePatch;
 import guardian.potions.AcceleratePotion;
 import guardian.potions.BlockOnCardUsePotion;
 import guardian.potions.DefensiveModePotion;
@@ -59,8 +57,6 @@ import guardian.potions.StasisDiscoveryPotion;
 import guardian.powers.ExhaustStatusesPower;
 import guardian.powers.zzz.MultiBoostPower;
 import guardian.relics.*;
-import guardian.rewards.GemReward;
-import guardian.rewards.GemRewardAllRarities;
 import guardian.stances.DefensiveMode;
 import guardian.ui.EnhanceBonfireOption;
 import guardian.vfx.AddGemToStartingDeckEffect;
@@ -87,8 +83,6 @@ public class GuardianMod implements PostDrawSubscriber,
         AddAudioSubscriber,
         OnPlayerLoseBlockSubscriber,
         PostCreateStartingDeckSubscriber
-        //basemod.interfaces.EditKeywordsSubscriber
-        //EditStringsSubscriber
 {
 
     public static final Float stasisCardRenderScale = 0.2F;
@@ -814,29 +808,6 @@ public static void saveData() {
 
 
     public void receivePostInitialize() {
-
-        //UIStrings configStrings = CardCrawlGame.languagePack.getUIString("slimeboundConfigMenuText");
-
-        BaseMod.registerCustomReward(
-                RewardItemTypePatch.GEM,
-                (rewardSave) -> { //on load
-                    GuardianMod.logger.info("gems loaded");
-                    return new GemReward();
-                }, (customReward) -> { //on save
-                    GuardianMod.logger.info("gems saved");
-                    return new RewardSave(customReward.type.toString(), null);
-                });
-
-        BaseMod.registerCustomReward(
-                RewardItemTypePatch.GEMALLRARITIES,
-                (rewardSave) -> { //on load
-                    GuardianMod.logger.info("gems loaded");
-                    return new GemRewardAllRarities();
-                }, (customReward) -> { //on save
-                    GuardianMod.logger.info("gems saved");
-                    return new RewardSave(customReward.type.toString(), null);
-                });
-
 
         //logger.info("Load Badge Image and mod options");
         // Load the Mod Badge

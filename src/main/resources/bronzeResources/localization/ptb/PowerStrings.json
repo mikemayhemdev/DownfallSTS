@@ -1,0 +1,146 @@
+{
+  "bronze:Cloning": {
+    "NAME": "Mesclagem",
+    "DESCRIPTIONS": [
+      "Na próxima vez em que você #yCodificar um cartão, #yCodifique uma cópia extra dele.",
+      "Na próxima vez em que você #yCodificar um cartão, #yCodifique #b",
+      " cópias extras dele."
+    ]
+  },
+  "bronze:Default": {
+    "NAME": "Padrão da Classe",
+    "DESCRIPTIONS": [
+      "Na próxima vez em que você criar uma função, #yCodifique uma cópia do cartão atual no primeiro slot.",
+      "Nas próximas #b",
+      " vezes que você criar uma função, #yCodifique uma cópia do cartão atual no primeiro slot."
+    ]
+  },
+  "bronze:Feature": {
+    "NAME": "É uma Característica",
+    "DESCRIPTIONS": [
+      "Sempre que você comprar um cartão #rMaldição ou #yEstado, ganhe #b",
+      " de Força temporária e #b",
+      " de Destreza temporária."
+    ]
+  },
+  "bronze:InfiniteBeams": {
+    "NAME": "Feixes Infinitos",
+    "DESCRIPTIONS": [
+      "No início de seu turno, ganhe #b1 Feixe #yMenor.",
+      "No início de seu turno, ganhe #b1 Feixe #yMenor+.",
+      "No início de seu turno, ganhe #b",
+      " Feixes #yMenores.",
+      "No início de seu turno, ganhe #b",
+      " Feixes #yMenores+."
+    ]
+  },
+  "bronze:Optimize": {
+    "NAME": "Otimizado",
+    "DESCRIPTIONS": [
+      "#yAprimore o próximo cartão #yAprimorável que você #yCodificar.",
+      "#yAprimore os próximos #b",
+      " cartões #yAprimoráveis que você #yCodificar."
+    ]
+  },
+  "bronze:MaxOutput": {
+    "NAME": "Saída Máxima",
+    "DESCRIPTIONS": [
+      "Compre #b1 carta adicional e adicione #b1 #yAtordoado em seu baralho a cada turno.",
+      "Compre #b",
+      " cartas adicionais e adicione #b",
+      " #yAtordoado em seu baralho a cada turno."
+    ]
+  },
+  "bronze:Return": {
+    "NAME": "Retornando",
+    "DESCRIPTIONS": [
+      "No início de seu próximo turno, ganhe [E] e compre #b1 carta.",
+      "No início de seus próximos #b",
+      " turnos, ganhe [E] e compre #b1 carta."
+    ]
+  },
+  "bronze:Library": {
+    "NAME": "Biblioteca",
+    "DESCRIPTIONS": [
+      "No início do seu turno, ganhe um card aleatório com #yCodificar. Ele custa #b0 até ser jogado.",
+      "No início do seu turno, ganhe #b",
+	  " cards aleatórios com #yCodificar. Eles custam #b0 até serem jogados."
+    ]
+  },
+  "bronze:LibraryMod": {
+    "NAME": "Biblioteca Externa",
+    "DESCRIPTIONS": [
+      "No início do seu turno, ganhe um card aleatório com #yCodificar e dê a ele #yEtereo."
+    ]
+  },
+  "bronze:BronzeHeatsink": {
+    "NAME": "Dissipador de Calor de Bronze",
+    "DESCRIPTIONS": [
+     "Sempre que você jogar uma #yFunção, compre #b1 carta.",
+	 "Sempre que você jogar uma #yFunção, compre #b",
+	 " cartas."
+    ]
+  },
+  "bronze:HardenedForm": {
+    "NAME": "Invocar Orbe",
+    "DESCRIPTIONS": [
+      "Sempre que você criar ou jogar uma #yFunção, ganhe #b",
+	  " de #yBloqueio e cause #b",
+	  " de dano a um inimigo aleatório."
+    ]
+  },
+  "bronze:Hardcode": {
+    "NAME": "Codificação Dura",
+    "DESCRIPTIONS": [
+      "Da próxima vez que você criar uma #yFunção, ela vai para o seu deck em vez de ir para a sua mão, removendo todos os cards usados.",
+      "Das próximas #b",
+	  " vezes que você criar uma Função, ela vai para o seu deck em vez de ir para a sua mão, removendo todos os cards usados."
+    ]
+  },
+  "bronze:Verify": {
+    "NAME": "Forma Sentiente",
+    "DESCRIPTIONS": [
+      "Sempre que você comprar uma #yFunção, aumente todos os números nela em #b1.",
+      "Sempre que você comprar uma #yFunção, aumente todos os números nela em #b",
+	  " exceto o custo."
+    ]
+  },
+  "bronze:FreeFunction": {
+    "NAME": "Função Gratuita",
+    "DESCRIPTIONS": [
+      "A próxima Função que você criar custa #b0.",
+      "As próximas #b",
+ 	  " Funções que você criar custam #b0 cada."
+    ]
+  },
+  "bronze:CleanCode": {
+    "NAME": "Código Limpo",
+    "DESCRIPTIONS": [
+      "Remove todos os efeitos de #yCompile #yError das cartas codificadas. Dura por mais #b1 função.",
+      "Remove todos os efeitos de #yCompile #yError das cartas codificadas. Dura por mais #b",
+	  " Funções."
+    ]
+  },
+  "bronze:CopyPaste": {
+    "NAME": "Copiar e Colar",
+    "DESCRIPTIONS": [
+      "Sua próxima função é jogada duas vezes neste turno.",
+      "Suas próximas #b",
+	  " funções são jogadas duas vezes neste turno."
+    ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "Liberação Total",
+    "DESCRIPTIONS": [
+      "No início do seu turno, NL"
+    ]
+  },
+  "bronze:RemoveNextError": {
+    "NAME": "Remover Erros",
+    "DESCRIPTIONS": [
+      "Remove a próxima carta #yCompile #yError #yEncoded.",
+      "Remove as próximas #b",
+	  " cartas #yCompile #yError #yEncoded."
+    ]
+  }
+}

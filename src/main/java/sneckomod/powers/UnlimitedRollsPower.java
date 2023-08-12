@@ -41,15 +41,14 @@ public class UnlimitedRollsPower extends AbstractPower implements CloneablePower
     }
 
     public void atStartOfTurnPostDraw() {
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {// 27
-            this.flash();// 28
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            this.flash();
 
             AbstractCard card = new SoulRoll();
-            card.exhaust = true;
             CardModifierManager.addModifier(card, new EtherealMod());
             CardModifierManager.addModifier(card, new ExhaustMod());
 
-            this.addToBot(new MakeTempCardInHandAction(card, amount, false));// 30 32 33
+            this.addToBot(new MakeTempCardInHandAction(card, amount, false));
         }
     }
 

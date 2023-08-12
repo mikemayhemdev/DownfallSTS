@@ -1,14 +1,14 @@
 {
 "hermit:Tonic": {
         "NAME": "Tônico",
-        "DESCRIPTIONS": ["Ganhe #b", " #yInflexível."]
+        "DESCRIPTIONS": ["Ganhe #b"," #yResistência."]
 },
 "hermit:BlackBile": {
-        "NAME": "Bile Negra",
-        "DESCRIPTIONS": ["Aplique #b", " #yHematoma."]
+        "NAME": "Bílis Negra",
+        "DESCRIPTIONS": ["Aplique #b"," #yHematoma."]
 },
 "hermit:Eclipse": {
         "NAME": "Vazio Líquido",
-        "DESCRIPTIONS": ["Cololque #b", " carta da sua #ypilha #yexaurida na sua mão. Ela custa #b0 esse turno."," cartas da sua #ypilha #yexaurida na sua mão. Elas custam #b0 esse turno."]
+        "DESCRIPTIONS": ["Coloque #b"," cartão de seu monte de #yexaustão em sua mão. Ele custa #b0 neste turno."," cartões de seu monte de #yexaustão em sua mão. Eles custam #b0 neste turno."]
 }
 }

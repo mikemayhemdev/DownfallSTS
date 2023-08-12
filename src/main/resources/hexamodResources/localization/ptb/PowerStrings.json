@@ -1,0 +1,211 @@
+{
+  "hexamod:AgainPower": {
+    "NAME": "Novamente!",
+    "DESCRIPTIONS": [
+      "Não #yAvance ao final da próxima rodada.",
+      "Não #yAvance ao final das próximas #b",
+      " rodadas."
+    ]
+  },
+  "hexamod:ApocalypticArmorPower": {
+    "NAME": "Dia do Juízo",
+    "DESCRIPTIONS": [
+      "Na próxima vez que #yAcender a Chama Fantasma Infernal e todas as #b",
+      " Chamas Fantasmas forem #yAcendida, ganhe uma rodada adicional.",
+      "Na próxima vez que #yAcender a Chama Fantasma Infernal e pelo menos #b"
+    ]
+  },
+  "hexamod:ApplyBurnAtTurnStartOncePower": {
+    "NAME": "Chama Atrasada",
+    "DESCRIPTIONS": [
+      "No início da sua próxima rodada, aplique #b",
+      " #yAngústia em TODOS os inimigos."
+    ]
+  },
+  "hexamod:BurnPerTurnPower": {
+    "NAME": "Metal Derretido",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " #yAngústia após a próxima vez que #yAngústia for detonado neste inimigo."
+    ]
+  },
+  "hexamod:BurnPower": {
+    "NAME": "Angústia",
+    "DESCRIPTIONS": [
+      "Em #b",
+      " rodadas, perde #b",
+      " rodada, perde #b",
+      " de PV, então #yAngústia é removido."
+    ]
+  },
+  "hexamod:BurnvenomPower": {
+    "NAME": "Arma Incendiária",
+    "DESCRIPTIONS": [
+      "Sempre que você causar dano de ataque não bloqueado, aplique #b",
+      " #yAngústia."
+    ]
+  },
+  "hexamod:CommonPostCombatPower": {
+    "NAME": "Recompensa Selada: Carta",
+    "DESCRIPTIONS": [
+      "Ao final do combate, obtenha #b",
+      " cartas adicionais.",
+      " carta adicional."
+    ]
+  },
+  "hexamod:CrispyPower": {
+    "NAME": "Extra Crocante",
+    "DESCRIPTIONS": [
+      "#ySoulburn aplicado é aumentado em #b",
+      "."
+    ]
+  },
+  "hexamod:EnhancePower": {
+    "NAME": "Intensidade",
+    "DESCRIPTIONS": [
+      "Aumenta a quantidade de dano, #yAngústia e #yProteção aplicados por Chamas Fantasmas quando estiverem Ignoradas por #b.",
+      "Diminui a quantidade de dano, #yAngústia e #yProteção aplicados por Chamas Fantasmas quando estiverem Ignoradas por #b."
+    ]
+  },
+  "hexamod:EtherealRefundPower": {
+    "NAME": "Reembolso Etéreo",
+    "DESCRIPTIONS": [
+      "Sempre que você jogar uma carta #yEtérea neste turno, ganhe ",
+      " ."
+    ]
+  },
+  "hexamod:FuturePower": {
+    "NAME": "Corrida Rápida",
+    "DESCRIPTIONS": [
+      "Sempre que você #yAvançar, ganhe #b",
+      " de Força temporária."
+    ]
+  },
+  "hexamod:FutureUpgradePower": {
+    "NAME": "Recompensa Selada: Melhoria",
+    "DESCRIPTIONS": [
+      "Ao final do combate, #yMelhore #b",
+      " carta aleatória em seu baralho.",
+      " cartas aleatórias em seu baralho."
+    ]
+  },
+  "hexamod:StopFromAdvancingPower": {
+    "NAME": "Aqui e Agora",
+    "DESCRIPTIONS": [
+      "Você não #yAvança mais ao final do seu turno."
+    ]
+  },
+  "hexamod:GhostFlameBarrierPower": {
+    "NAME": "Barreira de Chamas Fantasmas",
+    "DESCRIPTIONS": [
+      "Quando atacado neste turno, aplica #b",
+      " #yAngústia no atacante."
+    ]
+  },
+  "hexamod:GiftsFromTheDeadPower": {
+    "NAME": "Cartas Presenteadas",
+    "DESCRIPTIONS": [
+      "No início do seu turno, #yRecupere ",
+      " carta #yPós-Vida ",
+      " aleatória.",
+      " cartas #yPós-Vida ",
+      " aleatórias."
+    ]
+  },
+  "hexamod:GiftsFromTheDeadPowerPlus": {
+    "NAME": "Energia Presenteada",
+    "DESCRIPTIONS": [
+      "Sempre que uma carta #yEtérea é #yExaurida, ganhe ",
+      " no próximo turno."
+    ]
+  },
+  "hexamod:GoldPostCombatPower": {
+    "NAME": "Recompensa Selada: Ouro",
+    "DESCRIPTIONS": [
+      "Recompensa em ouro desta luta é aumentada em #b.",
+      ""
+    ]
+  },
+  "hexamod:HexalevelPower": {
+    "NAME": "Forma Infernal",
+    "DESCRIPTIONS": [
+      "No início do seu turno, ganhe #b",
+	  " #yIntensidade."
+    ]
+  },
+  "hexamod:LoseEnhanceInTurnsPower": {
+    "NAME": "Aquecimento",
+    "DESCRIPTIONS": [
+      "No final do seu turno, perca #b.",
+      "Em #b",
+	  " turnos, perca #b",
+	  " #yIntensidade."
+    ]
+  },
+  "hexamod:ParanormalFormPower": {
+    "NAME": "Poltergeist",
+    "DESCRIPTIONS": [
+      "Sempre que você jogar uma carta #yPós-Vida, cause #b",
+	  " dano a um inimigo aleatório."
+    ]
+  },
+  "hexamod:PastPower": {
+    "NAME": "Dança do Demônio",
+    "DESCRIPTIONS": [
+      "As primeiras #b",
+	  " vez ",
+	  " vezes ",
+      " que você usar #yRetract a cada turno, ganhe [E] e compre 1 carta. NL Retraído #b",
+ 	  " vez neste turno.",
+	  " vezes neste turno."
+    ]
+  },
+  "hexamod:PotionPostCombatPower": {
+    "NAME": "Recompensa Selada: Poção",
+    "DESCRIPTIONS": [
+      "No final da luta, obtenha #b",
+	  " Poções adicionais.",
+	  " Poção adicionail."
+    ]
+  },
+  "hexamod:RadiantPower": {
+    "NAME": "Chama Radiante",
+    "DESCRIPTIONS": [
+      "Sempre que você #yAcender uma #yChama-Fantasma, ganhe #b",
+	  " #yProteção."
+    ]
+  },
+  "hexamod:SealPostCombatPower": {
+    "NAME": "Recompensa Selada: Selo",
+    "DESCRIPTIONS": [
+      "No final da luta, obtenha #b",
+	  " cartas #ySelo adicionais.",
+	  " carta #ySelo adicionail."
+    ]
+  },
+  "hexamod:TimeStopPower": {
+    "NAME": "Chegada da Perdição",
+    "DESCRIPTIONS": [
+      "No final do seu turno, comece imediatamente outro turno. NL #yEnergia e #yProteção são mantidos."
+    ]
+  },
+  "hexamod:VolcanoVisagePower": {
+    "NAME": "Visagem Vulcânica",
+    "DESCRIPTIONS": [
+      "Sempre que você #yAcender uma #yChama-Fantasma, aplique #b",
+	  " #yAngústia em todos os inimigos."
+    ]
+  },
+  "hexamod:LivingBombPower": {
+    "NAME": "Bomba Viva",
+    "DESCRIPTIONS": [
+      "Na próxima vez que o #yAngústia desta criatura for detonado, ele afetará TODOS os inimigos."
+    ]
+  },
+  "hexamod:GainEnergyAtStartOfTurnPower": {
+    "NAME": "Mais Energia",
+    "DESCRIPTIONS": [
+      "No início do seu turno, ganhe "
+    ]
+  }
+}

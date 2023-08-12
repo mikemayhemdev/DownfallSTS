@@ -1,0 +1,143 @@
+{
+  "Gremlin:ImpeccablePecs": {
+    "NAME": "Pecados Impecáveis",
+    "FLAVOR": "Glorioso.",
+    "DESCRIPTIONS": [
+      "Sempre que você ganha #yStrength, ganha uma quantidade igual de #yTemporary_HP. NL Comece cada combate com #b1 #yStrength."
+    ]
+  },
+  "Gremlin:FragmentationGrenade": {
+    "NAME": "Granada de Fragmentação",
+    "FLAVOR": "Ninguém se atreve a perguntar de onde os Gremlins a conseguiram.",
+    "DESCRIPTIONS": [
+      "O dano causado a inimigos aleatórios é aumentado em #b", "."
+    ]
+  },
+  "Gremlin:GremlinBomb": {
+    "NAME": "Bomba Gremlin",
+    "FLAVOR": "Os Gremlins têm um talento incrível para encontrar coisas perigosas. Às vezes, eles até sobrevivem ao saqueá-las.",
+    "DESCRIPTIONS": [
+      "Sempre que um Gremlin morre, causa #b", " de dano a TODOS os inimigos."
+    ]
+  },
+  "Gremlin:GremlinGravestone": {
+    "NAME": "Lápide Gremlin",
+    "FLAVOR": "Para onde vão os Gremlins quando morrem? Não longe o suficiente.",
+    "DESCRIPTIONS": [
+      "Os Gremlins mortos podem ser ressuscitados em Acampamentos como uma Ação Gratuita."
+    ]
+  },
+  "Gremlin:GremlinKnob": {
+    "NAME": "Cajado do Líder de Bando",
+    "FLAVOR": "Entre as gangues de Gremlins, aquele com o melhor chifre mantém o completo comando sobre a trupe, até que outro consiga roubá-lo.",
+    "DESCRIPTIONS": [
+      "No início de cada combate, ganhe [E], compre #b1 carta e #yTroque para o próximo Gremlin."
+    ]
+  },
+  "Gremlin:GremlinKnobUpgrade": {
+    "NAME": "Coroa do Líder de Bando",
+    "FLAVOR": "Quanto mais elegante o símbolo de autoridade, mais provável é que seja roubado.",
+    "DESCRIPTIONS": [
+      "Substitui ",
+      ". NL Na primeira vez que você embaralha seu baralho de descarte em cada turno, ganhe [E], compre #b1 carta e #yTroque para o próximo Gremlin."
+    ]
+  },
+  "Gremlin:GremlinMask": {
+    "NAME": "Máscara Gremlin",
+    "FLAVOR": "Um sinal de status entre as Gangues de Gremlins.",
+    "DESCRIPTIONS": [
+      "Comece cada combate com #b1 #yStrength temporário."
+    ]
+  },
+  "Gremlin:LeaderVoucher": {
+    "NAME": "Vale-Líder dos Gremlins",
+    "FLAVOR": "IOU 1 Gremlin",
+    "DESCRIPTIONS": [
+      "Ganhe [E] no início do seu turno. NL Ao coletar, #rperca #rpermanentemente #r1 #rGremlin.",
+      " NL #r( #rGremlin #rGordo #r)",
+      " NL #r( #rGremlin #rMago #r)",
+      " NL #r( #rGremlin #rMaluco #r)",
+      " NL #r( #rGremlin #rEscudo #r)",
+      " NL #r( #rGremlin #rFurtivo #r)"
+    ]
+  },
+  "Gremlin:MagicalMallet": {
+    "NAME": "Martelo Mágico",
+    "FLAVOR": "Machucados nos dedos serão sentidos em dobro.",
+    "DESCRIPTIONS": [
+      "Sempre que você aplicar #yFraco, ganhe #b1 #yMago, até #b3 vezes por turno."
+    ]
+  },
+  "Gremlin:PricklyShields": {
+    "NAME": "Escudos Espinhosos",
+    "FLAVOR": "Gremlins usam quaisquer pedaços de metal como armas ou armaduras. Alguns servem para os dois.",
+    "DESCRIPTIONS": [
+      "Sempre que você ganhar #yBloqueio, cause #b", " de dano a um inimigo aleatório."
+    ]
+  },
+  "Gremlin:ShortStature": {
+    "NAME": "Estátua Baixinha",
+    "FLAVOR": "É surpreendente o quão bem ela funciona.",
+    "DESCRIPTIONS": [
+      "A primeira vez que um Gremlin iria morrer em cada combate, cure-o em #b75% de sua Vida Máxima em vez disso.",
+      "Já usado neste combate."
+    ]
+  },
+  "Gremlin:StolenMerchandise": {
+    "NAME": "Mercadorias Roubadas",
+    "FLAVOR": "\"Malditos Gremlins ladrões!\".",
+    "DESCRIPTIONS": [
+      "Sempre que você #yTrocar, ganhe um #yEco de uma carta Sem Cor aleatória. NL No início do combate, o Mercador ganha #b",
+      " de Força.",
+      "Malditos ladrões sem vergonha!",
+      "Vermes covardes e desprezíveis!",
+      "Gananciosos e avarentos Gremlins!"
+    ]
+  },
+  "Gremlin:SupplyScroll": {
+    "NAME": "Rolo de Suprimentos",
+    "FLAVOR": "Um inventário surpreendentemente detalhado dos vários pedaços e peças do grupo.",
+    "DESCRIPTIONS": [
+      "No início do seu terceiro turno, ganhe [E] e compre #b2 cartas."
+    ]
+  },
+  "Gremlin:TagTeamwork": {
+    "NAME": "Trabalho em Equipe",
+    "FLAVOR": "Trabalho em equipe faz o sonho acontecer.",
+    "DESCRIPTIONS": [
+      "Sempre que você comprar uma carta #yTag #yTeam, compre mais uma carta. Ao pegar este item, adicione duas cópias de #yTag #yTeam ao seu baralho."
+    ]
+  },
+  "Gremlin:WizardHat": {
+    "NAME": "Chapéu de Feiticeiro",
+    "FLAVOR": "As vestes que acompanham este chapéu foram roubadas há muito tempo.",
+    "DESCRIPTIONS": [
+      "Sempre que você consumir #yWiz, remova um debuff aleatório."
+    ]
+  },
+  "Gremlin:WizardStaff": {
+    "NAME": "Cajado de Feiticeiro",
+    "FLAVOR": "O orgulho e a alegria de todo Gremlin Feiticeiro, este cajado é frequentemente alvo de roubo por gangues rivais.",
+    "DESCRIPTIONS": [
+      "#yWiz causa #b7 de dano adicional."
+    ]
+  },
+  "Gremlin:WoundPoker": {
+    "NAME": "Espeto de Ferida",
+    "FLAVOR": "Isso dói quando eu faço assim?",
+    "DESCRIPTIONS": [
+      "Ao final de cada turno, cause #b", " de dano a cada inimigo #yWeakened."
+    ]
+  },
+  "Gremlin:PatchFixes": {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Ao pegar este item, aumente o HP máximo de todos os seus Gremlins em #b",
+      "Ao adicionar cartas ao seu baralho, você pode aumentar o HP máximo de todos os seus Gremlins em #b1 em vez disso.",
+      " #yOuro. NL Aumente o HP máximo de todos os seus Gremlins em #b",
+      "Ao final de cada 5ª luta, aumente o HP máximo de todos os seus Gremlins em #b1.",
+      "+1 HP máximo"
+    ]
+  }
+}

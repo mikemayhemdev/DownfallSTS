@@ -340,7 +340,8 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "퍼져나가는 영",
-    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 소멸된 카드 더미에 있는 휘발성 카드 한 장당 피해를 !D! 줍니다. NL 소멸."
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 소멸된 카드 더미에 있는 휘발성 카드 한 장당 피해를 !D! 줍니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": " NL (피해를 !M! 번 줍니다.)"
   },
   "hexamod:UnlimitedPower": {
     "NAME": "무한의 힘",

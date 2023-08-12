@@ -3,7 +3,7 @@
     "NAME": "Cœur de gelée",
     "FLAVOR": "Je me sens si funky.",
     "DESCRIPTIONS": [
-      "Lorsque vous #yslimeboundmod:Consumez, soignez-vous de #b2 PV, jusqu'à #b8 chaque combat."
+      "Lorsque vous #yslimeboundmod:Consumez, soignez-vous de #b2 PV, jusqu'à #b8 par combat."
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
@@ -11,7 +11,7 @@
     "FLAVOR": "Le secret de la Vase.",
     "DESCRIPTIONS": [
       "Remplace ",
-      ".[] NL Lorsque vous #yslimeboundmod:Consumez, soignez-vous de #b3 PV, jusqu'à #b15 chaque combat."
+      ".[] NL Lorsque vous #yslimeboundmod:Consumez, soignez-vous de #b3 PV, jusqu'à #b15 par combat."
     ]
   },
   "Slimebound:SlimedTailRelic": {
@@ -19,7 +19,7 @@
     "FLAVOR": "Une fausse queue pour feinter les ennemis durant le combat, totalement recouverte de slime.",
     "DESCRIPTIONS": [
       "Lorsque vous vous slimeboundmod:Divisez, gagnez #b",
-      " d'Armure."
+      " #yd'Armure."
     ]
   },
   "Slimebound:PotencyRelic": {
@@ -40,7 +40,7 @@
     "NAME": "Slime ferrailleux",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, faites apparaître le #ySlime #yferrailleux. NL Dans les sites de Repos, vous pouvez donner une carte au Slime ferrailleux, modifiant ses dégâts: NL #b+1 dégât pour les #gNon-communes NL #b+2 dégâts pour les #yRares NL #b-1 dégât pour les Communes NL #b-2 dégâts pour les #rMalédictions",
+      "Au début de chaque combat, faites apparaître le #ySlime #yferrailleux. Il est ranimable si #yAbsorbé. NL Aux feux de camp, vous pouvez donner une carte au Slime ferrailleux, modifiant ses dégâts : NL #b+1 dégât pour les #gPeu #gcommunes NL #b+2 dégâts pour les #yRares NL #b-1 dégât pour les Communes NL #b-2 dégâts pour les #rMalédictions",
       "Retirez une carte de votre deck et modifiez les dégâts du Slime ferrailleux.",
       "Rien à donner au Slime ferrailleux.",
       "Donner au Ferrailleux"
@@ -48,52 +48,52 @@
   },
   "Slimebound:GreedOozeRelic": {
     "NAME": "Slime cupide",
-    "FLAVOR": "Un ami trouvé dans la Tour qui adore l'or.",
+    "FLAVOR": "Un ami trouvé dans la Tour qui adore les âmes et l'or.",
     "DESCRIPTIONS": [
-      "Au début du combat, faites apparaître le #ySlime #ycupide. NL Dans les sites de Repos, le #ySlime #ycupide vous prendra #b50 de votre or, augmentant son dégât de #b1."
+      "Au début du combat, faites apparaître le #ySlime #ycupide. Il est ranimable si #yAbsorbé. NL Aux feux de camp, le #ySlime #ycupide vous prendra #b50 de vos âmes, augmentant ses dégâts de #b1."
     ]
   },
   "Slimebound:PreparedRelic": {
     "NAME": "Soupe de slime",
-    "FLAVOR": "Elle a un goût horrible, mais elle est incroyablement saine pour le corps.",
+    "FLAVOR": "Elle a un goût horrible, mais elle est incroyablement bonne pour la santé.",
     "DESCRIPTIONS": [
-      "Lorsque vous entrez dans un site de Repos, commencez le prochain combat avec une carte #yPréparation qui coûte 0."
+      "Lorsque vous accédez à un feu de camp, commencez le prochain combat avec une carte #yPréparation qui coûte #b0."
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {
     "NAME": "Squatteur visqueux",
-    "FLAVOR": "Il m'a suivi jusqu'à la maison. Je peux le garder?",
+    "FLAVOR": "Il m'a suivi jusqu'à la maison. Je peux le garder ?",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, #yslimeboundmod:Divisez-vous en #yslimeboundmod:Slime cogneur."
+      "Au début de chaque combat, #yslimeboundmod:Divisez-vous en #yslimeboundmod:Slime_cogneur."
     ]
   },
   "Slimebound:SlimedSkullRelic": {
     "NAME": "Crâne gluant",
-    "FLAVOR": "Un crâne de Geckobra Snecko skull dans un état absolument épouvantable. Dégoûtant et gluant, la saleté et la crasse s'y accrochent comme de la colle..",
+    "FLAVOR": "Un crâne de Geckobra dans un état absolument épouvantable. Dégoûtant et gluant, la saleté et la crasse s'y accrochent comme de la colle.",
     "DESCRIPTIONS": [
       "Lorsque vous appliquez du #yslimeboundmod:Goop, appliquez #b",
       " de #yslimeboundmod:Goop supplémentaire."
     ]
   },
   "Slimebound:MaxSlimesRelic": {
-    "NAME": "Bannière de Jeremiah",
+    "NAME": "Bannière de Jérémie",
     "FLAVOR": "Vous et votre armée.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, gagnez #b1 emplacement de Slime et #yslimeboundmod:Divisez-vous en un #yslimeboundmod:Slime aléatoire."
+      "Au début de chaque combat, gagnez #b1 emplacement de Slime et #yslimeboundmod:Divisez-vous en un Slime aléatoire."
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
     "NAME": "Équipement de protection",
     "FLAVOR": "La meilleure défense, c'est une bonne attaque.",
     "DESCRIPTIONS": [
-      "Réduisez les dégâts que vous prenez des cartes #yslimeboundmod:Tacle de #b3."
+      "Réduisez les dégâts que vous subissez des cartes \"Tacle\" de #b3."
     ]
   },
   "Slimebound:TarBlob": {
-    "NAME": "Slime Goudrron",
+    "NAME": "Slime de goudrron",
     "FLAVOR": "Le mauvais genre de Slime.",
     "DESCRIPTIONS": [
-      "Gagnez [E] au début du tour. Au début de chaque combat, perdez #b1 emplacement de Slime."
+      "Gagnez [E] au début de chaque tour. Au début de chaque combat, perdez #b1 emplacement de Slime."
     ]
   },
   "Slimebound:StickyStick": {

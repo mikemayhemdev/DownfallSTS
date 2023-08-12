@@ -34,4 +34,9 @@ public class RewardItemTypeEnumPatch {
 	public static RewardItem.RewardType COLLECTOR_COLLECTIBLECARDREWARD;
 	@SpireEnum
 	public static RewardItem.RewardType COLLECTOR_ESSENCE;
+	public static RewardItem.RewardType THIRDSEALCARDREWARD;
+	@SpireEnum
+	public static RewardItem.RewardType GEM;
+	@SpireEnum
+	public static RewardItem.RewardType GEMALLRARITIES;
 }

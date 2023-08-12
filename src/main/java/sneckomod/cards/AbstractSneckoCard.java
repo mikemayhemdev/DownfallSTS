@@ -135,9 +135,25 @@ public abstract class AbstractSneckoCard extends CustomCard {
     }
 
 
-    public static int getRandomNum(int min, int max, AbstractSneckoCard source) {
+    public static int getRandomNum(int a, int b, AbstractSneckoCard source) {
+        int min, max;
+        if (a > b) {
+            max = a;
+            min = b;
+            if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
+                min++;
+        } else if (b > a) {
+            max = b;
+            min = a;
+            if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
+                min++;
+        } else {
+            max = b;
+            min = a;
+            if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
+                max++;
+        }
 
-        int bruh = min;
         if (AbstractDungeon.player.hasPower(CheatPower.POWER_ID)) {
             AbstractPower q = AbstractDungeon.player.getPower(CheatPower.POWER_ID);
             q.flash();
@@ -148,28 +164,16 @@ public abstract class AbstractSneckoCard extends CustomCard {
             if (source != null) {
                 //SlimeboundMod.logger.info("min/max check passed card source check");
                 D8 d8relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
-                if (d8relic.card == source)
+                if (d8relic.card.uuid == source.uuid)
                     //SlimeboundMod.logger.info("min/max check passed card source = bottled card check");
                     return max;
             }
         }
-        if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
-            bruh++;
 
-        int a, b, sum;
-        if (bruh > max) {
-            a = max;
-            b = bruh;
-        } else {
-            a = bruh;
-            b = max;
+        if (min != max) {
+            return AbstractDungeon.cardRandomRng.random(min, max);
         }
-        if (a != b) {
-            sum = AbstractDungeon.cardRandomRng.random(a, b);
-        } else {
-            sum = b;
-        }
-        return sum;
+        return max;
     }
 
     public static String makeID(String name) {

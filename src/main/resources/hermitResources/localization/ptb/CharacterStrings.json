@@ -1,14 +1,15 @@
 {
   "hermit:hermit": {
     "NAMES": [
-      "O Heremita",
-      "o Heremita"
+      "O Eremita",
+      "o Eremita"
     ],
     "TEXT": [
-      "Um atirador imortal solitário de um lugar muito distante. NL Assombrado pelo espectro inescapável do passado.",
+      "Um solitário pistoleiro morto-vivo de um lugar distante. NL Assombrado pelo espectro inevitável do passado.",
       "NL Você alcança seu coldre...",
-      "Navegando uma rua escura, você se depara com várias figuras encapuzadas no meio de um ritual obscuro. Conforme você se aproxima, eles se viram para você em sincronia assombrosa. O mais alto entre eles carrega um dente canino e extende uma longa, pálida mão para você. NL ~\"Junte-se~ ~á~ ~nós~ ~vazio,~ ~e~ ~sinta~ ~o~ ~calor~ ~do~ ~Pináculo.\"~",
-      "#y~DESESPERO.~  NL NL O último adversário cai ao chão, agarrando um ferimento fumegante. Seus corpos mal têm tempo de esfriar antes de você começar a pilhar os restos. NL NL #bTecido. #rPlacas. #yOuro. NL NL Nuvens se agitam no alto, um mau presságio. Você ficou muito tempo em um só lugar. Logo eles virão para você. NL NL Você precisa fugir novamente, #rmas #rpara #ronde?"
+      "Navegando por uma rua escura, você encontra várias figuras encapuzadas no meio de algum ritual sombrio. Ao se aproximar, eles se voltam para você em uma sinistra uníssono. O mais alto deles mostra dentes afiados e estende uma mão pálida e longa em sua direção. NL ~\"Junte-se a nós, vazio, e sinta o calor do Pico.\"~",
+      "#y~DESESPERO.~  NL NL O último adversário cai no chão, segurando uma ferida fumegante. Seus corpos mal têm tempo de esfriar antes de você começar a saquear os restos. NL NL #bTecidos. #rPlacas. #yOuro. NL NL Nuvens se agitam no alto, um mau presságio. Você ficou tempo demais em um lugar. Em breve eles virão atrás de você. NL NL Novamente, você precisa fugir, #rmas #rpara #ronde?",
+      "Próximo"
     ]
   }
 }

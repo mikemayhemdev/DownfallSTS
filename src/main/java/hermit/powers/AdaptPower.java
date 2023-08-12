@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -50,15 +49,13 @@ public class AdaptPower extends AbstractPower implements CloneablePowerInterface
     @Override
     public void atStartOfTurnPostDraw() {
         this.flash();
-            Wiz.atb(new HandSelectAction(this.amount, (c) -> true, list -> {
-                for (AbstractCard c : list)
-                {
-                    Wiz.p().hand.moveToExhaustPile(c);
-                    AbstractDungeon.actionManager.addToTop(new GainBlockAction(this.owner, this.owner, 8));
-                }
-                AbstractDungeon.player.hand.refreshHandLayout();
-                list.clear();
-            }, null, uiStrings.TEXT[0],false,true,true,false));
+        Wiz.atb(new HandSelectAction(this.amount, (c) -> true, list -> {
+            for (AbstractCard c : list)
+            {
+                Wiz.p().hand.moveToExhaustPile(c);
+                Wiz.att(new GainBlockAction(this.owner, this.owner, 8));
+            }
+        }, null, uiStrings.TEXT[0],false,true,true));
     }
 
     @Override

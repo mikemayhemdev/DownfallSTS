@@ -13,16 +13,14 @@ import theHexaghost.cards.seals.FifthSeal;
 
 import java.util.ArrayList;
 
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRng;
 
 public class SealSealReward extends CustomReward {
     public static final String ID = HexaMod.makeID("SealSealReward");
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public SealSealReward() {
-        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardItemTypeEnumPatch.SEALCARD);
-        cards.clear();
-        cards.addAll(getCards());
+        super(TextureLoader.getTexture("downfallResources/images/rewards/seal_reward.png"), TEXT[0], RewardItemTypeEnumPatch.SEALCARD);
     }
 
     public static ArrayList<AbstractCard> getCards() {
@@ -37,14 +35,19 @@ public class SealSealReward extends CustomReward {
     }
 
 
+    public void generate_reward_cards(){
+        this.cards.clear();
+        this.cards.addAll(getCards());
+    }
+
     public static AbstractCard getNonSixthSeal() {
-        ArrayList<AbstractCard> list = new ArrayList<>();// 1201
+        ArrayList<AbstractCard> list = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
             if (q instanceof AbstractSealCard && !q.cardID.equals(FifthSeal.ID)) {
                 list.add(q.makeCopy());
             }
         }
-        return list.get(cardRandomRng.random(list.size() - 1));// 1217
+        return list.get(cardRng.random(list.size() - 1));
     }
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {

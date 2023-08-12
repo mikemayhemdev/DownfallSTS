@@ -1,102 +1,102 @@
 {
   "hermit:Momento": {
-    "NAME": "Velho Medalhão",
-    "FLAVOR": "Têm uma foto desbotada dentro.",
+    "NAME": "Medalhão Antigo",
+    "FLAVOR": "Tem uma foto desbotada dentro.",
     "DESCRIPTIONS": [
-      "No inicio de cada combate, adicione um #yMemento para sua mão."
+      "No início de cada combate, adicione um #yMomento à sua mão."
     ]
   },
   "hermit:RyeStalk": {
-    "NAME": "Espiga de Centeio",
-    "FLAVOR": "Ainda em condições perfeitas, apesar de ser mastigado por tanto tempo.",
+    "NAME": "Talo de Centeio",
+    "FLAVOR": "Ainda em perfeitas condições, apesar de ter sido mastigado por tanto tempo.",
     "DESCRIPTIONS": [
-      "No início de cada combate, todos os inimigos perdem #b2 de #yForça."
+      "No início de cada combate, todos os inimigos perdem #b2 #yForça."
     ]
   },
   "hermit:BartenderGlass": {
-    "NAME": "Copo de shot",
-    "FLAVOR": "Qualquer liquido colocado dentro torna-se algo diferente.",
+    "NAME": "Copo de Shot",
+    "FLAVOR": "Qualquer líquido colocado dentro se transforma em outra coisa.",
     "DESCRIPTIONS": [
-      "As primeiras #b2 vezes que você usar uma poção em cada combate, ganhe uma poção aleatória. Você só pode usar #b2 poções em cada combate.",
+      "Nas primeiras #b2 vezes que você usar uma poção em cada combate, ganhe uma poção aleatória. Você só pode usar #b2 poções em cada combate.",
       "Você não pode usar mais poções neste combate."
     ]
   },
   "hermit:Horseshoe": {
     "NAME": "Ferradura",
-    "FLAVOR": "Amuleto sortudo. Algúem sentirá falta disso.",
+    "FLAVOR": "Amuleto da sorte. Alguém vai sentir falta disso.",
     "DESCRIPTIONS": [
-      "Quando você ganhar #yFraqueza, #yFragilizado ou #yVulnerável, ganhe #b1 a menos."
+      "Sempre que você receber #yFraqueza, #yVulnerabilidade ou #yExaustão, receba #b1 a menos."
     ]
   },
   "hermit:Spyglass": {
-    "NAME": "Luneta",
+    "NAME": " Luneta",
     "FLAVOR": "Propriedade de Kestin Highfin.",
     "DESCRIPTIONS": [
-      "Se você acabar seu turno #yhermit:Concentrado, ganhe um [E] adicional no próximo turno."
+      "Se você encerrar seu turno #yhermit:Concentrated, ganhe um [E] adicional no próximo turno."
     ]
   },
   "hermit:RedScarf": {
     "NAME": "Cachecol Vermelho",
-    "FLAVOR": "É quente e felpudo.",
+    "FLAVOR": "É quente e fofo.",
     "DESCRIPTIONS": [
-      "Quando você aplicar um debuff em um inimigo, ganhe #b2 de #yProteção."
+      "Sempre que você aplicar um efeito negativo em um inimigo, ganhe #b2 #yBloqueio."
     ]
   },
   "hermit:DentedPlate": {
-    "NAME": "Placa Entalhada",
-    "FLAVOR": "Várias balas ainda estão alojadas dentro.",
+    "NAME": "Placa Amassada",
+    "FLAVOR": "Várias balas ainda estão presas dentro.",
     "DESCRIPTIONS": [
-      "Enquanto seu PV é #b50% ou menos, ganhe [E] e compre #b1 carta no inicio de seu turno."
+      "Enquanto sua PV estiver em ou abaixo de #b50%, ganhe [E] e compre #b1 carta no início de seu turno."
     ]
   },
   "hermit:PetGhost": {
     "NAME": "Fantasma de Estimação",
-    "FLAVOR": "Pobrezinho.",
+    "FLAVOR": "Coitado.",
     "DESCRIPTIONS": [
-      "A primeira vez que você fosse morrer em cada combate, ao invés disso, sobreviva com #b1 PV."
+      "Na primeira vez que você morrer em cada combate, sobreviva com #b1 PV em vez disso."
     ]
   },
   "hermit:CharredGlove": {
     "NAME": "Luva Chamuscada",
-    "FLAVOR": "Partes da luva ainda brilham com brasas de outro mundo.",
+    "FLAVOR": "Partes da luva ainda brilham com cinzas de outro mundo.",
     "DESCRIPTIONS": [
-      "Quando você comprar uma #rMaldição, seu próximo ataque causa #b3 a mais de dano."
+      "Sempre que você comprar uma #rMaldição, seu próximo ataque causa #b3 mais de dano."
     ]
   },
   "hermit:ClaspedLocket": {
-    "NAME": "Medalhão Fechado",
-    "FLAVOR": "Não abrirá novamente.",
+    "NAME": "Colar Fechado",
+    "FLAVOR": "Não abre mais.",
     "DESCRIPTIONS": [
-      "Substitui #yVelho #yMedalhão. Na primeira vez que você comprar uma maldição a cada turno, o #yExaura e compre #b2 cartas.  Após pegar, obtenha #b2 #rFerimentos.",
+      "Substitui o #yColar #yVelho. Quando você compra uma Maldição pela primeira vez em cada turno, #yExaure-a e compra #b2 cartas. Ao pegar, obtenha #b2 #rFeridas.",
       "Nunca mais..."
     ]
   },
   "hermit:StraightRazor": {
-    "NAME": "Navalha",
-    "FLAVOR": "Para se barbear...",
+    "NAME": "Navalha Reta",
+    "FLAVOR": "Para um barbear mais limpo...",
     "DESCRIPTIONS": [
-      "Quando você remover uma carta de seu baralho, cure #b15 PV."
+      "Sempre que você remove ou #yTransforma uma carta de seu baralho, cura #b15 PV."
     ]
   },
   "hermit:BrassTacks": {
-    "NAME": "Tachinhas de Latão",
-    "FLAVOR": "O brilho nessas tachinhas parece nunca desaparecer.",
+    "NAME": "Tachas de Latão",
+    "FLAVOR": "O brilho dessas tachas nunca parece desvanecer.",
     "DESCRIPTIONS": [
-      "Inicie cada combate com #b2 de #yMetalizar."
+      "Comece cada combate com #b2 #yMetalização."
     ]
   },
   "hermit:BlackPowder": {
-    "NAME": "Pólvora Preta",
+    "NAME": "Pólvora Negra",
     "FLAVOR": "Manuseie com cuidado.",
     "DESCRIPTIONS": [
-      "No fim de seu turno, cause #b2 de dano a TODOS os inimigos por cada efeito #yhermit:Na_Mira ativado."
+      "No final de seu turno, cause #b2 de dano a TODOS os inimigos para cada efeito #yhermit:Morto_Vivo acionado."
     ]
   },
   "hermit:BloodyTooth": {
     "NAME": "Dente Quebrado",
-    "FLAVOR": "Parece ser grande demais para ter vindo de uma mandíbula humana...",
+    "FLAVOR": "Parece grande demais para ter vindo de uma mandíbula humana...",
     "DESCRIPTIONS": [
-      "Inicie cada combate com #b1 de #yForça para cada encontro de Elite derrotado no mesmo ato."
+      "Sempre que você derrotar um Encontro de Elite, ganhe #b1 #yForça no início de cada combate pelo resto do Ato."
     ]
   }
 }
