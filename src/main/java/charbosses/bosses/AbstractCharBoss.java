@@ -1180,7 +1180,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
 
-        chosenArchetype = null;
+
         AbstractCharBoss.boss = null;
         AbstractCharBoss.finishedSetup = false;
         relics.clear();
@@ -1197,7 +1197,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         stance.onEnterStance();
 
         super.die();
-
+        chosenArchetype = null;
 
     }
 

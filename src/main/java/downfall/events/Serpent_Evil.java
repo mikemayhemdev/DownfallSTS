@@ -1,6 +1,11 @@
 package downfall.events;
 
 
+import basemod.helpers.CardModifierManager;
+import collector.CollectorChar;
+import collector.CollectorCollection;
+import collector.cardmods.CollectedCardMod;
+import collector.cards.collectibles.SsserpentCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -54,6 +59,11 @@ public class Serpent_Evil extends AbstractImageEvent {
         this.curse = new Doubt();
         this.imageEventText.setDialogOption(OPTIONS[0] + this.goldReward + OPTIONS[1], CardLibrary.getCopy(this.curse.cardID));
         this.imageEventText.setDialogOption(OPTIONS[2]);
+        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
+            AbstractCard card = new SsserpentCard();
+            CardModifierManager.addModifier(card, new CollectedCardMod());
+            imageEventText.setDialogOption(CollectorChar.COLLECTORTAKE, card);
+        }
     }
 
     public void onEnterRoom() {
@@ -78,12 +88,23 @@ public class Serpent_Evil extends AbstractImageEvent {
 
                     this.screen = CUR_SCREEN.AGREE;
                     AbstractEvent.logMetricGainGoldAndCard(ID, "Punch", this.curse, this.goldReward);
-                } else {
+                } else if (buttonPressed == 1) {
                     this.imageEventText.updateBodyText(DISAGREE_DIALOG);
                     this.imageEventText.removeDialogOption(1);
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                     this.screen = CUR_SCREEN.DISAGREE;
                     AbstractEvent.logMetricIgnored(ID);
+                } else if (buttonPressed == 2) {
+                    this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[3]);
+                    AbstractCard card = new SsserpentCard();
+                    CardModifierManager.addModifier(card, new CollectedCardMod());
+                    CollectorCollection.collection.addToTop(card);
+
+                    logMetric(ID, "Take", null, null, null, null, null, null, null,
+                            0, 0, 0, 0, 0, 0);
+                    this.screen = CUR_SCREEN.COMPLETE;
                 }
                 break;
             default:

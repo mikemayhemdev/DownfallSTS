@@ -36,12 +36,12 @@ public class ExtraCursedKey extends CustomRelic {
     }
 
     public void onChestOpen(boolean bossChest) {
-        if (!bossChest) {
-            for (int i = 0; i < 2; i++) {
-                AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(AbstractDungeon.returnRandomCurse(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            }
+        //if (!bossChest) {
+        for (int i = 0; i < 2; i++) {
+            AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(AbstractDungeon.returnRandomCurse(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         }
+        //}
     }
 
     public void onEquip() {

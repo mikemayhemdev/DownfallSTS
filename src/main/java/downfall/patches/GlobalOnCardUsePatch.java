@@ -3,9 +3,6 @@ package downfall.patches;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import downfall.downfallMod;
-import expansioncontent.expansionContentMod;
-import expansioncontent.patches.CardColorEnumPatch;
 
 import static theHexaghost.GhostflameHelper.activeGhostFlame;
 import static theHexaghost.HexaMod.renderFlames;

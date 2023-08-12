@@ -1,7 +1,6 @@
 package expansioncontent.cards.deprecated;
 
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,8 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
-import theHexaghost.HexaMod;
-import theHexaghost.powers.EnhancePower;
 
 @CardIgnore
 public class SuperHexaguard extends AbstractExpansionCard {

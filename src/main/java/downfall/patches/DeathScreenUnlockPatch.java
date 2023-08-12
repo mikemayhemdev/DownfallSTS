@@ -2,6 +2,7 @@ package downfall.patches;
 
 import automaton.AutomatonChar;
 import champ.ChampChar;
+import collector.CollectorChar;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -15,6 +16,7 @@ import gremlin.patches.GremlinEnum;
 import guardian.patches.GuardianEnum;
 import javassist.CtBehavior;
 import slimebound.patches.SlimeboundEnum;
+import sneckomod.TheSnecko;
 import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
@@ -75,6 +77,10 @@ public class DeathScreenUnlockPatch {
                         AbstractDungeon.unlocks.add(new SneckoUnlock());
                         AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                         ////SlimeboundMod.logger.info("Triggered Snecko Unlock screen!");
+                        return SpireReturn.Return(null);
+                    } else if ((UnlockTracker.isCharacterLocked("Collector") && (AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO))) {
+                        AbstractDungeon.unlocks.add(new CollectorUnlock());
+                        AbstractDungeon.unlockScreen.open(AbstractDungeon.unlocks.remove(0));
                         return SpireReturn.Return(null);
                     }
                 }

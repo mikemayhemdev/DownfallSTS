@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import expansioncontent.expansionContentMod;
-import expansioncontent.powers.ChronoBoostPlusPower;
 import expansioncontent.powers.ChronoBoostPower;
 
 import static expansioncontent.expansionContentMod.loadJokeCardImage;

@@ -38,12 +38,7 @@ public class Tadah extends AbstractGremlinCard {
         while (skill.cost == -2) {
             skill = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL).makeCopy();
         }
-        /*
-        if (upgraded) {
-            skill.upgrade();
-        }
 
-         */
         AbstractDungeon.actionManager.addToBottom(new MakeEchoAction(skill, 1, magicNumber));
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(new GremlinWizard(0)));
     }
