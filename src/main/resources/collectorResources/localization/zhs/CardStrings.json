@@ -13,7 +13,7 @@
   },
   "collector:Arrogance": {
     "NAME": "巫傲",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张攻击会给予 !M! 层 collector:魂灭 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张攻击会给予 !M! 层 collector:魂劫 。"
   },
   "collector:AshesAndDust": {
     "NAME": "成灰成烬",
@@ -21,7 +21,7 @@
   },
   "collector:BindingCall": {
     "NAME": "羁绊之唤",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL \"随机给予 !clm2! 层 collector:魂灭 \""
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL collector:火炬头 获得效果： NL \"随机给予 !clm2! 层 collector:魂劫 \""
   },
   "collector:Billow": {
     "NAME": "鼓动",
@@ -29,19 +29,19 @@
   },
   "collector:Bellow": {
     "NAME": "鼓噪",
-    "DESCRIPTION": "虚无 。 NL 给予你上回合余下的 格挡 层 collector:魂灭 。 NL 消耗 。",
+    "DESCRIPTION": "虚无 。 NL 给予你上回合余下的 格挡 层 collector:魂劫 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      " NL (给予 !M! 层 collector:魂灭 )"
+      " NL (给予 !M! 层 collector:魂劫 )"
     ]
   },
 
   "collector:BlackBindings": {
     "NAME": "黑缚咒",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 目标每有不同负面效果， NL 给予 !clm2! 层 collector:魂灭 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 目标每有不同负面效果， NL 给予 !clm2! 层 collector:魂劫 。"
   },
   "collector:Blightning": {
     "NAME": "惊萎",
-    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 造成 !D! 点伤害。 NL 从 *收藏堆 抽一张牌。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 collector:魂劫 。 NL 造成 !D! 点伤害。 NL 从 *收藏堆 抽一张牌。 NL 消耗 。"
   },
   "collector:Bonfire": {
     "NAME": "篝火",
@@ -66,7 +66,7 @@
   },
   "collector:CantTouchThis": {
     "NAME": "凶不可触",
-    "DESCRIPTION": "获得 !M! 点 敏捷 。 NL 防住攻击时， NL 给予对方 !clm2! 层 collector:魂灭 。"
+    "DESCRIPTION": "获得 !M! 点 敏捷 。 NL 防住攻击时， NL 给予对方 !clm2! 层 collector:魂劫 。"
   },
   "collector:CoffinNail": {
     "NAME": "棺材钉",
@@ -74,7 +74,7 @@
   },
   "collector:Condemn": {
     "NAME": "谴责",
-    "DESCRIPTION": "给予 !M! 层 易伤 。 NL 给予 !clm2! 层 collector:魂灭 。"
+    "DESCRIPTION": "给予 !M! 层 易伤 。 NL 给予 !clm2! 层 collector:魂劫 。"
   },
   "collector:CursedWail": {
     "NAME": "诅咒尖啸",
@@ -95,7 +95,7 @@
   },
   "collector:DarkwoodKindling": {
     "NAME": "邪柳柴",
-    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时，给予所有敌人 !M! 层 collector:魂灭 。",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时，给予所有敌人 !M! 层 collector:魂劫 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -110,7 +110,7 @@
   },
   "collector:DoMayhem": {
     "NAME": "驭魂乱战",
-    "DESCRIPTION": "回合开始时， NL 若有敌人有25层 collector:魂灭 ， NL 打出抽牌堆顶部的牌。"
+    "DESCRIPTION": "回合开始时， NL 若有敌人有25层 collector:魂劫 ， NL 打出抽牌堆顶部的牌。"
   },
   "collector:DragonsTrove": {
     "NAME": "龍之珍藏",
@@ -141,11 +141,11 @@
   },
   "collector:Finalize": {
     "NAME": "大功告成",
-    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 若目标本回合死亡， NL 回复 !clm2! 点生命。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 collector:魂劫 。 NL 若目标本回合死亡， NL 回复 !clm2! 点生命。 NL 消耗 。"
   },
   "collector:FingerOfDeath": {
     "NAME": "死亡恶指",
-    "DESCRIPTION": "只能使用 collector:储能 打出。 NL 给予 !M! 层 collector:魂灭 。"
+    "DESCRIPTION": "只能使用 collector:储能 打出。 NL 给予 !M! 层 collector:魂劫 。"
   },
   "collector:FlameLash": {
     "NAME": "焰鞭",
@@ -169,12 +169,12 @@
   },
   "collector:Goodbye": {
     "NAME": "再幸",
-    "DESCRIPTION": "翻倍目标的 collector:魂灭 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "三倍目标的 collector:魂灭 。 NL 消耗 。"
+    "DESCRIPTION": "翻倍目标的 collector:魂劫 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "三倍目标的 collector:魂劫 。 NL 消耗 。"
   },
   "collector:InevitableDemise": {
     "NAME": "贪魂绿眸",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标下次 collector:魂灭 不清零。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标下次 collector:魂劫 不清零。"
   },
   "collector:GreaterHurting": {
     "NAME": "伤魂",
@@ -245,7 +245,7 @@
   },
   "collector:LanternFlare": {
     "NAME": "提灯之耀",
-    "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 collector:魂灭 。 NL 每当敌方回合结束时， NL 再给予 !clm2! 层。"
+    "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 collector:魂劫 。 NL 每当敌方回合结束时， NL 再给予 !clm2! 层。"
   },
   "collector:LuckyWick": {
     "NAME": "幸运烛芯",
@@ -321,7 +321,7 @@
   },
   "collector:SeedOfDoubt": {
     "NAME": "疑虑之种",
-    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 消耗 牌时若本牌在手， NL 本牌 collector:魂灭 加 !clm2! 。"
+    "DESCRIPTION": "给予 !M! 层 collector:魂劫 。 NL 消耗 牌时若本牌在手， NL 本牌 collector:魂劫 加 !clm2! 。"
   },
   "collector:ShadowDaggers": {
     "NAME": "阴刃",
@@ -342,7 +342,7 @@
   },
   "collector:SoulSnare": {
     "NAME": "灵魂诱捕",
-    "DESCRIPTION": "给予 !M! 层 collector:魂灭 。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 collector:魂劫 。 NL 消耗 。"
   },
   "collector:Soulforge": {
     "NAME": "铸魂",
@@ -372,7 +372,7 @@
   },
   "collector:Suffering": {
     "NAME": "苦楚",
-    "DESCRIPTION": "给予 虚弱 或 易伤 时， NL 同时给予 !M! 层 collector:魂灭 。"
+    "DESCRIPTION": "给予 虚弱 或 易伤 时， NL 同时给予 !M! 层 collector:魂劫 。"
   },
   "collector:SunbloomKindling": {
     "NAME": "日花柴",
@@ -397,7 +397,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "虚空护甲",
-    "DESCRIPTION": "所有单位 获得 !B! 点 格挡 。 NL 给予 collector:魂灭 中的敌人 !M! 层 *魂灭 。"
+    "DESCRIPTION": "所有单位 获得 !B! 点 格挡 。 NL 给予 collector:魂劫 中的敌人 !M! 层 *魂劫 。"
   },
   "collector:Wildfire": {
     "NAME": "野火",
@@ -405,7 +405,7 @@
   },
   "collector:YouAreMine": {
     "NAME": "你是我的了",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL 给予 !clm2! 层 collector:魂灭 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL 给予 !clm2! 层 collector:魂劫 。"
   },
   "collector:Whomp": {
     "NAME": "当头杖喝",
@@ -438,7 +438,7 @@
   },
   "collector:BookOfStabbingCard": {
     "NAME": "扎人之书",
-    "DESCRIPTION": "造成未被格挡的攻击伤害时，给予 !M! 层 collector:魂灭 。"
+    "DESCRIPTION": "造成未被格挡的攻击伤害时，给予 !M! 层 collector:魂劫 。"
   },
   "collector:BronzeOrbCard": {
     "NAME": "铜制圆球",
@@ -654,7 +654,7 @@
   },
   "collector:TaskmasterCard": {
     "NAME": "奴隶头子",
-    "DESCRIPTION": "给予 !clm2! 层 collector:魂灭 。 NL 造成 !D! 点伤害。 NL 获得 !M! 点 力量 。"
+    "DESCRIPTION": "给予 !clm2! 层 collector:魂劫 。 NL 造成 !D! 点伤害。 NL 获得 !M! 点 力量 。"
   },
   "collector:ThievesCard": {
     "NAME": "盗贼",
