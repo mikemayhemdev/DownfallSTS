@@ -1,8 +1,11 @@
 package collector.powers.collectioncards;
 
 import collector.powers.AbstractCollectorPower;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
 import static collector.util.Wiz.atb;
 
@@ -14,13 +17,16 @@ public class TransientCardPower extends AbstractCollectorPower {
 
     public TransientCardPower() {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, 6);
+        this.loadRegion("fading");
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        atb(new ReducePowerAction(owner, owner, this, 1));
         if (amount == 1) {
-            //TODO: Yoink alchyr's instakill tech
+            this.addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            this.addToBot(new LoseHPAction(this.owner, this.owner, 99999));
+        } else {
+            atb(new ReducePowerAction(owner, owner, this, 1));
         }
     }
 }

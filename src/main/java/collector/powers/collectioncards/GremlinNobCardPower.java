@@ -15,6 +15,8 @@ public class GremlinNobCardPower extends AbstractCollectorPower {
 
     public GremlinNobCardPower(int amount) {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, amount);
+
+        this.loadRegion("anger");
     }
 
     @Override

@@ -15,6 +15,7 @@ public class ThievesCardPower extends AbstractCollectorPower {
 
     public ThievesCardPower(int amount) {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, amount);
+
     }
 
     @Override
