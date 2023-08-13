@@ -382,8 +382,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "Thorn Whip",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, repeat this twice.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL If the enemy is collector:Afflicted, repeat this twice."
+    "DESCRIPTION": "Deal !D! damage. NL When you obtain this card, gain 9 Essence."
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer",
