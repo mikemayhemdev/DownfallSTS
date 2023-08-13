@@ -177,12 +177,12 @@
   },
   "collector:GreaterHurting": {
     "NAME": "심한 아픔",
-    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드가 소멸 시 *심각한 *아픔을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드가 소멸 시 *심각한 *아픔+을 얻습니다."
+    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드 소멸 시 *심각한 *아픔을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드 소멸 시 *심각한 *아픔+을 얻습니다."
   },
   "collector:GreatestHurting": {
     "NAME": "심각한 아픔",
-    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드가 소멸 시 *불씨를 얻습니다."
+    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드 소멸 시 *불씨를 얻습니다."
   },
   "collector:GreenpyreLocus": {
     "NAME": "머무는 녹색 불꽃",
@@ -206,8 +206,8 @@
   },
   "collector:Hurting": {
     "NAME": "아픔",
-    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드가 소멸 시 *심한 *아픔을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드가 소멸 시 *심한 *아픔+을 얻습니다."
+    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드 소멸 시 *심한 *아픔을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드 소멸 시 *심한 *아픔+을 얻습니다."
   },
   "collector:IllTakeThat": {
     "NAME": "거둬들이마",
