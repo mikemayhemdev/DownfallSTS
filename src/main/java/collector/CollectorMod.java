@@ -21,9 +21,11 @@ import collector.potions.ReservePotion;
 import collector.potions.TempHPPotion;
 import collector.relics.*;
 import collector.ui.CombatCollectionPileButton;
+import collector.ui.ReserveIcon;
 import collector.util.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -233,6 +235,8 @@ public class CollectorMod implements
 
     @Override
     public void receiveEditCards() {
+        CustomIconHelper.addCustomIcon(new ReserveIcon());
+
         BaseMod.addDynamicVariable(new CollectorSecondMagic());
         try {
             autoAddCards();

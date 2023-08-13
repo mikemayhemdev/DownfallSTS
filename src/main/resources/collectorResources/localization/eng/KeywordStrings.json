@@ -22,10 +22,12 @@
     "DESCRIPTION": "Requires exhausting a card in hand in addition to paying its energy cost."
   },
   {
-    "PROPER_NAME": "Reserve",
+    "PROPER_NAME": "Reserve [collector:reserveIcon]",
     "NAMES": [
+      "[collector:reserveIcon]",
       "reserve",
-      "reserves"
+      "reserves",
+      "reserveicon"
     ],
     "DESCRIPTION": "An alternate type of Energy that is stored across turns."
   },
