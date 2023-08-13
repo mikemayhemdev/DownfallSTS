@@ -11,7 +11,7 @@ public class StrengthOverTurnsPower extends AbstractCollectorPower implements No
     public static final String NAME = "StrengthOverTurns";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
-    public static final boolean TURN_BASED = false;
+    public static final boolean TURN_BASED = true;
     private int duration;
 
     public StrengthOverTurnsPower(int duration, int strength) {
