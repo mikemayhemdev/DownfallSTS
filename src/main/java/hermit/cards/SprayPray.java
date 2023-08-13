@@ -66,7 +66,7 @@ public class SprayPray extends AbstractDynamicCard {
     @Override //zhs card text thing
     public void initializeDescriptionCN() {
         super.initializeDescriptionCN();
-        if(Settings.language == Settings.GameLanguage.ZHS && this.description!=null && this.description.size()>=1 ) {
+        if((Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT) && this.description!=null && this.description.size()>=1 ) {
             for(int i=0; i < this.description.size(); i++){
                 if(this.description.get(i).text.equals("。")) this.description.remove(i);
             }

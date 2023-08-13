@@ -37,7 +37,7 @@
 
   "collector:BlackBindings": {
     "NAME": "黑缚咒",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 目标每有不同负面效果， NL 给予 !clm2! 层 collector:魂劫 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 目标每有一种负面效果， NL 给予 !clm2! 层 collector:魂劫 。"
   },
   "collector:Blightning": {
     "NAME": "惊萎",
@@ -54,8 +54,8 @@
   },
   "collector:BramblesparKindling": {
     "NAME": "黑莓柴",
-    "DESCRIPTION": "不能被打出。 NL 本牌被 消耗 时， NL 获得一张 *火炬打击 。",
-    "UPGRADE_DESCRIPTION": "不能被打出。 NL 本牌被 消耗 时， NL 获得一张 *火炬打击+ 。",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得一张 *火炬打击 。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得一张 *火炬打击+ 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -334,7 +334,7 @@
   },
   "collector:ShootingStar": {
     "NAME": "流星",
-    "DESCRIPTION": "虚无 。 NL 每回合首次 collector:焰葬 时， NL 将被葬牌返回手牌， NL 其单次耗能变为0。"
+    "DESCRIPTION": "虚无 。 NL 每回合首次 collector:焰葬 时， NL 将被葬牌返回手牌， NL 其耗能变为0一次。"
   },
   "collector:SomberShield": {
     "NAME": "阴沉护盾",
@@ -383,8 +383,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "荆棘抽绕",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 再造成两次。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 再造成两次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 拾起时， NL 获得9魂粹。"
   },
   "collector:Torchbearer": {
     "NAME": "火炬御者",
@@ -549,7 +548,7 @@
   },
   "collector:MerchantCard": {
     "NAME": "商人",
-    "DESCRIPTION": "随机获得 !M! 张无色牌， NL 本回合其单次耗能为0。"
+    "DESCRIPTION": "随机获得 !M! 张无色牌， NL 本回合其首次耗能为0。"
   },
   "collector:MushroomCard": {
     "NAME": "蘑菇",
@@ -662,7 +661,7 @@
   },
   "collector:TorchHeadCard": {
     "NAME": "火炬头",
-    "DESCRIPTION": "随机获得一张呼唤， NL 其本回合单次耗能为0。"
+    "DESCRIPTION": "随机获得一张呼唤， NL 本回合其首次耗能为0。"
   },
   "collector:TransientCard": {
     "NAME": "倏忽魔",
