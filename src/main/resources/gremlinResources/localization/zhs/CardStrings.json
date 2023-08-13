@@ -397,8 +397,7 @@
   },
   "Gremlin:Tadah": {
     "NAME": "嗒哒",
-    "DESCRIPTION": "随机 gremlin:回响 一张技能牌 。 NL gremlin:切换 至 gremlin:地精法师 。",
-    "UPGRADE_DESCRIPTION": "随机 gremlin:回响 一张技能牌 ， NL 其能耗减1。 NL gremlin:切换 至 gremlin:地精法师 。"
+    "DESCRIPTION": "随机 gremlin:回响 一张技能牌 ， NL 其首次耗能为0。 NL gremlin:切换 至 gremlin:地精法师 。"
   },
   "Gremlin:TagTeam": {
     "NAME": "配合",

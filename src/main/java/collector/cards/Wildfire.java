@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -44,5 +45,14 @@ public class Wildfire extends AbstractCollectorCard {
         upgradeDamage(2);
     }
 
+    @Override //zhs card text thing
+    public void initializeDescriptionCN() {
+        super.initializeDescriptionCN();
+        if((Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT) && this.description!=null && this.description.size()>=1 ) {
+            for(int i=0; i < this.description.size(); i++){
+                if(this.description.get(i).text.equals("，")) this.description.remove(i);
+            }
+        }
+    }
 }
 
