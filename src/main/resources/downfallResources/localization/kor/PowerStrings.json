@@ -340,7 +340,7 @@
   "downfall:HermitDoomsday": {
     "NAME": "최후의 심판",
     "DESCRIPTIONS": [
-      "내 턴 시작 시 #y보존 효과가 추가된 #y임박한 #y종말을 얻습니다."
+      "허밋이 #y의식을 #b1 얻습니다. 내 턴 시작 시 #y보존 효과가 추가된 #y임박한 #y종말을 얻습니다."
     ]
   },
   "downfall:NeowEclipse": {

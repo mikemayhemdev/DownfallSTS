@@ -1,0 +1,37 @@
+{
+    "collector:MiniCursePotion": {
+      "NAME": "영혼 추출제",
+      "DESCRIPTIONS": [
+        "#y약화와 #y취약을 #b1 #y파멸을 #b6 부여합니다.",
+        "#y약화를 #b",
+        " , #y취약을 #b",
+        " , #y파멸을 #b",
+        " 부여합니다."
+      ]
+    },
+    "collector:ReservePotion": {
+      "NAME": "비축 포션",
+      "DESCRIPTIONS": [
+        "#y비축을 #b2 얻습니다.",
+        "#y비축을 #b",
+        " 얻습니다."
+      ]
+    },
+    "collector:DebuffDoublePotion": {
+      "NAME": "방부제",
+      "DESCRIPTIONS": [
+        "대상의 해로운 효과를 #b2 배로 만듭니다.",
+        "대상의 해로운 효과를 #b",
+        " 배로 만듭니다."
+      ]
+    },
+    "collector:TempHPPotion": {
+      "NAME": "지옥물",
+      "DESCRIPTIONS": [
+        "#y임시 #y체력을 #b8 얻습니다.",
+        "#y임시 #y체력을 #b",
+        " 얻습니다."
+      ]
+    }
+  }
+  

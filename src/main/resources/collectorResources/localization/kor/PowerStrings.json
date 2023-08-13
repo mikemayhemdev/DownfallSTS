@@ -1,0 +1,312 @@
+{
+  "collector:AddCopyNextTurn": {
+    "NAME": "카드 획득",
+    "DESCRIPTIONS": [
+      "내 다음 턴 시작 시 ",
+      "를 얻습니다."
+    ]
+  },
+  "collector:BindingCall": {
+    "NAME": "번제의 부름",
+    "DESCRIPTIONS": [
+      "#y임시 #y체력을 잃을 때마다 적 전체에게 #y파멸을 #b",
+      " 부여합니다.",
+      "Translator Note: 사용안함"
+    ]
+  },
+  "collector:CantTouchThis": {
+    "NAME": "손대지 말거라",
+    "DESCRIPTIONS": [
+      "공격에 피해를 받지 않는다면 공격한 대상에게 #y파멸을 #b",
+      " 부여합니다."
+    ]
+  },
+  "collector:Crackle": {
+    "NAME": "치직",
+    "DESCRIPTIONS": [
+      "내 턴 시작 시 #y비축을 #b1 얻습니다.",
+      "내 턴 시작 시 #y비축을 #b",
+      " 얻습니다."
+    ]
+  },
+  "collector:DarkLordForm": {
+    "NAME": "어둠 군주의 형상",
+    "DESCRIPTIONS": [
+      "내 턴 시작 시 무작위 적에게 #y넌 #y나의 #y것이다!를 사용합니다.",
+      "내 턴 시작 시 무작위 적들에게 #y넌 #y나의 #y것이다!를 #b",
+      " 번 사용합니다."
+    ]
+  },
+  "collector:DoMayhem": {
+    "NAME": "대혼란의 서막",
+    "DESCRIPTIONS": [
+      "내 턴 시작 시 #y파멸을 #b",
+      " 이상 보유한 적이 있다면 뽑을 카드 더미 맨 위에 있는 카드를 사용합니다.",
+      " 이상 보유한 적이 있다면 뽑을 카드 더미 맨 위부터 카드를 #b",
+      " 장 사용합니다."
+    ]
+  },
+  "collector:Doom": {
+    "NAME": "파멸",
+    "DESCRIPTIONS": [
+      "턴 시작 시 체력을 #b",
+      " 잃습니다. 체력을 잃었을 때 #y약화와 취약을 #y모두 가지고 있지 않다면 #y파멸을 제거합니다."
+    ]
+  },
+  "collector:DoublePlayCollectibles": {
+    "NAME": "수집품 다중 사용",
+    "DESCRIPTIONS": [
+      "수집품 카드가 두 번 사용됩니다.",
+      "수집품 카드가 #b",
+      " 번 사용됩니다."
+    ]
+  },
+  "collector:DemisePower": {
+    "NAME": "필연적 종말",
+    "DESCRIPTIONS": [
+      "다음으로 대상의 #y파멸이 제거될 때 #y파멸이 제거되지 않게 합니다.",
+      "다음 #b",
+      " 번 대상의 #y파멸이 제거될 때 #y파멸이 제거되지 않게 합니다."
+    ]
+  },
+  "collector:FeelMyPain": {
+    "NAME": "나의 고통을 느껴라",
+    "DESCRIPTIONS": [
+      "카드를 #y소멸시킬 때마다 무작위 적들의 체력을 #b",
+      " 잃게합니다."
+    ]
+  },
+  "collector:HealIfDieThisTurn": {
+    "NAME": "종결",
+    "DESCRIPTIONS": [
+      "이번 턴에 ",
+      "의 체력이 #b",
+      " 보다 낮아진다면 적은 죽습니다."
+    ]
+  },
+  "collector:Karma": {
+    "NAME": "업보",
+    "DESCRIPTIONS": [
+      "내 턴 종료 시 #y고초된 적이 있다면 방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "collector:NextAttackAppliesDoom": {
+    "NAME": "다음 공격 파멸",
+    "DESCRIPTIONS": [
+      "이번 턴에 다음 공격 카드 사용시 #y파멸을 #b",
+      " 부여합니다."
+    ]
+  },
+  "collector:AttacksApplyDoomPower": {
+    "NAME": "공격 파멸",
+    "DESCRIPTIONS": [
+      "이번 턴 동안 #y공격 카드 사용 시 #y파멸을 #b",
+      " 부여합니다."
+    ]
+  },
+  "collector:NextCollectedTwice": {
+    "NAME": "추가 난제",
+    "DESCRIPTIONS": [
+      "이번 턴에 다음 사용하는 #y수집품 카드가 두 번 사용됩니다.",
+      "이번 턴에 다음 #b",
+      " 번까지 사용하는 #y수집품 카드가 두 번 사용됩니다."
+    ]
+  },
+  "collector:NextTurnReserve": {
+    "NAME": "다음 턴 비축",
+    "DESCRIPTIONS": [
+      "내 다음 턴 시작 시 #y비축을 #b1 얻습니다.",
+      "내 다음 턴 시작 시 #y비축을 #b",
+      " 얻습니다."
+    ]
+  },
+  "collector:Omen": {
+    "NAME": "징조",
+    "DESCRIPTIONS": [
+      "#y수집품 카드를 사용할 때마다 적 전체가 체력을 #b",
+      " 잃습니다."
+    ]
+  },
+  "collector:ProtectingCall": {
+    "NAME": "수호의 부름",
+    "DESCRIPTIONS": [
+      "내 턴 시작 시 #y임시 #y체력이 있다면 #y방어도를 #b",
+      " 얻습니다.",
+      "Translator Note: NOT USED"
+    ]
+  },
+  "collector:RagingCall": {
+    "NAME": "거센 부름",
+    "DESCRIPTIONS": [
+      "내 턴 종료 시 #y임시 #y체력이 있다면 적 전체에게 피해를 #b",
+      " 줍니다.",
+      "Translator Note: NOT USED"
+    ]
+  },
+  "collector:Reserve": {
+    "NAME": "비축",
+    "DESCRIPTIONS": [
+      "#y비축이 #b1 있습니다.",
+      "#y비축이 #b",
+      " 있습니다."
+    ]
+  },
+  "collector:Soulforge": {
+    "NAME": "영혼 구축",
+    "DESCRIPTIONS": [
+      "내 턴 시작 시 #y불씨를 #b1 장 얻습니다.",
+      "내 턴 시작 시 #y불씨를 #b",
+      " 얻습니다."
+    ]
+  },
+  "collector:StrengthOverTurns": {
+    "NAME": "권능",
+    "DESCRIPTIONS": [
+      "다음 내 턴 시작 시 #y힘을 #b",
+      " 얻습니다.",
+      "다음 내 #b",
+      " 턴 시작 시 #y힘을 #b"
+    ]
+  },
+  "collector:Suffering": {
+    "NAME": "악화",
+    "DESCRIPTIONS": [
+      "#y약화 또는 #y취약을 부여할 때마다 부여한 적에게 #y파멸을 #b",
+      " 부여합니다."
+    ]
+  },
+  "collector:TorchHead": {
+    "NAME": "횃불 머리",
+    "DESCRIPTIONS": [
+      "공격 카드를 사용할 때마다 #y임시 #y체력이 있다면 횃불 머리는 아래처럼 행동합니다: NL ",
+      "무작위 적 #b",
+      " #y파멸 부여.",
+      "적 전체에게 피해를 #b",
+      " 줍니다.",
+      "#y방어도를 #b",
+      " 얻습니다.",
+      " #y중독 부여.",
+      "카드를 #b",
+      " 장 뽑습니다.",
+      " 장 뽑습니다."
+    ]
+  },
+  "collector:IncreasedCollectionDraw": {
+    "NAME": "수집품 뽑기 증가",
+    "DESCRIPTIONS": [
+      "매 턴 수집품 카드 더미에서 카드를 #b1 장 더 뽑습니다.",
+      "매 턴 수집품 카드 더미에서 카드를 #b",
+      " 장 더 뽑습니다."
+    ]
+  },
+  "collector:MastersCall": {
+    "NAME": "군주의 부름",
+    "DESCRIPTIONS": [
+      "공격 카드를 사용할 때마다 #y임시 #y체력이 있다면 무작위 적에게 피해를 #b",
+      " 줍니다.",
+      "Translator Note: NOT USED"
+    ]
+  },
+  "collector:LouseCard": {
+    "NAME": "몸 말기",
+    "DESCRIPTIONS": [
+      "적의 공격으로 막히지 않은 피해를 입었다면 #y방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "collector:MadGremlinCard": {
+    "NAME": "분노",
+    "DESCRIPTIONS": [
+      "이번 턴에 공격으로 피해를 입는다면 #y화난 #y그렘린을 #b1 장 얻습니다.",
+      "이번 턴에 공격으로 피해를 입는다면 #y화난 #y그렘린을 #b",
+      " 장 얻습니다."
+    ]
+  },
+  "collector:GremlinWizardCard": {
+    "NAME": "충전 중",
+    "DESCRIPTIONS": [
+      "다음 턴에 #y활력을 #b",
+      " 얻습니다."
+    ]
+  },
+  "collector:ThievesCard": {
+    "NAME": "부당",
+    "DESCRIPTIONS": [
+      "이번 턴 동안 받는 피해량을 #b",
+      " 감소시킵니다."
+    ]
+  },
+  "collector:BookofStabbingCardPower": {
+    "NAME": "칼부림",
+    "DESCRIPTIONS": [
+      "막히지 않은 피해를 줄 때마다 #y파멸을 #b",
+      " 부여합니다."
+    ]
+  },
+  "collector:TransientCard": {
+    "NAME": "희미해짐",
+    "DESCRIPTIONS": [
+      "내 턴 종료 시 #r죽습니다.",
+      "#b",
+      " 턴 뒤 #r죽습니다."
+    ]
+  },
+  "collector:ReptomancerCard": {
+    "NAME": "유독성 부름",
+    "DESCRIPTIONS": [
+      "내 턴 종료 시 #y임시 #y체력이 있다면 무작위 적에게 #y중독을 #b",
+      " 부여합니다."
+    ]
+  },
+  "collector:MoreBlockWithTempHP": {
+    "NAME": "제어 깍지",
+    "DESCRIPTIONS": [
+      "#y임시 #y체력을 가지고 있는 동안 추가로 #y방어도가 #b",
+      " 증가합니다."
+    ]
+  },
+  "collector:NextTurnVigor": {
+    "NAME": "다음 턴 활력",
+    "DESCRIPTIONS": [
+      "내 다음 턴 시작 시 #y활력을 #b",
+      " 얻습니다."
+    ]
+  },
+  "collector:AcidSlimeCard": {
+    "NAME": "끈적이는 복사",
+    "DESCRIPTIONS": [
+      "이번 턴에 다음 사용하는 #y공격 또는 #y스킬 카드가 두 번 사용됩니다.",
+      "이번 턴에 다음 #b",
+      " 번 사용하는 #y공격 또는 #y스킬 카드가 두 번 사용됩니다."
+    ]
+  },
+  "collector:GremlinNobCard": {
+    "NAME": "격분",
+    "DESCRIPTIONS": [
+      "#y스킬 카드를 사용 할 때마다 #y활력을 #b",
+      " 얻습니다."
+    ]
+  },
+  "collector:LanternFlare": {
+    "NAME": "그을음",
+    "DESCRIPTIONS": [
+      "대상의 턴 종료 시 #y파멸을 #b",
+      " 얻습니다."
+    ]
+  },
+  "collector:WomanInBlueCard": {
+    "NAME": "파란 옷의 여자",
+    "DESCRIPTIONS": [
+      "전투 종료 시 모든 포션을 잃습니다."
+    ]
+  },
+  "collector:ShootingStar": {
+    "NAME": "유성",
+    "DESCRIPTIONS": [
+      "매 턴 처음 collector:장작으로 카드 소멸 시 소멸시킨 카드를 복사해 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다.",
+      "매 턴 다음 #b",
+      " 번 collector:장작으로 카드 소멸 시 소멸시킨 카드를 복사해 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다."
+    ]
+  }
+}
