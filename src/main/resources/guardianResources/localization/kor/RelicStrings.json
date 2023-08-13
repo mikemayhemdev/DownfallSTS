@@ -66,7 +66,7 @@
     "NAME": "극저온 용기",
     "FLAVOR": "내 것을 내보내면 남의 것이 더 커보이는 법입니다.",
     "DESCRIPTIONS": [
-      "정지장 슬롯을 #b1 개 얻습니다. 이번 전투 동안 카드가 #yguardianmod:정지장에 들어가면 #y강화합니다."
+      "정지장 슬롯을 #b1 개 얻습니다. 카드가 #yguardianmod:정지장에 들어갈 때마다 그 카드를 #y강화합니다."
     ]
   },
   "Guardian:BottledStasis": {
