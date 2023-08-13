@@ -20,7 +20,7 @@ public class BronzeOrbCard extends AbstractCollectibleCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        dmg(m, AbstractGameAction.AttackEffect.NONE); //TODO: Beam
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
         atb(new AbstractGameAction() {
             @Override
             public void update() {

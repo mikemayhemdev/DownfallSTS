@@ -1,7 +1,10 @@
 package collector;
 
 import basemod.abstracts.CustomPlayer;
-import collector.cards.*;
+import collector.cards.Defend;
+import collector.cards.FuelTheFire;
+import collector.cards.Strike;
+import collector.cards.YouAreMine;
 import collector.relics.EmeraldTorch;
 import collector.util.DoubleEnergyOrb;
 import collector.util.RenderOnlyTorchHead;
@@ -177,7 +180,7 @@ public class CollectorChar extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return null;
+        return new YouAreMine();
     }
 
     @Override
@@ -269,7 +272,6 @@ public class CollectorChar extends CustomPlayer {
         super.render(sb);
 
         if (torchHead != null) {
-            //TODO: Torch Head should always be 'present' but should only be 'active' with TEMP HP
             if (Wiz.isInCombat() && TempHPField.tempHp.get(AbstractDungeon.player) > 0) {
                 torchHead.render(sb);
             }
