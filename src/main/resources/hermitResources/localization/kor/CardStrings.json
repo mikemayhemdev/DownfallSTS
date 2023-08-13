@@ -43,13 +43,13 @@
   },
   "hermit:Snipe": {
     "NAME": "저격",
-    "DESCRIPTION": "이번 턴에 다음으로 사용하는 카드의 hermit:정조준 효과가 두 번 발동됩니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "hermit:집중합니다. NL 이번 턴에 다음으로 사용하는 카드의 hermit:정조준 효과가 두 번 발동됩니다. NL 소멸."
+    "DESCRIPTION": "이번 턴에 사용하는 다음 카드의 hermit:정조준 효과가 두 번 발동됩니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "hermit:집중합니다. NL 이번 턴에 사용하는 다음 카드의 hermit:정조준 효과가 두 번 발동됩니다. NL 소멸."
   },
   "hermit:CalledShot": {
     "NAME": "콜드샷",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴 마지막으로 사용한 카드가 *정조준 *효과를 발동시켰다면 카드를 1장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 이번 턴 마지막으로 사용한 카드가 *정조준 *효과를 발동시켰다면 카드를 1장 뽑습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴 마지막으로 사용한 카드의 *정조준 *효과를 발동시켰다면 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 이번 턴 마지막으로 사용한 카드의 *정조준 *효과를 발동시켰다면 카드를 1장 뽑습니다."
   },
   "hermit:Dissolve": {
     "NAME": "용해",
@@ -182,8 +182,8 @@
   },
   "hermit:Vantage": {
     "NAME": "위치 선점",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준: NL 카드를 !M! 장 뽑고 그 카드를 이번 전투 동안 강화합니다.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준: NL 카드를 !M! 장 뽑고 그 카드를 이번 전투 동안 강화합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준: NL 카드를 1장 뽑고 그 카드를 강화합니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준: NL 카드를 !M! 장 뽑고 그 카드를 강화합니다."
   },
   "hermit:Brawl": {
     "NAME": "난투",
@@ -213,8 +213,8 @@
   },
   "hermit:FullyLoaded": {
     "NAME": "장전 완료",
-    "DESCRIPTION": "*타격과 *수비를 모두 뽑습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL *타격과 *수비를 모두 뽑습니다. NL 소멸."
+    "DESCRIPTION": "뽑을 카드 더미에서 *타격과 *수비를 전부 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL 뽑을 카드 더미에서 *타격과 *수비를 전부 뽑습니다. NL 소멸."
   },
   "hermit:Gestalt": {
     "NAME": "게슈탈트",
