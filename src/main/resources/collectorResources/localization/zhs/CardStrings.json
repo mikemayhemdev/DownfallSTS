@@ -1,11 +1,7 @@
 {
   "collector:ActOfAggression": {
     "NAME": "侵犯举动",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 易伤 。"
-  },
-  "collector:AlwaysMore": {
-    "NAME": "多多益善",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 金币 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 。"
   },
   "collector:AshenStrike": {
     "NAME": "化烬打击",
@@ -376,7 +372,7 @@
   },
   "collector:SunbloomKindling": {
     "NAME": "日花柴",
-    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得2张 *余烬 ， NL 与 !M! 点 力量 。",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得 !M! 点 力量 ， NL 与2张 *余烬 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
