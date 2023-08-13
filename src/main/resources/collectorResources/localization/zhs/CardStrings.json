@@ -425,7 +425,7 @@
   },
   "collector:BearCard": {
     "NAME": "熊",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 移除目标的 格挡。 NL 造成 !D! 点伤害。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 移除目标的 格挡 。 NL 造成 !D! 点伤害。"
   },
   "collector:BlueSlaverCard": {
     "NAME": "蓝衣奴贩",
@@ -523,7 +523,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量 。"
   },
   "collector:JousterCard": {
-    "NAME": "Jouster",
+    "NAME": "骑士",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若只有一名敌人， NL 获得 !B! 点 格挡 。"
   },
   "collector:LagavulinCard": {
