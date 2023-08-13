@@ -9,7 +9,8 @@
   "bronze:UnplayableMod": {
     "TEXT": [
       "사용불가. NL ",
-      "오류_주소_공백"
+      "오류_주소_공백",
+      "공백 포인터만을 위해 유지된다."
     ]
   },
   "bronze:EncodeAndShuffleMod": {
