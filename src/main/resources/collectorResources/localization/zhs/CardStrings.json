@@ -37,7 +37,7 @@
 
   "collector:BlackBindings": {
     "NAME": "黑缚咒",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 目标每有不同负面效果， NL 给予 !clm2! 层 collector:魂劫 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 目标每有一种负面效果， NL 给予 !clm2! 层 collector:魂劫 。"
   },
   "collector:Blightning": {
     "NAME": "惊萎",
