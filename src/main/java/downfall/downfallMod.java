@@ -239,21 +239,13 @@ public class downfallMod implements
             Settings.GameLanguage.ENG,
             Settings.GameLanguage.ZHS,
             // Settings.GameLanguage.JPN
-            Settings.GameLanguage.KOR,
-            Settings.GameLanguage.FRA,
-            Settings.GameLanguage.ZHT,
-            Settings.GameLanguage.RUS,
-            Settings.GameLanguage.PTB
+//            Settings.GameLanguage.KOR,
+//            Settings.GameLanguage.FRA,
+//            Settings.GameLanguage.ZHT,
+//            Settings.GameLanguage.RUS,
+//            Settings.GameLanguage.PTB
     };
 
-    public static String[] SupportedLanguagesStrings = {
-            "English",
-            "Chinese (Simplified)",
-            "Korean",
-            "French",
-            "Chinese (Traditional)",
-            "Russian",
-    };
     public static ReplaceData[] wordReplacements;
     public static SpireConfig bruhData = null;
 
@@ -394,6 +386,9 @@ public class downfallMod implements
             if (lang.equals(Settings.language)) {
                 return Settings.language.name().toLowerCase();
             }
+        }
+        if (Settings.language.equals(Settings.GameLanguage.ZHT)) {
+            return "zhs";
         }
         return "eng";
     }
