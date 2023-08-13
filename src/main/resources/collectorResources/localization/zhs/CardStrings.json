@@ -334,7 +334,7 @@
   },
   "collector:ShootingStar": {
     "NAME": "流星",
-    "DESCRIPTION": "虚无 。 NL 每回合首次 collector:焰葬 时， NL 将被葬牌返回手牌， NL 其单次耗能变为0。"
+    "DESCRIPTION": "虚无 。 NL 每回合首次 collector:焰葬 时， NL 将被葬牌返回手牌， NL 其耗能变为0一次。"
   },
   "collector:SomberShield": {
     "NAME": "阴沉护盾",
@@ -548,7 +548,7 @@
   },
   "collector:MerchantCard": {
     "NAME": "商人",
-    "DESCRIPTION": "随机获得 !M! 张无色牌， NL 本回合其单次耗能为0。"
+    "DESCRIPTION": "随机获得 !M! 张无色牌， NL 本回合其首次耗能为0。"
   },
   "collector:MushroomCard": {
     "NAME": "蘑菇",
@@ -661,7 +661,7 @@
   },
   "collector:TorchHeadCard": {
     "NAME": "火炬头",
-    "DESCRIPTION": "随机获得一张呼唤， NL 其本回合单次耗能为0。"
+    "DESCRIPTION": "随机获得一张呼唤， NL 本回合其首次耗能为0。"
   },
   "collector:TransientCard": {
     "NAME": "倏忽魔",
