@@ -50,7 +50,11 @@ public class Wildfire extends AbstractCollectorCard {
         super.initializeDescriptionCN();
         if((Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT) && this.description!=null && this.description.size()>=1 ) {
             for(int i=0; i < this.description.size(); i++){
-                if(this.description.get(i).text.equals("，")) this.description.remove(i);
+                if(this.description.get(i).text.equals("，")){
+                    StringBuilder sb = new StringBuilder();
+                    this.description.get(i-1).text = sb.append(this.description.get(i-1).text).append("，").toString();
+                    this.description.remove(i);
+                }
             }
         }
     }
