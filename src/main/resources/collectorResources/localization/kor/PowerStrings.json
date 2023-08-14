@@ -237,7 +237,7 @@
       " 감소시킵니다."
     ]
   },
-  "collector:BookOfStabbingCardPower": {
+  "collector:BookOfStabbingCard": {
     "NAME": "칼부림",
     "DESCRIPTIONS": [
       "막히지 않은 피해를 줄 때마다 #y파멸을 #b",
