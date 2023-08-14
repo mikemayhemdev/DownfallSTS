@@ -251,8 +251,8 @@
   },
   "hexamod:Rewind": {
     "NAME": "되감기",
-    "DESCRIPTION": "hexamod:수축합니다. NL 버린 카드 더미에서 카드를 1 장 선택해 가져옵니다.NL 소멸.",
-    "UPGRADE_DESCRIPTION": "hexamod:수축합니다. NL 버린 카드 더미에서 카드를 !M! 장 선택해 가져옵니다.NL 소멸."
+    "DESCRIPTION": "hexamod:수축합니다. NL 버린 카드 더미에서 카드를 1 장 선택해 가져옵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "hexamod:수축합니다. NL 버린 카드 더미에서 카드를 !M! 장 선택해 가져옵니다. NL 소멸."
   },
   "hexamod:Sear": {
     "NAME": "그을음",
