@@ -560,7 +560,7 @@
   "collector:NlothCard": {
     "NAME": "느로스",
     "DESCRIPTION": "collector:장작. NL 무작위 희귀 카드를 1장 얻습니다. NL 그 카드의 비용을 1 감소시킵니다.",
-    "UPGRADE_DESCRIPTION": "collector:장작. NL무작위 희귀 카드를 1장 얻습니다. NL 그 카드의 비용은 0이 됩니다."
+    "UPGRADE_DESCRIPTION": "collector:장작. NL 무작위 희귀 카드를 1장 얻습니다. NL 그 카드의 비용은 0이 됩니다."
   },
   "collector:OrbWalkerCard": {
     "NAME": "구체 순찰기",
