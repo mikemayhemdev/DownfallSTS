@@ -50,7 +50,7 @@
   "collector:CollectedCardMod": {
     "TEXT": [
       "collector:藏品 。 NL ",
-      "藏品"
+      ""
     ]
   },
   "collector:CollectibleCardReward": {
