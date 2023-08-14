@@ -1,0 +1,69 @@
+[
+  {
+    "PROPER_NAME": "고초",
+    "NAMES": [
+      "afflicted",
+      "고초합니다",
+      "고초된",
+      "고초되지"
+    ],
+    "DESCRIPTION": "#y약화와 #y취약을 동시에 보유한 대상입니다."
+  },
+  {
+    "PROPER_NAME": "파멸",
+    "NAMES": [
+      "doom",
+      "doomed",
+      "파멸",
+      "파멸을",
+      "파멸이"
+    ],
+    "DESCRIPTION": "파멸을 보유한 적의 턴 시작 시 체력을 잃습니다. 이후 적이 #y약화와 #y취약을 모두 가지고 있지 않다면 파멸을 제거합니다."
+  },
+  {
+    "PROPER_NAME": "장작",
+    "NAMES": [
+      "pyre",
+      "장작",
+      "장작으로"
+    ],
+    "DESCRIPTION": "사용 시 에너지 소모 이외에 추가로 카드를 #b1 장 #y소멸시켜야하는 카드입니다."
+  },
+  {
+    "PROPER_NAME": "비축",
+    "NAMES": [
+      "비축",
+      "비축을",
+      "비축으로만",
+      "reserve",
+      "reserves"
+    ],
+    "DESCRIPTION": "턴이 지나도 유지되는 다른 종류 #y에너지입니다."
+  },
+  {
+    "PROPER_NAME": "수집품",
+    "NAMES": [
+      "수집품",
+      "수집품을",
+      "collected"
+    ],
+    "DESCRIPTION": "사용 시 #y소멸하는 카드입니다. 내 턴 종료 시 해당 카드가 어느 곳에 있든지 #y소멸합니다."
+  },
+  {
+    "PROPER_NAME": "메가테리얼",
+    "NAMES": [
+      "megathereal"
+    ],
+    "DESCRIPTION": "사용 시 #y소멸하는 카드입니다. 내 턴 종료 시 해당 카드가 어느 곳에 있든지 #y소멸합니다."
+  },
+  {
+    "PROPER_NAME": "횃불 머리",
+    "NAMES": [
+      "torchhead",
+      "횃불_머리",
+      "횃불_머리가",
+      "횃불_머리에게"
+    ],
+    "DESCRIPTION": "#y임시 #y체력이 있다면 공격 카드 사용 시 #y횃불 #y머리가 행동합니다."
+  }
+]

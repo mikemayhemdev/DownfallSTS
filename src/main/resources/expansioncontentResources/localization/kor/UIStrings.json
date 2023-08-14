@@ -1,45 +1,48 @@
 {
   "downfall:PropertiesMod": {
     "TEXT": [
-      "Applied properties.",
-      "Additional properties: ",
-      "Additional properties for this turn: ",
-      " NL Also for this turn: ",
+      "적용된 속성.",
+      "적용된 속성: ",
+      "이번 턴에 적용된 속성: ",
+      " NL 또한 이번 턴에: ",
       ", ",
       ".",
-      "#yEcho",
-      "#yUnplayable",
-      "#yEthereal",
-      "#yRetain",
-      "#yExhaust",
-      "Echo: "
+      "#y",
+      "메아리",
+      "사용불가",
+      "휘발성",
+      "보존",
+      "소멸",
+      " ",
+      "NL ",
+      "메아리: "
     ]
   },
   "downfall:EtherealMod": {
     "TEXT": [
-      "Ethereal. NL "
+      "휘발성. NL "
     ]
   },
   "downfall:ExhaustMod": {
     "TEXT": [
-      " NL Exhaust."
+      " NL 소멸."
     ]
   },
   "downfall:InnateMod": {
     "TEXT": [
-      "Innate. NL "
+      "선천성. NL "
     ]
   },
   "downfall:RetainCardMod": {
     "TEXT": [
-      "Retain. NL "
+      "보존. NL "
     ]
   },
   "downfall:UnplayableMod": {
     "TEXT": [
-      "Unplayable. NL ",
-      "This card can't be played.",
-      "This card can't be played this turn."
+      "사용불가. NL ",
+      "이 카드는 사용할 수 없다.",
+      "이번 턴에 이 카드는 사용할 수 없다."
     ]
   },
   "expansioncontent:CannotUseBossCardMessage": {
