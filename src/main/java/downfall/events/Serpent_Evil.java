@@ -78,7 +78,7 @@ public class Serpent_Evil extends AbstractImageEvent {
             case INTRO:
                 if (buttonPressed == 0) {
                     this.imageEventText.updateBodyText(AGREE_DIALOG + GOLD_RAIN_MSG);
-                    this.imageEventText.removeDialogOption(1);
+                    this.imageEventText.clearAllDialogs();
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                     AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldReward));
@@ -90,7 +90,7 @@ public class Serpent_Evil extends AbstractImageEvent {
                     AbstractEvent.logMetricGainGoldAndCard(ID, "Punch", this.curse, this.goldReward);
                 } else if (buttonPressed == 1) {
                     this.imageEventText.updateBodyText(DISAGREE_DIALOG);
-                    this.imageEventText.removeDialogOption(1);
+                    this.imageEventText.clearAllDialogs();
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                     this.screen = CUR_SCREEN.DISAGREE;
                     AbstractEvent.logMetricIgnored(ID);
