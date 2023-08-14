@@ -98,8 +98,8 @@
   },
   "collector:EssenceReward": {
     "TEXT": [
-      "정수를 ",
-      " 얻습니다."
+      "",
+      " 정수"
     ]
   },
   "collector:CharacterOption": {
