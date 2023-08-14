@@ -135,9 +135,9 @@ public class CollectorChar extends CustomPlayer {
     public void doCharSelectScreenSelectEffect() {
 
         if (MathUtils.randomBoolean()) {
-            CardCrawlGame.sound.play("MONSTER_AUTOMATON_SUMMON", 0.1F);
+            CardCrawlGame.sound.play("MONSTER_COLLECTOR_SUMMON", 0.1F);
         } else {
-            CardCrawlGame.sound.play("AUTOMATON_ORB_SPAWN", 0.1F);
+            CardCrawlGame.sound.play("MONSTER_COLLECTOR_SUMMON", 0.1F);
         }
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false);
@@ -147,9 +147,9 @@ public class CollectorChar extends CustomPlayer {
     public String getCustomModeCharacterButtonSoundKey() {
 
         if (MathUtils.randomBoolean()) {
-            return "MONSTER_AUTOMATON_SUMMON";
+            return "MONSTER_COLLECTOR_SUMMON";
         } else {
-            return "AUTOMATON_ORB_SPAWN";
+            return "MONSTER_COLLECTOR_SUMMON";
         }
     }
 

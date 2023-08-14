@@ -1,6 +1,7 @@
 package collector.powers;
 
 import basemod.helpers.CardModifierManager;
+import collector.cardmods.ActuallyCollectedCardMod;
 import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.AbstractCollectibleCard;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -22,7 +23,7 @@ public class NextCollectedTwicePower extends AbstractCollectorPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && CardModifierManager.hasModifier(card, CollectedCardMod.ID) && this.amount > 0) {
+        if (!card.purgeOnUse && CardModifierManager.hasModifier(card, ActuallyCollectedCardMod.ID) && this.amount > 0) {
             this.flash();
             AbstractMonster m = null;
             if (action.target != null) {

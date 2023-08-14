@@ -49,7 +49,8 @@
   },
   "collector:CollectedCardMod": {
     "TEXT": [
-      "collector:Megathereal. NL "
+      "collector:Megathereal. NL ",
+      "Collected"
     ]
   },
   "collector:CollectibleCardReward": {

@@ -49,7 +49,8 @@
   },
   "collector:CollectedCardMod": {
     "TEXT": [
-      "collector:藏品 。 NL "
+      "collector:藏品 。 NL ",
+      "Collected"
     ]
   },
   "collector:CollectibleCardReward": {

@@ -49,7 +49,8 @@
   },
   "collector:CollectedCardMod": {
     "TEXT": [
-      "collector:Мегаэфирная. NL " //unfinished
+      "collector:Мегаэфирная. NL ",
+      "Collected" //unfinished
     ]
   },
   "collector:CollectibleCardReward": {

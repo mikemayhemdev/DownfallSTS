@@ -33,7 +33,7 @@
     "NAME": "Jade Ring",
     "FLAVOR": "Jade is the symbol of honesty.",
     "DESCRIPTIONS": [
-      "Whenever a #ycollector:Doomed enemy dies, gain #b",
+      "Whenever a #ycollector:Doomed non-Minion enemy dies, gain #b",
       " Souls."
     ]
   },

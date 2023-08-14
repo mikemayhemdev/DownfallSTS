@@ -237,7 +237,7 @@
       " less damage from attacks this turn."
     ]
   },
-  "collector:BookofStabbingCardPower": {
+  "collector:BookOfStabbingCardPower": {
     "NAME": "Stabby",
     "DESCRIPTIONS": [
       "Whenever you deal unblocked attack damage, apply #b",

@@ -298,7 +298,7 @@
   },
   "collector:ReceiveTribute": {
     "NAME": "Receive Tribute",
-    "DESCRIPTION": "collector:Pyre. NL Choose 1 of !M! Boss cards and add it into your hand. It gains Retain. Exhaust.",
+    "DESCRIPTION": "collector:Pyre. NL Choose 1 of !M! Boss cards to gain. It gains Retain. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to add into your hand."
     ]
