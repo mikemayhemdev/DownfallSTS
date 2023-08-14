@@ -28,6 +28,7 @@ import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardSave;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -314,27 +315,29 @@ public class CollectorMod implements
     }
 
     private void initializeSavedData() {
-        BaseMod.addSaveField("CollectorCollection", new CustomSavable<ArrayList<String>>() {
+        BaseMod.addSaveField("CollectorCollection", new CustomSavable<ArrayList<CardSave>>() {
             @Override
-            public ArrayList<String> onSave() {
-                ArrayList<String> results = new ArrayList<>();
+            public ArrayList<CardSave> onSave() {
+                ArrayList<CardSave> results = new ArrayList<>();
                 if (CollectorCollection.collection != null) {
                     for (AbstractCard q : CollectorCollection.collection.group) {
-                        results.add(q.cardID);
+                        results.add(new CardSave(q.cardID, q.timesUpgraded, 0));
                     }
                 }
                 System.out.println("Collector Saving Collection - cards: ");
-                results.stream().forEach(q -> System.out.println(q));
                 return results;
             }
 
             @Override
-            public void onLoad(ArrayList<String> strings) {
+            public void onLoad(ArrayList<CardSave> strings) {
                 CollectorCollection.init();
                 if (strings != null) {
-                    for (String s : strings) {
+                    for (CardSave s : strings) {
                         System.out.println("Collector Loading Collection Card: " + s);
-                        AbstractCard found = CardLibrary.getCopy(s);
+                        AbstractCard found = CardLibrary.getCopy(s.id);
+                        if (s.upgrades > 0) {
+                            found.upgrade();
+                        }
                         CardModifierManager.addModifier(found, new CollectedCardMod());
                         CollectorCollection.collection.addToBottom(found);
                     }

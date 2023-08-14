@@ -1,0 +1,110 @@
+{
+  "collector:CollectionReward": {
+    "TEXT": [
+      "Выберите карту для добавления в Коллекцию."
+    ]
+  },
+  "collector:CollectibleCardTab": {
+    "TEXT": [
+      "Коллекционные"
+    ]
+  },
+  "collector:CollectionScreen": {
+    "TEXT": [
+      "Скрыть",
+      "Вы начинаете бой с этими картами из Коллекции." //unfinished
+    ]
+  },
+  "collector:CollectionUITopPanel": {
+    "TEXT": [
+      "Коллекция",
+      "Просмотреть все карты в вашей Коллекции.",
+      "Вы начинаете бой с этими картами в стопке Коллекции." //unfinished
+    ]
+  },
+  "collector:CombatCollectionPileButton": {
+    "TEXT": [
+      "Стопка коллекции",
+      "Содержит карты из вашей Коллекции, которые ещё не были добавлены в руку в этом бою. Вы берёте #b1 карту из этой стопки в начале каждого хода.", //unfinished
+      "У меня нет карт в стопке Коллекции!"
+    ]
+  },
+  "collector:EssenceCount": {
+    "TEXT": [
+      "Эссенции",
+      "Вы можете тратить Эссенции для добавления карт в Коллекцию. Комнаты с боями дают #b1 #yЭссенции. Победа над Элитными врагами даёт #b2 #yЭссенции, а над Боссами - #b3! NL У вас #b",
+      " Эссенции."
+    ]
+  },
+  "collector:CombatCollectionViewScreen": {
+    "TEXT": [
+      "Экран отображения Коллекции в бою" //unfinished
+    ]
+  },
+  "collector:PyreInfo": {
+    "TEXT": [
+      "Пиромант",
+      "Чтобы разыграть эту карту, необходимо дополнительно Сжечь #b1 карту в руке." //unfinished
+    ]
+  },
+  "collector:CollectedCardMod": {
+    "TEXT": [
+      "collector:Мегаэфирная. NL ",
+      "Collected" //unfinished
+    ]
+  },
+  "collector:CollectibleCardReward": {
+    "TEXT": [
+      "Найдено: ", //unfinished
+      "Можно добавить в Коллекцию" //unfinished
+    ]
+  },
+  "collector:HoardedMod": {
+    "TEXT": [
+      "Неиграбельная. Оставляется. NL ",
+      "Неиграбельная. NL ",
+      "Оставляется. NL "
+    ]
+  },
+  "collector:SecondEnergyOrb": {
+    "TEXT": [
+      "Запасы", //unfinished
+      "Отдельный вид Энергии, сохраняющийся между ходами."
+    ]
+  },
+  "collector:PyreCostSpendScreen": {
+    "TEXT": [
+      "сжечь для карты-Пироманта." //unfinished
+    ]
+  },
+  "collector:PyreModText": {
+    "TEXT": [
+      "У меня нет карт для сжигания!"
+    ]
+  },
+  "collector:StashAwayCampfireOption": {
+    "TEXT": [
+      "Отпустить",
+      "Убрать карту из Коллекции. Получить ",
+      " Душ.",
+      "Требуется карта в Коллекции.", //unfinished
+      "Выберите карту, которую хотите убрать из Коллекции." //unfinished
+    ]
+  },
+  "collector:BonusEventOption": {
+    "TEXT": [
+      "[Забрать]" //unfinished
+    ]
+  },
+  "collector:EssenceReward": {
+    "TEXT": [
+      "Получить ",
+      " Эссенции."
+    ]
+  },
+  "collector:CharacterOption": {
+    "TEXT": [
+      "Эссенции: "
+    ]
+  }
+}

@@ -74,6 +74,6 @@ public class UnplayableMod extends AbstractCardModifier {
 
     @Override
     public boolean isInherent(AbstractCard card) {
-        return true;
+        return false;
     }
 }

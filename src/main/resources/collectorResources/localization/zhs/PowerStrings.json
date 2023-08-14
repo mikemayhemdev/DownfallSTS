@@ -234,7 +234,7 @@
       " 点攻击伤害。"
     ]
   },
-  "collector:BookofStabbingCardPower": {
+  "collector:BookOfStabbingCardPower": {
     "NAME": "Stabby",
     "DESCRIPTIONS": [
       "每当你造成未被格挡的攻击伤害，给予目标 #b",
