@@ -239,10 +239,10 @@ public class downfallMod implements
             Settings.GameLanguage.ENG,
             Settings.GameLanguage.ZHS,
             // Settings.GameLanguage.JPN
-//            Settings.GameLanguage.KOR,
+          Settings.GameLanguage.KOR,
 //            Settings.GameLanguage.FRA,
 //            Settings.GameLanguage.ZHT,
-//            Settings.GameLanguage.RUS,
+        Settings.GameLanguage.RUS,
 //            Settings.GameLanguage.PTB
     };
 
