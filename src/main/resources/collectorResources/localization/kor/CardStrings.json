@@ -328,7 +328,7 @@
   },
   "collector:ShadowDaggers": {
     "NAME": "그림자 단검",
-    "DESCRIPTION": "이번 전투에서 사용한 수집품 카드만큼 피해를 !M! 줍니다. NL 소멸.",
+    "DESCRIPTION": "이번 전투에서 사용한 수집품 카드만큼 피해를 !D! 줍니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       " NL (피해를 ",
       " 번 줍니다.)",
@@ -560,7 +560,7 @@
   "collector:NlothCard": {
     "NAME": "느로스",
     "DESCRIPTION": "collector:장작. NL 무작위 희귀 카드를 1장 얻습니다. NL 그 카드의 비용을 1 감소시킵니다.",
-    "UPGRADE_DESCRIPTION": "collector:장작. NL무작위 희귀 카드를 1장 얻습니다. NL 그 카드의 비용은 0이 됩니다."
+    "UPGRADE_DESCRIPTION": "collector:장작. NL 무작위 희귀 카드를 1장 얻습니다. NL 그 카드의 비용은 0이 됩니다."
   },
   "collector:OrbWalkerCard": {
     "NAME": "구체 순찰기",
