@@ -78,7 +78,7 @@
   },
   "collector:DarkApotheosis": {
     "NAME": "黑化",
-    "DESCRIPTION": "临时 升级 *收藏堆 的牌。 NL 消耗 。"
+    "DESCRIPTION": "升级 *收藏堆 的牌。 NL 消耗 。"
   },
   "collector:DarkLordForm": {
     "NAME": "暗主形态",
