@@ -329,10 +329,10 @@ public class CollectorMod implements
             }
 
             @Override
-            public void onLoad(ArrayList<CardSave> strings) {
+            public void onLoad(ArrayList<CardSave> cardSaves) {
                 CollectorCollection.init();
-                if (strings != null) {
-                    for (CardSave s : strings) {
+                if (cardSaves != null) {
+                    for (CardSave s : cardSaves) {
                         System.out.println("Collector Loading Collection Card: " + s);
                         AbstractCard found = CardLibrary.getCopy(s.id);
                         if (s.upgrades > 0) {

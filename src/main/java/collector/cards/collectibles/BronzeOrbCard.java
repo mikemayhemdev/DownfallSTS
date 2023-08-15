@@ -25,7 +25,8 @@ public class BronzeOrbCard extends AbstractCollectibleCard {
             @Override
             public void update() {
                 isDone = true;
-                AbstractDungeon.player.drawPile.getTopCard().freeToPlayOnce = true;
+                if (!AbstractDungeon.player.drawPile.isEmpty())
+                    AbstractDungeon.player.drawPile.getTopCard().freeToPlayOnce = true;
                 //Note: this technically lets you figure out what your top card is by checking draw pile before/after
             }
         });
