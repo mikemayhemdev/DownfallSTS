@@ -135,7 +135,7 @@
   },
   "hexamod:GhostShield": {
     "NAME": "유령 보호",
-    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 방어도를 !B! 얻습니다. NL 소멸되면 bronze:흐릿함을 !M! 얻습니다."
+    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 방어도를 !B! 얻습니다. NL 적 전체에게 약화를 !M! 부여합니다."
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "저편의 선물",
