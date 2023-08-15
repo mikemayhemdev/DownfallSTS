@@ -170,8 +170,8 @@
   "collector:Suffering": {
     "NAME": "苦楚",
     "DESCRIPTIONS": [
-      "每当你给予 #y虚弱 或 #y易伤 时，目标同时失去 #b",
-      " 点生命。"
+      "每当你给予 #y虚弱 或 #y易伤 时，同时给予 #b",
+      " 层 #y魂劫 。"
     ]
   },
   "collector:TorchHead": {
