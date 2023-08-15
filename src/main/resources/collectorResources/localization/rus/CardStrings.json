@@ -416,32 +416,32 @@
   }, //COLLECTIBLES BELOW
   "collector:AcidSlimeCard": {
     "NAME": "Едкий слизень",
-    "DESCRIPTION": "Add !M! random 0 cost card into your hand.",
-    "UPGRADE_DESCRIPTION": "Add !M! random 0 cost cards into your hand."
+    "DESCRIPTION": "Добавляет в руку !M! случ. карту стоимостью 0.",
+    "UPGRADE_DESCRIPTION": "Добавляет в руку !M! случ. карты стоимостью 0."
   },
   "collector:AugmenterCard": {
-    "NAME": "Augmenter", //unfinished
+    "NAME": "Усилитель",
     "DESCRIPTION": "Отнимает 3 ОЗ. NL Даёт !M! Силы."
   },
   "collector:BearCard": {
     "NAME": "Медведь",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Remove the enemy's Block. NL Наносит !D! урона."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Сбивает всю Защиту врага. NL Наносит !D! урона."
   },
   "collector:BlueSlaverCard": {
     "NAME": "Работорговец (в синем)",
-    "DESCRIPTION": "Наносит !D! урона. NL Накладывает 1 Силы. NL Удваивает Слабость врага." //unfinished
+    "DESCRIPTION": "Наносит !D! урона. NL Накладывает 1 Силы. NL Удваивает наложенную на врага Слабость."
   },
   "collector:BonfireSpiritsCard": {
-    "NAME": "Духи костра", //unfinished
-    "DESCRIPTION": "collector:Пиромант. NL Восполняет !M! ОЗ. NL If the Exhausted card was Rare, raise your Max HP by 1."
+    "NAME": "Духи костра",
+    "DESCRIPTION": "collector:Пиромант. NL Восполняет !M! ОЗ. NL Увеличивает Макс. ОЗ на 1, когда Сжигает Редкую карту." //unfinished
   },
   "collector:BookOfStabbingCard": {
     "NAME": "Истыклопедия",
-    "DESCRIPTION": "Whenever you deal unblocked attack damage, apply !M! collector:Doom."
+    "DESCRIPTION": "Накладывает !M! collector:Порчи, когда вы наносите урон по ОЗ."
   },
   "collector:BronzeOrbCard": {
     "NAME": "Сфера",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Наносит !D! урона. NL The top card of your draw pile costs 0 until played."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Наносит !D! урона. NL Карта с верха стопки добора стоит 0, пока не разыграна."
   },
   "collector:ByrdCard": {
     "NAME": "Птах",
@@ -453,11 +453,11 @@
   },
   "collector:ChosenCard": {
     "NAME": "Избранный",
-    "DESCRIPTION": "Накладывает !M! Слабости. NL Накладывает !M! Уязвимости, если враг не намеревается атаковать."
+    "DESCRIPTION": "Накладывает !M! Слабости. NL Накладывает !M! Уязвимости, если враг не собирается атаковать."
   },
   "collector:ClericCard": {
     "NAME": "Клирик",
-    "DESCRIPTION": "collector:Пиромант. NL Даёт !M! expansioncontent:Temp_HP."
+    "DESCRIPTION": "collector:Пиромант. NL Даёт !M! expansioncontent:Временного_ОЗ."
   },
   "collector:CultistCard": {
     "NAME": "Культист",
@@ -469,22 +469,22 @@
   },
   "collector:DarklingsCard": {
     "NAME": "Темныши",
-    "DESCRIPTION": "collector:Пиромант. NL Наносит !D! урона. expansioncontent:Exhume a Collected card.",
+    "DESCRIPTION": "collector:Пиромант. NL Наносит !D! урона. expansioncontent:Воскрешает Коллекционную карту.",
     "EXTENDED_DESCRIPTION": [
-      "to create 2 copies of."
+      "Воскресить и получить 2 её копии." //unfinished
     ]
   },
   "collector:DesignerInSpireCard": {
     "NAME": "Дизайнер Шпиль-ка",
-    "DESCRIPTION": "Даёт !M! expansioncontent:Temp_HP. NL collector:Torchhead gains \"Вы берёте 1 карту.\""
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временного ОЗ. NL collector:Пламяголовый получает: \"Вы берёте 1 карту.\""
   },
   "collector:FinalBossCard": {
     "NAME": "Эндшпиль", //extra pun here xD
-    "DESCRIPTION": "Remove the enemy's Invincible buff and Stun them. NL Сжигается."
+    "DESCRIPTION": "Сбивает Непобедимость и hermit:Оглушает врага. NL Сжигается."
   },
   "collector:FaceTraderCard": {
-    "NAME": "Торговец лицами", //unfinished
-    "DESCRIPTION": "Add !M! random cards of any color into your hand. NL They become Эфирная."
+    "NAME": "Торговец лицами",
+    "DESCRIPTION": "Добавляет в руку !M! карты случ. цвета. NL Они становятся Эфирными." //unfinished
   },
   "collector:FatGremlinCard": {
     "NAME": "Толстый гремлин",
@@ -495,52 +495,52 @@
     "DESCRIPTION": "Накладывает !M! Уязвимости. NL Накладывает 1 Уязвимости на ВСЕХ врагов."
   },
   "collector:GiantHeadCardStageOne": {
-    "NAME": "Тик", //unfinished
-    "DESCRIPTION": "Next turn, gain a *Tock."
+    "NAME": "Тик",
+    "DESCRIPTION": "Добавляет в руку *Так в след. ходу."
   },
   "collector:GiantHeadCardStageTwo": {
-    "NAME": "Так", //unfinished
-    "DESCRIPTION": "Next turn, gain a *Headcrush."
+    "NAME": "Так",
+    "DESCRIPTION": "Добавляет в руку *Огромную *голову в след. ходу." //unfinished
   },
   "collector:GiantHeadCardStageThree": {
-    "NAME": "Headcrush", //unfinished
+    "NAME": "Огромная голова", //unfinished
     "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам."
   },
   "collector:GremlinLeaderCard": {
     "NAME": "Предводитель гремлинов",
-    "DESCRIPTION": "Add !M! random Gremlin Collectibles into your hand."
+    "DESCRIPTION": "Добавляет в руку !M! случ. Коллекционных карт Гремлинов." //unfinished
   },
   "collector:GremlinNobCard": {
     "NAME": "Гремлин-верзила",
-    "DESCRIPTION": "Даёт !M! Vigor, когда вы разыгрываете Навык."
+    "DESCRIPTION": "Даёт !M! Бодрости, когда вы разыгрываете Навык."
   },
   "collector:GremlinWizardCard": {
     "NAME": "Гремлин-маг",
-    "DESCRIPTION": "Next turn, NL gain !M! Vigor and 1 collector:Reserve."
+    "DESCRIPTION": "Даёт !M! Бодрости и 1 collector:Резерва в след. ходу."
   },
   "collector:JawWormCard": {
     "NAME": "Зубастый червь",
     "DESCRIPTION": "Даёт !B! Защиты. NL Даёт !M! Силы."
   },
   "collector:JousterCard": {
-    "NAME": "Jouster", //unfinished
-    "DESCRIPTION": "Наносит !D! урона. NL If there's only one foe, gain !B! Block."
+    "NAME": "Рыцарь с копьём", //unfinished
+    "DESCRIPTION": "Наносит !D! урона. NL Даёт !B! Защиты, если вы сражаетесь с одним врагом." //unfinished
   },
   "collector:LagavulinCard": {
     "NAME": "Лагавулин",
-    "DESCRIPTION": "ALL enemies lose !M! Strength."
+    "DESCRIPTION": "ВСЕ враги теряют !M! Силы."
   },
   "collector:LivingWallCard": {
     "NAME": "Живая изгородь", //unfinished
-    "DESCRIPTION": "collector:Пиромант. NL Gain a random Upgraded card. NL It costs 0 until played."
+    "DESCRIPTION": "collector:Пиромант. NL Добавляет в руку случ. Улучшенную карту. NL Она стоит 0, пока не разыграна."
   },
   "collector:LouseCard": {
     "NAME": "Вошь",
-    "DESCRIPTION": "Даёт 1 bronze:Blur. NL The next time you receive unblocked attack damage, gain !B! Block."
+    "DESCRIPTION": "Даёт 1 bronze:Неуловимости. NL Даёт !B! Защиты при след. потере ОЗ от атак."
   },
   "collector:MadGremlinCard": {
     "NAME": "Безумный гремлин", //unfinished
-    "DESCRIPTION": "Даёт !M! Временной Силы."
+    "DESCRIPTION": "Даёт !M! временной Силы."
   },
   "collector:MawCard": {
     "NAME": "Пасть",
@@ -548,44 +548,44 @@
   },
   "collector:MerchantCard": {
     "NAME": "Торговец",
-    "DESCRIPTION": "Add !M! random Colorless cards into your hand. NL They cost 0 this turn."
+    "DESCRIPTION": "Добавляет в руку !M! случ. Бесцветных карт. NL Они стоят 0 в этом ходу."
   },
   "collector:MushroomCard": {
     "NAME": "Гриб",
-    "DESCRIPTION": "Наносит !D! урона. NL Накладывает !M! Слабости или Уязвимости."
+    "DESCRIPTION": "Наносит !D! урона. NL Накладывает !M! Слабости или Уязвимости." //unfinished
   },
   "collector:MysticCard": {
-    "NAME": "Мистик", //unfinished
-    "DESCRIPTION": "Даёт !M! expansioncontent:Temp_HP."
-  },
-  "collector:NemesisCard": {
-    "NAME": "Немезис",
-    "DESCRIPTION": "Даёт 1 Intangible."
+    "NAME": "Жрица",
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ."
   },
   "collector:NlothCard": {
-    "NAME": "Н'лот", //unfinished
+    "NAME": "Н'лот",
     "DESCRIPTION": "collector:Пиромант. NL Add a random Rare card into your hand. NL It costs 1 less.",
     "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Add a random Rare card into your hand. NL It costs 0."
   },
+  "collector:NemesisCard": {
+    "NAME": "Немезис",
+    "DESCRIPTION": "Даёт 1 Неосязаемости."
+  },
   "collector:OrbWalkerCard": {
     "NAME": "Сфероход",
-    "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку !M! *Embers."
+    "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку !M! *Уголька."
   },
   "collector:PointyCard": {
-    "NAME": "Pointy", //unfinished
+    "NAME": "Колючка",
     "DESCRIPTION": "Наносит !D! урона дважды. NL Вы берёте 1 карту."
   },
   "collector:RanwidCard": {
     "NAME": "Ранвид",
-    "DESCRIPTION": "Gain an additional Potion and Card reward at the end of combat."
+    "DESCRIPTION": "Вы получаете зелье и *доп. *карту в награду, в конце боя."
   },
   "collector:RedSlaverCard": {
     "NAME": "Работорговец (в красном)",
-    "DESCRIPTION": "Enemy loses !M! Strength this turn."
+    "DESCRIPTION": "Враг теряет !M! Силы до конца своего хода."
   },
   "collector:ReptomancerCard": {
     "NAME": "Жрица змеи",
-    "DESCRIPTION": "Даёт !M! expansioncontent:Temp_HP. NL collector:Torchhead gains \"Накладывает !clm2! Яда на случ. врага.\""
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ. NL collector:Пламяголовый получает: \"Накладывает !clm2! Яда на случ. врага\"."
   },
   "collector:RepulsorCard": {
     "NAME": "Отвратник",
@@ -593,15 +593,15 @@
   },
   "collector:RomeoCard": {
     "NAME": "Ромео",
-    "DESCRIPTION": "Your next Attack costs 0 and deals !M! additional damage."
+    "DESCRIPTION": "След. разыгранная Атака стоит 0 и наносит !M! доп. урона."
   },
   "collector:ScrapOozeCard": {
     "NAME": "Слизень-барахольщик",
-    "DESCRIPTION": "collector:Пиромант. NL Отнимает 3 ОЗ. NL Add !M! random Attacks into your hand. NL They cost 0 this turn."
+    "DESCRIPTION": "collector:Пиромант. NL Отнимает 3 ОЗ. NL Добавляет в руку !M! случ. Атаки. NL Они стоят 0 в этом ходу."
   },
   "collector:SentryCard": {
     "NAME": "Часовой",
-    "DESCRIPTION": "Наносит !D! урона. NL Накладывает !M! Слабости. NL Repeat if there is a *Sentry in your exhaust pile."
+    "DESCRIPTION": "Наносит !D! урона. NL Накладывает !M! Слабости. NL Дважды, если среди Сожжённых карт есть *Часовой." //unfinished
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Панцирный паразит",
@@ -621,7 +621,7 @@
   },
   "collector:SneckoCard": {
     "NAME": "Змекко",
-    "DESCRIPTION": "Вы берёте !M! карты. NL sneckomod:Muddle your hand."
+    "DESCRIPTION": "Вы берёте !M! карты. NL sneckomod:Спутывает все карты в руке."
   },
   "collector:SphericGuardianCard": {
     "NAME": "Сферический страж",
@@ -633,11 +633,11 @@
   },
   "collector:SpikeSlimeCard": {
     "NAME": "Шипастый слизень",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Whenever you are attacked this turn, наносит !M! урона back."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Наносит врагу !M! урона в ответ на каждую атаку в этом ходу."
   },
   "collector:SpireGrowthCard": {
-    "NAME": "Spire Growth", //unfinished
-    "DESCRIPTION": "Enemy takes !M! damage at the end of each of its turns."
+    "NAME": "Отросток Шпиля",
+    "DESCRIPTION": "Враг получает !M! урона в конца каждого своего хода."
   },
   "collector:SpireShieldCard": {
     "NAME": "Щит Шпиля",
@@ -648,39 +648,39 @@
     "DESCRIPTION": "Даёт !M! Силы."
   },
   "collector:SsserpentCard": {
-    "NAME": "Ssserpent", //unfinished
-    "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Doubt."
+    "NAME": "З-з-з-з-змей",
+    "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Сомнения."
   },
   "collector:TaskmasterCard": {
-    "NAME": "Taskmaster", //unfinished
-    "DESCRIPTION": "Накладывает !clm2! collector:Doom. NL Наносит !D! урона. NL Даёт !M! Силы."
+    "NAME": "Надсмотрщик",
+    "DESCRIPTION": "Накладывает !clm2! collector:Порчи. NL Наносит !D! урона. NL Даёт !M! Силы."
   },
   "collector:ThievesCard": {
-    "NAME": "Thieves", //unfinished
-    "DESCRIPTION": "Take !M! less damage from attacks this turn."
+    "NAME": "Грабители", //unfinished
+    "DESCRIPTION": "Вы получаете на !M! урона меньше от атак в этом ходу."
   },
   "collector:TorchHeadCard": {
     "NAME": "Пламяголовый",
-    "DESCRIPTION": "Add a random Torchhead Call into your hand. NL It costs 0 this turn."
+    "DESCRIPTION": "Добавляет в руку случ. Приказ Пламяголовому. NL Он стоит 0 в этом ходу."
   },
   "collector:TransientCard": {
     "NAME": "Преходящий",
-    "DESCRIPTION": "Даёт !M! Силы. NL Die in 6 turns."
+    "DESCRIPTION": "Даёт !M! Силы. NL Вы умрёте через 6 ходов."
   },
   "collector:VagrantCard": {
-    "NAME": "Бродяга", //unfinished
-    "DESCRIPTION": "Даёт !M! collector:Reserve. NL Добавляет в руку *Shame."
+    "NAME": "Умоляющий бродяга",
+    "DESCRIPTION": "Даёт !M! collector:Резерва. NL Добавляет в руку *Стыд."
   },
   "collector:WomanInBlueCard": {
     "NAME": "Женщина в синем",
-    "DESCRIPTION": "Gain a random Potion. NL Lose ALL Potions at the end of combat."
+    "DESCRIPTION": "Даёт случ. зелье. NL Отнимает ВСЕ зелья в конце боя."
   },
   "collector:WrithingMassCard": {
     "NAME": "Извивающаяся масса",
-    "DESCRIPTION": "Scry !M!. NL Play the top card of your draw pile."
+    "DESCRIPTION": "Вы Предсказываете !M! карты. NL Вы разыгрываете карту с верха стопки добора."
   },
   "collector:DefaultCollectibleCard": {
     "NAME": "Бездушная оболочка", //unfinished
-    "DESCRIPTION": "This foe doesn't have a unique Collectible yet! NL Даёт !M! Силы и Ловкости."
+    "DESCRIPTION": "Эта сущность ещё не является частью Коллекции! NL Даёт !M! Силы и Ловкости." //unfinished
   }
 }
