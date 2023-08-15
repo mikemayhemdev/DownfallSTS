@@ -1,121 +1,121 @@
 {
   "collector:EmeraldTorch": {
-    "NAME": "Emerald Torch",
-    "FLAVOR": "The fires of greed never fade.",
+    "NAME": "Факел изумрудного пламени",
+    "FLAVOR": "Пламя жадности никогда не угаснет.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #ycollector:Reserve."
+      "Даёт #b1 #ycollector:Резерва в начале боя."
     ]
   },
   "collector:PrismaticTorch": {
     "NAME": "Prismatic Torch",
     "FLAVOR": "The ever-changing flames reflect fortune's favor.",
     "DESCRIPTIONS": [
-      "Replaces ",
-      ".[] At the start of each combat, add an #yEmber into your hand and gain #b1 #ycollector:Reserve. Whenever you #yExhaust an #yEmber, gain #b1 #ycollector:Reserve."
+      "Заменяет ",
+      ".[] Добавляет в руку #yУголёк и даёт #b1 #ycollector:Резерва в начале боя. Даёт #b1 #ycollector:Резерва, когда #yСжигается #yУголёк."
     ]
   },
   "collector:HolidayCoal": {
-    "NAME": "Krampian Coal",
-    "FLAVOR": "\"Intriguing! But why only specific chimneys?\" - Ranwid",
+    "NAME": "Крампианский уголь",
+    "FLAVOR": "\"Интригует! Но почему только для особых дымоходов?\" - Ранвид",
     "DESCRIPTIONS": [
-      "When you would draw from an empty Collected pile, you instead draw a #yLucky #yWick."
+      "Добавляет в руку #yLucky #yWick, если стопка Коллекции пуста." //unfinished
     ]
   },
   "collector:BagOfTricks": {
-    "NAME": "Bag of Tricks",
-    "FLAVOR": "Tricky.",
+    "NAME": "Мешочек с фокусами",
+    "FLAVOR": "Замысловато.",
     "DESCRIPTIONS": [
-      "At the start of each combat, draw #b",
-      " Collected cards."
+      "Вы берёте #b",
+      " Коллекционных карт в начале боя."
     ]
   },
   "collector:JadeRing": {
-    "NAME": "Jade Ring",
-    "FLAVOR": "Jade is the symbol of honesty.",
+    "NAME": "Нефритовое кольцо",
+    "FLAVOR": "Нефрит - символ честности.",
     "DESCRIPTIONS": [
-      "Whenever a #ycollector:Doomed enemy dies, gain #b",
-      " Souls."
+      "Даёт #b",
+      " Душ, когда враг с #ycollector:Порчей умирает." //unfinished
     ]
   },
   "collector:SoullitLamp": {
-    "NAME": "Soul-lit Lamp",
-    "FLAVOR": "A ghoulish decoration. The crackles of fire are replaced by buzzing wails.",
+    "NAME": "Светильник душ",
+    "FLAVOR": "Жуткое украшение. Потрескивание пламени сменяется гудящими воплями.",
     "DESCRIPTIONS": [
-      "Upon pickup, gain #b3 #yEssence. At the start of combat, add an #yEmber into your hand."
+      "При получении даёт #b3 #yЭссенции. Добавляет в руку #yУголёк в начале боя."
     ]
   },
   "collector:ThimbleHelm": {
-    "NAME": "Thimble Helm",
-    "FLAVOR": "Worn by the Spire's miniest heroes.",
+    "NAME": "Шлем-напёрсток",
+    "FLAVOR": "Для самых маленьких героев Шпиля.",
     "DESCRIPTIONS": [
-      "Start each combat with #b",
-      " #yTemporary_HP. While you have #yTemporary_HP, cards grant #b1 additional #yBlock."
+      "Даёт #b",
+      " #yВременного_ОЗ в начале боя. Вы получаете #b1 доп. #yЗащиты от карт, когда у вас есть #yВременное_ОЗ." //unfinished
     ]
   },
   "collector:Incense": {
-    "NAME": "Incense",
-    "FLAVOR": "An antiquated form of mental clarification.",
+    "NAME": "Благовония",
+    "FLAVOR": "Устаревшая форма умственного очищения.", //unfinished
     "DESCRIPTIONS": [
-      "You cannot gain #yWeak, #yVulnerable or #yFrail while you are #yWeak, #yVulnerable or #yFrail."
+      "Вы не можете получить #yСлабость, #yУязвимость или #yХрупкость, если на вас уже наложена #yСлабость, #yУязвимость или #yХрупкость." //unfinished
     ]
   },
   "collector:FuelCanister": {
-    "NAME": "Fuel Canister",
-    "FLAVOR": "Disgusting.",
+    "NAME": "Канистра с топливом",
+    "FLAVOR": "Противно.",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yRetain the highest-cost card in your hand."
+      "Вы #yОставляете самую дорогую карту в руке, в конце хода." //unfinished
     ]
   },
   "collector:AutoCurser": {
-    "NAME": "Hexx Talisman",
-    "FLAVOR": "\"When I put this on, my rate of toe-stubbing increased drastically. I think it works!\" - Ranwid",
+    "NAME": "Хекс-оберег",
+    "FLAVOR": "\"Когда я надеваю его, то ударяюсь своей ногой гораздо чаще. Мне кажется, он работает!\" - Ранвид",
     "DESCRIPTIONS": [
-      "At the start of combat, apply #b1 #yWeak and #yVulnerable to a random enemy."
+      "Накладывает #b1 #yСлабости и #yУязвимости на случ. врага в начале боя."
     ]
   },
   "collector:Bagpipes": {
-    "NAME": "The Bagpipes",
-    "FLAVOR": "This dreaded instrument is said to have driven Kublai the Great mad.",
+    "NAME": "Волынка",
+    "FLAVOR": "Говорят, что этот ужасный инструмент свел с ума Хубилая Великого.",
     "DESCRIPTIONS": [
-      "Whenever you apply #yWeak or #yVulnerable, increase the amount applied by #b1."
+	  "Увеличичвает накладываемую на врага #yСлабость или #yУязвимость на 1." //unfinished
     ]
   },
   "collector:BottledCollectible": {
-    "NAME": "Bottled Brain",
-    "FLAVOR": "Collected from a wizard's laboratory.",
+    "NAME": "Закупоренный мозг",
+    "FLAVOR": "Собран в Лаборатории волшебника.",
     "DESCRIPTIONS": [
-      "Upon pickup, #yUpgrade a card in your Collection. Start combats with it on top of your Collected pile.",
-      "Start combat with #y",
-      " on top of your Collected pile.",
-      "Select a card to bottle for "
+      "При получении #yУлучшает выбранную карту в колоде. Вы начинаете каждый бой с этой картой на верху стопки Коллекции.", //unfinished
+      "Вы начинаете каждый бой с картой ",
+      " на верху стопки Коллекции.",
+      "Выберите карту, на которую подействует " //unfinished
     ]
   },
   "collector:TheContract": {
-    "NAME": "The Contract",
-    "FLAVOR": "Sign in blood.",
+    "NAME": "Контракт",
+    "FLAVOR": "Подпись оставлена кровью.",
     "DESCRIPTIONS": [
-      "Upon pickup, gain #b10 #yEssence."
+      "При получении даёт #b10 #yЭссенции."
     ]
   },
   "collector:ForbiddenFruit": {
-    "NAME": "Forbidden Fruit",
-    "FLAVOR": "This species of fruit looks completely unfamiliar.",
+    "NAME": "Запретный плод",
+    "FLAVOR": "Фрукт выглядит совершенно незнакомым.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. NL Gain #b8 Max HP."
+      "При получении выберите и получите одну Обычную, Необычную и Редкую карту из предложенных. Увеличивает Макс. ОЗ на #b8." //unfinished
     ]
   },
   "collector:RoughDiamond": {
-    "NAME": "Rough Diamond",
-    "FLAVOR": "With the mines demolished, even this tarnished stone is valuable.",
+    "NAME": "Неогранённый алмаз",
+    "FLAVOR": "Из-за разрушенных шахт даже этот потускневший камень представляет ценность.",
     "DESCRIPTIONS": [
-      "Rare cards in your deck and Collection start combat costing #b1 less, but not less than #b1."
+      "Редкие карты в вашей колоде и Коллекции стоят на #b1 меньше в начале боя, но не меньше, чем #b1." //unfinished
     ]
   },
   "collector:BlockedChakra": {
-    "NAME": "Blocked Chakra",
-    "FLAVOR": "One pulled muscle is all it takes.",
+    "NAME": "Закрытая чакра",
+    "FLAVOR": "Достаточно одной растянутой мышцы.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. You don't draw from your Collected pile until turn 4."
+      "Даёт [E] в начале вашего хода. Вы не берёте карту из стопки Коллекции до начала 4 хода." //unfinished
     ]
   }
 }
