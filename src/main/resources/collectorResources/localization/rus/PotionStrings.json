@@ -1,32 +1,32 @@
 {
   "collector:MiniCursePotion": {
-    "NAME": "Soul Extract",
+    "NAME": "Экстракт души",
     "DESCRIPTIONS": [
-      "Накладывает #b1 #yСлабости, #b1 #yУязвимости и #b6 #yDoom.",
+      "Накладывает #b1 #yСлабости, #b1 #yУязвимости и #b6 #yПорчи.",
       "Накладывает #b",
       " #yСлабости, #b",
       " #yУязвимости и #b",
-      " #yDoom."
+      " #yПорчи."
     ]
   },
   "collector:ReservePotion": {
-    "NAME": "Reserve Potion",
+    "NAME": "Зелье резерва",
     "DESCRIPTIONS": [
-      "Даёт #b2 #yReserves.",
+      "Даёт #b2 #yРезерва.",
       "Даёт #b",
-      " #yReserves."
+      " #yРезерва."
     ]
   },
   "collector:DebuffDoublePotion": {
-    "NAME": "Embalming Oils",
+    "NAME": "Масла для бальзамирования",
     "DESCRIPTIONS": [
-      "Double the target's debuffs.",
-      "Multiply the target's debuffs by #b",
-      "."
+      "Удваивает отриц. эффекты врага.",
+      "Увеличивает отриц. эффекты врага в #b",
+      " раз(а)."
     ]
   },
   "collector:TempHPPotion": {
-    "NAME": "Felwater",
+    "NAME": "Скверная водица", //unfinished
     "DESCRIPTIONS": [
       "Даёт #b8 #yВременного #yОЗ.",
       "Даёт #b",
