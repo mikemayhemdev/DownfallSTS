@@ -476,7 +476,7 @@
   },
   "collector:FinalBossCard": {
     "NAME": "终局",
-    "DESCRIPTION": "移除目标的坚不可摧， NL 并将其击晕。 NL 消耗 。"
+    "DESCRIPTION": "移除目标的坚不可摧， NL 并将其 hermit:击晕 。 NL 消耗 。"
   },
   "collector:FaceTraderCard": {
     "NAME": "换脸商",
