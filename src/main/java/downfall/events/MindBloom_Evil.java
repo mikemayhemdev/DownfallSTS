@@ -190,7 +190,6 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.loseRelic(HeartBlessingBlue.ID);
                         AbstractDungeon.player.loseRelic(HeartBlessingGreen.ID);
 
-                        AbstractDungeon.player.decreaseMaxHealth(10);
                         logMetricUpgradeCards(ID, "Upgrade", upgradedCards);
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
