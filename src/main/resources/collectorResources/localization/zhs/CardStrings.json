@@ -121,7 +121,7 @@
   },
   "collector:Empower": {
     "NAME": "邪力",
-    "DESCRIPTION": "接下来 !M! 个回合， NL 获得X点 力量 。"
+    "DESCRIPTION": "下 !M! 个回合开始时， NL 获得X点 力量 。"
   },
   "collector:Extricate": {
     "NAME": "解脱",
