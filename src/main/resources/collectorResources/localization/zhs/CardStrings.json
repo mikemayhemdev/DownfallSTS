@@ -216,7 +216,7 @@
   },
   "collector:Invigorate": {
     "NAME": "精神焕发",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力 。 NL 下回合获得 4 层 活力 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力 。 NL 下回合获得 !M! 层 活力 。"
   },
   "collector:IronbarkKindling": {
     "NAME": "铁皮柴",
