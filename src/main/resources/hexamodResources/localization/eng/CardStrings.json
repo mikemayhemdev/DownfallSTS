@@ -135,7 +135,7 @@
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL When *Exhausted, NL gain !M! bronze:Blur."
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "Gifts From Beyond",

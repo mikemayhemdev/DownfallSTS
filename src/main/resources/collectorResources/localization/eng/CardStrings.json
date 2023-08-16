@@ -223,7 +223,7 @@
   },
   "collector:Invigorate": {
     "NAME": "Invigorate",
-    "DESCRIPTION": "collector:Pyre. NL Gain !M! Vigor. NL Next turn, gain 4 Vigor."
+    "DESCRIPTION": "collector:Pyre. NL Gain !M! Vigor. NL Next turn, gain !M! Vigor."
   },
   "collector:IronbarkKindling": {
     "NAME": "Ironbark Kindling",
