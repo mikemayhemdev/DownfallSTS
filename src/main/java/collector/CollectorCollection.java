@@ -227,7 +227,7 @@ public class CollectorCollection {
         for (AbstractCard q : collection.group) {
             combatCollection.addToTop(q.makeSameInstanceOf());
         }
-        combatCollection.shuffle(AbstractDungeon.cardRandomRng);
+        combatCollection.shuffle(AbstractDungeon.shuffleRng);
         ArrayList<AbstractCard> toTopdeck = new ArrayList<>();
         for (AbstractCard q : combatCollection.group) {
             if (CollectorBottleField.inCollectionBottle.get(q)) {

@@ -39,9 +39,9 @@ public class StashAwayCampfireOption extends AbstractCampfireOption {
 
     public void updateImage(boolean active) {
         if (active) {
-            this.img = TextureLoader.getTexture("sneckomodResources/images/ui/lockincampfire.png");
+            this.img = TextureLoader.getTexture("collectorResources/images/ui/release_campfire.png");
         } else {
-            this.img = TextureLoader.getTexture("sneckomodResources/images/ui/lockincampfiredisabled.png");
+            this.img = TextureLoader.getTexture("collectorResources/images/ui/release_campfire_disabled.png");
         }
     }
 

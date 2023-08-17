@@ -87,7 +87,7 @@
   "collector:Karma": {
     "NAME": "Karma",
     "DESCRIPTIONS": [
-      "At the end of your turn, if an enemy is #yAfflicted, gain #b",
+      "At the end of your turn, if any enemy is #yAfflicted, gain #b",
       " #yBlock."
     ]
   },

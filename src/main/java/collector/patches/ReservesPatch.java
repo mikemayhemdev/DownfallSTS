@@ -20,7 +20,7 @@ public class ReservesPatch {
             int found = NewReserves.reserveCount();
             // Kill Special Case
             if (__instance.cardID.equals(FingerOfDeath.ID)) {
-                if (found >= __instance.costForTurn || __instance.freeToPlay()) {
+                if (found >= __instance.costForTurn || __instance.freeToPlay() || __instance.ignoreEnergyOnUse) {
                     return SpireReturn.Return(true);
                 }
                 return SpireReturn.Return(false);
