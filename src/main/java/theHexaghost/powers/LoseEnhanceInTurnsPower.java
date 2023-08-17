@@ -31,7 +31,7 @@ public class LoseEnhanceInTurnsPower extends TwoAmountPower implements Cloneable
         this.owner = AbstractDungeon.player;
         this.amount = amount;
         this.amount2 = amount2;
-        this.type = PowerType.BUFF;
+        this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);

@@ -11,7 +11,7 @@ import static collector.CollectorMod.makeID;
 public class EssenceReward extends CustomReward {
 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("EssenceReward"));
-    private final int amount;
+    public final int amount;
 
     public EssenceReward(int amount) {
         super(TopPanelEssence.ICON, uiStrings.TEXT[0] + amount + uiStrings.TEXT[1], RewardItemTypeEnumPatch.COLLECTOR_ESSENCE);
