@@ -170,7 +170,7 @@
     ]
   },
   "collector:Suffering": {
-    "NAME": "악화",
+    "NAME": "고통 나누기",
     "DESCRIPTIONS": [
       "#y약화 또는 #y취약을 부여할 때마다 부여한 적에게 #y파멸을 #b",
       " 부여합니다."

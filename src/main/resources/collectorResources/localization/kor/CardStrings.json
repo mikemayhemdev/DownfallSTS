@@ -223,7 +223,7 @@
   },
   "collector:Invigorate": {
     "NAME": "활성화",
-    "DESCRIPTION": "collector:장작. NL expansioncontent:활력을 !M! 얻습니다. NL 다음 턴에 expansioncontent:활력을 4 얻습니다."
+    "DESCRIPTION": "collector:장작. NL expansioncontent:활력을 !M! 얻습니다. NL 다음 턴에 expansioncontent:활력을 !M! 얻습니다."
   },
   "collector:IronbarkKindling": {
     "NAME": "유칼리나무철 쏘시개",
