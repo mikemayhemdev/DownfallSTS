@@ -148,8 +148,8 @@
   },
   "collector:FlameLash": {
     "NAME": "Flame Lash",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the *Pyred card's damage to this.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the *Pyred card's damage plus !M! to this."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage, then add the *Pyred card's damage to this.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage, then add the *Pyred card's damage plus !M! to this."
   },
   "collector:FleetingEmbers": {
     "NAME": "Fleeting Embers",
