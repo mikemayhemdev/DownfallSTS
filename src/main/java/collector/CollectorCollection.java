@@ -20,10 +20,7 @@ import com.megacrit.cardcrawl.cards.blue.CoreSurge;
 import com.megacrit.cardcrawl.cards.blue.Seek;
 import com.megacrit.cardcrawl.cards.blue.WhiteNoise;
 import com.megacrit.cardcrawl.cards.colorless.TheBomb;
-import com.megacrit.cardcrawl.cards.green.AfterImage;
-import com.megacrit.cardcrawl.cards.green.CorpseExplosion;
-import com.megacrit.cardcrawl.cards.green.Footwork;
-import com.megacrit.cardcrawl.cards.green.StormOfSteel;
+import com.megacrit.cardcrawl.cards.green.*;
 import com.megacrit.cardcrawl.cards.purple.ConjureBlade;
 import com.megacrit.cardcrawl.cards.purple.Omniscience;
 import com.megacrit.cardcrawl.cards.purple.Ragnarok;
@@ -132,6 +129,7 @@ public class CollectorCollection {
         collectionPool.put(Defect.ID, WhiteNoise.ID);
         collectionPool.put(Watcher.ID, TalkToTheHand.ID);
         collectionPool.put(Hermit.ID, ShadowCloak.ID);
+        collectionPool.put(MirrorImageSilent.ID, Doppelganger.ID);
 
         collectionPool.put(Fortification.ID, SpireShieldCard.ID);
         collectionPool.put(LadyInBlue.ID, WomanInBlueCard.ID);
