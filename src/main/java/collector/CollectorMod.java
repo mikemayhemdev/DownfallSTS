@@ -335,7 +335,7 @@ public class CollectorMod implements
                             found.upgrade();
                         }
                         CardModifierManager.addModifier(found, new CollectedCardMod());
-                        CollectorCollection.collection.addToBottom(found);
+                        CollectorCollection.collection.addToTop(found);
                     }
                     for (AbstractRelic r : AbstractDungeon.player.relics) {
                         if (r instanceof BottledCollectible) {
