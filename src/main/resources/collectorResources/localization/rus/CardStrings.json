@@ -682,5 +682,9 @@
   "collector:DefaultCollectibleCard": {
     "NAME": "Бездушная оболочка", //unfinished
     "DESCRIPTION": "Эта сущность ещё не является частью Коллекции! NL Даёт !M! Силы и Ловкости." //unfinished
+  },
+  "collector:CollectorCard": {
+    "NAME": "Ouroboros",
+    "DESCRIPTION": "collector:Pyre. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !clm2! Temporary_HP."
   }
 }

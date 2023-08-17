@@ -681,5 +681,9 @@
   "collector:ShootingStar": {
     "NAME": "유성",
     "DESCRIPTION": "휘발성. NL 매 턴 처음 collector:장작으로 카드 소멸 시 그 카드를 복사해 얻습니다. NL 사용하기 전까지 그 카드의 비용은 0이 됩니다."
+  },
+  "collector:CollectorCard": {
+    "NAME": "Ouroboros",
+    "DESCRIPTION": "collector:Pyre. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !clm2! Temporary_HP."
   }
 }

@@ -675,10 +675,12 @@
     "NAME": "扭曲团块",
     "DESCRIPTION": "预见 !M! 。 NL 打出抽牌堆顶部的牌。"
   },
-
-
   "collector:DefaultCollectibleCard": {
     "NAME": "无魂躯壳",
     "DESCRIPTION": "这名敌人没有灵魂。 NL 获得 !M! 点 力量 与 敏捷 。"
+  },
+  "collector:CollectorCard": {
+    "NAME": "Ouroboros",
+    "DESCRIPTION": "collector:Pyre. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !clm2! Temporary_HP."
   }
 }

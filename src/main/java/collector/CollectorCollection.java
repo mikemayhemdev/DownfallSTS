@@ -4,6 +4,7 @@ import basemod.helpers.CardModifierManager;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.monsters.*;
@@ -125,6 +126,7 @@ public class CollectorCollection {
         collectionPool.put(GrowingTotem.ID, LivingWallCard.ID);
         collectionPool.put(Augmenter.ID, AugmenterCard.ID);
         collectionPool.put(FleeingMerchant.ID, MerchantCard.ID);
+        collectionPool.put(CharBossMerchant.ID, MerchantCard.ID);
         collectionPool.put(Ironclad.ID, Inflame.ID);
         collectionPool.put(Silent.ID, Footwork.ID);
         collectionPool.put(Defect.ID, WhiteNoise.ID);
@@ -137,6 +139,7 @@ public class CollectorCollection {
         collectionPool.put(SpireSpear.ID, SpireSpearCard.ID);
         collectionPool.put(NeowBossFinal.ID, FinalBossCard.ID);
         collectionPool.put(CorruptHeart.ID, FinalBossCard.ID);
+        collectionPool.put(TheCollector.ID, CollectorCard.ID);
     }
 
     public static AbstractCard getCollectedCard(AbstractMonster m) {
