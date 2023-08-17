@@ -681,5 +681,9 @@
   "collector:ShootingStar": {
     "NAME": "Shooting Star",
     "DESCRIPTION": "Ethereal. NL The first time you collector:Pyre a card each turn, gain a copy of it. NL It costs 0 until played."
+  },
+  "collector:CollectorCard": {
+    "NAME": "Ouroboros",
+    "DESCRIPTION": "collector:Pyre. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !clm2! Temporary_HP."
   }
 }

@@ -137,6 +137,7 @@ public class CollectorCollection {
         collectionPool.put(SpireSpear.ID, SpireSpearCard.ID);
         collectionPool.put(NeowBossFinal.ID, FinalBossCard.ID);
         collectionPool.put(CorruptHeart.ID, FinalBossCard.ID);
+        collectionPool.put(TheCollector.ID, CollectorCard.ID);
     }
 
     public static AbstractCard getCollectedCard(AbstractMonster m) {
