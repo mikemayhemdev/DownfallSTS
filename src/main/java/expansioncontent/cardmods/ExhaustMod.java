@@ -5,14 +5,18 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 
-public class InnateMod  extends AbstractCardModifier {
-    public static String ID = "downfall:InnateMod";
+public class ExhaustMod extends AbstractCardModifier {
+    public static String ID = "downfall:ExhaustMod";
 
-    //Don't use for temporary modification (why would you do that?), for that use PropertiesMod instead.
+    //Don't use for temporary modification, for that use PropertiesMod instead.
+
+    public ExhaustMod() {
+        this.priority = 99; //Making sure Exhaust is the last line of the text on the card.
+    }
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return CardCrawlGame.languagePack.getUIString(ID).TEXT[0] + rawDescription;
+        return rawDescription + CardCrawlGame.languagePack.getUIString(ID).TEXT[0];
     }
 
     public boolean shouldApply(AbstractCard card) {
@@ -21,17 +25,17 @@ public class InnateMod  extends AbstractCardModifier {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        card.isInnate = true;
+        card.exhaust = true;
     }
 
     @Override
     public void onRemove(AbstractCard card) {
-        card.isInnate = false;
+        card.exhaust = false;
     }
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new InnateMod();
+        return new ExhaustMod();
     }
 
     @Override
