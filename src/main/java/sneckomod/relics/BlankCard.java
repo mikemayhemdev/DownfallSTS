@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.util.TextureLoader;
+import expansioncontent.actions.EchoACardAction;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
@@ -35,9 +36,7 @@ public class BlankCard extends CustomRelic {
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         card2.freeToPlayOnce = true;
-        CardModifierManager.addModifier(card2, new ExhaustMod());
-        CardModifierManager.addModifier(card2, new EtherealMod());
-        addToBot(new MakeTempCardInHandAction(card2));
+        addToBot(new EchoACardAction(card2));
     }
 
     public String getUpdatedDescription() {

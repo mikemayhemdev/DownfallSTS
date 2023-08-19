@@ -109,6 +109,7 @@ import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
 import downfall.util.*;
+import expansioncontent.cardmods.PropertiesMod;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import gremlin.GremlinMod;
@@ -1570,7 +1571,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public void receivePostDraw(AbstractCard abstractCard) {
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) || ModHelper.isModEnabled(Hexed.ID)) {
             if (!abstractCard.isEthereal) {
-                CardModifierManager.addModifier(abstractCard, new EtherealMod());
+                CardModifierManager.addModifier(abstractCard, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
             }
         }
     }

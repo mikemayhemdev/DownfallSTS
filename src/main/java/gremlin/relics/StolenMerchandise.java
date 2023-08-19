@@ -1,13 +1,9 @@
 package gremlin.relics;
 
-import basemod.cardmods.EtherealMod;
-import basemod.cardmods.ExhaustMod;
-import basemod.helpers.CardModifierManager;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.monsters.FleeingMerchant;
+import expansioncontent.actions.EchoACardAction;
 
 public class StolenMerchandise extends AbstractGremlinRelic {
     private static final String ID = getID("StolenMerchandise");
@@ -47,9 +44,7 @@ public class StolenMerchandise extends AbstractGremlinRelic {
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
         AbstractCard colorless = AbstractDungeon.returnTrulyRandomColorlessCardInCombat().makeCopy();
-        CardModifierManager.addModifier(colorless, new ExhaustMod());
-        CardModifierManager.addModifier(colorless, new EtherealMod());
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(colorless));
+        addToBot(new EchoACardAction(colorless));
     }
 
     public void atBattleStart() {

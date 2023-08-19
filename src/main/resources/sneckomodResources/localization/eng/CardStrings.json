@@ -324,8 +324,8 @@
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "Unlimited Rolls",
-    "DESCRIPTION": "At the start of your turn, gain an gremlin:Echo of *Soul *Roll.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain an gremlin:Echo of *Soul *Roll."
+    "DESCRIPTION": "At the start of your turn, gain a *Soul *Roll with Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain a *Soul *Roll with Exhaust."
   },
   "sneckomod:WideSting": {
     "NAME": "Wide Sting",

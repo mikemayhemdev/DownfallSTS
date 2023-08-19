@@ -1,7 +1,6 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
-import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -12,6 +11,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.StarBounceEffect;
 import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
+import expansioncontent.cardmods.EtherealMod;
 
 public class DigitalCarnage extends AbstractBronzeCard {
 
