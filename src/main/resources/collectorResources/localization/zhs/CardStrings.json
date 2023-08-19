@@ -141,7 +141,7 @@
   },
   "collector:FingerOfDeath": {
     "NAME": "死亡恶指",
-    "DESCRIPTION": "只能使用 collector:储能 打出。 NL 给予 !M! 层 collector:魂劫 。"
+    "DESCRIPTION": "只能用 collector:储能 打出。 NL 给予 !M! 层 collector:魂劫 。"
   },
   "collector:FlameLash": {
     "NAME": "焰鞭",
