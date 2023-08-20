@@ -16,7 +16,7 @@
   },
   "collector:HolidayCoal": {
     "NAME": "角魔煤块",
-    "FLAVOR": "\"Intriguing! But why only specific chimneys?\" - Ranwid",
+    "FLAVOR": "兰伟德：\"真有意思！但为什么只有某些烟囱才有呢？\"",
     "DESCRIPTIONS": [
       "从空的 #y收藏堆 抽牌时，抽出一张 #y幸运烛芯 。"
     ]
@@ -39,14 +39,14 @@
   },
   "collector:SoullitLamp": {
     "NAME": "燃魂灯",
-    "FLAVOR": "A ghoulish decoration. The crackles of fire are replaced by buzzing wails.",
+    "FLAVOR": "一件十分阴间的装饰品，从内部传来的不是燃料的燃爆声，而是嘈杂的哀嚎。",
     "DESCRIPTIONS": [
       "拾起时，获得 #b3 点 #g魂粹 。战斗开始时，获得 #b1 张 #y余烬 。"
     ]
   },
   "collector:ThimbleHelm": {
     "NAME": "顶针帽",
-    "FLAVOR": "Worn by the Spire's miniest heroes.",
+    "FLAVOR": "被尖塔中最迷你的英雄们穿戴着。",
     "DESCRIPTIONS": [
       "战斗开始时，获得 #b",
       " 层 #y临时生命 。拥有 #y临时生命 时，从卡牌中额外获得 #b1 点 #y格挡 。"
