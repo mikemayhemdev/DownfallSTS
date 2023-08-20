@@ -11,7 +11,8 @@
     "NAME": "巫傲",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张攻击会给予 !M! 层 collector:魂劫 。"
   },
-  "collector:AshesAndDust": {
+  "collector:AshesAndDust"
+: {
     "NAME": "成灰成烬",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害X次。 NL 若X大于4， NL 再造成2次。"
   },
@@ -145,7 +146,7 @@
   },
   "collector:FlameLash": {
     "NAME": "焰鞭",
-    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 本牌附加所葬牌的伤害。",
+    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 附加所葬牌的伤害于此。",
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 本场战斗伤害加 !M! ， NL 再加所葬牌的伤害。"
   },
   "collector:FleetingEmbers": {
