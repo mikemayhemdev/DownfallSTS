@@ -140,7 +140,7 @@
   },
   "collector:Finalize": {
     "NAME": "Прикончить", //unfinished
-    "DESCRIPTION": "Восстанавливает !clm2! ОЗ, если враг умирает в этом ходу. NL Накладывает !M! collector:Порчи. NL Сжигается."
+    "DESCRIPTION": "Восполняет !clm2! ОЗ, если враг умирает в этом ходу. NL Накладывает !M! collector:Порчи. NL Сжигается."
   },
   "collector:FingerOfDeath": {
     "NAME": "Касание смерти",
@@ -335,10 +335,6 @@
       " раз(а).)" //unfinished
     ]
   },
-  "collector:ShootingStar": {
-    "NAME": "Падающая звезда",
-    "DESCRIPTION": "Эфирная. NL The first time you collector:Пиромант a card each turn, gain a copy of it. NL It costs 0 until played."
-  },
   "collector:SomberShield": {
     "NAME": "Щит мрака",
     "DESCRIPTION": "collector:Пиромант. NL Даёт !B! Защиты. NL Добавляет в руку копию *Сожжённой карты в след. ходу."
@@ -385,9 +381,8 @@
     ]
   },
   "collector:ThornWhip": {
-    "NAME": "Thorn Whip",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, repeat this twice.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL If the enemy is collector:Afflicted, repeat this twice."
+    "NAME": "Thorn Whip", //unfinished
+    "DESCRIPTION": "Наносит !D! урона. NL Даёт 9 Эссенции при добавлении в колоду." //unfinished
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer", //unfinished
@@ -408,7 +403,7 @@
   },  
   "collector:Wildfire": {
     "NAME": "Дикое пламя",
-    "DESCRIPTION": "Наносит !D! урона. NL Повторяет за каждый отриц. эффект у врага." //unfinished
+    "DESCRIPTION": "Наносит !D! урона. NL Повторяет за каждый отриц. эффект врага." //unfinished
   },
   "collector:YouAreMine": {
     "NAME": "Ты принадлежишь мне!",
@@ -476,7 +471,7 @@
   },
   "collector:DesignerInSpireCard": {
     "NAME": "Дизайнер Шпиль-ка",
-    "DESCRIPTION": "Даёт !M! expansioncontent:Временного ОЗ. NL collector:Пламяголовый получает: \"Вы берёте 1 карту.\""
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ. NL collector:Пламяголовый получает: \"Вы берёте 1 карту.\""
   },
   "collector:FinalBossCard": {
     "NAME": "Эндшпиль", //extra pun here xD
@@ -560,8 +555,8 @@
   },
   "collector:NlothCard": {
     "NAME": "Н'лот",
-    "DESCRIPTION": "collector:Пиромант. NL Add a random Rare card into your hand. NL It costs 1 less.",
-    "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Add a random Rare card into your hand. NL It costs 0."
+    "DESCRIPTION": "collector:Пиромант. NL Добавляет в руку случ. Редкую карту. NL Она стоит на 1 меньше.",
+    "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Добавляет в руку случ. Редкую карту. NL Она стоит 0."
   },
   "collector:NemesisCard": {
     "NAME": "Немезис",
@@ -683,8 +678,12 @@
     "NAME": "Бездушная оболочка", //unfinished
     "DESCRIPTION": "Эта сущность ещё не является частью Коллекции! NL Даёт !M! Силы и Ловкости." //unfinished
   },
+  "collector:ShootingStar": {
+    "NAME": "Падающая звезда",
+    "DESCRIPTION": "Эфирная. NL При первом разыгрывании карты collector:Пироманта за ход, добавляет в руку её копию. NL Она стоит 0, пока не разыграна." //unfinished
+  },
   "collector:CollectorCard": {
-    "NAME": "Ouroboros",
-    "DESCRIPTION": "collector:Pyre. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !clm2! Temporary_HP."
-  }
+    "NAME": "Уроборос",
+    "DESCRIPTION": "collector:Пиромант. NL Накладывает !M! Слабости. NL Накладывает !M! Уязвимости. NL Даёт !clm2! expansioncontent:Временного_ОЗ."
+  }  
 }
