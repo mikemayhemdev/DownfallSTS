@@ -42,7 +42,7 @@ public class BigShot extends AbstractDynamicCard {
 
     public BigShot() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
         loadJokeCardImage(this, "smoking_barrel.png");
     }
 

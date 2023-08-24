@@ -16,7 +16,7 @@
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E]. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Next turn, lose [E]. NL Exhaust."
   },
   "expansioncontent:LastStand": {
     "NAME": "Last Stand",
@@ -25,7 +25,7 @@
   },
   "expansioncontent:YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "Remove Block from, and apply !M! Weak and Vulnerable to, ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Remove Block from, and apply !M! Weak and Vulnerable to ALL enemies. NL Exhaust."
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "Awaken",
@@ -33,8 +33,8 @@
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Chrono-Boost",
-    "DESCRIPTION": "Gain 1 Strength for every 12th card you play.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength. NL Gain 1 Strength for every 12th card you play."
+    "DESCRIPTION": "Gain 2 Strength for every 12th card you play.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Strength. NL Gain 2 Strength for every 12th card you play."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Donu Blast",
@@ -46,14 +46,12 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "Shaper's Blessing",
-    "DESCRIPTION": "Choose - Gain !M! Strength or 5 Plated Armor.",
-    "UPGRADE_DESCRIPTION": "Choose - Gain !M! Strength or 8 Plated Armor.",
+    "DESCRIPTION": "Choose - Gain !M! Strength or !DM! Plated Armor.",
     "EXTENDED_DESCRIPTION": [
       "Donu's Power",
       "Gain !M! Strength.",
       "Deca's Shield",
-      "Gain 5 Plated Armor.",
-      "Gain 8 Plated Armor."
+      "Gain !M! Plated Armor."
     ]
   },
   "expansioncontent:PrepareCrush": {

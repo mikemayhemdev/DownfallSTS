@@ -47,7 +47,8 @@
   {
     "PROPER_NAME": "容器",
     "NAMES": [
-      "容器"
+      "容器",
+      "seal"
     ],
     "DESCRIPTION": "若一场战斗所有的 #b6 种 #y容器 牌都被打出且无重复，获得 #p破损容器 并将打出的 #y容器 牌移出牌组。"
   },
@@ -56,7 +57,7 @@
     "NAMES": [
       "阴世"
     ],
-    "DESCRIPTION": "被 #y消耗 时触发效果。"
+    "DESCRIPTION": "被 #y消耗 时也能触发效果。"
   },
   {
     "PROPER_NAME": "碾压",

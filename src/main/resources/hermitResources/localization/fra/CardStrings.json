@@ -34,8 +34,8 @@
   },
   "hermit:HighCaliber": {
     "NAME": "Gros calibre",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une *Frappe dans votre défausse. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une *Frappe+ dans votre défausse. NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une *Frappe+2　 dans votre défausse. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une *Frappe+3　 dans votre défausse. NL Épuisement."
   },
   "hermit:BodyArmor": {
     "NAME": "Gilet pare-balles",
@@ -43,14 +43,13 @@
   },
   "hermit:Snipe": {
     "NAME": "Snipe",
-    "DESCRIPTION": "Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois.",
-    "UPGRADE_DESCRIPTION": "hermit:Concentrez-vous. NL Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois."
+    "DESCRIPTION": "Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "hermit:Concentrez-vous. NL Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois. NL Épuisement."
   },
   "hermit:CalledShot": {
     "NAME": "Tir contrôlé",
-    "DESCRIPTION": "Infligez des dégâts égaux à la taille de votre main. NL hermit:Dans_Le_Mille: NL Piochez !M! Attaque.",
-    "UPGRADE_DESCRIPTION": " NL (Inflige !D! dégâts.)",
-	"EXTENDED_DESCRIPTION":["Infligez des dégâts égaux à la taille de votre main. NL hermit:Dans_Le_Mille: NL Piochez !M! Attaques."]
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si la dernière carte jouée a déclenché hermit:Dans_Le_Mille, piochez une carte.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Si la dernière carte jouée a déclenché hermit:Dans_Le_Mille, piochez une carte."
   },
   "hermit:Dissolve": {
     "NAME": "Dissolution",
@@ -67,7 +66,7 @@
   },
   "hermit:ShadowCloak": {
     "NAME": "Cape obscure",
-    "DESCRIPTION": "Lorsque vous piochez une Malédiction, gagnez !M! d'Armure."
+    "DESCRIPTION": "Lorsque vous piochez ou Épuisez une Malédiction, gagnez !M! d'Armure."
   },
   "hermit:FatalDesire": {
     "NAME": "Désir fatal",
@@ -108,11 +107,11 @@
   },
   "hermit:Roulette": {
     "NAME": "Roulette",
-    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire. NL Défaussez votre main. NL Piochez autant de cartes."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Défaussez votre main. NL Piochez autant de cartes."
   },
   "hermit:Midnight": {
     "NAME": "Minuit",
-    "DESCRIPTION": "Éthérée. NL Gagnez !B! d'Armure. NL Ajoutez *Destin *Imminent à votre main.",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez *Destin *Imminent à votre main.",
     "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez *Destin *Imminent à votre main."
   },
   "hermit:Glare": {
@@ -122,8 +121,8 @@
   },
   "hermit:TakeCover": {
     "NAME": "À couvert",
-    "DESCRIPTION": "Ajoutez X *Défenses dans votre main. NL Elles coûtent 0 pendant ce combat. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Ajoutez X *Défenses+ dans votre main. NL Elles coûtent 0 pendant ce combat. NL Épuisement."
+    "DESCRIPTION": "Ajoutez une *Défense coûtant 0 dans votre main et améliorez-la X fois. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une *Défense coûtant 0 dans votre main et améliorez-la X+1 fois. NL Épuisement."
   },
   "hermit:Misfire": {
     "NAME": "Rater son coup",
@@ -155,11 +154,11 @@
   },
   "hermit:Spite": {
     "NAME": "Dépit",
-    "DESCRIPTION": "Piochez !M! *Malédictions. NL Infligez !D! dégâts deux fois."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Piochez une carte pour chaque Malédiction dans votre main."
   },
   "hermit:Manifest": {
     "NAME": "Manifeste",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Piochez !M! *Malédictions."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Obtenez un *Déclin."
   },
   "hermit:Feint": {
     "NAME": "Feinte",
@@ -183,7 +182,8 @@
   },
   "hermit:Vantage": {
     "NAME": "Avantage",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille: NL Améliorez !M! cartes aléatoires dans votre main pour le restant du combat."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille: NL Piochez !M! carte et Améliorez-la pour le reste du combat.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille: NL Piochez !M! cartes et Améliorez-les pour le reste du combat."
   },
   "hermit:Brawl": {
     "NAME": "Pugilat",
@@ -191,7 +191,8 @@
   },
   "hermit:Combo": {
     "NAME": "Combo",
-    "DESCRIPTION": "Lorsque vouus déclenchez un effet hermit:Dans_Le_Mille, ajoutez une carte aléatoire avec un effet hermit:Dans_Le_Mille dans votre main."
+    "DESCRIPTION": "Remettez dans votre main la première carte hermit:Dans_Le_Mille déclenchée à chaque tour",
+    "UPGRADE_DESCRIPTION": "Remettez dans votre main les !M! premières cartes hermit:Dans_Le_Mille cards déclenchées à chaque tour."
   },
   "hermit:BigShot": {
     "NAME": "Baril de fumée",
@@ -199,7 +200,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "Puissance écrasante",
-    "DESCRIPTION": "Gagnez [E] [E] [E]. NL Piochez 3 cartes. NL Lorsque vous finissez votre tour avec 0 d'Énergie, perdez !M! PV."
+    "DESCRIPTION": "Gagnez [E] [E] [E]. NL Piochez !hermit:SecondMagic! cartes. NL Lorsque vous finissez votre tour avec 0 d'Énergie, perdez !M! PV."
   },
   "hermit:Maintenance": {
     "NAME": "Maintenance",
@@ -207,8 +208,8 @@
    },
   "hermit:EternalForm": {
     "NAME": "Forme éternelle",
-    "DESCRIPTION": "Éthérée. NL Au début de votre tour, réduisez le coût de toutes les cartes dans votre main de 1 pour ce tour.",
-    "UPGRADE_DESCRIPTION": "Au début de votre tour, réduisez le coût de toutes les cartes dans votre main de 1 pour ce tour."
+    "DESCRIPTION": "Éthérée. NL Les 4 premières cartes jouables piochées au début de chaque tour coûtent 1 [E] de moins.",
+    "UPGRADE_DESCRIPTION": "Les 4 premières cartes jouables piochées au début de chaque tour coûtent 1 [E] de moins."
   },
   "hermit:FullyLoaded": {
     "NAME": "Pleine charge",
@@ -225,7 +226,7 @@
   },
   "hermit:CursedWeapon": {
     "NAME": "Arme maudite",
-    "DESCRIPTION": "Perdez !M! PV. NL Infligez !D! dégâts. NL Cette carte gagne 3 dégâts de façon permanente. NL Épuisement."
+    "DESCRIPTION": "Perdez !M! PV. NL Infligez !D! dégâts. NL Toutes les *Armes *maudites gagnent !hermit:SecondMagic! dégâts de façon permanente. NL Épuisement."
   },
   "hermit:Enervate": {
     "NAME": "Énervement",
@@ -309,8 +310,9 @@
   },
   "hermit:FinalCanter": {
     "NAME": "Galop final",
-    "DESCRIPTION": "Retenue. NL Infligez !D! dégâts pour chaque Malédiction dans votre main. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": " NL (Vous avez !M! Malédiciton(s))"
+    "DESCRIPTION": "Retenue. NL Épuisez toutes les Malédictions dans votre main, infligez !D! dégâts pour chaque Malédiction Épuisée. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": " NL (Vous avez !M! Malédiciton.)",
+    "EXTENDED_DESCRIPTION": [" NL (Vous avez !M! Malédicitons.)"]
   },
   "hermit:HeroicBravado": {
     "NAME": "Bravado héroïque",
@@ -323,9 +325,5 @@
   "hermit:Virtue": {
     "NAME": "Vertu",
     "DESCRIPTION": "Retenue. NL Réduisez chacun de vos débuffs de !M!."
-  },
-  "hermit:BossMaintenance": {
-    "NAME": "Entretien",
-    "DESCRIPTION": "Vos *Frappes infligent !M! dégâts supplémentaires ce combat. NL Gagnez 2 de Dexterité. NL Cette carte coûte 1 [E] de plus ce combat."
   }
 }

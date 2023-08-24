@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import expansioncontent.expansionContentMod;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
 
 public class LastStand extends AbstractExpansionCard {
     public final static String ID = makeID("LastStand");
@@ -32,6 +33,7 @@ public class LastStand extends AbstractExpansionCard {
 
         baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;
+        loadJokeCardImage(this, "LastStand.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

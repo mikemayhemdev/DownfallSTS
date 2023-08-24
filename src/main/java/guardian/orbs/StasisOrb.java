@@ -3,6 +3,7 @@ package guardian.orbs;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.UpgradeSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -17,6 +18,7 @@ import guardian.actions.ReturnStasisCardToHandAction;
 import guardian.actions.StasisEvokeIfRoomInHandAction;
 import guardian.cards.AbstractGuardianCard;
 import guardian.cards.InStasisCard;
+import guardian.cards.ChargeUp;
 import guardian.relics.StasisUpgradeRelic;
 import guardian.vfx.AddCardToStasisEffect;
 
@@ -26,13 +28,9 @@ public class StasisOrb extends AbstractOrb {
     private static final OrbStrings orbString;
     public static final String ID = GuardianMod.makeID("StasisOrb");
 
-    static {
-        orbString = CardCrawlGame.languagePack.getOrbString(ID);
-        DESC = orbString.DESCRIPTION;
-    }
-
     public AbstractCard stasisCard;
     private AbstractGameEffect stasisStartEffect;
+    public boolean cardExhausted = false; // Becomes true when single gem in stasis is exhausted by Gem Cannon, so that the orb is instantly set anew.
 
     public StasisOrb(AbstractCard card) {
         this(card, null);
@@ -44,6 +42,9 @@ public class StasisOrb extends AbstractOrb {
 
     public StasisOrb(AbstractCard card, CardGroup source, boolean selfStasis) {
         this.stasisCard = card;
+        if(this.stasisCard instanceof AbstractGuardianCard){
+            ((AbstractGuardianCard) this.stasisCard).belongedOrb=this;
+        }
         GuardianMod.logger.info("New Stasis Orb made");
         this.stasisCard.beginGlowing();
         this.name = orbString.NAME + stasisCard.name;
@@ -63,17 +64,13 @@ public class StasisOrb extends AbstractOrb {
             this.basePassiveAmount = this.passiveAmount = 1;
         }
 
-//        if(card.cost == -1 && AbstractDungeon.player != null){
-//            this.basePassiveAmount = this.passiveAmount = AbstractDungeon.player.energy.energy + 1;
-//        }
-
         this.baseEvokeAmount = this.basePassiveAmount;
         this.evokeAmount = this.passiveAmount;
         card.targetAngle = 0F;
 
         if (AbstractDungeon.player != null) {
             if (AbstractDungeon.player.hasRelic(StasisUpgradeRelic.ID)) {
-                card.upgrade();
+                AbstractDungeon.actionManager.addToBottom(new UpgradeSpecificCardAction(card));
             }
         }
         this.stasisCard.tags.add(GuardianMod.STASISGLOW);
@@ -81,9 +78,8 @@ public class StasisOrb extends AbstractOrb {
 
         initialize(source, selfStasis);
 
-        if(stasisCard instanceof AbstractGuardianCard) {
-            AbstractGuardianCard agc = (AbstractGuardianCard) stasisCard;
-            agc.whenEnteredStasis(this);
+        if(stasisCard instanceof InStasisCard) {
+            ((InStasisCard) stasisCard).whenEnteredStasis(this);
         }
     }
 
@@ -135,6 +131,7 @@ public class StasisOrb extends AbstractOrb {
     }
 
     public void onEvoke() {
+        if(cardExhausted){return;}
         if (this.stasisCard instanceof InStasisCard) {
             ((InStasisCard) this.stasisCard).onEvoke(this);
         }
@@ -156,7 +153,6 @@ public class StasisOrb extends AbstractOrb {
             this.stasisCard.superFlash(Color.GOLDENROD);
 
         }
-        //GuardianMod.updateStasisCount();
     }
 
     public void triggerEvokeAnimation() {
@@ -244,5 +240,10 @@ public class StasisOrb extends AbstractOrb {
         so.passiveAmount = so.basePassiveAmount = this.passiveAmount;
         so.evokeAmount = so.baseEvokeAmount = this.evokeAmount;
         return so;
+    }
+
+    static {
+        orbString = CardCrawlGame.languagePack.getOrbString(ID);
+        DESC = orbString.DESCRIPTION;
     }
 }

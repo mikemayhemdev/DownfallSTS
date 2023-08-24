@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.orbs.ShieldGremlin;
 
@@ -34,6 +35,7 @@ public class GlitterGuard extends AbstractGremlinCard {
         this.cardsToPreview = new Ward();
         this.tags.add(SHIELD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "GlitterGuard.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

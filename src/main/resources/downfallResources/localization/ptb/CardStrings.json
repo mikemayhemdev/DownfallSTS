@@ -1,0 +1,34 @@
+{
+  "downfall:Aged": {
+    "NAME": "Aged",
+    "DESCRIPTION": "Injogável. Etéreo. NL No final do seu turno, adicione um *Vazio ao topo do seu baralho de compra."
+  },
+  "downfall:Bewildered": {
+    "NAME": "Bewildered",
+    "DESCRIPTION": "Quando você joga outra carta, misture sua mão com sneckomod:Muddle, então descarte esta carta. NL Exaurir."
+  },
+  "downfall:Icky": {
+    "NAME": "Icky",
+    "DESCRIPTION": "Ganhe um *Viscoso. NL Exaurir."
+  },
+  "downfall:Haunted": {
+    "NAME": "Haunted",
+    "DESCRIPTION": "Etéreo. Injogável. NL Quando desenhado, adicione Etéreo a todas as cartas em sua mão."
+  },
+  "downfall:Malfunctioning": {
+    "NAME": "Flawed",
+    "DESCRIPTION": "No final do seu turno, transforme todas as cartas na mão em cartas de Estado aleatórias. NL Exaurir."
+  },
+  "downfall:Scatterbrained": {
+    "NAME": "Scatterbrained",
+    "DESCRIPTION": "Injogável. NL Quando desenhado, se for o seu turno, preencha sua mão com gremlin:Echoes desta carta."
+  },
+  "downfall:SummonMushrooms": {
+    "NAME": "Fungus Among Us",
+    "DESCRIPTION": "Matar todos os cogumelos. Cure HP igual ao seu HP restante. NL Invocar dois cogumelos."
+  },
+  "downfall:BossMaintenance": {
+    "NAME": "Maintenance",
+    "DESCRIPTION": "*Golpes causam !M! mais de dano neste combate. NL Ganhe !B! Destreza. NL Isto custa 1 a mais neste combate."
+  }
+}

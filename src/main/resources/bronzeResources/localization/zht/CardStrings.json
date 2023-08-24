@@ -261,7 +261,7 @@
   },
   "bronze:GetLatest": {
     "NAME": "最新素材",
-    "DESCRIPTION": "獲得一張 bronze:編碼 牌。 NL 其耗能為0。 NL 消耗 。"
+    "DESCRIPTION": "獲得一張 bronze:編碼 牌， NL 其耗能為0。 NL 消耗 。"
   },
   "bronze:Flail": {
     "NAME": "亂鬥",

@@ -1,6 +1,6 @@
 {
   "bronze:DazingPulse": {
-    "NAME": "晕眩反冲",
+    "NAME": "晕眩脉冲",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 ： bronze:插入 !M! 张 *晕眩 。",
     "EXTENDED_DESCRIPTION": [
       "晕眩",
@@ -202,7 +202,7 @@
     "DESCRIPTION": "给予 !M! 层 虚弱 。",
     "EXTENDED_DESCRIPTION": [
       "旧版",
-      "羞辱"
+      "虚弱"
     ]
   },
   "bronze:Invalidate": {
@@ -261,10 +261,10 @@
   },
   "bronze:GetLatest": {
     "NAME": "最新素材",
-    "DESCRIPTION": "获得一张 bronze:编码 牌。 NL 其首次耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "获得一张 bronze:编码 牌， NL 其首次耗能为0。 NL 消耗 。"
   },
   "bronze:Flail": {
-    "NAME": "乱斗",
+    "NAME": "乱击",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !bauto! 次。 NL 获得 !M! 层 人工制品 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "狂乱",
@@ -318,8 +318,8 @@
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 下张 bronze:编码 牌 bronze:编码 两次。"
   },
   "bronze:FollowUp": {
-    "NAME": "数据追踪",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若上张打出牌为 bronze:方法 ，再打出一次。"
+    "NAME": "数迹追踪",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若上张打出牌为 bronze:方法 ，本牌再打出一次。"
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
@@ -488,8 +488,8 @@
   },
   "bronze:Verify": {
     "NAME": "感知形态",
-    "DESCRIPTION": "虚无 。 NL 抽到 bronze:方法 时， NL 提高其数值1点。",
-    "UPGRADE_DESCRIPTION": "抽到 bronze:方法 时， NL 提高其数值1点。"
+    "DESCRIPTION": "虚无 。 NL 抽到 bronze:方法 时， NL 其各项数值加1。",
+    "UPGRADE_DESCRIPTION": "抽到 bronze:方法 时， NL 其各项数值加1。"
   },
   "bronze:BronzeHeatsink": {
     "NAME": "铜制散热器",
@@ -497,7 +497,7 @@
     "UPGRADE_DESCRIPTION": "打出 bronze:方法 时，抽2张牌。"
   },
   "bronze:HardenedForm": {
-    "NAME": "圆球召唤",
+    "NAME": "铜球召唤",
     "DESCRIPTION": " bronze:编译 或打出 bronze:方法 时： NL 获得 !M! 点 格挡 。 NL 随机造成 !M! 点伤害。"
   },
   "bronze:LegacyCode": {
@@ -507,11 +507,11 @@
   },
   "bronze:Repulsor": {
     "NAME": "反冲器",
-    "DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时， 消耗 其并抽一张牌。",
+    "DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时，将其 消耗 并抽一张牌。",
     "UPGRADE_DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时， 消耗 其并抽一张牌。"
   },
   "bronze:Debug": {
-    "NAME": "调试",
+    "NAME": "错误调试",
     "DESCRIPTION": "移除 bronze:编码 中牌的 bronze:编译 *错误 。 NL 消耗 。"
   },
   "bronze:HyperBeam": {
@@ -559,12 +559,12 @@
   },
   "bronze:Ignite": {
     "NAME": "魂灼",
-    "DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时， NL 受到2点伤害。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时， NL 受到4点伤害。"
+    "DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时若在手， NL 受到2点伤害。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时若在手， NL 受到4点伤害。"
   },
   "bronze:IntoTheVoid": {
     "NAME": "遁入虚空",
-    "DESCRIPTION": "虚无 。 NL 本回合敌人失去 !M! 力量 。 NL 抽到这张牌时，失去 [E] 。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 本回合目标失去 !M! 点 力量 。 NL 抽到时失去 [E] 。 NL 消耗 。"
   },
   "bronze:Lubricant": {
     "NAME": "润滑剂",
@@ -575,7 +575,7 @@
     "DESCRIPTION": "给予 !M! 层 易伤 。"
   },
   "bronze:Daze": {
-    "NAME": "晕眩",
+    "NAME": "昏迷",
     "DESCRIPTION": "虚无 。 NL 给予 !M! 层 虚弱 。 NL 消耗 。"
   },
   "bronze:UnknownStatus": {
@@ -598,8 +598,8 @@
   },
   "bronze:BugBarrage": {
     "NAME": "错误齐射",
-    "DESCRIPTION": "获得1张 *伤口 。 NL bronze:循环 手中 状态牌 。 NL 每张造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 张 *伤口 。 NL bronze:循环 手中 状态牌 。 NL 每张造成 !D! 点伤害。",
+    "DESCRIPTION": "获得1张 *伤口 。 NL bronze:循环 手中 状态牌 ， NL 每张造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 张 *伤口 。 NL bronze:循环 手中 状态牌 ， NL 每张造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次）"

@@ -8,6 +8,7 @@ import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 
 public class SlimeSlapEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private static final int W = 64;
@@ -24,7 +25,7 @@ public class SlimeSlapEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
         this.x = x;
         this.y = y;
 
-        this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/vfx/slap.png");
+        this.img = TextureLoader.getTexture("slimeboundResources/SlimeboundImages/vfx/slap.png");
 
         this.frame = 0;
         this.scale = 1F;

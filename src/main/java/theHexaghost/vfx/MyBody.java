@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.vfx.BobEffect;
+import downfall.util.TextureLoader;
 
 public class MyBody implements Disposable {
     public static final String ID = "MyBody";
@@ -34,10 +35,10 @@ public class MyBody implements Disposable {
     public float YOffset;
 
     public MyBody() {
-        this.plasma1 = ImageMaster.loadImage("images/monsters/theBottom/boss/ghost/plasma1.png");// 36
-        this.plasma2 = ImageMaster.loadImage("images/monsters/theBottom/boss/ghost/plasma2.png");// 37
-        this.plasma3 = ImageMaster.loadImage("images/monsters/theBottom/boss/ghost/plasma3.png");// 38
-        this.shadow = ImageMaster.loadImage("images/monsters/theBottom/boss/ghost/shadow.png");// 39
+        this.plasma1 = TextureLoader.getTexture("images/monsters/theBottom/boss/ghost/plasma1.png");// 36
+        this.plasma2 = TextureLoader.getTexture("images/monsters/theBottom/boss/ghost/plasma2.png");// 37
+        this.plasma3 = TextureLoader.getTexture("images/monsters/theBottom/boss/ghost/plasma3.png");// 38
+        this.shadow = TextureLoader.getTexture("images/monsters/theBottom/boss/ghost/shadow.png");// 39
     }// 40
 
     public void update() {

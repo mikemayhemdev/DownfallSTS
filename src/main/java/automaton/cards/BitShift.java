@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import basemod.BaseMod;
 import basemod.helpers.CardModifierManager;
@@ -8,22 +9,21 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.cardmods.RetainCardMod;
-import sneckomod.SneckoMod;
+import expansioncontent.cardmods.PropertiesMod;
+import expansioncontent.cardmods.RetainCardMod;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 import java.util.ArrayList;
 
 public class BitShift extends AbstractBronzeCard {
-
     public final static String ID = makeID("BitShift");
-
-    //stupid intellij stuff skill, self, common
 
     public BitShift() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = 1;
-     //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("BitShift.png"));
     }
 
     @Override
@@ -54,7 +54,7 @@ public class BitShift extends AbstractBronzeCard {
                 public void update() {
                     isDone = true;
                     q.superFlash();
-                    CardModifierManager.addModifier(q, new RetainCardMod());
+                    CardModifierManager.addModifier(q, new PropertiesMod(PropertiesMod.supportedProperties.RETAIN, false));
                 }
             });
             att(new AbstractGameAction() {

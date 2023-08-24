@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import downfall.util.CardIgnore;
-import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
+import expansioncontent.cards.AbstractExpansionCard;
 
 @CardIgnore
 public class DecasProtection extends AbstractExpansionCard {

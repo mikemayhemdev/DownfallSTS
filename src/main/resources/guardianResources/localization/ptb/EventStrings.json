@@ -1,0 +1,127 @@
+{
+  "Guardian:GemMine": {
+    "NAME": "Mina de Gemas",
+    "DESCRIPTIONS": [
+      "Você entra em um antigo poço de mineração. Nas fendas rochosas, você pode ver várias gemas brilhantes. #gEsmeraldas, #rrubis, #ytopazes e outras. Um grupo de anões escavadores próximos tem ferramentas de mineração que podem ser úteis, mas as gemas estão tão perto da superfície que, com determinação, você pode arrancá-las com as mãos.",
+      "Cavando na parede rochosa, você consegue arrancar uma gema do seu lugar de descanso. Dói um pouco, mas as gemas valem a dor.",
+      "Embora a perspectiva de tesouro seja atraente, você opta por salvar sua armadura para empreendimentos mais importantes.",
+      "Tendo conquistado com sucesso a velha mina, você parte com um sentimento de realização. E alguns membros de bronze doloridos.",
+      "Você pega a picareta de mineração no acampamento dos anões, que parece estar em más condições. Você pode usá-la aqui para obter algumas gemas, ou guardá-la para usar mais tarde em sua escalada.",
+      "Usando a picareta de mineração, você martela a parede e esculpe uma gema. A picareta sofre um pouco de desgaste no processo, mas é melhor danificá-la do que as suas garras."
+    ],
+    "OPTIONS": [
+      "[Cavar com Garras] #gGanhar #gGema #gAleatória. #rPerder #r",
+	  " #rHP.",
+      "[Sair]",
+      "[Roubar] #rLutar contra os Anões. #gGanhar #gPicareta #gde #gRhapsody.",
+      "[Minerar com Picareta] #gGanhar #gGema #gAleatória. #rPerder #rCarga #rda #rPicareta.",
+      "[Trancado] Picareta #rQuebrada."
+    ]
+  },
+  "Guardian:StasisEgg": {
+    "NAME": "Câmara Quântica",
+    "DESCRIPTIONS": [
+      "Você se depara com uma caixa, cuja tampa é gravada com estranhos símbolos rúnicos. Olhando para dentro, você nota um dispositivo em forma de ovo estranho, que emite um zumbido suave. Você não sabe o que é ou para que serve, mas a energia que emana dele faz você pensar que deve ser poderoso.",
+      "Você decide que algo tão poderoso deve ser usado. Você guarda o ovo e segue em frente, mas à medida que os símbolos brilham, você gradualmente sente o tempo escorrendo, fazendo você ficar mais devagar...",
+      "Você decide que algo tão poderoso não deve ser deixado para qualquer aventureiro usar e decide destruí-lo. Uma luz quente o revigora à medida que o ovo brilha antes de explodir violentamente, os cacos cortando dolorosamente o seu corpo.",
+      "Você decide que algo tão poderoso provavelmente está aqui por uma boa razão. Embora seu instinto diga que você deve fazer algo com um objeto tão poderoso, você raciocina que quem o deixou aqui fez isso com um propósito. Você fecha a tampa e segue em frente."
+    ],
+    "OPTIONS": [
+      "[Usar] #gGanhe a #gCâmara #gQuântica. #rTorne-se #rAmaldiçoado #- #rEnvelhecido",
+      "[Destruir] #gGanhe #g",
+	  " #gMáximo #gHP. #rTorne-se #rAmaldiçoado #- #rDor",
+      "[Deixar]"
+    ]
+  },
+  "Guardian:AccursedBlacksmith": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Você decide colocar a forja em uso e... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...fazer espaço em seu arsenal para novas gemas."
+    ],
+    "OPTIONS": [
+      "[Mexer] #gAdicione #gum #gsoquete #ga #gqualquer #gcarta #gsoquetada.",
+      "Adicione um soquete a uma carta.",
+      "[Trancado] Requer uma carta com soquetes."
+    ]
+  },
+  "Guardian:GuardianTalk": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "SUBSTITUIÇÃO - RETORNAR À ASSEMBLEIA.",
+      "ANOMALIA DETECTADA.",
+      "MODELO DE GUARDIÃO COM DEFEITO.",
+      "ANULAR O PROTOCOLO ALPHA.",
+      "GUARDIÃO: RETORNAR AO POSTO.",
+      "FALHA DE PROTOCOLO COMPLETO DETECTADA.",
+      "TERMINAR O GUARDIÃO IMEDIATAMENTE.",
+      "NOVO PROTOCOLO: DESTRUIR.",
+      "CESSAR E RETORNAR AO EXORDIUM."
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "Guardian:CrystalForge": {
+    "NAME": "Forja Sombria",
+    "DESCRIPTIONS": [
+      "Através de passagens secretas conhecidas apenas pelos Construtos da Torre, você entra em uma câmara projetada para manutenção e reparos em modelos de Autômato. As ferramentas disponíveis aqui serão úteis para você, mesmo que não tenham sido destinadas aos Guardiões.",
+      "Usando a bigorna encantada, você destrói uma peça desnecessária em pedaços, tudo para recuperar as gemas preciosas que você colocou nela anteriormente.",
+      "Com as pinças mágicas, você cuidadosamente abre uma tomada e remove as gemas dentro dela, abrindo espaço para melhores instalações posteriormente, ao custo de tornar as gemas completamente inutilizáveis.",
+      "A habilidade da Forja de transmutar matéria é imediatamente colocada em uso quando você joga uma peça de equipamento desnecessária. Alguns momentos depois, o material se dissolve e se comprime em uma bela gema.",
+      "Você escapa pela mesma passagem secreta pela qual entrou, deixando a Forja Sombria para trás. Sua jornada continua em direção à Aurora que o aguarda no topo da Torre.",
+      "Selecione um Cartão para Desmontar.",
+      "Selecione um Cartão para Abrir.",
+      "Selecione um Cartão para Transmutar.",
+      "Selecione uma Gema.",
+      "Selecione um Cartão para receber Gema.",
+      "Aproveitando essa pausa na subida, você coloca uma pedra preciosa em seu equipamento, sentindo instantaneamente seu poder crescer."
+    ],
+    "OPTIONS": [
+      "[Desmontar] #rRemova o Cartão Encaixado. Ganhe suas #gGemas.",
+      "[Bloqueado] Requer um Cartão Encaixado com uma Gema instalada.",
+      "[Abrir] #rDestrua todas as #gGemas em um Cartão Encaixado.",
+      "[Transmutar] #rRemova um Cartão. Ganhe uma #gGema aleatória.",
+      "[Bloqueado] Já utilizado.",
+      "[Sair]",
+      "[Aprimorar] Adicione uma #gGema a um #gEncaixe.",
+      "[Bloqueado] Requer uma Gema e um Encaixe vago."
+    ]
+  },
+  "Guardian:Purifier": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Com um golpe rápido e certeiro, você destroça o Santuário em pedaços para descobrir os tesouros dentro dele. Dentro dos destroços, você encontra duas gemas perfeitas e utilizáveis, aguardando pacientemente para serem incorporadas em suas armas. NL NL Você deixa os restos do Santuário para trás e continua a subida."
+    ],
+    "OPTIONS": [
+      "[Quebrar] #gObter #g2 #gGemas #gAleatórias."
+    ]
+  },
+  "Guardian:Transmorgrifier": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      ""
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "Guardian:UpgradeShrine": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      ""
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "Guardian:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Se você é um prego, suporte o impacto; se você é um martelo, golpeie."
+    ],
+    "OPTIONS": [
+      "[Resistência] #gAdicionar #g2 #gApoios a todos os #gGolpes e #gDefesas.",
+      "[Bloqueado] Requer um Golpe ou Defesa."
+    ]
+  }
+}

@@ -1,8 +1,11 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Shield extends AbstractBronzeCard {
 
@@ -17,6 +20,7 @@ public class Shield extends AbstractBronzeCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         cardsToPreview = new Slimed();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Shield.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

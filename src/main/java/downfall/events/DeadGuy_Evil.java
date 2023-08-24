@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
+import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -67,7 +68,7 @@ public class DeadGuy_Evil extends AbstractEvent {
         }
 
         this.enemy = AbstractDungeon.miscRng.random(0, 2);
-        this.adventurerImg = ImageMaster.loadImage("images/npcs/nopants.png");
+        this.adventurerImg = TextureLoader.getTexture("images/npcs/nopants.png");
         this.body = DESCRIPTIONS[2];
         switch (this.enemy) {
             case 0:

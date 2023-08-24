@@ -23,7 +23,7 @@ public class Gem_Blue extends AbstractGemCard {
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemBlue.png";
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
@@ -56,7 +56,7 @@ public class Gem_Blue extends AbstractGemCard {
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
-        brace(3);
+        brace(4);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

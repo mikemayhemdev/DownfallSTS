@@ -28,7 +28,7 @@ public class BustKeyOption extends AbstractCampfireOption {
     private boolean used;
     private boolean hacked;
     private float hackTime = 0F;
-    private int soulToCost = 100;
+    private int soulToCost = 50;
 
     public BustKeyOption() {
         this(Keys.RUBY);

@@ -217,7 +217,7 @@ public class GremlinCharacter extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 10; //2 per gremlin
+        return 5; //1 per gremlin
     }
 
     @Override

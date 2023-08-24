@@ -14,8 +14,8 @@
   },
   "champ:Execute": {
     "NAME": "處決",
-    "DESCRIPTION": "造成 !D! 點傷害 !cool! 次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害 !cool! 次。"
+    "DESCRIPTION": "造成 !D! 點傷害兩次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害兩次。"
   },
   "champ:StanceDance": {
     "NAME": "姿態之舞",
@@ -27,13 +27,13 @@
     ]
   },
   "champ:SwordSigil": {
-    "NAME": "劍紋",
+    "NAME": "勝利旌旗",
     "DESCRIPTION": "獲得 champ:技術 獎勵 !M! 次。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "獲得 champ:技術 獎勵 !M! 次。 NL 消耗 。"
   },
   "champ:FaceSlap": {
     "NAME": "打臉",
-    "DESCRIPTION": "造成 !D! 點傷害， NL 兩次若目標已被 易傷 。 NL champ:戰狂 champ:連段 ： NL 給予 !M! 層 易傷 。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL champ:戰狂 champ:連段 ：給予 !M! 層 易傷 。"
   },
   "champ:FlashCut": {
     "NAME": "拔刀打擊",
@@ -53,11 +53,11 @@
   },
   "champ:FocusedBerserking": {
     "NAME": "全力以赴",
-    "DESCRIPTION": "消耗 。 NL 連續觸發 !M! 次且不退出 姿態 。"
+    "DESCRIPTION": "消耗 。 NL 連續觸發 !M! 次， NL 且不退出 姿態 。"
   },
   "champ:SetATrap": {
     "NAME": "布置陷阱",
-    "DESCRIPTION": "獲得 !B! 點 格擋 ，兩次若有敵人已被 虛弱 。 NL champ:防守 champ:連段 ： NL 給予所有敵人 !M! 層 虛弱 。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL champ:防守 champ:連段 ：給予所有敵人 !M! 層 虛弱 。"
   },
   "champ:Backstep": {
     "NAME": "後撤",
@@ -85,16 +85,15 @@
   },
   "champ:Devastate": {
     "NAME": "壞滅",
-    "DESCRIPTION": "造成 !D! 點傷害三次。 NL 每用過一張 champ:終結技 ， NL 耗能減少 [E] 。"
+    "DESCRIPTION": "造成 !D! 點傷害三次。 NL 每用過一張 champ:終結技 ， NL 本場戰鬥耗能減1。"
   },
   "champ:Circumvent": {
     "NAME": "規避",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL *任意 champ:連段 ：抽 !M! 張牌。",
-    "UPGRADE_DESCRIPTION": "棄用"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 抽 !M! 張牌， NL 丟棄 !M! 張牌。"
   },
   "champ:SkillfulDodge": {
     "NAME": "精巧閃避",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 獲得 !M! 層 champ:反擊 。 NL champ:防守 champ:連段 ：本牌 格擋 與 champ:反擊 獲得增加 !cool! 點。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 獲得 !M! 層 champ:反擊 。 NL champ:防守 champ:連段 ： NL 本場戰鬥各加 !cool! 。"
   },
   "champ:TornadoPunch": {
     "NAME": "颶風拳",
@@ -111,36 +110,35 @@
     "UPGRADE_DESCRIPTION": "保留 。 NL 抽 !M! 張牌。"
   },
   "champ:EnchantShield": {
-    "NAME": "整備裝甲",
-    "DESCRIPTION": "選擇一張手牌。 NL 其 格擋 增加 !M! 點。 NL 消耗 。",
+    "NAME": "附魔堅盾",
+    "DESCRIPTION": "選擇一張手牌， NL 其 格擋 增加 !M! 點。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我沒有能夠強化的牌"
     ]
   },
   "champ:BringItOn": {
-    "NAME": "後發",
-    "DESCRIPTION": "獲得 !B! 點格擋。 NL 獲得 !M! 層 champ:反擊 。",
+    "NAME": "披堅",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 獲得 !M! 層 champ:反擊 。",
     "EXTENDED_DESCRIPTION": [
       "我不處於那個姿態。"
     ]
   },
   "champ:ShieldThrow": {
-    "NAME": "爆甲",
+    "NAME": "護盾猛擲",
     "DESCRIPTION": "造成你當前 格擋 值點傷害兩次。 NL 獲得2層 脆弱 。 NL champ:防守 champ:連段 ： NL 不獲得 脆弱 。",
     "EXTENDED_DESCRIPTION": ["造成你當前 格擋 值(!D!)點傷害兩次。 NL 獲得2層 脆弱 。 NL champ:防守 champ:連段 ： NL 不獲得 脆弱 。"]
   },
   "champ:FalseCounter": {
     "NAME": "以逸待勞",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 下回合獲得 [E] 並抽兩張牌。",
-    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 。 NL 下回合獲得 [E] [E] 並抽兩張牌。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 下回合， NL 獲得 [E] 並抽兩張牌。",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 。 NL 下回合， NL 獲得 [E] [E] 並抽兩張牌。"
   },
   "champ:IronFortress": {
     "NAME": "戰鬥躍舞",
-    "DESCRIPTION": "進入不同 姿態 時，獲得其 champ:技術 獎勵兩次。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 進入不同 姿態 時，獲得其 champ:技術 獎勵兩次。"
+    "DESCRIPTION": "進入不同 姿態 時， NL 獲得 !M! 點 格擋 。"
   },
   "champ:Lariat": {
-    "NAME": "強身健體",
+    "NAME": "身強體健",
     "DESCRIPTION": "獲得 !B! 點 格擋 X次。"
   },
   "champ:HoldFirm": {
@@ -157,7 +155,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "毒舌",
-    "DESCRIPTION": "目標獲得1點 力量 。 NL 獲得 !M! 層 活力 。",
+    "DESCRIPTION": "獲得 !M! 層 活力 。 NL 給予 !DM! 層 虛弱 。",
     "EXTENDED_DESCRIPTION": [
       " champ:戰狂 champ:連段 ：獲得 !M! 點 guardianmod:臨時 力量 。 NL ",
       " champ:防守 champ:連段 ：獲得 !M! 點 guardianmod:臨時 敏捷 。"
@@ -173,11 +171,11 @@
   },
   "champ:RapidStrikes": {
     "NAME": "連續打擊",
-    "DESCRIPTION": "造成 !D! 點傷害 !M! 次。 NL 手中隨機一張 *打擊 牌本回合下次耗能為0。"
+    "DESCRIPTION": "造成 !D! 點傷害 !M! 次。 NL 隨機一張 *打擊 手牌 NL 本回合下次耗能變為0。"
   },
   "champ:EnchantSword": {
-    "NAME": "劍拔弩張",
-    "DESCRIPTION": "選擇一張手牌。 NL 其傷害增加 !M! 點。 NL 消耗 。",
+    "NAME": "附魔利劍",
+    "DESCRIPTION": "選擇一張手牌， NL 其傷害增加 !M! 點。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我不必強化"
     ]
@@ -187,18 +185,18 @@
     "DESCRIPTION": "造成 !D! 點傷害。 NL 本回合下張 *打擊 牌將打出兩次。"
   },
   "champ:SwordThrow": {
-    "NAME": "投擲劍刃",
+    "NAME": "劍刃猛擲",
     "DESCRIPTION": "造成 !D! 點傷害 !M! 次。 NL 獲得2層 虛弱 。 NL champ:戰狂 champ:連段 ： NL 不獲得 虛弱 。"
     
   },
   "champ:MurderStrike": {
     "NAME": "劊子打擊",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 點傷害。 NL 打出 *技能 牌時， NL 傷害增加 !M! 點。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 點傷害。 NL 打出 *技能 牌時， NL 本場戰鬥傷害加 !M! 。"
   },
   "champ:HeavySlash": {
     "NAME": "大師斬擊",
-    "DESCRIPTION": " 造成 !D! 點傷害。 NL 隨機獲得1張 *技能 牌。 NL 其耗能為0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 隨機獲得1張 *技能 牌+ NL 其耗能為0。"
+    "DESCRIPTION": " 造成 !D! 點傷害。 NL 隨機獲得 *技能 牌， NL 其耗能為0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 隨機獲得 *技能 牌+， NL 其耗能為0。"
   },
   "champ:CheapShot": {
     "NAME": "偷襲",
@@ -211,10 +209,10 @@
   "champ:Shatter": {
     "NAME": "粉碎",
     "DESCRIPTION": "移除目標的 格擋 。 NL 造成 !D! 點傷害。",
-    "UPGRADE_DESCRIPTION": "移除目標的 格擋 與 人工製品 。 NL 造成 !D! 點傷害。"
+    "UPGRADE_DESCRIPTION": "移除目標的 格擋 與 人工制品 。 NL 造成 !D! 點傷害。"
   },
   "champ:EnragedBash": {
-    "NAME": "怒斬",
+    "NAME": "怒錘",
     "DESCRIPTION": "造成 !D! 點傷害 !M! 次。 NL champ:戰狂 champ:連段 ： NL 本場戰鬥次數加1。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 點傷害 !M! 次。 NL champ:戰狂 champ:連段 ：攻擊次數加1。"
@@ -266,7 +264,7 @@
     "UPGRADE_DESCRIPTION": "保留 。 NL 下回合開始前你的生命將不會減少。 NL 消耗 。"
   },
   "champ:DeathBlow": {
-    "NAME": "絕地反擊",
+    "NAME": "致命一擊",
     "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 NL 獲得 !M! 層 活力 。 NL 消耗 。"
   },
   "champ:ArenaPreparation": {
@@ -279,8 +277,7 @@
   },
   "champ:SteelEdge": {
     "NAME": "劍鋒",
-    "DESCRIPTION": "champ:戰狂 champ:連段 ： NL 造成 !D! 點傷害X次。 NL champ:防守 champ:連段 ： NL 獲得 !B! 點 格擋 X次。",
-    "UPGRADE_DESCRIPTION": "champ:戰狂 champ:連段 ： NL 造成 !D! 點傷害X+1次。 NL champ:防守 champ:連段 ： NL 獲得 !B! 點 格擋 X+1次。",
+    "DESCRIPTION": "造成 !D! 點傷害X次。",
     "EXTENDED_DESCRIPTION": [
       " champ:戰狂 champ:連段 ：造成 !D! 點傷害X次。 NL ",
       " champ:防守 champ:連段 ：獲得 !B! 點 格擋 X次。",
@@ -291,10 +288,10 @@
   },
   "champ:Improvising": {
     "NAME": "觸類旁通",
-    "DESCRIPTION": "每回合首次打出 champ:連段 牌時，將其返回手牌。 NL 其下次耗能為0。"
+    "DESCRIPTION": "回合開始時若未處於 姿態 ，隨機進入一種。"
   },
   "champ:CalledShot": {
-    "NAME": "宣告",
+    "NAME": "暢飲",
     "DESCRIPTION": " champ:戰狂 champ:連段 ： NL 獲得 [E] [E] 並 消耗 。 NL champ:防守 champ:連段 ： NL 抽 !M! 張牌。",
     "UPGRADE_DESCRIPTION": "champ:戰狂 champ:連段 ： NL 獲得 [E] [E] [E] 並 消耗 。 NL champ:防守 champ:連段 ： NL 抽 !M! 張牌。",
     "EXTENDED_DESCRIPTION": [
@@ -310,7 +307,7 @@
   },
   "champ:GladiatorForm": {
     "NAME": "角鬥形態",
-    "DESCRIPTION": "回合開始時，上回合每使用過3層 活力 ，獲得 !M! 層 。 champ:反擊 亦然。"
+    "DESCRIPTION": "回合開始時， NL 返還上回合所耗 !M! /3層 活力 與 champ:反擊 。"
   },
   "champ:Duel": {
     "NAME": "挑戰",
@@ -319,12 +316,12 @@
   },
   "champ:DancingMaster": {
     "NAME": "戰技大師",
-    "DESCRIPTION": "每回合首次打出 champ:終結技 時，獲得 [E] 並抽一張牌。"
+    "DESCRIPTION": "每回合首次 champ:終結技 時， NL 獲得 [E] 並抽一張牌。"
   },
   "champ:StrikeOfGenius": {
     "NAME": "打擊天才",
-    "DESCRIPTION": "回合開始時，隨機獲得一張 消耗 *打擊 牌。 NL 其首次耗能為0。",
-    "UPGRADE_DESCRIPTION": "回合開始時，隨機獲得一張 消耗 *打擊 牌+。 NL 其首次耗能為0。"
+    "DESCRIPTION": "回合開始時， NL 隨機獲得 消耗 *打擊 牌。 NL 其首次耗能為0。",
+    "UPGRADE_DESCRIPTION": "回合開始時， NL 隨機獲得 消耗 *打擊 牌+。 NL 其首次耗能為0。"
   },
   "champ:DefensiveStyle": {
     "NAME": "防守戰法",
@@ -333,7 +330,7 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "利落",
-    "DESCRIPTION": "獲得 !M! 點 力量 。 NL 所有敵人獲得1點 力量 。"
+    "DESCRIPTION": "獲得 !M! 點 力量 。 NL 獲得 !M! 點 敏捷 。"
   },
   "champ:BerserkerStyle": {
     "NAME": "狂暴戰法",
@@ -360,11 +357,11 @@
   "champ:Parry": {
     "NAME": "招架",
     "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 獲得 !M! 層 champ:反擊 。 NL 若本回合觸發 champ:反擊 ， NL 獲得 *彈反 。",
-    "UPGRADE_DESCRIPTION": "造成 champ:反擊 使用層數點傷害。 NL 消耗 。."
+    "UPGRADE_DESCRIPTION": "虛無 。 NL 造成 champ:反擊 觸發時層數點傷害。 NL 消耗 。"
   },
   "champ:EnchantCrown": {
     "NAME": "附魔金冠",
-    "DESCRIPTION": "選擇一張手牌。 NL 其耗能變為0。 NL 消耗 。",
+    "DESCRIPTION": "選擇一張手牌， NL 其耗能變為0。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我沒有能強化的牌"
     ]
@@ -387,8 +384,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "三重打擊",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 獲得兩張可觸發 champ:技術 的 *打擊 。其耗能為0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 獲得兩張可觸發 champ:技術 的 *打擊+ 。其耗能為0。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 獲得兩張 champ:技術 *打擊 ， NL 其耗能為0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 獲得兩張 champ:技術 *打擊+ ， NL 其耗能為0。 NL 消耗 。"
   },
   "champ:WindUp": {
     "NAME": "挑釁",

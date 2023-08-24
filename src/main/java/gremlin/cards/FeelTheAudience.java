@@ -40,6 +40,7 @@ public class FeelTheAudience extends AbstractGremlinCard {
         this.isMultiDamage = true;
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "FeelTheAudience.png");
     }
 
     @Override

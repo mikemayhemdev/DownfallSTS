@@ -275,7 +275,7 @@
     ]
   },
   "downfall:PleadingVagrant": {
-      "NAME": "事件: 浪漢的懇求",
+      "NAME": "事件: 流浪漢的懇求",
     "FLAVOR": "能給我點兒什麽嗎，朋友？ 求求你了……一點 #y小錢 就好？",
     "DESCRIPTIONS": [
       "Boss搶劫了流浪漢，被 #p詛咒-羞恥 並 "
@@ -448,21 +448,21 @@
     "NAME": "紅寶石心臟的祝福",
     "FLAVOR": "腐化之心很強大。它很欣慰。",
     "DESCRIPTIONS": [
-      "每場戰鬥開始時獲得 #b1 點 #y力量 。"
+      "首領戰鬥開始時，獲得 #b1 點 #y力量 。"
     ]
   },
   "downfall:HeartBlessingBlue": {
     "NAME": "藍寶石心臟的祝福",
     "FLAVOR": "心臟很欣慰。",
     "DESCRIPTIONS": [
-      "拾起時，獲得 #b10 點最大生命值。"
+      "首領戰鬥開始時，獲得 #b10 層 #y臨時生命 。"
     ]
   },
   "downfall:HeartBlessingGreen": {
     "NAME": "綠寶石心臟的祝福",
     "FLAVOR": "心臟就是一切。",
     "DESCRIPTIONS": [
-      "每場戰鬥開始時獲得 #b1 點 #y敏捷 。"
+      "首領戰鬥開始時，獲得 #b1 點 #y敏捷 。"
     ]
   },
   "downfall:TeleportStone": {

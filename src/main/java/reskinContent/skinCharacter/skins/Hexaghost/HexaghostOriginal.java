@@ -2,6 +2,7 @@ package reskinContent.skinCharacter.skins.Hexaghost;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 import reskinContent.skinCharacter.AbstractSkin;
 import theHexaghost.TheHexaghost;
 
@@ -10,7 +11,7 @@ public class HexaghostOriginal extends AbstractSkin {
     public HexaghostOriginal() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkin").TEXT[1];
         this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(TheHexaghost.ID).TEXT[0];
-        this.portraitStatic_IMG = ImageMaster.loadImage("hexamodResources/images/charSelect/charBG.png");
+        this.portraitStatic_IMG = TextureLoader.getTexture("hexamodResources/images/charSelect/charBG.png");
 
         this.SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";;
         this.SHOULDER2 = "hexamodResources/images/char/mainChar/shoulderR.png";

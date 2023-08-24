@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.monsters.FleeingMerchant;
-import gremlin.actions.MakeEchoAction;
+import expansioncontent.actions.EchoACardAction;
 
 public class StolenMerchandise extends AbstractGremlinRelic {
     private static final String ID = getID("StolenMerchandise");
@@ -44,7 +44,7 @@ public class StolenMerchandise extends AbstractGremlinRelic {
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
         AbstractCard colorless = AbstractDungeon.returnTrulyRandomColorlessCardInCombat().makeCopy();
-        AbstractDungeon.actionManager.addToBottom(new MakeEchoAction(colorless));
+        addToBot(new EchoACardAction(colorless));
     }
 
     public void atBattleStart() {

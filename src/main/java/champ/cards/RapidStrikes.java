@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 import java.util.ArrayList;
 
 public class RapidStrikes extends AbstractChampCard {
@@ -21,6 +23,7 @@ public class RapidStrikes extends AbstractChampCard {
         tags.add(CardTags.STRIKE);
         baseMagicNumber = magicNumber = 2;
         postInit();
+        loadJokeCardImage(this, "RapidStrikes.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

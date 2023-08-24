@@ -2,6 +2,7 @@ package hermit;
 
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
+import basemod.abstracts.CustomSavable;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
@@ -12,6 +13,7 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -20,7 +22,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
-import hermit.actions.MessageCaller;
+import downfall.actions.MessageCaller;
 import hermit.cards.*;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
@@ -31,6 +33,7 @@ import hermit.relics.*;
 import hermit.rewards.BountyGold;
 import hermit.util.CardFilter;
 import hermit.util.TextureLoader;
+import hermit.util.Wiz;
 import hermit.variables.DefaultCustomVariable;
 import hermit.variables.DefaultSecondMagicNumber;
 import javassist.CtClass;
@@ -83,7 +86,10 @@ public class HermitMod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         AddAudioSubscriber,
+        StartGameSubscriber,
         OnStartBattleSubscriber,
+        OnPlayerTurnStartSubscriber,
+        OnCardUseSubscriber,
         SetUnlocksSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
@@ -114,13 +120,6 @@ public class HermitMod implements
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
     public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
     public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
-
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
 
     // Card backgrounds - The actual rectangular card.
     private static final String ATTACK_DEFAULT_GRAY = "hermitResources/images/512/bg_attack_default_gray.png";
@@ -191,30 +190,8 @@ public class HermitMod implements
         System.out.println("Subscribe to BaseMod hooks");
 
         BaseMod.subscribe(this);
-        
-      /*
-           (   ( /(  (     ( /( (            (  `   ( /( )\ )    )\ ))\ )
-           )\  )\()) )\    )\()))\ )   (     )\))(  )\()|()/(   (()/(()/(
-         (((_)((_)((((_)( ((_)\(()/(   )\   ((_)()\((_)\ /(_))   /(_))(_))
-         )\___ _((_)\ _ )\ _((_)/(_))_((_)  (_()((_) ((_|_))_  _(_))(_))_
-        ((/ __| || (_)_\(_) \| |/ __| __| |  \/  |/ _ \|   \  |_ _||   (_)
-         | (__| __ |/ _ \ | .` | (_ | _|  | |\/| | (_) | |) |  | | | |) |
-          \___|_||_/_/ \_\|_|\_|\___|___| |_|  |_|\___/|___/  |___||___(_)
-      */
 
         modID = ("hermit");
-        // cool
-        // TODO: NOW READ THIS!!!!!!!!!!!!!!!:
-
-        // 1. Go to your resources folder in the project panel, and refactor> rename hermitResources to
-        // yourModIDResources.
-
-        // 2. Click on the localization > eng folder and press ctrl+shift+r, then select "Directory" (rather than in Project)
-        // replace all instances of theDefault with yourModID.
-        // Because your mod ID isn't the default. Your cards (and everything else) should have Your mod id. Not mine.
-
-        // 3. FINALLY and most importantly: Scroll up a bit. You may have noticed the image locations above don't use getModID()
-        // Change their locations to reflect your actual ID rather than theDefault. They get loaded before getID is a thing.
 
         System.out.println("Done subscribing");
 
@@ -362,7 +339,7 @@ public class HermitMod implements
         // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
         //BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
 
-        // Dead On card list addition.
+        initializeSavedData();
 
         // WIDE pots
 
@@ -371,6 +348,8 @@ public class HermitMod implements
             WidePotionsMod.whitelistSimplePotion(BlackBile.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(Eclipse.POTION_ID);
         }
+
+        // Dead On card list addition.
 
         deadList = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
@@ -469,7 +448,8 @@ public class HermitMod implements
 
         try {
             autoAddCards();
-        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException |
+                 ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
 
@@ -605,7 +585,18 @@ public class HermitMod implements
 
      */
 
+    @Override
+    public void receiveCardUsed(AbstractCard abstractCard) {
+        AbstractHermitCard.deadOnThisTurn.add(false);
+    }
+
+    @Override
+    public void receiveOnPlayerTurnStart() {
+        AbstractHermitCard.deadOnThisTurn.clear();
+    }
+
     public void receiveOnBattleStart(AbstractRoom room) {
+        AbstractHermitCard.deadOnThisTurn.clear();
         tackybypass = true;
         if (AbstractDungeon.player instanceof hermit) {
             if (downfallMod.unseenTutorials[0]) {
@@ -625,6 +616,40 @@ public class HermitMod implements
     }
 
 
+    public void receiveStartGame() {
+        if (!CardCrawlGame.loadingSave) {
+            CursedWeapon.BONUS = 0;
+        }
+    }
+
+    private void initializeSavedData() {
+        BaseMod.addSaveField("HermitCursedWeaponDamage", new CustomSavable<Integer>() {
+            @Override
+            public Integer onSave() {
+                return CursedWeapon.BONUS;
+            }
+
+            @Override
+            public void onLoad(Integer s) {
+                // Reduce cursed weapons to baseline.
+                for (AbstractCard c : Wiz.p().masterDeck.group)
+                    if (c instanceof CursedWeapon)
+                        c.baseDamage -= CursedWeapon.BONUS;
+
+                if (s != null) {
+                        // Override Bonus.
+                        CursedWeapon.BONUS = s;
+
+                        // Apply it.
+                        for (AbstractCard c : Wiz.p().masterDeck.group)
+                            if (c instanceof CursedWeapon)
+                                c.baseDamage += CursedWeapon.BONUS;
+                }
+            }
+        });
+    }
+
+
     public static void loadJokeCardImage(AbstractCard card, String img) {
         if (card instanceof AbstractHermitCard) {
             ((AbstractHermitCard) card).betaArtPath = img;
@@ -639,7 +664,7 @@ public class HermitMod implements
     }
 
 
-    // ================ /LOAD THE KEYWORDS/ ===================    
+    // ================ /LOAD THE KEYWORDS/ ===================
 
     // this adds "ModName:" before the ID of any card/relic/power etc.
     // in order to avoid conflicts if any other mod uses the same ID.

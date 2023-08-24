@@ -4,7 +4,7 @@ import automaton.AutomatonMod;
 import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardModifierManager;
-import downfall.cardmods.RetainCardMod;
+import expansioncontent.cardmods.RetainCardMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 

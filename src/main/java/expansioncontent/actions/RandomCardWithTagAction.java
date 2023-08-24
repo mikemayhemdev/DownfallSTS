@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.unlocks.CollectorUnlock;
 import expansioncontent.expansionContentMod;
 import guardian.patches.GuardianEnum;
 import slimebound.patches.SlimeboundEnum;
@@ -59,6 +60,10 @@ public class RandomCardWithTagAction extends AbstractGameAction {
 
     public static boolean autoLocked() {
         return UnlockTracker.isCharacterLocked(AutomatonChar.ID);
+    }
+
+    public static boolean collectorLocked() {
+        return UnlockTracker.isCharacterLocked(CollectorUnlock.KEY);
     }
 
     public void update() {

@@ -1,0 +1,539 @@
+{
+  "downfall:NeowBlessing": {
+    "NAME": "Bênção de Neow",
+    "FLAVOR": "Acalme sua raiva. Seja tão resistente e inabalável quanto a Torre em si.",
+    "DESCRIPTIONS": [
+      "O chefe aumentou o máximo de HP, não há relíquia inicial, retira #b2 cartas a menos e tem #b1 a menos.",
+	  " . NL início da batalha, o chefe recebe um efeito único de Buff. Não pode ser #yAtordoado."
+    ]
+  },
+  "downfall:NeowBlessing_Player": {
+    "NAME": "Bênção de Neow",
+    "FLAVOR": "Acalme sua raiva. Seja tão resistente e inabalável quanto a Torre em si.",
+    "DESCRIPTIONS": [
+      "Ao pegar, aumente seu HP máximo em #b100. NL Aumente seu HP máximo em #b100 no início de cada Ato. NL Perca todos os seus espaços de poção. NL Receba #b1 carta a menos e perca [E] no início do seu turno."
+    ]
+  },
+  "downfall:CoffeeDripper": {
+    "DESCRIPTIONS": [
+      " NL Sendo incapaz de descansar, o chefe começou com menos saúde do que o máximo."
+    ]
+  },
+  "downfall:BustedCrown": {
+    "DESCRIPTIONS": [
+      " NL Sendo incapaz de escolher cartas ideais, o chefe tem menos cartas sinérgicas do que o normal."
+    ]
+  },
+  "downfall:Girya": {
+    "DESCRIPTIONS": [
+      " NL Optando por Levantar em vez de Descansar, o chefe começou com menos saúde do que o máximo."
+    ]
+  },
+  "downfall:Matroyshka": {
+    "DESCRIPTIONS": [
+      " NL O chefe adquiriu ",
+      " relíquias adicionais."
+    ]
+  },
+  "downfall:Ectoplasm": {
+    "DESCRIPTIONS": [
+      " NL Sendo incapaz de ganhar ouro, o chefe tem ",
+      " remoções de cartas a menos do que o normal."
+    ]
+  },
+  "downfall:BlackStar": {
+    "DESCRIPTIONS": [
+      " NL O chefe adquiriu ",
+      " relíquias adicionais, mas começa com menos saúde do que o máximo."
+    ]
+  },
+  "downfall:MoltenEgg": {
+    "DESCRIPTIONS": [
+      " NL O chefe melhorou ",
+      " Ataques deste relíquia."
+    ]
+  },
+   "downfall:ToxicEgg": {
+    "DESCRIPTIONS": [
+      "Chefe NL melhorado",
+      "Habilidades deste item."
+    ]
+  },
+  "downfall:FrozenEgg": {
+   "DESCRIPTIONS": [
+      "Chefe possui muitos Poderes Melhorados."
+    ]
+  },
+  "downfall:Shovel": {
+   "DESCRIPTIONS": [
+      "Chefe NL adquiriu",
+      "relíquias adicionais, mas começa com menos saúde máxima devido a não descansar."
+    ]
+  },
+  "downfall:CBRSerpentHead": {
+    "DESCRIPTIONS": [
+      "Chefe NL usou este ouro para remover 2 cartas de seu baralho."
+    ]
+  },
+  "downfall:CursedKey": {
+    "DESCRIPTIONS": [
+      "Chefe NL ganhou",
+      "Maldições deste item."
+    ]
+  },
+  "downfall:DreamCatcher": {
+    "DESCRIPTIONS": [
+      "Chefe NL ganhou cartas adicionais ao descansar."
+    ]
+  },
+  "downfall:PrayerWheel": {
+   "DESCRIPTIONS": [
+      "Chefe NL ganhou",
+      "cartas extras deste item."
+    ]
+  },
+  "downfall:PeacePipe": {
+   "DESCRIPTIONS": [
+      "Chefe NL removeu",
+      "cartas adicionais, mas começa com menos saúde máxima."
+    ]
+  },
+  "downfall:RunicDome": {
+   "DESCRIPTIONS": [
+      "Chefe NL pode escolher a ordem das cartas desfavoravelmente."
+    ]
+  },
+  "downfall:CentennialPuzzle": {
+   "DESCRIPTIONS": [
+      "NL Não pode ser acionado no turno do chefe."
+    ]
+  },
+  "downfall:CBRFaceOfCleric": {
+   "DESCRIPTIONS": [
+      "HP máximo foi ganho através deste item."
+    ]
+  },
+  "downfall:Omamori": {
+    "DESCRIPTIONS": [
+      "Impediu o Chefe de ganhar um(a) "
+    ]
+  },
+  "downfall:DollysMirror": {
+    "DESCRIPTIONS": [
+      "O espelho duplicou "
+    ]
+  },
+  "downfall:Vampires": {
+    "NAME": "Evento: Vampiros",
+    "FLAVOR": "O sangue do mestre... o sangue do mestre! O SANGUE DO MESTRE!",
+    "DESCRIPTIONS": [
+      "Os ataques foram substituídos por mordidas. NL -",
+      " HP máximo."
+    ]
+  },
+  "downfall:BonfireSpirits": {
+    "NAME": "Evento: Espíritos da Fogueira",
+    "FLAVOR": "Os espíritos jogam pequenos ossos e fragmentos na fogueira, que explode brilhantemente a cada vez...",
+    "DESCRIPTIONS": [
+      "O Chefe removeu uma carta do seu baralho para ganhar 10 de HP máximo."
+    ]
+  },
+  "downfall:DesignerInSpire": {
+    "NAME": "Evento: Designer-In-Spire",
+    "FLAVOR": "Isso não vai funcionar, não não. Que estilo é esse? Nojento! Você está sangraaando? Quee groossso.",
+    "DESCRIPTIONS": [
+      "Uma carta foi removida do baralho, e outra foi aprimorada."
+    ]
+  },
+  "downfall:DivineFountain": {
+    "NAME": "Evento: Fonte Divina",
+    "FLAVOR": "Você encontra água cintilante fluindo sem fim de uma fonte em uma parede próxima.",
+    "DESCRIPTIONS": [
+      "As Maldições foram removidas do baralho."
+    ]
+  },
+  "downfall:Duplicator": {
+    "NAME": "Evento: Duplicador",
+    "FLAVOR": "Diante de você está um altar decorado para alguma entidade antiga.",
+    "DESCRIPTIONS": [
+      "O Chefe duplicou uma carta poderosa."
+    ]
+  },
+  "downfall:BigFish": {
+    "NAME": "Evento: Peixe Grande",
+    "FLAVOR": "Conforme você percorre um longo corredor, você vê uma banana, um donut e uma caixa flutuando.",
+    "DESCRIPTIONS": [
+      "O Donut foi escolhido. NL +5 de HP máximo.",
+      "A Caixa foi escolhida. NL Uma maldição Arrependimento e uma relíquia foram adicionadas."
+    ]
+  },
+  "downfall:LivingWall": {
+    "NAME": "Evento: Parede Viva",
+    "FLAVOR": "Esqueça o que sabe, e eu te deixarei ir.",
+    "DESCRIPTIONS": [
+      "Chefe removeu um(a) ",
+      "Chefe aprimorou um(a) ",
+      "Chefe transformou um(a) ",
+      " em um(a) "
+    ]
+  },
+  "downfall:WheelOfChange": {
+    "NAME": "Evento: Roda da Mudança",
+    "FLAVOR": "É hora de girar a roda! Você está PRONTO? Claro que está!",
+    "DESCRIPTIONS": [
+      "A Roda deu ao Chefe um(a) ",
+      "Chefe foi curado até a saúde máxima.",
+      "A Roda removeu um(a) ",
+      " do baralho do Chefe.",
+      "A Roda causou dano ao Chefe."
+    ]
+  },
+  "downfall:Falling": {
+    "NAME": "Evento: Queda",
+    "FLAVOR": "Enquanto em queda livre, você considera suas opções...",
+    "DESCRIPTIONS": [
+      "Golpe foi removido do baralho."
+    ]
+  },
+  "downfall:Augmenter": {
+    "NAME": "Evento: Aumentador",
+    "FLAVOR": "Ei, estranho(a). Interessado(a) em avançar na ciência?",
+    "DESCRIPTIONS": [
+      "Chefe transformou 2 cartas",
+      "Chefe ganhou J.A.X.",
+      "Chefe ganhou a Força Mutagênica."
+    ]
+  },
+  "downfall:AncientWriting": {
+    "NAME": "Evento: Escrita Antiga",
+    "FLAVOR": "De repente, a mensagem fica clara...",
+    "DESCRIPTIONS": [
+      "Chefe aprimorou todos os Golpes e Defesas."
+    ]
+  },
+  "downfall:Bandits": {
+    "NAME": "Evento: Bandidos da Máscara Vermelha",
+    "FLAVOR": "Pegue eles, Bear!",
+    "DESCRIPTIONS": [
+      "Chefe derrotou os Bandidos, ganhando a Máscara Vermelha, mas começa com menos que a saúde máxima."
+    ]
+  },
+  "downfall:WingStatue": {
+    "NAME": "Evento: Estátua de Asa",
+    "FLAVOR": "Entre as pedras e rochas, você nota uma intricada e grande estátua azul que se parece com uma asa.",
+    "DESCRIPTIONS": [
+      " foi removido do baralho."
+    ]
+  },
+  "downfall:Serpent": {
+    "NAME": "Evento: A Sssserpente",
+    "FLAVOR": "A vida mais satisfatória é aquela em que você pode comprar qualquer coisa! Você concorda?",
+    "DESCRIPTIONS": [
+      "O chefe ganhou uma maldição de Dúvida para ganhar ouro, que foi usado para comprar um relicário."
+    ]
+  },
+  "downfall:Cleric": {
+    "NAME": "Evento: Clérigo",
+    "FLAVOR": "Olá amigo! Eu sou Clérigo! Você está interessado nos meus serviços?!",
+    "DESCRIPTIONS": [
+      "O chefe removeu uma carta do seu baralho."
+    ]
+  },
+  "downfall:OldBeggar": {
+    "NAME": "Evento: Velho Mendigo",
+    "FLAVOR": "Dê uma moeda, criança?",
+    "DESCRIPTIONS": [
+      "Uma carta foi removida do baralho."
+    ]
+  },
+  "downfall:Library": {
+    "NAME": "Evento: Biblioteca",
+    "FLAVOR": "Você encontra um prédio ornamentado que parece abandonado.",
+    "DESCRIPTIONS": [
+      "O chefe ganhou uma carta sinérgica extra."
+    ]
+  },
+  "downfall:Mausoleum": {
+    "NAME": "Evento: Mausoléu",
+    "FLAVOR": "Você não consegue ler a escrita no caixão, no entanto, percebe uma névoa negra saindo pelas laterais.",
+    "DESCRIPTIONS": [
+      "O chefe ganhou uma maldição Esquivo e um relicário extra."
+    ]
+  },
+  "downfall:Nest": {
+    "NAME": "Evento: Ninho",
+    "FLAVOR": "CAW CAW CAAAAAWWW!",
+    "DESCRIPTIONS": [
+      "O chefe ganhou uma Adaga de Ritual."
+    ]
+  },
+  "downfall:Colosseum": {
+    "NAME": "Evento: Coliseu",
+    "FLAVOR": "NÓS AGORA COMEÇAMOS A BATALHA!!!!",
+    "DESCRIPTIONS": [
+      "O chefe completou o evento Coliseu, ganhando dois relicários adicionais."
+    ]
+  },
+  "downfall:PleadingVagrant": {
+    "NAME": "Evento: Pedinte Vagabundo",
+    "FLAVOR": "Tem algo para mim, amigo? Por favor... talvez alguns #yCoins?",
+    "DESCRIPTIONS": [
+      "Chefe roubou os Vagabundos, ganhando uma maldição de Vergonha e "
+    ]
+  },
+  "downfall:Mushroom": {
+    "NAME": "Evento: Cogumelos",
+    "FLAVOR": "Você entra em um corredor cheio de cogumelos coloridos hipnotizantes.",
+    "DESCRIPTIONS": [
+      "Chefe curou totalmente e ganhou uma maldição de Parasita.",
+      "Chefe ganhou o relicário Cogumelo Estranho, mas começa com menos que a saúde máxima."
+    ]
+  },
+  "downfall:ShiningLight": {
+    "NAME": "Evento: Luz Brilhante",
+    "FLAVOR": "Você encontra uma massa brilhante de luz que envolve o centro da sala.",
+    "DESCRIPTIONS": [
+      "Chefe melhorou ",
+      " e ",
+      ", mas começa com menos que a saúde máxima."
+    ]
+  },
+  "downfall:ScrapOoze": {
+    "NAME": "Evento: Lodo de Sucata",
+    "FLAVOR": "Diante de você está uma criatura semelhante a um slime que comeu muita sucata para o seu próprio bem.",
+    "DESCRIPTIONS": [
+      "Chefe ganhou um relicário adicional."
+    ]
+  },
+  "downfall:GoldenIdolEvent": {
+    "NAME": "Evento: Ídolo Dourado",
+    "FLAVOR": "No topo do altar está uma estatueta feminina ornamentada com os braços estendidos. NL Ela chama por você, exigindo sacrifício.",
+    "DESCRIPTIONS": [
+      "Chefe pegou o Ídolo Dourado, ganhando uma maldição de Lesão e usando o ouro extra para comprar "
+    ]
+  },
+  "downfall:FaceTrader": {
+    "NAME": "Evento: Trocador de Rostos",
+    "FLAVOR": "Rosto. Deixe-me tocar? Talvez trocar?",
+    "DESCRIPTIONS": [
+      "Chefe ganhou um relicário de rosto aleatório."
+    ]
+  },
+  "downfall:OminousForge": {
+    "NAME": "Evento: Forja Ominosa",
+    "FLAVOR": "CLANG! CLAAANG! CLANG!",
+    "DESCRIPTIONS": [
+      "Chefe ganhou Pinças Distorcidas e uma maldição de Dor."
+    ]
+  },
+  "downfall:Purifier": {
+    "NAME": "Evento: Purificador",
+    "FLAVOR": "Diante de você está um elaborado santuário de um espírito esquecido.",
+    "DESCRIPTIONS": [
+      " foi removido do baralho."
+    ]
+  },
+  "downfall:MatchAndKeep": {
+    "NAME": "Evento: Encontre e Mantenha",
+    "FLAVOR": "Doze cartas! Encontre suas combinações para mantê-las! Cinco tentativas, sem reiniciar. Está pronto? Vamos começar!",
+    "DESCRIPTIONS": [
+        "Chefe encontrou uma combinação correta e ganhou uma carta poderosa."
+    ]
+  },
+  "downfall:Transmogrifier": {
+    "NAME": "Evento: Transmorfose",
+    "FLAVOR": "À sua frente está um elaborado santuário para um espírito esquecido.",
+    "DESCRIPTIONS": [
+        "Chefe transformou uma carta inicial em uma nova carta."
+    ]
+  },
+  "downfall:TombRedMask": {
+    "NAME": "Evento: Tumba do Senhor Máscara Vermelha",
+    "FLAVOR": "Uma tumba altamente ornamentada pode ser vista do outro lado de um caminho flutuante.",
+    "DESCRIPTIONS": [
+        "Chefe obteve a relíquia Máscara Vermelha."
+    ]
+  },
+  "downfall:UpgradeShrine": {
+    "NAME": "Evento: Santuário de Aprimoramento",
+    "FLAVOR": "À sua frente está um elaborado santuário para um espírito esquecido.",
+    "DESCRIPTIONS": [
+        "Chefe #yaprimorou uma carta com o Santuário de Aprimoramento."
+    ]
+  },
+  "downfall:WeMeetAgain": {
+    "NAME": "Evento: Nos encontramos novamente",
+    "FLAVOR": "Sou eu, #yRanwid! Tem alguma mercadoria para mim hoje? O de sempre? Um cara como eu não pode fazer isso sozinho, sabe?",
+    "DESCRIPTIONS": [
+        "Ouro foi trocado por Ranwid em troca de uma relíquia extra."
+    ]
+  },
+  "downfall:GoldenShrine": {
+    "NAME": "Evento: Santuário Dourado",
+    "FLAVOR": "À sua frente está um elaborado santuário para um espírito antigo.",
+    "DESCRIPTIONS": [
+        "Chefe obteve uma maldição Remorso em troca de ouro, e usou esse ouro para comprar "
+    ]
+  },
+  "downfall:GremlinSack": {
+    "NAME": "Saco do Gremlin",
+    "FLAVOR": "O Gremlin e seu guarda-costas não foram páreo para você.",
+    "DESCRIPTIONS": [
+        "Ao pegar, adicione as seguintes cartas ao seu baralho: NL ",
+        "Ao pegar, adicione #b6 cartas ao seu baralho do Jogo de Combinação.",
+        "#g (Inicial) ",
+        "#g (Comum) ",
+        "#b (Incomum) ",
+        "#y (Raro) ",
+        "#b (Incolor) ",
+        "#r (Maldição) "
+    ]
+  },
+  "downfall:GremlinWheel": {
+    "NAME": "Roda da Mudança",
+    "FLAVOR": "Ninguém tem direito a dois giros, diz ele.",
+    "DESCRIPTIONS": [
+      "Em cada Área de Descanso, você pode girar a roda uma vez. Escolher coletar sua recompensa usa esta relíquia.",
+      "Esta relíquia foi usada."
+    ]
+  },
+  "downfall:CloakOfManyFaces": {
+    "NAME": "Manto das Muitas Faces",
+    "FLAVOR": "Era Steve, e Bill, e Ian, e Fred, e John...",
+    "DESCRIPTIONS": [
+      "Ao ser pego, ganhe o Capuz de Cultista, a Face do Clérigo, a Face Faminta de N'loth, a Face dos Gremlins e a Cabeça da Serpente."
+    ]
+  },
+  "downfall:BrokenWingStatue": {
+    "NAME": "Estátua da Asa Quebrada",
+    "FLAVOR": "Um pedaço quebrado de uma estátua antes magnífica.",
+    "DESCRIPTIONS": [
+      "Os cultistas que adoram o Despertado se interessarão por isso."
+    ]
+  },
+  "downfall:ShatteredFragment": {
+    "NAME": "Fragmento Afiado",
+    "FLAVOR": "Antes uma estátua quebrada, agora uma arma improvisada.",
+    "DESCRIPTIONS": [
+      "No início de cada turno, ganhe um #yCristal #yShiv."
+    ]
+  },
+  "downfall:RedIOU": {
+    "NAME": "Contrato de Bandido",
+    "FLAVOR": "Um acordo dos três Mascarados Vermelhos - em parte em troca de um trinket, mas principalmente em troca de suas vidas.",
+    "DESCRIPTIONS": [
+      "No início do combate do #b3º chefe, os Bandidos Mascarados Vermelhos irão ajudá-lo.",
+      "É hora de trabalhar, rapazes!",
+      "Peguem eles, Bear!",
+      "Um acordo é um acordo. NL Estamos fora daqui.",
+      "Viva o novo NL ~Senhor~ ~Máscara~ ~Vermelha!~",
+      "Boa sorte, chefe!"
+    ]
+  },
+  "downfall:RedIOUUpgrade": {
+    "NAME": "Contrato de Bandido+",
+    "FLAVOR": "Um acordo dos três Mascarados Vermelhos - em parte em troca de um trinket, mas principalmente em troca de suas vidas.",
+    "DESCRIPTIONS": [
+      "No início do combate do #b3º chefe, os Bandidos Mascarados Vermelhos irão ajudá-lo."
+    ]
+  },
+  "downfall:KnowingSkull": {
+    "NAME": "Crânio Consciente",
+    "FLAVOR": "Me coloque no chão!",
+    "DESCRIPTIONS": [
+      "No início de cada combate, você pode desejar Almas, Sucesso ou um Ajudinha."
+    ]
+  },
+    "downfall:HeartBlessingRed": {
+    "NAME": "Bênção do Coração de Rubi",
+    "FLAVOR": "O coração é forte.",
+    "DESCRIPTIONS": [
+      "Comece as lutas de chefes com #b1 #yForça."
+    ]
+  },
+  "downfall:HeartBlessingBlue": {
+    "NAME": "Bênção do Coração de Safira",
+    "FLAVOR": "O coração está satisfeito.",
+    "DESCRIPTIONS": [
+      "Comece as lutas de chefes com #b10 #yHP #yTemporário."
+    ]
+  },
+  "downfall:HeartBlessingGreen": {
+    "NAME": "Bênção do Coração de Esmeralda",
+    "FLAVOR": "O coração é tudo.",
+    "DESCRIPTIONS": [
+      "Comece as lutas de chefes com #b1 #yDestreza."
+    ]
+  },
+  "downfall:TeleportStone": {
+    "NAME": "Pedra de Teleporte",
+    "FLAVOR": "Nunca saia de casa sem ela.",
+    "DESCRIPTIONS": [
+      "Você pode pular qualquer número de salas na próxima vez que se mover, mas não pode entrar em uma Sala de Chefe.",
+      "",
+      "Este relicário foi usado."
+    ]
+  },
+  "downfall:HeartsMalice": {
+    "NAME": "Malícia do Coração",
+    "FLAVOR": "A malícia da corrupção concedida pelo coração.",
+    "DESCRIPTIONS": [
+      "Inimigos em suas primeiras #b3 lutas fugirão em terror.",
+      "Este relicário foi usado."
+    ]
+  },
+  "downfall:Hecktoplasm": {
+    "NAME": "Hecktoplasm",
+    "FLAVOR": "Esta bolha de slime parece pulsar com a energia de centenas de almas. Não é à toa que ninguém a quis.",
+    "DESCRIPTIONS": [
+      "Ganhe [E] no início do seu turno. Você não pode mais ganhar #yAlmas. Quebrar Chaves não custa #yAlmas."
+    ]
+  },
+  "downfall:replacements": {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Durante as lutas do Mercador, Chefes e Elite, ganhe [E] no início do seu turno.",
+      "Moeda Amaldiçoada",
+      "Poucos que ainda vivem conhecem o verdadeiro custo desta moeda antiga...",
+      "Cartão MVB",
+      "Realmente, você é o MVB do Coração: O Mais Valioso dos Chefes.",
+      "A corrupção do Coração não conhece limites - nem mesmo os bichinhos de estimação preciosos.",
+      "Correio Corrompido",
+      "O Coração reabastece cartas, relicários e poções. Todos os preços são reduzidos em #b20%.",
+      "As telas de recompensa de combate agora contêm cartas Incolores e cartas das cores dos Heróis.",
+      "Ganhe [E] no início do seu turno. Você não pode mais ganhar #yAlmas. Quebrar Chaves não custa #yAlmas."
+    ]
+  },
+    "downfall:LizardTail": {
+    "NAME": "Super Cauda de Lagarto",
+    "FLAVOR": "Uma cauda falsa para enganar inimigos durante o combate.",
+    "DESCRIPTIONS": [
+      "Quando você morrer, cure-se em #b100% do seu HP Máximo em vez disso (funciona uma vez)."
+    ]
+  },
+  "downfall:TestRelic": {
+    "NAME": "Testador de Efeitos Visuais",
+    "FLAVOR": "Quando isso indexa oobs, você conseguiu.",
+    "DESCRIPTIONS": [
+      "#pDireito #pClique: Jogue a próxima carta."
+    ]
+  },
+  "downfall:ExtraCursedKey": {
+    "NAME": "Chave Extra Amaldiçoada",
+    "FLAVOR": "Trancada por uma boa razão.",
+    "DESCRIPTIONS": [
+      "Obtenha [E] no início de seu turno. NL Sempre que você abrir um baú não chefe, obtenha #b2 #rMaldições."
+    ]
+  },
+  "downfall:ExtraCursedBell": {
+    "NAME": "Sino Extra Amaldiçoado",
+    "FLAVOR": "Você pensa ouvir o eco, mas nunca pode confirmar.",
+    "DESCRIPTIONS": [
+      "Ao pegar, obtenha #b2 de uma #rMaldição única e #b3 relíquias.",
+      "O Sino Toca Duas Vezes...",
+      "Pular Recompensas",
+      "Fechar"
+    ]
+  }
+}

@@ -51,11 +51,13 @@
   "reskinContent:ReSkinHexaghost": {
     "TEXT": [
       "Hexago",
-      "Ghostagon"
+      "Ghostagon",
+      "Lampghost"
     ],
     "EXTRA_TEXT": [
       "An accursed spirit of the Spire. NL Sealed to an eternal fate as a protector.",
-      "Likes to chase yellow circles around on its days off. NL Has a crippling fear of power pellets."
+      "Likes to chase yellow circles around on its days off. NL Has a crippling fear of power pellets.",
+      "Hexaghost's old partner. NL Decided to stop slaying adventurers for a more stable job selling wishes."
     ]
   },
   "reskinContent:ReSkinSnecko": {
@@ -81,11 +83,13 @@
   "reskinContent:ReSkinBronze": {
     "TEXT": [
       "Automaton",
-      "\"Automaton\""
+      "\"Automaton\"",
+      "The Perfect"
     ],
     "EXTRA_TEXT": [
       "",
-      "Yep! Tip to toe, that's the Automaton, alright! NL I've never seen anything that looks more like the Automaton!"
+      "Yep! Tip to toe, that's the Automaton, alright! NL I've never seen anything that looks more like the Automaton!",
+      "[BOOT] Initializing... Core Systems Online - No Faults Detected NL [OBJECTIVE] BALANCE will be ENFORCED"
     ]
   }
 }

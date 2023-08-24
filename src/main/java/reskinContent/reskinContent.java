@@ -85,12 +85,9 @@ public class reskinContent implements
             case FRA:
                 language = "fra";
                 break;
-//            case ZHT:
-//                language = "zht";
-//                break;
-//            case KOR:
-//                language = "kor";
-//                break;
+            case KOR:
+                language = "kor";
+                break;
 //            case JPN:
 //                language = "jpn";
 //                break;
@@ -150,13 +147,15 @@ public class reskinContent implements
                 characters[i].reskinUnlock = config.getBool(CardCrawlGame.saveSlot + "ReskinUnlock" + i);
                 characters[i].reskinCount = config.getInt(CardCrawlGame.saveSlot + "reskinCount" + i);
                 for (int k = 0; k <= characters[i].skins.length - 1; k++) {
-                    characters[i].skins[k].portraitAnimationType = config.getInt(CardCrawlGame.saveSlot + "portraitAnimationType" + i + "_" + k);
+                    if (!characters[i].skins[k].forcePortraitAnimationType) {
+                        characters[i].skins[k].portraitAnimationType = config.getInt(CardCrawlGame.saveSlot + "portraitAnimationType" + i + "_" + k);
 
-                    if (characters[i].skins[k].portraitAnimationType > 2 || characters[i].skins[k].portraitAnimationType < 0)
-                        characters[i].skins[k].portraitAnimationType = 2;
+                        if (characters[i].skins[k].portraitAnimationType > 2 || characters[i].skins[k].portraitAnimationType < 0)
+                            characters[i].skins[k].portraitAnimationType = 2;
 
-                    if (!characters[i].skins[k].hasAnimation())
-                        characters[i].skins[k].portraitAnimationType = 0;
+                        if (!characters[i].skins[k].hasAnimation())
+                            characters[i].skins[k].portraitAnimationType = 0;
+                    }
                 }
 
                 if(characters[i].reskinCount > characters[i].skins.length -1){

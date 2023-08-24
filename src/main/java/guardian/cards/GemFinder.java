@@ -13,6 +13,8 @@ import guardian.patches.AbstractCardEnum;
 import guardian.powers.GemFinderPower;
 import sneckomod.SneckoMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class GemFinder extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("GemFinder");
     public static final String NAME;
@@ -48,6 +50,7 @@ public class GemFinder extends AbstractGuardianCard {
         loadGemMisc();
        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("GemFinder.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,0 +1,122 @@
+{
+  "collector:EmeraldTorch": {
+    "NAME": "翠绿火炬",
+    "FLAVOR": "贪婪之火永不灭。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b1 #ycollector:储能 。"
+    ]
+  },
+  "collector:PrismaticTorch": {
+    "NAME": "多彩火炬",
+    "FLAVOR": "各色斑斓的火焰昭示着命运的偏袒。",
+    "DESCRIPTIONS": [
+      "替换 ",
+      " 。战斗开始时，获得一张 #y余烬 与 #b1 #ycollector:储能 。每当你 #y消耗 一张 #y余烬 时，获得 #b1 #ycollector:储能 。"
+    ]
+  },
+  "collector:HolidayCoal": {
+    "NAME": "角魔煤块",
+    "FLAVOR": "\"Intriguing! But why only specific chimneys?\" - Ranwid",
+    "DESCRIPTIONS": [
+      "从空的 #y收藏堆 抽牌时，抽出一张 #y幸运烛芯 。"
+    ]
+  },
+  "collector:BagOfTricks": {
+    "NAME": "诡计背包",
+    "FLAVOR": "Tricky.",
+    "DESCRIPTIONS": [
+      "战斗开始时，额外抽 #b",
+      " 张 #ycollector:藏品 牌。"
+    ]
+  },
+  "collector:JadeRing": {
+    "NAME": "玉戒指",
+    "FLAVOR": "Jade is the symbol of honesty.",
+    "DESCRIPTIONS": [
+      "每当一名 #ycollector:魂劫 中的非爪牙敌人死亡时，获得 #b",
+      " 灵魂。"
+    ]
+  },
+  "collector:SoullitLamp": {
+    "NAME": "燃魂灯",
+    "FLAVOR": "A ghoulish decoration. The crackles of fire are replaced by buzzing wails.",
+    "DESCRIPTIONS": [
+      "拾起时，获得 #b3 点 #g魂粹 。战斗开始时，获得 #b1 张 #y余烬 。"
+    ]
+  },
+  "collector:ThimbleHelm": {
+    "NAME": "顶针帽",
+    "FLAVOR": "Worn by the Spire's miniest heroes.",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b",
+      " 层 #y临时生命 。拥有 #y临时生命 时，从卡牌中额外获得 #b1 点 #y格挡 。"
+    ]
+  },
+  "collector:Incense": {
+    "NAME": "熏香",
+    "FLAVOR": "An antiquated form of mental clarification.",
+    "DESCRIPTIONS": [
+      "已有 #y虚弱 、 #y易伤 ，或 #y脆弱 之中的任意一种 #r负面效果 时，不再积累新层数。"
+    ]
+  },
+  "collector:FuelCanister": {
+    "NAME": "液罐",
+    "FLAVOR": "Disgusting.",
+    "DESCRIPTIONS": [
+      "回合结束时， #y保留 耗能最高的手牌。"
+    ]
+  },
+  "collector:AutoCurser": {
+    "NAME": "巫婆驱魔符",
+    "FLAVOR": "\"When I put this on, my rate of toe-stubbing increased drastically. I think it works!\" - Ranwid",
+    "DESCRIPTIONS": [
+      "战斗开始时，随机给予一名敌人 #b1 层 #y虚弱 与 #y易伤 。"
+    ]
+  },
+  "collector:Bagpipes": {
+    "NAME": "风笛",
+    "FLAVOR": "This dreaded instrument is said to have driven Kublai the Great mad.",
+    "DESCRIPTIONS": [
+      "每当你给予 #y虚弱 或 #y易伤 时，额外给予 #b1 层。"
+    ]
+  },
+  "collector:BottledCollectible": {
+    "NAME": "瓶装大脑",
+    "FLAVOR": "Collected from a wizard's laboratory.",
+    "DESCRIPTIONS": [
+      "拾起时，选择 #y升级 一张 #y收藏堆 的牌。每场战斗开始时其将被置于堆顶。",
+      "战斗开始时， #y",
+      " 将被置于 #y收藏堆 的顶部。",
+      "为",
+      " 选择一张牌来置于收藏堆顶部。"
+    ]
+  },
+  "collector:TheContract": {
+    "NAME": "交易契约",
+    "FLAVOR": "以血落成。",
+    "DESCRIPTIONS": [
+      "拾起时，获得 #b10 #g魂粹 。"
+    ]
+  },
+  "collector:ForbiddenFruit": {
+    "NAME": "禁忌之果",
+    "FLAVOR": "This species of fruit looks completely unfamiliar.",
+    "DESCRIPTIONS": [
+      "拾起时，从所有可获得的牌中各选择 #b1 张普通、 #b罕见 ，及 #y稀有 牌。 NL 获得 #b8 点 最大生命。"
+    ]
+  },
+  "collector:RoughDiamond": {
+    "NAME": "粗糙钻石",
+    "FLAVOR": "With the mines demolished, even this tarnished stone is valuable.",
+    "DESCRIPTIONS": [
+      "战斗开始时，牌组与 #y收藏堆 中的 #y稀有 牌该场战斗耗能减 #b1 ，最低减至 #b1 点。"
+    ]
+  },
+  "collector:BlockedChakra": {
+    "NAME": "被缚查克拉",
+    "FLAVOR": "One pulled muscle is all it takes.",
+    "DESCRIPTIONS": [
+      "回合开始时获得 [E] ，从第4回合开始才从 #y收藏堆 抽牌。"
+    ]
+  }
+}

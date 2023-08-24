@@ -1,10 +1,10 @@
 [
   {
     "NAMES": [
+      "absorb",
       "absorbez",
       "absorbant",
       "absorbé",
-      "absorb",
       "absorbing",
       "absorbed"
     ],
@@ -13,13 +13,13 @@
   },
   {
     "NAMES": [
+      "split",
       "divisez-vous",
       "divisez",
-      "split",
       "splitting"
     ],
     "PROPER_NAME": "Division",
-    "DESCRIPTION": "Faites apparaître un sbire #ySlime, qui attaque au début de chaque tour. NL NL Si vous n'avez pas d'emplacement de Slime, votre Slime le plus ancien est automatiquement #yAbsorbé pour faire de la place, vous donnant 1 de #yForce."
+    "DESCRIPTION": "Faites apparaître un sbire Slime, qui attaque au début de chaque tour. NL NL Si vous n'avez pas d'emplacement de Slime, votre Slime le plus ancien est automatiquement #yAbsorbé pour faire de la place, vous donnant 1 de #yForce."
   },
   {
     "NAMES": [
@@ -29,7 +29,7 @@
       "gooped"
     ],
     "PROPER_NAME": "Goop",
-    "DESCRIPTION": "La prochaine attaque inflige #b1 dégât de plus par #yGoop, retirant alors tout le #yGoop et déclenchant n'importe quel effet de #yConsumation."
+    "DESCRIPTION": "La prochaine attaque inflige #b1 dégât de plus par #yGoop, retirant alors tout le #yGoop et déclenchant les effets de #yConsumation."
   },
   {
     "NAMES": [
@@ -37,14 +37,14 @@
       "potentiel"
     ],
     "PROPER_NAME": "Potentiel",
-    "DESCRIPTION": "Augmente les dégâts de TOUS vos Slimes invoqués."
+    "DESCRIPTION": "Augmente les dégâts qu'infligent vos #ySlimes. Leurs effets secondaires sont augmentés de la moitié de votre Potentiel."
   },
   {
     "NAMES": [
+      "command",
       "commandez",
       "commande",
       "commandez-les",
-      "command",
       "commands"
     ],
     "PROPER_NAME": "Commande",
@@ -58,7 +58,7 @@
       "torchhead_slime"
     ],
     "PROPER_NAME": "Slime torche",
-    "DESCRIPTION": "Inflige #b6 dégâts chaque tour. Gagne de la #yForce lorsque vous en gagnez vous."
+    "DESCRIPTION": "Inflige #b6 dégâts chaque tour. Sa puissance est affectée par votre #yForce."
   },
   {
     "NAMES": [
@@ -66,7 +66,7 @@
       "slime_cogneur",
       "slimes cogneurs",
       "slime_cogneurs",
-      "cogneur",
+      "slime cogneur",
       "bruiser slime",
       "bruiser_slime",
       "bruiser slimes",
@@ -92,14 +92,14 @@
       "slime_sangsue",
       "slimes sangsues",
       "slimes_sangsues",
-      "sangsue",
+      "slime sangsue",
       "leeching slime",
       "leeching_slime",
       "leeching slimes",
       "leeching_slimes",
       "leeching"
     ],
-    "PROPER_NAME": "Slime Sangsue",
+    "PROPER_NAME": "Slime sangsue",
     "DESCRIPTION": "Inflige #b1 dégât et vous confère #b3 #yd'Armure chaque tour."
   },
   {
@@ -108,7 +108,7 @@
       "slime_guerrier",
       "slimes guerriers",
       "slimes_guerriers",
-      "guerrier",
+      "slime guerrier",
       "guerilla slime",
       "guerilla_slime",
       "guerilla slimes",
@@ -124,7 +124,7 @@
       "slime_bourbier",
       "slimes bourbier",
       "slimes_bourbier",
-      "bourbier",
+      "slime bourbier",
       "mire slime",
       "mire_slime",
       "mire slimes",
@@ -150,7 +150,7 @@
       "lick"
     ],
     "PROPER_NAME": "Léchouille",
-    "DESCRIPTION": "Des cartes qui coûtent 0 et qui appliquent du #yGoop avec une varitété d'effets secondaires."
+    "DESCRIPTION": "Des cartes qui coûtent 0 et appliquent du #yGoop avec une varitété d'effets secondaires."
   },
   {
     "NAMES": [
@@ -160,7 +160,7 @@
       "ghostflame_slime"
     ],
     "PROPER_NAME": "Slime follet",
-    "DESCRIPTION": "Inflige #b3 dégâts et applique #b3 de #ySoulburn chaque tour."
+    "DESCRIPTION": "Inflige #b3 dégâts et applique #b5 de #yBrûlure chaque tour."
   },
   {
     "NAMES": [
@@ -176,7 +176,7 @@
       "slow"
     ],
     "PROPER_NAME": "Ralenti",
-    "DESCRIPTION": "Recevez #b10% de dégâts en plus par carte jouée dans un tour."
+    "DESCRIPTION": "Une créature ralentie reçoit #b10% de dégâts en plus par carte jouée dans un tour."
   },
   {
     "NAMES": [
@@ -226,7 +226,7 @@
       "darkling_slime"
     ],
     "PROPER_NAME": "Slime ténébreux",
-    "DESCRIPTION": "Inflige #b3 dégâts chaque tour. Quand Commandé, les autres Slimes Ténébreux attaquant également."
+    "DESCRIPTION": "Inflige #b3 dégâts chaque tour. Quand Commandé, les autres Slimes Ténébreux attaquent également."
   },
   {
     "NAMES": [
@@ -268,10 +268,10 @@
   },
   {
     "NAMES": [
-      "Enterrée",
+      "enterrée",
       "buried"
     ],
-    "PROPER_NAME": "Enterrer",
+    "PROPER_NAME": "Enterré",
     "DESCRIPTION": "Les cartes Enterrées seront toujours choisies en dernier pour les effets #yd'Exhumation aléatoires."
   }
 ]

@@ -132,7 +132,11 @@ public class LivingWall_Evil extends AbstractImageEvent {
 //                        AbstractDungeon.getCurrRoom().monsters = monsters;
                         logMetric(ID, "Fight");
                         AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+                        if (Settings.isDailyRun) {
+                            AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(25));
+                        } else {
+                            AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(20, 30));
+                        }
                         AbstractDungeon.getCurrRoom().rewards.add(new RemoveCardReward());
                         AbstractDungeon.getCurrRoom().rewards.add(new UpgradeCardReward());
                         AbstractDungeon.getCurrRoom().rewards.add(new TransformCardReward());

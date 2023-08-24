@@ -1,15 +1,27 @@
 {
   "slimeboundConfigMenuText": {
     "TEXT": [
-      "Permet à d'autres personnages d'obtenir des reliques du Slimebound.",
-      "Permet à d'autres personnages d'obtenir des reliques du Slimebound.",
-      "Permet à d'autres personnages d'obtenir des évènements du Slimebound.",
-      "Tout débloquer (Pas recommandé)"
+      "Permet à d'autres personnages d'obtenir des reliques du Parrain Slime.",
+      "Permet à d'autres personnages d'obtenir des reliques du Parrain Slime.",
+      "Permet à d'autres personnages d'obtenir des évènements du Parrain Slime.",
+      "Tout débloquer (Déconseillé)"
     ]
   },
   "slimeboundmod:CommandMod": {
     "TEXT": [
       " NL slimeboundmod:Commandez."
+    ]
+  },
+  "slimeboundmod:lickDescriptor": {
+    "TEXT": [
+      "Léchouille",
+      "slimeboundmod:Léchouille. NL "
+    ]
+  },
+  "slimeboundmod:tackleDescriptor": {
+    "TEXT": [
+      "Tacle",
+      "slimeboundmod:Tacle. NL "
     ]
   }
 }

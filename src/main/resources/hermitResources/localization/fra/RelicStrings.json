@@ -10,7 +10,7 @@
     "NAME": "Tige de seigle",
     "FLAVOR": "Toujours en parfait état, malgré le fait qu'il ait été mâchouillé pendant si longtemps.",
     "DESCRIPTIONS": [
-      "Le taux de #yhermit:Meurtri n'est plus réduit à chaque attaque."
+      "Au début de chaque combat, TOUS les ennemis perdent #b2 de #yForce."
     ]
   },
   "hermit:BartenderGlass": {
@@ -46,7 +46,7 @@
     "NAME": "Plaque cabossée",
     "FLAVOR": "Plusieures balles sont restées logées à l'intérieur.",
     "DESCRIPTIONS": [
-      "Lorsque vous êtes à 50% ou moins de vos PV maximum, gagnez [E] et piochez #b1 carte au début de votre tour."
+      "Lorsque vous êtes à #b50% ou moins de vos PV maximum, gagnez [E] et piochez #b1 carte au début de votre tour."
     ]
   },
   "hermit:PetGhost": {

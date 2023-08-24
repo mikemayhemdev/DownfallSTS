@@ -3,7 +3,7 @@
     "NAME": "Neow's Blessing",
     "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
     "DESCRIPTIONS": [
-      "Boss has increased max HP, no starter relic, draws #b2 less cards, and has 1 less ",
+      "Boss has increased max HP, no starter relic, draws #b2 less cards, and has #b1 less ",
       " . NL At the start of combat, Boss gains a unique Buff effect. Can't be #yStunned."
     ]
   },
@@ -448,21 +448,21 @@
     "NAME": "Ruby Heart Blessing",
     "FLAVOR": "The heart is strong.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yStrength."
+      "Start Boss combats with #b1 #yStrength."
     ]
   },
   "downfall:HeartBlessingBlue": {
     "NAME": "Sapphire Heart Blessing",
     "FLAVOR": "The heart is pleased.",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10."
+      "Start Boss combats with #b10 #yTemporary #yHP."
     ]
   },
   "downfall:HeartBlessingGreen": {
     "NAME": "Emerald Heart Blessing",
     "FLAVOR": "The heart is everything.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yDexterity."
+      "Start Boss combats with #b1 #yDexterity."
     ]
   },
   "downfall:TeleportStone": {
@@ -523,7 +523,7 @@
     "NAME": "Extra Cursed Key",
     "FLAVOR": "Locked away for good reason.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Whenever you open a non-Boss chest, obtain #b2 #rCurses."
+      "Gain [E] at the start of your turn. NL Whenever you open ANY chest, obtain #b2 #rCurses."
     ]
   },
   "downfall:ExtraCursedBell": {

@@ -36,6 +36,7 @@ import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.relics.GremlinWheel;
+import downfall.util.TextureLoader;
 import gremlin.characters.GremlinCharacter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -116,9 +117,9 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
         this.wheelAngle = 0.0F;
         this.color = new Color(1.0F, 1.0F, 1.0F, 0.0F);
         this.hpLossPercent = 0.1F;
-        this.wheelImg = ImageMaster.loadImage("images/events/wheel.png");
-        this.arrowImg = ImageMaster.loadImage("images/events/wheelArrow.png");
-        this.buttonImg = ImageMaster.loadImage("images/events/spinButton.png");
+        this.wheelImg = TextureLoader.getTexture("images/events/wheel.png");
+        this.arrowImg = TextureLoader.getTexture("images/events/wheelArrow.png");
+        this.buttonImg = TextureLoader.getTexture("images/events/spinButton.png");
         this.noCardsInRewards = true;
         if (AbstractDungeon.ascensionLevel >= 15) {
             this.hpLossPercent = 0.15F;
@@ -318,7 +319,11 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                         AbstractDungeon.getCurrRoom().monsters = monsters;
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new GremlinWheel());
-                        AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+                        if (Settings.isDailyRun) {
+                            AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(25));
+                        } else {
+                            AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(20, 30));
+                        }
 
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         this.imageEventText.clearRemainingOptions();

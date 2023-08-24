@@ -1,32 +1,25 @@
 package champ.cards;
 
-import champ.ChampMod;
 import champ.powers.IronFortressPower;
-import champ.powers.IronFortressVigorPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class IronFortress extends AbstractChampCard {
-
     public final static String ID = makeID("IronFortress");
-
-    //stupid intellij stuff power, self, uncommon
 
     public IronFortress() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-
-        //tags.add(ChampMod.TECHNIQUE);
-        //techniqueLast = true;
-        //postInit();
+        baseMagicNumber = magicNumber = 3;
+        loadJokeCardImage(this, "IronFortress.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new IronFortressPower(2));
+        applyToSelf(new IronFortressPower(magicNumber));
     }
 
     public void upp() {
-        isInnate = true;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeMagicNumber(1);
     }
 }

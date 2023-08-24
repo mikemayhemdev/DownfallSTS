@@ -1,15 +1,17 @@
 [
   {
-    "PROPER_NAME": "Na Mira",
+    "PROPER_NAME": "Morto Vivo",
     "NAMES": [
-      "Na Mira",
-	  "Dead_On",
-	  "dead_on",
-      "Na_Mira",
-      "na_mira",
+	  "Morto Vivo",
+	  "Morto_Vivo",
+	  "morto_vivo",
+	  "mortovivo",
+	  "Dead On",
+      "Dead_On",
+      "dead_on",
       "deadon"
     ],
-    "DESCRIPTION": "Essa carta têm um efeito extra se jogada do meio da sua mão."
+    "DESCRIPTION": "Cartas Morto Vivo têm um efeito bônus quando no meio da sua mão."
   },
   {
     "PROPER_NAME": "Concentração",
@@ -17,34 +19,54 @@
       "Concentrar",
       "concentrar",
       "concentrado",
-      "Concentrado"
+      "Concentrado",
+	  "Concentrate",
+      "concentrate",
+      "concentrated",
+      "Concentrated"
     ],
-    "DESCRIPTION": "A próxima carta com #yNa #yMira jogada enquanto #yConcentrado ativa seu efeito independentemente da posição. Removido no fim do turno."
+    "DESCRIPTION": "A próxima carta Morto Vivo jogada enquanto concentrado aciona seu efeito independentemente da posição. Acaba no fim do turno."
   },
   {
-    "ID": "bruise",
-    "PROPER_NAME": "Hematoma",
+    "ID": "contusão",
+    "PROPER_NAME": "Contusão",
     "NAMES": [
-      "Hematoma",
-      "hematoma"
+      "bruise",
+      "bruised",
+	  "contusão",
+      "contundido"
     ],
-  "DESCRIPTION": "Alvos com Hematoma tomam mais dano de ataque. Com cada ataque, Hematoma é reduzido por #b1. Removido no fim do turno."
-},
+    "DESCRIPTION": "Alvos contundidos recebem mais dano de ataque. Acaba no fim do turno."
+  },
   {
-    "ID": "rugged",
-    "PROPER_NAME": "Inflexível",
+    "ID": "robusto",
+    "PROPER_NAME": "Robusto",
     "NAMES": [
-      "inflexível",
-	  "Inflexível"
+      "robusto"
     ],
-  "DESCRIPTION": "Reduz a próxima instância de dano de ataque recebido a #b1."
-},
+    "DESCRIPTION": "Reduz a próxima instância de dano de ataque recebido para #b2."
+  },
   {
     "PROPER_NAME": "Recompensa",
     "NAMES": [
-      "recompensa"
+      "rugged",
+	  "recompensa"
     ],
-  "DESCRIPTION": "Inimigo normal: #b15 de ouro.       Inimigo Elite: #b35 de ouro.              Chefe: #b75 de ouro."
-}
+    "DESCRIPTION": "Inimigo normal: #b15 de ouro. Inimigo de elite: #b40 de ouro. Chefe: #b100 de ouro."
+  },
+  {
+    "PROPER_NAME": "Atordoar",
+    "NAMES": [
+      "atordoar",
+      "Atordoar",
+      "atordoado",
+      "Atordoado",
+	  "stun",
+      "Stun",
+      "stunned",
+      "Stunned"
+    ],
+    "DESCRIPTION": "Inimigos atordoados perdem sua vez."
+  }
 
 ]

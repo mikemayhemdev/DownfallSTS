@@ -22,7 +22,7 @@ import slimebound.vfx.SlimeDripsEffect;
 import static com.badlogic.gdx.graphics.Color.GREEN;
 
 
-public class MegaLick extends AbstractLickCard {
+public class MegaLick extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:MegaLick";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -55,6 +55,7 @@ public class MegaLick extends AbstractLickCard {
 
         this.slimed = this.baseSlimed = 4;
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "MegaLick.png");
 
 
     }

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
 
@@ -42,6 +43,7 @@ public class Bang extends AbstractGremlinCard {
         this.cardsToPreview = new Whiz(false);
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Bang.png");
     }
 
     public Bang(boolean real)

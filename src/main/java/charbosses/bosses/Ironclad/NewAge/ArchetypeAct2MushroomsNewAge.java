@@ -1,5 +1,6 @@
 package charbosses.bosses.Ironclad.NewAge;
 
+import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.colorless.EnSwiftStrike;
@@ -12,12 +13,15 @@ import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.DefectVoidPower;
 import charbosses.powers.bossmechanicpowers.IroncladMushroomPower;
 import charbosses.relics.*;
+import com.esotericsoftware.spine.AnimationState;
+import com.esotericsoftware.spine.AnimationStateData;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
@@ -56,7 +60,18 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
 
-
+        // animation (dragonbones broke it)
+        /*try {
+            Method loadAnimationMethod = AbstractCreature.class.getDeclaredMethod("loadAnimation", new Class[] { String.class, String.class, float.class });
+            loadAnimationMethod.setAccessible(true);
+            loadAnimationMethod.invoke(AbstractCharBoss.boss, new Object[] { "expansioncontentResources/images/bosses/ironclad/2/Mushroomskeleton.atlas", "expansioncontentResources/images/bosses/ironclad/2/Mushroomskeleton.json", 1.0f });
+            //ReflectionHacks.privateMethod(AbstractCharBoss.class, "loadAnimation", String.class, String.class, float.class).invoke(AbstractCharBoss.boss, "expansioncontentResources/images/bosses/ironclad/2/mushroomclad.atlas", "expansioncontentResources/images/bosses/ironclad/2/mushroomclad.json", 1.0f);
+            AnimationState.TrackEntry e = AbstractCharBoss.boss.state.setAnimation(0, "Idle", true);
+            ((AnimationStateData)ReflectionHacks.getPrivate(AbstractCharBoss.boss, AbstractCharBoss.class, "stateData")).setMix("Hit", "Idle", 0.1f);
+            e.setTimeScale(0.6f);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
     }
 
     @Override

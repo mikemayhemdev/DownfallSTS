@@ -36,6 +36,7 @@ public class Hermit extends GauntletBoss {
         super(NAME, ID, 72 * 2, 0.0F, -5.0F, 240.0F, 270.0F, null, x, y);
         this.loadAnimation("hermitResources/images/char/hermit/Hermit.atlas", "hermitResources/images/char/hermit/Hermit.json", 1.0f);
         this.flipHorizontal = true;
+        this.skeleton.setFlip(this.flipHorizontal, this.flipVertical);
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         e.setTimeScale(0.7F);

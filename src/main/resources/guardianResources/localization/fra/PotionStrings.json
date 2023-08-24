@@ -9,9 +9,8 @@
   "Guardian:DefensiveModePotion": {
     "NAME": "Huile de lustrage",
     "DESCRIPTIONS": [
-      "Entrez en #yMode #yDéfensif pour #b",
-      " tour.",
-      " tours."
+      "Gagnez #b",
+      " d'Armure. Entrez en #yMode #Défensif"
     ]
   },
   "Guardian:BlockOnCardUsePotion": {

@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class CrookedStrike extends AbstractChampCard {
 
     public final static String ID = makeID("CrookedStrike");
@@ -15,6 +17,7 @@ public class CrookedStrike extends AbstractChampCard {
         baseDamage = 6;
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.FINISHER);
+        loadJokeCardImage(this, "CrookedStrike.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

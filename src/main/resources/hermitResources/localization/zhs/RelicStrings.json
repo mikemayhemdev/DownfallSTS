@@ -10,7 +10,7 @@
     "NAME": "黑麦茎",
     "FLAVOR": "即使嚼的时间久，也依旧能保持薄荷的新鲜感。",
     "DESCRIPTIONS": [
-      "你的回合结束时，被 #yhermit:瘀伤 的敌人失去同等层数点生命。"
+      "战斗开始时，所有敌人失去 #b2 点 #y力量 。"
     ]
   },
   "hermit:BartenderGlass": {
@@ -89,7 +89,7 @@
     "NAME": "黑火药",
     "FLAVOR": "谨慎处理。",
     "DESCRIPTIONS": [
-      "回合结束时，本回合每触发过一次 #yhermit:精准 效果就对所有敌人造成 #b2 点伤害。"
+      "回合结束时，本回合每触发过一次 #yhermit:精准 效果，对所有敌人造成 #b2 点伤害。"
     ]
   },
   "hermit:BloodyTooth": {

@@ -143,7 +143,7 @@ public class TheSnecko extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 8;
+        return 5;
     }
 
     @Override

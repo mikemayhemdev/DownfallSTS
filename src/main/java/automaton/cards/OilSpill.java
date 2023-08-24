@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class OilSpill extends AbstractBronzeCard {
 
     public final static String ID = makeID("OilSpill");
@@ -28,6 +30,7 @@ public class OilSpill extends AbstractBronzeCard {
         thisEncodes();
         cardsToPreview = new Slimed();
         tags.add(AutomatonMod.BAD_COMPILE);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("OilSpill.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

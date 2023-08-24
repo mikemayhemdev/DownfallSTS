@@ -42,6 +42,7 @@ public class Prepare extends AbstractSlimeboundCard {
         this.baseBlock = 10;
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
+        SlimeboundMod.loadJokeCardImage(this, "Prepare.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

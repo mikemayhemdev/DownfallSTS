@@ -8,11 +8,11 @@
     ]
   },
   "sneckomod:CheatPower": {
-    "NAME": "Tricheur",
+    "NAME": "Triche",
     "DESCRIPTIONS": [
-      "Ce tour, les cartes qui choisissent un nombre aléatoire pour leurs effets choisissent le nombre maximum possible.",
+      "Ce tour, les cartes qui génèrent un nombre aléatoire pour leurs effets choisissent le nombre maximum possible.",
       "Pour les #b",
-      " prochains tours, les cartes qui choisissent un nombre aléatoire pour leurs effets choisissent le nombre maximum possible."
+      " prochains tours, les cartes qui génèrent un nombre aléatoire pour leurs effets choisissent le nombre maximum possible."
     ]
   },
   "sneckomod:MuddleDrawnCardsPower": {
@@ -28,7 +28,7 @@
     "NAME": "Bouclier de boue",
     "DESCRIPTIONS": [
       "Lorsque vous #yConfondez une carte, gagnez #b",
-      " #yd'Armure au prochain tour."
+      " #yd'Armure."
     ]
   },
   "sneckomod:SerpentMindPower": {
@@ -43,7 +43,7 @@
     "NAME": "Source inépuisable",
     "DESCRIPTIONS": [
       "Au début de chaque tour, ajoutez #b",
-      " carte(s) #yHors-classe dans votre main et #yConfondez les."
+      " carte(s) #yHors-classe dans votre main."
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {

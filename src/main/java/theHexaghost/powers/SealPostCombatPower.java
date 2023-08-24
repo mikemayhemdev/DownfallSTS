@@ -28,7 +28,7 @@ public class SealPostCombatPower extends AbstractPower implements CloneablePower
         this.owner = AbstractDungeon.player;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.isTurnBased = true;
+        this.isTurnBased = false;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
@@ -47,7 +47,7 @@ public class SealPostCombatPower extends AbstractPower implements CloneablePower
     @Override
     public void onVictory() {
         for (int i = 0; i < amount; i++)
-            AbstractDungeon.getCurrRoom().addCardReward(new SealSealReward());
+            AbstractDungeon.getCurrRoom().rewards.add(new SealSealReward());
     }
 
     @Override

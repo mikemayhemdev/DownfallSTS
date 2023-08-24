@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 
@@ -37,7 +38,7 @@ public class LickEffect extends AbstractGameEffect {
 
     public LickEffect(float tX, float tY, float duration, Color tongueColor) {
         if (img == null) {
-            img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/vfx/tongue.png");
+            img = TextureLoader.getTexture("slimeboundResources/SlimeboundImages/vfx/tongue.png");
         }
         ////SlimeboundMod.logger.info("Slime lick effect firing");
 

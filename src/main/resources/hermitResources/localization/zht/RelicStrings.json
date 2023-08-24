@@ -3,14 +3,14 @@
     "NAME": "老舊小盒",
     "FLAVOR": "裏面有一張褪色的老照片。",
     "DESCRIPTIONS": [
-      "每場戰鬥開始時，將一張 #y紀念品 加入手牌。"
+      "戰鬥開始時，將一張 #y紀念品 加入手牌。"
     ]
   },
   "hermit:RyeStalk": {
     "NAME": "黑麥莖",
     "FLAVOR": "即使嚼的時間久，也依舊能保持薄荷的新鮮感。",
     "DESCRIPTIONS": [
-      "你的回合結束時，被 #yhermit:瘀傷 的敵人失去同等層數點生命。"
+      "戰鬥開始時，所有敵人失去 #b2 點 #y力量 。"
     ]
   },
   "hermit:BartenderGlass": {
@@ -46,7 +46,7 @@
     "NAME": "受損鐵板",
     "FLAVOR": "還有幾顆子彈殘存在鐵板裏。",
     "DESCRIPTIONS": [
-      "若生命值不超過 #b50% ，回合開始獲得 [E] 並抽 #b1 張牌。"
+      "若生命值不超過 #b50% ，回合開始時獲得 [E] 並抽 #b1 張牌。"
     ]
   },
   "hermit:PetGhost": {
@@ -60,8 +60,7 @@
     "NAME": "燒焦的手套",
     "FLAVOR": "手套上還殘留著部分的塵世灰燼。",
     "DESCRIPTIONS": [
-      "抽到 #y詛咒 時，下次 #y攻擊 額外造成 #b3 點傷害。"
-
+      "抽到 #y詛咒 時，獲得 #b3 層 #y活力 。"
     ]
   },
   "hermit:ClaspedLocket": {
@@ -76,14 +75,14 @@
     "NAME": "刮胡刀",
     "FLAVOR": "幹凈利落。。。",
     "DESCRIPTIONS": [
-      "移除一張牌時回復 #b15 點生命。"
+      "移除或變化一張牌時，回復 #b15 點生命。"
     ]
   },
   "hermit:BrassTacks": {
     "NAME": "破舊銅釘",
     "FLAVOR": "盡管年深歲久，你仍然能從它們身上感受到昔日的光芒。",
     "DESCRIPTIONS": [
-      "回合結束時獲得 #b2 點 #y格擋 。"
+      "回合結束時，獲得 #b2 點 #y格擋 。"
     ]
   },
   "hermit:BlackPowder": {

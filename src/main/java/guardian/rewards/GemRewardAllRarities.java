@@ -4,21 +4,21 @@ import basemod.abstracts.CustomReward;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.patches.RewardItemTypeEnumPatch;
+import downfall.util.TextureLoader;
 import guardian.GuardianMod;
-import guardian.patches.RewardItemTypePatch;
 
 public class GemRewardAllRarities extends CustomReward {
 
     public static final String[] TEXT;
-    private static final Texture TEXTURE = ImageMaster.loadImage(GuardianMod.getResourcePath("ui/gemreward.png"));
+    private static final Texture TEXTURE = TextureLoader.getTexture(GuardianMod.getResourcePath("ui/gemreward.png"));
 
     static {
         TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
     }
 
     public GemRewardAllRarities() {
-        super(TEXTURE, TEXT[6], RewardItemTypePatch.GEMALLRARITIES);
+        super(TEXTURE, TEXT[6], RewardItemTypeEnumPatch.GEMALLRARITIES);
         GuardianMod.logger.info("New Gem Reward created, " + GuardianMod.getRewardGemCards(false).size() + "cards");
         this.cards = GuardianMod.getRewardGemCards(false);
     }

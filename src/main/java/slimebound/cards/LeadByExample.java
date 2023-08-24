@@ -37,6 +37,7 @@ public class LeadByExample extends AbstractSlimeboundCard {
     public LeadByExample() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 1;
+        SlimeboundMod.loadJokeCardImage(this, "LeadByExample.png");
 
 
       //  this.tags.add(SneckoMod.BANNEDFORSNECKO);

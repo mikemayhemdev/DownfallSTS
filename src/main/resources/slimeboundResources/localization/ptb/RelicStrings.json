@@ -1,0 +1,106 @@
+{
+  "Slimebound:AbsorbEndCombat": {
+    "NAME": "Coração de Gosma",
+    "FLAVOR": "Me sinto tão funky.",
+    "DESCRIPTIONS": [
+      "Sempre que você #yslimeboundmod:Consumir, cura #b2 HP, até #b8 a cada combate."
+    ]
+  },
+  "Slimebound:AbsorbEndCombatUpgraded": {
+    "NAME": "Coração Negro de Gosma",
+    "FLAVOR": "O Segredo da Gosma.",
+    "DESCRIPTIONS": [
+      "Substitui ",
+      ".[] NL Sempre que você #yslimeboundmod:Consumir, cura #b3 HP, até #b15 a cada combate."
+    ]
+  },
+  "Slimebound:SlimedTailRelic": {
+    "NAME": "Cauda Gosmenta",
+    "FLAVOR": "Uma cauda falsa para enganar inimigos durante o combate, completamente coberta de gosma.",
+    "DESCRIPTIONS": [
+      "Sempre que você #yDividir, ganhe #b",
+      " #yBloqueio."
+    ]
+  },
+  "Slimebound:PotencyRelic": {
+    "NAME": "Pedra de Nomakk",
+    "FLAVOR": "Quando apresentada a um de seus Gangues de Gosma, parece fazer a bolha dançar.",
+    "DESCRIPTIONS": [
+      "No início do combate, ganhe #b1 #yslimeboundmod:Potência."
+    ]
+  },
+  "Slimebound:DailySplitRelic": {
+    "NAME": "Gosma na Torre",
+    "FLAVOR": "Sempre Dividir. Por que isso é uma relíquia? Porque não consigo descobrir como adicionar o mod personalizado à lista de mods ativos na interface do usuário!",
+    "DESCRIPTIONS": [
+      "#bModo #bPersonalizado #bExecutando #bModificador NL Todos os inimigos se dividem em dois inimigos de Gosma em #b50% de HP."
+    ]
+  },
+  "Slimebound:ScrapOozeRelic": {
+    "NAME": "Gosma de Sucata",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "No início do combate, invoque #yGosma #ySucata (pode ser revivida se #yAbsorvida). NL Em Áreas de Descanso, você pode doar uma carta para a #yGosma #ySucata, modificando seu dano: NL #b+1 de dano para #gIncomuns NL #b+2 de dano para #yRaros NL #b-1 de dano para Comuns NL #b-2 de dano para #rMaldições",
+      "Remova uma carta de seu baralho e modifique o dano da Gosma de Sucata.",
+      "Nada para dar para a Gosma de Sucata.",
+      "Sucata"
+    ]
+  },
+  "Slimebound:GreedOozeRelic": {
+    "NAME": "Gosma da Ganância",
+    "FLAVOR": "Um amigo encontrado na Torre que devora almas.",
+    "DESCRIPTIONS": [
+      "No início do combate, invoca #yGosma #yGananciosa (pode ser revivida se #yAbsorvida). NL Nos acampamentos, #yGosma #yGananciosa irá tomar #b50 de suas almas, aumentando seu dano em #b1."
+    ]
+  },
+    "Slimebound:PreparedRelic": {
+    "NAME": "Sopa de Slime",
+    "FLAVOR": "Tem um gosto horrível, mas é incrivelmente saudável.",
+    "DESCRIPTIONS": [
+      "Quando você entra em um Acampamento, comece o próximo combate com um card #yPrepare que custa #b0."
+    ]
+  },
+  "Slimebound:AggressiveSlimeRelic": {
+    "NAME": "Habitante de Gosma",
+    "FLAVOR": "Ele me seguiu até em casa. Posso ficar com ele?",
+    "DESCRIPTIONS": [
+      "No início do combate, #yslimeboundmod:Divida em um #ySlime #yslimeboundmod:Brutamontes."
+    ]
+  },
+  "Slimebound:SlimedSkullRelic": {
+    "NAME": "Crânio Pegajoso",
+    "FLAVOR": "Um crânio de Snecko em péssimas condições. Sujo e pegajoso, a sujeira e a graxa grudam nele como cola.",
+    "DESCRIPTIONS": [
+      "Sempre que você aplicar #yslimeboundmod:Goop, aplique mais #b",
+      " #yslimeboundmod:Goop."
+    ]
+  },
+  "Slimebound:MaxSlimesRelic": {
+    "NAME": "Bandeira de Jeremiah",
+    "FLAVOR": "Você e seu exército de Slimes.",
+    "DESCRIPTIONS": [
+      "No início do combate, ganhe #b1 espaço para Slime e #yslimeboundmod:Divida em um Slime aleatório."
+    ]
+  },
+  "Slimebound:SelfDamagePreventRelic": {
+    "NAME": "Equipamento de Proteção",
+    "FLAVOR": "A melhor defesa é um bom ataque.",
+    "DESCRIPTIONS": [
+      "Reduza o dano que você recebe de #yslimeboundmod:Investidas em #b3."
+    ]
+  },
+  "Slimebound:TarBlob": {
+    "NAME": "Bolha de Alcatrão",
+    "FLAVOR": "O tipo ruim de Slime.",
+    "DESCRIPTIONS": [
+      "Ganhe [E] no início do seu turno. No início do combate, perca #b1 espaço para Slime."
+    ]
+  },
+  "Slimebound:StickyStick": {
+    "NAME": "Cubo Gelatinoso",
+    "FLAVOR": "Ei, ele grudou no seu corpo.",
+    "DESCRIPTIONS": [
+      "Sempre que você comprar um card de #yStatus, compre #b1 card."
+    ]
+  }
+}

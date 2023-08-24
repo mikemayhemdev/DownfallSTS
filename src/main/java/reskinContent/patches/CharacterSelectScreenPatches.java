@@ -189,7 +189,7 @@ public class CharacterSelectScreenPatches {
                 for (CharacterOption o : __instance.options) {
                     for (AbstractSkinCharacter c : characters) {
                         c.InitializeReskinCount();
-                        if (o.name.equals(c.id) && o.selected && c.skins[c.reskinCount].hasAnimation() && c.skins[c.reskinCount].portraitAnimationType != 0) {
+                        if (o.name.equals(c.id) && o.selected && c.skins[c.reskinCount].portraitAnimationType != 0) {
                             c.skins[c.reskinCount].render(sb);
 
                             if (char_effectsQueue.size() > 0) {

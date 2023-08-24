@@ -15,7 +15,8 @@
       "HP",
       "Dead!",
       "Strength",
-      "Souls stolen"
+      "Souls stolen",
+      "Doom"
     ]
   },
   "downfall:BustKeyButton": {
@@ -23,10 +24,10 @@
       "Break Ruby",
       "Break Sapphire",
       "Break Emerald",
-      "(Free Action) Spend 100 Souls: Destroy key to ",
-      "gain 1 Strength.",
-      "raise Max HP by 10.",
-      "gain 1 Dexterity.",
+      "(Free Action) Spend 50 Souls: Destroy key to ",
+      "start Boss combats with 1 Strength.",
+      "start Boss combats with 10 Temporary HP.",
+      "start Boss combats with 1 Dexterity.",
       "Key shattered!",
       "Requires ",
       " Souls.",
@@ -62,7 +63,8 @@
       "Disable Champ's Stance Helper - for experienced Champions",
       "Prevent Snecko from using card pools from other mods.",
       "Disable music overrides (requires game restart)",
-      "Unlock all locked alternative skin for Downfall characters"
+      "Unlock all locked alternative skin for Downfall characters",
+      "Use icons instead of adding to text to cards for applied properties."
     ]
   },
   "downfall:EnergyPanelTip": {

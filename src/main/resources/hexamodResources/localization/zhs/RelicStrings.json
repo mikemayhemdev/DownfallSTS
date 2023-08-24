@@ -17,15 +17,15 @@
     "NAME": "以太印记",
     "FLAVOR": "看看我们能不能做得... 更好。",
     "DESCRIPTIONS": [
-      "替换 #r",
-      ".[]  NL 每回合首次 #y点燃 时，获得 [E] 。"
+      "替换 ",
+      " 。 NL 每回合首次 #y点燃 时，获得 [E] 。"
     ]
   },
   "hexamod:IceCube": {
     "NAME": "幽灵雪花",
     "FLAVOR": "我感觉……好冷。",
     "DESCRIPTIONS": [
-      "回合开始时获得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才引爆。"
+      "回合开始时获得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才引爆，失去 #b1 点 #yhexamod:热烈 。"
     ]
   },
   "hexamod:SoulConsumer": {
@@ -53,7 +53,7 @@
     "NAME": "火种",
     "FLAVOR": "火使一切更美好。",
     "DESCRIPTIONS": [
-      "战斗开始时获得 #b1 点 #yhexamod:热烈 。"
+      "战斗开始时，获得 #b1 点 #yhexamod:热烈 。"
     ]
   },
   "hexamod:SoulOfChaos": {

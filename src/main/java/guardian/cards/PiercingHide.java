@@ -19,6 +19,8 @@ import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.LoseThornsPower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class PiercingHide extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PiercingHide");
     public static final String NAME;
@@ -57,6 +59,7 @@ public class PiercingHide extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PiercingHide.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -4,6 +4,7 @@ import automaton.AutomatonChar;
 import basemod.CustomCharacterSelectScreen;
 import basemod.ReflectionHacks;
 import champ.ChampChar;
+import collector.CollectorChar;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
@@ -54,7 +55,7 @@ public class EvilModeCharacterSelect {
             Iterator<CharacterOption> options = __instance.options.iterator();
 
             ArrayList<CharacterOption> basegameOptions = new ArrayList<>(), moddedOptions = new ArrayList<>();
-            CharacterOption[] villainOptions = new CharacterOption[7];
+            CharacterOption[] villainOptions = new CharacterOption[8];
 
             while (options.hasNext()) {
                 CharacterOption o = options.next();
@@ -112,6 +113,12 @@ public class EvilModeCharacterSelect {
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
                                 villainOptions[6] = o;
+                            } else if (o.c.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
+                                if (UnlockTracker.isCharacterLocked("Collector")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[7] = o;
                             } else {
                                 isVillain = false;
                                 moddedOptions.add(o);

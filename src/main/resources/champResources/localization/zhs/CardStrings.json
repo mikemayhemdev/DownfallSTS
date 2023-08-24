@@ -33,7 +33,7 @@
   },
   "champ:FaceSlap": {
     "NAME": "打脸",
-    "DESCRIPTION": "造成 !D! 点伤害， NL 两次若目标已被 易伤 。 NL champ:战狂 champ:连段 ： NL 给予 !M! 层 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ： NL 给予 !M! 层 易伤 。"
   },
   "champ:FlashCut": {
     "NAME": "拔刀打击",
@@ -57,7 +57,7 @@
   },
   "champ:SetATrap": {
     "NAME": "布置陷阱",
-    "DESCRIPTION": "获得 !B! 点 格挡 ，两次若有敌人已被 虚弱 。 NL champ:防守 champ:连段 ： NL 给予所有敌人 !M! 层 虚弱 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL champ:防守 champ:连段 ：给予所有敌人 !M! 层 虚弱 。"
   },
   "champ:Backstep": {
     "NAME": "后撤",
@@ -89,12 +89,11 @@
   },
   "champ:Circumvent": {
     "NAME": "规避",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL *任意 champ:连段 ：抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "弃用"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌， NL 丢弃 !M! 张牌。"
   },
   "champ:SkillfulDodge": {
     "NAME": "精巧闪避",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ： NL 本场战斗数值各加 !cool! 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ： NL 本场战斗各加 !cool! 。"
   },
   "champ:TornadoPunch": {
     "NAME": "飓风拳",
@@ -112,7 +111,7 @@
   },
   "champ:EnchantShield": {
     "NAME": "附魔坚盾",
-    "DESCRIPTION": "选择一张手牌。 NL 其 格挡 增加 !M! 点。 NL 消耗 。",
+    "DESCRIPTION": "选择一张手牌， NL 其 格挡 增加 !M! 点。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我没有能够强化的牌"
     ]
@@ -136,8 +135,7 @@
   },
   "champ:IronFortress": {
     "NAME": "战斗跃舞",
-    "DESCRIPTION": "进入不同 姿态 时， NL 获得其 champ:技术 奖励两次。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 进入不同 姿态 时， NL 获得其 champ:技术 奖励两次。"
+    "DESCRIPTION": "进入不同 姿态 时， NL 获得 !M! 点 格挡 。"
   },
   "champ:Lariat": {
     "NAME": "身强体健",
@@ -157,7 +155,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "毒舌",
-    "DESCRIPTION": "目标获得1点 力量 。 NL 获得 !M! 层 活力 。",
+    "DESCRIPTION": "获得 !M! 层 活力 。 NL 给予 !DM! 层 虚弱 。",
     "EXTENDED_DESCRIPTION": [
       " champ:战狂 champ:连段 ：获得 !M! 点 guardianmod:临时 力量 。 NL ",
       " champ:防守 champ:连段 ：获得 !M! 点 guardianmod:临时 敏捷 。"
@@ -177,7 +175,7 @@
   },
   "champ:EnchantSword": {
     "NAME": "附魔利剑",
-    "DESCRIPTION": "选择一张手牌。 NL 其伤害增加 !M! 点。 NL 消耗 。",
+    "DESCRIPTION": "选择一张手牌， NL 其伤害增加 !M! 点。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我不必强化"
     ]
@@ -197,8 +195,8 @@
   },
   "champ:HeavySlash": {
     "NAME": "大师斩击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 随机获得 *技能 牌。 NL 其耗能为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得 *技能 牌+。 NL 其耗能为0。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 随机获得 *技能 牌， NL 其耗能为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得 *技能 牌+， NL 其耗能为0。"
   },
   "champ:CheapShot": {
     "NAME": "偷袭",
@@ -217,7 +215,7 @@
     "NAME": "怒锤",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ： NL 本场战斗次数加1。",
     "EXTENDED_DESCRIPTION": [
-      "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ：攻击次数加1。"
+      "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ： NL 本场战斗次数加1。"
     ]
   },
   "champ:VampiricStrike": {
@@ -237,7 +235,7 @@
     ]
   },
   "champ:CrownThrow": {
-    "NAME": "投掷王冠",
+    "NAME": "投掷金冠",
     "DESCRIPTION": " 造成 !D! 点伤害。 NL champ:战狂 champ:连段 ： NL 抽 !M! 张 *攻击 牌。"
   },
   "champ:Encircle": {
@@ -266,7 +264,7 @@
     "UPGRADE_DESCRIPTION": "保留 。 NL 下回合开始前你的生命将不会减少。 NL 消耗 。"
   },
   "champ:DeathBlow": {
-    "NAME": "绝地反击",
+    "NAME": "致命一击",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !M! 层 活力 。 NL 消耗 。"
   },
   "champ:ArenaPreparation": {
@@ -279,8 +277,7 @@
   },
   "champ:SteelEdge": {
     "NAME": "剑锋",
-    "DESCRIPTION": "champ:战狂 champ:连段 ： NL 造成 !D! 点伤害X次。 NL champ:防守 champ:连段 ： NL 获得 !B! 点 格挡 X次。",
-    "UPGRADE_DESCRIPTION": "champ:战狂 champ:连段 ： NL 造成 !D! 点伤害X+1次。 NL champ:防守 champ:连段 ： NL 获得 !B! 点 格挡 X+1次。",
+    "DESCRIPTION": "造成 !D! 点伤害X次。",
     "EXTENDED_DESCRIPTION": [
       " champ:战狂 champ:连段 ：造成 !D! 点伤害X次。 NL ",
       " champ:防守 champ:连段 ：获得 !B! 点 格挡 X次。",
@@ -291,7 +288,7 @@
   },
   "champ:Improvising": {
     "NAME": "触类旁通",
-    "DESCRIPTION": "每回合首次 champ:连段 时， NL 将该牌返回手牌。 NL 其下次耗能为0。"
+    "DESCRIPTION": "回合开始时若未处于 姿态 ，随机进入一种。"
   },
   "champ:CalledShot": {
     "NAME": "畅饮",
@@ -333,7 +330,7 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "利落",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL 所有敌人获得1点 力量 。"
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! 点 敏捷 。"
   },
   "champ:BerserkerStyle": {
     "NAME": "狂暴战法",
@@ -364,7 +361,7 @@
   },
   "champ:EnchantCrown": {
     "NAME": "附魔金冠",
-    "DESCRIPTION": "选择一张手牌。 NL 其耗能变为0。 NL 消耗 。",
+    "DESCRIPTION": "选择一张手牌， NL 其耗能变为0。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我没有能强化的牌"
     ]
@@ -387,8 +384,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "三重打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击 。 NL 其耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击+ 。 NL 其耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击 ， NL 其耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击+ ， NL 其耗能为0。 NL 消耗 。"
   },
   "champ:WindUp": {
     "NAME": "挑衅",

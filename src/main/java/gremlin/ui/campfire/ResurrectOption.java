@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
+import downfall.util.TextureLoader;
 import gremlin.GremlinMod;
 import gremlin.characters.GremlinCharacter;
 
@@ -31,9 +32,9 @@ public class ResurrectOption extends AbstractCampfireOption {
     public void updateImage() {
         this.label = TEXT[0];
         if (this.usable) {
-            this.img = ImageMaster.loadImage(GremlinMod.getResourcePath("ui/campfire/resurrect.png"));
+            this.img = TextureLoader.getTexture(GremlinMod.getResourcePath("ui/campfire/resurrect.png"));
         } else {
-            this.img = ImageMaster.loadImage(GremlinMod.getResourcePath("ui/campfire/resurrect_unusable.png"));
+            this.img = TextureLoader.getTexture(GremlinMod.getResourcePath("ui/campfire/resurrect_unusable.png"));
         }
         if (!this.used) {
             if (this.usable) {
@@ -57,7 +58,7 @@ public class ResurrectOption extends AbstractCampfireOption {
         this.used = true;
         this.usable = false;
         this.description = TEXT[3];
-        this.img = ImageMaster.loadImage(GremlinMod.getResourcePath("ui/campfire/resurrect_unusable.png"));
+        this.img = TextureLoader.getTexture(GremlinMod.getResourcePath("ui/campfire/resurrect_unusable.png"));
     }
 
     @Override

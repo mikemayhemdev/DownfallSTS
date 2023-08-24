@@ -1,27 +1,22 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.cards.green.Prepared;
+import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.EvolvePower;
 import hermit.HermitMod;
-import hermit.actions.CovetAction;
+import hermit.actions.HandSelectAction;
 import hermit.characters.hermit;
+import hermit.util.Wiz;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Covet extends AbstractDynamicCard {
-
-    /*
-     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
-     * For Each Loop x2" "Apply 1 Vulnerable to all enemies, 2(3) times.
-     */
 
     // TEXT DECLARATION
 
@@ -30,6 +25,7 @@ public class Covet extends AbstractDynamicCard {
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardAction");
 
     // /TEXT DECLARATION/
 
@@ -55,9 +51,22 @@ public class Covet extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new CovetAction(magicNumber));
+        Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {
+            for (AbstractCard c : list)
+            {
+                if (c.color == AbstractCard.CardColor.CURSE)
+                    Wiz.p().hand.moveToExhaustPile(c);
+                else
+                {
+                    Wiz.p().hand.moveToDiscardPile(c);
+                    c.triggerOnManualDiscard();
+                    GameActionManager.incrementDiscard(false);
+                }
+            }
+            list.clear();
+        }, null, uiStrings.TEXT[0],false,false,false));
+        Wiz.atb(new DrawCardAction(magicNumber));
     }
-
 
     //Upgraded stats.
     @Override

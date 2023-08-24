@@ -33,8 +33,8 @@
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Хроно-ускорение",
-    "DESCRIPTION": "Даёт 1 Силы, когда вы разыгрываете *12-ую карту.",
-    "UPGRADE_DESCRIPTION": "Даёт 1 Силы. NL Даёт 1 Силы, когда вы разыгрываете *12-ую карту."
+    "DESCRIPTION": "Даёт 2 Силы, когда вы разыгрываете *12-ую карту.",
+    "UPGRADE_DESCRIPTION": "Даёт 2 Силы. NL Даёт 2 Силы, когда вы разыгрываете *12-ую карту."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Взрыв Дону",
@@ -46,14 +46,12 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "Благословение Создателя",
-    "DESCRIPTION": "Выберите 1: Даёт !M! Силы или 5 Панциря.",
-    "UPGRADE_DESCRIPTION": "Выберите 1: Даёт !M! Силы или 8 Панциря.",
+    "DESCRIPTION": "Выберите 1: Даёт !M! Силы или !DM! Панциря.",
     "EXTENDED_DESCRIPTION": [
       "Сила Дону",
       "Даёт !M! Силы.",
       "Щит Деки",
-      "Даёт 5 Панциря.",
-      "Даёт 8 Панциря."
+      "Даёт !M! Панциря."
     ]
   },
   "expansioncontent:PrepareCrush": {

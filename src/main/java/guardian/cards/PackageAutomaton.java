@@ -107,12 +107,9 @@ public class PackageAutomaton extends AbstractGuardianCard {
             this.rawDescription = UPGRADED_DESCRIPTION;
 
             this.initializeDescription();
-            if (prev1 != null)
-                prev1.upgrade();
-            if (prev2 != null)
-                prev2.upgrade();
-            if (prev3 != null)
-                prev3.upgrade();
+            constPrev1.upgrade();
+            constPrev2.upgrade();
+            constPrev3.upgrade();
         }
     }
 
@@ -126,6 +123,22 @@ public class PackageAutomaton extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
+    }
+
+    @Override
+    public void hover() {
+        prev1 = constPrev1;
+        prev2 = constPrev2;
+        prev3 = constPrev3;
+        super.hover();
+    }
+
+    @Override
+    public void unhover() {
+        super.unhover();
+        prev1 = null;
+        prev2 = null;
+        prev3 = null;
     }
 
     @Override
@@ -146,31 +159,22 @@ public class PackageAutomaton extends AbstractGuardianCard {
             float xPosition3 = Settings.WIDTH * 0.65F;
 
             if (prev1 != null) {
-                AbstractCard card = prev1.makeStatEquivalentCopy();
-                if (card != null) {
-                    card.drawScale = drawScale;
-                    card.current_x = xPosition1;
-                    card.current_y = yPosition1;
-                    card.render(sb);
-                }
+                    prev1.drawScale = drawScale;
+                    prev1.current_x = xPosition1;
+                    prev1.current_y = yPosition1;
+                    prev1.render(sb);
             }
             if (prev2 != null) {
-                AbstractCard card = prev2.makeStatEquivalentCopy();
-                if (card != null) {
-                    card.drawScale = drawScale;
-                    card.current_x = xPosition2;
-                    card.current_y = yPosition1;
-                    card.render(sb);
-                }
+                    prev2.drawScale = drawScale;
+                    prev2.current_x = xPosition2;
+                    prev2.current_y = yPosition1;
+                    prev2.render(sb);
             }
             if (prev3 != null) {
-                AbstractCard card = prev3.makeStatEquivalentCopy();
-                if (card != null) {
-                    card.drawScale = drawScale;
-                    card.current_x = xPosition3;
-                    card.current_y = yPosition1;
-                    card.render(sb);
-                }
+                    prev3.drawScale = drawScale;
+                    prev3.current_x = xPosition3;
+                    prev3.current_y = yPosition1;
+                    prev3.render(sb);
             }
         } else {
             if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
@@ -194,31 +198,22 @@ public class PackageAutomaton extends AbstractGuardianCard {
                 xPosition1 = this.current_x + xOffset1;
 
                 if (prev1 != null) {
-                    AbstractCard card = prev1.makeStatEquivalentCopy();
-                    if (card != null) {
-                        card.drawScale = drawScale;
-                        card.current_x = xPosition1;
-                        card.current_y = yPosition1;
-                        card.render(sb);
-                    }
+                    prev1.drawScale = drawScale;
+                    prev1.current_x = xPosition1;
+                    prev1.current_y = yPosition1;
+                    prev1.render(sb);
                 }
                 if (prev2 != null) {
-                    AbstractCard card = prev2.makeStatEquivalentCopy();
-                    if (card != null) {
-                        card.drawScale = drawScale;
-                        card.current_x = xPosition1;
-                        card.current_y = yPosition2;
-                        card.render(sb);
-                    }
+                    prev2.drawScale = drawScale;
+                    prev2.current_x = xPosition1;
+                    prev2.current_y = yPosition2;
+                    prev2.render(sb);
                 }
                 if (prev3 != null) {
-                    AbstractCard card = prev3.makeStatEquivalentCopy();
-                    if (card != null) {
-                        card.drawScale = drawScale;
-                        card.current_x = xPosition1;
-                        card.current_y = yPosition3;
-                        card.render(sb);
-                    }
+                    prev3.drawScale = drawScale;
+                    prev3.current_x = xPosition1;
+                    prev3.current_y = yPosition3;
+                    prev3.render(sb);
                 }
             }
 

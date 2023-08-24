@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import guardian.powers.ExhaustStatusesPower;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class Safeguard extends AbstractBronzeCard {
 
     public final static String ID = makeID("Safeguard");
@@ -24,6 +26,7 @@ public class Safeguard extends AbstractBronzeCard {
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Safeguard.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

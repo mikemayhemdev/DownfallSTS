@@ -3,6 +3,7 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.powers.CheapStockPower;
+import sneckomod.SneckoMod;
 
 public class CheapStock extends AbstractSneckoCard {
 
@@ -12,6 +13,7 @@ public class CheapStock extends AbstractSneckoCard {
 
     public CheapStock() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        SneckoMod.loadJokeCardImage(this, "CheapStock.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

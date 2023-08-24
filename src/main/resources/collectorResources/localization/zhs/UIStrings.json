@@ -1,0 +1,110 @@
+{
+  "collector:CollectionReward": {
+    "TEXT": [
+      "Choose a card to Collect."
+    ]
+  },
+  "collector:CollectibleCardTab": {
+    "TEXT": [
+      "藏品"
+    ]
+  },
+  "collector:CollectionScreen": {
+    "TEXT": [
+      "隐藏",
+      "每场战斗开始时，这些牌将会出现在你的收藏堆中。"
+    ]
+  },
+  "collector:CollectionUITopPanel": {
+    "TEXT": [
+      "收藏堆",
+      "查看收藏堆中的牌。",
+      "每场战斗开始时，这些牌将会出现在你的收藏堆中。"
+    ]
+  },
+  "collector:CombatCollectionPileButton": {
+    "TEXT": [
+      "收藏堆",
+      "点击此处查看本场战斗中还处于收藏堆的牌。每回合开始时，你将从此处额外抽一张藏品牌。",
+      "我没有收藏任何牌！"
+    ]
+  },
+  "collector:EssenceCount": {
+    "TEXT": [
+      "魂粹",
+      "将 #y藏品 牌加入 #y收藏堆 时需要消耗 #g魂粹 。战斗胜利时可获得 #b1 点，精英战斗为 #b2 点，首领战斗 #b3 点。目前有 #b",
+      " 点 #g魂粹 。"
+    ]
+  },
+  "collector:CombatCollectionViewScreen": {
+    "TEXT": [
+      "收藏堆"
+    ]
+  },
+  "collector:PyreInfo": {
+    "TEXT": [
+      "焰葬",
+      "打出本牌时，需额外消耗一张手牌才能打出。"
+    ]
+  },
+  "collector:CollectedCardMod": {
+    "TEXT": [
+      "collector:藏品 。 NL ",
+      ""
+    ]
+  },
+  "collector:CollectibleCardReward": {
+    "TEXT": [
+      "藏品：",
+      "可将本牌加入收藏堆。"
+    ]
+  },
+  "collector:HoardedMod": {
+    "TEXT": [
+      "不能被打出 。 保留 。 NL ",
+      "不能被打出 。 NL ",
+      "保留 。 NL "
+    ]
+  },
+  "collector:SecondEnergyOrb": {
+    "TEXT": [
+      "储能",
+      "一种特殊的 #y能量 ，回合结束时不清零。"
+    ]
+  },
+  "collector:PyreCostSpendScreen": {
+    "TEXT": [
+      "消耗来进行焰葬。"
+    ]
+  },
+  "collector:PyreModText": {
+    "TEXT": [
+      "我没有牌可供消耗！"
+    ]
+  },
+  "collector:StashAwayCampfireOption": {
+    "TEXT": [
+      "释放",
+      "移除收藏堆一张牌，获得",
+      "灵魂。",
+      "需要一张藏品牌。",
+      "选择一张藏品牌来移除。"
+    ]
+  },
+  "collector:BonusEventOption": {
+    "TEXT": [
+      "[捕获]"
+    ]
+  },
+  "collector:EssenceReward": {
+    "TEXT": [
+      "",
+      " 魂粹"
+    ]
+  },
+  "collector:CharacterOption": {
+    "TEXT": [
+      "魂粹："
+    ]
+  }
+}

@@ -17,6 +17,8 @@ import guardian.patches.AbstractCardEnum;
 import guardian.vfx.SmallLaserEffectColored;
 import sneckomod.SneckoMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class PrismaticBeam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PrismaticBeam");
@@ -27,10 +29,10 @@ public class PrismaticBeam extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
-    private static final int DAMAGE = 2;
+    private static final int DAMAGE = 3;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 2;
+    private static final int UPGRADE_BONUS = 1;
     private static final int MULTICOUNT = 1;
     private static final int SOCKETS = 3;
     private static final boolean SOCKETSAREAFTER = true;
@@ -62,6 +64,7 @@ public class PrismaticBeam extends AbstractGuardianCard {
         
         tags.add(AbstractCard.CardTags.HEALING);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PrismaticBeam.png"));
     }
 
     @Override

@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class TwinSlam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("TwinSlam");
@@ -54,6 +56,7 @@ public class TwinSlam extends AbstractGuardianCard {
         cardsToPreview = new SecondStrikePreviewCard();
         ((AbstractGuardianCard)cardsToPreview).socketCount = 0;
         ((AbstractGuardianCard)cardsToPreview).updateDescription();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("TwinSlam.png"));
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
     }

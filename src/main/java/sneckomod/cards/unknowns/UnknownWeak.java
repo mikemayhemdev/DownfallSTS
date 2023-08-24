@@ -22,6 +22,7 @@ public class UnknownWeak extends AbstractUnknownCard {
 
     public UnknownWeak() {
         super(ID, CardType.SKILL, CardRarity.UNCOMMON);
+        SneckoMod.loadJokeCardImage(this, "UnknownWeak.png");
     }
 
     public boolean useCheck(AbstractCard card) {

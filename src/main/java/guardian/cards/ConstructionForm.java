@@ -15,6 +15,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.ConstructModePower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class ConstructionForm extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("ConstructionForm");
     public static final String NAME;
@@ -52,6 +54,7 @@ public class ConstructionForm extends AbstractGuardianCard {
         isEthereal = true;
 
         tags.add(BaseModCardTags.FORM);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("ConstructionForm.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

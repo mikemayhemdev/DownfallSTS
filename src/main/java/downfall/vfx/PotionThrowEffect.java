@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 
@@ -40,7 +41,7 @@ public class PotionThrowEffect extends AbstractGameEffect {
 
     public PotionThrowEffect(String imgSrc, float srcX, float srcY, float destX, float destY, float scale, float duration, boolean mute, boolean bigHeight) {
         if (img == null) {
-            img = ImageMaster.loadImage(imgSrc);
+            img = TextureLoader.getTexture(imgSrc);
         }
         ////SlimeboundMod.logger.info("Slime normal projectile firing");
 

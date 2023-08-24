@@ -54,7 +54,7 @@ public class Beggar_Evil extends AbstractImageEvent {
         if (AbstractDungeon.ascensionLevel >= 15) {
             this.gold = 50;
         } else {
-            this.gold = 100;
+            this.gold = 75;
         }
 
         this.imageEventText.setDialogOption(OPTIONS[4]);

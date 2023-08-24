@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.WallopEffect;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class CheapShot extends AbstractChampCard {
 
     public final static String ID = makeID("CheapShot");
@@ -22,6 +24,7 @@ public class CheapShot extends AbstractChampCard {
         baseDamage = DAMAGE;
       //  tags.add(ChampMod.FINISHER);
         exhaust = true;
+        loadJokeCardImage(this, "CheapShot.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

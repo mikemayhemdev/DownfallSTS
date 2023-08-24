@@ -63,11 +63,9 @@ public class LadyInBlue extends AbstractMonster {
 
     @Override
     public void changeState(String stateName) {
-        switch(stateName) {
-            case "ATTACK":
-                this.state.setAnimation(0, "Attack", false);
-                this.state.addAnimation(0, "Idle", true, 0.0F);
-                break;
+        if ("ATTACK".equals(stateName)) {
+            this.state.setAnimation(0, "Attack", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
         }
 
     }
@@ -127,6 +125,10 @@ public class LadyInBlue extends AbstractMonster {
             this.state.setAnimation(0, "Hit", false);
             this.state.addAnimation(0, "Idle", true, 0.0F);
         }
+        if (info.output > 0 && this.hasPower("Intangible")) {
+            info.output = 1;
+        }
+        super.damage(info);
     }
 
     protected void getMove(int num) {

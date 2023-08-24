@@ -34,7 +34,7 @@ public class Duel extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
 
         postInit();
-        loadJokeCardImage(this, "Challenge.png");
+        loadJokeCardImage(this, "Duel.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

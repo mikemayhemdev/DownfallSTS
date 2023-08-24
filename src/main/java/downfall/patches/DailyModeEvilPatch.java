@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.integrations.DistributorFactory;
 import com.megacrit.cardcrawl.screens.mainMenu.MenuCancelButton;
 import downfall.downfallMod;
+import downfall.util.TextureLoader;
 
 public class DailyModeEvilPatch {
 
@@ -74,10 +75,10 @@ public class DailyModeEvilPatch {
                 builder.append(" NL ");
                 if (todaysRunIsEvil) {
                     builder.append(downfallText);
-                    img = ImageMaster.loadImage(downfallMod.assetPath("/images/ui/dailyEvil.png"));
+                    img = TextureLoader.getTexture(downfallMod.assetPath("/images/ui/dailyEvil.png"));
                 } else {
                     builder.append(standardText);
-                    img = ImageMaster.loadImage(downfallMod.assetPath("/images/ui/dailyStandard.png"));
+                    img = TextureLoader.getTexture(downfallMod.assetPath("/images/ui/dailyStandard.png"));
                 }
 
 

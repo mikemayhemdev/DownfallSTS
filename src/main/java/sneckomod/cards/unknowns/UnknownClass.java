@@ -44,6 +44,7 @@ public class UnknownClass extends AbstractUnknownCard {
             + "\", \"UPGRADE_DESCRIPTION\": \"" + UPGRADE_DESCRIPTION +"\"}}");
         }
         initializeDescription();
+        SneckoMod.loadJokeCardImage(this, "UnknownClass.png");
     }
 
     private static String determineCardImg(CardColor myColor) {

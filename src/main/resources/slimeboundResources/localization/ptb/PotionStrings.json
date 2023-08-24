@@ -1,0 +1,30 @@
+{
+  "Slimebound:SlimedPotion": {
+    "NAME": "Jarra de Slime",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " #yGoop."
+    ]
+  },
+  "Slimebound:SlimyTonguePotion": {
+    "NAME": "Elixir Slime",
+    "DESCRIPTIONS": [
+      "Sempre que um efeito aplicar #yGoop nesta luta, aplique #b",
+      " a mais."
+    ]
+  },
+  "Slimebound:SpawnSlimePotion": {
+    "NAME": "Exército na Garrafa",
+    "DESCRIPTIONS": [
+      "Invoca #b",
+      " Slimes aleatórios (Normais ou #yEspecialistas)."
+    ]
+  },
+  "Slimebound:ThreeZeroPotion": {
+    "NAME": "Bebida Infundida com Lodo",
+    "DESCRIPTIONS": [
+      "Adiciona #b",
+      " cartas aleatórias de custo 0 à sua mão."
+    ]
+  }
+}

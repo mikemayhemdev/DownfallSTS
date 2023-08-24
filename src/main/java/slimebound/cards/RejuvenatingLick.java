@@ -21,7 +21,7 @@ import slimebound.vfx.LickEffect;
 import slimebound.vfx.SlimeDripsEffect;
 
 
-public class RejuvenatingLick extends AbstractLickCard {
+public class RejuvenatingLick extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:RejuvenatingLick";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -53,6 +53,7 @@ public class RejuvenatingLick extends AbstractLickCard {
 
         this.slimed = this.baseSlimed = 4;
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "RejuvenatingLick.png");
         //this.magicNumber = this.baseMagicNumber = 2;
 
 

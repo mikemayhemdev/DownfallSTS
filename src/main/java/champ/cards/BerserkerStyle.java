@@ -6,6 +6,8 @@ import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 import static champ.ChampMod.fatigue;
 
 public class BerserkerStyle extends AbstractChampCard {
@@ -21,6 +23,7 @@ public class BerserkerStyle extends AbstractChampCard {
         baseMagicNumber = magicNumber = 1;
        // myHpLossCost = 5;
         postInit();
+        loadJokeCardImage(this, "BerserkerStyle.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

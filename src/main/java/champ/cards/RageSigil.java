@@ -1,9 +1,10 @@
 package champ.cards;
 
-import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static champ.ChampMod.loadJokeCardImage;
 
 public class RageSigil extends AbstractChampCard {
 
@@ -14,6 +15,7 @@ public class RageSigil extends AbstractChampCard {
         baseBlock = 2;
         baseMagicNumber = magicNumber = 3;
         postInit();
+        loadJokeCardImage(this, "RageSigil.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -23,6 +25,6 @@ public class RageSigil extends AbstractChampCard {
 
     public void upp() {
         upgradeBlock(2);
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

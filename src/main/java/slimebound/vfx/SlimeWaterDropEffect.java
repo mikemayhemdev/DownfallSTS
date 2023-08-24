@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import downfall.util.TextureLoader;
 
 public class SlimeWaterDropEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private static final int W = 64;
@@ -22,12 +23,12 @@ public class SlimeWaterDropEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
 
         if (imgs == null) {
             imgs = new Texture[6];
-            imgs[0] = ImageMaster.loadImage("images/vfx/water_drop/drop1.png");
-            imgs[1] = ImageMaster.loadImage("images/vfx/water_drop/drop2.png");
-            imgs[2] = ImageMaster.loadImage("images/vfx/water_drop/drop3.png");
-            imgs[3] = ImageMaster.loadImage("images/vfx/water_drop/drop4.png");
-            imgs[4] = ImageMaster.loadImage("images/vfx/water_drop/drop5.png");
-            imgs[5] = ImageMaster.loadImage("images/vfx/water_drop/drop6.png");
+            imgs[0] = TextureLoader.getTexture("images/vfx/water_drop/drop1.png");
+            imgs[1] = TextureLoader.getTexture("images/vfx/water_drop/drop2.png");
+            imgs[2] = TextureLoader.getTexture("images/vfx/water_drop/drop3.png");
+            imgs[3] = TextureLoader.getTexture("images/vfx/water_drop/drop4.png");
+            imgs[4] = TextureLoader.getTexture("images/vfx/water_drop/drop5.png");
+            imgs[5] = TextureLoader.getTexture("images/vfx/water_drop/drop6.png");
         }
 
         this.frame = 0;

@@ -1,0 +1,12 @@
+{
+  "expansioncontent:CannotUseBossCardMessage": {
+    "TEXT": [
+      "Eu já joguei uma carta de Chefe neste turno!"
+    ]
+  },
+  "expansioncontent:BossCardTagName": {
+    "TEXT": [
+      "Chefe"
+    ]
+  }
+}

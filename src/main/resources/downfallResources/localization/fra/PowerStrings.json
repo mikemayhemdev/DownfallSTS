@@ -306,8 +306,7 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Roue de la Fortune",
     "DESCRIPTIONS": [
-      "Lorsque vous attaquez l'Ermite, sa carte la plus à gauche est défaussée et il pioche une carte. Tous les #b",
-      " fois que cela se passe, l'Ermite gagne #b1 de #yForce."
+      "Lorsque vous attaquez l'Ermite, sa carte la plus à gauche est défaussée et il pioche une carte."
     ]
   },
   "downfall:HermitDoomsday": {
@@ -366,7 +365,7 @@
       " NL Gagne 2 d'Épines #y(Silencieuse)",
       " NL Gagne 2 de Tampon #y(Défectueux)",
       " NL Gagne 5 de Mantra #y(Gardienne)",
-      " NL Ajoute 2 Malédictions aléatoires dans votre pioche. #y(Ermite)"
+      " NL Ajoute un *Déclin dans votre pioche. #y(Ermite)"
     ]
   }
 }

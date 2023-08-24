@@ -20,7 +20,6 @@ public class BolsterEngine extends CustomRelic {
     public static final String ID = HexaMod.makeID("BolsterEngine");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BolsterEngine.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BolsterEngine.png"));
-    public boolean activated = false;
 
     public BolsterEngine() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
@@ -28,20 +27,25 @@ public class BolsterEngine extends CustomRelic {
 
     @Override
     public void atBattleStart() {
-        activated = false;
+        grayscale = false;
         beginLongPulse();
     }
 
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
-        if (targetCard.type == AbstractCard.CardType.POWER && !activated) {
+        if (targetCard.type == AbstractCard.CardType.POWER && !grayscale) {
             flash();
-            activated = true;
             stopPulse();
+            grayscale = true;
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             addToBot(new GainBlockAction(AbstractDungeon.player, 6));
             addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
         }
+    }
+
+    @Override
+    public void onVictory() {
+        grayscale = false;
     }
 
     public String getUpdatedDescription() {

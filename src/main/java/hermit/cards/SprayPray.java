@@ -1,11 +1,11 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
@@ -18,16 +18,10 @@ import static hermit.HermitMod.makeCardPath;
 
 public class SprayPray extends AbstractDynamicCard {
 
-
-
-
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(SprayPray.class.getSimpleName());
     public static final String IMG = makeCardPath("spray_and_pray.png");
-
-    // /TEXT DECLARATION/
-
 
     // STAT DECLARATION
 
@@ -61,14 +55,21 @@ public class SprayPray extends AbstractDynamicCard {
         this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true));
     }
 
-
-
     //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+        }
+    }
+    @Override //zhs card text thing
+    public void initializeDescriptionCN() {
+        super.initializeDescriptionCN();
+        if((Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT) && this.description!=null && this.description.size()>=1 ) {
+            for(int i=0; i < this.description.size(); i++){
+                if(this.description.get(i).text.equals("。")) this.description.remove(i);
+            }
         }
     }
 }

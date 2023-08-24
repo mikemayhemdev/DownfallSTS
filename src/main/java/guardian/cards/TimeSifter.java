@@ -13,6 +13,8 @@ import guardian.patches.AbstractCardEnum;
 import guardian.powers.AutomayhemPower;
 import sneckomod.SneckoMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class TimeSifter extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("TimeSifter");
     public static final String NAME;
@@ -23,14 +25,7 @@ public class TimeSifter extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
-
-    //TUNING CONSTANTS
-    private static final int UPGRADE_COST = 0;
-    private static final int SOCKETS = 0;
-    private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -41,14 +36,13 @@ public class TimeSifter extends AbstractGuardianCard {
 
     public TimeSifter() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("TimeSifter.png"));
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
-
-       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new AutomayhemPower(p, p, 1), 1));
 
     }

@@ -25,6 +25,8 @@ import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 import java.util.ArrayList;
 
 public class WindUp extends AbstractChampCard implements OctopusCard {
@@ -38,6 +40,7 @@ public class WindUp extends AbstractChampCard implements OctopusCard {
         exhaust = true;
         tags.add(ChampMod.OPENER);
         postInit();
+        loadJokeCardImage(this, "WindUp.png");
     }
 
 

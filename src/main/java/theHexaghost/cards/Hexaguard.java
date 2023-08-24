@@ -7,19 +7,16 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 
 public class Hexaguard extends AbstractHexaCard {
-
     public final static String ID = makeID("Hexaguard");
 
-    //stupid intellij stuff SKILL, SELF, COMMON
-
-    private static final int BLOCK = 7;
     private static final int UPG_BLOCK = 3;
 
     public Hexaguard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = BLOCK;
+        baseBlock = 6;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
+        HexaMod.loadJokeCardImage(this, "Hexaguard.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

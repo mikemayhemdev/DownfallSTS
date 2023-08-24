@@ -192,7 +192,8 @@
   },
   "hermit:Combo": {
     "NAME": "Kombo",
-    "DESCRIPTION": "Immer wenn du ein hermit:Volltreffer erzielst, nimm eine zufällige Karte mit hermit:Volltreffer auf die Hand."
+    "DESCRIPTION": "Immer wenn du ein hermit:Volltreffer erzielst, nimm eine zufällige Karte mit hermit:Volltreffer auf die Hand.",
+    "UPGRADE_DESCRIPTION": "Put the first !M! hermit:Dead_On cards triggered each turn back into your hand."
   },
   "hermit:BigShot": {
     "NAME": "Rauchendes Rohr",
@@ -200,7 +201,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "Überwältigende Macht",
-    "DESCRIPTION": "Erhalte [E] [E] [E]. NL Ziehe 3 Karten. NL Immer wenn du dein Zug mit 0 Energie beendest, verliere !M! TP."
+    "DESCRIPTION": "Erhalte [E] [E] [E]. NL Ziehe !hermit:SecondMagic! Karten. NL Immer wenn du dein Zug mit 0 Energie beendest, verliere !M! TP."
   },
   "hermit:Maintenance": {
     "NAME": "Wartung",
@@ -312,7 +313,8 @@
   "hermit:FinalCanter": {
     "NAME": "Letzter Kanter",
     "DESCRIPTION": "Behalten. NL Füge für jedes Fluch in der Hand !D! Schaden zu. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": " NL (Du hast !M! Fluch(e).)"
+    "UPGRADE_DESCRIPTION": " NL (Du hast !M! Fluch.)",
+    "EXTENDED_DESCRIPTION": [" NL (Du hast !M! Flüche.)"]
   },
   "hermit:HeroicBravado": {
     "NAME": "Heldenhafte Tapferkeit",

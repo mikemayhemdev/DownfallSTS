@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theHexaghost.powers.BurnPower;
 
@@ -17,6 +18,7 @@ public class HeatShield extends AbstractHexaCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 0;
         this.magicNumber = this.baseMagicNumber = 0;
+        HexaMod.loadJokeCardImage(this, "HeatShield.png");
     }
 
     @Override
@@ -27,7 +29,7 @@ public class HeatShield extends AbstractHexaCard {
                 super.applyPowersToBlock();
                 this.magicNumber = this.baseMagicNumber = this.block;
                 for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                    if (mo.hasPower(BurnPower.POWER_ID))
+                    if (!mo.isDead && !mo.isDeadOrEscaped() &&  mo.hasPower(BurnPower.POWER_ID))
                         baseBlock += mo.getPower(BurnPower.POWER_ID).amount;
                 }
                 super.applyPowersToBlock();
@@ -53,7 +55,6 @@ public class HeatShield extends AbstractHexaCard {
             for (AbstractMonster m2 : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (!m2.isDeadOrEscaped() && m2.hasPower(BurnPower.POWER_ID)) {
                     atb(new RemoveSpecificPowerAction(m2, m2, m2.getPower(BurnPower.POWER_ID)));
-                    break;// 43
                 }
             }
     }

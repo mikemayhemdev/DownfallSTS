@@ -11,5 +11,17 @@
     "TEXT": [
       " NL slimeboundmod:명령합니다."
     ]
+  },
+  "slimeboundmod:lickDescriptor": {
+    "TEXT": [
+      "핥기",
+      "slimeboundmod:핥기. NL "
+    ]
+  },
+  "slimeboundmod:tackleDescriptor": {
+    "TEXT": [
+      "태클",
+      "slimeboundmod:태클. NL "
+    ]
   }
 }

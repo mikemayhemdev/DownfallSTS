@@ -20,7 +20,9 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
@@ -29,15 +31,14 @@ import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.events.shrines.PurificationShrine;
 import com.megacrit.cardcrawl.events.shrines.Transmogrifier;
 import com.megacrit.cardcrawl.events.shrines.UpgradeShrine;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import downfall.downfallMod;
+import downfall.util.TextureLoader;
 import guardian.cards.*;
 import guardian.characters.GuardianCharacter;
 import guardian.commands.SocketGems;
@@ -49,7 +50,6 @@ import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 import guardian.patches.BottledStasisPatch;
 import guardian.patches.GuardianEnum;
-import guardian.patches.RewardItemTypePatch;
 import guardian.potions.AcceleratePotion;
 import guardian.potions.BlockOnCardUsePotion;
 import guardian.potions.DefensiveModePotion;
@@ -57,10 +57,9 @@ import guardian.potions.StasisDiscoveryPotion;
 import guardian.powers.ExhaustStatusesPower;
 import guardian.powers.zzz.MultiBoostPower;
 import guardian.relics.*;
-import guardian.rewards.GemReward;
-import guardian.rewards.GemRewardAllRarities;
 import guardian.stances.DefensiveMode;
 import guardian.ui.EnhanceBonfireOption;
+import guardian.vfx.AddGemToStartingDeckEffect;
 import guardian.vfx.SocketGemEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -82,9 +81,8 @@ public class GuardianMod implements PostDrawSubscriber,
         EditCardsSubscriber,
         PostBattleSubscriber,
         AddAudioSubscriber,
-        OnPlayerLoseBlockSubscriber
-        //basemod.interfaces.EditKeywordsSubscriber
-        //EditStringsSubscriber
+        OnPlayerLoseBlockSubscriber,
+        PostCreateStartingDeckSubscriber
 {
 
     public static final Float stasisCardRenderScale = 0.2F;
@@ -208,7 +206,7 @@ public class GuardianMod implements PostDrawSubscriber,
             ((AbstractGuardianCard) card).betaArtPath = img;
         }
         Texture cardTexture;
-        cardTexture = ImageMaster.loadImage(img);
+        cardTexture = TextureLoader.getTexture(img);
         if (cardTexture != null) {
             cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
             int tw = cardTexture.getWidth();
@@ -299,8 +297,7 @@ public class GuardianMod implements PostDrawSubscriber,
     }
 
     public static String makeID(String input) {
-        String concat = "Guardian:" + input;
-        return concat;
+        return "Guardian:" + input;
     }
 
     public static String printString(String s) {
@@ -335,16 +332,14 @@ public class GuardianMod implements PostDrawSubscriber,
         allGemCards.add("GREEN");
         allGemCards.add("LIGHTBLUE");
         if (!onlyCommon) allGemCards.add("ORANGE");
-        allGemCards.add("CYAN");
+        if (!onlyCommon) allGemCards.add("CYAN");
         if (!onlyCommon) allGemCards.add("WHITE");
-        if (!onlyCommon) allGemCards.add("BLUE");
+        allGemCards.add("BLUE");
         if (!onlyCommon) allGemCards.add("CRIMSON");
         if (!onlyCommon) allGemCards.add("FRAGMENTED");
         if (!onlyCommon) allGemCards.add("PURPLE");
         if (!onlyCommon) allGemCards.add("SYNTHETIC");
-        if (!UnlockTracker.isCardLocked(Gem_Yellow.ID)) {
-            if (!onlyCommon) allGemCards.add("YELLOW");
-        }
+        if (!onlyCommon) allGemCards.add("YELLOW");
 
         int rando;
         String ID;
@@ -460,10 +455,8 @@ public class GuardianMod implements PostDrawSubscriber,
     }
 
     public void receiveEditCharacters() {
-
         guardianCharacter = new GuardianCharacter("TheGuardian", GuardianEnum.GUARDIAN);
         BaseMod.addCharacter(guardianCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), GuardianEnum.GUARDIAN, getResourcePath("charSelect/leaderboard.png"));
-
     }
 
 
@@ -539,7 +532,6 @@ public static void saveData() {
 
     @Override
     public void receiveSetUnlocks() {
-
         downfallMod.registerUnlockSuite(
                 GatlingBeam.ID,
                 Orbwalk.ID,
@@ -567,8 +559,6 @@ public static void saveData() {
 
 
     public void receiveEditRelics() {
-
-
         BaseMod.addRelicToCustomPool(new ModeShifter(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new ModeShifterPlus(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new BottledStasis(), AbstractCardEnum.GUARDIAN);
@@ -585,16 +575,11 @@ public static void saveData() {
         BaseMod.addRelic(new PocketSentry(), RelicType.SHARED);
         BaseMod.addRelic(new BottledAnomaly(), RelicType.SHARED);
         BaseMod.registerBottleRelic(BottledStasisPatch.inBottledAnomaly, new BottledAnomaly());
-
-
     }
 
     public void receiveEditCards() {
-
-
         BaseMod.addDynamicVariable(new MultihitVariable());
         BaseMod.addDynamicVariable(new SecondaryMagicVariable());
-
 
         BaseMod.addCard(new Strike_Guardian());
         BaseMod.addCard(new Defend_Guardian());
@@ -612,9 +597,9 @@ public static void saveData() {
         BaseMod.addCard(new HyperBeam_Guardian());
         BaseMod.addCard(new BronzeArmor());
         BaseMod.addCard(new FloatingOrbs());
-        BaseMod.addCard(new OrbSlam());
+        //BaseMod.addCard(new OrbSlam());
         BaseMod.addCard(new SphericShield());
-        BaseMod.addCard(new Harden());
+        //BaseMod.addCard(new Harden());
         BaseMod.addCard(new SentryWave());
         BaseMod.addCard(new SentryBeam());
         BaseMod.addCard(new WalkerClaw());
@@ -665,7 +650,9 @@ public static void saveData() {
         BaseMod.addCard(new MultiBeam());
         BaseMod.addCard(new RefractedBeam());
         BaseMod.addCard(new SpikerProtocol());
-        BaseMod.addCard(new ArmoredProtocol());
+        //BaseMod.addCard(new ArmoredProtocol());
+        BaseMod.addCard(new Metallicize());
+        BaseMod.addCard(new StrikeForStrike());
         BaseMod.addCard(new EvasiveProtocol());
         BaseMod.addCard(new TimeSifter());
         BaseMod.addCard(new CrystalBeam());
@@ -681,7 +668,8 @@ public static void saveData() {
         BaseMod.addCard(new ShieldCharger());
         BaseMod.addCard(new StasisEngine());
         BaseMod.addCard(new Gem_Purple());
-        
+
+        BaseMod.addCard(new GearUp());
         BaseMod.addCard(new CrystalShiv());
         BaseMod.addCard(new CrystalWard());
 
@@ -821,29 +809,6 @@ public static void saveData() {
 
     public void receivePostInitialize() {
 
-        //UIStrings configStrings = CardCrawlGame.languagePack.getUIString("slimeboundConfigMenuText");
-
-        BaseMod.registerCustomReward(
-                RewardItemTypePatch.GEM,
-                (rewardSave) -> { //on load
-                    GuardianMod.logger.info("gems loaded");
-                    return new GemReward();
-                }, (customReward) -> { //on save
-                    GuardianMod.logger.info("gems saved");
-                    return new RewardSave(customReward.type.toString(), null);
-                });
-
-        BaseMod.registerCustomReward(
-                RewardItemTypePatch.GEMALLRARITIES,
-                (rewardSave) -> { //on load
-                    GuardianMod.logger.info("gems loaded");
-                    return new GemRewardAllRarities();
-                }, (customReward) -> { //on save
-                    GuardianMod.logger.info("gems saved");
-                    return new RewardSave(customReward.type.toString(), null);
-                });
-
-
         //logger.info("Load Badge Image and mod options");
         // Load the Mod Badge
         //Texture badgeTexture = new Texture(getResourcePath("badge.png"));
@@ -974,71 +939,71 @@ public static void saveData() {
     }
 
     public void initializeSocketTextures() {
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/emptysocket.png")));
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/redgem.png")));
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/greengem.png")));
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/orangegem.png")));
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/whitegem.png")));
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/cyangem.png")));
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/bluegem.png")));
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/crimsongem.png")));
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/fraggem.png")));
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/purplegem.png")));
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/blackgem.png")));
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/yellowgem.png")));
-        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/lightbluegem.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/emptysocket2.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/redgem2.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/greengem2.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/orangegem2.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/whitegem2.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/cyangem2.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/bluegem2.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/crimsongem2.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/fraggem2.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/purplegem2.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/blackgem2.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/yellowgem2.png")));
-        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/lightbluegem2.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/emptysocket3.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/redgem3.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/greengem3.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/orangegem3.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/whitegem3.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/cyangem3.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/bluegem3.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/crimsongem3.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/fraggem3.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/purplegem3.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/blackgem3.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/yellowgem3.png")));
-        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/lightbluegem3.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/emptysocket4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/redgem4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/greengem4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/orangegem4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/whitegem4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/cyangem4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/bluegem4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/crimsongem4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/fraggem4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/purplegem4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/blackgem4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/yellowgem4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/lightbluegem4.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/emptysocket.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/redgem.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/greengem.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/orangegem.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/whitegem.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/cyangem.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/bluegem.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/crimsongem.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/fraggem.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/purplegem.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/blackgem.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/yellowgem.png")));
+        socketTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/lightbluegem.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/emptysocket2.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/redgem2.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/greengem2.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/orangegem2.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/whitegem2.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/cyangem2.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/bluegem2.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/crimsongem2.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/fraggem2.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/purplegem2.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/blackgem2.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/yellowgem2.png")));
+        socketTextures2.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/lightbluegem2.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/emptysocket3.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/redgem3.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/greengem3.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/orangegem3.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/whitegem3.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/cyangem3.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/bluegem3.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/crimsongem3.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/fraggem3.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/purplegem3.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/blackgem3.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/yellowgem3.png")));
+        socketTextures3.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/lightbluegem3.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/emptysocket4.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/redgem4.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/greengem4.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/orangegem4.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/whitegem4.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/cyangem4.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/bluegem4.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/crimsongem4.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/fraggem4.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/purplegem4.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/blackgem4.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/yellowgem4.png")));
+        socketTextures4.add(TextureLoader.getTexture(getResourcePath("/cardIcons/templated/512/lightbluegem4.png")));
 
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/redgem.png")));
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/bluegem.png")));
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/greengem.png")));
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/lightbluegem.png")));
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/whitegem.png")));
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/cyangem.png")));
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/orangegem.png")));
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/crimsongem.png")));
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/fraggem.png")));
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/blackgem.png")));
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/purplegem.png")));
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/yellowgem.png")));
+        gemTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/redgem.png")));
+        gemTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/bluegem.png")));
+        gemTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/greengem.png")));
+        gemTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/lightbluegem.png")));
+        gemTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/whitegem.png")));
+        gemTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/cyangem.png")));
+        gemTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/orangegem.png")));
+        gemTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/crimsongem.png")));
+        gemTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/fraggem.png")));
+        gemTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/blackgem.png")));
+        gemTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/purplegem.png")));
+        gemTextures.add(TextureLoader.getTexture(getResourcePath("/cardIcons/yellowgem.png")));
 
     }
 
@@ -1062,7 +1027,7 @@ public static void saveData() {
         if (!stasisDelay) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
                 if (o instanceof StasisOrb) {
-                    if (((StasisOrb) o).passiveAmount == 1) {
+                    if (o.passiveAmount == 1) {
                         stasisDelay = true;
                     }
                 }
@@ -1083,6 +1048,19 @@ public static void saveData() {
                     e.flash();
                 }
             }
+        }
+    }
+
+    @Override
+    public void receivePostCreateStartingDeck(AbstractPlayer.PlayerClass playerClass, CardGroup cardGroup) {
+        if ( AbstractDungeon.player instanceof GuardianCharacter ) {
+            AbstractGemCard starter_gem = (AbstractGemCard) GuardianMod.getRewardGemCards(true, 1).get(0).makeStatEquivalentCopy();
+            cardGroup.addToTop(starter_gem);
+            // this adds the real save&load friendly gem on floor 0, sentences below enable the
+            // show-card-and-card-flies-to-deck visual effect ,by adding a dummy card and remove it instantly
+
+            AbstractGemCard dummy_starter_gem_to_be_removed = (AbstractGemCard) starter_gem.makeStatEquivalentCopy();
+            AbstractDungeon.effectList.add(new AddGemToStartingDeckEffect(dummy_starter_gem_to_be_removed, (Settings.WIDTH * 0.5F), (Settings.HEIGHT * 0.5F)));
         }
     }
 

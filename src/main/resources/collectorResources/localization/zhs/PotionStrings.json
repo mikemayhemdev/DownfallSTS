@@ -1,0 +1,36 @@
+{
+  "collector:MiniCursePotion": {
+    "NAME": "灵魂提取物",
+    "DESCRIPTIONS": [
+      "给予 #b1 层 #y虚弱 、 #b1 层 #y易伤 ，与 #b6 层 #y魂劫 。",
+      "给予 #b",
+      " 层 #y虚弱 、 #b",
+      " 层 #y易伤 与 #b",
+      " 层 #y魂劫 。"
+    ]
+  },
+  "collector:ReservePotion": {
+    "NAME": "储能药水",
+    "DESCRIPTIONS": [
+      "获得 #b2 #y储能 。",
+      "获得 #b",
+      " #y储能 。"
+    ]
+  },
+  "collector:DebuffDoublePotion": {
+    "NAME": "防腐油",
+    "DESCRIPTIONS": [
+      "将目标的 #r负面效果 翻至 #b2 倍。",
+      "将目标的 #r负面效果 翻至 #b",
+      " 倍。"
+    ]
+  },
+  "collector:TempHPPotion": {
+    "NAME": "魔水",
+    "DESCRIPTIONS": [
+      "获得 #b8 层 #y临时生命 。",
+      "获得 #b",
+      " 层 #y临时生命 。"
+    ]
+  }
+}

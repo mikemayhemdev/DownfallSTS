@@ -35,7 +35,7 @@ public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPowe
         this.owner = AbstractDungeon.player;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.isTurnBased = true;
+        this.isTurnBased = false;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
@@ -63,7 +63,6 @@ public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPowe
         AbstractDungeon.actionManager.addToTop(new HealAction(abstractPlayer, abstractPlayer, this.amount));
         AbstractDungeon.actionManager.addToTop(new VFXAction(this.owner, new IntenseZoomEffect(this.owner.hb.cX, this.owner.hb.cY, true), 0.05F, true));
         AbstractDungeon.actionManager.addToTop(new SFXAction("VO_AWAKENEDONE_1"));
-        addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(abstractPlayer, abstractPlayer, new com.megacrit.cardcrawl.powers.RepairPower(abstractPlayer, this.amount), this.amount));
     }
 
     @Override

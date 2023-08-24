@@ -17,11 +17,9 @@ import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.OnPowersModifiedSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import basemod.interfaces.PostUpdateSubscriber;
-import champ.cards.AbstractChampCard;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -29,17 +27,19 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.ui.campfire.WheelSpinButton;
 import downfall.util.CardIgnore;
+import downfall.util.TextureLoader;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.potions.BossPotion;
 import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.util.CardFilter;
+import expansioncontent.util.DownfallMagic;
+import expansioncontent.util.SecondDownfallMagic;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -82,10 +82,21 @@ public class expansionContentMod implements
     public static AbstractCard.CardTags STUDY_SLIMEBOSS;
     @SpireEnum
     public static AbstractCard.CardTags STUDY;
+    @SpireEnum
+    public static AbstractCard.CardTags ECHO;
+    @SpireEnum
+    public static AbstractCard.CardTags UNPLAYABLE;
+
     public static boolean teleportToWheelTime = false;
     private static String modID;
 
     public static Color BOSS_CARD_COLOR = new Color(0.443F, 0.231F, 0.286F, 1);
+
+    public static final TextureAtlas UIAtlas = new TextureAtlas();
+    public static Texture etherealIcon;
+    public static Texture exhaustIcon;
+    public static Texture retainIcon;
+    public static Texture unplayableIcon;
 
     public expansionContentMod() {
         BaseMod.subscribe(this);
@@ -204,6 +215,8 @@ public class expansionContentMod implements
 
     @Override
     public void receiveEditCards() {
+        BaseMod.addDynamicVariable(new DownfallMagic());
+        BaseMod.addDynamicVariable(new SecondDownfallMagic());
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
@@ -248,6 +261,16 @@ public class expansionContentMod implements
 
     public void receivePostInitialize() {
         addPotions();
+
+        etherealIcon = TextureLoader.getTexture("expansioncontentResources/images/ui/cardmods/Ethereal.png");
+        exhaustIcon = TextureLoader.getTexture("expansioncontentResources/images/ui/cardmods/Exhaust.png");
+        retainIcon = TextureLoader.getTexture("expansioncontentResources/images/ui/cardmods/Retain.png");
+        unplayableIcon = TextureLoader.getTexture("expansioncontentResources/images/ui/cardmods/Unplayable.png");
+
+        UIAtlas.addRegion("etherealIcon", etherealIcon, 0, 0, etherealIcon.getWidth(), etherealIcon.getHeight());
+        UIAtlas.addRegion("exhaustIcon", exhaustIcon, 0, 0, exhaustIcon.getWidth(), exhaustIcon.getHeight());
+        UIAtlas.addRegion("retainIcon", retainIcon, 0, 0, retainIcon.getWidth(), retainIcon.getHeight());
+        UIAtlas.addRegion("unplayableIcon", unplayableIcon, 0, 0, unplayableIcon.getWidth(), unplayableIcon.getHeight());
     }
 
 }

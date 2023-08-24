@@ -1,4 +1,50 @@
 {
+  "downfall:PropertiesMod": {
+    "TEXT": [
+      "적용된 속성.",
+      "적용된 속성: ",
+      "이번 턴에 적용된 속성: ",
+      " NL 또한 이번 턴에: ",
+      ", ",
+      ".",
+      "#y",
+      "메아리",
+      "사용불가",
+      "휘발성",
+      "보존",
+      "소멸",
+      " ",
+      "NL ",
+      "메아리: "
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "휘발성. NL "
+    ]
+  },
+  "downfall:ExhaustMod": {
+    "TEXT": [
+      " NL 소멸."
+    ]
+  },
+  "downfall:InnateMod": {
+    "TEXT": [
+      "선천성. NL "
+    ]
+  },
+  "downfall:RetainCardMod": {
+    "TEXT": [
+      "보존. NL "
+    ]
+  },
+  "downfall:UnplayableMod": {
+    "TEXT": [
+      "사용불가. NL ",
+      "이 카드는 사용할 수 없다.",
+      "이번 턴에 이 카드는 사용할 수 없다."
+    ]
+  },
   "expansioncontent:CannotUseBossCardMessage": {
     "TEXT": [
       "이번 턴에 이미 보스 카드를 사용했다!"

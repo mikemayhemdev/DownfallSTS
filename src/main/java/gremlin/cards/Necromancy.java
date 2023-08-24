@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import gremlin.actions.NecromancyAction;
 import gremlin.characters.GremlinCharacter;
@@ -44,6 +45,7 @@ public class Necromancy extends AbstractGremlinCard {
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Necromancy.png");
     }
 
     @Override

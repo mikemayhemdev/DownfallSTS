@@ -10,10 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import guardian.GuardianMod;
-
-import java.util.ArrayList;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -38,7 +35,7 @@ public class PackageSphere extends AbstractGuardianCard {
 
     public AbstractGuardianCard constPrev1 = new SphericShield();
     public AbstractGuardianCard constPrev2 = new FloatingOrbs();
-    public AbstractGuardianCard constPrev3 = new Harden();
+    public AbstractGuardianCard constPrev3 = new Metallicize();
 
     public AbstractGuardianCard prev1;
     public AbstractGuardianCard prev2;
@@ -88,29 +85,18 @@ public class PackageSphere extends AbstractGuardianCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p, m);
-
-        ArrayList derp = new ArrayList();
         AbstractCard tmp;
-
         tmp = new SphericShield();
         if (upgraded) tmp.upgrade();
-        derp.add(tmp);
-     //   tmp.modifyCostForCombat(-1);
+        addToBot(new MakeTempCardInHandAction(tmp, true));
 
         tmp = new FloatingOrbs();
         if (upgraded) tmp.upgrade();
-        derp.add(tmp);
-     //   tmp.modifyCostForCombat(-1);
+        addToBot(new MakeTempCardInHandAction(tmp, true));
 
-        tmp = new Harden();
+        tmp = new Metallicize();
         if (upgraded) tmp.upgrade();
-        derp.add(tmp);
-     //   tmp.modifyCostForCombat(-1);
-
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard)derp.get(0), true));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(1), true));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(2), true));
+        addToBot(new MakeTempCardInHandAction(tmp, true));
     }
 
     public AbstractCard makeCopy() {
@@ -123,12 +109,9 @@ public class PackageSphere extends AbstractGuardianCard {
 
             this.initializeDescription();
             upgradeName();
-            if (prev1 != null)
-                prev1.upgrade();
-            if (prev2 != null)
-                prev2.upgrade();
-            if (prev3 != null)
-                prev3.upgrade();
+            constPrev1.upgrade();
+            constPrev2.upgrade();
+            constPrev3.upgrade();
         }
     }
 
@@ -162,31 +145,22 @@ public class PackageSphere extends AbstractGuardianCard {
             float xPosition3 = Settings.WIDTH * 0.65F;
 
             if (prev1 != null) {
-                AbstractCard card = prev1.makeStatEquivalentCopy();
-                if (card != null) {
-                    card.drawScale = drawScale;
-                    card.current_x = xPosition1;
-                    card.current_y = yPosition1;
-                    card.render(sb);
-                }
+                prev1.drawScale = drawScale;
+                prev1.current_x = xPosition1;
+                prev1.current_y = yPosition1;
+                prev1.render(sb);
             }
             if (prev2 != null) {
-                AbstractCard card = prev2.makeStatEquivalentCopy();
-                if (card != null) {
-                    card.drawScale = drawScale;
-                    card.current_x = xPosition2;
-                    card.current_y = yPosition1;
-                    card.render(sb);
-                }
+                prev2.drawScale = drawScale;
+                prev2.current_x = xPosition2;
+                prev2.current_y = yPosition1;
+                prev2.render(sb);
             }
             if (prev3 != null) {
-                AbstractCard card = prev3.makeStatEquivalentCopy();
-                if (card != null) {
-                    card.drawScale = drawScale;
-                    card.current_x = xPosition3;
-                    card.current_y = yPosition1;
-                    card.render(sb);
-                }
+                prev3.drawScale = drawScale;
+                prev3.current_x = xPosition3;
+                prev3.current_y = yPosition1;
+                prev3.render(sb);
             }
         } else {
             if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
@@ -210,31 +184,22 @@ public class PackageSphere extends AbstractGuardianCard {
                 xPosition1 = this.current_x + xOffset1;
 
                 if (prev1 != null) {
-                    AbstractCard card = prev1.makeStatEquivalentCopy();
-                    if (card != null) {
-                        card.drawScale = drawScale;
-                        card.current_x = xPosition1;
-                        card.current_y = yPosition1;
-                        card.render(sb);
-                    }
+                    prev1.drawScale = drawScale;
+                    prev1.current_x = xPosition1;
+                    prev1.current_y = yPosition1;
+                    prev1.render(sb);
                 }
                 if (prev2 != null) {
-                    AbstractCard card = prev2.makeStatEquivalentCopy();
-                    if (card != null) {
-                        card.drawScale = drawScale;
-                        card.current_x = xPosition1;
-                        card.current_y = yPosition2;
-                        card.render(sb);
-                    }
+                    prev2.drawScale = drawScale;
+                    prev2.current_x = xPosition1;
+                    prev2.current_y = yPosition2;
+                    prev2.render(sb);
                 }
                 if (prev3 != null) {
-                    AbstractCard card = prev3.makeStatEquivalentCopy();
-                    if (card != null) {
-                        card.drawScale = drawScale;
-                        card.current_x = xPosition1;
-                        card.current_y = yPosition3;
-                        card.render(sb);
-                    }
+                    prev3.drawScale = drawScale;
+                    prev3.current_x = xPosition1;
+                    prev3.current_y = yPosition3;
+                    prev3.render(sb);
                 }
             }
 

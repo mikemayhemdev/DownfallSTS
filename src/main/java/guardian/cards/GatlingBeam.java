@@ -18,6 +18,8 @@ import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 import guardian.vfx.SmallLaserEffectColored;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class GatlingBeam extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("GatlingBeam");
     public static final String NAME;
@@ -56,6 +58,7 @@ public class GatlingBeam extends AbstractGuardianCard implements InStasisCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("GatlingBeam.png"));
 
     }
 

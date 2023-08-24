@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class TemporalStrike extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("TemporalStrike");
@@ -54,6 +56,7 @@ public class TemporalStrike extends AbstractGuardianCard {
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
         this.updateDescription();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("TemporalStrike.png"));
 
     }
 

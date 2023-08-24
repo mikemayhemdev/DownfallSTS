@@ -29,7 +29,8 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
     public int pretendFocus = 0;
 
     public static int masterPretendFocus = 0;
-
+    // Pretend focus are used to make orb value correct when the character boss uses a card that modifies focus, since the focus value only changes
+    // exactly after the card is played, the orb value wouldn't be correct without adding coressponding value before hand, this variable serves that
     public AbstractEnemyOrb() {
         pretendFocus = masterPretendFocus;
     }
@@ -99,8 +100,8 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
             this.passiveAmount = Math.max(0, this.basePassiveAmount + power.amount + pretendFocus);
             this.evokeAmount = Math.max(0, this.baseEvokeAmount + power.amount + pretendFocus);
         } else {
-            this.passiveAmount = this.basePassiveAmount + pretendFocus;
-            this.evokeAmount = this.baseEvokeAmount + pretendFocus;
+            this.passiveAmount = Math.max( (this.basePassiveAmount + pretendFocus), 0 );
+            this.evokeAmount = Math.max( this.baseEvokeAmount + pretendFocus, 0 );
         }
     }
 
@@ -122,7 +123,7 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
     protected void renderText(SpriteBatch sb) {
         if (!(this instanceof EnemyEmptyOrbSlot) && showValues) {
             if (this.showEvokeValue || evokeOverride) {
-                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, evokeMult > 0 ? (Integer.toString(this.evokeAmount) + "x" + Integer.toString(evokeMult)) : Integer.toString(this.evokeAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, new Color(0.2F, 1.0F, 1.0F, this.c.a), this.fontScale);
+                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, evokeMult > 0 ? (this.evokeAmount + "x" + evokeMult) : Integer.toString(this.evokeAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, new Color(0.2F, 1.0F, 1.0F, this.c.a), this.fontScale);
             } else {
                 FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, this.c, this.fontScale);
             }

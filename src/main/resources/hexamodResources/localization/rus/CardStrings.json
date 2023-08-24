@@ -19,7 +19,7 @@
   },
   "hexamod:BacktrackSmack": {
     "NAME": "Удар с отступлением",
-    "DESCRIPTION": "Наносит !D! урона. NL Даёт hexamod:Откат."
+    "DESCRIPTION": "Наносит !D! урона дважды. NL Даёт hexamod:Откат."
   },
   "hexamod:BurningQuestion": {
     "NAME": "Жгучий вопрос",
@@ -31,7 +31,8 @@
   },
   "hexamod:CatchUp": {
     "NAME": "Наверстать упущенное",
-    "DESCRIPTION": "hexamod:Зажигает предыдущий Огонёк !M! раз."
+    "DESCRIPTION": "hexamod:Зажигает предыдущий Огонёк !M! раз. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "hexamod:Зажигает предыдущий Огонёк !M! раз."
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Заряженный залп",
@@ -68,7 +69,7 @@
   },
   "hexamod:FastForward": {
     "NAME": "Перемотать вперёд",
-    "DESCRIPTION": "Эфирная. NL hexamod:Зажигает hexamod:активный Огонёк. NL Даёт hexamod:Продвижение.",
+    "DESCRIPTION": "Вы берёте !M! карты. NL Даёт hexamod:Продвижение.",
     "UPGRADE_DESCRIPTION": "hexamod:Зажигает hexamod:активный Огонёк. NL Даёт hexamod:Продвижение."
   },
   "hexamod:Firestarter": {
@@ -81,7 +82,7 @@
   },
   "hexamod:FlameSwitch": {
     "NAME": "Дурной знак",
-    "DESCRIPTION": "Эфирная. NL Выберите и смените тип hexamod:активного Огонька. NL Сжигается.",
+    "DESCRIPTION": "{@@}Накладывает hexamod:Ожога_души. NL Продлевает таймер для его активации на !M! ход{!M!|@=|>1=а}. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Оставляется. NL Выберите и смените тип hexamod:активного Огонька. NL Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Заменяет hexamod:активный Огонёк на hexamod:Укрепляющий Огонёк",
@@ -157,7 +158,7 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "Раскалённый металл",
-    "DESCRIPTION": "Наносит !D! урона. NL Накладывает ещё !M! hexamod:Ожога_души на выбранного врага при срабатывании."
+    "DESCRIPTION": "Наносит !D! урона. NL Накладывает !burny! hexamod:Ожога_души. NL Накладывает !M! Уязвимости."
   },
   "hexamod:HeatShield": {
     "NAME": "Тепловой баррьер",
@@ -250,8 +251,8 @@
   },
   "hexamod:Rewind": {
     "NAME": "Перемотка назад",
-    "DESCRIPTION": "Даёт hexamod:Откат. NL Даёт [E] .",
-    "UPGRADE_DESCRIPTION": "hexamod:Откат. NL Даёт [E] и вы берёте карту."
+    "DESCRIPTION": "Даёт hexamod:Откат. NL Вы кладёте выбранную карту из стопки сброса в руку. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "hexamod:Откат. NL Вы кладёте !M! выбранных карт из стопки сброса в руку. NL Сжигается."
   },
   "hexamod:Sear": {
     "NAME": "Прижечь",
@@ -339,7 +340,8 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Натравить духов",
-    "DESCRIPTION": "Наносит !D! урона случ. врагу. Повторяет за каждую *сожжёную *Эфирную карту. NL Сжигается."
+    "DESCRIPTION": "{@@}Наносит !D! урона случ. врагу. Повторяет за каждую *сожжёную *Эфирную карту. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": " NL (Наносит урон !M! раз{!M!|@=|&2,&3,&4=а|&12,&13,&14=}.)"
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Безграничная мощь",

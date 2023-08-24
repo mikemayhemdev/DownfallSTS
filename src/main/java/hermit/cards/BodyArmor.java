@@ -1,36 +1,30 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.green.Survivor;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
-import hermit.actions.BodyArmorAction;
+import hermit.actions.HandSelectAction;
 import hermit.characters.hermit;
+import hermit.util.Wiz;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
+import static hermit.util.Wiz.att;
 
 public class BodyArmor extends AbstractDynamicCard {
-
-    /*
-     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
-     * Defend Gain 5 (8) block.
-     */
-
 
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(BodyArmor.class.getSimpleName());
     public static final String IMG = makeCardPath("body_armor.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardAction");
 
     // /TEXT DECLARATION/
 
@@ -50,9 +44,7 @@ public class BodyArmor extends AbstractDynamicCard {
     private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 2;
 
-
     // /STAT DECLARATION/
-
 
     public BodyArmor() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -60,27 +52,23 @@ public class BodyArmor extends AbstractDynamicCard {
         loadJokeCardImage(this, "body_armor.png");
     }
 
-    /*
-    // Actions the card should do.
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.upgraded) {
-            AbstractCard s = (new Defend_Hermit()).makeCopy();
-            s.upgrade();
-            this.addToTop(new MakeTempCardInDiscardAction(s, 1));
-        } else {
-            this.addToTop(new MakeTempCardInDiscardAction(new Defend_Hermit(), 1));
-        }
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-    }
-    */
-
     // Actions the card should actually unironically literally do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new BodyArmorAction(p,p,1,block,false));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {
+            for (AbstractCard c : list)
+            {
+                Wiz.p().hand.moveToDiscardPile(c);
+                c.triggerOnManualDiscard();
+                GameActionManager.incrementDiscard(false);
+
+                if (c.type != CardType.ATTACK)
+                    Wiz.att(new GainBlockAction(p, p, block));
+            }
+        }, null, uiStrings.TEXT[0],false,false,false));
+        Wiz.atb(new GainBlockAction(p, p, block));
     }
+
     //Upgraded stats.
     @Override
     public void upgrade() {

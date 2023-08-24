@@ -12,6 +12,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.StasisEnginePower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class StasisEngine extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("StasisEngine");
     public static final String NAME;
@@ -44,6 +46,8 @@ public class StasisEngine extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("StasisEngine.png"));
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

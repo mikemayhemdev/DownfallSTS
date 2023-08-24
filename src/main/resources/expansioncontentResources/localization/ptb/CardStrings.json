@@ -1,0 +1,88 @@
+{
+  "expansioncontent:GuardianWhirl": {
+    "NAME": "Vórtice do Guardião",
+    "DESCRIPTION": "Requer 10 de Proteção. NL Causa !D! de dano para TODOS os inimigos 4 vezes. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+      "Mais Proteção necessário."
+    ]
+  },
+  "expansioncontent:Hexaburn": {
+    "NAME": "Hexaburn",
+    "DESCRIPTION": "Em !M! rodadas, causa !D! de dano 6 vezes para um inimigo aleatório. NL Escala com Força."
+  },
+  "expansioncontent:InvincibleStrength": {
+    "NAME": "Invencível",
+    "DESCRIPTION": "Ganhe 10 expansioncontent:Invencível. NL Se você já tinha expansioncontent:Invencível, ele dura mais uma rodada."
+  },
+  "expansioncontent:HyperBeam": {
+    "NAME": "Automa-Feixe",
+    "DESCRIPTION": "Causa !D! de dano para TODOS os inimigos. NL No início da sua próxima rodada, perde [E]. NL Exaurir."
+  },
+  "expansioncontent:LastStand": {
+    "NAME": "Última Resistência",
+    "DESCRIPTION": "Remove todas as Desvantagens. NL Ganhe 1 Força. NL Se você estiver com menos da metade do PV, ganhe 2 Força.",
+    "UPGRADE_DESCRIPTION": "Remove todas as Desvantagens. NL Ganhe 1 Força. NL Se você estiver com menos da metade do PV, Cure !M! e ganhe 2 Força."
+  },
+  "expansioncontent:YouAreMine": {
+    "NAME": "VOCÊ É MEU!",
+    "DESCRIPTION": "Remove Proteção de todos os inimigos e aplica !M! Fraqueza e Vulnerável. NL Exaurir."
+  },
+  "expansioncontent:AwakenDeath": {
+    "NAME": "Despertar",
+    "DESCRIPTION": "Quando você iria morrer, ou ao final da luta, cure !M! de PV e perca esta melhoria."
+  },
+  "expansioncontent:Chronoboost": {
+    "NAME": "Crono-Aceleração",
+    "DESCRIPTION": "Ganhe 2 Força para cada 12º carta jogada.",
+    "UPGRADE_DESCRIPTION": "Ganhe 2 Força. NL Ganhe 2 Força para cada 12º carta jogada."
+  },
+  "expansioncontent:PolyBeam": {
+    "NAME": "Explosão de Donu",
+    "DESCRIPTION": "Ganhe !M! de Força."
+  },
+  "expansioncontent:DecaShield": {
+    "NAME": "Escudo de Deca",
+    "DESCRIPTION": "Ganhe !B! de Armadura Reforçada."
+  },
+  "expansioncontent:ShapePower": {
+    "NAME": "Benção do Criador",
+    "DESCRIPTION": "Escolha - Ganhe !M! Força ou !DM! Armadura Reforçada.",
+    "EXTENDED_DESCRIPTION": [
+      "Poder de Donu",
+      "Ganhe !M! Força.",
+      "Escudo de Deca",
+      "Ganhe !M! Armadura Reforçada."
+    ]
+  },
+  "expansioncontent:PrepareCrush": {
+    "NAME": "Preparar Esmagamento",
+    "DESCRIPTION": "Ganhe !B! Proteção. NL Próximo turno, ganhe [E] [E] [E] e *LAMA *ESMAGADORA. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Ganhe !B! Proteção. NL Próximo turno, ganhe [E] [E] [E] e *LAMA *ESMAGADORA+. NL Exaurir."
+  },
+  "expansioncontent:StudyTheSpire": {
+    "NAME": "Estudar a Torre",
+    "DESCRIPTION": "Ganhe uma carta *Chefe aleatória no início dos seus próximos !M! turnos. Elas custam 0.",
+    "UPGRADE_DESCRIPTION": "Ganhe uma carta *Chefe melhorada aleatória no início dos seus próximos !M! turnos. Elas custam 0."
+  },
+  "expansioncontent:QuickStudy": {
+    "NAME": "Estudo Rápido",
+    "DESCRIPTION": "Escolha 1 de 3 cartas de *Chefe para ganhar. NL Ela custa 0 até ser jogada. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Escolha 1 de 3 cartas de *Chefe melhoradas para ganhar. NL Ela custa 0 até ser jogada. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+      "Escolha uma carta de Chefe."
+    ]
+  },
+  "expansioncontent:DashGenerateEvil": {
+    "NAME": "O Mal Interior",
+    "DESCRIPTION": "Cause !D! de dano. NL Ganhe uma carta de *Chefe aleatória. Ela custa 0 até ser jogada. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Cause !D! de dano. NL Ganhe uma carta de *Chefe melhorada aleatória. Ela custa 0 até ser jogada. NL Exaurir."
+  },
+  "expansioncontent:KnowingSkullWish": {
+    "NAME": "Caveira Conhecedora",
+    "DESCRIPTION": "Etérea. NL Gaste PV para *Desejar *por *Almas, *Sucesso ou uma *Levantada. NL Exaurir."
+  },
+  "expansioncontent:Antidote": {
+    "NAME": "Antídoto",
+    "DESCRIPTION": "Perca todo o Veneno."
+  }
+}

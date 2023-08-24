@@ -3,25 +3,19 @@ package hermit.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.relics.RedSkull;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import hermit.HermitMod;
-import hermit.actions.RedScarfAction;
 import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makeRelicOutlinePath;
 import static hermit.HermitMod.makeRelicPath;
 
 public class DentedPlate extends CustomRelic {
-
-    // ID, images, text.
     public static final String ID = HermitMod.makeID("DentedPlate");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("dented_plate.png"));
@@ -84,7 +78,6 @@ public class DentedPlate extends CustomRelic {
         }
     }
 
-    // Description
     @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];

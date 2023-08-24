@@ -1,0 +1,52 @@
+[
+  {
+    "PROPER_NAME": "折磨",
+    "NAMES": [
+      "afflicted",
+      "折磨"
+    ],
+    "DESCRIPTION": "同时处于 #y易伤 与 #y虚弱 的单位视为处于 #y折磨 之中。"
+  },
+  {
+    "PROPER_NAME": "魂劫",
+    "NAMES": [
+      "doom",
+      "doomed",
+      "魂劫"
+    ],
+    "DESCRIPTION": "敌方回合开始时，敌人失去 #y魂劫 层数点生命与所有 #y魂劫 层数，若敌人处于 #y折磨 中，则 #y魂劫 持续至下回合。"
+  },
+  {
+    "PROPER_NAME": "焰葬",
+    "NAMES": [
+      "pyre",
+      "焰葬"
+    ],
+    "DESCRIPTION": "本牌需额外 #y消耗 一张手牌才能打出。"
+  },
+  {
+    "PROPER_NAME": "储能",
+    "NAMES": [
+      "reserve",
+      "reserves",
+      "储能"
+    ],
+    "DESCRIPTION": "另一种类型的 #y能量 ，回合结束时不清零。"
+  },
+  {
+    "PROPER_NAME": "藏品",
+    "NAMES": [
+      "collected",
+      "藏品"
+    ],
+    "DESCRIPTION": "回合开始时，额外从 #y收藏堆 抽一张 #y藏品 牌。 #y藏品 牌附带 #y超虚无 ，即被打出或回合结束时被 #y消耗 ，无论其位于 #y收藏堆 外的何处。"
+  },
+  {
+    "PROPER_NAME": "火炬头",
+    "NAMES": [
+      "torchhead",
+      "火炬头"
+    ],
+    "DESCRIPTION": "若你有 #y临时生命 ,每次攻击时都会触发 #y火炬头 的效果。"
+  }
+]

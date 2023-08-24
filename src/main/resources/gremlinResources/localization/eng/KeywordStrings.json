@@ -4,14 +4,14 @@
       "agony"
     ],
     "PROPER_NAME": "Agony",
-    "DESCRIPTION": "Creatures in #yAgony deal #b80% less damage with Attacks."
+    "DESCRIPTION": "Creatures in Agony deal #b80% less damage with Attacks."
   },
   {
     "NAMES": [
       "cripple"
     ],
     "PROPER_NAME": "Cripple",
-    "DESCRIPTION": "#yCrippled enemies can no longer lose #yWeak. At the end of their turn, they lose HP equal to their #yWeak."
+    "DESCRIPTION": "Crippled enemies can no longer lose #yWeak. At the end of their turn, they lose HP equal to their #yWeak."
   },
   {
     "NAMES": [

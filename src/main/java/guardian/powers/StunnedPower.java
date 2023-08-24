@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
+import downfall.util.TextureLoader;
 
 import java.util.Iterator;
 
@@ -27,7 +28,7 @@ public class StunnedPower extends AbstractPower {
 
         this.ID = POWER_ID;
         this.owner = owner;
-        this.img = ImageMaster.loadImage("images/stslib/powers/32/stun.png");
+        this.img = TextureLoader.getTexture("images/stslib/powers/32/stun.png");
         this.type = POWER_TYPE;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;

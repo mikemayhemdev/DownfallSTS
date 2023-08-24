@@ -1,11 +1,14 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.actions.RepeatCardAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class FollowUp extends AbstractBronzeCard {
 
@@ -23,6 +26,7 @@ public class FollowUp extends AbstractBronzeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("FollowUp.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

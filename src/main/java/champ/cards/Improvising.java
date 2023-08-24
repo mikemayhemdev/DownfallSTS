@@ -5,24 +5,22 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
-public class Improvising extends AbstractChampCard {
+import static champ.ChampMod.loadJokeCardImage;
 
+public class Improvising extends AbstractChampCard {
     public final static String ID = makeID("Improvising");
 
-    //stupid intellij stuff power, self, rare
-
     public Improvising() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-
-      //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         postInit();
+        loadJokeCardImage(this, "Improvising.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new ImprovisingPower(1));
+        applyToSelf(new ImprovisingPower());
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }

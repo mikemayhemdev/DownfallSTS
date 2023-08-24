@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class GutPunch extends AbstractChampCard {
 
     public final static String ID = makeID("GutPunch");
@@ -20,6 +22,7 @@ public class GutPunch extends AbstractChampCard {
         tags.add(ChampMod.COMBOBERSERKER);
         postInit();
         exhaust = true;
+        loadJokeCardImage(this, "GutPunch.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

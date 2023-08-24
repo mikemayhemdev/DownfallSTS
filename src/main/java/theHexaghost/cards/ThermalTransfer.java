@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import theHexaghost.powers.BurnPower;
 
@@ -24,6 +25,7 @@ public class ThermalTransfer extends AbstractHexaCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
+        HexaMod.loadJokeCardImage(this, "ThermalTransfer.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

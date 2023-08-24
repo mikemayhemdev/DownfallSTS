@@ -17,6 +17,8 @@ import guardian.actions.PlaceRandomCardIntoStasisAction;
 import guardian.patches.AbstractCardEnum;
 import guardian.vfx.BronzeOrbEffect;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class BronzeOrb extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("BronzeOrb");
@@ -61,6 +63,7 @@ public class BronzeOrb extends AbstractGuardianCard {
         this.tags.add(GuardianMod.BEAM);
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("BronzeOrb.png"));
 
     }
 

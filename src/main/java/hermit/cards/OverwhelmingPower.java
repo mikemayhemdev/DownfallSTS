@@ -6,23 +6,20 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.stances.DivinityStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
-import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceChangeParticleGenerator;
 import hermit.HermitMod;
 import hermit.characters.hermit;
-import hermit.powers.EternalPower;
 import hermit.powers.OverwhelmingPowerPower;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class OverwhelmingPower extends AbstractDynamicCard {
-
 
     // TEXT DECLARATION
 
@@ -50,6 +47,7 @@ public class OverwhelmingPower extends AbstractDynamicCard {
     public OverwhelmingPower() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 4;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 3;
         loadJokeCardImage(this, "overwhelming_power.png");
     }
 
@@ -61,7 +59,7 @@ public class OverwhelmingPower extends AbstractDynamicCard {
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.RED, true));
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new OverwhelmingPowerPower(p, p, magicNumber), magicNumber));
-        this.addToBot(new GainEnergyAction(3));
+        this.addToBot(new GainEnergyAction(defaultSecondMagicNumber));
         this.addToBot(new DrawCardAction(3));
     }
 
@@ -72,13 +70,18 @@ public class OverwhelmingPower extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(-2);
+            upgradeDefaultSecondMagicNumber(1);
+            upgradeMagicNumber(-1);
             initializeDescription();
         }
     }
 
     @Override
     public float getTitleFontSize() {
-        return 20.0F;
+        if(Settings.language== Settings.GameLanguage.ZHS || Settings.language== Settings.GameLanguage.KOR || Settings.language== Settings.GameLanguage.ZHT ) {
+            return -1.0F;
+        }else {
+            return 20.0F;
+        }
     }
 }

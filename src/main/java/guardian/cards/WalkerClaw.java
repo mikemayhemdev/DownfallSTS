@@ -18,6 +18,8 @@ import com.megacrit.cardcrawl.vfx.combat.RipAndTearEffect;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class WalkerClaw extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("WalkerClaw");
@@ -55,6 +57,7 @@ public class WalkerClaw extends AbstractGuardianCard {
         this.magicNumber = this.baseMagicNumber = 3;
         this.socketCount = SOCKETS;
         updateDescription();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("WalkerClaw.png"));
         //loadGemMisc();
     }
 

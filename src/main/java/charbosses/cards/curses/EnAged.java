@@ -1,5 +1,6 @@
 package charbosses.cards.curses;
 
+import charbosses.cards.AbstractCustomBossCard;
 import downfall.util.TextureLoader;
 import charbosses.actions.common.EnemyMakeTempCardInHandAction;
 import charbosses.cards.AbstractBossCard;
@@ -17,7 +18,7 @@ import downfall.downfallMod;
 import guardian.GuardianMod;
 import slimebound.SlimeboundMod;
 
-public class EnAged extends AbstractBossCard {
+public class EnAged extends AbstractCustomBossCard {
     public static final String ID = "downfall_Charboss:Aged";
     private static final CardStrings cardStrings;
     public static final String IMG_PATH = downfallMod.assetPath("images/cards/aged.png");

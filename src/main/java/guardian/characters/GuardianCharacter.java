@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
+import downfall.util.TextureLoader;
 import guardian.modules.EnergyOrbGuardian;
 import guardian.powers.ModeShiftPower;
 import reskinContent.patches.CharacterSelectScreenPatches;
@@ -121,7 +122,7 @@ public class GuardianCharacter extends CustomPlayer {
 
     @Override
     public Texture getCutsceneBg() {
-        return ImageMaster.loadImage("images/scenes/greenBg.jpg");
+        return TextureLoader.getTexture("images/scenes/greenBg.jpg");
 
     }
 
@@ -291,7 +292,7 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public int getAscensionMaxHPLoss() {
-        return 8;
+        return 5;
     }
 
     public BitmapFont getEnergyNumFont() {

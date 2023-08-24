@@ -14,7 +14,7 @@ public class TransformCardReward extends CustomReward {
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public TransformCardReward() {
-        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardItemTypeEnumPatch.TRANSFORMCARD);
+        super(TextureLoader.getTexture("downfallResources/images/rewards/transform_card_reward.png"), TEXT[0], RewardItemTypeEnumPatch.TRANSFORMCARD);
     }
 
     @Override

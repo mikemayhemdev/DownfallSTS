@@ -8,14 +8,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
-import com.esotericsoftware.spine.Bone;
 import com.esotericsoftware.spine.Slot;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.curses.Regret;
-import com.megacrit.cardcrawl.cards.green.Terror;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -24,15 +21,14 @@ import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.AwakenedEyeParticle;
-import com.megacrit.cardcrawl.vfx.AwakenedWingParticle;
-import com.megacrit.cardcrawl.vfx.combat.GhostIgniteEffect;
-import com.megacrit.cardcrawl.vfx.scene.SilentVictoryStarEffect;
+import hermit.cards.Covet;
+import hermit.cards.Defend_Hermit;
+import hermit.cards.Snapshot;
+import hermit.cards.Strike_Hermit;
 import hermit.effects.HermitEyeParticle;
 import hermit.effects.HermitVictoryEmbers;
 import hermit.effects.HermitVictoryMoon;
@@ -40,9 +36,7 @@ import hermit.patches.EnumPatch;
 import hermit.powers.Concentration;
 import hermit.powers.Rugged;
 import hermit.relics.Memento;
-
-import hermit.HermitMod;
-import hermit.cards.*;
+import hermit.util.TextureLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -335,7 +329,7 @@ public class hermit extends CustomPlayer {
 
     @Override
     public Texture getCutsceneBg() {
-        return ImageMaster.loadImage("images/scenes/greenBg.jpg");
+        return TextureLoader.getTexture("images/scenes/greenBg.jpg");
     }
 
 

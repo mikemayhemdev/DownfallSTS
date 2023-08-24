@@ -3,6 +3,7 @@ package automaton;
 import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 
 public class CompileDisplayPanel extends EasyInfoDisplayPanel {
@@ -32,6 +33,9 @@ public class CompileDisplayPanel extends EasyInfoDisplayPanel {
                         }
                     }
             }
+        if(Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT ){
+            return s.toString().replace("：","- ");
+        }
         return s.toString();
     }
 

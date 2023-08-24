@@ -3,7 +3,7 @@
     "NAME": "铜制齿轮",
     "FLAVOR": "在你最需要的时候保护你。",
     "DESCRIPTIONS": [
-      "每场战斗首次进入 #yguardianmod:防御模式 时，额外获得 #b10 点 #y格挡 。 NL 游戏开始时将 #b1 张普通 #yguardianmod:宝石 牌加入牌组。 "
+      "战斗开始时，获得一张 #y预防 。 NL 游戏开始时，将 #b1 张普通 #yguardianmod:宝石 牌加入牌组。 "
     ]
   },
   "Guardian:ModeShifterPlus": {
@@ -29,24 +29,23 @@
   },
   "Guardian:PocketSentry": {
     "NAME": "便携哨兵",
-    "FLAVOR": "哨兵模式启动。 获得目标。无慈悲。",
+    "FLAVOR": "哨兵模式启动。获取目标成功。无慈悲。",
     "DESCRIPTIONS": [
-      "回合开始时，以下行动交替进行: NL 随机造成 #b",
-      " 点伤害。 NL 给予所有敌人 #b1 层 #y虚弱 。"
+      "每 #b3 个回合，给予所有敌人 #b1 层 #y虚弱 。"
     ]
   },
   "Guardian:SackOfGems": {
     "NAME": "宝石袋",
     "FLAVOR": "噢……闪闪发光！",
     "DESCRIPTIONS": [
-      "拾起时，向牌组中加入5张随机 #yguardianmod:宝石 。"
+      "拾起时，向牌组中加入 #b5 张随机 #yguardianmod:宝石 。"
     ]
   },
   "Guardian:StasisCodex": {
     "NAME": "机械宝典",
     "FLAVOR": "尖塔最早原型的设计和图表。",
     "DESCRIPTIONS": [
-      "回合结束时如果没有被 #y凝滞 的牌，从 #b3 张随机牌中选择 #b1 张牌 #yguardianmod:凝滞 。"
+      "回合结束时若无被 #y凝滞 的牌，从 #b3 张随机牌中选择 #b1 张牌 #yguardianmod:凝滞 。"
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
@@ -60,24 +59,25 @@
     "NAME": "悬浮机",
     "FLAVOR": "这些自动机搜寻最棒的遗宝，但需要占用处理能力来维持运转。",
     "DESCRIPTIONS": [
-      "每回合获得 [E] 。 NL 失去 #b2 个 #yguardianmod:凝滞 栏位。"
+      "回合开始时获得 [E] 。 NL 战斗开始时，失去 #b1 个 #yguardianmod:凝滞 栏位。"
     ]
   },
   "Guardian:StasisUpgradeRelic": {
     "NAME": "低温瓶",
     "FLAVOR": "出来的东西总是比进去的好。",
     "DESCRIPTIONS": [
-      "提供 #b1 个 #yguardianmod:凝滞 栏位。当牌被 #yguardianmod:凝滞 时， #y升级 这张牌。"
+      "战斗开始时，获得 #b1 个 #yguardianmod:凝滞 栏位。 #yguardianmod:凝滞 一张牌时，将其 #y升级 。"
     ]
   },
   "Guardian:BottledStasis": {
     "NAME": "瓶装黑洞",
     "FLAVOR": "在某个地方，一些不可思议的事情等待着人们去发现。",
     "DESCRIPTIONS": [
-      "拾起时，选择 #b1 张牌。 NL 战斗开始时，将其 #yguardianmod:凝滞 。",
+      "拾起时，选择牌组中 #b1 张牌。 NL 战斗开始时，将其 #yguardianmod:凝滞 。",
       "选择一张牌 ",
       "战斗开始时，将牌组中一张 ",
-      " #y凝滞 。"
+      " #y凝滞 。",
+      "瓶装的牌已被 #r移出 牌组，遗物已失效。"
     ]
   },
   "Guardian:StasisEgg": {
@@ -119,7 +119,8 @@
       "拾起时，选择 #b1 张牌。 NL 战斗开始时，将其移出牌组。第 #b3 回合开始时，再将其加入手牌并且本场战斗耗能变为 #b0 。",
       "选择一张牌 ",
       "战斗开始时，将 ",
-      " 移出牌组。第 #b3 回合开始时，再将它加入手牌并且本场战斗耗能变为 #b0 。"
+      " 移出牌组。第 #b3 回合开始时，再将其加入手牌并且本场战斗耗能变为 #b0 。",
+      "瓶装的牌已被 #r移出 牌组，遗物已失效。"
     ]
   }
 }

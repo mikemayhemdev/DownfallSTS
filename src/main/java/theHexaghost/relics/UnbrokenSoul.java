@@ -4,6 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
@@ -49,11 +50,17 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
         // Colorize the starter relic's name
         String name = new SpiritBrand().name;
         StringBuilder sb = new StringBuilder();
-        for (String word : name.split(" ")) {
-            sb.append("[#").append(HexaMod.placeholderColor.toString()).append("]").append(word).append("[] ");
+        if(Settings.language== Settings.GameLanguage.ZHS || Settings.language== Settings.GameLanguage.ZHT){
+            sb.append("[#").append(HexaMod.placeholderColor.toString()).append("]").append(name).append("[]");
+
+        }else {
+            for (String word : name.split(" ")) {
+                sb.append("[#").append(HexaMod.placeholderColor.toString()).append("]").append(word).append("[] ");
+            }
+            sb.setLength(sb.length() - 1);
+            sb.append("[#").append(HexaMod.placeholderColor.toString()).append("]");
+
         }
-        sb.setLength(sb.length() - 1);
-        sb.append("[#").append(HexaMod.placeholderColor.toString()).append("]");
 
         return DESCRIPTIONS[0] + sb.toString() + DESCRIPTIONS[1];
     }

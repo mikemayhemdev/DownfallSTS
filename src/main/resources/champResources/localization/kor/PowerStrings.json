@@ -61,10 +61,7 @@
   "champ:ImprovisingPower": {
     "NAME": "증강",
     "DESCRIPTIONS": [
-      "매 턴 처음으로 #y연계 카드를 사용하면 그 카드를 가져오고 사용하기 전까지 비용이 #b0 이 됩니다. #b",
-      " 번 남았습니다.",
-      "매 턴 #b",
-      " 번까지 #y연계 카드를 사용하면 그 카드를 가져오고 사용하기 전까지 비용이 #b0 이 됩니다. #b"
+      "내 턴 시작 시 자세를 취하고 있지 않다면 무작위 자세를 취합니다."
     ]
   },
   "champ:CalledShotPower": {
@@ -143,9 +140,8 @@
   "champ:IronFortressPower": {
     "NAME": "현란한 꺾기",
     "DESCRIPTIONS": [
-      "자세를 취할 때마다 취한 #y자세의 #y스킬 카드 보너스 효과를 얻습니다.",
-      " #b",
-      " 번 얻습니다."
+      "자세를 취할 때마다 #y방어도를 #b",
+      " 얻습니다."
     ]
   },
   "champ:IronFortressVigorPower": {
@@ -187,11 +183,11 @@
     ]
   },
   "champ:UltimateFormNextTurnPower": {
-    "NAME": "Preparing Ultimate",
+    "NAME": "궁극의 준비",
     "DESCRIPTIONS": [
-      "At the start of your next turn, enter #yUltimate #yStance.",
-      " NL It will persist for #b",
-      " turns."
+      "내 다음 턴 시작 시 #y궁극의 #y자세를 취합니다.",
+      " NL #b",
+      " 턴 동안 지속됩니다."
     ]
   },
   "champ:EnGardePower": {

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.shop.ShopScreen;
 import downfall.downfallMod;
+import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 
@@ -21,8 +22,8 @@ public class HeartShopUIPatches {
         public static void Postfix(ShopScreen __result, ArrayList<AbstractCard> coloredCards, ArrayList<AbstractCard> colorlessCards) {
 
             if (EvilModeCharacterSelect.evilMode) {
-                ReflectionHacks.setPrivate(__result, ShopScreen.class, "rugImg", ImageMaster.loadImage(downfallMod.assetPath("images/ui/heartRug.png")));
-                ReflectionHacks.setPrivate(__result, ShopScreen.class, "handImg", ImageMaster.loadImage(downfallMod.assetPath("images/ui/heartHand.png")));
+                ReflectionHacks.setPrivate(__result, ShopScreen.class, "rugImg", TextureLoader.getTexture(downfallMod.assetPath("images/ui/heartRug.png")));
+                ReflectionHacks.setPrivate(__result, ShopScreen.class, "handImg", TextureLoader.getTexture(downfallMod.assetPath("images/ui/heartHand.png")));
 
 
                 ReflectionHacks.setPrivateStaticFinal(ShopScreen.class, "characterStrings", CardCrawlGame.languagePack.getCharacterString( downfallMod.makeID("HeartMerchantScreen")));

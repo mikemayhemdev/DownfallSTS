@@ -4,7 +4,6 @@ package expansioncontent.cards;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.ShakeScreenAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
@@ -13,9 +12,10 @@ import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import expansioncontent.expansionContentMod;
-import guardian.cards.SentryWave;
 import slimebound.cards.SlimeCrush;
 import slimebound.powers.NextTurnGainSlimeCrush;
+
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
 
 public class PrepareCrush extends AbstractExpansionCard {
     public final static String ID = makeID("PrepareCrush");
@@ -36,6 +36,7 @@ public class PrepareCrush extends AbstractExpansionCard {
         baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;
         cardsToPreview = new SlimeCrush();
+        loadJokeCardImage(this, "PrepareCrush.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -448,21 +448,21 @@
     "NAME": "Bénédiction de Rubis du Cœur",
     "FLAVOR": "Le Cœur est puissant.",
     "DESCRIPTIONS": [
-      "Commencez chaque combat avec #b1 de #yForce."
+      "Durant les combats de Boss, gagnez #b1 de #yForce."
     ]
   },
   "downfall:HeartBlessingBlue": {
     "NAME": "Bénédiction de Saphir du Cœur",
     "FLAVOR": "Le Cœur est satisfait.",
     "DESCRIPTIONS": [
-      "Lorsque vous la ramassez, augmentez vos PV Max de #b10."
+      "Durant les combats de Boss, gagnez #10 PV Temporaires."
     ]
   },
   "downfall:HeartBlessingGreen": {
     "NAME": "Bénédiction d'Émeraude du Cœur",
     "FLAVOR": "Le Cœur est tout.",
     "DESCRIPTIONS": [
-      "Commencez chaque combat avec #b1 de #yDexterité."
+      "Durant les combats de Boss, gagnez #b1 de #yDexterité."
     ]
   },
   "downfall:TeleportStone": {

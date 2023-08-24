@@ -48,6 +48,7 @@ public class Pretaliation extends AbstractGremlinCard {
         this.baseBlamage = BLAMAGE;
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Pretaliation.png");
     }
 
     @Override

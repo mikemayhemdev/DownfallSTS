@@ -1,11 +1,14 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class ForceShield extends AbstractBronzeCard {
 
@@ -22,6 +25,7 @@ public class ForceShield extends AbstractBronzeCard {
         if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null) {
             this.configureCostsOnNewCard();
         }
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("ForceShield.png"));
     }
 
     public void configureCostsOnNewCard() {

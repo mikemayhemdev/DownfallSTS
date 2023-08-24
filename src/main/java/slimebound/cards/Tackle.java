@@ -15,7 +15,7 @@ import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PreventTackleDamagePower;
 
 
-public class Tackle extends AbstractTackleCard {
+public class Tackle extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:Tackle";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -41,6 +41,7 @@ public class Tackle extends AbstractTackleCard {
         tags.add(SlimeboundMod.TACKLE);
         this.baseDamage = 12;
         baseSelfDamage = this.selfDamage = 3;
+        SlimeboundMod.loadJokeCardImage(this, "Tackle.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,0 +1,41 @@
+{
+  "Gremlin:FatGremlin": {
+    "NAME": "Gremlin Gordo",
+    "DESCRIPTION": [
+      "Após jogar um ataque, aplique #b",
+      " #yFraco em todos os alvos."
+    ]
+  },
+
+  "Gremlin:GremlinWizard": {
+    "NAME": "Gremlin Mago",
+    "DESCRIPTION": [
+      "Após jogar uma habilidade, ganhe #b",
+      " #yMago."
+    ]
+  },
+
+  "Gremlin:MadGremlin": {
+    "NAME": "Gremlin Louco",
+    "DESCRIPTION": [
+      "Ganhe #b",
+      " #yForça #yTemporária quando atacado."
+    ]
+  },
+
+  "Gremlin:ShieldGremlin": {
+    "NAME": "Gremlin de Escudo",
+    "DESCRIPTION": [
+      "Após jogar uma habilidade, ganhe #b",
+      " #yBloqueio."
+    ]
+  },
+
+  "Gremlin:SneakyGremlin": {
+    "NAME": "Gremlin Sorrateiro",
+    "DESCRIPTION": [
+      "Após jogar um ataque, cause #b",
+      " de dano a um inimigo aleatório."
+    ]
+  }
+}

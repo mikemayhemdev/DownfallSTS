@@ -1,0 +1,32 @@
+{
+  "hexamod:SoulburnPotion": {
+    "NAME": "Molotov",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " #ySoulburn."
+    ]
+  },
+  "hexamod:DoubleChargePotion": {
+    "NAME": "Fluido Combustível",
+    "DESCRIPTIONS": [
+      "#yIgnite o atual #bGhostflame #b",
+      " vezes."
+    ]
+  },
+  "hexamod:EctoCoolerPotion": {
+    "NAME": "Ecto-Cooler",
+    "DESCRIPTIONS": [
+      "Escolha #b1 de #b3 cartas #yEthereal aleatórias de qualquer classe para obter. Custa #b0 neste turno.",
+      "Escolha #b1 de #b3 cartas #yEthereal aleatórias de qualquer classe e obtenha #b",
+      " cópias. Elas custam #b0 neste turno."
+    ]
+  },
+  "hexamod:InfernoChargePotion": {
+    "NAME": "Poção Inferno",
+    "DESCRIPTIONS": [
+      "#yIgnite a #bGhostflame do Inferno.",
+      "#yIgnite a #bGhostflame do Inferno #b",
+      " vezes."
+    ]
+  }
+}

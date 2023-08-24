@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.vfx.ExplosionSmallEffectGreen;
 
@@ -23,6 +24,7 @@ public class PhantomFireball extends AbstractHexaCard {
     public PhantomFireball() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        HexaMod.loadJokeCardImage(this, "PhantomFireball.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

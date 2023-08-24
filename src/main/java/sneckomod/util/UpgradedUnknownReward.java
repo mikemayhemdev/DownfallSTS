@@ -11,16 +11,19 @@ import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.ArrayList;
 
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRng;
 
 public class UpgradedUnknownReward extends CustomReward {
     public static final String ID = SneckoMod.makeID("UpgradedUnknownReward");
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public UpgradedUnknownReward() {
-        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardItemTypeEnumPatch.UPGRADEDUNKNOWNCARD);
-        cards.clear();
-        cards.addAll(getCards());
+        super(TextureLoader.getTexture("downfallResources/images/rewards/unknown_card_reward.png"), TEXT[0], RewardItemTypeEnumPatch.UPGRADEDUNKNOWNCARD);
+    }
+
+    public void generate_reward_cards(){
+        this.cards.clear();
+        this.cards.addAll(UpgradedUnknownReward.getCards());
     }
 
     public static ArrayList<AbstractCard> getCards() {
@@ -60,7 +63,7 @@ public class UpgradedUnknownReward extends CustomReward {
                 list.add(c);
             }
         }
-        return list.get(cardRandomRng.random(list.size() - 1));// 1217
+        return list.get(cardRng.random(list.size() - 1));// 1217
     }
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {

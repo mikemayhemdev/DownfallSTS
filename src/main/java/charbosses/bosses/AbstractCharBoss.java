@@ -11,16 +11,12 @@ import charbosses.actions.util.CharbossDoNextCardAction;
 import charbosses.actions.util.CharbossMakePlayAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
-import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.cards.blue.EnThunderStrike;
 import charbosses.cards.green.EnBladeDance;
 import charbosses.cards.green.EnCloakAndDagger;
-import charbosses.cards.hermit.EnDesperado;
-import charbosses.cards.hermit.EnHoleUp;
-import charbosses.cards.hermit.EnItchyTrigger;
 import charbosses.cards.red.EnBodySlam;
 import charbosses.cards.red.EnSecondWind;
 import charbosses.core.EnemyEnergyManager;
@@ -65,12 +61,9 @@ import com.megacrit.cardcrawl.vfx.combat.DeckPoofEffect;
 import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import downfall.downfallMod;
-import downfall.monsters.NeowBoss;
-import hermit.cards.HoleUp;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -193,10 +186,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         */
 
 
-      //  if (AbstractDungeon.ascensionLevel >= 20 && CardCrawlGame.dungeon instanceof com.megacrit.cardcrawl.dungeons.TheBeyond) {
-       //     new CBR_LizardTail().instantObtain(this);
-            // new CBR_MagicFlower().instantObtain(this);
-      //  }
+        //  if (AbstractDungeon.ascensionLevel >= 20 && CardCrawlGame.dungeon instanceof com.megacrit.cardcrawl.dungeons.TheBeyond) {
+        //     new CBR_LizardTail().instantObtain(this);
+        // new CBR_MagicFlower().instantObtain(this);
+        //  }
         /*
         if (NeowBoss.neowboss != null) {
             switch (chosenArchetype.actNum) {
@@ -331,7 +324,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             c.resetAttributes();
         }
         addToBot(new DelayedActionAction(new CharbossTurnstartDrawAction()));
-
     }
 
 
@@ -414,8 +406,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                                 budget -= c.costForTurn;
                                 budget += ((AbstractBossCard) c).energyGeneratedIfPlayed;
                                 if (budget < 0) budget = 0;
-                            }
-                            else if (c.costForTurn == -2 && c.type == AbstractCard.CardType.CURSE && c.color == AbstractCard.CardColor.CURSE) {
+                            } else if (c.costForTurn == -2 && c.type == AbstractCard.CardType.CURSE && c.color == AbstractCard.CardColor.CURSE) {
                                 ((AbstractBossCard) c).bossLighten();
                             }
                         }
@@ -423,6 +414,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                             AbstractBossCard cB = (AbstractBossCard) c;
                             cB.refreshIntentHbLocation();
                         }
+
+                        //TODO Add a way for create a hidden attack intent for the Boss if it intends to play an Attack.
                     }
                 });
             }
@@ -502,7 +495,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 if (c.strengthGeneratedIfPlayed > 0) {
                     for (int j = i + 1; j < hand.size(); j++) {
                         AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
-                        c2.manualCustomDamageModifier += c.strengthGeneratedIfPlayed;
+                        if (c2.type == AbstractCard.CardType.ATTACK)
+                            c2.manualCustomDamageModifier += c.strengthGeneratedIfPlayed;
                     }
                 }
 
@@ -510,7 +504,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 if (c.block > 0) {
                     //Special case for Second Wind, always exhausts 2 wounds with Feel No Pain up
                     int tmpBlock = c.block;
-                    if(c instanceof EnSecondWind) {
+                    if (c instanceof EnSecondWind) {
                         tmpBlock = 2 * (c.block + 3);
                     }
                     for (int j = i + 1; j < hand.size(); j++) {
@@ -1185,8 +1179,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         }
 
+
         AbstractCharBoss.boss = null;
         AbstractCharBoss.finishedSetup = false;
+        relics.clear();
         hand.clear();
         /*
         drawPile.clear();
@@ -1200,7 +1196,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         stance.onEnterStance();
 
         super.die();
-
+        chosenArchetype = null;
 
     }
 
@@ -1443,7 +1439,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         ArrayList<AbstractEnemyOrb> orbies = new ArrayList<AbstractEnemyOrb>();
         for (AbstractOrb o : orbs) {
             if (o instanceof AbstractEnemyOrb) {
-                orbies.add((AbstractEnemyOrb)o);
+                orbies.add((AbstractEnemyOrb) o);
             }
         }
         return orbies;
@@ -1533,10 +1529,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             AbstractDungeon.actionManager.addToTop(new EnemyAnimateOrbAction(1));
         }
         // Need to update Thunderstrike intent if a lightning orb is played
-        for (AbstractCard card: boss.hand.group) {
+        for (AbstractCard card : boss.hand.group) {
             if (card instanceof EnThunderStrike) { // Condition maybe not needed?
                 card.applyPowers();
-                ((AbstractBossCard)card).createIntent();
+                ((AbstractBossCard) card).createIntent();
             }
         }
     }

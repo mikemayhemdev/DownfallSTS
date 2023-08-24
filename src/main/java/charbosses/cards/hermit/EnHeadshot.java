@@ -3,6 +3,7 @@ package charbosses.cards.hermit;
 import charbosses.cards.AbstractBossCard;
 import charbosses.powers.bossmechanicpowers.HermitConcentrateAdder;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -38,21 +39,20 @@ public class EnHeadshot extends AbstractHermitBossCard {
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
-        int oldBaseDamage = baseDamage;
+        super.calculateCardDamage(mo);
         AbstractPower concentration = this.owner.getPower(HermitConcentrationPower.POWER_ID);
         if (concentration != null && concentration.amount > 0) {
-            baseDamage *= 2;
+            damage *= 2;
         }
-        super.calculateCardDamage(mo);
-        baseDamage = oldBaseDamage;
-        if (this.damage != baseDamage) isDamageModified = true;
+        isDamageModified = damage != baseDamage;
+        this.intentDmg = damage;
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(3);
+            this.upgradeDamage(2);
         }
     }
 

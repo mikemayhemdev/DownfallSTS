@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import theHexaghost.actions.RetractAction;
 
@@ -19,6 +20,7 @@ public class RetreatToShadows extends AbstractHexaCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
+        HexaMod.loadJokeCardImage(this, "RetreatToShadows.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

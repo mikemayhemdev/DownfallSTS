@@ -1,9 +1,9 @@
 {
-  "Guardian:NextTurnGainStrengthPower": {
+  "Guardian:NextTurnGainTemporaryStrengthPower": {
     "NAME": "Charging Up",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yStrength on your next turn."
+      " temporary #yStrength on your next turn."
     ]
   },
   "Guardian:StunnedPower": {
@@ -17,9 +17,8 @@
   "Guardian:FloatingOrbsPower": {
     "NAME": "Floating Orbs",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain an #yOrb #ySlam.",
-      "At the start of your turn, gain #b",
-      " #yOrb #ySlams."
+      "Whenever you play a #y0-Cost card, deal #b",
+      " damage to a random enemy."
     ]
   },
   "Guardian:OrbwalkPower": {
@@ -32,9 +31,9 @@
   "Guardian:ClonePower": {
     "NAME": "Reroute",
     "DESCRIPTIONS": [
-      "Place the next non-Exhausting #yAttack or #ySkill you play this turn into #yStasis.",
+      "Place the next card you play this turn into #yStasis.",
       "Place the next #b",
-      " non-Exhausting #yAttacks or #ySkills you play this turn into #yStasis."
+      " cards you play this turn into #yStasis."
     ]
   },
   "Guardian:GemFinderPower": {

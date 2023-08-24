@@ -5,6 +5,8 @@ import basemod.abstracts.CustomCard;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
+import charbosses.cards.hermit.EnShortFuse;
+import charbosses.cards.hermit.EnShortFuseNecro;
 import charbosses.cards.purple.AbstractStanceChangeCard;
 import charbosses.cards.purple.EnCarveReality;
 import charbosses.cards.purple.EnSmite;
@@ -48,6 +50,7 @@ import com.megacrit.cardcrawl.vfx.combat.BuffParticleEffect;
 import com.megacrit.cardcrawl.vfx.combat.StunStarEffect;
 import com.megacrit.cardcrawl.vfx.combat.UnknownParticleEffect;
 import hermit.characters.hermit;
+import hermit.util.TextureLoader;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -72,7 +75,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     public boolean showIntent = false;
     public int energyGeneratedIfPlayed = 0;
-    public int strengthGeneratedIfPlayed = 0;
+    public int strengthGeneratedIfPlayed = 0; //used to increase intent damage for cards on the right of this card, when it provides strength
     public int damageMultGeneratedIfPlayed = 1;
     public int damageMultIfPlayed = 1;
     public int focusGeneratedIfPlayed = 0;
@@ -192,7 +195,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     }
 
     public int autoPriority() {
-        AbstractCharBoss ownerBoss = (AbstractCharBoss) this.owner;
+        AbstractCharBoss ownerBoss = this.owner;
         boolean setupPhase = ownerBoss.onSetupTurn;
 
         float blockModifier = 1F;
@@ -318,7 +321,6 @@ public abstract class AbstractBossCard extends AbstractCard {
         }
         if (mo != null) {
             this.damage = MathUtils.floor(calculateDamage(mo, player, this.baseDamage));
-            this.intentDmg = MathUtils.floor(manualCustomDamageModifierMult * calculateDamage(mo, player, this.baseDamage + customIntentModifiedDamage() + manualCustomDamageModifier));
             this.intentDmg = MathUtils.floor(manualCustomDamageModifierMult * calculateDamage(mo, player, this.baseDamage + customIntentModifiedDamage() + manualCustomDamageModifier));
             if (this instanceof EnCarveReality) {
                 if (((EnCarveReality)this).willUseSmite) {
@@ -777,7 +779,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         if ((!lockIntentValues) && this.damage > -1) {
             if (this.isMultiDamage) {
                 this.intentMultiAmt = this.magicNumber;
-                if (this instanceof EnHandOfGreedHermitNecro) {
+                if (this instanceof EnHandOfGreedHermitNecro || this instanceof EnShortFuseNecro) {
                     this.intentMultiAmt = 2;
                 }
             } else {
@@ -985,7 +987,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         if (imgMap.containsKey(img)) {
             cardTexture = (Texture) imgMap.get(img);
         } else {
-            cardTexture = ImageMaster.loadImage(img);
+            cardTexture = TextureLoader.getTexture(img);
             imgMap.put(img, cardTexture);
         }
 

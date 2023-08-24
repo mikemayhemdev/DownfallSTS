@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import gremlin.powers.ModifiedLoseStrengthPower;
 
@@ -36,6 +37,7 @@ public class Erupt extends AbstractGremlinCard {
         this.exhaust = true;
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Erupt.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

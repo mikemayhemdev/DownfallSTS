@@ -16,6 +16,8 @@ import com.megacrit.cardcrawl.powers.EnergizedPower;
 import slimebound.powers.EnergizedSlimeboundPower;
 import sneckomod.SneckoMod;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class FalseCounter extends AbstractChampCard {
 
     public final static String ID = makeID("FalseCounter");
@@ -25,6 +27,7 @@ public class FalseCounter extends AbstractChampCard {
         baseMagicNumber = magicNumber = 1;
         tags.add(ChampMod.FINISHER);
         baseBlock = block = 12;
+        loadJokeCardImage(this, "FalseCounter.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

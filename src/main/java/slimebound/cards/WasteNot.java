@@ -42,6 +42,7 @@ public class WasteNot extends AbstractSlimeboundCard {
 
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 1;
+        SlimeboundMod.loadJokeCardImage(this, "WasteNot.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

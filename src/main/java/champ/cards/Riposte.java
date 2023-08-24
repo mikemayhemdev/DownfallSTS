@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 @CardIgnore
 public class Riposte extends AbstractChampCard {
 
@@ -16,6 +18,7 @@ public class Riposte extends AbstractChampCard {
         isEthereal = true;
         exhaust = true;
         postInit();
+        loadJokeCardImage(this, "Riposte.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

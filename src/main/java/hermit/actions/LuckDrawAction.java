@@ -5,13 +5,9 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
-import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
-import java.util.Iterator;
 
 public class LuckDrawAction extends AbstractGameAction {
     private AbstractPlayer p;
@@ -31,6 +27,13 @@ public class LuckDrawAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
             if (tracker >= energy || (p.drawPile.isEmpty() && p.discardPile.isEmpty()) || p.hand.size() >= 10) {
+                this.isDone = true;
+                return;
+            }
+
+            if (AbstractDungeon.player.hasPower("No Draw"))
+            {
+                AbstractDungeon.player.getPower("No Draw").flash();
                 this.isDone = true;
                 return;
             }

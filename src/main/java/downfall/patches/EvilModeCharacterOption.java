@@ -3,6 +3,7 @@ package downfall.patches;
 import automaton.AutomatonChar;
 import champ.ChampChar;
 import champ.ChampMod;
+import collector.CollectorChar;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -63,6 +64,12 @@ public class EvilModeCharacterOption {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[9] + TEXT[11]);
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[10] + TEXT[11]);
+                }
+            } else if (__instance.c.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
+                if (UnlockTracker.isCharacterLocked("Collector")) {
+                    TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[12] + TEXT[11]);
+                } else {
+                    TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[13] + TEXT[11]);
                 }
             }
         }

@@ -19,7 +19,7 @@
   },
   "hexamod:BacktrackSmack": {
     "NAME": "Backtrack Smack",
-    "DESCRIPTION": "Deal !D! damage. NL hexamod:Retract."
+    "DESCRIPTION": "Deal !D! damage twice. NL hexamod:Retract."
   },
   "hexamod:BurningQuestion": {
     "NAME": "Burning Question",
@@ -31,7 +31,8 @@
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
-    "DESCRIPTION": "hexamod:Ignite the previous Ghostflame !M! times."
+    "DESCRIPTION": "hexamod:Ignite the previous Ghostflame !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Ignite the previous Ghostflame !M! times."
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",
@@ -68,7 +69,7 @@
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
-    "DESCRIPTION": "Ethereal. NL hexamod:Ignite the current Ghostflame. NL hexamod:Advance.",
+    "DESCRIPTION": "Draw !M! cards. NL hexamod:Advance.",
     "UPGRADE_DESCRIPTION": "hexamod:Ignite the current Ghostflame. NL hexamod:Advance."
   },
   "hexamod:Firestarter": {
@@ -81,7 +82,7 @@
   },
   "hexamod:FlameSwitch": {
     "NAME": "Bad Omen",
-    "DESCRIPTION": "Ethereal. NL Choose a Ghostflame type to change the current one into. NL Exhaust.",
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL Increase amount of turns for it to detonate by !M!. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Choose a Ghostflame type to change the current one into. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Replace the current Ghostflame with a hexamod:Bolstering Ghostflame",
@@ -157,7 +158,7 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "Heat Metal",
-    "DESCRIPTION": "Deal !D! damage. NL After hexamod:Soulburn detonates on this enemy, apply !M! hexamod:Soulburn."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !burny! hexamod:Soulburn. NL Apply !M! Vulnerable."
   },
   "hexamod:HeatShield": {
     "NAME": "Heat Shield",
@@ -250,8 +251,8 @@
   },
   "hexamod:Rewind": {
     "NAME": "Rewind",
-    "DESCRIPTION": "hexamod:Retract. NL Gain [E] .",
-    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] and draw 1 card."
+    "DESCRIPTION": "hexamod:Retract. NL Fetch a card from your discard pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Fetch !M! cards from your discard pile. NL Exhaust."
   },
   "hexamod:Sear": {
     "NAME": "Sear",
@@ -339,7 +340,8 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Unleash Spirits",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. Repeat for each *Exhausted *Ethereal card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. Repeat for each *Exhausted *Ethereal card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " NL (Hits !M! time(s).)"
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",

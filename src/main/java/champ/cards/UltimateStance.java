@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class UltimateStance extends AbstractChampCard {
 
     public final static String ID = makeID("UltimateStance");
@@ -23,6 +25,7 @@ public class UltimateStance extends AbstractChampCard {
     public UltimateStance() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
+        loadJokeCardImage(this, "UltimateStance.png");
     }
 
     /*

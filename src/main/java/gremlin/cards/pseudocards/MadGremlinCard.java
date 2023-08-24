@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.cards.AbstractGremlinCard;
 import gremlin.orbs.MadGremlin;
@@ -29,6 +30,7 @@ public class MadGremlinCard extends AbstractGremlinCard {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "MadGremlin.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

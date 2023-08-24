@@ -38,7 +38,7 @@
 
   "Gremlin:BulkUp": {
     "NAME": "몸집 부풀리기",
-    "DESCRIPTION": "gremlin:임시_체력을 !M! 얻습니다. NL gremlin:뚱뚱한_그렘린으로 gremlin:교체합니다."
+    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL gremlin:뚱뚱한_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:BurlyBlow": {
@@ -103,7 +103,7 @@
 
   "Gremlin:EdibleArmor": {
     "NAME": "식용 갑옷",
-    "DESCRIPTION": "방어도를 변환해서 gremlin:임시_체력을 얻습니다."
+    "DESCRIPTION": "방어도를 변환해서 expansioncontent:임시 *체력을 얻습니다."
   },
 
   "Gremlin:Encore": {
@@ -118,7 +118,7 @@
 
   "Gremlin:Erupt": {
     "NAME": "분출",
-    "DESCRIPTION": "힘을 !M! 얻습니다. 이번 턴이 끝날 때 힘을 !M! 잃습니다. NL 소멸."
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 이번 턴이 끝날 때 힘을 !M! 잃습니다. NL 소멸."
   },
 
   "Gremlin:Exacerbate": {
@@ -169,8 +169,8 @@
   },
 
   "Gremlin:FollowThrough": {
-    "NAME": "마무리 동작",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 힘을 !M! 얻습니다. 이번 턴이 끝날 때 힘을 !M! 잃습니다."
+    "NAME": "리더를 위하여!",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 힘을 !M! 얻습니다. NL 이번 턴이 끝날 때 힘을 !M! 잃습니다."
   },
 
   "Gremlin:Fury": {
@@ -197,7 +197,7 @@
 
   "Gremlin:GremlinMeal": {
     "NAME": "몸 풀기",
-    "DESCRIPTION": "힘을 !M! 얻습니다. 이번 턴이 끝날 때 힘을 !M! 잃습니다."
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 이번 턴이 끝날 때 힘을 !M! 잃습니다."
   },
 
   "Gremlin:GremlinDance": {
@@ -217,7 +217,7 @@
   "Gremlin:GremlinToss": {
     "NAME": "그렘린 던지기",
     "DESCRIPTION": "현재 방어도 와 gremlin:임시_체력만큼 피해를 줍니다.",
-    "UPGRADE_DESCRIPTION": "gremlin:임시_체력을 !M! 얻습니다. NL 현재 방어도와 gremlin:임시_체력만큼 피해를 줍니다.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL 현재 방어도와 gremlin:임시_체력만큼 피해를 줍니다.",
     "EXTENDED_DESCRIPTION": [" NL (피해를 !D! 줍니다.)"]
   },
 
@@ -228,7 +228,7 @@
 
   "Gremlin:Heckle": {
     "NAME": "야유",
-    "DESCRIPTION": "적에게 해로운 효과를 부여할 때마다 gremlin:임시_체력을 !M! 얻습니다."
+    "DESCRIPTION": "적에게 해로운 효과를 부여할 때마다 expansioncontent:임시 *체력을 !M! 얻습니다."
   },
 
   "Gremlin:InfiniteBlocks": {
@@ -249,7 +249,7 @@
 
   "Gremlin:Jeer": {
     "NAME": "조롱",
-    "DESCRIPTION": "피해를 !D! 줍니다. 적이 해로운 효과를 보유하고 있다면 gremlin:임시_체력을 !M! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. 적이 해로운 효과를 보유하고 있다면 expansioncontent:임시 *체력을 !M! 얻습니다."
   },
 
   "Gremlin:Kablamo": {
@@ -286,7 +286,7 @@
 
   "Gremlin:Nob": {
     "NAME": "귀족",
-    "DESCRIPTION": "gremlin:임시_체력을 !M! 얻습니다. NL gremlin:임시_체력을 모두 잃기 전까지 gremlin:귀족_그렘린으로 변이합니다."
+    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL expansioncontent:임시 *체력을 모두 잃기 전까지 gremlin:귀족_그렘린으로 변이합니다."
   },
 
   "Gremlin:NobChoice": {
@@ -320,7 +320,7 @@
   "Gremlin:Pinprick": {
     "NAME": "성가신 구멍",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "이 카드를 뽑을 때마다 이 카드의 gremlin:메아리를 1장 얻습니다. NL 피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "이 카드를 뽑을 때 이 카드의 gremlin:메아리를 1장 얻습니다. NL 피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL 소멸."
   },
 
   "Gremlin:Polish": {
@@ -452,8 +452,7 @@
 
   "Gremlin:Tadah": {
     "NAME": "이제 간다!",
-    "DESCRIPTION": "무작위 스킬 카드의 gremlin:메아리를 1장 얻습니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다.",
-    "UPGRADE_DESCRIPTION": "무작위 강화된 스킬 카드의 gremlin:메아리를 1장 얻습니다. NL 그 카드의 비용을 1 낮춥니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다."
+    "DESCRIPTION": "무작위 스킬 카드의 gremlin:메아리를 1장 얻습니다. 사용하기 전까지 그 카드의 비용이 0이 됩니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:TagTeam": {
@@ -464,7 +463,7 @@
 
   "Gremlin:TargetWeakness": {
     "NAME": "상처입은 대상",
-    "DESCRIPTION": "공격 대상이 약화를 보유하고 있다면 피해량을 !M! 증가시킵니다."
+    "DESCRIPTION": "공격 대상이 약화를 보유하고 있다면 내 피해량이 !M! 증가합니다."
   },
 
   "Gremlin:Tricksy": {

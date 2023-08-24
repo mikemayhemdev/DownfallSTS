@@ -1,0 +1,32 @@
+{
+  "champ:OpenerPotion": {
+    "NAME": "Strategy Potion",
+    "DESCRIPTIONS": [
+      "Escolha #b1 de #b2 cartas que Entrem em uma #yPostura para ganhar (uma para cada #yPostura). Custa #b0 neste turno.",
+      " Ganhe #b",
+      " cópia dela.",
+      " cópias dela."
+    ]
+  },
+  "champ:TechniquePotion": {
+    "NAME": "Bottled Technique",
+    "DESCRIPTIONS": [
+      "Ative a #yHabilidade #yBônus da sua Postura atual #b",
+      " vezes."
+    ]
+  },
+  "champ:UltimateStancePotion": {
+    "NAME": "Stimpack",
+    "DESCRIPTIONS": [
+      "Entre na #yPostura #ySuprema por #b",
+      " turnos."
+    ]
+  },
+  "champ:CounterPotion": {
+    "NAME": "Brew of Sharpness",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " #yContra-ataque."
+    ]
+  }
+}

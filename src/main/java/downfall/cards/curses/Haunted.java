@@ -11,9 +11,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.cardmods.EtherealMod;
 import downfall.downfallMod;
-import theHexaghost.HexaMod;
+import expansioncontent.cardmods.PropertiesMod;
 
 
 public class Haunted extends CustomCard {
@@ -60,7 +59,7 @@ public class Haunted extends CustomCard {
                 isDone = true;
                 for (AbstractCard c : AbstractDungeon.player.hand.group) {
                     if (!c.isEthereal) {
-                        CardModifierManager.addModifier(c, new EtherealMod());
+                        CardModifierManager.addModifier(c, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
                         c.superFlash(Color.PURPLE.cpy());
                     }
                 }

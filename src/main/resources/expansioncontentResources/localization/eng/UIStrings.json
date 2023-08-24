@@ -1,4 +1,50 @@
 {
+  "downfall:PropertiesMod": {
+    "TEXT": [
+      "Applied properties.",
+      "Additional properties: ",
+      "Additional properties for this turn: ",
+      " NL Also for this turn: ",
+      ", ",
+      ".",
+      "#y",
+      "Echo",
+      "Unplayable",
+      "Ethereal",
+      "Retain",
+      "Exhaust",
+      " ",
+      "NL ",
+      "Echo: "
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "Ethereal. NL "
+    ]
+  },
+  "downfall:ExhaustMod": {
+    "TEXT": [
+      " NL Exhaust."
+    ]
+  },
+  "downfall:InnateMod": {
+    "TEXT": [
+      "Innate. NL "
+    ]
+  },
+  "downfall:RetainCardMod": {
+    "TEXT": [
+      "Retain. NL "
+    ]
+  },
+  "downfall:UnplayableMod": {
+    "TEXT": [
+      "Unplayable. NL ",
+      "This card can't be played.",
+      "This card can't be played this turn."
+    ]
+  },
   "expansioncontent:CannotUseBossCardMessage": {
     "TEXT": [
       "I've already played a Boss card this turn!"

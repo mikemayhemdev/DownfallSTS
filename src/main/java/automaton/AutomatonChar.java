@@ -5,20 +5,26 @@ import automaton.cards.Replicate;
 import automaton.cards.Defend;
 import automaton.cards.Strike;
 import automaton.relics.BronzeCore;
+import automaton.vfx.CompileVictoryEffect;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.scene.DefectVictoryNumberEffect;
+import downfall.util.TextureLoader;
 import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
@@ -60,6 +66,15 @@ public class AutomatonChar extends CustomPlayer {
 
     }
 
+    public void damage(DamageInfo info) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0 && skeleton.getData().findAnimation("Hit") != null) {
+            this.state.setAnimation(0, "Hit", false);
+            this.state.addAnimation(0, "idle", true, 0.0F);
+        }
+
+        super.damage(info);
+    }
+
     public void reloadAnimation() {
         this.loadAnimation(
                 CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].atlasURL,
@@ -71,7 +86,7 @@ public class AutomatonChar extends CustomPlayer {
 
     @Override
     public Texture getCustomModeCharacterButtonImage() {
-        return ImageMaster.loadImage(AutomatonMod.getModID() + "Resources/images/charSelect/leaderboard.png");
+        return TextureLoader.getTexture(AutomatonMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
 
 
@@ -126,7 +141,7 @@ public class AutomatonChar extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 7;
+        return 4;
     }
 
     @Override
@@ -180,6 +195,18 @@ public class AutomatonChar extends CustomPlayer {
                 AbstractGameAction.AttackEffect.FIRE,
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL,
                 AbstractGameAction.AttackEffect.SLASH_HORIZONTAL};
+    }
+
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+        if (effects.size() == 0)
+            effects.add(new CompileVictoryEffect());
+        else {
+            effects.addAll(CompileVictoryEffect.effects);
+            CompileVictoryEffect.effects.clear();
+            if (effects.stream().filter(e -> e instanceof DefectVictoryNumberEffect).count() < 8)
+                effects.add(new DefectVictoryNumberEffect());
+        }
     }
 
     @Override

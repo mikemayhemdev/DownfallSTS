@@ -1,4 +1,50 @@
 {
+  "downfall:PropertiesMod": {
+    "TEXT": [
+      "Applied properties.",
+      "Additional properties: ",
+      "Additional properties for this turn: ",
+      " NL Also for this turn: ",
+      ", ",
+      ".",
+      "#y",
+      "回响",
+      "不能被打出",
+      "虚无",
+      "保留",
+      "消耗",
+      " ",
+      "NL ",
+      "回响："
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "虚无 。 NL "
+    ]
+  },
+  "downfall:ExhaustMod": {
+    "TEXT": [
+      " NL 消耗 。"
+    ]
+  },
+  "downfall:InnateMod": {
+    "TEXT": [
+      "固有 。 NL "
+    ]
+  },
+  "downfall:RetainCardMod": {
+    "TEXT": [
+      "保留 。 NL "
+    ]
+  },
+  "downfall:UnplayableMod": {
+    "TEXT": [
+      "不能被打出 。 NL ",
+      "本牌无法被打出。",
+      "本牌本回合无法被打出。"
+    ]
+  },
   "expansioncontent:CannotUseBossCardMessage": {
     "TEXT": [
       "我本回合已经打出了首领牌！"

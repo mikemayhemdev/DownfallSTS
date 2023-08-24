@@ -1,0 +1,106 @@
+{
+  "expansioncontent:StudyTheSpirePower": {
+    "NAME": "Estudar a Espiral",
+    "DESCRIPTIONS": [
+      "Receba uma carta #yBoss aleatória no início do próximo turno. NL Ela custa #b0 até ser jogada.",
+      "Receba uma carta #yBoss aleatória no início dos próximos #b",
+	  " turnos. NL Elas custam #b0 até serem jogadas.",
+      "Receba uma carta #yBoss aleatória e #yUpgraded no início do próximo turno. NL Ela custa #b0 até ser jogada.",
+      "Receba uma carta #yBoss aleatória e #yUpgraded no início dos próximos #b",
+	  " turnos. NL Elas custam #b0 até serem jogadas."
+    ]
+  },
+  "expansioncontent:AwakenedOnePower": {
+    "NAME": "Ritual Sombrio",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " #yStrength se este inimigo não atacar em seu turno."
+    ]
+  },
+  "expansioncontent:AwakenDeathPower": {
+    "NAME": "Despertar",
+    "DESCRIPTIONS": [
+      "Quando você estiver prestes a morrer, cure #b",
+      " pontos de vida e remova este efeito."
+    ]
+  },
+  "expansioncontent:ChronoBoostPower": {
+    "NAME": "Impulso Cronológico",
+    "DESCRIPTIONS": [
+      "Depois de jogar #b",
+      " cartas adicionais, ganhe #b",
+      " #yStrength."
+    ]
+  },
+  "expansioncontent:ChronoBoostPlusPower": {
+    "NAME": "Impulso Cronológico+",
+    "DESCRIPTIONS": [
+      "Depois de jogar #b",
+      " cartas adicionais, ganhe #b",
+      " #yStrength."
+    ]
+  },
+  "expansioncontent:DeEnergizedPower": {
+    "NAME": "Desenergizado",
+    "DESCRIPTIONS": [
+      "No início do seu próximo turno, perca #b",
+      " [E]."
+    ]
+  },
+  "expansioncontent:PolyBeamAgainPower": {
+    "NAME": "Potência",
+    "DESCRIPTIONS": [
+      "#yPoly #yBeam será jogado no início do seu próximo turno.",
+      "#yPoly #yBeam será jogado no início dos próximos #b",
+	  " turnos."
+    ]
+  },
+  "expansioncontent:PolyBeamAgainPowerUpgraded": {
+    "NAME": "Potência",
+    "DESCRIPTIONS": [
+      "#yPoly #yBeam+ será jogado no início do seu próximo turno.",
+      "#yPoly #yBeam+ será jogado no início do seu próximo turno em #b",
+      " turnos."
+    ]
+  },
+  "expansioncontent:AddCopyPower": {
+    "NAME": "Carta Adiada",
+    "DESCRIPTIONS": [
+      "Adiciona ",
+      "na sua mão no início do seu próximo turno."
+    ]
+  },
+  "expansioncontent:AddSameInstancePower": {
+    "NAME": "Carta Adiada",
+    "DESCRIPTIONS": [
+      "Adiciona ",
+      "na sua mão no início do seu próximo turno."
+    ]
+  },
+  "expansioncontent:NextTurnExhumePower": {
+    "NAME": "Exumação Adiada",
+    "DESCRIPTIONS": [
+      "Exuma ",
+      "no início do seu próximo turno."
+    ]
+  },
+  "expansioncontent:PretendHexWheelPower": {
+    "NAME": "Hexaburn",
+    "DESCRIPTIONS": [
+      "Em #b",
+      " turnos, causa #b",
+      "Ao final do seu turno, causa #b",
+      " de dano a um inimigo aleatório #b6 vezes."
+    ]
+  },
+  "expansioncontent:VexVinciblePower": {
+    "NAME": "Invencível",
+    "DESCRIPTIONS": [
+      "Limita todo o dano e perda de HP a #b",
+      " em um turno. Removido após a ativação.",
+      "Limita todo o dano e perda de HP a #b",
+      " em um turno. Removido após #b",
+      " ativações."
+    ]
+  }
+}

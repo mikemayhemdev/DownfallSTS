@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.powers.MakingMagicPower;
 import gremlin.powers.MakingMoreMagicPower;
 import gremlin.powers.WizPower;
@@ -40,6 +41,7 @@ public class Whiz extends AbstractGremlinCard {
         this.cardsToPreview = new Bang(false);
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Whiz.png");
     }
 
     public Whiz(boolean real)

@@ -40,6 +40,7 @@ public class GrowthPunch extends AbstractSlimeboundCard {
         this.baseDamage = 4;
 
         this.magicNumber = this.baseMagicNumber = 4;
+        SlimeboundMod.loadJokeCardImage(this, "GrowthPunch.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

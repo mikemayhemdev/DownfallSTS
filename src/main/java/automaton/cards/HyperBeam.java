@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
@@ -10,6 +11,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class HyperBeam extends AbstractBronzeCard {
 
@@ -28,6 +31,7 @@ public class HyperBeam extends AbstractBronzeCard {
       //  exhaust = true;
         baseMagicNumber = magicNumber = 5;
         cardsToPreview = new VoidCard();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("HyperBeam.png"));
     }
 
     /*

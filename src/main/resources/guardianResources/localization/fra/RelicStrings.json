@@ -3,8 +3,7 @@
     "NAME": "Engrenage de bronze",
     "FLAVOR": "De la protection lorsque vous en avez le plus besoin.",
     "DESCRIPTIONS": [
-      "La première fois que vous entrez en #yguardianmod:Mode_Défensif, gagnez #b10 #bd'Armure #ysupplémentaires. NL Le Gardien commence la run avec une #yGemme commune aléatoire."
-    ]
+      "Au début de chaque combat, obtenez #yEngrenage NL Le Gardien commence la run avec une #yGemme commune aléatoire."    ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "Engrenage de gardien",
@@ -31,8 +30,7 @@
     "NAME": "Sentinelle de poche de Arumba",
     "FLAVOR": "Sentinelle activée. Cible acquise. Pas de rancune.",
     "DESCRIPTIONS": [
-      "Au début de chaque tour, alterne entre: NL Infligez #b",
-      " dégâts à un ennemi aléatoire. NL Appliquez #b1 de #yFaiblesse à TOUS les ennemis."
+      "Tous les #b3 tours, appliquez #b1 de #yFaiblesse à TOUS les ennemis."
     ]
   },
   "Guardian:SackOfGems": {
@@ -60,14 +58,14 @@
     "NAME": "Drones errants",
     "FLAVOR": "Ces drones trouvent les meilleures pièces de récupération, mais requiert de la puissance pour se maintenir.",
     "DESCRIPTIONS": [
-      "Lorsque vous récupérez cette relique, perdez #b2 emplacements de #yguardianmod:Stase. NL Gagnez [E] au début de votre tour."
+      "Au début de chaque combat, perdez #b2 emplacements de #yguardianmod:Stase. NL Gagnez [E] au début de votre tour."
     ]
   },
   "Guardian:StasisUpgradeRelic": {
     "NAME": "Cryo-chambre",
     "FLAVOR": "Les choses semblent toujours meilleures lorsqu'elles en sortent que lorsqu'elles en entrent.",
     "DESCRIPTIONS": [
-      "Gagnez #b1 emplacement de #yguardianmod:Stase. Quand une carte entre en #yguardianmod:Stase, #yAméliorez-la."
+      "Au début de chaque combat, gagnez #b1 emplacement de #yguardianmod:Stase. Quand une carte entre en #yguardianmod:Stase, #yAméliorez-la."
     ]
   },
   "Guardian:BottledStasis": {
@@ -77,7 +75,8 @@
       "Lorsque vous le récupérez, choisissez une carte. Commencez chaque combat avec cette carte en #yguardianmod:Stase.",
       "Choisissez une carte pour ",
       "Commencez chaque combat avec ",
-      " en #yguardianmod:Stase."
+      " en #yguardianmod:Stase.",
+      "La carte embouteillée a été #rretirée de votre deck, la relique ne fonctionne plus."
     ]
   },
   "Guardian:StasisEgg": {
@@ -101,7 +100,7 @@
     "NAME": "Pioche de chez Rhapsody",
     "FLAVOR": "Avec toutes les pierres précieuses qui jonchent la Tour, il est difficile d'imaginer que quelqu'un soit si malchanceux qu'il ait eu besoin de cette pioche pour l'aider.",
     "DESCRIPTIONS": [
-      "Vous pouvez désormais #gMiner pour récupérer #b2 #yguardianmod:Gemmes sur les sites de Repos (jusqu'à #b3 fois)."
+      "Vous pouvez désormais #gMiner pour récupérer #b2 #yguardianmod:Gemmes aux feux de camp (jusqu'à #b3 fois)."
     ]
   },
   "Guardian:GemstoneGun": {
@@ -119,7 +118,8 @@
       "Lorsque vous la récupérez, choisissez une carte. Au début de chaque combat, celle-ci est enlevée de votre pioche. Au début du #b3e tour, elle est ajoutée à votre main et coûte #b0.",
       "Choisissez une carte pour ",
       "Commencez chaque combat avec ",
-      " retirée de votre pioche. Au début du #b3e tour, elle est ajoutée à votre main et coûte #b0."
+      " retirée de votre pioche. Au début du #b3e tour, elle est ajoutée à votre main et coûte #b0.",
+      "La carte embouteillée a été #rretirée de votre deck, la relique ne fonctionne plus."
     ]
   }
 }

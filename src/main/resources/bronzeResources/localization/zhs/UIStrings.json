@@ -42,7 +42,8 @@
       " NL bronze:编码 。",
       " bronze:编码 。 NL ",
       "\u202F bronze:编码 时",
-      "LOCALIZATION NOTE: 上方文本疑似弃用。"
+      "LOCALIZATION NOTE: 上方文本疑似弃用。",
+      "错误 - 检测到完全公开非法递归调用"
     ]
   },
   "bronze:CompileDisplayPanel": {

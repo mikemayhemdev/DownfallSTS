@@ -17,6 +17,7 @@ import guardian.patches.AbstractCardEnum;
 import guardian.powers.ArmoredProtocolPower;
 import guardian.powers.DontLeaveDefensiveModePower;
 
+@Deprecated
 public class ArmoredProtocol extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("ArmoredProtocol");
     public static final String NAME;

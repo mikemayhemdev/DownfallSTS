@@ -1,19 +1,17 @@
 package downfall.powers.neowpowers;
 
+import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import downfall.cardmods.EtherealMod;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
-import expansioncontent.powers.DeEnergizedPower;
+import expansioncontent.cardmods.PropertiesMod;
 import hermit.cards.ImpendingDoom;
 
 public class Eclipse extends AbstractBossMechanicPower {
@@ -43,7 +41,7 @@ public class Eclipse extends AbstractBossMechanicPower {
     public void atStartOfTurn() {
         flash();
         AbstractCard q = new ImpendingDoom();
-        CardModifierManager.addModifier(q, new EtherealMod());
+        CardModifierManager.addModifier(q, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
         addToBot(new MakeTempCardInHandAction(q));
     }
 

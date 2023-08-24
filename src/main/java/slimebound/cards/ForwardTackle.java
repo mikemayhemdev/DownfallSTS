@@ -18,7 +18,7 @@ import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
 
-public class ForwardTackle extends AbstractTackleCard {
+public class ForwardTackle extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:ForwardTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -47,6 +47,7 @@ public class ForwardTackle extends AbstractTackleCard {
 
         this.baseDamage = 15;
         baseSelfDamage = this.selfDamage = 3;
+        SlimeboundMod.loadJokeCardImage(this, "ForwardTackle.png");
 
         //this.exhaust = true;
 

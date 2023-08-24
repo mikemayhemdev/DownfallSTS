@@ -1,0 +1,111 @@
+
+Poison_Silent.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shadow
+  rotate: false
+  xy: 176, 164
+  size: 257, 81
+  orig: 257, 81
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 435, 1
+  size: 54, 94
+  orig: 54, 94
+  offset: 0, 0
+  index: -1
+foot
+  rotate: false
+  xy: 32, 172
+  size: 54, 32
+  orig: 54, 32
+  offset: 0, 0
+  index: -1
+neck_spine
+  rotate: false
+  xy: 122, 172
+  size: 24, 34
+  orig: 32, 40
+  offset: 4, 3
+  index: -1
+tail_spine
+  rotate: false
+  xy: 32, 206
+  size: 54, 24
+  orig: 54, 24
+  offset: 0, 0
+  index: -1
+cape_left
+  rotate: false
+  xy: 1, 1
+  size: 173, 169
+  orig: 173, 169
+  offset: 0, 0
+  index: -1
+kris
+  rotate: false
+  xy: 435, 173
+  size: 69, 64
+  orig: 69, 64
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 32, 232
+  size: 21, 17
+  orig: 27, 24
+  offset: 2, 4
+  index: -1
+cape_right
+  rotate: false
+  xy: 176, 1
+  size: 156, 161
+  orig: 156, 161
+  offset: 0, 0
+  index: -1
+hair2
+  rotate: false
+  xy: 88, 200
+  size: 21, 37
+  orig: 21, 37
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 88, 172
+  size: 32, 26
+  orig: 32, 26
+  offset: 0, 0
+  index: -1
+hair
+  rotate: false
+  xy: 1, 172
+  size: 29, 83
+  orig: 29, 83
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 111, 200
+  size: 6, 6
+  orig: 11, 7
+  offset: 2, 0
+  index: -1
+snek_skull1
+  rotate: false
+  xy: 435, 97
+  size: 67, 74
+  orig: 67, 74
+  offset: 0, 0
+  index: -1
+drip
+  rotate: false
+  xy: 111, 208
+  size: 27, 24
+  orig: 27, 24
+  offset: 0, 0
+  index: -1

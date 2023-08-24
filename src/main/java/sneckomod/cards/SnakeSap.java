@@ -26,6 +26,7 @@ public class SnakeSap extends AbstractSneckoCard {
         exhaust = true;
         tags.add(SneckoMod.SNEKPROOF);
         tags.add(SneckoMod.RNG);
+        SneckoMod.loadJokeCardImage(this, "SnakeSap.png");
     }
 
     @Override

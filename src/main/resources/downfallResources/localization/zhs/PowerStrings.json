@@ -31,7 +31,7 @@
   "downfall:TotemInvulnerable": {
     "NAME": "活墙壁",
     "DESCRIPTIONS": [
-      "只有在其他头生命均为1时才会死亡。死亡时其他头同时死亡。"
+      "只有在其他头生命均为 #b1 时才会死亡。死亡时其他头同时死亡。"
     ]
   },
   "downfall:ExhaustCardsPower": {
@@ -55,7 +55,7 @@
   "downfall:WatcherAngryPower": {
     "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      " #y观者 的回合结束时，如果其生命不高于 #b50% ，她将永久进入 #y愤怒 。 NL #y愤怒 时造成和受到的伤害增加 #b50% 而非 #b100% 。"
+      " #y观者 的回合结束时，若其生命不高于 #b50% ，她将永久进入 #y愤怒 。 NL #y愤怒 时造成与受到的伤害增加 #b50% 而非 #b100% 。"
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -143,7 +143,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "战斗开始时， #y故障机器人 将召唤 #b2 个 #y铜制圆球 。 NL 敌方回合结束时如果其没有 #y人工制品 ，获得 #b1 层。"
+      "战斗开始时， #y故障机器人 将召唤 #b2 个 #y铜制圆球 。 NL 敌方回合结束时，若其无 #y人工制品 ，获得 #b1 层。"
     ]
   },
   "downfall:NeowAncientConstruct": {
@@ -272,7 +272,7 @@
     "NAME": "奄息：不屈决心",
     "DESCRIPTIONS": [
       "该单位死亡时，所有单位获得 #b",
-      " 层 #y坚固 和 #b",
+      " 层 #y坚固 与 #b",
       " 层 #y易伤 。"
     ]
   },
@@ -300,14 +300,14 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "幸运大转盘",
     "DESCRIPTIONS": [
-      "每当你对 #y亡命之徒 造成 #b1 段攻击时，它丢弃最左边的牌并抽 #b1 张牌。每丢弃 #b",
-      " 张牌，它获得 #b1 点 力量 。"
+      "本场战斗 #y亡命之徒 的牌耗能不会改变。每当你打出一张 攻击牌，它丢弃最左边的牌并抽 #b1 张牌。",
+      ""
     ]
   },
   "downfall:HermitDoomsday": {
     "NAME": "末日",
     "DESCRIPTIONS": [
-      "每回合开始时，将 #b1 张 带有 #y保留 的 #r末日将临 加入你的手牌。"
+      "#y亡命之徒 以 #b1 层 #y仪式 的状态开始战斗。每回合开始时，它会将 #b1 张 带有 #y保留 的 #r末日将临 加入你的手牌。"
     ]
   },
   "downfall:NextTurnPowerPower": {
@@ -360,7 +360,7 @@
       " NL 获得 #b2 层 #y荆棘 。",
       " NL 获得 #b2 层 #y缓冲 。",
       " NL 获得 #b5 层 #y真言 。",
-      " NL 随机将 #b2 张 #r诅咒 加入你的抽牌堆。"
+      " NL 将 #b1 张 #r腐朽 加入你的抽牌堆。"
     ]
   }
 }

@@ -13,6 +13,8 @@ import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class StasisField extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("StasisField");
     public static final String NAME;
@@ -23,15 +25,7 @@ public class StasisField extends AbstractGuardianCard implements InStasisCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
-
-    //TUNING CONSTANTS
-    private static final int BLOCK = 7;
-    private static final int UPGRADE_BONUS = 3;
-    private static final int SOCKETS = 0;
-    private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -40,43 +34,25 @@ public class StasisField extends AbstractGuardianCard implements InStasisCard {
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
-    public boolean justUsed = false;
-
-    /*
-    @Override
-    public void whenReturnedFromStasis() {
-        upgradeBlock(magicNumber);
-        freeToPlayOnce = false;
-        cost = costForTurn = 1;
-    }
-    
-     */
-
     public StasisField() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-
-
-        this.baseBlock = BLOCK;
-
-        this.socketCount = SOCKETS;
-        baseMagicNumber = magicNumber = 4;
+        this.baseBlock = 6;
+        this.socketCount = 0;
         this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("StasisField.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        //brace(magicNumber);
-
         this.useGems(p, m);
-
     }
 
     @Override
     public void onEvoke(StasisOrb orb) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
+        addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
     }
 
 
@@ -87,8 +63,7 @@ public class StasisField extends AbstractGuardianCard implements InStasisCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(3);
-            upgradeMagicNumber(1);
+            upgradeBlock(2);
         }
     }
 

@@ -1,0 +1,110 @@
+{
+  "champ:ChampionCrown": {
+    "NAME": "Coroa do Campeão",
+    "FLAVOR": "O VENCEDOR É VOCÊ!",
+    "DESCRIPTIONS": [
+      "No início do combate, entre na #bDefensive ou #rBerserker #yStance."
+    ]
+  },
+  "champ:BlackKnightHelmet": {
+    "NAME": "Elmo do Cavaleiro Negro",
+    "FLAVOR": "Apenas um arranhão.",
+    "DESCRIPTIONS": [
+      "Na primeira vez que entrar em cada #yStance em cada combate: NL #bDefensive: Ganhe #b2 #yDexterity e perca #b1 #yStrength. NL #rBerserker: Ganhe #b2 #yStrength e perca #b1 #yDexterity."
+    ]
+  },
+  "champ:Barbells": {
+    "NAME": "Halteres",
+    "FLAVOR": "1000 repetições? Ah, eu consigo fazer 1001.",
+    "DESCRIPTIONS": [
+      "Sempre que entrar em um local de descanso e tiver pelo menos #b10 cartas atualizáveis em seu baralho, #yAtualize uma aleatoriamente."
+    ]
+  },
+  "champ:BerserkersGuideToSlaughter": {
+    "NAME": "Guia do Berserker",
+    "FLAVOR": "O texto é ilegível.",
+    "DESCRIPTIONS": [
+      "No início do seu turno, ganhe #b3 #yVigor."
+    ]
+  },
+  "champ:ChampionCrownUpgraded": {
+    "NAME": "Coroa da Vitória",
+    "FLAVOR": "Parabéns!! Você é o maior vencedor.",
+    "DESCRIPTIONS": [
+      "Substitui #rCoroa do #rCampeão. NL Comece cada combate em #ychamp:Ultimate #yStance, que dura #b1 turno."
+    ]
+  },
+  "champ:DefensiveTrainingManual": {
+    "NAME": "Tese Defensiva",
+    "FLAVOR": "Dica profissional: Não seja atingido.",
+    "DESCRIPTIONS": [
+      "O bônus #yFinisher da #yDefensive #yStance concede #b5 a mais de #yBlock."
+    ]
+  },
+  "champ:DeflectingBracers": {
+    "NAME": "Braçadeiras Desviadoras",
+    "FLAVOR": "Se você achava que bloquear era bom, então...",
+    "DESCRIPTIONS": [
+      "No início do seu turno, ganhe #ychamp:Counter igual à metade da quantidade de #yBlock expirado."
+    ]
+  },
+  "champ:DuelingGlove": {
+    "NAME": "Luva de Duelo",
+    "FLAVOR": "Conte até dez...",
+    "DESCRIPTIONS": [
+      "Depois de usar um #yAtaque de alvo único, se o alvo não tiver #yVulnerável, aplique #b1 #yVulnerabilidade."
+    ]
+  },
+  "champ:FightingForDummies": {
+    "NAME": "Guia de Estilo de Dolphin",
+    "FLAVOR": "Autor: Renomado explorador e pugilista Dolphin K. Mist.",
+    "DESCRIPTIONS": [
+      "Se você terminar seu turno sem nenhuma #yStance, compre #b1 carta adicional no próximo turno."
+    ]
+  },
+  "champ:GladiatorsBookOfMartialProwess": {
+    "NAME": "Manual do Gladiador",
+    "FLAVOR": "Tente tudo - algo vai funcionar.",
+    "DESCRIPTIONS": [
+      "Sempre que você jogar um #yCombo, um #yFinisher e entrar em uma #yStance no mesmo turno, ganhe #b1 #yStrength e #yDexterity."
+    ]
+  },
+  "champ:PowerArmor": {
+    "NAME": "Armadura de Potência",
+    "FLAVOR": "Comprada usada.",
+    "DESCRIPTIONS": [
+      "Ganhe [E] no início do seu turno. NL Seu #yVigor máximo e #ychamp:Counter é #b10."
+    ]
+  },
+  "champ:SignatureFinisher": {
+    "NAME": "Finalizador de Assinatura",
+    "FLAVOR": "E agora, é hora do meu MOVIMENTO FINAL!",
+    "DESCRIPTIONS": [
+      "Ao pegar, escolha um #yFinisher. Este #yFinisher custa #b0, pode ser usado sem uma #yStance e nunca faz com que sua #yStance seja interrompida.",
+      "Escolha uma carta para ",
+      " custa 0, pode ser usada sem uma #yStance e nunca faz com que sua #yStance seja interrompida."
+    ]
+  },
+  "champ:SpectersHand": {
+    "NAME": "Mão do Espectro",
+    "FLAVOR": "Algumas vitórias ficam com você.",
+    "DESCRIPTIONS": [
+      "Sempre que você entrar em uma #yStance, ganhe um #yStrike ou #yDefend básico. Ele custa #b0 e é #yExauria."
+    ]
+  },
+  "champ:LiftRelic": {
+    "NAME": "Força Interior",
+    "FLAVOR": "É sobre a espada gigante em seu coração.",
+    "DESCRIPTIONS": [
+      "Comece cada combate com #b",
+      " #yStrength."
+    ]
+  },
+  "champ:ChampStancesModRelic": {
+    "NAME": "Novo Desafiante",
+    "FLAVOR": "Você pode tomar a coroa?",
+    "DESCRIPTIONS": [
+      "Comece cada combate em uma #yStance aleatória do Champ."
+    ]
+  }
+}

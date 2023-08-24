@@ -22,6 +22,7 @@ public class GhostflameInferno extends AbstractHexaCard {
         exhaust = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "GhostflameInferno.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

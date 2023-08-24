@@ -42,8 +42,8 @@ public class HermitTutorials extends FtueTip {
 
     public HermitTutorials() {
 
-        this.img1 = ImageMaster.loadImage("hermitResources/images/tip/t1.png");
-        this.img2 = ImageMaster.loadImage("hermitResources/images/tip/t2.png");
+        this.img1 = TextureLoader.getTexture("hermitResources/images/tip/t1.png");
+        this.img2 = TextureLoader.getTexture("hermitResources/images/tip/t2.png");
 
         txt1 = txt[0];
         txt2 = txt[1];

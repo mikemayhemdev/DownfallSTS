@@ -13,8 +13,6 @@ import static hermit.HermitMod.makeRelicOutlinePath;
 import static hermit.HermitMod.makeRelicPath;
 
 public class BartenderGlass extends CustomRelic {
-
-    // ID, images, text.
     public static final String ID = HermitMod.makeID("BartenderGlass");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("bartenders_glass.png"));
@@ -56,13 +54,9 @@ public class BartenderGlass extends CustomRelic {
             this.counter--;
             if (counter <= 0)
                 grayscale=true;
-        } //else {
-        //    AbstractDungeon.effectsQueue.add(new ObtainPotionEffect(AbstractDungeon.returnRandomPotion()));
-        //}
+        }
     }
 
-
-    // Description
     @Override
     public String getUpdatedDescription() {
             return DESCRIPTIONS[0];

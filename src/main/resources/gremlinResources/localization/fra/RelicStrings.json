@@ -24,7 +24,7 @@
     "NAME": "Pierre tombale de Diablotin",
     "FLAVOR": "Où vont les Diablotins lorsqu'ils meurent ? Pas assez loin, bon sang.",
     "DESCRIPTIONS": [
-      "Les Diablotins morts peuvent être ressucités dans les Sites de Repos en tant qu'Action Gratuite."
+      "Les Diablotins morts peuvent être ressucités aux feux de camp en tant qu'Action Gratuite."
     ]
   },
   "Gremlin:GremlinKnob": {
@@ -98,7 +98,7 @@
     "NAME": "Parchemin d'équipement",
     "FLAVOR": "Un inventaire surprenamment détaillé des différents équipements de la bande.",
     "DESCRIPTIONS": [
-      "Au début du 3ème tour, ajoutez un assortiment aléatoire de 4 #ySurins et #yProtections dans votre main."
+      "Au début du 3ème tour, gagnez [E] et piochez #b2 cartes."
     ]
   },
   "Gremlin:TagTeamwork": {

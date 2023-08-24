@@ -33,8 +33,8 @@
   },
   "expansioncontent:Chronoboost": {
     "NAME": "시간-가속",
-    "DESCRIPTION": "카드를 12번 사용할 때마다 힘을 1 얻습니다.",
-    "UPGRADE_DESCRIPTION": "힘을 1 얻습니다. NL 카드를 12번 사용할 때마다 힘을 1 얻습니다."
+    "DESCRIPTION": "카드를 12번 사용할 때마다 힘을 2 얻습니다.",
+    "UPGRADE_DESCRIPTION": "힘을 2 얻습니다. NL 카드를 12번 사용할 때마다 힘을 2 얻습니다."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "도누의 폭발",
@@ -46,14 +46,12 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "모양기의 축복",
-    "DESCRIPTION": "선택 - 힘을 !M! 얻습니다 또는 *판금 *갑옷을 5 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선택 - 힘을 !M! 얻습니다 또는 *판금 *갑옷을 8 얻습니다.",
+    "DESCRIPTION": "선택 - 힘을 !M! 얻습니다. 또는 *판금 *갑옷을 !DM! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "도누의 힘",
       "힘을 !M! 얻습니다.",
       "데카의 방패",
-      "*판금 *갑옷을 5 얻습니다.",
-      "*판금 *갑옷을 8 얻습니다."
+      "*판금 *갑옷을 !M! 얻습니다."
     ]
   },
   "expansioncontent:PrepareCrush": {
@@ -81,7 +79,7 @@
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "뭐든지 아는 해골",
-    "DESCRIPTION": "휘발성. NL 체력을 잃고 영혼, 정신자극제, 성공하는 법을 구합니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 체력을 잃고 *영혼, *정신자극제, *성공하는 *법을 구합니다. NL 소멸."
   },
   "expansioncontent:Antidote": {
     "NAME": "해독제",

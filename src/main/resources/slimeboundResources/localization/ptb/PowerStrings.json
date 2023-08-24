@@ -1,0 +1,521 @@
+{
+  "Slimebound:PotencyPower": {
+    "NAME": "Potência",
+    "DESCRIPTIONS": [
+      "Aumenta o dano dos seus Slimes invocados em #b",
+      ". Aumenta efeitos secundários em #b",
+      "."
+    ]
+  },
+  "Slimebound:SlimedPower": {
+    "NAME": "Gosma",
+    "DESCRIPTIONS": [
+      "O próximo #yAtaque contra este inimigo causa #b",
+      " mais dano, consumindo toda a #yGosma."
+    ]
+  },
+  "Slimebound:PreventTackleDamagePower": {
+    "NAME": "Protegido",
+    "DESCRIPTIONS": [
+      "Você não recebe dano do próximo #b",
+      " #yTackle que você jogar."
+    ]
+  },
+  "Slimebound:SplitDailyTriggerPower": {
+    "NAME": "Divisão de Slime",
+    "DESCRIPTIONS": [
+      "Quando seus pontos de vida estiverem em #b50% ou menos, se dividirá em #b2 inimigos Slime com a HP atual de ",
+      "."
+    ]
+  },
+  "Slimebound:SplitDailyPower": {
+    "NAME": "Dividindo",
+    "DESCRIPTIONS": [
+      "Este inimigo está se dividindo nesta rodada."
+    ]
+  },
+  "Slimebound:BuffAttackSlimesPower": {
+    "NAME": "Melhoria: Bruto",
+    "DESCRIPTIONS": [
+      "Slimes #yBrutos causam #b",
+      " mais dano."
+    ]
+  },
+  "Slimebound:BuffPoisonSlimesPower": {
+    "NAME": "Melhoria: Ácido",
+    "DESCRIPTIONS": [
+      "Slimes #yEnvenenados aplicam #b",
+      " mais #yVeneno."
+    ]
+  },
+  "Slimebound:BuffSlimingSlimesPower": {
+    "NAME": "Melhoria: Lama",
+    "DESCRIPTIONS": [
+      "Slimes #yLamacentos aplicam #b",
+      " mais #yGosma."
+    ]
+  },
+  "Slimebound:BuffShieldSlimesPower": {
+    "NAME": "Melhoria: Sanguessuga",
+    "DESCRIPTIONS": [
+      "Slimes #ySanguessugas causam #b",
+      " mais dano."
+    ]
+  },
+  "Slimebound:HexSlimePerTurnPower": {
+    "NAME": "Poder de Maldição",
+    "DESCRIPTIONS": [
+      "Invoca um Slime #yChamaFantasma no início do seu próximo turno.",
+      "Invoca um Slime #yChamaFantasma no início dos próximos #b",
+      " turnos."
+    ]
+  },
+  "Slimebound:ProtectTheBoss": {
+    "NAME": "Proteja o Chefe",
+    "DESCRIPTIONS": [
+      "Evita o próximo ataque inimigo que causaria dano, #yAbsorvendo seu Slime líder em vez disso.",
+      "Evita os próximos #b",
+      " ataques inimigos que causariam dano, #yAbsorvendo seu Slime líder em vez disso."
+    ]
+  },
+  "Slimebound:SplitForLessPower": {
+    "NAME": "Divisão Eficiente",
+    "DESCRIPTIONS": [
+      "#yDividir custa #b",
+      " menos HP. Adiciona um card #yDivisão aleatório à sua mão a cada turno.",
+      " menos HP. Adiciona #b",
+      " cards #yDivisão aleatórios à sua mão a cada turno."
+    ]
+  },
+  "Slimebound:ComboAttackPower": {
+    "NAME": "Liderar pelo Exemplo",
+    "DESCRIPTIONS": [
+      "O primeiro card com alvo que você jogar a cada turno faz com que seu Slime líder também ataque.",
+      "Os primeiros #b",
+      " cards com alvo que você jogar a cada turno fazem com que seu Slime líder também ataque.",
+      " NL Este efeito pode ser ativado #b",
+      " mais vezes neste turno.",
+      " mais vez neste turno.",
+      " NL Este efeito não pode ser ativado novamente neste turno."
+    ]
+  },
+  "Slimebound:RetainCardsOneTurnPower": {
+    "NAME": "Preparar Cartas",
+    "DESCRIPTIONS": [
+      "Retém #b",
+      " carta neste turno.",
+      " cartas neste turno."
+    ]
+  },
+  "Slimebound:EnergizedSlimeboundPower": {
+    "NAME": "Energizado",
+    "DESCRIPTIONS": [
+      "Ganha #b",
+      " [E] adicional no próximo turno.",
+      " [E] adicionais no próximo turno.",
+      " - NOTA DO TRADUTOR: - A linha acima é para o plural, caso necessário para distinguir do singular."
+    ]
+  },
+  "Slimebound:SelfFormingGooPower": {
+    "NAME": "Reformação",
+    "DESCRIPTIONS": [
+      "Sempre que você Absorver um Slime, ganha #b",
+      " de Força."
+    ]
+  },
+  "Slimebound:SelfFormingGooPowerPlus": {
+    "NAME": "Reformação+",
+    "DESCRIPTIONS": [
+      "Sempre que você Absorver um Slime, ganha #b",
+      " de Destreza."
+    ]
+  },
+  "Slimebound:LoseSlimesPower": {
+    "NAME": "Sobrecarregar",
+    "DESCRIPTIONS": [
+      "No próximo turno, #yAbsorve todos os seus Slimes criados.",
+      " turnos a partir de agora, #yAbsorve todos os seus Slimes criados."
+    ]
+  },
+  "Slimebound:TackleModifyDamagePower": {
+    "NAME": "Danificado",
+    "DESCRIPTIONS": [
+      "Recebe #b",
+      " dano adicional de cartas contendo \"Investida\"."
+    ]
+  },
+  "Slimebound:LoseThornsPower": {
+    "NAME": "Espinhos Retráteis",
+    "DESCRIPTIONS": [
+      "Perde #b",
+      " #yEspinhos no início do seu próximo turno."
+    ]
+  },
+  "Slimebound:SlimedThornsPower": {
+    "NAME": "Muralha Viva",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " #yGosma aos atacantes neste turno."
+    ]
+  },
+  "Slimebound:PreventSlimeDecayPower": {
+    "NAME": "Encharcado em Gosma",
+    "DESCRIPTIONS": [
+      "Na próxima vez que um #yAtaque for usado neste inimigo, os benefícios da #yGosma serão aplicados sem consumir a #yGosma.",
+      "Nas próximas #b",
+      " vezes que um #yAtaque for usado neste inimigo, os benefícios da #yGosma serão aplicados sem consumir a #yGosma."
+    ]
+  },
+  "Slimebound:DuplicatedFormPower": {
+    "NAME": "Forma Duplicada",
+    "DESCRIPTIONS": [
+      "A primeira carta que você joga que mira inimigos a cada turno é jogada duas vezes.",
+      "As primeiras #b",
+      " cartas que você joga que miram inimigos a cada turno são jogadas duas vezes."
+    ]
+  },
+  "Slimebound:DuplicatedFormNoHealPower": {
+    "NAME": "Dividir",
+    "DESCRIPTIONS": [
+      "HP máximo é temporariamente reduzido em #b",
+      "."
+    ]
+  },
+  "Slimebound:DuplicatedFormEnergyPower": {
+    "NAME": "Tag-Team",
+    "DESCRIPTIONS": [
+      "Ganha #b",
+      " [E] a cada turno."
+    ]
+  },
+  "Slimebound:GluttonyPower": {
+    "NAME": "Gula",
+    "DESCRIPTIONS": [
+      "Na primeira vez que você #yConsome a cada turno, adiciona uma carta #yLamber à sua mão.",
+      "Nas primeiras ",
+      " vezes que você #yConsome a cada turno, adiciona uma carta #yLamber à sua mão.",
+      " NL Este efeito pode ser ativado mais #b",
+      " vezes neste turno.",
+	  " vez neste turno.",
+      " NL Este efeito não pode ser ativado novamente neste turno."
+    ]
+  },
+  "Slimebound:GluttonyPowerUpgraded": {
+    "NAME": "Gula+",
+    "DESCRIPTIONS": [
+      "Adiciona #b",
+      " carta #yLamber #yMelhorada aleatória à sua mão a cada turno.",
+	  " cartas #yLamber #yMelhoradas aleatórias à sua mão a cada turno."
+    ]
+  },
+  "Slimebound:PoisonThornsPower": {
+    "NAME": "Gosma Ácida",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " #yVeneno quando você #yAtaca um inimigo que tem #yGosma."
+    ]
+  },
+  "Slimebound:SlimeRitualPower": {
+    "NAME": "Ritual de Gosma",
+    "DESCRIPTIONS": [
+      "Ganha #b",
+      " #yForça no início de cada turno."
+    ]
+  },
+  "Slimebound:RecyclingPower": {
+    "NAME": "Reciclagem",
+    "DESCRIPTIONS": [
+      "No início do seu turno, retorna #b",
+      " carta Lick aleatória da sua pilha de #yExaustão para sua mão.",
+      " cartas Lick aleatórias da sua pilha de #yExaustão para sua mão."
+    ]
+  },
+  "Slimebound:RecyclingPowerUpgraded": {
+    "NAME": "Reciclagem+",
+    "DESCRIPTIONS": [
+      "Cura #b",
+      " PV e compra uma carta quando você #yExaure uma carta de custo 0."
+    ]
+  },
+  "Slimebound:AcidTonguePower": {
+    "NAME": "Língua Ácida",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " #yVeneno sempre que você aplica #yGosma."
+    ]
+  },
+  "Slimebound:AcidTonguePowerUpgraded": {
+    "NAME": "Língua Gosmenta",
+    "DESCRIPTIONS": [
+      "Efeitos que aplicam #yGosma aplicam #b",
+      " a mais."
+    ]
+  },
+  "Slimebound:SelfDamageSlimedPower": {
+    "NAME": "Gosma Perdida",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " #yGosma a um inimigo aleatório sempre que você perde PV."
+    ]
+  },
+  "Slimebound:TackleBuffPower": {
+    "NAME": "Investida Ofensiva",
+    "DESCRIPTIONS": [
+      "Cartas contendo \"Investida\" causam #b",
+      " a mais de dano aos inimigos."
+    ]
+  },
+  "Slimebound:PolyBeamAgainPower": {
+    "NAME": "Feixe Alternado",
+    "DESCRIPTIONS": [
+      "#yFeixe #yPolimórfico será jogado no início do seu próximo turno. ",
+      "#yFeixe #yPolimórfico será jogado no início dos próximos #b",
+      " turnos."
+    ]
+  },
+  "Slimebound:PolyBeamAgainPowerUpgraded": {
+    "NAME": "Feixe Alternado+",
+    "DESCRIPTIONS": [
+      "#yFeixe #yPolimórfico+ será jogado no início do seu próximo turno. ",
+      "#yFeixe #yPolimórfico+ será jogado no início dos próximos #b",
+      " turnos."
+    ]
+  },
+  "Slimebound:FirmFortitudePower": {
+    "NAME": "Sinta Nossa Dor",
+    "DESCRIPTIONS": [
+      "Da próxima vez que você sofrer dano ou perder HP em seu turno, um inimigo sofrerá o mesmo dano em seu lugar.",
+      "Da próxima vez #b",
+      " em que você sofrer dano ou perder HP em seu turno, um inimigo sofrerá o mesmo dano em seu lugar.",
+      " NL Este efeito pode ser ativado mais #b",
+      " vezes neste turno.",
+      " vez neste turno.",
+      " NL Este efeito não pode ser ativado novamente neste turno."
+    ]
+  },
+  "Slimebound:NextTurnGainStrengthPower": {
+    "NAME": "Carregando",
+    "DESCRIPTIONS": [
+      "Ganhe #b",
+      " #yForça em seu próximo turno."
+    ]
+  },
+  "Slimebound:NextTurnGainSlimeCrush": {
+    "NAME": "Preparando para Esmagar",
+    "DESCRIPTIONS": [
+      "Ganhe um #gESMAGAMENTO #gDE #gLIMO em seu próximo turno.",
+      "Ganhe um #gESMAGAMENTO #gDE #gLIMO+ em seu próximo turno.",
+      "Ganhe #b",
+      " cópias de #gESMAGAMENTO #gDE #gLIMO em seu próximo turno.",
+      " cópias de #gESMAGAMENTO #gDE #gLIMO+ em seu próximo turno."
+    ]
+  },
+  "Slimebound:StunnedPower": {
+    "NAME": "Completamente Esgotado",
+    "DESCRIPTIONS": [
+      "Pule sua próxima jogada.",
+      "Pule suas próximas #b",
+      " jogadas."
+    ]
+  },
+  "Slimebound:NextTurnGainHyperBeam": {
+    "NAME": "Preparando para o Raio",
+    "DESCRIPTIONS": [
+      "Ganhe um #yRAIO #yHIPER em seu próximo turno.",
+      "Ganhe #b",
+      " cópias de #yRAIO #yHIPER em seu próximo turno."
+    ]
+  },
+  "Slimebound:NextTurnGainDivider": {
+    "NAME": "Preparando para Dividir",
+    "DESCRIPTIONS": [
+      "Ganhe um #yDIVISOR em seu próximo turno.",
+      "Ganhe #b",
+      " cópias de #yDIVISOR em seu próximo turno."
+    ]
+  },
+  "Slimebound:StudyAutomatonPower": {
+    "NAME": "Estudando Autômato",
+    "DESCRIPTIONS": [
+      "Ganhe uma carta aleatória de Autômato no início do próximo turno.",
+      "Ganhe uma carta aleatória de Autômato no início de suas próximas ",
+      " jogadas."
+    ]
+  },
+  "Slimebound:StudyAutomatonPowerUpgraded": {
+    "NAME": "Estudando Autômato+",
+    "DESCRIPTIONS": [
+      "Ganhe uma carta aleatória de Autômato Melhorado no início do próximo turno.",
+      "Ganhe uma carta aleatória de Autômato Melhorado no início dos sues próximos ",
+      " turnos."
+	]
+  },
+  "Slimebound:StudyAwakenedPower": {
+    "NAME": "Estudo do Despertado",
+    "DESCRIPTIONS": [
+      "Receba uma carta aleatória do Despertado no início do próximo turno.",
+      "Receba uma carta aleatória do Despertado no início dos seus próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyAwakenedPowerUpgraded": {
+    "NAME": "Estudo do Despertado+",
+    "DESCRIPTIONS": [
+      "Receba uma carta aleatória do Despertado Aprimorado no início do próximo turno.",
+      "Receba uma carta aleatória do Despertado Aprimorado no início dos seus próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:AwakenedOnePower": {
+    "NAME": "Ritual das Trevas",
+    "DESCRIPTIONS": [
+      "Ganhe ",
+      " Força se este inimigo não atacar em seu turno."
+    ]
+  },
+  "Slimebound:StudyChampPower": {
+    "NAME": "Estudo do Campeão",
+    "DESCRIPTIONS": [
+      "Receba uma carta aleatória de Campeão no início do próximo turno.",
+      "Receba uma carta aleatória de Campeão no início dos seus próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyChampPowerUpgraded": {
+    "NAME": "Estudo do Campeão+",
+    "DESCRIPTIONS": [
+      "Receba uma carta aleatória de Campeão Aprimorado no início do próximo turno.",
+      "Receba uma carta aleatória de Campeão Aprimorado no início dos seus próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyCollectorPower": {
+    "NAME": "Estudo do Colecionador",
+    "DESCRIPTIONS": [
+      "Receba uma carta aleatória de Colecionador no início do próximo turno.",
+      "Receba uma carta aleatória de Colecionador no início dos seus próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyCollectorPowerUpgraded": {
+    "NAME": "Estudo do Colecionador+",
+    "DESCRIPTIONS": [
+      "Receba uma carta aleatória de Colecionador Aprimorado no início do próximo turno.",
+      "Receba uma carta aleatória de Colecionador Aprimorado no início dos seus próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyGuardianPower": {
+    "NAME": "Estudo do Guardião",
+    "DESCRIPTIONS": [
+      "Receba uma carta aleatória de Guardião no início do próximo turno.",
+      "Receba uma carta aleatória de Guardião no início dos seus próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyGuardianPowerUpgraded": {
+    "NAME": "Guardião de Estudo+",
+    "DESCRIPTIONS": [
+      "Receba uma carta de Guardião melhorada aleatória no início do próximo turno.",
+      "Receba uma carta de Guardião melhorada aleatória no início dos próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyHexaghostPower": {
+    "NAME": "Estudo Hexaghost",
+    "DESCRIPTIONS": [
+      "Receba uma carta de Hexaghost aleatória no início do próximo turno.",
+      "Receba uma carta de Hexaghost aleatória no início dos próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyHexaghostPowerUpgraded": {
+    "NAME": "Estudo Hexaghost+",
+    "DESCRIPTIONS": [
+      "Receba uma carta de Hexaghost melhorada aleatória no início do próximo turno.",
+      "Receba uma carta de Hexaghost melhorada aleatória no início dos próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyShapesPower": {
+    "NAME": "Estudo Donu & Deca",
+    "DESCRIPTIONS": [
+      "Receba uma carta de Donu & Deca aleatória no início do próximo turno.",
+      "Receba uma carta de Donu & Deca aleatória no início dos próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyShapesPowerUpgraded": {
+    "NAME": "Estudo Donu & Deca+",
+    "DESCRIPTIONS": [
+      "Receba uma carta de Donu & Deca melhorada aleatória no início do próximo turno.",
+      "Receba uma carta de Donu & Deca melhorada aleatória no início dos próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyTimeEaterPower": {
+    "NAME": "Estudo Time Eater",
+    "DESCRIPTIONS": [
+      "Receba uma carta de Time Eater aleatória no início do próximo turno.",
+      "Receba uma carta de Time Eater aleatória no início dos próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyTimeEaterPowerUpgraded": {
+    "NAME": "Estudo Time Eater+",
+    "DESCRIPTIONS": [
+      "Receba uma carta de Time Eater melhorada aleatória no início do próximo turno.",
+      "Receba uma carta de Time Eater melhorada aleatória no início dos próximos ",
+      " turnos."
+    ]
+  },
+  "Slimebound:GreedRespawnPower": {
+    "NAME": "Recuperação da Ganância",
+    "DESCRIPTIONS": [
+      "#yGreed #yOoze reaparecerá no final do seu turno."
+    ]
+  },
+  "Slimebound:ScrapRespawnPower": {
+    "NAME": "Recuperação de Sucata",
+    "DESCRIPTIONS": [
+      "#ySucata #yGosma reaparecerão no final do seu turno."
+    ]
+  },
+  "Slimebound:BuffSecondarySlimeEffectsPower": {
+    "NAME": "Mestre dos Lacaios",
+    "DESCRIPTIONS": [
+      "Sempre que você joga uma carta com Comando, comande novamente.",
+      "Sempre que você joga uma carta com Comando, comande #b",
+      " vezes adicionais."
+    ]
+  },
+  "Slimebound:TackleSelfDamagePreventPower": {
+    "NAME": "Impulsivo",
+    "DESCRIPTIONS": [
+      "Cartas que contenham \"Investida\" causam #b",
+      " dano adicional a você."
+    ]
+  },
+  "Slimebound:GoopArmorPower": {
+    "NAME": "Armadura de Gosma",
+    "DESCRIPTIONS": [
+      "Sempre que você #yAtacar um inimigo que tem #yGosma, ganhe #b",
+      " #yBloqueio."
+    ]
+  },
+  "Slimebound:CommandOnPlayPower": {
+    "NAME": "Apoio",
+    "DESCRIPTIONS": [
+      "Na próxima vez que você jogar uma carta neste turno, #yComando.",
+      "Nas próximas ",
+      " vezes que você jogar uma carta neste turno, #yComando."
+    ]
+  },
+  "Slimebound:GoopPerTurnPower": {
+    "NAME": "Banho de Gosma",
+    "DESCRIPTIONS": [
+      "Adiciona ",
+      " Gosma no início do turno deste inimigo."
+    ]
+  }
+}

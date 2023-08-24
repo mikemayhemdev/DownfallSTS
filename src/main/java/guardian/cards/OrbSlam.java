@@ -14,7 +14,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.powers.FloatingOrbsPower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 
+@Deprecated
 public class OrbSlam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("OrbSlam");
     public static final String NAME;
@@ -57,6 +59,7 @@ public class OrbSlam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("OrbSlam.png"));
 
 
     }

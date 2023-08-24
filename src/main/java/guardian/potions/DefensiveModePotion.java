@@ -33,22 +33,19 @@ public class DefensiveModePotion extends CustomPotion {
 
 
     public void initializeData() {
-        this.potency = getPotency();
-        if (potency > 1){
-            this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[2]);
-        } else {
-            this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
-        }
+        this.potency = getPotency(0);
+        this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(GameDictionary.BLOCK.NAMES[0]), GameDictionary.keywords.get(GameDictionary.BLOCK.NAMES[0])));
         this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("guardianmod:defensive mode")), GameDictionary.keywords.get("guardianmod:defensive mode")));
 
     }
 
     public void use(AbstractCreature target) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, 10));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, potency));
         AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, potency), potency));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, 1), 1));
     }
 
 
@@ -57,7 +54,7 @@ public class DefensiveModePotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 1;
+        return 10;
     }
 }
 

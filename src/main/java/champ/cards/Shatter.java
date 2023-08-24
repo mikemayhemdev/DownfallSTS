@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Shatter extends AbstractChampCard {
 
     public final static String ID = makeID("Shatter");
@@ -19,6 +21,7 @@ public class Shatter extends AbstractChampCard {
         baseDamage = 10;
         baseMagicNumber = magicNumber = 1;
         postInit();
+        loadJokeCardImage(this, "Shatter.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

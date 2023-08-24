@@ -13,7 +13,7 @@
 },
 "hermit:ShadowCloakPower": {
         "NAME": "暗影斗篷",
-        "DESCRIPTIONS": ["每当你抽到 #y诅咒 时，获得 #b", " 点 #y格挡 。"]
+        "DESCRIPTIONS": ["每当你抽到或 #y消耗 #y诅咒 时，获得 #b", " 点 #y格挡 。"]
 },
 "hermit:TakeAimPower": {
         "NAME": "举枪瞄准",
@@ -33,7 +33,7 @@
 },
 "hermit:ComboPower": {
         "NAME": "连击",
-        "DESCRIPTIONS": ["每当你触发 #y精准 效果时，随机将 #b", " 张 #y精准 牌加入手牌。", " 张 #y精准 牌加入手牌。"]
+        "DESCRIPTIONS": ["每回合前 #b", " 次触发 #y精准 时，将该牌返回手牌最右端。", " 次触发 #y精准 时，将该牌返回手牌最右端。"]
 },
 "hermit:BigShotPower": {
         "NAME": "冒烟枪管",
@@ -49,7 +49,7 @@
 },
 "hermit:EternalPower": {
         "NAME": "永恒形态",
-        "DESCRIPTIONS": ["你的回合开始时，抽牌阶段结束后，已在手的手牌的本回合首次耗能减少 #b", " 点。"]
+        "DESCRIPTIONS": ["每回合抽到的前 #b4 张牌该回合首次耗能减 #b", " 。"]
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "压倒性力量",

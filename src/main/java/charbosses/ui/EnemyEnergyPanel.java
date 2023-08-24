@@ -29,7 +29,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
     public static final float ENERGY_VFX_TIME = 2.0f;
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("EnergyPanelTip"));
     private static final int RAW_W = 256;
-    private static final Color ENERGY_TEXT_COLOR;
+    public static final Color ENERGY_TEXT_COLOR;
     private static final float VFX_ROTATE_SPEED = -30.0f;
     public static float fontScale;
     public static int totalCount;
@@ -162,15 +162,17 @@ public class EnemyEnergyPanel extends AbstractPanel {
 
     @Override
     public void render(final SpriteBatch sb) {
-        this.tipHitbox.move(this.current_x, this.current_y);
-        this.renderOrb(sb);
-        this.renderVfx(sb);
-        final String energyMsg = EnemyEnergyPanel.totalCount + "/" + this.owner.energy.energy;
-        AbstractDungeon.player.getEnergyNumFont().getData().setScale(EnemyEnergyPanel.fontScale);
-        FontHelper.renderFontCentered(sb, energyNumFont, energyMsg, this.current_x, this.current_y, EnemyEnergyPanel.ENERGY_TEXT_COLOR);
-        this.tipHitbox.render(sb);
-        if (this.tipHitbox.hovered && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.isScreenUp) {
-            TipHelper.renderGenericTip(1550.0F * Settings.scale, 750.0F * Settings.scale, EnemyEnergyPanel.LABEL[0], EnemyEnergyPanel.MSG[0]);
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            this.tipHitbox.move(this.current_x, this.current_y);
+            this.renderOrb(sb);
+            this.renderVfx(sb);
+            final String energyMsg = EnemyEnergyPanel.totalCount + "/" + this.owner.energy.energy;
+            AbstractDungeon.player.getEnergyNumFont().getData().setScale(EnemyEnergyPanel.fontScale);
+            FontHelper.renderFontCentered(sb, energyNumFont, energyMsg, this.current_x, this.current_y, EnemyEnergyPanel.ENERGY_TEXT_COLOR);
+            this.tipHitbox.render(sb);
+            if (this.tipHitbox.hovered && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.isScreenUp) {
+                TipHelper.renderGenericTip(1550.0F * Settings.scale, 750.0F * Settings.scale, EnemyEnergyPanel.LABEL[0], EnemyEnergyPanel.MSG[0]);
+            }
         }
     }
 

@@ -24,6 +24,7 @@ public class UnknownDraw extends AbstractUnknownCard {
 
     public UnknownDraw() {
         super(ID, CardType.SKILL, CardRarity.COMMON);
+        SneckoMod.loadJokeCardImage(this, "UnknownDraw.png");
     }
 
     public boolean useCheck(AbstractCard card) {

@@ -47,6 +47,7 @@ public class MassFeed extends AbstractSlimeboundCard {
 
         this.exhaust = true;
         this.isMultiDamage = true;
+        SlimeboundMod.loadJokeCardImage(this, "MassFeed.png");
 
     }
 

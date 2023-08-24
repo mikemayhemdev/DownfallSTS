@@ -28,7 +28,7 @@ public class WingStatue_Evil extends AbstractImageEvent {
     }
 
     private CurScreen screen;
-    private int damage = MathUtils.ceil((float) AbstractDungeon.player.getAscensionMaxHPLoss() * 1.5F);
+    private int damage = MathUtils.ceil((float) AbstractDungeon.player.getAscensionMaxHPLoss() * 2.0F);
 
     public WingStatue_Evil() {
         super(NAME, DESCRIPTIONS[0], "images/events/goldenWing.jpg");

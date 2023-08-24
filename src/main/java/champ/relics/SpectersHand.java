@@ -1,22 +1,18 @@
 package champ.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
 import champ.cards.Defend;
 import champ.cards.Strike;
-import champ.util.OnOpenerSubscriber;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
-import com.megacrit.cardcrawl.stances.AbstractStance;
-import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import downfall.cardmods.ExhaustMod;
+import downfall.util.TextureLoader;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
@@ -35,7 +31,8 @@ public class SpectersHand extends CustomRelic {
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
         if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
-            flash();if (AbstractDungeon.cardRng.randomBoolean()){
+            flash();
+            if (AbstractDungeon.cardRng.randomBoolean()) {
                 AbstractCard c2 = new Strike();
                 CardModifierManager.addModifier(c2, new ExhaustMod());
                 c2.freeToPlayOnce = true;
@@ -45,7 +42,6 @@ public class SpectersHand extends CustomRelic {
                 CardModifierManager.addModifier(c2, new ExhaustMod());
                 c2.freeToPlayOnce = true;
                 addToBot(new MakeTempCardInHandAction(c2));
-
             }
 
         }

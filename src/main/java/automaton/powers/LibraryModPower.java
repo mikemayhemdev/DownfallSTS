@@ -5,7 +5,7 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import downfall.cardmods.EtherealMod;
+import expansioncontent.cardmods.PropertiesMod;
 
 public class LibraryModPower extends AbstractAutomatonPower {
     public static final String NAME = "LibraryMod";
@@ -24,7 +24,7 @@ public class LibraryModPower extends AbstractAutomatonPower {
             for (int i = 0; i < amount; i++) {
                 AbstractCard qCardGet = SpaghettiCode.getRandomEncode();
                 //qCardGet.modifyCostForCombat(-99);
-                CardModifierManager.addModifier(qCardGet, new EtherealMod());
+                CardModifierManager.addModifier(qCardGet, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
                 addToBot(new MakeTempCardInHandAction(qCardGet, true));
             }
         }

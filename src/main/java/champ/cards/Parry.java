@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Parry extends AbstractChampCard {
 
     public final static String ID = makeID("Parry");
@@ -19,6 +21,7 @@ public class Parry extends AbstractChampCard {
         c.initializeDescription();
         cardsToPreview = c;
         postInit();
+        loadJokeCardImage(this, "Parry.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

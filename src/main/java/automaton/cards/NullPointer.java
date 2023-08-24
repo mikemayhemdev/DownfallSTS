@@ -1,13 +1,13 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
-import automaton.cardmods.UnplayableMod;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import expansioncontent.cardmods.UnplayableMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ViceCrushEffect;
 
@@ -43,7 +43,9 @@ public class NullPointer extends AbstractBronzeCard {
 
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
-        CardModifierManager.addModifier(function, new UnplayableMod());
+        UnplayableMod cardMod = new UnplayableMod();
+        cardMod.updateMessage(CardCrawlGame.languagePack.getUIString("bronze:UnplayableMod").TEXT[1]);
+        CardModifierManager.addModifier(function, cardMod);
     }
 
     @Override

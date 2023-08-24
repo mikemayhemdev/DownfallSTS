@@ -11,11 +11,11 @@
     "TEXT": [
       "Âmes",
       "Montre combien d'Âmes vous possédez. Les Âmes peuvent être données au Cœur pour des récompenses.",
-      "Merchant Status",
-      "HP",
-      "Dead!",
-      "Strength",
-      "Souls stolen"
+      "Statut du Marchand",
+      "PV",
+      "Mort!",
+      "de Force",
+      "Âmes volées"
     ]
   },
   "downfall:BustKeyButton": {
@@ -23,10 +23,10 @@
       "Casser le Rubis",
       "Casser le Saphir",
       "Casser l'Émeraude",
-      "(Action Gratuite) Dépensez 100 Âmes : Détruisez la clé pour ",
-      "gagnez 1 de Force.",
-      "augmentez les PV Max de 10.",
-      "gagnez 1 de Dextérité.",
+      "(Action Gratuite) Dépensez 50 Âmes : Détruisez la clé pour ",
+      "gagner 1 de Force durant les combats de Boss.",
+      "gagner 10 PV Temporaires durant les combats de Boss.",
+      "gagner 1 de Dextérité durant les combats de Boss.",
       "Clé détruite!",
       "Requiert ",
       " Âmes.",
@@ -62,7 +62,8 @@
       "Désactive l'aide pour les poses du Champion - pour les Champions expérimentés",
       "Prevent Snecko from using card pools from other mods.",
       "Désactive le remplacement de la musique (requiert un restart du jeu)",
-      "Débloque tous les déguisements alternatifs des personnages Downfall"
+      "Débloque tous les déguisements alternatifs des personnages Downfall",
+      "Allow display card's subtype next to main type."
     ]
   },
   "downfall:EnergyPanelTip": {
@@ -151,12 +152,12 @@
   },
   "downfall:MainMenuAd": {
     "TEXT": [
-      "Want More?",
-      "Many more mods, including",
-      "Downfall, are available for ",
-      "base Slay the Spire on",
-      "Steam Workshop.",
-      "Click here to learn how!"
+      "Vous en voulez plus?",
+      "De nombreux autres mods,",
+      "dont Downfall, sont disponibles pour ",
+      "le jeu Slay the Spire sur",
+      "le Steam Workshop.",
+      "Cliquez ici pour savoir comment !"
     ]
   }
 }

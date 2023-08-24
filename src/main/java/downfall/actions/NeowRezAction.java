@@ -70,11 +70,17 @@ public class NeowRezAction extends AbstractGameAction {
         this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration <= 1.5F && !rezInit) {
             this.rezInit = true;
+
             for (int i = 0; i < owner.bossesToRez.size(); i++) {
                 String name;
+                int ii = i;
                 name = owner.bossesToRez.get(i);
                 owner.bossesRezzed.add(name);
                 AbstractMonster q = rezBoss(name, i);
+
+                // Original spawn colorizing.
+                q.tint.color = new Color(.5F, .5F, 1F, 0F);
+                q.tint.changeColor(Color.WHITE.cpy(), 2F);
 
                 if (i==0) ally1 = ((GauntletBoss) q);
                 if (i==1) ally2 = ((GauntletBoss) q);
@@ -87,12 +93,18 @@ public class NeowRezAction extends AbstractGameAction {
 
                 }
 
-
                     AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                     @Override
                     public void update() {
                         isDone = true;
                         q.usePreBattleAction();
+
+                        // Original spawn visual effect.
+                        rezVFX = new NeowBossRezEffect(q.hb.cX, q.hb.cY);
+                        rezVFX.duration = 1.0F;
+                        rezVFX.timed = true;
+
+                        AbstractDungeon.effectsQueue.add(rezVFX);
                     }
                 });
                 AbstractDungeon.actionManager.addToTop(new SpawnMonsterAction(q, false));
@@ -103,7 +115,6 @@ public class NeowRezAction extends AbstractGameAction {
         if (this.duration <= 0F) {
             owner.isRezzing = false;
 
-            //rezVFX.end();
             // cB.usePreBattleAction();
             this.isDone = true;
         }

@@ -29,8 +29,8 @@
   {
     "PROPER_NAME": "Contre",
     "NAMES": [
-      "contre",
-      "counter"
+      "counter",
+      "contre"
     ],
     "DESCRIPTION": "La prochaine fois que vous prenez des dégâts #yd'Attaque, infligez ces dégâts en retour."
   },
@@ -42,7 +42,7 @@
       "defensive",
       "defensive."
     ],
-    "DESCRIPTION": "#yPose. NL Bonus de #yCompétence: Gagnez #b4 de #yContre. NL Bonus de #yFinisher: Gagnez #b12 #yd'Armure."
+    "DESCRIPTION": "#yPose. NL Bonus de #yCompétence: Gagnez #b3 de #yContre. NL Bonus de #yFinisher: Gagnez #b8 #yd'Armure."
   },
   {
     "PROPER_NAME": "Destructeur",

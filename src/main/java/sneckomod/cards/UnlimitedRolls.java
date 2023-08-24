@@ -4,10 +4,9 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.cardmods.EtherealMod;
+import expansioncontent.cardmods.ExhaustMod;
 import sneckomod.SneckoMod;
 import sneckomod.powers.UnlimitedRollsPower;
-import downfall.cardmods.ExhaustMod;
 
 public class UnlimitedRolls extends AbstractSneckoCard {
 
@@ -18,7 +17,6 @@ public class UnlimitedRolls extends AbstractSneckoCard {
     public UnlimitedRolls() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         AbstractCard q = new SoulRoll();
-        CardModifierManager.addModifier(q, new EtherealMod());
         CardModifierManager.addModifier(q, new ExhaustMod());
         q.initializeDescription();
         cardsToPreview = q;

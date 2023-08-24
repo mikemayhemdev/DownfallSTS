@@ -25,20 +25,17 @@ import com.megacrit.cardcrawl.events.beyond.Falling;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Ghosts;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import downfall.downfallMod;
 import downfall.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
-import guardian.cards.AbstractGuardianCard;
+import downfall.util.TextureLoader;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import slimebound.cards.AbstractSlimeboundCard;
 import theHexaghost.cards.*;
 import theHexaghost.events.*;
 import theHexaghost.ghostflames.AbstractGhostflame;
@@ -51,7 +48,6 @@ import theHexaghost.potions.SoulburnPotion;
 import theHexaghost.relics.*;
 import theHexaghost.util.BurnVariable;
 import theHexaghost.util.CardFilter;
-import downfall.util.TextureLoader;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -230,9 +226,6 @@ public class HexaMod implements
         BaseMod.addRelic(new CandleOfCauterizing(), RelicType.SHARED);
         BaseMod.addRelic(new Sixitude(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new UnbrokenSoul(), TheHexaghost.Enums.GHOST_GREEN);
-
-//        BaseMod.addRelic(new CandleOfCauterizing(), RelicType.SHARED);
-//        BaseMod.addRelic(new Sixitude(), RelicType.SHARED);
         BaseMod.addRelic(new BolsterEngine(), RelicType.SHARED);
     }
 

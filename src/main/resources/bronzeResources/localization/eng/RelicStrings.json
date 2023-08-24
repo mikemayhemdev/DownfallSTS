@@ -17,7 +17,7 @@
     "NAME": "Deca's Washers",
     "FLAVOR": "It is unclear why Deca collects these.",
     "DESCRIPTIONS": [
-      "At the start of each combat, draw #b3 additional cards and add a #yDazed into your draw pile."
+      "At the start of the first #b3 turns of each combat, draw an additional card."
     ]
   },
   "bronze:Timepiece": {

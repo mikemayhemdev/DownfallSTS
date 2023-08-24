@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import sneckomod.powers.MudshieldPower;
 
 public class Mudshield extends AbstractSneckoCard {
@@ -13,6 +14,7 @@ public class Mudshield extends AbstractSneckoCard {
     public Mudshield() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        SneckoMod.loadJokeCardImage(this, "Mudshield.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

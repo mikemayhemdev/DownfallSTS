@@ -12,6 +12,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import sneckomod.SneckoMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class PrismaticBarrier extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PrismaticBarrier");
     public static final String NAME;
@@ -25,7 +27,7 @@ public class PrismaticBarrier extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int BLOCK = 2;
-    private static final int UPGRADE_BONUS = 2;
+    private static final int UPGRADE_BONUS = 1;
     private static final int MULTICOUNT = 1;
     private static final int SOCKETS = 3;
     private static final boolean SOCKETSAREAFTER = true;
@@ -52,6 +54,7 @@ public class PrismaticBarrier extends AbstractGuardianCard {
 
         tags.add(AbstractCard.CardTags.HEALING);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PrismaticBarrier.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

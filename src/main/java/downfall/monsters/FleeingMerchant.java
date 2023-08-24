@@ -1,5 +1,6 @@
 package downfall.monsters;
 
+import collector.powers.DoomPower;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -74,6 +75,7 @@ public class FleeingMerchant extends AbstractMonster {
     public static int CURRENT_HP = 400;
     public static int CURRENT_STRENGTH = 0;
     public static int CURRENT_SOULS = 0;
+   // public static int CURRENT_DOOM = 0;
 
     public static boolean DEAD = false;
     public static boolean ESCAPED = false;
@@ -125,7 +127,6 @@ public class FleeingMerchant extends AbstractMonster {
 
     @Override
     public void usePreBattleAction() {
-        AbstractDungeon.getCurrRoom().eliteTrigger = true;
         //AbstractDungeon.getCurrRoom().cannotLose = true;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BarricadePower(this)));
 
@@ -137,6 +138,12 @@ public class FleeingMerchant extends AbstractMonster {
         if (CURRENT_SOULS > 0) {
             this.addToBot(new ApplyPowerAction(this, this, new SoulStealPower(this, CURRENT_SOULS), CURRENT_SOULS));
         }
+        /*
+        if (CURRENT_DOOM > 0) {
+            addToBot(new ApplyPowerAction(this, this, new DoomPower(this, CURRENT_DOOM), CURRENT_DOOM));
+        }
+
+         */
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
@@ -250,7 +257,7 @@ public class FleeingMerchant extends AbstractMonster {
         AbstractDungeon.getCurrRoom().rewardAllowed = false;
         AbstractDungeon.getCurrRoom().rewards.clear();
         */
-        int increaseGold = 300;
+        int increaseGold = 150;
         if (FleeingMerchant.CURRENT_SOULS > 0)
             increaseGold += FleeingMerchant.CURRENT_SOULS;
 
