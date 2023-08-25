@@ -93,7 +93,7 @@
     "DESCRIPTION": "Наносит !D! урона. NL Вы берёте !M! - 2 карты. NL sneckomod:Спутывает самую дорогую карту в руке."
   },
   "sneckomod:QuickMove": {
-    "NAME": "Резвое движение",
+    "NAME": "Резкое движение",
     "DESCRIPTION": "Даёт !B! Защиты. NL sneckomod:Спутывает самую дорогую карту в руке.",
     "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL sneckomod:Спутывает !M! самых дорогих карты в руке."
   },
@@ -116,8 +116,8 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "Экзотический облик",
-    "DESCRIPTION": "sneckomod:Анти-змекко. NL Вы берёте карту, когда разыгрываете sneckomod:Внеклассовую карту.",
-    "UPGRADE_DESCRIPTION": "Вы берёте карту, когда разыгрываете sneckomod:Внеклассовую карту."
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Вы берёте 1 карту, когда разыгрываете sneckomod:Внеклассовую карту.",
+    "UPGRADE_DESCRIPTION": "Вы берёте 1 карту, когда разыгрываете sneckomod:Внеклассовую карту."
   },
   "sneckomod:SlitherStrike": {
     "NAME": "Скользящий удар",
@@ -162,7 +162,7 @@
   "sneckomod:SoulRoll": {
     "NAME": "Переброс души",
     "DESCRIPTION": "sneckomod:Анти-змекко. NL sneckomod:Спутывает все карты в руке.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL sneckomod:Спутывает все карты в руке. NL Вы берёте карту."
+    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL sneckomod:Спутывает все карты в руке. NL Вы берёте 1 карту."
   },
   "sneckomod:Strike": {
     "NAME": "Удар",
@@ -170,7 +170,7 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "Хлестнуть хвостом",
-    "DESCRIPTION": "Наносит !D! урона. NL Накладывает !M! - 2 Слабости и !M! - 2 Уязвимости."
+    "DESCRIPTION": "Наносит !D! урона. NL Накладывает !M! - 2 Слабости. Накладывает !M! - 2 Уязвимости."
   },
   "sneckomod:Transmogrify": {
     "NAME": "Превращение",
