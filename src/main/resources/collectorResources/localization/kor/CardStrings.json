@@ -124,7 +124,7 @@
   },
   "collector:Empower": {
     "NAME": "권능",
-    "DESCRIPTION": "내 다음 !M! 턴 시작 시 힘을 X 얻습니다."
+    "DESCRIPTION": "다음 !M! 턴 동안 내 턴 시작 시 힘을 X 얻습니다."
   },
   "collector:Extricate": {
     "NAME": "해방",
@@ -135,7 +135,7 @@
     "DESCRIPTION": "카드를 소멸시킬 때마다 무작위 적들의 체력을 !M! 잃게합니다."
   },
   "collector:FiendFire": {
-    "NAME": "방화광",
+    "NAME": "지옥불",
     "DESCRIPTION": "카드를 전부 소멸시킵니다. NL 그 수만큼 피해를 !D! 줍니다. NL 소멸."
   },
   "collector:Finalize": {
@@ -456,7 +456,7 @@
   },
   "collector:CultistCard": {
     "NAME": "광신자",
-    "DESCRIPTION": "collector:장작. NL 내 다음 3턴 시작 시 힘을 1 얻습니다."
+    "DESCRIPTION": "collector:장작. NL 다음 3턴 동안 내 턴 시작 시 힘을 1 얻습니다."
   },
   "collector:DaggerCard": {
     "NAME": "단검",
