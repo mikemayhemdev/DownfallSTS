@@ -41,11 +41,6 @@ public class EtherealMod extends AbstractCardModifier {
         return ID;
     }
 
-    @Override
-    public boolean isInherent(AbstractCard card) {
-        return true;
-    }
-
     //Retain Override - do not remove - Stanek
     @Override
     public void onRetained(AbstractCard card) {
