@@ -16,14 +16,14 @@
   },
   "collector:HolidayCoal": {
     "NAME": "角魔煤块",
-    "FLAVOR": "兰伟德：\"真有意思！但为什么只有某些烟囱才有呢？\"",
+    "FLAVOR": "兰伟德：“真有意思！但为什么只有某些烟囱才有呢？”",
     "DESCRIPTIONS": [
       "从空的 #y收藏堆 抽牌时，抽出一张 #y幸运烛芯 。"
     ]
   },
   "collector:BagOfTricks": {
     "NAME": "诡计背包",
-    "FLAVOR": "Tricky。",
+    "FLAVOR": "趣奇。",
     "DESCRIPTIONS": [
       "战斗开始时，额外抽 #b",
       " 张 #ycollector:藏品 牌。"
@@ -54,7 +54,7 @@
   },
   "collector:Incense": {
     "NAME": "熏香",
-    "FLAVOR": "An antiquated form of mental clarification.",
+    "FLAVOR": "一种古旧的宁神方式。",
     "DESCRIPTIONS": [
       "已有 #y虚弱 、 #y易伤 ，或 #y脆弱 之中的任意一种 #r负面效果 时，不再积累新层数。"
     ]
@@ -68,7 +68,7 @@
   },
   "collector:AutoCurser": {
     "NAME": "巫婆驱魔符",
-    "FLAVOR": "\"When I put this on, my rate of toe-stubbing increased drastically. I think it works!\" - Ranwid",
+    "FLAVOR": "兰伟德：“带上它之后，崴到脚趾的频率显著提高了呢！我觉得它很有效！”",
     "DESCRIPTIONS": [
       "战斗开始时，随机给予一名敌人 #b1 层 #y虚弱 与 #y易伤 。"
     ]
