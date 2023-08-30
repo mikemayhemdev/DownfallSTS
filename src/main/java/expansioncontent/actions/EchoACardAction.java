@@ -15,6 +15,10 @@ public class EchoACardAction extends AbstractGameAction {
         this.amount = amount;
     }
 
+    public EchoACardAction(AbstractCard cardToEcho) {
+        this(cardToEcho, 1);
+    }
+
     @Override
     public void update() {
         isDone = true;

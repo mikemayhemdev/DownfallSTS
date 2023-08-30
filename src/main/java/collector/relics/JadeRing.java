@@ -3,9 +3,9 @@ package collector.relics;
 import basemod.abstracts.CustomRelic;
 import collector.CollectorMod;
 import collector.powers.DoomPower;
-import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.MinionPower;
 import downfall.util.TextureLoader;
 
 public class JadeRing extends CustomRelic {
@@ -21,7 +21,7 @@ public class JadeRing extends CustomRelic {
 
     @Override
     public void onMonsterDeath(AbstractMonster m) {
-        if (m.hasPower(DoomPower.POWER_ID)) {
+        if (m.hasPower(DoomPower.POWER_ID) && !m.hasPower(MinionPower.POWER_ID)) {
             flash();
             AbstractDungeon.player.gainGold(EXTRA_SOULS);
         }

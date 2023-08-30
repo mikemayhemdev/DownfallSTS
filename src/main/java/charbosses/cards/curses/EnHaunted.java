@@ -1,6 +1,5 @@
 package charbosses.cards.curses;
 
-import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import charbosses.cards.AbstractCustomBossCard;
 import downfall.util.TextureLoader;
@@ -14,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
+import expansioncontent.cardmods.PropertiesMod;
 
 public class EnHaunted extends AbstractCustomBossCard {
     public static final String ID = "downfall_Charboss:Haunted";
@@ -40,7 +40,7 @@ public class EnHaunted extends AbstractCustomBossCard {
                 isDone = true;
                 for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
                     if (!c.isEthereal) {
-                        CardModifierManager.addModifier(c, new EtherealMod());
+                        CardModifierManager.addModifier(c, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
                         c.superFlash(Color.PURPLE.cpy());
                     }
                 }

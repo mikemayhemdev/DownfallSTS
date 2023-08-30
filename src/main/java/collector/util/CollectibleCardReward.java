@@ -70,7 +70,6 @@ public class CollectibleCardReward extends CustomReward {
             EssenceSystem.changeEssence(-3);
             return true;
         } else {
-            //TODO: Visual assistance
             return false;
         }
     }

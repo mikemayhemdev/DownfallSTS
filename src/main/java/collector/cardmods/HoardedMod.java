@@ -47,7 +47,6 @@ public class HoardedMod extends AbstractCardModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        //TODO: Don't double up keywords
         String s = rawDescription;
         s = uiStrings.TEXT[0] + s;
         if (!hadRetain) {

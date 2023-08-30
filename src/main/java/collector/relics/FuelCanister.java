@@ -32,6 +32,7 @@ public class FuelCanister extends CustomRelic {
                 toRetain.add(q);
             }
         }
+        toRetain.removeIf(c -> c.isEthereal);
         if (!toRetain.isEmpty()) {
             Wiz.getRandomItem(toRetain).retain = true;
         }

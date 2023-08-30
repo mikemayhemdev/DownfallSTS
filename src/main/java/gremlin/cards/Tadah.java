@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.actions.EchoACardAction;
 import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.orbs.GremlinWizard;
@@ -40,10 +41,8 @@ public class Tadah extends AbstractGremlinCard {
         while (skill.cost == -2) {
             skill = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL).makeCopy();
         }
-        CardModifierManager.addModifier(skill, new EtherealMod());
-        CardModifierManager.addModifier(skill, new ExhaustMod());
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(skill));
-        AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(new GremlinWizard(0)));
+        addToBot(new EchoACardAction(skill));
+        addToBot(new GremlinSwapAction(new GremlinWizard(0)));
     }
 
     public void upgrade() {

@@ -20,12 +20,13 @@ public class BronzeOrbCard extends AbstractCollectibleCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        dmg(m, AbstractGameAction.AttackEffect.NONE); //TODO: Beam
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
         atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                AbstractDungeon.player.drawPile.getTopCard().freeToPlayOnce = true;
+                if (!AbstractDungeon.player.drawPile.isEmpty())
+                    AbstractDungeon.player.drawPile.getTopCard().freeToPlayOnce = true;
                 //Note: this technically lets you figure out what your top card is by checking draw pile before/after
             }
         });

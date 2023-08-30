@@ -1,6 +1,8 @@
 package collector.powers;
 
+import basemod.helpers.CardModifierManager;
 import collector.actions.AllEnemyLoseHPAction;
+import collector.cardmods.ActuallyCollectedCardMod;
 import collector.cards.collectibles.AbstractCollectibleCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,7 +18,7 @@ public class OmenPower extends AbstractCollectorPower {
     }
 
     public void onAfterCardPlayed(AbstractCard card) {
-        if (card instanceof AbstractCollectibleCard) {
+        if (CardModifierManager.hasModifier(card, ActuallyCollectedCardMod.ID)) {
             this.flash();
             addToBot(new AllEnemyLoseHPAction(amount));
         }

@@ -1,6 +1,7 @@
 package collector.powers;
 
 import basemod.helpers.CardModifierManager;
+import collector.cardmods.ActuallyCollectedCardMod;
 import collector.cardmods.CollectedCardMod;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,7 +21,7 @@ public class DoublePlayCollectiblesPower extends AbstractCollectorPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && CardModifierManager.hasModifier(card, CollectedCardMod.ID)) {
+        if (!card.purgeOnUse && CardModifierManager.hasModifier(card, ActuallyCollectedCardMod.ID)) {
             for (int i = 0; i < amount; i++) {
                 this.flash();
                 AbstractMonster m = null;

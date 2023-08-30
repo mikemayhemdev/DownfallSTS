@@ -10,16 +10,20 @@ import static collector.CollectorMod.makeID;
 
 public class CollectedCardMod extends AbstractCardModifier {
     public static final String ID = makeID("CollectedCardMod");
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
+    public static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
+
+    private boolean hadExhaust = false;
 
     @Override
     public void onInitialApplication(AbstractCard card) {
+        hadExhaust = card.exhaust;
         card.exhaust = true;
+        CardModifierManager.addModifier(card, new ActuallyCollectedCardMod());
     }
 
     @Override
     public void onRemove(AbstractCard card) {
-        card.exhaust = false;
+        card.exhaust = hadExhaust;
     }
 
     @Override

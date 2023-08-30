@@ -49,7 +49,7 @@
   "collector:Doom": {
     "NAME": "魂劫",
     "DESCRIPTIONS": [
-      "敌方回合结束时，该单位失去 #b",
+      "敌方回合开始时，该单位失去 #b",
       " 点生命与所有 #y魂劫 层数，若其处于 #y折磨 之中，则 #y魂劫 持续至下回合。"
     ]
   },
@@ -170,12 +170,12 @@
   "collector:Suffering": {
     "NAME": "苦楚",
     "DESCRIPTIONS": [
-      "每当你给予 #y虚弱 或 #y易伤 时，目标同时失去 #b",
-      " 点生命。"
+      "每当你给予 #y虚弱 或 #y易伤 时，同时给予 #b",
+      " 层 #y魂劫 。"
     ]
   },
   "collector:TorchHead": {
-    "NAME": "Torch Head",
+    "NAME": "火炬头",
     "DESCRIPTIONS": [
       "每当你打出一张 #y攻击 牌时，若你有 #y临时生命 ， #y火炬头 会： NL ",
       "随机给予一名敌人 #b",
@@ -234,7 +234,7 @@
       " 点攻击伤害。"
     ]
   },
-  "collector:BookofStabbingCardPower": {
+  "collector:BookOfStabbingCard": {
     "NAME": "Stabby",
     "DESCRIPTIONS": [
       "每当你造成未被格挡的攻击伤害，给予目标 #b",

@@ -87,7 +87,7 @@
   "collector:Karma": {
     "NAME": "Karma",
     "DESCRIPTIONS": [
-      "At the end of your turn, if an enemy is #yAfflicted, gain #b",
+      "At the end of your turn, if any enemy is #yAfflicted, gain #b",
       " #yBlock."
     ]
   },
@@ -172,8 +172,8 @@
   "collector:Suffering": {
     "NAME": "Suffering",
     "DESCRIPTIONS": [
-      "Whenever you apply #yWeak or #yVulnerable, the target loses #b",
-      " HP."
+      "Whenever you apply #yWeak or #yVulnerable, also apply #b",
+      " #yDoom."
     ]
   },
   "collector:TorchHead": {
@@ -237,7 +237,7 @@
       " less damage from attacks this turn."
     ]
   },
-  "collector:BookofStabbingCardPower": {
+  "collector:BookOfStabbingCard": {
     "NAME": "Stabby",
     "DESCRIPTIONS": [
       "Whenever you deal unblocked attack damage, apply #b",

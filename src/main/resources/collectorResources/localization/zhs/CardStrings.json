@@ -1,11 +1,7 @@
 {
   "collector:ActOfAggression": {
     "NAME": "侵犯举动",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 易伤 。"
-  },
-  "collector:AlwaysMore": {
-    "NAME": "多多益善",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 金币 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 。"
   },
   "collector:AshenStrike": {
     "NAME": "化烬打击",
@@ -82,7 +78,7 @@
   },
   "collector:DarkApotheosis": {
     "NAME": "黑化",
-    "DESCRIPTION": "临时 升级 *收藏堆 的牌。 NL 消耗 。"
+    "DESCRIPTION": "升级 *收藏堆 的牌。 NL 消耗 。"
   },
   "collector:DarkLordForm": {
     "NAME": "暗主形态",
@@ -125,7 +121,7 @@
   },
   "collector:Empower": {
     "NAME": "邪力",
-    "DESCRIPTION": "接下来 !M! 个回合， NL 获得X点 力量 。"
+    "DESCRIPTION": "下 !M! 个回合开始时， NL 获得X点 力量 。"
   },
   "collector:Extricate": {
     "NAME": "解脱",
@@ -145,11 +141,11 @@
   },
   "collector:FingerOfDeath": {
     "NAME": "死亡恶指",
-    "DESCRIPTION": "只能使用 collector:储能 打出。 NL 给予 !M! 层 collector:魂劫 。"
+    "DESCRIPTION": "只能用 collector:储能 打出。 NL 给予 !M! 层 collector:魂劫 。"
   },
   "collector:FlameLash": {
     "NAME": "焰鞭",
-    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 本牌附加所葬牌的伤害。",
+    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 附加所葬牌的伤害于此。",
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 本场战斗伤害加 !M! ， NL 再加所葬牌的伤害。"
   },
   "collector:FleetingEmbers": {
@@ -220,7 +216,7 @@
   },
   "collector:Invigorate": {
     "NAME": "精神焕发",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力 。 NL 下回合获得 4 层 活力 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力 。 NL 下回合获得 !M! 层 活力 。"
   },
   "collector:IronbarkKindling": {
     "NAME": "铁皮柴",
@@ -376,7 +372,7 @@
   },
   "collector:SunbloomKindling": {
     "NAME": "日花柴",
-    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得2张 *余烬 ， NL 与 !M! 点 力量 。",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得 !M! 点 力量 ， NL 与2张 *余烬 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -425,7 +421,7 @@
   },
   "collector:BearCard": {
     "NAME": "熊",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 移除目标的 格挡。 NL 造成 !D! 点伤害。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 移除目标的 格挡 。 NL 造成 !D! 点伤害。"
   },
   "collector:BlueSlaverCard": {
     "NAME": "蓝衣奴贩",
@@ -480,7 +476,7 @@
   },
   "collector:FinalBossCard": {
     "NAME": "终局",
-    "DESCRIPTION": "移除目标的坚不可摧， NL 并将其击晕。 NL 消耗 。"
+    "DESCRIPTION": "移除目标的坚不可摧， NL 并将其 hermit:击晕 。 NL 消耗 。"
   },
   "collector:FaceTraderCard": {
     "NAME": "换脸商",
@@ -523,7 +519,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量 。"
   },
   "collector:JousterCard": {
-    "NAME": "Jouster",
+    "NAME": "骑士",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若只有一名敌人， NL 获得 !B! 点 格挡 。"
   },
   "collector:LagavulinCard": {
@@ -679,10 +675,12 @@
     "NAME": "扭曲团块",
     "DESCRIPTION": "预见 !M! 。 NL 打出抽牌堆顶部的牌。"
   },
-
-
   "collector:DefaultCollectibleCard": {
     "NAME": "无魂躯壳",
     "DESCRIPTION": "这名敌人没有灵魂。 NL 获得 !M! 点 力量 与 敏捷 。"
+  },
+  "collector:CollectorCard": {
+    "NAME": "Ouroboros",
+    "DESCRIPTION": "collector:Pyre. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !clm2! Temporary_HP."
   }
 }

@@ -40,12 +40,12 @@ public class DebuffDoublePotion extends CustomPotion {
         this.tips.add(new PowerTip(this.name, this.description));
     }
 
-    public void use(AbstractCreature target) {
+    public void use(AbstractCreature targetFoe) {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                for (AbstractPower p : target.powers) {
+                for (AbstractPower p : targetFoe.powers) {
                     if (p.type == AbstractPower.PowerType.DEBUFF) {
                         p.amount *= potency + 1;
                     }

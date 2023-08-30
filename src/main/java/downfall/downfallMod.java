@@ -43,6 +43,7 @@ import charbosses.bosses.Watcher.CharBossWatcher;
 import collector.CollectorChar;
 import collector.CollectorMod;
 import collector.util.CollectibleCardReward;
+import collector.util.EssenceReward;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -108,6 +109,7 @@ import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
 import downfall.util.*;
+import expansioncontent.cardmods.PropertiesMod;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import gremlin.GremlinMod;
@@ -146,23 +148,7 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static reskinContent.reskinContent.unlockAllReskin;
 
 @SpireInitializer
-public class downfallMod implements
-        OnPlayerDamagedSubscriber,
-        OnStartBattleSubscriber,
-        PostDrawSubscriber,
-        PostDungeonInitializeSubscriber,
-        EditStringsSubscriber,
-        EditKeywordsSubscriber,
-        AddCustomModeModsSubscriber,
-        PostInitializeSubscriber,
-        EditRelicsSubscriber,
-        EditCardsSubscriber,
-        PostUpdateSubscriber,
-        StartGameSubscriber,
-        StartActSubscriber,
-        AddAudioSubscriber,
-        RenderSubscriber,
-        PostDeathSubscriber {
+public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, AddAudioSubscriber, RenderSubscriber, PostDeathSubscriber {
     public static final String modID = "downfall";
 
     public static final boolean STEAM_MODE = true;
@@ -216,8 +202,7 @@ public class downfallMod implements
     public static String Act2BossFaced = "";
     public static String Act3BossFaced = "";
 
-    public static boolean[] unseenTutorials = new boolean[]{
-            true, // Hermit
+    public static boolean[] unseenTutorials = new boolean[]{true, // Hermit
             true, // Guardian
             true, // Hexa
             true, // Charboss Info
@@ -236,13 +221,12 @@ public class downfallMod implements
     public static final boolean EXPERIMENTAL_FLIP = false;
     public static Settings.GameLanguage[] SupportedLanguages = {
             // Insert other languages here
-            Settings.GameLanguage.ENG,
-            Settings.GameLanguage.ZHS,
+            Settings.GameLanguage.ENG, Settings.GameLanguage.ZHS,
             // Settings.GameLanguage.JPN
-//            Settings.GameLanguage.KOR,
+            Settings.GameLanguage.KOR,
 //            Settings.GameLanguage.FRA,
 //            Settings.GameLanguage.ZHT,
-//            Settings.GameLanguage.RUS,
+            Settings.GameLanguage.RUS,
 //            Settings.GameLanguage.PTB
     };
 
@@ -604,26 +588,24 @@ public class downfallMod implements
         });
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.THIRDSEALCARDREWARD, (rewardSave) -> new ThirdSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        //Guardian
-        BaseMod.registerCustomReward(
-                RewardItemTypeEnumPatch.GEM,
-                (rewardSave) -> { //on load
-                    GuardianMod.logger.info("gems loaded");
-                    return new GemReward();
-                }, (customReward) -> { //on save
-                    GuardianMod.logger.info("gems saved");
-                    return new RewardSave(customReward.type.toString(), null);
-                });
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.COLLECTOR_ESSENCE, (rewardSave) -> new EssenceReward(rewardSave.amount), (customReward) -> new RewardSave(customReward.type.toString(), null, customReward instanceof EssenceReward ? ((EssenceReward) customReward).amount : 0, 0));
 
-        BaseMod.registerCustomReward(
-                RewardItemTypeEnumPatch.GEMALLRARITIES,
-                (rewardSave) -> { //on load
-                    GuardianMod.logger.info("gems loaded");
-                    return new GemRewardAllRarities();
-                }, (customReward) -> { //on save
-                    GuardianMod.logger.info("gems saved");
-                    return new RewardSave(customReward.type.toString(), null);
-                });
+        //Guardian
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.GEM, (rewardSave) -> { //on load
+            GuardianMod.logger.info("gems loaded");
+            return new GemReward();
+        }, (customReward) -> { //on save
+            GuardianMod.logger.info("gems saved");
+            return new RewardSave(customReward.type.toString(), null);
+        });
+
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.GEMALLRARITIES, (rewardSave) -> { //on load
+            GuardianMod.logger.info("gems loaded");
+            return new GemRewardAllRarities();
+        }, (customReward) -> { //on save
+            GuardianMod.logger.info("gems saved");
+            return new RewardSave(customReward.type.toString(), null);
+        });
     }
 
     private void initializeConfig() {
@@ -637,9 +619,7 @@ public class downfallMod implements
         int configPos = 750;
         int configStep = 40;
 
-        ModLabeledToggleButton characterCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[4],
-                350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                crossoverCharacters, settingsPanel, (label) -> {
+        ModLabeledToggleButton characterCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[4], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, crossoverCharacters, settingsPanel, (label) -> {
         }, (button) -> {
             crossoverCharacters = button.enabled;
             CardCrawlGame.mainMenuScreen.charSelectScreen.options.clear();
@@ -648,9 +628,7 @@ public class downfallMod implements
         });
 
         configPos -= configStep;
-        ModLabeledToggleButton useIconsForAppliedCardPropertiesBtn = new ModLabeledToggleButton(configStrings.TEXT[13],
-                350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                useIconsForAppliedProperties, settingsPanel, (label) -> {
+        ModLabeledToggleButton useIconsForAppliedCardPropertiesBtn = new ModLabeledToggleButton(configStrings.TEXT[13], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, useIconsForAppliedProperties, settingsPanel, (label) -> {
         }, (button) -> {
             useIconsForAppliedProperties = button.enabled;
             saveData();
@@ -661,9 +639,7 @@ public class downfallMod implements
 
         if (!STEAM_MODE) {
             configPos -= configStep;
-            ModLabeledToggleButton characterModCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[5],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    crossoverModCharacters, settingsPanel, (label) -> {
+            ModLabeledToggleButton characterModCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[5], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, crossoverModCharacters, settingsPanel, (label) -> {
             }, (button) -> {
                 crossoverModCharacters = button.enabled;
                 CardCrawlGame.mainMenuScreen.charSelectScreen.options.clear();
@@ -672,90 +648,70 @@ public class downfallMod implements
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton contentSharingBtnRelics = new ModLabeledToggleButton(configStrings.TEXT[0],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    contentSharing_relics, settingsPanel, (label) -> {
+            ModLabeledToggleButton contentSharingBtnRelics = new ModLabeledToggleButton(configStrings.TEXT[0], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, contentSharing_relics, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_relics = button.enabled;
                 saveData();
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton contentSharingBtnEvents = new ModLabeledToggleButton(configStrings.TEXT[2],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    contentSharing_events, settingsPanel, (label) -> {
+            ModLabeledToggleButton contentSharingBtnEvents = new ModLabeledToggleButton(configStrings.TEXT[2], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, contentSharing_events, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_events = button.enabled;
                 saveData();
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton contentSharingBtnPotions = new ModLabeledToggleButton(configStrings.TEXT[1],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    contentSharing_potions, settingsPanel, (label) -> {
+            ModLabeledToggleButton contentSharingBtnPotions = new ModLabeledToggleButton(configStrings.TEXT[1], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, contentSharing_potions, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_potions = button.enabled;
                 saveData();
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton contentSharingBtnColorless = new ModLabeledToggleButton(configStrings.TEXT[3],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    contentSharing_colorlessCards, settingsPanel, (label) -> {
+            ModLabeledToggleButton contentSharingBtnColorless = new ModLabeledToggleButton(configStrings.TEXT[3], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, contentSharing_colorlessCards, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_colorlessCards = button.enabled;
                 saveData();
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton contentSharingBtnCurses = new ModLabeledToggleButton(configStrings.TEXT[6],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    contentSharing_curses, settingsPanel, (label) -> {
+            ModLabeledToggleButton contentSharingBtnCurses = new ModLabeledToggleButton(configStrings.TEXT[6], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, contentSharing_curses, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_curses = button.enabled;
                 saveData();
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton normalMapBtn = new ModLabeledToggleButton(configStrings.TEXT[7],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    normalMapLayout, settingsPanel, (label) -> {
+            ModLabeledToggleButton normalMapBtn = new ModLabeledToggleButton(configStrings.TEXT[7], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, normalMapLayout, settingsPanel, (label) -> {
             }, (button) -> {
                 normalMapLayout = button.enabled;
                 saveData();
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton sneckoNoModConfig = new ModLabeledToggleButton(configStrings.TEXT[10],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    sneckoNoModCharacters, settingsPanel, (label) -> {
+            ModLabeledToggleButton sneckoNoModConfig = new ModLabeledToggleButton(configStrings.TEXT[10], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, sneckoNoModCharacters, settingsPanel, (label) -> {
             }, (button) -> {
                 sneckoNoModCharacters = button.enabled;
                 saveData();
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton unlockAllBtn = new ModLabeledToggleButton(configStrings.TEXT[8],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    unlockEverything, settingsPanel, (label) -> {
+            ModLabeledToggleButton unlockAllBtn = new ModLabeledToggleButton(configStrings.TEXT[8], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, unlockEverything, settingsPanel, (label) -> {
             }, (button) -> {
                 unlockEverything = button.enabled;
                 saveData();
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton noMusicBtn = new ModLabeledToggleButton(configStrings.TEXT[11],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    noMusic, settingsPanel, (label) -> {
+            ModLabeledToggleButton noMusicBtn = new ModLabeledToggleButton(configStrings.TEXT[11], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, noMusic, settingsPanel, (label) -> {
             }, (button) -> {
                 noMusic = button.enabled;
                 saveData();
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton unlockAllSkinBtn = new ModLabeledToggleButton(configStrings.TEXT[12],
-                    350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    unlockAllReskin, settingsPanel, (label) -> {
+            ModLabeledToggleButton unlockAllSkinBtn = new ModLabeledToggleButton(configStrings.TEXT[12], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, unlockAllReskin, settingsPanel, (label) -> {
             }, (button) -> {
                 unlockAllReskin = button.enabled;
                 unlockAllReskin();
@@ -816,8 +772,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(GremlinMatchGame.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(GremlinWheelGame_Evil.ID, GremlinWheelGame_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -827,16 +782,14 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(GremlinWheelGame.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         //Event only used in Gremlin Wheel relic.  Is not initialized into any Act.
         BaseMod.addEvent(new AddEventParams.Builder(GremlinWheelGame_Rest.ID, GremlinWheelGame_Rest.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> false)
                 //Act//
-                .dungeonID("")
-                .create());
+                .dungeonID("").create());
 
         BaseMod.addEvent(new AddEventParams.Builder(WomanInBlue_Evil.ID, WomanInBlue_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -847,8 +800,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(WomanInBlue.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(LivingWall_Evil.ID, LivingWall_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -858,8 +810,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(LivingWall.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Augmenter_Evil.ID, Augmenter_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -869,8 +820,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(DrugDealer.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(BonfireSpirits_Evil.ID, BonfireSpirits_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -878,8 +828,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(Bonfire.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(GoldenShrine_Evil.ID, GoldenShrine_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -887,8 +836,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(GoldShrine.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(FaceTrader_Evil.ID, FaceTrader_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -899,8 +847,7 @@ public class downfallMod implements
                 //Prevent from appearing too early//
                 .bonusCondition(() -> AbstractDungeon.floorNum > 6 && (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("Exordium")))
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(CursedFountain.ID, CursedFountain.class) //Event ID//
                 //Event Spawn Condition//
@@ -910,8 +857,7 @@ public class downfallMod implements
                 //Additional Condition//
                 .bonusCondition(() -> AbstractDungeon.player.isCursed())
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(WeMeetAgain_Evil.ID, WeMeetAgain_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -921,8 +867,7 @@ public class downfallMod implements
                 //Event Type//
                 .bonusCondition(() -> (AbstractDungeon.player.relics.size() > 2))
 
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Designer_Evil.ID, Designer_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -931,9 +876,7 @@ public class downfallMod implements
                 .overrideEvent(Designer.ID)
                 //Event Type//
 
-                .bonusCondition(() -> (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("TheBeyond")))
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .bonusCondition(() -> (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("TheBeyond"))).eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(DeadGuy_Evil.ID, DeadGuy_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -943,8 +886,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(DeadAdventurer.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(ShiningLight_Evil.ID, ShiningLight_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -952,8 +894,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(ShiningLight.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(WorldOfGoop_Evil.ID, WorldOfGoop_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -961,8 +902,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(GoopPuddle.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Serpent_Evil.ID, Serpent_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -970,8 +910,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(Sssserpent.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(WingStatue_Evil.ID, WingStatue_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -979,8 +918,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(GoldenWing.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(GoldenIdol_Evil.ID, GoldenIdol_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -988,8 +926,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(GoldenIdol.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Cleric_Evil.ID, Cleric_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -997,8 +934,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(Cleric.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(CouncilOfGhosts_Evil.ID, CouncilOfGhosts_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1006,8 +942,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(Ghosts.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(CursedTome_Evil.ID, CursedTome_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1015,8 +950,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(CursedTome.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(ForgottenAltar_Evil.ID, ForgottenAltar_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1024,8 +958,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(ForgottenAltar.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Bandits_Evil.ID, Bandits_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1033,19 +966,16 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(MaskedBandits.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(KnowingSkull_Evil.ID, KnowingSkull_Evil.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 //Additional Condition//
-                .bonusCondition(() -> (AbstractDungeon.player.currentHealth > 12) && AbstractDungeon.id.equals("TheCity"))
-                .overrideEvent(com.megacrit.cardcrawl.events.city.KnowingSkull.ID)
+                .bonusCondition(() -> (AbstractDungeon.player.currentHealth > 12) && AbstractDungeon.id.equals("TheCity")).overrideEvent(com.megacrit.cardcrawl.events.city.KnowingSkull.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Vagrant_Evil.ID, Vagrant_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1053,8 +983,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(Addict.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Mausoleum_Evil.ID, Mausoleum_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1062,8 +991,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(TheMausoleum.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Beggar_Evil.ID, Beggar_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1071,8 +999,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(Beggar.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(TheNest_Evil.ID, TheNest_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1080,8 +1007,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(Nest.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil.ID, Colosseum_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1089,8 +1015,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(Colosseum.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(MindBloom_Evil.ID, MindBloom_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1098,8 +1023,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(MindBloom.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(MoaiHead_Evil.ID, MoaiHead_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1107,19 +1031,16 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(MoaiHead.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Nloth_Evil.ID, Nloth_Evil.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
-                .overrideEvent(Nloth.ID)
-                .bonusCondition(() -> (AbstractDungeon.id.equals("TheCity")))
+                .overrideEvent(Nloth.ID).bonusCondition(() -> (AbstractDungeon.id.equals("TheCity")))
 
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(SensoryStone_Evil.ID, SensoryStone_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1127,8 +1048,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(SensoryStone.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Portal_Evil.ID, Portal_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1138,8 +1058,7 @@ public class downfallMod implements
 
                 .bonusCondition(() -> (AbstractDungeon.id.equals("TheBeyond")))
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(TombRedMask_Evil.ID, TombRedMask_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1149,8 +1068,7 @@ public class downfallMod implements
                 //Additional Condition//
                 .bonusCondition(() -> AbstractDungeon.player.hasRelic(RedIOU.ID))
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(WindingHalls_Evil.ID, WindingHalls_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1158,8 +1076,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(WindingHalls.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Joust_Evil.ID, Joust_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1167,21 +1084,17 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(TheJoust.ID)
                 //Event Type//
-                .bonusCondition(() -> (AbstractDungeon.id.equals("TheCity")))
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .bonusCondition(() -> (AbstractDungeon.id.equals("TheCity"))).eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(BossTester.ID, BossTester.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> false)
-                .create());
+                .spawnCondition(() -> false).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(DuplicatorEvil.ID, DuplicatorEvil.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
-                .overrideEvent(Duplicator.ID)
-                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .overrideEvent(Duplicator.ID).eventType(EventUtils.EventType.FULL_REPLACE)
                 // .bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
 
@@ -1189,8 +1102,7 @@ public class downfallMod implements
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
-                .overrideEvent(PurificationShrine.ID)
-                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .overrideEvent(PurificationShrine.ID).eventType(EventUtils.EventType.FULL_REPLACE)
                 //.bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
 
@@ -1198,8 +1110,7 @@ public class downfallMod implements
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
-                .overrideEvent(Transmogrifier.ID)
-                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .overrideEvent(Transmogrifier.ID).eventType(EventUtils.EventType.FULL_REPLACE)
                 //.bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
 
@@ -1207,8 +1118,7 @@ public class downfallMod implements
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
-                .overrideEvent(UpgradeShrine.ID)
-                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .overrideEvent(UpgradeShrine.ID).eventType(EventUtils.EventType.FULL_REPLACE)
                 //.bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
     }
@@ -1227,38 +1137,17 @@ public class downfallMod implements
 
         BaseMod.addMonster(downfall.monsters.FaceTrader.ID, downfall.monsters.FaceTrader::new);
 
-        BaseMod.addMonster("downfall:Heads", LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[0], () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        new ChangingTotem(),
-                        new ForgetfulTotem(),
-                        new GrowingTotem(),
-                }));
+        BaseMod.addMonster("downfall:Heads", LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[0], () -> new MonsterGroup(new AbstractMonster[]{new ChangingTotem(), new ForgetfulTotem(), new GrowingTotem(),}));
 
-        BaseMod.addMonster("downfall:Augmenter", Augmenter.NAME, () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        new Augmenter()
-                }));
+        BaseMod.addMonster("downfall:Augmenter", Augmenter.NAME, () -> new MonsterGroup(new AbstractMonster[]{new Augmenter()}));
 
-        BaseMod.addMonster("downfall:WomanInBlue", LadyInBlue.NAME, () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        new LadyInBlue()
-                }));
+        BaseMod.addMonster("downfall:WomanInBlue", LadyInBlue.NAME, () -> new MonsterGroup(new AbstractMonster[]{new LadyInBlue()}));
 
-        BaseMod.addMonster("downfall:FaceTrader", downfall.monsters.FaceTrader.NAME, () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        new downfall.monsters.FaceTrader()
-                }));
+        BaseMod.addMonster("downfall:FaceTrader", downfall.monsters.FaceTrader.NAME, () -> new MonsterGroup(new AbstractMonster[]{new downfall.monsters.FaceTrader()}));
 
-        BaseMod.addMonster(LooterAlt.ID, LooterAlt.NAME, () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        new LooterAlt(0.0F, 0.0F)
-                }));
+        BaseMod.addMonster(LooterAlt.ID, LooterAlt.NAME, () -> new MonsterGroup(new AbstractMonster[]{new LooterAlt(0.0F, 0.0F)}));
 
-        BaseMod.addMonster(makeID("LooterAlt2"), LocalizeHelper.RunHistoryMonsterNames.TEXT[6], () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        new LooterAlt(-200.0F, 15.0F),
-                        new MuggerAlt(80.0F, 0.0F)
-                }));
+        BaseMod.addMonster(makeID("LooterAlt2"), LocalizeHelper.RunHistoryMonsterNames.TEXT[6], () -> new MonsterGroup(new AbstractMonster[]{new LooterAlt(-200.0F, 15.0F), new MuggerAlt(80.0F, 0.0F)}));
 
         float x1 = 200F;
         float x2 = -100F;
@@ -1267,104 +1156,67 @@ public class downfallMod implements
         float y2 = -20F;
         float y3 = 10F;
 
-        BaseMod.addMonster(makeID("Gauntlet1"), "Gauntlet", () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        //   new Ironclad(),
-                        //   new Silent(),
-                        new Defect(x1, y1),
-                        new Watcher(x2, y2),
-                        new Hermit(x3, y3),
-                }));
+        BaseMod.addMonster(makeID("Gauntlet1"), "Gauntlet", () -> new MonsterGroup(new AbstractMonster[]{
+                //   new Ironclad(),
+                //   new Silent(),
+                new Defect(x1, y1), new Watcher(x2, y2), new Hermit(x3, y3),}));
 
-        BaseMod.addMonster(makeID("Gauntlet2"), "Gauntlet", () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        //   new Ironclad(),
-                        new Silent(x1, y1),
-                        //   new Defect(),
-                        new Watcher(x2, y2),
-                        new Hermit(x3, y3),
-                }));
+        BaseMod.addMonster(makeID("Gauntlet2"), "Gauntlet", () -> new MonsterGroup(new AbstractMonster[]{
+                //   new Ironclad(),
+                new Silent(x1, y1),
+                //   new Defect(),
+                new Watcher(x2, y2), new Hermit(x3, y3),}));
 
-        BaseMod.addMonster(makeID("Gauntlet3"), "Gauntlet", () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        //    new Ironclad(),
-                        new Silent(x1, y1),
-                        new Defect(x2, y2),
-                        //   new Watcher(),
-                        new Hermit(x3, y3),
-                }));
+        BaseMod.addMonster(makeID("Gauntlet3"), "Gauntlet", () -> new MonsterGroup(new AbstractMonster[]{
+                //    new Ironclad(),
+                new Silent(x1, y1), new Defect(x2, y2),
+                //   new Watcher(),
+                new Hermit(x3, y3),}));
 
-        BaseMod.addMonster(makeID("Gauntlet4"), "Gauntlet", () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        //    new Ironclad(),
-                        new Silent(x1, y1),
-                        new Defect(x2, y2),
-                        new Watcher(x3, y3),
-                        //new Hermit(),
-                }));
+        BaseMod.addMonster(makeID("Gauntlet4"), "Gauntlet", () -> new MonsterGroup(new AbstractMonster[]{
+                //    new Ironclad(),
+                new Silent(x1, y1), new Defect(x2, y2), new Watcher(x3, y3),
+                //new Hermit(),
+        }));
 
-        BaseMod.addMonster(makeID("Gauntlet5"), "Gauntlet", () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        //    new Ironclad(),
-                        new Silent(x1, y1),
-                        new Defect(x2, y2),
-                        new Watcher(x3, y3),
-                        //new Hermit(),
-                }));
+        BaseMod.addMonster(makeID("Gauntlet5"), "Gauntlet", () -> new MonsterGroup(new AbstractMonster[]{
+                //    new Ironclad(),
+                new Silent(x1, y1), new Defect(x2, y2), new Watcher(x3, y3),
+                //new Hermit(),
+        }));
 
-        BaseMod.addMonster(makeID("Gauntlet6"), "Gauntlet", () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        new Ironclad(x1, y1),
-                        //new Silent(),
-                        //new Defect(),
-                        new Watcher(x2, y2),
-                        new Hermit(x3, y3),
-                }));
+        BaseMod.addMonster(makeID("Gauntlet6"), "Gauntlet", () -> new MonsterGroup(new AbstractMonster[]{new Ironclad(x1, y1),
+                //new Silent(),
+                //new Defect(),
+                new Watcher(x2, y2), new Hermit(x3, y3),}));
 
-        BaseMod.addMonster(makeID("Gauntlet7"), "Gauntlet", () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        new Ironclad(x1, y1),
-                        //new Silent(),
-                        new Defect(x2, y2),
-                        new Watcher(x3, y3),
-                        //new Hermit(),
-                }));
+        BaseMod.addMonster(makeID("Gauntlet7"), "Gauntlet", () -> new MonsterGroup(new AbstractMonster[]{new Ironclad(x1, y1),
+                //new Silent(),
+                new Defect(x2, y2), new Watcher(x3, y3),
+                //new Hermit(),
+        }));
 
-        BaseMod.addMonster(makeID("Gauntlet8"), "Gauntlet", () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        new Ironclad(x1, y1),
-                        //new Silent(),
-                        new Defect(x2, y2),
-                        new Watcher(x3, y3),
-                        //new Hermit(),
-                }));
+        BaseMod.addMonster(makeID("Gauntlet8"), "Gauntlet", () -> new MonsterGroup(new AbstractMonster[]{new Ironclad(x1, y1),
+                //new Silent(),
+                new Defect(x2, y2), new Watcher(x3, y3),
+                //new Hermit(),
+        }));
 
-        BaseMod.addMonster(makeID("Gauntlet9"), "Gauntlet", () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        new Ironclad(x1, y1),
-                        new Silent(x2, y2),
-                        //new Defect(),
-                        //new Watcher(),
-                        new Hermit(x3, y3),
-                }));
+        BaseMod.addMonster(makeID("Gauntlet9"), "Gauntlet", () -> new MonsterGroup(new AbstractMonster[]{new Ironclad(x1, y1), new Silent(x2, y2),
+                //new Defect(),
+                //new Watcher(),
+                new Hermit(x3, y3),}));
 
-        BaseMod.addMonster(makeID("Gauntlet10"), "Gauntlet", () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        new Ironclad(x1, y1),
-                        new Silent(x2, y2),
-                        //new Defect(),
-                        new Watcher(x3, y3),
-                        //new Hermit(),
-                }));
+        BaseMod.addMonster(makeID("Gauntlet10"), "Gauntlet", () -> new MonsterGroup(new AbstractMonster[]{new Ironclad(x1, y1), new Silent(x2, y2),
+                //new Defect(),
+                new Watcher(x3, y3),
+                //new Hermit(),
+        }));
 
-        BaseMod.addMonster(makeID("Gauntlet11"), "Gauntlet", () -> new MonsterGroup(
-                new AbstractMonster[]{
-                        new Ironclad(x1, y1),
-                        new Silent(x2, y2),
-                        new Defect(x3, y3),
-                        //new Watcher(),
-                        //new Hermit(),
-                }));
+        BaseMod.addMonster(makeID("Gauntlet11"), "Gauntlet", () -> new MonsterGroup(new AbstractMonster[]{new Ironclad(x1, y1), new Silent(x2, y2), new Defect(x3, y3),
+                //new Watcher(),
+                //new Hermit(),
+        }));
 
         BaseMod.addMonster(CharBossIronclad.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
         BaseMod.addMonster(CharBossSilent.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
@@ -1479,10 +1331,7 @@ public class downfallMod implements
             AddBustKeyButtonPatches.KeyFields.bustedRuby.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(AbstractDungeon.player, false);
 
-            if ((ModHelper.enabledMods.size() > 0) &&
-                    ((ModHelper.isModEnabled("The Guardian Cards"))
-                            || (ModHelper.isModEnabled("The Slime Boss Cards"))
-                    )) {
+            if ((ModHelper.enabledMods.size() > 0) && ((ModHelper.isModEnabled("The Guardian Cards")) || (ModHelper.isModEnabled("The Slime Boss Cards")))) {
                 AbstractDungeon.player.increaseMaxOrbSlots(1, false);
             }
         }
@@ -1522,13 +1371,7 @@ public class downfallMod implements
 
 
     public static boolean isDownfallCharacter(AbstractPlayer p) {
-        if (p instanceof SlimeboundCharacter ||
-                p instanceof TheHexaghost ||
-                p instanceof GuardianCharacter ||
-                p instanceof TheSnecko ||
-                p instanceof ChampChar ||
-                p instanceof AutomatonChar ||
-                p instanceof GremlinCharacter || p instanceof hermit.characters.hermit || p instanceof CollectorChar) {
+        if (p instanceof SlimeboundCharacter || p instanceof TheHexaghost || p instanceof GuardianCharacter || p instanceof TheSnecko || p instanceof ChampChar || p instanceof AutomatonChar || p instanceof GremlinCharacter || p instanceof hermit.characters.hermit || p instanceof CollectorChar) {
             return true;
         }
         return false;
@@ -1577,8 +1420,7 @@ public class downfallMod implements
             RelicLibrary.getRelic(ChampStancesModRelic.ID).makeCopy().instantObtain();
 
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-                if (!c.hasTag(ChampMod.TECHNIQUE))
-                    CardModifierManager.addModifier(c, new TechniqueMod());
+                if (!c.hasTag(ChampMod.TECHNIQUE)) CardModifierManager.addModifier(c, new TechniqueMod());
             }
         }
 
@@ -1675,8 +1517,7 @@ public class downfallMod implements
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
             UnlockTracker.markCardAsSeen(c.cardID);
 
-        if ((evilWithinSingleton != null && evilWithinSingleton.selected)
-                || (CardCrawlGame.trial == null && DailyModeEvilPatch.todaysRunIsEvil)) {
+        if ((evilWithinSingleton != null && evilWithinSingleton.selected) || (CardCrawlGame.trial == null && DailyModeEvilPatch.todaysRunIsEvil)) {
             evilMode = true;
         }
 
@@ -1730,7 +1571,7 @@ public class downfallMod implements
     public void receivePostDraw(AbstractCard abstractCard) {
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) || ModHelper.isModEnabled(Hexed.ID)) {
             if (!abstractCard.isEthereal) {
-                CardModifierManager.addModifier(abstractCard, new EtherealMod());
+                CardModifierManager.addModifier(abstractCard, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
             }
         }
     }
@@ -1744,17 +1585,7 @@ public class downfallMod implements
 
 
     public enum otherPackagePaths {
-        PACKAGE_SLIME,
-        PACKAGE_GUARDIAN,
-        PACKAGE_HEXAGHOST,
-        PACKAGE_SNECKO,
-        PACKAGE_EXPANSION,
-        PACKAGE_CHAMP,
-        PACKAGE_AUTOMATON,
-        PACKAGE_GREMLIN,
-        PACKAGE_HERMIT,
-        PACKAGE_COLLECTOR,
-        PACKAGE_DOWNFALL;
+        PACKAGE_SLIME, PACKAGE_GUARDIAN, PACKAGE_HEXAGHOST, PACKAGE_SNECKO, PACKAGE_EXPANSION, PACKAGE_CHAMP, PACKAGE_AUTOMATON, PACKAGE_GREMLIN, PACKAGE_HERMIT, PACKAGE_COLLECTOR, PACKAGE_DOWNFALL;
 
         otherPackagePaths() {
         }
@@ -1822,9 +1653,7 @@ public class downfallMod implements
     private static void registerUnlockCardBundle(AbstractPlayer.PlayerClass player, int index, String card1, String card2, String card3) {
         CustomUnlockBundle currentBundle;
 
-        currentBundle = new CustomUnlockBundle(
-                card1, card2, card3
-        );
+        currentBundle = new CustomUnlockBundle(card1, card2, card3);
 
         UnlockTracker.addCard(card1);
         UnlockTracker.addCard(card2);
@@ -1845,9 +1674,7 @@ public class downfallMod implements
     private static void registerUnlockRelicBundle(AbstractPlayer.PlayerClass player, int index, String relic1, String relic2, String relic3) {
         CustomUnlockBundle currentBundle;
 
-        currentBundle = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                relic1, relic2, relic3
-        );
+        currentBundle = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC, relic1, relic2, relic3);
 
         UnlockTracker.addRelic(relic1);
         UnlockTracker.addRelic(relic2);
@@ -1880,13 +1707,7 @@ public class downfallMod implements
     }
 
 
-    public static void registerUnlockSuite(
-            String bundle1card1, String bundle1card2, String bundle1card3,
-            String bundle2card1, String bundle2card2, String bundle2card3,
-            String bundle3card1, String bundle3card2, String bundle3card3,
-            String bundle4relic1, String bundle4relic2, String bundle4relic3,
-            String bundle5relic1, String bundle5relic2, String bundle5relic3,
-            AbstractPlayer.PlayerClass player) {
+    public static void registerUnlockSuite(String bundle1card1, String bundle1card2, String bundle1card3, String bundle2card1, String bundle2card2, String bundle2card3, String bundle3card1, String bundle3card2, String bundle3card3, String bundle4relic1, String bundle4relic2, String bundle4relic3, String bundle5relic1, String bundle5relic2, String bundle5relic3, AbstractPlayer.PlayerClass player) {
 
         registerUnlockCardBundle(player, 0, bundle1card1, bundle1card2, bundle1card3);
         registerUnlockCardBundle(player, 1, bundle2card1, bundle2card2, bundle2card3);
@@ -1895,13 +1716,7 @@ public class downfallMod implements
         registerUnlockRelicBundle(player, 4, bundle5relic1, bundle5relic2, bundle5relic3);
     }
 
-    public static void registerUnlockSuiteAlternating(
-            String bundle1card1, String bundle1card2, String bundle1card3,
-            String bundle2relic1, String bundle2relic2, String bundle2relic3,
-            String bundle3card1, String bundle3card2, String bundle3card3,
-            String bundle4relic1, String bundle4relic2, String bundle4relic3,
-            String bundle5card1, String bundle5card2, String bundle5card3,
-            AbstractPlayer.PlayerClass player) {
+    public static void registerUnlockSuiteAlternating(String bundle1card1, String bundle1card2, String bundle1card3, String bundle2relic1, String bundle2relic2, String bundle2relic3, String bundle3card1, String bundle3card2, String bundle3card3, String bundle4relic1, String bundle4relic2, String bundle4relic3, String bundle5card1, String bundle5card2, String bundle5card3, AbstractPlayer.PlayerClass player) {
 
         registerUnlockCardBundle(player, 0, bundle1card1, bundle1card2, bundle1card3);
         registerUnlockRelicBundle(player, 1, bundle2relic1, bundle2relic2, bundle2relic3);
@@ -1916,15 +1731,10 @@ public class downfallMod implements
     }
 
     public static void removeAnyRelicFromPools(String relicID) {
-        if (AbstractDungeon.shopRelicPool.contains(relicID))
-            AbstractDungeon.shopRelicPool.remove(relicID);
-        if (AbstractDungeon.rareRelicPool.contains(relicID))
-            AbstractDungeon.rareRelicPool.remove(relicID);
-        if (AbstractDungeon.uncommonRelicPool.contains(relicID))
-            AbstractDungeon.uncommonRelicPool.remove(relicID);
-        if (AbstractDungeon.bossRelicPool.contains(relicID))
-            AbstractDungeon.bossRelicPool.remove(relicID);
-        if (AbstractDungeon.commonRelicPool.contains(relicID))
-            AbstractDungeon.commonRelicPool.remove(relicID);
+        if (AbstractDungeon.shopRelicPool.contains(relicID)) AbstractDungeon.shopRelicPool.remove(relicID);
+        if (AbstractDungeon.rareRelicPool.contains(relicID)) AbstractDungeon.rareRelicPool.remove(relicID);
+        if (AbstractDungeon.uncommonRelicPool.contains(relicID)) AbstractDungeon.uncommonRelicPool.remove(relicID);
+        if (AbstractDungeon.bossRelicPool.contains(relicID)) AbstractDungeon.bossRelicPool.remove(relicID);
+        if (AbstractDungeon.commonRelicPool.contains(relicID)) AbstractDungeon.commonRelicPool.remove(relicID);
     }
 }

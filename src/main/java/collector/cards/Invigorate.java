@@ -28,7 +28,7 @@ public class Invigorate extends AbstractCollectorCard {
             this.addToBot(new VFXAction(p, new FlameBarrierEffect(p.hb.cX, p.hb.cY), 0.5F));
         }
         applyToSelf(new VigorPower(p, magicNumber));
-        applyToSelf(new NextTurnVigorPower(4));
+        applyToSelf(new NextTurnVigorPower(magicNumber));
     }
 
     public void upp() {

@@ -148,8 +148,8 @@
   },
   "collector:FlameLash": {
     "NAME": "Flame Lash",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the *Pyred card's damage to this.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Add the *Pyred card's damage plus !M! to this."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage, then add the *Pyred card's damage to this.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage, then add the *Pyred card's damage plus !M! to this."
   },
   "collector:FleetingEmbers": {
     "NAME": "Fleeting Embers",
@@ -223,7 +223,7 @@
   },
   "collector:Invigorate": {
     "NAME": "Invigorate",
-    "DESCRIPTION": "collector:Pyre. NL Gain !M! Vigor. NL Next turn, gain 4 Vigor."
+    "DESCRIPTION": "collector:Pyre. NL Gain !M! Vigor. NL Next turn, gain !M! Vigor."
   },
   "collector:IronbarkKindling": {
     "NAME": "Ironbark Kindling",
@@ -298,7 +298,7 @@
   },
   "collector:ReceiveTribute": {
     "NAME": "Receive Tribute",
-    "DESCRIPTION": "collector:Pyre. NL Choose 1 of !M! Boss cards and add it into your hand. It gains Retain. Exhaust.",
+    "DESCRIPTION": "collector:Pyre. NL Choose 1 of !M! Boss cards to gain. It gains Retain. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to add into your hand."
     ]
@@ -681,5 +681,9 @@
   "collector:ShootingStar": {
     "NAME": "Shooting Star",
     "DESCRIPTION": "Ethereal. NL The first time you collector:Pyre a card each turn, gain a copy of it. NL It costs 0 until played."
+  },
+  "collector:CollectorCard": {
+    "NAME": "Ouroboros",
+    "DESCRIPTION": "collector:Pyre. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !clm2! Temporary_HP."
   }
 }

@@ -25,8 +25,6 @@ public class RanwidCard extends AbstractCollectibleCard {
                 AbstractDungeon.getCurrRoom().addPotionToRewards();
             }
         });
-
-        //TODO: Test to make sure this works, rewards may be cleared after combat.
     }
 
     public void upp() {

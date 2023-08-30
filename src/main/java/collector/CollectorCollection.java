@@ -4,6 +4,7 @@ import basemod.helpers.CardModifierManager;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.monsters.*;
@@ -19,10 +20,7 @@ import com.megacrit.cardcrawl.cards.blue.CoreSurge;
 import com.megacrit.cardcrawl.cards.blue.Seek;
 import com.megacrit.cardcrawl.cards.blue.WhiteNoise;
 import com.megacrit.cardcrawl.cards.colorless.TheBomb;
-import com.megacrit.cardcrawl.cards.green.AfterImage;
-import com.megacrit.cardcrawl.cards.green.CorpseExplosion;
-import com.megacrit.cardcrawl.cards.green.Footwork;
-import com.megacrit.cardcrawl.cards.green.StormOfSteel;
+import com.megacrit.cardcrawl.cards.green.*;
 import com.megacrit.cardcrawl.cards.purple.ConjureBlade;
 import com.megacrit.cardcrawl.cards.purple.Omniscience;
 import com.megacrit.cardcrawl.cards.purple.Ragnarok;
@@ -125,11 +123,13 @@ public class CollectorCollection {
         collectionPool.put(GrowingTotem.ID, LivingWallCard.ID);
         collectionPool.put(Augmenter.ID, AugmenterCard.ID);
         collectionPool.put(FleeingMerchant.ID, MerchantCard.ID);
+        collectionPool.put(CharBossMerchant.ID, MerchantCard.ID);
         collectionPool.put(Ironclad.ID, Inflame.ID);
         collectionPool.put(Silent.ID, Footwork.ID);
         collectionPool.put(Defect.ID, WhiteNoise.ID);
         collectionPool.put(Watcher.ID, TalkToTheHand.ID);
         collectionPool.put(Hermit.ID, ShadowCloak.ID);
+        collectionPool.put(MirrorImageSilent.ID, Doppelganger.ID);
 
         collectionPool.put(Fortification.ID, SpireShieldCard.ID);
         collectionPool.put(LadyInBlue.ID, WomanInBlueCard.ID);
@@ -137,6 +137,7 @@ public class CollectorCollection {
         collectionPool.put(SpireSpear.ID, SpireSpearCard.ID);
         collectionPool.put(NeowBossFinal.ID, FinalBossCard.ID);
         collectionPool.put(CorruptHeart.ID, FinalBossCard.ID);
+        collectionPool.put(TheCollector.ID, CollectorCard.ID);
     }
 
     public static AbstractCard getCollectedCard(AbstractMonster m) {
@@ -227,7 +228,7 @@ public class CollectorCollection {
         for (AbstractCard q : collection.group) {
             combatCollection.addToTop(q.makeSameInstanceOf());
         }
-        combatCollection.shuffle(AbstractDungeon.cardRandomRng);
+        combatCollection.shuffle(AbstractDungeon.shuffleRng);
         ArrayList<AbstractCard> toTopdeck = new ArrayList<>();
         for (AbstractCard q : combatCollection.group) {
             if (CollectorBottleField.inCollectionBottle.get(q)) {

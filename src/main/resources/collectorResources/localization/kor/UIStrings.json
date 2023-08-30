@@ -1,0 +1,110 @@
+{
+  "collector:CollectionReward": {
+    "TEXT": [
+      "수집할 카드를 선택하십시오."
+    ]
+  },
+  "collector:CollectibleCardTab": {
+    "TEXT": [
+      "수집 목록"
+    ]
+  },
+  "collector:CollectionScreen": {
+    "TEXT": [
+      "숨김",
+      "이곳에 있는 모든 수집품 카드를 가지고 전투를 시작합니다."
+    ]
+  },
+  "collector:CollectionUITopPanel": {
+    "TEXT": [
+      "수집품 덱",
+      "#y수집품 카드를 확인합니다.",
+      "전투 시작 시 이 카드들은 별개의 수집품 카드 더미로 취급됩니다."
+    ]
+  },
+  "collector:CombatCollectionPileButton": {
+    "TEXT": [
+      "수집품 더미",
+      "이번 전투 동안 여기에서 뽑지 않은 #y수집품 카드를 보여줍니다. NL 매 턴 시작 시 여기서 카드를 #b1 장 뽑습니다. NL NL 여기있는 카드를 보려면 클릭하십시오. (섞여있음).",
+      "수집된 카드가 없다!"
+    ]
+  },
+  "collector:EssenceCount": {
+    "TEXT": [
+      "정수",
+      "정수를 소모해 수집품 카드를 얻을 수 있습니다. NL 일반 전투 후 #b1, 엘리트 전투 후 #b2, 보스 전투 후 #b3 을 획득할 수 있습니다. NL NL 정수를 #b",
+      " 가지고 있습니다."
+    ]
+  },
+  "collector:CombatCollectionViewScreen": {
+    "TEXT": [
+      "자신의 턴이 시작될 때 이 곳에서 카드를 가져옵니다."
+    ]
+  },
+  "collector:PyreInfo": {
+    "TEXT": [
+      "장작",
+      "이 카드를 사용하려면 추가로 카드를 1장 소멸시켜야합니다."
+    ]
+  },
+  "collector:CollectedCardMod": {
+    "TEXT": [
+      "collector:수집품. NL ",
+      ""
+    ]
+  },
+  "collector:CollectibleCardReward": {
+    "TEXT": [
+      "수집: ",
+      "이것을 얻을 수 있습니다"
+    ]
+  },
+  "collector:HoardedMod": {
+    "TEXT": [
+      "사용불가. 보존. NL ",
+      "사용불가. NL ",
+      "보존. NL "
+    ]
+  },
+  "collector:SecondEnergyOrb": {
+    "TEXT": [
+      "비축",
+      "턴이 지나가도 유지되는 특별한 에너지입니다."
+    ]
+  },
+  "collector:PyreCostSpendScreen": {
+    "TEXT": [
+      "장작으로 소멸시킬 카드를 선택하십시오."
+    ]
+  },
+  "collector:PyreModText": {
+    "TEXT": [
+      "소멸 시킬 카드가 없다!"
+    ]
+  },
+  "collector:StashAwayCampfireOption": {
+    "TEXT": [
+      "제거",
+      "수집품 카드를 제거합니다. 영혼을 ",
+      " 얻습니다.",
+      "수집품 카드가 필요합니다.",
+      "제거할 수집품 카드를 선택하십시오."
+    ]
+  },
+  "collector:BonusEventOption": {
+    "TEXT": [
+      "[가져간다]"
+    ]
+  },
+  "collector:EssenceReward": {
+    "TEXT": [
+      "",
+      " 정수"
+    ]
+  },
+  "collector:CharacterOption": {
+    "TEXT": [
+      "정수: "
+    ]
+  }
+}
