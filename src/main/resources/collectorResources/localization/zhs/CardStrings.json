@@ -680,7 +680,7 @@
     "DESCRIPTION": "这名敌人没有灵魂。 NL 获得 !M! 点 力量 与 敏捷 。"
   },
   "collector:CollectorCard": {
-    "NAME": "Ouroboros",
-    "DESCRIPTION": "collector:Pyre. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !clm2! Temporary_HP."
+    "NAME": "衔尾蛇",
+    "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL 获得 !clm2! 层 临时生命 。"
   }
 }
