@@ -1,4 +1,4 @@
-{
+!{
   "Gremlin:AggressiveDefense": {
     "NAME": "Агрессивная оборона",
     "DESCRIPTION": "Наносит !D! урона. NL Враг теряет !M! ОЗ каждый раз, когда вы получаете Защиту в этом ходу."
@@ -452,8 +452,7 @@
 
   "Gremlin:Tadah": {
     "NAME": "Та-да!",
-    "DESCRIPTION": "Добавляет в руку gremlin:Эхо случ. Навыка. NL gremlin:Смена на gremlin:Гремлина-мага.",
-    "UPGRADE_DESCRIPTION": "Добавляет в руку gremlin:Эхо случ. Улучшенного Навыка. Он стоит на 1 меньше. NL gremlin:Смена на gremlin:Гремлина-мага."
+    "DESCRIPTION": "Добавляет в руку gremlin:Эхо случ. Навыка. NL Он стоит 0 пока не разыгран. NL gremlin:Смена на gremlin:Гремлина-мага.",
   },
 
   "Gremlin:TagTeam": {

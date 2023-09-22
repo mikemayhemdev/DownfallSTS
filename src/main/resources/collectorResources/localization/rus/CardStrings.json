@@ -167,7 +167,7 @@
     "DESCRIPTION": "collector:Пиромант. NL Даёт !M! collector:Резерва в след. ходу."
   },
   "collector:Goodbye": {
-    "NAME": "Goodbye", //unfinished
+    "NAME": "Прощай", //unfinished
     "DESCRIPTION": "Удваивает наложенную на врага collector:Порчу. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Утраивает наложенную на врага collector:Порчу. NL Сжигается."
   },
@@ -337,7 +337,7 @@
   },
   "collector:ShootingStar": {
     "NAME": "Падающая звезда",
-    "DESCRIPTION": "Эфирная. NL The first time you collector:Пиромант a card each turn, gain a copy of it. NL It costs 0 until played."
+    "DESCRIPTION": "Эфирная. NL Добавляет в руку копию первой в ходу сожжённой collector:Пиромантией карты. NL Она стоит 0 пока не разыграна."
   },
   "collector:SomberShield": {
     "NAME": "Щит мрака",
@@ -349,8 +349,8 @@
   },
   "collector:Soulforge": {
     "NAME": "Soulforge",
-    "DESCRIPTION": "Вы берёте !M! карту из стопки Коллекции, она теряет collector:Megathereal. NL Сжигается.", //unfinished
-    "UPGRADE_DESCRIPTION": "Вы берёте !M! карты из стопки Коллекции, они теряют collector:Megathereal. NL Сжигается." //unfinished
+    "DESCRIPTION": "Вы берёте !M! карту из стопки Коллекции, она теряет collector:Мегаэфирность. NL Сжигается.", //unfinished
+    "UPGRADE_DESCRIPTION": "Вы берёте !M! карты из стопки Коллекции, они теряют collector:Мегаэфирность. NL Сжигается." //unfinished
   },
   "collector:Spark": {
     "NAME": "Искра",
@@ -385,9 +385,9 @@
     ]
   },
   "collector:ThornWhip": {
-    "NAME": "Thorn Whip",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, repeat this twice.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL If the enemy is collector:Afflicted, repeat this twice."
+    "NAME": "Колючий хлыст",
+    "DESCRIPTION": "Наносит !D! урона. NL Наносит урон ещё два раза, если враг collector:Сокрушён.",
+    "UPGRADE_DESCRIPTION": "Оставляется. NL Наносит !D! урона. NL Наносит урон ещё два раза, если враг collector:Сокрушён."
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer", //unfinished
@@ -560,8 +560,8 @@
   },
   "collector:NlothCard": {
     "NAME": "Н'лот",
-    "DESCRIPTION": "collector:Пиромант. NL Add a random Rare card into your hand. NL It costs 1 less.",
-    "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Add a random Rare card into your hand. NL It costs 0."
+    "DESCRIPTION": "collector:Пиромант. NL Добавляет в руку случ. редкую карту. NL Она стоит на 1 меньше.",
+    "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Добавляет в руку случ. редкую карту. NL Она стоит 0."
   },
   "collector:NemesisCard": {
     "NAME": "Немезис",
@@ -684,7 +684,7 @@
     "DESCRIPTION": "Эта сущность ещё не является частью Коллекции! NL Даёт !M! Силы и Ловкости." //unfinished
   },
   "collector:CollectorCard": {
-    "NAME": "Ouroboros",
-    "DESCRIPTION": "collector:Pyre. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !clm2! Temporary_HP."
+    "NAME": "Уроборос",
+    "DESCRIPTION": "collector:Пиромант. NL Накладывает !M! Слабости. NL Накладывает !M! Уязвимости. NL Даёт !clm2! Временных_ОЗ."
   }
 }
