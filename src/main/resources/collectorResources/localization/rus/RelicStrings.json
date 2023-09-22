@@ -34,7 +34,7 @@
     "FLAVOR": "Нефрит - символ честности.",
     "DESCRIPTIONS": [
       "Даёт #b",
-      " Душ, когда враг с #ycollector:Порчей погибает (кроме прислужников)." //unfinished
+      " Душ, когда враг с #ycollector:Порчей умирает." //unfinished
     ]
   },
   "collector:SoullitLamp": {
