@@ -50,7 +50,9 @@
       "這名角色需要用機械人偶打過一局遊戲才能解鎖。",
       "這名角色需要用第六名惡棍打過一局遊戲才能解鎖。",
       "這名角色需要用地精小隊打過一局遊戲才能解鎖。",
-      " （進入第4幕無法解鎖）"
+      " （進入第4幕無法解鎖）",
+      "This character is unlocked by completing a run with the 7th Villain character.",
+      "This character is unlocked by completing a run with Snecko."
     ]
   },
   "downfall:HeartMerchant": {
