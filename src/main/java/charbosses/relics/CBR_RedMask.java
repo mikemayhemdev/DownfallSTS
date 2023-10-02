@@ -23,7 +23,7 @@ public class CBR_RedMask extends AbstractCharbossRelic {
     public void atBattleStart() {
         this.flash();
         this.addToBot(new RelicAboveCreatureAction(this.owner, this));
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, this.owner, new WeakPower(AbstractDungeon.player, 1, true), 1, true));
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, this.owner, new WeakPower(AbstractDungeon.player, 1, false), 1, true));
 
 
     }
