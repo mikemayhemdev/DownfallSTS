@@ -7,39 +7,42 @@
       " NL Also for this turn: ",
       ", ",
       ".",
-      "#yEcho",
-      "#yUnplayable",
-      "#yEthereal",
-      "#yRetain",
-      "#yExhaust",
-      "Echo: "
+      "#y",
+      "Эхо",
+      "Неиграбельная",
+      "Эфирная",
+      "Оставляется",
+      "Сжигается",
+      " ",
+      "NL ",
+      "Эхо: "
     ]
   },
   "downfall:EtherealMod": {
     "TEXT": [
-      "Ethereal. NL "
+      "Эфирная. NL "
     ]
   },
   "downfall:ExhaustMod": {
     "TEXT": [
-      " NL Exhaust."
+      " NL Сжигается."
     ]
   },
   "downfall:InnateMod": {
     "TEXT": [
-      "Innate. NL "
+      "Начальная. NL "
     ]
   },
   "downfall:RetainCardMod": {
     "TEXT": [
-      "Retain. NL "
+      "Оставляется. NL "
     ]
   },
   "downfall:UnplayableMod": {
     "TEXT": [
-      "Unplayable. NL ",
-      "This card can't be played.",
-      "This card can't be played this turn."
+      "Немграбельная. NL ",
+      "Я не могу разыграть эту карту.",
+      "Я не могу разыграть эту карту в этом ходу."
     ]
   },
   "expansioncontent:CannotUseBossCardMessage": {
