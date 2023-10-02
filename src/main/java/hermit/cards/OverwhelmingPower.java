@@ -59,8 +59,8 @@ public class OverwhelmingPower extends AbstractDynamicCard {
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.RED, true));
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new OverwhelmingPowerPower(p, p, magicNumber), magicNumber));
-        this.addToBot(new GainEnergyAction(defaultSecondMagicNumber));
-        this.addToBot(new DrawCardAction(3));
+        this.addToBot(new GainEnergyAction(3));
+        this.addToBot(new DrawCardAction(defaultSecondMagicNumber));
     }
 
 

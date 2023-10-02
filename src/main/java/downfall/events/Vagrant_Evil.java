@@ -83,16 +83,19 @@ public class Vagrant_Evil extends AbstractImageEvent {
                         this.screenNum = 1;
                         return;// 73
                     case 2:
-                        this.imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
-                        AbstractCard card2 = new VagrantCard();
-                        CardModifierManager.addModifier(card2, new CollectedCardMod());
-                        CollectorCollection.collection.addToTop(card2);
+                        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
+                            this.imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
+                            this.imageEventText.clearAllDialogs();
+                            this.imageEventText.setDialogOption(OPTIONS[3]);
+                            AbstractCard card2 = new VagrantCard();
+                            CardModifierManager.addModifier(card2, new CollectedCardMod());
+                            CollectorCollection.collection.addToTop(card2);
 
-                        logMetric(ID, "Take", null, null, null, null, null, null, null,
-                                0, 0, 0, 0, 0, 0);
-                        this.screenNum = 1;
+                            logMetric(ID, "Take", null, null, null, null, null, null, null,
+                                    0, 0, 0, 0, 0, 0);
+                            this.screenNum = 1;
+                            break;
+                        }
                     default:
                         logMetricIgnored(ID);
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);// 75

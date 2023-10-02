@@ -34,7 +34,8 @@ public class BlankCard extends CustomRelic {
         } // Get one of the cards in the unknown pool instead of the Unknown card which is already free to play.
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        card2.freeToPlayOnce = true;
+        if (card2.cost > 0)
+            card2.freeToPlayOnce = true;
         CardModifierManager.addModifier(card2, new ExhaustMod());
         CardModifierManager.addModifier(card2, new EtherealMod());
         addToBot(new MakeTempCardInHandAction(card2));
