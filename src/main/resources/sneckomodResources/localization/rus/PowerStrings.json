@@ -57,7 +57,7 @@
   "sneckomod:UnlimitedRollsPower": {
     "NAME": "Бесконечные броски",
     "DESCRIPTIONS": [
-      "Добавляет в руку #yЭхо #yПереброса #yдуши+, в начале каждого вашего хода."
+      "Добавляет в руку #yПереброс #yдуши+ со сжигаемостью, в начале каждого вашего хода." //unfinished
     ]
   },
   "sneckomod:Transmogrifying": {

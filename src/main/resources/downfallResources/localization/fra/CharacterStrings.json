@@ -50,7 +50,9 @@
       "Ce personnage se déverouille en complétant une run avec l'Automate.",
       "Ce personnage se déverouille en complétant une run avec le 6ème vilain.",
       "Ce personnage se déverouille en complétant une run avec les Diablotins.",
-      " (Les victoires de l'Acte 4 ne comptent pas)"
+      " (Les victoires de l'Acte 4 ne comptent pas)",
+      "This character is unlocked by completing a run with the 7th Villain character.",
+      "This character is unlocked by completing a run with Snecko."
     ]
   },
   "downfall:HeartMerchant": {

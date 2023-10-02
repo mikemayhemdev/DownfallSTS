@@ -162,8 +162,8 @@
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "无限随机",
-    "DESCRIPTION": "回合开始时， NL 获得 *灵 *魂 *随 *机 的 gremlin:回响 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时， NL 获得 *灵 *魂 *随 *机 的 gremlin:回响 。"
+    "DESCRIPTION": "回合开始时， NL 获得一张 *灵 *魂 *随 *机 ， NL 其附带 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时， NL 获得一张 *灵 *魂 *随 *机 ， NL 其附带 消耗 。"
   },
   "sneckomod:MasterEye": {
     "NAME": "主宰之眼",

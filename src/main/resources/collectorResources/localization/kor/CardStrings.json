@@ -124,7 +124,7 @@
   },
   "collector:Empower": {
     "NAME": "권능",
-    "DESCRIPTION": "내 다음 !M! 턴 시작 시 힘을 X 얻습니다."
+    "DESCRIPTION": "다음 !M! 턴 동안 내 턴 시작 시 힘을 X 얻습니다."
   },
   "collector:Extricate": {
     "NAME": "해방",
@@ -135,7 +135,7 @@
     "DESCRIPTION": "카드를 소멸시킬 때마다 무작위 적들의 체력을 !M! 잃게합니다."
   },
   "collector:FiendFire": {
-    "NAME": "방화광",
+    "NAME": "지옥불",
     "DESCRIPTION": "카드를 전부 소멸시킵니다. NL 그 수만큼 피해를 !D! 줍니다. NL 소멸."
   },
   "collector:Finalize": {
@@ -399,7 +399,7 @@
   },
   "collector:Wildfire": {
     "NAME": "들불",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 보유한 효과의 종류 하나당 피해를 줍니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 보유한 효과의 종류 하나당 피해를 !D! 줍니다."
   },
   "collector:YouAreMine": {
     "NAME": "넌 나의 것이다!",
@@ -456,7 +456,7 @@
   },
   "collector:CultistCard": {
     "NAME": "광신자",
-    "DESCRIPTION": "collector:장작. NL 내 다음 3턴 시작 시 힘을 1 얻습니다."
+    "DESCRIPTION": "collector:장작. NL 다음 3턴 동안 내 턴 시작 시 힘을 1 얻습니다."
   },
   "collector:DaggerCard": {
     "NAME": "단검",
@@ -683,7 +683,7 @@
     "DESCRIPTION": "휘발성. NL 매 턴 처음 collector:장작으로 카드 소멸 시 그 카드를 복사해 얻습니다. NL 사용하기 전까지 그 카드의 비용은 0이 됩니다."
   },
   "collector:CollectorCard": {
-    "NAME": "Ouroboros",
-    "DESCRIPTION": "collector:Pyre. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !clm2! Temporary_HP."
+    "NAME": "우로보로스",
+    "DESCRIPTION": "collector:장작. NL 약화를 !M! 부여합니다. NL 취약을 !M! 부여합니다. NL expansioncontent:임시 *체력을 !clm2! 얻습니다."
   }
 }

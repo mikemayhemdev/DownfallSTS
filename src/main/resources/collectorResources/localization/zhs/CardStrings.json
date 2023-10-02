@@ -121,7 +121,7 @@
   },
   "collector:Empower": {
     "NAME": "邪力",
-    "DESCRIPTION": "接下来 !M! 个回合， NL 获得X点 力量 。"
+    "DESCRIPTION": "下 !M! 个回合开始时， NL 获得X点 力量 。"
   },
   "collector:Extricate": {
     "NAME": "解脱",
@@ -141,11 +141,11 @@
   },
   "collector:FingerOfDeath": {
     "NAME": "死亡恶指",
-    "DESCRIPTION": "只能使用 collector:储能 打出。 NL 给予 !M! 层 collector:魂劫 。"
+    "DESCRIPTION": "只能用 collector:储能 打出。 NL 给予 !M! 层 collector:魂劫 。"
   },
   "collector:FlameLash": {
     "NAME": "焰鞭",
-    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 本牌附加所葬牌的伤害。",
+    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 附加所葬牌的伤害于此。",
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 本场战斗伤害加 !M! ， NL 再加所葬牌的伤害。"
   },
   "collector:FleetingEmbers": {
@@ -216,7 +216,7 @@
   },
   "collector:Invigorate": {
     "NAME": "精神焕发",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力 。 NL 下回合获得 4 层 活力 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力 。 NL 下回合获得 !M! 层 活力 。"
   },
   "collector:IronbarkKindling": {
     "NAME": "铁皮柴",
@@ -476,7 +476,7 @@
   },
   "collector:FinalBossCard": {
     "NAME": "终局",
-    "DESCRIPTION": "移除目标的坚不可摧， NL 并将其击晕。 NL 消耗 。"
+    "DESCRIPTION": "移除目标的坚不可摧， NL 并将其 hermit:击晕 。 NL 消耗 。"
   },
   "collector:FaceTraderCard": {
     "NAME": "换脸商",
@@ -680,7 +680,7 @@
     "DESCRIPTION": "这名敌人没有灵魂。 NL 获得 !M! 点 力量 与 敏捷 。"
   },
   "collector:CollectorCard": {
-    "NAME": "Ouroboros",
-    "DESCRIPTION": "collector:Pyre. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !clm2! Temporary_HP."
+    "NAME": "衔尾蛇",
+    "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL 获得 !clm2! 层 临时生命 。"
   }
 }

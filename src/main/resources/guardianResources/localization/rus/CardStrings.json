@@ -66,7 +66,8 @@
   "Guardian:GuardianWhirl": {
     "NAME": "Вихрь",
     "DESCRIPTION": "{@@}Требует не менее 20 Защиты. NL Наносит !D! урона ВСЕМ врагам !M! раз{!M!|&4=а|&5=}.",
-	"EXTENDED_DESCRIPTION": [ "Требуется больше Защиты."
+	"EXTENDED_DESCRIPTION": [ 
+	  "Требуется больше Защиты."
     ]
   },
   "Guardian:VentSteam": {

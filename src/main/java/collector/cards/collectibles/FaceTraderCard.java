@@ -1,10 +1,10 @@
 package collector.cards.collectibles;
 
-import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.cardmods.PropertiesMod;
 import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
@@ -22,7 +22,8 @@ public class FaceTraderCard extends AbstractCollectibleCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
             AbstractCard q = SneckoMod.getRandomAnyColorCard();
-            CardModifierManager.addModifier(q, new EtherealMod());
+            if (!q.isEthereal)
+                CardModifierManager.addModifier(q, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
             makeInHand(q);
         }
     }

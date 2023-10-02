@@ -28,6 +28,11 @@ public class JadeRing extends CustomRelic {
     }
 
     @Override
+    public boolean canSpawn() {
+        return !(AbstractDungeon.getCurrRoom() instanceof com.megacrit.cardcrawl.rooms.ShopRoom);
+    }
+
+    @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0] + EXTRA_SOULS + DESCRIPTIONS[1];
     }

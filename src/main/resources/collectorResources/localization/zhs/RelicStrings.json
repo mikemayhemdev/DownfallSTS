@@ -16,14 +16,14 @@
   },
   "collector:HolidayCoal": {
     "NAME": "角魔煤块",
-    "FLAVOR": "\"Intriguing! But why only specific chimneys?\" - Ranwid",
+    "FLAVOR": "兰伟德：“真有意思！但为什么只有某些烟囱才有呢？”",
     "DESCRIPTIONS": [
       "从空的 #y收藏堆 抽牌时，抽出一张 #y幸运烛芯 。"
     ]
   },
   "collector:BagOfTricks": {
     "NAME": "诡计背包",
-    "FLAVOR": "Tricky.",
+    "FLAVOR": "趣奇。",
     "DESCRIPTIONS": [
       "战斗开始时，额外抽 #b",
       " 张 #ycollector:藏品 牌。"
@@ -31,7 +31,7 @@
   },
   "collector:JadeRing": {
     "NAME": "玉戒指",
-    "FLAVOR": "Jade is the symbol of honesty.",
+    "FLAVOR": "玉象征着诚实。",
     "DESCRIPTIONS": [
       "每当一名 #ycollector:魂劫 中的非爪牙敌人死亡时，获得 #b",
       " 灵魂。"
@@ -39,14 +39,14 @@
   },
   "collector:SoullitLamp": {
     "NAME": "燃魂灯",
-    "FLAVOR": "A ghoulish decoration. The crackles of fire are replaced by buzzing wails.",
+    "FLAVOR": "一件十分阴间的装饰品，从内部传来的不是燃料的燃爆声，而是嘈杂的哀嚎。",
     "DESCRIPTIONS": [
       "拾起时，获得 #b3 点 #g魂粹 。战斗开始时，获得 #b1 张 #y余烬 。"
     ]
   },
   "collector:ThimbleHelm": {
     "NAME": "顶针帽",
-    "FLAVOR": "Worn by the Spire's miniest heroes.",
+    "FLAVOR": "被尖塔中最迷你的英雄们穿戴着。",
     "DESCRIPTIONS": [
       "战斗开始时，获得 #b",
       " 层 #y临时生命 。拥有 #y临时生命 时，从卡牌中额外获得 #b1 点 #y格挡 。"
@@ -54,21 +54,21 @@
   },
   "collector:Incense": {
     "NAME": "熏香",
-    "FLAVOR": "An antiquated form of mental clarification.",
+    "FLAVOR": "一种古旧的宁神方式。",
     "DESCRIPTIONS": [
       "已有 #y虚弱 、 #y易伤 ，或 #y脆弱 之中的任意一种 #r负面效果 时，不再积累新层数。"
     ]
   },
   "collector:FuelCanister": {
     "NAME": "液罐",
-    "FLAVOR": "Disgusting.",
+    "FLAVOR": "真恶心。",
     "DESCRIPTIONS": [
       "回合结束时， #y保留 耗能最高的手牌。"
     ]
   },
   "collector:AutoCurser": {
     "NAME": "巫婆驱魔符",
-    "FLAVOR": "\"When I put this on, my rate of toe-stubbing increased drastically. I think it works!\" - Ranwid",
+    "FLAVOR": "兰伟德：“带上它之后，崴到脚趾的频率显著提高了呢！我觉得它很有效！”",
     "DESCRIPTIONS": [
       "战斗开始时，随机给予一名敌人 #b1 层 #y虚弱 与 #y易伤 。"
     ]
@@ -82,7 +82,7 @@
   },
   "collector:BottledCollectible": {
     "NAME": "瓶装大脑",
-    "FLAVOR": "Collected from a wizard's laboratory.",
+    "FLAVOR": "从一名巫师的实验室中收集得到。",
     "DESCRIPTIONS": [
       "拾起时，选择 #y升级 一张 #y收藏堆 的牌。每场战斗开始时其将被置于堆顶。",
       "战斗开始时， #y",

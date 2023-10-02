@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.util.TextureLoader;
+import expansioncontent.actions.EchoACardAction;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
@@ -34,11 +35,8 @@ public class BlankCard extends CustomRelic {
         } // Get one of the cards in the unknown pool instead of the Unknown card which is already free to play.
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        if (card2.cost > 0)
-            card2.freeToPlayOnce = true;
-        CardModifierManager.addModifier(card2, new ExhaustMod());
-        CardModifierManager.addModifier(card2, new EtherealMod());
-        addToBot(new MakeTempCardInHandAction(card2));
+        card2.freeToPlayOnce = true;
+        addToBot(new EchoACardAction(card2));
     }
 
     public String getUpdatedDescription() {

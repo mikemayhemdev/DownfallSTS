@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
+import expansioncontent.cardmods.PropertiesMod;
 import hermit.cards.ImpendingDoom;
 
 public class Eclipse extends AbstractBossMechanicPower {
@@ -40,7 +41,7 @@ public class Eclipse extends AbstractBossMechanicPower {
     public void atStartOfTurn() {
         flash();
         AbstractCard q = new ImpendingDoom();
-        CardModifierManager.addModifier(q, new EtherealMod());
+        CardModifierManager.addModifier(q, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
         addToBot(new MakeTempCardInHandAction(q));
     }
 
