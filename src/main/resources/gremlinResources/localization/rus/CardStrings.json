@@ -38,7 +38,7 @@
 
   "Gremlin:BulkUp": {
     "NAME": "Утолщение кожи",
-    "DESCRIPTION": "Даёт !M! временного_ОЗ. NL gremlin:Смена на gremlin:Толстого_гремлина."
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ. NL gremlin:Смена на gremlin:Толстого_гремлина."
   },
 
   "Gremlin:BurlyBlow": {
@@ -86,8 +86,8 @@
   },
 
   "Gremlin:Dazzle": {
-    "NAME": "Ослепить",
-    "DESCRIPTION": "Наносит !D! урона. NL gremlin:Ворует 2 Силы, если у вас есть 3 или больше gremlin:Чар. NL Сжигается."
+    "NAME": "Ошеломить",
+    "DESCRIPTION": "Наносит !D! урона. NL gremlin:Ворует 2 Силы, если у вас 3 или больше gremlin:Чар. NL Сжигается."
   },
 
   "Gremlin:Defend": {
@@ -97,13 +97,13 @@
 
   "Gremlin:Duplicate": {
     "NAME": "Дублировать",
-    "DESCRIPTION": "Добавляет !M! gremlin:Эхо Атаки в руке. Они стоят на 1 меньше. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Добавляет !M! gremlin:Эхо Атаки в руке. Они стоят на 1 меньше."
+    "DESCRIPTION": "Добавляет !M! expansioncontent:Эхо Атаки в руке. Они стоят на 1 меньше. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Добавляет !M! expansioncontent:Эхо Атаки в руке. Они стоят на 1 меньше."
   },
 
   "Gremlin:EdibleArmor": {
     "NAME": "Съедобная броня",
-    "DESCRIPTION": "Превращает ВСЮ вашу Защиту во временное_ОЗ."
+    "DESCRIPTION": "Превращает ВСЮ вашу Защиту во expansioncontent:Временное_ОЗ."
   },
 
   "Gremlin:Encore": {
@@ -132,7 +132,7 @@
   },
 
   "Gremlin:SleeveOfAces": {
-    "NAME": "Туз в рукаве",
+    "NAME": "Тузы в рукаве",
     "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Заточку за каждые ваши gremlin:Чары.",
     "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Заточку+ за каждые ваши gremlin:Чары."
   },
@@ -175,7 +175,7 @@
 
   "Gremlin:Fury": {
     "NAME": "Ярость",
-    "DESCRIPTION": "Стоит на [E] меньше за каждые ваши 2 Силы. NL Наносит !D! урона 3 раза."
+    "DESCRIPTION": "Стоит на 1 [E] меньше за каждые ваши 2 Силы. NL Наносит !D! урона 3 раза."
   },
 
   "Gremlin:Glimmer": {
@@ -216,8 +216,8 @@
 
   "Gremlin:GremlinToss": {
     "NAME": "Бросок гремлина",
-    "DESCRIPTION": "Наносит урон равный текущему *временному *ОЗ и Защите.",
-    "UPGRADE_DESCRIPTION": "Даёт !M! временного_ОЗ. NL Наносит урон равный текущему *временному *ОЗ и Защите.",
+    "DESCRIPTION": "Наносит урон равный кол-ву текущего expansioncontent:Временного_ОЗ и Защиты.",
+    "UPGRADE_DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ. NL Наносит урон равный кол-ву текущего expansioncontent:Временного_ОЗ и Защиты.",
     "EXTENDED_DESCRIPTION": [" NL (Наносит !D! урона.)"]
   },
 
@@ -228,7 +228,7 @@
 
   "Gremlin:Heckle": {
     "NAME": "Хохот",
-    "DESCRIPTION": "Даёт !M! временного_ОЗ, когда вы накладываете отриц. эффект на врага."
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ, когда вы накладываете отриц. эффект на врага."
   },
 
   "Gremlin:InfiniteBlocks": {
@@ -239,7 +239,7 @@
 
   "Gremlin:IrksomeBlow": {
     "NAME": "Пародия на удар", 
-    "DESCRIPTION": "Наносит !D! урона. NL Сила  влияет на эту карту !M! раза."
+    "DESCRIPTION": "{@@}Наносит !D! урона. NL Сила  влияет на эту карту !M! раз{!M!|&4=а|&6=}."
   },
 
   "Gremlin:Irritability": {
@@ -249,7 +249,7 @@
 
   "Gremlin:Jeer": {
     "NAME": "Издёвка",
-    "DESCRIPTION": "Наносит !D! урона. Даёт !M! временного_ОЗ, если у врага есть отриц. эффекты."
+    "DESCRIPTION": "Наносит !D! урона. Даёт !M! expansioncontent:Временного_ОЗ, если у врага есть отриц. эффекты."
   },
 
   "Gremlin:Kablamo": {
@@ -269,8 +269,8 @@
 
   "Gremlin:MakeshiftArmor": {
     "NAME": "Самодельная броня",
-    "DESCRIPTION": "Вы получаете 1 Артефакт за каждые 7 разыгранных Атак.",
-    "UPGRADE_DESCRIPTION": "Даёт !M! Артефакта. NL Вы получаете 1 Артефакт за каждые 7 разыгранных Атак."
+    "DESCRIPTION": "Вы получаете 1 Артефакта за каждые 7 разыгранных Атак.",
+    "UPGRADE_DESCRIPTION": "Даёт !M! Артефакта. NL Вы получаете 1 Артефакта за каждые 7 разыгранных Атак."
   },
 
   "Gremlin:Mockery": {
@@ -286,7 +286,7 @@
 
   "Gremlin:Nob": {
     "NAME": "Облик Верзилы",
-    "DESCRIPTION": "Даёт !M! временного_ОЗ. NL Вы мутируете в Гремлина-Верзилу и остаётесь им, пока не потеряете всё временное_ОЗ."
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ. NL Вы мутируете в Гремлина-Верзилу и остаётесь им, пока не потеряете всё expansioncontent:Временное_ОЗ."
   },
 
   "Gremlin:NobChoice": {
@@ -330,7 +330,7 @@
 
   "Gremlin:PourSalt": {
     "NAME": "Насолить врагу",
-    "DESCRIPTION": "Наносит !D! урона. Если у врага есть Слабость - добавляет в руку !M! *Заточки и снимает 1 Слабости."
+    "DESCRIPTION": "Наносит !D! урона. Если на врага наложена Слабость - снимает 1 Слабости и добавляет в руку !M! *Заточки."
   },
 
   "Gremlin:Presto": {
@@ -404,8 +404,8 @@
 
   "Gremlin:SharpenBlades": {
     "NAME": "Заострить лезвия",
-    "DESCRIPTION": "Понижает стоимость всех Атак в руке до 0 на этот ход.",
-    "UPGRADE_DESCRIPTION": "Вы берёте карту. NL Понижает стоимость всех Атак в руке до 0 на этот ход."
+    "DESCRIPTION": "Уменьшает стоимость всех Атак в руке до 0 в этом ходу.",
+    "UPGRADE_DESCRIPTION": "Вы берёте карту. NL Уменьшает стоимость всех Атак в руке до 0 в этом ходу."
   },
 
   "Gremlin:ShieldGremlin": {
@@ -452,8 +452,7 @@
 
   "Gremlin:Tadah": {
     "NAME": "Та-да!",
-    "DESCRIPTION": "Добавляет в руку gremlin:Эхо случ. Навыка. NL gremlin:Смена на gremlin:Гремлина-мага.",
-    "UPGRADE_DESCRIPTION": "Добавляет в руку gremlin:Эхо случ. Улучшенного Навыка. Он стоит на 1 меньше. NL gremlin:Смена на gremlin:Гремлина-мага."
+    "DESCRIPTION": "Добавляет в руку gremlin:Эхо случ. Навыка, он стоит 0 пока не разыгран. NL gremlin:Смена на gremlin:Гремлина-мага."
   },
 
   "Gremlin:TagTeam": {
@@ -495,14 +494,14 @@
 
   "Gremlin:Whiz": {
     "NAME": "Волшебство",
-    "DESCRIPTION": "Даёт !M! gremlin:Чары. Добавляет в руку *Бум, на след. ход. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Даёт !M! gremlin:Чары. Добавляет в руку *Бум+, на след. ход. NL Сжигается."
+    "DESCRIPTION": "Даёт !M! gremlin:Чары. Добавляет в руку *Бум, в след. ходу. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Даёт !M! gremlin:Чары. Добавляет в руку *Бум+, в след. ходу. NL Сжигается."
   },
 
   "Gremlin:Wizardry": {
     "NAME": "Колдовство",
-    "DESCRIPTION": "Даёт !M! gremlin:Чары в начале каждого вашего хода.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Даёт !M! gremlin:Чары в начале каждого вашего хода."
+    "DESCRIPTION": "Даёт !M! gremlin:Чары в начале вашего хода.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL Даёт !M! gremlin:Чары в начале вашего хода."
   },
 
   "Gremlin:Placeholder": {

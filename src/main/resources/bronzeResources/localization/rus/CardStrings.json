@@ -536,6 +536,11 @@
     "NAME": "Дикий удар",
     "DESCRIPTION": "Наносит !D! урона. NL bronze:Вставляет *Рану."
   },  
+  
+  
+  
+  
+  
   "bronze:Batch": {
     "NAME": "Демо-версия",
     "DESCRIPTION": "Сразу создаёт bronze:Функцию из bronze:Записанных карт в bronze:Коде. NL Сжигается.",
@@ -652,15 +657,5 @@
   "bronze:UnknownStatus": {
     "NAME": "Озадаченность",
     "DESCRIPTION": "Даёт !B! Защиты."
-  },
-  "bronze:BronzeHeatsink": {
-    "NAME": "Бронзовый радиатор",
-    "DESCRIPTION": "Вы берёте карту, когда разыгрываете bronze:Функцию.",
-    "UPGRADE_DESCRIPTION": "Вы берёте 2 карты, когда разыгрываете bronze:Функцию."
-  },
-  "bronze:LegacyCode": {
-    "NAME": "Устаревший код",
-    "DESCRIPTION": "Оставляется. NL Вы кладёте !M! выбранную карту из стопки сброса в руку.",
-    "UPGRADE_DESCRIPTION": "Оставляется. NL Вы кладёте !M! выбранные карты из стопки сброса в руку."
   }
 }

@@ -27,7 +27,7 @@
   },
   "hexamod:BurningTouch": {
     "NAME": "Жгучее касание",
-    "DESCRIPTION": "Накладывает !burny! hexamod:Ожога_души. Повторяет, если на врага уже наложен NL hexamod:Ожог_души."
+    "DESCRIPTION": "Накладывает !burny! hexamod:Ожога_души. Дважды, если на врага уже наложен NL hexamod:Ожог_души."
   },
   "hexamod:CatchUp": {
     "NAME": "Наверстать упущенное",
@@ -52,7 +52,7 @@
   },
   "hexamod:DynamicBlow": {
     "NAME": "Динамический удар",
-    "DESCRIPTION": "Эфирная. NL Накладывает !burny! hexamod:Ожога_души, если hexamod:активный Огонёк hexamod:Зажжён. Если нет - наносит !D! урона."
+    "DESCRIPTION": "Эфирная. NL Накладывает !burny! hexamod:Ожога_души, если hexamod:активный Огонёк hexamod:Зажжён. Если нет: наносит !D! урона."
   },
   "hexamod:EmpoweredFlame": {
     "NAME": "Усиленное пламя",
@@ -186,8 +186,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Достойная жертва",
-    "DESCRIPTION": "Вы сжигаете карту. NL Если вы сожгли Атаку или Навык - добавляет случ. карту противоположного типа в руку.",
-    "UPGRADE_DESCRIPTION": "Вы сжигаете карту. NL Если вы сожгли Атаку или Навык - добавляет случ. карту противоположного типа в руку. Она стоит на 1 меньше.",
+    "DESCRIPTION": "Вы сжигаете карту. NL Если вы сожгли Атаку или Навык - добавляет в руку случ. карту противоположного типа.",
+    "UPGRADE_DESCRIPTION": "Вы сжигаете карту. NL Если вы сожгли Атаку или Навык - добавляет в руку случ. карту противоположного типа. Она стоит на 1 меньше.",
     "EXTENDED_DESCRIPTION": [
       "Сжечь для достойной жертвы."
     ]
@@ -204,7 +204,7 @@
   },
   "hexamod:ParanormalForm": {
     "NAME": "Облик полтергейста",
-    "DESCRIPTION": "Наносит !M! урона случайному врагу, когда вы разыгрываете карту с эффектом hexamod:Посмертие."
+    "DESCRIPTION": "Наносит !M! урона случ. врагу, когда вы разыгрываете карту с эффектом hexamod:Посмертие."
   },
   "hexamod:PhantomCloak": {
     "NAME": "Призрачный плащ",
@@ -221,7 +221,7 @@
   },
   "hexamod:Premonition": {
     "NAME": "Предчувствие",
-    "DESCRIPTION": "Выберите карту в руке. NL Разыграйте и *сожгите эту карту. NL Сжигается.",
+    "DESCRIPTION": "Выберите карту в руке. NL Разыграйте и *сожгите её. NL Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "чтобы разыграть и сжечь."
     ]
@@ -238,7 +238,7 @@
   "hexamod:RecurringNightmare": {
     "NAME": "Кошмарное видение",
     "DESCRIPTION": "Вы expansioncontent:Воскрешаете *Эфирную карту. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Воскрешаете !M! *Эфирные карты. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Вы expansioncontent:Воскрешаете !M! *Эфирные карты. NL Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Выберите Эфирную карту, которую хотите вернуть в руку.",
       "Выберите ",
@@ -273,7 +273,7 @@
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Щит Ночи",
-    "DESCRIPTION": "Даёт [E] , если hexamod:активный Огонёк не hexamod:Зажжён . NL Даёт !B! Защиты."
+    "DESCRIPTION": "Даёт [E] , если hexamod:активный Огонёк не hexamod:Зажжён. NL Даёт !B! Защиты."
   },
   "hexamod:SkipABeat": {
     "NAME": "Разжечь",
@@ -290,7 +290,7 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Яркий ритуал",
-    "DESCRIPTION": "Вы получаете [E] и берёте карту за каждый hexamod:Зажжёный Огонёк, затем hexamod:Тушите их. NL Сжигается."
+    "DESCRIPTION": "Вы получаете [E] и берёте 1 карту за каждый hexamod:Зажжёный Огонёк, затем hexamod:Тушите их. NL Сжигается."
   },
   "hexamod:SpectralSpark": {
     "NAME": "Призрачная искра",
@@ -298,7 +298,7 @@
   },
   "hexamod:StepThrough": {
     "NAME": "Пройти насквозь",
-    "DESCRIPTION": "Наносит !D! урона. NL Вы берёте карту за каждый hexamod:Зажжёный Огонёк."
+    "DESCRIPTION": "Наносит !D! урона. NL Вы берёте 1 карту за каждый hexamod:Зажжёный Огонёк."
   },
   "hexamod:Strike": {
     "NAME": "Удар",
@@ -311,11 +311,11 @@
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "Прижигающий удар",
-    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Накладывает !burny! hexamod:Ожога_души. NL Если эта карта Сжигается, вы получите !M! урона."
+    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Накладывает !burny! hexamod:Ожога_души. NL Вы получите !M! урона, если эта карта Сжигается."
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "Меч Ночи",
-    "DESCRIPTION": "Если hexamod:активный Огонёк не hexamod:Зажжён - даёт [E] . NL Наносит !D! урона."
+    "DESCRIPTION": "Даёт [E] , если hexamod:активный Огонёк не hexamod:Зажжён. NL Наносит !D! урона."
   },
   "hexamod:ThermalTransfer": {
     "NAME": "Теплопередача",
