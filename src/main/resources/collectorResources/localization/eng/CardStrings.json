@@ -44,7 +44,7 @@
   },
   "collector:Bonfire": {
     "NAME": "Bonfire",
-    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain 1 collector:Reserve."
+    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain 1 [collector:reserveIcon] ."
   },
   "collector:BrainDrain": {
     "NAME": "Brain Drain",
@@ -113,7 +113,7 @@
   },
   "collector:DragonsTrove": {
     "NAME": "Dragon's Trove",
-    "DESCRIPTION": "Draw 2 cards from your Collected pile. NL Gain !M! collector:Reserve. NL Exhaust."
+    "DESCRIPTION": "Draw 2 cards from your Collected pile. NL Gain !M! [collector:reserveIcon] . NL Exhaust."
   },
   "collector:Ember": {
     "NAME": "Ember",
@@ -144,7 +144,7 @@
   },
   "collector:FingerOfDeath": {
     "NAME": "Finger of Death",
-    "DESCRIPTION": "Only collector:Reserves may be spent on this. NL Apply !M! collector:Doom."
+    "DESCRIPTION": "Only [collector:reserveIcon] may be spent on this. NL Apply !M! collector:Doom."
   },
   "collector:FlameLash": {
     "NAME": "Flame Lash",
@@ -164,7 +164,7 @@
   },
   "collector:FuelTheFire": {
     "NAME": "Fuel the Fire",
-    "DESCRIPTION": "collector:Pyre. NL Next turn, gain !M! collector:Reserve."
+    "DESCRIPTION": "collector:Pyre. NL Next turn, gain !M! [collector:reserveIcon] ."
   },
   "collector:Goodbye": {
     "NAME": "Goodbye",
@@ -265,7 +265,7 @@
   },
   "collector:Misdirect": {
     "NAME": "Misdirect",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain 1 collector:Reserve."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain 1 [collector:reserveIcon] ."
   },
   "collector:MysteryWeaving": {
     "NAME": "Mystery Weaving",
@@ -289,8 +289,8 @@
   },
   "collector:Pyromancy": {
     "NAME": "Pyromancy",
-    "DESCRIPTION": "At the start of your turn, gain 1 collector:Reserve.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 collector:Reserve."
+    "DESCRIPTION": "At the start of your turn, gain 1 [collector:reserveIcon] .",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 [collector:reserveIcon] ."
   },
   "collector:RagingCall": {
     "NAME": "Raging Call",
@@ -350,8 +350,8 @@
   },
   "collector:Spark": {
     "NAME": "Spark",
-    "DESCRIPTION": "Gain 1 collector:Reserve. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 collector:Reserve. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Gain 1 [collector:reserveIcon] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 1 [collector:reserveIcon] . NL Draw 1 card. NL Exhaust."
   },
   "collector:SpiritLeech": {
     "NAME": "Spirit Leech",
@@ -359,7 +359,7 @@
   },
   "collector:StashAway": {
     "NAME": "Stash Away",
-    "DESCRIPTION": "Gain !B! Block X times. NL Next turn, gain X collector:Reserve. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block X times. NL Next turn, gain X [collector:reserveIcon] . NL Exhaust."
   },
   "collector:Strike": {
     "NAME": "Strike",
@@ -511,7 +511,7 @@
   },
   "collector:GremlinWizardCard": {
     "NAME": "Gremlin Wizard",
-    "DESCRIPTION": "Next turn, NL gain !M! Vigor and 1 collector:Reserve."
+    "DESCRIPTION": "Next turn, NL gain !M! Vigor and 1 [collector:reserveIcon] ."
   },
   "collector:JawWormCard": {
     "NAME": "Jaw Worm",
@@ -664,7 +664,7 @@
   },
   "collector:VagrantCard": {
     "NAME": "Vagrant",
-    "DESCRIPTION": "Gain !M! collector:Reserve. NL Add a *Shame into your hand."
+    "DESCRIPTION": "Gain !M! [collector:reserveIcon] . NL Add a *Shame into your hand."
   },
   "collector:WomanInBlueCard": {
     "NAME": "Woman in Blue",
