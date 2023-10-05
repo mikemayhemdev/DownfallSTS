@@ -13,7 +13,7 @@ public class JawWormCard extends AbstractCollectibleCard {
 
     public JawWormCard() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 10;
+        baseBlock = 12;
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -23,7 +23,7 @@ public class JawWormCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(3);
         upgradeMagicNumber(1);
     }
 }

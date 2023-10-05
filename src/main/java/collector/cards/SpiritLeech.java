@@ -22,7 +22,7 @@ public class SpiritLeech extends AbstractCollectorCard {
 
     public SpiritLeech() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 8;
         baseBlock = 6;
     }
 

@@ -39,8 +39,8 @@ public class IllTakeThat extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
-        upgradeMagicNumber(4);
+        upgradeDamage(3);
+        upgradeMagicNumber(3);
     }
 
     @Override

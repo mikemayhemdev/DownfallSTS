@@ -17,18 +17,20 @@ public class ChosenCard extends AbstractCollectibleCard {
 
     public ChosenCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
+        baseSecondMagic = secondMagic = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToEnemy(m, new WeakPower(m, magicNumber, false));
         if (m.getIntentBaseDmg() <= -1) {
-            applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
+            applyToEnemy(m, new VulnerablePower(m, secondMagic, false));
         }
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
+        upgradeSecondMagic(2);
     }
 
     @Override

@@ -18,8 +18,8 @@ public class CoffinNail extends AbstractCollectorCard {
 
     public CoffinNail() {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 5;
-        baseMagicNumber = magicNumber = 5;
+        baseDamage = 6;
+        baseMagicNumber = magicNumber = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,7 +33,7 @@ public class CoffinNail extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(1);
+        upgradeDamage(2);
+        upgradeMagicNumber(2);
     }
 }

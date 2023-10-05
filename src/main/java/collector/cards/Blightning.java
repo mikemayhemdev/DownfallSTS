@@ -19,7 +19,7 @@ public class Blightning extends AbstractCollectorCard {
 
     public Blightning() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 8;
+        baseDamage = 6;
         baseMagicNumber = magicNumber = 6;
         exhaust = true;
     }

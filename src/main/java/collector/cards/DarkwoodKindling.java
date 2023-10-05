@@ -16,7 +16,7 @@ public class DarkwoodKindling extends AbstractCollectorCard {
 
     public DarkwoodKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 8;
         tags.add(expansionContentMod.UNPLAYABLE);
     }
 
@@ -37,6 +37,6 @@ public class DarkwoodKindling extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(4);
+        upgradeMagicNumber(3);
     }
 }

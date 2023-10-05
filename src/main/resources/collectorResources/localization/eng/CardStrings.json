@@ -85,7 +85,7 @@
   },
   "collector:DarkLordForm": {
     "NAME": "Dark Lord Form",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, play *You *Are *Mine on a random enemy.",
+    "DESCRIPTION": "At the start of your turn, play *You *Are *Mine on a random enemy.",
     "UPGRADE_DESCRIPTION": "At the start of your turn, play *You *Are *Mine on a random enemy."
   },
   "collector:Darkstorm": {
@@ -148,8 +148,8 @@
   },
   "collector:FlameLash": {
     "NAME": "Flame Lash",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage, then add the *Pyred card's damage to this.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage, then add the *Pyred card's damage plus !M! to this."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage, then add *Pyred card's damage to this.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage, then add *Pyred card's damage plus !M! to this."
   },
   "collector:FleetingEmbers": {
     "NAME": "Fleeting Embers",
@@ -164,7 +164,8 @@
   },
   "collector:FuelTheFire": {
     "NAME": "Fuel the Fire",
-    "DESCRIPTION": "collector:Pyre. NL Next turn, gain !M! collector:Reserve."
+    "DESCRIPTION": "collector:Pyre. NL Next turn, gain !M! collector:Reserve.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Next turn, gain !M! collector:Reserve and draw a card."
   },
   "collector:Goodbye": {
     "NAME": "Goodbye",
@@ -239,7 +240,7 @@
   },
   "collector:JadedJabs": {
     "NAME": "Jaded Jabs",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to the Pyred card's cost + !M!."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to Pyred card's cost + !M!."
   },
   "collector:Karma": {
     "NAME": "Karma",
@@ -280,8 +281,8 @@
   },
   "collector:Omen": {
     "NAME": "Omen",
-    "DESCRIPTION": "Whenever you play a Collected card, ALL enemies lose !M! HP.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a Collected card, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Whenever you play a Collected card, gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a Collected card, gain 1 Strength."
   },
   "collector:ProtectingCall": {
     "NAME": "Protecting Call",
@@ -382,7 +383,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "Thorn Whip",
-    "DESCRIPTION": "Deal !D! damage. NL When you obtain this card, gain 9 Essence."
+    "DESCRIPTION": "Deal !D! damage and apply !M! hermit:Bruise to ALL enemies. NL Gain a *Shiv."
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer",
@@ -395,7 +396,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "Void Armor",
-    "DESCRIPTION": "EVERYONE gains !B! Block. NL Apply !M! collector:Doom to enemies with collector:Doom."
+    "DESCRIPTION": "EVERYONE gains !B! Block and 1 bronze:Blur."
   },
   "collector:Wildfire": {
     "NAME": "Wildfire",
@@ -448,7 +449,7 @@
   },
   "collector:ChosenCard": {
     "NAME": "Chosen",
-    "DESCRIPTION": "Apply !M! Weak. NL If the enemy does not intend to attack, apply !M! Vulnerable."
+    "DESCRIPTION": "Apply !M! Weak. NL If the enemy does not intend to attack, apply !clm2! Vulnerable."
   },
   "collector:ClericCard": {
     "NAME": "Cleric",
@@ -680,7 +681,7 @@
   },
   "collector:ShootingStar": {
     "NAME": "Shooting Star",
-    "DESCRIPTION": "Ethereal. NL The first time you collector:Pyre a card each turn, gain a copy of it. NL It costs 0 until played."
+    "DESCRIPTION": "The first time you collector:Pyre an Attack each turn, gain a copy of it. NL It costs 0 until played."
   },
   "collector:CollectorCard": {
     "NAME": "Ouroboros",

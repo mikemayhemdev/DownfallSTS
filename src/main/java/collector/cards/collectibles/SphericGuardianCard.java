@@ -14,7 +14,7 @@ public class SphericGuardianCard extends AbstractCollectibleCard {
 
     public SphericGuardianCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        this.baseMagicNumber = this.magicNumber = 3;
+        this.baseMagicNumber = this.magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

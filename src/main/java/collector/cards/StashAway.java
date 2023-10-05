@@ -15,7 +15,7 @@ public class StashAway extends AbstractCollectorCard {
 
     public StashAway() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 4;
         exhaust = true;
     }
 

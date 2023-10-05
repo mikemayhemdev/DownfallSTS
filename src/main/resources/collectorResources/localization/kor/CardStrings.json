@@ -85,7 +85,7 @@
   },
   "collector:DarkLordForm": {
     "NAME": "어둠 군주의 형상",
-    "DESCRIPTION": "휘발성. NL 내 턴 시작 시 무작위 적에게 *넌 *나의 *것이다!를 사용합니다.",
+    "DESCRIPTION": "내 턴 시작 시 무작위 적에게 *넌 *나의 *것이다!를 사용합니다.",
     "UPGRADE_DESCRIPTION": "내 턴 시작 시 무작위 적에게 *넌 *나의 *것이다!를 사용합니다."
   },
   "collector:Darkstorm": {

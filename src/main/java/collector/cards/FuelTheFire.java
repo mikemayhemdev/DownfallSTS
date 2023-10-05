@@ -1,11 +1,9 @@
 package collector.cards;
 
 import collector.powers.NextTurnReservePower;
-import collector.util.Wiz;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToSelf;
@@ -22,9 +20,12 @@ public class FuelTheFire extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new NextTurnReservePower(magicNumber));
+        if (upgraded) {
+            applyToSelf(new DrawCardNextTurnPower(p, 1));
+        }
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        uDesc();
     }
 }

@@ -35,7 +35,7 @@ public class Hurting extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(3);
         uDesc();
         cardsToPreview.upgrade();
     }

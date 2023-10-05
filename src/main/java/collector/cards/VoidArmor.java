@@ -1,9 +1,9 @@
 package collector.cards;
 
-import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.BlurPower;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.*;
@@ -15,21 +15,16 @@ public class VoidArmor extends AbstractCollectorCard {
     public VoidArmor() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL);
         baseBlock = 9;
-        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+        applyToSelf(new BlurPower(p, 1));
         forAllMonstersLiving(q -> atb(new GainBlockAction(q, block)));
-        forAllMonstersLiving(q -> {
-            if (q.hasPower(DoomPower.POWER_ID)) {
-                applyToEnemy(q, new DoomPower(q, magicNumber));
-            }
-        });
+        forAllMonstersLiving(q -> applyToEnemy(q, new BlurPower(q, 1)));
     }
 
     public void upp() {
-        upgradeBlock(2);
-        upgradeMagicNumber(2);
+        upgradeBlock(3);
     }
 }

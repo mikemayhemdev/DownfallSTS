@@ -25,6 +25,6 @@ public class DoubleTrouble extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(3);
     }
 }

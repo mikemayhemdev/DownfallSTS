@@ -32,6 +32,6 @@ public class GreatestHurting extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(12);
+        upgradeDamage(9);
     }
 }

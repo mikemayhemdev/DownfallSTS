@@ -14,7 +14,6 @@ public class ShootingStar extends AbstractCollectorCard {
 
     public ShootingStar() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

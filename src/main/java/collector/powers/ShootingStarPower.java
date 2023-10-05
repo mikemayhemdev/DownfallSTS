@@ -23,7 +23,7 @@ public class ShootingStarPower extends AbstractCollectorPower implements OnPyreP
 
     @Override
     public void onPyre(AbstractCard card) {
-        if (pyresThisTurn < amount) {
+        if (pyresThisTurn < amount && card.type == AbstractCard.CardType.ATTACK) {
             flash();
             pyresThisTurn++;
             AbstractCard copy = card.makeStatEquivalentCopy();

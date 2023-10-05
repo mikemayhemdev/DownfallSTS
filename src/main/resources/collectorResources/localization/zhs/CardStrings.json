@@ -82,7 +82,7 @@
   },
   "collector:DarkLordForm": {
     "NAME": "暗主形态",
-    "DESCRIPTION": "虚无 。 NL 回合开始时， NL 随机打出 *你是我的了 。",
+    "DESCRIPTION": "回合开始时， NL 随机打出 *你是我的了 。",
     "UPGRADE_DESCRIPTION": "回合开始时， NL 随机打出 *你是我的了 。"
   },
   "collector:Darkstorm": {

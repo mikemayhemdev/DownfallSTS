@@ -14,7 +14,7 @@ public class SpikeSlimeCard extends AbstractCollectibleCard {
     public SpikeSlimeCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
-        baseBlock = 8;
+        baseBlock = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -23,7 +23,7 @@ public class SpikeSlimeCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
         upgradeMagicNumber(2);
     }
 }

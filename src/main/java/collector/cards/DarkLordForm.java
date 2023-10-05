@@ -15,8 +15,7 @@ public class DarkLordForm extends AbstractCollectorCard {
     // intellij stuff power, self, rare, , , , , , 
 
     public DarkLordForm() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        isEthereal = true;
+        super(ID, 4, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         cardsToPreview = new YouAreMine();
     }
 
@@ -26,7 +25,6 @@ public class DarkLordForm extends AbstractCollectorCard {
     }
 
     public void upp() {
-        isEthereal = false;
-        uDesc();
+        upgradeBaseCost(3);
     }
 }
