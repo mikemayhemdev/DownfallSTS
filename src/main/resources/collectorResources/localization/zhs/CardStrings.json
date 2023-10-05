@@ -343,8 +343,8 @@
   },
   "collector:Soulforge": {
     "NAME": "铸魂",
-    "DESCRIPTION": "抽 !M! 张 collector:藏品 牌， NL 去除其 *超虚无 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张 collector:藏品 牌， NL 去除其 *超虚无 。 NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张 collector:藏品 牌， NL 并额外获得其 升级 版 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张 collector:藏品 牌， NL 并额外获得其 升级 版 。 NL 消耗 。"
   },
   "collector:Spark": {
     "NAME": "火花",
