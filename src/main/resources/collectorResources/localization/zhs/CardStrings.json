@@ -161,7 +161,8 @@
   },
   "collector:FuelTheFire": {
     "NAME": "供火",
-    "DESCRIPTION": "collector:焰葬 。 NL 下回合， NL 获得 !M! collector:储能 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 下回合， NL 获得 !M! collector:储能 。",
+    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 下回合， NL 获得 !M! collector:储能 ， NL 并抽一张牌。"
   },
   "collector:Goodbye": {
     "NAME": "再幸",
@@ -273,8 +274,8 @@
   },
   "collector:Omen": {
     "NAME": "不祥",
-    "DESCRIPTION": "打出 collector:藏品 牌时， NL 敌人全失去 !M! 点生命。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 打出 collector:藏品 牌时， NL 敌人全失去 !M! 点生命。"
+    "DESCRIPTION": "打出 collector:藏品 牌时， NL 获得1点 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 打出 collector:藏品 牌时， NL 获得1点 力量 。"
   },
   "collector:ProtectingCall": {
     "NAME": "佑护之唤",
@@ -330,7 +331,7 @@
   },
   "collector:ShootingStar": {
     "NAME": "流星",
-    "DESCRIPTION": "虚无 。 NL 每回合首次 collector:焰葬 时， NL 将被葬牌返回手牌， NL 其耗能变为0一次。"
+    "DESCRIPTION": "每回合首次 collector:焰葬 攻击牌时，将被葬牌返回手牌，其耗能变为0一次。"
   },
   "collector:SomberShield": {
     "NAME": "阴沉护盾",
@@ -379,7 +380,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "荆棘抽绕",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 拾起时， NL 获得9魂粹。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害并给予 !M! 层 hermit:瘀伤 。 NL 获得一张 *小刀 。"
   },
   "collector:Torchbearer": {
     "NAME": "火炬御者",
@@ -392,7 +393,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "虚空护甲",
-    "DESCRIPTION": "所有单位 获得 !B! 点 格挡 。 NL 给予 collector:魂劫 中的敌人 !M! 层 *魂劫 。"
+    "DESCRIPTION": "所有单位 获得 !B! 点 格挡 与1层 bronze:残影 。"
   },
   "collector:Wildfire": {
     "NAME": "野火",
@@ -449,7 +450,7 @@
   },
   "collector:ChosenCard": {
     "NAME": "被拣选者",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 若目标不意图攻击， NL 给予 !M! 层 易伤 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 若目标不意图攻击， NL 给予 !clm2! 层 易伤 。"
   },
   "collector:ClericCard": {
     "NAME": "牧师",
