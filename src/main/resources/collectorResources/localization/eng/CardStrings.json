@@ -346,8 +346,8 @@
   },
   "collector:Soulforge": {
     "NAME": "Soulforge",
-    "DESCRIPTION": "Draw !M! card from your Collected pile. Remove collector:Megathereal from it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards from your Collected pile. Remove collector:Megathereal from them. NL Exhaust."
+    "DESCRIPTION": "Draw !M! card from your Collected pile. Gain an Upgraded copy of it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards from your Collected pile. Gain Upgraded copies of them. NL Exhaust."
   },
   "collector:Spark": {
     "NAME": "Spark",
