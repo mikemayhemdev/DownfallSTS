@@ -124,8 +124,8 @@
   "collector:Omen": {
     "NAME": "不祥",
     "DESCRIPTIONS": [
-      "每当你打出 #y藏品 牌时，所有敌人失去 #b",
-      " 点生命。"
+      "每当你打出 #y藏品 牌时，获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "collector:ProtectingCall": {
