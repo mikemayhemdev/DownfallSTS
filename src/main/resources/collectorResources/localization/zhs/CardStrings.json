@@ -161,7 +161,8 @@
   },
   "collector:FuelTheFire": {
     "NAME": "供火",
-    "DESCRIPTION": "collector:焰葬 。 NL 下回合， NL 获得 !M! collector:储能 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 下回合， NL 获得 !M! collector:储能 。",
+    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 下回合， NL 获得 !M! collector:储能 并抽出一张牌。"
   },
   "collector:Goodbye": {
     "NAME": "再幸",
@@ -183,8 +184,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "诡域",
-    "DESCRIPTION": "collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL collector:焰葬 。 NL 选择 *收藏堆 !M! 张牌， NL 将其移入手牌。 NL 消耗 。",
+    "DESCRIPTION": "从 3 张收集的卡片中选择一张。 NL 添加！M！将其副本放入您的收藏堆中。 NL 排气。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌加入手牌。"
     ]
@@ -273,8 +273,8 @@
   },
   "collector:Omen": {
     "NAME": "不祥",
-    "DESCRIPTION": "打出 collector:藏品 牌时， NL 敌人全失去 !M! 点生命。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 打出 collector:藏品 牌时， NL 敌人全失去 !M! 点生命。"
+    "DESCRIPTION": "打出 collector:藏品 牌时， NL 获得 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 打出 collector:藏品 牌时， NL 获得 !M! 点 力量 。"
   },
   "collector:ProtectingCall": {
     "NAME": "佑护之唤",
@@ -330,7 +330,7 @@
   },
   "collector:ShootingStar": {
     "NAME": "流星",
-    "DESCRIPTION": "虚无 。 NL 每回合首次 collector:焰葬 时， NL 将被葬牌返回手牌， NL 其耗能变为0一次。"
+    "DESCRIPTION": "每回合首次 collector:焰葬 时， NL会将埋藏的攻击返回手牌， NL 其耗能变为0一次。"
   },
   "collector:SomberShield": {
     "NAME": "阴沉护盾",
@@ -342,8 +342,8 @@
   },
   "collector:Soulforge": {
     "NAME": "铸魂",
-    "DESCRIPTION": "抽 !M! 张 collector:藏品 牌， NL 去除其 *超虚无 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张 collector:藏品 牌， NL 去除其 *超虚无 。 NL 消耗 。"
+    "DESCRIPTION": "从你收集的牌堆中抽一张牌。增益！M！它的升级版。 NL 排气。",
+    "UPGRADE_DESCRIPTION": "从你收集的牌堆中抽一张牌。增益！M！它的升级版。 NL 排气。"
   },
   "collector:Spark": {
     "NAME": "火花",
@@ -379,7 +379,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "荆棘抽绕",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 拾起时， NL 获得9魂粹。"
+    "DESCRIPTION": "成交！D！损坏并涂抹！M！hermit:瘀伤  给所有敌人。 NL 获得*Shiv。"
   },
   "collector:Torchbearer": {
     "NAME": "火炬御者",
@@ -392,7 +392,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "虚空护甲",
-    "DESCRIPTION": "所有单位 获得 !B! 点 格挡 。 NL 给予 collector:魂劫 中的敌人 !M! 层 *魂劫 。"
+    "DESCRIPTION": "所有单位 获得 !B! 点 格挡 和 1 青铜层:残影。"
   },
   "collector:Wildfire": {
     "NAME": "野火",
@@ -449,7 +449,7 @@
   },
   "collector:ChosenCard": {
     "NAME": "被拣选者",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 若目标不意图攻击， NL 给予 !M! 层 易伤 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 若目标不意图攻击， NL 给予 !clm2! 层 易伤 。"
   },
   "collector:ClericCard": {
     "NAME": "牧师",
