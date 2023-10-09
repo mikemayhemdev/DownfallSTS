@@ -124,8 +124,8 @@
     "DESCRIPTION": "下 !M! 个回合开始时， NL 获得X点 力量 。"
   },
   "collector:Extricate": {
-    "NAME": "解脱",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 collector:折磨 ， NL 打出抽牌堆顶部的牌。"
+    "NAME": "断魂斩",
+    "DESCRIPTION": " 消耗 手牌中所有非攻击牌。 NL 造成 !D! 点伤害。"
   },
   "collector:FeelMyPain": {
     "NAME": "转嫁疼痛",
@@ -150,7 +150,7 @@
   },
   "collector:FleetingEmbers": {
     "NAME": "转瞬之烬",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 张 *余烬 。"
+    "DESCRIPTION": "collector:Pyre. NL 获得 !B! 点 格挡 。 NL 获得 !M! 张 *余烬 。"
   },
   "collector:Forgery": {
     "NAME": "伪造",
@@ -184,7 +184,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "诡域",
-    "DESCRIPTION": "从三张随机 collector:藏品 牌中选择一张，将其 !M! 张复制加入 *收藏堆 。 NL 消耗 。",
+    "DESCRIPTION": "从三张随机 collector:藏品 牌中选择一张，将其 !M! 张复制加入 *收藏堆 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌加入手牌。"
     ]
@@ -195,7 +195,7 @@
   },
   "collector:Hoard": {
     "NAME": "囤积",
-    "DESCRIPTION": "抽 !M! 张牌， NL 将其 保留 至下回合。"
+    "DESCRIPTION": "collector:Pyre. NL 抽 !M! 张牌， NL 将其 保留 至下回合。"
   },
   "collector:HoardersStrike": {
     "NAME": "囤积者打击",

@@ -127,8 +127,8 @@
     "DESCRIPTION": "다음 !M! 턴 동안 내 턴 시작 시 힘을 X 얻습니다."
   },
   "collector:Extricate": {
-    "NAME": "해방",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL collector:고초된 적이라면 뽑을 카드 더미 맨 위에 있는 카드를 사용합니다."
+    "NAME": "영혼 절단",
+    "DESCRIPTION": "손에 있는 공격 카드를 제외한 모든 카드를 소멸시킵니다. NL 피해를 !D! 줍니다."
   },
   "collector:FeelMyPain": {
     "NAME": "나의 고통을 느껴라",
@@ -153,7 +153,7 @@
   },
   "collector:FleetingEmbers": {
     "NAME": "스치는 불씨",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *불씨를 !M! 장 얻습니다."
+    "DESCRIPTION": "collector:Pyre. NL 방어도를 !B! 얻습니다. NL *불씨를 !M! 장 얻습니다."
   },
   "collector:Forgery": {
     "NAME": "위조품",
@@ -187,7 +187,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "머무는 녹색 불꽃",
-    "DESCRIPTION": "수집된 카드 3장 중 1장을 선택하세요. NL 추가 !M! 그 사본을 수집된 더미에 넣습니다. NL 배기.",
+    "DESCRIPTION": "수집된 카드 3장 중 1장을 선택하세요. NL 추가 !M! 그 사본을 수집된 더미에 넣습니다.",
     "EXTENDED_DESCRIPTION": [
       "가져올 카드를 선택하십시오."
     ]
@@ -198,7 +198,7 @@
   },
   "collector:Hoard": {
     "NAME": "저축",
-    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 이번 턴 동안 그 카드에 보존 효과가 추가됩니다."
+    "DESCRIPTION": "collector:Pyre. NL 카드를 !M! 장 뽑습니다. NL 이번 턴 동안 그 카드에 보존 효과가 추가됩니다."
   },
   "collector:HoardersStrike": {
     "NAME": "저축가의 타격",

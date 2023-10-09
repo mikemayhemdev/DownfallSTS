@@ -15,6 +15,7 @@ public class FleetingEmbers extends AbstractCollectorCard {
         baseMagicNumber = magicNumber = 2;
         baseBlock = 5;
         cardsToPreview = new Ember();
+        isPyre();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
