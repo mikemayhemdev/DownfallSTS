@@ -14,7 +14,7 @@ public class AugmenterCard extends AbstractCollectibleCard {
     // intellij stuff power, self, uncommkon, , , , , 3, 2
 
     public AugmenterCard() {
-        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
     }
 

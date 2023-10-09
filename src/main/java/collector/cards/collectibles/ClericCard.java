@@ -12,7 +12,7 @@ public class ClericCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, uncommon, , , , , 10, 4
 
     public ClericCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 10;
         isPyre();
     }

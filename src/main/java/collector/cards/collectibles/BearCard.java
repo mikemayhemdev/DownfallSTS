@@ -16,7 +16,7 @@ public class BearCard extends AbstractCollectibleCard {
     // intellij stuff attack, enemy, uncommon, 10, 3, 10, 3, , 
 
     public BearCard() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = 10;
         baseBlock = 10;
     }

@@ -12,7 +12,7 @@ public class JousterCard extends AbstractCollectibleCard {
     // intellij stuff attack, enemy, uncommon, 12, 3, 12, 3, , 
 
     public JousterCard() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = 12;
         baseBlock = 12;
     }

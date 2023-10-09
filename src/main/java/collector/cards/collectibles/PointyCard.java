@@ -13,7 +13,7 @@ public class PointyCard extends AbstractCollectibleCard {
     // intellij stuff attack, enemy, common, 5, 2, , , , 
 
     public PointyCard() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = 6;
     }
 
