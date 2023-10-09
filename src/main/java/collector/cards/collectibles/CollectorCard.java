@@ -11,6 +11,7 @@ import static collector.util.Wiz.applyToEnemy;
 import static collector.util.Wiz.atb;
 
 public class CollectorCard extends AbstractCollectibleCard {
+    // Ouroboros card name for easier search without changing class name
     public final static String ID = makeID(CollectorCard.class.getSimpleName());
     // intellij stuff skill, self_and_enemy, rare, , , , , 1, 1
 
