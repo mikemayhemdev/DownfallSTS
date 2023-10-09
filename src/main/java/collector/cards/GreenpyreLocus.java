@@ -23,7 +23,7 @@ public class GreenpyreLocus extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> allCollecteds = Wiz.getCardsMatchingPredicate(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE, true);
+        ArrayList<AbstractCard> allCollecteds = Wiz.getCardsMatchingPredicate(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE && c.rarity != CardRarity.SPECIAL, true);
         ArrayList<AbstractCard> selectionChoices = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             selectionChoices.add(allCollecteds.remove(AbstractDungeon.cardRandomRng.random(allCollecteds.size() - 1)));
