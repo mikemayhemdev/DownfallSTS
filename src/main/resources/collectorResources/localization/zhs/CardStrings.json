@@ -228,7 +228,7 @@
   },
   "collector:ItMattersNot": {
     "NAME": "凝神无视",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 敌方 虚弱 与 易伤 层数全加 !M! 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 敌方已有 虚弱 与 易伤 层数全加 !M! 。"
   },
   "collector:JadedJabs": {
     "NAME": "魂玉迸割",
@@ -430,7 +430,7 @@
   },
   "collector:BonfireSpiritsCard": {
     "NAME": "篝火精灵",
-    "DESCRIPTION": "collector:焰葬 。 NL 回复 !M! 点生命。 NL 若 消耗 一张稀有牌， NL 获得1点最大生命。"
+    "DESCRIPTION": "collector:焰葬 。 NL 回复 !M! 点生命。 NL 若 *焰葬 一张稀有牌， NL 获得1点最大生命。"
   },
   "collector:BookOfStabbingCard": {
     "NAME": "扎人之书",
