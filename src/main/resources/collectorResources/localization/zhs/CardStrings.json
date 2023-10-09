@@ -162,7 +162,7 @@
   "collector:FuelTheFire": {
     "NAME": "供火",
     "DESCRIPTION": "collector:焰葬 。 NL 下回合， NL 获得 !M! collector:储能 。",
-    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 下回合， NL 获得 !M! collector:储能 并抽出一张牌。"
+    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 下回合， NL 获得 !M! collector:储能 ， NL 并抽一张牌。"
   },
   "collector:Goodbye": {
     "NAME": "再幸",
@@ -184,7 +184,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "诡域",
-    "DESCRIPTION": "从 3 张收集的卡片中选择一张。 NL 添加！M！将其副本放入您的收藏堆中。 NL 排气。",
+    "DESCRIPTION": "从三张随机 collector:藏品 牌中选择一张，将其 !M! 张复制加入 *收藏堆 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌加入手牌。"
     ]
@@ -228,7 +228,7 @@
   },
   "collector:ItMattersNot": {
     "NAME": "凝神无视",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 敌方 虚弱 与 易伤 层数全加 !M! 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 敌方已有 虚弱 与 易伤 层数全加 !M! 。"
   },
   "collector:JadedJabs": {
     "NAME": "魂玉迸割",
@@ -273,8 +273,9 @@
   },
   "collector:Omen": {
     "NAME": "不祥",
-    "DESCRIPTION": "打出 collector:藏品 牌时， NL 获得 !M! 点 力量 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 打出 collector:藏品 牌时， NL 获得 !M! 点 力量 。"
+    "DESCRIPTION": "打出 collector:藏品 牌时， NL 获得1点 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 打出 collector:藏品 牌时， NL 获得1点 力量 。"
+
   },
   "collector:ProtectingCall": {
     "NAME": "佑护之唤",
@@ -330,7 +331,7 @@
   },
   "collector:ShootingStar": {
     "NAME": "流星",
-    "DESCRIPTION": "每回合首次 collector:焰葬 时， NL会将埋藏的攻击返回手牌， NL 其耗能变为0一次。"
+    "DESCRIPTION": "每回合首次 collector:焰葬 攻击牌时，将被葬牌返回手牌，其耗能变为0一次。"
   },
   "collector:SomberShield": {
     "NAME": "阴沉护盾",
@@ -342,8 +343,8 @@
   },
   "collector:Soulforge": {
     "NAME": "铸魂",
-    "DESCRIPTION": "从你收集的牌堆中抽一张牌。增益！M！它的升级版。 NL 排气。",
-    "UPGRADE_DESCRIPTION": "从你收集的牌堆中抽一张牌。增益！M！它的升级版。 NL 排气。"
+    "DESCRIPTION": "抽一张 collector:藏品 牌， NL 并获得其 升级 版 !M! 张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽一张 collector:藏品 牌， NL 并获得其 升级 版 !M! 张。 NL 消耗 。"
   },
   "collector:Spark": {
     "NAME": "火花",
@@ -379,7 +380,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "荆棘抽绕",
-    "DESCRIPTION": "成交！D！损坏并涂抹！M！hermit:瘀伤  给所有敌人。 NL 获得*Shiv。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害并给予 !M! 层 hermit:瘀伤 。 NL 获得一张 *小刀 。"
   },
   "collector:Torchbearer": {
     "NAME": "火炬御者",
@@ -392,7 +393,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "虚空护甲",
-    "DESCRIPTION": "所有单位 获得 !B! 点 格挡 和 1 青铜层:残影。"
+    "DESCRIPTION": "所有单位 获得 !B! 点 格挡 与1层 bronze:残影 。"
   },
   "collector:Wildfire": {
     "NAME": "野火",
@@ -429,7 +430,7 @@
   },
   "collector:BonfireSpiritsCard": {
     "NAME": "篝火精灵",
-    "DESCRIPTION": "collector:焰葬 。 NL 回复 !M! 点生命。 NL 若 消耗 一张稀有牌， NL 获得1点最大生命。"
+    "DESCRIPTION": "collector:焰葬 。 NL 回复 !M! 点生命。 NL 若 *焰葬 一张稀有牌， NL 获得1点最大生命。"
   },
   "collector:BookOfStabbingCard": {
     "NAME": "扎人之书",
