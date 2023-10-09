@@ -187,8 +187,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus",
-    "DESCRIPTION": "collector:Pyre. NL Put !M! card from your Collected pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL collector:Pyre. NL Put !M! card from your Collected pile into your hand. NL Exhaust.",
+    "DESCRIPTION": "Choose 1 of 3 Collected cards. NL Add !M! copies of it into your Collected pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to add into your hand."
     ]
@@ -346,8 +345,8 @@
   },
   "collector:Soulforge": {
     "NAME": "Soulforge",
-    "DESCRIPTION": "Draw !M! card from your Collected pile. Remove collector:Megathereal from it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards from your Collected pile. Remove collector:Megathereal from them. NL Exhaust."
+    "DESCRIPTION": "Draw a card from your Collected pile. Gain !M! Upgraded copy of it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw a card from your Collected pile. Gain !M! Upgraded copies of it. NL Exhaust."
   },
   "collector:Spark": {
     "NAME": "Spark",

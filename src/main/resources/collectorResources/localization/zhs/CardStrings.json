@@ -275,6 +275,7 @@
     "NAME": "不祥",
     "DESCRIPTION": "打出 collector:藏品 牌时， NL 获得1点 力量 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 打出 collector:藏品 牌时， NL 获得1点 力量 。"
+
   },
   "collector:ProtectingCall": {
     "NAME": "佑护之唤",

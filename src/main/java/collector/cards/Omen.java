@@ -13,7 +13,7 @@ public class Omen extends AbstractCollectorCard {
 
     public Omen() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

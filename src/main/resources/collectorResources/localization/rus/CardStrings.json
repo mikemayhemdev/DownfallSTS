@@ -164,7 +164,8 @@
   },
   "collector:FuelTheFire": {
     "NAME": "Fuel the Fire", //unfinished
-    "DESCRIPTION": "collector:Пиромант. NL Даёт !M! collector:Резерва в след. ходу."
+    "DESCRIPTION": "collector:Пиромант. NL Даёт !M! collector:Резерва в след. ходу.",
+    "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Даёт !M! collector:Резерва в след. ходу и вы берете карту."
   },
   "collector:Goodbye": {
     "NAME": "Goodbye", //unfinished
@@ -186,8 +187,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus", //unfinished
-    "DESCRIPTION": "{@@}collector:Пиромант. NL Вы кладёте !M! карт{!M!|@=|&1=у|&2,&3,&4=ы|&11,&12,&13,&14=} из стопки Коллекции в руку. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "{@@}Оставляется. NL collector:Пиромант. NL Вы кладёте !M! карт{!M!|@=|&1=у|&2,&3,&4=ы|&11,&12,&13,&14=} из стопки Коллекции в руку. NL Сжигается.",
+    "DESCRIPTION": "Выберите 1 из 3 собранных карт. НЛ Добавьте !M! его копии в свою стопку «Собранное». НЛ Выхлоп.",
     "EXTENDED_DESCRIPTION": [
       "Выберите карту, которую хотите добавить в руку."
     ]
@@ -280,8 +280,8 @@
   },
   "collector:Omen": {
     "NAME": "Предзнаменование",
-    "DESCRIPTION": "ВСЕ враги теряют !M! ОЗ, когда вы разыгрываете Коллекционные карты.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL ВСЕ враги теряют !M! ОЗ, когда вы разыгрываете Коллекционные карты."
+    "DESCRIPTION": " Даёт !M! Силы, когда вы разыгрываете Коллекционные карты.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL  Даёт !M! Силы, когда вы разыгрываете Коллекционные карты."
   },
   "collector:ProtectingCall": {
     "NAME": "Protecting Call", //unfinished
@@ -345,8 +345,8 @@
   },
   "collector:Soulforge": {
     "NAME": "Soulforge",
-    "DESCRIPTION": "Вы берёте !M! карту из стопки Коллекции, она теряет collector:Megathereal. NL Сжигается.", //unfinished
-    "UPGRADE_DESCRIPTION": "Вы берёте !M! карты из стопки Коллекции, они теряют collector:Megathereal. NL Сжигается." //unfinished
+    "DESCRIPTION": "Возьмите карту из своей стопки «Собрано». Получите !М! Модернизированная копия. НЛ Выхлоп.", //unfinished
+    "UPGRADE_DESCRIPTION": "Возьмите карту из своей стопки «Собрано». Получите !М! Его обновленные копии. НЛ Выхлоп." //unfinished
   },
   "collector:Spark": {
     "NAME": "Искра",
@@ -382,7 +382,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "Thorn Whip", //unfinished
-    "DESCRIPTION": "Наносит !D! урона. NL Даёт 9 Эссенции при добавлении в колоду." //unfinished
+    "DESCRIPTION": "Сделка !Д! повредить и применить !M! hermit:Травмы ВСЕМ врагам. NL Получите *Заточку." //unfinished
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer", //unfinished
@@ -391,7 +391,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "Броня бездны",
-    "DESCRIPTION": "Даёт !B! Защиты ВСЕМ. NL Накладывает !M! collector:Порчи на врагов с collector:Порчей." //unfinished
+    "DESCRIPTION": "Даёт !B! Защиты ВСЕМ & 1 expansioncontent:Неуловимости." //unfinished
   },  
   "collector:WhirlingFlame": {
     "NAME": "Пламенный вихрь",
@@ -448,7 +448,7 @@
   },
   "collector:ChosenCard": {
     "NAME": "Избранный",
-    "DESCRIPTION": "Накладывает !M! Слабости. NL Накладывает !M! Уязвимости, если враг не собирается атаковать."
+    "DESCRIPTION": "Накладывает !M! Слабости. NL Накладывает !clm2! Уязвимости, если враг не собирается атаковать."
   },
   "collector:ClericCard": {
     "NAME": "Клирик",
@@ -680,7 +680,7 @@
   },
   "collector:ShootingStar": {
     "NAME": "Падающая звезда",
-    "DESCRIPTION": "Эфирная. NL При первом разыгрывании карты collector:Пироманта за ход, добавляет в руку её копию. NL Она стоит 0, пока не разыграна." //unfinished
+    "DESCRIPTION": "При первом разыгрывании карты collector:Пироманта за атака, добавляет в руку её копию. NL Она стоит 0, пока не разыграна." //unfinished
   },
   "collector:CollectorCard": {
     "NAME": "Уроборос",
