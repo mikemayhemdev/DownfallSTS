@@ -19,6 +19,7 @@ public class Hoard extends AbstractCollectorCard {
     public Hoard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 2;
+        isPyre();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
