@@ -3,6 +3,7 @@ package collector.cards.collectibles;
 import collector.cards.BindingCall;
 import collector.cards.ProtectingCall;
 import collector.cards.RagingCall;
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -17,6 +18,9 @@ import static collector.util.Wiz.makeInHand;
 public class TorchHeadCard extends AbstractCollectibleCard {
     public final static String ID = makeID(TorchHeadCard.class.getSimpleName());
     // intellij stuff skill, self, uncommon, , , , , , 
+    private ArrayList<AbstractCard> dupeListForPrev = new ArrayList<>();
+    private float rotationTimer;
+    private int previewIndex;
 
     public TorchHeadCard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -39,4 +43,36 @@ public class TorchHeadCard extends AbstractCollectibleCard {
     public void upp() {
         upgradeBaseCost(0);
     }
+
+    private void add_cards(){
+        dupeListForPrev.add(new BindingCall());
+        dupeListForPrev.add(new ProtectingCall());
+        dupeListForPrev.add(new RagingCall());
+    }
+
+    @Override
+    public void update() {
+        super.update();
+        if (dupeListForPrev.isEmpty()) {
+            add_cards();
+        }
+        if (hb.hovered) {
+            if (rotationTimer <= 0F) {
+                rotationTimer = 2F;
+                if (dupeListForPrev.size() == 0) {
+                    cardsToPreview = CardLibrary.cards.get("Madness");
+                } else {
+                    cardsToPreview = dupeListForPrev.get(previewIndex);
+                }
+                if (previewIndex == dupeListForPrev.size() - 1) {
+                    previewIndex = 0;
+                } else {
+                    previewIndex++;
+                }
+            } else {
+                rotationTimer -= Gdx.graphics.getDeltaTime();
+            }
+        }
+    }
+
 }
