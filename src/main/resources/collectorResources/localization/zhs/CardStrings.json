@@ -124,7 +124,7 @@
     "DESCRIPTION": "下 !M! 个回合开始时， NL 获得X点 力量 。"
   },
   "collector:Extricate": {
-    "NAME": "断魂斩",
+    "NAME": "断魂术",
     "DESCRIPTION": " 消耗 手中所有非攻击牌。 NL 造成 !D! 点伤害。"
   },
   "collector:FeelMyPain": {
