@@ -125,7 +125,7 @@
   },
   "collector:Extricate": {
     "NAME": "断魂斩",
-    "DESCRIPTION": " 消耗 手牌中所有非攻击牌。 NL 造成 !D! 点伤害。"
+    "DESCRIPTION": " 消耗 手中所有非攻击牌。 NL 造成 !D! 点伤害。"
   },
   "collector:FeelMyPain": {
     "NAME": "转嫁疼痛",
@@ -150,7 +150,7 @@
   },
   "collector:FleetingEmbers": {
     "NAME": "转瞬之烬",
-    "DESCRIPTION": "collector:Pyre. NL 获得 !B! 点 格挡 。 NL 获得 !M! 张 *余烬 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 张 *余烬 。"
   },
   "collector:Forgery": {
     "NAME": "伪造",
@@ -195,7 +195,7 @@
   },
   "collector:Hoard": {
     "NAME": "囤积",
-    "DESCRIPTION": "collector:Pyre. NL 抽 !M! 张牌， NL 将其 保留 至下回合。"
+    "DESCRIPTION": "collector:焰葬 。 NL 抽 !M! 张牌， NL 将其 保留 至下回合。"
   },
   "collector:HoardersStrike": {
     "NAME": "囤积者打击",
