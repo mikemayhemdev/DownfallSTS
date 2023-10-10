@@ -75,7 +75,7 @@
   },
   "collector:Bagpipes": {
     "NAME": "风笛",
-    "FLAVOR": "This dreaded instrument is said to have driven Kublai the Great mad.",
+    "FLAVOR": "这种可怕的乐器据说曾惊扰到元世祖。",
     "DESCRIPTIONS": [
       "每当你给予 #y虚弱 或 #y易伤 时，额外给予 #b1 层。"
     ]
@@ -100,21 +100,21 @@
   },
   "collector:ForbiddenFruit": {
     "NAME": "禁忌之果",
-    "FLAVOR": "This species of fruit looks completely unfamiliar.",
+    "FLAVOR": "这种水果看起来真陌生。",
     "DESCRIPTIONS": [
       "拾起时，从所有可获得的牌中各选择 #b1 张普通、 #b罕见 ，及 #y稀有 牌。 NL 获得 #b8 点 最大生命。"
     ]
   },
   "collector:RoughDiamond": {
     "NAME": "粗糙钻石",
-    "FLAVOR": "With the mines demolished, even this tarnished stone is valuable.",
+    "FLAVOR": "矿藏耗尽后，哪怕这般暗淡的石头也变得值钱起来。",
     "DESCRIPTIONS": [
       "战斗开始时，牌组与 #y收藏堆 中的 #y稀有 牌该场战斗耗能减 #b1 ，最低减至 #b1 点。"
     ]
   },
   "collector:BlockedChakra": {
     "NAME": "被缚查克拉",
-    "FLAVOR": "One pulled muscle is all it takes.",
+    "FLAVOR": "只需一次肌肉拉伤。",
     "DESCRIPTIONS": [
       "回合开始时获得 [E] ，从第4回合开始才从 #y收藏堆 抽牌。"
     ]
