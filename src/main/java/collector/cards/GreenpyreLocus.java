@@ -1,6 +1,8 @@
 package collector.cards;
 
+import basemod.helpers.CardModifierManager;
 import collector.CollectorCollection;
+import collector.cardmods.CollectedCardMod;
 import collector.patches.CollectiblesPatches.CollectibleCardColorEnumPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -29,8 +31,10 @@ public class GreenpyreLocus extends AbstractCollectorCard {
             selectionChoices.add(allCollecteds.remove(AbstractDungeon.cardRandomRng.random(allCollecteds.size() - 1)));
         }
         addToBot(new SelectCardsCenteredAction(selectionChoices, 1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
+            AbstractCard tar = cards.get(0).makeCopy();
+            CardModifierManager.addModifier(tar, new CollectedCardMod());
             for (int i = 0; i < magicNumber; i++) {
-                CollectorCollection.combatCollection.addToRandomSpot(cards.get(0).makeCopy());
+                CollectorCollection.combatCollection.addToRandomSpot(tar.makeStatEquivalentCopy());
             }
         }));
     }
