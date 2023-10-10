@@ -13,7 +13,7 @@ public class DefaultCollectibleCard extends AbstractCollectibleCard {
     // intellij stuff power, self, uncommon, , , , , 1, 1
 
     public DefaultCollectibleCard() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 

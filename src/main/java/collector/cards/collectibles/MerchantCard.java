@@ -13,7 +13,7 @@ public class MerchantCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, rare, , , , , 4, 2
 
     public MerchantCard() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 4;
     }
 

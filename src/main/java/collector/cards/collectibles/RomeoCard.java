@@ -13,7 +13,7 @@ public class RomeoCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, uncommon, , , , , 5, 3
 
     public RomeoCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 5;
     }
 

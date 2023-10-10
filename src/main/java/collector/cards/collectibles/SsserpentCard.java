@@ -13,7 +13,7 @@ public class SsserpentCard extends AbstractCollectibleCard {
     // intellij stuff attack, enemy, uncommon, 20, 6, , , , 
 
     public SsserpentCard() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = 20;
         cardsToPreview = new Doubt();
     }
