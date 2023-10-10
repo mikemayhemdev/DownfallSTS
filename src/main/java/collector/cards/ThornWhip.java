@@ -14,7 +14,7 @@ public class ThornWhip extends AbstractCollectorCard {
     // intellij stuff attack, enemy, rare, 11, 1, , , , 
 
     public ThornWhip() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = 6;
         baseMagicNumber = 3;
         isMultiDamage = true;
