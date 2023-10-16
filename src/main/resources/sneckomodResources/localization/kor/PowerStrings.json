@@ -57,7 +57,7 @@
   "sneckomod:UnlimitedRollsPower": {
     "NAME": "무제한 도박",
     "DESCRIPTIONS": [
-      "내 턴 시작 시 #y영혼의 #y도박+를 #b1 장 얻습니다. 그 카드에 #y휘발성과 #y소멸 효과가 추가됩니다."
+      "내 턴 시작 시 #y영혼의 #y도박+를 #b1 장 얻습니다. 그 카드에 #y소멸 효과가 추가됩니다."
     ]
   },
   "sneckomod:Transmogrifying": {

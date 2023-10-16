@@ -324,8 +324,8 @@
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "무제한 도박",
-    "DESCRIPTION": "내 턴 시작 시 *영혼의 *도박을 1장 얻습니다. 그 카드에는 휘발성 과 소멸 효과가 추가됩니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴 시작 시 *영혼의 *도박을 1장 얻습니다. 그 카드에는 휘발성 과 소멸 효과가 추가됩니다."
+    "DESCRIPTION": "내 턴 시작 시 *영혼의 *도박을 1장 얻습니다. 그 카드에는 소멸 효과가 추가됩니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴 시작 시 *영혼의 *도박을 1장 얻습니다. 그 카드에는 소멸 효과가 추가됩니다."
   },
   "sneckomod:WideSting": {
     "NAME": "광역 찌르기",
