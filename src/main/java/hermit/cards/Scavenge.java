@@ -1,6 +1,7 @@
 package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -51,19 +52,17 @@ public class Scavenge extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, magicNumber), magicNumber));
         if (isDeadOn()) {
-            onDeadOn();
+            TriggerDeadOnEffect(p,m);
+        }
+    }
 
-            int DeadOnTimes = DeadOnAmount();
+    @Override
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m)
+    {
+        AbstractDungeon.player.gainGold(defaultSecondMagicNumber);
 
-            for (int a = 0; a < DeadOnTimes; a++) {
-                AbstractDungeon.player.gainGold(defaultSecondMagicNumber);
-
-                for (int i = 0; i < defaultSecondMagicNumber; ++i) {
-                    AbstractDungeon.effectList.add(new GainPennyEffect(p, p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, true));
-                }
-            }
-
-            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
+        for (int i = 0; i < defaultSecondMagicNumber; ++i) {
+            AbstractDungeon.effectList.add(new GainPennyEffect(p, p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, true));
         }
     }
 

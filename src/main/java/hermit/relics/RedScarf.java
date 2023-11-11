@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
 import hermit.HermitMod;
-import hermit.actions.RedScarfAction;
 import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makeRelicOutlinePath;
@@ -27,12 +26,12 @@ public class RedScarf extends CustomRelic implements OnApplyPowerRelic {
     @Override
     public boolean onApplyPower(AbstractPower var1, AbstractCreature var2, AbstractCreature var3)
     {
-        if (var1.type == AbstractPower.PowerType.DEBUFF && var1.amount != 0 && var3 == AbstractDungeon.player && var2 != AbstractDungeon.player && !var2.hasPower("Artifact"))
+        if (var1.type == AbstractPower.PowerType.DEBUFF && var1.amount != 0 && var3 == AbstractDungeon.player && var2 != AbstractDungeon.player && !var2.hasPower("Artifact") && !var2.hasPower(var1.ID))
         {
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             flash();
 
-            this.addToBot(new RedScarfAction(2));
+            this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
         }
 
         return true;

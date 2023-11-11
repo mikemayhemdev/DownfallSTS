@@ -1,13 +1,11 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
@@ -49,22 +47,20 @@ public class Enervate extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int dam = this.damage;
+
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn),
                         EnumPatch.HERMIT_GHOSTFIRE));
         if (isDeadOn()) {
-
-            onDeadOn();
-
-            int DeadOnTimes = DeadOnAmount();
-
-            for (int a = 0; a < DeadOnTimes; a++) {
-                this.addToBot(new GainEnergyAction(1));
-                this.addToBot(new DrawCardAction(1));
-            }
-
-            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
+            TriggerDeadOnEffect(p,m);
         }
+    }
+
+    @Override
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m)
+    {
+        this.addToBot(new GainEnergyAction(1));
+        this.addToBot(new DrawCardAction(1));
     }
 
     public void triggerOnGlowCheck() {
