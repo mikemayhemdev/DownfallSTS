@@ -153,7 +153,7 @@
   },
   "hermit:Spite": {
     "NAME": "恶意",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 手中每有一张 诅咒 ， NL 抽一张牌。"
+    "DESCRIPTION": "消耗 手中不可打出牌。 NL 获得 !B! 点 格挡 。 NL 抽 !M! 张牌。"
   },
   "hermit:Manifest": {
     "NAME": "恶灵现身",
@@ -238,7 +238,7 @@
   },
   "hermit:TrackingShot": {
     "NAME": "追踪射击",
-    "DESCRIPTION": "hermit:专注 。 NL 造成 !D! 点伤害。"
+    "DESCRIPTION": "hermit:专注 。 NL 造成 !D! 点伤害两次。"
   },
   "hermit:LoneWolf": {
     "NAME": "孤狼",
@@ -268,11 +268,11 @@
   },
   "hermit:Showdown": {
     "NAME": "决战",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 随机打出手中 *打击 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机全打出手中 *打击 。"
   },
   "hermit:LuckOfTheDraw": {
     "NAME": "神抽",
-    "DESCRIPTION": "抽牌直到抽到耗能共计为 !M! 。"
+    "DESCRIPTION": "抽牌直至耗能共计为 !M! 。"
   },
   "hermit:Coalescence": {
     "NAME": "愈合",
@@ -304,8 +304,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "风暴之眼",
-    "DESCRIPTION": "将 [E] 回复至上限。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽一张牌。 NL hermit:精准 ： NL 将 [E] 回复至上限。 NL 消耗 。"
+    "DESCRIPTION": "hermit:专注 。 NL 将 [E] 回复至上限。 NL 消耗 。"
   },
   "hermit:FinalCanter": {
     "NAME": "最终手段",
