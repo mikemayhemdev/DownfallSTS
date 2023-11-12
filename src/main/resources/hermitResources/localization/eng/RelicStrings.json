@@ -39,7 +39,7 @@
     "NAME": "Red Scarf",
     "FLAVOR": "It's warm and fuzzy.",
     "DESCRIPTIONS": [
-      "Whenever you apply a new debuff to an enemy, gain #b2 #yBlock."
+      "Whenever you apply a new debuff to an enemy, gain #b3 #yBlock."
     ]
   },
   "hermit:DentedPlate": {

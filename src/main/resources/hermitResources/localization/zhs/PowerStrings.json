@@ -49,7 +49,7 @@
 },
 "hermit:EternalPower": {
         "NAME": "永恒形态",
-        "DESCRIPTIONS": ["每回合抽到的前 #b4 张牌该回合首次耗能减 #b", " 。"]
+        "DESCRIPTIONS": ["每回合抽到的前 #b4 张可打出牌该回合首次耗能减 #b", " 。"]
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "压倒性力量",
