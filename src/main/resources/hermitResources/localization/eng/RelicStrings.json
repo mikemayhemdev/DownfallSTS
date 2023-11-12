@@ -39,7 +39,7 @@
     "NAME": "Red Scarf",
     "FLAVOR": "It's warm and fuzzy.",
     "DESCRIPTIONS": [
-      "Whenever you apply a new debuff to an enemy, gain #b2 #yBlock."
+      "Whenever you apply a new debuff to an enemy, gain #b3 #yBlock."
     ]
   },
   "hermit:DentedPlate": {
@@ -82,7 +82,7 @@
     "NAME": "Brass Tacks",
     "FLAVOR": "The luster on these tacks never seems to fade.",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain #b3 Block."
+      "At the end of your turn, gain #b2 Block."
     ]
   },
   "hermit:BlackPowder": {
