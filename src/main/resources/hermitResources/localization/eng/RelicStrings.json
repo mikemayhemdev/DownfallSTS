@@ -82,7 +82,7 @@
     "NAME": "Brass Tacks",
     "FLAVOR": "The luster on these tacks never seems to fade.",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain #b2 Block."
+      "At the end of your turn, gain #b3 Block."
     ]
   },
   "hermit:BlackPowder": {
