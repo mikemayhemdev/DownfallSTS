@@ -272,7 +272,7 @@
   },
   "hermit:LuckOfTheDraw": {
     "NAME": "神抽",
-    "DESCRIPTION": "抽牌直至耗能共计为 !M! 。"
+    "DESCRIPTION": "抽牌直至耗能共计 !M! 。"
   },
   "hermit:Coalescence": {
     "NAME": "愈合",
