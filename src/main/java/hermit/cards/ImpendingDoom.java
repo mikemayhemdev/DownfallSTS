@@ -1,9 +1,7 @@
 package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -51,38 +49,37 @@ public class ImpendingDoom extends AbstractDynamicCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
-            int DeadOnTimes = DeadOnAmount();
-
-            trig_deadon = true;
-            onDeadOn();
-
+            Wiz.atb(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, baseDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+            Wiz.atb(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(baseDamage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
             CardCrawlGame.sound.playA("BELL", -0.5f);
-
-            for (int a = 0; a < DeadOnTimes; a++) {
-                Wiz.atb(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 13, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-                Wiz.atb(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(13, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
-            }
-
-            Wiz.att(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
-
     }
 
     public void triggerOnEndOfTurnForPlayingCard() {
         this.dontTriggerOnUseCard = false;
 
-        AbstractDungeon.player.powers.removeIf(pow -> pow.ID == Concentration.POWER_ID);
+        // I decree that Impending Doom is not a Dead On effect itself.
+        // The alternative is too horrible to imagine.
+        double hand_pos = (AbstractDungeon.player.hand.group.indexOf(this)+0.5);
+        double hand_size = (AbstractDungeon.player.hand.size());
+        double relative = Math.abs(hand_pos-hand_size/2);
 
-        if (isDeadOnPos()) {
+        if (relative<1)
+        {
             dontTriggerOnUseCard = true;
             AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
         }
-
     }
 
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        if (isDeadOnPos()) {
+
+        double hand_pos = (AbstractDungeon.player.hand.group.indexOf(this)+0.5);
+        double hand_size = (AbstractDungeon.player.hand.size());
+        double relative = Math.abs(hand_pos-hand_size/2);
+
+        if (relative<1)
+        {
             this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
         }
     }

@@ -2,7 +2,8 @@ package charbosses.cards.hermit;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,6 +11,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.beyond.SnakeDagger;
+import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import hermit.cards.Purgatory;
 import hermit.characters.hermit;
 import hermit.vfx.ShortScreenFire;
@@ -28,6 +31,16 @@ public class EnPurgatory extends AbstractHermitBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new ShortScreenFire(), 0.5F));
         addToBot(new DamageAction(p, new DamageInfo(m, this.damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+
+        for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
+            if (!m2.isDead && !m2.isDying && m2 instanceof SnakeDagger) {
+                addToBot(new VFXAction(m2, new InflameEffect(m), 0.2F));
+                addToBot(new SuicideAction(m2));
+                addToBot(new HideHealthBarAction(m2));
+            }
+        }
+
+        addToBot(new SpawnMonsterAction(new SnakeDagger(-400, 150), true));
     }
 
     @Override

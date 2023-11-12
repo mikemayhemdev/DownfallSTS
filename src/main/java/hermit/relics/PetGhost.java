@@ -36,6 +36,20 @@ public class PetGhost extends CustomRelic implements OnPlayerDeathRelic {
         grayscale = false;
     }
 
+    /*
+    @Override
+    public int onLoseHpLast(int damageAmount) {
+        if (!canDie && (damageAmount >= Wiz.p().currentHealth)) {
+            canDie = true;
+            grayscale = true;
+            AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            flash();
+            return 0;
+        }
+        return damageAmount;
+    }
+    */
+
     @Override
     public boolean onPlayerDeath(AbstractPlayer p, DamageInfo damageInfo) {
         if (!canDie && p.currentHealth <= 0) {
@@ -43,7 +57,8 @@ public class PetGhost extends CustomRelic implements OnPlayerDeathRelic {
             grayscale = true;
             AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             flash();
-            p.currentHealth = 1;
+            p.currentHealth += p.lastDamageTaken;
+            damageInfo.output = 0;
             p.healthBarUpdatedEvent();
             return false;
         }

@@ -57,7 +57,7 @@
   },
   "hermit:BlackWind": {
     "NAME": "Black Wind",
-    "DESCRIPTION": "Ethereal. NL Deal damage equal to your missing health. NL Exhaust.",
+    "DESCRIPTION": "Ethereal. NL Deal damage equal to your missing HP. NL Exhaust.",
     "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
   },
   "hermit:Purgatory": {
@@ -66,7 +66,7 @@
   },
   "hermit:ShadowCloak": {
     "NAME": "Shadow Cloak",
-    "DESCRIPTION": "Whenever you draw or Exhaust a Curse, gain !M! Block."
+    "DESCRIPTION": "Whenever you draw or Exhaust a Curse card, gain !M! Block."
   },
   "hermit:FatalDesire": {
     "NAME": "Fatal Desire",
@@ -138,7 +138,7 @@
   },
   "hermit:ImpendingDoom": {
     "NAME": "Impending Doom",
-    "DESCRIPTION": "Unplayable. NL hermit:Dead_On: NL At the end of your turn, deal 13 damage to EVERYONE."
+    "DESCRIPTION": "Unplayable. NL If this is hermit:Dead_On at the end of your turn, deal 13 damage to EVERYONE."
   },
   "hermit:MementoCard": {
     "NAME": "Memento",
@@ -154,7 +154,7 @@
   },
   "hermit:Spite": {
     "NAME": "Spite",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a card for each *Curse in your hand."
+    "DESCRIPTION": "Exhaust all Unplayable cards in your hand. NL Gain !B! Block. NL Draw !M! cards."
   },
   "hermit:Manifest": {
     "NAME": "Manifest",
@@ -238,8 +238,8 @@
     "EXTENDED_DESCRIPTION": [" NL (Repeats !M! ", "time.)","times.)"]
   },
   "hermit:TrackingShot": {
-    "NAME": "Tracking Shot",
-    "DESCRIPTION": "hermit:Concentrate. NL Deal !D! damage."
+    "NAME": "Tracking Shots",
+    "DESCRIPTION": "hermit:Concentrate. NL Deal !D! damage twice."
   },
   "hermit:LoneWolf": {
     "NAME": "Lone Wolf",
@@ -269,11 +269,11 @@
   },
   "hermit:Showdown": {
     "NAME": "Showdown",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Play all *Strikes in your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Play all *Strikes in your hand."
   },
   "hermit:LuckOfTheDraw": {
     "NAME": "Luck of the Draw",
-    "DESCRIPTION": "Draw until you draw !M! total [E] worth of cards."
+    "DESCRIPTION": "Draw cards until their total cost is !M! or more."
   },
   "hermit:Coalescence": {
     "NAME": "Coalescence",
@@ -305,8 +305,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "Eye Of The Storm",
-    "DESCRIPTION": "Gain Energy up to your maximum. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a card. NL hermit:Dead_On: NL Gain Energy up to your maximum. NL Exhaust."
+    "DESCRIPTION": "hermit:Concentrate. NL Gain Energy up to your maximum. NL Exhaust."
   },
   "hermit:FinalCanter": {
     "NAME": "Final Canter",

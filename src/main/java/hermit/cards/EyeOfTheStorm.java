@@ -1,13 +1,17 @@
 package hermit.cards;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.actions.EyeOfTheStormAction;
 import hermit.characters.hermit;
+import hermit.powers.Concentration;
+import hermit.util.Wiz;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -46,7 +50,11 @@ public class EyeOfTheStorm extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new EyeOfTheStormAction(p,this, getLogicalCardCost(this)));
+
+        if (!AbstractDungeon.player.hasPower(Concentration.POWER_ID)) {
+            Wiz.atb(new ApplyPowerAction(p, p, new Concentration(p, -1), -1));
+        }
+        Wiz.atb(new EyeOfTheStormAction(p,this, getLogicalCardCost(this)));
     }
 
     private static int getLogicalCardCost(AbstractCard ccc) {

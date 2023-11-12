@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
@@ -60,17 +61,14 @@ public class Deadeye extends AbstractDynamicCard {
                         AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
         if (isDeadOn()) {
-            onDeadOn();
-
-            int DeadOnTimes = DeadOnAmount();
-
-            for (int a = 0; a < DeadOnTimes; a++) {
-                this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
-            }
-
-            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
+            TriggerDeadOnEffect(p,m);
         }
+    }
 
+    @Override
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m)
+    {
+        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
     }
 
     public void triggerOnGlowCheck() {

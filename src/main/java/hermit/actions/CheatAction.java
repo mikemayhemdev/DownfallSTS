@@ -24,11 +24,13 @@ public class CheatAction extends AbstractGameAction {
     private AbstractCard onlyChoice;
     private boolean onlyBoolean = false;
     private boolean isdeadon;
+    private int trig_times;
 
-    public CheatAction(int numCards, AbstractHermitCard cheatcard, boolean isdeadon) {
+    public CheatAction(int numCards, AbstractHermitCard cheatcard, boolean isdeadon, int trig_times) {
         this.amount = numCards;
         this.cheatcard = cheatcard;
         this.isdeadon = isdeadon;
+        this.trig_times = trig_times;
 
         this.actionType = ActionType.CARD_MANIPULATION;
         this.startingDuration = Settings.ACTION_DUR_FAST;
@@ -100,9 +102,8 @@ public class CheatAction extends AbstractGameAction {
             if (c.hasTag(AbstractHermitCard.Enums.DEADON))
             {
                 ((AbstractHermitCard)c).trig_deadon = true;
+                ((AbstractHermitCard)c).trig_times = trig_times;
             }
-            else
-            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
 
         c.current_y = -200.0F * Settings.scale;

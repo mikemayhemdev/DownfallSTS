@@ -2,15 +2,11 @@ package hermit.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import hermit.HermitMod;
 import hermit.util.TextureLoader;
-
-import java.util.Iterator;
 
 import static hermit.HermitMod.makeRelicOutlinePath;
 import static hermit.HermitMod.makeRelicPath;
@@ -25,13 +21,10 @@ public class RyeStalk extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
     }
 
-    @Override
-    public void atBattleStart() {
-        flash();
-
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            this.addToBot(new RelicAboveCreatureAction(mo, this));
-            this.addToBot(new ApplyPowerAction(mo, AbstractDungeon.player, new StrengthPower(mo, -2), -2, true));
+    public void wasHPLost(int damageAmount) {
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && damageAmount > 0 && AbstractDungeon.actionManager.turnHasEnded) {
+            this.flash();
+            this.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
         }
     }
 
