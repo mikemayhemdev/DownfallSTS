@@ -589,7 +589,7 @@
   },
   "bronze:Refactor": {
     "NAME": "重构",
-    "DESCRIPTION": " 预见 !M! 。 NL 消耗 丢弃的牌。 NL 每 消耗 一张 状态牌 ， NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": " 预见 !M! ， NL 消耗 丢弃的牌。 NL 每 消耗 一张 状态牌 ， NL 获得 !B! 点 格挡 。"
   },
   "bronze:Turbo": {
     "NAME": "内核加速",
