@@ -35,16 +35,14 @@ public class Showdown extends AbstractDynamicCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int DAMAGE = 9;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     // /STAT DECLARATION/
 
     public Showdown() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        this.selfRetain=true;
-        this.exhaust=true;
         loadJokeCardImage(this, "showdown.png");
     }
 

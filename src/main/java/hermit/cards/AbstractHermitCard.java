@@ -3,9 +3,17 @@ package hermit.cards;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.actions.ComboAction;
@@ -27,6 +35,7 @@ public abstract class AbstractHermitCard extends CustomCard {
 
     static boolean doneInit = false;
     public boolean trig_deadon = false;
+    public int trig_times = 1;
 
     public static void init() {
         doneInit=true;
@@ -81,6 +90,7 @@ public abstract class AbstractHermitCard extends CustomCard {
         super.resetAttributes();
 
         this.trig_deadon = false;
+        this.trig_times = 1;
     }
 
     @Override
@@ -128,18 +138,6 @@ public abstract class AbstractHermitCard extends CustomCard {
                 VigorPatch.isActive += 1;
             }
 
-            Iterator findPow = AbstractDungeon.player.relics.iterator();
-
-            while(findPow.hasNext()) {
-                AbstractRelic c = (AbstractRelic)findPow.next();
-
-                if (c.relicId.equals(BlackPowder.ID))
-                {
-                    ((BlackPowder)c).PowderCharge += 2;
-                    c.counter = ((BlackPowder)c).PowderCharge;
-                }
-            }
-
             if (!dontTriggerOnUseCard) {
                 if (deadOnThisTurn.size() > 0)
                     AbstractHermitCard.deadOnThisTurn.set(deadOnThisTurn.size() - 1, true);
@@ -169,9 +167,50 @@ public abstract class AbstractHermitCard extends CustomCard {
         return true;
     }
 
+    public void TriggerDeadOnEffect(AbstractPlayer p, AbstractMonster m)
+    {
+        // Things that happen before Dead On effect.
+        onDeadOn();
+
+        // Trigger Dead On effect.
+        int DeadOnTimes = DeadOnAmount();
+
+        // For effects that are stacked, rather than repeated.
+        DeadOnEffectStacking(p,m,DeadOnTimes);
+
+        // Effects that are repeated.
+        for (int a = 0; a < DeadOnTimes; a++) {
+            DeadOnEffect(p,m);
+
+            // Trigger Black Powder.
+            Iterator findPow = AbstractDungeon.player.relics.iterator();
+
+            while(findPow.hasNext()) {
+                AbstractRelic c = (AbstractRelic)findPow.next();
+
+                if (c.relicId.equals(BlackPowder.ID))
+                {
+                    this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, c));
+                    this.addToBot(new DamageAllEnemiesAction((AbstractCreature) null, DamageInfo.createDamageMatrix(2, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE,true));
+                }
+            }
+        }
+
+        // Remove Concentration.
+        this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
+    }
+
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m)
+    {
+    }
+
+    public void DeadOnEffectStacking(AbstractPlayer p, AbstractMonster m, int val)
+    {
+    }
+
     public int DeadOnAmount()
     {
-        int do_times = 1;
+        int do_times = trig_times;
 
         if (AbstractDungeon.player.hasPower(SnipePower.POWER_ID)) {
             do_times++;

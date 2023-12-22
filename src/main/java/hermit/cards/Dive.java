@@ -47,22 +47,17 @@ public class Dive extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int dam = this.damage;
-
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
 
         if (isDeadOn()) {
-            onDeadOn();
-
-            int DeadOnTimes = DeadOnAmount();
-
-            for (int a = 0; a < DeadOnTimes; a++) {
-                this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, magicNumber), magicNumber));
-            }
-
-            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
+            TriggerDeadOnEffect(p,m);
         }
+    }
 
+    @Override
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m)
+    {
+        this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, magicNumber), magicNumber));
     }
 
     public void triggerOnGlowCheck() {

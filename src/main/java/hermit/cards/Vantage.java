@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.SnipePower;
@@ -57,22 +58,21 @@ public class Vantage extends AbstractDynamicCard {
 
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         if (isDeadOn()) {
-            onDeadOn();
-
-            int DeadOnTimes = DeadOnAmount();
-
-            for (int a = 0; a < DeadOnTimes; a++) {
-                    Wiz.atb(new DrawCardAction(magicNumber, new AbstractGameAction() {
-                        @Override
-                        public void update() {
-                            for (AbstractCard c: DrawCardAction.drawnCards)
-                                Wiz.att(new UpgradeSpecificCardAction(c));
-                            isDone = true;
-                        }
-                    }));
-            }
-            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
+            TriggerDeadOnEffect(p,m);
         }
+    }
+
+    @Override
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m)
+    {
+        Wiz.atb(new DrawCardAction(magicNumber, new AbstractGameAction() {
+            @Override
+            public void update() {
+                for (AbstractCard c: DrawCardAction.drawnCards)
+                    Wiz.att(new UpgradeSpecificCardAction(c));
+                isDone = true;
+            }
+        }));
     }
 
     public void triggerOnGlowCheck() {

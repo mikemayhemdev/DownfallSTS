@@ -35,6 +35,7 @@ public class HermitDoomsday extends AbstractBossMechanicPower {
     }
 
 
+    /*
     @Override
     public void atStartOfTurnPostDraw() {
         flash();
@@ -42,6 +43,7 @@ public class HermitDoomsday extends AbstractBossMechanicPower {
         CardModifierManager.addModifier(q, new RetainCardMod());
         addToBot(new MakeTempCardInHandAction(q));
     }
+    */
 
     static {
         powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);

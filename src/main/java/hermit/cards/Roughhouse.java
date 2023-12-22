@@ -58,19 +58,17 @@ public class Roughhouse extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (isDeadOn()) {
-            onDeadOn();
-
-            int DeadOnTimes = DeadOnAmount();
-
-            for (int a = 0; a < DeadOnTimes; a++) {
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-            }
-
-            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
+            TriggerDeadOnEffect(p,m);
         }
 
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+    }
+
+    @Override
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m)
+    {
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block,true));
     }
 
     public void triggerOnGlowCheck() {

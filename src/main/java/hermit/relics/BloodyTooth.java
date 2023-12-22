@@ -2,10 +2,7 @@ package hermit.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.HermitMod;
 import hermit.util.TextureLoader;
 
@@ -26,20 +23,10 @@ public class BloodyTooth extends CustomRelic {
         if ((AbstractDungeon.getCurrRoom()).eliteTrigger)
         {
             this.flash();
-            this.counter++;
-        }
-    }
-
-    @Override
-    public void onEquip() {
-        this.counter = 0;
-    }
-
-    public void atBattleStart() {
-        if (this.counter > 0) {
-            this.flash();
-            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.counter), this.counter));
-            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            if (AbstractDungeon.player.currentHealth > 0) {
+                AbstractDungeon.player.heal(7);
+            }
+            AbstractDungeon.player.gainGold(35);
         }
     }
 

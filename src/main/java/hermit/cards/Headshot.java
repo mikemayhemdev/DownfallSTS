@@ -46,15 +46,13 @@ public class Headshot extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int base_dam = this.damage;
         int dam = this.damage;
 
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn),
                         EnumPatch.HERMIT_GUN2));
         if (isDeadOn()) {
-            onDeadOn();
-            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
+            TriggerDeadOnEffect(p,m);
         }
     }
 

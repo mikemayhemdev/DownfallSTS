@@ -10,7 +10,7 @@
     "NAME": "Rye Stalk",
     "FLAVOR": "Still in mint condition, despite being chewed on for so long.",
     "DESCRIPTIONS": [
-      "At the start of each combat, all enemies lose #b2 #yStrength."
+      "Whenever you lose HP during enemy turn, draw #b1 card."
     ]
   },
   "hermit:BartenderGlass": {
@@ -39,7 +39,7 @@
     "NAME": "Red Scarf",
     "FLAVOR": "It's warm and fuzzy.",
     "DESCRIPTIONS": [
-      "Whenever you apply a debuff to an enemy, gain #b2 #yBlock."
+      "Whenever you apply a new debuff to an enemy, gain #b3 #yBlock."
     ]
   },
   "hermit:DentedPlate": {
@@ -53,7 +53,7 @@
     "NAME": "Pet Ghost",
     "FLAVOR": "Poor guy.",
     "DESCRIPTIONS": [
-      "First time you would die each combat, survive with #b1 HP instead."
+      "Prevent your first lethal HP loss each combat."
     ]
   },
   "hermit:CharredGlove": {
@@ -82,21 +82,21 @@
     "NAME": "Brass Tacks",
     "FLAVOR": "The luster on these tacks never seems to fade.",
     "DESCRIPTIONS": [
-      "Start each combat with #b2 #yMetallicize."
+      "At the end of your turn, gain #b2 Block."
     ]
   },
   "hermit:BlackPowder": {
     "NAME": "Black Powder",
     "FLAVOR": "Handle with care.",
     "DESCRIPTIONS": [
-      "At the end of your turn, deal #b2 damage to ALL enemies for each #yhermit:Dead_On effect triggered."
+      "Whenever you trigger a #yhermit:Dead_On effect, deal #b2 damage to ALL enemies."
     ]
   },
   "hermit:BloodyTooth": {
     "NAME": "Broken Tooth",
     "FLAVOR": "Appears too large to have come from a human jaw...",
     "DESCRIPTIONS": [
-      "Whenever you beat an Elite encounter, gain #b1 #yStrength at the start of each combat for the rest of the Act."
+      "Whenever you defeat an Elite encounter, heal #b7 HP and gain #b35 gold."
     ]
   }
 }

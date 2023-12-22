@@ -307,7 +307,7 @@
   "downfall:HermitDoomsday": {
     "NAME": "末日",
     "DESCRIPTIONS": [
-      "#y亡命之徒 以 #b1 层 #y仪式 的状态开始战斗。每回合开始时，它会将 #b1 张 带有 #y保留 的 #r末日将临 加入你的手牌。"
+      "#y亡命之徒 以 #b1 层 #y仪式 的状态开始战斗。每当其打出 #y炼狱 时，召唤一只 #y匕首 。"
     ]
   },
   "downfall:NextTurnPowerPower": {
