@@ -153,7 +153,7 @@
   },
   "collector:FleetingEmbers": {
     "NAME": "스치는 불씨",
-    "DESCRIPTION": "collector:Pyre. NL 방어도를 !B! 얻습니다. NL *불씨를 !M! 장 얻습니다."
+    "DESCRIPTION": "collector:장작. NL 방어도를 !B! 얻습니다. NL *불씨를 !M! 장 얻습니다."
   },
   "collector:Forgery": {
     "NAME": "위조품",
@@ -165,7 +165,7 @@
   "collector:FuelTheFire": {
     "NAME": "연료 공급",
     "DESCRIPTION": "collector:장작. NL 다음 턴에 collector:비축을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "collector:장작. NL 다음 턴에 collector:비축을 !M! 얻습니다 그리고 카드를 1장이 울었어요."
+    "UPGRADE_DESCRIPTION": "collector:장작. NL 다음 턴에 collector:비축을 !M! 얻습니다. 카드를 1장 뽑습니다."
   },
   "collector:Goodbye": {
     "NAME": "잘 가거라",
@@ -187,7 +187,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "머무는 녹색 불꽃",
-    "DESCRIPTION": "수집된 카드 3장 중 1장을 선택하세요. NL 추가 !M! 그 사본을 수집된 더미에 넣습니다.",
+    "DESCRIPTION": "collector:수집품 카드 3장 중 1장을 선택합니다. NL *수집품 카드 더미에 그 카드를 !M! 장 복사해 섞어 넣습니다.",
     "EXTENDED_DESCRIPTION": [
       "가져올 카드를 선택하십시오."
     ]
@@ -198,7 +198,7 @@
   },
   "collector:Hoard": {
     "NAME": "저축",
-    "DESCRIPTION": "collector:Pyre. NL 카드를 !M! 장 뽑습니다. NL 이번 턴 동안 그 카드에 보존 효과가 추가됩니다."
+    "DESCRIPTION": "collector:장작. NL 카드를 !M! 장 뽑습니다. NL 이번 턴 동안 그 카드에 보존 효과가 추가됩니다."
   },
   "collector:HoardersStrike": {
     "NAME": "저축가의 타격",
@@ -280,8 +280,8 @@
   },
   "collector:Omen": {
     "NAME": "징조",
-    "DESCRIPTION": "수집품 카드를 사용할 때마다 적 힘을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 수집품 카드를 사용할 때마다 적 힘을 !M! 얻습니다."
+    "DESCRIPTION": "수집품 카드를 사용할 때마다 힘을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 수집품 카드를 사용할 때마다 힘을 1 얻습니다."
   },
   "collector:ProtectingCall": {
     "NAME": "수호의 부름",
@@ -345,8 +345,8 @@
   },
   "collector:Soulforge": {
     "NAME": "영혼 구축",
-    "DESCRIPTION": "수집된 더미에서 카드를 한 장 뽑습니다. 게인!엠! 그것의 업그레이드된 사본. NL 배기.",
-    "UPGRADE_DESCRIPTION": "수집품 카드를 !M! 장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "collector:수집품 카드 더미에서 카드를 1장 뽑습니다. 강화된 그 카드를 !M! 장 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "collector:수집품 카드 더미에서 카드를 1장 뽑습니다. 강화된 그 카드를 !M! 장 얻습니다. NL 소멸."
   },
   "collector:Spark": {
     "NAME": "불똥",
@@ -382,7 +382,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "가시 채찍",
-    "DESCRIPTION": "딜!디! 피해를 입히고 적용하세요!M! hermit:타박상을 모든 적에게. NL *Shiv를 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. 적 전체에게 hermit:타박상을 !M! 부여합니다. NL 단도를 1장 얻습니다."
   },
   "collector:Torchbearer": {
     "NAME": "횃불 봉송자",
@@ -395,7 +395,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "공허 갑옷",
-    "DESCRIPTION": "모두 방어도를 !B! 얻습니다 & bronze:흐릿함을 1 얻습니다."
+    "DESCRIPTION": "모두 방어도를 !B! 얻습니다. NL 모두 bronze:흐릿함을 1 얻습니다."
   },
   "collector:Wildfire": {
     "NAME": "들불",
@@ -680,7 +680,7 @@
   },
   "collector:ShootingStar": {
     "NAME": "유성",
-    "DESCRIPTION": "매 턴 처음 collector:장작으로 카드 소멸 시 그 카드를 복사해 얻습니다. NL 사용하기 전까지 그 카드의 비용은 0이 됩니다. 공격에만 작동."
+    "DESCRIPTION": "매 턴 처음 collector:장작으로 공격 카드 소멸 시 그 카드를 복사해 얻습니다. NL 사용하기 전까지 그 카드의 비용은 0이 됩니다."
   },
   "collector:CollectorCard": {
     "NAME": "우로보로스",
