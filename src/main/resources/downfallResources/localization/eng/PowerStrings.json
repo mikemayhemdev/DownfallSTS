@@ -334,7 +334,7 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Wheel of Fortune",
     "DESCRIPTIONS": [
-      "Hermit's card cost can't change. Whenever you play an #yAttack, Hermit discards his leftmost card and draws #b1 card."
+      "After you play an #yAttack, Hermit #yCycles his first card. Whenever he draws #yNecronomicurse, he gains #b2 #yStrength. Hermit's card cost can't change."
     ]
   },
   "downfall:HermitDoomsday": {
