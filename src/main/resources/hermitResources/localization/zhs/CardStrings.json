@@ -308,7 +308,7 @@
   },
   "hermit:FinalCanter": {
     "NAME": "最终手段",
-    "DESCRIPTION": "保留 。 NL 消耗 手中所有 诅咒 ， NL 每张造成 !D! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": "保留 。 NL 手中每有一张 诅咒 ， NL 造成 !D! 点伤害。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": " NL （造成 !M! 次）",
     "EXTENDED_DESCRIPTION": [" NL （造成 !M! 次）"]
   },
