@@ -26,6 +26,7 @@ public class Virus extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         cardsToPreview = new MinorBeam();
         selfRetain = true;
+        exhaust = true;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Virus.png"));
     }
 
@@ -43,7 +44,7 @@ public class Virus extends AbstractBronzeCard {
 
     public void upp() {
         cardsToPreview.upgrade();
-        upgradeDamage(1);
+        upgradeDamage(2);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

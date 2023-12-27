@@ -301,8 +301,8 @@
   },
   "bronze:Virus": {
     "NAME": "病毒",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 手牌变为 *微 *光 *射 *线 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 手牌变为 *微 *光 *射 *线 *+ 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 手牌全变 *微 *光 *射 *线 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 手牌全变 *微 *光 *射 *线 *+ 。 NL 消耗 。"
   },
   "bronze:Backtrace": {
     "NAME": "回溯",
@@ -463,7 +463,7 @@
   },
   "bronze:ShipIt": {
     "NAME": "废能转换",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 状态牌 ， NL 伤害增加 !M! 点。 NL (包括 消耗 堆)"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 状态牌 ， NL 额外造成 !M! 点。 NL (包括 消耗 堆)"
   },
   "bronze:Break": {
     "NAME": "打断",

@@ -319,7 +319,7 @@
   },
   "Guardian:CrystalBeam": {
     "NAME": "水晶射线",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有 guardianmod:镶嵌 的 guardianmod:宝石 ， NL 伤害增加 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 牌组每有 guardianmod:镶嵌 的 guardianmod:宝石 ， NL 额外造成 !M! 点。"
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "玛瑙",
