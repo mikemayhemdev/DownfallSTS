@@ -239,7 +239,7 @@
   },
   "hermit:TrackingShot": {
     "NAME": "트래킹샷",
-    "DESCRIPTION": "hermit:집중합니다. NL 피해를 !D! 줍니다."
+    "DESCRIPTION": "hermit:집중합니다. NL 피해를 !D! 만큼 두 번 줍니다."
   },
   "hermit:LoneWolf": {
     "NAME": "외톨이",
