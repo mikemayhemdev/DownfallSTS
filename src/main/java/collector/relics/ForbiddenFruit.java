@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.util.TextureLoader;
 
+import java.util.stream.Collectors;
+
 public class ForbiddenFruit extends CustomRelic {
     public static final String ID = CollectorMod.makeID(ForbiddenFruit.class.getSimpleName());
     private static final String IMG_PATH = ForbiddenFruit.class.getSimpleName() + ".png";
@@ -37,7 +39,8 @@ public class ForbiddenFruit extends CustomRelic {
             AbstractDungeon.previousScreen = AbstractDungeon.screen;
         }
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
-        CardGroup group = CardGroup.getGroupWithoutBottledCards(AbstractDungeon.srcCommonCardPool);
+        CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        group.group.addAll(AbstractDungeon.srcCommonCardPool.group.stream().map(AbstractCard::makeCopy).collect(Collectors.toList()));
         AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[0], false, false, false, false);
     }
 
@@ -57,13 +60,15 @@ public class ForbiddenFruit extends CustomRelic {
             }
             else if (stage == 0) {
                 selected = false;
-                CardGroup group = CardGroup.getGroupWithoutBottledCards(AbstractDungeon.srcUncommonCardPool);
+                CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+                group.group.addAll(AbstractDungeon.srcUncommonCardPool.group.stream().map(AbstractCard::makeCopy).collect(Collectors.toList()));
                 AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[0], false, false, false, false);
                 stage++;
             }
             else if (stage == 1) {
                 selected = false;
-                CardGroup group = CardGroup.getGroupWithoutBottledCards(AbstractDungeon.srcRareCardPool);
+                CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+                group.group.addAll(AbstractDungeon.srcRareCardPool.group.stream().map(AbstractCard::makeCopy).collect(Collectors.toList()));
                 AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[0], false, false, false, false);
                 stage++;
             }

@@ -1,7 +1,9 @@
 package hermit.cards;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import hermit.HermitMod;
 import hermit.actions.CheatAction;
 import hermit.characters.hermit;
@@ -27,6 +29,7 @@ public class Cheat extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
     private static final int COST = 1;
+    private int trig_amount = 1;
 
 
     // /STAT DECLARATION/
@@ -42,14 +45,23 @@ public class Cheat extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        trig_amount = 1;
 
         if (isDeadOn()) {
-            onDeadOn();
+            TriggerDeadOnEffect(p,m); // Of note is that Cheat's Dead On is now properly triggered "twice".
         }
+        else                        // Cheated without any dead on stuff.
+        this.addToBot(new CheatAction(this.magicNumber,this,isDeadOn(),trig_amount));
+    }
 
-        this.addToBot(new CheatAction(this.magicNumber,this,isDeadOn()));
-        //this.addToBot(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), false));
-        //this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true));
+    @Override
+    public void DeadOnEffectStacking(AbstractPlayer p, AbstractMonster m, int val)
+    {
+        trig_amount = val;
+
+        // Repeated to maintain dead on trigger order.
+        // By definition, isdeadon is true here.
+        this.addToBot(new CheatAction(this.magicNumber,this,true,trig_amount));
     }
 
     public void triggerOnGlowCheck() {

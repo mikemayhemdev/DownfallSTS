@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import hermit.HermitMod;
 import hermit.actions.SnapshotAction;
 import hermit.characters.hermit;
@@ -49,19 +50,19 @@ public class Snapshot extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         if (isDeadOn()) {
-            onDeadOn();
-
-            int DeadOnTimes = DeadOnAmount();
-
-            this.addToBot(new SnapshotAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),DeadOnTimes));
-
-            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
+            TriggerDeadOnEffect(p,m);
         }
         else {
             AbstractDungeon.actionManager.addToBottom(
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                             EnumPatch.HERMIT_GUN));
         }
+    }
+
+    @Override
+    public void DeadOnEffectStacking(AbstractPlayer p, AbstractMonster m, int val)
+    {
+        this.addToBot(new SnapshotAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),val));
     }
 
     public void triggerOnGlowCheck() {

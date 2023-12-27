@@ -2,6 +2,8 @@ package hermit.cards;
 
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -63,14 +65,7 @@ public class ItchyTrigger extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), EnumPatch.HERMIT_GUN2));
         if (isDeadOn()) {
-            onDeadOn();
-            int DeadOnTimes = DeadOnAmount();
-
-            for (int a = 0; a < DeadOnTimes; a++) {
-                this.itchyTrigger();
-            }
-
-            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
+            TriggerDeadOnEffect(p,m);
         }
     }
 
@@ -118,6 +113,12 @@ public class ItchyTrigger extends AbstractDynamicCard {
                 c.setCostForTurn(Math.max(c.costForTurn-this.magicNumber,0));
                 c.superFlash(Color.GOLD.cpy());
             }
+    }
+
+    @Override
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m)
+    {
+        this.itchyTrigger();
     }
 
     // Upgraded stats.

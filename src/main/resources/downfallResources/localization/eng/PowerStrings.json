@@ -340,7 +340,7 @@
   "downfall:HermitDoomsday": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "Hermit starts with #b1 #yRitual. At the start of your turn, gain an #rImpending #rDoom with #yRetain."
+      "Hermit starts with #b1 #yRitual. Whenever Hermit plays Purgatory, he summons a Dagger."
     ]
   },
   "downfall:NeowEclipse": {

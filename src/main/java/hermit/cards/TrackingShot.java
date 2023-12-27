@@ -30,8 +30,8 @@ public class TrackingShot extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 9;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 4;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
     // /STAT DECLARATION/
 
@@ -45,9 +45,13 @@ public class TrackingShot extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int dam = this.damage;
+
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn),
-                        EnumPatch.HERMIT_GUN2));
+                        EnumPatch.HERMIT_GUN3));
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn),
+                        EnumPatch.HERMIT_GUN));
 
             if (!AbstractDungeon.player.hasPower(Concentration.POWER_ID))
             {

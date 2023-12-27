@@ -39,7 +39,7 @@ public class Reprieve extends AbstractDynamicCard {
 
     public Reprieve() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = 12;
+        baseMagicNumber = magicNumber = 10;
         loadJokeCardImage(this, "reprieve.png");
         this.tags.add(CardTags.HEALING);
         this.isEthereal = true;

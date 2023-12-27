@@ -49,7 +49,7 @@
 },
 "hermit:EternalPower": {
         "NAME": "Power Eternal",
-        "DESCRIPTIONS": ["The first #b4 cards drawn at the start of each turn cost #b", " less that turn."]
+        "DESCRIPTIONS": ["The first #b4 playable cards drawn at the start of each turn cost #b", " less that turn."]
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "Overwhelming Power",
