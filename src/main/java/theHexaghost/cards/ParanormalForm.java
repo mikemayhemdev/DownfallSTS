@@ -9,7 +9,7 @@ public class ParanormalForm extends AbstractHexaCard {
 
     public final static String ID = makeID("ParanormalForm");
 
-    //stupid intellij stuff POWER, SELF, RARE
+    //Poltergeist easier search
 
     private static final int MAGIC = 6;
     private static final int UPG_MAGIC = 3;
