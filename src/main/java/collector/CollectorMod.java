@@ -80,6 +80,11 @@ public class CollectorMod implements
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
     public static Color COLLECTIBLE_CARD_COLOR = CardHelper.getColor(13, 158, 153);
+    public static TopPanelExtraDeck extraDeckPanel;
+    public static TopPanelEssence essencePanel;
+
+
+
 
     public CollectorMod() {
         BaseMod.subscribe(this);
@@ -208,8 +213,8 @@ public class CollectorMod implements
     public void receivePostInitialize() {
         addPotions();
         initializeSavedData();
-        BaseMod.addTopPanelItem(new TopPanelExtraDeck());
-        BaseMod.addTopPanelItem(new TopPanelEssence());
+        essencePanel = new TopPanelEssence();
+        extraDeckPanel = new TopPanelExtraDeck();
     }
 
     @Override
@@ -308,6 +313,14 @@ public class CollectorMod implements
         }
         combatCollectionPileButton = new CombatCollectionPileButton();
         NewReserves.resetReserves();
+
+        if (AbstractDungeon.player instanceof CollectorChar) {
+            BaseMod.addTopPanelItem(extraDeckPanel);
+            BaseMod.addTopPanelItem(essencePanel);
+        } else {
+        	BaseMod.removeTopPanelItem(extraDeckPanel);
+            BaseMod.removeTopPanelItem(essencePanel);
+        }
     }
 
     private void initializeSavedData() {
