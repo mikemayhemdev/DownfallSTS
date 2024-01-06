@@ -227,7 +227,7 @@ public class CollectorMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         CollectorCollection.atBattleStart();
         NewReserves.resetReserves();
-        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
+        if (AbstractDungeon.player instanceof CollectorChar) {
             if (((CollectorChar) AbstractDungeon.player).torchHead == null)
                 ((CollectorChar) AbstractDungeon.player).torchHead = new RenderOnlyTorchHead();
         }
@@ -314,7 +314,7 @@ public class CollectorMod implements
         combatCollectionPileButton = new CombatCollectionPileButton();
         NewReserves.resetReserves();
 
-        if (AbstractDungeon.player instanceof CollectorChar) {
+        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
             BaseMod.addTopPanelItem(extraDeckPanel);
             BaseMod.addTopPanelItem(essencePanel);
         } else {
