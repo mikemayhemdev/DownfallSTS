@@ -227,7 +227,7 @@ public class CollectorMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         CollectorCollection.atBattleStart();
         NewReserves.resetReserves();
-        if (AbstractDungeon.player instanceof CollectorChar) {
+        if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
             if (((CollectorChar) AbstractDungeon.player).torchHead == null)
                 ((CollectorChar) AbstractDungeon.player).torchHead = new RenderOnlyTorchHead();
         }
