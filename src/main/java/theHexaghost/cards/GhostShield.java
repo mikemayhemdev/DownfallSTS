@@ -30,11 +30,12 @@ public class GhostShield extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+        applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
     }
 
     @Override
     public void afterlife() {
-        use(AbstractDungeon.player, null);
+//        use(AbstractDungeon.player, null);
         applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
     }
 /*

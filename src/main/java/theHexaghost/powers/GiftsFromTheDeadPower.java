@@ -5,7 +5,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.curses.Injury;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -46,28 +50,35 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
 
     @Override
     public void atStartOfTurnPostDraw() {
-        flash();
-        addToBot(new AbstractGameAction() {
-            { startDuration = duration = 1.5f; }
-            @Override
-            public void update() {
-                if (duration == startDuration) {
-                    isDone = true;
-                    for (int i = 0; i < GiftsFromTheDeadPower.this.amount; i++) {
-                        if (!AbstractDungeon.player.exhaustPile.isEmpty()) {
-                            ArrayList<AbstractCard> eligible = AbstractDungeon.player.exhaustPile.group.stream().filter(c -> c.hasTag(HexaMod.AFTERLIFE)).collect(Collectors.toCollection(ArrayList::new));  // Very proud of this line
-                            if (!eligible.isEmpty()) {
-                                isDone = false;
-                                AbstractCard q = eligible.get(AbstractDungeon.cardRandomRng.random(eligible.size() - 1));
-                                AbstractDungeon.player.exhaustPile.removeCard(q);
-                                AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(q.makeSameInstanceOf()));
-                            }
-                        }
-                    }
-                }
-                tickDuration();
-            }
-        });
+        this.addToBot(new LoseEnergyAction(amount));
+//        flash();
+//        addToBot(new AbstractGameAction() {
+//            { startDuration = duration = 1.5f; }
+//            @Override
+//            public void update() {
+//                if (duration == startDuration) {
+//                    isDone = true;
+//                    for (int i = 0; i < GiftsFromTheDeadPower.this.amount; i++) {
+//                        if (!AbstractDungeon.player.exhaustPile.isEmpty()) {
+//                            ArrayList<AbstractCard> eligible = AbstractDungeon.player.exhaustPile.group.stream().filter(c -> c.hasTag(HexaMod.AFTERLIFE)).collect(Collectors.toCollection(ArrayList::new));  // Very proud of this line
+//                            if (!eligible.isEmpty()) {
+//                                isDone = false;
+//                                AbstractCard q = eligible.get(AbstractDungeon.cardRandomRng.random(eligible.size() - 1));
+//                                AbstractDungeon.player.exhaustPile.removeCard(q);
+//                                AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(q.makeSameInstanceOf()));
+//                            }
+//                        }
+//                    }
+//                }
+//                tickDuration();
+//            }
+//        });
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        this.flash();
+        this.addToBot(new DrawCardAction(3*amount));
     }
 
     @Override

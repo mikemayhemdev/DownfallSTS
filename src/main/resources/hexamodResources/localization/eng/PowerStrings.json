@@ -53,11 +53,12 @@
       " additional card."
     ]
   },
-  "hexamod:CrispyPower": {
+  "hexamod:CrispyPower_new": {
     "NAME": "Extra Crispy",
     "DESCRIPTIONS": [
-      "#ySoulburn applied is increased by #b",
-      "."
+      "Whenever you #Exhaust a card, it will contribute towards the current #yGhostflame according to its type and cost #b",
+      " time.",
+      " times."
     ]
   },
   "hexamod:EnhancePower": {
@@ -145,8 +146,8 @@
   "hexamod:ParanormalFormPower": {
     "NAME": "Poltergeist",
     "DESCRIPTIONS": [
-      "Whenever you play an #yAfterlife card, deal #b",
-      " damage to a random enemy."
+      "Whenever you #yExhaust an #yAfterlife card, trigger its #yAfterlife effect #b",
+      " additional time(s)."
     ]
   },
   "hexamod:PastPower": {

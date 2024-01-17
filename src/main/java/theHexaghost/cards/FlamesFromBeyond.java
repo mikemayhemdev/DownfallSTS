@@ -11,7 +11,7 @@ public class FlamesFromBeyond extends AbstractHexaCard {
 
     public FlamesFromBeyond() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseBurn = burn = 18;
+        baseBurn = burn = 9;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "FlamesFromBeyond.png");
@@ -19,6 +19,7 @@ public class FlamesFromBeyond extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            burn(q, burn);
             burn(q, burn);
         }
     }
@@ -33,7 +34,7 @@ public class FlamesFromBeyond extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBurn(6);
+            upgradeBurn(3);
         }
     }
 }

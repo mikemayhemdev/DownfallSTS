@@ -73,16 +73,18 @@ public class InfernoGhostflame extends AbstractGhostflame {
                 amountOfIgnitedGhostflames++;
             }
         }
+
+
+
         /*
         if (GhostflameHelper.activeGhostFlame == this){
             atb(new AdvanceAction(false));
         }
         */
 
-        /*
         if (amountOfIgnitedGhostflames == 6) {
-            atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(2), 2));
-        }*/
+            atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
+        }
 
     }
 

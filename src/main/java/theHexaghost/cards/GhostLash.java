@@ -20,7 +20,7 @@ public class GhostLash extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
 
     public GhostLash() {
@@ -28,23 +28,24 @@ public class GhostLash extends AbstractHexaCard {
         baseDamage = DAMAGE;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 3;
         HexaMod.loadJokeCardImage(this, "GhostLash.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, magicNumber), magicNumber));
     }
 
     @Override
     public void afterlife() {
 
-        AbstractMonster m = AbstractDungeon.getRandomMonster();
-        if (m == null) return;
-        this.calculateCardDamage(m);
-        use(AbstractDungeon.player, m);
+//        AbstractMonster m = AbstractDungeon.getRandomMonster();
+//        if (m == null) return;
+//        this.calculateCardDamage(m);
+//        use(AbstractDungeon.player, m);
         //atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, damage-4, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VigorPower.POWER_ID));
+//        atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VigorPower.POWER_ID));
 
         atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, magicNumber), magicNumber));
 
@@ -62,7 +63,7 @@ public class GhostLash extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 }

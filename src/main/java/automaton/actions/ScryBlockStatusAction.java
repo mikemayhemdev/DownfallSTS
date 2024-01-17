@@ -11,14 +11,16 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import theHexaghost.HexaMod;
 
 public class ScryBlockStatusAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
     private float startingDuration;
     private int blockPerCard;
+    private boolean used_by_night_cards;
 
-    public ScryBlockStatusAction(int numCards, int blockPer) {
+    public ScryBlockStatusAction(int numCards, int blockPer, boolean used_by_night_cards) {
         this.amount = numCards;
         if (AbstractDungeon.player.hasRelic("GoldenEye")) {
             AbstractDungeon.player.getRelic("GoldenEye").flash();
@@ -26,6 +28,7 @@ public class ScryBlockStatusAction extends AbstractGameAction {
         }
 
         blockPerCard = blockPer;
+        this.used_by_night_cards = used_by_night_cards;
         this.actionType = ActionType.CARD_MANIPULATION;
         this.startingDuration = Settings.ACTION_DUR_FAST;
         this.duration = this.startingDuration;
@@ -58,15 +61,22 @@ public class ScryBlockStatusAction extends AbstractGameAction {
 
                 AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, true, TEXT[0]);
             } else if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
-                    AbstractDungeon.player.drawPile.moveToDiscardPile(c);
-                    if (c.type == AbstractCard.CardType.STATUS) {
-                        addToBot(new GainBlockAction(AbstractDungeon.player, blockPerCard));
+                if(used_by_night_cards){
+                    for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
+                        AbstractDungeon.player.drawPile.moveToDiscardPile(c);
+                        if (c.hasTag(HexaMod.AFTERLIFE)) {
+                            addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile));
+                        }
                     }
-                    addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile));
-
+                }else {
+                    for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
+                        AbstractDungeon.player.drawPile.moveToDiscardPile(c);
+                        if (c.type == AbstractCard.CardType.STATUS) {
+                            addToBot(new GainBlockAction(AbstractDungeon.player, blockPerCard));
+                        }
+                        addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile));
+                    }
                 }
-
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
             }
 

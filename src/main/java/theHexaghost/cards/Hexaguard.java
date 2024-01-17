@@ -25,8 +25,8 @@ public class Hexaguard extends AbstractHexaCard {
     }
 
     public void afterlife() {
-        blck();
-        atb(new DrawCardAction(AbstractDungeon.player, 1));
+//        blck();
+        atb(new DrawCardAction(AbstractDungeon.player, 2));
     }
 
     public void upgrade() {
