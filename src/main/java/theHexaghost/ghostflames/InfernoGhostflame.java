@@ -83,7 +83,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
         */
 
         if (amountOfIgnitedGhostflames == 6) {
-            atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
+            atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(2), 2));
         }
 
     }

@@ -61,7 +61,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. NL Add !M! random Afterlife cards into your drawpile. NL hexamod:Afterlife: Add !M! random Afterlife cards into your drawpile."
+    "DESCRIPTION": "Ethereal. NL Add !M! random Afterlife card into your hand. NL hexamod:Afterlife: Add !burny! random Afterlife cards into your drawpile."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
@@ -100,7 +100,7 @@
   "hexamod:Floatwork": {
     "NAME": "Floatwork",
     "DESCRIPTION": "Ethereal. NL hexamod:Afterlife: NL Gain !M! Plated Armor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Ethereal. hexamod:Afterlife. NL Gain !M! Plated Armor."
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL hexamod:Afterlife: NL Gain !M! Plated Armor."
   },
   "hexamod:ForkedFlame": {
     "NAME": "Forked Flame",
@@ -118,7 +118,7 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL hexamod:Afterlife: NL Gain !M! Vigor."
+    "DESCRIPTION": "Ethereal. NL hexamod:Afterlife: Deal !D! damage for each hexamod:Afterlife card in your hand."
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Speedrunning",
@@ -127,7 +127,7 @@
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
-    "DESCRIPTION": "The first time you *Retract each turn, gain [E] and draw 1 card. NL hexamod:Retract.",
+    "DESCRIPTION": "Whenever you hexamod:Retract, draw a card.",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time you *Retract each turn, gain [E] and draw 1 card. NL hexamod:Retract."
   },
   "hexamod:GhostOfSpirePresent": {
@@ -136,7 +136,7 @@
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL hexamod:Afterlife: NL Gain !M! bronze:Blur."
+    "DESCRIPTION": "Ethereal. NL Gain !M! bronze:Blur. NL hexamod:Afterlife: NL Gain !B! Block."
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "Gifts From Beyond",
@@ -171,7 +171,7 @@
   },
   "hexamod:Hexaguard": {
     "NAME": "Hexaguard",
-    "DESCRIPTION": "Ethereal.  NL Gain !B! Block. NL hexamod:Afterlife: NL Draw 1 card."
+    "DESCRIPTION": "Ethereal.  NL Draw !M! cards. NL hexamod:Afterlife: NL Gain !B! Block."
   },
   "hexamod:HexaLevel": {
     "NAME": "Infernal Form",

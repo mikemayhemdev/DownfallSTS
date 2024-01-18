@@ -74,7 +74,10 @@ public class ShadowGuise extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(2);
-            cardsToPreview.upgrade();
+            if(cardsToPreview!=null){
+                cardsToPreview.upgrade();
+            }
+
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
@@ -86,6 +89,7 @@ public class ShadowGuise extends AbstractHexaCard {
         super.update();
         if (hb.hovered) {
             cardsToPreview = new NightmareStrike();
+            if(upgraded) cardsToPreview.upgrade();
         }
     }
 

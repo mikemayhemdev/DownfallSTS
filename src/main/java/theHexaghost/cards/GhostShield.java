@@ -35,8 +35,8 @@ public class GhostShield extends AbstractHexaCard {
 
     @Override
     public void afterlife() {
-//        use(AbstractDungeon.player, null);
-        applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
+        blck();
+//        applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
     }
 /*
     public void triggerOnGlowCheck() {

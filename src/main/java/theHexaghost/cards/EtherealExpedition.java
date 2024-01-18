@@ -26,6 +26,7 @@ public class EtherealExpedition extends AbstractHexaCard {
         tags.add(HexaMod.AFTERLIFE);
         exhaust = false;
         baseMagicNumber = magicNumber = 2;
+        baseBurn = burn = 1;
         HexaMod.loadJokeCardImage(this, "EtherealExpedition.png");
     }
 
@@ -55,7 +56,11 @@ public class EtherealExpedition extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        for (int i = 0; i < 2*this.magicNumber; i++) {
+        for (int i = 0; i < this.magicNumber; i++) {
+            AbstractCard q = returnTrulyRandomEtherealCardInCombat().makeCopy();
+            addToBot(new MakeTempCardInHandAction(q));
+        }
+        for (int i = 0; i < this.magicNumber+this.burn; i++) {
             AbstractCard q = returnTrulyRandomEtherealCardInCombat().makeCopy();
             addToBot(new MakeTempCardInDrawPileAction(q, 1, true, true));
         }
@@ -64,7 +69,7 @@ public class EtherealExpedition extends AbstractHexaCard {
     }
 
     public void afterlife() {
-        for (int i = 0; i < this.magicNumber; i++) {
+        for (int i = 0; i < this.burn; i++) {
             AbstractCard q = returnTrulyRandomEtherealCardInCombat().makeCopy();
             addToBot(new MakeTempCardInDrawPileAction(q, 1, true, true));
         }
@@ -73,7 +78,9 @@ public class EtherealExpedition extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeBaseCost(0);
+//            upgradeMagicNumber(1);
+            upgradeBurn(1);
         }
     }
 }

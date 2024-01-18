@@ -24,6 +24,7 @@ public class BurningQuestion extends AbstractHexaCard {
         baseMagicNumber = magicNumber = 2;
         isMultiDamage = true;
         isEthereal = true;
+        tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "BurningQuestion.png");
     }
 
