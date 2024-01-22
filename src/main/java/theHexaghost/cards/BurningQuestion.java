@@ -30,6 +30,7 @@ public class BurningQuestion extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new StrengthPower(p,magicNumber));
+        applyToSelf(new DexterityPower(AbstractDungeon.player,1));
     }
 
     @Override

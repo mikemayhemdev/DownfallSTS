@@ -36,9 +36,9 @@ public class SwordOfDarkness extends AbstractHexaCard {
         atb(new ScryBlockStatusAction(magicNumber, 0, true));
     }
 
-    public void triggerOnGlowCheck() {
-        this.glowColor = !GhostflameHelper.activeGhostFlame.charged ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
-    }// 68
+//    public void triggerOnGlowCheck() {
+//        this.glowColor = !GhostflameHelper.activeGhostFlame.charged ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+//    }// 68
 
     public void upgrade() {
         if (!upgraded) {

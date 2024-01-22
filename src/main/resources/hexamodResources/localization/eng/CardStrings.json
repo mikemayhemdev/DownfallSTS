@@ -23,8 +23,8 @@
   },
   "hexamod:BurningQuestion": {
     "NAME": "Burning Question",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength. NL Afterlife: NL Gain 1 Dexterity.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !M! Strength. NL Afterlife: NL Gain 1 Dexterity."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Strength. NL hexamod:Afterlife: NL Gain 1 Dexterity.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !M! Strength. NL hexamod:Afterlife: NL Gain 1 Dexterity."
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
@@ -79,11 +79,11 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
-    "DESCRIPTION": "Ethereal. Apply !burny! hexamod:Soulburn to ALL enemies. NL hexamod:Afterlife: Apply !burny! hexamod:Soulburn to ALL enemies."
+    "DESCRIPTION": "Ethereal. NL Apply !burny! AoE hexamod:Soulburn. NL hexamod:Afterlife: NL Apply !burny! AoE hexamod:Soulburn."
   },
   "hexamod:FlameSwitch": {
     "NAME": "Bad Omen",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL Increase amount of turns for it to detonate by !M!. NL Exhaust.",
+    "DESCRIPTION": "Ethereal. NL Choose a Ghostflame type to change the current one into. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Choose a Ghostflame type to change the current one into. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Replace the current Ghostflame with a hexamod:Bolstering Ghostflame",
@@ -118,7 +118,7 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. NL hexamod:Afterlife: Deal !D! damage for each hexamod:Afterlife card in your hand."
+    "DESCRIPTION": "Ethereal. NL hexamod:Afterlife: Deal !D! damage. Deal !M! additional damage for each hexamod:Afterlife card in your hand."
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Speedrunning",
@@ -164,9 +164,10 @@
   },
   "hexamod:HeatShield": {
     "NAME": "Heat Shield",
-    "DESCRIPTION": "Gain Block equal to *Soulburn on ALL enemies, then remove *Soulburn.",
+    "DESCRIPTION": "Gain Block equal to *Soulburn on the enemy, then delay its *Soulburn by 1 turn. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain Block equal to *Soulburn on the enemy, then delay its *Soulburn by 1 turn.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Current: !B! Block.)"
+      " NL (Gain !B! Block.)"
     ]
   },
   "hexamod:Hexaguard": {
@@ -259,7 +260,7 @@
   },
   "hexamod:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Ethereal. NL Apply !burny! hexamod:Soulburn. hexamod:Afterlife: Apply !burny! hexamod:Soulburn."
+    "DESCRIPTION": "Ethereal. NL Apply !burny! hexamod:Soulburn. hexamod:Afterlife: NL Apply !burny! hexamod:Soulburn."
   },
   "hexamod:SearingWound": {
     "NAME": "Searing Wound",
@@ -311,7 +312,7 @@
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "Strike From Beyond",
-    "DESCRIPTION": "Deal !D! damage twice. NL expansioncontent:Reclaim a random *Afterlife card.",
+    "DESCRIPTION": "Deal !D! damage. NL Return a random *Afterlife card from your exhaust pile into your drawpile.",
     "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
   },
   "hexamod:SuperheatedStrike": {
@@ -372,8 +373,8 @@
   },
   "hexamod:ThirdSeal": {
     "NAME": "Third Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional card reward.",
-    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional card reward."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional normal card reward.",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional normal card reward."
   },
   "hexamod:FourthSeal": {
     "NAME": "Fourth Seal",

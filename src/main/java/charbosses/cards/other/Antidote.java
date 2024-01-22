@@ -21,12 +21,16 @@ public class Antidote extends AbstractDownfallCard {
 
     public Antidote() {
         super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 11;
+        baseMagicNumber = magicNumber = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PoisonPower(AbstractDungeon.player, AbstractDungeon.player,-this.magicNumber), -this.magicNumber));
-//        atb(new RemoveSpecificPowerAction(p, p, PoisonPower.POWER_ID));
+        if(AbstractDungeon.player.getPower(PoisonPower.POWER_ID).amount <= this.magicNumber){
+            atb(new RemoveSpecificPowerAction(p, p, PoisonPower.POWER_ID));
+        }else{
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PoisonPower(AbstractDungeon.player, AbstractDungeon.player,-this.magicNumber), -this.magicNumber));
+        }
+
     }
 
     public void upp () {

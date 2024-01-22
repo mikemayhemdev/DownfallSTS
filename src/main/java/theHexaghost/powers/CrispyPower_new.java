@@ -7,8 +7,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
+import theHexaghost.actions.AdvanceAction;
 
 import static theHexaghost.GhostflameHelper.activeGhostFlame;
 import static theHexaghost.HexaMod.renderFlames;
@@ -46,6 +48,15 @@ public class CrispyPower_new extends AbstractPower{
             }
         }
     }
+
+    @Override
+    public void atEndOfRound() {
+        if (GhostflameHelper.activeGhostFlame.charged) {
+            AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
+        }
+    }
+
+
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + (amount>=2 ? DESCRIPTIONS[2] : DESCRIPTIONS[1]);

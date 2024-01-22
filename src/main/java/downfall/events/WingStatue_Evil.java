@@ -28,7 +28,7 @@ public class WingStatue_Evil extends AbstractImageEvent {
     }
 
     private CurScreen screen;
-    private int damage = MathUtils.ceil((float) AbstractDungeon.player.getAscensionMaxHPLoss() * 2.0F);
+    private int damage = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.15F);
 
     public WingStatue_Evil() {
         super(NAME, DESCRIPTIONS[0], "images/events/goldenWing.jpg");
@@ -48,7 +48,8 @@ public class WingStatue_Evil extends AbstractImageEvent {
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new ShatteredFragment());
-                        AbstractDungeon.player.decreaseMaxHealth(this.damage);
+//                        AbstractDungeon.player.decreaseMaxHealth(this.damage);
+                        AbstractDungeon.player.damage(new DamageInfo(null, this.damage));
                         AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AttackEffect.FIRE));
                         this.screen = CurScreen.RESULT;
                         logMetricObtainRelicAndDamage(ID, "Destroyed Statue", new ShatteredFragment(), damage);

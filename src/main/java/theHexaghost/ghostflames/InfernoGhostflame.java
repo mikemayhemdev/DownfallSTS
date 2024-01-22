@@ -19,6 +19,7 @@ import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.powers.ApocalypticArmorPower;
 import theHexaghost.powers.EnhancePower;
 import downfall.util.TextureLoader;
+import theHexaghost.relics.IceCube;
 
 import java.util.ArrayList;
 
@@ -83,7 +84,11 @@ public class InfernoGhostflame extends AbstractGhostflame {
         */
 
         if (amountOfIgnitedGhostflames == 6) {
-            atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(2), 2));
+            if(AbstractDungeon.player.hasRelic(IceCube.ID)){
+                atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
+            }else{
+                atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(2), 2));
+            }
         }
 
     }

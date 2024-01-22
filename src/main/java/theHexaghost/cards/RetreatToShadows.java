@@ -11,7 +11,7 @@ public class RetreatToShadows extends AbstractHexaCard {
 
     public final static String ID = makeID("RetreatToShadows");
 
-    //stupid intellij stuff SKILL, SELF, UNCOMMON
+    // Incorporeal
 
     private static final int MAGIC = 5;
     private static final int UPG_MAGIC = -2;
