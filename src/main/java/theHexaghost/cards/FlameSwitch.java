@@ -39,9 +39,9 @@ public class FlameSwitch extends AbstractHexaCard implements OctopusCard{
     public ArrayList<OctoChoiceCard> choiceList() {
 
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
+        cardList.add(new OctoChoiceCard("octo:OctoSear", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[2]));
         cardList.add(new OctoChoiceCard("octo:OctoCrush", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[1]));
         cardList.add(new OctoChoiceCard("octo:OctoEmpower", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[0]));
-        cardList.add(new OctoChoiceCard("octo:OctoSear", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[2]));
 
         return cardList;
     }
