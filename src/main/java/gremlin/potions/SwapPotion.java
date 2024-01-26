@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import gremlin.GremlinMod;
 import gremlin.actions.RandomGremlinSwapAction;
 
 public class SwapPotion extends CustomPotion {
@@ -18,6 +19,7 @@ public class SwapPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.S, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = GremlinMod.potionLabColor;
     }
 
     public void initializeData() {
