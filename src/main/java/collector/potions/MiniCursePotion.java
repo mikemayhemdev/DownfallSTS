@@ -1,13 +1,16 @@
 package collector.potions;
 
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import collector.CollectorMod;
 import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -39,6 +42,9 @@ public class MiniCursePotion extends CustomPotion {
         }
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(GameDictionary.WEAK.NAMES[0]), GameDictionary.keywords.get(GameDictionary.WEAK.NAMES[0])));
+        this.tips.add(new PowerTip(TipHelper.capitalize(GameDictionary.VULNERABLE.NAMES[0]), GameDictionary.keywords.get(GameDictionary.VULNERABLE.NAMES[0])));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("collector:doom")), BaseMod.getKeywordDescription("collector:doom")));
     }
 
     public void use(AbstractCreature target) {
