@@ -2,6 +2,7 @@ package collector.potions;
 
 
 import basemod.abstracts.CustomPotion;
+import collector.CollectorMod;
 import collector.actions.GainReservesAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -23,6 +24,7 @@ public class ReservePotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.H, PotionColor.ELIXIR); //TODO: Potion visual stuff
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor= CollectorMod.potionLabColor;
     }
 
     public void initializeData() {

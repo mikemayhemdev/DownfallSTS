@@ -2,6 +2,7 @@ package collector.potions;
 
 
 import basemod.abstracts.CustomPotion;
+import collector.CollectorMod;
 import collector.actions.GainReservesAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -27,6 +28,7 @@ public class DebuffDoublePotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.H, PotionColor.ELIXIR); //TODO: Potion visual stuff
         this.isThrown = true;
         this.targetRequired = true;
+        this.labOutlineColor= CollectorMod.potionLabColor;
     }
 
     public void initializeData() {

@@ -2,6 +2,7 @@ package collector.potions;
 
 
 import basemod.abstracts.CustomPotion;
+import collector.CollectorMod;
 import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -26,6 +27,7 @@ public class MiniCursePotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.H, PotionColor.ELIXIR); //TODO: Potion visual stuff
         this.isThrown = true;
         this.targetRequired = true;
+        this.labOutlineColor= CollectorMod.potionLabColor;
     }
 
     public void initializeData() {
