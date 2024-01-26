@@ -40,6 +40,7 @@ public class SpawnSlimePotion extends CustomPotion {
 
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("slimeboundmod:split")), BaseMod.getKeywordDescription("slimeboundmod:split")));
     }
 
     public void use(AbstractCreature target) {
