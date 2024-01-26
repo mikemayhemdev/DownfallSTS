@@ -12,7 +12,7 @@
       "doom",
       "doomed"
     ],
-    "DESCRIPTION": "Doomed creatures lose HP at the start of their turn, then Doom is removed #bunless the creature is #yAfflicted (has both #yWeak and #yVulnerable)."
+    "DESCRIPTION": "Doomed creatures lose HP at the start of their turn, then Doom is removed #bunless the creature is #yAfflicted (has both #yWeak and #yVulnerable [REMOVE_SPACE])."
   },
   {
     "PROPER_NAME": "Pyre",
