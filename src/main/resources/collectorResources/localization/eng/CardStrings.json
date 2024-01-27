@@ -235,11 +235,11 @@
   },
   "collector:ItMattersNot": {
     "NAME": "It Matters Not",
-    "DESCRIPTION": "Gain !B! Block. NL Add !M! to ALL enemies' Weak and Vulnerable."
+    "DESCRIPTION": "Gain !B! Block. NL Increase ALL enemy Weak and Vulnerable by !M!."
   },
   "collector:JadedJabs": {
     "NAME": "Jaded Jabs",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to Pyred card's cost + !M!."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Gain *Shivs equal to *Pyred card's cost + !M!."
   },
   "collector:Karma": {
     "NAME": "Karma",
