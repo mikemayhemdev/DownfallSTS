@@ -33,7 +33,6 @@ public class TechPotion extends CustomPotion {
         this.description = potionStrings.DESCRIPTIONS[0] + this.potency + potionStrings.DESCRIPTIONS[1];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("champ:technique")), GameDictionary.keywords.get("champ:technique")));
     }
 
     public void use(AbstractCreature target) {
