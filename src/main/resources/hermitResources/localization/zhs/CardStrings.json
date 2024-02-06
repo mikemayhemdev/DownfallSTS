@@ -17,7 +17,7 @@
   },
   "hermit:Headshot": {
     "NAME": "爆头",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ：造成双倍伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ：伤害+100%。"
   },
   "hermit:Quickdraw": {
     "NAME": "快拔",
