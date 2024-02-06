@@ -46,7 +46,7 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "先古塑形",
-    "DESCRIPTION": "获得 !M! 点 力量 ， NL 或 !DM! 层 *多层护甲 。",
+    "DESCRIPTION": "选择获得 !M! 点 力量 ， NL 或 !DM! 层 *多层护甲 。",
     "EXTENDED_DESCRIPTION": [
       "甜圈之力",
       "获得 !M! 点 力量 。",
@@ -56,8 +56,8 @@
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "准备：猛击",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] 与一张 *史莱姆猛击 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] 与一张 *史莱姆猛击+ 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] ， NL 与一张 *史莱姆猛击 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] ， NL 与一张 *史莱姆猛击+ 。 NL 消耗 。"
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",

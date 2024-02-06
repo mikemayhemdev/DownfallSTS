@@ -35,7 +35,7 @@ public class FloatingOrbs extends AbstractGuardianCard {
 
     public FloatingOrbs() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        this.baseMagicNumber = magicNumber = 4;
+        this.baseMagicNumber = magicNumber = 3;
         this.socketCount = 0;
         updateDescription();
         loadGemMisc();

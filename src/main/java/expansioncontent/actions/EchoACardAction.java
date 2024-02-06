@@ -9,6 +9,7 @@ import expansioncontent.expansionContentMod;
 
 public class EchoACardAction extends AbstractGameAction {
     private final AbstractCard cardToEcho;
+    private boolean free = false;
 
     public EchoACardAction(AbstractCard cardToEcho, int amount) {
         this.cardToEcho = cardToEcho;
@@ -17,6 +18,11 @@ public class EchoACardAction extends AbstractGameAction {
 
     public EchoACardAction(AbstractCard cardToEcho) {
         this(cardToEcho, 1);
+    }
+
+    public EchoACardAction(AbstractCard cardToEcho, boolean freeToUse) {
+        this(cardToEcho, 1);
+        this.free = freeToUse;
     }
 
     @Override
@@ -32,6 +38,9 @@ public class EchoACardAction extends AbstractGameAction {
             mod.addProperty(PropertiesMod.supportedProperties.ETHEREAL, false);
         if (!card.exhaust)
             mod.addProperty(PropertiesMod.supportedProperties.EXHAUST, false);
+        if(this.free){
+            card.freeToPlayOnce = true;
+        }
 
         CardModifierManager.addModifier(card, mod);
         addToTop(new MakeTempCardInHandAction(card, amount));

@@ -301,8 +301,8 @@
   },
   "bronze:Virus": {
     "NAME": "바이러스",
-    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 손에 있는 모든 카드를 *소형 *광선으로 sneckomod:변화시킵니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 손에 있는 모든 카드를 *소형 *광선+으로 sneckomod:변화시킵니다."
+    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 손에 있는 모든 카드를 *소형 *광선으로 sneckomod:변화시킵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 손에 있는 모든 카드를 *소형 *광선+으로 sneckomod:변화시킵니다. NL 소멸."
   },
   "bronze:Backtrace": {
     "NAME": "역추적",

@@ -303,7 +303,7 @@
   },
   "champ:PerfectedStrike": {
     "NAME": "完美打击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 每有一张 *打击 牌， NL 伤害增加 !M! 点。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 每有一张 *打击 牌， NL 额外造成 !M! 点。"
   },
   "champ:GladiatorForm": {
     "NAME": "角斗形态",

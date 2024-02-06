@@ -21,7 +21,7 @@ import static expansioncontent.expansionContentMod.loadJokeCardImage;
 public class LastStand extends AbstractExpansionCard {
     public final static String ID = makeID("LastStand");
 
-    private static final int MAGIC = 10;
+    private static final int MAGIC = 8;
     private static final int UPGRADE_MAGIC = 10;
 
     public LastStand() {

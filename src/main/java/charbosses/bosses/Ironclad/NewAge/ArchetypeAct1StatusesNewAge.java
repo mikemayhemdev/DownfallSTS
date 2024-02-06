@@ -32,7 +32,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
     public ArchetypeAct1StatusesNewAge() {
         super("IC_STATUS_ARCHETYPE", "Status");
 
-        maxHPModifier += 80;
+        maxHPModifier += 75;
         actNum = 1;
         bossMechanicName = IroncladStatusPower.NAME;
         bossMechanicDesc = IroncladStatusPower.DESC[0];
