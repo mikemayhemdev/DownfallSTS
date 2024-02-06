@@ -42,7 +42,7 @@ public class LoneWolfAction extends AbstractGameAction {
                 for(int n = 0; n < i; ++n) {
                     c = p.hand.getTopCard();
                     if (c.cost > 0) {
-                        c.freeToPlayOnce = true;
+                        c.setCostForTurn(0);
                         c.superFlash(Color.GOLD.cpy());
                     }
                 }
@@ -70,7 +70,7 @@ public class LoneWolfAction extends AbstractGameAction {
                 p.hand.removeCard(c);
 
                 if (c.cost > 0) {
-                    c.freeToPlayOnce = true;
+                    c.setCostForTurn(0);
                     c.superFlash(Color.GOLD.cpy());
                 }
 

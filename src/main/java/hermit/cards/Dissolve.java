@@ -36,13 +36,15 @@ public class Dissolve extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
     private static final int COST = 2;
+    private static final int BLOCK = 18;
+    private static final int UPGRADE_PLUS_BLOCK = 7;
 
     // /STAT DECLARATION/
 
     public Dissolve() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
-        baseBlock = block = 12;
+        baseBlock = block = BLOCK;
         this.exhaust=true;
         loadJokeCardImage(this, "dissolve.png");
     }
@@ -59,7 +61,7 @@ public class Dissolve extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(6);
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
             initializeDescription();
         }
     }

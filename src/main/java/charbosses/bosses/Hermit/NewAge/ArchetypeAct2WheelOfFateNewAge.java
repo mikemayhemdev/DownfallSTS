@@ -114,12 +114,10 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         for (int i = 0; i < 3; i++) {
             AbstractCard target = getNextCard();
             cardsList.add(target);
-            // No strength gain for now.
-            /*
+
             if (target.cardID.equals(EnNecronomicurse.ID)) {
                 AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
             }
-             */
         }
         if (AbstractCharBoss.boss instanceof CharBossHermit) {
             CharBossHermit.previewCard = mockDeck.get(0).makeStatEquivalentCopy();
@@ -153,12 +151,11 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         }
         AbstractCard next = getNextCard();
         AbstractCharBoss.boss.hand.addToTop(next);
-        // Not here either.
-        /*
+
         if (next.cardID.equals(EnNecronomicurse.ID)) {
             AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
         }
-         */
+
         AbstractCharBoss.boss.hand.refreshHandLayout();
         AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
             @Override
