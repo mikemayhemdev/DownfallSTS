@@ -41,16 +41,16 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IroncladMushroomPower(p)));
 
-        try {
-            Method loadAnimationMethod = AbstractCreature.class.getDeclaredMethod("loadAnimation", new Class[] { String.class, String.class, float.class });
-            loadAnimationMethod.setAccessible(true);
-            loadAnimationMethod.invoke(AbstractCharBoss.boss, new Object[] { "expansioncontentResources/images/bosses/ironclad/2/Mushroomskeleton.atlas", "expansioncontentResources/images/bosses/ironclad/2/Mushroomskeleton.json", 1.0f });
-            AnimationState.TrackEntry e = AbstractCharBoss.boss.state.setAnimation(0, "Idle", true);
-            ((AnimationStateData)ReflectionHacks.getPrivate(AbstractCharBoss.boss, AbstractCreature.class, "stateData")).setMix("Hit", "Idle", 0.1f);
-            e.setTimeScale(0.9f);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Method loadAnimationMethod = AbstractCreature.class.getDeclaredMethod("loadAnimation", new Class[] { String.class, String.class, float.class });
+//            loadAnimationMethod.setAccessible(true);
+//            loadAnimationMethod.invoke(AbstractCharBoss.boss, new Object[] { "expansioncontentResources/images/bosses/ironclad/2/Mushroomskeleton.atlas", "expansioncontentResources/images/bosses/ironclad/2/Mushroomskeleton.json", 1.0f });
+//            AnimationState.TrackEntry e = AbstractCharBoss.boss.state.setAnimation(0, "Idle", true);
+//            ((AnimationStateData)ReflectionHacks.getPrivate(AbstractCharBoss.boss, AbstractCreature.class, "stateData")).setMix("Hit", "Idle", 0.1f);
+//            e.setTimeScale(0.9f);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 
 

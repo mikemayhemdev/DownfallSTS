@@ -341,8 +341,8 @@
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
-    "DESCRIPTION": "Retain. NL Gain !M! Temporary hexamod:Intensity.",
-    "UPGRADE_DESCRIPTION": "Gain 6 hexamod:Intensity. NL Lose it in X+1 turns. NL Gain [E] . NL Exhaust."
+    "DESCRIPTION": "Gain !M! temp. hexamod:Intensity. NL Gain !M! temp. Strength. NL Gain !M! temp. Dexterity.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! temp. hexamod:Intensity. NL Gain !M! temp. Strength. NL Gain !M! temp. Dexterity."
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Unleash Spirits",

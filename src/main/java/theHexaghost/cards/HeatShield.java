@@ -77,7 +77,7 @@ public class HeatShield extends AbstractHexaCard {
                 isDone = true;
                 AbstractPower po = m.getPower(BurnPower.POWER_ID);
                 if (po != null) {
-                    ((TwoAmountPower) po).amount2 += magicNumber;
+                    ((TwoAmountPower) po).amount2 += 1;
                     po.updateDescription();
                 }
             }

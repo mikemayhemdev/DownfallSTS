@@ -6,8 +6,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import downfall.actions.PerformXAction;
 import sneckomod.SneckoMod;
@@ -26,7 +25,7 @@ public class TurnItUp extends AbstractHexaCard {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
 //        this.exhaust = true;
-        this.retain = true;
+        this.retain = false;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "TurnItUp.png");
@@ -35,6 +34,10 @@ public class TurnItUp extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new EnhancePower(magicNumber));
         addToBot(new ApplyPowerAction(p, p, new LoseIntesityPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new LoseDexterityPower(p, this.magicNumber), this.magicNumber));
 //        if (energyOnUse < EnergyPanel.totalCount) {
 //            energyOnUse = EnergyPanel.totalCount;
 //        }
@@ -48,8 +51,9 @@ public class TurnItUp extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-//            rawDescription = UPGRADE_DESCRIPTION;
+//            upgradeMagicNumber(1);
+            this.retain = true;
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

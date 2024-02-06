@@ -19,7 +19,9 @@ public class Floatwork extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+        if(upgraded){
+            blck();
+        }
         applyToSelf(new PlatedArmorPower(p, magicNumber));
     }
 
