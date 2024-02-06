@@ -2,7 +2,7 @@
   "bronze:FreeFunctionsPotion": {
     "NAME": "Machine Oil",
     "DESCRIPTIONS": [
-      "Increase all numbers on Encoded cards by #b",
+      "Increase all numbers on #yEncoded cards by #b",
       " except cost."
     ]
   },

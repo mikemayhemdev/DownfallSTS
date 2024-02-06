@@ -82,6 +82,8 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
     private static final String CHAR_BUTTON = "charSelect/button.png";
     private static final String CHAR_PORTRAIT = "charSelect/charBG.png";
 
+    public static Color potionLabColor = new Color(205F / 255F, 92F / 255F, 92F / 255F, 1);
+
     public static String getResourcePath(String resource) {
         return ASSETS_FOLDER + "/" + resource;
     }

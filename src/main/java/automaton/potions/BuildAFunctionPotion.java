@@ -1,6 +1,7 @@
 package automaton.potions;
 
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.actions.AddToFuncAction;
 import automaton.cards.SpaghettiCode;
@@ -32,6 +33,7 @@ public class BuildAFunctionPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.BOTTLE, PotionColor.ANCIENT);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = AutomatonMod.potionLabColor;
     }
 
     public void initializeData() {

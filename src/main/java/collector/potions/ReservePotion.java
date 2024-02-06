@@ -1,12 +1,15 @@
 package collector.potions;
 
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
+import collector.CollectorMod;
 import collector.actions.GainReservesAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 
 import static collector.CollectorMod.makeID;
@@ -23,6 +26,7 @@ public class ReservePotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.H, PotionColor.ELIXIR); //TODO: Potion visual stuff
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor= CollectorMod.potionLabColor;
     }
 
     public void initializeData() {
@@ -34,6 +38,7 @@ public class ReservePotion extends CustomPotion {
         }
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("collector:reserve")), BaseMod.getKeywordDescription("collector:reserve")));
     }
 
     public void use(AbstractCreature target) {
