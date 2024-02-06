@@ -40,5 +40,14 @@
       "shackled"
     ],
     "DESCRIPTION": "Les créatures enchaînées perdent de la #yForce pour un tour."
+  },
+  {
+    "PROPER_NAME": "Temporary HP",
+    "ID": "temp_hp",
+    "NAMES": [
+      "temp hp",
+      "temp_hp"
+    ],
+    "DESCRIPTION": "Until end of combat, prevents damage to HP."
   }
 ]
