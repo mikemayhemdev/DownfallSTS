@@ -138,7 +138,7 @@
   },
   "hermit:ImpendingDoom": {
     "NAME": "임박한 종말",
-    "DESCRIPTION": "사용불가. NL hermit:정조준: NL 내 턴 종료 시 모두에게 피해를 13 줍니다."
+    "DESCRIPTION": "사용불가. NL 내 턴 종료 시 hermit:정조준 상태라면 모두에게 피해를 13 줍니다."
   },
   "hermit:MementoCard": {
     "NAME": "유품",
@@ -154,7 +154,7 @@
   },
   "hermit:Spite": {
     "NAME": "앙심",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 저주 한 장당 카드를 뽑습니다. "
+    "DESCRIPTION": "손에 있는 사용불가 카드를 모두 소멸시킵니다. NL 방어도를 !B! 얻습니다. NL 카드를 !M! 장 뽑습니다. "
   },
   "hermit:Manifest": {
     "NAME": "현현",
@@ -239,7 +239,7 @@
   },
   "hermit:TrackingShot": {
     "NAME": "트래킹샷",
-    "DESCRIPTION": "hermit:집중합니다. NL 피해를 !D! 줍니다."
+    "DESCRIPTION": "hermit:집중합니다. NL 피해를 !D! 만큼 두 번 줍니다."
   },
   "hermit:LoneWolf": {
     "NAME": "외톨이",
@@ -269,11 +269,11 @@
   },
   "hermit:Showdown": {
     "NAME": "결착",
-    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 손에 있는 모든 *타격을 사용합니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 모든 *타격을 사용합니다."
   },
   "hermit:LuckOfTheDraw": {
     "NAME": "행운의 뽑기",
-    "DESCRIPTION": "뽑은 카드의 [E]  합이 !M! 만큼 될 때까지 카드를 뽑습니다."
+    "DESCRIPTION": "뽑은 카드의 [E]  합이 !M! 이상 될 때까지 카드를 뽑습니다."
   },
   "hermit:Coalescence": {
     "NAME": "융합",
@@ -305,12 +305,11 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "태풍의 눈",
-    "DESCRIPTION": "최대  [E] 보다 모자란 만큼  [E] 를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "카드를 뽑습니다. NL hermit:정조준: NL 최대  [E] 보다 모자란 만큼  [E] 를 얻습니다. NL 소멸."
+    "DESCRIPTION": "최대  [E] 보다 모자란 만큼  [E] 를 얻습니다. NL 소멸."
   },
   "hermit:FinalCanter": {
     "NAME": "최후의 위선",
-    "DESCRIPTION": "보존. NL 손에 있는 모든 저주를 소멸시킵니다. *소멸시킨 저주 한 장당 피해를 !D! 줍니다. NL 소멸.",
+    "DESCRIPTION": "보존. 손에 있는 저주 한 장당 피해를 !D! 줍니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": " NL (저주가 !M! 장 있습니다.)",
     "EXTENDED_DESCRIPTION": [" NL (저주가 !M! 장 있습니다.)"]
   },
