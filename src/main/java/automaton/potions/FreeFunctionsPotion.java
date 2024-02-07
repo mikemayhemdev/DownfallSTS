@@ -1,6 +1,7 @@
 package automaton.potions;
 
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.cards.AbstractBronzeCard;
 import basemod.abstracts.CustomPotion;
@@ -21,6 +22,7 @@ public class FreeFunctionsPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.BOLT, PotionColor.ANCIENT);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = AutomatonMod.potionLabColor;
     }
 
     public void initializeData() {

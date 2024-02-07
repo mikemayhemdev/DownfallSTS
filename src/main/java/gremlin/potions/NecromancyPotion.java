@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import gremlin.GremlinMod;
 import gremlin.actions.NecromancyAction;
 import gremlin.characters.GremlinCharacter;
 import gremlin.orbs.GremlinStandby;
@@ -21,6 +22,7 @@ public class NecromancyPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.GHOST, PotionColor.FRUIT);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = GremlinMod.potionLabColor;
     }
 
     public void initializeData() {

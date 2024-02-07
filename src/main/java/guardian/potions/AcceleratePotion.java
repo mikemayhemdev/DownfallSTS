@@ -38,6 +38,7 @@ public class AcceleratePotion extends CustomPotion {
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("guardianmod:accelerate")), GameDictionary.keywords.get("guardianmod:accelerate")));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("guardianmod:stasis")), GameDictionary.keywords.get("guardianmod:stasis")));
     }
 
     public void use(AbstractCreature target) {

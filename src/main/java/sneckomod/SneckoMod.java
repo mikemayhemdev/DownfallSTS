@@ -102,7 +102,7 @@ public class SneckoMod implements
     public static Random identifyRng;
 
     public static ArrayList<AbstractCard.CardColor> validColors = new ArrayList<>();
-    public static ArrayList<String> allowedColors = new ArrayList<>(Arrays.asList("RED", "BLUE", "GREEN", "PURPLE", "GUARDIAN", "SLIMEBOUND", "HEXA_GHOST_PURPLE", "THE_CHAMP_GRAY", "THE_BRONZE_AUTOMATON", "GREMLIN", "HERMIT_YELLOW"));
+    public static ArrayList<String> allowedColors = new ArrayList<>(Arrays.asList("RED", "BLUE", "GREEN", "PURPLE", "GUARDIAN", "SLIMEBOUND", "HEXA_GHOST_PURPLE", "THE_CHAMP_GRAY", "THE_BRONZE_AUTOMATON", "GREMLIN", "HERMIT_YELLOW", "THE_COLLECTOR"));
     public static ArrayList<UnknownClass> unknownClasses = new ArrayList<>();
     public static boolean pureSneckoMode = false;
 
@@ -339,7 +339,7 @@ public class SneckoMod implements
             throw new RuntimeException(e);
         }
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
-            if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN && p != CardColorEnumPatch.CardColorPatch.BOSS) {
+            if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN && p != CardColorEnumPatch.CardColorPatch.BOSS && p != CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE) {
                 UnknownClass q = new UnknownClass(p);
                 unknownClasses.add(q);
                 AbstractUnknownCard.unknownClassReplacements.add(new ArrayList<>());

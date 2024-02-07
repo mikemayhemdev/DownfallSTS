@@ -1,6 +1,7 @@
 package automaton.potions;
 
 
+import automaton.AutomatonMod;
 import automaton.powers.CleanCodePower;
 import automaton.powers.FreeFunctionPower;
 import basemod.abstracts.CustomPotion;
@@ -25,6 +26,7 @@ public class CleanCodePotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.H, PotionColor.ELIXIR);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = AutomatonMod.potionLabColor;
     }
 
     public void initializeData() {

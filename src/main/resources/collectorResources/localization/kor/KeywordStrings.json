@@ -32,10 +32,10 @@
   {
     "PROPER_NAME": "비축",
     "NAMES": [
+      "reserve",
       "비축",
       "비축을",
       "비축으로만",
-      "reserve",
       "reserves"
     ],
     "DESCRIPTION": "턴이 지나도 유지되는 다른 종류 #y에너지입니다."

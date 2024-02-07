@@ -1,11 +1,14 @@
 package gremlin.potions;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import gremlin.GremlinMod;
 import gremlin.actions.RandomGremlinSwapAction;
 
 public class SwapPotion extends CustomPotion {
@@ -18,6 +21,7 @@ public class SwapPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.S, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = GremlinMod.potionLabColor;
     }
 
     public void initializeData() {
@@ -25,6 +29,7 @@ public class SwapPotion extends CustomPotion {
         description = DESCRIPTIONS[0];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("gremlin:swap")), BaseMod.getKeywordDescription("gremlin:swap")));
     }
 
     public void use(AbstractCreature target) {

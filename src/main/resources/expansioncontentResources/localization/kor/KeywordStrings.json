@@ -54,6 +54,8 @@
     "PROPER_NAME": "임시 체력",
     "ID": "temp_hp",
     "NAMES": [
+      "temp hp",
+      "temp_hp",
       "임시체력",
       "임시",
       "임시체력을",
