@@ -25,7 +25,7 @@ public class TurnItUp extends AbstractHexaCard {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
 //        this.exhaust = true;
-        this.retain = false;
+//        this.retain = false;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "TurnItUp.png");
