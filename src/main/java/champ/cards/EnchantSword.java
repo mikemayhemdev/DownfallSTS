@@ -39,7 +39,7 @@ public class EnchantSword extends AbstractChampCard {
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = false;
         for (AbstractCard c : p.hand.group) {
-            if (c.baseDamage > 0) {
+            if (c.baseDamage >= 0) {
                 canUse = true;
                 break;
             }
