@@ -101,14 +101,14 @@
     "NAME": "Forbidden Fruit",
     "FLAVOR": "This species of fruit looks completely unfamiliar.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. NL Gain #b8 Max HP."
+      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. Then, obtain a *Sapped."
     ]
   },
   "collector:RoughDiamond": {
     "NAME": "Rough Diamond",
     "FLAVOR": "With the mines demolished, even this tarnished stone is valuable.",
     "DESCRIPTIONS": [
-      "Rare cards in your deck and Collection start combat costing #b1 less, but not less than #b1."
+      "Whenever you play a Rare card, gain [E] ."
     ]
   },
   "collector:BlockedChakra": {

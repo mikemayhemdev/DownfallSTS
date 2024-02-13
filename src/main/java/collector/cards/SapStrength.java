@@ -1,6 +1,9 @@
 package collector.cards;
 
+import collector.powers.LoseHpNextTurnPower;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.DamageCallbackAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
@@ -8,28 +11,24 @@ import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.applyToEnemy;
+import static collector.util.Wiz.*;
 
 public class SapStrength extends AbstractCollectorCard {
     public final static String ID = makeID(SapStrength.class.getSimpleName());
     // intellij stuff attack, enemy, uncommon, 24, 8, , , , 
 
     public SapStrength() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 16;
-        baseMagicNumber = magicNumber = 2;
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        applyToEnemy(m, new StrengthPower(m, -magicNumber));
-        if (!m.hasPower(ArtifactPower.POWER_ID)) {
-            applyToEnemy(m, new GainStrengthPower(m, magicNumber));
-        }
+        atb(new DamageCallbackAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY, (dealt) -> {
+            applyToEnemyTop(m, new LoseHpNextTurnPower(m, dealt * 2));
+        }));
     }
 
     public void upp() {
-        upgradeDamage(4);
-        upgradeMagicNumber(1);
+        upgradeDamage(2);
     }
 }

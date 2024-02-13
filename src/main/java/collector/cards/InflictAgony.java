@@ -18,7 +18,7 @@ public class InflictAgony extends AbstractCollectorCard {
     // intellij stuff attack, enemy, common, 13, 5, , , , 
 
     public InflictAgony() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 12;
     }
 

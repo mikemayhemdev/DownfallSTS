@@ -48,13 +48,13 @@
   },
   "collector:BrainDrain": {
     "NAME": "Brain Drain",
-    "DESCRIPTION": "Add the enemy's Collected card into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add the enemy's Collected card into your hand. NL Upgrade it. NL Exhaust."
+    "DESCRIPTION": "Enemy loses !M! HP. NL Add their Collected card into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Enemy loses !M! HP. NL Add their Collected card into your hand and Upgrade it. NL Exhaust."
   },
   "collector:BramblesparKindling": {
     "NAME": "Bramblespar Kindling",
     "DESCRIPTION": "Unplayable. NL When *Exhausted, add a *Burning *Strike into your hand.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL When *Exhausted, add a *Burning *Strike+ into your hand.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When *Exhausted, add a *Burning *Strike into your hand.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
@@ -94,7 +94,8 @@
   },
   "collector:DarkwoodKindling": {
     "NAME": "Darkwillow Kindling",
-    "DESCRIPTION": "Unplayable. NL When *Exhausted, apply !M! collector:Doom to ALL enemies.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, gain 2 collector:Reserve.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL When *Exhausted, gain 2 collector:Reserve.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
@@ -117,7 +118,7 @@
   },
   "collector:Ember": {
     "NAME": "Ember",
-    "DESCRIPTION": "Unplayable. NL Retain. NL When *Exhausted, gain !M! Strength.",
+    "DESCRIPTION": "Retain. NL Exhaust. NL When *Exhausted, gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [
       "These embers must be lit, not played."
     ]
@@ -140,11 +141,11 @@
   },
   "collector:Finalize": {
     "NAME": "Finalize",
-    "DESCRIPTION": "If the enemy dies this turn, heal !clm2! HP. NL Apply !M! collector:Doom. NL Exhaust."
+    "DESCRIPTION": "When the enemy dies, heal !clm2! HP. NL Apply !M! collector:Doom. NL Exhaust."
   },
   "collector:FingerOfDeath": {
     "NAME": "Finger of Death",
-    "DESCRIPTION": "Only collector:Reserves may be spent on this. NL Apply !M! collector:Doom."
+    "DESCRIPTION": "Only collector:Reserves may be spent on this. NL Apply !M! collector:Doom to ALL enemies."
   },
   "collector:FlameLash": {
     "NAME": "Flame Lash",
@@ -187,7 +188,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus",
-    "DESCRIPTION": "Choose 1 of 3 Collected cards. NL Add !M! copies of it into your Collected pile.",
+    "DESCRIPTION": "Choose 1 of 3 Collected cards to gain. NL Add !M! copies of it into your Collected pile.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to add into your hand."
     ]
@@ -223,7 +224,8 @@
   },
   "collector:Invigorate": {
     "NAME": "Invigorate",
-    "DESCRIPTION": "collector:Pyre. NL Gain !M! Vigor. NL Next turn, gain !M! Vigor."
+    "DESCRIPTION": "collector:Pyre. NL Choose Trip or Blind to gain.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Choose Trip+ or Blind+ to gain."
   },
   "collector:IronbarkKindling": {
     "NAME": "Ironbark Kindling",
@@ -316,7 +318,7 @@
   },
   "collector:SapStrength": {
     "NAME": "Sap Strength",
-    "DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, enemy loses twice as much HP."
   },
   "collector:ScorchingRay": {
     "NAME": "Scorching Ray",
@@ -328,7 +330,7 @@
   },
   "collector:ShadowDaggers": {
     "NAME": "Shadow Daggers",
-    "DESCRIPTION": "Deal !D! damage for each Collected card played this combat. Exhaust.",
+    "DESCRIPTION": "Deal !D! damage for each Collected card played this combat. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " time.)",
@@ -399,7 +401,7 @@
   },
   "collector:Wildfire": {
     "NAME": "Wildfire",
-    "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique debuff on the enemy."
+    "DESCRIPTION": "Deal !D! damage for each unique debuff on the enemy."
   },
   "collector:YouAreMine": {
     "NAME": "You Are Mine!",
@@ -685,5 +687,9 @@
   "collector:CollectorCard": {
     "NAME": "Ouroboros",
     "DESCRIPTION": "collector:Pyre. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !clm2! Temporary_HP."
+  },
+  "collector:Sapped": {
+    "NAME": "Sapped",
+    "DESCRIPTION": "collector:Pyre. NL Exhaust. NL Cannot be removed from your deck."
   }
 }

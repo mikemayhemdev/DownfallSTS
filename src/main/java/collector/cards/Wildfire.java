@@ -31,7 +31,6 @@ public class Wildfire extends AbstractCollectorCard {
             @Override
             public void update() {
                 isDone = true;
-                dmg(m, AbstractGameAction.AttackEffect.FIRE);
                 for (AbstractPower q : m.powers) {
                     if (q.type == AbstractPower.PowerType.DEBUFF) {
                         dmg(m, AbstractGameAction.AttackEffect.FIRE);

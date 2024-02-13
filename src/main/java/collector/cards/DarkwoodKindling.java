@@ -1,5 +1,6 @@
 package collector.cards;
 
+import collector.actions.GainReservesAction;
 import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -33,10 +34,11 @@ public class DarkwoodKindling extends AbstractCollectorCard {
     public void triggerOnExhaust() {
         CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);
         CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);
-        Wiz.forAllMonstersLiving(q -> applyToEnemy(q, new DoomPower(q, magicNumber)));
+        addToBot(new GainReservesAction(2));
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        selfRetain = true;
+        uDesc();
     }
 }

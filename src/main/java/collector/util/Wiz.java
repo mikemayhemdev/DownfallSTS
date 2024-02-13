@@ -125,6 +125,14 @@ public class Wiz {
         makeInHand(c, 1);
     }
 
+    public static void makeInHandTop(AbstractCard c, int i) {
+        att(new MakeTempCardInHandAction(c, i));
+    }
+
+    public static void makeInHandTop(AbstractCard c) {
+        makeInHandTop(c, 1);
+    }
+
     public static void shuffleIn(AbstractCard c, int i) {
         atb(new MakeTempCardInDrawPileAction(c, i, true, true));
     }

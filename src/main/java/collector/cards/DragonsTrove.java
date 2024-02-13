@@ -17,6 +17,7 @@ public class DragonsTrove extends AbstractCollectorCard {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
+        isPyre();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
