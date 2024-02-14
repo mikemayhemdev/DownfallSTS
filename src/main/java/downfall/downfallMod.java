@@ -42,6 +42,7 @@ import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import collector.CollectorChar;
 import collector.CollectorMod;
+import collector.cards.Sapped;
 import collector.util.CollectibleCardReward;
 import collector.util.EssenceReward;
 import com.badlogic.gdx.Gdx;
@@ -448,6 +449,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addCard(new Aged());
         BaseMod.addCard(new Pride());
         BaseMod.addCard(new Scatterbrained());
+        BaseMod.addCard(new Sapped());
 /*
         BaseMod.addCard(new Slug());
         BaseMod.addCard(new Defend_Crowbot());

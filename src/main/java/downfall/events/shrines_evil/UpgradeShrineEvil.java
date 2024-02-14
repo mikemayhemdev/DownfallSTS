@@ -2,6 +2,7 @@
 package downfall.events.shrines_evil;
 
 
+import collector.cards.Sapped;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -52,7 +53,7 @@ public class UpgradeShrineEvil extends AbstractImageEvent {
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
 
         if (AbstractDungeon.player.masterDeck.getUpgradableCards().size() >= 2) {
-            this.imageEventText.setDialogOption(OPTIONSALT[3]);
+            this.imageEventText.setDialogOption(OPTIONSALT[3], new Sapped());
         } else {
             this.imageEventText.setDialogOption(OPTIONS[3], true);
         }
@@ -82,7 +83,7 @@ public class UpgradeShrineEvil extends AbstractImageEvent {
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             if (bonusShrine2){
-                AbstractCard curse = CardLibrary.getCurse().makeStatEquivalentCopy();
+                AbstractCard curse = new Sapped();
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (Settings.WIDTH * .5F), Settings.HEIGHT * .5F));// 66
                 logMetric(ID, "Desecrated", Collections.singletonList(curse.cardID), null,
                         null, upgradedCards, null, null, null,
