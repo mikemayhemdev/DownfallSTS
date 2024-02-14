@@ -625,6 +625,13 @@ public abstract class AbstractGuardianCard extends CustomCard {
 
     }
 
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradesecondaryM) {
+            isSecondaryMModified = true;
+        }
+    }
+
     @Deprecated
     public float calculateBeamDamage() {
         return 0;
