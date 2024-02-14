@@ -133,6 +133,7 @@ public class MainMenuEvilMode {
         protected void buttonEffect() {
             if (getResult() == Enums.PLAY_EVIL || getResult() == PanelClickResult.PLAY_NORMAL) {
                 EvilModeCharacterSelect.evilMode = getResult() == Enums.PLAY_EVIL;
+                DailyModeEvilPatch.todaysRunIsEvil = false;
                 CardCrawlGame.mainMenuScreen.charSelectScreen.open(false);
             } else {
                 SpireSuper.call();
