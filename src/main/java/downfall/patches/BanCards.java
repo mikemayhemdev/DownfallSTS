@@ -1,6 +1,7 @@
 package downfall.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.SadisticNature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -13,8 +14,8 @@ public class BanCards {
 
         public static void Postfix(AbstractDungeon __instance) {
             if (EvilModeCharacterSelect.evilMode) {
-                AbstractDungeon.colorlessCardPool.group.remove(SadisticNature.ID);
-                AbstractDungeon.srcColorlessCardPool.group.remove(SadisticNature.ID);
+                AbstractDungeon.colorlessCardPool.group.removeIf(c -> c instanceof SadisticNature);
+                AbstractDungeon.srcColorlessCardPool.group.removeIf(c -> c instanceof SadisticNature);
             }
         }
     }

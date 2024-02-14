@@ -627,12 +627,12 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             saveData();
         });
 
-        configPos -= configStep;
-        ModLabeledToggleButton useIconsForAppliedCardPropertiesBtn = new ModLabeledToggleButton(configStrings.TEXT[13], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, useIconsForAppliedProperties, settingsPanel, (label) -> {
-        }, (button) -> {
-            useIconsForAppliedProperties = button.enabled;
-            saveData();
-        });
+//        configPos -= configStep;
+//        ModLabeledToggleButton useIconsForAppliedCardPropertiesBtn = new ModLabeledToggleButton(configStrings.TEXT[13], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, useIconsForAppliedProperties, settingsPanel, (label) -> {
+//        }, (button) -> {
+//            useIconsForAppliedProperties = button.enabled;
+//            saveData();
+//        });
 
         settingsPanel.addUIElement(characterCrossoverBtn);
         //settingsPanel.addUIElement(useIconsForAppliedCardPropertiesBtn);
