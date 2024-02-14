@@ -25,6 +25,7 @@ public class ReceiveTribute extends AbstractCollectorCard {
         baseMagicNumber = magicNumber = 2;
         isPyre();
         exhaust = true;
+        tags.add(CardTags.HEALING);
     }
 
     private static ArrayList<AbstractCard> possibilities;

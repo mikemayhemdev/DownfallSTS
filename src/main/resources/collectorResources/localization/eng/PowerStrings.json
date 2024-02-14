@@ -79,8 +79,8 @@
   "collector:HealIfDieThisTurn": {
     "NAME": "Finalized",
     "DESCRIPTIONS": [
-      "If ",
-      " dies this turn, heal #b",
+      "When ",
+      " dies, heal #b",
       " HP."
     ]
   },
@@ -307,6 +307,13 @@
       "The first time you #yPyre an #yAttack each turn, return it to your hand. It costs #b0 until played.",
       "The first #b",
       " times you #yPyre an #yAttack each turn, return it to your hand. It costs #b0 until played."
+    ]
+  },
+  "collector:LoseHpNextTurn": {
+    "NAME": "Sapped Away",
+    "DESCRIPTIONS": [
+      "At the end of its turn, loses #b",
+      " HP."
     ]
   }
 }

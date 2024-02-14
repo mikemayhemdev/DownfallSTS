@@ -14,8 +14,8 @@ public class Finalize extends AbstractCollectorCard {
 
     public Finalize() {
         super(ID, 4, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 25;
-        baseSecondMagic = secondMagic = 8;
+        baseMagicNumber = magicNumber = 24;
+        baseSecondMagic = secondMagic = 6;
         tags.add(CardTags.HEALING);
         exhaust = true;
     }
@@ -26,7 +26,7 @@ public class Finalize extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(5);
+        upgradeMagicNumber(4);
         upgradeSecondMagic(2);
     }
 }

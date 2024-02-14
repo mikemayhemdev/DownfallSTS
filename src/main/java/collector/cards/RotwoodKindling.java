@@ -1,5 +1,6 @@
 package collector.cards;
 
+import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -16,6 +17,7 @@ public class RotwoodKindling extends AbstractCollectorCard {
     public RotwoodKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 2;
+        baseSecondMagic = secondMagic = 4;
         tags.add(expansionContentMod.UNPLAYABLE);
     }
 
@@ -24,7 +26,10 @@ public class RotwoodKindling extends AbstractCollectorCard {
 
     @Override
     public void triggerOnExhaust() {
-        forAllMonstersLiving(q -> applyToEnemy(q, new VulnerablePower(q, magicNumber, false)));
+        forAllMonstersLiving(q -> {
+            applyToEnemy(q, new VulnerablePower(q, magicNumber, false));
+            applyToEnemy(q, new DoomPower(q, secondMagic));
+        });
     }
 
     @Override
@@ -34,6 +39,7 @@ public class RotwoodKindling extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        selfRetain = true;
+        uDesc();
     }
 }

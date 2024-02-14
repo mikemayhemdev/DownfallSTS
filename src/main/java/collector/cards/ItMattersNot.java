@@ -14,8 +14,8 @@ public class ItMattersNot extends AbstractCollectorCard {
     // intellij stuff skill, self, common, , , 8, 3, , 
 
     public ItMattersNot() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 8;
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 12;
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -32,7 +32,7 @@ public class ItMattersNot extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(4);
     }
 }
 
