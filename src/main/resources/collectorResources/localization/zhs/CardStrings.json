@@ -685,5 +685,9 @@
   "collector:CollectorCard": {
     "NAME": "衔尾蛇",
     "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL 获得 !clm2! 层 临时生命 。"
+  },
+  "collector:Sapped": {
+    "NAME": "虚脱",
+    "DESCRIPTION": "collector:焰葬 。 NL 消耗 。 NL 本牌无法从牌组移除。"
   }
 }
