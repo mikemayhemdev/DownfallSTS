@@ -108,7 +108,7 @@
     "NAME": "Rough Diamond",
     "FLAVOR": "With the mines demolished, even this tarnished stone is valuable.",
     "DESCRIPTIONS": [
-      "Whenever you play a Rare card, gain [E] ."
+      "Whenever you play a Rare card that cost 2 or more, gain [E] ."
     ]
   },
   "collector:BlockedChakra": {

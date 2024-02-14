@@ -1,5 +1,6 @@
 package downfall.events.shrines_evil;
 
+import collector.cards.Sapped;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -40,7 +41,7 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
         super(NAME, DIALOG_1, "images/events/shrine3.jpg");
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
-        this.imageEventText.setDialogOption(OPTIONSALT[1]);
+        this.imageEventText.setDialogOption(OPTIONSALT[1], new Sapped());
         this.imageEventText.setDialogOption(OPTIONS[0]);
         this.imageEventText.setDialogOption(OPTIONS[1]);
     }
@@ -80,7 +81,7 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
 
                         (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(2), com.megacrit.cardcrawl.core.Settings.WIDTH * 0.75F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2));
 
-                AbstractCard curse = CardLibrary.getCurse().makeStatEquivalentCopy();
+                AbstractCard curse = new Sapped();
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT * .75F)));// 66
                 AbstractDungeon.player.masterDeck.removeCard((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(2));
                 cards.add(AbstractDungeon.gridSelectScreen.selectedCards.get(2).cardID);
