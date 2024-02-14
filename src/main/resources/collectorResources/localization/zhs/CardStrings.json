@@ -111,7 +111,7 @@
   },
   "collector:DragonsTrove": {
     "NAME": "龍之珍藏",
-    "DESCRIPTION": "抽2张 collector:藏品 牌。 NL 获得 !M! collector:储能 。 NL 消耗 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 抽2张 collector:藏品 牌。 NL 获得 !M! collector:储能 。 NL 消耗 。"
   },
   "collector:Ember": {
     "NAME": "余烬",
@@ -218,7 +218,10 @@
   "collector:Invigorate": {
     "NAME": "精神焕发",
     "DESCRIPTION": "collector:焰葬 。 NL 选择获得 *绊倒 或 *致盲 。",
-    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 选择获得 *绊倒+ 或 *致盲+ 。"
+    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 选择获得 *绊倒+ 或 *致盲+ 。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张牌加入手牌。"
+    ]
   },
   "collector:IronbarkKindling": {
     "NAME": "铁皮柴",
@@ -285,8 +288,8 @@
   },
   "collector:Pyromancy": {
     "NAME": "焰咒术",
-    "DESCRIPTION": "回合开始时， NL 获得 1 collector:储能 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得 1 collector:储能 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 回合开始时， NL 获得 1 collector:储能 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL collector:焰葬 。 NL 回合开始时， NL 获得 1 collector:储能 。"
   },
   "collector:RagingCall": {
     "NAME": "暴怒之唤",
