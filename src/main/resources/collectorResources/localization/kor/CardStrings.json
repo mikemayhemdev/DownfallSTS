@@ -113,7 +113,7 @@
   },
   "collector:DragonsTrove": {
     "NAME": "용의 비보",
-    "DESCRIPTION": "수집품 카드를 2장 뽑습니다. NL collector:비축을 !M! 얻습니다. NL 소멸."
+    "DESCRIPTION": "collector:장작. NL 수집품 카드를 2장 뽑습니다. NL collector:비축을 !M! 얻습니다. NL 소멸."
   },
   "collector:Ember": {
     "NAME": "불씨",
@@ -223,7 +223,11 @@
   },
   "collector:Invigorate": {
     "NAME": "활성화",
-    "DESCRIPTION": "collector:장작. NL expansioncontent:활력을 !M! 얻습니다. NL 다음 턴에 expansioncontent:활력을 !M! 얻습니다."
+    "DESCRIPTION": "collector:장작. NL *헛디딤 또는 *실명을 선택해 얻습니다.",
+    "UPGRADE_DESCRIPTION": "collector:장작. NL *헛디딤+ 또는 *실명+을 선택해 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "얻을 카드를 선택하십시오."
+    ]
   },
   "collector:IronbarkKindling": {
     "NAME": "유칼리나무철 쏘시개",
@@ -289,8 +293,8 @@
   },
   "collector:Pyromancy": {
     "NAME": "불점",
-    "DESCRIPTION": "내 턴 시작 시 collector:비축을 1 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴 시작 시 collector:비축을 1 얻습니다."
+    "DESCRIPTION": "collector:장작. NL 내 턴 시작 시 collector:비축을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. collector:장작. NL 내 턴 시작 시 collector:비축을 1 얻습니다."
   },
   "collector:RagingCall": {
     "NAME": "거센 부름",
