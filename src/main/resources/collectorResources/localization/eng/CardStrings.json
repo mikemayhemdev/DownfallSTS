@@ -223,9 +223,9 @@
     "DESCRIPTION": "Deal !D! damage. NL If the enemy is not collector:Afflicted, apply 2 Weak and Vulnerable."
   },
   "collector:Invigorate": {
-    "NAME": "Invigorate",
-    "DESCRIPTION": "collector:Pyre. NL Choose *Trip or *Blind to gain.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Choose *Trip+ or *Blind+ to gain.",
+    "NAME": "Flash",
+    "DESCRIPTION": "collector:Pyre. NL Choose *Trip or *Blind to gain. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Choose *Trip+ or *Blind+ to gain. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to add into your hand."
     ]
@@ -320,7 +320,7 @@
     ]
   },
   "collector:SapStrength": {
-    "NAME": "Sap Strength",
+    "NAME": "Deathmark",
     "DESCRIPTION": "Deal !D! damage. NL Next turn, enemy loses twice as much HP."
   },
   "collector:ScorchingRay": {
