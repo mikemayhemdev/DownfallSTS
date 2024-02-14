@@ -114,7 +114,7 @@
   },
   "collector:DragonsTrove": {
     "NAME": "Dragon's Trove",
-    "DESCRIPTION": "Draw 2 cards from your Collected pile. NL Gain !M! collector:Reserve. NL Exhaust."
+    "DESCRIPTION": "collector:Pyre. NL Draw 2 cards from your Collected pile. NL Gain !M! collector:Reserve. NL Exhaust."
   },
   "collector:Ember": {
     "NAME": "Ember",
@@ -224,8 +224,11 @@
   },
   "collector:Invigorate": {
     "NAME": "Invigorate",
-    "DESCRIPTION": "collector:Pyre. NL Choose Trip or Blind to gain.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Choose Trip+ or Blind+ to gain."
+    "DESCRIPTION": "collector:Pyre. NL Choose *Trip or *Blind to gain.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Choose *Trip+ or *Blind+ to gain.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to add into your hand."
+    ]
   },
   "collector:IronbarkKindling": {
     "NAME": "Ironbark Kindling",
@@ -291,8 +294,8 @@
   },
   "collector:Pyromancy": {
     "NAME": "Pyromancy",
-    "DESCRIPTION": "At the start of your turn, gain 1 collector:Reserve.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 collector:Reserve."
+    "DESCRIPTION": "collector:Pyre. NL At the start of your turn, gain 1 collector:Reserve.",
+    "UPGRADE_DESCRIPTION": "Innate. collector:Pyre. NL NL At the start of your turn, gain 1 collector:Reserve."
   },
   "collector:RagingCall": {
     "NAME": "Raging Call",
