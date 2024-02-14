@@ -94,8 +94,8 @@
   },
   "collector:DarkwoodKindling": {
     "NAME": "Darkwillow Kindling",
-    "DESCRIPTION": "Unplayable. NL When *Exhausted, gain 2 collector:Reserve.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL When *Exhausted, gain 2 collector:Reserve.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, gain !M! collector:Reserve next turn.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL When *Exhausted, gain !M! collector:Reserve next turn.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
