@@ -14,8 +14,8 @@ public class Torchbearer extends AbstractCollectorCard {
     // intellij stuff skill, self, common, , , , , 6, 2
 
     public Torchbearer() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 6;
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 10;
         exhaust = true;
     }
 
@@ -27,6 +27,6 @@ public class Torchbearer extends AbstractCollectorCard {
     }
 
     public void upp() {
-        uDesc();
+        upgradeMagicNumber(4);
     }
 }

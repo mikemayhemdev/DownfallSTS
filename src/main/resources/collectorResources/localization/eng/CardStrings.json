@@ -86,7 +86,7 @@
   "collector:DarkLordForm": {
     "NAME": "Dark Lord Form",
     "DESCRIPTION": "At the start of your turn, play *You *Are *Mine on a random enemy.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, play *You *Are *Mine on a random enemy."
+    "UPGRADE_DESCRIPTION": "At the start of your turn, play *You *Are *Mine+ on a random enemy."
   },
   "collector:Darkstorm": {
     "NAME": "Darkstorm",
