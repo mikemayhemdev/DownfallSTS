@@ -296,7 +296,7 @@
   "collector:Pyromancy": {
     "NAME": "Pyromancy",
     "DESCRIPTION": "collector:Pyre. NL At the start of your turn, gain 1 collector:Reserve.",
-    "UPGRADE_DESCRIPTION": "Innate. collector:Pyre. NL NL At the start of your turn, gain 1 collector:Reserve."
+    "UPGRADE_DESCRIPTION": "Innate. collector:Pyre. NL At the start of your turn, gain 1 collector:Reserve."
   },
   "collector:RagingCall": {
     "NAME": "Raging Call",
