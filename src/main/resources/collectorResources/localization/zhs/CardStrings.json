@@ -91,8 +91,8 @@
   },
   "collector:DarkwoodKindling": {
     "NAME": "邪柳柴",
-    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时，给予所有敌人 !M! 层 collector:魂劫 。",
-    "UPGRADE_DESCRIPTION": "不能被打出 。 保留 。 NL 本牌被 消耗 时，给予所有敌人 !M! 层 collector:魂劫 。",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 的下回合， NL 获得 !M! collector:储能 。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 保留 。 NL 本牌被 消耗 的下回合， NL 获得 !M! collector:储能 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -142,7 +142,8 @@
   },
   "collector:FingerOfDeath": {
     "NAME": "死亡恶指",
-    "DESCRIPTION": "只能用 collector:储能 打出。 NL 给予 !M! 层群体 collector:魂劫 。"
+    "DESCRIPTION": "只能用 collector:储能 打出。 NL 给予 !M! 层 collector:魂劫 。",
+    "UPGRADE_DESCRIPTION": "只能用 collector:储能 打出。 NL 给予 !M! 层群体 collector:魂劫 。"
   },
   "collector:FlameLash": {
     "NAME": "焰鞭",
@@ -216,7 +217,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标不被 collector:折磨 ， NL 给予2层 虚弱 与 易伤 。"
   },
   "collector:Invigorate": {
-    "NAME": "精神焕发",
+    "NAME": "灵光乍现",
     "DESCRIPTION": "collector:焰葬 。 NL 选择获得 *绊倒 或 *致盲 。",
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 选择获得 *绊倒+ 或 *致盲+ 。",
     "EXTENDED_DESCRIPTION": [
@@ -319,7 +320,7 @@
   },
   "collector:ScorchingRay": {
     "NAME": "灼烧光线",
-    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "随机造成 !D! 点伤害 X 次。"
   },
   "collector:SeedOfDoubt": {
     "NAME": "疑虑之种",
