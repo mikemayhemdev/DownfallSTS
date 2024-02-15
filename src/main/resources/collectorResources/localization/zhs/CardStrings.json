@@ -219,7 +219,7 @@
   "collector:Invigorate": {
     "NAME": "灵光乍现",
     "DESCRIPTION": "collector:焰葬 。 NL 选择获得 *绊倒 或 *致盲 。",
-    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 选择获得 *绊倒+ 或 *致盲+ 。",
+    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 选获 *绊倒+ 或 *致盲+ 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌加入手牌。"
     ]
