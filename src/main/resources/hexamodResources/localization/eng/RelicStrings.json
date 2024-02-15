@@ -25,7 +25,7 @@
     "NAME": "Xanatos' Icy Charm",
     "FLAVOR": "I feel... cold.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #yhexamod:Soulburn takes #b4 turns to activate. Start each combat with #b1 less #yhexamod:Intensity."
+      "Gain [E] at the start of your turn. Start each combat with #b1 less #yhexamod:Intensity, and receive #b1 less #yhexamod:Intensity from the #yInferno #yGhostflame."
     ]
   },
   "hexamod:SoulConsumer": {

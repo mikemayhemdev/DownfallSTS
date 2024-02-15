@@ -15,19 +15,23 @@ public class ParanormalForm extends AbstractHexaCard {
     private static final int UPG_MAGIC = 3;
 
     public ParanormalForm() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         HexaMod.loadJokeCardImage(this, "ParanormalForm.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new ParanormalFormPower(magicNumber));
+        applyToSelf(new ParanormalFormPower(1));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
+            this.isInnate = true;
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+//            upgradeBaseCost(1);
+//            upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

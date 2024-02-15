@@ -33,7 +33,7 @@ public class SearingGhostflame extends AbstractGhostflame {
 
     public SearingGhostflame(float x, float y) {
         super(x, y);
-        magic = 4;
+        magic = 6;
 
         //this.textColor = new Color(.75F,1F,.75F,1F);
         this.triggersRequired = 2;
@@ -103,11 +103,11 @@ public class SearingGhostflame extends AbstractGhostflame {
     public int getEffectCount() {
         int x = magic;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+            x += 2 * AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
-        }
+//        if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
+//            x += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
+//        }
         return x;
     }
 

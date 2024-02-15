@@ -15,18 +15,19 @@ public class Hexaguard extends AbstractHexaCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 6;
         isEthereal = true;
+        baseMagicNumber = magicNumber = 2;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "Hexaguard.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new DrawCardAction(p, 1));
+        atb(new DrawCardAction(p, this.magicNumber));
     }
 
     public void afterlife() {
         blck();
-        atb(new DrawCardAction(AbstractDungeon.player, 1));
+//        atb(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
     }
 
     public void upgrade() {

@@ -16,13 +16,15 @@ public class Sear extends AbstractHexaCard {
 
     public Sear() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
-        baseBurn = burn = 10;
+        baseBurn = burn = 6;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "Sear.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
+        burn(m, burn);
         atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
         burn(m, burn);
     }
@@ -45,7 +47,7 @@ public class Sear extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBurn(4);
+            upgradeBurn(2);
         }
     }
 }

@@ -15,6 +15,7 @@ import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
 import theHexaghost.ghostflames.MayhemGhostflame;
 import theHexaghost.powers.AgainPower;
+import theHexaghost.powers.CrispyPower_new;
 import theHexaghost.powers.StopFromAdvancingPower;
 
 @SpirePatch(
@@ -44,7 +45,9 @@ public class EndTurnAdvance {
                     AbstractPower p = AbstractDungeon.player.getPower(StopFromAdvancingPower.POWER_ID);
                     p.flash();
 
-                } else if (GhostflameHelper.activeGhostFlame.charged) {
+                }else if(AbstractDungeon.player.hasPower(CrispyPower_new.POWER_ID)){
+
+                }else if (GhostflameHelper.activeGhostFlame.charged) {
                     AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
 
                 }

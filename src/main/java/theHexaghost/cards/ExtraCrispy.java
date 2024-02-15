@@ -1,9 +1,11 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.CrispyPower;
+import theHexaghost.powers.CrispyPower_new;
 
 public class ExtraCrispy extends AbstractHexaCard {
 
@@ -11,7 +13,7 @@ public class ExtraCrispy extends AbstractHexaCard {
 
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     // private static final int UPG_MAGIC = 1;
 
     public ExtraCrispy() {
@@ -21,14 +23,15 @@ public class ExtraCrispy extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new CrispyPower(magicNumber));
+        applyToSelf(new CrispyPower_new(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isInnate = true;
-            rawDescription = UPGRADE_DESCRIPTION;
+            upgradeBaseCost(0);
+//            isInnate = true;
+//            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

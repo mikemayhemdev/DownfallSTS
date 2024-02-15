@@ -24,36 +24,82 @@ import theHexaghost.powers.BurnPower;
 
 import java.util.ArrayList;
 
-public class FlameSwitch extends AbstractHexaCard {
+public class FlameSwitch extends AbstractHexaCard implements OctopusCard{
     public final static String ID = makeID("FlameSwitch");
 
+    //bad omen
     public FlameSwitch() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBurn = burn = 16;
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
         HexaMod.loadJokeCardImage(this, "FlameSwitch.png");
     }
 
+    public ArrayList<OctoChoiceCard> choiceList() {
+
+        ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
+        cardList.add(new OctoChoiceCard("octo:OctoSear", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[2]));
+        cardList.add(new OctoChoiceCard("octo:OctoCrush", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[1]));
+        cardList.add(new OctoChoiceCard("octo:OctoEmpower", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[0]));
+
+        return cardList;
+    }
+
+
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
+        switch (card.cardID) {
+            case "octo:OctoCrush":
+                atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        //   HexaMod.renderFlames = true;
+                        isDone = true;
+                        AbstractGhostflame gf = new CrushingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
+                        GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);
+                        gf.activate();
+                    }
+                });
+                break;
+            case "octo:OctoEmpower":
+                atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        //  HexaMod.renderFlames = true;
+                        isDone = true;
+                        AbstractGhostflame gf = new BolsteringGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
+                        GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);
+                        gf.activate();
+                    }
+                });
+                break;
+            case "octo:OctoSear":
+                atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        //  HexaMod.renderFlames = true;
+                        isDone = true;
+                        AbstractGhostflame gf = new SearingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
+                        GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);
+                        gf.activate();
+                    }
+                });
+                break;
+        }
+
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
-        burn(m, burn);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                AbstractPower po = m.getPower(BurnPower.POWER_ID);
-                if (po != null) {
-                    ((TwoAmountPower) po).amount2 += magicNumber;
-                    po.updateDescription();
-                }
-            }
-        });
+        atb(new OctoChoiceAction(m, this));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBurn(8);
+            isEthereal = false;
+            selfRetain = true;
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

@@ -12,7 +12,7 @@ public class HexaLevel extends AbstractHexaCard {
 
     public final static String ID = makeID("HexaLevel");
 
-    //stupid intellij stuff POWER, SELF, RARE
+    //infernal form
 
     private static final int MAGIC = 2;
 
