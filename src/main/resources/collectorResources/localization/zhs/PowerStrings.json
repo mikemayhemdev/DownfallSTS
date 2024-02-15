@@ -37,6 +37,14 @@
       " 张 #y你是我的了 ，每次都对随机一名敌人。"
     ]
   },
+  "collector:DarkLordFormPlus": {
+    "NAME": "暗主形态+",
+    "DESCRIPTIONS": [
+      "你的回合开始时，随机对一名敌人打出一张 #y你是我的了+ 。",
+      "你的回合开始时，随机打出 #b",
+      " 张 #y你是我的了+ ，每次都对随机一名敌人。"
+    ]
+  },
   "collector:DoMayhem": {
     "NAME": "驭魂乱战",
     "DESCRIPTIONS": [
