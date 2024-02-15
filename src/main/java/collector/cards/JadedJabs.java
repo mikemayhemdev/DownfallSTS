@@ -16,8 +16,8 @@ public class JadedJabs extends AbstractCollectorCard implements OnPyreCard {
     // intellij stuff attack, enemy, common, 10, 2, , , , 
 
     public JadedJabs() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 10;
+        super(ID, 3, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 15;
         baseMagicNumber = magicNumber = 1;
         cardsToPreview = new Shiv();
         isPyre();

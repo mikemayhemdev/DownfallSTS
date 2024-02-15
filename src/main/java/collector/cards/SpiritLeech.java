@@ -21,9 +21,9 @@ public class SpiritLeech extends AbstractCollectorCard {
     // intellij stuff attack, enemy, common, 9, 3, , , 3, 2
 
     public SpiritLeech() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
-        baseBlock = 6;
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 12;
+        baseBlock = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
