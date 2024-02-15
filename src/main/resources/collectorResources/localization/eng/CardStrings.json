@@ -145,7 +145,8 @@
   },
   "collector:FingerOfDeath": {
     "NAME": "Finger of Death",
-    "DESCRIPTION": "Only collector:Reserves may be spent on this. NL Apply !M! collector:Doom to ALL enemies."
+    "DESCRIPTION": "Only collector:Reserves may be spent on this. NL Apply !M! collector:Doom.",
+    "UPGRADE_DESCRIPTION": "Only collector:Reserves may be spent on this. NL Apply !M! collector:Doom to ALL enemies."
   },
   "collector:FlameLash": {
     "NAME": "Flame Lash",
@@ -325,7 +326,7 @@
   },
   "collector:ScorchingRay": {
     "NAME": "Scorching Ray",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage to a random enemy X times."
   },
   "collector:SeedOfDoubt": {
     "NAME": "Seed of Doubt",
