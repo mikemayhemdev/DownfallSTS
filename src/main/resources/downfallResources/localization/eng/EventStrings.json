@@ -615,10 +615,10 @@
     "DESCRIPTIONS": [
       "Only you should hold this power. You shatter the shrine into pieces. NL A dark wail echoes all around you, and you can feel the Shrine's #p~cursed~ #p~magic~ seep into your bones."    ],
     "OPTIONS": [
-      "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rRandom.",
-      "[Desecrate] #gRemove #g3 #gcards. #rCursed #r- #rRandom.",
-      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rRandom.",
-      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rRandom."
+      "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rSapped.",
+      "[Desecrate] #gRemove #g3 #gcards. #rCursed #r- #rSapped.",
+      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rSapped.",
+      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rSapped."
     ]
   }
 }

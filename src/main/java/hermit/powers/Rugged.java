@@ -34,6 +34,8 @@ public class Rugged extends AbstractPower implements CloneablePowerInterface {
         this.owner = owner;
         this.amount = amount;
 
+        priority = 6;
+
         type = PowerType.BUFF;
 
         if (this.amount <= 0) {

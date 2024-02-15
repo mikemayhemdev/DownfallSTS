@@ -3,15 +3,16 @@ package downfall.events.shrines_evil;
 /*    */
 /*    */
 
+import downfall.cards.curses.Sapped;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 /*    */ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 /*    */ import com.megacrit.cardcrawl.events.AbstractImageEvent;
-/*    */ import com.megacrit.cardcrawl.events.GenericEventDialog;
-/*    */ import com.megacrit.cardcrawl.helpers.CardLibrary;
+/*    */
+/*    */
 import com.megacrit.cardcrawl.localization.EventStrings;
-/*    */ import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
+/*    */
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 /*    */ import java.util.ArrayList;
@@ -38,7 +39,7 @@ import downfall.downfallMod;
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
 
-        this.imageEventText.setDialogOption(OPTIONSALT[0]);
+        this.imageEventText.setDialogOption(OPTIONSALT[0], new Sapped());
         this.imageEventText.setDialogOption(OPTIONS[0]);
         this.imageEventText.setDialogOption(OPTIONS[1]);
     }
@@ -67,7 +68,7 @@ import downfall.downfallMod;
                 AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect(c, com.megacrit.cardcrawl.core.Settings.WIDTH * 0.75F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
                 cards.add(c.cardID);
 
-                AbstractCard curse = CardLibrary.getCurse().makeStatEquivalentCopy();
+                AbstractCard curse = new Sapped();
                 cards.add(curse.cardID);
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
 

@@ -128,7 +128,7 @@
   },
   "collector:Extricate": {
     "NAME": "Вызволить", //unfinished
-    "DESCRIPTION": "Наносит !D! урона. NL Вы разыгрываете карту с верха стопки добора, если враг collector:Сокрушён."
+    "DESCRIPTION": "Сжигает все карты в руке, кроме Атак. NL Наносит !D! урона."
   },
   "collector:FeelMyPain": {
     "NAME": "Почувствуй мою боль",
@@ -153,7 +153,7 @@
   },
   "collector:FleetingEmbers": {
     "NAME": "Fleeting Embers",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Добавляет в руку !M! *Уголька." //unfinished
+    "DESCRIPTION": "collector:Пиромант. NL Даёт !B! Защиты. NL Добавляет в руку !M! *Уголька." //unfinished
   },
   "collector:Forgery": {
     "NAME": "Подделка",
@@ -165,7 +165,7 @@
   "collector:FuelTheFire": {
     "NAME": "Fuel the Fire", //unfinished
     "DESCRIPTION": "collector:Пиромант. NL Даёт !M! collector:Резерва в след. ходу.",
-    "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Даёт !M! collector:Резерва в след. ходу и вы берете карту."
+    "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Даёт !M! collector:Резерва в след. ходу и вы берёте карту."
   },
   "collector:Goodbye": {
     "NAME": "Goodbye", //unfinished
@@ -187,7 +187,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus", //unfinished
-    "DESCRIPTION": "Выберите 1 из 3 собранных карт. НЛ Добавьте !M! его копии в свою стопку «Собранное». НЛ Выхлоп.",
+    "DESCRIPTION": "Выберите 1 из 3 собранных карт и добавьте !M! её копии в стопку Коллекции. NL Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Выберите карту, которую хотите добавить в руку."
     ]
@@ -198,7 +198,7 @@
   },
   "collector:Hoard": {
     "NAME": "Hoard", //unfinished
-    "DESCRIPTION": "Вы берёте !M! карты. NL Они Оставляются в этом ходу." //unfinished
+    "DESCRIPTION": "collector:Пиромант. NL Вы берёте !M! карты. NL Они Оставляются в этом ходу." //unfinished
   },
   "collector:HoardersStrike": {
     "NAME": "Hoarder's Strike", //unfinished
@@ -280,8 +280,8 @@
   },
   "collector:Omen": {
     "NAME": "Предзнаменование",
-    "DESCRIPTION": " Даёт !M! Силы, когда вы разыгрываете Коллекционные карты.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL  Даёт !M! Силы, когда вы разыгрываете Коллекционные карты."
+    "DESCRIPTION": "Даёт !M! Силы, когда вы разыгрываете Коллекционные карты.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL Даёт !M! Силы, когда вы разыгрываете Коллекционные карты."
   },
   "collector:ProtectingCall": {
     "NAME": "Protecting Call", //unfinished
@@ -345,8 +345,8 @@
   },
   "collector:Soulforge": {
     "NAME": "Soulforge",
-    "DESCRIPTION": "Возьмите карту из своей стопки «Собрано». Получите !М! Модернизированная копия. НЛ Выхлоп.", //unfinished
-    "UPGRADE_DESCRIPTION": "Возьмите карту из своей стопки «Собрано». Получите !М! Его обновленные копии. НЛ Выхлоп." //unfinished
+    "DESCRIPTION": "Вы берёте Коллекционную карту и добавляете в руку !М! её Улучшеннную копию. NL Сжигается.", //unfinished
+    "UPGRADE_DESCRIPTION": "Вы берёте Коллекционную карту и добавляете в руку !М! её Улучшеннных копии. NL Сжигается." //unfinished
   },
   "collector:Spark": {
     "NAME": "Искра",
@@ -382,7 +382,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "Thorn Whip", //unfinished
-    "DESCRIPTION": "Сделка !Д! повредить и применить !M! hermit:Травмы ВСЕМ врагам. NL Получите *Заточку." //unfinished
+    "DESCRIPTION": "Наносит !D! урона и накладывает !M! hermit:Травмы на ВСЕХ врагов. NL Добавляет в руку *Заточку." //unfinished
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer", //unfinished
@@ -391,7 +391,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "Броня бездны",
-    "DESCRIPTION": "Даёт !B! Защиты ВСЕМ & 1 expansioncontent:Неуловимости." //unfinished
+    "DESCRIPTION": "Даёт ВСЕМ !B! Защиты и 1 expansioncontent:Неуловимости." //unfinished
   },  
   "collector:WhirlingFlame": {
     "NAME": "Пламенный вихрь",
@@ -680,7 +680,7 @@
   },
   "collector:ShootingStar": {
     "NAME": "Падающая звезда",
-    "DESCRIPTION": "При первом разыгрывании карты collector:Пироманта за атака, добавляет в руку её копию. NL Она стоит 0, пока не разыграна." //unfinished
+    "DESCRIPTION": "При первом разыгрывании Атаки collector:Пироманта за ход, добавляет в руку её копию. NL Она стоит 0, пока не разыграна." //unfinished
   },
   "collector:CollectorCard": {
     "NAME": "Уроборос",

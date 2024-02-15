@@ -5,10 +5,10 @@ import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.applyToEnemy;
-import static collector.util.Wiz.atb;
+import static collector.util.Wiz.*;
 
 public class FingerOfDeath extends AbstractCollectorCard {
     public final static String ID = makeID(FingerOfDeath.class.getSimpleName());
@@ -21,10 +21,15 @@ public class FingerOfDeath extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(p, new FingerOfDeathEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1f));
-        applyToEnemy(m, new DoomPower(m, magicNumber));
+        if (upgraded) {
+            forAllMonstersLiving(q -> applyToEnemy(q, new DoomPower(q, magicNumber)));
+        } else {
+            applyToEnemy(m, new DoomPower(m, magicNumber));
+        }
     }
 
     public void upp() {
-        upgradeBaseCost(3);
+        uDesc();
+        target = CardTarget.ALL_ENEMY;
     }
 }

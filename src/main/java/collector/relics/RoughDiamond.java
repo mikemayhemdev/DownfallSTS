@@ -1,10 +1,10 @@
 package collector.relics;
 
 import basemod.abstracts.CustomRelic;
-import collector.CollectorCollection;
 import collector.CollectorMod;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.TextureLoader;
 
 public class RoughDiamond extends CustomRelic {
@@ -17,17 +17,10 @@ public class RoughDiamond extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart() {
-        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-            if (c.rarity == AbstractCard.CardRarity.RARE && c.cost > 1) {
-                c.updateCost(-1);
-            }
-        }
-
-        for (AbstractCard c : CollectorCollection.combatCollection.group) {
-            if (c.rarity == AbstractCard.CardRarity.RARE && c.cost > 1) {
-                c.updateCost(-1);
-            }
+    public void onPlayCard(AbstractCard c, AbstractMonster m) {
+        if (c.rarity == AbstractCard.CardRarity.RARE && c.cost >= 2) {
+            flash();
+            addToBot(new GainEnergyAction(1));
         }
     }
 

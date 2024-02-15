@@ -84,8 +84,8 @@
   },
   {
     "NAMES": [
-      "permutez",
-      "swap"
+      "swap",
+      "permutez"
     ],
     "PROPER_NAME": "Permutation",
     "DESCRIPTION": "Changez de place avec un autre personnage. Ne fait rien si il n'y a pas de cible valide."

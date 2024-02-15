@@ -42,6 +42,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import downfall.monsters.*;
 import downfall.monsters.gauntletbosses.*;
+import expansioncontent.cards.*;
 import hermit.cards.Adapt;
 import hermit.cards.FromBeyond;
 import hermit.cards.Magnum;
@@ -138,6 +139,16 @@ public class CollectorCollection {
         collectionPool.put(NeowBossFinal.ID, FinalBossCard.ID);
         collectionPool.put(CorruptHeart.ID, FinalBossCard.ID);
         collectionPool.put(TheCollector.ID, CollectorCard.ID);
+
+        collectionPool.put(SlimeBoss.ID, PrepareCrush.ID);
+        collectionPool.put(TimeEater.ID, Chronoboost.ID);
+        collectionPool.put(AwakenedOne.ID, AwakenDeath.ID);
+        collectionPool.put(TheGuardian.ID, GuardianWhirl.ID);
+        collectionPool.put(Hexaghost.ID, Hexaburn.ID);
+        collectionPool.put(BronzeAutomaton.ID, HyperBeam.ID);
+        collectionPool.put(Champ.ID, LastStand.ID);
+        collectionPool.put(Donu.ID, ShapePower.ID);
+        collectionPool.put(Deca.ID, ShapePower.ID);
     }
 
     public static AbstractCard getCollectedCard(AbstractMonster m) {

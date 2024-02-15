@@ -1,6 +1,8 @@
 package collector.cards;
 
+import collector.actions.GainReservesAction;
 import collector.powers.DoomPower;
+import collector.powers.NextTurnReservePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -9,6 +11,7 @@ import hermit.util.Wiz;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
+import static collector.util.Wiz.applyToSelf;
 
 public class DarkwoodKindling extends AbstractCollectorCard {
     public final static String ID = makeID(DarkwoodKindling.class.getSimpleName());
@@ -16,7 +19,7 @@ public class DarkwoodKindling extends AbstractCollectorCard {
 
     public DarkwoodKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
-        baseMagicNumber = magicNumber = 8;
+        baseMagicNumber = magicNumber = 2;
         tags.add(expansionContentMod.UNPLAYABLE);
     }
 
@@ -33,10 +36,11 @@ public class DarkwoodKindling extends AbstractCollectorCard {
     public void triggerOnExhaust() {
         CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);
         CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);
-        Wiz.forAllMonstersLiving(q -> applyToEnemy(q, new DoomPower(q, magicNumber)));
+        applyToSelf(new NextTurnReservePower(magicNumber));
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        selfRetain = true;
+        uDesc();
     }
 }

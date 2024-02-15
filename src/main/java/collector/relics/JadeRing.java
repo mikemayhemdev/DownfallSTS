@@ -21,7 +21,7 @@ public class JadeRing extends CustomRelic {
 
     @Override
     public void onMonsterDeath(AbstractMonster m) {
-        if (m.hasPower(DoomPower.POWER_ID) && !m.hasPower(MinionPower.POWER_ID)) {
+        if (m.hasPower(DoomPower.POWER_ID) && !m.hasPower(MinionPower.POWER_ID) && !m.halfDead) {
             flash();
             AbstractDungeon.player.gainGold(EXTRA_SOULS);
         }

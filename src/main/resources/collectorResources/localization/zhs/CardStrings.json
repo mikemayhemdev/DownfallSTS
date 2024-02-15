@@ -45,13 +45,13 @@
   },
   "collector:BrainDrain": {
     "NAME": "意识窥视",
-    "DESCRIPTION": "获得目标的 collector:藏品 牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得目标的 collector:藏品 牌+。 NL 消耗 。"
+    "DESCRIPTION": "目标失去 !M! 点生命。 NL 获得目标的 collector:藏品 牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "目标失去 !M! 点生命。 NL 获得目标的 collector:藏品 牌+。 NL 消耗 。"
   },
   "collector:BramblesparKindling": {
     "NAME": "黑莓柴",
     "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得一张 *火炬打击 。",
-    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， NL 获得一张 *火炬打击+ 。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 保留 。 NL 本牌被 消耗 时， NL 获得一张 *火炬打击+ 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -83,7 +83,7 @@
   "collector:DarkLordForm": {
     "NAME": "暗主形态",
     "DESCRIPTION": "回合开始时， NL 随机打出 *你是我的了 。",
-    "UPGRADE_DESCRIPTION": "回合开始时， NL 随机打出 *你是我的了 。"
+    "UPGRADE_DESCRIPTION": "回合开始时， NL 随机打出 *你是我的了+ 。"
   },
   "collector:Darkstorm": {
     "NAME": "昏鸣",
@@ -91,7 +91,8 @@
   },
   "collector:DarkwoodKindling": {
     "NAME": "邪柳柴",
-    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时，给予所有敌人 !M! 层 collector:魂劫 。",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 的下回合， NL 获得 !M! collector:储能 。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 保留 。 NL 本牌被 消耗 的下回合， NL 获得 !M! collector:储能 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
@@ -110,11 +111,11 @@
   },
   "collector:DragonsTrove": {
     "NAME": "龍之珍藏",
-    "DESCRIPTION": "抽2张 collector:藏品 牌。 NL 获得 !M! collector:储能 。 NL 消耗 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 抽2张 collector:藏品 牌。 NL 获得 !M! collector:储能 。 NL 消耗 。"
   },
   "collector:Ember": {
     "NAME": "余烬",
-    "DESCRIPTION": "不能被打出 。 NL 保留 。 NL 本牌被 消耗 时， NL 获得 !M! 点 力量 。",
+    "DESCRIPTION": "保留 。 NL 消耗 。 NL 本牌被 消耗 时， NL 获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "这些余烬必须被点燃，而非直接打出。"
     ]
@@ -137,11 +138,12 @@
   },
   "collector:Finalize": {
     "NAME": "大功告成",
-    "DESCRIPTION": "给予 !M! 层 collector:魂劫 。 NL 若目标本回合死亡， NL 回复 !clm2! 点生命。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 collector:魂劫 。 NL 目标死亡时， NL 回复 !clm2! 点生命。 NL 消耗 。"
   },
   "collector:FingerOfDeath": {
     "NAME": "死亡恶指",
-    "DESCRIPTION": "只能用 collector:储能 打出。 NL 给予 !M! 层 collector:魂劫 。"
+    "DESCRIPTION": "只能用 collector:储能 打出。 NL 给予 !M! 层 collector:魂劫 。",
+    "UPGRADE_DESCRIPTION": "只能用 collector:储能 打出。 NL 给予 !M! 层群体 collector:魂劫 。"
   },
   "collector:FlameLash": {
     "NAME": "焰鞭",
@@ -184,7 +186,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "诡域",
-    "DESCRIPTION": "从三张随机 collector:藏品 牌中选择一张，将其 !M! 张复制加入 *收藏堆 。",
+    "DESCRIPTION": "从三张随机 collector:藏品 牌中选择获得一张，并将其 !M! 张复制加入 *收藏堆 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌加入手牌。"
     ]
@@ -215,8 +217,12 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标不被 collector:折磨 ， NL 给予2层 虚弱 与 易伤 。"
   },
   "collector:Invigorate": {
-    "NAME": "精神焕发",
-    "DESCRIPTION": "collector:焰葬 。 NL 获得 !M! 层 活力 。 NL 下回合获得 !M! 层 活力 。"
+    "NAME": "灵光乍现",
+    "DESCRIPTION": "collector:焰葬 。 NL 选择获得 *绊倒 或 *致盲 。",
+    "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 选获 *绊倒+ 或 *致盲+ 。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张牌加入手牌。"
+    ]
   },
   "collector:IronbarkKindling": {
     "NAME": "铁皮柴",
@@ -283,8 +289,8 @@
   },
   "collector:Pyromancy": {
     "NAME": "焰咒术",
-    "DESCRIPTION": "回合开始时， NL 获得 1 collector:储能 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得 1 collector:储能 。"
+    "DESCRIPTION": "collector:焰葬 。 NL 回合开始时， NL 获得 1 collector:储能 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL collector:焰葬 。 NL 回合开始时， NL 获得 1 collector:储能 。"
   },
   "collector:RagingCall": {
     "NAME": "暴怒之唤",
@@ -310,11 +316,11 @@
   },
   "collector:SapStrength": {
     "NAME": "竭力",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合目标失去 !M! 点 力量 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 下回合， NL 目标失去该值双倍生命。"
   },
   "collector:ScorchingRay": {
     "NAME": "灼烧光线",
-    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "随机造成 !D! 点伤害 X 次。"
   },
   "collector:SeedOfDoubt": {
     "NAME": "疑虑之种",
@@ -397,7 +403,7 @@
   },
   "collector:Wildfire": {
     "NAME": "野火",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标每有一种负面效果， NL 再造成一次。"
+    "DESCRIPTION": "目标每有一种负面效果， NL 造成 !D! 点伤害。"
   },
   "collector:YouAreMine": {
     "NAME": "你是我的了",
@@ -683,5 +689,9 @@
   "collector:CollectorCard": {
     "NAME": "衔尾蛇",
     "DESCRIPTION": "collector:焰葬 。 NL 给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL 获得 !clm2! 层 临时生命 。"
+  },
+  "collector:Sapped": {
+    "NAME": "虚脱",
+    "DESCRIPTION": "collector:焰葬 。 NL 消耗 。 NL 本牌无法从牌组移除。"
   }
 }

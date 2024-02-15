@@ -28,10 +28,7 @@ public class DarkApotheosis extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> toCheck = new ArrayList<>();
-        toCheck.addAll(CollectorCollection.combatCollection.group);
-        toCheck.addAll(Wiz.getAllCardsInCardGroups(true, false));
-        toCheck.removeIf(q -> !CardModifierManager.hasModifier(q, CollectedCardMod.ID));
+        ArrayList<AbstractCard> toCheck = new ArrayList<>(CollectorCollection.combatCollection.group);
         atb(new AbstractGameAction() {
             @Override
             public void update() {

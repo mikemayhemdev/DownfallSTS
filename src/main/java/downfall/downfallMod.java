@@ -20,7 +20,6 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.Pair;
 import basemod.abstracts.CustomUnlockBundle;
-import basemod.cardmods.EtherealMod;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
@@ -42,6 +41,7 @@ import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import collector.CollectorChar;
 import collector.CollectorMod;
+import downfall.cards.curses.Sapped;
 import collector.util.CollectibleCardReward;
 import collector.util.EssenceReward;
 import com.badlogic.gdx.Gdx;
@@ -448,6 +448,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addCard(new Aged());
         BaseMod.addCard(new Pride());
         BaseMod.addCard(new Scatterbrained());
+        BaseMod.addCard(new Sapped());
 /*
         BaseMod.addCard(new Slug());
         BaseMod.addCard(new Defend_Crowbot());
@@ -627,12 +628,12 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             saveData();
         });
 
-        configPos -= configStep;
-        ModLabeledToggleButton useIconsForAppliedCardPropertiesBtn = new ModLabeledToggleButton(configStrings.TEXT[13], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, useIconsForAppliedProperties, settingsPanel, (label) -> {
-        }, (button) -> {
-            useIconsForAppliedProperties = button.enabled;
-            saveData();
-        });
+//        configPos -= configStep;
+//        ModLabeledToggleButton useIconsForAppliedCardPropertiesBtn = new ModLabeledToggleButton(configStrings.TEXT[13], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, useIconsForAppliedProperties, settingsPanel, (label) -> {
+//        }, (button) -> {
+//            useIconsForAppliedProperties = button.enabled;
+//            saveData();
+//        });
 
         settingsPanel.addUIElement(characterCrossoverBtn);
         //settingsPanel.addUIElement(useIconsForAppliedCardPropertiesBtn);
@@ -1579,6 +1580,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     @Override
     public void receivePostDeath() {
         evilMode = false;
+        DailyModeEvilPatch.todaysRunIsEvil = false;
         EasyInfoDisplayPanel.specialDisplays.clear();
         // else: we are doing a quickRestart, do not reset evilMode
     }

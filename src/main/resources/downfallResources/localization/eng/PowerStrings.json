@@ -334,13 +334,13 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Wheel of Fortune",
     "DESCRIPTIONS": [
-      "Hermit's card cost can't change. Whenever you play an #yAttack, Hermit discards his leftmost card and draws #b1 card."
+      "After you play an #yAttack, Hermit #yCycles his first card. Whenever he draws #yNecronomicurse, he gains #b2 #yStrength. Hermit's card cost can't change."
     ]
   },
   "downfall:HermitDoomsday": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "Hermit starts with #b1 #yRitual. Whenever Hermit plays Purgatory, he summons a Dagger."
+      "Hermit starts with #b1 #yRitual. Whenever Hermit plays #yPurgatory, he summons a Dagger."
     ]
   },
   "downfall:NeowEclipse": {

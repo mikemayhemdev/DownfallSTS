@@ -13,6 +13,7 @@ public class Pyromancy extends AbstractCollectorCard {
 
     public Pyromancy() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        isPyre();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

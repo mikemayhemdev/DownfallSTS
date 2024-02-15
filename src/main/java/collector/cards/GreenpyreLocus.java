@@ -14,6 +14,7 @@ import hermit.util.Wiz;
 import java.util.ArrayList;
 
 import static collector.CollectorMod.makeID;
+import static collector.util.Wiz.makeInHandTop;
 
 public class GreenpyreLocus extends AbstractCollectorCard {
     public final static String ID = makeID(GreenpyreLocus.class.getSimpleName());
@@ -33,6 +34,7 @@ public class GreenpyreLocus extends AbstractCollectorCard {
         addToBot(new SelectCardsCenteredAction(selectionChoices, 1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             AbstractCard tar = cards.get(0).makeCopy();
             CardModifierManager.addModifier(tar, new CollectedCardMod());
+            makeInHandTop(tar);
             for (int i = 0; i < magicNumber; i++) {
                 CollectorCollection.combatCollection.addToRandomSpot(tar.makeStatEquivalentCopy());
             }

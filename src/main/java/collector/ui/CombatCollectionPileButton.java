@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -26,6 +27,7 @@ import static collector.CollectorMod.makeID;
 public class CombatCollectionPileButton extends ClickableUIElement {
     private static final float X_OFF = 0f * Settings.scale;
     private static final float Y_OFF = 150f * Settings.scale;
+    private static final float Y_OFF_MODSOUP = 400F * Settings.scale;
     private static final float HB_WIDTH = 128f;
     private static final float HB_HEIGHT = 128f;
     private static final float COUNT_X = 48.0F * Settings.scale;
@@ -46,7 +48,7 @@ public class CombatCollectionPileButton extends ClickableUIElement {
     public CombatCollectionPileButton() {
         super((Texture) null,
                 0f,
-                Y_OFF,
+                ModHelper.isModEnabled("minty") ? Y_OFF_MODSOUP : Y_OFF,
                 HB_WIDTH,
                 HB_HEIGHT);
         bob = new BobEffect(1.1f);

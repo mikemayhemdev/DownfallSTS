@@ -16,19 +16,14 @@ public class Ember extends AbstractCollectorCard {
     // intellij stuff skill, none, special, , , , , 1, 1
 
     public Ember() {
-        super(ID, -2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE, CardColor.COLORLESS);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 1;
         selfRetain = true;
+        exhaust = true;
         tags.add(expansionContentMod.UNPLAYABLE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
-        return false;
     }
 
     @Override

@@ -64,9 +64,9 @@
   "collector:DemisePower": {
     "NAME": "Неминуемая гибель",
     "DESCRIPTIONS": [
-      "Предотвращает след. снятие #yПорчи would be removed from this enemy.",
-      "Prevent the next #b",
-      " times #yDoom would be removed from this enemy."
+      "Предотвращает след. снятие #yПорчи с данного врага.",
+      "Предотвращает след. #b",
+      " снятия #yПорчи с данного врага."
     ]
   },
   "collector:FeelMyPain": {
@@ -124,8 +124,8 @@
   "collector:Omen": {
     "NAME": "Omen",
     "DESCRIPTIONS": [
-      "Whenever you play a #yCollected card, ALL enemies lose #b",
-      " HP."
+      "Даёт #b",
+      " #yСилы, когда вы разыгрываете #yКоллекционные карты."
     ]
   },
   "collector:ProtectingCall": {
@@ -304,9 +304,9 @@
   "collector:ShootingStar": {
     "NAME": "Shooting Star",
     "DESCRIPTIONS": [
-      "The first time you #yPyre a card each turn, return it to your hand. It costs #b0 until played.",
+      "The first time you #yPyre #yАтаку each turn, return it to your hand. It costs #b0 until played.",
       "The first #b",
-      " times you #yPyre a card each turn, return it to your hand. It costs #b0 until played."
+      " times you #yPyre #yАтаку each turn, return it to your hand. It costs #b0 until played."
     ]
   }
 }

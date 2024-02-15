@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import gremlin.GremlinMod;
 import gremlin.orbs.MadGremlin;
 import gremlin.orbs.ShieldGremlin;
 import gremlin.orbs.SneakyGremlin;
@@ -33,6 +34,7 @@ public class GremlinPotion extends AbstractPotion {
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.SPHERE, PotionEffect.RAINBOW, Color.WHITE, (Color)null, (Color)null);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = GremlinMod.potionLabColor;
     }
 
     public void initializeData() {

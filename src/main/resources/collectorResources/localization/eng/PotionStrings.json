@@ -12,9 +12,9 @@
   "collector:ReservePotion": {
     "NAME": "Reserve Potion",
     "DESCRIPTIONS": [
-      "Gain #b2 #yReserves.",
+      "Gain #b2 #yReserve.",
       "Gain #b",
-      " #yReserves."
+      " #yReserve."
     ]
   },
   "collector:DebuffDoublePotion": {

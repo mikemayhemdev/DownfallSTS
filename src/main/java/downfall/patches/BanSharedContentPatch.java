@@ -12,6 +12,7 @@ import champ.relics.Barbells;
 import champ.relics.DeflectingBracers;
 import champ.relics.DuelingGlove;
 import collector.CollectorChar;
+import downfall.cards.curses.Sapped;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -103,6 +104,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.curseCardPool.removeCard(PrideStandard.ID);
                 AbstractDungeon.curseCardPool.removeCard(Malfunctioning.ID);
                 AbstractDungeon.curseCardPool.removeCard(Scatterbrained.ID);
+                AbstractDungeon.curseCardPool.removeCard(Sapped.ID);
 
                 AbstractDungeon.srcCurseCardPool.removeCard(Aged.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Icky.ID);
@@ -111,6 +113,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.srcCurseCardPool.removeCard(PrideStandard.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Malfunctioning.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Scatterbrained.ID);
+                AbstractDungeon.srcCurseCardPool.removeCard(Sapped.ID);
             }
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                 AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);

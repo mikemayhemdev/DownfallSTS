@@ -28,7 +28,7 @@ public class EnchantSword extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        atb(new SelectCardsInHandAction(1, CardCrawlGame.languagePack.getUIString("champ:EnchantUI").TEXT[1], c -> c.baseDamage > 0, (cards) -> {
+        atb(new SelectCardsInHandAction(1, CardCrawlGame.languagePack.getUIString("champ:EnchantUI").TEXT[1], c -> c.makeCopy().baseDamage > 0, (cards) -> {
             cards.get(0).baseDamage += magicNumber;
 
         }));
@@ -39,7 +39,7 @@ public class EnchantSword extends AbstractChampCard {
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = false;
         for (AbstractCard c : p.hand.group) {
-            if (c.baseDamage > 0) {
+            if (c.baseDamage >= 0) {
                 canUse = true;
                 break;
             }
