@@ -17,8 +17,8 @@ public class CursedWail extends AbstractCollectorCard {
     // intellij stuff skill, all_enemy, uncommon, , , , , 6, 2
 
     public CursedWail() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 6;
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        baseMagicNumber = magicNumber = 8;
         baseSecondMagic = secondMagic = 1;
         exhaust = true;
     }

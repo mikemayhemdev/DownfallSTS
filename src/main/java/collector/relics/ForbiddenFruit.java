@@ -1,12 +1,8 @@
 package collector.relics;
 
 import basemod.abstracts.CustomRelic;
-import basemod.helpers.CardPowerTip;
-import collector.CollectorCollection;
 import collector.CollectorMod;
-import collector.cards.Sapped;
-import collector.cards.collectibles.LuckyWick;
-import collector.patches.CollectorBottleField;
+import downfall.cards.curses.Sapped;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;

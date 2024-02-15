@@ -15,8 +15,8 @@ public class WhirlingFlame extends AbstractCollectorCard {
     // intellij stuff attack, all_enemy, uncommon, 12, 4, , , 2, 1
 
     public WhirlingFlame() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 7;
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        baseDamage = 12;
         isMultiDamage = true;
     }
 
@@ -26,6 +26,6 @@ public class WhirlingFlame extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
     }
 }

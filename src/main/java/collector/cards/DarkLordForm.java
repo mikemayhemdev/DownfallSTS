@@ -2,6 +2,7 @@ package collector.cards;
 
 import collector.effects.GreenThirdEyeEffect;
 import collector.powers.DarkLordFormPower;
+import collector.powers.DarkLordFormPowerPlus;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -21,10 +22,16 @@ public class DarkLordForm extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new GreenThirdEyeEffect(p.hb.cX, p.hb.cY)));
-        applyToSelf(new DarkLordFormPower());
+        if (upgraded){
+            applyToSelf(new DarkLordFormPowerPlus());
+
+        } else {
+            applyToSelf(new DarkLordFormPower());
+        }
     }
 
     public void upp() {
-        upgradeBaseCost(3);
+        uDesc();
+        cardsToPreview.upgrade();
     }
 }

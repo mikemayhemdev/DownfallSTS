@@ -26,6 +26,7 @@ public class Invigorate extends AbstractCollectorCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         isPyre();
         MultiCardPreview.add(this, new Trip(), new Blind());
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

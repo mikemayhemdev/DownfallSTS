@@ -12,7 +12,7 @@ import champ.relics.Barbells;
 import champ.relics.DeflectingBracers;
 import champ.relics.DuelingGlove;
 import collector.CollectorChar;
-import collector.cards.Sapped;
+import downfall.cards.curses.Sapped;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;

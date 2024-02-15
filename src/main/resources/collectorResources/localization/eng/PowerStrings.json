@@ -37,6 +37,14 @@
       " copies of #yYou #yAre #yMine on random enemies."
     ]
   },
+  "collector:DarkLordFormPlus": {
+    "NAME": "Dark Lord Form+",
+    "DESCRIPTIONS": [
+      "At the start of your turn, play #yYou #yAre #yMine+ on a random enemy.",
+      "At the start of your turn, play #b",
+      " copies of #yYou #yAre #yMine+ on random enemies."
+    ]
+  },
   "collector:DoMayhem": {
     "NAME": "Do Mayhem",
     "DESCRIPTIONS": [
