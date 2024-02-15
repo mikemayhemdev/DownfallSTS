@@ -68,7 +68,7 @@
     "NAMES": [
       "afterlife"
     ],
-    "DESCRIPTION": "When this card is played or #yExhausted, its Afterlife effects activate."
+    "DESCRIPTION": "If this card is #yExhausted, its effects activate."
   },
   {
     "PROPER_NAME": "Crushing",

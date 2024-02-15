@@ -1,9 +1,7 @@
 package theHexaghost.cards;
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,12 +17,10 @@ public class ShadowStrike extends AbstractHexaCard {
     private AbstractCard parent;
 
     public ShadowStrike(AbstractCard parent) {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 7;
-//        exhaust = true;
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        baseDamage = 8;
+        exhaust = true;
         isEthereal = true;
-        cardsToPreview = new NightmareGuise();
-        tags.add(HexaMod.AFTERLIFE);
         tags.add(CardTags.STRIKE);
         setParent(parent);
         HexaMod.loadJokeCardImage(this, "ShadowStrike.png");
@@ -42,44 +38,23 @@ public class ShadowStrike extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        superFlash(Color.PURPLE);
-        AbstractCard q = new NightmareGuise();
-        if (upgraded) q.upgrade();
-        atb(new MakeTempCardInHandAction(q));
-//        atb(new AbstractGameAction() {
-//            @Override
-//            public void update() {
-//                isDone = true;
-//                if (parent != null && p.exhaustPile.contains(parent)) {
-//                    att(new AbstractGameAction() {
-//                        @Override
-//                        public void update() {
-//                            isDone = true;
-//                            p.exhaustPile.removeCard(parent);
-//                            AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(parent.makeSameInstanceOf()));
-//                        }
-//                    });
-//                }
-//            }
-//        });
-    }
-
-    @Override
-    public void afterlife() {
-        AbstractMonster m = AbstractDungeon.getRandomMonster();
-        if (m == null) return;
-        this.calculateCardDamage(m);
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-    }
-
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeDamage(2);
-            rawDescription = UPGRADE_DESCRIPTION;
-            cardsToPreview.upgrade();
-            initializeDescription();
-        }
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (parent != null && p.exhaustPile.contains(parent)) {
+                    att(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            p.exhaustPile.removeCard(parent);
+                            AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(parent.makeSameInstanceOf()));
+                        }
+                    });
+                }
+            }
+        });
     }
 
     @Override
@@ -112,4 +87,10 @@ public class ShadowStrike extends AbstractHexaCard {
         return card;
     }
 
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(2);
+        }
+    }
 }

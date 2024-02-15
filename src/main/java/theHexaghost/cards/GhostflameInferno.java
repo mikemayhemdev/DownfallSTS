@@ -14,7 +14,7 @@ public class GhostflameInferno extends AbstractHexaCard {
 
     public final static String ID = makeID("GhostflameInferno");
 
-    //Instant Inferno
+    //stupid intellij stuff ATTACK, ALL_ENEMY, RARE
 
     public GhostflameInferno() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);

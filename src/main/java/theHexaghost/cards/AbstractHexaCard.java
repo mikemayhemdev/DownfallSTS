@@ -22,13 +22,8 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.util.TextureLoader;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
-import theHexaghost.actions.AdvanceAction;
-import theHexaghost.actions.ChargeCurrentFlameAction;
-import theHexaghost.actions.ExtinguishCurrentFlameAction;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;
-import theHexaghost.powers.CrispyPower_new;
-import theHexaghost.powers.ParanormalFormPower;
 import theHexaghost.vfx.AfterlifePlayEffect;
 
 import java.util.ArrayList;
@@ -197,45 +192,33 @@ public abstract class AbstractHexaCard extends CustomCard {
 
     @Override
     public void triggerOnExhaust() {
-        int bonus = 0;
-        if(AbstractDungeon.player.hasPower(ParanormalFormPower.POWER_ID ) && this.hasTag(HexaMod.AFTERLIFE) ){
-            bonus = AbstractDungeon.player.getPower(ParanormalFormPower.POWER_ID).amount;
-        }
+        att(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (useAfterlifeVFX() && duration == startDuration) {
+                    atb(new VFXAction(new AfterlifePlayEffect(AbstractHexaCard.this)));
+                }
+                tickDuration();
+                if (isDone) {
 
-//        if(AbstractDungeon.player.hasPower(CrispyPower_new.POWER_ID) && this.hasTag(HexaMod.AFTERLIFE) ){
-//            for(int ignite = 0; ignite < AbstractDungeon.player.getPower(CrispyPower_new.POWER_ID).amount; ignite++ ){
-//                atb(new ExtinguishCurrentFlameAction());
-//                atb(new ChargeCurrentFlameAction());
-//            }
-//        }
-        for(int i = 0; i < bonus + 1; i++) {
-            att(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    if (useAfterlifeVFX() && duration == startDuration) {
-                        atb(new VFXAction(new AfterlifePlayEffect(AbstractHexaCard.this)));
-                    }
-                    tickDuration();
-                    if (isDone) {
+                    atb(new WaitAction(0.2F)); // from ShowCardAction
 
-                        atb(new WaitAction(0.2F)); // from ShowCardAction
+                    applyPowers();
+                    afterlife();
 
-                        applyPowers();
-                        afterlife();
+                    atb(new WaitAction(0.15F)); // from UseCardAction
 
-                        atb(new WaitAction(0.15F)); // from UseCardAction
-
-                        if (type == AbstractCard.CardType.POWER) { // special case for powers in UseCardAction
-                            if (com.megacrit.cardcrawl.core.Settings.FAST_MODE) {
-                                atb(new WaitAction(0.1F));
-                            } else {
-                                atb(new WaitAction(0.7F));
-                            }
+                    if (type == AbstractCard.CardType.POWER) { // special case for powers in UseCardAction
+                        if (com.megacrit.cardcrawl.core.Settings.FAST_MODE) {
+                            atb(new WaitAction(0.1F));
+                        } else {
+                            atb(new WaitAction(0.7F));
                         }
                     }
                 }
-            });
-        }
+            }
+        });
+
     }
 
     protected boolean useAfterlifeVFX() {

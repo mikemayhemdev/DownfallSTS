@@ -83,10 +83,6 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "Antidote",
-    "DESCRIPTION": "Lose !M! Poison."
-  },
-  "expansioncontent:BloodySacrifice": {
-    "NAME": "Bloody Sacrifice",
-    "DESCRIPTION": "Ethereal. NL Lose HP equal to 15% of your max HP({amount} HP). NL Gain 1 Ritual. Exhaust."
+    "DESCRIPTION": "Lose all Poison."
   }
 }

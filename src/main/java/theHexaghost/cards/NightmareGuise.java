@@ -12,31 +12,29 @@ public class NightmareGuise extends AbstractHexaCard {
     public final static String ID = makeID("NightmareGuise");
 
     public NightmareGuise() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseBlock = 4;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 9;
         isEthereal = true;
         cardsToPreview = new ShadowGuise();
-        tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "NightmareGuise.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+    }
+
+    @Override
+    public void afterlife() {
         superFlash(Color.PURPLE);
         AbstractCard q = new ShadowGuise(this);
         if (upgraded) q.upgrade();
         atb(new MakeTempCardInHandAction(q));
     }
 
-    @Override
-    public void afterlife() {
-        blck();
-    }
-
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(2);
+            upgradeBlock(3);
             cardsToPreview.upgrade();
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

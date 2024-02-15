@@ -19,25 +19,24 @@ public class BurningQuestion extends AbstractHexaCard {
     //ART:
 
     public BurningQuestion() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-//        baseBlock = 5;
-        baseMagicNumber = magicNumber = 2;
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        baseDamage = 10;
+        baseBlock = 10;
+        baseMagicNumber = magicNumber = 3;
         isMultiDamage = true;
         isEthereal = true;
-        tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "BurningQuestion.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new StrengthPower(p,magicNumber));
-        applyToSelf(new DexterityPower(AbstractDungeon.player,1));
     }
 
     @Override
     public void afterlife() {
         flash();
-        applyToSelf(new DexterityPower(AbstractDungeon.player,1));
-    }
+        applyToSelf(new DexterityPower(AbstractDungeon.player,2));
+          }
 
 //    @Override
 //    public void calculateCardDamage(AbstractMonster mo) {
@@ -53,8 +52,6 @@ public class BurningQuestion extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
             upgradeMagicNumber(1);
         }
     }

@@ -53,12 +53,11 @@
       " additional card."
     ]
   },
-  "hexamod:CrispyPower_new": {
+  "hexamod:CrispyPower": {
     "NAME": "Extra Crispy",
     "DESCRIPTIONS": [
-      "Whenever you #Exhaust a card, it will contribute towards the current #yGhostflame according to its type and cost #b",
-      " time.",
-      " times."
+      "#ySoulburn applied is increased by #b",
+      "."
     ]
   },
   "hexamod:EnhancePower": {
@@ -146,16 +145,19 @@
   "hexamod:ParanormalFormPower": {
     "NAME": "Poltergeist",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust an #yAfterlife card, trigger its #yAfterlife effect #b",
-      " additional time(s)."
+      "Whenever you play an #yAfterlife card, deal #b",
+      " damage to a random enemy."
     ]
   },
   "hexamod:PastPower": {
     "NAME": "Devil's Dance",
     "DESCRIPTIONS": [
-      "Whenever you #yRetract, draw #b",
-      " card.",
-      " cards."
+      "The first #b",
+      " time ",
+      " times ",
+      "you #yRetract each turn, gain [E] and draw 1 card. NL Retracted #b",
+      " time this turn.",
+      " times this turn."
     ]
   },
   "hexamod:PotionPostCombatPower": {

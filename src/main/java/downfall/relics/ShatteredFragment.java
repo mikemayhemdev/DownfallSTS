@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import downfall.cards.NewSharpenedFragment;
 import downfall.downfallMod;
 import guardian.cards.CrystalShiv;
 
@@ -24,15 +23,10 @@ public class ShatteredFragment extends CustomRelic {
         return DESCRIPTIONS[0];
     }
 
-//    @Override
-//    public void atTurnStart() {
-//        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-//        this.addToBot(new MakeTempCardInHandAction(new CrystalShiv(), 1, false));
-//    }
     @Override
-    public void atBattleStartPreDraw() {
-        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));// 24
-        this.addToBot(new MakeTempCardInHandAction(new NewSharpenedFragment()));// 25
+    public void atTurnStart() {
+        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        this.addToBot(new MakeTempCardInHandAction(new CrystalShiv(), 1, false));
     }
 
 }

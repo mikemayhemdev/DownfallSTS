@@ -32,7 +32,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
 
     public CrushingGhostflame(float x, float y) {
         super(x, y);
-        damage = 6;
+        damage = 3;
         //this.textColor = new Color(1F,.75F,.75F,1F);
         this.triggersRequired = 2;
 
@@ -61,7 +61,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
 
         @Override
     public void onCharge() {
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 2; i++) {
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {
@@ -83,7 +83,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
     @Override
     public String returnHoverHelperText() {
         int x = getEffectCount();
-        return x+"";
+        return x + "x2";
     }
 
     public int getEffectCount(){

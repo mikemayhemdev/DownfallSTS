@@ -415,7 +415,7 @@
     "NAME": "Sharpened Fragment",
     "FLAVOR": "Once a broken statue - now a makeshift weapon.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain a #yBloody #ySacrifice."
+      "At the start of each turn, gain a #yCrystal #yShiv."
     ]
   },
   "downfall:RedIOU": {

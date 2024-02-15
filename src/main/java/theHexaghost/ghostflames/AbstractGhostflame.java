@@ -70,9 +70,8 @@ public abstract class AbstractGhostflame {
         graphicalRender = new MyOrb(x, y, this, hitbox);
     }
 
-    // When using a card, the current ghostflame's advanceTrigger() will be called to
-    // trigger the ignition task progression and possibly the ignition effect, by patch GlobalOnCardUsePatch
     public void advanceTrigger(AbstractCard c) {
+
     }
 
     private void DoomsdayCheck(int amount) {

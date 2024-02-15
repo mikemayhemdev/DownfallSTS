@@ -41,13 +41,13 @@ public class SacrificeAction2 extends AbstractGameAction {
                 p.hand.moveToExhaustPile(c);
                 if (c.type == AbstractCard.CardType.ATTACK) {
                     AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.SKILL).makeCopy();// 32
-                    if (costify){q.upgrade();}
-//                        q.modifyCostForCombat(-1);
+                    if (costify)
+                        q.modifyCostForCombat(-1);
                     this.addToBot(new MakeTempCardInHandAction(q, true));// 34
                 } else if (c.type == AbstractCard.CardType.SKILL) {
                     AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK).makeCopy();// 32
-                    if (costify){q.upgrade();}
-//                        q.modifyCostForCombat(-1);
+                    if (costify)
+                        q.modifyCostForCombat(-1);
                     this.addToBot(new MakeTempCardInHandAction(q, true));// 34
                 }
                 this.returnCards();// 81
@@ -60,11 +60,13 @@ public class SacrificeAction2 extends AbstractGameAction {
                 p.hand.moveToExhaustPile(c);
                 if (c.type == AbstractCard.CardType.ATTACK) {
                     AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.SKILL).makeCopy();// 32
-                    if (costify){q.upgrade();}
+                    if (costify)
+                        q.modifyCostForCombat(-1);
                     this.addToBot(new MakeTempCardInHandAction(q, true));// 34
                 } else if (c.type == AbstractCard.CardType.SKILL) {
                     AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK).makeCopy();// 32
-                    if (costify){q.upgrade();}
+                    if (costify)
+                        q.modifyCostForCombat(-1);
                     this.addToBot(new MakeTempCardInHandAction(q, true));// 34
                 }
             }

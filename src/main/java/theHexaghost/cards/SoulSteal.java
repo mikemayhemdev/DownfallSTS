@@ -9,7 +9,7 @@ public class SoulSteal extends AbstractHexaCard {
 
     public final static String ID = makeID("SoulSteal");
 
-    //living bomb
+    //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
 
     public SoulSteal() {
@@ -28,7 +28,7 @@ public class SoulSteal extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBurn(2);
+            upgradeBurn(4);
         }
     }
 }

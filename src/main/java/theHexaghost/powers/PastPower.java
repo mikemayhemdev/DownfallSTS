@@ -41,19 +41,19 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
 
     @Override
     public void atStartOfTurnPostDraw() {
-//        activation_count = 0;
-//        updateDescription();
+        activation_count = 0;
+        updateDescription();
     }
 
     @Override
     public void onRetract() {
-//        if (activation_count < amount) {
+        if (activation_count < amount) {
             this.flash();
-//            addToBot(new GainEnergyAction(1));
+            addToBot(new GainEnergyAction(1));
             addToBot(new DrawCardAction(1));
-//        }
-//        activation_count++;
-//        updateDescription();
+        }
+        activation_count++;
+        updateDescription();
     }
 
     @Override
@@ -65,12 +65,12 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
             sb.append(DESCRIPTIONS[1]);
         else
             sb.append(amount).append(DESCRIPTIONS[2]);
-//        sb.append(DESCRIPTIONS[3]).append(activation_count);
-//        if (activation_count == 1)
-//            sb.append(DESCRIPTIONS[4]);
-//        else
-//            sb.append(DESCRIPTIONS[5]);
-//
+        sb.append(DESCRIPTIONS[3]).append(activation_count);
+        if (activation_count == 1)
+            sb.append(DESCRIPTIONS[4]);
+        else
+            sb.append(DESCRIPTIONS[5]);
+
         this.description = sb.toString();
     }
 

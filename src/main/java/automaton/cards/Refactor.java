@@ -19,7 +19,7 @@ public class Refactor extends AbstractBronzeCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ScryBlockStatusAction(magicNumber, block, false));
+        atb(new ScryBlockStatusAction(magicNumber, block));
 
     }
 

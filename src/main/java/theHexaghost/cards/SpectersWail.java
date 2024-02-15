@@ -22,8 +22,8 @@ public class SpectersWail extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ALL_ENEMY, COMMON
 
-    private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 8;
+    private static final int UPG_DAMAGE = 3;
 
     public SpectersWail() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
@@ -40,7 +40,6 @@ public class SpectersWail extends AbstractHexaCard {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShockWaveEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(MathUtils.random(1.0f), MathUtils.random(1.0f), MathUtils.random(1.0f), 1.0f), ShockWaveEffect.ShockWaveType.NORMAL)));
         }
         allDmg(AbstractGameAction.AttackEffect.FIRE);
-        allDmg(AbstractGameAction.AttackEffect.FIRE);
     }
 
     public void afterlife() {
@@ -53,6 +52,7 @@ public class SpectersWail extends AbstractHexaCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.baseDamage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
         atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VigorPower.POWER_ID));
     }
+
 
 
         public void upgrade() {

@@ -13,7 +13,7 @@ public class GhostOfSpirePast extends AbstractHexaCard {
 
     public final static String ID = makeID("GhostOfSpirePast");
 
-    //Devil's Dance
+    //stupid intellij stuff POWER, SELF, UNCOMMON
 
     private static final int MAGIC = 1;
 
@@ -27,7 +27,7 @@ public class GhostOfSpirePast extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new PastPower(1));
-//        atb(new RetractAction());
+        atb(new RetractAction());
     }
 
     public void upgrade() {
