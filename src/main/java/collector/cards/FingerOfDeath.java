@@ -15,16 +15,21 @@ public class FingerOfDeath extends AbstractCollectorCard {
     // intellij stuff attack, enemy, rare, 50, , , , , 
 
     public FingerOfDeath() {
-        super(ID, 4, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 4, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 50;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(p, new FingerOfDeathEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1f));
-        forAllMonstersLiving(q -> applyToEnemy(q, new DoomPower(q, magicNumber)));
+        if (upgraded) {
+            forAllMonstersLiving(q -> applyToEnemy(q, new DoomPower(q, magicNumber)));
+        } else {
+            applyToEnemy(m, new DoomPower(m, magicNumber));
+        }
     }
 
     public void upp() {
-        upgradeBaseCost(3);
+        uDesc();
+        target = CardTarget.ALL_ENEMY;
     }
 }
