@@ -26,8 +26,9 @@ public class ThirdSealReward extends CustomReward{
         this.redText = false;
         ReflectionHacks.setPrivate(this,RewardItem.class,"reticleColor",new Color(1.0F, 1.0F, 1.0F, 0.0F));
         this.type = RewardItemTypeEnumPatch.THIRDSEALCARDREWARD;
-        ReflectionHacks.setPrivate(this,RewardItem.class,"isBoss",AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss);
-        if(AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) this.icon = ImageMaster.REWARD_CARD_BOSS;
+        ReflectionHacks.setPrivate(this,RewardItem.class,"isBoss",false);
+//        ReflectionHacks.setPrivate(this,RewardItem.class,"isBoss",AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss);
+//        if(AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) this.icon = ImageMaster.REWARD_CARD_BOSS;
     }
 
     @Override
