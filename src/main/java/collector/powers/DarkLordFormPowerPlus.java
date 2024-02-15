@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class DarkLordFormPowerPlus extends AbstractCollectorPower {
-    public static final String NAME = "DarkLordFormPowerPlus";
+    public static final String NAME = "DarkLordFormPlus";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
     public static final boolean TURN_BASED = false;
