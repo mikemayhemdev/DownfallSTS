@@ -14,6 +14,7 @@ public class BurningStrike extends AbstractCollectorCard {
     public BurningStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 14;
+        baseMagicNumber = magicNumber = 1;
         tags.add(CardTags.STRIKE);
     }
 
@@ -23,6 +24,7 @@ public class BurningStrike extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(1);
+        upgradeMagicNumber(1);
     }
 }

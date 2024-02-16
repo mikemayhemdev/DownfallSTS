@@ -54,7 +54,7 @@
   "collector:BramblesparKindling": {
     "NAME": "가시나무서 쏘시개",
     "DESCRIPTION": "사용불가. NL 소멸되면 *불타는 *타격을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "사용불가. 보존. NL 소멸되면 *불타는 *타격+을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "사용불가. NL 소멸되면 *불타는 *타격+을 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "불쏘시개에는 불을 부쳐야 하지 않겠나."
     ]

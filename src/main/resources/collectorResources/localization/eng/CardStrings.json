@@ -54,7 +54,7 @@
   "collector:BramblesparKindling": {
     "NAME": "Bramblespar Kindling",
     "DESCRIPTION": "Unplayable. NL When *Exhausted, add a *Burning *Strike into your hand.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When *Exhausted, add a *Burning *Strike into your hand.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When *Exhausted, add a *Burning *Strike+ into your hand.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
