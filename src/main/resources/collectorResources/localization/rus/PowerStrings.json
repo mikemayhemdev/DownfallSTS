@@ -37,6 +37,14 @@
       " копии #yТы #yпринадлежишь #yмне! на случ. врагов." //unfinished
     ]
   },
+  "collector:DarkLordFormPlus": {
+    "NAME": "Облик Тёмной владычицы+",
+    "DESCRIPTIONS": [
+      "Вы разыгрываете #yТы #yпринадлежишь #yмне!+ на случ. врага в начале вашего хода.",
+      "Вы разыгрываете #b",
+      " копии #yТы #yпринадлежишь #yмне!+ на случ. врагов."
+    ]
+  },
   "collector:DoMayhem": {
     "NAME": "Да будет хаос",  //unfinished but unused anyway
     "DESCRIPTIONS": [
@@ -77,11 +85,11 @@
     ]
   },
   "collector:HealIfDieThisTurn": {
-    "NAME": "Finalized",
+    "NAME": "Прикончить",
     "DESCRIPTIONS": [
-      "If ",
-      " dies this turn, heal #b",
-      " HP."
+      "Когда ",
+      " погибнет, восполняет вам #b",
+      " ОЗ."
     ]
   },
   "collector:Karma": {
@@ -307,6 +315,13 @@
       "The first time you #yPyre #yАтаку each turn, return it to your hand. It costs #b0 until played.",
       "The first #b",
       " times you #yPyre #yАтаку each turn, return it to your hand. It costs #b0 until played."
+    ]
+  },
+  "collector:LoseHpNextTurn": {
+    "NAME": "Sapped Away",
+    "DESCRIPTIONS": [
+      "Теряет #b",
+      " ОЗ в конце своего хода."
     ]
   }
 }
