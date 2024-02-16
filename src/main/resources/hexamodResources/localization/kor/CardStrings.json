@@ -367,8 +367,8 @@
   },
   "hexamod:ThirdSeal": {
     "NAME": "세 번째 봉인",
-    "DESCRIPTION": "휘발성. hexamod:봉인. NL 전투 종료 시 카드 보상을 추가로 얻습니다.",
-    "UPGRADE_DESCRIPTION": "hexamod:봉인. NL 전투 종료 시 카드 보상을 추가로 얻습니다."
+    "DESCRIPTION": "휘발성. hexamod:봉인. NL 전투 종료 시 일반 카드 보상을 추가로 얻습니다.",
+    "UPGRADE_DESCRIPTION": "hexamod:봉인. NL 전투 종료 시 일반 카드 보상을 추가로 얻습니다."
   },
   "hexamod:FourthSeal": {
     "NAME": "네 번째 봉인",
