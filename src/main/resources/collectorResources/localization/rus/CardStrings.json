@@ -61,7 +61,8 @@
   },
   "collector:BurningStrike": {
     "NAME": "Обжигающий удар",
-    "DESCRIPTION": "Наносит !D! урона. NL Вы берёте карту."
+    "DESCRIPTION": "Наносит !D! урона. NL Вы берёте карту.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Вы берёте !M! карты."
   },
   "collector:CantTouchThis": {
     "NAME": "Не прикасайся", //unfinished
