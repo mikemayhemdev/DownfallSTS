@@ -263,8 +263,8 @@
   },
   "hermit:Determination": {
     "NAME": "决心",
-    "DESCRIPTION": "每当你获得负面效果， NL 获得1点 力量 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你获得负面效果， NL 获得1点 力量 。"
+    "DESCRIPTION": "获得负面效果时， NL 同时获得1点 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得负面效果时， NL 同时获得1点 力量 。"
   },
   "hermit:Showdown": {
     "NAME": "决战",
