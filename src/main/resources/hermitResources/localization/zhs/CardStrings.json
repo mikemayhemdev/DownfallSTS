@@ -38,7 +38,7 @@
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *打击+3 。 NL 消耗 。"
   },
   "hermit:BodyArmor": {
-    "NAME": "全身护甲",
+    "NAME": "防弹衣",
     "DESCRIPTION":"丢弃一张手牌。 NL 获得 !B! 点 格挡 。 NL 若丢弃一张 *非攻击 牌 ，再获得 !B! 点。"
   },
   "hermit:Snipe": {
