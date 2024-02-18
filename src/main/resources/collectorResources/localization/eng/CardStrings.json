@@ -61,7 +61,8 @@
   },
   "collector:BurningStrike": {
     "NAME": "Burning Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a card."
+    "DESCRIPTION": "Deal !D! damage. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
   },
   "collector:CantTouchThis": {
     "NAME": "Can't Touch This",

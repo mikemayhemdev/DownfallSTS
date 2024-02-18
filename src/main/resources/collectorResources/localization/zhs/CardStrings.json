@@ -58,7 +58,8 @@
   },
   "collector:BurningStrike": {
     "NAME": "火炬打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。"
   },
   "collector:CantTouchThis": {
     "NAME": "凶不可触",

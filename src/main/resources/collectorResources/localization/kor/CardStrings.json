@@ -61,7 +61,8 @@
   },
   "collector:BurningStrike": {
     "NAME": "불타는 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 뽑습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 장 뽑습니다."
   },
   "collector:CantTouchThis": {
     "NAME": "손대지 말거라",
