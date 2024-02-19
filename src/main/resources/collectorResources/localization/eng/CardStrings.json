@@ -323,7 +323,7 @@
   },
   "collector:SapStrength": {
     "NAME": "Deathmark",
-    "DESCRIPTION": "Deal !D! damage. NL Next turn, enemy loses twice as much HP."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, enemy loses HP equal to twice the unblocked damage dealt."
   },
   "collector:ScorchingRay": {
     "NAME": "Scorching Ray",
