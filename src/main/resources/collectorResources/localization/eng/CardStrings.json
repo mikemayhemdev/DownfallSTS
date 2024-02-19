@@ -315,7 +315,7 @@
   },
   "collector:RotwoodKindling": {
     "NAME": "Rotwood Kindling",
-    "DESCRIPTION": "Unplayable. NL When *Exhausted, apply !M! Vulnerable to ALL enemies.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, apply !M! Vulnerable and !clm2! collector:Doom to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
