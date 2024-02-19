@@ -49,8 +49,8 @@
     "NAME": "Sealed Reward: Card",
     "DESCRIPTIONS": [
       "At the end of combat, obtain #b",
-      " additional cards.",
-      " additional card."
+      " additional normal card rewards.",
+      " additional normal card reward."
     ]
   },
   "hexamod:CrispyPower": {

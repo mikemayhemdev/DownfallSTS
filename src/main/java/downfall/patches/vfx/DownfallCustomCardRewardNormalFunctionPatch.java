@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.EmptyRoom;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.screens.CombatRewardScreen;
 import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
 import downfall.util.ThirdSealReward;
@@ -26,9 +27,13 @@ public class DownfallCustomCardRewardNormalFunctionPatch {
                 if ( rewardItem instanceof ThirdSealReward ) {
                     ThirdSealReward reward = (ThirdSealReward) rewardItem;
                     AbstractRoom temp = AbstractDungeon.getCurrRoom();      // The card reward would roll cards based on current room type
-                    AbstractDungeon.currMapNode.setRoom(new EmptyRoom());   // these lines are used to force it generate card rewards like in hall fights
-                    reward.generate_reward_cards();                         // tested to work without affecting the original boss card reward and save & reload friendly
-                    AbstractDungeon.currMapNode.setRoom(temp);             //  but might be buggy
+                    if(temp instanceof MonsterRoomBoss){
+                        AbstractDungeon.currMapNode.setRoom(new EmptyRoom());   // these lines are used to force it generate card rewards like in hall fights
+                        reward.generate_reward_cards();                         // tested to work without affecting the original boss card reward and save & reload friendly
+                        AbstractDungeon.currMapNode.setRoom(temp);             //  but might still be buggy
+                    }else{
+                        reward.generate_reward_cards();
+                    }
                 } else if ( rewardItem instanceof SealSealReward ) {
                     SealSealReward reward = (SealSealReward) rewardItem;
                     reward.generate_reward_cards();

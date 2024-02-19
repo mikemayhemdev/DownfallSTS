@@ -58,7 +58,8 @@
   },
   "collector:BurningStrike": {
     "NAME": "火炬打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。"
   },
   "collector:CantTouchThis": {
     "NAME": "凶不可触",
@@ -309,7 +310,7 @@
   },
   "collector:RotwoodKindling": {
     "NAME": "腐木柴",
-    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， 给予所有敌人 !M! 层 易伤 。",
+    "DESCRIPTION": "不能被打出 。 NL 本牌被 消耗 时， 给予所有敌人 !M! 层 易伤 与 !clm2! 层 collector:魂劫 。",
     "EXTENDED_DESCRIPTION": [
       "我必须点燃这份燃材才能发挥它的作用。"
     ]
