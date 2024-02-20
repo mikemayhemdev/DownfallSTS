@@ -16,7 +16,7 @@ public class AutoCurser extends CustomRelic {
     public static final String ID = CollectorMod.makeID(AutoCurser.class.getSimpleName());
     private static final String IMG_PATH = AutoCurser.class.getSimpleName() + ".png";
     private static final String OUTLINE_IMG_PATH = AutoCurser.class.getSimpleName() + ".png";
-
+    \\talisman 
     public AutoCurser() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.COMMON, LandingSound.MAGICAL);
     }
@@ -25,9 +25,11 @@ public class AutoCurser extends CustomRelic {
     public void atBattleStart() {
         flash();
         AbstractMonster q = AbstractDungeon.getRandomMonster();
-        atb(new RelicAboveCreatureAction(q, this));
-        applyToEnemy(q, new WeakPower(q, 1, false));
-        applyToEnemy(q, new VulnerablePower(q, 1, false));
+        if(q != null){
+            atb(new RelicAboveCreatureAction(q, this));
+            applyToEnemy(q, new WeakPower(q, 1, false));
+            applyToEnemy(q, new VulnerablePower(q, 1, false));            
+        }
     }
 
     @Override
@@ -35,4 +37,3 @@ public class AutoCurser extends CustomRelic {
         return DESCRIPTIONS[0];
     }
 }
-
