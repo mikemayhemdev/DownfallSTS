@@ -10,7 +10,6 @@ import static automaton.AutomatonMod.makeBetaCardPath;
 public class Strike extends AbstractHexaCard {
 
     public final static String ID = makeID("Strike");
-// test
     //stupid intellij stuff ATTACK, ENEMY, STARTER
 
     private static final int DAMAGE = 6;
