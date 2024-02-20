@@ -30,14 +30,14 @@ public class BramblesparKindling extends AbstractCollectorCard {
     @Override
     public void triggerOnExhaust() {
         AbstractCard q = new BurningStrike();
-//        if (upgraded) {
-//            q.upgrade();
-//        }
+        if (upgraded) {
+            q.upgrade();
+        }
         makeInHand(q);
     }
 
     public void upp() {
-        selfRetain = true;
+        cardsToPreview.upgrade();
         uDesc();
     }
 }
