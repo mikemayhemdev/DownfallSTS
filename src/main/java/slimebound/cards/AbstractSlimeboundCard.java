@@ -40,6 +40,15 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
         upgradeSlimed = true;
     }
 
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradeSlimed) {
+            slimed = baseSlimed;
+            isSlimedModified = true;
+        }
+    }
+
+
     @Override
     public void resetAttributes() {
         super.resetAttributes();
