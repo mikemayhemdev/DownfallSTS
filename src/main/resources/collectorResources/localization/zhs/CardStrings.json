@@ -317,7 +317,7 @@
   },
   "collector:SapStrength": {
     "NAME": "竭力",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 下回合， NL 目标失去该值双倍生命。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 下回合，目标失去造成的未被格挡伤害的双倍生命。"
   },
   "collector:ScorchingRay": {
     "NAME": "灼烧光线",
