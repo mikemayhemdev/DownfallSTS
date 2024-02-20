@@ -33,10 +33,18 @@ public class PrismaticTorch extends CustomRelic {
     }
 
     @Override
+    public void atTurnStart() {
+        grayscale=false;
+    }
+
+    @Override
     public void onExhaust(AbstractCard card) {
-        if (card.cardID.equals(Ember.ID)) {
-            flash();
-            atb(new GainReservesAction(1));
+        if (!grayscale) {
+            if (card.cardID.equals(Ember.ID)) {
+                flash();
+                atb(new GainReservesAction(1));
+                grayscale=true;
+            }
         }
     }
 
@@ -79,4 +87,3 @@ public class PrismaticTorch extends CustomRelic {
         return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
     }
 }
-
