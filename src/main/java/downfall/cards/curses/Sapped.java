@@ -17,7 +17,6 @@ public class Sapped extends AbstractCollectorCard {
         baseMagicNumber = magicNumber = 1;
         isPyre();
         exhaust = true;
-        tags.add(expansionContentMod.UNPLAYABLE);
         SoulboundField.soulbound.set(this, true);
     }
 
