@@ -26,7 +26,6 @@ public class ForbiddenFruit extends CustomRelic {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
-    @Override
     public void onEquip() {
         stage = 0;
         selected = false;
@@ -64,6 +63,11 @@ public class ForbiddenFruit extends CustomRelic {
             else if (stage == 0) {
                 selected = false;
                 CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+                for(AbstractCard c: group.group){
+                    for (AbstractRelic r : AbstractDungeon.player.relics) {
+                        r.onPreviewObtainCard(c);
+                    }
+                }
                 group.group.addAll(AbstractDungeon.srcUncommonCardPool.group.stream().map(AbstractCard::makeCopy).collect(Collectors.toList()));
                 AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[0], false, false, false, false);
                 stage++;
@@ -71,6 +75,11 @@ public class ForbiddenFruit extends CustomRelic {
             else if (stage == 1) {
                 selected = false;
                 CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+                for(AbstractCard c: group.group){
+                    for (AbstractRelic r : AbstractDungeon.player.relics) {
+                        r.onPreviewObtainCard(c);
+                    }
+                }
                 group.group.addAll(AbstractDungeon.srcCommonCardPool.group.stream().map(AbstractCard::makeCopy).collect(Collectors.toList()));
                 AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[0], false, false, false, false);
                 stage++;
@@ -83,4 +92,3 @@ public class ForbiddenFruit extends CustomRelic {
         return DESCRIPTIONS[0];
     }
 }
-
