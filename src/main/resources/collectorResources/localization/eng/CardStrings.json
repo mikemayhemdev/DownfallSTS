@@ -190,7 +190,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus",
-    "DESCRIPTION": "Choose 1 of 3 Collected cards to gain. NL Add !M! copies of it into your Collected pile.",
+    "DESCRIPTION": "Choose 1 of 3 Collected cards to add into your hand. Add !M! copies of it into your Collected pile.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to add into your hand."
     ]
@@ -316,14 +316,14 @@
   },
   "collector:RotwoodKindling": {
     "NAME": "Rotwood Kindling",
-    "DESCRIPTION": "Unplayable. NL When *Exhausted, apply !M! Vulnerable to ALL enemies.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, apply !M! Vulnerable and !clm2! collector:Doom to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
   },
   "collector:SapStrength": {
     "NAME": "Deathmark",
-    "DESCRIPTION": "Deal !D! damage. NL Next turn, enemy loses twice as much HP."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, enemy loses HP equal to twice the unblocked damage dealt."
   },
   "collector:ScorchingRay": {
     "NAME": "Scorching Ray",
