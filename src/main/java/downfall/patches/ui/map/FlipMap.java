@@ -84,11 +84,15 @@ public class FlipMap {
         }
     }
 
+    private static boolean moddedActFourCheck() {
+        return (AbstractDungeon.actNum >= 4 && !Settings.isEndless && !AbstractDungeon.id.equals(TheEnding.ID));
+    }
+
     public static class MapFlipper {
         public static int startY = 0;
 
         public static void flipflipflipflipflip() {
-            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id) && !moddedActFourCheck()) {
                 if (downfallMod.normalMapLayout) {
                     if (!AbstractDungeon.id.equals(TheEnding.ID)) {
                         flipCampfire();
