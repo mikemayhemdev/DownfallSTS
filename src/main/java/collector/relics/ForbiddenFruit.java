@@ -92,4 +92,3 @@ public class ForbiddenFruit extends CustomRelic {
         return DESCRIPTIONS[0];
     }
 }
-

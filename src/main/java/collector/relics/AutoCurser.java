@@ -37,4 +37,3 @@ public class AutoCurser extends CustomRelic {
         return DESCRIPTIONS[0];
     }
 }
-
