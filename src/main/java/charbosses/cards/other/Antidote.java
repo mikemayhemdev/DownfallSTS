@@ -44,4 +44,3 @@ public class Antidote extends AbstractDownfallCard {
 }
 
 
-
