@@ -39,7 +39,7 @@ public class RotwoodKindling extends AbstractCollectorCard {
     }
 
     public void upp() {
-        selfRetain = true;
-        uDesc();
+        upgradeMagicNumber(1);
+        upgradeSecondMagic(2);
     }
 }
