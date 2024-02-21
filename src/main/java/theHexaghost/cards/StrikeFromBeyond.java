@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 
@@ -25,7 +26,7 @@ public class StrikeFromBeyond extends AbstractHexaCard {
     private static final int UPG_DAMAGE = 2;
 
     public StrikeFromBeyond() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         this.tags.add(CardTags.STRIKE);
@@ -33,9 +34,9 @@ public class StrikeFromBeyond extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 0; i < this.magicNumber; i++) {
+//        for(int i = 0; i < this.magicNumber; i++) {
             dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        }
+//        }
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
@@ -49,7 +50,8 @@ public class StrikeFromBeyond extends AbstractHexaCard {
                             public void update() {
                                 isDone = true;
                                 AbstractDungeon.player.exhaustPile.removeCard(q);
-                                AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(q.makeSameInstanceOf()));
+                                AbstractDungeon.effectsQueue.add( new ShowCardAndAddToDrawPileEffect( q.makeSameInstanceOf(), true, false ) );
+//                                AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(q.makeSameInstanceOf()));
                             }
                         });
                     }
