@@ -1,10 +1,15 @@
 package theHexaghost.cards;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.green.Nightmare;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
@@ -16,11 +21,13 @@ public class ShadowGuise extends AbstractHexaCard {
     private AbstractCard parent;
 
     public ShadowGuise(AbstractCard parent) {
-        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseBlock = 7;
-        exhaust = true;
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        baseBlock = 6;
+//        exhaust = true;
         isEthereal = true;
         setParent(parent);
+        tags.add(HexaMod.AFTERLIFE);
+//        cardsToPreview = new NightmareStrike();
         HexaMod.loadJokeCardImage(this, "ShadowGuise.png");
     }
 
@@ -36,23 +43,54 @@ public class ShadowGuise extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+        superFlash(Color.PURPLE);
+        AbstractCard q = new NightmareStrike();
+        if (upgraded) q.upgrade();
+        atb(new MakeTempCardInHandAction(q));
+//        atb(new AbstractGameAction() {
+//            @Override
+//            public void update() {
+//                isDone = true;
+//                if (parent != null && p.exhaustPile.contains(parent)) {
+//                    att(new AbstractGameAction() {
+//                        @Override
+//                        public void update() {
+//                            isDone = true;
+//                            p.exhaustPile.removeCard(parent);
+//                            AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(parent.makeSameInstanceOf()));
+//                        }
+//                    });
+//                }
+//            }
+//        });
+    }
+
+    @Override
+    public void afterlife() {
         blck();
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (parent != null && p.exhaustPile.contains(parent)) {
-                    att(new AbstractGameAction() {
-                        @Override
-                        public void update() {
-                            isDone = true;
-                            p.exhaustPile.removeCard(parent);
-                            AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(parent.makeSameInstanceOf()));
-                        }
-                    });
-                }
+    }
+
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeBlock(2);
+            if(cardsToPreview!=null){
+                cardsToPreview.upgrade();
             }
-        });
+
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+        }
+    }
+
+
+    @Override
+    public void update() {
+        super.update();
+        if (hb.hovered) {
+            cardsToPreview = new NightmareStrike();
+            if(upgraded) cardsToPreview.upgrade();
+        }
     }
 
     @Override
@@ -85,10 +123,5 @@ public class ShadowGuise extends AbstractHexaCard {
         return card;
     }
 
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeBlock(2);
-        }
-    }
+
 }
