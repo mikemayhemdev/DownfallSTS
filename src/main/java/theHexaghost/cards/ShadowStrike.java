@@ -19,14 +19,14 @@ public class ShadowStrike extends AbstractHexaCard {
     private AbstractCard parent;
 
     public ShadowStrike(AbstractCard parent) {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 7;
-//        exhaust = true;
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        baseDamage = 6;
+        exhaust = true;
         isEthereal = true;
-        cardsToPreview = new NightmareGuise();
-        tags.add(HexaMod.AFTERLIFE);
+//        cardsToPreview = new NightmareGuise();
+//        tags.add(HexaMod.AFTERLIFE);
         tags.add(CardTags.STRIKE);
-        setParent(parent);
+//        setParent(parent);
         HexaMod.loadJokeCardImage(this, "ShadowStrike.png");
     }
 
@@ -34,18 +34,18 @@ public class ShadowStrike extends AbstractHexaCard {
         this(null);
     }
 
-    public void setParent(AbstractCard parent) {
-        this.parent = parent;
-        if (parent != null)
-            cardsToPreview = this.parent.makeStatEquivalentCopy();
-    }
+//    public void setParent(AbstractCard parent) {
+//        this.parent = parent;
+//        if (parent != null)
+//            cardsToPreview = this.parent.makeStatEquivalentCopy();
+//    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        superFlash(Color.PURPLE);
-        AbstractCard q = new NightmareGuise();
-        if (upgraded) q.upgrade();
-        atb(new MakeTempCardInHandAction(q));
+//        superFlash(Color.PURPLE);
+//        AbstractCard q = new NightmareGuise();
+//        if (upgraded) q.upgrade();
+//        atb(new MakeTempCardInHandAction(q));
 //        atb(new AbstractGameAction() {
 //            @Override
 //            public void update() {
@@ -64,52 +64,52 @@ public class ShadowStrike extends AbstractHexaCard {
 //        });
     }
 
-    @Override
-    public void afterlife() {
-        AbstractMonster m = AbstractDungeon.getRandomMonster();
-        if (m == null) return;
-        this.calculateCardDamage(m);
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-    }
+//    @Override
+//    public void afterlife() {
+//        AbstractMonster m = AbstractDungeon.getRandomMonster();
+//        if (m == null) return;
+//        this.calculateCardDamage(m);
+//        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+//    }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(2);
-            rawDescription = UPGRADE_DESCRIPTION;
-            cardsToPreview.upgrade();
-            initializeDescription();
+//            rawDescription = UPGRADE_DESCRIPTION;
+//            cardsToPreview.upgrade();
+//            initializeDescription();
         }
     }
 
-    @Override
-    public AbstractCard makeStatEquivalentCopy() {
-        ShadowStrike card = (ShadowStrike) this.makeCopy();
-
-        for(int i = 0; i < this.timesUpgraded; ++i) {
-            card.upgrade();
-        }
-
-        card.name = this.name;
-        card.target = this.target;
-        card.upgraded = this.upgraded;
-        card.timesUpgraded = this.timesUpgraded;
-        card.baseDamage = this.baseDamage;
-        card.baseBlock = this.baseBlock;
-        card.baseMagicNumber = this.baseMagicNumber;
-        card.cost = this.cost;
-        card.costForTurn = this.costForTurn;
-        card.isCostModified = this.isCostModified;
-        card.isCostModifiedForTurn = this.isCostModifiedForTurn;
-        card.inBottleLightning = this.inBottleLightning;
-        card.inBottleFlame = this.inBottleFlame;
-        card.inBottleTornado = this.inBottleTornado;
-        card.isSeen = this.isSeen;
-        card.isLocked = this.isLocked;
-        card.misc = this.misc;
-        card.freeToPlayOnce = this.freeToPlayOnce;
-        card.setParent(this.parent);
-        return card;
-    }
+//    @Override
+//    public AbstractCard makeStatEquivalentCopy() {
+//        ShadowStrike card = (ShadowStrike) this.makeCopy();
+//
+//        for(int i = 0; i < this.timesUpgraded; ++i) {
+//            card.upgrade();
+//        }
+//
+//        card.name = this.name;
+//        card.target = this.target;
+//        card.upgraded = this.upgraded;
+//        card.timesUpgraded = this.timesUpgraded;
+//        card.baseDamage = this.baseDamage;
+//        card.baseBlock = this.baseBlock;
+//        card.baseMagicNumber = this.baseMagicNumber;
+//        card.cost = this.cost;
+//        card.costForTurn = this.costForTurn;
+//        card.isCostModified = this.isCostModified;
+//        card.isCostModifiedForTurn = this.isCostModifiedForTurn;
+//        card.inBottleLightning = this.inBottleLightning;
+//        card.inBottleFlame = this.inBottleFlame;
+//        card.inBottleTornado = this.inBottleTornado;
+//        card.isSeen = this.isSeen;
+//        card.isLocked = this.isLocked;
+//        card.misc = this.misc;
+//        card.freeToPlayOnce = this.freeToPlayOnce;
+//        card.setParent(this.parent);
+//        return card;
+//    }
 
 }

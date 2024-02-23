@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -50,7 +51,7 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
 
     @Override
     public void atStartOfTurnPostDraw() {
-        this.addToBot(new LoseEnergyAction(amount));
+//        this.addToBot(new LoseEnergyAction(amount));
 //        flash();
 //        addToBot(new AbstractGameAction() {
 //            { startDuration = duration = 1.5f; }
@@ -78,15 +79,16 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
     @Override
     public void atStartOfTurn() {
         this.flash();
-        this.addToBot(new DrawCardAction(3*amount));
+        this.addToBot(new DrawCardAction(2 * amount));
+        this.addToBot(new ExhaustAction(amount, false, false, true));
     }
 
     @Override
     public void updateDescription() {
         if (amount == 1) {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + 2*amount + DESCRIPTIONS[1] + DESCRIPTIONS[2] + amount + DESCRIPTIONS[4];
         } else {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[0] + 2*amount + DESCRIPTIONS[1] + DESCRIPTIONS[3] + amount + DESCRIPTIONS[5];
         }
     }
 

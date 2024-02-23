@@ -107,10 +107,12 @@
   "hexamod:GiftsFromTheDeadPower": {
     "NAME": "Gifted Cards",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yReclaim ",
-      " random #yAfterlife ",
-      " card.",
-      " cards."
+      "At the start of your turn, draw #b",
+      " additional",
+      " card and #yExhaust #b",
+      " cards and #yExhaust #b",
+      " random card.",
+      " random cards."
     ]
   },
   "hexamod:GiftsFromTheDeadPowerPlus": {

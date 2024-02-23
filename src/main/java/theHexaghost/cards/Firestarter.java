@@ -12,7 +12,7 @@ public class Firestarter extends AbstractHexaCard {
     public Firestarter() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 6;
-        baseBurn = burn = 6;
+        baseBurn = burn = 5;
         isMultiDamage = true;
         HexaMod.loadJokeCardImage(this, "Firestarter.png");
     }

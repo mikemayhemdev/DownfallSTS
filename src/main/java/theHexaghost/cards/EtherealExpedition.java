@@ -80,7 +80,6 @@ public class EtherealExpedition extends AbstractHexaCard {
             upgradeName();
             upgradeBaseCost(0);
 //            upgradeMagicNumber(1);
-            upgradeBurn(1);
         }
     }
 }

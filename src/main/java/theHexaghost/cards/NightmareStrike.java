@@ -15,7 +15,7 @@ public class NightmareStrike extends AbstractHexaCard {
 
     public NightmareStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 3;
         isEthereal = true;
         cardsToPreview = new ShadowStrike();
         tags.add(CardTags.STRIKE);
@@ -27,7 +27,7 @@ public class NightmareStrike extends AbstractHexaCard {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         superFlash(Color.PURPLE);
         AbstractCard q = new ShadowStrike(this);
-        if (upgraded) q.upgrade();
+//        if (upgraded) q.upgrade();
         atb(new MakeTempCardInHandAction(q));
     }
 
@@ -42,7 +42,7 @@ public class NightmareStrike extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(3);
             rawDescription = UPGRADE_DESCRIPTION;
             cardsToPreview.upgrade();
             initializeDescription();

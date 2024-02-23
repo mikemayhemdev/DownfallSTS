@@ -61,7 +61,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. NL Add !M! random Afterlife card into your hand. NL hexamod:Afterlife: Add !burny! random Afterlife cards into your drawpile."
+    "DESCRIPTION": "Ethereal. NL Add !M! random Afterlife card into your hand. NL hexamod:Afterlife: Add !burny! random Afterlife card into your drawpile."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
@@ -140,8 +140,8 @@
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "Gifts From Beyond",
-    "DESCRIPTION": "At the start of your turn, draw !M! additional cards but lose [E] .",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! additional cards but lose [E] .",
+    "DESCRIPTION": "At the start of your turn, draw !M! additional cards and Exhaust 1 card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! additional cards and Exhaust 1 card.",
     "EXTENDED_DESCRIPTION": [
       "These spirits are too powerful to invoke directly."
     ]
@@ -269,13 +269,13 @@
   },
   "hexamod:ShadowGuise": {
     "NAME": "Shadow Guise",
-    "DESCRIPTION": "Ethereal. NL Gain a *Nightmare *Strike. NL hexamod:Afterlife : NL Gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain a *Nightmare *Strike+. NL hexamod:Afterlife : NL Gain !B! Block."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Exhaust."
   },
   "hexamod:ShadowStrike": {
     "NAME": "Shadow Strike",
-    "DESCRIPTION": "Ethereal. NL Gain a *Nightmare *Guise. NL hexamod:Afterlife : NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain a *Nightmare *Guise+. NL hexamod:Afterlife : NL Deal !D! damage."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Shield of Night",

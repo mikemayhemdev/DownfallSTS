@@ -21,12 +21,12 @@ public class ShadowGuise extends AbstractHexaCard {
     private AbstractCard parent;
 
     public ShadowGuise(AbstractCard parent) {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseBlock = 6;
-//        exhaust = true;
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        baseBlock = 5;
+        exhaust = true;
         isEthereal = true;
-        setParent(parent);
-        tags.add(HexaMod.AFTERLIFE);
+//        setParent(parent);
+//        tags.add(HexaMod.AFTERLIFE);
 //        cardsToPreview = new NightmareStrike();
         HexaMod.loadJokeCardImage(this, "ShadowGuise.png");
     }
@@ -44,9 +44,9 @@ public class ShadowGuise extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         superFlash(Color.PURPLE);
-        AbstractCard q = new NightmareStrike();
-        if (upgraded) q.upgrade();
-        atb(new MakeTempCardInHandAction(q));
+//        AbstractCard q = new NightmareStrike();
+//        if (upgraded) q.upgrade();
+//        atb(new MakeTempCardInHandAction(q));
 //        atb(new AbstractGameAction() {
 //            @Override
 //            public void update() {
@@ -73,55 +73,51 @@ public class ShadowGuise extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(2);
-            if(cardsToPreview!=null){
-                cardsToPreview.upgrade();
-            }
-
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBlock(3);
+//            rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
         }
     }
 
 
-    @Override
-    public void update() {
-        super.update();
-        if (hb.hovered) {
-            cardsToPreview = new NightmareStrike();
-            if(upgraded) cardsToPreview.upgrade();
-        }
-    }
+//    @Override
+//    public void update() {
+//        super.update();
+//        if (hb.hovered) {
+//            cardsToPreview = new NightmareStrike();
+//            if(upgraded) cardsToPreview.upgrade();
+//        }
+//    }
 
-    @Override
-    public AbstractCard makeStatEquivalentCopy() {
-        ShadowGuise card = (ShadowGuise) this.makeCopy();
-
-        for(int i = 0; i < this.timesUpgraded; ++i) {
-            card.upgrade();
-        }
-
-        card.name = this.name;
-        card.target = this.target;
-        card.upgraded = this.upgraded;
-        card.timesUpgraded = this.timesUpgraded;
-        card.baseDamage = this.baseDamage;
-        card.baseBlock = this.baseBlock;
-        card.baseMagicNumber = this.baseMagicNumber;
-        card.cost = this.cost;
-        card.costForTurn = this.costForTurn;
-        card.isCostModified = this.isCostModified;
-        card.isCostModifiedForTurn = this.isCostModifiedForTurn;
-        card.inBottleLightning = this.inBottleLightning;
-        card.inBottleFlame = this.inBottleFlame;
-        card.inBottleTornado = this.inBottleTornado;
-        card.isSeen = this.isSeen;
-        card.isLocked = this.isLocked;
-        card.misc = this.misc;
-        card.freeToPlayOnce = this.freeToPlayOnce;
-        card.setParent(this.parent);
-        return card;
-    }
+//    @Override
+//    public AbstractCard makeStatEquivalentCopy() {
+//        ShadowGuise card = (ShadowGuise) this.makeCopy();
+//
+//        for(int i = 0; i < this.timesUpgraded; ++i) {
+//            card.upgrade();
+//        }
+//
+//        card.name = this.name;
+//        card.target = this.target;
+//        card.upgraded = this.upgraded;
+//        card.timesUpgraded = this.timesUpgraded;
+//        card.baseDamage = this.baseDamage;
+//        card.baseBlock = this.baseBlock;
+//        card.baseMagicNumber = this.baseMagicNumber;
+//        card.cost = this.cost;
+//        card.costForTurn = this.costForTurn;
+//        card.isCostModified = this.isCostModified;
+//        card.isCostModifiedForTurn = this.isCostModifiedForTurn;
+//        card.inBottleLightning = this.inBottleLightning;
+//        card.inBottleFlame = this.inBottleFlame;
+//        card.inBottleTornado = this.inBottleTornado;
+//        card.isSeen = this.isSeen;
+//        card.isLocked = this.isLocked;
+//        card.misc = this.misc;
+//        card.freeToPlayOnce = this.freeToPlayOnce;
+//        card.setParent(this.parent);
+//        return card;
+//    }
 
 
 }

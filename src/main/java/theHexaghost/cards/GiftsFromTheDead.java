@@ -16,7 +16,7 @@ public class GiftsFromTheDead extends AbstractHexaCard {
 
     public GiftsFromTheDead() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        this.magicNumber = baseMagicNumber = 3;
+        this.magicNumber = baseMagicNumber = 2;
         HexaMod.loadJokeCardImage(this, "GiftsFromTheDead.png");
     }
 

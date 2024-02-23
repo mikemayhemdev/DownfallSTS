@@ -28,8 +28,8 @@ public class GhostLash extends AbstractHexaCard {
 
     public GhostLash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = DAMAGE;
+        baseDamage = 6;
+        baseMagicNumber = magicNumber = 4;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "GhostLash.png");
@@ -96,7 +96,7 @@ public class GhostLash extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(UPG_DAMAGE);
+            upgradeMagicNumber(1);
         }
     }
 }
