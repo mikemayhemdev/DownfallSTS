@@ -49,8 +49,8 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
         this.updateDescription();
     }
 
-    @Override
-    public void atStartOfTurnPostDraw() {
+//    @Override
+//    public void atStartOfTurnPostDraw() {
 //        this.addToBot(new LoseEnergyAction(amount));
 //        flash();
 //        addToBot(new AbstractGameAction() {
@@ -74,10 +74,10 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
 //                tickDuration();
 //            }
 //        });
-    }
+//    }
 
     @Override
-    public void atStartOfTurn() {
+    public void atStartOfTurnPostDraw() {
         this.flash();
         this.addToBot(new DrawCardAction(2 * amount));
         this.addToBot(new ExhaustAction(amount, false, false, true));

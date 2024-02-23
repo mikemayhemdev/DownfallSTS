@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
@@ -16,6 +17,7 @@ import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;
 import theHexaghost.powers.EnhancePower;
 import downfall.util.TextureLoader;
+import theHexaghost.relics.JarOfFuel;
 
 public class SearingGhostflame extends AbstractGhostflame {
 
@@ -67,8 +69,12 @@ public class SearingGhostflame extends AbstractGhostflame {
 
     @Override
     public void advanceTrigger(AbstractCard c) {
-        if (!charged && c.type == AbstractCard.CardType.ATTACK) {
+        if (!charged && ( c.type == AbstractCard.CardType.ATTACK || (AbstractDungeon.player.hasRelic(JarOfFuel.ID) && c.type == AbstractCard.CardType.POWER ) ) ){
             if (attacksPlayedThisTurn < 2) {
+                if(AbstractDungeon.player.hasRelic(JarOfFuel.ID) && c.type == AbstractCard.CardType.POWER){
+                    AbstractRelic r =  AbstractDungeon.player.getRelic(JarOfFuel.ID);
+                    if(r != null){ r.flash(); }
+                }
                 advanceTriggerAnim();
                 attacksPlayedThisTurn++;
                 if (attacksPlayedThisTurn == 2) {

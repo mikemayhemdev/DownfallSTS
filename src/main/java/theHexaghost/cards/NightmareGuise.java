@@ -13,7 +13,7 @@ public class NightmareGuise extends AbstractHexaCard {
 
     public NightmareGuise() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 4;
+        baseBlock = 3;
         isEthereal = true;
         cardsToPreview = new ShadowGuise();
         tags.add(HexaMod.AFTERLIFE);

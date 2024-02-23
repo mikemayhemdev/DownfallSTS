@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.BurningHitAction;
+import theHexaghost.actions.ChargeCurrentFlameAction;
+import theHexaghost.actions.ExtinguishCurrentFlameAction;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 
@@ -24,8 +26,12 @@ public class Toasty extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new BurningHitAction(m, p, damage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+//        atb(new BurningHitAction(m, p, damage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+        atb(new ExtinguishCurrentFlameAction());
+        atb(new ChargeCurrentFlameAction());
     }
+
 
     public void upgrade() {
         if (!upgraded) {

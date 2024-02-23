@@ -14,7 +14,7 @@ public class SkipABeat extends AbstractHexaCard {
 
     public final static String ID = makeID("SkipABeat");
 
-    //stupid intellij stuff SKILL, SELF, UNCOMMON
+    //kindle
 
     public SkipABeat() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);

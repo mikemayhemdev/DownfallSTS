@@ -16,7 +16,7 @@ public class Haunt extends AbstractHexaCard {
 
     public final static String ID = makeID("Haunt");
 
-    //stupid intellij stuff SKILL, SELF, COMMON
+    //haunted hand
 
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;

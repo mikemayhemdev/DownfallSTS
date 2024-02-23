@@ -300,7 +300,7 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
-    "DESCRIPTION": "If possible, hexamod:Extinguish the current Ghostflame to gain !M! hexamod:Intensity."
+    "DESCRIPTION": "If possible, hexamod:Extinguish the current Ghostflame to gain !M! hexamod:Intensity. NL Exhaust."
   },
   "hexamod:StepThrough": {
     "NAME": "Step Through",
@@ -312,7 +312,7 @@
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "Strike From Beyond",
-    "DESCRIPTION": "Deal !D! damage. NL Return a random *Afterlife card from your exhaust pile into your drawpile.",
+    "DESCRIPTION": "Deal !D! damage. NL Return a random *Afterlife card from your exhaust pile into your draw pile.",
     "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
   },
   "hexamod:SuperheatedStrike": {
@@ -337,7 +337,7 @@
   },
   "hexamod:Toasty": {
     "NAME": "Toasty!",
-    "DESCRIPTION": "Deal !D! damage. NL Apply hexamod:Soulburn equal to unblocked damage dealt."
+    "DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame."
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",

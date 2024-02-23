@@ -14,7 +14,7 @@ import expansioncontent.expansionContentMod;
 
 import static expansioncontent.cards.AbstractExpansionCard.makeID;
 
-public class NewSharpenedFragment extends AbstractDownfallCard {
+public class BloodySacrifice extends AbstractDownfallCard {
 
 
     public static final String ID = makeID("BloodySacrifice");
@@ -23,7 +23,7 @@ public class NewSharpenedFragment extends AbstractDownfallCard {
     private float ratio = 0.15f;
     private int lose_hp;
 
-    public NewSharpenedFragment() {
+    public BloodySacrifice() {
         super(ID, cardStrings.NAME, IMG_PATH, 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
         isEthereal = true;
         exhaust = true;

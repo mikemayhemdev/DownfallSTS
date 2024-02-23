@@ -5,9 +5,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import downfall.cards.NewSharpenedFragment;
+import downfall.cards.BloodySacrifice;
 import downfall.downfallMod;
-import guardian.cards.CrystalShiv;
 
 public class ShatteredFragment extends CustomRelic {
 
@@ -32,7 +31,7 @@ public class ShatteredFragment extends CustomRelic {
     @Override
     public void atBattleStartPreDraw() {
         this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));// 24
-        this.addToBot(new MakeTempCardInHandAction(new NewSharpenedFragment()));// 25
+        this.addToBot(new MakeTempCardInHandAction(new BloodySacrifice()));// 25
     }
 
 }

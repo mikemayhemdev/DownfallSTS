@@ -20,7 +20,7 @@ public class GhostShield extends AbstractHexaCard {
     private static final int UPG_BLOCK = 3;
 
     public GhostShield() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;

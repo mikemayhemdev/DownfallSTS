@@ -67,7 +67,7 @@
     "NAME": "Olexa's Shield",
     "FLAVOR": "Protection on-demand.",
     "DESCRIPTIONS": [
-      "Swap the positions of the #yBolstering #yGhostflame and the first #ySearing #yGhostflame."
+      "#yPower cards are counted towards #ySearing #yGhostflames and #yCrushing #yGhostflames[REMOVE_SPACE]."
     ]
   },
   "hexamod:BolsterEngine": {

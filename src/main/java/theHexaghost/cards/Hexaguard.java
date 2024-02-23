@@ -12,7 +12,7 @@ public class Hexaguard extends AbstractHexaCard {
     private static final int UPG_BLOCK = 3;
 
     public Hexaguard() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 6;
         isEthereal = true;
         baseMagicNumber = magicNumber = 2;

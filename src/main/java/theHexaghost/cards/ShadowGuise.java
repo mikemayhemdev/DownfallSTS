@@ -65,10 +65,10 @@ public class ShadowGuise extends AbstractHexaCard {
 //        });
     }
 
-    @Override
-    public void afterlife() {
-        blck();
-    }
+//    @Override
+//    public void afterlife() {
+//        blck();
+//    }
 
     public void upgrade() {
         if (!upgraded) {

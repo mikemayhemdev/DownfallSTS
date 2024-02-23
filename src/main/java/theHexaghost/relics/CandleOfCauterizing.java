@@ -20,9 +20,9 @@ public class CandleOfCauterizing extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("CandleOfCauterizing.png"));
 
     public CandleOfCauterizing() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
-
+    //red candle
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         if (damageAmount > 0 && target != AbstractDungeon.player && info.type == DamageInfo.DamageType.NORMAL) {

@@ -32,7 +32,10 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
 import downfall.downfallMod;
+import downfall.patches.BanSharedContentPatch;
 import expansioncontent.relics.StudyCardRelic;
+import guardian.patches.GuardianEnum;
+import guardian.potions.BlockOnCardUsePotion;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.actions.SlimeSpawnAction;
@@ -604,6 +607,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addPotion(SlimedPotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimedPotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
         BaseMod.addPotion(SpawnSlimePotion.class, Color.GREEN, Color.FOREST, Color.BLACK, SpawnSlimePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
         BaseMod.addPotion(SlimyTonguePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimyTonguePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
+        // Slime probbaly doesnt need this or it would ban all potions on the first run
+        //        BanSharedContentPatch.registerRunLockedPotion(SlimeboundEnum.SLIMEBOUND, ThreeZeroPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(ThreeZeroPotion.POTION_ID);
