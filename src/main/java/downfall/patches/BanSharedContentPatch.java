@@ -2,16 +2,15 @@ package downfall.patches;
 
 import automaton.AutomatonChar;
 import automaton.potions.BurnAndBuffPotion;
-import automaton.relics.BronzeIdol;
-import automaton.relics.DecasWashers;
-import automaton.relics.DonusWashers;
-import automaton.relics.MakeshiftBattery;
+import automaton.relics.*;
 import champ.ChampChar;
 import champ.potions.CounterstrikePotion;
 import champ.relics.Barbells;
 import champ.relics.DeflectingBracers;
 import champ.relics.DuelingGlove;
 import collector.CollectorChar;
+import collector.potions.TempHPPotion;
+import collector.relics.*;
 import downfall.cards.curses.Sapped;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -33,6 +32,9 @@ import guardian.potions.BlockOnCardUsePotion;
 import guardian.relics.BottledAnomaly;
 import guardian.relics.GemstoneGun;
 import guardian.relics.PocketSentry;
+import hermit.relics.BloodyTooth;
+import hermit.relics.BrassTacks;
+import hermit.relics.RyeStalk;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.relics.PreparedRelic;
@@ -159,28 +161,39 @@ public class BanSharedContentPatch {
 
         public static void Prefix(AbstractDungeon __instance) {
             if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_relics) {
-                AbstractDungeon.relicsToRemoveOnStart.add(GemstoneGun.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(PocketSentry.ID);
+                //TODO: last checked in 5.12 ver in 2024.2.23 by Mwalls
+                AbstractDungeon.relicsToRemoveOnStart.add(AutoCurser.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(Bagpipes.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(Barbells.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(BottledAnomaly.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(PreparedRelic.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(StickyStick.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(StudyCardRelic.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(SuperSneckoEye.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(SneckoTalon.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(BlankCard.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(BolsterEngine.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(BronzeIdol.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(BrassTacks.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(BloodyTooth.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(CandleOfCauterizing.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(Sixitude.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(Barbells.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(DeflectingBracers.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(DuelingGlove.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(DecasWashers.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(DonusWashers.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(BronzeIdol.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(MakeshiftBattery.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(SupplyScroll.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(ForbiddenFruit.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(FuelCanister.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(GemstoneGun.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(ImpeccablePecs.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(Incense.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(MakeshiftBattery.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(PocketSentry.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(PricklyShields.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(PreparedRelic.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(RoughDiamond.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(RyeStalk.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(StickyStick.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(StudyCardRelic.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(SuperSneckoEye.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(SneckoTalon.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(Sixitude.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(SupplyScroll.ID);
+
             }
         }
     }
@@ -192,6 +205,7 @@ public class BanSharedContentPatch {
     public static class PotionPatch {
         public static void Postfix(AbstractPlayer.PlayerClass chosenClass) {
             if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
+                //TODO: last checked in 5.12 ver in 2024.2.23 by Mwalls
                 PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
                 PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
                 PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
@@ -200,6 +214,8 @@ public class BanSharedContentPatch {
                 PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
                 PotionHelper.potions.remove(WizPotion.POTION_ID);
                 PotionHelper.potions.remove(BossPotion.POTION_ID);
+
+                PotionHelper.potions.remove(TempHPPotion.POTION_ID);
             }
             // Ban shared potions from other classes if you haven't played as that class before
             runLockedPotions.forEach((playerClass, potionIds) -> {
