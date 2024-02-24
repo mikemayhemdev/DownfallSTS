@@ -117,6 +117,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.srcCurseCardPool.removeCard(Scatterbrained.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Sapped.ID);
             }
+            //TODO: Don't forget to add for Study the Spire and Quick Study
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                 AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(PrepareCrush.ID);

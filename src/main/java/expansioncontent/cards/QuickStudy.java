@@ -1,5 +1,8 @@
 package expansioncontent.cards;
 
+import automaton.AutomatonChar;
+import champ.ChampChar;
+import collector.CollectorChar;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -8,7 +11,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
+import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.expansionContentMod;
+import guardian.characters.GuardianCharacter;
+import slimebound.characters.SlimeboundCharacter;
+import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,12 +26,30 @@ public class QuickStudy extends AbstractExpansionCard {
 
     public final static String ID = makeID("QuickStudy");
 
-    //stupid intellij stuff SKILL, SELF, RARE
-
     private ArrayList<AbstractCard> getList() {
         ArrayList<AbstractCard> myList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
             if (q.rarity != CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
+
+                if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+                    if(q.cardID.equals(PrepareCrush.ID)){continue;}
+                }
+                if (AbstractDungeon.player instanceof TheHexaghost ) {
+                    if(q.cardID.equals(Hexaburn.ID)){continue;}
+                }
+                if (AbstractDungeon.player instanceof GuardianCharacter ) {
+                    if(q.cardID.equals(GuardianWhirl.ID)){continue;}
+                }
+                if (AbstractDungeon.player instanceof ChampChar ) {
+                    if(q.cardID.equals(LastStand.ID)){continue;}
+                }
+                if (AbstractDungeon.player instanceof AutomatonChar ) {
+                    if(q.cardID.equals(HyperBeam.ID)){continue;}
+                }
+                if (AbstractDungeon.player instanceof CollectorChar ) {
+                    if(q.cardID.equals(YouAreMine.ID)){continue;}
+                }
+
                 AbstractCard r = q.makeCopy();
                 if (upgraded) {
                     r.upgrade();
