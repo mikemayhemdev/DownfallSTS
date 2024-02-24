@@ -1,8 +1,10 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
@@ -20,13 +22,17 @@ public class GhostflameInferno extends AbstractHexaCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         selfRetain = true;
         exhaust = true;
+        baseBurn = burn = 12;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "GhostflameInferno.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) atb(new ChargeCurrentFlameAction());
+        if (upgraded) {
+            atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
+            burn(m, burn);
+        }
         atb(new AbstractGameAction() {
             @Override
             public void update() {
@@ -43,6 +49,7 @@ public class GhostflameInferno extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.target = CardTarget.ENEMY;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

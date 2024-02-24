@@ -10,7 +10,8 @@
   "hexamod:ApocalypseNow": {
     "NAME": "Apocalypse Now",
     "DESCRIPTION": "Ethereal. NL Gain [E] [E] . NL Move to the *Inferno Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] [E] [E] . NL Move to the *Inferno Ghostflame. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] [E] [E] . NL Move to the *Inferno Ghostflame. NL Exhaust.",
+    "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
   },
   "hexamod:ApocalypticArmor": {
     "NAME": "Doomsday",
@@ -53,7 +54,8 @@
   },
   "hexamod:DynamicBlow": {
     "NAME": "Dynamic Blow",
-    "DESCRIPTION": "Ethereal. NL If the current Ghostflame is hexamod:Ignited, apply !burny! hexamod:Soulburn. If not, deal !D! damage."
+    "DESCRIPTION": "Ethereal. NL If the current Ghostflame is hexamod:Ignited, apply !burny! hexamod:Soulburn. If not, deal !D! damage.",
+    "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
   },
   "hexamod:EmpoweredFlame": {
     "NAME": "Empowered Flame",
@@ -65,7 +67,7 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
-    "DESCRIPTION": "Exhausting a card will contribute to the progression of Ghostflames accordingly.",
+    "DESCRIPTION": "Exhausted cards will contribute to Ghostflame progression accordingly.",
     "UPGRADE_DESCRIPTION": "Draw a card. NL Exhausting a card will contribute to the progression of Ghostflames accordingly."
   },
   "hexamod:FastForward": {
@@ -114,7 +116,7 @@
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
     "DESCRIPTION": "Retain. NL hexamod:Ignite the *Inferno *Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL hexamod:Ignite the current, then the *Inferno *Ghostflames. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Retain. NL Apply !burny! hexamod:Soulburn. NL hexamod:Ignite the *Inferno *Ghostflames. NL Exhaust."
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
@@ -148,7 +150,7 @@
   },
   "hexamod:Haunt": {
     "NAME": "Haunted Hand",
-    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Draw !M! cards. NL All cards in your hand become Ethereal."
+    "DESCRIPTION": "Ethereal. NL Draw !M! cards. NL hexamod:Afterlife: Draw cards until you draw a non-Ethereal card."
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
@@ -212,7 +214,8 @@
   },
   "hexamod:PhantomCloak": {
     "NAME": "Phantom Cloak",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity and lose 1 Strength."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity and lose 1 Strength.",
+    "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
@@ -279,7 +282,7 @@
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Shield of Night",
-    "DESCRIPTION": "Gain !B! Block. NL Scry !M!, Exhaust the hexamod:Afterlife ones discarded."
+    "DESCRIPTION": "Gain !B! Block. NL Scry !M!, Exhaust discarded hexamod:Afterlife cards."
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",
@@ -317,11 +320,12 @@
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "Searing Strike",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !burny! hexamod:Soulburn. NL If this card is *Exhausted, take !M! damage."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !burny! hexamod:Soulburn. NL If this card is *Exhausted, take !M! damage.",
+    "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "Sword of Night",
-    "DESCRIPTION": "Deal !D! damage. NL Scry !M!, Exhaust the hexamod:Afterlife ones discarded."
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!, Exhaust discarded hexamod:Afterlife cards."
   },
   "hexamod:ThermalTransfer": {
     "NAME": "Thermal Transfer",

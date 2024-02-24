@@ -22,8 +22,8 @@ import javassist.CtBehavior;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
-//TODO: I accidentally pushed one of my attempt code to chance those evil run specific relic names(and image) for the related relics, it's not fully working
-//but shouldn't cause any bugs I think, Mwalls
+//TODO: I accidentally pushed one of my attempt code to change those evil run specific relic names(and image) for the related relics, it's not fully working
+// (breaks when you load a game) but shouldn't cause any bugs I think, Mwalls
 
 public class RelicOverrides {
 
