@@ -150,7 +150,8 @@
   },
   "hexamod:Haunt": {
     "NAME": "Haunted Hand",
-    "DESCRIPTION": "Ethereal. NL Draw !M! cards. NL hexamod:Afterlife: Draw cards until you draw a non-Ethereal card."
+    "DESCRIPTION": "Ethereal. NL Draw !M! cards NL hexamod:Afterlife: Draw cards until you draw a non-Ethereal card.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Draw !M! cards NL hexamod:Afterlife: Draw cards until you draw a non-Ethereal card."
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",

@@ -1,6 +1,7 @@
 package downfall.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -16,6 +17,7 @@ public class ShatteredFragment extends CustomRelic {
 
     public ShatteredFragment() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
+        tips.add(new CardPowerTip( new BloodySacrifice() ) );
     }
 
     @Override

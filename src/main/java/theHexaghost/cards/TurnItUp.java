@@ -23,7 +23,7 @@ public class TurnItUp extends AbstractHexaCard {
 
     public TurnItUp() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
 //        this.exhaust = true;
 //        this.retain = false;
         tags.add(HexaMod.GHOSTWHEELCARD);
