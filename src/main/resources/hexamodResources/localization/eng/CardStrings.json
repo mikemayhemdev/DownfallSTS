@@ -101,8 +101,8 @@
   },
   "hexamod:Floatwork": {
     "NAME": "Floatwork",
-    "DESCRIPTION": "Ethereal. NL hexamod:Afterlife: NL Gain !M! Plated Armor.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL hexamod:Afterlife: NL Gain !M! Plated Armor."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !burn! Plated Armor. NL hexamod:Afterlife: NL Gain !M! Plated Armor.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !burn! Plated Armor. NL hexamod:Afterlife: NL Gain !M! Plated Armor."
   },
   "hexamod:ForkedFlame": {
     "NAME": "Forked Flame",
@@ -115,7 +115,7 @@
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
-    "DESCRIPTION": "Retain. NL hexamod:Ignite the *Inferno *Ghostflame. NL Exhaust.",
+    "DESCRIPTION": "Retain. NL Apply !burny! hexamod:Soulburn. NL hexamod:Ignite the *Inferno *Ghostflames. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Apply !burny! hexamod:Soulburn. NL hexamod:Ignite the *Inferno *Ghostflames. NL Exhaust."
   },
   "hexamod:GhostLash": {
@@ -129,7 +129,7 @@
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
-    "DESCRIPTION": "Whenever you hexamod:Retract, draw a card.",
+    "DESCRIPTION": "Whenever you hexamod:Retract, gain [E].",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time you *Retract each turn, gain [E] and draw 1 card. NL hexamod:Retract."
   },
   "hexamod:GhostOfSpirePresent": {

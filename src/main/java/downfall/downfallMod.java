@@ -582,12 +582,13 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         //Hexaghost
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SEALCARD, (rewardSave) -> new SealSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.THIRDSEALCARDREWARD, (rewardSave) -> new ThirdSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
         //Collector
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.COLLECTOR_COLLECTIBLECARDREWARD, (rewardSave) -> new CollectibleCardReward(rewardSave.id), reward -> {
             String s = ((CollectibleCardReward) reward).card.cardID;
             return new RewardSave(reward.type.toString(), s);
         });
-        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.THIRDSEALCARDREWARD, (rewardSave) -> new ThirdSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.COLLECTOR_ESSENCE, (rewardSave) -> new EssenceReward(rewardSave.amount), (customReward) -> new RewardSave(customReward.type.toString(), null, customReward instanceof EssenceReward ? ((EssenceReward) customReward).amount : 0, 0));
 
@@ -637,6 +638,9 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         settingsPanel.addUIElement(characterCrossoverBtn);
         //settingsPanel.addUIElement(useIconsForAppliedCardPropertiesBtn);
+
+        //TODO: Fix this bug (stilling encountering downfall events when option is toggled, possibly relate to continuing a run)
+        //https://steamcommunity.com/workshop/filedetails/discussion/1610056683/4138312860566341700/?tscn=1708787149
 
         if (!STEAM_MODE) {
             configPos -= configStep;

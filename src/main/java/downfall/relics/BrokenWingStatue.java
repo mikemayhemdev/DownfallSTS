@@ -10,11 +10,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.city.Chosen;
 import com.megacrit.cardcrawl.monsters.exordium.Cultist;
-import downfall.downfallMod;
 import downfall.actions.LoseRelicAction;
 import downfall.actions.SpeechBubbleAction;
+import downfall.downfallMod;
 import downfall.events.WingStatue_Evil;
-import slimebound.SlimeboundMod;
 
 public class BrokenWingStatue extends CustomRelic {
 
@@ -27,7 +26,6 @@ public class BrokenWingStatue extends CustomRelic {
     public static boolean GIVEN = false;
 
     private AbstractMonster receiver;
-
     public BrokenWingStatue() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
     }
@@ -43,7 +41,6 @@ public class BrokenWingStatue extends CustomRelic {
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
             if (m instanceof Cultist || m instanceof Chosen) {
                 this.receiver = m;
-                //SlimeboundMod.logger.info("found valid target");
                 break;
             }
         }
@@ -52,10 +49,8 @@ public class BrokenWingStatue extends CustomRelic {
             int DialogIndex;
             if (this.receiver instanceof Cultist) {
                 DialogIndex = 4;
-                //SlimeboundMod.logger.info("assigned dialog index 4");
             } else {
                 DialogIndex = 6;
-                //SlimeboundMod.logger.info("assigned dialog index 6");
             }
             this.flash();
             forceWait(5);

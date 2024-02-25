@@ -19,7 +19,7 @@ public class GhostflameInferno extends AbstractHexaCard {
     //Instant Inferno
 
     public GhostflameInferno() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         selfRetain = true;
         exhaust = true;
         baseBurn = burn = 12;
@@ -29,10 +29,8 @@ public class GhostflameInferno extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) {
-            atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
-            burn(m, burn);
-        }
+        atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
+        burn(m, burn);
         atb(new AbstractGameAction() {
             @Override
             public void update() {
@@ -49,9 +47,9 @@ public class GhostflameInferno extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.target = CardTarget.ENEMY;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(9);
+//            rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
         }
     }
 }

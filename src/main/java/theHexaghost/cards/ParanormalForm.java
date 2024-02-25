@@ -9,13 +9,13 @@ public class ParanormalForm extends AbstractHexaCard {
 
     public final static String ID = makeID("ParanormalForm");
 
-    //Poltergeist easier search
+    //Poltergeist
 
     private static final int MAGIC = 6;
     private static final int UPG_MAGIC = 3;
 
     public ParanormalForm() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         HexaMod.loadJokeCardImage(this, "ParanormalForm.png");
     }

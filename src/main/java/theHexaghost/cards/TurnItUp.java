@@ -19,15 +19,13 @@ public class TurnItUp extends AbstractHexaCard {
 
     public final static String ID = makeID("TurnItUp");
 
-    //stupid intellij stuff SKILL, ENEMY, RARE
-
     public TurnItUp() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
 //        this.exhaust = true;
 //        this.retain = false;
-        tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+//        tags.add(HexaMod.GHOSTWHEELCARD);
+//        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "TurnItUp.png");
     }
 

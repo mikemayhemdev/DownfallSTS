@@ -11,8 +11,9 @@ public class Floatwork extends AbstractHexaCard {
 
     public Floatwork() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
-        baseBlock = 4;
+        baseBurn = burn = 1;
+        baseMagicNumber = magicNumber = 2;
+        baseBlock = 2;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "Floatwork.png");
@@ -22,7 +23,7 @@ public class Floatwork extends AbstractHexaCard {
         if(upgraded){
             blck();
         }
-        applyToSelf(new PlatedArmorPower(p, magicNumber));
+        applyToSelf(new PlatedArmorPower(p, magicNumber+burn));
     }
 
     public void afterlife() {
@@ -32,10 +33,10 @@ public class Floatwork extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeBlock(3);
             upgradeMagicNumber(1);
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
-
+//            rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
         }
     }
 }

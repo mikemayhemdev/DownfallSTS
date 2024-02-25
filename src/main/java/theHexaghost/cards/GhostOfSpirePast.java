@@ -13,7 +13,7 @@ public class GhostOfSpirePast extends AbstractHexaCard {
 
     public final static String ID = makeID("GhostOfSpirePast");
 
-    //Devil's Dance
+    //Devil's Dance devils dance devil dance
 
     private static final int MAGIC = 1;
 
