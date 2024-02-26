@@ -101,8 +101,8 @@
   },
   "hexamod:Floatwork": {
     "NAME": "Floatwork",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !burn! Plated Armor. NL hexamod:Afterlife: NL Gain !M! Plated Armor.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !burn! Plated Armor. NL hexamod:Afterlife: NL Gain !M! Plated Armor."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !burny! Plated Armor. NL hexamod:Afterlife: NL Gain !M! Plated Armor.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !burny! Plated Armor. NL hexamod:Afterlife: NL Gain !M! Plated Armor."
   },
   "hexamod:ForkedFlame": {
     "NAME": "Forked Flame",
@@ -111,7 +111,7 @@
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "Ghostflame Wall",
-    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !burny! hexamod:Soulburn to the attacker."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever a card is Exhausted this turn, apply !burny! hexamod:Soulburn to the enemy."
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
@@ -283,7 +283,7 @@
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Shield of Night",
-    "DESCRIPTION": "Gain !B! Block. NL Scry !M!, Exhaust discarded hexamod:Afterlife cards."
+    "DESCRIPTION": "Gain !B! Block. NL Scry !M!, Exhaust discarded Ethereal cards."
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",
@@ -326,7 +326,7 @@
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "Sword of Night",
-    "DESCRIPTION": "Deal !D! damage. NL Scry !M!, Exhaust discarded hexamod:Afterlife cards."
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!, Exhaust discarded Ethereal cards."
   },
   "hexamod:ThermalTransfer": {
     "NAME": "Thermal Transfer",

@@ -64,7 +64,7 @@ public class ScryBlockStatusAction extends AbstractGameAction {
                 if(used_by_night_cards){
                     for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                         AbstractDungeon.player.drawPile.moveToDiscardPile(c);
-                        if (c.hasTag(HexaMod.AFTERLIFE)) {
+                        if (c.isEthereal) {
                             addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile));
                         }
                     }

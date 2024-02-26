@@ -16,13 +16,13 @@ public class ShieldOfDarkness extends AbstractHexaCard {
 
     //shield of night
 
-    private static final int BLOCK = 7;
-    private static final int UPG_BLOCK = 2;
+    private static final int BLOCK = 11;
+    private static final int UPG_BLOCK = 3;
 
     public ShieldOfDarkness() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "ShieldOfDarkness.png");
     }

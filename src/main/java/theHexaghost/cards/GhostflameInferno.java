@@ -47,7 +47,7 @@ public class GhostflameInferno extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(9);
+            upgradeBurn(9);
 //            rawDescription = UPGRADE_DESCRIPTION;
 //            initializeDescription();
         }

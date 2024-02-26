@@ -17,13 +17,13 @@ public class SwordOfDarkness extends AbstractHexaCard {
 
     //sword of night
 
-    private static final int DAMAGE = 9;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 14;
+    private static final int UPG_DAMAGE = 4;
 
     public SwordOfDarkness() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "SwordOfDarkness.png");
     }

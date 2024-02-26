@@ -207,5 +207,12 @@
     "DESCRIPTIONS": [
       "At the start of your turn gain "
     ]
+  },
+  "hexamod:SoulburnOnExhaustPower": {
+    "NAME": "Soulburn Invation ",
+    "DESCRIPTIONS": [
+      "Whenver you #yExhaust a card this turn, apply #b",
+      " #ySoulburn to this enemy."
+    ]
   }
 }
