@@ -47,6 +47,7 @@ public class BraceAction extends AbstractGameAction {
                     if (AbstractDungeon.player.hasPower(ModeShiftPower.POWER_ID)) {
                         ((ModeShiftPower) AbstractDungeon.player.getPower(ModeShiftPower.POWER_ID)).onSpecificTrigger(braceValue);
                     }
+                    this.isDone = true;
                 }
             });
             addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
