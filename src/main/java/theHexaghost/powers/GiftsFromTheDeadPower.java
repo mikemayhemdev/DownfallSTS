@@ -80,7 +80,7 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
     public void atStartOfTurnPostDraw() {
         this.flash();
         this.addToBot(new DrawCardAction(2 * amount));
-        this.addToBot(new ExhaustAction(amount, false, false, true));
+        this.addToBot(new ExhaustAction(amount, false, false, false));
     }
 
     @Override

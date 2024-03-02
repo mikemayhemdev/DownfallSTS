@@ -18,7 +18,7 @@
     "FLAVOR": "Let’s see if we can do... better.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL The first time you #yIgnite a Ghostflame each turn, gain [E] ."
+      ".[] NL The first time you #yIgnite a Ghostflame each turn, gain #b4 #yBlock and draw a card."
     ]
   },
   "hexamod:IceCube": {
