@@ -395,5 +395,10 @@
     "NAME": "Fifth Seal",
     "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck.",
     "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
+  },
+  "hexamod:LingeringShades": {
+    "NAME": "Lingering Shades",
+    "DESCRIPTION": "hexamod:Retract. NL Apply !burny! hexamod:Soulburn. Return all Ethereal cards in your discard pile to your hand.",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
   }
 }
