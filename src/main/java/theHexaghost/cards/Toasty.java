@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
+import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.BurningHitAction;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
@@ -16,7 +17,7 @@ public class Toasty extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, RARE
 
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 12;
     private static final int UPG_DAMAGE = 4;
 
     public Toasty() {
@@ -30,6 +31,7 @@ public class Toasty extends AbstractHexaCard {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
         atb(new ExtinguishCurrentFlameAction());
         atb(new ChargeCurrentFlameAction());
+        atb(new AdvanceAction(false));
     }
 
 

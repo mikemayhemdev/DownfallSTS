@@ -45,7 +45,7 @@ public class SoulburnOnExhaustPower extends AbstractPower implements EnemyOnExha
     public void enemyOnExhaust(AbstractCard c) {
         AbstractPlayer p = AbstractDungeon.player;
         this.flash();
-        this.addToBot(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, owner.hb.cX, owner.hb.cY), 0.5F));
+        this.addToBot(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, owner.hb.cX, owner.hb.cY), 0.3F));
         this.addToBot(new ApplyPowerAction(owner, AbstractDungeon.player, new BurnPower(owner, this.amount), this.amount));
     }
 

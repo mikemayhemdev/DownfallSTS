@@ -23,9 +23,8 @@ public class Sear extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
+        atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
         burn(m, burn);
-        atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
         burn(m, burn);
     }
 
@@ -38,7 +37,7 @@ public class Sear extends AbstractHexaCard {
                 AbstractMonster m = AbstractDungeon.getRandomMonster();
                 if (m == null) return;
                 att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, burn), burn));
-                att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
+                att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
             }
         });
 

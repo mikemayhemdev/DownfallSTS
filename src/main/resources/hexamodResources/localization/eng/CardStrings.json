@@ -342,7 +342,7 @@
   },
   "hexamod:Toasty": {
     "NAME": "Toasty!",
-    "DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame."
+    "DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame and hexamod:Advance."
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
