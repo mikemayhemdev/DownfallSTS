@@ -15,9 +15,9 @@ import theHexaghost.vfx.SpookyFlameBarrier;
 
 public class GhostflameBarrier extends AbstractHexaCard {
 
-    public final static String ID = makeID("GhostflameBarrier");
+    public final static String ID = makeID("Whisper");
 
-    //stupid intellij stuff SKILL, SELF, UNCOMMON
+    //
 
     private static final int DAMAGE = 13;
 //    private static final int UPG_BLOCK = 4;

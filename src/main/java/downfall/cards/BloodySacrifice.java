@@ -18,7 +18,7 @@ public class BloodySacrifice extends AbstractDownfallCard {
 
 
     public static final String ID = makeID("BloodySacrifice");
-    public static final String IMG_PATH = expansionContentMod.makeCardPath("Antidote.png");
+    public static final String IMG_PATH = expansionContentMod.makeCardPath("BloodySacrifice.png");
     private static final CardStrings cardStrings;
     private float ratio = 0.15f;
     private int lose_hp;

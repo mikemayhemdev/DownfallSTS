@@ -15,6 +15,9 @@ import downfall.actions.SpeechBubbleAction;
 import downfall.downfallMod;
 import downfall.events.WingStatue_Evil;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class BrokenWingStatue extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("BrokenWingStatue");
@@ -25,7 +28,6 @@ public class BrokenWingStatue extends CustomRelic {
 
     public static boolean GIVEN = false;
 
-    private AbstractMonster receiver;
     public BrokenWingStatue() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
     }
@@ -37,34 +39,39 @@ public class BrokenWingStatue extends CustomRelic {
 
     @Override
     public void atBattleStartPreDraw() {
-        this.receiver = null;
-        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+        AbstractMonster receiver = null;
+        ArrayList<AbstractMonster> shuffled_monsters = AbstractDungeon.getMonsters().monsters;
+        int rng = AbstractDungeon.miscRng.random(100);
+        if(rng % 2 == 0){
+            Collections.shuffle(shuffled_monsters);
+        }
+        for (AbstractMonster m : shuffled_monsters) {
             if (m instanceof Cultist || m instanceof Chosen) {
-                this.receiver = m;
+                receiver = m;
                 break;
             }
         }
-        if (this.receiver != null) {
+        if (receiver != null) {
             GIVEN = true;
             int DialogIndex;
-            if (this.receiver instanceof Cultist) {
+            if (receiver instanceof Cultist) {
                 DialogIndex = 4;
             } else {
                 DialogIndex = 6;
             }
             this.flash();
             forceWait(5);
-            addToBot(new RelicAboveCreatureAction(this.receiver, this));
-            addToBot(new SpeechBubbleAction(DIALOG[DialogIndex], this.receiver, 2F));
+            addToBot(new RelicAboveCreatureAction(receiver, this));
+            addToBot(new SpeechBubbleAction(DIALOG[DialogIndex], receiver, 2F));
             forceWait(12);
             this.flash();
-            addToBot(new RelicAboveCreatureAction(this.receiver, this));
-            addToBot(new SpeechBubbleAction(DIALOG[DialogIndex + 1], this.receiver, 2F));
+            addToBot(new RelicAboveCreatureAction(receiver, this));
+            addToBot(new SpeechBubbleAction(DIALOG[DialogIndex + 1], receiver, 2F));
             forceWait(7);
             this.flash();
-            addToBot(new RelicAboveCreatureAction(this.receiver, this));
+            addToBot(new RelicAboveCreatureAction(receiver, this));
             AbstractDungeon.actionManager.addToBottom(new LoseRelicAction(this.relicId));
-            AbstractDungeon.actionManager.addToBottom(new EscapeAction(this.receiver));
+            AbstractDungeon.actionManager.addToBottom(new EscapeAction(receiver));
 
         }
     }
