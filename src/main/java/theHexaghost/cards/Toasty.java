@@ -15,7 +15,6 @@ public class Toasty extends AbstractHexaCard {
 
     public final static String ID = makeID("Toasty");
 
-    //stupid intellij stuff ATTACK, ENEMY, RARE
 
     private static final int DAMAGE = 12;
     private static final int UPG_DAMAGE = 4;

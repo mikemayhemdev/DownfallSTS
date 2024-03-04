@@ -63,7 +63,7 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
 
         }
 
-        return DESCRIPTIONS[0] + sb.toString() + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
     }
 
     @Override
