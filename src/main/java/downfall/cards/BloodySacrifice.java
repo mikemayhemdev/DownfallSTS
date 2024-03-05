@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.powers.RitualPower;
 import expansioncontent.cards.AbstractDownfallCard;
 import expansioncontent.expansionContentMod;
 
+import java.util.Arrays;
+
 import static expansioncontent.cards.AbstractExpansionCard.makeID;
 
 public class BloodySacrifice extends AbstractDownfallCard {
@@ -20,20 +22,20 @@ public class BloodySacrifice extends AbstractDownfallCard {
     public static final String ID = makeID("BloodySacrifice");
     public static final String IMG_PATH = expansionContentMod.makeCardPath("BloodySacrifice.png");
     private static final CardStrings cardStrings;
-    private float ratio = 0.15f;
     private int lose_hp;
 
     public BloodySacrifice() {
         super(ID, cardStrings.NAME, IMG_PATH, 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
         isEthereal = true;
+        baseMagicNumber = magicNumber = 12;
         exhaust = true;
     }
 
     @Override
     public void applyPowers() {
         super.applyPowers();
-        lose_hp = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * ratio);
-        rawDescription = cardStrings.DESCRIPTION.replace("{amount}",Integer.toString(lose_hp));
+        lose_hp = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * (float)magicNumber * 0.01f);
+        rawDescription = (cardStrings.DESCRIPTION + Arrays.toString(cardStrings.EXTENDED_DESCRIPTION)).replace("{amount}",Integer.toString(lose_hp));
         this.initializeDescription();
     }
 
@@ -46,7 +48,7 @@ public class BloodySacrifice extends AbstractDownfallCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            ratio = 0.09f;
+            upgradeMagicNumber(-5);
         }
     }
 

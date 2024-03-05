@@ -109,7 +109,7 @@
     "DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the previous, then the next Ghostflames.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the previous, then the current, then the next Ghostflames."
   },
-  "hexamod:GhostflameBarrier": {
+  "hexamod:Whisper": {
     "NAME": "Whisper from Beyond",
     "DESCRIPTION": "Deal !D! damage. NL Whenever a card is Exhausted this turn, apply !burny! hexamod:Soulburn to the enemy."
   },

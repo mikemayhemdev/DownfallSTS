@@ -87,6 +87,7 @@
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "Bloody Sacrifice",
-    "DESCRIPTION": "Ethereal. NL Lose HP equal to 15% of your max HP({amount} HP). NL Gain 1 Ritual. Exhaust."
+    "DESCRIPTION": "Ethereal. NL Lose HP equal to !M! % of your max HP. NL Gain 1 Ritual. Exhaust.",
+    "EXTENDED_DESCRIPTION":" NL (Lose {amount} HP. )"
   }
 }

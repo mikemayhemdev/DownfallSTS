@@ -50,7 +50,7 @@ public class TurnItUp extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
 //            upgradeMagicNumber(1);
-            this.retain = true;
+            this.selfRetain = true;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
