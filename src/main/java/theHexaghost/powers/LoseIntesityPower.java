@@ -1,5 +1,4 @@
 package theHexaghost.powers;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -34,7 +33,7 @@ public class LoseIntesityPower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer) {
         flash();
         addToBot(new ApplyPowerAction(this.owner, this.owner, new EnhancePower(-this.amount), -this.amount));
-        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "LoseIntensity"));
+        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
     }
 }
 

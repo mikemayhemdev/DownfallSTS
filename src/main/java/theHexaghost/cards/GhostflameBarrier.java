@@ -19,14 +19,14 @@ public class GhostflameBarrier extends AbstractHexaCard {
 
     //
 
-    private static final int DAMAGE = 13;
+    private static final int DAMAGE = 9;
 //    private static final int UPG_BLOCK = 4;
 
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 4;
     private static final int UPG_MAGIC = 2;
 
     public GhostflameBarrier() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
 //        baseBlock = BLOCK;
         baseDamage = DAMAGE;
 //        baseMagicNumber = magicNumber = MAGIC;
@@ -51,7 +51,7 @@ public class GhostflameBarrier extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
 //            upgradeBlock(UPG_BLOCK);
-            upgradeDamage(5);
+            upgradeDamage(2);
             upgradeBurn(UPG_MAGIC);
         }
     }

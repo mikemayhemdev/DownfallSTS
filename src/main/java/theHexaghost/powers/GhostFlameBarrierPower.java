@@ -24,7 +24,7 @@ public class GhostFlameBarrierPower extends AbstractPower implements CloneablePo
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-
+    //Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used
     public GhostFlameBarrierPower(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
