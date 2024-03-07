@@ -107,12 +107,9 @@
   "hexamod:GiftsFromTheDeadPower": {
     "NAME": "Gifted Cards",
     "DESCRIPTIONS": [
-      "At the start of your turn, draw #b",
-      " additional",
-      " card and #yExhaust #b",
-      " cards and #yExhaust #b",
-      " random card.",
-      " random cards."
+      "At the start of your turn, add #b",
+      " random #Afterlife card into your hand.",
+      " random #Afterlife cards into your hand."
     ]
   },
   "hexamod:GiftsFromTheDeadPowerPlus": {
@@ -133,7 +130,7 @@
     "NAME": "Infernal Form",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
-      " #yIntensity."
+      " #yIntensity [REMOVE_SPACE]."
     ]
   },
   "hexamod:LoseEnhanceInTurnsPower": {
@@ -142,7 +139,7 @@
       "At the end of your turn, lose #b",
       "In #b",
       " turns, lose #b",
-      " #yIntensity."
+      " #yIntensity [REMOVE_SPACE]."
     ]
   },
   "hexamod:ParanormalFormPower": {
@@ -213,6 +210,13 @@
     "DESCRIPTIONS": [
       "Whenver you #yExhaust a card this turn, apply #b",
       " #ySoulburn to this enemy."
+    ]
+  },
+  "hexamod:LoseIntensityPower": {
+    "NAME": "Intensity Down",
+    "DESCRIPTIONS": [
+      "At the end of this turn, lose #b",
+      " #yIntensity [REMOVE_SPACE]."
     ]
   }
 }

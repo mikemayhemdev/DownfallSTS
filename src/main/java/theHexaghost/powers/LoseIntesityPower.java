@@ -6,10 +6,12 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import theHexaghost.HexaMod;
 
 public class LoseIntesityPower extends AbstractPower {
-    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("Flex");
-    public static final String POWER_ID = "LoseIntensity";
+
+    public static final String POWER_ID = HexaMod.makeID("LoseIntensityPower");
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 

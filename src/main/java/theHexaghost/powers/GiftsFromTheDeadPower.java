@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
+import theHexaghost.cards.EtherealExpedition;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -79,16 +80,20 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
     @Override
     public void atStartOfTurnPostDraw() {
         this.flash();
-        this.addToBot(new DrawCardAction(2 * amount));
-        this.addToBot(new ExhaustAction(amount, false, false, false));
+        for (int i = 0; i < GiftsFromTheDeadPower.this.amount; i++) {
+            AbstractCard q = EtherealExpedition.returnTrulyRandomEtherealCardInCombat().makeCopy();
+            addToBot(new MakeTempCardInHandAction(q));
+        }
+//        this.addToBot(new DrawCardAction(2 * amount));
+//        this.addToBot(new ExhaustAction(amount, false, false, false));
     }
 
     @Override
     public void updateDescription() {
         if (amount == 1) {
-            description = DESCRIPTIONS[0] + 2*amount + DESCRIPTIONS[1] + DESCRIPTIONS[2] + amount + DESCRIPTIONS[4];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         } else {
-            description = DESCRIPTIONS[0] + 2*amount + DESCRIPTIONS[1] + DESCRIPTIONS[3] + amount + DESCRIPTIONS[5];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
         }
     }
 

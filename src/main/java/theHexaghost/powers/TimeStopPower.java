@@ -24,7 +24,7 @@ public class TimeStopPower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     private Map<AbstractMonster, Float> timeScales;
-
+    // Not used Not used Not used Not used Not used Not used Not used Not used Not used
     public TimeStopPower(AbstractCreature owner, int amount) {
         name = NAME;
         ID = POWER_ID;

@@ -8,6 +8,7 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -47,8 +48,9 @@ public class ApocalypticArmorPower extends AbstractPower implements NonStackable
     //Triggered by Inferno Ghostflame
     @Override
     public void onSpecificTrigger() {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new TimeStopPower(AbstractDungeon.player, 1), 1));
+//        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new TimeStopPower(AbstractDungeon.player, 1), 1));
         AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+        AbstractDungeon.actionManager.addToBottom(new SkipEnemiesTurnAction());
     }
 
     @Override

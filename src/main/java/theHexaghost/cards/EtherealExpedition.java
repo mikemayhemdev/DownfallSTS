@@ -30,7 +30,7 @@ public class EtherealExpedition extends AbstractHexaCard {
         HexaMod.loadJokeCardImage(this, "EtherealExpedition.png");
     }
 
-    private static AbstractCard returnTrulyRandomEtherealCardInCombat() {
+    public static AbstractCard returnTrulyRandomEtherealCardInCombat() {
         ArrayList<AbstractCard> list = new ArrayList<>();// 1201
         for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
             if (c.hasTag(HexaMod.AFTERLIFE) && !c.hasTag(CardTags.HEALING)) {
