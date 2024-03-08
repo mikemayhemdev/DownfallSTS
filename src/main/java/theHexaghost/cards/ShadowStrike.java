@@ -20,7 +20,7 @@ public class ShadowStrike extends AbstractHexaCard {
 
     public ShadowStrike(AbstractCard parent) {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 6;
+        baseDamage = 4;
         exhaust = true;
         isEthereal = true;
 //        cardsToPreview = new NightmareGuise();

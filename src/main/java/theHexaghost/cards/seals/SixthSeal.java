@@ -18,6 +18,7 @@ public class SixthSeal extends AbstractSealCard {
     @Override
     public void atTurnStart() {
         super.atTurnStart();
+        count_cards = 0;
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.canUpgrade()) {
                 count_cards++;
@@ -30,9 +31,9 @@ public class SixthSeal extends AbstractSealCard {
         super.applyPowers();
         magicNumber = count_cards / 13;
         if( magicNumber <= 1){
-            this.rawDescription = rawDescription + this.EXTENDED_DESCRIPTION[0];
+            this.rawDescription = DESCRIPTION + magicNumber + this.EXTENDED_DESCRIPTION[0];
         }else{
-            this.rawDescription = rawDescription + this.EXTENDED_DESCRIPTION[1];
+            this.rawDescription = DESCRIPTION + magicNumber + this.EXTENDED_DESCRIPTION[1];
         }
         this.initializeDescription();
     }

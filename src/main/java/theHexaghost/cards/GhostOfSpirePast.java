@@ -18,22 +18,23 @@ public class GhostOfSpirePast extends AbstractHexaCard {
     private static final int MAGIC = 1;
 
     public GhostOfSpirePast() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
+        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "GhostOfSpirePast.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new PastPower(1));
+        applyToSelf(new PastPower(magicNumber));
 //        atb(new RetractAction());
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeMagicNumber(1);
+//            upgradeBaseCost(0);
         }
     }
 }

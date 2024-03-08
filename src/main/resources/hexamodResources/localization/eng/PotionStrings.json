@@ -3,7 +3,7 @@
     "NAME": "Molotov",
     "DESCRIPTIONS": [
       "Apply #b",
-      " #ySoulburn."
+      " #ySoulburn [REMOVE_SPACE]."
     ]
   },
   "hexamod:DoubleChargePotion": {

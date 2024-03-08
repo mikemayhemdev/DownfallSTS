@@ -10,7 +10,7 @@ public class RetractBonusDamage extends AbstractHexaCard{
     public final static String ID = makeID("retract_bonus_damage");
 
     private static final int DAMAGE = 12;
-    private static final int UPG_DAMAGE = 4;
+    private static final int UPG_DAMAGE = 3;
 
     public RetractBonusDamage() {
         super(ID, 1, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
@@ -43,6 +43,7 @@ public class RetractBonusDamage extends AbstractHexaCard{
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
             upgradeDamage(UPG_DAMAGE);
         }
     }

@@ -18,13 +18,16 @@ public class BacktrackSmack extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        if(upgraded) dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         atb(new RetractAction());
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+//            upgradeDamage(2);
         }
     }
 }

@@ -10,7 +10,7 @@
     "NAME": "Polishing Oil",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yBlock. Enter #yDefensive #yMode."
+      " #yBlock. Enter #yDefensive #yMode [REMOVE_SPACE]."
     ]
   },
   "Guardian:BlockOnCardUsePotion": {
@@ -25,7 +25,7 @@
     "DESCRIPTIONS": [
       "Gain Stasis slots until you have #b",
       ". NL Repeat #b",
-      " times: choose #b1 of #b3 cards to place into #yStasis."
+      " times: choose #b1 of #b3 cards to place into #yStasis [REMOVE_SPACE]."
     ]
   }
 }

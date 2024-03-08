@@ -20,7 +20,8 @@
   },
   "hexamod:BacktrackSmack": {
     "NAME": "Backtrack Smack",
-    "DESCRIPTION": "Deal !D! damage twice. NL hexamod:Retract."
+    "DESCRIPTION": "Deal !D! damage twice. NL hexamod:Retract.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage trice. NL hexamod:Retract."
   },
   "hexamod:BurningQuestion": {
     "NAME": "Burning Question",
@@ -120,12 +121,12 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. NL hexamod:Afterlife: Deal !D! damage. Deal !M! additional damage for each hexamod:Afterlife card in your hand."
+    "DESCRIPTION": "Ethereal. NL hexamod:Afterlife: Deal !D! damage,  Deal !M! more for each hexamod:Afterlife card in hand."
   },
   "hexamod:GhostOfSpireFuture": {
-    "NAME": "Speedrunning",
-    "DESCRIPTION": "Whenever you *Advance, gain !M! temporary Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you *Advance, gain !M! temporary Strength."
+    "NAME": "Spooky Vanish",
+    "DESCRIPTION": "Whenever you *Retract, gain !M! temporary Strength and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you *Retract, gain !M! temporary Strength and Dexterity."
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
@@ -143,7 +144,7 @@
   "hexamod:GiftsFromTheDead": {
     "NAME": "Gifts From Beyond",
     "DESCRIPTION": "At the start of your turn, add !M! random hexamod:Afterlife card into your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! additional cards and Exhaust 1 card.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add !M! random hexamod:Afterlife card into your hand.",
     "EXTENDED_DESCRIPTION": [
       "These spirits are too powerful to invoke directly."
     ]
@@ -412,8 +413,8 @@
   },
   "hexamod:retract_bonus_damage": {
     "NAME": "retract bonus damage",
-    "DESCRIPTION": "Deal !D! damage, deal 2 additional damage for each hexamod:Retract happened this combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage, deal 2 additional damage for each hexamod:Retract happened this combat."
+    "DESCRIPTION": "Deal !D! damage, deal 2 additional damage everytime you hexamod:Retract this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, deal 2 additional damage everytime you hexamod:Retract this combat."
   },
   "hexamod:XRetractsAndDraw": {
     "NAME": "X Retracts And Draw",
@@ -421,8 +422,13 @@
     "UPGRADE_DESCRIPTION": "hexamod:Retract and draw a card X+1 times."
   },
   "hexamod:RandomWalk": {
-    "NAME": "Random walk(temp name too)",
-    "DESCRIPTION": "Choose a card in draw pile to add to your hand. Switch to a random Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Choose a card in draw pile to add to your hand. Switch to a random Ghostflame. NL Exhaust."
+    "NAME": "Random walk(temp name)",
+    "DESCRIPTION": "Choose a card in draw pile to add to your hand. NL Switch to a random Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose a card in draw pile to add to your hand. NL Switch to a random Ghostflame. NL Exhaust."
+  },
+  "hexamod:BacktrackDefend": {
+    "NAME": "Backtrack Defend",
+    "DESCRIPTION": "hexamod:Retract. NL Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain !B! Block."
   }
 }

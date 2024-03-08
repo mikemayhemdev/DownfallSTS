@@ -7,17 +7,16 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.*;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 import downfall.util.TextureLoader;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.util.OnAdvanceSubscriber;
 import theHexaghost.util.OnChargeSubscriber;
+import theHexaghost.util.OnRetractSubscriber;
 
-public class FuturePower extends AbstractPower implements CloneablePowerInterface, OnAdvanceSubscriber {
+public class FuturePower extends AbstractPower implements CloneablePowerInterface, OnAdvanceSubscriber, OnRetractSubscriber {
 
     public static final String POWER_ID = HexaMod.makeID("FuturePower");
 
@@ -56,6 +55,14 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
     public void onAdvance() {
         addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount),amount));
         addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount),amount));
+    }
+
+    @Override
+    public void onRetract() {
+        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount),amount));
+        addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount),amount));
+        addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner, amount),amount));
+        addToBot(new ApplyPowerAction(owner, owner, new LoseDexterityPower(owner, amount),amount));
     }
 
     @Override

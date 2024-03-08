@@ -15,11 +15,11 @@ public class NightmareStrike extends AbstractHexaCard {
 
     public NightmareStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 4;
+        baseDamage = 6;
         isEthereal = true;
         cardsToPreview = new ShadowStrike();
         tags.add(CardTags.STRIKE);
-        tags.add(HexaMod.AFTERLIFE);
+//        tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "NightmareStrike.png");
     }
 

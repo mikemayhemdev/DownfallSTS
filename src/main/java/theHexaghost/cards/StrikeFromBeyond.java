@@ -21,14 +21,14 @@ public class StrikeFromBeyond extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, SELF_AND_ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 5;
     private static final int MAGIC = 2;
     private static final int UPG_DAMAGE = 2;
 
     public StrikeFromBeyond() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
+//        baseMagicNumber = magicNumber = MAGIC;
         this.tags.add(CardTags.STRIKE);
         HexaMod.loadJokeCardImage(this, "StrikeFromBeyond.png");
     }

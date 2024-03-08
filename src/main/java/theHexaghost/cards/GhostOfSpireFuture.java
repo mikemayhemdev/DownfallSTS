@@ -11,7 +11,7 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
     //speedrunning
     public GhostOfSpireFuture() {
         super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        magicNumber = baseMagicNumber= 2;
+        magicNumber = baseMagicNumber= 1;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "GhostOfSpireFuture.png");
     }
@@ -23,8 +23,8 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isInnate = true;
-            rawDescription = UPGRADE_DESCRIPTION;
+//            isInnate = true;
+//            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

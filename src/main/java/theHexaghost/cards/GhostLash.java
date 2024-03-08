@@ -35,6 +35,12 @@ public class GhostLash extends AbstractHexaCard {
         HexaMod.loadJokeCardImage(this, "GhostLash.png");
     }
 
+    @Override
+    public void atTurnStartPreDraw() {
+        super.atTurnStartPreDraw();
+        calculate_bonus_damage();
+    }
+
     public int calculate_bonus_damage(){
         if(!AbstractDungeon.overlayMenu.endTurnButton.enabled){
 //        if(AbstractDungeon.actionManager.turnHasEnded){
