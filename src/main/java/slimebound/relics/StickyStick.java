@@ -16,7 +16,7 @@ public class StickyStick extends CustomRelic {
     public static final String IMG_PATH_LARGE = "relics/StickyStickLarge.png";
     public static final String OUTLINE_IMG_PATH = "relics/StickyStickOutline.png";
     private static final int HP_PER_CARD = 1;
-
+    //Gelatinous Cube
     public StickyStick() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.UNCOMMON, LandingSound.SOLID);
@@ -30,10 +30,10 @@ public class StickyStick extends CustomRelic {
     }
 
     public void atBattleStartPreDraw() {
-        this.flash();// 24
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EvolvePower(AbstractDungeon.player, 1), 1));// 25
-        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));// 31
-    }// 32
+        this.flash();
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EvolvePower(AbstractDungeon.player, 1), 1));
+        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+    }
 
     @Override
     public AbstractRelic makeCopy() {

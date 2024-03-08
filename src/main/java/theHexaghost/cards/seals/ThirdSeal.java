@@ -9,7 +9,7 @@ public class ThirdSeal extends AbstractSealCard {
     public final static String ID = makeID("ThirdSeal");
 
     public ThirdSeal() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         HexaMod.loadJokeCardImage(this, "ThirdSeal.png");
     }
 

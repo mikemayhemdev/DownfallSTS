@@ -22,14 +22,14 @@
       "retracted",
       "retracting"
     ],
-    "DESCRIPTION": "Move to the previous Ghostflame. Moving onto a Ghostflame #yExtinguishes it."
+    "DESCRIPTION": "Move to the previous Ghostflame and gain #b1 temporary #yStrength and #yDexterity [REMOVE_SPACE]. Moving onto a Ghostflame #yExtinguishes it."
   },
   {
     "PROPER_NAME": "Intensity",
     "NAMES": [
       "intensity"
     ],
-    "DESCRIPTION": "Intensity increases the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when #yIgnited."
+    "DESCRIPTION": "Intensity increases the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when #yIgnited [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Soulburn",
@@ -61,34 +61,37 @@
     "NAMES": [
       "seal"
     ],
-    "DESCRIPTION": "If all #b6 Seals have been played this combat (with no redundant ones), obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
+    "DESCRIPTION": "The more you play a Seal card, the more likely you are to find others. If all #b6 Seals have been played during a combat, obtain #pThe #pBroken #pSeal and remove the #b6 Seals from your deck."
   },
   {
     "PROPER_NAME": "Afterlife",
     "NAMES": [
       "afterlife"
     ],
-    "DESCRIPTION": "When this card is played or #yExhausted, its Afterlife effects activate."
+    "DESCRIPTION": "When this card is #yplayed or #yExhausted [REMOVE_SPACE], its Afterlife effects activate."
   },
   {
     "PROPER_NAME": "Crushing",
     "NAMES": [
       "crushing"
     ],
-    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #ySkills are played while #yActive. #yIgnition: When #yIgnited, deal #b3 damage to a random enemy twice."
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #ySkills are played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], deal #b3 damage to a random enemy twice.",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   },
   {
     "PROPER_NAME": "Bolstering",
     "NAMES": [
       "bolstering"
     ],
-    "DESCRIPTION": "#yGhostflame. #yIgnites when a #yPower is played while #yActive. #yIgnition: When #yIgnited, gain #b4 #yBlock and #b1 #yStrength."
+    "DESCRIPTION": "#yGhostflame. #yIgnites when a #yPower is played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], gain #b4 #yBlock and #b1 #yStrength [REMOVE_SPACE].",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   },
   {
     "PROPER_NAME": "Searing",
     "NAMES": [
       "searing"
     ],
-    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #yAttacks are played while #yActive. #yIgnition: When #yIgnited, apply #b4 #ySoulburn to a random enemy."
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #yAttacks are played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], apply #b4 #ySoulburn to a random enemy.",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   }
 ]

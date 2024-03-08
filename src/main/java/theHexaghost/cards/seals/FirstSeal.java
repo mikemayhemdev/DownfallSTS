@@ -12,10 +12,10 @@ public class FirstSeal extends AbstractSealCard {
 
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
-    public static final int MAGIC = 6;
+    public static final int MAGIC = 10;
 
     public FirstSeal() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(AbstractCard.CardTags.HEALING);
         HexaMod.loadJokeCardImage(this, "FirstSeal.png");

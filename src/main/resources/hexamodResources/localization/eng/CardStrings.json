@@ -63,7 +63,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. NL Add !M! random Afterlife card into your hand. NL hexamod:Afterlife: Add !burny! random Afterlife card into your drawpile."
+    "DESCRIPTION": "Ethereal. NL Add !M! random Afterlife card into your hand. NL hexamod:Afterlife: Add !burny! to your drawpile too."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
@@ -142,7 +142,7 @@
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "Gifts From Beyond",
-    "DESCRIPTION": "At the start of your turn, draw !M! additional cards and Exhaust 1 card.",
+    "DESCRIPTION": "At the start of your turn, add !M! random hexamod:Afterlife card into your hand.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! additional cards and Exhaust 1 card.",
     "EXTENDED_DESCRIPTION": [
       "These spirits are too powerful to invoke directly."
@@ -225,7 +225,7 @@
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
     "DESCRIPTION": "Ethereal. NL Gain [E] next turn. NL hexamod:Afterlife: draw !M! card next turn.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] [E] next turn. NL hexamod:Afterlife: draw !M! card next turn."
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] [E] next turn. NL hexamod:Afterlife: draw !M! cards next turn."
   },
   "hexamod:Premonition": {
     "NAME": "Premonition",
@@ -245,8 +245,8 @@
   },
   "hexamod:RecurringNightmare": {
     "NAME": "Nightmare Vision",
-    "DESCRIPTION": "expansioncontent:Exhume an *Ethereal card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Exhume !M! *Ethereal cards. NL Exhaust.",
+    "DESCRIPTION": "Hexamod:Retract. NL expansioncontent:Exhume an *Ethereal card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Hexamod:Retract. NL expansioncontent:Exhume !M! *Ethereal cards. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose an Ethereal card to return to your hand.",
       "Choose ",
@@ -296,7 +296,7 @@
   },
   "hexamod:SpectersWail": {
     "NAME": "Specter's Wail",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies. NL hexamod:Afterlife: Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Ethereal. NL Deal !D! AoE damage. NL hexamod:Afterlife: NL Deal !D! AoE damage."
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Bright Ritual",
@@ -338,7 +338,7 @@
   },
   "hexamod:TimeWarp": {
     "NAME": "Time Warp",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you *Advance or *Retract, return this from the discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you *Advance or *Retract during your turn, return this from the discard pile."
   },
   "hexamod:Toasty": {
     "NAME": "Toasty!",
@@ -388,17 +388,41 @@
   },
   "hexamod:FifthSeal": {
     "NAME": "Sixth Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional non-Sixth *Seal card reward.",
-    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional non-Sixth *Seal card reward."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, increase you Max HP by 2.",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, increase you Max HP by 2."
   },
   "hexamod:SixthSeal": {
     "NAME": "Fifth Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck.",
-    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, Upgrade a random card for every 13 unupgraded ones in deck.",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, Upgrade a random card for every 13 unupgraded ones in deck.",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( !M! card.)",
+      " NL ( !M! cards.)"
+    ]
   },
   "hexamod:LingeringShades": {
     "NAME": "Lingering Shades",
     "DESCRIPTION": "hexamod:Retract. NL Apply !burny! hexamod:Soulburn. Return all Ethereal cards in your discard pile to your hand.",
     "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
+  },
+  "hexamod:burning_act_and_damage": {
+    "NAME": "burning act and damage",
+    "DESCRIPTION": "Ethereal. NL Exhaust 1 card. NL Draw !M! cards. NL hexamod:Afterlife: NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Exhaust 1 card. NL Draw !M! cards. NL hexamod:Afterlife: NL Deal !D! damage."
+  },
+  "hexamod:retract_bonus_damage": {
+    "NAME": "retract bonus damage",
+    "DESCRIPTION": "Deal !D! damage, deal 2 additional damage for each hexamod:Retract happened this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, deal 2 additional damage for each hexamod:Retract happened this combat."
+  },
+  "hexamod:XRetractsAndDraw": {
+    "NAME": "X Retracts And Draw",
+    "DESCRIPTION": "hexamod:Retract and draw a card X times.",
+    "UPGRADE_DESCRIPTION": "hexamod:Retract and draw a card X+1 times."
+  },
+  "hexamod:RandomWalk": {
+    "NAME": "Random walk(temp name too)",
+    "DESCRIPTION": "Choose a card in draw pile to add to your hand. Switch to a random Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose a card in draw pile to add to your hand. Switch to a random Ghostflame. NL Exhaust."
   }
 }

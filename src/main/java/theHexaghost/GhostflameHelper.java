@@ -89,6 +89,17 @@ public class GhostflameHelper {
         }
     }
 
+    public static void end_on_random_flame(){
+
+        int new_flame_num = AbstractDungeon.miscRng.random(hexaGhostFlames.size());
+        AbstractGhostflame x = hexaGhostFlames.get(new_flame_num);
+        if (x.charged) {
+            x.extinguish();
+        }
+        x.activate();
+
+    }
+
     public static void update() {
         if (HexaMod.renderFlames)
             for (AbstractGhostflame gf : hexaGhostFlames) {

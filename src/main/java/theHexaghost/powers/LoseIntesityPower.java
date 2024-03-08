@@ -16,7 +16,7 @@ public class LoseIntesityPower extends AbstractPower {
 
     public LoseIntesityPower(AbstractCreature owner, int newAmount) {
         this.name = NAME;
-        this.ID = "LoseIntensity";
+        this.ID = POWER_ID;
         this.owner = owner;
         this.amount = newAmount;
         this.type = AbstractPower.PowerType.DEBUFF;
@@ -33,7 +33,7 @@ public class LoseIntesityPower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer) {
         flash();
         addToBot(new ApplyPowerAction(this.owner, this.owner, new EnhancePower(-this.amount), -this.amount));
-        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
     }
 }
 

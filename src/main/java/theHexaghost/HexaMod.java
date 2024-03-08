@@ -2,6 +2,7 @@ package theHexaghost;
 
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
+import basemod.abstracts.CustomSavable;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
@@ -32,11 +33,14 @@ import downfall.downfallMod;
 import downfall.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
+import hermit.cards.CursedWeapon;
+import hermit.util.Wiz;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import theHexaghost.cards.*;
+import theHexaghost.cards.seals.*;
 import theHexaghost.events.*;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.BolsteringGhostflame;
@@ -54,6 +58,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static theHexaghost.GhostflameHelper.*;
@@ -71,7 +76,9 @@ public class HexaMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         SetUnlocksSubscriber,
-        PostDeathSubscriber {
+        PostDeathSubscriber,
+        OnCardUseSubscriber,
+        StartGameSubscriber{
     public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "hexamodResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
@@ -90,6 +97,17 @@ public class HexaMod implements
     public static boolean unsealed = false;
     public static Color placeholderColor = new Color(114F / 255F, 62F / 255F, 109F / 255F, 1);
     private static String modID;
+
+    public static int[] seal_weight = new int[7];
+    public static int[] new_seal_weight = new int[7];
+//    public double[] seal_chance = new double[7];
+    public static boolean reseted_seal_weight = false;
+    public static int bonus_seal_drop_chance = 0;
+    public static int new_bonus_seal_drop_chance = 0;
+    // seal_weight[] records how likely a new seal reward will be the ith seal. and bonus_seal_drop_chance records how much more likely you are to receive a seal
+    // they are increased when you play a corresponding seal during combats, and to avoid them being counted more than they should by reloading a combat,
+    // the new_seal_weight[](reset at combat start) records the changes during a combat and add them to the record when the combat is over.
+    public static int number_of_times_of_retracts_during_the_combat = 0;
 
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
@@ -276,6 +294,14 @@ public class HexaMod implements
                 torches.clear();
             }
         }
+
+        for(int i = 1; i <= 6; i++){
+            new_seal_weight[i] = 0;
+            System.out.println("new_seal_wright reseted");
+        }
+        new_bonus_seal_drop_chance = 0;
+
+        number_of_times_of_retracts_during_the_combat = 0;
     }
 
     @Override
@@ -312,6 +338,11 @@ public class HexaMod implements
         renderFlames = false;
         ExhaustCardTickPatch.exhaustedLastTurn = false;
         ExhaustCardTickPatch.exhaustedThisTurn = false;
+        for(int i = 1; i <= 6; i++){
+            seal_weight[i] = seal_weight[i] + new_seal_weight[i];
+            System.out.println("combat end new seal_weight" + i + " : " + seal_weight[i]);
+        }
+        bonus_seal_drop_chance = bonus_seal_drop_chance + new_bonus_seal_drop_chance;
     }
 
     public static void renderGhostflames(SpriteBatch sb) {
@@ -410,11 +441,13 @@ public class HexaMod implements
     @Override
     public void receivePostDeath() {
         renderFlames = false;
+        reseted_seal_weight = false;
+        System.out.println("Reallowing seal weights to be reset.");
     }
 
     public void receivePostInitialize() {
         addPotions();
-
+        initializeSavedData();
         BaseMod.addEvent(new AddEventParams.Builder(WanderingSpecter.ID, WanderingSpecter.class) //Event ID//
                 //Extra Requirement
                 //Only in Evil if content sharing is disabled
@@ -457,4 +490,82 @@ public class HexaMod implements
     }
 
 
+    @Override
+    public void receiveCardUsed(AbstractCard abstractCard) {
+        // On playing a seal, it increases seal reward droprate by 1% (default 20%), and increases drop weight
+        // of the seals not in deck yet, so that future seals will be more likely to be the ones not in deck
+        if(abstractCard instanceof AbstractHexaCard){
+            boolean[] has_seal_in_deck = new boolean[7];
+
+            for(AbstractCard c : AbstractDungeon.player.masterDeck.group){
+                if(c instanceof FirstSeal){
+                    has_seal_in_deck[1] = true;
+                }else if(c instanceof SecondSeal){
+                    has_seal_in_deck[2] = true;
+                }else if(c instanceof ThirdSeal){
+                    has_seal_in_deck[3] = true;
+                }else if(c instanceof FourthSeal){
+                    has_seal_in_deck[4] = true;
+                }else if(c instanceof SixthSeal){
+                    has_seal_in_deck[5] = true;
+                }else if(c instanceof FifthSeal){
+                    has_seal_in_deck[6] = true;
+                }
+            }
+
+            HashMap<String, Integer> dic = new HashMap<>();
+            dic.put(FirstSeal.ID,1);
+            dic.put(SecondSeal.ID,2);
+            dic.put(ThirdSeal.ID,3);
+            dic.put(FourthSeal.ID,4);
+            dic.put(SixthSeal.ID,5);
+            dic.put(FifthSeal.ID,6);
+            if( abstractCard instanceof AbstractSealCard ) {
+//                int played_seal = dic.get(abstractCard.cardID);
+                new_bonus_seal_drop_chance += 1;
+                for(int i = 1; i <= 6; i++){
+                    if(!has_seal_in_deck[i]){
+                        new_seal_weight[i] += 3;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    private void initializeSavedData() {
+
+        String[] dic = {"First", "Second", "Third", "Fourth", "Fifth", "Sixth"};
+        for(int i = 1; i <= 6; i++){
+            int finalI = i;
+            BaseMod.addSaveField(dic[i-1] + "SealSpawnWeight", new CustomSavable<Integer>() {
+                @Override
+                public Integer onSave() {
+                    System.out.println("Saving seal weight" + finalI + " : " + seal_weight[finalI]);
+                    return seal_weight[finalI];
+                }
+
+                @Override
+                public void onLoad(Integer s) {
+                    if(s != null){
+                        seal_weight[finalI] = s;
+                        System.out.println("Loading old seal weight" + finalI + " : " + seal_weight[finalI]);
+                    }
+                }
+            });
+        }
+
+    }
+
+    @Override
+    public void receiveStartGame() {
+        if(!reseted_seal_weight){
+            System.out.println("Resetting seal weights on new run.");
+            for(int i = 0; i <= 6; i++){
+                seal_weight[i] = 20;
+            }
+            reseted_seal_weight = true;
+        }
+    }
 }

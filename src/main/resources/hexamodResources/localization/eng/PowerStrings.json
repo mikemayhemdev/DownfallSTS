@@ -42,7 +42,7 @@
     "NAME": "Wildfire Weapon",
     "DESCRIPTIONS": [
       "Whenever you deal unblocked attack damage, apply #b",
-      " #ySoulburn."
+      " #ySoulburn [REMOVE_SPACE]."
     ]
   },
   "hexamod:CommonPostCombatPower": {
@@ -80,7 +80,7 @@
     "NAME": "Speedrun",
     "DESCRIPTIONS": [
       "Whenever you #yAdvance, gain #b",
-      " temporary #yStrength."
+      " temporary #yStrength [REMOVE_SPACE]."
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -206,7 +206,7 @@
     ]
   },
   "hexamod:SoulburnOnExhaustPower": {
-    "NAME": "Soulburn Invasion ",
+    "NAME": "Soulburn Infestation",
     "DESCRIPTIONS": [
       "Whenver you #yExhaust a card this turn, apply #b",
       " #ySoulburn to this enemy."
