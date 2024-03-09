@@ -64,10 +64,11 @@ public class MainMenuAdPatch {
         // STS Modding Info
         if(Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT ){
             ads.add(new MainMenuAdInfo(STRINGS.TEXT[0], STRINGS.TEXT[1], STRINGS.TEXT[2], STRINGS.TEXT[3], STRINGS.TEXT[4], STRINGS.TEXT[5], "https://www.bilibili.com/video/BV1QA411j7Kx", null));
+        }else if(Settings.language == Settings.GameLanguage.KOR){
+            ads.add(new MainMenuAdInfo(STRINGS.TEXT[0], STRINGS.TEXT[1], STRINGS.TEXT[2], STRINGS.TEXT[3], STRINGS.TEXT[4], STRINGS.TEXT[5], "https://blog.naver.com/2020xodn/222147787489", null));
         }else{// english
             ads.add(new MainMenuAdInfo(STRINGS.TEXT[0], STRINGS.TEXT[1], STRINGS.TEXT[2], STRINGS.TEXT[3], STRINGS.TEXT[4], STRINGS.TEXT[5], "https://DownfallTutorial.github.io", null));
         }
-
         advert.current = ads.get(0);
     }
 
