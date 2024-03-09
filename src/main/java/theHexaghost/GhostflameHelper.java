@@ -91,7 +91,7 @@ public class GhostflameHelper {
 
     public static void end_on_random_flame(){
 
-        int new_flame_num = AbstractDungeon.miscRng.random(hexaGhostFlames.size());
+        int new_flame_num = AbstractDungeon.miscRng.random(hexaGhostFlames.size()-1);
         AbstractGhostflame x = hexaGhostFlames.get(new_flame_num);
         if (x.charged) {
             x.extinguish();

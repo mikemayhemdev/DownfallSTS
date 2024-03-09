@@ -23,6 +23,7 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
 //            isInnate = true;
 //            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

@@ -130,7 +130,7 @@
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
-    "DESCRIPTION": "Whenever you hexamod:Retract, gain [E].",
+    "DESCRIPTION": "Whenever you hexamod:Retract, draw a card.",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time you *Retract each turn, gain [E] and draw 1 card. NL hexamod:Retract."
   },
   "hexamod:GhostOfSpirePresent": {
@@ -394,11 +394,12 @@
   },
   "hexamod:SixthSeal": {
     "NAME": "Fifth Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, Upgrade a random card for every 13 unupgraded ones in deck.",
-    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, Upgrade a random card for every 13 unupgraded ones in deck.",
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, Upgrade a random card for every 13 unupgraded in deck.",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, Upgrade a random card for every 13 unupgraded in deck.",
     "EXTENDED_DESCRIPTION": [
-      " NL ( !M! card.)",
-      " NL ( !M! cards.)"
+      " NL ( ",
+      " card.)",
+      " cards.)"
     ]
   },
   "hexamod:LingeringShades": {

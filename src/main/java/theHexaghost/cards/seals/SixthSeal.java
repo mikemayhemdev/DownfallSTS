@@ -12,30 +12,34 @@ public class SixthSeal extends AbstractSealCard {
     private static int count_cards = 0;
     public SixthSeal() {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 0;
         HexaMod.loadJokeCardImage(this, "SixthSeal.png");
     }
 
-    @Override
-    public void atTurnStart() {
-        super.atTurnStart();
+    private void count(){
         count_cards = 0;
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.canUpgrade()) {
-                count_cards++;
+        if(AbstractDungeon.player.masterDeck.group != null){
+            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                if (c.canUpgrade()) {
+                    count_cards++;
+                }
             }
         }
     }
 
     @Override
     public void applyPowers() {
-        super.applyPowers();
-        magicNumber = count_cards / 13;
+        count();
+        int real_base_magic = baseMagicNumber;
+        baseMagicNumber = magicNumber = count_cards / 13;
         if( magicNumber <= 1){
-            this.rawDescription = DESCRIPTION + magicNumber + this.EXTENDED_DESCRIPTION[0];
+            this.rawDescription = DESCRIPTION + this.EXTENDED_DESCRIPTION[0] + magicNumber + this.EXTENDED_DESCRIPTION[1];
         }else{
-            this.rawDescription = DESCRIPTION + magicNumber + this.EXTENDED_DESCRIPTION[1];
+            this.rawDescription = DESCRIPTION + this.EXTENDED_DESCRIPTION[0] + magicNumber + this.EXTENDED_DESCRIPTION[2];
         }
         this.initializeDescription();
+        super.applyPowers();
+        baseMagicNumber = real_base_magic;
     }
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {
