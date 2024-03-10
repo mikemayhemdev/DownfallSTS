@@ -11,7 +11,7 @@ import theHexaghost.actions.RetractAction;
 public class FlameDevourer extends AbstractHexaCard{
     public final static String ID = makeID("FlameDevourer");
     public FlameDevourer() {
-        super(ID, 1, CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
         baseBlock = 12;
         baseMagicNumber = magicNumber = 4;
 //        HexaMod.loadJokeCardImage(this, "BacktrackSmack.png");

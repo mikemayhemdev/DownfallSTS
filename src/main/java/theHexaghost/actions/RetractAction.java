@@ -29,11 +29,6 @@ public class RetractAction extends AbstractGameAction {
         for(int i = 1; i <= number; i++) {
             GhostflameHelper.retract();
         }
-        AbstractPlayer p = AbstractDungeon.player;
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, number), number));
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseStrengthPower(p, number), number));
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, number), number));
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseDexterityPower(p, number), number));
         HexaMod.number_of_times_of_retracts_during_the_combat += number; // for calculating the rare attack's bonus damage
     }
 }

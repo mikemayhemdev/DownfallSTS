@@ -112,13 +112,6 @@
       " 牌。"
     ]
   },
-  "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "饋贈能量",
-    "DESCRIPTIONS": [
-      "每當一張 #y虛無 牌被 #y消耗 時，下回合獲得 ",
-      " 。"
-    ]
-  },
   "hexamod:GoldPostCombatPower": {
     "NAME": "戰後靈魂",
     "DESCRIPTIONS": [

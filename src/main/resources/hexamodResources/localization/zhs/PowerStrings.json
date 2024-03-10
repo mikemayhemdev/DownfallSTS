@@ -112,13 +112,6 @@
       " 牌。"
     ]
   },
-  "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "馈赠能量",
-    "DESCRIPTIONS": [
-      "每当一张 #y虚无 牌被 #y消耗 时，下回合获得 ",
-      " 。"
-    ]
-  },
   "hexamod:GoldPostCombatPower": {
     "NAME": "战后灵魂",
     "DESCRIPTIONS": [

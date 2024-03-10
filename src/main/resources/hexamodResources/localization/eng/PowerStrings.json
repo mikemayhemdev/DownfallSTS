@@ -113,13 +113,6 @@
       " random #Afterlife cards into your hand."
     ]
   },
-  "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "Gifted Energy",
-    "DESCRIPTIONS": [
-      "Whenever an #yEthereal card is #yExhausted, gain ",
-      " next turn."
-    ]
-  },
   "hexamod:GoldPostCombatPower": {
     "NAME": "Sealed Reward: Gold",
     "DESCRIPTIONS": [
