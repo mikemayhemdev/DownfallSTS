@@ -83,7 +83,7 @@
   },
   "hermit:Malice": {
     "NAME": "怨恨",
-    "DESCRIPTION": "消耗 一张手牌。 NL 造成 !D! 点伤害。 NL 若 消耗 一张 诅咒 ， NL 改为群体攻击。"
+    "DESCRIPTION": "消耗 一张手牌。 NL 造成 !D! 点伤害。 NL 若 消耗 一张 诅咒 ， NL 造成群体伤害。"
   },
   "hermit:Deadeye": {
     "NAME": "死神之眼",
