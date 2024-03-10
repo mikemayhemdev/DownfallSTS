@@ -20,7 +20,7 @@ public class BurningStrike extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        addToBot(new DrawCardAction(1));
+        addToBot(new DrawCardAction(magicNumber));
     }
 
     public void upp() {

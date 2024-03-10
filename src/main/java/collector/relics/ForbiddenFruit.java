@@ -2,6 +2,7 @@ package collector.relics;
 
 import basemod.abstracts.CustomRelic;
 import collector.CollectorMod;
+import com.megacrit.cardcrawl.cards.curses.Necronomicurse;
 import downfall.cards.curses.Sapped;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -57,7 +58,7 @@ public class ForbiddenFruit extends CustomRelic {
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
             if (stage == 2) {
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Sapped(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Necronomicurse(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                 AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             }
             else if (stage == 0) {

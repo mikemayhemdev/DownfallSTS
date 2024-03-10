@@ -29,8 +29,8 @@
   },
   "hermit:Covet": {
     "NAME": "渴求",
-    "DESCRIPTION": "丢弃一张牌。 NL 抽 !M! 张牌。 NL 消耗 被丢弃的 诅咒 。",
-    "UPGRADE_DESCRIPTION": "丢弃一张牌。 NL 抽 !M! 张牌。 NL 消耗 被丢弃的 诅咒 。"
+    "DESCRIPTION": "丢弃一张牌， NL 消耗 丢弃的 诅咒 。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "丢弃一张牌， NL 消耗 丢弃的 诅咒 。 NL 抽 !M! 张牌。"
   },
   "hermit:HighCaliber": {
     "NAME": "大口径",
@@ -95,7 +95,7 @@
   },
   "hermit:Adapt": {
     "NAME": "适应",
-    "DESCRIPTION": "回合开始时，可 消耗 1张牌来获得8点 格挡 。"
+    "DESCRIPTION": "回合开始时，可 消耗 1张牌以获得8点 格挡 。"
   },
   "hermit:Dive": {
     "NAME": "深潜",
