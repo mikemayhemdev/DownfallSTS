@@ -30,8 +30,8 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
             upgradeName();
             upgradeMagicNumber(1);
 //            isInnate = true;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+//            rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
         }
     }
 }
