@@ -29,8 +29,8 @@
   },
   "hermit:Covet": {
     "NAME": "渴求",
-    "DESCRIPTION": "丢弃一张牌。 NL 抽 !M! 张牌。 NL 消耗 被丢弃的 诅咒 。",
-    "UPGRADE_DESCRIPTION": "丢弃一张牌。 NL 抽 !M! 张牌。 NL 消耗 被丢弃的 诅咒 。"
+    "DESCRIPTION": "丢弃一张牌， NL 消耗 丢弃的 诅咒 。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "丢弃一张牌， NL 消耗 丢弃的 诅咒 。 NL 抽 !M! 张牌。"
   },
   "hermit:HighCaliber": {
     "NAME": "大口径",
