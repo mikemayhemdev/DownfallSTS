@@ -17,7 +17,12 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new FuturePower(magicNumber));
+//        if(upgraded){
+//            applyToSelf(new FuturePower(magicNumber, true));
+//        }else{
+            applyToSelf(new FuturePower(magicNumber, false));
+//        }
+
     }
 
     public void upgrade() {
@@ -25,7 +30,7 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
             upgradeName();
             upgradeMagicNumber(1);
 //            isInnate = true;
-//            rawDescription = UPGRADE_DESCRIPTION;
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

@@ -50,7 +50,7 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
 //        if (activation_count < amount) {
             this.flash();
 //            addToBot(new GainEnergyAction(1));
-            addToBot(new DrawCardAction(1));
+            addToBot(new DrawCardAction(amount));
 //        }
 //        activation_count++;
 //        updateDescription();

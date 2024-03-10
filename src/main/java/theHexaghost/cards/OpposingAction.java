@@ -1,16 +1,17 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theHexaghost.actions.RetractAction;
 
-public class XRetractsAndDraw extends AbstractHexaCard{
-    public final static String ID = makeID("XRetractsAndDraw");
+public class OpposingAction extends AbstractHexaCard{
+    public final static String ID = makeID("OpposingAction");
 
-    public XRetractsAndDraw() {
+    public OpposingAction() {
         super(ID, -1, CardType.SKILL, CardRarity.COMMON, AbstractCard.CardTarget.SELF);
     }
 
@@ -35,7 +36,7 @@ public class XRetractsAndDraw extends AbstractHexaCard{
         if (!this.freeToPlayOnce) {
             p.energy.use(EnergyPanel.totalCount);
         }
-
+        atb(new GainEnergyAction(1));
     }
 
     public void upgrade() {

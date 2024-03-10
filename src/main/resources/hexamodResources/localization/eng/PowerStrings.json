@@ -77,10 +77,11 @@
     ]
   },
   "hexamod:FuturePower": {
-    "NAME": "Speedrun",
+    "NAME": "Into Shadow",
     "DESCRIPTIONS": [
-      "Whenever you #yAdvance, gain #b",
-      " temporary #yStrength [REMOVE_SPACE]."
+      "Whenever you #yRetract, gain #b",
+      " #yStrength [REMOVE_SPACE].",
+      " #yStrength and #yDexterity [REMOVE_SPACE]."
     ]
   },
   "hexamod:FutureUpgradePower": {

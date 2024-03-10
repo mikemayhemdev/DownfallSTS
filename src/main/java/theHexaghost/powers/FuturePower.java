@@ -15,8 +15,8 @@ import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.util.OnAdvanceSubscriber;
 import theHexaghost.util.OnChargeSubscriber;
 import theHexaghost.util.OnRetractSubscriber;
-
-public class FuturePower extends AbstractPower implements CloneablePowerInterface, OnAdvanceSubscriber, OnRetractSubscriber {
+//CloneablePowerInterface, OnAdvanceSubscriber,
+public class FuturePower extends AbstractPower implements OnRetractSubscriber {
 
     public static final String POWER_ID = HexaMod.makeID("FuturePower");
 
@@ -27,14 +27,16 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    public boolean offer_dex = false;
 
-    public FuturePower(final int amount) {
+    public FuturePower(final int amount, boolean apply_dex) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
+        this.offer_dex = apply_dex;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
@@ -51,18 +53,16 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
 
      */
 
-    @Override
-    public void onAdvance() {
-        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount),amount));
-        addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount),amount));
-    }
+//    @Override
+//    public void onAdvance() {
+//        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount),amount));
+//        addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount),amount));
+//    }
 
     @Override
     public void onRetract() {
         addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount),amount));
-        addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount),amount));
-        addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner, amount),amount));
-        addToBot(new ApplyPowerAction(owner, owner, new LoseDexterityPower(owner, amount),amount));
+//        if(offer_dex) addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner, amount),amount));
     }
 
     @Override
@@ -86,10 +86,11 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
 
          */
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        if(offer_dex) this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
     }
 
-    @Override
-    public AbstractPower makeCopy() {
-        return new FuturePower(amount);
-    }
+//    @Override
+//    public AbstractPower makeCopy() {
+//        return new FuturePower(amount, offer_dex);
+//    }
 }

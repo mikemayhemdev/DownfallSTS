@@ -8,13 +8,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 
-public class BurningActAndDamage extends AbstractHexaCard{
-    public final static String ID = makeID("burning_act_and_damage");
+public class EtherStep extends AbstractHexaCard{
+    public final static String ID = makeID("EtherStep");
 
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 4;
 
-    public BurningActAndDamage() {
+    public EtherStep() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 2;
