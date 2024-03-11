@@ -19,7 +19,7 @@ public class NightmareStrike extends AbstractHexaCard {
         isEthereal = true;
         cardsToPreview = new ShadowStrike();
         tags.add(CardTags.STRIKE);
-//        tags.add(HexaMod.AFTERLIFE);
+        tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "NightmareStrike.png");
     }
 
