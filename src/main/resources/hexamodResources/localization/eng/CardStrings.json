@@ -102,8 +102,8 @@
   },
   "hexamod:Floatwork": {
     "NAME": "Floatwork",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !burny! Plated Armor. NL hexamod:Afterlife: NL Gain !M! Plated Armor.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !burny! Plated Armor. NL hexamod:Afterlife: NL Gain !M! Plated Armor."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL hexamod:Afterlife: NL Gain !M! Plated Armor.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL hexamod:Afterlife: NL Gain !M! Plated Armor."
   },
   "hexamod:ForkedFlame": {
     "NAME": "Forked Flame",

@@ -12,7 +12,7 @@ public class FirstSeal extends AbstractSealCard {
 
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
-    public static final int MAGIC = 10;
+    public static final int MAGIC = 8;
 
     public FirstSeal() {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
@@ -24,5 +24,14 @@ public class FirstSeal extends AbstractSealCard {
     @Override
     public void realUse(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new RepairPower(p, magicNumber));
+    }
+
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeBaseCost(1);
+//            rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
+        }
     }
 }

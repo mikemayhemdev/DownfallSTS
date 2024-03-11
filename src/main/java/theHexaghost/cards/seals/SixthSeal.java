@@ -45,4 +45,15 @@ public class SixthSeal extends AbstractSealCard {
     public void realUse(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new FutureUpgradePower(magicNumber));
     }
+
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeBaseCost(1);
+//            rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
+        }
+    }
+
+
 }

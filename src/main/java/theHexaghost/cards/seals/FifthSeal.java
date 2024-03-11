@@ -36,8 +36,14 @@ public class FifthSeal extends AbstractSealCard {
         AbstractDungeon.player.increaseMaxHp(2, true);
     }
 
-
-
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeBaseCost(1);
+//            rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
+        }
+    }
 
 //    @Override
 //    public void update() {

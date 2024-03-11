@@ -26,15 +26,15 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
         tags.add(CardTags.HEALING);
         isEthereal = true;
     }
-
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            isEthereal = false;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
-        }
-    }
+//
+//    public void upgrade() {
+//        if (!upgraded) {
+//            upgradeName();
+//            isEthereal = false;
+//            rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
+//        }
+//    }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {

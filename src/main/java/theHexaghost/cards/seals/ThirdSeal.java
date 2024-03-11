@@ -16,4 +16,13 @@ public class ThirdSeal extends AbstractSealCard {
     public void realUse(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new CommonPostCombatPower(1));
     }
+
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeBaseCost(1);
+//            rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
+        }
+    }
 }
