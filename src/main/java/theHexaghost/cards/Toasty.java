@@ -16,7 +16,7 @@ public class Toasty extends AbstractHexaCard {
     public final static String ID = makeID("Toasty");
 
 
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 4;
 
     public Toasty() {

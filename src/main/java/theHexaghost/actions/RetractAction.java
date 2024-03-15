@@ -29,6 +29,5 @@ public class RetractAction extends AbstractGameAction {
         for(int i = 1; i <= number; i++) {
             GhostflameHelper.retract();
         }
-        HexaMod.number_of_times_of_retracts_during_the_combat += number; // for calculating the rare attack's bonus damage
     }
 }

@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import slimebound.powers.GoopPerTurnPower;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.GhostFlameBarrierPower;
 import theHexaghost.powers.SoulburnOnExhaustPower;
@@ -19,7 +18,7 @@ public class GhostflameBarrier extends AbstractHexaCard {
 
     //
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 10;
 //    private static final int UPG_BLOCK = 4;
 
     private static final int MAGIC = 4;

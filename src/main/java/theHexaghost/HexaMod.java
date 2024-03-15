@@ -33,8 +33,6 @@ import downfall.downfallMod;
 import downfall.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
-import hermit.cards.CursedWeapon;
-import hermit.util.Wiz;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -58,7 +56,6 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static theHexaghost.GhostflameHelper.*;
@@ -104,10 +101,10 @@ public class HexaMod implements
     public static boolean reseted_seal_weight = false;
     public static int bonus_seal_drop_chance = 0;
     public static int new_bonus_seal_drop_chance = 0;
+    public static int num_of_seals_in_deck = 0;
     // seal_weight[] records how likely a new seal reward will be the ith seal. and bonus_seal_drop_chance records how much more likely you are to receive a seal
     // they are increased when you play a corresponding seal during combats, and to avoid them being counted more than they should by reloading a combat,
     // the new_seal_weight[](reset at combat start) records the changes during a combat and add them to the record when the combat is over.
-    public static int number_of_times_of_retracts_during_the_combat = 0;
 
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
@@ -290,7 +287,7 @@ public class HexaMod implements
         if (AbstractDungeon.player instanceof TheHexaghost) {
             renderFlames = true;
             if (AbstractDungeon.scene instanceof TheBottomScene) {
-                ArrayList<InteractableTorchEffect> torches = (ArrayList<InteractableTorchEffect>) ReflectionHacks.getPrivate(AbstractDungeon.scene, TheBottomScene.class, "torches");
+                ArrayList<InteractableTorchEffect> torches = ReflectionHacks.getPrivate(AbstractDungeon.scene, TheBottomScene.class, "torches");
                 torches.clear();
             }
         }
@@ -301,7 +298,6 @@ public class HexaMod implements
         }
         new_bonus_seal_drop_chance = 0;
 
-        number_of_times_of_retracts_during_the_combat = 0;
     }
 
     @Override
@@ -496,36 +492,36 @@ public class HexaMod implements
         // of the seals not in deck yet, so that future seals will be more likely to be the ones not in deck
         if(abstractCard instanceof AbstractHexaCard){
             boolean[] has_seal_in_deck = new boolean[7];
-
+            num_of_seals_in_deck = 0;
             for(AbstractCard c : AbstractDungeon.player.masterDeck.group){
                 if(c instanceof FirstSeal){
                     has_seal_in_deck[1] = true;
+                    num_of_seals_in_deck++;
                 }else if(c instanceof SecondSeal){
                     has_seal_in_deck[2] = true;
+                    num_of_seals_in_deck++;
                 }else if(c instanceof ThirdSeal){
                     has_seal_in_deck[3] = true;
+                    num_of_seals_in_deck++;
                 }else if(c instanceof FourthSeal){
                     has_seal_in_deck[4] = true;
+                    num_of_seals_in_deck++;
                 }else if(c instanceof SixthSeal){
                     has_seal_in_deck[5] = true;
+                    num_of_seals_in_deck++;
                 }else if(c instanceof FifthSeal){
                     has_seal_in_deck[6] = true;
+                    num_of_seals_in_deck++;
                 }
             }
 
-            HashMap<String, Integer> dic = new HashMap<>();
-            dic.put(FirstSeal.ID,1);
-            dic.put(SecondSeal.ID,2);
-            dic.put(ThirdSeal.ID,3);
-            dic.put(FourthSeal.ID,4);
-            dic.put(SixthSeal.ID,5);
-            dic.put(FifthSeal.ID,6);
             if( abstractCard instanceof AbstractSealCard ) {
-//                int played_seal = dic.get(abstractCard.cardID);
                 new_bonus_seal_drop_chance += 1;
                 for(int i = 1; i <= 6; i++){
                     if(!has_seal_in_deck[i]){
-                        new_seal_weight[i] += 3;
+                        if(num_of_seals_in_deck != 0){
+                            new_seal_weight[i] += 15 / num_of_seals_in_deck;
+                        }
                     }
                 }
             }

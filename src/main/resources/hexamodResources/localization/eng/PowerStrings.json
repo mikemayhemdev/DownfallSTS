@@ -11,7 +11,7 @@
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
       "The next time you #yIgnite the Inferno Ghostflame and all #b",
-      " Ghostflames are #yIgnited, gain an additional turn.",
+      " Ghostflames are #yIgnited [REMOVE_SPACE], gain an additional turn.",
       "The next time you #yIgnite the Inferno Ghostflame and at least #b"
     ]
   },
