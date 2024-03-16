@@ -1,5 +1,6 @@
 package theHexaghost.util;
 
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -53,6 +54,11 @@ public class SealSealReward extends CustomReward {
             for (int i = 1; i <= 6; i++) {
                 progress += HexaMod.seal_weight[i];
                 if (roll <= progress) {
+                    AbstractCard new_seal = dic.get(i);
+                    float upgrade_chance = ReflectionHacks.getPrivateStatic(AbstractDungeon.class, "cardUpgradedChance" );
+                    if (AbstractDungeon.cardRng.randomBoolean(upgrade_chance) && new_seal.canUpgrade()) {
+                        new_seal.upgrade();
+                    }
                     return dic.get(i);
                 }
             }

@@ -2,6 +2,7 @@ package theHexaghost.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.EventRoom;
@@ -20,8 +21,6 @@ public class GenerateSealRewardPatch {
 public static class DropSeals {
     public static void Postfix(AbstractRoom __instance) {
         if(AbstractDungeon.player instanceof TheHexaghost) {
-            System.out.println("This is actually working");
-//        AbstractRoom current_room = AbstractDungeon.getCurrRoom();
             int chance = 15;
             if (__instance instanceof MonsterRoomElite) {
                 chance = 35;
@@ -29,7 +28,7 @@ public static class DropSeals {
                 chance = 55;
             }
 
-            chance = chance + HexaMod.bonus_seal_drop_chance;
+            chance = chance + (int)(HexaMod.bonus_seal_drop_chance * 0.8);
 
             if (__instance.rewards.size() >= 5) {
                 chance = 0;

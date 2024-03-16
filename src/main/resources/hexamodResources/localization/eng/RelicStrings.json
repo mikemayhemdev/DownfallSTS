@@ -3,14 +3,14 @@
     "NAME": "Spirit Brand",
     "FLAVOR": "A bound protector.",
     "DESCRIPTIONS": [
-      "The first time you #yIgnite a Ghostflame each turn, gain #b4 #yBlock."
+      "The first time you #yIgnite a Ghostflame each turn, gain #b4 #yBlock [REMOVE_SPACE]."
     ]
   },
   "hexamod:TheBrokenSeal": {
     "NAME": "The Broken Seal",
     "FLAVOR": "Unlimited, unrestrained, unquenchable power.",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10, then heal all of your HP. Start each combat with #b2 #yStrength, #b2 #yDexterity, and #b2 #yhexamod:Intensity. You can not receive #pThe #pBroken #pSeal again."
+      "Upon pickup, raise your Max HP by #b10, then heal all of your HP. Start each combat with #b2 #yStrength [REMOVE_SPACE], #b2 #yDexterity [REMOVE_SPACE], and #b2 #yhexamod:Intensity [REMOVE_SPACE]. You can not receive #pThe #pBroken #pSeal again."
     ]
   },
   "hexamod:UnbrokenSoul": {
@@ -25,7 +25,7 @@
     "NAME": "Xanatos' Icy Charm",
     "FLAVOR": "I feel... cold.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. Start each combat with #b1 less #yhexamod:Intensity, and receive #b1 less #yhexamod:Intensity from the #yInferno #yGhostflame."
+      "Gain [E] at the start of your turn. Start each combat with #b1 less #yhexamod:Intensity, and receive #b1 less #yhexamod:Intensity from the #yInferno #yGhostflame [REMOVE_SPACE]."
     ]
   },
   "hexamod:SoulConsumer": {
@@ -46,21 +46,21 @@
     "NAME": "Sneaky Teakwood Match",
     "FLAVOR": "Lights on any surface!",
     "DESCRIPTIONS": [
-      "At the start of each combat, #yhexamod:Ignite the current Ghostflame and #yhexamod:Advance."
+      "At the start of each combat, #yhexamod:Ignite the current Ghostflame and #yhexamod:Advance [REMOVE_SPACE]."
     ]
   },
   "hexamod:InflammatoryLetter": {
     "NAME": "Jar of TOBSCo",
     "FLAVOR": "A little extra heat makes everything better.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yhexamod:Intensity."
+      "Start each combat with #b1 #yhexamod:Intensity [REMOVE_SPACE]."
     ]
   },
   "hexamod:SoulOfChaos": {
     "NAME": "Soul of Chaos",
     "FLAVOR": "Mayhem, made manifest.",
     "DESCRIPTIONS": [
-      "The fourth Ghostflame becomes a #yMayhem #yGhostflame. NL #yMayhem #yGhostflame activates when you end your turn on it. NL #yIgnition: Play the top card of your draw pile."
+      "The fourth Ghostflame becomes a #yMayhem #yGhostflame [REMOVE_SPACE]. NL #yMayhem #yGhostflame activates when you end your turn on it. NL #yIgnition [REMOVE_SPACE]: Play the top card of your draw pile."
     ]
   },
   "hexamod:JarOfFuel": {
@@ -74,14 +74,14 @@
     "NAME": "Tricky's Bolster-Rod",
     "FLAVOR": "Backed by the study of a thousand books. Knowledge is power!",
     "DESCRIPTIONS": [
-      "The first time you play a #yPower card each combat, gain #b6 #yBlock and #b1 #yStrength."
+      "The first time you play a #yPower card each combat, gain #b6 #yBlock and #b1 #yStrength [REMOVE_SPACE]."
     ]
   },
   "hexamod:CandleOfCauterizing": {
     "NAME": "Red Candle",
     "FLAVOR": "Fire BURNS...",
     "DESCRIPTIONS": [
-      "Whenever an #yAttack deals unblocked damage, apply #b2 #yhexamod:Soulburn."
+      "Whenever an #yAttack deals unblocked damage, apply #b2 #yhexamod:Soulburn [REMOVE_SPACE]."
     ]
   },
   "hexamod:Sixitude": {
