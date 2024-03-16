@@ -79,6 +79,6 @@ public class GhostLash extends AbstractHexaCard {
     @Override
     public void update() {
         super.update();
-        calculate_afterlifes();
+        applyPowers(); // to make the card show correct damage number when you draw it the first time
     }
 }

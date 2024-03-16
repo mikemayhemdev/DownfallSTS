@@ -36,7 +36,8 @@ public class Sear extends AbstractHexaCard {
                 isDone = true;
                 AbstractMonster m = AbstractDungeon.getRandomMonster();
                 if (m == null) return;
-                att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, burn), burn));
+                calculateCardDamage(m);
+                burn(m, burn);
                 att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
             }
         });

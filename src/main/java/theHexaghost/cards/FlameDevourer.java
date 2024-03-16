@@ -24,8 +24,9 @@ public class FlameDevourer extends AbstractHexaCard{
             baseBlock += magicNumber;
             super.applyPowers();
             baseBlock = real_base_block;
+        }else{
+            super.applyPowers();
         }
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

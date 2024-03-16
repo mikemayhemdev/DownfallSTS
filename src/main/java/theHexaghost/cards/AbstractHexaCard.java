@@ -5,30 +5,26 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.utility.ShowCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.util.TextureLoader;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
-import theHexaghost.actions.AdvanceAction;
-import theHexaghost.actions.ChargeCurrentFlameAction;
-import theHexaghost.actions.ExtinguishCurrentFlameAction;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;
-import theHexaghost.powers.CrispyPower_new;
 import theHexaghost.powers.ParanormalFormPower;
+import theHexaghost.relics.CandleOfCauterizing;
 import theHexaghost.vfx.AfterlifePlayEffect;
 
 import java.util.ArrayList;
@@ -155,12 +151,19 @@ public abstract class AbstractHexaCard extends CustomCard {
         if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
             base += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
         }
+        if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
+            base += CandleOfCauterizing.SOULBURN_BONUS_AMOUNT;
+        }
         this.burn = base;
         this.isBurnModified = (this.burn != this.baseBurn);
     }
 
     public void burn(AbstractMonster m, int amount) {
         applyToEnemy(m, new BurnPower(m, amount));
+        if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
+            AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
+            r.flash();
+        }
     }
 
     public void resetAttributes() {
@@ -190,7 +193,7 @@ public abstract class AbstractHexaCard extends CustomCard {
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (!m.isDeadOrEscaped() && m.hasPower(BurnPower.POWER_ID)) {
                     this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-                    break;// 43
+                    break;
                 }
             }
     }
@@ -202,12 +205,6 @@ public abstract class AbstractHexaCard extends CustomCard {
             bonus = AbstractDungeon.player.getPower(ParanormalFormPower.POWER_ID).amount;
         }
 
-//        if(AbstractDungeon.player.hasPower(CrispyPower_new.POWER_ID) && this.hasTag(HexaMod.AFTERLIFE) ){
-//            for(int ignite = 0; ignite < AbstractDungeon.player.getPower(CrispyPower_new.POWER_ID).amount; ignite++ ){
-//                atb(new ExtinguishCurrentFlameAction());
-//                atb(new ChargeCurrentFlameAction());
-//            }
-//        }
         for(int i = 0; i < bonus + 1; i++) {
             att(new AbstractGameAction() {
                 @Override
@@ -242,9 +239,7 @@ public abstract class AbstractHexaCard extends CustomCard {
         return AbstractHexaCard.this.tags.contains(HexaMod.AFTERLIFE);
     }
 
-    public void afterlife() {
-
-    }
+    public void afterlife() {}
 
     @Override
     protected Texture getPortraitImage() {

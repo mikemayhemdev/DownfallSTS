@@ -17,6 +17,7 @@ import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;
 import theHexaghost.powers.EnhancePower;
 import downfall.util.TextureLoader;
+import theHexaghost.relics.CandleOfCauterizing;
 import theHexaghost.relics.JarOfFuel;
 
 public class SearingGhostflame extends AbstractGhostflame {
@@ -61,7 +62,11 @@ public class SearingGhostflame extends AbstractGhostflame {
                 AbstractMonster m = AbstractDungeon.getRandomMonster();
                 if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
                     att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
-                    att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));// 173
+                    att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
+                    if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
+                        AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
+                        r.flash();
+                    }
                 }
             }
         });
@@ -110,6 +115,9 @@ public class SearingGhostflame extends AbstractGhostflame {
         int x = magic;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += 2 * AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        }
+        if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
+            x += CandleOfCauterizing.SOULBURN_BONUS_AMOUNT;
         }
 //        if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
 //            x += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;

@@ -23,7 +23,7 @@ public class MatchstickCase extends CustomRelic {
 
     public void atPreBattle() {
         this.firstTurn = true;// 44
-    }// 45
+    }
 
     @Override
     public void atTurnStartPostDraw() {
@@ -31,11 +31,11 @@ public class MatchstickCase extends CustomRelic {
     }
 
     public void atTurnStart() {
-        if (this.firstTurn) {// 49
-            this.flash();// 50
+        if (this.firstTurn) {
+            this.flash();
             addToBot(new ChargeCurrentFlameAction());
             addToBot(new AdvanceAction(false));
-            this.firstTurn = false;// 53
+            this.firstTurn = false;
         }
     }
 

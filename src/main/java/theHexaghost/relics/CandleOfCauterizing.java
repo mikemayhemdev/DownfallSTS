@@ -18,17 +18,18 @@ public class CandleOfCauterizing extends CustomRelic {
     public static final String ID = HexaMod.makeID("CandleOfCauterizing");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("CandleOfCauterizing.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("CandleOfCauterizing.png"));
+    public static final int SOULBURN_BONUS_AMOUNT = 3;
 
     public CandleOfCauterizing() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
     //red candle
-    @Override
-    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        if (damageAmount > 0 && target != AbstractDungeon.player && info.type == DamageInfo.DamageType.NORMAL) {
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new BurnPower(target, 2), 2, true));
-        }
-    }
+//    @Override
+//    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+//        if (damageAmount > 0 && target != AbstractDungeon.player && info.type == DamageInfo.DamageType.NORMAL) {
+//            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new BurnPower(target, 2), 2, true));
+//        }
+//    }
 
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
