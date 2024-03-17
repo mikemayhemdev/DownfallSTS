@@ -18,9 +18,11 @@ public class FifthSeal extends AbstractSealCard {
     private float rotationTimer;
     private int previewIndex;
     private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    public static final int MAGIC = 2;
 
     public FifthSeal() {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        baseMagicNumber = magicNumber = MAGIC;
 //
 //        cardsList.add(new FirstSeal());
 //        cardsList.add(new SecondSeal());
@@ -33,7 +35,7 @@ public class FifthSeal extends AbstractSealCard {
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {
 //        applyToSelf(new SealPostCombatPower(1));
-        AbstractDungeon.player.increaseMaxHp(2, true);
+        AbstractDungeon.player.increaseMaxHp(this.magicNumber, true);
     }
 
     public void upgrade() {

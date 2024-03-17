@@ -389,8 +389,8 @@
   },
   "hexamod:FifthSeal": {
     "NAME": "Sixth Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, increase you Max HP by 2.",
-    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, increase you Max HP by 2."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, increase you Max HP by !M! .",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, increase you Max HP by !M! ."
   },
   "hexamod:SixthSeal": {
     "NAME": "Fifth Seal",

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theHexaghost.HexaMod;
 
 public class GhostLash extends AbstractHexaCard {
@@ -79,6 +80,8 @@ public class GhostLash extends AbstractHexaCard {
     @Override
     public void update() {
         super.update();
-        applyPowers(); // to make the card show correct damage number when you draw it the first time
+        if(AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT){
+            applyPowers(); // to make the card show correct damage number when you draw it the first time
+        }
     }
 }

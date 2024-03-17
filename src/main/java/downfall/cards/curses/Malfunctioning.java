@@ -34,6 +34,7 @@ public class Malfunctioning extends CustomCard {
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
+    //Flawed flawed
     public Malfunctioning() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
         this.exhaust = true;

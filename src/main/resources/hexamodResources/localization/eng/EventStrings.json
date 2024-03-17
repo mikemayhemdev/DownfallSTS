@@ -42,7 +42,11 @@
       "[Locked] Requires a Common Card.",
       "[Locked] Requires a Potion.",
       "[Leave]",
-      "[Locked] Offering made."
+      "[Locked] Offering made.",
+      ". #gGain #gFifth #gSeal.",
+      "[Locked] Requires an Upgraded Card.",
+      " Max HP. #gGain #gSixth #gSeal.",
+      "[Locked] Requires 2 Max HP."
     ]
   },
   "hexamod:HexaFalling": {

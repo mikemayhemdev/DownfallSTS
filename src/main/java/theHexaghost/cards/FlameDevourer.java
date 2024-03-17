@@ -9,6 +9,7 @@ import theHexaghost.HexaMod;
 import theHexaghost.actions.RetractAction;
 
 public class FlameDevourer extends AbstractHexaCard{
+    //Devour Flame
     public final static String ID = makeID("FlameDevourer");
     public FlameDevourer() {
         super(ID, 1, CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
@@ -19,13 +20,30 @@ public class FlameDevourer extends AbstractHexaCard{
 
     @Override
     public void applyPowers() {
-        if(GhostflameHelper.getPreviousGhostFlame().charged){
-            int real_base_block = baseBlock;
-            baseBlock += magicNumber;
+        System.out.println("it's called");
+        if((GhostflameHelper.getPreviousGhostFlame()).charged){
+            System.out.println("charged charged charged charged charged charged charged charged charged charged ");
+            int real_base_block = this.baseBlock;
+            this.baseBlock += this.magicNumber;
             super.applyPowers();
-            baseBlock = real_base_block;
+            this.baseBlock = real_base_block;
+            this.isBlockModified = this.block != this.baseBlock;
         }else{
+            System.out.println("not charged not charged not charged not charged not charged not charged not charged not charged not charged not charged not charged not charged ");
             super.applyPowers();
+        }
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        if((GhostflameHelper.getPreviousGhostFlame()).charged){
+            int real_base_block = this.baseBlock;
+            this.baseBlock += this.magicNumber;
+            super.calculateCardDamage(mo);
+            this.baseBlock = real_base_block;
+            this.isBlockModified = this.block != this.baseBlock;
+        }else{
+            super.calculateCardDamage(mo);
         }
     }
 

@@ -30,18 +30,21 @@ public class Sear extends AbstractHexaCard {
 
     @Override
     public void afterlife() {
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                AbstractMonster m = AbstractDungeon.getRandomMonster();
-                if (m == null) return;
-                calculateCardDamage(m);
-                burn(m, burn);
-                att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
-            }
-        });
-
+//        atb(new AbstractGameAction() {
+//            @Override
+//            public void update() {
+//                isDone = true;
+//                AbstractMonster m = AbstractDungeon.getRandomMonster();
+//                if (m == null) return;
+//                calculateCardDamage(m);
+//                burn(m, burn);
+//                att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
+//            }
+//        });
+        AbstractMonster m = AbstractDungeon.getRandomMonster();
+        if (m == null) return;
+        atb(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
+        burn(m, burn);
     }
 
     public void upgrade() {

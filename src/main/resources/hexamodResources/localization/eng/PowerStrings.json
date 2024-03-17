@@ -5,7 +5,8 @@
       "Do not #yAdvance at the end of the next turn.",
       "Do not #yAdvance at the end of the next #b",
       " turns."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:ApocalypticArmorPower": {
     "NAME": "Doomsday",
@@ -20,14 +21,16 @@
     "DESCRIPTIONS": [
       "At the start of your next turn, apply #b",
       " #ySoulburn to ALL enemies."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:BurnPerTurnPower": {
     "NAME": "Melting Metal",
     "DESCRIPTIONS": [
       "Applies #b",
       " #ySoulburn after the next time #ySoulburn is detonated on this enemy."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:BurnPower": {
     "NAME": "Soulburn",
@@ -43,7 +46,8 @@
     "DESCRIPTIONS": [
       "Whenever you deal unblocked attack damage, apply #b",
       " #ySoulburn [REMOVE_SPACE]."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:CommonPostCombatPower": {
     "NAME": "Sealed Reward: Card",
@@ -74,7 +78,8 @@
     "DESCRIPTIONS": [
       "Whenever you play an #yEthereal card this turn, gain ",
       " ."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:FuturePower": {
     "NAME": "Into Shadow",
@@ -103,7 +108,8 @@
     "DESCRIPTIONS": [
       "When attacked this turn, applies #b",
       " #ySoulburn to the attacker."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:GiftsFromTheDeadPower": {
     "NAME": "Gifted Cards",
@@ -134,7 +140,8 @@
       "In #b",
       " turns, lose #b",
       " #yIntensity [REMOVE_SPACE]."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:ParanormalFormPower": {
     "NAME": "Poltergeist",
@@ -172,7 +179,8 @@
       "At the end of combat, obtain #b",
       " additional #ySeal cards.",
       " additional #ySeal card."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:TimeStopPower": {
     "NAME": "Doom's Arrival",
