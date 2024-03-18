@@ -37,19 +37,20 @@ public class EndTurnAdvance {
                         }
                     }
                 }
-                if (AbstractDungeon.player.hasPower(AgainPower.POWER_ID)) {
-                    AbstractPower p = AbstractDungeon.player.getPower(AgainPower.POWER_ID);
-                    p.flash();
-                    AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p.owner, p.owner, p, 1));
-                } else if (AbstractDungeon.player.hasPower(StopFromAdvancingPower.POWER_ID)) {
-                    AbstractPower p = AbstractDungeon.player.getPower(StopFromAdvancingPower.POWER_ID);
-                    p.flash();
-
-                }else if(AbstractDungeon.player.hasPower(CrispyPower_new.POWER_ID)){
-
-                }else if (GhostflameHelper.activeGhostFlame.charged) {
+//                if (AbstractDungeon.player.hasPower(AgainPower.POWER_ID)) {
+//                    AbstractPower p = AbstractDungeon.player.getPower(AgainPower.POWER_ID);
+//                    p.flash();
+//                    AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p.owner, p.owner, p, 1));
+//                }
+                if(AbstractDungeon.player.hasPower(CrispyPower_new.POWER_ID)){
+                    if (AbstractDungeon.player.hasPower(StopFromAdvancingPower.POWER_ID)) {
+                        GhostflameHelper.activeGhostFlame.extinguish();
+                    }
+                }else if (AbstractDungeon.player.hasPower(StopFromAdvancingPower.POWER_ID)) {
+                    GhostflameHelper.activeGhostFlame.extinguish();
+                }
+                else if (GhostflameHelper.activeGhostFlame.charged) {
                     AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
-
                 }
             }
 

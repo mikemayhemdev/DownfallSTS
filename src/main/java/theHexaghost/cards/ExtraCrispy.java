@@ -11,8 +11,6 @@ public class ExtraCrispy extends AbstractHexaCard {
 
     public final static String ID = makeID("ExtraCrispy");
 
-    //stupid intellij stuff POWER, SELF, UNCOMMON
-
     private static final int MAGIC = 1;
     // private static final int UPG_MAGIC = 1;
 

@@ -11,7 +11,7 @@ public class GhostOfSpirePresent extends AbstractHexaCard {
 
     public final static String ID = makeID("GhostOfSpirePresent");
 
-    //stupid intellij stuff POWER, SELF, UNCOMMON
+    //here and now
 
     private static final int MAGIC = 1;
 
