@@ -31,7 +31,7 @@ public class RenderOnlyTorchHead extends TorchHead {
             this.fireTimer -= Gdx.graphics.getDeltaTime();
             if (this.fireTimer < 0.0F) {
                 this.fireTimer = 0.04F;
-                AbstractDungeon.effectList.add(new TorchHeadFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() + 10.0F * Settings.scale, this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 110.0F * Settings.scale));
+                AbstractDungeon.effectList.add(new TorchHeadFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() , this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 110.0F * Settings.scale));
             }
         }
     }

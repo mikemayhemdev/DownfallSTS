@@ -18,7 +18,7 @@ public class RoughDiamond extends CustomRelic {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (c.rarity == AbstractCard.CardRarity.RARE && c.cost >= 2) {
+        if (c.rarity == AbstractCard.CardRarity.RARE && c.costForTurn >= 2) {
             flash();
             addToBot(new GainEnergyAction(1));
         }

@@ -9,8 +9,8 @@
   },
   "Gremlin:Astound": {
     "NAME": "惊愕",
-    "DESCRIPTION": "获得 !B! 格挡 。 NL 若至少有 3 层 gremlin:法力 ， NL 获得 !M! 张 *守卫 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 格挡 。 NL 若至少有 3 层 gremlin:法力 ， NL 获得 !M! 张 *守卫+ 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若至少有 3 层 gremlin:法力 ， NL 获得 !M! 张 *守卫 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 若至少有 3 层 gremlin:法力 ， NL 获得 !M! 张 *守卫+ 。"
   },
   "Gremlin:Bang": {
     "NAME": "砰",

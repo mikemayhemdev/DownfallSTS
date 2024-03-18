@@ -82,7 +82,7 @@ public class NeowBoss extends AbstractMonster {
         this.drawX += DRAWX_OFFSET;
         this.drawY += DRAWY_OFFSET;
 
-        type = EnemyType.BOSS;
+        type = EnemyType.ELITE;
         this.baseDrawX = drawX;
 
 
@@ -161,7 +161,7 @@ public class NeowBoss extends AbstractMonster {
         movingOffscreen = false;
         movingBack = false;
         // halfDead = true;
-        AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
+        // AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
 
 
         // AbstractDungeon.getCurrRoom().cannotLose = true;
