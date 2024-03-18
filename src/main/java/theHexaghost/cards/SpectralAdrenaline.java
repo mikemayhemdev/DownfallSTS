@@ -9,7 +9,7 @@ import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ExtinguishAction;
-import theHexaghost.ghostflames.AbstractGhostflame;
+import theHexaghost.actions.RetractAction;
 
 public class SpectralAdrenaline extends AbstractHexaCard {
 
@@ -18,8 +18,8 @@ public class SpectralAdrenaline extends AbstractHexaCard {
     //bright ritual
 
     public SpectralAdrenaline() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        exhaust = true;
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+//        exhaust = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "SpectralAdrenaline.png");
@@ -30,11 +30,29 @@ public class SpectralAdrenaline extends AbstractHexaCard {
             @Override
             public void update() {
                 isDone = true;
-                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-                    if (gf.charged) {
-                        att(new GainEnergyAction(1));
-                        att(new DrawCardAction(1));
-                        att(new ExtinguishAction(gf));
+                int x = GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame);
+                if(x == 0){
+                    if(GhostflameHelper.activeGhostFlame.charged){
+                        atb(new ExtinguishAction(GhostflameHelper.activeGhostFlame));
+                        atb(new GainEnergyAction(1));
+                        atb(new DrawCardAction(1));
+                    }
+                }else {
+                    int count = 0;
+                    for (int i = 0; i <= x; i++) {
+                        if (GhostflameHelper.hexaGhostFlames.get(i).charged) {
+                            count++;
+                        }
+                    }
+                    atb(new ExtinguishAction(GhostflameHelper.activeGhostFlame));
+                    while(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame) != 0){
+                        GhostflameHelper.retract();
+                    }
+
+                    while (count > 0) {
+                        atb(new GainEnergyAction(1));
+                        atb(new DrawCardAction(1));
+                        count -= 1;
                     }
                 }
             }
@@ -44,7 +62,7 @@ public class SpectralAdrenaline extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeBaseCost(1);
         }
     }
 }

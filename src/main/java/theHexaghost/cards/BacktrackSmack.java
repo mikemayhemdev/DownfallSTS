@@ -11,23 +11,22 @@ public class BacktrackSmack extends AbstractHexaCard {
 
     public BacktrackSmack() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 7;
         HexaMod.loadJokeCardImage(this, "BacktrackSmack.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        if(upgraded) dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         atb(new RetractAction());
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
-//            upgradeDamage(2);
+//            rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
+            upgradeDamage(2);
         }
     }
 }

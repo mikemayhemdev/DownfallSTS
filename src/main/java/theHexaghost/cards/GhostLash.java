@@ -15,6 +15,7 @@ public class GhostLash extends AbstractHexaCard {
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 2;
     private static int afterlife_inhand = 0;
+    private boolean can_show = false;
 
     public GhostLash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
@@ -59,6 +60,7 @@ public class GhostLash extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        this.can_show = false;
     }
 
     @Override
@@ -67,6 +69,7 @@ public class GhostLash extends AbstractHexaCard {
         if (m == null) return;
         this.calculateCardDamage(m);
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        this.can_show = false;
     }
 
     public void upgrade() {
@@ -78,9 +81,21 @@ public class GhostLash extends AbstractHexaCard {
     }
 
     @Override
+    public void triggerWhenDrawn() {
+        super.triggerWhenDrawn();
+        this.can_show = true;
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        super.onMoveToDiscard();
+        this.can_show = false;
+    }
+
+    @Override
     public void update() {
         super.update();
-        if(AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT){
+        if(can_show){
             applyPowers(); // to make the card show correct damage number when you draw it the first time
         }
     }

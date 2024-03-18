@@ -222,7 +222,7 @@ public class NeowBossFinal extends AbstractMonster {
 
                 switch(this.buffCount) {
                     case 0:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 2), 2));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 3), 3));
                         break;
                     case 1:
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new RegenerateMonsterPower(this, 30)));

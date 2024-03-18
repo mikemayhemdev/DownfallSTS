@@ -56,7 +56,7 @@ public class HeatShield extends AbstractHexaCard {
         super.calculateCardDamage(mo);
         baseBlock = real_baseBlock;
         this.isBlockModified = block != baseBlock;
-        this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];
+        this.rawDescription = EXTENDED_DESCRIPTION[0] + DESCRIPTION;
         initializeDescription();
     }
 

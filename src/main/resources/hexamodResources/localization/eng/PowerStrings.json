@@ -68,9 +68,9 @@
   "hexamod:EnhancePower": {
     "NAME": "Intensity",
     "DESCRIPTIONS": [
-      "Increase the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when Ignited by #b",
-      ".",
-      "Decrease the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when Ignited by #b"
+      "Increase the amount of damage, #ySoulburn [REMOVE_SPACE], and #yBlock applied by Ghostflames when Ignited by #b",
+      " [REMOVE_SPACE].",
+      "Decrease the amount of damage, #ySoulburn [REMOVE_SPACE], and #yBlock applied by Ghostflames when Ignited by #b"
     ]
   },
   "hexamod:EtherealRefundPower": {

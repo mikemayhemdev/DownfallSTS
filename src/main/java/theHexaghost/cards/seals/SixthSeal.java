@@ -33,9 +33,9 @@ public class SixthSeal extends AbstractSealCard {
         int real_base_magic = baseMagicNumber;
         baseMagicNumber = magicNumber = count_cards / 13;
         if( magicNumber <= 1){
-            this.rawDescription = DESCRIPTION + this.EXTENDED_DESCRIPTION[0] + magicNumber + this.EXTENDED_DESCRIPTION[1];
+            this.rawDescription = this.EXTENDED_DESCRIPTION[0] + magicNumber + this.EXTENDED_DESCRIPTION[1] + DESCRIPTION;
         }else{
-            this.rawDescription = DESCRIPTION + this.EXTENDED_DESCRIPTION[0] + magicNumber + this.EXTENDED_DESCRIPTION[2];
+            this.rawDescription = this.EXTENDED_DESCRIPTION[0] + magicNumber + this.EXTENDED_DESCRIPTION[2] + DESCRIPTION;
         }
         this.initializeDescription();
         super.applyPowers();

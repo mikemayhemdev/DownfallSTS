@@ -21,7 +21,7 @@ public class UnleashSpirits extends AbstractHexaCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = 0;
-        exhaust = true;
+//        exhaust = true;
         HexaMod.loadJokeCardImage(this, "UnleashSpirits.png");
     }
 
@@ -31,13 +31,13 @@ public class UnleashSpirits extends AbstractHexaCard {
             @Override
             public void update() {
                 isDone = true;
-                int i = 0;
-                for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
-                    if (c.isEthereal) {
-                        i++;
-                    }
-                }
-                for (int q = 0; q < i; q++) {
+//                int i = 0;
+//                for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
+//                    if (c.isEthereal) {
+//                        i++;
+//                    }
+//                }
+                for (int q = 0; q < HexaMod.cards_exhausted_last_turn; q++) {
                     addToTop(new DamageRandomEnemyAction(makeInfo(), AbstractGameAction.AttackEffect.FIRE));
                 }
             }
@@ -45,21 +45,21 @@ public class UnleashSpirits extends AbstractHexaCard {
     }
 
     public void applyPowers() {
-        baseMagicNumber = magicNumber = countCards()+1;
+        baseMagicNumber = magicNumber = HexaMod.cards_exhausted_last_turn + 1;
         super.applyPowers();
-        this.rawDescription = DESCRIPTION+UPGRADE_DESCRIPTION;
+        this.rawDescription = DESCRIPTION + UPGRADE_DESCRIPTION;
         this.initializeDescription();
     }
 
-    public int countCards(){
-        int count=0;
-        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
-            if (c.isEthereal) {
-                count++;
-            }
-        }
-        return count;
-    }
+//    public int countCards(){
+//        int count=0;
+//        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
+//            if (c.isEthereal) {
+//                count++;
+//            }
+//        }
+//        return count;
+//    }
 
     public void upgrade() {
         if (!upgraded) {

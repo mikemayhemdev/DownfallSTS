@@ -21,7 +21,7 @@
   "hexamod:BacktrackSmack": {
     "NAME": "Backtrack Smack",
     "DESCRIPTION": "Deal !D! damage twice. NL hexamod:Retract.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage trice. NL hexamod:Retract."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL hexamod:Retract."
   },
   "hexamod:BurningQuestion": {
     "NAME": "Burning Question",
@@ -64,7 +64,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. NL Add !M! random Afterlife card into your hand. NL hexamod:Afterlife: Add !burny! to your drawpile too."
+    "DESCRIPTION": "Ethereal. NL Add !M! random hexamod:Afterlife card into your hand. NL hexamod:Afterlife: Add !burny! to your drawpile too."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
@@ -86,7 +86,7 @@
   },
   "hexamod:FlameSwitch": {
     "NAME": "Bad Omen",
-    "DESCRIPTION": "Ethereal. NL Choose a Ghostflame type to change the current one into. NL Exhaust.",
+    "DESCRIPTION": "Choose a Ghostflame type to change the current one into. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Choose a Ghostflame type to change the current one into. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Replace the current Ghostflame with a hexamod:Bolstering Ghostflame",
@@ -241,8 +241,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn X times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage, apply !burny! hexamod:Soulburn, and apply 1 Weak X times."
+    "DESCRIPTION": "Deal !D! damage and apply !M! Weak X times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Weak X times."
   },
   "hexamod:RecurringNightmare": {
     "NAME": "Nightmare Vision",
@@ -301,7 +301,7 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Bright Ritual",
-    "DESCRIPTION": "Gain [E] and draw 1 card for each *Ignited Ghostflame, then hexamod:Extinguish them. NL Exhaust."
+    "DESCRIPTION": "hexamod:Retract to the first Ghostflame, hexamod:Extinguish all along the way, gain [E] and draw 1 card for each hexamod:Extinguished one."
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
@@ -339,7 +339,7 @@
   },
   "hexamod:TimeWarp": {
     "NAME": "Time Warp",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you *Advance or *Retract during your turn, return this from the discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you *Advance or *Retract, return this from the discard pile."
   },
   "hexamod:Toasty": {
     "NAME": "Toasty!",
@@ -352,8 +352,8 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Unleash Spirits",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. Repeat for each *Exhausted *Ethereal card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " NL (Hits !M! time(s).)"
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each card *Exhausted last turn.",
+    "UPGRADE_DESCRIPTION": " NL (Hit !M! time(s).)"
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",
@@ -397,9 +397,9 @@
     "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, Upgrade a random card for every 13 unupgraded in deck.",
     "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, Upgrade a random card for every 13 unupgraded in deck.",
     "EXTENDED_DESCRIPTION": [
-      " NL ( ",
-      " card.)",
-      " cards.)"
+      "( Upgrade ",
+      " card. ) NL ",
+      " cards. ) NL "
     ]
   },
   "hexamod:LingeringShades": {
@@ -424,12 +424,12 @@
   },
   "hexamod:RandomWalk": {
     "NAME": "Random walk(temp name)",
-    "DESCRIPTION": "Choose a card in draw pile to add to your hand. NL Switch to a random Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Choose a card in draw pile to add to your hand. NL Switch to a random Ghostflame. NL Exhaust."
+    "DESCRIPTION": "Fetch a card in your draw pile. NL Switch to a random Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Fetch a card in your draw pile. NL Switch to a random Ghostflame. NL Exhaust."
   },
   "hexamod:FlameDevourer": {
     "NAME": "Devour Flame",
-    "DESCRIPTION": "hexamod:Retract. NL Gain !B! Block. NL If hexamod:Retract onto a hexamod:Ignited Ghostflame, gain !M! additional.",
+    "DESCRIPTION": "Gain !B! Block. NL hexamod:Retract, if *Retract onto an hexamod:Ignited Ghostflame, gain !M! additional Block.",
     "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain !B! Block."
   }
 }

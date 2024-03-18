@@ -20,8 +20,8 @@ public class FlameSwitch extends AbstractHexaCard implements OctopusCard{
 
     //bad omen
     public FlameSwitch() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseBurn = burn = 16;
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+//        baseBurn = burn = 16;
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
         HexaMod.loadJokeCardImage(this, "FlameSwitch.png");
@@ -87,7 +87,7 @@ public class FlameSwitch extends AbstractHexaCard implements OctopusCard{
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isEthereal = false;
+//            isEthereal = false;
             selfRetain = true;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

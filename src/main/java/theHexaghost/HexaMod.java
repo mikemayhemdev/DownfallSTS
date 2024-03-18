@@ -75,7 +75,9 @@ public class HexaMod implements
         SetUnlocksSubscriber,
         PostDeathSubscriber,
         OnCardUseSubscriber,
-        StartGameSubscriber{
+        StartGameSubscriber,
+        PostExhaustSubscriber,
+        OnPlayerTurnStartPostDrawSubscriber{
     public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "hexamodResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
@@ -105,6 +107,10 @@ public class HexaMod implements
     // seal_weight[] records how likely a new seal reward will be the ith seal. and bonus_seal_drop_chance records how much more likely you are to receive a seal
     // they are increased when you play a corresponding seal during combats, and to avoid them being counted more than they should by reloading a combat,
     // the new_seal_weight[](reset at combat start) records the changes during a combat and add them to the record when the combat is over.
+
+    public static int cards_exhausted_this_turn = 0;
+    public static int cards_exhausted_last_turn = 0;
+    // for unleash spirits
 
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
@@ -298,6 +304,8 @@ public class HexaMod implements
         }
         new_bonus_seal_drop_chance = 0;
 
+        cards_exhausted_last_turn = 0;
+        cards_exhausted_this_turn = 0;
     }
 
     @Override
@@ -563,5 +571,16 @@ public class HexaMod implements
             }
             reseted_seal_weight = true;
         }
+    }
+
+    @Override
+    public void receivePostExhaust(AbstractCard abstractCard) {
+        cards_exhausted_this_turn++;
+    }
+
+    @Override
+    public void receiveOnPlayerTurnStartPostDraw() {
+        HexaMod.cards_exhausted_last_turn = HexaMod.cards_exhausted_this_turn;
+        HexaMod.cards_exhausted_this_turn = 0;
     }
 }
