@@ -162,8 +162,8 @@
   },
   "hexamod:ParanormalForm": {
     "NAME": "鬼哭神嚎",
-    "DESCRIPTION": "消耗 hexamod:阴世 牌时， NL 其 *阴世 效果额外触发一次。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 消耗 hexamod:阴世 牌时， NL 其 *阴世 效果额外触发一次。"
+    "DESCRIPTION": "消耗 hexamod:阴世 牌时， NL *阴世 效果额外触发一次。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 消耗 hexamod:阴世 牌时， NL *阴世 效果额外触发一次。"
   },
   "hexamod:UnleashSpirits": {
     "NAME": "释魂",
@@ -195,7 +195,7 @@
   },
   "hexamod:BurningTouch": {
     "NAME": "灼烧之触",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 若目标已有 hexamod:灼魂 ， NL 再给予一次。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 若目标已被 hexamod:灼魂 ， NL 再给予一次。"
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
@@ -225,7 +225,7 @@
   },
   "hexamod:ThermalTransfer": {
     "NAME": "热传递",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 hexamod:灼魂 ， NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标被 hexamod:灼魂 ， NL 获得 !B! 点 格挡 。"
   },
   "hexamod:HeatCrush": {
     "NAME": "高热撞击",
@@ -233,8 +233,8 @@
   },
   "hexamod:HeatShield": {
     "NAME": "高热护盾",
-    "DESCRIPTION": "获得目标 hexamod:灼魂 点 格挡 ， NL 延期其 *灼魂 引爆一回合。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得目标 hexamod:灼魂 点 格挡 ， NL 延期其 *灼魂 引爆一回合。",
+    "DESCRIPTION": "获得目标 hexamod:灼魂 点 格挡 ， NL 延慢其 *灼魂 引爆一回合。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得目标 hexamod:灼魂 点 格挡 ， NL 延慢其 *灼魂 引爆一回合。",
     "EXTENDED_DESCRIPTION": [
     " NL （获得 !B! 点)"
     ]
@@ -406,8 +406,8 @@
   },
   "hexamod:EtherStep": {
     "NAME": "太虚之跃",
-    "DESCRIPTION": "虚无 。 NL 选择 消耗 一张牌。 NL 抽 !M! 张牌。 NL hexamod:阴世 ： NL 造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 选择 消耗 一张牌。 NL 抽 !M! 张牌。 NL hexamod:阴世 ： NL 造成 !D! 点伤害。"
+    "DESCRIPTION": "虚无 。 NL 选择 消耗 一张手牌。 NL 抽 !M! 张牌。 NL hexamod:阴世 ： NL 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 选择 消耗 一张手牌。 NL 抽 !M! 张牌。 NL hexamod:阴世 ： NL 造成 !D! 点伤害。"
   },
   "hexamod:BustlingGhosts": {
     "NAME": "Bustling Ghosts",

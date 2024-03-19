@@ -43,7 +43,7 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
         this.owner = owner;
         this.amount = amount;
         amount2 = 3;
-        if (AbstractDungeon.player.hasRelic(IceCube.ID)) amount2 = 4;
+//        if (AbstractDungeon.player.hasRelic(IceCube.ID)) amount2 = 4;
         this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
 
