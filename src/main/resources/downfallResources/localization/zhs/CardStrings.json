@@ -1,34 +1,34 @@
 {
-  "downfall:SummonMushrooms": {
-    "NAME": "真菌环绕",
-    "DESCRIPTION": "击杀所有蘑菇。 NL 回复其剩余血量点生命。 NL 召唤两个蘑菇。"
-  },
   "downfall:Aged": {
     "NAME": "岁月",
-    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 回合结束时，将一张 *虚空 加入抽牌堆顶部。"
+    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 回合结束时， NL 将 *虚空 加入抽牌堆顶。"
+  },
+  "downfall:BossMaintenance": {
+    "NAME": "维护",
+    "DESCRIPTION": "*打击 额外造成 !M! 点伤害。 NL 获得 !B! 点 敏捷 。 NL 本场战斗耗能加1。"
   },
   "downfall:Bewildered": {
     "NAME": "困惑",
-    "DESCRIPTION": "本牌在手时，打出其他牌后 sneckomod:混淆 其他手牌并丢弃本牌。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 不能被打出 。 抽到时， NL sneckomod:混淆 其他手牌并自 消耗 。"
+  },
+  "downfall:Haunted": {
+    "NAME": "闹鬼",
+    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 抽到时， NL 将左侧手牌附加 虚无 。"
   },
   "downfall:Icky": {
     "NAME": "黏液缠身",
     "DESCRIPTION": "获得一张 *黏液 。 NL 消耗 。"
   },
-  "downfall:Haunted": {
-    "NAME": "闹鬼",
-    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 抽到时，将你已有的手牌附加 虚无 。"
-  },
   "downfall:Malfunctioning": {
     "NAME": "纰漏",
-    "DESCRIPTION": "回合结束时，将所有手牌变为随机 状态牌 。 NL 消耗 。"
+    "DESCRIPTION": "回合结束时若本牌在手， NL 将手牌全变为随机状态。 NL 消耗 。"
   },
   "downfall:Scatterbrained": {
     "NAME": "漫不经心",
-    "DESCRIPTION": "不能被打出 。 NL 你的回合中抽到时，将本牌的 gremlin:回响 充满手牌。"
+    "DESCRIPTION": "回合结束时若本牌在手， NL 获得本牌一张复制品。"
   },
-  "downfall:BossMaintenance": {
-    "NAME": "维护",
-    "DESCRIPTION": "*打击 额外造成 !M! 点伤害。 NL 获得 !B! 点 敏捷 。 NL 本场战斗耗能加1。"
+  "downfall:SummonMushrooms": {
+    "NAME": "真菌环绕",
+    "DESCRIPTION": "击杀所有蘑菇， NL 回复其剩余血量点生命。 NL 召唤两个蘑菇。"
   }
 }

@@ -8,9 +8,9 @@ import theHexaghost.powers.FuturePower;
 
 public class GhostOfSpireFuture extends AbstractHexaCard {
     public final static String ID = makeID("GhostOfSpireFuture");
-    //speedrunning
+    //speedrunning (old name) into shadow
     public GhostOfSpireFuture() {
-        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         magicNumber = baseMagicNumber= 1;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "GhostOfSpireFuture.png");
@@ -28,7 +28,8 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeBaseCost(0);
+//            upgradeMagicNumber(1);
 //            isInnate = true;
 //            rawDescription = UPGRADE_DESCRIPTION;
 //            initializeDescription();

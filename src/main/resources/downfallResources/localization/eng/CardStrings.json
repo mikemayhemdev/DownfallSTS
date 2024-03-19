@@ -21,7 +21,7 @@
   },
   "downfall:Scatterbrained": {
     "NAME": "Scatterbrained",
-    "DESCRIPTION": "Unplayable. NL When drawn, if it is your turn, fill your hand with gremlin:Echoes of this card."
+    "DESCRIPTION": "At the end of your turn, if this is in your hand, gain a copy of it."
   },
   "downfall:SummonMushrooms": {
     "NAME": "Fungus Among Us",

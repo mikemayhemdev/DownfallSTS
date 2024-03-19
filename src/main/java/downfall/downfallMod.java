@@ -162,7 +162,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean choosingTransformCard = false;
     public static boolean overrideBossDifficulty = false;
 
-    public static boolean playedBossCardThisTurn = false;
+    public static boolean playedBossCardThisTurn = false; // TODO: remove this and fix related code (abs expansion card)
 
     public static boolean replaceMenuColor = true;
     public static boolean tempAscensionHack = false;

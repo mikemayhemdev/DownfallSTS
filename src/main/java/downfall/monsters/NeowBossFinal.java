@@ -122,7 +122,7 @@ public class NeowBossFinal extends AbstractMonster {
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Aged(), 1, true, false, false, (float) Settings.WIDTH * 0.18F, (float) Settings.HEIGHT / 2.0F));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Bewildered(), 1, true, false, false, (float) Settings.WIDTH * 0.34F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Sapped(), 1, true, false, false, (float) Settings.WIDTH * 0.5F, (float) Settings.HEIGHT / 2.0F));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Scatterbrained(), 1, true, false, false, (float) Settings.WIDTH * 0.5F, (float) Settings.HEIGHT / 2.0F));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Icky(), 1, true, false, false, (float) Settings.WIDTH * 0.66F, (float) Settings.HEIGHT / 2.0F));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Malfunctioning(), 1, true, false, false, (float) Settings.WIDTH * 0.82F, (float) Settings.HEIGHT / 2.0F));
 
