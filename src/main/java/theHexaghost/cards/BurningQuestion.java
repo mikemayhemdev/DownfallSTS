@@ -53,8 +53,8 @@ public class BurningQuestion extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+//            rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
             upgradeMagicNumber(1);
         }
     }

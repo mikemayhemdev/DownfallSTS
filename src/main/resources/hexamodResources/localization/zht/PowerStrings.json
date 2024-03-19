@@ -169,11 +169,11 @@
     ]
   },
   "hexamod:SealPostCombatPower": {
-    "NAME": "戰後容器",
+    "NAME": "戰後封印",
     "DESCRIPTIONS": [
       "本場戰鬥結束時，額外獲得 #b",
-      " 張 #y容器 牌。",
-      " 張 #y容器 牌。"
+      " 張 #y封印 牌。",
+      " 張 #y封印 牌。"
     ]
   },
   "hexamod:TimeStopPower": {

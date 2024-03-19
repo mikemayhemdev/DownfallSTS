@@ -19,7 +19,7 @@ public class JarOfFuel extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("AncientSpiritShield.png"));
 
     public JarOfFuel() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
     //Olexa's Shield
     @Override

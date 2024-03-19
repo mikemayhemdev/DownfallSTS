@@ -22,7 +22,7 @@
       "retracted",
       "retracting"
     ],
-    "DESCRIPTION": "Move to the previous Ghostflame and gain #b1 temporary #yStrength and #yDexterity [REMOVE_SPACE]. Moving onto a Ghostflame #yExtinguishes it."
+    "DESCRIPTION": "Move to the previous Ghostflame. Moving onto a Ghostflame #yExtinguishes it."
   },
   {
     "PROPER_NAME": "Intensity",
@@ -75,7 +75,7 @@
     "NAMES": [
       "crushing"
     ],
-    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #ySkills are played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], deal #b3 damage to a random enemy twice.",
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #ySkills are played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], deal #b6 damage to a random enemy.",
     "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   },
   {
@@ -91,7 +91,7 @@
     "NAMES": [
       "searing"
     ],
-    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #yAttacks are played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], apply #b4 #ySoulburn to a random enemy.",
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #yAttacks are played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], apply #b6 #ySoulburn to a random enemy, modified twicce by #yIntensity [REMOVE_SPACE].",
     "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   }
 ]

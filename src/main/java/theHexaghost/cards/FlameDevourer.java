@@ -1,11 +1,9 @@
 package theHexaghost.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
-import theHexaghost.HexaMod;
 import theHexaghost.actions.RetractAction;
 
 public class FlameDevourer extends AbstractHexaCard{
@@ -20,16 +18,13 @@ public class FlameDevourer extends AbstractHexaCard{
 
     @Override
     public void applyPowers() {
-        System.out.println("it's called");
         if((GhostflameHelper.getPreviousGhostFlame()).charged){
-            System.out.println("charged charged charged charged charged charged charged charged charged charged ");
             int real_base_block = this.baseBlock;
             this.baseBlock += this.magicNumber;
             super.applyPowers();
             this.baseBlock = real_base_block;
             this.isBlockModified = this.block != this.baseBlock;
         }else{
-            System.out.println("not charged not charged not charged not charged not charged not charged not charged not charged not charged not charged not charged not charged ");
             super.applyPowers();
         }
     }
@@ -57,7 +52,6 @@ public class FlameDevourer extends AbstractHexaCard{
             upgradeName();
             upgradeBlock(2);
             upgradeMagicNumber(2);
-//            upgradeDamage(2);
         }
     }
 }

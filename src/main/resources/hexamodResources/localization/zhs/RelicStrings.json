@@ -7,10 +7,10 @@
     ]
   },
   "hexamod:TheBrokenSeal": {
-    "NAME": "破损容器",
+    "NAME": "挣破的封印",
     "FLAVOR": "未阻，无限，不灭的力量。",
     "DESCRIPTIONS": [
-      "拾起时，获得 #b10 点最大生命并回复所有生命。战斗开始时，获得 #b2 点 #y力量 、 #y敏捷 与 #yhexamod:热烈 。无法再获得 #y破损容器 。"
+      "拾起时，获得 #b10 点最大生命并回复所有生命。 NL 战斗开始时，获得 #b2 点 #y力量 、 #y敏捷 与 #yhexamod:热烈 。 NL 无法再获得 #y破损容器 。"
     ]
   },
   "hexamod:UnbrokenSoul": {
@@ -18,14 +18,14 @@
     "FLAVOR": "看看我们能不能做得... 更好。",
     "DESCRIPTIONS": [
       "替换 ",
-      " 。 NL 每回合首次 #y点燃 时，获得 [E] 。"
+      " 。 NL 每回合首次 #y点燃 时，获得 #b4 点 #y格挡 并抽 #b1 张牌。"
     ]
   },
   "hexamod:IceCube": {
     "NAME": "幽灵雪花",
     "FLAVOR": "我感觉……好冷。",
     "DESCRIPTIONS": [
-      "回合开始时获得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才引爆，失去 #b1 点 #yhexamod:热烈 。"
+      "回合开始时获得 [E] 。战斗开始时失去 #b1 点 #yhexamod:热烈 ， 且从无法再从 #y狱焱鬼火 获得 #y热烈 。"
     ]
   },
   "hexamod:SoulConsumer": {
@@ -67,7 +67,7 @@
     "NAME": "谜之盾",
     "FLAVOR": "按需防护。",
     "DESCRIPTIONS": [
-      "将 #yhexamod:高热 #y鬼火 与首枚 #yhexamod:灼热 #y鬼火 交换位置。"
+      "打出 #y能力 牌时，可积累 #y灼热鬼火 与 #y碾压鬼火 的进度。"
     ]
   },
   "hexamod:BolsterEngine": {
@@ -81,7 +81,7 @@
     "NAME": "红蜡烛",
     "FLAVOR": "烈焰炙烤...",
     "DESCRIPTIONS": [
-      "每当你造成未被 #y格挡 的 #y攻击 伤害，给予 #b2 层 #yhexamod:灼魂 。"
+      "每当你给予 #y灼魂 时，额外给予 #b3 层。"
     ]
   },
   "hexamod:Sixitude": {

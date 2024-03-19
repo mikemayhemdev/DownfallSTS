@@ -2,6 +2,7 @@ package theHexaghost.cards.seals;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
@@ -13,6 +14,7 @@ public class SixthSeal extends AbstractSealCard {
     public SixthSeal() {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 0;
+        baseBurn = burn = 13;
         HexaMod.loadJokeCardImage(this, "SixthSeal.png");
     }
 
@@ -32,13 +34,18 @@ public class SixthSeal extends AbstractSealCard {
         count();
         int real_base_magic = baseMagicNumber;
         baseMagicNumber = magicNumber = count_cards / 13;
-        if( magicNumber <= 1){
-            this.rawDescription = this.EXTENDED_DESCRIPTION[0] + magicNumber + this.EXTENDED_DESCRIPTION[1] + DESCRIPTION;
+        if(Settings.language != Settings.GameLanguage.ZHS){
+            if( magicNumber <= 1){
+                this.rawDescription = this.EXTENDED_DESCRIPTION[0] + magicNumber + this.EXTENDED_DESCRIPTION[1] + DESCRIPTION;
+            }else{
+                this.rawDescription = this.EXTENDED_DESCRIPTION[0] + magicNumber + this.EXTENDED_DESCRIPTION[2] + DESCRIPTION;
+            }
         }else{
-            this.rawDescription = this.EXTENDED_DESCRIPTION[0] + magicNumber + this.EXTENDED_DESCRIPTION[2] + DESCRIPTION;
+            this.rawDescription = DESCRIPTION + this.EXTENDED_DESCRIPTION[0] + magicNumber + this.EXTENDED_DESCRIPTION[1] ;
         }
+
         this.initializeDescription();
-        super.applyPowers();
+//        super.applyPowers();
         baseMagicNumber = real_base_magic;
     }
 
@@ -54,6 +61,21 @@ public class SixthSeal extends AbstractSealCard {
 //            initializeDescription();
         }
     }
+
+    @Override //zhs card text thing
+    public void initializeDescriptionCN() {
+        super.initializeDescriptionCN();
+        if(Settings.language == Settings.GameLanguage.ZHS && this.description!=null && this.description.size()>=1 ) {
+            for(int i = 0; i < this.description.size(); i++){
+                if( this.description.get(i).text.equals("，") ){
+                    StringBuilder sb = new StringBuilder();
+                    this.description.get(i-1).text = sb.append(this.description.get(i-1).text).append("，").toString();
+                    this.description.remove(i);
+                }
+            }
+        }
+    }
+
 
 
 }

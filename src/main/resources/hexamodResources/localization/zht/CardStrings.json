@@ -297,34 +297,34 @@
     "UPGRADE_DESCRIPTION": "下次 hexamod:點燃 !M! 枚鬼火時，額外獲得一回合。"
   },
   "hexamod:FirstSeal": {
-    "NAME": "第一容器",
-    "DESCRIPTION": "虛無 hexamod:容器 。 NL 戰鬥結束時， NL 回復 !M! 點生命。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 戰鬥結束時， NL 回復 !M! 點生命。"
+    "NAME": "第一封印",
+    "DESCRIPTION": "虛無 hexamod:封印 。 NL 戰鬥結束時， NL 回復 !M! 點生命。",
+    "UPGRADE_DESCRIPTION": "hexamod:封印 。 NL 戰鬥結束時， NL 回復 !M! 點生命。"
   },
   "hexamod:SecondSeal": {
-    "NAME": "第二容器",
-    "DESCRIPTION": "虛無 hexamod:容器 。 NL 戰鬥結束時， NL 額外獲得 !M! 金幣 。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 戰鬥結束時， NL 額外獲得 !M! 金幣 。"
+    "NAME": "第二封印",
+    "DESCRIPTION": "虛無 hexamod:封印 。 NL 戰鬥結束時， NL 額外獲得 !M! 金幣 。",
+    "UPGRADE_DESCRIPTION": "hexamod:封印 。 NL 戰鬥結束時， NL 額外獲得 !M! 金幣 。"
   },
   "hexamod:ThirdSeal": {
-    "NAME": "第三容器",
-    "DESCRIPTION": "虛無 hexamod:容器 。 NL 戰鬥結束時， NL 額外獲得一次卡牌獎勵。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 戰鬥結束時， NL 額外獲得一次卡牌獎勵。"
+    "NAME": "第三封印",
+    "DESCRIPTION": "虛無 hexamod:封印 。 NL 戰鬥結束時， NL 額外獲得一次卡牌獎勵。",
+    "UPGRADE_DESCRIPTION": "hexamod:封印 。 NL 戰鬥結束時， NL 額外獲得一次卡牌獎勵。"
   },
   "hexamod:FourthSeal": {
-    "NAME": "第四容器",
-    "DESCRIPTION": "虛無 hexamod:容器 。 NL 戰鬥結束時， NL 額外獲得一瓶藥水。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 戰鬥結束時， NL 額外獲得一瓶藥水。"
+    "NAME": "第四封印",
+    "DESCRIPTION": "虛無 hexamod:封印 。 NL 戰鬥結束時， NL 額外獲得一瓶藥水。",
+    "UPGRADE_DESCRIPTION": "hexamod:封印 。 NL 戰鬥結束時， NL 額外獲得一瓶藥水。"
   },
   "hexamod:FifthSeal": {
-    "NAME": "第六容器",
-    "DESCRIPTION": "虛無 hexamod:容器 。 NL 戰鬥結束時， NL 額外獲得一次 *容器 獎勵。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 戰鬥結束時， NL 額外獲得一次 *容器 獎勵。"
+    "NAME": "第六封印",
+    "DESCRIPTION": "虛無 hexamod:封印 。 NL 戰鬥結束時， NL 額外獲得一次 *封印 獎勵。",
+    "UPGRADE_DESCRIPTION": "hexamod:封印 。 NL 戰鬥結束時， NL 額外獲得一次 *封印 獎勵。"
   },
   "hexamod:SixthSeal": {
-    "NAME": "第五容器",
-    "DESCRIPTION": "虛無 hexamod:容器 。 NL 戰鬥結束時， NL 隨機 升級 牌組中一張牌。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 戰鬥結束時， NL 隨機 升級 牌組中一張牌。"
+    "NAME": "第五封印",
+    "DESCRIPTION": "虛無 hexamod:封印 。 NL 戰鬥結束時， NL 隨機 升級 牌組中一張牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:封印 。 NL 戰鬥結束時， NL 隨機 升級 牌組中一張牌。"
   },
   "hexamod:SoulSteal": {
     "NAME": "活體炸彈",

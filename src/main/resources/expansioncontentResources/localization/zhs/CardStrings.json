@@ -83,6 +83,13 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "解毒剂",
-    "DESCRIPTION": "失去所有 中毒 。"
+    "DESCRIPTION": "失去 !M! 层 中毒 。"
+  },
+  "expansioncontent:BloodySacrifice": {
+    "NAME": "染血牺牲",
+    "DESCRIPTION": "虚无 。 NL 失去 !M! % 最大生命点生命。 NL 获得1层 仪式 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION":[
+      " NL (失去 {amount} 点)"
+    ]
   }
 }

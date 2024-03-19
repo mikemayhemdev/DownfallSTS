@@ -20,8 +20,7 @@
   },
   "hexamod:BacktrackSmack": {
     "NAME": "Backtrack Smack",
-    "DESCRIPTION": "Deal !D! damage twice. NL hexamod:Retract.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL hexamod:Retract."
+    "DESCRIPTION": "Deal !D! damage twice. NL hexamod:Retract."
   },
   "hexamod:BurningQuestion": {
     "NAME": "Burning Question",
@@ -64,12 +63,12 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. NL Add !M! random hexamod:Afterlife card into your hand. NL hexamod:Afterlife: Add !burny! to your drawpile too."
+    "DESCRIPTION": "Ethereal. NL Add !M! random hexamod:Afterlife card into your hand. NL hexamod:Afterlife: Add 1 to your drawpile too."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
     "DESCRIPTION": "Exhausted cards will contribute to Ghostflame progression accordingly.",
-    "UPGRADE_DESCRIPTION": "Draw a card. NL Exhausting a card will contribute to the progression of Ghostflames accordingly."
+    "UPGRADE_DESCRIPTION": ""
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
@@ -116,7 +115,7 @@
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
-    "DESCRIPTION": "Retain. NL Apply !burny! hexamod:Soulburn. NL hexamod:Ignite the *Inferno *Ghostflames. NL Exhaust.",
+    "DESCRIPTION": "Retain. NL Apply !burny! hexamod:Soulburn. NL hexamod:Ignite the *Inferno *Ghostflame. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Apply !burny! hexamod:Soulburn. NL hexamod:Ignite the *Inferno *Ghostflames. NL Exhaust."
   },
   "hexamod:GhostLash": {
@@ -242,7 +241,7 @@
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
     "DESCRIPTION": "Deal !D! damage and apply !M! Weak X times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Weak X times."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Weak X+1 times."
   },
   "hexamod:RecurringNightmare": {
     "NAME": "Nightmare Vision",
@@ -404,8 +403,7 @@
   },
   "hexamod:LingeringShades": {
     "NAME": "Lingering Shades",
-    "DESCRIPTION": "hexamod:Retract. NL Apply !burny! hexamod:Soulburn. Return all Ethereal cards in your discard pile to your hand.",
-    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
+    "DESCRIPTION": "hexamod:Retract. NL Apply !burny! hexamod:Soulburn. Return all Ethereal cards in your discard pile to your hand."
   },
   "hexamod:EtherStep": {
     "NAME": "Ether Step",
@@ -415,7 +413,8 @@
   "hexamod:BustlingGhosts": {
     "NAME": "Bustling Ghosts",
     "DESCRIPTION": "Play all Ethereal cards in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage, deal 2 additional damage everytime you hexamod:Retract this combat."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, deal 2 additional damage everytime you hexamod:Retract this combat.",
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used not used not used "
   },
   "hexamod:OpposingAction": {
     "NAME": "Opposing Action",

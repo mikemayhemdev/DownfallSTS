@@ -7,7 +7,7 @@
     ]
   },
   "hexamod:TheBrokenSeal": {
-    "NAME": "破損容器",
+    "NAME": "掙破的封印",
     "FLAVOR": "未阻，無限，不滅的力量。",
     "DESCRIPTIONS": [
       "拾起時，獲得 #b10 點最大生命並回復所有生命。戰鬥開始時獲得 #b2 點 #y力量 、 #y敏捷 與 #yhexamod:熱烈 。無法再獲得 #y破損容器 。"

@@ -26,7 +26,7 @@ public class EtherealExpedition extends AbstractHexaCard {
         tags.add(HexaMod.AFTERLIFE);
         exhaust = false;
         baseMagicNumber = magicNumber = 1;
-        baseBurn = burn = 1;
+//        baseBurn = burn = 1;
         HexaMod.loadJokeCardImage(this, "EtherealExpedition.png");
     }
 

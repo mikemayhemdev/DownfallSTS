@@ -16,7 +16,7 @@ public class RainOfEmbers extends AbstractHexaCard {
 
     public RainOfEmbers() {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 5;
 //        baseBurn = burn = 6;
         baseMagicNumber = magicNumber = 1;
         HexaMod.loadJokeCardImage(this, "RainOfEmbers.png");
@@ -26,15 +26,21 @@ public class RainOfEmbers extends AbstractHexaCard {
         if (energyOnUse < EnergyPanel.totalCount) {
             energyOnUse = EnergyPanel.totalCount;
         }
-
-        EmbersAction r = new EmbersAction(0, p, m, damage, damageTypeForTurn, 0, 1);
-        atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
+        if(upgraded){
+            EmbersAction r = new EmbersAction(1, p, m, damage, damageTypeForTurn, 0, 1);
+            atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
+        }else {
+            EmbersAction r = new EmbersAction(0, p, m, damage, damageTypeForTurn, 0, 1);
+            atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
+        }
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+//            upgradeDamage(3);
 //            upgradeBurn(2);
         }
     }
