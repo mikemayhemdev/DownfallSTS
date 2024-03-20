@@ -60,7 +60,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
     @Override
     public void onCharge() {
 
-        atb(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
+        atb(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 0.8F));
         int x = damage, amountOfIgnitedGhostflames = 0;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
@@ -74,8 +74,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
                 amountOfIgnitedGhostflames++;
             }
         }
-
-
 
         /*
         if (GhostflameHelper.activeGhostFlame == this){

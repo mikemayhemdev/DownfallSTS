@@ -94,7 +94,7 @@
   "hexamod:StopFromAdvancingPower": {
     "NAME": "此刻",
     "DESCRIPTIONS": [
-      "你的回合结束时，不会自动跳至下枚鬼火。"
+      "你的回合结束时， #y熄灭 当前鬼火。"
     ]
   },
   "hexamod:GhostFlameBarrierPower": {

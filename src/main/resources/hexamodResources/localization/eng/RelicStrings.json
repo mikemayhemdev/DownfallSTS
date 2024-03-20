@@ -29,10 +29,10 @@
     ]
   },
   "hexamod:SoulConsumer": {
-    "NAME": "Thermal Stone",
-    "FLAVOR": "A fire would liven this thing up!",
+    "NAME": "Soul Stone",
+    "FLAVOR": "A soul would liven this thing up!",
     "DESCRIPTIONS": [
-      "If #yhexamod:Soulburn detonates, heal #b4 HP at the end of combat."
+      "Whenever you play an #Afterlife card, deal #b2 damage to a ALL enemies."
     ]
   },
   "hexamod:RecyclingMachine": {

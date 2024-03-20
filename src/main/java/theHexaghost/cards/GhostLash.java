@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theHexaghost.HexaMod;
 
 public class GhostLash extends AbstractHexaCard {
@@ -14,30 +13,30 @@ public class GhostLash extends AbstractHexaCard {
 
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 2;
-    private static int afterlife_inhand = 0;
+    private static int ethereal_inhand = 0;
     private boolean can_show = false;
 
     public GhostLash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 6;
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "GhostLash.png");
     }
 
     public static int calculate_afterlifes(){
-        if(!AbstractDungeon.overlayMenu.endTurnButton.enabled && afterlife_inhand != 0){
-            return afterlife_inhand ;
+        if(!AbstractDungeon.overlayMenu.endTurnButton.enabled && ethereal_inhand != 0){    // this is to make sure it counts correct number of cards when afterlifed
+            return ethereal_inhand;
         }else{
-            afterlife_inhand = 0;
+            ethereal_inhand = 0;
             for(AbstractCard c : AbstractDungeon.player.hand.group){
-                if(c.hasTag(HexaMod.AFTERLIFE)){
-                    afterlife_inhand += 1;
+                if(c.isEthereal){
+                    ethereal_inhand += 1;
                 }
             }
         }
-        return afterlife_inhand ;
+        return ethereal_inhand;
     }
 
     @Override

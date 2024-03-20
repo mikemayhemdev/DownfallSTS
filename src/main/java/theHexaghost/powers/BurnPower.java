@@ -82,9 +82,9 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
 
     public void explode(){
         this.flashWithoutSound();
-        if (AbstractDungeon.player.hasRelic(SoulConsumer.ID)){
-            AbstractDungeon.player.getRelic(SoulConsumer.ID).onTrigger();
-        }
+//        if (AbstractDungeon.player.hasRelic(SoulConsumer.ID)){
+//            AbstractDungeon.player.getRelic(SoulConsumer.ID).onTrigger();
+//        }
         this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
 

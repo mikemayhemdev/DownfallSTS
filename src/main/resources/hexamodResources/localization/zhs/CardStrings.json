@@ -103,7 +103,8 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "鲜焰仪式",
-    "DESCRIPTION": "hexamod:回退 至首枚鬼火， NL 并 hexamod:熄灭 途中所有鬼火， NL 每熄灭一枚， NL 获得 [E] 并抽一张牌 。"
+    "DESCRIPTION": "hexamod:回退 至首枚鬼火， NL 并 hexamod:熄灭 途中所有鬼火， NL 每熄灭一枚， NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "hexamod:回退 至首枚鬼火， NL 并 hexamod:熄灭 途中所有鬼火， NL 每熄灭一枚， NL 获得 [E] 并抽一张牌。"
   },
   "hexamod:StepThrough": {
     "NAME": "焰影迷步",
@@ -122,8 +123,8 @@
     "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL hexamod:阴世 ： NL 获得 !B! 点 格挡 。"
   },
   "hexamod:GhostLash": {
-    "NAME": "幽灵鞭击",
-    "DESCRIPTION": "虚无 。 NL hexamod:阴世 ： NL 造成 !D! 点伤害， NL 手中每有一张 *阴世 牌， NL 额外造成 !M! 点。"
+    "NAME": "幽灵甩击",
+    "DESCRIPTION": "虚无 。 NL hexamod:阴世 ： NL 造成 !D! 点伤害， NL 手中每有一张 虚无 牌， NL 额外造成 !M! 点。"
   },
   "hexamod:GhostShield": {
     "NAME": "幽灵护盾",
@@ -154,7 +155,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "诡异探险",
-    "DESCRIPTION": "虚无 。 NL 随机获得一张 hexamod:阴世 牌。 NL hexamod:阴世 ： NL 随机洗入抽牌堆一张。"
+    "DESCRIPTION": "虚无 。 NL 随机获得一张 hexamod:阴世 牌。 NL hexamod:阴世 ： NL 随机洗入抽牌堆一张 *阴世 牌。"
   },
   "hexamod:PhantomCloak": {
     "NAME": "幽灵披风",

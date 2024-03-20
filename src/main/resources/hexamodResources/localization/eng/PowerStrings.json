@@ -11,9 +11,9 @@
   "hexamod:ApocalypticArmorPower": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "The next time you #yIgnite the Inferno Ghostflame and all #b",
+      "The next time you #yIgnite the #yInferno #yGhostflame and all #b",
       " Ghostflames are #yIgnited [REMOVE_SPACE], gain an additional turn.",
-      "The next time you #yIgnite the Inferno Ghostflame and at least #b"
+      "The next time you #yIgnite the #yInferno #yGhostflame and at least #b"
     ]
   },
   "hexamod:ApplyBurnAtTurnStartOncePower": {
@@ -100,7 +100,7 @@
   "hexamod:StopFromAdvancingPower": {
     "NAME": "Here and Now",
     "DESCRIPTIONS": [
-      "You no longer #yAdvance at the end of your turn."
+      "At the end of your turn, #yExtinguish the current Ghostflame."
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
