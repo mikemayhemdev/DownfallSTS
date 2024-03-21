@@ -9,7 +9,7 @@
   },
   "downfall:Bewildered": {
     "NAME": "困惑",
-    "DESCRIPTION": "虚无 。 NL 不能被打出 。 抽到时， NL sneckomod:混淆 其他手牌并自 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 抽到时， NL sneckomod:混淆 其他手牌并自 消耗 。"
   },
   "downfall:Haunted": {
     "NAME": "闹鬼",

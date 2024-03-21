@@ -300,8 +300,8 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Bright Ritual",
-    "DESCRIPTION": "hexamod:Retract to the first Ghostflame, hexamod:Extinguish all along the way, gain [E] for each hexamod:Extinguished one.",
-    "UPGRADE_DESCRIPTION": "hexamod:Retract to the first Ghostflame, hexamod:Extinguish all along the way, gain [E] and draw 1 card for each hexamod:Extinguished one."
+    "DESCRIPTION": "hexamod:Retract to the first Ghostflame, hexamod:Extinguish all along the way, gain [E] for each hexamod:Extinguished one. Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Retract to the first Ghostflame, hexamod:Extinguish all along the way, gain [E] for each hexamod:Extinguished one."
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",

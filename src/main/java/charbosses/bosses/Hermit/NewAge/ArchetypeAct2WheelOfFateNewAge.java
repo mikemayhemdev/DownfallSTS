@@ -51,11 +51,11 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
     private void reshuffle() {
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
 
+        addCardToDeck(new EnDefendHermit(), false);
         addCardToDeck(new EnStrikeHermit(), true);
-        addCardToDeck(new EnStrikeHermit(), false);
         addCardToDeck(new EnDefendHermit(), false);
 
-        addCardToDeck(new EnDesperado(), extraUpgrades);
+        addCardToDeck(new EnDesperado(), false);
         addCardToDeck(new EnStrikeHermit(), true);
         addCardToDeck(new EnFlashPowder(), false);
 
@@ -115,9 +115,9 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
             AbstractCard target = getNextCard();
             cardsList.add(target);
 
-            if (target.cardID.equals(EnNecronomicurse.ID)) {
-                AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
-            }
+//            if (target.cardID.equals(EnNecronomicurse.ID)) {
+//                AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
+//            }
         }
         if (AbstractCharBoss.boss instanceof CharBossHermit) {
             CharBossHermit.previewCard = mockDeck.get(0).makeStatEquivalentCopy();

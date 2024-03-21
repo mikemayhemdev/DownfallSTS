@@ -103,8 +103,8 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "鲜焰仪式",
-    "DESCRIPTION": "hexamod:回退 至首枚鬼火， NL 并 hexamod:熄灭 途中所有鬼火， NL 每熄灭一枚， NL 获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "hexamod:回退 至首枚鬼火， NL 并 hexamod:熄灭 途中所有鬼火， NL 每熄灭一枚， NL 获得 [E] 并抽一张牌。"
+    "DESCRIPTION": "hexamod:回退 至首枚鬼火， NL 并 hexamod:熄灭 途中所有鬼火， NL 每熄灭一枚， NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "hexamod:回退 至首枚鬼火， NL 并 hexamod:熄灭 途中所有鬼火， NL 每熄灭一枚， NL 获得 [E] 。"
   },
   "hexamod:StepThrough": {
     "NAME": "焰影迷步",
@@ -331,7 +331,7 @@
     "DESCRIPTION": "虚无 hexamod:封印 。 NL 战斗结束时， NL 牌组每有 !burny! 张 未升级牌， NL 随机 升级 一张。",
     "UPGRADE_DESCRIPTION": "虚无 hexamod:封印 。 NL 战斗结束时， NL 牌组每有 !burny! 张 未升级牌， NL 随机 升级 一张。",
     "EXTENDED_DESCRIPTION": [
-      "NL ( 升级 ",
+      " NL ( 升级 ",
       " 张)",
       " 张)"
     ]

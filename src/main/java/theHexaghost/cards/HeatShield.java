@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -56,7 +57,11 @@ public class HeatShield extends AbstractHexaCard {
         super.calculateCardDamage(mo);
         baseBlock = real_baseBlock;
         this.isBlockModified = block != baseBlock;
-        this.rawDescription = EXTENDED_DESCRIPTION[0] + DESCRIPTION;
+        if(Settings.language == Settings.GameLanguage.ZHS){
+            this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];
+        }else{
+            this.rawDescription = EXTENDED_DESCRIPTION[0] + DESCRIPTION;
+        }
         initializeDescription();
     }
 

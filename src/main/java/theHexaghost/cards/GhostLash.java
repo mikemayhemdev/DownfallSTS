@@ -26,7 +26,7 @@ public class GhostLash extends AbstractHexaCard {
     }
 
     public static int calculate_afterlifes(){
-        if(!AbstractDungeon.overlayMenu.endTurnButton.enabled && ethereal_inhand != 0){    // this is to make sure it counts correct number of cards when afterlifed
+        if(!AbstractDungeon.overlayMenu.endTurnButton.enabled && ethereal_inhand != 0){  // this is to make sure it counts correct number of cards when afterlifed
             return ethereal_inhand;
         }else{
             ethereal_inhand = 0;
@@ -95,7 +95,10 @@ public class GhostLash extends AbstractHexaCard {
     public void update() {
         super.update();
         if(can_show){
-            applyPowers(); // to make the card show correct damage number when you draw it the first time
+            applyPowers(); // to make the card show correct damage number when you draw it the first time, without this somehow when you draw the card for the first
+                            // time each combat, it will only show the damage number based on cards already drawn, so if you draw another related card the damage won't
+                            // be updated until you drag the card which calls applypowers(), I dont like this so added this update that always call applypowers()
+                            // and added the condition variable so that it's only updated when the card is actually in your hand like how cards in vanilla behave
         }
     }
 }

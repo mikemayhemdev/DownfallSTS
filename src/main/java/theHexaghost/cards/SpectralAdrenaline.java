@@ -19,6 +19,7 @@ public class SpectralAdrenaline extends AbstractHexaCard {
 
     public SpectralAdrenaline() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        this.exhaust = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "SpectralAdrenaline.png");
@@ -34,9 +35,9 @@ public class SpectralAdrenaline extends AbstractHexaCard {
                     if(GhostflameHelper.activeGhostFlame.charged){
                         atb(new ExtinguishAction(GhostflameHelper.activeGhostFlame));
                         atb(new GainEnergyAction(1));
-                        if (upgraded) {
-                            atb(new DrawCardAction(1));
-                        }
+//                        if (upgraded) {
+//                            atb(new DrawCardAction(1));
+//                        }
                     }
                 }else {
                     int count = 0;
@@ -52,9 +53,9 @@ public class SpectralAdrenaline extends AbstractHexaCard {
 
                     while (count > 0) {
                         atb(new GainEnergyAction(1));
-                        if (upgraded) {
-                            atb(new DrawCardAction(1));
-                        }
+//                        if (upgraded) {
+//                            atb(new DrawCardAction(1));
+//                        }
                         count -= 1;
                     }
                 }
@@ -65,6 +66,7 @@ public class SpectralAdrenaline extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.exhaust = false;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

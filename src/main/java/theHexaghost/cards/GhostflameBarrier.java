@@ -21,7 +21,7 @@ public class GhostflameBarrier extends AbstractHexaCard {
     private static final int DAMAGE = 10;
 //    private static final int UPG_BLOCK = 4;
 
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 5;
     private static final int UPG_MAGIC = 2;
 
     public GhostflameBarrier() {
