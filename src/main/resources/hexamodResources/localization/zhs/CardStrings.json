@@ -360,7 +360,8 @@
     "EXTENDED_DESCRIPTION": [
       "将当前鬼火替换为 hexamod:高热 鬼火。",
       "将当前鬼火替换为 hexamod:碾压 鬼火。",
-      "将当前鬼火替换为 hexamod:灼热 鬼火。"
+      "将当前鬼火替换为 hexamod:灼热 鬼火。",
+      "不替换。"
     ]
   },
   "hexamod:BurningQuestion": {
@@ -420,7 +421,7 @@
     "DESCRIPTION": "hexamod:回退 。 NL 获得 [E] 。",
     "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 获得 [E] [E] 。"
   },
-  "hexamod:RandomWalk": {
+  "hexamod:SeventhEye": {
     "NAME": "第七感",
     "DESCRIPTION": "检索 抽牌堆一张牌。 NL 随机切换至一枚鬼火。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 检索 抽牌堆一张牌。 NL 随机切换至一枚鬼火。 NL 消耗 。"

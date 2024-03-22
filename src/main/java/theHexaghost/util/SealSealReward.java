@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.relics.FrozenEgg2;
 import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.TextureLoader;
 import theHexaghost.HexaMod;
@@ -57,6 +58,9 @@ public class SealSealReward extends CustomReward {
                     AbstractCard new_seal = dic.get(i);
                     float upgrade_chance = ReflectionHacks.getPrivateStatic(AbstractDungeon.class, "cardUpgradedChance" );
                     if (AbstractDungeon.cardRng.randomBoolean(upgrade_chance) && new_seal.canUpgrade()) {
+                        new_seal.upgrade();
+                    }
+                    if(AbstractDungeon.player.hasRelic(FrozenEgg2.ID)){
                         new_seal.upgrade();
                     }
                     return dic.get(i);

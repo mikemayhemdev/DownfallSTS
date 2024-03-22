@@ -32,8 +32,8 @@ public class SoulConsumer extends CustomRelic {
     }
 
     @Override
-    public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if(c.hasTag(HexaMod.AFTERLIFE)){
+    public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
+        if(targetCard.hasTag(HexaMod.AFTERLIFE)){
             this.addToTop(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(DAMAGE, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
         }
     }

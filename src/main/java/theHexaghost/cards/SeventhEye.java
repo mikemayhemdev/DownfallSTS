@@ -5,11 +5,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class RandomWalk extends AbstractHexaCard {
+public class SeventhEye extends AbstractHexaCard {
 
-    public final static String ID = makeID("RandomWalk");
+    public final static String ID = makeID("SeventhEye");
 
-    public RandomWalk() {
+    public SeventhEye() {
         super(ID, 0, AbstractCard.CardType.SKILL, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.exhaust = true;
     }
