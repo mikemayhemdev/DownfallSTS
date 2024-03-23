@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import guardian.GuardianMod;
@@ -33,8 +34,8 @@ public class HyperBeam_Guardian extends AbstractGuardianCard {
     private static final int COST = 3;
 
     //TUNING CONSTANTS
-    private static final int DAMAGE = 36;
-    private static final int UPGRADE_DAMAGE = 4;
+    private static final int DAMAGE = 30;
+    private static final int UPGRADE_DAMAGE = 5;
     private static final int STRENGTHMULTIPLIER = 4;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
@@ -64,7 +65,6 @@ public class HyperBeam_Guardian extends AbstractGuardianCard {
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("HyperBeam_Guardian.png"));
 
-
     }
 
     @Override
@@ -90,29 +90,20 @@ public class HyperBeam_Guardian extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunnedPower(p), 1));
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunnedPower(p), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p,2), 2));
         super.useGems(p, m);
     }
 
-    public AbstractCard makeCopy() {
-
-        return new HyperBeam_Guardian();
-
-    }
-
     public void upgrade() {
-
         if (!this.upgraded) {
-
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
             upgradeMagicNumber(2);
-
         }
     }
 
     public void updateDescription() {
-
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
                 this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
@@ -121,6 +112,10 @@ public class HyperBeam_Guardian extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
+    }
+
+    public AbstractCard makeCopy() {
+        return new HyperBeam_Guardian();
     }
 }
 

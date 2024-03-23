@@ -64,7 +64,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         addCardToDeck(new EnGoodInstincts(), false);
 
         addCardToDeck(new EnSwiftStrike(), false);
-        addCardToDeck(new EnPanacea(), true);
+        addCardToDeck(new EnPanacea(), false);
         addCardToDeck(new EnShortFuseNecro(), false);
         addCardToDeck(new EnNecronomicurse(), false);
     }

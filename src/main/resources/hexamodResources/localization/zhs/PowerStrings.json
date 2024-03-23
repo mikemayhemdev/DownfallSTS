@@ -176,7 +176,9 @@
   "hexamod:TimeStopPower": {
     "NAME": "末日来临",
     "DESCRIPTIONS": [
-      "你的回合结束时，立刻开始额外的一回合，并保留 #y格挡 与 #y能量 。"
+      "你的回合结束时，额外获得 #b1 回合。",
+      "你的回合结束时，额外获得 #b",
+      " 回合。"
     ]
   },
   "hexamod:VolcanoVisagePower": {

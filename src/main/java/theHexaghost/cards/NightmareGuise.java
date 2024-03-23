@@ -36,7 +36,7 @@ public class NightmareGuise extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(2);
+            upgradeBlock(3);
 //            cardsToPreview.upgrade();
 //            rawDescription = UPGRADE_DESCRIPTION;
 //            initializeDescription();

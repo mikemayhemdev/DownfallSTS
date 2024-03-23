@@ -11,17 +11,12 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
-import theHexaghost.GhostflameHelper;
-import theHexaghost.actions.AdvanceAction;
-import theHexaghost.actions.ExtinguishAction;
-import theHexaghost.powers.ApocalypticArmorPower;
-import theHexaghost.powers.EnhancePower;
 import downfall.util.TextureLoader;
+import theHexaghost.GhostflameHelper;
+import theHexaghost.actions.ExtinguishAction;
+import theHexaghost.powers.EnhancePower;
 import theHexaghost.relics.IceCube;
-
-import java.util.ArrayList;
 
 import static theHexaghost.HexaMod.makeUIPath;
 

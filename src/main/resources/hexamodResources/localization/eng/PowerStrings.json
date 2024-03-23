@@ -185,7 +185,9 @@
   "hexamod:TimeStopPower": {
     "NAME": "Doom's Arrival",
     "DESCRIPTIONS": [
-      "At the end of your turn, immediately start another turn. NL #yEnergy and #yBlock are maintained."
+      "At the end of your turn, immediately start another turn.",
+      "At the end of your turn, immediately start another #b",
+      " turns."
     ]
   },
   "hexamod:VolcanoVisagePower": {

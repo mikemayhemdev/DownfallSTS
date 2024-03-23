@@ -178,7 +178,7 @@
     "NAME": "瞄准伤口",
     "DESCRIPTIONS": [
       "对被 #y虚弱 的目标额外造成 #b",
-      " 点伤害。"
+      " 点攻击伤害。"
     ]
   },
   "Gremlin:Unforgiving": {

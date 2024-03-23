@@ -72,8 +72,8 @@
   },
   "Guardian:VentSteam": {
     "NAME": "Vent Steam",
-    "DESCRIPTION": "Apply !M! Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable."
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to ALL enemies."
   },
   "Guardian:CurlUp": {
     "NAME": "Curl Up",
