@@ -34,7 +34,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
     private Color flameColor = new Color(232F/255F, 164F/255F, 249F/255F, 1F);
     private Color activeColor = new Color(232F/255F * 0.5F, 164F/255F * 0.5F, 249F/255F * 0.5F, 1F);
 
-
     public InfernoGhostflame(float x, float y) {
         super(x, y);
         damage = 4;
@@ -84,9 +83,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     }
 
-
-
-
     @Override
     public String returnHoverHelperText() {
         int x = getEffectCount();
@@ -103,7 +99,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
             return (x + "x" + (chargedFlames + 1));
         }
     }
-
 
     public int getEffectCount() {
         int x = damage;
@@ -191,7 +186,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
         }
         return s;
     }
-
 
     public Color getFlameColor() {
         return activeColor.cpy();

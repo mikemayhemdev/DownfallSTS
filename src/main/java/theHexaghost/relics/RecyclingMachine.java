@@ -26,6 +26,7 @@ public class RecyclingMachine extends CustomRelic {
     @Override
     public void atBattleStart() {
         activated = false;
+        grayscale = false;
         beginLongPulse();
     }
 
@@ -40,6 +41,7 @@ public class RecyclingMachine extends CustomRelic {
                 card.type != AbstractCard.CardType.CURSE && !activated) {
             flash();
             activated = true;
+            grayscale = true;
             stopPulse();
             AbstractCard copy = card.makeCopy();
             copy.freeToPlayOnce = true;

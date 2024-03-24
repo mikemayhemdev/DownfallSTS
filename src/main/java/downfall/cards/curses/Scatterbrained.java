@@ -38,11 +38,7 @@ public class Scatterbrained extends CustomCard {
 
     public Scatterbrained() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
-
-        // Prevent Scatterbrained from showing up in Neow Fights
-        // tags.add(downfallMod.DOWNFALL_CURSE);
     }
-
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
@@ -74,7 +70,6 @@ public class Scatterbrained extends CustomCard {
 //            this.addToBot(new ScatterbrainedAction());
 //        }
 //    }
-
 
     public AbstractCard makeCopy() {
         return new Scatterbrained();

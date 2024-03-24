@@ -59,7 +59,6 @@ public class Gem_Crimson extends AbstractGemCard {
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             if ((!monster.isDead) && (!monster.isDying)) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new VulnerablePower(monster, VULN, false), VULN));
-
             }
         }
     }

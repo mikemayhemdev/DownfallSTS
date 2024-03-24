@@ -152,7 +152,7 @@ public class NeowBossFinal extends AbstractMonster {
             beatAmount += 2;
         }
 
-        int invincibleAmt = 300;
+        int invincibleAmt = 250;
         if (AbstractDungeon.ascensionLevel >= 19) {
             invincibleAmt -= 50;
         }

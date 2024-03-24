@@ -70,23 +70,18 @@ public class TimeStopPower extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
-        if (amount == 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, ID));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new SkipEnemiesTurnAction());
-            reducePower(1);
-            if (this.amount == 0){
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, ID));
-            }
-            updateDescription();
-            AbstractDungeon.onModifyPower();
-        }
+        AbstractDungeon.actionManager.addToBottom(new SkipEnemiesTurnAction());
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
             reducePower(1);
+        }
+        updateDescription();
+        AbstractDungeon.onModifyPower();
+        if (this.amount == 0){
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, ID));
         }
     }
 

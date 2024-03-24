@@ -86,7 +86,7 @@
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "Giga Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Strength affects this card !M! times. NL Skip your next turn."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Strength affects this card !M! times. NL Lose 2 Dexterity."
   },
   "Guardian:BronzeArmor": {
     "NAME": "Resilient Plate",

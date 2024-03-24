@@ -91,7 +91,7 @@ public class HyperBeam_Guardian extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunnedPower(p), 1));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p,2), 2));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p,-2), -2));
         super.useGems(p, m);
     }
 

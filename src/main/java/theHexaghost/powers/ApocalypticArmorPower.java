@@ -48,7 +48,7 @@ public class ApocalypticArmorPower extends AbstractPower implements NonStackable
     //Triggered by Inferno Ghostflame
     @Override
     public void onSpecificTrigger() {
-//        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new TimeStopPower(AbstractDungeon.player, 1), 1));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new TimeStopPower(AbstractDungeon.player, 1), 1));
         AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(owner, owner, this));
         AbstractDungeon.actionManager.addToBottom(new SkipEnemiesTurnAction());
     }

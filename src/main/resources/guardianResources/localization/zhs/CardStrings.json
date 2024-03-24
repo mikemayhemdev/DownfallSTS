@@ -86,7 +86,7 @@
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "究极射线",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 力量 本次发挥 !M! 倍效果。 NL 跳过你的下回合。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 力量 本次发挥 !M! 倍效果。 NL 失去2点 敏捷 。"
   },
   "Guardian:BronzeArmor": {
     "NAME": "弹性鳞甲",
