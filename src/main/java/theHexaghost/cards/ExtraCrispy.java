@@ -15,7 +15,7 @@ public class ExtraCrispy extends AbstractHexaCard {
     // private static final int UPG_MAGIC = 1;
 
     public ExtraCrispy() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         HexaMod.loadJokeCardImage(this, "ExtraCrispy.png");
     }
@@ -27,10 +27,7 @@ public class ExtraCrispy extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
-//            isInnate = true;
-//            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(1);
         }
     }
 }

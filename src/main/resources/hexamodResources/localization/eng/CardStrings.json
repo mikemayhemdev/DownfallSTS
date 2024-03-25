@@ -67,7 +67,7 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
-    "DESCRIPTION": "Exhausted cards will contribute to Ghostflame progression accordingly.",
+    "DESCRIPTION": "At the end of your turn, if you have Exhausted a card this turn, hexamod:Ignite the current Ghostflame.",
     "UPGRADE_DESCRIPTION": ""
   },
   "hexamod:FastForward": {

@@ -213,7 +213,7 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "脆烤",
-    "DESCRIPTION": "消耗 一张牌时， NL 对应地积累鬼火进度。",
+    "DESCRIPTION": "回合结束时， NL 若该回合 消耗 过牌， NL hexamod:点燃 当前鬼火1次。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 消耗 一张牌时， NL 对应地积累鬼火进度。"
   },
   "hexamod:Whisper": {

@@ -60,7 +60,7 @@
   "hexamod:CrispyPower_new": {
     "NAME": "Extra Crispy",
     "DESCRIPTIONS": [
-      "Whenever you #Exhaust a card, it will contribute towards the current #yGhostflame according to its type and cost #b",
+      "At the end of your turn, if you have #yExhausted a card this turn, #yIgnite the current Ghostflame #b",
       " time.",
       " times."
     ]

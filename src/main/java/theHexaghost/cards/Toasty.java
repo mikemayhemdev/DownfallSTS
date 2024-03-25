@@ -67,6 +67,8 @@ public class Toasty extends AbstractHexaCard implements OctopusCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }
