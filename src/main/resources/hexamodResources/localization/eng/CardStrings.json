@@ -343,8 +343,10 @@
     "DESCRIPTION": "Deal !D! damage. NL Whenever you *Advance or *Retract, return this from the discard pile."
   },
   "hexamod:Toasty": {
-    "NAME": "Toasty!",
-    "DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame and hexamod:Advance."
+    "NAME": "Flare Flick",
+    "DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame and hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame. NL Choose to hexamod:Retract or hexamod:Advance.",
+    "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",

@@ -3,21 +3,23 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.actions.OctoChoiceAction;
+import downfall.cards.OctoChoiceCard;
+import downfall.util.OctopusCard;
 import theHexaghost.HexaMod;
-import theHexaghost.actions.AdvanceAction;
-import theHexaghost.actions.BurningHitAction;
-import theHexaghost.actions.ChargeCurrentFlameAction;
-import theHexaghost.actions.ExtinguishCurrentFlameAction;
+import theHexaghost.actions.*;
+
+import java.util.ArrayList;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 
-public class Toasty extends AbstractHexaCard {
+public class Toasty extends AbstractHexaCard implements OctopusCard {
 
     public final static String ID = makeID("Toasty");
 
-
+    //flare flick
     private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 4;
+    private static final int UPG_DAMAGE = 2;
 
     public Toasty() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -25,12 +27,39 @@ public class Toasty extends AbstractHexaCard {
         HexaMod.loadJokeCardImage(this, "Toasty.png");
     }
 
+    public ArrayList<OctoChoiceCard> choiceList() {
+
+        ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
+        cardList.add(new OctoChoiceCard("octo:OctoRetract", this.name, HexaMod.makeCardPath("Float.png"), this.EXTENDED_DESCRIPTION[1]));
+        cardList.add(new OctoChoiceCard("octo:OctoNothing", this.name, HexaMod.makeCardPath("Float.png"), this.EXTENDED_DESCRIPTION[2]));
+        cardList.add(new OctoChoiceCard("octo:OctoAdvance", this.name, HexaMod.makeCardPath("Float.png"), this.EXTENDED_DESCRIPTION[0]));
+
+        return cardList;
+    }
+
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
+        switch (card.cardID) {
+            case "octo:OctoAdvance":
+                atb(new AdvanceAction(false));
+                break;
+            case "octo:OctoRetract":
+                atb(new RetractAction());
+                break;
+            case "octo:OctoNothing":
+                break;
+        }
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
 //        atb(new BurningHitAction(m, p, damage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
         atb(new ExtinguishCurrentFlameAction());
         atb(new ChargeCurrentFlameAction());
-        atb(new AdvanceAction(false));
+        if (upgraded) {
+            atb(new OctoChoiceAction(m, this));
+        } else {
+            atb(new AdvanceAction(false));
+        }
     }
 
 

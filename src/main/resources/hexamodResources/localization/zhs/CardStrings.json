@@ -221,8 +221,10 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每 消耗 一张牌， NL 给予目标 !burny! 层 hexamod:灼魂 。"
   },
   "hexamod:Toasty": {
-    "NAME": "擦划",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:点燃 当前鬼火 并 hexamod:步进 。"
+    "NAME": "擦燃",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:点燃 当前鬼火 并 hexamod:步进 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:点燃 当前鬼火。 NL 选择 hexamod:步进 、 hexamod:回退 或不动。",
+    "EXTENDED_DESCRIPTION": [" hexamod:步进 。"," hexamod:回退 。","不动。"]
   },
   "hexamod:ThermalTransfer": {
     "NAME": "热传递",

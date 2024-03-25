@@ -232,10 +232,10 @@ public class NeowBossFinal extends AbstractMonster {
                         AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 100));
                         break;
                     case 3:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 3)));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 13)));
                         break;
                     default:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 8)));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 23)));
                 }
 
                 ++this.buffCount;
