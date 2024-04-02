@@ -66,21 +66,21 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
         return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
     }
 
-    @Override
-    public void atTurnStartPostDraw() {
-        activated = false;
-        beginPulse();
-    }
+//    @Override
+//    public void atTurnStartPostDraw() {
+//        activated = false;
+//        beginPulse();
+//    }
 
     @Override
     public void onCharge(AbstractGhostflame g) {
-        if (!activated) {
+//        if (!activated) {
             flash();
-            addToBot(new GainBlockAction(AbstractDungeon.player, 4));
-            addToBot(new DrawCardAction(1));
+            addToBot(new GainBlockAction(AbstractDungeon.player, 3));
+//            addToBot(new DrawCardAction(1));
 //            addToBot(new GainEnergyAction(1));
-            activated = true;
-            stopPulse();
-        }
+//            activated = true;
+//            stopPulse();
+//        }
     }
 }

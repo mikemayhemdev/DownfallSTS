@@ -1,21 +1,16 @@
 package theHexaghost.powers;
 
-import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.*;
-import theHexaghost.HexaMod;
-import theHexaghost.actions.AdvanceAction;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.util.TextureLoader;
-import theHexaghost.ghostflames.AbstractGhostflame;
-import theHexaghost.util.OnAdvanceSubscriber;
-import theHexaghost.util.OnChargeSubscriber;
+import theHexaghost.HexaMod;
+import theHexaghost.actions.ChooseAndPlayExhaustDiscardedCardsAction;
 import theHexaghost.util.OnRetractSubscriber;
-//CloneablePowerInterface, OnAdvanceSubscriber,
+
 public class FuturePower extends AbstractPower implements OnRetractSubscriber {
 
     public static final String POWER_ID = HexaMod.makeID("FuturePower");
@@ -61,7 +56,8 @@ public class FuturePower extends AbstractPower implements OnRetractSubscriber {
 
     @Override
     public void onRetract() {
-        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount),amount));
+        addToTop(new ChooseAndPlayExhaustDiscardedCardsAction(this.amount));
+//        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount),amount));
 //        if(offer_dex) addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner, amount),amount));
     }
 
@@ -85,8 +81,11 @@ public class FuturePower extends AbstractPower implements OnRetractSubscriber {
         this.description = sb.toString();
 
          */
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        if(offer_dex) this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
+        if(amount == 1){
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        }else {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
+        }
     }
 
 //    @Override

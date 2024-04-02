@@ -217,8 +217,9 @@ public class NeowBossFinal extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
                 //   nukeDebuffs();
                 //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
+
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2 + this.buffCount)));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 6), 6));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
 
                 switch(this.buffCount) {
                     case 0:
@@ -232,10 +233,10 @@ public class NeowBossFinal extends AbstractMonster {
                         AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 100));
                         break;
                     case 3:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 13)));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 10), 10));
                         break;
                     default:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 23)));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 30), 30));
                 }
 
                 ++this.buffCount;

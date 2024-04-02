@@ -11,11 +11,9 @@ public class SoulSteal extends AbstractHexaCard {
 
     //living bomb
 
-
     public SoulSteal() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = 4;
-        //exhaust = true;
         HexaMod.loadJokeCardImage(this, "SoulSteal.png");
     }
 

@@ -12,7 +12,7 @@ public class OpposingAction extends AbstractHexaCard{
     public final static String ID = makeID("OpposingAction");
 
     public OpposingAction() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

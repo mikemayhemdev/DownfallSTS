@@ -1,10 +1,12 @@
 package theHexaghost.cards.seals;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.GoldPostCombatPower;
 
+@NoCompendium
 public class SecondSeal extends AbstractSealCard {
 
     public final static String ID = makeID("SecondSeal");

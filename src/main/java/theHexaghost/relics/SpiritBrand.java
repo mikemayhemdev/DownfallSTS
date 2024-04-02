@@ -41,7 +41,6 @@ public class SpiritBrand extends CustomRelic implements OnChargeSubscriber {
         if (!activated) {
             flash();
             addToBot(new GainBlockAction(AbstractDungeon.player, 4));
-           // addToBot(new GainEnergyAction(1));
             activated = true;
             stopPulse();
         }

@@ -146,15 +146,15 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
 
         AbstractCard bot = AbstractCharBoss.boss.hand.getBottomCard();
         AbstractCharBoss.boss.hand.removeCard(bot);
-        if (bot instanceof EnShowdown) {
-            ((AbstractHermitBossCard) bot).onSpecificTrigger();
-        }
+//        if (bot instanceof EnShowdown) {
+//            ((AbstractHermitBossCard) bot).onSpecificTrigger();
+//        }
         AbstractCard next = getNextCard();
         AbstractCharBoss.boss.hand.addToTop(next);
 
-        if (next.cardID.equals(EnNecronomicurse.ID)) {
-            AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
-        }
+//        if (next.cardID.equals(EnNecronomicurse.ID)) {
+//            AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
+//        }
 
         AbstractCharBoss.boss.hand.refreshHandLayout();
         AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {

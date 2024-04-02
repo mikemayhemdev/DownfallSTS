@@ -84,9 +84,9 @@
   "hexamod:FuturePower": {
     "NAME": "Into Shadow",
     "DESCRIPTIONS": [
-      "Whenever you #yRetract, gain #b",
-      " #yStrength [REMOVE_SPACE].",
-      " #yStrength and #yDexterity [REMOVE_SPACE]."
+      "Whenever you #yRetract, choose to play and #Exhaust #b",
+      " card in your draw pile.",
+      " cards in your draw pile."
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -146,8 +146,8 @@
   "hexamod:ParanormalFormPower": {
     "NAME": "Poltergeist",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust an #yAfterlife card, trigger its #yAfterlife effect #b",
-      " additional time(s)."
+      "Whenever you play an #yAfterlife card, a random enemy loses #b",
+      " HP."
     ]
   },
   "hexamod:PastPower": {

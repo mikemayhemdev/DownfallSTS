@@ -10,7 +10,7 @@ public class SeventhEye extends AbstractHexaCard {
     public final static String ID = makeID("SeventhEye");
 
     public SeventhEye() {
-        super(ID, 0, AbstractCard.CardType.SKILL, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        super(ID, 1, AbstractCard.CardType.SKILL, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.exhaust = true;
     }
 
@@ -22,9 +22,7 @@ public class SeventhEye extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.isInnate = true;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(0);
         }
     }
 }

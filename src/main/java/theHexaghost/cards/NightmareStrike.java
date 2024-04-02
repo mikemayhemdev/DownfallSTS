@@ -15,7 +15,7 @@ public class NightmareStrike extends AbstractHexaCard {
 
     public NightmareStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 7;
         isEthereal = true;
         cardsToPreview = new ShadowStrike();
         tags.add(CardTags.STRIKE);

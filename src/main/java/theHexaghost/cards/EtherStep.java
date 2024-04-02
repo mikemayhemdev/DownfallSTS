@@ -11,13 +11,13 @@ import theHexaghost.HexaMod;
 public class EtherStep extends AbstractHexaCard{
     public final static String ID = makeID("EtherStep");
 
-    private static final int DAMAGE = 9;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 4;
 
     public EtherStep() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
         isEthereal = true;
 
         tags.add(HexaMod.AFTERLIFE);

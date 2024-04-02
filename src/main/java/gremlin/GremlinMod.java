@@ -31,7 +31,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 import downfall.patches.BanSharedContentPatch;
 import gremlin.cards.*;
-import gremlin.cards.SharpenBlades;
 import gremlin.characters.GremlinCharacter;
 import gremlin.events.BackToBasicsGremlin;
 import gremlin.events.GremlinTrenchcoat;
@@ -48,7 +47,6 @@ import gremlin.powers.AbstractGremlinPower;
 import gremlin.relics.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.cards.AbstractSlimeboundCard;
 
 import java.util.ArrayList;
 import java.util.HashMap;

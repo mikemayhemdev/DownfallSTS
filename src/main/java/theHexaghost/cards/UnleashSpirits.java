@@ -15,7 +15,7 @@ public class UnleashSpirits extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ALL_ENEMY, RARE
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 8;
 
     public UnleashSpirits() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);

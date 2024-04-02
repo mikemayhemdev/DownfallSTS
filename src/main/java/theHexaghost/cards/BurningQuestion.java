@@ -19,10 +19,10 @@ public class BurningQuestion extends AbstractHexaCard {
     //ART:
 
     public BurningQuestion() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
 //        baseBlock = 5;
         baseMagicNumber = magicNumber = 2;
-        isMultiDamage = true;
+//        isMultiDamage = true;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "BurningQuestion.png");

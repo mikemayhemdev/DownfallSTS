@@ -100,7 +100,8 @@ public class HexaMod implements
     public static int[] seal_weight = new int[7];
     public static int[] new_seal_weight = new int[7];
 //    public double[] seal_chance = new double[7];
-    public static boolean reseted_seal_weight = false;
+    public static boolean reseted_seal_weight = false; // becomes true when you start a new run and the seal weights have been changed to the default value
+    public static boolean obtained_the_broken_seal_in_combat = false;
     public static int bonus_seal_drop_chance = 0;
     public static int new_bonus_seal_drop_chance = 0;
     public static int num_of_seals_in_deck = 0;
@@ -108,9 +109,11 @@ public class HexaMod implements
     // they are increased when you play a corresponding seal during combats, and to avoid them being counted more than they should by reloading a combat,
     // the new_seal_weight[](reset at combat start) records the changes during a combat and add them to the record when the combat is over.
 
-    public static int cards_exhausted_this_turn = 0;
+    public static int cards_exhausted_this_turn = 0;  // for unleash spirits
     public static int cards_exhausted_last_turn = 0;
-    // for unleash spirits
+
+    public static int soulburn_explosion_this_combat = 0; // for new radiant flame
+
 
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
@@ -306,6 +309,7 @@ public class HexaMod implements
 
         cards_exhausted_last_turn = 0;
         cards_exhausted_this_turn = 0;
+        soulburn_explosion_this_combat = 0;
     }
 
     @Override

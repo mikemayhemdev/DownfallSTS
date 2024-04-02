@@ -125,8 +125,13 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Into Shadow",
-    "DESCRIPTION": "Whenever you *Retract, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Whenever you *Retract, gain !M! Strength and Dexterity."
+    "DESCRIPTION": "Ethereal. NL Whenever you hexamod:Retract, choose a card in your discard pile to play and Exhaust.",
+    "UPGRADE_DESCRIPTION": "Whenever you hexamod:Retract, choose a card in your discard pile to play and Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to play and Exhaust.",
+      "Choose ",
+      "cards to play and Exhaust."
+    ]
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
@@ -211,8 +216,8 @@
   },
   "hexamod:ParanormalForm": {
     "NAME": "Poltergeist",
-    "DESCRIPTION": "hexamod:Afterlife effects trigger 1 additional time when Exhausting a card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL hexamod:Afterlife effects trigger 1 additional time when Exhausting a card."
+    "DESCRIPTION": "Whenever you play an Ethereal card, a random enemy loses !M! HP.",
+    "UPGRADE_DESCRIPTION": "Whenever you play an Ethereal card, a random enemy loses !M! HP."
   },
   "hexamod:PhantomCloak": {
     "NAME": "Phantom Cloak",
@@ -230,14 +235,15 @@
   },
   "hexamod:Premonition": {
     "NAME": "Premonition",
-    "DESCRIPTION": "Choose a card in your hand. NL Play the chosen card and Exhaust it. NL Exhaust.",
+    "DESCRIPTION": "Choose a card type. play a random card of that type in your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card type. play a random card of that type in your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "to play and Exhaust."
     ]
   },
   "hexamod:RadiantFlame": {
     "NAME": "Radiant Flame",
-    "DESCRIPTION": "Whenever you *Ignite a Ghostflame, gain !M! Block."
+    "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each Hexamod:Soulburn explosion this combat."
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
@@ -301,12 +307,12 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Bright Ritual",
-    "DESCRIPTION": "hexamod:Retract to the first Ghostflame, hexamod:Extinguish along the way, gain [E] for each Extinguished one. Exhaust.",
+    "DESCRIPTION": "hexamod:Retract to the first Ghostflame. NL hexamod:Extinguish all Ghostflames, gain 1 Strength for each.",
     "UPGRADE_DESCRIPTION": "hexamod:Retract to the first Ghostflame, hexamod:Extinguish along the way, gain [E] for each Extinguished one."
   },
   "hexamod:SpectralSpark": {
-    "NAME": "Spectral Spark",
-    "DESCRIPTION": "If possible, hexamod:Extinguish the current Ghostflame to gain !M! hexamod:Intensity. NL Exhaust."
+    "NAME": "Naughty Spirit",
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL hexamod:Retract. NL Whenever you hexamod:Ignite, return this from the discard pile. "
   },
   "hexamod:StepThrough": {
     "NAME": "Step Through",
@@ -428,11 +434,16 @@
   "hexamod:SeventhEye": {
     "NAME": "Seventh Eye",
     "DESCRIPTION": "Fetch a card in your draw pile. NL Switch to a random Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Fetch a card in your draw pile. NL Switch to a random Ghostflame. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Fetch a card in your draw pile. NL Switch to a random Ghostflame. NL Exhaust."
   },
   "hexamod:FlameDevourer": {
     "NAME": "Devour Flame",
     "DESCRIPTION": "Gain !B! Block. NL hexamod:Retract, if *Retract onto an hexamod:Ignited Ghostflame, gain !M! additional Block.",
     "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain !B! Block."
+  },
+  "hexamod:DiscardAndDamage": {
+    "NAME": "Discard and Damage",
+    "DESCRIPTION": "Requires !M! cards to discard. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Requires !M! cards to discard. NL Deal !D! damage."
   }
 }

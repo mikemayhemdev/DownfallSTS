@@ -201,9 +201,9 @@ public abstract class AbstractHexaCard extends CustomCard {
     @Override
     public void triggerOnExhaust() {
         int bonus = 0;
-        if(AbstractDungeon.player.hasPower(ParanormalFormPower.POWER_ID ) && this.hasTag(HexaMod.AFTERLIFE) ){
-            bonus = AbstractDungeon.player.getPower(ParanormalFormPower.POWER_ID).amount;
-        }
+//        if(AbstractDungeon.player.hasPower(ParanormalFormPower.POWER_ID ) && this.hasTag(HexaMod.AFTERLIFE) ){
+//            bonus = AbstractDungeon.player.getPower(ParanormalFormPower.POWER_ID).amount;
+//        }
 
         for(int i = 0; i < bonus + 1; i++) {
             att(new AbstractGameAction() {

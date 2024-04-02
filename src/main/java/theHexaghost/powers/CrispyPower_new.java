@@ -11,6 +11,7 @@ import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 import theHexaghost.actions.AdvanceAction;
+import theHexaghost.actions.ChargeCurrentFlameAction;
 
 import static theHexaghost.GhostflameHelper.activeGhostFlame;
 import static theHexaghost.HexaMod.renderFlames;
@@ -24,6 +25,7 @@ public class CrispyPower_new extends AbstractPower{
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    public static boolean exhausted_cards_this_turn = false;
 
     public CrispyPower_new(final int amount) {
         this.name = NAME;
@@ -40,11 +42,23 @@ public class CrispyPower_new extends AbstractPower{
     }
 
     public void onExhaust(AbstractCard card) {
-        flash();
+        exhausted_cards_this_turn = true;
+    }
 
-        for(int i = 0; i < this.amount; i++){
-            if (!activeGhostFlame.charged && renderFlames && activeGhostFlame.advanceOnCardUse) {
-                activeGhostFlame.advanceTrigger(card);
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        super.atEndOfTurn(isPlayer);
+        for(AbstractCard c: AbstractDungeon.player.hand.group){
+            if(c.isEthereal){
+                exhausted_cards_this_turn = true;
+            }
+        }
+        if(isPlayer && exhausted_cards_this_turn){
+            flash();
+            for(int i = 0; i < this.amount; i++){
+                if ( renderFlames ) {
+                    addToBot(new ChargeCurrentFlameAction());
+                }
             }
         }
     }
@@ -54,7 +68,8 @@ public class CrispyPower_new extends AbstractPower{
         if (GhostflameHelper.activeGhostFlame.charged) {
             AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
         }
-    }
+        exhausted_cards_this_turn = false;
+    } //TODO: check https://github.com/daviscook477/BaseMod/wiki/Hooks PreMonsterTurn to advance ealier than nearly at the start of player's turn
 
 
     @Override

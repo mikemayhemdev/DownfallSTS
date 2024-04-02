@@ -55,7 +55,7 @@ public abstract class AbstractGhostflame {
     public float animAlphaBySlot[] = new float[3];
     private boolean useBrightTexture[] = new boolean[3];
 
-    public boolean advanceOnCardUse = false;
+    public boolean advanceOnCardUse = false; // not whether "hexamod:advance" on card use, but whether task progression on card use, and currently only mayhem flame false
 
     public static final float whiteOverlayTimer = .4F;
 

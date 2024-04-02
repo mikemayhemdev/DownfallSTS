@@ -1,5 +1,6 @@
 package theHexaghost.cards.seals;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.FutureUpgradePower;
 
+@NoCompendium
 public class SixthSeal extends AbstractSealCard {
     public final static String ID = makeID("SixthSeal");
     private static int count_cards = 0;

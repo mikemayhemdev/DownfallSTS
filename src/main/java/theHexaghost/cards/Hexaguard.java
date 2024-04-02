@@ -13,7 +13,7 @@ public class Hexaguard extends AbstractHexaCard {
 
     public Hexaguard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 6;
         isEthereal = true;
         baseMagicNumber = magicNumber = 2;
         tags.add(HexaMod.AFTERLIFE);

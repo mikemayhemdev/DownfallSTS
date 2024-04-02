@@ -1,5 +1,6 @@
 package theHexaghost.cards.seals;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,6 +13,7 @@ import theHexaghost.powers.SealPostCombatPower;
 
 import java.util.ArrayList;
 
+@NoCompendium
 public class FifthSeal extends AbstractSealCard {
     public final static String ID = makeID("FifthSeal");
 
