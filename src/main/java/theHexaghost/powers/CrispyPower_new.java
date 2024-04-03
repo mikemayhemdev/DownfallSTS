@@ -7,13 +7,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
-import downfall.util.TextureLoader;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 
-import static theHexaghost.GhostflameHelper.activeGhostFlame;
 import static theHexaghost.HexaMod.renderFlames;
 
 public class CrispyPower_new extends AbstractPower{
@@ -25,7 +24,7 @@ public class CrispyPower_new extends AbstractPower{
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static boolean exhausted_cards_this_turn = false;
+    public static int exhausted_cards_this_turn = 0;
 
     public CrispyPower_new(final int amount) {
         this.name = NAME;
@@ -42,7 +41,7 @@ public class CrispyPower_new extends AbstractPower{
     }
 
     public void onExhaust(AbstractCard card) {
-        exhausted_cards_this_turn = true;
+        exhausted_cards_this_turn += 1;
     }
 
     @Override
@@ -50,10 +49,10 @@ public class CrispyPower_new extends AbstractPower{
         super.atEndOfTurn(isPlayer);
         for(AbstractCard c: AbstractDungeon.player.hand.group){
             if(c.isEthereal){
-                exhausted_cards_this_turn = true;
+                exhausted_cards_this_turn += 1;
             }
         }
-        if(isPlayer && exhausted_cards_this_turn){
+        if(isPlayer && exhausted_cards_this_turn >= 2 ){
             flash();
             for(int i = 0; i < this.amount; i++){
                 if ( renderFlames ) {
@@ -68,7 +67,7 @@ public class CrispyPower_new extends AbstractPower{
         if (GhostflameHelper.activeGhostFlame.charged) {
             AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
         }
-        exhausted_cards_this_turn = false;
+        exhausted_cards_this_turn = 0;
     } //TODO: check https://github.com/daviscook477/BaseMod/wiki/Hooks PreMonsterTurn to advance ealier than nearly at the start of player's turn
 
 

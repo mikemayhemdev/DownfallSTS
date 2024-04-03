@@ -17,7 +17,7 @@ public class SpectralSpark extends AbstractHexaCard {
     private static final int MAGIC = 5;
 
     public SpectralSpark() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = MAGIC;
 //        magicNumber = baseMagicNumber = 5;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);

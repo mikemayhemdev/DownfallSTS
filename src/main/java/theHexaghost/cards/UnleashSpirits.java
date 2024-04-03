@@ -13,15 +13,12 @@ public class UnleashSpirits extends AbstractHexaCard {
 
     public final static String ID = makeID("UnleashSpirits");
 
-    //stupid intellij stuff ATTACK, ALL_ENEMY, RARE
-
     private static final int DAMAGE = 8;
 
     public UnleashSpirits() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = 0;
-//        exhaust = true;
         HexaMod.loadJokeCardImage(this, "UnleashSpirits.png");
     }
 

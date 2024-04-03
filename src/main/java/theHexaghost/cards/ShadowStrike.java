@@ -22,7 +22,6 @@ public class ShadowStrike extends AbstractHexaCard {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 3;
         exhaust = true;
-        isEthereal = true;
 //        cardsToPreview = new NightmareGuise();
 //        tags.add(HexaMod.AFTERLIFE);
         tags.add(CardTags.STRIKE);

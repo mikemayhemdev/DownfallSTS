@@ -1,10 +1,9 @@
 package theHexaghost.cards;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
-import theHexaghost.powers.CrispyPower;
 import theHexaghost.powers.CrispyPower_new;
 
 public class ExtraCrispy extends AbstractHexaCard {
@@ -28,6 +27,20 @@ public class ExtraCrispy extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(1);
+        }
+    }
+
+    @Override //zhs card text thing
+    public void initializeDescriptionCN() {
+        super.initializeDescriptionCN();
+        if(Settings.language == Settings.GameLanguage.ZHS && this.description!=null && this.description.size()>=1 ) {
+            for(int i = 0; i < this.description.size(); i++){
+                if( this.description.get(i).text.equals("，") ){
+                    StringBuilder sb = new StringBuilder();
+                    this.description.get(i-1).text = sb.append(this.description.get(i-1).text).append("，").toString();
+                    this.description.remove(i);
+                }
+            }
         }
     }
 }

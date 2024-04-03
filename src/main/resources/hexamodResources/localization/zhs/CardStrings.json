@@ -69,8 +69,8 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "遁入暗影",
-    "DESCRIPTION": "虚无 。 NL hexamod:回退 时， NL 打出并 消耗 1张弃牌堆的牌。",
-    "UPGRADE_DESCRIPTION": "hexamod:回退 时， NL 打出并 消耗 1张弃牌堆的牌。",
+    "DESCRIPTION": "虚无 。 NL hexamod:回退 时， NL 打出并 消耗 1张手牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:回退 时， NL 打出并 消耗 1张手牌。",
     "EXTENDED_DESCRIPTION": [
       "选择1张牌来打出并消耗。",
       "选择",
@@ -108,8 +108,8 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "鲜焰仪式",
-    "DESCRIPTION": "hexamod:回退 至首枚鬼火。 NL hexamod:熄灭 所有鬼火， NL 每熄灭一枚， NL 获得1点 力量 。",
-    "UPGRADE_DESCRIPTION": "hexamod:回退 至首枚鬼火， NL 并 hexamod:熄灭 途中所有鬼火， NL 每熄灭一枚， NL 获得 [E] 。"
+    "DESCRIPTION": "切换至首枚鬼火。 NL hexamod:熄灭 hexamod:点燃 的鬼火。 NL 每熄灭一枚， NL 获得 [E] 并抽一张牌 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "切换至首枚鬼火。 NL hexamod:熄灭 hexamod:点燃 的鬼火。 NL 每熄灭一枚， NL 获得 [E] 并抽一张牌 。 NL 消耗 。"
   },
   "hexamod:StepThrough": {
     "NAME": "焰影迷步",
@@ -188,11 +188,11 @@
   },
   "hexamod:ShadowStrike": {
     "NAME": "暗影打击",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
   },
   "hexamod:ShadowGuise": {
     "NAME": "暗影伪装",
-    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 。"
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "深处之力",
@@ -218,7 +218,7 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "脆烤",
-    "DESCRIPTION": "回合结束时， NL 若该回合 消耗 过牌， NL hexamod:点燃 当前鬼火1次。",
+    "DESCRIPTION": "回合结束时， NL 若该回合 消耗 过两张牌， NL hexamod:点燃 当前鬼火1次。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 消耗 一张牌时， NL 对应地积累鬼火进度。"
   },
   "hexamod:Whisper": {
@@ -383,8 +383,8 @@
   },
   "hexamod:Premonition": {
     "NAME": "预兆",
-    "DESCRIPTION": "选择一种牌类，随机打出抽牌堆一张该类牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择一种牌类，随机打出抽牌堆一张该类牌。",
+    "DESCRIPTION": "选择一类牌，随机打出抽牌堆一张该类牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一类牌，随机打出抽牌堆一张该类牌。",
     "EXTENDED_DESCRIPTION": [
       "选择打出并消耗"
     ]
@@ -395,7 +395,7 @@
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "深处打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机将消耗堆一张 hexamod:阴世 牌返回抽牌堆。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张 虚无 牌。",
     "EXTENDED_DESCRIPTION": [" 虚无 "," 虚无 。 NL "]
   },
   "hexamod:WildfireWeapon": {

@@ -32,8 +32,8 @@ public class ChooseAndPlayExhaustDiscardedCardsAction extends AbstractGameAction
 
     public void update() {
         if (this.duration == this.startDuration) {
-            if (!this.player.discardPile.isEmpty() && this.numberOfCards > 0) {
-                if (this.player.discardPile.size() <= this.numberOfCards ) {
+            if (!this.player.hand.isEmpty() && this.numberOfCards > 0) {
+                if (this.player.hand.size() <= this.numberOfCards ) {
                     ArrayList<AbstractCard> cardsToPlay = new ArrayList();
                     Iterator var5 = this.player.discardPile.group.iterator();
 
@@ -47,7 +47,7 @@ public class ChooseAndPlayExhaustDiscardedCardsAction extends AbstractGameAction
 
                     while(var5.hasNext()) {
                         c = (AbstractCard) var5.next();
-                        this.player.discardPile.removeCard(c);
+                        this.player.hand.removeCard(c);
                         AbstractDungeon.getCurrRoom().souls.remove(c);
                         c.exhaustOnUseOnce = true;
                         c.current_y = -200.0F * Settings.scale;
@@ -74,10 +74,10 @@ public class ChooseAndPlayExhaustDiscardedCardsAction extends AbstractGameAction
                     this.isDone = true;
                 } else {
                     if(numberOfCards == 1){
-                        AbstractDungeon.gridSelectScreen.open(this.player.discardPile, this.numberOfCards, TEXT[0], false);
+                        AbstractDungeon.gridSelectScreen.open(this.player.hand, this.numberOfCards, TEXT[0], false);
                         this.tickDuration();
                     }else {
-                        AbstractDungeon.gridSelectScreen.open(this.player.discardPile, this.numberOfCards, TEXT[1] + this.numberOfCards + TEXT[2], false);
+                        AbstractDungeon.gridSelectScreen.open(this.player.hand, this.numberOfCards, TEXT[1] + this.numberOfCards + TEXT[2], false);
                         this.tickDuration();
                     }
                 }
@@ -92,7 +92,7 @@ public class ChooseAndPlayExhaustDiscardedCardsAction extends AbstractGameAction
 
                 while(var1.hasNext()) {
                     c = (AbstractCard) var1.next();
-                    this.player.discardPile.removeCard(c);
+                    this.player.hand.removeCard(c);
                     AbstractDungeon.getCurrRoom().souls.remove(c);
                     c.exhaustOnUseOnce = true;
                     c.current_y = -200.0F * Settings.scale;

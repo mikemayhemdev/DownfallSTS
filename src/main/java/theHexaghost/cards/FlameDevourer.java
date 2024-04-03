@@ -11,9 +11,8 @@ public class FlameDevourer extends AbstractHexaCard{
     public final static String ID = makeID("FlameDevourer");
     public FlameDevourer() {
         super(ID, 1, CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
-        baseBlock = 10;
-        baseMagicNumber = magicNumber = 6;
-//        HexaMod.loadJokeCardImage(this, "BacktrackSmack.png");
+        baseBlock = 9;
+        baseMagicNumber = magicNumber = 5;
     }
 
     @Override

@@ -24,7 +24,6 @@ public class ShadowGuise extends AbstractHexaCard {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = 2;
         exhaust = true;
-        isEthereal = true;
 //        setParent(parent);
 //        tags.add(HexaMod.AFTERLIFE);
 //        cardsToPreview = new NightmareStrike();

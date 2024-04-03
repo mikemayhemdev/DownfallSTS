@@ -60,7 +60,7 @@
   "hexamod:CrispyPower_new": {
     "NAME": "Extra Crispy",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you have #yExhausted a card this turn, #yIgnite the current Ghostflame #b",
+      "At the end of your turn, if you have #yExhausted #b2 or more cards this turn, #yIgnite the current Ghostflame #b",
       " time.",
       " times."
     ]
@@ -85,8 +85,8 @@
     "NAME": "Into Shadow",
     "DESCRIPTIONS": [
       "Whenever you #yRetract, choose to play and #Exhaust #b",
-      " card in your draw pile.",
-      " cards in your draw pile."
+      " card in your hand.",
+      " cards in your hand."
     ]
   },
   "hexamod:FutureUpgradePower": {
