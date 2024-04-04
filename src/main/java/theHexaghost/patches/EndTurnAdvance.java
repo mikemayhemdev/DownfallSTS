@@ -2,21 +2,20 @@ package theHexaghost.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.downfallMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
-import theHexaghost.actions.ExtinguishAction;
-import theHexaghost.ghostflames.AbstractGhostflame;
+import theHexaghost.actions.ChargeCurrentFlameAction;
+import theHexaghost.actions.ExtinguishCurrentFlameAction;
 import theHexaghost.ghostflames.InfernoGhostflame;
 import theHexaghost.ghostflames.MayhemGhostflame;
-import theHexaghost.powers.AgainPower;
 import theHexaghost.powers.CrispyPower_new;
 import theHexaghost.powers.StopFromAdvancingPower;
+
+import static theHexaghost.HexaMod.renderFlames;
 
 @SpirePatch(
         clz = GameActionManager.class,
@@ -40,18 +39,54 @@ public class EndTurnAdvance {
 
                 if(AbstractDungeon.player.hasPower(CrispyPower_new.POWER_ID)){
                     if (AbstractDungeon.player.hasPower(StopFromAdvancingPower.POWER_ID)) {
-                        GhostflameHelper.activeGhostFlame.extinguish();
+                        AbstractDungeon.actionManager.addToBottom(new ExtinguishCurrentFlameAction());
                     }
-                    AbstractDungeon.player.getPower(CrispyPower_new.POWER_ID).onSpecificTrigger();
-                }
-
-                else if (AbstractDungeon.player.hasPower(StopFromAdvancingPower.POWER_ID)) {
+                    int time_of_ignition = AbstractDungeon.player.getPower(CrispyPower_new.POWER_ID).amount;
+                    int cards_already_exhausted = CrispyPower_new.exhausted_cards_this_turn;
+                    System.out.println("hand size " + AbstractDungeon.player.hand.group.size());
+                    for(AbstractCard c: AbstractDungeon.player.hand.group){
+                        if(c.isEthereal){
+                            cards_already_exhausted += 1;
+                        }
+                    }
+                    if(cards_already_exhausted >= 2){
+                        for(int i = 0; i < time_of_ignition; i++){
+                            if ( renderFlames ) {
+                                AbstractDungeon.actionManager.addToBottom(new ChargeCurrentFlameAction());
+                            }
+                        }
+                    }
+                } else if (AbstractDungeon.player.hasPower(StopFromAdvancingPower.POWER_ID)) {
                     GhostflameHelper.activeGhostFlame.extinguish();
                 }
 
                 if (GhostflameHelper.activeGhostFlame.charged) {
                     AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
                 }
+            }else{
+
+                if(AbstractDungeon.player.hasPower(CrispyPower_new.POWER_ID)){
+                    int time_of_ignition = AbstractDungeon.player.getPower(CrispyPower_new.POWER_ID).amount;
+                    int cards_already_exhausted = CrispyPower_new.exhausted_cards_this_turn;
+                    System.out.println("hand size " + AbstractDungeon.player.hand.group.size());
+                    for(AbstractCard c: AbstractDungeon.player.hand.group){
+                        if(c.isEthereal){
+                            cards_already_exhausted += 1;
+                        }
+                    }
+                    if(cards_already_exhausted >= 2){
+                        for(int i = 0; i < time_of_ignition; i++){
+                            if ( renderFlames ) {
+                                AbstractDungeon.actionManager.addToBottom(new ChargeCurrentFlameAction());
+                            }
+                        }
+                    }
+                }
+
+                if (GhostflameHelper.activeGhostFlame.charged) {
+                    AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
+                }
+
             }
 
             if(GhostflameHelper.hexaGhostFlames.get(5) instanceof InfernoGhostflame) { // only auto extinguish inferno when it's not replaced to others

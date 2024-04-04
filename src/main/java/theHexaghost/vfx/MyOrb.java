@@ -67,7 +67,6 @@ public class MyOrb {
                     this.particleTimer -= Gdx.graphics.getDeltaTime();
                     if (this.particleTimer < 0.0F) {
                         AbstractDungeon.effectList.add(new GhostlyFireEffect(this.x, this.y));
-                        System.out.println(myDaddy.getName() + " test  " );
                         this.particleTimer = 0.06F;
                     }
                 }

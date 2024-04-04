@@ -1,21 +1,28 @@
 package theHexaghost.powers;
 
+import basemod.ReflectionHacks;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
 import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 
+import java.util.ArrayList;
+
 import static theHexaghost.HexaMod.renderFlames;
 
-public class CrispyPower_new extends AbstractPower{
+public class CrispyPower_new extends TwoAmountPower {
     public static final String POWER_ID = HexaMod.makeID("CrispyPower_new");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ExtraCrispy84.png");
@@ -25,12 +32,14 @@ public class CrispyPower_new extends AbstractPower{
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public static int exhausted_cards_this_turn = 0;
+    private float timer;
 
     public CrispyPower_new(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
+        this.amount2 = 2;
         this.type = AbstractPower.PowerType.BUFF;
         this.isTurnBased = false;
 
@@ -40,35 +49,89 @@ public class CrispyPower_new extends AbstractPower{
         this.updateDescription();
     }
 
-    public void onExhaust(AbstractCard card) {
-        exhausted_cards_this_turn += 1;
-    }
-
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        super.atEndOfTurn(isPlayer);
+    public void update(int slot) {
+        super.update(slot);
+        int count = 0;
         for(AbstractCard c: AbstractDungeon.player.hand.group){
             if(c.isEthereal){
-                exhausted_cards_this_turn += 1;
+                count += 1;
             }
         }
-        if(isPlayer && exhausted_cards_this_turn >= 2 ){
-            flash();
-            for(int i = 0; i < this.amount; i++){
-                if ( renderFlames ) {
-                    addToBot(new ChargeCurrentFlameAction());
-                }
+        if( (count + exhausted_cards_this_turn) >= 2 ) {
+            if (this.timer <= 0F){
+                ArrayList<AbstractGameEffect> effect2 = ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
+                effect2.add(new GainPowerEffect(this));
+                this.timer = 1F;
+            } else {
+                this.timer -= Gdx.graphics.getDeltaTime();
             }
         }
     }
 
     @Override
-    public void atEndOfRound() {
-        if (GhostflameHelper.activeGhostFlame.charged) {
-            AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
-        }
+    public void atStartOfTurn() {
         exhausted_cards_this_turn = 0;
-    } //TODO: check https://github.com/daviscook477/BaseMod/wiki/Hooks PreMonsterTurn to advance ealier than nearly at the start of player's turn
+        amount2 = 2;
+        updateDescription();
+    }
+
+    public void onExhaust(AbstractCard card) {
+        exhausted_cards_this_turn += 1;
+        amount2 -= 1;
+    }
+
+//    @Override
+//    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
+//        for(AbstractCard c: AbstractDungeon.player.hand.group){
+//            if(c.isEthereal){
+//                exhausted_cards_this_turn += 1;
+//            }
+//        }
+//    }
+
+//    @Override
+//    public void atEndOfTurn(boolean isPlayer) {
+//        super.atEndOfTurn(isPlayer);
+//        if(exhausted_cards_this_turn >= 2) return;
+//        for(AbstractCard c: AbstractDungeon.player.hand.group){
+//            if(c.isEthereal){
+//                exhausted_cards_this_turn += 1;
+//            }
+//        }
+//        if(isPlayer && exhausted_cards_this_turn >= 2 ){
+//            flash();
+//            for(int i = 0; i < this.amount; i++){
+//                if ( renderFlames ) {
+//                    addToBot(new ChargeCurrentFlameAction());
+//                }
+//            }
+//        }
+//    }
+
+//    public void onSpecificTrigger(){
+////        for(AbstractCard c: AbstractDungeon.player.hand.group){
+////            if(c.isEthereal){
+////                exhausted_cards_this_turn += 1;
+////            }
+////        }
+//        if(exhausted_cards_this_turn >= 2 ){
+//            flash();
+//            for(int i = 0; i < this.amount; i++){
+//                if ( renderFlames ) {
+//                    addToBot(new ChargeCurrentFlameAction());
+//                }
+//            }
+//        }
+//    }
+
+//    @Override
+//    public void atEndOfRound() {
+//        if (GhostflameHelper.activeGhostFlame.charged) {
+//            AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
+//        }
+//        exhausted_cards_this_turn = 0;
+//    } //TODO: check https://github.com/daviscook477/BaseMod/wiki/Hooks PreMonsterTurn to advance ealier than nearly at the start of player's turn
 
 
     @Override

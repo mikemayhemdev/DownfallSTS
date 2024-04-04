@@ -11,7 +11,7 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
     //speedrunning (old name) into shadow
     public GhostOfSpireFuture() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        magicNumber = baseMagicNumber= 1;
+        magicNumber = baseMagicNumber = 1;
         this.isEthereal = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "GhostOfSpireFuture.png");
