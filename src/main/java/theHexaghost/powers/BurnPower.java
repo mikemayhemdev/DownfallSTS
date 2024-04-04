@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,11 +17,8 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
-import theHexaghost.HexaMod;
-import theHexaghost.relics.IceCube;
-import theHexaghost.relics.SoulConsumer;
 import downfall.util.TextureLoader;
+import theHexaghost.HexaMod;
 import theHexaghost.vfx.ExplosionSmallEffectGreen;
 
 public class BurnPower extends TwoAmountPower implements CloneablePowerInterface, HealthBarRenderPower {

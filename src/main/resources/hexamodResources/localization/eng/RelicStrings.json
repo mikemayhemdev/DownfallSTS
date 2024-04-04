@@ -32,7 +32,7 @@
     "NAME": "Soul Stone",
     "FLAVOR": "A soul would liven this thing up!",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust #b3 cards at the same turn, apply #b1 #Vulnerable to a random enemy."
+      "Whenever you #yExhaust #b3 cards at the same turn, apply #b1 #yVulnerable to a random enemy."
     ]
   },
   "hexamod:RecyclingMachine": {
