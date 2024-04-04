@@ -214,5 +214,12 @@
       "At the end of this turn, lose #b",
       " #yIntensity [REMOVE_SPACE]."
     ]
+  },
+  "hexamod:MaxHPPostCombatPower": {
+    "NAME": "战后成长",
+    "DESCRIPTIONS": [
+      "本场战斗结束时，获得 #b",
+      " 点最大生命。"
+    ]
   }
 }

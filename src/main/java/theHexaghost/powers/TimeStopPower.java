@@ -33,7 +33,7 @@ public class TimeStopPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        if(amount == 0){
+        if(amount == 1){
             description = DESCRIPTIONS[0];
         }else{
             description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];

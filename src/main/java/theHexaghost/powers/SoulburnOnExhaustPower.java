@@ -23,8 +23,8 @@ public class SoulburnOnExhaustPower extends AbstractPower implements EnemyOnExha
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/SoulburnOnExhaust84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/SoulburnOnExhaust32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/GhostFlameBarrier84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/GhostFlameBarrier32.png");
 
     public SoulburnOnExhaustPower(AbstractCreature m, int amount) {
 

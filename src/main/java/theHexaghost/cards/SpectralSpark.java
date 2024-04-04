@@ -19,17 +19,15 @@ public class SpectralSpark extends AbstractHexaCard {
     public SpectralSpark() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = MAGIC;
-//        magicNumber = baseMagicNumber = 5;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "SpectralSpark.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         burn(m, burn);
-        atb(new RetractAction());
 
         AbstractCard c = this;
-        addToBot(new AbstractGameAction() {
+        atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
@@ -44,6 +42,8 @@ public class SpectralSpark extends AbstractHexaCard {
                 }
             }
         });
+
+        atb(new RetractAction());
     }
 
     public void triggerOnGlowCheck() {

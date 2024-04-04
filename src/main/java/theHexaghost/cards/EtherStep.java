@@ -42,6 +42,8 @@ public class EtherStep extends AbstractHexaCard{
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
             upgradeMagicNumber(1);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

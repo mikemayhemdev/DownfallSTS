@@ -10,7 +10,7 @@ public class ApocalypticArmor extends AbstractHexaCard {
 
     public final static String ID = makeID("ApocalypticArmor");
 
-    //doomsday
+    //doomsday dooms day
 
     private static final int MAGIC = 6;
     private static final int UPG_MAGIC = -1;

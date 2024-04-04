@@ -32,7 +32,7 @@
     "NAME": "Soul Stone",
     "FLAVOR": "A soul would liven this thing up!",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust #b4 cards at the same turn, apply #b1 #Vulnerable to a random enemy."
+      "Whenever you #yExhaust #b3 cards at the same turn, apply #b1 #Vulnerable to a random enemy."
     ]
   },
   "hexamod:RecyclingMachine": {
@@ -46,7 +46,7 @@
     "NAME": "Sneaky Teakwood Match",
     "FLAVOR": "Lights on any surface!",
     "DESCRIPTIONS": [
-      "At the start of each combat, #yhexamod:Ignite the current Ghostflame and #yhexamod:Advance [REMOVE_SPACE]."
+      "The first time you #yIgnite each turn, you can choose whether to #yAdvancce or #yRetract [REMOVE_SPACE]."
     ]
   },
   "hexamod:InflammatoryLetter": {
@@ -89,6 +89,13 @@
     "FLAVOR": "Fire, fire, fire, fire, fire, FIRE!",
     "DESCRIPTIONS": [
       "Whenever you play #b6 cards, deal #b6 damage to a random enemy."
+    ]
+  },
+  "hexamod:Libra": {
+    "NAME": "Libra",
+    "FLAVOR": "Balance in all things.",
+    "DESCRIPTIONS": [
+      "If you have more Attacks than Skills in your deck, transform all Strikes, otherwise transform all Defends. If it's the same, random half of all Strikes and Defends will be transformed."
     ]
   }
 }

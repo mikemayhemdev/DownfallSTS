@@ -35,11 +35,11 @@ public class GhostflameInferno extends AbstractHexaCard {
             @Override
             public void update() {
                 isDone = true;
-                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-                    if (gf instanceof InfernoGhostflame) {
-                        gf.forceCharge();
-                    }
+                AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(5);
+                if (gf instanceof InfernoGhostflame) {
+                    gf.forceCharge();
                 }
+                GhostflameHelper.activeGhostFlame = GhostflameHelper.hexaGhostFlames.get(5);
             }
         });
     }

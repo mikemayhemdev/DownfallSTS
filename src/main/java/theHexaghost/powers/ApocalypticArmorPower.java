@@ -1,26 +1,22 @@
 package theHexaghost.powers;
 
-import automaton.powers.InfiniteBeamsPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
-import theHexaghost.ghostflames.InfernoGhostflame;
 import theHexaghost.util.OnChargeSubscriber;
-import downfall.util.TextureLoader;
 
-public class ApocalypticArmorPower extends AbstractPower implements NonStackablePower {
+public class ApocalypticArmorPower extends AbstractPower implements NonStackablePower, OnChargeSubscriber {
 
     public static final String POWER_ID = HexaMod.makeID("ApocalypticArmorPower");
 
@@ -45,12 +41,18 @@ public class ApocalypticArmorPower extends AbstractPower implements NonStackable
         this.updateDescription();
     }
 
-    //Triggered by Inferno Ghostflame
     @Override
-    public void onSpecificTrigger() {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new TimeStopPower(AbstractDungeon.player, 1), 1));
-        AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(owner, owner, this));
-        AbstractDungeon.actionManager.addToBottom(new SkipEnemiesTurnAction());
+    public void onCharge(AbstractGhostflame gf) {
+        int count = 0;
+        for(AbstractGhostflame flame: GhostflameHelper.hexaGhostFlames){
+            if(flame.charged) count++;
+        }
+        if(count == amount){
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new TimeStopPower(AbstractDungeon.player, 1), 1));
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+            AbstractDungeon.actionManager.addToBottom(new SkipEnemiesTurnAction());
+        }
+        flash();
     }
 
     @Override

@@ -20,7 +20,7 @@ public class ExtraCrispy extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new CrispyPower_new(magicNumber));
+        applyToSelf(new CrispyPower_new(this.magicNumber));
     }
 
     public void upgrade() {

@@ -116,7 +116,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
     }
 
     @Override
-    public void reset() {
+    public void resetVariable() {
         skillsPlayedThisTurn = 0;
     }
 

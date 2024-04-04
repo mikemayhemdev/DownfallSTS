@@ -72,9 +72,7 @@
     "DESCRIPTION": "虚无 。 NL hexamod:回退 时， NL 打出并 消耗 1张手牌。",
     "UPGRADE_DESCRIPTION": "hexamod:回退 时， NL 打出并 消耗 1张手牌。",
     "EXTENDED_DESCRIPTION": [
-      "选择1张牌来打出并消耗。",
-      "选择",
-      "张牌来打出并消耗。"
+      "打出并消耗。"
       ]
   },
   "hexamod:GhostOfSpirePresent": {
@@ -108,8 +106,8 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "鲜焰仪式",
-    "DESCRIPTION": "切换至首枚鬼火。 NL hexamod:熄灭 hexamod:点燃 的鬼火。 NL 每熄灭一枚， NL 获得 [E] 并抽一张牌 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "切换至首枚鬼火。 NL hexamod:熄灭 hexamod:点燃 的鬼火。 NL 每熄灭一枚， NL 获得 [E] 并抽一张牌 。 NL 消耗 。"
+    "DESCRIPTION": "切换至首枚鬼火。 NL hexamod:熄灭 hexamod:点燃 的鬼火， NL 每熄灭一枚， NL 获得 [E] 并抽一张牌 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "切换至首枚鬼火。 NL hexamod:熄灭 hexamod:点燃 的鬼火， NL 每熄灭一枚， NL 获得 [E] 并抽一张牌 。 NL 消耗 。"
   },
   "hexamod:StepThrough": {
     "NAME": "焰影迷步",
@@ -178,12 +176,12 @@
   },
   "hexamod:NightmareStrike": {
     "NAME": "梦魇打击",
-    "DESCRIPTION": "虚无 。 NL 获得 *暗影打击 。 NL hexamod:阴世 : NL 造成 !D! 点伤害。",
+    "DESCRIPTION": "虚无 。 NL 获得一张 *暗影打击 。 NL hexamod:阴世 : NL 造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 时获得 *暗影打击 +。"
   },
   "hexamod:NightmareGuise": {
     "NAME": "梦魇伪装",
-    "DESCRIPTION": "虚无 。 NL 获得 *暗影伪装 。 NL hexamod:阴世 : NL 获得 !B! 点 格挡 。",
+    "DESCRIPTION": "虚无 。 NL 获得一张 *暗影伪装 。 NL hexamod:阴世 : NL 获得 !B! 点 格挡 。",
     "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 消耗 时获得 *暗影伪装 +。"
   },
   "hexamod:ShadowStrike": {
@@ -275,11 +273,11 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "淘气精灵",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL hexamod:回退 。 NL 若当前鬼火已 hexamod:点燃 ， NL 本牌从弃牌堆返回手牌。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 若当前鬼火已 hexamod:点燃 ， NL 本牌从弃牌堆返回手牌。 NL hexamod:回退 。 "
   },
   "hexamod:GhostflameInferno": {
     "NAME": "此即地狱",
-    "DESCRIPTION": "保留 。 NL 给予 !burny! 层 hexamod:灼魂 。 NL hexamod:点燃 hexamod:狱焱 鬼火 。 NL 消耗 。",
+    "DESCRIPTION": "保留 。 NL 给予 !burny! 层 hexamod:灼魂 。 NL 切换至并 hexamod:点燃 hexamod:狱焱 鬼火 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "保留 。 NL 给予 !burny! 层 hexamod:灼魂 。 NL hexamod:点燃 hexamod:狱焱 鬼火 。 NL 消耗 。"
   },
   "hexamod:ChargedBarrage": {
@@ -296,8 +294,8 @@
     "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 [E] [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。"
   },
   "hexamod:Again": {
-    "NAME": "复燃",
-    "DESCRIPTION": "hexamod:点燃 当前鬼火， NL 然后 hexamod:熄灭 它。"
+    "NAME": "死灰复燃",
+    "DESCRIPTION": "hexamod:点燃 当前鬼火， NL 再将其 hexamod:熄灭 。"
   },
   "hexamod:RetreatToShadows": {
     "NAME": "无形",
@@ -395,7 +393,7 @@
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "深处打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张 虚无 牌。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 从抽牌堆抽一张 虚无 牌。",
     "EXTENDED_DESCRIPTION": [" 虚无 "," 虚无 。 NL "]
   },
   "hexamod:WildfireWeapon": {

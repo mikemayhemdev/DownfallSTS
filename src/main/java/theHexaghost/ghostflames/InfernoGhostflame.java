@@ -1,5 +1,6 @@
 package theHexaghost.ghostflames;
 
+import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,6 +12,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.GhostlyFireEffect;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
@@ -68,7 +71,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
                 amountOfIgnitedGhostflames++;
             }
         }
-
         /*
         if (GhostflameHelper.activeGhostFlame == this){
             atb(new AdvanceAction(false));
@@ -145,7 +147,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
     }
 
     @Override
-    public void reset() {
+    public void resetVariable() {
         energySpentThisTurn = 0;
     }
 
@@ -182,7 +184,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
         int x = getEffectCount();
         s = s + DESCRIPTIONS[6] + x + DESCRIPTIONS[7];
         if (GhostflameHelper.activeGhostFlame == this) {
-            s = s + DESCRIPTIONS[9];
+            s = s + DESCRIPTIONS[8];
         }
         return s;
     }

@@ -13,7 +13,7 @@ public class LingeringShades extends AbstractHexaCard{
     public LingeringShades() {
 
         super(ID, 1, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
-        baseBurn = burn = 13;
+        baseBurn = burn = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

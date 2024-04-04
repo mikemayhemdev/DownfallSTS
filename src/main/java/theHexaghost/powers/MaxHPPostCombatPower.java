@@ -7,21 +7,21 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
+import theHexaghost.HexaMod;
 
-public class GoldPostCombatPower extends AbstractPower implements CloneablePowerInterface {
+public class MaxHPPostCombatPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = HexaMod.makeID("GoldPostCombatPower");
+    public static final String POWER_ID = HexaMod.makeID("MaxHPPostCombatPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/PostCombatGold84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/PostCombatGold32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Radiant84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Radiant32.png");
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public GoldPostCombatPower(final int amount) {
+    public MaxHPPostCombatPower(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
@@ -42,11 +42,11 @@ public class GoldPostCombatPower extends AbstractPower implements CloneablePower
 
     @Override
     public void onVictory() {
-        AbstractDungeon.getCurrRoom().addGoldToRewards(amount);
+        AbstractDungeon.player.increaseMaxHp(this.amount, true);
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new GoldPostCombatPower(amount);
+        return new CommonPostCombatPower(amount);
     }
 }

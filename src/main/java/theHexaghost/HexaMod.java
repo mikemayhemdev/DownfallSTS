@@ -245,6 +245,7 @@ public class HexaMod implements
         BaseMod.addRelicToCustomPool(new MatchstickCase(), TheHexaghost.Enums.GHOST_GREEN);
         BaseMod.addRelicToCustomPool(new RecyclingMachine(), TheHexaghost.Enums.GHOST_GREEN);
         BaseMod.addRelicToCustomPool(new SoulConsumer(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new Libra(), TheHexaghost.Enums.GHOST_GREEN);
         BaseMod.addRelicToCustomPool(new SoulOfChaos(), TheHexaghost.Enums.GHOST_GREEN);
         BaseMod.addRelicToCustomPool(new TheBrokenSeal(), TheHexaghost.Enums.GHOST_GREEN);
         BaseMod.addRelicToCustomPool(new CandleOfCauterizing(), TheHexaghost.Enums.GHOST_GREEN);

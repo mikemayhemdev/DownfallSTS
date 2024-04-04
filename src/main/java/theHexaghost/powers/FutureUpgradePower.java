@@ -17,7 +17,7 @@ import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 
-public class FutureUpgradePower extends AbstractPower implements CloneablePowerInterface, RemoveMeBabey {
+public class FutureUpgradePower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = HexaMod.makeID("FutureUpgradePower");
 

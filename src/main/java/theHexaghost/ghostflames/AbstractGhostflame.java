@@ -6,11 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,10 +16,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
-import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.actions.GreenFlameAction;
-import theHexaghost.powers.ApocalypticArmorPower;
-import theHexaghost.powers.EnhancePower;
 import theHexaghost.util.OnChargeSubscriber;
 import downfall.util.TextureLoader;
 import theHexaghost.vfx.MyOrb;
@@ -37,7 +30,7 @@ public abstract class AbstractGhostflame {
 
     public boolean charged = false;
 
-    public MyOrb graphicalRender;
+    public MyOrb graphicalRender; // its 'charged' variable controls whether to set fire particle effect to the flame
 
     public Hitbox hitbox;
     public Hitbox hitbox2;
@@ -55,13 +48,13 @@ public abstract class AbstractGhostflame {
     public float animAlphaBySlot[] = new float[3];
     private boolean useBrightTexture[] = new boolean[3];
 
-    public boolean advanceOnCardUse = false; // not whether "hexamod:advance" on card use, but whether task progression on card use, and currently only mayhem flame false
+    public boolean advanceOnCardUse = false; // not whether to advance on card use, but whether to trigger task progression on card use, and currently only mayhem flame false
 
     public static final float whiteOverlayTimer = .4F;
 
     private Texture whiteOverlay = TextureLoader.getTexture(HexaMod.makeUIPath("whiteOverlay.png"));
 
-
+    // End of turn advance is located at patch EndTurnAdvance.java
     public AbstractGhostflame(float x, float y) {
         lx = x;
         ly = y;
@@ -75,22 +68,23 @@ public abstract class AbstractGhostflame {
     public void advanceTrigger(AbstractCard c) {
     }
 
-    private void DoomsdayCheck(int amount) {
-        if (AbstractDungeon.player.hasPower(ApocalypticArmorPower.POWER_ID)) {
-            AbstractPower Doom = null;
-            int a = 0;
-            //Get the highest Doomsday that would trigger
-            for (AbstractPower p : AbstractDungeon.player.powers) {
-                if (p instanceof ApocalypticArmorPower) {
-                    if (p.amount <= amount && p.amount > a)
-                        Doom = p;
-                }
-            }
-            //Trigger it
-            if (Doom != null)
-                Doom.onSpecificTrigger();
-        }
-    }
+//    private void DoomsdayCheck(int amount) {
+//        if (AbstractDungeon.player.hasPower(ApocalypticArmorPower.POWER_ID)) {
+//            AbstractPower Doom = null;
+//            int a = 0;
+//            //Get the highest Doomsday that would trigger
+//            for (AbstractPower p : AbstractDungeon.player.powers) {
+//                if (p instanceof ApocalypticArmorPower) {
+//                    if (p.amount <= amount && p.amount > a)
+//                        Doom = p;
+//                }
+//            }
+//            //Trigger it
+//            if (Doom != null)
+//                Doom.onSpecificTrigger();
+//        }
+//    }
+
     public void advanceTriggerAnim() {
         if (getActiveFlamesTriggerCount() <= 2) {
             animAlphaBySlot[getActiveFlamesTriggerCount()] = AbstractGhostflame.whiteOverlayTimer;
@@ -113,27 +107,29 @@ public abstract class AbstractGhostflame {
             for (AbstractRelic r : AbstractDungeon.player.relics) {
                 if (r instanceof OnChargeSubscriber) ((OnChargeSubscriber) r).onCharge(this);
             }
-            if (AbstractDungeon.player instanceof TheHexaghost) {
+
+            if (AbstractDungeon.player instanceof TheHexaghost) {// Increase wheel rotate speed with more flames ignited
                 int x = 0;
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames)
                     if (gf.charged) x++;
                 ((TheHexaghost) AbstractDungeon.player).myBody.targetRotationSpeed = 100F + (20 * x);
             }
+
             for (int i = 0; i < 3; i++) {
                 if (animAlphaBySlot[i] <= 0F && !useBrightTexture[i]) {
                     animAlphaBySlot[i] = AbstractGhostflame.whiteOverlayTimer;
                 }
             }
-            reset();
-            int amountOfIgnitedGhostflames = 0;
-            for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
-                AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
-                if (gf.charged) {
-                     amountOfIgnitedGhostflames++;
-                }
-            }
+            resetVariable();
+//            int amountOfIgnitedGhostflames = 0;
+//            for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
+//                AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
+//                if (gf.charged) {
+//                     amountOfIgnitedGhostflames++;
+//                }
+//            }
 
-            DoomsdayCheck(amountOfIgnitedGhostflames);
+//            DoomsdayCheck(amountOfIgnitedGhostflames);
         }
     }
 
@@ -288,7 +284,7 @@ public abstract class AbstractGhostflame {
             charged = false;
             CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 297
             CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 298
-            reset();
+            resetVariable();
             if (AbstractDungeon.player instanceof TheHexaghost) {
                 int x = 0;
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames)
@@ -300,6 +296,8 @@ public abstract class AbstractGhostflame {
                 useBrightTexture[i] = false;
                 update();
             }
+        } else{ // to prevent an issue when you trigger the infernal by playing Unlimited Power at it
+            graphicalRender.charged = false;
         }
     }
 
@@ -309,17 +307,13 @@ public abstract class AbstractGhostflame {
 
     public Color getFlameColor() {
         return Color.SKY.cpy();
-        //return Color.SKY.cpy();
     }
 
     public Color getActiveColor() {
         return Color.PURPLE.cpy();
-        //return Color.PURPLE.cpy();
     }
 
-    public void reset() {
-
-    }
+    public void resetVariable() {}
 
     public void activate() {
         GhostflameHelper.activeGhostFlame = this;

@@ -126,7 +126,7 @@ public class SearingGhostflame extends AbstractGhostflame {
     }
 
     @Override
-    public void reset() {
+    public void resetVariable() {
         attacksPlayedThisTurn = 0;
     }
 

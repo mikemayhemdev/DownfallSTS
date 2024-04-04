@@ -41,11 +41,11 @@ public class MayhemGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
-        atb(new AbstractGameAction() {// 39
+        atb(new AbstractGameAction() {
             public void update() {
                 this.addToTop(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));// 42 44
-                this.isDone = true;// 49
-            }// 50
+                this.isDone = true;
+            }
         });
     }
 

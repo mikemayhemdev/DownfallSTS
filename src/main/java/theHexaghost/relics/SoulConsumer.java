@@ -29,9 +29,9 @@ public class SoulConsumer extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SoulConsumer.png"));
     private boolean activated = false;
     private static final int DAMAGE = 2;
-    // soul stone
+    // soul stone thermal stone(old)
     public SoulConsumer() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class SoulConsumer extends CustomRelic {
     @Override
     public void onExhaust(AbstractCard card) {
         ++this.counter;
-        if (this.counter % 4 == 0) {
+        if (this.counter % 3 == 0) {
             this.counter = 0;
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));

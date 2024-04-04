@@ -32,7 +32,7 @@
     "NAME": "魂石",
     "FLAVOR": "只需一点灵魂就能使这玩意生效！",
     "DESCRIPTIONS": [
-      "每当你在同回合 #y消耗 #b4 张牌，随机给予 #b1 层 #y易伤 。"
+      "每当你在同回合 #y消耗 #b3 张牌，随机给予 #b1 层 #y易伤 。"
     ]
   },
   "hexamod:RecyclingMachine": {
@@ -46,7 +46,7 @@
     "NAME": "火爆火柴",
     "FLAVOR": "划在哪儿都能着！",
     "DESCRIPTIONS": [
-      "战斗开始时， #yhexamod:点燃 当前鬼火并 #yhexamod:步进 。"
+      "每回合首次 #y点燃 时，可选择是否 #y步进 或 #y回退 。"
     ]
   },
   "hexamod:InflammatoryLetter": {
@@ -89,6 +89,13 @@
     "FLAVOR": "点火，点火，点火，点火，点火，点 火！",
     "DESCRIPTIONS": [
       "每当你打出 #b6 张牌，随机造成 #b6 点伤害。"
+    ]
+  },
+  "hexamod:Libra": {
+    "NAME": "天秤座",
+    "FLAVOR": "均衡，存乎万物之间。",
+    "DESCRIPTIONS": [
+      "若牌组中的攻击数大于技能数，变化所有初始打击，反之变化所有初始防御。若相等，则随机变化一半的打击与防御。"
     ]
   }
 }

@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.GhostlyFireEffect;
-import com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect;
 import com.megacrit.cardcrawl.vfx.combat.GhostIgniteEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.ghostflames.AbstractGhostflame;
@@ -18,7 +17,7 @@ public class MyOrb {
     public static final String ID = "MyOrb";
     public AbstractGhostflame myDaddy;
     public Hitbox mom;
-    public boolean charged = false;
+    public boolean charged = false; // controls whether to set fire particle effect to the flame (myDaddy here)
     public boolean hidden = false;
     public boolean playedSfx = false;
     private BobEffect effect = new BobEffect(2.0F);
@@ -29,66 +28,67 @@ public class MyOrb {
     private float particleTimer = 0.0F;
 
     public MyOrb(float x, float y, AbstractGhostflame pops, Hitbox mommy) {
-        this.x = x;// 32
-        this.y = y;// 33
-        this.activateTimer = 1 * 0.3F;// 34
-        this.color = Color.CHARTREUSE.cpy();// 35
-        this.color.a = 0.0F;// 36
-        this.hidden = false;// 37
+        this.x = x;
+        this.y = y;
+        this.activateTimer = 1 * 0.3F;
+        this.color = Color.CHARTREUSE.cpy();
+        this.color.a = 0.0F;
+        this.hidden = false;
         myDaddy = pops;
         mom = mommy;
-    }// 38
+    }
 
     public void charge() {
-        this.playedSfx = false;// 44
-        this.charged = true;// 45
-        this.hidden = false;// 46
-    }// 47
+        this.playedSfx = false;
+        this.charged = true;
+        this.hidden = false;
+    }
 
     public void update() {
         x = mom.cX;
         y = mom.cY;
-        if (!this.hidden) {// 64
-            if (this.charged) {// 65
-                this.activateTimer -= Gdx.graphics.getDeltaTime();// 66
-                if (this.activateTimer < 0.0F) {// 67
-                    if (!this.playedSfx) {// 68
-                        this.playedSfx = true;// 69
-                        AbstractDungeon.effectsQueue.add(new GhostIgniteEffect(this.x, this.y));// 70
-                        if (MathUtils.randomBoolean()) {// 71
-                            CardCrawlGame.sound.play("GHOST_ORB_IGNITE_1", 0.3F);// 72
+        if (!this.hidden) {
+            if (this.charged) {
+                this.activateTimer -= Gdx.graphics.getDeltaTime();
+                if (this.activateTimer < 0.0F) {
+                    if (!this.playedSfx) {
+                        this.playedSfx = true;
+                        AbstractDungeon.effectsQueue.add(new GhostIgniteEffect(this.x, this.y));
+                        if (MathUtils.randomBoolean()) {
+                            CardCrawlGame.sound.play("GHOST_ORB_IGNITE_1", 0.3F);
                         } else {
-                            CardCrawlGame.sound.play("GHOST_ORB_IGNITE_2", 0.3F);// 74
+                            CardCrawlGame.sound.play("GHOST_ORB_IGNITE_2", 0.3F);
                         }
                     }
 
-                    this.color.a = MathHelper.fadeLerpSnap(this.color.a, 1.0F);// 77
-                   // this.effect.update();// 78
-                   // this.effect.update();// 79
-                    this.particleTimer -= Gdx.graphics.getDeltaTime();// 80
-                    if (this.particleTimer < 0.0F) {// 81
-                        AbstractDungeon.effectList.add(new GhostlyFireEffect(this.x, this.y));// 82
-                        this.particleTimer = 0.06F;// 84
+                    this.color.a = MathHelper.fadeLerpSnap(this.color.a, 1.0F);
+                   // this.effect.update();  78
+                   // this.effect.update();  79
+                    this.particleTimer -= Gdx.graphics.getDeltaTime();
+                    if (this.particleTimer < 0.0F) {
+                        AbstractDungeon.effectList.add(new GhostlyFireEffect(this.x, this.y));
+                        System.out.println(myDaddy.getName() + " test  " );
+                        this.particleTimer = 0.06F;
                     }
                 }
             } else if (GhostflameHelper.activeGhostFlame == myDaddy) {
-                //this.effect.update();// 88
-                this.particleTimer -= Gdx.graphics.getDeltaTime();// 89
-                if (this.particleTimer < 0.0F) {// 90
-                    AbstractDungeon.effectList.add(new ActiveFireEffect(this.x, this.y, myDaddy.getActiveColor()));// 91
-                    this.particleTimer = 0.06F;// 93
+                //this.effect.update();
+                this.particleTimer -= Gdx.graphics.getDeltaTime();
+                if (this.particleTimer < 0.0F) {
+                    AbstractDungeon.effectList.add(new ActiveFireEffect(this.x, this.y, myDaddy.getActiveColor()));
+                    this.particleTimer = 0.06F;
                 }
             } else {
-               // this.effect.update();// 88
-                this.particleTimer -= Gdx.graphics.getDeltaTime();// 89
-                if (this.particleTimer < 0.0F) {// 90
-                    AbstractDungeon.effectList.add(new GhostlyWeakColorableFireEffect(this.x, this.y, myDaddy.getFlameColor()));// 91
-                    this.particleTimer = 0.06F;// 93
+               // this.effect.update();
+                this.particleTimer -= Gdx.graphics.getDeltaTime();
+                if (this.particleTimer < 0.0F) {
+                    AbstractDungeon.effectList.add(new GhostlyWeakColorableFireEffect(this.x, this.y, myDaddy.getFlameColor()));
+                    this.particleTimer = 0.06F;
                 }
             }
         } else {
-            this.color.a = MathHelper.fadeLerpSnap(this.color.a, 0.0F);// 97
+            this.color.a = MathHelper.fadeLerpSnap(this.color.a, 0.0F);
         }
 
-    }// 99
+    }
 }

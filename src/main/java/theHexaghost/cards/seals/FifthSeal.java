@@ -1,25 +1,19 @@
 package theHexaghost.cards.seals;
 
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
-import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
-import guardian.cards.*;
-import theHexaghost.powers.SealPostCombatPower;
-
-import java.util.ArrayList;
+import theHexaghost.powers.MaxHPPostCombatPower;
 
 @NoCompendium
 public class FifthSeal extends AbstractSealCard {
     public final static String ID = makeID("FifthSeal");
 
-    private float rotationTimer;
-    private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+//    private float rotationTimer;
+//    private int previewIndex;
+//    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
     public static final int MAGIC = 2;
 
     public FifthSeal() {
@@ -36,16 +30,13 @@ public class FifthSeal extends AbstractSealCard {
     }
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {
-//        applyToSelf(new SealPostCombatPower(1));
-        AbstractDungeon.player.increaseMaxHp(this.magicNumber, true);
+        applyToSelf(new MaxHPPostCombatPower(2));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(1);
-//            rawDescription = UPGRADE_DESCRIPTION;
-//            initializeDescription();
         }
     }
 

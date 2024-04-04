@@ -15,11 +15,10 @@ public class GlobalOnCardUsePatch {
     public static void Prefix(CardGroup __instance, AbstractCard abstractCard) {
         if (!activeGhostFlame.charged && renderFlames && activeGhostFlame.advanceOnCardUse)
             activeGhostFlame.advanceTrigger(abstractCard);
-        /*
-        if (abstractCard.hasTag(expansionContentMod.STUDY)) {
-            downfallMod.playedBossCardThisTurn = true;
-        }
 
-         */
+//        if (abstractCard.hasTag(expansionContentMod.STUDY)) {
+//            downfallMod.playedBossCardThisTurn = true;
+//        }
+
     }
 }
