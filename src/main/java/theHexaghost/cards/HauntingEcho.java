@@ -15,8 +15,6 @@ public class HauntingEcho extends AbstractHexaCard {
 
     public final static String ID = makeID("HauntingEcho");
 
-    //stupid intellij stuff ATTACK, SELF_AND_ENEMY, UNCOMMON
-
     private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
 
@@ -43,8 +41,8 @@ public class HauntingEcho extends AbstractHexaCard {
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = GhostflameHelper.activeGhostFlame.charged ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
-    }// 68
+        this.glowColor = GhostflameHelper.activeGhostFlame.charged ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+    }
 
     public void upgrade() {
         if (!upgraded) {

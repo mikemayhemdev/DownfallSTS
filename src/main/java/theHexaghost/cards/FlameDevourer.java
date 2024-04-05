@@ -46,6 +46,10 @@ public class FlameDevourer extends AbstractHexaCard{
         atb(new RetractAction());
     }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = ( (GhostflameHelper.getPreviousGhostFlame()).charged ) ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
