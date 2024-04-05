@@ -29,7 +29,7 @@
     "NAMES": [
       "intensity"
     ],
-    "DESCRIPTION": "Intensity increases the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when #yIgnited [REMOVE_SPACE]."
+    "DESCRIPTION": "Intensity increases the amount of damage, #ySoulburn, #yBlock [REMOVE_SPACE], and #yScry applied by Ghostflames when #yIgnited [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Soulburn",

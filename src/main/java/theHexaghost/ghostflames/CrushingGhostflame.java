@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,9 +12,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
+import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.EnhancePower;
 import downfall.util.TextureLoader;
 import theHexaghost.relics.JarOfFuel;
@@ -71,15 +74,25 @@ public class CrushingGhostflame extends AbstractGhostflame {
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {
-                    int x = damage;
-                    if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-                        x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
-                    }
+                    int x = getEffectCount();
                     isDone = true;
-                    AbstractMonster m = AbstractDungeon.getRandomMonster();
-                    if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                        addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
-                        addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
+
+                    if(HexaMod.used_inferno_potion > 0){
+                        for(int i = 0; i < HexaMod.used_inferno_potion; i++){
+                            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                                if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                                    addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                                    addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
+                                }
+                            }
+                        }
+                    }
+                    else {
+                        AbstractMonster m = AbstractDungeon.getRandomMonster();
+                        if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                            addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                            addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
+                        }
                     }
                 }
             });

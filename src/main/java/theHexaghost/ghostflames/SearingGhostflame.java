@@ -27,9 +27,9 @@ public class SearingGhostflame extends AbstractGhostflame {
     public static Texture bruh2 = TextureLoader.getTexture(HexaMod.makeUIPath("burn.png"));
     public int attacksPlayedThisTurn = 0;
 
-    private String ID = "hexamod:SearingGhostflame";
-    private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
-    private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
+    private final String ID = "hexamod:SearingGhostflame";
+    private final String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
+    private final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
     private Color flameColor = new Color(178F/255F, 249F/255F, 164F/255F, 1F);
     private Color activeColor = new Color(178F/255F * 0.5F, 249F/255F * 0.5F, 164F/255F * 0.5F, 1F);
@@ -59,13 +59,26 @@ public class SearingGhostflame extends AbstractGhostflame {
             public void update() {
                 isDone = true;
                 int x = getEffectCount();
-                AbstractMonster m = AbstractDungeon.getRandomMonster();
-                if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                    att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
-                    att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
-                    if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
-                        AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
-                        r.flash();
+
+                if(HexaMod.used_inferno_potion > 0){
+                    for(int i = 0; i < HexaMod.used_inferno_potion; i++){
+                        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                            if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                                att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
+                                att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.2F));
+                            }
+                        }
+                    }
+                }
+                else {
+                    AbstractMonster m = AbstractDungeon.getRandomMonster();
+                    if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                        att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
+                        att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
+                        if (AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)) {
+                            AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
+                            r.flash();
+                        }
                     }
                 }
             }
@@ -110,7 +123,6 @@ public class SearingGhostflame extends AbstractGhostflame {
         return x + "";
     }
 
-
     public int getEffectCount() {
         int x = magic;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
@@ -119,9 +131,6 @@ public class SearingGhostflame extends AbstractGhostflame {
         if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
             x += CandleOfCauterizing.SOULBURN_BONUS_AMOUNT;
         }
-//        if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
-//            x += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
-//        }
         return x;
     }
 

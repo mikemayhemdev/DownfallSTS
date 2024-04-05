@@ -42,13 +42,19 @@ public class BolsteringGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
-        int x = block;
-        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        int x = getEffectCount();
+        int n = HexaMod.used_inferno_potion;
+        if(n == 0) {
+            atb(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.5F));// 194
+            atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
+            atb(new GainBlockAction(AbstractDungeon.player, x));
+        }else {
+            for (int i = 0; i < HexaMod.used_inferno_potion; i++) {
+                atb(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.5F));// 194
+                atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
+                atb(new GainBlockAction(AbstractDungeon.player, x));
+            }
         }
-        atb(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.5F));// 194
-        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
-        atb(new GainBlockAction(AbstractDungeon.player, x));
     }
 
     @Override

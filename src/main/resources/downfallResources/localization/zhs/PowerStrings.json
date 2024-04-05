@@ -16,7 +16,7 @@
   "downfall:NeowInvulnerable": {
     "NAME": "生命之神",
     "DESCRIPTIONS": [
-      "你每打出一张牌，它回复 #b",
+      "每当你打出一张牌， #y涅奥 恢复 #b",
       " 点生命。"
     ]
   },

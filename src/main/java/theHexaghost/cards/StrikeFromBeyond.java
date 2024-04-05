@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
+import theHexaghost.actions.DrawEtherealAction;
 
 import java.util.Iterator;
 
@@ -30,6 +31,7 @@ public class StrikeFromBeyond extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+        atb(new DrawEtherealAction(1));
 //        addToBot(new AbstractGameAction() {
 //            @Override
 //            public void update() {
@@ -54,51 +56,48 @@ public class StrikeFromBeyond extends AbstractHexaCard {
 //                }
 //            }
 //        });
-        addToBot(new AbstractGameAction() {
-            public void update() {
-                if (this.duration == Settings.ACTION_DUR_MED) {
-                    if (AbstractDungeon.player.drawPile.isEmpty()) {
-                        this.isDone = true;
-                        return;
-                    }
-                    int counter = 0;
-                    CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-                    Iterator var2 = AbstractDungeon.player.drawPile.group.iterator();
-
-                    AbstractCard card;
-                    while(var2.hasNext() && counter < amount) {
-                        card = (AbstractCard)var2.next();
-                        if (card.isEthereal) {
-                            tmp.addToRandomSpot(card);
-                            counter++;
-                        }
-                    }
-
-                    if (tmp.size() == 0) {
-                        this.isDone = true;
-                        return;
-                    }
-
-                    for(int i = 0; i < counter; ++i) {
-                        if (!tmp.isEmpty()) {
-                            tmp.shuffle();
-                            card = tmp.getBottomCard();
-                            tmp.removeCard(card);
-                            if (AbstractDungeon.player.hand.size() == 10) {
-                                AbstractDungeon.player.createHandIsFullDialog();
-                            } else {
-                                p.drawPile.group.remove(card);
-                                p.drawPile.addToTop(card);
-                                this.addToBot(new DrawCardAction(1));
-                            }
-                        }
-                    }
-                    this.isDone = true;
-                }
-
-                this.tickDuration();
-            }
-        });
+//        addToBot(new AbstractGameAction() {
+//
+//            public void update() {
+//                if (AbstractDungeon.player.drawPile.isEmpty()) {
+//                    this.isDone = true;
+//                    return;
+//                }
+//                int counter = 0;
+//                CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+//                Iterator var2 = AbstractDungeon.player.drawPile.group.iterator();
+//
+//                AbstractCard card;
+//                while(var2.hasNext() && counter < amount) {
+//                    card = (AbstractCard)var2.next();
+//                    if (card.isEthereal) {
+//                        tmp.addToRandomSpot(card);
+//                        counter++;
+//                    }
+//                }
+//
+//                if (tmp.size() == 0) {
+//                    this.isDone = true;
+//                    return;
+//                }
+//
+//                for(int i = 0; i < counter; ++i) {
+//                    if (!tmp.isEmpty()) {
+//                        tmp.shuffle();
+//                        card = tmp.getBottomCard();
+//                        tmp.removeCard(card);
+//                        if (AbstractDungeon.player.hand.size() == 10) {
+//                            AbstractDungeon.player.createHandIsFullDialog();
+//                        } else {
+//                            p.drawPile.group.remove(card);
+//                            p.drawPile.addToTop(card);
+//                            this.addToBot(new DrawCardAction(1));
+//                        }
+//                    }
+//                }
+//                this.isDone = true;
+//            }
+//        });
     }
 
     public void upgrade() {

@@ -26,8 +26,6 @@ public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCa
     public static final String[] NAMES = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("OctoChoiceCards")).NAMES;
     public static final String[] TEXT = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("OctoChoiceCards")).TEXT;
 
-    //stupid intellij stuff SKILL, SELF, RARE
-
     public KnowingSkullWish() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         isEthereal = true;
@@ -63,13 +61,13 @@ public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCa
     public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "ks:0": {
-                int gold = upgraded ? 50 : 40;
+                int gold = upgraded ? 20 : 15;
                 atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 3));
                 atb(new ChangeGoldAction(gold));
                 break;
             }
             case "ks:1": {
-                atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1));
+                atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 2));
                 ArrayList<AbstractCard> list = new ArrayList<>();
                 for (AbstractCard c : AbstractDungeon.colorlessCardPool.group) {
                     list.add(c);
@@ -81,7 +79,7 @@ public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCa
                 break;
             }
             case "ks:2": {
-                int damage = upgraded ? 2 : 5;
+                int damage = upgraded ? 2 : 4;
                 atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, damage));
                 atb(new ObtainPotionAction(PotionHelper.getRandomPotion()));
                 break;

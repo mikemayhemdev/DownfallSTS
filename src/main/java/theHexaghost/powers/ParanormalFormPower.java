@@ -41,8 +41,8 @@ public class ParanormalFormPower extends AbstractPower implements CloneablePower
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        super.onUseCard(card, action);
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        super.onPlayCard(card, m);
         if(card.isEthereal){
             AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
             if (mo != null) {
@@ -50,6 +50,17 @@ public class ParanormalFormPower extends AbstractPower implements CloneablePower
             }
         }
     }
+
+//    @Override
+//    public void onUseCard(AbstractCard card, UseCardAction action) {
+//        super.onUseCard(card, action);
+//        if(card.isEthereal){
+//            AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
+//            if (mo != null) {
+//                this.addToTop(new FastLoseHPAction(mo, AbstractDungeon.player, this.amount, AbstractGameAction.AttackEffect.FIRE));
+//            }
+//        }
+//    }
 
     //    @Override
 //    public void onAfterCardPlayed(AbstractCard card) {

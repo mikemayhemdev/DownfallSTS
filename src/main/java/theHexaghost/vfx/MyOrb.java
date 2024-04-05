@@ -62,8 +62,8 @@ public class MyOrb {
                     }
 
                     this.color.a = MathHelper.fadeLerpSnap(this.color.a, 1.0F);
-                   // this.effect.update();  78
-                   // this.effect.update();  79
+                   // this.effect.update();
+                   // this.effect.update();
                     this.particleTimer -= Gdx.graphics.getDeltaTime();
                     if (this.particleTimer < 0.0F) {
                         AbstractDungeon.effectList.add(new GhostlyFireEffect(this.x, this.y));

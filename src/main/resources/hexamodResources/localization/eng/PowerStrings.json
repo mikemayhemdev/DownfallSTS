@@ -224,7 +224,7 @@
     ]
   },
   "hexamod:MaxHPPostCombatPower": {
-    "NAME": "Sealed Reward: Max Hp",
+    "NAME": "Sealed Reward: Max HP",
     "DESCRIPTIONS": [
       "At the end of combat, gain #b",
       " Max HP."

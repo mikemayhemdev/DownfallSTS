@@ -18,7 +18,7 @@
     "FLAVOR": "Let’s see if we can do... better.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL Whenever you #yIgnite a Ghostflame , gain #b3 #yBlock [REMOVE_SPACE]."
+      ".[] NL Whenever you #yIgnite a Ghostflame , gain #b4 #yBlock [REMOVE_SPACE]."
     ]
   },
   "hexamod:IceCube": {
@@ -46,7 +46,7 @@
     "NAME": "Sneaky Teakwood Match",
     "FLAVOR": "Lights on any surface!",
     "DESCRIPTIONS": [
-      "The first time you #yIgnite each turn, you can choose whether to #yAdvancce or #yRetract [REMOVE_SPACE]."
+      "The first time you #yhexamod:Ignite each turn, you can choose whether to #yhexamod:Advance or #yhexamod:Retract [REMOVE_SPACE]."
     ]
   },
   "hexamod:InflammatoryLetter": {
@@ -60,7 +60,7 @@
     "NAME": "Soul of Chaos",
     "FLAVOR": "Mayhem, made manifest.",
     "DESCRIPTIONS": [
-      "The second #ySearing #yGhostflame becomes a #yMayhem #yGhostflame [REMOVE_SPACE]. NL #yMayhem #yGhostflame activates when you end your turn on it. NL #yIgnition [REMOVE_SPACE]: Play the top card of your draw pile."
+      "The second #ySearing #yGhostflame becomes a #yMayhem #yGhostflame [REMOVE_SPACE]. NL #yMayhem #yGhostflame activates when you end your turn on it. NL #yIgnition [REMOVE_SPACE]: #yScry #bn and then play the top card of your draw pile, #bn is modified by #yIntensity [REMOVE_SPACE]."
     ]
   },
   "hexamod:JarOfFuel": {
@@ -95,7 +95,7 @@
     "NAME": "Libra",
     "FLAVOR": "Balance in all things.",
     "DESCRIPTIONS": [
-      "If you have more Attacks than Skills in your deck, transform all Strikes, otherwise transform all Defends. If it's the same, random half of all Strikes and Defends will be transformed."
+      "Transform part of you starter Strikes and Defends so that the proportion of Attacks and Skills is more balanced."
     ]
   }
 }

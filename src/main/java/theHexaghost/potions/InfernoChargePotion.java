@@ -45,15 +45,16 @@ public class InfernoChargePotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-
-        for (int i = 0; i < this.potency; i++) {
-            for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-                if (gf instanceof InfernoGhostflame) {
-                    addToBot(new ExtinguishAction(gf));
-                    addToBot(new ChargeAction(gf));
-                }
-            }
-        }
+//
+//        for (int i = 0; i < this.potency; i++) {
+//            for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
+//                if (gf instanceof InfernoGhostflame) {
+//                    addToBot(new ExtinguishAction(gf));
+//                    addToBot(new ChargeAction(gf));
+//                }
+//            }
+//        }
+        HexaMod.used_inferno_potion += this.potency; //TODO add a power so people dont forget it's activated.
     }
 
 
