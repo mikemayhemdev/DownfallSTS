@@ -13,14 +13,9 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
 import downfall.util.TextureLoader;
-import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
-import theHexaghost.actions.AdvanceAction;
-import theHexaghost.actions.ChargeCurrentFlameAction;
 
 import java.util.ArrayList;
-
-import static theHexaghost.HexaMod.renderFlames;
 
 public class CrispyPower_new extends TwoAmountPower {
     public static final String POWER_ID = HexaMod.makeID("CrispyPower_new");
@@ -80,59 +75,6 @@ public class CrispyPower_new extends TwoAmountPower {
         exhausted_cards_this_turn += 1;
         amount2 -= 1;
     }
-
-//    @Override
-//    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
-//        for(AbstractCard c: AbstractDungeon.player.hand.group){
-//            if(c.isEthereal){
-//                exhausted_cards_this_turn += 1;
-//            }
-//        }
-//    }
-
-//    @Override
-//    public void atEndOfTurn(boolean isPlayer) {
-//        super.atEndOfTurn(isPlayer);
-//        if(exhausted_cards_this_turn >= 2) return;
-//        for(AbstractCard c: AbstractDungeon.player.hand.group){
-//            if(c.isEthereal){
-//                exhausted_cards_this_turn += 1;
-//            }
-//        }
-//        if(isPlayer && exhausted_cards_this_turn >= 2 ){
-//            flash();
-//            for(int i = 0; i < this.amount; i++){
-//                if ( renderFlames ) {
-//                    addToBot(new ChargeCurrentFlameAction());
-//                }
-//            }
-//        }
-//    }
-
-//    public void onSpecificTrigger(){
-////        for(AbstractCard c: AbstractDungeon.player.hand.group){
-////            if(c.isEthereal){
-////                exhausted_cards_this_turn += 1;
-////            }
-////        }
-//        if(exhausted_cards_this_turn >= 2 ){
-//            flash();
-//            for(int i = 0; i < this.amount; i++){
-//                if ( renderFlames ) {
-//                    addToBot(new ChargeCurrentFlameAction());
-//                }
-//            }
-//        }
-//    }
-
-//    @Override
-//    public void atEndOfRound() {
-//        if (GhostflameHelper.activeGhostFlame.charged) {
-//            AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
-//        }
-//        exhausted_cards_this_turn = 0;
-//    } //TODO: check https://github.com/daviscook477/BaseMod/wiki/Hooks PreMonsterTurn to advance ealier than nearly at the start of player's turn
-
 
     @Override
     public void updateDescription() {

@@ -39,7 +39,7 @@
     "hexamod:InfernoGhostflame": {
     "NAME": "Inferno Ghostflame",
     "DESCRIPTION": [
-      "#yIgnited [REMOVE_SPACE]. ",
+      "#yIgnited [REMOVE_SPACE]. #yExtinguishes at end of any turn.",
 	  "Ignites when spending [E] [E] [E] .",
 	  "Ignites when spending [E] [E] .",
 	  "Ignites when spending [E] .",
