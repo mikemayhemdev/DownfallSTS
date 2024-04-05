@@ -1,7 +1,9 @@
 package theHexaghost.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
@@ -9,6 +11,7 @@ import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ChargeCurrentFlameAction;
+import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
 import theHexaghost.ghostflames.InfernoGhostflame;
 import theHexaghost.ghostflames.MayhemGhostflame;
@@ -40,6 +43,7 @@ public class EndTurnAdvance {
                 if(AbstractDungeon.player.hasPower(CrispyPower_new.POWER_ID)){
                     if (AbstractDungeon.player.hasPower(StopFromAdvancingPower.POWER_ID)) {
                         AbstractDungeon.actionManager.addToBottom(new ExtinguishCurrentFlameAction());
+                        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5F));
                     }
                     int time_of_ignition = AbstractDungeon.player.getPower(CrispyPower_new.POWER_ID).amount;
                     int cards_already_exhausted = CrispyPower_new.exhausted_cards_this_turn;
@@ -55,14 +59,24 @@ public class EndTurnAdvance {
                                 AbstractDungeon.actionManager.addToBottom(new ChargeCurrentFlameAction());
                             }
                         }
+                        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5F));
                     }
                 } else if (AbstractDungeon.player.hasPower(StopFromAdvancingPower.POWER_ID)) {
-                    GhostflameHelper.activeGhostFlame.extinguish();
+                    AbstractDungeon.actionManager.addToBottom(new ExtinguishCurrentFlameAction());
                 }
 
-                if (GhostflameHelper.activeGhostFlame.charged) {
-                    AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
-                }
+                AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        if (GhostflameHelper.activeGhostFlame.charged) {
+                            AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
+                        }
+                        this.isDone = true;
+                    }
+                });
+
+
+
             }else{
 
                 if(AbstractDungeon.player.hasPower(CrispyPower_new.POWER_ID)){
@@ -81,16 +95,23 @@ public class EndTurnAdvance {
                             }
                         }
                     }
+                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5F));
                 }
 
-                if (GhostflameHelper.activeGhostFlame.charged) {
-                    AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
-                }
+                AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        if (GhostflameHelper.activeGhostFlame.charged) {
+                            AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
+                        }
+                        this.isDone = true;
+                    }
+                });
 
             }
 
             if(GhostflameHelper.hexaGhostFlames.get(5) instanceof InfernoGhostflame) { // only auto extinguish inferno when it's not replaced to others
-                GhostflameHelper.hexaGhostFlames.get(5).extinguish();
+                AbstractDungeon.actionManager.addToBottom(new ExtinguishAction(GhostflameHelper.hexaGhostFlames.get(5)));
             }
         }
         downfallMod.playedBossCardThisTurn = false;

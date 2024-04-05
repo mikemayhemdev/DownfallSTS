@@ -45,6 +45,11 @@ public class CrispyPower_new extends TwoAmountPower {
     }
 
     @Override
+    public void playApplyPowerSfx() {
+        //to prevent the visual reminder below noising all the time
+    }
+
+    @Override
     public void update(int slot) {
         super.update(slot);
         int count = 0;
