@@ -95,11 +95,11 @@ public abstract class AbstractGhostflame {
         return 0;
     }
 
-    public void charge() {
+    public void charge() { // called after a card's use() has been called( actions within added to action queue )
         if (!charged) {
             flash();
             charged = true;
-            atb(new GreenFlameAction(graphicalRender));
+            atb(new GreenFlameAction(graphicalRender, this));
             onCharge();
             for (AbstractPower p : AbstractDungeon.player.powers) {
                 if (p instanceof OnChargeSubscriber) ((OnChargeSubscriber) p).onCharge(this);
@@ -121,15 +121,6 @@ public abstract class AbstractGhostflame {
                 }
             }
             resetVariable();
-//            int amountOfIgnitedGhostflames = 0;
-//            for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
-//                AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
-//                if (gf.charged) {
-//                     amountOfIgnitedGhostflames++;
-//                }
-//            }
-
-//            DoomsdayCheck(amountOfIgnitedGhostflames);
         }
     }
 
