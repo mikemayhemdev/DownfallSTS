@@ -42,7 +42,6 @@ import theHexaghost.cards.seals.*;
 import theHexaghost.events.*;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.BolsteringGhostflame;
-import theHexaghost.patches.ExhaustCardTickPatch;
 import theHexaghost.potions.DoubleChargePotion;
 import theHexaghost.potions.EctoCoolerPotion;
 import theHexaghost.potions.InfernoChargePotion;
@@ -101,7 +100,6 @@ public class HexaMod implements
     public static int[] new_seal_weight = new int[7];
 //    public double[] seal_chance = new double[7];
     public static boolean reseted_seal_weight = false; // becomes true when you start a new run and the seal weights have been changed to the default value
-    public static boolean obtained_the_broken_seal_in_combat = false;
     public static int bonus_seal_drop_chance = 0;
     public static int new_bonus_seal_drop_chance = 0;
     public static int num_of_seals_in_deck = 0;
@@ -292,8 +290,8 @@ public class HexaMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         GhostflameHelper.init();
-        ExhaustCardTickPatch.exhaustedLastTurn = false;
-        ExhaustCardTickPatch.exhaustedThisTurn = false;
+//        ExhaustCardTickPatch.exhaustedLastTurn = false;
+//        ExhaustCardTickPatch.exhaustedThisTurn = false;
 
         if (AbstractDungeon.player instanceof TheHexaghost) {
             renderFlames = true;
@@ -303,10 +301,10 @@ public class HexaMod implements
             }
         }
 
-        for(int i = 1; i <= 6; i++){
+        for (int i = 1; i <= 6; i++) {
             new_seal_weight[i] = 0;
-            System.out.println("new_seal_wright reseted");
         }
+        //            System.out.println("new_seal_wright reseted");
         new_bonus_seal_drop_chance = 0;
 
         cards_exhausted_last_turn = 0;
@@ -347,11 +345,10 @@ public class HexaMod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         renderFlames = false;
-        ExhaustCardTickPatch.exhaustedLastTurn = false;
-        ExhaustCardTickPatch.exhaustedThisTurn = false;
-        for(int i = 1; i <= 6; i++){
+//        ExhaustCardTickPatch.exhaustedLastTurn = false;
+//        ExhaustCardTickPatch.exhaustedThisTurn = false;
+        for (int i = 1; i <= 6; i++) {
             seal_weight[i] = seal_weight[i] + new_seal_weight[i];
-            System.out.println("combat end new seal_weight" + i + " : " + seal_weight[i]);
         }
         bonus_seal_drop_chance = bonus_seal_drop_chance + new_bonus_seal_drop_chance;
     }
@@ -453,7 +450,6 @@ public class HexaMod implements
     public void receivePostDeath() {
         renderFlames = false;
         reseted_seal_weight = false;
-        System.out.println("Reallowing seal weights to be reset.");
     }
 
     public void receivePostInitialize() {
@@ -572,7 +568,7 @@ public class HexaMod implements
     @Override
     public void receiveStartGame() {
         if(!reseted_seal_weight){
-            System.out.println("Resetting seal weights on new run.");
+//            System.out.println("Resetting seal weights on new run.");
             for(int i = 0; i <= 6; i++){
                 seal_weight[i] = 20;
             }

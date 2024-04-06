@@ -23,7 +23,6 @@ import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;
-import theHexaghost.powers.ParanormalFormPower;
 import theHexaghost.relics.CandleOfCauterizing;
 import theHexaghost.vfx.AfterlifePlayEffect;
 
@@ -201,38 +200,34 @@ public abstract class AbstractHexaCard extends CustomCard {
     @Override
     public void triggerOnExhaust() {
         int bonus = 0;
-//        if(AbstractDungeon.player.hasPower(ParanormalFormPower.POWER_ID ) && this.hasTag(HexaMod.AFTERLIFE) ){
-//            bonus = AbstractDungeon.player.getPower(ParanormalFormPower.POWER_ID).amount;
-//        }
 
-        for(int i = 0; i < bonus + 1; i++) {
-            att(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    if (useAfterlifeVFX() && duration == startDuration) {
-                        atb(new VFXAction(new AfterlifePlayEffect(AbstractHexaCard.this)));
-                    }
-                    tickDuration();
-                    if (isDone) {
+        att(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (useAfterlifeVFX() && duration == startDuration) {
+                    atb(new VFXAction(new AfterlifePlayEffect(AbstractHexaCard.this)));
+                }
+                tickDuration();
+                if (isDone) {
 
-                        atb(new WaitAction(0.2F)); // from ShowCardAction
+                    atb(new WaitAction(0.2F)); // from ShowCardAction
 
-                        applyPowers();
-                        afterlife();
+                    applyPowers();
+                    afterlife();
 
-                        atb(new WaitAction(0.15F)); // from UseCardAction
+                    atb(new WaitAction(0.15F)); // from UseCardAction
 
-                        if (type == AbstractCard.CardType.POWER) { // special case for powers in UseCardAction
-                            if (com.megacrit.cardcrawl.core.Settings.FAST_MODE) {
-                                atb(new WaitAction(0.1F));
-                            } else {
-                                atb(new WaitAction(0.7F));
-                            }
+                    if (type == AbstractCard.CardType.POWER) { // special case for powers in UseCardAction
+                        if (com.megacrit.cardcrawl.core.Settings.FAST_MODE) {
+                            atb(new WaitAction(0.1F));
+                        } else {
+                            atb(new WaitAction(0.7F));
                         }
                     }
                 }
-            });
-        }
+            }
+        });
+
     }
 
     protected boolean useAfterlifeVFX() {

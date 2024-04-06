@@ -55,6 +55,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_TwistedFunnel());
         addRelic(new CBR_HornCleat());
+        addRelic(new CBR_SneckoSkull());
 
         // animation
         try {
@@ -74,11 +75,10 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
         if (!looped) {
             switch (turn) {
-                case 0:
-                    //Turn 1
+                case 0: //Turn 1
                     if (AbstractDungeon.ascensionLevel >= 19) {
                         addToList(cardsList, new EnBurst());
-                        addToList(cardsList, new EnCripplingCloud()); //Removed
+                        addToList(cardsList, new EnCripplingCloud());
                         AbstractBossCard c = new EnCripplingCloud();
                         c.cost = 0;
                         c.freeToPlayOnce = true;
@@ -87,31 +87,29 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
                         addToList(cardsList, new EnSurvivor());
                     }
                     else {
-                        addToList(cardsList, new EnCripplingCloud()); //Removed
+                        addToList(cardsList, new EnCripplingCloud());
                         addToList(cardsList, new EnSurvivor());
                         addToList(cardsList, new EnBurst());
                     }
                     turn++;
                     break;
-                case 1:
-                    //Turn 2
+                case 1: //Turn 2
                     addToList(cardsList, new EnPoisonedStab());
                     addToList(cardsList, new EnDodgeAndRoll());
                     addToList(cardsList, new EnStrikeGreen());
                     turn++;
                     break;
-                case 2:
-                    //Turn 3
-                    addToList(cardsList, new EnBane(), extraUpgrades);
-                    addToList(cardsList, new EnDefendGreen());
-                    addToList(cardsList, new EnDeflect());
+                case 2: //Turn 3
+                    addToList(cardsList, new EnFootwork(),extraUpgrades);
+                    addToList(cardsList, new EnNoxiousFumes());
+                    addToList(cardsList, new EnDeadlyPoison());
                     turn++;
                     break;
-                case 3:
-                    //Turn 4
-                    addToList(cardsList, new EnFootwork()); //Removed
-                    addToList(cardsList, new EnNoxiousFumes()); //Removed
-                    addToList(cardsList, new EnDeadlyPoison());
+                case 3: //Turn 4
+
+                    addToList(cardsList, new EnBane());
+                    addToList(cardsList, new EnStrikeGreen());
+                    addToList(cardsList, new EnDeflect());
                     turn = 0;
                     looped = true;
                     break;
@@ -120,26 +118,27 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
         } else {
 
             switch (turn) {
-                case 0:
+                case 0: // Turn 5 + 3n
                     addToList(cardsList, new EnDodgeAndRoll());
                     addToList(cardsList, new EnStrikeGreen());
                     addToList(cardsList, new EnSurvivor());
                     turn++;
                     break;
-                case 1:
+                case 1: // Turn 6 + 3n
                     addToList(cardsList, new EnBurst());
-                    addToList(cardsList, new EnDeadlyPoison());
-                    AbstractBossCard c = new EnDeadlyPoison();
-                    c.cost = 0;
-                    c.freeToPlayOnce = true;
-                    c.modifyCostForCombat(-1);
-                    addToList(cardsList, c);
                     addToList(cardsList, new EnDeflect());
+                    addToList(cardsList, new EnDeflect());
+                    addToList(cardsList, new EnDeadlyPoison());
+//                    c.cost = 0;
+//                    c.freeToPlayOnce = true;
+//                    c.modifyCostForCombat(-1);
+//                    addToList(cardsList, c);
+//                    addToList(cardsList, new EnDeflect());
                     turn++;
                     break;
-                case 2:
-                    addToList(cardsList, new EnBane(), extraUpgrades);
+                case 2: // Turn 7 + 3n
                     addToList(cardsList, new EnPoisonedStab());
+                    addToList(cardsList, new EnStrikeGreen());
                     addToList(cardsList, new EnDefendGreen());
                     turn = 0;
                     break;

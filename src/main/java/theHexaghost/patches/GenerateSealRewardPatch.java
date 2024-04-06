@@ -1,15 +1,13 @@
 package theHexaghost.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.rooms.EventRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
+import theHexaghost.relics.TheBrokenSeal;
 import theHexaghost.util.SealSealReward;
 
 public class GenerateSealRewardPatch {
@@ -20,7 +18,7 @@ public class GenerateSealRewardPatch {
 )
 public static class DropSeals {
     public static void Postfix(AbstractRoom __instance) {
-        if(AbstractDungeon.player instanceof TheHexaghost) {
+        if( AbstractDungeon.player instanceof TheHexaghost && (!AbstractDungeon.player.hasRelic(TheBrokenSeal.ID)) ) {
             int chance = 15;
             if (__instance instanceof MonsterRoomElite) {
                 chance = 35;
@@ -33,7 +31,7 @@ public static class DropSeals {
             if (__instance.rewards.size() >= 5) {
                 chance = 0;
             }
-            System.out.println("Seal Dropchance: " + chance);
+//            System.out.println("Seal Dropchance: " + chance);
             if (AbstractDungeon.potionRng.random(0, 99) <= chance) {
                 __instance.rewards.add(new SealSealReward());
             }

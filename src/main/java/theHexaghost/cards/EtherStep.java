@@ -11,17 +11,15 @@ import theHexaghost.HexaMod;
 public class EtherStep extends AbstractHexaCard{
     public final static String ID = makeID("EtherStep");
 
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 4;
+    private static final int DAMAGE = 9;
+    private static final int UPG_DAMAGE = 3;
 
     public EtherStep() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 1;
         isEthereal = true;
-
         tags.add(HexaMod.AFTERLIFE);
-//        HexaMod.loadJokeCardImage(this, "Strike.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

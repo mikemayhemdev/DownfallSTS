@@ -10,7 +10,7 @@
     "NAME": "The Broken Seal",
     "FLAVOR": "Unlimited, unrestrained, unquenchable power.",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10, then heal all of your HP. Start each combat with #b2 #yStrength [REMOVE_SPACE], #b2 #yDexterity [REMOVE_SPACE], and #b2 #yhexamod:Intensity [REMOVE_SPACE]. You can not receive #pThe #pBroken #pSeal again."
+      "Upon pickup, raise your Max HP by #b10, then heal all of your HP. Start each combat with #b2 #yStrength [REMOVE_SPACE], #b2 #yDexterity [REMOVE_SPACE], and #b2 #yhexamod:Intensity [REMOVE_SPACE]. You can not receive #pThe #pBroken #pSeal and other seals again."
     ]
   },
   "hexamod:UnbrokenSoul": {
