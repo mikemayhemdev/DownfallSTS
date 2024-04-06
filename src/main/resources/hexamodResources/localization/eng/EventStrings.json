@@ -53,10 +53,12 @@
     "NAME": "HexaFalling",
     "DESCRIPTIONS": [
       "You, being unbound by the feeble laws of gravity, ~float~ over the pit harmlessly.",
-      "TODO..."
+      " NL Or, just float at your will."
     ],
+    "Translator Note": "the second sentence above is added after the vanilla one, which offers 3 choices [land](skill), [channel](power) and [strike](attack), you can preview below",
+    "preview": "While in free fall you consider your options: Land safely with your greatest techniques. Channel a Power to survive the fall. Strike at the wall to hang on to it.",
     "OPTIONS": [
-      "[Float] #rLose #rnothing...",
+      "[Float] #gLose #gnothing...",
       "[Leave]"
     ]
   },
