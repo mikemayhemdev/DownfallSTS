@@ -29,15 +29,23 @@ public class BrokenSealEffect extends AbstractGameEffect {
     private AbstractRelic sealRelic;
 
     private ArrayList<AbstractCard> seals = new ArrayList<>();
+    private boolean up1, up2, up3, up4, up5, up6;
 
-    public BrokenSealEffect() {
+    public BrokenSealEffect(boolean upp1, boolean upp2, boolean upp3, boolean upp4, boolean upp5, boolean upp6 ) {
         this.startingDuration = this.duration = 6F;
+        this.up1 = upp1;
+        this.up2 = upp2;
+        this.up3 = upp3;
+        this.up4 = upp4;
+        this.up5 = upp5;
+        this.up6 = upp6;
     }
 
     public void update() {
         //this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration <= 5.5F && this.cardsShown == 0){
             AbstractCard c = new FirstSeal();
+            if(up1) c.upgrade();
             c.target_x = Settings.WIDTH / 2F - effectWidth1 * Settings.scale;
             c.target_y = Settings.HEIGHT / 2F - effectHeight * Settings.scale + 75F * Settings.scale;
             c.current_x = Settings.WIDTH / 2F;
@@ -50,6 +58,7 @@ public class BrokenSealEffect extends AbstractGameEffect {
         }
         if (this.duration <= 5.2F && this.cardsShown == 1){
             AbstractCard c = new SecondSeal();
+            if(up2) c.upgrade();
             c.target_x = Settings.WIDTH / 2F - effectWidth2 * Settings.scale;
             c.target_y = Settings.HEIGHT / 2F * Settings.scale + 75F * Settings.scale;
             c.current_x = Settings.WIDTH / 2F;
@@ -63,6 +72,7 @@ public class BrokenSealEffect extends AbstractGameEffect {
         }
         if (this.duration <= 4.9F && this.cardsShown == 2){
             AbstractCard c = new ThirdSeal();
+            if(up3) c.upgrade();
             c.target_x = Settings.WIDTH / 2F - effectWidth1 * Settings.scale;
             c.target_y = Settings.HEIGHT / 2F + effectHeight * Settings.scale + 75F * Settings.scale;
             c.current_x = Settings.WIDTH / 2F;
@@ -76,6 +86,7 @@ public class BrokenSealEffect extends AbstractGameEffect {
         }
         if (this.duration <= 4.6F && this.cardsShown == 3){
             AbstractCard c = new FourthSeal();
+            if(up4) c.upgrade();
             c.target_x = Settings.WIDTH / 2F + effectWidth1 * Settings.scale;
             c.target_y = Settings.HEIGHT / 2F + effectHeight * Settings.scale + 75F * Settings.scale;
             c.current_x = Settings.WIDTH / 2F;
@@ -88,7 +99,8 @@ public class BrokenSealEffect extends AbstractGameEffect {
             this.cardsShown++;
         }
         if (this.duration <= 4.3F && this.cardsShown == 4){
-            AbstractCard c = new FifthSeal();
+            AbstractCard c = new SixthSeal();
+            if(up5) c.upgrade();
             c.target_x = Settings.WIDTH / 2F + effectWidth2 * Settings.scale;
             c.target_y = Settings.HEIGHT / 2F * Settings.scale + 75F * Settings.scale;
             c.current_x = Settings.WIDTH / 2F;
@@ -101,7 +113,8 @@ public class BrokenSealEffect extends AbstractGameEffect {
             this.cardsShown++;
         }
         if (this.duration <= 4F && this.cardsShown == 5){
-            AbstractCard c = new SixthSeal();
+            AbstractCard c = new FifthSeal();
+            if(up6) c.upgrade();
             c.target_x = Settings.WIDTH / 2F + effectWidth1 * Settings.scale;
             c.target_y = Settings.HEIGHT / 2F - effectHeight * Settings.scale + 75F * Settings.scale;
             c.current_x = Settings.WIDTH / 2F;

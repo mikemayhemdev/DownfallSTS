@@ -50,7 +50,16 @@ public class SpectersWail extends AbstractHexaCard {
         }
         AbstractPlayer p=AbstractDungeon.player;
         this.applyPowers();
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.baseDamage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
+        if(AbstractDungeon.player.hasPower("Pen Nib") ){
+
+            int damages[] = DamageInfo.createDamageMatrix(this.baseDamage);
+            for(int i = 0; i < damages.length; i++){
+                damages[i] /= 2;
+            }
+            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, damages, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
+        }else {
+            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.baseDamage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
+        }
         atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VigorPower.POWER_ID));
     }
 
