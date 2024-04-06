@@ -67,7 +67,13 @@ public class GhostLash extends AbstractHexaCard {
         AbstractMonster m = AbstractDungeon.getRandomMonster();
         if (m == null) return;
         this.calculateCardDamage(m);
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        if(AbstractDungeon.player.hasPower("Pen Nib") ){
+            this.damage /= 2;
+            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
+            this.damage *= 2;
+        }else {
+            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        }
         this.can_show = false;
     }
 

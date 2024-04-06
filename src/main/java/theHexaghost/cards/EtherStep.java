@@ -34,7 +34,13 @@ public class EtherStep extends AbstractHexaCard{
         AbstractMonster m = AbstractDungeon.getRandomMonster();
         if (m == null) return;
         this.calculateCardDamage(m);
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+        if(AbstractDungeon.player.hasPower("Pen Nib") ){
+            this.damage /= 2;
+            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+            this.damage *= 2;
+        }else {
+            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+        }
     }
 
     public void upgrade() {

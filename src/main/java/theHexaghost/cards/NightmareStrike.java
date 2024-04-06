@@ -36,7 +36,13 @@ public class NightmareStrike extends AbstractHexaCard {
         AbstractMonster m = AbstractDungeon.getRandomMonster();
         if (m == null) return;
         this.calculateCardDamage(m);
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        if(AbstractDungeon.player.hasPower("Pen Nib") ){
+            this.damage /= 2;
+            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+            this.damage *= 2;
+        }else {
+            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        }
     }
 
     public void upgrade() {
