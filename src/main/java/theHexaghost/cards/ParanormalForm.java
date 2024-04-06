@@ -12,7 +12,7 @@ public class ParanormalForm extends AbstractHexaCard {
     //Poltergeist
 
     private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 3;
+    private static final int UPG_MAGIC = 2;
 
     public ParanormalForm() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
