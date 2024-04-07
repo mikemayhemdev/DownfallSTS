@@ -95,8 +95,9 @@
     "NAME": "Libra",
     "FLAVOR": "Balance in all things.",
     "DESCRIPTIONS": [
-      "Transform part of you starter Strikes and Defends so that the proportion of Attacks and Skills is more balanced.",
-      "The scales of justice tip."
+      "Choose any number of your Strikes and Defends to #yTransform into their opposite type.",
+      "The scales of justice tip.",
+      "Choose any number of cards to Transform into the opposite type."
     ]
   }
 }

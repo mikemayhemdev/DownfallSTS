@@ -58,23 +58,6 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
 
     }
 
-//    private AbstractCard getRandomNonBasicCard() {
-//        ArrayList<AbstractCard> list = new ArrayList<>();
-//        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-//            if ((c.rarity == AbstractCard.CardRarity.COMMON)) {
-//                list.add(c);
-//            }
-//        }
-//
-//
-//        if (list.isEmpty()) {
-//            return null;
-//        }
-//
-//        java.util.Collections.shuffle(list, new java.util.Random(AbstractDungeon.miscRng.randomLong()));
-//        return list.get(0);
-//    }
-
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case INTRO:

@@ -6,13 +6,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.util.TextureLoader;
 import theHexaghost.HexaMod;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
@@ -24,11 +24,13 @@ public class Libra extends CustomRelic {
     public static final String ID = HexaMod.makeID("Libra");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Libra.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Libra.png"));
+
     public Libra() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
-    private int count = 0;
 
+    public int number_of_cards_to_transform;
+    private boolean no_cards_to_select = false;
     private boolean calledTransform = true;
 
     @Override
@@ -42,129 +44,157 @@ public class Libra extends CustomRelic {
 
     public void onEquip() {
         this.calledTransform = false;
-        int count_attack = 0;
-        int count_skill = 0;
-        int count_strike = 0;
-        int count_defend = 0;
-        ArrayList<AbstractCard> starters = new ArrayList<>();
-        boolean more_attacks_than_skills = false;
-        boolean equal = false;
+
+        CardGroup starters = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.type == AbstractCard.CardType.ATTACK) count_attack++;
-            if (c.type == AbstractCard.CardType.SKILL) count_skill++;
-            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)){
-                count_strike++;
-                starters.add(c);
-            }
-            if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)){
-                count_defend++;
-                starters.add(c);
+            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+                starters.addToBottom(c);
             }
         }
-        if (count_attack > count_skill) {
-            more_attacks_than_skills = true;
-        } else if (count_attack == count_skill) {
-            equal = true;
-        }
 
-        if (equal) {
-            if(starters.size() > 0) {
-                Collections.shuffle(starters, AbstractDungeon.cardRng.random);
-                for (int i = 0; i < starters.size() / 2; i++) {
-                    AbstractCard card_to_remove = starters.get(i);
-                    AbstractDungeon.player.masterDeck.removeCard(card_to_remove);
-                }
+        this.number_of_cards_to_transform = starters.size();
 
-                CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-
-                for (int j = 0; j < starters.size() / 2; ++j) {
-                    AbstractCard card = AbstractDungeon.returnTrulyRandomCard().makeCopy();
-                    UnlockTracker.markCardAsSeen(card.cardID);
-                    card.isSeen = true;
-                    Iterator var4 = AbstractDungeon.player.relics.iterator();
-
-                    while (var4.hasNext()) {
-                        AbstractRelic r = (AbstractRelic) var4.next();
-                        r.onPreviewObtainCard(card);
-                    }
-                    group.addToBottom(card);
-                }
-                AbstractDungeon.gridSelectScreen.openConfirmationGrid(group, " ");
-            }
-            return;
-
-        } else if (more_attacks_than_skills) {
-            Iterator i = AbstractDungeon.player.masterDeck.group.iterator();
-
-            while (true) {
-                AbstractCard e;
-                do {
-                    if (!i.hasNext()) {
-                        if (this.count > 0) {
-                            CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-
-                            for (int j = 0; j < this.count; ++j) {
-                                AbstractCard card = AbstractDungeon.returnTrulyRandomCard().makeCopy();
-                                UnlockTracker.markCardAsSeen(card.cardID);
-                                card.isSeen = true;
-                                Iterator var4 = AbstractDungeon.player.relics.iterator();
-
-                                while (var4.hasNext()) {
-                                    AbstractRelic r = (AbstractRelic) var4.next();
-                                    r.onPreviewObtainCard(card);
-                                }
-                                group.addToBottom(card);
-                            }
-                            AbstractDungeon.gridSelectScreen.openConfirmationGrid(group, " ");
-                        }
-                        return;
-                    }
-                    e = (AbstractCard) i.next();
-                } while (!e.hasTag(AbstractCard.CardTags.STARTER_STRIKE));
-
-                i.remove();
-                ++this.count;
-            }
+        if (starters.group.isEmpty()) {
+            this.no_cards_to_select = true;
         } else {
-            Iterator i = AbstractDungeon.player.masterDeck.group.iterator();
 
-            while (true) {
-                AbstractCard e;
-                do {
-                    if (!i.hasNext()) {
-                        if (this.count > 0) {
-                            CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-
-                            for (int j = 0; j < this.count; ++j) {
-                                AbstractCard card = AbstractDungeon.returnTrulyRandomCard().makeCopy();
-                                UnlockTracker.markCardAsSeen(card.cardID);
-                                card.isSeen = true;
-                                Iterator var4 = AbstractDungeon.player.relics.iterator();
-
-                                while (var4.hasNext()) {
-                                    AbstractRelic r = (AbstractRelic) var4.next();
-                                    r.onPreviewObtainCard(card);
-                                }
-                                group.addToBottom(card);
-                            }
-                            AbstractDungeon.gridSelectScreen.openConfirmationGrid(group, " ");
-                        }
-                        return;
-                    }
-                    e = (AbstractCard) i.next();
-                } while (!e.hasTag(AbstractCard.CardTags.STARTER_DEFEND));
-
-                i.remove();
-                ++this.count;
+            if (AbstractDungeon.isScreenUp) {
+                AbstractDungeon.dynamicBanner.hide();
+                AbstractDungeon.previousScreen = AbstractDungeon.screen;
             }
+            AbstractDungeon.gridSelectScreen.open(starters, starters.group.size(), true, this.DESCRIPTIONS[2]);
         }
+
     }
 
     public void update() {
-        super.update();
-        if (!this.calledTransform && AbstractDungeon.screen != AbstractDungeon.CurrentScreen.GRID) {
+        super.update(); //(AbstractDungeon.screen != AbstractDungeon.CurrentScreen.GRID )
+//        System.out.println("calledtansform" + calledTransform + "   no cards" + no_cards_to_select + "  clicked " + AbstractDungeon.gridSelectScreen.confirmButton.hb.clicked + "  clickestart  " + AbstractDungeon.gridSelectScreen.confirmButton.hb.clickStarted);
+        if (!this.calledTransform && (no_cards_to_select || (AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered && InputHelper.justClickedLeft) ) ) {
+            AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered = false;
             this.calledTransform = true;
             AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
+            this.giveCards(AbstractDungeon.gridSelectScreen.selectedCards);
         }
     }
+
+    public void giveCards(ArrayList<AbstractCard> group) {
+
+        Iterator<AbstractCard> i = group.iterator();
+
+        CardGroup new_cards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        while (i.hasNext()) {
+            AbstractCard card = i.next();
+            card.untip();
+            card.unhover();
+            AbstractDungeon.player.masterDeck.removeCard(card);
+            AbstractCard c = AbstractDungeon.returnTrulyRandomCard().makeCopy();
+            if (card.type == AbstractCard.CardType.SKILL) {
+                while(c.type != AbstractCard.CardType.ATTACK){
+                    c = AbstractDungeon.returnTrulyRandomCard().makeCopy();
+                }
+                UnlockTracker.markCardAsSeen(c.cardID);
+                c.isSeen = true;
+
+                for (AbstractRelic r : AbstractDungeon.player.relics) {
+                    r.onPreviewObtainCard(c);
+                }
+            }else{
+                while(c.type != AbstractCard.CardType.SKILL){
+                    c = AbstractDungeon.returnTrulyRandomCard().makeCopy();
+                }
+                UnlockTracker.markCardAsSeen(c.cardID);
+                c.isSeen = true;
+
+                for (AbstractRelic r : AbstractDungeon.player.relics) {
+                    r.onPreviewObtainCard(c);
+                }
+            }
+            new_cards.addToBottom(c);
+            AbstractDungeon.player.masterDeck.removeCard(card);
+        }
+
+        AbstractDungeon.gridSelectScreen.openConfirmationGrid(new_cards, this.DESCRIPTIONS[1]);
+        AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
+    }
+
+
+
 }
+
+//        } else if (more_attacks_than_skills) {
+//            Iterator i = AbstractDungeon.player.masterDeck.group.iterator();
+//
+//            while (true) {
+//                AbstractCard e;
+//                do {
+//                    if (!i.hasNext()) {
+//                        if (this.count > 0) {
+//                            CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+//
+//                            for (int j = 0; j < this.count; ++j) {
+//                                AbstractCard card = AbstractDungeon.returnTrulyRandomCard().makeCopy();
+//                                while(card.type != AbstractCard.CardType.SKILL){
+//                                    card = AbstractDungeon.returnTrulyRandomCard().makeCopy();
+//                                }
+//                                UnlockTracker.markCardAsSeen(card.cardID);
+//                                card.isSeen = true;
+//                                Iterator var4 = AbstractDungeon.player.relics.iterator();
+//
+//                                while (var4.hasNext()) {
+//                                    AbstractRelic r = (AbstractRelic) var4.next();
+//                                    r.onPreviewObtainCard(card);
+//                                }
+//                                group.addToBottom(card);
+//                            }
+//                            AbstractDungeon.gridSelectScreen.openConfirmationGrid(group, " ");
+//                        }
+//                        return;
+//                    }
+//                    e = (AbstractCard) i.next();
+//                } while (!e.hasTag(AbstractCard.CardTags.STARTER_STRIKE));
+//
+//                i.remove();
+//                ++this.count;
+//            }
+//        } else {
+//            Iterator i = AbstractDungeon.player.masterDeck.group.iterator();
+//
+//            while (true) {
+//                AbstractCard e;
+//                do {
+//                    if (!i.hasNext()) {
+//                        if (this.count > 0) {
+//                            CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+//
+//                            for (int j = 0; j < this.count; ++j) {
+//                                AbstractCard card = AbstractDungeon.returnTrulyRandomCard().makeCopy();
+//                                while(card.type != AbstractCard.CardType.ATTACK){
+//                                    card = AbstractDungeon.returnTrulyRandomCard().makeCopy();
+//                                }
+//                                UnlockTracker.markCardAsSeen(card.cardID);
+//                                card.isSeen = true;
+//                                Iterator var4 = AbstractDungeon.player.relics.iterator();
+//
+//                                while (var4.hasNext()) {
+//                                    AbstractRelic r = (AbstractRelic) var4.next();
+//                                    r.onPreviewObtainCard(card);
+//                                }
+//                                group.addToBottom(card);
+//                            }
+//                            AbstractDungeon.gridSelectScreen.openConfirmationGrid(group, " ");
+//                        }
+//                        return;
+//                    }
+//                    e = (AbstractCard) i.next();
+//                } while (!e.hasTag(AbstractCard.CardTags.STARTER_DEFEND));
+//
+//                i.remove();
+//                ++this.count;
+//            }
+//        }
+//    }
+//
+
+//}
