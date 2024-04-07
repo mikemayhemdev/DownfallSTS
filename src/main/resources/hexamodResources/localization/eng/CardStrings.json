@@ -63,7 +63,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. NL Add !M! random hexamod:Afterlife card into your hand. NL hexamod:Afterlife: Add 1 to your drawpile too."
+    "DESCRIPTION": "Ethereal. NL Add !M! random hexamod:Afterlife card into your hand. NL hexamod:Afterlife: Add 1 other to your drawpile too."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
@@ -116,12 +116,12 @@
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
-    "DESCRIPTION": "Retain. NL Apply !burny! hexamod:Soulburn. NL Switch to and hexamod:Ignite the Inferno Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Apply !burny! hexamod:Soulburn. NL hexamod:Ignite the *Inferno *Ghostflames. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Apply !burny! hexamod:Soulburn. NL Switch to and hexamod:Ignite the Inferno Ghostflame. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Apply !burny! hexamod:Soulburn. NL hexamod:Ignite the *Inferno *Ghostflames. Exhaust."
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. NL hexamod:Afterlife: Deal !D! damage, deal !M! additional damage for each Ethereal card in hand."
+    "DESCRIPTION": "Ethereal. NL hexamod:Afterlife: Deal !D! damage, deal !M! more damage for each Ethereal card in hand."
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Into Shadow",
@@ -315,7 +315,7 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "Naughty Spirit",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the current Ghostflame is hexamod:Ignited, return this card to your hand. NL hexamod:Retract. "
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the current Ghostflame is hexamod:Ignited, return this card to your hand. hexamod:Retract."
   },
   "hexamod:StepThrough": {
     "NAME": "Step Through",

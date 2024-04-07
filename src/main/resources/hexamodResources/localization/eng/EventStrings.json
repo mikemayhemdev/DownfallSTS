@@ -76,10 +76,11 @@
       "[Accept] #rLose #r",
       " #rMax #rHP. Unlock Study and Learn options.",
       "[Study] #rLose #rall #rStrikes. #gGain #g3 #gCouncil's #gJustice.",
-      "[Learn] #rLose #rall #rDefends. #gGain #g3 #gApparition.",
+      "[Learn] #rLose #rall #rDefends. #gGain #g",
       "[Complete]",
       "[Leave]",
-      "[Locked] Cannot leave yet."
+      "[Locked] Cannot leave yet.",
+      " #gApparition."
     ]
   },
   "hexamod:BackToBasics": {

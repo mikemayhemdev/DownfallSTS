@@ -3,25 +3,15 @@ package theHexaghost.events;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.colorless.Apparition;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import theHexaghost.HexaMod;
 import theHexaghost.cards.CouncilsJustice;
-import theHexaghost.cards.seals.FirstSeal;
-import theHexaghost.cards.seals.FourthSeal;
-import theHexaghost.cards.seals.SecondSeal;
-import theHexaghost.cards.seals.ThirdSeal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,42 +37,43 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
     private boolean accept = false;
     private List<String> cardsRemoved = new ArrayList<>();
     private List<String> cardsAdded = new ArrayList<>();
-
-
+    private boolean higher_ascension = false;
 
     public CouncilOfGhosts_Hexa() {
         super(NAME, DESCRIPTIONS[0], "images/events/ghost.jpg");
         this.screen = CurScreen.INTRO;
         this.noCardsInRewards = true;
 
-        this.hpLoss = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.5F);
+        this.hpLoss = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.75F);
         if (this.hpLoss >= AbstractDungeon.player.maxHealth) {
             this.hpLoss = AbstractDungeon.player.maxHealth - 1;
         }
 
+        if(AbstractDungeon.ascensionLevel >= 15) higher_ascension = true;
+
         this.imageEventText.setDialogOption(OPTIONS[0] + this.hpLoss + OPTIONS[1]);
         this.imageEventText.setDialogOption(OPTIONS[2], true, new CouncilsJustice());
-        this.imageEventText.setDialogOption(OPTIONS[3], true, new Apparition());
+        this.imageEventText.setDialogOption(OPTIONS[3] + (higher_ascension?3:5) + OPTIONS[7], true, new Apparition());
         this.imageEventText.setDialogOption(OPTIONS[5]);
 
     }
 
-    private AbstractCard getRandomNonBasicCard() {
-        ArrayList<AbstractCard> list = new ArrayList();
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if ((c.rarity == AbstractCard.CardRarity.COMMON)) {
-                list.add(c);
-            }
-        }
-
-
-        if (list.isEmpty()) {
-            return null;
-        }
-
-        java.util.Collections.shuffle(list, new java.util.Random(AbstractDungeon.miscRng.randomLong()));
-        return (AbstractCard) list.get(0);
-    }
+//    private AbstractCard getRandomNonBasicCard() {
+//        ArrayList<AbstractCard> list = new ArrayList<>();
+//        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+//            if ((c.rarity == AbstractCard.CardRarity.COMMON)) {
+//                list.add(c);
+//            }
+//        }
+//
+//
+//        if (list.isEmpty()) {
+//            return null;
+//        }
+//
+//        java.util.Collections.shuffle(list, new java.util.Random(AbstractDungeon.miscRng.randomLong()));
+//        return list.get(0);
+//    }
 
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
@@ -92,7 +83,7 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
                         AbstractDungeon.player.decreaseMaxHealth(this.hpLoss);
                         this.imageEventText.updateDialogOption(0, OPTIONS[4], true);
                         this.imageEventText.updateDialogOption(1, OPTIONS[2], new CouncilsJustice());
-                        this.imageEventText.updateDialogOption(2, OPTIONS[3], new Apparition());
+                        this.imageEventText.updateDialogOption(2, OPTIONS[3] + (higher_ascension?3:5) + OPTIONS[7], new Apparition());
                         this.imageEventText.updateDialogOption(3, OPTIONS[6],true);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.accept = true;
@@ -114,7 +105,7 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
                         this.imageEventText.updateDialogOption(3, OPTIONS[5]);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         nukeDefends();
-                        for (int i = 0; i < 3; i++) {
+                        for (int i = 0; i < (higher_ascension?3:5); i++) {
                             AbstractCard n = new Apparition();
                             cardsAdded.add(n.cardID);
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(n, Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F,0.75F)), Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F,0.75F))));

@@ -67,19 +67,16 @@ public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCa
                 break;
             }
             case "ks:1": {
-                atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 2));
-                ArrayList<AbstractCard> list = new ArrayList<>();
-                for (AbstractCard c : AbstractDungeon.colorlessCardPool.group) {
-                    list.add(c);
-                }
+                atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 3));
+                ArrayList<AbstractCard> list = new ArrayList<>(AbstractDungeon.colorlessCardPool.group);
                 AbstractCard q = list.get(cardRandomRng.random(list.size() - 1));
                 if (upgraded)
                     q.upgrade();
                 atb(new MakeTempCardInHandAction(q));
                 break;
             }
-            case "ks:2": {
-                int damage = upgraded ? 2 : 4;
+            case "ks:2": { //faster search     "Obtain Guardian *Boss cards."        获得守护者 *首领 牌。
+                int damage = upgraded ? 5 : 7;
                 atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, damage));
                 atb(new ObtainPotionAction(PotionHelper.getRandomPotion()));
                 break;
