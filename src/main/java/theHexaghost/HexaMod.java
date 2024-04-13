@@ -110,9 +110,9 @@ public class HexaMod implements
     public static int cards_exhausted_this_turn = 0;  // for unleash spirits
     public static int cards_exhausted_last_turn = 0;
 
-    public static int soulburn_explosion_this_combat = 0; // for new radiant flame
+//    public static int soulburn_explosion_this_combat = 0; // for new radiant flame
 
-    public static int used_inferno_potion = 0; // gained by inferno potion, if it's not 0, all ghostflame effect will affect all enemy this number of times.
+    public static int used_inferno_potion = 0; // gained by inferno potion, if it's not 0, all ghostflame effect will affect all enemies this number of times.
 
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
@@ -309,7 +309,7 @@ public class HexaMod implements
 
         cards_exhausted_last_turn = 0;
         cards_exhausted_this_turn = 0;
-        soulburn_explosion_this_combat = 0;
+//        soulburn_explosion_this_combat = 0;
         used_inferno_potion = 0;
     }
 

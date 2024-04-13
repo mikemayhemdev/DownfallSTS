@@ -96,7 +96,7 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
             this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
         }
 
-        HexaMod.soulburn_explosion_this_combat += 1;
+//        HexaMod.soulburn_explosion_this_combat += 1;
 //        if (owner.hasPower(BurnPerTurnPower.POWER_ID)) {
 //            owner.getPower(BurnPerTurnPower.POWER_ID).onSpecificTrigger();
 //        }

@@ -86,7 +86,7 @@
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "Giga Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Strength affects this card !M! times. NL Lose 2 Dexterity."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Strength affects this card !M! times. NL Skip your next turn."
   },
   "Guardian:BronzeArmor": {
     "NAME": "Resilient Plate",
@@ -325,7 +325,7 @@
   },
   "Guardian:CrystalBeam": {
     "NAME": "Crystal Ray",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each guardianmod:Gem in ALL of your guardianmod:Socketed cards."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each guardianmod:Gem in your deck."
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "Onyx",

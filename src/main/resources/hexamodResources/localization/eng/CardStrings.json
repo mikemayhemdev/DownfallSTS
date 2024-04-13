@@ -246,7 +246,7 @@
   },
   "hexamod:RadiantFlame": {
     "NAME": "Radiant Flame",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each Hexamod:Soulburn explosion this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Remove the target's hexamod:Soulburn to gain !M! hexamod:Intensity."
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
@@ -444,9 +444,9 @@
     "DESCRIPTION": "Gain !B! Block. NL hexamod:Retract, if *Retract onto an hexamod:Ignited Ghostflame, gain !M! additional Block.",
     "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain !B! Block."
   },
-  "hexamod:DiscardAndDamage": {
-    "NAME": "Discard and Damage",
-    "DESCRIPTION": "Requires !M! cards to discard. NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Requires !M! cards to discard. NL Deal !D! damage."
+  "hexamod:SpectralGrace": {
+    "NAME": "Spectral Grace",
+    "DESCRIPTION": "Discard !M! cards. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Discard !M! cards. NL Deal !D! damage."
   }
 }

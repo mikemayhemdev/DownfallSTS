@@ -285,8 +285,8 @@
     "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 每有一枚 hexamod:点燃 的鬼火，再给予一次。"
   },
   "hexamod:RadiantFlame": {
-    "NAME": "辐焰",
-    "DESCRIPTION": "造成 !D! 点伤害， NL 每引爆过一次 hexamod:灼魂 ， NL 额外造成 !M! 点。"
+    "NAME": "辐能回导",
+    "DESCRIPTION": "造成 !D! 点伤害， NL 若目标被 hexamod:灼魂 ， NL 移除以获得 !M! 点 hexamod:热烈 。"
   },
   "hexamod:ApocalypseNow": {
     "NAME": "启示录",
@@ -437,9 +437,9 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL hexamod:回退 ， NL 若 *回退 至 hexamod:点燃 的鬼火， NL 额外获得 !M! 点。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL hexamod:回退 ， NL 若 *回退 至 hexamod:点燃 的鬼火， NL 额外获得 !M! 点。"
   },
-  "hexamod:DiscardAndDamage": {
-    "NAME": "弃牌伤害",
-    "DESCRIPTION": "丢弃 !M! 张牌才能打出。 NL 造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": "丢弃 !M! 张牌才能打出。 NL 造成 !D! 点伤害。"
+  "hexamod:SpectralGrace": {
+    "NAME": "幽雅",
+    "DESCRIPTION": "丢弃两张牌。 NL 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "丢弃两张牌。 NL 造成 !D! 点伤害。"
   }
 }

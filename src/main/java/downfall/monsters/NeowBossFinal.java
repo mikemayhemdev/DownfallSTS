@@ -81,9 +81,9 @@ public class NeowBossFinal extends AbstractMonster {
 
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            setHp(550);
+            setHp(600);
         } else {
-            setHp(450);
+            setHp(500);
         }
 
 

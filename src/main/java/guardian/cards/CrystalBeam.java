@@ -1,7 +1,6 @@
 package guardian.cards;
 
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -16,7 +15,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.vfx.CrystalRayEffect;
-import guardian.vfx.SmallLaserEffectColored;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -33,17 +31,14 @@ public class CrystalBeam extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 14;
 
-    //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 4;
     private static final int DAMAGEPERGEM = 2;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -71,34 +66,41 @@ public class CrystalBeam extends AbstractGuardianCard {
 
     public static ArrayList<GuardianMod.socketTypes> listGems() {
         ArrayList<GuardianMod.socketTypes> sockets = new ArrayList<>();
-        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-            if (c instanceof AbstractGuardianCard) {
-                sockets.addAll(((AbstractGuardianCard) c).sockets);
-            }
-        }
-        /*
-        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
+
+
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c instanceof AbstractGuardianCard) {
                 sockets.addAll(((AbstractGuardianCard) c).sockets);
             }
         }
 
-         */
-        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if (c instanceof AbstractGuardianCard) {
-                sockets.addAll(((AbstractGuardianCard) c).sockets);
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c instanceof AbstractGuardianCard) {
-                sockets.addAll(((AbstractGuardianCard) c).sockets);
-            }
-        }
+//        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+//            if (c instanceof AbstractGuardianCard) {
+//                sockets.addAll(((AbstractGuardianCard) c).sockets);
+//            }
+//        }
+
+//        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+//            if (c instanceof AbstractGuardianCard) {
+//                sockets.addAll(((AbstractGuardianCard) c).sockets);
+//            }
+//        }
+//
+//        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+//            if (c instanceof AbstractGuardianCard) {
+//                sockets.addAll(((AbstractGuardianCard) c).sockets);
+//            }
+//        }
         return sockets;
     }
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         int cards = listGems().size();
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c instanceof AbstractGemCard) {
+                cards += 1;
+            }
+        }
         int bonus = cards * this.magicNumber;
         return tmp + bonus + calculateBeamDamage();
 

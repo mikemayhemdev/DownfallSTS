@@ -84,7 +84,7 @@ public class RefractedBeam extends AbstractGuardianCard {
             float randoX = MathUtils.random(-80, 80);
             float randoY = MathUtils.random(-80, 80);
 
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(p.hb.cX, p.hb.cY, m.hb.cX + (randoX * Settings.scale), m.hb.cY + (randoY * Settings.scale), Color.CYAN), 0.15F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(p.hb.cX, p.hb.cY, m.hb.cX + (randoX * Settings.scale), m.hb.cY + (randoY * Settings.scale), Color.CYAN), 0.1F));
 
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 

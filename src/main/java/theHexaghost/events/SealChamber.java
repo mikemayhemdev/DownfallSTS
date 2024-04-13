@@ -204,11 +204,6 @@ public class SealChamber extends AbstractImageEvent {
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new FirstSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                 damageTaken = hpLoss;
                 cardsObtained.add(FirstSeal.ID);
-
-                this.imageEventText.clearAllDialogs();
-                this.screen = CurScreen.END;
-                this.imageEventText.setDialogOption(OPTIONS[8]);
-                this.imageEventText.updateBodyText(DESCRIPTIONS[1] + DESCRIPTIONS[3]);
                 break;
 
             case "2":
@@ -216,11 +211,6 @@ public class SealChamber extends AbstractImageEvent {
                 AbstractDungeon.player.loseGold(this.goldLoss);
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new SecondSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                 cardsObtained.add(SecondSeal.ID);
-
-                this.imageEventText.clearAllDialogs();
-                this.screen = CurScreen.END;
-                this.imageEventText.setDialogOption(OPTIONS[8]);
-                this.imageEventText.updateBodyText(DESCRIPTIONS[1] + DESCRIPTIONS[3]);
                 break;
 
             case "3":
@@ -229,22 +219,12 @@ public class SealChamber extends AbstractImageEvent {
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new ThirdSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                 cardsObtained.add(ThirdSeal.ID);
                 cardsRemoved.add(this.cardOption.cardID);
-
-                this.imageEventText.clearAllDialogs();
-                this.screen = CurScreen.END;
-                this.imageEventText.setDialogOption(OPTIONS[8]);
-                this.imageEventText.updateBodyText(DESCRIPTIONS[1] + DESCRIPTIONS[3]);
                 break;
 
             case "4":
                 AbstractDungeon.player.removePotion(this.potionOption);
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new FourthSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                 cardsObtained.add(FourthSeal.ID);
-
-                this.imageEventText.clearAllDialogs();
-                this.screen = CurScreen.END;
-                this.imageEventText.setDialogOption(OPTIONS[8]);
-                this.imageEventText.updateBodyText(DESCRIPTIONS[1] + DESCRIPTIONS[3]);
                 break;
 
             case "5":
@@ -253,11 +233,6 @@ public class SealChamber extends AbstractImageEvent {
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new SixthSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                 cardsObtained.add(SixthSeal.ID);
                 cardsRemoved.add(this.upgradedCardOption.cardID);
-
-                this.imageEventText.clearAllDialogs();
-                this.screen = CurScreen.END;
-                this.imageEventText.setDialogOption(OPTIONS[8]);
-                this.imageEventText.updateBodyText(DESCRIPTIONS[1] + DESCRIPTIONS[3]);
                 break;
 
             case "6":
@@ -265,11 +240,6 @@ public class SealChamber extends AbstractImageEvent {
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new FifthSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                 damageTaken = maxHpLoss;
                 cardsObtained.add(FifthSeal.ID);
-
-                this.imageEventText.clearAllDialogs();
-                this.screen = CurScreen.END;
-                this.imageEventText.setDialogOption(OPTIONS[8]);
-                this.imageEventText.updateBodyText(DESCRIPTIONS[1] + DESCRIPTIONS[3]);
                 break;
 
             case "Leave":
@@ -280,6 +250,11 @@ public class SealChamber extends AbstractImageEvent {
                 logMetricIgnored(ID);
                 return;
         }
+
+        this.imageEventText.clearAllDialogs();
+        this.screen = CurScreen.END;
+        this.imageEventText.setDialogOption(OPTIONS[8]);
+        this.imageEventText.updateBodyText(DESCRIPTIONS[1] + DESCRIPTIONS[3]);
 
         logMetric(ID, "Entered Chamber", cardsObtained, cardsRemoved, null, null,
                 null, null, null,
