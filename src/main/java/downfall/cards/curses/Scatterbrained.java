@@ -26,7 +26,7 @@ public class Scatterbrained extends CustomCard {
     private static final CardRarity RARITY = CardRarity.CURSE;
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -38,6 +38,7 @@ public class Scatterbrained extends CustomCard {
 
     public Scatterbrained() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

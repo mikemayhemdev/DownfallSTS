@@ -13,7 +13,7 @@
   },
   "downfall:Haunted": {
     "NAME": "闹鬼",
-    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 抽到时， NL 将左侧手牌附加 虚无 。"
+    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 抽到时， NL 将所有手牌附加 虚无 。"
   },
   "downfall:Icky": {
     "NAME": "黏液缠身",
@@ -25,7 +25,7 @@
   },
   "downfall:Scatterbrained": {
     "NAME": "漫不经心",
-    "DESCRIPTION": "回合结束时若本牌在手， NL 获得本牌一张复制品。"
+    "DESCRIPTION": "回合结束时若本牌在手， NL 获得本牌一张复制品。 NL 消耗 。"
   },
   "downfall:SummonMushrooms": {
     "NAME": "真菌环绕",

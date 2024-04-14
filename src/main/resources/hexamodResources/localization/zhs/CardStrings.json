@@ -417,11 +417,6 @@
     "DESCRIPTION": "虚无 。 NL 选择 消耗 一张手牌。 NL 抽 !M! 张牌。 NL hexamod:阴世 ： NL 造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "虚无 。 NL 选择 消耗 一张手牌。 NL 抽 !M! 张牌。 NL hexamod:阴世 ： NL 造成 !D! 点伤害。"
   },
-  "hexamod:BustlingGhosts": {
-    "NAME": "Bustling Ghosts",
-    "DESCRIPTION": "Play all Ethereal cards in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage, deal 2 additional damage everytime you hexamod:Retract this combat."
-  },
   "hexamod:OpposingAction": {
     "NAME": "反骨",
     "DESCRIPTION": "hexamod:回退 。 NL 获得 [E] 。",

@@ -21,7 +21,7 @@
   },
   "downfall:Scatterbrained": {
     "NAME": "Scatterbrained",
-    "DESCRIPTION": "At the end of your turn, if this is in your hand, gain a copy of it."
+    "DESCRIPTION": "At the end of your turn, if this is in your hand, gain a copy of it. NL Exhaust."
   },
   "downfall:SummonMushrooms": {
     "NAME": "Fungus Among Us",

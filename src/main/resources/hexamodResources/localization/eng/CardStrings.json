@@ -423,12 +423,6 @@
     "DESCRIPTION": "Ethereal. NL Exhaust 1 card. NL Draw !M! card. NL hexamod:Afterlife: NL Deal !D! damage.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Exhaust 1 card. NL Draw !M! cards. NL hexamod:Afterlife: NL Deal !D! damage."
   },
-  "hexamod:BustlingGhosts": {
-    "NAME": "Bustling Ghosts",
-    "DESCRIPTION": "Play all Ethereal cards in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage, deal 2 additional damage everytime you hexamod:Retract this combat.",
-    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used not used not used "
-  },
   "hexamod:OpposingAction": {
     "NAME": "Opposing Action",
     "DESCRIPTION": "hexamod:Retract. NL Gain [E].",

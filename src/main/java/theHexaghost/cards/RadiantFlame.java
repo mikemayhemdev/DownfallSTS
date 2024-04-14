@@ -45,7 +45,6 @@ public class RadiantFlame extends AbstractHexaCard {
 //        this.isDamageModified = this.damage != this.baseDamage;
 //    }
 
-
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
 
@@ -56,18 +55,16 @@ public class RadiantFlame extends AbstractHexaCard {
                     break;
                 }
             }
-        this.glowColor = ( (GhostflameHelper.getPreviousGhostFlame()).charged ) ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
-
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        addToBot(new AbstractGameAction() {
+        addToTop(new AbstractGameAction() {
             @Override
             public void update() {
                 this.isDone = true;
                 if(m.hasPower(BurnPower.POWER_ID)){
-                    addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
+                    addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(magicNumber), magicNumber));
                     addToBot(new RemoveSpecificPowerAction(m, p, BurnPower.POWER_ID));
                 }
             }
@@ -78,7 +75,8 @@ public class RadiantFlame extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(2);
+            upgradeMagicNumber(1);
         }
     }
 }
