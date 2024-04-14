@@ -24,9 +24,9 @@
   "hexamod:InfernoChargePotion": {
     "NAME": "Адское зелье",
     "DESCRIPTIONS": [
-      "#yЗажигает #yАдский Огонёк.",
-      "#yЗажигает #yАдский Огонёк #b",
-      " раза."
+      "Огоньки действуют на ВСЕХ врагов до конца боя.",
+      "Your Ghostflame effect affects all enemy #b",
+      " times this combat."
     ]
   }
 }

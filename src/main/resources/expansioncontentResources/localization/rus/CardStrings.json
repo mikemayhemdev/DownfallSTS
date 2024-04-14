@@ -79,10 +79,17 @@
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Всеведущий череп",
-    "DESCRIPTION": "Эфирная. NL Отнимает ОЗ, выберите 1: *Запросить *души, *Успех или *Выбери *меня. NL Сжигается."
+    "DESCRIPTION": "Эфирная. NL Отнимает ОЗ, выберите 1: *Запросить *души, *Зелье или *Бесцветную карту. NL Сжигается."
   },
   "expansioncontent:Antidote": {
     "NAME": "Антидот",
     "DESCRIPTION": "Снимает весь Яд."
+  },
+  "expansioncontent:BloodySacrifice": {
+    "NAME": "Кровавая жертва",
+    "DESCRIPTION": "Эфирная. NL Отнимает ОЗ, равное !M! % от Макс. ОЗ. NL Даёт 1 Ритуала. NL Сжигается.",
+    "EXTENDED_DESCRIPTION":[
+      " NL (Отнимает {amount} ОЗ. )"
+    ]
   }
 }
