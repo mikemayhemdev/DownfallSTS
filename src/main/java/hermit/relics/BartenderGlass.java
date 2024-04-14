@@ -2,11 +2,11 @@ package hermit.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import hermit.HermitMod;
+import hermit.actions.ObtainPotionNotBlockedByCombatEndAction;
 import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makeRelicOutlinePath;
@@ -20,7 +20,7 @@ public class BartenderGlass extends CustomRelic {
 
     public BartenderGlass() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.SOLID);
-        counter=-1;
+        counter = -1;
     }
 
     public void obtain() {
@@ -35,31 +35,31 @@ public class BartenderGlass extends CustomRelic {
     @Override
     public void atBattleStart() {
         flash();
-        this.counter=2;
+        this.counter = 2;
         AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        this.grayscale=false;
+        this.grayscale = false;
     }
 
     @Override
     public void onVictory() {
         this.counter = -1;
-        this.grayscale=false;
+        this.grayscale = false;
     }
 
     public void onUsePotion() {
         this.flash();
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !grayscale) {
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.addToBot(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)));
+            this.addToBot(new ObtainPotionNotBlockedByCombatEndAction(AbstractDungeon.returnRandomPotion(true)));
             this.counter--;
             if (counter <= 0)
-                grayscale=true;
+                grayscale = true;
         }
     }
 
     @Override
     public String getUpdatedDescription() {
-            return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0];
     }
 
 }

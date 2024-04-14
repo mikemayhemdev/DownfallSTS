@@ -318,7 +318,7 @@
     ]
   },
   "collector:LoseHpNextTurn": {
-    "NAME": "Sapped Away",
+    "NAME": "Deathmarked",
     "DESCRIPTIONS": [
       "At the end of its turn, loses #b",
       " HP."

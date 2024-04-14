@@ -3,6 +3,7 @@ package expansioncontent.patches;
 import automaton.AutomatonChar;
 import basemod.ReflectionHacks;
 import champ.ChampChar;
+import collector.CollectorChar;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -74,6 +75,9 @@ public class ShopBossPatch {
         }
         if (AbstractDungeon.player instanceof AutomatonChar || RandomCardWithTagAction.autoLocked()) {
             return !q.cardID.equals(HyperBeam.ID);
+        }
+        if (AbstractDungeon.player instanceof CollectorChar || RandomCardWithTagAction.collectorLocked()) {
+            return !q.cardID.equals(YouAreMine.ID);
         }
         return true;
     }

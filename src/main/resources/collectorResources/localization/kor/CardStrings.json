@@ -54,14 +54,15 @@
   "collector:BramblesparKindling": {
     "NAME": "가시나무서 쏘시개",
     "DESCRIPTION": "사용불가. NL 소멸되면 *불타는 *타격을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "사용불가. 보존. NL 소멸되면 *불타는 *타격+을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "사용불가. NL 소멸되면 *불타는 *타격+을 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "불쏘시개에는 불을 부쳐야 하지 않겠나."
     ]
   },
   "collector:BurningStrike": {
     "NAME": "불타는 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 뽑습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 장 뽑습니다."
   },
   "collector:CantTouchThis": {
     "NAME": "손대지 말거라",
@@ -86,7 +87,7 @@
   "collector:DarkLordForm": {
     "NAME": "어둠 군주의 형상",
     "DESCRIPTION": "내 턴 시작 시 무작위 적에게 *넌 *나의 *것이다!를 사용합니다.",
-    "UPGRADE_DESCRIPTION": "내 턴 시작 시 무작위 적에게 *넌 *나의 *것이다!를 사용합니다."
+    "UPGRADE_DESCRIPTION": "내 턴 시작 시 무작위 적에게 *넌 *나의 *것이다!+를 사용합니다."
   },
   "collector:Darkstorm": {
     "NAME": "어둠의 폭풍",
@@ -94,8 +95,8 @@
   },
   "collector:DarkwoodKindling": {
     "NAME": "흑버들재 쏘시개",
-    "DESCRIPTION": "사용불가. NL 소멸되면 collector:비축을 2 얻습니다.",
-    "UPGRADE_DESCRIPTION": "사용불가. NL 보존. NL 소멸되면 collector:비축을 2 얻습니다.",
+    "DESCRIPTION": "사용불가. NL 소멸되면 다음 턴에 collector:비축을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "사용불가. NL 보존. NL 소멸되면 다음 턴에 collector:비축을 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "불쏘시개에는 불을 부쳐야 하지 않겠나."
     ]
@@ -145,7 +146,8 @@
   },
   "collector:FingerOfDeath": {
     "NAME": "죽음의 손짓",
-    "DESCRIPTION": "collector:비축으로만 이 카드를 사용할 수 있습니다. NL 적 전체에게 collector:파멸을 !M! 부여합니다."
+    "DESCRIPTION": "collector:비축으로만 이 카드를 사용할 수 있습니다. NL collector:파멸을 !M! 부여합니다.",
+    "UPGRADE_DESCRIPTION": "collector:비축으로만 이 카드를 사용할 수 있습니다. NL 적 전체에게 collector:파멸을 !M! 부여합니다."
   },
   "collector:FlameLash": {
     "NAME": "화염 채찍",
@@ -223,9 +225,9 @@
     "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 collector:고초되지 않았다면 약화 와 취약을 2 부여합니다."
   },
   "collector:Invigorate": {
-    "NAME": "활성화",
-    "DESCRIPTION": "collector:장작. NL *헛디딤 또는 *실명을 선택해 얻습니다.",
-    "UPGRADE_DESCRIPTION": "collector:장작. NL *헛디딤+ 또는 *실명+을 선택해 얻습니다.",
+    "NAME": "섬광",
+    "DESCRIPTION": "collector:장작. NL *헛디딤 또는 *실명을 선택해 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "collector:장작. NL *헛디딤+ 또는 *실명+을 선택해 얻습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "얻을 카드를 선택하십시오."
     ]
@@ -320,12 +322,12 @@
     ]
   },
   "collector:SapStrength": {
-    "NAME": "쇠락",
+    "NAME": "죽음의 낙인",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴에 적이 체력을 두 배로 잃습니다."
   },
   "collector:ScorchingRay": {
     "NAME": "맹렬한 광선",
-    "DESCRIPTION": "무작위 적들에게 피해를 !D! 만큼 !M! 번 줍니다."
+    "DESCRIPTION": "무작위 적들에게 피해를 !D! 만큼 X 번 줍니다."
   },
   "collector:SeedOfDoubt": {
     "NAME": "의심의 씨앗",

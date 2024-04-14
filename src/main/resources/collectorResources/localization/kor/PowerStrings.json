@@ -37,6 +37,14 @@
       " 번 사용합니다."
     ]
   },
+  "collector:DarkLordFormPlus": {
+    "NAME": "어둠 군주의 형상+",
+    "DESCRIPTIONS": [
+      "내 턴 시작 시 무작위 적에게 #y넌 #y나의 #y것이다!+를 사용합니다.",
+      "내 턴 시작 시 무작위 적들에게 #y넌 #y나의 #y것이다!를 #b",
+      " 번 사용합니다."
+    ]
+  },
   "collector:DoMayhem": {
     "NAME": "대혼란의 서막",
     "DESCRIPTIONS": [
@@ -310,7 +318,7 @@
     ]
   },
   "collector:LoseHpNextTurn": {
-    "NAME": "쇠락하는 중",
+    "NAME": "쇠락 중",
     "DESCRIPTIONS": [
       "대상의 턴이 끝날 때 대상이 체력을 #b",
       " 잃습니다."

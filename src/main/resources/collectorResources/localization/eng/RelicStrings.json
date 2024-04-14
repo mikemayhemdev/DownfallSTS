@@ -11,7 +11,7 @@
     "FLAVOR": "The ever-changing flames reflect fortune's favor.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] At the start of each combat, add an #yEmber into your hand and gain #b1 #ycollector:Reserve. Whenever you #yExhaust an #yEmber, gain #b1 #ycollector:Reserve."
+      ".[] At the start of each combat, add an #yEmber into your hand and gain #b1 #ycollector:Reserve. The first time you #yExhaust an #yEmber each turn, gain #b1 #ycollector:Reserve."
     ]
   },
   "collector:HolidayCoal": {
@@ -101,7 +101,7 @@
     "NAME": "Forbidden Fruit",
     "FLAVOR": "This species of fruit looks completely unfamiliar.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. Then, obtain a #ySapped."
+      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. Then, obtain a #yNecronomicurse."
     ]
   },
   "collector:RoughDiamond": {

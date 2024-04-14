@@ -54,14 +54,15 @@
   "collector:BramblesparKindling": {
     "NAME": "Лучина ежевичного куста", //unfinished
     "DESCRIPTION": "Неиграбельная. NL Добавляет в руку *Обжигающий *удар, когда Сжигается.",
-    "UPGRADE_DESCRIPTION": "Неиграбельная. Оставляется. NL Добавляет в руку *Обжигающий *удар+, когда Сжигается.",
+    "UPGRADE_DESCRIPTION": "Неиграбельная. NL Добавляет в руку *Обжигающий *удар+, когда Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Сначала нужно зажечь эту лучину." //unfinished
     ]
   },
   "collector:BurningStrike": {
     "NAME": "Обжигающий удар",
-    "DESCRIPTION": "Наносит !D! урона. NL Вы берёте карту."
+    "DESCRIPTION": "Наносит !D! урона. NL Вы берёте карту.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Вы берёте !M! карты."
   },
   "collector:CantTouchThis": {
     "NAME": "Не прикасайся", //unfinished
