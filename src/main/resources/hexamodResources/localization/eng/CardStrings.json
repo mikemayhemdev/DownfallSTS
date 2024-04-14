@@ -24,8 +24,7 @@
   },
   "hexamod:BurningQuestion": {
     "NAME": "Burning Question",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength. NL hexamod:Afterlife: NL Gain 1 Dexterity.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !M! Strength. NL hexamod:Afterlife: NL Gain 1 Dexterity."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Strength. NL hexamod:Afterlife: NL Gain 1 Dexterity."
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
@@ -67,8 +66,7 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
-    "DESCRIPTION": "At the end of your turn, if you have Exhausted 2 cards this turn, hexamod:Ignite the current Ghostflame.",
-    "UPGRADE_DESCRIPTION": ""
+    "DESCRIPTION": "At the end of your turn, if you have Exhausted 2 cards this turn, hexamod:Ignite the current Ghostflame."
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
@@ -102,8 +100,7 @@
   },
   "hexamod:Floatwork": {
     "NAME": "Floatwork",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL hexamod:Afterlife: NL Gain !M! Plated Armor.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL hexamod:Afterlife: NL Gain !M! Plated Armor."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL hexamod:Afterlife: NL Gain !M! Plated Armor."
   },
   "hexamod:ForkedFlame": {
     "NAME": "Forked Flame",
@@ -152,7 +149,6 @@
   "hexamod:GiftsFromTheDead": {
     "NAME": "Gifts From Beyond",
     "DESCRIPTION": "At the start of your turn, add !M! random hexamod:Afterlife card into your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add !M! random hexamod:Afterlife card into your hand.",
     "EXTENDED_DESCRIPTION": [
       "These spirits are too powerful to invoke directly."
     ]
@@ -209,18 +205,15 @@
   },
   "hexamod:NightmareGuise": {
     "NAME": "Nightmare Guise",
-    "DESCRIPTION": "Ethereal. NL Gain a *Shadow *Guise. NL hexamod:Afterlife : NL Gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain a *Shadow *Guise+. NL hexamod:Afterlife : NL Gain !B! Block."
+    "DESCRIPTION": "Ethereal. NL Gain a *Shadow *Guise. NL hexamod:Afterlife : NL Gain !B! Block."
   },
   "hexamod:NightmareStrike": {
     "NAME": "Nightmare Strike",
-    "DESCRIPTION": "Ethereal. NL Gain a *Shadow *Strike. NL hexamod:Afterlife : NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain a *Shadow *Strike+. NL hexamod:Afterlife : NL Deal !D! damage."
+    "DESCRIPTION": "Ethereal. NL Gain a *Shadow *Strike. NL hexamod:Afterlife : NL Deal !D! damage."
   },
   "hexamod:ParanormalForm": {
     "NAME": "Poltergeist",
-    "DESCRIPTION": "Whenever you play an Ethereal card, a random enemy loses !M! HP.",
-    "UPGRADE_DESCRIPTION": "Whenever you play an Ethereal card, a random enemy loses !M! HP."
+    "DESCRIPTION": "Whenever you play an Ethereal card, a random enemy loses !M! HP."
   },
   "hexamod:PhantomCloak": {
     "NAME": "Phantom Cloak",
@@ -283,13 +276,11 @@
   },
   "hexamod:ShadowGuise": {
     "NAME": "Shadow Guise",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
   },
   "hexamod:ShadowStrike": {
     "NAME": "Shadow Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Shield of Night",
@@ -310,8 +301,7 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Bright Ritual",
-    "DESCRIPTION": "Gain [E] and draw 1 card for each *Ignited Ghostflame, then hexamod:Extinguish them. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Retract to the first Ghostflame, hexamod:Extinguish along the way, gain [E] for each Extinguished one."
+    "DESCRIPTION": "Gain [E] and draw 1 card for each *Ignited Ghostflame, then hexamod:Extinguish them. NL Exhaust."
   },
   "hexamod:SpectralSpark": {
     "NAME": "Naughty Spirit",
@@ -377,7 +367,8 @@
   },
   "hexamod:WildfireWeapon": {
     "NAME": "Wildfire Weapon",
-    "DESCRIPTION": "Whenever an Attack deals unblocked damage, apply !M! hexamod:Soulburn."
+    "DESCRIPTION": "Whenever an Attack deals unblocked damage, apply !M! hexamod:Soulburn.",
+    "Translate_note": "not used not used not used not used not used not used not used not used not used not used not used not used "
   },
   "hexamod:FirstSeal": {
     "NAME": "First Seal",

@@ -5,8 +5,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.GiftsFromTheDeadPower;
 
-import static automaton.AutomatonMod.makeBetaCardPath;
-
 public class GiftsFromTheDead extends AbstractHexaCard {
 
     public final static String ID = makeID("GiftsFromTheDead");
@@ -24,8 +22,6 @@ public class GiftsFromTheDead extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-//            rawDescription = UPGRADE_DESCRIPTION;
-//            initializeDescription();
             upgradeBaseCost(1);
         }
     }

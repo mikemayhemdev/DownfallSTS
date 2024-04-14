@@ -73,8 +73,6 @@ public class ShadowGuise extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(3);
-//            rawDescription = UPGRADE_DESCRIPTION;
-//            initializeDescription();
         }
     }
 

@@ -24,7 +24,6 @@ public class NightmareGuise extends AbstractHexaCard {
         blck();
         superFlash(Color.PURPLE);
         AbstractCard q = new ShadowGuise(this);
-//        if (upgraded) q.upgrade();
         atb(new MakeTempCardInHandAction(q));
     }
 
@@ -37,9 +36,6 @@ public class NightmareGuise extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(3);
-//            cardsToPreview.upgrade();
-//            rawDescription = UPGRADE_DESCRIPTION;
-//            initializeDescription();
         }
     }
 }

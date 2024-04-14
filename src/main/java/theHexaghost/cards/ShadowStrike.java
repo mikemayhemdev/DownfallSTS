@@ -75,9 +75,6 @@ public class ShadowStrike extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(2);
-//            rawDescription = UPGRADE_DESCRIPTION;
-//            cardsToPreview.upgrade();
-//            initializeDescription();
         }
     }
 
