@@ -234,8 +234,8 @@
     "UPGRADE_DESCRIPTION": "获得 !M! 层 guardianmod:缓冲 。 NL 回合开始时若有 guardianmod:缓冲 ，获得1点 力量 。"
   },
   "Guardian:RollAttack": {
-    "NAME": "蜷身攻击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若处于 guardianmod:防御模式 ， NL 变为群体攻击。 NL 否则 guardianmod:提防 8 。"
+    "NAME": "翻滚攻击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若处于 guardianmod:防御模式 ， NL 变为群体攻击， NL 否则 guardianmod:提防 8 。"
   },
   "Guardian:GemFire": {
     "NAME": "宝石加农炮",

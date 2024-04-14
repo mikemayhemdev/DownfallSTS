@@ -46,5 +46,6 @@ public class Invigorate extends AbstractCollectorCard {
         q2.upgrade();
         MultiCardPreview.clear(this);
         MultiCardPreview.add(this, q, q2);
+        uDesc();
     }
 }

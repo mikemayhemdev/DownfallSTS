@@ -21,6 +21,10 @@ public class TransientCardPower extends AbstractCollectorPower {
     }
 
     @Override
+    public void stackPower(int stackAmount) {
+    }
+
+    @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (amount == 1) {
             this.addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));

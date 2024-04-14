@@ -23,6 +23,7 @@ public class ChosenStrike extends AbstractBronzeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE + misc;
         baseMagicNumber = magicNumber = 1;
+        this.tags.add(CardTags.STRIKE);
         thisEncodes();
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("ChosenStrike.png"));
     }

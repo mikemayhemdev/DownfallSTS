@@ -25,9 +25,11 @@ public class AutoCurser extends CustomRelic {
     public void atBattleStart() {
         flash();
         AbstractMonster q = AbstractDungeon.getRandomMonster();
-        atb(new RelicAboveCreatureAction(q, this));
-        applyToEnemy(q, new WeakPower(q, 1, false));
-        applyToEnemy(q, new VulnerablePower(q, 1, false));
+        if(q != null){
+            atb(new RelicAboveCreatureAction(q, this));
+            applyToEnemy(q, new WeakPower(q, 1, false));
+            applyToEnemy(q, new VulnerablePower(q, 1, false));            
+        }
     }
 
     @Override

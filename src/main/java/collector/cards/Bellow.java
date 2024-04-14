@@ -20,7 +20,9 @@ public class Bellow extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.baseMagicNumber = magicNumber = BLOCK_AMT_LOST;
-        applyToEnemy(m, new DoomPower(m, magicNumber));
+        if( magicNumber > 0){
+            applyToEnemy(m, new DoomPower(m, magicNumber));            
+        }
         this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
     }
