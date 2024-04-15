@@ -1,13 +1,18 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
+import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.*;
+import theHexaghost.ghostflames.CrushingGhostflame;
+import theHexaghost.ghostflames.InfernoGhostflame;
+import theHexaghost.ghostflames.SearingGhostflame;
 
 import java.util.ArrayList;
 
@@ -62,6 +67,24 @@ public class Toasty extends AbstractHexaCard implements OctopusCard {
         }
     }
 
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
+
+        if (GhostflameHelper.activeGhostFlame instanceof SearingGhostflame) {
+            if(GhostflameHelper.activeGhostFlame.getActiveFlamesTriggerCount() == 1){
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+            }
+        }
+
+        if (GhostflameHelper.activeGhostFlame instanceof InfernoGhostflame) {
+            if(GhostflameHelper.activeGhostFlame.getActiveFlamesTriggerCount() + this.costForTurn >= 3){
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+            }
+        }
+
+    }
 
     public void upgrade() {
         if (!upgraded) {

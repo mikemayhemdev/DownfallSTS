@@ -7,12 +7,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theHexaghost.HexaMod;
 
-public class DrawUntilNonAfterlifeAction extends AbstractGameAction {
+public class DrawUntilNonEtherealAction extends AbstractGameAction {
     private AbstractPlayer p;
 
-    public DrawUntilNonAfterlifeAction() {
+    public DrawUntilNonEtherealAction() {
         this.p = AbstractDungeon.player;
         this.setValues(this.p, this.p);
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
@@ -37,8 +36,8 @@ public class DrawUntilNonAfterlifeAction extends AbstractGameAction {
                 this.addToTop(new EmptyDeckShuffleAction());
             } else {
                 AbstractCard right = AbstractDungeon.player.hand.group.get(AbstractDungeon.player.hand.size() - 1); // need to draw 1 card first to make this cehck valid
-                if (right.hasTag(HexaMod.AFTERLIFE)) {
-                    this.addToTop(new DrawUntilNonAfterlifeAction());
+                if (right.isEthereal) {
+                    this.addToTop(new DrawUntilNonEtherealAction());
                     this.addToTop(new DrawCardAction(1));
                 }
             }

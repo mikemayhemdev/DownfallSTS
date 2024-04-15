@@ -211,8 +211,8 @@
   "hexamod:LoseIntensityPower": {
     "NAME": "Intensity Down",
     "DESCRIPTIONS": [
-      "At the end of this turn, lose #b",
-      " #yIntensity [REMOVE_SPACE]."
+      "你的回合结束时，失去 #b",
+      " 点 #y热烈 。"
     ]
   },
   "hexamod:MaxHPPostCombatPower": {

@@ -96,7 +96,7 @@ public class SealChamber extends AbstractImageEvent {
                 case "1":
                     option_number_and_seals.put(option_number, "1");
                     option_number++;
-                    this.imageEventText.setDialogOption(OPTIONS[0] + this.hpLoss + OPTIONS[1], new FirstSeal());
+                    this.imageEventText.setDialogOption(OPTIONS[0] + this.hpLoss + OPTIONS[1], new FirstSeal()); // no lock option because the player might have revive potion etc.
                     break;
 
                 case "2":
@@ -108,6 +108,7 @@ public class SealChamber extends AbstractImageEvent {
                         this.imageEventText.setDialogOption(OPTIONS[5], true);
                     }
                     break;
+
                 case "3":
                     option_number_and_seals.put(option_number, "3");
                     option_number++;

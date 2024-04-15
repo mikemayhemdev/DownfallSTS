@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
@@ -10,6 +11,7 @@ import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
+import theHexaghost.ghostflames.CrushingGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
 
 public class GhostflameInferno extends AbstractHexaCard {
@@ -44,12 +46,22 @@ public class GhostflameInferno extends AbstractHexaCard {
         });
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
+
+        if (GhostflameHelper.activeGhostFlame instanceof InfernoGhostflame) {
+            if(GhostflameHelper.activeGhostFlame.getActiveFlamesTriggerCount() + this.costForTurn >= 3){
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+            }
+        }
+
+    }
+
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeBurn(9);
-//            rawDescription = UPGRADE_DESCRIPTION;
-//            initializeDescription();
         }
     }
 }

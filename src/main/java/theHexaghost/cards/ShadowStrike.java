@@ -74,7 +74,7 @@ public class ShadowStrike extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(3);
         }
     }
 

@@ -1,17 +1,11 @@
 package theHexaghost.cards;
 
-import basemod.helpers.CardModifierManager;
-import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import expansioncontent.cardmods.PropertiesMod;
 import theHexaghost.HexaMod;
-import theHexaghost.actions.DrawUntilNonAfterlifeAction;
+import theHexaghost.actions.DrawUntilNonEtherealAction;
 
 public class Haunt extends AbstractHexaCard {
 
@@ -21,7 +15,7 @@ public class Haunt extends AbstractHexaCard {
 
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
-    public static final String EXTENDED_DESCRIPTION[] = CardCrawlGame.languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = CardCrawlGame.languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION;
 
     public Haunt() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -34,7 +28,7 @@ public class Haunt extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DrawCardAction(p, magicNumber));
         atb(new DrawCardAction(1));
-        atb(new DrawUntilNonAfterlifeAction());
+        atb(new DrawUntilNonEtherealAction());
 //        atb(new AbstractGameAction() {
 //            @Override
 //            public void update() {
@@ -52,7 +46,7 @@ public class Haunt extends AbstractHexaCard {
     @Override
     public void afterlife() {
         atb(new DrawCardAction(1));
-        atb(new DrawUntilNonAfterlifeAction());
+        atb(new DrawUntilNonEtherealAction());
 
 //        atb(new DrawCardAction(AbstractDungeon.player, magicNumber));
 //        atb(new AbstractGameAction() {

@@ -43,7 +43,7 @@ public class RecyclingMachine extends CustomRelic {
             activated = true;
             grayscale = true;
             stopPulse();
-            AbstractCard copy = card.makeCopy();
+            AbstractCard copy = card.makeStatEquivalentCopy();
             copy.freeToPlayOnce = true;
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(copy));
         }
