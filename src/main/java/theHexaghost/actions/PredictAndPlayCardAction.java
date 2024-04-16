@@ -27,8 +27,9 @@ public class PredictAndPlayCardAction extends AbstractGameAction {
             for( AbstractCard card: AbstractDungeon.player.drawPile.group ){
                 if(card.type == predicted_card_type)  cards_to_be_played.group.add(card);
             }
-
+            if (cards_to_be_played.group.size() == 0) return;
             AbstractCard card_to_play = cards_to_be_played.getRandomCard(AbstractDungeon.cardRng);
+            if (card_to_play == null) return;
             AbstractMonster m = AbstractDungeon.getRandomMonster();
             AbstractDungeon.player.drawPile.removeCard(card_to_play);
             AbstractDungeon.getCurrRoom().souls.remove(card_to_play);

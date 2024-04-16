@@ -34,14 +34,11 @@ public class RefractedBeam extends AbstractGuardianCard {
     private static final int COST = 2;
     private static final int DAMAGE = 3;
 
-    //TUNING CONSTANTS
     private static final int MULTICOUNT = 4;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -79,7 +76,7 @@ public class RefractedBeam extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        for (int i = 0; i < this.magicNumber; i++) {
+        for (int i = 0; (i < this.magicNumber) && !m.isDeadOrEscaped() ; i++) {
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
             float randoX = MathUtils.random(-80, 80);
             float randoY = MathUtils.random(-80, 80);

@@ -171,7 +171,7 @@
   },
   "champ:RapidStrikes": {
     "NAME": "连续打击",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 随机一张 *打击 手牌 NL 本回合下次耗能变为0。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 随机一张 *打击 手牌 NL 本回合单次耗能变为0。"
   },
   "champ:EnchantSword": {
     "NAME": "附魔利剑",
