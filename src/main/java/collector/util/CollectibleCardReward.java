@@ -57,12 +57,7 @@ public class CollectibleCardReward extends CustomReward {
         for (AbstractRelic r : AbstractDungeon.player.relics) {
             r.onPreviewObtainCard(card);
         }
-
         renderCard = card.makeStatEquivalentCopy();
-        if(Settings.language != Settings.GameLanguage.ZHS) { // hide zhs card text for the small card icon
-            card.rawDescription = "";                        // because it's rendered very strangely
-            card.initializeDescription();
-        }
         text = uiStrings.TEXT[0] + card.name;
         TIP_COL.a = 0.65f;
     }

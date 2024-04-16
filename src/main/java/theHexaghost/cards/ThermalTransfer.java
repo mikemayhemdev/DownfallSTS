@@ -13,8 +13,6 @@ public class ThermalTransfer extends AbstractHexaCard {
 
     public final static String ID = makeID("ThermalTransfer");
 
-    //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
-
     private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 3;
 
