@@ -33,14 +33,23 @@ public class ShadowStrike extends AbstractHexaCard {
         this(null);
     }
 
-//    public void setParent(AbstractCard parent) {
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+    }
+
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(3);
+        }
+    }
+
+    //    public void setParent(AbstractCard parent) {
 //        this.parent = parent;
 //        if (parent != null)
 //            cardsToPreview = this.parent.makeStatEquivalentCopy();
 //    }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
 //        superFlash(Color.PURPLE);
 //        AbstractCard q = new NightmareGuise();
 //        if (upgraded) q.upgrade();
@@ -61,7 +70,6 @@ public class ShadowStrike extends AbstractHexaCard {
 //                }
 //            }
 //        });
-    }
 
 //    @Override
 //    public void afterlife() {
@@ -71,12 +79,6 @@ public class ShadowStrike extends AbstractHexaCard {
 //        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
 //    }
 
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeDamage(3);
-        }
-    }
 
 //    @Override
 //    public AbstractCard makeStatEquivalentCopy() {

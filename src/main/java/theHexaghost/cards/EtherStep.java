@@ -11,7 +11,7 @@ import theHexaghost.HexaMod;
 public class EtherStep extends AbstractHexaCard{
     public final static String ID = makeID("EtherStep");
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 3;
 
     public EtherStep() {

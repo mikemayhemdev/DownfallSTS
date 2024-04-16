@@ -86,30 +86,25 @@ public class NeowBossFinal extends AbstractMonster {
             setHp(500);
         }
 
-
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
 
         if (AbstractDungeon.ascensionLevel >= 4) {
             this.damage.add(new DamageInfo(this, 9)); //Eye Beam Damage
-            this.damage.add(new DamageInfo(this, 20));  //Scream Damage
+            this.damage.add(new DamageInfo(this, 25));  //Scream Damage
         } else {
             this.damage.add(new DamageInfo(this, 7)); //Eye Beam Damage
-            this.damage.add(new DamageInfo(this, 18));  //Scream Damage
+            this.damage.add(new DamageInfo(this, 20));  //Scream Damage
         }
-
-
 
         this.strAmt = 2; //Strength Scaling for growth ability
         this.blockAmt = 20; //Block for growth ability
 
         this.intentOffsetX = INTENT_X;
 
-
         // halfDead = true;
 
         //Initialize the boss list with the four
-
 
         if (AbstractDungeon.isPlayerInDungeon()) AbstractDungeon.scene = new FakeDeathScene();
     }
@@ -145,7 +140,6 @@ public class NeowBossFinal extends AbstractMonster {
         AbstractCharBoss.boss = null;
         // halfDead = true;
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
-
 
         int beatAmount = 1;
         if (AbstractDungeon.ascensionLevel >= 19) {

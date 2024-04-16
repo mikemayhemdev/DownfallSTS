@@ -21,18 +21,15 @@ public class VentSteam extends AbstractGuardianCard {
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final int COST = 1;
 
-    //TUNING CONSTANTS
     private static final int UPGRADE_COST = 0;
     private static final int DEBUFFCOUNT = 2;
     private static final int UPGRADE_DEBUFF = 1;
     private static final int SOCKETS = 2;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

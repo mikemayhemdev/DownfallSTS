@@ -13,7 +13,7 @@ public class SoulSteal extends AbstractHexaCard {
 
     public SoulSteal() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseBurn = burn = 3;
+        baseBurn = burn = 4;
         HexaMod.loadJokeCardImage(this, "SoulSteal.png");
     }
 
