@@ -47,7 +47,7 @@ public class FlameTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
         this.baseDamage = 16;
         baseSelfDamage = this.selfDamage = 3;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 5;
         SlimeboundMod.loadJokeCardImage(this, "FlameTackle.png");
     }
 
@@ -65,8 +65,8 @@ public class FlameTackle extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
-            upgradeMagicNumber(1);
+            upgradeDamage(4);
+            upgradeMagicNumber(2);
         }
     }
 }

@@ -119,7 +119,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "查找策略",
-    "DESCRIPTION": "随机获得4张 slimeboundmod:冲撞 牌。 NL 本场战斗其耗能减1。 NL 消耗 。"
+    "DESCRIPTION": "随机获得4张 slimeboundmod:冲撞 牌， NL 本场战斗其耗能减1。 NL 消耗 。"
   },
   "Slimebound:Recycling": {
     "NAME": "循环再生",
@@ -172,7 +172,7 @@
   },
   "Slimebound:TongueLash": {
     "NAME": "舌鞭",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 消耗 的 slimeboundmod:舔舔 ， NL 本场战斗伤害加 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 消耗 的 slimeboundmod:舔舔 ， NL 额外造成 !M! 点。"
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "垂涎欲滴",

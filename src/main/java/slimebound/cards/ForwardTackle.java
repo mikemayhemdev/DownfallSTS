@@ -45,7 +45,7 @@ public class ForwardTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
 
 
-        this.baseDamage = 15;
+        this.baseDamage = 18;
         baseSelfDamage = this.selfDamage = 3;
         SlimeboundMod.loadJokeCardImage(this, "ForwardTackle.png");
 
@@ -68,7 +68,7 @@ public class ForwardTackle extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(4);
             rawDescription = UPGRADED_DESCRIPTION;
             initializeDescription();
         }
