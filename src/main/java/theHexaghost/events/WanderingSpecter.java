@@ -44,9 +44,6 @@ public class WanderingSpecter extends AbstractImageEvent {
     private boolean shopForMore;
     private boolean shopForMore2;
 
-
-    private int curseCount = 2;
-
     public WanderingSpecter() {
         super(NAME, DESCRIPTIONS[0], "hexamodResources/images/events/specter.png");
         this.screen = CurScreen.INTRO;

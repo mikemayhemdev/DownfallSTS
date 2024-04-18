@@ -12,8 +12,6 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleModifyDamagePower;
-import sneckomod.SneckoMod;
-
 
 public class BestDefense extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:BestDefense";
@@ -56,8 +54,6 @@ public class BestDefense extends AbstractSlimeboundCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(4);
-
-
         }
     }
 }
