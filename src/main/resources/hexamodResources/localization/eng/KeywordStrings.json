@@ -32,6 +32,7 @@
     "DESCRIPTION": "Intensity increases the amount of damage, #ySoulburn, #yBlock [REMOVE_SPACE], and #yScry applied by Ghostflames when #yIgnited [REMOVE_SPACE]."
   },
   {
+    "ID": "soulburn",
     "PROPER_NAME": "Soulburn",
     "NAMES": [
       "soulburn",
@@ -64,11 +65,12 @@
     "DESCRIPTION": "The more you play a Seal card, the more likely you are to find others. If all #b6 Seals have been played during a combat, obtain #pThe #pBroken #pSeal and remove the #b6 Seals from your deck."
   },
   {
+    "ID": "afterlife",
     "PROPER_NAME": "Afterlife",
     "NAMES": [
       "afterlife"
     ],
-    "DESCRIPTION": "When this card is #yplayed or #yExhausted [REMOVE_SPACE], its Afterlife effects activate."
+    "DESCRIPTION": "The purple effect will also trigger when this card is #yExhausted [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Crushing",

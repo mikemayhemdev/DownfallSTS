@@ -3,9 +3,11 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
+import theHexaghost.util.HexaPurpleTextInterface;
 
-public class FlamesFromBeyond extends AbstractHexaCard {
+public class FlamesFromBeyond extends AbstractHexaCard implements HexaPurpleTextInterface {
 
     public final static String ID = makeID("FlamesFromBeyond");
 
@@ -14,6 +16,8 @@ public class FlamesFromBeyond extends AbstractHexaCard {
         baseBurn = burn = 9;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("soulburn"));
         HexaMod.loadJokeCardImage(this, "FlamesFromBeyond.png");
     }
 

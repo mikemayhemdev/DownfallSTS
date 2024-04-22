@@ -21,6 +21,7 @@
     "DESCRIPTION": "提高鬼火 #y点燃 效果提供的伤害、 #y灼魂 、 #y格挡 ，以及 #y预见 量。"
   },
   {
+    "ID": "soulburn",
     "PROPER_NAME": "灼魂",
     "NAMES": [
       "灼魂",
@@ -53,11 +54,12 @@
     "DESCRIPTION": "省流：集齐六个有奖。 NL 每当你打出一张 #y封印 时，发现未获得 #y封印 的概率将增加。若一场战斗所有的 #b6 种 #y封印 都被打出，获得 #p挣破的封印 并将打出的 #y封印 移出牌组。"
   },
   {
+    "ID": "afterlife",
     "PROPER_NAME": "阴世",
     "NAMES": [
       "阴世"
     ],
-    "DESCRIPTION": "本牌被打出或被 #y消耗 时，均触发该效果。"
+    "DESCRIPTION": "本牌被 #y消耗 时也会触发同色效果。"
   },
   {
     "PROPER_NAME": "碾压",

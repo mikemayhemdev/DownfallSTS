@@ -9,7 +9,7 @@
   },
   "hexamod:Sear": {
     "NAME": "灼烧",
-    "DESCRIPTION": "虚无 。 NL 给予 !burny! 层 hexamod:灼魂 。 NL hexamod:阴世 ： NL 给予 !burny! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL [#e087a4]给予[] !burny! [#e087a4]层灼魂[] 两次。"
   },
   "hexamod:Float": {
     "NAME": "浮动",
@@ -119,24 +119,36 @@
   },
   "hexamod:SpectersWail": {
     "NAME": "亡灵哀号",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点群体伤害。 NL hexamod:阴世 ： NL 造成 !D! 点群体伤害。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL [#e087a4]造成[] !D! [#e087a4]点群体伤害[] 两次。"
   },
   "hexamod:Hexaguard": {
     "NAME": "六边防护",
-    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL hexamod:阴世 ： NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 抽 !M! 张牌。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "获得 !B! 点 格挡 。"
+    ]
   },
   "hexamod:GhostLash": {
     "NAME": "幽灵甩击",
-    "DESCRIPTION": "虚无 。 NL hexamod:阴世 ： NL 造成 !D! 点伤害， NL 手中每有一张 虚无 牌， NL 额外造成 !M! 点。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL ",
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害， NL 手中每有一张虚无牌， NL 额外造成 !M! 点。"
+    ]
   },
   "hexamod:GhostShield": {
     "NAME": "幽灵护盾",
-    "DESCRIPTION": "虚无 。 NL 获得 !M! 层 bronze:残影 。 NL hexamod:阴世 ： NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 !M! 层 bronze:残影 。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "获得 !B! 点格挡。"
+    ]
   },
   "hexamod:Haunt": {
     "NAME": "鬼手",
-    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL hexamod:阴世 ： NL 抽牌直至抽到非 虚无 牌。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL hexamod:阴世 ： NL 抽牌直至抽到非 虚无 牌。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 抽 !M! 张牌。 NL ",
+    "UPGRADE_DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 抽 !M! 张牌。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "抽牌直至抽到非虚无牌。"
+    ]
   },
   "hexamod:RecurringNightmare": {
     "NAME": "梦魇幻象",
@@ -158,7 +170,10 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "诡异探险",
-    "DESCRIPTION": "虚无 。 NL 随机获得一张 hexamod:阴世 牌。 NL hexamod:阴世 ： NL 随机洗入抽牌堆一张 *阴世 牌。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 随机获得一张 hexamod:阴世 牌。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "随机洗入抽牌堆一 张 阴 世 牌 。"
+    ]
   },
   "hexamod:PhantomCloak": {
     "NAME": "幽灵披风",
@@ -176,13 +191,17 @@
   },
   "hexamod:NightmareStrike": {
     "NAME": "梦魇打击",
-    "DESCRIPTION": "虚无 。 NL 获得一张 *暗影打击 。 NL hexamod:阴世 : NL 造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 时获得 *暗影打击 +。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得一张 *暗影打击 。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害。"
+    ]
   },
   "hexamod:NightmareGuise": {
     "NAME": "梦魇伪装",
-    "DESCRIPTION": "虚无 。 NL 获得一张 *暗影伪装 。 NL hexamod:阴世 : NL 获得 !B! 点 格挡 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 消耗 时获得 *暗影伪装 +。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得一张 *暗影伪装 。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "获得 !B! 点 格挡 。"
+    ]
   },
   "hexamod:ShadowStrike": {
     "NAME": "暗影打击",
@@ -194,8 +213,11 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "深处之力",
-    "DESCRIPTION": "虚无 。 NL 下回合额外获得 [E] 。 NL hexamod:阴世 ： NL 下回合额外抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 下回合额外获得 [E] [E] 。 NL hexamod:阴世 ： NL 下回合额外抽 !M! 张牌。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 下回合额外获得 [E] 。 NL ",
+    "UPGRADE_DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 下回合额外获得 [E] [E] 。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "下回合额外抽 !M! 张牌。"
+    ]
   },
   "hexamod:BurningTouch": {
     "NAME": "灼烧之触",
@@ -265,7 +287,7 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "深处之焰",
-    "DESCRIPTION": "虚无 。 NL 给予 !burny! 层群体 hexamod:灼魂 。 NL hexamod:阴世 ： NL 给予 !burny! 层群体 hexamod:灼魂 。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL [#e087a4]给予[] !burny! [#e087a4]层群体灼魂[] 两次 。"
   },
   "hexamod:PhantomFireball": {
     "NAME": "幻影火球",
@@ -371,13 +393,18 @@
   },
   "hexamod:BurningQuestion": {
     "NAME": "当务之急",
-    "DESCRIPTION": "虚无 。 NL 获得 !M! 点 力量 。 NL hexamod:阴世 ： NL 获得1点 敏捷 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !M! 点 力量 。 NL hexamod:阴世 ： NL 获得1点 敏捷 。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 !M! 点 力量 。 NL ",
+    "UPGRADE_DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 !M! 点 力量 。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "获得1点敏捷。"
+    ]
   },
   "hexamod:Floatwork": {
     "NAME": "飘忽不定",
-    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL hexamod:阴世 : NL 获得 !M! 层 *多层护甲 。",
-    "UPGRADE_DESCRIPTION": "弃用"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 !B! 点 格挡 。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "获得 !M! 层多层护甲。"
+    ]
   },
   "hexamod:Premonition": {
     "NAME": "预兆",
@@ -414,8 +441,11 @@
   },
   "hexamod:EtherStep": {
     "NAME": "太虚之跃",
-    "DESCRIPTION": "虚无 。 NL 选择 消耗 一张手牌。 NL 抽 !M! 张牌。 NL hexamod:阴世 ： NL 造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 选择 消耗 一张手牌。 NL 抽 !M! 张牌。 NL hexamod:阴世 ： NL 造成 !D! 点伤害。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 选择 消耗 一张手牌。 NL 抽 !M! 张牌。 NL ",
+    "UPGRADE_DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 选择 消耗 一张手牌。 NL 抽 !M! 张牌。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害。"
+    ]
   },
   "hexamod:OpposingAction": {
     "NAME": "反骨",
@@ -429,8 +459,7 @@
   },
   "hexamod:FlameDevourer": {
     "NAME": "噬火",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL hexamod:回退 ， NL 若 *回退 至 hexamod:点燃 的鬼火， NL 额外获得 !M! 点。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL hexamod:回退 ， NL 若 *回退 至 hexamod:点燃 的鬼火， NL 额外获得 !M! 点。"
+    "DESCRIPTION": "hexamod:回退 ， NL 若 *回退 至 hexamod:点燃 的鬼火， NL 获得 !B! 点 格挡 。"
   },
   "hexamod:SpectralGrace": {
     "NAME": "幽雅",

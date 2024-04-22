@@ -68,8 +68,7 @@ public class Libra extends CustomRelic {
     }
 
     public void update() {
-        super.update(); //(AbstractDungeon.screen != AbstractDungeon.CurrentScreen.GRID )
-//        System.out.println("calledtansform" + calledTransform + "   no cards" + no_cards_to_select + "  clicked " + AbstractDungeon.gridSelectScreen.confirmButton.hb.clicked + "  clickestart  " + AbstractDungeon.gridSelectScreen.confirmButton.hb.clickStarted);
+        super.update(); // Todo, verify the trigger condition is fine for controller input too
         if (!this.calledTransform && (no_cards_to_select || (AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered && InputHelper.justClickedLeft) ) ) {
             AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered = false;
             this.calledTransform = true;
@@ -118,83 +117,4 @@ public class Libra extends CustomRelic {
         AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
     }
-
-
-
 }
-
-//        } else if (more_attacks_than_skills) {
-//            Iterator i = AbstractDungeon.player.masterDeck.group.iterator();
-//
-//            while (true) {
-//                AbstractCard e;
-//                do {
-//                    if (!i.hasNext()) {
-//                        if (this.count > 0) {
-//                            CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-//
-//                            for (int j = 0; j < this.count; ++j) {
-//                                AbstractCard card = AbstractDungeon.returnTrulyRandomCard().makeCopy();
-//                                while(card.type != AbstractCard.CardType.SKILL){
-//                                    card = AbstractDungeon.returnTrulyRandomCard().makeCopy();
-//                                }
-//                                UnlockTracker.markCardAsSeen(card.cardID);
-//                                card.isSeen = true;
-//                                Iterator var4 = AbstractDungeon.player.relics.iterator();
-//
-//                                while (var4.hasNext()) {
-//                                    AbstractRelic r = (AbstractRelic) var4.next();
-//                                    r.onPreviewObtainCard(card);
-//                                }
-//                                group.addToBottom(card);
-//                            }
-//                            AbstractDungeon.gridSelectScreen.openConfirmationGrid(group, " ");
-//                        }
-//                        return;
-//                    }
-//                    e = (AbstractCard) i.next();
-//                } while (!e.hasTag(AbstractCard.CardTags.STARTER_STRIKE));
-//
-//                i.remove();
-//                ++this.count;
-//            }
-//        } else {
-//            Iterator i = AbstractDungeon.player.masterDeck.group.iterator();
-//
-//            while (true) {
-//                AbstractCard e;
-//                do {
-//                    if (!i.hasNext()) {
-//                        if (this.count > 0) {
-//                            CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-//
-//                            for (int j = 0; j < this.count; ++j) {
-//                                AbstractCard card = AbstractDungeon.returnTrulyRandomCard().makeCopy();
-//                                while(card.type != AbstractCard.CardType.ATTACK){
-//                                    card = AbstractDungeon.returnTrulyRandomCard().makeCopy();
-//                                }
-//                                UnlockTracker.markCardAsSeen(card.cardID);
-//                                card.isSeen = true;
-//                                Iterator var4 = AbstractDungeon.player.relics.iterator();
-//
-//                                while (var4.hasNext()) {
-//                                    AbstractRelic r = (AbstractRelic) var4.next();
-//                                    r.onPreviewObtainCard(card);
-//                                }
-//                                group.addToBottom(card);
-//                            }
-//                            AbstractDungeon.gridSelectScreen.openConfirmationGrid(group, " ");
-//                        }
-//                        return;
-//                    }
-//                    e = (AbstractCard) i.next();
-//                } while (!e.hasTag(AbstractCard.CardTags.STARTER_DEFEND));
-//
-//                i.remove();
-//                ++this.count;
-//            }
-//        }
-//    }
-//
-
-//}

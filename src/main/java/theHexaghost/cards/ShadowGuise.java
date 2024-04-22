@@ -25,7 +25,6 @@ public class ShadowGuise extends AbstractHexaCard {
         baseBlock = 2;
         exhaust = true;
 //        setParent(parent);
-//        tags.add(HexaMod.AFTERLIFE);
 //        cardsToPreview = new NightmareStrike();
         HexaMod.loadJokeCardImage(this, "ShadowGuise.png");
     }

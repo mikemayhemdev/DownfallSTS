@@ -297,6 +297,13 @@
       " 它本回合已被扰乱，一定不触发 #y精准 效果。"
     ]
   },
+  "downfall:TangerinePower": {
+    "NAME": "副手",
+    "DESCRIPTIONS": [
+      "小橘死亡时，将 #y亡命之徒 的 #y专注 打破，但其获得 #b",
+      " 点 #y力量 。"
+    ]
+  },
   "downfall:HermitWheelOfFortune": {
     "NAME": "幸运大转盘",
     "DESCRIPTIONS": [

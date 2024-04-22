@@ -1,20 +1,20 @@
 package theHexaghost.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
+import theHexaghost.util.HexaPurpleTextInterface;
 
 import java.util.ArrayList;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
-public class EtherealExpedition extends AbstractHexaCard {
+public class EtherealExpedition extends AbstractHexaCard implements HexaPurpleTextInterface {
 
     public final static String ID = makeID("EtherealExpedition");
 
@@ -26,8 +26,8 @@ public class EtherealExpedition extends AbstractHexaCard {
         tags.add(HexaMod.AFTERLIFE);
         exhaust = false;
         baseMagicNumber = magicNumber = 1;
-//        baseBurn = burn = 1;
         HexaMod.loadJokeCardImage(this, "EtherealExpedition.png");
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
     }
 
     public static AbstractCard returnTrulyRandomEtherealCardInCombat() {

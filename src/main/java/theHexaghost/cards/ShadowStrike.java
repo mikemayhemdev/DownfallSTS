@@ -23,7 +23,6 @@ public class ShadowStrike extends AbstractHexaCard {
         baseDamage = 3;
         exhaust = true;
 //        cardsToPreview = new NightmareGuise();
-//        tags.add(HexaMod.AFTERLIFE);
         tags.add(CardTags.STRIKE);
 //        setParent(parent);
         HexaMod.loadJokeCardImage(this, "ShadowStrike.png");

@@ -24,7 +24,17 @@
   },
   "hexamod:BurningQuestion": {
     "NAME": "Burning Question",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength. NL hexamod:Afterlife: NL Gain 1 Dexterity."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain !M! Strength. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Gain 1 Dexterity."
+    ],
+    "Translator Note":[
+      "For card text simplicity, we have designed a new text system for afterlife cards. Now if an Afterlife card has EXTENDED_DESCRIPTION, it means",
+      "its card description will be the form of DESCRIPTION/UPGRADE_DESCRIPTION + colored EXTENDED_DESCRIPTION (We have built a system to color them)",
+      "automatically) . Or they only use manual color setting in the DESCRIPTION, because colored text appears in the middle.",
+      "(Sear, Flames from Beyond and Specter's Wail use this form) Check how they look in game for a detailed view and if you have any",
+      "questions or issues, contact Mwalls in the loc channel."
+    ]
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
@@ -62,7 +72,10 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. NL Add !M! random hexamod:Afterlife card into your hand. NL hexamod:Afterlife: Add 1 other to your drawpile too."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Add !M! random hexamod:Afterlife card to your hand. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Add 1 random Afterlife card to your drawpile"
+    ]
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
@@ -79,7 +92,7 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
-    "DESCRIPTION": "Ethereal. NL Apply !burny! AoE hexamod:Soulburn. NL hexamod:Afterlife: NL Apply !burny! AoE hexamod:Soulburn."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Apply[] !burny! [#e087a4]Soulburn[] [#e087a4]to[] [#e087a4]All[] [#e087a4]enemies[] twice."
   },
   "hexamod:FlameSwitch": {
     "NAME": "Bad Omen",
@@ -100,7 +113,10 @@
   },
   "hexamod:Floatwork": {
     "NAME": "Floatwork",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL hexamod:Afterlife: NL Gain !M! Plated Armor."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain !B! Block. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Gain !M! Plated Armor."
+    ]
   },
   "hexamod:ForkedFlame": {
     "NAME": "Forked Flame",
@@ -118,7 +134,10 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. NL hexamod:Afterlife: Deal !D! damage, deal !M! more damage for each Ethereal card in hand."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[]  NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage, deal !M! more damage for each Ethereal card in your hand."
+    ]
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Into Shadow",
@@ -144,19 +163,25 @@
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. NL Gain !M! bronze:Blur. NL hexamod:Afterlife: NL Gain !B! Block."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain !M! bronze:Blur. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Gain !B! Block."
+    ]
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "Gifts From Beyond",
-    "DESCRIPTION": "At the start of your turn, add !M! random hexamod:Afterlife card into your hand.",
+    "DESCRIPTION": "At the start of your turn, add !M! random hexamod:Afterlife card to your hand.",
     "EXTENDED_DESCRIPTION": [
       "These spirits are too powerful to invoke directly."
     ]
   },
   "hexamod:Haunt": {
     "NAME": "Haunted Hand",
-    "DESCRIPTION": "Ethereal. NL Draw !M! card. NL hexamod:Afterlife: Draw cards until you draw a non-Ethereal card.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Draw !M! cards. NL hexamod:Afterlife: Draw cards until you draw a non-Ethereal card."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Draw !M! card. NL ",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Draw !M! cards. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Draw cards until you draw a non-Ethereal card."
+    ]
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
@@ -180,7 +205,10 @@
   },
   "hexamod:Hexaguard": {
     "NAME": "Hexaguard",
-    "DESCRIPTION": "Ethereal.  NL Draw !M! cards. NL hexamod:Afterlife: NL Gain !B! Block."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[]  NL Draw !M! cards. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Gain !B! Block."
+    ]
   },
   "hexamod:HexaLevel": {
     "NAME": "Infernal Form",
@@ -205,11 +233,17 @@
   },
   "hexamod:NightmareGuise": {
     "NAME": "Nightmare Guise",
-    "DESCRIPTION": "Ethereal. NL Gain a *Shadow *Guise. NL hexamod:Afterlife : NL Gain !B! Block."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain a *Shadow *Guise. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Gain !B! Block."
+    ]
   },
   "hexamod:NightmareStrike": {
     "NAME": "Nightmare Strike",
-    "DESCRIPTION": "Ethereal. NL Gain a *Shadow *Strike. NL hexamod:Afterlife : NL Deal !D! damage."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain a *Shadow *Strike. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage."
+    ]
   },
   "hexamod:ParanormalForm": {
     "NAME": "Poltergeist",
@@ -226,8 +260,11 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
-    "DESCRIPTION": "Ethereal. NL Gain [E] next turn. NL hexamod:Afterlife: draw !M! cards next turn.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] [E] next turn. NL hexamod:Afterlife: draw !M! cards next turn."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain [E] next turn. NL ",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain [E] [E] next turn. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Draw !M! cards next turn."
+    ]
   },
   "hexamod:Premonition": {
     "NAME": "Premonition",
@@ -267,7 +304,7 @@
   },
   "hexamod:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Ethereal. NL Apply !burny! hexamod:Soulburn. hexamod:Afterlife: NL Apply !burny! hexamod:Soulburn."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife. NL [#e087a4]Apply !burny! [#e087a4]Soulburn twice."
   },
   "hexamod:SearingWound": {
     "NAME": "Searing Wound",
@@ -297,7 +334,7 @@
   },
   "hexamod:SpectersWail": {
     "NAME": "Specter's Wail",
-    "DESCRIPTION": "Ethereal. NL Deal !D! AoE damage. NL hexamod:Afterlife: NL Deal !D! AoE damage."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage[] [#e087a4]to[] [#e087a4]All[] [#e087a4]enemies[] twice."
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Bright Ritual",
@@ -411,8 +448,11 @@
   },
   "hexamod:EtherStep": {
     "NAME": "Ether Step",
-    "DESCRIPTION": "Ethereal. NL Exhaust 1 card. NL Draw !M! card. NL hexamod:Afterlife: NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Exhaust 1 card. NL Draw !M! cards. NL hexamod:Afterlife: NL Deal !D! damage."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Exhaust 1 card. NL Draw !M! card. NL ",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]hexamod:Afterlife.[] NL Exhaust 1 card. NL Draw !M! cards. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage."
+    ]
   },
   "hexamod:OpposingAction": {
     "NAME": "Opposing Action",
@@ -426,8 +466,7 @@
   },
   "hexamod:FlameDevourer": {
     "NAME": "Devour Flame",
-    "DESCRIPTION": "Gain !B! Block. NL hexamod:Retract, if *Retract onto an hexamod:Ignited Ghostflame, gain !M! additional Block.",
-    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain !B! Block."
+    "DESCRIPTION": "hexamod:Retract, if *Retract onto an hexamod:Ignited Ghostflame, gain !B! Block."
   },
   "hexamod:SpectralGrace": {
     "NAME": "Spectral Grace",

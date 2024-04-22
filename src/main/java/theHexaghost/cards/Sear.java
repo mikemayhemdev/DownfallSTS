@@ -1,16 +1,15 @@
 package theHexaghost.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
-import theHexaghost.powers.BurnPower;
+import theHexaghost.util.HexaPurpleTextInterface;
 
-public class Sear extends AbstractHexaCard {
+public class Sear extends AbstractHexaCard implements HexaPurpleTextInterface {
 
     public final static String ID = makeID("Sear");
 
@@ -20,6 +19,8 @@ public class Sear extends AbstractHexaCard {
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "Sear.png");
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("soulburn"));
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

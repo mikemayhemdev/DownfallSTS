@@ -1,13 +1,16 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
+import theHexaghost.util.HexaPurpleTextInterface;
 
-public class BurningQuestion extends AbstractHexaCard {
+public class BurningQuestion extends AbstractHexaCard implements HexaPurpleTextInterface {
     public final static String ID = makeID("BurningQuestion");
 
     public BurningQuestion() {
@@ -16,6 +19,14 @@ public class BurningQuestion extends AbstractHexaCard {
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "BurningQuestion.png");
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
+        if (Settings.language == Settings.GameLanguage.ZHS){
+            this.keywords.add("敏捷");
+        }else if (Settings.language == Settings.GameLanguage.RUS){
+            this.keywords.add("ловкость");
+        }else{
+            this.keywords.add("dexterity");
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

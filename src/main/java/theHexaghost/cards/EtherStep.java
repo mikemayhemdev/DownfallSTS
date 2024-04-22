@@ -6,9 +6,11 @@ import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
+import theHexaghost.util.HexaPurpleTextInterface;
 
-public class EtherStep extends AbstractHexaCard{
+public class EtherStep extends AbstractHexaCard implements HexaPurpleTextInterface {
     public final static String ID = makeID("EtherStep");
 
     private static final int DAMAGE = 10;
@@ -20,6 +22,7 @@ public class EtherStep extends AbstractHexaCard{
         baseMagicNumber = magicNumber = 1;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

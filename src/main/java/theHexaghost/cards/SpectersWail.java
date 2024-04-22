@@ -11,16 +11,16 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import theHexaghost.HexaMod;
+import theHexaghost.util.HexaPurpleTextInterface;
 
-public class SpectersWail extends AbstractHexaCard {
+public class SpectersWail extends AbstractHexaCard implements HexaPurpleTextInterface {
 
     public final static String ID = makeID("SpectersWail");
-
-    //stupid intellij stuff ATTACK, ALL_ENEMY, COMMON
 
     private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 2;
@@ -31,6 +31,7 @@ public class SpectersWail extends AbstractHexaCard {
         isEthereal = true;
         isMultiDamage = true;
         tags.add(HexaMod.AFTERLIFE);
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
         HexaMod.loadJokeCardImage(this, "SpectersWail.png");
     }
 

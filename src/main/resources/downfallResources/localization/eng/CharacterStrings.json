@@ -109,7 +109,7 @@
       "..and so...... shall... NL ....I......"
     ],
     "OPTIONS": [
-      "~I~ ~brought...~ NL ~HIM...~ ~back...~ ~And...~took...his soul...~",
+      "~I~ ~brought...~ NL ~HIM...~ ~back...~ ~And...~ ~took...~ ~his~ ~soul...~",
       "~Protect~ ~me...~ NL ~And~ ~be...~ ~rewarded...~"
     ]
   },
@@ -234,5 +234,13 @@
     ],
     "TEXT": [
     ]
+  },
+  "downfall:OldNeow": {
+    "NAMES": [
+      "Old Neow"
+    ],
+    "TEXT": [
+    ]
   }
+
 }

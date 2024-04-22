@@ -2,16 +2,21 @@ package theHexaghost.cards;
 
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.DescriptionLine;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -24,6 +29,7 @@ import theHexaghost.TheHexaghost;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;
 import theHexaghost.relics.CandleOfCauterizing;
+import theHexaghost.util.HexaPurpleTextInterface;
 import theHexaghost.vfx.AfterlifePlayEffect;
 
 import java.util.ArrayList;
@@ -257,4 +263,28 @@ public abstract class AbstractHexaCard extends CustomCard {
         }
         return super.getPortraitImage();
     }
+
+    @Override
+    public void initializeDescription() {
+        // Checks if the card is afterlife, and if so, colorize the Extended Description (Afterlife effect description) and append to rawDescription
+        if(this instanceof HexaPurpleTextInterface && this.EXTENDED_DESCRIPTION != null && this.EXTENDED_DESCRIPTION.length >= 1 ){
+            String[] words = this.EXTENDED_DESCRIPTION[0].split(" ");
+            StringBuilder[] coloredWords = new StringBuilder[words.length];
+            for (int i = 0; i < words.length; i++) {
+                if(!words[i].equals("") &&  !words[i].equals("!D!") && !words[i].equals("!B!") && !words[i].equals("!M!") && !words[i].equals("!burny!") && !words[i].equals("NL") ) {
+                    coloredWords[i] = new StringBuilder("[#e087a4]").append(words[i]).append("[]");
+                }else{
+                    coloredWords[i] = new StringBuilder(words[i]);
+                }
+            }
+
+            if(this.upgraded && this.UPGRADE_DESCRIPTION != null) {
+                this.rawDescription = this.UPGRADE_DESCRIPTION + String.join(" ", coloredWords);
+            }else{
+                this.rawDescription = this.DESCRIPTION + String.join(" ", coloredWords);
+            }
+        }
+        super.initializeDescription();
+    }
+
 }

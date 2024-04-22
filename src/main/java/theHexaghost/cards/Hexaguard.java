@@ -4,9 +4,11 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
+import theHexaghost.util.HexaPurpleTextInterface;
 
-public class Hexaguard extends AbstractHexaCard {
+public class Hexaguard extends AbstractHexaCard implements HexaPurpleTextInterface {
     public final static String ID = makeID("Hexaguard");
 
     private static final int UPG_BLOCK = 3;
@@ -17,6 +19,7 @@ public class Hexaguard extends AbstractHexaCard {
         isEthereal = true;
         baseMagicNumber = magicNumber = 2;
         tags.add(HexaMod.AFTERLIFE);
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
         HexaMod.loadJokeCardImage(this, "Hexaguard.png");
     }
 

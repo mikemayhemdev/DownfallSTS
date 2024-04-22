@@ -10,39 +10,40 @@ public class FlameDevourer extends AbstractHexaCard{
     //Devour Flame
     public final static String ID = makeID("FlameDevourer");
     public FlameDevourer() {
-        super(ID, 1, CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
         baseBlock = 9;
-        baseMagicNumber = magicNumber = 5;
     }
 
-    @Override
-    public void applyPowers() {
-        if((GhostflameHelper.getPreviousGhostFlame()).charged){
-            int real_base_block = this.baseBlock;
-            this.baseBlock += this.magicNumber;
-            super.applyPowers();
-            this.baseBlock = real_base_block;
-            this.isBlockModified = this.block != this.baseBlock;
-        }else{
-            super.applyPowers();
-        }
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        if((GhostflameHelper.getPreviousGhostFlame()).charged){
-            int real_base_block = this.baseBlock;
-            this.baseBlock += this.magicNumber;
-            super.calculateCardDamage(mo);
-            this.baseBlock = real_base_block;
-            this.isBlockModified = this.block != this.baseBlock;
-        }else{
-            super.calculateCardDamage(mo);
-        }
-    }
+//    @Override
+//    public void applyPowers() {
+//        if((GhostflameHelper.getPreviousGhostFlame()).charged){
+//            int real_base_block = this.baseBlock;
+//            this.baseBlock += this.magicNumber;
+//            super.applyPowers();
+//            this.baseBlock = real_base_block;
+//            this.isBlockModified = this.block != this.baseBlock;
+//        }else{
+//            super.applyPowers();
+//        }
+//    }
+//
+//    @Override
+//    public void calculateCardDamage(AbstractMonster mo) {
+//        if((GhostflameHelper.getPreviousGhostFlame()).charged){
+//            int real_base_block = this.baseBlock;
+//            this.baseBlock += this.magicNumber;
+//            super.calculateCardDamage(mo);
+//            this.baseBlock = real_base_block;
+//            this.isBlockModified = this.block != this.baseBlock;
+//        }else{
+//            super.calculateCardDamage(mo);
+//        }
+//    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+        if((GhostflameHelper.getPreviousGhostFlame()).charged) {
+            blck();
+        }
         atb(new RetractAction());
     }
 
@@ -53,8 +54,8 @@ public class FlameDevourer extends AbstractHexaCard{
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(2);
-            upgradeMagicNumber(2);
+            upgradeBlock(3);
+//            upgradeMagicNumber(2);
         }
     }
 }

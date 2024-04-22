@@ -4,10 +4,12 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.DrawUntilNonEtherealAction;
+import theHexaghost.util.HexaPurpleTextInterface;
 
-public class Haunt extends AbstractHexaCard {
+public class Haunt extends AbstractHexaCard implements HexaPurpleTextInterface {
 
     public final static String ID = makeID("Haunt");
 
@@ -22,6 +24,7 @@ public class Haunt extends AbstractHexaCard {
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
         HexaMod.loadJokeCardImage(this, "HauntedHand.png");
     }
 

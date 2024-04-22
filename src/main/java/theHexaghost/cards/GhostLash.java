@@ -5,9 +5,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
+import theHexaghost.util.HexaPurpleTextInterface;
 
-public class GhostLash extends AbstractHexaCard {
+public class GhostLash extends AbstractHexaCard implements HexaPurpleTextInterface{
 
     public final static String ID = makeID("GhostLash");
 
@@ -17,12 +19,13 @@ public class GhostLash extends AbstractHexaCard {
     private boolean can_show = false;
 
     public GhostLash() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 6;
         baseMagicNumber = magicNumber = 3;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "GhostLash.png");
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
     }
 
     public static int calculate_afterlifes(){

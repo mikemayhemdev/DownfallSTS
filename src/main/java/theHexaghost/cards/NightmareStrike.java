@@ -7,9 +7,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
+import theHexaghost.util.HexaPurpleTextInterface;
 
-public class NightmareStrike extends AbstractHexaCard {
+public class NightmareStrike extends AbstractHexaCard implements HexaPurpleTextInterface {
 
     public final static String ID = makeID("NightmareStrike");
 
@@ -20,6 +22,7 @@ public class NightmareStrike extends AbstractHexaCard {
         cardsToPreview = new ShadowStrike();
         tags.add(CardTags.STRIKE);
         tags.add(HexaMod.AFTERLIFE);
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
         HexaMod.loadJokeCardImage(this, "NightmareStrike.png");
     }
 

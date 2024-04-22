@@ -139,10 +139,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static reskinContent.reskinContent.unlockAllReskin;
@@ -210,6 +207,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     };
 
     public static Properties tutorialSaves = new Properties();
+
+    public static Map<String, String> keywords_and_proper_names = new HashMap<>();
 
     @SpireEnum
     public static AbstractCard.CardTags CHARBOSS_ATTACK;
@@ -496,6 +495,9 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         if (keywords != null) {
             for (Keyword keyword : keywords) {
                 BaseMod.addKeyword(modID + "", keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+                if(!keyword.ID.isEmpty()){ // currently only used by hexa cards, could be expanded to potions too
+                    keywords_and_proper_names.put(keyword.ID, keyword.NAMES[0]);
+                }
             }
         }
     }
@@ -1231,6 +1233,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addMonster(NeowBoss.ID, () -> new MonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
+        BaseMod.addMonster(OldNeow.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new OldNeow()}));
 
     }
 
