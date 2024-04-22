@@ -72,10 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Add !M! random hexamod:Afterlife card to your hand. NL ",
-    "EXTENDED_DESCRIPTION": [
-      "Add 1 random Afterlife card to your drawpile"
-    ]
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Add[] !M! [#e087a4]random[] [#e087a4]Afterlife [#e087a4]card[] [#e087a4]to[] [#e087a4]your[] [#e087a4]drawpile[] and another to your hand."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
@@ -92,7 +89,7 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Apply[] !burny! [#e087a4]Soulburn[] [#e087a4]to[] [#e087a4]All[] [#e087a4]enemies[] twice."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Apply[] !burny! [#e087a4]Soulburn[] [#e087a4]to[] [#e087a4]ALL[] [#e087a4]enemies[] twice."
   },
   "hexamod:FlameSwitch": {
     "NAME": "Bad Omen",
@@ -334,7 +331,7 @@
   },
   "hexamod:SpectersWail": {
     "NAME": "Specter's Wail",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage[] [#e087a4]to[] [#e087a4]All[] [#e087a4]enemies[] twice."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage[] [#e087a4]to[] [#e087a4]ALL[] [#e087a4]enemies[] twice."
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Bright Ritual",
@@ -449,7 +446,7 @@
   "hexamod:EtherStep": {
     "NAME": "Ether Step",
     "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Exhaust 1 card. NL Draw !M! card. NL ",
-    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]hexamod:Afterlife.[] NL Exhaust 1 card. NL Draw !M! cards. NL ",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Exhaust 1 card. NL Draw !M! cards. NL ",
     "EXTENDED_DESCRIPTION": [
       "Deal !D! damage."
     ]

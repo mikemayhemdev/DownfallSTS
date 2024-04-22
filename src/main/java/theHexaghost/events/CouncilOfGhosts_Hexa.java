@@ -44,7 +44,7 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
         this.screen = CurScreen.INTRO;
         this.noCardsInRewards = true;
 
-        this.hpLoss = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.75F);
+        this.hpLoss = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.65F);
         if (this.hpLoss >= AbstractDungeon.player.maxHealth) {
             this.hpLoss = AbstractDungeon.player.maxHealth - 1;
         }
