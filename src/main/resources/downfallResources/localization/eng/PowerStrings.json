@@ -331,6 +331,13 @@
       "Hermit's #yConcentration is broken and #yDead #yOn effects don't trigger this turn."
     ]
   },
+  "downfall:TangerinePower": {
+    "NAME": "Deputy",
+    "DESCRIPTIONS": [
+      "When Tangerine dies, Hermit's #yConcentration breaks and he gains #b",
+      " #yStrength."
+    ]
+  },
   "downfall:HermitWheelOfFortune": {
     "NAME": "Wheel of Fortune",
     "DESCRIPTIONS": [
