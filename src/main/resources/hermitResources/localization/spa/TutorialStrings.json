@@ -1,0 +1,67 @@
+{
+  "HermitMod:HermitTutorials": {
+    "TEXT": [
+      "El Hermitaño es capaz de usar cartas #yEn #yel #yBlanco . NL NL Las cartas #yEn #yel #yBlanco activan un efecto especial cuando se colocan en medio de tu mano.",
+      "In even hands, #yboth of the middle cards count, even if these are the only cards in your hand."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "En el Blanco",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:GuardianTutorials": {
+    "TEXT": [
+      "El Guardian puede atrincherarse después de obtener una cierta cantidad de Aparatos.",
+      "También puedes colocar gemas en cartas para aumentar sus efectos."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "El Guardian",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:HexaghostTutorials": {
+    "TEXT": [
+      "El Hexaghost canaliza el poder sus llamas.",
+      "Realiza una determinada acción mientras cada una está activa para cargarla."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "El Hexaghost",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:CharbossTutorials": {
+    "TEXT": [
+      "Los héroes enemigos tienen poderosas habilidades que pueden requerir que modifiques tus estrategias.",
+      "Asegúrate de comprobar siempre los atributos de un héroe antes de actuar."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "Spire Slayers",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:CollectorTutorials": {
+    "TEXT": [
+      "El coleccionista toma esencias de los enemigos. Puedes gastar Esencias para agregar sus espíritus a tu Colección..",
+      "La Colección es un mazo separado. Se roba una carta en cada turno."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "El coleccionista",
+      "(Page: ",
+      ")"
+    ]
+  }
+}

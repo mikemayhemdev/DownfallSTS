@@ -1,0 +1,14 @@
+{
+"hermit:Tonic": {
+        "NAME": "Tonico",
+        "DESCRIPTIONS": ["Gana #b", " #yRobustez."]
+},
+"hermit:BlackBile": {
+        "NAME": "Bilis Negro",
+        "DESCRIPTIONS": ["Aplica #b", " #yHerir."]
+},
+"hermit:Eclipse": {
+        "NAME": "Vacío Líquido",
+        "DESCRIPTIONS": ["Pon #b", " carta de tu pila de #ydescartes en tu mano. Cuesta #b0 este turno."," carta de tu pila de #yagotados en tu mano. Cuestan #b0 este turno."]
+}
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "PROPER_NAME": "En el Blanco",
+    "NAMES": [
+      "En el Blanco",
+      "En_el_Blanco",
+      "en_el_blanco",
+      "enelblanco",
+	  "Dead On",
+      "Dead_On",
+      "dead_on",
+      "deadon"
+    ],
+    "DESCRIPTION": "Las cartas con En el Blanco tienen un efecto adicional cuando están en medio de tu mano."
+  },
+  {
+    "PROPER_NAME": "Concentración",
+    "NAMES": [
+      "Concentración",
+	  "concentración",
+	  "Concentrarse",
+      "concentrarse",
+      "concentrado",
+      "Concentrado",
+	  "Concentrate",
+      "concentrate",
+      "concentrated",
+      "Concentrated"
+    ],
+    "DESCRIPTION": "La siguiente carta #yEn #yel #yBlanco jugada mientras estás #yconcentrado activa su efecto independientemente de la posicion. Se desgasta al final del turno."
+  },
+  {
+    "ID": "bruise",
+    "PROPER_NAME": "Herida",
+    "NAMES": [
+	  "herir",
+      "herido",
+	  "Herido",
+	  "herida",
+	  "Herida",
+	  "bruise",
+      "bruised"
+    ],
+  "DESCRIPTION": "Los objetivos heridos reciben más daño de tus ataques. Se desgasta al final del turno."
+},
+  {
+    "ID": "rugged",
+    "PROPER_NAME": "Robustez",
+    "NAMES": [
+      "robustez",
+	  "rugged"
+    ],
+  "DESCRIPTION": "La proxima vez que fueras a recibir daño, se reduce en #b2."
+},
+  {
+    "PROPER_NAME": "Botín",
+    "NAMES": [
+      "botín",
+	  "bounty"
+    ],
+  "DESCRIPTION": "Enemigo Normal: #b15 de oro.      Enemigo Elite: #b40 de oro.            Enemigo Jefe: #b100 de oro."
+},
+  {
+    "PROPER_NAME": "Aturdir",
+    "NAMES": [
+      "aturdir",
+      "Aturdir",
+      "aturdido",
+      "Aturdido",
+	  "stun",
+      "Stun",
+      "stunned",
+      "Stunned"
+    ],
+    "DESCRIPTION": "Los enemigos aturdidos pierden su turno."
+  }
+
+]

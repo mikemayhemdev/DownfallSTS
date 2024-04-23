@@ -1,0 +1,15 @@
+{
+  "hermit:hermit": {
+    "NAMES": [
+      "El Ermitaño",
+      "El Ermitaño"
+    ],
+    "TEXT": [
+      "Un solitario pistolero no-muerto de un lugar lejano. NL Atormentado por el espectro de su ineludible pasado.",
+      "NL Tomas tu arma en tu funda...",
+      "Al caminar por una calle sin iluminacion, te encuentras con varias figuras encapuchadas en medio de algun oscuro ritual. A medida que te acercas, se vuelven hacia ti al unisono. El mas alto de ellos muestra dientes con colmillos y extiende una mano larga y palida hacia ti.. NL ~\"Unete~ ~a nosotros~ ~vacia~ ~una,~ ~y~ ~siente~ ~el~ ~calor~ ~de~ ~la~ ~Torre.\"~",
+      "#y~DESESPERACION.~  NL NL El ultimo adversario cae al suelo, apretando su herida humeante. Sus cuerpos apenas tienen tiempo de enfriarse antes de empezar a robar sus restos.. NL NL #bCloth. #rPlates. #yOro. NL NL Las nubes se agitan en lo alto, un mal augurio. Te has quedado demasiado tiempo en un solo lugar. Pronto vendran por ti. NL NL Otra vez hay que esconderse, #rpero #rdonde?",
+      "Seguir adelante"
+    ]
+  }
+}
