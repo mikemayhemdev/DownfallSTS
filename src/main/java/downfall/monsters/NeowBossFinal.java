@@ -83,7 +83,7 @@ public class NeowBossFinal extends AbstractMonster {
         if (AbstractDungeon.ascensionLevel >= 9) {
             setHp(600);
         } else {
-            setHp(500);
+            setHp(550);
         }
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
@@ -141,9 +141,9 @@ public class NeowBossFinal extends AbstractMonster {
         // halfDead = true;
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
 
-        int beatAmount = 1;
+        int beatAmount = 2;
         if (AbstractDungeon.ascensionLevel >= 19) {
-            beatAmount += 2;
+            beatAmount += 1;
         }
 
         int invincibleAmt = 300;

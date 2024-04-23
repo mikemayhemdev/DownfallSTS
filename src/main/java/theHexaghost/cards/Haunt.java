@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import theHexaghost.HexaMod;
@@ -72,6 +73,22 @@ public class Haunt extends AbstractHexaCard implements HexaPurpleTextInterface {
             upgradeMagicNumber(UPG_MAGIC);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
+        }
+    }
+
+
+
+    @Override //zhs card text thing
+    public void initializeDescriptionCN() {
+        super.initializeDescriptionCN();
+        if(Settings.language == Settings.GameLanguage.ZHS && this.description!=null && this.description.size()>=1 ) {
+            for(int i=0;i<this.description.size();i++){
+                if(this.description.get(i).text.equals("[#e087a4]。[]") || this.description.get(i).text.equals("[#e087a4]。[] ") ){
+                    StringBuilder sb = new StringBuilder();
+                    this.description.get(i-1).text = sb.append(this.description.get(i-1).text).append("[#e087a4]。[]").toString();
+                    this.description.remove(i);
+                }
+            }
         }
     }
 }

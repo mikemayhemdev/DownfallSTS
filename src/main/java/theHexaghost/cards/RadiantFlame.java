@@ -22,7 +22,7 @@ public class RadiantFlame extends AbstractHexaCard {
     public RadiantFlame() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = damage = 10;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "RadiantFlame.png");
     }
@@ -62,11 +62,11 @@ public class RadiantFlame extends AbstractHexaCard {
         addToTop(new AbstractGameAction() {
             @Override
             public void update() {
-                this.isDone = true;
                 if(m.hasPower(BurnPower.POWER_ID)){
                     addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(magicNumber), magicNumber));
-                    addToBot(new RemoveSpecificPowerAction(m, p, BurnPower.POWER_ID));
+                    addToTop(new RemoveSpecificPowerAction(m, p, BurnPower.POWER_ID));
                 }
+                this.isDone = true;
             }
         });
 //        applyToSelf(new RadiantPower(magicNumber));

@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.RetractAction;
 
 public class FlameDevourer extends AbstractHexaCard{
@@ -12,6 +13,7 @@ public class FlameDevourer extends AbstractHexaCard{
     public FlameDevourer() {
         super(ID, 0, CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
         baseBlock = 9;
+        HexaMod.loadJokeCardImage(this, "FlameDevourer.png");
     }
 
 //    @Override
