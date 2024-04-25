@@ -3,18 +3,15 @@ package theHexaghost.potions;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
-import theHexaghost.actions.ChargeAction;
-import theHexaghost.actions.ExtinguishAction;
-import theHexaghost.ghostflames.AbstractGhostflame;
-import theHexaghost.ghostflames.InfernoGhostflame;
+import theHexaghost.powers.FlameAffectAllEnemiesPower;
 
 
 public class InfernoChargePotion extends CustomPotion {
@@ -31,7 +28,6 @@ public class InfernoChargePotion extends CustomPotion {
         this.labOutlineColor = HexaMod.placeholderColor;
     }
 
-
     public void initializeData() {
         this.potency = getPotency();
         if (AbstractDungeon.player != null && potency > 1) {
@@ -45,16 +41,7 @@ public class InfernoChargePotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-//
-//        for (int i = 0; i < this.potency; i++) {
-//            for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-//                if (gf instanceof InfernoGhostflame) {
-//                    addToBot(new ExtinguishAction(gf));
-//                    addToBot(new ChargeAction(gf));
-//                }
-//            }
-//        }
-        HexaMod.used_inferno_potion += this.potency; //TODO add a power so people dont forget it's activated.
+        AbstractDungeon.actionManager.addToBottom( new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FlameAffectAllEnemiesPower(this.potency), this.potency));
     }
 
 

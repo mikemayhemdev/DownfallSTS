@@ -23,7 +23,7 @@ public class Incinerate extends AbstractGuardianCard {
 
     public Incinerate() {
         super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.ATTACK, AbstractCardEnum.GUARDIAN, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = 9;
+        this.baseDamage = 8;
         this.socketCount = 1;
         updateDescription();
         loadGemMisc();

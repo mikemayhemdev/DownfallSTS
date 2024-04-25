@@ -5,24 +5,22 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
-import theHexaghost.HexaMod;
 import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.powers.EnhancePower;
+import theHexaghost.powers.FlameAffectAllEnemiesPower;
 import theHexaghost.relics.IceCube;
 
 import static theHexaghost.HexaMod.makeUIPath;
-import static theHexaghost.HexaMod.used_inferno_potion;
 
 public class InfernoGhostflame extends AbstractGhostflame {
 
@@ -59,34 +57,34 @@ public class InfernoGhostflame extends AbstractGhostflame {
     public void onCharge() {
 
 
-        int x = getEffectCount();
+        int damage = getEffectCount();
         int amountOfIgnitedGhostflames = 0;
 
-        if(HexaMod.used_inferno_potion > 0){
-            atb(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.5F));
+        if(AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)){
+            atb(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
             for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
                 AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
                 if (gf.charged) {
-                    for(int i = 0; i < used_inferno_potion; i++){
-                        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                            if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                                atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY, true));
-                            }
-                        }
+                    for(int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++){
+//                        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+//                            if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+//                                atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY, true));
+//                            }
+//                        }
+                        atb(new DamageAllEnemiesAction(AbstractDungeon.player, damage, DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                        atb(new WaitAction(0.1F)); //Critical for keeping the UI not broken, and helps sell the anim
                     }
 
-                    atb(new WaitAction(0.1F)); //Critical for keeping the UI not broken, and helps sell the anim
                     if (gf != this) atb(new ExtinguishAction(gf));
                     amountOfIgnitedGhostflames++;
                 }
             }
-        }
-        else {
+        } else {
             atb(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 0.8F));
             for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
                 AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
                 if (gf.charged) {
-                    atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                    atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                     atb(new WaitAction(0.1F));  //Critical for keeping the UI not broken, and helps sell the anim
                     if (gf != this) atb(new ExtinguishAction(gf));
                     amountOfIgnitedGhostflames++;

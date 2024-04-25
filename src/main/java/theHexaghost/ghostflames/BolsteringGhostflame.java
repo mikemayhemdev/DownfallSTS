@@ -10,12 +10,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
+import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
-import downfall.util.TextureLoader;
-
-import static theHexaghost.GhostflameHelper.activeGhostFlame;
+import theHexaghost.powers.FlameAffectAllEnemiesPower;
 
 public class BolsteringGhostflame extends AbstractGhostflame {
     public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("bolster.png"));
@@ -43,14 +42,13 @@ public class BolsteringGhostflame extends AbstractGhostflame {
     @Override
     public void onCharge() {
         int x = getEffectCount();
-        int n = HexaMod.used_inferno_potion;
-        if(n == 0) {
-            atb(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.5F));// 194
+        if(!AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)) {
+            atb(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.5F));
             atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
             atb(new GainBlockAction(AbstractDungeon.player, x));
         }else {
-            for (int i = 0; i < HexaMod.used_inferno_potion; i++) {
-                atb(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.5F));// 194
+            for (int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++) {
+                atb(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.4F));
                 atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
                 atb(new GainBlockAction(AbstractDungeon.player, x));
             }

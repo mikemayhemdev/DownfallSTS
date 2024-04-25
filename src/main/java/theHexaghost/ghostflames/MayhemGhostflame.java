@@ -15,6 +15,7 @@ import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
+import theHexaghost.powers.FlameAffectAllEnemiesPower;
 
 public class MayhemGhostflame extends AbstractGhostflame {
     public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("mayhem.png"));
@@ -52,7 +53,7 @@ public class MayhemGhostflame extends AbstractGhostflame {
                 if(getEffectCount() > 0) {
                     this.addToBot(new ScryAction(getEffectCount()));
                 }
-                if(HexaMod.used_inferno_potion > 0){
+                if(AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)){
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
                     if(m == null) {
                         this.isDone = true;
@@ -61,7 +62,7 @@ public class MayhemGhostflame extends AbstractGhostflame {
                     if(!AbstractDungeon.player.drawPile.isEmpty()) {
                         AbstractCard c = AbstractDungeon.player.drawPile.getTopCard();
                         this.addToBot(new PlayTopCardAction(m, false));
-                        for (int i = 0; i < HexaMod.used_inferno_potion - 1; i++) {
+                        for (int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount - 1; i++) {
                             AbstractCard tmp = c.makeSameInstanceOf();
                             AbstractDungeon.player.limbo.addToBottom(tmp);
                             tmp.purgeOnUse = true;

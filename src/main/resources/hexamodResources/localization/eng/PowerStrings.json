@@ -229,5 +229,13 @@
       "At the end of combat, gain #b",
       " Max HP."
     ]
+  },
+  "hexamod:InfernoPotionPower": {
+    "NAME": "Hexaburn",
+    "DESCRIPTIONS": [
+      "Your Ghostflame effect affects all enemy this combat.",
+      "Your Ghostflame effect affects all enemy #b",
+      " times this combat."
+    ]
   }
 }

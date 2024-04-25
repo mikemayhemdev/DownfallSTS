@@ -27,24 +27,6 @@ public class RadiantFlame extends AbstractHexaCard {
         HexaMod.loadJokeCardImage(this, "RadiantFlame.png");
     }
 
-//    @Override
-//    public void calculateCardDamage(AbstractMonster mo) {
-//        int realBaseDamage = this.baseDamage;
-//        this.baseDamage += this.magicNumber * HexaMod.soulburn_explosion_this_combat;
-//        super.calculateCardDamage(mo);
-//        this.baseDamage = realBaseDamage;
-//        this.isDamageModified = this.damage != this.baseDamage;
-//    }
-//
-//    @Override
-//    public void applyPowers() {
-//        int realBaseDamage = this.baseDamage;
-//        this.baseDamage += this.magicNumber * HexaMod.soulburn_explosion_this_combat;
-//        super.applyPowers();
-//        this.baseDamage = realBaseDamage;
-//        this.isDamageModified = this.damage != this.baseDamage;
-//    }
-
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
 

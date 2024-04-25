@@ -2,23 +2,26 @@ package theHexaghost.ghostflames;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.combat.AnimatedSlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
+import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
-import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.EnhancePower;
-import downfall.util.TextureLoader;
+import theHexaghost.powers.FlameAffectAllEnemiesPower;
 import theHexaghost.relics.JarOfFuel;
 
 public class CrushingGhostflame extends AbstractGhostflame {
@@ -70,33 +73,51 @@ public class CrushingGhostflame extends AbstractGhostflame {
 
         @Override
     public void onCharge() {
-        for (int i = 0; i < 1; i++) {
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    int x = getEffectCount();
-                    isDone = true;
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                int x = getEffectCount();
+                isDone = true;
 
-                    if(HexaMod.used_inferno_potion > 0){
-                        for(int i = 0; i < HexaMod.used_inferno_potion; i++){
-                            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                                if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                                    addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
-                                    addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
-                                }
-                            }
-                        }
+                if(AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)){
+                    for(int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++){
+
+                            addToTop(new VFXAction(
+                                    new AbstractGameEffect() {
+
+                                        public void update() {
+                                            CardCrawlGame.sound.playA("ATTACK_IRON_2", -0.4F);
+                                            CardCrawlGame.sound.playA("ATTACK_HEAVY", -0.4F);
+                                            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                                                if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                                                    AbstractDungeon.effectsQueue.add(new AnimatedSlashEffect(m.hb.cX, m.hb.cY - 30.0F * Settings.scale, 0.0F, -500.0F, 180.0F, 5.0F, Color.GOLD, Color.GOLD));
+                                                }
+                                            }
+                                            this.isDone = true;
+                                        }
+
+                                        @Override
+                                        public void render(SpriteBatch spriteBatch) {}
+
+                                        @Override
+                                        public void dispose() {}
+                                    }
+                            ));
+//                                if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+//                                    addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+//                                    addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
+//                                }
+                            att(new DamageAllEnemiesAction(AbstractDungeon.player, damage, DamageInfo.DamageType.THORNS, AttackEffect.NONE));
                     }
-                    else {
-                        AbstractMonster m = AbstractDungeon.getRandomMonster();
-                        if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                            addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
-                            addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
-                        }
+                } else {
+                    AbstractMonster m = AbstractDungeon.getRandomMonster();
+                    if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                        addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                        addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
                     }
                 }
-            });
-        }
+            }
+        });
     }
 
     @Override

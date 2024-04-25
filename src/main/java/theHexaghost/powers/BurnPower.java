@@ -74,13 +74,11 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
                 }
             });
         }
-    }// 70
+    }
 
     public void explode(){
         this.flashWithoutSound();
-//        if (AbstractDungeon.player.hasRelic(SoulConsumer.ID)){
-//            AbstractDungeon.player.getRelic(SoulConsumer.ID).onTrigger();
-//        }
+
         this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
 
@@ -96,10 +94,6 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
             this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
         }
 
-//        HexaMod.soulburn_explosion_this_combat += 1;
-//        if (owner.hasPower(BurnPerTurnPower.POWER_ID)) {
-//            owner.getPower(BurnPerTurnPower.POWER_ID).onSpecificTrigger();
-//        }
     }
 
     @Override
