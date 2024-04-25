@@ -148,9 +148,9 @@ public abstract class AbstractHexaCard extends CustomCard {
     public void applyPowers() {
         super.applyPowers();
         int base = this.baseBurn;
-        if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
-            base += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
-        }
+//        if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
+//            base += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
+//        }
         if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
             base += CandleOfCauterizing.SOULBURN_BONUS_AMOUNT;
         }

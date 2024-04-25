@@ -1,10 +1,12 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import sneckomod.SneckoMod;
 import theHexaghost.powers.VolcanoVisagePower;
+import theHexaghost.relics.CandleOfCauterizing;
 
 public class VolcanoVisage extends AbstractHexaCard {
 
@@ -17,8 +19,24 @@ public class VolcanoVisage extends AbstractHexaCard {
         HexaMod.loadJokeCardImage(this, "VolcanoVisage.png");
     }
 
+    @Override
+    public void applyPowers() {
+        if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
+            this.magicNumber = this.baseMagicNumber + CandleOfCauterizing.SOULBURN_BONUS_AMOUNT;
+        }
+        this.isMagicNumberModified = this.magicNumber != this.baseMagicNumber;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
+            this.magicNumber = this.baseMagicNumber + CandleOfCauterizing.SOULBURN_BONUS_AMOUNT;
+        }
+        this.isMagicNumberModified = this.magicNumber != this.baseMagicNumber;
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new VolcanoVisagePower(magicNumber));
+        applyToSelf(new VolcanoVisagePower(this.magicNumber));
     }
 
     public void upgrade() {
