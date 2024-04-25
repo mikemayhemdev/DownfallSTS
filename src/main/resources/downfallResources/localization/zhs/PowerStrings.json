@@ -314,7 +314,7 @@
   "downfall:HermitDoomsday": {
     "NAME": "末日",
     "DESCRIPTIONS": [
-      "#y亡命之徒 以 #b1 层 #y仪式 的状态开始战斗。每当其打出 #y炼狱 时，召唤一只 #y匕首 。"
+      "#y亡命之徒 以 #b1 层 #y仪式 的状态开始战斗。每当其打出 #y炼狱 时，召唤一只 #r末日匕首 。"
     ]
   },
   "downfall:NextTurnPowerPower": {

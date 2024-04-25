@@ -51,7 +51,7 @@ public class ViciousTackle extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
 
-        this.baseDamage = 18;
+        this.baseDamage = 17;
         this.baseSelfDamage = this.selfDamage = 3;
         SlimeboundMod.loadJokeCardImage(this, "ViciousTackle.png");
 

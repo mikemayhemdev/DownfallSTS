@@ -81,5 +81,12 @@
     "NAME": "尘菌",
     "DIALOG": [
     ]
+  },
+  "downfall:DoomedDagger": {
+    "MOVES": [
+    ],
+    "NAME": "末日匕首",
+    "DIALOG": [
+    ]
   }
 }

@@ -31,7 +31,7 @@ public class CrystalBeam extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 12;
 
     private static final int UPGRADE_BONUS = 4;
     private static final int DAMAGEPERGEM = 2;

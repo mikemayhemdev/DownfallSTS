@@ -10,8 +10,6 @@ public class EmpoweredFlame extends AbstractHexaCard {
 
     public final static String ID = makeID("EmpoweredFlame");
 
-    //stupid intellij stuff POWER, SELF, UNCOMMON
-
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
 

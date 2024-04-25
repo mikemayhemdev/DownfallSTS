@@ -45,7 +45,7 @@ public class FlameTackle extends AbstractSlimeboundCard {
     public FlameTackle() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
-        this.baseDamage = 16;
+        this.baseDamage = 18;
         baseSelfDamage = this.selfDamage = 3;
         this.magicNumber = this.baseMagicNumber = 5;
         SlimeboundMod.loadJokeCardImage(this, "FlameTackle.png");

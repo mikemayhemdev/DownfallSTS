@@ -347,7 +347,7 @@
   "downfall:HermitDoomsday": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "Hermit starts with #b1 #yRitual [REMOVE_SPACE]. Whenever Hermit plays #yPurgatory [REMOVE_SPACE], he summons a Dagger."
+      "Hermit starts with #b1 #yRitual [REMOVE_SPACE]. Whenever Hermit plays #yPurgatory [REMOVE_SPACE], he summons a #rDoomed #rDagger [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowEclipse": {

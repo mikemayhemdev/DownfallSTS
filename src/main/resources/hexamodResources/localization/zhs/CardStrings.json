@@ -86,8 +86,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "牺牲",
-    "DESCRIPTION": "选择 消耗 一张手牌， NL 若为 *攻击 或 *技能 牌， NL 将其类型反转。",
-    "UPGRADE_DESCRIPTION": "选择 消耗 一张手牌， NL 若为 *攻击 或 *技能 牌， NL 将其类型反转并 升级 。",
+    "DESCRIPTION": "选择 消耗 两张手牌， NL 若为 *攻击 或 *技能 牌， NL 将其类型反转。",
+    "UPGRADE_DESCRIPTION": "选择 消耗 两张手牌， NL 若为 *攻击 或 *技能 牌， NL 将其类型反转并 升级 。",
     "EXTENDED_DESCRIPTION": [
      "消耗作为必要的牺牲。"
     ]
