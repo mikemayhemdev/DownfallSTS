@@ -13,7 +13,7 @@ public class FlamesFromBeyond extends AbstractHexaCard implements HexaPurpleText
 
     public FlamesFromBeyond() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseBurn = burn = 9;
+        baseBurn = burn = 10;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));

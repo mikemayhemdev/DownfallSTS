@@ -52,7 +52,7 @@ public class CheckThePlaybook extends AbstractSlimeboundCard {
         ArrayList<String> tmp = new ArrayList();
         Iterator var3 = CardLibrary.cards.entrySet().iterator();
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             while (var3.hasNext()) {
                 Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
                 if (c.getValue().hasTag(SlimeboundMod.TACKLE)) {

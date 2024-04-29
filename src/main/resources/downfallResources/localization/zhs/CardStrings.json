@@ -25,7 +25,7 @@
   },
   "downfall:Scatterbrained": {
     "NAME": "漫不经心",
-    "DESCRIPTION": "回合结束时若本牌在手， NL 获得本牌一张复制品。 NL 消耗 。"
+    "DESCRIPTION": "回合结束时若本牌在手， NL 将本牌复制至弃牌堆。 NL 消耗 。"
   },
   "downfall:SummonMushrooms": {
     "NAME": "真菌环绕",

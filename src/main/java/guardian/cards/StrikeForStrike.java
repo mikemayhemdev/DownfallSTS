@@ -20,7 +20,7 @@ public class StrikeForStrike extends AbstractGuardianCard {
 
     public StrikeForStrike() {
         super(ID, cardStrings.NAME, GuardianMod.getResourcePath("cards/StrikeForStrike.png"), 1, cardStrings.DESCRIPTION, CardType.ATTACK, AbstractCardEnum.GUARDIAN, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = 12;
+        this.baseDamage = 13;
         this.baseMagicNumber = magicNumber = 3;
         this.socketCount = 1;
         this.tags.add(CardTags.STRIKE);

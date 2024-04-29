@@ -1,5 +1,7 @@
 package theHexaghost.powers;
 
+import basemod.ReflectionHacks;
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -8,8 +10,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
 import theHexaghost.HexaMod;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class TimeStopPower extends AbstractPower {
@@ -17,9 +22,9 @@ public class TimeStopPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    private float timer;
 
     private Map<AbstractMonster, Float> timeScales;
-    // Not used Not used Not used Not used Not used Not used Not used Not used Not used
     public TimeStopPower(AbstractCreature owner, int amount) {
         name = NAME;
         ID = POWER_ID;
@@ -29,6 +34,23 @@ public class TimeStopPower extends AbstractPower {
         this.isTurnBased = true;
         updateDescription();
         loadRegion("time");
+    }
+
+    @Override
+    public void playApplyPowerSfx() {
+        //to prevent the visual reminder below noising all the time
+    }
+
+    @Override
+    public void update(int slot) {
+        super.update(slot);
+        if (this.timer <= 0F){
+            ArrayList<AbstractGameEffect> effect2 = ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
+            effect2.add(new GainPowerEffect(this));
+            this.timer = 1F;
+        } else {
+            this.timer -= Gdx.graphics.getDeltaTime();
+        }
     }
 
     @Override

@@ -32,7 +32,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
     @Override
     public void addedPreBattle() {
         super.addedPreBattle();
-        AbstractCreature p = AbstractDungeon.player;
+//        AbstractCreature p = AbstractDungeon.player;
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new SilentPoisonPower(AbstractCharBoss.boss)));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Antidote(), 1));
@@ -49,9 +49,9 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
 
         // animation
         try {
-            Method loadAnimationMethod = AbstractCreature.class.getDeclaredMethod("loadAnimation", new Class[] { String.class, String.class, float.class });
+            Method loadAnimationMethod = AbstractCreature.class.getDeclaredMethod("loadAnimation", String.class, String.class, float.class);
             loadAnimationMethod.setAccessible(true);
-            loadAnimationMethod.invoke(AbstractCharBoss.boss, new Object[] { "expansioncontentResources/images/bosses/silent/1/Poison_Silent.atlas", "expansioncontentResources/images/bosses/silent/1/Poison_Silent.json", 1.0f });
+            loadAnimationMethod.invoke(AbstractCharBoss.boss, "expansioncontentResources/images/bosses/silent/1/Poison_Silent.atlas", "expansioncontentResources/images/bosses/silent/1/Poison_Silent.json", 1.0f);
             AnimationState.TrackEntry e = AbstractCharBoss.boss.state.setAnimation(0, "Idle", true);
             e.setTimeScale(0.9f);
         } catch (Exception e) {

@@ -34,7 +34,7 @@ public class PhantomFireball extends AbstractHexaCard {
             public void update() {
                 if (m.hasPower(BurnPower.POWER_ID)) {
                     BurnPower p = (BurnPower) m.getPower(BurnPower.POWER_ID);
-                    p.explode();
+                    p.explode(true);
                 }
                 this.isDone = true;
             }

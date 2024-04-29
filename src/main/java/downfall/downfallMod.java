@@ -641,9 +641,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         settingsPanel.addUIElement(characterCrossoverBtn);
         //settingsPanel.addUIElement(useIconsForAppliedCardPropertiesBtn);
 
-        //TODO: Fix this bug (stilling encountering downfall events when option is toggled, possibly relate to continuing a run)
-        //https://steamcommunity.com/workshop/filedetails/discussion/1610056683/4138312860566341700/?tscn=1708787149
-
         if (!STEAM_MODE) {
             configPos -= configStep;
             ModLabeledToggleButton characterModCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[5], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, crossoverModCharacters, settingsPanel, (label) -> {
@@ -1146,11 +1143,11 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addMonster("downfall:Heads", LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[0], () -> new MonsterGroup(new AbstractMonster[]{new ChangingTotem(), new ForgetfulTotem(), new GrowingTotem(),}));
 
-        BaseMod.addMonster("downfall:Augmenter", Augmenter.NAME, () -> new MonsterGroup(new AbstractMonster[]{new Augmenter()}));
+        BaseMod.addMonster(Augmenter.ID, Augmenter.NAME, () -> new MonsterGroup(new AbstractMonster[]{new Augmenter()}));
 
-        BaseMod.addMonster("downfall:WomanInBlue", LadyInBlue.NAME, () -> new MonsterGroup(new AbstractMonster[]{new LadyInBlue()}));
+        BaseMod.addMonster(LadyInBlue.ID, LadyInBlue.NAME, () -> new MonsterGroup(new AbstractMonster[]{new LadyInBlue()}));
 
-        BaseMod.addMonster("downfall:FaceTrader", downfall.monsters.FaceTrader.NAME, () -> new MonsterGroup(new AbstractMonster[]{new downfall.monsters.FaceTrader()}));
+        BaseMod.addMonster(downfall.monsters.FaceTrader.ID, downfall.monsters.FaceTrader.NAME, () -> new MonsterGroup(new AbstractMonster[]{new downfall.monsters.FaceTrader()}));
 
         BaseMod.addMonster(LooterAlt.ID, LooterAlt.NAME, () -> new MonsterGroup(new AbstractMonster[]{new LooterAlt(0.0F, 0.0F)}));
 
@@ -1233,7 +1230,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addMonster(NeowBoss.ID, () -> new MonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
-        BaseMod.addMonster(OldNeow.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new OldNeow()}));
+        BaseMod.addMonster(OldNeow.ID, () -> new MonsterGroup(new AbstractMonster[]{new OldNeow()}));
+        BaseMod.addMonster(Neow4Life30Heal.ID, () -> new MonsterGroup(new AbstractMonster[]{new Neow4Life30Heal()}));
 
     }
 

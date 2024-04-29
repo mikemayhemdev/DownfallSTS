@@ -35,7 +35,7 @@ public class WingStatue_Evil extends AbstractImageEvent {
         this.screen = CurScreen.INTRO;
 
         this.imageEventText.setDialogOption(OPTIONS[0] + this.damage + OPTIONS[1], new ShatteredFragment());
-        this.imageEventText.setDialogOption(OPTIONS[2], new BrokenWingStatue());
+        this.imageEventText.setDialogOption(OPTIONS[2] + ((AbstractDungeon.ascensionLevel >= 15)?7:5) + OPTIONS[4], new BrokenWingStatue());
         this.imageEventText.setDialogOption(OPTIONS[3]);
     }
 

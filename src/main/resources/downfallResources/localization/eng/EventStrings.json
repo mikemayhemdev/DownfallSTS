@@ -267,8 +267,9 @@
     "OPTIONS": [
       "[Destroy] #rLose #r",
       " #rHP. #gGain #gSharpened #gFragment.",
-      "[Collect] #gGain #gBroken #gWing #gStatue.",
-      "[Leave]"
+      "[Collect] #rLose #r",
+      "[Leave]",
+      " #rHP. #gGain #gBroken #gWing #gStatue."
     ]
   },
   "downfall:GoldenIdol": {

@@ -1,25 +1,17 @@
 package downfall.actions;
 
 
-import charbosses.bosses.Defect.CharBossDefect;
-import charbosses.bosses.Hermit.CharBossHermit;
-import charbosses.bosses.Ironclad.CharBossIronclad;
-import charbosses.bosses.Silent.CharBossSilent;
-import charbosses.bosses.Watcher.CharBossWatcher;
-import charbosses.cards.other.Antidote;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
-import downfall.monsters.NeowBossFinal;
-import downfall.powers.neowpowers.*;
+import downfall.powers.neowpowers.TrueNeowPower;
 import slimebound.SlimeboundMod;
 
 public class NeowGainMinionPowersAction extends AbstractGameAction {
-    private AbstractMonster owner; //TODO check this change was fine, it's said to cause gauntlet corrupted
+    private AbstractMonster owner;
     private int num;
 
     public NeowGainMinionPowersAction(AbstractMonster owner, int act) {

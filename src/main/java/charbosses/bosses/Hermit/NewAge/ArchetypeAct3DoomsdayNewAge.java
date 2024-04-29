@@ -20,8 +20,6 @@ import java.util.ArrayList;
 
 public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
 
-
-
     public ArchetypeAct3DoomsdayNewAge() {
         super("HERMIT_DOOMSDAY_ARCHETYPE", "Doomsday");
 

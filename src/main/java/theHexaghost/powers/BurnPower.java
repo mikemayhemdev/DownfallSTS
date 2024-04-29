@@ -63,7 +63,7 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
 
     public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead() && amount2 == 1) {// 65 66
-            explode();
+            explode(false);
         } else {
             addToBot(new AbstractGameAction() {
                 @Override
@@ -76,11 +76,15 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
         }
     }
 
-    public void explode(){
+    public void explode(boolean fast_explode){
         this.flashWithoutSound();
-
-        this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        if(fast_explode){// for phantom fireball so that it detonates first before the searing flame applies soulburn
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            this.addToTop(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
+        }else {
+            this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
 
         if (owner.hasPower(LivingBombPower.POWER_ID)){
             for (AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){

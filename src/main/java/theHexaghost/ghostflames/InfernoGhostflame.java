@@ -66,11 +66,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
                 AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
                 if (gf.charged) {
                     for(int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++){
-//                        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-//                            if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-//                                atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY, true));
-//                            }
-//                        }
                         atb(new DamageAllEnemiesAction(AbstractDungeon.player, damage, DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                         atb(new WaitAction(0.1F)); //Critical for keeping the UI not broken, and helps sell the anim
                     }
@@ -139,8 +134,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
                 }
                 if (energySpentThisTurn >= 3) {
                     charge();
-                } else {
-                    //activeGhostFlame.flash();
                 }
             }
         }

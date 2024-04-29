@@ -295,7 +295,7 @@
     "DESCRIPTION": " champ:戰狂 champ:連段 ： NL 獲得 [E] [E] 並 消耗 。 NL champ:防守 champ:連段 ： NL 抽 !M! 張牌。",
     "UPGRADE_DESCRIPTION": "champ:戰狂 champ:連段 ： NL 獲得 [E] [E] [E] 並 消耗 。 NL champ:防守 champ:連段 ： NL 抽 !M! 張牌。",
     "EXTENDED_DESCRIPTION": [
-      " champ:戰狂 champ:連段 ：獲得 [E] [E] 並 消耗 。NL ",
+      " champ:戰狂 champ:連段 ：獲得 [E] [E] 並 消耗 。 NL ",
       " champ:戰狂 champ:連段 ：獲得 [E] [E] [E] 並 消耗 。 NL ",
       " champ:防守 champ:連段 ：抽 !M! 張牌。",
       "還不是時候。"
