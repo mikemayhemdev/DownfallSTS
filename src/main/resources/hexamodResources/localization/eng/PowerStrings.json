@@ -60,7 +60,7 @@
   "hexamod:CrispyPower_new": {
     "NAME": "Extra Crispy",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you have #yExhausted #b2 or more cards this turn, #yIgnite the current Ghostflame #b",
+      "Whenever you #yExhaust #b3 cards, #yIgnite the current Ghostflame #b",
       " time.",
       " times."
     ]

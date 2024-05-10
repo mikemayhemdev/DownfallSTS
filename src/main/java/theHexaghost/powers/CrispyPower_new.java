@@ -1,7 +1,5 @@
 package theHexaghost.powers;
 
-import basemod.ReflectionHacks;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
@@ -10,12 +8,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
 import downfall.util.TextureLoader;
+import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
-
-import java.util.ArrayList;
+import theHexaghost.actions.ChargeCurrentFlameAction;
 
 public class CrispyPower_new extends TwoAmountPower {
     public static final String POWER_ID = HexaMod.makeID("CrispyPower_new");
@@ -26,15 +22,13 @@ public class CrispyPower_new extends TwoAmountPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static int exhausted_cards_this_turn = 0;
-    private float timer;
 
     public CrispyPower_new(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
-        this.amount2 = 2;
+        this.amount2 = 3;
         this.type = AbstractPower.PowerType.BUFF;
         this.isTurnBased = false;
 
@@ -44,41 +38,17 @@ public class CrispyPower_new extends TwoAmountPower {
         this.updateDescription();
     }
 
-    @Override
-    public void playApplyPowerSfx() {
-        //to prevent the visual reminder below noising all the time
-    }
-
-    @Override
-    public void update(int slot) {
-        super.update(slot);
-        int count = 0;
-        for(AbstractCard c: AbstractDungeon.player.hand.group){
-            if(c.isEthereal){
-                count += 1;
-            }
-        }
-        if( (count + exhausted_cards_this_turn) >= 2 ) {
-            if (this.timer <= 0F){
-                ArrayList<AbstractGameEffect> effect2 = ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
-                effect2.add(new GainPowerEffect(this));
-                this.timer = 1F;
-            } else {
-                this.timer -= Gdx.graphics.getDeltaTime();
-            }
-        }
-    }
-
-    @Override
-    public void atStartOfTurn() {
-        exhausted_cards_this_turn = 0;
-        amount2 = 2;
-        updateDescription();
-    }
-
     public void onExhaust(AbstractCard card) {
-        exhausted_cards_this_turn += 1;
         amount2 -= 1;
+        if (amount2 <= 0) {
+            amount2 = 3;
+            GhostflameHelper.activeGhostFlame.charged = true; // for some special logic for end turn advance
+            for(int i = 0; i < this.amount; i++){
+                addToBot(new ChargeCurrentFlameAction());
+            }
+
+        }
+        this.updateDescription();
     }
 
     @Override

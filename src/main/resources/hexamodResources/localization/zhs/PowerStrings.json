@@ -56,7 +56,7 @@
   "hexamod:CrispyPower_new": {
     "NAME": "脆烤",
     "DESCRIPTIONS": [
-      "你的回合结束时，若该回合 #y消耗 过 #b2 及以上张牌， #y点燃 当前 #y鬼火 #b",
+      "每当你 #y消耗 #b3 张牌， #y点燃 当前 #y鬼火 #b",
       " 次。",
       " 次。"
     ]

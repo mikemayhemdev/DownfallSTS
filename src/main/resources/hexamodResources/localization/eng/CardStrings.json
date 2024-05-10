@@ -76,7 +76,7 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
-    "DESCRIPTION": "At the end of your turn, if you have Exhausted 2 cards this turn, hexamod:Ignite the current Ghostflame."
+    "DESCRIPTION": "Whenever you Exhaust !M! cards, hexamod:Ignite the current Ghostflame."
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
