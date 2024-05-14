@@ -5,6 +5,7 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.stances.EnCalmStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -15,6 +16,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
 import java.util.ArrayList;
 
@@ -38,7 +41,8 @@ public class EnRagnarok extends AbstractBossCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for(int i = 0; i < this.magicNumber; ++i) {
-            this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.LIGHTNING));
+            addToBot((AbstractGameAction)new VFXAction((AbstractGameEffect)new LightningEffect(p.hb.cX, p.hb.cY)));
+            this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         }
 
 

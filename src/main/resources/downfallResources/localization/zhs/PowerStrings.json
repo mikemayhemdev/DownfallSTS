@@ -65,11 +65,11 @@
     ]
   },
   "downfall:WatcherCripplePower": {
-    "NAME": "渎神者",
+    "NAME": "神罚",
     "DESCRIPTIONS": [
-      "当 #y观者 再失去 #b",
-      " 点生命后，下次她将要进入 #y神格 或打出 #y诸神之黄昏 后失去 #b4 点 #y力量 。",
-      " #y观者 下次将要进入 #y神格 或打出 #y诸神之黄昏 后失去 #b4 点 #y力量 。"
+      "每当 #y观者 失去 #b25 ",
+      " 点生命，她就会失去 #b1 点力量，每回合最多触发 #b3 次。 NL #y点穴 的伤害可以被 #y格挡 抵消。",
+      " #y观者 已经失去了 #b3 点力量。"
     ]
   },
   "downfall:NeowBlasphemersDemise": {
