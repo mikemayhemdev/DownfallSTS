@@ -15,7 +15,7 @@ public class EnLessonLearned extends AbstractBossCard {
     private static final CardStrings cardStrings;
 
     public EnLessonLearned() {
-        super(ID, cardStrings.NAME, "colorless/attack/lessons_learned", 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.PURPLE, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
+        super(ID, cardStrings.NAME, "purple/attack/lessons_learned", 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.PURPLE, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 10;
         this.exhaust = true;
     }

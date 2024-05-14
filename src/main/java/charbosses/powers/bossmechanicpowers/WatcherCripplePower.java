@@ -1,19 +1,15 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
+
 
 package charbosses.powers.bossmechanicpowers;
 
-import charbosses.bosses.Watcher.CharBossWatcher;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
 public class WatcherCripplePower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:WatcherCripplePower";
@@ -21,7 +17,11 @@ public class WatcherCripplePower extends AbstractBossMechanicPower {
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
 
-    private boolean used = false;
+    private boolean firstused = false;
+    private boolean secondused = false;
+    private boolean thirdused = false;
+
+    public static final int LOSE_1_STRENGTH_PER_X_HP = 25;
 
     public WatcherCripplePower(AbstractCreature owner, int newAmount) {
         this.name = NAME;
@@ -34,7 +34,7 @@ public class WatcherCripplePower extends AbstractBossMechanicPower {
 
     public void updateDescription() {
         if (this.amount > 0) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+            this.description = DESCRIPTIONS[0] +  DESCRIPTIONS[1];
         } else {
             this.description = DESCRIPTIONS[2];
         }
@@ -50,23 +50,39 @@ public class WatcherCripplePower extends AbstractBossMechanicPower {
 
     @Override
     public void onSpecificTrigger() {
-        if (amount <= 0 && !used) {
-            used = true;
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -4), -4, true, AbstractGameAction.AttackEffect.NONE));
-            if (!owner.hasPower(ArtifactPower.POWER_ID))
-                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new GainStrengthPower(this.owner, 4), 4, true, AbstractGameAction.AttackEffect.NONE));
+        if (amount <= 2 * LOSE_1_STRENGTH_PER_X_HP && !firstused) {
+            firstused = true;
+            addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -1), -1, true, AbstractGameAction.AttackEffect.NONE));
+        }
+        if (amount <= LOSE_1_STRENGTH_PER_X_HP && !secondused) {
+            secondused = true;
+            addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -1), -1, true, AbstractGameAction.AttackEffect.NONE));
+        }
+        if (amount <= 0 && !thirdused) {
+            thirdused = true;
+            addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -1), -1, true, AbstractGameAction.AttackEffect.NONE));
         }
     }
 
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
+        if (amount <= 2 * LOSE_1_STRENGTH_PER_X_HP) {
+            if (this.owner != null) {
+                onSpecificTrigger();
+            }
+        }
+        if (amount <= LOSE_1_STRENGTH_PER_X_HP) {
+            if (this.owner != null) {
+                onSpecificTrigger();
+            }
+        }
         if (amount <= 0) {
-            CharBossWatcher cb = (CharBossWatcher) this.owner;
-            if (cb != null) {
-                if (cb.powerhouseTurn) {
-                    onSpecificTrigger();
-                }
+            if (this.owner != null) {
+                onSpecificTrigger();
             }
         }
     }
@@ -74,10 +90,11 @@ public class WatcherCripplePower extends AbstractBossMechanicPower {
     @Override
     public void atEndOfRound() {
         super.atEndOfRound();
-        if (used) {
-            this.amount = 100;
-            used = false;
-        }
+
+        this.amount = 3 * LOSE_1_STRENGTH_PER_X_HP;
+        this.thirdused = false;
+        this.secondused = false;
+        this.firstused = false;
     }
 
     static {

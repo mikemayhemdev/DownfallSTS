@@ -17,7 +17,7 @@ import hermit.cards.ImpendingDoom;
 
 public class DoomedDagger extends AbstractMonster{
     public static final String ID = downfallMod.makeID("DoomedDagger");
-    public static final String NAME = CardCrawlGame.languagePack.getMonsterStrings( "DoomedDagger").NAME;
+    public static final String NAME = CardCrawlGame.languagePack.getMonsterStrings( downfallMod.makeID("DoomedDagger")).NAME;
 
     public boolean firstMove = true;
 

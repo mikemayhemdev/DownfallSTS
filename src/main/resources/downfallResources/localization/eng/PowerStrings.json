@@ -78,11 +78,11 @@
     ]
   },
   "downfall:WatcherCripplePower": {
-    "NAME": "Blasphemer's Demise",
+    "NAME": "Divine Retribution",
     "DESCRIPTIONS": [
-      "When Watcher loses #b",
-      " more HP, apply #b-4 #yStrength to her when she next enters #yDivinity or plays #yRagnarok [REMOVE_SPACE].",
-      "Watcher will lose #b4 #yStrength when she next enters #yDivinity or plays #yRagnarok [REMOVE_SPACE]."
+      "Whenever Watcher loses #b",
+      " HP, she loses #b1 #yStrength [REMOVE_SPACE], up to #b3 times per turn. NL You can #yBlock the damage from #yPressure #yPoints [REMOVE_SPACE].",
+      "Watcher has already lost #b3 #yStrength this turn."
     ]
   },
   "downfall:WatcherSkillPower": {

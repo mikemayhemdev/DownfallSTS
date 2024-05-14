@@ -81,7 +81,7 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "回声萦绕",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若当前鬼火已 hexamod:点燃 ， NL 再 hexamod:点燃 它。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若当前鬼火已 hexamod:点燃 ， NL 再将其 hexamod:点燃 。",
     "EXTENDED_DESCRIPTION": ["虚无","虚无。 NL "]
   },
   "hexamod:NecessarySacrifice": {
