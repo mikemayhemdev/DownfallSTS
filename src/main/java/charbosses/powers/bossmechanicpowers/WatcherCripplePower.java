@@ -96,7 +96,18 @@ public class WatcherCripplePower extends AbstractBossMechanicPower {
         this.secondused = false;
         this.firstused = false;
     }
+  @Override
+    public float atDamageReceive(float damage, DamageInfo.DamageType damageType) {
 
+        if (damage > 1.0F) {
+            if (this.owner instanceof AbstractCharBoss) {
+                if (((AbstractCharBoss)owner).stance instanceof EnRealWrathStance) {
+                    return damage * 2.0F;
+                }
+            }
+        }
+        return damage;
+    }
     static {
         powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
         NAME = powerStrings.NAME;
