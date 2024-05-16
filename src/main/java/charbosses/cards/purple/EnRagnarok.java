@@ -35,6 +35,7 @@ public class EnRagnarok extends AbstractBossCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for(int i = 0; i < this.magicNumber; ++i) {
             addToBot(new VFXAction(new LightningEffect(p.hb.cX, p.hb.cY)));
+            addToBot((AbstractGameAction)new SFXAction("THUNDERCLAP", 0.05F));
             this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         }
 
