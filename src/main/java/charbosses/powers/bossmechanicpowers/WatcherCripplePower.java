@@ -53,16 +53,19 @@ public class WatcherCripplePower extends AbstractBossMechanicPower {
         if (amount <= 2 * LOSE_1_STRENGTH_PER_X_HP && !firstused) {
             firstused = true;
             addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            addToBot((AbstractGameAction)new SFXAction("THUNDERCLAP", 0.05F));
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -1), -1, true, AbstractGameAction.AttackEffect.NONE));
         }
         if (amount <= LOSE_1_STRENGTH_PER_X_HP && !secondused) {
             secondused = true;
             addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            addToBot((AbstractGameAction)new SFXAction("THUNDERCLAP", 0.05F));
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -1), -1, true, AbstractGameAction.AttackEffect.NONE));
         }
         if (amount <= 0 && !thirdused) {
             thirdused = true;
             addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            addToBot((AbstractGameAction)new SFXAction("THUNDERCLAP", 0.05F));
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -1), -1, true, AbstractGameAction.AttackEffect.NONE));
         }
     }
