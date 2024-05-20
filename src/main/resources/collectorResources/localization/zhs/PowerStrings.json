@@ -106,7 +106,7 @@
       " 层 #y魂劫 。"
     ]
   },
-  "collector:Attacks给予DoomPower": {
+  "collector:AttacksApplyDoomPower": {
     "NAME": "诅咒攻击",
     "DESCRIPTIONS": [
       "本回合所有攻击牌会给予 #b",
@@ -114,7 +114,7 @@
     ]
   },
   "collector:NextCollectedTwice": {
-    "NAME": "Double Up",
+    "NAME": "多多益善",
     "DESCRIPTIONS": [
       "本回合下张 #y藏品 牌额外打出一次。",
       "本回合接下来的 #b",
@@ -243,7 +243,7 @@
     ]
   },
   "collector:BookOfStabbingCard": {
-    "NAME": "Stabby",
+    "NAME": "刺魂",
     "DESCRIPTIONS": [
       "每当你造成未被格挡的攻击伤害，给予目标 #b",
       " 层 #y魂劫 。"
@@ -260,8 +260,8 @@
   "collector:ReptomancerCard": {
     "NAME": "Toxic Call",
     "DESCRIPTIONS": [
-      "你的回合结束时， if you have #y临时生命 , 给予 #b",
-      " #yPoison to a random enemy。"
+      "你的回合结束时，若你有 #y临时生命 ，随机给予一名敌人 #b",
+      " 层 #y中毒 。"
     ]
   },
   "collector:MoreBlockWithTempHP": {

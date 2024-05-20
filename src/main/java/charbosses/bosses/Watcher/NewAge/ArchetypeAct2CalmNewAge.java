@@ -131,7 +131,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
                     break;
                 case 1:
                     addToList(cardsList, new EnFollowUp(), false);
-                    addToList(cardsList, new EnPressurePoints()， false);
+                    addToList(cardsList, new EnPressurePoints(), false);
                     addToList(cardsList, new EnEmptyBody(), true);
 //                    AbstractCharBoss.boss.powerhouseTurn = true;
                     turn++;

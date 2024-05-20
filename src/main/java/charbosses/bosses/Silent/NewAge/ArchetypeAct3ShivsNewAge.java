@@ -65,7 +65,7 @@ public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
                     addToList(cardsList, new EnLegSweep());
                     addToList(cardsList, new EnCloakAndDagger());
                     addToList(cardsList, new EnNeutralize());
-                    addToList(cardsList, new EnBlur());  //Removed
+                    addToList(cardsList, new EnBlur());
 
                     turn++;
                     break;

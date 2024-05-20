@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
@@ -27,7 +28,9 @@ public class EtherealExpedition extends AbstractHexaCard implements HexaPurpleTe
         exhaust = false;
         baseMagicNumber = magicNumber = 1;
         HexaMod.loadJokeCardImage(this, "EtherealExpedition.png");
-        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
+        if(Settings.language != Settings.GameLanguage.ZHS) {
+            this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
+        }
     }
 
     public static AbstractCard returnTrulyRandomEtherealCardInCombat() {
