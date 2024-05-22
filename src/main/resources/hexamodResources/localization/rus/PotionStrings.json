@@ -25,8 +25,8 @@
     "NAME": "Адское зелье",
     "DESCRIPTIONS": [
       "Огоньки действуют на ВСЕХ врагов до конца боя.",
-      "Your Ghostflame effect affects all enemy #b",
-      " times this combat."
+      "Огоньки действуют на ВСЕХ врагов #b",
+      " раза до конца боя."
     ]
   }
 }

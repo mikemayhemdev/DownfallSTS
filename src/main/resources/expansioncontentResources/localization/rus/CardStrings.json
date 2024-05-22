@@ -83,7 +83,7 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "Антидот",
-    "DESCRIPTION": "Снимает весь Яд."
+    "DESCRIPTION": "Снимает !M! Яда."
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "Кровавая жертва",
