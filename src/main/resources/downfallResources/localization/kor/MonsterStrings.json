@@ -81,5 +81,12 @@
     "NAME": "말불버섯",
     "DIALOG": [
     ]
+  },
+  "downfall:DoomedDagger": {
+    "MOVES": [
+    ],
+    "NAME": "파멸의 단검",
+    "DIALOG": [
+    ]
   }
 }
