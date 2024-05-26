@@ -463,7 +463,7 @@
   },
   "hexamod:FlameDevourer": {
     "NAME": "집어삼키는 불꽃",
-    "DESCRIPTION": "hexamod:수축합니다. hexamod:점화된 유령불꽃으로 *수축됐다면 방어도를 !M! 얻습니다."
+    "DESCRIPTION": "hexamod:수축합니다. hexamod:점화된 유령불꽃으로 *수축됐다면 방어도를 !B! 얻습니다."
   },
   "hexamod:SpectralGrace": {
     "NAME": "영적인 영감",
