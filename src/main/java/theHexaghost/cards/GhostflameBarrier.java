@@ -9,7 +9,7 @@ import theHexaghost.powers.SoulburnOnExhaustPower;
 
 public class GhostflameBarrier extends AbstractHexaCard {
 
-    public final static String ID = makeID("Whisper");
+    public final static String ID = makeID("WhisperFromBeyond");
 
 
     private static final int DAMAGE = 10;

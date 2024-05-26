@@ -16,7 +16,7 @@ import theHexaghost.ghostflames.SearingGhostflame;
 import java.util.ArrayList;
 
 public class FlameSwitch extends AbstractHexaCard implements OctopusCard{
-    public final static String ID = makeID("FlameSwitch");
+    public final static String ID = makeID("BadOmen");
 
     //bad omen
     public FlameSwitch() {

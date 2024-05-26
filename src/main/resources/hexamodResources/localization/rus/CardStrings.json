@@ -13,7 +13,7 @@
     "UPGRADE_DESCRIPTION": "Эфирная. NL Даёт [E] [E] [E] . NL Переход к *Адскому Огоньку. NL Сжигается.",
     "TRANSLATOR_NOTE:": "DEPRECATED"
   },
-  "hexamod:ApocalypticArmor": {
+  "hexamod:Doomsday": {
     "NAME": "Судный день",
     "DESCRIPTION": "Вы получите доп. ход в след. раз, когда hexamod:Зажжёте все !M! Огоньков.",
     "UPGRADE_DESCRIPTION": "Вы получите доп. ход в след. раз, когда hexamod:Зажжёте не менее !M! Огоньков."
@@ -85,7 +85,7 @@
     "NAME": "Огонь извне",
     "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL [#e087a4]Накладывает !burny! hexamod:Ожога_души на ВСЕХ врагов дважды.[]"
   },
-  "hexamod:FlameSwitch": {
+  "hexamod:BadOmen": {
     "NAME": "Дурной знак",
     "DESCRIPTION": "Выберите и смените тип hexamod:активного Огонька. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Оставляется. NL Выберите и смените тип hexamod:активного Огонька. NL Сжигается.",
@@ -118,7 +118,7 @@
     "NAME": "Стена из Огоньков",
     "DESCRIPTION": "Даёт !B! Защиты. NL Накладывает !burny! hexamod:Ожога_души в ответ на каждую атаку в этом ходу."
   },
-  "hexamod:Whisper": {
+  "hexamod:WhisperFromBeyond": {
     "NAME": "Шёпот извне",
     "DESCRIPTION": "Наносит !D! урона. NL Накладывает !burny! hexamod:Ожога_души, когда вы Сжигаете карту в этом ходу."
   },
@@ -134,7 +134,7 @@
       "Наносит !D! урона, наносит ещё !M! урона за каждую Эфирную карту в руке."
     ]
   },
-  "hexamod:GhostOfSpireFuture": {
+  "hexamod:IntoShadow": {
     "NAME": "В тенях",
     "DESCRIPTION": "Эфирная. NL Выберите карту в руке, чтобы разыграть и сжечь, когда вы hexamod:Откатываете Огонёк.",
     "UPGRADE_DESCRIPTION": "Выберите карту в руке, чтобы разыграть и сжечь, когда вы hexamod:Откатываете Огонёк.",
@@ -147,12 +147,12 @@
       " It will dynamically pick one so you only need to translate the verb(to do what)"
     ]
   },
-  "hexamod:GhostOfSpirePast": {
+  "hexamod:DevilsDance": {
     "NAME": "Танец дьявола",
     "DESCRIPTION": "Вы берёте карту, когда hexamod:Откатываете Огонёк.",
     "UPGRADE_DESCRIPTION": "Начальная. NL Даёт [E] и вы берёте карту, при первом hexamod:Откате за ход."
   },
-  "hexamod:GhostOfSpirePresent": {
+  "hexamod:HereAndNow": {
     "NAME": "Здесь и сейчас",
     "DESCRIPTION": "Даёт [E] в начале каждого вашего хода и hexamod:Тушит активный Огонёк в конце хода."
   },
@@ -171,7 +171,7 @@
       "Эти духи слишком сильны, чтобы обращаться к ним напрямую."
     ]
   },
-  "hexamod:Haunt": {
+  "hexamod:HauntedHand": {
     "NAME": "Призрачная рука",
     "DESCRIPTION": "{@@}Эфирная. [#e087a4]Посмертная.[] NL Вы берёте !M! карт{!M!|@=|&1=у|&2,&3,&4=ы|&11,&12,&13,&14=}. NL ",
     "UPGRADE_DESCRIPTION": "{@@}Эфирная. [#e087a4]Посмертная.[] NL Вы берёте !M! карт{!M!|@=|&1=у|&2,&3,&4=ы|&11,&12,&13,&14=}. NL ",
@@ -206,7 +206,7 @@
       "Даёт !B! Защиты."
     ]
   },
-  "hexamod:HexaLevel": {
+  "hexamod:InfernalForm": {
     "NAME": "Адский облик",
     "DESCRIPTION": "Даёт !M! hexamod:Интенсивности в начале каждого вашего хода.",
     "UPGRADE_DESCRIPTION": "Даёт !M! hexamod:Интенсивности. NL Даёт !M! hexamod:Интенсивности в начале каждого вашего хода."
@@ -215,7 +215,7 @@
     "NAME": "Испепелить",
     "DESCRIPTION": "Наносит !D! урона и накладывает !burny! hexamod:Ожога_души !M! раза."
   },
-  "hexamod:InspiringFlames": {
+  "hexamod:StokeTheFire": {
     "NAME": "Согреться",
     "DESCRIPTION": "Даёт !B! Защиты. NL Улучшает случ. карту в руке за каждый hexamod:Зажжёный Огонёк."
   },
@@ -243,7 +243,7 @@
       "Наносит !D! урона."
     ]
   },
-  "hexamod:ParanormalForm": {
+  "hexamod:Poltergeist": {
     "NAME": "Облик полтергейста",
     "DESCRIPTION": "Случайный враг теряет !M! ОЗ, когда вы разыгрываете Эфирную карту.",
     "UPGRADE_DESCRIPTION": "Случайный враг теряет !M! ОЗ, когда вы разыгрываете Эфирную карту."
@@ -282,7 +282,7 @@
     "DESCRIPTION": "Наносит !D! урона и накладывает !M! Слабости X раз.",
     "UPGRADE_DESCRIPTION": "Наносит !D! урона и накладывает !M! Слабости X+1 раз."
   },
-  "hexamod:RecurringNightmare": {
+  "hexamod:NightmareVision": {
     "NAME": "Кошмарное видение",
     "DESCRIPTION": "Даёт hexamod:Откат. NL Вы expansioncontent:Воскрешаете *Эфирную карту. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Даёт hexamod:Откат. NL Вы expansioncontent:Воскрешаете !M! *Эфирные карты. NL Сжигается.",
@@ -292,7 +292,7 @@
       " Эфирные карты, которые хотите вернуть в руку."
     ]
   },
-  "hexamod:RetreatToShadows": {
+  "hexamod:Incorporeal": {
     "NAME": "Бестелесность",
     "DESCRIPTION": "Даёт hexamod:Откат. NL Отнимает !M! ОЗ. NL Даёт 1 Неосязаемости. NL Сжигается."
   },
@@ -324,12 +324,12 @@
     "NAME": "Щит Ночи",
     "DESCRIPTION": "{@@}Даёт !B! Защиты. NL Вы Предсказываете !M! карт{!M!|@=|&1=у|&2,&3,&4=ы|&11,&12,&13,&14=} и Сжигаете сброшенные Эфирные карты."
   },
-  "hexamod:SkipABeat": {
+  "hexamod:Kindle": {
     "NAME": "Разжечь",
     "DESCRIPTION": "Если hexamod:активный Огонёк не hexamod:Зажжён - hexamod:Зажгите его.",
     "UPGRADE_DESCRIPTION": "hexamod:Зажигает hexamod:активный Огонёк."
   },
-  "hexamod:SoulSteal": {
+  "hexamod:LivingBomb": {
     "NAME": "Живая бомба",
     "DESCRIPTION": "Накладывает !burny! hexamod:Ожога_души. Этот эффект сработает на ВСЕХ врагов."
   },
@@ -337,13 +337,13 @@
     "NAME": "Призрачный вопль",
     "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL [#e087a4]Наносит !D! [#e087a4]урона [#e087a4]ВСЕМ [#e087a4]врагам дважды."
   },
-  "hexamod:SpectralAdrenaline": {
+  "hexamod:BrightRitual": {
     "NAME": "Яркий ритуал",
     "DESCRIPTION": "Вы получаете [E] и берёте 1 карту за каждый hexamod:Зажжёный Огонёк, затем hexamod:Тушите их. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Вы получаете [E] и берёте 1 карту за каждый hexamod:Зажжёный Огонёк, затем hexamod:Тушите их.",
     "TRANSLATOR_NOTE:": "DEPRECATED      backup:«hexamod:Откатывает к первому Огоньку и даёт [E] за каждый hexamod:Потушенный Огонёк в процессе.»"
   },
-  "hexamod:SpectralSpark": {
+  "hexamod:NaughtySpirit": {
     "NAME": "Озорной призрак",
     "DESCRIPTION": "Накладывает !burny! hexamod:Ожога_души. NL Возвращается в руку, если активный Огонёк hexamod:Зажжён. Даёт hexamod:Откат."
   },
@@ -381,7 +381,7 @@
     "NAME": "Искривление времени",
     "DESCRIPTION": "Наносит !D! урона. NL Возвращается в руку из стопки сброса, при каждом hexamod:Продвижении или hexamod:Откате."
   },
-  "hexamod:Toasty": {
+  "hexamod:FlareFlick": {
     "NAME": "Щёлчок фокусника",
     "DESCRIPTION": "Наносит !D! урона. NL hexamod:Поджигает активный Огонёк и hexamod:Продвигает.",
     "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL hexamod:Поджигает активный Огонёк. NL Выберите вы hexamod:Откатываете или hexamod:Продвигаете.",

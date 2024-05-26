@@ -20,9 +20,8 @@ import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Toasty extends AbstractHexaCard implements OctopusCard {
 
-    public final static String ID = makeID("Toasty");
+    public final static String ID = makeID("FlareFlick");
 
-    //flare flick
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 4;
 

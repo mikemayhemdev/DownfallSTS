@@ -12,7 +12,7 @@ import theHexaghost.util.HexaPurpleTextInterface;
 
 public class Haunt extends AbstractHexaCard implements HexaPurpleTextInterface {
 
-    public final static String ID = makeID("Haunt");
+    public final static String ID = makeID("HauntedHand");
 
     //haunted hand
 

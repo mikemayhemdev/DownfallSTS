@@ -13,7 +13,7 @@
     "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] [E] [E] . NL Move to the *Inferno Ghostflame. NL Exhaust.",
     "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
   },
-  "hexamod:ApocalypticArmor": {
+  "hexamod:Doomsday": {
     "NAME": "Doomsday",
     "DESCRIPTION": "The next time all !M! Ghostflames are *Ignited, take an extra turn.",
     "UPGRADE_DESCRIPTION": "The next time at least !M! Ghostflames are *Ignited, take an extra turn."
@@ -91,7 +91,7 @@
     "NAME": "Flames from Beyond",
     "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Apply[] !burny! [#e087a4]Soulburn[] [#e087a4]to[] [#e087a4]ALL[] [#e087a4]enemies[] twice."
   },
-  "hexamod:FlameSwitch": {
+  "hexamod:BadOmen": {
     "NAME": "Bad Omen",
     "DESCRIPTION": "Choose a Ghostflame type to change the current one into. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Choose a Ghostflame type to change the current one into. NL Exhaust.",
@@ -120,7 +120,7 @@
     "DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the previous, then the next Ghostflames.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the previous, then the current, then the next Ghostflames."
   },
-  "hexamod:Whisper": {
+  "hexamod:WhisperFromBeyond": {
     "NAME": "Whisper from Beyond",
     "DESCRIPTION": "Deal !D! damage. NL Whenever a card is Exhausted this turn, apply !burny! hexamod:Soulburn to the enemy."
   },
@@ -136,7 +136,7 @@
       "Deal !D! damage, deal !M! more damage for each Ethereal card in your hand."
     ]
   },
-  "hexamod:GhostOfSpireFuture": {
+  "hexamod:IntoShadow": {
     "NAME": "Into Shadow",
     "DESCRIPTION": "Ethereal. NL Whenever you hexamod:Retract, choose a card in your hand to play and Exhaust.",
     "UPGRADE_DESCRIPTION": "Whenever you hexamod:Retract, choose a card in your hand to play and Exhaust.",
@@ -149,12 +149,12 @@
       " It will dynamically pick one so you only need to translate the verb(to do what)"
       ]
   },
-  "hexamod:GhostOfSpirePast": {
+  "hexamod:DevilsDance": {
     "NAME": "Devil's Dance",
     "DESCRIPTION": "Whenever you hexamod:Retract, draw a card.",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time you *Retract each turn, gain [E] and draw 1 card. NL hexamod:Retract."
   },
-  "hexamod:GhostOfSpirePresent": {
+  "hexamod:HereAndNow": {
     "NAME": "Here and Now",
     "DESCRIPTION": "At the start of your turn, gain [E] . NL At the end of your turn, hexamod:Extinguish the current Ghostflame."
   },
@@ -172,7 +172,7 @@
       "These spirits are too powerful to invoke directly."
     ]
   },
-  "hexamod:Haunt": {
+  "hexamod:HauntedHand": {
     "NAME": "Haunted Hand",
     "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Draw !M! card. NL ",
     "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Draw !M! cards. NL ",
@@ -207,7 +207,7 @@
       "Gain !B! Block."
     ]
   },
-  "hexamod:HexaLevel": {
+  "hexamod:InfernalForm": {
     "NAME": "Infernal Form",
     "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
     "UPGRADE_DESCRIPTION": "Gain !M! hexamod:Intensity. NL At the start of your turn, gain !M! hexamod:Intensity."
@@ -216,7 +216,7 @@
     "NAME": "Incineration",
     "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn !M! times."
   },
-  "hexamod:InspiringFlames": {
+  "hexamod:StokeTheFire": {
     "NAME": "Stoke the Fire",
     "DESCRIPTION": "Gain !B! Block. NL For each *Ignited Ghostflame, Upgrade a random card in your hand."
   },
@@ -242,7 +242,7 @@
       "Deal !D! damage."
     ]
   },
-  "hexamod:ParanormalForm": {
+  "hexamod:Poltergeist": {
     "NAME": "Poltergeist",
     "DESCRIPTION": "Whenever you play an Ethereal card, a random enemy loses !M! HP."
   },
@@ -280,7 +280,7 @@
     "DESCRIPTION": "Deal !D! damage and apply !M! Weak X times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Weak X+1 times."
   },
-  "hexamod:RecurringNightmare": {
+  "hexamod:NightmareVision": {
     "NAME": "Nightmare Vision",
     "DESCRIPTION": "Hexamod:Retract. NL expansioncontent:Exhume an *Ethereal card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Hexamod:Retract. NL expansioncontent:Exhume !M! *Ethereal cards. NL Exhaust.",
@@ -290,7 +290,7 @@
       " Ethereal cards to return to your hand."
     ]
   },
-  "hexamod:RetreatToShadows": {
+  "hexamod:Incorporeal": {
     "NAME": "Incorporeal",
     "DESCRIPTION": "hexamod:Retract. NL Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
   },
@@ -320,12 +320,12 @@
     "NAME": "Shield of Night",
     "DESCRIPTION": "Gain !B! Block. NL Scry !M!, Exhaust discarded Ethereal cards."
   },
-  "hexamod:SkipABeat": {
+  "hexamod:Kindle": {
     "NAME": "Kindle",
     "DESCRIPTION": "If the current Ghostflame is not *Ignited, hexamod:Ignite it.",
     "UPGRADE_DESCRIPTION": "hexamod:Ignite the current Ghostflame."
   },
-  "hexamod:SoulSteal": {
+  "hexamod:LivingBomb": {
     "NAME": "Living Bomb",
     "DESCRIPTION": "Apply !burny! hexamod:Soulburn. When it detonates, it affects ALL enemies."
   },
@@ -333,11 +333,11 @@
     "NAME": "Specter's Wail",
     "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage[] [#e087a4]to[] [#e087a4]ALL[] [#e087a4]enemies[] twice."
   },
-  "hexamod:SpectralAdrenaline": {
+  "hexamod:BrightRitual": {
     "NAME": "Bright Ritual",
     "DESCRIPTION": "Gain [E] and draw 1 card for each *Ignited Ghostflame, then hexamod:Extinguish them. NL Exhaust."
   },
-  "hexamod:SpectralSpark": {
+  "hexamod:NaughtySpirit": {
     "NAME": "Naughty Spirit",
     "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the current Ghostflame is hexamod:Ignited, return this card to your hand. hexamod:Retract."
   },
@@ -375,7 +375,7 @@
     "NAME": "Time Warp",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you *Advance or *Retract, return this from the discard pile."
   },
-  "hexamod:Toasty": {
+  "hexamod:FlareFlick": {
     "NAME": "Flare Flick",
     "DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame and hexamod:Advance.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame. NL Choose to hexamod:Retract or hexamod:Advance.",

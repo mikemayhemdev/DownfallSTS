@@ -7,9 +7,7 @@ import theHexaghost.powers.ParanormalFormPower;
 
 public class ParanormalForm extends AbstractHexaCard {
 
-    public final static String ID = makeID("ParanormalForm");
-
-    //Poltergeist
+    public final static String ID = makeID("Poltergeist");
 
     private static final int MAGIC = 5;
     private static final int UPG_MAGIC = 2;

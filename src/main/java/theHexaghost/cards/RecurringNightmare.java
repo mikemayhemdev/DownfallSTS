@@ -9,9 +9,7 @@ import theHexaghost.actions.RetractAction;
 
 public class RecurringNightmare extends AbstractHexaCard {
 
-    public final static String ID = makeID("RecurringNightmare");
-
-    //Nightmare Vision
+    public final static String ID = makeID("NightmareVision");
 
     public RecurringNightmare() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

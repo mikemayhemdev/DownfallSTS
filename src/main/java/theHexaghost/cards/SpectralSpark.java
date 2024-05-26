@@ -12,7 +12,7 @@ import theHexaghost.actions.RetractAction;
 
 public class SpectralSpark extends AbstractHexaCard {
 
-    public final static String ID = makeID("SpectralSpark");
+    public final static String ID = makeID("NaughtySpirit");
 
     private static final int MAGIC = 6;
 

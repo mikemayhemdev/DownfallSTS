@@ -35,7 +35,7 @@
     "DESCRIPTION": "hexamod:回退 。 NL 從棄牌堆 檢索 !M! 張牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 從棄牌堆 檢索 !M! 張牌。 NL 消耗 。"
   },
-  "hexamod:SkipABeat": {
+  "hexamod:Kindle": {
     "NAME": "引燃",
     "DESCRIPTION": "hexamod:點燃 未 *點燃 的當前鬼火。",
     "UPGRADE_DESCRIPTION": "hexamod:點燃 當前鬼火。"
@@ -53,7 +53,7 @@
     "NAME": "高漲",
     "DESCRIPTION": "獲得 !M! 點 hexamod:熱烈 。"
   },
-  "hexamod:HexaLevel": {
+  "hexamod:InfernalForm": {
     "NAME": "地獄形態",
     "DESCRIPTION": "回合開始時， NL 獲得 !M! 點 hexamod:熱烈 。",
     "UPGRADE_DESCRIPTION": "獲得 !M! 點 hexamod:熱烈 。 NL 回合開始時， NL 獲得 !M! 點 hexamod:熱烈 。"
@@ -62,17 +62,17 @@
     "NAME": "無限潛力",
     "DESCRIPTION": "依次 hexamod:點燃 全部鬼火。 NL 消耗 。"
   },
-  "hexamod:GhostOfSpirePast": {
+  "hexamod:DevilsDance": {
     "NAME": "魔鬼之舞",
     "DESCRIPTION": "每回合首次 hexamod:回退 時， NL 獲得 [E] 並抽一張牌。 NL hexamod:回退 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 每回合首次 hexamod:回退 時， NL 獲得 [E] 並抽一張牌。 NL hexamod:回退 。"
   },
-  "hexamod:GhostOfSpireFuture": {
+  "hexamod:IntoShadow": {
     "NAME": "疾進",
     "DESCRIPTION": " hexamod:步進 時， NL 獲得 !M! 層 guardianmod:臨時 力量 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL hexamod:步進 時， NL 獲得 !M! 層 guardianmod:臨時 力量 。"
   },
-  "hexamod:GhostOfSpirePresent": {
+  "hexamod:HereAndNow": {
     "NAME": "此刻",
     "DESCRIPTION": "回合開始時獲得 [E] ，結束時不再自動 hexamod:步進 。"
   },
@@ -101,7 +101,7 @@
     "NAME": "黑夜之盾",
     "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 若當前鬼火未 hexamod:點燃 ， NL 獲得 [E] 。"
   },
-  "hexamod:SpectralAdrenaline": {
+  "hexamod:BrightRitual": {
     "NAME": "鮮焰儀式",
     "DESCRIPTION": "hexamod:熄滅 hexamod:點燃 的鬼火。 NL 每熄滅一枚， NL 獲得 [E] 並抽一張牌 。 NL 消耗 。"
   },
@@ -109,7 +109,7 @@
     "NAME": "焰影迷步",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 每有一枚 hexamod:點燃 的鬼火，抽一張牌。"
   },
-  "hexamod:InspiringFlames": {
+  "hexamod:StokeTheFire": {
     "NAME": "火上澆油",
     "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 每有一枚 hexamod:點燃 的鬼火，隨機 升級 一張手牌。"
   },
@@ -129,11 +129,11 @@
     "NAME": "幽靈護盾",
     "DESCRIPTION": "虛無 。 hexamod:陰世 。 NL 獲得 !B! 點 格擋 。 NL 消耗 時獲得 !M! 層 bronze:殘影 。"
   },
-  "hexamod:Haunt": {
+  "hexamod:HauntedHand": {
     "NAME": "鬼手",
     "DESCRIPTION": "虛無 。 hexamod:陰世 。 NL 抽 !M! 張牌。 NL 將手牌附加 虛無 。"
   },
-  "hexamod:RecurringNightmare": {
+  "hexamod:NightmareVision": {
     "NAME": "夢魘幻象",
     "DESCRIPTION": "expansioncontent:發掘 !M! 張 虛無 牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "expansioncontent:發掘 !M! 張 虛無 牌。 NL 消耗 。",
@@ -158,7 +158,7 @@
     "NAME": "幽靈披風",
     "DESCRIPTION": "虛無 。 NL 獲得 !M! 點 敏捷 並失去1點 力量 。"
   },
-  "hexamod:ParanormalForm": {
+  "hexamod:Poltergeist": {
     "NAME": "鬼哭神嚎",
     "DESCRIPTION": "打出 hexamod:陰世 牌時， NL 隨機造成 !M! 點傷害。"
   },
@@ -216,7 +216,7 @@
     "NAME": "亡魂屏障",
     "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 本回合被攻擊時， NL 給予對方 !burny! 層 hexamod:灼魂 。"
   },
-  "hexamod:Toasty": {
+  "hexamod:FlareFlick": {
     "NAME": "烘焙！",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 給予未被 格擋 傷害層 hexamod:灼魂 。"
   },
@@ -261,7 +261,7 @@
     "NAME": "幻影火球",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 引爆目標的 hexamod:灼魂 。"
   },
-  "hexamod:SpectralSpark": {
+  "hexamod:NaughtySpirit": {
     "NAME": "幽靈火花",
     "DESCRIPTION": "若當前鬼火已 hexamod:點燃 ， NL hexamod:熄滅 並獲得 !M! 點 hexamod:熱烈 。"
   },
@@ -287,11 +287,11 @@
     "NAME": "復燃",
     "DESCRIPTION": "hexamod:點燃 當前鬼火， NL 然後 hexamod:熄滅 它。"
   },
-  "hexamod:RetreatToShadows": {
+  "hexamod:Incorporeal": {
     "NAME": "無形",
     "DESCRIPTION": "hexamod:回退 。 NL 失去 !M! 點生命。 NL 獲得1層 無實體 。 NL 消耗 。"
   },
-  "hexamod:ApocalypticArmor": {
+  "hexamod:Doomsday": {
     "NAME": "末日",
     "DESCRIPTION": "下次 hexamod:點燃 !M! 枚鬼火時，額外獲得一回合。",
     "UPGRADE_DESCRIPTION": "下次 hexamod:點燃 !M! 枚鬼火時，額外獲得一回合。"
@@ -326,7 +326,7 @@
     "DESCRIPTION": "虛無 hexamod:封印 。 NL 戰鬥結束時， NL 隨機 升級 牌組中一張牌。",
     "UPGRADE_DESCRIPTION": "hexamod:封印 。 NL 戰鬥結束時， NL 隨機 升級 牌組中一張牌。"
   },
-  "hexamod:SoulSteal": {
+  "hexamod:LivingBomb": {
     "NAME": "活體炸彈",
     "DESCRIPTION": "給予 !burny! 層 hexamod:灼魂 。 NL 它引爆時對所有敵人造成傷害。"
   },
@@ -339,7 +339,7 @@
     "DESCRIPTION": "造成 !D! 點傷害。 NL hexamod:點燃 前後枚鬼火。",
     "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL hexamod:點燃 前一個、當前的、下一個鬼火。"
   },
-  "hexamod:FlameSwitch": {
+  "hexamod:BadOmen": {
     "NAME": "惡兆",
     "DESCRIPTION": "給予 !burny! 層 hexamod:灼魂 ， NL 其引爆所需回合加 !M! 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "保留 。 NL 將當前鬼火替換為 hexamod:灼熱 、 hexamod:碾壓 或 hexamod:高熱 鬼火。 NL 消耗 。",
