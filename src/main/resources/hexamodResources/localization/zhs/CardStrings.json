@@ -315,7 +315,7 @@
     "DESCRIPTION": "虚无 。 NL 获得 [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 [E] [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。"
   },
-  "hexamod:Again": {
+  "hexamod:MomentaryResurgence": {
     "NAME": "死灰复燃",
     "DESCRIPTION": "hexamod:点燃 当前鬼火， NL 再将其 hexamod:熄灭 。"
   },

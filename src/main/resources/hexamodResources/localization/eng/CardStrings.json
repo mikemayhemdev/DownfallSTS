@@ -3,8 +3,8 @@
     "NAME": "Advancing Guard",
     "DESCRIPTION": "Gain !B! Block. NL hexamod:Advance."
   },
-  "hexamod:Again": {
-    "NAME": "Again!",
+  "hexamod:MomentaryResurgence": {
+    "NAME": "Momentary Resurgence",
     "DESCRIPTION": "hexamod:Ignite the current Ghostflame, then hexamod:Extinguish it."
   },
   "hexamod:ApocalypseNow": {

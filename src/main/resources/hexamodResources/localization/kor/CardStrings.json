@@ -3,7 +3,7 @@
     "NAME": "팽창된 보호",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL hexamod:팽창합니다."
   },
-  "hexamod:Again": {
+  "hexamod:MomentaryResurgence": {
     "NAME": "다시!",
     "DESCRIPTION": "현재 유령불꽃을 hexamod:점화하고 hexamod:소화합니다."
   },

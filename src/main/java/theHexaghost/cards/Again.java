@@ -13,9 +13,7 @@ import theHexaghost.powers.AgainPower;
 
 public class Again extends AbstractHexaCard {
 
-    public final static String ID = makeID("Again");
-
-    //stupid intellij stuff SKILL, SELF, UNCOMMON
+    public final static String ID = makeID("MomentaryResurgence");
 
     public Again() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
