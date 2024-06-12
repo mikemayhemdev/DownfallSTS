@@ -1,15 +1,13 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
-import theHexaghost.powers.AgainPower;
 
 public class Again extends AbstractHexaCard {
 
@@ -39,6 +37,15 @@ public class Again extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(0);
+        }
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        if(Settings.language== Settings.GameLanguage.ZHS || Settings.language== Settings.GameLanguage.KOR || Settings.language== Settings.GameLanguage.ZHT ) {
+            return -1.0F;
+        }else {
+            return 20.0F;
         }
     }
 }
