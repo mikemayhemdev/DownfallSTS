@@ -110,7 +110,7 @@
     "NAME": "Muralha de Chamas Fantasmas",
     "DESCRIPTION": "Ganhe !B! de Proteção. NL Sempre que você for atacado neste turno, aplique !queimadura! hexamod:Angústia no atacante."
   },
-  "hexamod:GhostflameInferno": {
+  "hexamod:InstantInferno": {
     "NAME": "Inferno Instantâneo",
     "DESCRIPTION": "Retenha. NL hexamod:Acende a *Chama *Fantasma *Inferno. NL Exaurir.",
     "UPGRADE_DESCRIPTION": "Retenha. NL hexamod:Acende a *Chama *Fantasma atual, a seguir a *Inferno. NL Exaurir."
@@ -137,7 +137,7 @@
     "NAME": "Escudo Fantasma",
     "DESCRIPTION": "Etéreo. hexamod:Pós-Vida. NL Ganhe !B! de Proteção. NL Quando *Exaurida, ganhe !M! bronze:Desfoque."
   },
-  "hexamod:GiftsFromTheDead": {
+  "hexamod:GiftsFromBeyond": {
     "NAME": "Presentes do Além",
     "DESCRIPTION": "No início do seu turno, expansioncontent:Recupere uma carta aleatória *Pós-Vida.",
     "EXTENDED_DESCRIPTION": [

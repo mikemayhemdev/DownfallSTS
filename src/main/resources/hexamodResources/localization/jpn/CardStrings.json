@@ -162,7 +162,7 @@
       " Ethereal cards to return to your hand."
     ]
   },
-  "hexamod:GiftsFromTheDead": {
+  "hexamod:GiftsFromBeyond": {
     "NAME": "Gifts From Beyond",
     "DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, draw 1 card next turn.",
     "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] and draw 1 card next turn."
@@ -301,7 +301,7 @@
     "NAME": "Spectral Spark",
     "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the hexamod:Active Ghostflame is hexamod:Ignited: hexamod:Extinguish it and return this card to your hand."
   },
-  "hexamod:GhostflameInferno": {
+  "hexamod:InstantInferno": {
     "NAME": "Instant Inferno",
     "DESCRIPTION": "Retain. NL hexamod:Ignite the Inferno Ghostflame. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL hexamod:Ignite the hexamod:Active Ghostflame. NL hexamod:Ignite the Inferno Ghostflame. NL Exhaust."

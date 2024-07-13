@@ -124,7 +124,7 @@
     "NAME": "저편의 속삭임",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이 턴에 카드가 1장 소멸될 때마다 hexamod:영혼화상을 !burny! 부여합니다."
   },
-  "hexamod:GhostflameInferno": {
+  "hexamod:InstantInferno": {
     "NAME": "즉발 지옥불",
     "DESCRIPTION": "보존. NL hexamod:영혼화상을 !burny! 부여합니다. NL hexamod:지옥의 유령불꽃을 hexamod:점화합니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "보존. NL hexamod:영혼화상을 !burny! 부여합니다. NL hexamod:지옥의 유령불꽃을 hexamod:점화합니다. NL 소멸."
@@ -165,7 +165,7 @@
       "방어도를 !B! 얻습니다."
     ]
   },
-  "hexamod:GiftsFromTheDead": {
+  "hexamod:GiftsFromBeyond": {
     "NAME": "저편의 선물",
     "DESCRIPTION": "내 턴 시작 시 무작위 hexamod:사후세계 카드를 !M! 장 얻습니다.",
     "EXTENDED_DESCRIPTION": [

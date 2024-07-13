@@ -142,7 +142,7 @@
       " cartes Éthérées à remettre dans votre main."
     ]
   },
-  "hexamod:GiftsFromTheDead": {
+  "hexamod:GiftsFromBeyond": {
     "NAME": "Cadeaux de l'Au-Delà",
     "DESCRIPTION": "Au début de votre tour, expansioncontent:Recyclez une carte hexamod:Après-vie aléatoire.",
     "EXTENDED_DESCRIPTION": [
@@ -276,7 +276,7 @@
     "NAME": "Étincelle spectrale",
     "DESCRIPTION": "Si cela est possible, hexamod:Éteignez le Feu Follet actuel pour gagner !M! hexamod:d'Intensité."
   },
-  "hexamod:GhostflameInferno": {
+  "hexamod:InstantInferno": {
     "NAME": "Enfer immédiat",
     "DESCRIPTION": "Retenue. NL hexamod:Enflammez le Feu Follet Infernal. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Retenue. NL hexamod:Enflammez le Feu Follet actuel, puis le Feu Follet Infernal. NL Épuisement."

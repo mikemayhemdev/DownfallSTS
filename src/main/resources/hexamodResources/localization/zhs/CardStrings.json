@@ -160,7 +160,7 @@
       "张虚无牌"
     ]
   },
-  "hexamod:GiftsFromTheDead": {
+  "hexamod:GiftsFromBeyond": {
     "NAME": "深处之礼",
     "DESCRIPTION": "回合开始时， NL 随机获得一张 hexamod:阴世 牌。",
     "UPGRADE_DESCRIPTION": "回合开始时， NL 随机获得一张 hexamod:阴世 牌。",
@@ -297,7 +297,7 @@
     "NAME": "淘气精灵",
     "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 若当前鬼火已 hexamod:点燃 ， NL 本牌从弃牌堆返回手牌。 NL hexamod:回退 。 "
   },
-  "hexamod:GhostflameInferno": {
+  "hexamod:InstantInferno": {
     "NAME": "此即地狱",
     "DESCRIPTION": "保留 。 NL 给予 !burny! 层 hexamod:灼魂 。 NL 切换至并 hexamod:点燃 hexamod:狱焱 鬼火 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "保留 。 NL 给予 !burny! 层 hexamod:灼魂 。 NL hexamod:点燃 hexamod:狱焱 鬼火 。 NL 消耗 。"

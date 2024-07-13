@@ -124,7 +124,7 @@
     "NAME": "Whisper from Beyond",
     "DESCRIPTION": "Deal !D! damage. NL Whenever a card is Exhausted this turn, apply !burny! hexamod:Soulburn to the enemy."
   },
-  "hexamod:GhostflameInferno": {
+  "hexamod:InstantInferno": {
     "NAME": "Instant Inferno",
     "DESCRIPTION": "Retain. NL Apply !burny! hexamod:Soulburn. NL Switch to and hexamod:Ignite the Inferno Ghostflame. Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Apply !burny! hexamod:Soulburn. NL hexamod:Ignite the *Inferno *Ghostflames. Exhaust."
@@ -165,7 +165,7 @@
       "Gain !B! Block."
     ]
   },
-  "hexamod:GiftsFromTheDead": {
+  "hexamod:GiftsFromBeyond": {
     "NAME": "Gifts From Beyond",
     "DESCRIPTION": "At the start of your turn, add !M! random hexamod:Afterlife card to your hand.",
     "EXTENDED_DESCRIPTION": [

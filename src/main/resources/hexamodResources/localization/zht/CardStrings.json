@@ -143,7 +143,7 @@
       "張虛無牌"
     ]
   },
-  "hexamod:GiftsFromTheDead": {
+  "hexamod:GiftsFromBeyond": {
     "NAME": "深處之禮",
     "DESCRIPTION": "回合開始時， NL 隨機 expansioncontent:取回 一張 hexamod:陰世 牌。",
     "EXTENDED_DESCRIPTION": [
@@ -265,7 +265,7 @@
     "NAME": "幽靈火花",
     "DESCRIPTION": "若當前鬼火已 hexamod:點燃 ， NL hexamod:熄滅 並獲得 !M! 點 hexamod:熱烈 。"
   },
-  "hexamod:GhostflameInferno": {
+  "hexamod:InstantInferno": {
     "NAME": "此即地獄",
     "DESCRIPTION": "保留 。 NL hexamod:點燃 hexamod:獄焱 鬼火 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "保留 。 NL hexamod:點燃 當前與 hexamod:獄焱 鬼火 。 NL 消耗 。"

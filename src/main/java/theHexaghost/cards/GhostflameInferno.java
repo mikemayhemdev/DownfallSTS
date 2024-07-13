@@ -16,7 +16,7 @@ import theHexaghost.ghostflames.InfernoGhostflame;
 
 public class GhostflameInferno extends AbstractHexaCard {
 
-    public final static String ID = makeID("GhostflameInferno");
+    public final static String ID = makeID("InstantInferno");
 
     //Instant Inferno
 
