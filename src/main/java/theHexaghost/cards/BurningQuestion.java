@@ -14,8 +14,8 @@ public class BurningQuestion extends AbstractHexaCard implements HexaPurpleTextI
     public final static String ID = makeID("BurningQuestion");
 
     public BurningQuestion() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 3;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "BurningQuestion.png");

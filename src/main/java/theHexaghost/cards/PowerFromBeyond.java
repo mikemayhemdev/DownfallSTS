@@ -1,6 +1,7 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
@@ -55,5 +56,14 @@ public class PowerFromBeyond extends AbstractHexaCard implements HexaPurpleTextI
         super.initializeDescription();
         String afterlife_name = downfallMod.keywords_and_proper_names.get("afterlife");
         this.keywords.add(afterlife_name);
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        if(Settings.language != Settings.GameLanguage.ENG) {
+            return -1.0F;
+        }else {
+            return 20.0F;
+        }
     }
 }

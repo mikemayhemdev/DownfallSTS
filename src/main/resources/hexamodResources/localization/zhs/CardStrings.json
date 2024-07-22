@@ -130,9 +130,9 @@
   },
   "hexamod:GhostLash": {
     "NAME": "幽灵甩击",
-    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL ",
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL [#e087a4]造成[] !D! [#e087a4]点伤害，[] NL 手中每有其他 虚无 牌， NL 额外造成 !M! 点。",
     "EXTENDED_DESCRIPTION": [
-      "造成 !D! 点伤害， NL 手中每有一张虚无牌， NL 额外造成 !M! 点。"
+      ""
     ]
   },
   "hexamod:GhostShield": {

@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.SoulburnOnExhaustPower;
@@ -46,6 +47,15 @@ public class GhostflameBarrier extends AbstractHexaCard {
 //            upgradeBlock(UPG_BLOCK);
             upgradeDamage(2);
             upgradeBurn(UPG_MAGIC);
+        }
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        if(Settings.language != Settings.GameLanguage.ENG) {
+            return -1.0F;
+        }else {
+            return 19.0F;
         }
     }
 }

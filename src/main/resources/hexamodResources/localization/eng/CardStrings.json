@@ -131,9 +131,9 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[]  NL ",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[]  NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Deal !M! additional damage for each other Ethereal card in hand.",
     "EXTENDED_DESCRIPTION": [
-      "Deal !D! damage, deal !M! more damage for each Ethereal card in your hand."
+      ""
     ]
   },
   "hexamod:IntoShadow": {
@@ -166,7 +166,7 @@
     ]
   },
   "hexamod:GiftsFromBeyond": {
-    "NAME": "Gifts From Beyond",
+    "NAME": "Gifts from Beyond",
     "DESCRIPTION": "At the start of your turn, add !M! random hexamod:Afterlife card to your hand.",
     "EXTENDED_DESCRIPTION": [
       "These spirits are too powerful to invoke directly."
@@ -265,8 +265,8 @@
   },
   "hexamod:Premonition": {
     "NAME": "Premonition",
-    "DESCRIPTION": "Choose a card type, play a random card of that type in your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card type, play a random card of that type in your draw pile.",
+    "DESCRIPTION": "Choose a card type then play a random card of that type in your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card type then play a random card of that type in your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "to play and Exhaust."
     ]
@@ -350,7 +350,7 @@
     "DESCRIPTION": "Deal !D! damage."
   },
   "hexamod:StrikeFromBeyond": {
-    "NAME": "Strike From Beyond",
+    "NAME": "Strike from Beyond",
     "DESCRIPTION": "Deal !D! damage. NL Put 1 Ethereal card from your draw pile to your hand.",
     "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
   },
@@ -458,12 +458,12 @@
   },
   "hexamod:SeventhEye": {
     "NAME": "Seventh Eye",
-    "DESCRIPTION": "Fetch a card in your draw pile. NL Switch to a random Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Fetch a card in your draw pile. NL Switch to a random Ghostflame. NL Exhaust."
+    "DESCRIPTION": "Fetch a card from your draw pile. NL Switch to a random Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Fetch a card from your draw pile. NL Switch to a random Ghostflame. NL Exhaust."
   },
   "hexamod:FlameDevourer": {
     "NAME": "Devour Flame",
-    "DESCRIPTION": "hexamod:Retract, if *Retract onto an hexamod:Ignited Ghostflame, gain !B! Block."
+    "DESCRIPTION": "hexamod:Retract, retracting onto an hexamod:Ignited Ghostflame grant you !B! Block."
   },
   "hexamod:SpectralGrace": {
     "NAME": "Spectral Grace",

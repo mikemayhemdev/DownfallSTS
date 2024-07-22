@@ -131,9 +131,9 @@
   },
   "hexamod:GhostLash": {
     "NAME": "유령 채찍",
-    "DESCRIPTION": "휘발성. [#e087a4]사후세계.[]  NL ",
+    "DESCRIPTION": "휘발성. [#e087a4]사후세계.[]  NL [#e087a4]패해를 !D! [#e087a4]줍니다.[] 손에 있는 휘발성 카드 한장당 피해량이 !M! 증가합니다.",
     "EXTENDED_DESCRIPTION": [
-      "패해를 !D! 줍니다. 손에 있는 휘발성 카드 한장당 피해량이 !M! 증가합니다."
+      ""
     ]
   },
   "hexamod:IntoShadow": {

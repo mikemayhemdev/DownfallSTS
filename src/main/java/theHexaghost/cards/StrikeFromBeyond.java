@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
@@ -45,6 +46,15 @@ public class StrikeFromBeyond extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
+        }
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        if(Settings.language != Settings.GameLanguage.ENG) {
+            return -1.0F;
+        }else {
+            return 20.0F;
         }
     }
 }
