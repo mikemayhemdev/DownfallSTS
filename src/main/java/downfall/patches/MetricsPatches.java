@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 public class MetricsPatches {
 
     private static final Logger logger = LogManager.getLogger(MetricsPatches.class);
-    private static final String url = "http://downfallstats.atwebpages.com/";
+    private static final String url = "http://downfallhexabetastats.atwebpages.com/";
 
     @SpirePatch(clz = GameOverScreen.class, method = "shouldUploadMetricData")
     public static class ShouldUploadMetricData {
