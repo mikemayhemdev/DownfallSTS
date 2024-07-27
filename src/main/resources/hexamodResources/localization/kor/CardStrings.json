@@ -369,7 +369,7 @@
   },
   "hexamod:TimeOfNeed": {
     "NAME": "필요의 때",
-    "DESCRIPTION": "보존. NL 무작위 파워 카드를 1장 얻습니다. NL 사용하기 전까지 그 카드의 비용이 0이 됩니다. NL 소멸."
+    "DESCRIPTION": "보존. NL 무작위 파워 카드를 1장 얻습니다. NL 사용하기 전까지 그 카드의 비용이 1만큼 줄어듭니다. NL 소멸."
   },
   "hexamod:TimeWarp": {
     "NAME": "시간 왜곡",

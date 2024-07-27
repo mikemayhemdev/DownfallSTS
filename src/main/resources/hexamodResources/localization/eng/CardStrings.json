@@ -369,7 +369,7 @@
   },
   "hexamod:TimeOfNeed": {
     "NAME": "Time of Need",
-    "DESCRIPTION": "Retain. NL Gain a random Power card. It costs 0 until played. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain a random Power card. It costs 1 less until played. NL Exhaust."
   },
   "hexamod:TimeWarp": {
     "NAME": "Time Warp",

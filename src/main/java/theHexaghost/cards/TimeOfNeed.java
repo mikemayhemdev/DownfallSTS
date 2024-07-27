@@ -23,7 +23,7 @@ public class TimeOfNeed extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int roll = AbstractDungeon.cardRng.random(0, 99); // adding this because after it's moved to uncommon, I noticed it generates rare powers too frequently.
         AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
-        if(roll >= 85){
+        if(roll >= 80){
             while( q.rarity != CardRarity.RARE ){
                 q = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
             }

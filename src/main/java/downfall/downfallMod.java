@@ -621,9 +621,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             return new RewardSave(customReward.type.toString(), null);
         });
 
-////        BaseMod.removePotion(ThreeZeroPotion.POTION_ID);
-//        PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
-
     }
 
     private void initializeConfig() {
