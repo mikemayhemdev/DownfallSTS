@@ -32,14 +32,11 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
-import downfall.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import theHexaghost.TheHexaghost;
-import theHexaghost.potions.SoulburnPotion;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -174,8 +171,8 @@ public class CollectorMod implements
         BaseMod.addPotion(MiniCursePotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, MiniCursePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
         BaseMod.addPotion(ReservePotion.class, Color.RED, Color.GREEN, Color.CLEAR, ReservePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
         BaseMod.addPotion(DebuffDoublePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, DebuffDoublePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
-        BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID);
-        BanSharedContentPatch.registerRunLockedPotion(CollectorChar.Enums.THE_COLLECTOR, TempHPPotion.POTION_ID);
+
+//        BanSharedContentPatch.registerRunLockedPotion(CollectorChar.Enums.THE_COLLECTOR, TempHPPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(MiniCursePotion.POTION_ID);

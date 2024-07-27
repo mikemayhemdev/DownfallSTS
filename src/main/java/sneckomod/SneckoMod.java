@@ -31,7 +31,6 @@ import com.megacrit.cardcrawl.random.Random;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
-import downfall.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
 import expansioncontent.patches.CardColorEnumPatch;
@@ -379,11 +378,10 @@ public class SneckoMod implements
 
     public void addPotions() {
 
-        BaseMod.addPotion(MuddlingPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, MuddlingPotion.POTION_ID);
         BaseMod.addPotion(CheatPotion.class, Color.GRAY, Color.WHITE, Color.BLACK, CheatPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
         BaseMod.addPotion(DiceRollPotion.class, Color.CYAN, Color.WHITE, Color.BLACK, DiceRollPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
         BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
-        BanSharedContentPatch.registerRunLockedPotion(TheSnecko.Enums.THE_SNECKO, MuddlingPotion.POTION_ID);
+//        BanSharedContentPatch.registerRunLockedPotion(TheSnecko.Enums.THE_SNECKO, MuddlingPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(MuddlingPotion.POTION_ID);

@@ -13,6 +13,7 @@ import automaton.SuperTip;
 import automaton.cardmods.EncodeMod;
 import automaton.cards.Defend;
 import automaton.cards.Strike;
+import automaton.potions.BurnAndBuffPotion;
 import automaton.relics.*;
 import automaton.util.*;
 import basemod.BaseMod;
@@ -28,6 +29,7 @@ import basemod.interfaces.*;
 import champ.ChampChar;
 import champ.ChampMod;
 import champ.cards.ModFinisher;
+import champ.potions.CounterstrikePotion;
 import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
 import champ.util.TechniqueMod;
@@ -41,6 +43,7 @@ import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import collector.CollectorChar;
 import collector.CollectorMod;
+import collector.potions.TempHPPotion;
 import downfall.cards.curses.Sapped;
 import collector.util.CollectibleCardReward;
 import collector.util.EssenceReward;
@@ -102,6 +105,7 @@ import downfall.events.shrines_evil.UpgradeShrineEvil;
 import downfall.monsters.*;
 import downfall.monsters.gauntletbosses.*;
 import downfall.patches.DailyModeEvilPatch;
+import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
@@ -112,27 +116,33 @@ import downfall.util.*;
 import expansioncontent.cardmods.PropertiesMod;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
+import expansioncontent.potions.BossPotion;
 import gremlin.GremlinMod;
 import gremlin.cards.Wizardry;
 import gremlin.characters.GremlinCharacter;
+import gremlin.potions.WizPotion;
 import gremlin.relics.WizardHat;
 import gremlin.relics.WizardStaff;
 import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
 import guardian.characters.GuardianCharacter;
+import guardian.potions.BlockOnCardUsePotion;
 import guardian.relics.PickAxe;
 import guardian.rewards.GemReward;
 import guardian.rewards.GemRewardAllRarities;
 import hermit.HermitMod;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
+import slimebound.potions.ThreeZeroPotion;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
 import sneckomod.cards.unknowns.*;
+import sneckomod.potions.MuddlingPotion;
 import sneckomod.util.ColorfulCardReward;
 import sneckomod.util.UpgradedUnknownReward;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
+import theHexaghost.potions.SoulburnPotion;
 import theHexaghost.util.SealSealReward;
 
 import java.io.IOException;
@@ -540,7 +550,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         loadOtherData();
 
         this.initializeMonsters();
-        this.addPotions();
+//        this.addPotions();
         this.initializeEvents();
         this.initializeConfig();
 
@@ -610,6 +620,10 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             GuardianMod.logger.info("gems saved");
             return new RewardSave(customReward.type.toString(), null);
         });
+
+////        BaseMod.removePotion(ThreeZeroPotion.POTION_ID);
+//        PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
+
     }
 
     private void initializeConfig() {
@@ -1236,8 +1250,21 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     }
 
     public void addPotions() {
+        if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_potions){
+            BaseMod.addPotion(BossPotion.class, Color.MAROON, Color.MAROON, new Color(0x470000ff), BossPotion.POTION_ID);
+            BaseMod.addPotion(BlockOnCardUsePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, BlockOnCardUsePotion.POTION_ID);
+            BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID);
+            BaseMod.addPotion(MuddlingPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, MuddlingPotion.POTION_ID);
+            BaseMod.addPotion(ThreeZeroPotion.class, Color.FOREST, Color.BLACK, Color.BLACK, ThreeZeroPotion.POTION_ID);
+            BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID);
+            BaseMod.addPotion(CounterstrikePotion.class, Color.GRAY, Color.GRAY, Color.BLACK, CounterstrikePotion.POTION_ID);
+            BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
+            BaseMod.addPotion(WizPotion.class, Color.PURPLE, Color.PINK, Color.PURPLE, WizPotion.POTION_ID);
+        }
 
-        BaseMod.addPotion(CursedFountainPotion.class, Color.PURPLE, Color.MAROON, Color.BLACK, CursedFountainPotion.POTION_ID);
+        if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_events){
+            BaseMod.addPotion(CursedFountainPotion.class, Color.PURPLE, Color.MAROON, Color.BLACK, CursedFountainPotion.POTION_ID);
+        }
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(CursedFountainPotion.POTION_ID);
@@ -1416,6 +1443,9 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
     @Override
     public void receivePostDungeonInitialize() {
+
+        addPotions();
+
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID) || ModHelper.isModEnabled(Jewelcrafting.ID)) {
             RelicLibrary.getRelic(PickAxe.ID).makeCopy().instantObtain();
             AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());

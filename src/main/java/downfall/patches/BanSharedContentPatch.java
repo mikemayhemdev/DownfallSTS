@@ -1,17 +1,16 @@
 package downfall.patches;
 
 import automaton.AutomatonChar;
-import automaton.potions.BurnAndBuffPotion;
-import automaton.relics.*;
+import automaton.relics.BronzeIdol;
+import automaton.relics.DecasWashers;
+import automaton.relics.DonusWashers;
+import automaton.relics.MakeshiftBattery;
 import champ.ChampChar;
-import champ.potions.CounterstrikePotion;
 import champ.relics.Barbells;
 import champ.relics.DeflectingBracers;
 import champ.relics.DuelingGlove;
 import collector.CollectorChar;
-import collector.potions.TempHPPotion;
 import collector.relics.*;
-import downfall.cards.curses.Sapped;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,14 +20,11 @@ import downfall.downfallMod;
 import downfall.events.HeartEvent;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
-import expansioncontent.potions.BossPotion;
 import expansioncontent.relics.StudyCardRelic;
-import gremlin.potions.WizPotion;
 import gremlin.relics.ImpeccablePecs;
 import gremlin.relics.PricklyShields;
 import gremlin.relics.SupplyScroll;
 import guardian.characters.GuardianCharacter;
-import guardian.potions.BlockOnCardUsePotion;
 import guardian.relics.BottledAnomaly;
 import guardian.relics.GemstoneGun;
 import guardian.relics.PocketSentry;
@@ -36,20 +32,16 @@ import hermit.relics.BloodyTooth;
 import hermit.relics.BrassTacks;
 import hermit.relics.RyeStalk;
 import slimebound.characters.SlimeboundCharacter;
-import slimebound.potions.ThreeZeroPotion;
 import slimebound.relics.PreparedRelic;
 import slimebound.relics.StickyStick;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
 import sneckomod.cards.unknowns.UnknownClass;
-import sneckomod.potions.MuddlingPotion;
 import sneckomod.relics.BlankCard;
 import sneckomod.relics.SneckoTalon;
 import sneckomod.relics.SuperSneckoEye;
 import theHexaghost.TheHexaghost;
-import theHexaghost.potions.SoulburnPotion;
 import theHexaghost.relics.BolsterEngine;
-import theHexaghost.relics.CandleOfCauterizing;
 import theHexaghost.relics.Sixitude;
 
 import java.util.ArrayList;
@@ -117,7 +109,6 @@ public class BanSharedContentPatch {
                 AbstractDungeon.srcCurseCardPool.removeCard(Scatterbrained.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Sapped.ID);
             }
-            //TODO: Don't forget to add for Study the Spire and Quick Study
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                 AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(PrepareCrush.ID);
@@ -203,21 +194,23 @@ public class BanSharedContentPatch {
             clz = PotionHelper.class,
             method = "initialize"
     )
+
     public static class PotionPatch {
         public static void Postfix(AbstractPlayer.PlayerClass chosenClass) {
-            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
-                //TODO: last checked in 5.12 ver in 2024.2.23 by Mwalls
-                PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
-                PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
-                PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
-                PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
-                PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
-                PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
-                PotionHelper.potions.remove(WizPotion.POTION_ID);
-                PotionHelper.potions.remove(BossPotion.POTION_ID);
-
-                PotionHelper.potions.remove(TempHPPotion.POTION_ID);
-            }
+            // edit: this patch doesn't work somehow, the function is moved to downfallMod.receivePostDungeonInitialize()
+            // by checking the condition before adding them all together
+//            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
+//                PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
+//                PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
+//                PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
+//                PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
+//                PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
+//                PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
+//                PotionHelper.potions.remove(WizPotion.POTION_ID);
+//                PotionHelper.potions.remove(BossPotion.POTION_ID);
+//                PotionHelper.potions.remove(TempHPPotion.POTION_ID);
+//            }
+            // edit: below probably not functioning too but lazy to implement
             // Ban shared potions from other classes if you haven't played as that class before
             runLockedPotions.forEach((playerClass, potionIds) -> {
                 // Shared potions will never be banned from their base class

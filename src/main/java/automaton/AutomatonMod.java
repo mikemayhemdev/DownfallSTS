@@ -20,8 +20,6 @@ import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import charbosses.BossMechanicDisplayPanel;
-import collector.CollectorChar;
-import collector.potions.TempHPPotion;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -39,7 +37,6 @@ import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
-import downfall.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
 import expansioncontent.cardmods.EtherealMod;
@@ -266,10 +263,9 @@ public class AutomatonMod implements
     public void addPotions() {
 
         BaseMod.addPotion(BuildAFunctionPotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, BuildAFunctionPotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
-        BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
         BaseMod.addPotion(CleanCodePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, CleanCodePotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
         BaseMod.addPotion(FreeFunctionsPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, FreeFunctionsPotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
-        BanSharedContentPatch.registerRunLockedPotion(AutomatonChar.Enums.THE_AUTOMATON, BurnAndBuffPotion.POTION_ID);
+//        BanSharedContentPatch.registerRunLockedPotion(AutomatonChar.Enums.THE_AUTOMATON, BurnAndBuffPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(BuildAFunctionPotion.POTION_ID);
@@ -411,7 +407,7 @@ public class AutomatonMod implements
     }
 
     public static AbstractCard getGoodStatus(AbstractCard ogStatus) {
-        AbstractCard newStatus = null;
+        AbstractCard newStatus;
         if (ogStatus instanceof Dazed) {
             newStatus = new Daze();
         } else if (ogStatus instanceof Burn) {
