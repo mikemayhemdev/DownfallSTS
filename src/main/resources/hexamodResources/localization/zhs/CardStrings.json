@@ -94,7 +94,7 @@
   },
   "hexamod:TimeOfNeed": {
     "NAME": "久逢甘露",
-    "DESCRIPTION": "保留 。 NL 随机获得一张 *能力 牌。 NL 其耗能减1。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 随机获得一张 *能力 牌， NL 其耗能减1。 NL 消耗 。"
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "黑夜之剑",
