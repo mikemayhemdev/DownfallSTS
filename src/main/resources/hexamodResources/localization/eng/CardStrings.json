@@ -351,7 +351,7 @@
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "Strike from Beyond",
-    "DESCRIPTION": "Deal !D! damage. NL Put 1 Ethereal card from your draw pile to your hand.",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 Ethereal card from your draw pile.",
     "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
   },
   "hexamod:SuperheatedStrike": {

@@ -31,12 +31,14 @@ import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import downfall.downfallMod;
 import downfall.patches.BanSharedContentPatch;
+import downfall.patches.EvilModeCharacterSelect;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import sneckomod.potions.MuddlingPotion;
 import theHexaghost.cards.*;
 import theHexaghost.cards.seals.*;
 import theHexaghost.events.*;
@@ -270,10 +272,9 @@ public class HexaMod implements
     public void addPotions() {
 
         BaseMod.addPotion(EctoCoolerPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, EctoCoolerPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
-        BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID);
         BaseMod.addPotion(DoubleChargePotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, DoubleChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
         BaseMod.addPotion(InfernoChargePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, InfernoChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
-        BanSharedContentPatch.registerRunLockedPotion(TheHexaghost.Enums.THE_SPIRIT, SoulburnPotion.POTION_ID);
+//        BanSharedContentPatch.registerRunLockedPotion(TheHexaghost.Enums.THE_SPIRIT, SoulburnPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(EctoCoolerPotion.POTION_ID);
@@ -458,6 +459,7 @@ public class HexaMod implements
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
+                .spawnCondition(() -> !AbstractDungeon.player.hasRelic(TheBrokenSeal.ID))
                 //Event Character//
                 .playerClass(TheHexaghost.Enums.THE_SPIRIT)
                 .create());
