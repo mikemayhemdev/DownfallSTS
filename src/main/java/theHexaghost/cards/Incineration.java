@@ -16,8 +16,8 @@ public class Incineration extends AbstractHexaCard {
 
     public Incineration() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 4;
-        baseBurn = burn = 4;
+        baseDamage = 5;
+        baseBurn = burn = 5;
         baseMagicNumber = magicNumber = 3;
         HexaMod.loadJokeCardImage(this, "Incineration.png");
     }

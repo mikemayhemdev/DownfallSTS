@@ -26,6 +26,7 @@ import downfall.util.TextureLoader;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+@Deprecated
 public class PoisonProtectionPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = downfallMod.makeID("PoisonResist");
@@ -79,7 +80,7 @@ public class PoisonProtectionPower extends AbstractPower implements CloneablePow
         super.update(slot);
         if (firstTurn) {
             if (this.timer <= 0F) {
-                ArrayList<AbstractGameEffect> effect2 = (ArrayList<AbstractGameEffect>) ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
+                ArrayList<AbstractGameEffect> effect2 = ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
                 effect2.add(new GainPowerEffect(this));
                 this.timer = 1F;
                 if (AbstractDungeon.player != null) {

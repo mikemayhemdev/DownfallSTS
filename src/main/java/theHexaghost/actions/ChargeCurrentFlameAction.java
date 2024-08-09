@@ -2,7 +2,6 @@ package theHexaghost.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import theHexaghost.GhostflameHelper;
-import theHexaghost.HexaMod;
 
 public class ChargeCurrentFlameAction extends AbstractGameAction {
 

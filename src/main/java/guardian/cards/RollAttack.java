@@ -1,6 +1,5 @@
 package guardian.cards;
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -29,14 +28,11 @@ public class RollAttack extends AbstractGuardianCard {
     private static final int COST = 2;
     private static final int DAMAGE = 16;
 
-    //TUNING CONSTANTS
     private static final int UPGRADE_DAMAGE = 4;
     private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -45,13 +41,9 @@ public class RollAttack extends AbstractGuardianCard {
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
-
     public RollAttack() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-
         this.baseDamage = DAMAGE;
-
-        //this.sockets.add(GuardianMod.socketTypes.RED);
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -73,9 +65,19 @@ public class RollAttack extends AbstractGuardianCard {
         this.useGems(p, m);
     }
 
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        if(AbstractDungeon.player.stance instanceof DefensiveMode){
+            this.target = CardTarget.ALL_ENEMY;
+        }else{
+            this.target = CardTarget.ENEMY;
+        }
+    }
+
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractDungeon.player.stance instanceof DefensiveMode ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
-    }// 68
+    }
 
     public AbstractCard makeCopy() {
         return new RollAttack();
@@ -86,8 +88,6 @@ public class RollAttack extends AbstractGuardianCard {
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
         }
-
-
     }
 
     public void updateDescription() {

@@ -81,5 +81,12 @@
     "NAME": "Puffball",
     "DIALOG": [
     ]
+  },
+  "downfall:DoomedDagger": {
+    "MOVES": [
+    ],
+    "NAME": "Doomed Dagger",
+    "DIALOG": [
+    ]
   }
 }

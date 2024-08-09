@@ -69,7 +69,7 @@ public class SlimeCrush extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(5);
+//            upgradeDamage(5);
             this.target = CardTarget.ALL_ENEMY;
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();

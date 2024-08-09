@@ -21,7 +21,7 @@ public class ChargeUp extends AbstractGuardianCard {
 
     public ChargeUp() {
         super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.GUARDIAN, CardRarity.COMMON, CardTarget.SELF);
-        this.baseBlock = 6;
+        this.baseBlock = 7;
         this.baseMagicNumber = this.magicNumber = 2;
         this.socketCount = 0;
         updateDescription();

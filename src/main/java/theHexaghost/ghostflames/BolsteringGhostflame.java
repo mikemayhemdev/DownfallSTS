@@ -10,12 +10,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
+import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
-import downfall.util.TextureLoader;
-
-import static theHexaghost.GhostflameHelper.activeGhostFlame;
+import theHexaghost.powers.FlameAffectAllEnemiesPower;
 
 public class BolsteringGhostflame extends AbstractGhostflame {
     public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("bolster.png"));
@@ -29,7 +28,7 @@ public class BolsteringGhostflame extends AbstractGhostflame {
 
     public BolsteringGhostflame(float x, float y) {
         super(x, y);
-        block = 4;
+        block = 5;
 
         //this.textColor = new Color(.75F,.75F,1F,1F);
         this.triggersRequired = 1;
@@ -42,13 +41,18 @@ public class BolsteringGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
-        int x = block;
-        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        int x = getEffectCount();
+        if(!AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)) {
+            atb(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.5F));
+            atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
+            atb(new GainBlockAction(AbstractDungeon.player, x));
+        }else {
+            for (int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++) {
+                atb(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.4F));
+                atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
+                atb(new GainBlockAction(AbstractDungeon.player, x));
+            }
         }
-        atb(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.5F));// 194
-        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
-        atb(new GainBlockAction(AbstractDungeon.player, x));
     }
 
     @Override

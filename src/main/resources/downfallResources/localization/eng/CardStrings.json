@@ -5,7 +5,7 @@
   },
   "downfall:Bewildered": {
     "NAME": "Bewildered",
-    "DESCRIPTION": "When you play another card, sneckomod:Muddle your hand, then discard this. NL Exhaust."
+    "DESCRIPTION": "Unplayable. Ethereal. NL When drawn, sneckomod:Muddle your hand, then Exhaust this."
   },
   "downfall:Icky": {
     "NAME": "Icky",
@@ -21,7 +21,7 @@
   },
   "downfall:Scatterbrained": {
     "NAME": "Scatterbrained",
-    "DESCRIPTION": "Unplayable. NL When drawn, if it is your turn, fill your hand with gremlin:Echoes of this card."
+    "DESCRIPTION": "At the end of your turn, if this is in your hand, add a copy of it to your discard pile. NL Exhaust."
   },
   "downfall:SummonMushrooms": {
     "NAME": "Fungus Among Us",

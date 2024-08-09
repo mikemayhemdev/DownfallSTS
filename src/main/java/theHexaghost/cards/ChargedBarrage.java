@@ -23,7 +23,7 @@ public class ChargedBarrage extends AbstractHexaCard {
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
 
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 6;
     private static final int UPG_MAGIC = 2;
 
     public ChargedBarrage() {

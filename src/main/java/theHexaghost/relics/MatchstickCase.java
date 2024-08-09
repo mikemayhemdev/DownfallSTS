@@ -2,42 +2,54 @@ package theHexaghost.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import theHexaghost.HexaMod;
-import theHexaghost.actions.AdvanceAction;
-import theHexaghost.actions.ChargeCurrentFlameAction;
+import downfall.actions.OctoChoiceAction;
 import downfall.util.TextureLoader;
+import theHexaghost.HexaMod;
+import theHexaghost.ghostflames.AbstractGhostflame;
+import theHexaghost.util.OnChargeSubscriber;
+import theHexaghost.cards.Float;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;
 
-public class MatchstickCase extends CustomRelic {
-
+public class MatchstickCase extends CustomRelic implements OnChargeSubscriber {
+    //Sneaky Teakwood Match
     public static final String ID = HexaMod.makeID("MatchstickCase");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("MatchstickCase.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("MatchstickCase.png"));
-    private boolean firstTurn = true;
+    private boolean triggered = false;
 
     public MatchstickCase() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
     }
-
-    public void atPreBattle() {
-        this.firstTurn = true;// 44
-    }// 45
 
     @Override
-    public void atTurnStartPostDraw() {
-        super.atTurnStartPostDraw();
+    public void atTurnStart() {
+        triggered = false;
+        this.grayscale = false;
+        super.atTurnStart();
     }
 
-    public void atTurnStart() {
-        if (this.firstTurn) {// 49
-            this.flash();// 50
-            addToBot(new ChargeCurrentFlameAction());
-            addToBot(new AdvanceAction(false));
-            this.firstTurn = false;// 53
+    @Override
+    public void onCharge(AbstractGhostflame chargedFlame) {
+        if(!triggered) {
+            Float fl = new Float();
+            fl.upgrade();
+            addToBot(new OctoChoiceAction(null, fl));
+            triggered = true;
+            this.grayscale = true;
         }
     }
+
+    //
+//    public void atTurnStart() {
+//        if (this.firstTurn) {
+//            this.flash();
+//            addToBot(new ChargeCurrentFlameAction());
+//            addToBot(new AdvanceAction(false));
+//            this.firstTurn = false;
+//        }
+//    }
 
     @Override
     public String getUpdatedDescription() {

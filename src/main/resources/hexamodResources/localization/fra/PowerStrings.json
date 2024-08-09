@@ -105,20 +105,13 @@
       " de #yBrûlure à l'attaquant."
     ]
   },
-  "hexamod:GiftsFromTheDeadPower": {
+  "hexamod:GiftsFromBeyondPower": {
     "NAME": "Cartes cadeaux",
     "DESCRIPTIONS": [
       "Au début de votre tour, #yRecyclez ",
       " carte(s) Après-vie ",
       " aléatoire.",
       " aléatoires."
-    ]
-  },
-  "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "Énergies cadeaux",
-    "DESCRIPTIONS": [
-      "Lorsqu'une carte #yÉtherée est #yÉpuisée, gagnez ",
-      " au prochain tour."
     ]
   },
   "hexamod:GoldPostCombatPower": {

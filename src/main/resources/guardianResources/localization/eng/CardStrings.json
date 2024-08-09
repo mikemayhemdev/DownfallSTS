@@ -23,7 +23,7 @@
     "UPGRADE_DESCRIPTION": "Gain 4 temp. Thorns."
   },
   "Guardian:Gem_White": {
-    "NAME": "Quartz",
+    "NAME": "Opal",
     "DESCRIPTION": "guardianmod:Gem. NL Draw a card.",
     "UPGRADE_DESCRIPTION": "Draw a card."
   },
@@ -72,8 +72,8 @@
   },
   "Guardian:VentSteam": {
     "NAME": "Vent Steam",
-    "DESCRIPTION": "Apply !M! Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable."
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to ALL enemies."
   },
   "Guardian:CurlUp": {
     "NAME": "Curl Up",
@@ -325,7 +325,7 @@
   },
   "Guardian:CrystalBeam": {
     "NAME": "Crystal Ray",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each guardianmod:Gem in ALL of your guardianmod:Socketed cards."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each guardianmod:Gem in your deck."
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "Onyx",

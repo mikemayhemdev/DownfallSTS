@@ -29,8 +29,8 @@
   },
   "hermit:Covet": {
     "NAME": "渴求",
-    "DESCRIPTION": "丢弃一张牌。 NL 抽 !M! 张牌。 NL 消耗 被丢弃的 诅咒 。",
-    "UPGRADE_DESCRIPTION": "丢弃一张牌。 NL 抽 !M! 张牌。 NL 消耗 被丢弃的 诅咒 。"
+    "DESCRIPTION": "丢弃一张牌， NL 消耗 丢弃的 诅咒 。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "丢弃一张牌， NL 消耗 丢弃的 诅咒 。 NL 抽 !M! 张牌。"
   },
   "hermit:HighCaliber": {
     "NAME": "大口径",
@@ -70,8 +70,8 @@
   },
   "hermit:FatalDesire": {
     "NAME": "自弑之欲",
-    "DESCRIPTION": "回合开始时，抽两张牌并获得一张 *受伤 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，抽两张牌并获得一张 *受伤 。"
+    "DESCRIPTION": "回合开始时，额外抽2张牌并获得1张 *受伤 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，额外抽2张牌并获得1张 *受伤 。"
   },
   "hermit:Gambit": {
     "NAME": "开场白",
@@ -83,7 +83,7 @@
   },
   "hermit:Malice": {
     "NAME": "怨恨",
-    "DESCRIPTION": "消耗 一张手牌。 NL 造成 !D! 点伤害。 NL 若 消耗 一张 诅咒 ， NL 变为群体攻击。"
+    "DESCRIPTION": "消耗 一张手牌。 NL 造成 !D! 点伤害。 NL 若 消耗 一张 诅咒 ， NL 造成群体伤害。"
   },
   "hermit:Deadeye": {
     "NAME": "死神之眼",
@@ -95,7 +95,7 @@
   },
   "hermit:Adapt": {
     "NAME": "适应",
-    "DESCRIPTION": "回合开始时，可 消耗 1张牌来获得8点 格挡 。"
+    "DESCRIPTION": "回合开始时，可 消耗 1张牌以获得8点 格挡 。"
   },
   "hermit:Dive": {
     "NAME": "深潜",

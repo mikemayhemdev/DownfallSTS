@@ -66,14 +66,14 @@
   "Guardian:GuardianWhirl": {
     "NAME": "Вихрь",
     "DESCRIPTION": "{@@}Требует не менее 20 Защиты. NL Наносит !D! урона ВСЕМ врагам !M! раз{!M!|&4=а|&5=}.",
-	"EXTENDED_DESCRIPTION": [ 
-	  "Требуется больше Защиты."
+    "EXTENDED_DESCRIPTION": [
+      "Требуется больше Защиты."
     ]
   },
   "Guardian:VentSteam": {
     "NAME": "Дымовая завеса",
-    "DESCRIPTION": "Накладывает !M! Уязвимости.",
-    "UPGRADE_DESCRIPTION": "Накладывает !M! Уязвимости."
+    "DESCRIPTION": "Накладывает !M! Уязвимости на ВСЕХ врагов.",
+    "UPGRADE_DESCRIPTION": "Накладывает !M! Уязвимости на ВСЕХ врагов."
   },
   "Guardian:CurlUp": {
     "NAME": "Свернуться",
@@ -325,7 +325,7 @@
   },
   "Guardian:CrystalBeam": {
     "NAME": "Кристаллический луч",
-    "DESCRIPTION": "Наносит !D! урона. NL Наносит !M! доп. урона за каждый guardianmod:Инкрустированный guardianmod:Самоцвет в вашей колоде."
+    "DESCRIPTION": "Наносит !D! урона. NL Наносит !M! доп. урона за каждый guardianmod:Самоцвет в колоде."
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "Оникс",

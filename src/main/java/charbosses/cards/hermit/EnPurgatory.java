@@ -1,5 +1,6 @@
 package charbosses.cards.hermit;
 
+import charbosses.bosses.Hermit.NewAge.ArchetypeAct3DoomsdayNewAge;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -40,7 +41,7 @@ public class EnPurgatory extends AbstractHermitBossCard {
             }
         }
 
-        addToBot(new SpawnMonsterAction(new SnakeDagger(-400, 150), true));
+        addToBot(new SpawnMonsterAction(ArchetypeAct3DoomsdayNewAge.getDoomedSnake(), true));
     }
 
     @Override

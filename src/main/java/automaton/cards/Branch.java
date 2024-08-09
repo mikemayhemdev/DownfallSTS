@@ -25,11 +25,8 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
 
     public final static String ID = makeID("Branch");
 
-    //stupid intellij stuff attack, self_and_enemy, common
-
     private static final int DAMAGE = 7;
     private static final int BLOCK = 6;
-//     private int addBackVigor = 0;
 
     public Branch() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
@@ -38,14 +35,6 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
         exhaust = true;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Branch.png"));
     }
-
-//     public void applyPowers() {
-//         super.applyPowers();
-//         if(AbstractDungeon.player.hasPower(VigorPower.POWER_ID)){
-//             AbstractPower pr = AbstractDungeon.player.getPower( VigorPower.POWER_ID);
-//             this.addBackVigor = pr.amount;
-//         }
-//     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new OctoChoiceAction(m, this));
@@ -76,9 +65,6 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
             case "bronze:BranchBlock": {
                 AbstractCard q = new BranchHit();
                 if (upgraded) q.upgrade();
-//                 if (this.addBackVigor>0) {
-//                     att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, this.addBackVigor), this.addBackVigor));
-//                 }
                 att(new AddToFuncAction(q, null));
                 att(new GainBlockAction(AbstractDungeon.player, card.baseBlock));
             }

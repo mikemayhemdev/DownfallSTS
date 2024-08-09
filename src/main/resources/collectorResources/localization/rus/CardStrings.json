@@ -316,14 +316,14 @@
   },
   "collector:RotwoodKindling": {
     "NAME": "Rotwood Kindling", //unfinished
-    "DESCRIPTION": "Неиграбельная. NL Накладывает !M! Уязвимости на ВСЕХ врагов, когда Сжигается.",
+    "DESCRIPTION": "Неиграбельная. NL Накладывает !M! Уязвимости и collector:Порчи на ВСЕХ врагов, когда Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Сначала нужно зажечь этот брусок."
     ]
   },
   "collector:SapStrength": {
     "NAME": "Смертельная метка", //unfinished
-    "DESCRIPTION": "Наносит !D! урона. NL Враг теряет вдвое больше ОЗ в конце своего хода."
+    "DESCRIPTION": "Наносит !D! урона. NL Враг теряет ОЗ равное удвоенному урона по ОЗ в конце своего хода."
   },
   "collector:ScorchingRay": {
     "NAME": "Палящие лучи",
@@ -399,7 +399,7 @@
   "collector:VoidArmor": {
     "NAME": "Броня бездны",
     "DESCRIPTION": "Даёт ВСЕМ !B! Защиты и 1 expansioncontent:Неуловимости." //unfinished
-  },  
+  },
   "collector:WhirlingFlame": {
     "NAME": "Пламенный вихрь",
     "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. NL Вы кладёте карту из стопки сброса на верх стопки добора."
@@ -407,7 +407,7 @@
   "collector:Whomp": {
     "NAME": "Хлёст",
     "DESCRIPTION": "Наносит !D! урона. NL Даёт !M! expansioncontent:Временного_ОЗ. NL Сжигается."
-  },  
+  },
   "collector:Wildfire": {
     "NAME": "Дикое пламя",
     "DESCRIPTION": "Наносит !D! урона за каждый отриц. эффект на враге." //unfinished

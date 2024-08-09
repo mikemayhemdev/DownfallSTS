@@ -41,7 +41,6 @@ public class ModeShiftPower extends AbstractGuardianPower {
 
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-
     }
 
     public void onSpecificTrigger(int brace) {

@@ -19,12 +19,8 @@ import static hermit.HermitMod.makeCardPath;
 
 public class CalledShot extends AbstractDynamicCard {
 
-    // TEXT DECLARATION
-
     public static final String ID = HermitMod.makeID(CalledShot.class.getSimpleName());
     public static final String IMG = makeCardPath("called_shot.png");
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -38,15 +34,12 @@ public class CalledShot extends AbstractDynamicCard {
     private static final int DAMAGE = 5;
     private static final int UPGRADE_PLUS_DMG = 2;
 
-    // /STAT DECLARATION/
-
     public CalledShot() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
         loadJokeCardImage(this, "called_shot.png");
     }
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), EnumPatch.HERMIT_GUN2));
@@ -60,7 +53,6 @@ public class CalledShot extends AbstractDynamicCard {
             this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
     }
 
-    //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

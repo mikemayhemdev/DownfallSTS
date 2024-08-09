@@ -101,7 +101,10 @@
     "NAME": "Forbidden Fruit",
     "FLAVOR": "This species of fruit looks completely unfamiliar.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. Then, obtain a #yNecronomicurse."
+      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. Then, obtain a #yNecronomicurse.",
+      "Choose a Rare card to add to your deck.",
+      "Choose an Uncommon card to add to your deck.",
+      "Choose a Common card to add to your deck."
     ]
   },
   "collector:RoughDiamond": {

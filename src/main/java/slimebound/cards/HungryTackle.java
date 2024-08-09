@@ -46,7 +46,7 @@ public class HungryTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
 
 
-        this.baseDamage = 10;
+        this.baseDamage = 12;
         baseSelfDamage = this.selfDamage = 3;
 
 

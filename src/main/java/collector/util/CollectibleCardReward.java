@@ -57,7 +57,6 @@ public class CollectibleCardReward extends CustomReward {
         for (AbstractRelic r : AbstractDungeon.player.relics) {
             r.onPreviewObtainCard(card);
         }
-
         renderCard = card.makeStatEquivalentCopy();
         text = uiStrings.TEXT[0] + card.name;
         TIP_COL.a = 0.65f;
@@ -125,12 +124,12 @@ public class CollectibleCardReward extends CustomReward {
 
         hb.render(sb);
 
-        sb.draw(TopPanelEssence.ICON, GOLD_IMG_X, this.y - 9.0F * Settings.scale, GOLD_IMG_SIZE, GOLD_IMG_SIZE);
+        sb.draw(TopPanelEssence.ICON, GOLD_IMG_X + 5.0F * Settings.scale, this.y - 30.0F * Settings.scale, GOLD_IMG_SIZE, GOLD_IMG_SIZE);
         Color c = Color.WHITE.cpy();
         if (EssenceSystem.essenceCount() < 3) {
             c = Color.SALMON.cpy();
         }
-        FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, Integer.toString(3), GOLD_TEXT_X, this.y + 30.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, c);
+        FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, Integer.toString(3), GOLD_TEXT_X, this.y , 1000.0F * Settings.scale, 0.0F, c);
     }
 
     //Due to reward scrolling's orthographic camera and render order of rewards, the card needs to be rendered outside of the render method

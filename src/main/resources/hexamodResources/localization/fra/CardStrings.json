@@ -35,7 +35,7 @@
     "DESCRIPTION": "hexamod:Rétractez. NL Récupérez une carte de votre défausse. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "hexamod:Rétractez. NL Récupérez !M! cartes de votre défausse. NL Épuisement."
   },
-  "hexamod:SkipABeat": {
+  "hexamod:Kindle": {
     "NAME": "Allumage",
     "DESCRIPTION": "Si le Feu Follet actuel n'est pas *Enflammé, hexamod:Enflammez-le.",
     "UPGRADE_DESCRIPTION": "hexamod:Enflammez le Feu Follet actuel."
@@ -53,7 +53,7 @@
     "NAME": "Flamme amplifiée",
     "DESCRIPTION": "Gagnez !M! hexamod:d'Intensité."
   },
-  "hexamod:HexaLevel": {
+  "hexamod:InfernalForm": {
     "NAME": "Forme infernale",
     "DESCRIPTION": "Au début de votre tour, gagnez !M! hexamod:d'Intensité.",
     "UPGRADE_DESCRIPTION": "Gagnez !M! hexamod:d'Intensité. NL Au début de votre tour, gagnez !M! hexamod:d'Intensité."
@@ -62,17 +62,17 @@
     "NAME": "Pouvoir illimité",
     "DESCRIPTION": "hexamod:Enflammez tous les Feux Follets dans l'ordre. NL Épuisement."
   },
-  "hexamod:GhostOfSpirePast": {
+  "hexamod:DevilsDance": {
     "NAME": "Danse du démon",
     "DESCRIPTION": "La première fois que vous hexamod:Rétractez chaque tour, gagnez [E] et piochez 1 carte. NL hexamod:Rétractez.",
     "UPGRADE_DESCRIPTION": "Inné. NL La première fois que vous hexamod:Rétractez chaque tour, gagnez [E] et piochez 1 carte. NL hexamod:Rétractez."
   },
-  "hexamod:GhostOfSpireFuture": {
+  "hexamod:IntoShadow": {
     "NAME": "Speedrunning",
     "DESCRIPTION": "Lorsque vous *Avancez, gagnez !M! de Force Temporaire.",
     "UPGRADE_DESCRIPTION": "Inné. NL Lorsque vous *Avancez, gagnez !M! de Force Temporaire."
   },
-  "hexamod:GhostOfSpirePresent": {
+  "hexamod:HereAndNow": {
     "NAME": "Ici et Maintenant",
     "DESCRIPTION": "Vous *n'Avancez plus à la fin de votre tour. NL Au début de votre tour, gagnez [E]."
   },
@@ -100,7 +100,7 @@
     "NAME": "Bouclier de la nuit",
     "DESCRIPTION": "Si le Feu Follet actuel n'est pas *Enflammé, gagnez [E] . NL Gagnez !B! d'Armure."
   },
-  "hexamod:SpectralAdrenaline": {
+  "hexamod:BrightRitual": {
     "NAME": "Rituel éclatant",
     "DESCRIPTION": "Gagnez [E] et piochez 1 carte pour chaque Feu Follet hexamod:Enflammé, puis hexamod:Éteignez-les. NL Épuisement."
   },
@@ -108,7 +108,7 @@
     "NAME": "Passer à travers",
     "DESCRIPTION": "Infligez !D! dégâts. NL Piochez 1 carte pour chaque Feu Follet hexamod:Enflammé."
   },
-  "hexamod:InspiringFlames": {
+  "hexamod:StokeTheFire": {
     "NAME": "Attiser le feu",
     "DESCRIPTION": "Gagnez !B! d'Armure. NL Pour chaque Feu Follet hexamod:Enflammé, Améliorez une carte aléatoire dans votre main."
   },
@@ -128,11 +128,11 @@
     "NAME": "Bouclier fantôme",
     "DESCRIPTION": "Éthérée. hexamod:Après-vie. NL Gagnez !B! d'Armure. NL Quand cette carte est Épuisée, gagnez !M! de bronze:Flou."
   },
-  "hexamod:Haunt": {
+  "hexamod:HauntedHand": {
     "NAME": "Main hantée",
     "DESCRIPTION": "Éthérée. hexamod:Après-vie. NL Piochez !M! cartes. NL Toutes les cartes dans votre main deviennent Éthérées."
   },
-  "hexamod:RecurringNightmare": {
+  "hexamod:NightmareVision": {
     "NAME": "Vision de cauchemar",
     "DESCRIPTION": "expansioncontent:Exhumez une carte Éthérée. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "expansioncontent:Exhumez !M! cartes Éthérées. NL Épuisement.",
@@ -142,7 +142,7 @@
       " cartes Éthérées à remettre dans votre main."
     ]
   },
-  "hexamod:GiftsFromTheDead": {
+  "hexamod:GiftsFromBeyond": {
     "NAME": "Cadeaux de l'Au-Delà",
     "DESCRIPTION": "Au début de votre tour, expansioncontent:Recyclez une carte hexamod:Après-vie aléatoire.",
     "EXTENDED_DESCRIPTION": [
@@ -161,7 +161,7 @@
     "NAME": "Cape invisible",
     "DESCRIPTION": "Éthérée. NL Gagnez !M! de Dextérité et perdez 1 de Force."
   },
-  "hexamod:ParanormalForm": {
+  "hexamod:Poltergeist": {
     "NAME": "Poltergeist",
     "DESCRIPTION": "Lorsque vous jouez une carte *Après-vie, infligez !M! dégâts à un ennemi aléatoire."
   },
@@ -219,7 +219,7 @@
     "NAME": "Mur de feux follets",
     "DESCRIPTION": "Gagnez !B! d'Armure. NL Lorsque vous êtes attaqué ce tour, appliquez !burny! de hexamod:Brûlure à l'attaquant."
   },
-  "hexamod:Toasty": {
+  "hexamod:FlareFlick": {
     "NAME": "Toasty!",
     "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez autant de hexamod:Brûlure que de dégâts infligés."
   },
@@ -272,11 +272,11 @@
     "NAME": "Boule de feu fantôme",
     "DESCRIPTION": "Infligez !D! dégâts. NL Si l'ennemi a de la hexamod:Brûlure, déclenchez-la."
   },
-  "hexamod:SpectralSpark": {
+  "hexamod:NaughtySpirit": {
     "NAME": "Étincelle spectrale",
     "DESCRIPTION": "Si cela est possible, hexamod:Éteignez le Feu Follet actuel pour gagner !M! hexamod:d'Intensité."
   },
-  "hexamod:GhostflameInferno": {
+  "hexamod:InstantInferno": {
     "NAME": "Enfer immédiat",
     "DESCRIPTION": "Retenue. NL hexamod:Enflammez le Feu Follet Infernal. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Retenue. NL hexamod:Enflammez le Feu Follet actuel, puis le Feu Follet Infernal. NL Épuisement."
@@ -298,15 +298,15 @@
     "NAME": "Souffle dynamique",
     "DESCRIPTION": "Éthérée. NL Si le Feu Follet actuel hexamod:Enflammé, appliquez !burny! de hexamod:Brûlure. Sinon, infligez !D! dégâts."
   },
-  "hexamod:Again": {
+  "hexamod:MomentaryResurgence": {
     "NAME": "Encore!",
     "DESCRIPTION": "hexamod:Enflammez le Feu Follet actuel, puis hexamod:Éteignez-le."
   },
-  "hexamod:RetreatToShadows": {
+  "hexamod:Incorporeal": {
     "NAME": "Incorporel",
     "DESCRIPTION": "hexamod:Rétractez. NL Perdez !M! PV. NL Gagnez 1 Intangible. NL Épuisement."
   },
-  "hexamod:ApocalypticArmor": {
+  "hexamod:Doomsday": {
     "NAME": "Doomsday",
     "DESCRIPTION": "La prochaine fois tous les !M! Feu Follets sont hexamod:Enflammés, jouez un tour supplémentaire.",
     "UPGRADE_DESCRIPTION": "La prochaine fois que vous hexamod:Enflammez au moins !M! Feu Follets, jouez un tour supplémentaire."
@@ -341,7 +341,7 @@
     "DESCRIPTION": "hexamod:Sceau Éthéré. NL À la fin du combat, Améliorez une carte aléatoire dans votre deck.",
     "UPGRADE_DESCRIPTION": "hexamod:Sceau. NL À la fin du combat, Améliorez une carte aléatoire dans votre deck."
   },
-  "hexamod:SoulSteal": {
+  "hexamod:LivingBomb": {
     "NAME": "Bombe vivante",
     "DESCRIPTION": "Appliquez !burny! de hexamod:Brûlure. NL La prochaine fois que la hexamod:Brûlure de la cible s'active, cela affecte TOUS les ennemis. NL Épuisement."
   },
@@ -354,7 +354,7 @@
     "DESCRIPTION": "Infligez !D! dégâts. NL hexamod:Enflammez le Feu Follet précédent, puis le suivant.",
     "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL hexamod:Enflammez le Feu Follet précédent, puis l'actuel, puis le suivant."
   },
-  "hexamod:FlameSwitch": {
+  "hexamod:BadOmen": {
     "NAME": "Mauvais Omen",
     "DESCRIPTION": "Appliquez !burny! de hexamod:Brûlure NL Augmentez de !M! le nombre de tours nécessaires à la détonation. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Retenue. NL Choisissez un type de Feu Follet pour remplacer le Feu Follet actuel. NL Épuisement.",

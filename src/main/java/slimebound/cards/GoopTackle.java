@@ -75,7 +75,7 @@ public class GoopTackle extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            upgradeDamage(7);
         }
     }
 }

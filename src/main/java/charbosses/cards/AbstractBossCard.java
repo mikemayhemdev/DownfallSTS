@@ -74,7 +74,8 @@ public abstract class AbstractBossCard extends AbstractCard {
     public boolean intentActive = false;
 
     public boolean showIntent = false;
-    public int energyGeneratedIfPlayed = 0;
+    public int energyGeneratedIfPlayed = 0; // this doesn't seem actually to offer real energy, but make cards on the right visible so that they look like they could be played,
+    // to actually play those cards, you need to manually add energy somewhere
     public int strengthGeneratedIfPlayed = 0; //used to increase intent damage for cards on the right of this card, when it provides strength
     public int damageMultGeneratedIfPlayed = 1;
     public int damageMultIfPlayed = 1;

@@ -15,8 +15,6 @@ import static hermit.HermitMod.makeCardPath;
 
 public class LowProfile extends AbstractDynamicCard {
 
-    // TEXT DECLARATION
-
     public static final String ID = HermitMod.makeID(LowProfile.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -24,8 +22,6 @@ public class LowProfile extends AbstractDynamicCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -35,8 +31,6 @@ public class LowProfile extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int BLOCK = 7;
     private static final int UPGRADE_PLUS_BLOCK = 2;
-
-    // /STAT DECLARATION/
 
     public LowProfile() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -58,7 +52,6 @@ public class LowProfile extends AbstractDynamicCard {
         return debuffs;
     }
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.applyPowers();
@@ -75,7 +68,17 @@ public class LowProfile extends AbstractDynamicCard {
         this.isBlockModified = this.block != this.baseBlock;
     }
 
-    // Upgraded stats.
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        int realBaseBlock = this.baseBlock;
+
+        this.baseBlock += this.magicNumber * countDebuffs();
+        super.calculateCardDamage(mo);
+
+        this.baseBlock = realBaseBlock;
+        this.isBlockModified = this.block != this.baseBlock;
+    }
+
     @Override
     public void upgrade() {
         if (!upgraded) {

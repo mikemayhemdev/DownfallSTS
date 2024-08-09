@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,11 +17,8 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
-import theHexaghost.HexaMod;
-import theHexaghost.relics.IceCube;
-import theHexaghost.relics.SoulConsumer;
 import downfall.util.TextureLoader;
+import theHexaghost.HexaMod;
 import theHexaghost.vfx.ExplosionSmallEffectGreen;
 
 public class BurnPower extends TwoAmountPower implements CloneablePowerInterface, HealthBarRenderPower {
@@ -43,7 +39,7 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
         this.owner = owner;
         this.amount = amount;
         amount2 = 3;
-        if (AbstractDungeon.player.hasRelic(IceCube.ID)) amount2 = 4;
+//        if (AbstractDungeon.player.hasRelic(IceCube.ID)) amount2 = 4;
         this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
 
@@ -67,7 +63,7 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
 
     public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead() && amount2 == 1) {// 65 66
-            explode();
+            explode(false);
         } else {
             addToBot(new AbstractGameAction() {
                 @Override
@@ -78,15 +74,17 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
                 }
             });
         }
-    }// 70
+    }
 
-    public void explode(){
+    public void explode(boolean fast_explode){
         this.flashWithoutSound();
-        if (AbstractDungeon.player.hasRelic(SoulConsumer.ID)){
-            AbstractDungeon.player.getRelic(SoulConsumer.ID).onTrigger();
+        if(fast_explode){// for phantom fireball so that it detonates first before the searing flame applies soulburn
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            this.addToTop(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
+        }else {
+            this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
-        this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
 
         if (owner.hasPower(LivingBombPower.POWER_ID)){
             for (AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){
@@ -99,13 +97,8 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
         } else {
             this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
         }
-        if (owner.hasPower(BurnPerTurnPower.POWER_ID)) {
-            owner.getPower(BurnPerTurnPower.POWER_ID).onSpecificTrigger();
 
-        }
-
-
-        }
+    }
 
     @Override
     public void updateDescription() {

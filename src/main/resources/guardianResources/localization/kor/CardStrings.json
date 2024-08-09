@@ -65,15 +65,15 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "회오리 바람",
-    "DESCRIPTION": "방어도 가 20 이상 필요합니다. NL 적 전체에게 피해를 !D! 만큼 !M! 번 줍니다.",    
+    "DESCRIPTION": "방어도 가 20 이상 필요합니다. NL 적 전체에게 피해를 !D! 만큼 !M! 번 줍니다.",
     "EXTENDED_DESCRIPTION": [
       "방어도 더 필요."
     ]
   },
   "Guardian:VentSteam": {
     "NAME": "증기 분출",
-    "DESCRIPTION": "취약을 !M! 부여합니다.",
-    "UPGRADE_DESCRIPTION": "취약을 !M! 부여합니다."
+    "DESCRIPTION": "적 전체에게 취약을 !M! 부여합니다.",
+    "UPGRADE_DESCRIPTION": "적 전체에게 취약을 !M! 부여합니다."
   },
   "Guardian:CurlUp": {
     "NAME": "웅크리기",
@@ -325,7 +325,7 @@
   },
   "Guardian:CrystalBeam": {
     "NAME": "크리스탈 광선",
-    "DESCRIPTION": "피해를 !D! 줍니다. 덱에 guardianmod:보석을 장착한 카드 하나당 피해량이 !M! 증가합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. 덱에 guardianmod:보석 하나당 피해량이 !M! 증가합니다."
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "오닉스",

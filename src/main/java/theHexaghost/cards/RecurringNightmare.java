@@ -5,12 +5,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import downfall.util.CardIgnore;
 import theHexaghost.actions.RecurringNightmareAction;
+import theHexaghost.actions.RetractAction;
 
 public class RecurringNightmare extends AbstractHexaCard {
 
-    public final static String ID = makeID("RecurringNightmare");
-
-    //stupid intellij stuff SKILL, SELF, UNCOMMON
+    public final static String ID = makeID("NightmareVision");
 
     public RecurringNightmare() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -21,6 +20,7 @@ public class RecurringNightmare extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new RetractAction());
         atb(new RecurringNightmareAction(magicNumber));
     }
 

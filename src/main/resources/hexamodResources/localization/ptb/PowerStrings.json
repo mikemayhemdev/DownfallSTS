@@ -102,7 +102,7 @@
       " #yAngústia no atacante."
     ]
   },
-  "hexamod:GiftsFromTheDeadPower": {
+  "hexamod:GiftsFromBeyondPower": {
     "NAME": "Cartas Presenteadas",
     "DESCRIPTIONS": [
       "No início do seu turno, #yRecupere ",
@@ -110,13 +110,6 @@
       " aleatória.",
       " cartas #yPós-Vida ",
       " aleatórias."
-    ]
-  },
-  "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "Energia Presenteada",
-    "DESCRIPTIONS": [
-      "Sempre que uma carta #yEtérea é #yExaurida, ganhe ",
-      " no próximo turno."
     ]
   },
   "hexamod:GoldPostCombatPower": {

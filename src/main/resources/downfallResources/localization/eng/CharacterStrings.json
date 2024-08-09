@@ -109,7 +109,7 @@
       "..and so...... shall... NL ....I......"
     ],
     "OPTIONS": [
-      "~I~ ~brought...~ NL ~HIM...~ ~back...~",
+      "~I~ ~brought...~ NL ~HIM...~ ~back...~ ~And...~ ~took...~ ~his~ ~soul...~",
       "~Protect~ ~me...~ NL ~And~ ~be...~ ~rewarded...~"
     ]
   },
@@ -173,9 +173,9 @@
       "Split: Time"
     ],
     "TEXT": [
-      "Lose 3 HP. NL Gain 40 Souls.",
-      "Lose 1 HP. NL Add a random Colorless card to your hand.",
-      "Lose 5 HP. NL Gain a random Potion.",
+      "Lose 3 HP. NL Gain 15 Souls.",
+      "Lose 3 HP. NL Add a random Colorless card to your hand.",
+      "Lose 7 HP. NL Gain a random Potion.",
       "Obtain Guardian *Boss cards.",
       "Obtain Hexaghost *Boss cards.",
       "Obtain Slime Boss *Boss cards.",
@@ -197,9 +197,9 @@
       "Split into a slimeboundmod:Guerilla_Slime.",
       "Split into a slimeboundmod:Mire_Slime.",
       "Split into a slimeboundmod:Leeching_Slime.",
-      "Lose 3 HP. NL Gain 50 Souls.",
-      "Lose 1 HP. NL Add a random upgraded Colorless card to your hand.",
-      "Lose 2 HP. NL Gain a random Potion."
+      "Lose 3 HP. NL Gain 20 Souls.",
+      "Lose 3 HP. NL Add a random upgraded Colorless card to your hand.",
+      "Lose 5 HP. NL Gain a random Potion."
     ]
   },
   "downfall:lazyStorage": {
@@ -234,5 +234,13 @@
     ],
     "TEXT": [
     ]
+  },
+  "downfall:OldNeow": {
+    "NAMES": [
+      "Old Neow"
+    ],
+    "TEXT": [
+    ]
   }
+
 }

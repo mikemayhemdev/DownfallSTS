@@ -347,8 +347,8 @@
   },
   "bronze:Mutator": {
     "NAME": "Mutator",
-    "DESCRIPTION": "Gain 1 Strength. NL Transform a Status into a copy of this.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain 1 Strength. NL Transform a Status into a copy of this."
+    "DESCRIPTION": "Gain 1 Strength. NL *Transform a Status into a copy of this.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain 1 Strength. NL *Transform a Status into a copy of this."
   },
   "bronze:NullPointer": {
     "NAME": "Null Pointer",

@@ -157,7 +157,6 @@ public class CollectorMod implements
         BaseMod.addRelicToCustomPool(new BlockedChakra(), CollectorChar.Enums.COLLECTOR);
         BaseMod.addRelicToCustomPool(new BottledCollectible(), CollectorChar.Enums.COLLECTOR);
         BaseMod.addRelicToCustomPool(new TheContract(), CollectorChar.Enums.COLLECTOR);
-
         //Shared relics
         BaseMod.addRelic(new AutoCurser(), RelicType.SHARED);
         BaseMod.addRelic(new Incense(), RelicType.SHARED);
@@ -172,7 +171,8 @@ public class CollectorMod implements
         BaseMod.addPotion(MiniCursePotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, MiniCursePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
         BaseMod.addPotion(ReservePotion.class, Color.RED, Color.GREEN, Color.CLEAR, ReservePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
         BaseMod.addPotion(DebuffDoublePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, DebuffDoublePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
-        BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID);
+
+//        BanSharedContentPatch.registerRunLockedPotion(CollectorChar.Enums.THE_COLLECTOR, TempHPPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(MiniCursePotion.POTION_ID);

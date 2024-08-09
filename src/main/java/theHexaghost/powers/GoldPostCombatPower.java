@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
-public class GoldPostCombatPower extends AbstractPower implements CloneablePowerInterface, RemoveMeBabey {
+public class GoldPostCombatPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = HexaMod.makeID("GoldPostCombatPower");
 

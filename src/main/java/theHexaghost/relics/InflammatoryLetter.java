@@ -20,7 +20,7 @@ public class InflammatoryLetter extends CustomRelic {
     public InflammatoryLetter() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
     }
-
+    //Jar of TOBSCo
     @Override
     public void atBattleStart() {
         flash();

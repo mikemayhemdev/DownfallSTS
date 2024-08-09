@@ -18,8 +18,6 @@ public class Float extends AbstractHexaCard implements OctopusCard {
 
     public final static String ID = makeID("Float");
 
-    //stupid intellij stuff SKILL, SELF, BASIC
-
     public Float() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         tags.add(HexaMod.GHOSTWHEELCARD);

@@ -26,12 +26,9 @@ public class Emergency extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 0;
 
-    //TUNING CONSTANTS
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -58,8 +55,12 @@ public class Emergency extends AbstractGuardianCard {
             if (o instanceof StasisOrb) {
                 int stasisCount = o.passiveAmount;
                 ((StasisOrb) o).stasisCard.superFlash(Color.GOLDENROD);
-                for (int i = 0; i < stasisCount; i++) {
+                if(stasisCount <= 0) {
                     o.onStartOfTurn();
+                }else {
+                    for (int i = 0; i < stasisCount; i++) {
+                        o.onStartOfTurn();
+                    }
                 }
                 break;
             }
