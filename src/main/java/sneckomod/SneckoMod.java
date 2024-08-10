@@ -553,22 +553,20 @@ public class SneckoMod implements
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
                 if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor() && r != AbstractCard.CardColor.COLORLESS && r != CardColorEnumPatch.CardColorPatch.BOSS && r != CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE && (!sneckoNoModCharacters || allowedColors.contains(r.name()))) {
-                    String s = getClassFromColor(r);
-                    AbstractCard q = playerStartCardForEventFromColor(r);
-                    String[] strings = CardCrawlGame.languagePack.getUIString("sneckomod:AtGameStart").TEXT;
-                    AbstractCard.CardType tv = SKILL;
-                    if (q != null) {
-                        tv = q.type;
+                    if (BaseMod.getBackColor(r) != null) {
+
+                        String s = getClassFromColor(r);
+                        AbstractCard q = playerStartCardForEventFromColor(r);
+                        String[] strings = CardCrawlGame.languagePack.getUIString("sneckomod:AtGameStart").TEXT;
+                        AbstractCard.CardType tv = SKILL;
+                        if (q != null) {
+                            tv = q.type;
+                        }
+                        CustomCard c = new OctoChoiceCard("UNVERIFIED", strings[0] + s + strings[1], "bronzeResources/images/cards/BuggyMess.png", strings[2] + s + strings[3], r, tv);
+                        if (q != null && q.portrait != null)
+                            c.portrait = q.portrait;
+                        colorChoices.addToTop(c);
                     }
-                    //Help us locate which one is causing the null pointer without delving too deep
-                    System.out.println("Is strings null? [0] " + (strings[0] == null) + " [1] " + (strings[1] == null) + " [2] " + (strings[2] == null) + " [3] " + (strings[3] == null));
-                    System.out.println("Is s null? " + (s == null));
-                    System.out.println("Is r null? " + (r == null));
-                    System.out.println("Is tv null? " + (tv == null));
-                    CustomCard c = new OctoChoiceCard("UNVERIFIED", strings[0] + s + strings[1], "bronzeResources/images/cards/BuggyMess.png", strings[2] + s + strings[3], r, tv);
-                    if (q != null && q.portrait != null)
-                        c.portrait = q.portrait;
-                    colorChoices.addToTop(c);
                 }
             }
             CenterGridCardSelectScreen.centerGridSelect = true;
