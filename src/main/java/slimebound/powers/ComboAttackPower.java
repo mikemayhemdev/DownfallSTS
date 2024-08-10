@@ -72,7 +72,7 @@ public class ComboAttackPower extends TwoAmountPower {
 
     public void onAfterCardPlayed(AbstractCard usedCard) {
         super.onAfterCardPlayed(usedCard);
-        if (usedCard.target == AbstractCard.CardTarget.ENEMY || usedCard.target == AbstractCard.CardTarget.ALL_ENEMY) {
+        if (usedCard.target == AbstractCard.CardTarget.ENEMY || usedCard.target == AbstractCard.CardTarget.ALL_ENEMY || usedCard.target == AbstractCard.CardTarget.SELF_AND_ENEMY) {
             if (this.amount2 > 0) {
                 if (SlimeboundMod.getLeadingSlime() != null)
                 {
