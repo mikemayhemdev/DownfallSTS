@@ -221,7 +221,7 @@
   },
   "Guardian:Suspension": {
     "NAME": "Приостановить",
-    "DESCRIPTION": "Помещает карту из руки в guardianmod:Стазис.",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Помещает карту из руки в guardianmod:Стазис.",
     "UPGRADE_DESCRIPTION": "Вы берёте карту. NL Помещает карту из руки в guardianmod:Стазис."
   },
   "Guardian:FastForward": {

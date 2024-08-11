@@ -216,7 +216,7 @@
   },
   "Guardian:Suspension": {
     "NAME": "挂起",
-    "DESCRIPTION": "guardianmod:凝滞 一张手牌。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。NL guardianmod:凝滞 一张手牌。",
     "UPGRADE_DESCRIPTION": "抽一张牌。 NL guardianmod:凝滞 一张手牌。"
   },
   "Guardian:FastForward": {
