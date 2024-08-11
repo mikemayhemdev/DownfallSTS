@@ -3,10 +3,11 @@ package downfall.mainmenu;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.scenes.TitleBackground;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
+import com.megacrit.cardcrawl.screens.mainMenu.MenuButton;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
 
@@ -39,7 +40,7 @@ public class DiscordButton {
 
                 discordButton.DRAW_Y = Settings.HEIGHT / 2 - 200f * Settings.yScale - 70.0F * Settings.scale * __instance.bg.slider;
 
-                if (discordButton.hb.clicked == true) {
+                if (discordButton.hb.clicked && MainMenuAdPatch.popup.done) {
                     openWebpage("https://discord.gg/GtDrBX2vpr");
                     discordButton.hb.clicked = false;
                 }
@@ -55,9 +56,36 @@ public class DiscordButton {
     public static class Render {
         public static void Postfix(MainMenuScreen __instance, SpriteBatch sb) {
             if (__instance.screen == MainMenuScreen.CurScreen.MAIN_MENU && downfallMod.STEAM_MODE) {
-                discordButton.render(sb);
+                if (MainMenuAdPatch.popup.done)
+                    discordButton.render(sb);
             }
 
+        }
+    }
+
+    @SpirePatch(
+            clz = MenuButton.class,
+            method = "update"
+    )
+    public static class DontPressThroughAd {
+        public static SpireReturn Prefix(MenuButton __instance) {
+            if (!MainMenuAdPatch.popup.done) {
+                return SpireReturn.Return();
+            }
+            return SpireReturn.Continue();
+        }
+    }
+
+    @SpirePatch(
+            clz = MenuButton.class,
+            method = "render"
+    )
+    public static class DontSeeThroughAd {
+        public static SpireReturn Prefix(MenuButton __instance, SpriteBatch sb) {
+            if (!MainMenuAdPatch.popup.done) {
+                return SpireReturn.Return();
+            }
+            return SpireReturn.Continue();
         }
     }
 }

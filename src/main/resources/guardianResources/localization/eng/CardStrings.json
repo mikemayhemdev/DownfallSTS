@@ -221,7 +221,7 @@
   },
   "Guardian:Suspension": {
     "NAME": "Suspension",
-    "DESCRIPTION": "Place a card in your hand into guardianmod:Stasis.",
+    "DESCRIPTION": "Gain !B! Block. NL Place a card in your hand into guardianmod:Stasis.",
     "UPGRADE_DESCRIPTION": "Draw a card. NL Place a card in your hand into guardianmod:Stasis."
   },
   "Guardian:FastForward": {

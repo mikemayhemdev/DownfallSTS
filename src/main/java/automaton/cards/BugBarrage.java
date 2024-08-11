@@ -2,7 +2,6 @@ package automaton.cards;
 
 import automaton.AutomatonMod;
 import basemod.BaseMod;
-import basemod.devcommands.draw.Draw;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
@@ -23,7 +22,7 @@ public class BugBarrage extends AbstractBronzeCard {
     //stupid intellij stuff attack, enemy, common
 
     private static final int DAMAGE = 7;
-    private static final int UPG_DAMAGE = 2;
+    private static final int UPG_DAMAGE = 3;
 
     public BugBarrage() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
@@ -86,8 +85,6 @@ public class BugBarrage extends AbstractBronzeCard {
 
 
     public void upp() {
-        upgradeMagicNumber(1);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeDamage(UPG_DAMAGE);
     }
 }

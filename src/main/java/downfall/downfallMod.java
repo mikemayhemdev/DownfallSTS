@@ -158,7 +158,7 @@ import static reskinContent.reskinContent.unlockAllReskin;
 public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, AddAudioSubscriber, RenderSubscriber, PostDeathSubscriber {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = false;
+    public static final boolean STEAM_MODE = true;
 
     public static boolean neowtextoverride = false;
 
@@ -213,7 +213,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             true, // Guardian
             true, // Hexa
             true, // Charboss Info
-            true // COLLECTOR info. Wow, it's hard to believe how much has gone on since the last tutorial was made
+            true, // COLLECTOR info. Wow, it's hard to believe how much has gone on since the last tutorial was made
+            true // THE T&T ADVERTISEMENT!!! ADVERTISING!! To be fair we worked really hard both on T&T and this project
     };
 
     public static Properties tutorialSaves = new Properties();

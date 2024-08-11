@@ -1,7 +1,7 @@
 package guardian.cards;
 
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -39,6 +39,7 @@ public class Suspension extends AbstractGuardianCard {
     public Suspension() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
         this.socketCount = SOCKETS;
+        baseBlock = 2;
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Suspension.png"));
@@ -46,8 +47,7 @@ public class Suspension extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         AbstractDungeon.actionManager.addToBottom(new PlaceCardsInHandIntoStasisAction(p, 1, false));
         super.useGems(p, m);
     }
@@ -59,8 +59,7 @@ public class Suspension extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.updateDescription();
+            upgradeBlock(3);
         }
     }
 
