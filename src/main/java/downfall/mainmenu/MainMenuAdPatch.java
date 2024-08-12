@@ -60,7 +60,7 @@ public class MainMenuAdPatch {
 
     static {
         // T9 Game Info
-        ads.add(new MainMenuAdInfo("", "", "", "", "", "", "https://store.steampowered.com/app/1652250/Tales__Tactics/", TextureLoader.getTexture("downfallResources/images/menuTNT.png")));
+        ads.add(new MainMenuAdInfo("", "", "", "", "", "", "https://store.steampowered.com/app/1652250/Tales__Tactics/", TextureLoader.getTexture("downfallResources/images/menustuff/" + TalesAndTacticsPopup.langFolder() + "/menuTNT.png")));
         // STS Modding Info
         if (Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT) {
             ads.add(new MainMenuAdInfo(STRINGS.TEXT[0], STRINGS.TEXT[1], STRINGS.TEXT[2], STRINGS.TEXT[3], STRINGS.TEXT[4], STRINGS.TEXT[5], "https://www.bilibili.com/video/BV1QA411j7Kx", null));
