@@ -88,4 +88,30 @@ public class DiscordButton {
             return SpireReturn.Continue();
         }
     }
+
+    @SpirePatch(
+            clz = MainMenuScreen.class,
+            method = "updateRenameArea"
+    )
+    public static class DontSeeThroughAd2 {
+        public static SpireReturn Prefix(MainMenuScreen __instance) {
+            if (!MainMenuAdPatch.popup.done) {
+                return SpireReturn.Return();
+            }
+            return SpireReturn.Continue();
+        }
+    }
+
+    @SpirePatch(
+            clz = MainMenuScreen.class,
+            method = "renderNameEdit"
+    )
+    public static class DontSeeThroughAd3 {
+        public static SpireReturn Prefix(MainMenuScreen __instance, SpriteBatch sb) {
+            if (!MainMenuAdPatch.popup.done) {
+                return SpireReturn.Return();
+            }
+            return SpireReturn.Continue();
+        }
+    }
 }

@@ -11,43 +11,58 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
 
+import java.io.IOException;
+
 public class TalesAndTacticsPopup {
 
     private static final float POS_X = Settings.WIDTH * 0.1F;
     private static final float POS_Y = Settings.HEIGHT * 0.1F;
-    private static final float BTN_POS_X = Settings.WIDTH * 0.3F;
-    private static final float BTN_POS_Y = Settings.HEIGHT * 0.2F;
 
-    public static final Texture bgTex = TextureLoader.getTexture("downfallResources/images/menuPopupBg.png");
-    public static final Texture imgTex = TextureLoader.getTexture("downfallResources/images/menuTNTBig.png");
-    public static final Texture dismissBtnTex = TextureLoader.getTexture("downfallResources/images/menuTNTDismiss.png");
+    public static String langFolder() {
+        if (Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT) {
+            return "zhs";
+        }
+        return "eng";
+    }
+
+    public static final Texture bgTex = TextureLoader.getTexture("downfallResources/images/menustuff/" + langFolder() + "/menuPopupBg.png");
+    public static final Texture imgTex = TextureLoader.getTexture("downfallResources/images/menustuff/" + langFolder() + "/menuTNTBig.png");
+    public static final Texture dismissBtnTex = TextureLoader.getTexture("downfallResources/images/menustuff/" + langFolder() + "/menuTNTDismiss.png");
+    public static final Texture discordBtnTex = TextureLoader.getTexture("downfallResources/images/menustuff/" + langFolder() + "/menuDiscord.png");
+    public static final Texture steamBtnTex = TextureLoader.getTexture("downfallResources/images/menustuff/" + langFolder() + "/menuSteam.png");
 
     private float posY;
     private Color popupBgColor = new Color(1, 1, 1, 0);
     private Hitbox btnHitbox;
     private Hitbox steamHitbox;
+    private Hitbox discordHitbox;
     private boolean fadingIn = false;
     private boolean fadingOut = false;
     private float fadeTimer = 0;
-    private static final float FADE_TIME = 45;
+    private static final float FADE_TIME = 30;
     public boolean done = true;
 
     public TalesAndTacticsPopup() {
         posY = Settings.HEIGHT;
-        btnHitbox = new Hitbox(BTN_POS_X, BTN_POS_Y, dismissBtnTex.getWidth() * Settings.scale, dismissBtnTex.getHeight() * Settings.scale);
-        steamHitbox = new Hitbox(POS_X, POS_Y, 1600 * Settings.scale, 900 * Settings.scale);
-        //        if (downfallMod.unseenTutorials[5]) {
-        if (true) {
+        btnHitbox = new Hitbox(POS_X + (1286 * Settings.scale), POS_Y + (810 * Settings.scale), dismissBtnTex.getWidth() * Settings.scale, dismissBtnTex.getHeight() * Settings.scale);
+        steamHitbox = new Hitbox(POS_X + (862 * Settings.scale), POS_Y + (49 * Settings.scale), steamBtnTex.getWidth() * Settings.scale, steamBtnTex.getHeight() * Settings.scale);
+        discordHitbox = new Hitbox(POS_X + (247 * Settings.scale), POS_Y + (46 * Settings.scale), discordBtnTex.getWidth() * Settings.scale, discordBtnTex.getHeight() * Settings.scale);
+        if (downfallMod.unseenTutorials[5]) {
             downfallMod.unseenTutorials[5] = false;
             done = false;
             fadingIn = true;
+            try {
+                downfallMod.saveTutorialsSeen();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
     public void update() {
         if (fadingIn) {
             posY = MathUtils.lerp(Settings.HEIGHT, POS_Y, fadeTimer / FADE_TIME);
-            popupBgColor.a += 0.011;
+            popupBgColor.a += 0.025;
             fadeTimer += 1;
             if (fadeTimer >= FADE_TIME) {
                 fadingIn = false;
@@ -56,7 +71,7 @@ public class TalesAndTacticsPopup {
         } else if (fadingOut) {
             posY = MathUtils.lerp(POS_Y, Settings.HEIGHT, fadeTimer / FADE_TIME);
             fadeTimer += 1;
-            popupBgColor.a -= 0.011;
+            popupBgColor.a -= 0.025;
             if (fadeTimer >= FADE_TIME) {
                 fadingOut = false;
                 done = true;
@@ -64,12 +79,15 @@ public class TalesAndTacticsPopup {
         } else {
             steamHitbox.update();
             btnHitbox.update();
+            discordHitbox.update();
             if (btnHitbox.hovered && InputHelper.justClickedLeft) {
                 fadingOut = true;
             } else if (steamHitbox.hovered && InputHelper.justClickedLeft) {
-                fadingOut = true;
                 CardCrawlGame.sound.play("RELIC_DROP_MAGICAL");
                 DiscordButton.openWebpage("https://store.steampowered.com/app/1652250/Tales__Tactics/");
+            } else if (discordHitbox.hovered && InputHelper.justClickedLeft) {
+                CardCrawlGame.sound.play("RELIC_DROP_MAGICAL");
+                DiscordButton.openWebpage("https://discord.gg/g7Bv9gttpp");
             }
         }
     }
@@ -79,15 +97,30 @@ public class TalesAndTacticsPopup {
         drawTextureScaled(sb, bgTex, 0, 0);
         sb.setColor(Color.WHITE);
         drawTextureScaled(sb, imgTex, POS_X, posY);
-        if (btnHitbox.hovered) {
-            sb.setColor(Color.WHITE.cpy());
-        } else {
-            sb.setColor(Color.GRAY.cpy());
+        if (!fadingIn && !fadingOut) {
+            if (btnHitbox.hovered) {
+                sb.setColor(Color.WHITE.cpy());
+            } else {
+                sb.setColor(Color.GRAY.cpy());
+            }
+            drawTextureScaled(sb, dismissBtnTex, btnHitbox.x, btnHitbox.y);
+            if (discordHitbox.hovered) {
+                sb.setColor(Color.WHITE.cpy());
+            } else {
+                sb.setColor(Color.GRAY.cpy());
+            }
+            drawTextureScaled(sb, discordBtnTex, discordHitbox.x, discordHitbox.y);
+            if (steamHitbox.hovered) {
+                sb.setColor(Color.WHITE.cpy());
+            } else {
+                sb.setColor(Color.GRAY.cpy());
+            }
+            drawTextureScaled(sb, steamBtnTex, steamHitbox.x, steamHitbox.y);
+            sb.setColor(Color.WHITE);
+            steamHitbox.render(sb);
+            btnHitbox.render(sb);
+            discordHitbox.render(sb);
         }
-        drawTextureScaled(sb, dismissBtnTex, btnHitbox.x, btnHitbox.y - (100 * Settings.scale));
-        sb.setColor(Color.WHITE);
-        steamHitbox.render(sb);
-        btnHitbox.render(sb);
     }
 
     private static void drawTextureScaled(SpriteBatch sb, Texture tex, float x, float y) {
