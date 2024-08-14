@@ -160,9 +160,9 @@
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain !M! bronze:Blur. NL ",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain !B! Block. NL ",
     "EXTENDED_DESCRIPTION": [
-      "Gain !B! Block."
+      "Gain 1 Blur."
     ]
   },
   "hexamod:GiftsFromBeyond": {
@@ -230,17 +230,13 @@
   },
   "hexamod:NightmareGuise": {
     "NAME": "Nightmare Guise",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain a *Shadow *Guise. NL ",
-    "EXTENDED_DESCRIPTION": [
-      "Gain !B! Block."
-    ]
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Gain[] [#e087a4]a[] *Shadow *Guise. NL Then gain another.",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Gain[] [#e087a4]a[] *Shadow *Guise+. NL Then gain another."
   },
   "hexamod:NightmareStrike": {
     "NAME": "Nightmare Strike",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain a *Shadow *Strike. NL ",
-    "EXTENDED_DESCRIPTION": [
-      "Deal !D! damage."
-    ]
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Gain[] [#e087a4]a[] *Shadow *Strike. NL Then gain another.",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Gain[] [#e087a4]a[] *Shadow *Strike+. NL Then gain another."
   },
   "hexamod:Poltergeist": {
     "NAME": "Poltergeist",
@@ -265,8 +261,8 @@
   },
   "hexamod:Premonition": {
     "NAME": "Premonition",
-    "DESCRIPTION": "Choose a card type then play a random card of that type in your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card type then play a random card of that type in your draw pile.",
+    "DESCRIPTION": "Choose a card type, then play a random card of that type in your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card type then, play a random card of that type in your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "to play and Exhaust."
     ]
@@ -310,15 +306,15 @@
   },
   "hexamod:ShadowGuise": {
     "NAME": "Shadow Guise",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust."
   },
   "hexamod:ShadowStrike": {
     "NAME": "Shadow Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Shield of Night",
-    "DESCRIPTION": "Gain !B! Block. NL Scry !M!, Exhaust discarded Ethereal cards."
+    "DESCRIPTION": "Gain !B! Block. NL Scry !M!. NL Exhaust discarded Ethereal cards."
   },
   "hexamod:Kindle": {
     "NAME": "Kindle",
@@ -361,7 +357,7 @@
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "Sword of Night",
-    "DESCRIPTION": "Deal !D! damage. NL Scry !M!, Exhaust discarded Ethereal cards."
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL Exhaust discarded Ethereal cards."
   },
   "hexamod:ThermalTransfer": {
     "NAME": "Thermal Transfer",
@@ -463,7 +459,7 @@
   },
   "hexamod:FlameDevourer": {
     "NAME": "Devour Flame",
-    "DESCRIPTION": "hexamod:Retract, retracting onto an hexamod:Ignited Ghostflame grant you !B! Block."
+    "DESCRIPTION": "hexamod:Retract. NL If you hexamod:Retracted onto an hexamod:Ignited Ghostflame, gain !B! Block."
   },
   "hexamod:SpectralGrace": {
     "NAME": "Spectral Grace",

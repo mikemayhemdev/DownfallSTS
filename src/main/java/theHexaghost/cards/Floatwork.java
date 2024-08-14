@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,7 +16,7 @@ public class Floatwork extends AbstractHexaCard implements HexaPurpleTextInterfa
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBurn = burn = 1;
         baseMagicNumber = magicNumber = 3;
-        baseBlock = 2;
+        baseBlock = 7;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "Floatwork.png");
@@ -27,6 +28,7 @@ public class Floatwork extends AbstractHexaCard implements HexaPurpleTextInterfa
     }
 
     public void afterlife() {
+        addToBot(new GainBlockAction(AbstractDungeon.player, magicNumber));
         applyToSelf(new PlatedArmorPower(AbstractDungeon.player, magicNumber));
     }
 

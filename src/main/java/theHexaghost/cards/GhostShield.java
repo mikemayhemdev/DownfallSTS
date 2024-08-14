@@ -32,7 +32,7 @@ public class GhostShield extends AbstractHexaCard implements HexaPurpleTextInter
 
     @Override
     public void afterlife() {
-        blck();
+        applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
     }
 
     public void upgrade() {

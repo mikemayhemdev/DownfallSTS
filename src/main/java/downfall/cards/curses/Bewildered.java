@@ -50,17 +50,21 @@ public class Bewildered extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new MuddleHandAction());
-        this.flash();
-        addToBot(new ExhaustSpecificCardAction(this, p.hand));
+
     }
 
     @Override
     public void triggerWhenDrawn() {
-        use(AbstractDungeon.player, null);
+        AbstractDungeon.actionManager.addToBottom(new MuddleHandAction());
+        this.flash();
     }
 
-//    public void triggerOnOtherCardPlayed(AbstractCard c) {
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
+    }
+
+    //    public void triggerOnOtherCardPlayed(AbstractCard c) {
 //        AbstractDungeon.actionManager.addToBottom(new MuddleHandAction());
 //        this.flash();
 //        AbstractDungeon.actionManager.addToBottom(new DiscardSpecificCardAction(this));
