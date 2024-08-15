@@ -4,7 +4,7 @@
     "DESCRIPTION": "Gain !B! Block. NL hexamod:Advance."
   },
   "hexamod:MomentaryResurgence": {
-    "NAME": "Momentary Resurgence",
+    "NAME": "Resurgence",
     "DESCRIPTION": "hexamod:Ignite the current Ghostflame, then hexamod:Extinguish it."
   },
   "hexamod:ApocalypseNow": {
@@ -268,7 +268,7 @@
     ]
   },
   "hexamod:RadiantFlame": {
-    "NAME": "Radiant Flame",
+    "NAME": "Radiant Strike",
     "DESCRIPTION": "Deal !D! damage. NL Remove the target's hexamod:Soulburn to gain !M! hexamod:Intensity."
   },
   "hexamod:RainOfEmbers": {

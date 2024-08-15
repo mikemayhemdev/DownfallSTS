@@ -153,5 +153,9 @@
   "expansioncontent:PeaceOut": {
     "NAME": "Dark Whisper",
     "DESCRIPTION": "Retain. NL Enemy leaves their Stance. NL Remove all Mantra from the enemy. NL Exhaust."
+  },
+  "expansioncontent:HeartsFavorWish": {
+    "NAME": "Corrupted Form",
+    "DESCRIPTION": "Ethereal. NL Gain a 0-cost *Form from a defeated Boss. Add 3 random *Curses to your discard pile. NL Exhaust."
   }
 }

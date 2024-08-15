@@ -81,9 +81,9 @@ public class NeowBossFinal extends AbstractMonster {
 
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            setHp(600);
+            setHp(650);
         } else {
-            setHp(550);
+            setHp(600);
         }
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
@@ -130,6 +130,7 @@ public class NeowBossFinal extends AbstractMonster {
 
     }
 
+
     @Override
     public void usePreBattleAction() {
 
@@ -156,11 +157,18 @@ public class NeowBossFinal extends AbstractMonster {
         for (int i = 0; i < 3; i++) {
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         }
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new InvinciblePower(this, invincibleAmt), invincibleAmt));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvinciblePower(this, invincibleAmt), invincibleAmt));
 
         for (int i = 0; i < 3; i++) {
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new HeartsFavorPower(AbstractDungeon.player, 1), 1));
+
+        for (int i = 0; i < 3; i++) {
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        }
+        if (AbstractDungeon.ascensionLevel >= 19)  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new NeowExhumePower(AbstractDungeon.player)));
+
 //        AbstractDungeon.actionManager.addToBottom(new NeowGainMinionPowersAction(this, 1));
     }
 
@@ -172,7 +180,6 @@ public class NeowBossFinal extends AbstractMonster {
                 curses();
                 break;
             case 1:
-                playSfx();
                 AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX + EYE1_X, this.hb.cY + EYE1_Y, Color.GOLD), 0.25F));
 
@@ -193,6 +200,7 @@ public class NeowBossFinal extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(0.3F));
                 break;
             case 2:
+                playSfx();
                 playSfx();
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new ShockWaveEffect(this.hb.cX, this.hb.cY, Color.YELLOW, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new ShockWaveEffect(this.hb.cX, this.hb.cY, Color.GOLD, ShockWaveEffect.ShockWaveType.CHAOTIC), .5F));

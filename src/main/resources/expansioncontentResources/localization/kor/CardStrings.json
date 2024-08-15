@@ -91,5 +91,9 @@
     "EXTENDED_DESCRIPTION":[
       " NL (체력을 {amount} 잃습니다. )"
     ]
+  },
+  "expansioncontent:HeartsFavorWish": {
+    "NAME": "Corrupted Form",
+    "DESCRIPTION": "Ethereal. NL Gain a 0-cost *Form from a defeated Boss. Add 3 random *Curses to your discard pile. NL Exhaust."
   }
 }

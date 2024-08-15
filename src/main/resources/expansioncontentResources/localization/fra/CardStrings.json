@@ -84,5 +84,9 @@
   "expansioncontent:Antidote": {
     "NAME": "Antidote",
     "DESCRIPTION": "Perdez tout votre Poison."
+  },
+  "expansioncontent:HeartsFavorWish": {
+    "NAME": "Corrupted Form",
+    "DESCRIPTION": "Ethereal. NL Gain a 0-cost *Form from a defeated Boss. Add 3 random *Curses to your discard pile. NL Exhaust."
   }
 }
