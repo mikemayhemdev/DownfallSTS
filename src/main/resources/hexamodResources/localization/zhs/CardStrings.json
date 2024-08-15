@@ -137,9 +137,9 @@
   },
   "hexamod:GhostShield": {
     "NAME": "幽灵护盾",
-    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 !M! 层 bronze:残影 。 NL ",
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 !B! 点格挡。 NL ",
     "EXTENDED_DESCRIPTION": [
-      "获得 !B! 点格挡。"
+      "获得 !M! 层 残影 。"
     ]
   },
   "hexamod:HauntedHand": {
