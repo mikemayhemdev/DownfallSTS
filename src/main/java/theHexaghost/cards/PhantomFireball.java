@@ -18,7 +18,7 @@ public class PhantomFireball extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 4;
     private static final int UPG_DAMAGE = 3;
 
     public PhantomFireball() {
