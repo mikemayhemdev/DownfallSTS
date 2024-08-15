@@ -83,7 +83,7 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "Antidote",
-    "DESCRIPTION": "Lose !M! Poison."
+    "DESCRIPTION": "Retain. NL Lose !M! Poison."
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "Bloody Sacrifice",
