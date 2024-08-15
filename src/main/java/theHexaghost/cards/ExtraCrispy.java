@@ -9,23 +9,23 @@ public class ExtraCrispy extends AbstractHexaCard {
 
     public final static String ID = makeID("ExtraCrispy");
 
-    private static final int MAGIC = 3;
-    // private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 12;
+    private static final int UPG_MAGIC = 4;
 
     public ExtraCrispy() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         HexaMod.loadJokeCardImage(this, "ExtraCrispy.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new CrispyPower_new(1));
+        applyToSelf(new CrispyPower_new(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeMagicNumber(4);
         }
     }
 

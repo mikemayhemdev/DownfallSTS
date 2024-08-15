@@ -60,9 +60,8 @@
   "hexamod:CrispyPower_new": {
     "NAME": "Extra Crispy",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust #b3 cards, #yIgnite the current Ghostflame #b",
-      " time.",
-      " times."
+      "When #ySoulburn detonates on an enemy, apply #b",
+      " Soulburn to them (after detonation)."
     ]
   },
   "hexamod:EnhancePower": {

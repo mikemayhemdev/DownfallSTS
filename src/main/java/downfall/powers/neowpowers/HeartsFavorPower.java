@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.blue.EchoForm;
 import com.megacrit.cardcrawl.cards.green.WraithForm;
 import com.megacrit.cardcrawl.cards.optionCards.BecomeAlmighty;
@@ -17,6 +18,7 @@ import com.megacrit.cardcrawl.cards.red.DemonForm;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import downfall.cards.HeartsFavorWish;
 import downfall.cards.OctoChoiceCard;
@@ -28,7 +30,7 @@ import theHexaghost.HexaMod;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class HeartsFavorPower extends AbstractBossMechanicPower {
+public class HeartsFavorPower extends AbstractPower {
     public static final String POWER_ID = downfallMod.makeID("HeartsFavorPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
@@ -49,18 +51,22 @@ public class HeartsFavorPower extends AbstractBossMechanicPower {
         this.name = NAME;
 
         this.updateDescription();
-
-        this.canGoNegative = false;
     }
 
     @Override
-    public void onSpecificTrigger() {
-        addToBot(new MakeTempCardInHandAction(new HeartsFavorWish()));
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+        this.amount -= damageAmount;
+        if (amount <= 0){
+            amount += 300;
+            addToBot(new MakeTempCardInHandAction(new HeartsFavorWish()));
+            flash();
+        }
+        return super.onAttackedToChangeDamage(info, damageAmount);
     }
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
 }

@@ -159,15 +159,20 @@ public class NeowBossFinal extends AbstractMonster {
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvinciblePower(this, invincibleAmt), invincibleAmt));
 
-        for (int i = 0; i < 3; i++) {
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-        }
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new HeartsFavorPower(AbstractDungeon.player, 1), 1));
+        if (AbstractDungeon.ascensionLevel < 19) {
+            for (int i = 0; i < 3; i++) {
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+            }
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new HeartsFavorPower(this, 300), 300));
 
+        }
+
+        /*
         for (int i = 0; i < 3; i++) {
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         }
         if (AbstractDungeon.ascensionLevel >= 19)  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new NeowExhumePower(AbstractDungeon.player)));
+         */
 
 //        AbstractDungeon.actionManager.addToBottom(new NeowGainMinionPowersAction(this, 1));
     }

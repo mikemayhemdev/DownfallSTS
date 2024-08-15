@@ -8,6 +8,7 @@ import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -16,10 +17,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.util.TextureLoader;
 import theHexaghost.HexaMod;
+import theHexaghost.relics.CandleOfCauterizing;
 import theHexaghost.vfx.ExplosionSmallEffectGreen;
+
+import static collector.util.Wiz.applyToEnemy;
+import static collector.util.Wiz.atb;
 
 public class BurnPower extends TwoAmountPower implements CloneablePowerInterface, HealthBarRenderPower {
 
@@ -96,6 +102,16 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
 
         } else {
             this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
+        }
+
+        if (AbstractDungeon.player.hasPower(CrispyPower_new.POWER_ID)){
+            {
+                atb(new ApplyPowerAction(owner, AbstractDungeon.player, new BurnPower(owner, AbstractDungeon.player.getPower(CrispyPower_new.POWER_ID).amount), AbstractDungeon.player.getPower(CrispyPower_new.POWER_ID).amount));
+                if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
+                    AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
+                    r.flash();
+                }
+            }
         }
 
     }

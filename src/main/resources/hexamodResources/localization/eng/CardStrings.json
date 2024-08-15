@@ -4,7 +4,7 @@
     "DESCRIPTION": "Gain !B! Block. NL hexamod:Advance."
   },
   "hexamod:MomentaryResurgence": {
-    "NAME": "Resurgence",
+    "NAME": "Fleeting Flash",
     "DESCRIPTION": "hexamod:Ignite the current Ghostflame, then hexamod:Extinguish it."
   },
   "hexamod:ApocalypseNow": {
@@ -76,7 +76,7 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
-    "DESCRIPTION": "Whenever you Exhaust !M! cards, hexamod:Ignite the current Ghostflame."
+    "DESCRIPTION": "When Soulburn detonates on an enemy, apply !M! Soulburn to them (after detonation)."
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
