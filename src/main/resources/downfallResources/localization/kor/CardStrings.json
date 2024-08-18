@@ -34,7 +34,8 @@
   "downfall:HeartsFavorPower": {
     "NAME": "Heart's Favor",
     "DESCRIPTIONS": [
-      "Whenever Neow's #yInvincible reaches #b0, gain a #yCorrupted #yForm."
+      "니오우의 #y천하무적이 #b0 이 될 때마다 #y신의 #y생명을 #b",
+      " 감소시킵니다."
     ]
   }
 }
