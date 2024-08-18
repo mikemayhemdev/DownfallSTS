@@ -40,6 +40,7 @@ public class NightmareGuise extends AbstractHexaCard implements HexaPurpleTextIn
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.cardsToPreview.upgrade();
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
