@@ -138,8 +138,8 @@
   },
   "hexamod:IntoShadow": {
     "NAME": "Into Shadow",
-    "DESCRIPTION": "Ethereal. NL Whenever you hexamod:Retract, your next card is free to play and Exhaust.",
-    "UPGRADE_DESCRIPTION": "Whenever you hexamod:Retract, your next card is free to play and Exhaust.",
+    "DESCRIPTION": "Ethereal. NL Whenever you hexamod:Retract, your next card is free to play and Exhausts.",
+    "UPGRADE_DESCRIPTION": "Whenever you hexamod:Retract, your next card is free to play and Exhausts.",
     "EXTENDED_DESCRIPTION": [
       "play and Exhaust."
     ],
