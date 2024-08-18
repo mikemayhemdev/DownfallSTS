@@ -30,12 +30,5 @@
   "downfall:BossMaintenance": {
     "NAME": "유지보수",
     "DESCRIPTION": "이번 전투 동안 *타격의 피해량을 !M! 증가시키고 이 카드의 비용을 [E] 증가시킵니다. NL 민첩을 !B! 얻습니다."
-  },
-  "downfall:HeartsFavorPower": {
-    "NAME": "심장의 은총",
-    "DESCRIPTIONS": [
-      "니오우의 #y천하무적이 #b0 이 될 때마다 #y신의 #y생명을 #b",
-      " 감소시킵니다."
-    ]
   }
 }
