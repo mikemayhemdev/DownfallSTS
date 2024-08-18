@@ -44,7 +44,7 @@ public class ForbiddenFruit extends CustomRelic {
                 r.onPreviewObtainCard(c);
             }
         }
-        AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[0], false, false, false, false);
+        AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[1], false, false, false, false);
     }
 
     @Override
@@ -70,7 +70,7 @@ public class ForbiddenFruit extends CustomRelic {
                     }
                 }
                 group.group.addAll(AbstractDungeon.srcUncommonCardPool.group.stream().map(AbstractCard::makeCopy).collect(Collectors.toList()));
-                AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[0], false, false, false, false);
+                AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[2], false, false, false, false);
                 stage++;
             }
             else if (stage == 1) {
@@ -82,7 +82,7 @@ public class ForbiddenFruit extends CustomRelic {
                     }
                 }
                 group.group.addAll(AbstractDungeon.srcCommonCardPool.group.stream().map(AbstractCard::makeCopy).collect(Collectors.toList()));
-                AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[0], false, false, false, false);
+                AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[3], false, false, false, false);
                 stage++;
             }
         }
@@ -93,4 +93,3 @@ public class ForbiddenFruit extends CustomRelic {
         return DESCRIPTIONS[0];
     }
 }
-

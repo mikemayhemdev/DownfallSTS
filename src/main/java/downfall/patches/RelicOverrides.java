@@ -1,37 +1,47 @@
 package downfall.patches;
 
+import basemod.BaseMod;
 import basemod.ReflectionHacks;
-import basemod.helpers.CardPowerTip;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
+import basemod.abstracts.DynamicVariable;
+import basemod.helpers.dynamicvariables.BlockVariable;
+import basemod.helpers.dynamicvariables.DamageVariable;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardModifierPatches;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.RenderCustomDynamicVariableCN;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.*;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
+import javassist.CannotCompileException;
+import javassist.CtBehavior;
+
+import java.util.Objects;
+import java.util.regex.Pattern;
+
+//TODO: I accidentally pushed one of my attempt code to change those evil run specific relic names(and image) for the related relics, it's not fully working
+// (breaks when you load a game) but shouldn't cause any bugs I think, Mwalls
 
 public class RelicOverrides {
 
-    /*
-    @SpirePatch(
-            clz = SlaversCollar.class,
-            method = "setDescription"
-    )
-    public static class slaversCollarDesc {
-        @SpirePrefixPatch
-        public static SpireReturn<String> Prefix() {
-            if (EvilModeCharacterSelect.evilMode) {
-                return SpireReturn.Return(CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[0]);
-            }
-            return SpireReturn.Continue();
-        }
-    }
-     */
+//    @SpirePatch(
+//            clz = SlaversCollar.class,
+//            method = "setDescription"
+//    )
+//    public static class slaversCollarDesc {
+//        @SpirePrefixPatch
+//        public static SpireReturn<String> Prefix() {
+//            if (EvilModeCharacterSelect.evilMode) {
+//                return SpireReturn.Return(CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[0]);
+//
+//            }
+//            return SpireReturn.Continue();
+//        }
+//
+//    }
 
 
     @SpirePatch(
@@ -109,24 +119,18 @@ public class RelicOverrides {
 
     @SpirePatch(
             clz = Ectoplasm.class,
-            method = SpirePatch.CONSTRUCTOR
+            method = "getUpdatedDescription"
     )
-    public static class ectoConstructor {
-        @SpirePostfixPatch
-        public static void Postfix(Ectoplasm _instance) {
+    public static class EctoImage {
+        @SpirePrefixPatch
+        public static void Prefix(Ectoplasm _instance) {
             if (EvilModeCharacterSelect.evilMode) {
-                RelicStrings downfallEctoStrings = CardCrawlGame.languagePack.getRelicStrings("downfall:Hecktoplasm");
                 _instance.imgUrl = null;
                 _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/ectoplasmEvil.png"));
                 _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/ectoplasmEvil.png"));
-                _instance.flavorText = downfallEctoStrings.FLAVOR;
-                /* TODO: Someone who knows patching better than me should figure out how to make it work.
-                ReflectionHacks.setPrivateStaticFinal(Ectoplasm.class, "name", downfallEctoStrings.NAME); //Wrong method, as name is inherited from AbstractRelic
-                _instance.tips.clear();
-                _instance.tips.add(new PowerTip(downfallEctoStrings.NAME, _instance.description));
-                ReflectionHacks.privateStaticMethod(AbstractRelic.class, "initializeTips").invoke(); //Crashes the game.
-                */
+                _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:Hecktoplasm").FLAVOR;
             }
+
         }
     }
 
@@ -134,16 +138,38 @@ public class RelicOverrides {
             clz = Ectoplasm.class,
             method = "setDescription"
     )
-    public static class ectoDesc {
+    public static class EctoDesc {
         @SpirePrefixPatch
-        public static SpireReturn<String> Prefix(Ectoplasm _instance) {
+        public static SpireReturn<String> Prefix() {
+
             if (EvilModeCharacterSelect.evilMode) {
-                //_instance.imgUrl = null;
-                //_instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/ectoplasmEvil.png"));
-                //_instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/ectoplasmEvil.png"));
-                return SpireReturn.Return(CardCrawlGame.languagePack.getRelicStrings("downfall:Hecktoplasm").DESCRIPTIONS[0]);
+                return SpireReturn.Return(CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[9]);
             }
+
             return SpireReturn.Continue();
+        }
+    }
+
+    @SpirePatch(
+            clz=AbstractRelic.class,
+            method= SpirePatch.CONSTRUCTOR
+    )
+    public static class EctoTitle {
+        @SpireInsertPatch(
+                locator = Locator.class
+        )
+        public static void Insert(AbstractRelic __instance,String setId, String imgName, AbstractRelic.RelicTier tier, AbstractRelic.LandingSound sfx) {
+            if(Objects.equals(__instance.relicId, "Ectoplasm") && EvilModeCharacterSelect.evilMode) {
+                ReflectionHacks.setPrivateFinal(__instance, AbstractRelic.class, "relicStrings", CardCrawlGame.languagePack.getRelicStrings("downfall:Hecktoplasm").NAME);
+
+            }
+        }
+
+        private static class Locator extends SpireInsertLocator {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws CannotCompileException, PatchingException {
+                Matcher finalMatcher = new Matcher.MethodCallMatcher(ImageMaster.class, "loadRelicImg");
+                return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
+            }
         }
     }
 /*

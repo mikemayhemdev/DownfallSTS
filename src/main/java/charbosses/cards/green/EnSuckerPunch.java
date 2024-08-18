@@ -34,7 +34,7 @@ public class EnSuckerPunch extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, magicNumber + 1, true), magicNumber + 1));
+        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, magicNumber , true), magicNumber + 1));
     }
 
     @Override

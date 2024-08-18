@@ -263,9 +263,9 @@ public class AutomatonMod implements
     public void addPotions() {
 
         BaseMod.addPotion(BuildAFunctionPotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, BuildAFunctionPotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
-        BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
         BaseMod.addPotion(CleanCodePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, CleanCodePotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
         BaseMod.addPotion(FreeFunctionsPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, FreeFunctionsPotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
+//        BanSharedContentPatch.registerRunLockedPotion(AutomatonChar.Enums.THE_AUTOMATON, BurnAndBuffPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(BuildAFunctionPotion.POTION_ID);
@@ -407,7 +407,7 @@ public class AutomatonMod implements
     }
 
     public static AbstractCard getGoodStatus(AbstractCard ogStatus) {
-        AbstractCard newStatus = null;
+        AbstractCard newStatus;
         if (ogStatus instanceof Dazed) {
             newStatus = new Daze();
         } else if (ogStatus instanceof Burn) {

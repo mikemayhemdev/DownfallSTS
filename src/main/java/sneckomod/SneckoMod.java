@@ -31,7 +31,6 @@ import com.megacrit.cardcrawl.random.Random;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
-import downfall.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
 import expansioncontent.patches.CardColorEnumPatch;
@@ -379,11 +378,10 @@ public class SneckoMod implements
 
     public void addPotions() {
 
-        BaseMod.addPotion(MuddlingPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, MuddlingPotion.POTION_ID);
         BaseMod.addPotion(CheatPotion.class, Color.GRAY, Color.WHITE, Color.BLACK, CheatPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
         BaseMod.addPotion(DiceRollPotion.class, Color.CYAN, Color.WHITE, Color.BLACK, DiceRollPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
         BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
-        BanSharedContentPatch.registerRunLockedPotion(TheSnecko.Enums.THE_SNECKO, MuddlingPotion.POTION_ID);
+//        BanSharedContentPatch.registerRunLockedPotion(TheSnecko.Enums.THE_SNECKO, MuddlingPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(MuddlingPotion.POTION_ID);
@@ -555,17 +553,20 @@ public class SneckoMod implements
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
                 if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor() && r != AbstractCard.CardColor.COLORLESS && r != CardColorEnumPatch.CardColorPatch.BOSS && r != CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE && (!sneckoNoModCharacters || allowedColors.contains(r.name()))) {
-                    String s = getClassFromColor(r);
-                    AbstractCard q = playerStartCardForEventFromColor(r);
-                    String[] strings = CardCrawlGame.languagePack.getUIString("sneckomod:AtGameStart").TEXT;
-                    AbstractCard.CardType tv = SKILL;
-                    if (q != null) {
-                        tv = q.type;
+                    if (BaseMod.getBackColor(r) != null) {
+
+                        String s = getClassFromColor(r);
+                        AbstractCard q = playerStartCardForEventFromColor(r);
+                        String[] strings = CardCrawlGame.languagePack.getUIString("sneckomod:AtGameStart").TEXT;
+                        AbstractCard.CardType tv = SKILL;
+                        if (q != null) {
+                            tv = q.type;
+                        }
+                        CustomCard c = new OctoChoiceCard("UNVERIFIED", strings[0] + s + strings[1], "bronzeResources/images/cards/BuggyMess.png", strings[2] + s + strings[3], r, tv);
+                        if (q != null && q.portrait != null)
+                            c.portrait = q.portrait;
+                        colorChoices.addToTop(c);
                     }
-                    CustomCard c = new OctoChoiceCard("UNVERIFIED", strings[0] + s + strings[1], "bronzeResources/images/cards/BuggyMess.png", strings[2] + s + strings[3], r, tv);
-                    if (q != null && q.portrait != null)
-                        c.portrait = q.portrait;
-                    colorChoices.addToTop(c);
                 }
             }
             CenterGridCardSelectScreen.centerGridSelect = true;

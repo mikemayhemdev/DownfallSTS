@@ -45,7 +45,6 @@ public class PrismaticBarrier extends AbstractGuardianCard {
     public PrismaticBarrier() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
-
         this.baseBlock = BLOCK;
         this.multihit = MULTICOUNT;
         this.socketCount = SOCKETS;
@@ -59,7 +58,6 @@ public class PrismaticBarrier extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-      //  AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         for (int i = 0; i < this.multihit; i++) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         }

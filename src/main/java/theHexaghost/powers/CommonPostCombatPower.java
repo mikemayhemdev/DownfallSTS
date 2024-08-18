@@ -11,7 +11,7 @@ import downfall.util.TextureLoader;
 import downfall.util.ThirdSealReward;
 import theHexaghost.HexaMod;
 
-public class CommonPostCombatPower extends AbstractPower implements CloneablePowerInterface, RemoveMeBabey {
+public class CommonPostCombatPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = HexaMod.makeID("CommonPostCombatPower");
 

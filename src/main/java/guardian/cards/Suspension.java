@@ -1,7 +1,7 @@
 package guardian.cards;
 
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -25,12 +25,9 @@ public class Suspension extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 0;
 
-    //TUNING CONSTANTS
     private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -42,6 +39,7 @@ public class Suspension extends AbstractGuardianCard {
     public Suspension() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
         this.socketCount = SOCKETS;
+        baseBlock = 2;
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Suspension.png"));
@@ -49,14 +47,9 @@ public class Suspension extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        if (upgraded) upgradeAction(p,m);
-
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         AbstractDungeon.actionManager.addToBottom(new PlaceCardsInHandIntoStasisAction(p, 1, false));
         super.useGems(p, m);
-    }
-
-    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 
     public AbstractCard makeCopy() {
@@ -66,9 +59,7 @@ public class Suspension extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-
-            this.updateDescription();
+            upgradeBlock(3);
         }
     }
 

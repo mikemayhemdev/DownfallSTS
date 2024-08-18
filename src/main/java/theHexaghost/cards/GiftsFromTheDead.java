@@ -4,15 +4,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.GiftsFromTheDeadPower;
-import theHexaghost.powers.GiftsFromTheDeadPowerPlus;
-
-import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class GiftsFromTheDead extends AbstractHexaCard {
 
-    public final static String ID = makeID("GiftsFromTheDead");
-
-    //stupid intellij stuff POWER, SELF, RARE
+    public final static String ID = makeID("GiftsFromBeyond");
 
     public GiftsFromTheDead() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
@@ -27,7 +22,6 @@ public class GiftsFromTheDead extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-
             upgradeBaseCost(1);
         }
     }

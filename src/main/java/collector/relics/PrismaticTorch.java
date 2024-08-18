@@ -87,4 +87,3 @@ public class PrismaticTorch extends CustomRelic {
         return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
     }
 }
-

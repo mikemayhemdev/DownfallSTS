@@ -22,18 +22,18 @@ public class Sixitude extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Sixitude.png"));
 
     public Sixitude() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
         this.counter = 0;
     }
 
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
-        ++this.counter;// 35
-        if (this.counter % 6 == 0) {// 37
-            this.flash();// 38
-            this.counter = 0;// 39
-            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));// 40
-            this.addToBot(new DamageRandomEnemyAction(new DamageInfo(null, 6, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));// 29
+        ++this.counter;
+        if (this.counter % 6 == 0) {
+            this.flash();
+            this.counter = 0;
+            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            this.addToBot(new DamageRandomEnemyAction(new DamageInfo(null, 6, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         }
     }
 

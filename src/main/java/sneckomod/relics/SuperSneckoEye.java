@@ -54,10 +54,10 @@ public class SuperSneckoEye extends CustomRelic {
                         stopPulse();
                         flash();
                         activated = true;
-                        card.cost = 0;// 35
-                        card.costForTurn = card.cost;// 36
-                        card.isCostModified = true;// 37
-                        card.freeToPlayOnce = false;// 39
+                        card.cost = 0;
+                        card.costForTurn = card.cost;
+                        card.isCostModified = true;
+                        card.freeToPlayOnce = false;
                     }
                 }
             });

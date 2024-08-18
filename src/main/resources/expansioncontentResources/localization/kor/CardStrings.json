@@ -79,10 +79,21 @@
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "뭐든지 아는 해골",
-    "DESCRIPTION": "휘발성. NL 체력을 잃고 *영혼, *정신자극제, *성공하는 *법을 구합니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 체력을 잃고 *영혼, *포션, *무색 *카드를 얻습니다. NL 소멸."
   },
   "expansioncontent:Antidote": {
     "NAME": "해독제",
-    "DESCRIPTION": "모든 중독을 잃습니다."
+    "DESCRIPTION": "중독을 !M! 잃습니다."
+  },
+  "expansioncontent:BloodySacrifice": {
+    "NAME": "피로 물든 희생",
+    "DESCRIPTION": "휘발성. NL 최대 체력의 !M! % 만큼 체력을 잃습니다. 의식을 1 얻습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION":[
+      " NL (체력을 {amount} 잃습니다. )"
+    ]
+  },
+  "expansioncontent:HeartsFavorWish": {
+    "NAME": "Corrupted Form",
+    "DESCRIPTION": "Ethereal. NL Gain a 0-cost *Form from a defeated Boss. Add 3 random *Curses to your discard pile. NL Exhaust."
   }
 }

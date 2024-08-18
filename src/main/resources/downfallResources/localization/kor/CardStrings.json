@@ -5,7 +5,7 @@
   },
   "downfall:Bewildered": {
     "NAME": "당혹",
-    "DESCRIPTION": "이 카드 이외의 다른 카드를 사용하면 손에 있는 모든 카드가 sneckomod:뒤엉키고 이 카드를 버립니다. NL 소멸."
+    "DESCRIPTION": "사용불가. NL 휘발성. NL 이 카드를 뽑을 때 손에 있는 모든 카드가 sneckomod:뒤엉키고 이 카드를 소멸시킵니다."
   },
   "downfall:Icky": {
     "NAME": "질척임",
@@ -21,7 +21,7 @@
   },
   "downfall:Scatterbrained": {
     "NAME": "주의산만",
-    "DESCRIPTION": "사용불가. NL 뽑으면 이 카드의 gremlin:메아리를 손에 가득 차게 만듭니다."
+    "DESCRIPTION": "내 턴 종료 시 이 카드가 손에 있다면 이 카드를 1장 복사해 버린 카드 더미에 넣고 섞습니다. NL 소멸."
   },
   "downfall:SummonMushrooms": {
     "NAME": "균류 무리",
@@ -30,5 +30,11 @@
   "downfall:BossMaintenance": {
     "NAME": "유지보수",
     "DESCRIPTION": "이번 전투 동안 *타격의 피해량을 !M! 증가시키고 이 카드의 비용을 [E] 증가시킵니다. NL 민첩을 !B! 얻습니다."
+  },
+  "downfall:HeartsFavorPower": {
+    "NAME": "Heart's Favor",
+    "DESCRIPTIONS": [
+      "Whenever Neow's #yInvincible reaches #b0, gain a #yCorrupted #yForm."
+    ]
   }
 }

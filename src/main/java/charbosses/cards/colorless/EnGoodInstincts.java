@@ -19,7 +19,7 @@ public class EnGoodInstincts extends AbstractBossCard {
 
     public EnGoodInstincts() {
         super(ID, cardStrings.NAME, "colorless/skill/good_instincts", 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
-        this.baseBlock = 5;
+        this.baseBlock = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

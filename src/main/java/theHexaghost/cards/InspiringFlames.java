@@ -11,8 +11,8 @@ import theHexaghost.ghostflames.AbstractGhostflame;
 
 public class InspiringFlames extends AbstractHexaCard {
 
-    public final static String ID = makeID("InspiringFlames");
-
+    public final static String ID = makeID("StokeTheFire");
+    //Stoke the Fire
     public InspiringFlames() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 7;

@@ -1,23 +1,13 @@
 package charbosses.bosses.Merchant;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.colorless.*;
-import charbosses.cards.curses.EnWrithe;
-import charbosses.cards.green.*;
-import charbosses.cards.purple.*;
-import charbosses.cards.red.EnInflame;
-import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
 import charbosses.powers.bossmechanicpowers.MerchantStrengthPower;
 import charbosses.relics.*;
-import charbosses.relics.EventRelics.CBR_FaceTrader;
-import charbosses.relics.EventRelics.CBR_Falling;
-import charbosses.relics.EventRelics.CBR_Mausoleum;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import charbosses.relics.*;
 
 import java.util.ArrayList;
 
@@ -68,21 +58,21 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
             switch (turn) {
                 case 0:
 
-                    addToList(cardsList, new EnPanicButton());  //removed
-                    addToList(cardsList, new EnDramaticEntrance());  //removed
+                    addToList(cardsList, new EnPanicButton());
+                    addToList(cardsList, new EnDramaticEntrance());
                     addToList(cardsList, new EnTheBomb(), extraUpgrades);
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnApotheosis(), true);  //removed
-                    addToList(cardsList, new EnPanacea(), true);  //removed
+                    addToList(cardsList, new EnApotheosis(), true);
+                    addToList(cardsList, new EnPanacea(), true);
                     addToList(cardsList, new EnGoodInstincts(), true);
                     turn++;
                     break;
                 case 2:
                     //Bomb goes Boom.
-                    addToList(cardsList, new EnPanacea(), true);  //removed
-                    addToList(cardsList, new EnPanicButton(), true);  //removed
+                    addToList(cardsList, new EnPanacea(), true);
+                    addToList(cardsList, new EnPanicButton(), true);
                     addToList(cardsList, new EnBlind(), true);
                     turn++;
                     break;

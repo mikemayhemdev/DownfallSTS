@@ -148,7 +148,7 @@
   },
   "collector:FlameLash": {
     "NAME": "焰鞭",
-    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 附加所葬牌的伤害于此。",
+    "DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害后， NL 附加所葬牌的伤害于此。",
     "UPGRADE_DESCRIPTION": "collector:焰葬 。 NL 造成 !D! 点伤害。 NL 本场战斗伤害加 !M! ， NL 再加所葬牌的伤害。"
   },
   "collector:FleetingEmbers": {

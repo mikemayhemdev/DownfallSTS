@@ -379,7 +379,7 @@
     "NAME": "地精战利品",
     "FLAVOR": "你无法匹敌地精与其护卫们。",
     "DESCRIPTIONS": [
-      "拾起时，将下列牌加入你的牌组： NL ",
+      "拾起时，将下列牌加入牌组： NL ",
       "拾起时，将 #b6 张对对碰牌加入你的牌组。",
       "（初始牌） ",
       "（普通牌） ",
@@ -406,16 +406,16 @@
   },
   "downfall:BrokenWingStatue": {
     "NAME": "破碎的翅膀雕像",
-    "FLAVOR": "一座曾经宏伟的雕像的残缺部分。",
+    "FLAVOR": "一座曾经宏伟的雕像的残缺部分，崇拜觉醒者的邪教徒会对此感兴趣。",
     "DESCRIPTIONS": [
-      "崇拜觉醒者的邪教徒会对此感兴趣。"
+      "战斗开始时，若敌方为邪教徒群体，对方将夺走这件遗物并全数从该场战斗逃离。"
     ]
   },
   "downfall:ShatteredFragment": {
     "NAME": "尖锐碎片",
     "FLAVOR": "曾经破碎的雕像 - 如今打造成了武器。",
     "DESCRIPTIONS": [
-      "回合开始时，将一张 #y水晶小刀 加入手牌。"
+      "战斗开始时，将一张 #y染血牺牲 加入手牌。"
     ]
   },
   "downfall:RedIOU": {
@@ -441,25 +441,25 @@
     "NAME": "全知头骨",
     "FLAVOR": "放我下来！",
     "DESCRIPTIONS": [
-      "战斗开始时，你能许愿灵魂，成功或者来点喝的。"
+      "战斗开始时，你能以生命为代价许愿灵魂、一瓶药水，或一张无色牌。"
     ]
   },
   "downfall:HeartBlessingRed": {
-    "NAME": "红宝石心脏的祝福",
+    "NAME": "腐化之心的红色祝福",
     "FLAVOR": "腐化之心很强大。它很欣慰。",
     "DESCRIPTIONS": [
       "首领战斗开始时，获得 #b1 点 #y力量 。"
     ]
   },
   "downfall:HeartBlessingBlue": {
-    "NAME": "蓝宝石心脏的祝福",
+    "NAME": "腐化之心的蓝色祝福",
     "FLAVOR": "心脏很欣慰。",
     "DESCRIPTIONS": [
       "首领战斗开始时，获得 #b10 层 #y临时生命 。"
     ]
   },
   "downfall:HeartBlessingGreen": {
-    "NAME": "绿宝石心脏的祝福",
+    "NAME": "腐化之心的绿色祝福",
     "FLAVOR": "心脏就是一切。",
     "DESCRIPTIONS": [
       "首领战斗开始时，获得 #b1 点 #y敏捷 。"
@@ -530,10 +530,10 @@
     ]
   },
   "downfall:ExtraCursedKey": {
-    "NAME": "诅咒钥匙",
+    "NAME": "恶咒钥匙",
     "FLAVOR": "你能感到这把钥匙上散发出邪恶的能量。力量总是需要付出代价的。",
     "DESCRIPTIONS": [
-      "回合开始时获得 [E] 。 NL 打开宝箱时，获得 #b2 张 #r诅咒 。",
+      "回合开始时获得 [E] 。 NL 打开非首领宝箱时，随机获得 #b2 张 #r诅咒 。",
       ""
     ]
   }

@@ -66,8 +66,8 @@
   "Guardian:GuardianWhirl": {
     "NAME": "Вихрь",
     "DESCRIPTION": "{@@}Требует не менее 20 Защиты. NL Наносит !D! урона ВСЕМ врагам !M! раз{!M!|&4=а|&5=}.",
-	"EXTENDED_DESCRIPTION": [ 
-	  "Требуется больше Защиты."
+    "EXTENDED_DESCRIPTION": [
+      "Требуется больше Защиты."
     ]
   },
   "Guardian:VentSteam": {
@@ -221,7 +221,7 @@
   },
   "Guardian:Suspension": {
     "NAME": "Приостановить",
-    "DESCRIPTION": "Помещает карту из руки в guardianmod:Стазис.",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Помещает карту из руки в guardianmod:Стазис.",
     "UPGRADE_DESCRIPTION": "Вы берёте карту. NL Помещает карту из руки в guardianmod:Стазис."
   },
   "Guardian:FastForward": {

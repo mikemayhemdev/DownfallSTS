@@ -5,25 +5,26 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.utility.ShowCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.util.TextureLoader;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;
+import theHexaghost.relics.CandleOfCauterizing;
+import theHexaghost.util.HexaPurpleTextInterface;
 import theHexaghost.vfx.AfterlifePlayEffect;
 
 import java.util.ArrayList;
@@ -147,8 +148,11 @@ public abstract class AbstractHexaCard extends CustomCard {
     public void applyPowers() {
         super.applyPowers();
         int base = this.baseBurn;
-        if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
-            base += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
+//        if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
+//            base += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
+//        }
+        if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
+            base += CandleOfCauterizing.SOULBURN_BONUS_AMOUNT;
         }
         this.burn = base;
         this.isBurnModified = (this.burn != this.baseBurn);
@@ -156,6 +160,10 @@ public abstract class AbstractHexaCard extends CustomCard {
 
     public void burn(AbstractMonster m, int amount) {
         applyToEnemy(m, new BurnPower(m, amount));
+        if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
+            AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
+            r.flash();
+        }
     }
 
     public void resetAttributes() {
@@ -185,13 +193,15 @@ public abstract class AbstractHexaCard extends CustomCard {
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (!m.isDeadOrEscaped() && m.hasPower(BurnPower.POWER_ID)) {
                     this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-                    break;// 43
+                    break;
                 }
             }
     }
 
     @Override
     public void triggerOnExhaust() {
+        int bonus = 0;
+
         att(new AbstractGameAction() {
             @Override
             public void update() {
@@ -225,9 +235,7 @@ public abstract class AbstractHexaCard extends CustomCard {
         return AbstractHexaCard.this.tags.contains(HexaMod.AFTERLIFE);
     }
 
-    public void afterlife() {
-
-    }
+    public void afterlife() {}
 
     @Override
     protected Texture getPortraitImage() {
@@ -250,4 +258,28 @@ public abstract class AbstractHexaCard extends CustomCard {
         }
         return super.getPortraitImage();
     }
+
+    @Override
+    public void initializeDescription() {
+        // Checks if the card is afterlife, and if so, colorize the Extended Description (Afterlife effect description) and append to rawDescription
+        if(this instanceof HexaPurpleTextInterface && this.EXTENDED_DESCRIPTION != null && this.EXTENDED_DESCRIPTION.length >= 1 ){
+            String[] words = this.EXTENDED_DESCRIPTION[0].split(" ");
+            StringBuilder[] coloredWords = new StringBuilder[words.length];
+            for (int i = 0; i < words.length; i++) {
+                if(!words[i].equals("") &&  !words[i].equals("!D!") && !words[i].equals("!B!") && !words[i].equals("!M!") && !words[i].equals("!burny!") && !words[i].equals("NL") ) {
+                    coloredWords[i] = new StringBuilder("[#e087a4]").append(words[i]).append("[]");
+                }else{
+                    coloredWords[i] = new StringBuilder(words[i]);
+                }
+            }
+
+            if(this.upgraded && this.UPGRADE_DESCRIPTION != null) {
+                this.rawDescription = this.UPGRADE_DESCRIPTION + String.join(" ", coloredWords);
+            }else{
+                this.rawDescription = this.DESCRIPTION + String.join(" ", coloredWords);
+            }
+        }
+        super.initializeDescription();
+    }
+
 }

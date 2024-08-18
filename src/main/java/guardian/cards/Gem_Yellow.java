@@ -1,7 +1,6 @@
 package guardian.cards;
 
 
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -29,13 +28,10 @@ public class Gem_Yellow extends AbstractGemCard {
     private static final int COST = 0;
     private static final int BLOCK = 4;  //HARDCODED IN DESCRIPTION
 
-    //TUNING CONSTANTS
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     //GEMS ALWAYS need entries added to OnSave, OnLoad, updateGemDescription, render methods in AbstractGuardianCard!
 
@@ -57,7 +53,7 @@ public class Gem_Yellow extends AbstractGemCard {
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(0.5F));
+        AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(0.1F));
         AbstractDungeon.actionManager.addToBottom(new ReduceRightMostStasisAction());
 
     }

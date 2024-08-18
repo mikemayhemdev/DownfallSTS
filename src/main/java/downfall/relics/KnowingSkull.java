@@ -25,7 +25,7 @@ public class KnowingSkull extends CustomRelic {
 
     @Override
     public void atBattleStartPreDraw() {
-        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));// 24
-        this.addToBot(new MakeTempCardInHandAction(new KnowingSkullWish()));// 25
+        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        this.addToBot(new MakeTempCardInHandAction(new KnowingSkullWish()));
     }
 }

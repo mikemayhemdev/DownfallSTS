@@ -13,6 +13,7 @@ import static theHexaghost.HexaMod.makeRelicPath;
 
 public class IceCube extends CustomRelic {
 
+    //snow flake Xanatos' Icy Charm
     public static final String ID = HexaMod.makeID("IceCube");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("IceCube.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("IceCube.png"));

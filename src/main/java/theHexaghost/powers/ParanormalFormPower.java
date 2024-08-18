@@ -4,15 +4,16 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
+import hermit.actions.FastLoseHPAction;
+import theHexaghost.HexaMod;
 
 public class ParanormalFormPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -40,11 +41,13 @@ public class ParanormalFormPower extends AbstractPower implements CloneablePower
     }
 
     @Override
-    public void onAfterCardPlayed(AbstractCard card) {
-        super.onAfterCardPlayed(card);
-        if (card.hasTag(HexaMod.AFTERLIFE)) {
-            flash();
-            addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        super.onAfterUseCard(card, action);
+        if(card.isEthereal){
+            AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
+            if (mo != null) {
+                this.addToTop(new FastLoseHPAction(mo, AbstractDungeon.player, this.amount, AbstractGameAction.AttackEffect.FIRE));
+            }
         }
     }
 

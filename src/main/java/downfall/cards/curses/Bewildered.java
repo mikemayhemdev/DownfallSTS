@@ -2,7 +2,11 @@ package downfall.cards.curses;
 
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
+import expansioncontent.cardmods.PropertiesMod;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleHandAction;
 import sneckomod.cards.AbstractSneckoCard;
@@ -22,9 +27,9 @@ public class Bewildered extends CustomCard {
     public static final String IMG_PATH = downfallMod.assetPath("images/cards/bewildered.png");
     private static final CardType TYPE = CardType.CURSE;
     private static final CardRarity RARITY = CardRarity.CURSE;
-    private static final CardTarget TARGET = CardTarget.NONE;
+    private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = -2;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -38,9 +43,9 @@ public class Bewildered extends CustomCard {
 
     public Bewildered() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
-
-        this.magicNumber = this.baseMagicNumber = 1;
+//        this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
+        this.isEthereal = true;
         tags.add(downfallMod.DOWNFALL_CURSE);
     }
 
@@ -48,11 +53,22 @@ public class Bewildered extends CustomCard {
 
     }
 
-    public void triggerOnOtherCardPlayed(AbstractCard c) {
+    @Override
+    public void triggerWhenDrawn() {
         AbstractDungeon.actionManager.addToBottom(new MuddleHandAction());
         this.flash();
-        AbstractDungeon.actionManager.addToBottom(new DiscardSpecificCardAction(this));
     }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
+    }
+
+    //    public void triggerOnOtherCardPlayed(AbstractCard c) {
+//        AbstractDungeon.actionManager.addToBottom(new MuddleHandAction());
+//        this.flash();
+//        AbstractDungeon.actionManager.addToBottom(new DiscardSpecificCardAction(this));
+//    }
 
     public AbstractCard makeCopy() {
         return new Bewildered();

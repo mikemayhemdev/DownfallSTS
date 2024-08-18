@@ -3,7 +3,7 @@
     "NAME": "Guarda Avançada",
     "DESCRIPTION": "Ganhe !B! de Proteção. NL hexamod:Avançar."
   },
-  "hexamod:Again": {
+  "hexamod:MomentaryResurgence": {
     "NAME": "Novamente!",
     "DESCRIPTION": "hexamod:Acender a chama fantasma atual e, em seguida, hexamod:Extingua."
   },
@@ -12,7 +12,7 @@
     "DESCRIPTION": "Eteral. NL Ganhe [E] [E]. NL Mova-se para a *Chama Fantasma Infernal. NL Exaurir.",
     "UPGRADE_DESCRIPTION": "Eteral. NL Ganhe [E] [E] [E]. NL Mova-se para a *Chama Fantasma Infernal. NL Exaurir."
   },
-  "hexamod:ApocalypticArmor": {
+  "hexamod:Doomsday": {
     "NAME": "Dia do Juízo",
     "DESCRIPTION": "Na próxima vez em que todas as !M! Chamas Fantasma forem *Ignitadas, ganhe um turno extra.",
     "UPGRADE_DESCRIPTION": "Na próxima vez em que pelo menos !M! Chamas Fantasma forem *Ignitadas, ganhe um turno extra."
@@ -80,7 +80,7 @@
     "NAME": "Chamas de Além",
     "DESCRIPTION": "Eterno. hexamod:Pós-Vida. NL Aplique !queimadura! hexamod:Angústia em TODOS os inimigos."
   },
-  "hexamod:FlameSwitch": {
+  "hexamod:BadOmen": {
     "NAME": "Mau Presságio",
     "DESCRIPTION": "Aplique !queimadura! hexamod:Angústia. NL Aumente a quantidade de turnos para detonar em !M!. NL Exaurir.",
     "UPGRADE_DESCRIPTION": "Mantenha. NL Escolha um tipo de Chama Fantasma para transformar a atual. NL Exaurir.",
@@ -110,7 +110,7 @@
     "NAME": "Muralha de Chamas Fantasmas",
     "DESCRIPTION": "Ganhe !B! de Proteção. NL Sempre que você for atacado neste turno, aplique !queimadura! hexamod:Angústia no atacante."
   },
-  "hexamod:GhostflameInferno": {
+  "hexamod:InstantInferno": {
     "NAME": "Inferno Instantâneo",
     "DESCRIPTION": "Retenha. NL hexamod:Acende a *Chama *Fantasma *Inferno. NL Exaurir.",
     "UPGRADE_DESCRIPTION": "Retenha. NL hexamod:Acende a *Chama *Fantasma atual, a seguir a *Inferno. NL Exaurir."
@@ -119,17 +119,17 @@
     "NAME": "Chicote Fantasma",
     "DESCRIPTION": "Etéreo. hexamod:Pós-Vida. NL Cause !D! de dano. NL Quando *Exaurida, ganhe !M! Vigor."
   },
-  "hexamod:GhostOfSpireFuture": {
+  "hexamod:IntoShadow": {
     "NAME": "Corrida Rápida",
     "DESCRIPTION": "Sempre que você *Avançar, ganhe !M! Força temporária.",
     "UPGRADE_DESCRIPTION": "Inato. NL Sempre que você *Avançar, ganhe !M! Força temporária."
   },
-  "hexamod:GhostOfSpirePast": {
+  "hexamod:DevilsDance": {
     "NAME": "Dança do Demônio",
     "DESCRIPTION": "Na primeira vez que você *Retrair a cada turno, ganhe [E] e compre 1 carta. NL hexamod:Retrair.",
     "UPGRADE_DESCRIPTION": "Inato. NL Na primeira vez que você *Retrair a cada turno, ganhe [E] e compre 1 carta. NL hexamod:Retrair."
   },
-  "hexamod:GhostOfSpirePresent": {
+  "hexamod:HereAndNow": {
     "NAME": "Aqui e Agora",
     "DESCRIPTION": "Você não *Avança mais ao final do turno. NL No início do seu turno, ganhe [E]."
   },
@@ -137,14 +137,14 @@
     "NAME": "Escudo Fantasma",
     "DESCRIPTION": "Etéreo. hexamod:Pós-Vida. NL Ganhe !B! de Proteção. NL Quando *Exaurida, ganhe !M! bronze:Desfoque."
   },
-  "hexamod:GiftsFromTheDead": {
+  "hexamod:GiftsFromBeyond": {
     "NAME": "Presentes do Além",
     "DESCRIPTION": "No início do seu turno, expansioncontent:Recupere uma carta aleatória *Pós-Vida.",
     "EXTENDED_DESCRIPTION": [
       "Esses espíritos são poderosos demais para serem invocados diretamente."
     ]
   },
-  "hexamod:Haunt": {
+  "hexamod:HauntedHand": {
     "NAME": "Mão Assombrada",
     "DESCRIPTION": "Etéreo. hexamod:Pós-Vida. NL Compre !M! cartas. NL Todas as cartas em sua mão se tornam Etéreo."
   },
@@ -171,7 +171,7 @@
     "NAME": "Guardião Hexagonal",
     "DESCRIPTION": "Etéreo. hexamod:Pós-Vida. NL Ganhe !B! Proteção. NL Compre 1 carta."
   },
-  "hexamod:HexaLevel": {
+  "hexamod:InfernalForm": {
     "NAME": "Forma Infernal",
     "DESCRIPTION": "No início do seu turno, ganhe !M! hexamod:Intensidade.",
     "UPGRADE_DESCRIPTION": "Ganhe !M! hexamod:Intensidade. NL No início do seu turno, ganhe !M! hexamod:Intensidade."
@@ -180,7 +180,7 @@
     "NAME": "Incinerar",
     "DESCRIPTION": "Cause !D! de dano e aplica !burny! hexamod:Angústia !M! vezes."
   },
-  "hexamod:InspiringFlames": {
+  "hexamod:StokeTheFire": {
     "NAME": "Aquecer a Chama",
     "DESCRIPTION": "Ganhe !B! Proteção. NL Para cada *Chama-fantasma Acesa, aprimore uma carta aleatória em sua mão."
   },
@@ -202,7 +202,7 @@
     "DESCRIPTION": "Etéreo. NL Cause !D! de dano. NL Quando *Exaurida, ganhe um *Golpe *Sombrio.",
     "UPGRADE_DESCRIPTION": "Etéreo. NL Cause !D! de dano. NL Quando *Exaurida, ganhe um *Golpe *Sombrio+."
   },
-  "hexamod:ParanormalForm": {
+  "hexamod:Poltergeist": {
     "NAME": "Poltergeist",
     "DESCRIPTION": "Sempre que você jogar uma carta *Pós-Vida, cause !M! de dano a um inimigo aleatório."
   },
@@ -235,7 +235,7 @@
     "DESCRIPTION": "Cause !D! de dano e aplica !burny! hexamod:Angústia X vezes.",
     "UPGRADE_DESCRIPTION": "Cause !D! de dano, aplica !burny! hexamod:Angústia e aplica 1 Fraqueza X vezes."
   },
-  "hexamod:RecurringNightmare": {
+  "hexamod:NightmareVision": {
     "NAME": "Visão de Pesadelo",
     "DESCRIPTION": "expansioncontent:Exuma uma carta *Etérea. NL Exaurir.",
     "UPGRADE_DESCRIPTION": "expansioncontent:Exuma !M! cartas *Etérea. NL Exaurir.",
@@ -245,7 +245,7 @@
       " cartas Etérea para retornar à sua mão."
     ]
   },
-  "hexamod:RetreatToShadows": {
+  "hexamod:Incorporeal": {
     "NAME": "Incorpóreo",
     "DESCRIPTION": "hexamod:Retrair. NL Perde !M! PV. NL Ganha 1 Intangível. NL Exaurir."
   },
@@ -275,12 +275,12 @@
     "NAME": "Escudo da Noite",
     "DESCRIPTION": "Se a atual Chama Fantasma não estiver *Acendida, ganhe [E]. NL Ganhe !B! Proteção."
   },
-  "hexamod:SkipABeat": {
+  "hexamod:Kindle": {
     "NAME": "Atiar",
     "DESCRIPTION": "Se a atual Chama Fantasma não estiver *Acendida, hexamod:Acenda.",
     "UPGRADE_DESCRIPTION": "hexamod:Acenda a Chama Fantasma atual."
   },
-  "hexamod:SoulSteal": {
+  "hexamod:LivingBomb": {
     "NAME": "Bomba Viva",
     "DESCRIPTION": "Aplique !burny! hexamod:Angústia. Quando detonar, afeta TODOS os inimigos."
   },
@@ -288,11 +288,11 @@
     "NAME": "Lamento do Espectro",
     "DESCRIPTION": "Etéreo. hexamod:Pós-Vida. NL Cause !D! de dano a TODOS os inimigos."
   },
-  "hexamod:SpectralAdrenaline": {
+  "hexamod:BrightRitual": {
     "NAME": "Ritual Brilhante",
     "DESCRIPTION": "Ganhe [E] e compre 1 carta para cada Chama Fantasma *Acendida, então hexamod:Extingua. NL Exaurir."
   },
-  "hexamod:SpectralSpark": {
+  "hexamod:NaughtySpirit": {
     "NAME": "Fagulha Espectral",
     "DESCRIPTION": "Se possível, hexamod:Extingua a Chama Fantasma atual para ganhar !M! hexamod:Intensidade."
   },
@@ -329,7 +329,7 @@
     "NAME": "Distorção Temporal",
     "DESCRIPTION": "Causa !D! de dano. NL Toda vez que você *Avançar ou *Retrair, retorna do descarte."
   },
-  "hexamod:Toasty": {
+  "hexamod:FlareFlick": {
     "NAME": "Brasa Quente",
     "DESCRIPTION": "Causa !D! de dano. NL Aplica hexamod:Angústia igual ao dano não protegido causado."
   },

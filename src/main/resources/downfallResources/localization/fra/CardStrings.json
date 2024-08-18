@@ -30,5 +30,11 @@
   "downfall:BossMaintenance": {
     "NAME": "Entretien",
     "DESCRIPTION": "Vos *Frappes infligent !M! dégâts supplémentaires ce combat. NL Gagnez !B! de Dexterité. NL Cette carte coûte 1 [E] de plus ce combat."
+  },
+  "downfall:HeartsFavorPower": {
+    "NAME": "Heart's Favor",
+    "DESCRIPTIONS": [
+      "Whenever Neow's #yInvincible reaches #b0, gain a #yCorrupted #yForm."
+    ]
   }
 }

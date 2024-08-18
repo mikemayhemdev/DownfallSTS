@@ -13,10 +13,8 @@ public class HeatCrush extends AbstractHexaCard {
 
     public final static String ID = makeID("HeatCrush");
 
-    //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
-
     private static final int DAMAGE = 20;
-    private static final int UPG_DAMAGE = 10;
+    private static final int UPG_DAMAGE = 8;
 
     public HeatCrush() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -25,19 +23,19 @@ public class HeatCrush extends AbstractHexaCard {
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        int realBaseDamage = this.baseDamage;// 70
+        int realBaseDamage = this.baseDamage;
         if (mo.hasPower(BurnPower.POWER_ID))
             baseDamage += mo.getPower(BurnPower.POWER_ID).amount;
-        super.calculateCardDamage(mo);// 73
-        this.baseDamage = realBaseDamage;// 75
-        this.isDamageModified = this.damage != this.baseDamage;// 78
-    }// 79
+        super.calculateCardDamage(mo);
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m != null) {// 36
-            this.addToBot(new VFXAction(new HeatCrushEffect(m.hb.cX, m.hb.cY)));// 37
+        if (m != null) {
+            this.addToBot(new VFXAction(new HeatCrushEffect(m.hb.cX, m.hb.cY)));
         }
-        this.addToBot(new WaitAction(0.8F));// 39
+        this.addToBot(new WaitAction(0.8F));
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
     }
 

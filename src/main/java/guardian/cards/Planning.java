@@ -25,14 +25,11 @@ public class Planning extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 0;
 
-    //TUNING CONSTANTS
     private static final int CARDS = 2;
     private static final int UPGRADE_CARDS = 1;
     private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

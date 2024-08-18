@@ -3,6 +3,7 @@ package charbosses.relics;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.StoneCalendar;
 import com.megacrit.cardcrawl.vfx.BobEffect;
@@ -18,8 +20,8 @@ import downfall.util.TextureLoader;
 
 public class CBR_StoneCalendar extends AbstractCharbossRelic {
     public static final String ID = "Stone Calendar";
-    private static Texture red = TextureLoader.getTexture(downfallMod.assetPath("images/relics/RedStoneCalendar.png"));
-    private BobEffect bob;
+    private final static Texture red = TextureLoader.getTexture(downfallMod.assetPath("images/relics/RedStoneCalendar.png"));
+    private final BobEffect bob;
 
     public CBR_StoneCalendar() {
         super(new StoneCalendar());
@@ -52,11 +54,14 @@ public class CBR_StoneCalendar extends AbstractCharbossRelic {
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
-
+        float damage = 52F;
+        for(AbstractPower pw: AbstractDungeon.player.powers){
+            damage = pw.atDamageFinalReceive(damage, DamageInfo.DamageType.THORNS);
+        }
         if (counter == 7) {
             sb.setColor(Color.WHITE.cpy());
             sb.draw(red, this.owner.hb.x - 180.0F * Settings.scale, this.owner.hb.y + 240.0F * Settings.scale + bob.y, 64.0F, 64.0F, 128.0F, 128.0F, Settings.scale, Settings.scale, 0F, 0, 0, 128, 128, false, false);
-            FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(52), this.owner.hb.x - 155.0F * Settings.scale, this.owner.hb.y + 290.0F * Settings.scale + bob.y, Color.WHITE.cpy());
+            FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(MathUtils.floor(damage)), this.owner.hb.x - 155.0F * Settings.scale, this.owner.hb.y + 290.0F * Settings.scale + bob.y, Color.WHITE.cpy());
         }
     }
 

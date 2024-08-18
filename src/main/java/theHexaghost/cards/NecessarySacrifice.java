@@ -10,7 +10,7 @@ public class NecessarySacrifice extends AbstractHexaCard {
 
     public final static String ID = makeID("NecessarySacrifice");
 
-    //Worthy Sacrifice easier search
+    //worthy sacrifice
 
     public NecessarySacrifice() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

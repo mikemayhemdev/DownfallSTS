@@ -103,19 +103,10 @@
       " #ySoulburn to the attacker."
     ]
   },
-  "hexamod:GiftsFromTheDeadPower": {
+  "hexamod:GiftsFromBeyondPower": {
     "NAME": "Ghostly Gifts",
     "DESCRIPTIONS": [
       "Whenever an #yEthereal card is #yExhausted, gain ",
-      " next turn."
-    ]
-  },
-  "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "Ghostly Gifts+",
-    "DESCRIPTIONS": [
-      "Whenever an #yEthereal card is #yExhausted, draw ",
-      " cards",
-      " card",
       " next turn."
     ]
   },

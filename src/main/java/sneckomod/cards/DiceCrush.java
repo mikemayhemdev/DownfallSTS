@@ -13,8 +13,8 @@ public class DiceCrush extends AbstractSneckoCard {
 
     public DiceCrush() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 10; // Min Damage
-        baseDamage = 16; //Max Damage
+        baseMagicNumber = magicNumber = 12; // Min Damage
+        baseDamage = 18; //Max Damage
         tags.add(SneckoMod.RNG);
         SneckoMod.loadJokeCardImage(this, "DiceCrush.png");
     }

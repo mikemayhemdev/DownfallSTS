@@ -79,10 +79,21 @@
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "全知头骨",
-    "DESCRIPTION": "虚无 。 NL 支付生命以许愿灵魂，成功或来点喝的。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 支付生命以许愿灵魂、药水，或一张随机无色牌。 NL 消耗 。"
   },
   "expansioncontent:Antidote": {
     "NAME": "解毒剂",
-    "DESCRIPTION": "失去所有 中毒 。"
+    "DESCRIPTION": "失去 !M! 层 中毒 。"
+  },
+  "expansioncontent:BloodySacrifice": {
+    "NAME": "染血牺牲",
+    "DESCRIPTION": "虚无 。 NL 失去 !M! % 最大生命点生命。 NL 获得1层 仪式 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION":[
+      " NL (失去 {amount} 点)"
+    ]
+  },
+  "expansioncontent:HeartsFavorWish": {
+    "NAME": "Corrupted Form",
+    "DESCRIPTION": "Ethereal. NL Gain a 0-cost *Form from a defeated Boss. Add 3 random *Curses to your discard pile. NL Exhaust."
   }
 }

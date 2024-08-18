@@ -30,5 +30,11 @@
   "downfall:BossMaintenance": {
     "NAME": "Профилактика",
     "DESCRIPTION": "*Удары наносят на !M! урона больше в этом бою. NL Даёт !B! Ловкости. NL Стоит на 1 больше в этом бою."
+  },
+  "downfall:HeartsFavorPower": {
+    "NAME": "Heart's Favor",
+    "DESCRIPTIONS": [
+      "Whenever Neow's #yInvincible reaches #b0, gain a #yCorrupted #yForm."
+    ]
   }
 }

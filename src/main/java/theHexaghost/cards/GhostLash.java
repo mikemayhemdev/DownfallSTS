@@ -1,68 +1,133 @@
 package theHexaghost.cards;
 
-import basemod.patches.com.megacrit.cardcrawl.powers.FixVigorReduction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
-import theHexaghost.patches.ExhaustCardTickPatch;
+import theHexaghost.util.HexaPurpleTextInterface;
 
-public class GhostLash extends AbstractHexaCard {
+public class GhostLash extends AbstractHexaCard implements HexaPurpleTextInterface{
 
     public final static String ID = makeID("GhostLash");
 
-    //stupid intellij stuff ATTACK, ENEMY, COMMON
-
-    private static final int DAMAGE = 9;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 2;
+    private static int ethereal_inhand = 0;
+    private boolean can_show = false;
+    private boolean trigger_by_afterlife = false;
 
     public GhostLash() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = 3;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
-        baseMagicNumber = magicNumber = 6;
         HexaMod.loadJokeCardImage(this, "GhostLash.png");
     }
 
+    public static int calculate_afterlifes(){
+        if(!AbstractDungeon.overlayMenu.endTurnButton.enabled && ethereal_inhand != 0){  // this is to make sure it counts correct number of cards when afterlifed
+            return ethereal_inhand;
+        }else{
+            ethereal_inhand = 0;
+            for(AbstractCard c : AbstractDungeon.player.hand.group){
+                if(c.isEthereal){
+                    ethereal_inhand += 1;
+                }
+            }
+        }
+        return ethereal_inhand;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        if(!trigger_by_afterlife) {
+            int realBaseDamage = this.baseDamage;
+            this.baseDamage += (calculate_afterlifes()-1) * this.magicNumber; // -1 number to exclude itself for better damage clarity
+            super.calculateCardDamage(mo);
+            this.baseDamage = realBaseDamage;
+            this.isDamageModified = this.damage != this.baseDamage;
+        }else{
+            super.calculateCardDamage(mo);
+        }
+    }
+
+//    @Override
+//    public void applyPowers() {
+//        int realBaseDamage = this.baseDamage;
+//        this.baseDamage += calculate_afterlifes() * this.magicNumber;
+//        super.applyPowers();
+//        this.baseDamage = realBaseDamage;
+//        this.isDamageModified = this.damage != this.baseDamage;
+//    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
+        trigger_by_afterlife = false;
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        this.can_show = false;
     }
 
     @Override
     public void afterlife() {
-
+        trigger_by_afterlife = true;
         AbstractMonster m = AbstractDungeon.getRandomMonster();
         if (m == null) return;
         this.calculateCardDamage(m);
-        use(AbstractDungeon.player, m);
-        //atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, damage-4, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VigorPower.POWER_ID));
-
-        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, magicNumber), magicNumber));
-
+        if(AbstractDungeon.player.hasPower("Pen Nib") ){
+            this.damage /= 2;
+            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
+            this.damage *= 2;
+        }else {
+            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        }
+        this.can_show = false;
     }
-
-
-    /*
-    public void triggerOnGlowCheck() {
-        this.glowColor = ExhaustCardTickPatch.exhaustedLastTurn ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
-    }
-
-     */
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
+
+//    @Override
+//    public void triggerWhenDrawn() {
+//        super.triggerWhenDrawn();
+//        this.can_show = true;
+//    }
+
+//    @Override
+//    public void onMoveToDiscard() {
+//        super.onMoveToDiscard();
+//        this.can_show = false;
+//    }
+
+//    @Override // edit: effect changed so this is no longer necessary but kept in case we still go the old way later
+//    public void update() {
+//        super.update();
+//        if(can_show){
+//            applyPowers(); // to make the card show correct damage number when you draw it the first time, without this somehow when you draw the card for the first
+//                            // time each combat, it will only show the damage number based on cards already drawn, so if you draw another related card the damage won't
+//                            // be updated until you drag the card which calls applypowers(), I dont like this so added this update that always call applypowers()
+//                            // and added the condition variable so that it's only updated when the card is actually in your hand like how cards in vanilla behave
+//        }
+//    }
+//
+//    // to still show afterlife tooltip. because the format [purple]hexamod:afterlife[] doesnt get displayed correctly
+//    // we are only using [purple]afterlife[] here for easier text comprehension for new players, but doing this
+//    // means we dont have the keyword tooltip so we need to manually add it
+//    // but after I tried adding it in the constrcutor it turns out sometimes who knows why it wont be added
+//    // and this way seems to work
+
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        String afterlife_name = downfallMod.keywords_and_proper_names.get("afterlife");
+        this.keywords.add(afterlife_name);
+    }
+
 }

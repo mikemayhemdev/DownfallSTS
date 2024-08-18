@@ -20,12 +20,13 @@ public class RecyclingMachine extends CustomRelic {
     public boolean activated = false;
 
     public RecyclingMachine() {
-        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.HEAVY);
+        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.HEAVY);
     }
 
     @Override
     public void atBattleStart() {
         activated = false;
+        grayscale = false;
         beginLongPulse();
     }
 
@@ -40,8 +41,9 @@ public class RecyclingMachine extends CustomRelic {
                 card.type != AbstractCard.CardType.CURSE && !activated) {
             flash();
             activated = true;
+            grayscale = true;
             stopPulse();
-            AbstractCard copy = card.makeCopy();
+            AbstractCard copy = card.makeStatEquivalentCopy();
             copy.freeToPlayOnce = true;
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(copy));
         }

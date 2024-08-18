@@ -26,7 +26,7 @@
     "NAME": "黏黏石",
     "FLAVOR": "据说它能根据你的情绪获得力量",
     "DESCRIPTIONS": [
-      "战斗开始时，获得 #b1 点 #yslimeboundmod:潜力 。"
+      "战斗开始时，获得 #b2 点 #yslimeboundmod:潜力 。"
     ]
   },
   "Slimebound:DailySplitRelic": {

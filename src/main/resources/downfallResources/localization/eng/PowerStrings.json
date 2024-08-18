@@ -37,13 +37,13 @@
   "downfall:ExhaustCardsPower": {
     "NAME": "Forgetful",
     "DESCRIPTIONS": [
-      "At the end of your turn, choose a card to #yExhaust."
+      "At the end of your turn, choose a card to #yExhaust [REMOVE_SPACE]."
     ]
   },
   "downfall:SpotWeakness": {
     "NAME": "Spot Weakness",
     "DESCRIPTIONS": [
-      "Every turn in which you play an attack card with this power active, this enemy gains #b"," #yStrength. Currently it will gain #b", " #yStrength."
+      "Every turn in which you play an attack card with this power active, this enemy gains #b"," #yStrength. Currently it will gain #b", " #yStrength [REMOVE_SPACE]."
     ]
   },
   "downfall:FearNoEvil": {
@@ -68,7 +68,7 @@
   "downfall:WatcherAngryPower": {
     "NAME": "Unbridled Rage",
     "DESCRIPTIONS": [
-      "At the end of her turn, if Watcher is at or below #b50% HP, she enters #yWrath. NL Watcher's #yWrath increases damage dealt and received by #b50% instead of #b100%."
+      "At the end of her turn, if Watcher is at or below #b50% HP, she enters #yWrath. NL Watcher's #yWrath increases damage dealt and received by #b50% instead of #b100% [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -78,11 +78,11 @@
     ]
   },
   "downfall:WatcherCripplePower": {
-    "NAME": "Blasphemer's Demise",
+    "NAME": "Divine Retribution",
     "DESCRIPTIONS": [
-      "When Watcher loses #b",
-      " more HP, apply #b-4 #yStrength to her when she next enters #yDivinity or plays #yRagnarok.",
-      "Watcher will lose #b4 #yStrength when she next enters #yDivinity or plays #yRagnarok."
+      "Whenever Watcher loses #b",
+      " HP, she loses #b1 #yStrength [REMOVE_SPACE], up to #b3 times per turn. NL You can #yBlock the damage from #yPressure #yPoints [REMOVE_SPACE].",
+      "Watcher has already lost #b3 #yStrength this turn."
     ]
   },
   "downfall:WatcherSkillPower": {
@@ -90,20 +90,20 @@
     "DESCRIPTIONS": [
       "Whenever you play a skill, Watcher gains #b",
       " temporary #yStrength.",
-      "Whenever you play a skill, Watcher gains #yTemporary #yStrength."
+      "Whenever you play a skill, Watcher gains #yTemporary #yStrength [REMOVE_SPACE]."
     ]
   },
   "downfall:WrathNextTurnPower": {
     "NAME": "Wrath Next Turn",
     "DESCRIPTIONS": [
-      "At the start of her turn, Watcher will enter #yWrath."
+      "At the start of her turn, Watcher will enter #yWrath [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowBlasphemersDemise": {
     "NAME": "Blasphemers Demise",
     "DESCRIPTIONS": [
       "Unless Neow loses #b",
-      " more HP, the next time she uses a Buff, she will gain #b10 additional #yStrength.",
+      " more HP, the next time she uses a Buff, she will gain #b10 additional #yStrength [REMOVE_SPACE].",
       "Neow is crippled and will not gain additional #yStrength during her next Buff turn."
     ]
   },
@@ -122,7 +122,7 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "Bag of Knives",
     "DESCRIPTIONS": [
-      "The first time you play a card that costs #b2 or more each turn, Silent gains 2 #yShivs."
+      "The first time you play a card that costs #b2 or more each turn, Silent gains 2 #yShivs [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowBagOfKnives": {
@@ -170,13 +170,13 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
-      "Begins the fight with 2 #yBronze #yOrb minions. NL Gains 1 #yArtifact at the end of its turn if it did not already have #yArtifact."
+      "Begins the fight with 2 #yBronze #yOrb minions. NL Gains 1 #yArtifact at the end of its turn if it did not already have #yArtifact [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowAncientConstruct": {
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
-      "Neow gains #b2 #yArtifact at the end of her turn if she has no #yArtifact."
+      "Neow gains #b2 #yArtifact at the end of her turn if she has no #yArtifact [REMOVE_SPACE]."
     ]
   },
   "downfall:DefectCuriosity": {
@@ -190,13 +190,13 @@
     "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
       "Whenever you play a #yPower card, Defect channels #b",
-      " #yLightning #yOrb."
+      " #yLightning #yOrb [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowUnbiasedCognition": {
     "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, Neow gains #b2 #yStrength."
+      "Whenever you play a #yPower card, Neow gains #b2 #yStrength [REMOVE_SPACE]."
     ]
   },
   "downfall:IroncladStatusPower": {
@@ -214,7 +214,7 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "Feeding Frenzy",
     "DESCRIPTIONS": [
-      "Ironclad's #yReaper does not #yExhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 #yStrength."
+      "Ironclad's #yReaper does not #yExhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 #yStrength [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowFeedingFrenzy": {
@@ -239,7 +239,7 @@
   "downfall:MerchantStrengthPower": {
     "NAME": "Soul Stealer",
     "DESCRIPTIONS": [
-      "Merchant still has the #yStrength it earned from Soul Steal this run, and gains an equal amount of #yDexterity."
+      "Merchant still has the #yStrength it earned from Soul Steal this run, and gains an equal amount of #yDexterity [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowMantra": {
@@ -278,14 +278,14 @@
     "NAME": "Last Gasp: Inflame+",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
-      " #yStrength."
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "downfall:OnDeathEveryoneThorns": {
     "NAME": "Last Gasp: Caltrops+",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
-      " #yThorns."
+      " #yThorns [REMOVE_SPACE]."
     ]
   },
   "downfall:OnDeathEveryoneBuffer": {
@@ -331,16 +331,23 @@
       "Hermit's #yConcentration is broken and #yDead #yOn effects don't trigger this turn."
     ]
   },
+  "downfall:TangerinePower": {
+    "NAME": "Deputy",
+    "DESCRIPTIONS": [
+      "When Tangerine dies, Hermit's #yConcentration breaks and he gains #b",
+      " #yStrength."
+    ]
+  },
   "downfall:HermitWheelOfFortune": {
     "NAME": "Wheel of Fortune",
     "DESCRIPTIONS": [
-      "After you play an #yAttack, Hermit #yCycles his first card. Whenever he draws #yNecronomicurse, he gains #b2 #yStrength. Hermit's card cost can't change."
+      "After you play an #yAttack, Hermit #yCycles his first card. Hermit's card cost can't change."
     ]
   },
   "downfall:HermitDoomsday": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "Hermit starts with #b1 #yRitual. Whenever Hermit plays #yPurgatory, he summons a Dagger."
+      "Hermit starts with #b1 #yRitual [REMOVE_SPACE]. Whenever Hermit plays #yPurgatory [REMOVE_SPACE], he summons a #rDoomed #rDagger [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowEclipse": {
@@ -354,7 +361,7 @@
     "DESCRIPTIONS": [
       "Every #b",
       " cards you play, Neow gains #b",
-      " #yStrength."
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowDistracting": {
@@ -394,6 +401,13 @@
       " NL Gains #b2 Buffer. #y(Defect)",
       " NL Gains #b5 Mantra. #y(Watcher)",
       " NL Adds a #yDecay to your draw pile. #y(Hermit)"
+    ]
+  },
+  "downfall:HeartsFavorPower": {
+    "NAME": "Heart's Favor",
+    "DESCRIPTIONS": [
+      "When you deal #b" ,
+      " more damage to Neow, gain a #yCorrupted #yForm."
     ]
   }
 }

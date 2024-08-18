@@ -36,9 +36,9 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
         this.screen = CurScreen.INTRO;
         this.noCardsInRewards = true;
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.hpLoss = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.35F);
+            this.hpLoss = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.3F);
         } else {
-            this.hpLoss = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.25F);
+            this.hpLoss = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.2F);
         }
 
         if (AbstractDungeon.player.gold >= goldCost) {

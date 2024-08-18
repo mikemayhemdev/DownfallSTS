@@ -11,23 +11,23 @@ import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class GhostOfSpirePast extends AbstractHexaCard {
 
-    public final static String ID = makeID("GhostOfSpirePast");
+    public final static String ID = makeID("DevilsDance");
 
-    //stupid intellij stuff POWER, SELF, UNCOMMON
+    //Devil's Dance devils dance devil dance
 
     private static final int MAGIC = 1;
 
     public GhostOfSpirePast() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
+        baseMagicNumber = magicNumber = 1;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "GhostOfSpirePast.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new PastPower(1));
-        atb(new RetractAction());
+        applyToSelf(new PastPower(magicNumber));
+//        atb(new RetractAction());
     }
 
     public void upgrade() {
