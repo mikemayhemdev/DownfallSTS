@@ -283,7 +283,7 @@
     "DESCRIPTION": "虛無 。 NL 獲得 [E] [E] 。 NL hexamod:激活 獄焱鬼火。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "虛無 。 NL 獲得 [E] [E] [E] 。 NL hexamod:激活 獄焱鬼火。 NL 消耗 。"
   },
-  "hexamod:MomentaryResurgence": {
+  "hexamod:FleetingFlash": {
     "NAME": "復燃",
     "DESCRIPTION": "hexamod:點燃 當前鬼火， NL 然後 hexamod:熄滅 它。"
   },

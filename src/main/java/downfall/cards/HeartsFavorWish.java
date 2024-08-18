@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 import static expansioncontent.cards.AbstractExpansionCard.makeID;
 
+@Deprecated
 public class HeartsFavorWish extends AbstractDownfallCard {
 
     public static final String ID = makeID("HeartsFavorWish");

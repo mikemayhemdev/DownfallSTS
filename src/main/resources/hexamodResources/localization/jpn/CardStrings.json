@@ -328,7 +328,7 @@
     "DESCRIPTION": "Ethereal. NL Gain [E] for each hexamod:Ignited Ghostflame.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] for each hexamod:Ignited Ghostflame. NL Draw 1 card."
   },
-  "hexamod:MomentaryResurgence": {
+  "hexamod:FleetingFlash": {
     "NAME": "Again!",
     "DESCRIPTION": "hexamod:Ignite the hexamod:Active Ghostflame. NL Do not hexamod:Advance at the end of this turn."
   },

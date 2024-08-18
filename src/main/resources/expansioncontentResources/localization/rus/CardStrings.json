@@ -83,7 +83,7 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "Антидот",
-    "DESCRIPTION": "Снимает !M! Яда."
+    "DESCRIPTION": "Оставляется. NL Снимает !M! Яда."
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "Кровавая жертва",
@@ -91,9 +91,5 @@
     "EXTENDED_DESCRIPTION":[
       " NL (Отнимает {amount} ОЗ. )"
     ]
-  },
-  "expansioncontent:HeartsFavorWish": {
-    "NAME": "Corrupted Form",
-    "DESCRIPTION": "Ethereal. NL Gain a 0-cost *Form from a defeated Boss. Add 3 random *Curses to your discard pile. NL Exhaust."
   }
 }
