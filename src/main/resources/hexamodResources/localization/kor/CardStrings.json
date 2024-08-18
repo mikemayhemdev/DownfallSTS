@@ -306,11 +306,11 @@
   },
   "hexamod:ShadowGuise": {
     "NAME": "그림자 가장",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 소멸."
+    "DESCRIPTION": "보존. NL 방어도를 !B! 얻습니다. NL 소멸."
   },
   "hexamod:ShadowStrike": {
     "NAME": "그림자 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 소멸."
+    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 소멸."
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "밤의 방패",
