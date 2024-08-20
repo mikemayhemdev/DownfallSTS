@@ -20,7 +20,7 @@ public class ShadowStrike extends AbstractHexaCard {
 
     public ShadowStrike(AbstractCard parent) {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 5;
+        baseDamage = 7;
         selfRetain = true;
         exhaust = true;
 //        cardsToPreview = new NightmareGuise();
@@ -70,15 +70,6 @@ public class ShadowStrike extends AbstractHexaCard {
 //                }
 //            }
 //        });
-
-//    @Override
-//    public void afterlife() {
-//        AbstractMonster m = AbstractDungeon.getRandomMonster();
-//        if (m == null) return;
-//        this.calculateCardDamage(m);
-//        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-//    }
-
 
 //    @Override
 //    public AbstractCard makeStatEquivalentCopy() {

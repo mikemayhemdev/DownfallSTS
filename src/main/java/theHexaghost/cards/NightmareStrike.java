@@ -1,9 +1,11 @@
 package theHexaghost.cards;
 
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import theHexaghost.HexaMod;
@@ -14,7 +16,8 @@ public class NightmareStrike extends AbstractHexaCard implements HexaPurpleTextI
     public final static String ID = makeID("NightmareStrike");
 
     public NightmareStrike() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 3;
         isEthereal = true;
         cardsToPreview = new ShadowStrike();
         tags.add(CardTags.STRIKE);
@@ -23,10 +26,11 @@ public class NightmareStrike extends AbstractHexaCard implements HexaPurpleTextI
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         superFlash(Color.PURPLE);
         AbstractCard q = new ShadowStrike(this);
         if (upgraded) q.upgrade();
-        atb(new MakeTempCardInHandAction(q, 2));
+        atb(new MakeTempCardInHandAction(q));
     }
 
     @Override
@@ -39,6 +43,7 @@ public class NightmareStrike extends AbstractHexaCard implements HexaPurpleTextI
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.cardsToPreview.upgrade();
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

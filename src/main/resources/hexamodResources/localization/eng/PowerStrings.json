@@ -61,7 +61,7 @@
     "NAME": "Extra Crispy",
     "DESCRIPTIONS": [
       "When #ySoulburn detonates on an enemy, apply #b",
-      " Soulburn to them (after detonation)."
+      " #ySoulburn to them after detonation."
     ]
   },
   "hexamod:EnhancePower": {
@@ -83,9 +83,9 @@
   "hexamod:FuturePower": {
     "NAME": "Into Shadow",
     "DESCRIPTIONS": [
-      "Whenever you #yRetract, choose to play and #yExhaust #b",
-      " card in your hand.",
-      " cards in your hand."
+      "Whenever you #yRetract [REMOVE_SPACE], your next #b",
+      " card will be free to play then #yExhausts [REMOVE_SPACE].",
+      " cards will be free to play then #yExhaust [REMOVE_SPACE]."
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -235,6 +235,14 @@
       "Your Ghostflame effect affects all enemy this combat.",
       "Your Ghostflame effect affects all enemy #b",
       " times this combat."
+    ]
+  },
+  "hexamod:PlayCardAndExhaustPower": {
+    "NAME": "Shadowy Shift",
+    "DESCRIPTIONS": [
+      "Your next card is free to play then #yExhausts [REMOVE_SPACE].",
+      "Your next #b",
+      " cards are free to play then #yExhaust [REMOVE_SPACE]."
     ]
   }
 }

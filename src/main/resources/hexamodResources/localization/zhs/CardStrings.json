@@ -69,8 +69,8 @@
   },
   "hexamod:IntoShadow": {
     "NAME": "遁入暗影",
-    "DESCRIPTION": "虚无 。 NL hexamod:回退 时， NL 打出并 消耗 1张手牌。",
-    "UPGRADE_DESCRIPTION": "hexamod:回退 时， NL 打出并 消耗 1张手牌。",
+    "DESCRIPTION": "虚无 。 NL hexamod:回退 后， NL 免费打出并 消耗 一张牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:回退 后， NL 免费打出并 消耗 一张牌。",
     "EXTENDED_DESCRIPTION": [
       "打出并消耗。"
       ]
@@ -137,9 +137,9 @@
   },
   "hexamod:GhostShield": {
     "NAME": "幽灵护盾",
-    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 !B! 点格挡。 NL ",
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 !M! 层 bronze:残影 。 NL ",
     "EXTENDED_DESCRIPTION": [
-      "获得 !M! 层 残影 。"
+      "获得 !B! 点格挡。"
     ]
   },
   "hexamod:HauntedHand": {
@@ -191,25 +191,21 @@
   },
   "hexamod:NightmareStrike": {
     "NAME": "梦魇打击",
-    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得一张 *暗影打击 。 NL ",
-    "EXTENDED_DESCRIPTION": [
-      "造成 !D! 点伤害。"
-    ]
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 造成 !D! 点伤害。 NL [#e087a4]获得一张暗影打击。[]",
+    "UPGRADE_DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 造成 !D! 点伤害。 NL [#e087a4]获得一张暗影打击+。[]"
   },
   "hexamod:NightmareGuise": {
     "NAME": "梦魇伪装",
-    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得一张 *暗影伪装 。 NL ",
-    "EXTENDED_DESCRIPTION": [
-      "获得 !B! 点 格挡 。"
-    ]
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 !B! 点 格挡 。 NL [#e087a4]获得一张暗影伪装。[]",
+    "UPGRADE_DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 !B! 点 格挡 。 NL [#e087a4]获得一张暗影伪装+。[]"
   },
   "hexamod:ShadowStrike": {
     "NAME": "暗影打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 消耗 。"
   },
   "hexamod:ShadowGuise": {
     "NAME": "暗影伪装",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL 消耗 。"
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "深处之力",
@@ -238,8 +234,7 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "脆烤",
-    "DESCRIPTION": "每 消耗 !M! 张牌， NL hexamod:点燃 当前鬼火1次。",
-    "UPGRADE_DESCRIPTION": ""
+    "DESCRIPTION": "引爆 hexamod:灼魂 后， NL 再次给予 !M! 层。"
   },
   "hexamod:WhisperFromBeyond": {
     "NAME": "深处之语",
@@ -315,7 +310,7 @@
     "DESCRIPTION": "虚无 。 NL 获得 [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 [E] [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。"
   },
-  "hexamod:MomentaryResurgence": {
+  "hexamod:FleetingFlash": {
     "NAME": "死灰复燃",
     "DESCRIPTION": "hexamod:点燃 当前鬼火， NL 再将其 hexamod:熄灭 。"
   },

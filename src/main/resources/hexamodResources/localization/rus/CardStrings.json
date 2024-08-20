@@ -3,8 +3,8 @@
     "NAME": "Авангард",
     "DESCRIPTION": "Даёт !B! Защиты. NL Даёт hexamod:Продвижение."
   },
-  "hexamod:MomentaryResurgence": {
-    "NAME": "Еще раз!",
+  "hexamod:FleetingFlash": {
+    "NAME": "Мгновенная вспышка",
     "DESCRIPTION": "hexamod:Зажигает hexamod:активный Огонёк, затем hexamod:Тушит его."
   },
   "hexamod:ApocalypseNow": {
@@ -69,8 +69,7 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Хрустящая корочка",
-    "DESCRIPTION": "{@@}hexamod:Зажигает hexamod:активный Огонёк, когда вы Сжигаете !M! карт{!M!|@=|&1=у|&2,&3,&4=ы|&11,&12,&13,&14=}.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Карты и Огоньки накладывают на !M! hexamod:Ожога_души больше."
+    "DESCRIPTION": "При каждом взрыве hexamod:Ожога_души на враге, наложите на него после взрыва !М! hexamod:Ожога_души."
   },
   "hexamod:FastForward": {
     "NAME": "Перемотать вперёд",
@@ -229,19 +228,13 @@
   },
   "hexamod:NightmareGuise": {
     "NAME": "Кошмарная форма",
-    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Добавляет в руку *Теневую *форму. NL ",
-    "UPGRADE_DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Добавляет в руку *Теневую *форму+. NL ",
-    "EXTENDED_DESCRIPTION": [
-      "Даёт !B! Защиты."
-    ]
+    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Даёт !B! Защиты. NL [#e087a4]Добавляет[] [#e087a4]в[] [#e087a4]руку[] [#e087a4]Теневую[] [#e087a4]форму.[]",
+    "UPGRADE_DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Даёт !B! Защиты. NL [#e087a4]Добавляет[] [#e087a4]в[] [#e087a4]руку[] [#e087a4]Теневую[] [#e087a4]форму+.[]"
   },
   "hexamod:NightmareStrike": {
     "NAME": "Кошмарный удар",
-    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Добавляет в руку *Теневой *удар. NL ",
-    "UPGRADE_DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Добавляет в руку *Теневой *удар+. NL ",
-    "EXTENDED_DESCRIPTION": [
-      "Наносит !D! урона."
-    ]
+    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Наносит !D! урона. NL [#e087a4]Добавляет[] [#e087a4]в[] [#e087a4]руку[] [#e087a4]Теневой[] [#e087a4]удар.[]",
+    "UPGRADE_DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Наносит !D! урона. NL [#e087a4]Добавляет[] [#e087a4]в[] [#e087a4]руку[] [#e087a4]Теневой[] [#e087a4]удар+.[]"
   },
   "hexamod:Poltergeist": {
     "NAME": "Облик полтергейста",
@@ -312,13 +305,11 @@
   },
   "hexamod:ShadowGuise": {
     "NAME": "Теневая форма",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Эфирная. NL Даёт !B! Защиты. NL Сжигается."
+    "DESCRIPTION": "Оставляется. NL Даёт !B! Защиты. NL Сжигается."
   },
   "hexamod:ShadowStrike": {
     "NAME": "Теневой удар",
-    "DESCRIPTION": "Наносит !D! урона. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Сжигается."
+    "DESCRIPTION": "Оставляется. NL Наносит !D! урона. NL Сжигается."
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Щит Ночи",

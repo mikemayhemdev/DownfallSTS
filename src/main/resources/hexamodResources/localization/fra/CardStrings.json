@@ -298,7 +298,7 @@
     "NAME": "Souffle dynamique",
     "DESCRIPTION": "Éthérée. NL Si le Feu Follet actuel hexamod:Enflammé, appliquez !burny! de hexamod:Brûlure. Sinon, infligez !D! dégâts."
   },
-  "hexamod:MomentaryResurgence": {
+  "hexamod:FleetingFlash": {
     "NAME": "Encore!",
     "DESCRIPTION": "hexamod:Enflammez le Feu Follet actuel, puis hexamod:Éteignez-le."
   },
