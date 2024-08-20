@@ -28,11 +28,11 @@
       "Gain [E] at the start of your turn. Start each combat with #b1 less #yhexamod:Intensity [REMOVE_SPACE], and receive no #yhexamod:Intensity from the #yInferno #yGhostflame [REMOVE_SPACE]."
     ]
   },
-  "hexamod:SoulConsumer": {
+  "hexamod:SoulStone": {
     "NAME": "Soul Stone",
     "FLAVOR": "A soul would liven this thing up!",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust #b4 cards, apply #b1 #yVulnerable to a random enemy."
+      "Whenever you #yExhaust #b3 cards, #yhexamod:ignite the current Ghostflame."
     ]
   },
   "hexamod:RecyclingMachine": {

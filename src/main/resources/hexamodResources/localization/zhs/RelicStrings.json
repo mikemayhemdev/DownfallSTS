@@ -28,11 +28,11 @@
       "回合开始时获得 [E] 。战斗开始时失去 #b1 点 #yhexamod:热烈 ，且无法再从 #y狱焱鬼火 获得 #y热烈 。"
     ]
   },
-  "hexamod:SoulConsumer": {
+  "hexamod:SoulStone": {
     "NAME": "魂石",
     "FLAVOR": "只需一点灵魂就能使这玩意生效！",
     "DESCRIPTIONS": [
-      "每当你 #y消耗 #b4 张牌，随机给予 #b1 层 #y易伤 。"
+      "每当你 #y消耗 #b3 张牌， #yhexamod:点燃 当前鬼火。"
     ]
   },
   "hexamod:RecyclingMachine": {

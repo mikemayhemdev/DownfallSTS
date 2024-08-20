@@ -13,6 +13,7 @@ import static theHexaghost.HexaMod.renderFlames;
 )
 public class GlobalOnCardUsePatch {
     public static void Prefix(CardGroup __instance, AbstractCard abstractCard) {
+        if(activeGhostFlame == null) return;
         if (!activeGhostFlame.charged && renderFlames && activeGhostFlame.advanceOnCardUse)
             activeGhostFlame.advanceTrigger(abstractCard);
 
