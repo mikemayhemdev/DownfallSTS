@@ -15,17 +15,23 @@ import com.megacrit.cardcrawl.cards.optionCards.FameAndFortune;
 import com.megacrit.cardcrawl.cards.optionCards.LiveForever;
 import com.megacrit.cardcrawl.cards.purple.DevaForm;
 import com.megacrit.cardcrawl.cards.red.DemonForm;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.cards.HeartsFavorWish;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
+import downfall.monsters.NeowBossFinal;
+import downfall.powers.NeowInvulnerablePower;
 import downfall.util.TextureLoader;
 import hermit.cards.EternalForm;
 import theHexaghost.HexaMod;
+import theHexaghost.powers.BurnPower;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -54,14 +60,13 @@ public class HeartsFavorPower extends AbstractPower {
     }
 
     @Override
-    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        this.amount -= damageAmount;
-        if (amount <= 0){
-            amount += 300;
-            addToBot(new MakeTempCardInHandAction(new HeartsFavorWish()));
-            flash();
+    public void onSpecificTrigger() {
+        AbstractPlayer p = AbstractDungeon.player;
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (m != null && !m.isDead && !m.isDying && !m.halfDead && m.id == NeowBossFinal.ID) {
+                addToBot(new ApplyPowerAction(m, p, new NeowInvulnerablePower(m, -this.amount), -this.amount));
+            }
         }
-        return super.onAttackedToChangeDamage(info, damageAmount);
     }
 
     @Override

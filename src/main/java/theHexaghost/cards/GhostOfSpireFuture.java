@@ -8,7 +8,7 @@ import theHexaghost.powers.FuturePower;
 
 public class GhostOfSpireFuture extends AbstractHexaCard {
     public final static String ID = makeID("IntoShadow");
-    //speedrunning (old name) into shadow
+    //into shadow
     public GhostOfSpireFuture() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = 1;

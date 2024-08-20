@@ -24,8 +24,8 @@
   "hexamod:InfernoChargePotion": {
     "NAME": "Inferno Potion",
     "DESCRIPTIONS": [
-      "Your Ghostflame effect affects all enemy this combat.",
-      "Your Ghostflame effect affects all enemy #b",
+      "Your Ghostflame effects affect All enemies this combat.",
+      "Your Ghostflame effects affect All enemies #b",
       " times this combat."
     ]
   }

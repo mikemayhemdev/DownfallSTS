@@ -2,10 +2,13 @@ package theHexaghost.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.AmplifyPower;
 import downfall.util.TextureLoader;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChooseAndPlayExhaustCardsInHandAction;
@@ -38,7 +41,9 @@ public class FuturePower extends AbstractPower implements OnRetractSubscriber {
 
     @Override
     public void onRetract() {
-        addToTop(new ChooseAndPlayExhaustCardsInHandAction(this.amount));
+        AbstractPlayer p = AbstractDungeon.player;
+        addToBot(new ApplyPowerAction(p, p, new PlayCardAndExhaustPower(this.amount), this.amount));
+//        addToTop(new ChooseAndPlayExhaustCardsInHandAction(this.amount));
     }
 
     @Override

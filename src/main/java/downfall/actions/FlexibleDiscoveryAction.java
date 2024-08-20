@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import java.util.ArrayList;
 import java.util.function.Consumer;
 
+@Deprecated
 public class FlexibleDiscoveryAction extends AbstractGameAction {
     private boolean retrieveCard = false;
     private final ArrayList<AbstractCard> cards;

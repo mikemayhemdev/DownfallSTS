@@ -406,8 +406,8 @@
   "downfall:HeartsFavorPower": {
     "NAME": "Heart's Favor",
     "DESCRIPTIONS": [
-      "When you deal #b" ,
-      " more damage to Neow, gain a #yCorrupted #yForm."
+      "Whenever Neow's #yInvincible reaches #b0 [REMOVE_SPACE], reduce her #yGod #yof #yLife by #b",
+      " [REMOVE_SPACE]."
     ]
   }
 }

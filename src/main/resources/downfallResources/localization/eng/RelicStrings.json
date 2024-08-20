@@ -408,7 +408,8 @@
     "NAME": "Broken Wing Statue",
     "FLAVOR": "A broken hunk of a once-magnificent statue.",
     "DESCRIPTIONS": [
-      "The cultists that worship the Awakened One will be interested in this..."
+      "The cultists that worship the Awakened One will be interested in this...",
+      "At the start of each combat, if the enemies are from the Cultist group, they will take this relic from you and escape from the combat."
     ]
   },
   "downfall:ShatteredFragment": {

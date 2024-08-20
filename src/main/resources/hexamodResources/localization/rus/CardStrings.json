@@ -306,13 +306,11 @@
   },
   "hexamod:ShadowGuise": {
     "NAME": "Теневая форма",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Эфирная. NL Даёт !B! Защиты. NL Сжигается."
+    "DESCRIPTION": "Оставляется. NL Даёт !B! Защиты. NL Сжигается."
   },
   "hexamod:ShadowStrike": {
     "NAME": "Теневой удар",
-    "DESCRIPTION": "Наносит !D! урона. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Сжигается."
+    "DESCRIPTION": "Оставляется. NL Наносит !D! урона. NL Сжигается."
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Щит Ночи",
