@@ -160,7 +160,7 @@
   },
   "hexamod:GhostShield": {
     "NAME": "유령 보호",
-    "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL bronze:흐릿함을 !M! 얻습니다. NL ",
+    "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL bronze:흐릿함을 1 얻습니다. NL ",
     "EXTENDED_DESCRIPTION": [
       "방어도를 !B! 얻습니다."
     ]
