@@ -17,6 +17,7 @@ import downfall.actions.NeowExhumeAction;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
 
+@Deprecated
 public class NeowExhumePower extends AbstractPower {
     public static final String POWER_ID = downfallMod.makeID("NeowExhumePower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;

@@ -30,11 +30,5 @@
   "downfall:SummonMushrooms": {
     "NAME": "真菌环绕",
     "DESCRIPTION": "击杀所有蘑菇， NL 回复其剩余血量点生命。 NL 召唤两个蘑菇。"
-  },
-  "downfall:HeartsFavorPower": {
-    "NAME": "Heart's Favor",
-    "DESCRIPTIONS": [
-      "Whenever Neow's #yInvincible reaches #b0, gain a #yCorrupted #yForm."
-    ]
   }
 }

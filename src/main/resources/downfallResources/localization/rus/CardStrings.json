@@ -5,7 +5,7 @@
   },
   "downfall:Bewildered": {
     "NAME": "Озадаченность",
-    "DESCRIPTION": "Неиграбельная. NL Эфирная. NL sneckomod:Спутывает все карты в руке и Сжигается, когда вы берёте эту карту."
+    "DESCRIPTION": "Неиграбельная. NL Эфирная. NL sneckomod:Спутывает все карты в руке, когда вы берёте эту карту."
   },
   "downfall:Icky": {
     "NAME": "Гадость",
@@ -30,11 +30,5 @@
   "downfall:BossMaintenance": {
     "NAME": "Профилактика",
     "DESCRIPTION": "*Удары наносят на !M! урона больше в этом бою. NL Даёт !B! Ловкости. NL Стоит на 1 больше в этом бою."
-  },
-  "downfall:HeartsFavorPower": {
-    "NAME": "Heart's Favor",
-    "DESCRIPTIONS": [
-      "Whenever Neow's #yInvincible reaches #b0, gain a #yCorrupted #yForm."
-    ]
   }
 }

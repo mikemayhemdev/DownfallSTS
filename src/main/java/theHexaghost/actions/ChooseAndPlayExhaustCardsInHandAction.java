@@ -13,7 +13,7 @@ import theHexaghost.cards.GhostOfSpireFuture;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-
+@Deprecated
 public class ChooseAndPlayExhaustCardsInHandAction extends AbstractGameAction {
     public static final String[] TEXT;
     private AbstractPlayer player;

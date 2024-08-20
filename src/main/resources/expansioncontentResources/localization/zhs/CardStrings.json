@@ -83,7 +83,7 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "解毒剂",
-    "DESCRIPTION": "失去 !M! 层 中毒 。"
+    "DESCRIPTION": "保留 。 NL 失去 !M! 层 中毒 。"
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "染血牺牲",
@@ -91,9 +91,5 @@
     "EXTENDED_DESCRIPTION":[
       " NL (失去 {amount} 点)"
     ]
-  },
-  "expansioncontent:HeartsFavorWish": {
-    "NAME": "Corrupted Form",
-    "DESCRIPTION": "Ethereal. NL Gain a 0-cost *Form from a defeated Boss. Add 3 random *Curses to your discard pile. NL Exhaust."
   }
 }

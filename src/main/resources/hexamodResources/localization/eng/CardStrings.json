@@ -3,7 +3,7 @@
     "NAME": "Advancing Guard",
     "DESCRIPTION": "Gain !B! Block. NL hexamod:Advance."
   },
-  "hexamod:MomentaryResurgence": {
+  "hexamod:FleetingFlash": {
     "NAME": "Fleeting Flash",
     "DESCRIPTION": "hexamod:Ignite the current Ghostflame, then hexamod:Extinguish it."
   },
@@ -76,7 +76,7 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
-    "DESCRIPTION": "When Soulburn detonates on an enemy, apply !M! Soulburn to them (after detonation)."
+    "DESCRIPTION": "Whenever hexamod:Soulburn detonates on an enemy, apply !M! hexamod:Soulburn to them after detonation."
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
@@ -138,8 +138,8 @@
   },
   "hexamod:IntoShadow": {
     "NAME": "Into Shadow",
-    "DESCRIPTION": "Ethereal. NL Whenever you hexamod:Retract, choose a card in your hand to play and Exhaust.",
-    "UPGRADE_DESCRIPTION": "Whenever you hexamod:Retract, choose a card in your hand to play and Exhaust.",
+    "DESCRIPTION": "Ethereal. NL Whenever you hexamod:Retract, your next card is free to play and Exhausts.",
+    "UPGRADE_DESCRIPTION": "Whenever you hexamod:Retract, your next card is free to play and Exhausts.",
     "EXTENDED_DESCRIPTION": [
       "play and Exhaust."
     ],
@@ -160,9 +160,9 @@
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain !B! Block. NL ",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain 1 Blur. NL ",
     "EXTENDED_DESCRIPTION": [
-      "Gain 1 Blur."
+      "Gain !B! Block."
     ]
   },
   "hexamod:GiftsFromBeyond": {
@@ -230,13 +230,13 @@
   },
   "hexamod:NightmareGuise": {
     "NAME": "Nightmare Guise",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Gain[] [#e087a4]a[] *Shadow *Guise. NL Then gain another.",
-    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Gain[] [#e087a4]a[] *Shadow *Guise+. NL Then gain another."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain !B! Block. NL [#e087a4]Gain[] [#e087a4]a[] [#e087a4]Shadow[] [#e087a4]Guise.[]",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain !B! Block. NL [#e087a4]Gain[] [#e087a4]a[] [#e087a4]Shadow[] [#e087a4]Guise+.[]"
   },
   "hexamod:NightmareStrike": {
     "NAME": "Nightmare Strike",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Gain[] [#e087a4]a[] *Shadow *Strike. NL Then gain another.",
-    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Gain[] [#e087a4]a[] *Shadow *Strike+. NL Then gain another."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Deal !D! damage. NL [#e087a4]Gain[] [#e087a4]a[] [#e087a4]Shadow[] [#e087a4]Strike.[]",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Deal !D! damage. NL [#e087a4]Gain[] [#e087a4]a[] [#e087a4]Shadow[] [#e087a4]Strike+.[]"
   },
   "hexamod:Poltergeist": {
     "NAME": "Poltergeist",
@@ -268,7 +268,7 @@
     ]
   },
   "hexamod:RadiantFlame": {
-    "NAME": "Radiant Strike",
+    "NAME": "Radiant Reverb",
     "DESCRIPTION": "Deal !D! damage. NL Remove the target's hexamod:Soulburn to gain !M! hexamod:Intensity."
   },
   "hexamod:RainOfEmbers": {

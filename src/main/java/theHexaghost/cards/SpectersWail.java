@@ -22,7 +22,7 @@ public class SpectersWail extends AbstractHexaCard implements HexaPurpleTextInte
 
     public final static String ID = makeID("SpectersWail");
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 2;
 
     public SpectersWail() {

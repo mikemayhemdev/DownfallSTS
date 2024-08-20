@@ -15,6 +15,7 @@ import slimebound.SlimeboundMod;
 import java.util.ArrayList;
 import java.util.List;
 
+@Deprecated
 public class NeowExhumeAction extends AbstractGameAction {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     private AbstractPlayer p;
