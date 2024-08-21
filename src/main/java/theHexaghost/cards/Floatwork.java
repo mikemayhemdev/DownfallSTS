@@ -16,7 +16,7 @@ public class Floatwork extends AbstractHexaCard implements HexaPurpleTextInterfa
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBurn = burn = 1;
         baseMagicNumber = magicNumber = 3;
-        baseBlock = 4;
+        baseBlock = 5;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "Floatwork.png");
