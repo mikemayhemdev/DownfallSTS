@@ -32,7 +32,7 @@
     "NAME": "Soul Stone",
     "FLAVOR": "A soul would liven this thing up!",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust #b3 cards, #yhexamod:ignite the current Ghostflame."
+      "Whenever you #yExhaust #b3 cards, #yhexamod:Ignite the current Ghostflame."
     ]
   },
   "hexamod:RecyclingMachine": {
