@@ -16,7 +16,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.ui.buttons.EndTurnButton;
+import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
+import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.powers.BurnPower;
 import downfall.util.TextureLoader;
 
@@ -25,34 +27,39 @@ import static theHexaghost.HexaMod.makeRelicPath;
 
 public class SoulConsumer extends CustomRelic {
 
-    public static final String ID = HexaMod.makeID("SoulConsumer");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SoulConsumer.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SoulConsumer.png"));
+    public static final String ID = HexaMod.makeID("SoulStone");
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SoulStone.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SoulStone.png"));
     private boolean activated = false;
-    private static final int DAMAGE = 2;
     private int counter_2 = 0; //
     // soul stone thermal stone(old)
     public SoulConsumer() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
+    public void atTurnStart() {
+        this.counter = 0;
+    }
+
     @Override
     public void onExhaust(AbstractCard card) {
         ++this.counter;
-        if (this.counter % 4 == 0) {
+        if (this.counter % 3 == 0) {
             this.counter = 0;
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractMonster m = AbstractDungeon.getRandomMonster();
-            if(m != null) {
-                this.addToTop(new ApplyPowerAction(m, AbstractDungeon.player, new VulnerablePower(m, 1, false), 1));
-            }
+            GhostflameHelper.activeGhostFlame.charged = true; // for some special logic for end turn advance
+            addToBot(new ChargeCurrentFlameAction());
+//            AbstractMonster m = AbstractDungeon.getRandomMonster();
+//            if(m != null) {
+//                this.addToTop(new ApplyPowerAction(m, AbstractDungeon.player, new VulnerablePower(m, 1, false), 1));
+//            }
+
         }
     }
 
     public void onVictory() {
         this.counter = -1;
-
     }
 
     //    @Override

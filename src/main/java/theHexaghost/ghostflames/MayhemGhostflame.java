@@ -50,10 +50,10 @@ public class MayhemGhostflame extends AbstractGhostflame {
     public void onCharge() {
         atb(new AbstractGameAction() {
             public void update() {
-                if(getEffectCount() > 0) {
-                    this.addToBot(new ScryAction(getEffectCount()));
-                }
                 if(AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)){
+                    if(getEffectCount() > 0) {
+                        this.addToBot(new ScryAction(getEffectCount()));
+                    }
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
                     if(m == null) {
                         this.isDone = true;
@@ -72,7 +72,10 @@ public class MayhemGhostflame extends AbstractGhostflame {
                     }
 
                 }else {
-                    this.addToBot(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));
+                    this.addToTop(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));
+                    if(getEffectCount() > 0) {
+                        this.addToTop(new ScryAction(getEffectCount()));
+                    }
                 }
 
                 this.isDone = true;
