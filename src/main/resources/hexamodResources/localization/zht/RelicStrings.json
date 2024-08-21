@@ -28,7 +28,7 @@
       "回合開始時獲得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才引爆，失去 #b1 點 #yhexamod:熱烈 。"
     ]
   },
-  "hexamod:SoulConsumer": {
+  "hexamod:SoulStone": {
     "NAME": "保暖石",
     "FLAVOR": "一點火苗就能激活這東西了！",
     "DESCRIPTIONS": [

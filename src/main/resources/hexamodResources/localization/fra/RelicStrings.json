@@ -28,7 +28,7 @@
       "Gagnez [E] au début de votre tour. La #yhexamod:Brûlure prend #b4 tours à s'activer, Commencez chaque combat avec #b1 de moins #yhexamod:d'Intensité."
     ]
   },
-  "hexamod:SoulConsumer": {
+  "hexamod:SoulStone": {
     "NAME": "Pierre thermale",
     "FLAVOR": "Un feu animerait cette chose!",
     "DESCRIPTIONS": [

@@ -28,7 +28,7 @@
       "Gain [E] at the start of your turn. #yhexamod:Soulburn takes #b4 turns to activate."
     ]
   },
-  "hexamod:SoulConsumer": {
+  "hexamod:SoulStone": {
     "NAME": "Thermal Stone",
     "FLAVOR": "A fire would liven this thing up!",
     "DESCRIPTIONS": [

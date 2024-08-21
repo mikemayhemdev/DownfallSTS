@@ -28,11 +28,11 @@
       "내 턴 시작 시 [E] 를 얻습니다. 매 전투 시작 시 #yhexamod:극열을 #b1 잃습니다. 지옥 유령불꽃에서 #yhexamod:극열을 얻을 수 없습니다."
     ]
   },
-  "hexamod:SoulConsumer": {
+  "hexamod:SoulStone": {
     "NAME": "영혼석",
     "FLAVOR": "영혼은 이걸 살아있는 것처럼 만들어주지!",
     "DESCRIPTIONS": [
-      "같은 턴에 카드를 #b4 장 #y소멸시킬 때마다 무작위 적에게 #y취약을 #b1 부여합니다."
+      "카드를 #b3 장 소멸시킬 때마다 현재 유령불꽃을 #yhexamod:점화합니다."
     ]
   },
   "hexamod:RecyclingMachine": {
