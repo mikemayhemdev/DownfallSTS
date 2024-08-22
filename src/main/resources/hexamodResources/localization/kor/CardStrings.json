@@ -297,7 +297,7 @@
   },
   "hexamod:Sear": {
     "NAME": "그을음",
-    "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL [#e087a4]영혼화상을[] !burny! [#e087a4]만큼[] 2번 [#e087a4]부여합니다.[]"
+    "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL 피해를 !D! 줍니다. NL [#e087a4]영혼화상을[] !burny! [#e087a4]만큼[#e087a4] [#e087a4]부여합니다.[#e087a4]"
   },
   "hexamod:SearingWound": {
     "NAME": "화끈거리는 상처",

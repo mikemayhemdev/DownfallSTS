@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,7 +15,8 @@ public class Sear extends AbstractHexaCard implements HexaPurpleTextInterface {
     public final static String ID = makeID("Sear");
 
     public Sear() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
+        baseDamage = damage = 6;
         baseBurn = burn = 6;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
@@ -22,8 +24,8 @@ public class Sear extends AbstractHexaCard implements HexaPurpleTextInterface {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
         atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
-        burn(m, burn);
         burn(m, burn);
     }
 
