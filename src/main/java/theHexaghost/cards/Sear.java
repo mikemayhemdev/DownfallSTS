@@ -51,6 +51,7 @@ public class Sear extends AbstractHexaCard implements HexaPurpleTextInterface {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeDamage(2);
             upgradeBurn(2);
         }
     }
