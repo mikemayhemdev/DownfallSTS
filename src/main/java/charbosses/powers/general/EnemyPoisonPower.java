@@ -40,6 +40,7 @@ public class EnemyPoisonPower extends AbstractPower {
     @Override
     public void stackPower(int stackAmount) {
         this.amount += stackAmount;  // without the positive check, your antidote will reduce 1 less, because it will apply a negative amount, which would get + 1
+                                                        // by snecko skull
         if( (stackAmount >= 0) && AbstractCharBoss.boss.hasRelic(CBR_SneckoSkull.ID) ){
             this.amount ++;
         }
