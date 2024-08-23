@@ -4,7 +4,7 @@
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL hexamod:팽창합니다."
   },
   "hexamod:FleetingFlash": {
-    "NAME": "순간적인 번쩍임",
+    "NAME": "섬광",
     "DESCRIPTION": "현재 유령불꽃을 hexamod:점화하고 hexamod:소화합니다."
   },
   "hexamod:ApocalypseNow": {
@@ -76,7 +76,7 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "바싹 굽기",
-    "DESCRIPTION": "적에게 hexamod:영혼화상이 폭발할 때마다, 폭발 후 적에게 !M! hexamod:영혼화상을 적용합니다."
+    "DESCRIPTION": "hexamod:영혼화상이 체력을 잃게 하고 제거될 때마다 제거된 대상에게 hexamod:영혼화상을 !M! 부여합니다."
   },
   "hexamod:FastForward": {
     "NAME": "빨리 감기",
@@ -231,12 +231,12 @@
   "hexamod:NightmareGuise": {
     "NAME": "악몽 가장",
     "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL 방어도를 !B! 얻습니다. NL [#e087a4]그림자[] [#e087a4]가장을[] [#e087a4]얻습니다.[]",
-    "UPGRADE_DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL 방어도를 !B! 얻습니다. NL [#e087a4]그림자[] [#e087a4]가장을+[] [#e087a4]얻습니다.[]"
+    "UPGRADE_DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL 방어도를 !B! 얻습니다. NL [#e087a4]그림자[] [#e087a4]가장+을[] [#e087a4]얻습니다.[]"
   },
   "hexamod:NightmareStrike": {
     "NAME": "악몽 타격",
     "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL 피해를 !D! 줍니다. NL [#e087a4]그림자[] [#e087a4]타격을[] [#e087a4]얻습니다.[]",
-    "UPGRADE_DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL 피해를 !D! 줍니다. NL [#e087a4]그림자[] [#e087a4]타격을+[] [#e087a4]얻습니다.[]"
+    "UPGRADE_DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL 피해를 !D! 줍니다. NL [#e087a4]그림자[] [#e087a4]타격+을[] [#e087a4]얻습니다.[]"
   },
   "hexamod:Poltergeist": {
     "NAME": "폴터가이스트",
@@ -297,7 +297,7 @@
   },
   "hexamod:Sear": {
     "NAME": "그을음",
-    "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL [#e087a4]영혼화상을[] !burny! [#e087a4]만큼[] 2번 [#e087a4]부여합니다.[]"
+    "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL 피해를 !D! 줍니다. NL [#e087a4]영혼화상을[] !burny! [#e087a4]만큼[#e087a4] [#e087a4]부여합니다.[#e087a4]"
   },
   "hexamod:SearingWound": {
     "NAME": "화끈거리는 상처",
