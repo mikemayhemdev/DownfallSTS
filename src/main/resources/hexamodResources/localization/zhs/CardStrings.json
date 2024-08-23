@@ -9,7 +9,7 @@
   },
   "hexamod:Sear": {
     "NAME": "灼烧",
-    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL [#e087a4]给予[] !burny! [#e087a4]层灼魂[] 两次。"
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 造成 !D! 点伤害。 NL [#e087a4]给予[] !burny! [#e087a4]层灼魂。[]"
   },
   "hexamod:Float": {
     "NAME": "浮动",
@@ -286,7 +286,8 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "幻影火球",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 引爆目标的 hexamod:灼魂 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 引爆目标的 hexamod:灼魂 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 引爆目标的 hexamod:灼魂 ， NL 但留下1层。"
   },
   "hexamod:NaughtySpirit": {
     "NAME": "淘气精灵",

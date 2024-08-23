@@ -297,7 +297,7 @@
   },
   "hexamod:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife. NL [#e087a4]Apply !burny! [#e087a4]Soulburn twice."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.  NL Deal !D! damage. NL [#e087a4]Apply[] !burny! [#e087a4]Soulburn.[]"
   },
   "hexamod:SearingWound": {
     "NAME": "Searing Wound",
