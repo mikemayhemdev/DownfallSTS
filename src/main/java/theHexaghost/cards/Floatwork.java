@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,8 +29,16 @@ public class Floatwork extends AbstractHexaCard implements HexaPurpleTextInterfa
         applyToSelf(new PlatedArmorPower(p, magicNumber));
     }
 
+    @Override
+    public void triggerOnEndOfPlayerTurn() {
+        if (this.isEthereal) {
+            addToBot(new GainBlockAction(AbstractDungeon.player, magicNumber));
+            this.addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
+        }
+
+    }
+
     public void afterlife() {
-        applyToSelf(new DexterityPower(AbstractDungeon.player,1));
         applyToSelf(new PlatedArmorPower(AbstractDungeon.player, magicNumber));
     }
 
