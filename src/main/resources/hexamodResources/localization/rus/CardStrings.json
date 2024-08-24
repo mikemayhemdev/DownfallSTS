@@ -249,7 +249,7 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "Призрачный уголёк",
-    "DESCRIPTION": "Наносит !D! урона. NL hexamod:Ожог_души срабатывает, если наложен на врага."
+    "DESCRIPTION": "Наносит !D! урона. NL hexamod:Ожог_души срабатывает, если наложен на врага кроме одного."
   },
   "hexamod:PowerFromBeyond" : {
     "NAME": "Сила извне",

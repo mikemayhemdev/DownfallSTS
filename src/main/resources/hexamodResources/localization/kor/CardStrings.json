@@ -249,7 +249,7 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "혼령의 불덩이",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상의 보유한 hexamod:영혼화상만큼 체력을 잃게 하고 hexamod:영혼화상을 제거합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상의 보유한 hexamod:영혼화상만큼 -1 체력을 잃게 하고 hexamod:영혼화상을 제거합니다."
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "저편의 힘",

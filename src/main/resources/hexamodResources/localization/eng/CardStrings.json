@@ -249,7 +249,7 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has *Soulburn, detonate it."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has *Soulburn, detonate all but 1."
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
