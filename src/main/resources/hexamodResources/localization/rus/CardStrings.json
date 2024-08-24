@@ -104,7 +104,7 @@
   },
   "hexamod:Floatwork": {
     "NAME": "Залатать дыры",
-    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Даёт !B! Защиты. NL ",
+    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Даёт 1 Ловкости. NL ",
     "EXTENDED_DESCRIPTION": [
       "Даёт !M! Панциря."
     ]
@@ -249,7 +249,8 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "Призрачный уголёк",
-    "DESCRIPTION": "Наносит !D! урона. NL hexamod:Ожог_души срабатывает, если наложен на врага кроме одного."
+    "DESCRIPTION": "Наносит !D! урона. NL hexamod:Ожог_души срабатывает, если наложен на врага.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL hexamod:Ожог_души срабатывает, если наложен на врага кроме одного."
   },
   "hexamod:PowerFromBeyond" : {
     "NAME": "Сила извне",

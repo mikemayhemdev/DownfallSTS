@@ -110,7 +110,7 @@
   },
   "hexamod:Floatwork": {
     "NAME": "떠돌기",
-    "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL 방어도를 !B! 얻습니다. NL ",
+    "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL 민첩을 1 얻습니다. NL ",
     "EXTENDED_DESCRIPTION": [
       "판금 갑옷을 !M! 얻습니다."
     ]
@@ -249,7 +249,8 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "혼령의 불덩이",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상의 보유한 hexamod:영혼화상만큼 -1 체력을 잃게 하고 hexamod:영혼화상을 제거합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상의 보유한 hexamod:영혼화상만큼 체력을 잃게 하고 hexamod:영혼화상을 제거합니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 대상의 보유한 hexamod:영혼화상만큼 -1 체력을 잃게 하고 hexamod:영혼화상을 제거합니다."
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "저편의 힘",
