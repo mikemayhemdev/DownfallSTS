@@ -56,9 +56,8 @@
   "hexamod:CrispyPower_new": {
     "NAME": "脆烤",
     "DESCRIPTIONS": [
-      "每当你 #y消耗 #b3 张牌， #y点燃 当前 #y鬼火 #b",
-      " 次。",
-      " 次。"
+      "每当 #y灼魂 引爆后，再次给予引爆的目标 #b",
+      " 层 #y灼魂 。"
     ]
   },
   "hexamod:EnhancePower": {
