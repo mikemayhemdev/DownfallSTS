@@ -212,7 +212,8 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "Bola de Fogo Fantasma",
-    "DESCRIPTION": "Cause !D! de dano. NL Se o inimigo tiver *Angústia, detone-o."
+    "DESCRIPTION": "Cause !D! de dano. NL Se o inimigo tiver *Angústia, detone-o.",
+    "UPGRADE_DESCRIPTION": "Cause !D! de dano. NL Se o inimigo tiver *Angústia, detone-o."
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Poder Além",

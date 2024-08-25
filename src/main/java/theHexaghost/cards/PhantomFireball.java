@@ -21,7 +21,7 @@ public class PhantomFireball extends AbstractHexaCard {
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
     private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 3;
+    private static final int UPG_DAMAGE = 2;
 
     public PhantomFireball() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
@@ -39,7 +39,7 @@ public class PhantomFireball extends AbstractHexaCard {
                     public void update() {
                         if (m.hasPower(BurnPower.POWER_ID)) {
                             BurnPower p = (BurnPower) m.getPower(BurnPower.POWER_ID);
-                            p.explode(true, true);
+                            p.explode(true, upgraded);
                         }
                         this.isDone = true;
                     }
@@ -55,9 +55,14 @@ public class PhantomFireball extends AbstractHexaCard {
         if (AbstractDungeon.getCurrRoom().monsters != null)
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (!m.isDeadOrEscaped() && m.hasPower(BurnPower.POWER_ID)) {
-                    if (m.getPower(BurnPower.POWER_ID).amount > 1) {
-                        this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-                        break;
+                    if (upgraded){
+                        if (m.getPower(BurnPower.POWER_ID).amount > 1) {
+                            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                            break;
+                        } else {
+                            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                            break;
+                        }
                     }
                 }
             }
@@ -67,6 +72,8 @@ public class PhantomFireball extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

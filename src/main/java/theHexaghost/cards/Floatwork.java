@@ -1,9 +1,11 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import downfall.downfallMod;
 import theHexaghost.HexaMod;
@@ -16,27 +18,35 @@ public class Floatwork extends AbstractHexaCard implements HexaPurpleTextInterfa
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBurn = burn = 1;
         baseMagicNumber = magicNumber = 3;
-        baseBlock = 5;
+       // baseBlock = 5;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "Floatwork.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+        applyToSelf(new DexterityPower(AbstractDungeon.player,1));
         applyToSelf(new PlatedArmorPower(p, magicNumber));
     }
 
+    @Override
+    public void triggerOnEndOfPlayerTurn() {
+        if (this.isEthereal) {
+            addToBot(new GainBlockAction(AbstractDungeon.player, magicNumber));
+            this.addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
+        }
+
+    }
+
     public void afterlife() {
-        addToBot(new GainBlockAction(AbstractDungeon.player, magicNumber));
         applyToSelf(new PlatedArmorPower(AbstractDungeon.player, magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(2);
-            upgradeMagicNumber(1);
+          //  upgradeBlock(2);
+            upgradeMagicNumber(2);
         }
     }
 

@@ -110,7 +110,7 @@
   },
   "hexamod:Floatwork": {
     "NAME": "Floatwork",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain !B! Block. NL ",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain 1 Dexterity. NL ",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! Plated Armor."
     ]
@@ -249,7 +249,8 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has *Soulburn, detonate all but 1."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has *Soulburn, detonate it.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy has *Soulburn, detonate all but 1."
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
