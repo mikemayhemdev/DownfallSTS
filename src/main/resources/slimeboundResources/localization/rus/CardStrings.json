@@ -9,7 +9,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Книга стратегий",
-    "DESCRIPTION": "Добавляет в руку 4 случ. slimeboundmod:Рывка. Они стоят на 1 меньше в этом бою. NL Сжигается."
+    "DESCRIPTION": "Добавляет в руку 3 случ. slimeboundmod:Рывка. Они стоят на 1 меньше в этом бою. NL Сжигается."
   },
   "Slimebound:Chomp": {
     "NAME": "Грызть",

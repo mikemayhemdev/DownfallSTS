@@ -9,7 +9,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consultar Livro de Jogadas",
-    "DESCRIPTION": "Ganhe 4 cards \"Investida\" aleatórios. Eles custam 1 a menos neste combate. NL Exaurir."
+    "DESCRIPTION": "Ganhe 3 cards \"Investida\" aleatórios. Eles custam 1 a menos neste combate. NL Exaurir."
   },
   "Slimebound:Chomp": {
     "NAME": "Mordida",

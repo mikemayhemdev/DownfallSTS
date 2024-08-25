@@ -119,7 +119,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "查找策略",
-    "DESCRIPTION": "隨機獲得4張 slimeboundmod:衝撞 牌， NL 本場戰鬥其耗能減1。 NL 消耗 。"
+    "DESCRIPTION": "隨機獲得3張 slimeboundmod:衝撞 牌， NL 本場戰鬥其耗能減1。 NL 消耗 。"
   },
   "Slimebound:Recycling": {
     "NAME": "循環再生",
