@@ -132,7 +132,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "作戦の確認",
-    "DESCRIPTION": "手札に4枚のランダムなタックルカードを加える。 それらのカードのコストは戦闘中1低下する。 NL 廃棄 。"
+    "DESCRIPTION": "手札に3枚のランダムなタックルカードを加える。 それらのカードのコストは戦闘中1低下する。 NL 廃棄 。"
   },
   "Slimebound:Recycling": {
     "NAME": "リサイクル",

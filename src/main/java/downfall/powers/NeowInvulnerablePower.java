@@ -3,6 +3,7 @@ package downfall.powers;
 import charbosses.bosses.AbstractCharBoss;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import downfall.actions.NeowRezAction;
 import downfall.downfallMod;
@@ -28,6 +30,7 @@ public class NeowInvulnerablePower extends AbstractPower {
 
     private boolean firstTurn;
 
+    // god of life
     public NeowInvulnerablePower(final AbstractCreature owner, int stack) {
         this.ID = POWER_ID;
         this.owner = owner;
@@ -50,8 +53,14 @@ public class NeowInvulnerablePower extends AbstractPower {
         super.onAfterUseCard(card, action);
             this.owner.heal(amount);
         //AbstractDungeon.effectsQueue.add(new HealEffect(owner.hb.cX - owner.animX, owner.hb.cY, 2));
+    }
 
-
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+        if (this.amount <= 0) {
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, AbstractDungeon.player, POWER_ID));
+        }
     }
 
 

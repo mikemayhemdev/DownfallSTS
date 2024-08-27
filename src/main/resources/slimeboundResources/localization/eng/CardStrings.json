@@ -9,7 +9,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consult Playbook",
-    "DESCRIPTION": "Gain 4 random \"Tackle\" cards. They cost 1 less this combat. NL Exhaust."
+    "DESCRIPTION": "Gain 3 random \"Tackle\" cards. They cost 1 less this combat. NL Exhaust."
   },
   "Slimebound:Chomp": {
     "NAME": "Chomp",

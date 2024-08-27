@@ -130,7 +130,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consult Playbook",
-    "DESCRIPTION": "Add 4 random slimeboundmod:Tackles to your hand. They cost 1 less this combat. NL Exhaust."
+    "DESCRIPTION": "Add 3 random slimeboundmod:Tackles to your hand. They cost 1 less this combat. NL Exhaust."
   },
   "Slimebound:Recycling": {
     "NAME": "Recycling",
