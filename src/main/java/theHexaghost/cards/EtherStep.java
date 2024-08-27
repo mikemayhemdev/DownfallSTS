@@ -22,6 +22,7 @@ public class EtherStep extends AbstractHexaCard implements HexaPurpleTextInterfa
         baseMagicNumber = magicNumber = 1;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
+        HexaMod.loadJokeCardImage(this, "EtherStep.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -155,7 +155,9 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
         }
 
         if (AbstractCharBoss.boss.powerhouseTurn){
-            AbstractCharBoss.boss.getPower(WatcherCripplePower.POWER_ID).onSpecificTrigger();
+            if(  AbstractCharBoss.boss.hasPower(WatcherCripplePower.POWER_ID)   ){
+                AbstractCharBoss.boss.getPower(WatcherCripplePower.POWER_ID).onSpecificTrigger();
+            }
         }
         return cardsList;
 

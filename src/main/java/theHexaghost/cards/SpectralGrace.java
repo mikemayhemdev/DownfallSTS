@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 
 public class SpectralGrace extends AbstractHexaCard{
 
@@ -19,6 +20,7 @@ public class SpectralGrace extends AbstractHexaCard{
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        HexaMod.loadJokeCardImage(this, "SpectralGrace.png");
     }
 
 //    @Override

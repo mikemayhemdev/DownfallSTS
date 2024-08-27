@@ -22,7 +22,6 @@ import hermit.util.TextureLoader;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
 import theHexaghost.powers.BurnPower;
-import theHexaghost.powers.CrispyPower;
 import theHexaghost.relics.CandleOfCauterizing;
 import theHexaghost.util.HexaPurpleTextInterface;
 import theHexaghost.vfx.AfterlifePlayEffect;

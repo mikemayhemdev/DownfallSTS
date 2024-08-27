@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.BetterDrawPileToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 
 public class SeventhEye extends AbstractHexaCard {
 
@@ -12,6 +13,7 @@ public class SeventhEye extends AbstractHexaCard {
     public SeventhEye() {
         super(ID, 1, AbstractCard.CardType.SKILL, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.exhaust = true;
+        HexaMod.loadJokeCardImage(this, "SeventhEye.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
