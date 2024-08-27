@@ -20,7 +20,7 @@ public class SpectralSpark extends AbstractHexaCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = MAGIC;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        HexaMod.loadJokeCardImage(this, "SpectralSpark.png");
+        HexaMod.loadJokeCardImage(this, "NaughtySpirit.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

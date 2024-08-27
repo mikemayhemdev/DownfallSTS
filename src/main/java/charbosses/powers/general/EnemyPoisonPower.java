@@ -66,7 +66,6 @@ public class EnemyPoisonPower extends AbstractPower {
         }
     }
 
-
     static {
         powerStrings = CardCrawlGame.languagePack.getPowerStrings("Poison");
         NAME = powerStrings.NAME;

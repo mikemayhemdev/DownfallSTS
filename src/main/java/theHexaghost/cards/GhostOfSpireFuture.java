@@ -14,7 +14,7 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
         magicNumber = baseMagicNumber = 1;
         this.isEthereal = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        HexaMod.loadJokeCardImage(this, "GhostOfSpireFuture.png");
+        HexaMod.loadJokeCardImage(this, "IntoShadow.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

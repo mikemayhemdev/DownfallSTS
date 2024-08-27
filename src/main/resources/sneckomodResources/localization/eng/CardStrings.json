@@ -54,7 +54,7 @@
     "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. Gain a random card of the same class.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. Gain a random card of the same class. NL It costs 1 less.",
     "EXTENDED_DESCRIPTION": [
-      " to Exhaust for Nope."
+      "Exhaust for Nope."
     ]
   },
   "sneckomod:MasterEye": {
@@ -156,7 +156,7 @@
     "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, NL Choose a card, then *Transform your hand to that card's class.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw !M! cards, NL Choose a card, then *Transform your hand to that card's class.",
     "EXTENDED_DESCRIPTION": [
-      "to Exhaust for Soul Exchange."
+      "Exhaust for Soul Exchange."
     ]
   },
   "sneckomod:SoulRoll": {

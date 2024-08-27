@@ -238,35 +238,6 @@
       " раза до конца боя."
     ]
   },
-  "hexamod:SoulburnOnExhaustPower": {
-    "NAME": "Заражение души",
-    "DESCRIPTIONS": [
-      "Накладывает #b",
-      " #yОжога #yдуши на данного врага, когда вы #yСжигаете карту в этом ходу."
-    ]
-  },
-  "hexamod:LoseIntensityPower": {
-    "NAME": "Снижение Интенсивности",
-    "DESCRIPTIONS": [
-      "Отнимает #b",
-      " #yИнтенсивности в конце этого хода."
-    ]
-  },
-  "hexamod:MaxHPPostCombatPower": {
-    "NAME": "Награда за печать: Макс. ОЗ",
-    "DESCRIPTIONS": [
-      "Вы получите #b",
-      " Макс. ОЗ в конце боя."
-    ]
-  },
-  "hexamod:InfernoPotionPower": {
-    "NAME": "Адское зелье",
-    "DESCRIPTIONS": [
-      "Огоньки действуют на ВСЕХ врагов до конца боя.",
-      "Огоньки действуют на ВСЕХ врагов #b",
-      " раза до конца боя."
-    ]
-  },
   "hexamod:PlayCardAndExhaustPower": {
     "NAME": "Теневой Сдвиг",
     "DESCRIPTIONS": [

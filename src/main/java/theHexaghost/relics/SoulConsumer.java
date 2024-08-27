@@ -37,10 +37,6 @@ public class SoulConsumer extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
-    public void atTurnStart() {
-        this.counter = 0;
-    }
-
     @Override
     public void onExhaust(AbstractCard card) {
         ++this.counter;
