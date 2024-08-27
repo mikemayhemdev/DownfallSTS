@@ -54,17 +54,17 @@ public class EnemyPoisonPower extends AbstractPower {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
-    @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-                this.flashWithoutSound();
-                this.addToBot(new EnemyPoisonDamageAction(this.owner, this.source, this.amount, AttackEffect.POISON));
-                //Poison reduction/removal handled in damage action
-            }
-
-        }
-    }
+//     Damage action moved to SilentPoisonPower so that it happens after Afterlife activation
+//    @Override
+//    public void atEndOfTurn(boolean isPlayer) {
+//        if (isPlayer) {
+//            if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+//                this.flashWithoutSound();
+//                this.addToBot(new EnemyPoisonDamageAction(this.owner, this.source, this.amount, AttackEffect.POISON));
+//                //Poison reduction/removal handled in damage action
+//            }
+//        }
+//    }
 
     static {
         powerStrings = CardCrawlGame.languagePack.getPowerStrings("Poison");
