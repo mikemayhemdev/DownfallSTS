@@ -81,6 +81,8 @@ public class MainMenuAdPatch {
                 if (!popup.done) {
                     popup.render(sb);
                 }
+            } else {
+                popup.done = true;
             }
         }
     }
@@ -94,6 +96,8 @@ public class MainMenuAdPatch {
                 if (!popup.done) {
                     popup.update();
                 }
+            } else {
+                popup.done = true;
             }
         }
     }

@@ -47,16 +47,20 @@ public class TalesAndTacticsPopup {
         btnHitbox = new Hitbox(POS_X + (986 * Settings.scale), POS_Y + (600 * Settings.scale), dismissBtnTex.getWidth() * Settings.scale, dismissBtnTex.getHeight() * Settings.scale);
         steamHitbox = new Hitbox(POS_X + (662 * Settings.scale), POS_Y + (49 * Settings.scale), steamBtnTex.getWidth() * Settings.scale, steamBtnTex.getHeight() * Settings.scale);
         discordHitbox = new Hitbox(POS_X + (147 * Settings.scale), POS_Y + (46 * Settings.scale), discordBtnTex.getWidth() * Settings.scale, discordBtnTex.getHeight() * Settings.scale);
-        if (downfallMod.unseenTutorials[5]) {
-            downfallMod.unseenTutorials[5] = false;
-            done = false;
-            fadingIn = true;
-            try {
-                downfallMod.saveTutorialsSeen();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+        if (!downfallMod.STEAM_MODE){
+
+            if (downfallMod.unseenTutorials[5]) {
+                downfallMod.unseenTutorials[5] = false;
+                done = false;
+                fadingIn = true;
+                try {
+                    downfallMod.saveTutorialsSeen();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
+
     }
 
     public void update() {
