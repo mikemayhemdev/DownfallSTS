@@ -1,0 +1,14 @@
+{
+"hermit:Tonic": {
+        "NAME": "トニック",
+        "DESCRIPTIONS": ["#b", " #y堅牢 を得る。"]
+},
+"hermit:BlackBile": {
+        "NAME": "黒色粘液",
+        "DESCRIPTIONS": ["#y傷 #b", " を与える。"]
+},
+"hermit:Eclipse": {
+        "NAME": "リキッドヴォイド",
+        "DESCRIPTIONS": ["廃棄札の中から #b", " 枚のカードを手札に加える。このターン、そのコストは #b0"," 廃棄札の中からカードを手札に加える。このターン、そのコストは #b0"]
+}
+}

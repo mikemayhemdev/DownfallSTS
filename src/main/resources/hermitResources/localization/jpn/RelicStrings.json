@@ -1,0 +1,102 @@
+{
+  "hermit:Momento": {
+    "NAME": "古いロケット",
+    "FLAVOR": "中には色褪せた写真が入っている。",
+    "DESCRIPTIONS": [
+      "戦闘開始時、手札に #yメメント を加える。"
+    ]
+  },
+  "hermit:RyeStalk": {
+    "NAME": "ライ麦の茎",
+    "FLAVOR": "長い間咥えられていたが、まだ綺麗な状態だ。",
+    "DESCRIPTIONS": [
+      "敵のターン中に自分がHPを失う度、カードを #b1 枚引く。"
+    ]
+  },
+  "hermit:BartenderGlass": {
+    "NAME": "ショットグラス",
+    "FLAVOR": "中に入れた液体が別の物に変化する。",
+    "DESCRIPTIONS": [
+      "戦闘中に ポーション を 使用した時、ランダムなポーションを得る。 1回の戦闘に使えるポーションが #b2 個までになる。",
+      "この戦闘中はもうポーションを使えない。"
+    ]
+  },
+  "hermit:Horseshoe": {
+    "NAME": "蹄鉄",
+    "FLAVOR": "幸運のお守り。これを見逃す人もいるはず。",
+    "DESCRIPTIONS": [
+      " #y脱力 , #y脆弱化 , #y弱体 のいずれかを受けた時、その数値を #b1 減らす。"
+    ]
+  },
+  "hermit:Spyglass": {
+    "NAME": "スパイグラス",
+    "FLAVOR": "ケスティン・ハイフィン の持ち物。",
+    "DESCRIPTIONS": [
+      "ターン終了時 #yhermit:集中 している時。次のターン開始時に [E] を得る。"
+    ]
+  },
+  "hermit:RedScarf": {
+    "NAME": "赤いスカーフ",
+    "FLAVOR": "ポカポカして暖かい。",
+    "DESCRIPTIONS": [
+      "敵に新たにデバフを与えた時 #b3 #yブロック を得る。"
+    ]
+  },
+  "hermit:DentedPlate": {
+    "NAME": "へこんだプレート",
+    "FLAVOR": "内部にまだ数発の弾丸が残ってる。",
+    "DESCRIPTIONS": [
+      "HPが #b50% 以下の時、ターン開始時 [E] を得て追加でカードを #b1 枚ドローする。"
+    ]
+  },
+  "hermit:PetGhost": {
+    "NAME": "ペットの幽霊",
+    "FLAVOR": "かわいそうなヤツ",
+    "DESCRIPTIONS": [
+      "各戦闘で最初に受けた 致命的なHP減少 を防ぐ。"
+    ]
+  },
+  "hermit:CharredGlove": {
+    "NAME": "焦げた手袋",
+    "FLAVOR": "手袋の一部は今でも別世界の燃えカスで光っている。",
+    "DESCRIPTIONS": [
+      " #r呪い を引く度に、次のアタックのダメージが #b3 上昇する。"
+    ]
+  },
+  "hermit:ClaspedLocket": {
+    "NAME": "留め具付きのロケット",
+    "FLAVOR": "もう、開かない。",
+    "DESCRIPTIONS": [
+      " #y古いロケット と置き換える。 毎ターン初めて 呪い を引いた時それを #y廃棄 し、カードを #b2 枚引く。 取得時、 #b2 枚の #r怪我 をデッキに加える。",
+      "もう二度と..."
+    ]
+  },
+  "hermit:StraightRazor": {
+    "NAME": "直刃の剃刀",
+    "FLAVOR": "よりクリーンなシェービングの為に...",
+    "DESCRIPTIONS": [
+      "デッキのカードを削除したり #y変換 したりする度にHPを #b15 回復する。"
+    ]
+  },
+  "hermit:BrassTacks": {
+    "NAME": "真鍮製の鋲",
+    "FLAVOR": "これは決して色褪せない。",
+    "DESCRIPTIONS": [
+      "あなたのターン終了時、 #b2 ブロックを得る。"
+    ]
+  },
+  "hermit:BlackPowder": {
+    "NAME": "黒色火薬",
+    "FLAVOR": "取扱注意",
+    "DESCRIPTIONS": [
+      "#yhermit:デッド-オン を発動させた時、敵全体に #b2 ダメージを与える。"
+    ]
+  },
+  "hermit:BloodyTooth": {
+    "NAME": "折れた歯",
+    "FLAVOR": "人間の物にしては大きすぎる気が...",
+    "DESCRIPTIONS": [
+      "エリートを倒すたびにHPを #b7 回復し、更に #b35 ゴールドを得る。"
+    ]
+  }
+}

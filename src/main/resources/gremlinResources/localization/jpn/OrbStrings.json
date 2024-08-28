@@ -1,41 +1,41 @@
 {
   "Gremlin:FatGremlin": {
-    "NAME": "Fat Gremlin",
+    "NAME": "太っちょグレムリン",
     "DESCRIPTION": [
-      "Whenever you play an attack, apply #b",
-      " #yWeak to all targets."
+      "アタックをプレイ後、対象にしたモンスターに #y脱力 #b",
+      " を与える。"
     ]
   },
 
   "Gremlin:GremlinWizard": {
-    "NAME": "Gremlin Wizard",
+    "NAME": "グレムリンウィザード",
     "DESCRIPTION": [
-      "Whenever you play a skill, gain #b",
-      " #yWiz."
+      "スキルをプレイ後、 #y魔力 #b",
+      " を得る。"
     ]
   },
 
   "Gremlin:MadGremlin": {
-    "NAME": "Mad Gremlin",
+    "NAME": "マッドグレムリン",
     "DESCRIPTION": [
-      "Gain #b",
-      " #yTemporary #yStrength when attacked."
+      "攻撃を受けた時 #y一時的な #y筋力 #b",
+      " を得る。"
     ]
   },
 
   "Gremlin:ShieldGremlin": {
-    "NAME": "Shield Gremlin",
+    "NAME": "シールドグレムリン",
     "DESCRIPTION": [
-      "Whenever you play a skill, gain #b",
-      " #yBlock."
+      "スキルをプレイ後 #b",
+      " #yブロック を得る。"
     ]
   },
 
   "Gremlin:SneakyGremlin": {
-    "NAME": "Sneaky Gremlin",
+    "NAME": "スニーキーグレムリン",
     "DESCRIPTION": [
-      "Whenever you play an attack, deal #b",
-      " damage to a random enemy."
+      "アタックをプレイ後、ランダムな敵に #b",
+      " ダメージを与える。"
     ]
   }
 }

@@ -3,200 +3,230 @@
     "NAMES": [
       "absorb",
       "absorbing",
-      "absorbed"
+      "absorbed",
+      "吸収"
     ],
-    "PROPER_NAME": "Absorb",
-    "DESCRIPTION": "Manually recombine with your leading #ySlime, returning the Max HP it took upon #ySplitting and gaining 1 #yStrength."
+    "PROPER_NAME": "吸収",
+    "DESCRIPTION": "先頭の スライム を自発的に組み替えた時 #y筋力 1 を得る。"
   },
   {
     "NAMES": [
       "split",
-      "splitting"
+      "splitting",
+      "分裂",
+      "産み出す"
     ],
-    "PROPER_NAME": "Split",
-    "DESCRIPTION": "Lose #b4 HP and spawn a #ySlime minion, who attacks at the start of each turn. While the #ySlime is alive, your Max HP is reduced by #b4. NL NL If you have no empty slots, your oldest Slime is automatically #yAbsorbed to make room, granting you 1 #yStrength."
+    "PROPER_NAME": "分裂",
+    "DESCRIPTION": "ターン開始時に攻撃する #yスライムミニオン を1体産み出す。 NL 空きスロットが無い場合、一番古いスライムは自動的に #y吸収 され、 #y筋力 1 に変わる。"
   },
   {
     "NAMES": [
       "goop",
-      "gooped"
+      "gooped",
+      "汚泥"
     ],
-    "PROPER_NAME": "Goop",
-    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, removing all #yGoop and triggering any #yConsume effects."
+    "PROPER_NAME": "汚泥",
+    "DESCRIPTION": "次の攻撃時 #y汚泥 分ダメージを増加させる。全ての #y汚泥 を除去し、 #y使用 した時の効果を発動する。"
   },
   {
     "NAMES": [
-      "potency"
+      "potency",
+      "効力"
     ],
-    "PROPER_NAME": "Potency",
-    "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes."
+    "PROPER_NAME": "効力",
+    "DESCRIPTION": "#yスライムミニオン の全てのダメージを増加させる。副効果は効力2毎に1増加する。"
   },
   {
     "NAMES": [
       "command",
-      "commands"
+      "commands",
+      "命令"
     ],
-    "PROPER_NAME": "Command",
-    "DESCRIPTION": "Your leading Slime attacks."
+    "PROPER_NAME": "命令",
+    "DESCRIPTION": "先頭のスライムが攻撃する。"
   },
   {
     "NAMES": [
       "torchhead slime",
-      "torchhead_slime"
+      "torchhead_slime",
+      "トーチヘッドスライム"
     ],
-    "PROPER_NAME": "Torch Head Slime",
-    "DESCRIPTION": "Attacks for #b6 each turn. Gains twice the normal benefit from #yPotency."
+    "PROPER_NAME": "トーチヘッドスライム",
+    "DESCRIPTION": "ターン開始時 #b6 ダメージを与える。あなたの #y筋力 の影響を受ける。"
   },
   {
     "NAMES": [
-      "bruiser slime",
       "bruiser_slime",
       "bruiser slimes",
       "bruiser_slimes",
-      "bruiser"
+      "bruiser",
+      "ブルーザースライム"
     ],
-    "PROPER_NAME": "Bruiser Slime",
-    "DESCRIPTION": "Attacks for #b5 each turn."
+    "PROPER_NAME": "ブルーザースライム",
+    "DESCRIPTION": "ターン開始時 #b5 ダメージを与える"
   },
   {
     "NAMES": [
-      "cultist slime",
-      "cultist_slime"
+      "cultist_slime",
+      "カルティストスライム"
     ],
-    "PROPER_NAME": "Cultist Slime",
-    "DESCRIPTION": "Attacks for #b6 each turn, then increases its damage by #b1."
+    "PROPER_NAME": "カルティストスライム",
+    "DESCRIPTION": "ターン開始時 #b6 ダメージを与える。攻撃時、ダメージを #b1 上昇させる。"
   },
   {
     "NAMES": [
-      "leeching slime",
       "leeching_slime",
       "leeching slimes",
       "leeching_slimes",
-      "leeching"
+      "leeching",
+      "リーチングスライム"
     ],
-    "PROPER_NAME": "Leeching Slime",
-    "DESCRIPTION": "Attacks for #b2 and grants you #b2 #yBlock each turn."
+    "PROPER_NAME": "リーチングスライム",
+    "DESCRIPTION": "ターン開始時 #b1 ダメージを与え あなたに #b3 #yブロック を付与する。"
   },
   {
     "NAMES": [
-      "guerilla slime",
       "guerilla_slime",
       "guerilla slimes",
       "guerilla_slimes",
-      "guerilla"
+      "Guerilla_Slime",
+      "guerilla",
+      "ゲリラスライム"
     ],
-    "PROPER_NAME": "Guerilla Slime",
-    "DESCRIPTION": "Attacks for #b3 to ALL enemies each turn."
+    "PROPER_NAME": "ゲリラスライム",
+    "DESCRIPTION": "ターン開始時敵全体に #b3 ダメージを与える。"
   },
   {
     "NAMES": [
-      "mire slime",
       "mire_slime",
       "mire slimes",
       "mire_slimes",
-      "mire"
+      "mire",
+      "マイアスライム"
     ],
-    "PROPER_NAME": "Mire Slime",
-    "DESCRIPTION": "Attacks for #b2 and applies #b2 #yGoop each turn."
+    "PROPER_NAME": "マイアスライム",
+    "DESCRIPTION": "ターン開始時 #b2 ダメージと #y汚泥 #b2 を与える。"
   },
   {
     "NAMES": [
       "bronze slime",
-      "bronze_slime"
+      "bronze_slime",
+      "ブロンズスライム"
     ],
-    "PROPER_NAME": "Bronze Slime",
-    "DESCRIPTION": "Attacks for #b4 and grants you #b4 #yBlock each turn."
+    "PROPER_NAME": "ブロンズスライム",
+    "DESCRIPTION": "ターン開始時敵全体に #b10 ダメージを与えるが、それ以外の攻撃がスキップされる。"
   },
   {
     "NAMES": [
-      "lick"
+      "lick",
+      "舐める"
     ],
-    "PROPER_NAME": "Lick",
-    "DESCRIPTION": "0-cost cards that apply #yGoop with a variety of secondary effects."
+    "PROPER_NAME": "舐める",
+    "DESCRIPTION": "#y汚泥 を付与する0コストカード。"
   },
   {
     "NAMES": [
       "ghostflame slime",
-      "ghostflame_slime"
+      "ghostflame_slime",
+      "ゴーストフレイムスライム"
     ],
-    "PROPER_NAME": "Ghostflame Slime",
-    "DESCRIPTION": "Attacks for #b3 and applies #b3 #yBurn each turn."
+    "PROPER_NAME": "ゴーストフレイムスライム",
+    "DESCRIPTION": "ターン開始時 #b3 ダメージと #b5 #yソウルバーン を与える。"
   },
   {
     "NAMES": [
-      "morph"
+      "slow",
+      "スロウ"
     ],
-    "PROPER_NAME": "Morph",
-    "DESCRIPTION": "Replace with a random new card of your class, regardless of type. It costs #b1 less."
-  },
-  {
-    "NAMES": [
-      "slow"
-    ],
-    "PROPER_NAME": "Slow",
-    "DESCRIPTION": "Receives #b10% more damage per card played in a turn."
+    "PROPER_NAME": "スロウ",
+    "DESCRIPTION": "1ターンにプレイしたカード1枚毎に被ダメージが #b10% 増加する。"
   },
   {
     "NAMES": [
       "tackle",
-      "tackles"
+      "tackles",
+      "タックル"
     ],
-    "PROPER_NAME": "Tackle",
-    "DESCRIPTION": "High-damage #yAttacks that also deal a small amount of damage to you."
+    "PROPER_NAME": "タックル",
+    "DESCRIPTION": "高い威力を持つ #yアタック 。自分にも少量のダメージを与える。"
   },
   {
     "NAMES": [
       "spire boss",
-      "spire_boss"
+      "spire_boss",
+      "スパイアボス"
     ],
-    "PROPER_NAME": "Spire Boss",
-    "DESCRIPTION": "Powerful 0-cost cards, inspired by the bosses of the Spire."
+    "PROPER_NAME": "スパイアボス",
+    "DESCRIPTION": "塔のボスをイメージした、強力な0コストカード。"
   },
   {
     "NAMES": [
       "protector slime",
-      "protector_slime"
+      "protector_slime",
+      "スパイキースライム"
     ],
-    "PROPER_NAME": "Spiky Slime",
-    "DESCRIPTION": "Attacks for #b2 and grants you #b6 #yBlock each turn."
+    "PROPER_NAME": "スパイキースライム",
+    "DESCRIPTION": "ターン開始時 #b4 ダメージを与え、主人に #b4 #y一時的なトゲ を付与する。"
   },
   {
     "NAMES": [
       "insulting slime",
-      "insulting_slime"
+      "insulting_slime",
+      "インサルティングスライム"
     ],
-    "PROPER_NAME": "Insulting Slime",
-    "DESCRIPTION": "Attacks for #b4 and applies #b1 #yVulnerable each turn."
+    "PROPER_NAME": "インサルティングスライム",
+    "DESCRIPTION": "ターン開始時 #b4 ダメージと、 #y弱体 #b1 を与える。"
   },
   {
     "NAMES": [
       "darkling slime",
-      "darkling_slime"
+      "darkling_slime",
+      "ダークリングスライム"
     ],
-    "PROPER_NAME": "Darkling Slime",
-    "DESCRIPTION": "Attacks for #b3 each turn. When Commanded, other Darkling Slimes also attack."
+    "PROPER_NAME": "ダークリングスライム",
+    "DESCRIPTION": "ターン開始時 #b3 ダメージを与える。命令されると他のダークリングスライムも攻撃する。"
   },
   {
     "NAMES": [
       "ancient slime",
-      "ancient_slime"
+      "ancient_slime",
+      "エンシェントスライム"
     ],
-    "PROPER_NAME": "Ancient Slime",
-    "DESCRIPTION": "Attacks for #b3 and causes you to draw #b1 card each turn."
+    "PROPER_NAME": "エンシェントスライム",
+    "DESCRIPTION": "ターン開始時 #b3 ダメージを与え、主人にカードを #b1 枚ドローさせる。"
   },
   {
     "NAMES": [
       "time slime",
-      "time_slime"
+      "time_slime",
+      "タイムスライム"
     ],
-    "PROPER_NAME": "Time Slime",
-    "DESCRIPTION": "Attacks for #b4 and applies #b1 #yWeak each turn."
+    "PROPER_NAME": "タイムスライム",
+    "DESCRIPTION": "ターン開始時 #b4 ダメージと、 #y脱力 #b1 を与える。"
   },
   {
     "NAMES": [
-      "consume"
+      "consume",
+      "泥食い"
     ],
-    "PROPER_NAME": "Consume",
-    "DESCRIPTION": "Bonus effect which activates when an #yAttack is used on an enemy who has #yGoop."
+    "PROPER_NAME": "泥食い",
+    "DESCRIPTION": "#y汚泥 を持つ敵に #yアタック を使用した場合に発動するボーナス効果。"
+  },
+  {
+    "NAMES": [
+      "specialist",
+      "specialist",
+      "上級スライム"
+    ],
+    "PROPER_NAME": "上級スライム",
+    "DESCRIPTION": "通常のスライムよりも強力なユニークスライム。"
+  },
+  {
+    "NAMES": [
+      "buried",
+      "埋没"
+    ],
+    "PROPER_NAME": "埋没",
+    "DESCRIPTION": "埋没 を持つカードは #y発掘 の効果を受ける時常に最後に選択される。"
   }
 ]

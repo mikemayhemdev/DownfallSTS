@@ -1,31 +1,57 @@
 [
   {
-    "PROPER_NAME": "Snekproof",
+    "PROPER_NAME": "蛇避け",
     "NAMES": [
-      "snekproof"
+      "snekproof",
+      "蛇避け"
     ],
-    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled."
+    "DESCRIPTION": "蛇避けを持つカードは #y混乱 や #y泥まみれ の影響を受けない。"
   },
   {
-    "PROPER_NAME": "Unknown",
-    "NAMES": [
-      "unknown"
-    ],
-    "DESCRIPTION": "At the start of combat, Unknown cards transform into other random cards from ANY other class that satisfy certain constraints."
-  },
-  {
-    "PROPER_NAME": "Muddle",
+    "PROPER_NAME": "泥まみれ",
     "NAMES": [
       "muddle",
-      "muddled"
+      "muddled",
+      "泥まみれ"
     ],
-    "DESCRIPTION": "Muddling a card changes its cost to between 0 and 3."
+    "DESCRIPTION": "このターンの間、カードを泥まみれにしてコストをランダムで #b0 ～ #b3 に変化させる。"
   },
   {
-    "PROPER_NAME": "Offclass",
+    "PROPER_NAME": "オフクラス",
     "NAMES": [
-      "offclass"
+      "offclass",
+      "オフクラス"
     ],
-    "DESCRIPTION": "An Offclass card is any obtainable card from a class other than your own."
+    "DESCRIPTION": "オフクラス カードは自分以外のキャラクターのカード。 (無色、呪い、状態異常カードを含む)"
+  },
+  {
+    "PROPER_NAME": "識別",
+    "NAMES": [
+      "identify",
+      "識別"
+    ],
+    "DESCRIPTION": " #y未識別 のカードを、永久にランダムな現在のカードと交換する。"
+  },
+  {
+    "PROPER_NAME": "抹消",
+    "NAMES": [
+      "抹消"
+    ],
+    "DESCRIPTION": "使用後デッキから削除される。"
+  },
+    {
+    "PROPER_NAME": "変身",
+    "NAMES": [
+      "変身"
+    ],
+    "DESCRIPTION": "カードやポーションを別の物に変化させる。"
+  },
+  {
+    "PROPER_NAME": "ラッキー",
+    "NAMES": [
+      "lucky",
+      "ラッキー"
+    ],
+    "DESCRIPTION": "ランダムに値が決まるカードは可能な限り最大の値が使われるようになる。( 泥まみれ には影響しない。)"
   }
 ]

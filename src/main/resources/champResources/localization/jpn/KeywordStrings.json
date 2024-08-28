@@ -1,0 +1,87 @@
+[
+  {
+    "PROPER_NAME": "テクニック",
+    "NAMES": [
+      "technique",
+      "techniques",
+      "champ:[crown_icon]",
+      "[crown_icon]",
+      "テクニック"
+    ],
+    "DESCRIPTION": "#yスタンス では スキル にボーナスが付く。"
+  },
+  {
+    "PROPER_NAME": "コンボ",
+    "NAMES": [
+      "コンボ:",
+      "combo",
+      "コンボ"
+    ],
+    "DESCRIPTION": "指定の #yスタンス でプレイすると追加効果が発動する。"
+  },
+  {
+    "PROPER_NAME": "フィニッシャー",
+    "NAMES": [
+      "finisher",
+      "finishers",
+      "[fist_icon]",
+      "champ:[fist_icon]",
+      "フィニッシャー"
+    ],
+    "DESCRIPTION": "スタンスに入っている必要がある。 NL フィニッシャーをプレイ後、スタンスを解除してフィニッシャーボーナスを得る。"
+  },
+  {
+    "PROPER_NAME": "カウンター",
+    "NAMES": [
+      "counter",
+      "カウンター"
+    ],
+    "DESCRIPTION": "次に #y攻撃 でダメージを受けた時ダメージを返す。"
+  },
+  {
+    "PROPER_NAME": "守護",
+    "NAMES": [
+      "defensive",
+      "defensive.",
+      "守護"
+    ],
+    "DESCRIPTION": "#yスタンス NL #yスキルボーナス NL #yカウンター #b3 を得る。 NL #yフィニッシャーエフェクト NL #b8 #yブロック を得る。"
+  },
+  {
+    "PROPER_NAME": "狂化",
+    "NAMES": [
+      "berserker",
+      "berserker.",
+      "狂化"
+    ],
+    "DESCRIPTION": "#yスタンス NL #yスキルボーナス NL #b2 #y気力 を得る。 NL #yフィニッシャーエフェクト NL #y筋力 #b1 を得る。"
+  },
+  {
+    "PROPER_NAME": "剣闘",
+    "NAMES": [
+      "gladiator",
+      "gladiator.",
+      "剣闘"
+    ],
+    "DESCRIPTION": "#yスタンス NL #yスキルボーナス NL カードを1枚引く。 NL #yフィニッシャーエフェクト NL 次のターン カードを #b1 枚引き、 [E] を得る。ターンを終了する。"
+  },
+  {
+    "PROPER_NAME": "アルティメットスタンス",
+    "NAMES": [
+      "ultimate",
+      "ultimate.",
+      "アルティメット"
+    ],
+    "DESCRIPTION": "#yスタンス NL #y守護 と #y狂化 #yスタンス の効果を併せ持つ。 NL この #yスタンス の有効期間中に解除された場合、再度このスタンスに入る。"
+  },
+  {
+    "PROPER_NAME": "疲労",
+    "NAMES": [
+      "fatigue",
+      "fatigued",
+      "fatigue.",
+      "疲労"
+    ],
+    "DESCRIPTION": "HPを失う。 戦闘終了後に #y疲労 で失ったHPを回復する。 #y疲労 の効果で死ぬことはない。"
+  }
+]

@@ -1,1 +1,34 @@
-{}
+{
+  "downfall:Aged": {
+    "NAME": "加齢",
+    "DESCRIPTION": "使用不可 NL エセリアル NL ターン終了時、山札の上に *空虚 を追加する。"
+  },
+  "downfall:Bewildered": {
+    "NAME": "困惑",
+    "DESCRIPTION": "使用不可 NL エセリアル NL このカードを引いた時、手札を sneckomod:泥まみれ にする。"
+  },
+  "downfall:Icky": {
+    "NAME": "粘液塗れ",
+    "DESCRIPTION": " *粘液 を手札に加える。 NL 廃棄"
+  },
+  "downfall:Haunted": {
+    "NAME": "幽霊",
+    "DESCRIPTION": "使用不可 NL エセリアル NL このカードを引いた時、手札のカードは全て エセリアル を持つ。"
+  },
+  "downfall:Malfunctioning": {
+    "NAME": "不調",
+    "DESCRIPTION": "ターン終了時、手札を全てランダムな 状態異常 カードに変換する。 NL 廃棄"
+  },
+  "downfall:Scatterbrained": {
+    "NAME": "散漫",
+    "DESCRIPTION": "ターン終了時にこのカードが手札にあった場合、捨札にこのカードのコピーを加える。 NL 廃棄"
+  },
+  "downfall:SummonMushrooms": {
+    "NAME": "菌類混入",
+    "DESCRIPTION": "全てのマッシュルームを倒し、その残り HP と同じだけHPを回復する。 NL 2体のマッシュルームを呼び出す。"
+  },
+  "downfall:BossMaintenance": {
+    "NAME": "メンテナンス",
+    "DESCRIPTION": "戦闘中 *ストライク のダメージが !M! 増加する。 NL 敏捷性 !B! を得る。 NL このカードのコストが1増加する。"
+  }
+}

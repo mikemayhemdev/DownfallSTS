@@ -1,161 +1,95 @@
 {
-  "expansioncontent:ChargeUp": {
-    "NAME": "Charge Up",
-    "DESCRIPTION": "*Boss - Guardian. NL On your next turn, gain !B! Block and !M! Strength. NL Exhaust."
-  },
   "expansioncontent:GuardianWhirl": {
-    "NAME": "Guardian Whirl",
-    "DESCRIPTION": "*Boss - Guardian. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust."
-  },
-  "expansioncontent:DefensiveMode": {
-    "NAME": "Defensive Mode",
-    "DESCRIPTION": "*Boss - Guardian. NL Gain !B! Block. NL Enter guardianmod:Defensive_Mode."
+    "NAME": "旋風刃",
+    "DESCRIPTION": "必要 10 ブロック NL 敵全体に !D! ダメージを 4 回与える。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      "もっとブロックが必要だ"
+    ]
   },
   "expansioncontent:Hexaburn": {
-    "NAME": "Ghost Inferno",
-    "DESCRIPTION": "*Boss - Hexaghost. NL Lose 6 HP. NL Deal !D! damage a random enemy 6 times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "*Boss - Hexaghost. NL Deal !D! damage a random enemy 6 times. NL Exhaust."
+    "NAME": "ヘクサバーン",
+    "DESCRIPTION": " !M! ターン後、ランダムな敵に 6 回 !D! ダメージを与える。 NL 筋力 で強化される。"
   },
-  "expansioncontent:Sear": {
-    "NAME": "Greater Sear",
-    "DESCRIPTION": "*Boss - Hexaghost. NL Deal !D! damage. NL Apply !M! hexamod:Soulburn. NL Exhaust."
-  },
-  "expansioncontent:SuperHexaguard": {
-    "NAME": "Ghost Guard",
-    "DESCRIPTION": "*Boss - Hexaghost. Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL Draw 1 card."
+  "expansioncontent:Invincible筋力": {
+    "NAME": "インビンシブル",
+    "DESCRIPTION": "expansioncontent:無敵 10 を得る。 NL 既に expansioncontent:無敵 を持っていた場合、発動回数を 1 増やす"
   },
   "expansioncontent:HyperBeam": {
-    "NAME": "Automa-Beam",
-    "DESCRIPTION": "*Boss - Automaton. NL Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E]. NL Exhaust."
-  },
-  "expansioncontent:Flail": {
-    "NAME": "Flail",
-    "DESCRIPTION": "*Boss - Automaton. NL Deal !D! damage twice to ALL enemies. NL Gain !M! Artifact. NL Exhaust."
-  },
-  "expansioncontent:BronzeBeam": {
-    "NAME": "Orb Support",
-    "DESCRIPTION": "*Boss - Automaton. NL Deal !D! damage. NL Gain !B! Block. NL Exhaust."
-  },
-  "expansioncontent:DefensiveStance": {
-    "NAME": "Defensive Stance",
-    "DESCRIPTION": "*Boss - Champ. NL Gain !B! Block. NL Gain !M! Block at the end of each turn."
-  },
-  "expansioncontent:FaceSlap": {
-    "NAME": "Face Slap",
-    "DESCRIPTION": "*Boss - Champ. NL Remove all Block. NL Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
+    "NAME": "オートマ-ビーム",
+    "DESCRIPTION": "敵全体に !D! ダメージ。 NL 次のターン開始時、 [E] を失う。 NL 廃棄"
   },
   "expansioncontent:LastStand": {
-    "NAME": "Last Stand",
-    "DESCRIPTION": "*Boss - Champ. NL Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Gain 2 Strength.",
-    "UPGRADE_DESCRIPTION": "*Boss - Champ. NL Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Heal !M! and gain 2 Strength."
-  },
-  "expansioncontent:Collect": {
-    "NAME": "Collect",
-    "DESCRIPTION": "*Boss - Collector. NL Gain !B! Block. NL Gain 1 Strength. NL Gain 1 Dexterity."
+    "NAME": "ラストスタンド",
+    "DESCRIPTION": "全てのデバフを解除。 NL 筋力 1 を得る NL もし HP が半分以下なら 筋力 2 を得る。",
+    "UPGRADE_DESCRIPTION": "全てのデバフを解除。 NL 筋力 1 を得る NL もし HP が半分以下なら HPを !M! 回復し、 筋力 2 を得る。"
   },
   "expansioncontent:YouAreMine": {
-    "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "*Boss - Collector. NL Remove all Block, apply !M! Weak and apply !M! Vulnerable to ALL enemies. NL Exhaust."
-  },
-  "expansioncontent:Torchfire": {
-    "NAME": "Torchfire",
-    "DESCRIPTION": "*Boss - Collector. NL Deal !D! damage. Damage is increased by !M! for each Debuff on the enemy. NL Exhaust."
-  },
-  "expansioncontent:CaCaw": {
-    "NAME": "CA-CAW!",
-    "DESCRIPTION": "*Boss - Awakened One. NL Gain !M! Strength at the start of each turn."
-  },
-  "expansioncontent:DarkVoid": {
-    "NAME": "Dark Void",
-    "DESCRIPTION": "*Boss - Awakened One. NL Deal !D! damage to ALL enemies. The next time each enemy does not Attack on their turn, gain 1 Strength. NL Exhaust."
+    "NAME": "お前はわたしの物だ！！",
+    "DESCRIPTION": "敵全体の ブロック をすべて除去し、 脱力 と 弱体 !M! を与える。 NL 廃棄"
   },
   "expansioncontent:AwakenDeath": {
-    "NAME": "Awaken",
-    "DESCRIPTION": "*Boss - Awakened One. NL When you would die, heal !M! HP instead."
-  },
-  "expansioncontent:TimeRipple": {
-    "NAME": "Time Ripple",
-    "DESCRIPTION": "*Boss - Time Eater. NL Deal !D! damage and apply Slow to ALL enemies. NL Exhaust."
+    "NAME": "目覚め",
+    "DESCRIPTION": "この戦闘中あなたが死亡した時または戦闘終了時、HPを !M! 回復しこのバフを失う。"
   },
   "expansioncontent:Chronoboost": {
-    "NAME": "Chrono-Boost",
-    "DESCRIPTION": "*Boss - Time Eater. NL Gain 2 Strength for every 12th card you play.",
-    "UPGRADE_DESCRIPTION": "*Boss - Time Eater. NL Gain 2 Strength for every 9th card you play."
-  },
-  "expansioncontent:ManipulateTime": {
-    "NAME": "Manipulate Time",
-    "DESCRIPTION": "*Boss - Time Eater. NL Gain !B! Block. NL Trigger all effects that happen at the start of your turn. NL Exhaust."
-  },
-  "expansioncontent:DonusPower": {
-    "NAME": "Donu's Power",
-    "DESCRIPTION": "*Boss - Ancients. NL Gain 1 Strength. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust."
-  },
-  "expansioncontent:DecasProtection": {
-    "NAME": "Deca's Protection",
-    "DESCRIPTION": "*Boss - Ancients. NL Gain 1 Dexterity. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust."
+    "NAME": "クロノ-ブースト",
+    "DESCRIPTION": "カードを12枚プレイする毎に 筋力 2 を得る。",
+    "UPGRADE_DESCRIPTION": "筋力 2 を得る。 NL カードを12枚プレイする毎に 筋力 2 を得る。"
   },
   "expansioncontent:PolyBeam": {
-    "NAME": "Twin Beam",
-    "DESCRIPTION": "*Boss - Ancients. NL Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
+    "NAME": "ドヌーブースト",
+    "DESCRIPTION": "筋力 !M! を得る。"
+  },
+  "expansioncontent:DecaShield": {
+    "NAME": "デカシールド",
+    "DESCRIPTION": "プレートアーマー !B! を得る。"
+  },
+  "expansioncontent:ShapePower": {
+    "NAME": "シェイプ達の祝福",
+    "DESCRIPTION": "選択 NL 筋力 !M! NL または NL プレートアーマー !DM! ",
+    "EXTENDED_DESCRIPTION": [
+      "ドヌーパワー",
+      "筋力 !M! を得る。",
+      "デカシールド",
+      "プレートアーマー !M! を得る。"
+    ]
   },
   "expansioncontent:PrepareCrush": {
-    "NAME": "Prepare Crush",
-    "DESCRIPTION": "*Boss - Slime. NL Gain !B! Block. NL On your next turn, gain [E] [E] [E] and add SLIME CRUSH to your hand. NL Exhaust."
-  },
-  "expansioncontent:GoopSpray": {
-    "NAME": "Goop Spray",
-    "DESCRIPTION": "*Boss - Slime. NL Apply !M! slimeboundmod:Goop and 2 Vulnerable to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "*Boss - Slime. NL Apply !M! Goop and 3 Vulnerable to ALL enemies. NL Exhaust."
-  },
-  "expansioncontent:SlimeTackle": {
-    "NAME": "Slime Tackle",
-    "DESCRIPTION": "*Boss - Slime. NL Deal !D! damage. NL Take 3 damage. NL Exhaust."
+    "NAME": "クラッシュ準備",
+    "DESCRIPTION": " !B! ブロックを得る。 NL 次のターン [E] [E] [E] を得て *スライムクラッシュ を手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL 次のターン [E] [E] [E] を得て *スライムクラッシュ を手札に加える。 NL 廃棄"
   },
   "expansioncontent:StudyTheSpire": {
-    "NAME": "Study the Spire",
-    "DESCRIPTION": "Add a random *Boss card to your hand at the start of your next !M! turns. It costs 0 until played.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded *Boss card to your hand at the start of your next !M! turns. It costs 0 until played."
+    "NAME": "スパイアの研究",
+    "DESCRIPTION": "あと !M! ターン開始時、ランダムな *ボス カードを手札に加える。 NL プレイするまでそのコストは 0",
+    "UPGRADE_DESCRIPTION": "あと !M! ターン開始時、 アップグレード されたランダムな *ボス カードを手札に加える。 NL プレイするまでそのコストは 0"
   },
   "expansioncontent:QuickStudy": {
-    "NAME": "Quick Study",
-    "DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain a copy of each of its *Boss cards. NL They cost 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain an Upgraded copy of each of its *Boss cards. NL They cost 0 until played. NL Exhaust."
+    "NAME": "手っ取り早い研究",
+    "DESCRIPTION": " 3枚の *ボス カードから1枚を選択し手札に加える。 NL プレイするまでそのコストは 0 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "アップグレード された 3枚の *ボス カードから1枚を選択し手札に加える。 NL プレイするまでそのコストは 0 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      "ボスカードを選択"
+    ]
   },
   "expansioncontent:DashGenerateEvil": {
-    "NAME": "The Evil Within",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Add a random *Boss to your hand. It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Add a random Upgraded *Boss to your hand. It costs 0 until played. NL Exhaust."
-  },
-  "expansioncontent:Corrupt": {
-    "NAME": "Corrupt",
-    "DESCRIPTION": "Exhaust 1 card. Replace it with a random *Boss card that costs 1 less. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exhaust 1 card. Replace it with a random Upgraded *Boss card that costs 1 less. NL Exhaust."
+    "NAME": "悪意の中で",
+    "DESCRIPTION": " !D! ダメージを与える。 NL ランダムな *ボス カードを手札に加える。 NL プレイするまでそのコストは 0 NL 廃棄",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL アップグレード された ランダムな *ボス カードを手札に加える。 NL プレイするまでそのコストは 0 NL 廃棄"
   },
   "expansioncontent:KnowingSkullWish": {
-    "NAME": "KnowingSkull",
-    "DESCRIPTION": "Ethereal. NL Spend HP to Wish for Souls, Success, or a Pick Me Up. NL Exhaust."
-  },
-  "expansioncontent:ShieldSmash": {
-    "NAME": "Armor Break",
-    "DESCRIPTION": "Retain. NL Remove all Block from the enemy. NL Exhaust."
+    "NAME": "しゃれこうべ",
+    "DESCRIPTION": "エセリアル NL HP を消費し、いずれかを *願う 。 NL *ソウル, *ポーション, *無色カード NL 廃棄"
   },
   "expansioncontent:Antidote": {
-    "NAME": "Antidote",
-    "DESCRIPTION": "Retain. NL Lose all Poison. NL Poison does not bypass Block, happens at END of turn, and loses half its stack. NL Exhaust."
+    "NAME": "アンチドーテ",
+    "DESCRIPTION": "保留 NL 毒 を !M! 軽減する。"
   },
-  "expansioncontent:Debug": {
-    "NAME": "Corrupt Core",
-    "DESCRIPTION": "Retain. NL Remove all enemy Orbs. NL Exhaust."
-  },
-  "expansioncontent:PeaceOut": {
-    "NAME": "Dark Whisper",
-    "DESCRIPTION": "Retain. NL Enemy leaves their Stance. NL Remove all Mantra from the enemy. NL Exhaust."
-  },
-  "expansioncontent:HeartsFavorWish": {
-    "NAME": "Corrupted Form",
-    "DESCRIPTION": "Ethereal. NL Gain a 0-cost *Form from a defeated Boss. Add 3 random *Curses to your discard pile. NL Exhaust."
+  "expansioncontent:BloodySacrifice": {
+    "NAME": "血塗れの生贄",
+    "DESCRIPTION": "エセリアル NL 最大HPの !M! % の体力を失う。 NL 儀式 1 を得る。 NL 廃棄",
+    "EXTENDED_DESCRIPTION":[
+      " NL ( {amount} HP を消費)"
+    ]
   }
 }

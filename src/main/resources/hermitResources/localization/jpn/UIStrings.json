@@ -1,0 +1,17 @@
+{
+  "hermit:bountygold": {
+    "TEXT": [
+      " ゴールド (バウンティ)"
+    ]
+  },
+  "hermit:LoneWolfAction": {
+    "TEXT": [
+      "キープ"
+    ]
+  },
+  "hermit:SpecialFriend": {
+    "TEXT": [
+      "タンジェリン"
+    ]
+  }
+}

@@ -1,70 +1,70 @@
 {
   "sneckomod:CheapStockPower": {
-    "NAME": "Cheap Stock",
+    "NAME": "チープスタック",
     "DESCRIPTIONS": [
-      "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1.",
-      "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b",
-      " times."
+      "ターン開始時、手札の中で最もコストの高い #yオフクラス のカードのコストを #b1 減らす。",
+      "ターン開始時、手札の中で最もコストの高い #yオフクラス のカードのコストを #b1 減らす。 #b",
+      " 回繰り返す。"
     ]
   },
   "sneckomod:CheatPower": {
-    "NAME": "Cheating",
+    "NAME": "ずるっこ",
     "DESCRIPTIONS": [
-      "This turn, cards that choose a random number for their effect choose the maximum possible number.",
-      "For the next #b",
-      " turns, cards that choose a random number for their effect choose the maximum possible number."
+      "このターン、ランダムに値が決まるカードは可能な限り最大の値を使う。",
+      "あと #b",
+      " ターンの間、ランダムに値が決まるカードは可能な限り最大の値を使う。"
     ]
   },
   "sneckomod:MuddleDrawnCardsPower": {
-    "NAME": "Muddle Drawn Cards",
+    "NAME": "泥まみれなカード",
     "DESCRIPTIONS": [
-      "#yMuddle the next card you draw.",
-      "#yMuddle the first #b",
-      " cards drawn this turn. (",
-      " remaining)"
+      "次にあなたが引くカードは #y泥まみれ にされる。",
+      "次にあなたが引く #b",
+      " 枚のカードは #y泥まみれ にされる。 (残り ",
+      " 枚。)"
     ]
   },
   "sneckomod:MudshieldPower": {
-    "NAME": "Mudshield",
+    "NAME": "マッドシールド",
     "DESCRIPTIONS": [
-      "Whenever you #yMuddle a card, gain #b",
-      " #yBlock next turn."
+      "カードを #y泥まみれ にする度 #b",
+      " #yブロック を得る。"
     ]
   },
   "sneckomod:SerpentMindPower": {
-    "NAME": "Serpent Mind",
+    "NAME": "蛇心",
     "DESCRIPTIONS": [
-      "Whenever you play an #yOffclass card, draw #b",
-      " card.",
-      " cards."
+      "#yオフクラス カードをプレイする度にカードを #b",
+      " 枚引く。",
+      " 枚引く。"
     ]
   },
   "sneckomod:UnendingSupplyPower": {
-    "NAME": "Unending Supply",
+    "NAME": "無限サプライ",
     "DESCRIPTIONS": [
-      "At the start of your turn, add #b",
-      "random #yOffclass cards into your hand and #yMuddle them."
+      "ターン開始時、 #b",
+      " 枚のランダムな #yオフクラス カードを手札に加える。"
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {
-    "NAME": "Post-Combat Upgraded Unknown",
+    "NAME": "戦闘後：アップグレード済み未識別",
     "DESCRIPTIONS": [
-      "At the end of combat, obtain #b",
-      " additional #yUpgraded #yUnknown cards.",
-      " additional #yUpgraded #yUnknown card."
+      "戦闘終了後 #b",
+      " 枚の #yアップグレード済み #y未識別 カードを得る。",
+      " 枚の #yアップグレード済み #y未識別 カードを得る。"
     ]
   },
   "sneckomod:UnlimitedRollsPower": {
-    "NAME": "Unlimited Rolls",
+    "NAME": "無限ロール",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a #ySoul #yRoll+ into your hand with #yEthereal and #yExhaust."
+      "ターン開始時、 #yエセリアル と #y廃棄 のついた #yソウルロール+ を手札に加える。"
     ]
-  },
+  }, 
   "sneckomod:Transmogrifying": {
-    "NAME": "Transmogrifying",
+    "NAME": "変貌",
     "DESCRIPTIONS": [
-      " is being transformed into another ",
-      " relic."
+      " は別の ",
+      " レリックに変貌しつつある。"
     ]
   }
 }

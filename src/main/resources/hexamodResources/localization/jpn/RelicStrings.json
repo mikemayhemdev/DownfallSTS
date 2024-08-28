@@ -1,94 +1,103 @@
-{
+﻿{
   "hexamod:SpiritBrand": {
-    "NAME": "Spirit Brand",
-    "FLAVOR": "A bound protector.",
+    "NAME": "スピリットブランド",
+    "FLAVOR": "拘束用のプロテクター",
     "DESCRIPTIONS": [
-      "The first time you #yIgnite a Ghostflame each turn, gain #b6 #yBlock."
+      "各ターンで 初めて #y点火 した時 #b4 #yブロック を得る。"
     ]
   },
   "hexamod:TheBrokenSeal": {
-    "NAME": "The Broken Seal",
-    "FLAVOR": "Unlimited, unrestrained, unquenchable power.",
+    "NAME": "壊れた封印",
+    "FLAVOR": "無制限で無制御で無尽蔵のパワー。",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10. Start each combat with #b2 #yStrength, #b2 #yDexterity, and #b2 #yhexamod:Intensity."
+      "入手時、 最大HP + #b10 。HPを全回復。戦闘が #y筋力 #b2 #y敏捷性 #b2 更に #yhexamod:火力 #b2 上昇した状態で開始。このレリックを複数得る事は出来ない。"
     ]
   },
   "hexamod:UnbrokenSoul": {
-    "NAME": "Mark of the Ether",
-    "FLAVOR": "Let’s see if we can do... better.",
+    "NAME": "エーテルのマーク",
+    "FLAVOR": "もっといい物が出来るか試してみよう...。",
     "DESCRIPTIONS": [
-      "Replaces ",
-      ".[] NL The first time you #yIgnite a Ghostflame each turn, gain [E] and #b3 #yBlock."
+      "スピリットブランド",
+      " [] NL と置き換える。 NL #y点火 した時 #b4 #yブロック を得る。"
     ]
   },
   "hexamod:IceCube": {
-    "NAME": "Xanatos' Icy Charm",
-    "FLAVOR": "I feel... cold.",
+    "NAME": "ザナトスの凍てつく護符",
+    "FLAVOR": "なんだか...寒い。",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #yhexamod:Soulburn takes #b4 turns to activate."
+      "ターン開始時 [E] を得る。 戦闘開始時 #b1 #yhexamod:火力 を失い、 #yhexamod:インフェルノゴーストフレイム から #yhexamod:火力 を得られなくなる。"
     ]
   },
   "hexamod:SoulStone": {
-    "NAME": "Thermal Stone",
-    "FLAVOR": "A fire would liven this thing up!",
+    "NAME": "ソウルストーン",
+    "FLAVOR": "ソウルがあれば活気が出る！",
     "DESCRIPTIONS": [
-      "If #yhexamod:Soulburn detonates, heal #b2 HP at the end of combat."
+      "#b3 枚のカードを #y廃棄 する度に、現在のゴーストフレイムが #yhexamod:点火 される。"
     ]
   },
   "hexamod:RecyclingMachine": {
-    "NAME": "Recycler",
-    "FLAVOR": "One day, it shall be recycled too.",
+    "NAME": "リサイクラー",
+    "FLAVOR": "何時の日かこれもリサイクルされるだろう。",
     "DESCRIPTIONS": [
-      "The first time an #yEthereal card is #yExhausted each combat, add a copy to your hand that costs #b0 until played."
+      "各戦闘で初めて 呪い または 状態異常 を除く #yエセリアル カードが #y廃棄 された時、そのコピーを手札に加える。それはプレイするまでコスト #b0"
     ]
   },
   "hexamod:MatchstickCase": {
-    "NAME": "Sneaky Teakwood Match",
-    "FLAVOR": "Lights on any surface!",
+    "NAME": "こっそりチーク材マッチ",
+    "FLAVOR": "どんな場所でも光る！",
     "DESCRIPTIONS": [
-      "At the start of the first turn, #yhexamod:Ignite the #yhexamod:Active Ghostflame and #yhexamod:Advance."
+      "毎ターン最初に、ゴーストフレイムを #yhexamod:点火 した時、 #yhexamod:前進 するか #yhexamod:後退 するかを選択することが出来る。"
     ]
   },
   "hexamod:InflammatoryLetter": {
-    "NAME": "Kindling",
-    "FLAVOR": "Fire makes everything better.",
+    "NAME": "瓶詰めのTOBSCo",
+    "FLAVOR": "熱を加えれば何でも美味しくなるさ。",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yhexamod:Intensity."
+      "戦闘開始時 #yhexamod:火力 1 を得る。"
     ]
   },
   "hexamod:SoulOfChaos": {
-    "NAME": "Soul of Chaos",
-    "FLAVOR": "Mayhem, made manifest.",
+    "NAME": "ソウルオブカオス",
+    "FLAVOR": "メイヘムが現れた。",
     "DESCRIPTIONS": [
-      "The second Searing Ghostflame becomes a Mayhem Ghostflame. NL Mayhem Ghostflame activates when you end your turn while it is active. NL Ignition: Play the top card of your draw pile."
+      "2つ目の #yシーリングゴーストフレイム が #yメイヘムゴーストフレイム になる。 NL #yメイヘムゴーストフレイム はその上でターン終了した時に発動する。 NL #y発火 : #y占術 #bn を行い、山札の一番上のカードをプレイする。 #bn は #y火力 によって修正される。"
     ]
   },
   "hexamod:JarOfFuel": {
-    "NAME": "Olexa's Shield",
-    "FLAVOR": "Protection on-demand.",
+    "NAME": "アレクサの盾",
+    "FLAVOR": "要求に応じて保護します。",
     "DESCRIPTIONS": [
-      "Swap the positions of the Bolstering Ghostflame and the first Searing Ghostflame."
+      "#yパワー カードが #yシーリング と #yクラッシング #yゴーストフレイム の進行にカウントされる。"
     ]
   },
   "hexamod:BolsterEngine": {
-    "NAME": "Rod of Bolstering Flame",
-    "FLAVOR": "Fire shields! Fire strengthens.",
+    "NAME": "トリッキーなボルスターロッド",
+    "FLAVOR": "千冊の書物の研究に裏打ちされていた。知識は力なり！",
     "DESCRIPTIONS": [
-      "The first time you play a #yPower card each combat, gain #b6 #yBlock and #b1 #yStrength."
+      "各戦闘で初めて #yパワー をプレイした時、 #b6 #yブロック と #y筋力 #b1 を得る。"
     ]
   },
   "hexamod:CandleOfCauterizing": {
-    "NAME": "Red Candle",
-    "FLAVOR": "Fire BURNS...",
+    "NAME": "赤いロウソク",
+    "FLAVOR": "火が燃える...。",
     "DESCRIPTIONS": [
-      "Whenever an #yAttack deals unblocked damage, apply #b1 #yhexamod:Soulburn."
+      "#yhexamod:ソウルバーン を与える度に追加で #b3 #yhexamod:ソウルバーン を与える。"
     ]
   },
   "hexamod:Sixitude": {
     "NAME": "Six-Point Brand",
-    "FLAVOR": "Fire, fire, fire, fire, fire, FIRE!",
+    "FLAVOR": "炎、炎、炎、炎、炎、焔！",
     "DESCRIPTIONS": [
-      "Whenever you play #b6 cards, deal #b6 damage to a random enemy."
+      "カードを #b6 枚プレイする度に ランダムな敵に #b6 ダメージを与える。"
+    ]
+  },
+  "hexamod:Libra": {
+    "NAME": "ライブラ",
+    "FLAVOR": "全ての物事のバランス",
+    "DESCRIPTIONS": [
+      "デッキ内のストライクと防御を好きなだけ選び、反対のタイプのランダムなカードに #y変換 する。",
+      "審判の天秤が傾く",
+      "好きなカードを好きな枚数選び、反対のタイプに 変換 する。"
     ]
   }
 }

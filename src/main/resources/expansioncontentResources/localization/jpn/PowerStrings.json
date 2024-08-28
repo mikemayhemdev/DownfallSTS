@@ -1,199 +1,106 @@
 {
-  "expansioncontent:StudyAutomatonPower": {
-    "NAME": "Study Automaton",
+  "expansioncontent:StudyTheSpirePower": {
+    "NAME": "スパイアの研究",
     "DESCRIPTIONS": [
-      "Gain a random Automaton card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Automaton card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyAutomatonPowerUpgraded": {
-    "NAME": "Study Automaton+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Automaton card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Automaton card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyAwakenedPower": {
-    "NAME": "Study Awakened One",
-    "DESCRIPTIONS": [
-      "Gain a random Awakened One card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Awakened One card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyAwakenedPowerUpgraded": {
-    "NAME": "Study Awakened One+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Awakened One card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Awakened One card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
+      "次のターン開始時、ランダムな #yボス カードを得る。 NL プレイするまでそのコストは #b0",
+      "次の #b",
+      " ターンの開始時、ランダムな #yボス カードを得る。 NL プレイするまでそのコストは #b0",
+      "ターン開始時、 #yアップグレード されたランダムな #yボス カードを得る。 NL プレイするまでそれらのコストは #b0",
+      "次の #b",
+      " ターン開始時、 #yアップグレード されたランダムな #yボス カードを得る。 NL プレイするまでそれらのコストは #b0"
     ]
   },
   "expansioncontent:AwakenedOnePower": {
-    "NAME": "Dark Ritual",
+    "NAME": "ダークリチュアル",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yStrength if this enemy does not attack on its turn."
-    ]
-  },
-  "expansioncontent:StudyChampPower": {
-    "NAME": "Study Champ",
-    "DESCRIPTIONS": [
-      "Gain a random Champ card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Champ card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyChampPowerUpgraded": {
-    "NAME": "Study Champ+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Champ card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Champ card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyCollectorPower": {
-    "NAME": "Study Collector",
-    "DESCRIPTIONS": [
-      "Gain a random Collector card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Collector card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyCollectorPowerUpgraded": {
-    "NAME": "Study Collector+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Collector card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Collector card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyGuardianPower": {
-    "NAME": "Study Guardian",
-    "DESCRIPTIONS": [
-      "Gain a random Guardian card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Guardian card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyGuardianPowerUpgraded": {
-    "NAME": "Study Guardian+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Guardian card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Guardian card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyHexaghostPower": {
-    "NAME": "Study Hexaghost",
-    "DESCRIPTIONS": [
-      "Gain a random Hexaghost card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Hexaghost card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyHexaghostPowerUpgraded": {
-    "NAME": "Study Hexaghost+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Hexaghost card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Hexaghost card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyShapesPower": {
-    "NAME": "Study Donu & Deca",
-    "DESCRIPTIONS": [
-      "Gain a random Donu & Deca card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Donu & Deca card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyShapesPowerUpgraded": {
-    "NAME": "Study Donu & Deca+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Donu & Deca card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Donu & Deca card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyTimeEaterPower": {
-    "NAME": "Study Time Eater",
-    "DESCRIPTIONS": [
-      "Gain a random Time Eater card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Time Eater card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyTimeEaterPowerUpgraded": {
-    "NAME": "Study Time Eater+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Time Eater card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Time Eater card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudySlimeBossPower": {
-    "NAME": "Study Slime Boss",
-    "DESCRIPTIONS": [
-      "Gain a random Slime Boss card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Slime Boss card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudySlimeBossPowerUpgraded": {
-    "NAME": "Study Slime Boss+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Slime Boss card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Slime Boss card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
+      "そのターン、この敵が攻撃行動を行わなかった場合、 #y筋力 #b",
+      " を得る。"
     ]
   },
   "expansioncontent:AwakenDeathPower": {
-    "NAME": "Awakening",
+    "NAME": "目覚め",
     "DESCRIPTIONS": [
-      "When you would die, heal #b",
-      " HP and remove this effect."
+      "もしあなたが死んだ時、HPを #b",
+      " 回復し、この効果を失う。"
     ]
   },
   "expansioncontent:ChronoBoostPower": {
-    "NAME": "Chrono Boost",
+    "NAME": "クロノブースト",
     "DESCRIPTIONS": [
-      "After playing #b",
-      " more cards, gain #b",
-      " #yStrength."
+      "あと #b",
+      " 枚のカードをプレイした時 #y筋力 #b",
+      " を得る。"
     ]
   },
   "expansioncontent:ChronoBoostPlusPower": {
-    "NAME": "Chrono Boost+",
+    "NAME": "クロノブースト+",
     "DESCRIPTIONS": [
-      "After playing #b",
-      " more cards, gain #b",
-      " #yStrength."
+      "あと #b",
+      " 枚のカードをプレイした時 #y筋力 #b",
+      " を得る。"
     ]
   },
   "expansioncontent:DeEnergizedPower": {
-    "NAME": "De-Energized",
+    "NAME": "ディスエナジー",
     "DESCRIPTIONS": [
-      "At the start of your next turn, lose #b",
-      " [E]."
+      "次のターン開始時、 #b",
+      " [E] を失う。"
     ]
   },
   "expansioncontent:PolyBeamAgainPower": {
-    "NAME": "Potency",
+    "NAME": "潜在",
     "DESCRIPTIONS": [
-      "#yPoly #yBeam will be played at the start of your next turn. ",
-      "#yPoly #yBeam will be played at the start of your next #b",
-      " turns."
+      "#yポリービーム は次のターン開始時に発動する。 ",
+      "#yポリービーム は次の #b",
+      " ターン開始時に発動する。"
     ]
   },
   "expansioncontent:PolyBeamAgainPowerUpgraded": {
-    "NAME": "Potency",
+    "NAME": "潜在",
     "DESCRIPTIONS": [
-      "#yPoly #yBeam+ will be played at the start of your next turn. ",
-      "#yPoly #yBeam+ will be played at the start of your next #b",
-      " turns."
+      "#yポリービーム+ は次のターン開始時に発動する。 ",
+      "#yポリービーム+ は次の #b",
+      " ターン開始時に発動する。"
+    ]
+  },
+  "expansioncontent:AddCopyPower": {
+    "NAME": "Delayed Card",
+    "DESCRIPTIONS": [
+      "Add ",
+      " into your hand at the start of your next turn."
+    ]
+  },
+  "expansioncontent:AddSameInstancePower": {
+    "NAME": "遅延カード",
+    "DESCRIPTIONS": [
+      " ",
+      " を次の自分のターンの開始時に手札に加える。"
+    ]
+  },
+  "expansioncontent:NextTurnExhumePower": {
+    "NAME": "遅延発掘",
+    "DESCRIPTIONS": [
+      "発掘 ",
+      " を次の自分のターンの開始時に行う。"
+    ]
+  },
+  "expansioncontent:PretendHexWheelPower": {
+    "NAME": "ヘクサバーン",
+    "DESCRIPTIONS": [
+      "あと #b",
+      " ターン後、 #b",
+      "あなたのターン終了時 #b",
+      " ダメージをランダムな敵に #b6 回与える。"
+    ]
+  },
+  "expansioncontent:VexVinciblePower": {
+    "NAME": "無敵",
+    "DESCRIPTIONS": [
+      "1ターンに受けるダメージとHPの損失を #b",
+      " までに制限する。",
+      "1ターンに受けるダメージとHPの損失を #b",
+      " までに制限する。あと #b",
+      " 回発動すると効果を失う。"
     ]
   }
 }

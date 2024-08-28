@@ -1,503 +1,507 @@
 {
   "Gremlin:AggressiveDefense": {
-    "NAME": "Aggressive Defense",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you gain Block this turn, targeted enemy loses !M! HP."
+    "NAME": "守るが勝ち",
+    "DESCRIPTION": " !D! ダメージを与える。 NL このターン ブロック を得る度 この敵のHPを !M! 減らす。"
   },
 
   "Gremlin:ArmsTheft": {
-    "NAME": "Arms Theft",
-    "DESCRIPTION": "gremlin:Steal !M! Strength. NL Exhaust."
+    "NAME": "武器泥棒",
+    "DESCRIPTION": "gremlin:スティール !M! 筋力。 NL 廃棄"
   },
 
   "Gremlin:Astound": {
-    "NAME": "Astound",
-    "DESCRIPTION": "Gain !B! Block. NL If you have 3 or more Wiz, add !M! Wards to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have 3 or more Wiz, add !M! Upgraded Wards to your hand."
+    "NAME": "びっくり",
+    "DESCRIPTION": " !B! ブロックを得る。 NL gremlin:魔力 が 3 以上あれば !M! *ガード を手札に加える。",
+    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL gremlin:魔力 が 3 以上あれば !M! *ガード+ を手札に加える。"
   },
 
   "Gremlin:Bang": {
-    "NAME": "Bang",
-    "DESCRIPTION": "Deal !D! damage !M! times. Add 1 copy of Whiz to your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. Add 1 Upgraded copy of Whiz to your discard pile. NL Exhaust."
+    "NAME": "バン！",
+    "DESCRIPTION": " !D! ダメージを !M! 回与え、捨て札に *Whiz を加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを !M! 回与え、捨て札に *Whiz+ を加える。 NL 廃棄"
   },
 
   "Gremlin:Bellow": {
-    "NAME": "Bellow",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength for each enemy that does not intend to Attack. NL Exhaust."
+    "NAME": "怒号",
+    "DESCRIPTION": "エセリアル NL 攻撃予定ではない敵1体につき 筋力 !M! を得る。 NL 廃棄"
   },
 
   "Gremlin:BrokenShin": {
-    "NAME": "Broken Shin",
-    "DESCRIPTION": "Apply Agony for every !M! stacks of Weak the target has."
+    "NAME": "脛壊し",
+    "DESCRIPTION": "対象の受けている 脱力 !M! 毎に gremlin:苦悩 を与える。 NL 廃棄"
   },
 
   "Gremlin:BubbleBarrier": {
-    "NAME": "Bubble Barrier",
-    "DESCRIPTION": "Whenever you play a card this turn, gain !M! Block."
+    "NAME": "バブルバリア",
+    "DESCRIPTION": "このターンカードをプレイする毎に !M! ブロックを得る。"
   },
 
   "Gremlin:BulkUp": {
-    "NAME": "Bulk Up",
-    "DESCRIPTION": "Gain !M! Temporary HP. NL Swap to Fat_Gremlin."
+    "NAME": "バルクアップ",
+    "DESCRIPTION": "!M! の expansioncontent:一時的な体力 を得る。 NL gremlin:交代 ： gremlin:太っちょグレムリン"
   },
 
   "Gremlin:BurlyBlow": {
-    "NAME": "Burly Blow",
-    "DESCRIPTION": "Deal !D! damage for each stack of Weakened. NL (Always hits at least once.)"
+    "NAME": "逞しい一撃",
+    "DESCRIPTION": " !D! ダメージを与える。 敵の 脱力 分繰り返す。"
   },
 
   "Gremlin:CatScratch": {
-    "NAME": "Cat Scratch",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+    "NAME": "猫ひっかき",
+    "DESCRIPTION": " !D! ダメージを !M! 回与える。"
   },
 
   "Gremlin:Changeo": {
-    "NAME": "Change-o!",
-    "DESCRIPTION": "Gain !B! Block and !M! Wiz."
+    "NAME": "チェンジ-o！",
+    "DESCRIPTION": "!B! ブロック と !M! gremlin:魔力 を得る。"
   },
 
   "Gremlin:CongaLine": {
-    "NAME": "Conga Line",
-    "DESCRIPTION": "At the start of your turn, gain [E] and Swap to the next Gremlin.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain [E] and Swap to the next Gremlin."
+    "NAME": "コンガライン",
+    "DESCRIPTION": "ターン開始時、 [E] を得て次のグレムリンと gremlin:交代 する。",
+    "UPGRADE_DESCRIPTION": "天賦 NL ターン開始時、 [E] を得て次のグレムリンと gremlin:交代 する。"
   },
 
   "Gremlin:CounterStrike": {
-    "NAME": "Counter Strike",
-    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, add !M! Wards to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, add !M! Upgraded Wards to your hand."
+    "NAME": "カウンターストライク",
+    "DESCRIPTION": " !D! ダメージを与える。敵が攻撃を予定している場合、 !M! *ガード を手札に加える。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。敵が攻撃を予定している場合、 !M! *ガード+ を手札に加える。"
   },
 
   "Gremlin:CowerChoice": {
-    "NAME": "Cower",
-    "DESCRIPTION": "Lose all your gold.",
-    "EXTENDED_DESCRIPTION": ["WIMPY GREMS NOT STUPID."]
+    "NAME": "萎縮する",
+    "DESCRIPTION": "あなたの全てのゴールドが失われる。",
+    "EXTENDED_DESCRIPTION": ["ヨワムシグレムリン、バカデハナイナ。"]
   },
 
   "Gremlin:CowerChoiceB": {
-    "NAME": "Cower",
-    "DESCRIPTION": "Permanently lose your rearmost Gremlin.",
-    "EXTENDED_DESCRIPTION": ["Good. Now the rest of you, scram!", "Yeah! Scram!"]
+    "NAME": "萎縮する",
+    "DESCRIPTION": "最後尾のグレムリンが永久に失われる。",
+    "EXTENDED_DESCRIPTION": ["いいぞ、残りはスクラムを組め！", "イエーイ！ スクラム！"]
   },
 
   "Gremlin:DaggerDance": {
-    "NAME": "Dagger Dance",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times."
+    "NAME": "ダガーダンス",
+    "DESCRIPTION": "敵全体に !D! ダメージを !M! 回与える。"
   },
 
   "Gremlin:Dazzle": {
-    "NAME": "Dazzle",
-    "DESCRIPTION": "Deal !D! damage. NL If you have 3 or more gremlin:Wiz, gremlin:Steal 2 Strength. NL Exhaust."
+    "NAME": "目くらまし",
+    "DESCRIPTION": " !D! ダメージを与える。 NL gremlin:魔力 が 3 以上あれば gremlin:スティール 2 筋力。 NL 廃棄"
   },
 
   "Gremlin:Defend": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "防御",
+    "DESCRIPTION": " !B! ブロックを得る。"
   },
 
   "Gremlin:Duplicate": {
-    "NAME": "Duplicate",
-    "DESCRIPTION": "Make !M! Echoes of an Attack in your hand. They cost 1 less. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Make !M! Echoes of an Attack in your hand. They cost 1 less."
+    "NAME": "複製",
+    "DESCRIPTION": "手札の アタック 1 枚の gremlin:エコー を !M! 枚得る。それらはコストが 1 少ない。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "手札の アタック 1 枚の gremlin:エコー を !M! 枚得る。それらはコストが 1 少ない。"
   },
 
   "Gremlin:EdibleArmor": {
-    "NAME": "Edible Armor",
-    "DESCRIPTION": "Convert your Block into Temporary HP."
+    "NAME": "食用アーマー",
+    "DESCRIPTION": "ブロックを expansioncontent:一時的な体力 に変換する。"
   },
 
   "Gremlin:Encore": {
-    "NAME": "Encore",
-    "DESCRIPTION": "Gain 3 Wiz. NL Whenever you consume Wiz, deal !M! damage to ALL enemies."
+    "NAME": "アンコール",
+    "DESCRIPTION": "3 gremlin:魔力 を得る。 NL gremlin:魔力 を消費した時、敵全体に !M! ダメージ。"
   },
 
   "Gremlin:Enthusiasm": {
-    "NAME": "Enthusiasm",
-    "DESCRIPTION": "Whenever you Swap, draw a card."
+    "NAME": "熱意",
+    "DESCRIPTION": "gremlin:交代 する度にカードを1枚引く。"
   },
 
   "Gremlin:Erupt": {
-    "NAME": "Erupt",
-    "DESCRIPTION": "Gain !M! Temporary Strength. NL Exhaust."
+    "NAME": "噴火",
+    "DESCRIPTION": "一時的な 筋力 !M! を得る。 NL 廃棄"
   },
 
   "Gremlin:Exacerbate": {
-    "NAME": "Exacerbate",
-    "DESCRIPTION": "Deal !D! damage. Cripple the enemy. NL Exhaust."
+    "NAME": "悪化させる",
+    "DESCRIPTION": " !D! ダメージを与えて gremlin:廃人 にする。 NL 廃棄"
   },
 
   "Gremlin:FairyDust": {
-    "NAME": "Fairy Dust",
-    "DESCRIPTION": "Add !M! Wards to your hand and draw !M! cards. NL Exhaust."
+    "NAME": "妖精の粉",
+    "DESCRIPTION": " !M! *ガード とカードを !M! 枚引く。 NL 廃棄"
   },
 
   "Gremlin:SleeveOfAces": {
-    "NAME": "Sleeve Of Aces",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 Shiv to your hand for each stack of Wiz you have.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 1 Upgraded Shiv to your hand for each stack of Wiz you have."
+    "NAME": "とっておき",
+    "DESCRIPTION": " !D! ダメージを与える。 NL gremlin:魔力 の数だけ ナイフ を手札に加える。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL gremlin:魔力 の数だけ ナイフ+ を手札に加える。"
   },
 
   "Gremlin:FatGremlin": {
-    "NAME": "Fat Gremlin",
-    "DESCRIPTION": "Swap to Fat_Gremlin."
+    "NAME": "太っちょグレムリン",
+    "DESCRIPTION": "gremlin:交代 ： gremlin:太っちょグレムリン"
   },
 
   "Gremlin:FeelTheAudience": {
-    "NAME": "Feel The Audience",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! Wiz for each one that intends to attack."
+    "NAME": "感じる視線",
+    "DESCRIPTION": "敵全体に !D! ダメージ。 NL 攻撃予定の敵1体につき !M! gremlin:魔力 を得る。"
   },
 
   "Gremlin:FightChoice": {
-    "NAME": "Fight",
-    "DESCRIPTION": "Start Combat. NL Enemy gains !M! Strength.",
-    "EXTENDED_DESCRIPTION": ["GREMS DIE NOW!", "Somebody's asking for a beating!"]
+    "NAME": "ファイト",
+    "DESCRIPTION": "戦闘を開始。 NL 敵の 筋力 が !M! 上昇。",
+    "EXTENDED_DESCRIPTION": ["シネ、チビ共！", "あいつを殴れって声がする！"]
   },
 
   "Gremlin:FlipOut": {
-    "NAME": "Flip Out",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Whenever you would gain Block this turn, instead deal that much damage to ALL enemies."
+    "NAME": "反転",
+    "DESCRIPTION": " !D! ダメージを与える。 NL このターンあなたがブロックを得る代わりに敵全体に同じダメージを与える。"
   },
 
   "Gremlin:Flurry": {
-    "NAME": "Flurry",
-    "DESCRIPTION": "Deal !D! damage for each card played this turn. NL Exhaust.",
+    "NAME": "狼狽",
+    "DESCRIPTION": "このターンにプレイしたカード1枚ごとに !D! ダメージ。 NL 廃棄",
     "EXTENDED_DESCRIPTION": [
       " NL (",
-      " card played.)",
-      " cards played.)"
+      " カードをプレイ。)",
+      " カードをプレイ。)"
     ]
   },
 
   "Gremlin:FollowThrough": {
-    "NAME": "For The Leader!",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Temporary Strength."
+    "NAME": "リーダーの為に！",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 一時的な 筋力 !M! を得る。"
   },
 
   "Gremlin:Fury": {
-    "NAME": "Fury",
-    "DESCRIPTION": "Costs 1 less [E] for each 2 Strength you have. NL Deal !D! damage thrice."
+    "NAME": "激怒",
+    "DESCRIPTION": "自分の 筋力 2 ごとに、コスト が 1 減る。 NL !D! ダメージを 3 回与える。"
   },
 
   "Gremlin:Glimmer": {
-    "NAME": "Glimmer",
-    "DESCRIPTION": "Deal !D! damage. NL Add 2 Wards to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 2 Upgraded Wards to your hand."
+    "NAME": "きらきら",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 2 *ガード を手札に加える。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 2 *ガード+ を手札に加える。"
   },
 
   "Gremlin:GlitterGuard": {
-    "NAME": "Glitter Guard",
-    "DESCRIPTION": "Add !M! Wards to your hand. NL Swap to Shield_Gremlin.",
-    "UPGRADE_DESCRIPTION": "Add !M! Upgraded Wards to your hand. NL Swap to Shield_Gremlin."
+    "NAME": "煌めくガード",
+    "DESCRIPTION": " !M! *ガード を手札に加える。 NL gremlin:交代 ： gremlin:シールドグレムリン",
+    "UPGRADE_DESCRIPTION": " !M! *ガード+ を手札に加える。 NL gremlin:交代 ： gremlin:シールドグレムリン"
   },
 
   "Gremlin:GremlinArms": {
-    "NAME": "Gremlin Arms",
-    "DESCRIPTION": "Add a random assortment of !M! Shivs and Wards to your hand."
+    "NAME": "グレムリンアームズ",
+    "DESCRIPTION": "合計 !M! 枚の ナイフ または *ガード を手札に加える。"
   },
 
   "Gremlin:GremlinMeal": {
-    "NAME": "Flex",
-    "DESCRIPTION": "Gain !M! Temporary Strength."
+    "NAME": "フレックス",
+    "DESCRIPTION": "一時的な 筋力 !M! を得る。"
   },
 
   "Gremlin:GremlinDance": {
-    "NAME": "Gremlin Dance",
-    "DESCRIPTION": "Deal !D! damage. NL Has a bonus effect based on which Gremlin you are.",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage",
-    " to ALL enemies.", ". NL Enemy loses !M! Strength this turn.",
-    ". NL Gain !B! Block.", ". NL Draw !M! cards.", ". NL This attack does not consume Wiz.", ". NL Gain !M! Strength."]
+    "NAME": "グレムリンダンス",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 最前列のグレムリン毎にボーナスを得る。",
+    "EXTENDED_DESCRIPTION": ["!D! ダメージ",
+    " を敵全体に与える。", " NL このターン 対象が 筋力 !M! を失う。",
+    " NL !B! ブロックを得る。", " NL カードを !M! 枚引く。", " NL !M! gremlin:魔力 を得る。", " NL 筋力 !M! を得る。"]
   },
 
   "Gremlin:GremlinOffensive": {
-    "NAME": "Gremlin Offensive",
-    "DESCRIPTION": "Deal !D! damage. NL Add a Gremlin Offensive to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add an Upgraded Gremlin Offensive to your hand. NL Exhaust."
+    "NAME": "攻めの姿勢",
+    "DESCRIPTION": " !D! ダメージを与える。 NL *攻めの姿勢 を手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL *攻めの姿勢+ を手札に加える。 NL 廃棄"
   },
 
   "Gremlin:GremlinToss": {
-    "NAME": "Gremlin Toss",
-    "DESCRIPTION": "Deal damage equal to your current Block and Temporary HP.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Temporary HP. NL Deal damage equal to your current Block and Temporary HP.",
-    "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
+    "NAME": "グレムリン・トス",
+    "DESCRIPTION": "現在の ブロック と expansioncontent:一時的な体力 を合計したダメージを与える。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:一時的な体力 を !M! 得る。 NL 現在の ブロック と expansioncontent:一時的な体力 を合計したダメージを与える。",
+    "EXTENDED_DESCRIPTION": [" NL ( !D! ダメージ)"]
   },
 
   "Gremlin:GremlinWizard": {
-    "NAME": "Gremlin Wizard",
-    "DESCRIPTION": "Swap to Gremlin_Wizard."
+    "NAME": "グレムリンウィザード",
+    "DESCRIPTION": "gremlin:交代 ： gremlin:グレムリンウィザード"
   },
 
   "Gremlin:Heckle": {
-    "NAME": "Heckle",
-    "DESCRIPTION": "Whenever you apply a debuff to an enemy, gain !M! Temporary HP."
+    "NAME": "足手まとい",
+    "DESCRIPTION": "敵にデバフをかける度に expansioncontent:一時的な体力 を !M! 得る。"
   },
 
   "Gremlin:InfiniteBlocks": {
-    "NAME": "Infinite Blocks",
-    "DESCRIPTION": "At the start of your turn, add a Ward to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a Ward to your hand."
+    "NAME": "無限ブロック",
+    "DESCRIPTION": "ターン開始時、 *ガード を手札に加える。",
+    "UPGRADE_DESCRIPTION": "天賦 NL ターン開始時、 *ガード を手札に加える。"
   },
 
   "Gremlin:IrksomeBlow": {
-    "NAME": "Irksome Blow",
-    "DESCRIPTION": "Deal !D! damage. NL Irksome Blow is affected by Strength !M! times."
+    "NAME": "痛恨の一撃",
+    "DESCRIPTION": " !D! ダメージを与える。 NL このカードは 筋力 の影響を !M! 倍受ける。"
   },
 
   "Gremlin:Irritability": {
-    "NAME": "Irritability",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Thorns. NL Swap to Mad_Gremlin."
+    "NAME": "イライラ",
+    "DESCRIPTION": " !B! ブロックを得る。 NL 一時的な トゲ !M! を得る。 NL gremlin:交代 ： gremlin:マッドグレムリン"
   },
 
   "Gremlin:Jeer": {
-    "NAME": "Jeer",
-    "DESCRIPTION": "Deal !D! damage. If the enemy has a debuff, gain !M! Temporary HP."
+    "NAME": "からかう",
+    "DESCRIPTION": " !D! ダメージを与える。敵がデバフにかかっている場合、 !M! の expansioncontent:一時的な体力 を得る。"
   },
 
   "Gremlin:Kablamo": {
-    "NAME": "Kablamo!",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL This attack does not consume Wiz."
+    "NAME": "カブラモ!",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL この攻撃では gremlin:魔力 を消費しない。"
   },
 
   "Gremlin:LeaderChoice": {
-    "NAME": "Make a Choice",
-    "DESCRIPTION": "Surrender your friend to slavery?"
+    "NAME": "選択する",
+    "DESCRIPTION": "友を引き渡せって？"
   },
 
   "Gremlin:MadGremlin": {
-    "NAME": "Mad Gremlin",
-    "DESCRIPTION": "Swap to Mad_Gremlin."
+    "NAME": "マッドグレムリン",
+    "DESCRIPTION": "gremlin:交代 ： gremlin:マッドグレムリン"
   },
 
   "Gremlin:MakeshiftArmor": {
-    "NAME": "Makeshift Armor",
-    "DESCRIPTION": "Every time you play 7 attacks, gain 1 Artifact.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Every time you play 7 attacks, gain 1 Artifact."
+    "NAME": "その場しのぎアーマー",
+    "DESCRIPTION": "7 回 アタック をプレイする毎に 1 アーティファクト を得る。",
+    "UPGRADE_DESCRIPTION": " !M! アーティファクト を得る。 NL 7 回 アタック をプレイする毎に 1 アーティファクト を得る。"
   },
 
   "Gremlin:Mockery": {
-    "NAME": "Mockery",
-    "DESCRIPTION": "Apply !M! Weak. NL If the enemy has 3 or more Weak, gain !B! Block."
+    "NAME": "モノマネ",
+    "DESCRIPTION": "脱力 !M! を与える。 NL 敵の 脱力 が 3 以上なら !B! ブロックを得る。"
   },
 
   "Gremlin:Necromancy": {
-    "NAME": "Necromancy",
-    "DESCRIPTION": "Can only be played if you have 5 or more Wiz. NL Consume all Wiz to resurrect a random Gremlin with !M! HP. Exhaust.",
-    "EXTENDED_DESCRIPTION": ["Not enough mojo.", "Nobody is dead yet.", "Not enough room."]
+    "NAME": "ネクロマンシー",
+    "DESCRIPTION": "必要： 3 gremlin:魔力 NL 全ての gremlin:魔力 を消費して、ランダムなグレムリンを !M! HPで復活させる。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": ["魔力が足りない。", "まだ誰も死んでない。", "余裕がない。"]
   },
 
   "Gremlin:Nob": {
-    "NAME": "NOB",
-    "DESCRIPTION": "Gain !M! Temporary HP. NL Mutate into Gremlin Nob until you run out of Temporary HP."
+    "NAME": "ボス",
+    "DESCRIPTION": "expansioncontent:一時的な体力 を !M! 得る。 NL expansioncontent:一時的な体力 を使い切るまで *グレムリン gremlin:ボス に変身する。"
   },
 
   "Gremlin:NobChoice": {
-    "NAME": "Make a Choice",
-    "DESCRIPTION": "Puny Grems give Gold?"
+    "NAME": "選択する",
+    "DESCRIPTION": "貧弱グレムリンはゴールドを渡す？"
   },
 
   "Gremlin:PartyStick": {
-    "NAME": "Party Stick",
-    "DESCRIPTION": "Unplayable. NL Whenever you Swap while this card is in your hand, gain [E]",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Whenever you Swap while this card is in your hand, gain [E] [E]",
-    "EXTENDED_DESCRIPTION": ["Nobody is allowed to play with the Party Stick."]
+    "NAME": "パーティースティック",
+    "DESCRIPTION": "エセリアル NL 使用不可 NL gremlin:交代 する度に [E] を得る。",
+    "UPGRADE_DESCRIPTION": "使用不可 NL gremlin:交代 する度に [E] を得る。",
+    "EXTENDED_DESCRIPTION": ["パーティースティックで遊ぶ事は許されない"]
   },
 
   "Gremlin:Patsy": {
-    "NAME": "Patsy",
-    "DESCRIPTION": "Gain !B! Block. NL Swap to the next Gremlin."
+    "NAME": "カモ",
+    "DESCRIPTION": " !B! ブロックを得る。 NL gremlin:交代 ：次のグレムリン。"
   },
 
   "Gremlin:Pickpocket": {
-    "NAME": "Pickpocket",
-    "DESCRIPTION": "gremlin:Steal all Artifact. NL Deal !D! damage. NL Exhaust."
+    "NAME": "ピックポケット",
+    "DESCRIPTION": "gremlin:スティール 全 アーティファクト NL !D! ダメージを与える。 NL 廃棄"
   },
 
   "Gremlin:PinNeedle": {
-    "NAME": "Pin Needle",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Insert !M! Pinpricks. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Insert !M! Upgraded Pinpricks. NL Exhaust."
+    "NAME": "画鋲",
+    "DESCRIPTION": " !D! ダメージを与える。 NL *ピン刺し を !M! 枚 bronze:インサート する。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL *ピン刺し+ を !M! 枚 bronze:インサート する。 NL 廃棄"
   },
 
   "Gremlin:Pinprick": {
-    "NAME": "Pinprick",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Whenever you draw this card, add an Echo of it to your hand. NL Deal !D! damage. NL Draw a card. NL Exhaust."
+    "NAME": "ピン刺し",
+    "DESCRIPTION": " !D! ダメージを与える。 NL カードを1枚引く。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "このカードを引いた時、これの gremlin:エコー を得る。 NL !D! ダメージを与える。 NL カードを1枚引く。 NL 廃棄"
   },
 
   "Gremlin:Polish": {
-    "NAME": "Polish",
-    "DESCRIPTION": "Shivs deal !M! additional damage. NL Wards grant !M! additional Block."
+    "NAME": "磨く",
+    "DESCRIPTION": "ナイフ で与えるダメージが !M! 増加する。 NL *ガード で得るブロックが !M! 増加する。"
   },
 
   "Gremlin:PourSalt": {
-    "NAME": "Pour Salt",
-    "DESCRIPTION": "Deal !D! damage. If the enemy is Weak, add !M! Shivs to your hand."
+    "NAME": "塩を塗る",
+    "DESCRIPTION": " !D! ダメージを与える。敵が 脱力 状態なら 1 取り除き、ナイフを !M! 枚手札に加える。"
   },
 
   "Gremlin:Presto": {
-    "NAME": "Presto!",
-    "DESCRIPTION": "Deal !D! damage. Gain !M! Wiz."
+    "NAME": "お呪い!",
+    "DESCRIPTION": " !D! ダメージを与える。 !M! gremlin:魔力 を得る。"
   },
 
   "Gremlin:Pretaliation": {
-    "NAME": "Pretaliation",
-    "DESCRIPTION": "Deal !D! damage if the enemy intends to attack. NL Do !blamage! damage otherwise."
+    "NAME": "事前報復",
+    "DESCRIPTION": "敵が攻撃を予定している場合 !D! ダメージを与える。 NL それ以外の場合 !blamage! ダメージを与える。"
   },
 
   "Gremlin:ProperTools": {
-    "NAME": "Proper Tools",
-    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, add !M! Wards to your hand. Otherwise, add !M! Shivs to your hand."
+    "NAME": "適切なツール",
+    "DESCRIPTION": "敵が攻撃を予定している場合 !D! ダメージを与えて !M! *ガード を手札に加える。 それ以外の場合ナイフを !M! 枚手札に加える。"
   },
 
   "Gremlin:RageBreak": {
-    "NAME": "Rage Break",
-    "DESCRIPTION": "Double your Strength. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Double your Strength."
+    "NAME": "レイジブレイク",
+    "DESCRIPTION": " 筋力 を2倍にする。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL 筋力 を2倍にする。 NL 廃棄"
   },
 
   "Gremlin:Raid": {
-    "NAME": "Raid",
-    "DESCRIPTION": "Draw a card for each living Gremlin. NL Discard !M! cards.",
-    "UPGRADE_DESCRIPTION": "Draw a card for each living Gremlin. NL Discard !M! card."
+    "NAME": "ライド",
+    "DESCRIPTION": "生きてるグレムリン1体につきカードを1枚引く。 NL カードを !M! 枚捨てる。",
+    "UPGRADE_DESCRIPTION": "生きてるグレムリン1体につきカードを1枚引く。 NL カードを !M! 枚捨てる。"
   },
 
   "Gremlin:Revel": {
-    "NAME": "Revel",
-    "DESCRIPTION": "Gain [E] for each living Gremlin."
+    "NAME": "浮かれる",
+    "DESCRIPTION": "生きてるグレムリン1体につき [E] を得る。"
   },
 
   "Gremlin:Rhythm": {
-    "NAME": "Rhythm",
-    "DESCRIPTION": "Swap to the next Gremlin. NL Fetch a Basic card from your draw pile. It costs 0 this turn."
+    "NAME": "リズム",
+    "DESCRIPTION": "gremlin:交代 ：次のグレムリン。 NL 山札から基本カードを1枚取り出す。このターンそのコストは0"
   },
 
   "Gremlin:Rush": {
-    "NAME": "Rush",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
+    "NAME": "ラッシュ",
+    "DESCRIPTION": "エセリアル NL !D! ダメージを与える。 NL 廃棄"
   },
 
   "Gremlin:Scatter": {
-    "NAME": "Scatter!",
-    "DESCRIPTION": "The next time you would lose HP, instead Swap into a random Gremlin. NL Exhaust"
+    "NAME": "散れ!",
+    "DESCRIPTION": "次に HP が減る時、ダメージを無効化してからランダムなグレムリンと gremlin:交代 する。 NL 廃棄"
   },
 
   "Gremlin:SecondVolley": {
-    "NAME": "Second Volley",
-    "DESCRIPTION": "Deal !D! damage. Add a Shiv to your hand for each card played this turn",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add an upgraded Shiv to your hand for each card played this turn",
+    "NAME": "第二弾",
+    "DESCRIPTION": " !D! ダメージを与える。 NL このターンにプレイしたカード1枚につき ナイフ を手札に加える。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL このターンにプレイしたカード1枚につき ナイフ+ を手札に加える。",
     "EXTENDED_DESCRIPTION": [
       " NL (",
-      " card played.)",
-      " cards played.)"
+      " 枚プレイした)",
+      " 枚プレイした)"
     ]
   },
 
   "Gremlin:ShadowShiv": {
-    "NAME": "Shadow Shiv",
-    "DESCRIPTION": "Whenever you play an Attack that doesn't exhaust, add a Shiv to your hand."
+    "NAME": "隠しナイフ",
+    "DESCRIPTION": " 廃棄 以外のアタックをプレイする度に ナイフ を手札に加える。"
   },
 
   "Gremlin:ShankStone": {
-    "NAME": "Shank Stone",
-    "DESCRIPTION": "Unplayable. NL Whenever you draw this card, add !M! Shivs to your hand.",
-    "EXTENDED_DESCRIPTION": ["I can't play this card."]
+    "NAME": "シャンクストーン",
+    "DESCRIPTION": "使用不可 NL このカードを引いた時、ナイフを !M! 枚手札に加える。",
+    "EXTENDED_DESCRIPTION": ["このカードはプレイ出来ない。"]
   },
 
   "Gremlin:SharpenBlades": {
-    "NAME": "Sharpen Blades",
-    "DESCRIPTION": "Reduce the cost of all Attacks in your hand to 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Draw a card. NL Reduce the cost of all Attacks in your hand to 0 this turn."
+    "NAME": "刃を研ぐ",
+    "DESCRIPTION": "このターン手札の全ての アタック のコストを 0 にする。",
+    "UPGRADE_DESCRIPTION": "カードを1枚引く。 NL このターン手札の全ての アタック のコストを 0 にする。"
   },
 
   "Gremlin:ShieldGremlin": {
-    "NAME": "Shield Gremlin",
-    "DESCRIPTION": "Swap to Shield_Gremlin."
+    "NAME": "シールドグレムリン",
+    "DESCRIPTION": "gremlin:交代 ： gremlin:シールドグレムリン"
   },
 
   "Gremlin:ShowOfHands": {
-    "NAME": "Show of Hands",
-    "DESCRIPTION": "Gain !M! Block for every card in your hand.",
-    "UPGRADE_DESCRIPTION": "Draw a card. NL Gain !M! Block for every card in your hand."
+    "NAME": "手を見せる",
+    "DESCRIPTION": "手札1枚につき !M! ブロックを得る。",
+    "UPGRADE_DESCRIPTION": "カードを1枚引く。 NL 手札1枚につき !M! ブロックを得る。"
   },
 
   "Gremlin:ShowStopper": {
-    "NAME": "Show Stopper",
-    "DESCRIPTION": "Can only be played if you have exactly 10 Wiz. NL Deal !D! damage to ALL enemies 5 times.",
-    "EXTENDED_DESCRIPTION": ["Not enough suspense.", "The timing is ruined."]
+    "NAME": "ショーは終わりだ",
+    "DESCRIPTION": " gremlin:魔力 が 7 丁度の時のみ使用可能。 NL 敵全体に !D! ダメージを 5 回与える。",
+    "EXTENDED_DESCRIPTION": ["緊張感が足りない。", "このタイミングじゃ台無しだ。"]
   },
 
   "Gremlin:SkullBash": {
-    "NAME": "Skull Bash",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
+    "NAME": "スカルバッシュ",
+    "DESCRIPTION": "エセリアル NL !D! ダメージを与える。 NL 弱体 !M! を与える。 NL 廃棄"
   },
 
   "Gremlin:SneakyGremlin": {
-    "NAME": "Sneaky Gremlin",
-    "DESCRIPTION": "Swap to Sneaky_Gremlin."
+    "NAME": "スニーキーグレムリン",
+    "DESCRIPTION": "gremlin:交代 gremlin:スニーキーグレムリン"
   },
 
   "Gremlin:Strike": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "ストライク",
+    "DESCRIPTION": "!D! ダメージを与える。"
   },
 
   "Gremlin:Stupend": {
-    "NAME": "Stupend",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Block is affected by Wiz."
+    "NAME": "驚け",
+    "DESCRIPTION": " !B! ブロックを得る。 NL !D! ダメージを与える。 NL ブロックは gremlin:魔力 の影響を受ける。"
+  },
+
+  "Gremlin:SupplyScrollCard": {
+    "NAME": "サプライスクロール",
+    "DESCRIPTION": "色々な種類の ナイフと *ガード を !M! 枚手札に加える。 NL 廃棄"
   },
 
   "Gremlin:Tadah": {
-    "NAME": "Tadah!",
-    "DESCRIPTION": "Add an Echo of a random Skill to your hand. NL Swap to Gremlin_Wizard.",
-    "UPGRADE_DESCRIPTION": "Add an Echo of a random Skill to your hand. It costs 1 less. NL Swap to Gremlin_Wizard."
+    "NAME": "じゃじゃーん！",
+    "DESCRIPTION": "ランダムなスキルの gremlin:エコー を手札に加える。それはプレイするまでコストが0。 NL gremlin:交代 ： gremlin:グレムリンウィザード"
   },
 
   "Gremlin:TagTeam": {
-    "NAME": "Tag Team",
-    "DESCRIPTION": "Swap to a living Gremlin of your choice.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Swap to a living Gremlin of your choice."
+    "NAME": "タッグチーム",
+    "DESCRIPTION": "生きているグレムリンを選んで gremlin:交代 する。",
+    "UPGRADE_DESCRIPTION": "保留 NL 生きているグレムリンを選んで gremlin:交代 する。"
   },
 
   "Gremlin:TargetWeakness": {
-    "NAME": "Target Wounds",
-    "DESCRIPTION": "Deal !M! additional damage to Weakened enemies."
+    "NAME": "傷口を狙う",
+    "DESCRIPTION": "脱力 を受けている敵に !M! 追加ダメージ。"
   },
 
   "Gremlin:Tricksy": {
-    "NAME": "Tricksy",
-    "DESCRIPTION": "Draw !M! cards. Discard all cards draw this way that are not Attacks. NL Swap to Sneaky_Gremlin."
+    "NAME": "トリッキー",
+    "DESCRIPTION": "カードを !M! 枚引いた後、 アタック 以外のカードをすべて捨てる。 NL gremlin:交代 ： gremlin:スニーキーグレムリン"
   },
 
   "Gremlin:TwistTheKnife": {
-    "NAME": "Twist The Knife",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 Shiv to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 1 Upgraded Shiv to your hand."
+    "NAME": "ナイフで抉る",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 1 ナイフ を手札に加える。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 1 ナイフ+ を手札に加える。"
   },
 
   "Gremlin:ToeStub": {
-    "NAME": "Toe Stub",
-    "DESCRIPTION": "Deal !D! damage. If the enemy is Weak, apply !M! Vulnerable."
+    "NAME": "つま先に攻撃",
+    "DESCRIPTION": " !D! ダメージを与える。対象が 脱力 状態なら 弱体 !M! を与える。"
   },
 
   "Gremlin:Unforgiving": {
-    "NAME": "Unforgiving",
-    "DESCRIPTION": "You cannot lose Strength."
+    "NAME": "許さない",
+    "DESCRIPTION": " 筋力 が減少しなくなる。"
   },
 
   "Gremlin:Ward": {
-    "NAME": "Ward",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+    "NAME": "ガード",
+    "DESCRIPTION": " !B! ブロックを得る。 NL 廃棄"
   },
 
   "Gremlin:Whiz": {
     "NAME": "Whiz",
-    "DESCRIPTION": "Gain !M! Wiz. Next turn, add 1 Bang to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Wiz. Next turn, add 1 Upgraded Bang to your hand. NL Exhaust."
+    "DESCRIPTION": " !M! gremlin:魔力 を得る。 次のターン *バン！ を手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": " !M! gremlin:魔力 を得る。 次のターン *バン！+ を手札に加える。 NL 廃棄"
   },
 
   "Gremlin:Wizardry": {
-    "NAME": "Wizardry",
-    "DESCRIPTION": "At the start of your turn, gain !M! Wiz.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! Wiz."
+    "NAME": "ウィザードリィ",
+    "DESCRIPTION": "ターン開始時、 !M! gremlin:魔力 を得る。",
+    "UPGRADE_DESCRIPTION": "天賦 NL ターン開始時、 !M! gremlin:魔力 を得る。"
   },
 
   "Gremlin:Placeholder": {

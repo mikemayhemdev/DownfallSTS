@@ -1,0 +1,52 @@
+[
+  {
+    "PROPER_NAME": "苦悶",
+    "NAMES": [
+      "afflicted",
+      "苦悶"
+    ],
+    "DESCRIPTION": "敵が #y弱体 と #y脱力 を同時に受けている状態は #y苦悶 状態と呼ばれる。"
+  },
+  {
+    "PROPER_NAME": "破滅",
+    "NAMES": [
+      "doom",
+      "doomed",
+      "破滅"
+    ],
+    "DESCRIPTION": "破滅状態の敵はターン開始時にHPを失い、その後破滅状態が解除される。 #bただし その敵が #y苦悶 状態である時は除く。 ( #y脱力 と #y弱体 を同時に受けている状態 [REMOVE_SPACE])"
+  },
+  {
+    "PROPER_NAME": "葬火",
+    "NAMES": [
+      "pyre",
+      "葬火"
+    ],
+    "DESCRIPTION": "コストの支払いに加え、手札を一枚廃棄する必要がある。"
+  },
+  {
+    "PROPER_NAME": "リザーブ",
+    "NAMES": [
+      "reserve",
+      "reserves",
+      "リザーブ"
+          ],
+    "DESCRIPTION": "エナジーの代替となる。ターンを跨いで蓄積される。"
+  },
+  {
+    "PROPER_NAME": "メガエセリアル",
+    "NAMES": [
+      "megathereal",
+      "メガエセリアル"
+    ],
+    "DESCRIPTION": "メガエセリアルを持つカードは、プレイされた時、またはターン終了時、何処に置かれていても廃棄札へと送られる。"
+  },
+  {
+    "PROPER_NAME": "トーチヘッド",
+    "NAMES": [
+      "torchhead",
+      "トーチヘッド"
+    ],
+    "DESCRIPTION": "あなたが #y一時的な体力 を持っている間、アタックをプレイする度にトーチヘッドが行動する。"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "PROPER_NAME": "デッド-オン",
+    "NAMES": [
+      "Dead_On",
+      "dead_on",
+      "deadon",
+      "デッド-オン"
+    ],
+    "DESCRIPTION": "デッド-オン を持つカードは手札の中央にあると追加効果を発揮する。"
+  },
+  {
+    "PROPER_NAME": "集中",
+    "NAMES": [
+      "Concentrate",
+      "concentrate",
+      "concentrated",
+      "Concentrated",
+      "集中"
+    ],
+    "DESCRIPTION": "#y集中 状態で #yデッド-オン カードをプレイした場合、位置に関係なく効果が発動する。ターン終了時解除される。"
+  },
+  {
+    "ID": "bruise",
+    "PROPER_NAME": "傷",
+    "NAMES": [
+      "bruise",
+      "bruised",
+      "傷"
+          ],
+  "DESCRIPTION": "傷ついた対象は アタック からより多くのダメージを受ける。ターン終了時解除される。"
+},
+  {
+    "ID": "rugged",
+    "PROPER_NAME": "堅牢",
+    "NAMES": [
+      "rugged",
+      "堅牢"
+    ],
+  "DESCRIPTION": "次に受けるHPへのダメージを #b2 まで軽減する。"
+},
+  {
+    "PROPER_NAME": "バウンティ",
+    "NAMES": [
+      "bounty",
+      "バウンティ"
+    ],
+  "DESCRIPTION": "一般: #b15 ゴールド NL エリート: #b40 ゴールド NL ボス: #b100 ゴールド"
+},
+  {
+    "PROPER_NAME": "スタン",
+    "NAMES": [
+      "stun",
+      "Stun",
+      "stunned",
+      "Stunned",
+      "スタン"
+    ],
+    "DESCRIPTION": "スタン状態の敵はターンをスキップされる。"
+  }
+
+]

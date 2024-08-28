@@ -1,0 +1,32 @@
+{
+  "champ:OpenerPotion": {
+    "NAME": "ストラテジーポーション",
+    "DESCRIPTIONS": [
+      "カード #b2 枚から #b1 枚を選び手札に加え、 #yスタンス に入る。 ( #yスタンス [REMOVE_SPACE] 毎に)このターン、そのコストは #b0 ",
+      " #b",
+      " 枚のコピーを得る。",
+      " 枚のコピーを得る。"
+    ]
+  },
+  "champ:TechniquePotion": {
+    "NAME": "瓶詰めのテクニック",
+    "DESCRIPTIONS": [
+      "現在の #yスタンス [REMOVE_SPACE] の #yスキルボーナス を #b",
+      " 回得る。"
+    ]
+  },
+  "champ:UltimateStancePotion": {
+    "NAME": "スティムパック",
+    "DESCRIPTIONS": [
+      " #yアルティメットスタンスに入る。 #b",
+      " ターン持続。"
+    ]
+  },
+  "champ:CounterPotion": {
+    "NAME": "キレの良い醸造酒",
+    "DESCRIPTIONS": [
+      "#yカウンター #b",
+      " を得る。"
+    ]
+  }
+}

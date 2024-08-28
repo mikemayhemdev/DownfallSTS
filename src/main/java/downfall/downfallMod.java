@@ -231,8 +231,9 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static final boolean EXPERIMENTAL_FLIP = false;
     public static Settings.GameLanguage[] SupportedLanguages = {
             // Insert other languages here
+            // DONT FORGET TO TOGGLE AT reskinContent.getLanguageString() TOO
             Settings.GameLanguage.ENG, Settings.GameLanguage.ZHS,
-            // Settings.GameLanguage.JPN
+             Settings.GameLanguage.JPN,
             Settings.GameLanguage.KOR,
 //            Settings.GameLanguage.FRA,
 //            Settings.GameLanguage.ZHT,

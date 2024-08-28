@@ -1,13 +1,13 @@
 {
   "hexamod:theHexaghost": {
     "NAMES": [
-      "The Hexaghost",
+      "ヘクサゴースト",
       "the Hexaghost"
     ],
     "TEXT": [
-      "An accursed spirit of the Spire. NL Sealed to an eternal fate as a protector.",
-      "NL You accrue the burning hatred of the dead...",
-      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~ghastly~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+      "スパイアの呪われた魂。 NL 守護者として永劫の運命に封印されている。",
+      "NL 死者の憎悪を受け継いで...",
+      "暗い道を歩いていると、数人のフードをかぶった人物が何か暗い儀式をしているところに出くわす。あなたが近づくと、彼らは不気味に一斉にこちらを向いた。その中で最も背の高い者は牙の生えた歯をむき出しにし、青白い長い手をあなたに向かって伸ばした。 NL 「 ~我らに加われ悍ましき魂よ。そして塔の温もりを感じるのだ~ 」"
     ]
   }
 }

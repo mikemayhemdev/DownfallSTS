@@ -1,22 +1,58 @@
 {
   "downfall:WorldOfGoo": {
-    "NAME": "World of Goo",
-    "DESCRIPTION": "Whenever you take unblocked damage, add a Slimed Status to your discard pile."
+    "NAME": "粘つく世界",
+    "DESCRIPTION": "ブロック出来なかったダメージを受ける度に、 粘液 の状態異常 を捨て札に追加する。"
   },
   "downfall:Hexed": {
-    "NAME": "Hexed",
-    "DESCRIPTION": "Start with a Velvet Choker. When you draw a card, it becomes Ethereal."
+    "NAME": "ヘキサ",
+    "DESCRIPTION": "ベルベットチョーカーを持った状態で始まる。あなたがカードを引くとそれに エセリアル を追加する。"
   },
   "downfall:Improvised": {
-    "NAME": "Improvised",
-    "DESCRIPTION": "Start with 10 Unknown cards."
+    "NAME": "即興",
+    "DESCRIPTION": "10枚の正体不明なカードを持って開始。"
   },
   "downfall:Jewelcrafting": {
-    "NAME": "Jewelcrafting",
-    "DESCRIPTION": "Start with two copies of Exploit Gem and a Pick of Rhapsody."
+    "NAME": "宝石細工",
+    "DESCRIPTION": "2枚の ジェム発掘 と ピッケル・オブ・ラプソディ を持って開始する。"
   },
   "downfall:EvilRun": {
-    "NAME": "Evil Run",
-    "DESCRIPTION": "Enables Evil Run content."
+    "NAME": "エビル・ラン",
+    "DESCRIPTION": "DownFall コンテンツを有効にする。"
+  },
+  "downfall:ExchangeController": {
+    "NAME": "祝福",
+    "DESCRIPTION": "開始時、 ネオーの祝福 を得る。"
+  },
+  "downfall:Lament": {
+    "NAME": "嘆き",
+    "DESCRIPTION": "開始時、 ネオーの嘆き を得る。"
+  },
+  "downfall:ChampStances": {
+    "NAME": "ニューチャレンジャー",
+    "DESCRIPTION": "各戦闘はランダムな チャンプ の スタンス で開始され、 フィニッシングストライク を手札に加える。 全ての初期カードは テクニック を得る。"
+  },
+  "downfall:Enraging": {
+    "NAME": "ラストスタンド",
+    "DESCRIPTION": "全てのエネミーはHPが 50% 以下になった時、筋力が付与され更にデバフが全て除去される。"
+  },
+  "downfall:Analytical": {
+    "NAME": "分析的",
+    "DESCRIPTION": "各ターン開始時、 エンコード を持つランダムなカードを得る。それにはエセリアルが付与されている。基本の ストライク と 防御 に エンコード が付く。"
+  },
+  "downfall:StatusAbuse": {
+    "NAME": "感染症",
+    "DESCRIPTION": " 補助用電源, ドヌーのワッシャー, デカのワッシャー, 医療キット,ブロンズアイドル を持って開始する。そのほかのレリックは全て サークレット になる。"
+  },
+  "downfall:TooManyShivs": {
+    "NAME": "ナイフ多すぎ",
+    "DESCRIPTION": "ベルベットチョーカー と 空虚のエッセンス と ナイフを10 枚持って開始する。"
+  },
+  "downfall:Wizzardry": {
+    "NAME": "ウィザーードリィ",
+    "DESCRIPTION": " ウィザードハット, ウィザードスタッフ, ウィザードリィ+ を持って開始する。"
+  },
+  "downfall:TransformRewards": {
+    "NAME": "トランスフォーム",
+    "DESCRIPTION": "全てのカード報酬が ｢カードを変化させる｣ 効果になる。"
   }
 }

@@ -1,63 +1,65 @@
 {
   "hexamod:SearingGhostflame": {
-    "NAME": "Searing Ghostflame",
+    "NAME": "シーリングゴーストフレイム",
     "DESCRIPTION": [
-      "#yIgnited. ",
-	  "#yActive. #yIgnites when #b" ,
-	  " #yAttack is played.",
-	  " #yAttacks are played.",
-	  "Inactive. #yIgnites when #b2 #yAttacks are played while #yActive.",
-	  " NL NL #yIgnition: When #yIgnited, apply #b",
-	  " #ySoulburn to a random enemy.",
-	  " NL NL At the end of your turn, if this is #yIgnited, #yAdvance to the next Ghostflame."
+      "#y発火 #y中 NL ",
+	  "#y点火 条件： #yアタック を #b" ,
+	  " 回 プレイする。",
+	  " 回 プレイする。",
+	  "#y点火 条件：炎の上で #yアタックを #b2 回プレイする。",
+	  " NL NL #yイグニッション : ランダムな敵に #b",
+	  "  #yソウルバーン を与える。",
+	  " NL NL ターン終了時、これが #y発火 していたら次のゴーストフレイムへと #y前進 する。"
     ]
-  }, 
+  },
   "hexamod:CrushingGhostflame": {
-    "NAME": "Crushing Ghostflame",
+    "NAME": "クラッシングゴーストフレイム",
     "DESCRIPTION": [
-      "#yIgnited. ",
-	  "#yActive. #yIgnites when #b" ,
-	  " #ySkill is played.",
-	  " #ySkills are played.",
-	  "Inactive. #yIgnites when #b2 #ySkills are played while #yActive.",
-	  " NL NL #yIgnition: When #yIgnited, deal #b",
-	  " damage to a random enemy twice.",
-		" NL NL At the end of your turn, if this is #yIgnited, #yAdvance to the next Ghostflame."
+      "#y発火 #y中 NL ",
+	  "#y点火 条件： #yスキル を #b" ,
+	  " 回 プレイする。",
+	  " 回 プレイする。",
+	  "#y点火 条件：炎の上で  #yスキル を #b2 回プレイする。",
+	  " NL NL #yイグニッション : ランダムな敵に #b",
+	  " ダメージを #b2 回与える。",
+		" NL NL ターン終了時、これが #y発火 していたら次のゴーストフレイムへと #y前進 する。"
     ]
   },
   "hexamod:BolsteringGhostflame": {
-    "NAME": "Bolstering Ghostflame",
+    "NAME": "ボルスタリングゴーストフレイム",
     "DESCRIPTION": [
-      "#yIgnited. ",
-	  "#yActive. #yIgnites when a #yPower is played.",
-	  "Inactive. #yIgnites when a #yPower is played while #yActive.",
-	  " NL NL #yIgnition: When #yIgnited, gain #b",
-	  " #yBlock and #b1 #yStrength.",
-		" NL NL At the end of your turn, if this is #yIgnited, #yAdvance to the next Ghostflame."
+      "#y発火 #y中 NL ",
+	  "#y点火 条件： #yパワー をプレイする。 ",
+	  "#y点火 条件：炎の上で  #yパワー をプレイする。 ",
+	  " NL NL #yイグニッション : #b",
+	  " #yブロック と #y筋力 #b1 を得る。",
+		" NL NL ターン終了時、これが #y発火 していたら次のゴーストフレイムへと #y前進 する。"
     ]
   },
     "hexamod:InfernoGhostflame": {
-    "NAME": "Inferno Ghostflame",
+    "NAME": "インフェルノゴーストフレイム",
     "DESCRIPTION": [
-      "#yIgnited. ",
-	  "#yActive. Ignites when spending [E] [E] [E] .",
-	  "#yActive. Ignites when spending [E] [E] .",
-	  "#yActive. Ignites when spending [E] .",
-	  "Error. Please report to mod dev: ",
-	  "Inactive. Ignites when spending [E] [E] [E] while #yActive.",
-	  " NL NL #yIgnition: When #yIgnited, deal #b",
-	  " damage to a random enemy for each #yIgnited #yGhostflame, then #yExtinguish them. If this is #yActive, #yAdvance.",
-		" NL NL At the end of your turn, if this is #yIgnited, #yAdvance to the next Ghostflame."
+      "#y発火 #y中 [REMOVE_SPACE] ターン終了時に #y滅却 される。",
+	  "#y点火 条件： [E] [E] [E] を消費する。",
+	  "#y点火 条件： [E] [E] を消費する。",
+	  "#y点火 条件： [E] を消費する。",
+	  "error 開発に報告してください: ",
+	  "#y点火 条件：炎の上で [E] [E] [E] 消費すると #y点火 する。 任意のターン終了時に #y滅却 する。",
+	  " NL NL #yイグニッション : ランダムな敵に発火しているゴーストフレイム毎に #b",
+	  " ダメージ。その後 #y滅却 する。",
+		" NL NL ターン終了時、これが #y発火 していたら次のゴーストフレイムへと #y前進 する。もしすべてのゴーストフレイムが #y発火 していた場合 [REMOVE_SPACE], #y火力 #b2 を得る。 [REMOVE_SPACE].",
+		" NL NL ターン終了時、これが #y発火 していたら次のゴーストフレイムへと #y前進 する。"
     ]
-  }, 
+  },
   "hexamod:MayhemGhostflame": {
-    "NAME": "Mayhem Ghostflame",
+    "NAME": "メイヘムゴーストフレイム",
     "DESCRIPTION": [
-      "#yIgnited. ",
-	  "#yActive. #yIgnites when you end your turn.",
-	  "Inactive. #yIgnites when you end your turn while this is #yActive.",
-	  " NL NL #yIgnition: When #yIgnited, play the top card of your draw pile.",
-		" NL NL At the end of your turn, if this is #yIgnited, #yAdvance to the next Ghostflame."
+    "#y発火 #y中 NL ",
+	"#y点火 条件： ターン終了。",
+	"#y点火 条件： ターン終了。",
+	" NL NL #yイグニッション : #y占術 を行い",
+	" 山札の一番上のカードをプレイする。",
+	" NL NL ターン終了時、これが #y発火 していたら次のゴーストフレイムへと #y前進 する。"
     ]
   }
 }

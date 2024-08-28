@@ -1,200 +1,200 @@
 {
   "Gremlin:Agony": {
-    "NAME": "Agonizing Pain",
+    "NAME": "苦悩する痛み",
     "DESCRIPTIONS": [
-      "#yAttacks deal #b",
-      "% less damage for #b",
-      " turn.",
-      " turns."
+      "#yアタックで与えるダメージが #b",
+      "% 減少する。あと #b",
+      " ターン。",
+      " ターン。"
     ]
   },
   "Gremlin:Bang": {
-    "NAME": "Bang",
+    "NAME": "バン！",
     "DESCRIPTIONS": [
-      "The next attack you play consumes all stacks of #yWiz and deals #b", " additional damage."
+      "次に行う攻撃は #y魔力 をすべて消費して #b", " 追加ダメージを与える。"
     ]
   },
   "Gremlin:Bashed": {
-    "NAME": "Bashed",
+    "NAME": "バシッ！",
     "DESCRIPTIONS": [
-      "Whenever you gain #yBlock this turn, loses #b", " HP."
+      "このターン、 #yブロック を得る度に #b", " HPを失う。"
     ]
   },
   "Gremlin:BubbleBarrier": {
-    "NAME": "Bubble Barrier",
+    "NAME": "バブルバリア",
     "DESCRIPTIONS": [
-      "Whenever you play a card this turn, gain #b", " #yBlock."
+      "このターン、カードをプレイする度に #b", " #yブロックを得る。"
     ]
   },
   "Gremlin:CongaLine": {
-    "NAME": "Conga Line",
+    "NAME": "コンガライン",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain ",
-      "and #ySwap to the next Gremlin."
+      "あなたのターン開始時、 ",
+      " を得て、 次のグレムリンと #y交代 する。"
     ]
   },
   "Gremlin:Crippled": {
-    "NAME": "Crippled",
+    "NAME": "廃人",
     "DESCRIPTIONS": [
-      "#yWeak does not wear off. At the end of its turn, it loses HP equal to its #bWeak."
+      "#y脱力 が解除されなくなり、自分のターン終了時に #y脱力 分の HP を失う。"
     ]
   },
   "Gremlin:Encore": {
-    "NAME": "Encore",
+    "NAME": "アンコール",
     "DESCRIPTIONS": [
-      "Whenever you consume #yWiz, deal #b", " damage to ALL enemies."
+      " #y魔力 を消費する度に、敵全体に #b", " ダメージを与える。"
     ]
   },
   "Gremlin:Enthusiasm": {
-    "NAME": "Enthusiasm",
+    "NAME": "熱意",
     "DESCRIPTIONS": [
-      "Whenever you #ySwap, draw #b",
-      " card.",
-      " cards."
+      " #y交代 を行うと、 カードを #b",
+      " 枚引く。",
+      " 枚引く。"
     ]
   },
   "Gremlin:FatGremlin": {
-    "NAME": "Fat Gremlin",
+    "NAME": "太っちょグレムリン",
     "DESCRIPTIONS": [
-      "Whenever you play an attack, apply #b",
-      " #yWeak to all targets."
+      "アタックをプレイする度に対象に #y脱力 #b",
+      " を与える。"
     ]
   },
   "Gremlin:Flex": {
-    "NAME": "Strength Down",
+    "NAME": "筋力低下",
     "DESCRIPTIONS": [
-      "At the end of this turn, lose #b",
-      " #yStrength."
+      "このターン終了時に #y筋力 #b",
+      " を失う。"
     ]
   },
   "Gremlin:Furious": {
-    "NAME": "Furious",
+    "NAME": "激怒",
     "DESCRIPTIONS": [
-      "Whenever you would gain #yBlock this turn, instead deal that much damage to ALL enemies."
+      "このターン #yブロック を得る代わりに、敵全体にその分のダメージを与える。"
     ]
   },
   "Gremlin:GremlinNob": {
-    "NAME": "Gremlin Nob",
+    "NAME": "グレムリンボス",
     "DESCRIPTIONS": [
-      "At the start of each turn, add #b3 Gremlin Nob cards to your hand. You can no longer #ySwap. When you would lose all #yTemporary #yHP, prevent further damage and revert back."
+      "ターン開始時、 #b3 枚のグレムリンボスカードを得る。 あなたはもう #y交代出来ない。 NL 全ての #y一時的な体力 を失う場合、超過したダメージを無効化し元に戻る。"
     ]
   },
   "Gremlin:GremlinWizard": {
-    "NAME": "Gremlin Wizard",
+    "NAME": "グレムリンウィザード",
     "DESCRIPTIONS": [
-      "Whenever you play a skill, gain #b",
-      " #yWiz."
+      "スキルをプレイするたびに #y魔力 #b",
+      " を得る。"
     ]
   },
   "Gremlin:Heckle": {
-    "NAME": "Heckle",
+    "NAME": "足手まとい",
     "DESCRIPTIONS": [
-      "Whenever you apply a debuff to an enemy, gain #b",
-      " #yTemporary #yHP."
+      "敵にデバフを与える度に、 #y一時的な体力 #b",
+      " を得る。"
     ]
   },
   "Gremlin:InfiniteBlocks": {
-    "NAME": "Infinite Blocks",
+    "NAME": "無限ブロック",
     "DESCRIPTIONS": [
-      "At the start of your turn, add #b",
-      " #yWard to your hand.",
-      " #yWards to your hand."
+      "あなたのターン開始時、 #b",
+      " 枚の #yガード を手札に加える。",
+      " 枚の #yガード"
     ]
   },
   "Gremlin:MadGremlin": {
-    "NAME": "Mad Gremlin",
+    "NAME": "マッドグレムリン",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yTemporary #yStrength when attacked."
+      "攻撃を受ける度に #y一時的な #y筋力 #b",
+      " を得る。"
     ]
   },
   "Gremlin:MakeshiftArmor": {
-    "NAME": "Makeshift Armor",
+    "NAME": "その場しのぎアーマー",
     "DESCRIPTIONS": [
-      "Play #b",
-      " more attack to gain #b",
-      " more attacks to gain #b",
-      " #yArtifact."
+      " #b",
+      " アタックをプレイするたび #b",
+      " アタックをプレイするたび #b",
+      " #yアーティファクト を得る。"
     ]
   },
   "Gremlin:MakingMagic": {
-    "NAME": "Making Magic",
+    "NAME": "魔法をかける",
     "DESCRIPTIONS": [
-      "At the start of your next turn, add #b",
-      " copy of #yBang to your hand.",
-      " copies of #yBang to your hand."
+      "次のターン開始時、 #b",
+      " #yバン！ のコピーを得る。",
+      " #yバン！ のコピーを得る。"
     ]
   },
   "Gremlin:MakingMoreMagic": {
-    "NAME": "Making Magic+",
+    "NAME": "魔法をかける+",
     "DESCRIPTIONS": [
-      "At the start of your next turn, add #b",
-      " #yUpgraded copy of #yBang to your hand.",
-      " #yUpgraded copies of #yBang to your hand."
+      "次のターン開始時、 #b",
+      " #バン！+ のコピーを得る。",
+      " #バン！+ のコピーを得る。"
     ]
   },
   "Gremlin:Polish": {
-    "NAME": "Polish",
+    "NAME": "磨く",
     "DESCRIPTIONS": [
-      "Wards grant #b",
-      " additional #yBlock."
+      "#yガード で得られる #yブロックがの #b",
+      " 上昇。"
     ]
   },
   "Gremlin:Scatter": {
-    "NAME": "Scatter",
+    "NAME": "散れ！",
     "DESCRIPTIONS": [
-      "The next #b",
-      " time you would lose HP, instead #ySwap into a random Gremlin.",
-      " times you would lose HP, instead #ySwap into a random Gremlin."
+      "次の #b",
+      " 回、HPを失う代わりにランダムなグレムリンと #y交代 する。",
+      " 回、HPを失う代わりにランダムなグレムリンと #y交代 する。"
     ]
   },
   "Gremlin:ShadowShiv": {
-    "NAME": "Shadow Shiv",
+    "NAME": "隠しナイフ",
     "DESCRIPTIONS": [
-      "Whenever you play an Attack that doesn't Exhaust, add #b",
-      " #yShiv to your hand.",
-      " #yShivs to your hand."
+      " #y廃棄 を持っていない アタックをプレイするたびに #b",
+      " 枚の #yナイフ を手札に加える。",
+      " 枚の #yナイフ を手札に加える。"
     ]
   },
   "Gremlin:ShieldGremlin": {
-    "NAME": "Shield Gremlin",
+    "NAME": "シールドグレムリン",
     "DESCRIPTIONS": [
-      "Whenever you play a skill, gain #b",
-      " #yBlock."
+      "スキルをプレイする度に、 #b",
+      " #yブロック を得る。"
     ]
   },
   "Gremlin:SneakyGremlin": {
-    "NAME": "Sneaky Gremlin",
+    "NAME": "スニーキーグレムリン",
     "DESCRIPTIONS": [
-      "Whenever you play an attack, deal #b",
-      " damage to a random enemy."
+      "アタックをプレイする度に、ランダムな敵に #b",
+      " ダメージを与える。"
     ]
   },
   "Gremlin:TargetWeakness": {
-    "NAME": "Target Wounds",
+    "NAME": "傷口を広げる",
     "DESCRIPTIONS": [
-      "Deal #b",
-      " additional damage to #yWeakened enemies."
+      "脱力状態の敵に 追加で #b",
+      " ダメージを与える。"
     ]
   },
   "Gremlin:Unforgiving": {
-    "NAME": "Unforgiving",
+    "NAME": "許さない",
     "DESCRIPTIONS": [
-      "You cannot lose Strength."
+      " #y筋力 が減少しない。"
     ]
   },
   "Gremlin:Wiz": {
-    "NAME": "Wiz",
+    "NAME": "魔力",
     "DESCRIPTIONS": [
-      "Charging up. NL Need #b", " more stack.", " more stacks.",
-      "Ready to fire."
+      "チャージ開始。 NL あと #b", " 多くのスタックが必要。", " 多くのスタックが必要。",
+      "これでも喰らえ！"
     ]
   },
   "Gremlin:Wizardry": {
-    "NAME": "Wizardry",
+    "NAME": "ウィザードリィ",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yWiz."
+      "ターン開始時、 #y魔力 #b",
+      " を得る。"
     ]
   }
 }

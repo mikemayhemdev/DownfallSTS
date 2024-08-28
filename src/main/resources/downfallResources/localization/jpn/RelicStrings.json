@@ -1,506 +1,540 @@
 {
   "downfall:NeowBlessing": {
-    "NAME": "Neow's Blessing",
-    "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
+    "NAME": "ネオーの祝福",
+    "FLAVOR": "怒りを抑えよ。スパイアのように強く、不屈であれ。",
     "DESCRIPTIONS": [
-      "Replaces starter relic. Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b100 at the start of each Act. NL Draw #b2 less cards and lose ",
-      " at the start of your turn."
+      "ボスの最大 HP 増加、初期レリックなし、ドロー枚数 #b2 減少、 #b1 ",
+      " 減少。 NL 戦闘開始時、ボスは固有のバフを得る。更に #yスタン が無効になる。"
+    ]
+  },
+  "downfall:NeowBlessing_Player": {
+    "NAME": "ネオーの祝福",
+    "FLAVOR": "怒りを抑えよ。スパイアのように強く、不屈であれ。",
+    "DESCRIPTIONS": [
+      "入手時、最大 HP + #b100 NL 各Act. 開始時に、更に最大HP + #b100 NL ポーションスロットを全て失う。 NL ターン開始時ドロー枚数 #b1 と [E] が1減少する。"
     ]
   },
   "downfall:CoffeeDripper": {
     "DESCRIPTIONS": [
-      " NL Being unable to Rest, Boss started with less than maximum health."
+      " NL 休息が取れず体力が落ちている。"
     ]
   },
   "downfall:BustedCrown": {
     "DESCRIPTIONS": [
-      " NL Being unable to pick optimal cards, Boss has fewer synergistic cards than usual."
+      " NL 最適なカードを入手出来ず、シナジーのあるカードが減っている。"
     ]
   },
   "downfall:Girya": {
     "DESCRIPTIONS": [
-      " NL Opting to Lift instead of Rest, Boss started with less than maximum health."
+      " NL 休息よりもリフトを選んだので、体力が落ちている。"
     ]
   },
   "downfall:Matroyshka": {
     "DESCRIPTIONS": [
-      " NL Boss acquired ",
-      " additional relics."
+      " NL ボスは ",
+      " 追加でこれらのレリックを持つ。"
     ]
   },
   "downfall:Ectoplasm": {
     "DESCRIPTIONS": [
-      " NL Being unable to gain gold, Boss has ",
-      " fewer card removals than usual."
+      " NL ゴールドを得られなかったため除去が出来ず、 ",
+      " 不要なカードを多く所持している。"
     ]
   },
   "downfall:BlackStar": {
     "DESCRIPTIONS": [
-      " NL Boss acquired ",
-      " additional relics, but starts with less than maximum health."
+      " NL ボスは ",
+      " 追加でこれらの遺物を持つが、連戦で疲労しており体力が落ちている。"
     ]
   },
   "downfall:MoltenEgg": {
     "DESCRIPTIONS": [
-      " NL Boss upgraded ",
-      " Attacks from this relic."
+      " NL ボスが持つアタックは ",
+      " このレリックのおかげでアップグレードされている。"
     ]
   },
   "downfall:ToxicEgg": {
     "DESCRIPTIONS": [
-      " NL Boss upgraded ",
-      " Skills from this relic."
+      " NL ボスが持つスキルは ",
+      " このレリックのおかげでアップグレードされている。"
     ]
   },
   "downfall:FrozenEgg": {
     "DESCRIPTIONS": [
-      "Boss has many Upgraded Powers."
+      "ボスが持つパワーはこのレリックのおかげでアップグレードされている。"
     ]
   },
   "downfall:Shovel": {
     "DESCRIPTIONS": [
-      " NL Boss acquired ",
-      " additional relics, but starts with less than maximum health due to not Resting."
+      " NL ボスは ",
+      " 追加でこれらのレリックを持つが、休息をとらなかったため体力が落ちている。"
     ]
   },
   "downfall:CBRSerpentHead": {
     "DESCRIPTIONS": [
-      " NL Boss used this gold to remove 2 cards from their deck."
+      " NL ボスはこのゴールドを使い、相手のデッキから カードを 2 枚取り除いた。"
     ]
   },
   "downfall:CursedKey": {
     "DESCRIPTIONS": [
-      " NL Boss gained ",
-      " Curses from this relic."
+      " NL ボスはこのレリックにより ",
+      " 呪い カードを取得した。"
     ]
   },
   "downfall:DreamCatcher": {
     "DESCRIPTIONS": [
-      " NL Boss gained additional cards when resting."
+      " NL ボスは休息により追加のカードを取得した。"
     ]
   },
   "downfall:PrayerWheel": {
     "DESCRIPTIONS": [
-      " NL Boss gained ",
-      " extra cards from this relic."
+      " NL ボスはこのレリックにより ",
+      " 追加のカードを取得した。"
     ]
   },
   "downfall:PeacePipe": {
     "DESCRIPTIONS": [
-      " NL Boss removed ",
-      " additional cards, but starts with less than maximum health."
+      " NL ボスはこのレリックにより ",
+      " カードを除去したが、休息を取らなかったため体力が落ちている。"
     ]
   },
   "downfall:RunicDome": {
     "DESCRIPTIONS": [
-      " NL Boss may choose the order of cards unfavorably."
+      " NL ボスはカード選択が不利になる事がある。"
     ]
   },
   "downfall:CentennialPuzzle": {
     "DESCRIPTIONS": [
-      " NL Cannot trigger on the Boss's turn."
+      " NL ボスのターンには発動できない。"
     ]
   },
   "downfall:CBRFaceOfCleric": {
     "DESCRIPTIONS": [
-      " Max HP was gained via this relic."
+      " このレリックのおかげで最大HPが増加している。"
     ]
   },
   "downfall:Omamori": {
     "DESCRIPTIONS": [
-      " NL Prevented the Boss from gaining a "
+      " NL ボスが獲得するのを阻止した。 "
     ]
   },
   "downfall:DollysMirror": {
     "DESCRIPTIONS": [
-      " NL The mirror duplicated "
+      " NL 鏡により複製した。 "
     ]
   },
   "downfall:Vampires": {
-    "NAME": "Event: Vampires",
-    "FLAVOR": "The master's blood... the master's blood! THE MASTER'S BLOOD!",
+    "NAME": "イベント: 吸血鬼(？)",
+    "FLAVOR": "ご主人様の血...ご主人様の血！ご主人様の血！",
     "DESCRIPTIONS": [
-      "Strikes have been replaced with Bites. NL -",
-      " Maximum HP."
+      "ストライクは 噛み付き に変更された。 NL 最大 HP -",
+      " "
     ]
   },
   "downfall:BonfireSpirits": {
-    "NAME": "Event: Bonfire Spirits",
-    "FLAVOR": "The spirits toss small bones and fragments into the fire, which brilliantly erupts each time...",
+    "NAME": "イベント: たき火の精霊",
+    "FLAVOR": "精霊たちは小さな骨や破片を火に投げ入れ、そのたびに鮮やかに噴き上がる...。",
     "DESCRIPTIONS": [
-      "Boss removed a card from its deck to gain 10 Max HP."
+      "ボスは自分のデッキからカードを除去し、最大HPを10増やした。"
     ]
   },
   "downfall:DesignerInSpire": {
-    "NAME": "Event: Designer-In-Spire",
-    "FLAVOR": "This will not do, no no. What is this style? Disgusting! Are you bleeeeding? Groooss.",
+    "NAME": "イベント: デザイナー_イン・スパイア",
+    "FLAVOR": "こりゃダメダメだ。なんだよその恰好は。ああ気持ち悪い！血塗れじゃないか... 気色悪い。",
     "DESCRIPTIONS": [
-      "A card was removed from the deck, and another was upgraded."
+      "カードが一枚除去され、別のカードがアップグレードされた。"
     ]
   },
   "downfall:DivineFountain": {
-    "NAME": "Event: Divine Fountain",
-    "FLAVOR": "You come across shimmering water flowing endlessly from a fountain on a nearby wall.",
+    "NAME": "イベント: 聖なる泉",
+    "FLAVOR": "近くの壁にある噴水から、キラキラとした水が止め処なく流れているのに出くわした。",
     "DESCRIPTIONS": [
-      " Curses have been removed from the deck."
+      " デッキから呪いのカードが取り除かれた。"
     ]
   },
   "downfall:Duplicator": {
-    "NAME": "Event: Duplicator",
+    "NAME": "イベント: デュプリケーター",
     "FLAVOR": "Before you lies a decorated altar to some ancient entity.",
     "DESCRIPTIONS": [
-      "Boss duplicated a powerful card."
+      "ボスは強力なカードを複製した。"
     ]
   },
   "downfall:BigFish": {
-    "NAME": "Event: Big Fish",
+    "NAME": "イベント: ビッグフィッシュ",
     "FLAVOR": "As you make your way down a long corridor you see a banana, a donut, and a box floating about.",
     "DESCRIPTIONS": [
-      "The Donut was chosen. NL +5 Maximum HP.",
-      "The Box was chosen. NL A Regret curse and a relic was added."
+      "選ばれたのはドーナツだった。 NL 最大 HP + 5",
+      "選ばれたのは箱だった。 NL 追加のレリックと 呪い を得た。"
     ]
   },
   "downfall:LivingWall": {
-    "NAME": "Event: Living Wall",
+    "NAME": "イベント: 生きている壁",
     "FLAVOR": "Forget what you know, and I'll let you go.",
     "DESCRIPTIONS": [
-      "Boss removed a ",
-      "Boss upgraded a ",
-      "Boss transformed a ",
-      " into a "
+      "ボスは 除去した ",
+      "ボスは アップグレードした ",
+      "ボスは 変化させた ",
+      " から "
     ]
   },
   "downfall:WheelOfChange": {
-    "NAME": "Event: Wheel of Change",
+    "NAME": "イベント: 変化のルーレット",
     "FLAVOR": "It's time to spin the wheel! Are you READY? Of course you are!",
     "DESCRIPTIONS": [
-      "The Wheel gave the Boss a ",
-      "Boss was healed to maximum health.",
-      "The Wheel removed a ",
-      " from the Boss's deck.",
-      "The Wheel caused damage to the Boss."
+      "ホイールはボスに与えた ",
+      "体力を最大まで回復させた",
+      "ホイールはボスのデッキから ",
+      " を取り除いた",
+      "ホイールはボスにダメージを与えた。"
     ]
   },
   "downfall:Falling": {
-    "NAME": "Event: Falling",
+    "NAME": "イベント: 落下",
     "FLAVOR": "While in free fall you consider your options...",
     "DESCRIPTIONS": [
-      "Strike was removed from the deck."
+      "デッキからストライクが削除された"
     ]
   },
   "downfall:Augmenter": {
-    "NAME": "Event: Augmenter",
+    "NAME": "イベント: 増強因子",
     "FLAVOR": "Hey there, stranger. Interested in advancing science?",
     "DESCRIPTIONS": [
-      "Boss transformed 2 cards",
-      "Boss gained J.A.X.",
-      "Boss gained the Mutagenic Strength."
+      "ボスは 2 枚のカードを変化させた。",
+      "ボスは J.A.X. した。",
+      "ボスは 筋力 の変異を得た。"
     ]
   },
   "downfall:AncientWriting": {
-    "NAME": "Event: Ancient Writing",
+    "NAME": "イベント: 古代の筆跡",
     "FLAVOR": "Suddenly, the message becomes clear...",
     "DESCRIPTIONS": [
-      "Boss upgraded all Strikes & Defends."
+      "ボスは全てのストライクと防御をアップグレードした。"
     ]
   },
   "downfall:Bandits": {
-    "NAME": "Event: Red Mask Bandits",
+    "NAME": "イベント: 覆面の盗賊",
     "FLAVOR": "Get em Bear!",
     "DESCRIPTIONS": [
-      "Boss defeated the Bandits, gaining the Red Mask, but starts with less than maximum health."
+      "ボスはバンディット共を片付けレッドマスクを得たが代わりに体力を消耗した。"
     ]
   },
   "downfall:WingStatue": {
-    "NAME": "Event: Wing Statue",
+    "NAME": "イベント: 黄金の翼",
     "FLAVOR": "Among the stone and boulders, you notice an intricate large blue statue resembling a wing.",
     "DESCRIPTIONS": [
-      " was removed from the deck."
+      " デッキから除去された。"
     ]
   },
   "downfall:Serpent": {
-    "NAME": "Event: The Ssssserpent",
+    "NAME": "イベント: サ・サ・サ・サ・サーペント",
     "FLAVOR": "The most fulfilling of lives is that in which you can buy anything! Do you agree?",
     "DESCRIPTIONS": [
-      "Boss gained a Doubt curse to gain gold, which was used to buy a relic."
+      "ボスは呪いとゴールドを入手し、そのゴールドでレリックを購入した。"
     ]
   },
   "downfall:Cleric": {
-    "NAME": "Event: Cleric",
+    "NAME": "イベント: 聖職者",
     "FLAVOR": "Hello friend! I am Cleric! Are you interested in my services?!",
     "DESCRIPTIONS": [
-      "Boss removed a card from its deck."
+      "ボスはそのデッキからカードを除去した。"
     ]
   },
   "downfall:OldBeggar": {
-    "NAME": "Event: Old Beggar",
+    "NAME": "イベント: 年老いた物乞い",
     "FLAVOR": "Spare some coin, child?",
     "DESCRIPTIONS": [
-      "A card was removed from the deck."
+      "デッキからカードを除去した。"
     ]
   },
   "downfall:Library": {
-    "NAME": "Event: Library",
+    "NAME": "イベント: 図書館",
     "FLAVOR": "You come across an ornate building which appears abandoned.",
     "DESCRIPTIONS": [
-      "Boss gained an extra synergistic card."
+      "ボスは高いシナジーを得るカードを入手した。"
     ]
   },
   "downfall:Mausoleum": {
-    "NAME": "Event: Mausoleum",
+    "NAME": "イベント: 霊廟",
     "FLAVOR": "You cannot make out the writing on the coffin, however, you do notice black fog seeping out from the sides.",
     "DESCRIPTIONS": [
-      "Boss gained a Writhe curse and an extra relic."
+      "ボスは呪いとレリックを入手した。"
     ]
   },
   "downfall:Nest": {
-    "NAME": "Event: Nest",
+    "NAME": "イベント: 巣窟",
     "FLAVOR": "CAW CAW CAAAAAWWW!",
     "DESCRIPTIONS": [
-      "Boss gained a Ritual Dagger."
+      "ボスは 儀式の短剣 を入手した。"
     ]
   },
   "downfall:Colosseum": {
-    "NAME": "Event: Colosseum",
+    "NAME": "イベント: コロシアム",
     "FLAVOR": "WE NOW@ BEGIN THE COMBAT!!!!",
     "DESCRIPTIONS": [
-      "Boss completed the Colosseum event, gaining two additional relics."
+      "ボスはコロシアムを勝ち抜き、追加で2個のレリックを得た。"
     ]
   },
   "downfall:PleadingVagrant": {
-    "NAME": "Event: Pleading Vagrant",
+    "NAME": "イベント: すがりつくホームレス",
     "FLAVOR": "Got anything for me friend? Please... maybe some #yCoin?",
     "DESCRIPTIONS": [
-      "Boss robbed the Vagrants, gaining a Shame curse and "
+      "ボスはホームレスからレリックを強奪し、羞恥の呪いを受けた。 "
     ]
   },
   "downfall:Mushroom": {
-    "NAME": "Event: Mushrooms",
+    "NAME": "イベント: マッシュルーム",
     "FLAVOR": "You enter a corridor full of hypnotizing colored mushrooms.",
     "DESCRIPTIONS": [
-      "Boss healed to full and gained a Parasite curse.",
-      "Boss gained the Odd Mushroom relic, but starts with less than maximum health."
+      "ボスは体力を全回復させたが、 寄生 された。",
+      "ボスはキノコのレリックを得たが、代わりにHPを失った。"
     ]
   },
   "downfall:ShiningLight": {
-    "NAME": "Event: Shining Light",
+    "NAME": "イベント: 輝く光",
     "FLAVOR": "You find a shimmering mass of light encompassing the center of the room.",
     "DESCRIPTIONS": [
-      "Boss upgraded ",
-      " and ",
-      ", but starts with less than maximum health."
+      "ボスは ",
+      " と ",
+      ", をアップグレードさせたが、代わりにHPを失った。"
     ]
   },
   "downfall:ScrapOoze": {
-    "NAME": "Event: Scrap Ooze",
+    "NAME": "イベント: スクラップスライム",
     "FLAVOR": "Before you is a slime-like creature that ate too much scrap for its own good.",
     "DESCRIPTIONS": [
-      "Boss gain an additional relic."
+      "ボスは追加のレリックを得た。"
     ]
   },
   "downfall:GoldenIdolEvent": {
-    "NAME": "Event: Golden Idol",
+    "NAME": "イベント: 黄金の偶像",
     "FLAVOR": "Atop the altar sits an ornate female statue with arms outstretched. NL She calls out to you, demanding sacrifice.",
     "DESCRIPTIONS": [
-      "Boss took the Golden Idol, gaining an Injury curse and use the extra gold to buy "
+      "ボスは黄金の偶像を入手し、障害の呪いを得たが、余分なゴールドで別のものを購入した "
     ]
   },
   "downfall:FaceTrader": {
-    "NAME": "Event: Face Trader",
+    "NAME": "イベント: フェイストレーダー",
     "FLAVOR": "Face. Let me touch? Maybe trade?",
     "DESCRIPTIONS": [
-      "Boss gained a random face relic."
+      "ボスはランダムな フェイス レリックを得た。"
     ]
   },
   "downfall:OminousForge": {
-    "NAME": "Event: Ominous Forge",
+    "NAME": "イベント: 不吉な鍛冶場",
     "FLAVOR": "CLANG! CLAAANG! CLANG!",
     "DESCRIPTIONS": [
-      "Boss gained Warped Tongs and a Pain curse."
+      "ボスは 捻じれたトング を入手したが、痛みの呪いも得た。"
     ]
   },
   "downfall:Purifier": {
-    "NAME": "Event: Purifier",
+    "NAME": "イベント: 清め",
     "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
     "DESCRIPTIONS": [
-      " was removed from the deck."
+      " デッキから削除された。"
     ]
   },
   "downfall:MatchAndKeep": {
-    "NAME": "Event: Match and Keep",
+    "NAME": "イベント: 神経衰弱！",
     "FLAVOR": "Twelve cards! Match them to keep them! Five tries, no do-overs. Are you ready? Let's start!",
     "DESCRIPTIONS": [
-      "Boss matched successfully and gained a powerful card."
+      "ボスは神経衰弱を楽しみ、強力なカードを得た。"
     ]
   },
   "downfall:Transmogrifier": {
-    "NAME": "Event: Transmogrifier",
+    "NAME": "イベント: 一変",
     "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
     "DESCRIPTIONS": [
-      "Boss transformed a starter card into a new card."
+      "ボスは初期カードを新しいカードに変化させた。"
     ]
   },
   "downfall:TombRedMask": {
-    "NAME": "Event: Tomb of Lord Red Mask",
+    "NAME": "イベント: 紅の覆面王の墓石",
     "FLAVOR": "A highly ornamented tomb can be seen on the other side of a floating path.",
     "DESCRIPTIONS": [
-      "Boss gained the Red Mask relic."
+      "ボスはレッドマスクのレリックを入手した。"
     ]
   },
   "downfall:UpgradeShrine": {
-    "NAME": "Event: Upgrade Shrine",
+    "NAME": "イベント: 向上の聖堂",
     "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
     "DESCRIPTIONS": [
-      "Boss #yUpgraded a card with Upgrade Shrine."
+      "ボスは聖堂の効果でカードを #yアップグレード させた。"
     ]
   },
   "downfall:WeMeetAgain": {
-    "NAME": "Event: We Meet Again",
+    "NAME": "イベント: また会ったな!",
     "FLAVOR": "It's me, #yRanwid! Have any goods for me today? The usual? A fella like me can't make it alone, you know?",
     "DESCRIPTIONS": [
-      "Gold was traded to Ranwid in exchange for an extra relic."
+      "ランウィッドにゴールドを施し、余分なレリックと交換した。"
     ]
   },
   "downfall:GoldenShrine": {
-    "NAME": "Event: Golden Shrine",
+    "NAME": "イベント: 黄金寺院",
     "FLAVOR": "Before you lies an elaborate shrine to an ancient spirit.",
     "DESCRIPTIONS": [
-      "Boss gained a Regret curse in exchange for gold, and used this gold to buy "
+      "ボスはゴールドと引き換えに 後悔 の呪いを得たが、そのゴールドで購入した "
     ]
   },
   "downfall:GremlinSack": {
-    "NAME": "Gremlin Sack",
-    "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
+    "NAME": "グレムリンの袋",
+    "FLAVOR": "グレムリンも護衛も敵わなかったな。",
     "DESCRIPTIONS": [
-      "Upon pickup, add the following cards to your deck: ",
-      "a Starter card",
-      ", a random Common, a random Uncommon, a random Rare, a random Uncommon Colorless, and a random Curse.",
-      ", a random Common, a random Uncommon, a random Rare, two random Curses."
+      "入手時、あなたのデッキにこれらのカードを加える: NL ",
+      "入手時、 #b6 枚のカードをあなたのデッキに加える。From：神経衰弱",
+      "#g(初期) ",
+      "#g(コモン) ",
+      "#b(アンコモン) ",
+      "#y(レア) ",
+      "#b(無色) ",
+      "#r(呪い) "
     ]
   },
   "downfall:GremlinWheel": {
-    "NAME": "Wheel of Change",
-    "FLAVOR": "No one gets two spins, he says.",
+    "NAME": "ホイールオブチェンジ",
+    "FLAVOR": "2回回そうとする人はいないらしい。",
     "DESCRIPTIONS": [
-      "At each Rest Site, you may spin the wheel once. Choosing to collect its reward uses up this relic.",
-      "This relic has been used up."
+      "休憩所でルーレットを回すことが出来る。報酬を受け取った場合、このレリックは使用できなくなる。",
+      "このレリックは消費された。"
     ]
   },
   "downfall:CloakOfManyFaces": {
-    "NAME": "Coat of Many Faces",
-    "FLAVOR": "It was Steve, and Bill, and Ian, and Fred, and John...",
+    "NAME": "多くの顔が付いたコート",
+    "FLAVOR": "スティーブ、ビル、イアン、フレッド、ジョン.....。",
     "DESCRIPTIONS": [
-      "Upon pickup, gain Cultist Headpiece, Face Of Cleric, N'loth's Hungry Face, Gremlin Visage, and Ssserpent Head."
+      "入手時、「 狂信者の被り物 」「 聖職者の顔 」「 ヌロスの飢えた顔 」「 グレムリンの顔つき 」「 サ・サ・サーペントの頭部 」を得る。"
     ]
   },
   "downfall:BrokenWingStatue": {
-    "NAME": "Broken Wing Statue",
-    "FLAVOR": "A broken hunk of a once-magnificent statue.",
+    "NAME": "壊れた黄金の翼",
+    "FLAVOR": "かつて壮大だった彫像の壊れた塊",
     "DESCRIPTIONS": [
-      "The cultists that worship the Awakened One will be interested in this."
+      "目覚めし者を崇拝しているカルト教団がこれに興味を持つだろう。",
+      "戦闘開始時、敵にカルト教団が居た場合彼らはあなたからこのレリックを奪い逃走する。"
     ]
   },
   "downfall:ShatteredFragment": {
-    "NAME": "Sharpened Fragment",
-    "FLAVOR": "Once a broken statue - now a makeshift weapon.",
+    "NAME": "鋭い破片",
+    "FLAVOR": "かつては壊れた像、今は間に合わせの武器。",
     "DESCRIPTIONS": [
-      "At the start of each turn, gain a Crystal Shiv."
+      "各戦闘開始時、 #y血塗れの生贄 を得る。"
     ]
   },
   "downfall:RedIOU": {
-    "NAME": "Bandit Contract",
-    "FLAVOR": "An agreement from the Bandit trio - partially in exchange for a trinket, but mostly in exchange for their lives.",
+    "NAME": "盗賊との契約",
+    "FLAVOR": "盗賊の3人組から一部は装身具と引き換えに、大部分は命と引き換えに、契約を交わした。",
     "DESCRIPTIONS": [
-      "At the start of the #b3rd boss combat, Red Mask Bandits will assist you.",
-      "It's time for work, boys!",
-      "Get 'em Bear!",
-      "A deal's a deal. NL We're done here.",
-      "All hail the new NL ~Lord~ ~Red~ ~Mask!~",
-      "Good luck, boss!"
+      " #b3rd ボスとの戦闘時、 レッドマスク盗賊団 があなたを支援する。",
+      "仕事の時間だぜお前ら！",
+      "捕まえろベア！",
+      "取引は取引だ。 NL ここはもういい。",
+      "新しい ~レッドマスクの主~ 万歳！",
+      "幸運を祈るぜボス！"
     ]
   },
   "downfall:RedIOUUpgrade": {
-    "NAME": "Bandit Contract+",
-    "FLAVOR": "An agreement from the Bandit trio - partially in exchange for a trinket, but mostly in exchange for their lives.",
+    "NAME": "盗賊との契約+",
+    "FLAVOR": "盗賊の3人組から一部は装身具と引き換えに、大部分は命と引き換えに、契約を交わした。",
     "DESCRIPTIONS": [
-      "At the start of the #b3rd boss combat, Red Mask Bandits will assist you further."
+      " #b3rd ボスとの戦闘時、 レッドマスク盗賊団 があなたを支援する。"
     ]
   },
   "downfall:KnowingSkull": {
-    "NAME": "Knowing Skull",
-    "FLAVOR": "Put me down!",
+    "NAME": "しゃれこうべ",
+    "FLAVOR": "降ろしてくれ！",
     "DESCRIPTIONS": [
-      "At the start of each combat, you may Wish for Souls, Success, or a Pick me Up."
+      "戦闘開始時に、あなたはHPと引き換えに ソウル、ポーション、無色カードのどれかを願える。"
     ]
   },
   "downfall:HeartBlessingRed": {
-    "NAME": "Ruby Heart Blessing",
-    "FLAVOR": "The heart is strong. The heart is pleased.",
+    "NAME": "ルビーハートの祝福",
+    "FLAVOR": "心臓は強い。",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yStrength."
+      "ボス戦開始時、 #y筋力 #b1 を得る。"
     ]
   },
   "downfall:HeartBlessingBlue": {
-    "NAME": "Sapphire Heart Blessing",
-    "FLAVOR": "The heart is pleased.",
+    "NAME": "サファイアハートの祝福",
+    "FLAVOR": "心臓が喜ぶ。",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10."
+      "ボス戦開始時、 #y一時的な体力 を #b10 得る。"
     ]
   },
   "downfall:HeartBlessingGreen": {
-    "NAME": "Emerald Heart Blessing",
-    "FLAVOR": "The heart is everything.",
+    "NAME": "エメラルドハートの祝福",
+    "FLAVOR": "心臓が全てだ。",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yDexterity."
+      "ボス戦開始時、 #y敏捷性 #b1 を得る。"
     ]
   },
   "downfall:TeleportStone": {
-    "NAME": "Teleport Stone",
-    "FLAVOR": "Never leave home without it.",
+    "NAME": "転移の石",
+    "FLAVOR": "手ぶらでは帰れない。",
     "DESCRIPTIONS": [
-      "You may skip any number of rooms the next time you move, but cannot move into a Boss Room.",
+      "次に移動する時、任意の数の部屋をスキップすることが出来る。ボスに直接飛ぶ事は出来ない。",
       "",
-      "This relic has been used up."
+      "このレリックは消費された。"
     ]
   },
   "downfall:HeartsMalice": {
-    "NAME": "The Heart's Malice",
-    "FLAVOR": "The malice of corruption bestowed by the Heart.",
+    "NAME": "心臓の悪意",
+    "FLAVOR": "心臓から授かった堕落の悪意。",
     "DESCRIPTIONS": [
-      "Enemies in your first #b2 combats will flee in terror.",
-      "This relic has been used up."
+      "最初の #b3 回の戦闘は敵が恐怖のあまり逃げ出す。",
+      "このレリックは消費された。"
+    ]
+  },
+  "downfall:Hecktoplasm": {
+    "NAME": "ヘクトプラズム",
+    "FLAVOR": "このスライムの塊は何百もの魂のエネルギーで脈打っているようだ。そりゃ誰も欲しがらない。",
+    "DESCRIPTIONS": [
+      "ターン開始時、 [E] を得る。 #yソウル を入手できなくなり、鍵の破壊に #yソウル が必要なくなる。"
     ]
   },
   "downfall:replacements": {
     "NAME": "",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "During Merchant, Boss, and Elite combats, gain [E] at the start of your turn.",
-      "Cursed Coin",
-      "Few who still live know the true cost of this old coin...",
-      "MVB Card",
-      "Truly, you are the Heart's MVB: Most Valuable Boss.",
-      "The Heart's corruption knows no limits - not even precious pets.",
-      "Corrupted Courier",
-      "The Heart restocks cards, relics, and potions. All prices are reduced by #b20%."
+      "商人、ボス、エリートとの戦闘では、ターン開始時に [E] を得る。",
+      "呪われたコイン",
+      "この古いコインの真の代償を知りながら生きている者は殆ど居ない...",
+      "MVB カード",
+      "あなたは本当に、心臓の MVB: Most(最も) Valuable(価値のある) Boss(ボス) ですね。",
+      "心臓の汚染に限界はない。 - それは大切なペットであっても。",
+      "汚染された宅配便",
+      "心臓はカード、レリック、ポーションを補充する。すべての価格が #b20% 減少する。",
+      "戦闘報酬に無色のカードと、ヒーローたちの色のカードが含まれるようになる。",
+      "ターン開始時、 [E] を得る。 #yソウル を入手できなくなり、鍵の破壊に #yソウル が必要なくなる。"
     ]
   },
-  "downfall:ExtraCursedBell": {
-    "NAME": "Calling Bell",
-    "FLAVOR": "This dark iron bell rang 3 times when you found it, but now stays silent.",
+  "downfall:LizardTail": {
+    "NAME": "トカゲのしっぽSP",
+    "FLAVOR": "戦闘中に敵を欺くための偽物の尻尾。",
     "DESCRIPTIONS": [
-      "Upon pickup, obtain 2 unique #rCurses and #b3 relics.",
-      "The Bell Tolls Twice...",
-      "Skip Rewards",
-      "Close"
+      "あなたが死亡した時 最大HPの #b100% を回復して復活する。 (1回のみ)"
+    ]
+  },
+  "downfall:TestRelic": {
+    "NAME": "VFX テスター",
+    "FLAVOR": "インデックスオーブの時はやりましたね。",
+    "DESCRIPTIONS": [
+      "#p右クリック: 次のカードをプレイする。"
     ]
   },
   "downfall:ExtraCursedKey": {
-    "NAME": "Cursed Key",
-    "FLAVOR": "You can feel the malicious energy emanating from the key. Power comes at a price.",
+    "NAME": "呪いの鍵 EX",
+    "FLAVOR": "正当な理由でロックされてる。",
     "DESCRIPTIONS": [
-      " at the start of your turn. Whenever you open a non-Boss chest, obtain 2 #rCurses.",
-      "Gain [E]"
+      "ターン開始時、 [E] を得る。 NL ボス以外の宝箱を開ける度に #b2 枚の #r呪い がデッキに加わる。"
+    ]
+  },
+  "downfall:ExtraCursedBell": {
+    "NAME": "呼びよせる鐘 EX",
+    "FLAVOR": "響いているような気がするがどうしても確認できない。",
+    "DESCRIPTIONS": [
+      "入手時、 #b2 枚の特殊な #r呪い と #b3 つのレリックを得る。",
+      "鐘が二度鳴った...",
+      "報酬をスキップ",
+      "閉じる"
     ]
   }
 }
