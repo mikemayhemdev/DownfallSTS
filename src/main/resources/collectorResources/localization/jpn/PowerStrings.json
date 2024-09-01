@@ -1,0 +1,327 @@
+{
+  "collector:AddCopyNextTurn": {
+    "NAME": "カード獲得",
+    "DESCRIPTIONS": [
+      "次のターン開始時、手札に ",
+      " を加える。"
+    ]
+  },
+  "collector:BindingCall": {
+    "NAME": "バインドコール",
+    "DESCRIPTIONS": [
+      "あなたが #y一時的な体力 をすべて失った時、敵全体に #b",
+      " #y破滅 を与える。",
+      "Translator Note: NOT USED"
+    ]
+  },
+  "collector:CantTouchThis": {
+    "NAME": "触れ得ざる物",
+    "DESCRIPTIONS": [
+      "敵の攻撃を完全にブロックした時、攻撃してきた相手に #y破滅 #b",
+      " を与える"
+    ]
+  },
+  "collector:Crackle": {
+    "NAME": "亀裂",
+    "DESCRIPTIONS": [
+      "ターン開始時、 #b1 #yリザーブ を得る。",
+      "ターン開始時、 #b",
+      " #yリザーブ を得る。"
+    ]
+  },
+  "collector:DarkLordForm": {
+    "NAME": "闇帝化",
+    "DESCRIPTIONS": [
+      "ターン開始時、ランダムな敵に #yお前は私の物だ！ をプレイする。",
+      "ターン開始時、ランダムな敵に #b",
+      " 枚の #yお前は私の物だ！ をプレイする。"
+    ]
+  },
+  "collector:DarkLordFormPlus": {
+    "NAME": "闇帝化+ ",
+    "DESCRIPTIONS": [
+      "ターン開始時、ランダムな敵に #yお前は私の物だ！+ をプレイする。",
+      "ターン開始時、ランダムな敵に #b",
+      " 枚の #yお前は私の物だ！+ をプレイする。"
+    ]
+  },
+  "collector:DoMayhem": {
+    "NAME": "煽動",
+    "DESCRIPTIONS": [
+      "ターン開始時、敵が合計 #b",
+      " 以上の #y破滅 を持っていた時、山札の上のカードをプレイする。",
+      " 以上の #y破滅 を持っていた時、山札の上のカードを #b",
+      " 枚プレイする。"
+    ]
+  },
+  "collector:Doom": {
+    "NAME": "破滅",
+    "DESCRIPTIONS": [
+      "対象のターン開始時、 #b",
+      " HP を失い、 #y破滅 を解除する。ただし #y苦悶 状態の場合、解除されない。"
+    ]
+  },
+  "collector:DoublePlayCollectibles": {
+    "NAME": "マルチプレイ-コレクション",
+    "DESCRIPTIONS": [
+      "コレクトカードは2回プレイされる。",
+      "コレクトカードはd #b",
+      " 回プレイされる。"
+    ]
+  },
+  "collector:DemisePower": {
+    "NAME": "不可避の終焉",
+    "DESCRIPTIONS": [
+      "次に対象が #y破滅 を解除しようとした時それを防ぐ。",
+      "次の #b",
+      " 回の間、対象が #y破滅 を解除しようとした時それを防ぐ。"
+    ]
+  },
+  "collector:FeelMyPain": {
+    "NAME": "我が痛みを感じろ",
+    "DESCRIPTIONS": [
+      "あなたがカードを #y廃棄 する度、ランダムな敵がHPを #b",
+      " 失う。"
+    ]
+  },
+  "collector:HealIfDieThisTurn": {
+    "NAME": "仕上げ",
+    "DESCRIPTIONS": [
+      " ",
+      " が死亡した時、HPを #b",
+      " 回復する。"
+    ]
+  },
+  "collector:Karma": {
+    "NAME": "カルマ",
+    "DESCRIPTIONS": [
+      "ターン終了時、いずれかの敵が #y苦悶 状態なら #b",
+      " #yブロック を得る。"
+    ]
+  },
+  "collector:NextAttackAppliesDoom": {
+    "NAME": "破滅の一撃",
+    "DESCRIPTIONS": [
+      "このターン、次のアタックは #b",
+      " #y破滅 を与える。"
+    ]
+  },
+  "collector:AttacksApplyDoomPower": {
+    "NAME": "破滅の一撃",
+    "DESCRIPTIONS": [
+      "このターン、アタックは #b",
+      " #y破滅 を与える。"
+    ]
+  },
+  "collector:NextCollectedTwice": {
+    "NAME": "ダブルアップ",
+    "DESCRIPTIONS": [
+      "このターン、次のコレクトカードは2回プレイされる。",
+      "このターン、次の #b",
+      " 枚のコレクトカードは2回プレイされる。"
+    ]
+  },
+  "collector:NextTurnReserve": {
+    "NAME": "ネクストリザーブ",
+    "DESCRIPTIONS": [
+      "次のターン開始時、 #b1 #yリザーブ を得る。",
+      "次のターン開始時、 #b",
+      " #yリザーブ を得る。"
+    ]
+  },
+  "collector:Omen": {
+    "NAME": "オーメン",
+    "DESCRIPTIONS": [
+      "#yコレクトカード をプレイした時、 #b",
+      " #y筋力 を得る。"
+    ]
+  },
+  "collector:ProtectingCall": {
+    "NAME": "プロテクトコール",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if you have #y一時的な体力, gain #b",
+      " #yBlock",
+      "Translator Note: NOT USED"
+    ]
+  },
+  "collector:RagingCall": {
+    "NAME": "Raging Call",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if you have #y一時的な体力, deal #b",
+      " damage to ALL enemies",
+      "Translator Note: NOT USED"
+    ]
+  },
+  "collector:Reserve": {
+    "NAME": "リザーブ",
+    "DESCRIPTIONS": [
+      "あなたは #b1 の #yリザーブ を持っている。",
+      "あなたは #b",
+      " #yリザーブ を持っている。"
+    ]
+  },
+  "collector:Soulforge": {
+    "NAME": "ソウルフォージ",
+    "DESCRIPTIONS": [
+      "ターン開始時、手札に #b1 枚の #y燃え殻 を加える。",
+      "ターン開始時、手札に #b",
+      " 枚の #y燃え殻 を加える。"
+    ]
+  },
+  "collector:StrengthOverTurns": {
+    "NAME": "エンパワー",
+    "DESCRIPTIONS": [
+      "次のターン開始時、 #b",
+      " #y筋力 を得る。",
+      "あと #b",
+      " ターンの間、開始時 #b"
+    ]
+  },
+  "collector:Suffering": {
+    "NAME": "苦しみ",
+    "DESCRIPTIONS": [
+      "あなたが #y脱力 または #y弱体 を与える度、対象に #b",
+      " #y破滅 を与える。"
+    ]
+  },
+  "collector:TorchHead": {
+    "NAME": "トーチヘッド",
+    "DESCRIPTIONS": [
+      "あなたが #yアタック をプレイした時、 #y一時的な体力 を持っていれば トーチヘッドは: NL ",
+      "ランダムな敵に #b",
+      " #y破滅 を与える。",
+      "敵全体に #b",
+      " ダメージを与える。",
+      "あなたに #b",
+      " #yブロック を付与する。",
+      " #y毒 をランダムな敵に与える。",
+      "あなたは #b",
+      " 枚カードを引く。",
+      " 枚カードを引く。"
+    ]
+  },
+  "collector:IncreasedCollectionDraw": {
+    "NAME": "コレクトドロー上昇",
+    "DESCRIPTIONS": [
+      "毎ターン、追加で #b1 枚のコレクトカードを引く。",
+      "毎ターン、追加で #b",
+      " 枚のコレクトカードを引く。"
+    ]
+  },
+  "collector:MastersCall": {
+    "NAME": "Master's Call",
+    "DESCRIPTIONS": [
+      "Whenever you play an Attack, if you have #y一時的な体力, deal #b",
+      " damage to a random enemy",
+      "Translator Note: NOT USED"
+    ]
+  },
+  "collector:LouseCard": {
+    "NAME": "丸くなる",
+    "DESCRIPTIONS": [
+      "ブロック出来なかったダメージを受けた時、 #b",
+      " #yブロック を得る。"
+    ]
+  },
+  "collector:MadGremlinCard": {
+    "NAME": "怒り",
+    "DESCRIPTIONS": [
+      "このターンにブロック出来なかったダメージを受けた時、 #yマッドグレムリン を手札に加える。",
+      "このターンにブロック出来なかったダメージを受けた時、 #b",
+      " 枚の #yマッドグレムリン を手札に加える。"
+    ]
+  },
+  "collector:GremlinWizardCard": {
+    "NAME": "チャージアップ",
+    "DESCRIPTIONS": [
+      "次のターン #b",
+      " #y気力 を得る。"
+    ]
+  },
+  "collector:ThievesCard": {
+    "NAME": "ドッジ",
+    "DESCRIPTIONS": [
+      "このターン、攻撃から受けるダメージが #b",
+      " 減少する。"
+    ]
+  },
+  "collector:BookOfStabbingCard": {
+    "NAME": "刺々",
+    "DESCRIPTIONS": [
+      "あなたがブロックされなかったダメージを与える度、 #b",
+      " #y破滅 を与える。"
+    ]
+  },
+  "collector:TransientCard": {
+    "NAME": "消失",
+    "DESCRIPTIONS": [
+      "ターン終了時、あなたは #r死ぬ",
+      " #b",
+      " ターン後、あなたは #r死ぬ"
+    ]
+  },
+  "collector:ReptomancerCard": {
+    "NAME": "Toxic Call",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if you have #y一時的な体力, apply #b",
+      " #y毒 to a random enemy"
+    ]
+  },
+  "collector:MoreBlockWithTempHP": {
+    "NAME": "シンブルヘルム",
+    "DESCRIPTIONS": [
+      "#y一時的な体力 を持っていればカードから更に #b",
+      " #yブロック を得られる。"
+    ]
+  },
+  "collector:NextTurnVigor": {
+    "NAME": "気力充填",
+    "DESCRIPTIONS": [
+      "次のターン開始時、 #b",
+      " #y気力 を得る。"
+    ]
+  },
+  "collector:AcidSlimeCard": {
+    "NAME": "スライム増殖機",
+    "DESCRIPTIONS": [
+      "このターン、次の #yアタック または #yスキル は2回プレイされる。",
+      "このターン、次の",
+      " 枚の #yアタック または #yスキル は2回プレイされる。"
+    ]
+  },
+  "collector:GremlinNobCard": {
+    "NAME": "怒る",
+    "DESCRIPTIONS": [
+      "#yスキル をプレイする度 #b",
+      " #y気力 を得る。"
+    ]
+  },
+  "collector:LanternFlare": {
+    "NAME": "焼け焦げ",
+    "DESCRIPTIONS": [
+      "自分のターン終了時、 #b",
+      " #y破滅 を受ける。"
+    ]
+  },
+  "collector:WomanInBlueCard": {
+    "NAME": "青い服の女",
+    "DESCRIPTIONS": [
+      "戦闘終了時、全てのポーションを捨てる。"
+    ]
+  },
+  "collector:ShootingStar": {
+    "NAME": "流れ星",
+    "DESCRIPTIONS": [
+      "毎ターン、最初に #y葬火 を行った時、廃棄したカードのコピーを手札に加える。それはプレイするまでコストが0になる。",
+      "毎ターン、 #b",
+      " 回の間は #y葬火 を行った時、廃棄したカードのコピーを手札に加える。それはプレイするまでコストが0になる。"
+    ]
+  },
+  "collector:LoseHpNextTurn": {
+    "NAME": "死印",
+    "DESCRIPTIONS": [
+      "自分のターン終了時、HPを #b",
+      " 失う。"
+    ]
+  }
+}

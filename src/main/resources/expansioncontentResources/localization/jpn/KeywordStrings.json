@@ -1,16 +1,57 @@
-[
-  {
-    "PROPER_NAME": "Boss",
-    "NAMES": [
-      "boss"
-    ],
-    "DESCRIPTION": "You may only play #b1 #yBoss card in a turn."
-  },
-  {
-    "PROPER_NAME": "Ghostflames",
-    "NAMES": [
-      "ghostflames"
-    ],
-    "DESCRIPTION": "Ghostflames provide additional benefits each turn if their Ignition requirements are met during that turn."
-  }
+[{
+		"PROPER_NAME": "ボス",
+		"NAMES": [
+			"boss",
+			"ボス"
+		],
+		"DESCRIPTION": "#yボス を持つカードは1ターンに #b1 枚しかプレイできない。"
+	},
+	{
+		"PROPER_NAME": "無敵",
+		"NAMES": [
+			"invincible",
+			"無敵"
+		],
+		"DESCRIPTION": "1ターンにこれ以上のHPを失うことはない。 NL 無敵 がHPの減少を防いだターンの終了時、効果を除去する。"
+	},
+	{
+		"PROPER_NAME": "発掘",
+		"NAMES": [
+			"exhume",
+			"発掘"
+		],
+		"DESCRIPTION": "廃棄山からカードを手札に戻す。"
+	},
+	{
+		"PROPER_NAME": "回収",
+		"NAMES": [
+			"reclaim",
+			"回収"
+		],
+		"DESCRIPTION": "廃棄山からカードを捨て札に戻す。"
+	},
+	{
+		"PROPER_NAME": "束縛",
+		"NAMES": [
+			"shackled",
+			"束縛"
+		],
+		"DESCRIPTION": "束縛 されたモンスターは 1 ターンの間 #y筋力 を失う。"
+	},
+	{
+		"PROPER_NAME": "一時的な体力",
+		"NAMES": [
+			"temp hp",
+			"temp_hp",
+			"一時的な体力"
+		],
+		"DESCRIPTION": "戦闘終了まで、HPへのダメージを肩代わりする。"
+	},
+	{
+		"PROPER_NAME": "変身",
+		"NAMES": [
+			"変身"
+		],
+		"DESCRIPTION": "カードを #y廃棄 し、別のカードと入れ替える。"
+	}
 ]

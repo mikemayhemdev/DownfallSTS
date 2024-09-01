@@ -26,7 +26,7 @@ public class Antidote extends AbstractDownfallCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(AbstractDungeon.player.getPower(PoisonPower.POWER_ID).amount <= this.magicNumber){
+        if(AbstractDungeon.player.hasPower(EnemyPoisonPower.POWER_ID) && AbstractDungeon.player.getPower(EnemyPoisonPower.POWER_ID).amount <= this.magicNumber){
             atb(new RemoveSpecificPowerAction(p, p, EnemyPoisonPower.POWER_ID));
         }else{
             addToBot(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, EnemyPoisonPower.POWER_ID, this.magicNumber));

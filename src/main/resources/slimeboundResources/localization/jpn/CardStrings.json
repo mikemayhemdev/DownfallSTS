@@ -1,419 +1,386 @@
 {
-  "Slimebound:Strike_Slimebound": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "Slimebound:Defend_Slimebound": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
-  },
-  "Slimebound:GangUp": {
-    "NAME": "Gang Up",
-    "DESCRIPTION": "Gain X Slime slots. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime X+1 times. NL Exhaust."
-  },
-  "Slimebound:LevelUp": {
-    "NAME": "Level Up",
-    "DESCRIPTION": "Gain !M! slimeboundmod:Potency.",
-    "UPGRADE_DESCRIPTION": "Gain !M! slimeboundmod:Potency and 1 Slime slot."
-  },
-  "Slimebound:ProtectTheBoss": {
-    "NAME": "Protect the Boss",
-    "DESCRIPTION": "Prevent the next time you would be damaged by an enemy attack, slimeboundmod:Absorbing your leading Slime instead.",
-    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would be damaged by an enemy attack, slimeboundmod:Absorbing your leading Slime instead."
-  },
-  "Slimebound:SamplingLick": {
-    "NAME": "Sampling Lick",
-    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !slime! slimeboundmod:Goop NL Gain !B! Block. NL Draw a card. NL Exhaust."
-  },
-  "Slimebound:DuplicateSlimes": {
-    "NAME": "Replication",
-    "DESCRIPTION": "Duplicate all of your spawned Slimes. NL Exhaust."
-  },
-  "Slimebound:Replication": {
-    "NAME": "Replication",
-    "DESCRIPTION": "Choose a card in your hand. Add a copy of that card to your hand. NL Exhaust."
-  },
-  "Slimebound:Overexert": {
-    "NAME": "Overexert",
-    "DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL !M! turns from now, slimeboundmod:Absorb all Slimes.",
-    "UPGRADE_DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all Slimes."
-  },
-  "Slimebound:Split": {
-    "NAME": "Split",
-    "DESCRIPTION": "Choose 1 of 4 Slimes to slimeboundmod:Split into. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 2 of 4 Slimes to slimeboundmod:Split into. NL Exhaust."
-  },
-  "Slimebound:LeadByExample": {
-    "NAME": "Lead By Example",
-    "DESCRIPTION": "The first card you play each turn that targets enemies also slimeboundmod:Commands.",
-    "UPGRADE_DESCRIPTION": "The first !M! cards you play each turn that targets enemies also slimeboundmod:Commands."
-  },
-  "Slimebound:SlimeTap": {
-    "NAME": "Slime Tap",
-    "DESCRIPTION": "slimeboundmod:Absorb - Gain [E] [E] and draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb Twice - Gain [E] [E] and draw 2 cards for each slimeboundmod:Absorbed. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Need... slimes..."
-    ]
-  },
-  "Slimebound:Teamwork": {
-    "NAME": "Teamwork",
-    "DESCRIPTION": "slimeboundmod:Command X times. NL Gain !B! Block X times.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Command X+1 times. NL Gain !B! Block X+1 times."
-  },
-  "Slimebound:SlimeBarrage": {
-    "NAME": "Pile On!",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes twice."
-  },
-  "Slimebound:MaxSlimes": {
-    "NAME": "Make Some Room",
-    "DESCRIPTION": "Gain !M! Slime slot.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Slime slots."
-  },
-  "Slimebound:SlimeBrawl": {
-    "NAME": "Slime Brawl",
-    "DESCRIPTION": "Play the top card of your draw pile. Repeat for each of your spawned Slimes. NL Exhaust."
-  },
-  "Slimebound:SpikyOuterGoop": {
-    "NAME": "Goop Armor",
-    "DESCRIPTION": "Gain !M! Block whenever you slimeboundmod:Consume."
-  },
-  "Slimebound:SelfFormingGoo": {
-    "NAME": "Reformation",
-    "DESCRIPTION": "When you slimeboundmod:Absorb a Slime, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "When you slimeboundmod:Absorb a Slime, gain !M! Strength and !M! Dexterity."
-  },
-  "Slimebound:OozeBath": {
-    "NAME": "Ooze Bath",
-    "DESCRIPTION": "Apply !M! slimeboundmod:Goop to target enemy at the start of each of its turns. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple the enemy's slimeboundmod:Goop. NL Exhaust."
-  },
-  "Slimebound:SlimeSpikes": {
-    "NAME": "Slime Spikes",
-    "DESCRIPTION": "Gain !B! Block and !M! temporary Thorns."
-  },
-  "Slimebound:LeechingTouch": {
-    "NAME": "Leeching Strike",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Gain Block equal to the enemy's slimeboundmod:Goop."
-  },
-  "Slimebound:Dissolve": {
-    "NAME": "Dissolve",
-    "DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of *Licks to your hand equal to its cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of *Licks to your hand equal to its cost plus 1. NL Exhaust."
-  },
-  "Slimebound:DuplicatedForm": {
-    "NAME": "Duplicated Form",
-    "UPGRADE_DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL Gain [E] each turn. NL The first card you play each turn that targets enemies is played twice.",
-    "DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL The first card you play each turn that targets enemies is played twice.",
-    "EXTENDED_DESCRIPTION": [
-      "Need... Health..."
-    ]
-  },
-  "Slimebound:Recollect": {
-    "NAME": "Recollect",
-    "DESCRIPTION": "Gain !B! Block. NL Return a random 0-cost Exhausted card to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Return 2 random 0-cost Exhausted cards to your hand.",
-    "EXTENDED_DESCRIPTION": [
-      "Not... Exhausted..."
-    ]
-  },
-  "Slimebound:FormOfPuddle": {
-    "NAME": "Shape of Puddle",
-    "DESCRIPTION": "Gain 1 Intangible. NL Exhaust."
-  },
-  "Slimebound:GrowthPunch": {
-    "NAME": "Growth Punch",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL slimeboundmod:Consume - Increase this card's effects by !M! this combat."
-  },
-  "Slimebound:CheckThePlaybook": {
-    "NAME": "Consult Playbook",
-    "DESCRIPTION": "Add 3 random slimeboundmod:Tackles to your hand. They cost 1 less this combat. NL Exhaust."
-  },
-  "Slimebound:Recycling": {
-    "NAME": "Recycling",
-    "DESCRIPTION": "At the start of your turn, return a random Exhausted 0-cost card to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, return a random Exhausted 0-cost card to your hand."
-  },
-  "Slimebound:Repurpose": {
-    "NAME": "Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb - Gain 1 slimeboundmod:Potency, !B! Block, and heal !M! HP. NL Exhaust."
-  },
-  "Slimebound:RollThrough": {
-    "NAME": "Roll Through",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! slimeboundmod:Tackles."
-  },
-  "Slimebound:MassRepurpose": {
-    "NAME": "Mass Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. NL Gain 1 slimeboundmod:Potency, !B! Block, and heal !M! HP for each slimeboundmod:Absorbed. NL Exhaust."
-  },
-  "Slimebound:Lick": {
-    "NAME": "Lick",
-    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !slime! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
-  },
-  "Slimebound:HauntingLick": {
-    "NAME": "Haunting Lick",
-    "DESCRIPTION": "Apply !M! Vulnerable and !slime! slimeboundmod:Goop. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !slime! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
-  },
-  "Slimebound:MegaLick": {
-    "NAME": "Mega-Lick",
-    "DESCRIPTION": "Apply !M! Weak and !slime! slimeboundmod:Goop to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !slime! slimeboundmod:Goop to ALL enemies. NL Draw a card. NL Exhaust."
-  },
-  "Slimebound:RejuvenatingLick": {
-    "NAME": "Rejuvenating Lick",
-    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Heal !M! HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Heal !M! HP. NL Draw a card. NL Exhaust."
-  },
-  "Slimebound:Gluttony": {
-    "NAME": "Gluttony",
-    "DESCRIPTION": "The first time you slimeboundmod:Consume each turn, add a *Lick to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you slimeboundmod:Consume each turn, add a *Lick to your hand."
-  },
-  "Slimebound:PressTheAttack": {
-    "NAME": "Press the Attack",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - slimeboundmod:Command.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - slimeboundmod:Command twice."
-  },
-  "Slimebound:TongueLash": {
-    "NAME": "Tongue Lash",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for ALL of your cards containing \"Lick\" (including Exhausted cards)."
-  },
-  "Slimebound:ItLooksTasty": {
-    "NAME": "It Looks Tasty",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a *Lick to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a *Lick to your hand."
-  },
   "Slimebound:AcidTongue": {
-    "NAME": "Spreading Slime",
-    "DESCRIPTION": "Effects that apply slimeboundmod:Goop apply !M! more.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Effects that apply slimeboundmod:Goop apply !M! more."
-  },
-  "Slimebound:FirmFortitude": {
-    "NAME": "Feel Our Pain",
-    "DESCRIPTION": "The first time you would take damage or lose HP on each of YOUR turns, an enemy takes that much damage instead.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you would lose HP on each of YOUR turns, an enemy takes that much damage instead."
-  },
-  "Slimebound:WasteNot": {
-    "NAME": "Waste Not",
-    "DESCRIPTION": "Return all 0-cost Exhausted cards to your hand. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Not... Exhausted..."
-    ]
-  },
-  "Slimebound:Prepare": {
-    "NAME": "Prepare",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] and draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain [E] and draw !M! cards. NL Retain up to !M! cards this turn. Exhaust."
-  },
-  "Slimebound:Grow": {
-    "NAME": "Grow",
-    "DESCRIPTION": "Lose 1 Slime slot in exchange for !M! Strength and !M! Dexterity."
-  },
-  "Slimebound:HungryTackle": {
-    "NAME": "Hungry Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Return a random 0-cost Exhausted card to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Return 2 random 0-cost Exhausted cards to your hand."
-  },
-  "Slimebound:FinishingTackle": {
-    "NAME": "Finishing Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. slimeboundmod:Consume - Gain !B! Block."
-  },
-  "Slimebound:LivingWall": {
-    "NAME": "Living Wall",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !slime! slimeboundmod:Goop to attackers this turn."
-  },
-  "Slimebound:Slimepotheosis": {
-    "NAME": "Slimepotheosis",
-    "DESCRIPTION": "Upgrade all cards in your hand. Lose !M! HP for each card Upgraded. NL Exhaust."
-  },
-  "Slimebound:ComboTackle": {
-    "NAME": "Combo Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Draw a card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Draw !M! cards."
-  },
-  "Slimebound:Tackle": {
-    "NAME": "Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage."
-  },
-  "Slimebound:GoopTackle": {
-    "NAME": "Opening Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Add a random slimeboundmod:Tackle card to your hand. It costs 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Add a random Upgraded slimeboundmod:Tackle card to your hand. It costs 0 this turn."
-  },
-  "Slimebound:CorrosiveSpit": {
-    "NAME": "Corrosive Spit",
-    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop."
-  },
-  "Slimebound:Chomp": {
-    "NAME": "Chomp",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand to 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand to 0."
-  },
-  "Slimebound:DouseInSlime": {
-    "NAME": "Douse in Slime",
-    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL The next Attack used on this enemy does not remove slimeboundmod:Goop."
-  },
-  "Slimebound:FlameTackle": {
-    "NAME": "Flame Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL slimeboundmod:Tackles deal !M! more damage this combat."
-  },
-  "Slimebound:RainOfGoop": {
-    "NAME": "Rain of Goop",
-    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop to a random enemy !M! times.",
-    "UPGRADE_DESCRIPTION": "Apply !slime! slimeboundmod:Goop to a random enemy !M! times."
-  },
-  "Slimebound:GoopSpray": {
-    "NAME": "Goop Spray",
-    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop and !M! Vulnerable to ALL enemies."
-  },
-  "Slimebound:MassFeed": {
-    "NAME": "Mass Feed",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If Fatal, raise your Max HP by !M!. NL Exhaust."
-  },
-  "Slimebound:ViciousTackle": {
-    "NAME": "Vicious Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. This gains twice the damage bonus from slimeboundmod:Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. This gains twice the damage bonus AND healing from slimeboundmod:Goop."
-  },
-  "Slimebound:LeechEnergy": {
-    "NAME": "Leech Energy",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Gain [E] and draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Gain [E] and draw !M! cards."
-  },
-  "Slimebound:LeechLife": {
-    "NAME": "Leech Life",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Heal HP equal to the enemy's slimeboundmod:Goop. NL Exhaust."
-  },
-  "Slimebound:Equalize": {
-    "NAME": "Equalize",
-    "DESCRIPTION": "Deal !D! damage. NL Heal !M! HP. NL slimeboundmod:Consume - Play this twice. NL Exhaust."
-  },
-  "Slimebound:DisruptingSlam": {
-    "NAME": "Disrupting Slam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. Apply !M! Weak to each enemy that intends to attack."
-  },
-  "Slimebound:DefensiveMode": {
-    "NAME": "Defensive Mode",
-    "DESCRIPTION": "Gain !M! Thorns. NL Gain !B! Block, and another !B! Block next turn."
-  },
-  "Slimebound:PrepareCrush": {
-    "NAME": "Prepare: Crush",
-    "DESCRIPTION": "Next turn, gain [E] [E] [E] and !M! Strength, and add Slime Crush to your hand.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] [E] and !M! Strength, and add Slime Crush to your hand.",
-    "EXTENDED_DESCRIPTION": [
-      "~Slime...~ NL #r~CRUSH!!!~"
-    ]
-  },
-  "Slimebound:SlimeCrush": {
-    "NAME": "SLIME CRUSH!!!",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
-  },
-  "Slimebound:Icky": {
-    "NAME": "Icky",
-    "DESCRIPTION": "Add a Slimed Status to your hand. NL Exhaust."
-  },
-  "Slimebound:DivideAndConquerConquer": {
-    "NAME": "Conquer",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
-  },
-  "Slimebound:DivideAndConquerDivide": {
-    "NAME": "Divide",
-    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength for each Spawned Slime. NL Exhaust."
-  },
-  "Slimebound:DivideAndConquer": {
-    "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Add a Divide and a Conquer to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide and an Upgraded Conquer to your hand. NL Exhaust."
-  },
-  "Slimebound:ServeAndProtect": {
-    "NAME": "Serve & Protect",
-    "DESCRIPTION": "Add a Serve and a Protect to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve and an Upgraded Protect to your hand. NL Exhaust."
-  },
-  "Slimebound:ServeAndProtectServe": {
-    "NAME": "Serve",
-    "DESCRIPTION": "Retain. NL Gain !M! temporary Dexterity for each Spawned Slime. NL Exhaust."
-  },
-  "Slimebound:ServeAndProtectProtect": {
-    "NAME": "Protect",
-    "DESCRIPTION": "Gain !B! Block. Gains !M! additional Block for each spawned Slime. NL Exhaust."
-  },
-  "Slimebound:SplitBruiser": {
-    "NAME": "Split: Bruiser",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command three times. NL Exhaust."
-  },
-  "Slimebound:SplitLeeching": {
-    "NAME": "Split: Leeching",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command three times. NL Exhaust."
-  },
-  "Slimebound:SplitAcid": {
-    "NAME": "Split: Guerilla",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command three times. NL Exhaust."
-  },
-  "Slimebound:SplitMire": {
-    "NAME": "Split: Mire",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command three times. NL Exhaust."
-  },
-  "Slimebound:SplitSpecialist": {
-    "NAME": "Split: Specialist",
-    "DESCRIPTION": "Choose 1 of 3 unique Slimes to slimeboundmod:Split into. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 unique Slimes to slimeboundmod:Split into. NL slimeboundmod:Command. NL Exhaust."
-  },
-  "Slimebound:MinionMaster": {
-    "NAME": "Minion Master",
-    "DESCRIPTION": "Whenever you slimeboundmod:Command, slimeboundmod:Command 2 times instead.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you slimeboundmod:Command, slimeboundmod:Command 2 times instead."
+    "NAME": "拡散するスライム",
+    "DESCRIPTION": " slimeboundmod:汚泥 は更に !M! 追加で与えられる。"
   },
   "Slimebound:BestDefense": {
-    "NAME": "Recklessness",
-    "DESCRIPTION": "slimeboundmod:Tackles deal !M! more damage to enemies, and 1 more damage to you."
+    "NAME": "無謀な行動",
+    "DESCRIPTION": "slimeboundmod:タックル は追加で敵に !M! ダメージを与え、あなたに 1 ダメージを与える。"
+  },
+  "Slimebound:CheckThePlaybook": {
+    "NAME": "プレイブック",
+    "DESCRIPTION": "ランダムな 3 枚の slimeboundmod:タックル カードを手札に加える。 NL この戦闘中それらのコストは1下がる。 NL 廃棄"
+  },
+  "Slimebound:Chomp": {
+    "NAME": "むしゃり",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 手札のランダムな slimeboundmod:タックル のコストがこのターン 0 になる。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 手札のランダムな slimeboundmod:タックル のコストがこの戦闘中 0 になる。"
+  },
+  "Slimebound:ComboTackle": {
+    "NAME": "スピアタックル",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL カードを !M! 枚引く。"
+  },
+  "Slimebound:CorrosiveSpit": {
+    "NAME": "腐食性の唾",
+    "DESCRIPTION": " slimeboundmod:汚泥 !slime! を与える。"
   },
   "Slimebound:Darklings": {
-    "NAME": "Darkling Trio",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Darkling_Slime three times. NL Exhaust."
+    "NAME": "ダークリング・デュオ",
+    "DESCRIPTION": " slimeboundmod:ダークリングスライム !M! 匹に slimeboundmod:分裂 する。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "ダークリング・トリオ"
   },
-  "Slimebound:SlimeSlap": {
-    "NAME": "Slime Slap",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Does not remove slimeboundmod:Goop."
+  "Slimebound:Defend_Slimebound": {
+    "NAME": "防御",
+    "DESCRIPTION": " !B! ブロックを得る。"
   },
-  "Slimebound:OneTwoCombo": {
-    "NAME": "One-Two Combo",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command. NL When you slimeboundmod:Split, place this in your hand (wherever it is)."
+  "Slimebound:DisruptingSlam": {
+    "NAME": "因果応報",
+    "DESCRIPTION": "敵全体に !D! ダメージ。 NL ランダムな *舐める カードを !M! 枚 expansioncontent:発掘 する。"
+  },
+  "Slimebound:Dissolve": {
+    "NAME": "手頃なおやつ",
+    "DESCRIPTION": "カードを !M! 枚引く。 NL カードを1枚 廃棄し、そのコストに等しい *舐める を手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "カードを !M! 枚引く。 NL カードを1枚 廃棄し、そのコストに等しい *舐める を手札に加える。 NL 廃棄"
+  },
+  "Slimebound:DivideAndConquer": {
+    "NAME": "分裂 & 支配",
+    "DESCRIPTION": "各スライムごとにランダムな敵に !D! ダメージを与える。 NL 全てのスライムを slimeboundmod:吸収 する。 NL 廃棄"
+  },
+  "Slimebound:DouseInSlime": {
+    "NAME": "スライム浴",
+    "DESCRIPTION": "slimeboundmod:汚泥 !slime! を与える。 NL 次のこの敵への攻撃では slimeboundmod:汚泥 を失わない。"
+  },
+  "Slimebound:DuplicatedForm": {
+    "NAME": "分裂化",
+    "DESCRIPTION": "毎ターン最初の敵を対象とするカードが2回プレイされる。",
+    "UPGRADE_DESCRIPTION": "毎ターン [E] を得る。 NL 毎ターン最初の敵を対象とするカードが2回プレイされる。",
+    "EXTENDED_DESCRIPTION": [
+      "HPが... 足りない..."
+    ]
+  },
+  "Slimebound:Equalize": {
+    "NAME": "イコライズ",
+    "DESCRIPTION": " !D! ダメージを与える。 NL HPを !M! 回復する。 NL slimeboundmod:泥食い - 2回プレイされる。 NL 廃棄"
+  },
+  "Slimebound:FinishingTackle": {
+    "NAME": "開幕タックル",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL slimeboundmod:泥食い - 弱体 !M! を与える。"
+  },
+  "Slimebound:FirmFortitude": {
+    "NAME": "液状化",
+    "DESCRIPTION": "筋力 が マイナス以下の場合 使用不可 NL 筋力 2 を失う。 NL slimeboundmod:効力 !M! を得る。"
+  },
+  "Slimebound:FlameTackle": {
+    "NAME": "フレイムタックル",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL この戦闘中 slimeboundmod:タックル のダメージが !M! 増加。"
+  },
+  "Slimebound:FormOfPuddle": {
+    "NAME": "形を変える",
+    "DESCRIPTION": " 無形 1 を得る。 NL 廃棄"
   },
   "Slimebound:ForwardTackle": {
-    "NAME": "Forward Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL slimeboundmod:Command twice."
+    "NAME": "前進タックル",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL 2回 slimeboundmod:命令 する。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL 3回 slimeboundmod:命令 する。"
   },
-  "Slimebound:TagTeam": {
-    "NAME": "Tag Team",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command !M! times."
+  "Slimebound:Gluttony": {
+    "NAME": "暴食",
+    "DESCRIPTION": "毎ターン最初に slimeboundmod:泥食い した時 *舐める を手札に加える。",
+    "UPGRADE_DESCRIPTION": "天賦 NL 毎ターン最初に slimeboundmod:泥食い した時 *舐める を手札に加える。"
   },
-  "Slimebound:RallyTheTroops": {
-    "NAME": "Rally the Troops",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command."
+  "Slimebound:GoopSpray": {
+    "NAME": "ヘドロ噴射",
+    "DESCRIPTION": "敵全体に slimeboundmod:汚泥 !slime! と 脱力 !M! を与える。"
+  },
+  "Slimebound:GoopTackle": {
+    "NAME": "コンボタックル",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL ランダムな slimeboundmod:タックル を手札に加える。このターンコストは0",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL ランダムなアップグレード済み slimeboundmod:タックル を手札に加える。このターンコストは0"
+  },
+  "Slimebound:Grow": {
+    "NAME": "成長",
+    "DESCRIPTION": "スライムスロットを1つ失う代わりに 筋力 !M! と 敏捷性 !M! を得る。"
+  },
+  "Slimebound:GrowthPunch": {
+    "NAME": "成長するパンチ",
+    "DESCRIPTION": " !B! ブロックを得る。 NL !D! ダメージを与える。 NL slimeboundmod:泥食い - この戦闘中このカードの効果が !M! 上昇。"
+  },
+  "Slimebound:HauntingLick": {
+    "NAME": "舐められるトラウマ",
+    "DESCRIPTION": "弱体 !M! と slimeboundmod:汚泥 !slime! を与える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "弱体 !M! と slimeboundmod:汚泥 !slime! を与える。 NL カードを1枚引く。 NL 廃棄"
+  },
+  "Slimebound:HungryTackle": {
+    "NAME": "ハングリータックル",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL ランダムな *舐める カードを expansioncontent:発掘 する。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL ランダムな *舐める カードを 2 枚 expansioncontent:発掘 する。"
+  },
+  "Slimebound:ItLooksTasty": {
+    "NAME": "美味しそう...",
+    "DESCRIPTION": " !D! ダメージを与える。 NL slimeboundmod:泥食い - *舐める を手札に加える。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL slimeboundmod:泥食い - *舐める+ を手札に加える。"
+  },
+  "Slimebound:LeadByExample": {
+    "NAME": "お手本を見せる",
+    "DESCRIPTION": "毎ターン最初にプレイする敵を対象とするカードは slimeboundmod:命令 を得る。",
+    "UPGRADE_DESCRIPTION": "毎ターン最初にプレイする敵を対象とする !M! 枚のカードは slimeboundmod:命令 を得る。"
+  },
+  "Slimebound:LeechEnergy": {
+    "NAME": "リーチエナジー",
+    "DESCRIPTION": " !D! ダメージを与える。 slimeboundmod:泥食い - [E] を得て カードを !M! 枚引く。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 slimeboundmod:泥食い - [E] を得て カードを !M! 枚引く。"
+  },
+  "Slimebound:LeechLife": {
+    "NAME": "リーチライフ",
+    "DESCRIPTION": "エセリアル NL !D! ダメージを与え、防御されなかったダメージ分の HP を回復する。 NL 廃棄"
+  },
+  "Slimebound:LeechingTouch": {
+    "NAME": "リーチングストライク",
+    "DESCRIPTION": " !D! ダメージを与える。 NL slimeboundmod:泥食い - 敵に付与されている slimeboundmod:汚泥 に等しい ブロック を得る。"
+  },
+  "Slimebound:LevelUp": {
+    "NAME": "レベルアップ！",
+    "DESCRIPTION": "slimeboundmod:効力 !M! を得る。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:効力 !M! とスロットを1得る。"
+  },
+  "Slimebound:Lick": {
+    "NAME": "舐める",
+    "DESCRIPTION": "slimeboundmod:汚泥 !slime! を与える。 NL 廃棄 - slimeboundmod:埋没",
+    "UPGRADE_DESCRIPTION": "脱力 !M! と slimeboundmod:汚泥 !slime! を与える。 NL カードを1枚引く。 NL 廃棄 - slimeboundmod:埋没"
+  },
+  "Slimebound:LivingWall": {
+    "NAME": "リビングウォール",
+    "DESCRIPTION": " !B! ブロックを得る。 NL このターン攻撃してきた相手に slimeboundmod:汚泥 !slime! を与える。"
+  },
+  "Slimebound:MassFeed": {
+    "NAME": "大量供給",
+    "DESCRIPTION": "敵全体に !D! ダメージ。 致命 時、最大HP + !M! NL 廃棄"
+  },
+  "Slimebound:MassRepurpose": {
+    "NAME": "大量に使いまわす",
+    "DESCRIPTION": "全ての スライム を slimeboundmod:吸収 し、同量のランダムな slimeboundmod:上級スライム を産み出す。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "全ての スライム を slimeboundmod:吸収 し、同量のランダムな slimeboundmod:上級スライム を産み出し、 slimeboundmod:命令 する。 NL 廃棄"
+  },
+  "Slimebound:MegaLick": {
+    "NAME": "巨大なベロベロ",
+    "DESCRIPTION": "敵全体に 脱力 !M! と slimeboundmod:汚泥 !slime! を与える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "敵全体に 脱力 !M! と slimeboundmod:汚泥 !slime! を与える。 NL カードを 1 枚引く。 NL 廃棄"
+  },
+  "Slimebound:MinionMaster": {
+    "NAME": "ミニオンマスター",
+    "DESCRIPTION": " slimeboundmod:命令 を持つカードをプレイするたび slimeboundmod:命令 が再発動する。",
+    "UPGRADE_DESCRIPTION": "天賦 NL slimeboundmod:命令 を持つカードをプレイするたび slimeboundmod:命令 が再発動する。"
   },
   "Slimebound:Nibble": {
-    "NAME": "Nibble",
-    "DESCRIPTION": "Deal !D! damage. NL Add a random 0-cost card to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a random Upgraded 0-cost card to your hand. NL Exhaust."
+    "NAME": "齧って舐める",
+    "DESCRIPTION": " !D! ダメージを与える。 NL *舐める を手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL *舐める を手札に加える。 NL カードを 1 枚引く。 NL 廃棄"
+  },
+  "Slimebound:OneTwoCombo": {
+    "NAME": "ワン、ツー、コンボ",
+    "DESCRIPTION": " !D! ダメージを与える。 NL slimeboundmod:分裂 した時、これを捨て札から手札に戻す。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL slimeboundmod:命令 NL slimeboundmod:分裂 した時、これを捨て札から手札に戻す。"
+  },
+  "Slimebound:OozeBath": {
+    "NAME": "ヘドロ風呂",
+    "DESCRIPTION": "対象の各ターン開始時に slimeboundmod:汚泥 !M! を与える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "3体の敵に slimeboundmod:汚泥 を与える。 NL 廃棄"
+  },
+  "Slimebound:Overexert": {
+    "NAME": "過剰行使",
+    "DESCRIPTION": " slimeboundmod:効力 4 を得る。 NL !M! ターン後、全てのスライムを slimeboundmod:吸収 する。",
+    "UPGRADE_DESCRIPTION": " slimeboundmod:効力 4 を得る。 NL slimeboundmod:命令 を2回行う。 NL !M! ターン後、全てのスライムを slimeboundmod:吸収 する。"
+  },
+  "Slimebound:Prepare": {
+    "NAME": "準備行動",
+    "DESCRIPTION": " !B! ブロックを得る。 NL 次のターン [E] を得て カードを !M! 枚引く。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "次のターン [E] を得て カードを !M! 枚引く。 NL このターン !M! 枚のカードを 保留 する。 NL 廃棄"
+  },
+  "Slimebound:PrepareCrush": {
+    "NAME": "準備: クラッシュ",
+    "DESCRIPTION": "次のターン NL *スライムクラッシュ NL [E] [E] [E] NL 筋力 !M! を得る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "次のターン NL アップグレード済みの *スライムクラッシュ NL [E] [E] [E] [E] NL 筋力 !M! を得る。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      "~スライム...~ NL #r~クラッシュ!!!~"
+    ]
+  },
+  "Slimebound:PressTheAttack": {
+    "NAME": "押し潰せ",
+    "DESCRIPTION": " !D! ダメージを与える。 slimeboundmod:泥食い - slimeboundmod:命令 する。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 slimeboundmod:泥食い - 2回 slimeboundmod:命令 する。"
+  },
+  "Slimebound:ProtectTheBoss": {
+    "NAME": "主人を守れ",
+    "DESCRIPTION": "次のダメージを無効化する代わりに先頭のスライムを slimeboundmod:吸収 する。",
+    "UPGRADE_DESCRIPTION": "次の 2 回の ダメージを無効化する代わりに先頭のスライムを slimeboundmod:吸収 する。"
+  },
+  "Slimebound:RainOfGoop": {
+    "NAME": "ヘドロの雨",
+    "DESCRIPTION": "ランダムな敵に !M! 回の slimeboundmod:汚泥 !slime! を与える。",
+    "UPGRADE_DESCRIPTION": "ランダムな敵に !M! 回の slimeboundmod:汚泥 !slime! を与える。"
+  },
+  "Slimebound:RallyTheTroops": {
+    "NAME": "スライム軍",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 次の !M! 枚のカードはこのターン slimeboundmod:命令 を得る。"
+  },
+  "Slimebound:Recollect": {
+    "NAME": "忘れられない味",
+    "DESCRIPTION": " !B! ブロックを得る。 NL ランダムな *舐める を expansioncontent:発掘 する。",
+    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL ランダムな *舐める を2枚 expansioncontent:発掘 する。",
+    "EXTENDED_DESCRIPTION": [
+      "廃棄... されてない..."
+    ]
+  },
+  "Slimebound:Recycling": {
+    "NAME": "リサイクル",
+    "DESCRIPTION": "ターン開始時、ランダムな *舐める カードを expansioncontent:発掘 する。",
+    "UPGRADE_DESCRIPTION": "天賦 NL ターン開始時、ランダムな *舐める カードを expansioncontent:発掘 する。"
+  },
+  "Slimebound:RejuvenatingLick": {
+    "NAME": "2度舐め",
+    "DESCRIPTION": "slimeboundmod:汚泥 !slime! を2回与える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:汚泥 !slime! を2回与える。 NL カードを 1 枚引く。 NL 廃棄"
+  },
+  "Slimebound:Replication": {
+    "NAME": "複製",
+    "DESCRIPTION": "手札を1枚選択し、そのコピーを山札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "手札を1枚選択し、そのコピーを手札に加える。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      " 手札にコピーを加える",
+      " 山札にコピーを加える"
+    ]
+  },
+  "Slimebound:Repurpose": {
+    "NAME": "再利用",
+    "DESCRIPTION": "slimeboundmod:吸収 - ランダムな slimeboundmod:上級スライム を産み出す。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:吸収 - ランダムな slimeboundmod:上級スライム を産み出す。 NL slimeboundmod:命令 NL 廃棄"
+  },
+  "Slimebound:RollThrough": {
+    "NAME": "ロールスルー",
+    "DESCRIPTION": "敵全体に !D! ダメージ。あなたは次の !M! 回分、 slimeboundmod:タックル による反動を受けない。"
+  },
+  "Slimebound:SamplingLick": {
+    "NAME": "味見",
+    "DESCRIPTION": "slimeboundmod:汚泥 !slime! を与える。 NL !B! ブロックを得る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:汚泥 !slime! を与える。 NL !B! ブロックを得る。 NL カードを 1 枚引く。 NL 廃棄"
   },
   "Slimebound:Schlurp": {
-    "NAME": "Schlurp",
-    "DESCRIPTION": "Add !M! *Licks to your hand."
+    "NAME": "よだれを垂らす",
+    "DESCRIPTION": "slimeboundmod:汚泥 !slime! を与える。 NL *舐める を !M! 枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:汚泥 !slime! を与える。 NL *舐める を !M! 枚手札に加える。"
   },
-  "Slimebound:BronzeBeam": {
-    "NAME": "Bronze Beam",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bronze_Slime",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bronze_Slime"
+  "Slimebound:SelfFormingGoo": {
+    "NAME": "再統合",
+    "DESCRIPTION": " !B! ブロックを得る。 捨て札からカードを1枚山札の上に置く。"
+  },
+  "Slimebound:ServeAndProtect": {
+    "NAME": "奉仕 & プロテクト",
+    "DESCRIPTION": " !B! ブロックと 1 bronze:ブラー を スライム の数だけ 得る。 NL 全てのスライムを slimeboundmod:吸収 する。 NL 廃棄"
+  },
+  "Slimebound:SlimeBarrage": {
+    "NAME": "パイル・オン!",
+    "DESCRIPTION": " !D! ダメージを与える。全てのスライムに slimeboundmod:命令 する",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 全てのスライムに 2 回 slimeboundmod:命令 する"
+  },
+  "Slimebound:SlimeBrawl": {
+    "NAME": "スライム大騒動",
+    "DESCRIPTION": "スライムの数だけ山札の一番上のカードをプレイする。 NL 廃棄"
+  },
+  "Slimebound:SlimeCrush": {
+    "NAME": "スライムクラッシュ!!!",
+    "DESCRIPTION": "エセリアル NL !D! ダメージを与える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "エセリアル NL 敵全体に !D! ダメージ。 廃棄"
+  },
+  "Slimebound:SlimeSlap": {
+    "NAME": "スライムビンタ",
+    "DESCRIPTION": " !D! ダメージを与える。 NL slimeboundmod:汚泥 を消費しない。"
+  },
+  "Slimebound:SlimeSpikes": {
+    "NAME": "スライムスパイク",
+    "DESCRIPTION": " !B! ブロック と 一時的な トゲ !M! を得る。"
+  },
+  "Slimebound:SlimeTap": {
+    "NAME": "スライムタップ",
+    "DESCRIPTION": "slimeboundmod:吸収 - [E] を得て カードを !M! 枚引く。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:吸収 - [E] [E] を得て カードを !M! 枚引く。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      "スライム達... 必要..."
+    ]
+  },
+  "Slimebound:SpikyOuterGoop": {
+    "NAME": "ヘドロアーマー",
+    "DESCRIPTION": "slimeboundmod:泥食い する度に !M! ブロックを得る。"
+  },
+  "Slimebound:Split": {
+    "NAME": "分裂",
+    "DESCRIPTION": "ランダムな スライム に slimeboundmod:分裂 する。"
+  },
+  "Slimebound:SplitAcid": {
+    "NAME": "分裂：ゲリラ",
+    "DESCRIPTION": "slimeboundmod:ゲリラスライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:ゲリラスライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。 NL 廃棄"
+  },
+  "Slimebound:SplitBruiser": {
+    "NAME": "分裂：ブルーザー",
+    "DESCRIPTION": "slimeboundmod:ブルーザースライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:ブルーザースライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。 NL 廃棄"
+  },
+  "Slimebound:SplitGreed": {
+    "NAME": "復活：グリード",
+    "DESCRIPTION": "保留 NL グリードウーズを産み出す。 NL 廃棄"
+  },
+  "Slimebound:SplitLeeching": {
+    "NAME": "分裂：リーチング",
+    "DESCRIPTION": "slimeboundmod:リーチングスライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:リーチングスライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。 NL 廃棄"
+  },
+  "Slimebound:SplitMire": {
+    "NAME": "分裂：マイア",
+    "DESCRIPTION": "slimeboundmod:マイアスライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:マイアスライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。 NL 廃棄"
+  },
+  "Slimebound:SplitScrap": {
+    "NAME": "復活：スクラップ",
+    "DESCRIPTION": "保留 NL スクラップウーズを産み出す。 NL 廃棄"
+  },
+  "Slimebound:SplitSpecialist": {
+    "NAME": "分裂：上級スライム",
+    "DESCRIPTION": " 3体の中から選んだ slimeboundmod:上級スライム に slimeboundmod:分裂 する。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "3体の中から選んだ slimeboundmod:上級スライム に slimeboundmod:分裂 する。 NL slimeboundmod:命令 NL 廃棄"
+  },
+  "Slimebound:Strike_Slimebound": {
+    "NAME": "ストライク",
+    "DESCRIPTION": " !D! ダメージを与える。"
+  },
+  "Slimebound:Tackle": {
+    "NAME": "タックル",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。"
+  },
+  "Slimebound:TagTeam": {
+    "NAME": "ベトベト分離",
+    "DESCRIPTION": " !D! ダメージを与える。 NL ランダムな スライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL ランダムな slimeboundmod:上級スライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。"
+  },
+  "Slimebound:Teamwork": {
+    "NAME": "チームワーク",
+    "DESCRIPTION": " X 回 slimeboundmod:命令 する。 NL X 回 !B! ブロックを得る。",
+    "UPGRADE_DESCRIPTION": " X+1 回 slimeboundmod:命令 する。 NL X+1 回 !B! ブロックを得る。"
+  },
+  "Slimebound:TongueLash": {
+    "NAME": "乱れ舌さばき",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 廃棄山にある「舐める」カードの枚数x !M! のダメージが追加される。"
+  },
+  "Slimebound:ViciousTackle": {
+    "NAME": "凶悪なタックル",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL slimeboundmod:汚泥 の影響を2倍受ける。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL slimeboundmod:汚泥 の影響を2倍受け、HPを slimeboundmod:汚泥 分回復する。"
+  },
+  "Slimebound:WasteNot": {
+    "NAME": "無駄のない動き",
+    "DESCRIPTION": "全ての *舐める カードを expansioncontent:発掘 する。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "全ての *舐める カードを expansioncontent:発掘 する。",
+    "EXTENDED_DESCRIPTION": [
+      "廃棄... されてない..."
+    ]
   }
 }

@@ -1,26 +1,96 @@
 {
   "reskinContent:ReSkin": {
     "TEXT": [
-      "きせかえ",
-      "オリジナル",
-      "コアちゃん",
-      "オリジナル",
-      "スライム娘"
+      "スキン",
+      "オリジナル"
     ]
   },
-  "reskinContent:Name": {
+  "reskinContent:PortraitAnimation": {
     "TEXT": [
-      "The Guardian",
-      "スライムバウンド"
+      "ポートレートタイプ"
     ]
   },
-  "reskinContent:modSettings": {
-  "TEXT": [
-    "Remove mask of Hexaghost",
-    "Remove ghost Surround Hexaghost",
-    "Disable animated portrait--Guardian",
-    "Disable enemy's reskin"
+  "reskinContent:PortraitAnimationType": {
+    "TEXT": [
+      "安定",
+      "アニメ",
+      "フルエフェクト"
+    ]
+  },
+  "reskinContent:BetaArtUnlockEffect": {
+    "TEXT": [
+      "ガーディアンの代替アートをアンロック！",
+      "スライムボスの代替アートをアンロック！",
+      "ヘクサゴーストの代替アートをアンロック！",
+      "スネッコの代替アートをアンロック！",
+      "チャンプの代替アートをアンロック！",
+      "オートマトンの代替アートをアンロック！"
+    ]
+  },
 
-  ]
-}
+  "reskinContent:ReSkinGuardian": {
+    "TEXT": [
+      "ガーディアンちゃん",
+      "コンセプトアート"
+    ],
+    "EXTRA_TEXT": [
+      "尖塔を守るためにプログラムされたスパイアの構成体。 NL 命令により自身を守ることが出来る。",
+      "ガーディアン初期の草稿の一つ NL 紙の上でよく機能していました。"
+    ]
+  },
+  "reskinContent:ReSkinSlime": {
+    "TEXT": [
+      "スライフ",
+      "スライムボス?"
+    ],
+    "EXTRA_TEXT": [
+      "美味しいレリックを食べるのが大好きな珍しいスライム。 NL 完全なる気まぐれで心臓に仕えている。",
+      "これは・・・スライムボスか？やけに人懐っこい。 NL 確かにこの帽子はスパイアで一番大きいし、きっと責任者なんだろうな。"
+    ]
+  },
+  "reskinContent:ReSkinHexaghost": {
+    "TEXT": [
+      "ヘクサ子",
+      "ゴースタゴン",
+      "ランプゴースト"
+    ],
+    "EXTRA_TEXT": [
+      "スパイアの呪われた魂。 NL 守護者として永劫の運命に封印されている。",
+      "休日は黄色い丸を追いかけまわすのが趣味。 NL パワーエサが大の苦手。",
+      "ヘクサゴーストの昔の相棒。 NL 冒険者狩りをやめて安定した職に就きたいと願っている。"
+    ]
+  },
+  "reskinContent:ReSkinSnecko": {
+    "TEXT": [
+      "SSSSスネッコ",
+      "スネッドル"
+    ],
+    "EXTRA_TEXT": [
+      "眼を使って認知の偏差を誘導し、本来の姿を偽る。 NL 研究者によると混乱した生物は全く別の世界を見ているそうです。",
+      "より強さを求め、主人公に倣った野心家のスネッコ。 NL V'sを多用し、腕も太くなり 「スネッドル-Sneckdor-」 と名乗る。"
+    ]
+  },
+  "reskinContent:ReSkinChamp": {
+    "TEXT": [
+      "ちゃんプ",
+      "洗濯日和のチャンプ"
+    ],
+    "EXTRA_TEXT": [
+      "剣を振り回せるのかと思うだろうが NL 実は彼女だけがそれを持ち上げることが出来るほどに強い。",
+      "今日は洗濯日和だ。"
+    ]
+  },
+  "reskinContent:ReSkinBronze": {
+    "TEXT": [
+      "オートマトン",
+      "「オートマトン」",
+      "The Perfect"
+    ],
+    "EXTRA_TEXT": [
+      "",
+      "そうだ！ 爪先からつま先までこれこそ「オートマトン」だ！ NL これほど「オートマトン」らしい物は他に見た事が無い！",
+      "[BOOT] Initializing... Core Systems Online - 異常ナシ NL [OBJECTIVE] BALANCE will be ENFORCED"
+
+    ]
+  }
 }

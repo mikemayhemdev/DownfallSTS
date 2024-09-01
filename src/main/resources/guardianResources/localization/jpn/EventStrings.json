@@ -1,99 +1,99 @@
 {
   "Guardian:GemMine": {
-    "NAME": "Gem Mine",
+    "NAME": "ジェムを掘る",
     "DESCRIPTIONS": [
-      "You step inside an old mine shaft.  In the rocky crevices, you can see a number of shiny gemstones.  #gEmeralds, #rrubies, #ytopazes, and several others.  Looking around, you can’t seem to locate any mining picks, but the gems are so close to the surface that, with some determination, you might be able to pry them from the stone.",
-      "Digging into the rocky wall, you manage to pluck a gem from it’s resting spot.  It hurt a little, but there is no glory without sacrifice",
-      "Though the prospect of treasure is appealing, you opt to save your armor for more important ventures.",
-      "Having successfully won over the old mine, you leave with a sense of accomplishment.  And some sore bronze appendages.",
-      "You snatch up the mining pick, which seems to be in poor condition. You could use it here to gain some gems, or stash it away to use later in your climb.",
-      "Using the mining pick, you hammer away at the wall and carve out a gem. The pick takes some wear and tear in the process, but better to damage it than your claws."
+      "古い鉱山の坑道へと足を踏み入れた。岩の隙間にはいくつもの宝石が見える。 #gエメラルド、 #rルビー、 #yトパーズ、その他多種多様な宝石がある。 NL 近くにいるグレムリンの群れが採掘用の道具を持っているので利用できそうだが、宝石はすぐ目に見える場所にあるため多少の覚悟があれば爪で掘る事も可能だろう。",
+      "爪で岩壁を掘って宝石を取り出した。少し痛いけどその分の宝石は手に入れた。",
+      "宝石は魅力的だが、ここは鎧を消耗させる場面じゃない。",
+      "見事に鉱山から目的の物を入手し、達成感を得て帰路につく。ブロンズ細工の身体にほんの少しの痛みを感じながら。",
+      "グレムリンのキャンプにある採掘用ピッケルを手に取る。どうやら状態が悪いようだ。ここで宝石を取るのに使ってもいいが、後で使うために取っておくのも良いだろう。",
+      "ピッケルを使って壁を叩き、宝石を削り出す。ピッケルは少し傷んだが手を傷つけるよりはマシというもの。"
     ],
     "OPTIONS": [
-      "[Mine] #gGain #grandom #gGem. #rLose #r",
-      " #rHP.",
-      "[Leave]",
-      "[Loot] #gGain #gPick #gof #gRhapsody.",
-      "[Mine] #gGain #grandom #gGem. #rLose #rPick #rcharge.",
-      "[Locked] Pick #rBroken."
+      "[爪で掘る] #g入手：ランダムなジェム。 #r失う： #r",
+      " #rHP。",
+      "[立ち去る]",
+      "[奪う] #rグレムリン達と戦闘になる。 #g入手： #gピッケル",
+      "[ピッケルで掘る] #g入手：ランダムなジェム。 #r失う：ピッケルの耐久力。",
+      "[Locked] ピッケルが #r壊れた。"
     ]
   },
   "Guardian:StasisEgg": {
-    "NAME": "Quantum Chamber",
+    "NAME": "量子チャンバー",
     "DESCRIPTIONS": [
-      "You stumble open a box, its cover etched in strange runic symbols.  Peering inside, you notice a strange egg-shaped device, humming softly.  You don’t know what it is, or what it is used for, but the energy coming from it makes you think it must be powerful.",
-      "You decide that something this powerful is meant to be used.  You pocket the egg and be on your way, but as the runes glow, you gradually feel time itself slipping away, making you ~slower~ ~and~ ~slower~ ~.~ ~.~ ~.~",
-      "You decide that something this powerful should not be left for any adventurer to misuse, and decide to destroy it. NL A warm light invigorates you as the egg glows, before #rviolently #rexploding, the shards #rpainfully cutting into your body.",
-      "You decide that something this powerful is probably here for good reason.  Though your instinct says that you should do something with such a powerful object, you reason that whoever left this here did so with purpose.  You close the lid, and move on."
+      "奇妙なルーン文字が刻まれた箱の蓋を開け中を覗き込むと、奇妙な卵型の装置が小さな音を立てているのが見えた。それが何なのかわからないが、そこから発せられるエネルギーは強力なものに違いない。",
+      "この遺物は使用されることを望んでいると判断した。卵をポケットに入れ、出発するが、ルーンが光るにつれあなたは徐々に時間そのものが失われていくような感覚を感じた。 NL ~遅い、更に遅くなる.......~",
+      "この力を侵入者に悪用されては大変だ。そう判断したあなたはこの遺物を破壊する事にした。 NL 卵が光りだす。光は段々と温かくなりあなたを包むが、突如 #r激しく爆発 した。 破片があなたの身体を傷つけ #r激しい痛み を引き起こした。",
+      "あなたはこの強力な遺物がここにあるのには何か理由があるのだろうと考えた。直感的に放っておかない方が良いとも思ったが、結局あなたは何もせず、元通りに蓋を閉め、先へと進んだ。"
     ],
     "OPTIONS": [
-      "[Use] #gGain #gQuantum #gChamber. #rBecome #rCursed #r- #rAged",
-      "[Smash] #gGain #g",
-      " #gMax #gHP. #rBecome #rCursed #r- #rPain",
-      "[Leave]"
+      "[使う] #g入手：量子チャンバー。 #r呪い #r- #r加齢",
+      "[叩く] #g入手：最大HP+ #g",
+      " 。 #r呪い #r- #r痛み",
+      "[立ち去る]"
     ]
   },
   "Guardian:AccursedBlacksmith": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "You decide to put the forge to use and... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...make some room in your arsenal for new gemstones."
+      "あなたは鍛冶屋を利用する事に決めた... NL #y@カン！@ #y@カァーン！@ #y@カン！@ NL ...あなたの兵装に新しいジェムを装着する枠を作成できる。"
     ],
     "OPTIONS": [
-      "[Tinker] #gAdd #ga #gsocket #gto #gany #gsocketed #gcard.",
-      "Add a socket to a card.",
-      "[Locked] Requires a card with sockets."
+      "[鍛冶] #gソケットを持つカードにソケットを追加する。",
+      "ソケットを追加するカード",
+      "[Locked] 要求：ソケット付きカード"
     ]
   },
   "Guardian:GuardianTalk": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "REPLACEMENT - RETURN TO ASSEMBLY.",
-      "ANOMALY DETECTED.",
-      "GUARDIAN MODEL DEFECTIVE.",
-      "OVERRIDE ALPHA PROTOCOL.",
-      "GUARDIAN: RETURN TO POST.",
-      "COMPLETE PROTOCOL FAILURE DETECTED.",
-      "TERMINATE GUARDIAN IMMEDIATELY.",
-      "NEW PROTOCOL: DESTROY.",
-      "CEASE AND RETURN TO EXORDIUM."
+      "交換 - 組み立てに戻れ。",
+      "異常を検出。",
+      "ガーディアン モデル 不良。",
+      "アルファプロトコル オーバーライド。",
+      "ガーディアン：元の場所に戻れ。",
+      "プロトコルの不具合を検出。",
+      "ガーディアンを直ちに停止させろ。",
+      "新規プロトコル：破壊。",
+      "停止し、「序章」へと戻れ。"
     ],
     "OPTIONS": [
       ""
     ]
   },
   "Guardian:CrystalForge": {
-    "NAME": "Grim Forge",
+    "NAME": "グリムフォージ",
     "DESCRIPTIONS": [
-      "Through secret passages known only to the Constructs of the Spire, you enter a chamber designed for maintenance and repairs on Automaton models. The tools available here will be of certain use to you, even if they were not intended for Guardians.",
-      "Using the enchanted anvil, you smash an unnecessary piece of equipment to pieces, all to gain back the precious gems you foolishly placed into it earlier.",
-      "With the magic tongs, you carefully pry open a socket and remove the gems inside it, making room for better installments later, at the cost of making the gems completely unusable.",
-      "The Forge's ability to transmute matter is put to use immediately as you toss in an unneeded piece of equipment. Some moments later, the material dissolves and compresses into a beautiful gem.",
-      "You escape through the same secret passage you came in, leaving the Grim Forge behind you. Your journey continues towards the Dawn awaiting at the top of the Spire.",
-      "Select a Card to Dismantle.",
-      "Select a Card to Pry.",
-      "Select a Card to Transmute.",
-      "Select a Gem.",
-      "Select a Card to receive Gem.",
-      "Taking advantage of this break in the climb, you place a gemstone into your equipment, instantly feeling your power grow."
+      "尖塔の構築物だけが知っている秘密の通路を通り、オートマトンモデルのメンテナンスと修理のための部屋へと入る。ここにあるツールは例えそれがガーディアン用じゃなかったとしても、あなたにとって必ず役に立つはずだ",
+      "金床で不要な道具を破壊する。その中に入れていた宝石を取り出すために。",
+      "魔法のトングを使い、ソケットを慎重にこじ開け中の宝石を取り出した。",
+      "グリムフォージの中に不要な装備を放り込むと、すぐにフォージの物質変換能力が発揮される。しばらくすると素材は完全に溶けて圧縮され、美しい宝石へと生まれ変わった。",
+      "グリムフォージを後にし、来た時と同じ秘密の通路から脱出した。尖塔の頂上で待つ夜明けを目指し、旅を続けよう。",
+      "解体するカードを選択。",
+      "こじ開けるカードを選択。",
+      "変成するカードを選択。",
+      "ジェムを選択。",
+      "ジェムを装着するカードを選択。",
+      "塔を登る合間の休憩時間に、装備に宝石を装着すると途端にパワーアップするのを感じる。"
     ],
     "OPTIONS": [
-      "[Dismantle] #rRemove Socketed Card. Gain it's #gGems.",
-      "[Locked] Requires Socketed Card with a Gem installed.",
-      "[Pry] #rDestroy all #gGems in a Socketed Card.",
-      "[Transmute] #rRemove a Card. Gain a random #gGem.",
-      "[Locked] Already used.",
-      "[Leave]",
-      "[Enhance] Add a #gGem to a #gSocket.",
-      "[Locked] Requires a Gem and an open Socket."
+      "[解体] #rカードを解体し、 #gジェムを取り出す。",
+      "[Locked] ジェムの入ったカード。",
+      "[こじ開ける] #gカードからジェムを取り出す。",
+      "[変成] #rカードを削除。 ランダムな #gジェムを入手。",
+      "[Locked] 利用済み。",
+      "[立ち去る]",
+      "[エンハンス] #gジェム を #gソケット に装着。",
+      "[Locked] 必要：ジェムと空ソケット。"
     ]
   },
   "Guardian:Purifier": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "With a swift crushing blow, you shatter the Shrine into pieces in order to uncover the treasures within. Within the rubble, you find two pristine and usable gemstones, patiently awaiting their place in your weaponry. NL NL You leave the remains of the Shrine and continue the climb."
+      "祠の中にある宝石を取り出す為、粉々に破壊する。あなたは瓦礫の中から二つの原石を発見し、どの武器に装着しようかなどと考えていた。 NL NL 祠の残骸を後にして塔を登った。"
     ],
     "OPTIONS": [
-      "[Smash] #gGain #g2 #gRandom #gGems."
+      "[粉砕] #g入手：2枚のランダムなジェム"
     ]
   },
   "Guardian:Transmorgrifier": {
@@ -112,6 +112,16 @@
     ],
     "OPTIONS": [
       ""
+    ]
+  },
+  "Guardian:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "あなたが釘であるのなら打たれるのに耐えよ。あなたが槌であるのなら、打ちなさい。"
+    ],
+    "OPTIONS": [
+      "[耐久] 全ての #gストライク と #g防御 に #g制動2が付く。。",
+      "[Locked] 必要：ストライクまたは防御。"
     ]
   }
 }

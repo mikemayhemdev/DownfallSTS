@@ -1,103 +1,122 @@
 {
   "sneckomod:SneckoSoul": {
-    "NAME": "Snecko Soul",
+    "NAME": "スネッコソウル",
     "FLAVOR": "0...3...2...2...1",
     "DESCRIPTIONS": [
-      "Whenever you add a #ysneckomod:Unknown card into your deck, increase your Max HP by #b1."
+      "戦闘中、初めて #ysneckomod:オフクラス カードをプレイした時、 [E] を得てカードを1枚引く。"
     ]
   },
   "sneckomod:SuperSneckoSoul": {
-    "NAME": "Super Snecko Soul",
+    "NAME": "スネッコソウルSP",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
-      "Replaces [#407B93]Snecko Soul[]. NL Upon pickup, increase your Max HP by #b2 for each #ysneckomod:Unknown card in your deck."
+      " [#407B93]スネッコソウル[] と置き換える。 NL ターン毎に 初めて #ysneckomod:オフクラス カードをプレイした時、 [E] を得る。"
     ]
   },
   "sneckomod:CleanMud": {
-    "NAME": "Snake-Charmer's Flute",
-    "FLAVOR": "You're an oxy-moron!",
+    "NAME": "蛇使いの笛",
+    "FLAVOR": "シュシュスススス...",
     "DESCRIPTIONS": [
-      "#ysneckomod:Muddled cards can't cost #b3."
+      "#ysneckomod:泥まみれ ではコスト #b3 にならなくなる。"
     ]
   },
   "sneckomod:ConfusingCodex": {
-    "NAME": "Ring of the Snek",
-    "FLAVOR": "Illegible, unreadable, due by Thursday.",
+    "NAME": "蛇の指輪",
+    "FLAVOR": "読めない、読みづらい。木曜日〆切。",
     "DESCRIPTIONS": [
-      "At the start of combat, apply #b0-2 #yWeak and #yVulnerable to ALL enemies."
+      "戦闘開始時、敵全体に #y脱力 と #y弱体 #b0-2 を与える。"
     ]
   },
   "sneckomod:CrystallizedMud": {
-    "NAME": "Mesmerising Pendant",
-    "FLAVOR": "Dazzling dirt.",
+    "NAME": "魅惑的なペンダント",
+    "FLAVOR": "まばゆいばかりの汚れ方。",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #ysneckomod:Muddled cards can't cost #b0."
+      "ターン開始時、 [E] を得る。 #ysneckomod:泥まみれ ではコスト #b0 にならなくなる。"
     ]
   },
   "sneckomod:LoadedDie": {
-    "NAME": "Loaded Die",
-    "FLAVOR": "Cheese-stuffed.",
+    "NAME": "いかさまダイス",
+    "FLAVOR": "チーズがたっぷり詰まってる。",
     "DESCRIPTIONS": [
-      "Cards that choose random numbers have +1 minimum."
+      "ランダムで数値が決まるカードの最低値を + 1 する。"
     ]
   },
   "sneckomod:RareBoosterPack": {
-    "NAME": "Rare Booster Box",
-    "FLAVOR": "Mint condition.",
+    "NAME": "レアブースターボックス",
+    "FLAVOR": "とてもミントなコンディション。",
     "DESCRIPTIONS": [
-      "Upon pickup, obtain a #ysneckomod:Unknown #yRare card of each card type."
+      "入手時、各タイプの #yレア #y未識別 カードを1枚ずつ得る。"
     ]
   },
   "sneckomod:SleevedAce": {
-    "NAME": "Sleeved Ace",
-    "FLAVOR": "We're all aces.",
+    "NAME": "とっておきのエース",
+    "FLAVOR": "俺たちはみんなエースだ。",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a #yCheat into your hand with #yRetain."
+      "戦闘開始時、 #y保留 付きの #yピュアラック カードを手札に加える。 "
     ]
   },
   "sneckomod:UnknownEgg": {
-    "NAME": "Unknown Egg",
-    "FLAVOR": "What will hatch? Pay $1000 to see.",
+    "NAME": "正体不明の卵",
+    "FLAVOR": "何が生まれるのかって？ $1000 払って確認してみてね。",
     "DESCRIPTIONS": [
-      "#ysneckomod:Unknown cards in card rewards are #yUpgraded."
+      "休憩所での #y識別 が 行動を消費しなくなる。 NL #y未識別 カードが全て #yアップグレード された状態で手に入る。"
     ]
   },
   "sneckomod:SuperSneckoEye": {
-    "NAME": "Super Snecko Eye",
+    "NAME": "スネッコアイSP",
     "FLAVOR": "0121012",
     "DESCRIPTIONS": [
-      "Replaces Snecko Eye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0."
+      " #yスネッコアイ と置き換える。ターン開始時、2枚カードを追加で引く。戦闘開始時に 混乱 。 戦闘中初めてコスト #b3 のカードを引いた時、そのコストを #b0 にする。"
     ]
   },
   "sneckomod:SneckoTalon": {
-    "NAME": "Idol of Retromation",
-    "FLAVOR": "Often called the Idol of Reto for short.",
+    "NAME": "アイドル・オブ・レトロメーション",
+    "FLAVOR": "略してレトのアイドルと呼ばれることが多いらしい。",
     "DESCRIPTIONS": [
-      "At the start of your turn, reduce the cost of the most expensive card in your hand by #b1 for this turn."
+      "ターン開始時にこのターンの間、手札の中で最もコストの高いカードのコストを #b1 下げる。"
     ]
   },
   "sneckomod:BlankCard": {
-    "NAME": "Blank Card",
-    "FLAVOR": "Card Mimic.",
+    "NAME": "白紙のカード",
+    "FLAVOR": "偽装カード",
     "DESCRIPTIONS": [
-      "At the start of each combat, play a random card from your deck."
+      "戦闘開始時、デッキからランダムなカード1枚の #ygremlin:エコー をあなたの手札に加える。そのコストは #b0 になる。"
     ]
   },
   "sneckomod:D8": {
-    "NAME": "Mystical Octahedron",
-    "FLAVOR": "It appears weighted toward one side.",
+    "NAME": "神秘的な八面体",
+    "FLAVOR": "片方に偏っているように見える。",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card that selects a random number for its effects. This card always selects its maximum possible number.",
-      "Choose a card for ",
-      "Whenever ",
-      " is played, it chooses its maximum possible number for its effect."
+      "入手時、デッキからランダムに数値が変わるカードを1枚選択する。そのカードは常に最大値が出る。",
+      "選択するカードは ",
+      "いつでも ",
+      " プレイされた時、常に最大の数値が出る。"
     ]
   },
   "sneckomod:BabySnecko": {
-    "NAME": "Young Snecko",
-    "FLAVOR": "Bewilderingly adorable.",
+    "NAME": "ヤングスネッコ",
+    "FLAVOR": "ビミョーに可愛い",
     "DESCRIPTIONS": [
-      "Deals 5 damage to a random enemy at the start of your turn."
+      "ターン開始時、ランダムな敵に #b5 ダメージを与える。"
+    ]
+  },
+  "sneckomod:SneckoCommon": {
+    "NAME": "認証シール",
+    "FLAVOR": "俺の名はアイアンクラッド。これはスパイアで一番好きなレリックさ。 -商人の広告パンフレットより",
+    "DESCRIPTIONS": [
+      "入手時、 #b3 枚の #y未識別 #yキャラクター カード から 1枚選び、デッキに加える。 今後入手する #y未識別 カードは全てこの #yキャラクター の物になる。",
+      "発見されるすべての未識別キャラクターカードは ",
+      " カードになる。"
+    ]
+  },
+  "sneckomod:SneckoBoss": {
+    "NAME": "幸運の蹄鉄",
+    "FLAVOR": "自分の運を自分で切り開く。",
+    "DESCRIPTIONS": [
+      "入手時、 #b3 枚の #y未識別 #yキャラクター カード から 1枚選び、 それを #b5 枚 デッキに加える。今後すべての戦闘で選ばれたキャラクターのカードを追加で報酬に加える。",
+      "入手時に得られた #b5 #y未識別 ",
+      " カード。 今後すべての戦闘で追加報酬に ",
+      " カードが加わる。"
     ]
   }
 }

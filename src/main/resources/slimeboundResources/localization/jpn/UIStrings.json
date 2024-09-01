@@ -1,10 +1,27 @@
 {
   "slimeboundConfigMenuText": {
     "TEXT": [
-      "Allow other characters to encounter some Slimebound relics.",
-      "Allow other characters to encounter some Slimebound potions.",
-      "Allow other characters to encounter some Slimebound events.",
-      "Unlock everything (Not recommended)"
+      "他のキャラがスライムボスのレリックに遭遇するのを許可。",
+      "他のキャラがスライムボスのポーションに遭遇するのを許可。",
+      "他のキャラがスライムボスのイベントに遭遇するのを許可。",
+      "全てのロックを解除 (非推奨)"
+    ]
+  },
+  "slimeboundmod:CommandMod": {
+    "TEXT": [
+      " NL slimeboundmod:命令"
+    ]
+  },
+  "slimeboundmod:lickDescriptor": {
+    "TEXT": [
+      "舐める",
+      "slimeboundmod:舐める NL "
+    ]
+  },
+  "slimeboundmod:tackleDescriptor": {
+    "TEXT": [
+      "タックル",
+      "slimeboundmod:タックル NL "
     ]
   }
 }

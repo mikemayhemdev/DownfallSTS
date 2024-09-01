@@ -1,36 +1,36 @@
 {
   "downfall:ChangingTotem": {
     "MOVES": [
-      "Transformative Gaze"
+      "変容するまなざし"
     ],
-    "NAME": "Head of Change",
+    "NAME": "変換ヘッド",
     "DIALOG": [
       ""
     ]
   },
   "downfall:ForgetfulTotem": {
     "MOVES": [
-      "Forgetful Stare"
+      "忘却の視線"
     ],
-    "NAME": "Forgetful Head",
+    "NAME": "忘却ヘッド",
     "DIALOG": [
       ""
     ]
   },
   "downfall:GrowingTotem": {
     "MOVES": [
-      "Growth Beam"
+      "成長の光線"
     ],
-    "NAME": "Head of Growth",
+    "NAME": "成長ヘッド",
     "DIALOG": [
       ""
     ]
   },
   "downfall:FleeingMerchant": {
     "MOVES": [
-      "Soul Steal"
+      "ソウルスティール"
     ],
-    "NAME": "Head of Growth",
+    "NAME": "逃げ出そうとしている商人",
     "DIALOG": [
       ""
     ]
@@ -38,20 +38,55 @@
   "downfall:LooterAlt": {
     "MOVES": [
     ],
-    "NAME": "Looter",
+    "NAME": "ルーター",
     "DIALOG": [
-      "~Hey,~ you don't have any money!",
-      "@NOOOoooo!@",
-      "You're gonna die today, chump."
+      "~よお~ 文無し！",
+      "@ノオオオオオォォ!@",
+      "お前は今日死ぬんだぜ。チョンボ野郎"
     ]
   },
   "downfall:MuggerAlt": {
     "MOVES": [
     ],
-    "NAME": "Mugger",
+    "NAME": "ムガー",
     "DIALOG": [
-      "Let's teach 'em a lesson.",
-      "Teach 'em all the way!"
+      "さあレッスンの時間だ！",
+      "とことん分からせてやるぜ！"
+    ]
+  },
+  "downfall:Fortification": {
+    "MOVES": [
+    ],
+    "NAME": "要塞",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomRed": {
+    "MOVES": [
+    ],
+    "NAME": "ポルチーニ",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomPurple": {
+    "MOVES": [
+    ],
+    "NAME": "アクタリウス",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomWhite": {
+    "MOVES": [
+    ],
+    "NAME": "パフボール",
+    "DIALOG": [
+    ]
+  },
+  "downfall:DoomedDagger": {
+    "MOVES": [
+    ],
+    "NAME": "ドゥームダガー",
+    "DIALOG": [
     ]
   }
 }

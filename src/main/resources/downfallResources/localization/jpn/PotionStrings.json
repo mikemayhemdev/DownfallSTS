@@ -1,11 +1,11 @@
 {
   "downfall:CursedFountainPotion": {
-    "NAME": "Cursed Fountain Liquid",
+    "NAME": "呪いの泉のしずく",
     "DESCRIPTIONS": [
-      "Apply #b",
-      " #yWeak, #b",
-      " #yVulnerable, and reduce #yStrength by ",
-      "."
+      "#y脱力 #b",
+      " #y弱体 #b",
+      " を与え、 #y筋力 ",
+      " を失わせる。"
     ]
   }
 }

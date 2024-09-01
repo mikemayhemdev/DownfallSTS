@@ -4,190 +4,202 @@
       "The Heart"
     ],
     "TEXT": [
-      "~Serve...~ NL ~me..~ ~now...~",
-      "~Rise...~ NL ~Servant..~",
-      "~Arise...~",
-      "~Slay~ NL ~intruders...~",
-      "~Reach~ ~the~ ~intruder...~ NL ~to~ ~receive~ ~more..~ ~blessings...~",
-      "~At~ ~least...~ ~confront~ NL ~the~ ~first~ ~intruder...~",
-      "~I~ ~brought~ ~you~ ~back...~",
-      "~Choose...~",
-      "~Granted...~",
-      "~Sacrifice...~ NL ~...for~ ~power....~",
-      "~PROVE~ ~your~ NL ~worth...~",
-      "Rewards",
-      "~Continue~ ~for~ ~me...~",
-      "~Descend...~ ~..into madness...~",
-      "~Impressive...~ ~more...~",
-      "Cursed!",
-      "Scatterbrain!",
-      "Transformation!"
+      "~今こそ...~ NL ~我に...~ ~尽くせ...~",
+      "~甦れ...~ NL ~我が僕よ..~",
+      "~目覚めよ...~",
+      "~侵入者を~ NL ~排除せよ...~",
+      "~侵入者の元に行き...~ NL ~更なる..祝福を受けよ...~",
+      "~せめて...~ NL ~最初の侵入者まで辿り着いてほしいものだ...~",
+      "~私がお前をここに引き戻した...~",
+      "~選ぶがいい...~",
+      "~いいだろう...~",
+      "~力の為の.....~ NL ~...犠牲....~",
+      "~自らの価値...~ NL ~証明しろ...~",
+      "報いよう...",
+      "~続けろ..私の為に...~",
+      "~堕ちよ...狂気の世界....~",
+      "~素晴らしいぞ...~ ~もっとだ...~",
+      "呪われた！",
+      "迷走中！",
+      "トランスフォーム！"
     ],
     "OPTIONS": [
-      "[Continue]",
-      "[Talk]",
-      "[Skip]",
-      "[Leave]",
-      "Choose 10 cards to add to your deck.",
-      "[ #gEnemies #gin #gyour #gnext #gtwo #gcombats #gflee #gin #gterror ]"
+      "[続ける]",
+      "[話す]",
+      "[スキップ]",
+      "[立ち去る]",
+      " 10 枚のカードを選んでデッキに追加する。",
+      "[ #g次の3回の戦闘は敵が恐怖で逃げ出す。 ]",
+      "[ Locked - 初回挑戦時には選択出来ない ]",
+      "[ #g全てのグレムリンが最大HP+",
+      "#g全てのグレムリンが最大HP+",
+      "[ #r全てのグレムリンが失う ： #r",
+      "[ #r全てのグレムリンが得る ： #r"
     ]
   },
   "downfall:Unlock": {
     "TEXT": [
-      "This character is unlocked by completing a run with the Slime Boss.",
-      "This character is unlocked by completing a run with the 2nd Villain character.",
-      "This character is unlocked by completing a run with the Guardian.",
-      "This character is unlocked by completing a run with the 3rd Villain character.",
-      "This character is unlocked by completing a run with the Hexaghost.",
-      "This character is unlocked by completing a run with the 4th Villain character.",
-      "This character is unlocked by completing a run with the Champ."
-
+      "このキャラクターは以下のランを完了することでアンロックされる： スライムボス",
+      "このキャラクターは以下のランを完了することでアンロックされる： 2人目の悪役キャラクター",
+      "このキャラクターは以下のランを完了することでアンロックされる： ガーディアン",
+      "このキャラクターは以下のランを完了することでアンロックされる： 3人目の悪役キャラクター",
+      "このキャラクターは以下のランを完了することでアンロックされる： ヘクサゴースト",
+      "このキャラクターは以下のランを完了することでアンロックされる： 4人目の悪役キャラクター",
+      "このキャラクターは以下のランを完了することでアンロックされる： チャンプ",
+      "このキャラクターは以下のランを完了することでアンロックされる： 5人目の悪役キャラクター",
+      "このキャラクターは以下のランを完了することでアンロックされる： オートマトン",
+      "このキャラクターは以下のランを完了することでアンロックされる： 6人目の悪役キャラクター",
+      "このキャラクターは以下のランを完了することでアンロックされる： グレムリン",
+      " (Act 4 のクリアは関係ない)",
+      "このキャラクターは以下のランを完了することでアンロックされる： 7人目の悪役キャラクター",
+      "このキャラクターは以下のランを完了することでアンロックされる： スネッコ"
     ]
   },
   "downfall:HeartMerchant": {
   "NAMES": [
-    "Proceed",
-    "~Sacrifice...~"
+    "進め...",
+    "~魂を...~"
   ],
   "TEXT": [
-    "~You~ ~grow...~ ~stronger...~",
-    "~We~ ~grow...~ ~as~ ~you~ ~grow...~",
-    "~Slay...~ ~and~ ~be~ ~rewarded...~",
-    "~More...~ ~souls...~",
-    "~Feed~ ~us......~ NL ~FEED~ ~US......~",
-    "~Fuel...~ ~the~ ~corruption...~",
-    "~Blessings...~ ~are~ ~earned...~",
-    "~No...~ ~mercy...~",
-    "~Ever...~ ~stronger...~",
-    "~Our~ ~power...~ ~is~ ~yours...~",
-    "~Kill~ ~all...~ ~in~ ~your~ ~way...~",
-    "~Fight...~ ~fell...~ ~and~ ~feed...~",
-    "~We~ ~are...~ ~legion...~",
-    "~Go~ ~forth...~ ~and~ ~harvest...~",
-    "~Delicious...~ ~souls...~",
-    "~Reap...~ ~the~ ~fallen...~"
+    "~お前は...成長し...強くなる...~",
+    "~皆が成長すれば...お前も...~",
+    "~倒せ...そして褒美を...~",
+    "~もっと......魂を......~",
+    "~食わせろ...もっと食わせろ....~",
+    "~腐敗を...加速させろ...~",
+    "~祝福を...与える.....~",
+    "~慈悲は...ない..~",
+    "~もっと強くなれ~",
+    "~我々の力は...お前の力だ...~",
+    "~邪魔者は...殺せ...~",
+    "~闘い...倒し...糧を得よ...~",
+    "~我らは...一つの集団だ...~",
+    "~行け...そして収穫せよ~",
+    "~おいしい...魂.....,~",
+    "~刈り取れ...倒れた者達から...~"
   ],
   "OPTIONS": [
-    "~Neow...~ ~cannot~ ~win...~",
-    "~Fear...~ ~nothing...~",
+    "~ネオー...勝てないのか...~",
+    "~恐怖は...ない...~",
     "..... NL .... NL .........",
-    "~Finish...~ ~them...~",
-    "~Good...~ ~luck...~",
-    "~Don't...~ ~die...~",
-    "~We will...~ ~be~ ~waiting...~",
-    "~Destroy...~ ~them~ ~all...~"
+    "~終わらせろ...全て...~",
+    "~幸運を...祈る...~",
+    "~死ぬな...~",
+    "~我々は...待っている...~",
+    "~殲滅しろ...全てを...~"
   ]
 },
   "downfall:HeartProceed": {
     "TEXT": [
-      "~Intruders...~ NL ~...in~ ",
-      "~You~ ~are~ ~needed...~ NL ~...in~ ",
-      "~They~ ~have~ ~reached...~ NL ",
-      "~Return...~ NL ~Protect~ ",
-      "~Slay~ ~them~ ~all...~ NL ~...in~ "
+      "~侵入者...~ NL ~は...~ ",
+      "~お前が...~ NL ~向かうべきは...~ ",
+      "~奴らは...~ NL ",
+      "~守れ...~ NL ~向かえ...~ ",
+      "~侵入者達は...~ NL ~全員...~ "
     ],
     "OPTIONS": [
-      "~the~ ~City...~",
-      "~the~ ~Beyond...~"
+      " ~シティ...~",
+      " ~彼方...に...~"
     ]
   },
   "downfall:NeowEnding": {
     "TEXT": [
-      "You... have... slain... everyone...",
-      "...the cycle... has died.....",
-      "..and so...... shall... NL ....I......"
+      "お前は... 殺した... 一人残らず...",
+      "...この輪廻は... 終わった.....",
+      "..ああ...... そう... NL ....そうしよう......"
     ],
     "OPTIONS": [
-      "~I~ ~brought...~ NL ~HIM...~ ~back...~"
+      "~私が...~ NL ~彼を...~ ~連れ戻し...そして...ソウルを奪った...~",
+      "~私を守れ...~ NL ~そして受け取れ...褒美を...~"
     ]
   },
   "downfall:HeartMerchantScreen": {
     "NAMES": [
-      "~Greetings~ NL ~minion...~",
-      "~Bring~ ~more~ ~souls...~",
-      "~I~ ~need~ @more...@",
-      "~You~ ~are~ ~not~ NL @worthy...@",
-      "~No.~",
-      "~Harvest~ ~more~ NL ~for~ ~that...~",
-      "~Insufficient~ ~sacrifice...~",
-      "~Yes...~",
-      "~More...~ @More...!@",
-      "~Grow~ ~strong...~",
-      "~I~ ~am~ ~renewed...~",
-      "~Go~ ~forth...~",
-      "Leave",
-      "Select a card to remove from your deck."
+      "~調子はどうだ...~ NL ~我が手下よ...~",
+      "~もっと魂を狩って来い...~",
+      "@もっと欲しい...@",
+      "~お前には~ NL @相応しくない...@",
+      "~駄目だ~",
+      "~もっと...刈り取れ...~ NL ~それの為に...~",
+      "~贄が...足りない...~",
+      "~ああ...~",
+      "~もっと...~ @もっとだ...!@",
+      "~力強く成長した...~",
+      "~心地良いぞ...~",
+      "~行け...~",
+      "立ち去る",
+      "デッキから削除するカードを選択"
     ],
-    "TEXT": [
-      "~You~ ~grow...~ ~stronger...~",
-      "~We~ ~grow...~ ~as~ ~you~ ~grow...~",
-      "~Slay...~ ~and~ ~be~ ~rewarded...~",
-      "~More...~ ~souls...~",
-      "~Feed~ ~us......~ NL ~FEED~ ~US......~",
-      "~Fuel...~ ~the~ ~corruption...~",
-      "~Blessings...~ ~are~ ~earned...~",
-      "~No...~ ~mercy...~",
-      "~Ever...~ ~stronger...~",
-      "~Our~ ~power...~ ~is~ ~yours...~",
-      "~Kill~ ~all...~ ~in~ ~your~ ~way...~",
-      "~Fight...~ ~fell...~ ~and~ ~feed...~",
-      "~We~ ~are...~ ~legion...~",
-      "~Go~ ~forth...~ ~and~ ~harvest...~",
-      "~Delicious...~ ~souls...~",
-      "~Reap...~ ~the~ ~fallen...~"
+      "TEXT": [
+      "~お前は...成長し...強くなる...~",
+      "~皆が成長すれば...お前も...~",
+      "~倒せ...そして褒美を...~",
+      "~もっと......魂を......~",
+      "~食べたい...もっと食べたい....~",
+      "~腐敗を...加速させろ...~",
+      "~祝福を...与える.....~",
+      "~慈悲は...ない..~",
+      "~もっと強くなれ~",
+      "~我々の力は...お前の力だ...~",
+      "~邪魔者は...殺せ...~",
+      "~闘い...倒し...糧を得よ...~",
+      "~我らは...一つの集団だ...~",
+      "~行け...そして収穫せよ~",
+      "~おいしい...魂.....,~",
+      "~刈り取れ...倒れた者達から...~"
     ]
   },
   "downfall:OctoChoiceCards": {
     "NAMES": [
-      "Souls",
-      "Success",
-      "A Pick Me Up",
-      "Guardian",
-      "Hexaghost",
-      "Slime Boss",
-      "Automaton",
-      "Champ",
-      "Collector",
-      "Time Eater",
-      "Awakened One",
-      "Ancients",
-      "Split: Bronze",
-      "Split: Ghostflame",
-      "Split: Torchhead",
-      "Split: Cultist",
-      "Split: Protector",
-      "Split: Insulting",
-      "Split: Ancient",
-      "Split: Time"
+      "ソウル",
+      "成功",
+      "景気付け",
+      "ガーディアン",
+      "ヘクサゴースト",
+      "スライムボス",
+      "オートマトン",
+      "チャンプ",
+      "コレクター",
+      "タイムイーター",
+      "目覚めし者",
+      "エンシェント",
+      "分裂: ブロンズスライム",
+      "分裂: ゴーストフレイムスライム",
+      "分裂: トーチヘッドスライム",
+      "分裂: カルティストスライム",
+      "分裂: スパイキースライム",
+      "分裂: インサルティングスライム",
+      "分裂: エンシェントスライム",
+      "分裂: タイムスライム"
     ],
     "TEXT": [
-      "Lose 3 HP. NL Gain 40 Souls.",
-      "Lose 1 HP. NL Add a random Colorless card to your hand.",
-      "Lose 5 HP. NL Gain a random Potion.",
-      "Obtain Guardian *Boss cards.",
-      "Obtain Hexaghost *Boss cards.",
-      "Obtain Slime Boss *Boss cards.",
-      "Obtain Automaton *Boss cards.",
-      "Obtain Champ *Boss cards.",
-      "Obtain Collector *Boss cards.",
-      "Obtain Time Eater *Boss cards.",
-      "Obtain Awakened One *Boss cards.",
-      "Obtain Ancients *Boss cards.",
-      "Split into a slimeboundmod:Bronze_Slime.",
-      "Split into a slimeboundmod:Ghostflame_Slime.",
-      "Split into a slimeboundmod:Torchhead_Slime.",
-      "Split into a slimeboundmod:Cultist_Slime.",
-      "Split into a slimeboundmod:Protector_Slime.",
-      "Split into an slimeboundmod:Insulting_Slime.",
-      "Split into an slimeboundmod:Ancient_Slime.",
-      "Split into a slimeboundmod:Time_Slime.",
-      "Split into a slimeboundmod:Bruiser_Slime.",
-      "Split into a slimeboundmod:Guerilla_Slime.",
-      "Split into a slimeboundmod:Mire_Slime.",
-      "Split into a slimeboundmod:Leeching_Slime.",
-      "Lose 3 HP. NL Gain 50 Souls.",
-      "Lose 1 HP. NL Add a random upgraded Colorless card to your hand.",
-      "Lose 2 HP. NL Gain a random Potion."
+      " 3 HPを失う NL 15ソウルを得る",
+      " 3 HPを失う NL ランダムな無色のカードを入手",
+      " 7 HPを失う NL ランダムなポーションを入手",
+      "ガーディアンの *ボス カードを入手",
+      "ヘクサゴーストの *ボス カードを入手",
+      "スライムボスの *ボス カードを入手",
+      "オートマトンの *ボス カードを入手",
+      "チャンプの *ボス カードを入手",
+      "コレクターの *ボス カードを入手",
+      "タイムイーターの *ボス カードを入手",
+      "目覚めし者の *ボス カードを入手",
+      "エンシェントの *ボス カードを入手",
+      "分裂： slimeboundmod:ブロンズスライム",
+      "分裂： slimeboundmod:ゴーストフレイムスライム",
+      "分裂： slimeboundmod:トーチヘッドスライム",
+      "分裂： slimeboundmod:カルティストスライム",
+      "分裂： slimeboundmod:スパイキースライム",
+      "分裂： slimeboundmod:インサルティングスライム",
+      "分裂： slimeboundmod:エンシェントスライム",
+      "分裂： slimeboundmod:タイムスライム",
+      "分裂： slimeboundmod:ブルーザースライム",
+      "分裂： slimeboundmod:ゲリラスライム",
+      "分裂： slimeboundmod:マイアスライム",
+      "分裂： slimeboundmod:リーチングスライム",
+      "3 HPを失う NL 20ソウルを得る",
+      "3 HPを失う NL ランダムなアップグレードされた無色のカードを入手",
+      "5 HPを失う NL ランダムなポーションを入手"
     ]
   },
   "downfall:lazyStorage": {
@@ -195,25 +207,40 @@
 
     ],
     "TEXT": [
-      "Choose a Boss to Study.",
-      "Choose Advance,Retract or Do Nothing"
+      "研究するボスを選択",
+      "選択 「進む」か「引き返す」か「何もしないか」"
     ]
   },
-  "downfall:Merchant": {
+  "downfall:CharBossMerchant": {
     "NAMES": [
-      "Merchant"
+      "商人"
     ],
     "TEXT": [
     ]
   },
   "downfall:NeowBoss": {
     "NAMES": [
-      "Neow"
+      "ネオー"
     ],
     "TEXT": [
-      "~Arise...~",
-      "~Fight~ ~once~ ~more...~",
-      "~The~ ~cycle~ ~must~ ~end...~"
+      "~目覚めよ...~",
+      "~もう一度戦え...~",
+      "~輪廻を終わらせよう...~"
+    ]
+  },
+  "downfall:NeowBossFinal": {
+    "NAMES": [
+      "ネオー"
+    ],
+    "TEXT": [
+    ]
+  },
+  "downfall:OldNeow": {
+    "NAMES": [
+      "Old Neow"
+    ],
+    "TEXT": [
     ]
   }
+
 }

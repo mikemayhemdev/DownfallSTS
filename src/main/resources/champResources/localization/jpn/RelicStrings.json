@@ -1,0 +1,110 @@
+{
+  "champ:ChampionCrown": {
+    "NAME": "チャンピオンの王冠",
+    "FLAVOR": "お前が勝者だ！",
+    "DESCRIPTIONS": [
+      "戦闘開始時 #b守護 または #r狂化 の #yスタンス に入る。"
+    ]
+  },
+  "champ:BlackKnightHelmet": {
+    "NAME": "黒騎士の兜",
+    "FLAVOR": "かすり傷だ。",
+    "DESCRIPTIONS": [
+      "戦闘中初めて各 #yスタンス に入る時: NL #b守護: 敏捷性 #b2 を得て #y筋力 #b1 を失う。 NL #r狂化: #y筋力 #b2 を得て #y敏捷性 #b1 を失う。"
+    ]
+  },
+  "champ:Barbells": {
+    "NAME": "バーベル",
+    "FLAVOR": "1000回出来るかって？ ぷふっ。 1001回出来るさ。",
+    "DESCRIPTIONS": [
+      "休憩所に入った時、アップグレードされていないカードが #b10 枚以上あればランダムに1枚 #yアップグレード する。"
+    ]
+  },
+  "champ:BerserkersGuideToSlaughter": {
+    "NAME": "バーサーカーの心得",
+    "FLAVOR": "文字が読めない。",
+    "DESCRIPTIONS": [
+      "ターン開始時 #b3 #y気力 を得る。"
+    ]
+  },
+  "champ:ChampionCrownUpgraded": {
+    "NAME": "皇帝の冠",
+    "FLAVOR": "Conglaturation!! あなたは最高の勝者だ。",
+    "DESCRIPTIONS": [
+      "#rチャンピオンの王冠 を置き換える。 NL 戦闘開始時1ターンの間 #ychamp:アルティメット #yスタンス に入る。"
+    ]
+  },
+  "champ:DefensiveTrainingManual": {
+    "NAME": "防御の神髄",
+    "FLAVOR": "プロの一言：当たらないようにしよう。",
+    "DESCRIPTIONS": [
+      "守護のスタンスの #yフィニッシャーボーナス に追加で #b5 #yブロック 。"
+    ]
+  },
+  "champ:DeflectingBracers": {
+    "NAME": "偏向矯正器",
+    "FLAVOR": "ブロッキングが良いと思ったのなら...",
+    "DESCRIPTIONS": [
+      "ターン開始時、余った #yブロック の半分に等しい #ychamp:カウンター を得る。"
+    ]
+  },
+  "champ:DuelingGlove": {
+    "NAME": "決闘用の手袋",
+    "FLAVOR": "10秒数えて...",
+    "DESCRIPTIONS": [
+      "単体に #yアタック する場合、対象が #y弱体 状態でなければ #y弱体 #b1 を与える。"
+    ]
+  },
+  "champ:FightingForDummies": {
+    "NAME": "ドルフィンのスタイルガイド",
+    "FLAVOR": "著者: 著名な探検家でもあり格闘家である Dolphin K. Mist.",
+    "DESCRIPTIONS": [
+      "#yスタンス に入っていない状態でターンを終えた場合、次のターン追加でカードを #b1 枚引く。"
+    ]
+  },
+  "champ:GladiatorsBookOfMartialProwess": {
+    "NAME": "剣闘士マニュアル",
+    "FLAVOR": "何でもやってみろ。何か引っかかるさ。",
+    "DESCRIPTIONS": [
+      "同じターンに #yコンボ と #yフィニッシャー をプレイし、更に #yスタンス に入ったら #y筋力 と #y敏捷性 を #b1 得る。"
+    ]
+  },
+  "champ:PowerArmor": {
+    "NAME": "パワーアーマー",
+    "FLAVOR": "中古で買った。",
+    "DESCRIPTIONS": [
+      "ターン開始時 [E] を得る。 NL #y気力と #ychamp:カウンター の最大値が #b10 になる。"
+    ]
+  },
+  "champ:SignatureFinisher": {
+    "NAME": "フィニッシャーのサイン",
+    "FLAVOR": "さあいよいよ俺のアルティメットムーブの出番だ！",
+    "DESCRIPTIONS": [
+      "入手時 デッキ の #yフィニッシャー を選択する。選ばれた #yフィニッシャー のコストが #b0 になり、 #yスタンス が無くても使用出来るようになり、使用時に #yスタンス を解除しなくなる。",
+      "選択されたカード： ",
+      " コストが #b0 になり、 #yスタンス が無くても使用出来るようになり、使用時に #yスタンス を解除しなくなる"
+    ]
+  },
+  "champ:SpectersHand": {
+    "NAME": "幽霊の手",
+    "FLAVOR": "心に残る勝利もある。",
+    "DESCRIPTIONS": [
+      " #yスタンス に入った時 #yストライク または #y防御 を得る。それらはコストが #b0 で #y廃棄 を持つ。"
+    ]
+  },
+  "champ:LiftRelic": {
+    "NAME": "内なる強さ",
+    "FLAVOR": "心の中にある巨大な剣の事さ。",
+    "DESCRIPTIONS": [
+      "戦闘を #y筋力 #b",
+      " を持って開始する。"
+    ]
+  },
+  "champ:ChampStancesModRelic": {
+    "NAME": "ニューチャレンジャー",
+    "FLAVOR": "王冠を奪うことが出来るのか？",
+    "DESCRIPTIONS": [
+      "戦闘開始時ランダムにチャンプの #yスタンス に入る。"
+    ]
+  }
+}

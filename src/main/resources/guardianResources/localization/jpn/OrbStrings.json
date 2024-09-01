@@ -1,13 +1,19 @@
 {
-  "Guardian:StasisOrb": {
-    "NAME": "Stasis: ",
+  "Guardian:EmptyStasisSlot": {
+    "NAME": "停滞スロット",
     "DESCRIPTION": [
-      " will return to your hand at 0-cost at the start of your next turn.",
-      " will return to your hand at 0-cost in #b",
-      " turns.",
-      " will #yExhaust at the start of your next turn.",
-      " will #yExhaust in #b",
-      " turns."
+      "カードは #y停滞 させるとここに配置される。"
+    ]
+  },
+  "Guardian:StasisOrb": {
+    "NAME": "停滞: ",
+    "DESCRIPTION": [
+      " は次のターン開始時、コスト0で手札に戻る。",
+      " は。 #b",
+      " ターン後、コスト0で手札に戻る",
+      " は次のターン開始時 #y廃棄 される。",
+      " は #b",
+      " ターン後、 #y廃棄 される。"
     ]
   }
 }

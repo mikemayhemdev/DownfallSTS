@@ -1,29 +1,41 @@
 {
   "Guardian:EnhanceBonfireOptions": {
     "TEXT": [
-      "Enhance",
-      "(Free Action) Place a Gem into an open Socket.",
-      "Requires a Gem and an open Socket.",
-      "Select a Gem.",
-      "Select a Card to receive the Gem."
+      "エンハンス",
+      "(行動消費無し) 空 ソケット に ジェム を入れる。",
+      "必要： ジェム と空 ソケット",
+      "ジェム を1枚選択",
+      "ジェム を挿入するカードを1枚選択"
     ]
   },
   "Guardian:UIOptions": {
     "TEXT": [
-      "Choose a Card to place into Stasis.",
-      "Pick a Gem.",
-      "Add a Common Gem to your deck",
-      "place into Stasis.",
-      "~ERROR:~ Cannot #rAttack in Construction Mode.",
-      "~ERROR:~ #rStasis in progress.",
-      "Add a Gem to your deck"
+      "カードを1枚選び、 停滞 状態にする。",
+      "ジェムを1枚選択。",
+      "デッキにコモン ジェム を1枚加える。",
+      "停滞スロット に置く。",
+      "~ERROR:~ コンストラクションモードでは #rアタック を使用できません。",
+      "~ERROR:~ #r停滞 を実行中です。",
+      "デッキにジェムを1枚追加する。",
+      ""
     ]
   },
   "Guardian:FindGemsOption": {
     "TEXT": [
-      "Mine",
-      "Gain 2 random Gems.",
-      "Pick broken."
+      "掘削",
+      "2 枚のランダムなジェムを得る。",
+      "つるはしが壊れた。"
+    ]
+  },
+  "Guardian:BraceMod": {
+    "TEXT": [
+      " NL guardianmod:制動 2"
+    ]
+  },
+  "Guardian:gemDescriptor": {
+    "TEXT": [
+      "ジェム",
+      "guardianmod:ジェム NL "
     ]
   }
 }

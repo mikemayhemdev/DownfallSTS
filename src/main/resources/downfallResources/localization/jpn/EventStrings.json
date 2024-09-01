@@ -1,556 +1,576 @@
 {
   "downfall:SolShrine": {
-    "NAME": "Soul Shrine",
+    "NAME": "魂寺院",
     "DESCRIPTIONS": [
-      "Before you lies an elaborate shrine to an ancient spirit of evil. ",
-      "As your hand touches the shrine, #ysouls spill forth from the shrine, ~showering~ ~you~ ~in~ ~power.~ ",
-      "Each time you strike the shrine, #ysouls emit in bursts, again and again! NL NL As you consume the energy, you hesitate, realizing this shrine could have been a never-ending supply of power. You wonder if you made the #rright #rdecision.",
-      "You ignore the shrine."
+      "古代の悪霊を祀る豪華な聖堂がある。",
+      "あなたの手が触れると、聖堂から #yソウル が ~シャワーのようにあなたに降り注いだ！~ ",
+      "聖堂を叩くたび、 #yソウル が 何度も何度も飛び出してくる。 NL NL エネルギーを消費し続けながら、この聖堂が永続する力の供給減である事にあなたは気付き、躊躇する。果たしてこれは 「 #r正しい判断 」だったのだろうか...",
+      "あなたは聖堂を無視した。"
     ]
   },
   "downfall:GremlinMatchGame": {
-    "NAME": "Match and Keep!",
+    "NAME": "神経衰弱！",
     "DESCRIPTIONS": [
-      "\" ... #bT-twelve cards! Match them to keep them! #bF-five tries... no do-overs. NL Are you ready? Let's start!\"",
-      "You complete the gremlin's game and look up. NL He disappeared?",
-      "A gremlin is madly shuffling cards on a table. This monster seems to be a harmless one. As you approach, he nervously breaks his composure for a moment, but finds the courage to address you.",
-      "Immediately, the gremlin shouts! NL NL \"NOB!!!\" NL NL A lumbering gremlin emerges from the shadows, towering over the gremlin, the table, and you. NL \"Are you sure you don't want to play the game?\", the gremlin asks."
+      "「 ...カードが #b12 枚！同じカードを揃えたら貰えるぞ！チャンスは #b5 回、やり直しはなしだ。 NL 準備はいいか？じゃあ始めよう！」",
+      "グレムリンのゲームを終えてあなたは頭を上げた。 NL 彼は消えたのか？",
+      "グレムリンがテーブルでカードを激しくシャッフルしている。危害を加えるつもりなさそうだ。あなたは好奇心から彼に近づくと、彼は一瞬緊張し焦ったようだが、勇気を出してあなたに話しかけてきた。",
+      "その途端、グレムリンが叫んだ。 NL NL 「ボスー！！！」 NL NL すると物陰から、巨大なグレムリンが現れてグレムリンとテーブル、そしてあなたの前に立ちはだかった。 NL 巨大なグレムリンが尋ねる。 「本当にゲームをしたくないのか？」 "
     ],
     "OPTIONS": [
-      "[Continue]",
-      "[Leave]",
-      "[Play]",
-      "Remaining Attempts: #y",
-      "[Intimidate] Steal 6 cards.",
-      "[Punch] #rFight. #gGain #g6 #gCards."
+      "[続行]",
+      "[立ち去る]",
+      "[プレイ]",
+      "残り回数: #y",
+      "[威圧] 6 枚のカードを奪う",
+      "[殴る] #r戦闘。 #g6枚のカードを得る。"
     ]
   },
   "downfall:WomanInBlue": {
-    "NAME": "The Woman in Blue",
+    "NAME": "青い服の女",
     "DESCRIPTIONS": [
-      "Tucked in the darkness, you spot a small shop. Within, you see a pale woman in sharp clothes managing an inventory of potions, stacked along a wall. She is startled by your threatening appearance. NL \"Leave me and my wares alone, cretin!\" she screams.",
-      "You exit the shop cautiously, not wanting to spur the woman into a fight.",
-      "#r@WHAM@ NL Her gloved fist collides with your face, nearly knocking you off your feet. NL \"Get out before I litter the floor with your guts.\" You take her word and exit with your guts still safely in your body."
+      "暗闇の中に小さな店を見つけた。その中にはシャープな服を着た青白い女性が居て、壁際に積まれたポーションの在庫を管理している。彼女はあなたが現れた事に驚き叫んだ。 NL 「出て行きなさい！私や店の物に手を出すな！」",
+      "あなたは慎重に店を出た。女に喧嘩を売るのはやめておいた方が良い。",
+      "#r@ガツン@ NL 手袋をはめた女の拳があなたの顔を殴る。もう少しで倒れこんでしまう所だった。 NL 「臓物を床に撒き散らしたくないなら出て行きな」 あなたは彼女の言葉通り、無傷の内臓とともに店を出た。"
     ],
     "OPTIONS": [
-      "[Leave]",
-      "[Leave] #rTake #r",
-      " #rDamage.",
-      "[Punch] #rFight. #gGain #ga #gPotion #gRelic #gand #g3 #gPotions."
+      "[立ち去る]",
+      "[立ち去る] #r",
+      " #rダメージを受ける。",
+      "[殴る] #r戦闘。 #g入手：ポーションレリックと3つのポーション。"
     ]
   },
   "downfall:GremlinWheelGame": {
-    "NAME": "Wheel of Change",
+    "NAME": "変化のルーレット",
     "DESCRIPTIONS": [
-      "You come upon a dapper looking, cheery gremlin. Despite your menacing appearance, he seems to be unfazed, though you do catch him hesitantly glancing backstage. NL \"It's time to spin the wheel! Are you ready?\"",
-      "\"You win some #ySOULS! NL YAY!!!!\"",
-      "\"Ah, a #ggift! NL Enjoy!\"",
-      "\"Oooh, a free #gHeal for you!\"",
-      "\"Looks like you won a #pCurse! NL That's not good. NL Oh well! Better luck next time!\"",
-      "\"Ohh, the power of #r~darkness...~ NL Choose a card to remove from your deck!\"",
-      "\"Uh oh! NL You lose!\" NL You spot him readying a shiv...",
-      "You slash at the crazy gremlin but he's simply too quick! NL He gets you a few times with a crude shiv. NL \"The price has been paid!!\" NL and with that, both the gremlin and its wheel disappear in a puff of smoke.",
-      "The gremlin nervously looks over his shoulder, but quickly relaxes. You eye him gesturing with his hand, but disregard it. NL \"Now, now, friend, the wheel has fairly decided your reward! No one gets a second spin.\"",
-      "Immediately, the gremlin shouts! NL NL \"NOB!!!\" NL NL A lumbering gremlin emerges from the shadows, towering over the gremlin, the table, and you. NL \"My friend here suggests you take what the wheel has offered.\".",
-      "Settling in by the fire, you decide to see if you have better luck with the Wheel than your last attempt.",
-      "The Wheel has chosen a prize. NL NL You need only to reach out and take it.",
-      "Success! You've found what you are looking for, and just in time! NL NL #r@CRACK!@ NL NL You may have been a little rough with that last spin... the Wheel has been broken.",
-      "You decide to try your luck another day. NL NL For now, you must rest and regain your composure."
+      "こぎれいな身なりをした、陽気なグレムリンに出会った。彼はあなたの威嚇にも動じず、平気な顔をしている。 NL 「さあルーレットの時間だよ！準備は @いいかな？@ もちろんいいよね！」",
+      "「 #yソウル が当たったよ！ NL イェイ！！！！」",
+      "「おお、 #gギフト だ！ NL よかったね！」",
+      "「おおぉ、 #g回復 が当たったよ！」",
+      "「どうやら #p呪い を当ててしまったようだね！ NL よくないな。 NL 仕方ない！次回の幸運を祈るよ！」",
+      "「おお、 #r~闇...~ の力だ NL 削除するカードを選んでね！」",
+      "「おおっと！ NL ハズレだ！」 NL あなたはグレムリンが隠しナイフを取り出すのに気づいた...",
+      "あなたは木のふれたグレムリンに切りかかったが、軽々とかわされてしまった！ NL グレムリンは鋭いナイフであなたを数回切りつけた。 NL 「料金はこれで支払い済みだよ！」 NL するとグレムリンとルーレットは煙とともに姿を消した。",
+      "グレムリンは緊張しつつ肩越しに見ていたが、すぐにリラックスした。あなたは彼が手で身振りをするのを見たが、無視した。 NL 「さて、さて、友よ。ルーレットは公平に君の賞品を決定したよ！誰も2回目を回そうなんて思わないし、回す機会を得る事も無いだろう！」",
+      "その途端、グレムリンが叫んだ！ NL NL 「ボスー！！！」 NL NL すると物陰から、巨大なグレムリンが現れてグレムリンとテーブル、そしてあなたの前に立ちはだかった。 NL 「私の友人は、このルーレットが決めた賞品を受け取ることを勧めているぞ」",
+      "焚火を囲み、 \"ルーレット\" 運が前回よりもマシになってるかどうか試してみる事にした。",
+      "ホイールは賞品を決定した。 NL NL あなたはただ手を伸ばしてそれを取るだけでいいのだ。",
+      "成功だ！ あなたが手に入れたかったものが見つかった！いいタイミングだ。 NL NL #r@ガシャン！@ NL NL ルーレットは音を立てて壊れてしまった。最後のスピンは少し乱暴だったかもしれない...",
+      "また別の日に試すことにした。 NL NL 今は休んで落ち着こう。",
+      "彼はあなたに向かって突進してきたが、避ける準備は出来ていた。 NL 彼がナイフで攻撃してくる前に彼を切り伏せる。 NL あなたは賞品を取ろうとしたが、残念ながらそれを奪う前にルーレットが消えてしまった。"
     ],
     "OPTIONS": [
-      "[Play]",
-      "[Prize!] YAY!!!!",
-      "[Prize!] #gObtain #ga #gRelic.",
-      "[Prize!] #gHeal #gto #gfull #ghealth.",
-      "[Prize?] #rCurse #r- #rDecay.",
-      "[Prize!] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
-      "[Prize?] #rLose #r",
-      " #rHP.",
-      "[Leave]",
-      "Select a Card to Remove.",
-      "[Again!]",
-      "[AGAIN!!]",
-      "[Punch] #rFight. #gGain #gGremlin #gWheel.",
-      "[Pass] Try again later."
+      "[プレイ]",
+      "[賞品！] イェイ！！！！",
+      "[商品！] #gレリックを受け取る。",
+      "[商品！] #g体力が最大まで回復。",
+      "[商品?] #r呪い #r- #r腐敗。",
+      "[商品！] #gデッキからカードを削除。",
+      "[商品?] #rHP- #r",
+      " ",
+      "[立ち去る]",
+      "デッキから削除するカードを選択",
+      "[もう1回！]",
+      "[もう1回！！]",
+      "[殴る] #r戦闘。 #gグレムリンホイールを得る。",
+      "[パス] 次の機会に",
+      "[賞品！] #g先制攻撃！",
+      "[Loot]"
     ]
   },
   "downfall:GremlinWheelGameRest": {
-    "NAME": "Wheel of Change",
+    "NAME": "変化のルーレット",
     "DESCRIPTIONS": [
     ],
     "OPTIONS": [
     ]
   },
   "downfall:LivingWall": {
-    "NAME": "Living Wall",
+    "NAME": "生きている壁",
     "OPTIONS": [
-      "[Punch] #rFight. #gUse #gall #g3 #gHeads."
+      "[殴る] #r戦闘。 #g全ての効果を使う。"
     ]
   },
   "downfall:Augmenter": {
-    "NAME": "Augmenter",
+    "NAME": "増強因子",
     "DESCRIPTIONS": [
-      "A man with an eyepatch and a devilish grin strides up to you. NL \"Oh my, what a terrifying subject! You may not care for science, but I promise you - I can make you stronger than any harvesting of souls. You're gonna need it if you're going after one of those \"heroes\".\" NL NL ~\"Whad'ya~ ~say?\"~"
+      "眼帯をした悪魔のような笑みを浮かべた男が闊歩してくる。 NL 「おお、なんて恐ろしい奴だ。 君は科学に興味はないかもしれないが、約束しよう。私は君をどんなソウルの力よりも強くする事が出来る。 「ヒーロー」の一人を追うなら、それが必要だ」 NL NL ~「どうかな?」~"
     ],
     "OPTIONS": [
-      "[Punch] #rFight. #gTake #gEverything."
+      "[殴る] #r戦闘。 #g全部奪う。"
     ]
   },
   "downfall:BonfireSpirits": {
-    "NAME": "Bonfire Elemental",
+    "NAME": "たき火の精霊",
     "DESCRIPTIONS": [
-      "The spirits hungrily consume your offering! They gorge themselves on souls, burning brighter as the fire @doubles@ in strength. NL The spirits dance around you excitedly before ~merging~ ~into~ ~your~ ~form,~ filling you with warmth and strength. NL Your Max HP increases by #b10 and you are #ghealed to full HP."
+      "精霊は貪欲にあなたの供物を喰らう！彼らが魂を貪ると、火の大きさが @2倍@ 程になり、より明るく燃え上がった。 NL 精霊たちは興奮気味にあなたの周りを踊り ~あなたに溶け込む~ と、温もりと強さで満たした。 NL 最大HPが増加し、体力が全回復した。",
+      "あなたは手を伸ばし、それを #p掴んだ... NL 精霊達は @悲鳴を上げ@ あなたの手のひらから出現した ~渦に巻かれながらも~ 、逃げようとしている。 NL まもなく、彼らの霊魂はあなたのコレクションの一つに過ぎなくなるのだった。"
+
     ],
     "OPTIONS": [
-      "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP.",
-      "[Locked] Requires 150 Souls."
+      "[供物] #r失う：150ソウル。 #g最大HP+10&完全回復 ",
+      "[Locked] 必要： 150 ソウル。",
+      "[供物] #r失う：150ソウル。 #gグレムリン達の最大HP+2&1体復活&完全回復",
+      "[入手]"
     ]
   },
   "downfall:FaceTrader": {
-    "NAME": "Face Trader",
+    "NAME": "フェイストレーダー",
     "DESCRIPTIONS": [
-      " NL NL He doesn't look like he would put up much of a fight, but he has survived in this place. Perhaps these masks hold some power..."
+      " NL NL 彼は一見抵抗出来そうな力があるようには見えないが、この場所で生き延びてきている。この仮面には何か力があるのかも知れない..."
     ],
     "OPTIONS": [
-      "[Punch] #rFight. #g100%: #gAll #gFace."
+      "[殴る] #r戦闘。 #g100%: #g全ての顔。"
     ]
   },
   "downfall:CursedFountain": {
-    "NAME": "The Cursed Fountain",
+    "NAME": "呪われた泉",
     "DESCRIPTIONS": [
-      "You come across a tinged #p~purple~ #p~liquid~ flowing endlessly from a fountain on a nearby wall. It is one you recognize as deadly to most creatures, but quite beneficial to those subjected to a curse.",
-      "As you drink the #p~liquid,~ you feel a #pdark #pgrasp reach into your mind. It feels luxurious and refreshing.",
-      "Sensing that this #p~liquid~ may be useful, you decide to capture some in a jar to use later. Creatures not attuned to the #pdark #pwater will surely suffer when doused in it.",
-      "The fountain's #p~liquid~ is roiling in the souls of the lost. It seems a waste to not make use of them. You channel the souls into your form, ripping them from the #pcursed #pfountain's magic.",
-      "Leaving the fountain behind, you continue on your way."
+      "あなたは近くの壁にある噴水から、 #p~紫色の液体~ がとめどなく流れているのに出くわした。それは殆どの生物には致命的な物だが、呪いをかけられた者にとっては非常に有益な物であることが分かる。",
+      "泉の #p~液体~ は、迷える者たちの魂を揺り動かす。それを利用しないのは勿体無いだろう。 #p呪われた泉 の魔力から魂を引き離し、己の物にするのだ。",
+      "この #p~液体~ は役に立つかもしれない。あなたは瓶に水を汲んだ。 #p暗黒の水 に同調しない生物は、この水を浴びれば必ず苦しむ事になるだろう",
+      "その #p~液体~ を飲むと、あなたの心に #p暗黒 が届くのを感じた。",
+      "あなたは泉を後にし、元の道へと戻った"
     ],
     "OPTIONS": [
-      "[Bottle] #gGain #gCursed #gLiquid #gPotion.",
-      "[Consume] #gGain #g75 #ySouls.",
-      "[Drink] #gHeal #gto #gfull #gHP.",
-      "[Locked] Requires a curse.",
-      "[Locked] Requires 2 curses.",
-      "[Locked] Requires 3 curses.",
-      "[Locked] Already used.",
-      "[Leave]"
+      "[瓶に汲む] #g入手：呪いの泉のしずく",
+      "[消費する] #g入手：75ソウル。",
+      "[飲む] #g体力が全回復する。",
+      "[Locked] 必要 1 呪い",
+      "[Locked] 必要 2 呪い",
+      "[Locked] 必要 3 呪い",
+      "[Locked] 使用済み。",
+      "[立ち去る]"
     ]
   },
   "downfall:WeMeetAgain": {
-    "NAME": "We Meet Again!",
+    "NAME": "また会ったな！",
     "DESCRIPTIONS": [
-      "\"BOSS!\" A cheery disheveled fellow approaches you gleefully. You know this man well. NL \"It's me, #yRanwid! You wouldn't believe what I've swindled from the cursed heroes! Do you have any more junk I can give them?\" NL You appreciate his friendliness and consider your options. Surely you have something Ranwid can use in his next \"deal\"...",
-      "\"Oh, this is perfect! It's complete junk! Here, take these elixirs the last few fools gave me!\" NL Ranwid fumbles around his pouches, producing three bottles for you, though nearly dropping them in the process.",
-      "\"Magnificent! This will be quite handy for my next deal. Oh, and I've been harvesting the corpses, as you requested!\" NL Ranwid hands you a soul stone, then scurries away, looking for a new face to sell your useless trinket to.",
-      "\"Exemplary! With just a little work, I can make this look like something truly special.\" NL Ranwid departs, examining the relic carefully, no doubt pondering how he will exaggerate its usefulness to the next adventurer he meets.",
-      "\"Nothing today boss? Okay!\" NL He scampers away."
+      "「ボス！」 陽気でだらしない男が嬉しそうに近づいてくる。あなたはこの男をよく知っている。 NL 「俺だ、ランウィッドだ！あの呪われたヒーロー共から何を巻き上げたかお前は信じないだろうな！あいつらにもっとガラクタをくれてやらないか？」 NL あなたは彼のフレンドリーさに感心し、彼にあげる物を検討する。きっとランウィッドが次の \"取引\" に使える物があるはず...",
+      "「ああ、これは良いぞ！完全なガラクタだ！ほら、この前あのバカがくれたエリクサーをやるよ！」 NL ランウィッドはポーチの中を漁り、落としそうになりつつも3本の瓶をあなたに差し出した。",
+      "「こりゃあいい！ 次の取引の時に使えるぜ！おっと、そうだ頼まれた物を死体から取ってきたよ！」 NL ランウィッドはあなたに ソウルストーン を渡すと、その役に立たない装身具を売るための新たなカモを探して、そそくさと立ち去った。",
+      "「これはピッタリだな！ ちょっと手を加えるだけで、本当に特別な物に見せかけることが出来そうだ！」 NL ランウィッドはレリックをじっくりと観察しながら、次に会う冒険者にどのように誇張して見せるか思案しているようだ。",
+      "「今日は何もないのかいボス？オーケー！」 NL 彼は足早に立ち去った。"
     ],
     "OPTIONS": [
-      "[Lose ",
+      "[失う ",
       "] ",
-      "#gGain #g3 #gPotions.",
-      "#gGain ",
-      " #ySouls.",
-      "#gGain #ga #yRare #gCard.",
-      "[Leave]",
-      "[Locked] No Relic to give."
+      "#g入手：3つのポーション。",
+      "#g入手： ",
+      " #yソウル。",
+      "#gランダムな #yレア #gカードを得る。",
+      "[立ち去る]",
+      "[Locked] あげられるレリック",
+      "#g入手：2つのポーション。"
     ]
   },
   "downfall:Designer": {
-    "NAME": "Designer In-Spire",
+    "NAME": "デザイナー・イン・スパイア",
     "DESCRIPTIONS": [
-      "You discover a #g~colorful~ shop with the banner \"IN-SPIRE\". A #rBandit shouts from just inside the entryway, threatening whoever is inside. NL NL @\"Give@ @me@ @your@ @money!\"@ NL NL The Bandit doesn't notice you, distracted by his attempted looting.",
-      "It takes little effort to deal with the thief, but the fight does not go without some injury on your part. A man with ridiculous clothing appears at the shop entrance. NL \"Thank you, kind overlord!\", the man says, beckoning you inside.",
-      "You see no reason to get involved with this. There is important killing to be done.",
-      "\"Oh my, you are just dreadful!! This will not do, no no. What is this style? You are to be @menacing!@ A feared and intimidating #roverlord of the Spire! You simply ~must~ let me give you a proper makeover.\" NL NL You aren't sure whether to take this man at his word and accept his services, or if you should be insulted at his disgust at your style.",
-      "\"Okay, bye bye now! Tell your #roverlord friends!\" NL NL Though you were apprehensive of this man's ability, you definitely feel more intimidating.",
-      "You punch him. NL \"My @FACE!!@ Now I'll have to-\" NL NL He fainted. Perhaps next time he will give pause before insulting a creature of your status."
+      " 「IN-SPIRE」という #g~カラフル~ なバナーが掲げられた店を発見する。入口のすぐそばで、 #r盗賊 が何か叫んで中にいる人を脅していた。 NL NL @「金を出せ！」@ NL NL 盗賊は略奪に夢中であなたの事に気付いていない。",
+      "盗賊など物の数ではない。しかし、この戦いで怪我をしないとも限らない。店の入り口にとんでもない服装の男が現れる。 NL 「サンクス！優しいオーバーロード様！」男はそう言うとあなたを店の中に招き入れた。",
+      "あなたはこれに関与する事はないと思った。それよりも重要な任務があるのだ。",
+      "「なーんてこった！！ これじゃダメダメだ。何なんだその恰好は？ もっと @威圧するんだ！@ お前はスパイアの #rオーバーロード なんだ！ もっとちゃんとした格好を ~してもらわないと~ ！」 NL NL あなたはこの男の言葉を信じて彼のサービスを受けるべきか。それとも彼の侮辱に腹を立てるべきか迷っていた。",
+      "「オーケイ。今の君とはサヨーナラ！ 君の #rオーバーロード 友達に教えてあげよう！」 NL NL この男の腕には不安を感じていたが、確かに威圧感はあった。",
+      "あなたは彼を殴った。 NL 「俺の @顔がぁ！！@ お前よくも―」 NL NL 彼は失神した。今後彼はあなたのような存在を侮辱する前に一考する事だろう。",
+      "盗賊達を脇へと追いやる。しかし盗賊になど興味はない。 ~本当の狙い~ はその哀れなデザイナーだ。彼は怯え、あなたから逃げようとしている。あなたはそっと #gランタン を差し伸べる。やがて彼の魂があなたのコレクションへと加わった..."
+
     ],
     "OPTIONS": [
-      "[Adjustments] ",
-      "[Clean Up] ",
-      "[Full Service] ",
-      "[Ignore] Leave.",
-      "[Punch] Leave.",
-      "[Enter Shop]",
-      " #gGain #ga #gReward."
+      "[調整] ",
+      "[片付ける] ",
+      "[サービス] ",
+      "[無視] 立ち去る。",
+      "[殴る] 立ち去る。",
+      "[店に入る]",
+      " #g入手：報酬。"
     ]
   },
   "downfall:DeadGuy": {
-    "NAME": "Fallen Adventurer",
+    "NAME": "堕ちた冒険者",
     "DESCRIPTIONS": [
-      "While channeling the ritual you are caught off guard!",
-      "You exit without a sound.",
-      "You come across a #rdead #radventurer on the floor. NL His spirit still lingers in the area. Also, ",
-      "the armor and face appear to be #r@scoured@ #r@by@ #r@flames.@ ",
-      "it looks as though he's been #r@gouged@ #r@and@ #r@trampled@ by a horned beast. ",
-      "he looks to have been #r@eviscerated@ #r@and@ #r@chopped@ by giant claws. ",
-      "NL A soul harvesting ritual could yield results here, but whichever creature slew this man may return soon.",
-      "The ritual yields souls from the corpse! NL Continue channeling?",
-      "The spell is unable to pull the fallen man's spirit... NL Continue channeling?",
-      "Your magic causes the body to twitch and shake, and from its pockets falls a #yrelic! NL Continue channeling?",
-      "The ritual has been completed!"
+      "あなたは儀式に集中している隙を突かれた！",
+      "出来るだけ物音を立てず退散した。",
+      "床に横たわる #r冒険者の屍 がある。 NL 彼の魂はまだこの場所に残っているようだ。また、 ",
+      "鎧と顔に #r@炎によって焼かれた@ 痕跡がある。",
+      "どうやら角のある野獣に #r@抉られて弄ばれた@ ようだ。 ",
+      "彼は大きな爪で #r@内臓を抜かれて切り刻まれた@ ようだ。 ",
+      " NL 魂を収穫する儀式を行えば結果が得られるが、この男を殺した生物が戻ってくるかもしれない。",
+      "儀式により死体から魂を奪うことが出来た！ NL 儀式を続けるか？",
+      "男の魂を引き剥がすことが出来ない... NL 儀式を続けるか？",
+      "あなたの魔法は死体を痙攣させ、そのポケットから #yレリック を落下させた！ NL 儀式を続けるか？",
+      "儀式は完了した！"
     ],
     "OPTIONS": [
-      "[Soul Harvest] #gFind #gLoot. #r",
-      "[Leave]",
-      "[Fight]",
-      "[Continue] #gFind #gLoot. #r",
-      "%: #rmonster #rreturns."
+      "[魂を収穫] #g戦利品を探す。 #r",
+      "[立ち去る]",
+      "[戦闘]",
+      "[続行] #g戦利品を探す。 #r",
+      "%: #rモンスターが戻ってくる。"
     ]
   },
   "downfall:ShiningLight": {
-    "NAME": "Shining Light",
+    "NAME": "輝く光",
     "DESCRIPTIONS": [
-      "You find a shimmering #ymass #yof #ylight encompassing the center of the room. NL NL Its ~warm~ ~glow~ and ~enchanting~ ~patterns~ cause your stomach to turn, but you know this light carries an immense power.",
-      "As you walk through the light, you grimace as it is absorbed into you. NL It's #r@scorching@ #r@hot@ ! You feel no pain, and though you are newly #binvigorated, the haunting memory of this disgusting warmth will stay with you for a long time to come.",
-      "You walk around it, wondering what could have been."
+      "光り輝く #y光の筋 が部屋の中心を照らしている。 NL NL あなたは その ~暖かな光と魅力的な形状~ に胃を痛めながらも、この光には計り知れない力が宿っている事を知った。",
+      "光の中を歩くと、その光が自分に吸収される。あなたは苦笑いを浮かべる。 NL #r@燃えるような暑さだ@ ！ しかし、痛みはすぐに消え去った。 NL どうにも嫌な記憶が残ったが、同時に新たな #b活力 がみなぎってくるのを感じた。",
+      "あなたは周りを歩き、何が起こるのだろうと考えた。"
     ],
     "OPTIONS": [
-      "[Enter] #gUpgrade #g3 #grandom #gcards. #rBecome #rCursed #r- #rRegret.",
-      "[Leave]",
-      "[Locked] Requires: Upgradeable Cards"
+      "[入る] #gランダムなカード3枚をアップグレード。 #r呪い #r- #r不調。",
+      "[立ち去る]",
+      "[Locked] 必要: アップグレードされていないカード"
     ]
   },
   "downfall:WorldOfGoop": {
-    "NAME": "World of Goop",
+    "NAME": "一面の堆積物",
     "DESCRIPTIONS": [
-      "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL You can feel goop in your ears, goop in your nose, goop everywhere. NL NL Climbing out, you notice that stuck to your body is a unique-looking #yyellow Slime creature. It appears to have been collecting #ySouls from unfortunate adventurers who fell into the puddle. How convenient.",
-      "Not wanting to make this unfortunate puddle incident go without reward, you strike at the #yyellow slime creature. NL NL It @bursts@ instantly! NL NL You didn't think it possible, but you find yourself even more covered in goop than you were before.",
-      "Brushing off the #yyellow slime, you continue on your journey, though still partially covered in goop. It certainly adds to your menacing aesthetic."
+      "あなたは汚水の水たまりに落ちた。 NL それは #g@スライム@ の #g@堆積物@ で出来ていた！ NL 耳や鼻、堆積物は体中にまとわりついてくる。 NL NL 水から抜け出すと、 #y黄色いスライム というユニークな生き物が身体に張り付いているのに気付く。どうやら、水に落ちた冒険者から #yソウル を集めているようだ。なんて便利なんだ...。",
+      "この不愉快な水たまりから、せめてもの収穫を得るため #y黄色いスライム に襲い掛かった NL NL 瞬間、スライムは @破裂@ した！ NL NL まさかとは思ったが、気が付いた時にはもう、全身が #r粘液塗れ になってしまっていた・・・。",
+      "黄色いスライムを払い落とし、あなたはまだ部分的に粘液に覆われながらも旅を続ける。それは確かにあなたの威圧感を彩るに悪くはなかった。"
     ],
     "OPTIONS": [
-      "[Full Harvest] #gGain #g",
-      "[Drain] #gGain #g",
-      "[Sap] #gGain #g",
-      " #gSouls. #rBecome #rCursed #rThrice #r- #rIcky.",
-      " #gSouls. #rBecome #rCursed #rTwice #r- #rIcky.",
-      " #gSouls. #rBecome #rCursed #r- #rIcky.",
-      "[Leave]"
+      "[全て収穫する] #g入手： #g",
+      "[吸い取る] #g入手： #g",
+      "[奪う] #g入手： #g",
+      " #gソウル #r呪い #r3 #r- #r粘液塗れ",
+      " #gソウル #r呪い #r2 #r- #r粘液塗れ",
+      " #gソウル #r呪い #r- #r粘液塗れ",
+      "[立ち去る]"
     ]
   },
   "downfall:Serpent": {
-    "NAME": "The Ssssserpent",
+    "NAME": "サ・サ・サ・サ・サーペント",
     "DESCRIPTIONS": [
-      "You walk into a room to find a large hole in the ground. As you approach the hole, an enormous serpent creature appears from within. NL NL ~\"Ho~ ~hooo!~ ~Hello~ ~hello!~ ~what~ ~have~ ~we~ ~got~ ~here?~ To you, my overlord, I ask a simple question. NL The most fulfilling of lives is that in which you can #r~punch~ #r~anything!~ NL Do you agree?\"",
-      "~\"Hssssssssssss..~ ~..ssSSs.....~ ~ss...~ ~sssss....\"~",
-      "The serpent stares at you with a look of extreme disappointment.",
-      " NL NL The serpent rears its head and cries an awful scream. As its body goes limp and falls into the pit, the life force of the creature becomes readily available for harvesting. NL NL It is awe-inspiring, but you can't help but wonder if the serpent was speaking metaphorically. Perhaps it intended to aid and encourage you to do violence on others, but not itself..."
+      "入室すると、地面に大きな穴がある。穴に近づくと、蛇に似た巨大な生き物が中から現れた。 NL NL 「 ~ホホーーー！！~ ~こんにちはこんにちは！~ ~此処にいるのはどこの誰かな？?~ こんにちは我がオーバーロードよ！簡単な質問をしますよ。 NL 人生で最高の充足は #r~どんな物でも殴れること！~ NL そう思いますか？」",
+      "~「ハスススススス~ ~..ススススス.....~ ~スス...~ ~スススス....」~",
+      "蛇はとてもがっかりした様子であなたを見つめた。",
+      " NL NL 大蛇は頭をもたげ、恐ろしいほどの悲鳴を上げる。その体がぐったりして穴に落ちると、生き物の生命力が容易に収穫できるようになっていた。 NL NL 畏敬の念を抱かせるが、蛇は比喩的に言っているのだろうかと思わざるを得ない。おそらく、他者への暴力を援助し、奨励することを意図しているのだろうが、自分自身はそうではないのだろう....",
+      "あなたが手を伸ばすと、大蛇は悲鳴を上げながら @後ずさる@ 。 ~「ハスススス...簒奪者!」~ NL NL ~「あなたの欲望は底が知れません！お願いでえぇぇぇす！見逃して下さあぁぁい...」~ NL あなたは彼の言葉など気にしない。彼の魂はあなたの物なのだ。"
+
     ],
     "OPTIONS": [
-      "[Agree] [Punch] #gGain #g",
-      " #gSouls. #rBecome #rCursed #r- #rDoubt.",
-      "[Disagree]",
-      "[Leave]"
+      "[同意] [殴る] #g入手：",
+      " #gソウル。 #r呪い #r- #r疑念",
+      "[同意しない]",
+      "[立ち去る]"
     ]
   },
   "downfall:WingStatue": {
-    "NAME": "Wing Statue",
+    "NAME": "黄金の翼",
     "DESCRIPTIONS": [
-      "Among the stone and boulders, you notice an intricate large blue statue resembling a wing. NL You notice #yglittering #ycoins spilling from its cracks, but this has no value to you. The statue itself, however...",
-      "Knowing that you may encounter cultists of the Awakened One, you take the broken statue with you. It may prove useful to turn the cult's members to your cause.",
-      "With all your might, you hack away at the statue. NL It soon @crumbles,@ splintering into a sharp and deadly fragment. You grab the shard and continue onwards.",
-      "You walk past and continue onward.",
-      "CA...Caw?! Gift for BIRD GOD?",
-      "CA-CAAAW!!",
-      "An exchange? A fair offer...",
-      "The cult will be pleased."
+      "石や石球の間に、精巧に作られた大きな青い翼のような像があった。 NL ひび割れの間から #yキラキラしたコイン があふれ出しているのに気付いた。が、それはあなたにとって何の価値もない。しかし、この像は...",
+      "目覚めし者のカルト集団に遭遇する可能性がある事を知り、壊れた像を持ち帰る。教団員を味方につけるのに役に立つかもしれない。",
+      "渾身の力を込めて、あなたは像を殴りつけた。 NL それはすぐに @砕け散り@ 鋭利な破片となる。あなたはその破片を手にとって先に進んだ。",
+      "通り過ぎ、先へ進む。",
+      "カ...カァ？！ 神への供物？",
+      "カ-カアア！！",
+      "交換？公平な取引だ...",
+      "教団は喜ぶだろう。"
     ],
     "OPTIONS": [
-      "[Destroy] #rLose #r",
-      " #rHP. #gGain #gSharpened #gFragment.",
-      "[Collect] #gGain #gBroken #gWing #gStatue.",
-      "[Leave]"
+      "[破壊] #r最大HP- #r",
+      " 。 #g入手： #g鋭い破片",
+      "[収集] #r失う #r",
+      "[立ち去る]",
+      " #rHP- #g入手 #g壊れた黄金の翼"
     ]
   },
   "downfall:GoldenIdol": {
-    "NAME": "Golden Idol",
+    "NAME": "黄金の偶像",
     "DESCRIPTIONS": [
-      "You come across an inconspicuous pedestal with a #yshining #yidol sitting peacefully atop. It looks incredibly valuable. NL NL Wandering adventurers are certain to be attracted to this object. It may be worthwhile to set up a trap.",
-      "You come across an inconspicuous pedestal with a #yshining #yidol sitting peacefully atop. It looks incredibly valuable. NL NL The body of an adventurer lays a short distance down the hall, clearly crushed by a massive object. Their soul still lingers in the area.",
-      "Using the Idol's weight as a trigger, you rig up a simple trap to cause a nearby giant boulder to collapse into the room should anyone try to claim the #yshining artifact. NL Satisfied with the construction of your trap, you decide to move on.",
-      "You channel the adventurer's spirit into your body, absorbing its energy into your own.",
-      "You decide to leave the pedestal intact. Setting a trap is beneath you.",
-      "You decide to leave the soul alone and continue on your way."
+      "地味な台座に #y輝く黄金の偶像 が鎮座している。これはとても貴重な物のようだ。 NL NL 冒険者たちはこの像に魅了されるに違いないだろう、罠を仕掛けておくのも良いかも知れない。",
+      "地味な台座に #y輝く黄金の偶像 が鎮座している。これはとても貴重な物のようだ。 NL NL ホールの少し先には、明らかに巨大な物体に押しつぶされた冒険者の死体が横たわっている。彼らの魂はまだその場所に残っているようだ。",
+      "像の重さを引き金に発動する簡単な罠を仕掛けた。 誰かが #y輝く黄金の偶像 を奪おうとすれば、巨石が崩れ落ちてくるだろう。 NL 罠を構築して満足し、先に進むことにした。",
+      "冒険者の魂とそのエネルギーを自らの身体に吸収した。",
+      "台座はそっとしておくことにした。罠を仕掛けるなんてあなたらしくない。",
+      "魂は放っておいてにして元の道へと戻った。"
     ],
     "OPTIONS": [
-      "[Set Trap] #rLose #ra #rStrike.",
-      "[Harvest] #gGain #y",
-      " #ySouls.",
-      "[Leave]",
-      "[Locked] Requires a Strike."
+      "[罠をセット] #r失う：ストライク #r1枚。",
+      "[収穫] #g入手： #y",
+      " #yソウル",
+      "[立ち去る]",
+      "[Locked] 必要：ストライク"
     ]
   },
   "downfall:Cleric": {
-    "NAME": "The Cleric",
+    "NAME": "聖職者(？)",
     "DESCRIPTIONS": [
-      "A strange blue humanoid with a glimmering helm(?) approaches you with a huge smile. NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
-      "The creature crumples in a single blow, falling into a pile of mangled blue flesh. You absorb its #ysoul and continue on your way.",
-      "\"Cleric help! Cleric help!\" the creature says as you approach menacingly. NL A cold blue flame envelops your body and dissipates. NL Immediately after, this \"Cleric\" flees."
+      "黄金の兜(?) をかぶった、奇妙な青い人型生命体がにこやかに近づいてくる。 NL しかし、あなたの正体に気付いた時、そのにこやかな顔はやがて恐怖の表情へと変わった。 NL ~「モ、モンスター！！」~ と叫び、逃げだそうとしている。",
+      "その人型生命体は一撃で砕け散り、青い肉塊へと変わった。あなたは肉塊から #yソウル を吸収すると元の道へと戻った。",
+      "「聖職者だ助けてくれ！ 聖職者を助けてくれ！」あなたが威嚇しながら近づくと、その人型生命体は喚きだした。 NL 突如あなたの身体を冷たく青い炎が包み、消滅する。 NL 気付けば その「聖職者」とやらは消えていた。"
     ],
     "OPTIONS": [
-      "[Punch] #gGain #y",
-      "[Intimidate] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
-      "[Leave]",
-      "Select a Card to Remove.",
-      " #ySouls."
+      "[殴る] #g入手： #y",
+      "[威嚇] #gデッキからカードを1枚削除する。",
+      "[立ち去る]",
+      "デッキから削除するカードを選択",
+      " #yソウル。"
     ]
   },
   "downfall:Ghosts": {
-    "NAME": "Council of Ghosts",
+    "NAME": "幽霊議会",
     "DESCRIPTIONS": [
-      "As you continue your descent, #p~thick~ #p~black~ #p~smoke~ begins to billow out of the ground and walls around you, coalescing into three masked forms that start to speak. NL NL ~\"Another~ ~puppet~ ~of~ #r~the~ #r~Heart~ ~I~ ~think.\"~ NL #r@\"AGREED!@ #r@IT@ #r@ALWAYS@ #r@SENDS@ #r@THE@ #r@WEAKEST@ #r@PAWNS!\"@ NL NL You notice an over-sized grin as the third addresses you. NL \"Ignore the others... Would you like a taste of our #y~power?\"~ ",
-      "\"An @offering!@ How ~tempting...\"~ NL NL As the ghostly shape speaks, you notice its large mouth opening wider and wider. Within your body, you feel the #b~souls~ collected from the dead forced out in a violent spiral into the spirit's gaping maw. It takes all of your strength to maintain your ground and not be pulled in yourself. NL NL Just before your stamina gives out, the ghostly vortex stops, and the spirits fade into the ether. NL NL You continue on, feeling slightly #bhollow."
+      "塔を降り続けていると、 #p~濃密な黒煙~ があなたの周囲の地面や壁から吹き出し、3体の仮面を被った何かに形を変えて話し始めた。 NL NL ~「これも心臓の操り人形だろう！」~ NL #r@「そのようだ！あれはいつも一番弱い駒を送り込んでくる！」@ NL NL あなたは口が裂けるほどの笑みを浮かべた三体目が、こちらを見つめていることに気付いた。 NL 「他の二人は気にするな... 我らの #y~力~ に興味は無いか？」",
+      "~「~ @供物とは！@ ~なんと魅力的なんだ！」~ NL NL 幽霊のような何かが喋ると、その口がどんどん大きく開いていく事に気付いた。あなたの身体から死者から集めた #b~ソウル~ が激しく渦巻き、その口へと引き込まれていくのを感じる。 NL 引きずり込まれないようにするのが精一杯だ。 NL NL あなたの体力が尽きる直前に渦は止まり、幽霊は何処かへと消えていった。 NL NL あなたは少しの #b虚しさ を感じながら、進み続けた。",
+      "あなたが近づくと、 #p~幽霊達~ はゲラゲラと笑い出す。 NL NL #r@「ああ、我々の良き友よ！」@ NL 彼らの #p~煙のような姿~ が部屋いっぱいに立ち込める... NL NL 「また ~いつもの~ あれかい?」"
+
     ],
     "OPTIONS": [
-      "[Offer] #rLose #r",
-      " Souls. #gReceive Apparition.",
-      "[Locked] Requires ",
-      " Souls."
+      "[供物] #r",
+      " ソウルを失う。 #g幻姿 を得る。",
+      "[Locked] 必要： ",
+      " ソウル。"
     ]
   },
   "downfall:CursedTome": {
-    "NAME": "Cursed Tome",
+    "NAME": "呪われた本",
     "DESCRIPTIONS": [
-      "In an abandoned temple, you find a giant book, open, riddled with #p@cryptic@ #p@writings.@ NL NL You need not interpret the elaborate script, for you know the power that lies within - and the #rcost it incurs upon its owner.",
-      "Understanding the cost, you decide to take the tome with you. As you reach for the pedestal, the trance of the tome speaks to you in a #rthousand #rvoices, clawing at your very soul! NL NL With the book secured, and your mind even more corrupted than it was before, you exit the temple feeling #b~drained...~"
+      "あなたは廃寺院で大きな本を見つけた。開いてみると、 #p@暗号のような文字@ で埋め尽くされている。 NL NL しかしあなたは精巧な文字を解読する必要はない。何故ならその本に秘められた力、そしてその持ち主へと降りかかる #r代償 を知っているのだから。",
+      "その代償を理解した上で、あなたはその書物を手にする事にした。台座に手を伸ばすと、 #r千の声 であなたに語り掛け、その魂を引っ掻き回した。 NL NL 本を確保し、以前にも増して汚染された心を抱えながら、あなたは寺院を後にした。 #b~脱力感を感じる...~"
     ]
   },
   "downfall:ForgottenAltar": {
-    "NAME": "Forgotten Altar",
+    "NAME": "忘れられた祭壇",
     "DESCRIPTIONS": [
-      "You stand on the altar and channel the spiritual energy from your inner being. NL As the #bsouls spill out in an offering to the goddess, the arms of the statue reach out and emanate a soothing #p~cursed~ #p~magic.~ NL Everything goes dark. NL You wake up a short time later, your wounds and injuries from battle suddenly healed.",
-      "After taking a brief moment to admire the evil that resides within the statue, you depart, continuing through the City."
+      "あなたは祭壇の前に立ち、身体の内にあるエネルギーを台座へと流す。 NL 女神への捧げものとしての #ソウル が届くと、像は腕を伸ばし #p~呪われた魔法~ をあなたへと放った。 NL -暗転- NL しばらくして目が覚めた時、あなたの身体から戦いでつけられた傷や怪我が消えていた。",
+      "この像に宿る邪悪な物にしばらく見とれた後、あなたは元の道へと戻った。"
     ],
     "OPTIONS": [
-      "[Offer Souls] #rLose #r",
-      " #rSouls. #gHeal #g",
-      " #gHP.",
-      "[Locked] Requires ",
-      " Souls.",
-      "[Leave]"
+      "[魂を捧げる] #r",
+      " #rソウルを失う。 ",
+      " #gHP回復。",
+      "[Locked] 必要 ",
+      " ソウル。",
+      "[立ち去る]"
     ]
   },
   "downfall:Bandits": {
-    "NAME": "Masked Bandits",
+    "NAME": "覆面の盗賊",
     "DESCRIPTIONS": [
-      "You encounter a group of bandits wearing large #rred #rmasks. NL \"Hello, pay up t- Oh, a ~monster.~ Maybe you'd have need of our services?\"",
-      "Thanks a bunch, whacko! You certainly won't regret this..."
+      "あなたは #r赤い覆面 を被った盗賊団に出くわした。 NL 「よう、通行料を払って...ああ ~モンスター~ か。俺たちになんか用か？」",
+      "サンキュー！変わった奴だな！ まあいい後悔はさせないぜ..."
     ],
     "OPTIONS": [
-      "[Lose ",
-      "] #gHire #gthe #gBandits.",
-      "[Locked] Requires more Relics."
+      "[失う ",
+      "] #g盗賊を雇う。",
+      "[Locked] 必要：レリック。"
     ]
   },
   "downfall:Nloth": {
-    "NAME": "N'loth",
+    "NAME": "ヌロス",
     "DESCRIPTIONS": [
-      "Deciding this bottom-feeder of a creature does not belong in the Spire, you deliver a swift and powerful blow directly to N'loths chest. NL NL As the creature recoils in agony, its tentacles @lash@ @out@ at you in reflex, leaving a #rpainful sting! NL NL When the creature's lifeless form hits the ground, you hear the rattling of charms and trinkets. Scouring through his body, just as it once scoured through the trash pile, you uncover a potent magical item."
+      "この低俗な生物はスパイアにふさわしくない、そう判断したあなたはヌロスの胸へ素早く強力な一撃をお見舞いした。 NL NL その瞬間 @反射的@ に @触手@ が伸びてきてあなたを突き刺した。 #rとても痛い！ NL NL その生物が地面へと倒れると、あなたはお守りや装身具の音がするのを聞いた。かつて彼がごみの山をかき分けていたように、今度は彼の身体をかき分けると、あなたは強力な魔法のアイテムを手に入れた。"
     ],
     "OPTIONS": [
-      "[Punch] #gGain #gRandom #gRelic. #rBecome #rCursed #r- #rPain."
+      "[殴る] #g入手： #gランダムなレリック。 #r呪い #r- #r痛み"
     ]
   },
   "downfall:KnowingSkull": {
-    "NAME": "Knowing Skull",
+    "NAME": "しゃれこうべ",
     "DESCRIPTIONS": [
-      "You find yourself in an old, decorated chamber. In the center of the room, a large skull sits atop an ornate pedestal. As you approach, the skull #g@bursts@ #g@into@ #g@flames@ and turns to face you. NL NL \"WHAT IS IT YOU SEEK? WHAT IS IT YOU OFFER?\" NL In sync with its final words, the door behind you @slams@ @shut.@",
-      "\"Heyheyheyheyhandsoffthenoggin-\" NL NL Ignoring the skull's complaints, you snatch it from the pedestal, momentarily #rscorched by its flames. Perhaps it will come in handy later...",
-      "\"BEHIND YOU, MORTAL.\" NL You peek behind the skull. Surely enough, there is a door."
+      "装飾が施された古い部屋に入った。部屋の中央の豪華な台座には、巨大な頭蓋骨が鎮座している。近づいていくと、頭蓋骨が #g@発火して炎に包まれた。@ あなたを見つめている。 NL NL 「オ前ハ何ヲ求メ何ヲ差シ出ス？」 NL 言い終わるや否や、後ろの扉が @音を立てて閉じた。@",
+      "「オイオイオイソノ手ヲ離セ」 NL NL 文句を無視して台座から頭蓋骨をひったくるが、一瞬その炎に #r焼かれた 。",
+      "「後ロダ、モンスターヨ」 NL あなたは頭蓋骨の後ろをのぞき込む。確かに扉がある。"
     ],
     "OPTIONS": [
-      "[You.] #gObtain #gthe #gSkull. #rLose #r",
-      "[Leave]",
-      " #rHP."
+      "[お前] #g入手： #gしゃれこうべ #r失う： #r",
+      "[立ち去る]",
+      " #rHP。"
     ]
   },
   "downfall:Vagrant": {
-    "NAME": "Pleading Vagrant",
+    "NAME": "すがりつくホームレス",
     "DESCRIPTIONS": [
-      "You kill the man and harvest his soul. ~Gasps~ come from the crowd behind you. NL \"He just killed Burgundy!\" a figure says, as more addicts just like the one you encountered begin to approach you. NL NL You escape, but not without some #rclaws and #rbites."
-    ],
+      "あなたはその男を殺し、魂を収穫した。 ~ざわざわ~ 後ろの群衆から声が聞こえる NL 「あいつがバーガンディを殺した！」 ある人物がそう言うと、あなたが遭遇したのと同じような乞食の群れがあなたに近づいてくる。 NL NL あなたは逃げ出したが、身体にいくつかの #r爪痕 や #r噛み跡 を残すことになってしまった。",
+      "あなたは彼の手から #yレリック を奪い、立ち去った。 NL 後ろから声が聞こえる NL ~「この恥知らずが。この、恥、知らず、がーーーー！！」~ NL #p恥じる事など全く無い。 スパイアのオーバーロードに奪われるなんて光栄だろう！",
+      "彼の持つ玩具に等興味はない。興味があるのは、そう、彼の ~魂だ~ 。 彼はあなたに対し、泣きながら哀願する。 @あなたはそっと手を伸ばした...@"
+   ],
     "OPTIONS": [
-      "[Punch] #gGain #g85 #gSouls. #rLose #r",
-      " #rHP."
+      "[殴る] #g入手： #g85ソウル #r失う： #r",
+      " #rHP。",
+      "[奪う] #gレリックを入手。 #r呪い #r- #r傲慢"
     ]
   },
   "downfall:Beggar": {
-    "NAME": "Old Beggar",
+    "NAME": "年老いた物乞い",
     "DESCRIPTIONS": [
-      "The beggar takes off its cloak, revealing a blue humanoid form with a glimmering helm(?). NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
-      "The old beggar looks around, seemingly puzzled. He ignores you at first as he searches the area, then glances towards you. NL \"Have you seen a young, blue-skinned man near here? Wears an odd, glimmering helm? He usually comes by the City, spending his tithe on food for us...\" NL The beggar must be referring to the one called #bCleric, who you dispatched a short while ago.",
-      "@\"Do@ @not@ @fear,@ @old@ @man.@ @You@ @shall@ @see@ @your@ @friend@ @sooner@ @than@ @you@ @think.\"@ NL NL The beggar struggles to provide any semblance of defense, and you strike him down easily. NL Leaving the alley behind, you stride ahead, excessively #yproud of the work you have done this day.",
-      "This man has suffered enough as a result of your earlier actions. You decide to spare him his life, and move on.",
-      "The beggar takes off its cloak to reveal that he is #bCleric! NL @\"You@ @are@ @a@ @horrible@ @soul.@ @Cleric@ @bought@ @protection!\"@ he screams. NL NL Two massive figures emerge from the alley, each wearing full plate. Before you have a chance to react, they draw their blades and charge!",
-      "Having slain this #bCleric's bodyguards, you turn to him and back him into a corner of the alley. He is terrified and trembling.",
-      "The creature crumples in a single blow, falling into a pile of mangled blue flesh. You happily absorb its #ysoul and continue onward. NL NL As you leave, you notice the other beggars peering from behind buildings and alleys. You bask in their fear - let this be a lesson to anyone who dare defy a Spire overlord.",
-      "\"Cleric help! Cleric help!\" the creature says once again, barely able to speak as he cowers in fear. NL A cold blue flame envelops your body and dissipates. NL NL Deciding his powers may of use later, and that you can easily dispatch of any bodyguards he tries to employ in the future, you let this \"Cleric\" live once more."
+      "物乞いはマントを脱ぎ、兜(?)をかぶった青い人型の姿を現した。 NL しかし、あなたの正体に気付いた時、そのにこやかな顔はやがて恐怖の表情へと変わった。 NL ~「モ、モンスター！！」~ と叫び、逃げだそうとしている。",
+      "老いた乞食は困惑した様子で辺りを見回している。最初はあなたの事を無視していたが、やがて君の方をちらりと見た。 NL 「この辺りで、若い、青い肌をした奇妙なきらめく兜(?)を身に着けている男性を見ませんでしたか？彼はいつもこの街にやってきて、私たちの為に寄付をしてくれるのだけど・・・」 NL その乞食が話しているのは、あなたが先程肉塊へと変貌させた聖職者の事だろう。",
+      "@「心配するな。お前はすぐにでもその男に会える。」@ NL NL 乞食は必死に抵抗の姿勢を見せるが、あなたは楽々とそれを打ちのめした。 NL 路地を後にし、あなたは今日一日の自分の行動に #y誇り を持ち、前へと進みだした。",
+      "この男は、以前のあなたの行動によって十分に苦しんだだろう。あなたは彼の命を奪うことなく前へと進んだ。",
+      "物乞いが身にまとったマントを脱ぎ捨て正体を現した、彼は #b聖職者 だ！ NL @「お前は恐ろしい奴だ！聖職者は護衛を雇ったぞ！」@ と叫んだ。 NL NL 路地から二人のフルプレートを身にまとった巨大な人影が現れた。あなたが反応する前に彼らは武器を抜いて突進してきた！",
+      "あなたは #b聖職者 の護衛を始末した後、彼に向かい、路地の隅へと追いやった。彼はおびえて震えている。",
+      "その生物は一撃で砕け散り、青い肉塊へと変わった。あなたは嬉々として #yソウル を吸収し、先へと進んだ。 NL NL 立ち去り際にあなたは他の乞食たちが建物の裏や路地から覗いているのに気づいた。あなたは彼らの恐怖に酔いしれる。スパイアの支配者に逆らう奴にはこれを教訓とさせるべきだ。",
+      "「聖職者だ助けてくれ！ 聖職者を助けてくれ！」 その生物は恐怖に震えながらも、言葉を発することが出来るようになった。 NL 冷たく青い炎があなたの身体を包み、消滅した。 NL NL あなたは、この生物の力はあとで役に立つかもしれないし、また護衛を雇った所で簡単に切り伏せれると判断し、この「聖職者」とやらを生かしておいた。"
     ],
     "OPTIONS": [
-      " #rBecome #rCursed #r- #rPride.",
-      "[Fight]",
-      "[Threaten] #gRemove #g2 #gcards #gfrom #gyour #gdeck."
+      " #r呪い #r- #rプライド",
+      "[戦闘]",
+      "[脅迫] #gデッキから2枚のカードを削除する。"
     ]
   },
   "downfall:Mausoleum": {
-    "NAME": "The Mausoleum",
+    "NAME": "霊廟",
     "DESCRIPTIONS": [
-      "Venturing through a series of tombs, you are faced with a large sarcophagus ~studded~ ~with~ ~gems~ in the center of a circular room. NL You cannot make out the writing on the coffin, however, you do notice #p~black~ #p~fog~ seeping out from the sides. NL You're familiar with this fog - a clear sign of #y~spirits.~",
-      "You absorb the #p~ghostly~ #p~fog~ into yourself, gathering their spirits. As you leave, however, you can't help but start to #r@feel@ #r@a@ #r@chill...@"
+      "墓石群を通り抜けていくと、丸い部屋があり、中央には ~宝石がはめ込まれた石棺~ が置かれていた。 NL 棺に何と書かれているのかはわからなかったが、 #p~黒い煙~ が棺から漏れ出ているのに気づいた。 NL この霧は #y~霊~ の存在を示すものであることがよく知られていた。",
+      "あなたは #p~幽霊の霧~ を自分の中に吸収し、彼らの魂を収穫した。しかし、その場を去る時あなたは #r@寒気を感じた...@"
     ],
     "OPTIONS": [
-      "[Feast] #gGain #g200 #gSouls. #rBecome #rCursed #r- #rHaunted."
+      "[ご馳走だ] #g入手： #g200ソウル #r呪い #r- #r幽霊"
     ]
   },
   "downfall:Nest": {
-    "NAME": "The Nest",
+    "NAME": "巣窟",
     "DESCRIPTIONS": [
-      "A long line of #b~hooded~ #b~figures~ can be seen entering an #punassuming #pcathedral. NL The moment you enter the cathedral, the figures turn to you! NL NL Your ears are near-instantly filled with a cacophony of gasps, cheers, and caws. One of the cultists approaches you with an offering.",
-      "Eyeing a dangerous-looking weapon lying on an altar, you cut through the line of cultists and simply take your prize. You are quickly surrounded by #rCultists! NL NL #r@\"MURDER!!@ #r@MURDER@ #r@MURDER!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL NL The cultists quickly draw their own daggers, #rslicing and #rslashing as you push through them to exit the building.",
-      "Accepting the cultist's offering, you take the strange elixir from its hands. NL NL The cultists @chant@ and @holler@ for you! NL NL #b~\"CAAW~ #b~CAW~ #b~CAAAAAAWW!!\"~ NL NL You chant, too. Why not? These cultists are an odd bunch, but they serve one of your fellow overlords well.",
-      "#r@\"BIRDGOD!!@ #r@RETURNED!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL NL Wading through the cheering crowd of cultists, you soon come face-to-face with the leader. A well-dressed cultist hands you an #yOrnate #yDagger.",
-      "You take the dagger, unsure of exactly what is about to transpire. The cultist leader reaches into his robe and offers you a #bblue #boily #bmixture.",
-      "The cultists surrounding the leader provide him with replacements, and soon with his own dagger and potion in hand, he gestures for you to follow in his actions.",
-      "Mimicking the cultist leader's ritual process, you uncork the potion and gently pour a small amount of it over the blade. The steel seems to glow an #b~eerie~ #b~hue~ in the cathedral's light. NL NL Without a single word or gesture from the cult's leader, two cultists step forward - one to you, and one to him. NL NL It is now painfully clear what they want you to do.",
-      "#rYou #rplunge #rthe #rdagger #rinto #rthe #rcultist's #rheart! NL NL #b~\"CAW~ #b~CAAAAW~ #b~CAAAAAWWW!\"~ NL NL The ritual is completed, and the surviving cultists could not appear happier. They wave their sticks in celebration and continue to call out a cheering caw as you exit the cathedral."
+      "#b~フードを被った人影たち~ が長い列をなし、 #p質素な大聖堂 に入っていくのを目にした。 NL 聖堂に入った瞬間、人影が一斉にこちらを向いた！ NL NL その瞬間、あなたの耳に、歓声と唸り声の不協和音が響く。カルト教団の一人が、捧げ物を持ってあなたに近づいてくる。",
+      "祭壇に置かれた危険そうな武器に目をつけると、カルト教団の列をかき分けてあっさりとそれを入手した。しかし、その瞬間あっという間に #r狂信者 に囲まれる！ NL NL #r@「コロセ！！@ #r@コロセ@ #r@コロセ！！」@ NL #b~「カア~ #b~カァ~ #b~クワアアァァァ！！」~ NL NL 狂信者達はすぐに自分のダガーを引き抜く。あなたは信者たちを #r切って #r斬って斬りまくった 。信者たちの群れをかき分け、建物から出て行った。",
+      "教団員に差し出された奇妙な霊薬を受け取った。 NL NL 狂信者達は あなたの為に @大声で唱和@ し @叫んだ@ ！ NL NL #b~「カア~ #b~カァ~ #b~クワアアァァァ！！」~ NL NL あなたも唱えてみよう。何故だ？ この狂信者達は奇妙な集団だが、あなたの仲間の一人のオーバーロードによく仕えている。",
+      "#r@「ワレラノカミ！！@ #r@モドッテキタ！！」@ NL #b~「カア~ #b~カア~ #b~カアアアァ！！！」~ NL NL 歓声を上げる教団員をかき分けて、あなたはすぐにリーダーと対面する。恰幅のいい教団員があなたに #y装飾された短剣 を渡してくれた。",
+      "あなたはこれから何が起こるかわからないまま、短剣を手に取った。教団長はローブに手を入れ、 #b青い油の混じる液体 を差し出した。",
+      "リーダーを取り囲む教団員たちは、彼に代わりを用意し、やがて自分の短剣とポーションを手に、あなたにも同じよう行動するように身振りで合図をした。",
+      "教団長の儀式を真似て、あなたはポーションの栓を抜いて少量の液体を刃に注ぐ。大聖堂の光に照らされた鋼鉄は #b~不気味な色に輝いている~ ように見える。 NL NL 教団長のリーダーの言葉やジェスチャーはなかったが、二人の教団員が出てくる。一人は彼の前に、もう一人はあなたの前に。 NL NL 彼らがあなたに何を望んでいるか、それは最早痛いほどに理解出来る。",
+      "#r短剣をその狂信者の心臓に突き刺すのだ！ NL NL #b~「カア~ #b~カア~ #b~カアアアァ！！！」~ NL NL 儀式は完了した。生き残った教団員達はこれ以上ないほどの恍惚とした表情を浮かべている。彼らは杖を振って祝福し、あなたが聖堂を出た後も歓声を上げ続けていた...。"
     ],
     "OPTIONS": [
-      "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards.",
-      "[Locked] Requires Broken Wing Statue.",
-      "[Accept] #gGain #gCultist #gPotion.",
-      "[Steal] #gObtain Ritual Dagger. #rLose #r",
-      " #rHP.",
-      "[Leave]",
-      "[Continue]",
-      "[Take Dagger] #gGain #gRitual #gDagger.",
-      "[Anoint] #gUpgrade #gRitual #gDagger.",
-      "[Sacrifice] #rKill #rCultist with Ritual Dagger+.",
-      "[Be Praised] #gGain #grewards for returning the #gBroken #gWing #gStatue."
+      "[像を返す] #r壊れた黄金の翼を失う。 #g入手： #g数多の報酬",
+      "[Locked] 要求 : 壊れた黄金の翼。",
+      "[受け入れる] #g入手： #g狂信者のポーション。",
+      "[盗む] #g入手： 装飾された短剣 #r",
+      " #rHPを失う。",
+      "[立ち去る]",
+      "[続行]",
+      "[ダガーを取る] #g入手： #g儀式の短剣。",
+      "[油を注ぐ] #gアップグレード： #g儀式の短剣。",
+      "[生贄] #r儀式の短剣+で狂信者を殺す。",
+      "[称賛される] #g入手： #g壊れた黄金の翼の報酬。"
     ]
   },
   "downfall:Colosseum": {
-    "NAME": "The Colosseum",
+    "NAME": "コロシアム",
     "DESCRIPTIONS": [
-      "As you continue down the spire, you notice a group of humanoids waiting in ambush nearby a large auditorium. When approached, the Slavers are startled, but quickly explain themselves. NL NL \"We await these who would assault our City - the ones you seek to destroy! We have an audience awaiting a fresh capture. The people love a #rfight to the #rdeath!\"",
-      "The slavers are no threat to you, and may prove useful if they do manage to slow down or injure your prey. NL NL However, this bloodsport might just be too tempting to pass up...",
-      "You enter the massive stadium to find an overflowing audience of #bSlavers, #pCultists, and other denizens of the City. NL NL ",
-      "@\"BRING@ @ME@ @YOUR@ @BEST!\"@ you boom into the crowd, opening a challenge to their champions. NL Two challengers approach, warning you that the rules of the arena prevent them from holding back, despite your position as a lord of the Spire. NL NL You would assume nothing less.",
-      "@\"THE@ @NEXT@ @ONE@ @IS@ @MINE!\"@ you boom into the crowd, who replies with a deafening applause. NL NL It does not take long for the slavers to drag in their latest catch. The unwitting challenger awakens, ~groggy~ from the ambush, but readies themselves. NL NL This should be fun.",
-      "You deciding that, though it is tempting, fighting here would be an unnecessary distraction. Your journey continues on, and you leave the slavers to resume their ambush."
+      "尖塔を降りていくと、大きなスタジアムの近くで待ち伏せをしている一団に気付く。あなたが近づくと奴隷商人たちは驚いた様子だったが、すぐに自分たちの事を説明し始めた。 NL NL 「俺達はシティに来る侵入者、つまりアンタが追ってる奴らを待ってるんだ。我々の観客は新たに捕らえられた獲物が待ち遠しいのさ。なんたって奴らは獲物が #r戦いの中で死ぬ瞬間 が大好きだからな！」",
+      "この奴隷商人はあなたにとって脅威ではないし、獲物を弱らせるのに役立つかもしれない。 NL NL しかし、この血のスポーツは見過ごすにはあまりにも魅力的だ。",
+      "巨大なスタジアムに足を踏み入れると、そこでは #bスレイバー や #p狂信者 など街の住民で溢れんばかりの観客が居た。 NL NL ",
+      "@「強い奴を連れてこい！」@ あなたは観客に向かって叫び、チャンピオンへと宣戦を布告した。 NL 二人の挑戦者が近づいてくる。彼らはアリーナのルール上、あなたが誰であろうと手加減は出来ない、と警告してきた。",
+      "魅力的ではあるが、ここで戦うのは時間の無駄だろう。旅を続け、奴隷商人達が待ち伏せを再開するのを見送った。"
     ],
     "OPTIONS": [
-      "[Challenge] #rFight Arena Champions. #gGain #gmany #grewards.",
-      "[Participate] #rFight Captive Hero. #gGain #gmany #grewards.",
-      "[Leave]",
-      "[FIGHT!]",
-      "[Continue]"
+      "[挑戦] #r戦闘：アリーナのチャンピオン。 #g入手： #g数多の報酬。",
+      "[参加] #r戦闘：捕らえられたヒーロー。 #g入手： #g数多の報酬。",
+      "[立ち去る]",
+      "[戦え！]",
+      "[続行]"
     ]
   },
   "downfall:MindBloom": {
-    "NAME": "Mind Bloom",
+    "NAME": "マインドブルーム",
     "DESCRIPTIONS": [
-      "While walking and traversing through the beauty of the Beyond, your thoughts suddenly begin to feel very... #p~real...~ NL NL Imaginings of #rslain #radventurers and #bhoarded #bsouls begin to manifest themselves into reality. NL The sensation is quickly fleeting. What do you do?",
-      "You know you have been here before. NL NL Hunting the same adventurer. NL NL Is any of this real? NL NL How many times have you been slain?",
-      "Everything makes sense now. NL The singular purpose, the descent, the #pHeart. NL NL This is the way it always was. NL This is the way it always will be. NL All will be forgotten again soon..."
+      "「彼方」の美しい世界を歩き回っていると、突然あなたの思考が非常な #p~現実味~ を帯び始めた... NL NL #r殺された冒険者 や #b囚われた魂 の想像が具現化し始める。 NL 感覚はすぐに消えさった。あなたは一体何者だ？",
+      "以前もここに来たことがあると思う。 NL NL 同じ冒険者を狩っている。 NL NL 一体何が現実なのか？ NL NL 私は何度殺された？",
+      "今、全てを理解した。 NL 特異な目的、降臨、 #p心臓 。 NL NL いつもそうだった。 NL これからもそうだろう。 NL そしてまたすぐに全て忘れてしまうのだろう..."
     ],
     "OPTIONS": [
-      "[I am an Echo] #rFight #ryourself. #gObtain #ga #gRare #gRelic.",
-      "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality.",
-      "[I am Complete] #gUpgrade #gall #gCards. #rLose #rHeart #rBlessings and #r10 #rMax #rHP.",
-      "[Locked] Requires all 3 Heart Blessings.",
-      "[Leave]"
+      "[私は反響] #r自分自身との戦闘。 #g入手：レアレリック",
+      "[私は満腹] #g入手： #g999 #gソウル #r呪い #r- #r2 #r凡庸",
+      "[私は完全] #g全カードをアップグレード。 #r心臓の祝福を失う。",
+      "[Locked] 必要：3つの心臓の祝福。",
+      "[立ち去る]",
+      "[私は完全] #g全カードをアップグレード。 #r心臓の祝福と最大HP2を失う。"
     ]
   },
   "downfall:MoaiHead": {
-    "NAME": "The Moai Head",
+    "NAME": "モアイ",
     "DESCRIPTIONS": [
-      "You decide to take a slight detour to one of the Beyond's greatest monuments - an enormous stony head, emerging from a large wall segment. NL NL The head's mouth is wide open, and it reveals large intimidating teeth stained red with blood. The surface of the statue is riddled with pictographs that seem to indicate people throwing themselves into the mouth of this head and being devoured.",
-      "You step up into the mouth of the statue, waiting for the statue to activate, knowing you will have to pay its cost in blood. Within a short time, the huge molars slam down from above, crushing you whole. NL @Darkness.@ NL Sometime later from within the dark, you see a sliver of light, and hear what you now realize is the sound of stony teeth slowly rising upwards. NL NL You leave restored, the statue's magic flowing through you.",
-      "You step up into the mouth of the statue, and let flow from your body an immense amount of #bspiritual #benergy. The statue's eyes glow #b~aflame,~ and its huge molars slam down upon you. NL #b~Blue~ #b~light~ #b~is~ #b~everywhere.~ NL NL As the teeth rise, you feel completely reinvigorated, and more powerful than ever before.",
-      "You leave, wondering what could have been."
+      "あなたは、「彼方」最大のモニュメントの一つである、大きな壁の一部から現れた巨大な石の頭部に少し寄ってみる事にした。 NL NL 頭部は大きな口を開け、血で赤く染まった威圧的な大きな歯を見せている。像の表面には絵文字が散見され、人々がこの口に身を投げ、食われる様子を示しているようだ。",
+      "あなたは像の口の中に足を踏み入れ、何が起こるか知っていながらも像が起動するのを待った。まもなく巨大な臼歯が上からたたきつけられ、あなたは丸ごと潰される。 NL @暗闇@ NL しばらく後、あなたは暗闇の中に差す光を見つけ、石の歯がゆっくりと開いていく音を聞いた。 NL NL あなたは像の魔法を受け、回復してその場を後にした。",
+      "あなたは像の口の中に足を踏み入れると、その体から膨大な量の #b霊的なエネルギー を流し込む。彫像の目は #b~炎~ を放ち、その巨大な歯はあなたに襲い掛かる。 NL #b~一面の青い光~ NL NL 歯が上昇すると、完全に元気を取り戻しかつてないほどのパワーを感じることが出来た。",
+      "何があったのだろうと思いながら、あなたはその場を後にした。"
     ],
     "OPTIONS": [
-      "[Offer Souls] #rLose #r",
-      " #rSouls. #gGain #g",
-      " #gMax #gHP and #gHeal #gto #gfull.",
-      "[Locked] Requires ",
-      " Souls."
+      "[魂の供物] #r",
+      " #rソウルを失う。 #g入手： #g",
+      " #g最大HP と #g全回復。",
+      "[Locked] 必要： ",
+      " ソウル。",
+      " #rグレムリンの数のソウル。 #g入手： #g",
+      "[中に飛び込む] #gHP全回復。 #r各グレムリンの死 #r"
     ]
   },
   "downfall:SensoryStone": {
-    "NAME": "Sensory Stone",
+    "NAME": "センサリーストーン",
     "DESCRIPTIONS": [
-      "#g~VANITY.~ NL NL Life is a beautiful, magnificent thing... even to a #gslime. NL NL You’ve always known you were destined for great things. The others all settle for coins and bits of scraps, but not you. You wait, like a predator, for something special. Something unique. Something ~fabulous.~ NL NL Days... weeks... maybe years pass by... it’s hard to tell in the Spire. Until, at last, you spot it. No longer will you be counted just among the masses! They may have their #ycoins and #ytrinkets, but you have something better... NL NL @A@ @TINY@ @BOWLER@ @HAT!@ Dashing!",
-      "#y~FRAILTY.~ NL NL The #rblade enters your chest, and the cheer of the #bcrowd fills your ears... the last thing you will ever feel is a hand striking across your face, and your eyes close. NL NL You awaken in an unfamiliar room, @unable@ @to@ @move.@ You try to speak, but no words come out, and your vision is clouded in a #ggreen #gfog. Is this a dream? Is this the afterlife? You try to remember, but your thoughts are as disjointed as your arms and legs. NL NL You hear a voice in your mind - a single command. #g\"BALANCE #gmust #gbe #gENFORCED. #gGUARD #gExordium.\"",
-      "#p~HOPELESSNESS.~ NL NL #yWatch. #yRemember. #yLive. This is the Watcher's mission. Your assignment is to investigate a Spire of unknown origin.  You enter a hexagonal room and before you can react, the door @collapses@ @behind@ @you!@ NL NL There is no escape. The only path that may lead out is by taking a tablet, clearly infused with magic, which lays upon a pedestal. The moment your skin touches the artifact, your body ~dissolves~ ~into~ ~nothing,~ and your #psoul is pulled into the #pstone. NL NL Your fate will forever be tied to the #ptablet, #rcursed to wander the Spire for eternity.",
-      "#y~DETACHMENT.~ NL NL You are the first. You serve the ~Shaper.~ You are not born, with frailty and weakness, but created. Perfect. And in your image shall you create more constructs. The #yautomatons of the Maker’s legacy. NL NL Each one flawless in its design, all to serve a specific purpose. All but one. The one meant to maintain balance in the City. NL NL You cast the #ydefective #yconstruct from the tallest window, plunging it to the bottom of the Spire, and take his place as the City's protector. NL NL Balance must be enforced.",
-      "#b~PRIDE.~ NL NL You stand at the center of a grand arena. Everything you have worked for culminates in this one singular combat. You take up a #bdefensive #bstance, draining the stamina of your enemy, until an opening presents itself. With your last bit of strength, you #rplunge #ryour #rblade into the chest of your opponent. The audience erupts in @thunderous@ @applause!@ NL NL Not one to stop at just winning, you raise your open hand and strike your foe ~across~ ~the~ ~face,~ delivering a most insulting final blow. NL NL There is no one in your way now. You are the new #b@Champion!@",
-      "#p~GREED.~ NL NL Few men can resist the #btemptation #bof #bpower. But power comes at a cost, and great power an even greater price. NL NL You sit upon your throne above the Colosseum, watching men #rfight #rto #rthe #rdeath for your amusement for the title of #bChampion. The price for entry - the #g~flame~ #g~of~ #g~their~ #g~eternal~ #g~soul~ in service to you. Each name etched in a tablet, binding them to you in the afterlife. NL NL The crowd cheers as one fighter is struck down with a final blow across the face. You go to your vault, but someone has been here. Traps are sprung, but no body to be found... and the #p@tablet@ @is@ @missing!@",
-      "#g~GRIEF.~ NL NL You stand, at long last, atop the highest peak of the Spire. You have spent your years working tirelessly to bring this colossal feat of architecture, a monument to the Great One, to life. Every #gcurve rounded to perfection. Every #yedge meticulously placed. NL NL “It is done, my love.” Covering their lifeless hand with yours, you turn on the machine. A soft hum fills the room, and soon you feel your very #b~essence~ being pulled into your creation - swiftly joined by another. You will both live for all eternity in this place, just as you planned. NL NL With a resounding echo... the #pHeart ~thumps~ its first beat.",
-      "#b~RAGE.~ NL NL You are powerless to stop the #yornate #ydagger that enters your chest. In your final moment, you pray to whatever #pdeity rules over this Spire to give you the strength to live, ~no~ ~matter~ ~the~ ~cost.~ NL NL Your #pheart thumps a strong final beat, then is silenced... for a moment. Your eyes glow with #b@blue@ #b@fire@ as you return to life with the strength of ten men, bursting your bonds with ease and roaring into the crowd of #brobed #bfigures surrounding you! NL NL As you feel your body begin to morph into a #bmonstrous #bshape, the figures bow before you.",
-      "#p~ARROGANCE.~ NL NL You spite the #pgod-like #pHeart that controls this place, dictating your fate. It is #ytime to take action. NL NL The Beyond is the least guarded of the Spire's sections, and you are able to slip into its #ytreasury with ease. There are many artifacts of power here, but one in particular speaks to you - a #y~glowing~ #y~pocketwatch.~ NL NL With unyielding confidence, you reach out and snatch the pocketwa... @...awtekcop@ @eht@ @hctans@ @dna@ @tuo@ @hcaer@ @uoy@ @,ecnedifnoc@ @gnidleiynu@ @htiW@ NL NL You spite the #pgod-like #pHeart that controls this... place...?",
-      "On second thought, perhaps memories are best left in the past."
+      "#g~VANITY-虚栄-~ NL NL 人生とは美しく壮大な物だ... #gスライム にとっても。 NL NL あなたはずっと、自分が偉業を成し遂げる運命にある事を知っていた。他人はみな、小銭や端切れに落ち着くが、あなたは違う。あなたは捕食者のように、何か特別な物を持っている。 ~素晴らしい物を~ NL NL 何日も...何週間も...何年も...スパイアの中ではわからない。そして、ついに、あなたはそれを見つける。あなたはもはや大衆の一人ではない。彼らはコインやアクセサリーを持っているが、あなたは違う。もっといい物を持っている... NL @それはタイニーボウラーハットだ！@ カッコいい！",
+      "#y~FRAILTY-虚偽-~ NL NL #r刃 があなたの胸に入ってゆく。 #b観衆の歓声 が耳に入る... 最後に感じたのは顔を打つ手、そして閉じる視界。 NL NL あなたは見知らぬ部屋で目を覚ます。 @身動きが取れない@ 声を出そうとしても言葉が出ない。 そして、視界は #g緑の霧 で覆われる。これは夢？ それとも死後の世界か？ あなたは記憶を探ろうとするが、あなたの思考はあなたの手足と同じようにバラバラだ。 NL NL あなたは心の中で声を聴く。--たった一つの命令。 NL #g「均衡 は #g保たれ なければならない #g守れ #g始めろ。」",
+      "#p~HOPELESSNESS-絶望-~ NL NL #y観測する #y記憶する #y生存する これがウォッチャーの使命だ。あなたの任務は起源不明の尖塔-スパイア-を調査する事だ。六角形の部屋に入ると、 @あなたが反応する前に@ ドアが @崩れ落ちた！@ NL NL 逃げ場はない。唯一の道は、台座に上に置かれた、魔力を注入された石板を取る事だ。あなたはその石板に近づき、触れる。瞬間 あなたの身体は ~溶けて消えた~ そしてあなたの #p魂 は #p石板 の中へと引きずり込まれる。 NL NL あなたの運命は永久に #p石板 に縛られ、永久に尖塔を彷徨う呪いをかけられた。",
+      "#y~DETACHMENT-分離-~ NL NL あなたは最初の者。 あなたは ~造物主~ に仕えている。あなたは、虚弱で、弱い。しかしそれは生まれつきではなく、そのように造られたのだ。 完璧だ。 あなたのイメージでより多くの構築物を創造するのだ。創造主の遺産 #yオートマトン 。 NL NL それぞれが傷一つない完璧なデザインで、それは特定の目的を果たす為の物。一つを除いて。それはシティの均衡を保つための物だ。 NL NL あなたはその #y欠陥品の #y構築物 を一番高い窓から投げ捨て、スパイアの底に落とし、シティの守護者の座に就かせるのだ。 NL NL 均衡は保たれなければならない。",
+      "#b~PRIDE-驕傲-~ NL NL あなたは壮大なアリーナの中心に立っている。これまでの努力の結晶がこの一騎打ちに集約されている。 #b防御の構え を取り、敵の体力を削りながら、隙をつく。最後の力を振り絞り、敵の胸に #rあなたの刃を突き立てた 。会場の群衆からから @拍手が沸き起こる！@ NL NL だが。あなたは勝利だけでは飽き足らず、空いた手で ~相手の顔面を殴りつける~ 屈辱を与えるための一撃。 NL NL もう邪魔する者は居ない。あなたが新たな #b@チャンピオンだ！@",
+      "#p~GREED-欲望-~ NL NL #b権力の誘惑 に勝てる者は殆ど居ない。 だが 権力には代償がつきものだ。 NL NL あなたはコロッセオの上の玉座に座り、娯楽のために、 #b王者 の座を巡って #r死ぬまで戦う男たち を眺めている。 参加するための代償は、あなたに仕える #g~永遠の魂の炎~ だ。それぞれの名前が石板に刻まれ、死の後にあなたに拘束されるのだ。 NL NL 一人のファイターが顔面に最後の一撃を受け、観客の歓声が上がる。あなたは自分の金庫に向かった。しかし、何か妙だ。誰かがここに来ていた。 トラップが作動している。だが死体が無い... そして #p@石板が消えている！@",
+      "#g~GRIEF-悲嘆-~ NL NL ついにあなたは塔の最上階に立った。あなたはこの巨大な塔を建築する為、偉大なる者の記念碑の為に何年も努力を続けてきた。  全ての #g曲線 は完璧なカーブを描き、 全ての #yエッジ は細心の注意を払って配置されている。 NL NL 「完成だ。愛しき者よ。」 生気のない手を覆い、あなたは機械のスイッチを入れる。柔らかな音が部屋に響く。やがて、あなたは自分の #b~本質~ が造物主に引き込まれていくのを感じる。すぐにもう一人と繋がる。あなたたちは、あなたの計画通り、この場所で永遠に生き続ける事になるのだ。 NL NL 響き渡るエコーと共に... #p心臓 は最初の鼓動を刻む。 ~ドクン~",
+      "#b~RAGE-憤怒-~ NL NL 胸に突き刺さる #y装飾された短剣 を止める力は、ない。最後の瞬間、あなたはこの尖塔を支配するどんな #p神 にも、 ~どんな犠牲を払っても~ 生きる力を与えてくれるよう祈る。 NL NL あなたの #p心臓 は最後に強く鼓動し、そして沈黙する... 瞬間、あなたの目は #b@青白い炎@ で輝き、常人の10倍程の力で生き返ると、いとも簡単に拘束を解き、あなたを取り囲む #bローブを着た人影 へと咆哮した。 NL NL 自分の身体が #b化物へと変貌 するのを感じると、人影はあなたに跪いた。",
+      "#p~ARROGANCE-傲慢-~ NL NL この塔を支配する #p神のような心臓 。あなたの運命を決めるのは、あなただ。今こそ行動を起こす #y時 だ。 NL NL 「彼方」は、スパイアの中で最も警備が緩く、あなたは簡単にその #y宝物庫 に忍び込むことが出来た。 ここには力のあるアーティファクトがたくさんあるが、中でも目を引くのは #y~光る懐中時計~ だ。 NL NL あなたは手を伸ばし、その懐中時... @...時中懐のそ、しば伸を手はたなあ@ NL NL あなたは #p神である心臓 に向けて唾を吐くのか ...?",
+      "思い出は過去のままにしておくのが良い。"
     ],
     "OPTIONS": [
-      "[Recall] #gAdd #g1 #gBoss #gcard #gto #gyour #gdeck.",
-      "[Recall] #gAdd #g2 #gBoss #gcards #gto #gyour #gdeck. #rLose #r",
-      "[Recall] #gAdd #g3 #gBoss #gcards #gto #gyour #gdeck. #rLose #r"
+      "[思い起こす] #gデッキに1枚のボスカードを追加。",
+      "[思い起こす] #gデッキに2枚のボスカードを追加。 #rHPを",
+      "[思い起こす] #gデッキに3枚のボスカードを追加。 #rHPを"
     ]
   },
   "downfall:SecretPortal": {
-    "NAME": "Secret Portal",
+    "NAME": "秘密のポータル",
     "DESCRIPTIONS": [
-      "Before you is a welcome sight - in one of the living walls of the Beyond is an enclosed stone entrance filled with a #p~swirling~ #p~magical~ #p~portal.~ NL NL This portal allows for quick access to the Beyond's overlord. However, if you take the stone that powers it, your journey through the Spire would be hastened.",
-      "The portal can always be repaired later. You pry the runed stone that powers the gateway, and quickly contemplate where to head next. The stone will only remain useful for a brief moment."
+      "あなたの目の前に、歓迎すべき光景が広がっていた。「彼方」の生きた壁の一つに #p~渦を巻く魔法の扉~ で満たされた石造りの入り口があるのだ。 NL NL このポータルは、「彼方」のボスの元へすぐに辿り着く事が出来る。しかし、この扉の動力源である石を手に入れれば、スパイアをより早く移動できるようになるだろう。",
+      "ポータルはあとで修理できる。あなたは門の動力源であるルーンストーンを引き抜くと、次にどこへ向かうべきかを考える。この石が役に立つのはほんの一瞬だ。"
     ],
     "OPTIONS": [
-      "[Take Stone] Skip to any non-Boss Room."
+      "[石を取る] ボス以外の道をスキップ出来る"
     ]
   },
   "downfall:TombRedMask": {
-    "NAME": "Tomb of Lord Red Mask",
+    "NAME": "紅の覆面王の墓石",
     "DESCRIPTIONS": [
-      "A highly ornamented tomb can be seen on the other side of a floating path. NL NL Upon reaching the tomb, you notice a soft wall, likely holding a secret compartment. One good strike should be enough to break it down.",
-      "You don the #rmask. The bandits who agreed to assist you seem to have a connection with this Lord - perhaps they will be inspired by your new adornment.",
-      "An opening appears in the tomb and out slides a small red mask with a note attached. \"Take from others as I have taken from you!\"",
-      "Deciding against disturbing the tomb, you continue on.",
-      "Satisfied with collecting the mask, you continue on."
+      "中に浮かぶ小道の反対側に豪華な装飾を施した墓石が見える。 NL NL 墓に着くと、柔らかい壁を見つけた。どうやら秘密の区画があるようだ。こんな壁程度、一撃で破壊できるだろう。",
+      "あなたは #rマスク を着けた。あなたを支援してくれる盗賊たちは、この墓石の主と繋がりがあるようだ。きっとあなたの新しい装飾品に触発される事だろう。",
+      "墓に穴が開き、小さな赤いマスクが紙切れとともに滑り出してきた。 NL 「私がお前から奪ったように、他者から奪うがいい！」",
+      "墓を乱すのはやめようと思いなおし、先へ進んだ。",
+      "マスクを回収して満足し、先へと進んだ。"
     ],
     "OPTIONS": [
-      "[Don the Red Mask] #gUpgrade #gBandit #gContract.",
-      "[Locked] Requires: Red Mask & Bandit Contract.",
-      "[Bash] #rLose #r",
-      ". #gObtain #gRed #gMask.",
-      "[Locked] Requires an Attack.",
-      "[Leave]"
+      "[赤いマスクを被る] #g盗賊との契約をアップグレード",
+      "[Locked] 必要: レッドマスク & 盗賊との契約",
+      "[一撃] #r失う： ",
+      " #gレッドマスクを入手。",
+      "[Locked] 必要：アタック",
+      "[立ち去る]"
     ]
   },
   "downfall:WindingHalls": {
-    "NAME": "Winding Halls",
+    "NAME": "曲がりくねった穴",
     "DESCRIPTIONS": [
-      "As you slowly make your way up the twisting pathways, you find yourself in the infamous shifting hallways of the Beyond. A lesser being would go mad trying to navigate these, but to you, they are as familiar as an old friend. NL NL The constant #p~whispering~ #p~voices~ ease your mind as you decide which path to take."
+      "曲がりくねった通路をゆっくりと進んでいくと、あなたは「彼方」で悪名高い揺れ動く廊下にいる事に気付く。常人がこれを通り抜けようとすると、気が狂いそうになる物だがあなたにとっては旧友のように馴染み深い場所だ。 NL NL 常に #p~ささやくような声~ が心を和ませ、進むべき道を決めていく。"
     ],
     "OPTIONS": [
-      "[Left] #gExplore #gan #gEvent.",
-      "[Right] #gSearch #gthe #gTreasury #gfor #ga #gRelic.",
-      "[Straight] #gHunt #gdown #gthe #gMerchant."
+      "[左へ] #gイベントを探す。",
+      "[右へ] #g宝物庫でレリックを探す。",
+      "[直進] #g商人を追い詰める。"
     ]
   },
   "downfall:Joust": {
-    "NAME": "The Joust",
+    "NAME": "馬上槍",
     "DESCRIPTIONS": [
-      "As you make your way through the large buildings you come across a long narrow bridge and spot knights on either side, facing one another. You approach and they scatter, glaring at one another. NL \"Monster! YOU fight it, if you're so good at killing things!\" NL \"No, YOU fight it! You know monsters better, what with that ~demonic~ ~cat!~\" NL NL They won't stop bickering. You'll have to decide...",
-      "This knight was clearly stronger than the other one, and you tried your best but were ultimately thrashed. NL \"I'd like to see you best a beast like that!\" he says to the other knight as they leave, bickering.",
-      "You ruthlessly avoid the knight's attacks and #rkill him, sucking his #gsouls out gleefully. The other knight screams and flees. What a coward...",
-      "The cowardly knight gives you a few pesky scratches from afar with his longsword, then runs away screaming. The other knight runs after him, angry. You return to your work, annoyed.",
-      "You ~loom~ over the knight, and rather than even trying to run, he simply cowers. You #rslay him easily and take his #gsouls, but when you turn for the other knight, he's already ran away."
+      "大きな建物の中を進んでいくと細長い橋がある。橋の両脇では、騎士が向かい合っているのが見えた。あなたが近づくと、彼らは互いににらみ合いながら散っていった。 NL 「モンスターだ！お前が戦え！殺し合いが得意ならな！」 NL 「いや、お前が戦え！あの ~悪魔のような猫~ のおかげでお前はモンスターの事をよく知ってるだろう！」 NL NL 彼らはいつまでも喧嘩を続けている、あなたが決めないと...",
+      "この騎士は明らかにもう一人の騎士より強く、あなたは善戦したものの結局打ちのめされてしまった。 NL 彼は 「あんな獣を倒す所を見てみたいもんだ」 と、もう一方の騎士に言いながら、喧嘩して去っていった。",
+      "あなたは無慈悲に騎士の攻撃を退け、彼を #r殺し 、その #gソウル を収穫した。もう一人の騎士は悲鳴を上げて逃げ出していく。なんて臆病者だ...",
+      "臆病な騎士は遠くからロングソードであなたに少しばかり厄介な傷をつけると、それから急に悲鳴を上げて逃げ出した。もう一人の騎士は怒って彼の後を追いかける。あなたは腹が立ったが、諦めて自分の仕事に戻った。",
+      "あなたは騎士の前に ~立ちはだかった~ 。しかし彼は、逃げようとするどころかひたすらに怯えているだけだった。あなたは面倒そうに彼を #r殺し 、その #g魂 を奪った。その後あなたがもう一人の騎士に目を向けようとするが、彼はすでに逃げて居なくなってしまっていた。"
     ],
     "OPTIONS": [
-      "[Left] #r50%: #rLose #r",
-      " HP.",
-      " #g50%: #gGain #g200 #gSouls.",
-      "[Right] #r25%: #rLose #r",
-      " #g75%: #gGain #g100 #gSouls."
+      "[左の男] #r50%: #r失う：",
+      " HP",
+      " #g50%: #g入手： #g200 #gソウル",
+      "[右の男] #r25%: #r失う： #r",
+      " #g75%: #g入手： #g100 #gソウル"
     ]
   },
   "downfall:BossTester": {
@@ -567,31 +587,42 @@
     ]
   },
   "downfall:BetterEnding": {
-    "NAME": "Spire Heart",
+    "NAME": "スパイアの心臓",
     "DESCRIPTIONS": [
-      "@tu-thump@ ... @tu-thump@ ... @tu-thump@ ... NL A comforting heartbeat can be felt throughout the room... NL Are you at the ~end~ ? Is your purpose fulfilled?",
-      "You give #b",
-      " Souls back to the heart! NL The heart #b@squirms@ in elation, pounding forever more.",
-      "For all your efforts, the door to the Heart's chamber remains vulnerable, and that pesky, laughing, rug-toting citizen got away from you. So, you ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~  NL You feel that you have given a total of #b",
-      " Souls to the heart.",
-      " NL A total of #b",
-      " Souls have been given by all who have been summoned by it.",
-      " NL The heart pulses louder and louder as your #y~consciousness~ #y~fades...~",
-      "NL You ready your blade...",
-      "NL You prepare your daggers...",
-      "NL You charge your core to its maximum...",
-      "You ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~",
-      " NL The heart pulses louder and louder as your #p~consciousness~ #p~begins~ #p~to~ #p~fade...~",
-      " NL A sudden burst of #y@energy@ emanates from inside you, #b@jolting@ you awake.",
-      " NL The heart #gretreats, sensing an approaching threat! The fight is not over yet...",
-      "NL You prime your staff with divine energy...",
-      "You feel #psomething #p@evil@ at your very core..."
+      "@ドクン@ ... @ドクン@ ... @ドクン@ ... NL 心地よい鼓動が部屋全体に伝わってくる...。 NL お前はもう ~終えたのか？~ 目的は果たされたのか？",
+      "あなたは #b",
+      " ソウルを差し出す。魂は心臓へと還ってゆく。 NL 心臓は高揚し、 #b@悶え@ いつもより強い鼓動を続けている。",
+      "あなたは最善を尽くした、だが心臓の部屋の扉は脆弱なままだ。あなたは自問する。 NL ~「自分は本当に必要な事を十分にやり遂げたのか？」~ NL あなたは今まで心臓に、合計 #b",
+      " ソウルを与えた、と実感している。",
+      " NL トータル #b",
+      " ソウル は招集された者すべてで与えられた。",
+      " NL 心臓の鼓動は、あなたの #y~意識が遠のくにつれ~ 大きくなっていった...",
+      "NL 剣を構え...",
+      "NL 短剣の準備をし...",
+      "NL コアを最大までチャージして...",
+      "あなたは自問する。 ~「自分は本当に必要な事を十分にやり遂げたのか？」~",
+      " NL #y~意識が遠のき始める~ につれ、心臓の鼓動は大きくなっていった...",
+      " NL 突然、 #y@エネルギー@ が体の内から迸り、あなたの意識を #b@揺り起こした。@",
+      " NL 驚異の接近を察知し、心臓が #g後退した！ 戦いはまだ終わっていない...",
+      "NL 杖に神聖な力を込め...",
+      "あなたは自分の心の奥底に #p@邪悪@ #pな物を感じている..."
     ],
     "OPTIONS": [
-      "[Continue]",
-      "[Give] #b???",
-      "[Sleep]",
-      "[Approach Door]"
+      "[続行]",
+      "[捧げる] #b???",
+      "[寝る]",
+      "[扉の先へ]"
+    ]
+  },
+  "downfall:EvilShrines": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "この力は自分だけが持つべきだ。あなたは祠を粉々に砕く。 NL 周囲に暗い慟哭が響き渡り、あなたは祠の #p~呪いの魔法~ が骨身に染み渡るのを感じた。"],
+    "OPTIONS": [
+      "[冒涜] #g2枚のカードを複製。 #r呪い #r- #r消耗",
+      "[冒涜] #g3枚のカードを削除。 #r呪い #r- #r消耗",
+      "[冒涜] #g3枚のカードを変換。 #r呪い #r- #r消耗",
+      "[冒涜] #g2枚のカードをアップグレード。 #r呪い #r- #r消耗"
     ]
   }
 }

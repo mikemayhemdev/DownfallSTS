@@ -1,71 +1,99 @@
 [
   {
     "NAMES": [
-      "agony"
+      "agony",
+      "苦悩"
     ],
-    "DESCRIPTION": "Creatures in #yAgony deal #b80% less damage with Attacks."
+    "PROPER_NAME": "苦悩",
+    "DESCRIPTION": "#y苦悩 状態のモンスターは攻撃で与えるダメージが #b80% 減少する。"
   },
   {
     "NAMES": [
       "cripple",
-      "crippled"
+      "廃人"
     ],
-    "DESCRIPTION": "#yCrippled enemies can no longer lose #yWeak. At the end of their turn, they lose HP equal to their #yWeak."
+    "PROPER_NAME": "廃人",
+    "DESCRIPTION": "#y廃人 化したモンスターは #y脱力 状態が解除されなくなり、ターン終了時 #y脱力 に等しいHPを失う。"
   },
   {
     "NAMES": [
       "echo",
-      "echoes"
+      "echoes",
+      "エコー"
     ],
-    "DESCRIPTION": "Echoes are copies of cards with Ethereal and Exhaust."
+    "PROPER_NAME": "エコー",
+    "DESCRIPTION": "エコーは #yエセリアル と #y廃棄 を持ったコピーカード。"
   },
   {
     "NAMES": [
-      "fat gremlin", "fat_gremlin"
+      "fat gremlin", "fat_gremlin",
+      "太っちょグレムリン"
     ],
-    "DESCRIPTION": "Whenever you play an attack, apply #b1 #yWeak to all targets."
+    "PROPER_NAME": "太っちょグレムリン",
+    "DESCRIPTION": "アタックをプレイ後、対象にしたモンスターに #y脱力 #b1 を与える。"
   },
   {
     "NAMES": [
-      "gremlin wizard", "gremlin_wizard"
+      "gremlin wizard", "gremlin_wizard",
+      "グレムリンウィザード"
     ],
-    "DESCRIPTION": "Whenever you play a skill, gain #b1 #yWiz."
+    "PROPER_NAME": "グレムリンウィザード",
+    "DESCRIPTION": "スキルをプレイ後、 #y魔力 #b1 を得る。"
   },
   {
     "NAMES": [
-      "mad gremlin", "mad_gremlin"
+      "mad gremlin", "mad_gremlin",
+      "マッドグレムリン"
     ],
-    "DESCRIPTION": "Gain #b2 #yTemporary #yStrength when attacked."
+    "PROPER_NAME": "マッドグレムリン",
+    "DESCRIPTION": "攻撃を受けた時、 #y一時的な #y筋力 #b2 を得る。"
   },
   {
     "NAMES": [
-      "shield gremlin", "shield_gremlin"
+      "shield gremlin", "shield_gremlin",
+      "シールドグレムリン"
     ],
-    "DESCRIPTION": "Whenever you play a skill, gain #b2 #yBlock."
+    "PROPER_NAME": "シールドグレムリン",
+    "DESCRIPTION": "スキルをプレイ後、 #b2 #yブロック を得る。"
   },
   {
     "NAMES": [
-      "sneaky gremlin", "sneaky_gremlin"
+      "sneaky gremlin", "sneaky_gremlin",
+      "スニーキーグレムリン"
     ],
-    "DESCRIPTION": "Whenever you play an attack, deal #b3 damage to a random enemy."
+    "PROPER_NAME": "スニーキーグレムリン",
+    "DESCRIPTION": "アタックをプレイ後、ランダムな敵に #b3 ダメージを与える。"
   },
   {
     "NAMES": [
-      "swap"
+      "swap",
+      "交代"
     ],
-    "DESCRIPTION": "Switch places with another character. Does nothing if there is no valid target."
+    "PROPER_NAME": "交代",
+    "DESCRIPTION": "他のグレムリンと入れ替わる。有効な対象が居ない場合何も起こらない。"
   },
   {
     "NAMES": [
-      "wiz"
+      "wiz",
+      "魔力"
     ],
-    "DESCRIPTION": "When you have at least three stacks of Wiz, attacks will consume all stacks to deal 10 additional damage."
+    "PROPER_NAME": "魔力",
+    "DESCRIPTION": "魔力が 3 以上ある時、攻撃時にすべてのスタックを消費して #b10 追加ダメージを与える。"
   },
   {
     "NAMES": [
-      "steal"
+      "steal",
+      "スティール"
     ],
-    "PROPER_NAME": "Steal",
-    "DESCRIPTION": "Target loses specified amount of resource. You gain the amount that was lost."
+    "PROPER_NAME": "スティール",
+    "DESCRIPTION": "対象から指定した量だけバフのスタックを奪う。奪った分だけ上昇する。"
+  },
+  {
+    "NAMES": [
+      "nob",
+      "ボス"
+    ],
+    "PROPER_NAME": "グレムリンボス",
+    "DESCRIPTION": "ターン開始時、  #y怒号 、 #yスカルバッシュ 、 #yラッシュ を1枚ずつ手札に加える。"
   }
 ]

@@ -1,105 +1,106 @@
 {
   "Slimebound:AbsorbEndCombat": {
-    "NAME": "Heart of Goo",
-    "FLAVOR": "I feel so funky.",
+    "NAME": "ベタつく心臓",
+    "FLAVOR": "とてもいい気分だ！",
     "DESCRIPTIONS": [
-      "Whenever you #yslimeboundmod:Consume, heal 2 HP."
+      "#yslimeboundmod:泥食い を行うたびに HPを #b2 回復する。1戦闘中 #b8 HPまで。"
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
-    "NAME": "Black Heart of Goo",
-    "FLAVOR": "The Secret of the Ooze.",
+    "NAME": "黒いベタつく心臓",
+    "FLAVOR": "ウーズの秘密",
     "DESCRIPTIONS": [
-      "Whenever you #yslimeboundmod:Consume, heal 4 HP."
+      " ",
+      " [] と置き換える。 NL #yslimeboundmod:泥食い を行うたびに HPを #b3 回復する。1戦闘中 #b15 HPまで。"
     ]
   },
   "Slimebound:SlimedTailRelic": {
-    "NAME": "Slimed Tail",
-    "FLAVOR": "A fake tail to trick enemies during combat, completely covered in slime.",
+    "NAME": "スライムのしっぽ",
+    "FLAVOR": "敵をだますための偽物の尻尾。スライムで覆われている。",
     "DESCRIPTIONS": [
-      "When you fall below #b50% of your Maximum HP, #yslimeboundmod:Split into a #yslimeboundmod:Guerilla Slime, and the next time you take damage, your leading slime is #yslimeboundmod:Absorbed instead. (works once per combat).",
-      "This relic has been used this combat. It will become active again next combat."
+      "#y分裂 した時 #b",
+      " #yブロック を得る。"
     ]
   },
   "Slimebound:PotencyRelic": {
-    "NAME": "Ooze Stone",
-    "FLAVOR": "It is said to gain power based on your mood.",
+    "NAME": "ストーンオブノマック",
+    "FLAVOR": "ヘドロギャングの一人に見せるとたちまち踊りだす。",
     "DESCRIPTIONS": [
-      "At the start of combat, #yslimeboundmod:split into a #yslimeboundmod:Mire Slime and gain #b1 #yslimeboundmod:Potency."
+      "戦闘開始時、 #yslimeboundmod:効力 #b2 を得る。"
     ]
   },
   "Slimebound:DailySplitRelic": {
-    "NAME": "Slime the Spire",
-    "FLAVOR": "ALWAYS Split.  Why is this a relic? Cause I can't figure out how to add the custom mod to the list of active mods UI!",
+    "NAME": "スライム・ザ・スパイア",
+    "FLAVOR": "ALWAYS Split .なぜこれがレリックなのか？それはカスタムMODをアクティブMODのUIリストに追加する方法が分からないからさ！",
     "DESCRIPTIONS": [
-      "#bCustom #bRun #bModifier NL All enemies form into two Slime enemies at #b50% HP."
+      "#bカスタムラン #bModifier NL 全ての敵はHPが #b50% 以下になると2体のスライムに分裂する。"
     ]
   },
   "Slimebound:ScrapOozeRelic": {
-    "NAME": "Scrap Ooze",
+    "NAME": "スクラップウーズ",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn #yScrap #yOoze. NL At Rest Sites, you can donate a card to the Scrap Ooze, modifying it's damage: NL #b+1 damage for #gUncommons NL #b+2 damage for #yRares NL #b-1 damage for Commons NL #b-2 damage for #rCurses",
-      "Remove a card from your deck and modify Scrap Ooze's damage.",
-      "Nothing to give to the Scrap Ooze.",
-      "Scrap"
+      "戦闘開始時、 #yスクラップウーズ を産み出す。 ( #y吸収 しても復活出来る。) NL 休憩所 で #yスクラップウーズ にカードを1枚吸収させ、ダメージを変化させることが出来る。 ダメージ: NL #gアンコモン： #b+1 NL #yレア : #b+2 NL コモン： #b-1 NL #r呪い #b-2 ",
+      "デッキのカードを捧げスクラップウーズのダメージを修正する。",
+      "スクラップウーズに与えられるものが無い。",
+      "スクラップ"
     ]
   },
   "Slimebound:GreedOozeRelic": {
-    "NAME": "Greed Ooze",
-    "FLAVOR": "A friend found in the Spire who hoards gold.",
+    "NAME": "グリードウーズ",
+    "FLAVOR": "塔の中で見つけた魂を喰らう友人",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn #yGreed #yOoze. NL At Rest Sites, #yGreed #yOoze will take #b50 of your gold, increasing its damage by #b1."
+      "戦闘開始時、 #yグリードウーズ を産み出す。 ( #y吸収 しても復活出来る。) NL 休憩所 で #yグリードウーズ に #b50 の 魂 を吸収させると、ダメージを #b1 上昇させることが出来る。"
     ]
   },
   "Slimebound:PreparedRelic": {
-    "NAME": "Slime Soup",
-    "FLAVOR": "Tastes awful, but incredibly healthy.",
+    "NAME": "スライムスープ",
+    "FLAVOR": "酷い味だ...しかし、とんでもなく健康的になれる。",
     "DESCRIPTIONS": [
-      "When you enter a Rest Site, begin the next combat with a #yPrepare card that costs #b0 for your first turn."
+      "休憩所に入った次の戦闘で、戦闘開始時に #y準備行動 カードを手札に加える。それは1ターンの間コストが #b0 "
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {
-    "NAME": "Goop Dweller",
-    "FLAVOR": "He followed me home. Can I keep it?",
+    "NAME": "ヘドロの住民",
+    "FLAVOR": "家まで着いてきちゃった。飼ってもいい？",
     "DESCRIPTIONS": [
-      "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Bruiser Slime."
+      "戦闘開始時 #yslimeboundmod:ブルーザースライム に #yslimeboundmod:分裂 する。"
     ]
   },
   "Slimebound:SlimedSkullRelic": {
-    "NAME": "Slimy Skull",
-    "FLAVOR": "A Snecko skull in absolutely awful condition. Unclean and slimy, dirt and grime stick to it like glue.",
+    "NAME": "粘液まみれの頭蓋骨",
+    "FLAVOR": "とても…とてもひどい状態のスネッコの頭蓋骨。汚れや垢が糊のように付着し不潔極まりない。",
     "DESCRIPTIONS": [
-      "Whenever you apply #yslimeboundmod:Goop, apply an additional #b",
-      " #yslimeboundmod:Goop."
+      "あなたが #yslimeboundmod:汚泥 を与える度に追加で #b",
+      " #yslimeboundmod:汚泥 を与える。"
     ]
   },
   "Slimebound:MaxSlimesRelic": {
-    "NAME": "Jeremiah's Banner",
-    "FLAVOR": "You and ooze army.",
+    "NAME": "エレミアの旗",
+    "FLAVOR": "あなたと粘液の軍隊",
     "DESCRIPTIONS": [
-      "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Leeching slime and gain #b1 Slime slot."
+      "戦闘開始時、ランダムなスライム に #yslimeboundmod:分裂 し、 #b1 スライムスロット を得る。"
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
-    "NAME": "Protective Gear",
-    "FLAVOR": "The best defense is a good offense.",
+    "NAME": "プロテクトギア",
+    "FLAVOR": "最高の護りこそが最適な攻撃だ",
     "DESCRIPTIONS": [
-      "Reduce the damage you take from #yslimeboundmod:Tackle cards by #b1."
+      "#yslimeboundmod:タックル の自傷ダメージを #b3 軽減する。"
     ]
   },
   "Slimebound:TarBlob": {
-    "NAME": "Tarr Blob",
-    "FLAVOR": "The bad kind of Slime.",
+    "NAME": "タラゴンの球根",
+    "FLAVOR": "悪い意味でスライムっぽい。",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #yslimeboundmod:Splitting costs #b2 more HP and Max HP."
+      "ターン開始時 [E] を得る。戦闘開始時 #b1 スライムスロット を失う。"
     ]
   },
   "Slimebound:StickyStick": {
-    "NAME": "Gelatinous Cube",
-    "FLAVOR": "Hey, it stuck to your body.",
+    "NAME": "ゼラチナスキューブ",
+    "FLAVOR": "やあ、身体にくっついてしまったよ",
     "DESCRIPTIONS": [
-      "Whenever you draw a #yStatus card, draw #b1 card."
+      " #y状態異常 カードを引いた時 カードを #b1 枚引く。"
     ]
   }
 }

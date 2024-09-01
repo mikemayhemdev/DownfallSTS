@@ -1,0 +1,246 @@
+{
+  "champ:CounterPower": {
+    "NAME": "カウンター",
+    "DESCRIPTIONS": [
+      "次に #y攻撃 でダメージを受けた時 #b",
+      " ダメージで反撃する。"
+    ]
+  },
+  "champ:FocusedDefPower": {
+    "NAME": "集中: 守護",
+    "DESCRIPTIONS": [
+      "このターン次に #yフィニッシャー を使用した時 #b",
+      " #yブロックを得る。"
+    ]
+  },
+  "champ:FocusedBerPower": {
+    "NAME": "派手なフットワーク",
+    "DESCRIPTIONS": [
+      "このターン次に #yフィニッシャー を使用した時 敵全体がHPを #b",
+      " 失う。"
+    ]
+  },
+  "champ:ShieldWallPower": {
+    "NAME": "シールドウォール",
+    "DESCRIPTIONS": [
+      "ターン終了時 #b",
+      " #yカウンター を得る。"
+    ]
+  },
+  "champ:EntangleNextTurnPower": {
+    "NAME": "ソードスロー",
+    "DESCRIPTIONS": [
+      "次のターン #yアタック が出来ない。",
+      "次の #b",
+      " ターン #yアタック が出来ない。"
+    ]
+  },
+  "champ:DrawLessNextTurnPower": {
+    "NAME": "ドロー減少",
+    "DESCRIPTIONS": [
+      "次のターン引けるカードが #b",
+      " 枚減少する。",
+      " 枚減少する。"
+    ]
+  },
+  "champ:PushThroughPower": {
+    "NAME": "痛みに耐える",
+    "DESCRIPTIONS": [
+      "このターンHPが減らない。",
+      "あと #b",
+      " ターンの間HPが減らない。"
+    ]
+  },
+  "champ:WorseRupturePower": {
+    "NAME": "無尽蔵の怒り",
+    "DESCRIPTIONS": [
+      "自分のHPが減る度に一時的な #y筋力 #b",
+      " を得る。"
+    ]
+  },
+  "champ:ImprovisingPower": {
+    "NAME": "即興",
+    "DESCRIPTIONS": [
+      "毎ターン最初に #yコンボ をプレイした時、コストを0にして手札に戻す。プレイ後元に戻る。 #b",
+      " 残り回数：",
+      "毎ターン最初の #b",
+      " 枚の #yコンボ をプレイした時、コストを0にして手札に戻す。プレイ後元に戻る。 #b"
+    ]
+  },
+  "champ:CalledShotPower": {
+    "NAME": "コールドショット",
+    "DESCRIPTIONS": [
+      "次に #yフィニッシャー をプレイした時、 #yスタンス を解除しない。",
+      "あと #b",
+      " 回 #yフィニッシャー をプレイした時、 #yスタンス を解除しない。"
+    ]
+  },
+  "champ:DancingMasterPower": {
+    "NAME": "ダンシングマスター",
+    "DESCRIPTIONS": [
+      "毎ターン最初に #yフィニッシャー をプレイした時 #b",
+      " [E] を得て カードを #b",
+      " 枚引く。 ",
+      "",
+      "このターンに使用した。",
+      ""
+    ]
+  },
+  "champ:StrikeOfGeniusPower": {
+    "NAME": "ストライクの才能",
+    "DESCRIPTIONS": [
+      "ターン開始時ランダムな 「ストライク」を手札に加える。それはプレイするまでコスト #b0 で 廃棄 を持つ。",
+      "ターン開始時ランダムな 「ストライク」を #b",
+      " 枚手札に加える。それはプレイするまでコスト #b0 で 廃棄 を持つ。"
+    ]
+  },
+  "champ:StrikeOfGeniusUpgradedPower": {
+    "NAME": "ストライクの才能+",
+    "DESCRIPTIONS": [
+      "ターン開始時ランダムな 「ストライク+」を手札に加える。それはプレイするまでコスト #b0 で 廃棄 を持つ。",
+      "ターン開始時ランダムな 「ストライク+」を #b",
+      " 枚手札に加える。それはプレイするまでコスト #b0 で 廃棄 を持つ。"
+    ]
+  },
+  "champ:DefensiveStylePower": {
+    "NAME": "防御の構え",
+    "DESCRIPTIONS": [
+      "#y守護 の #yスキルボーナスに #b",
+      " #yカウンター が追加される。 "
+    ]
+  },
+  "champ:GladiatorStylePower": {
+    "NAME": "正々堂々",
+    "DESCRIPTIONS": [
+      "ターン開始時 #yスタンス に入っていなければ一時的な #y筋力 と #y敏捷性 #b",
+      " を得る。"
+    ]
+  },
+  "champ:BerserkerStylePower": {
+    "NAME": "狂化の構え",
+    "DESCRIPTIONS": [
+      "#y狂化 #yスキルボーナスに #b",
+      " #y気力 が追加される。"
+    ]
+  },
+  "champ:FalseCounterPower": {
+    "NAME": "疑似カウンター",
+    "DESCRIPTIONS": [
+      "次に #yカウンター が発動した時、半分の数値だけ失う。",
+      "次の #b",
+      " 回 #yカウンター が発動した時、半分の数値だけ失う。"
+    ]
+  },
+  "champ:EnergizedDurationPower": {
+    "NAME": "エナジー化",
+    "DESCRIPTIONS": [
+      "次のターン追加の #b",
+      " [E]を得る。",
+      " [E]を得る。",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+    ]
+  },
+  "champ:IronFortressPower": {
+    "NAME": "テクニカルジグ",
+    "DESCRIPTIONS": [
+      "スタンスに入る度 #yスキルボーナスを ",
+      " #b",
+      " 回発動する。"
+    ]
+  },
+  "champ:IronFortressVigorPower": {
+    "NAME": "テクニカルジグ: 狂化",
+    "DESCRIPTIONS": [
+      "スタンスに入る度 #b",
+      " #yブロック を得る。"
+    ]
+  },
+  "champ:LastStandMod": {
+    "NAME": "ラストスタンド",
+    "DESCRIPTIONS": [
+      "ターン開始時、一度だけHPが 50% 以下になっていた場合、全てのデバフを解除して 筋力 ",
+      " を得る。"
+    ]
+  },
+  "champ:GladiatorFormPower": {
+    "NAME": "闘士化",
+    "DESCRIPTIONS": [
+      "前ターンに消費した #y気力 3 毎に #y気力 #b",
+      " を得る。 #yカウンター にも同様の効果を繰り返す。"
+    ]
+  },
+  "champ:NoBlockNextTurnPower": {
+    "NAME": "シールドスロー",
+    "DESCRIPTIONS": [
+      "次のターンブロックを得られない。",
+      "あと #b",
+      " ターンの間ブロックを得られない。"
+    ]
+  },
+  "champ:UltimateStancePower": {
+    "NAME": "アルティメットドレイン",
+    "DESCRIPTIONS": [
+      "アルティメットスタンスはこのターン失われる。",
+      "アルティメットスタンスはあと #b",
+      " ターン持続する。"
+    ]
+  },
+  "champ:UltimateFormNextTurnPower": {
+    "NAME": "準備：アルティメット",
+    "DESCRIPTIONS": [
+      "次のターン開始時 #yアルティメット #yスタンス に入る。",
+      " NL それは #b",
+      " ターン持続する。"
+    ]
+  },
+  "champ:EnGardePower": {
+    "NAME": "構える",
+    "DESCRIPTIONS": [
+      "このターン ブロック が破壊された場合、次のターン #b",
+      " ブロック を得る。"
+    ]
+  },
+  "champ:ParryPower": {
+    "NAME": "パリング",
+    "DESCRIPTIONS": [
+      "このターンカウンターが発動した場合、 応酬 を1枚手札に加える。"
+    ]
+  },
+  "champ:BoomerangPower": {
+    "NAME": "ブーメラン",
+    "DESCRIPTIONS": [
+      "次のターン開始時に、 ",
+      " を手札に戻す。それはコストが #b0 で、もう戻らなくなる。"
+    ]
+  },
+  "champ:ResolvePower": {
+    "NAME": "疲労",
+    "DESCRIPTIONS": [
+      "戦闘終了時 疲労 の効果で減った HPを回復する。"
+    ]
+  },
+  "champ:DualPlaySrikePower": {
+    "NAME": "ダブルストライク",
+    "DESCRIPTIONS": [
+      "このターン次に使用する #yストライク を2回プレイする。",
+      "このターン次に使用する ",
+      " 枚の #yストライク を2回プレイする。"
+    ]
+  },
+  "champ:LastStandPower": {
+    "NAME": "ラストスタンド",
+    "DESCRIPTIONS": [
+      "HPが #b50% 以下になった時一度だけ、全てのデバフを解除し #y筋力 #b",
+      " を得る。",
+      "~やりやがったな...？~",
+      "@敗北??@ NL @認めんぞ!!@"
+    ]
+  },
+  "champ:DoubleStyleThisTurnPower": {
+    "NAME": "チェインラッシュ",
+    "DESCRIPTIONS": [
+      "このターン #yスキルブースト が追加で #b",
+      " の効果を得る。"
+    ]
+  }
+}

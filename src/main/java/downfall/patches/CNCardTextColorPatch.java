@@ -35,7 +35,7 @@ public class CNCardTextColorPatch {
                   String colorTag = word[0].substring(0, 9);
                   char[] lettersOfWord = wordTrim.toCharArray();
                   int wordLength = lettersOfWord.length;
-                  // using the same logic of the last else branch of the main if else branch from the original function, except inserts a pair of
+                  // using the same logic of the last else branch of the main if else branch from the original function, except
                   // inserting a pair of color tags at the side of each char .
                   for(int i = 0; i < wordLength; ++i) {
                         char letter = lettersOfWord[i];

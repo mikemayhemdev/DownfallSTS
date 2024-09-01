@@ -1,31 +1,32 @@
 {
   "sneckomod:DiceRollPotion": {
-    "NAME": "Potentially Potent Potion",
+    "NAME": "可能性ポーション",
     "DESCRIPTIONS": [
-      "Deal #b",
+      " #b",
       "-",
-      " damage."
+      " ダメージを与える。"
     ]
   },
   "sneckomod:CheatPotion": {
-    "NAME": "Liquid Luck",
+    "NAME": "液状の運",
     "DESCRIPTIONS": [
-      "This turn, cards that choose a random number for their effect choose the maximum possible number.",
-      "For 2 turns, cards that choose a random number for their effect choose the maximum possible number."
+      "#yラッキー を 1 ターン得る。",
+      "#yラッキー を #b",
+      " ターン得る。"
     ]
   },
   "sneckomod:MuddlingPotion": {
-    "NAME": "Spiked Energy Drink",
+    "NAME": "スパイクEドリンク",
     "DESCRIPTIONS": [
-      "#yMuddle the #b",
-      " highest-cost cards in your hand."
+      "手札の中で最もコストが高いカードを #b",
+      " 枚 #y泥まみれ にする。これで #y泥まみれ になったカードはコスト3にはならない。"
     ]
   },
   "sneckomod:OffclassReductionPotion": {
-    "NAME": "Exotic Beverage",
+    "NAME": "エキゾチックな飲み物",
     "DESCRIPTIONS": [
-      "Reduce the cost of #yOffclass cards in your hand by #b",
-      "."
+      "手札の #yオフクラス カードのコストを #b",
+      " 軽減する。"
     ]
   }
 }

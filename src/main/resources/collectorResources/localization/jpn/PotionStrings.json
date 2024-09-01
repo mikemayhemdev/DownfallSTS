@@ -1,0 +1,36 @@
+{
+  "collector:MiniCursePotion": {
+    "NAME": "魂のエキス",
+    "DESCRIPTIONS": [
+      "#b1 #y脱力 と #b1 #y弱体 と #b6 #y破滅 を与える。",
+      " #b",
+      " #y脱力 と #b",
+      " #y弱体 と #b",
+      " #y破滅 を与える。"
+    ]
+  },
+  "collector:ReservePotion": {
+    "NAME": "リザーブポーション",
+    "DESCRIPTIONS": [
+      "#b2 #yリザーブ を得る。",
+      " #b",
+      " #yリザーブ を得る。"
+    ]
+  },
+  "collector:DebuffDoublePotion": {
+    "NAME": "防腐剤",
+    "DESCRIPTIONS": [
+      "対象のデバフを2倍にする。",
+      "対象のデバフを #b",
+      " 倍にする。"
+    ]
+  },
+  "collector:TempHPPotion": {
+    "NAME": "堕落の水",
+    "DESCRIPTIONS": [
+      "#b8 の #y一時的な体力 を得る。",
+      " #b",
+      " の #y一時的な体力 を得る。"
+    ]
+  }
+}

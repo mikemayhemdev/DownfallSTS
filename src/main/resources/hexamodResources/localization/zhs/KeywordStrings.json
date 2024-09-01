@@ -59,7 +59,7 @@
     "NAMES": [
       "阴世"
     ],
-    "DESCRIPTION": "本牌被 #y消耗 时也会触发同色效果。"
+    "DESCRIPTION": "本牌被打出或被 #y消耗 均会触发粉色效果。"
   },
   {
     "PROPER_NAME": "碾压",

@@ -1,334 +1,334 @@
 {
   "sneckomod:CheapStock": {
-    "NAME": "Cheap Stock",
-    "DESCRIPTION": "At the start of your turn, reduce the cost of the highest cost sneckomod:Offclass card in your hand by 1.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, reduce the cost of the highest cost sneckomod:Offclass card in your hand by 1."
+    "NAME": "チープストック",
+    "DESCRIPTION": "ターン開始時、手札の中で最もコストの高い sneckomod:オフクラス のコストがこの戦闘中 1 減少する。",
+    "UPGRADE_DESCRIPTION": "天賦 NL ターン開始時、手札の中で最もコストの高い sneckomod:オフクラス のコストがこの戦闘中 1 減少する。"
   },
   "sneckomod:Cheat": {
-    "NAME": "Pure Luck",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn."
+    "NAME": "ピュアラック",
+    "DESCRIPTION": "sneckomod:蛇避け NL ターン終了時まで sneckomod:ラッキー を得る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL ターン終了時まで sneckomod:ラッキー を得る。"
   },
   "sneckomod:DangerNoodle": {
-    "NAME": "Danger Noodle",
-    "DESCRIPTION": "Deal !D! damage. NL Repeat this for each sneckomod:Offclass card in your hand, then Exhaust those cards."
+    "NAME": "デンジャーヌードル",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 手札の sneckomod:オフクラス の数だけこれを繰り返し、それらを 廃棄 する。"
   },
   "sneckomod:Defend": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "防御",
+    "DESCRIPTION": " !B! ブロック を得る。"
   },
   "sneckomod:DefensiveFlair": {
-    "NAME": "Defensive Flair",
-    "DESCRIPTION": "Gain !B! Block, increased by !M! for each sneckomod:Offclass card in your hand."
+    "NAME": "防御の工夫",
+    "DESCRIPTION": " !B! ブロック を得る。追加で !M! ブロックを手札の sneckomod:オフクラス の数だけ得る。"
   },
   "sneckomod:DiceBlock": {
-    "NAME": "Dice Block",
-    "DESCRIPTION": "Gain !M! - !B! Block."
+    "NAME": "ブロックダイス",
+    "DESCRIPTION": " !M! - !B! ブロックを得る。"
   },
   "sneckomod:DiceBoulder": {
-    "NAME": "Dice Boulder",
-    "DESCRIPTION": "Deal !M! - !D! damage. NL Can be Upgraded any number of times."
+    "NAME": "落石ダイス",
+    "DESCRIPTION": " !M! - !D! ダメージを与える。 NL 何度でもアップグレード出来る。"
   },
   "sneckomod:DiceCrush": {
-    "NAME": "Dice Crush",
-    "DESCRIPTION": "Deal !M! - !D! damage."
+    "NAME": "クラッシュダイス",
+    "DESCRIPTION": " !M! - !D! ダメージを与える。"
   },
   "sneckomod:GlitteringGambit": {
-    "NAME": "Glittering Gambit",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! - 30 *Gold. NL Exhaust."
+    "NAME": "キラキラのまなざし",
+    "DESCRIPTION": "sneckomod:蛇避け NL !M! ～ 30 *ゴールド を得る。 NL 廃棄"
   },
   "sneckomod:IronFang": {
-    "NAME": "Iron Fang",
-    "DESCRIPTION": "Gain !M! - !B! Block. NL Deal !qqq! - !D! damage."
+    "NAME": "アイアンファング",
+    "DESCRIPTION": " !M! - !B! ブロックを得る。 NL !qqq! - !D! ダメージを与える。"
   },
   "sneckomod:ImprovisedAttack": {
-    "NAME": "Improvised Attack",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a random sneckomod:Offclass Attack and sneckomod:Muddle it."
+    "NAME": "即興アタック",
+    "DESCRIPTION": " !D! ダメージを与える。 NL ランダムで sneckomod:泥まみれ の sneckomod:オフクラス アタックを得る。"
   },
   "sneckomod:ImprovisedGuard": {
-    "NAME": "Improvised Guard",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a random sneckomod:Offclass Skill and sneckomod:Muddle it."
+    "NAME": "即興ガード",
+    "DESCRIPTION": " !B! ブロックを得る。 NL ランダムで sneckomod:泥まみれ の sneckomod:オフクラス スキルを得る。"
   },
   "sneckomod:Nope": {
-    "NAME": "Nope",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. Gain a random card of the same class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. Gain a random card of the same class. NL It costs 1 less.",
+    "NAME": "これじゃない",
+    "DESCRIPTION": "sneckomod:蛇避け NL カードを1枚 廃棄 して、ランダムな同じクラスのカードを得る。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL カードを1枚 廃棄 して、ランダムな同じクラスのカードを得る。 NL それのコストを1減らす。",
     "EXTENDED_DESCRIPTION": [
-      "Exhaust for Nope."
+      " NL 廃棄"
     ]
   },
   "sneckomod:MasterEye": {
-    "NAME": "Master Eye",
-    "DESCRIPTION": "Become Confused. NL Draw !M! additional card each turn.",
-    "UPGRADE_DESCRIPTION": "Become Confused. NL Draw !M! additional cards each turn."
+    "NAME": "マスターアイ",
+    "DESCRIPTION": "混乱 する。 NL 毎ターン追加で !M! 枚のカードを引く。",
+    "UPGRADE_DESCRIPTION": "混乱 する。 NL 毎ターン追加で !M! 枚のカードを引く。"
   },
   "sneckomod:Memorize": {
-    "NAME": "Memorize",
-    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card which started *Unidentified. sneckomod:Identify it.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card which started *Unidentified. sneckomod:Identify it.",
+    "NAME": "メモライズ",
+    "DESCRIPTION": "sneckomod:蛇避け NL sneckomod:抹消 NL 手札から *未識別 カードを1枚選び、それを sneckomod:識別 する。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL sneckomod:抹消 NL 保留 NL 手札から *未識別 カードを1枚選び、それを sneckomod:識別 する。",
     "EXTENDED_DESCRIPTION": [
-      " to Identify."
+      " を識別する。"
     ]
   },
   "sneckomod:MixItUp": {
-    "NAME": "Mix It Up!",
-    "DESCRIPTION": "*Transform your Potions. NL Deal !D! damage !M! times. NL Exhaust."
+    "NAME": "ミックス開始！",
+    "DESCRIPTION": "手持ちのポーションを sneckomod:変身 させる。 NL !D! ダメージを !M! 回与える。 NL 廃棄"
   },
   "sneckomod:MorePower": {
-    "NAME": "More Power!",
-    "DESCRIPTION": "Obtain an additional Upgraded *Unidentified card reward at the end of combat."
+    "NAME": "もっと力を！",
+    "DESCRIPTION": "戦闘終了後、アップグレード済みの *未識別 カードを報酬に追加する。"
   },
   "sneckomod:Mudshield": {
-    "NAME": "Mud Shield",
-    "DESCRIPTION": "Whenever you *Muddle a card, gain !M! Block.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you *Muddle a card, gain !M! Block."
+    "NAME": "マッドシールド",
+    "DESCRIPTION": "カード を *泥まみれ にする度に、 !M! ブロックを得る。",
+    "UPGRADE_DESCRIPTION": "天賦 NL カード を *泥まみれ にする度に、 !M! ブロックを得る。"
   },
   "sneckomod:PureSnecko": {
-    "NAME": "Shift",
-    "DESCRIPTION": "sneckomod:Snekproof. NL *Transform all sneckomod:Offclass cards in your hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL *Transform all sneckomod:Offclass cards in your hand. NL They cost 1 less."
+    "NAME": "シフト",
+    "DESCRIPTION": "sneckomod:蛇避け NL 手札にある全ての sneckomod:オフクラス カードを sneckomod:変身 させる。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL 手札にある全ての sneckomod:オフクラス カードを sneckomod:変身 させる。 NL それらのコストを 1 減らす。"
   },
   "sneckomod:QuickBite": {
-    "NAME": "Snake Rake",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! - 2 cards. NL sneckomod:Muddle the highest-cost card in your hand."
+    "NAME": "スネークレーキ",
+    "DESCRIPTION": " !D! ダメージを与える。 NL !M! - 2 枚のカードを引く。 NL 手札の最もコストが高いカードを sneckomod:泥まみれ にする。"
   },
   "sneckomod:QuickMove": {
-    "NAME": "Quick Move",
-    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle the highest-cost card in your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle the !M! highest-cost cards in your hand."
+    "NAME": "素早い動き",
+    "DESCRIPTION": " !B! ブロックを得る。 NL 手札の最もコストが高いカードを sneckomod:泥まみれ にする。",
+    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL 手札の最もコストが高いカードを !M! 枚 sneckomod:泥まみれ にする。 "
   },
   "sneckomod:RainOfDice": {
-    "NAME": "Rain of Dice",
-    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy. NL sneckomod:Muddle this, then return this to your hand."
+    "NAME": "ダイスの雨",
+    "DESCRIPTION": "ランダムな敵に !qqq! - !D! ダメージを与える。 NL sneckomod:泥まみれ にしたこのカードを手札に戻す。"
   },
   "sneckomod:Restock": {
-    "NAME": "Restock",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard your hand. NL Draw 5-10 cards. NL Exhaust."
+    "NAME": "再ストック",
+    "DESCRIPTION": "sneckomod:蛇避け NL 手札を捨てる。 NL 5-10 枚のカードを引く。 NL 廃棄"
   },
   "sneckomod:Rotation": {
-    "NAME": "Rotation",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!."
+    "NAME": "ローテーション",
+    "DESCRIPTION": "sneckomod:蛇避け NL 全ての sneckomod:オフクラス カード を捨てる。 NL 同量のカードを引く。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL 全ての sneckomod:オフクラス カード を捨てる。 NL 同量のカード + !M! 枚引く。"
   },
   "sneckomod:SerpentIdol": {
-    "NAME": "Serpent Idol",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Choose 1 of 3 random sneckomod:Offclass cards to gain. It costs 0 this turn. NL Exhaust."
+    "NAME": "蛇の像",
+    "DESCRIPTION": "sneckomod:蛇避け NL ランダムな sneckomod:オフクラス 3枚の中から1枚手札に加える。このターンそのコストは 0 NL 廃棄"
   },
   "sneckomod:SerpentMind": {
-    "NAME": "Exotic Form",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Whenever you play an sneckomod:Offclass card, draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Whenever you play an sneckomod:Offclass card, draw 1 card."
+    "NAME": "異邦化",
+    "DESCRIPTION": "sneckomod:蛇避け NL sneckomod:オフクラス カードをプレイする度に カードを 1 枚引く。",
+    "UPGRADE_DESCRIPTION": " sneckomod:オフクラス カードをプレイする度に カードを 1 枚引く。"
   },
   "sneckomod:SlitherStrike": {
-    "NAME": "Slither Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn."
+    "NAME": "ずるずるストライク",
+    "DESCRIPTION": " !D! ダメージを与える。 NL ターン中、 sneckomod:オフクラス カードのコストを減らす。"
   },
   "sneckomod:SnakeSap": {
-    "NAME": "Snake Sap",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !qqq! - !D! damage. NL Gain 1 - !M! [E] . NL Exhaust."
+    "NAME": "スネークビンタ",
+    "DESCRIPTION": "sneckomod:蛇避け NL !qqq! - !D! ダメージを与える。 NL 1 - !M! の [E] を得る。 NL 廃棄"
   },
   "sneckomod:SnekBeam": {
-    "NAME": "Snek Beam",
-    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unidentified cards in your deck. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unidentified cards in your deck.",
+    "NAME": "スネッコビーム",
+    "DESCRIPTION": "デッキ内の未識別カードの数だけ敵全体にダメージを与える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "デッキ内の未識別カードの数だけ敵全体にダメージを与える。",
     "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.) NL Exhaust.",
-      " NL (Deals !D! damage.)"
+      " NL ( !D! ダメージ) NL 廃棄",
+      " NL ( !D! ダメージ)"
     ]
   },
   "sneckomod:SnekBite": {
-    "NAME": "Snek Bite",
-    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the highest-cost card in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the !M! highest-cost cards in your hand."
+    "NAME": "スネッコバイト",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 手札の最もコストが高いカードを sneckomod:泥まみれ にする。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 手札の最もコストが高いカードを !M! 枚 sneckomod:泥まみれ にする。 "
   },
   "sneckomod:SoulCleanse": {
-    "NAME": "Soul Cleanse",
-    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3."
+    "NAME": "ソウルクリーン",
+    "DESCRIPTION": "sneckomod:蛇避け NL 手札のカードを sneckomod:泥まみれ にする。 sneckomod:泥まみれ にしたカードはコスト 3 にはならない。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL 手札のカードを sneckomod:泥まみれ にする。 sneckomod:泥まみれ にしたカードはコスト 3 にはならない。"
   },
   "sneckomod:SoulDraw": {
-    "NAME": "Soul Draw",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! random sneckomod:Offclass cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 - !M! cards."
+    "NAME": "ソウルドロー",
+    "DESCRIPTION": "sneckomod:蛇避け NL ランダムで !M! 枚の sneckomod:オフクラス カードを得る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL 1 - !M! 枚のカードを引く。"
   },
   "sneckomod:SoulExchange": {
-    "NAME": "Soul Exchange",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, NL Choose a card, then *Transform your hand to that card's class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw !M! cards, NL Choose a card, then *Transform your hand to that card's class.",
+    "NAME": "ソウル・エクスチェンジ",
+    "DESCRIPTION": "sneckomod:蛇避け NL カードを 1 枚引く。 NL カードを 1 枚選び、 手札をそのクラスのカードに sneckomod:変身 させる。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL カードを !M! 枚引く。 NL カードを 1 枚選び、 手札をそのクラスのカードに sneckomod:変身 させる。",
     "EXTENDED_DESCRIPTION": [
-      "Exhaust for Soul Exchange."
+      "エクスチェンジの為に廃棄する。"
     ]
   },
   "sneckomod:SoulRoll": {
-    "NAME": "Soul Roll",
-    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. NL Draw 1 card."
+    "NAME": "ソウルロール",
+    "DESCRIPTION": "sneckomod:蛇避け NL 手札を sneckomod:泥まみれ にする。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL 手札を sneckomod:泥まみれ にする。 NL カードを 1 枚引く。"
   },
   "sneckomod:Strike": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "ストライク",
+    "DESCRIPTION": " !D! ダメージを与える。"
   },
   "sneckomod:TailWhip": {
-    "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! - 2 Weak. NL Apply !M! - 2 Vulnerable."
+    "NAME": "テイルウィップ",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 脱力 !M! - 2 と NL 弱体 !M! - 2 を与える。"
   },
   "sneckomod:Transmogrify": {
-    "NAME": "Transmogrify",
-    "DESCRIPTION": "Choose 1 of 2 Relics to lose. NL Obtain a random Relic of the same rarity. NL Exhaust.",
+    "NAME": "変貌",
+    "DESCRIPTION": "手持ちのレリック2種から1つを選び、それを永久的に失う。 NL 同じレアリティのランダムなレリックを得る。 NL 廃棄",
     "EXTENDED_DESCRIPTION": [
-      "I have no Relicsss to ssswap.",
-      "Choose a Relic to lose.",
-      "Lose ",
-      " and obtain another ",
-      " Relic."
+      "交換すすする レリックが無い。",
+      "選択したレリックは失われる",
+      " ",
+      " を捨てて 別の ",
+      " レリックを得る。 "
     ]
   },
   "sneckomod:TrashToTreasure": {
-    "NAME": "Trash to Treasure",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost."
+    "NAME": "ガラクタを宝物に",
+    "DESCRIPTION": "sneckomod:蛇避け NL カードを1枚廃棄する。 NL コストに等しい [E] を得る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL カードを1枚廃棄する。 NL コストに等しい [E] を得る。"
   },
   "sneckomod:UnendingSupply": {
-    "NAME": "Unending Supply",
-    "DESCRIPTION": "At the start of each turn, gain a random sneckomod:Offclass card."
+    "NAME": "無限サプライ",
+    "DESCRIPTION": "ターン開始時、ランダムな sneckomod:オフクラス カードを得る。"
   },
   "sneckomod:Unknown": {
-    "NAME": "??? Basic",
-    "DESCRIPTION": "*Unidentified Basic Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Basic Card."
+    "NAME": "??? 基本",
+    "DESCRIPTION": "*未識別 NL 基本カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 基本カード"
   },
   "sneckomod:Unknown0Cost": {
-    "NAME": "??? 0-Cost",
-    "DESCRIPTION": "*Unidentified 0 Cost Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified 0 Cost Card."
+    "NAME": "??? 0-コスト",
+    "DESCRIPTION": "*未識別 NL 0 コストカード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 0 コストカード"
   },
   "sneckomod:Unknown1Cost": {
-    "NAME": "??? 1-Cost",
-    "DESCRIPTION": "*Unidentified 1 Cost Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified 1 Cost Card."
+    "NAME": "??? 1-コスト",
+    "DESCRIPTION": "*未識別 NL 1 コストカード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 1 コストカード"
   },
   "sneckomod:Unknown2Cost": {
-    "NAME": "??? 2-Cost",
-    "DESCRIPTION": "*Unidentified 2 Cost Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified 2 Cost Card."
+    "NAME": "??? 2-コスト",
+    "DESCRIPTION": "*未識別 NL 2 コストカード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 2 コストカード"
   },
   "sneckomod:Unknown3Cost": {
-    "NAME": "??? 3-Cost",
-    "DESCRIPTION": "*Unidentified 3 Cost Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified 3 Cost Card."
+    "NAME": "??? 3-コスト",
+    "DESCRIPTION": "*未識別 NL 3 コストカード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 3 コストカード"
   },
   "sneckomod:UnknownBlock": {
-    "NAME": "??? Block",
-    "DESCRIPTION": "*Unidentified Block Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Block Card."
+    "NAME": "??? ブロック",
+    "DESCRIPTION": "*未識別 NL ブロックカード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL ブロックカード"
   },
   "sneckomod:UnknownBoss": {
-    "NAME": "??? Boss",
-    "DESCRIPTION": "*Unidentified Colorless Boss card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Colorless Boss card."
+    "NAME": "??? ボス",
+    "DESCRIPTION": "*未識別 NL 無色のボスカード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 無色のボスカード"
   },
   "sneckomod:UnknownClass": {
-    "NAME": "??? Class",
-    "DESCRIPTION": "*Unidentified YouShouldNeverSeeThis-ReportToDev Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified YouShouldNeverSeeThis-ReportToDev Card."
+    "NAME": "??? クラス",
+    "DESCRIPTION": "*未識別 NL 有り得ないカードだから開発者に報告して",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 有り得ないカードだから開発者に報告して"
   },
   "sneckomod:UnknownColorless": {
-    "NAME": "??? Colorless",
-    "DESCRIPTION": "*Unidentified Colorless Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Colorless Card."
+    "NAME": "??? 無色",
+    "DESCRIPTION": "*未識別 NL 無色 カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 無色 カード"
   },
   "sneckomod:UnknownCommonAttack": {
-    "NAME": "??? C Attack",
-    "DESCRIPTION": "*Unidentified Common Attack Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Common Attack Card."
+    "NAME": "??? C アタック",
+    "DESCRIPTION": "*未識別 NL コモン アタック カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL コモン アタック カード"
   },
   "sneckomod:UnknownCommonSkill": {
-    "NAME": "??? C Skill",
-    "DESCRIPTION": "*Unidentified Common Skill Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Common Skill Card."
+    "NAME": "??? C スキル",
+    "DESCRIPTION": "*未識別 NL コモン スキル カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL コモン スキル カード"
   },
   "sneckomod:UnknownDexterity": {
-    "NAME": "??? Dexterity",
-    "DESCRIPTION": "*Unidentified Dexterity Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Dexterity Card."
+    "NAME": "??? 敏捷性",
+    "DESCRIPTION": "*未識別 NL 敏捷性 カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 敏捷性 カード"
   },
   "sneckomod:UnknownDraw": {
-    "NAME": "??? Draw",
-    "DESCRIPTION": "*Unidentified Draw Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Draw Card."
+    "NAME": "??? ドロー",
+    "DESCRIPTION": "*未識別 NL ドロー カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL ドロー カード"
   },
   "sneckomod:UnknownEthereal": {
-    "NAME": "??? Ethereal",
-    "DESCRIPTION": "*Unidentified Ethereal Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Ethereal Card."
+    "NAME": "??? エセリアル",
+    "DESCRIPTION": "*未識別 NL エセリアル カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL エセリアル カード"
   },
   "sneckomod:UnknownExhaust": {
-    "NAME": "??? Exhaust",
-    "DESCRIPTION": "*Unidentified Exhaust Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Exhaust Card."
+    "NAME": "??? 廃棄",
+    "DESCRIPTION": "*未識別 NL 廃棄 カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 廃棄 カード"
   },
   "sneckomod:UnknownRareAttack": {
-    "NAME": "??? R Attack",
-    "DESCRIPTION": "*Unidentified Rare Attack Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Rare Attack Card."
+    "NAME": "??? R アタック",
+    "DESCRIPTION": "*未識別 NL レア アタック カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL レア アタック カード"
   },
   "sneckomod:UnknownRarePower": {
-    "NAME": "??? R Power",
-    "DESCRIPTION": "*Unidentified Rare Power Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Rare Power Card."
+    "NAME": "??? R パワー",
+    "DESCRIPTION": "*未識別 NL レア パワー カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL レア パワー カード"
   },
   "sneckomod:UnknownRareSkill": {
-    "NAME": "??? R Skill",
-    "DESCRIPTION": "*Unidentified Rare Skill Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Rare Skill Card."
+    "NAME": "??? R スキル",
+    "DESCRIPTION": "*未識別 NL レア スキル カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL レア スキル カード"
   },
   "sneckomod:UnknownStrength": {
-    "NAME": "??? Strength",
-    "DESCRIPTION": "*Unidentified Strength Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Strength Card."
+    "NAME": "??? 筋力",
+    "DESCRIPTION": "*未識別 NL 筋力 カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 筋力 カード"
   },
   "sneckomod:UnknownStrike": {
-    "NAME": "??? Strike",
-    "DESCRIPTION": "*Unidentified Strike Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Strike Card."
+    "NAME": "??? ストライク",
+    "DESCRIPTION": "*未識別 NL ストライク カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL ストライク カード"
   },
   "sneckomod:UnknownUncommonAttack": {
-    "NAME": "??? U Attack",
-    "DESCRIPTION": "*Unidentified Uncommon Attack Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Uncommon Attack Card."
+    "NAME": "??? U アタック",
+    "DESCRIPTION": "*未識別 NL アンコモン アタック カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL アンコモン アタック カード"
   },
   "sneckomod:UnknownUncommonPower": {
-    "NAME": "??? U Power",
-    "DESCRIPTION": "*Unidentified Uncommon Power Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Uncommon Power Card."
+    "NAME": "??? U パワー",
+    "DESCRIPTION": "*未識別 NL アンコモン パワー カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL アンコモン パワー カード"
   },
   "sneckomod:UnknownUncommonSkill": {
-    "NAME": "??? U Skill",
-    "DESCRIPTION": "*Unidentified Uncommon Skill Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Uncommon Skill Card."
+    "NAME": "??? U スキル",
+    "DESCRIPTION": "*未識別 NL アンコモン スキル カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL アンコモン スキル カード"
   },
   "sneckomod:UnknownVulnerable": {
-    "NAME": "??? Vulnerable",
-    "DESCRIPTION": "*Unidentified Vulnerable Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Vulnerable Card."
+    "NAME": "??? 弱体",
+    "DESCRIPTION": "*未識別 NL 弱体 カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 弱体 カード"
   },
   "sneckomod:UnknownWeak": {
-    "NAME": "??? Weak",
-    "DESCRIPTION": "*Unidentified Weak Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Weak Card."
+    "NAME": "??? 脱力",
+    "DESCRIPTION": "*未識別 NL 脱力 カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 脱力 カード"
   },
   "sneckomod:UnknownX": {
-    "NAME": "??? X-Cost",
-    "DESCRIPTION": "*Unidentified X Cost Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified X Cost Card."
+    "NAME": "??? X-コスト",
+    "DESCRIPTION": "*未識別 NL X コスト カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL X コスト カード"
   },
   "sneckomod:UnlimitedRolls": {
-    "NAME": "Unlimited Rolls",
-    "DESCRIPTION": "At the start of your turn, gain an gremlin:Echo of *Soul *Roll.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain an gremlin:Echo of *Soul *Roll."
+    "NAME": "無限ロール",
+    "DESCRIPTION": "ターン開始時、 *廃棄 の付いた *ソウルロール を手札に加える。",
+    "UPGRADE_DESCRIPTION": "天賦 NL ターン開始時、 *廃棄 の付いた *ソウルロール を手札に加える。"
   },
   "sneckomod:WideSting": {
-    "NAME": "Wide Sting",
-    "DESCRIPTION": "Deal !M! - !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand."
+    "NAME": "ワイドスティング",
+    "DESCRIPTION": "敵全体に !M! - !D! ダメージ。 NL 手札の sneckomod:オフクラス カードを全てアップグレードする。"
   }
 }
