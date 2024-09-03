@@ -207,8 +207,8 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "見つけて置換",
-    "DESCRIPTION": "あなたの山札か捨て札からカードを選んで1枚引く。 NL 元の場所に *めまい を加える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "あなたの山札か捨て札からカードを選んで1枚引く。 NL 廃棄",
+    "DESCRIPTION": "あなたの山札か捨て札から 1 枚のカードを選び、手札に加える。 NL 元の場所に *めまい を加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "あなたの山札か捨て札から 1 枚のカードを選び、手札に加える。 NL 廃棄",
     "EXTENDED_DESCRIPTION": [
       "選択"
     ]

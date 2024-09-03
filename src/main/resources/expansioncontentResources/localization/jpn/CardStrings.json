@@ -10,7 +10,7 @@
     "NAME": "ヘクサバーン",
     "DESCRIPTION": " !M! ターン後、ランダムな敵に 6 回 !D! ダメージを与える。 NL 筋力 で強化される。"
   },
-  "expansioncontent:Invincible筋力": {
+  "expansioncontent:InvincibleStrength": {
     "NAME": "インビンシブル",
     "DESCRIPTION": "expansioncontent:無敵 10 を得る。 NL 既に expansioncontent:無敵 を持っていた場合、発動回数を 1 増やす"
   },

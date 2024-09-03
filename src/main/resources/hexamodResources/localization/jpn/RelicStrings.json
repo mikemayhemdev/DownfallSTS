@@ -17,15 +17,15 @@
     "NAME": "エーテルのマーク",
     "FLAVOR": "もっといい物が出来るか試してみよう...。",
     "DESCRIPTIONS": [
-      "スピリットブランド",
-      " [] NL と置き換える。 NL #y点火 した時 #b4 #yブロック を得る。"
+      "",
+      " スピリットブランド と置き換える。 NL #y点火 した時 #b4 #yブロック を得る。"
     ]
   },
   "hexamod:IceCube": {
     "NAME": "ザナトスの凍てつく護符",
     "FLAVOR": "なんだか...寒い。",
     "DESCRIPTIONS": [
-      "ターン開始時 [E] を得る。 戦闘開始時 #b1 #yhexamod:火力 を失い、 #yhexamod:インフェルノゴーストフレイム から #yhexamod:火力 を得られなくなる。"
+      "ターン開始時 [E] を得る。 戦闘開始時 #b1 #yhexamod:火力 を失い、 #yhexamod:インフェルノ #yゴーストフレイム から #yhexamod:火力 を得られなくなる。"
     ]
   },
   "hexamod:SoulStone": {
