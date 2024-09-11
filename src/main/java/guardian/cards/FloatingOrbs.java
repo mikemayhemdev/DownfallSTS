@@ -18,7 +18,7 @@ public class FloatingOrbs extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("FloatingOrbs");
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/floatingOrbs.png";
+    public static final String IMG_PATH = "cards/FloatingOrbs.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
