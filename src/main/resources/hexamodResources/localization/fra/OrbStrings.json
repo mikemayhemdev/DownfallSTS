@@ -1,6 +1,6 @@
 {
   "hexamod:SearingGhostflame": {
-    "NAME": "Feu Follet Ardent",
+    "NAME": "Feu Follet Incinérateur",
     "DESCRIPTION": [
       "#yEnflammé. ",
 	  "Est #yEnflammé lorsque #b" ,
@@ -13,7 +13,7 @@
     ]
   }, 
   "hexamod:CrushingGhostflame": {
-    "NAME": "Feu Follet Écraseur",
+    "NAME": "Feu Follet Écrasent",
     "DESCRIPTION": [
       "#yEnflammé. ",
 	  "Est #yEnflammé lorsque #b" ,
@@ -21,7 +21,7 @@
 	  " #yCompétences sont jouées.",
 	  "Est #yEnflammé lorsque #b2 #yCompétences sont jouées pendant que vous êtes sur celui-ci.",
 	  " NL NL #yInflammation: Infligez #b",
-	  " dégâts à un ennemi aléatoire deux fois.",
+	  " dégâts à un ennemi aléatoire.",
 		" NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet."
     ]
   },
@@ -39,16 +39,15 @@
     "hexamod:InfernoGhostflame": {
     "NAME": "Feu Follet Infernal",
     "DESCRIPTION": [
-      "#yEnflammé. ",
+      "#yEnflammé. S'éteindra à la fin de chaque tour. ",
 	  "Est #yEnflammé lorsque vous dépensez [E] [E] [E] .",
 	  "Est #yEnflammé lorsque vous dépensez [E] [E] .",
 	  "Est #yEnflammé lorsque vous dépensez [E] .",
 	  "Error. Please report to mod dev: ",
-	  "Est #yEnflammé lorsque vous dépensez [E] [E] [E] pendant que vous êtes sur celui-ci.",
+	  "Est #yEnflammé lorsque vous dépensez [E] [E] [E] pendant que vous êtes sur celui-ci. S'éteindra à la fin de chaque tour.",
 	  " NL NL #yInflammation: Infligez #b",
-	  " dégâts à un ennemi aléatoire pour chaque #yFeu #yFollet #yEnflammé, puis #yÉteignez-les.",
-		" NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet.",
-		" NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet."
+	  " dégâts à un ennemi aléatoire pour chaque #yFeu #yFollet #yEnflammé, puis #yÉteignez-les. si tous les feu follet etait #yEnflammé, gagnez #b2 #yIntensité.",
+	  " NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet."
     ]
   }, 
   "hexamod:MayhemGhostflame": {
@@ -57,7 +56,8 @@
       "#yEnflammé. ",
 	  "Est #yEnflammé lorsque vous terminez votre tour.",
 	  "Est #yEnflammé lorsque vou terminez votre tour sur celui-ci.",
-	  " NL NL #yInflammation: Jouez la carte du haut de votre pioche.",
+	  " NL NL #yInflammation: #yScrutez #b.",
+	  " puis jouez la carte au dessus de la pioche.",
 		" NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet."
     ]
   }

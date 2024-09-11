@@ -235,7 +235,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             Settings.GameLanguage.ENG, Settings.GameLanguage.ZHS,
              Settings.GameLanguage.JPN,
             Settings.GameLanguage.KOR,
-//            Settings.GameLanguage.FRA,
+            Settings.GameLanguage.FRA,
 //            Settings.GameLanguage.ZHT,
             Settings.GameLanguage.RUS,
 //            Settings.GameLanguage.PTB
@@ -1378,7 +1378,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 //SlimeboundMod.logger.info("ERROR! Had to reset the bosses mid-run!");
             }
             if (AbstractDungeon.actNum <= 3) {
-                Method setBoss = null;
+                Method setBoss;
                 try {
                     AbstractDungeon.bossKey = possEncounterList.remove(AbstractDungeon.cardRandomRng.random(possEncounterList.size() - 1));
                     setBoss = AbstractDungeon.class.getDeclaredMethod("setBoss", String.class);

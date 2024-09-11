@@ -9,12 +9,12 @@
   "hexamod:DoubleChargePotion": {
     "NAME": "Fluide combustible",
     "DESCRIPTIONS": [
-      "#yEnflammez de force le Feu Follet #yActif #b",
+      "#yEnflammez le Feu Follet #yActif #b",
       " fois."
     ]
   },
   "hexamod:EctoCoolerPotion": {
-    "NAME": "Ecto-Cooler",
+    "NAME": "Potion Ethérée",
     "DESCRIPTIONS": [
       "Choisissez #b1 carte #yEthérée parmi #b3 aléatoires de n'importe quelle classe dans votre main. Elle coûte #b0 ce tour.",
       "hoisissez #b1 carte #yEthérée parmi #b3 aléatoires de n'importe quelle classe et ajoutez-en #b",
@@ -24,9 +24,9 @@
   "hexamod:InfernoChargePotion": {
     "NAME": "Potion infernale",
     "DESCRIPTIONS": [
-      "#yEnflammez le Feu Follet Infernal.",
-      "#yEnflammez le Feu Follet Infernal #b",
-      " fois."
+      "Vos feu follet affecte tous les ennemies pour se combat.",
+      "Vos feu follet affecte tous les ennemies #b",
+      " fois pour se combat."
     ]
   }
 }

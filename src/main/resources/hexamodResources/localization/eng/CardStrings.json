@@ -263,7 +263,7 @@
   "hexamod:Premonition": {
     "NAME": "Premonition",
     "DESCRIPTION": "Choose a card type, then play a random card of that type in your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card type then, play a random card of that type in your draw pile.",
+    "UPGRADE_DESCRIPTION": "Choose a card type, then play a random card of that type in your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "to play and Exhaust."
     ]
@@ -332,7 +332,7 @@
   },
   "hexamod:BrightRitual": {
     "NAME": "Bright Ritual",
-    "DESCRIPTION": "Gain [E] and draw 1 card for each *Ignited Ghostflame, then hexamod:Extinguish them. NL Exhaust."
+    "DESCRIPTION": "Reset the ghostflame wheel. NL Gain [E] and draw 1 card for each Ghostflame hexamod:Extinguished this way. NL Exhaust."
   },
   "hexamod:NaughtySpirit": {
     "NAME": "Naughty Spirit",
@@ -348,7 +348,7 @@
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "Strike from Beyond",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 Ethereal card from your draw pile.",
+    "DESCRIPTION": "Deal !D! damage. NL Draw an Ethereal card from your draw pile.",
     "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
   },
   "hexamod:SuperheatedStrike": {

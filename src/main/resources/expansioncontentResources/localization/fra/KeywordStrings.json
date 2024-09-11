@@ -42,12 +42,12 @@
     "DESCRIPTION": "Les créatures enchaînées perdent de la #yForce pour un tour."
   },
   {
-    "PROPER_NAME": "Temporary HP",
+    "PROPER_NAME": "PV temporaire",
     "ID": "temp_hp",
     "NAMES": [
-      "temp hp",
+      "pv_temporaire",
       "temp_hp"
     ],
-    "DESCRIPTION": "Until end of combat, prevents damage to HP."
+    "DESCRIPTION": "jusqu'a la fin du combat, prevois les perte de PV."
   }
 ]

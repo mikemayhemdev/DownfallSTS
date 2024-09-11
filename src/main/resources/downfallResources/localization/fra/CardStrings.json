@@ -1,8 +1,4 @@
 {
-  "downfall:SummonMushrooms": {
-    "NAME": "Fungus Among Us",
-    "DESCRIPTION": "Tuez tous les Champignons. Soignez vous autant de leurs PV restants. NL Invoquez deux Champignons."
-  },
   "downfall:Aged": {
     "NAME": "Vieillesse",
     "DESCRIPTION": "Injouable. Éthérée. NL À la fin de votre tour, ajoutez un Néant sur le haut de votre pioche."
@@ -27,14 +23,12 @@
     "NAME": "Écervellé",
     "DESCRIPTION": "Injouable. NL Quand cette carte est piochée, si c'est votre tour, remplissez votre main avec des gremlin:Échos de cette carte."
   },
+  "downfall:SummonMushrooms": {
+    "NAME": "Fungus Among Us",
+    "DESCRIPTION": "Tuez tous les Champignons. Soignez vous autant de leurs PV restants. NL Invoquez deux Champignons."
+  },							   
   "downfall:BossMaintenance": {
     "NAME": "Entretien",
     "DESCRIPTION": "Vos *Frappes infligent !M! dégâts supplémentaires ce combat. NL Gagnez !B! de Dexterité. NL Cette carte coûte 1 [E] de plus ce combat."
-  },
-  "downfall:HeartsFavorPower": {
-    "NAME": "Heart's Favor",
-    "DESCRIPTIONS": [
-      "Whenever Neow's #yInvincible reaches #b0, gain a #yCorrupted #yForm."
-    ]
   }
 }

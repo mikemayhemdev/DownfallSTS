@@ -42,6 +42,7 @@
     "DESCRIPTION": "L'Intensité augmente les dégâts, l'Armure et la Brûlure appliqués par les Feu Follets lorsqu'ils sont Enflammés ."
   },
   {
+	"ID": "soulburn",
     "PROPER_NAME": "Brûlure",
     "NAMES": [
       "brûlure",
@@ -85,17 +86,17 @@
     "DESCRIPTION": "Si les #b6 Sceaux ont été joués ce combat, obtenez #pLe #pSceau #pBrisé et retirez les Sceaux de votre deck."
   },
   {
+	"ID": "afterlife",
     "PROPER_NAME": "Après-vie",
     "NAMES": [
-      "après-vie",
-      "afterlife"
+      "après-vie"
     ],
     "DESCRIPTION": "Si cette carte est Épuisée, ses effets s'activent."
   },
   {
-    "PROPER_NAME": "Écraseur",
+    "PROPER_NAME": "Écrasent",
     "NAMES": [
-      "écraseur",
+      "écrasent",
       "crushing"
     ],
     "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsque #b2 #yCompétences sont jouées alors que celui-ci est #yActif. #yInflammation: Lorsqu'il est #yEnflammé, infligez #b4 dégâts à un ennemi aléatoire deux fois."
@@ -109,9 +110,9 @@
     "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsqu'un #yPouvoir est joué alors que celui-ci est #yActif. #yInflammation: Lorsqu'il est #yEnflammé, gagnez #b4 #yd'Armure et #b1 de #yForce."
   },
   {
-    "PROPER_NAME": "Ardent",
+    "PROPER_NAME": "Incinérateur",
     "NAMES": [
-      "ardent",
+      "incinérateur",
       "searing"
     ],
     "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsque #b2 #yAttaques sont jouées alors que celui-ci est #yActif. #yInflammation: Lorsqu'il est #yEnflammé, appliquez #b4 de #yBrûlure à un ennemi aléatoire."

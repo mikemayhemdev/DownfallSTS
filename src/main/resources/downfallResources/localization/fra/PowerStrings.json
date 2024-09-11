@@ -46,6 +46,13 @@
       "Chaque tour que vous jouez une Attaque avec ce pouvoir actif, cet ennemi gagne #b", " de #yForce. Actuellement, il va gagner #b", " de #yForce."
     ]
   },
+  "downfall:FearNoEvil": {
+    "NAME": "Craindre aucun mal",
+    "DESCRIPTIONS": [
+      "Si vous jouez une carte attaque a se tour, cette ennemie changera sa posture en #yCalm une fois qu'il ora jouez sa carte #yFear #yNo #yEvil .",
+      "cette ennemie changera sa posture en #yCalm une fois qu'il ora jouez sa carte #yFear #yNo #yEvil."	 																																																		  
+    ]
+  },
   "downfall:PoisonResist": {
     "NAME": "Résistance au poison",
     "DESCRIPTIONS": [
@@ -78,6 +85,20 @@
       "La Gardienne perdra #b4 de #yForce quand elle entre pour la prochaine fois en #yDivinité ou joue #yRagnarok."
     ]
   },
+  "downfall:WatcherSkillPower": {
+    "NAME": "En proie à la discorde",
+    "DESCRIPTIONS": [
+      "Chaque fois que vous jouez une compétence, la Gardienne gagne #b",
+      " temporary #yStrength.",
+      "Chaque fois que vous jouez une compétence, la Gardienne gagne #yTemporary #yStrength [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:WrathNextTurnPower": {
+    "NAME": "Colère au prochain tour",
+    "DESCRIPTIONS": [
+      "Au début de son tour, la Gardienne entrera en #yWrath [REMOVE_SPACE]."	 																			
+    ]
+  },
   "downfall:NeowBlasphemersDemise": {
     "NAME": "Mort blasphématoire",
     "DESCRIPTIONS": [
@@ -102,7 +123,7 @@
     "NAME": "Sac de couteaux",
     "DESCRIPTIONS": [
       "La première fois que vous jouez une carte qui coûte #b2 ou plus chaque tour, la Silencieuse gagne 2 #ySurins."
-      ]
+    ]
   },
   "downfall:NeowBagOfKnives": {
     "NAME": "Sac de couteaux",
@@ -165,6 +186,13 @@
       " de #yConcentration."
     ]
   },
+  "downfall:DefectCuriosityLighning": {
+    "NAME": "Cognition impartiale",
+    "DESCRIPTIONS": [
+      "Chaque fois que vous jouez une carte #yPower, le Défectueux canalise #b",
+      " #yLightning #yOrb [REMOVE_SPACE]."
+    ]
+  },								   
   "downfall:NeowUnbiasedCognition": {
     "NAME": "Cognition Impartiale",
     "DESCRIPTIONS": [
@@ -303,6 +331,13 @@
       "La Concentration de l'Ermite est brisée et ses effets #yDans #yLe #yMille ne se déclencheront pas ce tour."
     ]
   },
+  "downfall:TangerinePower": {
+    "NAME": "Député",
+    "DESCRIPTIONS": [
+      "Quand Mandarine meurt, l'Ermite brise sa #yConcentration et gagnes #b",
+      " #yStrength."
+    ]
+  },							  	
   "downfall:HermitWheelOfFortune": {
     "NAME": "Roue de la Fortune",
     "DESCRIPTIONS": [
@@ -366,6 +401,13 @@
       " NL Gagne 2 de Tampon #y(Défectueux)",
       " NL Gagne 5 de Mantra #y(Gardienne)",
       " NL Ajoute un *Déclin dans votre pioche. #y(Ermite)"
+    ]
+  },
+  "downfall:HeartsFavorPower": {
+    "NAME": "Faveur du coeur",
+    "DESCRIPTIONS": [
+      "Chaque fois que #yInvincible de Neow atteint #b0 [REMOVE_SPACE], Réduit sa #yGod #yof #yLife de #b",
+      " [REMOVE_SPACE]."
     ]
   }
 }

@@ -5,14 +5,14 @@
       "#yN'avancez pas à la fin de votre prochain tour.",
       "#yN'avancez pas à la fin de vos #b",
       " prochains tours."
-    ]
+    ]																								
   },
   "hexamod:ApocalypticArmorPower": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "La prochaine fois que vous #yEnflammez le Feu Follet Infernal et que tous les #b",
-      " Feu Follets soient #yEnflammés, terminez votre tour et jouez un tour supplémentaire.",
-      "Lorsque vous #yEnflammez le Feu Follet Infernal et qu'au moins #b"
+      "La prochaine fois que vous #yEnflammez #b",
+      " Feu Follets, gagnez un tour supplémentaire.",
+      "La prochaine fois que vous #yEnflammez au moins un #b"
     ]
   },
   "hexamod:ApplyBurnAtTurnStartOncePower": {
@@ -20,14 +20,14 @@
     "DESCRIPTIONS": [
       "Au début de votre prochain tour, appliquez #b",
       " de #yBrûlure à TOUS les ennemis."
-    ]
+    ]																								
   },
   "hexamod:BurnPerTurnPower": {
     "NAME": "Métal fondu",
     "DESCRIPTIONS": [
       "Applique #b",
       " de #yBrûlure après la prochain détonation de #yBrûlure sur cet ennemi."
-    ]
+    ]																								
   },
   "hexamod:BurnPower": {
     "NAME": "Brûlure",
@@ -43,7 +43,7 @@
     "DESCRIPTIONS": [
       "Lorsque vous infligez des dégâts non-bloqués, appliquez #b",
       " de #yBrûlure."
-    ]
+    ]																								
   },
   "hexamod:CommonPostCombatPower": {
     "NAME": "Récompense scellée: Carte",
@@ -53,11 +53,11 @@
       " carte supplémentaire."
     ]
   },
-  "hexamod:CrispyPower": {
-    "NAME": "Extra Crispy",
+  "hexamod:CrispyPower_new": {
+    "NAME": "Extra Croustillant",
     "DESCRIPTIONS": [
-      "La #yBrûlure appliquée est augmentée par #b",
-      "."
+      "Quand #yBrûlure s'active sur une créature, applique #b",
+      " #yBrûlure sur eux apres activation."
     ]
   },
   "hexamod:EnhancePower": {
@@ -65,8 +65,8 @@
     "DESCRIPTIONS": [
       "Augmentez les dégâts, la #yBrûlure, et l'Armure appliqué par les Feu Follets lorsqu'ils sont Enflammés par #b",
       ".",
-      "Diminuez les dégâts, la #yBrûlure, et l'Armure appliqué par les Feu Follets lorsqu'ils sont Enflammés par #b"
-
+      "Diminuez les dégâts, la #yBrûlure, et l'Armure appliqué par les Feu Follets lorsqu'ils sont Enflammés par #b",
+      "Double efficacité sur le #yFeu #yFollet #yIncinérateur."
     ]
   },
   "hexamod:EtherealRefundPower": {
@@ -77,10 +77,11 @@
     ]
   },
   "hexamod:FuturePower": {
-    "NAME": "Speedrun",
+    "NAME": "Dans l'ombre",
     "DESCRIPTIONS": [
-      "Lorsque vous #yAvancez, gagnez #b",
-      " #yd'Armure."
+      "Quand vous #yrétractez , vos prochaines #b",
+      " carte sera gratuite et sera #yÉpuiser.",
+      " cartes seront gratuites et seront #yÉpuiser."											  
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -91,11 +92,10 @@
       " cartes aléatoires dans votre deck."
     ]
   },
-  "hexamod:GainStrengthThatGoesAwayPower": {
+  "hexamod:StopFromAdvancingPower": {
     "NAME": "Ici et maintenant",
     "DESCRIPTIONS": [
-      "Si vous commencez et terminez votre tour sur le même Feu Follet, gagnez ",
-      " de #yForce."
+      "A la fin de votre tour, #yÉteignait le feu follet actuel."		
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
@@ -108,10 +108,9 @@
   "hexamod:GiftsFromBeyondPower": {
     "NAME": "Cartes cadeaux",
     "DESCRIPTIONS": [
-      "Au début de votre tour, #yRecyclez ",
-      " carte(s) Après-vie ",
-      " aléatoire.",
-      " aléatoires."
+      "Au début de votre tour, ajouter #b",
+      " carte #yAprès-vie dans votre main.",
+      " cartes #yAprès-vie dans votre main."					
     ]
   },
   "hexamod:GoldPostCombatPower": {
@@ -140,19 +139,16 @@
   "hexamod:ParanormalFormPower": {
     "NAME": "Poltergeist",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez une carte #yAprès-vie, infligez #b",
-      " dégâts à un ennemi aléatoire."
+      "Lorsque vous jouez une carte #yAprès-vie, un ennemie aléatoire perds #b",
+      " PV."
     ]
   },
   "hexamod:PastPower": {
     "NAME": "Danse du démon",
     "DESCRIPTIONS": [
-      "La/Les #b",
-      " première fois ",
-      " premières fois ",
-      "que vous #yRétractez chaque tour, gagnez [E] et piochez 1 carte. NL Vous avez rétracté #b",
-      " fois ce tour.",
-      " fois ce tour."
+      "A chaque fois que vous #yRétractez, piochez #b",																							 
+      " carte.",
+      " cartes."
     ]
   },
   "hexamod:PotionPostCombatPower": {
@@ -166,8 +162,8 @@
   "hexamod:RadiantPower": {
     "NAME": "Flammes radiantes",
     "DESCRIPTIONS": [
-      "Lorsqu'un Feu Follet est #yEnflammé, appliquez #b",
-      " de #yBrûlure à un ennemi aléatoire."
+      "Chaque fois qu'un Feu Follet est #yEnflammé, gagnez #b",
+      " #yBlocage."
     ]
   },
   "hexamod:SealPostCombatPower": {
@@ -181,13 +177,15 @@
   "hexamod:TimeStopPower": {
     "NAME": "Jugement dernier",
     "DESCRIPTIONS": [
-      "À la fin de votre tour, commencez immédiatement un autre tour. NL l'Énergie et l'Armure sont maintenus."
+      "À la fin de votre tour, commencez immédiatement un autre tour.",
+      "À la fin de votre tour, commencez immédiatement #b autre",
+      " tours."		   
     ]
   },
   "hexamod:VolcanoVisagePower": {
     "NAME": "Façade du volcan",
     "DESCRIPTIONS": [
-      "Au début de votre tour, appliquez #b",
+      "Chaque fois que vous #yEnflammez un feu follet, appliquez #b",
       " de #yBrûlure à TOUS les ennemis."
     ]
   },
@@ -195,6 +193,49 @@
     "NAME": "Bombe vivante",
     "DESCRIPTIONS": [
       "La prochaine fois que la #yBrûlure de cette créature s'active, cela affecte TOUS les ennemis."
+    ]
+  },
+  "hexamod:GainEnergyAtStartOfTurnPower": {
+    "NAME": "Plus d'énergie",
+    "DESCRIPTIONS": [
+      "Au début de votre tour gagnez "
+    ]
+  },
+  "hexamod:SoulburnOnExhaustPower": {
+    "NAME": "Infestation de brûlures",
+    "DESCRIPTIONS": [
+      "Chaque fois que vous #yÉpuiser une carte se tour, appliquez #b",
+      " #yBrûlure a cette créature."
+    ]
+  },
+  "hexamod:LoseIntensityPower": {
+    "NAME": "Intensité en baisse",
+    "DESCRIPTIONS": [
+      "À la fin du tour, perdez #b",
+      " #yIntensité [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:MaxHPPostCombatPower": {
+    "NAME": "Récompense scellée: PV Max",
+    "DESCRIPTIONS": [
+      "À la fin du combat, gagnez #b",
+      " PV Max."	 
+    ]
+  },
+  "hexamod:InfernoPotionPower": {
+    "NAME": "HexaBrûlure",
+    "DESCRIPTIONS": [
+      "Vos feu follet affecte tous les ennemies pour se combat.",
+      "Vos feu follet affecte tous les ennemies #b",
+      " fois pour se combat."
+    ]
+  },
+  "hexamod:PlayCardAndExhaustPower": {
+    "NAME": "Changement d'ombre",
+    "DESCRIPTIONS": [
+      "Votre prochaine carte et gratuite puis sera #yÉpuiser.",
+      "Vos prochaines #b",
+      " cartes seront gratuites puis seront #yÉpuiser."
     ]
   }
 }
