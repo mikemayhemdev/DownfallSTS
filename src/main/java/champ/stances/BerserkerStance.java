@@ -8,18 +8,13 @@ import champ.powers.DoubleStyleThisTurnPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import guardian.vfx.DefensiveModeStanceParticleEffect;
 
-import static champ.ChampMod.fatigue;
 import static champ.ChampMod.vigor;
 
 public class BerserkerStance extends AbstractChampStance {

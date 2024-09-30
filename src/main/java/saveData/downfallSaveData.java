@@ -35,4 +35,5 @@ public class downfallSaveData {
     public boolean PURE_SNECKO_MODE;
 
     public int IDENTIFY_RNG_COUNT;
+    public int BOUNTIES_COLLECTED;
 }

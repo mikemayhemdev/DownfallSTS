@@ -21,10 +21,17 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.MonsterRoom;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import downfall.util.TextureLoader;
+import expansioncontent.util.DownfallAchievementUnlocker;
+import expansioncontent.util.DownfallAchievementVariables;
+import sneckomod.TheSnecko;
 
 import java.util.HashMap;
 
@@ -139,6 +146,26 @@ public class FunctionHelper {
             ((AbstractBronzeCard) c).onInput();
         }
         if (held.size() == max()) {
+            boolean bossPresent = false;
+            AbstractRoom currentRoom = AbstractDungeon.getCurrRoom();
+            if (currentRoom instanceof MonsterRoom) {
+                MonsterGroup monsters = currentRoom.monsters;
+                for (AbstractMonster monster : monsters.monsters) {
+                    if (monster.type == AbstractMonster.EnemyType.BOSS) {
+                        bossPresent = true;
+                        break;
+                    }
+                }
+            }
+
+            if (bossPresent) {
+                DownfallAchievementVariables.functionCreated = true;
+            }
+
+            if (AbstractDungeon.player instanceof TheSnecko) {
+                DownfallAchievementUnlocker.unlockAchievement("NOODLE_CODE");
+            }
+
             output();
         }
         secretStorage = makeFunction(false);

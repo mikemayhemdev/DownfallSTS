@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.ConfusionPower;
 import com.megacrit.cardcrawl.relics.SneckoEye;
 import downfall.util.TextureLoader;
+import expansioncontent.util.DownfallAchievementUnlocker;
 import sneckomod.SneckoMod;
 
 public class SuperSneckoEye extends CustomRelic {
@@ -65,6 +66,7 @@ public class SuperSneckoEye extends CustomRelic {
 
     public void onEquip() {
         AbstractDungeon.player.masterHandSize += 2;
+        DownfallAchievementUnlocker.unlockAchievement("MASTER_OF_CONFUSION");
     }
 
     public void onUnequip() {

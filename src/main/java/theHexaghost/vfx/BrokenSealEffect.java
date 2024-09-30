@@ -154,7 +154,7 @@ public class BrokenSealEffect extends AbstractGameEffect {
         for (AbstractCard c : this.seals){
             c.update();
         }
-        
+
         this.duration -= Gdx.graphics.getDeltaTime() * 1.3F;
 
         if (this.duration < 0.0F) {

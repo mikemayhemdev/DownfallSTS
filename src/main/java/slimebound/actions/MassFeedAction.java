@@ -9,11 +9,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import expansioncontent.util.DownfallAchievementUnlocker;
 
 public class MassFeedAction
         extends AbstractGameAction {
     public int[] damage;
     private int increaseHpAmount;
+    private int killCount;
 
     public MassFeedAction(AbstractCreature source, int[] amount, DamageInfo.DamageType type,
                           AbstractGameAction.AttackEffect effect, int increaseHpAmount) {
@@ -23,6 +25,7 @@ public class MassFeedAction
         this.damageType = type;
         this.attackEffect = effect;
         this.increaseHpAmount = increaseHpAmount;
+        this.killCount = 0;
     }
 
     public void update() {
@@ -63,9 +66,15 @@ public class MassFeedAction
                     if (((target.isDying) || (target.currentHealth <= 0))
                             && (!target.halfDead) && (!target.hasPower("Minion"))) {
                         AbstractDungeon.player.increaseMaxHp(this.increaseHpAmount, false);
+                        killCount++;
                     }
                 }
             }
+
+            if (killCount >= 3) {
+                DownfallAchievementUnlocker.unlockAchievement("GORGED");
+            }
+
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();
             }

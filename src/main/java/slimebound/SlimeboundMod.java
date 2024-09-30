@@ -611,7 +611,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         }
     }
 
-
     public void receiveCardUsed(AbstractCard c) {
 
         if (c.type == AbstractCard.CardType.ATTACK) {

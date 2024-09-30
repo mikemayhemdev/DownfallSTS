@@ -35,6 +35,7 @@ import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import expansioncontent.util.DownfallAchievementUnlocker;
 import guardian.powers.ConstructPower;
 import hermit.util.TextureLoader;
 import slimebound.SlimeboundMod;
@@ -193,6 +194,11 @@ public class CharBossIronclad extends AbstractCharBoss {
                 }
             }
         }
+
+        if (AbstractDungeon.player instanceof ChampChar && AbstractDungeon.actNum == 1) {
+            DownfallAchievementUnlocker.unlockAchievement("MY_BELT");
+        }
+
     }
 
     @Override

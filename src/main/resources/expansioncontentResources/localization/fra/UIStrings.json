@@ -45,6 +45,305 @@
       "This card can't be played this turn."
     ]
   },
+  "downfall:AchievementGrid": {
+    "TEXT": [
+      "#yDownfall #yAchievements"
+    ]
+  },
+  "downfall:BULLY": {
+    "TEXT": [
+      "Bully",
+      "Coerce Cleric into removing 3 of your cards in a single run."
+    ]
+  },
+  "downfall:CORRUPTED": {
+    "TEXT": [
+      "Corrupted",
+      "Complete the Ending in Downfall mode as Ironclad, Silent, Defect, Watcher, or Hermit."
+    ]
+  },
+  "downfall:UPRISE": {
+    "TEXT": [
+      "Uprise",
+      "Complete the Ending in Standard mode as a Downfall villain."
+    ]
+  },
+  "downfall:LONGSHOT": {
+    "TEXT": [
+      "Longshot",
+      "(Hermit) Without Concentration, trigger a Dead On effect while you have at least 9 cards in hand."
+    ]
+  },
+  "downfall:BOUNTY_HUNTER": {
+    "TEXT": [
+      "Bounty Hunter",
+      "(Hermit) Claim 300 Gold from Bounties in a single run."
+    ]
+  },
+  "downfall:WIELDER_OF_WOE": {
+    "TEXT": [
+      "Wielder Of Woe",
+      "(Hermit) Get Cursed Weapon to a base of 40 damage."
+    ]
+  },
+  "downfall:GORGED": {
+    "TEXT": [
+      "Gorged",
+      "(Slime Boss) Raise your Max HP 3 times from a single use of Mass Feed."
+    ]
+  },
+  "downfall:FOR_THE_BOSS": {
+    "TEXT": [
+      "For The Boss",
+      "(Slime Boss) Absorb 15 Slimes in a single combat."
+    ]
+  },
+  "downfall:PAYMENT_RECEIVED": {
+    "TEXT": [
+      "Payment Received",
+      "(Slime Boss) Have 400 Souls taken by the Greed Ooze in a single run."
+    ]
+  },
+  "downfall:HYPER_ACCELERATION": {
+    "TEXT": [
+      "Hyper Acceleration",
+      "(Guardian) Return 10 cards from Stasis to your hand in a single turn."
+    ]
+  },
+  "downfall:IMPENETRABLE": {
+    "TEXT": [
+      "Impenetrable",
+      "(Guardian) Have 5 stacks of Defensive Mode at once."
+    ]
+  },
+  "downfall:BEJEWELED": {
+    "TEXT": [
+      "Bejeweled",
+      "(Guardian) Socket 8 gems in a single floor."
+    ]
+  },
+  "downfall:HEXABURN": {
+    "TEXT": [
+      "Hexaburn",
+      "(Hexaghost) Fully Ignite the Inferno Ghostflame 6 times in a single combat."
+    ]
+  },
+  "downfall:GHOSTLY": {
+    "TEXT": [
+      "Ghostly",
+      "(Hexaghost) Lose 4 Strikes and 4 Defends at a single visit of the Council of Ghosts event."
+    ]
+  },
+  "downfall:THE_BROKEN_SEAL": {
+    "TEXT": [
+      "The Broken Seal",
+      "(Hexaghost) Obtain The Broken Seal."
+    ]
+  },
+  "downfall:MY_BELT": {
+    "TEXT": [
+      "\"Hey, That's My Belt\"",
+      "(Champ) As the Champ, defeat Ironclad 1."
+    ]
+  },
+  "downfall:I_AM_THE_ONE": {
+    "TEXT": [
+      "I Am The One",
+      "(Champ) Enter Ultimate Stance 3 times in a single turn."
+    ]
+  },
+  "downfall:OVER_OVERKILL": {
+    "TEXT": [
+      "Over Overkill",
+      "(Champ) Play an Attack while you have at least 200 Vigor."
+    ]
+  },
+  "downfall:TRIPLE_SETTER": {
+    "TEXT": [
+      "Triple Setter",
+      "(Automaton) Use Mutator to transform 3 Statuses in a single turn."
+    ]
+  },
+  "downfall:MECHANICAL_GAUNTLET": {
+    "TEXT": [
+      "Mechanical Gauntlet",
+      "(Automaton) Defeat an Exploder, Repulsor, and Spiker in a single Exordium combat."
+    ]
+  },
+  "downfall:CODERS_BLOCK": {
+    "TEXT": [
+      "Coder's Block",
+      "(Automaton) As the Automaton, defeat a Boss without creating a Function."
+    ]
+  },
+  "downfall:PICKPOCKET_100": {
+    "TEXT": [
+      "Pickpocket 100",
+      "(Gremlins) Steal at least 3 Artifact from a single use of Pickpocket."
+    ]
+  },
+  "downfall:GLASS_BONES": {
+    "TEXT": [
+      "Glass Bones & Paper Skin",
+      "(Gremlins) Cause an enemy to have Agony and Crippled at the same time."
+    ]
+  },
+  "downfall:OUR_TRUE_FORM": {
+    "TEXT": [
+      "Our True Form",
+      "(Gremlins) Defeat a Boss as NOB."
+    ]
+  },
+  "downfall:NOODLE_CODE": {
+    "TEXT": [
+      "Noodle Code",
+      "(Snecko) As the Snecko, create a Function."
+    ]
+  },
+  "downfall:MASTER_OF_CONFUSION": {
+    "TEXT": [
+      "Master Of Confusion",
+      "(Snecko) Acquire the Super Snecko Eye."
+    ]
+  },
+  "downfall:UNBOUND": {
+    "TEXT": [
+      "Unbound",
+      "(Snecko) Beat the game as Pure Snecko."
+    ]
+  },
+  "downfall:SAYONARA": {
+    "TEXT": [
+      "Sayonara",
+      "(Collector) Apply at least 100 Doom with a single use of Goodbye."
+    ]
+  },
+  "downfall:THE_BIGGER_THEY_ARE": {
+    "TEXT": [
+      "The Bigger They Are...",
+      "(Collector) Play Endgame."
+    ]
+  },
+  "downfall:HOARDER": {
+    "TEXT": [
+      "Hoarder",
+      "(Collector) Beat the game with at least 20 Collected cards."
+    ]
+  },
+  "downfall:TOPAZ": {
+    "TEXT": [
+      "Topaz",
+      "Beat the game with the Hermit."
+    ]
+  },
+  "downfall:TOPAZ+": {
+    "TEXT": [
+      "Topaz+",
+      "Complete the Ending with the Hermit."
+    ]
+  },
+  "downfall:JADE": {
+    "TEXT": [
+      "Jade",
+      "Beat the game with the Slime Boss."
+    ]
+  },
+  "downfall:JADE+": {
+    "TEXT": [
+      "Jade+",
+      "Complete the Ending with the Slime Boss."
+    ]
+  },
+  "downfall:CITRINE": {
+    "TEXT": [
+      "Citrine",
+      "Beat the game with the Guardian."
+    ]
+  },
+  "downfall:CITRINE+": {
+    "TEXT": [
+      "Citrine+",
+      "Complete the Ending with the Guardian."
+    ]
+  },
+  "downfall:TANZANITE": {
+    "TEXT": [
+      "Tanzanite",
+      "Beat the game with the Hexaghost."
+    ]
+  },
+  "downfall:TANZANITE+": {
+    "TEXT": [
+      "Tanzanite+",
+      "Complete the Ending with the Hexaghost."
+    ]
+  },
+  "downfall:KYANITE": {
+    "TEXT": [
+      "Kyanite",
+      "Beat the game with the Champ."
+    ]
+  },
+  "downfall:KYANITE+": {
+    "TEXT": [
+      "Kyanite+",
+      "Complete the Ending with the Champ."
+    ]
+  },
+  "downfall:RUTILE": {
+    "TEXT": [
+      "Rutile",
+      "Beat the game with the Automaton."
+    ]
+  },
+  "downfall:RUTILE+": {
+    "TEXT": [
+      "Rutile+",
+      "Complete the Ending with the Automaton."
+    ]
+  },
+  "downfall:SPINEL": {
+    "TEXT": [
+      "Spinel",
+      "Beat the game with the Gremlins."
+    ]
+  },
+  "downfall:SPINEL+": {
+    "TEXT": [
+      "Spinel+",
+      "Complete the Ending with the Gremlins."
+    ]
+  },
+  "downfall:CHRYSOCOLLA": {
+    "TEXT": [
+      "Chrysocolla",
+      "Beat the game with the Snecko."
+    ]
+  },
+  "downfall:CHRYSOCOLLA+": {
+    "TEXT": [
+      "Chrysocolla+",
+      "Complete the Ending with the Snecko."
+    ]
+  },
+  "downfall:MALACHITE": {
+    "TEXT": [
+      "Malachite",
+      "Beat the game with the Collector."
+    ]
+  },
+  "downfall:MALACHITE+": {
+    "TEXT": [
+      "Malachite+",
+      "Complete the Ending with the Collector."
+    ]
+  },
+  "downfall:EVIL_ONE": {
+    "TEXT": [
+      "Evil One",
+      "Obtain all other Downfall Achievements."
+    ]
+  },
   "expansioncontent:CannotUseBossCardMessage": {
     "TEXT": [
       "J'ai déjà joué une carte de Boss ce tour!"

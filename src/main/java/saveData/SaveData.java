@@ -18,6 +18,7 @@ import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.relics.BrokenWingStatue;
+import expansioncontent.util.DownfallAchievementVariables;
 import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -48,6 +49,7 @@ public class SaveData {
     public static final String VALID_COLORS = "VALID_COLORS";
     public static final String PURE_SNECKO_MODE = "PURE_SNECKO_MODE";
     public static final String IDENTIFY_RNG_COUNT = "IDENTIFY_RNG_COUNT";
+    public static final String BOUNTIES_COLLECTED = "BOUNTIES_COLLECTED";
 
     private static Logger saveLogger = LogManager.getLogger("downfallSaveData");
     //data is stored here in addition to the actual location
@@ -160,6 +162,7 @@ public class SaveData {
             params.put(VALID_COLORS, saveCacheColors);
             params.put(PURE_SNECKO_MODE, pureSneckoMode);
             params.put(IDENTIFY_RNG_COUNT, identifyRngCount);
+            params.put(BOUNTIES_COLLECTED, DownfallAchievementVariables.bountiesCollectedPerm);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -214,6 +217,7 @@ public class SaveData {
                 pureSneckoMode = data.PURE_SNECKO_MODE;
 
                 identifyRngCount = data.IDENTIFY_RNG_COUNT;
+                DownfallAchievementVariables.bountiesCollectedPerm = data.BOUNTIES_COLLECTED;
 
                 saveLogger.info("Loaded downfall save data successfully.");
             } catch (Exception e) {
@@ -283,6 +287,9 @@ public class SaveData {
             SneckoMod.identifyRng = new Random(file.seed, identifyRngCount);
 
             OffclassHelper.updateAllUnknownReplacements();
+
+            DownfallAchievementVariables.gemsSocketed = 0;
+            DownfallAchievementVariables.threeShapesFought = false;
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here

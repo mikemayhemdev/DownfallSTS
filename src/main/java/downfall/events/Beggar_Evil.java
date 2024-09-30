@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
+import expansioncontent.util.DownfallAchievementUnlocker;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -193,6 +194,7 @@ public class Beggar_Evil extends AbstractImageEvent {
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[7]);
                         AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 2, OPTIONSOG[3], false, false, false, true);
+                        DownfallAchievementUnlocker.unlockAchievement("BULLY");
                         this.screen = CurScreen.END;
                         this.imageEventText.setDialogOption(OPTIONS[5]);
                         break;

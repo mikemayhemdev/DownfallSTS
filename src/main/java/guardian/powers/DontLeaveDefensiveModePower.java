@@ -3,6 +3,7 @@ package guardian.powers;
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import expansioncontent.util.DownfallAchievementUnlocker;
 
 
 public class DontLeaveDefensiveModePower extends AbstractGuardianPower {
@@ -23,6 +24,24 @@ public class DontLeaveDefensiveModePower extends AbstractGuardianPower {
 
         updateDescription();
 
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        checkAchievement();
+    }
+
+    @Override
+    public void reducePower(int reduceAmount) {
+        super.reducePower(reduceAmount);
+        checkAchievement();
+    }
+
+    private void checkAchievement() {
+        if (this.amount >= 5) {
+            DownfallAchievementUnlocker.unlockAchievement("IMPENETRABLE");
+        }
     }
 
     public void updateDescription() {

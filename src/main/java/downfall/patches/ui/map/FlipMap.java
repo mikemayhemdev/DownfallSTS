@@ -16,9 +16,11 @@ import com.megacrit.cardcrawl.map.DungeonMap;
 import com.megacrit.cardcrawl.map.MapEdge;
 import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.map.RoomTypeAssigner;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.rooms.*;
 import com.megacrit.cardcrawl.screens.DungeonMapScreen;
 import com.megacrit.cardcrawl.ui.buttons.DynamicBanner;
+import com.megacrit.cardcrawl.ui.panels.TopPanel;
 import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.actlikeit.MapCompatiblity;
@@ -31,6 +33,7 @@ import javassist.expr.MethodCall;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.lang.reflect.Field;
 import java.util.*;
 
 public class FlipMap {
@@ -634,6 +637,111 @@ public class FlipMap {
                             "}");
                 }
             }
+        }
+    }
+    @SpirePatch(
+            clz = DungeonMapScreen.class,
+            method = "updateControllerInput"
+    )
+    public static class FixDownfallControllerInput {
+        private static Field visibleMapNodesField;
+        private static MapRoomNode lastSelectedNode;
+
+        static {
+            try {
+                visibleMapNodesField = DungeonMapScreen.class.getDeclaredField("visibleMapNodes");
+                visibleMapNodesField.setAccessible(true);
+            } catch (NoSuchFieldException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @SpireInsertPatch(
+                locator = Locator.class,
+                localvars = {"nodes", "index", "anyHovered"}
+        )
+        public static void Insert(DungeonMapScreen __instance, ArrayList<MapRoomNode> nodes, @ByRef int[] index, @ByRef boolean[] anyHovered) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id) && !AbstractDungeon.firstRoomChosen) {
+                try {
+                    @SuppressWarnings("unchecked")
+                    ArrayList<MapRoomNode> visibleMapNodes = (ArrayList<MapRoomNode>) visibleMapNodesField.get(__instance);
+                    nodes.clear();
+                    for (MapRoomNode n : visibleMapNodes) {
+                        if (n.y == FlipMap.MapFlipper.startY) {
+                            nodes.add(n);
+                        }
+                    }
+
+                    anyHovered[0] = false;
+
+                    for (int i = 0; i < nodes.size(); i++) {
+                        if (nodes.get(i).hb.hovered) {
+                            index[0] = i;
+                            anyHovered[0] = true;
+                            lastSelectedNode = nodes.get(i);
+                            break;
+                        }
+                    }
+
+                    if (!anyHovered[0]) {
+                        if (lastSelectedNode != null && nodes.contains(lastSelectedNode)) {
+                            index[0] = nodes.indexOf(lastSelectedNode);
+                        } else if (!nodes.isEmpty()) {
+                            index[0] = nodes.size() / 2;
+                            lastSelectedNode = nodes.get(index[0]);
+                        }
+
+                        if (!nodes.isEmpty()) {
+                            Gdx.input.setCursorPosition((int)nodes.get(index[0]).hb.cX, Settings.HEIGHT - (int)nodes.get(index[0]).hb.cY);
+                            __instance.mapNodeHb = nodes.get(index[0]).hb;
+                        }
+                    }
+
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        private static class Locator extends SpireInsertLocator {
+            @Override
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
+                Matcher finalMatcher = new Matcher.MethodCallMatcher(ArrayList.class, "isEmpty");
+                return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
+            }
+        }
+    }
+    @SpirePatch(clz = TopPanel.class, method = "update")
+    public static class DisableTopPanelHoveringPatch {
+        @SpireInsertPatch(locator = Locator.class)
+        public static void Insert(TopPanel __instance) {
+            if (Settings.isControllerMode && EvilModeCharacterSelect.evilMode && !__instance.selectPotionMode) {
+                __instance.goldHb.hovered = false;
+
+                for (AbstractPotion potion : AbstractDungeon.player.potions) {
+                    potion.hb.hovered = false;
+                }
+            }
+        }
+
+        private static class Locator extends SpireInsertLocator {
+            @Override
+            public int[] Locate(CtBehavior ctBehavior) throws Exception {
+                Matcher finalMatcher = new Matcher.MethodCallMatcher(TopPanel.class, "updateButtons");
+                return LineFinder.findInOrder(ctBehavior, finalMatcher);
+            }
+        }
+    }
+
+    @SpirePatch(clz = TopPanel.class, method = "updateAscensionHover")
+    public static class DisableAscensionHoveringPatch {
+        @SpirePrefixPatch
+        public static SpireReturn<Void> Prefix(TopPanel __instance) {
+            if (Settings.isControllerMode && EvilModeCharacterSelect.evilMode && !__instance.selectPotionMode) {
+                __instance.ascensionHb.hovered = false;
+                return SpireReturn.Return(null);
+            }
+            return SpireReturn.Continue();
         }
     }
 }

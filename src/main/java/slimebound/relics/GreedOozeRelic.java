@@ -4,14 +4,13 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.vfx.GainPennyEffect;
+import expansioncontent.util.DownfallAchievementUnlocker;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.orbs.GreedOozeSlime;
 
 public class GreedOozeRelic extends CustomRelic {
@@ -69,6 +68,10 @@ public class GreedOozeRelic extends CustomRelic {
                 for (int i = 0; i < 20; i++) {
                     AbstractDungeon.effectList.add(new GainPennyEffect(p, p.hb.cX, p.hb.cY, this.hb.cX, this.hb.cY, false));
 
+                }
+
+                if (this.counter >= 12) {
+                    DownfallAchievementUnlocker.unlockAchievement("PAYMENT_RECEIVED");
                 }
 
             }

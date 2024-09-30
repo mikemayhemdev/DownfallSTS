@@ -1,27 +1,20 @@
 package automaton.events;
 
-
 import automaton.cards.DazingPulse;
 import automaton.cards.Explode;
 import automaton.cards.Spike;
 import automaton.util.DazingPulseReward;
-import automaton.util.DonuBeamReward;
 import automaton.util.ExplodeReward;
 import automaton.util.SpikeReward;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.beyond.Exploder;
 import com.megacrit.cardcrawl.monsters.beyond.Repulsor;
 import com.megacrit.cardcrawl.monsters.beyond.Spiker;
-import com.megacrit.cardcrawl.monsters.exordium.SlaverBlue;
-import com.megacrit.cardcrawl.relics.ChampionsBelt;
-import com.megacrit.cardcrawl.relics.CloakClasp;
-import com.megacrit.cardcrawl.relics.WristBlade;
-import slimebound.SlimeboundMod;
+import expansioncontent.util.DownfallAchievementVariables;
 
 public class ShapeFactory extends AbstractImageEvent {
     public static final String ID = "bronze:ShapeFactory";
@@ -166,6 +159,9 @@ public class ShapeFactory extends AbstractImageEvent {
         }
         if (fightExploder){
             AbstractDungeon.getCurrRoom().rewards.add(new ExplodeReward());
+        }
+        if (fightSpiker && fightRepulsor && fightExploder) {
+            DownfallAchievementVariables.threeShapesFought = true;
         }
         int numShapes = AbstractDungeon.getCurrRoom().rewards.size();
         logMetric(ID, "Fought " + numShapes + " shapes");

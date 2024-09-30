@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.core.*;
 import com.megacrit.cardcrawl.dungeons.*;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
+import expansioncontent.util.DownfallAchievementUnlocker;
 
 public class StealArtifactAction extends AbstractGameAction
 {
@@ -22,6 +23,11 @@ public class StealArtifactAction extends AbstractGameAction
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(source, source,
                     new ArtifactPower(source, amount), amount));
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(target, source, "Artifact"));
+
+            // Check for achievement
+            if (amount >= 3) {
+                DownfallAchievementUnlocker.unlockAchievement("PICKPOCKET_100");
+            }
         }
         this.tickDuration();
     }

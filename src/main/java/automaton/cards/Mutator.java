@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import expansioncontent.util.DownfallAchievementUnlocker;
+import expansioncontent.util.DownfallAchievementVariables;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 
@@ -28,6 +30,10 @@ public class Mutator extends AbstractBronzeCard {
         atb(new SelectCardsInHandAction(1, masterUI.TEXT[6], c -> c.type == CardType.STATUS, (cards) -> {
             att(new MakeTempCardInHandAction(q.makeStatEquivalentCopy(), true));
             att(new ExhaustSpecificCardAction(cards.get(0), p.hand, true));
+            DownfallAchievementVariables.statusesMutated++;
+            if (DownfallAchievementVariables.statusesMutated >= 3) {
+                DownfallAchievementUnlocker.unlockAchievement("TRIPLE_SETTER");
+            }
         }));
     }
 

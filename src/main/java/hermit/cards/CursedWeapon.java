@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import expansioncontent.util.DownfallAchievementUnlocker;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
@@ -37,6 +38,7 @@ public class CursedWeapon extends AbstractDynamicCard {
     private static final int COST = 1;
 
     private static final int DAMAGE = 10;
+    private static final int ACHIEVEMENT_DAMAGE = 40;
 
     // /STAT DECLARATION/
 
@@ -91,6 +93,10 @@ public class CursedWeapon extends AbstractDynamicCard {
     public void triggerOnCardPlayed(AbstractCard c) {
         if (c instanceof CursedWeapon) {
             baseDamage += ((CursedWeapon)c).defaultSecondMagicNumber;
+
+            if (baseDamage >= ACHIEVEMENT_DAMAGE) {
+                DownfallAchievementUnlocker.unlockAchievement("WIELDER_OF_WOE");
+            }
         }
     }
 

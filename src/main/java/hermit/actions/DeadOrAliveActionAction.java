@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import expansioncontent.util.DownfallAchievementUnlocker;
+import expansioncontent.util.DownfallAchievementVariables;
 
 
 public class DeadOrAliveActionAction extends AbstractGameAction {
@@ -36,6 +38,11 @@ public class DeadOrAliveActionAction extends AbstractGameAction {
                 }
 
                 AbstractDungeon.player.gainGold(amount);
+                DownfallAchievementVariables.bountiesCollectedTemp += amount;
+
+                if (DownfallAchievementVariables.bountiesCollectedTemp + DownfallAchievementVariables.bountiesCollectedPerm >= 300) {
+                    DownfallAchievementUnlocker.unlockAchievement("BOUNTY_HUNTER");
+                }
 
                 for (int ii = 0; ii < amount; ++ii) {
                     AbstractDungeon.effectList.add(new GainPennyEffect(this.source, this.target.hb.cX, this.target.hb.cY, this.source.hb.cX, this.source.hb.cY, true));

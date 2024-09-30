@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import expansioncontent.util.DownfallAchievementUnlocker;
 import gremlin.GremlinMod;
 
 public class AgonyPower extends AbstractGremlinPower {
@@ -57,6 +58,13 @@ public class AgonyPower extends AbstractGremlinPower {
             return  damage * 0.2F;
         } else {
             return damage;
+        }
+    }
+
+    @Override
+    public void onInitialApplication() {
+        if (this.owner.hasPower(CrippledPower.POWER_ID)) {
+            DownfallAchievementUnlocker.unlockAchievement("GLASS_BONES");
         }
     }
 }

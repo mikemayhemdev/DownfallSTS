@@ -4,13 +4,13 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import expansioncontent.util.DownfallAchievementUnlocker;
 import gremlin.GremlinMod;
 
 public class CrippledPower extends AbstractGremlinPower implements HealthBarRenderPower {
@@ -52,6 +52,13 @@ public class CrippledPower extends AbstractGremlinPower implements HealthBarRend
             return owner.getPower(WeakPower.POWER_ID).amount;
         }
         return 0;
+    }
+
+    @Override
+    public void onInitialApplication() {
+        if (this.owner.hasPower(AgonyPower.POWER_ID)) {
+            DownfallAchievementUnlocker.unlockAchievement("GLASS_BONES");
+        }
     }
 
     @Override

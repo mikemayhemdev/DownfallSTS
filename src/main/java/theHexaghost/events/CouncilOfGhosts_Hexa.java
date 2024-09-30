@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import expansioncontent.util.DownfallAchievementUnlocker;
+import expansioncontent.util.DownfallAchievementVariables;
 import theHexaghost.HexaMod;
 import theHexaghost.cards.CouncilsJustice;
 
@@ -127,7 +129,9 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
             AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(c, com.megacrit.cardcrawl.core.Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F,0.75F)), com.megacrit.cardcrawl.core.Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F,0.75F))));
             AbstractDungeon.player.masterDeck.removeCard(c);
             cardsRemoved.add(c.cardID);
+            DownfallAchievementVariables.councilStrikesRemoved++;
         }
+        checkCouncilAchievement();
     }
 
     private void nukeDefends() {
@@ -142,10 +146,17 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
             AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(c, com.megacrit.cardcrawl.core.Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F,0.75F)), com.megacrit.cardcrawl.core.Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F,0.75F))));
             AbstractDungeon.player.masterDeck.removeCard(c);
             cardsRemoved.add(c.cardID);
-
+            DownfallAchievementVariables.councilDefendsRemoved++;
         }
+        checkCouncilAchievement();
     }
 
+    private void checkCouncilAchievement() {
+        if (DownfallAchievementVariables.councilStrikesRemoved >= 4 &&
+                DownfallAchievementVariables.councilDefendsRemoved >= 4) {
+            DownfallAchievementUnlocker.unlockAchievement("GHOSTLY");
+        }
+    }
 
     private enum CurScreen {
             INTRO,

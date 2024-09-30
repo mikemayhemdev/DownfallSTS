@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import expansioncontent.util.DownfallAchievementUnlocker;
 import hermit.actions.ComboAction;
 import hermit.patches.EndOfTurnPatch;
 import hermit.patches.VigorPatch;
@@ -169,6 +170,11 @@ public abstract class AbstractHermitCard extends CustomCard {
 
     public void TriggerDeadOnEffect(AbstractPlayer p, AbstractMonster m)
     {
+        // Check for Longshot achievement.
+        if (p.hand.size() >= 9 && !p.hasPower(Concentration.POWER_ID)) {
+            DownfallAchievementUnlocker.unlockAchievement("LONGSHOT");
+        }
+
         // Things that happen before Dead On effect.
         onDeadOn();
 

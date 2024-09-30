@@ -12,7 +12,6 @@ import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,10 +23,11 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.beyond.Darkling;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import expansioncontent.util.DownfallAchievementUnlocker;
+import expansioncontent.util.DownfallAchievementVariables;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import reskinContent.patches.CharacterSelectScreenPatches;
@@ -320,6 +320,12 @@ public abstract class SpawnedSlime
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
 
         triggerEvokeAnimation();
+
+        DownfallAchievementVariables.slimesEvoked++;
+        if (DownfallAchievementVariables.slimesEvoked >= 15) {
+            DownfallAchievementUnlocker.unlockAchievement("FOR_THE_BOSS");
+        }
+
     }
 
 

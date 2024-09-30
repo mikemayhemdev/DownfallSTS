@@ -3,6 +3,8 @@ package champ.stances;
 import champ.ChampChar;
 import champ.ChampMod;
 import com.megacrit.cardcrawl.stances.AbstractStance;
+import expansioncontent.util.DownfallAchievementUnlocker;
+import expansioncontent.util.DownfallAchievementVariables;
 
 public class UltimateStance extends AbstractChampStance {
 
@@ -47,6 +49,10 @@ public class UltimateStance extends AbstractChampStance {
         super.onEnterStance();
         ChampMod.enteredBerserkerThisTurn = true;
         ChampMod.enteredDefensiveThisTurn = true;
+        DownfallAchievementVariables.enteredUltimateStance++;
+        if (DownfallAchievementVariables.enteredUltimateStance >= 3) {
+            DownfallAchievementUnlocker.unlockAchievement("I_AM_THE_ONE");
+        }
     }
 
     @Override
