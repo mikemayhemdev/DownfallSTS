@@ -124,4 +124,3 @@ public class HyperBeam_Guardian extends AbstractGuardianCard {
     }
 }
 
-

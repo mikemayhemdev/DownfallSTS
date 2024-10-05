@@ -170,7 +170,7 @@ public class NeowBoss extends AbstractMonster {
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         }
 
-        curses();
+//        curses();
 
         for (int i = 0; i < 10; i++) {
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));

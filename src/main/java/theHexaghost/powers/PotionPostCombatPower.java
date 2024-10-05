@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.rewards.RewardItem;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
-public class PotionPostCombatPower extends AbstractPower implements CloneablePowerInterface, RemoveMeBabey {
+public class PotionPostCombatPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = HexaMod.makeID("PotionPostCombatPower");
 

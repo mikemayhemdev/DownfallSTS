@@ -35,7 +35,7 @@
       "#b",
       " 个回合后，该单位失去 #b",
       " 个回合后，该单位失去 #b",
-      " 点生命，并移除所有 #y灼魂 层数。"
+      " 点生命，并移除其所有 #y灼魂 层数。"
     ]
   },
   "hexamod:BurnvenomPower": {
@@ -49,15 +49,16 @@
     "NAME": "战后卡牌",
     "DESCRIPTIONS": [
       "本场战斗结束时，额外获得 #b",
-      " 次普通卡牌奖励。",
-      " 次普通卡牌奖励。"
+      " 次常规卡牌奖励。",
+      " 次常规卡牌奖励。"
     ]
   },
-  "hexamod:CrispyPower": {
-    "NAME": "清脆",
+  "hexamod:CrispyPower_new": {
+    "NAME": "脆烤",
     "DESCRIPTIONS": [
-      "给予 #y灼魂 时层数增加 #b",
-      " 层。"
+      "每当你 #y消耗 #b3 张牌， #y点燃 当前 #y鬼火 #b",
+      " 次。",
+      " 次。"
     ]
   },
   "hexamod:EnhancePower": {
@@ -76,10 +77,11 @@
     ]
   },
   "hexamod:FuturePower": {
-    "NAME": "疾进",
+    "NAME": "遁入暗影",
     "DESCRIPTIONS": [
-      "每当你 #y步进 时，获得 #b",
-      " 层 #y临时力量 。"
+      "每当你 #y回退 时，选择 #b",
+      " 张手牌，将其打出并 #y消耗 。",
+      " 张手牌，将其打出并 #y消耗 。"
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -93,7 +95,7 @@
   "hexamod:StopFromAdvancingPower": {
     "NAME": "此刻",
     "DESCRIPTIONS": [
-      "你的回合结束时，不会自动跳至下枚鬼火。"
+      "你的回合结束时， #y熄灭 当前鬼火。"
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
@@ -106,17 +108,9 @@
   "hexamod:GiftsFromTheDeadPower": {
     "NAME": "深处馈赠",
     "DESCRIPTIONS": [
-      "你的回合开始时，随机 #y取回 #b",
-      " 张 #y阴世",
-      " 牌。",
-      " 牌。"
-    ]
-  },
-  "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "馈赠能量",
-    "DESCRIPTIONS": [
-      "每当一张 #y虚无 牌被 #y消耗 时，下回合获得 ",
-      " 。"
+      "你的回合开始时，随机将 #b",
+      " 张 #y阴世 牌加入手牌。",
+      " 张 #y阴世 牌加入手牌。"
     ]
   },
   "hexamod:GoldPostCombatPower": {
@@ -145,19 +139,16 @@
   "hexamod:ParanormalFormPower": {
     "NAME": "鬼哭神嚎",
     "DESCRIPTIONS": [
-      "每当你打出 #y阴世 牌时，对随机一名敌人造成 #b",
-      " 点伤害。"
+      "每当你打出一张 #y虚无 牌，随机一名敌人失去 #b",
+      " 点生命。"
     ]
   },
   "hexamod:PastPower": {
     "NAME": "魔鬼之舞",
     "DESCRIPTIONS": [
-      "每回合你前 #b",
-      "1 次",
-      " 次",
-      " #y回退 时，获得 [E] 并抽 #b1 张牌。本回合已 #y回退 #b",
-      " 次。",
-      " 次。"
+      "每当你 #y回退 时，抽 #b",
+      " 张牌。",
+      " 张牌。"
     ]
   },
   "hexamod:PotionPostCombatPower": {
@@ -176,17 +167,19 @@
     ]
   },
   "hexamod:SealPostCombatPower": {
-    "NAME": "战后容器",
+    "NAME": "战后封印",
     "DESCRIPTIONS": [
       "本场战斗结束时，额外获得 #b",
-      " 张 #y容器 牌。",
-      " 张 #y容器 牌。"
+      " 张 #y封印 牌。",
+      " 张 #y封印 牌。"
     ]
   },
   "hexamod:TimeStopPower": {
     "NAME": "末日来临",
     "DESCRIPTIONS": [
-      "你的回合结束时，立刻开始额外的一回合，并保留 #y格挡 与 #y能量 。"
+      "你的回合结束时，额外获得 #b1 回合。",
+      "你的回合结束时，额外获得 #b",
+      " 回合。"
     ]
   },
   "hexamod:VolcanoVisagePower": {
@@ -206,6 +199,35 @@
     "NAME": "更多能量",
     "DESCRIPTIONS": [
       "你的回合开始时，获得 "
+    ]
+  },
+  "hexamod:SoulburnOnExhaustPower": {
+    "NAME": "深处侵扰",
+    "DESCRIPTIONS": [
+      "每当你本回合 #y消耗 一张牌，给予该单位 #b",
+      " 层 #y灼魂 。"
+    ]
+  },
+  "hexamod:LoseIntensityPower": {
+    "NAME": "Intensity Down",
+    "DESCRIPTIONS": [
+      "你的回合结束时，失去 #b",
+      " 点 #y热烈 。"
+    ]
+  },
+  "hexamod:MaxHPPostCombatPower": {
+    "NAME": "战后成长",
+    "DESCRIPTIONS": [
+      "本场战斗结束时，获得 #b",
+      " 点最大生命。"
+    ]
+  },
+  "hexamod:InfernoPotionPower": {
+    "NAME": "幽灵地狱",
+    "DESCRIPTIONS": [
+      "本场战斗的鬼火 #y点燃 效果将作用于所有敌人。",
+      "本场战斗的鬼火 #y点燃 效果将作用于所有敌人 #b",
+      " 次。"
     ]
   }
 }

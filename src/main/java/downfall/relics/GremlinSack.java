@@ -25,7 +25,6 @@ public class GremlinSack extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
 
     }
-
     @Override
     public void onTrigger() {
         sackCards = new ArrayList<>();
@@ -35,6 +34,7 @@ public class GremlinSack extends CustomRelic {
                     sackCards.add(AbstractDungeon.player.getStartCardForEvent().makeStatEquivalentCopy());
                 }
                 //TODO - Does this need to be seeded?
+                //TODO reloading will lose all
                 sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON).makeCopy());
                 sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
                 sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy());

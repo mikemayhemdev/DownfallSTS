@@ -54,7 +54,7 @@ public class DiscoverEtherealAction extends AbstractGameAction {
 
             this.tickDuration();
         }
-    }// 29 54
+    }
 
     private ArrayList<AbstractCard> generateCardChoices() {
         ArrayList<AbstractCard> derp = new ArrayList<>();
@@ -63,9 +63,9 @@ public class DiscoverEtherealAction extends AbstractGameAction {
             boolean dupe = false;
             int roll = AbstractDungeon.cardRandomRng.random(99);
             AbstractCard.CardRarity cardRarity;
-            if (roll < 55) {
+            if (roll < 60) {
                 cardRarity = AbstractCard.CardRarity.COMMON;
-            } else if (roll < 85) {
+            } else if (roll < 93) {
                 cardRarity = AbstractCard.CardRarity.UNCOMMON;
             } else {
                 cardRarity = AbstractCard.CardRarity.RARE;

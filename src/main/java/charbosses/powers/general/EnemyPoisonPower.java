@@ -1,27 +1,15 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package charbosses.powers.general;
 
 import charbosses.actions.unique.EnemyPoisonDamageAction;
+import charbosses.bosses.AbstractCharBoss;
+import charbosses.relics.CBR_SneckoSkull;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 public class EnemyPoisonPower extends AbstractPower {
     public static final String POWER_ID = "Poison";
@@ -36,6 +24,9 @@ public class EnemyPoisonPower extends AbstractPower {
         this.owner = owner;
         this.source = source;
         this.amount = poisonAmt;
+        if( AbstractCharBoss.boss.hasRelic(CBR_SneckoSkull.ID) ){
+            this.amount++;
+        }
         if (this.amount >= 9999) {
             this.amount = 9999;
         }
@@ -44,6 +35,14 @@ public class EnemyPoisonPower extends AbstractPower {
         this.loadRegion("poison");
         this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        this.amount += stackAmount;  // without the positive check, your antidote will reduce 1 less, because it will apply a negative amount, which would get + 1
+        if( (stackAmount >= 0) && AbstractCharBoss.boss.hasRelic(CBR_SneckoSkull.ID) ){
+            this.amount ++;
+        }
     }
 
     public void playApplyPowerSfx() {

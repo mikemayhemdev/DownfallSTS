@@ -2,7 +2,6 @@
 
 package charbosses.powers.bossmechanicpowers;
 
-import charbosses.bosses.Watcher.CharBossWatcher;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -10,7 +9,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
 public class WatcherCripplePower extends AbstractBossMechanicPower {
@@ -22,6 +20,8 @@ public class WatcherCripplePower extends AbstractBossMechanicPower {
     private boolean firstused = false;
     private boolean secondused = false;
     private boolean thirdused = false;
+
+    public static final int LOSE_1_STRENGTH_PER_X_HP = 25;
 
     public WatcherCripplePower(AbstractCreature owner, int newAmount) {
         this.name = NAME;
@@ -50,19 +50,22 @@ public class WatcherCripplePower extends AbstractBossMechanicPower {
 
     @Override
     public void onSpecificTrigger() {
-        if (amount <= 50 && firstused == false ) {
+        if (amount <= 2 * LOSE_1_STRENGTH_PER_X_HP && !firstused) {
             firstused = true;
-            addToBot((AbstractGameAction)new VFXAction((AbstractGameEffect)new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            addToBot((AbstractGameAction)new SFXAction("THUNDERCLAP", 0.05F));
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -1), -1, true, AbstractGameAction.AttackEffect.NONE));
         }
-        if (amount <= 25 && secondused == false) {
+        if (amount <= LOSE_1_STRENGTH_PER_X_HP && !secondused) {
             secondused = true;
-            addToBot((AbstractGameAction)new VFXAction((AbstractGameEffect)new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            addToBot((AbstractGameAction)new SFXAction("THUNDERCLAP", 0.05F));
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -1), -1, true, AbstractGameAction.AttackEffect.NONE));
         }
-        if (amount <= 0&& thirdused == false ) {
+        if (amount <= 0 && !thirdused) {
             thirdused = true;
-            addToBot((AbstractGameAction)new VFXAction((AbstractGameEffect)new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+            addToBot((AbstractGameAction)new SFXAction("THUNDERCLAP", 0.05F));
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -1), -1, true, AbstractGameAction.AttackEffect.NONE));
         }
     }
@@ -70,50 +73,44 @@ public class WatcherCripplePower extends AbstractBossMechanicPower {
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
-        if (amount <= 50) {
-            CharBossWatcher cb = (CharBossWatcher) this.owner;
-            if (cb != null) {
-                if (cb.powerhouseTurn) {
-                    onSpecificTrigger();
-                }
+        if (amount <= 2 * LOSE_1_STRENGTH_PER_X_HP) {
+            if (this.owner != null) {
+                onSpecificTrigger();
             }
         }
-        if (amount <= 25) {
-            CharBossWatcher cb = (CharBossWatcher) this.owner;
-            if (cb != null) {
-                if (cb.powerhouseTurn) {
-                    onSpecificTrigger();
-                }
+        if (amount <= LOSE_1_STRENGTH_PER_X_HP) {
+            if (this.owner != null) {
+                onSpecificTrigger();
             }
         }
         if (amount <= 0) {
-            CharBossWatcher cb = (CharBossWatcher) this.owner;
-            if (cb != null) {
-                if (cb.powerhouseTurn) {
-                    onSpecificTrigger();
-                }
+            if (this.owner != null) {
+                onSpecificTrigger();
             }
         }
     }
 
     @Override
     public void atEndOfRound() {
-
         super.atEndOfRound();
-        if (this.thirdused) {
-            this.amount += 25;
-        }
-        if (this.secondused) {
-            this.amount += 25;
-        }
-        if (this.firstused) {
-            this.amount += 25;
-        }
+
+        this.amount = 3 * LOSE_1_STRENGTH_PER_X_HP;
         this.thirdused = false;
         this.secondused = false;
         this.firstused = false;
     }
+  @Override
+    public float atDamageReceive(float damage, DamageInfo.DamageType damageType) {
 
+        if (damage > 1.0F) {
+            if (this.owner instanceof AbstractCharBoss) {
+                if (((AbstractCharBoss)owner).stance instanceof EnRealWrathStance) {
+                    return damage * 2.0F;
+                }
+            }
+        }
+        return damage;
+    }
     static {
         powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
         NAME = powerStrings.NAME;

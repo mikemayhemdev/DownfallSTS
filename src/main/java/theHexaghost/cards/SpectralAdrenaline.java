@@ -14,9 +14,7 @@ import theHexaghost.ghostflames.AbstractGhostflame;
 public class SpectralAdrenaline extends AbstractHexaCard {
 
     public final static String ID = makeID("SpectralAdrenaline");
-
-    //stupid intellij stuff SKILL, SELF, UNCOMMON
-
+    //bright ritual
     public SpectralAdrenaline() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
@@ -30,6 +28,7 @@ public class SpectralAdrenaline extends AbstractHexaCard {
             @Override
             public void update() {
                 isDone = true;
+                GhostflameHelper.activeGhostFlame = GhostflameHelper.hexaGhostFlames.get(0);
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                     if (gf.charged) {
                         att(new GainEnergyAction(1));

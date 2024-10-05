@@ -1,0 +1,94 @@
+{
+"hermit:Concentration": {
+        "NAME": "集中",
+        "DESCRIPTIONS": ["次にプレイする #yデッド-オン カードは位置に関係なくその効果を発動する。"]
+},
+"hermit:HighNoonPower": {
+        "NAME": "日盛り",
+        "DESCRIPTIONS": [" #yストライク または #y防御 をプレイする度に カードを #b", " 枚引く。", " 枚引く。"]
+},
+"hermit:FatalDesirePower": {
+        "NAME": "フェイタルデザイア",
+        "DESCRIPTIONS": ["ターン開始時 カードを #b", " 枚引き、手札に #b", " 枚の #y怪我 を加える。", " 枚の #y怪我 を加える。"]
+},
+"hermit:ShadowCloakPower": {
+        "NAME": "シャドウクローク",
+        "DESCRIPTIONS": ["呪い を引くか 廃棄 する度に #b", " ブロックを得る。"]
+},
+"hermit:TakeAimPower": {
+        "NAME": "狙う",
+        "DESCRIPTIONS": ["ターン開始時、 #y集中"]
+},
+"hermit:AdaptPower": {
+        "NAME": "適応",
+        "DESCRIPTIONS": ["ターン開始時 カードを #b", " 枚まで #y廃棄 し 1枚につき #b8 ブロックを得る。" , " 枚まで #y廃棄 し 1枚につき #b8 ブロックを得る。"]
+},
+"hermit:Bruise": {
+        "NAME": "傷",
+        "DESCRIPTIONS": ["このターン対象に追加で #b", " ダメージを与える。"]
+},
+"hermit:HorrorPower": {
+        "NAME": "ホラー",
+        "DESCRIPTIONS": [" #b", " ターンの間 傷 が消えない。", " ターンの間 傷 が消えない。"]
+},
+"hermit:ComboPower": {
+        "NAME": "コンボ",
+        "DESCRIPTIONS": ["各ターン最初の #b", " 枚の #yデッド-オン が発動した時、そのカードを手札に戻す。", " 枚の #yデッド-オン が発動した時、そのカードを手札に戻す。"]
+},
+"hermit:BigShotPower": {
+        "NAME": "煙る銃口",
+        "DESCRIPTIONS": [" #yデッド-オン を発動する度、次の アタック のダメージは #b", " 増加する。"]
+},
+"hermit:BrawlPower": {
+        "NAME": "乱闘",
+        "DESCRIPTIONS": ["ターン開始時敵全体に 傷 #b", " を与える。"]
+},
+"hermit:Rugged": {
+        "NAME": "堅牢",
+        "DESCRIPTIONS": ["次に受ける", " 回の防御できなかったダメージは #b2 まで減少する。", " 回の防御できなかったダメージは #b2 まで減少する。"]
+},
+"hermit:EternalPower": {
+        "NAME": "永遠の力",
+        "DESCRIPTIONS": ["ターン開始時、ドローしたプレイ可能な #b4 枚のカードのコストを #b", " 減少させる。"]
+},
+"hermit:OverwhelmingPowerPower": {
+        "NAME": "圧倒的な力の反動",
+        "DESCRIPTIONS": ["ターン終了時、エナジーが #b0 の場合 HPを #b"," 失う。 "]
+},
+"hermit:Bounty": {
+        "NAME": "バウンティ",
+        "DESCRIPTIONS": ["報奨金: #b"]
+},
+"hermit:Drained": {
+        "NAME": "ドレイン",
+        "DESCRIPTIONS": ["次のターンエナジーを #b", " 失う。"]
+},
+"hermit:DeterminationPower": {
+        "NAME": "決意",
+        "DESCRIPTIONS": ["デバフを受ける度に #y筋力 #b", " を得る。"]
+},
+"hermit:RyeStalkPower": {
+        "NAME": "ライ麦の茎",
+        "DESCRIPTIONS": ["このターン終了時カードを好きなだけ #y保留 する"]
+},
+"hermit:PetGhostPower": {
+        "NAME": "子飼いの幽霊",
+        "DESCRIPTIONS": ["あなたは死ねない。あと", " ターン後に、死ぬ。", " ターン後に、死ぬ。"]
+},
+"hermit:SnipePower": {
+        "NAME": "スナイプ",
+        "DESCRIPTIONS": ["このターン次の #b", " 回 、 #yデッド-オン 効果は2回発動する。", "回 、 #yデッド-オン 効果は2回発動する。"]
+},
+"hermit:CoalescencePower": {
+        "NAME": "融合",
+        "DESCRIPTIONS": ["ターン終了時、カードを #b", " 枚 #y保留 する。", " 枚 #y保留 する。"]
+},
+"hermit:ReprievePower": {
+        "NAME": "執行猶予",
+        "DESCRIPTIONS": ["ターン終了後 #b", " 追加のターンを得る。", " 追加のターンを得る。"]
+},
+"hermit:MaintenanceStrikePower": {
+        "NAME": "メンテナンス",
+        "DESCRIPTIONS": [" #yストライク が 追加の #b", " ダメージを与える。"]
+}
+}

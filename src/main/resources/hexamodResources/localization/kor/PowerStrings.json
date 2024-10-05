@@ -112,13 +112,6 @@
       " 장 #y복구합니다."
     ]
   },
-  "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "에너지 선물",
-    "DESCRIPTIONS": [
-      "#y휘발성 카드가 #y소멸할 때마다 다음 턴에 ",
-      " 를 얻습니다."
-    ]
-  },
   "hexamod:GoldPostCombatPower": {
     "NAME": "봉인의 대가: 영혼",
     "DESCRIPTIONS": [

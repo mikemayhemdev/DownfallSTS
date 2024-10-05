@@ -3,21 +3,14 @@ package charbosses.bosses.Watcher.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.purple.*;
 import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.WatcherCripplePower;
-import charbosses.powers.cardpowers.EnemyFearNoEvilPower;
 import charbosses.relics.*;
-import charbosses.stances.EnCalmStance;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import gremlin.relics.StolenMerchandise;
 
 import java.util.ArrayList;
 
@@ -31,14 +24,14 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
         maxHPModifier += 198;
         actNum = 2;
         bossMechanicName = WatcherCripplePower.NAME;
-        bossMechanicDesc = WatcherCripplePower.DESCRIPTIONS[0] + WatcherCripplePower.DESCRIPTIONS[1];
+        bossMechanicDesc = WatcherCripplePower.DESCRIPTIONS[0] + 150 + WatcherCripplePower.DESCRIPTIONS[1];
     }
 
     @Override
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 75), 25));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 150), 100));
 
     }
 
@@ -46,7 +39,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
        /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_VioletLotus());
+        addRelic(new CBR_SmoothStone());
         addRelic(new CBR_TeardropLocket());
         addRelic(new CBR_IncenseBurner());
        // addRelic(new CBR_MercuryHourglass());
@@ -59,50 +52,44 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
 
     @Override
     public ArrayList<AbstractCard> getThisTurnCards() {
-        AbstractCharBoss b = AbstractCharBoss.boss;
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
         if (!looped) {
             switch (turn) {
                 case 0:
-
                     if (AbstractDungeon.ascensionLevel >= 19) {
-                        AbstractBossCard c = new EnMentalFortress();
+                        AbstractBossCard c = new EnLikeWater();
                         c.freeToPlayOnce = true;
                         c.costForTurn = 0;
 //                        c.energyGeneratedIfPlayed = 1;
                         addToList(cardsList, c, false);  //removed
                     }
-                    addToList(cardsList, new EnLikeWater(), true);  //removed
-                    addToList(cardsList, new EnPressurePoints(), true);
-                    this.addToList(cardsList, new EnRagnarok(), false);
+                    addToList(cardsList, new EnLikeWater(), false);  //removed
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnRagnarok(), true);  //not used
                     turn++;
-                    AbstractCharBoss.boss.powerhouseTurn = true;
                     break;
                 case 1:
-                    addToList(cardsList, new EnFearNoEvil(), false);
-                    addToList(cardsList, new EnFollowUp(), false);
-                    addToList(cardsList, new EnWreathOfFlame(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnFollowUp(), true);
+                    addToList(cardsList, new EnDefendPurple(), false);  //not used
                     turn++;
-                    AbstractCharBoss.boss.powerhouseTurn = true;
                     break;
                 case 2:
-                    addToList(cardsList, new EnTantrum(), true,3);
-                    addToList(cardsList, new EnClumsy(), false);
-                    addToList(cardsList, new EnVigilance(), false);
+                    addToList(cardsList, new EnWaveOfTheHand(), false);
+                    addToList(cardsList, new EnLikeWater(), false);
+                    addToList(cardsList, new EnDefendPurple(), true);  //not used
                     turn++;
-                    AbstractCharBoss.boss.powerhouseTurn = true;
                     break;
                 case 3:
-                    addToList(cardsList, new EnLessonLearned(), true);
+                    addToList(cardsList, new EnWallop(), true);
                     theVeryImportantBlasphemy = new EnBlasphemy();
                     theVeryImportantBlasphemy.newPrio = 1;
-                    addToList(cardsList, theVeryImportantBlasphemy, true,6);
+                    addToList(cardsList, theVeryImportantBlasphemy, true);
                     theVeryImportantFlyingSleeves = new EnFlyingSleeves();
                     theVeryImportantFlyingSleeves.newPrio = 1;
-                    addToList(cardsList, theVeryImportantFlyingSleeves, extraUpgrades);
+                    addToList(cardsList, theVeryImportantFlyingSleeves, true);
                     turn++;
-                    AbstractCharBoss.boss.powerhouseTurn = true;
                     break;
                 case 4:
                     theVeryImportantBlasphemy.newPrio = -2;
@@ -111,51 +98,47 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
                     theVeryImportantFlyingSleeves.lockIntentValues = false;
                     AbstractBossCard c = new EnWish();
                     c.newPrio = -1;
-                    addToList(cardsList, c, true);  //removed
-                    addToList(cardsList, new EnRagnarok(), false);
-                    addToList(cardsList, new EnTranquility(), true);
+                    addToList(cardsList, c, extraUpgrades);  //removed
+                    addToList(cardsList, new EnTranquility(), true);  //not used
+                    addToList(cardsList, new EnVigilance());
                     turn++;
                     AbstractCharBoss.boss.powerhouseTurn = true;
                     break;
                 case 5:
-                    addToList(cardsList, new EnEmptyBody(), true,3);  //not used
-                    addToList(cardsList, new EnDevaForm(),  false);  //removed
-                    addToList(cardsList, new EnLikeWater(), true);
+                    addToList(cardsList, new EnEmptyBody(), false);  //not used
+                    addToList(cardsList, new EnWishPlated(), false);  //removed
+                    addToList(cardsList, new EnConsecrate(), true);
                     turn=0;
                     looped = true;
-                    AbstractCharBoss.boss.powerhouseTurn = true;
+                    AbstractCharBoss.boss.powerhouseTurn = false;
                     break;
             }
 
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnTantrum(),true,3);
-                    addToList(cardsList, new EnFlyingSleeves(), extraUpgrades);
-                    addToList(cardsList, new EnFearNoEvil(), false);
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(b, b, new EnemyFearNoEvilPower(b)));
-                    AbstractCharBoss.boss.powerhouseTurn = true;
+                    addToList(cardsList, new EnVigilance());
+                    addToList(cardsList, new EnConsecrate(), true);
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    AbstractCharBoss.boss.powerhouseTurn = false;
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnFollowUp(), false);
-                    addToList(cardsList, new EnPressurePoints(), true);
-                    addToList(cardsList, new EnEmptyBody(), true);
-                    AbstractCharBoss.boss.powerhouseTurn = true;
+                    addToList(cardsList, new EnFollowUp(), true);
+                    addToList(cardsList, new EnFlyingSleeves(), true);
+                    addToList(cardsList, new EnStrikePurple(), false);
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnTantrum(),true,3);
-                    addToList(cardsList, new EnWreathOfFlame(), false);
-                    addToList(cardsList, new EnFearNoEvil(), false);
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(b, b, new EnemyFearNoEvilPower(b)));
-                    AbstractCharBoss.boss.powerhouseTurn = true;
+                    addToList(cardsList, new EnWaveOfTheHand(), false);
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnWallop(), true);
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnPressurePoints(), true);
+                    addToList(cardsList, new EnEmptyBody(), false);
                     addToList(cardsList, new EnRagnarok(), false);
-                    addToList(cardsList, new EnVigilance(), false);
+                    addToList(cardsList, new EnDefendPurple(), true);
                     AbstractCharBoss.boss.powerhouseTurn = true;
                     turn = 0;
                     break;

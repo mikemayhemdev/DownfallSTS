@@ -5,15 +5,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
+import theHexaghost.util.HexaPurpleTextInterface;
 
-public class PowerFromBeyond extends AbstractHexaCard {
+public class PowerFromBeyond extends AbstractHexaCard implements HexaPurpleTextInterface {
 
     public final static String ID = makeID("PowerFromBeyond");
 
-    //stupid intellij stuff SKILL, NONE, UNCOMMON
-
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
 
     public PowerFromBeyond() {
@@ -21,24 +21,26 @@ public class PowerFromBeyond extends AbstractHexaCard {
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
         HexaMod.loadJokeCardImage(this, "PowerFromBeyond.png");
     }
 
     @Override
     public void afterlife() {
-        applyToSelf(new EnergizedBluePower(AbstractDungeon.player, 1));
+//        applyToSelf(new EnergizedBluePower(AbstractDungeon.player, 1));
         applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, magicNumber));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new EnergizedBluePower(AbstractDungeon.player, 1));
+        if(upgraded){applyToSelf(new EnergizedBluePower(AbstractDungeon.player, 1));}
         applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
+//            upgradeMagicNumber(UPG_MAGIC);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

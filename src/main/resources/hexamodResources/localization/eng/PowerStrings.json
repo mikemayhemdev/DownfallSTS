@@ -5,14 +5,15 @@
       "Do not #yAdvance at the end of the next turn.",
       "Do not #yAdvance at the end of the next #b",
       " turns."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:ApocalypticArmorPower": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "The next time you #yIgnite the Inferno Ghostflame and all #b",
-      " Ghostflames are #yIgnited, gain an additional turn.",
-      "The next time you #yIgnite the Inferno Ghostflame and at least #b"
+      "The next time you #yIgnite #b",
+      " Ghostflames, gain an additional turn.",
+      "The next time you #yIgnite at least #b"
     ]
   },
   "hexamod:ApplyBurnAtTurnStartOncePower": {
@@ -20,14 +21,16 @@
     "DESCRIPTIONS": [
       "At the start of your next turn, apply #b",
       " #ySoulburn to ALL enemies."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:BurnPerTurnPower": {
     "NAME": "Melting Metal",
     "DESCRIPTIONS": [
       "Applies #b",
       " #ySoulburn after the next time #ySoulburn is detonated on this enemy."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:BurnPower": {
     "NAME": "Soulburn",
@@ -42,30 +45,32 @@
     "NAME": "Wildfire Weapon",
     "DESCRIPTIONS": [
       "Whenever you deal unblocked attack damage, apply #b",
-      " #ySoulburn."
-    ]
+      " #ySoulburn [REMOVE_SPACE]."
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:CommonPostCombatPower": {
     "NAME": "Sealed Reward: Card",
     "DESCRIPTIONS": [
       "At the end of combat, obtain #b",
-      " additional normal card rewards.",
-      " additional normal card reward."
+      " additional normal cards.",
+      " additional normal card."
     ]
   },
-  "hexamod:CrispyPower": {
+  "hexamod:CrispyPower_new": {
     "NAME": "Extra Crispy",
     "DESCRIPTIONS": [
-      "#ySoulburn applied is increased by #b",
-      "."
+      "Whenever you #yExhaust #b3 cards, #yIgnite the current Ghostflame #b",
+      " time.",
+      " times."
     ]
   },
   "hexamod:EnhancePower": {
     "NAME": "Intensity",
     "DESCRIPTIONS": [
-      "Increase the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when Ignited by #b",
-      ".",
-      "Decrease the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when Ignited by #b"
+      "Increase the amount of damage, #ySoulburn [REMOVE_SPACE], and #yBlock applied by Ghostflames when Ignited by #b",
+      " [REMOVE_SPACE].",
+      "Decrease the amount of damage, #ySoulburn [REMOVE_SPACE], and #yBlock applied by Ghostflames when Ignited by #b"
     ]
   },
   "hexamod:EtherealRefundPower": {
@@ -73,13 +78,15 @@
     "DESCRIPTIONS": [
       "Whenever you play an #yEthereal card this turn, gain ",
       " ."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:FuturePower": {
-    "NAME": "Speedrun",
+    "NAME": "Into Shadow",
     "DESCRIPTIONS": [
-      "Whenever you #yAdvance, gain #b",
-      " temporary #yStrength."
+      "Whenever you #yRetract, choose to play and #yExhaust #b",
+      " card in your hand.",
+      " cards in your hand."
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -93,7 +100,7 @@
   "hexamod:StopFromAdvancingPower": {
     "NAME": "Here and Now",
     "DESCRIPTIONS": [
-      "You no longer #yAdvance at the end of your turn."
+      "At the end of your turn, #yExtinguish the current Ghostflame."
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
@@ -101,22 +108,15 @@
     "DESCRIPTIONS": [
       "When attacked this turn, applies #b",
       " #ySoulburn to the attacker."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:GiftsFromTheDeadPower": {
     "NAME": "Gifted Cards",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yReclaim ",
-      " random #yAfterlife ",
-      " card.",
-      " cards."
-    ]
-  },
-  "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "Gifted Energy",
-    "DESCRIPTIONS": [
-      "Whenever an #yEthereal card is #yExhausted, gain ",
-      " next turn."
+      "At the start of your turn, add #b",
+      " random #yAfterlife card into your hand.",
+      " random #yAfterlife cards into your hand."
     ]
   },
   "hexamod:GoldPostCombatPower": {
@@ -130,7 +130,7 @@
     "NAME": "Infernal Form",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
-      " #yIntensity."
+      " #yIntensity [REMOVE_SPACE]."
     ]
   },
   "hexamod:LoseEnhanceInTurnsPower": {
@@ -139,25 +139,23 @@
       "At the end of your turn, lose #b",
       "In #b",
       " turns, lose #b",
-      " #yIntensity."
-    ]
+      " #yIntensity [REMOVE_SPACE]."
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:ParanormalFormPower": {
     "NAME": "Poltergeist",
     "DESCRIPTIONS": [
-      "Whenever you play an #yAfterlife card, deal #b",
-      " damage to a random enemy."
+      "Whenever you play an #yEthereal card, a random enemy loses #b",
+      " HP."
     ]
   },
   "hexamod:PastPower": {
     "NAME": "Devil's Dance",
     "DESCRIPTIONS": [
-      "The first #b",
-      " time ",
-      " times ",
-      "you #yRetract each turn, gain [E] and draw 1 card. NL Retracted #b",
-      " time this turn.",
-      " times this turn."
+      "Whenever you #yRetract, draw #b",
+      " card.",
+      " cards."
     ]
   },
   "hexamod:PotionPostCombatPower": {
@@ -181,12 +179,15 @@
       "At the end of combat, obtain #b",
       " additional #ySeal cards.",
       " additional #ySeal card."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:TimeStopPower": {
     "NAME": "Doom's Arrival",
     "DESCRIPTIONS": [
-      "At the end of your turn, immediately start another turn. NL #yEnergy and #yBlock are maintained."
+      "At the end of your turn, immediately start another turn.",
+      "At the end of your turn, immediately start another #b",
+      " turns."
     ]
   },
   "hexamod:VolcanoVisagePower": {
@@ -206,6 +207,35 @@
     "NAME": "More Energy",
     "DESCRIPTIONS": [
       "At the start of your turn gain "
+    ]
+  },
+  "hexamod:SoulburnOnExhaustPower": {
+    "NAME": "Soulburn Infestation",
+    "DESCRIPTIONS": [
+      "Whenver you #yExhaust a card this turn, apply #b",
+      " #ySoulburn to this enemy."
+    ]
+  },
+  "hexamod:LoseIntensityPower": {
+    "NAME": "Intensity Down",
+    "DESCRIPTIONS": [
+      "At the end of this turn, lose #b",
+      " #yIntensity [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:MaxHPPostCombatPower": {
+    "NAME": "Sealed Reward: Max HP",
+    "DESCRIPTIONS": [
+      "At the end of combat, gain #b",
+      " Max HP."
+    ]
+  },
+  "hexamod:InfernoPotionPower": {
+    "NAME": "Hexaburn",
+    "DESCRIPTIONS": [
+      "Your Ghostflame effect affects all enemy this combat.",
+      "Your Ghostflame effect affects all enemy #b",
+      " times this combat."
     ]
   }
 }

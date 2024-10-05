@@ -30,7 +30,7 @@ public class GatlingBeam extends AbstractGuardianCard implements InStasisCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
 
-
+    //Laser turret
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
@@ -100,7 +100,7 @@ public class GatlingBeam extends AbstractGuardianCard implements InStasisCard {
     @Override
     public void onStartOfTurn(StasisOrb orb) {
         AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
-
+        this.calculateCardDamage(m);
         if (m != null) {
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(m.hb.cX, m.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.BLUE), 0.1F));

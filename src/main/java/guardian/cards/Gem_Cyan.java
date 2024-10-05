@@ -27,13 +27,11 @@ public class Gem_Cyan extends AbstractGemCard {
     private static final int COST = 0;
     private static final int BLOCK = 4;  //HARDCODED IN DESCRIPTION
 
-    //TUNING CONSTANTS
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
 
-    //END TUNING CONSTANTS
 
     //GEMS ALWAYS need entries added to OnSave, OnLoad, updateGemDescription, render methods in AbstractGuardianCard!
 

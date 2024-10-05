@@ -2,6 +2,7 @@ package theHexaghost.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.core.Settings;
@@ -21,7 +22,7 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("UnbrokenSoul.png"));
 
     public boolean activated = false;
-
+    // mark of the ether
     public UnbrokenSoul() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
@@ -62,23 +63,24 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
 
         }
 
-        return DESCRIPTIONS[0] + sb.toString() + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
     }
 
-    @Override
-    public void atTurnStartPostDraw() {
-        activated = false;
-        beginPulse();
-    }
+//    @Override
+//    public void atTurnStartPostDraw() {
+//        activated = false;
+//        beginPulse();
+//    }
 
     @Override
     public void onCharge(AbstractGhostflame g) {
-        if (!activated) {
+//        if (!activated) {
             flash();
-            //addToBot(new GainBlockAction(AbstractDungeon.player, 5));
-            addToBot(new GainEnergyAction(1));
-            activated = true;
-            stopPulse();
-        }
+            addToBot(new GainBlockAction(AbstractDungeon.player, 4));
+//            addToBot(new DrawCardAction(1));
+//            addToBot(new GainEnergyAction(1));
+//            activated = true;
+//            stopPulse();
+//        }
     }
 }

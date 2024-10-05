@@ -9,13 +9,11 @@ public class SoulSteal extends AbstractHexaCard {
 
     public final static String ID = makeID("SoulSteal");
 
-    //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
-
+    //living bomb
 
     public SoulSteal() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = 4;
-        //exhaust = true;
         HexaMod.loadJokeCardImage(this, "SoulSteal.png");
     }
 
@@ -28,7 +26,7 @@ public class SoulSteal extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBurn(4);
+            upgradeBurn(3);
         }
     }
 }

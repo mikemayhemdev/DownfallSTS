@@ -13,19 +13,28 @@ public class TimeOfNeed extends AbstractHexaCard {
 
     public final static String ID = makeID("TimeOfNeed");
 
-    //stupid intellij stuff SKILL, SELF, RARE
-
     public TimeOfNeed() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         selfRetain = true;
         exhaust = true;
         HexaMod.loadJokeCardImage(this, "TimeOfNeed.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();// 32
-        q.freeToPlayOnce = true;// 33
-        this.addToBot(new MakeTempCardInHandAction(q, true));// 34
+        int roll = AbstractDungeon.cardRng.random(0, 99); // adding this because after it's moved to uncommon, I noticed it generates rare powers too frequently.
+        AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
+        if(roll >= 85){
+            while( q.rarity != CardRarity.RARE ){
+                q = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
+            }
+        }else{
+            while( q.rarity == CardRarity.RARE ){
+                q = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
+            }
+        }
+
+        q.freeToPlayOnce = true;
+        this.addToBot(new MakeTempCardInHandAction(q, true));
     }
 
     public void upgrade() {

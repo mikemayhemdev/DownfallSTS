@@ -19,7 +19,7 @@ public class PhantomFireball extends AbstractHexaCard {
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
     private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 3;
+    private static final int UPG_DAMAGE = 2;
 
     public PhantomFireball() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
@@ -29,12 +29,12 @@ public class PhantomFireball extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        atb(new AbstractGameAction() {
+        att(new AbstractGameAction() {
             @Override
             public void update() {
                 if (m.hasPower(BurnPower.POWER_ID)) {
                     BurnPower p = (BurnPower) m.getPower(BurnPower.POWER_ID);
-                    p.explode();
+                    p.explode(true);
                 }
                 this.isDone = true;
             }

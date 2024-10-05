@@ -1,6 +1,5 @@
 package guardian.cards;
 
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,7 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
@@ -23,18 +21,15 @@ public class VentSteam extends AbstractGuardianCard {
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final int COST = 1;
 
-    //TUNING CONSTANTS
     private static final int UPGRADE_COST = 0;
     private static final int DEBUFFCOUNT = 2;
     private static final int UPGRADE_DEBUFF = 1;
     private static final int SOCKETS = 2;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -55,10 +50,11 @@ public class VentSteam extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        //if (upgraded)
-        //    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
-
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if ((!monster.isDead) && (!monster.isDying)) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new VulnerablePower(monster, this.magicNumber, false), this.magicNumber));
+            }
+        }
         super.useGems(p, m);
     }
 
@@ -74,7 +70,6 @@ public class VentSteam extends AbstractGuardianCard {
     }
 
     public void updateDescription() {
-
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
                 this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);

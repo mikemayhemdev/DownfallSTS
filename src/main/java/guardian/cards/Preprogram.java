@@ -104,7 +104,6 @@ public class Preprogram extends AbstractGuardianCard {
                     this.description.remove(i);
                 }
             }
-
         }
     }
 }

@@ -51,11 +51,11 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
     private void reshuffle() {
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
 
+        addCardToDeck(new EnDefendHermit(), false);
         addCardToDeck(new EnStrikeHermit(), true);
-        addCardToDeck(new EnStrikeHermit(), false);
         addCardToDeck(new EnDefendHermit(), false);
 
-        addCardToDeck(new EnDesperado(), extraUpgrades);
+        addCardToDeck(new EnDesperado(), false);
         addCardToDeck(new EnStrikeHermit(), true);
         addCardToDeck(new EnFlashPowder(), false);
 
@@ -64,7 +64,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         addCardToDeck(new EnGoodInstincts(), false);
 
         addCardToDeck(new EnSwiftStrike(), false);
-        addCardToDeck(new EnPanacea(), true);
+        addCardToDeck(new EnPanacea(), false);
         addCardToDeck(new EnShortFuseNecro(), false);
         addCardToDeck(new EnNecronomicurse(), false);
     }
@@ -115,9 +115,9 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
             AbstractCard target = getNextCard();
             cardsList.add(target);
 
-            if (target.cardID.equals(EnNecronomicurse.ID)) {
-                AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
-            }
+//            if (target.cardID.equals(EnNecronomicurse.ID)) {
+//                AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
+//            }
         }
         if (AbstractCharBoss.boss instanceof CharBossHermit) {
             CharBossHermit.previewCard = mockDeck.get(0).makeStatEquivalentCopy();
@@ -146,15 +146,15 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
 
         AbstractCard bot = AbstractCharBoss.boss.hand.getBottomCard();
         AbstractCharBoss.boss.hand.removeCard(bot);
-        if (bot instanceof EnShowdown) {
-            ((AbstractHermitBossCard) bot).onSpecificTrigger();
-        }
+//        if (bot instanceof EnShowdown) {
+//            ((AbstractHermitBossCard) bot).onSpecificTrigger();
+//        }
         AbstractCard next = getNextCard();
         AbstractCharBoss.boss.hand.addToTop(next);
 
-        if (next.cardID.equals(EnNecronomicurse.ID)) {
-            AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
-        }
+//        if (next.cardID.equals(EnNecronomicurse.ID)) {
+//            AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
+//        }
 
         AbstractCharBoss.boss.hand.refreshHandLayout();
         AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {

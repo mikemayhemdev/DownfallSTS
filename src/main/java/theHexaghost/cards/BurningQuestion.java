@@ -1,48 +1,44 @@
 package theHexaghost.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
-import com.megacrit.cardcrawl.cards.red.Rampage;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
+import theHexaghost.HexaMod;
+import theHexaghost.util.HexaPurpleTextInterface;
 
-public class BurningQuestion extends AbstractHexaCard {
+public class BurningQuestion extends AbstractHexaCard implements HexaPurpleTextInterface {
     public final static String ID = makeID("BurningQuestion");
-    // intellij stuff skill, self, rare, 10, 2, 10, 2, 8, 2
-    //ART:
 
     public BurningQuestion() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseDamage = 10;
-        baseBlock = 10;
-        baseMagicNumber = magicNumber = 3;
-        isMultiDamage = true;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
         isEthereal = true;
+        tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "BurningQuestion.png");
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
+        if (Settings.language == Settings.GameLanguage.ZHS){
+            this.keywords.add("敏捷");
+        }else if (Settings.language == Settings.GameLanguage.RUS){
+            this.keywords.add("ловкость");
+        }else{
+            this.keywords.add("dexterity");
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new StrengthPower(p,magicNumber));
+        applyToSelf(new DexterityPower(AbstractDungeon.player,1));
     }
 
     @Override
     public void afterlife() {
         flash();
-        applyToSelf(new DexterityPower(AbstractDungeon.player,2));
-          }
-
-//    @Override
-//    public void calculateCardDamage(AbstractMonster mo) {
-//        this.damage = baseDamage;
-//    }
-
+        applyToSelf(new DexterityPower(AbstractDungeon.player,1));
+    }
 
     @Override
     protected boolean useAfterlifeVFX() {

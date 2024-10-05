@@ -31,7 +31,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 import downfall.patches.BanSharedContentPatch;
 import gremlin.cards.*;
-import gremlin.cards.SharpenBlades;
 import gremlin.characters.GremlinCharacter;
 import gremlin.events.BackToBasicsGremlin;
 import gremlin.events.GremlinTrenchcoat;
@@ -48,7 +47,6 @@ import gremlin.powers.AbstractGremlinPower;
 import gremlin.relics.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.cards.AbstractSlimeboundCard;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -81,6 +79,8 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
     private static final String CHAR_BUTTON = "charSelect/button.png";
     private static final String CHAR_PORTRAIT = "charSelect/charBG.png";
+    private static final String CUSTOMMODE_CHAR_PORTRAIT = "charSelect/leaderboard.png";
+
 
     public static Color potionLabColor = new Color(205F / 255F, 92F / 255F, 92F / 255F, 1);
 
@@ -161,7 +161,8 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         BaseMod.addCharacter(new GremlinCharacter("The Gremlins"),
                 getResourcePath(CHAR_BUTTON),
                 getResourcePath(CHAR_PORTRAIT),
-                GREMLIN);
+                GREMLIN,
+                getResourcePath(CUSTOMMODE_CHAR_PORTRAIT));
     }
 
     @Override

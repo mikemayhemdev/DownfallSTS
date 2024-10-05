@@ -117,6 +117,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.srcCurseCardPool.removeCard(Scatterbrained.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Sapped.ID);
             }
+            //TODO: Don't forget to add for Study the Spire and Quick Study
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                 AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(PrepareCrush.ID);
@@ -171,7 +172,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(BronzeIdol.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(BrassTacks.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(BloodyTooth.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(CandleOfCauterizing.ID);
+//                AbstractDungeon.relicsToRemoveOnStart.add(CandleOfCauterizing.ID); // red candle changed to hexa specific
                 AbstractDungeon.relicsToRemoveOnStart.add(DeflectingBracers.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(DuelingGlove.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(DecasWashers.ID);

@@ -343,6 +343,7 @@ public abstract class AbstractBossDeckArchetype {
 
     public void initialize() {
         //Overwritten in each Archetype Base
+        //called by every instance of AbstractCharBoss's generateDeck()
     }
 
 

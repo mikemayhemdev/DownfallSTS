@@ -112,13 +112,6 @@
       " карт(ы) с эффектом #yПосмертие, в начале вашего хода."
     ]
   },
-  "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "Энергия извне",
-    "DESCRIPTIONS": [
-      "Вы получаете ",
-      " в следующем ходу, когда #yЭфирная карта #yсжигается."
-    ]
-  },
   "hexamod:GoldPostCombatPower": {
     "NAME": "Награда за печать: Золото",
     "DESCRIPTIONS": [

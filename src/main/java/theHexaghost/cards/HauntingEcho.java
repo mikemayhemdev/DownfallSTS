@@ -10,12 +10,13 @@ import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
+import theHexaghost.ghostflames.CrushingGhostflame;
+import theHexaghost.ghostflames.InfernoGhostflame;
+import theHexaghost.ghostflames.SearingGhostflame;
 
 public class HauntingEcho extends AbstractHexaCard {
 
     public final static String ID = makeID("HauntingEcho");
-
-    //stupid intellij stuff ATTACK, SELF_AND_ENEMY, UNCOMMON
 
     private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
@@ -43,8 +44,22 @@ public class HauntingEcho extends AbstractHexaCard {
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = GhostflameHelper.activeGhostFlame.charged ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
-    }// 68
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
+
+        if (GhostflameHelper.activeGhostFlame instanceof SearingGhostflame) {
+            if(GhostflameHelper.activeGhostFlame.getActiveFlamesTriggerCount() == 1){
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+            }
+        }
+
+        if (GhostflameHelper.activeGhostFlame instanceof InfernoGhostflame) {
+            if(GhostflameHelper.activeGhostFlame.getActiveFlamesTriggerCount() + this.costForTurn >= 3){
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+            }
+        }
+
+        if(GhostflameHelper.activeGhostFlame.charged) this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+    }
 
     public void upgrade() {
         if (!upgraded) {

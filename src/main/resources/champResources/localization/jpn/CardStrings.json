@@ -1,0 +1,396 @@
+{
+  "champ:Strike": {
+    "NAME": "ストライク",
+    "DESCRIPTION": " !D! ダメージを与える。"
+  },
+  "champ:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": " !B! ブロックを得る。"
+  },
+  "champ:Taunt": {
+    "NAME": "誘い",
+    "DESCRIPTION": "脱力 !M! と 弱体 1 を与える。",
+    "UPGRADE_DESCRIPTION": "敵全体に 脱力 1 と 弱体 1 を与える。"
+  },
+  "champ:Execute": {
+    "NAME": "エクスキュート",
+    "DESCRIPTION": " !D! ダメージを !cool! 回与える。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを !cool! 回与える。"
+  },
+  "champ:StanceDance": {
+    "NAME": "スタンスダンス",
+    "DESCRIPTION": "入るスタンスを選択。 NL 現在のスタンスを選んだ場合ランダムな champ:コンボ カードを1枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "入るスタンスを選択。 NL ランダムな champ:コンボ カードを1枚手札に加える。",
+    "EXTENDED_DESCRIPTION": [
+      "champ:狂化 に入る。",
+      "champ:守護 に入る。"
+    ]
+  },
+  "champ:SwordSigil": {
+    "NAME": "勝利の紋章",
+    "DESCRIPTION": "現在のスタンスの *スキルボーナス を !M! 回得る。 NL 廃棄"
+  },
+  "champ:FaceSlap": {
+    "NAME": "平手打ち",
+    "DESCRIPTION": " !D! ダメージを与える。 NL *狂化 champ:コンボ: 弱体 !M! を与える。"
+  },
+  "champ:FlashCut": {
+    "NAME": "フラッシュストライク",
+    "DESCRIPTION": " !D! ダメージを与える。 NL *守護 champ:コンボ: !M! champ:カウンター と !B! ブロックを得る。"
+  },
+  "champ:DefensiveShout": {
+    "NAME": "守護の叫び",
+    "DESCRIPTION": " !M! champ:カウンター を得る。 NL champ:守護 のスタンスに入る。"
+  },
+  "champ:ShieldSigil": {
+    "NAME": "チェインラッシュ",
+    "DESCRIPTION": " !D! ダメージを与える。 NL このターン スキルボーナスの効果が !M! 上昇。"
+  },
+  "champ:FocusedDefense": {
+    "NAME": "回避行動",
+    "DESCRIPTION": " !B! ブロックを得る。 NL 気力 !M! を得る。 NL champ:狂化 のスタンスに入る。"
+  },
+  "champ:FocusedBerserking": {
+    "NAME": "オールアウト",
+    "DESCRIPTION": "廃棄 NL スタンスを崩さず !M! 回行う: "
+  },
+  "champ:SetATrap": {
+    "NAME": "トラップセット",
+    "DESCRIPTION": " !B! ブロックを得る。 NL *守護 champ:コンボ: 敵全体に 脱力 !M! を与える。"
+  },
+  "champ:Backstep": {
+    "NAME": "バックステップ",
+    "DESCRIPTION": "champ:守護 のスタンスに入る NL !B! ブロックを得る。 NL *気力 で効果が増加する。"
+  },
+  "champ:BerserkersShout": {
+    "NAME": "狂化の叫び",
+    "DESCRIPTION": "気力 !M! を得る。 NL champ:狂化 のスタンスに入る。"
+  },
+  "champ:RageSigil": {
+    "NAME": "戦闘プラン",
+    "DESCRIPTION": " !B! ブロックを得る。 NL 占術 !M! "
+  },
+  "champ:GutPunch": {
+    "NAME": "内臓攻撃",
+    "DESCRIPTION": " !D! ダメージを与える。 NL *全スタンス champ:コンボ: champ:アルティメット スタンスに入る。1ターン持続。 NL 廃棄"
+  },
+  "champ:FanOfKnives": {
+    "NAME": "扇形投擲",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL *狂化 champ:コンボ: 2回与える。",
+    "UPGRADE_DESCRIPTION": "敵全体に !D! ダメージを与える。 NL *狂化 champ:コンボ: 3回与える。"
+  },
+  "champ:Devastate": {
+    "NAME": "踏み荒らし",
+    "DESCRIPTION": " !D! ダメージを !M! 回与える。 NL フィニッシャー をプレイすると コストが [E] 下がる。"
+  },
+  "champ:Circumvent": {
+    "NAME": "迂回",
+    "DESCRIPTION": " !B! ブロックを得る。 NL カードを !M! 枚引く。 NL カードを !M! 枚捨てる。"
+  },
+  "champ:SkillfulDodge": {
+    "NAME": "巧みな回避",
+    "DESCRIPTION": " !B! ブロックを得る。 NL !M! champ:カウンター を得る。 NL *守護 champ:コンボ: この戦闘中効果を !cool! 上昇させる。"
+  },
+  "champ:TornadoPunch": {
+    "NAME": "トルネードパンチ",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL *守護 champ:コンボ: ダメージを与えた敵1体毎に !B! ブロックを得る。",
+    "UPGRADE_DESCRIPTION": "敵全体に !D! ダメージを与える。 NL *守護 champ:コンボ: ダメージを与えた敵1体毎に !B! ブロックを得る。"
+  },
+  "champ:EnGarde": {
+    "NAME": "構える",
+    "DESCRIPTION": " !B! ブロックを得る。 NL このターンブロックが破壊されると次のターン !B! ブロックを得る。"
+  },
+  "champ:ShieldSlam": {
+    "NAME": "真実の瞬間",
+    "DESCRIPTION": "保留 NL カードを !M! 枚引く。",
+    "UPGRADE_DESCRIPTION": "保留 NL カードを !M! 枚引く。"
+  },
+  "champ:EnchantShield": {
+    "NAME": "エンチャントシールド",
+    "DESCRIPTION": "カードを選択する。 NL この戦闘中そのブロックを !M! 上昇させる。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      "今はこれを行う時期ではない。"
+    ]
+  },
+  "champ:BringItOn": {
+    "NAME": "攻撃してみろ！",
+    "DESCRIPTION": " !B! ブロックを得る。 NL !M! champ:カウンター を得る。",
+    "EXTENDED_DESCRIPTION": [
+      "スタンスに入っていない。"
+    ]
+  },
+  "champ:ShieldThrow": {
+    "NAME": "シールドスロー",
+    "DESCRIPTION": "現在のブロックと同等のダメージを2回与える。 NL 脆弱化 2 を受ける。 NL *守護 champ:コンボ: 脆弱化 にならない。",
+    "EXTENDED_DESCRIPTION": [
+      "現在のブロックと同等のダメージ( !D! )を2回与える。 NL 脆弱化 2 を受ける。 NL *守護 champ:コンボ: 脆弱化 を2減らす。"
+    ]
+  },
+  "champ:FalseCounter": {
+    "NAME": "弱ったふり",
+    "DESCRIPTION": " !B! ブロックを得る。 NL 次のターン [E] を得てカードを 2 枚引く。",
+    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL 次のターン [E] [E] を得てカードを 2 枚引く。"
+  },
+  "champ:IronFortress": {
+    "NAME": "テクニカルジグ",
+    "DESCRIPTION": "スタンスに入る度 !M! ブロックを得る。"
+  },
+  "champ:Lariat": {
+    "NAME": "強化ボディ",
+    "DESCRIPTION": " !B! ブロックを X 回得る。"
+  },
+  "champ:HoldFirm": {
+    "NAME": "鋼鉄の意思",
+    "DESCRIPTION": " !B! ブロックを得る。 NL !M! champ:カウンター を得る。 NL bronze:ブラー 1を得る。"
+  },
+  "champ:ShieldWall": {
+    "NAME": "鋼鉄の要塞",
+    "DESCRIPTION": "敏捷性 2 を得る。 NL 各ターン終了時 !M! ブロックを得る。"
+  },
+  "champ:Haymaker": {
+    "NAME": "パイルドライバー",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 弱体 2 を与える。 NL 脱力 2 を与える。"
+  },
+  "champ:ViciousMockery": {
+    "NAME": "悪意ある嘲笑",
+    "DESCRIPTION": "気力 !M! を得る。 NL 脱力 !DM! を与える。",
+    "EXTENDED_DESCRIPTION": [
+      "狂化 champ:コンボ: 一時的な 筋力 !M! を得る。 NL ",
+      "守護 champ:コンボ: 一時的な 敏捷性 !M! を得る。"
+    ]
+  },
+  "champ:PreciseThrust": {
+    "NAME": "正確な予想",
+    "DESCRIPTION": " !D! ダメージを与える。 NL *狂化 champ:コンボ: !D! ダメージ NL *守護 champ:コンボ: !B! ブロック"
+  },
+  "champ:CrookedStrike": {
+    "NAME": "クルークストライク",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 気力を消費しない。"
+  },
+  "champ:RapidStrikes": {
+    "NAME": "ラピッドストライク",
+    "DESCRIPTION": " !D! ダメージを !M! 回与える。 NL このターン手札の「ストライク」1枚のコストが0になる。"
+  },
+  "champ:EnchantSword": {
+    "NAME": "エンチャントソード",
+    "DESCRIPTION": "手札を1枚選択し、この戦闘中ダメージを !M! 上昇させる。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      "今はこれを行う時期ではない。"
+    ]
+  },
+  "champ:BladeFlurry": {
+    "NAME": "マルチストライク",
+    "DESCRIPTION": " !D! ダメージを与える。 NL このターン次の 「ストライク」 を2回プレイする。"
+  },
+  "champ:SwordThrow": {
+    "NAME": "ソードスロー",
+    "DESCRIPTION": " !D! ダメージを !M! 回与える。 NL 脱力 2 を受ける。 NL *狂化 champ:コンボ: 脱力を受けない。"
+  },
+  "champ:MurderStrike": {
+    "NAME": "マーダーストライク",
+    "DESCRIPTION": "保留 NL !D! ダメージを与える。 NL スキル を使用するとダメージが !M! 増加する。"
+  },
+  "champ:HeavySlash": {
+    "NAME": "達人の一撃",
+    "DESCRIPTION": " !D! ダメージを与える。 NL ランダムな スキル を1枚手札に加える。 NL それはコストが0になる。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL ランダムな スキル+ を1枚手札に加える。 NL それはコストが0になる。"
+  },
+  "champ:CheapShot": {
+    "NAME": "卑劣な攻撃",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 対象がボスの場合更に2回攻撃する。それ以外なら hermit:スタン させる。 NL 廃棄"
+  },
+  "champ:RisingSlash": {
+    "NAME": "ライジングストライク",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 最後にプレイされたカードが champ:フィニッシャー だった場合もう一度 !D! ダメージを与える。"
+  },
+  "champ:Shatter": {
+    "NAME": "シャッター",
+    "DESCRIPTION": "敵の ブロック を解除する。 NL !D! ダメージを与える。",
+    "UPGRADE_DESCRIPTION": "敵の ブロック と アーティファクト を解除する。 NL !D! ダメージを与える。"
+  },
+  "champ:EnragedBash": {
+    "NAME": "怒りの一撃",
+    "DESCRIPTION": " !D! ダメージを与える。 NL *狂化 champ:コンボ: この戦闘中ヒット数が上昇する。",
+    "EXTENDED_DESCRIPTION": [
+      " !D! ダメージを !M! 回与える。 NL *狂化 champ:コンボ: この戦闘中ヒット数が上昇する。"
+    ]
+  },
+  "champ:VampiricStrike": {
+    "NAME": "クラバー",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 防御されなかったダメージ分のブロックを得る。"
+  },
+  "champ:AdrenalArmor": {
+    "NAME": "アドレナリン分泌",
+    "DESCRIPTION": " !B! ブロックを得る。 NL 一時的な 筋力 !M! を得る。"
+  },
+  "champ:HeartStrike": {
+    "NAME": "奴を仕留める",
+    "DESCRIPTION": " !D! ダメージを与える。敵のHPが !M! % 以下ならもう一度与える。",
+    "EXTENDED_DESCRIPTION": [
+      "今は時期ではない",
+      "まだその敵を仕留める準備が出来てない"
+    ]
+  },
+  "champ:CrownThrow": {
+    "NAME": "王冠攻撃",
+    "DESCRIPTION": " !D! ダメージを与える。 NL *狂化 champ:コンボ: アタックを !M! 枚引く。"
+  },
+  "champ:Encircle": {
+    "NAME": "包囲",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 攻撃が当たった敵の数だけ *スキルボーナス を得る。"
+  },
+  "champ:LastStand": {
+    "NAME": "ラストスタンド",
+    "DESCRIPTION": "HPが 50% 以下になると、全てのデバフを解除して 筋力 !M! を得る。",
+    "EXTENDED_DESCRIPTION": [
+      "~やりやがったな...？~",
+      "@敗北??@ NL @認めんぞ!!@"
+    ]
+  },
+  "champ:RecklessLeap": {
+    "NAME": "リスキーストライク",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 筋力 2 を得る。 NL 敏捷性 を 1 失う。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 筋力 2 を得る。 NL 敏捷性 を 1 失う。",
+    "EXTENDED_DESCRIPTION": [
+      "今は動く時期じゃない"
+    ]
+  },
+  "champ:IgnorePain": {
+    "NAME": "食いしばり",
+    "DESCRIPTION": "次のターンまでHPが減らない。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "次のターンまでHPが減らない。 NL 廃棄"
+  },
+  "champ:DeathBlow": {
+    "NAME": "デスブロウ",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 気力 !M! を得る。 NL 廃棄"
+  },
+  "champ:ArenaPreparation": {
+    "NAME": "アリーナの準備",
+    "DESCRIPTION": "ランダムなスキルを !M! 枚手札に加える。 NL それらに 保留 が付く。 NL 廃棄"
+  },
+  "champ:SteelEdge": {
+    "NAME": "鋼鉄の刃",
+    "DESCRIPTION": " !D! ダメージを X 回与える。",
+    "EXTENDED_DESCRIPTION": [
+      "狂化 champ:コンボ: !D! ダメージを X 回与える。 NL ",
+      "守護 champ:コンボ: !B! ブロックを X 回得る。",
+      "剣闘: カードを1枚引いて [E] を得る。",
+      "剣闘: カードを2枚引いて [E] を得る。",
+      "champ:コンボ NL "
+    ]
+  },
+  "champ:Improvising": {
+    "NAME": "即興",
+    "DESCRIPTION": "ターン開始時スタンスに入っていなければランダムなスタンスに入る。"
+  },
+  "champ:CalledShot": {
+    "NAME": "リフレッシュ",
+    "DESCRIPTION": "*狂化 champ:コンボ: [E] [E] を得て、これを廃棄する。 NL *守護 champ:コンボ: カードを !M! 枚引く。",
+    "UPGRADE_DESCRIPTION": "*狂化 champ:コンボ: [E] [E] [E] を得て、これを廃棄する。 NL *守護 champ:コンボ: カードを !M! 枚引く。",
+    "EXTENDED_DESCRIPTION": [
+      "狂化 champ:コンボ: [E] [E] を得て、これを廃棄する。 NL ",
+      "狂化 champ:コンボ: [E] [E] [E] を得て、これを廃棄する。 NL ",
+      "守護 champ:コンボ: カードを !M! 枚引く。",
+      "今はこれを行う時期じゃない"
+    ]
+  },
+  "champ:PerfectedStrike": {
+    "NAME": "パーフェクトストライク",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 全ての「ストライク」の数 x !M! 追加ダメージ。"
+  },
+  "champ:GladiatorForm": {
+    "NAME": "闘士化",
+    "DESCRIPTION": "前ターンに消費した気力 3 毎に 気力 !M! を得る。 champ:カウンター にも同じ処理をする。"
+  },
+  "champ:Duel": {
+    "NAME": "挑戦者",
+    "DESCRIPTION": " !B! ブロックを得る。 NL !D! ダメージを与える。 NL 対象が 筋力 を持っている場合もう一度繰り返す。",
+    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL !D! ダメージを与える。 NL 対象が 筋力 を持っている場合もう一度繰り返す。"
+  },
+  "champ:DancingMaster": {
+    "NAME": "ダンシングマスター",
+    "DESCRIPTION": "各ターン最初に *フィニッシャー を使用した時、 [E] を得てカードを1枚引く。"
+  },
+  "champ:StrikeOfGenius": {
+    "NAME": "ストライクジーニアス",
+    "DESCRIPTION": "ターン開始時ランダムな「ストライク」を得る。 NL そのカードはコストが0になり、 廃棄 が付く。",
+    "UPGRADE_DESCRIPTION": "ターン開始時ランダムな「ストライク+」を得る。 NL そのカードはコストが0になり、 廃棄 が付く。"
+  },
+  "champ:DefensiveStyle": {
+    "NAME": "防御の構え",
+    "DESCRIPTION": "champ:守護 のスタンスに入る。 NL champ:守護 *スキルボーナス が追加で !M! champ:カウンター を得る",
+    "UPGRADE_DESCRIPTION": "天賦 NL champ:守護 のスタンスに入る。 NL champ:守護 *スキルボーナス が追加で !M! champ:カウンター を得る"
+  },
+  "champ:GladiatorStyle": {
+    "NAME": "正々堂々",
+    "DESCRIPTION": "筋力 と 敏捷性 !M! を得る。"
+  },
+  "champ:BerserkerStyle": {
+    "NAME": "狂化の構え",
+    "DESCRIPTION": "champ:狂化 のスタンスに入る。 NL champ:狂化 *スキルボーナス 追加で !M! 気力を得る。",
+    "UPGRADE_DESCRIPTION": "天賦 NL champ:狂化 のスタンスに入る。 NL champ:狂化 *スキルボーナス 追加で !M! 気力を得る。"
+  },
+  "champ:Riposte": {
+    "NAME": "応酬",
+    "DESCRIPTION": "エセリアル NL !D! ダメージを与える。 NL 廃棄"
+  },
+  "champ:Endure": {
+    "NAME": "耐える",
+    "DESCRIPTION": " !B! ブロックを得る。 NL このカードは *敏捷性 ではなく *筋力 の影響を受ける。",
+    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL このカードは *筋力 の影響も受ける。"
+  },
+  "champ:PreemptiveStrike": {
+    "NAME": "プリムストライク",
+    "DESCRIPTION": "全ての敵に champ:カウンター に等しいダメージ。 NL champ:カウンター を半分失う。",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( !D! ダメージ)",
+      "今はこれを行えない"
+    ]
+  },
+  "champ:Parry": {
+    "NAME": "パリイ",
+    "DESCRIPTION": " !B! ブロックを得る。 NL !M! champ:カウンター を得る。 NL このターン champ:カウンター を使用したら *応酬 を手札に加える。",
+    "UPGRADE_DESCRIPTION": "エセリアル NL champ:カウンター に等しいダメージを与える。 NL 廃棄"
+  },
+  "champ:EnchantCrown": {
+    "NAME": "エンチャントクラウン",
+    "DESCRIPTION": "手札を1枚選択する。 NL 戦闘中そのコストを0にする。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      "今はこれを行えない"
+    ]
+  },
+  "champ:ModFinisherStrike": {
+    "NAME": "フィニッシュストライク",
+    "DESCRIPTION": "保留 NL !D! ダメージを与える。"
+  },
+  "champ:UltimateStance": {
+    "NAME": "究極の構え",
+    "DESCRIPTION": "次のターン中 champ:アルティメット スタンスに入る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": " *守護 か *狂化 スタンスが必要。 NL champ:アルティメット スタンスに入る。 !M! ターン持続する。",
+    "EXTENDED_DESCRIPTION": [
+      "スタンスに入っていない"
+    ]
+  },
+  "champ:FancyFootwork": {
+    "NAME": "派手なフットワーク",
+    "DESCRIPTION": "現在と別のスタンスに入る。 NL このターン次の champ:フィニッシャー を行うと敵全体がHPを !M! 失う。"
+  },
+  "champ:TripleStrike": {
+    "NAME": "トリプルストライク",
+    "DESCRIPTION": " !D! ダメージを与える。 NL コストが0で *スキルボーナス が付いた *ストライク を2枚手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL コストが0で *スキルボーナス が付いた *ストライク+ を2枚手札に加える。 NL 廃棄"
+  },
+  "champ:WindUp": {
+    "NAME": "ワインドアップ",
+    "DESCRIPTION": "入るスタンスを選択。 NL 山札から champ:フィニッシャー を1枚引く。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "入るスタンスを選択。 NL 山札から champ:フィニッシャー を1枚引く。",
+    "EXTENDED_DESCRIPTION": [
+      "champ:狂化 のスタンスに入る。",
+      "champ:守護 のスタンスに入る。"
+    ]
+  },
+  "champ:Headbutt": {
+    "NAME": "ヘッドバット",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 捨て札のカードを1枚山札の上に置く。"
+  }
+}

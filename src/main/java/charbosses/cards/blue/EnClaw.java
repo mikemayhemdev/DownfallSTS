@@ -33,18 +33,18 @@ public class EnClaw extends AbstractBossCard {
         this.baseDamage = 3;
     }
 
-    public EnClaw(int clawsPlayed){
+    public EnClaw(int bonusDamage){
         this();
-        this.baseDamage += (clawsPlayed * 2);
+        this.baseDamage += bonusDamage;
         this.damage = this.baseDamage;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m != null) {// 40
-            this.addToBot(new VFXAction(new ClawEffect(p.hb.cX, p.hb.cY, Color.CYAN, Color.WHITE), 0.1F));// 41
+        if (m != null) {
+            this.addToBot(new VFXAction(new ClawEffect(p.hb.cX, p.hb.cY, Color.CYAN, Color.WHITE), 0.1F));
         }
 
-        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));// 44
+        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
         CharBossDefect cB = (CharBossDefect) AbstractCharBoss.boss;
         cB.clawsPlayed++;
     }
@@ -59,7 +59,7 @@ public class EnClaw extends AbstractBossCard {
             this.upgradeName();
             this.upgradeDamage(2);
         }
-    }// 51
+    }
 
     public AbstractCard makeCopy() {
         return new EnClaw();

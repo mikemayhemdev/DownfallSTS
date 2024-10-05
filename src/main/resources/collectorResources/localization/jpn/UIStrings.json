@@ -1,0 +1,110 @@
+{
+  "collector:CollectionReward": {
+    "TEXT": [
+      "収集するカードを選択"
+    ]
+  },
+  "collector:CollectibleCardTab": {
+    "TEXT": [
+      "コレクション"
+    ]
+  },
+  "collector:CollectionScreen": {
+    "TEXT": [
+      "隠す",
+      "戦闘ではこれらのコレクションを使用します。"
+    ]
+  },
+  "collector:CollectionUITopPanel": {
+    "TEXT": [
+      "コレクション",
+      "コレクション内の全てのカードを表示。",
+      "これらのカードは各戦闘で収集札に置かれる。"
+    ]
+  },
+  "collector:CombatCollectionPileButton": {
+    "TEXT": [
+      "収集札",
+      "この戦闘でまだ引かれていないコレクトカードが含まれている。ターン開始時に、ここからカードを1枚引く。",
+      "コレクトカードを持っていない！"
+    ]
+  },
+  "collector:EssenceCount": {
+    "TEXT": [
+      "エッセンス",
+      "カードをコレクションする為に消費される。一般の戦闘は #b1 #yエッセンス を、 エリートは #b2 #yエッセンス を、 ボスは #b3 エッセンスを得られます。 NL 現在 #b",
+      " エッセンス を所持。"
+    ]
+  },
+  "collector:CombatCollectionViewScreen": {
+    "TEXT": [
+      "収集札一覧"
+    ]
+  },
+  "collector:PyreInfo": {
+    "TEXT": [
+      "葬火",
+      "このカードをプレイする為に、手札を廃棄する必要がある。"
+    ]
+  },
+  "collector:CollectedCardMod": {
+    "TEXT": [
+      "collector:メガエセリアル NL ",
+      "コレクト"
+    ]
+  },
+  "collector:CollectibleCardReward": {
+    "TEXT": [
+      "収集: ",
+      "これを入手することが出来る。"
+    ]
+  },
+  "collector:HoardedMod": {
+    "TEXT": [
+      "使用不可 NL 保留 NL ",
+      "使用不可 NL ",
+      "保留 NL "
+    ]
+  },
+  "collector:SecondEnergyOrb": {
+    "TEXT": [
+      "リザーブ",
+      "ターンを跨いで持続する特別なエナジー"
+    ]
+  },
+  "collector:PyreCostSpendScreen": {
+    "TEXT": [
+      "葬火の為に廃棄する。"
+    ]
+  },
+  "collector:PyreModText": {
+    "TEXT": [
+      "廃棄するカードが無い！"
+    ]
+  },
+  "collector:StashAwayCampfireOption": {
+    "TEXT": [
+      "解放",
+      "コレクトカードを1枚取り除き、",
+      " ソウル を得る。",
+      "コレクトカードが必要",
+      "取り除くカードを選択"
+    ]
+  },
+  "collector:BonusEventOption": {
+    "TEXT": [
+      "[収集] #g魂を奪う"
+    ]
+  },
+  "collector:EssenceReward": {
+    "TEXT": [
+      " ",
+      " エッセンス"
+    ]
+  },
+  "collector:CharacterOption": {
+    "TEXT": [
+      "エッセンス: "
+    ]
+  }
+}

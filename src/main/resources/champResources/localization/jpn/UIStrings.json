@@ -1,0 +1,44 @@
+{
+  "champ:SealCommonReward": {
+    "TEXT": [
+      "デッキにコモンカードを1枚追加する。"
+    ]
+  },
+  "champ:SealSealReward": {
+    "TEXT": [
+      "デッキに封印を追加する。"
+    ]
+  },
+  "champ:TechniqueMod": {
+    "TEXT": [
+      " NL *スキルボーナス"
+    ]
+  },
+  "champ:OpenerMod": {
+    "TEXT": [
+      " NL champ:狂化 に入る。",
+      " NL champ:守護 に入る。",
+      " champ:剣闘 に入る。 NL "
+    ]
+  },
+  "champ:RetainCardMod": {
+    "TEXT": [
+      "保留 NL "
+    ]
+  },
+  "champ:EnchantUI": {
+    "TEXT": [
+      "コスト 0",
+      "ダメージ上昇",
+      "ブロック上昇"
+    ]
+  },
+  "champ:highlightCombos": {
+    "TEXT": [
+      "*狂化 champ:コンボ :",
+      "[#5ebf2a]狂化 champ:コンボ :",
+      "*守護 champ:コンボ :",
+      "[#5ebf2a]守護 champ:コンボ :"
+    ]
+  }
+}

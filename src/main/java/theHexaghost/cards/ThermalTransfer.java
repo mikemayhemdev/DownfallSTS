@@ -13,8 +13,6 @@ public class ThermalTransfer extends AbstractHexaCard {
 
     public final static String ID = makeID("ThermalTransfer");
 
-    //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
-
     private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 3;
 
@@ -29,11 +27,11 @@ public class ThermalTransfer extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
+        atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
         if (m.hasPower(BurnPower.POWER_ID)) {
             atb(new GainBlockAction(p, block));
-            atb(new VFXAction(new FireballEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.5F));
+            atb(new VFXAction(new FireballEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.4F));
         }
     }
 

@@ -3,7 +3,7 @@
     "NAME": "Molotov",
     "DESCRIPTIONS": [
       "Apply #b",
-      " #ySoulburn."
+      " #ySoulburn [REMOVE_SPACE]."
     ]
   },
   "hexamod:DoubleChargePotion": {
@@ -24,9 +24,9 @@
   "hexamod:InfernoChargePotion": {
     "NAME": "Inferno Potion",
     "DESCRIPTIONS": [
-      "#yIgnite the Inferno Ghostflame.",
-      "#yIgnite the Inferno Ghostflame #b",
-      " times."
+      "Your Ghostflame effect affects all enemy this combat.",
+      "Your Ghostflame effect affects all enemy #b",
+      " times this combat."
     ]
   }
 }

@@ -1,0 +1,104 @@
+{
+  "bronze:BronzeCore": {
+    "NAME": "ブロンズコア",
+    "FLAVOR": "50,000年に一度交換する",
+    "DESCRIPTIONS": [
+      "戦闘中初めてファンクションを作成した時 [E] を得る。"
+    ]
+  },
+  "bronze:ProtectiveGoggles": {
+    "NAME": "保護ゴーグル",
+    "FLAVOR": "よく見て。",
+    "DESCRIPTIONS": [
+      "ターン終了時 #yエンコード済み のカードが無かったら #b4 #yブロック を得る。"
+    ]
+  },
+  "bronze:DecasWashers": {
+    "NAME": "デカのワッシャー",
+    "FLAVOR": "デカが何でこんな物を集めているのかは不明。",
+    "DESCRIPTIONS": [
+      "各戦闘開始から #b3 ターンの間、追加でカードを1枚引く。"
+    ]
+  },
+  "bronze:Timepiece": {
+    "NAME": "凍った下地剤",
+    "FLAVOR": "22 オンスの化合物「Ar22」保存期間: 22 年。マホガニー材の冷蔵庫で保管する事を推奨。",
+    "DESCRIPTIONS": [
+      "全ての作成したファンクションに #y保留 が付く。"
+    ]
+  },
+  "bronze:Mallet": {
+    "NAME": "マレット",
+    "FLAVOR": "それだ!マレットの準備は良いか!",
+    "DESCRIPTIONS": [
+      "戦闘開始時 #b2 枚の #y微調整+ を手札に加える。"
+    ]
+  },
+  "bronze:SilverBullet": {
+    "NAME": "シルバーバレット",
+    "FLAVOR": "スパイアの狼はもうとっくに居ない。",
+    "DESCRIPTIONS": [
+      "戦闘開始時 コスト 0 の #yピアシングショット のコピーを手札に加える。"
+    ]
+  },
+  "bronze:MakeshiftBattery": {
+    "NAME": "補助用電源",
+    "FLAVOR": "8.9ボルトしかないけどね。",
+    "DESCRIPTIONS": [
+      "ターン開始時 [E] を得て #y粘液 を捨て札に加える。"
+    ]
+  },
+  "bronze:CableSpool": {
+    "NAME": "ケーブル巻き取り器",
+    "FLAVOR": "絡まっちゃった...",
+    "DESCRIPTIONS": [
+      "戦闘中最初に使用した #yエンコード済み カードのコピーを #yエンコードする。"
+    ]
+  },
+  "bronze:ElectromagneticCoil": {
+    "NAME": "電磁石コイル",
+    "FLAVOR": "非効率だけど面白い。",
+    "DESCRIPTIONS": [
+      "ファンクションが #b4 枚のカードで構成されるようになる。"
+    ]
+  },
+  "bronze:PlatinumCore": {
+    "NAME": "プラチナムコア",
+    "FLAVOR": "チェンジログ: ユーザーエクスペリエンスを改善しました。",
+    "DESCRIPTIONS": [
+      " ",
+      " と置き換える。 NL 最初の #b3 回、ファンクションを作成した時 プレイするまでコストが #b0 になる。"
+    ]
+  },
+  "bronze:BottledCode": {
+    "NAME": "瓶詰のコード",
+    "FLAVOR": "実はまさにその通りのコードがあるんだ...",
+    "DESCRIPTIONS": [
+      "入手時、 #yエンコード カードを1枚選択する。選択されたカードが #yエンコード済み の状態で戦闘を開始する。",
+      "選択されたカード： ",
+      "選択されたカード: ",
+      "。"
+    ]
+  },
+  "bronze:DonusWashers": {
+    "NAME": "ドヌーのワッシャー",
+    "FLAVOR": "ドヌーがどうしてこれを集めるのかは割とはっきりしている。",
+    "DESCRIPTIONS": [
+      "戦闘開始時 [E] [E] を得て、 #y空虚 を1枚山札に加える。"
+    ]
+  },
+  "bronze:BronzeIdol": {
+    "NAME": "ブロンズアイドル",
+    "FLAVOR": "古代の兵器化したアンチウィルス-誰が何のために作ったか誰か知ってる？",
+    "DESCRIPTIONS": [
+      "#y状態異常 をプレイした時有用な効果を発揮するようになる。"
+    ]
+  },
+  "bronze:AnalyticalCore": {
+    "NAME": "パラドクスアーティファクト",
+    "FLAVOR": "こんなに熱狂したコーディングは初めて見る。",
+    "DESCRIPTIONS": [
+      "ターン開始時 #yエンコード を持つランダムなカードを手札に加える。それは #yエセリアル を持つ。"
+    ]
+  }
+}

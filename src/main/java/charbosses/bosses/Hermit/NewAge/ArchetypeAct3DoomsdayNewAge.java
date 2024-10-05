@@ -12,14 +12,13 @@ import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.beyond.SnakeDagger;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RitualPower;
+import downfall.monsters.DoomedDagger;
 
 import java.util.ArrayList;
 
 public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
-
-
 
     public ArchetypeAct3DoomsdayNewAge() {
         super("HERMIT_DOOMSDAY_ARCHETYPE", "Doomsday");
@@ -33,11 +32,16 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         bossMechanicDesc = HermitDoomsday.DESC[0];
     }
 
+    public static AbstractMonster getDoomedSnake(){ // called by EnPurgatory too
+        return new DoomedDagger(-400, 200);
+    }
+
     @Override
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-        AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new SnakeDagger(-400, 200), true));
+
+        AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(getDoomedSnake(), true));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitDoomsday(p), 1));
 //        AbstractDungeon.actionManager.addToBottom(new VFXAction(new PotionThrowEffect("downfallResources/images/vfx/CultistPotion.png", p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, 2F, 0.6F, false, true), 0.6F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RitualPower(p, 1, false), 1));

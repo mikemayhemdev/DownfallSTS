@@ -1,0 +1,700 @@
+{
+  "collector:ActOfAggression": {
+    "NAME": "侵害行為",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 敵全体に 弱体 !M! を与える。"
+  },
+  "collector:AlwaysMore": {
+    "NAME": "常なる欲望",
+    "DESCRIPTION": "collector:葬火 NL Gold !M! を得る。"
+  },
+  "collector:AshenStrike": {
+    "NAME": "アッシェンストライク",
+    "DESCRIPTION": "!D! ダメージを与える。 NL *燃え殻 を手札に加える。"
+  },
+  "collector:Arrogance": {
+    "NAME": "傲慢",
+    "DESCRIPTION": "!B! ブロックを得る。 NL このターン、次のアタックは !M! collector:破滅 を与える。"
+  },
+  "collector:AshesAndDust": {
+    "NAME": "灰と塵",
+    "DESCRIPTION": "敵全体に !D! ダメージを X回与える。 NL もし X が 5 以上だった場合、追加で2回与える。"
+  },
+  "collector:BindingCall": {
+    "NAME": "バインドコール",
+    "DESCRIPTION": "expansioncontent:一時的な体力 !M! を得る。 NL collector:トーチヘッド を呼ぶ。「ランダムな敵に collector:破滅 !clm2! を与える。」"
+  },
+  "collector:Billow": {
+    "NAME": "波立つマント",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 次のターン、 *吹き荒れる風 を手札に加える。"
+  },
+  "collector:Bellow": {
+    "NAME": "吹き荒れる風",
+    "DESCRIPTION": "エセリアル NL 前のターンで余ったブロックに等しい collector:破滅 を与える。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( !M! collector:破滅 を与える。)"
+    ]
+  },
+  "collector:BlackBindings": {
+    "NAME": "黒の拘束具",
+    "DESCRIPTION": "脱力 !M! を与え、その後敵の持つデバフ1種毎に collector:破滅 !clm2! を与える。"
+  },
+  "collector:Blightning": {
+    "NAME": "雷鳴",
+    "DESCRIPTION": "collector:破滅 !M! を与える。 NL !D! ダメージを与える。 NL コレクターデッキからカードを 1 枚引く。 NL 廃棄"
+  },
+  "collector:Bonfire": {
+    "NAME": "篝火",
+    "DESCRIPTION": "collector:葬火 NL !B! ブロックを得る。 NL 次のターン、 collector:リザーブ 1 を得る。"
+  },
+  "collector:BrainDrain": {
+    "NAME": "ブレインドレイン",
+    "DESCRIPTION": "敵はHPを !M! 失う。 NL 敵のコレクトカードを手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "敵はHPを !M! 失う。 NL 敵のコレクトカードを手札に加え、それをアップグレードする。 NL 廃棄"
+  },
+  "collector:BramblesparKindling": {
+    "NAME": "ブランブルスパーの薪",
+    "DESCRIPTION": "使用不可 NL このカードが *廃棄 された時、 *バーニングストライク を手札に加える。",
+    "UPGRADE_DESCRIPTION": "使用不可 NL このカードが *廃棄 された時、 *バーニングストライク+ を手札に加える。",
+    "EXTENDED_DESCRIPTION": [
+      "この薪は火をつけて使う必要がある"
+    ]
+  },
+  "collector:BurningStrike": {
+    "NAME": "バーニングストライク",
+    "DESCRIPTION": "!D! ダメージを与える。 NL カードを 1 枚引く。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL カードを !M! 枚引く。"
+  },
+  "collector:CantTouchThis": {
+    "NAME": "触れざる物",
+    "DESCRIPTION": "!M! 敏捷性 を得る。 NL 攻撃を完全にブロックした時、相手に collector:破滅 !clm2! を与える。"
+  },
+  "collector:CoffinNail": {
+    "NAME": "棺の釘",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 廃棄された時、次のターンに手札に戻しダメージが !M! 増加する。"
+  },
+  "collector:Condemn": {
+    "NAME": "糾弾",
+    "DESCRIPTION": "弱体 !M! を与える。 NL collector:破滅 !clm2! を与える。"
+  },
+  "collector:CursedWail": {
+    "NAME": "呪の慟哭",
+    "DESCRIPTION": "敵全体がこのターン 筋力 !M! を失う。 NL 更に collector:苦悶 状態の対象はこの戦闘中 筋力 !clm2! を失う。 NL 廃棄"
+  },
+  "collector:DarkApotheosis": {
+    "NAME": "ダークアポトーシス",
+    "DESCRIPTION": "収集札 のカードをアップグレードする。 NL 廃棄"
+  },
+  "collector:DarkLordForm": {
+    "NAME": "闇帝化",
+    "DESCRIPTION": "ターン開始時、ランダムな敵に *お前は私の物だ！ をプレイする。",
+    "UPGRADE_DESCRIPTION": "ターン開始時、ランダムな敵に *お前は私の物だ！+ をプレイする。"
+  },
+  "collector:Darkstorm": {
+    "NAME": "闇嵐",
+    "DESCRIPTION": "*雷鳴 を手札に加え NL 更に !M! 枚を山札に加えシャッフルする。 NL 廃棄"
+  },
+  "collector:DarkwoodKindling": {
+    "NAME": "ダークウィローの薪",
+    "DESCRIPTION": "使用不可 NL このカードが *廃棄 された時、次のターン collector:リザーブ !M! を得る。",
+    "UPGRADE_DESCRIPTION": "使用不可 NL 保留 NL このカードが *廃棄 された時、次のターン collector:リザーブ !M! を得る。",
+    "EXTENDED_DESCRIPTION": [
+      "この薪は火をつけて使う必要がある。"
+    ]
+  },
+  "collector:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "!B! ブロックを得る。"
+  },
+  "collector:DoubleTrouble": {
+    "NAME": "二重苦",
+    "DESCRIPTION": "!B! ブロックを得る。 NL このターン、次の コレクトカード は2回プレイされる。"
+  },
+  "collector:DoMayhem": {
+    "NAME": "煽動",
+    "DESCRIPTION": "ターン開始時、敵の持つ collector:破滅 が25以上ある場合、あなたの山札の一番上のカードをプレイする。"
+  },
+  "collector:DragonsTrove": {
+    "NAME": "龍の宝庫",
+    "DESCRIPTION": "collector:葬火 NL 収集札からカードを 2 枚引く。 NL collector:リザーブ !M! を得る。 NL 廃棄"
+  },
+  "collector:Ember": {
+    "NAME": "燃え殻",
+    "DESCRIPTION": "保留 NL このカードが *廃棄 された時、 筋力 !M! を得る。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      "この燠火は燃やし尽くさなければならない。"
+    ]
+  },
+  "collector:Empower": {
+    "NAME": "エンパワー",
+    "DESCRIPTION": " !M! ターンの間、ターン開始時に 筋力 X を得る。"
+  },
+  "collector:Extricate": {
+    "NAME": "魂の断絶",
+    "DESCRIPTION": "手札から全ての非アタックカードを廃棄し NL !D! ダメージを与える。"
+  },
+  "collector:FeelMyPain": {
+    "NAME": "我が痛みを感じろ",
+    "DESCRIPTION": "カードを *廃棄 する度に、ランダムな敵がHPを !M! 失う。"
+  },
+  "collector:FiendFire": {
+    "NAME": "悪霊の火",
+    "DESCRIPTION": "手札を 廃棄 する。 NL 廃棄されたカードの数だけ !D! ダメージを与える。 NL 廃棄"
+  },
+  "collector:Finalize": {
+    "NAME": "仕上げ",
+    "DESCRIPTION": "対象が死亡した時、 HPを !clm2! 回復する。 NL collector:破滅 !M! を与える。 NL 廃棄"
+  },
+  "collector:FingerOfDeath": {
+    "NAME": "死の指先",
+    "DESCRIPTION": "collector:リザーブ でのみプレイ可能。 NL collector:破滅 !M! を与える。",
+    "UPGRADE_DESCRIPTION": "collector:リザーブ でのみプレイ可能。 NL 敵全体に collector:破滅 !M! を与える。"
+  },
+  "collector:FlameLash": {
+    "NAME": "炎の鞭",
+    "DESCRIPTION": "collector:葬火 NL !D! ダメージを与える。 NL *葬火 したカードのダメージをこのカードに加える。",
+    "UPGRADE_DESCRIPTION": "collector:葬火 NL !D! ダメージを与える。 NL *葬火 したカードのダメージ + !M! をこのカードに加える。"
+  },
+  "collector:FleetingEmbers": {
+    "NAME": "儚い熾火",
+    "DESCRIPTION": "collector:葬火 NL !B! ブロックを得る。 NL !M! 枚の *燃え殻 を手札に加える。"
+  },
+  "collector:Forgery": {
+    "NAME": "模造品",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 収集札 の !M! 枚のカードから1枚を選び、そのコピーを得る。",
+    "EXTENDED_DESCRIPTION": [
+      "このカードを手札に加える"
+    ]
+  },
+  "collector:FuelTheFire": {
+    "NAME": "焔の糧",
+    "DESCRIPTION": "collector:葬火 NL 次のターン、 collector:リザーブ !M! を得る。",
+    "UPGRADE_DESCRIPTION": "collector:葬火 NL 次のターン、 collector:リザーブ !M! を得て、カードを1枚引く。"
+  },
+  "collector:Goodbye": {
+    "NAME": "さらばだ",
+    "DESCRIPTION": "敵の collector:破滅 を2倍にする。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "敵の collector:破滅 を3倍にする。 NL 廃棄"
+  },
+  "collector:GourmandsGaze": {
+    "NAME": "美食家の目",
+    "DESCRIPTION": "!D! ダメージを与える。 NL このターン、 collector:収集 カードをプレイする度 !B! ブロックを得る。"
+  },
+  "collector:GreaterHurting": {
+    "NAME": "深い傷",
+    "DESCRIPTION": "エセリアル NL !D! ダメージを与える。 NL このカードが廃棄された時、 *致命傷 を手札に加える。",
+    "UPGRADE_DESCRIPTION": "エセリアル NL !D! ダメージを与える。 NL このカードが廃棄された時、 *致命傷+ を手札に加える。"
+  },
+  "collector:GreatestHurting": {
+    "NAME": "致命傷",
+    "DESCRIPTION": "エセリアル NL !D! ダメージを与える。 NL このカードが廃棄された時、 *燃え殻 を手札に加える。"
+  },
+  "collector:GreenpyreLocus": {
+    "NAME": "緑炎の軌跡",
+    "DESCRIPTION": "3 枚の コレクトカード から 1 枚を選び手札に加える。 NL 更に収集札に選択されたカードのコピーを !M! 枚加える。",
+    "EXTENDED_DESCRIPTION": [
+      "選択したカードを手札と収集札に加える"
+    ]
+  },
+  "collector:Heatwave": {
+    "NAME": "ヒートウェイブ",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL *燃え殻 を手札に加える。"
+  },
+  "collector:Hoard": {
+    "NAME": "蓄える",
+    "DESCRIPTION": "collector:葬火 NL カードを !M! 枚引く。 NL このターン、それらを 保留 する。"
+  },
+  "collector:HoardersStrike": {
+    "NAME": "ホーダーズストライク",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 収集札 の一番上のカードをプレイする。"
+  },
+  "collector:Hurting": {
+    "NAME": "傷",
+    "DESCRIPTION": "エセリアル NL !D! ダメージを与える。 NL このカードが廃棄された時、 *深い傷 を手札に加える。",
+    "UPGRADE_DESCRIPTION": "エセリアル NL !D! ダメージを与える。 NL このカードが廃棄された時、 *深い傷+ を手札に加える。"
+  },
+  "collector:IllTakeThat": {
+    "NAME": "それを頂く",
+    "DESCRIPTION": "敵の持つ ブロック を !M! 盗む。 NL !D! ダメージを与える。"
+  },
+  "collector:InevitableDemise": {
+    "NAME": "不可避の終焉",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 次に対象が collector:破滅 を解除しようとした時それを防ぐ。"
+  },
+  "collector:InflictAgony": {
+    "NAME": "与えられし苦痛",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 敵が collector:苦悶 状態でなければ、 脱力 と 弱体 2を与える。"
+  },
+  "collector:Invigorate": {
+    "NAME": "閃光",
+    "DESCRIPTION": "collector:葬火 NL *つまづき または *目くらまし を選び手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "collector:葬火 NL *つまづき+ または *目くらまし+ を選び手札に加える。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      "選択したカードを手札に加える"
+    ]
+  },
+  "collector:IronbarkKindling": {
+    "NAME": "アイアンバークの薪",
+    "DESCRIPTION": "使用不可 NL このカードが *廃棄 された時、 !B! ブロックを得る。",
+    "UPGRADE_DESCRIPTION": "使用不可 NL 保留 NL このカードが *廃棄 された時、 !B! ブロックを得る。",
+    "EXTENDED_DESCRIPTION": [
+      "この薪は火をつけて使う必要がある。"
+    ]
+  },
+  "collector:ItMattersNot": {
+    "NAME": "関係無い",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 敵全体の持つ 脱力 と 弱体 を !M! 増加させる。"
+  },
+  "collector:JadedJabs": {
+    "NAME": "色褪せた刃",
+    "DESCRIPTION": "collector:葬火 NL !D! ダメージを与える。 NL *葬火 したカードのコスト + !M! 枚の *ナイフ を手札に加える。"
+  },
+  "collector:Karma": {
+    "NAME": "カルマ",
+    "DESCRIPTION": "ターン終了時、 !M! ブロックを得る。 NL 敵が collector:苦悶 状態であれば、追加で !clm2! ブロックを得る。",
+    "UPGRADE_DESCRIPTION": "天賦 NL ターン終了時、 !M! ブロックを得る。 NL 敵が collector:苦悶 状態であれば、追加で !clm2! ブロックを得る。"
+  },
+  "collector:LanternFlare": {
+    "NAME": "ランタンの灯",
+    "DESCRIPTION": "collector:葬火 NL collector:破滅 !M! を与える。 NL 対象は毎ターン終了時、追加で 破滅 を !clm2! 受ける。"
+  },
+  "collector:LuckyWick": {
+    "NAME": "幸運の燃芯",
+    "DESCRIPTION": "!B! ブロックを得る。 NL !D! ダメージを与える。"
+  },
+  "collector:MastersCall": {
+    "NAME": "Master's Call",
+    "DESCRIPTION": "Unused!"
+  },
+  "collector:MiniCurse": {
+    "NAME": "微かな呪い",
+    "DESCRIPTION": "collector:葬火 NL 脱力 と 弱体 1 を与える。 ",
+    "UPGRADE_DESCRIPTION": "collector:葬火 NL 敵全体に 脱力 と 弱体 1 を与える。 "
+  },
+  "collector:Misdirect": {
+    "NAME": "ミスディレクト",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 次のターン、 collector:リザーブ 1 を得る。"
+  },
+  "collector:MysteryWeaving": {
+    "NAME": "幽玄の織",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 他の手札1枚につき、得られるブロックが 2 減少する。"
+  },
+  "collector:OakbrimKindling": {
+    "NAME": "オークブリムの薪",
+    "DESCRIPTION": "使用不可 NL このカードが *廃棄 された時、 カードを !M! 枚引く。",
+    "EXTENDED_DESCRIPTION": [
+      "この薪は火をつけて使う必要がある。"
+    ]
+  },
+  "collector:Omen": {
+    "NAME": "オーメン",
+    "DESCRIPTION": "コレクトカード をプレイした時、 筋力 1 を得る。",
+    "UPGRADE_DESCRIPTION": "天賦 NL コレクトカード をプレイした時、 筋力 1 を得る。"
+  },
+  "collector:ProtectingCall": {
+    "NAME": "プロテクトコール",
+    "DESCRIPTION": "expansioncontent:一時的な体力 を !M! 得る。 NL collector:トーチヘッド を呼ぶ。「 !clm2! ブロックを得る。」"
+  },
+  "collector:Pyromancy": {
+    "NAME": "パイロマンシー",
+    "DESCRIPTION": "collector:葬火 NL ターン開始時、 collector:リザーブ 1 を得る。",
+    "UPGRADE_DESCRIPTION": "天賦 NL collector:葬火 NL ターン開始時、 collector:リザーブ 1 を得る。"
+  },
+  "collector:RagingCall": {
+    "NAME": "レイジングコール",
+    "DESCRIPTION": "expansioncontent:一時的な体力 !M! を得る。 NL collector:トーチヘッド を呼ぶ。 「敵全体に !clm2! ダメージを与える。」"
+  },
+  "collector:ReceiveTribute": {
+    "NAME": "貢ぎ物",
+    "DESCRIPTION": "collector:葬火 NL !M! 枚のボスカードから1枚を選び、手札に加える。 NL それには保留が付く。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      "選んだカードを手札に加える"
+    ]
+  },
+  "collector:Roast": {
+    "NAME": "ロースト",
+    "DESCRIPTION": "collector:葬火 NL !D! ダメージを与える。"
+  },
+  "collector:RotwoodKindling": {
+    "NAME": "ロットウッドの薪",
+    "DESCRIPTION": "使用不可 NL このカードが *廃棄 された時、敵全体に 弱体 !M! と collector:破滅 !clm2! を与える。",
+    "EXTENDED_DESCRIPTION": [
+      "この薪は火をつけて使う必要がある。"
+    ]
+  },
+  "collector:SapStrength": {
+    "NAME": "死印",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 更に次の敵ターン終了時、対象はブロックされなかったダメージの2倍のHPを失う。"
+  },
+  "collector:ScorchingRay": {
+    "NAME": "灼熱の光線",
+    "DESCRIPTION": "ランダムな敵に !D! ダメージを X 回 与える。"
+  },
+  "collector:SeedOfDoubt": {
+    "NAME": "疑惑の種",
+    "DESCRIPTION": "collector:破滅 !M! を与える。 NL このカードが手札にある間にカードが *廃棄 された場合、効果を !clm2! 増加させる。"
+  },
+  "collector:ShadowDaggers": {
+    "NAME": "シャドウダガー",
+    "DESCRIPTION": "!D! ダメージを この戦闘中にプレイした コレクトカード の数だけ与える。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( ",
+      " 回ヒット)",
+      " 回ヒット)"
+    ]
+  },
+  "collector:SomberShield": {
+    "NAME": "暗澹たる盾",
+    "DESCRIPTION": "collector:葬火 NL !B! ブロックを得る。 NL 次のターン開始時、 葬火されたカードのコピーを手札に加える。"
+  },
+  "collector:SoulSnare": {
+    "NAME": "ソウルスネア",
+    "DESCRIPTION": "collector:破滅 !M! を与える。 NL 廃棄"
+  },
+  "collector:Soulforge": {
+    "NAME": "ソウルフォージ",
+    "DESCRIPTION": "収集札 からカードを 1枚引く。 NL そのカードのアップグレードされたコピーを !M! 枚手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "収集札 からカードを 1枚引く。 NL そのカードのアップグレードされたコピーを !M! 枚手札に加える。 NL 廃棄"
+  },
+  "collector:Spark": {
+    "NAME": "スパーク",
+    "DESCRIPTION": "collector:リザーブ 1 を得る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "collector:リザーブ 1 を得る。 NL カードを 1 枚引く。 NL 廃棄"
+  },
+  "collector:SpiritLeech": {
+    "NAME": "スピリットリーチ",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 敵が collector:苦悶 状態なら、 !B! ブロックを得る。"
+  },
+  "collector:StashAway": {
+    "NAME": "隠し持つ",
+    "DESCRIPTION": "!B! ブロックをX回得る。 NL 次のターン、 collector:リザーブ を X 得る。 NL 廃棄"
+  },
+  "collector:Strike": {
+    "NAME": "ストライク",
+    "DESCRIPTION": "!D! ダメージを与える。"
+  },
+  "collector:SuckerPunch": {
+    "NAME": "不意打ち",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 脱力 !M! を与える。"
+  },
+  "collector:Suffering": {
+    "NAME": "苦しめ",
+    "DESCRIPTION": "あなたが敵に *脱力 または *弱体 を与えた時、それらに collector:破滅 !M! を与える。"
+  },
+  "collector:SunbloomKindling": {
+    "NAME": "サンブルームの薪",
+    "DESCRIPTION": "使用不可 NL このカードが *廃棄 された時、 筋力 !M! を得て、手札に 2枚の *燃え殻 を加える。",
+    "EXTENDED_DESCRIPTION": [
+      "この薪は火をつけて使う必要がある。"
+    ]
+  },
+  "collector:ThornWhip": {
+    "NAME": "ソーンウィップ",
+    "DESCRIPTION": "敵全体に !D! ダメージと !M! hermit:傷 を与える。 NL ナイフを1枚手札に加える。"
+  },
+  "collector:Torchbearer": {
+    "NAME": "トーチベアラー",
+    "DESCRIPTION": "expansioncontent:一時的な体力 !M! を得る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "あなたが expansioncontent:一時的な体力 を持っていれば 廃棄 される。 NL expansioncontent:一時的な体力 !M! を得る。"
+  },
+  "collector:WhirlingFlame": {
+    "NAME": "渦巻く焔",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 捨て札から1枚を選び、山札の上に置く。"
+  },
+  "collector:VoidArmor": {
+    "NAME": "虚空の鎧",
+    "DESCRIPTION": "全員が !B! ブロックと 1 bronze:ブラー を得る。"
+  },
+  "collector:Wildfire": {
+    "NAME": "ワイルドファイア",
+    "DESCRIPTION": "!D! ダメージを敵の持つデバフの種類の数だけ与える。"
+  },
+  "collector:YouAreMine": {
+    "NAME": "お前は私の物だ!",
+    "DESCRIPTION": "脱力 !M! を与える。 NL 弱体 !M! を与える。 collector:破滅 !clm2! を与える。"
+  },
+  "collector:Whomp": {
+    "NAME": "ドゴッ",
+    "DESCRIPTION": "!D! ダメージを与える。 NL expansioncontent:一時的な体力 !M! を得る。 NL 廃棄"
+  },
+  "collector:AcidSlimeCard": {
+    "NAME": "アシッドスライム",
+    "DESCRIPTION": "ランダムな !M! 枚の 0 コストカードを手札に加える。",
+    "UPGRADE_DESCRIPTION": "ランダムな !M! 枚の 0 コストカードを手札に加える。"
+  },
+  "collector:AugmenterCard": {
+    "NAME": "増強因子",
+    "DESCRIPTION": "HP を 3 失う。 NL 筋力 !M! を得る。"
+  },
+  "collector:BearCard": {
+    "NAME": "ベアー",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 敵全体のブロックを解除する。 NL !D! ダメージを与える。"
+  },
+  "collector:BlueSlaverCard": {
+    "NAME": "スレイバー青",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 脱力 1 を与える。 NL 敵全体の 脱力 を2倍にする。"
+  },
+  "collector:BonfireSpiritsCard": {
+    "NAME": "たき火の精霊",
+    "DESCRIPTION": "collector:葬火 NL HPを !M! 回復する。 NL レアカードを廃棄した場合、最大HP を 1得る。"
+  },
+  "collector:BookOfStabbingCard": {
+    "NAME": "刺創の本",
+    "DESCRIPTION": "ブロックされなかったダメージを与えた場合、 collector:破滅 !M! を与える。"
+  },
+  "collector:BronzeOrbCard": {
+    "NAME": "ブロンズオーブ",
+    "DESCRIPTION": "!B! ブロックを得る。 NL !D! ダメージを与える。 NL 山札の一番上のカードがプレイするまでコスト0になる。"
+  },
+  "collector:ByrdCard": {
+    "NAME": "ビャード",
+    "DESCRIPTION": "!D! ダメージを5回与える。"
+  },
+  "collector:CenturionCard": {
+    "NAME": "センチュリオン",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 敏捷性 !M! を得る。"
+  },
+  "collector:ChosenCard": {
+    "NAME": "選ばれし者",
+    "DESCRIPTION": "脱力 !M! を与える。 NL 敵が攻撃を予定していない場合、 弱体 !clm2! を与える。"
+  },
+  "collector:ClericCard": {
+    "NAME": "聖職者",
+    "DESCRIPTION": "collector:葬火 NL expansioncontent:一時的な体力 !M! を得る。"
+  },
+  "collector:CultistCard": {
+    "NAME": "狂信者",
+    "DESCRIPTION": "collector:葬火 NL 3ターンの間、ターン開始時に筋力 1 を得る。"
+  },
+  "collector:DaggerCard": {
+    "NAME": "ダガー",
+    "DESCRIPTION": "HPを !M! 失う。 NL !D! ダメージを与える。"
+  },
+  "collector:DarklingsCard": {
+    "NAME": "ダークリング",
+    "DESCRIPTION": "collector:葬火 NL !D! ダメージを与える。 NL コレクトカードを 1 枚 expansioncontent:発掘 する。",
+    "EXTENDED_DESCRIPTION": [
+      "to create 2 copies of"
+    ]
+  },
+  "collector:DesignerInSpireCard": {
+    "NAME": "デザイナー・イン・スパイア",
+    "DESCRIPTION": "expansioncontent:一時的な体力 !M! を得る。 NL collector:トーチヘッド を呼ぶ。 「カードを 1 枚引く。」"
+  },
+  "collector:FinalBossCard": {
+    "NAME": "エンドゲーム",
+    "DESCRIPTION": "敵の 無敵 状態を解除し、スタンさせる。 NL 廃棄"
+  },
+  "collector:FaceTraderCard": {
+    "NAME": "フェイストレーダー",
+    "DESCRIPTION": "ランダムな色のカードを !M! 枚手札に加える。 NL それらに エセリアル が付く。"
+  },
+  "collector:FatGremlinCard": {
+    "NAME": "太っちょグレムリン",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 脱力 !M! を与える。"
+  },
+  "collector:FungiBeastCard": {
+    "NAME": "キノコビースト",
+    "DESCRIPTION": "弱体 !M! を与える。 NL 敵全体に 弱体 1 を与える。"
+  },
+  "collector:GiantHeadCardStageOne": {
+    "NAME": "チック",
+    "DESCRIPTION": "次のターン、 *タック を手札に加える。"
+  },
+  "collector:GiantHeadCardStageTwo": {
+    "NAME": "タック",
+    "DESCRIPTION": "次のターン、 *ヘッドクラッシュ を手札に加える。"
+  },
+  "collector:GiantHeadCardStageThree": {
+    "NAME": "ヘッドクラッシュ",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。"
+  },
+  "collector:GremlinLeaderCard": {
+    "NAME": "グレムリンリーダー",
+    "DESCRIPTION": "ランダムに !M! 枚の グレムリンの コレクトカード を手札に加える。"
+  },
+  "collector:GremlinNobCard": {
+    "NAME": "グレムリンボス",
+    "DESCRIPTION": "スキル をプレイする度に 気力 !M! を得る。"
+  },
+  "collector:GremlinWizardCard": {
+    "NAME": "グレムリンウィザード",
+    "DESCRIPTION": "次のターン NL 気力 !M! と 1 collector:リザーブ を得る。"
+  },
+  "collector:JawWormCard": {
+    "NAME": "デカアゴムシ",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 筋力 !M! を得る。"
+  },
+  "collector:JousterCard": {
+    "NAME": "ジョースター",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 敵が1体のみの場合 !B! ブロックを得る。"
+  },
+  "collector:LagavulinCard": {
+    "NAME": "ラガヴーリン",
+    "DESCRIPTION": "敵全体が筋力 !M! を失う。"
+  },
+  "collector:LivingWallCard": {
+    "NAME": "リビングウォール",
+    "DESCRIPTION": "collector:葬火 NL ランダムなアップグレードされたカードを手札に加える。 NL それはプレイするまでコストが0"
+  },
+  "collector:LouseCard": {
+    "NAME": "寄生虫",
+    "DESCRIPTION": "bronze:ブラー 1 を得る。 NL 次にブロック出来なかったダメージを受けた時、 !B! ブロックを得る。"
+  },
+  "collector:MadGremlinCard": {
+    "NAME": "マッドグレムリン",
+    "DESCRIPTION": "一時的な 筋力 !M! を得る。"
+  },
+  "collector:MawCard": {
+    "NAME": "モー",
+    "DESCRIPTION": "!D! ダメージを与える。"
+  },
+  "collector:MerchantCard": {
+    "NAME": "商人",
+    "DESCRIPTION": "ランダムに !M! 枚の無色のカードを手札に加える。 NL それらはこのターンコストが0"
+  },
+  "collector:MushroomCard": {
+    "NAME": "マッシュルーム",
+    "DESCRIPTION": "!D! ダメージを与える。 NL ランダムに 脱力 か 弱体 !M! を与える。"
+  },
+  "collector:MysticCard": {
+    "NAME": "ミスティック",
+    "DESCRIPTION": "expansioncontent:一時的な体力 !M! を得る。"
+  },
+  "collector:NemesisCard": {
+    "NAME": "ネメシス",
+    "DESCRIPTION": "無形 1 を得る。"
+  },
+  "collector:NlothCard": {
+    "NAME": "ヌロス",
+    "DESCRIPTION": "collector:葬火 NL ランダムなレアカードを手札に加える。 NL それはコストが 1 少ない。",
+    "UPGRADE_DESCRIPTION": "collector:葬火 NL ランダムなレアカードを手札に加える。 NL それはコストが 0 になる。"
+  },
+  "collector:OrbWalkerCard": {
+    "NAME": "オーブウォーカー",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札に !M! 枚の *燃え殻 を加える。"
+  },
+  "collector:PointyCard": {
+    "NAME": "ポインティ",
+    "DESCRIPTION": "!D! ダメージを 2回与える。 NL カードを 1 枚引く。"
+  },
+  "collector:RanwidCard": {
+    "NAME": "ランウィッド",
+    "DESCRIPTION": "戦闘終了時、追加でポーションとカード報酬を得る。"
+  },
+  "collector:RedSlaverCard": {
+    "NAME": "スレイバー赤",
+    "DESCRIPTION": "このターン、対象は 筋力 !M! を失う。"
+  },
+  "collector:ReptomancerCard": {
+    "NAME": "レプトマンサー",
+    "DESCRIPTION": "expansioncontent:一時的な体力 !M! を得る。 NL collector:トーチヘッド を呼ぶ。 「ランダムな敵に毒 !clm2! を与える。」"
+  },
+  "collector:RepulsorCard": {
+    "NAME": "リパルサー",
+    "DESCRIPTION": "collector:葬火 NL カードを !M! 枚引く。"
+  },
+  "collector:RomeoCard": {
+    "NAME": "ロメオ",
+    "DESCRIPTION": "次にプレイするアタックは コストが0になり追加で !M! ダメージを与える。"
+  },
+  "collector:ScrapOozeCard": {
+    "NAME": "スクラップウーズ",
+    "DESCRIPTION": "collector:葬火 NL HP を3失う。 NL ランダムに !M! 枚の アタック カードを手札に加える。 NL それらはこのターン、コストが0。"
+  },
+  "collector:SentryCard": {
+    "NAME": "セントリー",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 脱力 !M! を与える。 NL 廃棄札に *セントリー があれば、もう一度繰り返す。"
+  },
+  "collector:ShelledParasiteCard": {
+    "NAME": "ヤドカリパラサイト",
+    "DESCRIPTION": "プレートアーマー !M! を得る。"
+  },
+  "collector:ShieldGremlinCard": {
+    "NAME": "シールドグレムリン",
+    "DESCRIPTION": "!B! ブロックを得る。"
+  },
+  "collector:SnakePlantCard": {
+    "NAME": "スネークプラント",
+    "DESCRIPTION": "!D! ダメージを3回与える。"
+  },
+  "collector:SneakyGremlinCard": {
+    "NAME": "スニーキーグレムリン",
+    "DESCRIPTION": "!D! ダメージを与える。 NL カードを 1 枚引く。"
+  },
+  "collector:SneckoCard": {
+    "NAME": "スネッコ",
+    "DESCRIPTION": "カードを !M! 枚引く。 NL 手札を sneckomod:泥まみれ にする。"
+  },
+  "collector:SphericGuardianCard": {
+    "NAME": "スフィアガーディアン",
+    "DESCRIPTION": "bronze:ブラー !M! を得る。"
+  },
+  "collector:SpikerCard": {
+    "NAME": "スパイカー",
+    "DESCRIPTION": "トゲ !M! を得る。"
+  },
+  "collector:SpikeSlimeCard": {
+    "NAME": "スパイクスライム",
+    "DESCRIPTION": "!B! ブロックを得る。 NL このターン、攻撃してきた相手に !M! ダメージを与える。"
+  },
+  "collector:SpireGrowthCard": {
+    "NAME": "塔で成長するもの",
+    "DESCRIPTION": "対象は毎ターン終了時 !M! ダメージを受ける。"
+  },
+  "collector:SpireShieldCard": {
+    "NAME": "塔の盾",
+    "DESCRIPTION": "敏捷性 !M! を得る。"
+  },
+  "collector:SpireSpearCard": {
+    "NAME": "塔の矛",
+    "DESCRIPTION": "筋力 !M! を得る。"
+  },
+  "collector:SsserpentCard": {
+    "NAME": "サ・サ・サ・サーペント",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札に *疑念 を加える。"
+  },
+  "collector:TaskmasterCard": {
+    "NAME": "タスクマスター",
+    "DESCRIPTION": "collector:破滅 !clm2! を与える。 NL !D! ダメージを与える。 NL 筋力 !M! を得る。"
+  },
+  "collector:ThievesCard": {
+    "NAME": "シーフ",
+    "DESCRIPTION": "このターン、敵から受けるダメージが !M! 減少する。"
+  },
+  "collector:TorchHeadCard": {
+    "NAME": "トーチヘッド",
+    "DESCRIPTION": "ランダムにトーチヘッドを呼ぶカードを手札に加える。 NL それらはこのターンコストが0になる。"
+  },
+  "collector:TransientCard": {
+    "NAME": "消えゆくもの",
+    "DESCRIPTION": "筋力 !M! を得る。 NL 6 ターン後、あなたは死ぬ。"
+  },
+  "collector:VagrantCard": {
+    "NAME": "浮浪者",
+    "DESCRIPTION": "collector:リザーブ !M! を得る。 NL 手札に *羞恥 を加える。"
+  },
+  "collector:WomanInBlueCard": {
+    "NAME": "青い服の女",
+    "DESCRIPTION": "ランダムなポーションを得る。 NL 戦闘終了時、全てのポーションを失う。"
+  },
+  "collector:WrithingMassCard": {
+    "NAME": "もがき蠢く塊",
+    "DESCRIPTION": "占術 !M! NL 山札の上のカードをプレイする。"
+  },
+  "collector:DefaultCollectibleCard": {
+    "NAME": "魂の抜け殻",
+    "DESCRIPTION": "この対象はまだユニークなカードを持っていない！ NL 筋力 と 敏捷性 !M! を得る。"
+  },
+  "collector:ShootingStar": {
+    "NAME": "流星",
+    "DESCRIPTION": "エセリアル NL 各ターン最初に アタック を collector:葬火 した時、葬火したカードのコピーを手札に加える。 NL それはプレイするまでコストが0になる。"
+  },
+  "collector:CollectorCard": {
+    "NAME": "ウロボロス",
+    "DESCRIPTION": "collector:葬火 NL 脱力 !M! を与える。 NL 弱体を !M! 与える。 NL 一時的な体力 !clm2! を得る。"
+  },
+  "collector:Sapped": {
+    "NAME": "消耗",
+    "DESCRIPTION": "collector:葬火 NL このカードはデッキから削除出来ない。 NL 廃棄"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "collector:EmeraldTorch": {
+    "NAME": "エメラルドトーチ",
+    "FLAVOR": "欲望の火が消える事は無い",
+    "DESCRIPTIONS": [
+      "戦闘開始時、 #b1 #ycollector:リザーブ を得る。"
+    ]
+  },
+  "collector:PrismaticTorch": {
+    "NAME": "プリズマティックトーチ",
+    "FLAVOR": "絶え間なく変化する炎は幸運の恵みを映し出す",
+    "DESCRIPTIONS": [
+      " ",
+      " [] と置き換える。戦闘開始時、 #y燃え殻 を手札に加え、 #b1 #ycollector:リザーブ を得る。各ターンで最初に #y燃え殻 を #y廃棄 した時、 #b1 #ycollector:リザーブ を得る。"
+    ]
+  },
+  "collector:HolidayCoal": {
+    "NAME": "クランピアンコール",
+    "FLAVOR": "「興味深いな! でもなんで特定の煙突だけなんだ?」 - ランウィッド",
+    "DESCRIPTIONS": [
+      "空になった収集札からドローしようとした時、代わりに #y幸運の燃芯 をドローする。"
+    ]
+  },
+  "collector:BagOfTricks": {
+    "NAME": "バッグオブトリック",
+    "FLAVOR": "トリッキー",
+    "DESCRIPTIONS": [
+      "戦闘開始時、 #b",
+      " 枚の コレクトカード を引く。"
+    ]
+  },
+  "collector:JadeRing": {
+    "NAME": "翡翠の指輪",
+    "FLAVOR": "翡翠は誠実さの象徴である",
+    "DESCRIPTIONS": [
+      "#ycollector:破滅 の効果で ミニオン以外の敵を倒した時、 #b",
+      " ソウル を得る。"
+    ]
+  },
+  "collector:SoullitLamp": {
+    "NAME": "魂を灯すランプ",
+    "FLAVOR": "奇妙な装飾をしている。ぱちぱちという炎の音が、やがて唸るような鳴き声へと変わる。",
+    "DESCRIPTIONS": [
+      "入手時、 #b3 #yエッセンス を得る。 戦闘開始時、手札に #y燃え殻 を加える。"
+    ]
+  },
+  "collector:ThimbleHelm": {
+    "NAME": "シンブルヘルム",
+    "FLAVOR": "スパイアのミニヒーローが着用していた。",
+    "DESCRIPTIONS": [
+      "戦闘開始時 #b",
+      " の #y一時的なHP を得る。 #y一時的なHP を所持している間、カードから得られる #yブロック が #b1 増加する。"
+    ]
+  },
+  "collector:Incense": {
+    "NAME": "お香",
+    "FLAVOR": "時代遅れな精神統一方法",
+    "DESCRIPTIONS": [
+      "#y脱力 、 #y弱体 、 #y脆弱化 のいずれかを受けている間、追加でそれらのデバフを受けない。"
+    ]
+  },
+  "collector:FuelCanister": {
+    "NAME": "燃料容器",
+    "FLAVOR": "気分がむかむかする",
+    "DESCRIPTIONS": [
+      "ターン終了時、手札で最もコストの高いカードを #y保留 する。"
+    ]
+  },
+  "collector:AutoCurser": {
+    "NAME": "呪いのアミュレット",
+    "FLAVOR": "「これを身に着けてると、よくつま先をぶつける気がするんだ」 - ランウィッド",
+    "DESCRIPTIONS": [
+      "戦闘開始時、ランダムな敵に #y脱力 と #y弱体 を #b1 与える。"
+    ]
+  },
+  "collector:Bagpipes": {
+    "NAME": "バグパイプ",
+    "FLAVOR": "この恐ろしい楽器はクビライ王を狂わせたと言われている",
+    "DESCRIPTIONS": [
+      "あなたが #y脱力 や #y弱体 を与えた時、追加で #b1 与える。"
+    ]
+  },
+  "collector:BottledCollectible": {
+    "NAME": "瓶入りの脳",
+    "FLAVOR": "魔法使いの研究室から失敬した",
+    "DESCRIPTIONS": [
+      "入手時、 コレクトカード を1枚 #yアップグレード し、そのカードを戦闘開始時に収集札の一番上に置く。",
+      "戦闘開始時 ",
+      " は収集札の一番上に置かれる。",
+      "選択されたカード "
+    ]
+  },
+  "collector:TheContract": {
+    "NAME": "契約書",
+    "FLAVOR": "血で書かれたサイン",
+    "DESCRIPTIONS": [
+      "入手時、 #b10 #yエッセンス を得る。"
+    ]
+  },
+  "collector:ForbiddenFruit": {
+    "NAME": "フォビドゥンフルーツ",
+    "FLAVOR": "この種の果物はまったく馴染みが無い",
+    "DESCRIPTIONS": [
+      "入手時、コモン、アンコモン、レアカードを1枚ずつ選んで入手する。 NL 更にデッキに #y死霊の呪い を加える。",
+      "レアカードを選びデッキに加える。",
+      "アンコモンカードを選びデッキに加える。",
+      "コモンカードを選びデッキに加える。"
+    ]
+  },
+  "collector:RoughDiamond": {
+    "NAME": "ラフダイヤモンド",
+    "FLAVOR": "鉱山が取り壊され、この変色した石ですら価値がある。",
+    "DESCRIPTIONS": [
+      "コスト #y2 以上のレアカードをプレイする度に [E] を得る。"
+    ]
+  },
+  "collector:BlockedChakra": {
+    "NAME": "チャクラブロック",
+    "FLAVOR": "筋肉を1本引っ張るだけでいい",
+    "DESCRIPTIONS": [
+      "ターン開始時、 [E] を得る。あなたは 4 ターン目までターン開始時に収集札からカードを引けなくなる。"
+    ]
+  }
+}

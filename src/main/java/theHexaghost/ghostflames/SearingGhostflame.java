@@ -2,6 +2,7 @@ package theHexaghost.ghostflames;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -9,13 +10,17 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
+import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
-import theHexaghost.powers.CrispyPower;
 import theHexaghost.powers.EnhancePower;
-import downfall.util.TextureLoader;
+import theHexaghost.powers.FlameAffectAllEnemiesPower;
+import theHexaghost.relics.CandleOfCauterizing;
+import theHexaghost.relics.JarOfFuel;
 
 public class SearingGhostflame extends AbstractGhostflame {
 
@@ -24,16 +29,16 @@ public class SearingGhostflame extends AbstractGhostflame {
     public static Texture bruh2 = TextureLoader.getTexture(HexaMod.makeUIPath("burn.png"));
     public int attacksPlayedThisTurn = 0;
 
-    private String ID = "hexamod:SearingGhostflame";
-    private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
-    private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
+    private final String ID = "hexamod:SearingGhostflame";
+    private final String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
+    private final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
     private Color flameColor = new Color(178F/255F, 249F/255F, 164F/255F, 1F);
     private Color activeColor = new Color(178F/255F * 0.5F, 249F/255F * 0.5F, 164F/255F * 0.5F, 1F);
 
     public SearingGhostflame(float x, float y) {
         super(x, y);
-        magic = 4;
+        magic = 6;
 
         //this.textColor = new Color(.75F,1F,.75F,1F);
         this.triggersRequired = 2;
@@ -56,10 +61,50 @@ public class SearingGhostflame extends AbstractGhostflame {
             public void update() {
                 isDone = true;
                 int x = getEffectCount();
-                AbstractMonster m = AbstractDungeon.getRandomMonster();
-                if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                    att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
-                    att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
+
+                if(AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)){
+                    for(int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++){
+                        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                            if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                                att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
+                            }
+                        }
+//                                att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.2F));
+                        att(new VFXAction(
+                                new AbstractGameEffect() {
+
+                                    public void update() {
+                                        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                                            if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                                                AbstractDungeon.effectsQueue.add(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY));
+                                            }
+                                        }
+                                        this.isDone = true;
+                                    }
+
+                                    @Override
+                                    public void render(SpriteBatch spriteBatch) {}
+
+                                    @Override
+                                    public void dispose() {}
+                                }
+                        , 0.3F));
+                        if (AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)) {
+                            AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
+                            r.flash();
+                        }
+                    }
+                }
+                else {
+                    AbstractMonster m = AbstractDungeon.getRandomMonster();
+                    if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                        att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
+                        att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
+                        if (AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)) {
+                            AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
+                            r.flash();
+                        }
+                    }
                 }
             }
         });
@@ -67,8 +112,12 @@ public class SearingGhostflame extends AbstractGhostflame {
 
     @Override
     public void advanceTrigger(AbstractCard c) {
-        if (!charged && c.type == AbstractCard.CardType.ATTACK) {
+        if (!charged && ( c.type == AbstractCard.CardType.ATTACK || (AbstractDungeon.player.hasRelic(JarOfFuel.ID) && c.type == AbstractCard.CardType.POWER ) ) ){
             if (attacksPlayedThisTurn < 2) {
+                if(AbstractDungeon.player.hasRelic(JarOfFuel.ID) && c.type == AbstractCard.CardType.POWER){
+                    AbstractRelic r =  AbstractDungeon.player.getRelic(JarOfFuel.ID);
+                    if(r != null){ r.flash(); }
+                }
                 advanceTriggerAnim();
                 attacksPlayedThisTurn++;
                 if (attacksPlayedThisTurn == 2) {
@@ -99,20 +148,19 @@ public class SearingGhostflame extends AbstractGhostflame {
         return x + "";
     }
 
-
     public int getEffectCount() {
         int x = magic;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+            x += 2 * AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
+        if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
+            x += CandleOfCauterizing.SOULBURN_BONUS_AMOUNT;
         }
         return x;
     }
 
     @Override
-    public void reset() {
+    public void resetVariable() {
         attacksPlayedThisTurn = 0;
     }
 

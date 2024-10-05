@@ -6,14 +6,14 @@
   },
   "hexamod:SealSealReward": {
     "TEXT": [
-      "將一張容器加入牌組",
+      "將一張封印加入牌組",
       "選擇一張牌"
     ]
   },
   "hexamod:SealDescriptor": {
     "TEXT": [
-      "容器",
-      "hexamod:容器. NL "
+      "封印",
+      "hexamod:封印. NL "
     ]
   }
 }

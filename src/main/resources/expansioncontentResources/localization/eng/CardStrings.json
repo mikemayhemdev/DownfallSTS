@@ -79,10 +79,17 @@
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Knowing Skull",
-    "DESCRIPTION": "Ethereal. NL Spend HP to *Wish *for *Souls, *Success, or a *Pick *Me *Up. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Spend HP to *Wish *for *Souls, *Potions, or a *Colorless card. NL Exhaust."
   },
   "expansioncontent:Antidote": {
     "NAME": "Antidote",
-    "DESCRIPTION": "Lose all Poison."
+    "DESCRIPTION": "Lose !M! Poison."
+  },
+  "expansioncontent:BloodySacrifice": {
+    "NAME": "Bloody Sacrifice",
+    "DESCRIPTION": "Ethereal. NL Lose HP equal to !M! % of your max HP. NL Gain 1 Ritual. Exhaust.",
+    "EXTENDED_DESCRIPTION":[
+      " NL (Lose {amount} HP. )"
+    ]
   }
 }

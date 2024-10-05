@@ -12,8 +12,6 @@ public class SearingWound extends AbstractHexaCard {
 
     public final static String ID = makeID("SearingWound");
 
-    //stupid intellij stuff ATTACK, ALL_ENEMY, UNCOMMON
-
     public SearingWound() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.exhaust = true;

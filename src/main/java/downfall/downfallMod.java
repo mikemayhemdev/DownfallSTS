@@ -139,10 +139,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static reskinContent.reskinContent.unlockAllReskin;
@@ -162,7 +159,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean choosingTransformCard = false;
     public static boolean overrideBossDifficulty = false;
 
-    public static boolean playedBossCardThisTurn = false;
+    public static boolean playedBossCardThisTurn = false; // TODO: remove this and fix related code (abs expansion card)
 
     public static boolean replaceMenuColor = true;
     public static boolean tempAscensionHack = false;
@@ -210,6 +207,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     };
 
     public static Properties tutorialSaves = new Properties();
+
+    public static Map<String, String> keywords_and_proper_names = new HashMap<>();
 
     @SpireEnum
     public static AbstractCard.CardTags CHARBOSS_ATTACK;
@@ -496,6 +495,9 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         if (keywords != null) {
             for (Keyword keyword : keywords) {
                 BaseMod.addKeyword(modID + "", keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+                if(!keyword.ID.isEmpty()){ // currently only used by hexa cards, could be expanded to potions too
+                    keywords_and_proper_names.put(keyword.ID, keyword.NAMES[0]);
+                }
             }
         }
     }
@@ -582,12 +584,13 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         //Hexaghost
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SEALCARD, (rewardSave) -> new SealSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.THIRDSEALCARDREWARD, (rewardSave) -> new ThirdSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
         //Collector
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.COLLECTOR_COLLECTIBLECARDREWARD, (rewardSave) -> new CollectibleCardReward(rewardSave.id), reward -> {
             String s = ((CollectibleCardReward) reward).card.cardID;
             return new RewardSave(reward.type.toString(), s);
         });
-        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.THIRDSEALCARDREWARD, (rewardSave) -> new ThirdSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.COLLECTOR_ESSENCE, (rewardSave) -> new EssenceReward(rewardSave.amount), (customReward) -> new RewardSave(customReward.type.toString(), null, customReward instanceof EssenceReward ? ((EssenceReward) customReward).amount : 0, 0));
 
@@ -1140,11 +1143,11 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addMonster("downfall:Heads", LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[0], () -> new MonsterGroup(new AbstractMonster[]{new ChangingTotem(), new ForgetfulTotem(), new GrowingTotem(),}));
 
-        BaseMod.addMonster("downfall:Augmenter", Augmenter.NAME, () -> new MonsterGroup(new AbstractMonster[]{new Augmenter()}));
+        BaseMod.addMonster(Augmenter.ID, Augmenter.NAME, () -> new MonsterGroup(new AbstractMonster[]{new Augmenter()}));
 
-        BaseMod.addMonster("downfall:WomanInBlue", LadyInBlue.NAME, () -> new MonsterGroup(new AbstractMonster[]{new LadyInBlue()}));
+        BaseMod.addMonster(LadyInBlue.ID, LadyInBlue.NAME, () -> new MonsterGroup(new AbstractMonster[]{new LadyInBlue()}));
 
-        BaseMod.addMonster("downfall:FaceTrader", downfall.monsters.FaceTrader.NAME, () -> new MonsterGroup(new AbstractMonster[]{new downfall.monsters.FaceTrader()}));
+        BaseMod.addMonster(downfall.monsters.FaceTrader.ID, downfall.monsters.FaceTrader.NAME, () -> new MonsterGroup(new AbstractMonster[]{new downfall.monsters.FaceTrader()}));
 
         BaseMod.addMonster(LooterAlt.ID, LooterAlt.NAME, () -> new MonsterGroup(new AbstractMonster[]{new LooterAlt(0.0F, 0.0F)}));
 
@@ -1227,6 +1230,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addMonster(NeowBoss.ID, () -> new MonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
+        BaseMod.addMonster(OldNeow.ID, () -> new MonsterGroup(new AbstractMonster[]{new OldNeow()}));
+        BaseMod.addMonster(Neow4Life30Heal.ID, () -> new MonsterGroup(new AbstractMonster[]{new Neow4Life30Heal()}));
 
     }
 

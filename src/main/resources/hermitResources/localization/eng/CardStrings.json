@@ -213,8 +213,8 @@
   },
   "hermit:FullyLoaded": {
     "NAME": "Fully Loaded",
-    "DESCRIPTION": "Add ALL *Strikes and *Defends from your draw pile to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Add ALL *Strikes and *Defends from your draw pile to your hand. NL Exhaust."
+    "DESCRIPTION": "Put ALL *Strikes and *Defends from your draw pile to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Put ALL *Strikes and *Defends from your draw pile to your hand. NL Exhaust."
   },
   "hermit:Gestalt": {
     "NAME": "Gestalt",

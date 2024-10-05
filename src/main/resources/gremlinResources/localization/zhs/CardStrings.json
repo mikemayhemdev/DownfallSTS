@@ -355,8 +355,8 @@
   },
   "Gremlin:SharpenBlades": {
     "NAME": "锐化刀片",
-    "DESCRIPTION": "手中 *攻击 牌本回合下次耗能变为0。",
-    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 手中 *攻击 牌本回合下次耗能变为0。"
+    "DESCRIPTION": "手中 *攻击 牌本回合单次耗能变为0。",
+    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 手中 *攻击 牌本回合单次耗能变为0。"
   },
   "Gremlin:ShieldGremlin": {
     "NAME": "持盾地精",

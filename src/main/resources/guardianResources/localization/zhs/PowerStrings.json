@@ -113,7 +113,7 @@
   "Guardian:AutomayhemPower": {
     "NAME": "时间沙漏",
     "DESCRIPTIONS": [
-      "回合开始时， #y加速 。",
+      "回合开始时， #y加速 #b1 次。",
       "回合开始时， #y加速 #b",
       " 次。"
     ]

@@ -11,7 +11,7 @@ import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
 public class CrispyPower extends AbstractPower implements CloneablePowerInterface {
-
+// Not used anymore but left as dummy because other codes are still referencing it
     public static final String POWER_ID = HexaMod.makeID("CrispyPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ExtraCrispy84.png");

@@ -28,9 +28,9 @@
     "NAME": "Seal Chamber",
     "DESCRIPTIONS": [
       "A menacing structure lies before you.  Most would never dare approach it, but you know its purpose, and know it can be of great use. NL You enter the chamber, and prepare to make a #rsacrifice...",
-      "Paying a piece of your very soul, you acquire the seal - one more step in the path to your ultimate power.",
+      "Paying a piece of your very soul, you acquire the seal - one more step in the path to your ultimate power. ",
       "Weighing your options, you decide against making a sacrifice in the Seal Chamber.  You'll need everything you have to complete your journey.",
-      "These Seals shall prove most useful in the battles to come."
+      "This Seal shall prove most useful in the battles to come."
     ],
     "OPTIONS": [
       "[Offer] #rLose ",
@@ -42,17 +42,23 @@
       "[Locked] Requires a Common Card.",
       "[Locked] Requires a Potion.",
       "[Leave]",
-      "[Locked] Offering made."
+      "[Locked] Offering made.",
+      ". #gGain #gFifth #gSeal.",
+      "[Locked] Requires an Upgraded Card.",
+      " Max HP. #gGain #gSixth #gSeal.",
+      "[Locked] Requires 2 Max HP."
     ]
   },
   "hexamod:HexaFalling": {
     "NAME": "HexaFalling",
     "DESCRIPTIONS": [
       "You, being unbound by the feeble laws of gravity, ~float~ over the pit harmlessly.",
-      "TODO..."
+      " NL Or, just float at your will."
     ],
+    "Translator Note": "the second sentence above is added after the vanilla one, which offers 3 choices [land](skill), [channel](power) and [strike](attack), you can preview below",
+    "preview": "While in free fall you consider your options: Land safely with your greatest techniques. Channel a Power to survive the fall. Strike at the wall to hang on to it.",
     "OPTIONS": [
-      "[Float] #rLose #rnothing...",
+      "[Float] #gLose #gnothing...",
       "[Leave]"
     ]
   },
@@ -70,10 +76,11 @@
       "[Accept] #rLose #r",
       " #rMax #rHP. Unlock Study and Learn options.",
       "[Study] #rLose #rall #rStrikes. #gGain #g3 #gCouncil's #gJustice.",
-      "[Learn] #rLose #rall #rDefends. #gGain #g3 #gApparition.",
+      "[Learn] #rLose #rall #rDefends. #gGain #g",
       "[Complete]",
       "[Leave]",
-      "[Locked] Cannot leave yet."
+      "[Locked] Cannot leave yet.",
+      " #gApparition."
     ]
   },
   "hexamod:BackToBasics": {

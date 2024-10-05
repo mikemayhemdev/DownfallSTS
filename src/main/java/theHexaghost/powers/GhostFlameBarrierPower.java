@@ -24,7 +24,7 @@ public class GhostFlameBarrierPower extends AbstractPower implements CloneablePo
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-
+    //Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used
     public GhostFlameBarrierPower(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -40,17 +40,17 @@ public class GhostFlameBarrierPower extends AbstractPower implements CloneablePo
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.owner instanceof AbstractMonster && info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != this.owner) {// 44
-            this.flash();// 46
+        if (info.owner instanceof AbstractMonster && info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != this.owner) {
+            this.flash();
             addToBot(new ApplyPowerAction(info.owner, owner, new BurnPower(info.owner, amount), amount));
         }
 
-        return damageAmount;// 49
+        return damageAmount;
     }
 
     public void atStartOfTurn() {
-        this.addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this.ID));// 54
-    }// 55
+        this.addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this.ID));
+    }
 
     @Override
     public void updateDescription() {

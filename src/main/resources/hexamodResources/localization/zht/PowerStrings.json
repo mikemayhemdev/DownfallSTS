@@ -112,13 +112,6 @@
       " 牌。"
     ]
   },
-  "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "饋贈能量",
-    "DESCRIPTIONS": [
-      "每當一張 #y虛無 牌被 #y消耗 時，下回合獲得 ",
-      " 。"
-    ]
-  },
   "hexamod:GoldPostCombatPower": {
     "NAME": "戰後靈魂",
     "DESCRIPTIONS": [
@@ -176,11 +169,11 @@
     ]
   },
   "hexamod:SealPostCombatPower": {
-    "NAME": "戰後容器",
+    "NAME": "戰後封印",
     "DESCRIPTIONS": [
       "本場戰鬥結束時，額外獲得 #b",
-      " 張 #y容器 牌。",
-      " 張 #y容器 牌。"
+      " 張 #y封印 牌。",
+      " 張 #y封印 牌。"
     ]
   },
   "hexamod:TimeStopPower": {
