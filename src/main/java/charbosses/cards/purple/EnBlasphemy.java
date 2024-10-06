@@ -1,6 +1,5 @@
 package charbosses.cards.purple;
 
-import charbosses.actions.common.EnemyGainEnergyAction;
 import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
