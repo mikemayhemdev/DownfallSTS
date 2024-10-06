@@ -1,28 +1,24 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
-import theHexaghost.powers.AgainPower;
 
 public class Again extends AbstractHexaCard {
 
-    public final static String ID = makeID("Again");
+    public final static String ID = makeID("FleetingFlash");
 
-    //stupid intellij stuff SKILL, SELF, UNCOMMON
-
+    // Fleeting Flash
     public Again() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        HexaMod.loadJokeCardImage(this, "Again.png");
+        HexaMod.loadJokeCardImage(this, "FleetingFlash.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -43,4 +39,5 @@ public class Again extends AbstractHexaCard {
             upgradeBaseCost(0);
         }
     }
+
 }

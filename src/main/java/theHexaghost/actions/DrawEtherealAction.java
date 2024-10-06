@@ -21,7 +21,6 @@ public class DrawEtherealAction extends AbstractGameAction{
         this.setValues(this.p, this.p);
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
-//        System.out.println("amount in conusttor " + this.amount);
     }
 
     public void update() {

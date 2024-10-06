@@ -32,7 +32,7 @@ public class MainMenuAdPatch {
 
     private static final UIStrings STRINGS = CardCrawlGame.languagePack.getUIString("downfall:MainMenuAd");
     private static final MainMenuAd advert = new MainMenuAd();
-
+    public static final TalesAndTacticsPopup popup = new TalesAndTacticsPopup();
 
     private static class MainMenuAdInfo {
         private String text;
@@ -60,13 +60,13 @@ public class MainMenuAdPatch {
 
     static {
         // T9 Game Info
-        ads.add(new MainMenuAdInfo("", "", "", "", "", "", "https://store.steampowered.com/app/1652250/Tales__Tactics/", TextureLoader.getTexture("downfallResources/images/menuTNT.png")));
+        ads.add(new MainMenuAdInfo("", "", "", "", "", "", "https://store.steampowered.com/app/1652250/Tales__Tactics/", TextureLoader.getTexture("downfallResources/images/menustuff/" + TalesAndTacticsPopup.langFolder() + "/menuTNT.png")));
         // STS Modding Info
-        if(Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT ){
+        if (Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT) {
             ads.add(new MainMenuAdInfo(STRINGS.TEXT[0], STRINGS.TEXT[1], STRINGS.TEXT[2], STRINGS.TEXT[3], STRINGS.TEXT[4], STRINGS.TEXT[5], "https://www.bilibili.com/video/BV1QA411j7Kx", null));
-        }else if(Settings.language == Settings.GameLanguage.KOR){
+        } else if (Settings.language == Settings.GameLanguage.KOR) {
             ads.add(new MainMenuAdInfo(STRINGS.TEXT[0], STRINGS.TEXT[1], STRINGS.TEXT[2], STRINGS.TEXT[3], STRINGS.TEXT[4], STRINGS.TEXT[5], "https://blog.naver.com/2020xodn/222147787489", null));
-        }else{// english
+        } else {// english
             ads.add(new MainMenuAdInfo(STRINGS.TEXT[0], STRINGS.TEXT[1], STRINGS.TEXT[2], STRINGS.TEXT[3], STRINGS.TEXT[4], STRINGS.TEXT[5], "https://DownfallTutorial.github.io", null));
         }
         advert.current = ads.get(0);
@@ -76,8 +76,14 @@ public class MainMenuAdPatch {
     public static class RenderPatch {
         @SpirePostfixPatch
         public static void renderAd(TitleBackground instance, SpriteBatch sb) {
-            if (downfallMod.STEAM_MODE)
+            if (downfallMod.STEAM_MODE) {
                 advert.render(sb);
+                if (!popup.done) {
+                    popup.render(sb);
+                }
+            } else {
+                popup.done = true;
+            }
         }
     }
 
@@ -85,8 +91,14 @@ public class MainMenuAdPatch {
     public static class UpdatePatch {
         @SpirePostfixPatch
         public static void updateAd(TitleBackground instance) {
-            if (downfallMod.STEAM_MODE)
+            if (downfallMod.STEAM_MODE) {
                 advert.update();
+                if (!popup.done) {
+                    popup.update();
+                }
+            } else {
+                popup.done = true;
+            }
         }
     }
 
@@ -174,6 +186,10 @@ public class MainMenuAdPatch {
 
         public void update() {
             if (CardCrawlGame.mainMenuScreen.screen != MainMenuScreen.CurScreen.MAIN_MENU) {
+                return;
+            }
+
+            if (!popup.done) {
                 return;
             }
 

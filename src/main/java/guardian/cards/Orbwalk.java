@@ -19,7 +19,7 @@ public class Orbwalk extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("Orbwalk");
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/orbwalk.png";
+    public static final String IMG_PATH = "cards/Orbwalk.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;

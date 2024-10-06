@@ -2,127 +2,169 @@
   "downfall:EvilMenuPanel": {
     "TEXT": [
       "Downfall",
-      "Defend the Heart from adventuring intruders who intend to Slay the Spire.",
-      "Choose Your Villain",
-      "Campaign"
+      "心臓を侵入者から守る。",
+      "悪役を選択",
+      "キャンペーン"
     ]
   },
   "downfall:SoulToGoldChanges": {
     "TEXT": [
-      "Souls",
-      "Shows how many Souls you are carrying. Souls can be given to the Heart for rewards.",
-      "Merchant Status",
+      "ソウル",
+      "所持しているソウルの数が表示されます。ソウルは心臓に渡してリワードと交換できます。",
+      "商人のステータス",
       "HP",
-      "Dead!",
-      "Strength",
-      "Souls stolen"
+      "死んだ!",
+      "強さ",
+      "盗まれたソウル",
+      "破滅"
     ]
   },
   "downfall:BustKeyButton": {
     "TEXT": [
-      "Break Ruby",
-      "Break Sapphire",
-      "Break Emerald",
-      "(Free Action) Spend 50 Souls: Destroy key to ",
-      "gain 1 Strength.",
-      "raise Max HP by 10.",
-      "gain 1 Dexterity.",
-      "Key shattered!",
-      "Requires ",
-      " Souls."
+      "ルビーの鍵を壊す",
+      "サファイアの鍵を壊す",
+      "エメラルドの鍵を壊す",
+      "(行動消費なし) 50 ソウルを消費: 鍵を破壊 ",
+      "ボス戦で筋力 1 を得る。",
+      "ボス戦で一時的な HP を 10 得る。",
+      "ボス戦で敏捷性 1 を得る。",
+      "鍵は破壊された！",
+      "要求 ",
+      " ソウル",
+      "(行動消費なし) 鍵を破壊する "
     ]
   },
   "downfall:WheelSpinButton": {
     "TEXT": [
-      "Spin Wheel",
-      "(Free Action) Spin the Wheel.",
-      "Can't Spin Again."
+      "スピンホイール",
+      "(行動消費なし) 車輪を回す！",
+      "もう回さない"
     ]
   },
   "downfall:AscensionText": {
     "TEXT": [
-      "19. Bosses have an extra Relic.",
-      "20. Act 3 Boss has Lizard Tail which heals all HP.",
-      "Obtain the Ruby Key. Break it later.",
-      "4. Bosses have an extra card upgraded."
+      "19. ボスはレリックを一つ余計に持っている。",
+      "20. Act 3 のボスはHPを全快する トカゲのしっぽ を持っている。",
+      "ルビーのカギを入手。後で壊そう。",
+      "4. ボスのカードがアップグレードされている。"
     ]
   },
   "downfall:ConfigMenuText": {
     "TEXT": [
-      "Allow Standard runs to encounter global relics from Downfall's characters.",
-      "Allow Standard runs to encounter global potions from Downfall.",
-      "Allow Standard runs to encounter global events from Downfall.",
-      "Allow Standard runs to encounter Boss Cards from Downfall.",
-      "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs.",
-      "Allow Standard runs to encounter Downfall Curse cards.",
-      "Downfall runs use traditional Map layout - fire before boss, not at start."
+      "スタンダードランで Downfallのレリックを入手",
+      "スタンダードランで Downfallのポーションを入手",
+      "スタンダードランで Downfallのイベントが発生",
+      "スタンダードランで Downfallのボスカードを入手",
+      "スタンダードランのキャラでDownfallをプレイ、またその逆を許可",
+      "MODのキャラでDownfallをプレイ",
+      "スタンダードランで Downfallの呪いカードを入手",
+      "Downfallでスタンダードなマップレイアウトを使用",
+      "Downfall キャラクターの全てのアンロックを解除 (再起動が必要)",
+      "チャンプのスタンスヘルパーを無効化。玄人チャンププレイヤー向け",
+      "スネッコが他のMODのカードを使用できなくする",
+      "音楽の変更を許可しない (再起動が必要)",
+      "Downfall キャラクター のスキンをすべて解除。",
+      "カード特性のテキストの代わりにアイコンを利用する。"
     ]
   },
   "downfall:EnergyPanelTip": {
     "TEXT": [
-      "Enemy's current energy count. Cards require energy to play."
+      "敵のエナジーの現在値。カードをプレイするのに必要。"
     ],
     "EXTRA_TEXT": [
-      "Energy"
+      "エナジー"
     ]
   },
   "downfall:RemoveCardReward": {
   "TEXT": [
-    "Remove a card in your deck",
-    "Choose a Card to Remove"
+    "デッキからカードを削除する",
+    "削除するカードを選択"
   ]
 },
   "downfall:TransformCardReward": {
     "TEXT": [
-      "Transform a card in your deck",
-      "Choose a Card to Transform"
+      "デッキのカードを変化させる",
+      "変化させるカードを選択"
     ]
   },
   "downfall:UpgradeCardReward": {
     "TEXT": [
-      "Upgrade a card in your deck",
-      "Choose a Card to Upgrade"
+      "デッキのカードをアップグレードする",
+      "アップグレードさせるカードを選択"
     ]
   },
   "downfall:BossRelicReward": {
     "TEXT": [
-      "Choose 1 of 3 Boss Relics to obtain.",
-      "Obtain a ",
-      ".",
-      "Choose a Relic.. sorta"
+      " 3 ボスレリック の中から 1つ を選択",
+      "入手： ",
+      "",
+      " Relicを選択.. ソート"
     ]
   },
   "downfall:EtherealMod": {
     "TEXT": [
-      "Ethereal. NL "
+      "エセリアル NL "
     ]
   },
   "downfall:JaxReward": {
     "TEXT": [
-      "Found some JAX!"
+      "JAX を見つけた！"
     ]
   },
   "downfall:RareCardReward": {
     "TEXT": [
-      "Add a Rare Card to your deck"
+      "レアカードをデッキに加えた。"
     ]
   },
   "downfall:OctoChoiceAction": {
     "TEXT": [
-      "Choose a Wish to use.",
-      "You should never see this.",
-      "Choose a Slime."
+      "選択を決定する。",
+      "決して見てはいけない・・・おおっと"
     ]
   },
   "downfall:BossCardReward": {
     "TEXT": [
-      "Add a Boss Card to your deck",
-      "Pick a card."
+      "デッキにボスカードを追加。",
+      "カードを取れ"
+    ]
+  },
+  "downfall:ColorfulCardReward": {
+    "TEXT": [
+      "デッキに ",
+      " カードを追加。",
+      "カードを取る"
     ]
   },
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
-      "Living Wall Heads"
+      "リビングウォールヘッド"
     ]
+  },
+  "downfall:WhaleHunter": {
+    "TEXT": [
+      "ホエールハンター",
+      "サイクルを終了させた。"
+    ]
+  },
+  "downfall:SingleCardViewPopup": {
+    "TEXT": [
+      "弾薬"
+    ]
+  },
+  "downfall:MainMenuAd": {
+    "TEXT": [
+      "もっと欲しい?",
+      "Downfallを含むより多くのMODがあります",
+      "Downfallは Slay the Spire をベースとしています。",
+      "",
+      "Steam Workshop.",
+      "ここをクリックして方法を学んでください。"
+    ]
+  },
+  "downfall:CantEscapeGauntlet": {
+    "TEXT": [
+      "圧倒されている"
+    ],
+    "Translator note": "This pops up when you try to escape the gauntlet fight, まだ生きている英雄が居るので逃げることが出来ない。"
   }
 }

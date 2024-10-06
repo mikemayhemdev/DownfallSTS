@@ -29,7 +29,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
-import downfall.patches.BanSharedContentPatch;
 import gremlin.cards.*;
 import gremlin.characters.GremlinCharacter;
 import gremlin.events.BackToBasicsGremlin;
@@ -42,7 +41,6 @@ import gremlin.patches.GremlinModSaveState;
 import gremlin.potions.GremlinPotion;
 import gremlin.potions.NecromancyPotion;
 import gremlin.potions.SwapPotion;
-import gremlin.potions.WizPotion;
 import gremlin.powers.AbstractGremlinPower;
 import gremlin.relics.*;
 import org.apache.logging.log4j.LogManager;
@@ -450,8 +448,8 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         BaseMod.addPotion(SwapPotion.class, Color.BLACK, Color.GRAY, Color.SLATE, SwapPotion.POTION_ID, GREMLIN);
         BaseMod.addPotion(GremlinPotion.class, Color.RED, Color.YELLOW, Color.BLUE, GremlinPotion.POTION_ID, GREMLIN);
         BaseMod.addPotion(NecromancyPotion.class, Color.RED, Color.YELLOW, Color.BLUE, NecromancyPotion.POTION_ID, GREMLIN);
-        BaseMod.addPotion(WizPotion.class, Color.PURPLE, Color.PINK, Color.PURPLE, WizPotion.POTION_ID);
-        BanSharedContentPatch.registerRunLockedPotion(GREMLIN, WizPotion.POTION_ID);
+
+        //        BanSharedContentPatch.registerRunLockedPotion(GREMLIN, WizPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(GremlinPotion.POTION_ID);

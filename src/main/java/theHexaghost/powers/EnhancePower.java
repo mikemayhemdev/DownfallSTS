@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import javassist.runtime.Desc;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
@@ -57,10 +58,10 @@ public class EnhancePower extends AbstractPower implements CloneablePowerInterfa
 
         if(this.amount<0){
             this.type = PowerType.DEBUFF;
-            description = DESCRIPTIONS[2] + amount*(-1) + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[2] + amount*(-1) + DESCRIPTIONS[1] + " NL " + DESCRIPTIONS[3];
         }else{
             this.type = PowerType.BUFF;
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + " NL " + DESCRIPTIONS[3];
         }
     }
 

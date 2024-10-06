@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.util.TextureLoader;
+import theHexaghost.TheHexaghost;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -37,10 +38,15 @@ public class CutsceneChangePatches {
             }
 
             List<CutscenePanel> customPanels = new ArrayList<>();
-
-            customPanels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/ending1.png"), "VO_NEOW_1A"));
-            customPanels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/ending2.png")));
-            customPanels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/ending3.png")));
+            if(chosenClass ==  TheHexaghost.Enums.THE_SPIRIT){
+                customPanels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/hexaending1.jpg"), "VO_NEOW_1A"));
+                customPanels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/hexaending2.jpg")));
+                customPanels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/hexaending3.jpg")));
+            }else {
+                customPanels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/ending1.png"), "VO_NEOW_1A"));
+                customPanels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/ending2.png")));
+                customPanels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/ending3.png")));
+            }
             if (customPanels != null) {
                 try {
                     Field f = Cutscene.class.getDeclaredField("panels");

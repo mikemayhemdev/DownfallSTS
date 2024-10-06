@@ -2,12 +2,12 @@
   "sneckomod:theSnecko": {
     "NAMES": [
       "The Snecko",
-      "the Snecko"
+      "スネッコ"
     ],
     "TEXT": [
-      "A serpentine creature, native to the City. NL Known for a stare that confuses predators.",
-      "NL Sssssssss....",
-      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~snake~ ~friend,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+      "スネッコ。「シティ」に生息する蛇のような生物。 NL 捕食者を混乱させるにらみつけで知られている。",
+      "NL シュシュシュシュ....",
+      "暗い道を歩いていると、数人のフードをかぶった人物が何か暗い儀式をしているところに出くわす。あなたが近づくと、彼らは不気味に一斉にこちらを向いた。その中で最も背の高い者は牙の生えた歯をむき出しにし、青白い長い手をあなたに向かって伸ばした。 NL 「 ~我らに加われ'蛇'よ。そして塔の温もりを感じるのだ~ 」"
     ]
   }
 }

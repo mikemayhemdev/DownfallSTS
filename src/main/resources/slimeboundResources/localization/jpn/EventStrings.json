@@ -1,92 +1,105 @@
 {
   "Slimebound:Hunted": {
-    "NAME": "The Boss Approaches",
+    "NAME": "追いついてきたスライムボス",
     "DESCRIPTIONS": [
-      "A booming voice echoes the spire... NL NL #r~SLIME CRUSH!!!~ NL NL The hulking slime quickly catches up to you, blocking your path forward. It appears it has grown since the Exordium, consuming and strengthening itself as it followed your trail up the Spire.",
-      "Can it really be this easy?",
-      "You dispatch the Slime Boss with ease, claiming its prizes possession for yourself. It's a very stylish hat, after all."
+      "威勢の良い声が尖塔に響く... NL NL #r~スライムクラッシュ!!!~ NL NL 巨大なスライムはすぐにあなたに追いついて道を塞いだ。このスライムは「序章」の頃から成長し、自らを強化しながらあなたの後を追ってきたようだ。",
+      "こんなに簡単でいいんだろうか？",
+      "スライムボスをあっさりと退治してその報酬を手に入れた。 NL とってもおしゃれな帽子だね。"
     ],
     "OPTIONS": [
-      "[Confront] #rFight #rSlime #rBoss. Reward: #gTiny #gBowler #gHat.",
-      "[Flee in Terror] #rCursed #r- #rShame."
+      "[対決] #rスライムボスとの戦闘 報酬: #gタイニーボウラーハット。",
+      "[恐怖で逃げる] #r呪い #r- #r羞恥。"
     ]
   },
   "Slimebound:WorldofGoop": {
-    "NAME": "World of Goop",
+    "NAME": "一面の堆積物",
     "DESCRIPTIONS": [
-      "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL Calmly, you bathe yourself as you bond with the goop, enjoying a moment of reprieve. NL NL Climbing out, you notice in the pool a pile of #ygold from unfortunate adventurers, along with a curious creature who seems to be attracted to the shiny metal.",
-      "You exit the invigorating slime bath, fishing out the #ygold, leaving the creature with a sad look upon its amorphous face.",
-      "You succeed in negotiating a deal with the creature to provide it with more shiny metal if it will aid you in your quest. NL You and your newfound #gfriend exit the slime bath together."
+      "あなたは汚水の水たまりに落ちた。 NL それは #g@スライム@ の #g@堆積物@ で出来ていた！ NL あなたは落ち着いて水浴びを楽しむと、堆積物と一体化しひと時の休息を楽しむことが出来た。 NL NL 水たまりの中には、不幸な冒険者たちの魂が食欲旺盛な生き物にゆっくりと消化されているのが見える。",
+      "あなたは #yソウル を吸収し、爽快なスライム風呂を出る。...先住民の生物は悲しそうな顔を浮かべていた。",
+      "手伝ってくれるならもっと美味しい魂が食べれるぞ。 NL 交渉は成功したようだ。 NL あなたは新しい #g友達 と一緒にスライム風呂から出るのだった。"
     ],
     "OPTIONS": [
-      "[Gather Gold] #gGain #g75 #gGold.",
-      "[Recruit] #gGain #yGreed #yOoze.",
-      "[Leave]"
+      "[魂を集める] #g入手： #g75ソウル。",
+      "[勧誘] #r失う： #r75ソウル。 #g入手： #yグリードウーズ",
+      "[立ち去る]",
+      "[Locked] 必要： 75 ソウル。"
     ]
   },
   "Slimebound:SlimeTalk": {
     "NAME": "TalkStrings",
     "DESCRIPTIONS": [
-      "~Don't~ ~absorb~ ~me!~",
-      "~Taking~ ~our~ ~souls?~",
-      "~It~ ~will~ ~feed~ ~on~ ~us...~",
-      "~The~ ~Boss!~",
-      "That hat... NL #r~I~ #r~must~ #r~have~ #r~it!~",
-      "~Why~ ~would~",
-      "~it~ ~not~",
-      "~let~ ~us~ ~play?~",
-      "~It~ ~will~ ~consume~ ~us...~",
-      "~It's~ ~so~ ~strong...~",
-      "~It's~ ~like~ ~us...~",
-      "~NICE~ #r~HAT!!!~"
+      "~我を...吸収...する気か~",
+      "~我の...魂を...奪う...のか?~",
+      "~我...を...食べるのか...~",
+      "~ボス！~",
+      "その帽子... NL #r~欲しい！~",
+      "~どうして...？~",
+      "~なぜ...だ...~",
+      "~遊んで...くれるの？~",
+      "~我らを...飲み込むのか...~",
+      "~強いな...~",
+      "~我らと...同じ...~",
+      "~ナイス~ #r~帽子!!!~"
     ]
   },
   "Slimebound:ScrapOoze": {
-    "NAME": "Scrap Ooze",
+    "NAME": "スクラップウーズ",
     "DESCRIPTIONS": [
-      "Any slime is a friend in your cause.  With offerings of new scrap and treasure, the Scrap Ooze joins your quest."
+      "どんなスライムもあなたの味方だ。 NL 新しくゴミや宝が好きなスクラップウーズがあなたの冒険に参加する。"
     ],
     "OPTIONS": [
-      "[Recruit] #rLose ",
-      ". Gain #gScrap #gOoze. #rLocked if you Reach Inside.",
-      "[Recruit] Locked (Angered the Scrap Ooze)",
-      "[Leave]",
-      "[Recruit] Locked (Requires a Common or Uncommon Relic)"
+      "[勧誘] #r失う：",
+      " #g入手： #gスクラップウーズ #rレリックを諦める",
+      "[勧誘] Locked (スクラップウーズを怒らせた。)",
+      "[立ち去る]",
+      "[勧誘] Locked 必要：コモンまたはアンコモンのレリック"
     ]
   },
   "Slimebound:ArtOfSlimeWar": {
-    "NAME": "The Art of Slime War",
+    "NAME": "スライム流戦闘の極意",
     "DESCRIPTIONS": [
-      "You come across a disgusting pedestal with a #gglowing #gbook sitting atop. It appears this book contains the complicated and advanced combat techniques used by the #gSlime #gBoss and its minions.",
-      "As you reach for the book, you hear several traps activate.  You won't be able to avoid them all.",
-      "You steal the book and manage to avoid the traps, but fall into a horrible puddle of goop.",
-      "Grabbing the book revealed a trap of spikes below the floor, which you narrowly escape, but not without a severe gash.",
-      "As soon as the book leaves the pedestal, you feel it draining your very life essence. It had better be worth it.",
-      "You decide to leave the book where it is and continue on.",
-      "You can't figure out how the Slime minions are a threat to anyone - it appears the only tactic they use is to violently throw their bodies at enemies.  Well, if it works for them..."
+      "あなたは #g光る本 が鎮座する醜い台座を見つけた。 NL この本には #gスライムボス とその配下が使う、複雑で高度な戦闘技術が書かれているようだ。",
+      "本を手に取るとトラップが作動する音が聞こえた。全てを回避するのは困難だ。",
+      "あなたは本を盗み、罠を避ける事に成功した。 NL しかし、ヘドロの溜まった水たまりへと落下してしまった。",
+      "本を掴むと床下にトゲの罠があった！ NL 辛うじて逃れたが大きな傷を負ったようだ...",
+      "本が台座から離れた瞬間、自分の身体から生命力が失われていくのを感じた。 NL しかしこの本はそれ以上の価値があるはずだ。",
+      "あなたは本をそのままに先へ進むことにした。",
+      "スライムは体当たりしかしないので脅威にはならない。 NL まあ、彼らにはそれが有効なのだろう...。"
     ],
     "OPTIONS": [
-      "[Read] #gRemove #gall Strikes. #gReceive #g3 #gUpgraded Tackles.",
-      "[Take] #gObtain #gConsult #gPlaybook. #rTrigger #ra #rtrap.",
-      "[Leave]",
-      "[Dive] #rBecome #rCursed #r- #rIcky.",
-      "[Be Patient] #rTake #r",
-      " #rDamage.",
-      "[Grab and Run] #rLose #r",
-      " #rMax #rHP."
+      "[読む] #g全てのストライクを削除。 #g入手：3枚のアップグレード済みのタックル。",
+      "[取る] #g入手： #gプレイブック。 #rトラップが作動する。",
+      "[立ち去る]",
+      "[飛び込む] #r呪い #r- #r粘液塗れ。",
+      "[我慢する] #r",
+      " #rダメージ。",
+      "[掴んで走る] #r",
+      " #r最大HPを失う。"
     ]
   },
   "Slimebound:Darklings": {
-    "NAME": "Darklings",
+    "NAME": "ダークリング達",
     "DESCRIPTIONS": [
-      "Three unfamiliar looking slimes stand(?) in your way. They look hostile, but as you approach, they note that you are of similar consistency and look at you with curiosity.",
-      "As you ~prepare~ ~to~ ~battle,~ so do the inky black slimes!",
-      "After a short conversation, these fellow slimes are on your side as well - guarding for intruders. They can leave their post for a little while to assist you."
+      "見慣れない三匹のスライムがあなたの前に立ち(?)はだかった。 NL 彼らは敵対しているように見えたが、あなたが近づくとあなたが同じような性質を持っていることに気付き、興味深くあなたを見つめている。",
+      " 黒いスライム達も ~戦闘の準備~ を始めた。",
+      "少し話をすると、どうやら侵入者を排除する為、彼らは少しの間持ち場を離れてあなたをサポートしてくれるようだ。"
     ],
     "OPTIONS": [
-      "[Recruit] #gObtain #gDarklings.",
-      "[Fight]",
-      "[Leave]"
+      "[勧誘] #g入手： #gダークリング達。 #r失う： ",
+      "[戦う]",
+      "[立ち去る]",
+      "",
+      "[Locked] 必要：レアカード"
+    ]
+  },
+  "Slimebound:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "一匹の羊が道を歩けば、残りの羊は皆ついてくる。"
+    ],
+    "OPTIONS": [
+      "[感化] 全ての #gストライク と #g防御 に命令の効果が付く。",
+      "[Locked] 必要：ストライクまたは防御"
     ]
   }
 }

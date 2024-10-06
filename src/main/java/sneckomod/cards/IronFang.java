@@ -16,8 +16,8 @@ public class IronFang extends AbstractSneckoCard {
 
     public IronFang() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
-        baseBlock = 8;
+        baseDamage = 9;
+        baseBlock = 9;
         baseMagicNumber = magicNumber = 3;
         baseSilly = silly = 3;
         tags.add(SneckoMod.RNG);

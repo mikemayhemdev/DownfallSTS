@@ -12,7 +12,7 @@ import theHexaghost.actions.RetractAction;
 
 public class SpectralSpark extends AbstractHexaCard {
 
-    public final static String ID = makeID("SpectralSpark");
+    public final static String ID = makeID("NaughtySpirit");
 
     private static final int MAGIC = 6;
 
@@ -20,7 +20,7 @@ public class SpectralSpark extends AbstractHexaCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = MAGIC;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        HexaMod.loadJokeCardImage(this, "SpectralSpark.png");
+        HexaMod.loadJokeCardImage(this, "NaughtySpirit.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

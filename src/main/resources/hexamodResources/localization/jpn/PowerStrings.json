@@ -1,194 +1,249 @@
 {
   "hexamod:AgainPower": {
-    "NAME": "Again!",
+    "NAME": "アゲイン!",
     "DESCRIPTIONS": [
-      "Do not #yAdvance at the end of the next turn.",
-      "Do not #yAdvance at the end of the next #b",
-      " turns."
-    ]
+      "次のターン終了時に #y前進 しない。",
+      "次の #b",
+      " ターン終了時に #y前進 しない。"
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:ApocalypticArmorPower": {
-    "NAME": "Doomsday",
+    "NAME": "終末の日",
     "DESCRIPTIONS": [
-      "The next time you #yIgnite the Inferno Ghostflame and all #b",
-      " Ghostflames are #yIgnited, end your turn and take an additional turn.",
-      "Whenever you #yIgnite the Inferno Ghostflame and at least #b"
+      "次に #b",
+      " 体のゴーストフレイムが #y点火 された場合、追加の1ターンを得る。",
+      "次に #b"
     ]
   },
   "hexamod:ApplyBurnAtTurnStartOncePower": {
-    "NAME": "Delayed Flame",
+    "NAME": "ディレイフレイム",
     "DESCRIPTIONS": [
-      "At the start of your next turn, apply #b",
-      " #ySoulburn to ALL enemies."
-    ]
+      "次のターン開始時、敵全体に #b",
+      " #yソウルバーン を与える。"
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:BurnPerTurnPower": {
-    "NAME": "Melting Metal",
+    "NAME": "メルティングメタル",
     "DESCRIPTIONS": [
-      "Applies #b",
-      " #ySoulburn after the next time #ySoulburn is detonated on this enemy."
-    ]
+      "次にこの敵に #yソウルバーン でダメージを与えた時、 #b",
+      " #yソウルバーン を与える。"
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:BurnPower": {
-    "NAME": "Soulburn",
+    "NAME": "ソウルバーン",
     "DESCRIPTIONS": [
-      "In #b",
-      " turns, loses #b",
-      " turn, loses #b",
-      " HP, then #ySoulburn is removed."
+      " #b",
+      " ターン後に炸裂して HPを #b",
+      " ターン後に炸裂して HPを #b",
+      " 減少させ #yソウルバーン を解除する。"
     ]
   },
   "hexamod:BurnvenomPower": {
-    "NAME": "Wildfire Weapon",
+    "NAME": "野火",
     "DESCRIPTIONS": [
-      "Whenever you deal unblocked attack damage, apply #b",
-      " #ySoulburn."
-    ]
+      "防御されなかったダメージを与える度に #b",
+      " #yソウルバーンを与える。"
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:CommonPostCombatPower": {
-    "NAME": "Sealed Reward: Card",
+    "NAME": "封印報酬: カード",
     "DESCRIPTIONS": [
-      "At the end of combat, obtain #b",
-      " additional cards.",
-      " additional card."
+      "戦闘終了後、追加の通常カード報酬を #b",
+      " 回得る。",
+      " 回得る。"
     ]
   },
-  "hexamod:CrispyPower": {
-    "NAME": "Extra Crispy",
+  "hexamod:CrispyPower_new": {
+    "NAME": "黒コゲ",
     "DESCRIPTIONS": [
-      "#ySoulburn applied is increased by #b",
-      "."
+      "次に #yソウルバーン が炸裂した時、 #yソウルバーン を #b",
+      " 与える。"
     ]
   },
   "hexamod:EnhancePower": {
-    "NAME": "Intensity",
+    "NAME": "火力",
     "DESCRIPTIONS": [
-      "Increase the amount of damage, #ySoulburn, and Block applied by Ghostflames when Ignited by #b",
-      "."
+      " #yソウルバーン で与えるダメージと、ゴーストフレイムから付与される #yブロック が増加： #b",
+      " ",
+      "#yソウルバーン で与えるダメージと、ゴーストフレイムから付与される #yブロック が減少： #b",
+      "#yシーリングゴーストフレイム の効果が2倍になる。"
     ]
   },
   "hexamod:EtherealRefundPower": {
-    "NAME": "Ethereal Refund",
+    "NAME": "エセリアル・リファウンド",
     "DESCRIPTIONS": [
-      "Whenever you play an #yEthereal card this turn, gain ",
-      " ."
-    ]
+      "このターン、あなたが #yエセリアル カードをプレイした時 ",
+      " を得る。"
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:FuturePower": {
-    "NAME": "Speedrun",
+    "NAME": "潜影",
     "DESCRIPTIONS": [
-      "Whenever you #yAdvance, gain #b",
-      " #yBlock."
+      "あなたが #y後退 を行う度 [REMOVE_SPACE] 次の #b",
+      " 枚のカードを自由にプレイし、 #y廃棄 する。 [REMOVE_SPACE].",
+      " 枚のカードを自由にプレイし、 #y廃棄 する。 [REMOVE_SPACE]."
     ]
   },
   "hexamod:FutureUpgradePower": {
-    "NAME": "Sealed Reward: Upgrade",
+    "NAME": "封印報酬: アップグレード",
     "DESCRIPTIONS": [
-      "At the end of combat, #yUpgrade #b",
-      " random card in your deck.",
-      " random cards in your deck."
+      "戦闘終了後、デッキ内のランダムなカードを #b",
+      " 枚 #yアップグレードする。",
+      " 枚 #yアップグレードする。"
     ]
   },
-  "hexamod:GainStrengthThatGoesAwayPower": {
-    "NAME": "Here and Now",
+  "hexamod:StopFromAdvancingPower": {
+    "NAME": "今はここで",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yStrength. Lose this #yStrength when you #yAdvance or #yRetract."
+      "ターン終了時 #y前進 を行わなくなり、現在のゴーストフレイムを #y滅却 する。"
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
-    "NAME": "Ghostflame Barrier",
+    "NAME": "ゴーストフレイムバリア",
     "DESCRIPTIONS": [
-      "When attacked, applies #b",
-      " #ySoulburn to the attacker."
-    ]
+      "このターン攻撃を受けた時、攻撃してきた相手に #b",
+      " #yソウルバーン を与える。"
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
-  "hexamod:GiftsFromTheDeadPower": {
-    "NAME": "Ghostly Gifts",
+  "hexamod:GiftsFromBeyondPower": {
+    "NAME": "ギフテッドカード",
     "DESCRIPTIONS": [
-      "Whenever an #yEthereal card is #yExhausted, gain ",
-      " next turn."
+      "ターン開始時、ランダムな #y死後 カードを",
+      " 枚 手札に加える。",
+      " 枚 手札に加える。"
     ]
   },
   "hexamod:GoldPostCombatPower": {
-    "NAME": "Sealed Reward: Gold",
+    "NAME": "封印報酬: ゴールド",
     "DESCRIPTIONS": [
-      "Gold reward from this combat is increased by #b",
-      " ."
+      "戦闘終了後、追加で #b",
+      " ゴールドを得る。"
     ]
   },
   "hexamod:HexalevelPower": {
-    "NAME": "Hexalevel",
+    "NAME": "地獄化",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yEnhance."
+      "ターン開始時、 #y火力 #b",
+      " を得る。"
     ]
   },
   "hexamod:LoseEnhanceInTurnsPower": {
-    "NAME": "Heated Up",
+    "NAME": "ヒートアップ",
     "DESCRIPTIONS": [
-      "At the end of your turn, lose #b",
-      "In #b",
-      " turns, lose #b",
-      " #yEnhance."
-    ]
+      "ターン終了時、 #b",
+      " #b",
+      " ターン後、、 #b",
+      " #y火力 を失う。"
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:ParanormalFormPower": {
-    "NAME": "Paranormal Form",
+    "NAME": "ポルターガイスト",
     "DESCRIPTIONS": [
-      "Whenever you play an #yEthereal card, deal #b",
-      " damage to a random enemy."
+      "#yエセリアル カードがプレイされるたび、ランダムな敵がHPを #b",
+      " 失う。"
     ]
   },
   "hexamod:PastPower": {
-    "NAME": "Devil's Dance",
+    "NAME": "デビルズダンス",
     "DESCRIPTIONS": [
-      "The first time you #yRetract each turn, gain ",
-      " and draw #b",
-      " card.",
-      " cards."
+      " #y後退 する度に、カードを #b",
+      " 枚引く。",
+      " 枚引く。"
     ]
   },
   "hexamod:PotionPostCombatPower": {
-    "NAME": "Sealed Reward: Potion",
+    "NAME": "封印報酬: ポーション",
     "DESCRIPTIONS": [
-      "At the end of combat, obtain #b",
-      " additional Potions.",
-      " additional Potion."
+      "戦闘終了後、追加でポーションを #b",
+      " 報酬に追加する。",
+      " 報酬に追加する。"
     ]
   },
   "hexamod:RadiantPower": {
-    "NAME": "Radiant Flame",
+    "NAME": "レディアントフレイム",
     "DESCRIPTIONS": [
-      "Whenever a Ghostflame is #yIgnited, apply #b",
-      " #ySoulburn to a random enemy."
+      "ゴーストフレイムに #y点火 をする度に #b",
+      " #yブロック を得る。"
     ]
   },
   "hexamod:SealPostCombatPower": {
-    "NAME": "Sealed Reward: Seal",
+    "NAME": "封印報酬: 封印",
     "DESCRIPTIONS": [
-      "At the end of combat, obtain #b",
-      " additional #ySeal cards.",
-      " additional #ySeal card."
-    ]
+      "戦闘終了後、 #y封印 カードを #b",
+      " 枚報酬に追加する。",
+      " 枚報酬に追加する。"
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:TimeStopPower": {
-    "NAME": "Doom's Arrival",
+    "NAME": "終末の時",
     "DESCRIPTIONS": [
-      "At the end of your turn, immediately start another turn. NL Energy and Block are maintained."
+      "ターン終了時、すぐにもう一度自分のターンを開始する。",
+      "ターン終了時、すぐにもう一度自分のターンを #b",
+      " 回開始する。"
     ]
   },
   "hexamod:VolcanoVisagePower": {
-    "NAME": "Volcanic Visage",
+    "NAME": "怒髪衝天",
     "DESCRIPTIONS": [
-      "At the start of your turn, apply #b",
-      " #ySoulburn to all enemies."
+      " #y点火 する度に、敵全体に #b",
+      " #yソウルバーン を与える。"
     ]
   },
   "hexamod:LivingBombPower": {
-    "NAME": "Living Bomb",
+    "NAME": "リビングボム",
     "DESCRIPTIONS": [
-      "The next time this creature's #ySoulburn is detonated, it affects ALL enemies."
+      "この敵の #yソウルバーン が爆発した時、全ての敵に影響を与える。"
+    ]
+  },
+  "hexamod:GainEnergyAtStartOfTurnPower": {
+    "NAME": "モアエナジー",
+    "DESCRIPTIONS": [
+      "ターン開始時"
+    ]
+  },
+  "hexamod:SoulburnOnExhaustPower": {
+    "NAME": "潜在的ソウルバーン",
+    "DESCRIPTIONS": [
+      "このターン、カードを #y廃棄 する度に #b",
+      " #yソウルバーン が与えられる。"
+    ]
+  },
+  "hexamod:LoseIntensityPower": {
+    "NAME": "火力低下",
+    "DESCRIPTIONS": [
+      "このターン終了時に #b",
+      " #y火力 を失う。 [REMOVE_SPACE]"
+    ]
+  },
+  "hexamod:MaxHPPostCombatPower": {
+    "NAME": "封印報酬: Max HP",
+    "DESCRIPTIONS": [
+      "戦闘終了時Max HP が #b",
+      " 増加する"
+    ]
+  },
+  "hexamod:InfernoPotionPower": {
+    "NAME": "ヘクサバーン",
+    "DESCRIPTIONS": [
+      "あなたのゴーストフレイムはこの戦闘中敵全体に作用する。",
+      "あなたのゴーストフレイムはこの戦闘中敵全体に #b",
+      " 回作用する。"
+    ]
+  },
+  "hexamod:PlayCardAndExhaustPower": {
+    "NAME": "変化する影",
+    "DESCRIPTIONS": [
+      "次のカードは自由にプレイ出来るが #y廃棄 される。 [REMOVE_SPACE].",
+      "次の #b",
+      " 枚のカードは自由にプレイ出来るが #y廃棄 される。 [REMOVE_SPACE]."
     ]
   }
 }

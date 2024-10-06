@@ -13,11 +13,11 @@ public class HeatCrush extends AbstractHexaCard {
 
     public final static String ID = makeID("HeatCrush");
 
-    private static final int DAMAGE = 20;
-    private static final int UPG_DAMAGE = 8;
+    private static final int DAMAGE = 12;
+    private static final int UPG_DAMAGE = 4;
 
     public HeatCrush() {
-        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         HexaMod.loadJokeCardImage(this, "HeatCrush.png");
     }

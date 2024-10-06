@@ -11,7 +11,7 @@ import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class GhostOfSpirePast extends AbstractHexaCard {
 
-    public final static String ID = makeID("GhostOfSpirePast");
+    public final static String ID = makeID("DevilsDance");
 
     //Devil's Dance devils dance devil dance
 

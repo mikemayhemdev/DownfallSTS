@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.RetractAction;
 
 public class OpposingAction extends AbstractHexaCard{
@@ -13,6 +14,7 @@ public class OpposingAction extends AbstractHexaCard{
 
     public OpposingAction() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        HexaMod.loadJokeCardImage(this, "OpposingAction.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

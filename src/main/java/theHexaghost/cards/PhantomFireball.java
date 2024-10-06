@@ -5,7 +5,9 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
@@ -29,27 +31,49 @@ public class PhantomFireball extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        att(new AbstractGameAction() {
-            @Override
-            public void update() {
-                if (m.hasPower(BurnPower.POWER_ID)) {
-                    BurnPower p = (BurnPower) m.getPower(BurnPower.POWER_ID);
-                    p.explode(true);
-                }
-                this.isDone = true;
+        if (m.hasPower(BurnPower.POWER_ID)){
+            if (m.getPower(BurnPower.POWER_ID).amount > 1){
+
+                att(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        if (m.hasPower(BurnPower.POWER_ID)) {
+                            BurnPower p = (BurnPower) m.getPower(BurnPower.POWER_ID);
+                            p.explode(true, upgraded);
+                        }
+                        this.isDone = true;
+                    }
+                });
             }
-        });
+        }
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        burnGlowCheck();
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+
+        if (AbstractDungeon.getCurrRoom().monsters != null)
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (!m.isDeadOrEscaped() && m.hasPower(BurnPower.POWER_ID)) {
+                    if (upgraded){
+                        if (m.getPower(BurnPower.POWER_ID).amount > 1) {
+                            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                            break;
+                        } else {
+                            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                            break;
+                        }
+                    }
+                }
+            }
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

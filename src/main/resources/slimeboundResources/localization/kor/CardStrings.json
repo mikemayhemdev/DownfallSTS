@@ -119,7 +119,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "전술교본 참조",
-    "DESCRIPTION": "무작위 slimeboundmod:태클 카드를 4장 얻습니다. 이번 전투 동안 그 카드의 비용이 1 감소합니다. NL 소멸."
+    "DESCRIPTION": "무작위 slimeboundmod:태클 카드를 3장 얻습니다. 이번 전투 동안 그 카드의 비용이 1 감소합니다. NL 소멸."
   },
   "Slimebound:Recycling": {
     "NAME": "재수거",

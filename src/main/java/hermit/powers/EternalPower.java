@@ -20,7 +20,7 @@ public class EternalPower extends AbstractPower implements CloneablePowerInterfa
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static int total=4;
+    public static int total = 4;
 
     private static final Texture tex84 = TextureLoader.getTexture("hermitResources/images/powers/power_eternal_p.png");
     private static final Texture tex32 = TextureLoader.getTexture("hermitResources/images/powers/power_eternal.png");
@@ -48,6 +48,7 @@ public class EternalPower extends AbstractPower implements CloneablePowerInterfa
     @Override
     public void onCardDraw(AbstractCard card) {
         if(!PreDrawPatch.DRAWN_DURING_TURN && total>0){
+            if(card.cost == -2) return;
             total--;
 
             if (card.costForTurn > 0) {

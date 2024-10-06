@@ -9,8 +9,6 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import champ.ChampChar;
-import champ.potions.CounterstrikePotion;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -40,7 +38,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import downfall.downfallMod;
-import downfall.patches.BanSharedContentPatch;
 import downfall.util.TextureLoader;
 import guardian.cards.*;
 import guardian.characters.GuardianCharacter;
@@ -1012,12 +1009,10 @@ public static void saveData() {
 
 
     public void addPotions() {
-
-        BaseMod.addPotion(BlockOnCardUsePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, BlockOnCardUsePotion.POTION_ID);
         BaseMod.addPotion(AcceleratePotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, AcceleratePotion.POTION_ID, GuardianEnum.GUARDIAN);
         BaseMod.addPotion(DefensiveModePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, DefensiveModePotion.POTION_ID, GuardianEnum.GUARDIAN);
         BaseMod.addPotion(StasisDiscoveryPotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, StasisDiscoveryPotion.POTION_ID, GuardianEnum.GUARDIAN);
-        BanSharedContentPatch.registerRunLockedPotion(GuardianEnum.GUARDIAN, BlockOnCardUsePotion.POTION_ID);
+//        BanSharedContentPatch.registerRunLockedPotion(GuardianEnum.GUARDIAN, BlockOnCardUsePotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(BlockOnCardUsePotion.POTION_ID);

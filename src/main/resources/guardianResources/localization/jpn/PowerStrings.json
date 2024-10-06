@@ -1,210 +1,213 @@
 {
-  "Guardian:NextTurnGainStrengthPower": {
-    "NAME": "Charging Up",
+  "Guardian:NextTurnGainTemporaryStrengthPower": {
+    "NAME": "チャージ中",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yStrength on your next turn."
+      "次のターン一時的な #y筋力 #b",
+      " を得る。"
     ]
   },
   "Guardian:StunnedPower": {
-    "NAME": "Stunned",
+    "NAME": "スタン",
     "DESCRIPTIONS": [
-      "Skip your next turn.",
-      "Skip your next #b",
-      " turns."
+      "次のターン何も出来ない。",
+      "あと #b",
+      " ターン何も出来ない。"
     ]
   },
   "Guardian:FloatingOrbsPower": {
-    "NAME": "Floating Orbs",
+    "NAME": "漂うオーブ",
     "DESCRIPTIONS": [
-      "At the start of your turn, add an #yOrb #ySlam to your hand.",
-      "At the start of your turn, add #b",
-      " #yOrb #ySlams to your hand."
+      " #y0コストカード を使用するたびランダムな敵に #b",
+      " ダメージを与える。"
     ]
   },
   "Guardian:OrbwalkPower": {
-    "NAME": "Orbwalk",
+    "NAME": "オーブウォーク",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yStrength at the start of each turn."
+      "各ターン開始時、 #y筋力 #b",
+      " を得る。"
     ]
   },
   "Guardian:ClonePower": {
-    "NAME": "Reroute",
+    "NAME": "経路変更",
     "DESCRIPTIONS": [
-      "Place the next non-Exhausting #yAttack or #ySkill you play this turn into #yStasis.",
-      "Place the next #b",
-      " non-Exhausting #yAttacks or #ySkills you play this turn into #yStasis."
+      "このターン、次にプレイしたカードを #y停滞 させる。",
+      "このターン、次にプレイする #b",
+      " 枚のカードを #y停滞 させる。"
     ]
   },
   "Guardian:GemFinderPower": {
-    "NAME": "Gem Finder",
+    "NAME": "ジェム探査",
     "DESCRIPTIONS": [
-      "At the end of combat, choose a Common #yGem to add to your deck.",
-      "At the end of combat, choose #b",
-      " Common #yGems to add to your deck."
+      "戦闘終了時、 コモン #yジェム を1枚選択しデッキに加える。",
+      "戦闘終了時、 #b",
+      " 枚の コモン #yジェム を選択しデッキに加える。"
     ]
   },
   "Guardian:FuturePlansPower": {
-    "NAME": "Future Plans",
+    "NAME": "未来のプラン",
     "DESCRIPTIONS": [
-      "At the end of your turn, you may place #b",
-      " card into #yStasis.",
-      " cards into #yStasis."
+      "ターン終了時、あなたは #b",
+      " 枚のカードを #y停滞 スロットに配置してもよい。",
+      " 枚のカードを #y停滞 スロットに配置してもよい。"
     ]
   },
   "Guardian:DefenseModePower": {
-    "NAME": "Defensive Mode",
+    "NAME": "ディフェンシブモード",
     "DESCRIPTIONS": [
-      "#yDefensive #yMode will remain active for #b",
-      " turns. #yDefensive #yMode grants #b",
-      " #yThorns, reduces damage dealt by #b25%, and grants #b2 #yBlock when you play a card."
+      "#yディフェンシブモード はあと #b",
+      " ターン継続する。 #yディフェンシブモード は #yトゲ #b",
+      " を付与するが、与えるダメージが #b25% 低下する。更に カードをプレイするたび #b2 #yブロック を得る。"
     ]
   },
   "Guardian:ConstructModePower": {
-    "NAME": "Construction Mode",
+    "NAME": "コンストラクションモード",
     "DESCRIPTIONS": [
-      "You will not be able to play #yAttacks next turn.",
-      "You will not be able to play #yAttacks next  #b",
-      " turns."
+      "ターン開始時、あなたが バッファー を持っていれば 筋力 #b",
+      " を得る。"
     ]
   },
   "Guardian:MultiBoostPower": {
-    "NAME": "MultiBoost",
+    "NAME": "マルチブースト",
     "DESCRIPTIONS": [
-      "#yAttacks that deal damage multiple times do so an additional time.",
-      "#yAttacks that deal damage multiple times do so #b",
-      " additional times."
+      "ダメージを複数回与える #yアタック は追加で機会を得る。",
+      "ダメージを複数回与える #yアタック は追加で #b",
+      " 回の機会を得る。"
     ]
   },
   "Guardian:TargetedPower": {
-    "NAME": "Targeted",
+    "NAME": "ターゲット中",
     "DESCRIPTIONS": [
-      "Each time this enemy takes damage, gain #b",
-      " #yStrength for this turn."
+      "このターン中、対象がダメージを受ける度に #y筋力 #b",
+      " を得る。"
     ]
   },
   "Guardian:LoseThornsPower": {
-    "NAME": "Thorns Down",
+    "NAME": "折れたトゲ",
     "DESCRIPTIONS": [
-      "Lose #b",
-      " #yThorns at the start of your next turn."
+      "次のターン開始時、 #yトゲ #b",
+      " を失う。"
     ]
   },
   "Guardian:BeamBuffPower": {
-    "NAME": "Primed",
+    "NAME": "プライム化",
     "DESCRIPTIONS": [
-      "Beam cards deal #b",
-      " more damage."
+      "ビーム カードで与えるダメージが #b",
+      " 増加する。"
     ]
   },
   "Guardian:DefensiveModeBuffsPower": {
-    "NAME": "Defensive Mode+",
+    "NAME": "ディフェンシブモード+",
     "DESCRIPTIONS": [
-      "In addition to its normal effects, #yDefensive #yMode will apply: NL #b",
-      " #yThorns.",
-      " #yDexterity.",
-      " #yBlock at the end of each turn.",
-      "#yExhaust the first #yStatus or #yCurse drawn each turn.",
-      "#yExhaust the first #b",
-      " #yStatus or #yCurse cards drawn each turn.",
-      "Gain #b",
-      " #yStrength for each turn #yDefensive #yMode was active when it ends."
+      "通常の #yディフェンシブモード の効果に加え、追加で NL #b",
+      " #yトゲ",
+      " #y敏捷性",
+      " #yブロック をターン終了時に得る。",
+      "各ターン最初に引いた #y状態異常 または #y呪い は廃棄される。",
+      "各ターン最初に引いた #b",
+      " 枚の #y状態異常 または #y呪い は廃棄される。",
+      "#yディフェンシブモード が終了した時、継続したターン数分の #y筋力 #b",
+      " を得る。"
     ]
   },
   "Guardian:AutomayhemPower": {
-    "NAME": "Time Sifter",
+    "NAME": "タイムシフター",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yAccelerate.",
-      "At the end of your turn, #yAccelerate ",
-      " times."
+      "ターン開始時、 #yアクセラレート 。",
+      "ターン開始時、 #yアクセラレート を ",
+      " 回行う。"
     ]
   },
   "Guardian:ConstructPower": {
-    "NAME": "Ancient Construct",
+    "NAME": "古代の構築物",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yArtifact and lose #b",
-      " [E] at the start of your turn if you have no #yArtifact."
+      "ターン開始時、 #yアーティファクト を持たない場合 #b",
+      " #yアーティファクト を得る。",
+      " "
     ]
   },
   "Guardian:ModeShiftPower": {
-    "NAME": "Mode Shift",
+    "NAME": "モードシフト",
     "DESCRIPTIONS": [
-      "When you lose #b",
-      " HP, gain #b10 #yBlock, then enter #yDefensive #yMode. NL The amount required to activate increases each time #yMode #yShift is activated.",
-      "#yMode #yShift already activated this turn."
+      "HPが #b",
+      " 減少した場合、 #b10 #yブロックを得て 次のターンまで #yディフェンシブモード に入る。 NL 次にこの効果を発動するために必要なHP量が #b10 増加する。最大 #b50 まで。"
     ]
   },
   "Guardian:ExhaustStatusesPower": {
-    "NAME": "Repulse",
+    "NAME": "撃退",
     "DESCRIPTIONS": [
-      "#yExhaust the first #yStatus or #yCurse card drawn each turn.",
-      "#yExhaust the first #b",
-      " #yStatus or #yCurse cards drawn each turn."
+      "各ターン最初に引いた #y状態異常 または #y呪い は廃棄し、カードを1枚引く。",
+      "各ターン最初に引いた #b",
+      " 枚の #y状態異常 または #y呪い は廃棄し、カードを1枚引く。"
     ]
   },
   "Guardian:RevengePower": {
-    "NAME": "Revenge",
+    "NAME": "リベンジ",
     "DESCRIPTIONS": [
-      "When #yDefensive #yMode is removed, gain ",
-      " #yStrength for each turn it was active. NL Currently will grant #b",
-      " #yStrength."
+      "#yディフェンシブモード の間、 #y筋力 #b",
+      " を得る。"
     ]
   },
   "Guardian:StasisEnginePower": {
-    "NAME": "Stasis Engine",
+    "NAME": "停滞エンジン",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " [E] and draw #b",
-      " card",
-      " cards",
-      " whenever you play 3 0-cost cards in a single turn."
+      "毎ターン、3枚目の0コストカードをプレイする度に、 #b",
+      " [E] を得て、カードを #b",
+      " 枚引く。",
+      " 枚引く。",
+      " "
     ]
   },
   "Guardian:EnergizedGuardianPower": {
-    "NAME": "Energized",
+    "NAME": "エナジー生成",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " additional [E] next turn.",
-      " additional [E] next turn.",
+      "次のターン、追加の #b",
+      " [E] を得る。",
+      " [E] を得る。",
       " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
     ]
   },
   "Guardian:BlockOnCardUsePower": {
-    "NAME": "Armorer's Oil",
+    "NAME": "整備油",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yBlock whenever you play a card this turn."
+      "このターン、カードをプレイする度に #b",
+      " #yブロック を得る。"
     ]
   },
   "Guardian:EvasiveProtocolPower": {
-    "NAME": "Evasive Protocol",
+    "NAME": "回避プロトコル",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yDexterity while in #yDefensive #yMode."
+      "#yディフェンシブモード の間 #y敏捷性 #b",
+      " を得る。"
     ]
   },
   "Guardian:SpikerProtocolPower": {
-    "NAME": "Spiker Protocol",
+    "NAME": "反撃プロトコル",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yThorns while in #yDefensive #yMode."
+      "#yディフェンシブモード の間 #yトゲ #b",
+      " を得る。"
     ]
   },
   "Guardian:ArmoredProtocolPower": {
-    "NAME": "Armored Protocol",
+    "NAME": "防御プロトコル",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yBlock when you end your turn while in #yDefensive #yMode."
+      "#yディフェンシブモード の間、ターン終了時に #b",
+      " #yブロック を追加で得る。"
     ]
   },
   "Guardian:DontLeaveDefensiveModePower": {
-    "NAME": "Entrenched",
+    "NAME": "ディフェンシブモード",
     "DESCRIPTIONS": [
-      "At the start of your next turn, don't leave #yDefensive #yMode.",
-      "At the start of your next #b",
-      " turns, don't leave #yDefensive #yMode."
+      "このラウンド終了時 #yディフェンシブモード が解除される。",
+      "#yディフェンシブモード はあと #b",
+      " ラウンド継続する。"
+    ]
+  },
+  "Guardian:BracePerTurnPower": {
+    "NAME": "制動",
+    "DESCRIPTIONS": [
+      "ターン開始時 #y制動 #b",
+      " を行う。"
     ]
   }
 }

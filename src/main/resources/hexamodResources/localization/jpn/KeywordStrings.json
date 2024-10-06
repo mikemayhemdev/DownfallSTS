@@ -1,79 +1,116 @@
 [
   {
-    "PROPER_NAME": "Active",
+    "PROPER_NAME": "活性",
     "NAMES": [
-      "active"
+      "active",
+      "活性"
     ],
-    "DESCRIPTION": "The #yActive Ghostflame can be Ignited by meeting its listed Ignition requirements."
+    "DESCRIPTION": "#y活性 状態のゴーストフレイムは、記載されている条件を満たすことで #y点火 する事が出来る。"
   },
   {
-    "PROPER_NAME": "Advance",
+    "PROPER_NAME": "前進",
     "NAMES": [
       "advance",
       "advanced",
-      "advancing"
+      "advancing",
+      "前進"
     ],
-    "DESCRIPTION": "#yActivate the next Ghostflame. If it's Ignited, #yExtinguish it."
+    "DESCRIPTION": "次の ゴーストフレイム に移動する。 ゴーストフレイム の上に移動すると #y消火 される。"
   },
   {
-    "PROPER_NAME": "Retract",
+    "PROPER_NAME": "後退",
     "NAMES": [
       "retract",
       "retracted",
-      "retracting"
+      "retracting",
+      "後退"
     ],
-    "DESCRIPTION": "#yActivate the previous Ghostflame. If it's Ignited, #yExtinguish it."
+    "DESCRIPTION": "前の ゴーストフレイム に移動する。 ゴーストフレイム の上に移動すると #y消火 される。"
   },
   {
-    "PROPER_NAME": "Intensity",
+    "PROPER_NAME": "火力",
     "NAMES": [
-      "intensity"
+      "intensity",
+      "火力"
     ],
-    "DESCRIPTION": "Intensity increases the amount of damage, Soulburn, and Block applied by Ghostflames when Ignited."
+    "DESCRIPTION": "火力 は #y発火 時に ゴーストフレイム が与えるダメージ量、 #yソウルバーン 、 #yブロック を増加させる。"
   },
   {
-    "PROPER_NAME": "Soulburn",
+    "ID": "soulburn",
+    "PROPER_NAME": "ソウルバーン",
     "NAMES": [
       "soulburn",
-      "soulburned"
+      "soulburned",
+      "ソウルバーン"
     ],
-    "DESCRIPTION": "After #b3 turns, a Soulburned enemy loses HP, removing the Soulburn effect."
+    "DESCRIPTION": "ソウルバーンを受けた敵は #b3 ターン後にHPを失い、ソウルバーンの効果が解除される。"
   },
   {
-    "PROPER_NAME": "Extinguish",
+    "PROPER_NAME": "滅却",
     "NAMES": [
       "extinguish",
-      "extinguished"
+      "extinguished",
+      "滅却"
     ],
-    "DESCRIPTION": "Allows Ghostflame to become Ignited again, resetting its Ignition requirements."
+    "DESCRIPTION": "ゴーストフレイムを再び #y発火 出来るようにし、発火の条件をリセットする。"
   },
   {
-    "PROPER_NAME": "Ignite",
+    "PROPER_NAME": "点火",
     "NAMES": [
       "ignite",
-      "ignited"
+      "ignited",
+      "force-ignite",
+      "発火",
+      "点火",
+      "再点火"
     ],
-    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame."
+    "DESCRIPTION": "ゴーストフレイムに記載されている点火時の効果を発動させる。"
   },
   {
-    "PROPER_NAME": "Force-Ignite",
+    "PROPER_NAME": "封印",
     "NAMES": [
-      "force-ignite"
+      "seal",
+      "封印"
     ],
-    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame, even if it was already Ignited."
+    "DESCRIPTION": "この戦闘で #b6 個すべての封印がプレイされた場合 (重複を除く)、 #p壊れた封印 を入手し、自分のデッキから封印を取り除く。"
   },
   {
-    "PROPER_NAME": "Seal",
+    "ID": "afterlife",
+    "PROPER_NAME": "死後",
     "NAMES": [
-      "seal"
+      "afterlife",
+      "死後"
     ],
-    "DESCRIPTION": "Can't be upgraded. If all #b6 Seals have been played this combat, obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
+    "DESCRIPTION": "紫色の文字で書かれた効果は #y廃棄 された時にも発動する。"
   },
   {
-    "PROPER_NAME": "Afterlife",
+    "PROPER_NAME": "クラッシング",
     "NAMES": [
-      "afterlife"
+      "crushing",
+      "クラッシング"
     ],
-    "DESCRIPTION": "If this card is Exhausted, its effects activate."
+    "DESCRIPTION": "#yゴーストフレイム 。 #y活性 時にスキルを #b2 回プレイされると、 #y発火 する。 #y発火: ランダムな敵1体に #b3 ダメージを2回与える。",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+
+  },
+  {
+    "PROPER_NAME": "ボルスタリング",
+    "NAMES": [
+      "bolstering",
+      "ボルスタリング"
+    ],
+    "DESCRIPTION": "#yゴーストフレイム 。 #y活性 時にパワーがプレイされると、 #y発火 する。 #y発火: #b4 #yブロック と #y筋力 #b1 を得る。",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+
+  },
+  {
+    "PROPER_NAME": "シーリング",
+    "NAMES": [
+      "searing",
+      "シーリング"
+    ],
+    "DESCRIPTION": "#yゴーストフレイム 。 #y活性 時にアタックを #b2 回プレイされると、 #y発火 する。 #y発火: ランダムな敵に #b4 #yソウルバーン を与える。",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+
   }
 ]

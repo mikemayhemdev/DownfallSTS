@@ -43,8 +43,8 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
                         sealNameList.add(c.cardID);
                         seals_to_remove.add( (AbstractSealCard)c ) ;
                     }else{ // when there already is the seal in the list and you played another, replace the upgraded one with the none one
-                        for(AbstractSealCard seal_to_be_replaced: seals_to_remove){ // replace seals to be removed with unupgraded ver
-                            if( seal_to_be_replaced.getClass().equals( c.getClass() ) ){ // if the same card
+                        for(AbstractSealCard seal_to_be_replaced: seals_to_remove){ // replace seals to be removed with un-upgraded version if possible
+                            if( seal_to_be_replaced.getClass().equals( c.getClass() ) ){ // if the same type of seal card
                                 if( (!c.upgraded) && (seal_to_be_replaced.upgraded) ){ // only replace when necessary
                                     // replace it
                                     seals_to_remove.set( seals_to_remove.indexOf(seal_to_be_replaced), (AbstractSealCard)c ) ;
@@ -74,7 +74,7 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
                 ArrayList<AbstractCard> seals_to_remove_for_real = new ArrayList<>();
                 for(AbstractSealCard seal : seals_to_remove){
                     for(AbstractCard c : abstractPlayer.masterDeck.group){
-                        if ( c.getClass().equals(seal.getClass()) && c.upgraded == seal.upgraded ){
+                        if ( c.uuid == seal.uuid ){
                             seals_to_remove_for_real.add(c);
                         }
                     }

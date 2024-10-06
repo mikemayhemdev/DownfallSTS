@@ -1,53 +1,53 @@
 {
   "sneckomod:D8": {
-    "NAME": "Mystical Octahedron",
+    "NAME": "神秘的な八面体",
     "DESCRIPTIONS": [
-      "Approach the mystical octahedron.",
-      "Relic go boom.",
-      "Got relic.",
-      "Decided to leave."
+      "神秘的な八面体に接近した。",
+      "レリックは爆発した。",
+      "レリックを入手した。",
+      "触らぬ神に祟りなし。"
     ],
     "OPTIONS": [
-      "[Shatter] #rLose #r",
-      " #r HP. #gGain #g5 #gUnknown #gCards",
-      "[Take] #gGain #gMystical #gOctahedron. #rCursed #r- #rPain.",
-      "[Leave]",
-      "[Locked] Requires a card that uses a randomly chosen number."
+      "[粉砕する] #r失う： #r",
+      " #r HP #g入手： #g5 #g未識別カード",
+      "[取る] #g入手： #g神秘的な八面体。 #r呪い #r- #r痛み。",
+      "[立ち去る]",
+      "[Locked] 必要：効果に乱数を使用するカード"
     ]
   },
   "sneckomod:BackToBasics": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "Creativity triumphs over planning every time."
+      "創造性は常に計画性に勝る"
     ],
     "OPTIONS": [
-      "[Improvisation] #gReplace all #gStrikes and #gDefends with random #gUnknown cards.",
-      "[Locked] Requires a Strike or Defend."
+      "[即興] #g全てのストライクと防御をランダムな未識別カードに置き換える。",
+      "[Locke] 必要： ストライクまたは防御。"
     ]
   },
   "sneckomod:Serpent": {
-    "NAME": "The Ssssserpent",
+    "NAME": "サ・サ・サ・サ・サーペント",
     "DESCRIPTIONS": [
-      "You walk into a room to find a large hole in the ground. As you approach the hole, an enormous scaled creature, not unlike yourself, appears from within. NL NL ~\"Ho~ ~hooo!~ ~Hello~ ~snake~ ~friend!~ Let me ask you something... NL NL You hear the serpent speak words, but find yourself utterly perplexed, comprehending none of it. NL NL \"Do you agree?\"",
-      "~\"Excellent!\"~ NL NL You still have no idea what the question was, but it appears you've made the Serpent's day. NL The creature offers you a trinket to assist in your goal, then slithers back into the hole.",
-      "The serpent stares at you with a look of extreme disappointment, but ultimately smiles and wishes you well on your journey."
+      "入室すると、地面に大きな穴がある。穴に近づくと、自分と同じような巨大な鱗を持つ生物が現れた。 NL NL ~ホホーーー！!~ ~こんにちはスネークフレンド!~ あなたに質問があるのですが... NL NL あなたは蛇の言葉を聞いたが、全く理解出来ず困惑している。 NL NL 「そう思いますか？」",
+      "~「素晴らしいいい！」~ NL NL ？？？あなたはその質問が何であったかすら分からないが、ともあれその蛇は喜んでいるようだ。 NL その蛇はあなたに装身具を差し出すとそそくさと穴の中へと戻っていった。",
+      "蛇はとてもがっかりした様子であなたを見つめた。が、最後には笑顔になりあなたの旅の無事を祈ってくれたようだ。"
     ],
     "OPTIONS": [
-      "[Agree] #gGain #ga #grandom #gRelic. #rBecome #rCursed #r- #rBewildered.",
-      "[Disagree]",
+      "[同意する] #gランダムな #gレリックを得る。 #r呪い #r- #r困惑。",
+      "[同意しない]",
       "[Leave]"
     ]
   },
   "sneckomod:SuspiciousHouse": {
-    "NAME": "Suspicious House",
+    "NAME": "不審な家",
     "DESCRIPTIONS": [
-      "Travelling through the city, your ears are pierced by a shrill inhuman cry coming from a nearby house. Upon investigation, you find an inhabitant of the City, trying to silence a small serpentine creature, trapped in a cage. NL NL ~\"HEY!~ What are you doing in my house?! @GET@ @OUT!\"@ NL NL The caged critter is startled, and hops back into a corner of its confinement. It clearly is not happy here.",
-      "\"You want it? @Fine!@ It's not worth the trouble.\" NL NL With a frustrated ~sigh,~ the captor unlocks the cage and reaches in. With a surprising swiftness, the serpent bites his finger with all the strength its tiny jaw can muster. NL NL With a quick intervention, you #rpunch the man, knocking him out cold, before he can retaliate against the critter. The creature happily crawls up to your hand when you offer it, and the two of you continue through the Spire together.",
-      "The serpent stares at you with a look of extreme disappointment, but ultimately smiles and wishes you well on your journey."
+      "あなたがシティを進んでいると、近くの民家から人間とは思えない甲高い鳴き声が聞こえてきた。どうやら、街の住民が檻に閉じ込められた小さな蛇のような生物を黙らせようとしているようだ。 NL NL 「 ~おい！~ 俺の家で何してる！ @出て行け！@ 」 NL NL 檻の中の生物は驚き、檻の隅へと身を隠した。明らかにここが不満そうな様子だ。",
+      "「なんだこれが欲しいのか？ @好きにしな！@ こんなもん俺には必要ねえ」 NL NL  ~溜息~ イライラした様子で男が檻のカギを開けて中に手を入れる。その瞬間、中の大蛇が驚くべき速度で近付くと渾身の力で男の指をかみ砕いた！ NL NL まずい！男が蛇に反撃をする前に、とっさにあなたは男を #r殴って 気絶させた。その生物はあなたが手を差し出すと嬉しそうに這い上がってくる。あなたは彼女を #y'クレメンタイン' と名付け、一緒に塔を進むことにした。",
+      "蛇はとてもがっかりした様子であなたを見つめた。が、最後には笑顔になりあなたの旅の無事を祈ってくれたようだ。"
     ],
     "OPTIONS": [
-      "[Rescue] #gGain #gYoung #gSnecko. #rBecome #rCursed #r- #rBewildered.",
-      "[Leave]"
+      "[助ける] #g入手： #gヤングスネッコ。 #r呪い #r- #r困惑。",
+      "[立ち去る]"
     ]
   }
 }

@@ -5,14 +5,15 @@
       "이번 턴 종료 시 #y팽창하지 않습니다.",
       "다음 #b",
       " 턴까지 #y팽창하지 않습니다."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:ApocalypticArmorPower": {
     "NAME": "최후의 심판",
     "DESCRIPTIONS": [
-      "모든 유령불꽃이 #b",
-      " 개 이상 #y점화되어 있다면 턴 종료 시 추가 턴을 얻습니다.",
-      "유령불꽃이 #b"
+      "다음으로 유령불꽃이 #b",
+      " 개 #y점화된다면 턴 종료 시 추가 턴을 얻습니다.",
+      "유령불꽃이 최소 #b"
     ]
   },
   "hexamod:ApplyBurnAtTurnStartOncePower": {
@@ -20,14 +21,16 @@
     "DESCRIPTIONS": [
       "다음 내 턴 시작 시 적 전체에게 #y영혼화상을 #b",
       " 부여합니다."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:BurnPerTurnPower": {
     "NAME": "녹아내리는 금속",
     "DESCRIPTIONS": [
       "이 적의 #y영혼화상이 체력을 잃게 하고 제거된다면 #y영혼화상을 #b",
       " 부여합니다."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:BurnPower": {
     "NAME": "영혼화상",
@@ -42,22 +45,23 @@
     "NAME": "도깨비불 무기",
     "DESCRIPTIONS": [
       "막히지 않은 피해를 줄 때마다 #y영혼화상을 #b",
-        " 부여합니다."
-    ]
+      " 부여합니다."
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:CommonPostCombatPower": {
     "NAME": "봉인의 대가: 카드",
     "DESCRIPTIONS": [
-      "전투 종료 시 카드 보상을 추가로 #b",
+      "전투 종료 시 일반 카드를 추가로 #b",
       " 개 얻습니다.",
       " 개 얻습니다."
     ]
   },
-  "hexamod:CrispyPower": {
+  "hexamod:CrispyPower_new": {
     "NAME": "바싹 굽기",
     "DESCRIPTIONS": [
-      "#y영혼화상의 부여량이 #b",
-      " 증가합니다."
+      "#y영혼화상이 체력을 잃게 하고 제거될 때마다 제거된 대상에게 #y영혼화상을 #b",
+      " 부여합니다."
     ]
   },
   "hexamod:EnhancePower": {
@@ -65,7 +69,8 @@
     "DESCRIPTIONS": [
       "유령불꽃의 #y점화 시 피해량, #y영혼화상, #y방어도 증가: #b",
       " .",
-      "유령불꽃의 #y점화 시 피해량, #y영혼화상, #y방어도 감소: #b"
+      "유령불꽃의 #y점화 시 피해량, #y영혼화상, #y방어도 감소: #b",
+      "타오르는 유령불에 두 배의 효과를 가집니다."
     ]
   },
   "hexamod:EtherealRefundPower": {
@@ -73,13 +78,15 @@
     "DESCRIPTIONS": [
       "#y휘발성 카드를 사용할 때마다 ",
       " 를 얻습니다."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:FuturePower": {
-    "NAME": "스피드 런",
+    "NAME": "그림자 속으로",
     "DESCRIPTIONS": [
-      "팽창할 때마다 힘을 #b",
-      " 얻습니다. 턴 종료 시 얻은 힘을 잃습니다."
+      "#y수축할 때마다 카드를 #b",
+      " 장 선택해 사용하고 #y소멸시킵니다.",
+      " 장 선택해 사용하고 #y소멸시킵니다."
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -93,7 +100,7 @@
   "hexamod:StopFromAdvancingPower": {
     "NAME": "지금 당장",
     "DESCRIPTIONS": [
-      "내 턴 종료 시 #y팽창하지 않습니다."
+      "내 턴 종료 시 현재 유령불꽃을 #y소화시킵니다."
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
@@ -101,15 +108,15 @@
     "DESCRIPTIONS": [
       "이번 턴 동안 공격을 받을 때마다 공격한 대상에게 #y영혼화상을 #b",
       " 부여합니다."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
-  "hexamod:GiftsFromTheDeadPower": {
+  "hexamod:GiftsFromBeyondPower": {
     "NAME": "카드 선물",
     "DESCRIPTIONS": [
-      "내 턴 시작 시  ",
-      " 무작위 #y사후세계 카드를 ",
-      " 장 #y복구합니다.",
-      " 장 #y복구합니다."
+      "내 턴 시작 시 무작위 #y사후세계 카드를 #b",
+      " 장 얻습니다.",
+      " 장 얻습니다."
     ]
   },
   "hexamod:GoldPostCombatPower": {
@@ -133,24 +140,22 @@
       "#b",
       " 턴 후에 #y극열을 #b",
       " 잃습니다."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:ParanormalFormPower": {
     "NAME": "폴터가이스트",
     "DESCRIPTIONS": [
-      "#y사후세계 카드를 사용할 때마다 무작위 적에게 피해를 #b",
-      " 줍니다."
+      "#y휘발성 카드를 사용할 때마다 무작위 적이 체력을 #b",
+      " 잃습니다."
     ]
   },
   "hexamod:PastPower": {
     "NAME": "악마의 춤",
     "DESCRIPTIONS": [
-      "매 턴 #b",
-      " 번까지 ",
-      " 번까지 ",
-      "#y수축하면 [E] 를 얻고 카드를 1장 뽑습니다. NL 이번 턴에 #b",
-      " 번 #y수축했습니다.",
-      " 번 #y수축했습니다."
+      "#y수축할 때마다 카드를 #b",
+      " 장 뽑습니다.",
+      " 장 뽑습니다."
     ]
   },
   "hexamod:PotionPostCombatPower": {
@@ -174,12 +179,15 @@
       "전투 종료 시 #y봉인 카드 보상을 추가로 #b",
       " 개 얻습니다.",
       " 개 얻습니다."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:TimeStopPower": {
     "NAME": "종말의 도래",
     "DESCRIPTIONS": [
-      "턴 종료 시 즉시 내 턴을 시작합니다. NL [E] 와 #y방어도가 유지됩니다."
+      "내 턴 종료 시 즉시 내 턴을 시작합니다.",
+      "내 턴 종료 시 다음 ",
+      " 턴 동안 즉시 내 턴을 시작합니다."
     ]
   },
   "hexamod:VolcanoVisagePower": {
@@ -199,6 +207,43 @@
     "NAME": "에너지 추가",
     "DESCRIPTIONS": [
       "내 턴 시작 시 획득 "
+    ]
+  },
+  "hexamod:SoulburnOnExhaustPower": {
+    "NAME": "영혼화상 촉발",
+    "DESCRIPTIONS": [
+      "이번 턴에 카드를 #y소멸시킬 때마다 이 적에게 #y영혼화상을 #b",
+      " 부여합니다."
+    ]
+  },
+  "hexamod:LoseIntensityPower": {
+    "NAME": "극열 감소",
+    "DESCRIPTIONS": [
+      "이번 턴 종료 시 #y극열을 #b",
+      " 잃습니다."
+    ]
+  },
+  "hexamod:MaxHPPostCombatPower": {
+    "NAME": "봉인의 대가: 최대 체력",
+    "DESCRIPTIONS": [
+      "전투 종료 시 최대 체력을 #b",
+      " 얻습니다."
+    ]
+  },
+  "hexamod:InfernoPotionPower": {
+    "NAME": "육각염",
+    "DESCRIPTIONS": [
+      "이번 전투 동안 유령 불꽃이 적 전체에게 영향을 미칩니다.",
+      "이번 전투 동안 유령 불꽃이 적 전체에게 #b",
+      " 번 영향을 미칩니다."
+    ]
+  },
+  "hexamod:PlayCardAndExhaustPower": {
+    "NAME": "그림자 이동",
+    "DESCRIPTIONS": [
+      "다음 카드를 #b1 장 비용 없이 사용 후 #y소멸시킵니다.",
+      "다음 카드를 #b",
+      " 장 비용 없이 사용 후 #y소멸시킵니다."
     ]
   }
 }

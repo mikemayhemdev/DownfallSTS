@@ -13,8 +13,8 @@ import theHexaghost.ghostflames.AbstractGhostflame;
 
 public class SpectralAdrenaline extends AbstractHexaCard {
 
-    public final static String ID = makeID("SpectralAdrenaline");
-    //bright ritual
+    public final static String ID = makeID("BrightRitual");
+
     public SpectralAdrenaline() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;

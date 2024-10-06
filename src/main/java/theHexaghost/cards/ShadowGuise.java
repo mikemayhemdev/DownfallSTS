@@ -22,7 +22,8 @@ public class ShadowGuise extends AbstractHexaCard {
 
     public ShadowGuise(AbstractCard parent) {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseBlock = 2;
+        baseBlock = 6;
+        selfRetain = true;
         exhaust = true;
 //        setParent(parent);
 //        cardsToPreview = new NightmareStrike();
@@ -62,11 +63,6 @@ public class ShadowGuise extends AbstractHexaCard {
 //            }
 //        });
     }
-
-//    @Override
-//    public void afterlife() {
-//        blck();
-//    }
 
     public void upgrade() {
         if (!upgraded) {

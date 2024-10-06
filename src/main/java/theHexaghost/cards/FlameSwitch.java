@@ -16,7 +16,7 @@ import theHexaghost.ghostflames.SearingGhostflame;
 import java.util.ArrayList;
 
 public class FlameSwitch extends AbstractHexaCard implements OctopusCard{
-    public final static String ID = makeID("FlameSwitch");
+    public final static String ID = makeID("BadOmen");
 
     //bad omen
     public FlameSwitch() {
@@ -30,10 +30,10 @@ public class FlameSwitch extends AbstractHexaCard implements OctopusCard{
     public ArrayList<OctoChoiceCard> choiceList() {
 
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        cardList.add(new OctoChoiceCard("octo:OctoSear", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[2]));
-        cardList.add(new OctoChoiceCard("octo:OctoCrush", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[1]));
-        cardList.add(new OctoChoiceCard("octo:OctoEmpower", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[0]));
-        cardList.add(new OctoChoiceCard("octo:OctoNo", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[3]));
+        cardList.add(new OctoChoiceCard("octo:OctoSear", this.name, HexaMod.makeCardPath("BadOmen.png"), this.EXTENDED_DESCRIPTION[2]));
+        cardList.add(new OctoChoiceCard("octo:OctoCrush", this.name, HexaMod.makeCardPath("BadOmen.png"), this.EXTENDED_DESCRIPTION[1]));
+        cardList.add(new OctoChoiceCard("octo:OctoEmpower", this.name, HexaMod.makeCardPath("BadOmen.png"), this.EXTENDED_DESCRIPTION[0]));
+        cardList.add(new OctoChoiceCard("octo:OctoNo", this.name, HexaMod.makeCardPath("BadOmen.png"), this.EXTENDED_DESCRIPTION[3]));
 
         return cardList;
     }

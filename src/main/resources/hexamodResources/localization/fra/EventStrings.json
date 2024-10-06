@@ -25,7 +25,7 @@
     ]
   },
   "hexamod:SealChamber": {
-    "NAME": "Chambre de Sceaux",
+    "NAME": "Chambre du Sceaux",
     "DESCRIPTIONS": [
       "Une structure menaçante se tient devant vous. La plupart des gens n'oseraient jamais s'en approcher, mais vous connaissez son utilisation et savez qu'elle peut être d'une grande utilité. NL Vous entrez dans la chambre, et vous vous préparez à faire un #rsacrifice...",
       "En payant avec une partie de votre âme, vous obtenez le sceau - une étape de plus sur la voie de votre pouvoir ultime.",
@@ -42,7 +42,11 @@
       "[Verrouillé] Requiert une carte Commune.",
       "[Verrouillé] Requiert une Potion.",
       "[Quitter]",
-      "[Verrouillé] Offrande faite."
+      "[Verrouillé] Offrande faite.",
+      ". #gGagnez #gle #gCinquieme #gSceau.",
+      "[Verrouillé] Requiert une carte améliorer.",
+      " PV Max. #gGagnez #gle #gSixième #gSceau.",
+      "[Verrouillé] Requiert 2 PV Max."								 						   
     ]
   },
   "hexamod:HexaFalling": {
@@ -51,6 +55,8 @@
       "Vous, qui n'êtes pas lié par les faibles lois de la gravité, flottez au-dessus de la fosse sans danger.",
       "TODO..."
     ],
+    "Translator Note": "the second sentence above is added after the vanilla one, which offers 3 choices [land](skill), [channel](power) and [strike](attack), you can preview below",
+    "preview": "While in free fall you consider your options: Land safely with your greatest techniques. Channel a Power to survive the fall. Strike at the wall to hang on to it.",																																													  																																												
     "OPTIONS": [
       "[Flotter] #rNe #rperdez #rrien...",
       "[Quitter]"
@@ -73,7 +79,8 @@
       "[Apprendre] #rPerdez #rtoutes #rvos #rDéfenses. #gGagnez #g3 #gApparition.",
       "[Terminé]",
       "[Quitter]",
-      "[Verrouillé] Vous ne pouvez pas encore quitter."
+      "[Verrouillé] Vous ne pouvez pas encore partir.",
+      " #gApparition."					  
     ]
   },
   "hexamod:BackToBasics": {

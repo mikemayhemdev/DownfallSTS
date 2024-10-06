@@ -7,7 +7,7 @@ import theHexaghost.powers.LivingBombPower;
 
 public class SoulSteal extends AbstractHexaCard {
 
-    public final static String ID = makeID("SoulSteal");
+    public final static String ID = makeID("LivingBomb");
 
     //living bomb
 

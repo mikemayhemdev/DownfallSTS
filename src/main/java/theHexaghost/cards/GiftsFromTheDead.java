@@ -7,7 +7,7 @@ import theHexaghost.powers.GiftsFromTheDeadPower;
 
 public class GiftsFromTheDead extends AbstractHexaCard {
 
-    public final static String ID = makeID("GiftsFromTheDead");
+    public final static String ID = makeID("GiftsFromBeyond");
 
     public GiftsFromTheDead() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);

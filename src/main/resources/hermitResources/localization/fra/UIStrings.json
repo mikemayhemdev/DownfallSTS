@@ -6,7 +6,12 @@
   },
   "hermit:LoneWolfAction": {
     "TEXT": [
-      "garder."
+      "Garder."
+    ]
+  },
+  "hermit:SpecialFriend": {
+    "TEXT": [
+      "Clémentine"
     ]
   }
 }

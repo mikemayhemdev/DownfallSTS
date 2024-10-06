@@ -322,7 +322,7 @@
   },
   "Gremlin:Rhythm": {
     "NAME": "节奏",
-    "DESCRIPTION": "gremlin:切换 至下只地精。 NL 检索 抽牌堆一张基础牌，本回合其耗能为0。"
+    "DESCRIPTION": "gremlin:切换 至下只地精。 NL 检索 抽牌堆一张基础牌，本回合其单次耗能为0。"
   },
   "Gremlin:Rush": {
     "NAME": "冲锋",

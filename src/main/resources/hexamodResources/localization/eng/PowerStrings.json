@@ -60,9 +60,8 @@
   "hexamod:CrispyPower_new": {
     "NAME": "Extra Crispy",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust #b3 cards, #yIgnite the current Ghostflame #b",
-      " time.",
-      " times."
+      "When #ySoulburn detonates on an enemy, apply #b",
+      " #ySoulburn to them after detonation."
     ]
   },
   "hexamod:EnhancePower": {
@@ -70,7 +69,8 @@
     "DESCRIPTIONS": [
       "Increase the amount of damage, #ySoulburn [REMOVE_SPACE], and #yBlock applied by Ghostflames when Ignited by #b",
       " [REMOVE_SPACE].",
-      "Decrease the amount of damage, #ySoulburn [REMOVE_SPACE], and #yBlock applied by Ghostflames when Ignited by #b"
+      "Decrease the amount of damage, #ySoulburn [REMOVE_SPACE], and #yBlock applied by Ghostflames when Ignited by #b",
+      "Has double effectiveness for #ySearing #yGhostflames."
     ]
   },
   "hexamod:EtherealRefundPower": {
@@ -84,9 +84,9 @@
   "hexamod:FuturePower": {
     "NAME": "Into Shadow",
     "DESCRIPTIONS": [
-      "Whenever you #yRetract, choose to play and #yExhaust #b",
-      " card in your hand.",
-      " cards in your hand."
+      "Whenever you #yRetract [REMOVE_SPACE], your next #b",
+      " card will be free to play then #yExhausts [REMOVE_SPACE].",
+      " cards will be free to play then #yExhaust [REMOVE_SPACE]."
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -111,7 +111,7 @@
     ],
     "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
-  "hexamod:GiftsFromTheDeadPower": {
+  "hexamod:GiftsFromBeyondPower": {
     "NAME": "Gifted Cards",
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
@@ -236,6 +236,14 @@
       "Your Ghostflame effect affects all enemy this combat.",
       "Your Ghostflame effect affects all enemy #b",
       " times this combat."
+    ]
+  },
+  "hexamod:PlayCardAndExhaustPower": {
+    "NAME": "Shadowy Shift",
+    "DESCRIPTIONS": [
+      "Your next card is free to play then #yExhausts [REMOVE_SPACE].",
+      "Your next #b",
+      " cards are free to play then #yExhaust [REMOVE_SPACE]."
     ]
   }
 }

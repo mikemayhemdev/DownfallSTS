@@ -46,7 +46,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitConcentrationPower(p), damageThreshold));
 
         AbstractMonster tangerine = new LouseTangerine(-400F, 0);
-        AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(tangerine,false));
+        AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(tangerine,true));
         tangerine.usePreBattleAction();
 
         try {

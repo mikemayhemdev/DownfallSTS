@@ -1,121 +1,121 @@
 {
-  "Slimebound:BronzeSlime": {
-    "NAME": "Bronze Slime",
+  "Slimebound:EmptySlimeSlot": {
+    "NAME": "スライムスロット",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn and grants you #b",
-      " #yBlock."
+      " お供のスライムが配置されるスロット。 #y分裂 するとスライムが出現する。"
+    ]
+  },
+  "Slimebound:BronzeSlime": {
+    "NAME": "ブロンズスライム",
+    "DESCRIPTION": [
+      "ターン開始時敵全体に #b",
+      " ダメージで攻撃するが、次のターンは攻撃がスキップされる。",
+      ""
     ]
   },
   "Slimebound:AttackSlime": {
-    "NAME": "Bruiser Slime",
+    "NAME": "ブルーザースライム",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn."
+      "ターン開始時 #b",
+      " ダメージを与える。"
     ]
   },
   "Slimebound:ScrapOozeSlime": {
-    "NAME": "Scrap Ooze",
+    "NAME": "スクラップウーズ",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn. NL Respawns at the end of your turn if #yAbsorbed. NL Does not reduce Max HP."
+      "ターン開始時 #b",
+      " ダメージを与える。 NL 吸収されると復活することがある。"
     ]
   },
   "Slimebound:GreedOozeSlime": {
-    "NAME": "Greed Ooze",
+    "NAME": "グリードウーズ",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn. NL Respawns at the end of your turn if #yAbsorbed. NL Does not reduce Max HP."
+      "ターン開始時 #b",
+      " ダメージを与える。 NL 吸収されると復活することがある。"
     ]
   },
   "Slimebound:TorchHeadSlime": {
-    "NAME": "Torch Head Slime",
+    "NAME": "トーチヘッドスライム",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn. Gains twice the normal benefit from #yPotency."
+      "ターン開始時 #b",
+      " ダメージを与える。ダメージはあなたの #y筋力 の影響を受ける。"
     ]
   },
   "Slimebound:CultistSlime": {
-    "NAME": "Cultist Slime",
+    "NAME": "カルティストスライム",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn, then increases its damage by #b1."
+      "ターン開始時 #b",
+      " ダメージを与える。 攻撃時、ダメージを #b1 上昇させる。"
     ]
   },
   "Slimebound:ShieldSlime": {
-    "NAME": "Leeching Slime",
+    "NAME": "リーチングスライム",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn and grants you #b",
-      " #yBlock."
+      "ターン開始時敵に #b",
+      " ダメージを与え、あなたに #b",
+      " #yブロックを与える。"
     ]
   },
   "Slimebound:PoisonSlime": {
-    "NAME": "Guerilla Slime",
+    "NAME": "ゲリラスライム",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage to ALL enemies at the start of your turn."
+      "ターン開始時敵全体に #b",
+      " ダメージを与える。"
     ]
   },
   "Slimebound:SlimingSlime": {
-    "NAME": "Mire Slime",
+    "NAME": "マイアスライム",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage and applies #b",
-      " #yGoop at the start of your turn."
+      "ターン開始時 #b",
+      " ダメージと #y汚泥 #b",
+      " を与える。"
     ]
   },
   "Slimebound:HexSlime": {
-    "NAME": "Ghostflame Slime",
+    "NAME": "ゴーストフレイムスライム",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage and applies #b",
-      " #yBurn at the start of your turn."
+      "ターン開始時 #b",
+      " ダメージと #yソウルバーン #b",
+      " を与える。"
     ]
   },
   "Slimebound:ChampSlime": {
-    "NAME": "Insulting Slime",
+    "NAME": "インサルティングスライム",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage and applies #b",
-      " #yVulnerable at the start of your turn."
+      "ターン開始時 #b",
+      " ダメージと #y弱体 #b",
+      " を与える。"
     ]
   },
   "Slimebound:SlowingSlime": {
-    "NAME": "Time Slime",
+    "NAME": "タイムスライム",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage and applies #b",
-      " #yWeak at the start of your turn."
+      "ターン開始時 #b",
+      " ダメージと #y脱力 #b",
+      " を与える。"
     ]
   },
   "Slimebound:ProtectorSlime": {
-    "NAME": "Spiky Slime",
+    "NAME": "スパイキースライム",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn and grants you #b",
-      " #yBlock."
+      "ターン開始時敵に #b",
+      " ダメージを与え、あなたに一時的な #yトゲ #b",
+      " を付与する。"
     ]
   },
   "Slimebound:DrawingSlime": {
-    "NAME": "Ancient Slime",
+    "NAME": "エンシェントスライム",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn and causes you to draw #b",
-      " card."
+      "ターン開始時 #b",
+      " ダメージを与え、カードを #b",
+      " 枚ドローする。"
     ]
   },
   "Slimebound:DarklingSlime": {
-    "NAME": "Darkling Slime",
+    "NAME": "ダークリングスライム",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn. When you Command, all Darklings will attack (regardless of position)."
+      "ターン開始時 #b",
+      " ダメージを与える。命令されると、全てのダークリングスライムが攻撃する。(ポジションを問わない)"
     ]
   }
 }
-
-
-
-
-
-

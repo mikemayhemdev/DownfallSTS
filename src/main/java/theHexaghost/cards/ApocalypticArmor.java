@@ -8,7 +8,7 @@ import theHexaghost.powers.ApocalypticArmorPower;
 
 public class ApocalypticArmor extends AbstractHexaCard {
 
-    public final static String ID = makeID("ApocalypticArmor");
+    public final static String ID = makeID("Doomsday");
 
     //doomsday dooms day
 

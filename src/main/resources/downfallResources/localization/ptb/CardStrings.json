@@ -30,5 +30,11 @@
   "downfall:BossMaintenance": {
     "NAME": "Maintenance",
     "DESCRIPTION": "*Golpes causam !M! mais de dano neste combate. NL Ganhe !B! Destreza. NL Isto custa 1 a mais neste combate."
+  },
+  "downfall:HeartsFavorPower": {
+    "NAME": "Heart's Favor",
+    "DESCRIPTIONS": [
+      "Whenever Neow's #yInvincible reaches #b0, gain a #yCorrupted #yForm."
+    ]
   }
 }

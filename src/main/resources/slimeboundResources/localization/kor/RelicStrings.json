@@ -26,7 +26,7 @@
     "NAME": "노막의 돌",
     "FLAVOR": "당신의 점액질 군단에게 선물하면 슬라임들이 춤추듯 움직입니다.",
     "DESCRIPTIONS": [
-      "전투 시작 시 #yslimeboundmod:잠재력을 #b1 얻습니다."
+      "전투 시작 시 #yslimeboundmod:잠재력을 #b2 얻습니다."
     ]
   },
   "Slimebound:DailySplitRelic": {

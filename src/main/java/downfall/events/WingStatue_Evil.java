@@ -58,6 +58,7 @@ public class WingStatue_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
+                        AbstractDungeon.player.damage(new DamageInfo(null, ((AbstractDungeon.ascensionLevel >= 15)?7:5)));
                         this.screen = CurScreen.RESULT;
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new BrokenWingStatue());
                         logMetricObtainRelic(ID, "Collected Statue", new BrokenWingStatue());

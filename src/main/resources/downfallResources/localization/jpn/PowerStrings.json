@@ -1,91 +1,413 @@
 {
   "downfall:FairyPotion": {
-    "NAME": "Fairy Potion",
+    "NAME": "瓶詰の妖精",
     "DESCRIPTIONS": [
-      "Heals to 30% of Max HP instead of dying, removing this effect.",
-      "Ha! Fairy Potion, jerk!"
+      "死亡時、代わりに最大HPの #b30% まで回復しこの効果を失う。",
+      "はっ！瓶詰の妖精だ！バカめ！"
     ]
   },
   "downfall:SoulSteal": {
-    "NAME": "Soul Stealer",
+    "NAME": "ソウルスティーラー",
     "DESCRIPTIONS": [
-      "Has stolen ",
-      " of your Souls."
+      "あなたのソウルを #b",
+      " 盗んだ。"
     ]
   },
   "downfall:NeowInvulnerable": {
-    "NAME": "Goddess of Life",
+    "NAME": "命の神",
     "DESCRIPTIONS": [
-      "Cannot be killed.  Retreats to recover when reduced to 0 HP."
+      "カードをプレイする度にHPを #b",
+      " 回複する。"
     ]
   },
   "downfall:TransformDrawnCardsPower": {
-    "NAME": "Transform Drawn Cards",
+    "NAME": "ドローカード変換",
     "DESCRIPTIONS": [
-      "#yTransform the first #b",
-      " cards drawn this turn. (",
-      " remaining)"
+      "このターン最初の #b",
+      " 枚のドローしたカードを #y変換 する。(残：",
+      " )"
     ]
   },
   "downfall:TotemInvulnerable": {
-    "NAME": "Living Wall",
+    "NAME": "リビングデッドウォール",
     "DESCRIPTIONS": [
-      "Cannot die unless all other Heads are at 1 HP.  Dies if any other Head dies."
+      "他の全てのヘッドのHPが #b1 でない限り死ぬことはない。他のヘッドが死亡した場合、死亡する。"
     ]
   },
   "downfall:ExhaustCardsPower": {
-    "NAME": "Forgetful",
+    "NAME": "物忘れ",
     "DESCRIPTIONS": [
-      "At the end of your turn, choose a card to Exhaust."
+      "あなたのターン終了時、カードを1枚選んで #y廃棄 する。"
+    ]
+  },
+  "downfall:SpotWeakness": {
+    "NAME": "弱点発見",
+    "DESCRIPTIONS": [
+      "この効果を受けた状態で アタック カードをプレイしたターン毎に、この敵は #b"," #y筋力 を得る。 現在 #b", " #y筋力 を得る。"
+    ]
+  },
+  "downfall:FearNoEvil": {
+    "NAME": "悪しきを恐れず",
+    "DESCRIPTIONS": [
+      "このターン、あなたが アタック カードをプレイした場合、この敵は #y悪しきを恐れず をプレイ後、 #y平静 の スタンス に変わる。",
+      "この敵は #y悪しきを恐れず をプレイ後、 #y平静 の スタンス に変わる。"
     ]
   },
   "downfall:PoisonResist": {
-    "NAME": "Poison Resistance",
+    "NAME": "ポイズンレジスト",
     "DESCRIPTIONS": [
-      "Poison does not bypass your Block, triggers at the end of your turn, and loses half its stack."
+      "あなたのターン終了時、 #y毒 が発動する。 NL ターン終了時、残りの [E] をすべて消費し、消費した [E] * 10 の #y毒 を除去する。"
+    ]
+  },
+  "downfall:NeowBuff": {
+    "NAME": "ネオーの活力",
+    "DESCRIPTIONS": [
+      "自分のターン終了時、 #y筋力 #b2 を得る。"
+    ]
+  },
+  "downfall:WatcherAngryPower": {
+    "NAME": "抑えられぬ憤怒",
+    "DESCRIPTIONS": [
+      "ターン終了時、ウォッチャーのHPが #b50% 以下なら #y憤怒 の スタンス に入る。 NL ウォッチャーの #y憤怒 ではダメージが #b100% ではなく #b50% 増加する。"
+    ]
+  },
+  "downfall:NeowUnbridledRage": {
+    "NAME": "抑えられぬ憤怒",
+    "DESCRIPTIONS": [
+      "ラウンド終了時、ネオーのHPが #b50% 以下なら、 #y筋力 #b6 を得る。 NL 戦闘中1回のみ発動する。"
+    ]
+  },
+  "downfall:WatcherCripplePower": {
+    "NAME": "神聖なる報復",
+    "DESCRIPTIONS": [
+      "ウォッチャーは1ターンに3回まで、 #b",
+      " HPを失う度、このターンの間 #y筋力 を #b1 失う。 NL あなたは #yプレッシャー のダメージを #bブロック 出来る。",
+      "ウォッチャーはこのターン既に #y筋力 を #b3 失っている。"
+    ]
+  },
+  "downfall:WatcherSkillPower": {
+    "NAME": "不調和の利用",
+    "DESCRIPTIONS": [
+      "あなたが スキル をプレイする度に ウォッチャーは 一時的な #y筋力 #b",
+      " を得る。",
+      "あなたが スキル をプレイする度に ウォッチャーは 一時的な #y筋力 を得る。"
+    ]
+  },
+  "downfall:WrathNextTurnPower": {
+    "NAME": "次のターン憤怒する",
+    "DESCRIPTIONS": [
+      "彼女のターン開始時、 #y憤怒 の スタンス に入る。"
+    ]
+  },
+  "downfall:NeowBlasphemersDemise": {
+    "NAME": "冒涜者の終焉",
+    "DESCRIPTIONS": [
+      "ネオーはあとHPが #b",
+      " 以上減らない限り、次にバフを使用した時追加の #y筋力 #b10 を得る。",
+      "ネオーはもはや虫の息だ。次のバフのターンに追加の #y筋力 を得ることはできない。"
+    ]
+  },
+  "downfall:WatcherDivinityPower": {
+    "NAME": "儚き信仰",
+    "DESCRIPTIONS": [
+      "ウォッチャーはあなたがカードをプレイする度に #yマントラ #b1 を得る。 NL ウォッチャーはターン開始時に #yマントラ #b5 を失う。 NL ウォッチャーはターン終了時に #y神聖 のスタンスを終了しない。"
+    ]
+  },
+  "downfall:NeowFleetingFaith": {
+    "NAME": "儚き信仰",
+    "DESCRIPTIONS": [
+      "ネオーはあなたがカードをプレイする度に #yマントラ #b1 を得る。 NL ネオーはターン開始時に #yマントラ #b5 を失う。"
+    ]
+  },
+  "downfall:SilentShivTimeEaterPower": {
+    "NAME": "ナイフの袋",
+    "DESCRIPTIONS": [
+      "サイレントは毎ターン あなたが初めて コスト #b2 以上のカードをプレイした時、 2 枚の #yナイフ を手札に加える。"
+    ]
+  },
+  "downfall:NeowBagOfKnives": {
+    "NAME": "ナイフの袋",
+    "DESCRIPTIONS": [
+      "毎ターン あなたが初めて コスト #b2 以上のカードをプレイした時、 #b4 ダメージを2回あなたに与える。"
+    ]
+  },
+  "downfall:SilentMirrorImagePower": {
+    "NAME": "残像",
+    "DESCRIPTIONS": [
+      "各ターン開始時、サイレントの鏡像が彼女の本当の居所を隠す。サイレントや鏡像に攻撃すると、そのターンは戦闘不能になる。"
+    ]
+  },
+  "downfall:NeowSeeingDouble": {
+    "NAME": "残像",
+    "DESCRIPTIONS": [
+      "毎ターン、最初にネオーに行う #yアタック はダメージが #b0 になる。"
+    ]
+  },
+  "downfall:SilentPoisonPower": {
+    "NAME": "警告: 致死性の毒",
+    "DESCRIPTIONS": [
+      "#y毒 はターン終了時にダメージを受けるが、ブロック出来る。 NL 戦闘開始時に #yアンチドーテ を1枚受け取る。"
+    ]
+  },
+  "downfall:NeowHighlyToxic": {
+    "NAME": "警告: 致死性の毒",
+    "DESCRIPTIONS": [
+      "ネオーは1ターンにつき #y毒 #b5 をあなたに与える。 #y毒 はターン終了時にダメージを受けるが、ブロック出来る。 NL 戦闘開始時に #yアンチドーテ を 2 枚デッキに加えシャッフルする。"
+    ]
+  },
+  "downfall:DefectVoidPower": {
+    "NAME": "エナジー泥棒",
+    "DESCRIPTIONS": [
+      "ディフェクトが #y空虚 を生成するたび、それはあなたの山札の上に置かれる。"
+    ]
+  },
+  "downfall:NeowEnergyThief": {
+    "NAME": "エナジー泥棒",
+    "DESCRIPTIONS": [
+      "ネオーが #r呪い を生成してあなたの山札に加える時、追加で #y空虚 も加える。"
+    ]
+  },
+  "downfall:DefectAncientConstructPower": {
+    "NAME": "古代の構築物",
+    "DESCRIPTIONS": [
+      "戦闘を 2 #yブロンズオーブ ミニオンで開始する。 NL ターン終了時に #yアーティファクト を持っていなかった場合、 #yアーティファクト #b1 を得る。"
+    ]
+  },
+  "downfall:NeowAncientConstruct": {
+    "NAME": "古代の構築物",
+    "DESCRIPTIONS": [
+      "ネオーはターン終了時に #yアーティファクト を持っていなかった場合、 #yアーティファクト #b2 を得る。"
+    ]
+  },
+  "downfall:DefectCuriosity": {
+    "NAME": "認知非偏向",
+    "DESCRIPTIONS": [
+      "あなたが #yパワー をプレイした時、ディフェクトは #y集中力 #b",
+      " を得る。"
+    ]
+  },
+  "downfall:DefectCuriosityLighning": {
+    "NAME": "認知非偏向",
+    "DESCRIPTIONS": [
+      "あなたが #yパワー をプレイした時 ディフェクトは #b",
+      " #yライトニングオーブ を召喚する。"
+    ]
+  },
+  "downfall:NeowUnbiasedCognition": {
+    "NAME": "認知非偏向",
+    "DESCRIPTIONS": [
+      "あなたが #yパワー をプレイした時 ネオーは #y筋力 #b2 を得る。"
+    ]
+  },
+  "downfall:IroncladStatusPower": {
+    "NAME": "シンクロナイズ",
+    "DESCRIPTIONS": [
+      "アイアンクラッドが #y状態異常 を生成する度に、あなたの捨て札にも複製を加える。"
+    ]
+  },
+  "downfall:NeowSyncronize": {
+    "NAME": "シンクロナイズ",
+    "DESCRIPTIONS": [
+      "ネオーは毎ターン ランダムな #y状態異常 を生成し、あなたの捨て札に加える。"
+    ]
+  },
+  "downfall:IroncladMushroomPower": {
+    "NAME": "エサの奪い合い",
+    "DESCRIPTIONS": [
+      "アイアンクラッドの #y死神 は #y廃棄 されず、また全てのマッシュルームを対象とする。 NL アイアンクラッドがマッシュルームを倒すと、彼は #y筋力 #b1 を得る。"
+    ]
+  },
+  "downfall:NeowFeedingFrenzy": {
+    "NAME": "エサの奪い合い",
+    "DESCRIPTIONS": [
+      "ネオーは防御されなかったダメージを与える度にHPを回復する。"
+    ]
+  },
+  "downfall:IroncladFortificationPower": {
+    "NAME": "バスティオン",
+    "DESCRIPTIONS": [
+      "アイアンクラッドは #yバリケード を持ち、 #y要塞 を連れて戦闘を開始する。それは毎ターン #b",
+      " #yブロック をアイアンクラッドに付与する。 NL アイアンクラッドは #y要塞 を破壊された時 #yバリケード を失うが、各ターン開始時に #y筋力 #b5 を得る。"
+    ]
+  },
+  "downfall:NeowBastion": {
+    "NAME": "バスティオン",
+    "DESCRIPTIONS": [
+      "ネオーは #yバリケード を持ち、毎ターン #b10 #yブロックを得る。"
+    ]
+  },
+  "downfall:MerchantStrengthPower": {
+    "NAME": "ソウルスティーラー",
+    "DESCRIPTIONS": [
+      "商人は ソウルスティール で得た #y筋力 を維持しており、更に同量の #y敏捷性 も得る。"
+    ]
+  },
+  "downfall:NeowMantra": {
+    "NAME": "マントラ",
+    "DESCRIPTIONS": [
+      "ネオーが #yマントラ を #b10 持っている時、 神聖 の スタンス に入り次のターン3倍のダメージを与える。"
+    ]
+  },
+  "downfall:NeowSeeingDoubleProduct": {
+    "NAME": "???",
+    "DESCRIPTIONS": [
+      "あなたの次の ネオー に対する #yアタック は このターン、 #b0 ダメージとなる。"
+    ]
+  },
+  "downfall:CrowbotRitualPower": {
+    "NAME": "再構成: 儀式",
+    "DESCRIPTIONS": [
+      " #yクローボット のHPが #b50% 以下になると、 HP が #b3 減少し、 #y筋力 #b",
+      " を得る。"
+    ]
+  },
+  "downfall:DamageMultiplier": {
+    "NAME": "ダメージ倍率",
+    "DESCRIPTIONS": [
+      "#yアタック は #b",
+      " 倍のダメージを与える。"
+    ]
+  },
+  "downfall:CompressionMold": {
+    "NAME": "圧縮形成金型",
+    "DESCRIPTIONS": [
+      "今後発射される #弾丸 はアップグレードされている。"
     ]
   },
   "downfall:OnDeathEveryoneStr": {
-    "NAME": "Dying Rage",
+    "NAME": "最後のあがき: インフレイム+",
     "DESCRIPTIONS": [
-      "When this character dies, ALL characters (including you) gain #b",
-      " #yStrength."
+      "このユニットが死ぬとき、あなたを含めすべてのユニットが #y筋力 #b",
+      " を得る。"
     ]
   },
   "downfall:OnDeathEveryoneThorns": {
-    "NAME": "Thorny Personality",
+    "NAME": "最後のあがき: 鉄びし+",
     "DESCRIPTIONS": [
-      "When this character dies, ALL characters (including you) gain #b",
-      " #yThorns."
+      "このユニットが死ぬとき、あなたを含めすべてのユニットが #yトゲ #b",
+      " を得る。"
     ]
   },
   "downfall:OnDeathEveryoneBuffer": {
-    "NAME": "pause()",
+    "NAME": "最後のあがき: バッファー+",
     "DESCRIPTIONS": [
-      "When this character dies, ALL characters (including you) gain #b",
-      " #yBuffer."
+      "このユニットが死ぬとき、あなたを含めすべてのユニットが #yバッファー #b",
+      " を得る。 (バッファー: 次にHPが減るのを防ぐ。)"
     ]
   },
   "downfall:OnDeathEveryoneVigor": {
-    "NAME": "Vigorous Strength",
+    "NAME": "最後のあがき: 華炎輪+",
     "DESCRIPTIONS": [
-      "When this character dies, ALL characters (including you) gain #b",
-      " #yVigor."
+      "このユニットが死ぬとき、あなたを含めすべてのユニットが #y気力 #b",
+      " を得る。 (気力: 次の1回のアタックのダメージを増やす)"
     ]
   },
   "downfall:OnDeathEveryoneRuggedVuln": {
-    "NAME": "Determination",
+    "NAME": "最後のあがき: ゲシュタルト",
     "DESCRIPTIONS": [
-      "When this character dies, ALL characters (including you) gain #b",
-      " #yRugged and #b",
-      " #yVulnerable."
+      "このユニットが死ぬとき、あなたを含めすべてのユニットが #y堅牢 #b",
+      " と #y弱体 #b",
+      " を得る。 (堅牢: ブロック出来なかったダメージを 2 に軽減する) "
     ]
   },
   "downfall:MonsterVigor": {
-    "NAME": "Vigor",
+    "NAME": "気力",
     "DESCRIPTIONS": [
-      "This character's next attack deals #b",
-      " additional damage."
+      "このユニットの次の攻撃は #b",
+      " ダメージを追加で与える。"
+    ]
+  },
+  "downfall:HermitConcentrateAdder": {
+    "NAME": "死に際の集中力",
+    "DESCRIPTIONS": [
+      "ハーミットのカードは #y集中 状態の間 ボーナスで #yデッドオン の効果を付加する。 HPに #b10 ダメージを与えると、ターン中 #y集中 が解除される。"
+    ]
+  },
+  "downfall:HermitConcentrationPower": {
+    "NAME": "集中力",
+    "DESCRIPTIONS": [
+      "ハーミットのカードは #y集中 状態の間 ボーナスで #yデッドオン の効果を付加する。このターン あと #b",
+      " ダメージを受けると #y集中 が解除される。",
+      "ハーミットの #y集中力 が乱された。このターンの間 #yデッドオン の効果が発動しない。"
+    ]
+  },
+   "downfall:TangerinePower": {
+    "NAME": "補佐役",
+    "DESCRIPTIONS": [
+      "タンジェリンが死亡すると、ハーミットは #y集中 が途切れ、 #y筋力 #b",
+      " を失う。"
+    ]
+  },
+  "downfall:HermitWheelOfFortune": {
+    "NAME": "ホイール・オブ・フォーチュン",
+    "DESCRIPTIONS": [
+      "ハーミットのカードはコストが変動しない。あなたが #yアタック をプレイするたびハーミットは左端のカードを捨て、カードを #b1 枚引く。 彼が #y死霊の呪い を引く度、彼は #y筋力 2 を得る。"
+    ]
+  },
+  "downfall:HermitDoomsday": {
+    "NAME": "終末の日",
+    "DESCRIPTIONS": [
+      "ハーミットは #y儀式 #b1 を持つ。ハーミットが #y煉獄 をプレイする度、ダガーを召喚する。"
+    ]
+  },
+  "downfall:NeowEclipse": {
+    "NAME": "エクリプス",
+    "DESCRIPTIONS": [
+      "ネオーは毎ターンあなたの手札に #yエセリアル の #y迫りくる破滅 を追加する。"
+    ]
+  },
+  "downfall:NeowWheelOfDeath": {
+    "NAME": "ホイール・オブ・デス",
+    "DESCRIPTIONS": [
+      "カードを #b",
+      " 枚プレイする度に ネオー は #y筋力 #b",
+      " を得る。"
+    ]
+  },
+  "downfall:NeowDistracting": {
+    "NAME": "注意散漫",
+    "DESCRIPTIONS": [
+      "ネオー にそのターン初めて #yアタック でダメージを与えたると、次のターン [E] を失う。"
+    ]
+  },
+  "downfall:NextTurnPowerPower": {
+    "NAME": "Next Turn ",
+    "DESCRIPTIONS": [
+      "バグ! 見てはいけない",
+      "次のターン, #b",
+      " を得る。",
+      "",
+      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field."
+    ]
+  },
+  "downfall:NeowStayAt1Hp": {
+    "NAME": "まだ殺せない",
+    "DESCRIPTIONS": [
+      "ネオーのHPはダメージによって #b1 以下になる事はない。代わりにネオーは全回復し、新しいフェーズに入る。"
+    ]
+  },
+  "downfall:NeowDivinity": {
+    "NAME": "神聖",
+    "DESCRIPTIONS": [
+      "このターン ネオー が与える ダメージ は 3 倍になる。"
+    ]
+  },
+  "downfall:NeowSpirit": {
+    "NAME": "英雄達の魂",
+    "DESCRIPTIONS": [
+      "ネオーがバフを予定していた場合、彼女は #y筋力 #b6 を得て... ",
+      " NL 上昇： 悪魔化 #b1  #y(アイアンクラッド)",
+      " NL 上昇： トゲ #b2  #y(サイレント)",
+      " NL 上昇： バッファー #b2 #y(ディフェクト)",
+      " NL 上昇： マントラ #b5 #y(ウォッチャー)",
+      " NL あなたの山札に #b2 枚の #y腐敗 を加える。 #y(ハーミット)"
+    ]
+  },
+  "downfall:HeartsFavorPower": {
+    "NAME": "心臓の寵愛",
+    "DESCRIPTIONS": [
+      "ネオーの #y無敵 が #b0 になる度に、彼女の #y命の神 を #b",
+      " 減らす。"
     ]
   }
 }

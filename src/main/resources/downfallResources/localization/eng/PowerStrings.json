@@ -402,5 +402,12 @@
       " NL Gains #b5 Mantra. #y(Watcher)",
       " NL Adds a #yDecay to your draw pile. #y(Hermit)"
     ]
+  },
+  "downfall:HeartsFavorPower": {
+    "NAME": "Heart's Favor",
+    "DESCRIPTIONS": [
+      "Whenever Neow's #yInvincible reaches #b0 [REMOVE_SPACE], reduce her #yGod #yof #yLife by #b",
+      " [REMOVE_SPACE]."
+    ]
   }
 }

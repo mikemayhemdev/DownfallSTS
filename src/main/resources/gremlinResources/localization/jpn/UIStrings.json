@@ -1,59 +1,74 @@
 {
   "Gremlin:NobFight": {
     "TEXT": [
-      "PUNY GREMS GIVE SOULS!",
-      "You, Angry. You're mine now.",
-      "You, Fatty. You're mine now.",
-      "You, Girly. You're mine now.",
-      "You, Twitchy. You're mine now.",
-      "You. Dopey. You're mine now.",
-      "You. You're mine now.",
-      "I need to choose."
+      "チビ共！魂ヲヨコセ！",
+      "お前だ、アングリー。お前は今から俺の物だ。",
+      "お前だ、ファッティ。お前は今から俺の物だ。",
+      "お前だ、ガーリー。お前は今から俺の物だ。",
+      "お前だ、トウィッチー。お前は今から俺の物だ。",
+      "お前だ、ドーピィ。お前は今から俺の物だ。",
+      "俺の物だ。",
+      "どうしよう。"
     ]
   },
   "Gremlin:GremFight": {
     "TEXT": [
-      "Bash their heads!",
-      "Kill them dead!",
-      "Take their stuff!"
+      "奴らの頭を叩き割れ！",
+      "奴らをぶっ殺せ！",
+      "奴らから盗め！"
     ]
   },
   "Gremlin:ResurrectOption": {
     "TEXT": [
-      "Resurrect",
-      "(Free Action) Summon a random Gremlin back from the dead.",
-      "Requires a Gremlin to be Dead.",
-      "The grave site has been desecrated already.",
-      "I RISE!",
-      "I RISE, AGAIN!",
-      "I'M BACK FOR MORE LOOTING!"
+      "蘇生",
+      "(行動消費なし) ランダムなグレムリン1体を蘇生する。",
+      "グレムリンが死んでいる必要がある。",
+      "墓が既に荒らされている。",
+      "復活！",
+      "もう一度だ！",
+      "また略奪出来る！"
     ]
   },
   "Gremlin:RestOption": {
     "TEXT": [
-      "Rest",
-      "Heal every Gremlin for 100% of your Max HP (",
-      " HP from ",
-      "Heal every Gremlin for 30% of your Max HP (",
-      "If any Gremlins are dead, one will resurrect at random."
+      "休憩",
+      "全てのグレムリンを 自分の最大HP の100%分回復。 (",
+      " HP ",
+      "全てのグレムリンを 自分の最大HP の30%分回復。(",
+      "グレムリンが死亡している場合、ランダムで1体復活する。"
     ]
   },
   "Gremlin:Swap": {
     "TEXT": [
-      "NO SWAP!",
-      "NOB LEADER NOW!",
-      "NOB LEAD FOREVER!"
+      "交代出来ない！",
+      "ボスがリーダーだ！!",
+      "ボスが率いるのだ！!"
     ]
   },
   "Gremlin:ArtMode": {
     "TEXT": [
-      "Gremlin Art Mode",
-      "Gremlins invade the card frames. Only impacts aesthetics. Might make finding synergies easier."
+      "グレムリンアートモード",
+      "グレムリンがカードフレームに侵食する。見た目のみ。シナジーとなるカードが見つけやすくなるかもしれません。"
     ]
   },
   "Gremlin:BonusGold": {
     "TEXT": [
-       " Gold (Bonus)"
+       " ゴールド (ボーナス)"
+    ]
+  },
+  "Gremlin:MakeEchoAction": {
+    "TEXT": [
+      "エコー: "
+    ]
+  },
+  "Gremlin:EventReplacementStrings": {
+    "TEXT": [
+      "#r失う： #r",
+      " #rHP",
+      "#r全てのグレムリンが #r失う： #r",
+      "#gHP",
+      " #gを得る。",
+      "#g全てのグレムリンが #g"
     ]
   }
 }

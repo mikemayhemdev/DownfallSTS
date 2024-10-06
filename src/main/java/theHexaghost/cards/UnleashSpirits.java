@@ -10,7 +10,7 @@ public class UnleashSpirits extends AbstractHexaCard {
 
     public final static String ID = makeID("UnleashSpirits");
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 10;
 
     public UnleashSpirits() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);

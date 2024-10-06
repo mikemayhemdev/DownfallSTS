@@ -79,7 +79,6 @@ public class NeowBossFinal extends AbstractMonster {
         type = EnemyType.BOSS;
         this.baseDrawX = drawX;
 
-
         if (AbstractDungeon.ascensionLevel >= 9) {
             setHp(600);
         } else {
@@ -130,6 +129,7 @@ public class NeowBossFinal extends AbstractMonster {
 
     }
 
+
     @Override
     public void usePreBattleAction() {
 
@@ -141,26 +141,38 @@ public class NeowBossFinal extends AbstractMonster {
         // halfDead = true;
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
 
-        int beatAmount = 2;
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            beatAmount += 1;
-        }
+        int beatAmount = 3;
+//        if (AbstractDungeon.ascensionLevel >= 19) {
+//            beatAmount += 1;
+//        }
 
-        int invincibleAmt = 300;
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            invincibleAmt -= 50;
-        }
+        int invincibleAmt = 250;
+//        if (AbstractDungeon.ascensionLevel >= 19) {
+//            invincibleAmt -= 50;
+//        } a19 difficulty setting is changed from god of life 2(3), invincible 300(250) , to,  you (dont) get heart's favor
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, beatAmount)));
 
         for (int i = 0; i < 3; i++) {
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         }
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new InvinciblePower(this, invincibleAmt), invincibleAmt));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvinciblePower(this, invincibleAmt), invincibleAmt));
 
+        if (AbstractDungeon.ascensionLevel < 19) {
+            for (int i = 0; i < 3; i++) {
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+            }
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, null, new HeartsFavorPower(this, 2), 2));
+
+        }
+
+        /*
         for (int i = 0; i < 3; i++) {
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         }
+        if (AbstractDungeon.ascensionLevel >= 19)  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new NeowExhumePower(AbstractDungeon.player)));
+         */
+
 //        AbstractDungeon.actionManager.addToBottom(new NeowGainMinionPowersAction(this, 1));
     }
 
@@ -172,7 +184,6 @@ public class NeowBossFinal extends AbstractMonster {
                 curses();
                 break;
             case 1:
-                playSfx();
                 AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX + EYE1_X, this.hb.cY + EYE1_Y, Color.GOLD), 0.25F));
 
@@ -193,6 +204,7 @@ public class NeowBossFinal extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(0.3F));
                 break;
             case 2:
+                playSfx();
                 playSfx();
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new ShockWaveEffect(this.hb.cX, this.hb.cY, Color.YELLOW, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new ShockWaveEffect(this.hb.cX, this.hb.cY, Color.GOLD, ShockWaveEffect.ShockWaveType.CHAOTIC), .5F));

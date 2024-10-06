@@ -15,9 +15,7 @@ import theHexaghost.powers.BurnPower;
 
 public class SkipABeat extends AbstractHexaCard {
 
-    public final static String ID = makeID("SkipABeat");
-
-    //kindle
+    public final static String ID = makeID("Kindle");
 
     public SkipABeat() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);

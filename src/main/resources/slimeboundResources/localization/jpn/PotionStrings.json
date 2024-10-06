@@ -1,30 +1,30 @@
 {
   "Slimebound:SlimedPotion": {
-    "NAME": "Jar of Slime",
+    "NAME": "瓶詰めスライム",
     "DESCRIPTIONS": [
-      "Apply #b",
-      " #yGoop."
+      "#y汚泥 #b",
+      " を与える。"
     ]
   },
   "Slimebound:SlimyTonguePotion": {
-    "NAME": "Slimy Elixir",
+    "NAME": "スライミーエリクサー",
     "DESCRIPTIONS": [
-      "Whenever an effect applies #yGoop, apply #b",
-      " more."
+      "この戦闘で #y汚泥 が与えられるたび、 #b",
+      " 追加で付与する。"
     ]
   },
   "Slimebound:SpawnSlimePotion": {
-    "NAME": "Army in a Bottle",
+    "NAME": "瓶詰めアーミー",
     "DESCRIPTIONS": [
-      "Gain Slime slots until you have #b3. NL Spawn a #yLeeching, #yMire, and #yGuerilla Slime. They do not cost HP.",
-      "Gain Slime slots until you have #b6. NL Spawn #b2 #yLeeching, #b2 #yMire, and #b2 #yGuerilla Slimes. They do not cost HP."
+      "ランダムな スライム #b",
+      " 体が召喚される。 (ノーマルまたはユニーク [REMOVE_SPACE])"
     ]
   },
   "Slimebound:ThreeZeroPotion": {
-    "NAME": "Ooze-Infused Drink",
+    "NAME": "ウーズ入りドリンク",
     "DESCRIPTIONS": [
-      "Add #b",
-      " random 0-cost cards to your hand."
+      "手札に #b",
+      " 枚のランダムな 0 コスト のカードを追加する。"
     ]
   }
 }

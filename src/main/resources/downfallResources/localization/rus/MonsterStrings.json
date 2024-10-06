@@ -81,5 +81,12 @@
     "NAME": "Дождевик",
     "DIALOG": [
     ]
+  },
+  "downfall:DoomedDagger": {
+    "MOVES": [
+    ],
+    "NAME": "Судный кинжал",
+    "DIALOG": [
+    ]
   }
 }

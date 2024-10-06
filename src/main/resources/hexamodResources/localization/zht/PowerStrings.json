@@ -65,7 +65,8 @@
     "DESCRIPTIONS": [
       "提高鬼火上點燃效果提供的 #y傷害 、 #y灼魂 和 #y格擋 獲得 #b",
       " 點。",
-      "降低鬼火上點燃效果提供的 #y傷害 、 #y灼魂 和 #y格擋 獲得 #b"
+      "降低鬼火上點燃效果提供的 #y傷害 、 #y灼魂 和 #y格擋 獲得 #b",
+      "對燒灼鬼焰具有雙倍效果。"
     ]
   },
   "hexamod:EtherealRefundPower": {
@@ -103,7 +104,7 @@
       " 層 #y灼魂 。"
     ]
   },
-  "hexamod:GiftsFromTheDeadPower": {
+  "hexamod:GiftsFromBeyondPower": {
     "NAME": "深處饋贈",
     "DESCRIPTIONS": [
       "你的回合開始時， #y取回 隨機 #b",

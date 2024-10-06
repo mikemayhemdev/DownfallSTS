@@ -13,7 +13,7 @@ import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 
-public class CrispyPower_new extends TwoAmountPower {
+public class CrispyPower_new extends AbstractPower {
     public static final String POWER_ID = HexaMod.makeID("CrispyPower_new");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ExtraCrispy84.png");
@@ -28,7 +28,6 @@ public class CrispyPower_new extends TwoAmountPower {
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
-        this.amount2 = 3;
         this.type = AbstractPower.PowerType.BUFF;
         this.isTurnBased = false;
 
@@ -38,22 +37,10 @@ public class CrispyPower_new extends TwoAmountPower {
         this.updateDescription();
     }
 
-    public void onExhaust(AbstractCard card) {
-        amount2 -= 1;
-        if (amount2 <= 0) {
-            amount2 = 3;
-            GhostflameHelper.activeGhostFlame.charged = true; // for some special logic for end turn advance
-            for(int i = 0; i < this.amount; i++){
-                addToBot(new ChargeCurrentFlameAction());
-            }
-
-        }
-        this.updateDescription();
-    }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + (amount>=2 ? DESCRIPTIONS[2] : DESCRIPTIONS[1]);
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
 

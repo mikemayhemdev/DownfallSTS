@@ -1,1 +1,59 @@
-{}
+{
+  "downfall:PropertiesMod": {
+    "TEXT": [
+      "適用される特性",
+      "追加特性: ",
+      "このターンの追加特性: ",
+      " NL また、このターン: ",
+      " ",
+      "",
+      "#y",
+      "エコー",
+      "使用不可",
+      "エセリアル",
+      "保留",
+      "廃棄",
+      " ",
+      "NL ",
+      "エコー: "
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "エセリアル NL "
+    ]
+  },
+  "downfall:ExhaustMod": {
+    "TEXT": [
+      " NL 廃棄"
+    ]
+  },
+  "downfall:InnateMod": {
+    "TEXT": [
+      "天賦 NL "
+    ]
+  },
+  "downfall:RetainCardMod": {
+    "TEXT": [
+      "保留 NL "
+    ]
+  },
+  "downfall:UnplayableMod": {
+    "TEXT": [
+      "使用不可 NL ",
+      "このカードは使用出来ない",
+      "このターン、このカードは使用出来ない"
+    ]
+  },
+
+  "expansioncontent:CannotUseBossCardMessage": {
+    "TEXT": [
+      "このターンは既に ボス カードをプレイしている！"
+    ]
+  },
+  "expansioncontent:BossCardTagName": {
+    "TEXT": [
+      "ボス"
+    ]
+  }
+}

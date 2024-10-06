@@ -1,14 +1,14 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package charbosses.powers.bossmechanicpowers;
 
+import charbosses.actions.unique.EnemyPoisonDamageAction;
+import charbosses.powers.general.EnemyPoisonPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class SilentPoisonPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:SilentPoisonPower";
@@ -25,6 +25,17 @@ public class SilentPoisonPower extends AbstractBossMechanicPower {
         loadRegion("curiosity");
         this.type = PowerType.BUFF;
     }
+
+    public void atStartOfTurn() {
+        if(AbstractDungeon.player.hasPower(EnemyPoisonPower.POWER_ID)){
+            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                AbstractPower poison = AbstractDungeon.player.getPower(EnemyPoisonPower.POWER_ID);
+                poison.flashWithoutSound();
+                this.addToBot(new EnemyPoisonDamageAction(poison.owner, this.owner, poison.amount, AbstractGameAction.AttackEffect.POISON));
+            }
+        }
+    }
+
 
     public void updateDescription() {
         this.description = DESC[0];

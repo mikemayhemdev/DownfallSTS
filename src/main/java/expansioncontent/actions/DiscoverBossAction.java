@@ -1,5 +1,8 @@
 package expansioncontent.actions;
 
+import automaton.AutomatonChar;
+import champ.ChampChar;
+import collector.CollectorChar;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -8,7 +11,11 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.screens.CardRewardScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
+import expansioncontent.cards.*;
 import expansioncontent.expansionContentMod;
+import guardian.characters.GuardianCharacter;
+import slimebound.characters.SlimeboundCharacter;
+import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -60,6 +67,21 @@ public class DiscoverBossAction extends AbstractGameAction {
         ArrayList<AbstractCard> selectionsList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
             if (q.rarity != AbstractCard.CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
+
+                if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+                    if(q.cardID.equals(PrepareCrush.ID)){continue;}
+                } else if (AbstractDungeon.player instanceof TheHexaghost) {
+                    if(q.cardID.equals(Hexaburn.ID)){continue;}
+                } else if (AbstractDungeon.player instanceof GuardianCharacter) {
+                    if(q.cardID.equals(GuardianWhirl.ID)){continue;}
+                } else if (AbstractDungeon.player instanceof ChampChar) {
+                    if(q.cardID.equals(LastStand.ID)){continue;}
+                } else if (AbstractDungeon.player instanceof AutomatonChar) {
+                    if(q.cardID.equals(HyperBeam.ID)){continue;}
+                } else if (AbstractDungeon.player instanceof CollectorChar) {
+                    if(q.cardID.equals(YouAreMine.ID)){continue;}
+                }
+
                 AbstractCard r = q.makeCopy();
                 cardsList.add(r);
             }
