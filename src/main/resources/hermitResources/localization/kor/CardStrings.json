@@ -305,7 +305,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "태풍의 눈",
-    "DESCRIPTION": "최대  [E] 보다 모자란 만큼  [E] 를 얻습니다. NL 소멸."
+    "DESCRIPTION": "hermit:집중합니다. NL 최대  [E] 보다 모자란 만큼  [E] 를 얻습니다. NL 소멸."
   },
   "hermit:FinalCanter": {
     "NAME": "최후의 위선",
