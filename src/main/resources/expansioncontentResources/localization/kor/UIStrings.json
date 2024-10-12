@@ -45,6 +45,305 @@
       "이번 턴에 이 카드는 사용할 수 없다."
     ]
   },
+  "downfall:AchievementGrid": {
+    "TEXT": [
+      "#yDownfall #y업적"
+    ]
+  },
+  "downfall:BULLY": {
+    "TEXT": [
+      "깡패",
+      "한 도전에서 성직자에게 카드를 3장 제거하십시오."
+    ]
+  },
+  "downfall:CORRUPTED": {
+    "TEXT": [
+      "타락",
+      "몰락 도전에서 아이언클래드나 사일런트나 디펙트나 와쳐나 허밋으로 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:UPRISE": {
+    "TEXT": [
+      "등반",
+      "일반 도전에서 Downfall 악당으로 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:LONGSHOT": {
+    "TEXT": [
+      "승부사",
+      "(허밋) 집중 상태가 아닌 채로 정조준 효과를 9 번 이상 발동시키십시오."
+    ]
+  },
+  "downfall:BOUNTY_HUNTER": {
+    "TEXT": [
+      "현상금 사냥꾼",
+      "(허밋) 한 도전에서 현상금을 300 골드 이상 벌으십시오."
+    ]
+  },
+  "downfall:WIELDER_OF_WOE": {
+    "TEXT": [
+      "통탄의 총",
+      "(허밋) 저주받은 무기의 피해량을 40 이상으로 만드십시오."
+    ]
+  },
+  "downfall:GORGED": {
+    "TEXT": [
+      "포식",
+      "(대왕 슬라임) 대량 섭취를 1장 사용했을 때 최대 체력 증가 효과를 3번 받으십시오."
+    ]
+  },
+  "downfall:FOR_THE_BOSS": {
+    "TEXT": [
+      "대왕을 위하여",
+      "(대왕 슬라임) 한 전투에서 슬라임을 15마리 흡수하십시오."
+    ]
+  },
+  "downfall:PAYMENT_RECEIVED": {
+    "TEXT": [
+      "선수납",
+      "(대왕 슬라임) 한 도전에서 욕심쟁이 수액에게 영혼을 400 빼앗기십시오."
+    ]
+  },
+  "downfall:HYPER_ACCELERATION": {
+    "TEXT": [
+      "극한 가속",
+      "(가디언) 한 턴에 정지장에서 카드를 10장 가져오십시오."
+    ]
+  },
+  "downfall:IMPENETRABLE": {
+    "TEXT": [
+      "철옹성",
+      "(가디언) 수비 모드를 5번 중첩하십시오."
+    ]
+  },
+  "downfall:BEJEWELED": {
+    "TEXT": [
+      "보석함",
+      "(가디언) 한 층에서 소켓에 보석을 8개 장착하십시오."
+    ]
+  },
+  "downfall:HEXABURN": {
+    "TEXT": [
+      "육각염",
+      "(육각령) 한 전투에서 모든 유령불꽃을 점화 후 지옥 유령불꽃 점화를 6번 반복하십시오."
+    ]
+  },
+  "downfall:GHOSTLY": {
+    "TEXT": [
+      "귀신들림",
+      "(육각령) 유령 의회에서 타격과 수비를 각각 4장 이상 잃으십시오."
+    ]
+  },
+  "downfall:THE_BROKEN_SEAL": {
+    "TEXT": [
+      "파괴된 봉인",
+      "(육각령) 파괴된 봉인을 얻으십시오."
+    ]
+  },
+  "downfall:MY_BELT": {
+    "TEXT": [
+      "\"그건 내 밸트야!!\"",
+      "(투사) 투사로 1막에서 아이언클래드에게 승리하십시오."
+    ]
+  },
+  "downfall:I_AM_THE_ONE": {
+    "TEXT": [
+      "궁극의 경지",
+      "(투사) 한 턴에 궁극의 자세를 3번 취하십시오."
+    ]
+  },
+  "downfall:OVER_OVERKILL": {
+    "TEXT": [
+      "의욕 과잉",
+      "(투사) 활력이 200 이상일 때 공격하십시오."
+    ]
+  },
+  "downfall:TRIPLE_SETTER": {
+    "TEXT": [
+      "삼중 변수 획득",
+      "(청동 자동인형) 한 턴에 돌연변이를 사용해 상태이상을 3장 변화시키십시오."
+    ]
+  },
+  "downfall:MECHANICAL_GAUNTLET": {
+    "TEXT": [
+      "기계 장갑",
+      "(청동 자동인형) 태초에서 한 전투에 폭탄기, 현혹기, 반사기를 처리하십시오."
+    ]
+  },
+  "downfall:CODERS_BLOCK": {
+    "TEXT": [
+      "난해한 코드 풀이",
+      "(청동 자동인형) 청동 자동인형으로 함수 카드를 생성하지 않고 보스를 처리하십시오."
+    ]
+  },
+  "downfall:PICKPOCKET_100": {
+    "TEXT": [
+      "소매치기 100단",
+      "(그렘린 군단) 슬쩍하기를 1장 사용할 때 인공물을 3 이상 강탈하십시오."
+    ]
+  },
+  "downfall:GLASS_BONES": {
+    "TEXT": [
+      "유리 몸과 종이 체질",
+      "(그렘린 군단) 적에게 분개와 무력화를 동시에 부여합니다."
+    ]
+  },
+  "downfall:OUR_TRUE_FORM": {
+    "TEXT": [
+      "우리의 진정한 형상",
+      "(그렘린 군단) 귀족 고블린으로 보스를 처리하십시오."
+    ]
+  },
+  "downfall:NOODLE_CODE": {
+    "TEXT": [
+      "엉망진창 코드",
+      "(스네코) 스네코로 함수 카드를 생성하십시오."
+    ]
+  },
+  "downfall:MASTER_OF_CONFUSION": {
+    "TEXT": [
+      "혼란의 달인",
+      "(스네코) 초강력 스네코의 눈을 얻습니다."
+    ]
+  },
+  "downfall:UNBOUND": {
+    "TEXT": [
+      "해방",
+      "(스네코) 태초의 스네코 모드로 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:SAYONARA": {
+    "TEXT": [
+      "사요나라",
+      "(수집가) 잘 가거라를 1장 사용해 파멸을 100 이상 늘리십시오."
+    ]
+  },
+  "downfall:THE_BIGGER_THEY_ARE": {
+    "TEXT": [
+      "높이 올라갈 수록...",
+      "(수집가) 마지막 게임을 사용하십시오."
+    ]
+  },
+  "downfall:HOARDER": {
+    "TEXT": [
+      "호더",
+      "(수집가) 수집품 카드를 20장 이상 수집하고 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:TOPAZ": {
+    "TEXT": [
+      "토파즈",
+      "허밋으로 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:TOPAZ+": {
+    "TEXT": [
+      "토파즈+",
+      "허밋으로 엔딩을 클리어하십시오."
+    ]
+  },
+  "downfall:JADE": {
+    "TEXT": [
+      "비취",
+      "대왕 슬라임으로 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:JADE+": {
+    "TEXT": [
+      "비취+",
+      "대왕 슬라임으로 엔딩을 클리어하십시오."
+    ]
+  },
+  "downfall:CITRINE": {
+    "TEXT": [
+      "황수정",
+      "수호자로 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:CITRINE+": {
+    "TEXT": [
+      "황수정+",
+      "수호자로 엔딩을 클리어하십시오."
+    ]
+  },
+  "downfall:TANZANITE": {
+    "TEXT": [
+      "탄자나이트",
+      "육각령으로 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:TANZANITE+": {
+    "TEXT": [
+      "탄자나이트+",
+      "육각령으로 엔딩을 클리어하십시오."
+    ]
+  },
+  "downfall:KYANITE": {
+    "TEXT": [
+      "남정석",
+      "투사로 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:KYANITE+": {
+    "TEXT": [
+      "남정석+",
+      "투사로 엔딩을 클리어하십시오."
+    ]
+  },
+  "downfall:RUTILE": {
+    "TEXT": [
+      "금홍석",
+      "청동 자동인형으로 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:RUTILE+": {
+    "TEXT": [
+      "금홍석+",
+      "청동 자동인형으로 엔딩을 클리어하십시오."
+    ]
+  },
+  "downfall:SPINEL": {
+    "TEXT": [
+      "첨정석",
+      "그렘린 군단으로 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:SPINEL+": {
+    "TEXT": [
+      "첨정석+",
+      "그렘린 군단으로 엔딩을 클리어하십시오."
+    ]
+  },
+  "downfall:CHRYSOCOLLA": {
+    "TEXT": [
+      "규공작석",
+      "스네코로 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:CHRYSOCOLLA+": {
+    "TEXT": [
+      "규공작석+",
+      "스네코로 엔딩을 클리어하십시오."
+    ]
+  },
+  "downfall:MALACHITE": {
+    "TEXT": [
+      "공작석",
+      "수집가로 게임을 클리어하십시오."
+    ]
+  },
+  "downfall:MALACHITE+": {
+    "TEXT": [
+      "공작석+",
+      "수집가로 엔딩을 클리어하십시오."
+    ]
+  },
+  "downfall:EVIL_ONE": {
+    "TEXT": [
+      "완벽한 악",
+      "모든 Downfall 업적을 달성하십시오."
+    ]
+  },
   "expansioncontent:CannotUseBossCardMessage": {
     "TEXT": [
       "이번 턴에 이미 보스 카드를 사용했다!"
