@@ -24,13 +24,16 @@ public class CombatEventPatch {
                                 "currentRoom.event instanceof downfall.events.GremlinMatchGame_Evil || " +
                                 "currentRoom.event instanceof downfall.events.GremlinWheelGame_Evil || " +
                                 "currentRoom.event instanceof downfall.events.LivingWall_Evil || " +
+                                "currentRoom.event instanceof downfall.events.DeadGuy_Evil || " +
                                 "currentRoom.event instanceof downfall.events.Augmenter_Evil || " +
                                 "currentRoom.event instanceof downfall.events.FaceTrader_Evil || " +
                                 "currentRoom.event instanceof downfall.events.Beggar_Evil || " +
                                 "currentRoom.event instanceof downfall.events.Colosseum_Evil || " +
+                                "currentRoom.event instanceof downfall.events.Bandits_Evil || " +
+                                "currentRoom.event instanceof downfall.events.MindBloom_Evil || " +
+                                "currentRoom.event instanceof slimebound.events.DarklingsSlimebound || " +
                                 "currentRoom.event instanceof champ.events.Colosseum_Evil_Champ || " +
                                 "currentRoom.event instanceof champ.events.MinorLeagueArena || " +
-                                "currentRoom.event instanceof downfall.events.MindBloom_Evil || " +
                                 "currentRoom.event instanceof automaton.events.ShapeFactory || " +
                                 "currentRoom.event instanceof automaton.events.AncientFactory;");
                     }
