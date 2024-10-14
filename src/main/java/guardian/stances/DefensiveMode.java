@@ -114,11 +114,11 @@ public class DefensiveMode extends AbstractStance {
         }
     }
 
-    public void atStartOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 10));
-
-
-    }
+//    public void atStartOfTurn() {
+//        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 10));
+//
+//
+//    }
 
     public void onEndOfRound() {
         if (AbstractDungeon.player.hasPower(DontLeaveDefensiveModePower.POWER_ID)) {

@@ -19,8 +19,8 @@
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "Tourmaline",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 4 temporary Thorns.",
-    "UPGRADE_DESCRIPTION": "Gain 4 temp. Thorns."
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 2 Thorns.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Thorns."
   },
   "Guardian:Gem_White": {
     "NAME": "Opal",
@@ -303,15 +303,15 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "Evasive Protocol",
-    "DESCRIPTION": "While in *Defensive *Mode, raise your Dexterity by !M!. NL At the start of your turn, guardianmod:Brace 3."
+    "DESCRIPTION": "Whenever you enter *Defensive *Mode, gain !M! Dexterity."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "Spiker Protocol",
-    "DESCRIPTION": "Gain !M! Thorns while in *Defensive *Mode. NL At the start of your turn, guardianmod:Brace 3."
+    "DESCRIPTION": "Whenever you enter *Defensive *Mode, gain !M! Thorns."
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "Armored Protocol",
-    "DESCRIPTION": "Gain !M! Block at the end of each turn while in *Defensive *Mode. NL At the start of your turn, guardianmod:Brace 3."
+    "DESCRIPTION": "Whenever you enter *Defensive *Mode, gain !M! *Metallicize."
   },
   "Guardian:TimeSifter": {
     "NAME": "Time Sifter",
@@ -366,8 +366,8 @@
     "DESCRIPTION": "Gain !B! Block. NL Exhaust."
   },
   "Guardian:Repulse": {
-    "NAME": "Repulsor",
-    "DESCRIPTION": "When you draw the first Status or Curse card each turn, Exhaust it and draw a card.",
+    "NAME": "Repulsive Protocol",
+    "DESCRIPTION": "Whenever you enter *Defensive *Mode, Exhaust a card in your hand.",
     "UPGRADE_DESCRIPTION": "When you draw the first Status or Curse card each turn, Exhaust it and draw a card."
   },
   "Guardian:BronzeOrb": {
@@ -375,8 +375,8 @@
     "DESCRIPTION": "Innate. NL Deal !D! damage. Put a random card from your draw pile into guardianmod:Stasis. Exhaust."
   },
   "Guardian:RevengeProtocol": {
-    "NAME": "Revenge Protocol",
-    "DESCRIPTION": "While in *Defensive *Mode, raise your Strength by !M!. NL At the start of your turn, guardianmod:Brace !GuardianSecondM!."
+    "NAME": "Alert Protocol",
+    "DESCRIPTION": "At the start of your turn, guardianmod:Brace !GuardianSecondM!."
   },
   "Guardian:GatlingBeam": {
     "NAME": "Laser Turret",

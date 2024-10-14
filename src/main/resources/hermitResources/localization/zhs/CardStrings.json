@@ -180,7 +180,7 @@
     "DESCRIPTION": "从抽牌堆顶部 !M! 张牌中选择打出一张。 NL hermit:精准 ：触发打出牌的 hermit:精准 效果。"
   },
   "hermit:Vantage": {
-    "NAME": "优势",
+    "NAME": "制高点",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL hermit:精准 ： NL 抽 !M! 张牌并将其 升级 。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL hermit:精准 ： NL 抽 !M! 张牌并将其 升级 。"
   },
@@ -191,7 +191,7 @@
   "hermit:Combo": {
     "NAME": "连击",
     "DESCRIPTION": "每回合首次 hermit:精准 时， NL 将该 *精准 牌返回手牌。",
-    "UPGRADE_DESCRIPTION": "每回合前 !M! 次 hermit:精准 时， NL 将 *精准 牌返回手牌。"
+    "UPGRADE_DESCRIPTION": "每回合前 !M! 次 hermit:精准 时， NL 将该 *精准 牌返回手牌。"
   },
   "hermit:BigShot": {
     "NAME": "冒烟枪管",

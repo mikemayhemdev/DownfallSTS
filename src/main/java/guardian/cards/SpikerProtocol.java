@@ -30,15 +30,12 @@ public class SpikerProtocol extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
 
-    //TUNING CONSTANTS
     private static final int THORNS = 4;
     private static final int UPGRADE_THORNS = 2;
     private static final int SOCKETS = 0;
     private static final int BRACE_PER_TURN = 3;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -61,10 +58,10 @@ public class SpikerProtocol extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SpikerProtocolPower(p, magicNumber)));
-        if (p.stance instanceof DefensiveMode) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, magicNumber), magicNumber));
-        }
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BracePerTurnPower(p, this.secondaryM)));
+//        if (p.stance instanceof DefensiveMode) {
+//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, magicNumber), magicNumber));
+//        }
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BracePerTurnPower(p, this.secondaryM)));
     }
 
     public AbstractCard makeCopy() {
@@ -74,19 +71,20 @@ public class SpikerProtocol extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_THORNS);
+//            upgradeMagicNumber(UPGRADE_THORNS);
+            upgradeBaseCost(0);
         }
     }
 
     public void updateDescription() {
 
-        if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
-            } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
-            }
-        }
+//        if (this.socketCount > 0) {
+//            if (upgraded && UPGRADED_DESCRIPTION != null) {
+//                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
+//            } else {
+//                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
+//            }
+//        }
         this.initializeDescription();
     }
 }

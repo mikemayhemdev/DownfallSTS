@@ -651,7 +651,7 @@ public static void saveData() {
         BaseMod.addCard(new RefractedBeam());
         BaseMod.addCard(new SpikerProtocol());
         //BaseMod.addCard(new ArmoredProtocol());
-        BaseMod.addCard(new Metallicize());
+        BaseMod.addCard(new ArmoredProtocol());
         BaseMod.addCard(new StrikeForStrike());
         BaseMod.addCard(new EvasiveProtocol());
         BaseMod.addCard(new TimeSifter());
