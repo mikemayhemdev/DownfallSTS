@@ -30,12 +30,10 @@ public class PackageSphere extends AbstractGuardianCard {
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
-    //END TUNING CONSTANTS
-
 
     public AbstractGuardianCard constPrev1 = new SphericShield();
     public AbstractGuardianCard constPrev2 = new FloatingOrbs();
-    public AbstractGuardianCard constPrev3 = new Metallicize();
+    public AbstractGuardianCard constPrev3 = new ArmoredProtocol();
 
     public AbstractGuardianCard prev1;
     public AbstractGuardianCard prev2;
@@ -94,7 +92,7 @@ public class PackageSphere extends AbstractGuardianCard {
         if (upgraded) tmp.upgrade();
         addToBot(new MakeTempCardInHandAction(tmp, true));
 
-        tmp = new Metallicize();
+        tmp = new ArmoredProtocol();
         if (upgraded) tmp.upgrade();
         addToBot(new MakeTempCardInHandAction(tmp, true));
     }

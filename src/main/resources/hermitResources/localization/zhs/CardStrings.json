@@ -287,7 +287,7 @@
     "DESCRIPTION": "丢弃所有手牌。 NL 从 *抽牌堆 中抽取 !M! 张稀有度最高的牌。"
   },
   "hermit:DeadOrAlive": {
-    "NAME": "不论死活",
+    "NAME": "人尸皆可",
     "DESCRIPTION": "造成 !D! 点伤害X次。 NL 斩杀 时获得 hermit:赏金 。 NL 消耗 。"
   },
   "hermit:GoldenBullet": {

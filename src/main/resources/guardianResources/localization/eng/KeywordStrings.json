@@ -72,7 +72,7 @@
     "NAMES": [
       "brace"
     ],
-    "PROPER_NAME": "Brace X",
-    "DESCRIPTION": "Reduce the HP loss required to trigger #yMode #yShift by X."
+    "PROPER_NAME": "Brace",
+    "DESCRIPTION": "Reduce the HP loss required to enter #yDefensive #yMode by some amount."
   }
 ]

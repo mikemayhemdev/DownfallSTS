@@ -35,10 +35,10 @@ public class DefensiveMode extends AbstractStance {
     private static long sfxId = -1L;
 
     public DefensiveMode() {
-        this.ID = STANCE_ID;// 21
+        this.ID = STANCE_ID;
         this.name = GuardianCharacter.charStrings.TEXT[4];
-        this.updateDescription();// 23
-    }// 24
+        this.updateDescription();
+    }
 
     @Override
     public void updateAnimation() {

@@ -152,8 +152,8 @@
   },
   "Guardian:PackageSphere": {
     "NAME": "组件: 圆球",
-    "DESCRIPTION": "获得 *球 *形 *护 *盾 、 *金 *属 *化 与 *浮 *动 *圆 *球 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *球 *形 *护 *盾 *+ 、 *金 *属 *化 *+ 与 *浮 *动 *圆 *球 *+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *球 *形 *护 *盾 、 *装 *甲 *协 *议 与 *浮 *动 *圆 *球 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *球 *形 *护 *盾 *+ 、 *装 *甲 *协 *议 *+ 与 *浮 *动 *圆 *球 *+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageSentry": {
     "NAME": "组件: 哨卫",
@@ -199,7 +199,7 @@
   },
   "Guardian:GemFinder": {
     "NAME": "宝石发现",
-    "DESCRIPTION": "战斗胜利后， NL 额外获得普通 guardianmod:宝石 奖励。"
+    "DESCRIPTION": "战斗胜利后， NL 额外获得一枚 guardianmod:宝石 。"
   },
   "Guardian:StasisField": {
     "NAME": "凝滞屏障",
@@ -239,7 +239,7 @@
   },
   "Guardian:GemFire": {
     "NAME": "宝石加农炮",
-    "DESCRIPTION": " 消耗 所有 guardianmod:宝石 ，每颗随机造成 !D! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": " 消耗 手中所有 guardianmod:宝石 ， NL 每颗随机造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": " NL (造成 !M! 次)"
   },
   "Guardian:ChargeCore": {
