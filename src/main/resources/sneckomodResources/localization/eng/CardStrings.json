@@ -13,6 +13,10 @@
     "NAME": "Danger Noodle",
     "DESCRIPTION": "Deal !D! damage. NL Repeat this for each sneckomod:Offclass card in your hand, then Exhaust those cards."
   },
+  "sneckomod:Deception": {
+    "NAME": "Deception",
+    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Overflow: Apply !M! Weak to ALL enemies."
+  },
   "sneckomod:Defend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
@@ -23,7 +27,7 @@
   },
   "sneckomod:DiceBlock": {
     "NAME": "Dice Block",
-    "DESCRIPTION": "Gain !M! - !B! Block."
+    "DESCRIPTION": "Gain !M! - !B! Block. NL sneckomod:Overflow: Always gain !B! Block."
   },
   "sneckomod:DiceBoulder": {
     "NAME": "Dice Boulder",
@@ -31,7 +35,20 @@
   },
   "sneckomod:DiceCrush": {
     "NAME": "Dice Crush",
-    "DESCRIPTION": "Deal !M! - !D! damage."
+    "DESCRIPTION": "Deal !M! - !D! damage. NL sneckomod:Overflow: Always deal !D! damage."
+  },
+  "sneckomod:DragonsHoard": {
+    "NAME": "Dragon's Hoard",
+    "DESCRIPTION": "Gain Strength equal to this card's cost. NL sneckomod:Overflow: Double your Strength.",
+    "UPGRADE_DESCRIPTION": "Gain Strength equal to this card's cost +1. NL sneckomod:Overflow: Double your Strength."
+  },
+  "sneckomod:FourOfAKind": {
+    "NAME": "Four Of A Kind",
+    "DESCRIPTION": "Can only be played if you have played exactly 4 sneckomod:Suits this turn. NL Gain 1 Intangible. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Can only be played if you have played exactly 4 sneckomod:Suits this turn. NL Gain 1 Intangible. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "I haven't played 4 Suits this turn!"
+    ]
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
@@ -51,8 +68,8 @@
   },
   "sneckomod:Nope": {
     "NAME": "Nope",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. Gain a random card of the same class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. Gain a random card of the same class. NL It costs 1 less.",
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. Gain a random card of the same class.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Exhaust a card. Gain a random card of the same class.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for Nope."
     ]
@@ -60,7 +77,7 @@
   "sneckomod:MasterEye": {
     "NAME": "Master Eye",
     "DESCRIPTION": "Become Confused. NL Draw !M! additional card each turn.",
-    "UPGRADE_DESCRIPTION": "Become Confused. NL Draw !M! additional cards each turn."
+    "UPGRADE_DESCRIPTION": "Become Confused. NL Draw !M! additional card each turn."
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
@@ -69,6 +86,10 @@
     "EXTENDED_DESCRIPTION": [
       " to Identify."
     ]
+  },
+  "sneckomod:MintCondition": {
+    "NAME": "Mint Condition",
+    "DESCRIPTION": "Gain !B! Block for each unique sneckomod:Suit in your hand. NL sneckomod:Overflow: Draw 2 cards next turn."
   },
   "sneckomod:MixItUp": {
     "NAME": "Mix It Up!",
@@ -83,10 +104,14 @@
     "DESCRIPTION": "Whenever you *Muddle a card, gain !M! Block.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you *Muddle a card, gain !M! Block."
   },
+  "sneckomod:PoisonParadise": {
+    "NAME": "Poison Paradise",
+    "DESCRIPTION": "Apply !M! Poison. NL sneckomod:Overflow: Do it again. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Apply !M! Poison. NL sneckomod:Overflow: Do it again. NL Exhaust."
+  },
   "sneckomod:PureSnecko": {
     "NAME": "Shift",
-    "DESCRIPTION": "sneckomod:Snekproof. NL *Transform all sneckomod:Offclass cards in your hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL *Transform all sneckomod:Offclass cards in your hand. NL They cost 1 less."
+    "DESCRIPTION": "Draw !M! cards and sneckomod:Muddle them."
   },
   "sneckomod:QuickBite": {
     "NAME": "Snake Rake",
@@ -103,12 +128,17 @@
   },
   "sneckomod:Restock": {
     "NAME": "Restock",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard your hand. NL Draw 5-10 cards. NL Exhaust."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Discard your hand. NL Draw 5-10 cards, then sneckomod:Muddle your hand. NL Exhaust."
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
     "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!."
+  },
+  "sneckomod:SerpentBottle": {
+    "NAME": "Serpent Bottle",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 2 Cards. NL Choose a card to sneckomod:Muddle. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 2 Cards. NL Choose !M! cards to sneckomod:Muddle. NL Exhaust."
   },
   "sneckomod:SerpentIdol": {
     "NAME": "Serpent Idol",
@@ -116,12 +146,17 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotic Form",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Whenever you play an sneckomod:Offclass card, draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Whenever you play an sneckomod:Offclass card, draw 1 card."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Whenever you play an sneckomod:Offclass card, gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Whenever you play an sneckomod:Offclass card, gain 1 Strength."
   },
   "sneckomod:SlitherStrike": {
     "NAME": "Slither Strike",
     "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn."
+  },
+  "sneckomod:SnakeEyes": {
+    "NAME": "Snake Eyes",
+    "DESCRIPTION": "This turn, your next sneckomod:Offclass card is played twice.",
+    "UPGRADE_DESCRIPTION": "This turn, your next 2 sneckomod:Offclass cards are played twice."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
@@ -138,8 +173,8 @@
   },
   "sneckomod:SnekBite": {
     "NAME": "Snek Bite",
-    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the highest-cost card in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the !M! highest-cost cards in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Choose a card to sneckomod:Muddle.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Choose !M! cards to sneckomod:Muddle."
   },
   "sneckomod:SoulCleanse": {
     "NAME": "Soul Cleanse",
@@ -148,13 +183,13 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! random sneckomod:Offclass cards. NL Exhaust.",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Gain 2 random sneckomod:Offclass cards. NL They gain Retain. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 - !M! cards."
   },
   "sneckomod:SoulExchange": {
     "NAME": "Soul Exchange",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, NL Choose a card, then *Transform your hand to that card's class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw !M! cards, NL Choose a card, then *Transform your hand to that card's class.",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, NL Choose a card, then *Transform your hand to that card's class. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw !M! cards, NL Choose a card, then *Transform your hand to that card's class. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for Soul Exchange."
     ]
@@ -168,9 +203,22 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
+  "sneckomod:ToothAndClaw": {
+    "NAME": "Tooth And Claw",
+    "DESCRIPTION": "Deal !D! damage. Gain a Shiv for each unique sneckomod:Suit in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain an Upgraded Shiv for each unique sneckomod:Suit in your hand."
+  },
+  "sneckomod:TyphoonFang": {
+    "NAME": "Typhoon Fang",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !D! damage. NL sneckomod:Overflow: This turn, whenever you sneckomod:Overflow, play a copy of this card."
+  },
+  "sneckomod:Yearn": {
+    "NAME": "Yearn",
+    "DESCRIPTION": "Draw !M! cards. NL Give them Retain. NL Exhaust."
+  },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! - 2 Weak. NL Apply !M! - 2 Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! - 2 Weak and Vulnerable. NL sneckomod:Overflow: Always apply 2 of each."
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",

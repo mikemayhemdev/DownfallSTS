@@ -24,6 +24,7 @@ public class SoulExchange extends AbstractSneckoCard {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
         baseMagicNumber = magicNumber = 1;
+        exhaust = true; // this had to happen
         SneckoMod.loadJokeCardImage(this, "SoulExchange.png");
     }
 

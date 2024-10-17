@@ -46,7 +46,7 @@ public class Floatwork extends AbstractHexaCard implements HexaPurpleTextInterfa
         if (!upgraded) {
             upgradeName();
           //  upgradeBlock(2);
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 

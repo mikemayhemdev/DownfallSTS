@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.cards.AbstractDynamicCard;
 import sneckomod.SneckoMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
@@ -13,9 +14,10 @@ public class DiceCrush extends AbstractSneckoCard {
 
     public DiceCrush() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 12; // Min Damage
-        baseDamage = 18; //Max Damage
+        baseMagicNumber = magicNumber = 14; // Min Damage
+        baseDamage = 20; //Max Damage
         tags.add(SneckoMod.RNG);
+        this.tags.add(SneckoMod.OVERFLOW); // small buff with overflow mechanic
         SneckoMod.loadJokeCardImage(this, "DiceCrush.png");
     }
 
@@ -37,6 +39,9 @@ public class DiceCrush extends AbstractSneckoCard {
         baseDamage = CURRENT_DMG;
         super.applyPowers();
         isDamageModified = baseDamage != damage;
+
+
+
     }
 
     @Override
@@ -53,6 +58,18 @@ public class DiceCrush extends AbstractSneckoCard {
         baseDamage = CURRENT_DMG;
         super.calculateCardDamage(mo);
         isDamageModified = baseDamage != damage;
+        // overflow check
+        if (isOverflowActive()) {
+            damage = baseDamage;
+        }
+
+    }
+    //Glowverflow - make the card glow if overflow is active~
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if (isOverflowActive()) {
+            this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
     }
 
     public void upgrade() {

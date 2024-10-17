@@ -17,6 +17,7 @@ public class SoulRoll extends AbstractSneckoCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
         SneckoMod.loadJokeCardImage(this, "SoulRoll.png");
+        exhaust = true; // this had to happen
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

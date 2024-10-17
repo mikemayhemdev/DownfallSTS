@@ -28,7 +28,7 @@ public class NopeAction extends AbstractGameAction {
         this.actionType = ActionType.CARD_MANIPULATION;// 22
         this.p = AbstractDungeon.player;// 23
         this.duration = Settings.ACTION_DUR_FAST;// 24
-        this.reduction = reduceCost;
+        this.reduction = false;
     }// 26
 
     public void update() {
@@ -56,7 +56,8 @@ public class NopeAction extends AbstractGameAction {
 
                 if (reduction) {
                     this.addToBot(new MakeTempCardInHandActionReduceCost(card));// 34
-                } else {
+                } else
+                {
                     this.addToBot(new MakeTempCardInHandAction(card));
                 }
 

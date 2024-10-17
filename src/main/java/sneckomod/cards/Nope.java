@@ -12,19 +12,24 @@ public class Nope extends AbstractSneckoCard {
 
     //stupid intellij stuff SKILL, SELF, COMMON
 
+    private static final int BLOCK = 7;
+    private static final int UPG_BLOCK = 3;
+
     public Nope() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = BLOCK;
         SneckoMod.loadJokeCardImage(this, "Nope.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         atb(new NopeAction(upgraded));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeBlock(UPG_BLOCK);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

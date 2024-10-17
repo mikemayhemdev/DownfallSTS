@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.SoulburnOnExhaustPower;
 
@@ -25,6 +26,8 @@ public class GhostflameBarrier extends AbstractHexaCard {
         baseDamage = DAMAGE;
 //        baseMagicNumber = magicNumber = MAGIC;
         baseBurn = burn = MAGIC;
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "GhostflameBarrier.png");
     }
 

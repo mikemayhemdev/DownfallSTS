@@ -10,7 +10,7 @@ import theHexaghost.powers.HexalevelPower;
 
 public class HexaLevel extends AbstractHexaCard {
 
-    public final static String ID = makeID("InfernalForm");
+    public final static String ID = makeID("HexaLevel");
 
     //infernal form
 
