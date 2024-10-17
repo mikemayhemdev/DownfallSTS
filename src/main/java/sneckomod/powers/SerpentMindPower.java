@@ -10,8 +10,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import sneckomod.SneckoMod;
 import downfall.util.TextureLoader;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+
+import static hermit.util.Wiz.applyToSelf;
 
 public class SerpentMindPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -42,7 +46,8 @@ public class SerpentMindPower extends AbstractPower implements CloneablePowerInt
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.color != AbstractDungeon.player.getCardColor()) {
             flash();
-            addToBot(new DrawCardAction(amount));
+        //    addToBot(new DrawCardAction(amount)); BEGONE
+            applyToSelf(new StrengthPower(owner, amount)); // wow boring nerf really cool (it's not cool)
         }
     }
 

@@ -13,8 +13,8 @@ public class VolcanoVisage extends AbstractHexaCard {
     public final static String ID = makeID("VolcanoVisage");
 
     public VolcanoVisage() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 5;
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 4;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "VolcanoVisage.png");
     }

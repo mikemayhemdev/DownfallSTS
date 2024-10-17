@@ -12,7 +12,7 @@
 
     <properties>
 
-           //Change below line to your Steam installation directory
+        //Change below line to your Steam installation directory
         <steamFolder>D:/SteamLibrary/</steamFolder>
 
         <workshopFolder>${steamFolder}steamapps/workshop/content/646570/</workshopFolder>

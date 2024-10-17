@@ -7,6 +7,21 @@
     "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled."
   },
   {
+  "PROPER_NAME": "Suit",
+  "NAMES": [
+  "suit",
+  "suits"
+],
+  "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits."
+  },
+  {
+    "PROPER_NAME": "Overflow",
+    "NAMES": [
+      "Overflow", "overflow"
+    ],
+    "DESCRIPTION": "Overflow is active if you have 5 or more cards in hand or if the card costs 3."
+  },
+  {
     "PROPER_NAME": "Muddle",
     "NAMES": [
       "muddle",

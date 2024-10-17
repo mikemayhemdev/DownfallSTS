@@ -34,9 +34,17 @@
   "sneckomod:SerpentMindPower": {
     "NAME": "Serpent Mind",
     "DESCRIPTIONS": [
-      "Whenever you play an #yOffclass card, draw #b",
-      " card.",
-      " cards."
+      "Whenever you play an #yOffclass card, gain #b",
+        " Strength.",
+      " Strength."
+    ]
+  },
+  "sneckomod:SnakeEyesPower": {
+    "NAME": "Snake Eyes",
+    "DESCRIPTIONS": [
+      "Your next #yOffclass #yCard is played twice this turn.",
+      "Your next #b",
+      " #yOffclass #yCards are played twice this turn."
     ]
   },
   "sneckomod:UnendingSupplyPower": {
@@ -66,5 +74,23 @@
       " is being transformed into another ",
       " relic."
     ]
+  },
+  "sneckomod:TyphoonPower": {
+    "NAME": "Typhoon",
+    "DESCRIPTIONS": [
+      "This turn, whenever you #bOverflow, play a copy of #yTyphoon #yFang.",
+      "This turn, whenever you #bOverflow, play #b",
+      " copies of #yTyphoon #yFang."
+    ]
+  },
+  "sneckomod:TyphoonPlusPower": {
+    "NAME": "Typhoon+",
+    "DESCRIPTIONS": [
+      "This turn, whenever you #bOverflow, play a copy of #yTyphoon #yFang+.",
+      "This turn, whenever you #bOverflow, play #b",
+      " copies of #yTyphoon #yFang+."
+    ]
   }
 }
+
+
