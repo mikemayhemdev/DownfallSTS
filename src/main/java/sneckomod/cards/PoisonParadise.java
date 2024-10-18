@@ -14,7 +14,7 @@ public class PoisonParadise extends AbstractSneckoCard {
 
     public PoisonParadise() {
         super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 12;
+        baseMagicNumber = magicNumber = 15;
         exhaust = true;
         this.tags.add(SneckoMod.OVERFLOW);
         SneckoMod.loadJokeCardImage(this, "PoisonParadise.png");

@@ -37,6 +37,8 @@ public class Yearn extends AbstractSneckoCard {
                     PropertiesMod mod = new PropertiesMod();
                     if (!q.selfRetain)
                         mod.addProperty(PropertiesMod.supportedProperties.RETAIN, false);
+                    if (!mod.bonusPropertiesForThisTurn.isEmpty())
+                        CardModifierManager.addModifier(q, mod);
                 }
             }
         }));

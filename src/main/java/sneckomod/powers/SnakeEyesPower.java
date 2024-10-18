@@ -22,9 +22,6 @@ public class SnakeEyesPower extends AbstractPower implements CloneablePowerInter
     private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Rolls84.png");
     private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Rolls32.png");
 
-    //this one was way easier than TyphoonPower because offclass detection already existed
-    //so I just used that with the code for duplicated form
-
     public SnakeEyesPower(int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -59,7 +56,6 @@ public class SnakeEyesPower extends AbstractPower implements CloneablePowerInter
             if (this.amount <= 0) {
                 addToBot(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, this));
             }
-
             updateDescription();
         }
     }
@@ -73,6 +69,7 @@ public class SnakeEyesPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void updateDescription() {
+
         if (this.amount == 1) {
             this.description = DESCRIPTIONS[0];
         } else {

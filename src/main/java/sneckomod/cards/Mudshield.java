@@ -14,6 +14,7 @@ public class Mudshield extends AbstractSneckoCard {
     public Mudshield() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+
         SneckoMod.loadJokeCardImage(this, "Mudshield.png");
     }
 
@@ -24,9 +25,7 @@ public class Mudshield extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isInnate = true;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 }

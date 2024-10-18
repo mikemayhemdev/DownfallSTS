@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Circlet;
@@ -16,7 +17,8 @@ import downfall.util.SelectCardsCenteredAction;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Locale;
-
+@Deprecated
+@CardIgnore
 public class Transmogrify extends AbstractSneckoCard {
 
     public final static String ID = makeID("Transmogrify");
@@ -24,7 +26,8 @@ public class Transmogrify extends AbstractSneckoCard {
     //stupid intellij stuff SKILL, SELF, RARE
 
     public Transmogrify() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+     //   super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         tags.add(CardTags.HEALING);
         SneckoMod.loadJokeCardImage(this, "Transmogrify.png");
