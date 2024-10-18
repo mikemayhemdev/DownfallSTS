@@ -1,8 +1,12 @@
 {
+  "sneckomod:Blunderbus": {
+    "NAME": "Blunderbus",
+    "DESCRIPTION": "Deal !D! damage 2 times. Deal damage one more time for every 3+ cost card in hand."
+  },
   "sneckomod:CheapStock": {
     "NAME": "Cheap Stock",
-    "DESCRIPTION": "At the start of your turn, reduce the cost of the highest cost sneckomod:Offclass card in your hand by 1.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, reduce the cost of the highest cost sneckomod:Offclass card in your hand by 1."
+    "DESCRIPTION": "At the start of your turn, sneckomod:Muddle the highest cost card in your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, sneckomod:Muddle the !M! highest cost cards in your hand."
   },
   "sneckomod:Cheat": {
     "NAME": "Pure Luck",
@@ -11,7 +15,7 @@
   },
   "sneckomod:DangerNoodle": {
     "NAME": "Danger Noodle",
-    "DESCRIPTION": "Deal !D! damage. NL Repeat this for each sneckomod:Offclass card in your hand, then Exhaust those cards."
+    "DESCRIPTION": "Deal !D! damage. NL Repeat this for each sneckomod:Offclass card in your hand, then Exhaust those cards. NL Exhaust."
   },
   "sneckomod:Deception": {
     "NAME": "Deception",
@@ -56,7 +60,7 @@
   },
   "sneckomod:IronFang": {
     "NAME": "Iron Fang",
-    "DESCRIPTION": "Gain !M! - !B! Block. NL Deal !qqq! - !D! damage."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Apply !M! Weak."
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Improvised Attack",
@@ -76,8 +80,8 @@
   },
   "sneckomod:MasterEye": {
     "NAME": "Master Eye",
-    "DESCRIPTION": "Become Confused. NL Draw !M! additional card each turn.",
-    "UPGRADE_DESCRIPTION": "Become Confused. NL Draw !M! additional card each turn."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Become Confused. NL Draw !M! additional card each turn.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Become Confused. NL Draw !M! additional card each turn."
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
@@ -101,8 +105,7 @@
   },
   "sneckomod:Mudshield": {
     "NAME": "Mud Shield",
-    "DESCRIPTION": "Whenever you *Muddle a card, gain !M! Block.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you *Muddle a card, gain !M! Block."
+    "DESCRIPTION": "Whenever you sneckomod:Muddle a card, gain !M! Block."
   },
   "sneckomod:PoisonParadise": {
     "NAME": "Poison Paradise",
@@ -132,8 +135,8 @@
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!. NL Exhaust."
   },
   "sneckomod:SerpentBottle": {
     "NAME": "Serpent Bottle",
@@ -183,8 +186,7 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Gain 2 random sneckomod:Offclass cards. NL They gain Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 - !M! cards."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! random sneckomod:Offclass cards. NL They gain Retain. NL Exhaust."
   },
   "sneckomod:SoulExchange": {
     "NAME": "Soul Exchange",
@@ -196,8 +198,7 @@
   },
   "sneckomod:SoulRoll": {
     "NAME": "Soul Roll",
-    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. NL Draw 1 card."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !B! Block. NL Choose a card to sneckomod:Muddle."
   },
   "sneckomod:Strike": {
     "NAME": "Strike",
@@ -234,7 +235,7 @@
   "sneckomod:TrashToTreasure": {
     "NAME": "Trash to Treasure",
     "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost."
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost. NL Exhaust."
   },
   "sneckomod:UnendingSupply": {
     "NAME": "Unending Supply",

@@ -26,8 +26,6 @@ public class GhostflameBarrier extends AbstractHexaCard {
         baseDamage = DAMAGE;
 //        baseMagicNumber = magicNumber = MAGIC;
         baseBurn = burn = MAGIC;
-        tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "GhostflameBarrier.png");
     }
 

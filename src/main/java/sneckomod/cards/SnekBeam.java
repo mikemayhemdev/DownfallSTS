@@ -6,12 +6,14 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import static com.megacrit.cardcrawl.cards.red.PerfectedStrike.countCards;
-
+@Deprecated
+@CardIgnore
 public class SnekBeam extends AbstractSneckoCard {
 
     public final static String ID = makeID("SnekBeam");
@@ -21,7 +23,8 @@ public class SnekBeam extends AbstractSneckoCard {
     private static final int DAMAGE = 0;
 
     public SnekBeam() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY);
+        //       super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
         this.exhaust = true;

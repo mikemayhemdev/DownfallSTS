@@ -21,8 +21,8 @@ public class SoulDraw extends AbstractSneckoCard {
 
     public SoulDraw() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        exhaust = true;
         baseMagicNumber = magicNumber = 2;
+        exhaust = true;
         tags.add(SneckoMod.SNEKPROOF);
         SneckoMod.loadJokeCardImage(this, "SoulDraw.png");
     }
@@ -30,6 +30,7 @@ public class SoulDraw extends AbstractSneckoCard {
 
     // coffee blast reprint because
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         ArrayList<AbstractCard> cards = OffclassHelper.getXRandomOffclassCards(magicNumber);
         for (AbstractCard c : cards) {
             if (!c.selfRetain) {
