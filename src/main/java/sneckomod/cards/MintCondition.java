@@ -13,8 +13,8 @@ public class MintCondition extends AbstractSneckoCard {
 
     public final static String ID = makeID("MintCondition");
 
-    private static final int BASE_BLOCK = 6;
-    private static final int MAGIC = 2;
+    private static final int BASE_BLOCK = 4;
+    private static final int MAGIC = 1;
     private static final int UPGRADE_BLOCK = 2;
 
     //just a block card

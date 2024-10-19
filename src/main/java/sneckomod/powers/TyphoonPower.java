@@ -125,6 +125,6 @@ public class TyphoonPower extends AbstractPower implements CloneablePowerInterfa
 
     @Override
     public AbstractPower makeCopy() {
-        return new TyphoonPower(this.amount);
+        return new ToxicPersonalityPower(this.amount);
     }
 }

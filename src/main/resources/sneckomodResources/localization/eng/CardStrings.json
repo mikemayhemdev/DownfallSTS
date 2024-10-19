@@ -149,8 +149,8 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotic Form",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Whenever you play an sneckomod:Offclass card, gain 1 Strength.",
-    "UPGRADE_DESCRIPTION": "Whenever you play an sneckomod:Offclass card, gain 1 Strength."
+    "DESCRIPTION": "sneckomod:Snekproof. NL At the end of your turn, gain 1 Strength for each unique sneckomod:Suit played this turn.",
+    "UPGRADE_DESCRIPTION": "At the end of your turn, gain 1 Strength for each unique sneckomod:Suit played this turn."
   },
   "sneckomod:SlitherStrike": {
     "NAME": "Slither Strike",
@@ -231,6 +231,10 @@
       " and obtain another ",
       " Relic."
     ]
+  },
+  "sneckomod:ToxicPersonality": {
+    "NAME": "Toxic Personality",
+    "DESCRIPTION": "Whenever you play a card that cost more than its original cost, apply Poison to ALL enemies equal to !M! times its cost."
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "Trash to Treasure",
