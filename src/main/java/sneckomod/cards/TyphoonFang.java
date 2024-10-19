@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import hermit.cards.AbstractDynamicCard;
 import sneckomod.SneckoMod;
 import sneckomod.powers.TyphoonPlusPower;
-import sneckomod.powers.TyphoonPower;
+import sneckomod.powers.ToxicPersonalityPower;
 
 public class TyphoonFang extends AbstractSneckoCard {
 
@@ -34,7 +34,7 @@ public class TyphoonFang extends AbstractSneckoCard {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
             if (isOverflowActive() && !this.purgeOnUse) {
                 if (!upgraded) {
-                    applyToSelf(new TyphoonPower(1));
+                    applyToSelf(new ToxicPersonalityPower(1));
                 }
                 if (upgraded) {
                     applyToSelf(new TyphoonPlusPower(1));

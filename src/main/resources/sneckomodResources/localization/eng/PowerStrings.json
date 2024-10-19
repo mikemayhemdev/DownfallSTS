@@ -34,9 +34,9 @@
   "sneckomod:SerpentMindPower": {
     "NAME": "Serpent Mind",
     "DESCRIPTIONS": [
-      "Whenever you play an #yOffclass card, gain #b",
-        " Strength.",
-      " Strength."
+      "At the end of your turn gain #b",
+        " Strength for each unique #Suit played this turn.",
+      " Strength for each unique #Suit played this turn."
     ]
   },
   "sneckomod:SnakeEyesPower": {
@@ -73,6 +73,13 @@
     "DESCRIPTIONS": [
       " is being transformed into another ",
       " relic."
+    ]
+  },
+  "sneckomod:ToxicPersonalityPower": {
+    "NAME": "Toxic Personality",
+    "DESCRIPTIONS": [
+      "Whenever you play a card that cost more than its original cost apply Poison to ALL enemies equal to #b",
+      " times its cost."
     ]
   },
   "sneckomod:TyphoonPower": {
