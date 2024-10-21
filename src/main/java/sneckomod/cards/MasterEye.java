@@ -11,7 +11,7 @@ public class MasterEye extends AbstractSneckoCard {
 
     public MasterEye() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         rawDescription = UPGRADE_DESCRIPTION;
         tags.add(SneckoMod.SNEKPROOF);
         initializeDescription();

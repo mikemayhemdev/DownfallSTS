@@ -365,4 +365,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
         return super.getPortraitImage();
     }
 
+    public void onMuddledSword() {
+        // help
+    }
 }
