@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
+import sneckomod.cards.RiskySword;
+import sneckomod.powers.BlunderGuardPower;
 import sneckomod.powers.MudshieldPower;
 import sneckomod.relics.CleanMud;
 import sneckomod.relics.CrystallizedMud;
@@ -30,6 +32,10 @@ public class MuddleAction extends AbstractGameAction {
 
     public void update() {
         isDone = true;
+        if (card instanceof RiskySword) {
+            // Cast the card to RiskySword and call the onMuddled method
+            ((RiskySword) card).onMuddledSword();
+        }
         if (card.cost >= 0 && !card.hasTag(SneckoMod.SNEKPROOF)) {// 32
             if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {
                 AbstractDungeon.player.getPower(MudshieldPower.POWER_ID).onSpecificTrigger();
@@ -51,8 +57,13 @@ public class MuddleAction extends AbstractGameAction {
             if (card.costForTurn != newCost) {// 34
                 card.setCostForTurn(newCost);
             }
-
+            if (AbstractDungeon.player.hasPower(BlunderGuardPower.POWER_ID)){
+                if ((card.costForTurn == 3)) {
+                        AbstractDungeon.player.getPower(BlunderGuardPower.POWER_ID).onSpecificTrigger();
+            }
+            }
             card.freeToPlayOnce = false;// 39
         }
     }
+
 }

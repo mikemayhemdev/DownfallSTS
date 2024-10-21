@@ -1,4 +1,12 @@
 {
+  "sneckomod:BlunderGuardPower": {
+    "NAME": "Blunder Guard",
+    "DESCRIPTIONS": [
+      "Whenever you #yMuddle a card to cost 3, draw #b",
+      " card.",
+      " cards."
+    ]
+  },
   "sneckomod:CheapStockPower": {
     "NAME": "Cheap Stock",
     "DESCRIPTIONS": [
@@ -29,6 +37,14 @@
     "DESCRIPTIONS": [
       "Whenever you #yMuddle a card, gain #b",
       " #yBlock."
+    ]
+  },
+  "sneckomod:OverwhelmingPresence": {
+    "NAME": "Overwhelming Presence",
+    "DESCRIPTIONS": [
+      "The first time you play a card that costs 3 each turn, gain [E].",
+      "The first time you play a card that costs 3 each turn, gain ",
+      " [E]."
     ]
   },
   "sneckomod:SerpentMindPower": {

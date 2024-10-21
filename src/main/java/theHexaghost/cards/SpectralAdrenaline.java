@@ -16,7 +16,7 @@ public class SpectralAdrenaline extends AbstractHexaCard {
     public final static String ID = makeID("BrightRitual");
 
     public SpectralAdrenaline() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
@@ -43,7 +43,7 @@ public class SpectralAdrenaline extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeBaseCost(1);
         }
     }
 }

@@ -25,8 +25,7 @@ public class TrashToTreasure extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-        //    this.exhaust = false;
-            upgradeBaseCost(0);
+            this.exhaust = false;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

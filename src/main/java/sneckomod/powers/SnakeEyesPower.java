@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 
@@ -38,23 +39,26 @@ public class SnakeEyesPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-
+        // Check if the card is of a different color and not being purged
         if (card.color != AbstractDungeon.player.getCardColor() && !card.purgeOnUse) {
             AbstractCard tmp = card.makeStatEquivalentCopy();
-            tmp.purgeOnUse = true;
-            tmp.freeToPlayOnce = true;
+            tmp.purgeOnUse = true;  // Ensure the new card is purged after use
+            tmp.freeToPlayOnce = true;  // Set to free to play
 
+            // Add the temporary card to limbo
             AbstractDungeon.player.limbo.addToBottom(tmp);
             tmp.current_x = card.current_x;
             tmp.current_y = card.current_y;
             tmp.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
             tmp.target_y = (Settings.HEIGHT / 2.0F);
 
+            // Add the copied card to the card queue for use
             AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmp, null, card.energyOnUse));
 
+            // Decrease the power's amount and remove it if the amount reaches 0
             this.amount--;
             if (this.amount <= 0) {
-                addToBot(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, this));
+                addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
             }
             updateDescription();
         }
@@ -62,14 +66,15 @@ public class SnakeEyesPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
+        // Remove the power at the end of the turn
         if (isPlayer) {
-            addToBot(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, this));
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }
 
     @Override
     public void updateDescription() {
-
+        // Update the power description based on the amount
         if (this.amount == 1) {
             this.description = DESCRIPTIONS[0];
         } else {

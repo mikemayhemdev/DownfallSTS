@@ -3,6 +3,10 @@
     "NAME": "Blunderbus",
     "DESCRIPTION": "Deal !D! damage 2 times. Deal damage one more time for every 3+ cost card in hand."
   },
+  "sneckomod:BlunderGuard": {
+    "NAME": "Blunder Guard",
+    "DESCRIPTION": "Whenever you sneckomod:Muddle a card to cost 3, draw !M! card."
+  },
   "sneckomod:CheapStock": {
     "NAME": "Cheap Stock",
     "DESCRIPTION": "At the start of your turn, sneckomod:Muddle the highest cost card in your hand.",
@@ -58,6 +62,10 @@
     "NAME": "Glittering Gambit",
     "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! - 30 *Gold. NL Exhaust."
   },
+  "sneckomod:ImmovableObject": {
+    "NAME": "Immovable Object",
+    "DESCRIPTION": "Gain !B! Block. NL If the total cost of your hand is at least !M!, double your Block then Exhaust this."
+  },
   "sneckomod:IronFang": {
     "NAME": "Iron Fang",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Apply !M! Weak."
@@ -70,6 +78,10 @@
     "NAME": "Improvised Guard",
     "DESCRIPTION": "Gain !B! Block. NL Gain a random sneckomod:Offclass Skill and sneckomod:Muddle it."
   },
+  "sneckomod:LuckyBreak": {
+    "NAME": "Lucky Break",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card for each 2+ cost in hand."
+  },
   "sneckomod:Nope": {
     "NAME": "Nope",
     "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. Gain a random card of the same class.",
@@ -80,8 +92,8 @@
   },
   "sneckomod:MasterEye": {
     "NAME": "Master Eye",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Become Confused. NL Draw !M! additional card each turn.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Become Confused. NL Draw !M! additional card each turn."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Become Confused. NL Draw !M! additional cards each turn.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Become Confused. NL Draw !M! additional cards each turn."
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
@@ -106,6 +118,14 @@
   "sneckomod:Mudshield": {
     "NAME": "Mud Shield",
     "DESCRIPTION": "Whenever you sneckomod:Muddle a card, gain !M! Block."
+  },
+  "sneckomod:OverwhelmingPresence": {
+    "NAME": "Overwhelming Presence",
+    "DESCRIPTION": "The first time you play a card that costs 3 each turn, gain [E]."
+  },
+  "sneckomod:RiskySword": {
+    "NAME": "Risky Sword",
+    "DESCRIPTION": "Deal !D! Damage. NL When sneckomod:Muddled, increase this card's damage by !M! for this combat."
   },
   "sneckomod:PoisonParadise": {
     "NAME": "Poison Paradise",
@@ -239,7 +259,7 @@
   "sneckomod:TrashToTreasure": {
     "NAME": "Trash to Treasure",
     "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost."
   },
   "sneckomod:UnendingSupply": {
     "NAME": "Unending Supply",
