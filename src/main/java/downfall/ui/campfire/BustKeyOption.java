@@ -23,7 +23,6 @@ import downfall.vfx.campfire.BustKeyEffect;
 public class BustKeyOption extends AbstractCampfireOption {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("BustKeyButton"));
     public static final String[] TEXT = uiStrings.TEXT;
-    private static final int MAXHP_INC = 10;
     private Keys key;
     private boolean used;
     private boolean hacked;

@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.GemFinderPower;
-import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -26,13 +25,11 @@ public class GemFinder extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
 
-    //TUNING CONSTANTS
     private static final int UPGRADENEWCOST = 0;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

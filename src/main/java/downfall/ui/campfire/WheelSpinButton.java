@@ -41,34 +41,34 @@ public class WheelSpinButton extends AbstractCampfireOption {
     }
 
     public static void doStuff() {
-        AbstractDungeon.eventList.add(0, GremlinWheelGame_Rest.ID);// 50
-        MapRoomNode cur = AbstractDungeon.currMapNode;// 52
-        MapRoomNode node = new MapRoomNode(cur.x, cur.y);// 53
-        node.room = new CustomEventRoom();// 54
-        ArrayList<MapEdge> curEdges = cur.getEdges();// 56
+        AbstractDungeon.eventList.add(0, GremlinWheelGame_Rest.ID);
+        MapRoomNode cur = AbstractDungeon.currMapNode;
+        MapRoomNode node = new MapRoomNode(cur.x, cur.y);
+        node.room = new CustomEventRoom();
+        ArrayList<MapEdge> curEdges = cur.getEdges();
 
         for (MapEdge edge : curEdges) {
-            node.addEdge(edge);// 58
+            node.addEdge(edge);
         }
 
-        AbstractDungeon.player.releaseCard();// 61
-        AbstractDungeon.overlayMenu.hideCombatPanels();// 62
-        AbstractDungeon.previousScreen = null;// 63
-        AbstractDungeon.dynamicBanner.hide();// 64
-        AbstractDungeon.dungeonMapScreen.closeInstantly();// 65
-        AbstractDungeon.closeCurrentScreen();// 66
-        AbstractDungeon.topPanel.unhoverHitboxes();// 67
-        AbstractDungeon.fadeIn();// 68
-        AbstractDungeon.effectList.clear();// 69
-        AbstractDungeon.topLevelEffects.clear();// 70
-        AbstractDungeon.topLevelEffectsQueue.clear();// 71
-        AbstractDungeon.effectsQueue.clear();// 72
-        AbstractDungeon.dungeonMapScreen.dismissable = true;// 73
-        AbstractDungeon.nextRoom = node;// 74
-        AbstractDungeon.setCurrMapNode(node);// 75
-        AbstractDungeon.getCurrRoom().onPlayerEntry();// 76
-        AbstractDungeon.scene.nextRoom(node.room);// 77
-        AbstractDungeon.rs = node.room.event instanceof AbstractImageEvent ? AbstractDungeon.RenderScene.EVENT : AbstractDungeon.RenderScene.NORMAL;// 78
+        AbstractDungeon.player.releaseCard();
+        AbstractDungeon.overlayMenu.hideCombatPanels();
+        AbstractDungeon.previousScreen = null;
+        AbstractDungeon.dynamicBanner.hide();
+        AbstractDungeon.dungeonMapScreen.closeInstantly();
+        AbstractDungeon.closeCurrentScreen();
+        AbstractDungeon.topPanel.unhoverHitboxes();
+        AbstractDungeon.fadeIn();
+        AbstractDungeon.effectList.clear();
+        AbstractDungeon.topLevelEffects.clear();
+        AbstractDungeon.topLevelEffectsQueue.clear();
+        AbstractDungeon.effectsQueue.clear();
+        AbstractDungeon.dungeonMapScreen.dismissable = true;
+        AbstractDungeon.nextRoom = node;
+        AbstractDungeon.setCurrMapNode(node);
+        AbstractDungeon.getCurrRoom().onPlayerEntry();
+        AbstractDungeon.scene.nextRoom(node.room);
+        AbstractDungeon.rs = node.room.event instanceof AbstractImageEvent ? AbstractDungeon.RenderScene.EVENT : AbstractDungeon.RenderScene.NORMAL;
     }
 
     @Override

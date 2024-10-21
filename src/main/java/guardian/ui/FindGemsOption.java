@@ -4,13 +4,11 @@ import basemod.ReflectionHacks;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import downfall.util.TextureLoader;
 import guardian.GuardianMod;
-import guardian.relics.PickAxe;
 import guardian.vfx.CampfireFindGemsEffect;
 
 
@@ -24,10 +22,8 @@ public class FindGemsOption extends AbstractCampfireOption {
 
     }
 
-    //private ArrayList<String> idleMessages;
     public FindGemsOption(boolean active) {
         this.label = DESCRIPTIONS[0];
-        this.description = DESCRIPTIONS[1];
 
         this.usable = active;
         if (active) {
@@ -41,10 +37,10 @@ public class FindGemsOption extends AbstractCampfireOption {
 
     @Override
     public void useOption() {
-
         AbstractDungeon.effectList.add(new CampfireFindGemsEffect());
-        AbstractDungeon.player.getRelic(PickAxe.ID).onTrigger();
-
+        this.description = DESCRIPTIONS[2];
+        this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("ui/minecampfiredisabled.png"));
+        this.usable = false;
     }
 
     @Override

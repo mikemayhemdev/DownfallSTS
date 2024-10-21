@@ -39,9 +39,9 @@
   "Guardian:GemFinderPower": {
     "NAME": "开采宝石",
     "DESCRIPTIONS": [
-      "战斗结束后，选择一颗普通 #y宝石 加入牌组。",
-      "战斗结束后，选择 #b",
-      " 颗普通 #y宝石 加入牌组。"
+      "战斗结束后，可额外将一颗 #y宝石 加入牌组。",
+      "战斗结束后，可额外将 #b",
+      " 颗 #y宝石 加入牌组。"
     ]
   },
   "Guardian:FuturePlansPower": {
@@ -63,7 +63,7 @@
   "Guardian:ConstructModePower": {
     "NAME": "造物形态",
     "DESCRIPTIONS": [
-      "回合开始时，若你有 #y缓冲 ，获得 #b",
+      "你的回合开始时，若你有 #y缓冲 ，获得 #b",
       " 点 #y力量 。"
     ]
   },
@@ -130,7 +130,7 @@
     "NAME": "模式转换",
     "DESCRIPTIONS": [
       "再失去 #b",
-      " 点生命后，进入 #y防御模式 并获得 #b10 点 #y格挡 。 若已处于 #y防御模式 ，不获得 #y格挡 但额外获得 #b1 回合持续时间。 NL 每次进入 #y防御模式 时，下次进入所需的生命损失增加 #b10 点。（上限 #b50 点）"
+      " 点生命后，进入 #y防御模式 。"
     ]
   },
   "Guardian:ExhaustStatusesPower": {
@@ -144,8 +144,8 @@
   "Guardian:RevengePower": {
     "NAME": "复仇协议",
     "DESCRIPTIONS": [
-      "处于 #y防御模式 时，临时拥有 #b",
-      " 层 #y力量 。"
+      "你的回合开始时，提防 #b",
+      " 。"
     ]
   },
   "Guardian:StasisEnginePower": {
@@ -198,7 +198,7 @@
   "Guardian:DontLeaveDefensiveModePower": {
     "NAME": "处于防御模式",
     "DESCRIPTIONS": [
-      "你将在本回合结束时退出 #y防御模式 。",
+      "你将在下回合开始时退出 #y防御模式 。",
       "你将在 #b",
       " 个回合后退出 #y防御模式 。"
     ]

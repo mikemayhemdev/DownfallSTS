@@ -271,7 +271,7 @@ public class ChampChar extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new Taunt();
+        return new Execute();
     }
 
     @Override

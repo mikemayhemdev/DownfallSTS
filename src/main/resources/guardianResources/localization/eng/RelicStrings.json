@@ -101,7 +101,7 @@
     "NAME": "Pick of Rhapsody",
     "FLAVOR": "With as many gemstones that litter the Spire, it is hard to imagine anyone so unlucky to have needed this Pick to aid them.",
     "DESCRIPTIONS": [
-      "You can now #gMine for #b2 #yguardianmod:Gems at Rest Sites (up to #b3 times)."
+      "You can now #gMine for a single #yguardianmod:Gem at Rest Sites."
     ]
   },
   "Guardian:GemstoneGun": {

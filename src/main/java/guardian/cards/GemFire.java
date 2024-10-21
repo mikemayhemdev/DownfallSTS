@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -28,17 +29,14 @@ public class GemFire extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 12;
     private static int gem_count=0;
 
-    //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 5;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -51,7 +49,7 @@ public class GemFire extends AbstractGuardianCard {
     public GemFire() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
-        this.exhaust = true;
+//        this.exhaust = true;
         this.baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = 0;
         this.socketCount = SOCKETS;
@@ -79,9 +77,9 @@ public class GemFire extends AbstractGuardianCard {
     public void countCards(){
         GemFire.gem_count=0;
         count_gems_from_group(AbstractDungeon.player.hand);
-        count_gems_from_group(AbstractDungeon.player.drawPile);
-        count_gems_from_group(AbstractDungeon.player.discardPile);
-        count_gems_from_group(this.gatherStasisCards());
+//        count_gems_from_group(AbstractDungeon.player.drawPile);
+//        count_gems_from_group(AbstractDungeon.player.discardPile);
+//        count_gems_from_group(this.gatherStasisCards());
     }
 
     public void count_gems_from_group(CardGroup group) {
@@ -103,15 +101,15 @@ public class GemFire extends AbstractGuardianCard {
         }
     }
 
-    public CardGroup gatherStasisCards(){
-        CardGroup stasiscards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o instanceof StasisOrb) {
-                stasiscards.group.add( ((StasisOrb) o).stasisCard );
-            }
-        }
-        return stasiscards;
-    }
+//    public CardGroup gatherStasisCards(){
+//        CardGroup stasiscards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+//        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+//            if (o instanceof StasisOrb) {
+//                stasiscards.group.add( ((StasisOrb) o).stasisCard );
+//            }
+//        }
+//        return stasiscards;
+//    }
 
     public AbstractCard makeCopy() {
         return new GemFire();
@@ -129,14 +127,28 @@ public class GemFire extends AbstractGuardianCard {
 
     public void updateDescription() {
 
-        if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
-            } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
+//        if (this.socketCount > 0) {
+//            if (upgraded && UPGRADED_DESCRIPTION != null) {
+//                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
+//            } else {
+//                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
+//            }
+//        }
+        this.initializeDescription();
+    }
+
+    @Override //zhs card text thing
+    public void initializeDescriptionCN() {
+        super.initializeDescriptionCN();
+        if((Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT) && this.description!=null && this.description.size()>=1 ) {
+            for(int i=0; i < this.description.size(); i++){
+                if(this.description.get(i).text.equals("，")){
+                    StringBuilder sb = new StringBuilder();
+                    this.description.get(i-1).text = sb.append(this.description.get(i-1).text).append("，").toString();
+                    this.description.remove(i);
+                }
             }
         }
-        this.initializeDescription();
     }
 }
 

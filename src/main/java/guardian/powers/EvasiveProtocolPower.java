@@ -2,7 +2,6 @@ package guardian.powers;
 
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -36,8 +35,8 @@ public class EvasiveProtocolPower extends AbstractGuardianPower implements Defen
 
     @Override
     public void onLeave() {
-        flash();
-        addToBot(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DexterityPower.POWER_ID, amount));
+//        flash();
+//        addToBot(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DexterityPower.POWER_ID, amount));
     }
 
     public void updateDescription() {

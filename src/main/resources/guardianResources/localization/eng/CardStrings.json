@@ -19,8 +19,8 @@
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "Tourmaline",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 4 temporary Thorns.",
-    "UPGRADE_DESCRIPTION": "Gain 4 temp. Thorns."
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 2 Thorns.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Thorns."
   },
   "Guardian:Gem_White": {
     "NAME": "Opal",
@@ -157,8 +157,8 @@
   },
   "Guardian:PackageSphere": {
     "NAME": "Package: Spheric",
-    "DESCRIPTION": "Gain a *Spheric *Shield, *Floating *Orbs, and *Metallicize. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a *Spheric *Shield+, *Floating *Orbs+, and *Metallicize+. NL Exhaust."
+    "DESCRIPTION": "Gain a *Spheric *Shield, *Floating *Orbs, and *Armored *Protocol. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain a *Spheric *Shield+, *Floating *Orbs+, and *Armored *Protocol+. NL Exhaust."
   },
   "Guardian:PackageSentry": {
     "NAME": "Package: Sentry",
@@ -204,7 +204,7 @@
   },
   "Guardian:GemFinder": {
     "NAME": "Gem Finder",
-    "DESCRIPTION": "At the end of combat, you may choose a Common guardianmod:Gem to add to your deck."
+    "DESCRIPTION": "At the end of combat, obtain a random guardianmod:Gem."
   },
   "Guardian:StasisField": {
     "NAME": "Stasis Field",
@@ -244,7 +244,7 @@
   },
   "Guardian:GemFire": {
     "NAME": "Gem Cannon",
-    "DESCRIPTION": "Exhaust ALL Gems, including Socketed ones. Deal !D! damage to a random enemy for each. Exhaust.",
+    "DESCRIPTION": "Exhaust ALL guardianmod:Gems in your hand. Deal !D! damage to a random enemy for each.",
     "UPGRADE_DESCRIPTION": " NL (Hits !M! time(s).)"
   },
   "Guardian:ChargeCore": {
@@ -303,15 +303,15 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "Evasive Protocol",
-    "DESCRIPTION": "While in *Defensive *Mode, raise your Dexterity by !M!. NL At the start of your turn, guardianmod:Brace 3."
+    "DESCRIPTION": "Whenever you enter *Defensive *Mode, gain !M! Dexterity."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "Spiker Protocol",
-    "DESCRIPTION": "Gain !M! Thorns while in *Defensive *Mode. NL At the start of your turn, guardianmod:Brace 3."
+    "DESCRIPTION": "Whenever you enter *Defensive *Mode, gain !M! Thorns."
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "Armored Protocol",
-    "DESCRIPTION": "Gain !M! Block at the end of each turn while in *Defensive *Mode. NL At the start of your turn, guardianmod:Brace 3."
+    "DESCRIPTION": "Whenever you enter *Defensive *Mode, gain !M! *Metallicize."
   },
   "Guardian:TimeSifter": {
     "NAME": "Time Sifter",
@@ -366,8 +366,8 @@
     "DESCRIPTION": "Gain !B! Block. NL Exhaust."
   },
   "Guardian:Repulse": {
-    "NAME": "Repulsor",
-    "DESCRIPTION": "When you draw the first Status or Curse card each turn, Exhaust it and draw a card.",
+    "NAME": "Repulsive Protocol",
+    "DESCRIPTION": "Whenever you enter *Defensive *Mode, Exhaust a card in your hand.",
     "UPGRADE_DESCRIPTION": "When you draw the first Status or Curse card each turn, Exhaust it and draw a card."
   },
   "Guardian:BronzeOrb": {
@@ -375,8 +375,8 @@
     "DESCRIPTION": "Innate. NL Deal !D! damage. Put a random card from your draw pile into guardianmod:Stasis. Exhaust."
   },
   "Guardian:RevengeProtocol": {
-    "NAME": "Revenge Protocol",
-    "DESCRIPTION": "While in *Defensive *Mode, raise your Strength by !M!. NL At the start of your turn, guardianmod:Brace !GuardianSecondM!."
+    "NAME": "Alert Protocol",
+    "DESCRIPTION": "At the start of your turn, guardianmod:Brace !GuardianSecondM!."
   },
   "Guardian:GatlingBeam": {
     "NAME": "Laser Turret",
