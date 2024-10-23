@@ -19,7 +19,7 @@
     "NAMES": [
       "Overflow", "overflow"
     ],
-    "DESCRIPTION": "Overflow is active if you have 5 or more cards in hand or if the card costs 3."
+    "DESCRIPTION": "Overflow effects activate if you have more than 5 cards in hand."
   },
   {
     "PROPER_NAME": "Muddle",

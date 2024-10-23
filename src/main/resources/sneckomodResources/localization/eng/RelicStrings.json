@@ -3,7 +3,7 @@
     "NAME": "Snecko Soul",
     "FLAVOR": "0...3...2...2...1",
     "DESCRIPTIONS": [
-      "The first time you play an #ysneckomod:Offclass card in a combat, gain [E] and draw a card."
+      "At the start of each combat, add a #ySoul #yRoll to your hand."
     ]
   },
   "sneckomod:SuperSneckoSoul": {

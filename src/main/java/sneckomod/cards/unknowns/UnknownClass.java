@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.function.Predicate;
 
 import static sneckomod.SneckoMod.makeCardPath;
-
+@Deprecated
 @CardIgnore
 public class UnknownClass extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownClass");
@@ -24,7 +24,7 @@ public class UnknownClass extends AbstractUnknownCard {
     public CardColor myColor;
 
     public UnknownClass(CardColor cardColor) {
-        super(ID + cardColor.name(), determineCardImg(cardColor), CardType.SKILL, CardRarity.COMMON, true);
+        super(ID + cardColor.name(), determineCardImg(cardColor), CardType.SKILL, CardRarity.SPECIAL, true);
         TID = ID + cardColor.name();
         myColor = cardColor;
         name = unknownClass[0];
