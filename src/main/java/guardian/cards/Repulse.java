@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.ExhaustStatusesPower;
+import guardian.powers.RepulsiveProtocolPower;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -23,15 +24,12 @@ public class Repulse extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
-    //TUNING CONSTANTS
     private static final int STATUSNEGATION = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -53,10 +51,7 @@ public class Repulse extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ExhaustStatusesPower(p, p, this.magicNumber), this.magicNumber));
-
-
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RepulsiveProtocolPower(p, this.magicNumber), this.magicNumber));
     }
 
     public AbstractCard makeCopy() {
@@ -66,19 +61,19 @@ public class Repulse extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeBaseCost(0);
         }
     }
 
     public void updateDescription() {
 
-        if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
-            } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
-            }
-        }
+//        if (this.socketCount > 0) {
+//            if (upgraded && UPGRADED_DESCRIPTION != null) {
+//                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
+//            } else {
+//                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
+//            }
+//        }
         this.initializeDescription();
     }
 }

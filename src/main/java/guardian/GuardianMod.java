@@ -324,6 +324,29 @@ public class GuardianMod implements PostDrawSubscriber,
     }
 
 
+    public static AbstractCard getSingleRewardGemWithWeight() {
+        AbstractCard.CardRarity gem_rarity = AbstractDungeon.rollRarity();
+        ArrayList<AbstractCard> gems = new ArrayList<>();
+        gems.add(new Gem_Red());
+        gems.add(new Gem_Blue());
+        gems.add(new Gem_Green());
+        gems.add(new Gem_Lightblue());
+        gems.add(new Gem_Yellow());
+        gems.add(new Gem_Purple());
+        gems.add(new Gem_Fragmented());
+        gems.add(new Gem_Crimson());
+        gems.add(new Gem_White());
+        gems.add(new Gem_Cyan());
+        gems.add(new Gem_Orange());
+        gems.add(new Gem_Synthetic());
+        int i = AbstractDungeon.cardRng.random(gems.size()-1);
+        while(gems.get(i).rarity != gem_rarity){
+            i = AbstractDungeon.cardRng.random(gems.size()-1);
+        }
+        return gems.get(i);
+    }
+
+
     public static ArrayList<AbstractCard> getRewardGemCards(boolean onlyCommon, int count) {
         ArrayList<String> allGemCards = new ArrayList<>();
         ArrayList<AbstractCard> rewardGemCards = new ArrayList<>();
@@ -331,10 +354,11 @@ public class GuardianMod implements PostDrawSubscriber,
         allGemCards.add("RED");
         allGemCards.add("GREEN");
         allGemCards.add("LIGHTBLUE");
+        allGemCards.add("BLUE");
+
         if (!onlyCommon) allGemCards.add("ORANGE");
         if (!onlyCommon) allGemCards.add("CYAN");
         if (!onlyCommon) allGemCards.add("WHITE");
-        allGemCards.add("BLUE");
         if (!onlyCommon) allGemCards.add("CRIMSON");
         if (!onlyCommon) allGemCards.add("FRAGMENTED");
         if (!onlyCommon) allGemCards.add("PURPLE");
@@ -651,7 +675,7 @@ public static void saveData() {
         BaseMod.addCard(new RefractedBeam());
         BaseMod.addCard(new SpikerProtocol());
         //BaseMod.addCard(new ArmoredProtocol());
-        BaseMod.addCard(new Metallicize());
+        BaseMod.addCard(new ArmoredProtocol());
         BaseMod.addCard(new StrikeForStrike());
         BaseMod.addCard(new EvasiveProtocol());
         BaseMod.addCard(new TimeSifter());
@@ -1056,7 +1080,7 @@ public static void saveData() {
             AbstractGemCard starter_gem = (AbstractGemCard) GuardianMod.getRewardGemCards(true, 1).get(0).makeStatEquivalentCopy();
             cardGroup.addToTop(starter_gem);
             // this adds the real save&load friendly gem on floor 0, sentences below enable the
-            // show-card-and-card-flies-to-deck visual effect ,by adding a dummy card and remove it instantly
+            // show-card-and-card-flies-to-deck visual effect, by adding a dummy card and remove it instantly
 
             AbstractGemCard dummy_starter_gem_to_be_removed = (AbstractGemCard) starter_gem.makeStatEquivalentCopy();
             AbstractDungeon.effectList.add(new AddGemToStartingDeckEffect(dummy_starter_gem_to_be_removed, (Settings.WIDTH * 0.5F), (Settings.HEIGHT * 0.5F)));

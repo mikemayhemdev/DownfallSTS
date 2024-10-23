@@ -159,9 +159,9 @@ public class GemFireAction extends AbstractGameAction {
 
     public int get_cards(){
         addGemsFromGroup(AbstractDungeon.player.hand);
-        addGemsFromGroup(AbstractDungeon.player.drawPile);
-        addGemsFromGroup(AbstractDungeon.player.discardPile);
-        addGemsFromGroup(this.gatherStasisCards());
+//        addGemsFromGroup(AbstractDungeon.player.drawPile);
+//        addGemsFromGroup(AbstractDungeon.player.discardPile);
+//        addGemsFromGroup(this.gatherStasisCards());
         return exhaustCount;
     }
 

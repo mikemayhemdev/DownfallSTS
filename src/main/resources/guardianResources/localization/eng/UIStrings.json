@@ -12,7 +12,7 @@
     "TEXT": [
       "Choose a Card to place into Stasis.",
       "Pick a Gem.",
-      "Add a Common Gem to your deck",
+      "Add a Gem to your deck",
       "place into Stasis.",
       "~ERROR:~ Cannot #rAttack in Construction Mode.",
       "~ERROR:~ #rStasis in progress.",
@@ -23,8 +23,8 @@
   "Guardian:FindGemsOption": {
     "TEXT": [
       "Mine",
-      "Gain 2 random Gems.",
-      "Pick broken."
+      "(Free Action) Gain a random Gem.",
+      "Mine exploited here."
     ]
   },
   "Guardian:BraceMod": {

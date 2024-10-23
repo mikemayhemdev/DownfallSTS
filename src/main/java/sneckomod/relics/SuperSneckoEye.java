@@ -17,7 +17,7 @@ public class SuperSneckoEye extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SuperSneckoEye.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("SuperSneckoEye.png"));
     public boolean activated = false;
-
+    private boolean added_hand_size = false;
     public SuperSneckoEye() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
@@ -64,7 +64,10 @@ public class SuperSneckoEye extends CustomRelic {
     }
 
     public void onEquip() {
-        AbstractDungeon.player.masterHandSize += 2;
+        if(!added_hand_size) {
+            AbstractDungeon.player.masterHandSize += 2;
+            added_hand_size = true;
+        }
     }
 
     public void onUnequip() {

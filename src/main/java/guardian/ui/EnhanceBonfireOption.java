@@ -5,9 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import downfall.util.TextureLoader;
@@ -25,7 +23,6 @@ public class EnhanceBonfireOption extends AbstractCampfireOption {
 
     }
 
-    //private ArrayList<String> idleMessages;
     public EnhanceBonfireOption(boolean active) {
         this.label = DESCRIPTIONS[0];
 
