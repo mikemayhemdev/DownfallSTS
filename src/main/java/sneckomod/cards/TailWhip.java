@@ -12,8 +12,8 @@ public class TailWhip extends AbstractSneckoCard {
 
     //stupid intellij stuff ATTACK, ENEMY, BASIC
 
-    private static final int DAMAGE = 10;
-    private static final int MAGIC = 0;
+    private static final int DAMAGE = 9;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
     public TailWhip() {
@@ -27,34 +27,26 @@ public class TailWhip extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        int x = getRandomNum(magicNumber, 2, this);
+        int x = 0;
         // this is probably bad practice but it works
         if (isOverflowActive()) {
-            x = 2;
+            x = magicNumber;
         }
         if (x > 0)
             applyToEnemy(m, autoWeak(m, x));
-        int y = getRandomNum(magicNumber, 2, this);
+        int y = 0;
         if (isOverflowActive()){
-            y = 2;
+            y = magicNumber;
         }
         if (y > 0)
             applyToEnemy(m, autoVuln(m, y));
         // atb(new MuddleHandAction());
     }
 
-    //Glowverflow - make the card glow if overflow is active~
-    public void triggerOnGlowCheck() {
-        this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        if (isOverflowActive()) {
-            this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        }
-    }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
             upgradeMagicNumber(UPG_MAGIC);
         }
     }

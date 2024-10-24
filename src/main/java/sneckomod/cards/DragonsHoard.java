@@ -33,13 +33,6 @@ public class DragonsHoard extends AbstractSneckoCard {
 
     }
 
-    //Glowverflow - make the card glow if overflow is active~
-    public void triggerOnGlowCheck() {
-        this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        if (isOverflowActive()) {
-            this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        }
-    }
 
     public void upgrade() {
         if (!upgraded) {

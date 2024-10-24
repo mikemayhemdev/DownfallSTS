@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.util.CardIgnore;
 import guardian.patches.BottledStasisPatch;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
@@ -30,6 +31,7 @@ import java.util.function.Predicate;
 
 
 public abstract class AbstractUnknownCard extends AbstractSneckoCard implements StartupCard, CustomSavable<String> {
+@Deprecated
 
     public AbstractCard lastUnknownRoll;
 

@@ -218,7 +218,7 @@
   },
   "sneckomod:SoulRoll": {
     "NAME": "Soul Roll",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !B! Block. NL Choose a card to sneckomod:Muddle."
+    "DESCRIPTION": "Retain. NL sneckomod:Snekproof. NL Gain !B! Block. NL Choose a card to sneckomod:Muddle. NL Exhaust."
   },
   "sneckomod:Strike": {
     "NAME": "Strike",
@@ -239,7 +239,7 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! - 2 Weak and Vulnerable. NL sneckomod:Overflow: Always apply 2 of each."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Overflow: Apply !M! Weak and Vulnerable."
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",

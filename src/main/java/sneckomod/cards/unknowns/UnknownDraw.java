@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.util.CardIgnore;
 import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
@@ -17,13 +18,14 @@ import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
-
+@Deprecated
+@CardIgnore
 public class UnknownDraw extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownDraw");
     public static boolean bruh = false;
 
     public UnknownDraw() {
-        super(ID, CardType.SKILL, CardRarity.COMMON);
+        super(ID, CardType.SKILL, CardRarity.SPECIAL);
         SneckoMod.loadJokeCardImage(this, "UnknownDraw.png");
     }
 

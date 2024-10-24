@@ -3,16 +3,18 @@ package sneckomod.cards.unknowns;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
-
+@Deprecated
+@CardIgnore
 public class Unknown0Cost extends AbstractUnknownCard {
     public final static String ID = makeID("Unknown0Cost");
 
     public Unknown0Cost() {
-        super(ID, CardType.SKILL, CardRarity.UNCOMMON);
+        super(ID, CardType.SKILL, CardRarity.SPECIAL);
         SneckoMod.loadJokeCardImage(this, "Unknown0Cost.png");
     }
 

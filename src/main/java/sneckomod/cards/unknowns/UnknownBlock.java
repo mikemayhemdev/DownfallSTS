@@ -5,17 +5,19 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.Keyword;
+import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
-
+@Deprecated
+@CardIgnore
 public class UnknownBlock extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownBlock");
     public static boolean bruh = false;
 
     public UnknownBlock() {
-        super(ID, CardType.SKILL, CardRarity.COMMON);
+        super(ID, CardType.SKILL, CardRarity.SPECIAL);
         SneckoMod.loadJokeCardImage(this, "UnknownBlock.png");
     }
 

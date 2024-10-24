@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import downfall.util.CardIgnore;
 import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
@@ -16,13 +17,14 @@ import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
-
+@Deprecated
+@CardIgnore
 public class UnknownVulnerable extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownVulnerable");
     public static boolean bruh = false;
 
     public UnknownVulnerable() {
-        super(ID, CardType.SKILL, CardRarity.UNCOMMON);
+        super(ID, CardType.SKILL, CardRarity.SPECIAL);
         SneckoMod.loadJokeCardImage(this, "UnknownVulnerable.png");
     }
 

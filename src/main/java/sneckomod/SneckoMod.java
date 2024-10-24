@@ -353,7 +353,7 @@ public class SneckoMod implements
     public void receiveSetUnlocks() {
 
         downfallMod.registerUnlockSuite(
-                Memorize.ID,
+                SoulDraw.ID,
                 PureSnecko.ID,
                 Rotation.ID,
 

@@ -24,7 +24,6 @@ import sneckomod.powers.CheatPower;
 import sneckomod.relics.D8;
 import sneckomod.relics.LoadedDie;
 
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -77,7 +76,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
         initializeDescription();
     }
 
-    public AbstractSneckoCard(final String id, final String img, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, boolean IsClass) {
+    public AbstractSneckoCard(final String id, final String img,  final int cost, final CardType type, final CardRarity rarity, final CardTarget target, boolean IsClass) {
         super(id, "ERROR", getCorrectPlaceholderImage(img),
                 cost, "ERROR", type, TheSnecko.Enums.SNECKO_CYAN, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings("sneckomod:Unknown0Cost");
@@ -136,6 +135,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
         }
         return sum;
     }
+
 
     public static int getRandomNum(int a, int b, AbstractSneckoCard source) {
         int min, max;
@@ -283,7 +283,8 @@ public abstract class AbstractSneckoCard extends CustomCard {
             if (this.rawDescription.contains(name)) {
                 if (SneckoMod.validColors.size() > 3) {
                     tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[5]));
-                } else if (SneckoMod.validColors.isEmpty()) {
+                }
+                else if (SneckoMod.validColors.isEmpty()) {
                     tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[4]));
                 } else {
                     tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[2] + unknownUpgrade[3] + getCharList()));
@@ -296,15 +297,15 @@ public abstract class AbstractSneckoCard extends CustomCard {
     public boolean isOverflowActive() { // initial overflow mechanic :)
         boolean OVERFLOW = false; // reset overflow state
 
-        // Are there more than 4 cards in hand?
-        if (AbstractDungeon.player.hand.size() > 4) {
+        // Are there more than 5 cards in hand?
+        if (AbstractDungeon.player.hand.size() > 5) {
             OVERFLOW = true;
         }
         // THANK YOU VEX
-        if (costForTurn >= 3){
-            // if (costForTurn >= 3 && !freeToPlay()){
-            OVERFLOW = true;
-        }
+        //  if (costForTurn >= 3) {
+        //     // if (costForTurn >= 3 && !freeToPlay()){
+        //    OVERFLOW = true;
+        //    }
         return OVERFLOW; // return true or false
     }
 
@@ -314,8 +315,8 @@ public abstract class AbstractSneckoCard extends CustomCard {
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
             // these don't count because I said so. Sandtag convinced me that status and curse should count.
             if (
-            //(card.type == AbstractCard.CardType.STATUS ||
-            //        card.type == AbstractCard.CardType.CURSE ||
+                //(card.type == AbstractCard.CardType.STATUS ||
+                //        card.type == AbstractCard.CardType.CURSE ||
                     (card.color == AbstractCard.CardColor.COLORLESS && card.rarity == AbstractCard.CardRarity.SPECIAL)) {
                 continue;
             }
@@ -327,13 +328,13 @@ public abstract class AbstractSneckoCard extends CustomCard {
     }
 
     public int getUniqueSuitsPlayedThisTurn() {
-        Set<AbstractCard.CardColor> uniqueColors = new HashSet<>(); // another one of these
+        Set<CardColor> uniqueColors = new HashSet<>(); // another one of these
 
         for (AbstractCard card : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
             // they still don't count because I said so. Sandtag convinced me that status and curse should count.
             if (
-            //(card.type != AbstractCard.CardType.STATUS &&
-            //        card.type != AbstractCard.CardType.CURSE &&
+                //(card.type != AbstractCard.CardType.STATUS &&
+                //        card.type != AbstractCard.CardType.CURSE &&
                     !(card.color == AbstractCard.CardColor.COLORLESS && card.rarity == AbstractCard.CardRarity.SPECIAL)) {
 
                 uniqueColors.add(card.color);
@@ -341,6 +342,9 @@ public abstract class AbstractSneckoCard extends CustomCard {
         }
 
         return uniqueColors.size(); // number colors played per turn hopefully
+    }
+    public void onMuddledSword() {
+        // help
     }
 
     @Override
@@ -363,9 +367,5 @@ public abstract class AbstractSneckoCard extends CustomCard {
             }
         }
         return super.getPortraitImage();
-    }
-
-    public void onMuddledSword() {
-        // help
     }
 }

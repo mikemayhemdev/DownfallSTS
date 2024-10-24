@@ -18,15 +18,16 @@ public class SoulRoll extends AbstractSneckoCard {
 
     //stupid intellij stuff SKILL, SELF, COMMON
     private static final int BLOCK = 3;
-    private static final int UPGRADE_BLOCK = 1;
+    private static final int UPGRADE_BLOCK = 3;
     private static final int MAGIC = 1;
 
     public SoulRoll() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         tags.add(SneckoMod.SNEKPROOF);
         SneckoMod.loadJokeCardImage(this, "SoulRoll.png");
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
