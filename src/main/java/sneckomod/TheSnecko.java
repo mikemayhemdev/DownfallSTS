@@ -112,14 +112,13 @@ public class TheSnecko extends CustomPlayer {
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(TailWhip.ID);
         retVal.add(SnekBite.ID);
-        retVal.add(Unknown.ID);
-        retVal.add(Unknown.ID);
         return retVal;
     }
 
