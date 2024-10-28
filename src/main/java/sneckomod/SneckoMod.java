@@ -99,6 +99,8 @@ public class SneckoMod implements
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags BANNEDFORSNECKO;
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags OVERFLOW; // Overflow Tag
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags MUDDLED;
 
     public static Random identifyRng;
 

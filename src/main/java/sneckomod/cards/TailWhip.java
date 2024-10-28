@@ -12,7 +12,7 @@ public class TailWhip extends AbstractSneckoCard {
 
     //stupid intellij stuff ATTACK, ENEMY, BASIC
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 10;
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
@@ -21,7 +21,6 @@ public class TailWhip extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "TailWhip.png");
-        this.tags.add(SneckoMod.RNG);
         this.tags.add(SneckoMod.OVERFLOW);
     }
 
@@ -29,13 +28,13 @@ public class TailWhip extends AbstractSneckoCard {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
         int x = 0;
         // this is probably bad practice but it works
-        if (isOverflowActive()) {
+        if (isOverflowActive(this)) {
             x = magicNumber;
         }
         if (x > 0)
             applyToEnemy(m, autoWeak(m, x));
         int y = 0;
-        if (isOverflowActive()){
+        if (isOverflowActive(this)){
             y = magicNumber;
         }
         if (y > 0)

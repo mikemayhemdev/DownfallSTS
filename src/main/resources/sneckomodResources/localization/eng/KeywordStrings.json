@@ -25,7 +25,8 @@
     "PROPER_NAME": "Muddle",
     "NAMES": [
       "muddle",
-      "muddled"
+      "muddled",
+      "muddles"
     ],
     "DESCRIPTION": "Muddling a card changes its cost this turn to between #b0 and #b3 at random."
   },

@@ -450,8 +450,8 @@
   },
   "hexamod:OpposingAction": {
     "NAME": "Opposing Action",
-    "DESCRIPTION": "hexamod:Retract. NL Gain [E]. Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] [E]. Exhaust."
+    "DESCRIPTION": "hexamod:Retract. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] [E]. NL Exhaust."
   },
   "hexamod:SeventhEye": {
     "NAME": "Seventh Eye",

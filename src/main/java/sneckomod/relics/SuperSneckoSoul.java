@@ -1,40 +1,50 @@
 package sneckomod.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
-import sneckomod.cards.unknowns.AbstractUnknownCard;
+import sneckomod.actions.SuperSneckoSoulAction;
 import downfall.util.TextureLoader;
+import sneckomod.cards.SoulRoll;
 
 public class SuperSneckoSoul extends CustomRelic {
 
     public static final String ID = SneckoMod.makeID("SuperSneckoSoul");
     private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SuperSneckoSoul.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("SuperSneckoSoul.png"));
-
     public SuperSneckoSoul() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+        this.counter = 0;
     }
 
+    @Override
     public void atTurnStart() {
         grayscale = false;
     }
 
+    @Override
     public void onVictory() {
         grayscale = false;
+        this.counter = 0;
     }
 
-    public void onUseCard(AbstractCard c, UseCardAction action) {
-        if (!grayscale && c.color != AbstractDungeon.player.getCardColor()) {
-            addToTop(new GainEnergyAction(1));
-            grayscale = true;
+    @Override
+    public void atTurnStartPostDraw() {
+        if (this.counter == 2) {
+            this.counter = 0;
         }
+        if (this.counter == 0) {
+            this.addToTop(new MakeTempCardInHandAction(new SoulRoll(), 1, false));
+            flash();
+        }
+        if (this.counter != 0) {
+            AbstractDungeon.actionManager.addToBottom(new SuperSneckoSoulAction());
+        }
+
+        ++this.counter;
     }
 
     @Override
@@ -60,5 +70,4 @@ public class SuperSneckoSoul extends CustomRelic {
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }
-
 }

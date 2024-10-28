@@ -22,7 +22,7 @@ public class PoisonParadise extends AbstractSneckoCard {
 
         public void use (AbstractPlayer p, AbstractMonster m){
             applyToEnemy(m, new PoisonPower(m, p, magicNumber));
-            if (isOverflowActive()){
+            if (isOverflowActive(this)){
                 applyToEnemy(m, new PoisonPower(m, p, magicNumber));
             }
         }

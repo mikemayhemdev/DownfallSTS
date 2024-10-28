@@ -5,9 +5,11 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
-
+@Deprecated
+@CardIgnore
 public class SnakeSap extends AbstractSneckoCard {
 
     public final static String ID = makeID("SnakeSap");
@@ -19,7 +21,7 @@ public class SnakeSap extends AbstractSneckoCard {
     private static final int UPG_MAGIC = 1;
 
     public SnakeSap() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         baseSilly = silly = 1;

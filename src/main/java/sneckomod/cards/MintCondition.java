@@ -13,7 +13,7 @@ public class MintCondition extends AbstractSneckoCard {
 
     public final static String ID = makeID("MintCondition");
 
-    private static final int BASE_BLOCK = 4;
+    private static final int BASE_BLOCK = 5;
     private static final int MAGIC = 2;
     private static final int UPGRADE_BLOCK = 2;
 
@@ -34,7 +34,7 @@ public class MintCondition extends AbstractSneckoCard {
             addToBot(new GainBlockAction(p, p, block));
         }
 
-        if (isOverflowActive()) {
+        if (isOverflowActive(this)) {
             addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, magicNumber), magicNumber));
         }
     }

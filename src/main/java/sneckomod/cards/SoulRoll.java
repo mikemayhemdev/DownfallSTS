@@ -23,11 +23,11 @@ public class SoulRoll extends AbstractSneckoCard {
 
     public SoulRoll() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        tags.add(SneckoMod.SNEKPROOF);
         SneckoMod.loadJokeCardImage(this, "SoulRoll.png");
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
+        this.selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

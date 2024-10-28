@@ -1,5 +1,6 @@
 package sneckomod.cards.unknowns;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import downfall.util.CardIgnore;
@@ -7,8 +8,7 @@ import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
-@Deprecated
-@CardIgnore
+@NoCompendium
 public class UnknownColorless extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownColorless");
 

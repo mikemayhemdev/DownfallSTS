@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import hermit.cards.AbstractDynamicCard;
 import hermit.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
@@ -294,30 +295,48 @@ public abstract class AbstractSneckoCard extends CustomCard {
         return tips;
     }
 
-    public boolean isOverflowActive() { // initial overflow mechanic :)
-        boolean OVERFLOW = false; // reset overflow state
 
-        // Are there more than 5 cards in hand?
-        if (AbstractDungeon.player.hand.size() > 5) {
-            OVERFLOW = true;
+    public boolean isOverflowActive(AbstractCard source) { // Adjusted to take a card parameter
+        boolean OVERFLOW = false; // Reset overflow state
+
+        // Only check for overflow if the card has the OVERFLOW tag
+        if (source.hasTag(SneckoMod.OVERFLOW)) {
+            // Check if there are more than 5 cards in hand
+            if (AbstractDungeon.player.hand.size() > 5) {
+                OVERFLOW = true;
+            }
+
+            // If the card purges on use, immediately return false
+            if (source instanceof TyphoonFang && source.purgeOnUse) {
+                return false; // If the card purges on use, it cannot cause overflow
+            }
+
+            // Check for the D8 relic
+            if (AbstractDungeon.player.hasRelic(D8.ID)) {
+                D8 d8Relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
+                if (d8Relic != null && d8Relic.card != null) {
+                    if (d8Relic.card.uuid.equals(source.uuid)) {
+                        OVERFLOW = true; // Set overflow if the D8 card is the same as the source card
+                    }
+                }
+            }
         }
-        // THANK YOU VEX
-        //  if (costForTurn >= 3) {
-        //     // if (costForTurn >= 3 && !freeToPlay()){
-        //    OVERFLOW = true;
-        //    }
-        return OVERFLOW; // return true or false
+
+        return OVERFLOW; // Return true or false
     }
+
+
+
+
+
+
 
     public int findSuitinHand() {
         Set<AbstractCard.CardColor> uniqueColors = new HashSet<>(); // check without status, curse, collectible, colorless common
 
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
-            // these don't count because I said so. Sandtag convinced me that status and curse should count.
             if (
-                //(card.type == AbstractCard.CardType.STATUS ||
-                //        card.type == AbstractCard.CardType.CURSE ||
-                    (card.color == AbstractCard.CardColor.COLORLESS && card.rarity == AbstractCard.CardRarity.SPECIAL)) {
+                card.type == AbstractCard.CardType.STATUS || card.type == AbstractCard.CardType.CURSE || (card.color == AbstractCard.CardColor.COLORLESS && card.rarity == AbstractCard.CardRarity.SPECIAL)) {
                 continue;
             }
 
@@ -332,10 +351,8 @@ public abstract class AbstractSneckoCard extends CustomCard {
 
         for (AbstractCard card : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
             // they still don't count because I said so. Sandtag convinced me that status and curse should count.
-            if (
-                //(card.type != AbstractCard.CardType.STATUS &&
-                //        card.type != AbstractCard.CardType.CURSE &&
-                    !(card.color == AbstractCard.CardColor.COLORLESS && card.rarity == AbstractCard.CardRarity.SPECIAL)) {
+            if ((card.type != AbstractCard.CardType.STATUS && card.type != AbstractCard.CardType.CURSE &&
+                    !(card.color == AbstractCard.CardColor.COLORLESS && card.rarity == AbstractCard.CardRarity.SPECIAL))) {
 
                 uniqueColors.add(card.color);
             }
@@ -345,6 +362,19 @@ public abstract class AbstractSneckoCard extends CustomCard {
     }
     public void onMuddledSword() {
         // help
+    }
+
+    @Override
+    public void triggerOnGlowCheck() { // glowing overflow cards that hopefully work with the D8
+        if (this.hasTag(SneckoMod.OVERFLOW)) {
+            if (isOverflowActive(this)) {
+                this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
+            } else {
+                this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();
+            }
+        } else {
+            this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        }
     }
 
     @Override

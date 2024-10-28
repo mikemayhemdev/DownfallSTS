@@ -1,6 +1,7 @@
 package sneckomod.cards.unknowns;
 
 import basemod.BaseMod;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,6 +18,7 @@ import java.util.function.Predicate;
 import static sneckomod.SneckoMod.makeCardPath;
 @Deprecated
 @CardIgnore
+@NoCompendium
 public class UnknownClass extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownClass");
     private static String[] unknownClass = CardCrawlGame.languagePack.getUIString(ID).TEXT;

@@ -27,7 +27,7 @@ public class DragonsHoard extends AbstractSneckoCard {
         if (upgraded) {
             applyToSelf(new StrengthPower(p, costForTurn+1));
         }
-        if (isOverflowActive()){
+        if (isOverflowActive(this)){
             AbstractDungeon.actionManager.addToBottom(new LimitBreakAction());
         }
 

@@ -7,11 +7,13 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import expansioncontent.cardmods.PropertiesMod;
 import sneckomod.SneckoMod;
 
 import static collector.util.Wiz.atb;
-
+@Deprecated
+@CardIgnore
 public class Yearn extends AbstractSneckoCard {
 
     public final static String ID = makeID("Yearn");
@@ -21,7 +23,7 @@ public class Yearn extends AbstractSneckoCard {
     private static final int MAGIC = 2;
 
     public Yearn() {
-        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
+        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE);
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
         SneckoMod.loadJokeCardImage(this, "Yearn.png");

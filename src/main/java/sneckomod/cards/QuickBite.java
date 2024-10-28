@@ -15,28 +15,18 @@ public class QuickBite extends AbstractSneckoCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
-
-    private static final int MAGIC = 0;
-    private static final int UPG_MAGIC = 1;
 
     public QuickBite() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
-        tags.add(SneckoMod.RNG);
         SneckoMod.loadJokeCardImage(this, "QuickBite.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// 117
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
-        int x = getRandomNum(magicNumber, 2, this);
-
-        if (x > 0)
-            atb(new DrawCardAction(x));
-
         atb(new MuddleRandomCardAction(1, true));
 
     }
@@ -45,7 +35,6 @@ public class QuickBite extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

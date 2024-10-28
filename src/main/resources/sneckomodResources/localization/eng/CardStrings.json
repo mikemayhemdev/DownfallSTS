@@ -23,7 +23,7 @@
   },
   "sneckomod:Deception": {
     "NAME": "Deception",
-    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Overflow: Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Overflow: Apply !M! Weak and Vulnerable to ALL enemies."
   },
   "sneckomod:Defend": {
     "NAME": "Defend",
@@ -35,7 +35,7 @@
   },
   "sneckomod:DiceBlock": {
     "NAME": "Dice Block",
-    "DESCRIPTION": "Gain !M! - !B! Block. NL sneckomod:Overflow: Always gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Overflow: Gain !M! additional Block."
   },
   "sneckomod:DiceBoulder": {
     "NAME": "Dice Boulder",
@@ -43,7 +43,7 @@
   },
   "sneckomod:DiceCrush": {
     "NAME": "Dice Crush",
-    "DESCRIPTION": "Deal !M! - !D! damage. NL sneckomod:Overflow: Always deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Overflow: Draw 2 cards."
   },
   "sneckomod:DragonsHoard": {
     "NAME": "Dragon's Hoard",
@@ -68,7 +68,7 @@
   },
   "sneckomod:IronFang": {
     "NAME": "Iron Fang",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Apply !M! Weak."
+    "DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies."
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Improvised Attack",
@@ -84,8 +84,8 @@
   },
   "sneckomod:Nope": {
     "NAME": "Nope",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. Gain a random card of the same class.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Exhaust a card. Gain a random card of the same class.",
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. If it had a color, gain a random card of the same class.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Exhaust a card. If it had a color, gain a random card of the same class.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for Nope."
     ]
@@ -138,16 +138,15 @@
   },
   "sneckomod:QuickBite": {
     "NAME": "Snake Rake",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! - 2 cards. NL sneckomod:Muddle the highest-cost card in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the highest-cost card in your hand."
   },
   "sneckomod:QuickMove": {
     "NAME": "Quick Move",
-    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle the highest-cost card in your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle the !M! highest-cost cards in your hand."
+    "DESCRIPTION": "Gain Block equal to !B! times this card's cost. NL If this card costs 0, gain !B! Block and Exhaust."
   },
   "sneckomod:RainOfDice": {
     "NAME": "Rain of Dice",
-    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy. NL sneckomod:Muddle this, then return this to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle this, then return this to your hand."
   },
   "sneckomod:Restock": {
     "NAME": "Restock",
@@ -186,13 +185,8 @@
     "DESCRIPTION": "sneckomod:Snekproof. NL Deal !qqq! - !D! damage. NL Gain 1 - !M! [E] . NL Exhaust."
   },
   "sneckomod:SnekBeam": {
-    "NAME": "Snek Beam",
-    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unidentified cards in your deck. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unidentified cards in your deck.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.) NL Exhaust.",
-      " NL (Deals !D! damage.)"
-    ]
+    "NAME": "Laser Eyes",
+    "DESCRIPTION": "Deal !D! damage. NL Gain [E]."
   },
   "sneckomod:SnekBite": {
     "NAME": "Snek Bite",
@@ -218,7 +212,7 @@
   },
   "sneckomod:SoulRoll": {
     "NAME": "Soul Roll",
-    "DESCRIPTION": "Retain. NL sneckomod:Snekproof. NL Gain !B! Block. NL Choose a card to sneckomod:Muddle. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Choose a card to sneckomod:Muddle. NL Exhaust."
   },
   "sneckomod:Strike": {
     "NAME": "Strike",
@@ -400,8 +394,58 @@
     "DESCRIPTION": "At the start of your turn, gain a *Soul *Roll with Exhaust.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain a *Soul *Roll with Exhaust."
   },
+  "sneckomod:Behold": {
+    "NAME": "Behold!",
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each other card in your hand."
+  },
+  "sneckomod:SaveForLater": {
+    "NAME": "Save For Later",
+    "DESCRIPTION": "Deal !D! damage. Give a random card in your hand Retain this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Give a card in your hand Retain this combat."
+  },
+  "sneckomod:PowerShot": {
+    "NAME": "Power Shot",
+    "DESCRIPTION": "Deal !D! damage. Whenever you play a Power, return this from the discard pile to your hand."
+  },
+  "sneckomod:LilGuardian": {
+    "NAME": "Lil' Guardian",
+    "DESCRIPTION": "Gain !B! Block. Whenever you play a card that costs 2 or more, play this from your hand."
+  },
+  "sneckomod:CrystalBoomerang": {
+    "NAME": "Crystal Boomerang",
+    "DESCRIPTION": "Put a card from the discard pile into your hand. If it's sneckomod:Offclass, gain !B! Block."
+  },
+  "sneckomod:Amass": {
+    "NAME": "Amass",
+    "DESCRIPTION": "Gain !B! Block, increased by !M! for the total [E] cost of your hand."
+  },
+  "sneckomod:Medusa": {
+    "NAME": "Medusa",
+    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Overflow: Apply 1 Weak and !M! Poison to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Overflow: Apply 2 Weak and !M! Poison to ALL enemies."
+  },
+  "sneckomod:Cower": {
+    "NAME": "Cower",
+    "DESCRIPTION": "Gain !B! Block. If this costs 0 or 1, gain 2 Weak."
+  },
   "sneckomod:WideSting": {
     "NAME": "Wide Sting",
-    "DESCRIPTION": "Deal !M! - !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand."
+  },
+  "sneckomod:GildedShield": {
+    "NAME": "Gilded Shield",
+    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle this, then return it to your hand."
+  },
+  "sneckomod:Mesmerize": {
+    "NAME": "Mesmerize",
+    "DESCRIPTION": "ALL enemies lose !M! Strength. NL sneckomod:Muddle a card. NL Exhaust."
+  },
+  "sneckomod:Serpentscale": {
+    "NAME": "Serpentscale",
+    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Overflow: Gain !M! *Plated *Armor."
+  },
+  "sneckomod:WideAngle": {
+    "NAME": "Wide Angle",
+    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies."
   }
 }

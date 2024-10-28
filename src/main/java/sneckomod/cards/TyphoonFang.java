@@ -33,7 +33,7 @@ public class TyphoonFang extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// reused snek bite animation
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
-            if (isOverflowActive() && !this.purgeOnUse) {
+            if (isOverflowActive(this) && !this.purgeOnUse) {
                 if (!upgraded) {
                     applyToSelf(new TyphoonPower(1));
                 }

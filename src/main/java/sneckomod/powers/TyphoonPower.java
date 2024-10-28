@@ -15,6 +15,7 @@ import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.cards.TyphoonFang;
 import com.megacrit.cardcrawl.core.Settings;
+import sneckomod.relics.D8;
 
 public class TyphoonPower extends AbstractPower implements CloneablePowerInterface {
     public static final String POWER_ID = SneckoMod.makeID("TyphoonPower");
@@ -46,11 +47,32 @@ public class TyphoonPower extends AbstractPower implements CloneablePowerInterfa
         this.updateDescription();
     }
 
-    // Overflow check (ensures the card has OVERFLOW tag and correct conditions are met)
-    public boolean isOverflowActive(AbstractCard card) {
-        AbstractPlayer p = AbstractDungeon.player;
-        return (p.hand.size() >= 4 && card.hasTag(SneckoMod.OVERFLOW)) || (card.cost >= 3 && card.hasTag(SneckoMod.OVERFLOW));
+    public boolean isOverflowActive(AbstractCard source) { // Adjusted to take a card parameter
+        boolean OVERFLOW = false; // Reset overflow state
+
+        // Check if there are more than 5 cards in hand
+        if (AbstractDungeon.player.hand.size() > 5) {
+            OVERFLOW = true;
+        }
+
+        if (source instanceof TyphoonFang && source.purgeOnUse) {
+            return false; // If the card purges on use, it cannot cause overflow
+        }
+
+        // Check for the D8 relic
+        if (AbstractDungeon.player.hasRelic(D8.ID)) {
+            D8 d8Relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
+            if (d8Relic != null && d8Relic.card != null) {
+                if (d8Relic.card.uuid.equals(source.uuid)) {
+                    OVERFLOW = true; // Set overflow if the D8 card is the same as the source card
+                }
+            }
+        }
+        // we don't use the d8 flash here, that's part of the abstract card code
+
+        return OVERFLOW; // Return true or false
     }
+
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {

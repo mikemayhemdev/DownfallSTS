@@ -1,5 +1,6 @@
 package sneckomod.cards.unknowns;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -18,8 +19,7 @@ import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
-@Deprecated
-@CardIgnore
+@NoCompendium
 public class UnknownDraw extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownDraw");
     public static boolean bruh = false;

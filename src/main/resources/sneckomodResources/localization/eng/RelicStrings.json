@@ -3,14 +3,14 @@
     "NAME": "Snecko Soul",
     "FLAVOR": "0...3...2...2...1",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a #ySoul #yRoll to your hand."
+      "At the start of each combat, add #ySoul #yRoll to your hand."
     ]
   },
   "sneckomod:SuperSneckoSoul": {
     "NAME": "Super Snecko Soul",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
-      "Replaces [#407B93]Snecko Soul[]. NL The first time you play an #ysneckomod:Offclass each turn, gain [E] ."
+      "Replaces [#407B93]Snecko [#407B93]Soul[]. NL At the start of each combat and every other turn, gain a #ySoul #yRoll. NL On other turns, draw an additional card at the start of your turn and #ysneckomod:Muddle it."
     ]
   },
   "sneckomod:CleanMud": {
@@ -24,7 +24,7 @@
     "NAME": "Ring of the Snek",
     "FLAVOR": "Illegible, unreadable, due by Thursday.",
     "DESCRIPTIONS": [
-      "At the start of combat, apply #b0-2 #yWeak and #yVulnerable to ALL enemies."
+      "Whenever you activate an #ysneckomod:Overflow effect, apply #b1 #yWeak and #yVulnerable to a random enemy."
     ]
   },
   "sneckomod:CrystallizedMud": {
@@ -38,7 +38,7 @@
     "NAME": "Loaded Die",
     "FLAVOR": "Cheese-stuffed.",
     "DESCRIPTIONS": [
-      "Cards that choose random numbers have +1 minimum."
+      "Whenever you #ysneckomod:Muddle a card, gain #b1 #yBlock."
     ]
   },
   "sneckomod:RareBoosterPack": {
@@ -87,17 +87,17 @@
     "NAME": "Mystical Octahedron",
     "FLAVOR": "It appears weighted toward one side.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card that selects a random number for its effects. This card always selects its maximum possible number.",
+      "Upon pickup, choose a card that has an #ysneckomod:Overflow effect. Whenever you play it, gain #b3 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than 5 cards in hand.",
       "Choose a card for ",
       "Whenever ",
-      " is played, it chooses its maximum possible number for its effect."
+      " is played, gain #b3 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than 5 cards in hand."
     ]
   },
   "sneckomod:BabySnecko": {
     "NAME": "Young Snecko",
     "FLAVOR": "Bewilderingly adorable.",
     "DESCRIPTIONS": [
-      "Deals #b5 damage to a random enemy at the start of your turn."
+      "Deals #b9 damage to a random enemy and #ysneckomod:Muddles #b2 random cards in your hand at the start of your turn."
     ]
   },
   "sneckomod:SneckoCommon": {

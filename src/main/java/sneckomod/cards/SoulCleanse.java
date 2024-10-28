@@ -3,9 +3,11 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.city.Snecko;
+import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleHandAction;
-
+@Deprecated
+@CardIgnore
 public class SoulCleanse extends AbstractSneckoCard {
 
     public final static String ID = makeID("SoulCleanse");
@@ -13,7 +15,7 @@ public class SoulCleanse extends AbstractSneckoCard {
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
     public SoulCleanse() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
         exhaust = true;
         SneckoMod.loadJokeCardImage(this, "SoulCleanse.png");

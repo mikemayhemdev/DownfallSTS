@@ -1,6 +1,7 @@
 package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.UpgradeSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -16,68 +17,34 @@ public class WideSting extends AbstractSneckoCard {
 
     //stupid intellij stuff ATTACK, ALL, COMMON
 
-    private static final int DAMAGE = 12;
-    private static final int MAGIC = 7;
+    private static final int DAMAGE = 7;
+    private static final int UPG_DAMAGE = 3;
 
     public WideSting() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "WideSting.png");
     }
 
-    @Override
-    public void applyPowers() {
-        int CURRENT_MAGIC_NUMBER = baseMagicNumber;
-        int CURRENT_DMG = baseDamage;
-        baseDamage = CURRENT_MAGIC_NUMBER;
-        super.applyPowers(); // takes baseDamage and applies things like Strength or Pen Nib to set damage
-
-        magicNumber = damage; // magic number holds the first condition's modified damage, so !M! will work
-        isMagicNumberModified = magicNumber != baseMagicNumber;
-
-        // repeat so damage holds the second condition's damage
-        baseDamage = CURRENT_DMG;
-        super.applyPowers();
-    }
-
-    @Override
-    public void calculateCardDamage(final AbstractMonster mo) {
-        int CURRENT_MAGIC_NUMBER = baseMagicNumber;
-        int CURRENT_DMG = baseDamage;
-        baseDamage = CURRENT_MAGIC_NUMBER;
-        super.calculateCardDamage(mo); // takes baseDamage and applies things like Strength or Pen Nib to set damage
-
-        magicNumber = damage; // magic number holds the first condition's modified damage, so !M! will work
-        isMagicNumberModified = magicNumber != baseMagicNumber;
-
-        // repeat so damage holds the second condition's damage
-        baseDamage = CURRENT_DMG;
-        super.calculateCardDamage(mo);
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster q : monsterList()) {
-            atb(new NoApplyRandomDamageAction(q, magicNumber, damage, 1, AbstractGameAction.AttackEffect.LIGHTNING, this, DamageInfo.DamageType.NORMAL));
-        }
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                for (AbstractCard q : p.hand.group) {
-                    if (q.color != AbstractDungeon.player.getCardColor()) {
-                        atb(new UpgradeSpecificCardAction(q));
-                        //  atb(new MuddleAction(q));
-                    }
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (!monster.isDead && !monster.isDying) {
+                addToBot(new DamageAction(monster, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            }
+
+            for (AbstractCard q : p.hand.group) {
+                if (q.color != AbstractDungeon.player.getCardColor()) {
+                    atb(new UpgradeSpecificCardAction(q));
+                    //  atb(new MuddleAction(q));
                 }
             }
-        });
+        }
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeDamage(UPG_DAMAGE);
         }
     }
 }

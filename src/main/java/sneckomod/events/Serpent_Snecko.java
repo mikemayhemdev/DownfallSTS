@@ -58,6 +58,7 @@ public class Serpent_Snecko extends AbstractImageEvent {
 
     }
 
+//todo: make the relic be a random snecko relic, like how champ gets special champ exclusive relics from the library
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case INTRO:

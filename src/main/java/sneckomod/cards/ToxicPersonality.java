@@ -3,9 +3,11 @@ package sneckomod.cards;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 import sneckomod.powers.ToxicPersonalityPower;
-
+@Deprecated
+@CardIgnore
 public class ToxicPersonality extends AbstractSneckoCard {
 
     public final static String ID = makeID("ToxicPersonality");
@@ -16,7 +18,7 @@ public class ToxicPersonality extends AbstractSneckoCard {
     private static final int UPG_MAGIC = 1;
 
     public ToxicPersonality() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "ToxicPersonality.png");
     }

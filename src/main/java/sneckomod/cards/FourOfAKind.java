@@ -2,9 +2,11 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
+import downfall.util.CardIgnore;
 import hermit.cards.AbstractDynamicCard;
 import sneckomod.SneckoMod;
-
+@Deprecated
+@CardIgnore
 public class FourOfAKind extends AbstractSneckoCard {
 
     public final static String ID = makeID("FourOfAKind");
@@ -12,7 +14,7 @@ public class FourOfAKind extends AbstractSneckoCard {
     // intangible card with a weird condition
 
     public FourOfAKind() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         exhaust = true;
         SneckoMod.loadJokeCardImage(this, "FourOfAKind.png");
     }
