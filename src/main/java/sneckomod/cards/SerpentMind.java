@@ -17,22 +17,18 @@ public class SerpentMind extends AbstractSneckoCard {
     public SerpentMind() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-
         tags.add(BaseModCardTags.FORM);
-        tags.add(SneckoMod.SNEKPROOF);
         SneckoMod.loadJokeCardImage(this, "SerpentMind.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new SerpentMindPower(1));
+        applyToSelf(new SerpentMindPower(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
-            tags.remove(SneckoMod.SNEKPROOF);
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 }

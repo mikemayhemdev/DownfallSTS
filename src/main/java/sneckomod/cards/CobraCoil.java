@@ -1,0 +1,47 @@
+package sneckomod.cards;
+
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ConstrictedPower;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import sneckomod.SneckoMod;
+
+import static collector.util.Wiz.applyToEnemy;
+
+public class CobraCoil extends AbstractSneckoCard {
+
+    public static final String ID = makeID("CobraCoil");
+
+    private static final int DAMAGE = 20;
+    private static final int UPGRADE_DAMAGE = 4;
+    private static final int MAGIC = 10;
+    private static final int UPG_MAGIC = 2;
+    private static final int COST = 4;
+
+    public CobraCoil() {
+        super(ID, COST, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
+        baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC;
+        SneckoMod.loadJokeCardImage(this, "CobraCoil.png");
+    }
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        applyToEnemy(m, new ConstrictedPower(m, p, magicNumber));
+    }
+
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(UPGRADE_DAMAGE);
+            upgradeMagicNumber(UPG_MAGIC);
+        }
+    }
+}

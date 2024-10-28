@@ -13,9 +13,8 @@ public class PoisonParadise extends AbstractSneckoCard {
     // weird and out of place if I'm speaking honestly - blue
 
     public PoisonParadise() {
-        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 15;
-        exhaust = true;
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 12;
         this.tags.add(SneckoMod.OVERFLOW);
         SneckoMod.loadJokeCardImage(this, "PoisonParadise.png");
     }
@@ -32,9 +31,8 @@ public class PoisonParadise extends AbstractSneckoCard {
 
         if (!upgraded) {
             upgradeName();
-            selfRetain = true;
             rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(3);
         }
     }
 }

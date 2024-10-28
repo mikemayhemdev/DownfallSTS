@@ -39,19 +39,27 @@
       " #yBlock."
     ]
   },
-  "sneckomod:OverwhelmingPresence": {
+  "sneckomod:OverwhelmingPresencePower": {
     "NAME": "Overwhelming Presence",
     "DESCRIPTIONS": [
-      "The first time you play a card that costs 3 each turn, gain [E].",
+      "The first time you play a card that costs 3 each turn, gain [E] .",
       "The first time you play a card that costs 3 each turn, gain ",
-      " [E]."
+      " [E] ."
+    ]
+  },
+  "sneckomod:SerpentsNestPower": {
+    "NAME": "Serpent's Nest",
+    "DESCRIPTIONS": [
+      "Whenever you play a Power deal 1 damage to ALL enemies.",
+      "Whenever you play a Power deal #b",
+      " damage to ALL enemies."
     ]
   },
   "sneckomod:SerpentMindPower": {
     "NAME": "Serpent Mind",
     "DESCRIPTIONS": [
       "At the end of your turn gain #b",
-        " Strength for each unique #Suit played this turn.",
+      " Strength for each unique #Suit played this turn.",
       " Strength for each unique #Suit played this turn."
     ]
   },
@@ -113,7 +121,29 @@
       "This turn, whenever you #bOverflow, play #b",
       " copies of #yTyphoon #yFang+."
     ]
+  },
+  "sneckomod:SerpentineSleuthPower": {
+    "NAME": "Serpentine Sleuth",
+    "DESCRIPTIONS": [
+      "Whenever you play a Power, gain #b",
+      " [E] .",
+      " [E] ."
+    ]
+  },
+  "sneckomod:BigGunsStrengthPower": {
+    "NAME": "Big Guns",
+    "DESCRIPTIONS": [
+      "Whenever you play a card that costs 3, gain #b",
+      " Strength.",
+      " Strength."
+    ],
+      "sneckomod:BigGunsBlockPower": {
+        "NAME": "Tough Guy",
+        "DESCRIPTIONS": [
+          "Whenever you play a card that costs 3, gain #b",
+          " Block.",
+          " Block."
+        ]
+      }
+    }
   }
-}
-
-

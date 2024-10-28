@@ -13,8 +13,6 @@ public class TrashToTreasure extends AbstractSneckoCard {
 
     public TrashToTreasure() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
-        this.exhaust = true;
         SneckoMod.loadJokeCardImage(this, "TrashToTreasure.png");
     }
 
@@ -25,7 +23,7 @@ public class TrashToTreasure extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.exhaust = false;
+            exhaust = false;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

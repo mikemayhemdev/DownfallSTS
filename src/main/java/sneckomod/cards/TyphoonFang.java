@@ -26,7 +26,6 @@ public class TyphoonFang extends AbstractSneckoCard {
         baseDamage = DAMAGE;
      //   baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "TyphoonFang.png");
-        this.tags.add(SneckoMod.SNEKPROOF);
         this.tags.add(SneckoMod.OVERFLOW);
     }
 

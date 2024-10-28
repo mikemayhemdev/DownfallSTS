@@ -12,26 +12,24 @@ public class Restock extends AbstractSneckoCard {
     public final static String ID = makeID("Restock");
 
     //stupid intellij stuff SKILL, SELF, RARE
-
+    private static final int MAGIC = 5;
 
     public Restock() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
-        tags.add(SneckoMod.RNG);
-        this.exhaust = true;
         SneckoMod.loadJokeCardImage(this, "Restock.png");
+        magicNumber = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DiscardAction(p, p, p.hand.size(), true));
-        atb(new DrawCardAction(getRandomNum(5, 10, this)));
+        atb(new DrawCardAction(magicNumber));
         atb(new MuddleHandAction()); // it's 12% cooler now.
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeMagicNumber(2);
         }
     }
 }

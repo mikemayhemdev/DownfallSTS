@@ -13,9 +13,9 @@ public class Blunderbus extends AbstractSneckoCard {
 
     public final static String ID = SneckoMod.makeID("Blunderbus");
 
-    private static final int DAMAGE = 7;
-    private static final int UPGRADE_DAMAGE = 3;
-    private static final int BASE_HITS = 2;
+    private static final int DAMAGE = 11;
+    private static final int UPGRADE_DAMAGE = 2;
+    private static final int BASE_HITS = 1;
 
     public Blunderbus() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
@@ -40,7 +40,7 @@ public class Blunderbus extends AbstractSneckoCard {
         int totalHits = BASE_HITS + additionalHits;
 
         for (int i = 0; i < totalHits; i++) {
-            addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+            allDmg(AbstractGameAction.AttackEffect.FIRE);
         }
     }
 

@@ -1,57 +1,35 @@
 package sneckomod.cards;
 
-import basemod.BaseMod;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
-
-import java.util.ArrayList;
+import sneckomod.actions.MuddleHandAction;
 
 public class SoulExchange extends AbstractSneckoCard {
 
     public final static String ID = makeID("SoulExchange");
 
-    //stupid intellij stuff SKILL, SELF, RARE
+    //stupid intellij stuff SKILL, SELF, COMMON
 
     public SoulExchange() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
-        baseMagicNumber = magicNumber = 1;
-        exhaust = true; // this had to happen
+        exhaust = true;
         SneckoMod.loadJokeCardImage(this, "SoulExchange.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DrawCardAction(magicNumber));
-        atb(new SelectCardsInHandAction(1, EXTENDED_DESCRIPTION[0], (cards) -> {
-            AbstractCard q = cards.get(0);
-            CardColor c = q.color;
-            ArrayList<AbstractCard> coloredCards = new ArrayList<>();
-            for (AbstractCard r : CardLibrary.getAllCards()) {
-                if (r.color == c && r.rarity != CardRarity.SPECIAL && r.rarity != CardRarity.BASIC && !r.hasTag(CardTags.HEALING)) {
-                    coloredCards.add(r);
-                }
-            }
-            int x = p.hand.size();
-            if (!coloredCards.isEmpty())
-                for (int i = 0; i < x; i++) {
-                    att(new MakeTempCardInHandAction(coloredCards.get(AbstractDungeon.cardRandomRng.random(0, coloredCards.size() - 1))));
-                }
-            att(new ExhaustAction(BaseMod.MAX_HAND_SIZE, true, false));
-        }));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        atb(new MuddleHandAction());
+        this.addToBot(new DiscardAction(p, p, 1, false));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            exhaust = false;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

@@ -10,7 +10,7 @@
     "NAME": "Super Snecko Soul",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
-      "Replaces [#407B93]Snecko [#407B93]Soul[]. NL At the start of each combat and every other turn, gain a #ySoul #yRoll. NL On other turns, draw an additional card at the start of your turn and #ysneckomod:Muddle it."
+      "Replaces [#407B93]Snecko [#407B93]Soul[]. NL At the start of each combat and every other turn, gain a #ySoul #yRoll. NL On other turns, draw an additional card at the start of your turn and #ysneckomod:Muddles it."
     ]
   },
   "sneckomod:CleanMud": {

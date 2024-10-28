@@ -9,6 +9,7 @@ import expansioncontent.cardmods.RetainCardMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.Cheat;
 import downfall.util.TextureLoader;
+import sneckomod.cards.MarkedCard;
 
 public class SleevedAce extends CustomRelic {
 
@@ -22,7 +23,7 @@ public class SleevedAce extends CustomRelic {
 
     @Override
     public void atBattleStart() {
-        AbstractCard q = new Cheat();
+        AbstractCard q = new MarkedCard();
         CardModifierManager.addModifier(q, new RetainCardMod());
         addToBot(new MakeTempCardInHandAction(q));
     }
