@@ -59,6 +59,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.HashSet;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.*;
 import static downfall.downfallMod.sneckoNoModCharacters;
@@ -164,6 +165,7 @@ public class SneckoMod implements
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
 
+
     public SneckoMod() {
         BaseMod.subscribe(this);
 
@@ -174,7 +176,6 @@ public class SneckoMod implements
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
                 CARD_ENERGY_L, TEXT_ENERGY);
-
     }
 
     public static void loadJokeCardImage(AbstractCard card, String img) {
@@ -278,12 +279,16 @@ public class SneckoMod implements
         if (simplePossibilities == null) {
             simplePossibilities = new ArrayList<>();
             for (AbstractCard q : CardLibrary.getAllCards()) {
-                if (!q.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !q.hasTag(AbstractCard.CardTags.STARTER_DEFEND) && q.color != AbstractCard.CardColor.CURSE && q.type != CURSE && q.type != STATUS && !q.hasTag(AbstractCard.CardTags.HEALING) && q.rarity != AbstractCard.CardRarity.SPECIAL) {
+                if (!q.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !q.hasTag(AbstractCard.CardTags.STARTER_DEFEND) &&
+                        q.color != AbstractCard.CardColor.CURSE && q.type != CURSE && q.type != STATUS &&
+                        !q.hasTag(AbstractCard.CardTags.HEALING) && q.rarity != AbstractCard.CardRarity.SPECIAL) {
                     simplePossibilities.add(q.cardID);
                 }
             }
         }
-        return CardLibrary.getCopy(Wiz.getRandomItem(simplePossibilities, AbstractDungeon.cardRandomRng));
+
+        String selectedCardID = Wiz.getRandomItem(simplePossibilities, AbstractDungeon.cardRandomRng);
+        return CardLibrary.getCopy(selectedCardID);
     }
 
     //TODO Make rarity matter in Offclass card gen.

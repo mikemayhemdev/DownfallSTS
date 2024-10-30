@@ -7,8 +7,12 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
+import sneckomod.actions.MuddleRandomCardAction;
+
 
 import java.util.ArrayList;
+
+import static hermit.util.Wiz.atb;
 
 public class SneckoTalon extends CustomRelic {
 
@@ -22,31 +26,9 @@ public class SneckoTalon extends CustomRelic {
 
     @Override
     public void atTurnStartPostDraw() {
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = 0;
-                for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (!q.freeToPlay())
-                        if (q.costForTurn > x)
-                            x = q.costForTurn;
-                }
-                ArrayList<AbstractCard> possCardsList = new ArrayList<>();
-                for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (!q.freeToPlay())
-                        if (q.costForTurn == x)
-                            possCardsList.add(q);
-                }
-                if (!possCardsList.isEmpty()) {
-                    flash();
-                    AbstractCard q = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1));
-                    q.setCostForTurn(q.costForTurn - 1);
-                    q.isCostModifiedForTurn = true;
-                    q.superFlash();
-                }
-            }
-        });
+        atb(new MuddleRandomCardAction(1, true));
+       // atb(new MuddleRandomCardAction(2, true));
+        flash();
     }
 
     public String getUpdatedDescription() {

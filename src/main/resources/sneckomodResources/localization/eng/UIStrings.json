@@ -56,6 +56,12 @@
       "[Free Action] Lock an Unidentified into a permanent card."
     ]
   },
+  "sneckomod:CommonAttackReward": {
+    "TEXT": [
+      "Add an Offclass card to your deck",
+      "Pick a Card."
+    ]
+  },
   "sneckomod:AtGameStart": {
     "TEXT": [
       "",

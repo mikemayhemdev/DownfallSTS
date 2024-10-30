@@ -20,14 +20,15 @@ public class SaveForLater extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("SaveForLater");
 
-    private static final int MAGIC = 2;
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int MAGIC = 1;
+    private static final int DAMAGE = 9;
+    private static final int UPGRADE_DAMAGE = 3;
+    private static final int UPGRADE_MAGIC = 1;
 
     public SaveForLater() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        magicNumber = MAGIC;
+        baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "SaveForLater.png");
     }
 
@@ -43,6 +44,9 @@ public class SaveForLater extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
+            upgradeMagicNumber(UPGRADE_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

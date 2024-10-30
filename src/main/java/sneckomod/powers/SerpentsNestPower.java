@@ -17,7 +17,7 @@ import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 
 public class SerpentsNestPower extends AbstractPower implements CloneablePowerInterface {
-    public static final String POWER_ID = SneckoMod.makeID("SerpentineSleuthPower");
+    public static final String POWER_ID = SneckoMod.makeID("SerpentsNestPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -54,12 +54,12 @@ public class SerpentsNestPower extends AbstractPower implements CloneablePowerIn
         if (this.amount == 1) {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
         } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
+            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         }
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new SerpentineSleuthPower(this.amount);
+        return new SerpentsNestPower(this.amount);
     }
 }

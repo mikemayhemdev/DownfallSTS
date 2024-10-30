@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.unique.DiscardPileToTopOfDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
+
+import static collector.util.Wiz.atb;
 
 //I used GPT to code this one because it was super complicated, sorry.
 
@@ -32,7 +35,7 @@ public class CrystalBoomerang extends AbstractSneckoCard {
         if (cardsInDiscard.isEmpty()) {
             return; // Do nothing if the discard pile is empty
         }
-
+        atb(new DiscardPileToTopOfDeckAction(p));
         AbstractCard selectedCard = cardsInDiscard.get(AbstractDungeon.cardRandomRng.random(cardsInDiscard.size() - 1)); //THIS IS RANDOM I WANT A SCREEN BUT IDK HOW HOLOGRAM WORKS
 
         p.discardPile.removeCard(selectedCard);

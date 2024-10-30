@@ -31,7 +31,6 @@ import java.util.function.Predicate;
 
 
 public abstract class AbstractUnknownCard extends AbstractSneckoCard implements StartupCard, CustomSavable<String> {
-@Deprecated
 
     public AbstractCard lastUnknownRoll;
 

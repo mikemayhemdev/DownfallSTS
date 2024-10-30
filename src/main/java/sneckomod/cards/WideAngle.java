@@ -21,13 +21,12 @@ public class WideAngle extends AbstractSneckoCard {
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = DAMAGE;
         this.isMultiDamage = true;
-        this.retain = true; // Card is retained
+        this.selfRetain = true;
         SneckoMod.loadJokeCardImage(this, "WideAngle.png");
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Deals damage to all enemies
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             if (!monster.isDead && !monster.isDying) {
                 addToBot(new DamageAction(monster, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));

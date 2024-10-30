@@ -6,9 +6,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
-import downfall.util.CommonSkillReward;
-import downfall.util.UpgradeCardReward;
 import sneckomod.SneckoMod;
+
+import java.util.ArrayList;
 
 public class OtherworldlyStrike extends AbstractSneckoCard implements OnObtainCard{
 
@@ -20,6 +20,7 @@ public class OtherworldlyStrike extends AbstractSneckoCard implements OnObtainCa
     public OtherworldlyStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        tags.add(CardTags.STRIKE);
         SneckoMod.loadJokeCardImage(this, "OtherworldlyStrike.png");
     }
 
@@ -42,7 +43,24 @@ public class OtherworldlyStrike extends AbstractSneckoCard implements OnObtainCa
 
     @Override
     public void onObtainCard() {
-        AbstractDungeon.getCurrRoom().rewards.add(new CommonSkillReward());
+        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+        while (cardsToReward.size() < 3) {
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.type == AbstractCard.CardType.SKILL && c.rarity == AbstractCard.CardRarity.COMMON);
+            if (!cardListDuplicate(cardsToReward, newCard)) {
+                cardsToReward.add(newCard.makeCopy()); // Use makeCopy() to ensure a new instance
+            }
+        }
+
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

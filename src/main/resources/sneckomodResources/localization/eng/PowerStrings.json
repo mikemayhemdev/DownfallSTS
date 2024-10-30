@@ -18,9 +18,9 @@
   "sneckomod:CheatPower": {
     "NAME": "Cheating",
     "DESCRIPTIONS": [
-      "This turn, cards that choose a random number for their effect choose the maximum possible number.",
+      "This turn, cards that have an #yOverflow effect always activate it when played.",
       "For the next #b",
-      " turns, cards that choose a random number for their effect choose the maximum possible number."
+      " turns, cards that have an #yOverflow effect always activate it when played."
     ]
   },
   "sneckomod:MuddleDrawnCardsPower": {
@@ -59,8 +59,8 @@
     "NAME": "Serpent Mind",
     "DESCRIPTIONS": [
       "At the end of your turn gain #b",
-      " Strength for each unique #Suit played this turn.",
-      " Strength for each unique #Suit played this turn."
+      " Strength for each unique #ySuit played this turn.",
+      " Strength for each unique #ySuit played this turn."
     ]
   },
   "sneckomod:SnakeEyesPower": {

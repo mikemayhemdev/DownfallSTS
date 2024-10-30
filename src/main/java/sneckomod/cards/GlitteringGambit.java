@@ -1,41 +1,63 @@
 package sneckomod.cards;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.util.CardIgnore;
+import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import sneckomod.SneckoMod;
-import sneckomod.actions.ChangeGoldAction;
-@Deprecated
-@CardIgnore
+
+import java.util.ArrayList;
 
 public class GlitteringGambit extends AbstractSneckoCard {
     public final static String ID = makeID("GlitteringGambit");
 
-    //stupid intellij stuff SKILL, SELF, RARE
-
-    private static final int MAGIC = -10;
-    private static final int UPG_MAGIC = 10;
+    private static final int MAGIC = 50;
 
     public GlitteringGambit() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        //        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, -2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        tags.add(SneckoMod.SNEKPROOF);
-        exhaust = true;
+        isEthereal = false;
         tags.add(CardTags.HEALING);
-        tags.add(SneckoMod.RNG);
         SneckoMod.loadJokeCardImage(this, "GlitteringGambit.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ChangeGoldAction((int) Math.ceil((getRandomNum(magicNumber, 30, this)))));
+        // No specific action for this card
     }
 
+    @Override
+    public void onObtainCard() {
+        AbstractDungeon.player.gainGold(magicNumber);
+        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+        while (cardsToReward.size() < 3) {
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == AbstractCard.CardRarity.RARE);
+            if (newCard != null && !cardListDuplicate(cardsToReward, newCard)) {
+                AbstractCard cardCopy = newCard.makeCopy();
+                cardCopy.upgrade();
+                cardsToReward.add(cardCopy);
+            }
+        }
+
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
+            isEthereal = true;
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.function.Predicate;
 
 import static sneckomod.SneckoMod.makeCardPath;
-@Deprecated
 @CardIgnore
 @NoCompendium
 public class UnknownClass extends AbstractUnknownCard {

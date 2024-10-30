@@ -51,7 +51,7 @@ public class TyphoonPower extends AbstractPower implements CloneablePowerInterfa
         boolean OVERFLOW = false; // Reset overflow state
 
         // Check if there are more than 5 cards in hand
-        if (AbstractDungeon.player.hand.size() > 5) {
+        if (AbstractDungeon.player.hand.size() > 5 || (AbstractDungeon.player.hasPower(CheatPower.POWER_ID))) {
             OVERFLOW = true;
         }
 

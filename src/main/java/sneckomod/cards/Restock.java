@@ -16,8 +16,9 @@ public class Restock extends AbstractSneckoCard {
 
     public Restock() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = MAGIC;
+        exhaust = true;
         SneckoMod.loadJokeCardImage(this, "Restock.png");
-        magicNumber = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

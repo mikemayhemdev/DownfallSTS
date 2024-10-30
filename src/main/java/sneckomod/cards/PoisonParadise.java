@@ -31,7 +31,6 @@ public class PoisonParadise extends AbstractSneckoCard {
 
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
             upgradeMagicNumber(3);
         }
     }

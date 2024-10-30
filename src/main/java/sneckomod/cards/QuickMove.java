@@ -22,7 +22,7 @@ public class QuickMove extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (costForTurn == 0) {
             blck();
-            addToBot(new ExhaustAction(p, p, 1, false));
+            exhaust = true;
         } else {
             for (int i = 0; i < costForTurn; i++) {
                 blck();

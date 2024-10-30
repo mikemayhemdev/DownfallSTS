@@ -10,7 +10,7 @@
     "NAME": "Super Snecko Soul",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
-      "Replaces [#407B93]Snecko [#407B93]Soul[]. NL At the start of each combat and every other turn, gain a #ySoul #yRoll. NL On other turns, draw an additional card at the start of your turn and #ysneckomod:Muddles it."
+      "Replaces [#407B93]Snecko [#407B93]Soul[]. NL At the start of each combat and every other turn, gain a #ySoul #yRoll. NL On other turns, draws an additional card at the start of your turn and #ysneckomod:Muddles it."
     ]
   },
   "sneckomod:CleanMud": {
@@ -45,14 +45,14 @@
     "NAME": "Rare Booster Box",
     "FLAVOR": "Mint condition.",
     "DESCRIPTIONS": [
-      "Upon pickup, obtain a #yUnidentified #yRare card of each card type."
+      "Upon pickup, obtain an #ysneckomod:Offclass #yRare card."
     ]
   },
   "sneckomod:SleevedAce": {
     "NAME": "Sleeved Ace",
     "FLAVOR": "We're all aces.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain a #yPure #yLuck with #yRetain."
+      "At the start of each combat, gain a #yMarked #yCard with #yRetain."
     ]
   },
   "sneckomod:UnknownEgg": {
@@ -66,14 +66,14 @@
     "NAME": "Super Snecko Eye",
     "FLAVOR": "0121012",
     "DESCRIPTIONS": [
-      "Replaces #ySnecko #yEye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0."
+      "Replaces #ySnecko #yEye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, gain [E] [E] [E] ."
     ]
   },
   "sneckomod:SneckoTalon": {
     "NAME": "Idol of Retromation",
     "FLAVOR": "Often called the Idol of Reto for short.",
     "DESCRIPTIONS": [
-      "At the start of your turn, reduce the cost of the most expensive card in your hand by #b1 for this turn."
+      "At the start of your turn, #ysneckomod:Muddle the highest cost card in your hand."
     ]
   },
   "sneckomod:BlankCard": {
@@ -104,9 +104,7 @@
     "NAME": "Seal of Approval",
     "FLAVOR": "I'm The Ironclad and this is my favorite Relic in the Spire.  -Merchant Advertising Pamphlet",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b1 of #b3 #yUnidentified #yCharacter cards to add to your deck. All future #yUnidentified #yCharacter cards found will be of this character.",
-      "All Unidentified Character cards found will be ",
-      " cards."
+      "Upon pickup, choose #b1 of #b5 Uncommon #ysneckomod:Offclass Powers to obtain."
     ]
   },
   "sneckomod:SneckoBoss": {

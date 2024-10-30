@@ -1,12 +1,17 @@
 package sneckomod.cards;
 
 import basemod.helpers.BaseModCardTags;
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import sneckomod.powers.SerpentMindPower;
 
-public class SerpentMind extends AbstractSneckoCard {
+import java.util.ArrayList;
+
+public class SerpentMind extends AbstractSneckoCard implements OnObtainCard {
 
     public final static String ID = makeID("SerpentMind");
 
@@ -23,6 +28,29 @@ public class SerpentMind extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new SerpentMindPower(magicNumber));
+    }
+
+    @Override
+    public void onObtainCard() {
+        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+        while (cardsToReward.size() < 3) {
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == AbstractCard.CardRarity.RARE);
+            if (newCard != null && !cardListDuplicate(cardsToReward, newCard)) {
+                AbstractCard cardCopy = newCard.makeCopy();
+                cardsToReward.add(cardCopy);
+            }
+        }
+
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void upgrade() {

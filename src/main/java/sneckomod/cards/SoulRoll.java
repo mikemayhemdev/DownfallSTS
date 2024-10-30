@@ -22,7 +22,7 @@ public class SoulRoll extends AbstractSneckoCard {
     private static final int MAGIC = 1;
 
     public SoulRoll() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         SneckoMod.loadJokeCardImage(this, "SoulRoll.png");
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;

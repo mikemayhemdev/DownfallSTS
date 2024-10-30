@@ -1,7 +1,7 @@
 {
   "sneckomod:Blunderbus": {
     "NAME": "Blunderbus",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. Deal damage one more time for every 3+ cost card in hand."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deal damage one more time for every 3+ cost card in hand."
   },
   "sneckomod:BlunderGuard": {
     "NAME": "Blunder Guard",
@@ -60,7 +60,8 @@
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! - 30 *Gold. NL Exhaust."
+    "DESCRIPTION": "Unplayable. NL sneckomod:Picked: Obtain an Upgraded sneckomod:Offclass Rare card and !M! Gold.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL sneckomod:Picked: Obtain an Upgraded sneckomod:Offclass Rare card and !M! Gold."
   },
   "sneckomod:ImmovableObject": {
     "NAME": "Immovable Object",
@@ -149,7 +150,7 @@
   },
   "sneckomod:Restock": {
     "NAME": "Restock",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard your hand. NL Draw !M! cards, then sneckomod:Muddle your hand. NL Exhaust."
+    "DESCRIPTION": "Discard your hand. NL Draw !M! cards, then sneckomod:Muddle your hand. NL Exhaust."
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
@@ -158,8 +159,8 @@
   },
   "sneckomod:SerpentBottle": {
     "NAME": "Discount Sale",
-    "DESCRIPTION": "Draw 2 Cards. NL Choose a card to sneckomod:Muddle. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw 2 Cards. NL Choose !M! cards to sneckomod:Muddle. NL Exhaust."
+    "DESCRIPTION": "Draw 2 Cards. NL sneckomod:Muddle a card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw 2 Cards. NL sneckomod:Muddle !M! cards. NL Exhaust."
   },
   "sneckomod:SerpentIdol": {
     "NAME": "Serpent Idol",
@@ -171,7 +172,7 @@
   },
   "sneckomod:SlitherStrike": {
     "NAME": "Slither Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn. NL sneckomod:Picked: Obtain an sneckomod:Offclass Uncommon Attack."
   },
   "sneckomod:SnakeEyes": {
     "NAME": "Snake Eyes",
@@ -188,8 +189,8 @@
   },
   "sneckomod:SnekBite": {
     "NAME": "Snek Bite",
-    "DESCRIPTION": "Deal !D! damage. NL Choose a card to sneckomod:Muddle.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Choose !M! cards to sneckomod:Muddle."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle a card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle !M! cards."
   },
   "sneckomod:SoulCleanse": {
     "NAME": "Soul Cleanse",
@@ -202,12 +203,12 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "Soul Exchange",
-    "DESCRIPTION": "Draw 1 card, NL sneckomod:Muddle your hand. NL Discard 1 card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw 1 card, NL sneckomod:Muddle your hand. NL Discard 1 card."
+    "DESCRIPTION": "Draw 1 card. NL sneckomod:Muddle your hand. NL Discard 1 card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw 1 card. NL sneckomod:Muddle your hand. NL Discard 1 card."
   },
   "sneckomod:SoulRoll": {
     "NAME": "Soul Roll",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Choose a card to sneckomod:Muddle. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL sneckomod:Muddle a card. NL Exhaust."
   },
   "sneckomod:Strike": {
     "NAME": "Strike",
@@ -247,8 +248,8 @@
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "Trash to Treasure",
-    "DESCRIPTION": "Exhaust a card. NL Gain [E] equal to its cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exhaust a card. NL Gain [E] equal to its cost."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. NL Gain [E] equal to its cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. Exhaust a card. NL Gain [E] equal to its cost."
   },
   "sneckomod:UnendingSupply": {
     "NAME": "Unending Supply",
@@ -395,7 +396,8 @@
   },
   "sneckomod:SaveForLater": {
     "NAME": "Save For Later",
-    "DESCRIPTION": "Deal !D! damage. Retain !M! cards at the end of your turn."
+    "DESCRIPTION": "Deal !D! damage. NL Retain !M! card at the end of your turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Retain !M! cards at the end of your turn."
   },
   "sneckomod:PowerShot": {
     "NAME": "Power Shot",
@@ -456,11 +458,11 @@
   },
   "sneckomod:SerpentsNest": {
     "NAME": "Serpent's Nest",
-    "DESCRIPTION": "Whenever you play a Power, deal !M! damage to ALL enemies. NL sneckomod:Picked: Choose an sneckomod:Offclass Power to obtain."
+    "DESCRIPTION": "Whenever you play a Power, deal !M! damage to ALL enemies. NL sneckomod:Picked: Choose an sneckomod:Offclass Uncommon Power to obtain."
   },
   "sneckomod:Whack": {
     "NAME": "Whack",
-    "DESCRIPTION": "Deal !D! damage. NL If you a sneckomod:Offclass card this turn, gain Block equal to unblocked damage dealt."
+    "DESCRIPTION": "Deal !D! damage. NL If you played an sneckomod:Offclass card this turn, gain Block equal to unblocked damage dealt."
   },
   "sneckomod:CobraCoil": {
     "NAME": "Cobra Coil",
@@ -485,9 +487,19 @@
     "DESCRIPTION": "Deal !D! damage. NL If this costs... NL 1+: Draw !M! cards. NL 2+: Gain 3 Strength. NL 3+: Gain [E].",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If this costs... NL 1+: Draw !M! cards. NL 2+: Gain 4 Strength. NL 3+: Gain [E] [E]."
   },
+  "sneckomod:PerpetualSerpent": {
+    "NAME": "Perpetual Serpent",
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Overflow: Gain [E] [E]."
+  },
+  "sneckomod:LastStrike": {
+    "NAME": "Last Strike",
+    "DESCRIPTION": "Deal !D! damage, multiplied by each unique Strike played. NL sneckomod:Picked: Obtain an sneckomod:Offclass Strike.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, multiplied by each unique Strike played. NL sneckomod:Picked: Obtain an sneckomod:Offclass Strike."
+
+  },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Serpentine Sleuth",
-    "DESCRIPTION": "Whenever you play a Power, gain [E]. NL sneckomod:Picked: Choose an sneckomod:Offclass Power to obtain.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a Power, gain [E] [E]. NL sneckomod:Picked: Choose an sneckomod:Offclass Power to obtain."
+    "DESCRIPTION": "Whenever you play a Power, gain [E]. NL sneckomod:Picked: Choose an sneckomod:Offclass Uncommon Power to obtain.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a Power, gain [E] [E]. NL sneckomod:Picked: Choose an sneckomod:Offclass Uncommon Power to obtain."
   }
 }
