@@ -29,7 +29,7 @@ public class CrystalBoomerang extends AbstractSneckoCard {
             if (!p.hand.isEmpty()) {
                 AbstractCard topCard = p.hand.getTopCard();
                 if (topCard.color != p.getCardColor()) {
-                    this.addToBot(new GainBlockAction(p, p, this.block));
+                    this.addToBot(new GainBlockAction(p, p, this.block)); //
                 }
             }
         }
