@@ -26,8 +26,7 @@ public class SneckoTalon extends CustomRelic {
 
     @Override
     public void atTurnStartPostDraw() {
-        atb(new MuddleRandomCardAction(1, true));
-       // atb(new MuddleRandomCardAction(2, true));
+       atb(new MuddleRandomCardAction(2, true));
         flash();
     }
 

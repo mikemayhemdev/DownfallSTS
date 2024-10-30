@@ -59,7 +59,7 @@
     "NAME": "Unidentified Egg",
     "FLAVOR": "What will hatch? Pay $1000 to see.",
     "DESCRIPTIONS": [
-      "#yIdentifying becomes a free action. NL #yUnidentified cards in card rewards are #yUpgraded."
+      "All #ysneckomod:Offclass cards in card rewards are #Upgraded. yIdentifying becomes a free action. NL #yUnidentified cards in card rewards are #yUpgraded."
     ]
   },
   "sneckomod:SuperSneckoEye": {
@@ -73,7 +73,7 @@
     "NAME": "Idol of Retromation",
     "FLAVOR": "Often called the Idol of Reto for short.",
     "DESCRIPTIONS": [
-      "At the start of your turn, #ysneckomod:Muddle the highest cost card in your hand."
+      "At the start of your turn, #ysneckomod:Muddle the #b2 highest cost cards in your hand."
     ]
   },
   "sneckomod:BlankCard": {
@@ -111,8 +111,8 @@
     "NAME": "Lucky Horseshoe",
     "FLAVOR": "Make your own luck.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b1 of #b3 #yUnidentified #yCharacter cards. Add #b5 copies of it to your deck. All combats drop an additional card reward of the chosen character's cards.",
-      "Upon pickup, obtain #b5 #yUnidentified ",
+      "Upon pickup, choose #b1 of #b3 #yCharacters. Choose #b3 Upgraded Uncommon cards and #b2 Rare cards to add to your deck. All combats drop an additional card reward of the chosen character's cards.",
+      "Upon pickup, obtain #b3 Upgraded Uncommon and #b2 Rare ",
       " cards. All combats drop an additional ",
       " card reward."
     ]

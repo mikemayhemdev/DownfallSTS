@@ -135,6 +135,20 @@
       "Pick a Card."
     ]
   },
+  "downfall:ColorfulUncommonCardReward": {
+    "TEXT": [
+      "Add a ",
+      " Card to your deck",
+      "Pick a Card."
+    ]
+  },
+  "downfall:ColorfulRareCardReward": {
+    "TEXT": [
+      "Add a ",
+      " Card to your deck",
+      "Pick a Card."
+    ]
+  },
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
       "Living Wall Heads"
