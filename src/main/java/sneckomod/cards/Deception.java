@@ -2,6 +2,9 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.purple.Wallop;
+import com.megacrit.cardcrawl.cards.red.Shockwave;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -29,20 +32,14 @@ public class Deception extends AbstractSneckoCard {
     public Deception() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
-        this.tags.add(SneckoMod.OVERFLOW);
         SneckoMod.loadJokeCardImage(this, "Deception.png");
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (isOverflowActive(this)) {
-            for (AbstractMonster mo : Wiz.getEnemies()) {
-                this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-                this.addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-            }
+        addToBot(new MakeTempCardInHandAction(new Shockwave(), 1));
         }
-    }
 
     public void upgrade() {
         if (!upgraded) {

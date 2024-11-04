@@ -310,7 +310,7 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
             }
 
             // If the card purges on use, immediately return false
-            if (source instanceof TyphoonFang && source.purgeOnUse) {
+            if ((source instanceof TyphoonFang && source.purgeOnUse)){
                 return false; // If the card purges on use, it cannot cause overflow
             }
 
@@ -330,7 +330,9 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
 
 
 
-
+    public void atBattleStart() {
+// overrides moment
+    }
 
 
 

@@ -10,7 +10,7 @@ public class TrashToTreasure extends AbstractSneckoCard {
     public final static String ID = makeID("TrashToTreasure");
 
     //stupid intellij stuff SKILL, SELF, UNCOMMON
-    private static final int BASE_BLOCK = 7;
+    private static final int BASE_BLOCK = 9;
 
     public TrashToTreasure() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);

@@ -21,7 +21,7 @@ public class SaveForLater extends AbstractSneckoCard {
     public static final String ID = SneckoMod.makeID("SaveForLater");
 
     private static final int MAGIC = 1;
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 8;
     private static final int UPGRADE_DAMAGE = 3;
     private static final int UPGRADE_MAGIC = 1;
 

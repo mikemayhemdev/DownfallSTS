@@ -62,8 +62,8 @@ public class ConfusingCodex extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!isOverflowActive(card) || card.purgeOnUse) {
-            return; // Exit if OVERFLOW is not active or the card is purged
+        if (!isOverflowActive(card)) {
+            return;
         }
         AbstractMonster q = AbstractDungeon.getRandomMonster();
         if(q != null){

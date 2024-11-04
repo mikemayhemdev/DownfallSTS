@@ -10,8 +10,8 @@ public class PerpetualSerpent extends AbstractSneckoCard {
 
     public static final String ID = makeID("PerpetualSerpent");
 
-    private static final int DAMAGE = 18;
-    private static final int UPG_DAMAGE = 4;
+    private static final int DAMAGE = 20;
+    private static final int UPG_DAMAGE = 5;
     private static final int MAGIC = 2;
 
     public PerpetualSerpent() {

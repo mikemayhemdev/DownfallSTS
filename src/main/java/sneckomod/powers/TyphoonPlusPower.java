@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
+import sneckomod.cards.PoisonParadise;
 import sneckomod.cards.TyphoonFang;
 import com.megacrit.cardcrawl.core.Settings;
 import sneckomod.relics.D8;
@@ -53,7 +54,7 @@ public class TyphoonPlusPower extends AbstractPower implements CloneablePowerInt
             }
 
             // If the card purges on use, immediately return false
-            if (source instanceof TyphoonFang && source.purgeOnUse) {
+            if ((source instanceof TyphoonFang && source.purgeOnUse)) {
                 return false; // If the card purges on use, it cannot cause overflow
             }
 

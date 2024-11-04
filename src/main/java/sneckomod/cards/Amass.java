@@ -27,6 +27,7 @@ public class Amass extends AbstractSneckoCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int newstuff = baseBlock;
         int totalEnergyCost = 0;
 
         for (AbstractCard card : p.hand.group) {
@@ -35,11 +36,11 @@ public class Amass extends AbstractSneckoCard {
 
         int blockAmount = baseBlock + totalEnergyCost;
 
-        if (isOverflowActive(this)){
-            blockAmount = baseMagicNumber + totalEnergyCost;
-        }
 
-        addToBot(new GainBlockAction(p, blockAmount));
+        baseBlock = blockAmount;
+
+        blck();
+        baseBlock = newstuff;
     }
 
     @Override
@@ -48,6 +49,8 @@ public class Amass extends AbstractSneckoCard {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK);
             upgradeMagicNumber(UPGRADE_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

@@ -12,7 +12,7 @@ public class Restock extends AbstractSneckoCard {
     public final static String ID = makeID("Restock");
 
     //stupid intellij stuff SKILL, SELF, RARE
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 6;
 
     public Restock() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
@@ -30,7 +30,7 @@ public class Restock extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeBaseCost(0);
         }
     }
 }

@@ -46,7 +46,7 @@ public class MarkedCard extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
+            upgradeMagicNumber(1);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

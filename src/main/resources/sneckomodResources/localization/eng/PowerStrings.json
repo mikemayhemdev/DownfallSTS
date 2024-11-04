@@ -2,9 +2,9 @@
   "sneckomod:BlunderGuardPower": {
     "NAME": "Blunder Guard",
     "DESCRIPTIONS": [
-      "Whenever you #yMuddle a card to cost 3, draw #b",
-      " card.",
-      " cards."
+      "Whenever you #yMuddle a card to cost 3, gain #b",
+      " Block.",
+      " Block."
     ]
   },
   "sneckomod:CheapStockPower": {
@@ -102,8 +102,8 @@
   "sneckomod:ToxicPersonalityPower": {
     "NAME": "Toxic Personality",
     "DESCRIPTIONS": [
-      "Whenever you play a card that cost more than its original cost apply Poison to ALL enemies equal to #b",
-      " times its cost."
+      "Whenever you apply a debuff to an enemy, apply #b",
+      " #yVenom."
     ]
   },
   "sneckomod:TyphoonPower": {
@@ -136,7 +136,8 @@
       "Whenever you play a card that costs 3, gain #b",
       " Strength.",
       " Strength."
-    ],
+    ]
+  },
       "sneckomod:BigGunsBlockPower": {
         "NAME": "Tough Guy",
         "DESCRIPTIONS": [
@@ -144,6 +145,36 @@
           " Block.",
           " Block."
         ]
+      },
+  "sneckomod:AceOfWandsPower": {
+    "NAME": "Queen of Pentacles",
+    "DESCRIPTIONS": [
+      "Whenever you apply a debuff to an enemy, gain #b",
+      " Block.",
+      " Block."
+    ]
+  },
+  "sneckomod:LacerateDebuff": {
+    "NAME": "Lacerate",
+    "DESCRIPTIONS": [
+      "Whenever you apply a debuff to this enemy this turn, deal #b",
+      " damage to them.",
+      " damage to them."
+    ]
+  },
+  "sneckomod:FountainPower": {
+    "NAME": "Fountain",
+    "DESCRIPTIONS": [
+      "#yOverflow effects also apply #b",
+      " #yVenom to a random enemy.",
+      " #yVenom to a random enemy."
+    ]
+  },
+        "sneckomod:VenomDebuff": {
+          "NAME": "Venom",
+          "DESCRIPTIONS": [
+            "At the end of its turn, loses #b",
+            " HP only if it has at least two debuffs that aren't Venom."
+          ]
+        }
       }
-    }
-  }

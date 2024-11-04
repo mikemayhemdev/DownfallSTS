@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -32,13 +33,7 @@ public class PowerShot extends AbstractSneckoCard {
     @Override
     public void triggerOnOtherCardPlayed(AbstractCard card) {
         if (card.type == CardType.POWER && AbstractDungeon.player.discardPile.contains(this)) {
-            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    AbstractDungeon.player.discardPile.moveToHand(PowerShot.this);
-                    isDone = true;
-                }
-            });
+            this.addToBot(new DiscardToHandAction(this));
         }
     }
 

@@ -5,20 +5,20 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
+import sneckomod.powers.SerpentMindPower;
 import sneckomod.powers.ToxicPersonalityPower;
-@Deprecated
-@CardIgnore
+
 public class ToxicPersonality extends AbstractSneckoCard {
 
     public final static String ID = makeID("ToxicPersonality");
 
     //stupid intellij stuff POWER, SELF, RARE
 
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 3;
+    private static final int UPG_MAGIC = 2;
 
     public ToxicPersonality() {
-        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "ToxicPersonality.png");
     }

@@ -23,7 +23,6 @@ public class SoulDraw extends AbstractSneckoCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
-        tags.add(SneckoMod.SNEKPROOF);
         SneckoMod.loadJokeCardImage(this, "SoulDraw.png");
     }
 

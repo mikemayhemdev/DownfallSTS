@@ -23,10 +23,12 @@ public class Behold extends AbstractSneckoCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int orig = baseDamage;
         int additionalDamage = (p.hand.size() - 1) * magicNumber;
         int totalDamage = this.baseDamage + additionalDamage;
-
-        addToBot(new DamageAction(m, new DamageInfo(p, totalDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        baseDamage = totalDamage;
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        baseDamage = orig;
     }
 
     @Override

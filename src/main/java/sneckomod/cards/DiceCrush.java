@@ -16,7 +16,7 @@ public class DiceCrush extends AbstractSneckoCard {
 
     private static final int DAMAGE = 10;
     private static final int MAGIC = 2;
-    private static final int UPG_DAMAGE = 2;
+    private static final int UPG_DAMAGE = 3;
 
     public DiceCrush() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);

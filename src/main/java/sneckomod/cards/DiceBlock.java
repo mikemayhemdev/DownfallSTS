@@ -9,15 +9,12 @@ public class DiceBlock extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("DiceBlock");
 
-    private static final int BASE_BLOCK = 7;
-    private static final int UPG_BASE_BLOCK = 3;
-    private static final int BASE_MAGIC = 3; // Base overflow block
-    private static final int UPG_MAGIC = 1; // Overflow block increase per upgrade
+    private static final int BASE_BLOCK = 6;
+    private static final int UPG_BASE_BLOCK = 2;
 
     public DiceBlock() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BASE_BLOCK;
-        baseMagicNumber = BASE_MAGIC;
         SneckoMod.loadJokeCardImage(this, "DiceBlock.png");
         this.tags.add(SneckoMod.OVERFLOW);
     }
@@ -25,8 +22,8 @@ public class DiceBlock extends AbstractSneckoCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (isOverflowActive(this)) {
-            addToBot(new GainBlockAction(p, p, magicNumber));
+        if (isOverflowActive(this)){
+            blck();
         }
     }
 
@@ -35,7 +32,6 @@ public class DiceBlock extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPG_BASE_BLOCK);
-            upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

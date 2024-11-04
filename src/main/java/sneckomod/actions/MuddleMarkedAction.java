@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
+import sneckomod.cards.Cower;
 import sneckomod.cards.RiskySword;
 import sneckomod.powers.BlunderGuardPower;
 import sneckomod.powers.MudshieldPower;
@@ -32,9 +33,13 @@ public class MuddleMarkedAction extends AbstractGameAction {
     public void update() {
         isDone = true;
 
-        if (card instanceof RiskySword) {
+        if ((card instanceof RiskySword)) {
             ((RiskySword) card).onMuddledSword();
         }
+        if ((card instanceof Cower)) {
+            ((Cower) card).onMuddledSword();
+        }
+
 
         if (card.cost >= 0 && !card.hasTag(SneckoMod.SNEKPROOF)) {
             if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {

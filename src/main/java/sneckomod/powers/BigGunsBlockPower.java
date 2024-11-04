@@ -59,6 +59,6 @@ public class BigGunsBlockPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public AbstractPower makeCopy() {
-        return new OverwhelmingPresencePower(this.amount);
+        return new BigGunsStrengthPower(this.amount);
     }
 }

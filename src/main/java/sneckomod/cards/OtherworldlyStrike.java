@@ -28,24 +28,20 @@ public class OtherworldlyStrike extends AbstractSneckoCard implements OnObtainCa
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Deal initial damage
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        boolean playedOffClassCard = AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
+                .anyMatch(card -> card.color != this.color);
 
-        // Check if the last played card was a different color
-        if (!AbstractDungeon.actionManager.cardsPlayedThisTurn.isEmpty()) {
-            AbstractCard lastCard = AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1);
-
-            // If the last card's color is different from this card's color, deal additional damage
-            if (lastCard.color != this.color) {
+        if (playedOffClassCard) {
                 dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
             }
         }
-    }
 
 
     @Override
     public void onObtainCard() {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
         while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.type == AbstractCard.CardType.SKILL && c.rarity == AbstractCard.CardRarity.COMMON);
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == AbstractCard.CardRarity.COMMON);
             if (!cardListDuplicate(cardsToReward, newCard)) {
                 cardsToReward.add(newCard.makeCopy()); // Use makeCopy() to ensure a new instance
             }

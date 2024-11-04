@@ -17,7 +17,7 @@ public class Verify extends AbstractBronzeCard {
 
     public Verify() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO); //I'm rebanning this, why can you see this as Snecko?
         tags.add(BaseModCardTags.FORM);
         isEthereal = true;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Verify.png"));

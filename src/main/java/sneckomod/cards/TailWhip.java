@@ -15,6 +15,7 @@ public class TailWhip extends AbstractSneckoCard {
     private static final int DAMAGE = 10;
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
+    private static final int UPG_DAMAGE = 4;
 
     public TailWhip() {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
@@ -47,6 +48,7 @@ public class TailWhip extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPG_MAGIC);
+            upgradeDamage(UPG_DAMAGE);
         }
     }
 }

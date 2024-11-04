@@ -42,7 +42,7 @@ public class BlunderGuardPower extends AbstractPower implements CloneablePowerIn
     @Override
     public void onSpecificTrigger() {
         flash();
-        addToTop(new DrawCardAction(owner, amount, true));
+        addToTop(new GainBlockAction(owner, amount, false));
     }
 
     @Override

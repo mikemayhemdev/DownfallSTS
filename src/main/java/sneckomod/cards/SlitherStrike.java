@@ -16,11 +16,11 @@ public class SlitherStrike extends AbstractSneckoCard {
 
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 9;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 13;
+    private static final int UPG_DAMAGE = 4;
 
     public SlitherStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         SneckoMod.loadJokeCardImage(this, "SlitherStrike.png");
@@ -46,7 +46,7 @@ public class SlitherStrike extends AbstractSneckoCard {
     public void onObtainCard() {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
         while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.type == CardType.ATTACK && c.rarity == AbstractCard.CardRarity.UNCOMMON);
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == AbstractCard.CardRarity.UNCOMMON);
             if (!cardListDuplicate(cardsToReward, newCard)) {
                 cardsToReward.add(newCard.makeCopy());
             }

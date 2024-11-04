@@ -1,0 +1,44 @@
+package sneckomod.cards;
+
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
+
+public class ComboString extends AbstractSneckoCard {
+
+    public static final String ID = SneckoMod.makeID("ComboString");
+
+    // Card constants
+    private static final int DAMAGE = 5;
+    private static final int UPGRADE_DAMAGE = 2;
+    private static final int COST = 1;
+
+    public ComboString() {
+        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = DAMAGE;
+        SneckoMod.loadJokeCardImage(this, "ComboString.png");
+    }
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        int offclassCardsPlayed = (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
+                .filter(card -> card.color != AbstractDungeon.player.getCardColor())
+                .count();
+
+        for (int i = 0; i < offclassCardsPlayed; i++) {
+            addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        }
+    }
+
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeDamage(UPGRADE_DAMAGE);
+        }
+    }
+}

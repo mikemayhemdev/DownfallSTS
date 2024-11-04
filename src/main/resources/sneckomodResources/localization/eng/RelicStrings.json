@@ -73,7 +73,7 @@
     "NAME": "Idol of Retromation",
     "FLAVOR": "Often called the Idol of Reto for short.",
     "DESCRIPTIONS": [
-      "At the start of your turn, #ysneckomod:Muddle the #b2 highest cost cards in your hand."
+      "At the start of your turn, #ysneckomod:Muddle the highest cost card in your hand."
     ]
   },
   "sneckomod:BlankCard": {

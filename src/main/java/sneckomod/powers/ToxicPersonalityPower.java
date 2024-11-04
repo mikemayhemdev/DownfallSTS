@@ -2,19 +2,15 @@ package sneckomod.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
-
 
 public class ToxicPersonalityPower extends AbstractPower implements CloneablePowerInterface {
     public static final String POWER_ID = SneckoMod.makeID("ToxicPersonalityPower");
@@ -29,7 +25,7 @@ public class ToxicPersonalityPower extends AbstractPower implements CloneablePow
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
-        this.amount = amount;  // Store the number of stacks
+        this.amount = amount;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
 
@@ -40,21 +36,22 @@ public class ToxicPersonalityPower extends AbstractPower implements CloneablePow
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.costForTurn > card.cost) {
-            for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                addToBot(new ApplyPowerAction(q, AbstractDungeon.player,
-                        new PoisonPower(q, AbstractDungeon.player, this.amount * card.costForTurn), this.amount * card.costForTurn));
-            }
+    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        // Check if the applied power is a debuff and not Venom/Shackle AND they don't have Artifact
+        if ((power.type == PowerType.DEBUFF && !(power instanceof VenomDebuff) && source == this.owner && target != this.owner) && !power.ID.equals("Shackled") && !target.hasPower("Artifact")){
+            onActivateCall(target);
         }
     }
 
-
+    public void onActivateCall(AbstractCreature target) {
+        this.flash();
+        this.addToBot(new ApplyPowerAction(target, this.owner, new VenomDebuff(target, this.amount), this.amount));
+    }
 
     @Override
     public void updateDescription() {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        }
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+    }
 
     @Override
     public AbstractPower makeCopy() {

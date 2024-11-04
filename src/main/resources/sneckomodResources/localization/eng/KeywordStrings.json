@@ -38,11 +38,11 @@
     "DESCRIPTION": "An Offclass card is any obtainable card from a class other than your own (including Colorless cards, Curses, and Statuses)."
   },
   {
-    "PROPER_NAME": "Picked",
+    "PROPER_NAME": "Gift",
     "NAMES": [
-      "picked"
+      "gift"
     ],
-    "DESCRIPTION": "When this card is obtained..."
+    "DESCRIPTION": "When you obtain this card, get a card reward with the following card type."
   },
   {
     "PROPER_NAME": "Identify",
@@ -50,6 +50,13 @@
       "identify"
     ],
     "DESCRIPTION": "Replace an #yUnidentified card with its current random card permanently."
+  },
+  {
+    "PROPER_NAME": "Venom",
+    "NAMES": [
+      "venom"
+    ],
+    "DESCRIPTION": "Creatures with Venom lose additional HP at the end of their turn if they have at least two additional debuffs."
   },
   {
     "PROPER_NAME": "Lucky",

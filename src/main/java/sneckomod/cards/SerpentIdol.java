@@ -14,7 +14,6 @@ public class SerpentIdol extends AbstractSneckoCard {
     public SerpentIdol() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
-        tags.add(SneckoMod.SNEKPROOF);
         SneckoMod.loadJokeCardImage(this, "SerpentIdol.png");
     }
 

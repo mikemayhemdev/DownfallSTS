@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
+import sneckomod.cards.PoisonParadise;
 import sneckomod.cards.TyphoonFang;
 import com.megacrit.cardcrawl.core.Settings;
 import sneckomod.relics.D8;
@@ -50,28 +51,32 @@ public class TyphoonPower extends AbstractPower implements CloneablePowerInterfa
     public boolean isOverflowActive(AbstractCard source) { // Adjusted to take a card parameter
         boolean OVERFLOW = false; // Reset overflow state
 
-        // Check if there are more than 5 cards in hand
-        if (AbstractDungeon.player.hand.size() > 5 || (AbstractDungeon.player.hasPower(CheatPower.POWER_ID))) {
-            OVERFLOW = true;
-        }
+        // Only check for overflow if the card has the OVERFLOW tag
+        if (source.hasTag(SneckoMod.OVERFLOW)) {
+            // Check if there are more than 5 cards in hand
+            if (AbstractDungeon.player.hand.size() > 5 || (AbstractDungeon.player.hasPower(CheatPower.POWER_ID))) {
+                OVERFLOW = true;
+            }
 
-        if (source instanceof TyphoonFang && source.purgeOnUse) {
-            return false; // If the card purges on use, it cannot cause overflow
-        }
+            // If the card purges on use, immediately return false
+            if ((source instanceof TyphoonFang && source.purgeOnUse)) {
+                return false; // If the card purges on use, it cannot cause overflow
+            }
 
-        // Check for the D8 relic
-        if (AbstractDungeon.player.hasRelic(D8.ID)) {
-            D8 d8Relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
-            if (d8Relic != null && d8Relic.card != null) {
-                if (d8Relic.card.uuid.equals(source.uuid)) {
-                    OVERFLOW = true; // Set overflow if the D8 card is the same as the source card
+            // Check for the D8 relic
+            if (AbstractDungeon.player.hasRelic(D8.ID)) {
+                D8 d8Relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
+                if (d8Relic != null && d8Relic.card != null) {
+                    if (d8Relic.card.uuid.equals(source.uuid)) {
+                        OVERFLOW = true; // Set overflow if the D8 card is the same as the source card
+                    }
                 }
             }
         }
-        // we don't use the d8 flash here, that's part of the abstract card code
 
         return OVERFLOW; // Return true or false
     }
+
 
 
     @Override
@@ -147,6 +152,6 @@ public class TyphoonPower extends AbstractPower implements CloneablePowerInterfa
 
     @Override
     public AbstractPower makeCopy() {
-        return new ToxicPersonalityPower(this.amount);
+        return new TyphoonPower(this.amount);
     }
 }

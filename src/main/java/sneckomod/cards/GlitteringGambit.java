@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
+import expansioncontent.expansionContentMod;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -12,13 +13,14 @@ import java.util.ArrayList;
 public class GlitteringGambit extends AbstractSneckoCard {
     public final static String ID = makeID("GlitteringGambit");
 
-    private static final int MAGIC = 50;
+    private static final int MAGIC = 75;
 
     public GlitteringGambit() {
         super(ID, -2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = false;
         tags.add(CardTags.HEALING);
+        tags.add(expansionContentMod.UNPLAYABLE);
         SneckoMod.loadJokeCardImage(this, "GlitteringGambit.png");
     }
 

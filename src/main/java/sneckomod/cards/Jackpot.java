@@ -15,7 +15,7 @@ public class Jackpot extends AbstractSneckoCard {
     private static final int UPGRADE_MAGIC = 1;
 
     public Jackpot() {
-        super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 4, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
         SneckoMod.loadJokeCardImage(this, "Jackpot.png");

@@ -10,28 +10,27 @@ import sneckomod.actions.MuddleHandAction;
 
 public class SoulExchange extends AbstractSneckoCard {
 
-    public final static String ID = makeID("SoulExchange");
+    public static final String ID = SneckoMod.makeID("SoulExchange");
 
-    //stupid intellij stuff SKILL, SELF, COMMON
+    private static final int COST = 1;
 
     public SoulExchange() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        exhaust = true;
+        super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        this.retain = true;
+        this.exhaust = true;
         SneckoMod.loadJokeCardImage(this, "SoulExchange.png");
     }
 
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-        atb(new MuddleHandAction());
-        this.addToBot(new DiscardAction(p, p, 1, false));
+        addToBot(new MuddleHandAction());
     }
 
+    @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(0);
         }
     }
 }

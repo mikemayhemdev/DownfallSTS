@@ -28,7 +28,7 @@ public class LilGuardian extends AbstractSneckoCard {
 
     @Override
     public void triggerOnCardPlayed(AbstractCard card) {
-        if (card.cost >= 2 && AbstractDungeon.player.hand.contains(this)) {
+        if (card.costForTurn >= 2 && AbstractDungeon.player.hand.contains(this)) {
             addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
             addToBot(new DiscardSpecificCardAction(this, AbstractDungeon.player.hand));
         }

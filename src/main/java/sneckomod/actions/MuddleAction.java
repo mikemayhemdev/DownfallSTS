@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
+import sneckomod.cards.Cower;
 import sneckomod.cards.RiskySword;
 import sneckomod.powers.BlunderGuardPower;
 import sneckomod.powers.MudshieldPower;
@@ -36,10 +37,13 @@ public class MuddleAction extends AbstractGameAction {
 
     public void update() {
         isDone = true;
-        if (card instanceof RiskySword) {
-            // Cast the card to RiskySword and call the onMuddled method
+        if ((card instanceof RiskySword)) {
             ((RiskySword) card).onMuddledSword();
         }
+        if ((card instanceof Cower)) {
+            ((Cower) card).onMuddledSword();
+        }
+
         if (card.cost >= 0 && !card.hasTag(SneckoMod.SNEKPROOF)) {// 32
             if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {
                 AbstractDungeon.player.getPower(MudshieldPower.POWER_ID).onSpecificTrigger();
@@ -74,7 +78,7 @@ public class MuddleAction extends AbstractGameAction {
                         AbstractDungeon.player.getPower(BlunderGuardPower.POWER_ID).onSpecificTrigger();
             }
             }
-            // jk i removed it  card.tags.add(MUDDLED); // THIS LITERALLY ONLY EXISTS FOR BABY SNECKO AND IS IRRELEVANT OTHERWISE
+            //card.tags.add(MUDDLED); // THIS LITERALLY ONLY EXISTS FOR BABY SNECKO AND IS IRRELEVANT OTHERWISE
             card.freeToPlayOnce = false;// 39
         }
     }
