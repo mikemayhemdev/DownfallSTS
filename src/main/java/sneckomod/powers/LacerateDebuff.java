@@ -2,6 +2,7 @@ package sneckomod.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -12,9 +13,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.util.TextureLoader;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import sneckomod.SneckoMod;
 
-public class LacerateDebuff extends AbstractPower implements CloneablePowerInterface {
+
+public class LacerateDebuff extends AbstractPower implements CloneablePowerInterface, OnReceivePowerPower {
     public static final String POWER_ID = SneckoMod.makeID("LacerateDebuff");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
@@ -39,18 +42,29 @@ public class LacerateDebuff extends AbstractPower implements CloneablePowerInter
     }
 
     @Override
-    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.type == PowerType.DEBUFF
-                && !power.ID.equals("Shackled")
-                && source == AbstractDungeon.player // Ensure source is the player
-                && target != AbstractDungeon.player // Ensure target is not the player
-                && target == this.owner // Ensure the target is the same as the debuff's owner
-                && !target.hasPower("Artifact")) {
-
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(target, new DamageInfo(owner, this.amount, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE)
-            );
+    public void atEndOfTurn(boolean isPlayer) {
+        // Remove LacerateDebuff at the end of the turn
+        if (!this.owner.isPlayer) {
+            this.addToBot(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
+    }
+
+    @Override
+    public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        if (power.type == PowerType.DEBUFF && target == this.owner && !power.ID.equals("Shackled") && !target.hasPower("Artifact")) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, this.owner, new VenomDebuff(target, this.amount), this.amount));
+                    // Check if the player has Toxic Personality power and the target does not have Artifact
+            if (AbstractDungeon.player.hasPower(ToxicPersonalityPower.POWER_ID) && !target.hasPower("Artifact")) {
+                ToxicPersonalityPower toxicPersonalityPower =
+                        (ToxicPersonalityPower) AbstractDungeon.player.getPower(ToxicPersonalityPower.POWER_ID);
+
+                if (toxicPersonalityPower != null) {
+                    toxicPersonalityPower.onActivateCall(target);
+
+                }
+            }
+        }
+        return true;
     }
 
     @Override

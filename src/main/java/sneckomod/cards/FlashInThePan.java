@@ -16,7 +16,6 @@ public class FlashInThePan extends AbstractSneckoCard {
 
     private static final int BLOCK = 9;
     private static final int COST = 2;
-    int DhandSize = 0;
 
     public FlashInThePan() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -28,16 +27,17 @@ public class FlashInThePan extends AbstractSneckoCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
-        DhandSize = 0;
-        for (AbstractCard card : p.hand.group) {
-            addToBot(new DiscardAction(p, p, 1, false)); // Discard one card at a time
-            DhandSize = DhandSize + 1;
+
+        int handSize = p.hand.size(); // todo: I heard this was bad practice but I don't remember what the proper variable to use is
+        if (handSize > 0) {
+            addToBot(new DiscardAction(p, p, handSize, false));
         }
 
-        if (DhandSize > 1) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, DhandSize-1), DhandSize-1));
+        if (handSize > 1) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, handSize - 1), handSize - 1));
         }
     }
+
 
     @Override
     public void upgrade() {

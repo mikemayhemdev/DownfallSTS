@@ -1,12 +1,16 @@
 package sneckomod.cards;
 
 import basemod.helpers.BaseModCardTags;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 import sneckomod.powers.SerpentMindPower;
 import sneckomod.powers.ToxicPersonalityPower;
+
+import java.util.ArrayList;
 
 public class ToxicPersonality extends AbstractSneckoCard {
 
@@ -14,7 +18,7 @@ public class ToxicPersonality extends AbstractSneckoCard {
 
     //stupid intellij stuff POWER, SELF, RARE
 
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 5;
     private static final int UPG_MAGIC = 2;
 
     public ToxicPersonality() {
@@ -25,6 +29,33 @@ public class ToxicPersonality extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new ToxicPersonalityPower(magicNumber));
+    }
+
+    @Override
+    public void onObtainCard() {
+        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+        while (cardsToReward.size() < 3) {
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(
+                    c -> (c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE) &&
+                            ((((c.rawDescription.contains("Apply") ||c.rawDescription.contains("apply") ||c.rawDescription.contains("applies")
+                                    ||c.rawDescription.contains("Lick") ||c.rawDescription.contains("Debuff") ||c.rawDescription.contains("Steal")
+                                    || c.name.contains("Disarm") || c.name.contains("Choke") || c.name.contains("Talk to the Hand") || c.name.contains("Cursed Wail")
+                                    || c.name.contains("Undervolt"))|| c.name.contains("Dark Lord Form")))));
+            if (!cardListDuplicate(cardsToReward, newCard)) {
+                cardsToReward.add(newCard.makeCopy());
+            }
+        }
+
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void upgrade() {

@@ -99,7 +99,7 @@ public class SneckoMod implements
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags BANNEDFORSNECKO;
     @SpireEnum
-    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags OVERFLOW; // Overflow Tag
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags OVERFLOW;
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags MUDDLED;
 
@@ -363,14 +363,14 @@ public class SneckoMod implements
         downfallMod.registerUnlockSuite(
                 SoulDraw.ID,
                 PureSnecko.ID,
-                Rotation.ID,
+                Restock.ID,
 
-                UnknownColorless.ID,
-                UnknownStrength.ID,
-                UnknownDexterity.ID,
+                BigGuns.ID,
+                OverwhelmingPresence.ID,
+                BlunderGuard.ID,
 
-                MixItUp.ID,
-                Transmogrify.ID,
+                Lacerate.ID,
+                InertBlade.ID,
                 GlitteringGambit.ID,
 
                 RareBoosterPack.ID,
@@ -379,7 +379,7 @@ public class SneckoMod implements
 
                 SuperSneckoEye.ID,
                 UnknownEgg.ID,
-                BlankCard.ID,
+                SneckoTalon.ID,
 
                 TheSnecko.Enums.THE_SNECKO
         );
@@ -465,8 +465,6 @@ public class SneckoMod implements
         BaseMod.addEvent(new AddEventParams.Builder(Serpent_Snecko.ID, Serpent_Snecko.class) //Event ID//
                 //Event Character//
                 .playerClass(TheSnecko.Enums.THE_SNECKO)
-                //Event Spawn Condition//
-                .spawnCondition(() -> !evilMode)
                 //Event ID to Override//
                 .overrideEvent(Sssserpent.ID)
                 //Event Type//
@@ -476,8 +474,6 @@ public class SneckoMod implements
         BaseMod.addEvent(new AddEventParams.Builder(Serpent_Snecko.ID, Serpent_Snecko.class) //Event ID//
                 //Event Character//
                 .playerClass(TheSnecko.Enums.THE_SNECKO)
-                //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Serpent_Evil.ID)
                 //Event Type//

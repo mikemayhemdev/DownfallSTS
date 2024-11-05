@@ -3,13 +3,17 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import sneckomod.SneckoMod;
+
+import java.util.ArrayList;
 
 public class MakeshiftBlade extends AbstractSneckoCard {
 
@@ -35,6 +39,31 @@ public class MakeshiftBlade extends AbstractSneckoCard {
         if (m != null && m.powers.stream().filter(power -> power.type == AbstractPower.PowerType.DEBUFF).count() >= magicNumber) {
             addToBot(new DrawCardAction(p, 3));
         }
+    }
+
+    @Override
+    public void onObtainCard() {
+        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+        while (cardsToReward.size() < 3) {
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(
+                    c -> c.rarity == AbstractCard.CardRarity.UNCOMMON &&
+                            (c.rawDescription.contains("Weak") || c.rawDescription.contains("Vulnerable") || c.rawDescription.contains("Bruise") || c.rawDescription.contains("Soulburn") || c.rawDescription.contains("Goop") || c.rawDescription.contains("Doom"))
+            );
+            if (!cardListDuplicate(cardsToReward, newCard)) {
+                cardsToReward.add(newCard.makeCopy());
+            }
+        }
+
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

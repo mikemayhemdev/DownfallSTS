@@ -48,6 +48,9 @@ public class ToxicPersonalityPower extends AbstractPower implements CloneablePow
         this.addToBot(new ApplyPowerAction(target, this.owner, new VenomDebuff(target, this.amount), this.amount));
     }
 
+
+
+
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];

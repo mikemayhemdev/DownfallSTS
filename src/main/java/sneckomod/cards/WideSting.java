@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
+import java.util.ArrayList;
+
 public class WideSting extends AbstractSneckoCard {
 
     public final static String ID = makeID("WideSting");
@@ -39,6 +41,28 @@ public class WideSting extends AbstractSneckoCard {
                 }
             }
         }
+    }
+
+    @Override
+    public void onObtainCard() {
+        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+        while (cardsToReward.size() < 3) {
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == AbstractCard.CardRarity.COMMON);
+            if (!cardListDuplicate(cardsToReward, newCard)) {
+                cardsToReward.add(newCard.makeCopy()); // Use makeCopy() to ensure a new instance
+            }
+        }
+
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void upgrade() {

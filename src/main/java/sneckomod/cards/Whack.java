@@ -29,7 +29,11 @@ public class Whack extends AbstractSneckoCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new MakeTempCardInHandAction(new Wallop(), 1));
+        AbstractCard g = new Wallop();
+        if(this.upgraded){
+            g.upgrade();
+        }
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(g));
     }
 
     @Override
@@ -37,6 +41,8 @@ public class Whack extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

@@ -23,8 +23,8 @@ public class Deception extends AbstractSneckoCard {
 
     //this is definitely one of the cards of all time - blue
 
-    private static final int BLOCK = 13;
-    private static final int UPG_BLOCK = 2;
+    private static final int BLOCK = 14;
+    private static final int UPG_BLOCK = 4;
 
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;

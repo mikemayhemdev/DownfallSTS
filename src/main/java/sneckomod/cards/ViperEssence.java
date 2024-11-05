@@ -23,7 +23,7 @@ public class ViperEssence extends AbstractSneckoCard {
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
     public ViperEssence() {
-        super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 0, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         SneckoMod.loadJokeCardImage(this, "SoulRoll.png");
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;

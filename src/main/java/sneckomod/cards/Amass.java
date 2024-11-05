@@ -34,7 +34,7 @@ public class Amass extends AbstractSneckoCard {
             totalEnergyCost += card.costForTurn;
         }
 
-        int blockAmount = baseBlock + totalEnergyCost;
+        int blockAmount = baseBlock + totalEnergyCost*magicNumber;
 
 
         baseBlock = blockAmount;

@@ -21,8 +21,8 @@ public class Medusa extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("Medusa");
 
-    private static final int DAMAGE = 9;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 12;
+    private static final int UPG_DAMAGE = 4;
 
     public Medusa() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);

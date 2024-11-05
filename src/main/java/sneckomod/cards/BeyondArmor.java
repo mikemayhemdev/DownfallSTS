@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import hermit.util.Wiz;
 
+import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 import static sneckomod.SneckoMod.makeID;
@@ -51,6 +52,28 @@ public class BeyondArmor extends AbstractSneckoCard {
                 if (count >= magicNumber) break;
             }
         }
+    }
+
+    @Override
+    public void onObtainCard() {
+        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+        while (cardsToReward.size() < 3) {
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == AbstractCard.CardRarity.COMMON);
+            if (!cardListDuplicate(cardsToReward, newCard)) {
+                cardsToReward.add(newCard.makeCopy()); // Use makeCopy() to ensure a new instance
+            }
+        }
+
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

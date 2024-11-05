@@ -48,7 +48,8 @@ public class Belittle extends AbstractSneckoCard implements OnObtainCard{
     public void onObtainCard() {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
         while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.type == AbstractCard.CardType.SKILL && c.rarity == AbstractCard.CardRarity.UNCOMMON);
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> ((c.rawDescription.contains("Apply") ||c.rawDescription.contains("apply") ||c.rawDescription.contains("applies") ||c.rawDescription.contains("Lick") ||c.rawDescription.contains("Debuff") ||c.rawDescription.contains("Steal") || c.name.contains("Disarm") || c.name.contains("Choke") || c.name.contains("Talk to the Hand") || c.name.contains("Cursed Wail") || c.name.contains("Undervolt"))
+            ) && c.rarity == AbstractCard.CardRarity.UNCOMMON);
             if (!cardListDuplicate(cardsToReward, newCard)) {
                 cardsToReward.add(newCard.makeCopy());
             }

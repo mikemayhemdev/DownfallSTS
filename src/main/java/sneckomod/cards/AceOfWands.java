@@ -13,7 +13,7 @@ public class AceOfWands extends AbstractSneckoCard {
 
     public AceOfWands() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
         isEthereal = true;
         SneckoMod.loadJokeCardImage(this, "AceOfWands.png");
     }

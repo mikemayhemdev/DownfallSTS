@@ -12,7 +12,7 @@ public class CheapStock extends AbstractSneckoCard {
     public final static String ID = makeID("CheapStock");
 
     public CheapStock() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 

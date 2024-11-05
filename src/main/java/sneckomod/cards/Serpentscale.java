@@ -16,7 +16,7 @@ public class Serpentscale extends AbstractSneckoCard {
     // Card constants
     private static final int DAMAGE = 9;
     private static final int UPGRADE_DAMAGE = 3;
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
 
     public Serpentscale() {

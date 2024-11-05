@@ -22,7 +22,7 @@ public class MintCondition extends AbstractSneckoCard {
     //this is a show-off clone
 
     public MintCondition() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         this.tags.add(SneckoMod.OVERFLOW);
         SneckoMod.loadJokeCardImage(this, "MintCondition.png");

@@ -13,13 +13,12 @@ public class RoundaboutSwing extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("RoundaboutSwing");
 
-    private static final int DAMAGE = 16;
+    private static final int DAMAGE = 12;
     private static final int UPGRADE_DAMAGE = 4;
-    private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 2;
 
     public RoundaboutSwing() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = MAGIC;
     }
@@ -36,9 +35,6 @@ public class RoundaboutSwing extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
-            upgradeMagicNumber(UPG_MAGIC);
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
         }
     }
 }

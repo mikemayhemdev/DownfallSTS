@@ -19,7 +19,7 @@
   },
   "sneckomod:DangerNoodle": {
     "NAME": "Danger Noodle",
-    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle a card. NL sneckomod:Gift: sneckomod:Offclass 3+ cost."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle a card. NL sneckomod:Gift: 3+ cost."
   },
   "sneckomod:Deception": {
     "NAME": "Deception",
@@ -31,7 +31,7 @@
   },
   "sneckomod:DefensiveFlair": {
     "NAME": "Defensive Flair",
-    "DESCRIPTION": "Gain !B! Block, increased by !M! for each sneckomod:Offclass card in your hand."
+    "DESCRIPTION": "Gain !B! Block, increased by !M! for each sneckomod:Offclass card in your hand. NL sneckomod:Gift: Uncommon."
   },
   "sneckomod:DiceBlock": {
     "NAME": "Dice Block",
@@ -47,8 +47,8 @@
   },
   "sneckomod:DragonsHoard": {
     "NAME": "Dragon's Hoard",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity. NL sneckomod:Gift: Uncommon Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Dexterity. NL sneckomod:Gift: Uncommon Dexterity."
   },
   "sneckomod:FourOfAKind": {
     "NAME": "Four Of A Kind",
@@ -60,8 +60,8 @@
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
-    "DESCRIPTION": "Unplayable. NL sneckomod:Gift: Upgraded sneckomod:Offclass Rare card and !M! Gold.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL sneckomod:Gift: Upgraded sneckomod:Offclass Rare and !M! Gold."
+    "DESCRIPTION": "Unplayable. NL sneckomod:Gift: Upgraded Rare card and !M! Gold.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL sneckomod:Gift: Upgraded Rare and !M! Gold."
   },
   "sneckomod:ImmovableObject": {
     "NAME": "Immovable Object",
@@ -92,9 +92,9 @@
     ]
   },
   "sneckomod:MasterEye": {
-    "NAME": "Master Eye",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Become Confused. NL Draw !M! additional cards each turn.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Become Confused. NL Draw !M! additional cards each turn."
+    "NAME": "Snake Eyes",
+    "DESCRIPTION": "This turn, your next sneckomod:Offclass card is played twice. NL sneckomod:Gift: Rare Skill.",
+    "UPGRADE_DESCRIPTION": "This turn, your next 2 sneckomod:Offclass cards are played twice. NL sneckomod:Gift: Rare Skill."
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
@@ -147,7 +147,7 @@
   },
   "sneckomod:RainOfDice": {
     "NAME": "Rain of Dice",
-    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle a card, then return this to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle a card, then add a copy of this to your hand. NL Exhaust."
   },
   "sneckomod:Restock": {
     "NAME": "Restock",
@@ -169,16 +169,16 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotic Form",
-    "DESCRIPTION": "At the end of your turn, gain !M! Strength for each unique sneckomod:Suit played this turn. NL sneckomod:Gift: sneckomod:Offclass Rare."
+    "DESCRIPTION": "At the end of your turn, gain !M! Strength for each unique color played this turn. NL sneckomod:Gift: Rare."
   },
   "sneckomod:SlitherStrike": {
     "NAME": "Slither Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn. NL sneckomod:Gift: sneckomod:Offclass Uncommon."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn. NL sneckomod:Gift: Uncommon."
   },
   "sneckomod:SnakeEyes": {
     "NAME": "Snake Eyes",
-    "DESCRIPTION": "This turn, your next sneckomod:Offclass card is played twice. NL sneckomod:Gift: sneckomod:Offclass Rare Skill.",
-    "UPGRADE_DESCRIPTION": "This turn, your next 2 sneckomod:Offclass cards are played twice. NL sneckomod:Gift: sneckomod:Offclass Rare Skill."
+    "DESCRIPTION": "This turn, your next sneckomod:Offclass card is played twice. NL sneckomod:Gift: Rare Skill.",
+    "UPGRADE_DESCRIPTION": "This turn, your next 2 sneckomod:Offclass cards are played twice. NL sneckomod:Gift: Rare Skill."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
@@ -216,8 +216,8 @@
   },
   "sneckomod:ToothAndClaw": {
     "NAME": "Tooth And Claw",
-    "DESCRIPTION": "Deal !D! damage. Gain a Shiv for each unique sneckomod:Suit in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain an Upgraded Shiv for each unique sneckomod:Suit in your hand."
+    "DESCRIPTION": "Deal !D! damage. Gain a Shiv for each unique color in your hand. NL sneckomod:Gift: Uncommon.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain an Upgraded Shiv for each unique color in your hand. NL sneckomod:Gift: Uncommon."
   },
   "sneckomod:TyphoonFang": {
     "NAME": "Typhoon Fang",
@@ -244,7 +244,7 @@
   },
   "sneckomod:ToxicPersonality": {
     "NAME": "Toxic Personality",
-    "DESCRIPTION": "Whenever you apply a debuff to an enemy, apply !M! sneckomod:Venom to them."
+    "DESCRIPTION": "Whenever you apply a debuff to an enemy, also apply !M! sneckomod:Venom. NL sneckomod:Gift: Uncommon+ Debuff."
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "Trash to Treasure",
@@ -430,7 +430,7 @@
   },
   "sneckomod:WideSting": {
     "NAME": "Wide Sting",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand. NL sneckomod:Gift: Common."
   },
   "sneckomod:GildedShield": {
     "NAME": "Gilded Shield",
@@ -446,15 +446,15 @@
   },
   "sneckomod:OtherworldlyStrike": {
     "NAME": "Otherworldly Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If you played an sneckomod:Offclass card this turn, deal !D! damage again. NL sneckomod:Gift: Common sneckomod:Offclass."
+    "DESCRIPTION": "Deal !D! damage. NL If you played an sneckomod:Offclass card this turn, deal !D! damage again. NL sneckomod:Gift: Common."
   },
   "sneckomod:BeyondArmor": {
     "NAME": "Beyond Armor",
-    "DESCRIPTION": "Gain !B! Block. NL Put !M! sneckomod:Offclass cards from your draw pile into your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Put !M! sneckomod:Offclass cards from your draw pile into your hand. NL sneckomod:Gift: Common."
   },
   "sneckomod:BigGuns": {
     "NAME": "Big Guns",
-    "DESCRIPTION": "Whenever you play a card that costs 3, gain !B! Block and !M! Strength."
+    "DESCRIPTION": "Whenever you play a card that costs 3, gain !B! Block and !M! Strength. NL sneckomod:Gift: 3 cost."
   },
   "sneckomod:WideAngle": {
     "NAME": "Wide Angle",
@@ -462,11 +462,12 @@
   },
   "sneckomod:SerpentsNest": {
     "NAME": "Serpent's Nest",
-    "DESCRIPTION": "Whenever you play a Power, deal !M! damage to ALL enemies. NL sneckomod:Gift: sneckomod:Offclass Uncommon Power."
+    "DESCRIPTION": "Whenever you play a Power, deal !M! damage to ALL enemies. NL sneckomod:Gift: Uncommon Power."
   },
   "sneckomod:Whack": {
     "NAME": "Whack",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Wallop to your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Wallop to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Wallop+ to your hand. NL Exhaust."
   },
   "sneckomod:CobraCoil": {
     "NAME": "Cobra Coil",
@@ -474,7 +475,7 @@
   },
   "sneckomod:Belittle": {
     "NAME": "Belittle",
-    "DESCRIPTION": "Enemy loses !M! HP for each unique debuff they have. NL sneckomod:Gift: Uncommon sneckomod:Offclass Skill."
+    "DESCRIPTION": "Enemy loses !M! HP for each unique debuff they have. NL sneckomod:Gift: Uncommon Debuff."
   },
   "sneckomod:Jackpot": {
     "NAME": "Jackpot",
@@ -483,7 +484,7 @@
   },
   "sneckomod:MakeshiftBlade": {
     "NAME": "Makeshift Blade",
-    "DESCRIPTION": "Deal !D! damage. If the target has at least !M! debuffs, draw 3 cards."
+    "DESCRIPTION": "Deal !D! damage. If the target has at least !M! debuffs, draw 3 cards. NL sneckomod:Gift: Debuff."
   },
   "sneckomod:LatchOn": {
     "NAME": "Latch On",
@@ -491,7 +492,7 @@
   },
   "sneckomod:ComboString": {
     "NAME": "Combo String",
-    "DESCRIPTION": "Deal !D! damage for each sneckomod:Offclass card played this turn."
+    "DESCRIPTION": "Deal !D! damage for each sneckomod:Offclass card played this turn. NL sneckomod:Gift: Uncommon."
   },
   "sneckomod:ThrowingCards": {
     "NAME": "Throwing Cards",
@@ -499,13 +500,12 @@
   },
   "sneckomod:RoundaboutSwing": {
     "NAME": "Roundabout Swing",
-    "DESCRIPTION": "Deal !D! damage. NL Put a card in your hand on top of your draw pile. NL Draw !M! card next turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put a card in hand on top of your draw pile. NL Draw !M! cards next turn."
+    "DESCRIPTION": "Deal !D! damage. NL Put a card in hand on top of your draw pile. NL Draw !M! cards next turn."
   },
   "sneckomod:MarkedCard": {
     "NAME": "Marked Card",
-    "DESCRIPTION": "sneckomod:Muddle a card. NL It will always be cheaper. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Muddle !M! cards. NL They will always be cheaper. NL Exhaust."
+    "DESCRIPTION": "Retain. NL sneckomod:Muddle a card. NL It will always be cheaper. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL sneckomod:Muddle !M! cards. NL They will always be cheaper. NL Exhaust."
   },
   "sneckomod:InertBlade": {
     "NAME": "Inert Blade",
@@ -518,8 +518,8 @@
   },
   "sneckomod:LastStrike": {
     "NAME": "Last Strike",
-    "DESCRIPTION": "Deal !D! damage, doubled for each unique 'Strike' played. NL sneckomod:Gift: sneckomod:Offclass Strike.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage, doubled for each unique 'Strike' played. NL sneckomod:Gift: sneckomod:Offclass Strike.",
+    "DESCRIPTION": "Deal !D! damage, doubled for each unique 'Strike' played. NL sneckomod:Gift: 'Strike'.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, doubled for each unique 'Strike' played. NL sneckomod:Gift: 'Strike'.",
     "EXTENDED_DESCRIPTION": [
       " NL (deals x",
       " damage.)"
@@ -537,11 +537,11 @@
   },
   "sneckomod:Lacerate": {
     "NAME": "Lacerate",
-    "DESCRIPTION": "Deal !D! damage. This turn, whenever you apply a debuff to this enemy, they take !M! damage."
+    "DESCRIPTION": "Deal !D! damage. Whenever this enemy is debuffed this turn they gain !M! sneckomod:Venom. sneckomod:Gift: Uncommon Debuff."
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Serpentine Sleuth",
-    "DESCRIPTION": "Whenever you play a Power, gain [E]. NL sneckomod:Gift: sneckomod:Offclass Uncommon Power.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a Power, gain [E] [E]. NL sneckomod:Gift: sneckomod:Offclass Uncommon Power."
+    "DESCRIPTION": "Whenever you play a Power, gain [E]. NL sneckomod:Gift: Uncommon Power.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a Power, gain [E] [E]. NL sneckomod:Gift: Uncommon Power."
   }
 }

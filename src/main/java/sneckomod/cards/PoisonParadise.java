@@ -13,8 +13,8 @@ public class PoisonParadise extends AbstractSneckoCard {
     public final static String ID = SneckoMod.makeID("PoisonParadise");
 
     public PoisonParadise() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 6;
         SneckoMod.loadJokeCardImage(this, "PoisonParadise.png");
     }
 

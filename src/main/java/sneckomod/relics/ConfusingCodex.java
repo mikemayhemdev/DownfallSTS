@@ -16,6 +16,8 @@ import sneckomod.cards.AbstractSneckoCard;
 import downfall.util.TextureLoader;
 import sneckomod.cards.TyphoonFang;
 
+import java.util.ArrayList;
+
 import static collector.util.Wiz.applyToEnemy;
 import static collector.util.Wiz.atb;
 
@@ -28,6 +30,13 @@ public class ConfusingCodex extends CustomRelic {
     public ConfusingCodex() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
+
+
+    @Override
+    public void onEquip() {
+        this.counter = 0;
+    }
+
 
     public boolean isOverflowActive(AbstractCard source) { // Adjusted to take a card parameter
         boolean OVERFLOW = false; // Reset overflow state
@@ -63,14 +72,19 @@ public class ConfusingCodex extends CustomRelic {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!isOverflowActive(card)) {
+
             return;
         }
-        AbstractMonster q = AbstractDungeon.getRandomMonster();
-        if(q != null){
-            atb(new RelicAboveCreatureAction(q, this));
-            applyToEnemy(q, new WeakPower(q, 1, false));
-            applyToEnemy(q, new VulnerablePower(q, 1, false));
-            flash(); // relic tracking
+        ++this.counter;
+        if (this.counter % 3 == 0) {
+            this.counter = 0;
+            AbstractMonster q = AbstractDungeon.getRandomMonster();
+            if (q != null) {
+                atb(new RelicAboveCreatureAction(q, this));
+                applyToEnemy(q, new WeakPower(q, 1, false));
+                applyToEnemy(q, new VulnerablePower(q, 1, false));
+                flash(); // relic tracking
+            }
         }
     }
 

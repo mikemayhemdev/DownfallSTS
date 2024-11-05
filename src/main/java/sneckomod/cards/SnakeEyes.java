@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class SnakeEyes extends AbstractSneckoCard implements OnObtainCard {
 
-    public final static String ID = makeID("SnakeEyes");
+    public final static String ID = makeID("MasterEye");
 
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
@@ -20,7 +20,7 @@ public class SnakeEyes extends AbstractSneckoCard implements OnObtainCard {
     public SnakeEyes() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        SneckoMod.loadJokeCardImage(this, "SnakeEyes.png");
+        SneckoMod.loadJokeCardImage(this, "MasterEye.png");
     }
 
     @Override
