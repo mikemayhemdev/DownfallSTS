@@ -32,12 +32,12 @@ public class PowerShot extends AbstractSneckoCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
 
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == CardType.POWER && AbstractDungeon.player.discardPile.contains(this)) {
-            this.addToBot(new DiscardToHandAction(this));
-        }
+   // public void () {
+     //   if (AbstractDungeon.player.discardPile.contains(this)) {
+       //     this.addToBot(new DiscardToHandAction(this));
+       // }
 
-    }
+   // }
 
     @Override
     public void upgrade() {

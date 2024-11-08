@@ -10,18 +10,17 @@ import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
-public class OtherworldlyStrike extends AbstractSneckoCard implements OnObtainCard{
+public class OtherworldlySlash extends AbstractSneckoCard implements OnObtainCard{
 
-    public final static String ID = makeID("OtherworldlyStrike");
+    public final static String ID = makeID("OtherworldlySlash");
 
     private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 2;
 
-    public OtherworldlyStrike() {
+    public OtherworldlySlash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(CardTags.STRIKE);
-        SneckoMod.loadJokeCardImage(this, "OtherworldlyStrike.png");
+        SneckoMod.loadJokeCardImage(this, "OtherworldlySlash.png");
     }
 
     @Override

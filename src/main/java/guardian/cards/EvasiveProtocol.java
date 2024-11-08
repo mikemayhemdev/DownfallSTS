@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.EvasiveProtocolPower;
+import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -46,6 +47,7 @@ public class EvasiveProtocol extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("EvasiveProtocol.png"));
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,10 +1,7 @@
 package sneckomod.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.badlogic.gdx.graphics.Texture;
@@ -15,7 +12,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.util.TextureLoader;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import sneckomod.SneckoMod;
-
 
 public class LacerateDebuff extends AbstractPower implements CloneablePowerInterface, OnReceivePowerPower {
     public static final String POWER_ID = SneckoMod.makeID("LacerateDebuff");
@@ -43,7 +39,6 @@ public class LacerateDebuff extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        // Remove LacerateDebuff at the end of the turn
         if (!this.owner.isPlayer) {
             this.addToBot(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
@@ -51,18 +46,17 @@ public class LacerateDebuff extends AbstractPower implements CloneablePowerInter
 
     @Override
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.type == PowerType.DEBUFF && target == this.owner && !power.ID.equals("Shackled") && !target.hasPower("Artifact")) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, this.owner, new VenomDebuff(target, this.amount), this.amount));
-                    // Check if the player has Toxic Personality power and the target does not have Artifact
-            if (AbstractDungeon.player.hasPower(ToxicPersonalityPower.POWER_ID) && !target.hasPower("Artifact")) {
-                ToxicPersonalityPower toxicPersonalityPower =
-                        (ToxicPersonalityPower) AbstractDungeon.player.getPower(ToxicPersonalityPower.POWER_ID);
+        if (power.type == PowerType.DEBUFF && target == this.owner && !(power instanceof VenomDebuff) && !power.ID.equals("Shackled") && !target.hasPower("Artifact")) {
+            int additionalAmount = 0;
 
-                if (toxicPersonalityPower != null) {
-                    toxicPersonalityPower.onActivateCall(target);
-
-                }
+            // Check if ToxicPersonalityPower exists and get its stack count
+            if (AbstractDungeon.player.hasPower(ToxicPersonalityPower.POWER_ID)) {
+                AbstractPower toxicPersonality = AbstractDungeon.player.getPower(ToxicPersonalityPower.POWER_ID);
+                additionalAmount += toxicPersonality.amount;
             }
+
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, this.owner, new VenomDebuff(target, this.amount), this.amount));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, this.owner, new VenomDebuff(target, additionalAmount), additionalAmount));
         }
         return true;
     }

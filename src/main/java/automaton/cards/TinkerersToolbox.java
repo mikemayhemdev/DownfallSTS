@@ -32,6 +32,7 @@ public class TinkerersToolbox extends AbstractBronzeCard {
         exhaust = true;
         selfRetain = true;
        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         cardsList.add(new Debug());
         cardsList.add(new Batch());
         cardsList.add(new Decompile());

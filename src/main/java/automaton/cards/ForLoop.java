@@ -5,6 +5,7 @@ import automaton.actions.EasyXCostAction;
 import automaton.powers.CloningPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class ForLoop extends AbstractBronzeCard {
 
@@ -17,6 +18,7 @@ public class ForLoop extends AbstractBronzeCard {
         //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
         exhaust = true;
         baseMagicNumber = magicNumber = 0;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("ForLoop.png"));
     }
 

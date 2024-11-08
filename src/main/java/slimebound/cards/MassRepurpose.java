@@ -51,7 +51,7 @@ public class MassRepurpose extends AbstractSlimeboundCard {
         this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "MassRepurpose.png");
 
-
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
 //         this.tags.add(CardTags.HEALING);

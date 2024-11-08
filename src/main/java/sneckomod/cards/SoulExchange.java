@@ -16,7 +16,7 @@ public class SoulExchange extends AbstractSneckoCard {
 
     public SoulExchange() {
         super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        this.retain = true;
+        this.selfRetain = true;
         this.exhaust = true;
         SneckoMod.loadJokeCardImage(this, "SoulExchange.png");
     }

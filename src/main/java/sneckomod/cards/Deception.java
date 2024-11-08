@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.purple.Wallop;
 import com.megacrit.cardcrawl.cards.red.Shockwave;
+import com.megacrit.cardcrawl.cards.tempCards.Expunger;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -33,6 +34,7 @@ public class Deception extends AbstractSneckoCard {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         SneckoMod.loadJokeCardImage(this, "Deception.png");
+        this.cardsToPreview = new Shockwave();
         exhaust = true;
     }
 

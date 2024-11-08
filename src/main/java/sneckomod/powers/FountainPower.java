@@ -16,11 +16,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.cards.TyphoonFang;
-import sneckomod.powers.VenomDebuff;
 import sneckomod.relics.D8;
 
 public class FountainPower extends AbstractPower implements CloneablePowerInterface {
-    public static final String POWER_ID = SneckoMod.makeID("FountainPower"); // Correct ID for the power
+    public static final String POWER_ID = SneckoMod.makeID("FountainPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -44,11 +43,19 @@ public class FountainPower extends AbstractPower implements CloneablePowerInterf
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        // Check if the played card has Overflow active
         if (isOverflowActive(card)) {
             AbstractMonster randomTarget = getRandomAliveMonster();
             if (randomTarget != null) {
                 this.addToBot(new ApplyPowerAction(randomTarget, this.owner, new VenomDebuff(randomTarget, this.amount), this.amount));
+
+                // Check if the target has LacerateDebuff and apply additional Venom equal to its amount
+                if (randomTarget.hasPower(LacerateDebuff.POWER_ID) && !randomTarget.hasPower("Artifact")) {
+                    AbstractPower lacerate = randomTarget.getPower(LacerateDebuff.POWER_ID);
+                    if (lacerate != null) {
+                        int additionalVenomAmount = lacerate.amount;
+                        this.addToBot(new ApplyPowerAction(randomTarget, this.owner, new VenomDebuff(randomTarget, additionalVenomAmount), additionalVenomAmount));
+                    }
+                }
 
                 // Check if the player has Toxic Personality power and the target does not have Artifact
                 if (AbstractDungeon.player.hasPower(ToxicPersonalityPower.POWER_ID) && !randomTarget.hasPower("Artifact")) {
@@ -57,41 +64,44 @@ public class FountainPower extends AbstractPower implements CloneablePowerInterf
 
                     if (toxicPersonalityPower != null) {
                         toxicPersonalityPower.onActivateCall(randomTarget);
+
+                        // Re-check LacerateDebuff after Toxic Personality activation and apply Venom if needed
+                        if (randomTarget.hasPower(LacerateDebuff.POWER_ID) && !randomTarget.hasPower("Artifact")) {
+                            AbstractPower lacerate = randomTarget.getPower(LacerateDebuff.POWER_ID);
+                            int additionalVenomAmount = lacerate.amount;
+                            this.addToBot(new ApplyPowerAction(randomTarget, this.owner, new VenomDebuff(randomTarget, additionalVenomAmount), additionalVenomAmount));
+                        }
                     }
                 }
             }
         }
     }
+
     private boolean isOverflowActive(AbstractCard card) {
         boolean overflowActive = false;
 
-        // Check if the card has the OVERFLOW tag
         if (card.hasTag(SneckoMod.OVERFLOW)) {
-            // Check if there are more than 5 cards in hand
             if (AbstractDungeon.player.hand.size() > 5 || AbstractDungeon.player.hasPower("CheatPower")) {
-                overflowActive = true; // Overflow condition met
+                overflowActive = true;
             }
 
-            // Check if the card is a TyphoonFang or purges on use
             if (card instanceof TyphoonFang && card.purgeOnUse) {
-                overflowActive = false; // If it purges on use, overflow cannot activate
+                overflowActive = false;
             }
 
-            // Check for D8 relic
             if (AbstractDungeon.player.hasRelic(D8.ID)) {
                 D8 d8Relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
                 if (d8Relic != null && d8Relic.card != null) {
                     if (d8Relic.card.uuid.equals(card.uuid)) {
-                        overflowActive = true; // Set overflow if the D8 card is the same as the source card
+                        overflowActive = true;
                     }
                 }
             }
         }
 
-        return overflowActive; // Return the overflow state
+        return overflowActive;
     }
 
-    // Helper function to get a random alive monster
     private AbstractMonster getRandomAliveMonster() {
         AbstractMonster randomTarget = AbstractDungeon.getMonsters().getRandomMonster(true);
         return (randomTarget != null && randomTarget.isDeadOrEscaped()) ? null : randomTarget;

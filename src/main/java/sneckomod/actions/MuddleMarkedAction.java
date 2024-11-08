@@ -48,7 +48,7 @@ public class MuddleMarkedAction extends AbstractGameAction {
 
             LoadedDie loadedDieInstance = new LoadedDie();
             if (AbstractDungeon.player.hasRelic(LoadedDie.ID)) {
-                addToBot(new GainBlockAction(AbstractDungeon.player, 1));
+                addToBot(new GainBlockAction(AbstractDungeon.player, 2));
                 loadedDieInstance.flash();
             }
 
@@ -64,10 +64,6 @@ public class MuddleMarkedAction extends AbstractGameAction {
             int newCost = numList.get(AbstractDungeon.cardRandomRng.random(numList.size() - 1));
             if (card.costForTurn != newCost) {
                 card.setCostForTurn(newCost);
-            }
-
-            if (AbstractDungeon.player.hasPower(BlunderGuardPower.POWER_ID) && card.costForTurn == 3) {
-                AbstractDungeon.player.getPower(BlunderGuardPower.POWER_ID).onSpecificTrigger();
             }
 
             card.freeToPlayOnce = false;

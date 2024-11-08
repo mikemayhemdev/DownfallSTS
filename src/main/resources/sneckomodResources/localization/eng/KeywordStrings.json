@@ -56,13 +56,13 @@
     "NAMES": [
       "venom"
     ],
-    "DESCRIPTION": "Creatures with Venom lose additional HP at the end of their turn if they have at least two additional debuffs."
+    "DESCRIPTION": "Creatures with Venom lose additional HP at the start of their turn if they have at least two additional debuffs."
   },
   {
     "PROPER_NAME": "Lucky",
     "NAMES": [
       "lucky"
     ],
-    "DESCRIPTION": "Cards that choose a random number as part of their card text choose the maximum possible number. (Does not affect Muddle)"
+    "DESCRIPTION": "#Overflow effects always activate this turn regardless of hand size."
   }
 ]

@@ -1,10 +1,8 @@
 {
   "sneckomod:DiceRollPotion": {
-    "NAME": "Potentially Potent Potion",
+    "NAME": "Card in a Bottle",
     "DESCRIPTIONS": [
-      "Deal #b",
-      "-",
-      " damage."
+      "On use, choose 1 of 3 #yUpgraded Uncommon #yOffclass cards to add to your deck."
     ]
   },
   "sneckomod:CheatPotion": {

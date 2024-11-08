@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import hermit.HermitMod;
 import hermit.characters.hermit;
+import sneckomod.SneckoMod;
 
 import java.util.Iterator;
 
@@ -50,6 +51,7 @@ public class RoundhouseKick extends AbstractDynamicCard {
         baseDamage=13;
         exhaust=true;
         loadJokeCardImage(this, "roundhouse_kick.png");
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     // Actions the card should do.

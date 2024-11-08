@@ -10,20 +10,19 @@ import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
-public class SlitherStrike extends AbstractSneckoCard {
+public class SlitherThrough extends AbstractSneckoCard {
 
-    public final static String ID = makeID("SlitherStrike");
+    public final static String ID = makeID("SlitherThrough");
 
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
     private static final int DAMAGE = 13;
     private static final int UPG_DAMAGE = 4;
 
-    public SlitherStrike() {
+    public SlitherThrough() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(CardTags.STRIKE);
-        SneckoMod.loadJokeCardImage(this, "SlitherStrike.png");
+        SneckoMod.loadJokeCardImage(this, "SlitherThrough.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

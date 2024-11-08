@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.watcher.ExpungeVFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,26 +16,24 @@ import java.util.HashSet;
 public class LastStrike extends AbstractSneckoCard {
     public static final String ID = makeID("LastStrike");
 
-    private static final int BASE_DAMAGE = 6;
-    private static final int UPGRADE_DAMAGE = 3;
+    // Constants
+    private static final int BASE_DAMAGE = 9;
+    private static final int UPGRADE_DAMAGE = 6;
 
-    // strike tracking
-    private HashSet<String> uniqueStrikeNames;
+    // Strike tracking
     private HashSet<String> uniqueStrikeIDs;
     private boolean hasPlayedOnce;
 
     public LastStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = BASE_DAMAGE;
         tags.add(CardTags.STRIKE);
         SneckoMod.loadJokeCardImage(this, "LastStrike.png");
 
-        // set everything to zero
         resetMultiplierTracking();
     }
 
     private void resetMultiplierTracking() {
-        uniqueStrikeNames = new HashSet<>();
         uniqueStrikeIDs = new HashSet<>();
         hasPlayedOnce = false;
     }
@@ -46,53 +45,39 @@ public class LastStrike extends AbstractSneckoCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // don't immediately add last strike as you play it for the first time
         int uniqueStrikesCount = calculateDamageMultiplier(!hasPlayedOnce);
-        int multiplier = (int) Math.pow(2, uniqueStrikesCount);
 
-        int totalDamage = baseDamage * multiplier;
-        addToBot(new DamageAction(m, new DamageInfo(p, totalDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        for (int i = 0; i < uniqueStrikesCount + 1; ++i) {
+            this.addToBot(new ExpungeVFXAction(m));
+            this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        }
 
-        // NOW, add last strike.
         if (!hasPlayedOnce) {
-            uniqueStrikeNames.add(this.name);
             uniqueStrikeIDs.add(this.cardID);
             hasPlayedOnce = true;
         }
+
+        this.rawDescription = cardStrings.DESCRIPTION + EXTENDED_DESCRIPTION[0] + uniqueStrikesCount + EXTENDED_DESCRIPTION[1];
+        initializeDescription();
     }
 
     @Override
     public void applyPowers() {
         super.applyPowers();
-        int uniqueStrikesCount = calculateDamageMultiplier();
-        int multiplier = (int) Math.pow(2, uniqueStrikesCount);
+        int uniqueStrikesCount = calculateDamageMultiplier(!hasPlayedOnce);
 
-        // default to base damage
-        if (uniqueStrikesCount == 0) {
-            multiplier = 1;
-        }
-
-        // update card text
-        this.damage = baseDamage * multiplier;
-        this.rawDescription = cardStrings.DESCRIPTION + EXTENDED_DESCRIPTION[0] + multiplier + EXTENDED_DESCRIPTION[1];
+        this.rawDescription = cardStrings.DESCRIPTION + EXTENDED_DESCRIPTION[0] + uniqueStrikesCount + EXTENDED_DESCRIPTION[1];
         initializeDescription();
     }
 
-    private int calculateDamageMultiplier() {
-        return calculateDamageMultiplier(true);
-    }
-
     private int calculateDamageMultiplier(boolean excludeThisCard) {
-        uniqueStrikeNames.clear();
         uniqueStrikeIDs.clear();
 
         for (AbstractCard card : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
             if (card.cardID.contains("Strike")
                     && (!excludeThisCard || card != this)
-                    && !uniqueStrikeNames.contains(card.name)
                     && !uniqueStrikeIDs.contains(card.cardID)) {
-                uniqueStrikeNames.add(card.name); // dupe tracking by name (strike from ironclad vs strike from defect, etc. meant so that strikes generated from high caliber don't count as extra, they're all deal 6 damage starter strikes)
-                uniqueStrikeIDs.add(card.cardID); // dupe tracking by id for cross mod compat
+                uniqueStrikeIDs.add(card.cardID);
             }
         }
         return uniqueStrikeIDs.size();
@@ -103,7 +88,7 @@ public class LastStrike extends AbstractSneckoCard {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
 
         while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity != CardRarity.BASIC && c.hasTag(CardTags.STRIKE));
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity != CardRarity.BASIC && ((c.hasTag(CardTags.STRIKE) || c.name.contains("High-Caliber"))));
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
                 cardsToReward.add(newCard.makeCopy());

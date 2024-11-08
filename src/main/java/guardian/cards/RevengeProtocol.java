@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.BracePerTurnPower;
+import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -30,6 +31,7 @@ public class RevengeProtocol extends AbstractGuardianCard {
         this.magicNumber = this.baseMagicNumber = 2;
         this.secondaryM = 5;
         this.socketCount = 0;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("RevengeProtocol.png"));

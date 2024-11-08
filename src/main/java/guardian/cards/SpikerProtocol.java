@@ -16,6 +16,7 @@ import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.DontLeaveDefensiveModePower;
 import guardian.powers.SpikerProtocolPower;
+import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -49,6 +50,7 @@ public class SpikerProtocol extends AbstractGuardianCard {
         this.magicNumber = this.baseMagicNumber = THORNS;
         this.secondaryM = BRACE_PER_TURN;
         this.socketCount = SOCKETS;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("SpikerProtocol.png"));

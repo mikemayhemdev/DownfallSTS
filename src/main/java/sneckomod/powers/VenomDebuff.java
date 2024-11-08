@@ -38,11 +38,9 @@ public class VenomDebuff extends AbstractPower implements CloneablePowerInterfac
         updateDescription();
     }
 
-    public void atStartOfTurn(boolean isPlayer) {
-        if (!isPlayer && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+    public void atStartOfTurn() {
             if (getDebuffCount() >= 3) {
                 this.addToBot(new DamageAction(owner, new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
-            }
         }
     }
 

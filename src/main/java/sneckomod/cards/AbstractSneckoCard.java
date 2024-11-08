@@ -23,6 +23,7 @@ import hermit.cards.AbstractDynamicCard;
 import hermit.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
+import sneckomod.powers.BlunderGuardPower;
 import sneckomod.powers.CheatPower;
 import sneckomod.relics.D8;
 import sneckomod.relics.LoadedDie;
@@ -325,7 +326,11 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
                 }
             }
         }
-
+        if (OVERFLOW) {
+            if (AbstractDungeon.player.hasPower(BlunderGuardPower.POWER_ID)){
+                    AbstractDungeon.player.getPower(BlunderGuardPower.POWER_ID).onSpecificTrigger();
+                }
+        }
         return OVERFLOW; // Return true or false
     }
 

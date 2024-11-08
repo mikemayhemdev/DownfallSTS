@@ -16,7 +16,7 @@ public class BlunderGuard extends AbstractSneckoCard{
 
     public BlunderGuard() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -26,7 +26,7 @@ public class BlunderGuard extends AbstractSneckoCard{
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeMagicNumber(1);
         }
     }
 }

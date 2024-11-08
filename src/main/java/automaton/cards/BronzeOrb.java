@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.vfx.BronzeOrbEffect;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
@@ -35,6 +36,7 @@ public class BronzeOrb extends AbstractBronzeCard {
         exhaust = true;
         isInnate = true;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("BronzeOrb.png"));
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

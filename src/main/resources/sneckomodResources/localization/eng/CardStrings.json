@@ -4,8 +4,8 @@
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deal damage one more time for every 3+ cost card in hand."
   },
   "sneckomod:BlunderGuard": {
-    "NAME": "Blunder Guard",
-    "DESCRIPTION": "Whenever you sneckomod:Muddle a card to cost 3, gain !M! Block."
+    "NAME": "Tsunami",
+    "DESCRIPTION": "sneckomod:Overflow effects also grant !M! Block."
   },
   "sneckomod:CheapStock": {
     "NAME": "Cheap Stock",
@@ -142,12 +142,13 @@
   },
   "sneckomod:QuickMove": {
     "NAME": "Quick Move",
-    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle a random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle !M! random cards in your hand."
+    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Overflow: sneckomod:Muddle a card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle a card."
   },
   "sneckomod:RainOfDice": {
     "NAME": "Rain of Dice",
-    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle a card, then add a copy of this to your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle a card, then add *Rain *of *Dice to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle a card, then add *Rain *of *Dice+ to your hand. NL Exhaust."
   },
   "sneckomod:Restock": {
     "NAME": "Restock",
@@ -171,8 +172,8 @@
     "NAME": "Exotic Form",
     "DESCRIPTION": "At the end of your turn, gain !M! Strength for each unique color played this turn. NL sneckomod:Gift: Rare."
   },
-  "sneckomod:SlitherStrike": {
-    "NAME": "Slither Strike",
+  "sneckomod:SlitherThrough": {
+    "NAME": "Slither Through",
     "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn. NL sneckomod:Gift: Uncommon."
   },
   "sneckomod:SnakeEyes": {
@@ -413,7 +414,7 @@
   },
   "sneckomod:ViperEssence": {
     "NAME": "Viper Essence",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength."
+    "DESCRIPTION": "Ethereal. NL sneckomod:Offclass. NL Gain !M! Strength."
   },
   "sneckomod:Amass": {
     "NAME": "Amass",
@@ -422,7 +423,7 @@
   },
   "sneckomod:Medusa": {
     "NAME": "Medusa",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle *Viper *Essence into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! sneckomod:Venom."
   },
   "sneckomod:Cower": {
     "NAME": "Cower",
@@ -444,8 +445,8 @@
     "NAME": "Serpentscale",
     "DESCRIPTION": "Deal !D! damage. NL Gain 1 *Plated *Armor. NL sneckomod:Overflow: Gain !M! *Plated *Armor instead."
   },
-  "sneckomod:OtherworldlyStrike": {
-    "NAME": "Otherworldly Strike",
+  "sneckomod:OtherworldlySlash": {
+    "NAME": "Otherworldly Slash",
     "DESCRIPTION": "Deal !D! damage. NL If you played an sneckomod:Offclass card this turn, deal !D! damage again. NL sneckomod:Gift: Common."
   },
   "sneckomod:BeyondArmor": {
@@ -453,7 +454,7 @@
     "DESCRIPTION": "Gain !B! Block. NL Put !M! sneckomod:Offclass cards from your draw pile into your hand. NL sneckomod:Gift: Common."
   },
   "sneckomod:BigGuns": {
-    "NAME": "Big Guns",
+    "NAME": "Blunder Guard",
     "DESCRIPTION": "Whenever you play a card that costs 3, gain !B! Block and !M! Strength. NL sneckomod:Gift: 3 cost."
   },
   "sneckomod:WideAngle": {
@@ -518,11 +519,11 @@
   },
   "sneckomod:LastStrike": {
     "NAME": "Last Strike",
-    "DESCRIPTION": "Deal !D! damage, doubled for each unique 'Strike' played. NL sneckomod:Gift: 'Strike'.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage, doubled for each unique 'Strike' played. NL sneckomod:Gift: 'Strike'.",
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique Strike played this combat. NL sneckomod:Gift: Strike.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Repeat for each unique Strike played this combat. NL sneckomod:Gift: Strike.",
     "EXTENDED_DESCRIPTION": [
-      " NL (deals x",
-      " damage.)"
+      " NL (hits ",
+      " x extra times.)"
     ]
   },
   "sneckomod:AceOfWands": {
@@ -541,7 +542,7 @@
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Serpentine Sleuth",
-    "DESCRIPTION": "Whenever you play a Power, gain [E]. NL sneckomod:Gift: Uncommon Power.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a Power, gain [E] [E]. NL sneckomod:Gift: Uncommon Power."
+    "DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E]. NL sneckomod:Gift: Uncommon Power.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E] [E]. NL sneckomod:Gift: Uncommon Power."
   }
 }

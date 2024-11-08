@@ -20,7 +20,7 @@ public class FormOfPuddle extends AbstractSlimeboundCard {
     private static final CardStrings cardStrings;
 
     public FormOfPuddle() {
-        super(ID, cardStrings.NAME, IMG_PATH, 3, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.SLIMEBOUND, CardRarity.RARE, CardTarget.SELF);
+        super(ID, cardStrings.NAME, IMG_PATH, 2, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.SLIMEBOUND, CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "FormOfPuddle.png");
@@ -36,7 +36,7 @@ public class FormOfPuddle extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
+            upgradeBaseCost(1);
         }
     }
 

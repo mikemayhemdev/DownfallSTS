@@ -4,6 +4,7 @@ import automaton.AutomatonMod;
 import automaton.powers.HardenedFormPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 
@@ -19,6 +20,7 @@ public class HardenedForm extends AbstractBronzeCard {
     public HardenedForm() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("HardenedForm.png"));
     }
 

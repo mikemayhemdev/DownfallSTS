@@ -23,6 +23,7 @@ public class FineTuning extends AbstractBronzeCard {
         exhaust = true;
       //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("FineTuning.png"));
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

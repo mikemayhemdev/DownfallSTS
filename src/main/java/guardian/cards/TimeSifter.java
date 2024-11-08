@@ -37,6 +37,7 @@ public class TimeSifter extends AbstractGuardianCard {
     public TimeSifter() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("TimeSifter.png"));
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 

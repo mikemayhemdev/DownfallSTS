@@ -38,7 +38,7 @@
     "NAME": "Loaded Die",
     "FLAVOR": "Cheese-stuffed.",
     "DESCRIPTIONS": [
-      "Whenever you #ysneckomod:Muddle a card, gain #b1 #yBlock."
+      "Whenever you #ysneckomod:Muddle a card, gain #b2 #yBlock."
     ]
   },
   "sneckomod:RareBoosterPack": {
@@ -52,7 +52,7 @@
     "NAME": "Sleeved Ace",
     "FLAVOR": "We're all aces.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain a #yMarked #yCard with #yRetain."
+      "At the start of each combat, gain a #yMarked #yCard."
     ]
   },
   "sneckomod:UnknownEgg": {

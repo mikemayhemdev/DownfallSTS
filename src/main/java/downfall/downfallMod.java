@@ -552,7 +552,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         loadOtherData();
 
         this.initializeMonsters();
-//        this.addPotions();
+        this.addPotions(); // sorry
         this.initializeEvents();
         this.initializeConfig();
 

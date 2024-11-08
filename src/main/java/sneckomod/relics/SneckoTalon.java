@@ -3,15 +3,22 @@ package sneckomod.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.EvolvePower;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
+import sneckomod.actions.MuddleAction;
 import sneckomod.actions.MuddleRandomCardAction;
+import sneckomod.powers.CheapStockPower;
 
 
 import java.util.ArrayList;
 
+import static hermit.util.Wiz.applyToSelf;
 import static hermit.util.Wiz.atb;
 
 public class SneckoTalon extends CustomRelic {
@@ -24,10 +31,13 @@ public class SneckoTalon extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
-    @Override
-    public void atTurnStartPostDraw() {
-       atb(new MuddleRandomCardAction(1, true));
-        flash();
+    public void atBattleStartPreDraw() {
+        this.flash();
+        applyToSelf(new CheapStockPower(1));
+    }
+
+    public void atBattleStart() {
+        atb(new MuddleRandomCardAction(1, true));
     }
 
     public String getUpdatedDescription() {
