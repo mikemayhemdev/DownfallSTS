@@ -131,7 +131,7 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[]  NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Deal !M! additional damage for each other Ethereal card in hand.",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Deal !M! additional damage for each other Ethereal card in hand.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -202,7 +202,7 @@
   },
   "hexamod:Hexaguard": {
     "NAME": "Hexaguard",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[]  NL Draw !M! cards. NL ",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Draw !M! cards. NL ",
     "EXTENDED_DESCRIPTION": [
       "Gain !B! Block."
     ]
@@ -298,7 +298,7 @@
   },
   "hexamod:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.  NL Deal !D! damage. NL [#e087a4]Apply[] !burny! [#e087a4]Soulburn.[]"
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife. NL Deal !D! damage. NL [#e087a4]Apply[] !burny! [#e087a4]Soulburn.[]"
   },
   "hexamod:SearingWound": {
     "NAME": "Searing Wound",
@@ -386,7 +386,7 @@
   "hexamod:UnleashSpirits": {
     "NAME": "Unleash Spirits",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each card *Exhausted last turn.",
-    "UPGRADE_DESCRIPTION": " NL (Hit !M! time(s).)"
+    "UPGRADE_DESCRIPTION": " NL (Hits !M! times.)"
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",
