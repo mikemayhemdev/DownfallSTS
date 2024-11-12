@@ -218,7 +218,7 @@
   },
   "hexamod:StokeTheFire": {
     "NAME": "불 지피기",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 전투 동안 hexamod:점화된 유령불꽃 하나당 카드를 무작위로 1장 강화합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hexamod:점화된 유령불꽃 하나당 카드를 무작위로 1장 강화합니다."
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "대가 지불",
