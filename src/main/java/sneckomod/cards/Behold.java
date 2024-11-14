@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
@@ -23,12 +24,38 @@ public class Behold extends AbstractSneckoCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int orig = baseDamage;
-        int additionalDamage = (p.hand.size() - 1) * magicNumber;
-        int totalDamage = this.baseDamage + additionalDamage;
-        baseDamage = totalDamage;
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        baseDamage = orig;
+        this.applyPowers();
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+    }
+
+    @Override
+    public void applyPowers() {
+        int realBaseDamage = this.baseDamage;
+
+        // Calculate additional damage based on the number of cards in hand
+        int additionalDamage = (AbstractDungeon.player.hand.size() - 1) * this.magicNumber;
+        this.baseDamage += additionalDamage;
+
+        super.applyPowers();
+
+        // Reset baseDamage to avoid permanent modification
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        int realBaseDamage = this.baseDamage;
+
+        // Calculate additional damage based on the number of cards in hand
+        int additionalDamage = (AbstractDungeon.player.hand.size() - 1) * this.magicNumber;
+        this.baseDamage += additionalDamage;
+
+        super.calculateCardDamage(mo);
+
+        // Reset baseDamage to avoid permanent modification
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
     }
 
     @Override

@@ -22,7 +22,7 @@ public class SuperSneckoEye extends CustomRelic {
     public boolean activated = false;
     private boolean added_hand_size = false;
     public SuperSneckoEye() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
     @Override
@@ -46,35 +46,15 @@ public class SuperSneckoEye extends CustomRelic {
         }
     }
 
-    @Override
-    public void onCardDraw(AbstractCard card) {
-        if (!activated)
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    if (card.cost == 3 && !activated) {
-                        stopPulse();
-                        flash();
-                        activated = true;
-                        atb(new GainEnergyAction(3));
-                        card.costForTurn = card.cost;
-                        card.isCostModified = true;
-                        card.freeToPlayOnce = false;
-                    }
-                }
-            });
-    }
-
     public void onEquip() {
         if(!added_hand_size) {
-            AbstractDungeon.player.masterHandSize += 2;
+            AbstractDungeon.player.masterHandSize += 4;
             added_hand_size = true;
         }
     }
 
     public void onUnequip() {
-        AbstractDungeon.player.masterHandSize -= 2;
+        AbstractDungeon.player.masterHandSize -= 4;
     }
 
     public void atPreBattle() {

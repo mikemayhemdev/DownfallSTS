@@ -33,29 +33,6 @@ public class DragonsHoard extends AbstractSneckoCard {
         this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
     }
 
-    @Override
-    public void onObtainCard() {
-        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
-        while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(
-                    c -> c.rarity == AbstractCard.CardRarity.UNCOMMON &&
-                            (c.rawDescription.contains("Dexterity")));
-            if (!cardListDuplicate(cardsToReward, newCard)) {
-                cardsToReward.add(newCard.makeCopy());
-            }
-        }
-
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
-    }
-
-    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
-                return true;
-            }
-        }
-        return false;
-    }
     public void upgrade() {
         if (!upgraded) {
             upgradeName();

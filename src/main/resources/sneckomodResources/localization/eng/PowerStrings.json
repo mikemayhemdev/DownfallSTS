@@ -42,9 +42,10 @@
   "sneckomod:OverwhelmingPresencePower": {
     "NAME": "Overwhelming Presence",
     "DESCRIPTIONS": [
-      "The first time you play a card that costs 3 each turn, gain [E] .",
-      "The first time you play a card that costs 3 each turn, gain ",
-      " [E] ."
+      "The first time you shuffle your deck each turn, gain [E] and draw 1 card.",
+      "The first time you shuffle your deck each turn, gain ",
+      " [E] and draw ",
+      " cards ."
     ]
   },
   "sneckomod:SerpentsNestPower": {
@@ -75,7 +76,7 @@
     "NAME": "Unending Supply",
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
-      " random #yOffclass cards into your hand."
+      " random #yOffclass cards into your hand. They have Ethereal and Exhaust."
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {
@@ -83,7 +84,9 @@
     "DESCRIPTIONS": [
       "At the end of combat, obtain #b",
       " additional #yUpgraded #yUnidentified cards.",
-      " additional #yUpgraded #yUnidentified card."
+      " additional #yUpgraded #yUnidentified card.",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+
     ]
   },
   "sneckomod:UnlimitedRollsPower": {
@@ -96,14 +99,16 @@
     "NAME": "Transmogrifying",
     "DESCRIPTIONS": [
       " is being transformed into another ",
-      " relic."
+      " relic.",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
     ]
   },
   "sneckomod:ToxicPersonalityPower": {
     "NAME": "Toxic Personality",
     "DESCRIPTIONS": [
       "Whenever you apply a debuff to an enemy, apply #b",
-      " #yVenom."
+      " #yVenom.",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
     ]
   },
   "sneckomod:TyphoonPower": {
@@ -170,6 +175,14 @@
       " #yVenom to a random enemy."
     ]
   },
+  "sneckomod:TrashCanPower": {
+    "NAME": "Trash Can",
+    "DESCRIPTIONS": ["At the start of your turn, you may Exhaust a card.",
+      "At the start of your turn, you may Exhaust up to.",
+      " cards."
+  ]
+      },
+
         "sneckomod:VenomDebuff": {
           "NAME": "Venom",
           "DESCRIPTIONS": [

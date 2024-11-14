@@ -14,13 +14,13 @@ public class FlashInThePan extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("FlashInThePan");
 
-    private static final int BLOCK = 9;
+    private static final int BLOCK = 7;
     private static final int COST = 2;
+    private static final int UPG_BLOCK = 3;
 
     public FlashInThePan() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        exhaust = true;
         SneckoMod.loadJokeCardImage(this, "FlashInThePan.png");
     }
 
@@ -43,9 +43,7 @@ public class FlashInThePan extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBlock(UPG_BLOCK);
         }
     }
 }

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 
@@ -21,6 +22,7 @@ public class PreemptiveStrike extends AbstractChampCard {
         isMultiDamage = true;
         tags.add(CardTags.STRIKE);
         postInit();
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         loadJokeCardImage(this, "PreemptiveStrike.png");
     }
 

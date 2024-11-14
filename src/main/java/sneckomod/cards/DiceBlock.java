@@ -9,7 +9,7 @@ public class DiceBlock extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("DiceBlock");
 
-    private static final int BASE_BLOCK = 6;
+    private static final int BASE_BLOCK = 5;
     private static final int UPG_BASE_BLOCK = 2;
 
     public DiceBlock() {

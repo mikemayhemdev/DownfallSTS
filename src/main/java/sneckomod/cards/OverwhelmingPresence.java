@@ -16,7 +16,7 @@ public class OverwhelmingPresence extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new OverwhelmingPresencePower(this.magicNumber));
+        applyToSelf(new OverwhelmingPresencePower(p, this.magicNumber));
     }
 
     public void upgrade() {

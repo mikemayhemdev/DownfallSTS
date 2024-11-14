@@ -78,7 +78,7 @@ public class D8 extends AbstractImageEvent {
 
     private void handleSpecialBonusOption() {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
-        while (cardsToReward.size() < 10) {
+        while (cardsToReward.size() < 3) {
             AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == AbstractCard.CardRarity.RARE);
             if (newCard != null && !cardListDuplicate(cardsToReward, newCard)) {
                 cardsToReward.add(newCard.makeCopy());

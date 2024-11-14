@@ -3,9 +3,9 @@ package sneckomod.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -22,48 +22,61 @@ public class OverwhelmingPresencePower extends AbstractPower implements Cloneabl
     private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Rolls84.png");
     private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Rolls32.png");
 
-    private boolean hasTriggeredThisTurn = false;
+    private int previousDrawPileSize;
+    private boolean hasTriggeredThisTurn;
 
-    public OverwhelmingPresencePower(int amount) {
+    public OverwhelmingPresencePower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
-        this.owner = AbstractDungeon.player;
+        this.owner = owner;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.isTurnBased = false;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
+        this.previousDrawPileSize = AbstractDungeon.player.drawPile.size();
         this.updateDescription();
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.costForTurn == 3 && !hasTriggeredThisTurn) {
-            addToBot(new GainEnergyAction(this.amount));
-            hasTriggeredThisTurn = true;
-        }
+    public void atStartOfTurn() {
+        // Reset tracking to detect a new shuffle each turn
+        this.previousDrawPileSize = AbstractDungeon.player.drawPile.size();
+        hasTriggeredThisTurn = false;
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            hasTriggeredThisTurn = false;
+    public void update(int slot) {
+        super.update(slot);
+
+        // Detect shuffle by checking if the draw pile size has increased (refilled from discard)
+        int currentDrawPileSize = AbstractDungeon.player.drawPile.size();
+        int discardPileSize = AbstractDungeon.player.discardPile.size();
+
+        if (!hasTriggeredThisTurn && currentDrawPileSize > previousDrawPileSize && discardPileSize == 0) {
+            // Shuffle detected and effect not yet triggered this turn
+            flash();
+            addToBot(new GainEnergyAction(amount));
+            addToBot(new DrawCardAction(AbstractDungeon.player, amount));
+
+            // Prevent re-triggering this turn
+            hasTriggeredThisTurn = true;
         }
+
+        // Update the previousDrawPileSize for the next check
+        previousDrawPileSize = currentDrawPileSize;
     }
 
     @Override
     public void updateDescription() {
-        if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0];
-        } else {
-            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
-        }
+        this.description = (amount == 1)
+                ? DESCRIPTIONS[0]
+                : DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3];
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new OverwhelmingPresencePower(this.amount);
+        return new OverwhelmingPresencePower(this.owner, this.amount);
     }
 }

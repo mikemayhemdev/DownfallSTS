@@ -326,11 +326,6 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
                 }
             }
         }
-        if (OVERFLOW) {
-            if (AbstractDungeon.player.hasPower(BlunderGuardPower.POWER_ID)){
-                    AbstractDungeon.player.getPower(BlunderGuardPower.POWER_ID).onSpecificTrigger();
-                }
-        }
         return OVERFLOW; // Return true or false
     }
 

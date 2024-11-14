@@ -4,7 +4,7 @@
     "NAMES": [
       "snekproof"
     ],
-    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled."
+    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
   },
   {
   "PROPER_NAME": "Suit",
@@ -12,7 +12,7 @@
   "suit",
   "suits"
 ],
-  "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits."
+  "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
   },
   {
     "PROPER_NAME": "Overflow",
@@ -49,7 +49,7 @@
     "NAMES": [
       "identify"
     ],
-    "DESCRIPTION": "Replace an #yUnidentified card with its current random card permanently."
+    "DESCRIPTION": "Replace an #yUnidentified card with its current random card permanently. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
   },
   {
     "PROPER_NAME": "Venom",

@@ -24,7 +24,6 @@ public class SleevedAce extends CustomRelic {
     @Override
     public void atBattleStart() {
         AbstractCard q = new MarkedCard();
-        CardModifierManager.addModifier(q, new RetainCardMod());
         addToBot(new MakeTempCardInHandAction(q));
     }
 

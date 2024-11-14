@@ -39,7 +39,7 @@
   },
   "sneckomod:DiceBoulder": {
     "NAME": "Dice Boulder",
-    "DESCRIPTION": "Deal !M! - !D! damage. NL Can be Upgraded any number of times."
+    "DESCRIPTION": "Gain !B! Block. NL Increase this card's Block by !M! this combat."
   },
   "sneckomod:DiceCrush": {
     "NAME": "Dice Crush",
@@ -47,25 +47,28 @@
   },
   "sneckomod:DragonsHoard": {
     "NAME": "Dragon's Hoard",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity. NL sneckomod:Gift: Uncommon Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Dexterity. NL sneckomod:Gift: Uncommon Dexterity."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Dexterity."
   },
   "sneckomod:FourOfAKind": {
     "NAME": "Four Of A Kind",
     "DESCRIPTION": "Can only be played if you have played exactly 4 sneckomod:Suits this turn. NL Gain 1 Intangible. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Can only be played if you have played exactly 4 sneckomod:Suits this turn. NL Gain 1 Intangible. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "I haven't played 4 Suits this turn!"
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
     ]
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
-    "DESCRIPTION": "Unplayable. NL sneckomod:Gift: Upgraded Rare card and !M! Gold.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL sneckomod:Gift: Upgraded Rare and !M! Gold."
+    "DESCRIPTION": "Unplayable. NL On pickup, lose 10 Max HP. NL sneckomod:Gift: Upgraded Common. NL sneckomod:Gift: Upgraded Uncommon. NL sneckomod:Gift: Upgraded Rare.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL On pickup, lose 10 Max HP. NL sneckomod:Gift: Upgraded Common. NL sneckomod:Gift: Upgraded Uncommon. NL sneckomod:Gift: Upgraded Rare."
   },
   "sneckomod:ImmovableObject": {
     "NAME": "Immovable Object",
-    "DESCRIPTION": "Gain !B! Block. NL If the total cost of your hand is at least !M!, double your Block then Exhaust this."
+    "DESCRIPTION": "Gain !B! Block. NL If the total cost of your hand is at least !M!, double your Block then Exhaust this.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+    ]
   },
   "sneckomod:IronFang": {
     "NAME": "Iron Fang",
@@ -73,11 +76,17 @@
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Improvised Attack",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a random sneckomod:Offclass Attack and sneckomod:Muddle it."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a random sneckomod:Offclass Attack and sneckomod:Muddle it.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+    ]
   },
   "sneckomod:ImprovisedGuard": {
     "NAME": "Improvised Guard",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a random sneckomod:Offclass Skill and sneckomod:Muddle it."
+    "DESCRIPTION": "Gain !B! Block. NL Gain a random sneckomod:Offclass Skill and sneckomod:Muddle it.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+    ]
   },
   "sneckomod:LuckyBreak": {
     "NAME": "Lucky Break",
@@ -101,7 +110,8 @@
     "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card which started *Unidentified. sneckomod:Identify it.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card which started *Unidentified. sneckomod:Identify it.",
     "EXTENDED_DESCRIPTION": [
-      " to Identify."
+      " to Identify.",
+        "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
     ]
   },
   "sneckomod:MintCondition": {
@@ -110,11 +120,17 @@
   },
   "sneckomod:MixItUp": {
     "NAME": "Mix It Up!",
-    "DESCRIPTION": "*Transform your Potions. NL Deal !D! damage !M! times. NL Exhaust."
+    "DESCRIPTION": "*Transform your Potions. NL Deal !D! damage !M! times. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+    ]
   },
   "sneckomod:MorePower": {
     "NAME": "More Power!",
-    "DESCRIPTION": "Obtain an additional Upgraded *Unidentified card reward at the end of combat."
+    "DESCRIPTION": "Obtain an additional Upgraded *Unidentified card reward at the end of combat.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+    ]
   },
   "sneckomod:Mudshield": {
     "NAME": "Mud Shield",
@@ -122,7 +138,7 @@
   },
   "sneckomod:OverwhelmingPresence": {
     "NAME": "Overwhelming Presence",
-    "DESCRIPTION": "The first time you play a card that costs 3 each turn, gain [E]."
+    "DESCRIPTION": "The first time you shuffle your deck each turn, gain [E] and draw !M! card."
   },
   "sneckomod:RiskySword": {
     "NAME": "Risky Sword",
@@ -157,7 +173,10 @@
   "sneckomod:Rotation": {
     "NAME": "Rotation",
     "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+    ]
   },
   "sneckomod:SerpentBottle": {
     "NAME": "Discount Sale",
@@ -183,7 +202,10 @@
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !qqq! - !D! damage. NL Gain 1 - !M! [E] . NL Exhaust."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !qqq! - !D! damage. NL Gain 1 - !M! [E] . NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+    ]
   },
   "sneckomod:SnekBeam": {
     "NAME": "Laser Eyes",
@@ -197,7 +219,10 @@
   "sneckomod:SoulCleanse": {
     "NAME": "Soul Cleanse",
     "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3."
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+    ]
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
@@ -226,7 +251,10 @@
   },
   "sneckomod:Yearn": {
     "NAME": "Yearn",
-    "DESCRIPTION": "Draw !M! cards. NL Give them Retain. NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL Give them Retain. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+    ]
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
@@ -240,12 +268,16 @@
       "Choose a Relic to lose.",
       "Lose ",
       " and obtain another ",
-      " Relic."
-    ]
+      " Relic.",
+        "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      ]
   },
   "sneckomod:ToxicPersonality": {
     "NAME": "Toxic Personality",
-    "DESCRIPTION": "Whenever you apply a debuff to an enemy, also apply !M! sneckomod:Venom. NL sneckomod:Gift: Uncommon+ Debuff."
+    "DESCRIPTION": "Whenever you apply a debuff to an enemy, also apply !M! sneckomod:Venom. NL sneckomod:Gift: Uncommon+ Debuff.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+    ]
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "Trash to Treasure",
@@ -254,8 +286,9 @@
   },
   "sneckomod:UnendingSupply": {
     "NAME": "Unending Supply",
-    "DESCRIPTION": "At the start of each turn, gain a random sneckomod:Offclass card."
-  },
+    "DESCRIPTION": "At the start of each turn, gain a random sneckomod:Offclass card with Ethereal and Exhaust added.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, gain a random sneckomod:Offclass card with Ethereal and Exhaust added."
+},
   "sneckomod:Unknown": {
     "NAME": "??? Basic",
     "DESCRIPTION": "*Unidentified Basic Card.",
@@ -389,7 +422,10 @@
   "sneckomod:UnlimitedRolls": {
     "NAME": "Unlimited Rolls",
     "DESCRIPTION": "At the start of your turn, gain a *Soul *Roll with Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain a *Soul *Roll with Exhaust."
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain a *Soul *Roll with Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+    ]
   },
   "sneckomod:Behold": {
     "NAME": "Behold!",
@@ -418,8 +454,8 @@
   },
   "sneckomod:Amass": {
     "NAME": "Amass",
-    "DESCRIPTION": "Gain !B! Block. Gains additional Block increased by the total [E] cost of your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. Gains additional Block increased by twice the total [E] cost of your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Gains additional Block equal to the total [E] cost of your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gains additional Block equal to twice the total [E] cost of your hand."
   },
   "sneckomod:Medusa": {
     "NAME": "Medusa",
@@ -427,7 +463,7 @@
   },
   "sneckomod:Cower": {
     "NAME": "Cower",
-    "DESCRIPTION": "Gain !B! Block. NL Whenever you sneckomod:Muddle this card, gain !M! Weak."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Weak."
   },
   "sneckomod:WideSting": {
     "NAME": "Wide Sting",
@@ -451,7 +487,7 @@
   },
   "sneckomod:BeyondArmor": {
     "NAME": "Beyond Armor",
-    "DESCRIPTION": "Gain !B! Block. NL Put !M! sneckomod:Offclass cards from your draw pile into your hand. NL sneckomod:Gift: Common."
+    "DESCRIPTION": "Gain !B! Block. NL Put !M! random sneckomod:Offclass cards from your draw pile into your hand. NL sneckomod:Gift: Common."
   },
   "sneckomod:BigGuns": {
     "NAME": "Blunder Guard",
@@ -480,8 +516,8 @@
   },
   "sneckomod:Jackpot": {
     "NAME": "Jackpot",
-    "DESCRIPTION": "Gain [E] [E] [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] [E]. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain [E] [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E] [E]. NL Exhaust."
   },
   "sneckomod:MakeshiftBlade": {
     "NAME": "Makeshift Blade",
@@ -497,7 +533,8 @@
   },
   "sneckomod:ThrowingCards": {
     "NAME": "Throwing Cards",
-    "DESCRIPTION": "Gain !B! Block X times. NL Draw X cards at the start of your next turn."
+    "DESCRIPTION": "Add X copies of *FTL to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add X copies of *FTL+ to your hand. NL Exhaust."
   },
   "sneckomod:RoundaboutSwing": {
     "NAME": "Roundabout Swing",
@@ -533,8 +570,12 @@
   },
   "sneckomod:FlashInThePan": {
     "NAME": "Flash in the Pan",
-    "DESCRIPTION": "Gain !B! Block. NL Discard your hand. NL Draw that many cards next turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Discard your hand. NL Draw that many cards next turn."
+    "DESCRIPTION": "Gain !B! Block. NL Discard your hand. NL Draw that many cards next turn."
+  },
+  "sneckomod:TrashCan": {
+    "NAME": "Trash Can",
+    "DESCRIPTION": "At the start of your turn, you may Exhaust a card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, you may Exhaust a card."
   },
   "sneckomod:Lacerate": {
     "NAME": "Lacerate",
@@ -542,7 +583,7 @@
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Serpentine Sleuth",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E]. NL sneckomod:Gift: Uncommon Power.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E] [E]. NL sneckomod:Gift: Uncommon Power."
+    "DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E]. NL sneckomod:Gift: Rare Power.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E] [E]. NL sneckomod:Gift: Rare Power."
   }
 }

@@ -389,7 +389,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "Thorn Whip",
-    "DESCRIPTION": "Deal !D! damage and apply !M! hermit:Bruise to ALL enemies. NL Gain a *Shiv."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply collector:Doom equal to unblocked damage dealt."
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer",

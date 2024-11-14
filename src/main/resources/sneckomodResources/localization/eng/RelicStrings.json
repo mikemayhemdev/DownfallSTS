@@ -66,7 +66,7 @@
     "NAME": "Super Snecko Eye",
     "FLAVOR": "0121012",
     "DESCRIPTIONS": [
-      "Replaces #ySnecko #yEye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, gain [E] [E] [E] ."
+      "Replaces #ySnecko #yEye. At the start of your turn, draw #b4 additional cards. Start each combat #yConfused."
     ]
   },
   "sneckomod:SneckoTalon": {

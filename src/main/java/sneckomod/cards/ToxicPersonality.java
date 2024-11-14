@@ -11,7 +11,8 @@ import sneckomod.powers.SerpentMindPower;
 import sneckomod.powers.ToxicPersonalityPower;
 
 import java.util.ArrayList;
-
+@Deprecated
+@CardIgnore
 public class ToxicPersonality extends AbstractSneckoCard {
 
     public final static String ID = makeID("ToxicPersonality");
@@ -22,7 +23,7 @@ public class ToxicPersonality extends AbstractSneckoCard {
     private static final int UPG_MAGIC = 2;
 
     public ToxicPersonality() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "ToxicPersonality.png");
     }

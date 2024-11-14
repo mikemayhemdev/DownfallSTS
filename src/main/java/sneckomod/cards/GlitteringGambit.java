@@ -1,10 +1,11 @@
 package sneckomod.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.SoulboundField;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import expansioncontent.expansionContentMod;
 import sneckomod.SneckoMod;
 
@@ -24,29 +25,41 @@ public class GlitteringGambit extends AbstractSneckoCard {
         SneckoMod.loadJokeCardImage(this, "GlitteringGambit.png");
     }
 
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // No specific action for this card
     }
 
     @Override
     public void onObtainCard() {
-        AbstractDungeon.player.gainGold(magicNumber);
+        AbstractDungeon.player.decreaseMaxHealth(10);
+        displayCardRewards(AbstractCard.CardRarity.COMMON, "Special Bonus Card!");
+        displayCardRewards(AbstractCard.CardRarity.UNCOMMON, "Special Bonus Card!");
+        displayCardRewards(AbstractCard.CardRarity.RARE, "Special Bonus Card!");
+    }
+
+    private void displayCardRewards(AbstractCard.CardRarity rarity, String rewardText) {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+
         while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == AbstractCard.CardRarity.RARE);
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == rarity);
             if (newCard != null && !cardListDuplicate(cardsToReward, newCard)) {
                 AbstractCard cardCopy = newCard.makeCopy();
-                cardCopy.upgrade();
+                cardCopy.upgrade();  // Upgrade each card copy
                 cardsToReward.add(cardCopy);
             }
         }
 
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, rewardText);
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
     }
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+        for (AbstractCard existingCard : cardsList) {
+            if (existingCard.cardID.equals(card.cardID)) {
                 return true;
             }
         }
