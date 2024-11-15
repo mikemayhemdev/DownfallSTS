@@ -559,7 +559,7 @@ public class SneckoMod implements
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
                 if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor() && r != AbstractCard.CardColor.COLORLESS && r != CardColorEnumPatch.CardColorPatch.BOSS && r != CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE && (!sneckoNoModCharacters || allowedColors.contains(r.name()))) {
-                    if (BaseMod.getBackColor(r) != null) {
+                    if (1==1) {
 
                         String s = getClassFromColor(r);
                         AbstractCard q = playerStartCardForEventFromColor(r);

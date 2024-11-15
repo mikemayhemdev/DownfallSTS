@@ -15,7 +15,10 @@
   "sneckomod:Cheat": {
     "NAME": "Pure Luck",
     "DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn."
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+    ]
   },
   "sneckomod:DangerNoodle": {
     "NAME": "Danger Noodle",
@@ -39,7 +42,7 @@
   },
   "sneckomod:DiceBoulder": {
     "NAME": "Dice Boulder",
-    "DESCRIPTION": "Gain !B! Block. NL Increase this card's Block by !M! this combat."
+    "DESCRIPTION": "Gain !B! Block. NL Increase this card's Block by !M! and cost by 1 this combat."
   },
   "sneckomod:DiceCrush": {
     "NAME": "Dice Crush",
@@ -60,8 +63,8 @@
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
-    "DESCRIPTION": "Unplayable. NL On pickup, lose 10 Max HP. NL sneckomod:Gift: Upgraded Common. NL sneckomod:Gift: Upgraded Uncommon. NL sneckomod:Gift: Upgraded Rare.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL On pickup, lose 10 Max HP. NL sneckomod:Gift: Upgraded Common. NL sneckomod:Gift: Upgraded Uncommon. NL sneckomod:Gift: Upgraded Rare."
+    "DESCRIPTION": "Unplayable. NL sneckomod:Gift: Upgraded Rare and !M! Gold.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL sneckomod:Gift: Upgraded Rare and !M! Gold."
   },
   "sneckomod:ImmovableObject": {
     "NAME": "Immovable Object",
@@ -459,11 +462,12 @@
   },
   "sneckomod:Medusa": {
     "NAME": "Medusa",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! sneckomod:Venom."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! sneckomod:Venom. NL sneckomod:Gift: Common Debuff."
   },
   "sneckomod:Cower": {
     "NAME": "Cower",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Weak."
+    "DESCRIPTION": "Gain !B! Block. NL Add a *Hole *Up to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add a *Hole *Up+ to your hand. NL Exhaust."
   },
   "sneckomod:WideSting": {
     "NAME": "Wide Sting",
@@ -579,7 +583,7 @@
   },
   "sneckomod:Lacerate": {
     "NAME": "Lacerate",
-    "DESCRIPTION": "Deal !D! damage. Whenever this enemy is debuffed this turn they gain !M! sneckomod:Venom. sneckomod:Gift: Uncommon Debuff."
+    "DESCRIPTION": "Deal !D! damage. Whenever this enemy is debuffed this turn they gain !M! sneckomod:Venom. sneckomod:Gift: *Crippling *Cloud."
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Serpentine Sleuth",

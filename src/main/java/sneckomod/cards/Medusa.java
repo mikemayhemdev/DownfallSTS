@@ -18,6 +18,8 @@ import sneckomod.powers.LacerateDebuff;
 import sneckomod.powers.ToxicPersonalityPower;
 import sneckomod.powers.VenomDebuff;
 
+import java.util.ArrayList;
+
 public class Medusa extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("Medusa");
@@ -67,6 +69,30 @@ public class Medusa extends AbstractSneckoCard {
             }
         }
     }
+
+    @Override
+    public void onObtainCard() {
+        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+        while (cardsToReward.size() < 3) {
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> ((c.rawDescription.contains("Apply") ||c.rawDescription.contains("apply") ||c.rawDescription.contains("applies") ||c.rawDescription.contains("Lick") ||c.rawDescription.contains("Debuff") ||c.rawDescription.contains("Steal") || c.name.contains("Disarm") || c.name.contains("Choke") || c.name.contains("Talk to the Hand") || c.name.contains("Cursed Wail") || c.name.contains("Undervolt"))
+            ) && c.rarity == AbstractCard.CardRarity.COMMON);
+            if (!cardListDuplicate(cardsToReward, newCard)) {
+                cardsToReward.add(newCard.makeCopy());
+            }
+        }
+
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     @Override
     public void upgrade() {

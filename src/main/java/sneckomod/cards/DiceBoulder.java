@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.actions.ReduceCostActionFixed;
 import sneckomod.SneckoMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
@@ -19,7 +20,7 @@ public class DiceBoulder extends AbstractSneckoCard {
     private static final int UPGRADE_MAGIC = 1;
 
     public DiceBoulder() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
         baseBlock = BASE_BLOCK;
         SneckoMod.loadJokeCardImage(this, "DiceBoulder.png");
@@ -28,6 +29,7 @@ public class DiceBoulder extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         this.addToBot(new ModifyBlockAction(this.uuid, this.magicNumber));
+        this.addToBot(new ReduceCostActionFixed(this.uuid, 1));
     }
 
 

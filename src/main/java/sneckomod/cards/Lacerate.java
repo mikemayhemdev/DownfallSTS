@@ -4,9 +4,15 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.curses.Necronomicurse;
+import com.megacrit.cardcrawl.cards.green.CripplingPoison;
+import com.megacrit.cardcrawl.cards.purple.Wallop;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import sneckomod.SneckoMod;
 import sneckomod.powers.LacerateDebuff;
 
@@ -25,6 +31,7 @@ public class Lacerate extends AbstractSneckoCard {
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        this.cardsToPreview = new CripplingPoison();
         SneckoMod.loadJokeCardImage(this, "Lacerate.png");
     }
 
@@ -36,18 +43,8 @@ public class Lacerate extends AbstractSneckoCard {
 
     @Override
     public void onObtainCard() {
-        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
-        while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(
-                    c -> (c.rarity == AbstractCard.CardRarity.UNCOMMON &&
-                            (((c.rawDescription.contains("Apply") ||c.rawDescription.contains("apply") ||c.rawDescription.contains("applies") ||c.rawDescription.contains("Lick") ||c.rawDescription.contains("Debuff") ||c.rawDescription.contains("Steal") || c.name.contains("Disarm") || c.name.contains("Choke") || c.name.contains("Talk to the Hand") || c.name.contains("Cursed Wail") || c.name.contains("Undervolt"))
-                            ))));
-            if (!cardListDuplicate(cardsToReward, newCard)) {
-                cardsToReward.add(newCard.makeCopy());
-            }
-        }
-
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new CripplingPoison(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+        UnlockTracker.markCardAsSeen("Crippling Cloud");
     }
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {

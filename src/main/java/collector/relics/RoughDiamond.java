@@ -11,16 +11,27 @@ public class RoughDiamond extends CustomRelic {
     public static final String ID = CollectorMod.makeID(RoughDiamond.class.getSimpleName());
     private static final String IMG_PATH = RoughDiamond.class.getSimpleName() + ".png";
     private static final String OUTLINE_IMG_PATH = RoughDiamond.class.getSimpleName() + ".png";
+    private boolean triggeredThisTurn = false;
+
 
     public RoughDiamond() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
+
+    public void atTurnStart() {
+        this.triggeredThisTurn = false;
+    }
+
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (c.rarity == AbstractCard.CardRarity.RARE && c.costForTurn >= 2) {
-            flash();
-            addToBot(new GainEnergyAction(1));
+
+            if (c.rarity == AbstractCard.CardRarity.RARE) {
+                if (!this.triggeredThisTurn) {
+                    this.triggeredThisTurn = true;
+                flash();
+                addToBot(new GainEnergyAction(1));
+            }
         }
     }
 

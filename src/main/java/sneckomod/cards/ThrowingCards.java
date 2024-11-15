@@ -30,7 +30,7 @@ public class ThrowingCards extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect + params[0]; i++) {
-                AbstractCard g = new Wallop();
+                AbstractCard g = new FTL();
                 if(this.upgraded){
                     g.upgrade();
                 }

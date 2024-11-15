@@ -14,12 +14,12 @@ public class DiceCrush extends AbstractSneckoCard {
 
     //stupid intellij stuff ATTACK, ENEMY, BASIC
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 18;
     private static final int MAGIC = 2;
-    private static final int UPG_DAMAGE = 3;
+    private static final int UPG_DAMAGE = 4;
 
     public DiceCrush() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "DiceCrush.png");

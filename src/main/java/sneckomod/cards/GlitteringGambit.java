@@ -1,6 +1,7 @@
 package sneckomod.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.SoulboundField;
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -31,9 +32,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
 
     @Override
     public void onObtainCard() {
-        AbstractDungeon.player.decreaseMaxHealth(10);
-        displayCardRewards(AbstractCard.CardRarity.COMMON, "Special Bonus Card!");
-        displayCardRewards(AbstractCard.CardRarity.UNCOMMON, "Special Bonus Card!");
+        this.addToBot(new GainGoldAction(this.magicNumber));
         displayCardRewards(AbstractCard.CardRarity.RARE, "Special Bonus Card!");
     }
 
