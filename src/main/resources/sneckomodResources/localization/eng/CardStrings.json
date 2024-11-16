@@ -22,7 +22,8 @@
   },
   "sneckomod:DangerNoodle": {
     "NAME": "Danger Noodle",
-    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle a card. NL sneckomod:Gift: 3+ cost."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle a card. NL sneckomod:Gift: 3+ cost.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage. NL sneckomod:Muddle a card."
   },
   "sneckomod:Deception": {
     "NAME": "Deception",
@@ -34,7 +35,8 @@
   },
   "sneckomod:DefensiveFlair": {
     "NAME": "Defensive Flair",
-    "DESCRIPTION": "Gain !B! Block, increased by !M! for each sneckomod:Offclass card in your hand. NL sneckomod:Gift: Uncommon."
+    "DESCRIPTION": "Gain !B! Block, increased by !M! for each sneckomod:Offclass card in your hand. NL sneckomod:Gift: Uncommon.",
+    "DESCRIPTION_BATTLE": "Gain !B! Block, increased by !M! for each sneckomod:Offclass card in your hand."
   },
   "sneckomod:DiceBlock": {
     "NAME": "Dice Block",
@@ -64,7 +66,9 @@
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
     "DESCRIPTION": "Unplayable. NL sneckomod:Gift: Upgraded Rare and !M! Gold.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL sneckomod:Gift: Upgraded Rare and !M! Gold."
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL sneckomod:Gift: Upgraded Rare and !M! Gold.",
+    "DESCRIPTION_BATTLE": "Unplayable.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Unplayable. NL Ethereal."
   },
   "sneckomod:ImmovableObject": {
     "NAME": "Immovable Object",
@@ -106,7 +110,9 @@
   "sneckomod:MasterEye": {
     "NAME": "Snake Eyes",
     "DESCRIPTION": "This turn, your next sneckomod:Offclass card is played twice. NL sneckomod:Gift: Rare Skill.",
-    "UPGRADE_DESCRIPTION": "This turn, your next 2 sneckomod:Offclass cards are played twice. NL sneckomod:Gift: Rare Skill."
+    "UPGRADE_DESCRIPTION": "This turn, your next 2 sneckomod:Offclass cards are played twice. NL sneckomod:Gift: Rare Skill.",
+    "DESCRIPTION_BATTLE": "This turn, your next sneckomod:Offclass card is played twice.",
+    "UPGRADE_DESCRIPTION_BATTLE": "This turn, your next 2 sneckomod:Offclass cards are played twice."
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
@@ -192,16 +198,20 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotic Form",
-    "DESCRIPTION": "At the end of your turn, gain !M! Strength for each unique color played this turn. NL sneckomod:Gift: Rare."
+    "DESCRIPTION": "At the end of your turn, gain !M! Strength for each unique color played this turn. NL sneckomod:Gift: Rare.",
+    "DESCRIPTION_BATTLE": "At the end of your turn, gain !M! Strength for each unique color played this turn."
   },
   "sneckomod:SlitherThrough": {
     "NAME": "Slither Through",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn. NL sneckomod:Gift: Uncommon."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn. NL sneckomod:Gift: Uncommon.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn."
   },
   "sneckomod:SnakeEyes": {
     "NAME": "Snake Eyes",
     "DESCRIPTION": "This turn, your next sneckomod:Offclass card is played twice. NL sneckomod:Gift: Rare Skill.",
-    "UPGRADE_DESCRIPTION": "This turn, your next 2 sneckomod:Offclass cards are played twice. NL sneckomod:Gift: Rare Skill."
+    "UPGRADE_DESCRIPTION": "This turn, your next 2 sneckomod:Offclass cards are played twice. NL sneckomod:Gift: Rare Skill.",
+    "DESCRIPTION_BATTLE": "This turn, your next sneckomod:Offclass card is played twice.",
+    "UPGRADE_DESCRIPTION_BATTLE": "This turn, your next 2 sneckomod:Offclass cards are played twice."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
@@ -246,7 +256,9 @@
   "sneckomod:ToothAndClaw": {
     "NAME": "Tooth And Claw",
     "DESCRIPTION": "Deal !D! damage. Gain a Shiv for each unique color in your hand. NL sneckomod:Gift: Uncommon.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain an Upgraded Shiv for each unique color in your hand. NL sneckomod:Gift: Uncommon."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain an Upgraded Shiv for each unique color in your hand. NL sneckomod:Gift: Uncommon.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage. Gain a Shiv for each unique color in your hand.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Deal !D! damage. Gain an Upgraded Shiv for each unique color in your hand."
   },
   "sneckomod:TyphoonFang": {
     "NAME": "Typhoon Fang",
@@ -462,7 +474,8 @@
   },
   "sneckomod:Medusa": {
     "NAME": "Medusa",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! sneckomod:Venom. NL sneckomod:Gift: Common Debuff."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! sneckomod:Venom. NL sneckomod:Gift: Common Debuff.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage. NL Apply !M! sneckomod:Venom."
   },
   "sneckomod:Cower": {
     "NAME": "Cower",
@@ -471,7 +484,8 @@
   },
   "sneckomod:WideSting": {
     "NAME": "Wide Sting",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand. NL sneckomod:Gift: Common."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand. NL sneckomod:Gift: Common.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand."
   },
   "sneckomod:GildedShield": {
     "NAME": "Gilded Shield",
@@ -487,15 +501,18 @@
   },
   "sneckomod:OtherworldlySlash": {
     "NAME": "Otherworldly Slash",
-    "DESCRIPTION": "Deal !D! damage. NL If you played an sneckomod:Offclass card this turn, deal !D! damage again. NL sneckomod:Gift: Common."
+    "DESCRIPTION": "Deal !D! damage. NL If you played an sneckomod:Offclass card this turn, deal !D! damage again. NL sneckomod:Gift: Common.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage. NL If you played an sneckomod:Offclass card this turn, deal !D! damage again.."
   },
   "sneckomod:BeyondArmor": {
     "NAME": "Beyond Armor",
-    "DESCRIPTION": "Gain !B! Block. NL Put !M! random sneckomod:Offclass cards from your draw pile into your hand. NL sneckomod:Gift: Common."
+    "DESCRIPTION": "Gain !B! Block. NL Put !M! random sneckomod:Offclass cards from your draw pile into your hand. NL sneckomod:Gift: Common.",
+    "DESCRIPTION_BATTLE": "Gain !B! Block. NL Put !M! random sneckomod:Offclass cards from your draw pile into your hand."
   },
   "sneckomod:BigGuns": {
     "NAME": "Blunder Guard",
-    "DESCRIPTION": "Whenever you play a card that costs 3, gain !B! Block and !M! Strength. NL sneckomod:Gift: 3 cost."
+    "DESCRIPTION": "Whenever you play a card that costs 3, gain !B! Block and !M! Strength. NL sneckomod:Gift: 3 cost.",
+    "DESCRIPTION_BATTLE": "Whenever you play a card that costs 3, gain !B! Block and !M! Strength."
   },
   "sneckomod:WideAngle": {
     "NAME": "Wide Angle",
@@ -503,7 +520,8 @@
   },
   "sneckomod:SerpentsNest": {
     "NAME": "Serpent's Nest",
-    "DESCRIPTION": "Whenever you play a Power, deal !M! damage to ALL enemies. NL sneckomod:Gift: Uncommon Power."
+    "DESCRIPTION": "Whenever you play a Power, deal !M! damage to ALL enemies. NL sneckomod:Gift: Uncommon Power.",
+    "DESCRIPTION_BATTLE": "Whenever you play a Power, deal !M! damage to ALL enemies."
   },
   "sneckomod:Whack": {
     "NAME": "Whack",
@@ -516,7 +534,8 @@
   },
   "sneckomod:Belittle": {
     "NAME": "Belittle",
-    "DESCRIPTION": "Enemy loses !M! HP for each unique debuff they have. NL sneckomod:Gift: Uncommon Debuff."
+    "DESCRIPTION": "Enemy loses !M! HP for each unique debuff they have. NL sneckomod:Gift: Uncommon Debuff.",
+    "DESCRIPTION_BATTLE": "Enemy loses !M! HP for each unique debuff they have."
   },
   "sneckomod:Jackpot": {
     "NAME": "Jackpot",
@@ -525,7 +544,8 @@
   },
   "sneckomod:MakeshiftBlade": {
     "NAME": "Makeshift Blade",
-    "DESCRIPTION": "Deal !D! damage. If the target has at least !M! debuffs, draw 3 cards. NL sneckomod:Gift: Debuff."
+    "DESCRIPTION": "Deal !D! damage. If the target has at least !M! debuffs, draw 3 cards. NL sneckomod:Gift: Debuff.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage. If the target has at least !M! debuffs, draw 3 cards."
   },
   "sneckomod:LatchOn": {
     "NAME": "Latch On",
@@ -533,7 +553,8 @@
   },
   "sneckomod:ComboString": {
     "NAME": "Combo String",
-    "DESCRIPTION": "Deal !D! damage for each sneckomod:Offclass card played this turn. NL sneckomod:Gift: Uncommon."
+    "DESCRIPTION": "Deal !D! damage for each sneckomod:Offclass card played this turn. NL sneckomod:Gift: Uncommon.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage for each sneckomod:Offclass card played this turn."
   },
   "sneckomod:ThrowingCards": {
     "NAME": "Throwing Cards",
@@ -562,6 +583,8 @@
     "NAME": "Last Strike",
     "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique Strike played this combat. NL sneckomod:Gift: Strike.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Repeat for each unique Strike played this combat. NL sneckomod:Gift: Strike.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage. NL Repeat for each unique Strike played this combat.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Deal !D! damage. NL Repeat for each unique Strike played this combat.",
     "EXTENDED_DESCRIPTION": [
       " NL (hits ",
       " x extra times.)"
@@ -583,11 +606,14 @@
   },
   "sneckomod:Lacerate": {
     "NAME": "Lacerate",
-    "DESCRIPTION": "Deal !D! damage. Whenever this enemy is debuffed this turn they gain !M! sneckomod:Venom. sneckomod:Gift: *Crippling *Cloud."
+    "DESCRIPTION": "Deal !D! damage. Whenever this enemy is debuffed this turn they gain !M! sneckomod:Venom. sneckomod:Gift: *Crippling *Cloud.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage. Whenever this enemy is debuffed this turn they gain !M! sneckomod:Venom."
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Serpentine Sleuth",
     "DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E]. NL sneckomod:Gift: Rare Power.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E] [E]. NL sneckomod:Gift: Rare Power."
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E] [E]. NL sneckomod:Gift: Rare Power.",
+    "DESCRIPTION_BATTLE": "Ethereal. NL Whenever you play a Power, gain [E].",
+    "UPGRADE_DESCRIPTION_BATTLE": "Ethereal. NL Whenever you play a Power, gain [E] [E]."
   }
 }

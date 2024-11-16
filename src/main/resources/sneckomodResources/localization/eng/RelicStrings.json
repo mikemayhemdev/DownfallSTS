@@ -38,7 +38,7 @@
     "NAME": "Loaded Die",
     "FLAVOR": "Cheese-stuffed.",
     "DESCRIPTIONS": [
-      "Whenever you #ysneckomod:Muddle a card, gain #b2 #yBlock."
+      "Whenever you #ysneckomod:Muddle a card, gain #b1 #yBlock."
     ]
   },
   "sneckomod:RareBoosterPack": {
@@ -59,7 +59,7 @@
     "NAME": "Unidentified Egg",
     "FLAVOR": "What will hatch? Pay $1000 to see.",
     "DESCRIPTIONS": [
-      "All #ysneckomod:Offclass cards are #Upgraded."
+      "All #ysneckomod:Offclass cards are #yUpgraded."
     ]
   },
   "sneckomod:SuperSneckoEye": {
