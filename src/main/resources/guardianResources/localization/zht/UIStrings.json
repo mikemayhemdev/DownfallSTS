@@ -1,0 +1,41 @@
+{
+  "Guardian:EnhanceBonfireOptions": {
+    "TEXT": [
+      "鑲嵌",
+      "(自由行動)鑲嵌一顆寶石進孔位。",
+      "需要一顆寶石和一個孔位。",
+      "選擇一顆寶石。",
+      "選擇一張有剩余孔位的牌。"
+    ]
+  },
+  "Guardian:UIOptions": {
+    "TEXT": [
+      "選擇一張牌凝滯。",
+      "拾起一顆寶石。",
+      "將一顆普通寶石加入牌組。",
+      "進行凝滯。",
+      "~錯誤:~ 不能在建設形態時 #r攻擊 。",
+      "~錯誤:~ 在 #r凝滯 進程中。",
+      "將一顆寶石加入你的牌組中。",
+      "(隊列後的牌先被凝滯)"
+    ]
+  },
+  "Guardian:FindGemsOption": {
+    "TEXT": [
+      "挖掘",
+      "獲得兩顆隨機寶石。",
+      "鎬已損毀。"
+    ]
+  },
+  "Guardian:BraceMod": {
+    "TEXT": [
+      " NL guardianmod:提防 2。"
+    ]
+  },
+  "Guardian:gemDescriptor": {
+    "TEXT": [
+      "寶石",
+      "guardianmod:寶石. NL "
+    ]
+  }
+}

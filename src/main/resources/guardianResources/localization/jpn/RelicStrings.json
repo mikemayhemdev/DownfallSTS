@@ -1,0 +1,126 @@
+{
+  "Guardian:ModeShifter": {
+    "NAME": "ブロンズギア",
+    "FLAVOR": "最も重要な部分を保護する。",
+    "DESCRIPTIONS": [
+      "戦闘開始時、 #yギアアップ を得る。 NL ガーディアンはランダムなコモン #yジェム を持った状態でランを開始する。"
+    ]
+  },
+  "Guardian:ModeShifterPlus": {
+    "NAME": "ガーディアンギア",
+    "FLAVOR": "3,000フロア毎に交換してください",
+    "DESCRIPTIONS": [
+      "#rブロンズギア と置き換える。 NL 戦闘が #yguardianmod:ディフェンシブモード で開始される。それは #b3 ターンの間継続する。"
+    ]
+  },
+  "Guardian:DefensiveModeMoreBlock": {
+    "NAME": "バロールの豪奢なプレート",
+    "FLAVOR": "鎧はいくらあっても困らない",
+    "DESCRIPTIONS": [
+      " #yguardianmod:制動 を行う度にもう一度 #y制動 1 を行う。"
+    ]
+  },
+  "Guardian:guardianmod:GemCopier": {
+    "NAME": "ジェムタンブラー",
+    "FLAVOR": "最も無垢な物だけが許される。",
+    "DESCRIPTIONS": [
+      "#yguardianmod:ジェム カードをプレイした時、そのコピーをプレイする。"
+    ]
+  },
+  "Guardian:PocketSentry": {
+    "NAME": "アルンバのポケットセントリー",
+    "FLAVOR": "セントリーモード、起動。ターゲット補足。悪く思うな。",
+    "DESCRIPTIONS": [
+      "3ターン毎に全ての敵に #y脱力 #b1 を与える。"
+    ]
+  },
+  "Guardian:SackOfGems": {
+    "NAME": "ジェム入り袋",
+    "FLAVOR": "おおぉ...眩しい!",
+    "DESCRIPTIONS": [
+      "入手時、ランダムな #yguardianmod:ジェム #b5 枚をデッキに追加する。"
+    ]
+  },
+  "Guardian:StasisCodex": {
+    "NAME": "パイロットのコーデックス",
+    "FLAVOR": "尖塔の初期手動駆動プロトタイプの設計図とダイアグラム。 by - マスター パイロット デビッド",
+    "DESCRIPTIONS": [
+      "ターン終了時、 #yguardianmod:停滞 されているカードが無かった場合、 #b3 枚のカードから #b1 枚を選択し、 #yguardianmod:停滞 スロットに置く。"
+    ]
+  },
+  "Guardian:StasisSlotIncreaseRelic": {
+    "NAME": "タイニーポリスボックス",
+    "FLAVOR": "中身の方が大きい...",
+    "DESCRIPTIONS": [
+      "戦闘開始時、追加で #b2 個の 停滞 スロット を得る。"
+    ]
+  },
+  "Guardian:StasisSlotReductionRelic": {
+    "NAME": "ワンダーボット",
+    "FLAVOR": "このドローンは素晴らしい性能だが維持に処理能力が必要だ。",
+    "DESCRIPTIONS": [
+      "戦闘開始時、 停滞 スロットを #b1 個失う。 NL ターン開始時 [E] を得る。"
+    ]
+  },
+  "Guardian:StasisUpgradeRelic": {
+    "NAME": "冷凍チャンバー",
+    "FLAVOR": "物事の価値はいつも、入手した時ではなく失った時に気付く。",
+    "DESCRIPTIONS": [
+      "戦闘開始時、 停滞 スロットが #b1 個増加。更にカードを #yguardianmod:停滞 させると、そのカードを #yアップグレード する。"
+    ]
+  },
+  "Guardian:BottledStasis": {
+    "NAME": "瓶詰めブラックホール",
+    "FLAVOR": "何処かで、驚くほど不思議な事が、いつか知られるのを待っているのだ。",
+    "DESCRIPTIONS": [
+      "入手時、デッキからカードを1枚選択する。戦闘開始時、選ばれたカードが #yguardianmod:停滞 スロットに入った状態で開始する。",
+      "選択されたカード： ",
+      "戦闘開始時 #yguardianmod:停滞 ",
+      " スロットに入る。",
+      "瓶に入ったカードがデッキから #r取り除かれ レリックは機能を失った。"
+    ]
+  },
+  "Guardian:StasisEgg": {
+    "NAME": "量子チャンバー",
+    "FLAVOR": "鶏は卵を孵化させて得る物だ。卵を壊して得る物ではない。",
+    "DESCRIPTIONS": [
+      "入手時、デッキからカードを1枚選択する。このカードをデッキから取り除いた状態で戦闘を開始する。 #b4ターン目 開始時、このカードとそのコピー #b2 枚をあなたの手札に加える。",
+      "選択されたカード： ",
+      "戦闘開始時 ",
+      " をデッキから取り除いた状態で戦闘を開始する。 #b4ターン目 開始時、このカードとそのコピー #b2 枚をあなたの手札に加える。"
+    ]
+  },
+  "Guardian:TickHelperRelic": {
+    "NAME": "冷却液",
+    "FLAVOR": "危険だ。飲んではいけない。",
+    "DESCRIPTIONS": [
+      "戦闘開始時 #b2 個の 停滞 スロットを得る。 NL カードが #yguardianmod:停滞 した時、カウンターを #b2 増加させる。"
+    ]
+  },
+  "Guardian:PickAxe": {
+    "NAME": "ピッケル・オブ・ラプソディ",
+    "FLAVOR": "尖塔に多くの宝石が散在する中で、このピッケルを必要とするほど不運な人が居るとは想像し難い。",
+    "DESCRIPTIONS": [
+      "休憩所で #b2 枚の #yguardianmod:ジェム を #g掘削 出来るようになる。 (最大 #b3 回)"
+    ]
+  },
+  "Guardian:GemstoneGun": {
+    "NAME": "ジェムストーンガン",
+    "FLAVOR": "バン！バン！バン！ ヘイ、3つ揃ったぜ！",
+    "DESCRIPTIONS": [
+      "入手時、 #b3 枚の #yguardianmod:ジェム を選択する。 戦闘開始時、 #y保留 と #y廃棄 と 選択された #yジェム がソケットに追加されたカードを1枚手札に加える。",
+      "ジェムガンに追加するジェムを1つ選ぶ。"
+    ]
+  },
+  "Guardian:BottledAnomaly": {
+    "NAME": "瓶詰めの異変",
+    "FLAVOR": "渦を巻いて、渦を巻いて、最後には壊れる。",
+    "DESCRIPTIONS": [
+      "入手時、デッキからカードを1枚選択する。戦闘開始時、山札からそれを取り除く。 #b3ターン目 開始時、コストを0にしたそのカードを手札に加える。",
+      "選択されたカード： ",
+      "戦闘開始時 ",
+      " 山札からそれを取り除く。 #b3ターン目 開始時、コストを0にしたそのカードを手札に加える。",
+      "瓶に入ったカードがデッキから #r取り除かれ レリックは機能を失った。"
+    ]
+  }
+}

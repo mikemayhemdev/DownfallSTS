@@ -1,0 +1,127 @@
+{
+  "Guardian:GemMine": {
+    "NAME": "Mine de gemmes",
+    "DESCRIPTIONS": [
+      "Vous entrez dans un ancien puits de mine.  Dans les crevasses rocheuses, vous pouvez voir un certain nombre de pierres précieuses brillantes. Des #gémeraudes, des #rrubis, des #ytopazes, et bien d'autres.  Une meute de mineurs diablotins à proximité possède des outils d'extraction qui pourraient être utiles, mais les pierres précieuses sont si proches de la surface qu'avec un peu de détermination, vous pourriez être en mesure de les retirer à la main.",
+      "Creusant dans le mur rocheux, vous réusissez à arracher une gemme de l'endroit où elle reposait. Ça fait un peu mal, mais les joyaux en valent la peine.",
+      "Bien que la perspective d'un trésor soit attrayante, vous préférez gardez votre armure pour des aventures plus importantes.",
+      "Ayant réussi à conquérir l'ancienne mine, vous repartez avec un sentiment de satisfaction.  Et des appendices de bronze douloureux.",
+      "Vous volez la pioche du camp de Diablotins, qui semble être de mauvaise qualité. Vous pouvez l'utiliser ici pour gagner des pierres précieuses, ou le mettre de côté pour l'utiliser plus tard dans votre ascension.",
+      "Utilisant la pioche, vous frappez le mur et taillez une pierre précieuse. Celle-ci s'use un peu dans le processus, mais mieux vaut l'abîmer que vos propres griffes."
+    ],
+    "OPTIONS": [
+      "[Creuser avec les griffes] #gGagnez #gune #gGemme #galéatoire. #rPerdez #r",
+      " #rPV.",
+      "[Quitter]",
+      "[Voler] #rFight #rGremlins. #gGain #gPick #gof #gRhapsody.",
+      "[Miner avec la Pioche] #gGagnez #gune #gGemme #galéatoire. #rPerdez #rune #rcharge #rde #rla #rPioche.",
+      "[Verrouillé] Pioche #rCassée."
+    ]
+  },
+  "Guardian:StasisEgg": {
+    "NAME": "Chambre quantique",
+    "DESCRIPTIONS": [
+      "Vous tombez par hasard sur une boîte dont le couvercle est gravé d'étranges symboles runiques. En regardant à l'intérieur, vous remarquez un étrange appareil en forme d'œuf, qui bourdonne doucement. Vous ne savez pas ce que c'est, ni à quoi ça sert, mais l'énergie qui en émane vous fait penser que cela doit être puissant.",
+      "Vous décidez que quelque chose d'aussi puissant se doit d'être utilisé. Vous rangez l'œuf et poursuivez votre route, mais au fur et à mesure que les runes brillent, vous sentez le temps vous échapper, vous rendant de ~plus~ ~en~ ~plus~ ~lent~ ~.~ ~.~ ~.~",
+      "Vous décidez qu'un objet aussi puissant ne doit pas être laissé à la merci d'un aventurier et décidez de le détruire. NL Une lumière chaude vous revigore tandis que l'œuf brille, avant #rd'exploser #rviolemment, les éclats vous #rentaillant #rdouloureusement le corps.",
+      "Vous décidez que quelque chose d'aussi puissant est probablement ici pour une bonne raison. Bien que votre instinct vous dise que vous devriez faire quelque chose avec un objet aussi puissant, vous vous dites que celui qui a laissé ça ici l'a fait exprès. Vous fermez le couvercle, et passez à autre chose.."
+    ],
+    "OPTIONS": [
+      "[Utiliser] #gGagnez #gChambre #gQuantique. #rDevenez #rMaudit #r- #rVieillesse",
+      "[Détruire] #gGagnez #g",
+      " #gPV #gMax. #rDevenez #rMaudit #r- #rDouleur",
+      "[Quitter]"
+    ]
+  },
+  "Guardian:AccursedBlacksmith": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Vous décidez d'utiliser la forge et... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...de faire de la place dans votre arsenal pour de nouvelles gemmes."
+    ],
+    "OPTIONS": [
+      "[Trafiquer] #gAjoutez #gune #gcavité #gpour #gn'importe #gquelle #gcarte #gpouvant #gavoir #gune #gcavité.",
+      "Ajoutez une Cavité à une carte.",
+      "[Verrouillé] Requiert une carte avec des cavités."
+    ]
+  },
+  "Guardian:GuardianTalk": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "REPLACEMENT - RETOURNEZ À L'ASSEMBLAGE.",
+      "ANOMALIE DÉTECTÉE.",
+      "MODÈLE DE GARDIEN DÉFECTUEUX.",
+      "CONTOURNEMENT DU PROTOCOLE ALPHA.",
+      "GARDIEN: RETOURNEZ À VOTRE POSTE.",
+      "ÉCHEC COMPLET DU PROTOCOLE DÉTECTÉ.",
+      "METTRE FIN IMMÉDIATEMENT AU GARDIEN.",
+      "NOUVEAU PROTOCOLE: DÉTRUIRE.",
+      "ARRÊTEZ-VOUS ET RETOURNEZ À L'EXORDIUM."
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "Guardian:CrystalForge": {
+    "NAME": "Forge sombre",
+    "DESCRIPTIONS": [
+      "À travers des passages secrets connus seulement des Androïdes de la Tour, vous entrez dans une chambre désignée pour la maintenance et les réparations des modèles d'Automate. Les outils disponibles ici vous seront certainement utiles, même s'ils n'ont pas été conçus pour les Gardiens.",
+      "Utilisant l'enclume enchantée, vous détruisez une pièce d'équipement inutile, afin de pour récupérer les pierres précieuses que vous avez bêtement placées auparavant.",
+      "Avec les pinces magiques, vous faites levier sur une cavité et retirez les gemmes à l'intérieur, faisant de la place pour de meilleurs dispositifs à installer plus tard, au prix de rendre les pierres précieuses complètement inutilisables.",
+      "La capacité de la Forge à transmettre la matière est utilisée immédiatement alors que vous jetez une pièce d'équipement inutile. Quelques instants plus tard, le matériel se dissout et se compresse en une gemme magnifique.",
+      "Vous vous échappez à travers le même passage par lequel vous êtes entré, laissant la Forge Sombre derrière vous. Votre voyage continue, vous dirigeant vers le haut de la Tour.",
+      "Sélectionnez une carte à Démonter.",
+      "Sélectionnez une carte à Forcer.",
+      "Sélectionnez une carte à Transmettre.",
+      "Sélectionnez une Gemme.",
+      "Sélectionnez une Carte pour recevoir une Gemme.",
+      "Profitant de cette pause dans votre ascension, vous placez une pierre précieuse dans votre équipement, sentant instantanément votre puissance augmenter."
+    ],
+    "OPTIONS": [
+      "[Démonter] #rRetirez une Carte Encastrée. Gagnez ses #gGemmes.",
+      "[Verrouillé] Requiert une Carte Encastrée avec une Gemme installée.",
+      "[Forcer] #rDétruisez toutes les #gGemmes dans une carte Encastrée.",
+      "[Transmettre] #rRetirez une carte. Gagnez une #gGemme aléatoire.",
+      "[Verrouillé] Déjà utilisée.",
+      "[Quitter]",
+      "[Optimiser] Ajoutez une #gGemme dans une #gCavité.",
+      "[Verrouillé] Requiert une Gemme et une Cavité ouverte."
+    ]
+  },
+  "Guardian:Purifier": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "D'un coup sec et écrasant, vous mettez l'autel en morceaux afin de découvrir les trésors qu'il contient. Dans les décombres, vous trouverez deux pierres précieuses immaculées et utilisables, qui attendent patiemment leur place dans votre armement. NL NL Vous quittez les restes de l'autel et continuez votre ascension.."
+    ],
+    "OPTIONS": [
+      "[Détruire] #gGagnez #g2 #gGemmes #galéatoires."
+    ]
+  },
+  "Guardian:Transmorgrifier": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      ""
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "Guardian:UpgradeShrine": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      ""
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "Guardian:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Si vous êtes un clou, supportez les coups; si vous êtes un maillet, frappez."
+    ],
+    "OPTIONS": [
+      "[Endurance] #gAjoutez #gRenforcez #gde #g2 à toutes les #gFrappes et les #gDéfenses.",
+      "[Verrouillé] Requiert une Frappe et une Défense."
+    ]
+  }
+}

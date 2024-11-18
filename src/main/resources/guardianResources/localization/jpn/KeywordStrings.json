@@ -1,0 +1,87 @@
+[
+  {
+    "NAMES": [
+      "socket",
+      "sockets",
+      "socketed",
+      "ソケット"
+    ],
+    "PROPER_NAME": "ソケット",
+    "DESCRIPTION": "休憩所で #yジェム を装着することが出来る枠。"
+  },
+  {
+    "NAMES": [
+      "stasis",
+      "停滞"
+    ],
+    "PROPER_NAME": "停滞",
+    "DESCRIPTION": "カードコスト+ #b1 ターンの間、停滞スロットに配置される。 NL カウントが0になると手札に戻り、プレイするまでコストが #b0 になる。"
+  },
+  {
+    "NAMES": [
+      "gem",
+      "gems",
+      "ジェム"
+    ],
+    "PROPER_NAME": "ジェム",
+    "DESCRIPTION": "ジェムカードは 休憩所 で #yソケット を持つカードに装着する事が出来る。 #yアップグレード は出来ない。"
+  },
+  {
+    "PROPER_NAME": "ディフェンシブモード",
+    "NAMES": [
+      "defensive mode",
+      "defensive_mode",
+      "ディフェンシブモード"
+    ],
+    "DESCRIPTION": "#yスタンス NL ディフェンシブモード中は #b3 #yトゲ を持ち、ターン開始時に #b10 #yブロック を得る。更にターン終了時ブロックを維持する。"
+  },
+  {
+    "NAMES": [
+      "accelerate",
+      "アクセラレート"
+    ],
+    "PROPER_NAME": "アクセラレート",
+    "DESCRIPTION": "一番右側の #y停滞 カウンターを #b1 減らす。"
+  },
+  {
+    "NAMES": [
+      "package",
+      "packages",
+      "パッケージ"
+    ],
+    "PROPER_NAME": "パッケージ",
+    "DESCRIPTION": "0コスト #y消耗型スキル 。スパイアの構築物をモチーフにしたカードを3枚生成する。"
+  },
+  {
+    "NAMES": [
+      "volatile",
+      "揮発性"
+    ],
+    "PROPER_NAME": "揮発性",
+    "DESCRIPTION": "このカードが #y停滞 から離れた時 #y廃棄 される。"
+  },
+  {
+    "NAMES": [
+      "tick",
+      "チック"
+    ],
+    "PROPER_NAME": "チック",
+    "DESCRIPTION": "このカードの #y停滞 カウンターが減少した時...。"
+  },
+  {
+    "NAMES": [
+      "buffer",
+      "バッファー"
+    ],
+    "PROPER_NAME": "バッファー",
+    "DESCRIPTION": "次にHPが減る時それを無効化する。"
+  },
+  {
+    "NAMES": [
+      "brace",
+      "制動"
+    ],
+    "PROPER_NAME": "制動 X",
+    "DESCRIPTION": "モードシフトの発動に必要なHPの量を X 減らす。"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "Guardian:EnhanceBonfireOptions": {
+    "TEXT": [
+      "エンハンス",
+      "(行動消費無し) 空 ソケット に ジェム を入れる。",
+      "必要： ジェム と空 ソケット",
+      "ジェム を1枚選択",
+      "ジェム を挿入するカードを1枚選択"
+    ]
+  },
+  "Guardian:UIOptions": {
+    "TEXT": [
+      "カードを1枚選び、 停滞 状態にする。",
+      "ジェムを1枚選択。",
+      "デッキにコモン ジェム を1枚加える。",
+      "停滞スロット に置く。",
+      "~ERROR:~ コンストラクションモードでは #rアタック を使用できません。",
+      "~ERROR:~ #r停滞 を実行中です。",
+      "デッキにジェムを1枚追加する。",
+      ""
+    ]
+  },
+  "Guardian:FindGemsOption": {
+    "TEXT": [
+      "掘削",
+      "2 枚のランダムなジェムを得る。",
+      "つるはしが壊れた。"
+    ]
+  },
+  "Guardian:BraceMod": {
+    "TEXT": [
+      " NL guardianmod:制動 2"
+    ]
+  },
+  "Guardian:gemDescriptor": {
+    "TEXT": [
+      "ジェム",
+      "guardianmod:ジェム NL "
+    ]
+  }
+}

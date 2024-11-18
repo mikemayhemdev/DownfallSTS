@@ -1,0 +1,107 @@
+{
+  "Guardian:ModeShifter": {
+    "NAME": "모드 변환기",
+    "FLAVOR": "가장 필요한 곳에 보호를.",
+    "DESCRIPTIONS": [
+      "체력을 10 잃을 때마다, 방어도 10과 방어모드 2를 얻습니다. NL 발동할 때마다 다시 발동하는 데에 필요한 체력 비용을 증가시킵니다."
+    ]
+  },
+  "Guardian:ModeShifterPlus": {
+    "NAME": "수호자 기어",
+    "FLAVOR": "3,000층마다 갈아 끼워주세요.",
+    "DESCRIPTIONS": [
+      "전투 시작 시 방어모드 5를 얻습니다."
+    ]
+  },
+  "Guardian:DefensiveModeMoreBlock": {
+    "NAME": "청동 판금 갑옷",
+    "FLAVOR": "갑옷은 언제나 부족하죠.",
+    "DESCRIPTIONS": [
+      "방어모드 에서 카드를 사용하면 1의 방어도 를 추가로 얻습니다."
+    ]
+  },
+  "Guardian:GemCopier": {
+    "NAME": "보석 텀블러",
+    "FLAVOR": "가장 깨끗한 것만 가능합니다.",
+    "DESCRIPTIONS": [
+      "보석 카드를 낼 때마다 그 카드를 복사해서 시전합니다."
+    ]
+  },
+  "Guardian:PocketSentry": {
+    "NAME": "휴대용 보초기",
+    "FLAVOR": "경계 모드 발동. 타겟 발견. 악감정 없음.",
+    "DESCRIPTIONS": [
+      "매 턴 시작시 다음 효과를 1번씩 번갈아가며 발동합니다 : 피해를 ",
+      " 줍니다. NL 모든 적에게 약화 를 1 부여합니다."
+    ]
+  },
+  "Guardian:SackOfGems": {
+    "NAME": "보석 자루",
+    "FLAVOR": "오... 반짝이다!",
+    "DESCRIPTIONS": [
+      "획득 시 5개의 무작위 보석 을 덱에 추가합니다."
+    ]
+  },
+  "Guardian:StasisCodex": {
+    "NAME": "건축도면 사본",
+    "FLAVOR": "첨탑 초기 프로토타입의 디자인과 도표.",
+    "DESCRIPTIONS": [
+      "정지장 에 아무런 카드가 없이 턴을 마치면, 3장의 카드중 하나를 골라 정지장 에 넣습니다."
+    ]
+  },
+  "Guardian:StasisSlotIncreaseRelic": {
+    "NAME": "작은 파출소",
+    "FLAVOR": "안쪽은 더 크답니다...",
+    "DESCRIPTIONS": [
+      "정지장 슬롯을 2개 얻습니다."
+    ]
+  },
+  "Guardian:StasisSlotReductionRelic": {
+    "NAME": "피난 안내도",
+    "FLAVOR": "첨탑을 탈출하는데에 필요한 설명. 다른 사람의 손에 들어가지 않도록 해야합니다.",
+    "DESCRIPTIONS": [
+      "획득 시 2개의 정지장 슬롯을 잃습니다. NL 매 턴 시작 시 [E] 를 얻습니다."
+    ]
+  },
+  "Guardian:StasisUpgradeRelic": {
+    "NAME": "극저온용기",
+    "FLAVOR": "모든 것은 항상 들어갈 때보다 나올 때 더 좋아보입니다.",
+    "DESCRIPTIONS": [
+      "카드가 정지장 에 들어서면, 그 카드를 강화합니다."
+    ]
+  },
+  "Guardian:BottledStasis": {
+    "NAME": "병 속의 블랙홀",
+    "FLAVOR": "어딘가에서 무언가 엄청난게 알려지길 기다리고 있습니다.",
+    "DESCRIPTIONS": [
+      "획득 시 #y카드 를 고릅니다. 선택한 카드를 정지장 에 넣은 채로 전투를 시작합니다.",
+      "전투 시작시 ",
+      "정지장 에 ",
+      " 를 넣습니다."
+    ]
+  },
+  "Guardian:StasisEgg": {
+    "NAME": "양자 알",
+    "FLAVOR": "닭은 달걀을 부화시켜서 얻는 것이지, 달걀을 부숴서 얻는 것이 아닙니다.",
+    "DESCRIPTIONS": [
+      "획득 시, #y카드 를 고릅니다. 선택한 카드를 덱에서 제거한 채로 전투를 시작합니다. 3번째 턴 시작 시, 해당 카드와 2장의 동일한 카드를 패로 돌려받습니다.",
+      " ",
+      "전투 시작시 ",
+      " 카드를 전투에서 제외합니다. 4번째 턴 시작시 해당 카드와 복제된 카드 2장을 손으로 가져옵니다."
+    ]
+  },
+  "Guardian:TickHelperRelic": {
+    "NAME": "냉각 유체",
+    "FLAVOR": "위험 : 먹을 수 없습니다.",
+    "DESCRIPTIONS": [
+      "체크포인트 효과가 있는 카드가 정지장으로 들어갈 때 그 카드의 카운터를 2 증가시킵니다."
+    ]
+  },
+  "Guardian:PickAxe": {
+    "NAME": "채굴용 곡괭이",
+    "FLAVOR": "성실한 보석세공사를 위한 물건.",
+    "DESCRIPTIONS": [
+      "휴식 장소에서 3번까지 #y보석 을 2개씩 #g채광 할 수 있습니다."
+    ]
+  }
+}

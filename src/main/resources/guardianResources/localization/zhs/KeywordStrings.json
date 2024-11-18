@@ -1,0 +1,86 @@
+[
+  {
+    "NAMES": [
+      "镶嵌"
+    ],
+    "PROPER_NAME": "镶嵌",
+    "DESCRIPTION": " #y宝石 能够被 #y镶嵌 进有 #y孔位 的牌上，使其效果附加于牌。"
+  },
+  {
+    "NAMES": [
+      "stasis",
+      "凝滞"
+    ],
+    "PROPER_NAME": "凝滞",
+    "DESCRIPTION": "省流：过几回合免费打出。 NL 一张牌被 #y凝滞 时其获得一个计数器。倒计点数等于其耗能加 #b1 点，每回合开始时减少 #b1 点。 NL 归零时，将其返回手牌且单次耗能为 #b0 。"
+  },
+  {
+    "NAMES": [
+      "宝石",
+      "gem",
+      "gems"
+    ],
+    "PROPER_NAME": "宝石",
+    "DESCRIPTION": " #y宝石 能在 #y休息处 被 #y镶嵌 至有 #y孔位 的牌上。不能被 #y升级 。"
+  },
+  {
+    "PROPER_NAME": "防御模式",
+    "NAMES": [
+      "defensive mode",
+      "defensive_mode",
+      "防御模式"
+    ],
+    "DESCRIPTION": "#y姿态 。 NL #y防御模式 持续 #b1 回合。 NL 处于 #y防御模式 时：拥有 #b3 层 #y荆棘 ，每回合开始时获得 #b10 点 #y格挡 且在回合结束时 #y格挡 不会消失。"
+  },
+  {
+    "NAMES": [
+      "accelerate",
+      "加速"
+    ],
+    "PROPER_NAME": "加速",
+    "DESCRIPTION": "降低最右端被 #y凝滞 牌的倒计点数 #b1 点。若归零, 将其返回手牌且单次耗能为 #b0 。"
+  },
+  {
+    "NAMES": [
+      "组件"
+    ],
+    "PROPER_NAME": "组件",
+    "DESCRIPTION": "一系列 #b0 耗能 消耗 技能牌，可将 #b3 张同体系牌加入手牌。"
+  },
+  {
+    "NAMES": [
+      "临时"
+    ],
+    "PROPER_NAME": "临时",
+    "DESCRIPTION": "只持续 #b1 回合，即同时获得等量层，回合结束时剥夺增益的 #r负面效果 。"
+  },
+  {
+    "NAMES": [
+      "消散",
+      "挥发"
+    ],
+    "PROPER_NAME": "消散",
+    "DESCRIPTION": "本牌结束 #y凝滞 时，被 #y消耗 而非返回手牌。"
+  },
+  {
+    "NAMES": [
+      "滴答"
+    ],
+    "PROPER_NAME": "滴答",
+    "DESCRIPTION": "被 #y凝滞 牌倒计点数减少时，触发该效果。"
+  },
+  {
+    "NAMES": [
+      "缓冲"
+    ],
+    "PROPER_NAME": "缓冲",
+    "DESCRIPTION": "阻止你下次失去生命。"
+  },
+  {
+    "NAMES": [
+      "提防"
+    ],
+    "PROPER_NAME": "提防",
+    "DESCRIPTION": "降低进入 #y防御模式 所需生命损失，需求变为 #b0 时直接进入。"
+  }
+]
