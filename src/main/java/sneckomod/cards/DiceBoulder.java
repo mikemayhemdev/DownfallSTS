@@ -16,11 +16,11 @@ public class DiceBoulder extends AbstractSneckoCard {
     public final static String ID = makeID("DiceBoulder");
     private static final int BASE_BLOCK = 7;
     private static final int UPG_BLOCK = 1;
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 4;
     private static final int UPGRADE_MAGIC = 1;
 
     public DiceBoulder() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         baseBlock = BASE_BLOCK;
         SneckoMod.loadJokeCardImage(this, "DiceBoulder.png");
