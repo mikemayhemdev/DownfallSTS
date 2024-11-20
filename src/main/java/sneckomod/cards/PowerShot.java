@@ -12,6 +12,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+
+import hermit.patches.EnumPatch;
+import hermit.util.Wiz;
 import sneckomod.SneckoMod;
 
 public class PowerShot extends AbstractSneckoCard {
@@ -26,18 +29,16 @@ public class PowerShot extends AbstractSneckoCard {
         SneckoMod.loadJokeCardImage(this, "PowerShot.png");
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Deal damage to the targeted enemy
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
     }
 
-   // public void () {
-     //   if (AbstractDungeon.player.discardPile.contains(this)) {
-       //     this.addToBot(new DiscardToHandAction(this));
-       // }
+    public void triggerOnCardPlayed(AbstractCard c)
+    {
+        if (c.type == CardType.POWER)
+            Wiz.atb(new DiscardToHandAction(this));
+    }
 
-   // }
 
     @Override
     public void upgrade() {

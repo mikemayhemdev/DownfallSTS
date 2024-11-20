@@ -29,7 +29,7 @@ public class CompilePackage extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = 2;
 
     //TUNING CONSTANTS
     private static final int SOCKETS = 0;
@@ -71,7 +71,7 @@ public class CompilePackage extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
-        AbstractDungeon.actionManager.addToBottom(new CompilePackageAction(this.upgraded));
+        AbstractDungeon.actionManager.addToBottom(new CompilePackageAction(false));
 
     }
 
@@ -82,12 +82,8 @@ public class CompilePackage extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
-            for(AbstractCard c:cardsList){
-                c.upgrade();
-            }    
-        }
+            upgradeBaseCost(1);
+            }
     }
 
     public void updateDescription() {

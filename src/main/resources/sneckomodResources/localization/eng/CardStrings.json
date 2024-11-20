@@ -558,8 +558,8 @@
   },
   "sneckomod:ThrowingCards": {
     "NAME": "Throwing Cards",
-    "DESCRIPTION": "Add X copies of *FTL to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add X copies of *FTL+ to your hand. NL Exhaust."
+    "DESCRIPTION": "Add X copies of *FTL to your hand. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add X copies of *FTL+ to your hand. NL Gain [E]. cNL Exhaust."
   },
   "sneckomod:RoundaboutSwing": {
     "NAME": "Roundabout Swing",

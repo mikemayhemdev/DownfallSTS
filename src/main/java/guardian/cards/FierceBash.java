@@ -28,7 +28,7 @@ public class FierceBash extends AbstractGuardianCard implements InStasisCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
-    private static final int COST = 3;
+    private static final int COST = 2;
     private static final int DAMAGE = 18;
 
     //TUNING CONSTANTS

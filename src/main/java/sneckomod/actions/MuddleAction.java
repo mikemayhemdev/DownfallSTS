@@ -2,24 +2,19 @@ package sneckomod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
-import sneckomod.cards.Cower;
 import sneckomod.cards.RiskySword;
 import sneckomod.powers.BlunderGuardPower;
 import sneckomod.powers.MudshieldPower;
 import sneckomod.relics.CleanMud;
 import sneckomod.relics.CrystallizedMud;
-import sneckomod.relics.LoadedDie;
 
 import java.util.ArrayList;
-
-import static sneckomod.SneckoMod.MUDDLED;
 
 public class MuddleAction extends AbstractGameAction {
 
@@ -37,25 +32,14 @@ public class MuddleAction extends AbstractGameAction {
 
     public void update() {
         isDone = true;
-        if ((card instanceof RiskySword)) {
+        if (card instanceof RiskySword) {
+            // Cast the card to RiskySword and call the onMuddled method
             ((RiskySword) card).onMuddledSword();
         }
-        if ((card instanceof Cower)) {
-            ((Cower) card).onMuddledSword();
-        }
-
         if (card.cost >= 0 && !card.hasTag(SneckoMod.SNEKPROOF)) {// 32
             if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {
                 AbstractDungeon.player.getPower(MudshieldPower.POWER_ID).onSpecificTrigger();
             }
-
-            LoadedDie loadedDieInstance = new LoadedDie();
-            if (AbstractDungeon.player.hasRelic(LoadedDie.ID)) {
-                addToBot(new GainBlockAction(AbstractDungeon.player, 1));
-                loadedDieInstance.flash();
-            }
-
-
             card.superFlash();
             ArrayList<Integer> numList = new ArrayList<>();
             if (!AbstractDungeon.player.hasRelic(CrystallizedMud.ID)) {
@@ -73,7 +57,11 @@ public class MuddleAction extends AbstractGameAction {
             if (card.costForTurn != newCost) {// 34
                 card.setCostForTurn(newCost);
             }
-            //card.tags.add(MUDDLED); // THIS LITERALLY ONLY EXISTS FOR BABY SNECKO AND IS IRRELEVANT OTHERWISE
+            if (AbstractDungeon.player.hasPower(BlunderGuardPower.POWER_ID)){
+                if ((card.costForTurn == 3)) {
+                    AbstractDungeon.player.getPower(BlunderGuardPower.POWER_ID).onSpecificTrigger();
+                }
+            }
             card.freeToPlayOnce = false;// 39
         }
     }

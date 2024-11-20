@@ -34,7 +34,7 @@ public class RefractedBeam extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 4;
 
     private static final int MULTICOUNT = 4;
     private static final int SOCKETS = 1;

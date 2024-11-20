@@ -38,7 +38,7 @@ public class SphericShield extends AbstractGuardianCard {
 
     public SphericShield() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        this.baseBlock = 20;
+        this.baseBlock = 12;
         this.socketCount = 0;
         exhaust = true;
         updateDescription();
@@ -61,7 +61,7 @@ public class SphericShield extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(5);
+            upgradeBlock(4);
         }
     }
 

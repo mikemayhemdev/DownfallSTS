@@ -24,10 +24,10 @@ public class GemFinder extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     //TUNING CONSTANTS
-    private static final int UPGRADENEWCOST = 0;
+    private static final int UPGRADENEWCOST = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;

@@ -51,9 +51,8 @@ public class ShieldSpikes extends AbstractGuardianCard {
 
         if (p.stance instanceof DefensiveMode) {
             addToBot(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
-        } else {
-            brace(8);
         }
+        brace(8);
     }
 
     public void triggerOnGlowCheck() {

@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import hermit.actions.ReduceDebuffsAction;
+import hermit.util.Wiz;
 
 
 public class EvasiveProtocolPower extends AbstractGuardianPower implements DefensiveModeBooster {
@@ -31,13 +33,11 @@ public class EvasiveProtocolPower extends AbstractGuardianPower implements Defen
     @Override
     public void onEnter() {
         flash();
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, amount), amount));
+        AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, amount));
     }
 
     @Override
     public void onLeave() {
-        flash();
-        addToBot(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DexterityPower.POWER_ID, amount));
     }
 
     public void updateDescription() {

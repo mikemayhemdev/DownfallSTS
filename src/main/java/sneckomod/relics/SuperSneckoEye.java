@@ -47,6 +47,18 @@ public class SuperSneckoEye extends CustomRelic {
     }
 
     public void onEquip() {
+        if (AbstractDungeon.player.hasRelic(SneckoEye.ID)) {
+            for (int i = 0; i < AbstractDungeon.player.relics.size(); ++i) {
+                if (AbstractDungeon.player.relics.get(i).relicId.equals(SneckoEye.ID)) {
+                    instantObtain(AbstractDungeon.player, i, true);
+                    break;
+                }
+            }
+        } else {
+            super.obtain();
+        }
+
+
         if(!added_hand_size) {
             AbstractDungeon.player.masterHandSize += 4;
             added_hand_size = true;

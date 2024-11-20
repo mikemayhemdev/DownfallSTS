@@ -49,7 +49,7 @@ public class CampfireFindGemsEffect extends AbstractGameEffect {
 
             this.isDone = true;
             ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
-            AbstractDungeon.getCurrRoom().phase = RoomPhase.COMPLETE;
+            AbstractDungeon.getCurrRoom().phase = RoomPhase.INCOMPLETE;
         }
 
     }
