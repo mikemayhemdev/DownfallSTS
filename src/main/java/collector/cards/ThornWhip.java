@@ -31,7 +31,7 @@ public class ThornWhip extends AbstractCollectorCard {
         for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!monster.isDeadOrEscaped()) {
                 addToBot(new DamageAction(monster, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                int unblockedDamage = Math.max(damage - m.currentBlock, 0);
+                int unblockedDamage = Math.max(damage - monster.currentBlock, 0); // Changed `m` to `monster`
                 if (unblockedDamage > 0) {
                     applyToEnemy(monster, new DoomPower(monster, unblockedDamage));
                 }

@@ -1,4 +1,4 @@
-package expansioncontent.cards.deprecated;
+package expansioncontent.cards;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -10,20 +10,18 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import downfall.util.CardIgnore;
-import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 
-@CardIgnore
 public class Flail extends AbstractExpansionCard {
     public final static String ID = makeID("Flail");
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 7;
     private static final int UPGRADE_DAMAGE = 1;
 
 
     public Flail() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_automaton.png", "expansioncontentResources/images/1024/bg_boss_automaton.png");
 
         tags.add(expansionContentMod.STUDY_AUTOMATON);
         tags.add(expansionContentMod.STUDY);
@@ -35,21 +33,10 @@ public class Flail extends AbstractExpansionCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        atb(new SFXAction("ATTACK_WHIRLWIND"));
-
         for (int i = 0; i < 2; i++) {
-            atb(new SFXAction("ATTACK_HEAVY"));
-
-            atb(new VFXAction(p, new CleaveEffect(), 0.1F));
-            atb(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-            //atb(new WaitAction(0.1F));
-
-
+            allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         }
-        atb(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
-
-
+        applyToSelf(new ArtifactPower(p, magicNumber));
     }
 
     public void upgrade() {

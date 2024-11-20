@@ -44,7 +44,7 @@ public class Orbwalk extends AbstractGuardianCard implements InStasisCard {
     public Orbwalk() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
-        this.baseMagicNumber = this.magicNumber = 2;
+        this.baseMagicNumber = this.magicNumber = 3;
         this.tags.add(GuardianMod.TICK);
         this.tags.add(GuardianMod.VOLATILE);
         this.socketCount = SOCKETS;

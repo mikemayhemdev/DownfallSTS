@@ -58,7 +58,7 @@ public class RevengeProtocol extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
-            upgradeSecondaryM(1);
+            upgradeSecondaryM(2);
         }
     }
 

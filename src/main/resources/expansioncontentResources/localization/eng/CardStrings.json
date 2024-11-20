@@ -16,7 +16,7 @@
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Next turn, lose [E]. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a *Void on top of your draw pile. NL Exhaust."
   },
   "expansioncontent:LastStand": {
     "NAME": "Last Stand",
@@ -25,7 +25,7 @@
   },
   "expansioncontent:YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "Remove Block from, and apply !M! Weak and Vulnerable to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies. NL Exhaust."
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "Awaken",
@@ -84,6 +84,39 @@
   "expansioncontent:Antidote": {
     "NAME": "Antidote",
     "DESCRIPTION": "Retain. NL Lose !M! Poison."
+  },
+  "expansioncontent:SuperHexaguard": {
+    "NAME": "Hexaguard",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[]  NL Draw !M! cards. NL [#e087a4]Gain[] [#e087a4]!B![] [#e087a4]Block.[]",
+    "EXTENDED_DESCRIPTION": [
+      "Gain !B! Block."
+    ]
+  },
+  "expansioncontent:SuperGoopSpray": {
+    "NAME": "Goop Spray",
+    "DESCRIPTION": "Apply !M! expansioncontent:Goop and 1 Weak to ALL enemies."
+  },
+  "expansioncontent:ChargeUp": {
+    "NAME": "Resilient Plate",
+    "DESCRIPTION": "Gain !B! Block. NL Reduce each of your debuffs by !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Reduce each of your debuffs by !M!."
+  },
+  "expansioncontent:SuperTaunt": {
+    "NAME": "Taunt",
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies."
+  },
+  "expansioncontent:Torchfire": {
+    "NAME": "Wildfire",
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique debuff on the enemy."
+  },
+  "expansioncontent:Flail": {
+    "NAME": "Flail",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies 2 times. NL Gain !M! Artifact. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "flailing",
+      "Flail"
+    ]
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "Bloody Sacrifice",

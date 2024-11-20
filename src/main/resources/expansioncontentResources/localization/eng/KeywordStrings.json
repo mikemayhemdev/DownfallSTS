@@ -45,6 +45,13 @@
     "DESCRIPTION": "Put a card from your exhaust pile into your discard pile."
   },
   {
+    "PROPER_NAME": "Goop",
+    "NAMES": [
+      "goop"
+    ],
+    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, removing all #yGoop and triggering any #yConsume effects."
+  },
+  {
     "PROPER_NAME": "Shackled",
     "NAMES": [
       "shackled"

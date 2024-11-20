@@ -30,7 +30,7 @@
       "defensive_mode",
       "defensive"
     ],
-    "DESCRIPTION": "#yStance. NL While in Defensive Mode, you have #b3 #yThorns, gain #b10 #yBlock at the start of your turn, and your #yBlock does not expire."
+    "DESCRIPTION": "#yStance. NL Gain #b16 #yBlock when you enter Defensive Mode. While in it, you have #b3 #yThorns and your #yBlock does not expire."
   },
   {
     "NAMES": [

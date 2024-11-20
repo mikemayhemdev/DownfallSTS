@@ -42,9 +42,11 @@ public class Blunderbus extends AbstractSneckoCard {
         }
 
         int totalHits = BASE_HITS + additionalHits;
-
-        for (int i = 0; i < totalHits; i++) {
-            this.addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, EnumPatch.HERMIT_GHOSTFIRE, true));
+        this.addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, EnumPatch.HERMIT_GHOSTFIRE, true));
+        if (totalHits > 1) {
+            for (int i = 0; i < totalHits-1; i++) {
+                this.addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, EnumPatch.HERMIT_GHOSTFIRE, true));
+            }
         }
     }
 

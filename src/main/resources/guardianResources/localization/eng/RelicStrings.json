@@ -10,7 +10,14 @@
     "NAME": "Guardian Gear",
     "FLAVOR": "Replace every 3,000 floors.",
     "DESCRIPTIONS": [
-      "Replaces #rBronze #rGear. NL Begin each combat in #yguardianmod:Defensive_Mode, which persists for #b3 turns."
+      "Replaces #rBronze #rGear. At the start of combat, gain #yGear #yUp. NL Whenever you enter #yDefensive #yMode, gain [E] and draw 2 cards."
+    ]
+  },
+  "Guardian:ObsidianScales": {
+    "NAME": "Obsidian Scales",
+    "FLAVOR": "Stain the sky black with your blood. Retaliate against all who struck out at you.",
+    "DESCRIPTIONS": [
+      "At the start of combat and whenever you are debuffed, gain 3 #yThorns."
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
@@ -38,14 +45,14 @@
     "NAME": "Sack of Gems",
     "FLAVOR": "Ooh... shiny!",
     "DESCRIPTIONS": [
-      "Upon pickup, add #b5 random #yguardianmod:Gems to your deck."
+      "Upon pickup, you may choose up to #b5 random #yguardianmod:Gems to your deck."
     ]
   },
   "Guardian:StasisCodex": {
     "NAME": "Pilot's Codex",
     "FLAVOR": "Designs and diagrams of the Spire's earliest manually-driven prototypes, by Master Pilot David.",
     "DESCRIPTIONS": [
-      "If you end your turn with no cards in #yguardianmod:Stasis, choose #b1 of #b3 cards to place into #yguardianmod:Stasis."
+      "If you end of your first 3 turns, if your #yguardianmod:Stasis slots aren't full, choose #b1 of #b3 cards to place into #yguardianmod:Stasis."
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {

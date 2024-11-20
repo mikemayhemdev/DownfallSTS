@@ -1,12 +1,14 @@
 package sneckomod.cards;
 
-import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.SelectCardsCenteredAction;
 import sneckomod.SneckoMod;
+
+import java.util.function.Consumer;
 
 public class CrystalBoomerang extends AbstractSneckoCard {
 
@@ -24,14 +26,26 @@ public class CrystalBoomerang extends AbstractSneckoCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!p.discardPile.isEmpty()) {
-            this.addToBot(new BetterDiscardPileToHandAction(1));
+            this.addToBot(new SelectCardsCenteredAction(
 
-            if (!p.hand.isEmpty()) {
-                AbstractCard topCard = p.hand.getTopCard();
-                if (topCard.color != p.getCardColor()) {
-                    this.addToBot(new GainBlockAction(p, p, this.block)); //
-                }
-            }
+                    p.discardPile.group,
+                    1,
+                    "Choose a card to add to your hand.",
+
+                    (selectedCards) -> {
+
+                        AbstractCard selected = selectedCards.get(0);
+                        p.discardPile.removeCard(selected);
+                        p.hand.addToHand(selected);
+                        selected.lighten(false);
+                        selected.unhover();
+                        selected.applyPowers();
+
+                        if (selected.color != p.getCardColor()) {
+                            this.addToTop(new GainBlockAction(p, p, this.block));
+                        }
+                    }
+            ));
         }
     }
 

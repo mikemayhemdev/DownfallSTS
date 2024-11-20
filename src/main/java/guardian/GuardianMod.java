@@ -538,7 +538,7 @@ public static void saveData() {
                 FierceBash.ID,
 
                 ChargeUp.ID,
-                GemFire.ID,
+                ShieldSpikes.ID,
                 GemFinder.ID,
 
                 StasisEngine.ID,
@@ -570,6 +570,7 @@ public static void saveData() {
         BaseMod.addRelicToCustomPool(new StasisUpgradeRelic(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new guardian.relics.StasisEgg(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new guardian.relics.PickAxe(), AbstractCardEnum.GUARDIAN);
+        BaseMod.addRelicToCustomPool(new guardian.relics.ObsidianScales(), AbstractCardEnum.GUARDIAN);
         BaseMod.registerBottleRelic(BottledStasisPatch.inStasisEgg, new guardian.relics.StasisEgg());
         BaseMod.addRelic(new GemstoneGun(), RelicType.SHARED);
         BaseMod.addRelic(new PocketSentry(), RelicType.SHARED);

@@ -45,7 +45,5 @@ public class RevengePower extends AbstractGuardianPower implements DefensiveMode
 
     @Override
     public void onLeave() {
-        flash();
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, StrengthPower.POWER_ID, amount));
     }
 }

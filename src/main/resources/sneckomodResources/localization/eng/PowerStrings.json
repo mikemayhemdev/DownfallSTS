@@ -162,9 +162,9 @@
   "sneckomod:LacerateDebuff": {
     "NAME": "Lacerate",
     "DESCRIPTIONS": [
-      "Whenever you apply a debuff to this enemy this turn, deal #b",
-      " damage to them.",
-      " damage to them."
+      "Whenever you apply a debuff to this enemy this turn, apply #b",
+      " #yVenom to them.",
+      " #yVenom to them."
     ]
   },
   "sneckomod:FountainPower": {

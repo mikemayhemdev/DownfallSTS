@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import guardian.GuardianMod;
+import guardian.actions.AccelerateAllCardsInStasisAction;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 import sneckomod.SneckoMod;
@@ -51,19 +52,10 @@ public class Emergency extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof StasisOrb) {
-                int stasisCount = o.passiveAmount;
-                ((StasisOrb) o).stasisCard.superFlash(Color.GOLDENROD);
-                if(stasisCount <= 0) {
-                    o.onStartOfTurn();
-                }else {
-                    for (int i = 0; i < stasisCount; i++) {
-                        o.onStartOfTurn();
-                    }
-                }
-                break;
-            }
+        addToBot(new AccelerateAllCardsInStasisAction());
+
+        if (this.upgraded) {
+            addToBot(new AccelerateAllCardsInStasisAction());
         }
 
         super.useGems(p, m);
@@ -76,7 +68,7 @@ public class Emergency extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            exhaust = false;
+           // exhaust = false;
             rawDescription = UPGRADED_DESCRIPTION;
             initializeDescription();
         }

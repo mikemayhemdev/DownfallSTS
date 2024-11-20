@@ -14,13 +14,14 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.CompilePackageAction;
+import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
-public class CompilePackage extends AbstractGuardianCard {
+public class CompilePackage extends AbstractGuardianCard implements InStasisCard{
     public static final String ID = GuardianMod.makeID("CompilePackage");
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -29,7 +30,7 @@ public class CompilePackage extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = 2;
 
     //TUNING CONSTANTS
     private static final int SOCKETS = 0;
@@ -51,8 +52,8 @@ public class CompilePackage extends AbstractGuardianCard {
 
     public CompilePackage() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-
-        this.exhaust = true;
+        this.tags.add(GuardianMod.SELFSTASIS);
+        this.tags.add(GuardianMod.VOLATILE);
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -70,9 +71,11 @@ public class CompilePackage extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
+    }
 
-        AbstractDungeon.actionManager.addToBottom(new CompilePackageAction(this.upgraded));
-
+    @Override
+    public void onEvoke(StasisOrb orb) {
+        AbstractDungeon.actionManager.addToBottom(new CompilePackageAction(false));
     }
 
     public AbstractCard makeCopy() {
@@ -82,12 +85,8 @@ public class CompilePackage extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
-            for(AbstractCard c:cardsList){
-                c.upgrade();
-            }    
-        }
+            upgradeBaseCost(1);
+            }
     }
 
     public void updateDescription() {

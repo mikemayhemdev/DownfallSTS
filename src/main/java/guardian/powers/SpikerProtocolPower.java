@@ -36,8 +36,6 @@ public class SpikerProtocolPower extends AbstractGuardianPower implements Defens
 
     @Override
     public void onLeave() {
-        flash();
-        addToBot(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, ThornsPower.POWER_ID, amount));
     }
 
     public void updateDescription() {

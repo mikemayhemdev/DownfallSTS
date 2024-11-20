@@ -4,6 +4,7 @@ import automaton.actions.AddToFuncAction;
 import automaton.cards.FormatEncoded;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.FTL;
@@ -38,6 +39,7 @@ public class ThrowingCards extends AbstractSneckoCard {
             }
             return true;
         }, magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
     }
 
     @Override

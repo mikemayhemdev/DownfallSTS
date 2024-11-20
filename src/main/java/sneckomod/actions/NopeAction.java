@@ -60,6 +60,7 @@ public class NopeAction extends AbstractGameAction {
     }
 
     private boolean isCardInvalid(AbstractCard card) {
+        p.hand.moveToExhaustPile(card);
         return card.color == AbstractCard.CardColor.COLORLESS && card.rarity == AbstractCard.CardRarity.SPECIAL
                 || card.type == AbstractCard.CardType.STATUS
                 || card.type == AbstractCard.CardType.CURSE;
