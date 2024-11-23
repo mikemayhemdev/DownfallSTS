@@ -34,7 +34,7 @@ public class MassRepurpose extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     public static String UPGRADED_DESCRIPTION;
 
     static {

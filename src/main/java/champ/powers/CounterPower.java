@@ -66,11 +66,15 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
                     AbstractDungeon.player.getPower(ParryPower.POWER_ID).onSpecificTrigger();
                 }
             }
-            this.addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
+            //this.addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
             if (owner.hasPower(GladiatorFormPower.POWER_ID)) {
                 owner.getPower(GladiatorFormPower.POWER_ID).onSpecificTrigger();
             }
+            AbstractCard c = new Riposte();
+            c.baseDamage = amount;
+            addToBot(new MakeTempCardInHandAction(c));
         }
+
 
         return damageAmount;
     }

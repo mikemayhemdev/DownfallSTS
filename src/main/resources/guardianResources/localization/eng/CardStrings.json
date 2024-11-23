@@ -65,7 +65,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies 2 times. NL If you have 16 or more Block, deal damage !M! more times.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL If you have 16 or more Block, deal damage 2 more times.",
     "EXTENDED_DESCRIPTION": [
       "More Block required."
     ]
@@ -139,8 +139,8 @@
   },
   "Guardian:CompilePackage": {
     "NAME": "Compile Package",
-    "DESCRIPTION": "Choose one of three guardianmod:Packages to gain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose one of three Upgraded guardianmod:Packages to gain. NL Exhaust.",
+    "DESCRIPTION": "Put this card in guardianmod:Stasis. NL When this card leaves Stasis, choose a guardianmod:Package to gain. NL guardianmod:Volatile.",
+    "UPGRADE_DESCRIPTION": "Put this card in guardianmod:Stasis. NL When this card leaves Stasis, choose a guardianmod:Package to gain. guardianmod:NL Volatile.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Package."
     ]
@@ -157,8 +157,8 @@
   },
   "Guardian:PackageSphere": {
     "NAME": "Package: Spheric",
-    "DESCRIPTION": "Gain a *Spheric *Shield, *Floating *Orbs, and *Metallicize. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a *Spheric *Shield+, *Floating *Orbs+, and *Metallicize+. NL Exhaust."
+    "DESCRIPTION": "Gain a *Spheric *Shield, *Floating *Orbs, and *Harden. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain a *Spheric *Shield+, *Floating *Orbs+, and *Harden+. NL Exhaust."
   },
   "Guardian:PackageSentry": {
     "NAME": "Package: Sentry",
@@ -208,7 +208,11 @@
   },
   "Guardian:StasisField": {
     "NAME": "Stasis Field",
-    "DESCRIPTION": "Gain !B! Block. NL Place this into *Stasis NL When this leaves *Stasis, gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block 3 times. NL Place this card into *Stasis."
+  },
+  "Guardian:Metallicize": {
+    "NAME": "Harden",
+    "DESCRIPTION": "Gain !M! *Plated *Armor."
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasis Strike",
@@ -222,7 +226,7 @@
   "Guardian:Suspension": {
     "NAME": "Suspension",
     "DESCRIPTION": "Gain !B! Block. NL Place a card in your hand into guardianmod:Stasis.",
-    "UPGRADE_DESCRIPTION": "Draw a card. NL Place a card in your hand into guardianmod:Stasis."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Place a card in your hand into guardianmod:Stasis."
   },
   "Guardian:FastForward": {
     "NAME": "Speed Boost",
@@ -235,8 +239,8 @@
   },
   "Guardian:ConstructionForm": {
     "NAME": "Construction Form",
-    "DESCRIPTION": "Ethereal. NL Gain !M! guardianmod:Buffer. NL At the start of each turn, if you have guardianmod:Buffer, gain 1 Strength.",
-    "UPGRADE_DESCRIPTION": "Gain !M! guardianmod:Buffer. NL At the start of each turn, if you have guardianmod:Buffer, gain 1 Strength."
+    "DESCRIPTION": "Ethereal. NL Gain !M! guardianmod:Buffer. NL At the start of each turn, if you have 1+ guardianmod:Buffer, gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Gain !M! guardianmod:Buffer. NL At the start of each turn, if you have 1+ guardianmod:Buffer, gain 1 Strength."
   },
   "Guardian:RollAttack": {
     "NAME": "Roll Attack",

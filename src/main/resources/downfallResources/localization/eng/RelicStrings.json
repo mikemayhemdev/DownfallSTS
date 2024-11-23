@@ -466,6 +466,13 @@
       "Start Boss combats with #b1 #yDexterity."
     ]
   },
+  "downfall:BurdenOfKnowledge": {
+    "NAME": "Burden of Knowledge",
+    "FLAVOR": "The truth hurts.",
+    "DESCRIPTIONS": [
+      "Upon pickup, #rlose #rALL #rHeart #rBlessings and #b10 Max HP. Permanently #yUpgrade #rALL cards #rEVERYWHERE. Start combats with #b2 less #yStrength and #yDexterity."
+    ]
+  },
   "downfall:TeleportStone": {
     "NAME": "Teleport Stone",
     "FLAVOR": "Never leave home without it.",

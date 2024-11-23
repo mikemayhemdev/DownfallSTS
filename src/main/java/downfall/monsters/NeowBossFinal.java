@@ -89,11 +89,11 @@ public class NeowBossFinal extends AbstractMonster {
         e.setTime(e.getEndTime() * MathUtils.random());
 
         if (AbstractDungeon.ascensionLevel >= 4) {
-            this.damage.add(new DamageInfo(this, 9)); //Eye Beam Damage
-            this.damage.add(new DamageInfo(this, 25));  //Scream Damage
+            this.damage.add(new DamageInfo(this, 10)); //Eye Beam Damage
+            this.damage.add(new DamageInfo(this, 40));  //Scream Damage
         } else {
-            this.damage.add(new DamageInfo(this, 7)); //Eye Beam Damage
-            this.damage.add(new DamageInfo(this, 20));  //Scream Damage
+            this.damage.add(new DamageInfo(this, 8)); //Eye Beam Damage
+            this.damage.add(new DamageInfo(this, 30));  //Scream Damage
         }
 
         this.strAmt = 2; //Strength Scaling for growth ability
@@ -225,24 +225,55 @@ public class NeowBossFinal extends AbstractMonster {
                 //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
 
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 6), 6));
+                if (AbstractDungeon.ascensionLevel >= 19) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 6), 6));
+                }
+                if (AbstractDungeon.ascensionLevel < 19) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 4), 4));
+                }
 
                 switch(this.buffCount) {
                     case 0:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 3), 3));
+                     if (AbstractDungeon.ascensionLevel >= 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 3), 3));
+                     }
+                        if (AbstractDungeon.ascensionLevel < 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 2), 3));
+                        }
                         break;
                     case 1:
-                        AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 100));
+                        if (AbstractDungeon.ascensionLevel >= 19) {
+                            AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 100));
+                        }
+                        if (AbstractDungeon.ascensionLevel < 19) {
+                            AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 75));
+                        }
+
                        //                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BeatOfDeathPower(this, 1), 1));
                         break;
                     case 2:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new RegenerateMonsterPower(this, 50)));
+                        if (AbstractDungeon.ascensionLevel >= 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new RegenerateMonsterPower(this, 50)));
+                        }
+                        if (AbstractDungeon.ascensionLevel < 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new RegenerateMonsterPower(this, 30)));
+                        }
                         break;
                     case 3:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 10), 10));
+                        if (AbstractDungeon.ascensionLevel >= 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 10), 10));
+                        }
+                        if (AbstractDungeon.ascensionLevel < 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 8), 8));
+                        }
                         break;
                     default:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 30), 30));
+                        if (AbstractDungeon.ascensionLevel >= 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 30), 30));
+                        }
+                        if (AbstractDungeon.ascensionLevel < 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 20), 30));
+                        }
                 }
 
                 ++this.buffCount;

@@ -23,6 +23,6 @@ public class GladiatorStyle extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(1);
     }
 }

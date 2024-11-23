@@ -7,11 +7,12 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.ThornsPower;
 import hermit.actions.ReduceDebuffsAction;
 import hermit.util.Wiz;
 
 
-public class EvasiveProtocolPower extends AbstractGuardianPower implements DefensiveModeBooster {
+public class EvasiveProtocolPower extends AbstractGuardianPower {
     public static final String POWER_ID = "Guardian:EvasiveProtocolPower";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
@@ -30,15 +31,11 @@ public class EvasiveProtocolPower extends AbstractGuardianPower implements Defen
         updateDescription();
     }
 
-    @Override
-    public void onEnter() {
+    public void onActivateCallE(AbstractCreature target) {
         flash();
         AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, amount));
     }
 
-    @Override
-    public void onLeave() {
-    }
 
     public void updateDescription() {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];

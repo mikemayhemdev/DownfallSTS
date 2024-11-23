@@ -17,7 +17,7 @@ public class FanOfKnives extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 4;
     private static final int UPG_DAMAGE = 2;
 
     public FanOfKnives() {

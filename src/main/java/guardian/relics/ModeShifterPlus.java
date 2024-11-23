@@ -41,8 +41,6 @@ public class ModeShifterPlus extends CustomRelic {
         if (newStance instanceof DefensiveMode) {
             flash();
             addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToTop(new GainEnergyAction(1));
-            addToTop(new DrawCardAction(AbstractDungeon.player, 2));
         }
     }
 

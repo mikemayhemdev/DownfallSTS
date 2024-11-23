@@ -1276,6 +1276,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addRelic(new ShatteredFragment(), RelicType.SHARED);
         BaseMod.addRelic(new BrokenWingStatue(), RelicType.SHARED);
         BaseMod.addRelic(new CloakOfManyFaces(), RelicType.SHARED);
+        BaseMod.addRelic(new BurdenOfKnowledge(), RelicType.SHARED);
         BaseMod.addRelic(new GremlinSack(), RelicType.SHARED);
         BaseMod.addRelic(new GremlinWheel(), RelicType.SHARED);
         BaseMod.addRelic(new RedIOU(), RelicType.SHARED);

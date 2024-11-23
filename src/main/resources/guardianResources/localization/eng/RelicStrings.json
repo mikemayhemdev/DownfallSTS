@@ -52,7 +52,7 @@
     "NAME": "Pilot's Codex",
     "FLAVOR": "Designs and diagrams of the Spire's earliest manually-driven prototypes, by Master Pilot David.",
     "DESCRIPTIONS": [
-      "If you end of your first 3 turns, if your #yguardianmod:Stasis slots aren't full, choose #b1 of #b3 cards to place into #yguardianmod:Stasis."
+      "At the end of your first 3 turns, if your #yguardianmod:Stasis slots aren't full, choose #b1 of #b3 cards to place into #yguardianmod:Stasis."
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {

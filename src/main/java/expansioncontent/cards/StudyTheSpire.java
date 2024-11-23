@@ -67,8 +67,8 @@ public class StudyTheSpire extends AbstractExpansionCard {
     private ArrayList<AbstractCard> dupeListForPrev = new ArrayList<>();
 
     public StudyTheSpire() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 3;
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_power.png", "expansioncontentResources/images/1024/bg_boss_power.png");
         loadJokeCardImage(this, "StudyTheSpire.png");
     }

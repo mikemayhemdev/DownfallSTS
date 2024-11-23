@@ -19,11 +19,13 @@ public class SteelEdge extends AbstractChampCard {
         loadJokeCardImage(this, "SteelEdge.png");
     }
 
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect; i++) {
                 dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+                if (effect > 1) {
+                    finisher(true);
+                }
             }
             return true;
         }));

@@ -2,6 +2,7 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.CounterPower;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -37,6 +38,6 @@ public class DefensiveShout extends AbstractChampCard {
      //   tags.add(ChampMod.TECHNIQUE);
     //    postInit();
      //   initializeDescription();
-        upgradeMagicNumber(4);
+        upgradeMagicNumber(2);
     }
 }

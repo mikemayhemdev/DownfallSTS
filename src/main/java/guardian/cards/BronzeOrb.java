@@ -30,8 +30,8 @@ public class BronzeOrb extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
-    private static final int COST = 0;
-    private static final int DAMAGE = 7;
+    private static final int COST = 2;
+    private static final int DAMAGE = 9;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_DAMAGE = 3;

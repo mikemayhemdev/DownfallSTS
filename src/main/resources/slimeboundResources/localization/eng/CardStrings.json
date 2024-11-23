@@ -178,8 +178,8 @@
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "One-Two Combo",
-    "DESCRIPTION": "Deal !D! damage. NL When you slimeboundmod:Split, return this from the discard pile to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command. NL When you slimeboundmod:Split, return this from the discard pile to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command. NL When you slimeboundmod:Split, return this from the discard pile to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command twice. NL When you slimeboundmod:Split, return this from the discard pile to your hand."
   },
   "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",
@@ -188,8 +188,8 @@
   },
   "Slimebound:Overexert": {
     "NAME": "Overexert",
-    "DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL !M! turns from now, slimeboundmod:Absorb all Slimes.",
-    "UPGRADE_DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all Slimes."
+    "DESCRIPTION": "Gain 5 slimeboundmod:Potency. NL !M! turns from now, slimeboundmod:Absorb all Slimes.",
+    "UPGRADE_DESCRIPTION": "Gain 5 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all Slimes."
   },
   "Slimebound:Prepare": {
     "NAME": "Prepare",
@@ -206,8 +206,8 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - slimeboundmod:Command.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - slimeboundmod:Command twice."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Command twice."
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "Protect the Boss",
@@ -313,7 +313,7 @@
   },
   "Slimebound:Split": {
     "NAME": "Split",
-    "DESCRIPTION": "slimeboundmod:Split into a random Slime."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Split: Guerilla",

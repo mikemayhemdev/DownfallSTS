@@ -1,5 +1,6 @@
 package collector;
 
+import basemod.ReflectionHacks;
 import basemod.helpers.CardModifierManager;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Hermit.CharBossHermit;
@@ -13,6 +14,7 @@ import collector.cards.collectibles.*;
 import collector.patches.CollectorBottleField;
 import collector.util.CollectibleCardReward;
 import collector.util.EssenceReward;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.blue.Buffer;
@@ -38,6 +40,7 @@ import com.megacrit.cardcrawl.monsters.ending.CorruptHeart;
 import com.megacrit.cardcrawl.monsters.ending.SpireShield;
 import com.megacrit.cardcrawl.monsters.ending.SpireSpear;
 import com.megacrit.cardcrawl.monsters.exordium.*;
+import com.megacrit.cardcrawl.powers.DrawReductionPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import downfall.monsters.*;

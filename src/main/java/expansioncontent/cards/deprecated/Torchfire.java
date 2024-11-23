@@ -1,4 +1,4 @@
-package expansioncontent.cards;
+package expansioncontent.cards.deprecated;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -9,37 +9,34 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.util.CardIgnore;
 import expansioncontent.expansionContentMod;
+import expansioncontent.cards.AbstractExpansionCard;
 
-import static collector.util.Wiz.atb;
-
+@CardIgnore
 public class Torchfire extends AbstractExpansionCard {
     public final static String ID = makeID("Torchfire");
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 14;
     private static final int UPGRADE_DAMAGE = 2;
+    private static final int MAGIC = 3;
+    private static final int UPGRADE_MAGIC = 1;
 
     public Torchfire() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_collector.png", "expansioncontentResources/images/1024/bg_boss_collector.png");
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+
         tags.add(expansionContentMod.STUDY_COLLECTOR);
         tags.add(expansionContentMod.STUDY);
 
+        baseMagicNumber = magicNumber = MAGIC;
         baseDamage = DAMAGE;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                dmg(m, AbstractGameAction.AttackEffect.FIRE);
-                for (AbstractPower q : m.powers) {
-                    if (q.type == AbstractPower.PowerType.DEBUFF) {
-                        dmg(m, AbstractGameAction.AttackEffect.FIRE);
-                    }
-                }
-            }
-        });
+
+
+        atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+
+
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
@@ -59,6 +56,7 @@ public class Torchfire extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(UPGRADE_MAGIC);
             upgradeDamage(UPGRADE_DAMAGE);
         }
     }

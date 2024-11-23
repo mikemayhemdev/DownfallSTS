@@ -33,9 +33,7 @@ import downfall.downfallMod;
 import downfall.monsters.GremlinMirror;
 import downfall.monsters.SneckoMirror;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
-import downfall.relics.HeartBlessingBlue;
-import downfall.relics.HeartBlessingGreen;
-import downfall.relics.HeartBlessingRed;
+import downfall.relics.*;
 import gremlin.characters.GremlinCharacter;
 import guardian.characters.GuardianCharacter;
 import slimebound.characters.SlimeboundCharacter;
@@ -193,6 +191,12 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.loseRelic(HeartBlessingRed.ID);
                         AbstractDungeon.player.loseRelic(HeartBlessingBlue.ID);
                         AbstractDungeon.player.loseRelic(HeartBlessingGreen.ID);
+
+                      // if (AbstractDungeon.ascensionLevel >= 15) {
+                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new BurdenOfKnowledge());
+                            logMetricObtainRelic(ID, "BurdenOfKnowledge", new BurdenOfKnowledge());
+                      //  }
+
 
                         logMetricUpgradeCards(ID, "Upgrade", upgradedCards);
 

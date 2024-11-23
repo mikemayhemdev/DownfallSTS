@@ -1,4 +1,4 @@
-package expansioncontent.cards;
+package expansioncontent.cards.deprecated;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -8,27 +8,28 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import downfall.util.CardIgnore;
+import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import slimebound.powers.SlimedPower;
 import slimebound.vfx.SlimeProjectileEffect;
 
-import static expansioncontent.expansionContentMod.loadJokeCardImage;
-
+@CardIgnore
 public class GoopSpray extends AbstractExpansionCard {
-    public final static String ID = makeID("SuperGoopSpray");
+    public final static String ID = makeID("GoopSpray");
 
-    private static final int MAGIC = 5;
-    private static final int UPGRADE_MAGIC = 3;
+    private static final int MAGIC = 12;
+    private static final int UPGRADE_MAGIC = 4;
 
     public GoopSpray() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_slime.png", "expansioncontentResources/images/1024/bg_boss_slime.png");
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+
         tags.add(expansionContentMod.STUDY_SLIMEBOSS);
         tags.add(expansionContentMod.STUDY);
 
         baseMagicNumber = magicNumber = MAGIC;
-        loadJokeCardImage(this, "SuperGoopSpray.png");
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -48,8 +49,9 @@ public class GoopSpray extends AbstractExpansionCard {
                 if ((!monster.isDead) && (!monster.isDying)) {
 
                     atb(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-                    int vuln = 1; // its weak now
-                    atb(new ApplyPowerAction(monster, p, new WeakPower(monster, vuln, false), vuln, true, AbstractGameAction.AttackEffect.NONE));
+                    int vuln = 2;
+                    if (upgraded) vuln++;
+                    atb(new ApplyPowerAction(monster, p, new VulnerablePower(monster, vuln, false), vuln, true, AbstractGameAction.AttackEffect.NONE));
 
 
                 }
@@ -63,7 +65,9 @@ public class GoopSpray extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
+            upgradeBlock(UPGRADE_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

@@ -2,8 +2,8 @@
   "champ:CounterPower": {
     "NAME": "Counter",
     "DESCRIPTIONS": [
-      "The next time you receive #yAttack damage, deal #b",
-      " damage back."
+      "The next time you receive #yAttack damage, gain a #yRiposte Strike that deals #b",
+      " damage."
     ]
   },
   "champ:FocusedDefPower": {
@@ -200,7 +200,7 @@
   "champ:ParryPower": {
     "NAME": "Parrying",
     "DESCRIPTIONS": [
-      "If your Counter is used this turn, gain Riposte."
+      "If your #yCounter is used this turn, gain an additional #yRiposte."
     ]
   },
   "champ:BoomerangPower": {

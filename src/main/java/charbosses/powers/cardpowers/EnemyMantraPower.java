@@ -2,6 +2,7 @@ package charbosses.powers.cardpowers;
 import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class EnemyMantraPower extends AbstractPower {
     public static final String POWER_ID = "Mantra";
@@ -41,6 +43,7 @@ public class EnemyMantraPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
         if (this.amount >= 10) {
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, 2), 2));
             this.addToTop(new EnemyChangeStanceAction("Divinity"));
             this.amount -= 10;
             if (this.amount <= 0) {

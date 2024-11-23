@@ -4,8 +4,10 @@ package expansioncontent.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
@@ -19,8 +21,8 @@ public class HyperBeam extends AbstractExpansionCard {
     public final static String ID = makeID("HyperBeam");
 
 
-    private static final int DAMAGE = 21;
-    private static final int UPGRADE_DAMAGE = 7;
+    private static final int DAMAGE = 26;
+    private static final int UPGRADE_DAMAGE = 8;
 
     public HyperBeam() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
@@ -28,7 +30,7 @@ public class HyperBeam extends AbstractExpansionCard {
 
         tags.add(expansionContentMod.STUDY_AUTOMATON);
         tags.add(expansionContentMod.STUDY);
-
+        cardsToPreview = new VoidCard();
         baseDamage = DAMAGE;
         this.exhaust = true;
         this.isMultiDamage = true;
@@ -39,11 +41,8 @@ public class HyperBeam extends AbstractExpansionCard {
 
         atb(new SFXAction("ATTACK_HEAVY"));
         this.addToBot(new VFXAction(p, new MindblastEffect(p.hb.cX, p.hb.cY, p.flipHorizontal), 0.1F));
-        atb(new WaitAction(0.1F));
-
+        addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
         allDmg(AbstractGameAction.AttackEffect.NONE);
-        atb(new ApplyPowerAction(p, p, new DeEnergizedPower(1), 1));
-
 
     }
 

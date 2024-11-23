@@ -29,7 +29,7 @@
       "potency"
     ],
     "PROPER_NAME": "Potency",
-    "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes. Secondary effects increase by 1 for every 2 Potency."
+    "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes. Secondary effects increase by 1 for every 2 Potency (rounding up)."
   },
   {
     "NAMES": [
@@ -56,7 +56,7 @@
       "bruiser"
     ],
     "PROPER_NAME": "Bruiser Slime",
-    "DESCRIPTION": "Attacks for #b5 each turn."
+    "DESCRIPTION": "Attacks for #b4 twice each turn."
   },
   {
     "NAMES": [

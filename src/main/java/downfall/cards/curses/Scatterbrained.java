@@ -24,7 +24,7 @@ public class Scatterbrained extends CustomCard {
     public static final String IMG_PATH = downfallMod.assetPath("images/cards/scatterbrained.png");
 
     private static final CardType TYPE = CardType.CURSE;
-    private static final CardRarity RARITY = CardRarity.CURSE;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardStrings cardStrings;
     private static final int COST = 2;

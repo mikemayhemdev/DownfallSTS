@@ -87,12 +87,10 @@ public class RefractedBeam extends AbstractGuardianCard {
 
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
-            for (int z = 0; z < timesUpgraded+1; z++) {
-                super.useGems(p, m);
-            }
-
         }
-
+        for (int z = 0; z < timesUpgraded+1; z++) {
+            super.useGems(p, m);
+        }
        // addToBot(new ModifyMagicNumberAction(this.uuid, -1));
     }
 

@@ -20,7 +20,7 @@ public class BerserkerStyle extends AbstractChampCard {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
        // myHpLossCost = 5;
         postInit();
         loadJokeCardImage(this, "BerserkerStyle.png");

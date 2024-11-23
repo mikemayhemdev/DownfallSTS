@@ -121,9 +121,9 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
-    "DESCRIPTION": "Deal damage equal to your Block, twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Don't gain Frail.",
+    "DESCRIPTION": "Deal damage equal to your Block, twice.",
     "EXTENDED_DESCRIPTION": [
-      "Deal damage equal to your Block ( !D! ) twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Lose 2 Frail."
+      "Deal damage equal to your Block ( !D! ) twice."
     ]
   },
   "champ:FalseCounter": {
@@ -204,9 +204,8 @@
     "DESCRIPTION": "Deal !D! damage. NL If the last played card this combat was a champ:Finisher, deal !D! damage again."
   },
   "champ:Shatter": {
-    "NAME": "Shatter",
-    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Remove the enemy's Block and Artifact. NL Deal !D! damage."
+    "NAME": "Shatter Strike",
+    "DESCRIPTION": "Deal !D! damage. NL *Any *Stance champ:Combo: Apply !M! Weak and Vulnerable."
   },
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
@@ -216,7 +215,7 @@
     ]
   },
   "champ:VampiricStrike": {
-    "NAME": "Clobber",
+    "NAME": "Clobbering Strike",
     "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to unblocked damage dealt."
   },
   "champ:AdrenalArmor": {
@@ -249,8 +248,8 @@
   },
   "champ:RecklessLeap": {
     "NAME": "Reckless Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 2 Strength. NL Lose 1 Dexterity. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Strength. NL Lose 1 Dexterity.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Enter champ:Berserker. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Enter champ:Berserker.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]
@@ -270,7 +269,7 @@
   },
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
-    "DESCRIPTION": "Deal !D! damage X times.",
+    "DESCRIPTION": "Deal !D! damage X times. Perform X times, at least once:",
     "EXTENDED_DESCRIPTION": [
       "Berserker champ:Combo: Deal !D! damage X times. NL ",
       "Defensive champ:Combo: Gain !B! Block X times.",
@@ -331,7 +330,7 @@
     "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Berserker *Skill *Bonus grants !M! more Vigor."
   },
   "champ:Riposte": {
-    "NAME": "Riposte",
+    "NAME": "Riposte Strike",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
   },
   "champ:Endure": {
@@ -341,7 +340,7 @@
   },
   "champ:PreemptiveStrike": {
     "NAME": "Preemptive Strike",
-    "DESCRIPTION": "Deal damage equal to your champ:Counter to ALL enemies. NL Lose half of your champ:Counter.",
+    "DESCRIPTION": "Deal damage equal to your champ:Counter to ALL enemies. Lose half. NL *Defensive champ:Combo: Don't.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage)",
       "A poor time for that move."
@@ -349,7 +348,7 @@
   },
   "champ:Parry": {
     "NAME": "Parry",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL If your champ:Counter is used this turn, Gain *Riposte.",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL If champ:Counter is used this turn, Gain another *Riposte *Strike.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Deal damage equal to the amount of champ:Counter used. NL Exhaust."
   },
   "champ:EnchantCrown": {

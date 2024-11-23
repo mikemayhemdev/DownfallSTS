@@ -2,6 +2,7 @@ package sneckomod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -13,6 +14,7 @@ import sneckomod.powers.BlunderGuardPower;
 import sneckomod.powers.MudshieldPower;
 import sneckomod.relics.CleanMud;
 import sneckomod.relics.CrystallizedMud;
+import sneckomod.relics.LoadedDie;
 
 import java.util.ArrayList;
 
@@ -62,6 +64,13 @@ public class MuddleAction extends AbstractGameAction {
                     AbstractDungeon.player.getPower(BlunderGuardPower.POWER_ID).onSpecificTrigger();
                 }
             }
+
+            LoadedDie loadedDieInstance = new LoadedDie();
+            if (AbstractDungeon.player.hasRelic(LoadedDie.ID)) {
+                addToBot(new GainBlockAction(AbstractDungeon.player, 1));
+                loadedDieInstance.flash();
+            }
+
             card.freeToPlayOnce = false;// 39
         }
     }

@@ -31,7 +31,7 @@
     "NAMES": [
       "counter"
     ],
-    "DESCRIPTION": "The next time you take #yAttack damage, deal damage back."
+    "DESCRIPTION": "The next time you take #yAttack damage, gain a #yRiposte #yStrike that deals that much damage."
   },
   {
     "PROPER_NAME": "Defensive",

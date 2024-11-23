@@ -287,7 +287,7 @@ public abstract class SpawnedSlime
 
         if (power != null) {
             this.passiveAmount = this.basePassiveAmount + power.amount + this.UniqueFocus + bonus;
-            this.debuffAmount = this.debuffBaseAmount + (power.amount / 2) ;
+            this.debuffAmount = (int) Math.ceil(this.debuffBaseAmount + (power.amount / 2.0));
 
         } else {
             this.passiveAmount = this.basePassiveAmount + this.UniqueFocus + bonus;

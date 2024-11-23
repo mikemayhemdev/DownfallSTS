@@ -1,27 +1,26 @@
-package expansioncontent.cards;
+package expansioncontent.cards.deprecated;
 
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import downfall.util.CardIgnore;
 import expansioncontent.expansionContentMod;
-import hermit.actions.ReduceDebuffsAction;
+import expansioncontent.cards.AbstractExpansionCard;
 import slimebound.powers.NextTurnGainStrengthPower;
 
-
+@CardIgnore
 public class ChargeUp extends AbstractExpansionCard {
     public final static String ID = makeID("ChargeUp");
 
-    private static final int BLOCK = 8;
-    private static final int MAGIC = 1;
+    private static final int BLOCK = 20;
+    private static final int UPGRADE_BLOCK = 10;
+    private static final int MAGIC = 2;
 
     public ChargeUp() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
 
         tags.add(expansionContentMod.STUDY_GUARDIAN);
         tags.add(expansionContentMod.STUDY);
@@ -32,16 +31,18 @@ public class ChargeUp extends AbstractExpansionCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
-        AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));
+
+        atb(new SFXAction("MONSTER_GUARDIAN_DESTROY"));
+        atb(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
+        atb(new ApplyPowerAction(p, p, new NextTurnGainStrengthPower(p, p, this.magicNumber), this.magicNumber));
+
+
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.exhaust = false;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBlock(UPGRADE_BLOCK);
         }
     }
 

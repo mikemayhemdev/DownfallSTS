@@ -329,14 +329,14 @@ public class GuardianMod implements PostDrawSubscriber,
         ArrayList<AbstractCard> rewardGemCards = new ArrayList<>();
 
         allGemCards.add("RED");
-        allGemCards.add("GREEN");
         allGemCards.add("LIGHTBLUE");
+        allGemCards.add("FRAGMENTED");
         if (!onlyCommon) allGemCards.add("ORANGE");
         if (!onlyCommon) allGemCards.add("CYAN");
         if (!onlyCommon) allGemCards.add("WHITE");
         allGemCards.add("BLUE");
         if (!onlyCommon) allGemCards.add("CRIMSON");
-        if (!onlyCommon) allGemCards.add("FRAGMENTED");
+        if (!onlyCommon) allGemCards.add("GREEN");
         if (!onlyCommon) allGemCards.add("PURPLE");
         if (!onlyCommon) allGemCards.add("SYNTHETIC");
         if (!onlyCommon) allGemCards.add("YELLOW");
