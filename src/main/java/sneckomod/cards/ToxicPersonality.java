@@ -25,7 +25,7 @@ public class ToxicPersonality extends AbstractSneckoCard {
     public ToxicPersonality() {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        SneckoMod.loadJokeCardImage(this, "ToxicPersonality.png");
+        SneckoMod.loadJokeCardImage(this, "AceOfWands.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

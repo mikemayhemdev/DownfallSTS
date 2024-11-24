@@ -1,10 +1,12 @@
 package guardian.cards;
 
 
+import automaton.FunctionHelper;
 import automaton.cards.Batch;
 import automaton.cards.Debug;
 import automaton.cards.Decompile;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,14 +16,13 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.CompilePackageAction;
-import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
-public class CompilePackage extends AbstractGuardianCard implements InStasisCard{
+public class CompilePackage extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("CompilePackage");
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -30,7 +31,7 @@ public class CompilePackage extends AbstractGuardianCard implements InStasisCard
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 0;
 
     //TUNING CONSTANTS
     private static final int SOCKETS = 0;
@@ -52,8 +53,8 @@ public class CompilePackage extends AbstractGuardianCard implements InStasisCard
 
     public CompilePackage() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        this.tags.add(GuardianMod.SELFSTASIS);
-        this.tags.add(GuardianMod.VOLATILE);
+
+        this.exhaust = true;
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -71,11 +72,9 @@ public class CompilePackage extends AbstractGuardianCard implements InStasisCard
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-    }
 
-    @Override
-    public void onEvoke(StasisOrb orb) {
-        AbstractDungeon.actionManager.addToBottom(new CompilePackageAction(false));
+        AbstractDungeon.actionManager.addToBottom(new CompilePackageAction(this.upgraded));
+
     }
 
     public AbstractCard makeCopy() {
@@ -85,8 +84,12 @@ public class CompilePackage extends AbstractGuardianCard implements InStasisCard
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
+            for(AbstractCard c:cardsList){
+                c.upgrade();
             }
+        }
     }
 
     public void updateDescription() {
@@ -100,7 +103,6 @@ public class CompilePackage extends AbstractGuardianCard implements InStasisCard
         }
         this.initializeDescription();
     }
-
 
     @Override
     public void update() {
@@ -124,5 +126,3 @@ public class CompilePackage extends AbstractGuardianCard implements InStasisCard
         }
     }
 }
-
-

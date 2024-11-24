@@ -20,7 +20,7 @@ public class SnakeEyes extends AbstractSneckoCard implements OnObtainCard {
     public SnakeEyes() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        SneckoMod.loadJokeCardImage(this, "MasterEye.png");
+        SneckoMod.loadJokeCardImage(this, "SnakeEyes.png");
     }
 
     @Override

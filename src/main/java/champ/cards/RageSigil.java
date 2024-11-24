@@ -19,6 +19,7 @@ public class RageSigil extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        defenseOpen();
         blck();
         atb(new ScryAction(magicNumber));
     }

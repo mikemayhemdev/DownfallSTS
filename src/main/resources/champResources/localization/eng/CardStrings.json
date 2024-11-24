@@ -68,7 +68,7 @@
   },
   "champ:RageSigil": {
     "NAME": "Battle Plan",
-    "DESCRIPTION": "Gain !B! Block. NL Scry !M!."
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL Scry !M!."
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
@@ -136,8 +136,8 @@
     "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block."
   },
   "champ:Lariat": {
-    "NAME": "Reinforced Body",
-    "DESCRIPTION": "Gain !B! Block X times."
+    "NAME": "Lariat",
+    "DESCRIPTION": "Gain !B! Block X times. NL Trigger your stance's *Skill *Bonus X times."
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
@@ -153,7 +153,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "Gain !M! Vigor. NL Apply !DM! Weak.",
+    "DESCRIPTION": "Gain !M! Vigor. NL Apply !DM! Weak. NL Trigger your stance's *Skill *Bonus.",
     "EXTENDED_DESCRIPTION": [
       "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
       "Defensive champ:Combo: Gain !M! temporary Dexterity."

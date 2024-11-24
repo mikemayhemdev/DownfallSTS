@@ -5,6 +5,7 @@
 
 package charbosses.powers.bossmechanicpowers;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.powers.cardpowers.EnemyAccuracyPower;
 import charbosses.powers.cardpowers.EnemyMantraPower;
@@ -37,9 +38,14 @@ public class WatcherDivinityPower extends AbstractBossMechanicPower {
 
     @Override
     public void atStartOfTurn() {
-        addToBot(new ReducePowerAction(this.owner, this.owner, EnemyMantraPower.POWER_ID, 5));
-    }
+        int tracker = 5;
+        int currentAmount = this.amount;
+        int reducedAmount = Math.min(tracker, currentAmount);
 
+        addToBot(new ReducePowerAction(this.owner, this.owner, EnemyMantraPower.POWER_ID, reducedAmount));
+
+        AbstractCharBoss.boss.mantraGained -= reducedAmount;
+    }
     public void updateDescription() {
         this.description = DESC[0];
     }

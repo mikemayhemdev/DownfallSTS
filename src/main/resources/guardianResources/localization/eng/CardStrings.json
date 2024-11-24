@@ -139,8 +139,8 @@
   },
   "Guardian:CompilePackage": {
     "NAME": "Compile Package",
-    "DESCRIPTION": "Put this card in guardianmod:Stasis. NL When this card leaves Stasis, choose a guardianmod:Package to gain. NL guardianmod:Volatile.",
-    "UPGRADE_DESCRIPTION": "Put this card in guardianmod:Stasis. NL When this card leaves Stasis, choose a guardianmod:Package to gain. guardianmod:NL Volatile.",
+    "DESCRIPTION": "Choose a guardianmod:Package to place into guardianmod:Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose an Upgraded guardianmod:Package to place into guardianmod:Stasis. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Package."
     ]

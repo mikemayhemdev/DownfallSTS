@@ -31,6 +31,7 @@ public class ViciousMockery extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         ChampMod.vigor(magicNumber);
         applyToEnemy(m, autoWeak(m, downfallMagic));
+        techique();
         atb(new SFXAction("VO_CHAMP_2A"));
         atb(new TalkAction(true, getTaunt(), 2.0F, 2.0F));
     }

@@ -28,6 +28,7 @@ public class RecklessLeap extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         //myHpLossCost = MAGIC;
+        exhaust = true;
         tags.add(CardTags.STRIKE);
         loadJokeCardImage(this, "RecklessLeap.png");
     }
