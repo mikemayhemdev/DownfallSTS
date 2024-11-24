@@ -21,8 +21,8 @@ public class HyperBeam extends AbstractExpansionCard {
     public final static String ID = makeID("HyperBeam");
 
 
-    private static final int DAMAGE = 26;
-    private static final int UPGRADE_DAMAGE = 8;
+    private static final int DAMAGE = 21;
+    private static final int UPGRADE_DAMAGE = 7;
 
     public HyperBeam() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
