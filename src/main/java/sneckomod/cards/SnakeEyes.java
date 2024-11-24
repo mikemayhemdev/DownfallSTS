@@ -16,7 +16,7 @@ public class SnakeEyes extends AbstractSneckoCard implements OnObtainCard {
 
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
-
+//aaaa
     public SnakeEyes() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
