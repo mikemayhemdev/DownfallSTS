@@ -44,14 +44,21 @@ public class UnendingSupplyPower extends AbstractPower implements CloneablePower
     }
 
     public void atStartOfTurn() {
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {// 27
-            this.flash();// 28
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            this.flash();//
 
             ArrayList<AbstractCard> cards = OffclassHelper.getXRandomOffclassCards(this.amount);
-            for (AbstractCard card : cards) {// 29
-                CardModifierManager.addModifier(card, new EtherealMod());
-                CardModifierManager.addModifier(card, new ExhaustMod());
-                this.addToBot(new MakeTempCardInHandAction(card, 1, false));// 30 32 33
+            for (AbstractCard card : cards) {
+
+                if (!card.isEthereal) {
+                    CardModifierManager.addModifier(card, new EtherealMod());
+                }
+
+                if (!card.exhaust) {
+                    CardModifierManager.addModifier(card, new ExhaustMod());
+                }
+
+                this.addToBot(new MakeTempCardInHandAction(card, 1, false));
             }
         }
 

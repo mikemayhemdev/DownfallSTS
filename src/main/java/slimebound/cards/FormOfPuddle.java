@@ -22,6 +22,7 @@ public class FormOfPuddle extends AbstractSlimeboundCard {
     public FormOfPuddle() {
         super(ID, cardStrings.NAME, IMG_PATH, 2, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.SLIMEBOUND, CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
+        isEthereal = true;
         this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "FormOfPuddle.png");
     }

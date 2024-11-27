@@ -23,20 +23,7 @@ public class Hoard extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DrawCardAction(magicNumber, new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                for (AbstractCard q : DrawCardAction.drawnCards) {
-                    q.superFlash(Color.GREEN.cpy());
-                    PropertiesMod mod = new PropertiesMod();
-                    if (!q.selfRetain)
-                        mod.addProperty(PropertiesMod.supportedProperties.RETAIN, true);
-                    if (!mod.bonusPropertiesForThisTurn.isEmpty())
-                        CardModifierManager.addModifier(q, mod);
-                }
-            }
-        }));
+        atb(new DrawCardAction(magicNumber));
     }
 
     public void upp() {

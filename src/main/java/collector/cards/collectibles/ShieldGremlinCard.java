@@ -10,8 +10,8 @@ public class ShieldGremlinCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, common, , , 9, 3, , 
 
     public ShieldGremlinCard() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 6;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

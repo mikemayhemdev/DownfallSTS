@@ -1,10 +1,18 @@
 package sneckomod.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 import sneckomod.actions.MuddleRandomCardAction;
@@ -30,22 +38,19 @@ public class QuickMove extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         if (isOverflowActive(this)) {
-            addToBot(new SelectCardsInHandAction(magicNumber, "Muddle",
-                    (AbstractCard c) -> true,
-                    (cards) -> {
-                        for (AbstractCard card : cards) {
-                            addToBot(new MuddleAction(card));
-                        }
-                    }
-            ));
+            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
+                    atb(new ApplyPowerAction(monster, p, new VulnerablePower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                }
+            }
         }
     }
 
-    @Override
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeBlock(UPG_BLOCK);
+        @Override
+        public void upgrade () {
+            if (!upgraded) {
+                upgradeName();
+                upgradeBlock(UPG_BLOCK);
+            }
         }
     }
-}

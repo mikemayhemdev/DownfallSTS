@@ -45,7 +45,7 @@ public class Gem_Synthetic extends AbstractGemCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = SYNTHETIC;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Onyx.png"));
     }

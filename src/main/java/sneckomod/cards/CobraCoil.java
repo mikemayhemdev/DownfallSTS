@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.powers.ConstrictedPower;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import sneckomod.SneckoMod;
 
+import java.util.ArrayList;
+
 import static collector.util.Wiz.applyToEnemy;
 
 public class CobraCoil extends AbstractSneckoCard {
@@ -34,6 +36,28 @@ public class CobraCoil extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         applyToEnemy(m, new ConstrictedPower(m, p, magicNumber));
+    }
+
+    @Override
+    public void onObtainCard() {
+        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+        while (cardsToReward.size() < 3) {
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.type == AbstractCard.CardType.ATTACK && c.rarity == AbstractCard.CardRarity.RARE);
+            if (!cardListDuplicate(cardsToReward, newCard)) {
+                cardsToReward.add(newCard.makeCopy());
+            }
+        }
+
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

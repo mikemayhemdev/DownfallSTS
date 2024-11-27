@@ -12,8 +12,8 @@ public class SpireSpearCard extends AbstractCollectibleCard {
     // intellij stuff power, self, rare, , , , , 3, 1
 
     public SpireSpearCard() {
-        super(ID, 0, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,6 +21,6 @@ public class SpireSpearCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

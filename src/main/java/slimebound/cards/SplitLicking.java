@@ -44,7 +44,7 @@ public class SplitLicking extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 2;
         this.slimed = this.baseSlimed = 8;
-        this.exhaust = true;
+        //this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "SplitMire.png");
     }
 

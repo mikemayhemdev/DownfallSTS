@@ -16,9 +16,9 @@ public class Whack extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("Whack");
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 7;
     private static final int UPGRADE_DAMAGE = 3;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     public Whack() {
         super(ID, COST, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);

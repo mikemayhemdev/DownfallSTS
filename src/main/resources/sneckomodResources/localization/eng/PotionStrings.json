@@ -8,9 +8,9 @@
   "sneckomod:CheatPotion": {
     "NAME": "Liquid Luck",
     "DESCRIPTIONS": [
-      "Gain #yLucky for 1 turn.",
-      "Gain #yLucky for #b",
-      " turns."
+      "Overflow effects always activate this turn regardless of hand size.",
+      "Overflow effects always activate for #b",
+      " turns regardless of hand size."
     ]
   },
   "sneckomod:MuddlingPotion": {

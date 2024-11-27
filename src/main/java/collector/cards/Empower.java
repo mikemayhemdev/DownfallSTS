@@ -16,7 +16,7 @@ public class Empower extends AbstractCollectorCard {
 
     public Empower() {
         super(ID, -1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -31,5 +31,6 @@ public class Empower extends AbstractCollectorCard {
 
     public void upp() {
         upgradeMagicNumber(1);
+        uDesc();
     }
 }

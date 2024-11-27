@@ -21,7 +21,7 @@ public class Soulforge extends AbstractCollectorCard {
     // intellij stuff skill, self, uncommon, , , 8, 3, , 
 
     public Soulforge() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
@@ -48,8 +48,7 @@ public class Soulforge extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        uDesc();
+        upgradeBaseCost(0);
     }
 }
 

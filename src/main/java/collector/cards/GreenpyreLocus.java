@@ -22,9 +22,10 @@ public class GreenpyreLocus extends AbstractCollectorCard {
     // intellij stuff skill, self, uncommon, , , , , 1, 1
 
     public GreenpyreLocus() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,13 +38,10 @@ public class GreenpyreLocus extends AbstractCollectorCard {
             AbstractCard tar = cards.get(0).makeCopy();
             CardModifierManager.addModifier(tar, new CollectedCardMod());
             makeInHandTop(tar);
-            for (int i = 0; i < magicNumber; i++) {
-                CollectorCollection.combatCollection.addToRandomSpot(tar.makeStatEquivalentCopy());
-            }
         }));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(1);
     }
 }

@@ -51,18 +51,18 @@ public class FirmFortitude extends AbstractSlimeboundCard {
 
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            if (AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount < 0) {
-                if (!this.hasTag(expansionContentMod.UNPLAYABLE))
-                    this.tags.add(expansionContentMod.UNPLAYABLE);
-                return false;
-            }
-        }
-        this.tags.remove(expansionContentMod.UNPLAYABLE);
-        return super.canUse(p, m);
-    }
+ //   @Override
+  //  public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+    //    if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+     //       if (AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount < 0) {
+     //           if (!this.hasTag(expansionContentMod.UNPLAYABLE))
+      //              this.tags.add(expansionContentMod.UNPLAYABLE);
+    //            return false;
+   //         }
+   //     }
+   //     this.tags.remove(expansionContentMod.UNPLAYABLE);
+  //      return super.canUse(p, m);
+  //  }
 
     public AbstractCard makeCopy() {
         return new FirmFortitude();

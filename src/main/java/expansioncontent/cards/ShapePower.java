@@ -23,7 +23,7 @@ public class ShapePower extends AbstractExpansionCard implements OctopusCard {
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_donudeca.png", "expansioncontentResources/images/1024/bg_boss_donudeca.png");
         tags.add(expansionContentMod.STUDY_SHAPES);
         tags.add(expansionContentMod.STUDY);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         baseDownfallMagic = downfallMagic = 5;
         loadJokeCardImage(this, "ShapePower.png");
     }
@@ -54,7 +54,7 @@ public class ShapePower extends AbstractExpansionCard implements OctopusCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
         upgradeDownfall(3);
     }
 }

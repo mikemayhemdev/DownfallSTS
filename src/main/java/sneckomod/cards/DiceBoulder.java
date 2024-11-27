@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.actions.ReduceCostActionFixed;
 import sneckomod.SneckoMod;
-import sneckomod.actions.NoApplyRandomDamageAction;
+
 
 public class DiceBoulder extends AbstractSneckoCard {
 

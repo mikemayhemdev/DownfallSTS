@@ -40,7 +40,7 @@ public class SplitLeeching extends AbstractSlimeboundCard {
 
         this.baseBlock = 8;
         this.magicNumber = this.baseMagicNumber = 2;
-        this.exhaust = true;
+        //this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "SplitLeeching.png");
     }
 

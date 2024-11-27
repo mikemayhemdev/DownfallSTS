@@ -13,8 +13,8 @@ public class LouseCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, common, , , 7, 3, , 
 
     public LouseCard() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 7;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

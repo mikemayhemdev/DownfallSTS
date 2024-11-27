@@ -18,6 +18,7 @@ public class MiniCurse extends AbstractCollectorCard {
     public MiniCurse() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         isPyre();
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

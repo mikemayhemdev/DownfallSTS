@@ -167,8 +167,7 @@
   },
   "sneckomod:QuickMove": {
     "NAME": "Quick Move",
-    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Overflow: sneckomod:Muddle a card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle a card."
+    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Overflow: Apply !M! Vulnerable to ALL enemies."
   },
   "sneckomod:RainOfDice": {
     "NAME": "Rain of Dice",
@@ -444,7 +443,8 @@
   },
   "sneckomod:Behold": {
     "NAME": "Behold!",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each other card in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Overflow: Gain !M! Shivs.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Overflow: Gain !M! Shivs."
   },
   "sneckomod:SaveForLater": {
     "NAME": "Save For Later",
@@ -530,7 +530,7 @@
   },
   "sneckomod:CobraCoil": {
     "NAME": "Cobra Coil",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Constricted."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Constricted. NL sneckomod:Gift: Rare Attack."
   },
   "sneckomod:Belittle": {
     "NAME": "Belittle",
@@ -563,7 +563,7 @@
   },
   "sneckomod:RoundaboutSwing": {
     "NAME": "Roundabout Swing",
-    "DESCRIPTION": "Deal !D! damage. NL Put a card in hand on top of your draw pile. NL Draw !M! cards next turn."
+    "DESCRIPTION": "Deal !D! damage. NL Put a card in hand on top of your draw pile. NL Draw !M! additional cards next turn."
   },
   "sneckomod:MarkedCard": {
     "NAME": "Marked Card",
@@ -592,8 +592,8 @@
   },
   "sneckomod:AceOfWands": {
     "NAME": "Queen of Pentacles",
-    "DESCRIPTION": "Ethereal. NL Whenever you apply a debuff to an enemy, gain !M! Block.",
-    "UPGRADE_DESCRIPTION": "Whenever you apply a debuff to an enemy, gain !M! Block."
+    "DESCRIPTION": "Ethereal. NL Whenever you apply a debuff to an enemy, gain !M! Block. NL sneckomod:Gift: Debuff.",
+    "UPGRADE_DESCRIPTION": "Whenever you apply a debuff to an enemy, gain !M! Block. NL sneckomod:Gift: Debuff."
   },
   "sneckomod:FlashInThePan": {
     "NAME": "Flash in the Pan",

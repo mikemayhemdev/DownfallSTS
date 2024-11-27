@@ -12,7 +12,7 @@ public class RepulsorCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, common, , , , , 3, 1
 
     public RepulsorCard() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         isPyre();
     }

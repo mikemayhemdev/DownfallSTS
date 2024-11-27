@@ -63,7 +63,7 @@
     "NAME": "Fuel Canister",
     "FLAVOR": "Disgusting.",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yRetain the highest-cost card in your hand."
+      "At the end of your turn, #yRetain the lowest-cost card in your hand."
     ]
   },
   "collector:AutoCurser": {

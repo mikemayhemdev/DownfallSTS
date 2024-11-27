@@ -11,12 +11,13 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import hermit.cards.AbstractDynamicCard;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
 public class MakeshiftBlade extends AbstractSneckoCard {
-
+// todo: try to make this one glow later
     public static final String ID = SneckoMod.makeID("MakeshiftBlade");
 
     // Card constants

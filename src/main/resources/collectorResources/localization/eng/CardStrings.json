@@ -115,7 +115,8 @@
   },
   "collector:DragonsTrove": {
     "NAME": "Dragon's Trove",
-    "DESCRIPTION": "collector:Pyre. NL Draw 2 cards from your Collected pile. NL Gain !M! collector:Reserve. NL Exhaust."
+    "DESCRIPTION": "collector:Pyre. NL Draw !M! card from your Collected pile. NL Gain 1 collector:Reserve. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Draw !M! cards from your Collected pile. NL Gain 1 collector:Reserve. NL Exhaust."
   },
   "collector:Ember": {
     "NAME": "Ember",
@@ -126,7 +127,8 @@
   },
   "collector:Empower": {
     "NAME": "Empower",
-    "DESCRIPTION": "Gain X Strength at the start of your next !M! turns."
+    "DESCRIPTION": "Gain X Strength at the start of your next turn.",
+    "UPGRADE_DESCRIPTION": "Gain X Strength at the start of your next !M! turns."
   },
   "collector:Extricate": {
     "NAME": "Sever Soul",
@@ -137,7 +139,7 @@
     "DESCRIPTION": "Whenever you *Exhaust a card, a random enemy loses !M! HP."
   },
   "collector:FiendFire": {
-    "NAME": "Fiend Fire",
+    "NAME": "Greenpyre Burst",
     "DESCRIPTION": "Exhaust your hand. NL Deal !D! damage for each card *Exhausted. NL Exhaust."
   },
   "collector:Finalize": {
@@ -173,7 +175,7 @@
   "collector:Goodbye": {
     "NAME": "Goodbye",
     "DESCRIPTION": "Double the enemy's collector:Doom. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple the enemy's collector:Doom. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Retain. NL Double the enemy's collector:Doom. NL Exhaust."
   },
   "collector:GourmandsGaze": {
     "NAME": "Gourmand's Gaze",
@@ -190,7 +192,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus",
-    "DESCRIPTION": "Choose 1 of 3 Collected cards to add into your hand. Add !M! copies of it into your Collected pile.",
+    "DESCRIPTION": "Choose 1 of 3 Collected cards to add into your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to add into your hand."
     ]
@@ -201,7 +203,7 @@
   },
   "collector:Hoard": {
     "NAME": "Hoard",
-    "DESCRIPTION": "collector:Pyre. NL Draw !M! cards. NL This turn, they Retain."
+    "DESCRIPTION": "collector:Pyre. NL Draw !M! cards."
   },
   "collector:HoardersStrike": {
     "NAME": "Hoarder's Strike",
@@ -222,7 +224,7 @@
   },
   "collector:InflictAgony": {
     "NAME": "Inflict Agony",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is not collector:Afflicted, apply 2 Weak and Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is not collector:Afflicted, apply !M! Weak and Vulnerable."
   },
   "collector:Invigorate": {
     "NAME": "Flash",
@@ -267,8 +269,8 @@
   },
   "collector:MiniCurse": {
     "NAME": "Mini-Curse",
-    "DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable to ALL enemies."
+    "DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable to ALL enemies. NL Exhaust."
   },
   "collector:Misdirect": {
     "NAME": "Misdirect",
@@ -287,8 +289,8 @@
   },
   "collector:Omen": {
     "NAME": "Omen",
-    "DESCRIPTION": "Whenever you play a Collected card, gain 1 Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a Collected card, gain 1 Strength."
+    "DESCRIPTION": "Ethereal. NL Whenever you play a Collected card, gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a Collected card, gain 1 Strength."
   },
   "collector:ProtectingCall": {
     "NAME": "Protecting Call",
@@ -312,7 +314,7 @@
   },
   "collector:Roast": {
     "NAME": "Roast",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage."
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL Exhaust."
   },
   "collector:RotwoodKindling": {
     "NAME": "Rotwood Kindling",
@@ -352,8 +354,7 @@
   },
   "collector:Soulforge": {
     "NAME": "Soulforge",
-    "DESCRIPTION": "Draw a card from your Collected pile. Gain !M! Upgraded copy of it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a card from your Collected pile. Gain !M! Upgraded copies of it. NL Exhaust."
+    "DESCRIPTION": "Draw a card from your Collected pile. Gain !M! Upgraded copy of it. NL Exhaust."
   },
   "collector:Spark": {
     "NAME": "Spark",
@@ -619,7 +620,7 @@
   },
   "collector:SneakyGremlinCard": {
     "NAME": "Sneaky Gremlin",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 2 cards."
   },
   "collector:SneckoCard": {
     "NAME": "Snecko",

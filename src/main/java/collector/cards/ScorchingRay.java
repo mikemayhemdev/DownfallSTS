@@ -14,8 +14,8 @@ public class ScorchingRay extends AbstractCollectorCard {
     // intellij stuff attack, enemy, common, 4, 1, , , 4, 
 
     public ScorchingRay() {
-        super(ID, -1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 8;
+        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        baseDamage = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,6 +28,6 @@ public class ScorchingRay extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
     }
 }

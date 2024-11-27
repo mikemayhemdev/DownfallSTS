@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
+import hermit.cards.AbstractDynamicCard;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -35,6 +36,17 @@ public class OtherworldlySlash extends AbstractSneckoCard implements OnObtainCar
             }
         }
 
+
+    @Override
+    public void triggerOnGlowCheck() { // it glows now.
+        boolean playedOffClassCard = AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
+                .anyMatch(card -> card.color != this.color);
+        if (playedOffClassCard) {
+            this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        }
+    }
 
     @Override
     public void onObtainCard() {

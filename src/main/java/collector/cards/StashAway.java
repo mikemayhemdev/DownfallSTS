@@ -14,7 +14,7 @@ public class StashAway extends AbstractCollectorCard {
     // intellij stuff skill, self, uncommon, , , , , , 
 
     public StashAway() {
-        super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = 4;
         exhaust = true;
     }

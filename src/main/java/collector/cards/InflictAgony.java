@@ -20,19 +20,21 @@ public class InflictAgony extends AbstractCollectorCard {
     public InflictAgony() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 12;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new ViceCrushEffect(m.hb.cX, m.hb.cY)));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         if (!isAfflicted(m)) {
-            applyToEnemy(m, new WeakPower(m, 2, false));
-            applyToEnemy(m, new VulnerablePower(m, 2, false));
+            applyToEnemy(m, new WeakPower(m, magicNumber, false));
+            applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
         }
     }
 
     public void upp() {
-        upgradeDamage(6);
+        upgradeDamage(3);
+        upgradeMagicNumber(1);
     }
 
     @Override

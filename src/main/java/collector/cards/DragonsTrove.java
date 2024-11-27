@@ -24,13 +24,14 @@ public class DragonsTrove extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardCrawlGame.sound.play("MAW_DEATH");
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < magicNumber; i++) {
             atb(new DrawCardFromCollectionAction());
         }
-        atb(new GainReservesAction(magicNumber));
+        atb(new GainReservesAction(1));
     }
 
     public void upp() {
         upgradeMagicNumber(1);
+        uDesc();
     }
 }

@@ -13,9 +13,9 @@ public class FatGremlinCard extends AbstractCollectibleCard {
     // intellij stuff attack, enemy, common, 4, 1, , , 2, 1
 
     public FatGremlinCard() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 4;
-        baseMagicNumber = magicNumber = 1;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 7;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

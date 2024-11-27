@@ -14,7 +14,7 @@ public class NemesisCard extends AbstractCollectibleCard {
     // intellij stuff skill, enemy, uncommon, , , , , , 
 
     public NemesisCard() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 4, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -22,6 +22,6 @@ public class NemesisCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(3);
     }
 }

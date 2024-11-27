@@ -63,6 +63,6 @@
     "NAMES": [
       "lucky"
     ],
-    "DESCRIPTION": "#Overflow effects always activate this turn regardless of hand size."
+    "DESCRIPTION": "Overflow effects always activate this turn regardless of hand size."
   }
 ]
