@@ -267,6 +267,12 @@ public class SneckoMod implements
             //  }
         }
     }
+    // THE SUPER IMPORTANT GIFT ARRAY
+    ArrayList<ArrayList<AbstractCard>> incomingGiftsList = new ArrayList<>();
+    //
+
+
+
 
     @Deprecated
     public static AbstractCard getOffClassCard() {

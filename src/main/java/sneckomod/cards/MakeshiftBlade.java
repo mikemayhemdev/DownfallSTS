@@ -44,14 +44,15 @@ public class MakeshiftBlade extends AbstractSneckoCard {
 
     @Override
     public void onObtainCard() {
+        System.out.println("DEBUG: Took Makeshift Blade.");
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
         while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(
-                    c -> c.rarity == AbstractCard.CardRarity.UNCOMMON &&
-                            (c.rawDescription.contains("Weak") || c.rawDescription.contains("Vulnerable") || c.rawDescription.contains("Bruise") || c.rawDescription.contains("Soulburn") || c.rawDescription.contains("Goop") || c.rawDescription.contains("Doom"))
-            );
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> ((c.rawDescription.contains("Apply") ||c.rawDescription.contains("apply") ||c.rawDescription.contains("applies") ||c.rawDescription.contains("Lick") ||c.rawDescription.contains("Debuff") ||c.rawDescription.contains("Steal") || c.name.contains("Disarm") || c.name.contains("Choke") || c.name.contains("Talk to the Hand") || c.name.contains("Cursed Wail") || c.name.contains("Undervolt")|| c.name.contains("Piercing Wail") || c.name.contains("Billow"))
+            ) && c.rarity == AbstractCard.CardRarity.UNCOMMON);
+            System.out.println("DEBUG: Card generated: " + newCard.name);
             if (!cardListDuplicate(cardsToReward, newCard)) {
                 cardsToReward.add(newCard.makeCopy());
+                System.out.println("DEBUG: Card added: " + newCard.name);
             }
         }
 
@@ -59,11 +60,14 @@ public class MakeshiftBlade extends AbstractSneckoCard {
     }
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        System.out.println("DEBUG: Checking for duplicate: " + card.name);
         for (AbstractCard alreadyHave : cardsList) {
             if (alreadyHave.cardID.equals(card.cardID)) {
+                System.out.println("DEBUG: Duplicate detected: " + card.name);
                 return true;
             }
         }
+        System.out.println("DEBUG: No Duplicate detected: " + card.name);
         return false;
     }
 
