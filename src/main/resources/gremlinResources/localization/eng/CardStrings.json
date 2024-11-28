@@ -103,7 +103,7 @@
 
   "Gremlin:EdibleArmor": {
     "NAME": "Edible Armor",
-    "DESCRIPTION": "Convert your Block into expansioncontent:Temp_HP."
+    "DESCRIPTION": "Convert your Block into expansioncontent:Temp_HP. NL Exhaust."
   },
 
   "Gremlin:Encore": {

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.relics.PrismaticShard;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
@@ -47,7 +48,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCar
 
         CardGroup selectionGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard card : CardLibrary.getAllCards()) {
-            if (card instanceof UnknownClass && (SneckoMod.validColors.contains(((UnknownClass) card).myColor) || SneckoMod.pureSneckoMode)) {
+            if (card instanceof UnknownClass && (SneckoMod.validColors.contains(((UnknownClass) card).myColor) || SneckoMod.pureSneckoMode || AbstractDungeon.player.hasRelic(PrismaticShard.ID))) {
                 selectionGroup.addToTop(card.makeCopy());
             }
         }

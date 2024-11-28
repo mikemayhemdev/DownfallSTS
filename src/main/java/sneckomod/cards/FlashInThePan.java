@@ -28,7 +28,7 @@ public class FlashInThePan extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
 
-        int handSize = p.hand.size(); // todo: I heard this was bad practice but I don't remember what the proper variable to use is
+        int handSize = p.hand.size(); // todo: I heard this was bad practice but I don't remember what the proper variable to use is, I know it's basemod something
         if (handSize > 0) {
             addToBot(new DiscardAction(p, p, handSize, false));
         }

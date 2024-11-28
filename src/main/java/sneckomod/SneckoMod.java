@@ -28,9 +28,11 @@ import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.random.Random;
+import com.megacrit.cardcrawl.relics.PrismaticShard;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
+import downfall.relics.BrokenWingStatue;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
 import expansioncontent.patches.CardColorEnumPatch;
@@ -297,11 +299,13 @@ public class SneckoMod implements
         return CardLibrary.getCopy(selectedCardID);
     }
 
-    //TODO Make rarity matter in Offclass card gen.
+    //TODO Make rarity matter in Offclass card gen. - Not needed anymore?
+
+    //todo: allow 'Healing' Cards to generate outside of combat in Gifts. Gift Array on line 273.
     public static AbstractCard getOffClassCardMatchingPredicate(Predicate<AbstractCard> q) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
         possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || !q.test(c) || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO));
-        if (!pureSneckoMode && AbstractDungeon.player instanceof TheSnecko)
+        if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
             possList.removeIf(c -> !validColors.contains(c.color));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }

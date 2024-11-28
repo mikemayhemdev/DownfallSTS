@@ -23,6 +23,7 @@ public class ImpeccablePecs extends AbstractGremlinRelic {
     }
 
     //TODO Rework this Relic at some point
+    // I mean I also want to rework this, it's very weird
 
     @Override
     public String getUpdatedDescription() {
