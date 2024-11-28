@@ -32,6 +32,7 @@ public class Bonfire extends AbstractCollectorCard {
 
 
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(3);
+        uDesc();
     }
 }

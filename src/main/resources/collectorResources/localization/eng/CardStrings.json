@@ -44,7 +44,8 @@
   },
   "collector:Bonfire": {
     "NAME": "Bonfire",
-    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain 1 collector:Reserve."
+    "DESCRIPTION": "collector:Pyre a random card. NL Gain !B! Block. NL Next turn, gain 1 collector:Reserve.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain 1 collector:Reserve."
   },
   "collector:BrainDrain": {
     "NAME": "Brain Drain",

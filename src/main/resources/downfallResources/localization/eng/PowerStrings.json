@@ -49,8 +49,8 @@
   "downfall:FearNoEvil": {
     "NAME": "Fear No Evil",
     "DESCRIPTIONS": [
-      "If you play an attack card this turn, this enemy will change stance to #yCalm once it plays its #yFear #yNo #yEvil card.",
-      "This enemy will change stance to #yCalm once it plays its #yFear #yNo #yEvil card."
+      "If you play an attack card this turn, Watcher will change her stance to #yCalm once she plays her #yFear #yNo #yEvil card.",
+      "Watcher will change stance to #yCalm once she plays its #yFear #yNo #yEvil card."
     ]
   },
   "downfall:PoisonResist": {
@@ -110,7 +110,7 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Fleeting Faith",
     "DESCRIPTIONS": [
-      "Watcher gains #b1 #yMantra whenever you play a card. NL Whenever Watcher enters #yDivinity, she gains #b2 #yStrength. NL Watcher loses #b5 #yMantra at the start of her turn. NL Watcher does not exit #yDivinity at the end of her turn."
+      "Watcher gains #b1 #yMantra whenever you play a card. NL Whenever Watcher enters #yDivinity, she gains #b3 #yStrength. NL Watcher loses #b4 #yMantra at the start of her turn. NL Watcher does not exit #yDivinity at the end of her turn."
     ]
   },
   "downfall:NeowFleetingFaith": {

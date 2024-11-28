@@ -37,37 +37,6 @@ public class WatcherDivinityPower extends AbstractBossMechanicPower {
         this.type = PowerType.BUFF;
     }
 
-    @Override
-    public void atStartOfTurn() {
-        System.out.println("atStartOfTurn started...");
-
-        this.flash();
-
-        int initialAmount = this.amount;
-        System.out.println("Initial amount of Mantra: " + initialAmount);
-
-        addToBot(new ReducePowerAction(this.owner, this.owner, EnemyMantraPower.POWER_ID, 5));
-        System.out.println("DEBUG: Reducing by 5...");
-
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                System.out.println("Following up.");
-
-                int reducedAmount = Math.min(5, initialAmount);
-                System.out.println("Predicted amount removed: " + reducedAmount);
-
-                int previousMantraGained = AbstractCharBoss.boss.mantraGained;
-                AbstractCharBoss.boss.mantraGained -= reducedAmount;
-                System.out.println("MantraGained reduced from " + previousMantraGained + " to " + AbstractCharBoss.boss.mantraGained);
-
-                this.isDone = true;
-                System.out.println("atStartOfTurn completed.");
-            }
-        });
-    }
-
-
     public void updateDescription() {
         this.description = DESC[0];
     }

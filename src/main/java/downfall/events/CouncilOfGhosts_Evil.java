@@ -54,6 +54,9 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
             this.hpLoss = AbstractDungeon.player.maxHealth - 1;
         }
 
+        if (AbstractDungeon.ascensionLevel >= 15){
+            goldCost = 250;
+        }
 
         if (AbstractDungeon.player.gold >= goldCost) {
             this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldCost + OPTIONSALT[1], new Apparition());
