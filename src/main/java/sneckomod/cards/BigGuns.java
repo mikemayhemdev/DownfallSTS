@@ -37,7 +37,7 @@ public class BigGuns extends AbstractSneckoCard {
     public void onObtainCard() {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
         while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.cost == 3 && !(c.rarity == AbstractCard.CardRarity.RARE));
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.cost == 3);
             if (!cardListDuplicate(cardsToReward, newCard)) {
                 cardsToReward.add(newCard.makeCopy());
             }
