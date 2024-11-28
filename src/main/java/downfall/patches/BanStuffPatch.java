@@ -1,9 +1,14 @@
 package downfall.patches;
 
+import basemod.devcommands.relic.RelicRemove;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
+import com.megacrit.cardcrawl.relics.PrismaticShard;
 import downfall.potions.CursedFountainPotion;
+import gremlin.patches.GremlinEnum;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.relicsToRemoveOnStart;
 
 public class BanStuffPatch {
     @SpirePatch(
@@ -13,6 +18,11 @@ public class BanStuffPatch {
     public static class PotionPatch {
         public static void Postfix(AbstractPlayer.PlayerClass chosenClass) {
             PotionHelper.potions.remove(CursedFountainPotion.POTION_ID);
+
+            if (chosenClass == GremlinEnum.GREMLIN) {
+                relicsToRemoveOnStart.add("Prismatic Shard");
+            }
+
         }
     }
 }
