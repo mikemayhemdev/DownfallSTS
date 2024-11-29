@@ -13,6 +13,7 @@ import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
+import sneckomod.SneckoMod;
 
 
 public class FirmFortitude extends AbstractSlimeboundCard {
@@ -41,6 +42,7 @@ public class FirmFortitude extends AbstractSlimeboundCard {
 
         baseMagicNumber = magicNumber = 2;
         SlimeboundMod.loadJokeCardImage(this, "FirmFortitude.png");
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 

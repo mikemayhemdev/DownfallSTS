@@ -18,6 +18,7 @@ import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.LoseThornsPower;
 import hermit.actions.ReduceDebuffsAction;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
@@ -38,6 +39,7 @@ public class GemFire extends AbstractGuardianCard {
         this.exhaust = true;
         this.baseDamage = DAMAGE;
         this.socketCount = SOCKETS;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, GuardianMod.makeBetaCardPath("GemFire.png"));

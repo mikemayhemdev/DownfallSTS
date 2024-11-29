@@ -272,7 +272,7 @@ public class NeowBossFinal extends AbstractMonster {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 30), 30));
                         }
                         if (AbstractDungeon.ascensionLevel < 19) {
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 20), 30));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 20), 20));
                         }
                 }
 
