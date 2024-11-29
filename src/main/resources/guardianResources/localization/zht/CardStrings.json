@@ -424,11 +424,6 @@
     "DESCRIPTION": "    ！！！！！！！！！！！！   以下為疑似棄用文本，為了保險起見防止遊戲崩潰，暫未刪除。    ！！！！！！！！！！！！  ",
     "UPGRADE_DESCRIPTION": "    ！！！！！！！！！！！！   以下為疑似棄用文本，為了保險起見防止遊戲崩潰，暫未刪除。    ！！！！！！！！！！！！  "
   },
-  "Guardian:PackageMass": {
-    "NAME": "組件: 團塊",
-    "DESCRIPTION": "棄用",
-    "UPGRADE_DESCRIPTION": "棄用"
-  },
   "Guardian:HammerDown": {
     "NAME": "墜落重錘",
     "DESCRIPTION": "棄用"
