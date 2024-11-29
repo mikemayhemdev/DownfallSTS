@@ -50,7 +50,7 @@
     "NAME": "Fear No Evil",
     "DESCRIPTIONS": [
       "If you play an attack card this turn, Watcher will change her stance to #yCalm once she plays her #yFear #yNo #yEvil card.",
-      "Watcher will change stance to #yCalm once she plays its #yFear #yNo #yEvil card."
+      "Watcher will change her stance to #yCalm once she plays her #yFear #yNo #yEvil card."
     ]
   },
   "downfall:PoisonResist": {
