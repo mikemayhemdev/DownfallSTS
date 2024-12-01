@@ -13,7 +13,7 @@
 },
 "hermit:ShadowCloakPower": {
         "NAME": "Shadow Cloak",
-        "DESCRIPTIONS": ["Whenever you draw or #yExhaust a curse, gain #b", " Block."]
+        "DESCRIPTIONS": ["Whenever you draw or #yExhaust a #yCurse card, gain #b", " #yBlock."]
 },
 "hermit:TakeAimPower": {
         "NAME": "Take Aim",
@@ -21,7 +21,7 @@
 },
 "hermit:AdaptPower": {
         "NAME": "Adapt",
-        "DESCRIPTIONS": ["At the start of your turn, #yExhaust up to #b", " card to gain #b8 Block." , " cards. Gain #b8 Block for each."]
+        "DESCRIPTIONS": ["At the start of your turn, #yExhaust up to #b", " card to gain #b8 #yBlock." , " cards. Gain #b8 #yBlock for each."]
 },
 "hermit:Bruise": {
         "NAME": "Bruised",
@@ -29,7 +29,7 @@
 },
 "hermit:HorrorPower": {
         "NAME": "Horror",
-        "DESCRIPTIONS": ["Bruise will not wear off for #b", " turn.", " turns."]
+        "DESCRIPTIONS": ["#yBruise will not wear off for #b", " turn.", " turns."]
 },
 "hermit:ComboPower": {
         "NAME": "Combo",
@@ -41,7 +41,7 @@
 },
 "hermit:BrawlPower": {
         "NAME": "Brawl",
-        "DESCRIPTIONS": ["At the start of your turn, apply #b", " Bruise to ALL enemies."]
+        "DESCRIPTIONS": ["At the start of your turn, apply #b", " #yBruise to ALL enemies."]
 },
 "hermit:Rugged": {
         "NAME": "Rugged",
@@ -61,7 +61,7 @@
 },
 "hermit:Drained": {
         "NAME": "Drained",
-        "DESCRIPTIONS": ["Gain #b", " less energy next turn."]
+        "DESCRIPTIONS": ["Gain #b", " less [E] next turn."]
 },
 "hermit:DeterminationPower": {
         "NAME": "Determination",
@@ -81,7 +81,7 @@
 },
 "hermit:CoalescencePower": {
         "NAME": "Coalescence",
-        "DESCRIPTIONS": ["At the end of your turn, #yRetain up to #b", " Card.", " Cards."]
+        "DESCRIPTIONS": ["At the end of your turn, #yRetain up to #b", " card.", " cards."]
 },
 "hermit:ReprievePower": {
         "NAME": "Reprieve",
