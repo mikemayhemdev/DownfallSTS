@@ -45,7 +45,7 @@
   "Slimebound:ScrapOoze": {
     "NAME": "Scrap Ooze",
     "DESCRIPTIONS": [
-      "Any slime is a friend in your cause.  With offerings of new scrap and treasure, the Scrap Ooze joins your quest."
+      "Any slime is a friend in your cause. With offerings of new scrap and treasure, the Scrap Ooze joins your quest."
     ],
     "OPTIONS": [
       "[Recruit] #rLose ",
@@ -59,7 +59,7 @@
     "NAME": "The Art of Slime War",
     "DESCRIPTIONS": [
       "You come across a disgusting pedestal with a #gglowing #gbook sitting atop. It appears this book contains the complicated and advanced combat techniques used by the #gSlime #gBoss and its minions.",
-      "As you reach for the book, you hear several traps activate.  You won't be able to avoid them all.",
+      "As you reach for the book, you hear several traps activate. You won't be able to avoid them all.",
       "You steal the book and manage to avoid the traps, but fall into a horrible puddle of goop.",
       "Grabbing the book revealed a trap of spikes below the floor, which you narrowly escape, but not without a severe gash.",
       "As soon as the book leaves the pedestal, you feel it draining your very life essence. It had better be worth it.",

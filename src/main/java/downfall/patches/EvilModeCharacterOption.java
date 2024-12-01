@@ -53,23 +53,23 @@ public class EvilModeCharacterOption {
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[6] + TEXT[11]);
                 }
-            } else if (__instance.c.chosenClass == GremlinEnum.GREMLIN) {
+            } else if (__instance.c.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
                 if (UnlockTracker.isCharacterLocked("Automaton")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[7] + TEXT[11]);
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[8] + TEXT[11]);
                 }
-            } else if (__instance.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
-                if (UnlockTracker.isCharacterLocked("Gremlin")) {
+            }  else if (__instance.c.chosenClass == GremlinEnum.GREMLIN) {
+                if (UnlockTracker.isCharacterLocked("Collector")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[9] + TEXT[11]);
                 } else {
-                    TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[10] + TEXT[11]);
+                    TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[13] + TEXT[11]);
                 }
-            } else if (__instance.c.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
-                if (UnlockTracker.isCharacterLocked("Collector")) {
+            }  else if (__instance.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
+                if (UnlockTracker.isCharacterLocked("Gremlin")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[12] + TEXT[11]);
                 } else {
-                    TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[13] + TEXT[11]);
+                    TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[10] + TEXT[11]);
                 }
             }
         }

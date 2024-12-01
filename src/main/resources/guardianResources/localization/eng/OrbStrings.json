@@ -2,7 +2,7 @@
   "Guardian:EmptyStasisSlot": {
     "NAME": "Stasis Slot",
     "DESCRIPTION": [
-      "Cards can be placed into this slot through #yStasis."
+      "Cards can be placed into this slot through #yStasis [REMOVE_SPACE]."
     ]
   },
   "Guardian:StasisOrb": {
