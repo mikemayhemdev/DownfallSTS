@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
+import downfall.actions.ForceWaitAction;
 import guardian.GuardianMod;
 import guardian.powers.BracePerTurnPower;
 import guardian.powers.EvasiveProtocolPower;
@@ -68,6 +69,8 @@ public class SpikerProtocol extends AbstractGuardianCard {
         if (this.upgraded) {
             brace(9);
         }
+
+        AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(1F));
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SpikerProtocolPower(p, magicNumber)));
 

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import downfall.actions.ForceWaitAction;
 import guardian.GuardianMod;
 import guardian.powers.BracePerTurnPower;
 import guardian.stances.DefensiveMode;
@@ -59,8 +60,6 @@ public class EvasiveProtocol extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EvasiveProtocolPower(p, magicNumber)));
 
         if (!this.upgraded) {
             brace(6);
@@ -69,6 +68,10 @@ public class EvasiveProtocol extends AbstractGuardianCard {
         if (this.upgraded) {
             brace(9);
         }
+
+        AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(1F));
+
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EvasiveProtocolPower(p, magicNumber)));
 
         if (p.stance instanceof DefensiveMode) {
             AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));

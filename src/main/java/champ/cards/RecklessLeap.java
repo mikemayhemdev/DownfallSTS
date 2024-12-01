@@ -28,15 +28,17 @@ public class RecklessLeap extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         //myHpLossCost = MAGIC;
+        tags.add(ChampMod.OPENER);
+        this.tags.add(ChampMod.OPENERBERSERKER);
         exhaust = true;
         tags.add(CardTags.STRIKE);
         loadJokeCardImage(this, "RecklessLeap.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        berserkOpen();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         applyToSelf(new StrengthPower(p, magicNumber));
-        berserkOpen();
     }
 
     public void upp() {

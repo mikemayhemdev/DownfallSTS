@@ -504,7 +504,7 @@
   },
   "collector:GiantHeadCardStageTwo": {
     "NAME": "Tock",
-    "DESCRIPTION": "Next turn, gain a *Headcrush."
+    "DESCRIPTION": "Next turn, gain a *Headcrush. NL Exhaust."
   },
   "collector:GiantHeadCardStageThree": {
     "NAME": "Headcrush",

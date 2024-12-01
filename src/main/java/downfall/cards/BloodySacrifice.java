@@ -27,7 +27,7 @@ public class BloodySacrifice extends AbstractDownfallCard {
     public BloodySacrifice() {
         super(ID, cardStrings.NAME, IMG_PATH, 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
         isEthereal = true;
-        baseMagicNumber = magicNumber = 12;
+        baseMagicNumber = magicNumber = 8;
         exhaust = true;
     }
 
@@ -40,7 +40,10 @@ public class BloodySacrifice extends AbstractDownfallCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new LoseHPAction(p, p, lose_hp));
+        AbstractDungeon.player.maxHealth -= this.lose_hp;
+        if (AbstractDungeon.player.currentHealth > AbstractDungeon.player.maxHealth) {
+            AbstractDungeon.player.currentHealth = AbstractDungeon.player.maxHealth;
+        }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RitualPower(p, 1, true), 1));
     }
 
@@ -48,7 +51,7 @@ public class BloodySacrifice extends AbstractDownfallCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(-5);
+            upgradeMagicNumber(-3);
         }
     }
 

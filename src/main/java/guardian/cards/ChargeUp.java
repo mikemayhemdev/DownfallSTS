@@ -23,7 +23,7 @@ public class ChargeUp extends AbstractGuardianCard {
         super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.GUARDIAN, CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = 7;
         this.baseMagicNumber = this.magicNumber = 2;
-        this.socketCount = 0;
+        this.socketCount = 1;
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("ChargeUp.png"));

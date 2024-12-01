@@ -23,7 +23,7 @@ public class ThornWhip extends AbstractCollectorCard {
 
     public ThornWhip() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = 5;
+        baseDamage = 6;
         isMultiDamage = true;
     }
 

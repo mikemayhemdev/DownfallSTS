@@ -24,5 +24,6 @@ public class SneckoCard extends AbstractCollectibleCard {
 
     public void upp() {
         upgradeMagicNumber(1);
+        uDesc();
     }
 }

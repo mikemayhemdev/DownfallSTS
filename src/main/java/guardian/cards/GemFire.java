@@ -23,6 +23,8 @@ import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
+import static collector.util.Wiz.applyToEnemy;
+
 public class GemFire extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("GemFire");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -69,6 +71,7 @@ public class GemFire extends AbstractGuardianCard {
         nonSyntheticSockets.addAll(syntheticSockets); // Combine lists
         for (GuardianMod.socketTypes socket : nonSyntheticSockets) {
             processSocket(p, m, socket);
+            AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(0.1F));
         }
     }
 
@@ -163,18 +166,20 @@ public class GemFire extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, lossPower, lossPower.amount));
     }
 
-    private void applyVulnerableToAllEnemies(AbstractPlayer p, int amount) {
+
+    private void weakenAllEnemies(AbstractPlayer p, int amount) {
         for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (!monster.isDeadOrEscaped()) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new VulnerablePower(monster, amount, false), amount));
+            applyToEnemy(monster, new StrengthPower(monster, -amount));
+            if (!monster.hasPower(ArtifactPower.POWER_ID)) {
+                applyToEnemy(monster, new GainStrengthPower(monster, amount));
             }
         }
     }
 
-    private void weakenAllEnemies(AbstractPlayer p, int amount) {
+    private void applyVulnerableToAllEnemies(AbstractPlayer p, int amount) {
         for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!monster.isDeadOrEscaped()) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, amount, false), amount));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new VulnerablePower(monster, amount, false), amount));
             }
         }
     }
