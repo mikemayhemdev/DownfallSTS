@@ -200,7 +200,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "Overwhelming Power",
-    "DESCRIPTION": "Gain [E] [E] [E]. NL Draw !hermit:SecondMagic! cards. NL Whenever you end your turn with 0 Energy, lose !M! HP."
+    "DESCRIPTION": "Gain [E] [E] [E]. NL Draw !hermit:SecondMagic! cards. NL Whenever you end your turn with 0 *Energy, lose !M! HP."
   },
   "hermit:Maintenance": {
     "NAME": "Maintenance",
@@ -288,7 +288,7 @@
     "DESCRIPTION": "Discard your hand. Add the !M! rarest cards from your draw pile to your hand."
   },
   "hermit:DeadOrAlive": {
-    "NAME": "Dead Or Alive",
+    "NAME": "Dead or Alive",
     "DESCRIPTION": "Deal !D! damage X times. NL If Fatal, get a hermit:Bounty. NL Exhaust."
   },
   "hermit:GoldenBullet": {
@@ -304,8 +304,8 @@
     "DESCRIPTION": "Deal !D! damage. NL hermit:Dead_On: Reduce the cost of a random card in your hand by !M! this turn."
   },
   "hermit:EyeOfTheStorm": {
-    "NAME": "Eye Of The Storm",
-    "DESCRIPTION": "hermit:Concentrate. NL Gain Energy up to your maximum. NL Exhaust."
+    "NAME": "Eye of the Storm",
+    "DESCRIPTION": "hermit:Concentrate. NL Gain *Energy up to your maximum. NL Exhaust."
   },
   "hermit:FinalCanter": {
     "NAME": "Final Canter",

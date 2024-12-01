@@ -7,7 +7,7 @@
       "dead_on",
       "deadon"
     ],
-    "DESCRIPTION": "Dead On cards have a bonus effect when in the middle of your hand."
+    "DESCRIPTION": "#yDead #yOn cards have a bonus effect when in the middle of your hand."
   },
   {
     "PROPER_NAME": "Concentration",
@@ -26,7 +26,7 @@
       "bruise",
       "bruised"
     ],
-  "DESCRIPTION": "Bruised targets take more attack damage. Wears off on turn end."
+  "DESCRIPTION": "#yBruised targets take more attack damage. Wears off on turn end."
 },
   {
     "ID": "rugged",
@@ -41,7 +41,7 @@
     "NAMES": [
       "bounty"
     ],
-  "DESCRIPTION": "Normal Enemy: #b15 gold.      Elite Enemy: #b40 gold.            Boss: #b100 gold."
+  "DESCRIPTION": "Normal Enemy: #b15 #yGold.      Elite Enemy: #b40 #yGold.            Boss: #b100 #yGold."
 },
   {
     "PROPER_NAME": "Stun",
@@ -51,7 +51,7 @@
       "stunned",
       "Stunned"
     ],
-    "DESCRIPTION": "Stunned enemies skip their turn."
+    "DESCRIPTION": "#yStunned enemies skip their turn."
   }
 
 ]
