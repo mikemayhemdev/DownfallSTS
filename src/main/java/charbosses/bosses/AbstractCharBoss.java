@@ -1046,7 +1046,10 @@ public void damage(final DamageInfo info) {
         }
     }
 
-    DamageModifierPatches.OnAttackMonster.toChangeDamage(this, info, damageAmount);
+    int[] arrayOfInt2 = new int[1];
+    arrayOfInt2[0] = damageAmount;
+    DamageModifierPatches.OnAttackMonster.toChangeDamage(this, info, arrayOfInt2);
+    damageAmount = arrayOfInt2[0];
 
     for (final AbstractRelic r : this.relics) {
         damageAmount = r.onAttackedToChangeDamage(info, damageAmount);
