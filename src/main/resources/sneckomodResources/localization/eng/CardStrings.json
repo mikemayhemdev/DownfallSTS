@@ -65,8 +65,8 @@
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
-    "DESCRIPTION": "Unplayable. NL sneckomod:Gift: Upgraded Rare and !M! Gold.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL sneckomod:Gift: Upgraded Rare and !M! Gold.",
+    "DESCRIPTION": "Unplayable. NL Cannot be removed from your deck. NL sneckomod:Gift: Upgraded Rare and !M! Gold.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL Cannot be removed from your deck. NL sneckomod:Gift: Upgraded Rare and !M! Gold.",
     "DESCRIPTION_BATTLE": "Unplayable.",
     "UPGRADE_DESCRIPTION_BATTLE": "Unplayable. NL Ethereal."
   },
@@ -554,6 +554,10 @@
   "sneckomod:ComboString": {
     "NAME": "Combo String",
     "DESCRIPTION": "Deal !D! damage for each sneckomod:Offclass card played this turn. NL sneckomod:Gift: Uncommon.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (hits ",
+      " x times.)"
+    ],
     "DESCRIPTION_BATTLE": "Deal !D! damage for each sneckomod:Offclass card played this turn."
   },
   "sneckomod:ThrowingCards": {

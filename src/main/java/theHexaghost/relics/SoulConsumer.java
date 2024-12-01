@@ -55,7 +55,7 @@ public class SoulConsumer extends CustomRelic {
     }
 
     public void onVictory() {
-        this.counter = -1;
+        this.counter = 0;
     }
 
     //    @Override

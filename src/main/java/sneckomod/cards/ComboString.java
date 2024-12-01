@@ -38,6 +38,23 @@ public class ComboString extends AbstractSneckoCard {
     }
 
     @Override
+    public void applyPowers() {
+        super.applyPowers();
+
+        int offclassCardsPlayed = (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
+                .filter(card -> card.color != AbstractDungeon.player.getCardColor())
+                .count();
+
+        updateDescription(offclassCardsPlayed);
+    }
+
+    private void updateDescription(int offclassCardsPlayed) {
+        this.rawDescription = cardStrings.DESCRIPTION + EXTENDED_DESCRIPTION[0] + offclassCardsPlayed + EXTENDED_DESCRIPTION[1];
+        initializeDescription();
+    }
+
+
+    @Override
     public void onObtainCard() {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
         while (cardsToReward.size() < 3) {

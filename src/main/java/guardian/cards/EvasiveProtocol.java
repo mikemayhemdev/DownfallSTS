@@ -59,6 +59,8 @@ public class EvasiveProtocol extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
+        
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EvasiveProtocolPower(p, magicNumber)));
 
         if (!this.upgraded) {
             brace(6);
@@ -67,8 +69,6 @@ public class EvasiveProtocol extends AbstractGuardianCard {
         if (this.upgraded) {
             brace(9);
         }
-
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EvasiveProtocolPower(p, magicNumber)));
 
         if (p.stance instanceof DefensiveMode) {
             AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));

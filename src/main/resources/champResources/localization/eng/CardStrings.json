@@ -269,7 +269,7 @@
   },
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
-    "DESCRIPTION": "Deal !D! damage X times. Perform X times, at least once:",
+    "DESCRIPTION": "Deal !D! damage X times. NL Perform X times, at least once:",
     "EXTENDED_DESCRIPTION": [
       "Berserker champ:Combo: Deal !D! damage X times. NL ",
       "Defensive champ:Combo: Gain !B! Block X times.",
@@ -348,7 +348,7 @@
   },
   "champ:Parry": {
     "NAME": "Parry",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL If champ:Counter is used this turn, Gain another *Riposte *Strike.",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL If champ:Counter is used this turn, gain another *Riposte *Strike.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Deal damage equal to the amount of champ:Counter used. NL Exhaust."
   },
   "champ:EnchantCrown": {

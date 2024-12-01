@@ -332,7 +332,7 @@
   },
   "hexamod:BrightRitual": {
     "NAME": "Bright Ritual",
-    "DESCRIPTION": "Reset the ghostflame wheel. NL Gain [E] and draw 1 card for each Ghostflame hexamod:Extinguished this way. NL Exhaust."
+    "DESCRIPTION": "Reset the Wheel. NL Gain [E] and draw 1 for each Ghostflame hexamod:Extinguished. NL Exhaust."
   },
   "hexamod:NaughtySpirit": {
     "NAME": "Naughty Spirit",

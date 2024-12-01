@@ -2,7 +2,7 @@
   "champ:CounterPower": {
     "NAME": "Counter",
     "DESCRIPTIONS": [
-      "The next time you receive #yAttack damage, gain a #yRiposte Strike that deals #b",
+      "The next time you receive #yAttack damage, gain a #yRiposte #yStrike that deals #b",
       " damage."
     ]
   },

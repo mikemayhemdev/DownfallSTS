@@ -248,8 +248,9 @@
   },
   "Guardian:GemFire": {
     "NAME": "Gem Cannon",
-    "DESCRIPTION": "Deal !D! damage. NL Activate ALL of your guardianmod:Gems. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " NL (You have !M! Gem(s).)"
+    "DESCRIPTION": "Deal !D! damage. NL Activate ALL of your Socketed guardianmod:Gems. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " NL (You have !M! Gem(s).)",
+    "NOTE, don't TL": "This was meant to work on unsocketed gems too but I gave up because gems are weird."
   },
   "Guardian:ChargeCore": {
     "NAME": "Charge Core",
@@ -308,16 +309,16 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "Evasive Protocol",
-    "DESCRIPTION": "guardianmod:Brace 6. NL Whenever you enter *Defensive *Mode, reduce each of your debuffs by !M!.",
-    "UPGRADE_DESCRIPTION": "guardianmod:Brace 9. NL Whenever you enter *Defensive *Mode, reduce each of your debuffs by !M!."
+    "DESCRIPTION": "Whenever you enter *Defensive *Mode, reduce each of your debuffs by !M!. NL guardianmod:Brace 6.",
+    "UPGRADE_DESCRIPTION": "Whenever you enter *Defensive *Mode, reduce each of your debuffs by !M!. NL guardianmod:Brace 9."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "Spiker Protocol",
-    "DESCRIPTION": "guardianmod:Brace 6. NL Whenever you enter *Defensive *Mode, gain !M! Thorns.",
-    "UPGRADE_DESCRIPTION": "guardianmod:Brace 9. NL Whenever you enter *Defensive *Mode, gain !M! Thorns."
+    "DESCRIPTION": "Whenever you enter *Defensive *Mode, gain !M! Thorns. NL guardianmod:Brace 6.",
+    "UPGRADE_DESCRIPTION": "Whenever you enter *Defensive *Mode, gain !M! Thorns. NL guardianmod:Brace 9."
   },
   "Guardian:ArmoredProtocol": {
-    "NAME": "Armored Protocol",
+    "NAME": "Armored Protocol (Deprecated card do not TL!)",
     "DESCRIPTION": "Gain !M! Block at the end of each turn while in *Defensive *Mode. NL At the start of your turn, guardianmod:Brace 3."
   },
   "Guardian:TimeSifter": {

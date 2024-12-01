@@ -625,7 +625,8 @@
   },
   "collector:SneckoCard": {
     "NAME": "Snecko",
-    "DESCRIPTION": "Draw !M! cards. NL sneckomod:Muddle your hand."
+    "DESCRIPTION": "Draw !M! card. NL sneckomod:Muddle your hand.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL sneckomod:Muddle your hand."
   },
   "collector:SphericGuardianCard": {
     "NAME": "Spheric Guardian",

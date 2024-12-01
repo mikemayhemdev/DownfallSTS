@@ -24,6 +24,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
         tags.add(CardTags.HEALING);
         tags.add(expansionContentMod.UNPLAYABLE);
         SneckoMod.loadJokeCardImage(this, "GlitteringGambit.png");
+        SoulboundField.soulbound.set(this, true);
     }
 
     @Override
@@ -32,7 +33,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
 
     @Override
     public void onObtainCard() {
-        this.addToBot(new GainGoldAction(this.magicNumber));
+        AbstractDungeon.player.gainGold(this.magicNumber);
         displayCardRewards(AbstractCard.CardRarity.RARE, "Special Bonus Card!");
     }
 

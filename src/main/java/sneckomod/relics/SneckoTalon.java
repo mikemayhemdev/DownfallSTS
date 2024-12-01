@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,6 +14,8 @@ import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 import sneckomod.actions.MuddleRandomCardAction;
+import sneckomod.actions.SuperSneckoSoulAction;
+import sneckomod.cards.SoulRoll;
 import sneckomod.powers.CheapStockPower;
 
 
@@ -31,13 +34,9 @@ public class SneckoTalon extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
-    public void atBattleStartPreDraw() {
-        this.flash();
-        applyToSelf(new CheapStockPower(1));
-    }
-
-    public void atBattleStart() {
-        atb(new MuddleRandomCardAction(1, true));
+    @Override
+    public void atTurnStartPostDraw() {
+            AbstractDungeon.actionManager.addToBottom(new SuperSneckoSoulAction());
     }
 
     public String getUpdatedDescription() {

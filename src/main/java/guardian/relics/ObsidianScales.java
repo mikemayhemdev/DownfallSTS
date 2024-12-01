@@ -29,10 +29,10 @@ public class ObsidianScales extends CustomRelic implements OnReceivePowerRelic{
 
     @Override
     public boolean onReceivePower(AbstractPower var1, AbstractCreature var2) {
-        if (var1.type == AbstractPower.PowerType.DEBUFF && !var1.ID.equals("Shackled") && !var1.ID.equals("Guardian:LoseThornsPower") && !var1.ID.equals("Flex") && !var1.ID.equals("DexLoss") ) {
+       // if (var1.type == AbstractPower.PowerType.DEBUFF && !var1.ID.equals("Shackled") && !var1.ID.equals("Guardian:LoseThornsPower") && !var1.ID.equals("Flex") && !var1.ID.equals("DexLoss") ) {
             this.flash();
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, 3), 3));
-        }
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, 2), 2));
+        //}
         return true;
     }
 

@@ -76,6 +76,8 @@ public class MindBloom_Evil extends AbstractImageEvent {
                 this.imageEventText.setDialogOption(OPTIONSALT[5]);
             } else {
                 this.imageEventText.setDialogOption(OPTIONSALT[2]);
+                //if ruining the surprise is important use this instead
+                // this.imageEventText.setDialogOption(OPTIONSALT[2], new BurdenOfKnowledge());
             }
         } else {
             this.imageEventText.setDialogOption(OPTIONSALT[3], true);

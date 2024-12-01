@@ -214,7 +214,7 @@
       "You walk around it, wondering what could have been."
     ],
     "OPTIONS": [
-      "[Enter] #gUpgrade #g3 #grandom #gcards. #rBecome #rCursed #r- #rFlawed.",
+      "[Enter] #gUpgrade #g3 #grandom #gcards. #rBecome #rCursed #r- #rIcky.",
       "[Leave]",
       "[Locked] Requires: Upgradeable Cards"
     ]
@@ -616,10 +616,11 @@
     "DESCRIPTIONS": [
       "Only you should hold this power. You shatter the shrine into pieces. NL A dark wail echoes all around you, and you can feel the Shrine's #p~cursed~ #p~magic~ seep into your bones."    ],
     "OPTIONS": [
-      "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rSapped.",
-      "[Desecrate] #gRemove #g3 #gcards. #rCursed #r- #rSapped.",
-      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rSapped.",
-      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rSapped."
+      "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rAged.",
+      "[Desecrate] #gRemove #g2 #gcards. #rLose #r",
+      " #rMax #rHP.",
+      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rFlawed.",
+      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rPain."
     ]
   }
 }

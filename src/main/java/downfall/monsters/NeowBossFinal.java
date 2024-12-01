@@ -89,11 +89,11 @@ public class NeowBossFinal extends AbstractMonster {
         e.setTime(e.getEndTime() * MathUtils.random());
 
         if (AbstractDungeon.ascensionLevel >= 4) {
-            this.damage.add(new DamageInfo(this, 10)); //Eye Beam Damage
-            this.damage.add(new DamageInfo(this, 40));  //Scream Damage
+            this.damage.add(new DamageInfo(this, 12)); //Eye Beam Damage
+            this.damage.add(new DamageInfo(this, 44));  //Scream Damage
         } else {
-            this.damage.add(new DamageInfo(this, 8)); //Eye Beam Damage
-            this.damage.add(new DamageInfo(this, 30));  //Scream Damage
+            this.damage.add(new DamageInfo(this, 9)); //Eye Beam Damage
+            this.damage.add(new DamageInfo(this, 33));  //Scream Damage
         }
 
         this.strAmt = 2; //Strength Scaling for growth ability

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import downfall.cards.curses.Icky;
 import downfall.cards.curses.Malfunctioning;
 
 import java.util.*;
@@ -45,7 +46,7 @@ public class ShiningLight_Evil extends AbstractImageEvent {
         this.screen = CUR_SCREEN.INTRO;
 
         if (AbstractDungeon.player.masterDeck.hasUpgradableCards()) {
-            this.imageEventText.setDialogOption(OPTIONS[0], new Malfunctioning());
+            this.imageEventText.setDialogOption(OPTIONS[0], new Icky());
         } else {
             this.imageEventText.setDialogOption(OPTIONS[2], true);
         }
@@ -130,7 +131,7 @@ public class ShiningLight_Evil extends AbstractImageEvent {
             }
         }
 
-        Malfunctioning curse = new Malfunctioning();
+        Icky curse = new Icky();
         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
         logMetric(ID, "Entered Light", Collections.singletonList(curse.cardID), null, null, cardMetrics, null, null, null,
                 0, 0, 0, 0, 0, 0);

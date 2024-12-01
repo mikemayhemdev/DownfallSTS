@@ -15,10 +15,9 @@ public class Sapped extends AbstractCollectorCard {
     public final static String ID = makeID(Sapped.class.getSimpleName());
     // intellij stuff skill, none, special, , , , , 1, 1
     public Sapped() {
-        super(ID, 1, CardType.CURSE, CardRarity.SPECIAL, CardTarget.NONE, CardColor.CURSE);
+        super(ID, 0, CardType.CURSE, CardRarity.SPECIAL, CardTarget.NONE, CardColor.CURSE);
         baseMagicNumber = magicNumber = 1;
         isPyre();
-
         exhaust = true;
         SoulboundField.soulbound.set(this, true);
     }

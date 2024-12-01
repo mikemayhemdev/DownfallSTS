@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.*;
+import downfall.actions.ForceWaitAction;
 import guardian.GuardianMod;
 import guardian.actions.ReduceRightMostStasisAction;
 import guardian.orbs.StasisOrb;
@@ -151,6 +152,7 @@ public class GemFire extends AbstractGuardianCard {
                 AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(p, 1));
                 break;
             case YELLOW:
+                AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(0.1F));
                 AbstractDungeon.actionManager.addToBottom(new ReduceRightMostStasisAction());
                 break;
         }

@@ -40,7 +40,6 @@ public class UnknownEgg extends CustomRelic {
     }
 
     public void onObtainCard(AbstractCard c) {
-        // Check if the card's color is different from the player's color and upgrade if so
         if (!c.upgraded && c.color != AbstractDungeon.player.getCardColor() || (!c.upgraded && (c instanceof AbstractUnknownCard))) {
             c.upgrade();
         }

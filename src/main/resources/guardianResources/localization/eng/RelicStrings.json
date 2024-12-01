@@ -17,7 +17,7 @@
     "NAME": "Obsidian Scales",
     "FLAVOR": "Stain the sky black with your blood. Retaliate against all who struck out at you.",
     "DESCRIPTIONS": [
-      "At the start of combat and whenever you are debuffed, gain 3 #yThorns."
+      "At the start of combat, gain 3 Thorns. Whenever you are debuffed or gain a debuff, gain 2 #yThorns."
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
@@ -45,7 +45,7 @@
     "NAME": "Sack of Gems",
     "FLAVOR": "Ooh... shiny!",
     "DESCRIPTIONS": [
-      "Upon pickup, you may choose up to #b5 random #yguardianmod:Gems to your deck."
+      "Upon pickup, you may choose up to #b5 random #yguardianmod:Gems to add to your deck."
     ]
   },
   "Guardian:StasisCodex": {

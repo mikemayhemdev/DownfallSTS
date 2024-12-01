@@ -25,7 +25,10 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
 
         maxHPModifier += 315;
         if (AbstractDungeon.ascensionLevel >= 19) {
-            maxHPModifier += 24;
+            maxHPModifier += 90;
+            //why was this 24 it's ascension 19 and also act 3 that's nothing you could have gave him something
+            //sadistic like duvu but whatever
+            //actually I just counted duvu would make this fight too hard, so I'm just increasing the HP gain to 90.
         }
         actNum = 3;
         bossMechanicName = HermitDoomsday.NAME;

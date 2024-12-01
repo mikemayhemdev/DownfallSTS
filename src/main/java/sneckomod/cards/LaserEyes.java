@@ -1,11 +1,15 @@
 package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import sneckomod.SneckoMod;
 
 public class LaserEyes extends AbstractSneckoCard {
@@ -24,10 +28,10 @@ public class LaserEyes extends AbstractSneckoCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Deal damage to the targeted enemy
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        this.addToBot(new SFXAction("ATTACK_HEAVY"));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
 
-        // Gain 1 energy
         addToBot(new GainEnergyAction(1));
     }
 
