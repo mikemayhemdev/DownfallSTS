@@ -53,7 +53,7 @@
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "Overwhelming Power",
-        "DESCRIPTIONS": ["Lose #b"," HP if you end your turn with #b0 #yEnergy."]
+        "DESCRIPTIONS": ["Lose #b"," HP if you end your turn with #b0 Energy."]
 },
 "hermit:Bounty": {
         "NAME": "Bounty",
