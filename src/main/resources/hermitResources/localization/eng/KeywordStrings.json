@@ -7,7 +7,7 @@
       "dead_on",
       "deadon"
     ],
-    "DESCRIPTION": "#yDead #yOn cards have a bonus effect when in the middle of your hand."
+    "DESCRIPTION": "Dead On cards have a bonus effect when in the middle of your hand."
   },
   {
     "PROPER_NAME": "Concentration",
@@ -17,7 +17,7 @@
       "concentrated",
       "Concentrated"
     ],
-    "DESCRIPTION": "The next #yDead #yOn card played while #yConcentrated triggers its effect regardless of position. Wears off on turn end."
+    "DESCRIPTION": "The next #yDead #yOn card played while Concentrated triggers its effect regardless of position. Wears off on turn end."
   },
   {
     "ID": "bruise",
@@ -26,7 +26,7 @@
       "bruise",
       "bruised"
     ],
-  "DESCRIPTION": "#yBruised targets take more attack damage. Wears off on turn end."
+  "DESCRIPTION": "Bruised targets take more attack damage. Wears off on turn end."
 },
   {
     "ID": "rugged",
@@ -51,7 +51,7 @@
       "stunned",
       "Stunned"
     ],
-    "DESCRIPTION": "#yStunned enemies skip their turn."
+    "DESCRIPTION": "Stunned enemies skip their turn."
   }
 
 ]
