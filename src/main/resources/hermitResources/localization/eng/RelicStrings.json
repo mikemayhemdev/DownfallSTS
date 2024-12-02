@@ -32,7 +32,7 @@
     "NAME": "Spyglass",
     "FLAVOR": "Property of Kestin Highfin.",
     "DESCRIPTIONS": [
-      "If you end your turn #yhermit:Concentrated, gain an additional [E] next turn ."
+      "If you end your turn #yhermit:Concentrated, gain an additional [E] next turn."
     ]
   },
   "hermit:RedScarf": {
@@ -67,7 +67,7 @@
     "NAME": "Clasped Locket",
     "FLAVOR": "It won't open anymore.",
     "DESCRIPTIONS": [
-      "Replaces #yOld #yLocket. First time you draw a curse each turn, #yExhaust it and draw #b2 cards. Upon pickup, obtain #b2 #rInjuries.",
+      "Replaces #yOld #yLocket. First time you draw a #rCurse each turn, #yExhaust it and draw #b2 cards. Upon pickup, obtain #b2 #rInjuries.",
       "Never again..."
     ]
   },
@@ -82,7 +82,7 @@
     "NAME": "Brass Tacks",
     "FLAVOR": "The luster on these tacks never seems to fade.",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain #b2 Block."
+      "At the end of your turn, gain #b2 #yBlock."
     ]
   },
   "hermit:BlackPowder": {
@@ -96,7 +96,7 @@
     "NAME": "Broken Tooth",
     "FLAVOR": "Appears too large to have come from a human jaw...",
     "DESCRIPTIONS": [
-      "Whenever you defeat an Elite encounter, heal #b7 HP and gain #b35 gold."
+      "Whenever you defeat an Elite encounter, heal #b7 HP and gain #b35 #yGold."
     ]
   }
 }

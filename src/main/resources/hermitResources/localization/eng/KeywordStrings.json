@@ -17,7 +17,7 @@
       "concentrated",
       "Concentrated"
     ],
-    "DESCRIPTION": "The next #yDead #yOn card played while #yConcentrated triggers its effect regardless of position. Wears off on turn end."
+    "DESCRIPTION": "The next #yDead #yOn card played while Concentrated triggers its effect regardless of position. Wears off on turn end."
   },
   {
     "ID": "bruise",
@@ -41,7 +41,7 @@
     "NAMES": [
       "bounty"
     ],
-  "DESCRIPTION": "Normal Enemy: #b15 gold.      Elite Enemy: #b40 gold.            Boss: #b100 gold."
+  "DESCRIPTION": "Normal Enemy: #b15 #yGold.      Elite Enemy: #b40 #yGold.            Boss: #b100 #yGold."
 },
   {
     "PROPER_NAME": "Stun",

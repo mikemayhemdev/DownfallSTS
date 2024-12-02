@@ -288,7 +288,7 @@
     "DESCRIPTION": "Discard your hand. Add the !M! rarest cards from your draw pile to your hand."
   },
   "hermit:DeadOrAlive": {
-    "NAME": "Dead Or Alive",
+    "NAME": "Dead or Alive",
     "DESCRIPTION": "Deal !D! damage X times. NL If Fatal, get a hermit:Bounty. NL Exhaust."
   },
   "hermit:GoldenBullet": {
@@ -304,7 +304,7 @@
     "DESCRIPTION": "Deal !D! damage. NL hermit:Dead_On: Reduce the cost of a random card in your hand by !M! this turn."
   },
   "hermit:EyeOfTheStorm": {
-    "NAME": "Eye Of The Storm",
+    "NAME": "Eye of the Storm",
     "DESCRIPTION": "hermit:Concentrate. NL Gain Energy up to your maximum. NL Exhaust."
   },
   "hermit:FinalCanter": {
