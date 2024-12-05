@@ -14,7 +14,7 @@ public class DaggerCard extends AbstractCollectibleCard {
 
     public DaggerCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 20;
+        baseDamage = 23;
         baseMagicNumber = magicNumber = 3;
     }
 

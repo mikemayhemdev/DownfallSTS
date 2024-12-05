@@ -21,7 +21,7 @@ public class BrainDrain extends AbstractCollectorCard {
     public BrainDrain() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         exhaust = true;
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 8;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 

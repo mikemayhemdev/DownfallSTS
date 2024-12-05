@@ -13,7 +13,7 @@ public class ClericCard extends AbstractCollectibleCard {
 
     public ClericCard() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 13;
         isPyre();
     }
 

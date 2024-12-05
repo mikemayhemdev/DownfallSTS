@@ -5,7 +5,9 @@ import collector.cards.Defend;
 import collector.cards.FuelTheFire;
 import collector.cards.Strike;
 import collector.cards.YouAreMine;
+import collector.relics.BlockedChakra;
 import collector.relics.EmeraldTorch;
+import collector.relics.HolidayCoal;
 import collector.util.DoubleEnergyOrb;
 import collector.util.RenderOnlyTorchHead;
 import collector.util.Wiz;
@@ -19,6 +21,9 @@ import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -30,12 +35,15 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.GlowyFireEyesEffect;
 import com.megacrit.cardcrawl.vfx.StaffFireEffect;
+import hermit.powers.Bruise;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import static collector.CollectorMod.*;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.getCurrRoom;
@@ -73,7 +81,6 @@ public class CollectorChar extends CustomPlayer {
     private final String atlasURL = "collectorResources/images/char/mainChar/skeleton.atlas";
     private final String jsonURL = "collectorResources/images/char/mainChar/skeleton.json";
     private float fireTimer = 0.0F;
-
     public static final float[] layerSpeeds = {-20.0F, 20.0F, -40.0F, 40.0F, 360.0F};
 
     public static final String COLLECTORTAKE = CardCrawlGame.languagePack.getUIString("collector:BonusEventOption").TEXT[0];
@@ -107,7 +114,7 @@ public class CollectorChar extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                65, 65, 0, 99, 5, this, getStartingRelics(),
+                75, 75, 0, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 
@@ -155,7 +162,7 @@ public class CollectorChar extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 7;
+        return 4;
     }
 
     @Override
@@ -266,6 +273,7 @@ public class CollectorChar extends CustomPlayer {
             torchHead.drawY = drawY + TORCHHEAD_YDIFF;
         }
     }
+
 
     @Override
     public void render(SpriteBatch sb) {

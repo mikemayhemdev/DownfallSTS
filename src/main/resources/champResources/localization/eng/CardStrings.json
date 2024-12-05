@@ -19,8 +19,8 @@
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
-    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, gain a champ:Combo of that Stance.",
-    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Gain a champ:Combo of that Stance.",
+    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, trigger its *Skill *Bonus.",
+    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Trigger its *Skill *Bonus.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Berserker.",
       "Enter champ:Defensive."
@@ -192,7 +192,7 @@
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a random Skill. NL It costs 0.",
+    "DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, gain Vigor equal to unblocked damage dealt.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a random Upgraded Skill. NL It costs 0."
   },
   "champ:CheapShot": {
@@ -236,7 +236,7 @@
   },
   "champ:Encircle": {
     "NAME": "Encircle",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Trigger Skill Bonus for each enemy hit."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Trigger *Skill *Bonus for each enemy hit."
   },
   "champ:LastStand": {
     "NAME": "Last Stand",

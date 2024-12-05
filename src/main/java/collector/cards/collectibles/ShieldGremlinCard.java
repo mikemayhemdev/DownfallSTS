@@ -11,7 +11,7 @@ public class ShieldGremlinCard extends AbstractCollectibleCard {
 
     public ShieldGremlinCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 9;
+        baseBlock = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

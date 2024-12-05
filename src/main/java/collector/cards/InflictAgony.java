@@ -33,7 +33,7 @@ public class InflictAgony extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
         upgradeMagicNumber(1);
     }
 

@@ -14,7 +14,7 @@ public class OrbWalkerCard extends AbstractCollectibleCard {
 
     public OrbWalkerCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 14;
+        baseDamage = 16;
         baseMagicNumber = magicNumber = 2;
         cardsToPreview = new Ember();
     }

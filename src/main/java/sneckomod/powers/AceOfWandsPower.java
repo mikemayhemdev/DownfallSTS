@@ -9,8 +9,11 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.WaveOfTheHandPower;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
+import sneckomod.actions.AceOfWandsAction;
+import sneckomod.patches.WaveOfTheHandPatch;
 
 public class AceOfWandsPower extends AbstractPower implements CloneablePowerInterface {
     public static final String POWER_ID = SneckoMod.makeID("AceOfWandsPower");
@@ -38,11 +41,10 @@ public class AceOfWandsPower extends AbstractPower implements CloneablePowerInte
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (power.type == PowerType.DEBUFF && !power.ID.equals("Shackled") && source == this.owner && target != this.owner && !target.hasPower("Artifact")) {
             this.flash();
-            addToTop(new GainBlockAction(owner, amount, true));
+            //patched in old hermit code to prevent wave of the hand softlock
+            addToTop(new AceOfWandsAction(amount));
+            }
         }
-
-    }
-
 
     @Override
     public void updateDescription() {

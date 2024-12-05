@@ -15,6 +15,9 @@ public class AceOfWands extends AbstractSneckoCard {
 
     //stupid intellij stuff POWER, SELF, RARE
 
+
+    //Queen of Pentacles
+
     public AceOfWands() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 4;

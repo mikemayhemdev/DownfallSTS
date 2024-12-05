@@ -1,12 +1,16 @@
 package collector.relics;
 
 import basemod.abstracts.CustomRelic;
+import collector.CollectorCollection;
 import collector.CollectorMod;
 import collector.actions.DrawCardFromCollectionAction;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.util.TextureLoader;
 
 import static collector.util.Wiz.atb;
+import static collector.util.Wiz.att;
 
 public class BagOfTricks extends CustomRelic {
     public static final String ID = CollectorMod.makeID(BagOfTricks.class.getSimpleName());
@@ -24,6 +28,9 @@ public class BagOfTricks extends CustomRelic {
         flash();
         for (int i = 0; i < EXTRA_CARDS; i++) {
             atb(new DrawCardFromCollectionAction());
+            if (!CollectorCollection.combatCollection.isEmpty() || AbstractDungeon.player.hasRelic(HolidayCoal.ID)) {
+                att(new DrawCardAction(1));
+            }
         }
     }
 

@@ -3,7 +3,7 @@
     "NAME": "Emerald Torch",
     "FLAVOR": "The fires of greed never fade.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #ycollector:Reserve."
+      "At the start of each combat, add an #yEmber into your hand. The first time you #yExhaust an #yEmber each combat, gain #b1 #ycollector:Reserve."
     ]
   },
   "collector:PrismaticTorch": {
@@ -11,14 +11,14 @@
     "FLAVOR": "The ever-changing flames reflect fortune's favor.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] At the start of each combat, add an #yEmber into your hand and gain #b1 #ycollector:Reserve. The first time you #yExhaust an #yEmber each turn, gain #b1 #ycollector:Reserve."
+      ".[] At the start of each combat, add an #yEmber into your hand. The first time you #yExhaust an #yEmber each turn, gain #b1 #ycollector:Reserve."
     ]
   },
   "collector:HolidayCoal": {
     "NAME": "Krampian Coal",
     "FLAVOR": "\"Intriguing! But why only specific chimneys?\" - Ranwid",
     "DESCRIPTIONS": [
-      "When you would draw from an empty Collected pile, you instead draw a #yLucky #yWick."
+      "When you would draw from an empty Collected pile, add a #yLucky #yWick to your hand."
     ]
   },
   "collector:BagOfTricks": {
@@ -33,8 +33,8 @@
     "NAME": "Jade Ring",
     "FLAVOR": "Jade is the symbol of honesty.",
     "DESCRIPTIONS": [
-      "Whenever a #ycollector:Doomed non-Minion enemy dies, gain #b",
-      " Souls."
+      "Enemies take #b",
+      " more damage from #ycollector:Doom."
     ]
   },
   "collector:SoullitLamp": {

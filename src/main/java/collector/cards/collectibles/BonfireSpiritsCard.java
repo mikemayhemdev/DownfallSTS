@@ -18,7 +18,7 @@ public class BonfireSpiritsCard extends AbstractCollectibleCard implements OnPyr
 
     public BonfireSpiritsCard() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 7;
         isPyre();
         tags.add(CardTags.HEALING);
     }
@@ -52,6 +52,6 @@ public class BonfireSpiritsCard extends AbstractCollectibleCard implements OnPyr
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(3);
     }
 }

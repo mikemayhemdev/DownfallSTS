@@ -33,11 +33,9 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        //if (upgraded) techique();
         atb(new OctoChoiceAction(m, this));
         postInit();
-
+        //if (upgraded) techique();
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -58,8 +56,11 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
                     }
                     AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
                     UnlockTracker.markCardAsSeen(r.cardID);
-                    makeInHand(r);
+                   // makeInHand(r);
+                    ChampMod.berserkOpen();
+                    techique();
                 }
+                //ChampMod.berserkOpen();
                 ChampMod.berserkOpen();
 
                 break;
@@ -72,8 +73,11 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
                     }
                     AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
                     UnlockTracker.markCardAsSeen(r.cardID);
-                    makeInHand(r);
+                   // makeInHand(r);
+                    ChampMod.defenseOpen();
+                    techique();
                 }
+               // ChampMod.defenseOpen();
                 ChampMod.defenseOpen();
                 break;
         }

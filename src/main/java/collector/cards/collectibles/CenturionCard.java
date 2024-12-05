@@ -13,7 +13,7 @@ public class CenturionCard extends AbstractCollectibleCard {
 
     public CenturionCard() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 10;
+        baseBlock = 13;
         baseMagicNumber = magicNumber = 1;
     }
 

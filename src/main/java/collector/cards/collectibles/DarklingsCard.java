@@ -19,7 +19,7 @@ public class DarklingsCard extends AbstractCollectibleCard {
     public DarklingsCard() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         isPyre();
-        baseDamage = 8;
+        baseDamage = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

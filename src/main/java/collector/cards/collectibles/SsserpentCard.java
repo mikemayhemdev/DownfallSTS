@@ -14,7 +14,7 @@ public class SsserpentCard extends AbstractCollectibleCard {
 
     public SsserpentCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 15;
+        baseDamage = 18;
         cardsToPreview = new Doubt();
     }
 

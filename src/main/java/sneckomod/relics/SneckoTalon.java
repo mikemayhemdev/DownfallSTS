@@ -36,7 +36,8 @@ public class SneckoTalon extends CustomRelic {
 
     @Override
     public void atTurnStartPostDraw() {
-            AbstractDungeon.actionManager.addToBottom(new SuperSneckoSoulAction());
+        AbstractDungeon.actionManager.addToBottom(new SuperSneckoSoulAction());
+        AbstractDungeon.actionManager.addToBottom(new SuperSneckoSoulAction());
     }
 
     public String getUpdatedDescription() {

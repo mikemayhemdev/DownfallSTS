@@ -59,19 +59,30 @@ public class EvasiveProtocol extends AbstractGuardianCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        int moda = 999;
+        int mods = 0;
         super.use(p, m);
+
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EvasiveProtocolPower(p, magicNumber)));
+
+        if (AbstractDungeon.player.hasPower("Guardian:ModeShiftPower")) {
+            moda = AbstractDungeon.player.getPower("Guardian:ModeShiftPower").amount;
+        }
 
         if (!this.upgraded) {
             brace(6);
+            mods = 6;
         }
 
         if (this.upgraded) {
             brace(9);
+            mods = 9;
         }
 
-        AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(1F));
-
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EvasiveProtocolPower(p, magicNumber)));
+        if (((moda - mods) <= 0) && !(p.stance instanceof DefensiveMode)) {
+            AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));
+        }
 
         if (p.stance instanceof DefensiveMode) {
             AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));

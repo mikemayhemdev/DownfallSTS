@@ -18,7 +18,7 @@ public class ChosenCard extends AbstractCollectibleCard {
     public ChosenCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 3;
+        baseSecondMagic = secondMagic = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -29,7 +29,7 @@ public class ChosenCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
         upgradeSecondMagic(2);
     }
 

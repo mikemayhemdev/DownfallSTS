@@ -17,8 +17,8 @@ public class BearCard extends AbstractCollectibleCard {
 
     public BearCard() {
         super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 10;
-        baseBlock = 10;
+        baseDamage = 12;
+        baseBlock = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

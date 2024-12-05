@@ -16,11 +16,12 @@ public class Darkstorm extends AbstractCollectorCard {
     // intellij stuff skill, self, rare, , , , , 4, 2
 
     public Darkstorm() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         cardsToPreview = new Blightning();
         exhaust = true;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this doesn't draw collected anymore so it can be unbanned
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

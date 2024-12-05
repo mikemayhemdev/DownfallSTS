@@ -12,9 +12,8 @@ public class Roast extends AbstractCollectorCard {
 
     public Roast() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 4;
         isPyre();
-        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -22,6 +21,6 @@ public class Roast extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(2);
     }
 }

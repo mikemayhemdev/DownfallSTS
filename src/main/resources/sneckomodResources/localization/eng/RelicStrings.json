@@ -73,7 +73,7 @@
     "NAME": "Idol of Retromation",
     "FLAVOR": "Often called the Idol of Reto for short.",
     "DESCRIPTIONS": [
-      "At the start of your turn, draw an additional card and #ysneckomod:Muddle it."
+      "At the start of your turn, draw 2 additional cards and #ysneckomod:Muddle them."
     ]
   },
   "sneckomod:BlankCard": {

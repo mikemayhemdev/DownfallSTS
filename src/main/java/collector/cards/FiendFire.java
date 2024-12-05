@@ -14,7 +14,7 @@ public class FiendFire extends AbstractCollectorCard {
 
     public FiendFire() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 9;
         exhaust = true;
     }
 

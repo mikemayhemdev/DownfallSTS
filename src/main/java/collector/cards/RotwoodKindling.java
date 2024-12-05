@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import expansioncontent.expansionContentMod;
+import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
@@ -19,6 +20,7 @@ public class RotwoodKindling extends AbstractCollectorCard {
         baseMagicNumber = magicNumber = 2;
         baseSecondMagic = secondMagic = 4;
         tags.add(expansionContentMod.UNPLAYABLE);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

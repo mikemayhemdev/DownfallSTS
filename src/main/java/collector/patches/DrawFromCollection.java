@@ -16,9 +16,13 @@ public class DrawFromCollection {
 
     @SpirePatch(
             clz = AbstractPlayer.class,
-            method = "applyStartOfTurnPostDrawRelics"
+            method = "applyStartOfTurnPreDrawCards"
     )
-    public static class AbstractPlayerApplyStartOfTurnPostDrawRelicsPatch {
+
+
+    //THIS DOESN'T WORK TURN 1 SO YOU NEED TO PUT atb(new DrawCardFromCollectionAction()); INTO COLLECTORCHAR!!!
+
+    public static class AbstractPlayerApplyStartOfTurnPreDrawCardsPatch {
         public static void Prefix(AbstractPlayer __instance) {
             if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR) || !CollectorCollection.collection.isEmpty()) {
                 if (AbstractDungeon.player.hasRelic(BlockedChakra.ID)) {

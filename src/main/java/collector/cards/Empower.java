@@ -21,9 +21,9 @@ public class Empower extends AbstractCollectorCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
-            if (effect > 0) {
+            if (effect+1 > 0) {
                 att(new VFXAction(new HeartBuffEffect(Empower.this.hb.cX, Empower.this.hb.cY)));
-                applyToSelfTop(new StrengthOverTurnsPower(magicNumber, effect));
+                applyToSelfTop(new StrengthOverTurnsPower(magicNumber, effect+1));
             }
             return true;
         }));

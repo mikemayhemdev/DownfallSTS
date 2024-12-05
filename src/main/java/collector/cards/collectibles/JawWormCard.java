@@ -12,8 +12,8 @@ public class JawWormCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, common, , , 14, 4, 2, 1
 
     public JawWormCard() {
-        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 12;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 8;
         baseMagicNumber = magicNumber = 1;
     }
 

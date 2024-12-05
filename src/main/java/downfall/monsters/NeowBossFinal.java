@@ -88,12 +88,22 @@ public class NeowBossFinal extends AbstractMonster {
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
 
+
+        //When adjusting these numbers, remember to keep the Heart Blessings in mind.
+        //The player has +1 dexterity and +10 temp hp, so they will be blocking for 4/5 extra than typically, and that they have a
+        //good buffer of Temp HP to get through the first cycle much easier.
+        //Not to mention the lack of Beat of Death, which makes Block much more permanent throughout this fight.
+        //This fight should test consistency and overall scaling to surpass the God of Life scaling that Neow has.
+        //Her buffs should reflect this fact and test consistency by increasing God of Life and
+        //gaining buffs like Artifact. (To test strategies that rely on a debuff like Goop, Soulburn, or Doom)
+
+
         if (AbstractDungeon.ascensionLevel >= 4) {
-            this.damage.add(new DamageInfo(this, 12)); //Eye Beam Damage
-            this.damage.add(new DamageInfo(this, 44));  //Scream Damage
+            this.damage.add(new DamageInfo(this, 12)); //Eye Beam Damage - 48 damage first cycle
+            this.damage.add(new DamageInfo(this, 44));  //Scream Damage - 66 damage first cycle
         } else {
-            this.damage.add(new DamageInfo(this, 9)); //Eye Beam Damage
-            this.damage.add(new DamageInfo(this, 33));  //Scream Damage
+            this.damage.add(new DamageInfo(this, 9)); //Eye Beam Damage - 41 damage first cycle
+            this.damage.add(new DamageInfo(this, 33));  //Scream Damage - 50 damage first cycle
         }
 
         this.strAmt = 2; //Strength Scaling for growth ability
@@ -113,6 +123,13 @@ public class NeowBossFinal extends AbstractMonster {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 3, true), 3));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 3, true), 3));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, 3, true), 3));
+
+
+        //aged -2 draw -1e (ethereal but places void on top of draw pile targeted exhaust makes it only -1 draw)
+        //bewildered -1 draw +/- ??? e (ethereal - muddles entire hand - targeted exhaust on this is pointless)
+        //scatterbrained -1 - infinity draw -0 - infinity e (heavily depends on exhaust access, but playing it normally costs 2e, important targeted exhaust card - this curse creates copies of itself similar to pride but into the discard pile)
+        //icky -1 draw -2e / -2 draw -2e (with targeted exhaust only -1 draw - this curse can be redrawn so targeted exhaust is relevant but not as important)
+        //flawed -1 draw -1e / -4+ cards lost and turned +5 random statuses ("ethereal" ish, transforms hand into status cards, lost value heavily depends, also important targeted exhaust card, but playing it for 1 energy isn't difficult compared to scatterbrained's 2 cost requirement)
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Aged(), 1, true, false, false, (float) Settings.WIDTH * 0.18F, (float) Settings.HEIGHT / 2.0F));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Bewildered(), 1, true, false, false, (float) Settings.WIDTH * 0.34F, (float) Settings.HEIGHT / 2.0F));
@@ -224,29 +241,44 @@ public class NeowBossFinal extends AbstractMonster {
                 //   nukeDebuffs();
                 //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
 
+
+                //Neow always gains 2 God of Life each cycle no matter the Ascension.
+                //This is the main mechanic of the fight and meant to mirror the Corrupt Heart's Beat of Death.
+                //While Beat of Death is a near constant presence through the fight, effectively applying negative Dexterity to the player,
+                //this effectively reduces player Strength. (But rewards cards that do a lot at once, similar to Beat of Death.)
+                //This will dramatically lengthen the duration of this fight overall and punishes airy cards if they are not backed by Strength / Dexterity.
+
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
+
                 if (AbstractDungeon.ascensionLevel >= 19) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 6), 6));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 7), 8));
+                    // this is +21 damage for the multi hit, +28 total, 8 damage over the a19- version
                 }
                 if (AbstractDungeon.ascensionLevel < 19) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 4), 4));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 5), 6));
+                    //this is +15 damage for the multi hit, +20 total
                 }
 
                 switch(this.buffCount) {
                     case 0:
                      if (AbstractDungeon.ascensionLevel >= 19) {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 3), 3));
+                            //3 artifact prevents weak + vuln + doom and should make Collector's life harder - and test her artifact piercing and consistency,
+                            //but should act as a minor annoyance for other characters, even for Hexa or Slime Boss.
                      }
                         if (AbstractDungeon.ascensionLevel < 19) {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 2), 3));
+                            //easier pre a19 version of artifact, still blocks an instance of weak + vuln
                         }
                         break;
                     case 1:
                         if (AbstractDungeon.ascensionLevel >= 19) {
                             AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 100));
+                            //this effectively makes her HP 700 - Not factoring in God of Life.
                         }
                         if (AbstractDungeon.ascensionLevel < 19) {
                             AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 75));
+                            //this pre a19 version effectively makes her hp 675, and 625 pre a4 - Not factoring in God of Life.
                         }
 
                        //                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BeatOfDeathPower(this, 1), 1));
@@ -254,25 +286,35 @@ public class NeowBossFinal extends AbstractMonster {
                     case 2:
                         if (AbstractDungeon.ascensionLevel >= 19) {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new RegenerateMonsterPower(this, 50)));
+                            //this is the part where it becomes significantly harder. If you factor in the God of Life Neow already has much more total HP than
+                            //the corrupt heart, and she can easily reach 1000~ HP total depending on the rate that the player uses cards.
                         }
                         if (AbstractDungeon.ascensionLevel < 19) {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new RegenerateMonsterPower(this, 30)));
+                            //this lessened Regenerate should be significantly easier to deal with
                         }
                         break;
                     case 3:
                         if (AbstractDungeon.ascensionLevel >= 19) {
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 10), 10));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 12), 10));
+                            //this is +36 damage on the multihit, +48 damage total.
                         }
                         if (AbstractDungeon.ascensionLevel < 19) {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 8), 8));
+                            //this is +24 damage on the multihit, +32 damage total.
                         }
                         break;
                     default:
                         if (AbstractDungeon.ascensionLevel >= 19) {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 30), 30));
+                            //this is +90 damage on the multihit, +120 damage total
+                            //basically a slightly kinder version of the heart getting +50 strength, especially since Neow always does the big hit before the multihit
+                            //not a total "now die" buff but pretty close
                         }
                         if (AbstractDungeon.ascensionLevel < 19) {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 20), 20));
+                            //this is +60 damage on the multihit, +80 damage total
+                            //I could see a player living through the multihit on this one
                         }
                 }
 

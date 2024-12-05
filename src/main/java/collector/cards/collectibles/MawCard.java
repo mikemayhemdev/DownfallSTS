@@ -12,7 +12,7 @@ public class MawCard extends AbstractCollectibleCard {
 
     public MawCard() {
         super(ID, 3, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 40;
+        baseDamage = 50;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

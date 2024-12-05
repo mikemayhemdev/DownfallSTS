@@ -18,6 +18,7 @@ import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.DontLeaveDefensiveModePower;
 import guardian.powers.SpikerProtocolPower;
+import hermit.actions.ReduceDebuffsAction;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -61,18 +62,28 @@ public class SpikerProtocol extends AbstractGuardianCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int moda = 999;
+        int mods = 0;
         super.use(p, m);
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SpikerProtocolPower(p, magicNumber)));
+        if (AbstractDungeon.player.hasPower("Guardian:ModeShiftPower")) {
+            moda = AbstractDungeon.player.getPower("Guardian:ModeShiftPower").amount;
+        }
+
         if (!this.upgraded) {
             brace(6);
+            mods = 6;
         }
 
         if (this.upgraded) {
             brace(9);
+            mods = 9;
         }
 
-        AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(1F));
+        if (((moda - mods) <= 0) && !(p.stance instanceof DefensiveMode)) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, magicNumber), magicNumber));
+        }
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SpikerProtocolPower(p, magicNumber)));
 
         if (p.stance instanceof DefensiveMode) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, magicNumber), magicNumber));

@@ -14,7 +14,7 @@ public class PointyCard extends AbstractCollectibleCard {
 
     public PointyCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -4,6 +4,7 @@ import collector.actions.DrawCardFromCollectionAction;
 import collector.powers.DoomPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -20,8 +21,8 @@ public class Blightning extends AbstractCollectorCard {
 
     public Blightning() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 6;
-        baseMagicNumber = magicNumber = 6;
+        baseDamage = 5;
+        baseMagicNumber = magicNumber = 5;
         exhaust = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
@@ -31,7 +32,8 @@ public class Blightning extends AbstractCollectorCard {
         atb(new VFXAction(new LightningEffect(m.drawX, m.drawY), 0.05F));
         applyToEnemy(m, new DoomPower(m, magicNumber));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        atb(new DrawCardFromCollectionAction());
+       // atb(new DrawCardFromCollectionAction());
+        addToBot(new DrawCardAction(p, 1));
     }
 
     public void upp() {

@@ -43,7 +43,7 @@ public class GemFinder extends AbstractGuardianCard {
 
     public GemFinder() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-
+        isEthereal = true;
         this.baseMagicNumber = this.magicNumber = 1;
         this.socketCount = SOCKETS;
         updateDescription();

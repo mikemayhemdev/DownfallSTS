@@ -18,7 +18,7 @@ public class CollectorCard extends AbstractCollectibleCard {
     public CollectorCard() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 4;
+        baseSecondMagic = secondMagic = 5;
         isPyre();
     }
 

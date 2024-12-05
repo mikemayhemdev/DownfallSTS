@@ -5,9 +5,11 @@ import basemod.helpers.CardPowerTip;
 import collector.CollectorMod;
 import collector.actions.GainReservesAction;
 import collector.cards.Ember;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import downfall.util.TextureLoader;
 
 import static collector.util.Wiz.atb;
+import static collector.util.Wiz.makeInHand;
 
 public class EmeraldTorch extends CustomRelic {
     public static final String ID = CollectorMod.makeID("EmeraldTorch");
@@ -20,10 +22,32 @@ public class EmeraldTorch extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart() {
-        flash();
-        atb(new GainReservesAction(1));
+    public void onVictory() {
+        grayscale=false;
     }
+
+
+    @Override
+    public void atBattleStart() {
+        System.out.println("DEBUG: This is a debug message.");
+        grayscale=false;
+        flash();
+        makeInHand(new Ember(), 1);
+  //      atb(new GainReservesAction(1));
+    }
+
+
+    @Override
+    public void onExhaust(AbstractCard card) {
+        if (!grayscale) {
+            if (card.cardID.equals(Ember.ID)) {
+                flash();
+                atb(new GainReservesAction(1));
+                grayscale=true;
+            }
+        }
+    }
+
 
     @Override
     public String getUpdatedDescription() {

@@ -12,7 +12,7 @@ public class ByrdCard extends AbstractCollectibleCard {
 
     public ByrdCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 1;
+        baseDamage = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

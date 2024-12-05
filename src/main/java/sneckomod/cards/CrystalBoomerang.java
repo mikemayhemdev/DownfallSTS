@@ -34,14 +34,14 @@ public class CrystalBoomerang extends AbstractSneckoCard {
 
                     (selectedCards) -> {
 
-                        AbstractCard selected = selectedCards.get(0);
-                        p.discardPile.removeCard(selected);
-                        p.hand.addToHand(selected);
-                        selected.lighten(false);
-                        selected.unhover();
-                        selected.applyPowers();
+                        AbstractCard selecteda = selectedCards.get(0);
+                        p.discardPile.removeCard(selecteda);
+                        p.hand.addToHand(selecteda);
+                        selecteda.lighten(false);
+                        selecteda.unhover();
+                        selecteda.applyPowers();
 
-                        if (selected.color != p.getCardColor()) {
+                        if (selecteda.color != p.getCardColor()) {
                             this.addToTop(new GainBlockAction(p, p, this.block));
                         }
                     }

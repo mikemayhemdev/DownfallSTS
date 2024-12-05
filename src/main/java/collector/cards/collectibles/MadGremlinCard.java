@@ -14,7 +14,7 @@ public class MadGremlinCard extends AbstractCollectibleCard {
 
     public MadGremlinCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

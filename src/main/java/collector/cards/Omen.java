@@ -13,7 +13,7 @@ public class Omen extends AbstractCollectorCard {
     // intellij stuff power, self, rare, , , , , 20, 5
 
     public Omen() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         isEthereal = true;
         baseMagicNumber = magicNumber = 1;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);

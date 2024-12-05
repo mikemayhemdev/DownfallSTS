@@ -14,7 +14,7 @@ public class DesignerInSpireCard extends AbstractCollectibleCard {
 
     public DesignerInSpireCard() {
         super(ID, 4, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

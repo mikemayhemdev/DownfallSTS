@@ -1,15 +1,16 @@
 package collector.cards;
 
+import collector.actions.GainReservesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import expansioncontent.expansionContentMod;
+import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.applyToSelf;
-import static collector.util.Wiz.makeInHand;
+import static collector.util.Wiz.*;
 
 public class SunbloomKindling extends AbstractCollectorCard {
     public final static String ID = makeID(SunbloomKindling.class.getSimpleName());
@@ -20,6 +21,7 @@ public class SunbloomKindling extends AbstractCollectorCard {
         baseMagicNumber = magicNumber = 2;
         cardsToPreview = new Ember();
         tags.add(expansionContentMod.UNPLAYABLE);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,7 +36,8 @@ public class SunbloomKindling extends AbstractCollectorCard {
     @Override
     public void triggerOnExhaust() {
         CardCrawlGame.sound.play("HEAL_1");
-        applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
+        atb(new GainReservesAction(magicNumber));
+  //      applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
         makeInHand(new Ember(), 2);
     }
 

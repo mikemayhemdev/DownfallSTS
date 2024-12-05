@@ -22,22 +22,13 @@ public class MiniCurse extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) {
-            forAllMonstersLiving(q -> {
-                atb(new VFXAction(new FlashAtkImgEffect(q.hb.cX, q.hb.cY, AbstractGameAction.AttackEffect.POISON)));
-                applyToEnemy(q, new WeakPower(q, 1, false));
-                applyToEnemy(q, new VulnerablePower(q, 1, false));
-            });
-        }
-        else {
             atb(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.POISON)));
             applyToEnemy(m, new WeakPower(m, 1, false));
             applyToEnemy(m, new VulnerablePower(m, 1, false));
-        }
     }
 
     public void upp() {
-        target = CardTarget.ALL_ENEMY;
+        this.exhaust = false;
         uDesc();
     }
 }

@@ -14,7 +14,7 @@ public class TransientCard extends AbstractCollectibleCard {
 
     public TransientCard() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

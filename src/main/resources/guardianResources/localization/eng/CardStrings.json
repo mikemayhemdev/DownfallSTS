@@ -204,7 +204,7 @@
   },
   "Guardian:GemFinder": {
     "NAME": "Gem Finder",
-    "DESCRIPTION": "At the end of combat, you may add a random guardianmod:Gem to your deck."
+    "DESCRIPTION": "Ethereal. NL At the end of combat, you may add a random guardianmod:Gem to your deck."
   },
   "Guardian:StasisField": {
     "NAME": "Stasis Field",

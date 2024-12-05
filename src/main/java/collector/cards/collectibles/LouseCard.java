@@ -14,7 +14,7 @@ public class LouseCard extends AbstractCollectibleCard {
 
     public LouseCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 9;
+        baseBlock = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -16,7 +16,7 @@ public class FaceTraderCard extends AbstractCollectibleCard {
 
     public FaceTraderCard() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

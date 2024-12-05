@@ -34,7 +34,7 @@ public class NopeAction extends AbstractGameAction {
                     return;
                 }
 
-                p.hand.moveToExhaustPile(c);
+                //p.hand.moveToExhaustPile(c);
                 AbstractCard card = SneckoMod.getSpecificClassCard(c.color);
                 this.addToBot(new MakeTempCardInHandAction(card));
                 this.isDone = true;

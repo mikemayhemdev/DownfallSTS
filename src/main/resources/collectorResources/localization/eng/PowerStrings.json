@@ -80,7 +80,7 @@
   "collector:FeelMyPain": {
     "NAME": "Feel My Pain",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a card, a random enemy loses #b",
+      "Whenever you #yExhaust a card, ALL enemies lose #b",
       " HP."
     ]
   },

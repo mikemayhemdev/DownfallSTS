@@ -14,7 +14,7 @@ public class FatGremlinCard extends AbstractCollectibleCard {
 
     public FatGremlinCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 9;
         baseMagicNumber = magicNumber = 2;
     }
 
@@ -24,7 +24,7 @@ public class FatGremlinCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(3);
         upgradeMagicNumber(1);
     }
 }

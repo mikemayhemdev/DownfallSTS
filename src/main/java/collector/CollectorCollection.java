@@ -9,9 +9,11 @@ import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.monsters.*;
+import collector.actions.DrawCardFromCollectionAction;
 import collector.cardmods.CollectedCardMod;
 import collector.cards.collectibles.*;
 import collector.patches.CollectorBottleField;
+import collector.relics.BlockedChakra;
 import collector.util.CollectibleCardReward;
 import collector.util.EssenceReward;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -54,11 +56,15 @@ import hermit.cards.ShadowCloak;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import static hermit.util.Wiz.atb;
+
 public class CollectorCollection {
     public static CardGroup collection;
     public static CardGroup combatCollection;
     public static HashMap<String, String> collectionPool;
-
+    private static int turncounter = 0;
+    public static boolean adjusteddraw = false; //this gets adjusted on a perturnbasis but this should help
+    public static boolean nerfcollectordraw = true;
     private static ArrayList<AbstractMonster> collectedAlready = new ArrayList<>();
 
     static {
@@ -238,7 +244,14 @@ public class CollectorCollection {
     }
 
     public static void atBattleStart() {
+        System.out.println("DEBUG: Started Battle. Resetting draw tracking variables.");
+        adjusteddraw = false;
+        turncounter = 0;
         combatCollection.clear();
+
+        //this is because the collected draw doesn't work turn one so we have to force it
+        atb(new DrawCardFromCollectionAction());
+
         for (AbstractCard q : collection.group) {
             combatCollection.addToTop(q.makeSameInstanceOf());
         }
@@ -254,6 +267,34 @@ public class CollectorCollection {
             combatCollection.addToTop(q);
         });
     }
+
+    //I could write a boolean here but I can't be bothered sorry
+ //   public void atStartOfTurn() {
+        //NONE OF THIS WORKS I COMMENTED IT OUT
+    //    System.out.println("DEBUG: Started new turn.");
+  //      ++turncounter;
+   //     if (!CollectorCollection.collection.isEmpty() && !adjusteddraw) {
+ //           System.out.println("DEBUG: The Collection has cards in it and the draw hasn't been adjusted yet. Checking for Blocked Chakra.");
+  //          if ((AbstractDungeon.player.hasRelic(BlockedChakra.ID) && (turncounter == 4)) || !AbstractDungeon.player.hasRelic(BlockedChakra.ID));{
+  //              System.out.println("DEBUG: The player either has Blocked Chakra and it's turn 4 or they don't have Blocked Chakra.");
+  //              if (nerfcollectordraw = true) {
+   //                 --AbstractDungeon.player.gameHandSize;
+  //              }
+   //             adjusteddraw = true;
+   //             System.out.println("DEBUG: Decreasing masterHandSize by 1 and setting adjusteddraw to true.");
+   //         }
+   //     }
+  //      System.out.println("DEBUG: Checking if the Collection is empty and draw has been adjusted.");
+ //       if (CollectorCollection.collection.isEmpty() && adjusteddraw) {
+  //          System.out.println("DEBUG: The Collection is empty and draw has been adjusted.");
+  //          if (nerfcollectordraw = true) {
+  //              ++AbstractDungeon.player.gameHandSize;
+  //          }
+   //         adjusteddraw = false;
+    //        System.out.println("DEBUG: Increasing masterHandSize by 1 and setting adjusteddraw to false.");
+  //      }
+ //   }
+
 
     public static void atBattleEnd() {
         combatCollection.clear();

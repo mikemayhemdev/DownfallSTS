@@ -14,7 +14,7 @@ public class GremlinWizardCard extends AbstractCollectibleCard {
 
     public GremlinWizardCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

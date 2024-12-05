@@ -19,7 +19,7 @@ public class SentryCard extends AbstractCollectibleCard {
 
     public SentryCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 7;
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -36,7 +36,7 @@ public class SentryCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
         upgradeMagicNumber(1);
     }
 }
