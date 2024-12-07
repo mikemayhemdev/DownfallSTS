@@ -1,12 +1,10 @@
 package sneckomod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.patches.EnumPatch;
 import sneckomod.SneckoMod;
 
@@ -44,7 +42,7 @@ public class Blunderbus extends AbstractSneckoCard {
         int totalHits = BASE_HITS + additionalHits;
         this.addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, EnumPatch.HERMIT_GHOSTFIRE, true));
         if (totalHits > 1) {
-            for (int i = 0; i < totalHits-1; i++) {
+            for (int i = 0; i < totalHits - 1; i++) {
                 this.addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, EnumPatch.HERMIT_GHOSTFIRE, true));
             }
         }

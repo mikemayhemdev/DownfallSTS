@@ -4,9 +4,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import sneckomod.powers.FountainPower;
-import sneckomod.powers.MudshieldPower;
-import sneckomod.powers.ToxicPersonalityPower;
-import sneckomod.powers.VenomDebuff;
 
 public class PoisonParadise extends AbstractSneckoCard {
 

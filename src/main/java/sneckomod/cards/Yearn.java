@@ -11,7 +11,6 @@ import downfall.util.CardIgnore;
 import expansioncontent.cardmods.PropertiesMod;
 import sneckomod.SneckoMod;
 
-import static collector.util.Wiz.atb;
 @Deprecated
 @CardIgnore
 public class Yearn extends AbstractSneckoCard {
@@ -28,6 +27,7 @@ public class Yearn extends AbstractSneckoCard {
         exhaust = true;
         SneckoMod.loadJokeCardImage(this, "Yearn.png");
     }
+
     // code taken from hoard but modified
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DrawCardAction(magicNumber, new AbstractGameAction() {
@@ -45,7 +45,8 @@ public class Yearn extends AbstractSneckoCard {
             }
         }));
     }
-    public void upgrade () {
+
+    public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(1);

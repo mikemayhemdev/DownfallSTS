@@ -2,18 +2,11 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-
-import hermit.patches.EnumPatch;
 import hermit.util.Wiz;
 import sneckomod.SneckoMod;
 
@@ -33,8 +26,7 @@ public class PowerShot extends AbstractSneckoCard {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
     }
 
-    public void triggerOnCardPlayed(AbstractCard c)
-    {
+    public void triggerOnCardPlayed(AbstractCard c) {
         if (c.type == CardType.POWER)
             Wiz.atb(new DiscardToHandAction(this));
     }

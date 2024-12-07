@@ -26,6 +26,15 @@ public class ComboString extends AbstractSneckoCard {
         SneckoMod.loadJokeCardImage(this, "ComboString.png");
     }
 
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int offclassCardsPlayed = (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
@@ -53,7 +62,6 @@ public class ComboString extends AbstractSneckoCard {
         initializeDescription();
     }
 
-
     @Override
     public void onObtainCard() {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
@@ -64,18 +72,9 @@ public class ComboString extends AbstractSneckoCard {
             }
         }
 
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+        SneckoMod.addGift(cardsToReward);
+        ;
     }
-
-    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
 
     @Override
     public void upgrade() {

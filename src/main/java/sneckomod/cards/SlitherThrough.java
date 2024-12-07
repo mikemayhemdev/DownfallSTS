@@ -25,6 +25,15 @@ public class SlitherThrough extends AbstractSneckoCard {
         SneckoMod.loadJokeCardImage(this, "SlitherThrough.png");
     }
 
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         atb(new AbstractGameAction() {
@@ -51,16 +60,8 @@ public class SlitherThrough extends AbstractSneckoCard {
             }
         }
 
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
-    }
-
-    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
-                return true;
-            }
-        }
-        return false;
+        SneckoMod.addGift(cardsToReward);
+        ;
     }
 
     public void upgrade() {

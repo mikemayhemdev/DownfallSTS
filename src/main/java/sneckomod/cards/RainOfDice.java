@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import gremlin.cards.GremlinOffensive;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 
@@ -54,11 +53,11 @@ public class RainOfDice extends AbstractSneckoCard {
                 }
         ));
         AbstractCard g = new RainOfDice();
-        if(this.upgraded){
+        if (this.upgraded) {
             g.upgrade();
         }
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(g));
-        }
+    }
 
     @Override
     public void upgrade() {

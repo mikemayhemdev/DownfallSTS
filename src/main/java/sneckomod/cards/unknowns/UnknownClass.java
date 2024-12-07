@@ -16,13 +16,14 @@ import java.util.ArrayList;
 import java.util.function.Predicate;
 
 import static sneckomod.SneckoMod.makeCardPath;
+
 @CardIgnore
 @NoCompendium
 public class UnknownClass extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownClass");
-    private static String[] unknownClass = CardCrawlGame.languagePack.getUIString(ID).TEXT;
-    private String TID; //Temporary ID
+    private static final String[] unknownClass = CardCrawlGame.languagePack.getUIString(ID).TEXT;
     public CardColor myColor;
+    private final String TID; //Temporary ID
 
     public UnknownClass(CardColor cardColor) {
         super(ID + cardColor.name(), determineCardImg(cardColor), CardType.SKILL, CardRarity.SPECIAL, true);
@@ -39,10 +40,10 @@ public class UnknownClass extends AbstractUnknownCard {
         }
         UPGRADE_DESCRIPTION = unknownClass[6] + rawDescription;
         if (CardCrawlGame.languagePack.getCardStrings(TID).NAME == "[MISSING_TITLE]") {
-            BaseMod.loadCustomStrings(CardStrings.class, "{\"" + TID 
-            + "\": {\"NAME\": \"" + name 
-            + "\", \"DESCRIPTION\": \"" + rawDescription 
-            + "\", \"UPGRADE_DESCRIPTION\": \"" + UPGRADE_DESCRIPTION +"\"}}");
+            BaseMod.loadCustomStrings(CardStrings.class, "{\"" + TID
+                    + "\": {\"NAME\": \"" + name
+                    + "\", \"DESCRIPTION\": \"" + rawDescription
+                    + "\", \"UPGRADE_DESCRIPTION\": \"" + UPGRADE_DESCRIPTION + "\"}}");
         }
         initializeDescription();
         SneckoMod.loadJokeCardImage(this, "UnknownClass.png");

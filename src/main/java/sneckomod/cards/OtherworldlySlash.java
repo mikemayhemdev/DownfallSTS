@@ -1,17 +1,17 @@
 package sneckomod.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import hermit.cards.AbstractDynamicCard;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
-public class OtherworldlySlash extends AbstractSneckoCard implements OnObtainCard{
+public class OtherworldlySlash extends AbstractSneckoCard implements OnObtainCard {
 
     public final static String ID = makeID("OtherworldlySlash");
 
@@ -24,6 +24,15 @@ public class OtherworldlySlash extends AbstractSneckoCard implements OnObtainCar
         SneckoMod.loadJokeCardImage(this, "OtherworldlySlash.png");
     }
 
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Deal initial damage
@@ -32,10 +41,9 @@ public class OtherworldlySlash extends AbstractSneckoCard implements OnObtainCar
                 .anyMatch(card -> card.color != this.color);
 
         if (playedOffClassCard) {
-                dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
-            }
+            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
         }
-
+    }
 
     @Override
     public void triggerOnGlowCheck() { // it glows now.
@@ -58,16 +66,8 @@ public class OtherworldlySlash extends AbstractSneckoCard implements OnObtainCar
             }
         }
 
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
-    }
-
-    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
-                return true;
-            }
-        }
-        return false;
+        SneckoMod.addGift(cardsToReward);
+        ;
     }
 
     @Override

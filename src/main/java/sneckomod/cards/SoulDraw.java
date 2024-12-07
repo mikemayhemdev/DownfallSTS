@@ -1,17 +1,12 @@
 package sneckomod.cards;
 
 import basemod.helpers.CardModifierManager;
-import basemod.helpers.dynamicvariables.MagicNumberVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import expansioncontent.cardmods.PropertiesMod;
 import sneckomod.OffclassHelper;
 import sneckomod.SneckoMod;
-import expansioncontent.cardmods.PropertiesMod;
-import expansioncontent.cardmods.RetainCardMod;
 
 import java.util.ArrayList;
 
@@ -39,10 +34,10 @@ public class SoulDraw extends AbstractSneckoCard {
         }
     }
 
-        public void upgrade () {
-            if (!upgraded) {
-                upgradeName();
-                upgradeBaseCost(0);
-            }
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeBaseCost(0);
         }
+    }
 }

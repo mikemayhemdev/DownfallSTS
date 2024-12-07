@@ -1,17 +1,11 @@
 package sneckomod.cards;
 
-import basemod.devcommands.draw.Draw;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
-import sneckomod.actions.MuddleAction;
-import sneckomod.actions.MuddleRandomCardAction;
 
 
 public class LuckyBreak extends AbstractSneckoCard {
@@ -55,7 +49,7 @@ public class LuckyBreak extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPG_BLOCK);
-          //  upgradeMagicNumber(UPG_MAGIC);
+            //  upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

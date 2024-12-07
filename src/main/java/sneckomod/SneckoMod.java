@@ -599,6 +599,7 @@ public class SneckoMod implements
 
     @Override
     public void receivePostUpdate() {
+        gifted = false;
         if (!SneckoMod.openedStarterScreen) {
             if (CardCrawlGame.isInARun() && downfallMod.readyToDoThing) {
                 SneckoMod.findAWayToTriggerThisAtGameStart();
@@ -620,6 +621,23 @@ public class SneckoMod implements
                 SneckoMod.choosingCharacters += 1;
                 SneckoMod.dualClassChoice();
             }
+        }
+    }
+
+    public static boolean gifted = false;
+
+    public static ArrayList<ArrayList<AbstractCard>> incomingPicks = new ArrayList<>();
+
+    public static void addGift(ArrayList<AbstractCard> incomingGift) {
+        incomingPicks.add(incomingGift);
+    }
+
+    public static void nextGift() {
+        System.out.println("Next called" + incomingPicks.size());
+        if (incomingPicks.size() > 0 && !gifted) {
+            gifted = true;
+            System.out.println(incomingPicks.get(0));
+            AbstractDungeon.cardRewardScreen.open(incomingPicks.remove(0), null, "Choose a card to add to your deck.");
         }
     }
 }

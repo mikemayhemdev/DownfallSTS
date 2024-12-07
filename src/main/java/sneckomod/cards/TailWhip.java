@@ -3,7 +3,6 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import hermit.cards.AbstractDynamicCard;
 import sneckomod.SneckoMod;
 
 public class TailWhip extends AbstractSneckoCard {
@@ -35,7 +34,7 @@ public class TailWhip extends AbstractSneckoCard {
         if (x > 0)
             applyToEnemy(m, autoWeak(m, x));
         int y = 0;
-        if (isOverflowActive(this)){
+        if (isOverflowActive(this)) {
             y = magicNumber;
         }
         if (y > 0)

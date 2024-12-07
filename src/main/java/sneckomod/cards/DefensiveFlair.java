@@ -27,6 +27,15 @@ public class DefensiveFlair extends AbstractSneckoCard {
         SneckoMod.loadJokeCardImage(this, "DefensiveFlair.png");
     }
 
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     protected void applyPowersToBlock() {
         int realBaseBlock = this.baseBlock;
@@ -49,18 +58,9 @@ public class DefensiveFlair extends AbstractSneckoCard {
             }
         }
 
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+        SneckoMod.addGift(cardsToReward);
+        ;
     }
-
-    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();

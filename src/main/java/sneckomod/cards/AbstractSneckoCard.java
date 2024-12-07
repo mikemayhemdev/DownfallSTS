@@ -6,13 +6,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -23,7 +21,6 @@ import hermit.cards.AbstractDynamicCard;
 import hermit.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
-import sneckomod.powers.BlunderGuardPower;
 import sneckomod.powers.CheatPower;
 import sneckomod.relics.D8;
 import sneckomod.relics.LoadedDie;
@@ -39,19 +36,18 @@ import static sneckomod.SneckoMod.makeCardPath;
 
 public abstract class AbstractSneckoCard extends CustomCard implements OnObtainCard {
 
-    protected String[] unknownUpgrade = CardCrawlGame.languagePack.getUIString(makeID("Unknown")).TEXT;
-    protected String[] unknownNames = CardCrawlGame.languagePack.getUIString(makeID("UnknownNames")).TEXT;
-
     protected final CardStrings cardStrings;
-    public String betaArtPath;
     protected final String NAME;
     protected final String DESCRIPTION;
-    protected String UPGRADE_DESCRIPTION;
     protected final String[] EXTENDED_DESCRIPTION;
+    public String betaArtPath;
     public int silly;
     public int baseSilly;
     public boolean upgradedSilly;
     public boolean isSillyModified;
+    protected String[] unknownUpgrade = CardCrawlGame.languagePack.getUIString(makeID("Unknown")).TEXT;
+    protected String[] unknownNames = CardCrawlGame.languagePack.getUIString(makeID("UnknownNames")).TEXT;
+    protected String UPGRADE_DESCRIPTION;
 
 
     public AbstractSneckoCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
@@ -80,7 +76,7 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
         initializeDescription();
     }
 
-    public AbstractSneckoCard(final String id, final String img,  final int cost, final CardType type, final CardRarity rarity, final CardTarget target, boolean IsClass) {
+    public AbstractSneckoCard(final String id, final String img, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, boolean IsClass) {
         super(id, "ERROR", getCorrectPlaceholderImage(img),
                 cost, "ERROR", type, TheSnecko.Enums.SNECKO_CYAN, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings("sneckomod:Unknown0Cost");
@@ -186,6 +182,14 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
         return getModID() + ":" + name;
     }
 
+    public static String getCharList() {
+        StringBuilder s = new StringBuilder();
+        for (CardColor c : SneckoMod.validColors) {
+            s.append(" NL ").append(SneckoMod.getClassFromColor(c));
+        }
+        return s.toString();
+    }
+
     protected void atb(AbstractGameAction action) {
         addToBot(action);
     }
@@ -274,14 +278,6 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
         upgradedSilly = true;
     }
 
-    public static String getCharList() {
-        StringBuilder s = new StringBuilder();
-        for (CardColor c : SneckoMod.validColors) {
-            s.append(" NL ").append(SneckoMod.getClassFromColor(c));
-        }
-        return s.toString();
-    }
-
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tips = new ArrayList<>();
@@ -289,8 +285,7 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
             if (this.rawDescription.contains(name)) {
                 if (SneckoMod.validColors.size() > 3) {
                     tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[5]));
-                }
-                else if (SneckoMod.validColors.isEmpty()) {
+                } else if (SneckoMod.validColors.isEmpty()) {
                     tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[4]));
                 } else {
                     tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[2] + unknownUpgrade[3] + getCharList()));
@@ -312,7 +307,7 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
             }
 
             // If the card purges on use, immediately return false
-            if ((source instanceof TyphoonFang && source.purgeOnUse)){
+            if ((source instanceof TyphoonFang && source.purgeOnUse)) {
                 return false; // If the card purges on use, it cannot cause overflow
             }
 
@@ -330,11 +325,9 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
     }
 
 
-
     public void atBattleStart() {
 // overrides moment
     }
-
 
 
     public int findSuitinHand() {
@@ -342,7 +335,7 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
 
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
             if (
-               (card.color == AbstractCard.CardColor.COLORLESS && card.rarity == AbstractCard.CardRarity.SPECIAL)) {
+                    (card.color == AbstractCard.CardColor.COLORLESS && card.rarity == AbstractCard.CardRarity.SPECIAL)) {
                 continue;
             }
 
@@ -365,6 +358,7 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
 
         return uniqueColors.size(); // number colors played per turn hopefully
     }
+
     public void onMuddledSword() {
         // help
     }

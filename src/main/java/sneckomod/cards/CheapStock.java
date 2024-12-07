@@ -1,11 +1,8 @@
 package sneckomod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.powers.CheapStockPower;
-import sneckomod.SneckoMod;
-import sneckomod.powers.MudshieldPower;
 
 public class CheapStock extends AbstractSneckoCard {
 

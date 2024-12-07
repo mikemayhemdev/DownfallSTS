@@ -1,20 +1,14 @@
 package sneckomod.cards;
 
-import automaton.actions.AddToFuncAction;
-import automaton.cards.FormatEncoded;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import automaton.actions.EasyXCostAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.FTL;
-import com.megacrit.cardcrawl.cards.purple.Wallop;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import sneckomod.SneckoMod;
-import automaton.actions.EasyXCostAction;
 
 public class ThrowingCards extends AbstractSneckoCard {
 
@@ -32,7 +26,7 @@ public class ThrowingCards extends AbstractSneckoCard {
         atb(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect + params[0]; i++) {
                 AbstractCard g = new FTL();
-                if(this.upgraded){
+                if (this.upgraded) {
                     g.upgrade();
                 }
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(g));
@@ -43,11 +37,11 @@ public class ThrowingCards extends AbstractSneckoCard {
     }
 
     @Override
-        public void upgrade() {
-            if (!upgraded) {
-                upgradeName();
-                rawDescription = UPGRADE_DESCRIPTION;
-                initializeDescription();
-            }
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
+}
