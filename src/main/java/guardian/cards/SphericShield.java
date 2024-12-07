@@ -13,10 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
-import guardian.powers.DontLeaveDefensiveModePower;
-import guardian.powers.EvasiveProtocolPower;
-import guardian.powers.RevengePower;
-import guardian.powers.SpikerProtocolPower;
+import guardian.powers.*;
 import guardian.relics.ModeShifterPlus;
 import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
@@ -45,7 +42,7 @@ public class SphericShield extends AbstractGuardianCard {
 
     public SphericShield() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        this.baseBlock = 8;
+        this.baseBlock = 10;
         this.socketCount = 0;
         exhaust = true;
         updateDescription();
@@ -62,7 +59,12 @@ public class SphericShield extends AbstractGuardianCard {
 
         ModeShifterPlus modeShifterPlusInstance = new ModeShifterPlus();
         if (AbstractDungeon.player.hasRelic(ModeShifterPlus.ID)) {
-            addToTop(new GainEnergyAction(1));
+            if (!AbstractDungeon.actionManager.turnHasEnded) {
+                addToTop(new GainEnergyAction(1));
+            }
+            if (AbstractDungeon.actionManager.turnHasEnded) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedGuardianPower(p, 1)));
+            }
             addToTop(new DrawCardAction(AbstractDungeon.player, 2));
             modeShifterPlusInstance.flash();
         }

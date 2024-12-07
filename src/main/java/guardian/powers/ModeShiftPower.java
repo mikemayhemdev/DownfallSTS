@@ -1,5 +1,6 @@
 package guardian.powers;
 
+import champ.powers.EnergizedDurationPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BufferPower;
+import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import guardian.relics.ModeShifterPlus;
 import guardian.stances.DefensiveMode;
@@ -59,7 +61,12 @@ public class ModeShiftPower extends AbstractGuardianPower {
 
             ModeShifterPlus modeShifterPlusInstance = new ModeShifterPlus();
             if (AbstractDungeon.player.hasRelic(ModeShifterPlus.ID)) {
-                addToTop(new GainEnergyAction(1));
+                if (!AbstractDungeon.actionManager.turnHasEnded) {
+                    addToTop(new GainEnergyAction(1));
+                }
+                if (AbstractDungeon.actionManager.turnHasEnded) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new EnergizedGuardianPower(owner, 1)));
+                }
                 addToTop(new DrawCardAction(AbstractDungeon.player, 2));
                 modeShifterPlusInstance.flash();
             }

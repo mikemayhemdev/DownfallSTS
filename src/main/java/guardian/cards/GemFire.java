@@ -77,17 +77,18 @@ public class GemFire extends AbstractGuardianCard {
 
     private void collectSocketsFromGroup(CardGroup group) {
         for (AbstractCard c : group.group) {
-            if (c instanceof AbstractGuardianCard) {
+            if ((c instanceof AbstractGuardianCard) && !(c.hasTag(GuardianMod.GEM))) {
                 AbstractGuardianCard gc = (AbstractGuardianCard) c;
                 for (GuardianMod.socketTypes socket : gc.sockets) {
-                    if (!this.sockets.contains(socket)) {
+                   // if (!this.sockets.contains(socket)) {
                         this.sockets.add(socket);
-                    }
+                 //   }
                 }
             } else if (c.hasTag(GuardianMod.GEM)) {
                 if (c instanceof AbstractGuardianCard) {
                     GuardianMod.socketTypes gemType = ((AbstractGuardianCard) c).thisGemsType;
-                    if (gemType != null && !this.sockets.contains(gemType)) {
+                    if (gemType != null) {
+                  //  if (gemType != null && !this.sockets.contains(gemType)) {
                         this.sockets.add(gemType);
                     }
                 }
@@ -102,14 +103,15 @@ public class GemFire extends AbstractGuardianCard {
                 if (stasisCard instanceof AbstractGuardianCard) {
                     AbstractGuardianCard gc = (AbstractGuardianCard) stasisCard;
                     for (GuardianMod.socketTypes socket : gc.sockets) {
-                        if (!this.sockets.contains(socket)) {
-                            this.sockets.add(socket);
-                        }
+                    //    if (!this.sockets.contains(socket)) {
+                           this.sockets.add(socket);
+                     //   }
                     }
                 } else if (stasisCard != null && stasisCard.hasTag(GuardianMod.GEM)) {
                     if (stasisCard instanceof AbstractGuardianCard) {
                         GuardianMod.socketTypes gemType = ((AbstractGuardianCard) stasisCard).thisGemsType;
-                        if (gemType != null && !this.sockets.contains(gemType)) {
+                        if (gemType != null) {
+                       // if (gemType != null && !this.sockets.contains(gemType)) {
                             this.sockets.add(gemType);
                         }
                     }

@@ -15,10 +15,7 @@ import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import guardian.powers.DontLeaveDefensiveModePower;
-import guardian.powers.EvasiveProtocolPower;
-import guardian.powers.RevengePower;
-import guardian.powers.SpikerProtocolPower;
+import guardian.powers.*;
 import guardian.relics.ModeShifterPlus;
 import guardian.stances.DefensiveMode;
 import guardian.characters.GuardianCharacter;
@@ -56,7 +53,12 @@ public class DefensiveModePotion extends CustomPotion {
 
         ModeShifterPlus modeShifterPlusInstance = new ModeShifterPlus();
         if (AbstractDungeon.player.hasRelic(ModeShifterPlus.ID)) {
-            addToTop(new GainEnergyAction(1));
+            if (!AbstractDungeon.actionManager.turnHasEnded) {
+                addToTop(new GainEnergyAction(1));
+            }
+            if (AbstractDungeon.actionManager.turnHasEnded) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new EnergizedGuardianPower(target, 1)));
+            }
             addToTop(new DrawCardAction(AbstractDungeon.player, 2));
             modeShifterPlusInstance.flash();
         }

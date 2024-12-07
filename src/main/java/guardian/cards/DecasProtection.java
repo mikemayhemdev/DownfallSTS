@@ -30,7 +30,7 @@ public class DecasProtection extends AbstractGuardianCard {
 
     public DecasProtection() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
         socketCount = 1;
         updateDescription();
         loadGemMisc();

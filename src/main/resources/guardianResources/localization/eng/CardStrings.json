@@ -65,7 +65,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL If you have 16 or more Block, deal damage 2 more times.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies 2 times. NL If you have 16 or more Block, deal damage !M! more times.",
     "EXTENDED_DESCRIPTION": [
       "More Block required."
     ]

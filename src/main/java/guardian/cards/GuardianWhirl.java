@@ -48,14 +48,14 @@ public class GuardianWhirl extends AbstractGuardianCard {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_WHIRLWIND"));
 
-        for (int i = 0; i < this.magicNumber; i++) {
+        for (int i = 0; i < 2; i++) {
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.05F));
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.NONE));
         }
 
         if (p.currentBlock >= 16) {
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < this.magicNumber; i++) {
                 AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.05F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.NONE));

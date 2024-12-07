@@ -70,9 +70,10 @@ public class Amass extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBlock(4);
+         //   upgradeMagicNumber(UPGRADE_MAGIC);
+         //   rawDescription = UPGRADE_DESCRIPTION;
+          //  initializeDescription();
         }
     }
 }

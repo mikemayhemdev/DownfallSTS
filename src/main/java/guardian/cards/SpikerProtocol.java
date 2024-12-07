@@ -65,6 +65,11 @@ public class SpikerProtocol extends AbstractGuardianCard {
         int moda = 999;
         int mods = 0;
         super.use(p, m);
+
+        if (p.stance instanceof DefensiveMode) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, magicNumber), magicNumber));
+        }
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SpikerProtocolPower(p, magicNumber)));
         if (AbstractDungeon.player.hasPower("Guardian:ModeShiftPower")) {
             moda = AbstractDungeon.player.getPower("Guardian:ModeShiftPower").amount;
@@ -80,14 +85,10 @@ public class SpikerProtocol extends AbstractGuardianCard {
             mods = 9;
         }
 
-        if (((moda - mods) <= 0) && !(p.stance instanceof DefensiveMode)) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, magicNumber), magicNumber));
-        }
+      //  if (((moda - mods) <= 0)) {
+       //     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, magicNumber), magicNumber));
+       // }
 
-
-        if (p.stance instanceof DefensiveMode) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, magicNumber), magicNumber));
-        }
        // AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BracePerTurnPower(p, this.secondaryM)));
     }
 
