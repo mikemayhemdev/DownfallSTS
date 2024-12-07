@@ -8,6 +8,7 @@ import downfall.util.CardIgnore;
 import expansioncontent.cardmods.ExhaustMod;
 import sneckomod.SneckoMod;
 import sneckomod.powers.UnlimitedRollsPower;
+
 @Deprecated
 @CardIgnore
 public class UnlimitedRolls extends AbstractSneckoCard {

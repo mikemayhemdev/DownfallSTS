@@ -7,16 +7,17 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.util.CardIgnore;
-import sneckomod.SneckoMod;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Circlet;
 import downfall.cards.OctoChoiceCard;
+import downfall.util.CardIgnore;
 import downfall.util.SelectCardsCenteredAction;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Locale;
+
 @Deprecated
 @CardIgnore
 public class Transmogrify extends AbstractSneckoCard {
@@ -27,7 +28,7 @@ public class Transmogrify extends AbstractSneckoCard {
 
     public Transmogrify() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-     //   super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        //   super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         tags.add(CardTags.HEALING);
         SneckoMod.loadJokeCardImage(this, "Transmogrify.png");
@@ -114,8 +115,7 @@ public class Transmogrify extends AbstractSneckoCard {
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, returnTrueRandomScreenlessRelic(q.tier));
                     }
                 });
-            }
-            else {
+            } else {
                 AbstractRelic q2 = eligibleRelicsList.get(1);
                 ArrayList<AbstractCard> cardChoices = new ArrayList<>();
                 cardChoices.add(new OctoChoiceCard(q.relicId, q.name, getCorrectPlaceholderImage(ID), EXTENDED_DESCRIPTION[2] + q.name + EXTENDED_DESCRIPTION[3] + q.tier.name().toLowerCase(Locale.ROOT) + EXTENDED_DESCRIPTION[4], CardColor.COLORLESS));

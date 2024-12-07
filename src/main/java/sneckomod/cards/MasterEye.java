@@ -2,10 +2,11 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.util.CardIgnore;
-import sneckomod.SneckoMod;
 import com.megacrit.cardcrawl.powers.ConfusionPower;
 import com.megacrit.cardcrawl.powers.DrawPower;
+import downfall.util.CardIgnore;
+import sneckomod.SneckoMod;
+
 @Deprecated
 @CardIgnore
 public class MasterEye extends AbstractSneckoCard {

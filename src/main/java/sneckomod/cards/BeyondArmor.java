@@ -8,13 +8,11 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 import hermit.util.Wiz;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
-
-import static sneckomod.SneckoMod.makeID;
 
 public class BeyondArmor extends AbstractSneckoCard {
 
@@ -29,6 +27,15 @@ public class BeyondArmor extends AbstractSneckoCard {
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "BeyondArmor.png");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
@@ -64,16 +71,8 @@ public class BeyondArmor extends AbstractSneckoCard {
             }
         }
 
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
-    }
-
-    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
-                return true;
-            }
-        }
-        return false;
+        SneckoMod.addGift(cardsToReward);
+        ;
     }
 
     @Override

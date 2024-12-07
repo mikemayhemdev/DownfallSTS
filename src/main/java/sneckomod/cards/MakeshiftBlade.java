@@ -1,23 +1,21 @@
 package sneckomod.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import hermit.cards.AbstractDynamicCard;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
 public class MakeshiftBlade extends AbstractSneckoCard {
-// todo: try to make this one glow later
+    // todo: try to make this one glow later
     public static final String ID = SneckoMod.makeID("MakeshiftBlade");
 
     // Card constants
@@ -31,6 +29,18 @@ public class MakeshiftBlade extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "MakeshiftBlade.png");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        System.out.println("DEBUG: Checking for duplicate: " + card.name);
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                System.out.println("DEBUG: Duplicate detected: " + card.name);
+                return true;
+            }
+        }
+        System.out.println("DEBUG: No Duplicate detected: " + card.name);
+        return false;
     }
 
     @Override
@@ -47,7 +57,7 @@ public class MakeshiftBlade extends AbstractSneckoCard {
         System.out.println("DEBUG: Took Makeshift Blade.");
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
         while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> ((c.rawDescription.contains("Apply") ||c.rawDescription.contains("apply") ||c.rawDescription.contains("applies") ||c.rawDescription.contains("Lick") ||c.rawDescription.contains("Debuff") ||c.rawDescription.contains("Steal") || c.name.contains("Disarm") || c.name.contains("Choke") || c.name.contains("Talk to the Hand") || c.name.contains("Cursed Wail") || c.name.contains("Undervolt")|| c.name.contains("Piercing Wail") || c.name.contains("Billow"))
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> ((c.rawDescription.contains("Apply") || c.rawDescription.contains("apply") || c.rawDescription.contains("applies") || c.rawDescription.contains("Lick") || c.rawDescription.contains("Debuff") || c.rawDescription.contains("Steal") || c.name.contains("Disarm") || c.name.contains("Choke") || c.name.contains("Talk to the Hand") || c.name.contains("Cursed Wail") || c.name.contains("Undervolt") || c.name.contains("Piercing Wail") || c.name.contains("Billow"))
             ) && c.rarity == AbstractCard.CardRarity.UNCOMMON);
             System.out.println("DEBUG: Card generated: " + newCard.name);
             if (!cardListDuplicate(cardsToReward, newCard)) {
@@ -56,19 +66,8 @@ public class MakeshiftBlade extends AbstractSneckoCard {
             }
         }
 
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
-    }
-
-    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        System.out.println("DEBUG: Checking for duplicate: " + card.name);
-        for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
-                System.out.println("DEBUG: Duplicate detected: " + card.name);
-                return true;
-            }
-        }
-        System.out.println("DEBUG: No Duplicate detected: " + card.name);
-        return false;
+        SneckoMod.addGift(cardsToReward);
+        ;
     }
 
     @Override

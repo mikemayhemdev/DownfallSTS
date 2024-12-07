@@ -1,16 +1,11 @@
 package sneckomod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.green.CripplingPoison;
-import com.megacrit.cardcrawl.cards.purple.Wallop;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import hermit.cards.HoleUp;
 import sneckomod.SneckoMod;
 
@@ -36,12 +31,12 @@ public class Cower extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         AbstractCard g = new HoleUp();
-        if(this.upgraded){
+        if (this.upgraded) {
             g.upgrade();
         }
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(g));
 
-}
+    }
 
     @Override
     public void upgrade() {

@@ -1,6 +1,5 @@
 package sneckomod.cards;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
@@ -22,7 +21,7 @@ public class DiceBlock extends AbstractSneckoCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (isOverflowActive(this)){
+        if (isOverflowActive(this)) {
             blck();
         }
     }

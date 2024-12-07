@@ -1,16 +1,15 @@
 package sneckomod.cards.unknowns;
 
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.Keyword;
-import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
+
 @NoCompendium
 public class UnknownExhaust extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownExhaust");
@@ -27,7 +26,7 @@ public class UnknownExhaust extends AbstractUnknownCard {
 
         Keyword keywordString = CardCrawlGame.languagePack.getKeywordString("Game Dictionary").EXHAUST;
         for (int i = 0; i < keywordString.NAMES.length; i++) {
-            if (!bruh){
+            if (!bruh) {
                 String key = keywordString.NAMES[i];
                 key = key.toLowerCase();
                 String test = card.rawDescription.toLowerCase();

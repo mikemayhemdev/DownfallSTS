@@ -2,12 +2,10 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import sneckomod.powers.BigGunsBlockPower;
 import sneckomod.powers.BigGunsStrengthPower;
-import sneckomod.powers.MudshieldPower;
 
 import java.util.ArrayList;
 
@@ -28,6 +26,15 @@ public class BigGuns extends AbstractSneckoCard {
         SneckoMod.loadJokeCardImage(this, "BigGuns.png");
     }
 
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new BigGunsBlockPower(this.baseBlock));
         applyToSelf(new BigGunsStrengthPower(this.magicNumber));
@@ -43,16 +50,8 @@ public class BigGuns extends AbstractSneckoCard {
             }
         }
 
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
-    }
-
-    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
-                return true;
-            }
-        }
-        return false;
+        SneckoMod.addGift(cardsToReward);
+        ;
     }
 
     public void upgrade() {

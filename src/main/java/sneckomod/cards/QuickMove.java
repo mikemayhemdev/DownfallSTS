@@ -1,21 +1,12 @@
 package sneckomod.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
-import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 import sneckomod.SneckoMod;
-import sneckomod.actions.MuddleAction;
-import sneckomod.actions.MuddleRandomCardAction;
 
 public class QuickMove extends AbstractSneckoCard {
 
@@ -46,11 +37,11 @@ public class QuickMove extends AbstractSneckoCard {
         }
     }
 
-        @Override
-        public void upgrade () {
-            if (!upgraded) {
-                upgradeName();
-                upgradeBlock(UPG_BLOCK);
-            }
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeBlock(UPG_BLOCK);
         }
     }
+}

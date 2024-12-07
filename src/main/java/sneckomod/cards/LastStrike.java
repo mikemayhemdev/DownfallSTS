@@ -80,8 +80,7 @@ public class LastStrike extends AbstractSneckoCard {
         // Track unique Strike cards played this combat
         for (AbstractCard card : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
             if (card.hasTag(CardTags.STRIKE)
-                    && (!excludeThisCard || card != this)
-                    && !uniqueStrikeIDs.contains(card.cardID)) {
+                    && (!excludeThisCard || card != this)) {
                 uniqueStrikeIDs.add(card.cardID);
             }
         }
@@ -107,7 +106,8 @@ public class LastStrike extends AbstractSneckoCard {
             }
         }
 
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+        SneckoMod.addGift(cardsToReward);
+        ;
     }
 
     private boolean cardListDuplicate(ArrayList<AbstractCard> cardsToReward, AbstractCard newCard) {

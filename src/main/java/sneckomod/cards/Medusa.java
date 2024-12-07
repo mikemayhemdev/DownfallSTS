@@ -1,6 +1,5 @@
 package sneckomod.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -9,11 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import sneckomod.SneckoMod;
-import sneckomod.actions.MuddleAction;
 import sneckomod.powers.LacerateDebuff;
 import sneckomod.powers.ToxicPersonalityPower;
 import sneckomod.powers.VenomDebuff;
@@ -34,6 +30,15 @@ public class Medusa extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "Medusa.png");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
@@ -74,25 +79,16 @@ public class Medusa extends AbstractSneckoCard {
     public void onObtainCard() {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
         while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> ((c.rawDescription.contains("Apply") ||c.rawDescription.contains("apply") ||c.rawDescription.contains("applies") ||c.rawDescription.contains("Lick") ||c.rawDescription.contains("Debuff") ||c.rawDescription.contains("Steal") || c.name.contains("Disarm") || c.name.contains("Choke") || c.name.contains("Talk to the Hand") || c.name.contains("Cursed Wail") || c.name.contains("Undervolt"))
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> ((c.rawDescription.contains("Apply") || c.rawDescription.contains("apply") || c.rawDescription.contains("applies") || c.rawDescription.contains("Lick") || c.rawDescription.contains("Debuff") || c.rawDescription.contains("Steal") || c.name.contains("Disarm") || c.name.contains("Choke") || c.name.contains("Talk to the Hand") || c.name.contains("Cursed Wail") || c.name.contains("Undervolt"))
             ) && c.rarity == AbstractCard.CardRarity.COMMON);
             if (!cardListDuplicate(cardsToReward, newCard)) {
                 cardsToReward.add(newCard.makeCopy());
             }
         }
 
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+        SneckoMod.addGift(cardsToReward);
+        ;
     }
-
-    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
 
     @Override
     public void upgrade() {

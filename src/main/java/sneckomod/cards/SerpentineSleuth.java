@@ -1,21 +1,15 @@
 package sneckomod.cards;
 
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
-import sneckomod.powers.MudshieldPower;
-import sneckomod.powers.SerpentineSleuthPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import sneckomod.SneckoMod;
+import sneckomod.powers.SerpentineSleuthPower;
 
 import java.util.ArrayList;
 
-public class SerpentineSleuth extends AbstractSneckoCard implements OnObtainCard{
+public class SerpentineSleuth extends AbstractSneckoCard implements OnObtainCard {
 
     public final static String ID = makeID("SerpentineSleuth");
 
@@ -26,6 +20,15 @@ public class SerpentineSleuth extends AbstractSneckoCard implements OnObtainCard
         baseMagicNumber = magicNumber = 1;
         isEthereal = true;
         SneckoMod.loadJokeCardImage(this, "SerpentineSleuth.png");
+    }
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -42,16 +45,8 @@ public class SerpentineSleuth extends AbstractSneckoCard implements OnObtainCard
             }
         }
 
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
-    }
-
-    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
-                return true;
-            }
-        }
-        return false;
+        SneckoMod.addGift(cardsToReward);
+        ;
     }
 
     public void upgrade() {

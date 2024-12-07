@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
-import sneckomod.actions.SerpentIdolAction;
 
 public class Jackpot extends AbstractSneckoCard {
 

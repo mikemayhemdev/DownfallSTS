@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.purple.Wallop;
-import com.megacrit.cardcrawl.cards.tempCards.Expunger;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -32,7 +31,7 @@ public class Whack extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         AbstractCard g = new Wallop();
-        if(this.upgraded){
+        if (this.upgraded) {
             g.upgrade();
         }
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(g));
