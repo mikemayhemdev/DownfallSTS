@@ -14,10 +14,10 @@
   },
   "sneckomod:Cheat": {
     "NAME": "Pure Luck",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:DangerNoodle": {
@@ -57,10 +57,10 @@
   },
   "sneckomod:FourOfAKind": {
     "NAME": "Four Of A Kind",
-    "DESCRIPTION": "Can only be played if you have played exactly 4 sneckomod:Suits this turn. NL Gain 1 Intangible. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Can only be played if you have played exactly 4 sneckomod:Suits this turn. NL Gain 1 Intangible. NL Exhaust.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:GlitteringGambit": {
@@ -72,9 +72,9 @@
   },
   "sneckomod:ImmovableObject": {
     "NAME": "Immovable Object",
-    "DESCRIPTION": "Gain !B! Block. NL If the total cost of your hand is at least !M!, double your Block then Exhaust this.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:IronFang": {
@@ -83,16 +83,16 @@
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Improvised Attack",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a random sneckomod:Offclass Attack and sneckomod:Muddle it.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:ImprovisedGuard": {
     "NAME": "Improvised Guard",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a random sneckomod:Offclass Skill and sneckomod:Muddle it.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:LuckyBreak": {
@@ -116,11 +116,11 @@
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
-    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card which started *Unidentified. sneckomod:Identify it.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card which started *Unidentified. sneckomod:Identify it.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
       " to Identify.",
-        "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:MintCondition": {
@@ -129,16 +129,16 @@
   },
   "sneckomod:MixItUp": {
     "NAME": "Mix It Up!",
-    "DESCRIPTION": "*Transform your Potions. NL Deal !D! damage !M! times. NL Exhaust.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:MorePower": {
     "NAME": "More Power!",
-    "DESCRIPTION": "Obtain an additional Upgraded *Unidentified card reward at the end of combat.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:Mudshield": {
@@ -180,10 +180,10 @@
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!. NL Exhaust.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:SerpentBottle": {
@@ -214,9 +214,9 @@
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !qqq! - !D! damage. NL Gain 1 - !M! [E] . NL Exhaust.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:SnekBeam": {
@@ -230,10 +230,10 @@
   },
   "sneckomod:SoulCleanse": {
     "NAME": "Soul Cleanse",
-    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:SoulDraw": {
@@ -265,9 +265,9 @@
   },
   "sneckomod:Yearn": {
     "NAME": "Yearn",
-    "DESCRIPTION": "Draw !M! cards. NL Give them Retain. NL Exhaust.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:TailWhip": {
@@ -276,21 +276,21 @@
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
-    "DESCRIPTION": "Choose 1 of 2 Relics to lose. NL Obtain a random Relic of the same rarity. NL Exhaust.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
       "I have no Relicsss to ssswap.",
       "Choose a Relic to lose.",
       "Lose ",
       " and obtain another ",
       " Relic.",
-        "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
       ]
   },
   "sneckomod:ToxicPersonality": {
     "NAME": "Toxic Personality",
-    "DESCRIPTION": "Whenever you apply a debuff to an enemy, also apply !M! sneckomod:Venom. NL sneckomod:Gift: Uncommon+ Debuff.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:TrashToTreasure": {
@@ -305,140 +305,140 @@
 },
   "sneckomod:Unknown": {
     "NAME": "??? Basic",
-    "DESCRIPTION": "*Unidentified Basic Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Basic Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:Unknown0Cost": {
     "NAME": "??? 0-Cost",
-    "DESCRIPTION": "*Unidentified 0 Cost Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified 0 Cost Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:Unknown1Cost": {
     "NAME": "??? 1-Cost",
-    "DESCRIPTION": "*Unidentified 1 Cost Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified 1 Cost Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:Unknown2Cost": {
     "NAME": "??? 2-Cost",
-    "DESCRIPTION": "*Unidentified 2 Cost Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified 2 Cost Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:Unknown3Cost": {
     "NAME": "??? 3-Cost",
-    "DESCRIPTION": "*Unidentified 3 Cost Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified 3 Cost Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownBlock": {
     "NAME": "??? Block",
-    "DESCRIPTION": "*Unidentified Block Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Block Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownBoss": {
     "NAME": "??? Boss",
-    "DESCRIPTION": "*Unidentified Colorless Boss card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Colorless Boss card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownClass": {
     "NAME": "??? Class",
-    "DESCRIPTION": "*Unidentified YouShouldNeverSeeThis-ReportToDev Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified YouShouldNeverSeeThis-ReportToDev Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownColorless": {
     "NAME": "??? Colorless",
-    "DESCRIPTION": "*Unidentified Colorless Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Colorless Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "??? C Attack",
-    "DESCRIPTION": "*Unidentified Common Attack Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Common Attack Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownCommonSkill": {
     "NAME": "??? C Skill",
-    "DESCRIPTION": "*Unidentified Common Skill Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Common Skill Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownDexterity": {
     "NAME": "??? Dexterity",
-    "DESCRIPTION": "*Unidentified Dexterity Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Dexterity Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownDraw": {
     "NAME": "??? Draw",
-    "DESCRIPTION": "*Unidentified Draw Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Draw Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownEthereal": {
     "NAME": "??? Ethereal",
-    "DESCRIPTION": "*Unidentified Ethereal Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Ethereal Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownExhaust": {
     "NAME": "??? Exhaust",
-    "DESCRIPTION": "*Unidentified Exhaust Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Exhaust Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownRareAttack": {
     "NAME": "??? R Attack",
-    "DESCRIPTION": "*Unidentified Rare Attack Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Rare Attack Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownRarePower": {
     "NAME": "??? R Power",
-    "DESCRIPTION": "*Unidentified Rare Power Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Rare Power Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownRareSkill": {
     "NAME": "??? R Skill",
-    "DESCRIPTION": "*Unidentified Rare Skill Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Rare Skill Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownStrength": {
     "NAME": "??? Strength",
-    "DESCRIPTION": "*Unidentified Strength Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Strength Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownStrike": {
     "NAME": "??? Strike",
-    "DESCRIPTION": "*Unidentified Strike Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Strike Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownUncommonAttack": {
     "NAME": "??? U Attack",
-    "DESCRIPTION": "*Unidentified Uncommon Attack Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Uncommon Attack Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownUncommonPower": {
     "NAME": "??? U Power",
-    "DESCRIPTION": "*Unidentified Uncommon Power Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Uncommon Power Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownUncommonSkill": {
     "NAME": "??? U Skill",
-    "DESCRIPTION": "*Unidentified Uncommon Skill Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Uncommon Skill Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownVulnerable": {
     "NAME": "??? Vulnerable",
-    "DESCRIPTION": "*Unidentified Vulnerable Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Vulnerable Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownWeak": {
     "NAME": "??? Weak",
-    "DESCRIPTION": "*Unidentified Weak Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Weak Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownX": {
     "NAME": "??? X-Cost",
-    "DESCRIPTION": "*Unidentified X Cost Card.",
-    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified X Cost Card."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "Unlimited Rolls",
-    "DESCRIPTION": "At the start of your turn, gain a *Soul *Roll with Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain a *Soul *Roll with Exhaust.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE"
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:Behold": {

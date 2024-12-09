@@ -29,27 +29,6 @@ public class PyreAdditionalCostPatch {
         if (CardModifierManager.hasModifier(c, PyreMod.ID)) {
             for (AbstractCardModifier r : CardModifierManager.getModifiers(c, PyreMod.ID)) {
                 if (r instanceof PyreMod) {
-                    System.out.println("DEBUG: Checking card " + c.name + " (cardID: " + c.cardID + ", upgraded: " + c.upgraded + ")");
-                    if (c.cardID.equals("collector:Bonfire") && !c.upgraded) {
-                        // Bonfire- Logic
-                        System.out.println("DEBUG: This is an unupgraded Bonfire-. Card: " + c);
-                        if (!AbstractDungeon.player.hand.isEmpty()) {
-                            AbstractCard randomCard = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
-                            System.out.println("DEBUG: Selected random card: " + randomCard.name);
-                            for (AbstractPower pow : AbstractDungeon.player.powers) {
-                                if (pow instanceof OnPyrePower) {
-                                    System.out.println("DEBUG: Applying OnPyrePower to card: " + randomCard.name);
-                                    ((OnPyrePower) pow).onPyre(randomCard);
-                                }
-                            }
-                            if (c instanceof OnPyreCard) {
-                                System.out.println("DEBUG: Applying OnPyreCard logic to card: " + randomCard.name);
-                                ((OnPyreCard) c).onPyred(randomCard);
-                            }
-                            att(new ExhaustSpecificCardAction(randomCard, AbstractDungeon.player.hand));
-                        }
-                    } else {
-                        // Standard Logic
                         System.out.println("DEBUG: This is NOT an unupgraded Bonfire-. Card: " + c);
                         att(new SelectCardsInHandAction("Select a card to Pyre", (cards) -> {
                             System.out.println("DEBUG: Selected card: " + cards.get(0).name);
@@ -70,4 +49,3 @@ public class PyreAdditionalCostPatch {
             }
         }
     }
-}

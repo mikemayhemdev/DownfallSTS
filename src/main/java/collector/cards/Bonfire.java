@@ -16,7 +16,7 @@ public class Bonfire extends AbstractCollectorCard {
 
     public Bonfire() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 8;
+        baseBlock = 9;
         isPyre();
     }
 
@@ -32,7 +32,6 @@ public class Bonfire extends AbstractCollectorCard {
 
 
     public void upp() {
-        upgradeBlock(3);
-        uDesc();
+        upgradeBlock(4);
     }
 }

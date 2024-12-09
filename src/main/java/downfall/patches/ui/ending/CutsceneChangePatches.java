@@ -21,7 +21,7 @@ public class CutsceneChangePatches {
     //Should be compatible with basemod's change since Basemod should be loaded before this
     @SpirePostfixPatch
     public static void patch(Cutscene __instance, AbstractPlayer.PlayerClass chosenClass) {
-        if (EvilModeCharacterSelect.evilMode || (chosenClass ==  TheHexaghost.Enums.THE_SPIRIT)) {
+        if (EvilModeCharacterSelect.evilMode) {
 
             Texture customBg = TextureLoader.getTexture("images/scenes/redBg.jpg");;
             if (customBg != null) {

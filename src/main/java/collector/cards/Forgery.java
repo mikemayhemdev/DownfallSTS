@@ -21,7 +21,7 @@ public class Forgery extends AbstractCollectorCard {
 
     public Forgery() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 10;
         baseMagicNumber = magicNumber = 2;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }

@@ -13,8 +13,8 @@ public class FiendFire extends AbstractCollectorCard {
     // intellij stuff attack, enemy, rare, 7, 3, , , , 
 
     public FiendFire() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 9;
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        baseDamage = 7;
         exhaust = true;
     }
 

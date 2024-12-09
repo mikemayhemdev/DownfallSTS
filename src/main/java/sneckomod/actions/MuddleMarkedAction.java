@@ -54,16 +54,40 @@ public class MuddleMarkedAction extends AbstractGameAction {
 
             card.superFlash();
             ArrayList<Integer> numList = new ArrayList<>();
-            numList.add(0); // Always include zero as an option for free-to-play
 
-            // Add costs that are strictly lower than the current cost for turn
+            if (!AbstractDungeon.player.hasRelic(CrystallizedMud.ID)) {
+                numList.add(0);
+            }
             if (card.costForTurn > 1) numList.add(1);
             if (card.costForTurn > 2) numList.add(2);
             if (card.costForTurn > 3 && !AbstractDungeon.player.hasRelic(CleanMud.ID) && !this.no3) numList.add(3);
 
+            if (numList.isEmpty()) {
+                numList.add(0);
+            }
+
             int newCost = numList.get(AbstractDungeon.cardRandomRng.random(numList.size() - 1));
-            if (card.costForTurn != newCost) {
-                card.setCostForTurn(newCost);
+
+            if (((newCost == 3))) {
+                ArrayList<Integer> numListMud = new ArrayList<>();
+                if (!AbstractDungeon.player.hasRelic(CrystallizedMud.ID) && (card.costForTurn != 1)){
+                    numListMud.add(0);
+                }
+
+                CleanMud cleanMudInstance = new CleanMud();
+                if (AbstractDungeon.player.hasRelic(CleanMud.ID) && (newCost == 3)) {
+                    cleanMudInstance.flash();
+                }
+
+                if (card.costForTurn > 1) numListMud.add(1);
+                if (card.costForTurn > 2) numListMud.add(2);
+                newCost = numListMud.get(AbstractDungeon.cardRandomRng.random(numListMud.size() - 1));
+            }
+
+            int truecost = newCost;
+
+            if (card.costForTurn != truecost) {
+                card.setCostForTurn(truecost);
             }
 
             card.freeToPlayOnce = false;

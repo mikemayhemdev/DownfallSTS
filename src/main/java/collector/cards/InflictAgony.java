@@ -19,7 +19,7 @@ public class InflictAgony extends AbstractCollectorCard {
 
     public InflictAgony() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 12;
+        baseDamage = 14;
         baseMagicNumber = magicNumber = 1;
     }
 

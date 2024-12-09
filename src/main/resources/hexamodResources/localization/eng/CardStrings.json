@@ -108,6 +108,12 @@
     "UPGRADE_DESCRIPTION": "Draw a card. NL You may choose to NL hexamod:Retract or hexamod:Advance.",
     "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
   },
+  "hexamod:MatchstickFloat": {
+    "NAME": "Sneaky Teakwood Match",
+   "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
+  },
   "hexamod:Floatwork": {
     "NAME": "Floatwork",
     "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain 1 Dexterity. NL ",

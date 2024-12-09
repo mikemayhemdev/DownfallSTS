@@ -1,6 +1,14 @@
 package theHexaghost;
 
+import automaton.vfx.CompileVictoryEffect;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.scene.DefectVictoryNumberEffect;
+import downfall.downfallMod;
+import hermit.effects.HermitVictoryEmbers;
+import hermit.effects.HermitVictoryMoon;
+import hermit.vfx.GreenFireEffect;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomEnergyOrb;
@@ -32,10 +40,17 @@ import theHexaghost.cards.Float;
 import theHexaghost.ghostflames.*;
 import theHexaghost.relics.SpiritBrand;
 import downfall.util.TextureLoader;
+import theHexaghost.vfx.ActiveFireEffect;
 import theHexaghost.vfx.MyBody;
+import theHexaghost.vfx.SpookyEmberEffect;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import static com.badlogic.gdx.graphics.Color.GREEN;
+import static com.badlogic.gdx.graphics.Color.PURPLE;
+import static hermit.characters.hermit.update_timer;
+import static java.awt.Color.green;
 import static theHexaghost.GhostflameHelper.*;
 import static theHexaghost.HexaMod.*;
 import static theHexaghost.TheHexaghost.Enums.GHOST_GREEN;
@@ -119,6 +134,31 @@ public class TheHexaghost extends CustomPlayer {
         dialogY = (drawY + 240.0F * Settings.scale);
 
         myBody = new MyBody();
+    }
+
+    @Override
+    public Texture getCutsceneBg() {
+        return TextureLoader.getTexture("images/scenes/purpleBg.jpg");
+    }
+
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList();
+        //wow look standard mode ending
+        panels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/hexaending1.jpg"), "GHOST_FLAMES"));
+        panels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/hexaending2.jpg")));
+        panels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/hexaending3.jpg")));
+        return panels;
+    }
+
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+        //todo: make a victory effect, literally just use ShortScreenFire.java retooled somehow, this doesn't work :(
+        // if (effects.size() == 0)
+       //     AbstractDungeon.effectsQueue.add(new GreenFireEffect());
+       //  else {
+       //     AbstractDungeon.effectsQueue.add(new GreenFireEffect());
+       //  }
     }
 
     public void reloadAnimation() {

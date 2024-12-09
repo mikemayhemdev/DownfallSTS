@@ -48,7 +48,7 @@ public class BlunderGuardPower extends AbstractPower implements CloneablePowerIn
         this.updateDescription();
     }
 
-    public boolean isOverflowActive(AbstractCard source) { // Adjusted to take a card parameter
+    public boolean isOverflowActive(AbstractCard source) {
         boolean OVERFLOW = false; // Reset overflow state
 
         // Only check for overflow if the card has the OVERFLOW tag

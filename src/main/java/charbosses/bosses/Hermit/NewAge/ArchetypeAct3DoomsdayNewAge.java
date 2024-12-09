@@ -19,17 +19,11 @@ import downfall.monsters.DoomedDagger;
 import java.util.ArrayList;
 
 public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
-
+    public boolean froegg = false;
     public ArchetypeAct3DoomsdayNewAge() {
         super("HERMIT_DOOMSDAY_ARCHETYPE", "Doomsday");
 
-        maxHPModifier += 315;
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            maxHPModifier += 90;
-            //why was this 24 it's ascension 19 and also act 3 that's nothing you could have gave him something
-            //sadistic like duvu but whatever
-            //actually I just counted duvu would make this fight too hard, so I'm just increasing the HP gain to 90.
-        }
+        maxHPModifier += 363;
         actNum = 3;
         bossMechanicName = HermitDoomsday.NAME;
         bossMechanicDesc = HermitDoomsday.DESC[0];
@@ -43,7 +37,6 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(getDoomedSnake(), true));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitDoomsday(p), 1));
 //        AbstractDungeon.actionManager.addToBottom(new VFXAction(new PotionThrowEffect("downfallResources/images/vfx/CultistPotion.png", p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, 2F, 0.6F, false, true), 0.6F));
@@ -69,7 +62,12 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         if (!looped) {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnShadowCloak());
+                    if (AbstractDungeon.ascensionLevel >= 19) {
+                        addToList(cardsList, new EnShadowCloak(), extraUpgrades);
+                    }
+                    if (!(AbstractDungeon.ascensionLevel >= 19)) {
+                        addToList(cardsList, new EnShadowCloak());
+                    }
                     addToList(cardsList, new EnGrudge(15));
                     addToList(cardsList, new EnGlare());
                     turn++;
@@ -118,6 +116,6 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_DarkstonePeriapt());
+        addRelic(new CBR_FrozenEgg());
     }
 }

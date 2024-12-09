@@ -182,6 +182,7 @@ public class HexaMod implements
         return getModID() + ":" + idText;
     }
 
+
     private static void autoAddCards()
             throws URISyntaxException, IllegalAccessException, InstantiationException, NotFoundException, ClassNotFoundException {
         ClassFinder finder = new ClassFinder();

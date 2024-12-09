@@ -31,6 +31,6 @@ public class Darkstorm extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

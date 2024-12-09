@@ -44,6 +44,7 @@ import charbosses.bosses.Watcher.CharBossWatcher;
 import collector.CollectorChar;
 import collector.CollectorMod;
 import collector.potions.TempHPPotion;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import downfall.cards.curses.Sapped;
 import collector.util.CollectibleCardReward;
 import collector.util.EssenceReward;
@@ -210,11 +211,20 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static String Act3BossFaced = "";
 
     public static boolean[] unseenTutorials = new boolean[]{true, // Hermit
-            true, // Guardian
-            true, // Hexa
-            true, // Charboss Info
-            true, // COLLECTOR info. Wow, it's hard to believe how much has gone on since the last tutorial was made
-            true // THE T&T ADVERTISEMENT!!! ADVERTISING!! To be fair we worked really hard both on T&T and this project
+
+            true, // Guardian 1
+            true, // Hexa 2
+            true, // Charboss Info 3
+            true, // COLLECTOR info. Wow, it's hard to believe how much has gone on since the last tutorial was made 4
+            true, // t&t advert 5
+            true, // Slime Boss 6
+            true, // Champ 7
+            true, // Auto 8
+            true, // Gremlins 9
+            true // Snecko 10
+            // true, //act3 boss 11
+         // true, //act3 boss 12
+         // true //act3 boss 13
     };
 
     public static Properties tutorialSaves = new Properties();
@@ -1657,25 +1667,36 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
         }
 
+        // Code 0 is Hermit's Tutorial and already within his own mod.
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID)) || ModHelper.isModEnabled(ChampStances.ID)) {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new ModFinisher()));
+        }
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Enraging.ID)) || ModHelper.isModEnabled(Enraging.ID)) {
+            for (AbstractMonster m : abstractRoom.monsters.monsters)
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
+        }
+
+        //guardian tutorial 1
         if (AbstractDungeon.player instanceof GuardianCharacter) {
             if (downfallMod.unseenTutorials[1]) {
                 AbstractDungeon.actionManager.addToBottom(new MessageCaller(1));
             }
         }
-
+        //hexa tutorial 2
         if (AbstractDungeon.player instanceof TheHexaghost) {
             if (downfallMod.unseenTutorials[2]) {
                 AbstractDungeon.actionManager.addToBottom(new MessageCaller(2));
             }
         }
-
+        //collector tutorial 4
         if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
             if (downfallMod.unseenTutorials[4]) {
                 AbstractDungeon.actionManager.addToTop(new MessageCaller(4));
             }
         }
-
-        /*
+        //charboss tutorial 3
         if (abstractRoom instanceof MonsterRoomBoss) {
             if (evilMode) {
                 if (downfallMod.unseenTutorials[3]) {
@@ -1683,7 +1704,36 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 }
             }
         }
-         */
+        //slime boss tutorial 6
+        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+            if (downfallMod.unseenTutorials[6]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(6));
+            }
+        }
+        //champ tutorial 7
+        if (AbstractDungeon.player instanceof ChampChar) {
+            if (downfallMod.unseenTutorials[7]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(7));
+            }
+        }
+        //auto tutorial 8
+        if (AbstractDungeon.player instanceof AutomatonChar) {
+            if (downfallMod.unseenTutorials[8]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(8));
+            }
+        }
+        //grems tutorial 9
+        if (AbstractDungeon.player instanceof GremlinCharacter) {
+            if (downfallMod.unseenTutorials[9]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(9));
+            }
+        }
+        //snecko tutorial 10
+        if (AbstractDungeon.player instanceof TheSnecko) {
+            if (downfallMod.unseenTutorials[10]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(10));
+            }
+        }
     }
 
 

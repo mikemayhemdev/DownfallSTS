@@ -50,8 +50,7 @@ public class DiceRollPotion extends CustomPotion {
                 }
             }
         }
-
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+        SneckoMod.addGift(cardsToReward);
     }
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {

@@ -44,8 +44,7 @@
   },
   "collector:Bonfire": {
     "NAME": "Bonfire",
-    "DESCRIPTION": "collector:Pyre a random card. NL Gain !B! Block. NL Next turn, gain 1 collector:Reserve.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain 1 collector:Reserve."
+    "DESCRIPTION": "collector:Pyre. NL Gain !B! Block. NL Next turn, gain 1 collector:Reserve."
   },
   "collector:BrainDrain": {
     "NAME": "Brain Drain",
@@ -140,7 +139,7 @@
     "DESCRIPTION": "Whenever you *Exhaust a card, ALL enemies lose !M! HP."
   },
   "collector:FiendFire": {
-    "NAME": "Greenpyre Burst",
+    "NAME": "Fiend Fire",
     "DESCRIPTION": "Exhaust your hand. NL Deal !D! damage for each card *Exhausted. NL Exhaust."
   },
   "collector:Finalize": {
@@ -420,8 +419,7 @@
   },
   "collector:AcidSlimeCard": {
     "NAME": "Acid Slime",
-    "DESCRIPTION": "Add !M! random 0 cost cards into your hand.",
-    "UPGRADE_DESCRIPTION": "Add !M! random 0 cost cards into your hand."
+    "DESCRIPTION": "Add !M! random 0 cost cards into your hand."
   },
   "collector:AugmenterCard": {
     "NAME": "Augmenter",
@@ -540,7 +538,7 @@
   },
   "collector:LouseCard": {
     "NAME": "Louse",
-    "DESCRIPTION": "Gain 1 bronze:Blur. NL The next time you receive unblocked attack damage, gain !B! Block."
+    "DESCRIPTION": "Gain 1 bronze:Blur. NL Next turn, gain !B! Block."
   },
   "collector:MadGremlinCard": {
     "NAME": "Mad Gremlin",

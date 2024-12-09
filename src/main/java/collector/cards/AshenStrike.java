@@ -14,7 +14,7 @@ public class AshenStrike extends AbstractCollectorCard {
 
     public AshenStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 10;
+        baseDamage = 8;
         cardsToPreview = new Ember();
         tags.add(CardTags.STRIKE);
     }

@@ -35,7 +35,7 @@ public class ExtraCursedBell extends CustomRelic {
         CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         AbstractCard bellCurse = new CurseOfTheBell();
         UnlockTracker.markCardAsSeen(bellCurse.cardID);
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 1; i++)
             group.addToBottom(bellCurse.makeCopy());
         AbstractDungeon.gridSelectScreen.openConfirmationGrid(group, this.DESCRIPTIONS[1]);
         CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
@@ -47,8 +47,10 @@ public class ExtraCursedBell extends CustomRelic {
             AbstractDungeon.combatRewardScreen.open();
             AbstractDungeon.combatRewardScreen.rewards.clear();
             AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(AbstractDungeon.returnRandomScreenlessRelic(RelicTier.COMMON)));
-            AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(AbstractDungeon.returnRandomScreenlessRelic(RelicTier.UNCOMMON)));
-            AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(AbstractDungeon.returnRandomScreenlessRelic(RelicTier.RARE)));
+            AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(AbstractDungeon.returnRandomScreenlessRelic(RelicTier.COMMON)));
+            AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(AbstractDungeon.returnRandomScreenlessRelic(RelicTier.COMMON)));
+           // AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(AbstractDungeon.returnRandomScreenlessRelic(RelicTier.UNCOMMON)));
+           // AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(AbstractDungeon.returnRandomScreenlessRelic(RelicTier.RARE)));
             AbstractDungeon.combatRewardScreen.positionRewards();
             AbstractDungeon.overlayMenu.proceedButton.setLabel(this.DESCRIPTIONS[2]);
             this.cardsReceived = true;

@@ -17,7 +17,7 @@
     "NAME": "Bruiser Slime",
     "DESCRIPTION": [
       "Deals #b",
-      " damage at the start of your turn."
+      " damage twice at the start of your turn."
     ]
   },
   "Slimebound:ScrapOozeSlime": {
@@ -108,7 +108,7 @@
     "DESCRIPTION": [
       "Deals #b",
       " damage at the start of your turn and causes you to draw #b",
-      " card."
+      " card. Draw does not scale with Potency."
     ]
   },
   "Slimebound:DarklingSlime": {

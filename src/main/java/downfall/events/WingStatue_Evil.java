@@ -28,13 +28,23 @@ public class WingStatue_Evil extends AbstractImageEvent {
     }
 
     private CurScreen screen;
-    private int damage = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.15F);
+    private int goldLoss;
 
     public WingStatue_Evil() {
         super(NAME, DESCRIPTIONS[0], "images/events/goldenWing.jpg");
         this.screen = CurScreen.INTRO;
 
-        this.imageEventText.setDialogOption(OPTIONS[0] + this.damage + OPTIONS[1], new ShatteredFragment());
+        if (AbstractDungeon.ascensionLevel >= 15) {
+            this.goldLoss = AbstractDungeon.miscRng.random(50, 75);
+        } else {
+            this.goldLoss = AbstractDungeon.miscRng.random(25, 50);
+        }
+
+        if (this.goldLoss > AbstractDungeon.player.gold) {
+            this.goldLoss = AbstractDungeon.player.gold;
+        }
+
+        this.imageEventText.setDialogOption(OPTIONS [0] + goldLoss + OPTIONS[1], new ShatteredFragment());
         this.imageEventText.setDialogOption(OPTIONS[2] + ((AbstractDungeon.ascensionLevel >= 15)?7:5) + OPTIONS[4], new BrokenWingStatue());
         this.imageEventText.setDialogOption(OPTIONS[3]);
     }
@@ -49,10 +59,10 @@ public class WingStatue_Evil extends AbstractImageEvent {
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new ShatteredFragment());
 //                        AbstractDungeon.player.decreaseMaxHealth(this.damage);
-                        AbstractDungeon.player.damage(new DamageInfo(null, this.damage));
-                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AttackEffect.FIRE));
+                      //  AbstractDungeon.player.damage(new DamageInfo(null, this.damage));
+                       // AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AttackEffect.FIRE));
                         this.screen = CurScreen.RESULT;
-                        logMetricObtainRelicAndDamage(ID, "Destroyed Statue", new ShatteredFragment(), damage);
+                        logMetricObtainRelicAndDamage(ID, "Destroyed Statue", new ShatteredFragment(), goldLoss);
                         return;
                     case 1:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);

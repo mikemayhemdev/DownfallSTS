@@ -304,7 +304,7 @@ public class SneckoMod implements
     //todo: allow 'Healing' Cards to generate outside of combat in Gifts. Gift Array on line 273.
     public static AbstractCard getOffClassCardMatchingPredicate(Predicate<AbstractCard> q) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || !q.test(c) || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO));
+        possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.rarity == AbstractCard.CardRarity.BASIC || c.type == STATUS || !q.test(c) || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO));
         if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
             possList.removeIf(c -> !validColors.contains(c.color));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();

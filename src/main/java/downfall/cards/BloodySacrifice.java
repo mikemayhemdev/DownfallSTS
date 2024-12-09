@@ -34,7 +34,7 @@ public class BloodySacrifice extends AbstractDownfallCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        lose_hp = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * (float)magicNumber * 0.01f);
+        lose_hp = MathUtils.floor((float) AbstractDungeon.player.maxHealth * (float)magicNumber * 0.01f);
         rawDescription = (cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0].replace("{amount}",Integer.toString(lose_hp)) );
         this.initializeDescription();
     }
