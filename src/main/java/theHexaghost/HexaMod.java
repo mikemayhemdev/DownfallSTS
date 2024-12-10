@@ -30,7 +30,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import downfall.downfallMod;
-import downfall.patches.BanSharedContentPatch;
+//import downfall.patches.BanSharedContentPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;

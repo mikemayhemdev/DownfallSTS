@@ -2,6 +2,7 @@ package sneckomod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import slimebound.SlimeboundMod;
@@ -63,7 +64,7 @@ public class MuddleMarkedAction extends AbstractGameAction {
             if (card.costForTurn > 3 && !AbstractDungeon.player.hasRelic(CleanMud.ID) && !this.no3) numList.add(3);
 
             if (numList.isEmpty()) {
-                numList.add(0);
+                numList.add(1);
             }
 
             int newCost = numList.get(AbstractDungeon.cardRandomRng.random(numList.size() - 1));
@@ -76,7 +77,9 @@ public class MuddleMarkedAction extends AbstractGameAction {
 
                 CleanMud cleanMudInstance = new CleanMud();
                 if (AbstractDungeon.player.hasRelic(CleanMud.ID) && (newCost == 3)) {
+                    this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, cleanMudInstance));
                     cleanMudInstance.flash();
+
                 }
 
                 if (card.costForTurn > 1) numListMud.add(1);

@@ -1,14 +1,19 @@
 package theHexaghost;
 
 import automaton.vfx.CompileVictoryEffect;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.combat.GiantFireEffect;
+import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 import com.megacrit.cardcrawl.vfx.scene.DefectVictoryNumberEffect;
+import com.megacrit.cardcrawl.vfx.scene.IroncladVictoryFlameEffect;
 import downfall.downfallMod;
 import hermit.effects.HermitVictoryEmbers;
 import hermit.effects.HermitVictoryMoon;
 import hermit.vfx.GreenFireEffect;
+import hermit.vfx.ShortScreenFire;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomEnergyOrb;
@@ -34,6 +39,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.BobEffect;
+import reskinContent.vfx.PortraitScreenOnFireEffect;
 import sneckomod.SneckoMod;
 import theHexaghost.cards.*;
 import theHexaghost.cards.Float;
@@ -50,6 +56,7 @@ import java.util.List;
 import static com.badlogic.gdx.graphics.Color.GREEN;
 import static com.badlogic.gdx.graphics.Color.PURPLE;
 import static hermit.characters.hermit.update_timer;
+import static hermit.util.Wiz.atb;
 import static java.awt.Color.green;
 import static theHexaghost.GhostflameHelper.*;
 import static theHexaghost.HexaMod.*;
@@ -153,12 +160,26 @@ public class TheHexaghost extends CustomPlayer {
 
     @Override
     public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
-        //todo: make a victory effect, literally just use ShortScreenFire.java retooled somehow, this doesn't work :(
-        // if (effects.size() == 0)
-       //     AbstractDungeon.effectsQueue.add(new GreenFireEffect());
-       //  else {
-       //     AbstractDungeon.effectsQueue.add(new GreenFireEffect());
-       //  }
+    AbstractDungeon.effectsQueue.add(new GiantFireEffect());
+        AbstractDungeon.effectsQueue.add(new GreenFireEffect());
+        AbstractDungeon.effectsQueue.add(new IroncladVictoryFlameEffect());
+        update_timer += Gdx.graphics.getDeltaTime();
+
+        for(float i = 0; i+(1.0/120.0) <= update_timer; update_timer -= (1.0/120.0)) {
+            effects.add(new GiantFireEffect());
+            AbstractDungeon.effectsQueue.add(new GreenFireEffect());
+            AbstractDungeon.effectsQueue.add(new IroncladVictoryFlameEffect());
+        }
+       if (effects.stream().filter(e -> e instanceof GiantFireEffect).count() < 8){
+            effects.add(new GiantFireEffect());
+           AbstractDungeon.effectsQueue.add(new GreenFireEffect());
+           AbstractDungeon.effectsQueue.add(new IroncladVictoryFlameEffect());
+          // IroncladVictoryFlameEffect
+        }
+       // if (effects.stream().filter(e -> e instanceof GiantFireEffect).count() == 8){
+       //     effects.clear();
+      //  }
+
     }
 
     public void reloadAnimation() {
