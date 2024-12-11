@@ -2,10 +2,12 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardModifierManager;
+import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import expansioncontent.cardmods.RetainCardMod;
+import guardian.cards.GearUp;
 import sneckomod.SneckoMod;
 import sneckomod.cards.Cheat;
 import downfall.util.TextureLoader;
@@ -19,6 +21,7 @@ public class SleevedAce extends CustomRelic {
 
     public SleevedAce() {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
+        this.tips.add(new CardPowerTip(new MarkedCard()));
     }
 
     @Override

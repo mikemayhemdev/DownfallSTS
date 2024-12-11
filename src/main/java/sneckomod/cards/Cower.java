@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.cards.HoleUp;
+import slimebound.cards.SlimeCrush;
 import sneckomod.SneckoMod;
 
 public class Cower extends AbstractSneckoCard {
@@ -41,6 +42,9 @@ public class Cower extends AbstractSneckoCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
+            AbstractCard q = new HoleUp();
+            q.upgrade();
+            cardsToPreview = q;
             upgradeName();
             upgradeBlock(UPG_BLOCK);
             rawDescription = UPGRADE_DESCRIPTION;

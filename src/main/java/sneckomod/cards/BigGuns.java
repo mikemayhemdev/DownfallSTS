@@ -26,32 +26,9 @@ public class BigGuns extends AbstractSneckoCard {
         SneckoMod.loadJokeCardImage(this, "BigGuns.png");
     }
 
-    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new BigGunsBlockPower(this.baseBlock));
         applyToSelf(new BigGunsStrengthPower(this.magicNumber));
-    }
-
-    @Override
-    public void onObtainCard() {
-        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
-        while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.cost == 3);
-            if (!cardListDuplicate(cardsToReward, newCard)) {
-                cardsToReward.add(newCard.makeCopy());
-            }
-        }
-
-        SneckoMod.addGift(cardsToReward);
-        ;
     }
 
     public void upgrade() {
@@ -59,6 +36,8 @@ public class BigGuns extends AbstractSneckoCard {
             upgradeName();
             upgradeMagicNumber(UPGRADE_MAGIC);
             upgradeBlock(UPG_BASE_BLOCK);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

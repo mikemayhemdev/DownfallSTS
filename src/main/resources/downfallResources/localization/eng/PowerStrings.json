@@ -158,7 +158,7 @@
   "downfall:DefectVoidPower": {
     "NAME": "Energy Thief",
     "DESCRIPTIONS": [
-      "Whenever Defect generates a #yVoid, it goes to the top of your draw pile."
+      "Whenever Defect generates a #yVoid, it goes into YOUR discard pile."
     ]
   },
   "downfall:NeowEnergyThief": {
@@ -170,7 +170,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
-      "Begins the fight with 2 #yBronze #yOrb minions. NL Gains 1 #yArtifact at the end of its turn if it did not already have #yArtifact [REMOVE_SPACE]."
+      "Begins the fight with 2 #yBronze #yOrb minions. NL Whenever Defect is about to use #bReprogram or #bHyperbeam [REMOVE_SPACE], they gain #b1 #yArtifact."
     ]
   },
   "downfall:NeowAncientConstruct": {

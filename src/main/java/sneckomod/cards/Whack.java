@@ -9,13 +9,14 @@ import com.megacrit.cardcrawl.cards.purple.Wallop;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.cards.HoleUp;
 import sneckomod.SneckoMod;
 
 public class Whack extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("Whack");
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 12;
     private static final int UPGRADE_DAMAGE = 3;
     private static final int COST = 1;
 
@@ -40,6 +41,9 @@ public class Whack extends AbstractSneckoCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
+            AbstractCard q = new Whack();
+            q.upgrade();
+            cardsToPreview = q;
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
             rawDescription = UPGRADE_DESCRIPTION;

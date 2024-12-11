@@ -101,7 +101,8 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
         }
 
         if(AbstractDungeon.player.hasRelic(JadeRing.ID)){
-            description = DESCRIPTIONS[0] + amount+6 + DESCRIPTIONS[1];
+            int display = (this.amount+6);
+            description = DESCRIPTIONS[0] + display + DESCRIPTIONS[1];
         }
 
     }

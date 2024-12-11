@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.blue.FTL;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.cards.HoleUp;
 import sneckomod.SneckoMod;
 
 public class ThrowingCards extends AbstractSneckoCard {
@@ -39,6 +40,9 @@ public class ThrowingCards extends AbstractSneckoCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
+            AbstractCard q = new ThrowingCards();
+            q.upgrade();
+            cardsToPreview = q;
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

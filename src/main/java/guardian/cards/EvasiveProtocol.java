@@ -64,12 +64,6 @@ public class EvasiveProtocol extends AbstractGuardianCard {
         int mods = 0;
         super.use(p, m);
 
-        if (p.stance instanceof DefensiveMode) {
-            AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));
-        }
-
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EvasiveProtocolPower(p, magicNumber)));
-
         if (AbstractDungeon.player.hasPower("Guardian:ModeShiftPower")) {
             moda = AbstractDungeon.player.getPower("Guardian:ModeShiftPower").amount;
         }
@@ -84,7 +78,14 @@ public class EvasiveProtocol extends AbstractGuardianCard {
             mods = 9;
         }
 
-      //  if (((moda - mods) <= 0)) {
+
+        if (p.stance instanceof DefensiveMode) {
+            AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));
+        }
+
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EvasiveProtocolPower(p, magicNumber)));
+
+        //  if (((moda - mods) <= 0)) {
        //     AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));
       //  }
 

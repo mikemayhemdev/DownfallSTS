@@ -41,7 +41,7 @@ public class SlimeCrush extends AbstractSlimeboundCard {
 
     public SlimeCrush() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-        this.baseDamage = 25;
+        this.baseDamage = 35;
         this.exhaust = true;
         this.isEthereal = true;
         SlimeboundMod.loadJokeCardImage(this, "SlimeCrush.png");
@@ -69,7 +69,7 @@ public class SlimeCrush extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(10);
+          //  upgradeDamage(10);
             this.target = CardTarget.ALL_ENEMY;
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();

@@ -52,9 +52,13 @@ public class GemFire extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
         // Collect sockets from piles and stasis
+        System.out.println("DEBUG: Collecting Hand");
         collectSocketsFromGroup(p.hand);
+        System.out.println("DEBUG: Collecting Draw Pile");
         collectSocketsFromGroup(p.drawPile);
+        System.out.println("DEBUG: Collecting Discard Pile");
         collectSocketsFromGroup(p.discardPile);
+        System.out.println("DEBUG: Collecting Stasis");
         collectSocketsFromStasis(p);
 
         // Process sockets (non-SYNTHETIC first, then SYNTHETIC)
@@ -62,12 +66,14 @@ public class GemFire extends AbstractGuardianCard {
         ArrayList<GuardianMod.socketTypes> syntheticSockets = new ArrayList<>();
         for (GuardianMod.socketTypes socket : this.sockets) {
             if (socket == GuardianMod.socketTypes.SYNTHETIC) {
+                System.out.println("DEBUG: Adding " + socket);
                 syntheticSockets.add(socket);
             } else {
                 nonSyntheticSockets.add(socket);
+                System.out.println("DEBUG: Adding " + socket);
             }
         }
-
+        System.out.println("DEBUG: Combining Arrays");
         nonSyntheticSockets.addAll(syntheticSockets); // Combine lists
         for (GuardianMod.socketTypes socket : nonSyntheticSockets) {
             processSocket(p, m, socket);
@@ -79,8 +85,10 @@ public class GemFire extends AbstractGuardianCard {
         for (AbstractCard c : group.group) {
             if ((c instanceof AbstractGuardianCard) && !(c.hasTag(GuardianMod.GEM))) {
                 AbstractGuardianCard gc = (AbstractGuardianCard) c;
+                System.out.println("DEBUG: Card: " + c);
                 for (GuardianMod.socketTypes socket : gc.sockets) {
                    // if (!this.sockets.contains(socket)) {
+                    System.out.println("DEBUG: Adding " + socket);
                         this.sockets.add(socket);
                  //   }
                 }
@@ -89,6 +97,7 @@ public class GemFire extends AbstractGuardianCard {
                     GuardianMod.socketTypes gemType = ((AbstractGuardianCard) c).thisGemsType;
                     if (gemType != null) {
                   //  if (gemType != null && !this.sockets.contains(gemType)) {
+                        System.out.println("DEBUG: Detected " + gemType);
                         this.sockets.add(gemType);
                     }
                 }
@@ -104,6 +113,7 @@ public class GemFire extends AbstractGuardianCard {
                     AbstractGuardianCard gc = (AbstractGuardianCard) stasisCard;
                     for (GuardianMod.socketTypes socket : gc.sockets) {
                     //    if (!this.sockets.contains(socket)) {
+                        System.out.println("DEBUG: Adding " + socket);
                            this.sockets.add(socket);
                      //   }
                     }
@@ -112,6 +122,7 @@ public class GemFire extends AbstractGuardianCard {
                         GuardianMod.socketTypes gemType = ((AbstractGuardianCard) stasisCard).thisGemsType;
                         if (gemType != null) {
                        // if (gemType != null && !this.sockets.contains(gemType)) {
+                            System.out.println("DEBUG: Adding " + gemType);
                             this.sockets.add(gemType);
                         }
                     }

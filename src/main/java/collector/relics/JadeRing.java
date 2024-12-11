@@ -20,7 +20,7 @@ public class JadeRing extends CustomRelic {
     }
 
     //logic moved to DoomPower.java
-    //but basically the way it works is that DoomPower has +4 added to it when dealing damage and
+    //but basically the way it works is that DoomPower has +6 added to it when dealing damage and
     //rendering health bars, and returning the amount of damage in the description
 
   //  @Override

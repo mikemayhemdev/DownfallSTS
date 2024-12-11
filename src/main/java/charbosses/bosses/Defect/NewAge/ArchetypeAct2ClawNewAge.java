@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.NoBlockPower;
 
 import java.lang.reflect.Method;
@@ -55,9 +56,10 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
     public void initialize() {
 
         addRelic(new CBR_NeowsBlessing());
+        addRelic(new CBR_ClockworkSouvenir());
         addRelic(new CBR_Kunai());
-        addRelic(new CBR_RedMask());
-        addRelic(new CBR_Turnip());
+        addRelic(new CBR_BagOfPreparation());
+
 
         // animation
         try {
@@ -85,6 +87,10 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
             switch (turn) {
                 case 0:
                     // NO Orbs
+                    addToList(cardsList, new EnChill(), true);
+                    frostOrbsChanneled += 1;
+                    addToList(cardsList, new EnChill(), true);
+                    frostOrbsChanneled += 1;
                     addToList(cardsList, new EnBootSequence(), false);  // removed
                     addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);
                     addToList(cardsList, new EnMachineLearning(), true);  // removed
@@ -105,8 +111,9 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                 case 2:
                     //Turn 3
                     // Frost
-                    addToList(cardsList, new EnReprogram(), false);
+                    addToList(cardsList, new EnReprogram(), extraUpgrades);
                     ArchetypeAct3OrbsNewAge.increasePretendFocus(-1);
+                    if (extraUpgrades) {ArchetypeAct3OrbsNewAge.increasePretendFocus(-1);}
                     addToList(cardsList, new EnSwiftStrike(), false);
                     addToList(cardsList, new EnRebound(), false);
                     addToList(cardsList, new EnClaw(cB.clawsPlayed * 2));
@@ -127,7 +134,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                 case 4:
                     //Turn 5
                     // Frost
-                    addToList(cardsList, new EnHyperbeam(), extraUpgrades);
+                    addToList(cardsList, new EnHyperbeam(), true);
                     ArchetypeAct3OrbsNewAge.increasePretendFocus(-3);
                     addToList(cardsList, new EnMalfunctioning(), false);
                     addToList(cardsList, new EnDefendBlue(), false);
@@ -164,7 +171,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                     break;
                 case 1:
                     //Turn 3
-                    addToList(cardsList, new EnHyperbeam(), extraUpgrades);
+                    addToList(cardsList, new EnHyperbeam(), true);
                     ArchetypeAct3OrbsNewAge.increasePretendFocus(-3);
                     addToList(cardsList, new EnChargeBattery(), false);
                     addToList(cardsList, new EnShame(), false);
@@ -172,8 +179,9 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnReprogram(), false);
+                    addToList(cardsList, new EnReprogram(), extraUpgrades);
                     ArchetypeAct3OrbsNewAge.increasePretendFocus(-1);
+                    if (extraUpgrades) {ArchetypeAct3OrbsNewAge.increasePretendFocus(-1);}
                     addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);
                     addToList(cardsList,  new EnDefendBlue(), false);
                     addToList(cardsList, new EnSwiftStrike(), false);

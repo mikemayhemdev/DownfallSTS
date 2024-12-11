@@ -511,8 +511,8 @@
   },
   "sneckomod:BigGuns": {
     "NAME": "Blunder Guard",
-    "DESCRIPTION": "Whenever you play a card that costs 3, gain !B! Block and !M! Strength. NL sneckomod:Gift: 3 cost.",
-    "DESCRIPTION_BATTLE": "Whenever you play a card that costs 3, gain !B! Block and !M! Strength."
+    "DESCRIPTION": "Whenever you play a card that costs 3, gain 6 Block and !M! Strength. NL Gain [E].",
+    "UPGRADE_DESCRIPTION": "Whenever you play a card that costs 3, gain 8 Block and !M! Strength. NL Gain [E]."
   },
   "sneckomod:WideAngle": {
     "NAME": "Wide Angle",

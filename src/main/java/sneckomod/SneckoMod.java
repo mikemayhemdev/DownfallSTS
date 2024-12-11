@@ -375,24 +375,24 @@ public class SneckoMod implements
 
         downfallMod.registerUnlockSuite(
                 SoulDraw.ID,
-                PureSnecko.ID,
                 Restock.ID,
+                PureSnecko.ID,
 
                 BigGuns.ID,
+                Blunderbus.ID,
+                WideAngle.ID,
+
+                TrashCan.ID,
+                TrashToTreasure.ID,
                 OverwhelmingPresence.ID,
-                BlunderGuard.ID,
 
-                Lacerate.ID,
-                InertBlade.ID,
-                GlitteringGambit.ID,
-
-                RareBoosterPack.ID,
-                SleevedAce.ID,
+                CrystallizedMud.ID,
+                CheapStock.ID,
                 CleanMud.ID,
 
-                SuperSneckoEye.ID,
-                UnknownEgg.ID,
+                GlitteringGambit.ID,
                 SneckoTalon.ID,
+                Jackpot.ID,
 
                 TheSnecko.Enums.THE_SNECKO
         );

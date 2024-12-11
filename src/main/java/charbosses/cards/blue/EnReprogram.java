@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -31,6 +32,7 @@ public class EnReprogram extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToTop(new ApplyPowerAction(m, m, new ArtifactPower(m, 1), 1));
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
