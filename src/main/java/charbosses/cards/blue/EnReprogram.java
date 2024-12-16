@@ -32,7 +32,6 @@ public class EnReprogram extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToTop(new ApplyPowerAction(m, m, new ArtifactPower(m, 1), 1));
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {

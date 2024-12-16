@@ -35,8 +35,8 @@ public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
                 toMove.addAll(AbstractDungeon.player.hand.group);
                 for (AbstractCard c : toMove) {
                     if (c.isEthereal) {
-                        AbstractDungeon.player.hand.removeCard(c);
-                        invalidTargets.add(c);
+                       // AbstractDungeon.player.hand.removeCard(c);
+                       // invalidTargets.add(c);
                     }
                 }
 

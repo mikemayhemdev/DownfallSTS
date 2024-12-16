@@ -37,10 +37,6 @@ public class MuddleMarkedAction extends AbstractGameAction {
         if ((card instanceof RiskySword)) {
             ((RiskySword) card).onMuddledSword();
         }
-        if ((card instanceof Cower)) {
-            ((Cower) card).onMuddledSword();
-        }
-
 
         if (card.cost >= 0 && !card.hasTag(SneckoMod.SNEKPROOF)) {
             if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {
@@ -51,6 +47,7 @@ public class MuddleMarkedAction extends AbstractGameAction {
             if (AbstractDungeon.player.hasRelic(LoadedDie.ID)) {
                 addToBot(new GainBlockAction(AbstractDungeon.player, 1));
                 loadedDieInstance.flash();
+                AbstractDungeon.player.getRelic(LoadedDie.ID).onTrigger();
             }
 
             card.superFlash();
@@ -59,6 +56,7 @@ public class MuddleMarkedAction extends AbstractGameAction {
             if (!AbstractDungeon.player.hasRelic(CrystallizedMud.ID)) {
                 numList.add(0);
             }
+
             if (card.costForTurn > 1) numList.add(1);
             if (card.costForTurn > 2) numList.add(2);
             if (card.costForTurn > 3 && !AbstractDungeon.player.hasRelic(CleanMud.ID) && !this.no3) numList.add(3);
@@ -69,7 +67,7 @@ public class MuddleMarkedAction extends AbstractGameAction {
 
             int newCost = numList.get(AbstractDungeon.cardRandomRng.random(numList.size() - 1));
 
-            if (((newCost == 3))) {
+            if (((newCost == 3) && AbstractDungeon.player.hasRelic(CleanMud.ID))){
                 ArrayList<Integer> numListMud = new ArrayList<>();
                 if (!AbstractDungeon.player.hasRelic(CrystallizedMud.ID) && (card.costForTurn != 1)){
                     numListMud.add(0);
@@ -79,7 +77,7 @@ public class MuddleMarkedAction extends AbstractGameAction {
                 if (AbstractDungeon.player.hasRelic(CleanMud.ID) && (newCost == 3)) {
                     this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, cleanMudInstance));
                     cleanMudInstance.flash();
-
+                    AbstractDungeon.player.getRelic(CleanMud.ID).onTrigger();
                 }
 
                 if (card.costForTurn > 1) numListMud.add(1);

@@ -41,7 +41,7 @@ public class Whack extends AbstractSneckoCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
-            AbstractCard q = new Whack();
+            AbstractCard q = new Wallop();
             q.upgrade();
             cardsToPreview = q;
             upgradeName();

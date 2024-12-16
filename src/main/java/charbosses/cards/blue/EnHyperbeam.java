@@ -36,7 +36,6 @@ public class EnHyperbeam extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToTop(new ApplyPowerAction(m, m, new ArtifactPower(m, 1), 1));
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {

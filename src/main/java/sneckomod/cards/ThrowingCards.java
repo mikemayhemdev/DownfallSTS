@@ -40,7 +40,7 @@ public class ThrowingCards extends AbstractSneckoCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
-            AbstractCard q = new ThrowingCards();
+            AbstractCard q = new FTL();
             q.upgrade();
             cardsToPreview = q;
             upgradeName();

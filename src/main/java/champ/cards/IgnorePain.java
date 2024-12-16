@@ -5,6 +5,7 @@ import champ.powers.PushThroughPower;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 import static champ.ChampMod.fatigue;
 
@@ -22,6 +23,7 @@ public class IgnorePain extends AbstractChampCard {
         tags.add(ChampMod.FINISHER);
        // tags.add(ChampMod.TECHNIQUE);
       //  myHpLossCost = 5;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         postInit();
         loadJokeCardImage(this, "IgnorePain.png");
 

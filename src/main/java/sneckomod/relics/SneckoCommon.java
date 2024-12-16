@@ -32,7 +32,7 @@ public class SneckoCommon extends CustomRelic {
                 cardsToReward.add(newCard.makeCopy());
             }
         }
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+        SneckoMod.addGift(cardsToReward);
     }
 
     private boolean isDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {

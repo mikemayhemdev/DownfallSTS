@@ -170,7 +170,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
-      "Begins the fight with 2 #yBronze #yOrb minions. NL Whenever Defect is about to use #bReprogram or #bHyperbeam [REMOVE_SPACE], they gain #b1 #yArtifact."
+      "Begins the fight with 2 #yBronze #yOrb minions. NL Defect's #yCore #ySurges do not #yExhaust."
     ]
   },
   "downfall:NeowAncientConstruct": {

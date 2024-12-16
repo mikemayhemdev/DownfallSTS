@@ -24,6 +24,8 @@ public class CrystallizedMud extends CustomRelic {
         --AbstractDungeon.player.energy.energyMaster;// 42
     }// 43
 
+    public void onTrigger() {this.flash();}
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

@@ -15,7 +15,7 @@ public class Karma extends AbstractCollectorCard {
     public Karma() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
        // baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 5;
+        baseSecondMagic = secondMagic = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,6 +25,6 @@ public class Karma extends AbstractCollectorCard {
 
     public void upp() {
      //   upgradeMagicNumber(1);
-        upgradeSecondMagic(3);
+        upgradeSecondMagic(2);
     }
 }

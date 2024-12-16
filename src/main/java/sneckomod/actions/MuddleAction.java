@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
+import gremlin.relics.WizardHat;
 import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.RiskySword;
@@ -60,18 +61,22 @@ public class MuddleAction extends AbstractGameAction {
 
             System.out.println("DEBUG: Cost: " + newCost);
 
-            if (((newCost == 3) || ((newCost == 0)))) {
+            if ((
+                    ((newCost == 3) && AbstractDungeon.player.hasRelic(CleanMud.ID))
+                            || ((newCost == 0) && (AbstractDungeon.player.hasRelic(CrystallizedMud.ID)))
+            )) {
+
                 System.out.println("DEBUG: Cost is 0 or 3: " + newCost);
                 CleanMud cleanMudInstance = new CleanMud();
                 if (AbstractDungeon.player.hasRelic(CleanMud.ID) && (newCost == 3)) {
                     this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, cleanMudInstance));
-                    cleanMudInstance.flash();
+                    AbstractDungeon.player.getRelic(CleanMud.ID).onTrigger();
                 }
 
                 CrystallizedMud crystallizedMudInstance = new CrystallizedMud();
                 if (AbstractDungeon.player.hasRelic(CrystallizedMud.ID) && (newCost == 0)) {
                     this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, crystallizedMudInstance));
-                    crystallizedMudInstance.flash();
+                    AbstractDungeon.player.getRelic(CrystallizedMud.ID).onTrigger();
                 }
 
                 ArrayList<Integer> numListMud = new ArrayList<>();
@@ -109,6 +114,7 @@ public class MuddleAction extends AbstractGameAction {
                 addToBot(new GainBlockAction(AbstractDungeon.player, 1));
                 loadedDieInstance.flash();
                 this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, loadedDieInstance));
+                AbstractDungeon.player.getRelic(LoadedDie.ID).onTrigger();
             }
 
             card.freeToPlayOnce = false;// 39
