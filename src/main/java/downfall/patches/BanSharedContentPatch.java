@@ -211,26 +211,26 @@ public class BanSharedContentPatch {
             //todo: I'm thinking of just making all these potions character exclusive which fixes the compendium problem
             //todo: and people don't like these potions anyways
             if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
-                PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
-               PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
-                PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
-               PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
-                PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
-                PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
-                PotionHelper.potions.remove(WizPotion.POTION_ID);
-               PotionHelper.potions.remove(BossPotion.POTION_ID);
-               PotionHelper.potions.remove(TempHPPotion.POTION_ID);
+              //  PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
+             //  PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
+             //   PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
+              // PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
+             //   PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
+             //   PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
+             //   PotionHelper.potions.remove(WizPotion.POTION_ID);
+            //   PotionHelper.potions.remove(BossPotion.POTION_ID);
+            //   PotionHelper.potions.remove(TempHPPotion.POTION_ID);
            }
             // edit: below probably not functioning too but lazy to implement
             // Ban shared potions from other classes if you haven't played as that class before
-            runLockedPotions.forEach((playerClass, potionIds) -> {
+          //  runLockedPotions.forEach((playerClass, potionIds) -> {
                 // Shared potions will never be banned from their base class
-                if (chosenClass != playerClass) {
-                    if (!HeartEvent.hasPlayedRun(playerClass)) {
-                        PotionHelper.potions.removeAll(potionIds);
-                    }
+             //   if (chosenClass != playerClass) {
+                 //   if (!HeartEvent.hasPlayedRun(playerClass)) {
+                 //       PotionHelper.potions.removeAll(potionIds);
+                //    }
                 }
-            });
-        }
+          //  });
+   //     }
     }
 }

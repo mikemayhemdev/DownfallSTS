@@ -1,13 +1,17 @@
 package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import sneckomod.SneckoMod;
 
 public class LatchOn extends AbstractSneckoCard {
@@ -28,14 +32,9 @@ public class LatchOn extends AbstractSneckoCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Deal damage to all enemies
-        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            if (!monster.isDead && !monster.isDying) {
-                addToBot(new DamageAction(monster, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-            }
-        }
-
-        // Add Viper Essence to the player's hand
+        this.addToBot(new SFXAction("ATTACK_HEAVY"));
+        this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
+        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         AbstractCard viperEssence = new ViperEssence();
         addToBot(new MakeTempCardInHandAction(viperEssence, 1));
     }

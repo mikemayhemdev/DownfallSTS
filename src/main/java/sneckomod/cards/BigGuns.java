@@ -1,5 +1,6 @@
 package sneckomod.cards;
 
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -29,6 +30,7 @@ public class BigGuns extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new BigGunsBlockPower(this.baseBlock));
         applyToSelf(new BigGunsStrengthPower(this.magicNumber));
+        atb(new GainEnergyAction(1));
     }
 
     public void upgrade() {

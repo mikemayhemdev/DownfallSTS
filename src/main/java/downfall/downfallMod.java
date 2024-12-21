@@ -556,6 +556,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     }
 
     public void receivePostInitialize() {
+        addPotions();
         UnlockTracker.betaCardPref = new IndividualBetaArtEnablerPref(UnlockTracker.betaCardPref);
         soulsImage = TextureLoader.getTexture(downfallMod.assetPath("images/ui/Souls.png"));
 
@@ -1259,17 +1260,14 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     }
 
     public void addPotions() {
-        if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_potions){
             BaseMod.addPotion(BossPotion.class, Color.MAROON, Color.MAROON, new Color(0x470000ff), BossPotion.POTION_ID);
             BaseMod.addPotion(BlockOnCardUsePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, BlockOnCardUsePotion.POTION_ID);
-            BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID);
             BaseMod.addPotion(MuddlingPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, MuddlingPotion.POTION_ID);
             BaseMod.addPotion(ThreeZeroPotion.class, Color.FOREST, Color.BLACK, Color.BLACK, ThreeZeroPotion.POTION_ID);
             BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID);
             BaseMod.addPotion(CounterstrikePotion.class, Color.GRAY, Color.GRAY, Color.BLACK, CounterstrikePotion.POTION_ID);
             BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
             BaseMod.addPotion(WizPotion.class, Color.PURPLE, Color.PINK, Color.PURPLE, WizPotion.POTION_ID);
-        }
 
         if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_events){
             BaseMod.addPotion(CursedFountainPotion.class, Color.PURPLE, Color.MAROON, Color.BLACK, CursedFountainPotion.POTION_ID);
@@ -1453,7 +1451,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
     @Override
     public void receivePostDungeonInitialize() {
-
         addPotions();
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID) || ModHelper.isModEnabled(Jewelcrafting.ID)) {
