@@ -26,6 +26,7 @@ public class LatchOn extends AbstractSneckoCard {
     public LatchOn() {
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL);
         baseDamage = DAMAGE;
+        this.isMultiDamage = true;
         SneckoMod.loadJokeCardImage(this, "LatchOn.png");
         this.cardsToPreview = new ViperEssence();
     }

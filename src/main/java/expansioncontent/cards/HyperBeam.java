@@ -32,18 +32,16 @@ public class HyperBeam extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY);
         cardsToPreview = new VoidCard();
         baseDamage = DAMAGE;
-        this.exhaust = true;
+       // this.exhaust = true;
         this.isMultiDamage = true;
         loadJokeCardImage(this, "HyperBeam.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         atb(new SFXAction("ATTACK_HEAVY"));
         this.addToBot(new VFXAction(p, new MindblastEffect(p.hb.cX, p.hb.cY, p.flipHorizontal), 0.1F));
         addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
         allDmg(AbstractGameAction.AttackEffect.NONE);
-
     }
 
     public void upgrade() {

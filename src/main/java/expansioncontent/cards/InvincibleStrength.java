@@ -12,7 +12,7 @@ public class InvincibleStrength extends AbstractExpansionCard {
     public final static String ID = makeID("InvincibleStrength");
 
     public InvincibleStrength() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_heart.png", "expansioncontentResources/images/1024/bg_boss_heart.png");
 
         tags.add(expansionContentMod.STUDY);
@@ -26,7 +26,7 @@ public class InvincibleStrength extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeBaseCost(0);
         }
     }
 }

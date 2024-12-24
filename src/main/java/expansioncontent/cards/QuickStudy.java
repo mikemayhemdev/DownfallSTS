@@ -32,7 +32,7 @@ public class QuickStudy extends AbstractExpansionCard {
             if (q.rarity != CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
 
                 if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-                    if(q.cardID.equals(PrepareCrush.ID)){continue;}
+                    if(q.cardID.equals(SuperPrepareCrush.ID)){continue;}
                 }
                 if (AbstractDungeon.player instanceof TheHexaghost ) {
                     if(q.cardID.equals(Hexaburn.ID)){continue;}

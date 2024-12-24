@@ -8,6 +8,20 @@
     "DESCRIPTION": "#yBlock is not removed at the start of your turn."
   },
   {
+    "PROPER_NAME": "Vibrancy",
+    "NAMES": [
+      "vibrancy"
+    ],
+    "DESCRIPTION": "The number of cards you draw at the start of your turn."
+  },
+  {
+    "PROPER_NAME": "Opulence",
+    "NAMES": [
+      "opulence"
+    ],
+    "DESCRIPTION": "The amount of [E] you gain at the start of your turn."
+  },
+  {
     "PROPER_NAME": "Boss",
     "NAMES": [
       "boss"
@@ -67,6 +81,39 @@
     ],
     "DESCRIPTION": "Until end of combat, prevents damage to HP."
   },
+  {
+    "PROPER_NAME": "Pyre",
+    "NAMES": [
+      "pyre"
+    ],
+    "DESCRIPTION": "Requires exhausting a card in hand in addition to paying its energy cost."
+  },
+  {
+    "PROPER_NAME": "Doom",
+    "NAMES": [
+      "doom",
+      "doomed"
+    ],
+    "DESCRIPTION": "Doomed creatures lose HP at the start of their turn, then Doom is removed #bunless the creature is #yAfflicted (has both #yWeak and #yVulnerable [REMOVE_SPACE])."
+  },
+
+  {
+    "NAMES": [
+      "goop",
+      "gooped"
+    ],
+    "PROPER_NAME": "Goop",
+    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, removing all #yGoop and triggering any #yConsume effects."
+  },
+
+  {
+    "PROPER_NAME": "Chant",
+    "NAMES": [
+      "chant",
+      "Chant",
+      "Chants"
+    ],
+    "DESCRIPTION": "Chant effects on a card activate during play if you played a Power while it was in hand."},
   {
     "PROPER_NAME": "Transform",
     "ID": "transform",

@@ -73,7 +73,7 @@
     "NAME": "Idol of Retromation",
     "FLAVOR": "Often called the Idol of Reto for short.",
     "DESCRIPTIONS": [
-      "At the start of each combat, lose #b2 #yStrength. The first #yAttack you play each turn is played twice."
+      "At the start of your turn, reduce the cost of a random card that costs at least #b1 in your hand by #b1 for this turn."
     ]
   },
   "sneckomod:BlankCard": {

@@ -22,7 +22,7 @@ public class ShieldThrow extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseBlock = block = 0;
         baseMagicNumber = magicNumber = 2;
-        tags.add(ChampMod.FINISHER);
+    //    tags.add(ChampMod.FINISHER);
         postInit();
         loadJokeCardImage(this, "ShieldThrow.png");
     }
@@ -38,7 +38,7 @@ public class ShieldThrow extends AbstractChampCard {
 
        // if (!dcombo()) applyToSelf(new FrailPower(p,2, false));
        // if (bcombo()) atb(new ReducePowerAction(p,p,FrailPower.POWER_ID,2));
-        finisher();
+      //  finisher();
     }
 
     @Override

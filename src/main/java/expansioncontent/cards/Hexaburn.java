@@ -13,12 +13,12 @@ public class Hexaburn extends AbstractExpansionCard {
     public final static String ID = makeID("Hexaburn");
 
     public Hexaburn() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_hexaghost.png", "expansioncontentResources/images/1024/bg_boss_hexaghost.png");
         tags.add(expansionContentMod.STUDY_HEXAGHOST);
         tags.add(expansionContentMod.STUDY);
-        baseMagicNumber = magicNumber = 3;
-        baseDamage = 6;
+        baseMagicNumber = magicNumber = 2;
+        baseDamage = 4;
         loadJokeCardImage(this, "Hexaburn.png");
     }
 
@@ -29,7 +29,7 @@ public class Hexaburn extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(-1);
+            upgradeDamage(2);
         }
     }
 }

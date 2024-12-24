@@ -22,6 +22,7 @@ public class SerpentMind extends AbstractSneckoCard implements OnObtainCard {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(BaseModCardTags.FORM);
+        isEthereal = true;
         SneckoMod.loadJokeCardImage(this, "SerpentMind.png");
     }
 
@@ -56,7 +57,9 @@ public class SerpentMind extends AbstractSneckoCard implements OnObtainCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            isEthereal = false;
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

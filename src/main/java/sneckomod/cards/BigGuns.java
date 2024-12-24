@@ -30,7 +30,7 @@ public class BigGuns extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new BigGunsBlockPower(this.baseBlock));
         applyToSelf(new BigGunsStrengthPower(this.magicNumber));
-        atb(new GainEnergyAction(1));
+       // atb(new GainEnergyAction(1));
     }
 
     public void upgrade() {

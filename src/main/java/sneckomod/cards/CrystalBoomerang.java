@@ -27,7 +27,7 @@ public class CrystalBoomerang extends AbstractSneckoCard {
 
                     p.discardPile.group,
                     1,
-                    "Choose a card to add to your hand.",
+                    "Choose.",
 
                     (selectedCards) -> {
 

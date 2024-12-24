@@ -14,10 +14,10 @@ public class GuardianWhirl extends AbstractExpansionCard {
     public final static String ID = makeID("GuardianWhirl");
 
     private static final int DAMAGE = 4;
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int MAGIC = 3;
 
     public GuardianWhirl() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
 
         tags.add(expansionContentMod.STUDY_GUARDIAN);
@@ -25,6 +25,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
 
         baseDamage = DAMAGE;
         this.isMultiDamage = true;
+        this.magicNumber = this.baseMagicNumber = MAGIC;
         this.exhaust = true;
         loadJokeCardImage(this, "GuardianWhirl.png");
     }
@@ -33,7 +34,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
 
         atb(new SFXAction("ATTACK_WHIRLWIND"));
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < magicNumber; i++) {
             atb(new SFXAction("ATTACK_HEAVY"));
 
             atb(new VFXAction(p, new CleaveEffect(), 0.1F));
@@ -55,7 +56,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_DAMAGE);
+            upgradeMagicNumber(1);
         }
     }
 

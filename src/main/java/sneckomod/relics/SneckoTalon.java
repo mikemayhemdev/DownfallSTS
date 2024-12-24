@@ -3,30 +3,12 @@ package sneckomod.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.DoubleTapPower;
-import com.megacrit.cardcrawl.powers.EvolvePower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
-import sneckomod.actions.MuddleAction;
-import sneckomod.actions.MuddleRandomCardAction;
-import sneckomod.actions.SuperSneckoSoulAction;
-import sneckomod.cards.SoulRoll;
-import sneckomod.powers.CheapStockPower;
-
 
 import java.util.ArrayList;
-
-import static hermit.util.Wiz.applyToSelf;
-import static hermit.util.Wiz.atb;
 
 public class SneckoTalon extends CustomRelic {
 
@@ -38,16 +20,33 @@ public class SneckoTalon extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
-
-    public void atBattleStart() {
-        this.flash();
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -2), -2));
-    }
-
     @Override
     public void atTurnStartPostDraw() {
-        this.flash();
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DoubleTapPower(AbstractDungeon.player, 1), 1));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = 0;
+                for (AbstractCard q : AbstractDungeon.player.hand.group) {
+                    if (!q.freeToPlay())
+                        if (q.costForTurn > 0)
+                            x = q.costForTurn;
+                }
+                ArrayList<AbstractCard> possCardsList = new ArrayList<>();
+                for (AbstractCard q : AbstractDungeon.player.hand.group) {
+                    if (!q.freeToPlay())
+                        if (q.costForTurn > 0)
+                            possCardsList.add(q);
+                }
+                if (!possCardsList.isEmpty()) {
+                    flash();
+                    AbstractCard q = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1));
+                    q.setCostForTurn(q.costForTurn - 1);
+                    q.isCostModifiedForTurn = true;
+                    q.superFlash();
+                }
+            }
+        });
     }
 
     public String getUpdatedDescription() {

@@ -99,10 +99,10 @@ public class NeowBossFinal extends AbstractMonster {
 
 
         if (AbstractDungeon.ascensionLevel >= 4) {
-            this.damage.add(new DamageInfo(this, 12)); //Eye Beam Damage - 48 damage first cycle
+            this.damage.add(new DamageInfo(this, 12)); //Eye Beam Damage - 54 damage first cycle
             this.damage.add(new DamageInfo(this, 44));  //Scream Damage - 66 damage first cycle
         } else {
-            this.damage.add(new DamageInfo(this, 9)); //Eye Beam Damage - 41 damage first cycle
+            this.damage.add(new DamageInfo(this, 9)); //Eye Beam Damage - 42 damage first cycle
             this.damage.add(new DamageInfo(this, 33));  //Scream Damage - 50 damage first cycle
         }
 
@@ -251,12 +251,12 @@ public class NeowBossFinal extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
 
                 if (AbstractDungeon.ascensionLevel >= 19) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 7), 8));
-                    // this is +21 damage for the multi hit, +28 total, 8 damage over the a19- version
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 8), 8));
+                    // this is +24 damage for the multi hit, +32 total, 8 damage over the a19- version
                 }
                 if (AbstractDungeon.ascensionLevel < 19) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 5), 6));
-                    //this is +15 damage for the multi hit, +20 total
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 6), 6));
+                    //this is +18 damage for the multi hit, +24 total
                 }
 
                 switch(this.buffCount) {

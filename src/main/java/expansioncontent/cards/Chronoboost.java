@@ -14,27 +14,25 @@ import static expansioncontent.expansionContentMod.loadJokeCardImage;
 public class Chronoboost extends AbstractExpansionCard {
     public final static String ID = makeID("Chronoboost");
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
 
     public Chronoboost() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(expansionContentMod.STUDY_TIMEEATER);
         tags.add(expansionContentMod.STUDY);
+        baseMagicNumber = magicNumber = MAGIC;
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_timeeater.png", "expansioncontentResources/images/1024/bg_boss_timeeater.png");
         loadJokeCardImage(this, "Chronoboost.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) atb(new ApplyPowerAction(p, p, new StrengthPower(p, 2), 2));
-
-        atb(new ApplyPowerAction(p, p, new ChronoBoostPower(p, p, 2), 2));
+        atb(new ApplyPowerAction(p, p, new ChronoBoostPower(p, p, magicNumber), magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+    upgradeMagicNumber(1);
         }
     }
 

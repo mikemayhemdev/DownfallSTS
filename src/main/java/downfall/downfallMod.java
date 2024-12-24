@@ -45,6 +45,7 @@ import collector.CollectorChar;
 import collector.CollectorMod;
 import collector.potions.TempHPPotion;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
+import downfall.cards.MajorBeam;
 import downfall.cards.curses.Sapped;
 import collector.util.CollectibleCardReward;
 import collector.util.EssenceReward;
@@ -462,6 +463,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         // BaseMod.addCard(new ShieldSmash());
         // BaseMod.addCard(new Debug());
         //BaseMod.addCard(new PeaceOut());
+        BaseMod.addCard(new MajorBeam());
         BaseMod.addCard(new Malfunctioning());
         BaseMod.addCard(new Bewildered());
         BaseMod.addCard(new Haunted());

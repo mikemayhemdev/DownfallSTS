@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.shop.ShopScreen;
 import downfall.patches.EvilModeCharacterSelect;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
+import expansioncontent.expansionContentMod;
 import guardian.characters.GuardianCharacter;
 import slimebound.characters.SlimeboundCharacter;
 import theHexaghost.TheHexaghost;
@@ -27,7 +28,8 @@ public class ShopBossPatch {
     public static void Postfix(ShopScreen __instance) {
         if (EvilModeCharacterSelect.evilMode) {
             ArrayList<AbstractCard> colorlessCards = (ArrayList<AbstractCard>) ReflectionHacks.getPrivate(__instance, ShopScreen.class, "colorlessCards");
-            if (AbstractDungeon.merchantRng.randomBoolean()) {
+            if (1 == 1) {
+                //  if (AbstractDungeon.merchantRng.randomBoolean()) {
                 int x = colorlessCards.get(0).price;
                 colorlessCards.set(0, getReplacement(colorlessCards.get(0).rarity));
                 colorlessCards.get(0).price = x;
@@ -35,7 +37,8 @@ public class ShopBossPatch {
                     r.onPreviewObtainCard(colorlessCards.get(0));
                 }
             }
-            if (AbstractDungeon.merchantRng.randomBoolean()) {
+            if (1 == 1) {
+                //  if (AbstractDungeon.merchantRng.randomBoolean()) {
                 int x = colorlessCards.get(1).price;
                 colorlessCards.set(1, getReplacement(colorlessCards.get(1).rarity));
                 colorlessCards.get(1).price = x;
@@ -60,25 +63,36 @@ public class ShopBossPatch {
         if (q.rarity == AbstractCard.CardRarity.SPECIAL) return false;
 
         if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-            if (q.cardID.equals(PrepareCrush.ID)) {
+            if (q.hasTag(expansionContentMod.STUDY_SLIMEBOSS)){
                 return false;
             }
         }
         if (AbstractDungeon.player instanceof TheHexaghost || RandomCardWithTagAction.hexaLocked()) {
-           if (q.cardID.equals(Hexaburn.ID)) return false;
+            if (q.hasTag(expansionContentMod.STUDY_HEXAGHOST)){
+                return false;
+            }
         }
         if (AbstractDungeon.player instanceof GuardianCharacter || RandomCardWithTagAction.guardianLocked()) {
-            if (q.cardID.equals(GuardianWhirl.ID)) return false;
+            if (q.hasTag(expansionContentMod.STUDY_GUARDIAN)){
+                return false;
+            }
         }
         if (AbstractDungeon.player instanceof ChampChar || RandomCardWithTagAction.champLocked()) {
-            if (q.cardID.equals(LastStand.ID)) return false;
+            if (q.hasTag(expansionContentMod.STUDY_CHAMP)){
+                return false;
+            }
         }
         if (AbstractDungeon.player instanceof AutomatonChar || RandomCardWithTagAction.autoLocked()) {
-            return !q.cardID.equals(HyperBeam.ID);
+            if (q.hasTag(expansionContentMod.STUDY_AUTOMATON)){
+                return false;
+            }
         }
         if (AbstractDungeon.player instanceof CollectorChar || RandomCardWithTagAction.collectorLocked()) {
-            return !q.cardID.equals(YouAreMine.ID);
-        }
+            if (q.hasTag(expansionContentMod.STUDY_COLLECTOR)){
+                return false;
+            }
+            }
+
         return true;
     }
 }
