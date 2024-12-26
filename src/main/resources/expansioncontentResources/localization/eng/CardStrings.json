@@ -1,22 +1,22 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Requires 10 Block. NL Deal !D! damage to ALL enemies !M! times. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL If you have at least !DM! Block, hits !M! more times.",
     "EXTENDED_DESCRIPTION": [
       "More Block required."
     ]
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Hexaburn",
-    "DESCRIPTION": "In !M! turns, deal !D! damage to a random enemy 6 times. NL Scales with Strength."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust."
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Invincible",
-    "DESCRIPTION": "Gain 10 expansioncontent:Invincible. NL If you already had expansioncontent:Invincible, it lasts another turn instead."
+    "DESCRIPTION": "Gain !M! expansioncontent:Invincible. NL If you already had expansioncontent:Invincible, it lasts another turn instead."
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a *Void on top of your draw pile."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Place a *Void on top of your draw pile. NL Exhaust."
   },
   "expansioncontent:LastStand": {
     "NAME": "Last Stand",
@@ -28,7 +28,7 @@
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "Curiosity",
-    "DESCRIPTION": "Gain !M! Strength. Whenever you play a Power, gain !M! Strength."
+    "DESCRIPTION": "Whenever you play a Power, gain !M! Strength."
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Chrono-Boost",
@@ -61,9 +61,9 @@
     ]
   },
   "expansioncontent:SuperLivingWall": {
-      "NAME": "Living Wall",
-      "DESCRIPTION": "Gain !B! Block. NL Apply !M! expansioncontent:Goop to attackers this turn."
-    },
+    "NAME": "Living Wall",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! expansioncontent:Goop to attackers this turn."
+  },
 
   "expansioncontent:StudyTheSpire": {
     "NAME": "Study the Spire",
@@ -99,7 +99,8 @@
   },
   "expansioncontent:SuperGoopSpray": {
     "NAME": "Goop Spray",
-    "DESCRIPTION": "Apply !M! expansioncontent:Goop and !DM! Weak to ALL enemies."
+    "DESCRIPTION": "Apply !M! expansioncontent:Goop and !DM! Weak.",
+    "UPGRADE_DESCRIPTION": "Apply !M! expansioncontent:Goop and !DM! Weak to ALL enemies."
   },
   "expansioncontent:ChargeUp": {
     "NAME": "Resilient Plate",
@@ -117,8 +118,8 @@
   },
 
   "expansioncontent:TakeFlight": {
-    "NAME": "Feathered Cascade",
-    "DESCRIPTION": "Gain !B! Block. NL expansioncontent:Chant: Gain !M! expansioncontent:Blur."
+    "NAME": "Revitalize",
+    "DESCRIPTION": "Gain !M! expansioncontent:Regen. NL expansioncontent:Chant: Gain !DM! *Regen instead."
   },
   "expansioncontent:BeatOfDeath": {
     "NAME": "Beat Of Death",
@@ -152,7 +153,7 @@
   },
   "expansioncontent:SuperBloodthirst": {
     "NAME": "Bloodthirst",
-    "DESCRIPTION": "Deal !D! damage. NL If Fatal, obtain a random potion."
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal, obtain a random potion and Exhaust this card."
   },
   "expansioncontent:SuperBodyCrash": {
     "NAME": "Body Crash",
@@ -161,11 +162,8 @@
   },
   "expansioncontent:SuperEtherStep": {
     "NAME": "Ether Step",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Exhaust 1 card. NL Draw !M! card. NL [#e087a4]Deal[] !D! [#e087a4]damage.[]",
-    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Exhaust 1 card. NL Draw !M! cards. NL [#e087a4]Deal[] !D! [#e087a4]damage.[]",
-    "EXTENDED_DESCRIPTION": [
-      "[#e087a4]Deal !D! damage.[]"
-    ]
+    "DESCRIPTION": "Exhaust 1 card. NL Draw !M! card. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Exhaust 1 card. NL Draw !M! cards. NL Deal !D! damage."
   },
 
   "expansioncontent:Virus": {
@@ -194,7 +192,7 @@
   },
   "expansioncontent:ExploitVulnerability": {
     "NAME": "Exploit Vulnerability",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Vulnerable, deal damage !DM! more times. NL Apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Vulnerable, deal damage !DM! more times."
   },
   "expansioncontent:PeekPages": {
     "NAME": "Peek Pages",
@@ -206,8 +204,7 @@
   },
   "expansioncontent:DoubleAct": {
     "NAME": "Double Act",
-    "DESCRIPTION": "Lose your hand and [E]. NL Draw cards for your expansioncontent:Opulence and gain [E] for your expansioncontent:Vibrancy. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"Lose your hand and [E]. NL Draw cards for your expansioncontent:Opulence + 1 and gain [E] for your expansioncontent:Vibrancy + 1. NL Exhaust."
+    "DESCRIPTION": "At the start of your next turn, draw cards and gain [E] an additional time."
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "Bloody Sacrifice",

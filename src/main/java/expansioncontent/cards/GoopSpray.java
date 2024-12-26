@@ -1,73 +1,67 @@
 package expansioncontent.cards;
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import downfall.util.CardIgnore;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import expansioncontent.expansionContentMod;
 import slimebound.powers.SlimedPower;
 import slimebound.vfx.SlimeProjectileEffect;
 
+import java.util.Iterator;
+
 public class GoopSpray extends AbstractExpansionCard {
-    public final static String ID = makeID("SuperGoopSpray");
+    public static final String ID = makeID("SuperGoopSpray");
 
     private static final int MAGIC = 5;
+
     private static final int UPGRADE_MAGIC = 3;
-    private static final int downfallMagic = 1;
+
+    private static final int downfallMagic = 2;
+
     private static final int UPGRADE_downfallMagic = 1;
 
     public GoopSpray() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_slime.png", "expansioncontentResources/images/1024/bg_boss_slime.png");
-
-        tags.add(expansionContentMod.STUDY_SLIMEBOSS);
-        tags.add(expansionContentMod.STUDY);
-
-        baseDownfallMagic = downfallMagic;
-        baseMagicNumber = magicNumber = MAGIC;
+        super(ID, 1, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
+        setBackgroundTexture("expansioncontentResources/images/512/bg_boss_slime.png", "expansioncontentResources/images/1024/bg_boss_slime.png");
+        this.tags.add(expansionContentMod.STUDY_SLIMEBOSS);
+        this.tags.add(expansionContentMod.STUDY);
+        this.baseDownfallMagic = 2;
+        this.baseMagicNumber = this.magicNumber = 8;
     }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (!this.upgraded) {
+            atb((AbstractGameAction)new VFXAction((AbstractGameEffect)new SlimeProjectileEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY, 3.0F, false, 0.6F), 0.01F));
+            atb((AbstractGameAction)new WaitAction(0.2F));
+            atb((AbstractGameAction)new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p, (AbstractPower)new SlimedPower((AbstractCreature)m, (AbstractCreature)p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            flash();
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead) && (!monster.isDying)) {
-                    atb(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, monster.hb.cX, monster.hb.cY, 3F, false, 0.6F), 0.01F));
-
-
-                }
-                atb(new WaitAction(0.2F));
-            }
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead) && (!monster.isDying)) {
-
-                    atb(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-                    int vuln = downfallMagic;
-                    atb(new ApplyPowerAction(monster, p, new WeakPower(monster, vuln, false), vuln, true, AbstractGameAction.AttackEffect.NONE));
-
-
-                }
-
+            this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, downfallMagic, false), downfallMagic));
+        } else {
+            Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+            while(var3.hasNext()) {
+                AbstractMonster mo = (AbstractMonster)var3.next();
+                atb((AbstractGameAction)new VFXAction((AbstractGameEffect)new SlimeProjectileEffect(p.hb.cX, p.hb.cY, mo.hb.cX, mo.hb.cY, 3.0F, false, 0.6F), 0.01F));
+                atb((AbstractGameAction)new ApplyPowerAction((AbstractCreature)mo, (AbstractCreature)p, (AbstractPower)new SlimedPower((AbstractCreature)mo, (AbstractCreature)p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), downfallMagic, true, AbstractGameAction.AttackEffect.NONE));
             }
         }
-
 
     }
 
     public void upgrade() {
-        if (!upgraded) {
+        if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
-            upgradeDownfall(UPGRADE_downfallMagic);
+            this.target = CardTarget.ALL_ENEMY;
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
-
 }

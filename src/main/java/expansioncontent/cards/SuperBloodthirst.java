@@ -52,7 +52,7 @@ public class SuperBloodthirst extends AbstractExpansionCard {
                 this.addToTop(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY)));
             }
         }
-        this.addToBot(new BloodthirstAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.magicNumber));
+        this.addToBot(new BloodthirstAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.uuid));
     }
 
     public void upgrade() {

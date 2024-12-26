@@ -21,11 +21,11 @@ public class HyperBeam extends AbstractExpansionCard {
     public final static String ID = makeID("HyperBeam");
 
 
-    private static final int DAMAGE = 21;
-    private static final int UPGRADE_DAMAGE = 7;
+    private static final int DAMAGE = 17;
+    private static final int UPGRADE_DAMAGE = 4;
 
     public HyperBeam() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_automaton.png", "expansioncontentResources/images/1024/bg_boss_automaton.png");
 
         tags.add(expansionContentMod.STUDY_AUTOMATON);

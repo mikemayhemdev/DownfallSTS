@@ -1,48 +1,42 @@
 package expansioncontent.cards;
 
-
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import downfall.util.CardIgnore;
 import expansioncontent.expansionContentMod;
 import hermit.actions.ReduceDebuffsAction;
-import slimebound.powers.NextTurnGainStrengthPower;
 
 public class ChargeUp extends AbstractExpansionCard {
-    public final static String ID = makeID("ChargeUp");
+    public static final String ID = makeID("ChargeUp");
 
     private static final int BLOCK = 20;
+
     private static final int UPGRADE_BLOCK = 10;
+
     private static final int MAGIC = 2;
 
     public ChargeUp() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        //todo skill bg instead of attack bg
-        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
-
-        tags.add(expansionContentMod.STUDY_GUARDIAN);
-        tags.add(expansionContentMod.STUDY);
-        baseMagicNumber = magicNumber = MAGIC;
+        super(ID, 0, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
+        this.tags.add(expansionContentMod.STUDY_GUARDIAN);
+        this.tags.add(expansionContentMod.STUDY);
+        this.baseMagicNumber = this.magicNumber = 2;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));
+        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ReduceDebuffsAction((AbstractCreature)AbstractDungeon.player, this.magicNumber));
     }
 
     public void upgrade() {
-        if (!upgraded) {
+        if (!this.upgraded) {
             upgradeName();
             this.exhaust = false;
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            this.rawDescription = this.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
-
 }
-
-

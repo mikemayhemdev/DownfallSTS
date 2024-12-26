@@ -1,29 +1,36 @@
 package expansioncontent.powers;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-
-import static expansioncontent.expansionContentMod.makeID;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import expansioncontent.expansionContentMod;
 
 public class VexVinciblePower extends TwoAmountPower {
-    public static final String POWER_ID = makeID("VexVinciblePower");
-    public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String POWER_ID = expansionContentMod.makeID("VexVinciblePower");
+
+    public static final String NAME = (CardCrawlGame.languagePack.getPowerStrings(POWER_ID)).NAME;
+
+    public static final String[] DESCRIPTIONS = (CardCrawlGame.languagePack.getPowerStrings(POWER_ID)).DESCRIPTIONS;
+
     public int maxAmt;
+
+    public int variable;
 
     private boolean activated = false;
 
-    public VexVinciblePower(AbstractCreature owner, int amount) {
+    public VexVinciblePower(AbstractCreature owner, int amount, int amount2, int amount3) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = amount;   //duration
-        this.amount2 = 10;      //damage cap, also "damage remaining this turn"
+        this.amount = amount;
+        this.amount2 = amount2;
+        this.variable = amount3;
         this.maxAmt = amount;
-        this.updateDescription();
-        this.loadRegion("heartDef");
+        updateDescription();
+        loadRegion("heartDef");
         this.priority = 99;
         this.activated = false;
     }
@@ -31,32 +38,26 @@ public class VexVinciblePower extends TwoAmountPower {
     public int onLoseHp(int damageAmount) {
         if (damageAmount > this.amount2) {
             damageAmount = this.amount2;
-            activated = true;
+            this.activated = true;
         }
-
         this.amount2 -= damageAmount;
-        if (this.amount2 < 0) {
+        if (this.amount2 < 0)
             this.amount2 = 0;
-        }
-
-        this.updateDescription();
-
+        updateDescription();
         return damageAmount;
     }
 
-    @Override
-    public void atEndOfRound(){
-        if (activated) {
-            addToBot(new ReducePowerAction(owner, owner, this, 1));
-        }
-        this.amount2 = 10;
+    public void atEndOfRound() {
+        if (this.activated)
+            addToBot((AbstractGameAction)new ReducePowerAction(this.owner, this.owner, (AbstractPower)this, 1));
+        this.amount2 = this.variable;
     }
 
     public void updateDescription() {
         if (this.amount == 1) {
             this.description = DESCRIPTIONS[0] + this.amount2 + DESCRIPTIONS[1];
         } else {
-            this.description = DESCRIPTIONS[2] + this.amount2 + DESCRIPTIONS[3] + amount + DESCRIPTIONS[4];
+            this.description = DESCRIPTIONS[2] + this.amount2 + DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[4];
         }
     }
 }

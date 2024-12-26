@@ -35,8 +35,8 @@ public class SuperEtherStep extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 1;
-        isEthereal = true;
-        tags.add(HexaMod.AFTERLIFE);
+        //isEthereal = true;
+        //tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "EtherStep.png");
     }
 
@@ -44,19 +44,6 @@ public class SuperEtherStep extends AbstractExpansionCard {
         this.addToBot(new ExhaustAction(1, false));
         this.addToBot(new DrawCardAction(p, this.magicNumber));
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-    }
-
-    public void afterlife() {
-        AbstractMonster m = AbstractDungeon.getRandomMonster();
-        if (m == null) return;
-        this.calculateCardDamage(m);
-        if(AbstractDungeon.player.hasPower("Pen Nib") ){
-            this.damage /= 2;
-            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-            this.damage *= 2;
-        }else {
-            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        }
     }
 
     public void upgrade() {
@@ -69,15 +56,4 @@ public class SuperEtherStep extends AbstractExpansionCard {
         }
     }
 
-    // to still show afterlife tooltip. because the format [purple]hexamod:afterlife[] doesnt get displayed correctly
-    // we are only using [purple]afterlife[] here for easier text comprehension for new players, but doing this
-    // means we dont have the keyword tooltip so we need to manually add it
-    // but after I tried adding it in the constrcutor it turns out sometimes who knows why it wont be added
-    // and this way seems to work
-    @Override
-    public void initializeDescription() {
-        super.initializeDescription();
-        String afterlife_name = downfallMod.keywords_and_proper_names.get("afterlife");
-        this.keywords.add(afterlife_name);
-    }
 }

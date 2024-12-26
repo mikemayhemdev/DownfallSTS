@@ -8,10 +8,7 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
@@ -41,19 +38,12 @@ public class DoubleAct extends AbstractExpansionCard{
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int handSize = p.masterHandSize;
-        int maxenergy = p.energy.energyMaster;
-        addToBot(new DiscardAction(p, p, handSize, false));
-        atb(new LoseEnergyAction(999));
-        atb(new DrawCardAction(maxenergy+magicNumber));
-        atb(new GainEnergyAction(handSize+downfallMagic));
+        applyToSelf(new EnergizedBluePower(AbstractDungeon.player,  p.energy.energyMaster));
+        applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, p.gameHandSize));
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeDownfall(1);
-        this.rawDescription = UPGRADE_DESCRIPTION;
-        this.initializeDescription();
+upgradeBaseCost(2);
     }
 }

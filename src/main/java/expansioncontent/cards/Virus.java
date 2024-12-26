@@ -27,7 +27,7 @@ public class Virus extends AbstractExpansionCard {
     private static final int MAGIC = 5;
 
     public Virus() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         //todo skill bg instead of attack bg
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_automaton.png", "expansioncontentResources/images/1024/bg_boss_automaton.png");
 
@@ -48,7 +48,7 @@ public class Virus extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeBaseCost(0);
         }
     }
 

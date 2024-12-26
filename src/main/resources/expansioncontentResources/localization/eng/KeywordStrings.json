@@ -22,6 +22,13 @@
     "DESCRIPTION": "The amount of [E] you gain at the start of your turn."
   },
   {
+    "PROPER_NAME": "Regen",
+    "NAMES": [
+      "regen"
+    ],
+    "DESCRIPTION": "At the end of your turn, heal HP equal to your #yRegen then reduce #yRegen by #b1."
+  },
+  {
     "PROPER_NAME": "Boss",
     "NAMES": [
       "boss"

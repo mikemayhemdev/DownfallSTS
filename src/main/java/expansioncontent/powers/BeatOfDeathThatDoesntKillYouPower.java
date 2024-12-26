@@ -54,14 +54,7 @@ public class BeatOfDeathThatDoesntKillYouPower extends AbstractPower {
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         this.flash();
-        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
-                this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(monster, this.amount, DamageType.THORNS), AttackEffect.BLUNT_LIGHT));
-
-
-            }
-            this.updateDescription();
-        }
+        this.addToBot(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(this.amount, true), DamageType.THORNS, AttackEffect.BLUNT_LIGHT, true));
     }
         public void updateDescription () {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];

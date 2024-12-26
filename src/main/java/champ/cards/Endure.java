@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -12,13 +13,19 @@ public class Endure extends AbstractChampCard {
     public final static String ID = makeID("Endure");
 
     public Endure() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        tags.add(ChampMod.OPENER);
+
+        this.tags.add(ChampMod.OPENERDEFENSIVE);
         baseBlock = block = 8;
         postInit();
+
         loadJokeCardImage(this, "Endure.png");
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        defenseOpen();
         blck();
     }
 

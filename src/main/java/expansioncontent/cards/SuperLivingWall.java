@@ -76,7 +76,7 @@ public class SuperLivingWall extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY_SLIMEBOSS);
         tags.add(expansionContentMod.STUDY);
 
-        this.baseBlock = 12;
+        this.baseBlock = 14;
         baseMagicNumber = magicNumber = MAGIC;
     }
 
@@ -121,7 +121,7 @@ public class SuperLivingWall extends AbstractExpansionCard {
             upgradeName();
 
             upgradeMagicNumber(2);
-            upgradeBlock(3);
+            upgradeBlock(4);
         }
 
     }

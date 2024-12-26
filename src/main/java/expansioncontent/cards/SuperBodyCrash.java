@@ -1,41 +1,37 @@
 package expansioncontent.cards;
 
-
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import downfall.util.CardIgnore;
 import expansioncontent.expansionContentMod;
-import hermit.actions.ReduceDebuffsAction;
-import slimebound.powers.NextTurnGainStrengthPower;
-
-import static guardian.cards.BodySlam.UPGRADED_DESCRIPTION;
+import guardian.cards.BodySlam;
 
 public class SuperBodyCrash extends AbstractExpansionCard {
-    public final static String ID = makeID("SuperBodyCrash");
+    public static final String ID = makeID("SuperBodyCrash");
 
     private static final int BLOCK = 7;
 
     public SuperBodyCrash() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
-        baseBlock = 6;
-        tags.add(expansionContentMod.STUDY_GUARDIAN);
-        tags.add(expansionContentMod.STUDY);
+        super(ID, 1, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
+        setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
+        this.baseBlock = 6;
+        this.tags.add(expansionContentMod.STUDY_GUARDIAN);
+        this.tags.add(expansionContentMod.STUDY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         calculateCardDamage(m);
         this.baseDamage = p.currentBlock + this.block;
         calculateCardDamage(m);
-        addToBot(new GainBlockAction(p, block));
-        addToBot(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new DamageInfo(p, this.damage, com.megacrit.cardcrawl.cards.DamageInfo.DamageType.NORMAL), com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        this.rawDescription = DESCRIPTION;
+        addToBot((AbstractGameAction)new GainBlockAction((AbstractCreature)p, this.block));
+        addToBot((AbstractGameAction)new DamageAction((AbstractCreature)m, new DamageInfo((AbstractCreature)p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        this.rawDescription = this.DESCRIPTION;
         initializeDescription();
     }
 
@@ -43,21 +39,15 @@ public class SuperBodyCrash extends AbstractExpansionCard {
         super.applyPowers();
         this.baseDamage = AbstractDungeon.player.currentBlock + this.block;
         super.applyPowers();
-
-        this.rawDescription = DESCRIPTION;
-        this.rawDescription += UPGRADED_DESCRIPTION;
+        this.rawDescription = this.DESCRIPTION;
+        this.rawDescription += BodySlam.UPGRADED_DESCRIPTION;
         initializeDescription();
     }
 
-
-
     public void upgrade() {
-        if (!upgraded) {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(0);
         }
     }
-
 }
-
-
