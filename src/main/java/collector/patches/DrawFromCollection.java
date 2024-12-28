@@ -33,7 +33,13 @@ public class DrawFromCollection {
                         return;
                     }
                 }
+                AbstractRelic r = AbstractDungeon.player.getRelic(BlockedChakra.ID);
+                if ((AbstractDungeon.player.hasRelic(BlockedChakra.ID) && r.counter > 0)){
                 atb(new DrawCardFromCollectionAction());
+            }
+                if ((!AbstractDungeon.player.hasRelic(BlockedChakra.ID))){
+                    atb(new DrawCardFromCollectionAction());
+                }
                 if (AbstractDungeon.player.hasPower(IncreasedCollectionDrawPower.POWER_ID)) {
                     for (int i = 0; i < AbstractDungeon.player.getPower(IncreasedCollectionDrawPower.POWER_ID).amount; i++) {
                         atb(new DrawCardFromCollectionAction());
