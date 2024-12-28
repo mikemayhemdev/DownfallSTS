@@ -28,7 +28,7 @@ public class VerifyPower extends AbstractAutomatonPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card instanceof FunctionCard && cardsDoubledThisTurn < amount) {
+        if (!card.purgeOnUse && card instanceof FunctionCard && cardsDoubledThisTurn < amount) {
             cardsDoubledThisTurn++;
             flash();
 

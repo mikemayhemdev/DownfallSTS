@@ -36,12 +36,11 @@ public class HardenedFormPower extends AbstractAutomatonPower {
     public void onSpecificTrigger() {
         flash();
 
-        // Combine draw and discard piles
+
         CardGroup combinedPile = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         combinedPile.group.addAll(AbstractDungeon.player.drawPile.group);
         combinedPile.group.addAll(AbstractDungeon.player.discardPile.group);
 
-        // Create arrays to separate cards by rarity, status, and curse
         List<AbstractCard> rareCards = new ArrayList<>();
         List<AbstractCard> uncommonCards = new ArrayList<>();
         List<AbstractCard> commonCards = new ArrayList<>();
@@ -50,29 +49,28 @@ public class HardenedFormPower extends AbstractAutomatonPower {
         List<AbstractCard> statusCards = new ArrayList<>();
         List<AbstractCard> curseCards = new ArrayList<>();
 
-        // Sort cards into their respective arrays, removing them from the original array as we go
-        for (AbstractCard card : new ArrayList<>(combinedPile.group)) { // Use a new ArrayList to safely remove cards while iterating
+        for (AbstractCard card : new ArrayList<>(combinedPile.group)) {
             if (card.type == CardType.STATUS) {
                 statusCards.add(card);
-                combinedPile.removeCard(card);  // Remove from the original pile
+                combinedPile.removeCard(card);
             } else if (card.rarity == CardRarity.CURSE) {
                 curseCards.add(card);
-                combinedPile.removeCard(card);  // Remove from the original pile
+                combinedPile.removeCard(card);
             } else if (card.rarity == CardRarity.RARE) {
                 rareCards.add(card);
-                combinedPile.removeCard(card);  // Remove from the original pile
+                combinedPile.removeCard(card);
             } else if (card.rarity == CardRarity.UNCOMMON) {
                 uncommonCards.add(card);
-                combinedPile.removeCard(card);  // Remove from the original pile
+                combinedPile.removeCard(card);
             } else if (card.rarity == CardRarity.COMMON) {
                 commonCards.add(card);
-                combinedPile.removeCard(card);  // Remove from the original pile
+                combinedPile.removeCard(card);
             } else if (card.rarity == CardRarity.BASIC) {
                 basicCards.add(card);
-                combinedPile.removeCard(card);  // Remove from the original pile
+                combinedPile.removeCard(card);
             } else if (card.rarity == CardRarity.SPECIAL) {
                 specialCards.add(card);
-                combinedPile.removeCard(card);  // Remove from the original pile
+                combinedPile.removeCard(card);
             }
         }
 
