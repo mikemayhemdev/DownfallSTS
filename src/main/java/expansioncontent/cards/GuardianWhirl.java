@@ -41,7 +41,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
             atb((AbstractGameAction)new VFXAction((AbstractCreature)p, (AbstractGameEffect)new CleaveEffect(), 0.1F));
             atb((AbstractGameAction)new DamageAllEnemiesAction((AbstractCreature)p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         }
-        if (p.currentBlock < 10)
+        if (p.currentBlock >= 10)
             for (i = 0; i < this.magicNumber; i++) {
                 atb((AbstractGameAction)new SFXAction("ATTACK_HEAVY"));
                 atb((AbstractGameAction)new VFXAction((AbstractCreature)p, (AbstractGameEffect)new CleaveEffect(), 0.1F));
