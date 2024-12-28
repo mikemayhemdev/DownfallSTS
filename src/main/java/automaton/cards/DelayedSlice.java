@@ -18,7 +18,7 @@ public class DelayedSlice extends AbstractBronzeCard {
 
     public DelayedSlice() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
         baseDamage = 9;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("DelayedSlice.png"));
     }
@@ -31,5 +31,7 @@ public class DelayedSlice extends AbstractBronzeCard {
     public void upp() {
         upgradeDamage(1);
         upgradeMagicNumber(1);
+        rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

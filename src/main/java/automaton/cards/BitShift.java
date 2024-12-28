@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.cardmods.PropertiesMod;
 import expansioncontent.cardmods.RetainCardMod;
-import sneckomod.SneckoMod;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 
@@ -25,7 +24,6 @@ public class BitShift extends AbstractBronzeCard {
         exhaust = true;
         baseMagicNumber = magicNumber = 1;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("BitShift.png"));
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     @Override

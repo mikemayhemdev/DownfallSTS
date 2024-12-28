@@ -38,7 +38,7 @@
     "NAME": "Silver Bullet",
     "FLAVOR": "Spirewolves are long gone.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a copy of #yPiercing #yShot+ to your hand. It costs #b0 and is #yEthereal."
+      "At the start of each combat, add a copy of #yPiercing #yShot to your hand. It costs #b0 ."
     ]
   },
   "bronze:MakeshiftBattery": {
@@ -67,7 +67,7 @@
     "FLAVOR": "Changelog: Improved user experience.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL Whenever you create a Function, gain [E]."
+      ".[] NL The first #b3 Functions you create each combat cost #b0 until played."
     ]
   },
   "bronze:BottledCode": {

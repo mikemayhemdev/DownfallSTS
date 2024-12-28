@@ -25,7 +25,7 @@ public class BugBarrage extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 3;
 
     public BugBarrage() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         // exhaust = true;
         magicNumber = baseMagicNumber = 1;

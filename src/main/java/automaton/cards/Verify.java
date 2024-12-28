@@ -17,18 +17,18 @@ public class Verify extends AbstractBronzeCard {
 
     public Verify() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO); //I'm rebanning this, why can you see this as Snecko?
+       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         tags.add(BaseModCardTags.FORM);
-        baseMagicNumber = magicNumber = 1;
+        isEthereal = true;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Verify.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new VerifyPower(p, magicNumber));
+        applyToSelf(new VerifyPower(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        this.isEthereal = false;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

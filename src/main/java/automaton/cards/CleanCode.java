@@ -20,7 +20,6 @@ public class CleanCode extends AbstractBronzeCard {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
       //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("CleanCode.png"));
     }
 

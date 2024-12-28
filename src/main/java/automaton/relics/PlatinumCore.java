@@ -3,7 +3,6 @@ package automaton.relics;
 import automaton.AutomatonMod;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,30 +19,29 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
 
     public PlatinumCore() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
-        //counter = 0;
+        counter = 0;
     }
 
 
     @Override
     public void atBattleStart() {
-       // counter = 3;
-      //  grayscale = false;
+        counter = 3;
+        grayscale = false;
     }
 
     @Override
     public void receiveCompile(AbstractCard function, boolean forGameplay) {
-      //  if (counter != 0) {
-            //if (function.cost > 0) {
-               // function.freeToPlayOnce = true;
+        if (counter != 0) {
+            if (function.cost > 0) {
+                function.freeToPlayOnce = true;
                 if (forGameplay) {
-                   // counter -= 1;
-                    addToBot(new GainEnergyAction(1));
+                    counter -= 1;
                     flash();
-                   // if (counter == 0) grayscale = true;
+                    if (counter == 0) grayscale = true;
                 }
             }
-      //  }
- //   }
+        }
+    }
 
     @Override
     public void obtain() {
@@ -80,7 +78,7 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
             sb.append("[#").append(AutomatonMod.placeholderColor.toString()).append("]");
         }
 
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
     }
 
 }

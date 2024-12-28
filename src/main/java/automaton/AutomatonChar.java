@@ -1,6 +1,9 @@
 package automaton;
 
-import automaton.cards.*;
+import automaton.cards.Goto;
+import automaton.cards.Replicate;
+import automaton.cards.Defend;
+import automaton.cards.Strike;
 import automaton.relics.BronzeCore;
 import automaton.vfx.CompileVictoryEffect;
 import basemod.abstracts.CustomPlayer;
@@ -104,8 +107,7 @@ public class AutomatonChar extends CustomPlayer {
             retVal.add(Defend.ID);
         }
         retVal.add(Replicate.ID);
-        retVal.add(Branch.ID);
-       // retVal.add(Goto.ID);
+        retVal.add(Goto.ID);
         return retVal;
     }
 
@@ -164,7 +166,7 @@ public class AutomatonChar extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new Branch();
+        return new Goto();
     }
 
     @Override

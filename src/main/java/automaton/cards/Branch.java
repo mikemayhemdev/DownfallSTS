@@ -29,10 +29,10 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
     private static final int BLOCK = 6;
 
     public Branch() {
-        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.SELF_AND_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
-       // exhaust = true;
+        exhaust = true;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Branch.png"));
     }
 

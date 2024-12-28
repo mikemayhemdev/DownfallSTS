@@ -19,8 +19,8 @@ public class SpaghettiCode extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, rare
 
     public SpaghettiCode() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        //exhaust = true;
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        exhaust = true;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("SpaghettiCode.png"));
     }
 
@@ -64,18 +64,21 @@ public class SpaghettiCode extends AbstractBronzeCard {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
 
         eligibleCardsList.add(getRandomEncode().makeCopy());
-      //  eligibleCardsList.add(getRandomEncode(eligibleCardsList).makeCopy());
-      //  eligibleCardsList.add(getRandomEncode(eligibleCardsList).makeCopy());
+        eligibleCardsList.add(getRandomEncode(eligibleCardsList).makeCopy());
+        eligibleCardsList.add(getRandomEncode(eligibleCardsList).makeCopy());
         return eligibleCardsList;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < (FunctionHelper.max() - FunctionHelper.held.size()); i++) {
-                addToTop(new AddToFuncAction(getRandomEncode().makeCopy(), null));
+            ArrayList<AbstractCard> cardsList = getRandomEncodeChoices();
+            addToBot(new SelectCardsCenteredAction(cardsList, 1, masterUI.TEXT[7], (cards) -> {
+                addToTop(new AddToFuncAction(cards.get(0), null));
+            }));
         }
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBaseCost(1);
     }
 }

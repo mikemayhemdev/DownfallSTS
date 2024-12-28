@@ -64,14 +64,14 @@ public class ScryBlockStatusAction extends AbstractGameAction {
                 if(used_by_night_cards){
                     for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                         AbstractDungeon.player.drawPile.moveToDiscardPile(c);
-                        if (c.isEthereal && (c.type == AbstractCard.CardType.STATUS ||c.type == AbstractCard.CardType.CURSE)) {
+                        if (c.isEthereal) {
                             addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile));
                         }
                     }
                 }else {
                     for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                         AbstractDungeon.player.drawPile.moveToDiscardPile(c);
-                        if (c.type == AbstractCard.CardType.STATUS ||c.type == AbstractCard.CardType.CURSE) {
+                        if (c.type == AbstractCard.CardType.STATUS) {
                             addToBot(new GainBlockAction(AbstractDungeon.player, blockPerCard));
                         }
                         addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile));

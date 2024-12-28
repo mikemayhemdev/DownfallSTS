@@ -19,18 +19,15 @@ public class MaxOutput extends AbstractBronzeCard {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         cardsToPreview = new Dazed();
         baseMagicNumber = magicNumber = 3;
-        baseAuto = auto = 1;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("MaxOutput.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-     //   atb(new DrawCardAction(magicNumber));
-        applyToSelf(new MaxOutputPower(auto));
+        atb(new DrawCardAction(magicNumber));
+        applyToSelf(new MaxOutputPower(1));
     }
 
     public void upp() {
-        upgradeAuto(1);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeBaseCost(0);
     }
 }

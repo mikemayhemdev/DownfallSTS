@@ -18,14 +18,12 @@ public class Mutator extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public Mutator() {
-        super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Mutator.png"));
-        selfRetain = true;
-        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new StrengthPower(p, magicNumber));
+        applyToSelf(new StrengthPower(p, 1));
         AbstractCard q = this;
         atb(new SelectCardsInHandAction(1, masterUI.TEXT[6], c -> c.type == CardType.STATUS, (cards) -> {
             att(new MakeTempCardInHandAction(q.makeStatEquivalentCopy(), true));
@@ -35,6 +33,7 @@ public class Mutator extends AbstractBronzeCard {
 
     public void upp() {
         selfRetain = true;
-        upgradeMagicNumber(1);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
