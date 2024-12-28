@@ -11,7 +11,7 @@ public class ClassDefault extends AbstractBronzeCard {
 
     public ClassDefault() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("ClassDefault.png"));
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }

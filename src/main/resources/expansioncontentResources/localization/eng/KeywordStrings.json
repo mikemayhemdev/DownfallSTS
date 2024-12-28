@@ -29,6 +29,13 @@
     "DESCRIPTION": "At the end of your turn, heal HP equal to your #yRegen then reduce #yRegen by #b1."
   },
   {
+    "PROPER_NAME": "Plated Armor",
+    "NAMES": [
+      "plated"
+    ],
+    "DESCRIPTION": "At the end of your turn, gain Block equal to your #yPlated #yArmor. Taking unblocked attack damage reduces #yPlated #yArmor by #b1."
+  },
+  {
     "PROPER_NAME": "Boss",
     "NAMES": [
       "boss"

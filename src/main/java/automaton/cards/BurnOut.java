@@ -24,7 +24,7 @@ public class BurnOut extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 3;
 
     public BurnOut() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("BurnOut.png"));
         exhaust = true;

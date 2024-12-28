@@ -21,8 +21,8 @@ public class WildBeam extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 9;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 4;
 
     public WildBeam() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
@@ -37,7 +37,7 @@ public class WildBeam extends AbstractBronzeCard {
             public void update() {
                 isDone = true;
                 ArrayList<AbstractCard> valid = new ArrayList<>();
-                valid.addAll(AbstractDungeon.player.drawPile.group.stream().filter(q -> q.type == CardType.STATUS).collect(Collectors.toList()));
+                valid.addAll(AbstractDungeon.player.drawPile.group.stream().filter(q -> q.type == CardType.STATUS || q.type == CardType.CURSE).collect(Collectors.toList()));
                 if (!valid.isEmpty()) {
                     att(new ExhaustSpecificCardAction(valid.get(AbstractDungeon.cardRandomRng.random(valid.size()-1)), AbstractDungeon.player.drawPile));
                 }

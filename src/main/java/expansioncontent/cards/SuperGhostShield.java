@@ -59,6 +59,7 @@ public class SuperGhostShield extends AbstractExpansionCard {
         this.keywords.add(afterlife_name);
         String blur_name = downfallMod.keywords_and_proper_names.get("blur");
         this.keywords.add(blur_name);
+        this.keywords.add("block");
     }
 }
 

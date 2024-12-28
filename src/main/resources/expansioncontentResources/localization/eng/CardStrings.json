@@ -44,7 +44,7 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "Shaper's Blessing",
-    "DESCRIPTION": "Choose - Gain !M! Strength or !DM! Plated Armor.",
+    "DESCRIPTION": "Gain !M! Strength and !DM! expansioncontent:Plated *Armor.",
     "EXTENDED_DESCRIPTION": [
       "Donu's Power",
       "Gain !M! Strength.",
@@ -204,7 +204,7 @@
   },
   "expansioncontent:DoubleAct": {
     "NAME": "Double Act",
-    "DESCRIPTION": "At the start of your next turn, draw cards and gain [E] an additional time."
+    "DESCRIPTION": "At the start of your next turn, draw cards and gain [E] an additional time. NL Exhaust."
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "Bloody Sacrifice",

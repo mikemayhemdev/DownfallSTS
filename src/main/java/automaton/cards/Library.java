@@ -14,7 +14,7 @@ public class Library extends AbstractBronzeCard {
     //stupid intellij stuff power, self, rare
 
     public Library() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Library.png"));
     }
 
@@ -23,6 +23,6 @@ public class Library extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeBaseCost(2);
+        upgradeBaseCost(1);
     }
 }

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.RepairPower;
 import sneckomod.SneckoMod;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
@@ -36,7 +37,7 @@ public class Repair extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
-            atb(new HealAction(AbstractDungeon.player, AbstractDungeon.player, magicNumber));
+            applyToSelf(new RepairPower(AbstractDungeon.player, magicNumber));
         }
     }
 

@@ -22,7 +22,7 @@ public class SuperSneckoEye extends CustomRelic {
     public boolean activated = false;
     private boolean added_hand_size = false;
     public SuperSneckoEye() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.DEPRECATED, LandingSound.MAGICAL);
     }
 
     @Override

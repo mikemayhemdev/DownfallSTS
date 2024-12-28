@@ -14,7 +14,7 @@ public class Philosophize extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = -1;
 
     public Philosophize() {
@@ -40,6 +40,6 @@ public class Philosophize extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        upgradeAuto(1);
     }
 }

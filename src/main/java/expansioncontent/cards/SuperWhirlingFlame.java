@@ -45,7 +45,7 @@ public class SuperWhirlingFlame extends AbstractExpansionCard {
 
     public SuperWhirlingFlame() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 10;
+        baseDamage = 8;
         isMultiDamage = true;
         //todo attack bg instead of skill bg
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_collector.png", "expansioncontentResources/images/1024/bg_boss_collector.png");

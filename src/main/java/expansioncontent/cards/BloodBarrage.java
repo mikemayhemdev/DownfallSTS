@@ -35,7 +35,7 @@ public class BloodBarrage extends AbstractExpansionCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeDamage(1);
         }
     }
 }

@@ -120,9 +120,9 @@
   "expansioncontent:ReveriePower":{
   "NAME": "Reverie",
   "DESCRIPTIONS": [
-    "At the start of your turn, look at the top card of your discard pile and to add it to your hand.",
+    "At the start of your turn, look at the top card of your discard pile and add it to your hand.",
     "At the start of your turn, look at the top #b",
-    " cards of your discard pile and choose 1 to add to your hand.",
+    " cards of your discard pile and choose one to add to your hand.",
     "Choose a card to add to your hand."
   ]
 },

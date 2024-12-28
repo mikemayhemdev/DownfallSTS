@@ -1,5 +1,6 @@
 package automaton.powers;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,7 +19,7 @@ public class MaxOutputPower extends AbstractAutomatonPower {
     @Override
     public void atStartOfTurn() {
         flash();
-        addToBot(new MakeTempCardInDrawPileAction(new Dazed(), amount, true, true));
+        addToBot(new MakeTempCardInDiscardAction(new Dazed(), amount));
     }
 
     @Override

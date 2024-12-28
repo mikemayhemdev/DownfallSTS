@@ -10,9 +10,8 @@
   "bronze:Default": {
     "NAME": "Class Default",
     "DESCRIPTIONS": [
-      "Next time you create a Function, #yEncode a copy of current card in the first slot.",
-      "Next #b",
-      " times you create a Function, #yEncode a copy of current card in the first slot."
+      "Whenever you create a Function increase all numbers on it by #b",
+      "."
     ]
   },
   "bronze:Feature": {
@@ -84,9 +83,8 @@
   "bronze:HardenedForm": {
     "NAME": "Summon Orb",
     "DESCRIPTIONS": [
-      "Whenever you create or play a Function, gain #b",
-      " #yBlock and deal #b",
-      " damage to a random enemy."
+      "Whenever you create or play a Function, put #b",
+      " random rarest card(s) from your draw or discard pile into your hand."
     ]
   },
   "bronze:Hardcode": {
@@ -100,9 +98,9 @@
   "bronze:Verify": {
     "NAME": "Sentient Form",
     "DESCRIPTIONS": [
-      "Whenever you draw a Function, increase all numbers on it by #b1.",
-      "Whenever you draw a Function, increase all numbers on it by #b",
-      " except for cost."
+      "The first Function you play each turn is played twice.",
+      "The first #b",
+      " Functions you play each turn are played twice."
     ]
   },
   "bronze:FreeFunction": {

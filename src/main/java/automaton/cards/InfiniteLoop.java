@@ -1,12 +1,14 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import collector.powers.AddCopyNextTurnPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
+import static collector.util.Wiz.applyToSelf;
 
 public class InfiniteLoop extends AbstractBronzeCard {
 
@@ -18,9 +20,9 @@ public class InfiniteLoop extends AbstractBronzeCard {
     private boolean showCard;
 
     public InfiniteLoop(boolean showCard) {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 6;
         thisEncodes();
         this.showCard = showCard;
         //if (showCard)
@@ -44,13 +46,14 @@ public class InfiniteLoop extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
-            AbstractCard c = makeStatEquivalentCopy();
-            c.baseDamage += this.magicNumber;
-            makeInHand(c);
+            AbstractCard copyloop = makeStatEquivalentCopy();
+            copyloop.baseDamage += this.magicNumber;
+            applyToSelf(new AddCopyNextTurnPower(copyloop));
         }
     }
 
     public void upp() {
+        upgradeDamage(2);
         upgradeMagicNumber(2);
     }
 }

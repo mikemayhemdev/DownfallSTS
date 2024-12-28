@@ -28,7 +28,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCar
     private boolean chosenInGeneral = false;
 
     public SneckoBoss() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.DEPRECATED, LandingSound.MAGICAL);
     }
 
     @Override

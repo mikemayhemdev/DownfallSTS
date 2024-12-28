@@ -1,47 +1,42 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
-
-import static com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.FIRE;
-import static com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.LIGHTNING;
 
 public class Virus extends AbstractBronzeCard {
 
     public final static String ID = makeID("Virus");
 
-    //stupid intellij stuff attack, enemy, uncommon
-
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 4;
 
     public Virus() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         cardsToPreview = new MinorBeam();
-        selfRetain = true;
-        exhaust = true;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Virus.png"));
     }
 
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, LIGHTNING);
-        for (AbstractCard c:AbstractDungeon.player.hand.group){
-            if (c != this) {
-                atb(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
-                AbstractCard c2 = new MinorBeam();
-                if (upgraded) c2.upgrade();
-                atb(new MakeTempCardInHandAction(c2));
+        dmg(m, AbstractGameAction.AttackEffect.LIGHTNING);
+        int handSize = p.hand.size();
+            addToBot(new DiscardAction(p, p, handSize, false));
+            AbstractCard tokenCard = new MinorBeam();
+            if (upgraded) {
+                tokenCard.upgrade();
             }
-        }
+            if (handSize > 0) {
+                addToBot(new MakeTempCardInHandAction(tokenCard, handSize - 1));
+            }
     }
 
+    @Override
     public void upp() {
         cardsToPreview.upgrade();
         upgradeDamage(2);

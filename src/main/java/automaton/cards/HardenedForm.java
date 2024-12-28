@@ -14,7 +14,7 @@ public class HardenedForm extends AbstractBronzeCard {
 
     //stupid intellij stuff power, self, rare
 
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 2;
 
     public HardenedForm() {
@@ -29,6 +29,6 @@ public class HardenedForm extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        upgradeBaseCost(1);
     }
 }

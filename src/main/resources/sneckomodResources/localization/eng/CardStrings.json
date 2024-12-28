@@ -512,8 +512,8 @@
   },
   "sneckomod:BigGuns": {
     "NAME": "Blunder Guard",
-    "DESCRIPTION": "Whenever you play a card that costs 3, gain 6 Block and !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a card that costs 3, gain 8 Block and !M! Strength."
+    "DESCRIPTION": "Whenever you play a card that costs 3+, gain 6 Block and !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a card that costs 3+, gain 8 Block and !M! Strength."
   },
   "sneckomod:WideAngle": {
     "NAME": "Wide Angle",

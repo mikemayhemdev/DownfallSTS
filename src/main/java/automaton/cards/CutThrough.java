@@ -16,10 +16,10 @@ public class CutThrough extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 2;
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
 
     public CutThrough() {
@@ -45,6 +45,6 @@ public class CutThrough extends AbstractBronzeCard {
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(UPG_MAGIC);
+       // upgradeMagicNumber(UPG_MAGIC);
     }
 }
