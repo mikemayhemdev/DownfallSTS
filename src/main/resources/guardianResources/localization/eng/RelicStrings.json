@@ -17,7 +17,7 @@
     "NAME": "Obsidian Scales",
     "FLAVOR": "Stain the sky black with your blood. Retaliate against all who struck out at you.",
     "DESCRIPTIONS": [
-      "At the start of combat, gain 3 Thorns. Whenever you are debuffed or gain a debuff, gain 2 #yThorns."
+      "At the start of combat, gain 3 #yThorns. Whenever you are debuffed or gain a debuff, gain 2 #yThorns."
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {

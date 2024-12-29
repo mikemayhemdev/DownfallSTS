@@ -30,6 +30,7 @@ import downfall.powers.NeowInvulnerablePower;
 import downfall.powers.neowpowers.*;
 import downfall.vfx.combat.FakeDeathScene;
 import guardian.vfx.SmallLaserEffectColored;
+import hermit.cards.ImpendingDoom;
 
 import java.util.ArrayList;
 
@@ -125,15 +126,9 @@ public class NeowBossFinal extends AbstractMonster {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, 3, true), 3));
 
 
-        //aged -2 draw -1e (ethereal but places void on top of draw pile targeted exhaust makes it only -1 draw)
-        //bewildered -1 draw +/- ??? e (ethereal - muddles entire hand - targeted exhaust on this is pointless)
-        //scatterbrained -1 - infinity draw -0 - infinity e (heavily depends on exhaust access, but playing it normally costs 2e, important targeted exhaust card - this curse creates copies of itself similar to pride but into the discard pile)
-        //icky -1 draw -2e / -2 draw -2e (with targeted exhaust only -1 draw - this curse can be redrawn so targeted exhaust is relevant but not as important)
-        //flawed -1 draw -1e / -4+ cards lost and turned +5 random statuses ("ethereal" ish, transforms hand into status cards, lost value heavily depends, also important targeted exhaust card, but playing it for 1 energy isn't difficult compared to scatterbrained's 2 cost requirement)
-
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Aged(), 1, true, false, false, (float) Settings.WIDTH * 0.18F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Bewildered(), 1, true, false, false, (float) Settings.WIDTH * 0.34F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Scatterbrained(), 1, true, false, false, (float) Settings.WIDTH * 0.5F, (float) Settings.HEIGHT / 2.0F));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new ImpendingDoom(), 1, true, false, false, (float) Settings.WIDTH * 0.34F, (float) Settings.HEIGHT / 2.0F));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new PrideStandard(), 1, true, false, false, (float) Settings.WIDTH * 0.5F, (float) Settings.HEIGHT / 2.0F));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Icky(), 1, true, false, false, (float) Settings.WIDTH * 0.66F, (float) Settings.HEIGHT / 2.0F));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Malfunctioning(), 1, true, false, false, (float) Settings.WIDTH * 0.82F, (float) Settings.HEIGHT / 2.0F));
 
@@ -250,13 +245,14 @@ public class NeowBossFinal extends AbstractMonster {
 
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
 
+
                 if (AbstractDungeon.ascensionLevel >= 19) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 8), 8));
-                    // this is +24 damage for the multi hit, +32 total, 8 damage over the a19- version
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 9), 9));
+                    // this is +27 damage for the multi hit, +36 total, 8 damage over the a19- version
                 }
                 if (AbstractDungeon.ascensionLevel < 19) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 6), 6));
-                    //this is +18 damage for the multi hit, +24 total
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 7), 7));
+                    //this is +21 damage for the multi hit, +28 total
                 }
 
                 switch(this.buffCount) {
@@ -296,12 +292,12 @@ public class NeowBossFinal extends AbstractMonster {
                         break;
                     case 3:
                         if (AbstractDungeon.ascensionLevel >= 19) {
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 12), 10));
-                            //this is +36 damage on the multihit, +48 damage total.
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 15), 10));
+                            //this is +45 damage on the multihit, +60 damage total.
                         }
                         if (AbstractDungeon.ascensionLevel < 19) {
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 8), 8));
-                            //this is +24 damage on the multihit, +32 damage total.
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 12), 8));
+                            //this is +36 damage on the multihit, +48 damage total.
                         }
                         break;
                     default:

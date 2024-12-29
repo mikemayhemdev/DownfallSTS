@@ -64,7 +64,10 @@ public class MassRepurpose extends AbstractSlimeboundCard {
                 SlimeboundMod.spawnSpecialistSlime();
             }
         }
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
+        if (upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
+            checkMinionMaster();
+        }
     }
 
     public void upgrade() {

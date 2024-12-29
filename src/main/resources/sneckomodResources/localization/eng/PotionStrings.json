@@ -2,7 +2,7 @@
   "sneckomod:DiceRollPotion": {
     "NAME": "Card in a Bottle",
     "DESCRIPTIONS": [
-      "On use, choose 1 of 3 #yUpgraded Uncommon #yOffclass cards to add to your deck."
+      "Use in combat to add a card reward with 3 #yUpgraded Uncommon #yOffclass cards to the room's rewards."
     ]
   },
   "sneckomod:CheatPotion": {

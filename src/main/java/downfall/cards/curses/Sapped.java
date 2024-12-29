@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
 
 import static collector.CollectorMod.makeID;
@@ -20,6 +21,7 @@ public class Sapped extends AbstractCollectorCard {
         isPyre();
         exhaust = true;
         SoulboundField.soulbound.set(this, true);
+        tags.add(downfallMod.DOWNFALL_CURSE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

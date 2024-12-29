@@ -62,6 +62,18 @@
       "Pick a Card."
     ]
   },
+  "sneckomod:DiceRollPotionReward": {
+    "TEXT": [
+      "Add an Upgraded Card to your deck.",
+      "Pick a Card."
+    ]
+  },
+  "sneckomod:ColorfulPowersCardReward": {
+    "TEXT": [
+      "Add an Upgraded Power to your deck.",
+      "Pick a Card."
+    ]
+  },
   "sneckomod:AtGameStart": {
     "TEXT": [
       "",

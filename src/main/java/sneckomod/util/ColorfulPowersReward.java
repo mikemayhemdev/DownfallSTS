@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.POWER;
 
 public class ColorfulPowersReward extends CustomReward {
-    public static final String ID = downfallMod.makeID("ColorfulUncommonCardReward");
+    public static final String ID = downfallMod.makeID("ColorfulPowersCardReward");
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
 
@@ -32,6 +32,7 @@ public class ColorfulPowersReward extends CustomReward {
         while (selectedCards.size() < 5) {
             AbstractCard card = SneckoMod.getOffClassCardMatchingPredicate(c ->
                     c.type == AbstractCard.CardType.POWER && c.rarity == AbstractCard.CardRarity.UNCOMMON);
+                    card.upgrade();
             if (!isDuplicate(selectedCards, card)) {
                 selectedCards.add(card);
             }

@@ -28,7 +28,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCar
     private boolean chosenInGeneral = false;
 
     public SneckoBoss() {
-        super(ID, IMG, OUTLINE, RelicTier.DEPRECATED, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
     @Override
@@ -55,41 +55,45 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCar
         AbstractDungeon.gridSelectScreen.open(selectionGroup, 1, false, "Choose a class color for rewards.");
     }
 
+
     @Override
     public void update() {
         super.update();
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && !chosenInGeneral) {
             chosenInGeneral = true;
-            AbstractCard selectedCard = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            myColor = ((UnknownClass) selectedCard).myColor;
-            createColorSpecificRewards();
-            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-            AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            this.description = getUpdatedDescription();
-            this.tips.clear();
-            this.tips.add(new PowerTip(this.name, this.description));
+            AbstractCard selectedCardsnek = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            if (selectedCardsnek instanceof UnknownClass) {
+                myColor = ((UnknownClass) selectedCardsnek).myColor;
+                createColorSpecificRewards();
+                AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+                AbstractDungeon.gridSelectScreen.selectedCards.clear();
+                updateDescriptionAndTips();
+            }
         }
     }
 
     private void createColorSpecificRewards() {
-        // 3 upgraded uncommons
+        // Add 3 upgraded uncommon rewards
         for (int i = 0; i < 3; i++) {
-            AbstractCard card = SneckoMod.getOffClassCardMatchingPredicate(c -> c.color == myColor && c.rarity == AbstractCard.CardRarity.UNCOMMON);
-                AbstractDungeon.getCurrRoom().rewards.add(new ColorfulUncommonUpgradedReward(myColor));
+            AbstractDungeon.getCurrRoom().rewards.add(new ColorfulUncommonUpgradedReward(myColor));
         }
-        // 2 rares
-        for (int i = 0; i < 2; i++) {
 
-                AbstractDungeon.getCurrRoom().rewards.add(new ColorfulRareReward(myColor));
-            }
+        // Add 2 rare rewards
+        for (int i = 0; i < 2; i++) {
+            AbstractDungeon.getCurrRoom().rewards.add(new ColorfulRareReward(myColor));
+        }
+
         AbstractDungeon.combatRewardScreen.open("Rewards!");
         AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
     }
 
-    public static void updateCardPools() {
-        AbstractDungeon.commonCardPool.group.removeIf(card -> card instanceof UnknownClass && ((UnknownClass) card).myColor != myColor);
+    private void updateDescriptionAndTips() {
+        this.description = getUpdatedDescription();
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
     }
 
+    @Override
     public String getUpdatedDescription() {
         if (myColor != null) {
             return DESCRIPTIONS[1] + SneckoMod.getClassFromColor(myColor) + DESCRIPTIONS[2] + SneckoMod.getClassFromColor(myColor) + DESCRIPTIONS[3];
@@ -105,9 +109,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCar
     @Override
     public void onLoad(AbstractCard.CardColor color) {
         myColor = color;
-        this.description = getUpdatedDescription();
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
+        updateDescriptionAndTips();
     }
 
     @Override
