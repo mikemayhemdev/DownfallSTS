@@ -51,86 +51,67 @@ public class GemFire extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
+        // SECOND ARRAY TO AVOID CRASHING
+        ArrayList<GuardianMod.socketTypes> tempSockets = new ArrayList<>();
+
         // Collect sockets from piles and stasis
-        System.out.println("DEBUG: Collecting Hand");
-        collectSocketsFromGroup(p.hand);
-        System.out.println("DEBUG: Collecting Draw Pile");
-        collectSocketsFromGroup(p.drawPile);
-        System.out.println("DEBUG: Collecting Discard Pile");
-        collectSocketsFromGroup(p.discardPile);
-        System.out.println("DEBUG: Collecting Stasis");
-        collectSocketsFromStasis(p);
+        collectSocketsFromGroup(p.hand, tempSockets);
+        collectSocketsFromGroup(p.drawPile, tempSockets);
+        collectSocketsFromGroup(p.discardPile, tempSockets);
+        collectSocketsFromStasis(p, tempSockets);
 
         // Process sockets (non-SYNTHETIC first, then SYNTHETIC)
         ArrayList<GuardianMod.socketTypes> nonSyntheticSockets = new ArrayList<>();
         ArrayList<GuardianMod.socketTypes> syntheticSockets = new ArrayList<>();
-        for (GuardianMod.socketTypes socket : this.sockets) {
+        for (GuardianMod.socketTypes socket : tempSockets) {
             if (socket == GuardianMod.socketTypes.SYNTHETIC) {
-                System.out.println("DEBUG: Adding " + socket);
                 syntheticSockets.add(socket);
             } else {
                 nonSyntheticSockets.add(socket);
-                System.out.println("DEBUG: Adding " + socket);
             }
         }
-        System.out.println("DEBUG: Combining Arrays");
         nonSyntheticSockets.addAll(syntheticSockets); // Combine lists
+
         for (GuardianMod.socketTypes socket : nonSyntheticSockets) {
             processSocket(p, m, socket);
             AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(0.1F));
         }
     }
 
-    private void collectSocketsFromGroup(CardGroup group) {
+    private void collectSocketsFromGroup(CardGroup group, ArrayList<GuardianMod.socketTypes> tempSockets) {
         for (AbstractCard c : group.group) {
-            if ((c instanceof AbstractGuardianCard) && !(c.hasTag(GuardianMod.GEM))) {
+            if (c instanceof AbstractGuardianCard && !c.hasTag(GuardianMod.GEM)) {
                 AbstractGuardianCard gc = (AbstractGuardianCard) c;
-                System.out.println("DEBUG: Card: " + c);
-                for (GuardianMod.socketTypes socket : gc.sockets) {
-                   // if (!this.sockets.contains(socket)) {
-                    System.out.println("DEBUG: Adding " + socket);
-                        this.sockets.add(socket);
-                 //   }
-                }
+                tempSockets.addAll(gc.sockets);
             } else if (c.hasTag(GuardianMod.GEM)) {
                 if (c instanceof AbstractGuardianCard) {
                     GuardianMod.socketTypes gemType = ((AbstractGuardianCard) c).thisGemsType;
                     if (gemType != null) {
-                  //  if (gemType != null && !this.sockets.contains(gemType)) {
-                        System.out.println("DEBUG: Detected " + gemType);
-                        this.sockets.add(gemType);
+                        tempSockets.add(gemType);
                     }
                 }
             }
         }
     }
 
-    private void collectSocketsFromStasis(AbstractPlayer p) {
+    private void collectSocketsFromStasis(AbstractPlayer p, ArrayList<GuardianMod.socketTypes> tempSockets) {
         for (AbstractOrb orb : p.orbs) {
             if (orb instanceof StasisOrb) {
                 AbstractCard stasisCard = ((StasisOrb) orb).stasisCard;
                 if (stasisCard instanceof AbstractGuardianCard) {
                     AbstractGuardianCard gc = (AbstractGuardianCard) stasisCard;
-                    for (GuardianMod.socketTypes socket : gc.sockets) {
-                    //    if (!this.sockets.contains(socket)) {
-                        System.out.println("DEBUG: Adding " + socket);
-                           this.sockets.add(socket);
-                     //   }
-                    }
+                    tempSockets.addAll(gc.sockets);
                 } else if (stasisCard != null && stasisCard.hasTag(GuardianMod.GEM)) {
                     if (stasisCard instanceof AbstractGuardianCard) {
                         GuardianMod.socketTypes gemType = ((AbstractGuardianCard) stasisCard).thisGemsType;
                         if (gemType != null) {
-                       // if (gemType != null && !this.sockets.contains(gemType)) {
-                            System.out.println("DEBUG: Adding " + gemType);
-                            this.sockets.add(gemType);
+                            tempSockets.add(gemType);
                         }
                     }
                 }
             }
         }
     }
-
 
     private void processSocket(AbstractPlayer p, AbstractMonster m, GuardianMod.socketTypes socketType) {
         switch (socketType) {
@@ -178,7 +159,6 @@ public class GemFire extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, power, power.amount));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, lossPower, lossPower.amount));
     }
-
 
     private void weakenAllEnemies(AbstractPlayer p, int amount) {
         for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {

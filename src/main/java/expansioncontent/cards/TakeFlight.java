@@ -30,6 +30,7 @@ public class TakeFlight extends AbstractExpansionCard {
         setBackgroundTexture("expansioncontentResources/images/512/bg_boss_awakenedone.png", "expansioncontentResources/images/1024/bg_boss_awakenedone.png");
         this.baseMagicNumber = this.magicNumber = 3;
         this.baseDownfallMagic = this.downfallMagic = 4;
+        tags.add(CardTags.HEALING);
         expansionContentMod.loadJokeCardImage((AbstractCard)this, "TakeFlight.png");
         this.exhaust = true;
     }

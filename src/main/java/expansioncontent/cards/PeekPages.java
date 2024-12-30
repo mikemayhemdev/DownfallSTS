@@ -35,6 +35,7 @@ public class PeekPages extends AbstractExpansionCard {
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new Insight();
         this.exhaust = true;
+        this.tags.add(expansionContentMod.STUDY);
         loadJokeCardImage(this, "PeekPages.png");
     }
 

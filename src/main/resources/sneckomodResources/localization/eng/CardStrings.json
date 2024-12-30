@@ -3,7 +3,7 @@
     "NAME": "Blunderbus",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deal damage one more time for every 3+ cost card in hand."
   },
-  "sneckomod:BlunderGuard": {
+  "sneckomod:Tsunami": {
     "NAME": "Tsunami",
     "DESCRIPTION": "sneckomod:Overflow effects also grant !M! Block."
   },
@@ -510,7 +510,7 @@
     "DESCRIPTION": "Gain !B! Block. NL Put !M! random sneckomod:Offclass cards from your draw pile into your hand. NL sneckomod:Gift: Common.",
     "DESCRIPTION_BATTLE": "Gain !B! Block. NL Put !M! random sneckomod:Offclass cards from your draw pile into your hand."
   },
-  "sneckomod:BigGuns": {
+  "sneckomod:BlunderGuard": {
     "NAME": "Blunder Guard",
     "DESCRIPTION": "Whenever you play a card that costs 3+, gain 6 Block and !M! Strength.",
     "UPGRADE_DESCRIPTION": "Whenever you play a card that costs 3+, gain 8 Block and !M! Strength."
@@ -525,7 +525,7 @@
     "DESCRIPTION_BATTLE": "Whenever you play a Power, deal !M! damage to ALL enemies."
   },
   "sneckomod:Whack": {
-    "NAME": "Whack",
+    "NAME": "Whack!",
     "DESCRIPTION": "Deal !D! damage. NL Add a *Wallop to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Wallop+ to your hand. NL Exhaust."
   },

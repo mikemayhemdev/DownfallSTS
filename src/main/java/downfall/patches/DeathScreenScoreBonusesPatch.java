@@ -25,20 +25,19 @@ public class DeathScreenScoreBonusesPatch {
             method = "createGameOverStats"
     )
     //use replaceheartkillbonuspatch too so it also counts on winning a run.
-    public static class VictoryScreenPatch {
-        public static void Postfix(VictoryScreen __instance) {
+    public static class DeathScreenPatch {
+        public static void Postfix(DeathScreen __instance) {
             if (EvilModeCharacterSelect.evilMode) {
                 ArrayList<GameOverStat> stats = ReflectionHacks.getPrivate(__instance, GameOverScreen.class, "stats");
-            //insert evil mode score bonuses here.
+                //insert evil mode score bonuses here.
             }
 
 
             //insert non evil exclusive score bonuses here
-            ArrayList<GameOverStat> stats2 = ReflectionHacks.getPrivate(__instance, GameOverScreen.class, "stats");
-            if (AbstractDungeon.player.hasRelic(TheBrokenSeal.ID)) {
-                stats2.add(stats2.size()+1, new GameOverStat(uiStrings.TEXT[0], uiStrings2.TEXT[1], Integer.toString(333)));
-            }
-
+          //  ArrayList<GameOverStat> stats2 = ReflectionHacks.getPrivate(__instance, GameOverScreen.class, "stats");
+          //  if (AbstractDungeon.player.hasRelic(TheBrokenSeal.ID)) {
+            //    stats2.add(stats2.size()-2, new GameOverStat(uiStrings2.TEXT[0], uiStrings2.TEXT[1], Integer.toString(333)));
+          //  }
         }
     }
 }

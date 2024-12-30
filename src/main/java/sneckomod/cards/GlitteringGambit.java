@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class GlitteringGambit extends AbstractSneckoCard {
     public final static String ID = makeID("GlitteringGambit");
 
-    private static final int MAGIC = 75;
+    private static final int MAGIC = 150;
 
     public GlitteringGambit() {
         super(ID, -2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
@@ -52,7 +52,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
             AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == rarity);
             if (newCard != null && !cardListDuplicate(cardsToReward, newCard)) {
                 AbstractCard cardCopy = newCard.makeCopy();
-                cardCopy.upgrade();  // Upgrade each card copy
+                cardCopy.upgrade();
                 cardsToReward.add(cardCopy);
             }
         }

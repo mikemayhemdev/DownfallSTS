@@ -382,7 +382,7 @@ public class SneckoMod implements
                 Restock.ID,
                 PureSnecko.ID,
 
-                BigGuns.ID,
+                BlunderGuard.ID,
                 Blunderbus.ID,
                 WideAngle.ID,
 
