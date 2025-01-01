@@ -497,6 +497,15 @@
       "Gain [E] at the start of your turn. You can no longer gain #ySouls. Breaking Keys costs no #ySouls."
     ]
   },
+  "downfall:BlackCandle": {
+    "NAME": "Black Candle",
+    "FLAVOR": "The flame shines even brighter from within the darkness.",
+    "DESCRIPTIONS": [
+      "#yUnplayable #rCurse cards can now be played. Whenever you play a #rCurse card, Exhaust it. If it was #yUnplayable, lose #b1 HP.",
+      "The flame shines even brighter from within the darkness.",
+      "Black Candle"
+    ]
+  },
   "downfall:replacements": {
     "NAME": "",
     "FLAVOR": "",

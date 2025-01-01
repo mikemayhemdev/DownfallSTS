@@ -11,7 +11,7 @@ public class Amass extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("Amass");
     private static final int COST = 3;
-    private static final int BASE_BLOCK = 4;
+    private static final int BASE_BLOCK = 12;
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;
 

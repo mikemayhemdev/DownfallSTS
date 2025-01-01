@@ -10,8 +10,12 @@ import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.RenderCustomDyn
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.*;
 import downfall.downfallMod;
@@ -44,6 +48,7 @@ public class RelicOverrides {
 //    }
 
 
+
     @SpirePatch(
             clz = OldCoin.class,
             method = "getUpdatedDescription"
@@ -52,7 +57,7 @@ public class RelicOverrides {
         @SpirePrefixPatch
         public static void Prefix(OldCoin _instance) {
             if (EvilModeCharacterSelect.evilMode && _instance.name != CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[1]) {
-                //ReflectionHacks.setPrivateStaticFinal(OldCoin.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[1]);
+                ReflectionHacks.setPrivateStaticFinal(OldCoin.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[1]);
                 _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/oldCoinEvil.png"));
                 _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/oldCoinEvil.png"));
                 _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[2];
@@ -60,6 +65,44 @@ public class RelicOverrides {
 
         }
 
+    }
+
+    @SpirePatch(
+            clz = BlueCandle.class,
+            method = "onUseCard"
+    )
+    public static class BlueCandleOverride {
+        @SpireOverride
+        public static void onUseCard(BlueCandle __instance, AbstractCard card, UseCardAction action) {
+                if (card.type == AbstractCard.CardType.CURSE) {
+                    __instance.flash();
+                    if ((EvilModeCharacterSelect.evilMode && card.cost == -2) || (!EvilModeCharacterSelect.evilMode)) {
+                        AbstractDungeon.actionManager.addToBottom(
+                                new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, AbstractGameAction.AttackEffect.FIRE)
+                        );
+                    }
+                    card.exhaust = true;
+                    action.exhaustCard = true;
+                }
+            }
+        }
+
+    @SpirePatch(
+            clz = BlueCandle.class,
+            method = "getUpdatedDescription"
+    )
+    public static class bluecandleName {
+        @SpirePrefixPatch
+        public static void Prefix(BlueCandle _instance) {
+            if (EvilModeCharacterSelect.evilMode && _instance.name != CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").DESCRIPTIONS[2]) {
+                ReflectionHacks.setPrivateStaticFinal(BlueCandle.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").DESCRIPTIONS[2]);
+                _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/BlackCandle.png"));
+                _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/BlackCandleOutline.png"));
+                _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").DESCRIPTIONS[1];
+                _instance.description = CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").DESCRIPTIONS[0];
+            }
+
+        }
     }
 
 
@@ -71,7 +114,7 @@ public class RelicOverrides {
         @SpirePrefixPatch
         public static void Prefix(MembershipCard _instance) {
             if (EvilModeCharacterSelect.evilMode && _instance.name != CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[3]) {
-                //ReflectionHacks.setPrivateStaticFinal(MembershipCard.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[3]);
+                ReflectionHacks.setPrivateStaticFinal(MembershipCard.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[3]);
                 _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/membershipCardEvil.png"));
                 _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/membershipCardEvil.png"));
                 _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[4];
@@ -90,7 +133,7 @@ public class RelicOverrides {
         @SpirePrefixPatch
         public static void Prefix(Courier _instance) {
             if (EvilModeCharacterSelect.evilMode && _instance.name != CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]) {
-                //ReflectionHacks.setPrivateStaticFinal(Courier.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]);
+                ReflectionHacks.setPrivateStaticFinal(Courier.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]);
                 _instance.imgUrl = null;
                 _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/courierEvil.png"));
                 _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/courierEvil.png"));
@@ -110,7 +153,7 @@ public class RelicOverrides {
         public static void Postfix(PrismaticShard _instance) {
             if (EvilModeCharacterSelect.evilMode) {
                 //ReflectionHacks.setPrivateStaticFinal(Courier.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]);
-                _instance.description = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[8];
+               // _instance.description = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[8];
 
             }
 

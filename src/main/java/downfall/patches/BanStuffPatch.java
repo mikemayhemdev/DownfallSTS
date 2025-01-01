@@ -9,6 +9,7 @@ import downfall.potions.CursedFountainPotion;
 import gremlin.patches.GremlinEnum;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.relicsToRemoveOnStart;
+import static hermit.characters.hermit.Enums.HERMIT;
 
 public class BanStuffPatch {
     @SpirePatch(
@@ -23,6 +24,7 @@ public class BanStuffPatch {
                 relicsToRemoveOnStart.add("Prismatic Shard");
             }
 
+            }
+
         }
     }
-}

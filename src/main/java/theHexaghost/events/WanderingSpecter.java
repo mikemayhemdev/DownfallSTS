@@ -15,6 +15,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
+import downfall.patches.EvilModeCharacterSelect;
+import downfall.relics.BlackCandle;
 import downfall.relics.ExtraCursedBell;
 import downfall.relics.ExtraCursedKey;
 import theHexaghost.HexaMod;
@@ -72,8 +74,13 @@ public class WanderingSpecter extends AbstractImageEvent {
             imageEventText.setDialogOption(OPTIONS[1]);
             shopForMore2 = true;
         }
-        if (!AbstractDungeon.player.hasRelic(BlueCandle.ID)){
-            this.imageEventText.setDialogOption(OPTIONS[3]);
+        if ((!AbstractDungeon.player.hasRelic(BlueCandle.ID)) || (!AbstractDungeon.player.hasRelic(BlackCandle.ID))) {
+            if (EvilModeCharacterSelect.evilMode) {
+                this.imageEventText.setDialogOption(OPTIONS[3], new BlackCandle());
+            }
+            if (!EvilModeCharacterSelect.evilMode) {
+                this.imageEventText.setDialogOption(OPTIONS[3], new BlueCandle());
+            }
         } else {
             this.imageEventText.setDialogOption(OPTIONS[4]);
         }
@@ -127,7 +134,7 @@ public class WanderingSpecter extends AbstractImageEvent {
                         this.screen = CurScreen.TRADE;
                         return;
                     case 2:
-                        if (AbstractDungeon.player.hasRelic(BlueCandle.ID)){
+                        if ((AbstractDungeon.player.hasRelic(BlueCandle.ID)) || (AbstractDungeon.player.hasRelic(BlackCandle.ID))){
                             this.imageEventText.updateBodyText(DESCRIPTIONS[7]);
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
@@ -138,11 +145,17 @@ public class WanderingSpecter extends AbstractImageEvent {
                             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
                             AbstractDungeon.combatRewardScreen.open();
                             downfallMod.removeAnyRelicFromPools(BlueCandle.ID);
+                            downfallMod.removeAnyRelicFromPools(BlackCandle.ID);
                         }
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[9]);
                         this.screen = CurScreen.END;
-                        logMetricObtainRelicAndDamage(ID, "Chased Away", new BlueCandle(), 5);
+                        if (!EvilModeCharacterSelect.evilMode) {
+                            logMetricObtainRelicAndDamage(ID, "Chased Away", new BlueCandle(), 5);
+                        }
+                        if (EvilModeCharacterSelect.evilMode) {
+                            logMetricObtainRelicAndDamage(ID, "Chased Away", new BlackCandle(), 5);
+                        }
                         return;
                 }
                 return;

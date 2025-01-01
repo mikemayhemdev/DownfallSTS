@@ -20,7 +20,7 @@ public class Medusa extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("Medusa");
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 2;
     private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;

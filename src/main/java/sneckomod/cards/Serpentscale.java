@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
 
 public class Serpentscale extends AbstractSneckoCard {
@@ -46,4 +47,10 @@ public class Serpentscale extends AbstractSneckoCard {
             upgradeMagicNumber(UPG_MAGIC);
         }
     }
+
+@Override
+public void initializeDescription() {
+    super.initializeDescription();
+    this.keywords.add(downfallMod.keywords_and_proper_names.get("plated"));
+}
 }

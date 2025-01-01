@@ -17,7 +17,7 @@ public class TyphoonFang extends AbstractSneckoCard {
 
     // this card was a herculean effort to code
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 12;
 
     public TyphoonFang() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
@@ -40,11 +40,10 @@ public class TyphoonFang extends AbstractSneckoCard {
         }
     }
 
-
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(4);
         }
     }
 }

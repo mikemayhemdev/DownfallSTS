@@ -1,13 +1,16 @@
 package champ.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.combat.FlameBarrierEffect;
 import downfall.powers.NextTurnPowerPower;
 import hermit.util.Wiz;
 
@@ -29,6 +32,11 @@ public class HeavySlash extends AbstractChampCard {
 
         if (unblockedDamage > 0) {
             Wiz.atb(new ApplyPowerAction(p, p, new NextTurnPowerPower(p, new VigorPower(p,unblockedDamage)), unblockedDamage));
+            if (Settings.FAST_MODE) {
+                this.addToBot(new VFXAction(p, new FlameBarrierEffect(p.hb.cX, p.hb.cY), 0.1F));
+            } else {
+                this.addToBot(new VFXAction(p, new FlameBarrierEffect(p.hb.cX, p.hb.cY), 0.5F));
+            }
         }
 
     }

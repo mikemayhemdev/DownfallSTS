@@ -84,7 +84,8 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCar
         }
 
         AbstractDungeon.combatRewardScreen.open("Rewards!");
-        AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
+        AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
+        (AbstractDungeon.getCurrRoom()).rewardPopOutTimer = 0.05F;
     }
 
     private void updateDescriptionAndTips() {
