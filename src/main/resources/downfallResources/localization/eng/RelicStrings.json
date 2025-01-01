@@ -494,7 +494,8 @@
     "NAME": "Hecktoplasm",
     "FLAVOR": "This blob of slime seems to pulse with the energy of hundreds of souls. No wonder no one wanted it.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. You can no longer gain #ySouls. Breaking Keys costs no #ySouls."
+      "Gain [E] at the start of your turn. You can no longer gain #ySouls. Breaking Keys costs no #ySouls.",
+      "Hecktoplasm"
     ]
   },
   "downfall:BlackCandle": {
@@ -502,7 +503,6 @@
     "FLAVOR": "The flame shines even brighter from within the darkness.",
     "DESCRIPTIONS": [
       "#yUnplayable #rCurse cards can now be played. Whenever you play a #rCurse card, Exhaust it. If it was #yUnplayable, lose #b1 HP.",
-      "The flame shines even brighter from within the darkness.",
       "Black Candle"
     ]
   },

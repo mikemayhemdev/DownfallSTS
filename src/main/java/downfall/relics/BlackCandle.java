@@ -30,7 +30,7 @@ public class BlackCandle extends CustomRelic {
     private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/BlackCandleOutline.png"));
 
     public BlackCandle() {
-        super(ID, IMG, OUTLINE, RelicTier.DEPRECATED, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
     @Override
@@ -50,7 +50,7 @@ public class BlackCandle extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return false;
+        return true;
                 // || AbstractPlayer.PlayerClass == HERMIT);
     }
 

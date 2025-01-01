@@ -72,38 +72,38 @@ public class RelicOverrides {
             method = "onUseCard"
     )
     public static class BlueCandleOverride {
-        @SpireOverride
+       // @SpirePatch
         public static void onUseCard(BlueCandle __instance, AbstractCard card, UseCardAction action) {
-                if (card.type == AbstractCard.CardType.CURSE) {
-                    __instance.flash();
-                    if ((EvilModeCharacterSelect.evilMode && card.cost == -2) || (!EvilModeCharacterSelect.evilMode)) {
-                        AbstractDungeon.actionManager.addToBottom(
-                                new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, AbstractGameAction.AttackEffect.FIRE)
-                        );
-                    }
-                    card.exhaust = true;
-                    action.exhaustCard = true;
+            if (card.type == AbstractCard.CardType.CURSE) {
+                __instance.flash();
+                if (!EvilModeCharacterSelect.evilMode || card.cost == -2) {
+                    AbstractDungeon.actionManager.addToBottom(
+                            new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, AbstractGameAction.AttackEffect.FIRE)
+                    );
                 }
+                card.exhaust = true;
+                action.exhaustCard = true;
             }
         }
+    }
 
     @SpirePatch(
             clz = BlueCandle.class,
             method = "getUpdatedDescription"
     )
     public static class bluecandleName {
-        @SpirePrefixPatch
-        public static void Prefix(BlueCandle _instance) {
-            if (EvilModeCharacterSelect.evilMode && _instance.name != CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").DESCRIPTIONS[2]) {
-                ReflectionHacks.setPrivateStaticFinal(BlueCandle.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").DESCRIPTIONS[2]);
-                _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/BlackCandle.png"));
-                _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/BlackCandleOutline.png"));
-                _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").DESCRIPTIONS[1];
-                _instance.description = CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").DESCRIPTIONS[0];
-            }
+            @SpirePrefixPatch
+            public static void Prefix(BlueCandle _instance) {
+                if (EvilModeCharacterSelect.evilMode) {
+                    _instance.imgUrl = null;
+                    ReflectionHacks.setPrivateStaticFinal(BlueCandle.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").DESCRIPTIONS[1]);
+                    _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/BlackCandle.png"));
+                    _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/BlackCandleOutline.png"));
+                    _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").FLAVOR;
+                }
 
+            }
         }
-    }
 
 
     @SpirePatch(
@@ -169,6 +169,7 @@ public class RelicOverrides {
         public static void Prefix(Ectoplasm _instance) {
             if (EvilModeCharacterSelect.evilMode) {
                 _instance.imgUrl = null;
+                ReflectionHacks.setPrivateStaticFinal(Ectoplasm.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:Hecktoplasm").DESCRIPTIONS[1]);
                 _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/ectoplasmEvil.png"));
                 _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/ectoplasmEvil.png"));
                 _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:Hecktoplasm").FLAVOR;
