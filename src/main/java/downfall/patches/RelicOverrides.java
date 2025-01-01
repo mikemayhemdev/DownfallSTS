@@ -67,43 +67,60 @@ public class RelicOverrides {
 
     }
 
-    @SpirePatch(
-            clz = BlueCandle.class,
-            method = "onUseCard"
-    )
-    public static class BlueCandleOverride {
-       // @SpirePatch
-        public static void onUseCard(BlueCandle __instance, AbstractCard card, UseCardAction action) {
-            if (card.type == AbstractCard.CardType.CURSE) {
-                __instance.flash();
-                if (!EvilModeCharacterSelect.evilMode || card.cost == -2) {
-                    AbstractDungeon.actionManager.addToBottom(
-                            new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, AbstractGameAction.AttackEffect.FIRE)
-                    );
-                }
-                card.exhaust = true;
-                action.exhaustCard = true;
-            }
-        }
-    }
-
-    @SpirePatch(
-            clz = BlueCandle.class,
-            method = "getUpdatedDescription"
-    )
-    public static class bluecandleName {
-            @SpirePrefixPatch
-            public static void Prefix(BlueCandle _instance) {
-                if (EvilModeCharacterSelect.evilMode) {
-                    _instance.imgUrl = null;
-                    ReflectionHacks.setPrivateStaticFinal(BlueCandle.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").DESCRIPTIONS[1]);
-                    _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/BlackCandle.png"));
-                    _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/BlackCandleOutline.png"));
-                    _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").FLAVOR;
-                }
-
-            }
-        }
+//    @SpirePatch(
+//            clz = BlueCandle.class,
+//            method = "onUseCard"
+//    )
+//    public static class BlueCandleOverride {
+//       // @SpirePatch
+//        public static void onUseCard(BlueCandle __instance, AbstractCard card, UseCardAction action) {
+//            if (card.type == AbstractCard.CardType.CURSE) {
+//                __instance.flash();
+//                if (!EvilModeCharacterSelect.evilMode || card.cost == -2) {
+//                    AbstractDungeon.actionManager.addToBottom(
+//                            new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, AbstractGameAction.AttackEffect.FIRE)
+//                    );
+//                }
+//                card.exhaust = true;
+//                action.exhaustCard = true;
+//            }
+//        }
+//    }
+//
+//    @SpirePatch(
+//            clz = BlueCandle.class,
+//            method = "getUpdatedDescription"
+//    )
+//    public static class bluecandleName {
+//            @SpirePrefixPatch
+//            public static void Prefix(BlueCandle _instance) {
+//                if (EvilModeCharacterSelect.evilMode) {
+//                    _instance.imgUrl = null;
+//                    ReflectionHacks.setPrivateStaticFinal(MembershipCard.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").DESCRIPTIONS[1]);_instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/BlackCandle.png"));
+//                    _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/BlackCandleOutline.png"));
+//                    _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").FLAVOR;
+//                }
+//
+//            }
+//        }
+//
+//
+//
+//    @SpirePatch(
+//            clz = BlueCandle.class,
+//            method = "setDescription"
+//    )
+//    public static class BlueCandleDesc {
+//        @SpirePrefixPatch
+//        public static SpireReturn<String> Prefix() {
+//
+//            if (EvilModeCharacterSelect.evilMode) {
+//                return SpireReturn.Return(CardCrawlGame.languagePack.getRelicStrings("downfall:BlackCandle").DESCRIPTIONS[1]);
+//            }
+//
+//            return SpireReturn.Continue();
+//        }
+//    }
 
 
     @SpirePatch(
