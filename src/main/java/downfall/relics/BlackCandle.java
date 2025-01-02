@@ -50,7 +50,7 @@ public class BlackCandle extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return true;
+        return EvilModeCharacterSelect.evilMode;
                 // || AbstractPlayer.PlayerClass == HERMIT);
     }
 

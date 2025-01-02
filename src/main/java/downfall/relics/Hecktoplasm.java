@@ -13,7 +13,6 @@ import downfall.actions.WaitForEscapeAction;
 import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
 
-@Deprecated
 public class Hecktoplasm extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("Hecktoplasm");

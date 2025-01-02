@@ -97,7 +97,7 @@
   },
   "sneckomod:LuckyBreak": {
     "NAME": "Lucky Break",
-    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card for each 2+ cost in hand."
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card for each 2+ cost card in hand."
   },
   "sneckomod:Nope": {
     "NAME": "Nope",
@@ -301,8 +301,8 @@
   },
   "sneckomod:UnendingSupply": {
     "NAME": "Unending Supply",
-    "DESCRIPTION": "At the start of each turn, gain a random sneckomod:Offclass card with Ethereal and Exhaust added.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, gain a random sneckomod:Offclass card with Ethereal and Exhaust added."
+    "DESCRIPTION": "At the start of each turn, gain an gremlin:Echo of a random sneckomod:Offclass card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, gain an gremlin:Echo of a random sneckomod:Offclass card."
 },
   "sneckomod:Unknown": {
     "NAME": "??? Basic",

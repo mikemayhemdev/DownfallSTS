@@ -76,7 +76,7 @@
     "NAME": "Unending Supply",
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
-      " random #yOffclass cards into your hand. They have Ethereal and Exhaust."
+      " #yEcho(es) of random #yOffclass card(s) into your hand."
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {

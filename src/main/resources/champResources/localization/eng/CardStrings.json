@@ -313,8 +313,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "Strike of Genius",
-    "DESCRIPTION": "At the start of your turn, gain a random \"Strike\". NL It costs 0 until played and gains Exhaust.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, gain a random Upgraded \"Strike\". NL It costs 0 until played and gains Exhaust."
+    "DESCRIPTION": "At the start of your turn, gain a random \"Strike\" gremlin:Echo. NL It costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain a random Upgraded \"Strike\" gremlin:Echo. NL It costs 0 until played."
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
@@ -377,8 +377,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "Triple Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strikes. They cost 0 and trigger *Skill *Bonuses. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strikes. They cost 0 and trigger *Skill *Bonuses. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strike gremlin:Echoes. They cost 0 and trigger *Skill *Bonuses.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strike gremlin:Echoes. They cost 0 and trigger *Skill *Bonuses."
   },
   "champ:WindUp": {
     "NAME": "Wind Up",

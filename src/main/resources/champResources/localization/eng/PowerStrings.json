@@ -86,17 +86,17 @@
   "champ:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, gain a random \"Strike\" #Echo. It costs #b0 until played.",
       "At the start of your turn, gain #b",
-      " random \"Strike\"s. They cost #b0 until played and Exhaust."
+      " random \"Strike\" #yEchoes. They cost #b0 until played."
     ]
   },
   "champ:StrikeOfGeniusUpgradedPower": {
     "NAME": "Strike of Genius+",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random #yupgraded \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, gain a random #yupgraded \"Strike\" #yEcho. It costs #b0 until played.",
       "At the start of your turn, gain #b",
-      " random #yupgraded \"Strike\"s. They cost #b0 until played and Exhaust."
+      " random #yupgraded \"Strike\" #yEchoes. They cost #b0 until played."
     ]
   },
   "champ:DefensiveStylePower": {
@@ -200,7 +200,7 @@
   "champ:ParryPower": {
     "NAME": "Parrying",
     "DESCRIPTIONS": [
-      "If your #yCounter is used this turn, gain an additional #yRiposte."
+      "If your #yCounter is used this turn, gain an additional #yRiposte #yStrike."
     ]
   },
   "champ:BoomerangPower": {

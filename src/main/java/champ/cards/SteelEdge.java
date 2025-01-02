@@ -23,7 +23,7 @@ public class SteelEdge extends AbstractChampCard {
         atb(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect; i++) {
                 dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-                if (effect > 1) {
+                if ((i < effect-1) && (effect !=0)){
                     finisher(true);
                 }
             }

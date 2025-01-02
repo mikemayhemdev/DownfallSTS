@@ -24,7 +24,12 @@ public class BanStuffPatch {
                 relicsToRemoveOnStart.add("Prismatic Shard");
             }
 
+                if (EvilModeCharacterSelect.evilMode) {
+                relicsToRemoveOnStart.add("Blue Candle");
+                relicsToRemoveOnStart.add("Ectoplasm");
+                 }
+
+            }
             }
 
         }
-    }

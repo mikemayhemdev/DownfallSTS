@@ -58,9 +58,9 @@ public class ColorfulCardReward extends CustomReward {
         AbstractCard.CardRarity rarity;
 
         if (roll < 50) {
-            rarity = AbstractCard.CardRarity.COMMON; // 70%
+            rarity = AbstractCard.CardRarity.COMMON; // 50%
         } else if (roll < 90) {
-            rarity = AbstractCard.CardRarity.UNCOMMON; // 20%
+            rarity = AbstractCard.CardRarity.UNCOMMON; // 40%
         } else {
             rarity = AbstractCard.CardRarity.RARE; // 10%
         }

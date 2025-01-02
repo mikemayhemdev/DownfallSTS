@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import expansioncontent.actions.EchoACardAction;
 import expansioncontent.cardmods.EtherealMod;
 import expansioncontent.cardmods.ExhaustMod;
 import sneckomod.OffclassHelper;
@@ -49,16 +50,7 @@ public class UnendingSupplyPower extends AbstractPower implements CloneablePower
 
             ArrayList<AbstractCard> cards = OffclassHelper.getXRandomOffclassCards(this.amount);
             for (AbstractCard card : cards) {
-
-                if (!card.isEthereal) {
-                    CardModifierManager.addModifier(card, new EtherealMod());
-                }
-
-                if (!card.exhaust) {
-                    CardModifierManager.addModifier(card, new ExhaustMod());
-                }
-
-                this.addToBot(new MakeTempCardInHandAction(card, 1, false));
+                addToBot(new EchoACardAction(card, false));
             }
         }
 
