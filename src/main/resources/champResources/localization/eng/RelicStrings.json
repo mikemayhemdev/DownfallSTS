@@ -89,7 +89,7 @@
     "NAME": "Spectre's Hand",
     "FLAVOR": "Some victories stay with you.",
     "DESCRIPTIONS": [
-      "Whenever you enter a #yStance, gain a basic #yStrike or #yDefend gremlin:Echo. It costs #b0."
+      "Whenever you enter a #yStance, gain an #yEcho of a basic #yStrike or #yDefend. It costs #b0."
     ]
   },
   "champ:LiftRelic": {

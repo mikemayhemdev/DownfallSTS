@@ -59,7 +59,7 @@
     "NAME": "Unidentified Egg",
     "FLAVOR": "What will hatch? Pay $1000 to see.",
     "DESCRIPTIONS": [
-      "Whenever you add an #ysneckomod:Offclass card to your deck, #yUpgrade it."
+      "Whenever you add an #ysneckomod:Offclass card to your deck, #yUpgrade it. Upon pickup, #yUpgrade #b2 random #ysneckomod:Offclass cards."
     ]
   },
   "sneckomod:SuperSneckoEye": {

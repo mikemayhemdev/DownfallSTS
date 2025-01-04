@@ -17,6 +17,14 @@
     "DESCRIPTION": "Extra effect when played in the listed #yStance."
   },
   {
+    "PROPER_NAME": "Strike",
+    "NAMES": [
+      "strike",
+      "strikes"
+    ],
+    "DESCRIPTION": "Any card containing \"Strike\" in their name. Not to be confused with #yStrikes, which refers exclusively to Basic Strike cards."
+  },
+  {
     "PROPER_NAME": "Finisher",
     "NAMES": [
       "finisher",

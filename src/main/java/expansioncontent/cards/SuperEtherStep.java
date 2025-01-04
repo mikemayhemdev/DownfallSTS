@@ -24,7 +24,7 @@ import theHexaghost.HexaMod;
 public class SuperEtherStep extends AbstractExpansionCard {
     public final static String ID = makeID("SuperEtherStep");
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 3;
 
     public SuperEtherStep() {

@@ -30,6 +30,6 @@ public class BerserkerStyle extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

@@ -8,7 +8,8 @@
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Hexaburn",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Invincible",
@@ -191,8 +192,8 @@
     "DESCRIPTION": "At the start of your turn, put one of the top !M! cards of your discard pile into your hand."
   },
   "expansioncontent:ExploitVulnerability": {
-    "NAME": "Exploit Vulnerability",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Vulnerable, deal damage !DM! more times."
+    "NAME": "Donu Beam",
+    "DESCRIPTION": "Remove all Block from the enemy, then gain that much Block. NL Deal !D! damage twice."
   },
   "expansioncontent:PeekPages": {
     "NAME": "Peek Pages",
