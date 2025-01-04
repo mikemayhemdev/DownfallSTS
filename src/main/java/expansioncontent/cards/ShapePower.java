@@ -24,7 +24,7 @@ public class ShapePower extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY_SHAPES);
         tags.add(expansionContentMod.STUDY);
         baseMagicNumber = magicNumber = 2;
-        baseDownfallMagic = downfallMagic = 3;
+        baseDownfallMagic = downfallMagic = 4;
         loadJokeCardImage(this, "ShapePower.png");
     }
 
@@ -36,6 +36,6 @@ public class ShapePower extends AbstractExpansionCard {
     @Override
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeDownfall(2);
+        upgradeDownfall(1);
     }
 }

@@ -23,7 +23,7 @@ import static expansioncontent.expansionContentMod.loadJokeCardImage;
 public class SuperBloodthirst extends AbstractExpansionCard {
     public final static String ID = makeID("SuperBloodthirst");
 
-    private static final int DAMAGE = 18;
+    private static final int DAMAGE = 20;
     private static final int UPGRADE_DAMAGE = 5;
 
     public SuperBloodthirst() {

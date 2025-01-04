@@ -3,6 +3,7 @@ package collector.relics;
 import basemod.abstracts.CustomRelic;
 import collector.CollectorMod;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.TextureLoader;
@@ -23,10 +24,8 @@ public class RoughDiamond extends CustomRelic {
         this.triggeredThisTurn = false;
     }
 
-    @Override
-    public void onPlayCard(AbstractCard c, AbstractMonster m) {
-
-            if (c.rarity == AbstractCard.CardRarity.RARE) {
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+            if (card.rarity == AbstractCard.CardRarity.RARE) {
                 if (!this.triggeredThisTurn) {
                     this.triggeredThisTurn = true;
                 flash();

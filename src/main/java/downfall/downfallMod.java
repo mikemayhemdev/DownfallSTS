@@ -1271,6 +1271,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             BaseMod.addPotion(CounterstrikePotion.class, Color.GRAY, Color.GRAY, Color.BLACK, CounterstrikePotion.POTION_ID);
             BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
             BaseMod.addPotion(WizPotion.class, Color.PURPLE, Color.PINK, Color.PURPLE, WizPotion.POTION_ID);
+        BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+
 
         if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_events){
             BaseMod.addPotion(CursedFountainPotion.class, Color.PURPLE, Color.MAROON, Color.BLACK, CursedFountainPotion.POTION_ID);
@@ -1285,6 +1287,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelic(new ShatteredFragment(), RelicType.SHARED);
+        // BaseMod.addRelic(new BlackCandle(), RelicType.SHARED);
+        //BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
         BaseMod.addRelic(new BrokenWingStatue(), RelicType.SHARED);
         BaseMod.addRelic(new CloakOfManyFaces(), RelicType.SHARED);
         BaseMod.addRelic(new BurdenOfKnowledge(), RelicType.SHARED);
@@ -1301,6 +1305,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addRelic(new NeowBlessing(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedBell(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedKey(), RelicType.SHARED);
+        addPotions();
     }
 
     public static boolean readyToDoThing = false;

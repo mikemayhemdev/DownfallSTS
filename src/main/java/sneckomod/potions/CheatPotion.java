@@ -21,7 +21,7 @@ public class CheatPotion extends CustomPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public CheatPotion() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.H, PotionColor.SMOKE);
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.H, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = SneckoMod.placeholderColor;

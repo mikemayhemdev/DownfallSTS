@@ -16,7 +16,7 @@ public class Chronoboost extends AbstractExpansionCard {
     private static final int MAGIC = 2;
 
     public Chronoboost() {
-        super(ID, 2, AbstractCard.CardType.POWER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        super(ID, 1, AbstractCard.CardType.POWER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.tags.add(expansionContentMod.STUDY_TIMEEATER);
         this.tags.add(expansionContentMod.STUDY);
         this.baseMagicNumber = this.magicNumber = 2;

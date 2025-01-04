@@ -7,6 +7,7 @@ import basemod.helpers.dynamicvariables.BlockVariable;
 import basemod.helpers.dynamicvariables.DamageVariable;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardModifierPatches;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.RenderCustomDynamicVariableCN;
+import champ.ChampChar;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
@@ -47,8 +48,15 @@ public class RelicOverrides {
 //
 //    }
 
-
-
+    @SpirePatch(clz = BustedCrown.class, method = "getUpdatedDescription")
+    public static class BustedCrownJokeText {
+        @SpirePrefixPatch
+        public static void Prefix(BustedCrown _instance) {
+            if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP) {
+                _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:BustedCrownGagText").FLAVOR;
+            }
+        }
+    }
     @SpirePatch(
             clz = OldCoin.class,
             method = "getUpdatedDescription"

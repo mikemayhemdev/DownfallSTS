@@ -25,8 +25,8 @@ public class BanStuffPatch {
             }
 
                 if (EvilModeCharacterSelect.evilMode) {
-                relicsToRemoveOnStart.add("Blue Candle");
-                relicsToRemoveOnStart.add("Ectoplasm");
+             //   relicsToRemoveOnStart.add("Blue Candle");
+             //   relicsToRemoveOnStart.add("Ectoplasm");
                  }
 
             }

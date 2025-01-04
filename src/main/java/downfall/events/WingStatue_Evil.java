@@ -35,9 +35,9 @@ public class WingStatue_Evil extends AbstractImageEvent {
         this.screen = CurScreen.INTRO;
 
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.goldLoss = AbstractDungeon.miscRng.random(50, 75);
+            this.goldLoss = AbstractDungeon.miscRng.random(100, 125);
         } else {
-            this.goldLoss = AbstractDungeon.miscRng.random(25, 50);
+            this.goldLoss = AbstractDungeon.miscRng.random(75, 100);
         }
 
         if (this.goldLoss > AbstractDungeon.player.gold) {
@@ -61,6 +61,7 @@ public class WingStatue_Evil extends AbstractImageEvent {
 //                        AbstractDungeon.player.decreaseMaxHealth(this.damage);
                       //  AbstractDungeon.player.damage(new DamageInfo(null, this.damage));
                        // AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AttackEffect.FIRE));
+                        AbstractDungeon.player.loseGold(this.goldLoss);
                         this.screen = CurScreen.RESULT;
                         logMetricObtainRelicAndDamage(ID, "Destroyed Statue", new ShatteredFragment(), goldLoss);
                         return;

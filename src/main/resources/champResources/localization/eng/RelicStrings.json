@@ -89,7 +89,7 @@
     "NAME": "Spectre's Hand",
     "FLAVOR": "Some victories stay with you.",
     "DESCRIPTIONS": [
-      "Whenever you enter a #yStance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust."
+      "Whenever you enter a #yStance, gain a basic #yStrike or #yDefend gremlin:Echo. It costs #b0."
     ]
   },
   "champ:LiftRelic": {
@@ -105,6 +105,13 @@
     "FLAVOR": "Can you take the crown?",
     "DESCRIPTIONS": [
       "Start each combat in a random Champ #yStance."
+    ]
+  },
+  "champ:BustedCrownGagText": {
+    "NAME": "Busted Crown",
+    "FLAVOR": "Imitation is the most sincere form of flattery... or is it? It doesn't even look that much like your crown. It's actually kind of insulting.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. Future card rewards have 2 less cards to choose from."
     ]
   }
 }

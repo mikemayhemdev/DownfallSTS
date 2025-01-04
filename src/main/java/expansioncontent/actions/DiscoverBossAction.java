@@ -66,7 +66,7 @@ public class DiscoverBossAction extends AbstractGameAction {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         ArrayList<AbstractCard> selectionsList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.rarity != AbstractCard.CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
+            if (q.rarity != AbstractCard.CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY) && !q.hasTag(AbstractCard.CardTags.HEALING)) {
 
                 if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                     if (q.hasTag(expansionContentMod.STUDY_SLIMEBOSS)){continue;}

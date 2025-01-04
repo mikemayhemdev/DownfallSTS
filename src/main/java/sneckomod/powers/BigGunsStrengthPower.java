@@ -41,7 +41,7 @@ public class BigGunsStrengthPower extends AbstractPower implements CloneablePowe
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.costForTurn >= 3) {
+        if (card.costForTurn >= 3 || (card.cost == -1 && card.energyOnUse >= 3)) {
             this.flash();
             applyToSelf(new StrengthPower(owner, amount));
         }

@@ -42,7 +42,7 @@ public class BigGunsBlockPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.costForTurn >= 3) {
+        if (card.costForTurn >= 3 || (card.cost == -1 && card.energyOnUse >= 3)) {
             this.flash();
             addToTop(new GainBlockAction(owner, amount, true));
         }

@@ -21,7 +21,7 @@ import java.util.Iterator;
 public class GoopSpray extends AbstractExpansionCard {
     public static final String ID = makeID("SuperGoopSpray");
 
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 8;
 
     private static final int UPGRADE_MAGIC = 3;
 
@@ -35,7 +35,7 @@ public class GoopSpray extends AbstractExpansionCard {
         this.tags.add(expansionContentMod.STUDY_SLIMEBOSS);
         this.tags.add(expansionContentMod.STUDY);
         this.baseDownfallMagic = 2;
-        this.baseMagicNumber = this.magicNumber = 5;
+        this.baseMagicNumber = this.magicNumber = 8;
     }
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!this.upgraded) {
@@ -59,6 +59,7 @@ public class GoopSpray extends AbstractExpansionCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeMagicNumber(2);
             this.target = CardTarget.ALL_ENEMY;
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();

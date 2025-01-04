@@ -29,7 +29,7 @@ public class Shatter extends AbstractChampCard {
         baseDamage = 10;
         baseMagicNumber = magicNumber = 1;
         postInit();
-        tags.add(CardTags.STRIKE);
+        //tags.add(CardTags.STRIKE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
         tags.add(ChampMod.COMBOBERSERKER);

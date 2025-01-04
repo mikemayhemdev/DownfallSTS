@@ -13,7 +13,7 @@ public class SteelEdge extends AbstractChampCard {
 
     public SteelEdge() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 6;
         this.tags.add(ChampMod.FINISHER);
         postInit();
         loadJokeCardImage(this, "SteelEdge.png");

@@ -502,7 +502,7 @@
     "NAME": "Black Candle",
     "FLAVOR": "The flame shines even brighter from within the darkness.",
     "DESCRIPTIONS": [
-      "#yUnplayable #rCurse cards can now be played. Whenever you play a #rCurse card, Exhaust it. If it was #yUnplayable, lose #b1 HP.",
+      "#yUnplayable #rCurse cards can now be played. Whenever you play a #rCurse card, #yExhaust it. If it was #yUnplayable, lose #b1 HP.",
       "Black Candle"
     ]
   },
@@ -551,6 +551,13 @@
       "The Bell Tolls Twice...",
       "Skip Rewards",
       "Close"
+    ]
+  },
+  "downfall:BustedCrownGagText": {
+    "NAME": "Busted Crown",
+    "FLAVOR": "Imitation is the most sincere form of flattery... or is it? It doesn't even look that much like your crown. It's actually very insulting.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. Future card rewards have 2 less cards to choose from."
     ]
   }
 }

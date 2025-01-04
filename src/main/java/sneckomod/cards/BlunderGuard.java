@@ -11,20 +11,20 @@ public class BlunderGuard extends AbstractSneckoCard {
     public final static String ID = makeID("BlunderGuard");
 
     //stupid intellij stuff POWER, SELF, RARE
-    private static final int BASE_BLOCK = 6;
-    private static final int UPG_BASE_BLOCK = 2;
+    private static final int BASE_SILLY = 6;
+    private static final int UPG_SILLY = 2;
     private static final int MAGIC = 2;
     private static final int UPGRADE_MAGIC = 1;
 
     public BlunderGuard() {
         super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        baseBlock = BASE_BLOCK;
+        baseSilly = silly = 6;
         SneckoMod.loadJokeCardImage(this, "BlunderGuard.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new BigGunsBlockPower(this.baseBlock));
+        applyToSelf(new BigGunsBlockPower(this.silly));
         applyToSelf(new BigGunsStrengthPower(this.magicNumber));
        // atb(new GainEnergyAction(1));
     }
@@ -33,7 +33,7 @@ public class BlunderGuard extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_MAGIC);
-            upgradeBlock(UPG_BASE_BLOCK);
+            upgradeSilly(UPG_SILLY);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

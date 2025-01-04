@@ -86,7 +86,7 @@
   "champ:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random \"Strike\" #Echo. It costs #b0 until played.",
+      "At the start of your turn, gain a random \"Strike\" #yEcho. It costs #b0 until played.",
       "At the start of your turn, gain #b",
       " random \"Strike\" #yEchoes. They cost #b0 until played."
     ]
@@ -219,9 +219,9 @@
   "champ:DualPlaySrikePower": {
     "NAME": "Flurry of Strikes",
     "DESCRIPTIONS": [
-      "Your next #yStrike is played twice this turn.",
+      "Your next #y\"Strike\" is played twice this turn.",
       "Your next ",
-      " #yStrikes are played twice this turn."
+      " #y\"Strikes\" are played twice this turn."
     ]
   },
   "champ:LastStandPower": {
@@ -231,6 +231,13 @@
       " Strength.",
       "~You've~ ~done~ ~it~ ~now...~",
       "@DEFEAT??@ NL @IMPOSSIBLE!!@"
+    ]
+  },
+  "champ:HonePower": {
+    "NAME": "Honed Blade",
+    "DESCRIPTIONS": [
+      "Your #y\"Strike\" cards deal #b",
+      " more damage."
     ]
   },
   "champ:DoubleStyleThisTurnPower": {
