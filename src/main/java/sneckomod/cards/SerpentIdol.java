@@ -15,6 +15,7 @@ public class SerpentIdol extends AbstractSneckoCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
         SneckoMod.loadJokeCardImage(this, "SerpentIdol.png");
+        magicNumber = baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

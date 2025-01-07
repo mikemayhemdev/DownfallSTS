@@ -44,7 +44,7 @@
   },
   "sneckomod:DiceBoulder": {
     "NAME": "Dice Boulder",
-    "DESCRIPTION": "Gain !B! Block. NL Increase this card's Block by !M! and cost by 1 this combat."
+    "DESCRIPTION": "Gain !B! Block. NL Increase this card's Block by !M! and cost by !qqq! this combat."
   },
   "sneckomod:DiceCrush": {
     "NAME": "Dice Crush",
@@ -52,8 +52,8 @@
   },
   "sneckomod:DragonsHoard": {
     "NAME": "Dragon's Hoard",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Dexterity."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Strength. NL Gain !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity."
   },
   "sneckomod:FourOfAKind": {
     "NAME": "Four Of A Kind",
@@ -146,7 +146,7 @@
     "DESCRIPTION": "Whenever you sneckomod:Muddle a card, gain !M! Block."
   },
   "sneckomod:OverwhelmingPresence": {
-    "NAME": "Overwhelming Presence",
+    "NAME": "Overwhelming",
     "DESCRIPTION": "The first time you shuffle your deck each turn, gain [E] and draw !M! card."
   },
   "sneckomod:RiskySword": {
@@ -188,12 +188,12 @@
   },
   "sneckomod:SerpentBottle": {
     "NAME": "Discount Sale",
-    "DESCRIPTION": "Draw 2 Cards. NL sneckomod:Muddle a card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw 2 Cards. NL sneckomod:Muddle !M! cards. NL Exhaust."
+    "DESCRIPTION": "Draw !qqq! cards. NL sneckomod:Muddle a card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !qqq! cards. NL sneckomod:Muddle !M! cards. NL Exhaust."
   },
   "sneckomod:SerpentIdol": {
     "NAME": "Serpent Idol",
-    "DESCRIPTION": "Choose 1 of 3 random sneckomod:Offclass cards to gain. It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of !M! random sneckomod:Offclass cards to gain. It costs 0 this turn. NL Exhaust."
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotic Form",
@@ -203,8 +203,8 @@
   },
   "sneckomod:SlitherThrough": {
     "NAME": "Slither Through",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn. NL sneckomod:Gift: Uncommon.",
-    "DESCRIPTION_BATTLE": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by !M! this turn. NL sneckomod:Gift: Uncommon.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by !M! this turn."
   },
   "sneckomod:SnakeEyes": {
     "NAME": "Snake Eyes",
@@ -545,8 +545,8 @@
   },
   "sneckomod:MakeshiftBlade": {
     "NAME": "Makeshift Blade",
-    "DESCRIPTION": "Deal !D! damage. If the target has at least !M! debuffs, draw 3 cards. NL sneckomod:Gift: Debuff.",
-    "DESCRIPTION_BATTLE": "Deal !D! damage. If the target has at least !M! debuffs, draw 3 cards."
+    "DESCRIPTION": "Deal !D! damage. If the target has at least !M! debuffs, draw !qqq! cards. NL sneckomod:Gift: Debuff.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage. If the target has at least !M! debuffs, draw !qqq! cards."
   },
   "sneckomod:LatchOn": {
     "NAME": "Latch On",

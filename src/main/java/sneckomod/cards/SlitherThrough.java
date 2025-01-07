@@ -16,12 +16,14 @@ public class SlitherThrough extends AbstractSneckoCard {
 
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 13;
+    private static final int DAMAGE = 14;
     private static final int UPG_DAMAGE = 4;
+    private static final int MAGIC = 1;
 
     public SlitherThrough() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "SlitherThrough.png");
     }
 
@@ -42,7 +44,7 @@ public class SlitherThrough extends AbstractSneckoCard {
                 isDone = true;
                 for (AbstractCard q : p.hand.group) {
                     if (q.color != AbstractDungeon.player.getCardColor()) {
-                        addToTop(new ReduceCostForTurnAction(q, 1));
+                        addToTop(new ReduceCostForTurnAction(q, magicNumber));
                         q.superFlash();
                     }
                 }

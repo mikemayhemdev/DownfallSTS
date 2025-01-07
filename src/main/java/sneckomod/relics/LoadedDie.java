@@ -12,7 +12,7 @@ public class LoadedDie extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("LoadedDie.png"));
 
     public LoadedDie() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
     public void onTrigger() {this.flash();}

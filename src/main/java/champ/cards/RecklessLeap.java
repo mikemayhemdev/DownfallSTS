@@ -43,6 +43,7 @@ public class RecklessLeap extends AbstractChampCard {
 
     public void upp() {
         exhaust = false;
+        upgradeDamage(3);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

@@ -14,12 +14,14 @@ public class SerpentBottle extends AbstractSneckoCard {
 
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
+    private static final int BASE_SILLY = 2;
 
     //snecko adrenaline
 
     public SerpentBottle() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        baseSilly = silly = 2;
         SneckoMod.loadJokeCardImage(this, "SerpentBottle.png");
         exhaust = true;
         tags.add(SneckoMod.SNEKPROOF);
@@ -28,7 +30,7 @@ public class SerpentBottle extends AbstractSneckoCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        addToBot(new DrawCardAction(p, 2));
+        addToBot(new DrawCardAction(p, this.silly));
 
         addToBot(new SelectCardsInHandAction(magicNumber, "Muddle",
                 (AbstractCard c) -> true,

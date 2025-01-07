@@ -70,7 +70,7 @@ public class NeowBossFinal extends AbstractMonster {
     private int buffCount = 0;
 
     public NeowBossFinal() {
-        super(NAME, ID, 500, HB_X, HB_Y, HB_W, HB_H, "images/npcs/neow/skeleton.png");
+        super(NAME, ID, 600, HB_X, HB_Y, HB_W, HB_H, "images/npcs/neow/skeleton.png");
 
         this.loadAnimation("images/npcs/neow/skeleton.atlas", "images/npcs/neow/skeleton.json", 1.0F);
 
@@ -81,9 +81,9 @@ public class NeowBossFinal extends AbstractMonster {
         this.baseDrawX = drawX;
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            setHp(600);
+            setHp(700);
         } else {
-            setHp(550);
+            setHp(600);
         }
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);

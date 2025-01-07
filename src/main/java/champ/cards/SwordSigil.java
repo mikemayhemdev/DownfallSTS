@@ -12,7 +12,7 @@ public class SwordSigil extends AbstractChampCard {
 
     public SwordSigil() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
        // this.exhaust = true;
         loadJokeCardImage(this, "SwordSigil.png");
     }

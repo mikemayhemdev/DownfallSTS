@@ -31,7 +31,12 @@ public class Sapped extends AbstractCollectorCard {
         this.addToBot(new LoseEnergyAction(1));
     }
 
-    public void upp() {
-        upgradeMagicNumber(1);
+    @Override
+    public boolean canUpgrade() {
+        return false;
     }
+
+    public void upp() {
+    }
+    
 }

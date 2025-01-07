@@ -31,6 +31,11 @@ public class GladiatorStyle extends AbstractChampCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = (bcombo() || dcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeMagicNumber(1);
     }

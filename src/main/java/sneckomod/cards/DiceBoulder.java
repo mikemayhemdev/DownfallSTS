@@ -19,6 +19,7 @@ public class DiceBoulder extends AbstractSneckoCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         baseBlock = BASE_BLOCK;
+        baseSilly = silly = 1;
         SneckoMod.loadJokeCardImage(this, "DiceBoulder.png");
     }
 

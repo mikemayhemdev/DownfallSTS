@@ -42,6 +42,7 @@ public class SneckoCommon extends CustomRelic {
                 }
               }
             AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         }
 
 

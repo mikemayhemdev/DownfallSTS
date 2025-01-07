@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import sneckomod.SneckoMod;
 
@@ -23,6 +24,7 @@ public class DragonsHoard extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new VFXAction(p, new InflameEffect(p), 1.0F));
+        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
     }
 

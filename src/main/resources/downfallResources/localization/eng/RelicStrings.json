@@ -540,7 +540,7 @@
     "NAME": "Extra Cursed Key",
     "FLAVOR": "Locked away for good reason.",
     "DESCRIPTIONS": [
-      "Gain [E] the first time you draw a Curse each turn. NL Whenever you open a non-Boss chest, obtain an #rInjury."
+      "Gain [E] the first time you draw a #rCurse each turn. NL Whenever you open a non-Boss chest, obtain an #rInjury."
     ]
   },
   "downfall:ExtraCursedBell": {

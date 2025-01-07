@@ -20,7 +20,7 @@ public class SleevedAce extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("SleevedAce.png"));
 
     public SleevedAce() {
-        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
         this.tips.add(new CardPowerTip(new MarkedCard()));
     }
 

@@ -24,7 +24,7 @@
     "NAME": "Ring of the Snek",
     "FLAVOR": "Illegible, unreadable, due by Thursday.",
     "DESCRIPTIONS": [
-      "Whenever you activate 3 #ysneckomod:Overflow effects, apply #b1 #yWeak and #yVulnerable to a random enemy."
+      "Whenever you activate #b3 #ysneckomod:Overflow effects, apply #b1 #yWeak and #yVulnerable to a random enemy."
     ]
   },
   "sneckomod:CrystallizedMud": {
@@ -87,17 +87,17 @@
     "NAME": "Mystical Octahedron",
     "FLAVOR": "It appears weighted toward one side.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card that has an #ysneckomod:Overflow effect. Whenever you play it, gain #b3 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than 5 cards in hand.",
+      "Upon pickup, choose a card that has an #ysneckomod:Overflow effect. Whenever you play it, gain #b4 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than #b5 cards in hand.",
       "Choose a card for ",
       "Whenever ",
-      " is played, gain #b3 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than 5 cards in hand."
+      " is played, gain #b4 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than #b5 cards in hand."
     ]
   },
   "sneckomod:BabySnecko": {
     "NAME": "Young Snecko",
     "FLAVOR": "Bewilderingly adorable.",
     "DESCRIPTIONS": [
-      "Deals #b9 damage to a random enemy and #ysneckomod:Muddles #b2 random cards in your hand at the start of your turn."
+      "Deals #b9 damage to a random enemy and #ysneckomod:Muddles #b2 random (not #b0 cost, #bX, or #yUnplayable) cards in your hand at the start of your turn."
     ]
   },
   "sneckomod:SneckoCommon": {
@@ -111,7 +111,7 @@
     "NAME": "Lucky Horseshoe",
     "FLAVOR": "Make your own luck.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b1 of #b3 #yCharacters. Choose #b3 Upgraded Uncommon cards and #b2 Rare cards to add to your deck. All combats drop an additional card reward of the chosen character's cards.",
+      "Upon pickup, choose #b1 of #b3 #yCharacters. Choose #b3 #yUpgraded Uncommon cards and #b2 Rare cards to add to your deck. All combats drop an additional card reward of the chosen character's cards.",
       "Upon pickup, obtain #b3 Upgraded Uncommon and #b2 Rare ",
       " cards. All combats drop an additional ",
       " card reward."

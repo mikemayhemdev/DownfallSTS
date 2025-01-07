@@ -15,7 +15,7 @@ public class BabySneckoMuddleAction extends AbstractGameAction {
 
         // Filter valid cards based on cost and tags
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
-            if (card.cost == 0 || card.hasTag(SneckoMod.SNEKPROOF) || card.cost != card.costForTurn) {
+            if (card.cost <= 0 || card.hasTag(SneckoMod.SNEKPROOF) || card.cost != card.costForTurn) {
                 continue; // Skip invalid cards
             }
             validCards.add(card);

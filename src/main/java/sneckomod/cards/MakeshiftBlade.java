@@ -24,10 +24,12 @@ public class MakeshiftBlade extends AbstractSneckoCard {
     private static final int MAGIC = 3; // Initial debuff requirement
     private static final int UPGRADE_MAGIC = -1; // Reduces debuff requirement by 1
 
+
     public MakeshiftBlade() {
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        baseSilly = silly = 3;
         SneckoMod.loadJokeCardImage(this, "MakeshiftBlade.png");
     }
 
@@ -48,7 +50,7 @@ public class MakeshiftBlade extends AbstractSneckoCard {
         addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         if (m != null && m.powers.stream().filter(power -> power.type == AbstractPower.PowerType.DEBUFF).count() >= magicNumber) {
-            addToBot(new DrawCardAction(p, 3));
+            addToBot(new DrawCardAction(p, this.silly));
         }
     }
 

@@ -20,7 +20,7 @@ public class ShieldThrow extends AbstractChampCard {
 
     public ShieldThrow() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseBlock = block = 0;
+     //   baseBlock = block = 0;
         baseMagicNumber = magicNumber = 2;
     //    tags.add(ChampMod.FINISHER);
         postInit();
@@ -28,7 +28,7 @@ public class ShieldThrow extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+       // blck();
         this.baseDamage = p.currentBlock;
         this.calculateCardDamage(m);
         dmg(m, AbstractGameAction.AttackEffect.SMASH);

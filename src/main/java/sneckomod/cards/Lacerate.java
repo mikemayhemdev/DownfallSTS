@@ -19,7 +19,7 @@ public class Lacerate extends AbstractSneckoCard {
     private static final int DAMAGE = 9;
     private static final int COST = 1;
     private static final int UPGRADE_MAGIC = 2;
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 5;
 
     public Lacerate() {
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);

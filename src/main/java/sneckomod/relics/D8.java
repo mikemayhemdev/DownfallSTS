@@ -74,7 +74,7 @@ public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         if (this.card != null && card.uuid.equals(this.card.uuid)) {
             if (!(card instanceof TyphoonFang && card.purgeOnUse)) {
-                addToBot(new GainBlockAction(AbstractDungeon.player, 3));
+                addToBot(new GainBlockAction(AbstractDungeon.player, 4));
                 this.flash(); //block tracking
             }
         }
