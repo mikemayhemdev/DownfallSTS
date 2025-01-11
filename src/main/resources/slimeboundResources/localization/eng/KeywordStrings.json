@@ -6,7 +6,7 @@
       "absorbed"
     ],
     "PROPER_NAME": "Absorb",
-    "DESCRIPTION": "Manually recombine with your leading Slime, granting you 1 #yStrength."
+    "DESCRIPTION": "Manually recombine with your leading Slime, granting you #b1 #yStrength."
   },
   {
     "NAMES": [
@@ -14,7 +14,7 @@
       "splitting"
     ],
     "PROPER_NAME": "Split",
-    "DESCRIPTION": "Spawn a Slime minion, who attacks at the start of each turn. NL If you have no empty slots, your oldest Slime is automatically #yAbsorbed to make room, granting you 1 #yStrength."
+    "DESCRIPTION": "Spawn a Slime minion, who attacks at the start of each turn. NL If you have no empty slots, your oldest Slime is automatically #yAbsorbed to make room, granting you #b1 #yStrength."
   },
   {
     "NAMES": [
@@ -29,7 +29,7 @@
       "potency"
     ],
     "PROPER_NAME": "Potency",
-    "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes. Secondary effects increase by 1 for every 2 Potency (rounding up)."
+    "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes. Secondary effects increase by #b1 for every #b2 Potency (rounding up)."
   },
   {
     "NAMES": [

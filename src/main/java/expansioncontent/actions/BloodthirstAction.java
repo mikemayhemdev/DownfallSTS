@@ -41,13 +41,13 @@ public class BloodthirstAction extends AbstractGameAction {
                 while (var1.hasNext()) {
                     AbstractCard c = var1.next();
                     if (c.uuid.equals(this.uuid)) {
-                        c.applyPowers();
+                        // c.applyPowers();
                         addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile, false));
                     }
                 }
                 for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext();) {
                     AbstractCard c = var1.next();
-                    c.applyPowers();
+                    //c.applyPowers();
                     addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile, false));
                 }
             AbstractRelic sozu = AbstractDungeon.player.getRelic(Sozu.ID);

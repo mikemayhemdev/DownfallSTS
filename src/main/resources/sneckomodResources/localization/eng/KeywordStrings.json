@@ -19,7 +19,7 @@
     "NAMES": [
       "Overflow", "overflow"
     ],
-    "DESCRIPTION": "Overflow effects activate if you have more than 5 cards in hand."
+    "DESCRIPTION": "Overflow effects activate if you have more than #b5 cards in hand."
   },
   {
     "PROPER_NAME": "Muddle",

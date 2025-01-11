@@ -3,8 +3,8 @@
     "NAME": "Tsunami",
     "DESCRIPTIONS": [
       "#yOverflow effects also grant #b",
-      " Block.",
-      " Block."
+      " #yBlock.",
+      " #yBlock."
     ]
   },
   "sneckomod:CheapStockPower": {
@@ -51,8 +51,8 @@
   "sneckomod:SerpentsNestPower": {
     "NAME": "Serpent's Nest",
     "DESCRIPTIONS": [
-      "Whenever you play a Power deal 1 damage to ALL enemies.",
-      "Whenever you play a Power deal #b",
+      "Whenever you play a #yPower card deal 1 damage to ALL enemies.",
+      "Whenever you play a #yPower card deal #b",
       " damage to ALL enemies."
     ]
   },
@@ -130,7 +130,7 @@
   "sneckomod:SerpentineSleuthPower": {
     "NAME": "Serpentine Sleuth",
     "DESCRIPTIONS": [
-      "Whenever you play a Power, gain #b",
+      "Whenever you play a #yPower card, gain #b",
       " [E] .",
       " [E] ."
     ]

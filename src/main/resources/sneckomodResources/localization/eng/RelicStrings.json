@@ -87,7 +87,7 @@
     "NAME": "Mystical Octahedron",
     "FLAVOR": "It appears weighted toward one side.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card that has an #ysneckomod:Overflow effect. Whenever you play it, gain #b4 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than #b5 cards in hand.",
+      "Upon pickup, choose a card that has an #ysneckomod:Overflow effect. Whenever you play it, gain #b4 #yBlock and activate its #yOverflow effect, even if you don't have more than #b5 cards in hand.",
       "Choose a card for ",
       "Whenever ",
       " is played, gain #b4 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than #b5 cards in hand."
