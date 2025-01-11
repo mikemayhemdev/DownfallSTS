@@ -167,7 +167,7 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
         if (!this.grayscale) {
             ++this.counter;
         }
-        if (counter == 4) {
+        if (counter == 3) {
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             if (card instanceof AbstractUnknownCard) {

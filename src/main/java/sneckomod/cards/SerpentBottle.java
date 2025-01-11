@@ -24,7 +24,7 @@ public class SerpentBottle extends AbstractSneckoCard {
         baseSilly = silly = 2;
         SneckoMod.loadJokeCardImage(this, "SerpentBottle.png");
         exhaust = true;
-        tags.add(SneckoMod.SNEKPROOF);
+        //tags.add(SneckoMod.SNEKPROOF);
     }
 
     @Override

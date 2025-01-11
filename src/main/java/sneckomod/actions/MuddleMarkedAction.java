@@ -76,7 +76,7 @@ public class MuddleMarkedAction extends AbstractGameAction {
                 CleanMud cleanMudInstance = new CleanMud();
                 if (AbstractDungeon.player.hasRelic(CleanMud.ID) && (newCost == 3)) {
                     this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, cleanMudInstance));
-                    cleanMudInstance.flash();
+                    //cleanMudInstance.flash();
                     AbstractDungeon.player.getRelic(CleanMud.ID).onTrigger();
                 }
 

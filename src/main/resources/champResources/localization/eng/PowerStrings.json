@@ -47,7 +47,7 @@
     "NAME": "Ignoring Pain",
     "DESCRIPTIONS": [
       "You cannot lose HP this turn.",
-      "You cannot lose HP this and the next #b",
+      "You cannot lose HP for the next #b",
       " turns."
     ]
   },

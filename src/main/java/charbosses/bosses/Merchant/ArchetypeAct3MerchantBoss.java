@@ -77,9 +77,9 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnTrip(), true);
-                    addToList(cardsList, new EnTheBomb(), true);
                     addToList(cardsList, new EnSwiftStrike(), true);
+                    addToList(cardsList, new EnTheBomb(), true);
+                    addToList(cardsList, new EnTrip(), true); //now adheres to base game design of never adding vulnerable before attacking
                     turn++;
                     break;
                 case 4:

@@ -123,10 +123,10 @@
     "NAME": "Bottled Anomaly",
     "FLAVOR": "Swirling and swirling and finally breaking.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card. At the start of each combat, remove it from your draw pile. At the start of turn #b4, add it into your hand. It costs #b0 for the turn.",
+      "Upon pickup, choose a card. At the start of each combat, remove it from your draw pile. At the start of turn #b3, add it into your hand. It costs #b0 for the turn.",
       "Choose a card for ",
       "Start each combat with ",
-      " removed from your draw pile. At the start of turn #b4, add it into your hand. NL It costs #b0 for the turn.",
+      " removed from your draw pile. At the start of turn #b3, add it into your hand. NL It costs #b0 for the turn.",
       "The bottled card has been #rremoved from your deck, the relic no longer functions."
     ]
   }

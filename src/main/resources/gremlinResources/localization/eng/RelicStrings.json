@@ -124,7 +124,7 @@
   },
   "Gremlin:WoundPoker": {
     "NAME": "Wound Poker",
-    "FLAVOR": "Does it hurt when I do this?.",
+    "FLAVOR": "Does it hurt when I do this?",
     "DESCRIPTIONS": [
       "At the end of each turn, deal #b", " damage to each #yWeakened enemy."
     ]

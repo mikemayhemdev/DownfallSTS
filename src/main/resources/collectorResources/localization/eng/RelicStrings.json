@@ -77,7 +77,7 @@
     "NAME": "The Bagpipes",
     "FLAVOR": "This dreaded instrument is said to have driven Kublai the Great mad.",
     "DESCRIPTIONS": [
-      "Whenever you apply #yWeak or #yVulnerable, increase the amount applied by #b1."
+      "Whenever you apply new #yWeak or #yVulnerable to an enemy, increase the amount applied by #b1."
     ]
   },
   "collector:BottledCollectible": {

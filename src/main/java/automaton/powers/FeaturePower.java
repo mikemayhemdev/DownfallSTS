@@ -1,5 +1,6 @@
 package automaton.powers;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,12 +21,9 @@ public class FeaturePower extends AbstractAutomatonPower {
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        if (card.type == AbstractCard.CardType.STATUS || card.type == AbstractCard.CardType.CURSE) {
+        if (card.type == AbstractCard.CardType.STATUS) {
             flash();
-            applyToSelf(new StrengthPower(owner, amount));
-            applyToSelf(new LoseStrengthPower(owner, amount));
-            applyToSelf(new DexterityPower(owner, amount));
-            applyToSelf(new LoseDexterityPower(owner, amount));
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, amount));
             //Imagine how much time could be saved with some kind of function that could be used to make any power temporary.
             //IE: applyTempPower(new StrengthPower(owner, amount)):
             //Function applies the power, then uses some abstract Java trickery to make another power, called Lose [powername]
@@ -36,6 +34,13 @@ public class FeaturePower extends AbstractAutomatonPower {
             //Combine the two and you could do..
             //Next turn, gain 1 Temporary Strength.
             //But in two lines, with no new powers!
+        }
+    }
+
+    public void onExhaust(AbstractCard card){
+        if (card.type == AbstractCard.CardType.STATUS) {
+            flash();
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, amount));
         }
     }
 

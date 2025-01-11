@@ -11,8 +11,8 @@ import guardian.GuardianMod;
 
 public class ObsidianScales extends CustomRelic implements OnReceivePowerRelic{
     public static final String ID = "Guardian:ObsidianScales";
-    public static final String IMG_PATH = "relics/blueprints.png";
-    public static final String OUTLINE_IMG_PATH = "relics/blueprintsOutline.png";
+    public static final String IMG_PATH = "relics/obsidianscales.png";
+    public static final String OUTLINE_IMG_PATH = "relics/obsidianscalesOutline.png";
 
 
     public ObsidianScales() {

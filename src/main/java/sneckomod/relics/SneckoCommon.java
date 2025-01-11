@@ -32,12 +32,11 @@ public class SneckoCommon extends CustomRelic {
         while (cardsToReward.size() < 5) {
             AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c ->
                     c.type == AbstractCard.CardType.POWER && c.rarity == AbstractCard.CardRarity.UNCOMMON);
-
+            //newCard.upgrade();
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
             CardGroup c = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
                 if (!isDuplicate(cardsToReward, newCard)) {
-                    newCard.upgrade();
                     cardsToReward.add(newCard.makeCopy());
                 }
               }

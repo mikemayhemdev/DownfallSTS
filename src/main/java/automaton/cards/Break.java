@@ -2,10 +2,9 @@ package automaton.cards;
 
 import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.Burn;
-import com.megacrit.cardcrawl.cards.status.Slimed;
-import com.megacrit.cardcrawl.cards.status.Wound;
+import com.megacrit.cardcrawl.cards.status.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -19,7 +18,7 @@ public class Break extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 15;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 5;
 
     public Break() {
@@ -38,10 +37,11 @@ public class Break extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
-
-            shuffleIn(new Burn());
-            shuffleIn(new Wound());
-            shuffleIn(new Slimed());
+            addToBot(new MakeTempCardInHandAction(new Dazed(), 1));
+            addToBot(new MakeTempCardInHandAction(new Slimed(), 1));
+            addToBot(new MakeTempCardInHandAction(new Wound(), 1));
+            addToBot(new MakeTempCardInHandAction(new Burn(), 1));
+            addToBot(new MakeTempCardInHandAction(new VoidCard(), 1));
         }
     }
 

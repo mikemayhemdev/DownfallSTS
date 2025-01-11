@@ -39,7 +39,7 @@ public class ModeShifterPlus extends CustomRelic {
     @Override
     public void onChangeStance(AbstractStance prevStance, AbstractStance newStance) {
         if (newStance instanceof DefensiveMode) {
-            flash();
+           // flash();
             addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         }
     }

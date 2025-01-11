@@ -20,20 +20,16 @@ public class InertBlade extends AbstractSneckoCard {
     private static final int UPG_DAMAGE = 3;
     private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
-    private static final int STRENGTH_GAIN = 3;
-    private static final int UPG_STRENGTH = 1;
     private static final int ENERGY_GAIN = 1;
     private static final int UPG_ENERGY = 1;
     private static final int COST = 0;
 
-    private int strengthpayout;
     private int energypayout;
 
     public InertBlade() {
         super(ID, COST, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = MAGIC;
-        strengthpayout = STRENGTH_GAIN;
         energypayout = ENERGY_GAIN;
         SneckoMod.loadJokeCardImage(this, "InertBlade.png");
     }
@@ -47,7 +43,7 @@ public class InertBlade extends AbstractSneckoCard {
             addToBot(new DrawCardAction(p, magicNumber));
         }
         if (this.costForTurn >= 2) {
-            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, strengthpayout), strengthpayout));
+            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
         }
         if (this.costForTurn >= 3) {
             addToBot(new GainEnergyAction(energypayout));
@@ -60,7 +56,6 @@ public class InertBlade extends AbstractSneckoCard {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
             upgradeMagicNumber(UPG_MAGIC);
-            strengthpayout += UPG_STRENGTH;
             energypayout += UPG_ENERGY;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

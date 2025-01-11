@@ -577,8 +577,8 @@
   },
   "sneckomod:InertBlade": {
     "NAME": "Inert Blade",
-    "DESCRIPTION": "Deal !D! damage. NL If this costs... NL 1+: Draw !M! cards. NL 2+: Gain 3 Strength. NL 3+: Gain [E].",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If this costs... NL 1+: Draw !M! cards. NL 2+: Gain 4 Strength. NL 3+: Gain [E] [E]."
+    "DESCRIPTION": "Deal !D! damage. NL If this costs... NL 1+: Draw !M! cards. NL 2+: Gain !M! Strength. NL 3+: Gain [E].",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If this costs... NL 1+: Draw !M! cards. NL 2+: Gain !M! Strength. NL 3+: Gain [E] [E]."
   },
   "sneckomod:PerpetualSerpent": {
     "NAME": "Perpetual Serpent",

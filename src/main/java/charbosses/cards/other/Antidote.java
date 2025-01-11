@@ -21,7 +21,7 @@ public class Antidote extends AbstractDownfallCard {
 
     public Antidote() {
         super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 12;
+        baseMagicNumber = magicNumber = 15;
         selfRetain = true;
     }
 
@@ -35,8 +35,8 @@ public class Antidote extends AbstractDownfallCard {
     }
 
     public void upp () {
-        upgradeMagicNumber(3);
-//        upgradeBaseCost(0);
+        //upgradeMagicNumber(3);
+        upgradeBaseCost(0);
     }
 
     static {
