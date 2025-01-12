@@ -1,5 +1,6 @@
 package sneckomod.cards;
 
+import automaton.cards.goodstatus.IntoTheVoid;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.watcher.ExpungeVFXAction;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.cards.HighCaliber;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -98,7 +100,7 @@ public class LastStrike extends AbstractSneckoCard {
 
         while (cardsToReward.size() < 3) {
             AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(
-                    c -> c.rarity != CardRarity.BASIC && (c.hasTag(CardTags.STRIKE) || c.name.contains("High-Caliber"))
+                    c -> c.rarity != CardRarity.BASIC && (c.hasTag(CardTags.STRIKE) || c.cardID.equals(HighCaliber.ID))
             );
 
             if (!cardListDuplicate(cardsToReward, newCard)) {

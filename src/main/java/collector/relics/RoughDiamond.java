@@ -34,12 +34,7 @@ public class RoughDiamond extends CustomRelic {
                     this.triggeredThisTurn = true;
                     this.grayscale = true;
                 flash();
-                   if (!(card.cost == -1)) {
-                       addToBot(new GainEnergyAction(1));
-                   }
-                    if ((card.cost == -1)) {
-                        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnergizedPower(AbstractDungeon.player, 1), 1));
-                    }
+                this.addToBot(new GainEnergyAction(1));
             }
         }
     }
