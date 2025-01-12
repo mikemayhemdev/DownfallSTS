@@ -466,7 +466,7 @@
   },
   "hexamod:FlameDevourer": {
     "NAME": "Devour Flame",
-    "DESCRIPTION": "hexamod:Retract. NL If you hexamod:Retracted onto an hexamod:Ignited Ghostflame, gain !B! Block."
+    "DESCRIPTION": "If the previous Ghostflame is Ignited, hexamod:Retract and gain !B! Block."
   },
   "hexamod:SpectralGrace": {
     "NAME": "Spectral Grace",

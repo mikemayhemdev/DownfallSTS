@@ -58,7 +58,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
             switch (turn) {
                 case 0:
                     //Turn 1
-                    addToList(cardsList, new EnWishPlated(), extraUpgrades);
+                    addToList(cardsList, new EnWishPlated(), true);
                     addToList(cardsList, new EnGoodInstincts());
                     addToList(cardsList, new EnShame());
                     turn++;

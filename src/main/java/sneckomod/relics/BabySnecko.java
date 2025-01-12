@@ -44,7 +44,7 @@ public class BabySnecko extends CustomRelic {
         if (m != null) {
             AbstractDungeon.actionManager.addToBottom(new BabySneckoAttackAction(m, this));
             AbstractDungeon.actionManager.addToBottom(new BabySneckoMuddleAction());
-            AbstractDungeon.actionManager.addToBottom(new BabySneckoMuddleAction());
+          // AbstractDungeon.actionManager.addToBottom(new BabySneckoMuddleAction());
             flash(); // tracking attacks
         }
     }

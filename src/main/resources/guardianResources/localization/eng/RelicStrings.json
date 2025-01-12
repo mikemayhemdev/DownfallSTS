@@ -10,7 +10,7 @@
     "NAME": "Guardian Gear",
     "FLAVOR": "Replace every 3,000 floors.",
     "DESCRIPTIONS": [
-      "Replaces #rBronze #rGear. At the start of combat, gain #yGear #yUp. NL Whenever you enter #yDefensive #yMode, gain [E] and draw 2 cards."
+      "Replaces #rBronze #rGear. At the start of combat, gain #yGear #yUp. NL Whenever you enter #yDefensive #yMode, gain [E] and draw #b2 cards."
     ]
   },
   "Guardian:ObsidianScales": {

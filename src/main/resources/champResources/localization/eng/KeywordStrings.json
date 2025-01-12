@@ -1,13 +1,15 @@
 [
   {
-    "PROPER_NAME": "Technique",
+    "PROPER_NAME": "Skill Bonus",
     "NAMES": [
+      "bonus",
+      "bonuses",
       "technique",
       "techniques",
       "champ:[crown_icon]",
       "[crown_icon]"
     ],
-    "DESCRIPTION": "If you are in a #yStance, trigger its Skill Bonus."
+    "DESCRIPTION": "If you are in a #yStance, trigger its Skill Bonus. NL #rBerserker #ySkill #yBonus: Gain #b2 #yVigor. NL #bDefensive #ySkill #yBonus: Gain #b3 #yCounter."
   },
   {
     "PROPER_NAME": "Combo",
@@ -71,7 +73,7 @@
       "ultimate",
       "ultimate."
     ],
-    "DESCRIPTION": "#yStance. Counts as both #yDefensive and #yBerserker #yStances. NL If you leave this #yStance before it expires, immediately re-enter it."
+    "DESCRIPTION": "#yStance. Counts as both #bDefensive and #rBerserker #yStances. NL If you leave this #yStance before it expires, immediately re-enter it."
   },
   {
     "PROPER_NAME": "Fatigue",

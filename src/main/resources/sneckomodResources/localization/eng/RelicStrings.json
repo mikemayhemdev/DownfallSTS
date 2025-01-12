@@ -104,7 +104,7 @@
     "NAME": "Seal of Approval",
     "FLAVOR": "I'm The Ironclad and this is my favorite Relic in the Spire.  -Merchant Advertising Pamphlet",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b1 of #b5 Uncommon #ysneckomod:Offclass Powers to obtain."
+      "Upon pickup, choose #b1 of #b5 Uncommon #ysneckomod:Offclass #yPowers to obtain."
     ]
   },
   "sneckomod:SneckoBoss": {

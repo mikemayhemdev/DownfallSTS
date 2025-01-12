@@ -19,8 +19,8 @@
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
-    "DESCRIPTION": "Choose a Stance to Enter. NL Trigger its *Skill *Bonus.",
-    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Trigger its *Skill *Bonus twice.",
+    "DESCRIPTION": "Choose a Stance to Enter. NL Trigger its *Skill champ:Bonus.",
+    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Trigger its *Skill champ:Bonus twice.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Berserker.",
       "Enter champ:Defensive."
@@ -28,7 +28,7 @@
   },
   "champ:SwordSigil": {
     "NAME": "Sigil of Victory",
-    "DESCRIPTION": "Trigger your current Stance's *Skill *Bonus !M! times."
+    "DESCRIPTION": "Trigger your current Stance's *Skill champ:Bonus !M! times."
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
@@ -44,7 +44,7 @@
   },
   "champ:ShieldSigil": {
     "NAME": "Chain Lash",
-    "DESCRIPTION": "Deal !D! damage. NL This turn, your Skill Bonus effects are increased by !M!."
+    "DESCRIPTION": "Deal !D! damage. NL This turn, your *Skill champ:Bonus effects are increased by !M!."
   },
   "champ:FocusedDefense": {
     "NAME": "Bob and Weave",
@@ -137,7 +137,7 @@
   },
   "champ:Lariat": {
     "NAME": "Lariat",
-    "DESCRIPTION": "Gain !B! Block X times. NL Trigger your Stance's *Skill *Bonus X times."
+    "DESCRIPTION": "Gain !B! Block X times. NL Trigger your Stance's *Skill champ:Bonus X times."
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
@@ -153,7 +153,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "Gain !M! Vigor. NL Apply !DM! Weak. NL Trigger your Stance's *Skill *Bonus.",
+    "DESCRIPTION": "Gain !M! Vigor. NL Apply !DM! Weak. NL Trigger your Stance's *Skill champ:Bonus.",
     "EXTENDED_DESCRIPTION": [
       "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
       "Defensive champ:Combo: Gain !M! temporary Dexterity."
@@ -318,7 +318,7 @@
   },
   "champ:DefensiveStyle": {
     "NAME": "Double Style",
-    "DESCRIPTION": "*Skill *Bonuses grant !M! more Vigor and champ:Counter."
+    "DESCRIPTION": "*Skill champ:Bonuses grant !M! more Vigor and champ:Counter."
   },
   "champ:GladiatorStyle": {
     "NAME": "Good Clean Fight",
@@ -375,8 +375,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "Triple Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strike gremlin:Echoes. They cost 0 and trigger *Skill *Bonuses.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strike gremlin:Echoes. They cost 0 and trigger *Skill *Bonuses."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strike gremlin:Echoes. They cost 0 and trigger *Skill champ:Bonuses.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strike gremlin:Echoes. They cost 0 and trigger *Skill champ:Bonuses."
   },
   "champ:WindUp": {
     "NAME": "Wind Up",

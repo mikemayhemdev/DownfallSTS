@@ -48,8 +48,8 @@ public class FlameDevourer extends AbstractHexaCard{
     public void use(AbstractPlayer p, AbstractMonster m) {
         if((GhostflameHelper.getPreviousGhostFlame()).charged) {
             blck();
+            atb(new RetractAction());
         }
-        atb(new RetractAction());
     }
 
     public void triggerOnGlowCheck() {

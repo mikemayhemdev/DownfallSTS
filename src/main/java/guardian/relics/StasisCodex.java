@@ -37,7 +37,7 @@ public class StasisCodex extends CustomRelic {
         if (marker < MAX_MARKER) {
             ++this.counter;
             marker++;
-            if (AbstractDungeon.player.orbs.size() < AbstractDungeon.player.maxOrbs) {
+            if (AbstractDungeon.player.hasEmptyOrb()) {
                 AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 AbstractDungeon.actionManager.addToBottom(new StasisCodexAction());
             }

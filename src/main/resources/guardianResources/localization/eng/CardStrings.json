@@ -248,9 +248,8 @@
   },
   "Guardian:GemFire": {
     "NAME": "Gem Cannon",
-    "DESCRIPTION": "Deal !D! damage. NL Activate ALL of your Socketed guardianmod:Gems. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " NL (You have !M! Gem(s).)",
-    "NOTE, don't TL": "This was meant to work on unsocketed gems too but I gave up because gems are weird."
+    "DESCRIPTION": "Deal !D! damage. NL Activate ALL of your guardianmod:Gems. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " NL (You have !M! Gem(s).)"
   },
   "Guardian:ChargeCore": {
     "NAME": "Charge Core",

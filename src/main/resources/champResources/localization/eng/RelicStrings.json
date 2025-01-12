@@ -3,14 +3,14 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "At the start of combat, enter #bDefensive or #rBerserker #yStance."
+      "At the start of combat, enter #bchamp:Defensive or #rchamp:Berserker #yStance."
     ]
   },
   "champ:BlackKnightHelmet": {
     "NAME": "Black Knight's Helm",
     "FLAVOR": "Only a flesh wound.",
     "DESCRIPTIONS": [
-      "The first time you enter each #yStance each combat: NL #bDefensive: Gain #b2 #yDexterity and lose #b1 #yStrength. NL #rBerserker: Gain #b2 #yStrength and lose #b1 #yDexterity."
+      "The first time you enter each #yStance each combat: NL #bchamp:Defensive : Gain #b2 #yDexterity and lose #b1 #yStrength. NL #rchamp:Berserker : Gain #b2 #yStrength and lose #b1 #yDexterity."
     ]
   },
   "champ:Barbells": {
@@ -31,14 +31,15 @@
     "NAME": "Victorious Crown",
     "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
-      "Replaces #rChampion's #rCrown. NL Start each combat in #ychamp:Ultimate #yStance, which lasts for #b3 turns."
+      "Replaces ",
+      ".[] NL Start each combat in #ychamp:Ultimate #yStance, which lasts for #b3 turns."
     ]
   },
   "champ:DefensiveTrainingManual": {
     "NAME": "Defensive Thesis",
     "FLAVOR": "Pro tip: Don't get hit.",
     "DESCRIPTIONS": [
-      "Defensive Stance's #yFinisher #yBonus grants #b5 more #yBlock."
+      "#bchamp:Defensive #bStance's #ychamp:Finisher #yBonus grants #b6 more #yBlock."
     ]
   },
   "champ:DeflectingBracers": {
@@ -66,7 +67,7 @@
     "NAME": "Gladiators Manual",
     "FLAVOR": "Try everything - something will stick.",
     "DESCRIPTIONS": [
-      "Whenever you play a #yCombo, a #yFinisher, and enter a #yStance in the same turn, gain #b1 #yStrength and #yDexterity."
+      "Whenever you play a #ychamp:Combo, a #ychamp:Finisher, and enter a #yStance in the same turn, gain #b1 #yStrength and #yDexterity."
     ]
   },
   "champ:PowerArmor": {
@@ -80,7 +81,7 @@
     "NAME": "Signature Finisher",
     "FLAVOR": "And now, it's time for my ULTIMATE MOVE!",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a #yFinisher. This #yFinisher costs #b0, can be used without a #yStance, and never causes your #yStance to be exited.",
+      "Upon pickup, choose a #ychamp:Finisher. This #yFinisher costs #b0, can be used without a #yStance, and never causes your #yStance to be exited.",
       "Choose a card for ",
       " costs 0, can be used without a #yStance, and never causes your #yStance to be exited."
     ]
