@@ -342,7 +342,7 @@
   },
   "hexamod:NaughtySpirit": {
     "NAME": "Naughty Spirit",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the current Ghostflame is hexamod:Ignited, return this card to your hand. hexamod:Retract."
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the current Ghostflame is hexamod:Ignited, return this card to your hand and hexamod:Retract."
   },
   "hexamod:StepThrough": {
     "NAME": "Step Through",
