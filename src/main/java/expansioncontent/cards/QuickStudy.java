@@ -70,7 +70,7 @@ public class QuickStudy extends AbstractExpansionCard {
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_skill.png", "expansioncontentResources/images/1024/bg_boss_skill.png");
         this.exhaust = true;
         loadJokeCardImage(this, "QuickStudy.png");
-        this.tags.add(expansionContentMod.STUDY);
+        //this.tags.add(expansionContentMod.STUDY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

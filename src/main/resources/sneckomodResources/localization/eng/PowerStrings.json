@@ -76,7 +76,8 @@
     "NAME": "Unending Supply",
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
-      " #yEcho(es) of random #yOffclass card(s) into your hand."
+      "At the start of your turn, add an #yEcho of a random #yOffclass card into your hand.",
+      " #yEchoes of a random #yOffclass cards into your hand."
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {
