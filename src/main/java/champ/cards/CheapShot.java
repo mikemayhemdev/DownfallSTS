@@ -31,7 +31,7 @@ public class CheapShot extends AbstractChampCard {
         atb(new VFXAction(new WallopEffect(30, m.hb.cX, m.hb.cY)));
 
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        if (m.type != AbstractMonster.EnemyType.BOSS || m instanceof CharBossMerchant) {
+        if (m.type != AbstractMonster.EnemyType.BOSS && !(m instanceof CharBossMerchant)) {
             atb(new StunMonsterAction(m, p));
         } else {
             dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
