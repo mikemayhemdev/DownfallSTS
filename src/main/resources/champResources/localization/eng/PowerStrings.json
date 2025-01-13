@@ -61,8 +61,8 @@
   "champ:ImprovisingPower": {
     "NAME": "Improvising",
     "DESCRIPTIONS": [
-      "At the start of your turn, if you are not in a Stance, enter a random Stance. NL If you are already in a #yStance, trigger its #ySkill #Bonus.",
-      "At the start of your turn, if you are not in a Stance, enter a random Stance. NL If you are already in a #yStance, trigger its #ySkill #Bonus #b",
+      "At the start of your turn, if you are not in a Stance, enter a random Stance. NL Whenever you enter a #yStance, trigger its #ySkill #Bonus.",
+      "At the start of your turn, if you are not in a Stance, enter a random Stance. NL Whenever a #yStance, trigger its #ySkill #Bonus #b",
       " times."
     ]
   },

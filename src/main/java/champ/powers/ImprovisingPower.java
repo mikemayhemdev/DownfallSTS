@@ -7,12 +7,14 @@ import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.util.TextureLoader;
 import sneckomod.powers.UnendingSupplyPower;
@@ -38,14 +40,18 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
     }
 
     @Override
-    public void atStartOfTurn() {
-        if (!(AbstractDungeon.player.stance instanceof NeutralStance)) {
-
+    public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
+        if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
+            flash();
             for (int i = 0; i < this.amount; ++i) {
                 if (AbstractDungeon.player.stance instanceof AbstractChampStance)
                     ((AbstractChampStance) AbstractDungeon.player.stance).techique();
             }
+        }
+    }
 
+    @Override
+    public void atStartOfTurn() {
             if (AbstractDungeon.player.stance instanceof NeutralStance) {
                 if (AbstractDungeon.cardRandomRng.randomBoolean()) {
                     addToBot(new ChangeStanceAction(new BerserkerStance()));
@@ -54,7 +60,6 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
                 }
             }
         }
-    }
 
     @Override
     public void updateDescription() {

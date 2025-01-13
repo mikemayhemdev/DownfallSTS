@@ -281,7 +281,7 @@
   },
   "champ:Improvising": {
     "NAME": "Improvising",
-    "DESCRIPTION": "At the start of the turn, if you are not in a Stance, enter a random Stance. NL Otherwise, trigger its #ySkill champ:Bonus !M! times."
+      "DESCRIPTION": "At the start of the turn, if you are not in a Stance, enter a random Stance. NL Whenever you enter a Stance, trigger its #ySkill champ:Bonus !M! times."
   },
   "champ:CalledShot": {
     "NAME": "Refreshment",
