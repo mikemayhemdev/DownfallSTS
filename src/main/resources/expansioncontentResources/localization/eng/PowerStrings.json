@@ -93,7 +93,7 @@
       " damage to a random enemy #b6 times."
     ]
   },
-  "expansioncontent:BeatOfDeathThatDoesntKillYouPower": {
+  "expansioncontent:BeatOfDeathPowerThatDoesntKillYouPower": {
     "NAME": "Beat of Death",
     "DESCRIPTIONS": [
       "Whenever you play a card, deal #b",
