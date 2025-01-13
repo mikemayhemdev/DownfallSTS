@@ -35,7 +35,6 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new OctoChoiceAction(m, this));
         postInit();
-        if (upgraded) techique();
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -49,11 +48,15 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
         switch (card.cardID) {
             case "octo:OctoBerserk":
                 ChampMod.berserkOpen();
-                techique();
+                BerserkerStance bs = new BerserkerStance();
+                bs.techique();
+                if (upgraded) bs.techique();
                 break;
             case "octo:OctoDefense":
                 ChampMod.defenseOpen();
-                techique();
+                DefensiveStance ds = new DefensiveStance();
+                ds.techique();
+                if (upgraded) ds.techique();
                 break;
         }
 
