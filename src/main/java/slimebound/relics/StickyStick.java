@@ -40,11 +40,11 @@ public class StickyStick extends CustomRelic {
             ++this.counter;
             //this.addToTop(new ExhaustSpecificCardAction(card,AbstractDungeon.player.hand));
             this.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
-            if (card.cardID.equals(VoidCard.ID) || card.cardID.equals(IntoTheVoid.ID))
+            if (card.cardID.equals(VoidCard.ID) || card.cardID.equals(IntoTheVoid.ID)) {
                 this.flash();
-                this.addToTop(new GainEnergyAction( 1));
+                this.addToTop(new GainEnergyAction(1));
+            }
         }
-
     }
 
     public void atTurnStart() {
