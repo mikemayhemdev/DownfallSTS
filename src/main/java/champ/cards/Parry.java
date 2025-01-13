@@ -14,8 +14,8 @@ public class Parry extends AbstractChampCard {
 
     public Parry() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 8;
-        baseMagicNumber = magicNumber = 5;
+        baseBlock = 12;
+        baseMagicNumber = magicNumber = 6;
         AbstractCard c = new Riposte();
         c.rawDescription = UPGRADE_DESCRIPTION;
         c.initializeDescription();
@@ -31,6 +31,7 @@ public class Parry extends AbstractChampCard {
     }
 
     public void upp() {
+        upgradeBlock(4);
         upgradeMagicNumber(2);
     }
 }

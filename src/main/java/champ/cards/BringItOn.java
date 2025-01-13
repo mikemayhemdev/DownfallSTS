@@ -12,8 +12,8 @@ public class BringItOn extends AbstractChampCard {
 
     public BringItOn() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 6;
-        baseMagicNumber = magicNumber = 6;
+        baseBlock = 7;
+        baseMagicNumber = magicNumber = 7;
         tags.add(ChampMod.FINISHER);
         postInit();
         loadJokeCardImage(this, "BringItOn.png");

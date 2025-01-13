@@ -37,14 +37,14 @@ import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 import slimebound.orbs.AttackSlime;
 
 public class BeatOfDeathThatDoesntKillYouPower extends AbstractPower {
-    public static final String POWER_ID = "BeatOfDeathPowerThatDoesntKillYouPower";
+    public static final String POWER_ID = "BeatOfDeathP";
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     public int maxAmt;
 
     public BeatOfDeathThatDoesntKillYouPower(AbstractCreature owner, int amount) {
         this.name = NAME;
-        this.ID = "BeatOfDeathPowerThatDoesntKillYouPower";
+        this.ID = "BeatOfDeathP";
         this.owner = owner;
         this.amount = amount;
         this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
