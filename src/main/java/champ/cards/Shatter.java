@@ -38,7 +38,7 @@ public class Shatter extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        if (bcombo() || dcombo()) {
+        if (bcombo() || dcombo() || !AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
             this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
         }
@@ -46,7 +46,7 @@ public class Shatter extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() { // it glows now.
-            if (bcombo() || dcombo()) {
+        if (bcombo() || dcombo() || !AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
                 this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
             } else {
                 this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();

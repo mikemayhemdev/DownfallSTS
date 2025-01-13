@@ -309,7 +309,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "Dancing Master",
-    "DESCRIPTION": "The first time you use a *Finisher each turn, gain [E] and draw 1 card."
+    "DESCRIPTION": "The first time you use a champ:Finisher each turn, gain [E] and draw 1 card."
   },
   "champ:StrikeOfGenius": {
     "NAME": "Strike of Genius",

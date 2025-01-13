@@ -7,6 +7,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.actions.EchoACardAction;
+import expansioncontent.cardmods.EtherealMod;
+import expansioncontent.cardmods.ExhaustMod;
+import expansioncontent.cardmods.PropertiesMod;
+import expansioncontent.expansionContentMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 
@@ -25,6 +29,10 @@ public class TripleStrike extends AbstractChampCard {
       //  exhaust = true;
         AbstractCard r = new Strike();
         r.updateCost(-999);
+        PropertiesMod mod = new PropertiesMod(PropertiesMod.supportedProperties.ECHO, false);
+        CardModifierManager.addModifier(r, mod);
+        CardModifierManager.addModifier(r, new EtherealMod());
+        CardModifierManager.addModifier(r, new ExhaustMod());
         CardModifierManager.addModifier(r, new TechniqueMod());
         cardsToPreview = r;
       //  CardModifierManager.addModifier(this, new TechniqueMod());

@@ -34,7 +34,7 @@
       "[fist_icon]",
       "champ:[fist_icon]"
     ],
-    "DESCRIPTION": "Requires being in a Stance. NL After playing a Finisher, exit your Stance and trigger its Finisher bonus."
+    "DESCRIPTION": "Requires being in a Stance. NL After playing a Finisher, exit your Stance and trigger its Finisher bonus. NL #rBerserker #yFinisher #yBonus: Gain #b1 #yStrength. NL #bDefensive #yFinisher #yBonus: Gain #b8 #yBlock."
   },
   {
     "PROPER_NAME": "Counter",
