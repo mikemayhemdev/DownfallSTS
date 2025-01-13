@@ -32,9 +32,10 @@ public class StickyStick extends CustomRelic {
     }
 
     public void onCardDraw(AbstractCard card) {
-       if (this.counter == 2)
+       if (this.counter == 2) {
+           this.grayscale = true;
            return;
-
+       }
         if (card.type == AbstractCard.CardType.STATUS || card.type == AbstractCard.CardType.CURSE) {
             this.flash();
             ++this.counter;
@@ -49,6 +50,12 @@ public class StickyStick extends CustomRelic {
 
     public void atTurnStart() {
         this.counter = 0;
+        this.grayscale = false;
+    }
+
+    public void onVictory() {
+        this.counter = -1;
+        this.grayscale = false;
     }
 
     @Override
