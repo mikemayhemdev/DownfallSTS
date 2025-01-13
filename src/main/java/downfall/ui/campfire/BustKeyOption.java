@@ -1,6 +1,7 @@
 package downfall.ui.campfire;
 
 import basemod.ReflectionHacks;
+import champ.relics.DeflectingBracers;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -14,10 +15,7 @@ import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import downfall.downfallMod;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
-import downfall.relics.HeartBlessingBlue;
-import downfall.relics.HeartBlessingGreen;
-import downfall.relics.HeartBlessingRed;
-import downfall.relics.Hecktoplasm;
+import downfall.relics.*;
 import downfall.util.TextureLoader;
 import downfall.vfx.campfire.BustKeyEffect;
 
@@ -168,16 +166,22 @@ public class BustKeyOption extends AbstractCampfireOption {
             switch (key) {
                 case SAPPHIRE:
                     AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(p, true);
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingBlue());
+                    if (!AbstractDungeon.player.hasRelic(BurdenOfKnowledge.ID)) {
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingBlue());
+                    }
                     break;
                 case EMERALD:
                     AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(p, true);
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingGreen());
+                    if (!AbstractDungeon.player.hasRelic(BurdenOfKnowledge.ID)) {
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingGreen());
+                    }
                     break;
                 default:
                     AddBustKeyButtonPatches.KeyFields.bustedRuby.set(p, true);
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingRed());
-            }
+                    if (!AbstractDungeon.player.hasRelic(BurdenOfKnowledge.ID)) {
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingRed());
+                    }
+                    }
             updateImage(key);
         }
 
