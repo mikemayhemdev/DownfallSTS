@@ -7,17 +7,14 @@ import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.util.TextureLoader;
-import sneckomod.powers.UnendingSupplyPower;
 
 public class ImprovisingPower extends AbstractPower implements CloneablePowerInterface {
     public static final String POWER_ID = ChampMod.makeID("ImprovisingPower");
@@ -32,6 +29,7 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
         this.amount = amount;
         this.owner = AbstractDungeon.player;
         this.type = PowerType.BUFF;
+        this.isTurnBased = true;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
@@ -42,11 +40,10 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
         if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
-            flash();
-            for (int i = 0; i < this.amount; ++i) {
-                if (AbstractDungeon.player.stance instanceof AbstractChampStance)
-                    ((AbstractChampStance) AbstractDungeon.player.stance).techique();
-            }
+            if (newStance instanceof AbstractChampStance)
+                for (int x = 0; x < this.amount; x++) {
+                    ((AbstractChampStance) newStance).technique();
+                }
         }
     }
 
@@ -63,16 +60,11 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
 
     @Override
     public void updateDescription() {
-        if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0];
-        }
-        if (this.amount != 1) {
-            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
-        }
+        description = powerStrings.DESCRIPTIONS[0] + this.amount + powerStrings.DESCRIPTIONS[1];
     }
 
         @Override
         public AbstractPower makeCopy () {
-            return new ImprovisingPower(this.amount);
+            return new ImprovisingPower(amount);
         }
     }
