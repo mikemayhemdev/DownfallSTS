@@ -160,27 +160,30 @@ public class TheHexaghost extends CustomPlayer {
 
     @Override
     public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
-    AbstractDungeon.effectsQueue.add(new GiantFireEffect());
+        AbstractDungeon.effectsQueue.add(new GiantFireEffect());
         AbstractDungeon.effectsQueue.add(new GreenFireEffect());
-        AbstractDungeon.effectsQueue.add(new IroncladVictoryFlameEffect());
+       // AbstractDungeon.effectsQueue.add(new IroncladVictoryFlameEffect());
+
         update_timer += Gdx.graphics.getDeltaTime();
 
-        for(float i = 0; i+(1.0/120.0) <= update_timer; update_timer -= (1.0/120.0)) {
+        while (update_timer >= (1.0 / 120.0)) {
+           // effects.add(new GiantFireEffect());
             effects.add(new GiantFireEffect());
             AbstractDungeon.effectsQueue.add(new GreenFireEffect());
-            AbstractDungeon.effectsQueue.add(new IroncladVictoryFlameEffect());
+           // AbstractDungeon.effectsQueue.add(new IroncladVictoryFlameEffect());
+            update_timer -= (1.0 / 120.0);
         }
-       if (effects.stream().filter(e -> e instanceof GiantFireEffect).count() < 8){
-            effects.add(new GiantFireEffect());
-           AbstractDungeon.effectsQueue.add(new GreenFireEffect());
-           AbstractDungeon.effectsQueue.add(new IroncladVictoryFlameEffect());
-          // IroncladVictoryFlameEffect
-        }
-       // if (effects.stream().filter(e -> e instanceof GiantFireEffect).count() == 8){
-       //     effects.clear();
-      //  }
 
+        long fireEffectCount = effects.stream().filter(e -> e instanceof GiantFireEffect).count();
+
+        while (fireEffectCount < 2) {
+           effects.add(new GiantFireEffect());
+            AbstractDungeon.effectsQueue.add(new GreenFireEffect());
+           // AbstractDungeon.effectsQueue.add(new IroncladVictoryFlameEffect());
+            fireEffectCount++;
+        }
     }
+
 
     public void reloadAnimation() {
         this.loadAnimation(

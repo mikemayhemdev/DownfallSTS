@@ -175,7 +175,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         addRelicToCustomPool(new WizardHat(), AbstractCardEnum.GREMLIN);
 
         // Uncommon
-        addRelic(new ImpeccablePecs(), RelicType.SHARED);
+        addRelicToCustomPool(new ImpeccablePecs(), AbstractCardEnum.GREMLIN);
         addRelicToCustomPool(new MagicalMallet(), AbstractCardEnum.GREMLIN);
         addRelicToCustomPool(new WizardStaff(), AbstractCardEnum.GREMLIN);
         addRelicToCustomPool(new WoundPoker(), AbstractCardEnum.GREMLIN);
