@@ -27,7 +27,7 @@ public class Hexaburn extends AbstractExpansionCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new VFXAction((AbstractCreature)p, (AbstractGameEffect)new ShortScreenFire(), 0.5F));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new ShortScreenFire(), 0.5F));
         for (int i = 0; i < this.magicNumber; i++)
             addToBot((AbstractGameAction)new AttackDamageRandomEnemyAction((AbstractCard)this, AbstractGameAction.AttackEffect.FIRE));
     }

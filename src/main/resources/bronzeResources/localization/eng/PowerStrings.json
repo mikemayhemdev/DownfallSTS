@@ -18,9 +18,8 @@
   "bronze:Feature": {
     "NAME": "It's A Feature",
     "DESCRIPTIONS": [
-      "Whenever you draw a #rCurse or #yStatus card, gain #b",
-      " temporary #yStrength and #b",
-      " temporary #yDexterity."
+      "Whenever you draw or #yExhaust  #yStatus card, gain #b",
+      " #bBlock."
     ]
   },
   "bronze:InfiniteBeams": {
