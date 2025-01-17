@@ -32,7 +32,7 @@ public class HyperBeam extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY);
         cardsToPreview = new VoidCard();
         baseDamage = DAMAGE;
-       // this.exhaust = true;
+       this.exhaust = true;
         this.isMultiDamage = true;
         loadJokeCardImage(this, "HyperBeam.png");
     }
