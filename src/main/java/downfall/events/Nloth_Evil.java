@@ -65,7 +65,7 @@ public class Nloth_Evil extends AbstractImageEvent {
                     (r.relicId.equals(Strawberry.ID) ||
                     r.relicId.equals(MawBank.ID) ||
                     r.relicId.equals(PickAxe.ID) ||
-                    r.relicId.equals(TinyChest.ID) ||
+                    r.relicId.equals(Matryoshka.ID) || // I mixed up tiny chest and this lol
                     r.relicId.equals(WarPaint.ID) ||
                     r.relicId.equals(Whetstone.ID) || r.relicId.equals(SneckoCommon.ID) ||
                     //uncommons
