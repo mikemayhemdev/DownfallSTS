@@ -61,8 +61,8 @@ public class StanceDanceCrown extends AbstractChampCard implements OctopusCard {
                 break;
         }
 
-        AbstractDungeon.player.useJumpAnimation();
-        atb(new VFXAction(new StanceDanceEffect(AbstractDungeon.player, false, true, false), 0.7F));
+     //   AbstractDungeon.player.useJumpAnimation();
+      //  atb(new VFXAction(new StanceDanceEffect(AbstractDungeon.player, false, true, false), 0.7F));
 
     }
 
