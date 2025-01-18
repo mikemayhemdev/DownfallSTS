@@ -1287,8 +1287,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelic(new ShatteredFragment(), RelicType.SHARED);
-        // BaseMod.addRelic(new BlackCandle(), RelicType.SHARED);
-        //BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
+        BaseMod.addRelic(new BlackCandle(), RelicType.SHARED);
+        BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
         BaseMod.addRelic(new BrokenWingStatue(), RelicType.SHARED);
         BaseMod.addRelic(new CloakOfManyFaces(), RelicType.SHARED);
         BaseMod.addRelic(new BurdenOfKnowledge(), RelicType.SHARED);
