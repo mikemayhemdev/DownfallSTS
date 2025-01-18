@@ -14,7 +14,9 @@ import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.relics.BottledStasis;
 import guardian.relics.PickAxe;
+import sneckomod.relics.D8;
 import sneckomod.relics.SneckoBoss;
+import sneckomod.relics.SneckoCommon;
 import theHexaghost.relics.Libra;
 
 import java.util.ArrayList;
@@ -58,14 +60,14 @@ public class Nloth_Evil extends AbstractImageEvent {
         while (relicIterator.hasNext()) {
             AbstractRelic r = relicIterator.next();
             //Starter / Boss fairness
-            if (r.tier == AbstractRelic.RelicTier.STARTER ||r.tier == AbstractRelic.RelicTier.BOSS ||
+            if (r.tier == AbstractRelic.RelicTier.STARTER || r.tier == AbstractRelic.RelicTier.BOSS ||
                     //commons
                     (r.relicId.equals(Strawberry.ID) ||
                     r.relicId.equals(MawBank.ID) ||
                     r.relicId.equals(PickAxe.ID) ||
                     r.relicId.equals(TinyChest.ID) ||
                     r.relicId.equals(WarPaint.ID) ||
-                    r.relicId.equals(Whetstone.ID) ||
+                    r.relicId.equals(Whetstone.ID) || r.relicId.equals(SneckoCommon.ID) ||
                     //uncommons
                     r.relicId.equals(BottledFlame.ID) ||
                     r.relicId.equals(BottledLightning.ID) ||
@@ -77,7 +79,9 @@ public class Nloth_Evil extends AbstractImageEvent {
                     r.relicId.equals(LizardTail.ID) ||
                     r.relicId.equals(Mango.ID) ||
                     r.relicId.equals(SignatureFinisher.ID) ||
-                    r.relicId.equals(WingBoots.ID)))
+                    r.relicId.equals(WingBoots.ID)) ||
+                    //event
+                    r.relicId.equals(D8.ID))
             {
                 relicIterator.remove(); // Remove the blacklisted relic
             }
