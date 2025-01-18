@@ -95,6 +95,17 @@ public class LastStrike extends AbstractSneckoCard {
     }
 
     @Override
+    public void onMoveToDiscard() {
+        if(upgraded){
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        }
+        else {
+            this.rawDescription = cardStrings.DESCRIPTION;
+        }
+        this.initializeDescription();
+    }
+
+    @Override
     public void onObtainCard() {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
 

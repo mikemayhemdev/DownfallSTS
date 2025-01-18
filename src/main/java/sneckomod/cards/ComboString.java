@@ -77,6 +77,17 @@ public class ComboString extends AbstractSneckoCard {
     }
 
     @Override
+    public void onMoveToDiscard() {
+        if(upgraded){
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        }
+        else {
+            this.rawDescription = cardStrings.DESCRIPTION;
+        }
+        this.initializeDescription();
+    }
+
+    @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();

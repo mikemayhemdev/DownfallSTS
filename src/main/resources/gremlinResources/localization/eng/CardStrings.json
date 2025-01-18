@@ -382,8 +382,8 @@
 
   "Gremlin:SecondVolley": {
     "NAME": "Second Volley",
-    "DESCRIPTION": "Deal !D! damage. Gain a Shiv for each card played this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain an Upgraded Shiv for each card played this turn.",
+    "DESCRIPTION": "Deal !D! damage. Gain a Shiv for each card played this turn, or until your hand is full.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain an Upgraded Shiv for each card played this turn, or until your hand is full.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " card played.)",
