@@ -515,7 +515,7 @@
     "NAME": "Ooze Bath",
     "DESCRIPTIONS": [
       "Adds ",
-      " Goop at the start of this enemy's turn."
+      " #yGoop at the start of this enemy's turn."
     ]
   }
 }

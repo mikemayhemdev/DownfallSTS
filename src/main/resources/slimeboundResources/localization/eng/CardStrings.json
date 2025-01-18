@@ -183,7 +183,7 @@
   },
   "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",
-    "DESCRIPTION": "Apply !M! slimeboundmod:Goop to target enemy at the start of each of its turns. NL Exhaust.",
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop to target enemy at the start of each of its turns. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple the enemy's slimeboundmod:Goop. NL Exhaust."
   },
   "Slimebound:Overexert": {
