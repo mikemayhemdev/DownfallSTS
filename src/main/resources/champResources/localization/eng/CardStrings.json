@@ -27,7 +27,7 @@
     ]
   },
   "champ:StanceDanceCrown": {
-    "NAME": "Champion Crown",
+    "NAME": "Champion's Crown",
     "DESCRIPTION": "Choose a Stance to Enter. NL Trigger its *Skill champ:Bonus.",
     "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Trigger its *Skill champ:Bonus twice.",
     "EXTENDED_DESCRIPTION": [
