@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "At the start of combat, enter #bchamp:Defensive or #rchamp:Berserker #yStance."
+      "At the start of combat, choose to enter #bchamp:Defensive or #rchamp:Berserker #yStance."
     ]
   },
   "champ:BlackKnightHelmet": {
