@@ -14,7 +14,7 @@ public class InvincibleStrength extends AbstractExpansionCard {
     public InvincibleStrength() {
         super(ID, 1, AbstractCard.CardType.POWER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
         setBackgroundTexture("expansioncontentResources/images/512/bg_boss_heart.png", "expansioncontentResources/images/1024/bg_boss_heart.png");
-        this.baseMagicNumber = 10;
+        baseMagicNumber = magicNumber = 10;
         this.tags.add(expansionContentMod.STUDY);
         expansionContentMod.loadJokeCardImage((AbstractCard)this, "InvincibleStrength.png");
     }
