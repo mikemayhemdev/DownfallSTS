@@ -117,7 +117,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);//8th
                     addToList(cardsList, new EnChargeBattery(), false);//9th
                     addToList(cardsList, new EnGeneticAlgorithm(14), true);  //removed
-                    addToList(cardsList, new EnMalfunctioning(), true);//removed
+                    addToList(cardsList, new EnClumsy(), true);//removed
                     turn++;
                     break;
                 case 4:

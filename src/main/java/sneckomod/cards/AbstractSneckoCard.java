@@ -119,64 +119,64 @@ public abstract class AbstractSneckoCard extends CustomCard implements OnObtainC
         return makeCardPath(id.replaceAll((getModID() + ":"), "")) + ".png";
     }
 
-    public static int getRandomNum(int min, int max) {
-        int a, b, sum;
-        if (min > max) {
-            a = max;
-            b = min;
-        } else {
-            a = min;
-            b = max;
-        }
-        if (a != b) {
-            sum = AbstractDungeon.cardRandomRng.random(a, b);
-        } else {
-            sum = b;
-        }
-        return sum;
-    }
+//    public static int getRandomNum(int min, int max) {
+//        int a, b, sum;
+//        if (min > max) {
+//            a = max;
+//            b = min;
+//        } else {
+//            a = min;
+//            b = max;
+//        }
+//        if (a != b) {
+//            sum = AbstractDungeon.cardRandomRng.random(a, b);
+//        } else {
+//            sum = b;
+//        }
+//        return sum;
+//    }
 
 
-    public static int getRandomNum(int a, int b, AbstractSneckoCard source) {
-        int min, max;
-        if (a > b) {
-            max = a;
-            min = b;
-            if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
-                min++;
-        } else if (b > a) {
-            max = b;
-            min = a;
-            if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
-                min++;
-        } else {
-            max = b;
-            min = a;
-            if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
-                max++;
-        }
-
-        if (AbstractDungeon.player.hasPower(CheatPower.POWER_ID)) {
-            AbstractPower q = AbstractDungeon.player.getPower(CheatPower.POWER_ID);
-            q.flash();
-            return max;
-        }
-        if (AbstractDungeon.player.hasRelic(D8.ID)) {
-            //SlimeboundMod.logger.info("min/max check passed D8 relic check");
-            if (source != null) {
-                //SlimeboundMod.logger.info("min/max check passed card source check");
-                D8 d8relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
-                if (d8relic.card.uuid == source.uuid)
-                    //SlimeboundMod.logger.info("min/max check passed card source = bottled card check");
-                    return max;
-            }
-        }
-
-        if (min != max) {
-            return AbstractDungeon.cardRandomRng.random(min, max);
-        }
-        return max;
-    }
+//    public static int getRandomNum(int a, int b, AbstractSneckoCard source) {
+//        int min, max;
+//        if (a > b) {
+//            max = a;
+//            min = b;
+//            if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
+//                min++;
+//        } else if (b > a) {
+//            max = b;
+//            min = a;
+//            if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
+//                min++;
+//        } else {
+//            max = b;
+//            min = a;
+//            if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
+//                max++;
+//        }
+//
+//        if (AbstractDungeon.player.hasPower(CheatPower.POWER_ID)) {
+//            AbstractPower q = AbstractDungeon.player.getPower(CheatPower.POWER_ID);
+//            q.flash();
+//            return max;
+//        }
+//        if (AbstractDungeon.player.hasRelic(D8.ID)) {
+//            //SlimeboundMod.logger.info("min/max check passed D8 relic check");
+//            if (source != null) {
+//                //SlimeboundMod.logger.info("min/max check passed card source check");
+//                D8 d8relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
+//                if (d8relic.card.uuid == source.uuid)
+//                    //SlimeboundMod.logger.info("min/max check passed card source = bottled card check");
+//                    return max;
+//            }
+//        }
+//
+//        if (min != max) {
+//            return AbstractDungeon.cardRandomRng.random(min, max);
+//        }
+//        return max;
+//    }
 
     public static String makeID(String name) {
         return getModID() + ":" + name;
