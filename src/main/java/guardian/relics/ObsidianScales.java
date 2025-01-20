@@ -32,7 +32,7 @@ public class ObsidianScales extends CustomRelic implements OnReceivePowerRelic{
         // was told that checking for flex / speed / thorns down was "not fun" so it uses determination rules
        if (var1.type == AbstractPower.PowerType.DEBUFF){
            this.flash();
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, 2), 2));
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, 1), 1));
         }
         return true;
     }
