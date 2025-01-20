@@ -87,10 +87,9 @@ public class ExhaustVirusAction extends AbstractGameAction {
                 numExhausted = this.amount;
                 i = this.p.hand.size();
 
-                for(i = 0; i < i; ++i) {
+                for(int z = 0; z < z; ++z) {
                     AbstractCard c = this.p.hand.getTopCard();
                     this.p.hand.moveToExhaustPile(c);
-                //    this.addToBot(new MakeTempCardInDrawPileAction(new MajorBeam(), this.amount, true, true));
                 }
 
                 CardCrawlGame.dungeon.checkForPactAchievement();
@@ -106,9 +105,8 @@ public class ExhaustVirusAction extends AbstractGameAction {
 
             for(i = 0; i < this.amount; ++i) {
                 this.p.hand.moveToExhaustPile(this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng));
-              this.addToBot(new MakeTempCardInDrawPileAction(new MajorBeam(), 1, true, true));
             }
-
+            this.addToBot(new MakeTempCardInDrawPileAction(new MajorBeam(), this.amount, true, true));
             CardCrawlGame.dungeon.checkForPactAchievement();
         }
 
@@ -118,9 +116,8 @@ public class ExhaustVirusAction extends AbstractGameAction {
             while(var4.hasNext()) {
                 AbstractCard c = (AbstractCard)var4.next();
                 this.p.hand.moveToExhaustPile(c);
-              this.addToBot(new MakeTempCardInDrawPileAction(new MajorBeam(), 1, true, true));
             }
-
+            //this.addToBot(new MakeTempCardInDrawPileAction(new MajorBeam(), this.amount, true, true));
             CardCrawlGame.dungeon.checkForPactAchievement();
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
         }

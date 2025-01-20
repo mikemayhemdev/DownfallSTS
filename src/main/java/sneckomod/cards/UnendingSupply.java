@@ -23,11 +23,11 @@ public class UnendingSupply extends AbstractSneckoCard {
 
     public void upgrade() {
         if (!upgraded) {
-            //isInnate = true;
+            isInnate = true;
             upgradeName();
-            upgradeBaseCost(1);
-          //  rawDescription = UPGRADE_DESCRIPTION;
-         //   initializeDescription();
+           // upgradeBaseCost(1);
+            rawDescription = UPGRADE_DESCRIPTION;
+           initializeDescription();
         }
     }
 }
