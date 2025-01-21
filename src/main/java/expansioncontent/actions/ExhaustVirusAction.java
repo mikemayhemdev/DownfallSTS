@@ -106,7 +106,7 @@ public class ExhaustVirusAction extends AbstractGameAction {
             for(i = 0; i < this.amount; ++i) {
                 this.p.hand.moveToExhaustPile(this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng));
             }
-            this.addToBot(new MakeTempCardInDrawPileAction(new MajorBeam(), this.amount, true, true));
+            //this.addToBot(new MakeTempCardInDrawPileAction(new MajorBeam(), this.amount, true, true));
             CardCrawlGame.dungeon.checkForPactAchievement();
         }
 
@@ -117,7 +117,7 @@ public class ExhaustVirusAction extends AbstractGameAction {
                 AbstractCard c = (AbstractCard)var4.next();
                 this.p.hand.moveToExhaustPile(c);
             }
-            //this.addToBot(new MakeTempCardInDrawPileAction(new MajorBeam(), this.amount, true, true));
+            this.addToBot(new MakeTempCardInDrawPileAction(new MajorBeam(), this.amount, true, true));
             CardCrawlGame.dungeon.checkForPactAchievement();
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
         }
