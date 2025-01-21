@@ -92,7 +92,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
 
                     addToList(cardsList, new EnFootwork(),extraUpgrades);
                     addToList(cardsList, new EnNoxiousFumes());
-                    addToList(cardsList, new EnDeadlyPoison());
+                    addToList(cardsList, new EnPoisonedStab());
                     turn++;
                     break;
 
@@ -118,7 +118,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
                     addToList(cardsList, new EnBurst());
                     addToList(cardsList, new EnDeflect());
                     addToList(cardsList, new EnDeflect());
-                    addToList(cardsList, new EnDeadlyPoison());
+                    addToList(cardsList, new EnPoisonedStab());
 //                    c.cost = 0;
 //                    c.freeToPlayOnce = true;
 //                    c.modifyCostForCombat(-1);

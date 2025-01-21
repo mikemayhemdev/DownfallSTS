@@ -116,8 +116,8 @@ public class ExhaustVirusAction extends AbstractGameAction {
             while(var4.hasNext()) {
                 AbstractCard c = (AbstractCard)var4.next();
                 this.p.hand.moveToExhaustPile(c);
+                this.addToBot(new MakeTempCardInDrawPileAction(new MajorBeam(), 1, true, true));
             }
-            this.addToBot(new MakeTempCardInDrawPileAction(new MajorBeam(), this.amount, true, true));
             CardCrawlGame.dungeon.checkForPactAchievement();
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
         }
