@@ -153,7 +153,7 @@ public class NeowBossFinal extends AbstractMonster {
         // halfDead = true;
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
 
-        int beatAmount = 3;
+        int beatAmount = 3; //a19 healing, a18 healing is this -1
 //        if (AbstractDungeon.ascensionLevel >= 19) {
 //            beatAmount += 1;
 //        }
@@ -163,7 +163,13 @@ public class NeowBossFinal extends AbstractMonster {
 //            invincibleAmt -= 50;
 //        } a19 difficulty setting is changed from god of life 2(3), invincible 300(250) , to,  you (dont) get heart's favor
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, beatAmount)));
+        if (AbstractDungeon.ascensionLevel >= 19) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, beatAmount)));
+        }
+
+        if (AbstractDungeon.ascensionLevel < 19) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, beatAmount-1)));
+        }
 
         for (int i = 0; i < 3; i++) {
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
@@ -237,14 +243,11 @@ public class NeowBossFinal extends AbstractMonster {
                 //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
 
 
-                //Neow always gains 2 God of Life each cycle no matter the Ascension.
-                //This is the main mechanic of the fight and meant to mirror the Corrupt Heart's Beat of Death.
-                //While Beat of Death is a near constant presence through the fight, effectively applying negative Dexterity to the player,
-                //this effectively reduces player Strength. (But rewards cards that do a lot at once, similar to Beat of Death.)
-                //This will dramatically lengthen the duration of this fight overall and punishes airy cards if they are not backed by Strength / Dexterity.
-
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
-
+                // god of life maxes out at 6 (7 on a19 because of the higher starting healing) now
+                    int buf = AbstractDungeon.player.getPower(NeowInvulnerablePower.POWER_ID).amount;
+                    if (buf < 6) {
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
+                }
 
                 if (AbstractDungeon.ascensionLevel >= 19) {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 9), 9));
@@ -316,7 +319,7 @@ public class NeowBossFinal extends AbstractMonster {
 
                 ++this.buffCount;
 
-//                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.blockAmt));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.blockAmt));
 //                if (hasPower(TrueNeowPower.POWER_ID)){
 //                    getPower(TrueNeowPower.POWER_ID).onSpecificTrigger();
 //                }
