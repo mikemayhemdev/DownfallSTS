@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.PolyBeamAction;
 import guardian.patches.AbstractCardEnum;
+import hermit.patches.EnumPatch;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -69,7 +70,7 @@ public class PolyBeam extends AbstractGuardianCard {
         super.use(p, m);
         for(int i=0; i<this.magicNumber; i++) {
             addToBot(new PolyBeamAction(this));
-            addToBot((AbstractGameAction)new AttackDamageRandomEnemyAction((AbstractCard)this, AbstractGameAction.AttackEffect.FIRE));
+            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
         }
         super.useGems(p, m);
     }
