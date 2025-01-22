@@ -319,7 +319,7 @@ public class NeowBossFinal extends AbstractMonster {
 
                 ++this.buffCount;
 
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.blockAmt));
+                this.addToBot(new GainBlockAction(this, this, 20));
 //                if (hasPower(TrueNeowPower.POWER_ID)){
 //                    getPower(TrueNeowPower.POWER_ID).onSpecificTrigger();
 //                }
