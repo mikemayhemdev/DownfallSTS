@@ -15,6 +15,7 @@ import sneckomod.SneckoMod;
 import sneckomod.cards.AbstractSneckoCard;
 import downfall.util.TextureLoader;
 import sneckomod.cards.TyphoonFang;
+import sneckomod.powers.CheatPower;
 
 import java.util.ArrayList;
 
@@ -38,13 +39,13 @@ public class ConfusingCodex extends CustomRelic {
     }
 
 
-    public boolean isOverflowActive(AbstractCard source) { // Adjusted to take a card parameter
+    public boolean isOverflowActive(AbstractCard source) {
         boolean OVERFLOW = false; // Reset overflow state
 
         // Only check for overflow if the card has the OVERFLOW tag
         if (source.hasTag(SneckoMod.OVERFLOW)) {
             // Check if there are more than 5 cards in hand
-            if (AbstractDungeon.player.hand.size() > 5) {
+            if (AbstractDungeon.player.hand.size() > 5 || (AbstractDungeon.player.hasPower(CheatPower.POWER_ID))) {
                 OVERFLOW = true;
             }
 

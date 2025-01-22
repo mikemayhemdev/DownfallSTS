@@ -16,6 +16,7 @@ import sneckomod.SneckoMod;
 import sneckomod.cards.TyphoonFang;
 import sneckomod.patches.BottledD8Patch;
 import downfall.util.TextureLoader;
+import sneckomod.powers.CheatPower;
 
 import java.util.function.Predicate;
 
@@ -78,7 +79,7 @@ public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<
                 this.flash(); //block tracking
             }
         }
-        if (this.card != null && card.uuid.equals(this.card.uuid) && AbstractDungeon.player.hand.size() <= 5) {
+        if (this.card != null && card.uuid.equals(this.card.uuid) && AbstractDungeon.player.hand.size() <= 5 && !(AbstractDungeon.player.hasPower(CheatPower.POWER_ID))) {
             if (!(card instanceof TyphoonFang && card.purgeOnUse)) {
                 this.flash(); //overflow tracking
             }
