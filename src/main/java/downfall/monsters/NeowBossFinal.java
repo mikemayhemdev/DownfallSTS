@@ -244,7 +244,7 @@ public class NeowBossFinal extends AbstractMonster {
 
 
                 // god of life maxes out at 6 (7 on a19 because of the higher starting healing) now
-                    int buf = AbstractDungeon.player.getPower(NeowInvulnerablePower.POWER_ID).amount;
+                    int buf = this.getPower(NeowInvulnerablePower.POWER_ID).amount;
                     if (buf < 6) {
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
                 }
