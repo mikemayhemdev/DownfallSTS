@@ -37,6 +37,10 @@ public class SoulConsumer extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
+    public void onEquip() {
+        this.counter = 0;
+    }
+
     @Override
     public void onExhaust(AbstractCard card) {
         this.img = TextureLoader.getTexture(makeRelicPath("SoulStone.png"));
