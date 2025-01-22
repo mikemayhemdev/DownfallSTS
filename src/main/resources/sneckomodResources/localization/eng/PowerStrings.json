@@ -60,8 +60,8 @@
     "NAME": "Exotic Form",
     "DESCRIPTIONS": [
       "At the end of your turn gain #b",
-      " Strength for each unique color played this turn.",
-      " Strength for each unique color played this turn."
+      " #yStrength for each unique color played this turn.",
+      " #YStrength for each unique color played this turn."
     ]
   },
   "sneckomod:SnakeEyesPower": {
