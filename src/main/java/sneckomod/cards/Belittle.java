@@ -57,7 +57,7 @@ public class Belittle extends AbstractSneckoCard implements OnObtainCard {
                 isDone = true;
                 for (AbstractPower q : m.powers) {
                     if (q.type == AbstractPower.PowerType.DEBUFF) {
-                        atb(new LoseHPAction(m, p, magicNumber));
+                        atb(new LoseHPAction(m, p, magicNumber, AttackEffect.BLUNT_LIGHT));
                     }
                 }
             }
