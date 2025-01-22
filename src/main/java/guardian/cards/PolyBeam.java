@@ -1,6 +1,8 @@
 package guardian.cards;
 
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -67,6 +69,7 @@ public class PolyBeam extends AbstractGuardianCard {
         super.use(p, m);
         for(int i=0; i<this.magicNumber; i++) {
             addToBot(new PolyBeamAction(this));
+            addToBot((AbstractGameAction)new AttackDamageRandomEnemyAction((AbstractCard)this, AbstractGameAction.AttackEffect.FIRE));
         }
         super.useGems(p, m);
     }
