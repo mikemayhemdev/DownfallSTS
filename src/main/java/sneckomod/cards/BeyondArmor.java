@@ -8,8 +8,13 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.FrozenEgg2;
+import com.megacrit.cardcrawl.relics.MoltenEgg2;
+import com.megacrit.cardcrawl.relics.ToxicEgg2;
+import hermit.relics.Spyglass;
 import hermit.util.Wiz;
 import sneckomod.SneckoMod;
+import sneckomod.relics.UnknownEgg;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -66,11 +71,18 @@ public class BeyondArmor extends AbstractSneckoCard {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
         while (cardsToReward.size() < 3) {
             AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == AbstractCard.CardRarity.COMMON);
+
+            if (((newCard.type == AbstractCard.CardType.SKILL) && (AbstractDungeon.player.hasRelic(ToxicEgg2.ID)) ||
+                            ((newCard.type == AbstractCard.CardType.ATTACK) && (AbstractDungeon.player.hasRelic(MoltenEgg2.ID)) ||
+                                    (newCard.type == AbstractCard.CardType.POWER) && (AbstractDungeon.player.hasRelic(FrozenEgg2.ID)) ||
+                                    AbstractDungeon.player.hasRelic(UnknownEgg.ID)))) {
+                newCard.upgrade();
+            }
+
             if (!cardListDuplicate(cardsToReward, newCard)) {
                 cardsToReward.add(newCard.makeCopy()); // Use makeCopy() to ensure a new instance
             }
         }
-
         SneckoMod.addGift(cardsToReward);
         ;
     }

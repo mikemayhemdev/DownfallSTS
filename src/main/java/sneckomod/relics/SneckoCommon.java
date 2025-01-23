@@ -8,6 +8,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.FrozenEgg2;
+import com.megacrit.cardcrawl.relics.MoltenEgg2;
+import com.megacrit.cardcrawl.relics.ToxicEgg2;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
@@ -32,6 +35,14 @@ public class SneckoCommon extends CustomRelic {
         while (cardsToReward.size() < 5) {
             AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c ->
                     c.type == AbstractCard.CardType.POWER && c.rarity == AbstractCard.CardRarity.UNCOMMON);
+
+            if (((newCard.type == AbstractCard.CardType.SKILL) && (AbstractDungeon.player.hasRelic(ToxicEgg2.ID)) ||
+                    ((newCard.type == AbstractCard.CardType.ATTACK) && (AbstractDungeon.player.hasRelic(MoltenEgg2.ID)) ||
+                            (newCard.type == AbstractCard.CardType.POWER) && (AbstractDungeon.player.hasRelic(FrozenEgg2.ID)) ||
+                            AbstractDungeon.player.hasRelic(UnknownEgg.ID)))) {
+                newCard.upgrade();
+            }
+
             //newCard.upgrade();
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
             CardGroup c = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);

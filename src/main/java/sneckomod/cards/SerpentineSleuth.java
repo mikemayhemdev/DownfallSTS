@@ -3,9 +3,14 @@ package sneckomod.cards;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.FrozenEgg2;
+import com.megacrit.cardcrawl.relics.MoltenEgg2;
+import com.megacrit.cardcrawl.relics.ToxicEgg2;
 import sneckomod.SneckoMod;
 import sneckomod.powers.SerpentineSleuthPower;
+import sneckomod.relics.UnknownEgg;
 
 import java.util.ArrayList;
 
@@ -40,6 +45,14 @@ public class SerpentineSleuth extends AbstractSneckoCard implements OnObtainCard
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
         while (cardsToReward.size() < 3) {
             AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.type == AbstractCard.CardType.POWER && c.rarity == AbstractCard.CardRarity.RARE);
+
+            if (((newCard.type == AbstractCard.CardType.SKILL) && (AbstractDungeon.player.hasRelic(ToxicEgg2.ID)) ||
+                    ((newCard.type == AbstractCard.CardType.ATTACK) && (AbstractDungeon.player.hasRelic(MoltenEgg2.ID)) ||
+                            (newCard.type == AbstractCard.CardType.POWER) && (AbstractDungeon.player.hasRelic(FrozenEgg2.ID)) ||
+                            AbstractDungeon.player.hasRelic(UnknownEgg.ID)))) {
+                newCard.upgrade();
+            }
+
             if (!cardListDuplicate(cardsToReward, newCard)) {
                 cardsToReward.add(newCard.makeCopy()); // Use makeCopy() to ensure a new instance
             }

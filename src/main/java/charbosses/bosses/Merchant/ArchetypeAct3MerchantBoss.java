@@ -37,8 +37,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
         //addRelic(new CBR_BagOfPreparation());
 
-        //this is how he always plays panic button turn one when you fight him multiple times
-        addRelic(new CBR_BottledLightning());
+        addRelic(new CBR_FossilizedHelix());
 
         addRelic(new CBR_TungstenRod());
         addRelic(new CBR_IceCream());

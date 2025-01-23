@@ -46,7 +46,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_ThreadAndNeedle());
-        addRelic(new CBR_CaptainsWheel());
+        addRelic(new CBR_DuvuDoll(2));
         addRelic(new CBR_Torii());
         addRelic(new CBR_VelvetChoker());
     }
@@ -60,7 +60,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                 case 0:
                     //turn 1
                     //nothing
-                    addToList(cardsList, new EnWish(), extraUpgrades);
+                    addToList(cardsList, new EnWishPlated());
                     addToList(cardsList, new EnGoodInstincts());
                     addToList(cardsList, new EnInjury());
                     turn++;
