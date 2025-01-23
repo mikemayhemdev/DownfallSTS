@@ -1,6 +1,7 @@
 package theHexaghost.cards.seals;
 
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
@@ -18,6 +19,7 @@ public class SecondSeal extends AbstractSealCard {
     public SecondSeal() {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        tags.add(AbstractCard.CardTags.HEALING);
         HexaMod.loadJokeCardImage(this, "SecondSeal.png");
     }
 

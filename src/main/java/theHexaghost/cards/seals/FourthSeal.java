@@ -1,6 +1,7 @@
 package theHexaghost.cards.seals;
 
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
@@ -13,6 +14,7 @@ public class FourthSeal extends AbstractSealCard {
     public FourthSeal() {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         HexaMod.loadJokeCardImage(this, "FourthSeal.png");
+        tags.add(AbstractCard.CardTags.HEALING);
     }
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {

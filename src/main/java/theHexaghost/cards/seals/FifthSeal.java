@@ -16,6 +16,8 @@ public class FifthSeal extends AbstractSealCard {
 //    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
     public static final int MAGIC = 2;
 
+
+    //THIS IS SIXTH SEAL!
     public FifthSeal() {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;

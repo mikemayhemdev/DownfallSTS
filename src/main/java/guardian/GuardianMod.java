@@ -875,7 +875,9 @@ public static void saveData() {
                 //Act
                 .dungeonID(TheBeyond.ID)
                 //Only in Evil if content sharing is disabled
-                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
+                //This is a guardian exclusive event that doesn't overwrite anything, it should appear in standard even without content sharing
+                .spawnCondition(() -> (1==1))
+           //     .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(CrystalForge.ID, CrystalForge.class) //Event ID//
                 //Event Character//

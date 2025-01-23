@@ -4,6 +4,7 @@ import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
@@ -58,6 +59,10 @@ public class DiceRollPotion extends CustomPotion {
     @Override
     public boolean canUse() {
         return AbstractDungeon.getCurrRoom() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT;
+    }
+
+    public boolean canSpawn() {
+        return Settings.isEndless || AbstractDungeon.floorNum <= 48;
     }
 
     @Override
