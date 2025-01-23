@@ -301,7 +301,7 @@ public class SneckoMod implements
         return CardLibrary.getCopy(selectedCardID);
     }
 
-    //TODO Make rarity matter in Offclass card gen. - Not needed anymore?
+    //removed to-do here, rarity is not relevant due to how gift generation works in a limited pool
 
     public static AbstractCard getOffClassCardMatchingPredicate(Predicate<AbstractCard> q) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());

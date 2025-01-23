@@ -1126,7 +1126,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Duplicator.ID).eventType(EventUtils.EventType.FULL_REPLACE)
-                // .bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
+                .bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(PurificationShrineEvil.ID, PurificationShrineEvil.class) //Event ID//
@@ -1134,7 +1134,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(PurificationShrine.ID).eventType(EventUtils.EventType.FULL_REPLACE)
-                //.bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
+                .bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(TransmogrifierEvil.ID, TransmogrifierEvil.class) //Event ID//
@@ -1142,7 +1142,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Transmogrifier.ID).eventType(EventUtils.EventType.FULL_REPLACE)
-                //.bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
+                .bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(UpgradeShrineEvil.ID, UpgradeShrineEvil.class) //Event ID//
@@ -1150,7 +1150,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(UpgradeShrine.ID).eventType(EventUtils.EventType.FULL_REPLACE)
-                //.bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
+                .bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
     }
 

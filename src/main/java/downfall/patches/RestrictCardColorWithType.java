@@ -7,15 +7,15 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import sneckomod.SneckoMod;
+import theHexaghost.HexaMod;
 
 @SpirePatch(clz = CardLibrary.class, method = "getAnyColorCard", paramtypez = {AbstractCard.CardType.class, AbstractCard.CardRarity.class})
 public class RestrictCardColorWithType {
 
-  // todo: this is only here so it displays in bright green. Instead of banning non Hero cards like it did previously,
+  // Instead of banning non Hero cards like it did previously,
   //  this bans cards that are additionally banned for Snecko. I was very harsh with banning useless
   //  cards from Snecko so it should be fine-ish to play with.
   //  If this still makes prismatic shard bad we can just revert it to the old version again.
-  //  Please also check RestrictCardColor, I'm just covering both possible bases here.
 
   @SpireInsertPatch(rloc = 11, localvars = {"anyCard"})
   public static void Insert(AbstractCard.CardType type, AbstractCard.CardRarity rarity, CardGroup anyCard) {
@@ -25,7 +25,7 @@ public class RestrictCardColorWithType {
       if (card.color == AbstractDungeon.player.getCardColor()) {
         available = true;
       }
-      else if (!card.hasTag(SneckoMod.BANNEDFORSNECKO)) {
+      else if (!card.hasTag(SneckoMod.BANNEDFORSNECKO) && !card.hasTag(HexaMod.GHOSTWHEELCARD)) {
         available = true;
       }
       if (!available) {

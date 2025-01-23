@@ -26,7 +26,7 @@ public class OffclassHelper {
     }
 
     public static void updateAllUnknownReplacements() {
-        //TODO - Ban any unknowns from the cardpool if their list size = 0
+        // there are no unknown cards, removed the to-do here due to it having no reason to exist
 
         ArrayList<Predicate<AbstractCard>> predList = new ArrayList<>();
         ArrayList<ArrayList<String>> listList = new ArrayList<>();

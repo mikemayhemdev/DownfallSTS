@@ -46,7 +46,8 @@ public class VenomDebuff extends AbstractPower implements CloneablePowerInterfac
 
     @Override
     public Color getColor() {
-        return (getDebuffCount() >= 3) ? Color.CYAN.cpy() : Color.CYAN.cpy(); // todo: make the color vanish if possible
+        return (getDebuffCount() >= 3) ? Color.CYAN.cpy() : Color.CYAN.cpy();
+        // apparently base game bug involving color changing
     }
 
     private int getDebuffCount() {

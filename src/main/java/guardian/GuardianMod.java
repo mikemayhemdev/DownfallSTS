@@ -157,7 +157,7 @@ public class GuardianMod implements PostDrawSubscriber,
     private CustomUnlockBundle unlocks4;
 
 
-    //TODO - content sharing if needed
+    //removed to-do due to content sharing being handled elsewhere
     /*
     public static Properties slimeboundDefault = new Properties();
     public static boolean contentSharing_relics = true;
@@ -185,7 +185,7 @@ public class GuardianMod implements PostDrawSubscriber,
                 getResourcePath(ATTACK_CARD_PORTRAIT), getResourcePath(SKILL_CARD_PORTRAIT),
                 getResourcePath(POWER_CARD_PORTRAIT), getResourcePath(ENERGY_ORB_PORTRAIT), getResourcePath(CARD_ENERGY_ORB));
 
-        //TODO - Part of Settings
+        //Part of Settings
         /*
         slimeboundDefault.setProperty(PROP_EVENT_SHARING, "FALSE");
         slimeboundDefault.setProperty(PROP_RELIC_SHARING, "FALSE");
@@ -423,7 +423,7 @@ public class GuardianMod implements PostDrawSubscriber,
         return false;
     }
 
-    //TODO - Part of shared relics
+    //Part of shared relics
     /*
     public void addSharedRelics(){
         if (contentSharing_relics){
