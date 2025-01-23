@@ -31,11 +31,15 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
        // addRelic(new CBR_Girya(3));
        // addRelic(new CBR_Vajra());
       //  addRelic(new CBR_SmoothStone());
-        addRelic(new CBR_FossilizedHelix());
+
+        // :)
+        addRelic(new CBR_SmilingMask());
+
         //addRelic(new CBR_BagOfPreparation());
-        addRelic(new CBR_DollysMirror());
-        //replaced clockwork with dolly's mirror, pretend that he duped panacea because he already has 2. This means he has 4 artifact instead of 5
-        //which matches with donu / deca's artifact amount
+
+        //this is how he always plays panic button turn one when you fight him multiple times
+        addRelic(new CBR_BottledLightning());
+
         addRelic(new CBR_TungstenRod());
         addRelic(new CBR_IceCream());
         //addRelic(new CBR_FusionHammer());

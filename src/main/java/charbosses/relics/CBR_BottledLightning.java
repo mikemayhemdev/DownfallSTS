@@ -4,26 +4,27 @@ import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.BottledLightning;
 import com.megacrit.cardcrawl.relics.SmilingMask;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class CBR_SmilingMask extends AbstractCharbossRelic {
-    public static final String ID = "Smiling Mask";
+public class CBR_BottledLightning extends AbstractCharbossRelic {
+    public static final String ID = "Bottled Lightning";
 
-    public CBR_SmilingMask() {
-        super(new SmilingMask());
+    public CBR_BottledLightning() {
+        super(new BottledLightning());
     }
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + 50 + this.DESCRIPTIONS[1];
+        return this.DESCRIPTIONS[0];
     }
 
     @Override
     public AbstractRelic makeCopy() {
-        return new CBR_SmilingMask();
+        return new CBR_BottledLightning();
     }
 }
