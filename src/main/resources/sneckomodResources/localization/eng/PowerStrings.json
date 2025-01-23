@@ -61,7 +61,7 @@
     "DESCRIPTIONS": [
       "At the end of your turn gain #b",
       " #yStrength for each unique color played this turn.",
-      " #YStrength for each unique color played this turn."
+      " #yStrength for each unique color played this turn."
     ]
   },
   "sneckomod:SnakeEyesPower": {
