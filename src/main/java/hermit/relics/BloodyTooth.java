@@ -33,7 +33,7 @@ public class BloodyTooth extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return Settings.isEndless || ((AbstractDungeon.floorNum <= 54 && AbstractDungeon.ascensionLevel >= 20) && !evilMode) || ((AbstractDungeon.floorNum <= 53 && AbstractDungeon.ascensionLevel < 20 && !evilMode)) || ((AbstractDungeon.floorNum <= 48 && evilMode));
+        return Settings.isEndless || ((AbstractDungeon.floorNum <= 53 && AbstractDungeon.ascensionLevel >= 20) && !evilMode) || ((AbstractDungeon.floorNum <= 52 && AbstractDungeon.ascensionLevel < 20 && !evilMode)) || ((AbstractDungeon.floorNum <= 48 && evilMode));
     }
 
     @Override
