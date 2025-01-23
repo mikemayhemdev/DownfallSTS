@@ -62,26 +62,28 @@ public class RelicOverrides {
 //            }
 //    }
 
-      @SpirePatch2(clz = PreservedInsect.class, method = "<ctor>")
-      public static class AddNewMethodPI {
-     @SpireRawPatch
-        public static void addMethod(CtBehavior ctMethodToPatch) throws CannotCompileException, NotFoundException {
-         CtClass ctNestClass = ctMethodToPatch.getDeclaringClass();
-         CtClass superClass = ctNestClass.getSuperclass();
-         CtMethod superMethod = superClass.getDeclaredMethod("canSpawn");
-         CtMethod updateMethod = CtNewMethod.delegator(superMethod, ctNestClass);
-                try {
-                    ctNestClass.addMethod(updateMethod);
-          } catch (DuplicateMemberException ignored) {
-                    updateMethod = ctNestClass.getDeclaredMethod("canSpawn");
-          }
-          updateMethod.insertBefore("if(true){return " + PreservedInsect.class.getName() + ".addCanSpawn48PI($0);}");
-        }
-      }
 
-    public static boolean addCanSpawn48PI(PreservedInsect __instance) {
-        return (Settings.isEndless || (AbstractDungeon.floorNum <= 52 && !evilMode) || (AbstractDungeon.floorNum <= 48 && evilMode));
-    }
+//    // thanks sandtag for the code
+//      @SpirePatch2(clz = PreservedInsect.class, method = "<ctor>")
+//      public static class AddNewMethodPI {
+//     @SpireRawPatch
+//        public static void addMethod(CtBehavior ctMethodToPatch) throws CannotCompileException, NotFoundException {
+//         CtClass ctNestClass = ctMethodToPatch.getDeclaringClass();
+//         CtClass superClass = ctNestClass.getSuperclass();
+//         CtMethod superMethod = superClass.getDeclaredMethod("canSpawn");
+//         CtMethod updateMethod = CtNewMethod.delegator(superMethod, ctNestClass);
+//                try {
+//                    ctNestClass.addMethod(updateMethod);
+//          } catch (DuplicateMemberException ignored) {
+//                    updateMethod = ctNestClass.getDeclaredMethod("canSpawn");
+//          }
+//          updateMethod.insertBefore("if(true){return " + PreservedInsect.class.getName() + ".addCanSpawn48PI($0);}");
+//        }
+//      }
+//
+//    public static boolean addCanSpawn48PI(PreservedInsect __instance) {
+//        return (Settings.isEndless || (AbstractDungeon.floorNum <= 52 && !evilMode) || (AbstractDungeon.floorNum <= 48 && evilMode));
+//    }
 
 
     @SpirePatch(clz = BustedCrown.class, method = "getUpdatedDescription")
