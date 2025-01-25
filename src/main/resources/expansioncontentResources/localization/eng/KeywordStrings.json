@@ -26,14 +26,14 @@
     "NAMES": [
       "regen"
     ],
-    "DESCRIPTION": "At the end of your turn, heal HP equal to your #yRegen then reduce #yRegen by #b1."
+    "DESCRIPTION": "At the end of your turn, heal HP equal to your #yRegen then reduce #yRegen by #b1 [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Plated Armor",
     "NAMES": [
       "plated"
     ],
-    "DESCRIPTION": "At the end of your turn, gain Block equal to your #yPlated #yArmor. Taking unblocked attack damage reduces #yPlated #yArmor by #b1."
+    "DESCRIPTION": "At the end of your turn, gain Block equal to your #yPlated #yArmor [REMOVE_SPACE]. Taking unblocked attack damage reduces #yPlated #yArmor by #b1 [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Boss",
@@ -48,7 +48,7 @@
     "NAMES": [
       "echo"
     ],
-    "DESCRIPTION": "Add a copy of a card to you hand, it is #yEthereal and #yExhausts. NL Echoes cannot be Echoed."
+    "DESCRIPTION": "Add a copy of a card to you hand, it is #yEthereal and #yExhausts [REMOVE_SPACE]. NL Echoes cannot be Echoed."
   },
   {
     "PROPER_NAME": "Exhume",
@@ -77,7 +77,7 @@
     "NAMES": [
       "goop"
     ],
-    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, removing all #yGoop and triggering any #yConsume effects."
+    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop [REMOVE_SPACE], removing all #yGoop and triggering any #yConsume effects."
   },
   {
     "PROPER_NAME": "Shackled",
@@ -117,7 +117,7 @@
       "gooped"
     ],
     "PROPER_NAME": "Goop",
-    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, removing all #yGoop and triggering any #yConsume effects."
+    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop [REMOVE_SPACE], removing all #yGoop and triggering any #yConsume effects."
   },
 
   {

@@ -48,8 +48,8 @@
     "NAME": "Future Plans",
     "DESCRIPTIONS": [
       "At the end of your turn, you may place #b",
-      " card into #yStasis.",
-      " cards into #yStasis."
+      " card into #yStasis [REMOVE_SPACE].",
+      " cards into #yStasis  [REMOVE_SPACE]."
     ]
   },
   "Guardian:DefenseModePower": {
@@ -124,14 +124,14 @@
     "DESCRIPTIONS": [
       "Gain #b",
       " #yArtifact",
-      " at the start of your turn if you have no #yArtifact."
+      " at the start of your turn if you have no #yArtifact [REMOVE_SPACE]."
     ]
   },
   "Guardian:ModeShiftPower": {
     "NAME": "Mode Shift",
     "DESCRIPTIONS": [
       "When you lose #b",
-      " HP, gain #b16 #yBlock, enter #yDefensive #yMode until next turn, and increase the amount required to trigger this effect again by #b10, up to a maximum of #b50."
+      " HP, gain #b16 #yBlock, enter #yDefensive #yMode until next turn, and increase the amount required to trigger this effect again by #b10, up to a maximum of #b50 [REMOVE_SPACE]."
     ]
   },
   "Guardian:ExhaustStatusesPower": {
@@ -146,7 +146,7 @@
     "NAME": "Revenge",
     "DESCRIPTIONS": [
       "Whenever you enter #yDefensive #yMode gain #b",
-      " #yStrength."
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "Guardian:StasisEnginePower": {
@@ -179,21 +179,21 @@
     "NAME": "Evasive Protocol",
     "DESCRIPTIONS": [
       "Reduce your debuffs by #b",
-      " when you enter #yDefensive #yMode."
+      " when you enter #yDefensive #yMode [REMOVE_SPACE]."
     ]
   },
   "Guardian:SpikerProtocolPower": {
     "NAME": "Spiker Protocol",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yThorns when you enter #yDefensive #yMode."
+      " #yThorns when you enter #yDefensive #yMode [REMOVE_SPACE]."
     ]
   },
   "Guardian:ArmoredProtocolPower": {
     "NAME": "Armored Protocol",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yBlock when you end your turn while in #yDefensive #yMode."
+      " #yBlock when you end your turn while in #yDefensive #yMode [REMOVE_SPACE]."
     ]
   },
   "Guardian:DontLeaveDefensiveModePower": {
@@ -208,7 +208,7 @@
     "NAME": "Bracing",
     "DESCRIPTIONS": [
       "At the start of your turn, #yBrace #b",
-      " ."
+      " [REMOVE_SPACE]."
     ]
   }
 }

@@ -1,11 +1,14 @@
 package guardian.relics;
 
 import basemod.abstracts.CustomRelic;
+import champ.ChampMod;
+import champ.relics.ChampionCrown;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.AbstractStance;
@@ -22,11 +25,6 @@ public class ModeShifterPlus extends CustomRelic {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)),
                 new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.BOSS, LandingSound.FLAT);
-    }
-
-    @Override
-    public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
     }
 
     @Override
@@ -57,6 +55,26 @@ public class ModeShifterPlus extends CustomRelic {
             super.obtain();
         }
     }
+
+    @Override
+    public String getUpdatedDescription() {
+        // Colorize the starter relic's name
+        String name = new ModeShifter().name;
+        StringBuilder sb = new StringBuilder();
+        if(Settings.language== Settings.GameLanguage.ZHS|| Settings.language== Settings.GameLanguage.ZHT){
+            sb.append("[#").append(GuardianMod.mainGuardianColor.toString()).append("]").append(name).append("[]");
+
+        }else {
+            for (String word : name.split(" ")) {
+                sb.append("[#").append(GuardianMod.mainGuardianColor.toString()).append("]").append(word).append("[] ");
+            }
+            sb.setLength(sb.length() - 1);
+            sb.append("[#").append(GuardianMod.mainGuardianColor.toString()).append("]");
+        }
+
+        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
+    }
+
 
     @Override
     public AbstractRelic makeCopy() {

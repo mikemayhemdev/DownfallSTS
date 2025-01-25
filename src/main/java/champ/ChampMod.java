@@ -263,6 +263,7 @@ public class ChampMod implements
         BaseMod.addRelicToCustomPool(new GladiatorsBookOfMartialProwess(), ChampChar.Enums.CHAMP_GRAY);
         BaseMod.addRelicToCustomPool(new SignatureFinisher(), ChampChar.Enums.CHAMP_GRAY);
         BaseMod.addRelicToCustomPool(new PowerArmor(), ChampChar.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new RageAmulet(), ChampChar.Enums.CHAMP_GRAY);
         BaseMod.addRelicToCustomPool(new SpectersHand(), ChampChar.Enums.CHAMP_GRAY);
         BaseMod.addRelicToCustomPool(new LiftRelic(), ChampChar.Enums.CHAMP_GRAY);
 

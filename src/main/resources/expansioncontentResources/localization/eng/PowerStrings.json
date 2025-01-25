@@ -29,7 +29,7 @@
     "DESCRIPTIONS": [
       "After playing #b",
       " more cards, gain #b",
-      " #yStrength."
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "expansioncontent:ChronoBoostPlusPower": {
@@ -37,7 +37,7 @@
     "DESCRIPTIONS": [
       "After playing #b",
       " more cards, gain #b",
-      " #yStrength."
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "expansioncontent:DeEnergizedPower": {

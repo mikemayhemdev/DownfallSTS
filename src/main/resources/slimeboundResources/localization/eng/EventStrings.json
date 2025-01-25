@@ -7,20 +7,20 @@
       "You dispatch the Slime Boss with ease, claiming its prizes possession for yourself. It's a very stylish hat, after all."
     ],
     "OPTIONS": [
-      "[Confront] #rFight #rSlime #rBoss. Reward: #gTiny #gBowler #gHat.",
-      "[Flee in Terror] #rCursed #r- #rShame."
+      "[Confront] #rFight #rSlime #rBoss. Reward: #gTiny #gBowler #gHat [REMOVE_SPACE].",
+      "[Flee in Terror] #rCursed #r- #rShame [REMOVE_SPACE]."
     ]
   },
   "Slimebound:WorldofGoop": {
     "NAME": "World of Goop",
     "DESCRIPTIONS": [
       "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL Calmly, you bathe yourself as you bond with the goop, enjoying a moment of reprieve. NL NL Climbing out, you notice in the pool the #ysouls of a few unfortunate adventurers, slowly being consumed by a gluttonous creature.",
-      "You exit the invigorating slime bath, absorbing the #ysouls, leaving the creature with a sad look upon its amorphous face.",
-      "You succeed in negotiating a deal with the creature to provide it with more tasty souls if it will aid you in your quest. NL You and your newfound #gfriend exit the slime bath together."
+      "You exit the invigorating slime bath, absorbing the #ysouls [REMOVE_SPACE], leaving the creature with a sad look upon its amorphous face.",
+      "You succeed in negotiating a deal with the creature to provide it with more tasty #ysouls if it will aid you in your quest. NL You and your newfound #gfriend exit the slime bath together."
     ],
     "OPTIONS": [
-      "[Gather Souls] #gGain #g75 #gSouls.",
-      "[Recruit] #rLose #r75 #rSouls. #gGain #yGreed #yOoze.",
+      "[Gather Souls] #gGain #g75 #gSouls [REMOVE_SPACE].",
+      "[Recruit] #rLose #r75 #rSouls. #gGain #yGreed #yOoze [REMOVE_SPACE].",
       "[Leave]",
       "[Locked] Requires 75 Souls."
     ]
@@ -49,7 +49,7 @@
     ],
     "OPTIONS": [
       "[Recruit] #rLose ",
-      ". Gain #gScrap #gOoze. #rLocked if you Reach Inside.",
+      ". Gain #gScrap #gOoze [REMOVE_SPACE]. #rLocked if you Reach Inside.",
       "[Recruit] Locked (Angered the Scrap Ooze)",
       "[Leave]",
       "[Recruit] Locked (Requires a Common or Uncommon Relic)"
@@ -68,13 +68,13 @@
     ],
     "OPTIONS": [
       "[Read] #gRemove #gall Strikes. #gReceive #g3 #gUpgraded Tackles.",
-      "[Take] #gObtain #gConsult #gPlaybook. #rTrigger #ra #rtrap.",
+      "[Take] #gObtain #gConsult #gPlaybook. #rTrigger #ra #rtrap [REMOVE_SPACE].",
       "[Leave]",
-      "[Dive] #rBecome #rCursed #r- #rIcky.",
+      "[Dive] #rBecome #rCursed #r- #rIcky [REMOVE_SPACE].",
       "[Be Patient] #rTake #r",
-      " #rDamage.",
+      " #rDamage [REMOVE_SPACE].",
       "[Grab and Run] #rLose #r",
-      " #rMax #rHP."
+      " #rMax #rHP [REMOVE_SPACE]."
     ]
   },
   "Slimebound:Darklings": {
@@ -98,7 +98,7 @@
       "When one sheep leads the way, all the rest follow."
     ],
     "OPTIONS": [
-      "[Inspiration] #gAdd #gCommand to all #gStrikes and #gDefends.",
+      "[Inspiration] #gAdd #gCommand to all #gStrikes and #gDefends [REMOVE_SPACE].",
       "[Locked] Requires a Strike or Defend."
     ]
   }

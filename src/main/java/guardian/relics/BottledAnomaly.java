@@ -29,7 +29,7 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
 
     public BottledAnomaly() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.SHOP, LandingSound.FLAT);
+                RelicTier.SHOP, LandingSound.CLINK);
     }
 
     @Override

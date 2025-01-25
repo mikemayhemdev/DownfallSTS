@@ -37,7 +37,7 @@
       "accelerate"
     ],
     "PROPER_NAME": "Accelerate",
-    "DESCRIPTION": "Reduce the turn counter of the right-most card in #yStasis by #b1."
+    "DESCRIPTION": "Reduce the turn counter of the right-most card in #yStasis by #b1 [REMOVE_SPACE]."
   },
   {
     "NAMES": [

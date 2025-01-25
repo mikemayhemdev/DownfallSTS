@@ -12,14 +12,14 @@
       "You know the deals this #papparition offers come with too high a price. You need to deal with it, and how fortuitous! You brought along a #bCurse-Dispelling #bCandle! NL NL You toss the candle towards the specter, which dissipates into an #beerie #bhue. NL NL It won't be offering any deals any more."
     ],
     "OPTIONS": [
-      "[Left Box] #gObtain #ga #gDu-Vu #gDoll #gor #gDarkstone #gPeriapt. #rCursed #rTwice #r- #rHaunted.",
+      "[Left Box] #gObtain #ga #gDu-Vu #gDoll #gor #gDarkstone #gPeriapt [REMOVE_SPACE]. #rCursed #rTwice #r- #rHaunted [REMOVE_SPACE].",
       "[Shop for More]",
-      "[Right Box] #gObtain #ga #gCursed #gKey #gor #gCalling #gBell. #rIt #ris #rextra #rCursed.",
-      "[Chase Away] #gObtain a #bCurse-Dispelling #bCandle. #rLose #r5 #rHP.",
+      "[Right Box] #gObtain #ga #gCursed #gKey #gor #gCalling #gBell [REMOVE_SPACE]. #rIt #ris #rextra #rCursed [REMOVE_SPACE].",
+      "[Chase Away] #gObtain a #bCurse-Dispelling #bCandle [REMOVE_SPACE]. #rLose #r5 #rHP [REMOVE_SPACE].",
       "[Chase Away] Leave.",
-      "[Trade for Power] #gGain a #grandom #yRare #gcard. #rBecome #rCursed #r- #rRandom.",
-      "[Trade for Life] #gGain #g5 #gMax #gHP. #rBecome #rCursed #r- #rRandom.",
-      "[Trade for Souls] #gGain #g100 #gSouls. #rBecome #rCursed #r- #rRandom.",
+      "[Trade for Power] #gGain a #grandom #yRare #gcard [REMOVE_SPACE]. #rBecome #rCursed #r- #rRandom [REMOVE_SPACE].",
+      "[Trade for Life] #gGain #g5 #gMax #gHP [REMOVE_SPACE]. #rBecome #rCursed #r- #rRandom [REMOVE_SPACE].",
+      "[Trade for Souls] #gGain #g100 #gSouls [REMOVE_SPACE]. #rBecome #rCursed #r- #rRandom [REMOVE_SPACE].",
       "[Locked] Trade Complete.",
       "[Leave]"
     ]
@@ -34,18 +34,18 @@
     ],
     "OPTIONS": [
       "[Offer] #rLose ",
-      " HP. #gGain #gFirst #gSeal.",
-      " #ySouls. #gGain #gSecond #gSeal.",
-      ". #gGain #gThird #gSeal.",
-      ". #gGain #gFourth #gSeal.",
-      "[Locked] Requires more Gold.",
+      " HP. #gGain #gFirst #gSeal [REMOVE_SPACE].",
+      " #ySouls. #gGain #gSecond #gSeal [REMOVE_SPACE].",
+      ". #gGain #gThird #gSeal [REMOVE_SPACE].",
+      ". #gGain #gFourth #gSeal [REMOVE_SPACE].",
+      "[Locked] Requires more Gold [REMOVE_SPACE].",
       "[Locked] Requires a Common Card.",
       "[Locked] Requires a Potion.",
       "[Leave]",
       "[Locked] Offering made.",
-      ". #gGain #gFifth #gSeal.",
+      ". #gGain #gFifth #gSeal [REMOVE_SPACE].",
       "[Locked] Requires an Upgraded Card.",
-      " Max HP. #gGain #gSixth #gSeal.",
+      " Max HP. #gGain #gSixth #gSeal [REMOVE_SPACE].",
       "[Locked] Requires 2 Max HP."
     ]
   },
@@ -74,13 +74,13 @@
       ],
     "OPTIONS": [
       "[Accept] #rLose #r",
-      " #rMax #rHP. Unlock Study and Learn options.",
-      "[Study] #rLose #rall #rStrikes. #gGain #g3 #gCouncil's #gJustice.",
-      "[Learn] #rLose #rall #rDefends. #gGain #g",
+      " #rMax #rHP [REMOVE_SPACE]. Unlock Study and Learn options.",
+      "[Study] #rLose #rall #rStrikes [REMOVE_SPACE]. #gGain #g3 #gCouncil's #gJustice [REMOVE_SPACE].",
+      "[Learn] #rLose #rall #rDefends [REMOVE_SPACE]. #gGain #g",
       "[Complete]",
       "[Leave]",
       "[Locked] Cannot leave yet.",
-      " #gApparition."
+      " #gApparition [REMOVE_SPACE]."
     ]
   },
   "hexamod:BackToBasics": {
@@ -89,7 +89,7 @@
       "Spirit is the sword - and experience, the sharpening stone."
     ],
     "OPTIONS": [
-      "[Wistfulness] #gAdd #gEthereal to all #gStrikes and #gDefends.",
+      "[Wistfulness] #gAdd #gEthereal to all #gStrikes and #gDefends [REMOVE_SPACE].",
       "[Locked] Requires a Strike or Defend."
     ]
   }

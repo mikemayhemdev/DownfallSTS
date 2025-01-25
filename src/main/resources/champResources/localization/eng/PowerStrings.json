@@ -10,7 +10,7 @@
     "NAME": "Focused: Defensive",
     "DESCRIPTIONS": [
       "The next time you use a #yFinisher this turn, gain #b",
-      " #yBlock."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "champ:FocusedBerPower": {
@@ -24,7 +24,7 @@
     "NAME": "Shield Wall",
     "DESCRIPTIONS": [
       "At the end of your turn, gain #b",
-      " #yCounter."
+      " #yCounter [REMOVE_SPACE]."
     ]
   },
   "champ:EntangleNextTurnPower": {
@@ -55,22 +55,22 @@
     "NAME": "Endless Rage",
     "DESCRIPTIONS": [
       "Whenever you lose HP on your turn, gain #b",
-      " temporary #yStrength."
+      " temporary #yStrength [REMOVE_SPACE]."
     ]
   },
   "champ:ImprovisingPower": {
     "NAME": "Improvising",
     "DESCRIPTIONS": [
-      "At the start of your turn, if you are not in a Stance, enter a random Stance. Whenever a #yStance, trigger its #ySkill #yBonus #b",
+      "At the start of your turn, if you are not in a #yStance [REMOVE_SPACE], enter a random #yStance [REMOVE_SPACE]. Whenever you enter a #yStance [REMOVE_SPACE], trigger its #ySkill #yBonus #b",
       " times."
     ]
   },
   "champ:CalledShotPower": {
     "NAME": "Called Shot",
     "DESCRIPTIONS": [
-      "The next time you play a #yFinisher, do not leave your #yStance.",
+      "The next time you play a #yFinisher [REMOVE_SPACE], do not leave your #yStance [REMOVE_SPACE].",
       "The next #b",
-      " times you play a #yFinisher, do not leave your #yStance."
+      " times you play a #yFinisher [REMOVE_SPACE], do not leave your #yStance [REMOVE_SPACE]."
     ]
   },
   "champ:DancingMasterPower": {
@@ -87,24 +87,24 @@
   "champ:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random \"Strike\" #yEcho. It costs #b0 until played.",
+      "At the start of your turn, gain a random \"Strike\" #yEcho [REMOVE_SPACE]. It costs #b0 until played.",
       "At the start of your turn, gain #b",
-      " random \"Strike\" #yEchoes. They cost #b0 until played."
+      " random \"Strike\" #yEchoes [REMOVE_SPACE]. They cost #b0 until played."
     ]
   },
   "champ:StrikeOfGeniusUpgradedPower": {
     "NAME": "Strike of Genius+",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random #yupgraded \"Strike\" #yEcho. It costs #b0 until played.",
+      "At the start of your turn, gain a random #yupgraded \"Strike\" #yEcho [REMOVE_SPACE]. It costs #b0 until played.",
       "At the start of your turn, gain #b",
-      " random #yupgraded \"Strike\" #yEchoes. They cost #b0 until played."
+      " random #yupgraded \"Strike\" #yEchoes [REMOVE_SPACE]. They cost #b0 until played."
     ]
   },
   "champ:DefensiveStylePower": {
     "NAME": "Defensive Style",
     "DESCRIPTIONS": [
       "#yDefensive #ySkill Bonuses grant #b",
-      " additional #yCounter."
+      " additional #yCounter [REMOVE_SPACE]."
     ]
   },
   "champ:GladiatorStylePower": {

@@ -10,7 +10,7 @@
     "OPTIONS": [
       "[Shatter] #rLose #r",
       " #r HP. #gChoose #b1 of #b3 Rare #yOffclass Cards to Obtain.",
-      "[Take] #gGain #gMystical #gOctahedron. #rCursed #r- #rPain.",
+      "[Take] #gGain #gMystical #gOctahedron [REMOVE_SPACE]. #rCursed #r- #rPain [REMOVE_SPACE].",
       "[Leave]",
       "[Locked] Requires an Overflow card."
     ]
@@ -33,7 +33,7 @@
       "The serpent stares at you with a look of extreme disappointment, but ultimately smiles and wishes you well on your journey."
     ],
     "OPTIONS": [
-      "[Agree] #gGain #ga #gSnecko #gRelic. #rBecome #rCursed #r- #rBewildered.",
+      "[Agree] #gGain #ga #gSnecko #gRelic [REMOVE_SPACE]. #rBecome #rCursed #r- #rBewildered [REMOVE_SPACE].",
       "[Disagree]",
       "[Leave]"
     ]
@@ -46,7 +46,7 @@
       "The serpent stares at you with a look of extreme disappointment, but ultimately smiles and wishes you well on your journey."
     ],
     "OPTIONS": [
-      "[Rescue] #gGain #gYoung #gSnecko. #rFight #ran #rAngry #rCenturion.",
+      "[Rescue] #gGain #gYoung #gSnecko [REMOVE_SPACE]. #rFight #ran #rAngry #rCenturion [REMOVE_SPACE].",
       "[Leave]"
     ]
   }

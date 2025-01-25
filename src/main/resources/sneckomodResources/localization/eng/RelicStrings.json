@@ -10,14 +10,14 @@
     "NAME": "Super Snecko Soul",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
-      "Replaces [#407B93]Snecko [#407B93]Soul[]. NL At the start of each combat and every other turn, gain a #ySoul #yRoll. NL On other turns, draws an additional card at the start of your turn and #ysneckomod:Muddles it."
+      "Replaces [#407B93]Snecko [#407B93]Soul[]. NL At the start of each combat and every other turn, gain a #ySoul #yRoll [REMOVE_SPACE]. NL On other turns, draws an additional card at the start of your turn and #ysneckomod:Muddles it."
     ]
   },
   "sneckomod:CleanMud": {
     "NAME": "Snake-Charmer's Flute",
     "FLAVOR": "Sssssss...",
     "DESCRIPTIONS": [
-      "#ysneckomod:Muddled cards can't cost #b3."
+      "#ysneckomod:Muddled cards can't cost #b3 [REMOVE_SPACE]."
     ]
   },
   "sneckomod:ConfusingCodex": {
@@ -38,7 +38,7 @@
     "NAME": "Loaded Die",
     "FLAVOR": "Cheese-stuffed.",
     "DESCRIPTIONS": [
-      "Whenever you #ysneckomod:Muddle a card, gain #b1 #yBlock."
+      "Whenever you #ysneckomod:Muddle a card, gain #b1 #yBlock [REMOVE_SPACE]."
     ]
   },
   "sneckomod:RareBoosterPack": {
@@ -52,7 +52,7 @@
     "NAME": "Sleeved Ace",
     "FLAVOR": "We're all aces.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain a #yMarked #yCard."
+      "At the start of each combat, gain a #yMarked #yCard [REMOVE_SPACE]."
     ]
   },
   "sneckomod:UnknownEgg": {
@@ -80,7 +80,7 @@
     "NAME": "Blank Card",
     "FLAVOR": "Card Mimic.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add an #ygremlin:Echo of a random card from your deck to your hand. It costs #b0 ."
+      "At the start of each combat, add an #ygremlin:Echo of a random card from your deck to your hand. It costs #b0 [REMOVE_SPACE]."
     ]
   },
   "sneckomod:D8": {
@@ -111,7 +111,7 @@
     "NAME": "Lucky Horseshoe",
     "FLAVOR": "Make your own luck.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b1 of #b3 #yCharacters. Choose #b3 #yUpgraded Uncommon cards and #b2 Rare cards to add to your deck. All combats drop an additional card reward of the chosen character's cards.",
+      "Upon pickup, choose #b1 of #b3 #yCharacters [REMOVE_SPACE]. Choose #b3 #yUpgraded Uncommon cards and #b2 Rare cards to add to your deck. All combats drop an additional card reward of the chosen character's cards.",
       "Upon pickup, obtain #b3 Upgraded Uncommon and #b2 Rare ",
       " cards. All combats drop an additional ",
       " card reward."

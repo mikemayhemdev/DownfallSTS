@@ -19,6 +19,8 @@ import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.scene.DefectVictoryNumberEffect;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import sneckomod.cards.Defend;
@@ -27,6 +29,7 @@ import sneckomod.cards.Strike;
 import sneckomod.cards.TailWhip;
 import sneckomod.cards.unknowns.*;
 import sneckomod.relics.SneckoSoul;
+import sneckomod.vfx.SneckoVictoryNumberEffect;
 
 import java.util.ArrayList;
 
@@ -204,6 +207,13 @@ public class TheSnecko extends CustomPlayer {
         return ImageMaster.loadImage(SneckoMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
     */
+
+
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+        if (effects.stream().filter(e -> e instanceof SneckoVictoryNumberEffect).count() < 8)
+            effects.add(new SneckoVictoryNumberEffect());
+    }
 
 
     @Override

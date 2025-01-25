@@ -11,7 +11,7 @@
     "NAME": "Gremlin Wizard",
     "DESCRIPTION": [
       "After you play a skill, gain #b",
-      " #yWiz."
+      " #yWiz [REMOVE_SPACE]."
     ]
   },
 
@@ -27,7 +27,7 @@
     "NAME": "Shield Gremlin",
     "DESCRIPTION": [
       "After you play a skill, gain #b",
-      " #yBlock."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
 

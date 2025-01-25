@@ -1,6 +1,7 @@
 package sneckomod.potions;
 
 import basemod.abstracts.CustomPotion;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.relics.SacredBark;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.combat.LightBulbEffect;
 import sneckomod.SneckoMod;
 import sneckomod.util.DiceRollPotionReward;
 
@@ -40,6 +42,11 @@ public class DiceRollPotion extends CustomPotion {
     @Override
     public void use(AbstractCreature target) {
         if (AbstractDungeon.getCurrRoom() != null) {
+            if (Settings.FAST_MODE) {
+                this.addToBot(new VFXAction(new LightBulbEffect(target.hb)));
+            } else {
+                this.addToBot(new VFXAction(new LightBulbEffect(target.hb), 0.2F));
+            }
             AbstractDungeon.getCurrRoom().rewards.add(new DiceRollPotionReward());
             if (AbstractDungeon.player.hasRelic(SacredBark.ID)) {
                 AbstractDungeon.getCurrRoom().rewards.add(new DiceRollPotionReward());

@@ -2,6 +2,7 @@ package downfall.events;
 
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.curses.Pain;
 import com.megacrit.cardcrawl.cards.curses.Regret;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -46,7 +47,12 @@ public class ShiningLight_Evil extends AbstractImageEvent {
         this.screen = CUR_SCREEN.INTRO;
 
         if (AbstractDungeon.player.masterDeck.hasUpgradableCards()) {
-            this.imageEventText.setDialogOption(OPTIONS[0], new Icky());
+            if (AbstractDungeon.ascensionLevel < 15) {
+                this.imageEventText.setDialogOption(OPTIONS[0], new Malfunctioning());
+            }
+            if (AbstractDungeon.ascensionLevel >= 15) {
+                this.imageEventText.setDialogOption(OPTIONS[3], new Malfunctioning());
+            }
         } else {
             this.imageEventText.setDialogOption(OPTIONS[2], true);
         }
@@ -117,21 +123,28 @@ public class ShiningLight_Evil extends AbstractImageEvent {
             } else {
                 upgradableCards.get(0).upgrade();
                 upgradableCards.get(1).upgrade();
-                upgradableCards.get(2).upgrade();
+                if (AbstractDungeon.ascensionLevel < 15) {
+                    upgradableCards.get(2).upgrade();
+                }
                 cardMetrics.add(upgradableCards.get(0).cardID);
                 cardMetrics.add(upgradableCards.get(1).cardID);
-                cardMetrics.add(upgradableCards.get(2).cardID);
-                AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
+                if (AbstractDungeon.ascensionLevel < 15) {
+                    cardMetrics.add(upgradableCards.get(2).cardID);
+                }
+                    AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
                 AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(1));
-                AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(2));
+                if (AbstractDungeon.ascensionLevel < 15) {
+                    AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(2));
+                }
                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(0).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(1).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(2).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F + 300.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
-
+                if (AbstractDungeon.ascensionLevel < 15) {
+                    AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(2).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F + 300.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                }
             }
         }
 
-        Icky curse = new Icky();
+        Malfunctioning curse = new Malfunctioning();
         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
         logMetric(ID, "Entered Light", Collections.singletonList(curse.cardID), null, null, cardMetrics, null, null, null,
                 0, 0, 0, 0, 0, 0);

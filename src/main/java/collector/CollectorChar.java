@@ -5,6 +5,7 @@ import collector.cards.Defend;
 import collector.cards.FuelTheFire;
 import collector.cards.Strike;
 import collector.cards.YouAreMine;
+import collector.effects.CollectorVictoryFlameEffect;
 import collector.relics.BlockedChakra;
 import collector.relics.EmeraldTorch;
 import collector.relics.HolidayCoal;
@@ -38,8 +39,11 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.GlowyFireEyesEffect;
 import com.megacrit.cardcrawl.vfx.StaffFireEffect;
+import com.megacrit.cardcrawl.vfx.scene.DefectVictoryNumberEffect;
+import com.megacrit.cardcrawl.vfx.scene.IroncladVictoryFlameEffect;
 import hermit.powers.Bruise;
 
 import java.util.ArrayList;
@@ -242,6 +246,16 @@ public class CollectorChar extends CustomPlayer {
             }
         }
 
+    }
+
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+        if (effects.stream().filter(e -> e instanceof CollectorVictoryFlameEffect).count() < 8) {
+            float spawn = (float) MathUtils.random(0, 20);
+            if (spawn == 1) {
+                effects.add(new CollectorVictoryFlameEffect());
+            }
+        }
     }
 
     public static class Enums {

@@ -170,7 +170,7 @@
     "NAME": "Radiant Flame",
     "DESCRIPTIONS": [
       "Whenever you #yIgnite a Ghostflame, gain #b",
-      " #yBlock."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "hexamod:SealPostCombatPower": {

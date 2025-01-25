@@ -23,7 +23,7 @@
     "NAME": "Pizazz Potion",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yVigor."
+      " #yVigor [REMOVE_SPACE]."
     ]
   }
 }
