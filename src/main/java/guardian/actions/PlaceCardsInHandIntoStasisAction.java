@@ -30,6 +30,7 @@ public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
     public void update() {
         if (this.duration == 0.5F) {
             // removing Ethereal cards for Future Plans for consistency with similar affects.
+            // deprecated ethereal override
             if (this.endOfTurn) {
                 ArrayList<AbstractCard> toMove = new ArrayList<>();
                 toMove.addAll(AbstractDungeon.player.hand.group);

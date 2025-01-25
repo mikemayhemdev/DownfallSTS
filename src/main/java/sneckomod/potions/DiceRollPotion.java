@@ -34,7 +34,12 @@ public class DiceRollPotion extends CustomPotion {
     @Override
     public void initializeData() {
         this.potency = getPotency();
-        this.description = DESCRIPTIONS[0];
+        if (this.potency == 1) {
+            this.description = potionStrings.DESCRIPTIONS[0] + this.potency + potionStrings.DESCRIPTIONS[1];
+        }
+        if (this.potency != 1) {
+            this.description = potionStrings.DESCRIPTIONS[0] + this.potency + potionStrings.DESCRIPTIONS[2];
+        }
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
     }
@@ -43,12 +48,12 @@ public class DiceRollPotion extends CustomPotion {
     public void use(AbstractCreature target) {
         if (AbstractDungeon.getCurrRoom() != null) {
             if (Settings.FAST_MODE) {
-                this.addToBot(new VFXAction(new LightBulbEffect(target.hb)));
+                this.addToBot(new VFXAction(new LightBulbEffect(AbstractDungeon.player.hb)));
             } else {
-                this.addToBot(new VFXAction(new LightBulbEffect(target.hb), 0.2F));
+                this.addToBot(new VFXAction(new LightBulbEffect(AbstractDungeon.player.hb), 0.2F));
             }
-            AbstractDungeon.getCurrRoom().rewards.add(new DiceRollPotionReward());
-            if (AbstractDungeon.player.hasRelic(SacredBark.ID)) {
+            int i;
+            for (i = 0; i < this.potency; i++) {
                 AbstractDungeon.getCurrRoom().rewards.add(new DiceRollPotionReward());
             }
         }

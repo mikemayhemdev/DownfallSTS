@@ -22,6 +22,10 @@ public class RoughDiamond extends CustomRelic {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
+    @Override
+    public void onVictory() {
+        this.grayscale = false;
+    }
 
     public void atTurnStart() {
         this.triggeredThisTurn = false;

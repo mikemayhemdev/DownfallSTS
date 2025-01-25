@@ -510,9 +510,9 @@
       "On second thought, perhaps memories are best left in the past."
     ],
     "OPTIONS": [
-      "[Recall] #gAdd #g1 #gBoss #gcard #gto #gyour #gdeck [REMOVE_SPACE].",
-      "[Recall] #gAdd #g2 #gBoss #gcards #gto #gyour #gdeck [REMOVE_SPACE]. #rLose #r",
-      "[Recall] #gAdd #g3 #gBoss #gcards #gto #gyour #gdeck [REMOVE_SPACE]. #rLose #r"
+      "[Recall] #gAdd #g1 #gBoss #gcard #gto #gyour #gdeck.",
+      "[Recall] #gAdd #g2 #gBoss #gcards #gto #gyour #gdeck. #rLose #r",
+      "[Recall] #gAdd #g3 #gBoss #gcards #gto #gyour #gdeck. #rLose #r"
     ]
   },
   "downfall:SecretPortal": {
