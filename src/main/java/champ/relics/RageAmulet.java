@@ -55,18 +55,18 @@ public class RageAmulet extends CustomRelic {
 
     public void addNextTurnPower(AbstractPower power) {
         int found = power.amount;
-        int totaled = found / 6;
+        int totaled = found / 12;
         int finalized = totaled * 1;
         boolean isVigor = (VigorPower.POWER_ID.equals(power.ID));
 
         // Add remainder.
         if (isVigor) {
-            remainingVigor += found % 6;
+            remainingVigor += found % 12;
             this.counter = remainingVigor;
         }
         // If remainder is beyond threshold, add to total and subtract.
-        if (remainingVigor >= 6) {
-            remainingVigor -= 6;
+        if (remainingVigor >= 12) {
+            remainingVigor -= 12;
             finalized += 1;
             this.counter = remainingVigor;
         }

@@ -24,7 +24,7 @@ public class SwordSigil extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
        // upgradeCool(2);
     }
 }
