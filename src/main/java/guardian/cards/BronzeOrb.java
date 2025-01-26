@@ -9,11 +9,13 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
+import guardian.actions.BraceWallopAction;
 import guardian.actions.PlaceRandomCardIntoStasisAction;
 import guardian.patches.AbstractCardEnum;
 import guardian.vfx.BronzeOrbEffect;
@@ -82,15 +84,10 @@ public class BronzeOrb extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new BronzeOrbEffect(p, m), 0.5F));
-        //   AbstractDungeon.actionManager.addToBottom(new PlaceRandomCardIntoStasisAction(1));
-        //  AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
-        int unblockedDamage = Math.max(damage - m.currentBlock, 0);
-        if (unblockedDamage > 0) {
-            brace(unblockedDamage);
-        }
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new BronzeOrbEffect(p, m), 0.5F));
+
+        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new BraceWallopAction((AbstractCreature)m, (AbstractCreature)p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
 
         this.useGems(p, m);
     }

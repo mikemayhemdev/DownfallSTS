@@ -231,9 +231,9 @@
       "[Full Harvest] #gGain #g",
       "[Drain] #gGain #g",
       "[Sap] #gGain #g",
-      " #gSouls [REMOVE_SPACE]. #rBecome #rCursed #rThrice #r- #rIcky [REMOVE_SPACE].",
-      " #gSouls [REMOVE_SPACE]. #rBecome #rCursed #rTwice #r- #rIcky [REMOVE_SPACE].",
-      " #gSouls [REMOVE_SPACE]. #rBecome #rCursed #r- #rIcky [REMOVE_SPACE].",
+      " #gSouls. #rBecome #rCursed #rThrice #r- #rIcky.",
+      " #gSouls. #rBecome #rCursed #rTwice #r- #rIcky.",
+      " #gSouls. #rBecome #rCursed #r- #rIcky.",
       "[Leave]"
     ]
   },
@@ -248,7 +248,8 @@
     ],
     "OPTIONS": [
       "[Agree] [Punch] #gGain #g",
-      " #gSouls [REMOVE_SPACE]. #rBecome #rCursed #r- #rDoubt [REMOVE_SPACE].",
+      " #gSouls. #rBecome #rCursed #r- #rDoubt.",
+      " #gSouls. #rBecome #rCursed #r- #rDoubt.",
       "[Disagree]",
       "[Leave]"
     ]
@@ -267,10 +268,10 @@
     ],
     "OPTIONS": [
       "[Destroy] #rLose #r",
-      " #rSouls [REMOVE_SPACE]. #gGain #gSharpened #gFragment [REMOVE_SPACE].",
+      " #rSouls. #gGain #gSharpened #gFragment.",
       "[Collect] #rLose #r",
       "[Leave]",
-      " #rHP [REMOVE_SPACE]. #gGain #gBroken #gWing #gStatue [REMOVE_SPACE]."
+      " #rHP [REMOVE_SPACE]. #gGain #gBroken #gWing #gStatue."
     ]
   },
   "downfall:GoldenIdol": {
@@ -414,7 +415,7 @@
       "You absorb the #p~ghostly~ #p~fog~ into yourself, gathering their spirits. As you leave, however, you can't help but start to #r@feel@ #r@a@ #r@chill...@"
     ],
     "OPTIONS": [
-      "[Feast] #gGain #g200 #gSouls. #rBecome #rCursed #r- #rHaunted [REMOVE_SPACE]."
+      "[Feast] #gGain #g200 #gSouls. #rBecome #rCursed #r- #rHaunted."
     ]
   },
   "downfall:Nest": {
@@ -431,16 +432,16 @@
     ],
     "OPTIONS": [
       "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards [REMOVE_SPACE].",
-      "[Locked] Requires Broken Wing Statue [REMOVE_SPACE].",
-      "[Accept] #gGain #gCultist #gPotion [REMOVE_SPACE].",
-      "[Steal] #gObtain Ritual Dagger. #rLose #r",
-      " #rHP [REMOVE_SPACE].",
+      "[Locked] Requires Broken Wing Statue.",
+      "[Accept] #gGain #gCultist #gPotion",
+      "[Steal] #gObtain #gRitual #gDagger. #rLose #r",
+      " #rHP.",
       "[Leave]",
       "[Continue]",
-      "[Take Dagger] #gGain #gRitual #gDagger [REMOVE_SPACE].",
-      "[Anoint] #gUpgrade #gRitual #gDagger [REMOVE_SPACE].",
-      "[Sacrifice] #rKill #rCultist with Ritual Dagger+.",
-      "[Be Praised] #gGain #grewards for returning the #gBroken #gWing #gStatue [REMOVE_SPACE]."
+      "[Take Dagger] #gGain #gRitual #gDagger.",
+      "[Anoint] #gUpgrade #gRitual #gDagger.",
+      "[Sacrifice] #rKill #rCultist #rwith #rRitual #rDagger+.",
+      "[Be Praised] #gGain #grewards for returning the #gBroken #gWing #gStatue."
     ]
   },
   "downfall:Colosseum": {
