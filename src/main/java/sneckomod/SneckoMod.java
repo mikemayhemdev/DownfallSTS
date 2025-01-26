@@ -390,7 +390,7 @@ public class SneckoMod implements
                 TrashToTreasure.ID,
                 OverwhelmingPresence.ID,
 
-                CrystallizedMud.ID,
+                SneckoBoss.ID,
                 CheapStock.ID,
                 CleanMud.ID,
 
