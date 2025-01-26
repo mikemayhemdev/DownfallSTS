@@ -27,7 +27,7 @@ public class Tadah extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.COMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     public Tadah() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
@@ -41,6 +41,8 @@ public class Tadah extends AbstractGremlinCard {
         while (skill.cost == -2) {
             skill = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL).makeCopy();
         }
+        if (this.upgraded)
+            skill.upgrade();
         addToBot(new EchoACardAction(skill, false));
         addToBot(new GremlinSwapAction(new GremlinWizard(0)));
     }
@@ -48,7 +50,8 @@ public class Tadah extends AbstractGremlinCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            this.rawDescription = strings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

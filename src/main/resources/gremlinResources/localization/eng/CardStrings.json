@@ -43,7 +43,7 @@
 
   "Gremlin:BurlyBlow": {
     "NAME": "Burly Blow",
-    "DESCRIPTION": "Deal !D! damage.  Repeat for each stack of Weak."
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each stack of Weak."
   },
 
   "Gremlin:CatScratch": {
@@ -64,8 +64,8 @@
 
   "Gremlin:CounterStrike": {
     "NAME": "Counter Strike",
-    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, gain !M! Wards.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, gain !M! Upgraded Wards."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, gain !M! Wards.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, gain !M! Upgraded Wards."
   },
 
   "Gremlin:CowerChoice": {
@@ -123,7 +123,7 @@
 
   "Gremlin:Exacerbate": {
     "NAME": "Exacerbate",
-    "DESCRIPTION": "Deal !D! damage. gremlin:Cripple the enemy. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL gremlin:Cripple the enemy. NL Exhaust."
   },
 
   "Gremlin:FairyDust": {
@@ -452,7 +452,8 @@
 
   "Gremlin:Tadah": {
     "NAME": "Tadah!",
-    "DESCRIPTION": "expansioncontent:Echo a random Skill. NL gremlin:Swap to gremlin:Gremlin_Wizard."
+    "DESCRIPTION": "expansioncontent:Echo a random Skill. NL gremlin:Swap to gremlin:Gremlin_Wizard.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Echo a random Upgraded Skill. NL gremlin:Swap to gremlin:Gremlin_Wizard."
   },
 
   "Gremlin:TagTeam": {
