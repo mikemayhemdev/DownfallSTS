@@ -5,6 +5,7 @@ import collector.actions.GainReservesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.atb;
@@ -18,6 +19,7 @@ public class DragonsTrove extends AbstractCollectorCard {
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
         isPyre();
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
