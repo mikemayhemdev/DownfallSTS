@@ -12,14 +12,14 @@
       "You know the deals this #papparition offers come with too high a price. You need to deal with it, and how fortuitous! You brought along a #bCurse-Dispelling #bCandle! NL NL You toss the candle towards the specter, which dissipates into an #beerie #bhue. NL NL It won't be offering any deals any more."
     ],
     "OPTIONS": [
-      "[Left Box] #gObtain #ga #gDu-Vu #gDoll #gor #gDarkstone #gPeriapt [REMOVE_SPACE]. #rCursed #rTwice #r- #rHaunted [REMOVE_SPACE].",
+      "[Left Box] #gObtain #ga #gDu-Vu #gDoll #gor #gDarkstone #gPeriapt. #rCursed #rTwice #r- #rHaunted.",
       "[Shop for More]",
-      "[Right Box] #gObtain #ga #gCursed #gKey #gor #gCalling #gBell [REMOVE_SPACE]. #rIt #ris #rextra #rCursed [REMOVE_SPACE].",
-      "[Chase Away] #gObtain a #bCurse-Dispelling #bCandle [REMOVE_SPACE]. #rLose #r5 #rHP [REMOVE_SPACE].",
+      "[Right Box] #gObtain #ga #gCursed #gKey #gor #gCalling #gBell. #rIt #ris #rextra #rCursed.",
+      "[Chase Away] #gObtain #ga #bCurse-Dispelling #bCandle. #rLose #r5 #rHP.",
       "[Chase Away] Leave.",
-      "[Trade for Power] #gGain a #grandom #yRare #gcard [REMOVE_SPACE]. #rBecome #rCursed #r- #rRandom [REMOVE_SPACE].",
-      "[Trade for Life] #gGain #g5 #gMax #gHP [REMOVE_SPACE]. #rBecome #rCursed #r- #rRandom [REMOVE_SPACE].",
-      "[Trade for Souls] #gGain #g100 #gSouls [REMOVE_SPACE]. #rBecome #rCursed #r- #rRandom [REMOVE_SPACE].",
+      "[Trade for Power] #gGain a #grandom #yRare #gcard. #rBecome #rCursed #r- #rRandom.",
+      "[Trade for Life] #gGain #g5 #gMax #gHP. #rBecome #rCursed #r- #rRandom.",
+      "[Trade for Souls] #gGain #g100 #gSouls. #rBecome #rCursed #r- #rRandom.",
       "[Locked] Trade Complete.",
       "[Leave]"
     ]

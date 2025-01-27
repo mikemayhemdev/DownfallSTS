@@ -35,8 +35,8 @@
     "OPTIONS": [
       "[Leave]",
       "[Leave] #rTake #r",
-      " #rDamage [REMOVE_SPACE].",
-      "[Punch] #rFight [REMOVE_SPACE]. #gGain #ga #gPotion #gRelic #gand #g3 #gPotions [REMOVE_SPACE]."
+      " #rDamage.",
+      "[Punch] #rFight. #gGain #ga #gPotion #gRelic #gand #g3 #gPotions."
     ]
   },
   "downfall:GremlinWheelGame": {
@@ -202,8 +202,8 @@
       "[Soul Harvest] #gFind #gLoot. #r",
       "[Leave]",
       "[Fight]",
-      "[Continue] #gFind #gLoot [REMOVE_SPACE]. #r",
-      "%: #rmonster #rreturns [REMOVE_SPACE]."
+      "[Continue] #gFind #gLoot. #r",
+      "%: #rmonster #rreturns."
     ]
   },
   "downfall:ShiningLight": {
@@ -271,7 +271,7 @@
       " #rSouls. #gGain #gSharpened #gFragment.",
       "[Collect] #rLose #r",
       "[Leave]",
-      " #rHP [REMOVE_SPACE]. #gGain #gBroken #gWing #gStatue."
+      " #rHP. #gGain #gBroken #gWing #gStatue."
     ]
   },
   "downfall:GoldenIdol": {
@@ -386,8 +386,8 @@
     ],
     "OPTIONS": [
       "[Punch] #gGain #g85 #gSouls. #rLose #r",
-      " #rHP [REMOVE_SPACE].",
-      "[Rob] #gObtain #ga #gRelic [REMOVE_SPACE]. #rBecome #rCursed #r- #rPride [REMOVE_SPACE]."
+      " #rHP.",
+      "[Rob] #gObtain #ga #gRelic. #rBecome #rCursed #r- #rPride."
     ]
   },
   "downfall:Beggar": {

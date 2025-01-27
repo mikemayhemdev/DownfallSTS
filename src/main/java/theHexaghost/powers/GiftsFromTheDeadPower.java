@@ -78,7 +78,7 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
 //    }
 
     @Override
-    public void atStartOfTurnPostDraw() {
+    public void atStartOfTurn() {
         this.flash();
         for (int i = 0; i < GiftsFromTheDeadPower.this.amount; i++) {
             AbstractCard q = EtherealExpedition.returnTrulyRandomEtherealCardInCombat().makeCopy();
