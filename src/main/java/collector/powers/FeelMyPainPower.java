@@ -1,15 +1,12 @@
 package collector.powers;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static collector.util.Wiz.applyToEnemy;
 import static collector.util.Wiz.att;
 
 public class FeelMyPainPower extends AbstractCollectorPower {
@@ -31,11 +28,9 @@ public class FeelMyPainPower extends AbstractCollectorPower {
             @Override
             public void update() {
                 isDone = true;
-                for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                    if (!monster.isDeadOrEscaped()) {
-                        att(new LoseHPAction(monster, damageSource, damageAmount));
-                    }
-                }
+                AbstractMonster tar = AbstractDungeon.getRandomMonster();
+                if ( tar != null && !tar.isDeadOrEscaped() )
+                    att(new LoseHPAction(tar, damageSource, damageAmount));
             }
         });
     }

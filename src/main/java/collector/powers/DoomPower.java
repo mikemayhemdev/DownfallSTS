@@ -1,6 +1,5 @@
 package collector.powers;
 
-import collector.relics.JadeRing;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
@@ -12,7 +11,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import theHexaghost.relics.CandleOfCauterizing;
 
 import static collector.util.Wiz.atb;
 import static collector.util.Wiz.isAfflicted;
@@ -32,19 +30,7 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
 
     @Override
     public int getHealthBarAmount() {
-
-        int healthbar = 0;
-
-        if(AbstractDungeon.player.hasRelic(JadeRing.ID)){
-            healthbar = amount+6;
-        }
-
-        if(!(AbstractDungeon.player.hasRelic(JadeRing.ID))){
-            healthbar = amount;
-        }
-
-        return healthbar;
-
+        return amount;
     }
 
     public void atStartOfTurn() {
@@ -55,56 +41,23 @@ public class DoomPower extends AbstractCollectorPower implements HealthBarRender
 
     public void explode() {
         this.flashWithoutSound();
-        System.out.println("DEBUG: Checking Affliction.");
-        if (isAfflicted((AbstractMonster) this.owner)) {         System.out.println("DEBUG: Affliction confirmed.");
+        if (isAfflicted((AbstractMonster) this.owner)) {
         } else {
             if (this.owner.hasPower(DemisePower.POWER_ID)) {
-                System.out.println("DEBUG: There is no Affliction. Reducing DemisePower by 1.");
                 atb(new ReducePowerAction(this.owner, this.owner, DemisePower.POWER_ID, 1));
             } else {
-                System.out.println("DEBUG: There is no Affliction. Removing DoomPower");
                 this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
             }
         }
-
-        if (AbstractDungeon.player.hasRelic(JadeRing.ID)) {
-            if (amount+6 >= owner.currentHealth) {
-                System.out.println("DEBUG: Kill SFX with Jade Ring.");
-                CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-            }
+        if (amount >= owner.currentHealth) {
+            CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
         }
-
-        if (!(AbstractDungeon.player.hasRelic(JadeRing.ID))) {
-            if (amount >= owner.currentHealth) {
-                System.out.println("DEBUG: Kill SFX without Jade Ring.");
-                CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-            }
-        }
-
-        if (AbstractDungeon.player.hasRelic(JadeRing.ID)) {
-            System.out.println("DEBUG: Dealing damage with Jade Ring.");
-            this.addToBot(new LoseHPAction(owner, owner, amount+6, AbstractGameAction.AttackEffect.NONE));
-            }
-
-        if (!AbstractDungeon.player.hasRelic(JadeRing.ID)) {
-            System.out.println("DEBUG: Dealing damage without Jade Ring.");
-            this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.NONE));
-            }
-
+        this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.NONE));
     }
 
     @Override
     public void updateDescription() {
-
-        if (!(AbstractDungeon.player.hasRelic(JadeRing.ID))){
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-        }
-
-        if(AbstractDungeon.player.hasRelic(JadeRing.ID)){
-            int display = (this.amount+6);
-            description = DESCRIPTIONS[0] + display + DESCRIPTIONS[1];
-        }
-
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     @Override

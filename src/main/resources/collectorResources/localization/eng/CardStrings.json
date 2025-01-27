@@ -40,7 +40,7 @@
   },
   "collector:Blightning": {
     "NAME": "Blightning",
-    "DESCRIPTION": "Apply !M! collector:Doom. NL Deal !D! damage. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! collector:Doom. NL Deal !D! damage. NL Draw 1 card from your Collected pile. NL Exhaust."
   },
   "collector:Bonfire": {
     "NAME": "Bonfire",
@@ -82,7 +82,7 @@
   },
   "collector:DarkApotheosis": {
     "NAME": "Dark Apotheosis",
-    "DESCRIPTION": "Upgrade ALL of your Collected cards for the rest of combat. NL Exhaust."
+    "DESCRIPTION": "Upgrade the Collected pile for the rest of combat. NL Exhaust."
   },
   "collector:DarkLordForm": {
     "NAME": "Dark Lord Form",
@@ -115,20 +115,18 @@
   },
   "collector:DragonsTrove": {
     "NAME": "Dragon's Trove",
-    "DESCRIPTION": "collector:Pyre. NL Draw !M! card from your Collected pile. NL Gain 1 collector:Reserve. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Draw !M! cards from your Collected pile. NL Gain 1 collector:Reserve. NL Exhaust."
+    "DESCRIPTION": "collector:Pyre. NL Draw 2 cards from your Collected pile. NL Gain !M! collector:Reserve. NL Exhaust."
   },
   "collector:Ember": {
     "NAME": "Ember",
-    "DESCRIPTION": "Retain. Exhaust. NL When *Exhausted, gain !M! Strength and !B! Block.",
+    "DESCRIPTION": "Retain. NL Exhaust. NL When *Exhausted, gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [
       "These embers must be lit, not played."
     ]
   },
   "collector:Empower": {
     "NAME": "Empower",
-    "DESCRIPTION": "Gain X+1 Strength at the start of your next turn.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 Strength at the start of your next !M! turns."
+    "DESCRIPTION": "Gain X Strength at the start of your next !M! turns."
   },
   "collector:Extricate": {
     "NAME": "Sever Soul",
@@ -136,7 +134,7 @@
   },
   "collector:FeelMyPain": {
     "NAME": "Feel My Pain",
-    "DESCRIPTION": "Whenever you *Exhaust a card, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Whenever you *Exhaust a card, a random enemy loses !M! HP."
   },
   "collector:FiendFire": {
     "NAME": "Fiend Fire",
@@ -148,7 +146,7 @@
   },
   "collector:FingerOfDeath": {
     "NAME": "Finger of Death",
-    "DESCRIPTION": "Only collector:Reserves may be spent on this. NL Apply !M! collector:Doom to ALL enemies.",
+    "DESCRIPTION": "Only collector:Reserves may be spent on this. NL Apply !M! collector:Doom.",
     "UPGRADE_DESCRIPTION": "Only collector:Reserves may be spent on this. NL Apply !M! collector:Doom to ALL enemies."
   },
   "collector:FlameLash": {
@@ -169,13 +167,13 @@
   },
   "collector:FuelTheFire": {
     "NAME": "Fuel the Fire",
-    "DESCRIPTION": "collector:Pyre. NL Next turn, gain !M! collector:Reserve and draw a card. NL Exhaust.",
+    "DESCRIPTION": "collector:Pyre. NL Next turn, gain !M! collector:Reserve.",
     "UPGRADE_DESCRIPTION": "collector:Pyre. NL Next turn, gain !M! collector:Reserve and draw a card."
   },
   "collector:Goodbye": {
     "NAME": "Goodbye",
-    "DESCRIPTION": "Triple the enemy's collector:Doom. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Triple the enemy's collector:Doom. NL Exhaust."
+    "DESCRIPTION": "Double the enemy's collector:Doom. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple the enemy's collector:Doom. NL Exhaust."
   },
   "collector:GourmandsGaze": {
     "NAME": "Gourmand's Gaze",
@@ -192,7 +190,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "Greenpyre Locus",
-    "DESCRIPTION": "Choose 1 of 3 Collected cards to add into your hand. NL Exhaust.",
+    "DESCRIPTION": "Choose 1 of 3 Collected cards to add into your hand. Add !M! copies of it into your Collected pile.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to add into your hand."
     ]
@@ -203,7 +201,7 @@
   },
   "collector:Hoard": {
     "NAME": "Hoard",
-    "DESCRIPTION": "collector:Pyre. NL Draw !M! cards."
+    "DESCRIPTION": "collector:Pyre. NL Draw !M! cards. NL This turn, they Retain."
   },
   "collector:HoardersStrike": {
     "NAME": "Hoarder's Strike",
@@ -224,7 +222,7 @@
   },
   "collector:InflictAgony": {
     "NAME": "Inflict Agony",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is not collector:Afflicted, apply !M! Weak and Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is not collector:Afflicted, apply 2 Weak and Vulnerable."
   },
   "collector:Invigorate": {
     "NAME": "Flash",
@@ -236,8 +234,8 @@
   },
   "collector:IronbarkKindling": {
     "NAME": "Ironbark Kindling",
-    "DESCRIPTION": "Unplayable. NL When *Exhausted, gain !B! Block and draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When *Exhausted, gain !B! Block and draw 1 card.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When *Exhausted, gain !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
@@ -252,7 +250,7 @@
   },
   "collector:Karma": {
     "NAME": "Karma",
-    "DESCRIPTION": "At the end of your turn, if an enemy is collector:Afflicted, gain !clm2! Block.",
+    "DESCRIPTION": "At the end of your turn, gain !M! Block. NL If an enemy is collector:Afflicted, gain !clm2! more.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, gain !M! Block. NL If an enemy is collector:Afflicted, gain !clm2! more."
   },
   "collector:LanternFlare": {
@@ -269,8 +267,8 @@
   },
   "collector:MiniCurse": {
     "NAME": "Mini-Curse",
-    "DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable."
+    "DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable.",
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Apply 1 Weak and Vulnerable to ALL enemies."
   },
   "collector:Misdirect": {
     "NAME": "Misdirect",
@@ -282,15 +280,15 @@
   },
   "collector:OakbrimKindling": {
     "NAME": "Oakbrim Kindling",
-    "DESCRIPTION": "Unplayable. Retain. NL When *Exhausted, draw !M! cards.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
   },
   "collector:Omen": {
     "NAME": "Omen",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a Collected card, gain 1 Strength.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a Collected card, gain 1 Strength."
+    "DESCRIPTION": "Whenever you play a Collected card, gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a Collected card, gain 1 Strength."
   },
   "collector:ProtectingCall": {
     "NAME": "Protecting Call",
@@ -354,7 +352,8 @@
   },
   "collector:Soulforge": {
     "NAME": "Soulforge",
-    "DESCRIPTION": "Draw a card from your Collected pile. Gain !M! Upgraded copy of it. NL Exhaust."
+    "DESCRIPTION": "Draw a card from your Collected pile. Gain !M! Upgraded copy of it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw a card from your Collected pile. Gain !M! Upgraded copies of it. NL Exhaust."
   },
   "collector:Spark": {
     "NAME": "Spark",
@@ -363,7 +362,7 @@
   },
   "collector:SpiritLeech": {
     "NAME": "Spirit Leech",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is collector:Afflicted, gain !B! Block."
   },
   "collector:StashAway": {
     "NAME": "Stash Away",
@@ -383,14 +382,14 @@
   },
   "collector:SunbloomKindling": {
     "NAME": "Sunbloom Kindling",
-    "DESCRIPTION": "Unplayable. NL When *Exhausted, gain !M! collector:Reserve and add 2 *Embers into your hand.",
+    "DESCRIPTION": "Unplayable. NL When *Exhausted, gain !M! Strength and add 2 *Embers into your hand.",
     "EXTENDED_DESCRIPTION": [
       "I must light this kindling to use it."
     ]
   },
   "collector:ThornWhip": {
     "NAME": "Thorn Whip",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply collector:Doom equal to unblocked damage dealt."
+    "DESCRIPTION": "Deal !D! damage and apply !M! hermit:Bruise to ALL enemies. NL Gain a *Shiv."
   },
   "collector:Torchbearer": {
     "NAME": "Torchbearer",
@@ -419,7 +418,8 @@
   },
   "collector:AcidSlimeCard": {
     "NAME": "Acid Slime",
-    "DESCRIPTION": "Add !M! random 0 cost cards into your hand."
+    "DESCRIPTION": "Add !M! random 0 cost card into your hand.",
+    "UPGRADE_DESCRIPTION": "Add !M! random 0 cost cards into your hand."
   },
   "collector:AugmenterCard": {
     "NAME": "Augmenter",
@@ -502,7 +502,7 @@
   },
   "collector:GiantHeadCardStageTwo": {
     "NAME": "Tock",
-    "DESCRIPTION": "Next turn, gain a *Headcrush. NL Exhaust."
+    "DESCRIPTION": "Next turn, gain a *Headcrush."
   },
   "collector:GiantHeadCardStageThree": {
     "NAME": "Headcrush",
@@ -530,7 +530,7 @@
   },
   "collector:LagavulinCard": {
     "NAME": "Lagavulin",
-    "DESCRIPTION": "Gain !B! Block. NL ALL enemies lose !M! Strength."
+    "DESCRIPTION": "ALL enemies lose !M! Strength."
   },
   "collector:LivingWallCard": {
     "NAME": "Living Wall",
@@ -538,7 +538,7 @@
   },
   "collector:LouseCard": {
     "NAME": "Louse",
-    "DESCRIPTION": "Gain 1 bronze:Blur. NL Next turn, gain !B! Block."
+    "DESCRIPTION": "Gain 1 bronze:Blur. NL The next time you receive unblocked attack damage, gain !B! Block."
   },
   "collector:MadGremlinCard": {
     "NAME": "Mad Gremlin",
@@ -562,7 +562,7 @@
   },
   "collector:NemesisCard": {
     "NAME": "Nemesis",
-    "DESCRIPTION": "Gain 1 Intangible. NL Gain !M! hexamod:Soulburn."
+    "DESCRIPTION": "Gain 1 Intangible."
   },
   "collector:NlothCard": {
     "NAME": "N'Loth",
@@ -619,12 +619,11 @@
   },
   "collector:SneakyGremlinCard": {
     "NAME": "Sneaky Gremlin",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 2 cards."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card."
   },
   "collector:SneckoCard": {
     "NAME": "Snecko",
-    "DESCRIPTION": "Draw !M! card. NL sneckomod:Muddle your hand.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL sneckomod:Muddle your hand."
+    "DESCRIPTION": "Draw !M! cards. NL sneckomod:Muddle your hand."
   },
   "collector:SphericGuardianCard": {
     "NAME": "Spheric Guardian",

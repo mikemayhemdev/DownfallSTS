@@ -19,7 +19,6 @@ public class OakbrimKindling extends AbstractCollectorCard {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 2;
         tags.add(expansionContentMod.UNPLAYABLE);
-        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

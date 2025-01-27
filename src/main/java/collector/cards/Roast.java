@@ -12,7 +12,7 @@ public class Roast extends AbstractCollectorCard {
 
     public Roast() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 4;
+        baseDamage = 6;
         isPyre();
     }
 
@@ -21,6 +21,6 @@ public class Roast extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 }

@@ -14,7 +14,7 @@ public class SomberShield extends AbstractCollectorCard implements OnPyreCard {
 
     public SomberShield() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 6;
         isPyre();
     }
 

@@ -15,7 +15,7 @@ public class ItMattersNot extends AbstractCollectorCard {
 
     public ItMattersNot() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 13;
+        baseBlock = 12;
         baseMagicNumber = magicNumber = 1;
     }
 

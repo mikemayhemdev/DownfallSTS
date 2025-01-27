@@ -15,7 +15,7 @@ public class ReptomancerCard extends AbstractCollectibleCard {
     public ReptomancerCard() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 6;
-        baseSecondMagic = secondMagic = 2;
+        baseSecondMagic = secondMagic = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

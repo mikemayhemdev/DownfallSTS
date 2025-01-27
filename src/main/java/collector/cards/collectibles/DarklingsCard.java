@@ -17,9 +17,9 @@ public class DarklingsCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, common, , , , , , 
 
     public DarklingsCard() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         isPyre();
-        baseDamage = 12;
+        baseDamage = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

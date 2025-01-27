@@ -18,8 +18,8 @@ public class AcidSlimeCard extends AbstractCollectibleCard {
     // intellij stuff skill, enemy, common, , , , , , 
 
     public AcidSlimeCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -42,5 +42,6 @@ public class AcidSlimeCard extends AbstractCollectibleCard {
 
     public void upp() {
         upgradeMagicNumber(1);
+        uDesc();
     }
 }

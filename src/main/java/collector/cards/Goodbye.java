@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
-import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemyTop;
@@ -19,10 +18,9 @@ public class Goodbye extends AbstractCollectorCard {
     // intellij stuff skill, enemy, rare, , , , , 2, 1
 
     public Goodbye() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 2;
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 1;
         exhaust = true;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -43,7 +41,6 @@ public class Goodbye extends AbstractCollectorCard {
     }
 
     public void upp() {
-        this.selfRetain=true;
-        uDesc();
+        upgradeBaseCost(1);
     }
 }

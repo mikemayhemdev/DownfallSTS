@@ -23,6 +23,6 @@ public class FungiBeastCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

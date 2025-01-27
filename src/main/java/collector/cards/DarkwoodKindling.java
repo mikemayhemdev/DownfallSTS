@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
 import hermit.util.Wiz;
-import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToEnemy;
@@ -22,7 +21,6 @@ public class DarkwoodKindling extends AbstractCollectorCard {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 2;
         tags.add(expansionContentMod.UNPLAYABLE);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

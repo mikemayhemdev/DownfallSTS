@@ -14,7 +14,7 @@ public class RomeoCard extends AbstractCollectibleCard {
 
     public RomeoCard() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

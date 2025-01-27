@@ -13,9 +13,9 @@ public class Finalize extends AbstractCollectorCard {
     // intellij stuff skill, enemy, uncommon, , , , , 25, 5
 
     public Finalize() {
-        super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 20;
-        baseSecondMagic = secondMagic = 5;
+        super(ID, 4, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 24;
+        baseSecondMagic = secondMagic = 6;
         tags.add(CardTags.HEALING);
         exhaust = true;
     }

@@ -19,7 +19,7 @@ public class VoidArmor extends AbstractCollectorCard {
 
     public VoidArmor() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL);
-        baseBlock = 10;
+        baseBlock = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

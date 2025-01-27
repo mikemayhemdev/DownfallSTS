@@ -21,7 +21,7 @@ public class InevitableDemise extends AbstractCollectorCard {
 
     public InevitableDemise() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 10;
+        baseDamage = 9;
        // baseMagicNumber = magicNumber = 1;
     }
 

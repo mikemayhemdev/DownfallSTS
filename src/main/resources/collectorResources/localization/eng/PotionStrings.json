@@ -28,7 +28,7 @@
   "collector:TempHPPotion": {
     "NAME": "Felwater",
     "DESCRIPTIONS": [
-      "Gain #b8 #yTemp. #yHP [REMOVE_SPACE].",
+      "Gain #b8 #yTemp. #yHP.",
       "Gain #b",
       " #yTemp. #yHP [REMOVE_SPACE]."
     ]

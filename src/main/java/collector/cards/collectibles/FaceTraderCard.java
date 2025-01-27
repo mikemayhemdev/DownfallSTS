@@ -15,8 +15,8 @@ public class FaceTraderCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, uncommon, , , , , 2, 1
 
     public FaceTraderCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

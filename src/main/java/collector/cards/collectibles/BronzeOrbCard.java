@@ -14,8 +14,8 @@ public class BronzeOrbCard extends AbstractCollectibleCard {
 
     public BronzeOrbCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 7;
-        baseBlock = 7;
+        baseDamage = 5;
+        baseBlock = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

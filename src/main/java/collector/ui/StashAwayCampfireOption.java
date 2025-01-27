@@ -15,7 +15,7 @@ public class StashAwayCampfireOption extends AbstractCampfireOption {
     public static final String[] DESCRIPTIONS;
     private static final UIStrings UI_STRINGS;
 
-    public static final int GOLD_GRANTED = 60;
+    public static final int GOLD_GRANTED = 40;
 
 
     static {

@@ -16,7 +16,7 @@ public class Bonfire extends AbstractCollectorCard {
 
     public Bonfire() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 9;
+        baseBlock = 16;
         isPyre();
     }
 

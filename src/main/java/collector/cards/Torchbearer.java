@@ -20,6 +20,9 @@ public class Torchbearer extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (upgraded){
+            this.exhaust = TempHPField.tempHp.get(p) > 0;
+        }
         atb(new AddTemporaryHPAction(p, p, magicNumber));
     }
 

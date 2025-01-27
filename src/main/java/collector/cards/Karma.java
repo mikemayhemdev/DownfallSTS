@@ -14,17 +14,17 @@ public class Karma extends AbstractCollectorCard {
 
     public Karma() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-       // baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 4;
+        baseMagicNumber = magicNumber = 2;
+        baseSecondMagic = secondMagic = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       // applyToSelf(new MetallicizePower(p, magicNumber));
+        applyToSelf(new MetallicizePower(p, magicNumber));
         applyToSelf(new KarmaPower(secondMagic));
     }
 
     public void upp() {
-     //   upgradeMagicNumber(1);
-        upgradeSecondMagic(2);
+        upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }

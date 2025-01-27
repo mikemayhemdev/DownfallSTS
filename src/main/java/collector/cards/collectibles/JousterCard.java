@@ -13,8 +13,8 @@ public class JousterCard extends AbstractCollectibleCard {
 
     public JousterCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 14;
-        baseBlock = 14;
+        baseDamage = 12;
+        baseBlock = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

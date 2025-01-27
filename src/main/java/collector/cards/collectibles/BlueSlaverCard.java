@@ -14,7 +14,7 @@ public class BlueSlaverCard extends AbstractCollectibleCard {
 
     public BlueSlaverCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 10;
+        baseDamage = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

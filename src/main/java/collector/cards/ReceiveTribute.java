@@ -34,7 +34,7 @@ public class ReceiveTribute extends AbstractCollectorCard {
         if (possibilities == null) {
             possibilities = new ArrayList<>();
             for (AbstractCard q : CardLibrary.getAllCards()) {
-                if (q.rarity != CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY) && !(q.name.contains("YOU ARE MINE!"))) {
+                if (q.rarity != CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
                     possibilities.add(q.makeCopy());
                 }
             }
@@ -53,6 +53,6 @@ public class ReceiveTribute extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

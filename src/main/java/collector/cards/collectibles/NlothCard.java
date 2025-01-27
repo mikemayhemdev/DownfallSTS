@@ -13,7 +13,7 @@ public class NlothCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, uncommon, , , , , , 
 
     public NlothCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         isPyre();
     }
 

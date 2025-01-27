@@ -16,14 +16,14 @@ public class Empower extends AbstractCollectorCard {
 
     public Empower() {
         super(ID, -1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
-            if (effect+1 > 0) {
+            if (effect > 0) {
                 att(new VFXAction(new HeartBuffEffect(Empower.this.hb.cX, Empower.this.hb.cY)));
-                applyToSelfTop(new StrengthOverTurnsPower(magicNumber, effect+1));
+                applyToSelfTop(new StrengthOverTurnsPower(magicNumber, effect));
             }
             return true;
         }));
@@ -31,6 +31,5 @@ public class Empower extends AbstractCollectorCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        uDesc();
     }
 }

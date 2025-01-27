@@ -25,6 +25,6 @@ public class Misdirect extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(3);
     }
 }

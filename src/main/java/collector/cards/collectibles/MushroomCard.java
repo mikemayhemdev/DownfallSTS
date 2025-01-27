@@ -16,7 +16,7 @@ public class MushroomCard extends AbstractCollectibleCard {
 
     public MushroomCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 5;
         baseMagicNumber = magicNumber = 3;
     }
 
@@ -30,7 +30,7 @@ public class MushroomCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(1);
         upgradeMagicNumber(1);
     }
 }

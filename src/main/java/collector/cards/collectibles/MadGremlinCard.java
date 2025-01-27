@@ -13,8 +13,8 @@ public class MadGremlinCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, common, , , , , 2, 2
 
     public MadGremlinCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 6;
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

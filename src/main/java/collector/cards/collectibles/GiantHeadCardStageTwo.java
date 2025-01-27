@@ -14,7 +14,6 @@ public class GiantHeadCardStageTwo extends AbstractCollectibleCard {
     public GiantHeadCardStageTwo() {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         cardsToPreview = new GiantHeadCardStageThree();
-        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

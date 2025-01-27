@@ -13,7 +13,7 @@ public class SpireGrowthCard extends AbstractCollectibleCard {
 
     public SpireGrowthCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 12;
+        baseMagicNumber = magicNumber = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -16,16 +16,16 @@ public class FuelTheFire extends AbstractCollectorCard {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         isPyre();
-        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new NextTurnReservePower(magicNumber));
-        applyToSelf(new DrawCardNextTurnPower(p, 1));
+        if (upgraded) {
+            applyToSelf(new DrawCardNextTurnPower(p, 1));
+        }
     }
 
     public void upp() {
-        exhaust = false;
         uDesc();
     }
 }

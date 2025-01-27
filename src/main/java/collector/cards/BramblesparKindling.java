@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.makeInHand;
@@ -17,7 +16,6 @@ public class BramblesparKindling extends AbstractCollectorCard {
     public BramblesparKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         cardsToPreview = new BurningStrike();
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

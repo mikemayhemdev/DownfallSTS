@@ -101,31 +101,31 @@ public class TorchHeadPower extends AbstractCollectorPower implements NonStackab
         StringBuilder sb = new StringBuilder();
         sb.append(DESCRIPTIONS[0]);
         if (onAttackRandomDoom > 0) {
-            sb.append(DESCRIPTIONS[1]).append(onAttackRandomDoom).append(DESCRIPTIONS[2]);
-            if (onAttackAOE > 0 || onAttackBlock > 0 || onAttackPoison > 0 || onAttackDraw > 0) {
+            sb.append(DESCRIPTIONS[1] + onAttackRandomDoom + DESCRIPTIONS[2]);
+            if (onAttackAOE > 0 || onAttackBlock > 0 || onAttackPoison > 0) {
                 sb.append(" NL ");
             }
         }
         if (onAttackPoison > 0) {
-            sb.append(DESCRIPTIONS[1]).append(onAttackPoison).append(DESCRIPTIONS[7]);
-            if (onAttackAOE > 0 || onAttackBlock > 0 || onAttackDraw > 0) {
+            sb.append(DESCRIPTIONS[1] + onAttackPoison + DESCRIPTIONS[7]);
+            if (onAttackAOE > 0 || onAttackBlock > 0) {
                 sb.append(" NL ");
             }
         }
         if (onAttackAOE > 0) {
-            sb.append(DESCRIPTIONS[3]).append(onAttackAOE).append(DESCRIPTIONS[4]);
-            if (onAttackBlock > 0 || onAttackDraw > 0) {
+            sb.append(DESCRIPTIONS[3] + onAttackAOE + DESCRIPTIONS[4]);
+            if (onAttackBlock > 0) {
                 sb.append(" NL ");
             }
         }
         if (onAttackBlock > 0) {
-            sb.append(DESCRIPTIONS[5]).append(onAttackBlock).append(DESCRIPTIONS[6]);
+            sb.append(DESCRIPTIONS[5] + onAttackBlock + DESCRIPTIONS[6]);
             if (onAttackDraw > 0) {
                 sb.append(" NL ");
             }
         }
         if (onAttackDraw > 0) {
-            sb.append(DESCRIPTIONS[8]).append(onAttackDraw).append(onAttackDraw == 1 ? DESCRIPTIONS[9] : DESCRIPTIONS[10]);
+            sb.append(DESCRIPTIONS[7] + onAttackDraw + (onAttackDraw == 1 ? DESCRIPTIONS[8] : DESCRIPTIONS[9]));
         }
         description = sb.toString();
     }

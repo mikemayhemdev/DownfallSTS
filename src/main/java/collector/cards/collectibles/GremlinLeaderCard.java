@@ -20,7 +20,7 @@ public class GremlinLeaderCard extends AbstractCollectibleCard {
 
     public GremlinLeaderCard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -18,7 +18,7 @@ public class SnakePlantCard extends AbstractCollectibleCard {
 
     public SnakePlantCard() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

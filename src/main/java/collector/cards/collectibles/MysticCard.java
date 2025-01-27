@@ -12,8 +12,8 @@ public class MysticCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, common, , , , , 6, 2
 
     public MysticCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 8;
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,6 +21,6 @@ public class MysticCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(2);
     }
 }

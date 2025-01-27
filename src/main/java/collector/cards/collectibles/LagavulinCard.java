@@ -15,11 +15,9 @@ public class LagavulinCard extends AbstractCollectibleCard {
     public LagavulinCard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 1;
-        baseBlock = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
         forAllMonstersLiving(q -> applyToEnemy(q, new StrengthPower(q, -magicNumber)));
     }
 

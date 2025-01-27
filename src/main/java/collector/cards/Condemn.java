@@ -18,7 +18,7 @@ public class Condemn extends AbstractCollectorCard {
     public Condemn() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 5;
+        baseSecondMagic = secondMagic = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -29,6 +29,6 @@ public class Condemn extends AbstractCollectorCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeSecondMagic(2);
+        upgradeSecondMagic(1);
     }
 }

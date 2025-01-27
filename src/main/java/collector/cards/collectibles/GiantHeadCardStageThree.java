@@ -12,7 +12,7 @@ public class GiantHeadCardStageThree extends AbstractCollectibleCard {
 
     public GiantHeadCardStageThree() {
         super(ID, 3, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
-        baseDamage = 75;
+        baseDamage = 70;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -20,6 +20,6 @@ public class GiantHeadCardStageThree extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeDamage(25);
+        upgradeDamage(30);
     }
 }

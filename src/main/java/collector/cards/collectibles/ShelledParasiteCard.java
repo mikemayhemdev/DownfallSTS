@@ -13,7 +13,7 @@ public class ShelledParasiteCard extends AbstractCollectibleCard {
 
     public ShelledParasiteCard() {
         super(ID, 1, CardType.POWER, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
