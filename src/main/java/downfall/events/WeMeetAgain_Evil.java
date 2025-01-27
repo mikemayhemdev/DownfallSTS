@@ -62,8 +62,8 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
 
         for (AbstractRelic r : AbstractDungeon.player.relics) {
             if
-                    //Commons
-                    ((r.relicId != Strawberry.ID) &&
+                //Commons
+            ((r.relicId != Strawberry.ID) &&
                     (r.relicId != MawBank.ID) &&
                     (r.relicId != PickAxe.ID) &&
                     (r.relicId != TinyChest.ID) &&
@@ -86,13 +86,14 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
                     (r.relicId != ForbiddenFruit.ID) &&
                     (r.relicId != Libra.ID) &&
                     (r.relicId != SneckoBoss.ID) &&
-                    (r.relicId != PandorasBox.ID))
+                    (r.relicId != PandorasBox.ID)) {
 
-            if (r.tier == AbstractRelic.RelicTier.COMMON) {
-                playerCommonRelics.add(r);
-            }
-            if (r.tier == AbstractRelic.RelicTier.UNCOMMON) {
-                playerUncommonRelics.add(r);
+                if (r.tier == AbstractRelic.RelicTier.COMMON) {
+                    playerCommonRelics.add(r);
+                }
+                if (r.tier == AbstractRelic.RelicTier.UNCOMMON) {
+                    playerUncommonRelics.add(r);
+                }
             }
         }
 

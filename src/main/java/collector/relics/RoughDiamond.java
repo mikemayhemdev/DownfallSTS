@@ -24,19 +24,19 @@ public class RoughDiamond extends CustomRelic {
 
     @Override
     public void onVictory() {
-        this.grayscale = false;
+        stopPulse();
     }
 
     public void atTurnStart() {
         this.triggeredThisTurn = false;
-        this.grayscale = false;
+        beginLongPulse();
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
             if (card.rarity == AbstractCard.CardRarity.RARE) {
                 if (!this.triggeredThisTurn) {
                     this.triggeredThisTurn = true;
-                    this.grayscale = true;
+                    stopPulse();
                 flash();
                 this.addToBot(new GainEnergyAction(1));
             }
