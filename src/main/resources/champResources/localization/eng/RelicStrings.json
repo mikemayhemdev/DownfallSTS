@@ -81,7 +81,8 @@
     "NAME": "Amulet of Unyielding",
     "FLAVOR": "Energy once thought fleeting flows through you as if it had always been there.",
     "DESCRIPTIONS": [
-      "Whenever you spend #yVigor [REMOVE_SPACE], gain #b1 #yStrength for every #b12 #yVigor spent."
+      "Whenever you spend #yVigor [REMOVE_SPACE], gain #b1 #yStrength for every #b",
+      " #yVigor spent."
     ]
   },
   "champ:SignatureFinisher": {

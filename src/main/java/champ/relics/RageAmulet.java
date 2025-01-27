@@ -32,6 +32,7 @@ public class RageAmulet extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("CrystallizedMud.png"));
     private boolean triggeredThisTurn = false;
     int remainingVigor = 0;
+    private static final int VIGREQ = 12;
     public RageAmulet() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.HEAVY);
     }
@@ -55,18 +56,18 @@ public class RageAmulet extends CustomRelic {
 
     public void addNextTurnPower(AbstractPower power) {
         int found = power.amount;
-        int totaled = found / 12;
+        int totaled = found / VIGREQ;
         int finalized = totaled * 1;
         boolean isVigor = (VigorPower.POWER_ID.equals(power.ID));
 
         // Add remainder.
         if (isVigor) {
-            remainingVigor += found % 12;
+            remainingVigor += found % VIGREQ;
             this.counter = remainingVigor;
         }
         // If remainder is beyond threshold, add to total and subtract.
-        if (remainingVigor >= 12) {
-            remainingVigor -= 12;
+        if (remainingVigor >= VIGREQ) {
+            remainingVigor -= VIGREQ;
             finalized += 1;
             this.counter = remainingVigor;
         }
@@ -82,7 +83,6 @@ public class RageAmulet extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + VIGREQ + DESCRIPTIONS[1];
     }
-
 }
