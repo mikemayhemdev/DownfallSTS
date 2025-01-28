@@ -214,10 +214,10 @@
       "You walk around it, wondering what could have been."
     ],
     "OPTIONS": [
-      "[Enter] #gUpgrade #g2 #grandom #gcards. #rBecome #rCursed #r- #rFlawed [REMOVE_SPACE].",
+      "[Enter] #gUpgrade #g2 #grandom #gcards. #rBecome #rCursed #r- #rFlawed.",
       "[Leave]",
       "[Locked] Requires: Upgradeable Cards",
-      "[Enter] #gUpgrade #g3 #grandom #gcards. #rBecome #rCursed #r- #rFlawed [REMOVE_SPACE]."
+      "[Enter] #gUpgrade #g3 #grandom #gcards. #rBecome #rCursed #r- #rFlawed."
     ]
   },
   "downfall:WorldOfGoop": {
@@ -618,11 +618,11 @@
     "DESCRIPTIONS": [
       "Only you should hold this power. You shatter the shrine into pieces. NL A dark wail echoes all around you, and you can feel the Shrine's #p~cursed~ #p~magic~ seep into your bones."    ],
     "OPTIONS": [
-      "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rAged [REMOVE_SPACE].",
+      "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rAged.",
       "[Desecrate] #gRemove #g2 #gcards. #rLose #r",
       " #rMax #rHP [REMOVE_SPACE].",
-      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rFlawed [REMOVE_SPACE].",
-      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rPain [REMOVE_SPACE]."
+      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rFlawed.",
+      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rPain."
     ]
   }
 }

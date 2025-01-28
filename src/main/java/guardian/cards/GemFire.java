@@ -32,8 +32,8 @@ public class GemFire extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int COST = 1;
-    private static final int DAMAGE = 12;
+    private static final int COST = 2;
+    private static final int DAMAGE = 16;
 
     private static final int SOCKETS = 0;
 
@@ -186,7 +186,7 @@ public class GemFire extends AbstractGuardianCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            upgradeBaseCost(1);
         }
     }
 }

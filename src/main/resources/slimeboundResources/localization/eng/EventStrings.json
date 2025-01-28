@@ -67,14 +67,14 @@
       "You can't figure out how the Slime minions are a threat to anyone - it appears the only tactic they use is to violently throw their bodies at enemies.  Well, if it works for them..."
     ],
     "OPTIONS": [
-      "[Read] #gRemove #gall Strikes. #gReceive #g3 #gUpgraded Tackles.",
-      "[Take] #gObtain #gConsult #gPlaybook. #rTrigger #ra #rtrap [REMOVE_SPACE].",
+      "[Read] #gRemove #gall #gStrikes. #gReceive #g3 #gUpgraded #gTackles.",
+      "[Take] #gObtain #gConsult #gPlaybook. #rTrigger #ra #rtrap.",
       "[Leave]",
-      "[Dive] #rBecome #rCursed #r- #rIcky [REMOVE_SPACE].",
+      "[Dive] #rBecome #rCursed #r- #rIcky.",
       "[Be Patient] #rTake #r",
-      " #rDamage [REMOVE_SPACE].",
+      " #rDamage.",
       "[Grab and Run] #rLose #r",
-      " #rMax #rHP [REMOVE_SPACE]."
+      " #rMax #rHP."
     ]
   },
   "Slimebound:Darklings": {

@@ -48,11 +48,6 @@ public class PressTheAttack extends AbstractSlimeboundCard {
 
     }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        slimedGlowCheck();
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
             addToBot(new CommandAction());

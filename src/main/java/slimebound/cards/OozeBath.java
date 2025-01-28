@@ -55,10 +55,7 @@ public class OozeBath extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new GoopPerTurnPower(m, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
-
-
     }
 
     public AbstractCard makeCopy() {
@@ -72,7 +69,7 @@ public class OozeBath extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeMagicNumber(3);
+            upgradeSlimed(3);
 
         }
 
