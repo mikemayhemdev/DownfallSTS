@@ -26,11 +26,13 @@ public class BraceWallopAction extends AbstractGameAction {
         if (this.duration == 0.5F)
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, this.attackEffect));
         tickDuration();
-        braceattack();
-        this.target.damage(new DamageInfo(this.source, this.damage, this.damageType));
-        if (AbstractDungeon.getMonsters().areMonstersBasicallyDead())
-            AbstractDungeon.actionManager.clearPostCombatActions();
-        AbstractDungeon.actionManager.addToTop((AbstractGameAction) new WaitAction(0.1F));
+        if (this.isDone) {
+            braceattack();
+            this.target.damage(new DamageInfo(this.source, this.damage, this.damageType));
+            if (AbstractDungeon.getMonsters().areMonstersBasicallyDead())
+                AbstractDungeon.actionManager.clearPostCombatActions();
+            AbstractDungeon.actionManager.addToTop((AbstractGameAction) new WaitAction(0.1F));
+        }
     }
 
     private void braceattack() {
