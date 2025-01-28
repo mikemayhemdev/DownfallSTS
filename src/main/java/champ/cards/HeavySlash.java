@@ -30,8 +30,7 @@ public class HeavySlash extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new VigorWallopAction((AbstractCreature)m, (AbstractCreature)p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new VigorWallopAction((AbstractCreature)m, (AbstractCreature)p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 
     public void upp() {
