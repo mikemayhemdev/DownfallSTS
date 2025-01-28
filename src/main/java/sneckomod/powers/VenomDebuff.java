@@ -6,18 +6,33 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import basemod.interfaces.CloneablePowerInterface;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import hermit.HermitMod;
+import hermit.util.TextureLoader;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import downfall.util.TextureLoader;
+
 import sneckomod.SneckoMod;
 
-public class VenomDebuff extends AbstractPower implements CloneablePowerInterface, HealthBarRenderPower {
+public class VenomDebuff extends AbstractPower implements CloneablePowerInterface, OnReceivePowerPower {
     public static final String POWER_ID = SneckoMod.makeID("VenomDebuff");
 
     private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/MudShield84.png");
@@ -38,32 +53,12 @@ public class VenomDebuff extends AbstractPower implements CloneablePowerInterfac
         updateDescription();
     }
 
-    public void atStartOfTurn() {
-            if (getDebuffCount() >= 3) {
-                this.addToBot(new DamageAction(owner, new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
-        }
-    }
-
     @Override
-    public Color getColor() {
-        return (getDebuffCount() >= 3) ? Color.CYAN.cpy() : Color.CYAN.cpy();
-        // apparently base game bug involving color changing
-    }
-
-    private int getDebuffCount() {
-        int debuffCount = 0;
-        for (AbstractPower power : owner.powers) {
-            if ((power.type == PowerType.DEBUFF))
-            {
-                debuffCount++;
-            }
+    public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        if (power.type == PowerType.DEBUFF && target == this.owner && !power.ID.equals("Shackled") && !target.hasPower("Artifact") && !(power instanceof VenomDebuff)) {
+            this.addToBot(new DamageAction(owner, new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
         }
-        return debuffCount;
-    }
-
-    @Override
-    public int getHealthBarAmount() {
-        return amount;
+        return true;
     }
 
     @Override

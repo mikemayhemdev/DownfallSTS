@@ -85,9 +85,6 @@ public class FountainPower extends AbstractPower implements CloneablePowerInterf
                 overflowActive = true;
             }
 
-            if (card instanceof TyphoonFang && card.purgeOnUse) {
-                overflowActive = false;
-            }
 
             if (AbstractDungeon.player.hasRelic(D8.ID)) {
                 D8 d8Relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
@@ -96,6 +93,10 @@ public class FountainPower extends AbstractPower implements CloneablePowerInterf
                         overflowActive = true;
                     }
                 }
+            }
+
+            if (card instanceof TyphoonFang && card.purgeOnUse) {
+                overflowActive = false;
             }
         }
 

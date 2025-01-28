@@ -187,8 +187,8 @@
         "sneckomod:VenomDebuff": {
           "NAME": "Venom",
           "DESCRIPTIONS": [
-            "At the start of its turn, loses #b",
-            " HP only if it has at least two debuffs that aren't #yVenom [REMOVE_SPACE]."
+            "Whenever this creature gains a #ynon-Venom debuff, they lose #b",
+            " HP."
           ]
         }
       }

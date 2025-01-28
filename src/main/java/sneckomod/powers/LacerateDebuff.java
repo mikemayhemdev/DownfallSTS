@@ -49,7 +49,6 @@ public class LacerateDebuff extends AbstractPower implements CloneablePowerInter
         if (power.type == PowerType.DEBUFF && target == this.owner && !(power instanceof VenomDebuff) && !power.ID.equals("Shackled") && !target.hasPower("Artifact")) {
             int additionalAmount = 0;
 
-            // Check if ToxicPersonalityPower exists and get its stack count
             if (AbstractDungeon.player.hasPower(ToxicPersonalityPower.POWER_ID)) {
                 AbstractPower toxicPersonality = AbstractDungeon.player.getPower(ToxicPersonalityPower.POWER_ID);
                 additionalAmount += toxicPersonality.amount;

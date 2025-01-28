@@ -25,7 +25,6 @@ public class ShiningLight_Evil extends AbstractImageEvent {
     private static final EventStrings eventStrings;
     private static final String INTRO;
     private static final String AGREE_DIALOG;
-    private static final String AGREE_DIALOG_ASC;
     private static final String DISAGREE_DIALOG;
     private static final float HP_LOSS_PERCENT = 0.2F;
     private static final float A_2_HP_LOSS_PERCENT = 0.3F;
@@ -38,7 +37,6 @@ public class ShiningLight_Evil extends AbstractImageEvent {
         INTRO = DESCRIPTIONS[0];
         AGREE_DIALOG = DESCRIPTIONS[1];
         DISAGREE_DIALOG = DESCRIPTIONS[2];
-        AGREE_DIALOG_ASC = DESCRIPTIONS[4];
     }
 
     private int damage = 0;
