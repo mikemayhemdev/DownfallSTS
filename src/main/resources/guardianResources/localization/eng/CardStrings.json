@@ -212,7 +212,7 @@
   },
   "Guardian:Metallicize": {
     "NAME": "Harden",
-    "DESCRIPTION": "Gain !M! *Plated *Armor."
+    "DESCRIPTION": "Gain !M! expansioncontent:Plated *Armor."
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasis Strike",
