@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 
 public class SlimeBrawl extends AbstractSlimeboundCard {
@@ -46,6 +47,7 @@ public class SlimeBrawl extends AbstractSlimeboundCard {
 
         this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "SlimeBrawl.png");
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 

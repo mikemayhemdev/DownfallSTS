@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
@@ -38,7 +37,6 @@ public class BustKeyEffect extends AbstractGameEffect {
             if ( AbstractDungeon.getCurrRoom() instanceof RestRoom) {
                 ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
             }
-
             //AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         }
     }

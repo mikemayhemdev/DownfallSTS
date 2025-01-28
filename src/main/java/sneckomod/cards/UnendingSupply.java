@@ -12,7 +12,8 @@ public class UnendingSupply extends AbstractSneckoCard {
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
     public UnendingSupply() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        isInnate = false;
         SneckoMod.loadJokeCardImage(this, "UnendingSupply.png");
     }
 
@@ -22,8 +23,11 @@ public class UnendingSupply extends AbstractSneckoCard {
 
     public void upgrade() {
         if (!upgraded) {
+            isInnate = true;
             upgradeName();
-            upgradeBaseCost(0);
+           // upgradeBaseCost(1);
+            rawDescription = UPGRADE_DESCRIPTION;
+           initializeDescription();
         }
     }
 }

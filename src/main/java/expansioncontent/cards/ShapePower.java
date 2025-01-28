@@ -15,7 +15,7 @@ import static expansioncontent.expansionContentMod.loadJokeCardImage;
 
 import java.util.ArrayList;
 
-public class ShapePower extends AbstractExpansionCard implements OctopusCard {
+public class ShapePower extends AbstractExpansionCard {
     public final static String ID = makeID("ShapePower");
 
     public ShapePower() {
@@ -24,37 +24,18 @@ public class ShapePower extends AbstractExpansionCard implements OctopusCard {
         tags.add(expansionContentMod.STUDY_SHAPES);
         tags.add(expansionContentMod.STUDY);
         baseMagicNumber = magicNumber = 2;
-        baseDownfallMagic = downfallMagic = 5;
+        baseDownfallMagic = downfallMagic = 4;
         loadJokeCardImage(this, "ShapePower.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new OctoChoiceAction(m, this));
-    }
-
-    public ArrayList<OctoChoiceCard> choiceList() {
-        ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        cardList.add(new OctoChoiceCard("expansioncontent:PolyBeam", EXTENDED_DESCRIPTION[0], "expansioncontentResources/images/cards/PolyBeam.png", EXTENDED_DESCRIPTION[1], -1, -1, magicNumber, CardType.POWER));
-        cardList.add(new OctoChoiceCard("expansioncontent:DecaShield", EXTENDED_DESCRIPTION[2], "expansioncontentResources/images/cards/DecaShield.png", EXTENDED_DESCRIPTION[3], -1, -1, downfallMagic, CardType.POWER));
-        return cardList;
-    }
-
-    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
-        AbstractPlayer p = AbstractDungeon.player;
-        switch (card.cardID) {
-            case "expansioncontent:PolyBeam": {
-                atb(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
-                break;
-            }
-            case "expansioncontent:DecaShield": {
-                atb(new ApplyPowerAction(p, p, new PlatedArmorPower(p, downfallMagic)));
-            }
-        }
+        atb(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
+        atb(new ApplyPowerAction(p, p, new PlatedArmorPower(p, downfallMagic)));
     }
 
     @Override
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeDownfall(3);
+        upgradeDownfall(1);
     }
 }

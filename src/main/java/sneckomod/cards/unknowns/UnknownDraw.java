@@ -1,15 +1,13 @@
 package sneckomod.cards.unknowns;
 
-import com.badlogic.gdx.graphics.Texture;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
@@ -18,12 +16,13 @@ import sneckomod.SneckoMod;
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
+@NoCompendium
 public class UnknownDraw extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownDraw");
     public static boolean bruh = false;
 
     public UnknownDraw() {
-        super(ID, CardType.SKILL, CardRarity.COMMON);
+        super(ID, CardType.SKILL, CardRarity.SPECIAL);
         SneckoMod.loadJokeCardImage(this, "UnknownDraw.png");
     }
 

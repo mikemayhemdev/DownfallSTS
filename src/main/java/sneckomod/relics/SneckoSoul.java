@@ -4,11 +4,15 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import hermit.cards.MementoCard;
 import sneckomod.SneckoMod;
 import downfall.util.TextureLoader;
+import sneckomod.cards.SoulRoll;
 
 public class SneckoSoul extends CustomRelic {
 
@@ -20,20 +24,10 @@ public class SneckoSoul extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
+    @Override
     public void atBattleStart() {
-        this.grayscale = false;
-    }
-
-    public void onVictory() {
-        grayscale = false;
-    }
-
-    public void onUseCard(AbstractCard c, UseCardAction action) {
-        if (!grayscale && c.color != AbstractDungeon.player.getCardColor()) {
-            addToBot(new DrawCardAction(1));
-            addToBot(new GainEnergyAction(1));
-            grayscale = true;
-        }
+        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        this.addToTop(new MakeTempCardInHandAction(new SoulRoll(), 1, false));
     }
 
     public String getUpdatedDescription() {

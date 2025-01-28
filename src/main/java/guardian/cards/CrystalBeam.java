@@ -122,6 +122,7 @@ public class CrystalBeam extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
+            upgradeMagicNumber(1);
         }
     }
 

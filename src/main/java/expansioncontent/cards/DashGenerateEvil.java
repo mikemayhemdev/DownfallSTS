@@ -1,114 +1,43 @@
 package expansioncontent.cards;
 
-
-import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import expansioncontent.expansionContentMod;
-import expansioncontent.actions.RandomCardWithTagAction;
-
-import static expansioncontent.expansionContentMod.loadJokeCardImage;
-
-import java.util.ArrayList;
-
+import expansioncontent.powers.EvilWithinPower;
 
 public class DashGenerateEvil extends AbstractExpansionCard {
-    public final static String ID = makeID("DashGenerateEvil");
+    public static final String ID = makeID("DashGenerateEvil");
 
-    private static final int BLOCK = 10;
-    private static final int UPGRADE_BLOCK = 2;
-    private static final int DAMAGE = 10;
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int MAGIC = 10;
 
-    private ArrayList<AbstractCard> getList() {
-        ArrayList<AbstractCard> myList = new ArrayList<>();
-        for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.rarity != CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
-                AbstractCard r = q.makeCopy();
-                if (upgraded) {
-                    r.upgrade();
-                }
-                myList.add(r);
-            }
-        }
-        return myList;
-    }
-
-    private float rotationTimer;
-    private int previewIndex;
-    private ArrayList<AbstractCard> dupeListForPrev = new ArrayList<>();
+    private static final int downfallMagic = 5;
 
     public DashGenerateEvil() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_attack.png", "expansioncontentResources/images/1024/bg_boss_attack.png");
-        baseBlock = BLOCK;
-        baseDamage = DAMAGE;
+        super(ID, 0, AbstractCard.CardType.POWER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+        setBackgroundTexture("expansioncontentResources/images/512/bg_boss_power.png", "expansioncontentResources/images/1024/bg_boss_power.png");
+        this.baseDownfallMagic = 5;
+        this.baseMagicNumber = this.magicNumber = 10;
         this.exhaust = true;
-        loadJokeCardImage(this, "DashGenerateEvil.png");
+        this.tags.add(expansionContentMod.STUDY);
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "DashGenerateEvil.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-
-        this.addToBot(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
-
-      //  atb(new GainBlockAction(p, p, this.block));
-        atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
-        atb(new RandomCardWithTagAction(upgraded, expansionContentMod.STUDY, true));
-
-
+        if (!AbstractDungeon.player.hasPower("expansioncontent:EvilWithinPower"))
+            addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new EvilWithinPower((AbstractCreature)p, this.magicNumber), this.magicNumber));
+        addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new EvilWithinPower((AbstractCreature)p, this.magicNumber), this.magicNumber));
     }
 
     public void upgrade() {
-        if (!upgraded) {
+        if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BLOCK);
-            upgradeDamage(UPGRADE_DAMAGE);
-            rawDescription = UPGRADE_DESCRIPTION;
-            for (AbstractCard q : this.dupeListForPrev) {
-                q.upgrade();
-            }
-            initializeDescription();
+            upgradeMagicNumber(4);
         }
-    }
-
-    @Override
-    public void update() {
-        super.update();
-        if (dupeListForPrev.isEmpty()) {
-            dupeListForPrev.addAll(getList());
-        }
-        if (hb.hovered) {
-            if (rotationTimer <= 0F) {
-                rotationTimer = 2F;
-                if (dupeListForPrev.size() == 0) {
-                    cardsToPreview = CardLibrary.cards.get("Madness");
-                } else {
-                    cardsToPreview = dupeListForPrev.get(previewIndex);
-                }
-                if (previewIndex == dupeListForPrev.size() - 1) {
-                    previewIndex = 0;
-                } else {
-                    previewIndex++;
-                }
-            } else {
-                rotationTimer -= Gdx.graphics.getDeltaTime();
-            }
-        }
-    }
-
-    @Override
-    public void unhover() {
-        super.unhover();
-        cardsToPreview = null;
     }
 }
-

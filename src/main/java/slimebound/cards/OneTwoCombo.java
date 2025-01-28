@@ -36,7 +36,7 @@ public class OneTwoCombo extends AbstractSlimeboundCard {
 
     public OneTwoCombo() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        baseDamage = 3;
+        baseDamage = 4;
         SlimeboundMod.loadJokeCardImage(this, "OneTwoCombo.png");
 //        exhaust = true;
     }
@@ -47,9 +47,8 @@ public class OneTwoCombo extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        addToBot(new CommandAction());
         if (upgraded) addToBot(new CommandAction());
-
-
         checkMinionMaster();
     }
 

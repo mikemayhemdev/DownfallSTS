@@ -35,8 +35,8 @@ public class ShopRoomReplacePatch {
                     roomList.add(new HeartShopRoom());
                 }
                 roomList.removeAll(shopRooms);
+                System.out.println("Shop rooms replaced with HeartShopRoom.");
             }
-
         }
     }
 
@@ -51,6 +51,7 @@ public class ShopRoomReplacePatch {
 
             if (EvilModeCharacterSelect.evilMode) {
                 if (roomType == EventHelper.RoomResult.SHOP) {
+                    System.out.println("Replacing SHOP room with HeartShopRoom.");
                     return SpireReturn.Return(new HeartShopRoom());
                 }
             }
@@ -58,7 +59,6 @@ public class ShopRoomReplacePatch {
             return SpireReturn.Continue();
         }
     }
-
 
     @SpirePatch(
             clz = RoomTypeAssigner.class,
@@ -71,6 +71,7 @@ public class ShopRoomReplacePatch {
             if (EvilModeCharacterSelect.evilMode) {
                 applicableRooms[0] = new ArrayList<>(applicableRooms[0]);
                 applicableRooms[0].add(HeartShopRoom.class);
+                System.out.println("Added HeartShopRoom to applicableRooms.");
             }
         }
     }
@@ -86,8 +87,8 @@ public class ShopRoomReplacePatch {
             if (EvilModeCharacterSelect.evilMode) {
                 applicableRooms[0] = new ArrayList<>(applicableRooms[0]);
                 applicableRooms[0].add(HeartShopRoom.class);
+                System.out.println("Added HeartShopRoom to sibling applicableRooms.");
             }
         }
     }
 }
-

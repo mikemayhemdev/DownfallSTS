@@ -3,6 +3,7 @@ package charbosses.bosses.Silent.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
+import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.green.*;
 import charbosses.cards.other.Antidote;
 import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
@@ -44,7 +45,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_TwistedFunnel());
-        addRelic(new CBR_HornCleat());
+        addRelic(new CBR_Anchor());
         addRelic(new CBR_Lantern());
 
         // animation
@@ -63,6 +64,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
     public ArrayList<AbstractCard> getThisTurnCards() {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        //boolean WhetstoneUpgrades = AbstractDungeon.ascensionLevel >= 19;
         if (!looped) {
             switch (turn) {
                 case 0: //Turn 1
@@ -80,7 +82,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
 
                 case 1: //Turn 2
 
-                    addToList(cardsList, new EnPoisonedStab());
+                    addToList(cardsList, new EnPoisonedStab(), true);
                     addToList(cardsList, new EnDodgeAndRoll());
                     addToList(cardsList, new EnStrikeGreen());
                     turn++;
@@ -90,7 +92,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
 
                     addToList(cardsList, new EnFootwork(),extraUpgrades);
                     addToList(cardsList, new EnNoxiousFumes());
-                    addToList(cardsList, new EnDeadlyPoison());
+                    addToList(cardsList, new EnPoisonedStab());
                     turn++;
                     break;
 
@@ -116,7 +118,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
                     addToList(cardsList, new EnBurst());
                     addToList(cardsList, new EnDeflect());
                     addToList(cardsList, new EnDeflect());
-                    addToList(cardsList, new EnDeadlyPoison());
+                    addToList(cardsList, new EnPoisonedStab(), true);
 //                    c.cost = 0;
 //                    c.freeToPlayOnce = true;
 //                    c.modifyCostForCombat(-1);
@@ -125,7 +127,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
                     turn++;
                     break;
                 case 2: // Turn 7 + 3n
-                    addToList(cardsList, new EnPoisonedStab());
+                    addToList(cardsList, new EnBane());
                     addToList(cardsList, new EnStrikeGreen());
                     addToList(cardsList, new EnDefendGreen());
                     turn = 0;

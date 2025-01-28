@@ -19,19 +19,16 @@ public class ShieldThrow extends AbstractChampCard {
     //stupid intellij stuff attack, enemy, rare
 
     public ShieldThrow() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        //  tags.add(ChampMod.FINISHER);
-        baseBlock = block = 0;
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+     //   baseBlock = block = 0;
         baseMagicNumber = magicNumber = 2;
-        tags.add(ChampMod.COMBODEFENSIVE);
-        tags.add(ChampMod.COMBO);
+    //    tags.add(ChampMod.FINISHER);
         postInit();
         loadJokeCardImage(this, "ShieldThrow.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //finisher();
-        blck();
+       // blck();
         this.baseDamage = p.currentBlock;
         this.calculateCardDamage(m);
         dmg(m, AbstractGameAction.AttackEffect.SMASH);
@@ -39,14 +36,9 @@ public class ShieldThrow extends AbstractChampCard {
         this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
 
-        if (!dcombo()) applyToSelf(new FrailPower(p,2, false));
+       // if (!dcombo()) applyToSelf(new FrailPower(p,2, false));
        // if (bcombo()) atb(new ReducePowerAction(p,p,FrailPower.POWER_ID,2));
-        //  finisher();
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+      //  finisher();
     }
 
     public void applyPowers() {
@@ -71,6 +63,6 @@ public class ShieldThrow extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBaseCost(1);
     }
 }

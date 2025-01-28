@@ -1,5 +1,6 @@
 package gremlin.actions;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.*;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.dungeons.*;
@@ -20,11 +21,16 @@ public class ShivPerCardPlayedAction extends AbstractGameAction
         this.isDone = true;
         int count = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
         --count;
+        int availableSpace = BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size();
+        if (count > availableSpace) {
+            count = availableSpace;
+        }
         AbstractCard c = new Shiv();
-        if(upgraded){
+        if (upgraded) {
             c.upgrade();
         }
         AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(c, count));
     }
+
 }
 

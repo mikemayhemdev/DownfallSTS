@@ -90,11 +90,11 @@ public class Neow4Life30Heal extends AbstractMonster {
         e.setTime(e.getEndTime() * MathUtils.random());
 
         if (AbstractDungeon.ascensionLevel >= 4) {
+            this.damage.add(new DamageInfo(this, 12)); //Eye Beam Damage
+            this.damage.add(new DamageInfo(this, 40));  //Scream Damage
+        } else {
             this.damage.add(new DamageInfo(this, 9)); //Eye Beam Damage
             this.damage.add(new DamageInfo(this, 25));  //Scream Damage
-        } else {
-            this.damage.add(new DamageInfo(this, 7)); //Eye Beam Damage
-            this.damage.add(new DamageInfo(this, 20));  //Scream Damage
         }
 
         this.strAmt = 2; //Strength Scaling for growth ability

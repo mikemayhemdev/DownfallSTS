@@ -12,7 +12,7 @@
   "champ:Colosseum": {
     "NAME": "The Colosseum",
     "DESCRIPTIONS": [
-      "As you continue down the spire, you notice a group of humanoids waiting in ambush nearby a large auditorium. When approached, the Slavers are startled, but quickly explain themselves. NL NL \"CHAMPION! You grave us with your presence! Are you here to take on the new challenger?\"",
+      "As you continue down the spire, you notice a group of humanoids waiting in ambush nearby a large auditorium. When approached, the Slavers are startled, but quickly explain themselves. NL NL \"CHAMPION! You grace us with your presence! Are you here to take on the new challenger?\"",
       "A new challenger? How delightful! NL NL However, the challenge may have to wait. The audience always likes seeing the Champion slaughter the latest capture...",
       "You enter the massive stadium to find an overflowing audience of #bSlavers, #pCultists, and other denizens of the City. NL NL ",
       "@\"WHO@ @DARES@ @CHALLENGE@ @ME?!\"@ you boom into the crowd, beckoning this new 'challenger'. NL A knight approaches, clad in strikingly similar armor to your own, only drenched in black ink. The crowd cheers more than this pretender deserves. NL NL There can only be one Champion!",
@@ -21,8 +21,8 @@
       "Black Knight"
     ],
     "OPTIONS": [
-      "[Defend Title] #rFight Black Knight. #gGain #gmany #grewards.",
-      "[Participate] #rFight Captive Hero. #gGain #gmany #grewards.",
+      "[Defend Title] #rFight #rBlack #rKnight. #gGain #gmany #grewards.",
+      "[Participate] #rFight #rCaptive #rHero. #gGain #gmany #grewards.",
       "[Leave]",
       "[FIGHT!]",
       "[Continue]"
@@ -50,11 +50,11 @@
     ],
     "OPTIONS": [
       "[Read] Choose an Attack to gain #y'trigger #ySkill #yBonus.' #rLose #r",
-      " #rHP.",
+      " #rHP [REMOVE_SPACE].",
       "[Leave]",
       "[Locked] Requires an Attack Card.",
-      "Choose a card to gain #y'trigger #ySkill #yBonus.'",
-      "[Read] Choose an Attack to gain #y'trigger #ySkill #yBonus.'. #rCursed #r- #rPride."
+      "Choose a card to gain #y'trigger #ySkill #yBonus.' [REMOVE_SPACE].",
+      "[Read] Choose an Attack to gain #y'trigger #ySkill #yBonus.' [REMOVE_SPACE]. #rCursed #r- #rPride [REMOVE_SPACE]."
     ]
   },
   "champ:Gym": {
@@ -67,9 +67,9 @@
     ],
     "OPTIONS": [
       "[Cardio] #gGain #g",
-      " #gMax #gHP.",
+      " #gMax #gHP [REMOVE_SPACE].",
       "[Spar] Choose a non-Finisher card to gain 'Enter (Chosen) Stance'.",
-      "[Lift] #gGain #g1 #gStrength #gPermanently.",
+      "[Lift] #gGain #g1 #gStrength #gPermanently [REMOVE_SPACE].",
       "[Leave]",
       "Choose a non-Finisher card to give 'Enter Defensive'.",
       "Choose a non-Finisher card to give 'Enter Gladiator'.",

@@ -1,4 +1,4 @@
-/*
+package collector.patches.PyrePatches;/*
 package collector.patches.PyrePatches;
 
 import basemod.BaseMod;

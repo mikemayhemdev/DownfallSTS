@@ -29,6 +29,7 @@ public class EdibleArmor extends AbstractGremlinCard {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(SHIELD_GREMLIN);
         setBackgrounds();
+        this.exhaust = true;
         GremlinMod.loadJokeCardImage(this, "EdibleArmor.png");
     }
 

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.ending.CorruptHeart;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.monsters.FleeingMerchant;
@@ -50,7 +51,7 @@ public class StolenMerchandise extends AbstractGremlinRelic {
     public void atBattleStart() {
         for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!mo.isDeadOrEscaped()) {
-                if (mo instanceof FleeingMerchant || mo instanceof CharBossMerchant) {
+                if (mo instanceof FleeingMerchant || mo instanceof CharBossMerchant || mo instanceof CorruptHeart) {
                     flash();
                     addToBot(new RelicAboveCreatureAction(mo, this));
                     AbstractDungeon.actionManager.addToBottom(

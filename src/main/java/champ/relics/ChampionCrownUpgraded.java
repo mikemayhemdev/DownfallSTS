@@ -1,11 +1,14 @@
 package champ.relics;
 
+import automaton.AutomatonMod;
+import automaton.relics.BronzeCore;
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
 import champ.actions.OpenerReduceCostAction;
 import champ.powers.UltimateFormPower;
 import champ.stances.UltimateStance;
 import champ.util.OnOpenerSubscriber;
+import com.megacrit.cardcrawl.core.Settings;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -31,7 +34,7 @@ public class ChampionCrownUpgraded extends CustomRelic {
     @Override
     public void atBattleStart() {
         addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(1), 1));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(3), 3));
     }
 
     @Override
@@ -54,7 +57,21 @@ public class ChampionCrownUpgraded extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        // Colorize the starter relic's name
+        String name = new ChampionCrown().name;
+        StringBuilder sb = new StringBuilder();
+        if(Settings.language== Settings.GameLanguage.ZHS|| Settings.language== Settings.GameLanguage.ZHT){
+            sb.append("[#").append(ChampMod.placeholderColor.toString()).append("]").append(name).append("[]");
+
+        }else {
+            for (String word : name.split(" ")) {
+                sb.append("[#").append(ChampMod.placeholderColor.toString()).append("]").append(word).append("[] ");
+            }
+            sb.setLength(sb.length() - 1);
+            sb.append("[#").append(ChampMod.placeholderColor.toString()).append("]");
+        }
+
+        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
     }
 
 }

@@ -47,7 +47,7 @@
 	  "Ignites when spending [E] [E] [E] while on it. #yExtinguishes at end of any turn.",
 	  " NL NL #yIgnition: Deal #b",
 	  " damage to a random enemy for each #yIgnited Ghostflame [REMOVE_SPACE], then #yExtinguish others. If all Ghostflames are #yIgnited [REMOVE_SPACE], gain #b2 #yIntensity [REMOVE_SPACE].",
-	  " NL NL At the end of your turn, if this is #yIgnited [REMOVE_SPACE], #yAdvance to the next Ghostflame [REMOVE_SPACE]."
+	  " NL NL At the end of your turn, if this is #yIgnited [REMOVE_SPACE], #yAdvance to the next Ghostflame."
     ]
   },
   "hexamod:MayhemGhostflame": {
@@ -57,7 +57,7 @@
 	  "#yIgnites when you end your turn.",
 	  "#yIgnites when you end your turn on it.",
 	  " NL NL #yIgnition [REMOVE_SPACE]: #yScry #b",
-	  " and then play the top card of your draw pile.",
+	  " and then play the top card of your draw pile, modified by #yIntensity [REMOVE_SPACE]. ",
 	  " NL NL At the end of your turn, if this is #yIgnited [REMOVE_SPACE], #yAdvance to the next Ghostflame."
     ]
   }

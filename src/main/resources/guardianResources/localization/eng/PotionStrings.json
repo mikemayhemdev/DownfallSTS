@@ -1,6 +1,6 @@
 {
   "Guardian:AcceleratePotion": {
-    "NAME": "Temporal Potion",
+    "NAME": "Emergency Potion",
     "DESCRIPTIONS": [
       "#yAccelerate all cards in #yStasis #b",
       " times."

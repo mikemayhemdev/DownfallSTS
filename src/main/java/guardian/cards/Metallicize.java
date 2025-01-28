@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
@@ -19,12 +20,12 @@ public class Metallicize extends AbstractGuardianCard {
 
     public Metallicize() {
         super(ID, cardStrings.NAME, GuardianMod.getResourcePath("cards/Metallicize.png"), 1, cardStrings.DESCRIPTION, CardType.POWER, AbstractCardEnum.GUARDIAN, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = magicNumber = 3;
+        this.baseMagicNumber = magicNumber = 4;
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Metallicize.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new MetallicizePower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
     }
 
     public void upgrade() {
@@ -42,7 +43,7 @@ public class Metallicize extends AbstractGuardianCard {
         if(  Settings.language == Settings.GameLanguage.ZHS  ||  Settings.language == Settings.GameLanguage.ZHT  ){
             cardStrings = CardCrawlGame.languagePack.getCardStrings(GuardianMod.makeID("Metallicize"));
         }else{
-            cardStrings = CardCrawlGame.languagePack.getCardStrings("Metallicize");
+            cardStrings = CardCrawlGame.languagePack.getCardStrings(GuardianMod.makeID("Metallicize"));
         }
     }
 }

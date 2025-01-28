@@ -46,7 +46,7 @@ public class Floatwork extends AbstractHexaCard implements HexaPurpleTextInterfa
         if (!upgraded) {
             upgradeName();
           //  upgradeBlock(2);
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 
@@ -60,5 +60,6 @@ public class Floatwork extends AbstractHexaCard implements HexaPurpleTextInterfa
         super.initializeDescription();
         String afterlife_name = downfallMod.keywords_and_proper_names.get("afterlife");
         this.keywords.add(afterlife_name);
+        this.keywords.add(downfallMod.keywords_and_proper_names.get("plated"));
     }
 }

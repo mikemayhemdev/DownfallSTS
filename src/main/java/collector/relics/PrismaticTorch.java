@@ -18,7 +18,7 @@ public class PrismaticTorch extends CustomRelic {
     private static final String IMG_PATH = PrismaticTorch.class.getSimpleName() + ".png";
     private static final String OUTLINE_IMG_PATH = PrismaticTorch.class.getSimpleName() + ".png";
 
-    private static final int EMBER_COUNT = 1;
+    private static final int EMBER_COUNT = 2;
 
     public PrismaticTorch() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
@@ -29,7 +29,7 @@ public class PrismaticTorch extends CustomRelic {
     public void atBattleStart() {
         flash();
         makeInHand(new Ember(), EMBER_COUNT);
-        atb(new GainReservesAction(1));
+    //    atb(new GainReservesAction(1));
     }
 
     @Override

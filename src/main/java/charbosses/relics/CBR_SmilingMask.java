@@ -19,7 +19,7 @@ public class CBR_SmilingMask extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + 2 + this.DESCRIPTIONS[1];
+        return this.DESCRIPTIONS[0] + 50 + this.DESCRIPTIONS[1];
     }
 
     @Override

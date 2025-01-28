@@ -36,7 +36,7 @@ public class SupplyScroll extends AbstractGremlinRelic {
         if (this.counter == 3) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToBot(new GainEnergyAction(1));
+            addToBot(new GainEnergyAction(2));
             addToBot(new DrawCardAction(2));
 
             this.counter = -1;

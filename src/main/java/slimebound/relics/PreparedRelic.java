@@ -3,6 +3,7 @@ package slimebound.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -10,6 +11,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import downfall.util.TextureLoader;
 import slimebound.actions.AddPreparedAction;
+
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 public class PreparedRelic extends CustomRelic {
     public static final String ID = "Slimebound:PreparedRelic";
@@ -66,6 +69,12 @@ public class PreparedRelic extends CustomRelic {
             this.pulse = true;
         }
     }
+
+
+    public boolean canSpawn() {
+        return Settings.isEndless || (AbstractDungeon.floorNum <= 48 && !evilMode) || evilMode;
+    }
+
 
     @Override
     public AbstractRelic makeCopy() {

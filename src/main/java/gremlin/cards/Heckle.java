@@ -19,7 +19,7 @@ public class Heckle extends AbstractGremlinCard {
     private static final String IMG_PATH = "cards/heckle.png";
 
     private static final AbstractCard.CardType TYPE = CardType.POWER;
-    private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
     private static final int COST = 3;

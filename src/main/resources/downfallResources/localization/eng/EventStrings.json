@@ -22,7 +22,7 @@
       "[Play]",
       "Remaining Attempts: #y",
       "[Intimidate] Steal 6 cards.",
-      "[Punch] #rFight. #gGain #g6 #gCards."
+      "[Punch] #rFight. #gGain #g6 #gCards [REMOVE_SPACE]."
     ]
   },
   "downfall:WomanInBlue": {
@@ -61,19 +61,19 @@
     "OPTIONS": [
       "[Play]",
       "[Prize!] YAY!!!!",
-      "[Prize!] #gObtain #ga #gRelic.",
-      "[Prize!] #gHeal #gto #gfull #ghealth.",
-      "[Prize?] #rCurse #r- #rDecay.",
-      "[Prize!] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
+      "[Prize!] #gObtain #ga #gRelic [REMOVE_SPACE].",
+      "[Prize!] #gHeal #gto #gfull #ghealth [REMOVE_SPACE].",
+      "[Prize?] #rCurse #r- #rDecay [REMOVE_SPACE].",
+      "[Prize!] #gRemove #ga #gcard #gfrom #gyour #gdeck [REMOVE_SPACE].",
       "[Prize?] #rLose #r",
-      " #rHP.",
+      " #rHP [REMOVE_SPACE].",
       "[Leave]",
       "Select a Card to Remove.",
       "[Again!]",
       "[AGAIN!!]",
-      "[Punch] #rFight. #gGain #gGremlin #gWheel.",
+      "[Punch] #rFight. #gGain #gGremlin #gWheel [REMOVE_SPACE].",
       "[Pass] Try again later.",
-      "[Prize!] #gPREEMPTIVE #gSTRIKE!",
+      "[Prize!] #gPREEMPTIVE #gSTRIKE [REMOVE_SPACE]!",
       "[Loot]"
     ]
   },
@@ -87,7 +87,7 @@
   "downfall:LivingWall": {
     "NAME": "Living Wall",
     "OPTIONS": [
-      "[Punch] #rFight. #gUse #gall #g3 #gHeads."
+      "[Punch] #rFight. #gUse #gall #g3 #gHeads [REMOVE_SPACE]."
     ]
   },
   "downfall:Augmenter": {
@@ -96,7 +96,7 @@
       "A man with an eyepatch and a devilish grin strides up to you. NL \"Oh my, what a terrifying subject! You may not care for science, but I promise you - I can make you stronger than any harvesting of souls. You're gonna need it if you're going after one of those \"heroes\".\" NL NL ~\"Whad'ya~ ~say?\"~"
     ],
     "OPTIONS": [
-      "[Punch] #rFight. #gTake #gEverything."
+      "[Punch] #rFight [REMOVE_SPACE]. #gTake #gEverything [REMOVE_SPACE]."
     ]
   },
   "downfall:BonfireSpirits": {
@@ -106,9 +106,9 @@
       "You reach your hand out to #ptake... NL The spirits @shriek,@ ~swirling~ around the vortex that emerges from your palm in useless attempts to flee. NL Soon, their spirits themselves are nothing more than an item in the Collection."
     ],
     "OPTIONS": [
-      "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP #gand #gFully #gHeal.",
-      "[Locked] Requires 150 Souls.",
-      "[Donate] #rLose #r150 #rSouls. #gEach #gGremlin #gGains #g2 #gMax #gHP #gand #the #gAlive #gOnes #gFully #gHeal.",
+      "[Donate] #rLose #r150 #rSouls [REMOVE_SPACE]. #gGain #g10 #gMax #gHP #gand #gFully #gHeal [REMOVE_SPACE].",
+      "[Locked] Requires 150 Souls [REMOVE_SPACE].",
+      "[Donate] #rLose #r150 #rSouls [REMOVE_SPACE]. #gEach #gGremlin #gGains #g2 #gMax #gHP #gand #the #gAlive #gOnes #gFully #gHeal [REMOVE_SPACE].",
       "[Take]"
     ]
   },
@@ -118,7 +118,7 @@
       " NL NL He doesn't look like he would put up much of a fight, but he has survived in this place. Perhaps these masks hold some power..."
     ],
     "OPTIONS": [
-      "[Punch] #rFight. #g100%: #gAll #gFace."
+      "[Punch] #rFight. #g100%: #gAll #gFace [REMOVE_SPACE]."
     ]
   },
   "downfall:CursedFountain": {
@@ -131,9 +131,9 @@
       "Leaving the fountain behind, you continue on your way."
     ],
     "OPTIONS": [
-      "[Bottle] #gGain #gCursed #gLiquid #gPotion.",
-      "[Consume] #gGain #g75 #ySouls.",
-      "[Drink] #gHeal #gto #gfull #gHP.",
+      "[Bottle] #gGain #gCursed #gLiquid #gPotion [REMOVE_SPACE].",
+      "[Consume] #gGain #g75 #ySouls [REMOVE_SPACE].",
+      "[Drink] #gHeal #gto #gfull #gHP [REMOVE_SPACE].",
       "[Locked] Requires a curse.",
       "[Locked] Requires 2 curses.",
       "[Locked] Requires 3 curses.",
@@ -153,13 +153,13 @@
     "OPTIONS": [
       "[Lose ",
       "] ",
-      "#gGain #g3 #gPotions.",
+      "#gGain #g3 #gPotions [REMOVE_SPACE].",
       "#gGain ",
-      " #ySouls.",
-      "#gGain #ga #gRandom #yRare #gCard.",
+      " #ySouls [REMOVE_SPACE].",
+      "#gGain #ga #gRandom #yRare #gCard [REMOVE_SPACE].",
       "[Leave]",
       "[Locked] No Relic to give.",
-      "#gGain #g2 #gPotions."
+      "#gGain #g2 #gPotions [REMOVE_SPACE]."
     ]
   },
   "downfall:Designer": {
@@ -180,7 +180,7 @@
       "[Ignore] Leave.",
       "[Punch] Leave.",
       "[Enter Shop]",
-      " #gGain #ga #gReward."
+      " #gGain #ga #gReward [REMOVE_SPACE]."
     ]
   },
   "downfall:DeadGuy": {
@@ -214,9 +214,10 @@
       "You walk around it, wondering what could have been."
     ],
     "OPTIONS": [
-      "[Enter] #gUpgrade #g3 #grandom #gcards. #rBecome #rCursed #r- #rFlawed.",
+      "[Enter] #gUpgrade #g2 #grandom #gcards. #rBecome #rCursed #r- #rFlawed.",
       "[Leave]",
-      "[Locked] Requires: Upgradeable Cards"
+      "[Locked] Requires: Upgradeable Cards",
+      "[Enter] #gUpgrade #g3 #grandom #gcards. #rBecome #rCursed #r- #rFlawed."
     ]
   },
   "downfall:WorldOfGoop": {
@@ -248,6 +249,7 @@
     "OPTIONS": [
       "[Agree] [Punch] #gGain #g",
       " #gSouls. #rBecome #rCursed #r- #rDoubt.",
+      " #gSouls. #rBecome #rCursed #r- #rDoubt.",
       "[Disagree]",
       "[Leave]"
     ]
@@ -266,7 +268,7 @@
     ],
     "OPTIONS": [
       "[Destroy] #rLose #r",
-      " #rHP. #gGain #gSharpened #gFragment.",
+      " #rSouls. #gGain #gSharpened #gFragment.",
       "[Collect] #rLose #r",
       "[Leave]",
       " #rHP. #gGain #gBroken #gWing #gStatue."
@@ -283,11 +285,11 @@
       "You decide to leave the soul alone and continue on your way."
     ],
     "OPTIONS": [
-      "[Set Trap] #rLose #ra #rStrike.",
+      "[Set Trap] #rLose #ra #rStrike [REMOVE_SPACE].",
       "[Harvest] #gGain #y",
-      " #ySouls.",
+      " #ySouls [REMOVE_SPACE].",
       "[Leave]",
-      "[Locked] Requires a Strike."
+      "[Locked] Requires a Strike [REMOVE_SPACE]."
     ]
   },
   "downfall:Cleric": {
@@ -299,10 +301,10 @@
     ],
     "OPTIONS": [
       "[Punch] #gGain #y",
-      "[Intimidate] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
+      "[Intimidate] #gRemove #ga #gcard #gfrom #gyour #gdeck [REMOVE_SPACE].",
       "[Leave]",
       "Select a Card to Remove.",
-      " #ySouls."
+      " #ySouls [REMOVE_SPACE]."
     ]
   },
   "downfall:Ghosts": {
@@ -314,9 +316,9 @@
     ],
     "OPTIONS": [
       "[Offer] #rLose #r",
-      " Souls. #gReceive Apparition.",
+      " Souls [REMOVE_SPACE]. #gReceive Apparition.",
       "[Locked] Requires ",
-      " Souls."
+      " Souls [REMOVE_SPACE]."
     ]
   },
   "downfall:CursedTome": {
@@ -334,10 +336,10 @@
     ],
     "OPTIONS": [
       "[Offer Souls] #rLose #r",
-      " #rSouls. #gHeal #g",
-      " #gHP.",
+      " #rSouls [REMOVE_SPACE]. #gHeal #g",
+      " #gHP [REMOVE_SPACE].",
       "[Locked] Requires ",
-      " Souls.",
+      " Souls [REMOVE_SPACE].",
       "[Leave]"
     ]
   },
@@ -349,7 +351,7 @@
     ],
     "OPTIONS": [
       "[Lose ",
-      "] #gHire #gthe #gBandits.",
+      "] #gHire #gthe #gBandits [REMOVE_SPACE].",
       "[Locked] Requires more Relics."
     ]
   },
@@ -359,7 +361,7 @@
       "Deciding this bottom-feeder of a creature does not belong in the Spire, you deliver a swift and powerful blow directly to N'loths chest. NL NL As the creature recoils in agony, its tentacles @lash@ @out@ at you in reflex, leaving a #rpainful sting! NL NL When the creature's lifeless form hits the ground, you hear the rattling of charms and trinkets. Scouring through his body, just as it once scoured through the trash pile, you uncover a potent magical item."
     ],
     "OPTIONS": [
-      "[Punch] #gGain #gRandom #gRelic. #rBecome #rCursed #r- #rPain."
+      "[Punch] #gGain #gRandom #gRelic [REMOVE_SPACE]. #rBecome #rCursed #r- #rPain [REMOVE_SPACE]."
     ]
   },
   "downfall:KnowingSkull": {
@@ -370,9 +372,9 @@
       "\"BEHIND YOU, MORTAL.\" NL You peek behind the skull. Surely enough, there is a door."
     ],
     "OPTIONS": [
-      "[You.] #gObtain #gthe #gSkull. #rLose #r",
+      "[You.] #gObtain #gthe #gSkull [REMOVE_SPACE]. #rLose #r",
       "[Leave]",
-      " #rHP."
+      " #rHP [REMOVE_SPACE]."
     ]
   },
   "downfall:Vagrant": {
@@ -401,9 +403,9 @@
       "\"Cleric help! Cleric help!\" the creature says once again, barely able to speak as he cowers in fear. NL A cold blue flame envelops your body and dissipates. NL NL Deciding his powers may of use later, and that you can easily dispatch of any bodyguards he tries to employ in the future, you let this \"Cleric\" live once more."
     ],
     "OPTIONS": [
-      " #rBecome #rCursed #r- #rPride.",
+      " #rBecome #rCursed #r- #rPride [REMOVE_SPACE].",
       "[Fight]",
-      "[Threaten] #gRemove #g2 #gcards #gfrom #gyour #gdeck."
+      "[Threaten] #gRemove #g2 #gcards #gfrom #gyour #gdeck [REMOVE_SPACE]."
     ]
   },
   "downfall:Mausoleum": {
@@ -429,16 +431,16 @@
       "#rYou #rplunge #rthe #rdagger #rinto #rthe #rcultist's #rheart! NL NL #b~\"CAW~ #b~CAAAAW~ #b~CAAAAAWWW!\"~ NL NL The ritual is completed, and the surviving cultists could not appear happier. They wave their sticks in celebration and continue to call out a cheering caw as you exit the cathedral."
     ],
     "OPTIONS": [
-      "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards.",
+      "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards [REMOVE_SPACE].",
       "[Locked] Requires Broken Wing Statue.",
-      "[Accept] #gGain #gCultist #gPotion.",
-      "[Steal] #gObtain Ritual Dagger. #rLose #r",
+      "[Accept] #gGain #gCultist #gPotion",
+      "[Steal] #gObtain #gRitual #gDagger. #rLose #r",
       " #rHP.",
       "[Leave]",
       "[Continue]",
       "[Take Dagger] #gGain #gRitual #gDagger.",
       "[Anoint] #gUpgrade #gRitual #gDagger.",
-      "[Sacrifice] #rKill #rCultist with Ritual Dagger+.",
+      "[Sacrifice] #rKill #rCultist #rwith #rRitual #rDagger+.",
       "[Be Praised] #gGain #grewards for returning the #gBroken #gWing #gStatue."
     ]
   },
@@ -453,8 +455,8 @@
       "You deciding that, though it is tempting, fighting here would be an unnecessary distraction. Your journey continues on, and you leave the slavers to resume their ambush."
     ],
     "OPTIONS": [
-      "[Challenge] #rFight Arena Champions. #gGain #gmany #grewards.",
-      "[Participate] #rFight Captive Hero. #gGain #gmany #grewards.",
+      "[Challenge] #rFight Arena Champions. #gGain #gmany #grewards [REMOVE_SPACE].",
+      "[Participate] #rFight Captive Hero. #gGain #gmany #grewards [REMOVE_SPACE].",
       "[Leave]",
       "[FIGHT!]",
       "[Continue]"
@@ -468,12 +470,12 @@
       "Everything makes sense now. NL The singular purpose, the descent, the #pHeart. NL NL This is the way it always was. NL This is the way it always will be. NL All will be forgotten again soon..."
     ],
     "OPTIONS": [
-      "[I am an Echo] #rFight #ryourself. #gObtain #ga #gRare #gRelic.",
-      "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality.",
-      "[I am Complete] #gUpgrade #gall #gCards. #rLose #rHeart #rBlessings.",
+      "[I am an Echo] #rFight #ryourself. #gObtain #ga #gRare #gRelic [REMOVE_SPACE].",
+      "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality [REMOVE_SPACE].",
+      "[I am Complete] #gUpgrade #gall #gCards. #rBecome #rBurdened [REMOVE_SPACE].",
       "[Locked] Requires all 3 Heart Blessings.",
       "[Leave]",
-      "[I am Complete] #gUpgrade #gall #gCards. #rLose #rHeart #rBlessings and #r2 #rMax #rHP."
+      "[I am Complete] #gUpgrade #gall #gCards. #rBecome #rBurdened [REMOVE_SPACE]."
     ]
   },
   "downfall:MoaiHead": {
@@ -486,21 +488,21 @@
     ],
     "OPTIONS": [
       "[Offer Souls] #rLose #r",
-      " #rSouls. #gGain #g",
-      " #gMax #gHP and #gHeal #gto #gfull.",
+      " #rSouls [REMOVE_SPACE]. #gGain #g",
+      " #gMax #gHP and #gHeal #gto #gfull [REMOVE_SPACE].",
       "[Locked] Requires ",
       " Souls.",
-      " #rSouls. #gEach #gGremlin #gGains #g",
-      "[Jump Inside] #gHeal #gto #gfull #gHP. #rEach #rGremlin #rLoses #r"
+      " #rSouls [REMOVE_SPACE]. #gEach #gGremlin #gGains #g",
+      "[Jump Inside] #gHeal #gto #gfull #gHP [REMOVE_SPACE]. #rEach #rGremlin #rLoses #r"
     ]
   },
   "downfall:SensoryStone": {
     "NAME": "Sensory Stone",
     "DESCRIPTIONS": [
-      "#g~VANITY.~ NL NL Life is a beautiful, magnificent thing... even to a #gslime. NL NL You’ve always known you were destined for great things. The others all settle for coins and bits of scraps, but not you. You wait, like a predator, for something special. Something unique. Something ~fabulous.~ NL NL Days... weeks... maybe years pass by... it’s hard to tell in the Spire. Until, at last, you spot it. No longer will you be counted just among the masses! They may have their #ycoins and #ytrinkets, but you have something better... NL NL @A@ @TINY@ @BOWLER@ @HAT!@ Dashing!",
+      "#g~VANITY.~ NL NL Life is a beautiful, magnificent thing... even to a #gslime. NL NL You've always known you were destined for great things. The others all settle for coins and bits of scraps, but not you. You wait, like a predator, for something special. Something unique. Something ~fabulous.~ NL NL Days... weeks... maybe years pass by... it's hard to tell in the Spire. Until, at last, you spot it. No longer will you be counted just among the masses! They may have their #ycoins and #ytrinkets, but you have something better... NL NL @A@ @TINY@ @BOWLER@ @HAT!@ Dashing!",
       "#y~FRAILTY.~ NL NL The #rblade enters your chest, and the cheer of the #bcrowd fills your ears... the last thing you will ever feel is a hand striking across your face, and your eyes close. NL NL You awaken in an unfamiliar room, @unable@ @to@ @move.@ You try to speak, but no words come out, and your vision is clouded in a #ggreen #gfog. Is this a dream? Is this the afterlife? You try to remember, but your thoughts are as disjointed as your arms and legs. NL NL You hear a voice in your mind - a single command. #g\"BALANCE #gmust #gbe #gENFORCED. #gGUARD #gExordium.\"",
       "#p~HOPELESSNESS.~ NL NL #yWatch. #yRemember. #yLive. This is the Watcher's mission. Your assignment is to investigate a Spire of unknown origin.  You enter a hexagonal room and before you can react, the door @collapses@ @behind@ @you!@ NL NL There is no escape. The only path that may lead out is by taking a tablet, clearly infused with magic, which lays upon a pedestal. The moment your skin touches the artifact, your body ~dissolves~ ~into~ ~nothing,~ and your #psoul is pulled into the #pstone. NL NL Your fate will forever be tied to the #ptablet, #rcursed to wander the Spire for eternity.",
-      "#y~DETACHMENT.~ NL NL You are the first. You serve the ~Shaper.~ You are not born, with frailty and weakness, but created. Perfect. And in your image shall you create more constructs. The #yautomatons of the Maker’s legacy. NL NL Each one flawless in its design, all to serve a specific purpose. All but one. The one meant to maintain balance in the City. NL NL You cast the #ydefective #yconstruct from the tallest window, plunging it to the bottom of the Spire, and take his place as the City's protector. NL NL Balance must be enforced.",
+      "#y~DETACHMENT.~ NL NL You are the first. You serve the ~Shaper.~ You are not born, with frailty and weakness, but created. Perfect. And in your image shall you create more constructs. The #yautomatons of the Maker's legacy. NL NL Each one flawless in its design, all to serve a specific purpose. All but one. The one meant to maintain balance in the City. NL NL You cast the #ydefective #yconstruct from the tallest window, plunging it to the bottom of the Spire, and take his place as the City's protector. NL NL Balance must be enforced.",
       "#b~PRIDE.~ NL NL You stand at the center of a grand arena. Everything you have worked for culminates in this one singular combat. You take up a #bdefensive #bstance, draining the stamina of your enemy, until an opening presents itself. With your last bit of strength, you #rplunge #ryour #rblade into the chest of your opponent. The audience erupts in @thunderous@ @applause!@ NL NL Not one to stop at just winning, you raise your open hand and strike your foe ~across~ ~the~ ~face,~ delivering a most insulting final blow. NL NL There is no one in your way now. You are the new #b@Champion!@",
       "#p~GREED.~ NL NL Few men can resist the #btemptation #bof #bpower. But power comes at a cost, and great power an even greater price. NL NL You sit upon your throne above the Colosseum, watching men #rfight #rto #rthe #rdeath for your amusement for the title of #bChampion. The price for entry - the #g~flame~ #g~of~ #g~their~ #g~eternal~ #g~soul~ in service to you. Each name etched in a tablet, binding them to you in the afterlife. NL NL The crowd cheers as one fighter is struck down with a final blow across the face. You go to your vault, but someone has been here. Traps are sprung, but no body to be found... and the #p@tablet@ @is@ @missing!@",
       "#g~GRIEF.~ NL NL You stand, at long last, atop the highest peak of the Spire. You have spent your years working tirelessly to bring this colossal feat of architecture, a monument to the Great One, to life. Every #gcurve rounded to perfection. Every #yedge meticulously placed. NL NL “It is done, my love.” Covering their lifeless hand with yours, you turn on the machine. A soft hum fills the room, and soon you feel your very #b~essence~ being pulled into your creation - swiftly joined by another. You will both live for all eternity in this place, just as you planned. NL NL With a resounding echo... the #pHeart ~thumps~ its first beat.",
@@ -534,11 +536,11 @@
       "Satisfied with collecting the mask, you continue on."
     ],
     "OPTIONS": [
-      "[Don the Red Mask] #gUpgrade #gBandit #gContract.",
-      "[Locked] Requires: Red Mask & Bandit Contract.",
+      "[Don the Red Mask] #gUpgrade #gBandit #gContract [REMOVE_SPACE].",
+      "[Locked] Requires: Red Mask & Bandit Contract [REMOVE_SPACE].",
       "[Bash] #rLose ",
-      ". #gObtain #gRed #gMask.",
-      "[Locked] Requires an Attack.",
+      ". #gObtain #gRed #gMask [REMOVE_SPACE].",
+      "[Locked] Requires an Attack [REMOVE_SPACE].",
       "[Leave]"
     ]
   },
@@ -548,9 +550,9 @@
       "As you slowly make your way up the twisting pathways, you find yourself in the infamous shifting hallways of the Beyond. A lesser being would go mad trying to navigate these, but to you, they are as familiar as an old friend. NL NL The constant #p~whispering~ #p~voices~ ease your mind as you decide which path to take."
     ],
     "OPTIONS": [
-      "[Left] #gExplore #gan #gEvent.",
-      "[Right] #gSearch #gthe #gTreasury #gfor #ga #gRelic.",
-      "[Straight] #gHunt #gdown #gthe #gMerchant."
+      "[Left] #gExplore #gan #gEvent [REMOVE_SPACE].",
+      "[Right] #gSearch #gthe #gTreasury #gfor #ga #gRelic [REMOVE_SPACE].",
+      "[Straight] #gHunt #gdown #gthe #gMerchant [REMOVE_SPACE]."
     ]
   },
   "downfall:Joust": {
@@ -565,9 +567,9 @@
     "OPTIONS": [
       "[Left] #r50%: #rLose #r",
       " HP.",
-      " #g50%: #gGain #g200 #gSouls.",
+      " #g50%: #gGain #g200 #gSouls [REMOVE_SPACE].",
       "[Right] #r25%: #rLose #r",
-      " #g75%: #gGain #g100 #gSouls."
+      " #g75%: #gGain #g100 #gSouls [REMOVE_SPACE]."
     ]
   },
   "downfall:BossTester": {
@@ -616,10 +618,11 @@
     "DESCRIPTIONS": [
       "Only you should hold this power. You shatter the shrine into pieces. NL A dark wail echoes all around you, and you can feel the Shrine's #p~cursed~ #p~magic~ seep into your bones."    ],
     "OPTIONS": [
-      "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rSapped.",
-      "[Desecrate] #gRemove #g3 #gcards. #rCursed #r- #rSapped.",
-      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rSapped.",
-      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rSapped."
+      "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rAged.",
+      "[Desecrate] #gRemove #g2 #gcards. #rLose #r",
+      " #rMax #rHP [REMOVE_SPACE].",
+      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rFlawed.",
+      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rPain."
     ]
   }
 }

@@ -1,49 +1,36 @@
 package sneckomod.cards;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
-import sneckomod.actions.MuddleAction;
-import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 public class DiceBlock extends AbstractSneckoCard {
 
-    public final static String ID = makeID("DiceBlock");
+    public static final String ID = SneckoMod.makeID("DiceBlock");
+
+    private static final int BASE_BLOCK = 5;
+    private static final int UPG_BASE_BLOCK = 2;
 
     public DiceBlock() {
-        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 10; //Min Block
-        baseBlock = 15; //Max Block
-        tags.add(SneckoMod.RNG);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = BASE_BLOCK;
         SneckoMod.loadJokeCardImage(this, "DiceBlock.png");
-    }
-
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new GainBlockAction(p, getRandomNum(magicNumber, block, this)));
+        this.tags.add(SneckoMod.OVERFLOW);
     }
 
     @Override
-    protected void applyPowersToBlock() {
-        int CURRENT_MAGIC_NUMBER = baseMagicNumber;
-        int CURRENT_BLOCK = baseBlock;
-        baseBlock = CURRENT_MAGIC_NUMBER;
-        super.applyPowersToBlock();
-        magicNumber = block;
-        isMagicNumberModified = block != baseBlock;
-
-        baseBlock = CURRENT_BLOCK;
-        super.applyPowersToBlock();
-        isBlockModified = baseBlock != block;
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
+        if (isOverflowActive(this)) {
+            blck();
+        }
     }
 
+    @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(4);
-            upgradeBlock(4);
+            upgradeBlock(UPG_BASE_BLOCK);
         }
     }
 }

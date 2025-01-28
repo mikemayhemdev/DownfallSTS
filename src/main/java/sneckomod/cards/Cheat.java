@@ -2,9 +2,12 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 import sneckomod.powers.CheatPower;
 
+@Deprecated
+@CardIgnore
 public class Cheat extends AbstractSneckoCard {
 
     public final static String ID = makeID("Cheat");
@@ -12,7 +15,8 @@ public class Cheat extends AbstractSneckoCard {
     //stupid intellij stuff SKILL, SELF, RARE
 
     public Cheat() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        //      super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
         exhaust = true;
         SneckoMod.loadJokeCardImage(this, "Cheat.png");

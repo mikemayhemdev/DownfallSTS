@@ -32,7 +32,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
     public ArchetypeAct1StatusesNewAge() {
         super("IC_STATUS_ARCHETYPE", "Status");
 
-        maxHPModifier += 75;
+        maxHPModifier += 60;
         actNum = 1;
         bossMechanicName = IroncladStatusPower.NAME;
         bossMechanicDesc = IroncladStatusPower.DESC[0];
@@ -76,13 +76,13 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 1:
+                    addToList(cardsList, new EnWildStrike());
                     addToList(cardsList, new EnRecklessCharge());
-                    addToList(cardsList, new EnWildStrike(), extraUpgrades);
                     addToList(cardsList, new EnDefendRed());
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnPowerThrough(true));
+                    addToList(cardsList, new EnPowerThrough(true), extraUpgrades);
                     addToList(cardsList, new EnSecondWind());
                     addToList(cardsList, new EnDefendRed());
                     theArtOfWar.beginPulse();
@@ -112,7 +112,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnPowerThrough(true));
+                    addToList(cardsList, new EnPowerThrough(true), extraUpgrades);
                     addToList(cardsList, new EnTrueGrit(), true);
                     //IC will exhaust the Doubt the first time through the loop instead of a wound
                     //So the wound will appear the second time through the loop onward
@@ -121,7 +121,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     theArtOfWar.beginPulse();
                     break;
                 case 1:
-                    addToList(cardsList, new EnWildStrike(), extraUpgrades);
+                    addToList(cardsList, new EnWildStrike());
                     addToList(cardsList, new EnRecklessCharge());
                     addToList(cardsList, new EnBash());  //unused
                     turn++;

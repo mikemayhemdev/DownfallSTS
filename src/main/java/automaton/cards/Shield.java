@@ -19,6 +19,7 @@ public class Shield extends AbstractBronzeCard {
     public Shield() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
+        selfRetain = true;
         cardsToPreview = new Slimed();
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Shield.png"));
     }

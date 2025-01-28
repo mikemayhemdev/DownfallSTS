@@ -47,7 +47,7 @@ public class Gem_Cyan extends AbstractGemCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = CYAN;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
         this.cardsToPreview = new CrystalWard();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Aquamarine.png"));

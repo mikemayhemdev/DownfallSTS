@@ -5,7 +5,7 @@
       "encode",
       "encoded"
     ],
-    "DESCRIPTION": "Encode a card. NL When 3 cards are Encoded, their effects (other than Encode) are merged into a Function that costs #b1."
+    "DESCRIPTION": "Encode a card. NL When 3 cards are Encoded, their effects (other than Encode) are merged into a Function that costs #b1 [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Compile",

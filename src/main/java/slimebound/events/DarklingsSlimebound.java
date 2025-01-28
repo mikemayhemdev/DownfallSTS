@@ -1,7 +1,6 @@
 package slimebound.events;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.curses.Parasite;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,8 +9,6 @@ import com.megacrit.cardcrawl.events.RoomEventDialog;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.Circlet;
-import com.megacrit.cardcrawl.relics.OddMushroom;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import org.apache.logging.log4j.LogManager;
@@ -32,7 +29,7 @@ public class DarklingsSlimebound extends AbstractEvent {
 
     ArrayList<AbstractCard> validCards;
     public DarklingsSlimebound() {
-        this.body = DESCRIPTIONS[0];// 43
+        this.body = DESCRIPTIONS[0];
         validCards = new ArrayList<>();
         for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
             if (c.rarity == AbstractCard.CardRarity.RARE){
@@ -40,46 +37,46 @@ public class DarklingsSlimebound extends AbstractEvent {
             }
         }
 
-        this.roomEventText.addDialogOption(OPTIONS[1]);// 47
+        this.roomEventText.addDialogOption(OPTIONS[1]);
 
         if (validCards.size() > 0){
             this.roomEventText.addDialogOption(OPTIONS[0] + validCards.get(0).name + OPTIONS[3], CardLibrary.getCopy(Darklings.ID));// 45
         } else {
-            this.roomEventText.addDialogOption(OPTIONS[4],true);// 45
+            this.roomEventText.addDialogOption(OPTIONS[4],true);
         }
 
-        AbstractDungeon.getCurrRoom().phase = RoomPhase.EVENT;// 48
-        this.hasDialog = true;// 49
-        this.hasFocus = true;// 50
-    }// 51
+        AbstractDungeon.getCurrRoom().phase = RoomPhase.EVENT;
+        this.hasDialog = true;
+        this.hasFocus = true;
+    }
 
     public void update() {
-        super.update();// 54
-        if (!RoomEventDialog.waitForInput) {// 55
-            this.buttonEffect(this.roomEventText.getSelectedOption());// 56
+        super.update();
+        if (!RoomEventDialog.waitForInput) {
+            this.buttonEffect(this.roomEventText.getSelectedOption());
         }
 
-    }// 58
+    }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (buttonPressed) {// 62
+        switch (buttonPressed) {
             case 0:
-                if (this.screenNum == 0) {// 65
+                if (this.screenNum == 0) {
                     logMetric(ID, "Fight");
-                    AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("3 Darklings");// 66
-                    this.roomEventText.updateBodyText(DESCRIPTIONS[1]);// 68
-                    this.roomEventText.updateDialogOption(0, OPTIONS[2]);// 69
-                    this.roomEventText.removeDialogOption(1);// 70
-                    this.screenNum += 2;// 72
-                } else if (this.screenNum == 1) {// 73
-                    this.openMap();// 75
-                } else if (this.screenNum == 2) {// 76
-                    this.enterCombat();// 89
+                    AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("3 Darklings");
+                    this.roomEventText.updateBodyText(DESCRIPTIONS[1]);
+                    this.roomEventText.updateDialogOption(0, OPTIONS[2]);
+                    this.roomEventText.removeDialogOption(1);
+                    this.screenNum += 2;
+                } else if (this.screenNum == 1) {
+                    this.openMap();
+                } else if (this.screenNum == 2) {
+                    this.enterCombat();
                 }
 
                 return;// 92
             case 1:
-                AbstractCard bonus = new Darklings();// 956
+                AbstractCard bonus = new Darklings();
                 AbstractCard cardRemoved = validCards.get(0);
                 AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(
                         cardRemoved, Settings.WIDTH * 0.35F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2));
@@ -90,20 +87,20 @@ public class DarklingsSlimebound extends AbstractEvent {
                         null, null, null,
                         0, 0, 0, 0, 0, 0);
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(bonus, (float) Settings.WIDTH * 0.65F, (float) Settings.HEIGHT / 2.0F));// 99
-                this.roomEventText.updateBodyText(DESCRIPTIONS[2]);// 101
-                this.roomEventText.updateDialogOption(0, OPTIONS[2]);// 102
-                this.roomEventText.removeDialogOption(1);// 103
-                this.screenNum = 1;// 104
-                return;// 105
+                this.roomEventText.updateBodyText(DESCRIPTIONS[2]);
+                this.roomEventText.updateDialogOption(0, OPTIONS[2]);
+                this.roomEventText.removeDialogOption(1);
+                this.screenNum = 1;
+                return;
             default:
-                logger.info("ERROR: case " + buttonPressed + " should never be called");// 107
+                logger.info("ERROR: case " + buttonPressed + " should never be called");
         }
-    }// 108
+    }
 
     static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(ID);// 28
-        NAME = eventStrings.NAME;// 29
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;// 30
-        OPTIONS = eventStrings.OPTIONS;// 31
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
     }
 }

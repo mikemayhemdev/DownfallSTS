@@ -8,9 +8,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import sneckomod.powers.VenomDebuff;
 
 
-public class RevengePower extends AbstractGuardianPower implements DefensiveModeBooster {
+public class RevengePower extends AbstractGuardianPower{
     public static final String POWER_ID = "Guardian:RevengePower";
     public static PowerType POWER_TYPE = PowerType.BUFF;
 
@@ -37,15 +38,10 @@ public class RevengePower extends AbstractGuardianPower implements DefensiveMode
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
-    @Override
-    public void onEnter() {
+
+    public void onActivateCallR(AbstractCreature target) {
         flash();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
     }
 
-    @Override
-    public void onLeave() {
-        flash();
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, StrengthPower.POWER_ID, amount));
-    }
 }

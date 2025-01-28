@@ -24,8 +24,8 @@ public class TurnItUp extends AbstractHexaCard {
         baseMagicNumber = magicNumber = 3;
 //        this.exhaust = true;
 //        this.retain = false;
-//        tags.add(HexaMod.GHOSTWHEELCARD);
-//        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+          tags.add(HexaMod.GHOSTWHEELCARD); // I'm adding these back in for a later prismatic shard / snecko fix - blue
+          this.tags.add(SneckoMod.BANNEDFORSNECKO); // read one line up
         HexaMod.loadJokeCardImage(this, "TurnItUp.png");
     }
 

@@ -97,7 +97,6 @@ public class WatcherCripplePower extends AbstractBossMechanicPower {
     @Override
     public void atEndOfRound() {
         super.atEndOfRound();
-
         this.amount = 3 * LOSE_1_STRENGTH_PER_X_HP;
         this.thirdused = false;
         this.secondused = false;

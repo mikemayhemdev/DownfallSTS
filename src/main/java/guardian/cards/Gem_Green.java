@@ -23,7 +23,7 @@ public class Gem_Green extends AbstractGemCard {
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemGreen.png";
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
@@ -52,7 +52,7 @@ public class Gem_Green extends AbstractGemCard {
         this.baseMagicNumber = this.magicNumber = DAMAGEBUFF;
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = GREEN;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Emerald.png"));
     }

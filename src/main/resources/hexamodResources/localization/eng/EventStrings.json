@@ -8,14 +8,14 @@
       "You take the strange #ygolden box, and feel a #pdarkness flow through you as you open it. Inside, you find a useful weapon!",
       "You take the pulsating, steadily @BEATING@ box, and feel it @FLOW@ into your arm. A foul #pnausea pulses through you, but you feel stronger for it...",
       "As soon as you clasp the artifact from the figure, #pdarkness envelops the room. The specter speaks to you once more, his words appearing in your head without you ever hearing them. NL NL #p'A #pwise #pchoice. #pWhat #pdo #pyou #psay #pto #panother #pdeal, #pfriend? #pTake #pas #pmany #pas #pyou #plike...'",
-      "You know the deals this #papparition offers come with too high a price. You need to deal with it, and how fortuitous! Near the wall! A #bBlue #bCandle! NL NL You snatch the candle from the wall, #rsingeing #ryourself a bit, and toss it towards the specter, which dissipates into an #beerie #bhue. NL NL It won't be offering any deals any more.",
-      "You know the deals this #papparition offers come with too high a price. You need to deal with it, and how fortuitous! You brought along a #bBlue #bCandle! NL NL You toss the candle towards the specter, which dissipates into an #beerie #bhue. NL NL It won't be offering any deals any more."
+      "You know the deals this #papparition offers come with too high a price. You need to deal with it, and how fortuitous! Near the wall! A #bCurse-Dispelling #bCandle! NL NL You snatch the candle from the wall, #rsingeing #ryourself a bit, and toss it towards the specter, which dissipates into an #beerie #bhue. NL NL It won't be offering any deals any more.",
+      "You know the deals this #papparition offers come with too high a price. You need to deal with it, and how fortuitous! You brought along a #bCurse-Dispelling #bCandle! NL NL You toss the candle towards the specter, which dissipates into an #beerie #bhue. NL NL It won't be offering any deals any more."
     ],
     "OPTIONS": [
       "[Left Box] #gObtain #ga #gDu-Vu #gDoll #gor #gDarkstone #gPeriapt. #rCursed #rTwice #r- #rHaunted.",
       "[Shop for More]",
       "[Right Box] #gObtain #ga #gCursed #gKey #gor #gCalling #gBell. #rIt #ris #rextra #rCursed.",
-      "[Chase Away] #gObtain #gBlue #gCandle. #rLose #r5 #rHP.",
+      "[Chase Away] #gObtain #ga #bCurse-Dispelling #bCandle. #rLose #r5 #rHP.",
       "[Chase Away] Leave.",
       "[Trade for Power] #gGain a #grandom #yRare #gcard. #rBecome #rCursed #r- #rRandom.",
       "[Trade for Life] #gGain #g5 #gMax #gHP. #rBecome #rCursed #r- #rRandom.",
@@ -27,25 +27,25 @@
   "hexamod:SealChamber": {
     "NAME": "Seal Chamber",
     "DESCRIPTIONS": [
-      "A menacing structure lies before you.  Most would never dare approach it, but you know its purpose, and know it can be of great use. NL You enter the chamber, and prepare to make a #rsacrifice...",
+      "A menacing structure lies before you. Most would never dare approach it, but you know its purpose, and know it can be of great use. NL You enter the chamber, and prepare to make a #rsacrifice...",
       "Paying a piece of your very soul, you acquire the seal - one more step in the path to your ultimate power. ",
-      "Weighing your options, you decide against making a sacrifice in the Seal Chamber.  You'll need everything you have to complete your journey.",
+      "Weighing your options, you decide against making a sacrifice in the Seal Chamber. You'll need everything you have to complete your journey.",
       "This Seal shall prove most useful in the battles to come."
     ],
     "OPTIONS": [
       "[Offer] #rLose ",
-      " HP. #gGain #gFirst #gSeal.",
-      " #ySouls. #gGain #gSecond #gSeal.",
-      ". #gGain #gThird #gSeal.",
-      ". #gGain #gFourth #gSeal.",
-      "[Locked] Requires more Gold.",
+      " HP. #gGain #gFirst #gSeal [REMOVE_SPACE].",
+      " #ySouls. #gGain #gSecond #gSeal [REMOVE_SPACE].",
+      ". #gGain #gThird #gSeal [REMOVE_SPACE].",
+      ". #gGain #gFourth #gSeal [REMOVE_SPACE].",
+      "[Locked] Requires more Gold [REMOVE_SPACE].",
       "[Locked] Requires a Common Card.",
       "[Locked] Requires a Potion.",
       "[Leave]",
       "[Locked] Offering made.",
-      ". #gGain #gFifth #gSeal.",
+      ". #gGain #gFifth #gSeal [REMOVE_SPACE].",
       "[Locked] Requires an Upgraded Card.",
-      " Max HP. #gGain #gSixth #gSeal.",
+      " Max HP. #gGain #gSixth #gSeal [REMOVE_SPACE].",
       "[Locked] Requires 2 Max HP."
     ]
   },
@@ -74,13 +74,13 @@
       ],
     "OPTIONS": [
       "[Accept] #rLose #r",
-      " #rMax #rHP. Unlock Study and Learn options.",
-      "[Study] #rLose #rall #rStrikes. #gGain #g3 #gCouncil's #gJustice.",
-      "[Learn] #rLose #rall #rDefends. #gGain #g",
+      " #rMax #rHP [REMOVE_SPACE]. Unlock Study and Learn options.",
+      "[Study] #rLose #rall #rStrikes [REMOVE_SPACE]. #gGain #g3 #gCouncil's #gJustice [REMOVE_SPACE].",
+      "[Learn] #rLose #rall #rDefends [REMOVE_SPACE]. #gGain #g",
       "[Complete]",
       "[Leave]",
       "[Locked] Cannot leave yet.",
-      " #gApparition."
+      " #gApparition [REMOVE_SPACE]."
     ]
   },
   "hexamod:BackToBasics": {
@@ -89,7 +89,7 @@
       "Spirit is the sword - and experience, the sharpening stone."
     ],
     "OPTIONS": [
-      "[Wistfulness] #gAdd #gEthereal to all #gStrikes and #gDefends.",
+      "[Wistfulness] #gAdd #gEthereal to all #gStrikes and #gDefends [REMOVE_SPACE].",
       "[Locked] Requires a Strike or Defend."
     ]
   }

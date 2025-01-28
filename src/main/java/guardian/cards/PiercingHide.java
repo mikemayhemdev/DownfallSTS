@@ -69,7 +69,12 @@ public class PiercingHide extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, this.magicNumber), this.magicNumber));
-        brace(3);
+        if (!upgraded) {
+            brace(3);
+        }
+        if (upgraded) {
+            brace(4);
+        }
         super.useGems(p, m);
     }
 
@@ -82,6 +87,8 @@ public class PiercingHide extends AbstractGuardianCard {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK);
             upgradeMagicNumber(UPGRADE_THORNS);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.updateDescription();
         }
     }
 

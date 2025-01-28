@@ -23,6 +23,7 @@ public class ChampAfraidOfGhostsPatch {
         )
         public static void Insert(Random rng, ArrayList<String> tmp) {
             if (AbstractDungeon.player instanceof ChampChar) {
+                //todo: figure out why this is here
                 tmp.remove(Ghosts.ID);
             }
         }

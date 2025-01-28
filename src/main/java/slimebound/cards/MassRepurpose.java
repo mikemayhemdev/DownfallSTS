@@ -34,7 +34,7 @@ public class MassRepurpose extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -51,7 +51,7 @@ public class MassRepurpose extends AbstractSlimeboundCard {
         this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "MassRepurpose.png");
 
-
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
 //         this.tags.add(CardTags.HEALING);
@@ -64,7 +64,10 @@ public class MassRepurpose extends AbstractSlimeboundCard {
                 SlimeboundMod.spawnSpecialistSlime();
             }
         }
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
+        if (upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
+            checkMinionMaster();
+        }
     }
 
     public void upgrade() {

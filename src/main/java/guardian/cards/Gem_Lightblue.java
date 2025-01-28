@@ -55,7 +55,7 @@ public class Gem_Lightblue extends AbstractGemCard {
         this.baseMagicNumber = this.magicNumber = Thorns;
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = LIGHTBLUE;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Tourmaline.png"));
     }

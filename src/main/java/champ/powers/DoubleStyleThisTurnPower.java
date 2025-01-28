@@ -15,7 +15,7 @@ public class DoubleStyleThisTurnPower extends AbstractPower implements Cloneable
 
     public static final String POWER_ID = ChampMod.makeID("DoubleStyleThisTurnPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/ChainLash84.png"); //TODO: Icon Art
+    private static final Texture tex84 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/ChainLash84.png");
     private static final Texture tex32 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/ChainLash32.png");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;

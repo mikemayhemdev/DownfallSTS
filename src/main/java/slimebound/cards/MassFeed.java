@@ -43,7 +43,7 @@ public class MassFeed extends AbstractSlimeboundCard {
 
         this.tags.add(CardTags.HEALING);
         this.baseDamage = 10;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
 
         this.exhaust = true;
         this.isMultiDamage = true;

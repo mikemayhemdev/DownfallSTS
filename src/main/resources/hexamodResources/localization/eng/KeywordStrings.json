@@ -29,7 +29,7 @@
     "NAMES": [
       "intensity"
     ],
-    "DESCRIPTION": "Intensity increases the amount of damage, #ySoulburn, and #yBlock [REMOVE_SPACE] applied by Ghostflames when #yIgnited [REMOVE_SPACE]."
+    "DESCRIPTION": "Intensity increases the damage, #ySoulburn [REMOVE_SPACE], and #yBlock [REMOVE_SPACE] applied by Ghostflames when #yIgnited [REMOVE_SPACE]."
   },
   {
     "ID": "soulburn",
@@ -46,7 +46,7 @@
       "extinguish",
       "extinguished"
     ],
-    "DESCRIPTION": "Allows Ghostflame to become #yIgnited again, resetting its Ignition requirements."
+    "DESCRIPTION": "Allows a Ghostflame to become #yIgnited again, resetting its Ignition requirements."
   },
   {
     "PROPER_NAME": "Ignite",
@@ -87,6 +87,14 @@
     ],
     "DESCRIPTION": "#yGhostflame. #yIgnites when a #yPower is played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], gain #b4 #yBlock and #b1 #yStrength [REMOVE_SPACE].",
     "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+  },
+  {
+    "ID": "plated",
+    "PROPER_NAME": "Plated Armor",
+    "NAMES": [
+      "plated"
+    ],
+    "DESCRIPTION": "At the end of your turn, gain Block equal to your #yPlated #yArmor. Taking unblocked attack damage reduces #yPlated #yArmor by #b1."
   },
   {
     "PROPER_NAME": "Searing",

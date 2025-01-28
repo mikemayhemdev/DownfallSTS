@@ -11,7 +11,7 @@ public class ShieldSlam extends AbstractChampCard {
 
     public final static String ID = makeID("ShieldSlam");
 
-    //stupid intellij stuff attack, enemy, rare
+    //Moment of Truth
 
     public ShieldSlam() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

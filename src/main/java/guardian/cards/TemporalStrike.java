@@ -50,6 +50,7 @@ public class TemporalStrike extends AbstractGuardianCard {
 
         this.baseDamage = DAMAGE;
         this.socketCount = SOCKETS;
+        tags.add(CardTags.STRIKE);
         updateDescription();
         loadGemMisc();
 

@@ -18,7 +18,7 @@ public class RapidStrikes extends AbstractChampCard {
     private static final int DAMAGE = 4;
 
     public RapidStrikes() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         baseMagicNumber = magicNumber = 2;

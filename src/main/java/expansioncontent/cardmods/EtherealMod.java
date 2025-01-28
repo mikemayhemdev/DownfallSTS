@@ -42,8 +42,9 @@ public class EtherealMod extends AbstractCardModifier {
     }
 
     //Retain Override - do not remove - Stanek
-    @Override
-    public void onRetained(AbstractCard card) {
-        AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand, true));
-    }
+    //sorry - blue
+   // @Override
+    //    public void onRetained(AbstractCard card) {
+    //       // AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand, true));
+    //    }
 }

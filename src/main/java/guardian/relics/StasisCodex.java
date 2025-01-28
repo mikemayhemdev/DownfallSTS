@@ -15,29 +15,49 @@ public class StasisCodex extends CustomRelic {
     public static final String IMG_PATH = "relics/constructCodex.png";
     public static final String OUTLINE_IMG_PATH = "relics/constructCodexOutline.png";
     public static final String LARGE_IMG_PATH = "relics/constructCodexLarge.png";
-    private static final int HP_PER_CARD = 1;
+    private static final int MAX_MARKER = 3;
+    private int marker = 0;
 
     public StasisCodex() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.UNCOMMON, LandingSound.FLAT);
+                RelicTier.SHOP, LandingSound.FLAT);
         this.largeImg = TextureLoader.getTexture(GuardianMod.getResourcePath(LARGE_IMG_PATH));
+    }
+
+    @Override
+    public void atBattleStart() {
+        this.counter = 1;
+        marker = 1;
+        this.grayscale = false;
     }
 
     @Override
     public void onPlayerEndTurn() {
         super.onPlayerEndTurn();
-        if (!GuardianMod.isStasisOrbInPlay()) {
-
-            AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractDungeon.actionManager.addToBottom(new StasisCodexAction());
+        if (marker < MAX_MARKER) {
+            ++this.counter;
+            marker++;
+            if (AbstractDungeon.player.hasEmptyOrb()) {
+                AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                AbstractDungeon.actionManager.addToBottom(new StasisCodexAction());
+            }
+            if (marker == MAX_MARKER) {
+                this.grayscale = true;
+            }
         }
+    }
+
+    @Override
+    public void onVictory() {
+        this.grayscale = false;
+        marker = 0;
+        this.counter = 0;
     }
 
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
-
 
     @Override
     public AbstractRelic makeCopy() {

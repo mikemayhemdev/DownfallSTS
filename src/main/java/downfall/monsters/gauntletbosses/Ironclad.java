@@ -104,6 +104,9 @@ public class Ironclad extends GauntletBoss {
 
     private void bossMove() {
         int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
+        if (turnNum > 5) {
+            rnd = AbstractDungeon.cardRandomRng.random(0, 4);
+        }
         switch (rnd) {
             case 0:
                 isAttacking = true;
@@ -121,7 +124,11 @@ public class Ironclad extends GauntletBoss {
                 isAttacking = true;
                 setMove(moveName(Bash.ID), (byte) 4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
                 break;
-        }
+            case 4:
+                isAttacking = true;
+                setMove(moveName(Bash.ID), (byte) 4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
+                break;
+    }
     }
 
     protected void getMove(int num) {

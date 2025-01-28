@@ -42,9 +42,10 @@ public class EnPressurePoints extends AbstractBossCard {
       @Override
       public void use(final AbstractPlayer p, final AbstractMonster m) {
             //TODO: add vfx, this below wont work, still strikes the player from left to right like you use on a monster
-//            AbstractGameEffect pressure_vfx = new PressurePointEffect(p.hb.cX, p.hb.cY);
-//            pressure_vfx.renderBehind = true;
-//            addToBot(new VFXAction(    pressure_vfx   ));
+            //still probably worth using imo.
+            AbstractGameEffect pressure_vfx = new PressurePointEffect(p.hb.cX, p.hb.cY);
+            pressure_vfx.renderBehind = true;
+            addToBot(new VFXAction(    pressure_vfx   ));
             addToBot(new ApplyPowerAction(p, m, new EnemyMarkPower(p, m, magicNumber), magicNumber));
             if(countMarks()>0) {
                   this.addToBot(new DamageAction(p, new DamageInfo(m, countMarks(), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
