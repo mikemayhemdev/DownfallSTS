@@ -50,7 +50,7 @@ public class CoalescencePower extends AbstractPower implements CloneablePowerInt
     public void atEndOfTurn(boolean isPlayer) {
         this.flash();
 
-        if ((isPlayer && !AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.player.hasRelic("Runic Pyramid") && !AbstractDungeon.player.hasPower("Equilibrium")) || (AbstractDungeon.player.hasPower(EstablishmentPower.POWER_ID)) && !AbstractDungeon.player.hand.isEmpty()) {
+        if ((isPlayer && !AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.player.hasRelic("Runic Pyramid") && !AbstractDungeon.player.hasPower("Equilibrium")) || (isPlayer && (AbstractDungeon.player.hasPower(EstablishmentPower.POWER_ID)) && !AbstractDungeon.player.hand.isEmpty())) {
             this.addToBot(new RetainCardsAction(this.owner, this.amount));
         }
 
