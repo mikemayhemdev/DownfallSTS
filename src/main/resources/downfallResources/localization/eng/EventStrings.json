@@ -470,12 +470,12 @@
       "Everything makes sense now. NL The singular purpose, the descent, the #pHeart. NL NL This is the way it always was. NL This is the way it always will be. NL All will be forgotten again soon..."
     ],
     "OPTIONS": [
-      "[I am an Echo] #rFight #ryourself. #gObtain #ga #gRare #gRelic [REMOVE_SPACE].",
-      "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality [REMOVE_SPACE].",
-      "[I am Complete] #gUpgrade #gall #gCards. #rBecome #rBurdened [REMOVE_SPACE].",
+      "[I am an Echo] #rFight #ryourself. #gObtain #ga #gRare #gRelic.",
+      "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality.",
+      "[I am Complete] #gUpgrade #gall #gCards. #rBecome #rBurdened.",
       "[Locked] Requires all 3 Heart Blessings.",
       "[Leave]",
-      "[I am Complete] #gUpgrade #gall #gCards. #rBecome #rBurdened [REMOVE_SPACE]."
+      "[I am Complete] #gUpgrade #gall #gCards. #rBecome #rBurdened."
     ]
   },
   "downfall:MoaiHead": {
@@ -488,12 +488,12 @@
     ],
     "OPTIONS": [
       "[Offer Souls] #rLose #r",
-      " #rSouls [REMOVE_SPACE]. #gGain #g",
-      " #gMax #gHP and #gHeal #gto #gfull [REMOVE_SPACE].",
+      " #rSouls. #gGain #g",
+      " #gMax #gHP and #gHeal #gto #gfull.",
       "[Locked] Requires ",
       " Souls.",
-      " #rSouls [REMOVE_SPACE]. #gEach #gGremlin #gGains #g",
-      "[Jump Inside] #gHeal #gto #gfull #gHP [REMOVE_SPACE]. #rEach #rGremlin #rLoses #r"
+      " #rSouls. #gEach #gGremlin #gGains #g",
+      "[Jump Inside] #gHeal #gto #gfull #gHP. #rEach #rGremlin #rLoses #r"
     ]
   },
   "downfall:SensoryStone": {

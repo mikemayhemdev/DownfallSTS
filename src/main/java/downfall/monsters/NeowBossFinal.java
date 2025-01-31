@@ -160,7 +160,7 @@ public class NeowBossFinal extends AbstractMonster {
 
         int invincibleAmt = 250;
         if (AbstractDungeon.ascensionLevel >= 19) {
-            invincibleAmt -= 50;
+           // invincibleAmt -= 50;
         }// a19 difficulty setting is changed from god of life 2(3), invincible 300(250) , to,  you (dont) get heart's favor
 
         if (AbstractDungeon.ascensionLevel >= 19) {
