@@ -51,7 +51,7 @@ public class ShiningLight_Evil extends AbstractImageEvent {
                 this.imageEventText.setDialogOption(OPTIONS[0], new Malfunctioning());
             }
             if (AbstractDungeon.ascensionLevel >= 15) {
-                this.imageEventText.setDialogOption(OPTIONS[4], new Malfunctioning());
+                this.imageEventText.setDialogOption(OPTIONS[3], new Malfunctioning());
             }
         } else {
             this.imageEventText.setDialogOption(OPTIONS[2], true);
