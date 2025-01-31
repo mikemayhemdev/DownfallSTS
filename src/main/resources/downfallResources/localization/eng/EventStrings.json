@@ -214,10 +214,10 @@
       "You walk around it, wondering what could have been."
     ],
     "OPTIONS": [
-      "[Enter] #gUpgrade #g2 #grandom #gcards. #rBecome #rCursed #r- #rFlawed.",
+      "[Enter] #gUpgrade #g",
       "[Leave]",
       "[Locked] Requires: Upgradeable Cards",
-      "[Enter] #gUpgrade #g3 #grandom #gcards. #rBecome #rCursed #r- #rFlawed."
+      " #grandom #gcards. #rBecome #rCursed #r- #rFlawed."
     ]
   },
   "downfall:WorldOfGoop": {
@@ -248,7 +248,6 @@
     ],
     "OPTIONS": [
       "[Agree] [Punch] #gGain #g",
-      " #gSouls. #rBecome #rCursed #r- #rDoubt.",
       " #gSouls. #rBecome #rCursed #r- #rDoubt.",
       "[Disagree]",
       "[Leave]"
