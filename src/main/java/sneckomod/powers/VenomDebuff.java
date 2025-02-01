@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.beyond.Transient;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.HermitMod;
@@ -56,6 +57,7 @@ public class VenomDebuff extends AbstractPower implements CloneablePowerInterfac
     @Override
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (power.type == PowerType.DEBUFF && target == this.owner && !power.ID.equals("Shackled") && !target.hasPower("Artifact") && !(power instanceof VenomDebuff)) {
+            if (! ((target.hasPower("Shifting") && (power instanceof StrengthPower))) )
             this.addToBot(new DamageAction(owner, new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
         }
         return true;
