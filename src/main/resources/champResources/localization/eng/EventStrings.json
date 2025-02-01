@@ -54,7 +54,7 @@
       "[Leave]",
       "[Locked] Requires an Attack Card.",
       "Choose a card to gain #y'trigger #ySkill #yBonus.' [REMOVE_SPACE].",
-      "[Read] Choose an Attack to gain #y'trigger #ySkill #yBonus.' [REMOVE_SPACE]. #rCursed #r- #rPride [REMOVE_SPACE]."
+      "[Read] Choose an Attack to gain #y'trigger #ySkill #yBonus.' [REMOVE_SPACE]. #rCursed #r- #rPride."
     ]
   },
   "champ:Gym": {
@@ -69,7 +69,7 @@
       "[Cardio] #gGain #g",
       " #gMax #gHP [REMOVE_SPACE].",
       "[Spar] Choose a non-Finisher card to gain 'Enter (Chosen) Stance'.",
-      "[Lift] #gGain #g1 #gStrength #gPermanently [REMOVE_SPACE].",
+      "[Lift] #gGain #g1 #gStrength #gPermanently.",
       "[Leave]",
       "Choose a non-Finisher card to give 'Enter Defensive'.",
       "Choose a non-Finisher card to give 'Enter Gladiator'.",

@@ -7,8 +7,8 @@
       "You dispatch the Slime Boss with ease, claiming its prizes possession for yourself. It's a very stylish hat, after all."
     ],
     "OPTIONS": [
-      "[Confront] #rFight #rSlime #rBoss. Reward: #gTiny #gBowler #gHat [REMOVE_SPACE].",
-      "[Flee in Terror] #rCursed #r- #rShame [REMOVE_SPACE]."
+      "[Confront] #rFight #rSlime #rBoss. Reward: #gTiny #gBowler #gHat.",
+      "[Flee in Terror] #rCursed #r- #rShame."
     ]
   },
   "Slimebound:WorldofGoop": {
@@ -19,8 +19,8 @@
       "You succeed in negotiating a deal with the creature to provide it with more tasty #ysouls if it will aid you in your quest. NL You and your newfound #gfriend exit the slime bath together."
     ],
     "OPTIONS": [
-      "[Gather Souls] #gGain #g75 #gSouls [REMOVE_SPACE].",
-      "[Recruit] #rLose #r75 #rSouls. #gGain #yGreed #yOoze [REMOVE_SPACE].",
+      "[Gather Souls] #gGain #g75 #gSouls.",
+      "[Recruit] #rLose #r75 #rSouls. #gGain #yGreed #yOoze.",
       "[Leave]",
       "[Locked] Requires 75 Souls."
     ]
@@ -98,7 +98,7 @@
       "When one sheep leads the way, all the rest follow."
     ],
     "OPTIONS": [
-      "[Inspiration] #gAdd #gCommand to all #gStrikes and #gDefends [REMOVE_SPACE].",
+      "[Inspiration] #gAdd #gCommand to all #gStrikes and #gDefends.",
       "[Locked] Requires a Strike or Defend."
     ]
   }
