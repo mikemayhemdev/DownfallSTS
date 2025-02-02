@@ -18,7 +18,7 @@ public class SnakeEyes extends AbstractSneckoCard implements OnObtainCard {
 
 
     ///Snake Eyes
-    public final static String ID = makeID("MasterEye");
+    public final static String ID = makeID("SnakeEyes");
 
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
