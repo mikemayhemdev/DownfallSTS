@@ -14,7 +14,7 @@ import sneckomod.SneckoMod;
 
 public class LaserEyes extends AbstractSneckoCard {
 
-    public static final String ID = SneckoMod.makeID("SnekBeam");
+    public static final String ID = SneckoMod.makeID("LaserEyes");
 
     private static final int COST = 3;
     private static final int DAMAGE = 15;

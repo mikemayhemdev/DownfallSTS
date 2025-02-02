@@ -107,7 +107,7 @@
       "Exhaust for Nope."
     ]
   },
-  "sneckomod:MasterEye": {
+  "sneckomod:SnakeEyes": {
     "NAME": "Snake Eyes",
     "DESCRIPTION": "This turn, your next sneckomod:Offclass card is played twice. NL sneckomod:Gift: Rare Skill.",
     "UPGRADE_DESCRIPTION": "This turn, your next 2 sneckomod:Offclass cards are played twice. NL sneckomod:Gift: Rare Skill.",
@@ -206,13 +206,6 @@
     "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by !M! this turn. NL sneckomod:Gift: Uncommon.",
     "DESCRIPTION_BATTLE": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by !M! this turn."
   },
-  "sneckomod:SnakeEyes": {
-    "NAME": "Snake Eyes",
-    "DESCRIPTION": "This turn, your next sneckomod:Offclass card is played twice. NL sneckomod:Gift: Rare Skill.",
-    "UPGRADE_DESCRIPTION": "This turn, your next 2 sneckomod:Offclass cards are played twice. NL sneckomod:Gift: Rare Skill.",
-    "DESCRIPTION_BATTLE": "This turn, your next sneckomod:Offclass card is played twice.",
-    "UPGRADE_DESCRIPTION_BATTLE": "This turn, your next 2 sneckomod:Offclass cards are played twice."
-  },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
     "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
@@ -220,7 +213,7 @@
       "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
-  "sneckomod:SnekBeam": {
+  "sneckomod:LaserEyes": {
     "NAME": "Laser Eyes",
     "DESCRIPTION": "Deal !D! damage. NL Gain [E]."
   },
