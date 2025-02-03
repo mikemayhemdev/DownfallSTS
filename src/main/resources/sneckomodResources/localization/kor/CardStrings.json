@@ -107,7 +107,7 @@
       "안돼로 소멸시킬 카드를 선택하십시오."
     ]
   },
-  "sneckomod:MasterEye": {
+  "sneckomod:SnakeEyes": {
     "NAME": "뱀의 눈",
     "DESCRIPTION": "이번 턴에 다음으로 사용하는 sneckomod:다른_직업 카드 1장이 2번 사용됩니다. NL sneckomod:선물: 희귀 스킬 카드.",
     "UPGRADE_DESCRIPTION": "이번 턴에 다음으로 사용하는 sneckomod:다른_직업 카드 2장이 2번 사용됩니다. NL sneckomod:선물: 희귀 스킬 카드.",
@@ -205,13 +205,6 @@
     "NAME": "유연한 통과",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 sneckomod:다른_직업 카드의 비용을 !M! 장의 비용을 낯춥니다. NL sneckomod:선물: 특별 카드.",
     "DESCRIPTION_BATTLE": "피해를 !D! 줍니다. NL 이번 턴에 sneckomod:다른_직업 카드의 비용을 !M! 장의 비용을 낯춥니다."
-  },
-  "sneckomod:SnakeEyes": {
-    "NAME": "뱀의 눈",
-    "DESCRIPTION": "이번 턴에 다음으로 사용하는 sneckomod:다른_직업 카드 1장이 2번 사용됩니다. NL sneckomod:선물: 희귀 스킬 카드.",
-    "UPGRADE_DESCRIPTION": "이번 턴에 다음으로 사용하는 sneckomod:다른_직업 카드 2장이 2번 사용됩니다. NL sneckomod:선물: 희귀 스킬 카드.",
-    "DESCRIPTION_BATTLE": "이번 턴에 다음으로 사용하는 sneckomod:다른_직업 카드 1장이 2번 사용됩니다.",
-    "UPGRADE_DESCRIPTION_BATTLE": "이번 턴에 다음으로 사용하는 sneckomod:다른_직업 카드 2장이 2번 사용됩니다."
   },
   "sneckomod:SnakeSap": {
     "NAME": "뱀 수액",
@@ -498,7 +491,7 @@
   },
   "sneckomod:Serpentscale": {
     "NAME": "뱀비늘",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL sneckomod:과중하지 않았다면 expansioncontent:판금_갑옷을 1 얻습니다. NL sneckomod:과중 시 *판금 *갑옷을 !M! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL sneckomod:과중하지 않았다면 expansioncontent:판금 *갑옷을 1 얻습니다. NL sneckomod:과중 시 *판금 *갑옷을 !M! 얻습니다."
   },
   "sneckomod:OtherworldlySlash": {
     "NAME": "초인적인 베기",
