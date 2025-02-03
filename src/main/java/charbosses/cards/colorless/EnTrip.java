@@ -54,7 +54,8 @@ public class EnTrip extends AbstractBossCard {
 
     public String overrideIntentText() {
         if (AbstractCharBoss.boss.hasPower(SadisticPower.POWER_ID)) {
-            return "7";
+            int count=this.magicNumber+AbstractCharBoss.boss.getPower(SadisticPower.POWER_ID).amount;
+            return "(" +count+ ")";
         }
         return super.overrideIntentText();
     }

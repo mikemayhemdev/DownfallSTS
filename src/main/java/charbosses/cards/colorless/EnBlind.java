@@ -2,6 +2,8 @@ package charbosses.cards.colorless;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.orbs.AbstractEnemyOrb;
+import charbosses.powers.cardpowers.EnemyStormPower;
 import charbosses.powers.general.EnemyPoisonPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -47,7 +49,8 @@ public class EnBlind extends AbstractBossCard {
 
     public String overrideIntentText() {
         if (AbstractCharBoss.boss.hasPower(SadisticPower.POWER_ID)) {
-            return "7";
+            int count=this.magicNumber+AbstractCharBoss.boss.getPower(SadisticPower.POWER_ID).amount;
+            return "(" +count+ ")";
         }
         return super.overrideIntentText();
     }
