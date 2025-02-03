@@ -62,7 +62,6 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.*;
 import java.util.function.Predicate;
-import java.util.HashSet;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.*;
 import static downfall.downfallMod.sneckoNoModCharacters;
@@ -78,7 +77,8 @@ public class SneckoMod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         StartGameSubscriber,
-        PostUpdateSubscriber {
+        PostUpdateSubscriber,
+        AddAudioSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulderR.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
@@ -193,6 +193,15 @@ public class SneckoMod implements
         int th = cardTexture.getHeight();
         TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
         ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
+    }
+
+
+    public static String makeImagePath(String resourcePath) {
+        return getModID() + "Resources/images/" + resourcePath;
+    }
+
+    public static String makeAudioPath(String resourcePath) {
+        return getModID() + "Resources/audio/" + resourcePath;
     }
 
     public static String makeCardPath(String resourcePath) {
@@ -401,6 +410,12 @@ public class SneckoMod implements
                 TheSnecko.Enums.THE_SNECKO
         );
 
+    }
+
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio(makeID("BUS"), makeAudioPath("bus.ogg"));
+        BaseMod.addAudio(makeID("SHOTGUN"), makeAudioPath("shotgun.ogg"));
     }
 
     public void addPotions() {

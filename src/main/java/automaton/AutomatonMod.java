@@ -139,7 +139,6 @@ public class AutomatonMod implements
         ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
     }
 
-
     public static String makeCardPath(String resourcePath) {
         return getModID() + "Resources/images/cards/" + resourcePath;
     }
