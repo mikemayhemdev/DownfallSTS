@@ -454,8 +454,8 @@
       "You deciding that, though it is tempting, fighting here would be an unnecessary distraction. Your journey continues on, and you leave the slavers to resume their ambush."
     ],
     "OPTIONS": [
-      "[Challenge] #rFight Arena Champions. #gGain #gmany #grewards.",
-      "[Participate] #rFight Captive Hero. #gGain #gmany #grewards.",
+      "[Challenge] #rFight #rArena #rChampions. #gGain #gmany #grewards.",
+      "[Participate] #rFight #rCaptive #rHero. #gGain #gmany #grewards.",
       "[Leave]",
       "[FIGHT!]",
       "[Continue]"

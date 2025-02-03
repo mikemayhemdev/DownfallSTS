@@ -578,7 +578,7 @@
     "DESCRIPTION": "Deal !D! damage. NL sneckomod:Overflow: Gain [E] [E]."
   },
   "sneckomod:LastStrike": {
-    "NAME": "Last Strike",
+    "NAME": "Final Strike",
     "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique Strike played this combat. NL sneckomod:Gift: Strike.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Repeat for each unique Strike played this combat. NL sneckomod:Gift: Strike.",
     "DESCRIPTION_BATTLE": "Deal !D! damage. NL Repeat for each unique Strike played this combat.",
