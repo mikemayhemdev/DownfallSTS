@@ -25,8 +25,8 @@ public class ShiningLight_Evil extends AbstractImageEvent {
     private static final EventStrings eventStrings;
     private static final String INTRO;
     private static final String AGREE_DIALOG;
-    private static final String AGREE_DIALOG_ASC;
     private static final String DISAGREE_DIALOG;
+    private int curseObtainChance = 3;
     private static final float HP_LOSS_PERCENT = 0.2F;
     private static final float A_2_HP_LOSS_PERCENT = 0.3F;
 
@@ -38,7 +38,6 @@ public class ShiningLight_Evil extends AbstractImageEvent {
         INTRO = DESCRIPTIONS[0];
         AGREE_DIALOG = DESCRIPTIONS[1];
         DISAGREE_DIALOG = DESCRIPTIONS[2];
-        AGREE_DIALOG_ASC = DESCRIPTIONS[4];
     }
 
     private int damage = 0;
@@ -49,12 +48,10 @@ public class ShiningLight_Evil extends AbstractImageEvent {
         this.screen = CUR_SCREEN.INTRO;
 
         if (AbstractDungeon.player.masterDeck.hasUpgradableCards()) {
-            if (AbstractDungeon.ascensionLevel < 15) {
-                this.imageEventText.setDialogOption(OPTIONS[0], new Malfunctioning());
-            }
             if (AbstractDungeon.ascensionLevel >= 15) {
-                this.imageEventText.setDialogOption(OPTIONS[4], new Malfunctioning());
+                this.curseObtainChance = 2;
             }
+            this.imageEventText.setDialogOption(OPTIONS[0] + this.curseObtainChance + OPTIONS[3], new Malfunctioning());
         } else {
             this.imageEventText.setDialogOption(OPTIONS[2], true);
         }

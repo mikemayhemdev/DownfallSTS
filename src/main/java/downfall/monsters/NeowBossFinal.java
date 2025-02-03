@@ -160,7 +160,7 @@ public class NeowBossFinal extends AbstractMonster {
 
         int invincibleAmt = 250;
         if (AbstractDungeon.ascensionLevel >= 19) {
-            invincibleAmt -= 50;
+           // invincibleAmt -= 50;
         }// a19 difficulty setting is changed from god of life 2(3), invincible 300(250) , to,  you (dont) get heart's favor
 
         if (AbstractDungeon.ascensionLevel >= 19) {
@@ -244,9 +244,15 @@ public class NeowBossFinal extends AbstractMonster {
 
 
                 // god of life maxes out at 6 (7 on a19 because of the higher starting healing) now
-                    int buf = this.getPower(NeowInvulnerablePower.POWER_ID).amount;
-                    if (buf < 6) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
+                    if (this.hasPower(NeowInvulnerablePower.POWER_ID)) {
+                        int buf = this.getPower(NeowInvulnerablePower.POWER_ID).amount;
+                        if (buf < 6) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
+                        }
+                    }
+
+                if (!this.hasPower(NeowInvulnerablePower.POWER_ID)) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
                 }
 
                 if (AbstractDungeon.ascensionLevel >= 19) {

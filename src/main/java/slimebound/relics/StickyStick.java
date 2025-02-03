@@ -36,6 +36,8 @@ public class StickyStick extends CustomRelic {
            this.grayscale = true;
            return;
        }
+
+        if (this.counter < 3)
         if (card.type == AbstractCard.CardType.STATUS || card.type == AbstractCard.CardType.CURSE) {
             this.flash();
             ++this.counter;

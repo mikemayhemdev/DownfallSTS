@@ -22,7 +22,7 @@
       "[Play]",
       "Remaining Attempts: #y",
       "[Intimidate] Steal 6 cards.",
-      "[Punch] #rFight. #gGain #g6 #gCards [REMOVE_SPACE]."
+      "[Punch] #rFight. #gGain #g6 #gCards."
     ]
   },
   "downfall:WomanInBlue": {
@@ -61,19 +61,19 @@
     "OPTIONS": [
       "[Play]",
       "[Prize!] YAY!!!!",
-      "[Prize!] #gObtain #ga #gRelic [REMOVE_SPACE].",
-      "[Prize!] #gHeal #gto #gfull #ghealth [REMOVE_SPACE].",
-      "[Prize?] #rCurse #r- #rDecay [REMOVE_SPACE].",
-      "[Prize!] #gRemove #ga #gcard #gfrom #gyour #gdeck [REMOVE_SPACE].",
+      "[Prize!] #gObtain #ga #gRelic.",
+      "[Prize!] #gHeal #gto #gfull #ghealth.",
+      "[Prize?] #rCurse #r- #rDecay.",
+      "[Prize!] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
       "[Prize?] #rLose #r",
       " #rHP [REMOVE_SPACE].",
       "[Leave]",
       "Select a Card to Remove.",
       "[Again!]",
       "[AGAIN!!]",
-      "[Punch] #rFight. #gGain #gGremlin #gWheel [REMOVE_SPACE].",
+      "[Punch] #rFight. #gGain #gGremlin #gWheel.",
       "[Pass] Try again later.",
-      "[Prize!] #gPREEMPTIVE #gSTRIKE [REMOVE_SPACE]!",
+      "[Prize!] #gPREEMPTIVE #gSTRIKE!",
       "[Loot]"
     ]
   },
@@ -96,7 +96,7 @@
       "A man with an eyepatch and a devilish grin strides up to you. NL \"Oh my, what a terrifying subject! You may not care for science, but I promise you - I can make you stronger than any harvesting of souls. You're gonna need it if you're going after one of those \"heroes\".\" NL NL ~\"Whad'ya~ ~say?\"~"
     ],
     "OPTIONS": [
-      "[Punch] #rFight [REMOVE_SPACE]. #gTake #gEverything [REMOVE_SPACE]."
+      "[Punch] #rFight. #gTake #gEverything."
     ]
   },
   "downfall:BonfireSpirits": {
@@ -106,9 +106,9 @@
       "You reach your hand out to #ptake... NL The spirits @shriek,@ ~swirling~ around the vortex that emerges from your palm in useless attempts to flee. NL Soon, their spirits themselves are nothing more than an item in the Collection."
     ],
     "OPTIONS": [
-      "[Donate] #rLose #r150 #rSouls [REMOVE_SPACE]. #gGain #g10 #gMax #gHP #gand #gFully #gHeal [REMOVE_SPACE].",
-      "[Locked] Requires 150 Souls [REMOVE_SPACE].",
-      "[Donate] #rLose #r150 #rSouls [REMOVE_SPACE]. #gEach #gGremlin #gGains #g2 #gMax #gHP #gand #the #gAlive #gOnes #gFully #gHeal [REMOVE_SPACE].",
+      "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP #gand #gFully #gHeal.",
+      "[Locked] Requires 150 Souls.",
+      "[Donate] #rLose #r150 #rSouls. #gEach #gGremlin #gGains #g2 #gMax #gHP #gand #the #gAlive #gOnes #gFully #gHeal.",
       "[Take]"
     ]
   },
@@ -118,7 +118,7 @@
       " NL NL He doesn't look like he would put up much of a fight, but he has survived in this place. Perhaps these masks hold some power..."
     ],
     "OPTIONS": [
-      "[Punch] #rFight. #g100%: #gAll #gFace [REMOVE_SPACE]."
+      "[Punch] #rFight. #g100%: #gAll #gFace."
     ]
   },
   "downfall:CursedFountain": {
@@ -131,9 +131,9 @@
       "Leaving the fountain behind, you continue on your way."
     ],
     "OPTIONS": [
-      "[Bottle] #gGain #gCursed #gLiquid #gPotion [REMOVE_SPACE].",
-      "[Consume] #gGain #g75 #ySouls [REMOVE_SPACE].",
-      "[Drink] #gHeal #gto #gfull #gHP [REMOVE_SPACE].",
+      "[Bottle] #gGain #gCursed #gLiquid #gPotion.",
+      "[Consume] #gGain #g75 #ySouls.",
+      "[Drink] #gHeal #gto #gfull #gHP.",
       "[Locked] Requires a curse.",
       "[Locked] Requires 2 curses.",
       "[Locked] Requires 3 curses.",
@@ -153,13 +153,13 @@
     "OPTIONS": [
       "[Lose ",
       "] ",
-      "#gGain #g3 #gPotions [REMOVE_SPACE].",
+      "#gGain #g3 #gPotions.",
       "#gGain ",
-      " #ySouls [REMOVE_SPACE].",
-      "#gGain #ga #gRandom #yRare #gCard [REMOVE_SPACE].",
+      " #ySouls.",
+      "#gGain #ga #gRandom #yRare #gCard.",
       "[Leave]",
       "[Locked] No Relic to give.",
-      "#gGain #g2 #gPotions [REMOVE_SPACE]."
+      "#gGain #g2 #gPotions."
     ]
   },
   "downfall:Designer": {
@@ -180,7 +180,7 @@
       "[Ignore] Leave.",
       "[Punch] Leave.",
       "[Enter Shop]",
-      " #gGain #ga #gReward [REMOVE_SPACE]."
+      " #gGain #ga #gReward."
     ]
   },
   "downfall:DeadGuy": {
@@ -214,10 +214,10 @@
       "You walk around it, wondering what could have been."
     ],
     "OPTIONS": [
-      "[Enter] #gUpgrade #g2 #grandom #gcards. #rBecome #rCursed #r- #rFlawed.",
+      "[Enter] #gUpgrade #g",
       "[Leave]",
       "[Locked] Requires: Upgradeable Cards",
-      "[Enter] #gUpgrade #g3 #grandom #gcards. #rBecome #rCursed #r- #rFlawed."
+      " #grandom #gcards. #rBecome #rCursed #r- #rFlawed."
     ]
   },
   "downfall:WorldOfGoop": {
@@ -248,7 +248,6 @@
     ],
     "OPTIONS": [
       "[Agree] [Punch] #gGain #g",
-      " #gSouls. #rBecome #rCursed #r- #rDoubt.",
       " #gSouls. #rBecome #rCursed #r- #rDoubt.",
       "[Disagree]",
       "[Leave]"
@@ -285,11 +284,11 @@
       "You decide to leave the soul alone and continue on your way."
     ],
     "OPTIONS": [
-      "[Set Trap] #rLose #ra #rStrike [REMOVE_SPACE].",
+      "[Set Trap] #gRemove #ga #gStrike.",
       "[Harvest] #gGain #y",
-      " #ySouls [REMOVE_SPACE].",
+      " #ySouls.",
       "[Leave]",
-      "[Locked] Requires a Strike [REMOVE_SPACE]."
+      "[Locked] Requires a Strike."
     ]
   },
   "downfall:Cleric": {
@@ -316,9 +315,9 @@
     ],
     "OPTIONS": [
       "[Offer] #rLose #r",
-      " Souls [REMOVE_SPACE]. #gReceive Apparition.",
+      " Souls. #gReceive Apparition.",
       "[Locked] Requires ",
-      " Souls [REMOVE_SPACE]."
+      " Souls."
     ]
   },
   "downfall:CursedTome": {
@@ -336,10 +335,10 @@
     ],
     "OPTIONS": [
       "[Offer Souls] #rLose #r",
-      " #rSouls [REMOVE_SPACE]. #gHeal #g",
-      " #gHP [REMOVE_SPACE].",
+      " #rSouls. #gHeal #g",
+      " #gHP.",
       "[Locked] Requires ",
-      " Souls [REMOVE_SPACE].",
+      " Souls.",
       "[Leave]"
     ]
   },
@@ -351,7 +350,7 @@
     ],
     "OPTIONS": [
       "[Lose ",
-      "] #gHire #gthe #gBandits [REMOVE_SPACE].",
+      "] #gHire #gthe #gBandits.",
       "[Locked] Requires more Relics."
     ]
   },
@@ -372,9 +371,9 @@
       "\"BEHIND YOU, MORTAL.\" NL You peek behind the skull. Surely enough, there is a door."
     ],
     "OPTIONS": [
-      "[You.] #gObtain #gthe #gSkull [REMOVE_SPACE]. #rLose #r",
+      "[You.] #gObtain #gthe #gSkull. #rLose #r",
       "[Leave]",
-      " #rHP [REMOVE_SPACE]."
+      " #rHP."
     ]
   },
   "downfall:Vagrant": {
@@ -403,9 +402,9 @@
       "\"Cleric help! Cleric help!\" the creature says once again, barely able to speak as he cowers in fear. NL A cold blue flame envelops your body and dissipates. NL NL Deciding his powers may of use later, and that you can easily dispatch of any bodyguards he tries to employ in the future, you let this \"Cleric\" live once more."
     ],
     "OPTIONS": [
-      " #rBecome #rCursed #r- #rPride [REMOVE_SPACE].",
+      " #rBecome #rCursed #r- #rPride.",
       "[Fight]",
-      "[Threaten] #gRemove #g2 #gcards #gfrom #gyour #gdeck [REMOVE_SPACE]."
+      "[Threaten] #gRemove #g2 #gcards #gfrom #gyour #gdeck."
     ]
   },
   "downfall:Mausoleum": {
@@ -431,7 +430,7 @@
       "#rYou #rplunge #rthe #rdagger #rinto #rthe #rcultist's #rheart! NL NL #b~\"CAW~ #b~CAAAAW~ #b~CAAAAAWWW!\"~ NL NL The ritual is completed, and the surviving cultists could not appear happier. They wave their sticks in celebration and continue to call out a cheering caw as you exit the cathedral."
     ],
     "OPTIONS": [
-      "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards [REMOVE_SPACE].",
+      "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards.",
       "[Locked] Requires Broken Wing Statue.",
       "[Accept] #gGain #gCultist #gPotion",
       "[Steal] #gObtain #gRitual #gDagger. #rLose #r",
@@ -455,8 +454,8 @@
       "You deciding that, though it is tempting, fighting here would be an unnecessary distraction. Your journey continues on, and you leave the slavers to resume their ambush."
     ],
     "OPTIONS": [
-      "[Challenge] #rFight Arena Champions. #gGain #gmany #grewards [REMOVE_SPACE].",
-      "[Participate] #rFight Captive Hero. #gGain #gmany #grewards [REMOVE_SPACE].",
+      "[Challenge] #rFight #rArena #rChampions. #gGain #gmany #grewards.",
+      "[Participate] #rFight #rCaptive #rHero. #gGain #gmany #grewards.",
       "[Leave]",
       "[FIGHT!]",
       "[Continue]"
@@ -470,12 +469,12 @@
       "Everything makes sense now. NL The singular purpose, the descent, the #pHeart. NL NL This is the way it always was. NL This is the way it always will be. NL All will be forgotten again soon..."
     ],
     "OPTIONS": [
-      "[I am an Echo] #rFight #ryourself. #gObtain #ga #gRare #gRelic [REMOVE_SPACE].",
-      "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality [REMOVE_SPACE].",
-      "[I am Complete] #gUpgrade #gall #gCards. #rBecome #rBurdened [REMOVE_SPACE].",
+      "[I am an Echo] #rFight #ryourself. #gObtain #ga #gRare #gRelic.",
+      "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality.",
+      "[I am Complete] #gUpgrade #gall #gCards. #rBecome #rBurdened.",
       "[Locked] Requires all 3 Heart Blessings.",
       "[Leave]",
-      "[I am Complete] #gUpgrade #gall #gCards. #rBecome #rBurdened [REMOVE_SPACE]."
+      "[I am Complete] #gUpgrade #gall #gCards. #rBecome #rBurdened."
     ]
   },
   "downfall:MoaiHead": {
@@ -488,12 +487,12 @@
     ],
     "OPTIONS": [
       "[Offer Souls] #rLose #r",
-      " #rSouls [REMOVE_SPACE]. #gGain #g",
-      " #gMax #gHP and #gHeal #gto #gfull [REMOVE_SPACE].",
+      " #rSouls. #gGain #g",
+      " #gMax #gHP and #gHeal #gto #gfull.",
       "[Locked] Requires ",
       " Souls.",
-      " #rSouls [REMOVE_SPACE]. #gEach #gGremlin #gGains #g",
-      "[Jump Inside] #gHeal #gto #gfull #gHP [REMOVE_SPACE]. #rEach #rGremlin #rLoses #r"
+      " #rSouls. #gEach #gGremlin #gGains #g",
+      "[Jump Inside] #gHeal #gto #gfull #gHP. #rEach #rGremlin #rLoses #r"
     ]
   },
   "downfall:SensoryStone": {
@@ -536,11 +535,11 @@
       "Satisfied with collecting the mask, you continue on."
     ],
     "OPTIONS": [
-      "[Don the Red Mask] #gUpgrade #gBandit #gContract [REMOVE_SPACE].",
-      "[Locked] Requires: Red Mask & Bandit Contract [REMOVE_SPACE].",
+      "[Don the Red Mask] #gUpgrade #gBandit #gContract.",
+      "[Locked] Requires: Red Mask & Bandit Contract.",
       "[Bash] #rLose ",
-      ". #gObtain #gRed #gMask [REMOVE_SPACE].",
-      "[Locked] Requires an Attack [REMOVE_SPACE].",
+      ". #gObtain #gRed #gMask.",
+      "[Locked] Requires an Attack.",
       "[Leave]"
     ]
   },
@@ -550,9 +549,9 @@
       "As you slowly make your way up the twisting pathways, you find yourself in the infamous shifting hallways of the Beyond. A lesser being would go mad trying to navigate these, but to you, they are as familiar as an old friend. NL NL The constant #p~whispering~ #p~voices~ ease your mind as you decide which path to take."
     ],
     "OPTIONS": [
-      "[Left] #gExplore #gan #gEvent [REMOVE_SPACE].",
-      "[Right] #gSearch #gthe #gTreasury #gfor #ga #gRelic [REMOVE_SPACE].",
-      "[Straight] #gHunt #gdown #gthe #gMerchant [REMOVE_SPACE]."
+      "[Left] #gExplore #gan #gEvent.",
+      "[Right] #gSearch #gthe #gTreasury #gfor #ga #gRelic.",
+      "[Straight] #gHunt #gdown #gthe #gMerchant."
     ]
   },
   "downfall:Joust": {
@@ -567,9 +566,9 @@
     "OPTIONS": [
       "[Left] #r50%: #rLose #r",
       " HP.",
-      " #g50%: #gGain #g200 #gSouls [REMOVE_SPACE].",
+      " #g50%: #gGain #g200 #gSouls.",
       "[Right] #r25%: #rLose #r",
-      " #g75%: #gGain #g100 #gSouls [REMOVE_SPACE]."
+      " #g75%: #gGain #g100 #gSouls."
     ]
   },
   "downfall:BossTester": {
@@ -620,7 +619,7 @@
     "OPTIONS": [
       "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rAged.",
       "[Desecrate] #gRemove #g2 #gcards. #rLose #r",
-      " #rMax #rHP [REMOVE_SPACE].",
+      " #rMax #rHP.",
       "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rFlawed.",
       "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rPain."
     ]

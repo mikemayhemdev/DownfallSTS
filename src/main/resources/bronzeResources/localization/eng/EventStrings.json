@@ -23,9 +23,9 @@
       "Even for unfinished prototypes, they are still formidable - no need for unnecessary risks."
     ],
     "OPTIONS": [
-      "[Fight Donu Prototype] #gGain #gProto-Beam [REMOVE_SPACE].",
-      "[Fight Deca Prototype] #gGain #gProto-Shield [REMOVE_SPACE].",
-      "[Fight Both] #gGain #gBoth #gCards [REMOVE_SPACE].",
+      "[Fight Donu Prototype] #gGain #gProto-Beam.",
+      "[Fight Deca Prototype] #gGain #gProto-Shield.",
+      "[Fight Both] #gGain #gBoth #gCards.",
       "[Leave]"
     ]
   },
@@ -45,7 +45,7 @@
       "You decide to put the forge to use and... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...power up your arsenal with new upgrades and servos."
     ],
     "OPTIONS": [
-      "[Tinker] #gUpgrade #g3 #gRandom #gCards #gwith #gEncode [REMOVE_SPACE].",
+      "[Tinker] #gUpgrade #g3 #gRandom #gCards #gwith #gEncode.",
       "[Locked] Requires an unupgraded card with Encode."
     ]
   },
@@ -60,9 +60,9 @@
       "Choose a card to Remove."
     ],
     "OPTIONS": [
-      "[Craft] #gGain #gBottled #gCode [REMOVE_SPACE]. #rLose #r10 #rMax #rHP [REMOVE_SPACE].",
-      "[Transmute] #rRemove a Card. Gain a random #gCard #gwith #gEncode [REMOVE_SPACE].",
-      "[Reforge] #rRemove a #yRare Card. #gGain #g10 #gMax #gHP #gand #gHeal #gto #gfull [REMOVE_SPACE].",
+      "[Craft] #gGain #gBottled #gCode. #rLose #r10 #rMax #rHP.",
+      "[Transmute] #rRemove a Card. Gain a random #gCard #gwith #gEncode.",
+      "[Reforge] #rRemove a #yRare Card. #gGain #g10 #gMax #gHP #gand #gHeal #gto #gfull.",
       "[Locked] Already used.",
       "[Leave]",
       "[Locked] Requires a card with Encode.",

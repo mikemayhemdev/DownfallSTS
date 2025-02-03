@@ -19,9 +19,6 @@ public class LacerateDebuff extends AbstractPower implements CloneablePowerInter
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/LacerateDebuff84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/LacerateDebuff32.png");
-
     public LacerateDebuff(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -30,10 +27,7 @@ public class LacerateDebuff extends AbstractPower implements CloneablePowerInter
         this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
         this.canGoNegative = false;
-
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
-
+        this.loadRegion("envenom");
         this.updateDescription();
     }
 
@@ -49,7 +43,6 @@ public class LacerateDebuff extends AbstractPower implements CloneablePowerInter
         if (power.type == PowerType.DEBUFF && target == this.owner && !(power instanceof VenomDebuff) && !power.ID.equals("Shackled") && !target.hasPower("Artifact")) {
             int additionalAmount = 0;
 
-            // Check if ToxicPersonalityPower exists and get its stack count
             if (AbstractDungeon.player.hasPower(ToxicPersonalityPower.POWER_ID)) {
                 AbstractPower toxicPersonality = AbstractDungeon.player.getPower(ToxicPersonalityPower.POWER_ID);
                 additionalAmount += toxicPersonality.amount;

@@ -55,7 +55,7 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
         }
 
         if (AbstractDungeon.ascensionLevel >= 15){
-            goldCost = 250;
+            goldCost = 200;
         }
 
         if (AbstractDungeon.player.gold >= goldCost) {

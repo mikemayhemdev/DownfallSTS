@@ -24,9 +24,6 @@ public class FountainPower extends AbstractPower implements CloneablePowerInterf
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/FountainPower84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/FountainPower32.png");
-
     public FountainPower(int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -35,8 +32,7 @@ public class FountainPower extends AbstractPower implements CloneablePowerInterf
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
 
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+        this.loadRegion("envenom");
 
         this.updateDescription();
     }
@@ -85,9 +81,6 @@ public class FountainPower extends AbstractPower implements CloneablePowerInterf
                 overflowActive = true;
             }
 
-            if (card instanceof TyphoonFang && card.purgeOnUse) {
-                overflowActive = false;
-            }
 
             if (AbstractDungeon.player.hasRelic(D8.ID)) {
                 D8 d8Relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
@@ -96,6 +89,10 @@ public class FountainPower extends AbstractPower implements CloneablePowerInterf
                         overflowActive = true;
                     }
                 }
+            }
+
+            if (card instanceof TyphoonFang && card.purgeOnUse) {
+                overflowActive = false;
             }
         }
 

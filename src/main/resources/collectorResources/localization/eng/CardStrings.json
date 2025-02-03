@@ -607,7 +607,7 @@
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Shelled Parasite",
-    "DESCRIPTION": "Gain !M! Plated Armor."
+    "DESCRIPTION": "Gain !M! expansioncontent:Plated *Armor."
   },
   "collector:ShieldGremlinCard": {
     "NAME": "Shield Gremlin",

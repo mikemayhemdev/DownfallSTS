@@ -107,7 +107,7 @@
       "Exhaust for Nope."
     ]
   },
-  "sneckomod:MasterEye": {
+  "sneckomod:SnakeEyes": {
     "NAME": "Snake Eyes",
     "DESCRIPTION": "This turn, your next sneckomod:Offclass card is played twice. NL sneckomod:Gift: Rare Skill.",
     "UPGRADE_DESCRIPTION": "This turn, your next 2 sneckomod:Offclass cards are played twice. NL sneckomod:Gift: Rare Skill.",
@@ -205,13 +205,6 @@
     "NAME": "Slither Through",
     "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by !M! this turn. NL sneckomod:Gift: Uncommon.",
     "DESCRIPTION_BATTLE": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by !M! this turn."
-  },
-  "sneckomod:SnakeEyes": {
-    "NAME": "Snake Eyes",
-    "DESCRIPTION": "This turn, your next sneckomod:Offclass card is played twice. NL sneckomod:Gift: Rare Skill.",
-    "UPGRADE_DESCRIPTION": "This turn, your next 2 sneckomod:Offclass cards are played twice. NL sneckomod:Gift: Rare Skill.",
-    "DESCRIPTION_BATTLE": "This turn, your next sneckomod:Offclass card is played twice.",
-    "UPGRADE_DESCRIPTION_BATTLE": "This turn, your next 2 sneckomod:Offclass cards are played twice."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
@@ -498,7 +491,7 @@
   },
   "sneckomod:Serpentscale": {
     "NAME": "Serpentscale",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 1 *Plated *Armor. NL sneckomod:Overflow: Gain !M! *Plated *Armor instead."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 expansioncontent:Plated *Armor. NL sneckomod:Overflow: Gain !M! *Plated *Armor instead."
   },
   "sneckomod:OtherworldlySlash": {
     "NAME": "Otherworldly Slash",
@@ -585,7 +578,7 @@
     "DESCRIPTION": "Deal !D! damage. NL sneckomod:Overflow: Gain [E] [E]."
   },
   "sneckomod:LastStrike": {
-    "NAME": "Last Strike",
+    "NAME": "Final Strike",
     "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique Strike played this combat. NL sneckomod:Gift: Strike.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Repeat for each unique Strike played this combat. NL sneckomod:Gift: Strike.",
     "DESCRIPTION_BATTLE": "Deal !D! damage. NL Repeat for each unique Strike played this combat.",

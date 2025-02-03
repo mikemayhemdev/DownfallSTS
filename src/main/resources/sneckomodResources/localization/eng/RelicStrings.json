@@ -38,7 +38,7 @@
     "NAME": "Loaded Die",
     "FLAVOR": "Cheese-stuffed.",
     "DESCRIPTIONS": [
-      "Whenever you #ysneckomod:Muddle a card, gain #b1 #yBlock [REMOVE_SPACE]."
+      "Whenever a card is #ysneckomod:Muddled, gain #b1 #yBlock [REMOVE_SPACE]."
     ]
   },
   "sneckomod:RareBoosterPack": {

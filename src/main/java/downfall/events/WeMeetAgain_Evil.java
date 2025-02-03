@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.relics.BottledStasis;
 import guardian.relics.PickAxe;
 import sneckomod.relics.SneckoBoss;
+import sneckomod.relics.SneckoCommon;
 import theHexaghost.relics.Libra;
 
 import java.util.ArrayList;
@@ -69,6 +70,7 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
                     (r.relicId != TinyChest.ID) &&
                     (r.relicId != WarPaint.ID) &&
                     (r.relicId != Whetstone.ID) &&
+                    (r.relicId != SneckoCommon.ID) &&
                     //Uncommons
                     (r.relicId != BottledFlame.ID) &&
                     (r.relicId != BottledLightning.ID) &&

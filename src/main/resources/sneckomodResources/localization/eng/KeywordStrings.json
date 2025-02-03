@@ -56,7 +56,7 @@
     "NAMES": [
       "venom"
     ],
-    "DESCRIPTION": "Creatures with Venom lose additional HP at the start of their turn if they have at least two additional debuffs."
+    "DESCRIPTION": "Creatures with #yVenom lose HP whenever they gain a debuff that isn't #yVenom."
   },
   {
     "PROPER_NAME": "Lucky",

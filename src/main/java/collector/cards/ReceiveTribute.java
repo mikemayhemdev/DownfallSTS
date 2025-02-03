@@ -59,9 +59,6 @@ public class ReceiveTribute extends AbstractCollectorCard {
                     AbstractCard r = q.makeCopy();
                     possibilities.add(r);
                 }
-                {
-                    possibilities.add(q.makeCopy());
-                }
             }
         }
         ArrayList<AbstractCard> remaining = new ArrayList<>();

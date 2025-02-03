@@ -1,6 +1,7 @@
 package theHexaghost.events;
 
 
+import collector.CollectorChar;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -19,6 +20,7 @@ import downfall.patches.EvilModeCharacterSelect;
 import downfall.relics.BlackCandle;
 import downfall.relics.ExtraCursedBell;
 import downfall.relics.ExtraCursedKey;
+import hermit.characters.hermit;
 import theHexaghost.HexaMod;
 import downfall.cards.curses.Haunted;
 
@@ -75,10 +77,10 @@ public class WanderingSpecter extends AbstractImageEvent {
             shopForMore2 = true;
         }
         if ((!AbstractDungeon.player.hasRelic(BlueCandle.ID)) || (!AbstractDungeon.player.hasRelic(BlackCandle.ID))) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode || (AbstractDungeon.player instanceof hermit)) {
                 this.imageEventText.setDialogOption(OPTIONS[3], new BlackCandle());
             }
-            if (!EvilModeCharacterSelect.evilMode) {
+            if (!EvilModeCharacterSelect.evilMode && !(AbstractDungeon.player instanceof hermit)) {
                 this.imageEventText.setDialogOption(OPTIONS[3], new BlueCandle());
             }
         } else {

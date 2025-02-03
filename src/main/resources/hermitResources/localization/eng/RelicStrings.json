@@ -67,7 +67,7 @@
     "NAME": "Clasped Locket",
     "FLAVOR": "It won't open anymore.",
     "DESCRIPTIONS": [
-      "Replaces #yOld #yLocket [REMOVE_SPACE]. First time you draw a curse each turn, #yExhaust it and draw #b2 cards. Upon pickup, obtain #b2 #rInjuries [REMOVE_SPACE].",
+      "Replaces #yOld #yLocket [REMOVE_SPACE]. First time you draw a #rCurse each turn, #yExhaust it and draw #b2 cards. Upon pickup, obtain #b2 #rInjuries [REMOVE_SPACE].",
       "Never again..."
     ]
   },
