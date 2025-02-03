@@ -37,7 +37,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
         //addRelic(new CBR_BagOfPreparation());
 
-        addRelic(new CBR_FossilizedHelix());
+        addRelic(new CBR_Toolbox());
 
         addRelic(new CBR_TungstenRod());
         addRelic(new CBR_IceCream());
@@ -62,7 +62,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         if (!looped) {
             switch (turn) {
                 case 0:
-
+                    addToList(cardsList, new EnPanacea()); //Toolbox
                     addToList(cardsList, new EnPanicButton()); //exhausts
                     addToList(cardsList, new EnDramaticEntrance()); //exhausts
                     addToList(cardsList, new EnTheBomb(), extraUpgrades); //1 of 1 Bombs

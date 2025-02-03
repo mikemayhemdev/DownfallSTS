@@ -1,6 +1,8 @@
 package charbosses.cards.colorless;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.general.EnemyPoisonPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
+import com.megacrit.cardcrawl.powers.SadisticPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
@@ -40,6 +43,13 @@ public class EnBlind extends AbstractBossCard {
             this.initializeDescription();
         }
 
+    }
+
+    public String overrideIntentText() {
+        if (AbstractCharBoss.boss.hasPower(SadisticPower.POWER_ID)) {
+            return "7";
+        }
+        return super.overrideIntentText();
     }
 
     @Override
