@@ -39,9 +39,9 @@
   "Guardian:GemFinderPower": {
     "NAME": "보석 채취",
     "DESCRIPTIONS": [
-      "전투 종료 시 #y일반 #y보석 카드 보상을 얻습니다.",
-      "전투 종료 시 #y일반 #y보석 카드 보상을 #b",
-      " 개 얻습니다."
+      "전투 종료 시 덱에 무작위 #y보석을 얻습니다.",
+      "전투 종료 시 덱에 무작위 #y보석을 #b",
+      " 장 얻습니다."
     ]
   },
   "Guardian:FuturePlansPower": {
@@ -63,7 +63,8 @@
   "Guardian:ConstructModePower": {
     "NAME": "재구성 모드",
     "DESCRIPTIONS": [
-      "내 턴 시작 시 버퍼가 있다면 #y힘을 #b",
+      "내 턴 시작 시 #y버퍼가 #b",
+      " 이상 있다면 #y힘을 #b",
       " 얻습니다."
     ]
   },
@@ -130,7 +131,7 @@
     "NAME": "모드 전환",
     "DESCRIPTIONS": [
       "체력을 #b",
-      " 잃었을 때 #y방어도를 #b10 얻고 다음 턴까지 #y수비 #y모드로 전환합니다. 모드 전환 시 전환에 필요한 체력 소모가 #b10, 최대 #b50 까지 증가합니다."
+      " 잃었을 때 #y방어도를 #b16 얻고 다음 턴까지 #y수비 #y모드로 전환합니다. 모드 전환 시 전환에 필요한 체력 소모가 #b10, 최대 #b50 까지 증가합니다."
     ]
   },
   "Guardian:ExhaustStatusesPower": {
@@ -144,8 +145,8 @@
   "Guardian:RevengePower": {
     "NAME": "복수",
     "DESCRIPTIONS": [
-      "#y수비 #y모드 동안 #y힘이 #b",
-      " 증가합니다."
+      "#y수비 #y모드로 전환할 때마다 #y힘을 #b",
+      " 얻습니다."
     ]
   },
   "Guardian:StasisEnginePower": {
@@ -177,14 +178,14 @@
   "Guardian:EvasiveProtocolPower": {
     "NAME": "회피 규약",
     "DESCRIPTIONS": [
-      "#y수비 #y모드 동안 #y민첩을 #b",
-      " 얻습니다."
+      "#y수비 #y모드로 전환할 때마다 모든 해로운 효과를 #b",
+      " 감소시킵니다."
     ]
   },
   "Guardian:SpikerProtocolPower": {
     "NAME": "가시 돋친 규약",
     "DESCRIPTIONS": [
-      "#y수비 #y모드 동안 #y가시를 #b",
+      "#y수비 #y모드로 전환할 때마다 #y가시를 #b",
       " 얻습니다."
     ]
   },

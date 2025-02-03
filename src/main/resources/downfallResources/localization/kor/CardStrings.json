@@ -13,7 +13,7 @@
   },
   "downfall:Haunted": {
     "NAME": "귀신들림",
-    "DESCRIPTION": "사용불가. NL 휘발성. NL 뽑으면 손에 있는 모든 카드에 휘발성을 부여합니다."
+    "DESCRIPTION": "사용불가. NL 휘발성. NL 이 카드가 손에 있다면 이 카드 이외의 카드가 소멸할 때마다 피해를 2 받습니다."
   },
   "downfall:Malfunctioning": {
     "NAME": "결함",

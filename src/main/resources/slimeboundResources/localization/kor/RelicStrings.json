@@ -26,7 +26,7 @@
     "NAME": "노막의 돌",
     "FLAVOR": "당신의 점액질 군단에게 선물하면 슬라임들이 춤추듯 움직입니다.",
     "DESCRIPTIONS": [
-      "전투 시작 시 #yslimeboundmod:잠재력을 #b2 얻습니다."
+      "전투 시작 시 #yslimeboundmod:잠재력을 #b1 얻습니다."
     ]
   },
   "Slimebound:DailySplitRelic": {
@@ -100,7 +100,7 @@
     "NAME": "젤라틴 큐브",
     "FLAVOR": "이봐요, 당신 몸에 딱 달라붙었다구요.",
     "DESCRIPTIONS": [
-      "#y상태이상을 뽑을 때마다 카드를 #b1 장 뽑습니다."
+      "2턴 동안 매 턴 #y상태이상 또는 #r저주를 뽑을 때마다 카드를 #b1 장 뽑습니다. #y공허를 뽑았다면 [E] 를 얻습니다."
     ]
   }
 }
