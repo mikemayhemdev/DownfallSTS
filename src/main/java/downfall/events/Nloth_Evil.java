@@ -1,6 +1,7 @@
 package downfall.events;
 
 
+import automaton.relics.BottledCode;
 import champ.relics.SignatureFinisher;
 import collector.relics.BottledCollectible;
 import collector.relics.ForbiddenFruit;
@@ -79,8 +80,10 @@ public class Nloth_Evil extends AbstractImageEvent {
                     r.relicId.equals(LizardTail.ID) ||
                     r.relicId.equals(Mango.ID) ||
                     r.relicId.equals(SignatureFinisher.ID) ||
+                            r.relicId.equals(BottledCode.ID) ||
                     r.relicId.equals(WingBoots.ID)) ||
                     //event
+
                     r.relicId.equals(D8.ID))
             {
                 relicIterator.remove(); // Remove the blacklisted relic
