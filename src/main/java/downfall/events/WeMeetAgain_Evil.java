@@ -71,6 +71,7 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
                     (r.relicId != WarPaint.ID) &&
                     (r.relicId != Whetstone.ID) &&
                     (r.relicId != SneckoCommon.ID) &&
+                    (r.relicId != PotionBelt.ID) &&
                     //Uncommons
                     (r.relicId != BottledFlame.ID) &&
                     (r.relicId != BottledLightning.ID) &&
