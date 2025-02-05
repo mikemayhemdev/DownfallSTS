@@ -78,25 +78,6 @@ public class Blunderbus extends AbstractSneckoCard {
     }
 
     @Override
-    public void applyPowers() {
-        super.applyPowers();
-
-        // Set multiDamage values based on current damage
-        calculateCardDamage(null);
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
-
-        // Ensure multiDamage matches the current damage for each enemy
-        this.multiDamage = new int[AbstractDungeon.getCurrRoom().monsters.monsters.size()];
-        for (int i = 0; i < multiDamage.length; i++) {
-            multiDamage[i] = this.damage;
-        }
-    }
-
-    @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
