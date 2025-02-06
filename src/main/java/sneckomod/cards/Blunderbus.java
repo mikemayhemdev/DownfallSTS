@@ -33,8 +33,8 @@ public class Blunderbus extends AbstractSneckoCard {
 
     public final static String ID = SneckoMod.makeID("Blunderbus");
 
-    private static final int DAMAGE = 9;
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int DAMAGE = 8;
+    private static final int UPGRADE_DAMAGE = 3;
     private static final int BASE_HITS = 1;
 
     public Blunderbus() {
