@@ -1,7 +1,7 @@
 {
   "sneckomod:Blunderbus": {
     "NAME": "Blunderbus",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deal damage one more time for every 3+ cost card in hand."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Repeat for every 3+ cost card in hand."
   },
   "sneckomod:Tsunami": {
     "NAME": "Tsunami",
