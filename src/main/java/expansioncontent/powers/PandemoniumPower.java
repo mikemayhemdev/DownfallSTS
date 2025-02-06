@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -50,7 +51,15 @@ public class PandemoniumPower extends AbstractPower {
                         cardToPlay.freeToPlayOnce = true;
                         cardToPlay.applyPowers();
                         cardToPlay.calculateCardDamage(randomMonster);
-                        AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(cardToPlay, randomMonster));
+
+                        // Add the card to the player's limbo (temporary play area)
+                        AbstractDungeon.player.limbo.addToBottom(cardToPlay);
+
+                        // Calculate the damage for the target
+                        cardToPlay.calculateCardDamage(randomMonster);
+
+                        // Add the card to the action manager's card queue, targeting the selected monster
+                        AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(cardToPlay, randomMonster, cardToPlay.energyOnUse));
                         this.isDone = true;
                     }
                 });
