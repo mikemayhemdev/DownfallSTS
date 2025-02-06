@@ -54,7 +54,9 @@ public class PandemoniumPower extends AbstractPower {
 
                         // Add the card to the player's limbo (temporary play area)
                         AbstractDungeon.player.limbo.addToBottom(cardToPlay);
-
+                        cardToPlay.current_y = -200.0F * Settings.scale;
+                        cardToPlay.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
+                        cardToPlay.target_y = (Settings.HEIGHT / 2.0F);
                         // Calculate the damage for the target
                         cardToPlay.calculateCardDamage(randomMonster);
 
@@ -63,6 +65,7 @@ public class PandemoniumPower extends AbstractPower {
                         this.isDone = true;
                     }
                 });
+
             }
         }
     }
