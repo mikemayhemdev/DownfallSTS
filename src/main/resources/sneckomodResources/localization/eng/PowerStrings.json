@@ -51,15 +51,15 @@
   "sneckomod:SerpentsNestPower": {
     "NAME": "Serpent's Nest",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card deal 1 damage to ALL enemies.",
-      "Whenever you play a #yPower card deal #b",
+      "Whenever you play a #yPower card, deal 1 damage to ALL enemies.",
+      "Whenever you play a #yPower card, deal #b",
       " damage to ALL enemies."
     ]
   },
   "sneckomod:SerpentMindPower": {
     "NAME": "Exotic Form",
     "DESCRIPTIONS": [
-      "At the end of your turn gain #b",
+      "At the end of your turn, gain #b",
       " #yStrength for each unique color played this turn.",
       " #yStrength for each unique color played this turn."
     ]
