@@ -19,7 +19,7 @@
     "NAME": "It's A Feature",
     "DESCRIPTIONS": [
       "Whenever you draw or #yExhaust a #yStatus card, gain #b",
-      " #bBlock."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "bronze:InfiniteBeams": {

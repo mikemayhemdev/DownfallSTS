@@ -61,7 +61,7 @@
   },
   "bronze:Break": {
     "NAME": "Break",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile *Error - Gain 1 *Dazed, *Slimed, *Wound, *Burn, *Void.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile *Error - Gain a *Dazed, *Slimed, *Wound, *Burn, *Void.",
     "EXTENDED_DESCRIPTION": [
       "broken",
       "Smash"

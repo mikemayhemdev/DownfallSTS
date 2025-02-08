@@ -15,7 +15,7 @@ public class ItsAFeature extends AbstractBronzeCard {
 
     public ItsAFeature() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = this.magicNumber = 4;
+        this.baseMagicNumber = this.magicNumber = 3;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("ItsAFeature.png"));
     }
 
@@ -24,6 +24,6 @@ public class ItsAFeature extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }
