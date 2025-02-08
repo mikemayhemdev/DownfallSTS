@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import expansioncontent.cardmods.PropertiesMod;
+import sneckomod.cards.TyphoonFang;
 
 
 public class Haunted extends CustomCard implements OnOtherCardExhaustInHand {
@@ -76,8 +77,10 @@ public class Haunted extends CustomCard implements OnOtherCardExhaustInHand {
 
     @Override
     public void onOtherCardExhaustWhileInHand(AbstractCard card) {
-        flash(Color.PURPLE.cpy());
-        this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 2, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        if (card != this) {
+            flash(Color.PURPLE.cpy());
+            this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 2, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        }
     }
 
 
