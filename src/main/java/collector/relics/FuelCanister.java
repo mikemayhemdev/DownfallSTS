@@ -5,8 +5,10 @@ import collector.CollectorMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.RunicPyramid;
 import downfall.util.TextureLoader;
 import expansioncontent.cardmods.RetainCardMod;
+import hermit.relics.Memento;
 import hermit.util.Wiz;
 
 import java.util.ArrayList;
@@ -32,7 +34,7 @@ public class FuelCanister extends CustomRelic {
                 toRetain.clear();
                 toRetain.add(q);
                 max = q.costForTurn;
-            } else if (q.costForTurn == max) {
+            } else if ((q.costForTurn == max) && !(q.costForTurn < -1) && !(q.isEthereal) && !(q.selfRetain)) {
                 toRetain.add(q);
             }
         }
@@ -40,6 +42,10 @@ public class FuelCanister extends CustomRelic {
         if (!toRetain.isEmpty()) {
             Wiz.getRandomItem(toRetain).retain = true;
         }
+    }
+
+    public boolean canSpawn() {
+        return !AbstractDungeon.player.hasRelic(RunicPyramid.ID);
     }
 
     @Override

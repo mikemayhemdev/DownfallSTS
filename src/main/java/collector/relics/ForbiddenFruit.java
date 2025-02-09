@@ -15,6 +15,8 @@ import downfall.util.TextureLoader;
 
 import java.util.stream.Collectors;
 
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
+
 public class ForbiddenFruit extends CustomRelic {
     public static final String ID = CollectorMod.makeID(ForbiddenFruit.class.getSimpleName());
     private static final String IMG_PATH = ForbiddenFruit.class.getSimpleName() + ".png";
@@ -86,6 +88,10 @@ public class ForbiddenFruit extends CustomRelic {
                 stage++;
             }
         }
+    }
+
+    public boolean canSpawn() {
+        return ((AbstractDungeon.floorNum > 1));
     }
 
     @Override

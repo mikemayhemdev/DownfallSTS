@@ -17,7 +17,10 @@ import com.megacrit.cardcrawl.relics.BlueCandle;
 import downfall.actions.WaitForEscapeAction;
 import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
+import hermit.characters.hermit;
+import slimebound.characters.SlimeboundCharacter;
 
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static hermit.characters.hermit.Enums.HERMIT;
 
 
@@ -42,17 +45,16 @@ public class BlackCandle extends CustomRelic {
         if (card.type == AbstractCard.CardType.CURSE) {
             this.flash();
             if (card.cost == -2) {
+                this.flash();
                 this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, AbstractGameAction.AttackEffect.FIRE));
+                card.exhaust = true;
+                action.exhaustCard = true;
             }
-            card.exhaust = true;
-            action.exhaustCard = true;
         }
     }
 
     public boolean canSpawn() {
-        return false;
-        // EvilModeCharacterSelect.evilMode;
-                // || AbstractPlayer.PlayerClass == HERMIT);
+        return (evilMode || (AbstractDungeon.player instanceof hermit));
     }
 
     public AbstractRelic makeCopy() {
