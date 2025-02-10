@@ -5,7 +5,7 @@ import gremlin.powers.GremlinPower;
 import gremlin.powers.ShieldGremlinPower;
 
 public class ShieldGremlin extends GremlinStandby{
-    public static final int BLOCK = 2;
+    public static final int BLOCK = 1;
 
     public ShieldGremlin(int hp) {
         super(hp, "Gremlin:ShieldGremlin", "shield", "idle", 25);

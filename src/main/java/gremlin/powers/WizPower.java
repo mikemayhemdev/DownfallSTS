@@ -47,10 +47,10 @@ public class WizPower extends AbstractGremlinPower {
             if(AbstractDungeon.player.hasRelic(WizardStaff.ID))
             {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
-                        new BangPower(this.owner, 10 + WizardStaff.OOMPH), 1));
+                        new BangPower(this.owner, 7 + WizardStaff.OOMPH), 1));
             } else {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
-                        new BangPower(this.owner, 10), 1));
+                        new BangPower(this.owner, 7), 1));
             }
         }
     }
@@ -63,10 +63,10 @@ public class WizPower extends AbstractGremlinPower {
                 if(AbstractDungeon.player.hasRelic(WizardStaff.ID))
                 {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
-                            new BangPower(this.owner, 10 + WizardStaff.OOMPH), 1));
+                            new BangPower(this.owner, 7 + WizardStaff.OOMPH), 1));
                 } else {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
-                            new BangPower(this.owner, 10), 1));
+                            new BangPower(this.owner, 7), 1));
                 }
             }
         }
