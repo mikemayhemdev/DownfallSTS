@@ -22,7 +22,12 @@ public class GremlinPostBossHealPatch {
             }
 
             // Only rez 1
+            // full rez to counterbalance nerfs
             if (((GremlinCharacter) AbstractDungeon.player).canRez()) {
+                ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
+                ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
+                ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
+                ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
                 ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
             }
 

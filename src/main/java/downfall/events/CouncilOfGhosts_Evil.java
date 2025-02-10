@@ -7,12 +7,14 @@ import collector.cardmods.CollectedCardMod;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Apparition;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import gremlin.patches.GremlinEnum;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -102,6 +104,9 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
                         return;
                     case 1:
                         this.imageEventText.updateBodyText(ACCEPT_BODY);
+                        if (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
+                            this.hpLoss = this.hpLoss*5;
+                        }
                         AbstractDungeon.player.decreaseMaxHealth(this.hpLoss);
                         this.becomeGhost();
                         this.screenNum = 1;
