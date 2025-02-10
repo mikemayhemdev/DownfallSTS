@@ -84,9 +84,9 @@
       "Deciding your time is better spent elsewhere, you leave the Arena. You can hear a sigh of relief from the fighters as you depart - clearly, nobody was looking forward to dying at your hand today."
    ],
     "OPTIONS": [
-      "[Fight Centurion & Mystic] #gGain #gCloak #gClasp",
-      "[Fight Gremlin Nob] #gGain #gChampion #gBelt",
-      "[Fight Slaver Duo] #gGain #gWrist #gBlade",
+      "[Fight Centurion & Mystic] #gGain #gCloak #gClasp.",
+      "[Fight Gremlin Nob] #gGain #gChampion #gBelt.",
+      "[Fight Slaver Duo] #gGain #gWrist #gBlade.",
       "[Leave]"
     ]
   },

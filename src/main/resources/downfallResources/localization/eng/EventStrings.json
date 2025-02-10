@@ -300,10 +300,10 @@
     ],
     "OPTIONS": [
       "[Punch] #gGain #y",
-      "[Intimidate] #gRemove #ga #gcard #gfrom #gyour #gdeck [REMOVE_SPACE].",
+      "[Intimidate] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
       "[Leave]",
       "Select a Card to Remove.",
-      " #ySouls [REMOVE_SPACE]."
+      " #ySouls."
     ]
   },
   "downfall:Ghosts": {
