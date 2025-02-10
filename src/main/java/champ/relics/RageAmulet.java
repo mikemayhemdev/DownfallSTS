@@ -2,6 +2,7 @@ package champ.relics;
 
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
+import champ.cards.CrookedStrike;
 import champ.powers.CounterPower;
 import collector.CollectorCollection;
 import collector.actions.DrawCardFromCollectionAction;
@@ -50,8 +51,10 @@ public class RageAmulet extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hasPower(VigorPower.POWER_ID))
-            addNextTurnPower(AbstractDungeon.player.getPower(VigorPower.POWER_ID));
+        if (!(card instanceof CrookedStrike)) {
+            if (card.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hasPower(VigorPower.POWER_ID))
+                addNextTurnPower(AbstractDungeon.player.getPower(VigorPower.POWER_ID));
+        }
     }
 
     public void addNextTurnPower(AbstractPower power) {

@@ -2,6 +2,7 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
+import champ.cards.CrookedStrike;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -46,10 +47,11 @@ public class GladiatorFormPower extends AbstractPower implements CloneablePowerI
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK && owner.hasPower(VigorPower.POWER_ID))
-            addNextTurnPower(AbstractDungeon.player.getPower(VigorPower.POWER_ID));
+        if (!(card instanceof CrookedStrike)) {
+            if (card.type == AbstractCard.CardType.ATTACK && owner.hasPower(VigorPower.POWER_ID))
+                addNextTurnPower(AbstractDungeon.player.getPower(VigorPower.POWER_ID));
+        }
     }
-
     @Override
     public void onSpecificTrigger() {
         if (owner.hasPower(CounterPower.POWER_ID))
