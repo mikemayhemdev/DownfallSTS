@@ -973,6 +973,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 //Event ID to Override//
                 .overrideEvent(Ghosts.ID)
                 //Event Type//
+
                 .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(CursedTome_Evil.ID, CursedTome_Evil.class) //Event ID//
