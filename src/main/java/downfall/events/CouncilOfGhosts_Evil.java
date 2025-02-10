@@ -52,6 +52,9 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
     public CouncilOfGhosts_Evil() {
         super(NAME, DESCRIPTIONSALT[0], "images/events/ghost.jpg");
         this.hpLoss = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.5F);
+        if (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
+            this.hpLoss = this.hpLoss*5;
+        }
         if (this.hpLoss >= AbstractDungeon.player.maxHealth) {
             this.hpLoss = AbstractDungeon.player.maxHealth - 1;
         }
@@ -104,9 +107,6 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
                         return;
                     case 1:
                         this.imageEventText.updateBodyText(ACCEPT_BODY);
-                        if (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
-                            this.hpLoss = this.hpLoss*5;
-                        }
                         AbstractDungeon.player.decreaseMaxHealth(this.hpLoss);
                         this.becomeGhost();
                         this.screenNum = 1;

@@ -24,7 +24,7 @@ public class CatScratch extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
     private static final int COST = 1;
-    private static final int POWER = 2;
+    private static final int POWER = 3;
     private static final int MAGIC = 3;
     private static final int UPGRADE_MAGIC = 1;
 
