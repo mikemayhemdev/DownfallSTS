@@ -44,7 +44,7 @@ public class BurlyBlow extends AbstractGremlinCard {
         if(m.hasPower(WeakPower.POWER_ID)){
             count = m.getPower(WeakPower.POWER_ID).amount;
         }
-        for(int i=0; i<count-1; i++){
+        for(int i=0; i<count; i++){
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                     this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
