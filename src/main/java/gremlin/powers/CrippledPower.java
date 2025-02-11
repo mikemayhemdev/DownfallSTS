@@ -20,7 +20,7 @@ public class CrippledPower extends AbstractGremlinPower implements HealthBarRend
 
     private AbstractCreature source;
 
-    public CrippledPower(AbstractCreature owner, AbstractCreature source) {
+    public CrippledPower(AbstractCreature owner, AbstractCreature source, int amount) {
         this.name = strings.NAME;
         this.ID = POWER_ID;
         this.owner = owner;
@@ -28,7 +28,7 @@ public class CrippledPower extends AbstractGremlinPower implements HealthBarRend
 
         this.img = IMG;
         this.type = PowerType.DEBUFF;
-        this.amount = -1;
+        this.amount = amount;
         this.updateDescription();
     }
 
@@ -37,13 +37,13 @@ public class CrippledPower extends AbstractGremlinPower implements HealthBarRend
         this.description = strings.DESCRIPTIONS[0];
     }
 
-    public void atEndOfTurn(boolean player) {
-        if (!player) {
+    public void atStartOfTurn() {
             if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 this.flashWithoutSound();
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.LoseHPAction(this.owner, this.source, getHealthBarAmount(), AbstractGameAction.AttackEffect.POISON));
+                for (int i = 0; i < this.amount; i++) {
+                    AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.LoseHPAction(this.owner, this.source, getHealthBarAmount(), AbstractGameAction.AttackEffect.POISON));
+                }
             }
-        }
     }
 
     @Override

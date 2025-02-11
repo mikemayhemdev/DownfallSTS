@@ -45,7 +45,7 @@ public class Exacerbate extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                new CrippledPower(m, p), 1));
+                new CrippledPower(m, p, 1), 1));
     }
 
     @Override
