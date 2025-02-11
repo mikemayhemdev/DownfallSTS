@@ -254,7 +254,7 @@
 
   "Gremlin:Kablamo": {
     "NAME": "Kablamo!",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL This attack does not consume gremlin:Wiz."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL This attack does not consume gremlin:Wiz."
   },
 
   "Gremlin:LeaderChoice": {
