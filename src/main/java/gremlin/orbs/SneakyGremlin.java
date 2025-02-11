@@ -5,7 +5,7 @@ import gremlin.powers.GremlinPower;
 import gremlin.powers.SneakyGremlinPower;
 
 public class SneakyGremlin extends GremlinStandby{
-    public static final int DAMAGE = 2;
+    public static final int DAMAGE = 3;
 
     public SneakyGremlin(int hp) {
         super(hp, "Gremlin:SneakyGremlin", "sneak", "animation", 25);
