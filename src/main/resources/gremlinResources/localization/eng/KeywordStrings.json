@@ -47,7 +47,7 @@
       "shield gremlin", "shield_gremlin"
     ],
     "PROPER_NAME": "Shield Gremlin",
-    "DESCRIPTION": "After you play a skill, gain #b1 #yBlock [REMOVE_SPACE]."
+    "DESCRIPTION": "After you play a skill, gain #b2 #yBlock [REMOVE_SPACE]."
   },
   {
     "NAMES": [
