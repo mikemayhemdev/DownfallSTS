@@ -25,9 +25,9 @@ public class Stupend extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
     private static final int COST = 1;
-    private static final int POWER = 9;
+    private static final int POWER = 8;
     private static final int UPGRADE_BONUS = 2;
-    private static final int BLOCK = 9;
+    private static final int BLOCK = 8;
 
     public Stupend()
     {
