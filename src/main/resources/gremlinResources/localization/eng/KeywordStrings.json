@@ -11,7 +11,7 @@
       "cripple"
     ],
     "PROPER_NAME": "Cripple",
-    "DESCRIPTION": "Crippled enemies can no longer lose #yWeak [REMOVE_SPACE]. At the end of their turn, they lose HP equal to their #yWeak [REMOVE_SPACE]."
+      "DESCRIPTION": "Crippled enemies can no longer lose #yWeak [REMOVE_SPACE]. At the end of their turn, they lose HP equal to their #yWeak [REMOVE_SPACE]."
   },
   {
     "NAMES": [

@@ -36,13 +36,14 @@
   "Gremlin:Crippled": {
     "NAME": "Crippled",
     "DESCRIPTIONS": [
-      "#yWeak does not wear off. At the end of its turn, it loses HP equal to its #bWeak [REMOVE_SPACE]."
+      "Whenever this enemy gains #yWeak [REMOVE_SPACE], they lose #b",
+      " HP."
     ]
   },
   "Gremlin:Encore": {
     "NAME": "Encore",
     "DESCRIPTIONS": [
-      "Whenever you consume #yWiz, deal #b", " damage to ALL enemies."
+      "#yWiz, deals #b", " additional damage."
     ]
   },
   "Gremlin:Enthusiasm": {

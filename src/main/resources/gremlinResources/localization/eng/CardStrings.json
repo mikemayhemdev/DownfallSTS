@@ -108,7 +108,7 @@
 
   "Gremlin:Encore": {
     "NAME": "Encore",
-    "DESCRIPTION": "Gain 3 gremlin:Wiz. NL Whenever you consume gremlin:Wiz, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Gain 3 gremlin:Wiz. NL gremlin:Wiz deals !M! more damage."
   },
 
   "Gremlin:Enthusiasm": {
@@ -123,7 +123,7 @@
 
   "Gremlin:Exacerbate": {
     "NAME": "Exacerbate",
-    "DESCRIPTION": "Deal !D! damage. NL gremlin:Cripple the enemy. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you apply Weak to this enemy, they lose !M! HP. NL Exhaust."
   },
 
   "Gremlin:FairyDust": {

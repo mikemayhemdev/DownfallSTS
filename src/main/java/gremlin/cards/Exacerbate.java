@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
 import gremlin.powers.CrippledPower;
+import sneckomod.powers.VenomDebuff;
 
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
@@ -27,12 +28,13 @@ public class Exacerbate extends AbstractGremlinCard {
 
     private static final int COST = 2;
     private static final int POWER = 8;
+
     private static final int UPGRADE_BONUS = 4;
 
     public Exacerbate()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
-
+        baseMagicNumber = magicNumber = 3;
         this.baseDamage = POWER;
         this.exhaust = true;
         this.tags.add(FAT_GREMLIN);
@@ -44,8 +46,7 @@ public class Exacerbate extends AbstractGremlinCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                new CrippledPower(m, p, 1), 1));
+        addToBot(new ApplyPowerAction(m, p, new CrippledPower(m, p, magicNumber), magicNumber));
     }
 
     @Override
@@ -53,7 +54,7 @@ public class Exacerbate extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            upgradeDamage(UPGRADE_BONUS);
+            //upgradeDamage(UPGRADE_BONUS);
             upgradeBaseCost(1);
         }
     }

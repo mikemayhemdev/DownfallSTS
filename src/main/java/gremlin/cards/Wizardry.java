@@ -47,10 +47,10 @@ public class Wizardry extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            this.isInnate = true;
-
-            this.rawDescription = strings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            //this.isInnate = true;
+            upgradeMagicNumber(1);
+            //this.rawDescription = strings.UPGRADE_DESCRIPTION;
+           // initializeDescription();
         }
     }
 }
