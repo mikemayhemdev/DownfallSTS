@@ -43,10 +43,10 @@ public class Encore extends AbstractGremlinCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
+                new EncorePower(p, magicNumber), magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new WizPower(p, WIZ), WIZ));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new EncorePower(p, magicNumber), magicNumber));
     }
 
     public void upgrade()
