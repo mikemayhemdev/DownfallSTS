@@ -54,6 +54,7 @@ public class Exacerbate extends AbstractGremlinCard {
         {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
+            upgradeBaseCost(1);
         }
     }
 }
