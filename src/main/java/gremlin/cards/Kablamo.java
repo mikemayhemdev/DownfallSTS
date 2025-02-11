@@ -22,8 +22,8 @@ public class Kablamo extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = CardTarget.ALL_ENEMY;
 
-    private static final int COST = 2;
-    private static final int POWER = 6;
+    private static final int COST = 1;
+    private static final int POWER = 4;
     private static final int UPGRADE_BONUS = 2;
 
     public Kablamo()
