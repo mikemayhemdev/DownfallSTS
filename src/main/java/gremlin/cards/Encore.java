@@ -29,7 +29,7 @@ public class Encore extends AbstractGremlinCard {
 
     private static final int WIZ = 3;
 
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 4;
     private static final int UPGRADE_BONUS = 2;
 
     public Encore()
