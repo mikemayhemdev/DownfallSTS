@@ -13,6 +13,7 @@ import gremlin.GremlinMod;
 import com.megacrit.cardcrawl.vfx.combat.DaggerSprayEffect;
 
 import static gremlin.GremlinMod.MAD_GREMLIN;
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
 
 public class DaggerDance extends AbstractGremlinCard {
     public static final String ID = getID("DaggerDance");
@@ -38,7 +39,7 @@ public class DaggerDance extends AbstractGremlinCard {
         this.magicNumber = MAGIC;
 
         this.isMultiDamage = true;
-        this.tags.add(MAD_GREMLIN);
+        this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "DaggerDance.png");
     }
