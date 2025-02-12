@@ -22,11 +22,14 @@ public class GremlinPostBossHealPatch {
             }
 
             // Only rez 1
-            // full rez to counterbalance nerfs
+            // a4 and under, full rez
+            // a5 and up, rez 2
             if (((GremlinCharacter) AbstractDungeon.player).canRez()) {
-                ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
-                ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
-                ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
+                if (AbstractDungeon.ascensionLevel <= 5) {
+                    ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
+                    ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
+                    ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
+                }
                 ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
                 ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
             }
