@@ -37,7 +37,7 @@ public class CrippledPower extends AbstractGremlinPower implements OnReceivePowe
     }
 
     public void updateDescription() {
-        this.description = strings.DESCRIPTIONS[0];
+        this.description = strings.DESCRIPTIONS[0] + this.amount + strings.DESCRIPTIONS[1];
     }
 
     @Override
