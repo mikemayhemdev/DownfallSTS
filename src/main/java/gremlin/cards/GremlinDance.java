@@ -240,6 +240,8 @@ public class GremlinDance extends AbstractGremlinCard {
         {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
+            upgradeBlock(UPGRADE_BONUS);
+           // upgradeMagicNumber(1);
         }
     }
 
