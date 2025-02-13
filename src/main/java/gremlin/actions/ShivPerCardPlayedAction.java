@@ -22,8 +22,8 @@ public class ShivPerCardPlayedAction extends AbstractGameAction
         int count = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
         --count;
         int availableSpace = BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size();
-        if (count > availableSpace-1) {
-            count = availableSpace-1;
+        if (count > availableSpace) {
+            count = availableSpace;
         }
         AbstractCard c = new Shiv();
         if (upgraded) {
