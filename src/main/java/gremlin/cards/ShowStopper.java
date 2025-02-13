@@ -76,7 +76,7 @@ public class ShowStopper extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            upgradeDamage(2);
+            upgradeMagicNumber(1);
         }
     }
 }
