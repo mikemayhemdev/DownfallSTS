@@ -73,6 +73,9 @@ public class reskinContent implements
     public static String getLanguageString() {
         String language;
         switch (Settings.language) {
+            case PTB:
+                language = "ptb";
+                break;
             case ZHS:
                 language = "zhs";
                 break;
