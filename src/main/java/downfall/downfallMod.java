@@ -250,7 +250,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             Settings.GameLanguage.FRA,
 //            Settings.GameLanguage.ZHT,
             Settings.GameLanguage.RUS,
-//            Settings.GameLanguage.PTB
+            Settings.GameLanguage.PTB
     };
 
     public static ReplaceData[] wordReplacements;
