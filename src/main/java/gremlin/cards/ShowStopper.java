@@ -27,7 +27,7 @@ public class ShowStopper extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final int COST = 0;
-    private static final int POWER = 0;
+    private static final int POWER = 3;
     private static final int UPGRADE_BONUS = 2;
     private static final int SHOWMANSHIP = 7;
 
@@ -36,7 +36,7 @@ public class ShowStopper extends AbstractGremlinCard {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
-        this.baseMagicNumber = 7;
+        this.baseMagicNumber = 5;
         this.isMultiDamage = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(WIZARD_GREMLIN);
@@ -76,7 +76,7 @@ public class ShowStopper extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            upgradeDamage(1);
+            upgradeDamage(2);
         }
     }
 }
