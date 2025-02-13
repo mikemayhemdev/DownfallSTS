@@ -44,14 +44,24 @@ public class WizPower extends AbstractGremlinPower {
 
     @Override
     public void onInitialApplication() {
-        if(amount >= 3){
-            if(AbstractDungeon.player.hasRelic(WizardStaff.ID))
-            {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
-                        new BangPower(this.owner, 7 + WizardStaff.OOMPH), 1));
-            } else {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
-                        new BangPower(this.owner, 7), 1));
+        if(amount >= 3) {
+            if(!this.owner.hasPower(BangPower.POWER_ID)) {
+                if(AbstractDungeon.player.hasRelic(WizardStaff.ID))
+                {
+                    int buf = 0;
+                    if (AbstractDungeon.player.hasPower(EncorePower.POWER_ID)) {
+                        buf = AbstractDungeon.player.getPower(EncorePower.POWER_ID).amount;
+                    }
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
+                            new BangPower(this.owner, 7 + WizardStaff.OOMPH + buf), 1));
+                } else {
+                    int buf = 0;
+                    if (AbstractDungeon.player.hasPower(EncorePower.POWER_ID)) {
+                        buf = AbstractDungeon.player.getPower(EncorePower.POWER_ID).amount;
+                    }
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
+                            new BangPower(this.owner, 7 + buf), 1));
+                }
             }
         }
     }
