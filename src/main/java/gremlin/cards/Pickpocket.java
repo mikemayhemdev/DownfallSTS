@@ -30,7 +30,6 @@ public class Pickpocket extends AbstractGremlinCard {
     private static final int POWER = 9;
     private static final int MAGIC = 2;
     private static final int UPGRADE_BONUS = 4;
-    private static final int downfallMagic = 2;
 
     public Pickpocket()
     {
@@ -38,7 +37,7 @@ public class Pickpocket extends AbstractGremlinCard {
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         this.baseDamage = POWER;
-        baseDownfallMagic = downfallMagic = 2;
+        baseDownfallMagic = downfallMagic = 5;
         this.exhaust = true;
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
