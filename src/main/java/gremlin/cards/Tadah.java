@@ -49,6 +49,7 @@ public class Tadah extends AbstractGremlinCard {
 
     public void upgrade() {
         if (!this.upgraded) {
+            cardsToPreview.upgrade();
             upgradeName();
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();

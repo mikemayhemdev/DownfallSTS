@@ -53,7 +53,6 @@ public class GremlinArms extends AbstractGremlinCard {
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
-        updateModal();
         GremlinMod.loadJokeCardImage(this, "GremlinArms.png");
     }
 
@@ -161,26 +160,5 @@ public class GremlinArms extends AbstractGremlinCard {
         }
     }
 
-    @Override
-    public void update() {
-        super.update();
-        if (hb.hovered) {
-            if (rotationTimer <= 0F) {
-                rotationTimer = 2F;
-                if (cardsList.size() == 0) {
-                    cardsToPreview = CardLibrary.cards.get("Madness");
-                } else {
-                    cardsToPreview = cardsList.get(previewIndex);
-                }
-                if (previewIndex == cardsList.size() - 1) {
-                    previewIndex = 0;
-                } else {
-                    previewIndex++;
-                }
-            } else {
-                rotationTimer -= Gdx.graphics.getDeltaTime();
-            }
-        }
-    }
 }
 

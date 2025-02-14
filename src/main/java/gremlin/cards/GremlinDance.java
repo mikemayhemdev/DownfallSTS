@@ -142,6 +142,7 @@ public class GremlinDance extends AbstractGremlinCard {
                 if (previewIndex == cardsList.size() - 1) {
                     previewIndex = 0;
                 } else {
+
                     previewIndex++;
                 }
             } else {
@@ -243,6 +244,7 @@ public class GremlinDance extends AbstractGremlinCard {
     public void upgrade() {
         if (!this.upgraded)
         {
+            cardsToPreview.upgrade();
             upgradeName();
             upgradeDamage(2);
             upgradeBlock(2);
