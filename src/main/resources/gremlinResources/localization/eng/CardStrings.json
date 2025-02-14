@@ -308,8 +308,7 @@
 
   "Gremlin:Pickpocket": {
     "NAME": "Pickpocket",
-    "DESCRIPTION": "Deal !D! damage. NL Shackle the target for !M! Strength twice. NL Gain 5 Gold. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shackle the target for !M! Strength twice. NL Gain 10 Gold. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Shackle the target for !M! Strength twice. NL Gain !DM! Gold. NL Exhaust."
   },
 
   "Gremlin:PinNeedle": {
