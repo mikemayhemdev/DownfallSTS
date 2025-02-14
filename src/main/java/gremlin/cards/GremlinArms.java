@@ -1,8 +1,11 @@
 package gremlin.cards;
 
 import com.badlogic.gdx.Gdx;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,7 +13,16 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import gremlin.GremlinMod;
+import gremlin.actions.ShackleAction;
+import gremlin.cards.pseudocards.*;
+import gremlin.characters.GremlinCharacter;
+import gremlin.orbs.*;
+import gremlin.powers.ModifiedLoseStrengthPower;
+import gremlin.powers.WizPower;
 
 import java.util.ArrayList;
 
@@ -29,7 +41,7 @@ public class GremlinArms extends AbstractGremlinCard {
     private static final int COST = 1;
     private static final int MAGIC = 2;
     private static final int UPGRADE_BONUS = 1;
-
+    private boolean hasOptions = true;
     private float rotationTimer;
     private int previewIndex;
     private ArrayList<AbstractCard> cardsList = new ArrayList<>();
@@ -40,24 +52,106 @@ public class GremlinArms extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
-        cardsList.add(new Shiv());
-        cardsList.add(new Ward());
-
-        this.cardsToPreview = new Shiv();
-        this.tags.add(SNEAKY_GREMLIN);
+        updateModal();
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "GremlinArms.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        for(int i = 0; i < magicNumber; i++){
-            int shiv = AbstractDungeon.cardRandomRng.random(0, 1);
-            if (shiv == 1)
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Shiv(), 1));
-            else
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Ward(), 1));
+
+        if(hasOptions){
+            addToBot(new ChooseOneAction(updateModal()));
         }
+        for(int i = 0; i < magicNumber; i++){
+            String gremlin = "";
+            boolean isNob = false;
+            if(AbstractDungeon.player instanceof GremlinCharacter) {
+                if(((GremlinCharacter) AbstractDungeon.player).nob){
+                    isNob = true;
+                } else {
+                    gremlin = ((GremlinCharacter) AbstractDungeon.player).currentGremlin;
+                }
+            }
+
+            if(gremlin.equals("shield")){
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+            }
+
+            if(gremlin.equals("angry")){
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                        new StrengthPower(p, MadGremlin.STRENGTH)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                        new ModifiedLoseStrengthPower(p, MadGremlin.STRENGTH)));
+            }
+
+            else if(gremlin.equals("wizard")){
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                        new WizPower(p, 1), 1));
+            } else {
+               // AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
+                  //      this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            }
+
+            if(gremlin.equals("fat")){
+                for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                    if (!mo.isDeadOrEscaped()) {
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
+                                new WeakPower(mo, 1, false), 1));
+                    }
+                }
+            }
+
+            if(gremlin.equals("sneak")){
+                AbstractDungeon.actionManager.addToBottom(
+                        new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, SneakyGremlin.DAMAGE, DamageInfo.DamageType.THORNS),
+                                AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            }
+
+            if(gremlin.equals("wizard")){
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                        new WizPower(p, this.magicNumber), this.magicNumber));
+            }
+        }
+    }
+
+    private ArrayList<AbstractCard> updateModal(){
+        if(AbstractDungeon.player != null){
+            ArrayList<GremlinStandby> living = new ArrayList<>();
+            for(AbstractOrb orb : AbstractDungeon.player.orbs){
+                if(orb instanceof GremlinStandby){
+                    living.add((GremlinStandby) orb);
+                }
+            }
+            if(living.size() == 0){
+                hasOptions = false;
+                return new ArrayList<>();
+            }
+            else {
+                hasOptions = true;
+                ArrayList<AbstractCard> options = new ArrayList<>();
+                for(AbstractOrb grem : living){
+                    if(grem instanceof MadGremlin){
+                        options.add(new MadGremlinCard());
+                    }
+                    else if(grem instanceof FatGremlin){
+                        options.add(new FatGremlinCard());
+                    }
+                    else if(grem instanceof ShieldGremlin){
+                        options.add(new ShieldGremlinCard());
+                    }
+                    else if(grem instanceof SneakyGremlin){
+                        options.add(new SneakyGremlinCard());
+                    }
+                    else if(grem instanceof GremlinWizard){
+                        options.add(new GremlinWizardCard());
+                    }
+                }
+                return options;
+            }
+        }
+        hasOptions = false;
+        return new ArrayList<>();
     }
 
     public void upgrade()

@@ -64,8 +64,7 @@
 
   "Gremlin:CounterStrike": {
     "NAME": "Counter Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, gain !M! Wards.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, gain !M! Upgraded Wards."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, trigger your current Gremlin's Bonus !M! times."
   },
 
   "Gremlin:CowerChoice": {
@@ -192,7 +191,8 @@
 
   "Gremlin:GremlinArms": {
     "NAME": "Gremlin Arms",
-    "DESCRIPTION": "Gain a random assortment of !M! Shivs and *Wards."
+    "DESCRIPTION": "gremlin:Swap to a living Gremlin of your choice. NL Trigger it's Bonus.",
+    "UPGRADE_DESCRIPTION": "gremlin:Swap to a living Gremlin of your choice. NL Trigger it's Bonus twice."
   },
 
   "Gremlin:GremlinMeal": {
@@ -453,8 +453,8 @@
 
   "Gremlin:Tadah": {
     "NAME": "Tadah!",
-    "DESCRIPTION": "expansioncontent:Echo a random Skill. NL gremlin:Swap to gremlin:Gremlin_Wizard.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Echo a random Upgraded Skill. NL gremlin:Swap to gremlin:Gremlin_Wizard."
+    "DESCRIPTION": "Gain a *Ward. NL gremlin:Swap to gremlin:Gremlin_Wizard.",
+    "UPGRADE_DESCRIPTION": "Gain an Upgraded *Ward. NL gremlin:Swap to gremlin:Gremlin_Wizard."
   },
 
   "Gremlin:TagTeam": {
