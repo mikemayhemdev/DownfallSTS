@@ -35,7 +35,7 @@ public class Pretaliation extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.COMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int POWER = 6;
     private static final int BLAMAGE = 5;
     private static final int UPGRADE_POWER = 1;

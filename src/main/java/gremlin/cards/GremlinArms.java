@@ -40,7 +40,7 @@ public class GremlinArms extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
     private static final int COST = 1;
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     private static final int UPGRADE_BONUS = 1;
     private boolean hasOptions = true;
     private float rotationTimer;
@@ -64,6 +64,7 @@ public class GremlinArms extends AbstractGremlinCard {
         if(hasOptions){
             addToBot(new ChooseOneAction(updateModal()));
         }
+
         for(int i = 0; i < magicNumber; i++){
             String gremlin = "";
             boolean isNob = false;
@@ -76,18 +77,18 @@ public class GremlinArms extends AbstractGremlinCard {
             }
 
             if(gremlin.equals("shield")){
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+                AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, 2));
             }
 
             if(gremlin.equals("angry")){
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
                         new StrengthPower(p, MadGremlin.STRENGTH)));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
                         new ModifiedLoseStrengthPower(p, MadGremlin.STRENGTH)));
             }
 
             else if(gremlin.equals("wizard")){
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
                         new WizPower(p, 1), 1));
             } else {
                // AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
@@ -97,20 +98,20 @@ public class GremlinArms extends AbstractGremlinCard {
             if(gremlin.equals("fat")){
                 for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                     if (!mo.isDeadOrEscaped()) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
+                        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, p,
                                 new WeakPower(mo, 1, false), 1));
                     }
                 }
             }
 
             if(gremlin.equals("sneak")){
-                AbstractDungeon.actionManager.addToBottom(
+                AbstractDungeon.actionManager.addToTop(
                         new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, SneakyGremlin.DAMAGE, DamageInfo.DamageType.THORNS),
                                 AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
             }
 
             if(gremlin.equals("wizard")){
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
                         new WizPower(p, this.magicNumber), this.magicNumber));
             }
         }

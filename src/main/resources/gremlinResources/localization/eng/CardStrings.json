@@ -191,8 +191,8 @@
 
   "Gremlin:GremlinArms": {
     "NAME": "Gremlin Arms",
-    "DESCRIPTION": "gremlin:Swap to a living Gremlin of your choice. NL Trigger it's Bonus.",
-    "UPGRADE_DESCRIPTION": "gremlin:Swap to a living Gremlin of your choice. NL Trigger it's Bonus twice."
+    "DESCRIPTION": "Trigger your current Gremlin's Bonus, then gremlin:Swap to a living Gremlin of your choice.",
+    "UPGRADE_DESCRIPTION": "Trigger your current Gremlin's Bonus twice, then gremlin:Swap to a living Gremlin of your choice."
   },
 
   "Gremlin:GremlinMeal": {
