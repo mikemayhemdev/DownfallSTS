@@ -202,7 +202,7 @@
 
   "Gremlin:GremlinDance": {
     "NAME": "Gremlin Dance",
-    "DESCRIPTION": "Deal !D! damage. NL Has a bonus effect based on which Gremlin you are."
+    "DESCRIPTION": "Deal !D! damage. NL Has a bonus effect based on which Gremlin you are.",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage",
     " to ALL enemies.", ". NL Enemy loses !M! Strength this turn.",
     ". NL Gain !B! Block.", ". NL Draw !M! cards.", ". NL Gain !M! gremlin:Wiz.", ". NL Gain !M! Strength."]
