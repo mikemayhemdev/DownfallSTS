@@ -244,6 +244,8 @@ public class GremlinDance extends AbstractGremlinCard {
     public void upgrade() {
         if (!this.upgraded)
         {
+            this.rawDescription = strings.UPGRADE_DESCRIPTION;
+            initializeDescription();
             //cardsToPreview.upgrade();
             upgradeName();
             upgradeDamage(2);
