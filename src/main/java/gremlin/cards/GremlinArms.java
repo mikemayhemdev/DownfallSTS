@@ -54,7 +54,6 @@ public class GremlinArms extends AbstractGremlinCard {
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         updateModal();
-        setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "GremlinArms.png");
     }
 
