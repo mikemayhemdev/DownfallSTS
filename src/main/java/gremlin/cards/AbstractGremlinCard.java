@@ -21,10 +21,10 @@ public abstract class AbstractGremlinCard extends CustomCard {
 
     //Variables
     //Second Magic - Downfall Magic (DM)
-    public int downfallMagic;
-    public int baseDownfallMagic;
-    public boolean isDownfallUpgraded;
-    public boolean isDownfallModified;
+    public int gremlinMagic;
+    public int basegremlinMagic;
+    public boolean isgremlinUpgraded;
+    public boolean isgremlinModified;
 
     public boolean upgradedsecondMagic;
     public boolean issecondMagicModified;
@@ -55,22 +55,26 @@ public abstract class AbstractGremlinCard extends CustomCard {
             blamage = baseBlamage;
             isBlamageModifed = true;
         }
-        if (isDownfallUpgraded) {
-            downfallMagic = baseDownfallMagic;
-            isDownfallModified = true;
+        if (isgremlinUpgraded) {
+            gremlinMagic = basegremlinMagic;
+            isgremlinModified = true;
         }
     }
-    public void resetAttributes() {
-        super.resetAttributes();
-        downfallMagic = baseDownfallMagic;
-        isDownfallModified = false;
+
+    protected void upgradeBlammage(int amount) {
+        baseBlamage += amount;
+        blamage = baseBlamage;
+        upgradedBlamage = true;
     }
 
-    public void upgradeDownfall(int amount) {
-        baseDownfallMagic += amount;
-        downfallMagic = baseDownfallMagic;
-        isDownfallUpgraded = true;
+
+    public void resetAttributes() {
+        super.resetAttributes();
+        gremlinMagic = basegremlinMagic;
+        isgremlinModified = false;
     }
+
+
 
     public void setBackgrounds() {
         //Call this immediately after any tag changes.

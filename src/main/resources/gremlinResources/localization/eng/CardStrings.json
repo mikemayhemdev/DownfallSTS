@@ -308,7 +308,7 @@
 
   "Gremlin:Pickpocket": {
     "NAME": "Pickpocket",
-    "DESCRIPTION": "Deal !D! damage. NL Shackle the target for !M! Strength twice. NL Gain !DM! Gold. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Shackle the target for !M! Strength twice. NL Gain !blamage! Gold. NL Exhaust."
   },
 
   "Gremlin:PinNeedle": {
@@ -340,7 +340,7 @@
 
   "Gremlin:Pretaliation": {
     "NAME": "Pretaliation",
-    "DESCRIPTION": "Deal !D! damage if the enemy intends to attack. NL Deal !blamage! damage otherwise."
+    "DESCRIPTION": "Deal !D! damage twice. NL Enemy attacks you for !M! damage."
   },
 
   "Gremlin:ProperTools": {

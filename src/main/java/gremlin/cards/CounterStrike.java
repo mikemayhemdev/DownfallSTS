@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
 import gremlin.actions.CounterStrikeAction;
+import sneckomod.SneckoMod;
 
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
@@ -36,7 +37,7 @@ public class CounterStrike extends AbstractGremlinCard {
         this.baseDamage = POWER;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
-
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(AbstractCard.CardTags.STRIKE);
 
         this.cardsToPreview = new Ward();

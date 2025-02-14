@@ -23,6 +23,7 @@ import gremlin.characters.GremlinCharacter;
 import gremlin.orbs.*;
 import gremlin.powers.ModifiedLoseStrengthPower;
 import gremlin.powers.WizPower;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
@@ -49,7 +50,7 @@ public class GremlinArms extends AbstractGremlinCard {
     public GremlinArms()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
-
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         updateModal();

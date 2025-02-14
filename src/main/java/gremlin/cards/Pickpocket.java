@@ -37,7 +37,7 @@ public class Pickpocket extends AbstractGremlinCard {
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         this.baseDamage = POWER;
-        baseDownfallMagic = downfallMagic = 5;
+        this.baseBlamage = 5;
         this.exhaust = true;
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
@@ -50,9 +50,9 @@ public class Pickpocket extends AbstractGremlinCard {
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         AbstractDungeon.actionManager.addToBottom(new ShackleAction(m, magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ShackleAction(m, magicNumber));
-        AbstractDungeon.player.gainGold(downfallMagic);
+        AbstractDungeon.player.gainGold(blamage);
 
-        for (int i = 0; i < downfallMagic; ++i) {
+        for (int i = 0; i < blamage; ++i) {
             AbstractDungeon.effectList.add(new GainPennyEffect(p, p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, true));
         }
         }
@@ -62,7 +62,7 @@ public class Pickpocket extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            upgradeDownfall(5);
+            upgradeBlammage(5);
             upgradeDamage(UPGRADE_BONUS);
             upgradeMagicNumber(1);
         }
