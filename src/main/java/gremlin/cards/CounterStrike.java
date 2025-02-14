@@ -39,10 +39,6 @@ public class CounterStrike extends AbstractGremlinCard {
         this.magicNumber = MAGIC;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(AbstractCard.CardTags.STRIKE);
-
-        this.cardsToPreview = new Ward();
-        this.tags.add(SHIELD_GREMLIN);
-        setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "CounterStrike.png");
     }
 
@@ -62,9 +58,6 @@ public class CounterStrike extends AbstractGremlinCard {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             upgradeMagicNumber(1);
-            this.rawDescription = strings.UPGRADE_DESCRIPTION;
-            initializeDescription();
-            this.cardsToPreview.upgrade();
         }
     }
 }

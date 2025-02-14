@@ -161,6 +161,8 @@ public class GremlinArms extends AbstractGremlinCard {
         {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
+            this.rawDescription = strings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 
