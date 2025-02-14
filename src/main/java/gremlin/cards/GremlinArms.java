@@ -109,11 +109,6 @@ public class GremlinArms extends AbstractGremlinCard {
                         new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, SneakyGremlin.DAMAGE, DamageInfo.DamageType.THORNS),
                                 AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
             }
-
-            if(gremlin.equals("wizard")){
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
-                        new WizPower(p, this.magicNumber), this.magicNumber));
-            }
         }
     }
 
