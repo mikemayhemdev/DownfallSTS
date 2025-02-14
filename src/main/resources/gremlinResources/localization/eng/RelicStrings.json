@@ -10,7 +10,7 @@
     "NAME": "Fragmentation Grenade",
     "FLAVOR": "Nobody dares to ask where the Gremlin got it from.",
     "DESCRIPTIONS": [
-      "#yAttacks that cost #b0 deal #b", " additional damage.."
+      "Damage dealt to random enemies is increased by #b", " [REMOVE_SPACE]."
     ]
   },
   "Gremlin:GremlinBomb": {

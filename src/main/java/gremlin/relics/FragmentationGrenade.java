@@ -18,9 +18,9 @@ public class FragmentationGrenade extends AbstractGremlinRelic {
         super(ID, IMG, TIER, SOUND);
     }
 
-    public float atDamageModify(float damage, AbstractCard c) {
-        return c.costForTurn != 0 && (!c.freeToPlayOnce || c.cost == -1) ? damage : damage + 2.0F;
-    }
+//    public float atDamageModify(float damage, AbstractCard c) {
+//        return c.costForTurn != 0 && (!c.freeToPlayOnce || c.cost == -1) ? damage : damage + 2.0F;
+//    }
 
     @Override
     public String getUpdatedDescription() {
