@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.relics.ChampionsBelt;
 import com.megacrit.cardcrawl.relics.CloakClasp;
 import com.megacrit.cardcrawl.relics.WristBlade;
 import downfall.downfallMod;
+import hermit.relics.Horseshoe;
+import hermit.relics.StraightRazor;
 import slimebound.SlimeboundMod;
 
 public class MinorLeagueArena extends AbstractImageEvent {
@@ -38,7 +40,7 @@ public class MinorLeagueArena extends AbstractImageEvent {
         this.imageEventText.clearAllDialogs();
         this.imageEventText.setDialogOption(OPTIONS[0], new CloakClasp());
         this.imageEventText.setDialogOption(OPTIONS[1], new ChampionsBelt());
-        this.imageEventText.setDialogOption(OPTIONS[2], new WristBlade());
+        this.imageEventText.setDialogOption(OPTIONS[2], new Horseshoe());
         this.imageEventText.setDialogOption(OPTIONS[3]);
     }
 
@@ -82,8 +84,8 @@ public class MinorLeagueArena extends AbstractImageEvent {
                         //SlimeboundMod.logger.info("fight");
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Colosseum Slavers");
                         AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().addRelicToRewards(new WristBlade());
-                        downfallMod.removeAnyRelicFromPools("WristBlade");
+                        AbstractDungeon.getCurrRoom().addRelicToRewards(new Horseshoe());
+                        downfallMod.removeAnyRelicFromPools(Horseshoe.ID);
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         AbstractDungeon.lastCombatMetricKey = "Colosseum Slavers";
