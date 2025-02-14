@@ -71,7 +71,7 @@ public class Flurry extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            upgradeDamage(1);
+            upgradeBaseCost(0);
         }
     }
 }

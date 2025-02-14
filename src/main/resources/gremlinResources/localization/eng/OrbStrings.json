@@ -35,7 +35,8 @@
     "NAME": "Sneaky Gremlin",
     "DESCRIPTION": [
       "After you play an attack, deal #b",
-      " damage to a random enemy."
+      " damage to a random enemy. 0 cost attacks deal #b",
+      " extra damage."
     ]
   }
 }

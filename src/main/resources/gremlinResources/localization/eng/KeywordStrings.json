@@ -54,7 +54,7 @@
       "sneaky gremlin", "sneaky_gremlin"
     ],
     "PROPER_NAME": "Sneaky Gremlin",
-    "DESCRIPTION": "After you play an attack, deal #b2 damage to a random enemy."
+    "DESCRIPTION": "After you play an attack, deal #b2 damage to a random enemy. 0 cost attacks deal #b2 additional damage."
   },
   {
     "NAMES": [

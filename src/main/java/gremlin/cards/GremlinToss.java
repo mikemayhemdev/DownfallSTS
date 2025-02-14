@@ -27,7 +27,7 @@ public class GremlinToss extends AbstractGremlinCard {
 
     private static final int COST = 1;
     private static final int POWER = 0;
-    private static final int MAGIC = 0;
+    private static final int MAGIC = 3;
     private static final int UPGRADE_BONUS = 3;
 
     public GremlinToss()
@@ -44,9 +44,7 @@ public class GremlinToss extends AbstractGremlinCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(p, p, magicNumber));
-        }
+        AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(p, p, magicNumber));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
@@ -100,9 +98,7 @@ public class GremlinToss extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_BONUS);
-            this.rawDescription = strings.UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            upgradeBaseCost(0);
         }
     }
 }

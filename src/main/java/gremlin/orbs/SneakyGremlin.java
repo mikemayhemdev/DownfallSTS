@@ -13,7 +13,7 @@ public class SneakyGremlin extends GremlinStandby{
 
     @Override
     public void updateDescription() {
-        this.description = this.descriptions[0] + DAMAGE + this.descriptions[1];
+        this.description = this.descriptions[0] + DAMAGE + this.descriptions[1] + DAMAGE + this.descriptions[2];
     }
 
     @Override

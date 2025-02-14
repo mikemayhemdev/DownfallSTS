@@ -6,7 +6,7 @@
 
   "Gremlin:ArmsTheft": {
     "NAME": "Arms Theft",
-    "DESCRIPTION": "gremlin:Steal !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak. NL gremlin:Steal !M! Strength. NL Exhaust."
   },
 
   "Gremlin:Astound": {
@@ -204,7 +204,7 @@
     "NAME": "Gremlin Dance",
     "DESCRIPTION": "Deal !D! damage. NL Has a bonus effect based on which Gremlin you are.",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage",
-    " to ALL enemies.", ". NL Enemy loses !M! Strength this turn.",
+    " to ALL enemies twice.", ". NL Enemy loses !M! Strength this turn.",
     ". NL Gain !B! Block.", ". NL Draw !M! cards.", ". NL Gain !M! gremlin:Wiz.", ". NL Gain !M! Strength."]
   },
 
@@ -216,7 +216,7 @@
 
   "Gremlin:GremlinToss": {
     "NAME": "Gremlin Toss",
-    "DESCRIPTION": "Deal damage equal to your current Block and *Temp *HP.",
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL Deal damage equal to your current Block and *Temp *HP.",
     "UPGRADE_DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL Deal damage equal to your current Block and *Temp *HP.",
     "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
   },
@@ -308,7 +308,8 @@
 
   "Gremlin:Pickpocket": {
     "NAME": "Pickpocket",
-    "DESCRIPTION": "gremlin:Steal all Artifact. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Shackle the target for !M! Strength twice. NL Gain 5 Gold. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shackle the target for !M! Strength twice. NL Gain 10 Gold. NL Exhaust."
   },
 
   "Gremlin:PinNeedle": {

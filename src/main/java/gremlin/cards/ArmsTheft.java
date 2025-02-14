@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import gremlin.GremlinMod;
 
 import static gremlin.GremlinMod.MAD_GREMLIN;
@@ -39,6 +40,8 @@ public class ArmsTheft extends AbstractGremlinCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
+                new WeakPower(m, magicNumber, false), magicNumber));
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(m, p, new StrengthPower(m, -this.magicNumber), -this.magicNumber));
         if (!m.hasPower("Artifact")) {

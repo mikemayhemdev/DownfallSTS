@@ -34,10 +34,10 @@ public class GremlinDance extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
     private static final int COST = 1;
-    private static final int POWER = 6;
-    private static final int BLOCK = 6;
+    private static final int POWER = 5;
+    private static final int BLOCK = 5;
     private static final int MAGIC = 2;
-    private static final int UPGRADE_BONUS = 3;
+    private static final int UPGRADE_BONUS = 2;
 
     private String gremlin;
     private float rotationTimer;
@@ -94,8 +94,14 @@ public class GremlinDance extends AbstractGremlinCard {
         }
 
         if(gremlin.equals("angry")){
-            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage,
-                    this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+           // AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage,
+             //       this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            if (upgraded) {
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
+                        this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            }
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
+                    this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         } else if(gremlin.equals("wizard")){
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                     this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
@@ -239,9 +245,9 @@ public class GremlinDance extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            upgradeDamage(UPGRADE_BONUS);
-            upgradeBlock(UPGRADE_BONUS);
-           // upgradeMagicNumber(1);
+            upgradeDamage(2);
+            upgradeBlock(2);
+            upgradeMagicNumber(1);
         }
     }
 

@@ -26,7 +26,7 @@ public class DaggerDance extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final int COST = 1;
-    private static final int POWER = 2;
+    private static final int POWER = 3;
     private static final int MAGIC = 2;
     private static final int UPGRADE_MAGIC = 1;
 
