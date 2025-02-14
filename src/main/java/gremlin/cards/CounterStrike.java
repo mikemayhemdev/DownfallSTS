@@ -60,6 +60,7 @@ public class CounterStrike extends AbstractGremlinCard {
         {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
+            upgradeMagicNumber(1);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
             this.cardsToPreview.upgrade();
