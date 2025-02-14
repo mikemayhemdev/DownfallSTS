@@ -34,7 +34,7 @@ public class GremlinDance extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
     private static final int COST = 1;
-    private static final int POWER = 4;
+    private static final int POWER = 5;
     private static final int BLOCK = 6;
     private static final int MAGIC = 2;
     private static final int UPGRADE_BONUS = 2;
@@ -248,7 +248,7 @@ public class GremlinDance extends AbstractGremlinCard {
             initializeDescription();
             //cardsToPreview.upgrade();
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(1);
             upgradeBlock(3);
             upgradeMagicNumber(1);
         }
