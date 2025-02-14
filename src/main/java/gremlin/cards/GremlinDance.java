@@ -137,9 +137,6 @@ public class GremlinDance extends AbstractGremlinCard {
                 if (cardsList.size() == 0) {
                     cardsToPreview = CardLibrary.cards.get("Madness");
                 } else {
-                    if (!this.upgraded) {
-                        cardsToPreview.upgrade();
-                    }
                     cardsToPreview = cardsList.get(previewIndex);
                 }
                 if (previewIndex == cardsList.size() - 1) {
