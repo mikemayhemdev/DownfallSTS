@@ -27,7 +27,7 @@ public class SneakyGremlinPower extends GremlinPower {
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        return super.atDamageGive(card.costForTurn == 0 ? damage + this.amount : damage, type, card);
+        return super.atDamageGive(card.costForTurn == 0 ? damage + this.pot : damage, type, card);
     }
 
     @Override

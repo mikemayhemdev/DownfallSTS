@@ -5,6 +5,7 @@ import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -33,17 +34,16 @@ public class Tadah extends AbstractGremlinCard {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
+        this.cardsToPreview = new Ward();
         GremlinMod.loadJokeCardImage(this, "Tadah.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard skill = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL).makeCopy();
-        while (skill.cost == -2) {
-            skill = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL).makeCopy();
+        AbstractCard c = new Ward();
+        if (upgraded) {
+            c.upgrade();
         }
-        if (this.upgraded)
-            skill.upgrade();
-        addToBot(new EchoACardAction(skill, false));
+        AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(c, 1));
         addToBot(new GremlinSwapAction(new GremlinWizard(0)));
     }
 
