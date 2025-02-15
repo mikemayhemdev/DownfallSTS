@@ -50,10 +50,11 @@ public class TemporalStrike extends AbstractGuardianCard {
 
         this.baseDamage = DAMAGE;
         this.socketCount = SOCKETS;
+        tags.add(CardTags.STRIKE);
         updateDescription();
         loadGemMisc();
 
-        tags.add(CardTags.STRIKE);
+
         //this.sockets.add(GuardianMod.socketTypes.RED);
         this.updateDescription();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("TemporalStrike.png"));

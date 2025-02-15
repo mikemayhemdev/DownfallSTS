@@ -607,7 +607,7 @@
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Shelled Parasite",
-    "DESCRIPTION": "Gain !M! Plated Armor."
+    "DESCRIPTION": "Gain !M! expansioncontent:Plated *Armor."
   },
   "collector:ShieldGremlinCard": {
     "NAME": "Shield Gremlin",
@@ -695,6 +695,6 @@
   },
   "collector:Sapped": {
     "NAME": "Sapped",
-    "DESCRIPTION": "collector:Pyre. NL Exhaust. NL Cannot be removed from your deck."
+    "DESCRIPTION": "collector:Pyre. NL When drawn, lose [E]. NL Exhaust. NL Cannot be removed from your deck."
   }
 }

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 import sneckomod.powers.CheatPower;
+
 @Deprecated
 @CardIgnore
 public class Cheat extends AbstractSneckoCard {

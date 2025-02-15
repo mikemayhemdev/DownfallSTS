@@ -1,6 +1,19 @@
 package theHexaghost;
 
+import automaton.vfx.CompileVictoryEffect;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.combat.GiantFireEffect;
+import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
+import com.megacrit.cardcrawl.vfx.scene.DefectVictoryNumberEffect;
+import com.megacrit.cardcrawl.vfx.scene.IroncladVictoryFlameEffect;
+import downfall.downfallMod;
+import hermit.effects.HermitVictoryEmbers;
+import hermit.effects.HermitVictoryMoon;
+import hermit.vfx.GreenFireEffect;
+import hermit.vfx.ShortScreenFire;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomEnergyOrb;
@@ -26,16 +39,25 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.BobEffect;
+import reskinContent.vfx.PortraitScreenOnFireEffect;
 import sneckomod.SneckoMod;
 import theHexaghost.cards.*;
 import theHexaghost.cards.Float;
 import theHexaghost.ghostflames.*;
 import theHexaghost.relics.SpiritBrand;
 import downfall.util.TextureLoader;
+import theHexaghost.vfx.ActiveFireEffect;
 import theHexaghost.vfx.MyBody;
+import theHexaghost.vfx.SpookyEmberEffect;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import static com.badlogic.gdx.graphics.Color.GREEN;
+import static com.badlogic.gdx.graphics.Color.PURPLE;
+import static hermit.characters.hermit.update_timer;
+import static hermit.util.Wiz.atb;
+import static java.awt.Color.green;
 import static theHexaghost.GhostflameHelper.*;
 import static theHexaghost.HexaMod.*;
 import static theHexaghost.TheHexaghost.Enums.GHOST_GREEN;
@@ -120,6 +142,42 @@ public class TheHexaghost extends CustomPlayer {
 
         myBody = new MyBody();
     }
+
+    @Override
+    public Texture getCutsceneBg() {
+        return TextureLoader.getTexture("images/scenes/purpleBg.jpg");
+    }
+
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList();
+        //wow look standard mode ending
+        panels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/hexaending1.jpg"), "GHOST_FLAMES"));
+        panels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/hexaending2.jpg")));
+        panels.add(new CutscenePanel(downfallMod.assetPath("images/scenes/hexaending3.jpg")));
+        return panels;
+    }
+
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+
+        AbstractDungeon.effectsQueue.add(new GiantFireEffect());
+        AbstractDungeon.effectsQueue.add(new GreenFireEffect());
+
+        update_timer += Gdx.graphics.getDeltaTime();
+
+        update_timer += Gdx.graphics.getDeltaTime();
+
+        for (float i = 0; i + (1.0 / 120.0) <= update_timer; update_timer -= (1.0 / 120.0)) {
+            float spawn = (float) MathUtils.random(0, 10);
+            if (spawn == 1) {
+                effects.add(new GiantFireEffect());
+                AbstractDungeon.effectsQueue.add(new GreenFireEffect());
+            }
+        }
+    }
+
+
 
     public void reloadAnimation() {
         this.loadAnimation(

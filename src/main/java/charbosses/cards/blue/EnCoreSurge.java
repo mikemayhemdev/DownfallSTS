@@ -23,7 +23,7 @@ public class EnCoreSurge extends AbstractBossCard {
 
     public EnCoreSurge() {
         super(ID, cardStrings.NAME, "blue/attack/core_surge", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_BUFF);
-        this.exhaust = true;
+       // this.exhaust = true;
         this.baseDamage = 11;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;

@@ -157,7 +157,7 @@ public class GuardianMod implements PostDrawSubscriber,
     private CustomUnlockBundle unlocks4;
 
 
-    //TODO - content sharing if needed
+    //removed to-do due to content sharing being handled elsewhere
     /*
     public static Properties slimeboundDefault = new Properties();
     public static boolean contentSharing_relics = true;
@@ -185,7 +185,7 @@ public class GuardianMod implements PostDrawSubscriber,
                 getResourcePath(ATTACK_CARD_PORTRAIT), getResourcePath(SKILL_CARD_PORTRAIT),
                 getResourcePath(POWER_CARD_PORTRAIT), getResourcePath(ENERGY_ORB_PORTRAIT), getResourcePath(CARD_ENERGY_ORB));
 
-        //TODO - Part of Settings
+        //Part of Settings
         /*
         slimeboundDefault.setProperty(PROP_EVENT_SHARING, "FALSE");
         slimeboundDefault.setProperty(PROP_RELIC_SHARING, "FALSE");
@@ -324,43 +324,19 @@ public class GuardianMod implements PostDrawSubscriber,
     }
 
 
-    public static AbstractCard getSingleRewardGemWithWeight() {
-        AbstractCard.CardRarity gem_rarity = AbstractDungeon.rollRarity();
-        ArrayList<AbstractCard> gems = new ArrayList<>();
-        gems.add(new Gem_Red());
-        gems.add(new Gem_Blue());
-        gems.add(new Gem_Green());
-        gems.add(new Gem_Lightblue());
-        gems.add(new Gem_Yellow());
-        gems.add(new Gem_Purple());
-        gems.add(new Gem_Fragmented());
-        gems.add(new Gem_Crimson());
-        gems.add(new Gem_White());
-        gems.add(new Gem_Cyan());
-        gems.add(new Gem_Orange());
-        gems.add(new Gem_Synthetic());
-        int i = AbstractDungeon.cardRng.random(gems.size()-1);
-        while(gems.get(i).rarity != gem_rarity){
-            i = AbstractDungeon.cardRng.random(gems.size()-1);
-        }
-        return gems.get(i);
-    }
-
-
     public static ArrayList<AbstractCard> getRewardGemCards(boolean onlyCommon, int count) {
         ArrayList<String> allGemCards = new ArrayList<>();
         ArrayList<AbstractCard> rewardGemCards = new ArrayList<>();
 
         allGemCards.add("RED");
-        allGemCards.add("GREEN");
         allGemCards.add("LIGHTBLUE");
-        allGemCards.add("BLUE");
-
+        allGemCards.add("FRAGMENTED");
         if (!onlyCommon) allGemCards.add("ORANGE");
         if (!onlyCommon) allGemCards.add("CYAN");
         if (!onlyCommon) allGemCards.add("WHITE");
+        allGemCards.add("BLUE");
         if (!onlyCommon) allGemCards.add("CRIMSON");
-        if (!onlyCommon) allGemCards.add("FRAGMENTED");
+        if (!onlyCommon) allGemCards.add("GREEN");
         if (!onlyCommon) allGemCards.add("PURPLE");
         if (!onlyCommon) allGemCards.add("SYNTHETIC");
         if (!onlyCommon) allGemCards.add("YELLOW");
@@ -447,7 +423,7 @@ public class GuardianMod implements PostDrawSubscriber,
         return false;
     }
 
-    //TODO - Part of shared relics
+    //Part of shared relics
     /*
     public void addSharedRelics(){
         if (contentSharing_relics){
@@ -562,7 +538,7 @@ public static void saveData() {
                 FierceBash.ID,
 
                 ChargeUp.ID,
-                GemFire.ID,
+                ShieldSpikes.ID,
                 GemFinder.ID,
 
                 StasisEngine.ID,
@@ -594,6 +570,7 @@ public static void saveData() {
         BaseMod.addRelicToCustomPool(new StasisUpgradeRelic(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new guardian.relics.StasisEgg(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new guardian.relics.PickAxe(), AbstractCardEnum.GUARDIAN);
+        BaseMod.addRelicToCustomPool(new guardian.relics.ObsidianScales(), AbstractCardEnum.GUARDIAN);
         BaseMod.registerBottleRelic(BottledStasisPatch.inStasisEgg, new guardian.relics.StasisEgg());
         BaseMod.addRelic(new GemstoneGun(), RelicType.SHARED);
         BaseMod.addRelic(new PocketSentry(), RelicType.SHARED);
@@ -675,7 +652,7 @@ public static void saveData() {
         BaseMod.addCard(new RefractedBeam());
         BaseMod.addCard(new SpikerProtocol());
         //BaseMod.addCard(new ArmoredProtocol());
-        BaseMod.addCard(new ArmoredProtocol());
+        BaseMod.addCard(new Metallicize());
         BaseMod.addCard(new StrikeForStrike());
         BaseMod.addCard(new EvasiveProtocol());
         BaseMod.addCard(new TimeSifter());
@@ -898,7 +875,9 @@ public static void saveData() {
                 //Act
                 .dungeonID(TheBeyond.ID)
                 //Only in Evil if content sharing is disabled
-                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
+                //This is a guardian exclusive event that doesn't overwrite anything, it should appear in standard even without content sharing
+                .spawnCondition(() -> (1==1))
+           //     .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(CrystalForge.ID, CrystalForge.class) //Event ID//
                 //Event Character//
@@ -1080,7 +1059,7 @@ public static void saveData() {
             AbstractGemCard starter_gem = (AbstractGemCard) GuardianMod.getRewardGemCards(true, 1).get(0).makeStatEquivalentCopy();
             cardGroup.addToTop(starter_gem);
             // this adds the real save&load friendly gem on floor 0, sentences below enable the
-            // show-card-and-card-flies-to-deck visual effect, by adding a dummy card and remove it instantly
+            // show-card-and-card-flies-to-deck visual effect ,by adding a dummy card and remove it instantly
 
             AbstractGemCard dummy_starter_gem_to_be_removed = (AbstractGemCard) starter_gem.makeStatEquivalentCopy();
             AbstractDungeon.effectList.add(new AddGemToStartingDeckEffect(dummy_starter_gem_to_be_removed, (Settings.WIDTH * 0.5F), (Settings.HEIGHT * 0.5F)));

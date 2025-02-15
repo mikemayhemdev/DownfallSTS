@@ -29,6 +29,8 @@ public class ExhaustStatusesPower extends AbstractGuardianPower {
 
     }
 
+    //ACTUAL EFFECTS IN RECEIVE POST DRAW OF GUARDIANMOD
+
     @Override
     public void atStartOfTurn() {
         super.atStartOfTurn();

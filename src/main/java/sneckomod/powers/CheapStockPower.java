@@ -44,31 +44,9 @@ public class CheapStockPower extends AbstractPower implements CloneablePowerInte
     }
 
     public void atStartOfTurnPostDraw() {
-        for (int i = 0; i < amount; i++)
-         //   addToBot(new AbstractGameAction() {
-         //       @Override
-          //      public void update() {
-            //        isDone = true;
-               //     int x = 0;
-                //    for (AbstractCard q : AbstractDungeon.player.hand.group) {
-               //         if (q.color != AbstractDungeon.player.getCardColor() && q.cost > x)
-                //            x = q.cost;
-            //        }
-             //       ArrayList<AbstractCard> possCardsList = new ArrayList<>();
-            //        for (AbstractCard q : AbstractDungeon.player.hand.group) {
-             //           if (q.cost == x && q.color != AbstractDungeon.player.getCardColor())
-              //              possCardsList.add(q);
-             //       }
-             //       if (!possCardsList.isEmpty()) {
-           //             flash();
-           //             AbstractCard q = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1));
-           //             q.modifyCostForCombat(-1);
-            //            q.superFlash();
-            atb(new MuddleRandomCardAction(1, true));
+            atb(new MuddleRandomCardAction(amount, true));
                     }
- //               }
-    //        });
- //   }
+
 
     @Override
     public void updateDescription() {

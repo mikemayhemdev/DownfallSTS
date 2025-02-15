@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
+
 @Deprecated
 @CardIgnore
 public class ImprovisedAttack extends AbstractSneckoCard {
@@ -16,7 +17,7 @@ public class ImprovisedAttack extends AbstractSneckoCard {
 
     public ImprovisedAttack() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-   //     super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        //     super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 9;
         SneckoMod.loadJokeCardImage(this, "ImprovisedAttack.png");
     }

@@ -25,11 +25,14 @@ public class ModeShift extends AbstractGuardianCard {
     private static final int COST = 1;
     private static final int DAMAGE = 4;
 
+    //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 2;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
+
+    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

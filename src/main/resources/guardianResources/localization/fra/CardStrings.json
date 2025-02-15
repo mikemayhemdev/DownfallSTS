@@ -295,7 +295,7 @@
   },
   "Guardian:BaubleBeam": {
     "NAME": "Éclat de gemmes",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Réalisez !M! fois ceci:"
+    "DESCRIPTION": "Infligez !D! dégâts. NL NL Réalisez !M! fois ceci:"
   },
   "Guardian:PrimingBeam": {
     "NAME": "Tir d'amorce",

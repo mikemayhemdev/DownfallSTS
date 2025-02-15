@@ -29,7 +29,7 @@
     "DESCRIPTIONS": [
       "After playing #b",
       " more cards, gain #b",
-      " #yStrength."
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "expansioncontent:ChronoBoostPlusPower": {
@@ -37,7 +37,7 @@
     "DESCRIPTIONS": [
       "After playing #b",
       " more cards, gain #b",
-      " #yStrength."
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "expansioncontent:DeEnergizedPower": {
@@ -93,6 +93,39 @@
       " damage to a random enemy #b6 times."
     ]
   },
+  "expansioncontent:BeatOfDeathP": {
+    "NAME": "Beat of Death",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "expansioncontent:PandemoniumPower":{
+    "NAME": "Pandemonium",
+    "DESCRIPTIONS": [
+      "At the start of your turn, play a random card from your discard pile.",
+      "At the start of your turn, play #b",
+      " random cards from your discard pile."
+    ]
+  },
+  "expansioncontent:EvilWithinPower":{
+    "NAME": "The Evil Within",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " damage to ALL enemies after applying #b",
+      " more debuffs.",
+      " more debuff."
+    ]
+  },
+  "expansioncontent:ReveriePower":{
+  "NAME": "Reverie",
+  "DESCRIPTIONS": [
+    "At the start of your turn, look at the top card of your discard pile and add it to your hand.",
+    "At the start of your turn, look at the top #b",
+    " cards of your discard pile and choose one to add to your hand.",
+    "Choose a card to add to your hand."
+  ]
+},
   "expansioncontent:VexVinciblePower": {
     "NAME": "Invincible",
     "DESCRIPTIONS": [

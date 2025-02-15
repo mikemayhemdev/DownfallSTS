@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
+import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.cards.HeartsFavorWish;
 import downfall.cards.OctoChoiceCard;
@@ -64,7 +65,9 @@ public class HeartsFavorPower extends AbstractPower {
         AbstractPlayer p = AbstractDungeon.player;
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (m != null && !m.isDead && !m.isDying && !m.halfDead && m.id == NeowBossFinal.ID) {
-                addToBot(new ApplyPowerAction(m, p, new NeowInvulnerablePower(m, -this.amount), -this.amount));
+                if (m.hasPower(NeowInvulnerablePower.POWER_ID)) {
+                    addToBot(new ApplyPowerAction(m, p, new NeowInvulnerablePower(m, -this.amount), -this.amount));
+                }
             }
         }
     }

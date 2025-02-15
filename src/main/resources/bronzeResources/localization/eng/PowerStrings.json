@@ -18,28 +18,27 @@
   "bronze:Feature": {
     "NAME": "It's A Feature",
     "DESCRIPTIONS": [
-      "Whenever you draw a #rCurse or #yStatus card, gain #b",
-      " temporary #yStrength and #b",
-      " temporary #yDexterity."
+      "Whenever you draw or #yExhaust a #yStatus card, gain #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "bronze:InfiniteBeams": {
     "NAME": "Infinite Beams",
     "DESCRIPTIONS": [
-      "At the start of your turn, Gain #b1 #yMinor #yBeam.",
-      "At the start of your turn, Gain #b1 #yMinor #yBeam+.",
+      "At the start of your turn, Gain #b1 #yMinor #yBeam [REMOVE_SPACE].",
+      "At the start of your turn, Gain #b1 #yMinor #yBeam+ [REMOVE_SPACE].",
       "At the start of your turn, gain #b",
-      " #yMinor #yBeams.",
+      " #yMinor #yBeams [REMOVE_SPACE].",
       "At the start of your turn, gain #b",
-      " #yMinor #yBeam+s."
+      " #yMinor #yBeam+s [REMOVE_SPACE]."
     ]
   },
   "bronze:Optimize": {
     "NAME": "Optimized",
     "DESCRIPTIONS": [
-      "#yUpgrade the next #yUpgradable card you #yEncode.",
+      "#yUpgrade the next #yUpgradable card you #yEncode [REMOVE_SPACE].",
       "#yUpgrade the next #b",
-      " #yUpgradable cards you #yEncode."
+      " #yUpgradable cards you #yEncode [REMOVE_SPACE]."
     ]
   },
   "bronze:MaxOutput": {
@@ -70,14 +69,14 @@
   "bronze:LibraryMod": {
     "NAME": "External Library",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random card with #yEncode and give it #yEthereal."
+      "At the start of your turn, gain a random card with #yEncode and give it #yEthereal [REMOVE_SPACE]."
     ]
   },
   "bronze:BronzeHeatsink": {
     "NAME": "Bronze Heatsink",
     "DESCRIPTIONS": [
-      "Whenever you play a #yFunction, draw #b1 card.",
-      "Whenever you play a #yFunction, draw #b",
+      "Whenever you play a #yFunction [REMOVE_SPACE], draw #b1 card.",
+      "Whenever you play a #yFunction [REMOVE_SPACE], draw #b",
       " cards."
     ]
   },
@@ -100,7 +99,7 @@
   "bronze:Verify": {
     "NAME": "Sentient Form",
     "DESCRIPTIONS": [
-      "Whenever you draw a Function, increase all numbers on it by #b1.",
+      "Whenever you draw a Function, increase all numbers on it by #b1 [REMOVE_SPACE].",
       "Whenever you draw a Function, increase all numbers on it by #b",
       " except for cost."
     ]
@@ -108,9 +107,9 @@
   "bronze:FreeFunction": {
     "NAME": "Free Function",
     "DESCRIPTIONS": [
-      "The next Function you create costs #b0.",
+      "The next Function you create costs #b0 [REMOVE_SPACE].",
       "The next #b",
-      " Functions you create cost #b0."
+      " Functions you create cost #b0 [REMOVE_SPACE]."
     ]
   },
   "bronze:CleanCode": {
@@ -138,9 +137,9 @@
   "bronze:RemoveNextError": {
     "NAME": "Remove Errors",
     "DESCRIPTIONS": [
-      "Remove the next #yCompile #yError #yEncoded.",
+      "Remove the next #yCompile #yError #yEncoded [REMOVE_SPACE].",
       "Remove the next #b",
-      " #yCompile #yErrors #yEncoded."
+      " #yCompile #yErrors #yEncoded [REMOVE_SPACE]."
     ]
   }
 }

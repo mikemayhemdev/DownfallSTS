@@ -3,9 +3,12 @@ package slimebound.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
+import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -20,7 +23,11 @@ public class Split extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        SlimeboundMod.spawnNormalSlime();
+        //SlimeboundMod.spawnNormalSlime();
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true, 0, 0));
+        addToBot(new CommandAction());
+        checkMinionMaster();
+        // what if...  not random??????
 
         //Forever shall this code remain commented here.  A legacy to the origins of how bad Mayhem was at coding when this all began.
         /*        for (int i = 0; i < magicNumber; i++) {

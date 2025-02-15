@@ -119,14 +119,14 @@
   "Slimebound:SelfFormingGooPower": {
     "NAME": "재형성",
     "DESCRIPTIONS": [
-      "슬라임을 #y흡수할 때마다 힘을 #b",
+      "슬라임을 #y흡수할 때마다 #y힘을 #b",
       " 얻습니다."
     ]
   },
   "Slimebound:SelfFormingGooPowerPlus": {
     "NAME": "재형성+",
     "DESCRIPTIONS": [
-      "슬라임을 #y흡수할 때마다 민첩을 #b",
+      "슬라임을 #y흡수할 때마다 #y민첩을 #b",
       " 얻습니다."
     ]
   },

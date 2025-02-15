@@ -30,7 +30,7 @@ public class Gem_Lightblue extends AbstractGemCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
-    private static final int Thorns = 2;  //HARDCODED IN DESCRIPTION
+    private static final int Thorns = 4;  //HARDCODED IN DESCRIPTION
 
     //TUNING CONSTANTS
     private static final int SOCKETS = 0;
@@ -55,14 +55,14 @@ public class Gem_Lightblue extends AbstractGemCard {
         this.baseMagicNumber = this.magicNumber = Thorns;
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = LIGHTBLUE;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Tourmaline.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, Thorns), Thorns));
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, Thorns), Thorns));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, Thorns), Thorns));
 
     }
 

@@ -108,6 +108,12 @@
     "UPGRADE_DESCRIPTION": "카드를 1장 뽑습니다. NL hexamod:수축 또는 hexamod:팽창하거나 현재 상태를 유지합니다.",
     "EXTENDED_DESCRIPTION": ["hexamod:팽창.", "hexamod:수축.", "유지."]
   },
+  "hexamod:MatchstickFloat": {
+    "NAME": "신출귀몰 티크재 발견",
+   "DESCRIPTION": "도전에서 만날 수 없는 카드입니다. NL 이 카드를 발견했다면 버그가 발생했을 가능성이 큽니다. NL 부디 모드 개발자에게 버그를 제보해 주세요.",
+    "UPGRADE_DESCRIPTION": "도전에서 만날 수 없는 카드입니다. NL 이 카드를 발견했다면 버그가 발생했을 가능성이 큽니다. NL 부디 모드 개발자에게 버그를 제보해 주세요.",
+    "EXTENDED_DESCRIPTION": ["hexamod:팽창.", "hexamod:수축.", "유지."]
+  },
   "hexamod:Floatwork": {
     "NAME": "떠돌기",
     "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL 민첩을 1 얻습니다. NL ",
@@ -218,7 +224,7 @@
   },
   "hexamod:StokeTheFire": {
     "NAME": "불 지피기",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 전투 동안 hexamod:점화된 유령불꽃 하나당 카드를 무작위로 1장 강화합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hexamod:점화된 유령불꽃 하나당 카드를 무작위로 1장 강화합니다."
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "대가 지불",
@@ -332,11 +338,11 @@
   },
   "hexamod:BrightRitual": {
     "NAME": "눈부신 의식",
-    "DESCRIPTION": "hexamod:점화된 유령불꽃 하나당 [E] 를 얻고 카드를 1장 뽑습니다. hexamod:점화된 유령불꽃을 모두 hexamod:소화시킵니다. NL 소멸."
+    "DESCRIPTION": "hexamod:점화된 유령불꽃 하나당 [E] 를 얻고 카드를 1장 뽑습니다. hexamod:점화된 유령불꽃을 모두 hexamod:소화시키고 첫 유령 불꽃 위치로 돌아갑니다. NL 소멸."
   },
   "hexamod:NaughtySpirit": {
     "NAME": "악랄한 영",
-    "DESCRIPTION": "hexamod:수축합니다. NL hexamod:영혼화상을 !burny! 부여합니다. NL 현재 유령불꽃이 hexamod:점화된다면 이 카드를 가져옵니다."
+    "DESCRIPTION": "hexamod:수축합니다. NL hexamod:영혼화상을 !burny! 부여합니다. NL 현재 유령불꽃이 hexamod:점화된다면 이 카드를 가져오고 hexamod:수축합니다."
   },
   "hexamod:StepThrough": {
     "NAME": "단계 밟기",
@@ -450,8 +456,8 @@
   },
   "hexamod:OpposingAction": {
     "NAME": "반발",
-    "DESCRIPTION": "hexamod:수축합니다. NL [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "hexamod:수축합니다. NL [E] [E] 를 얻습니다."
+    "DESCRIPTION": "hexamod:수축합니다. NL [E] 를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "hexamod:수축합니다. NL [E] [E] 를 얻습니다. NL 소멸."
   },
   "hexamod:SeventhEye": {
     "NAME": "일곱 번째 눈",
@@ -460,7 +466,7 @@
   },
   "hexamod:FlameDevourer": {
     "NAME": "집어삼키는 불꽃",
-    "DESCRIPTION": "hexamod:수축합니다. hexamod:점화된 유령불꽃으로 *수축됐다면 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "이전 유령불꽃이 hexamod:점화되어 있다면 hexamod:수축하고 방어도를 !B! 얻습니다."
   },
   "hexamod:SpectralGrace": {
     "NAME": "영적인 영감",

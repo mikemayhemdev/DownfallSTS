@@ -40,7 +40,7 @@ public class EnAged extends AbstractCustomBossCard {
 
     @Override
     public void triggerWhenDrawn() {
-        addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
+        addToBot(new MakeTempCardInDiscardAction(new VoidCard(), 1));
     }
 
     @Override

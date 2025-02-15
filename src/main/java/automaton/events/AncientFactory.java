@@ -10,10 +10,18 @@ import automaton.util.ProtoDonu;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
+import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.beyond.Deca;
+import com.megacrit.cardcrawl.monsters.beyond.Donu;
+import com.megacrit.cardcrawl.monsters.beyond.Spiker;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.relics.ChampionsBelt;
+import com.megacrit.cardcrawl.relics.CloakClasp;
+import com.megacrit.cardcrawl.relics.WristBlade;
+import slimebound.SlimeboundMod;
 
 public class AncientFactory extends AbstractImageEvent {
     public static final String ID = "bronze:AncientFactory";
@@ -51,6 +59,7 @@ public class AncientFactory extends AbstractImageEvent {
                     case 0:
                         logMetric(ID, "Fought Donu");
                         this.screen = CurScreen.FIGHT;
+                        //SlimeboundMod.logger.info("fight");
                         m = new ProtoDonu();
                         m.maxHealth = m.maxHealth / 2;
                         m.currentHealth = m.maxHealth;
@@ -67,6 +76,7 @@ public class AncientFactory extends AbstractImageEvent {
                     case 1:
                         logMetric(ID, "Fought Deca");
                         this.screen = CurScreen.FIGHT;
+                        //SlimeboundMod.logger.info("fight");
                         m = new ProtoDeca();
                         m.maxHealth = m.maxHealth / 2;
                         m.currentHealth = m.maxHealth;
@@ -82,6 +92,7 @@ public class AncientFactory extends AbstractImageEvent {
                     case 2:
                         logMetric(ID, "Fought Donu and Deca");
                         this.screen = CurScreen.FIGHT;
+                        //SlimeboundMod.logger.info("fight");
                         m = new ProtoDonu();
                         m.maxHealth = m.maxHealth / 2;
                         m.currentHealth = m.maxHealth;

@@ -3,7 +3,6 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import hermit.cards.AbstractDynamicCard;
 import sneckomod.SneckoMod;
 
 public class TailWhip extends AbstractSneckoCard {
@@ -12,16 +11,16 @@ public class TailWhip extends AbstractSneckoCard {
 
     //stupid intellij stuff ATTACK, ENEMY, BASIC
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 10;
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
+    private static final int UPG_DAMAGE = 2;
 
     public TailWhip() {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "TailWhip.png");
-        this.tags.add(SneckoMod.RNG);
         this.tags.add(SneckoMod.OVERFLOW);
     }
 
@@ -29,13 +28,13 @@ public class TailWhip extends AbstractSneckoCard {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
         int x = 0;
         // this is probably bad practice but it works
-        if (isOverflowActive()) {
+        if (isOverflowActive(this)) {
             x = magicNumber;
         }
         if (x > 0)
             applyToEnemy(m, autoWeak(m, x));
         int y = 0;
-        if (isOverflowActive()){
+        if (isOverflowActive(this)) {
             y = magicNumber;
         }
         if (y > 0)
@@ -48,6 +47,7 @@ public class TailWhip extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPG_MAGIC);
+            upgradeDamage(UPG_DAMAGE);
         }
     }
 }

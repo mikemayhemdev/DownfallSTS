@@ -15,6 +15,8 @@ public class LoadedDie extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
+    public void onTrigger() {this.flash();}
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

@@ -41,7 +41,7 @@ public class SplitAcid extends AbstractSlimeboundCard {
 
 
         this.baseDamage = 7;
-        this.exhaust = true;
+       // this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
         this.isMultiDamage = true;
         SlimeboundMod.loadJokeCardImage(this, "SplitAcid.png");

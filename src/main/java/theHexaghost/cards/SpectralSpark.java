@@ -37,13 +37,12 @@ public class SpectralSpark extends AbstractHexaCard {
                         public void update() {
                             isDone = true;
                             NoDiscardField.noDiscard.set(c, true);
+                            atb(new RetractAction());
                         }
                     });
                 }
             }
         });
-
-        atb(new RetractAction());
     }
 
     public void triggerOnGlowCheck() {

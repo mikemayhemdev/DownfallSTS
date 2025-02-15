@@ -1,6 +1,7 @@
 package downfall.patches;
 
 import automaton.AutomatonChar;
+import automaton.potions.BurnAndBuffPotion;
 import automaton.relics.BronzeIdol;
 import automaton.relics.DecasWashers;
 import automaton.relics.DonusWashers;
@@ -10,6 +11,8 @@ import champ.relics.Barbells;
 import champ.relics.DeflectingBracers;
 import champ.relics.DuelingGlove;
 import collector.CollectorChar;
+import collector.cards.WhirlingFlame;
+import collector.potions.TempHPPotion;
 import collector.relics.*;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,11 +23,14 @@ import downfall.downfallMod;
 import downfall.events.HeartEvent;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
+import expansioncontent.potions.BossPotion;
 import expansioncontent.relics.StudyCardRelic;
+import gremlin.potions.WizPotion;
 import gremlin.relics.ImpeccablePecs;
 import gremlin.relics.PricklyShields;
 import gremlin.relics.SupplyScroll;
 import guardian.characters.GuardianCharacter;
+import guardian.potions.BlockOnCardUsePotion;
 import guardian.relics.BottledAnomaly;
 import guardian.relics.GemstoneGun;
 import guardian.relics.PocketSentry;
@@ -32,15 +38,19 @@ import hermit.relics.BloodyTooth;
 import hermit.relics.BrassTacks;
 import hermit.relics.RyeStalk;
 import slimebound.characters.SlimeboundCharacter;
+import slimebound.potions.ThreeZeroPotion;
 import slimebound.relics.PreparedRelic;
 import slimebound.relics.StickyStick;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
 import sneckomod.cards.unknowns.UnknownClass;
+import sneckomod.potions.MuddlingPotion;
 import sneckomod.relics.BlankCard;
 import sneckomod.relics.SneckoTalon;
 import sneckomod.relics.SuperSneckoEye;
 import theHexaghost.TheHexaghost;
+import theHexaghost.potions.SoulburnPotion;
+import champ.potions.CounterstrikePotion;
 import theHexaghost.relics.BolsterEngine;
 import theHexaghost.relics.Sixitude;
 
@@ -71,11 +81,32 @@ public class BanSharedContentPatch {
                 AbstractDungeon.colorlessCardPool.removeCard(HyperBeam.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(LastStand.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(ShapePower.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(SuperPrepareCrush.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(QuickStudy.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(StudyTheSpire.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(YouAreMine.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(InvincibleStrength.ID);
+
+                AbstractDungeon.colorlessCardPool.removeCard(BeatOfDeath.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(BloodBarrage.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(ChargeUp.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(DoubleAct.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(FaceSlap.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(Flail.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(GoopSpray.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(ManipulateTime.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(Pandemonium.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(PeekPages.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(SuperBloodthirst.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(SuperBodyCrash.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(SuperClobber.ID);
+
+                AbstractDungeon.colorlessCardPool.removeCard(SuperEtherStep.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(SuperGhostShield.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(SuperLivingWall.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(SuperSomberShield.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(TakeFlight.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(Virus.ID);
 
                 AbstractDungeon.srcColorlessCardPool.removeCard(AwakenDeath.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(Chronoboost.ID);
@@ -85,11 +116,33 @@ public class BanSharedContentPatch {
                 AbstractDungeon.srcColorlessCardPool.removeCard(HyperBeam.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(LastStand.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(ShapePower.ID);
-                AbstractDungeon.srcColorlessCardPool.removeCard(PrepareCrush.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperPrepareCrush.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(QuickStudy.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(StudyTheSpire.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(YouAreMine.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(InvincibleStrength.ID);
+
+                AbstractDungeon.srcColorlessCardPool.removeCard(BeatOfDeath.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(BloodBarrage.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(ChargeUp.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(DoubleAct.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(FaceSlap.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(Flail.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(GoopSpray.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(ManipulateTime.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(Pandemonium.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(PeekPages.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperBloodthirst.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperBodyCrash.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperClobber.ID);
+
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperEtherStep.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperGhostShield.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperLivingWall.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperSomberShield.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(TakeFlight.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(Virus.ID);
+
 
                 AbstractDungeon.curseCardPool.removeCard(Aged.ID);
                 AbstractDungeon.curseCardPool.removeCard(Icky.ID);
@@ -110,38 +163,66 @@ public class BanSharedContentPatch {
                 AbstractDungeon.srcCurseCardPool.removeCard(Sapped.ID);
             }
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-                AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
-                AbstractDungeon.srcColorlessCardPool.removeCard(PrepareCrush.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(SuperPrepareCrush.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperPrepareCrush.ID);
+
+                AbstractDungeon.colorlessCardPool.removeCard(GoopSpray.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(GoopSpray.ID);
+
+                AbstractDungeon.colorlessCardPool.removeCard(SuperLivingWall.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperLivingWall.ID);
             }
             if (AbstractDungeon.player instanceof TheHexaghost || RandomCardWithTagAction.hexaLocked()) {
                 AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(Hexaburn.ID);
+
+                AbstractDungeon.colorlessCardPool.removeCard(SuperGhostShield.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperGhostShield.ID);
+
+                AbstractDungeon.colorlessCardPool.removeCard(SuperEtherStep.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperEtherStep.ID);
             }
             if (AbstractDungeon.player instanceof GuardianCharacter || RandomCardWithTagAction.guardianLocked()) {
                 AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(GuardianWhirl.ID);
+
+                AbstractDungeon.colorlessCardPool.removeCard(ChargeUp.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(ChargeUp.ID);
+
+                AbstractDungeon.colorlessCardPool.removeCard(SuperBodyCrash.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperBodyCrash.ID);
             }
             if (AbstractDungeon.player instanceof ChampChar || RandomCardWithTagAction.champLocked()) {
                 AbstractDungeon.colorlessCardPool.removeCard(LastStand.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(LastStand.ID);
+
+                AbstractDungeon.colorlessCardPool.removeCard(SuperClobber.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperClobber.ID);
+
+                AbstractDungeon.colorlessCardPool.removeCard(FaceSlap.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(FaceSlap.ID);
             }
             if (AbstractDungeon.player instanceof AutomatonChar || RandomCardWithTagAction.autoLocked()) {
                 AbstractDungeon.colorlessCardPool.removeCard(HyperBeam.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(HyperBeam.ID);
+
+                AbstractDungeon.colorlessCardPool.removeCard(Virus.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(Virus.ID);
+
+                AbstractDungeon.colorlessCardPool.removeCard(Flail.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(Flail.ID);
             }
             if (AbstractDungeon.player instanceof CollectorChar || RandomCardWithTagAction.collectorLocked()) {
                 AbstractDungeon.colorlessCardPool.removeCard(YouAreMine.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(YouAreMine.ID);
-            }
 
+                AbstractDungeon.colorlessCardPool.removeCard(SuperSomberShield.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(SuperSomberShield.ID);
 
-            if (AbstractDungeon.player instanceof TheSnecko) {
-                if (SneckoMod.validColors != null && !SneckoMod.pureSneckoMode) {
-                    AbstractDungeon.commonCardPool.group.removeIf(c -> c instanceof UnknownClass && !SneckoMod.validColors.contains(((UnknownClass) c).myColor));
-                    AbstractDungeon.srcCommonCardPool.group.removeIf(c -> c instanceof UnknownClass && !SneckoMod.validColors.contains(((UnknownClass) c).myColor));
-                }
+                AbstractDungeon.colorlessCardPool.removeCard(SuperWhirlingFlame.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(WhirlingFlame.ID);
             }
-        }
+            }
     }
 
 
@@ -199,27 +280,29 @@ public class BanSharedContentPatch {
         public static void Postfix(AbstractPlayer.PlayerClass chosenClass) {
             // edit: this patch doesn't work somehow, the function is moved to downfallMod.receivePostDungeonInitialize()
             // by checking the condition before adding them all together
-//            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
-//                PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
-//                PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
-//                PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
-//                PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
-//                PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
-//                PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
-//                PotionHelper.potions.remove(WizPotion.POTION_ID);
-//                PotionHelper.potions.remove(BossPotion.POTION_ID);
-//                PotionHelper.potions.remove(TempHPPotion.POTION_ID);
-//            }
+            //todo: I'm thinking of just making all these potions character exclusive which fixes the compendium problem
+            //todo: and people don't like these potions anyways
+            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
+              //  PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
+             //  PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
+             //   PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
+              // PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
+             //   PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
+             //   PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
+             //   PotionHelper.potions.remove(WizPotion.POTION_ID);
+            //   PotionHelper.potions.remove(BossPotion.POTION_ID);
+            //   PotionHelper.potions.remove(TempHPPotion.POTION_ID);
+           }
             // edit: below probably not functioning too but lazy to implement
             // Ban shared potions from other classes if you haven't played as that class before
-            runLockedPotions.forEach((playerClass, potionIds) -> {
+          //  runLockedPotions.forEach((playerClass, potionIds) -> {
                 // Shared potions will never be banned from their base class
-                if (chosenClass != playerClass) {
-                    if (!HeartEvent.hasPlayedRun(playerClass)) {
-                        PotionHelper.potions.removeAll(potionIds);
-                    }
+             //   if (chosenClass != playerClass) {
+                 //   if (!HeartEvent.hasPlayedRun(playerClass)) {
+                 //       PotionHelper.potions.removeAll(potionIds);
+                //    }
                 }
-            });
-        }
+          //  });
+   //     }
     }
 }

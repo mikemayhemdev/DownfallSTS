@@ -25,7 +25,7 @@ public class Toasty extends AbstractHexaCard implements OctopusCard {
 
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 4;
-
+    //Flare Flick
     public Toasty() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;

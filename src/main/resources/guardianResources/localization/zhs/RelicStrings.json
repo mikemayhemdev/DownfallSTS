@@ -3,7 +3,7 @@
     "NAME": "铜制齿轮",
     "FLAVOR": "在你最需要的时候保护你。",
     "DESCRIPTIONS": [
-      "战斗开始时，获得一张 #y预防 。 NL 游戏开始时，将 #b1 颗普通 #yguardianmod:宝石 加入牌组。 "
+      "战斗开始时，获得一张 #y预防 。 NL 游戏开始时，将 #b1 张普通 #yguardianmod:宝石 牌加入牌组。 "
     ]
   },
   "Guardian:ModeShifterPlus": {
@@ -101,7 +101,7 @@
     "NAME": "星光采矿镐",
     "FLAVOR": "有那么多宝石散落在尖塔中，很难想象有这么不幸的人需要这把镐来帮助他们。",
     "DESCRIPTIONS": [
-	"可在休息处挖掘一颗 #yguardianmod:宝石 。"
+	"你能在 #b3 个休息处各 #y挖掘 #b2 颗 #yguardianmod:宝石 #b1 次。"
     ]
   },
     "Guardian:GemstoneGun": {

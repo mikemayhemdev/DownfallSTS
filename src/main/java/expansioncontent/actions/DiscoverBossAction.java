@@ -66,20 +66,20 @@ public class DiscoverBossAction extends AbstractGameAction {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         ArrayList<AbstractCard> selectionsList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.rarity != AbstractCard.CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
+            if (q.rarity != AbstractCard.CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY) && !q.hasTag(AbstractCard.CardTags.HEALING)) {
 
                 if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-                    if(q.cardID.equals(PrepareCrush.ID)){continue;}
+                    if (q.hasTag(expansionContentMod.STUDY_SLIMEBOSS)){continue;}
                 } else if (AbstractDungeon.player instanceof TheHexaghost) {
-                    if(q.cardID.equals(Hexaburn.ID)){continue;}
+                    if(q.hasTag(expansionContentMod.STUDY_HEXAGHOST)){continue;}
                 } else if (AbstractDungeon.player instanceof GuardianCharacter) {
-                    if(q.cardID.equals(GuardianWhirl.ID)){continue;}
+                    if(q.hasTag(expansionContentMod.STUDY_GUARDIAN)){continue;}
                 } else if (AbstractDungeon.player instanceof ChampChar) {
-                    if(q.cardID.equals(LastStand.ID)){continue;}
+                    if(q.hasTag(expansionContentMod.STUDY_CHAMP)){continue;}
                 } else if (AbstractDungeon.player instanceof AutomatonChar) {
-                    if(q.cardID.equals(HyperBeam.ID)){continue;}
+                    if(q.hasTag(expansionContentMod.STUDY_AUTOMATON)){continue;}
                 } else if (AbstractDungeon.player instanceof CollectorChar) {
-                    if(q.cardID.equals(YouAreMine.ID)){continue;}
+                    if(q.hasTag(expansionContentMod.STUDY_COLLECTOR)){continue;}
                 }
 
                 AbstractCard r = q.makeCopy();

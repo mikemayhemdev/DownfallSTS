@@ -21,7 +21,7 @@ public class FineTuning extends AbstractBronzeCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
-      //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("FineTuning.png"));
     }
 

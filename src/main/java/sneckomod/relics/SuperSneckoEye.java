@@ -4,12 +4,15 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.ConfusionPower;
 import com.megacrit.cardcrawl.relics.SneckoEye;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
+
+import static hermit.util.Wiz.atb;
 
 public class SuperSneckoEye extends CustomRelic {
 
@@ -19,7 +22,7 @@ public class SuperSneckoEye extends CustomRelic {
     public boolean activated = false;
     private boolean added_hand_size = false;
     public SuperSneckoEye() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.DEPRECATED, LandingSound.MAGICAL);
     }
 
     @Override
@@ -43,35 +46,27 @@ public class SuperSneckoEye extends CustomRelic {
         }
     }
 
-    @Override
-    public void onCardDraw(AbstractCard card) {
-        if (!activated)
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    if (card.cost == 3 && !activated) {
-                        stopPulse();
-                        flash();
-                        activated = true;
-                        card.cost = 0;
-                        card.costForTurn = card.cost;
-                        card.isCostModified = true;
-                        card.freeToPlayOnce = false;
-                    }
-                }
-            });
-    }
-
     public void onEquip() {
+        if (AbstractDungeon.player.hasRelic(SneckoEye.ID)) {
+            for (int i = 0; i < AbstractDungeon.player.relics.size(); ++i) {
+                if (AbstractDungeon.player.relics.get(i).relicId.equals(SneckoEye.ID)) {
+                    instantObtain(AbstractDungeon.player, i, true);
+                    break;
+                }
+            }
+        } else {
+            super.obtain();
+        }
+
+
         if(!added_hand_size) {
-            AbstractDungeon.player.masterHandSize += 2;
+            AbstractDungeon.player.masterHandSize += 4;
             added_hand_size = true;
         }
     }
 
     public void onUnequip() {
-        AbstractDungeon.player.masterHandSize -= 2;
+        AbstractDungeon.player.masterHandSize -= 4;
     }
 
     public void atPreBattle() {

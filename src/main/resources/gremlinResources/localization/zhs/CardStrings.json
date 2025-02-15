@@ -173,7 +173,7 @@
   },
   "Gremlin:GremlinDance": {
     "NAME": "地精之舞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL gremlin:领队 的地精造成额外效果。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL gremlin:领队 地精造成额外效果。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 点伤害",
       " （全体攻击）。",

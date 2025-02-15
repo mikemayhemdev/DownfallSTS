@@ -7,89 +7,60 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import java.util.Iterator;
-
 public class ShipIt extends AbstractBronzeCard {
 
     public final static String ID = makeID("ShipIt");
 
-    //stupid intellij stuff attack, enemy, rare
-
+    // Attack card constants
     private static final int DAMAGE = 5;
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 1;
+    private static final int UPGRADE_DAMAGE = 2;
 
     public ShipIt() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("ShipIt.png"));
     }
 
     public static int countCards() {
-        int count = 0;
-        Iterator var1 = AbstractDungeon.player.hand.group.iterator();
-
-        AbstractCard c;
-        while (var1.hasNext()) {
-            c = (AbstractCard) var1.next();
+        int statusCount = 0;
+        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
             if (c.type == CardType.STATUS) {
-                ++count;
+                statusCount++;
             }
         }
-
-        var1 = AbstractDungeon.player.drawPile.group.iterator();
-
-        while (var1.hasNext()) {
-            c = (AbstractCard) var1.next();
-            if (c.type == CardType.STATUS) {
-                ++count;
-            }
-        }
-
-        var1 = AbstractDungeon.player.discardPile.group.iterator();
-
-        while (var1.hasNext()) {
-            c = (AbstractCard) var1.next();
-            if (c.type == CardType.STATUS) {
-                ++count;
-            }
-        }
-
-        var1 = AbstractDungeon.player.exhaustPile.group.iterator();
-
-        while (var1.hasNext()) {
-            c = (AbstractCard) var1.next();
-            if (c.type == CardType.STATUS) {
-                ++count;
-            }
-        }
-
-        return count;
-    }
-
-    public void calculateCardDamage(AbstractMonster mo) {
-        int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * countCards();
-        super.calculateCardDamage(mo);
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = this.damage != this.baseDamage;
+        return statusCount;
     }
 
     public void applyPowers() {
-        int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * countCards();
         super.applyPowers();
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = this.damage != this.baseDamage;
+
+        if (AbstractDungeon.player != null) {
+            this.rawDescription = cardStrings.DESCRIPTION;
+
+            int statusCount = 0;
+            for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
+                if (c.type == CardType.STATUS) {
+                    statusCount++;
+                }
+            }
+
+            this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + statusCount + cardStrings.EXTENDED_DESCRIPTION[1];
+
+            this.initializeDescription();
+        }
     }
 
-
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        int count = countCards();
+        for (int i = 0; i < count; i++) {
+            dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        }
     }
 
+    @Override
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        upgradeDamage(UPGRADE_DAMAGE);
     }
 }

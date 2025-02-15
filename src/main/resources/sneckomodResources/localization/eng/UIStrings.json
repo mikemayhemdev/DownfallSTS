@@ -44,7 +44,7 @@
   "sneckomod:ChallengeMode": {
     "TEXT": [
       "Challenge Mode - Pure Snecko",
-      "Unidentified cards can be from any class. Recommended for experienced Snecko players."
+      "Gifts can be from any class. Recommended for experienced Snecko players."
     ]
   },
   "sneckomod:LockInBonfireOptions": {
@@ -56,11 +56,29 @@
       "[Free Action] Lock an Unidentified into a permanent card."
     ]
   },
+  "sneckomod:CommonAttackReward": {
+    "TEXT": [
+      "Add an Offclass card to your deck",
+      "Pick a Card."
+    ]
+  },
+  "sneckomod:DiceRollPotionReward": {
+    "TEXT": [
+      "Add an Upgraded Card to your deck.",
+      "Pick a Card."
+    ]
+  },
+  "sneckomod:ColorfulPowersCardReward": {
+    "TEXT": [
+      "Add an Upgraded Power to your deck.",
+      "Pick a Card."
+    ]
+  },
   "sneckomod:AtGameStart": {
     "TEXT": [
       "",
       " Cards",
-      "Unidentified cards can become ",
+      "Gifts will include ",
       " cards this run.",
       "Choose."
     ]

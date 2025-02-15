@@ -23,6 +23,7 @@ public class VampiricStrike extends AbstractChampCard {
        // tags.add(ChampMod.COMBO);
       //  tags.add(ChampMod.COMBOBERSERKER);
       //  tags.add(ChampMod.COMBODEFENSIVE);
+        tags.add(CardTags.STRIKE);
         postInit();
         loadJokeCardImage(this, "VampiricStrike.png");
     }

@@ -26,7 +26,7 @@ public class PackageSentry extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     //TUNING CONSTANTS
     private static final int SOCKETS = 0;

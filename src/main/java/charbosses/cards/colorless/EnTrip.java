@@ -1,6 +1,9 @@
 package charbosses.cards.colorless;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.cardpowers.EnemyStormPower;
+import charbosses.powers.general.EnemyPoisonPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
+import com.megacrit.cardcrawl.powers.SadisticPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
@@ -46,8 +50,16 @@ public class EnTrip extends AbstractBossCard {
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
-
     }
+
+    public String overrideIntentText() {
+        if (AbstractCharBoss.boss.hasPower(SadisticPower.POWER_ID)) {
+            int count=this.magicNumber+AbstractCharBoss.boss.getPower(SadisticPower.POWER_ID).amount;
+            return "(" +count+ ")";
+        }
+        return super.overrideIntentText();
+    }
+
 
     @Override
     public int getPriority(ArrayList<AbstractCard> hand) {

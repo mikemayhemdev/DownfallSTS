@@ -12,6 +12,8 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 
+import static downfall.cardmods.CommandMod.checkMinionMaster;
+
 
 public class ComboAttackPower extends TwoAmountPower {
     public static final String POWER_ID = "Slimebound:ComboAttackPower";
@@ -78,6 +80,7 @@ public class ComboAttackPower extends TwoAmountPower {
                 {
                     flash();
                     com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new CommandAction());
+                    checkMinionMaster(); // maybe this crashes idk lol
                     this.amount2--;
                     updateDescription();
                 }

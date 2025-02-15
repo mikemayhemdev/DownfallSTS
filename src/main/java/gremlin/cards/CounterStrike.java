@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
 import gremlin.actions.CounterStrikeAction;
+import sneckomod.SneckoMod;
 
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
@@ -36,12 +37,8 @@ public class CounterStrike extends AbstractGremlinCard {
         this.baseDamage = POWER;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
-
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(AbstractCard.CardTags.STRIKE);
-
-        this.cardsToPreview = new Ward();
-        this.tags.add(SHIELD_GREMLIN);
-        setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "CounterStrike.png");
     }
 
@@ -49,7 +46,9 @@ public class CounterStrike extends AbstractGremlinCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        AbstractDungeon.actionManager.addToBottom(new CounterStrikeAction(m,this.magicNumber, upgraded));
+        for(int i = 0; i < magicNumber; i++) {
+            AbstractDungeon.actionManager.addToBottom(new CounterStrikeAction(m, 1, upgraded));
+        }
     }
 
     @Override
@@ -58,9 +57,7 @@ public class CounterStrike extends AbstractGremlinCard {
         {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
-            this.rawDescription = strings.UPGRADE_DESCRIPTION;
-            initializeDescription();
-            this.cardsToPreview.upgrade();
+            upgradeMagicNumber(1);
         }
     }
 }

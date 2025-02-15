@@ -50,5 +50,6 @@ public class Hexaguard extends AbstractHexaCard implements HexaPurpleTextInterfa
         super.initializeDescription();
         String afterlife_name = downfallMod.keywords_and_proper_names.get("afterlife");
         this.keywords.add(afterlife_name);
+        this.keywords.add("block");
     }
 }

@@ -24,7 +24,7 @@ public class BladeFlurry extends AbstractChampCard {
     private static final int DAMAGE = 6;
 
     public BladeFlurry() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         loadJokeCardImage(this, "BladeFlurry.png");

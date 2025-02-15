@@ -44,9 +44,9 @@ public class RetainCardMod extends AbstractCardModifier {
     }
 
     //Ethereal check - do not remove - Stanek
-    @Override
-    public void onRetained(AbstractCard card) {
-        if (card.isEthereal)
+     @Override
+   public void onRetained(AbstractCard card) {
+       if (card.isEthereal)
             AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand, true));
     }
 }

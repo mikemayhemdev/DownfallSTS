@@ -1,6 +1,6 @@
 {
   "Guardian:AcceleratePotion": {
-    "NAME": "시간차 포션",
+    "NAME": "긴급 포션",
     "DESCRIPTIONS": [
       "#y정지장에 있는 모든 카드를 #b",
       " 번 #y가속합니다."

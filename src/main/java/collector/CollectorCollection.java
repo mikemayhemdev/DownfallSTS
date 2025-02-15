@@ -140,7 +140,7 @@ public class CollectorCollection {
         collectionPool.put(CorruptHeart.ID, FinalBossCard.ID);
         collectionPool.put(TheCollector.ID, CollectorCard.ID);
 
-        collectionPool.put(SlimeBoss.ID, PrepareCrush.ID);
+        collectionPool.put(SlimeBoss.ID, SuperPrepareCrush.ID);
         collectionPool.put(TimeEater.ID, Chronoboost.ID);
         collectionPool.put(AwakenedOne.ID, AwakenDeath.ID);
         collectionPool.put(TheGuardian.ID, GuardianWhirl.ID);

@@ -139,7 +139,6 @@ public class AutomatonMod implements
         ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
     }
 
-
     public static String makeCardPath(String resourcePath) {
         return getModID() + "Resources/images/cards/" + resourcePath;
     }
@@ -226,12 +225,13 @@ public class AutomatonMod implements
         BaseMod.addRelicToCustomPool(new BronzeCore(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new CableSpool(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelic(new DecasWashers(), RelicType.SHARED);
-        BaseMod.addRelic(new DonusWashers(), RelicType.SHARED);
+        //  BaseMod.addRelic(new DonusWashers(), RelicType.SHARED);
+        BaseMod.addRelicToCustomPool(new DonusWashers(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new ElectromagneticCoil(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new ProtectiveGoggles(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new Mallet(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new PlatinumCore(), AutomatonChar.Enums.BRONZE_AUTOMATON);
-        BaseMod.addRelic(new MakeshiftBattery(), RelicType.SHARED);
+        BaseMod.addRelicToCustomPool(new MakeshiftBattery(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelic(new BronzeIdol(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new SilverBullet(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new BottledCode(), AutomatonChar.Enums.BRONZE_AUTOMATON);

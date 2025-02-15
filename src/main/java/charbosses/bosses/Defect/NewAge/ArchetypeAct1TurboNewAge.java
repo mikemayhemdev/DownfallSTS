@@ -5,6 +5,7 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.blue.*;
 import charbosses.cards.curses.EnAged;
+import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnShame;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.bossmechanicpowers.DefectVoidPower;
@@ -85,7 +86,7 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
                     //Turn 2
                     addToList(cardsList, new EnSteamBarrier(), false);
                     addToList(cardsList, new EnDefendBlue(), false);
-                    addToList(cardsList, new EnAged(), false);
+                    addToList(cardsList, new EnClumsy(), false);
                     turn++;
                     steamBarrierCasts++;
                     break;

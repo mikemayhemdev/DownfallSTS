@@ -21,7 +21,6 @@ import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 
-
 @SpirePatch(
         clz = DeathScreen.class,
         method = "update"
@@ -68,18 +67,18 @@ public class DeathScreenUnlockPatch {
                         AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                         ////SlimeboundMod.logger.info("Triggered Automaton Unlock screen!");
                         return SpireReturn.Return(null);
-                    } else if ((UnlockTracker.isCharacterLocked("Gremlin")) && (AbstractDungeon.player.chosenClass == AutomatonChar.Enums.THE_AUTOMATON)) {
-                        AbstractDungeon.unlocks.add(new GremlinUnlock());
+                    } else if ((UnlockTracker.isCharacterLocked("Collector")) && (AbstractDungeon.player.chosenClass == AutomatonChar.Enums.THE_AUTOMATON)) {
+                        AbstractDungeon.unlocks.add(new CollectorUnlock());
                         AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                         ////SlimeboundMod.logger.info("Triggered Gremlin Unlock screen!");
                         return SpireReturn.Return(null);
-                    } else if ((UnlockTracker.isCharacterLocked("Snecko")) && (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN)) {
-                        AbstractDungeon.unlocks.add(new SneckoUnlock());
+                    } else if ((UnlockTracker.isCharacterLocked("Gremlin") && (AbstractDungeon.player.chosenClass == CollectorChar.Enums.THE_COLLECTOR))) {
+                        AbstractDungeon.unlocks.add(new GremlinUnlock());
                         AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                         ////SlimeboundMod.logger.info("Triggered Snecko Unlock screen!");
                         return SpireReturn.Return(null);
-                    } else if ((UnlockTracker.isCharacterLocked("Collector") && (AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO))) {
-                        AbstractDungeon.unlocks.add(new CollectorUnlock());
+                    } else if ((UnlockTracker.isCharacterLocked("Snecko") && (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN))) {
+                        AbstractDungeon.unlocks.add(new SneckoUnlock());
                         AbstractDungeon.unlockScreen.open(AbstractDungeon.unlocks.remove(0));
                         return SpireReturn.Return(null);
                     }

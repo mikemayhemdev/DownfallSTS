@@ -67,6 +67,7 @@ public class ProperTools extends AbstractGremlinCard {
         {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
+            upgradeMagicNumber(1);
         }
     }
 

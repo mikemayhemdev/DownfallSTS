@@ -5,10 +5,8 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import hermit.cards.AbstractDynamicCard;
 import sneckomod.SneckoMod;
 import sneckomod.powers.TyphoonPlusPower;
-import sneckomod.powers.ToxicPersonalityPower;
 import sneckomod.powers.TyphoonPower;
 
 public class TyphoonFang extends AbstractSneckoCard {
@@ -19,35 +17,33 @@ public class TyphoonFang extends AbstractSneckoCard {
 
     // this card was a herculean effort to code
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 12;
 
     public TyphoonFang() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-     //   baseMagicNumber = magicNumber = MAGIC;
+        //   baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "TyphoonFang.png");
-        this.tags.add(SneckoMod.SNEKPROOF);
         this.tags.add(SneckoMod.OVERFLOW);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// reused snek bite animation
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
-            if (isOverflowActive() && !this.purgeOnUse) {
-                if (!upgraded) {
-                    applyToSelf(new TyphoonPower(1));
-                }
-                if (upgraded) {
-                    applyToSelf(new TyphoonPlusPower(1));
-                }
+        if (isOverflowActive(this) && !this.purgeOnUse) {
+            if (!upgraded) {
+                applyToSelf(new TyphoonPower(1));
+            }
+            if (upgraded) {
+                applyToSelf(new TyphoonPlusPower(1));
             }
         }
-
+    }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(4);
         }
     }
 }

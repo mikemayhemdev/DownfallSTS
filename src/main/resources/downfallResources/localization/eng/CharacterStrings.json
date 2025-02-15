@@ -52,7 +52,7 @@
       "This character is unlocked by completing a run with the Gremlins.",
       " (Act 4 Wins do not count)",
       "This character is unlocked by completing a run with the 7th Villain character.",
-      "This character is unlocked by completing a run with Snecko."
+      "This character is unlocked by completing a run with the Collector."
     ]
   },
   "downfall:HeartMerchant": {
@@ -109,7 +109,7 @@
       "..and so...... shall... NL ....I......"
     ],
     "OPTIONS": [
-      "~I~ ~brought...~ NL ~HIM...~ ~back...~ ~And...~ ~took...~ ~his~ ~soul...~",
+      "~I~ ~brought...~ NL ~HIM...~ ~back...~",
       "~Protect~ ~me...~ NL ~And~ ~be...~ ~rewarded...~"
     ]
   },

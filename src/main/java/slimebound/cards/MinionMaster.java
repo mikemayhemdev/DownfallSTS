@@ -23,7 +23,7 @@ public class MinionMaster extends AbstractSlimeboundCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
     private static int upgradedamount = 1;
 
@@ -36,7 +36,7 @@ public class MinionMaster extends AbstractSlimeboundCard {
 
     public MinionMaster() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.magicNumber = this.baseMagicNumber = 1;
 
      //   this.tags.add(SneckoMod.BANNEDFORSNECKO);

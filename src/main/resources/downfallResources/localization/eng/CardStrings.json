@@ -13,7 +13,7 @@
   },
   "downfall:Haunted": {
     "NAME": "Haunted",
-    "DESCRIPTION": "Ethereal. Unplayable. NL When drawn, add Ethereal to all cards in your hand."
+    "DESCRIPTION": "Ethereal. Unplayable. NL Whenever another card is *Exhausted when this is in hand, take 2 damage."
   },
   "downfall:Malfunctioning": {
     "NAME": "Flawed",

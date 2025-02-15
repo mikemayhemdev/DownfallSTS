@@ -1,7 +1,11 @@
 package guardian.cards;
 
 
+import basemod.helpers.BaseModCardTags;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
+import guardian.actions.BraceAction;
 import guardian.patches.AbstractCardEnum;
 
 import static guardian.GuardianMod.makeBetaCardPath;
@@ -17,7 +22,7 @@ import static guardian.GuardianMod.makeBetaCardPath;
 public class BodySlam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("BodySlam");
     public static final String NAME;
-    public static final String IMG_PATH = "cards/BodySlam.png";
+    public static final String IMG_PATH = "cards/bodySlam.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -26,6 +31,8 @@ public class BodySlam extends AbstractGuardianCard {
     private static final int SOCKETS = 0;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
+
+    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

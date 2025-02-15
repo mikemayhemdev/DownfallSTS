@@ -1,6 +1,8 @@
 package guardian.cards;
 
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -12,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.PolyBeamAction;
 import guardian.patches.AbstractCardEnum;
+import hermit.patches.EnumPatch;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -21,7 +24,7 @@ public class PolyBeam extends AbstractGuardianCard {
     public static final String NAME;
     public static final String IMG_PATH = "cards/polybeam.png";
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
@@ -67,6 +70,7 @@ public class PolyBeam extends AbstractGuardianCard {
         super.use(p, m);
         for(int i=0; i<this.magicNumber; i++) {
             addToBot(new PolyBeamAction(this));
+            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
         }
         super.useGems(p, m);
     }

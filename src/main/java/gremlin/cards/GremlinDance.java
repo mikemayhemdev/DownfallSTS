@@ -37,7 +37,7 @@ public class GremlinDance extends AbstractGremlinCard {
     private static final int POWER = 6;
     private static final int BLOCK = 6;
     private static final int MAGIC = 2;
-    private static final int UPGRADE_BONUS = 3;
+    private static final int UPGRADE_BONUS = 2;
 
     private String gremlin;
     private float rotationTimer;
@@ -96,6 +96,7 @@ public class GremlinDance extends AbstractGremlinCard {
         if(gremlin.equals("angry")){
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage,
                     this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+
         } else if(gremlin.equals("wizard")){
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                     this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
@@ -137,6 +138,7 @@ public class GremlinDance extends AbstractGremlinCard {
                 if (previewIndex == cardsList.size() - 1) {
                     previewIndex = 0;
                 } else {
+
                     previewIndex++;
                 }
             } else {
@@ -239,7 +241,8 @@ public class GremlinDance extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            upgradeDamage(UPGRADE_BONUS);
+            upgradeDamage(3);
+            upgradeBlock(3);
         }
     }
 

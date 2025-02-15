@@ -1,9 +1,18 @@
 package expansioncontent.cards;
 
+import basemod.helpers.CardModifierManager;
+import collector.cardmods.PyreMod;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -11,6 +20,9 @@ import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CardColorEnumPatch;
 import hermit.util.TextureLoader;
+import theHexaghost.HexaMod;
+import theHexaghost.cards.AbstractHexaCard;
+import theHexaghost.vfx.AfterlifePlayEffect;
 
 import static expansioncontent.expansionContentMod.*;
 
@@ -94,6 +106,75 @@ public abstract class AbstractExpansionCard extends AbstractDownfallCard {
             }
         }
         return super.canUse(p, m);
+    }
+
+
+
+//HEXAGHOST AFTERLIFE CODE
+protected DamageInfo makeInfo() {
+    return makeInfo(damageTypeForTurn);
+}
+
+    private DamageInfo makeInfo(DamageInfo.DamageType type) {
+        return new DamageInfo(AbstractDungeon.player, damage, type);
+    }
+
+    public void dmg(AbstractMonster m, DamageInfo info, AbstractGameAction.AttackEffect fx) {
+        atb(new DamageAction(m, makeInfo(), fx));
+    }
+
+    @Override
+    public void triggerOnExhaust() {
+        int bonus = 0;
+
+        att(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (useAfterlifeVFX() && duration == startDuration) {
+                    atb(new VFXAction(new AfterlifePlayEffect(AbstractExpansionCard.this)));
+                }
+                tickDuration();
+                if (isDone) {
+
+                    atb(new WaitAction(0.2F)); // from ShowCardAction
+
+                    applyPowers();
+                    afterlife();
+
+                    atb(new WaitAction(0.15F)); // from UseCardAction
+
+                    if (type == AbstractCard.CardType.POWER) { // special case for powers in UseCardAction
+                        if (com.megacrit.cardcrawl.core.Settings.FAST_MODE) {
+                            atb(new WaitAction(0.1F));
+                        } else {
+                            atb(new WaitAction(0.7F));
+                        }
+                    }
+                }
+            }
+        });
+
+    }
+
+    protected boolean useAfterlifeVFX() {
+        return AbstractExpansionCard.this.tags.contains(HexaMod.AFTERLIFE);
+    }
+
+    public void afterlife() {}
+
+
+
+
+
+
+
+
+
+
+
+    //collector pyre code
+    protected void isPyre() {
+        CardModifierManager.addModifier(this, new PyreMod());
     }
 
     @Override

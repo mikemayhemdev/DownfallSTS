@@ -3,9 +3,12 @@ package downfall.cards.curses;
 
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
+import collector.cards.OnOtherCardExhaustInHand;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,9 +16,10 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import expansioncontent.cardmods.PropertiesMod;
+import sneckomod.cards.TyphoonFang;
 
 
-public class Haunted extends CustomCard {
+public class Haunted extends CustomCard implements OnOtherCardExhaustInHand {
     public static final String ID = downfallMod.makeID("Haunted");
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -52,24 +56,33 @@ public class Haunted extends CustomCard {
 
     @Override
     public void triggerWhenDrawn() {
-        super.triggerWhenDrawn();
-        AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                    if (!c.isEthereal) {
-                        CardModifierManager.addModifier(c, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
-                        c.superFlash(Color.PURPLE.cpy());
-                    }
-                }
-            }
-        });
+//        super.triggerWhenDrawn();
+//        AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
+//            @Override
+//            public void update() {
+//                isDone = true;
+//                for (AbstractCard c : AbstractDungeon.player.hand.group) {
+//                    if (!c.isEthereal) {
+//                        CardModifierManager.addModifier(c, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
+//                        c.superFlash(Color.PURPLE.cpy());
+//                    }
+//                }
+//            }
+//        });
     }
 
     @Override
     public void atTurnStart() {
     }
+
+    @Override
+    public void onOtherCardExhaustWhileInHand(AbstractCard card) {
+        if (card != this) {
+            flash(Color.PURPLE.cpy());
+            this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 2, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        }
+    }
+
 
     public AbstractCard makeCopy() {
         return new Haunted();

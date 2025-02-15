@@ -26,7 +26,7 @@ public class BottledCode extends CustomRelic implements CustomBottleRelic, Custo
 
     public BottledCode() {
         super(ID, new Texture(AutomatonMod.makeRelicPath(IMG_PATH)), new Texture(AutomatonMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)),
-                RelicTier.SPECIAL, LandingSound.FLAT);
+                RelicTier.SPECIAL, LandingSound.CLINK);
     }
 
     @Override

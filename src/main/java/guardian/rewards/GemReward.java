@@ -32,7 +32,7 @@ public class GemReward extends CustomReward{
 
     public void generate_reward_cards(){
         this.cards.clear();
-        this.cards.add( GuardianMod.getSingleRewardGemWithWeight() );
+        this.cards.addAll(GuardianMod.getRewardGemCards(false,1));
     }
 
 }

@@ -80,7 +80,7 @@
       "sneaky_gremlin"
     ],
     "PROPER_NAME": "교활한 그렘린",
-    "DESCRIPTION": "#y공격 카드를 사용할 때마다 무작위 적에게 피해를 #b3 줍니다."
+    "DESCRIPTION": "#y공격 카드를 사용할 때마다 무작위 적에게 피해를 #b2 줍니다."
   },
   {
     "NAMES": [
@@ -102,7 +102,7 @@
       "wiz"
     ],
     "PROPER_NAME": "마법",
-    "DESCRIPTION": "#y마법이 #b3 이상 쌓이면 #y공격 카드를 쓸 때 모든 #y마법을 소모해서 피해량을 #b10 증가시킵니다."
+    "DESCRIPTION": "#y마법이 #b3 이상 쌓이면 #y공격 카드를 쓸 때 모든 #y마법을 소모해서 피해량을 #b7 증가시킵니다."
   },
   {
     "NAMES": [

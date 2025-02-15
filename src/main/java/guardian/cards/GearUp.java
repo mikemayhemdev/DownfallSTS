@@ -17,7 +17,7 @@ public class GearUp extends AbstractGuardianCard {
 
     public GearUp() {
         super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
-        this.baseMagicNumber = magicNumber = 15;
+        this.baseMagicNumber = magicNumber = 10;
         this.selfRetain = true;
         this.exhaust = true;
         updateDescription();

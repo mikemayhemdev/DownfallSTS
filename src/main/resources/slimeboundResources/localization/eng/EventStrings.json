@@ -15,8 +15,8 @@
     "NAME": "World of Goop",
     "DESCRIPTIONS": [
       "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL Calmly, you bathe yourself as you bond with the goop, enjoying a moment of reprieve. NL NL Climbing out, you notice in the pool the #ysouls of a few unfortunate adventurers, slowly being consumed by a gluttonous creature.",
-      "You exit the invigorating slime bath, absorbing the #ysouls, leaving the creature with a sad look upon its amorphous face.",
-      "You succeed in negotiating a deal with the creature to provide it with more tasty souls if it will aid you in your quest. NL You and your newfound #gfriend exit the slime bath together."
+      "You exit the invigorating slime bath, absorbing the #ysouls [REMOVE_SPACE], leaving the creature with a sad look upon its amorphous face.",
+      "You succeed in negotiating a deal with the creature to provide it with more tasty #ysouls if it will aid you in your quest. NL You and your newfound #gfriend exit the slime bath together."
     ],
     "OPTIONS": [
       "[Gather Souls] #gGain #g75 #gSouls.",
@@ -45,11 +45,11 @@
   "Slimebound:ScrapOoze": {
     "NAME": "Scrap Ooze",
     "DESCRIPTIONS": [
-      "Any slime is a friend in your cause.  With offerings of new scrap and treasure, the Scrap Ooze joins your quest."
+      "Any slime is a friend in your cause. With offerings of new scrap and treasure, the Scrap Ooze joins your quest."
     ],
     "OPTIONS": [
       "[Recruit] #rLose ",
-      ". Gain #gScrap #gOoze. #rLocked if you Reach Inside.",
+      ". Gain #gScrap #gOoze [REMOVE_SPACE]. #rLocked if you Reach Inside.",
       "[Recruit] Locked (Angered the Scrap Ooze)",
       "[Leave]",
       "[Recruit] Locked (Requires a Common or Uncommon Relic)"
@@ -59,7 +59,7 @@
     "NAME": "The Art of Slime War",
     "DESCRIPTIONS": [
       "You come across a disgusting pedestal with a #gglowing #gbook sitting atop. It appears this book contains the complicated and advanced combat techniques used by the #gSlime #gBoss and its minions.",
-      "As you reach for the book, you hear several traps activate.  You won't be able to avoid them all.",
+      "As you reach for the book, you hear several traps activate. You won't be able to avoid them all.",
       "You steal the book and manage to avoid the traps, but fall into a horrible puddle of goop.",
       "Grabbing the book revealed a trap of spikes below the floor, which you narrowly escape, but not without a severe gash.",
       "As soon as the book leaves the pedestal, you feel it draining your very life essence. It had better be worth it.",
@@ -67,7 +67,7 @@
       "You can't figure out how the Slime minions are a threat to anyone - it appears the only tactic they use is to violently throw their bodies at enemies.  Well, if it works for them..."
     ],
     "OPTIONS": [
-      "[Read] #gRemove #gall Strikes. #gReceive #g3 #gUpgraded Tackles.",
+      "[Read] #gRemove #gall #gStrikes. #gReceive #g3 #gUpgraded #gTackles.",
       "[Take] #gObtain #gConsult #gPlaybook. #rTrigger #ra #rtrap.",
       "[Leave]",
       "[Dive] #rBecome #rCursed #r- #rIcky.",

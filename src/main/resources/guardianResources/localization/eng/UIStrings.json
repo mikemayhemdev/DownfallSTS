@@ -22,9 +22,9 @@
   },
   "Guardian:FindGemsOption": {
     "TEXT": [
-      "Mine",
-      "(Free Action) Gain a random Gem.",
-      "Mine exploited here."
+      "Mine.",
+      "Gain 2 random Gems.",
+      "Pick broken."
     ]
   },
   "Guardian:BraceMod": {

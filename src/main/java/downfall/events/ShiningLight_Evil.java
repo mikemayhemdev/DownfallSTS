@@ -2,6 +2,7 @@ package downfall.events;
 
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.curses.Pain;
 import com.megacrit.cardcrawl.cards.curses.Regret;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import downfall.cards.curses.Icky;
 import downfall.cards.curses.Malfunctioning;
 
 import java.util.*;
@@ -24,6 +26,7 @@ public class ShiningLight_Evil extends AbstractImageEvent {
     private static final String INTRO;
     private static final String AGREE_DIALOG;
     private static final String DISAGREE_DIALOG;
+    private int curseObtainChance = 3;
     private static final float HP_LOSS_PERCENT = 0.2F;
     private static final float A_2_HP_LOSS_PERCENT = 0.3F;
 
@@ -45,7 +48,10 @@ public class ShiningLight_Evil extends AbstractImageEvent {
         this.screen = CUR_SCREEN.INTRO;
 
         if (AbstractDungeon.player.masterDeck.hasUpgradableCards()) {
-            this.imageEventText.setDialogOption(OPTIONS[0], new Malfunctioning());
+            if (AbstractDungeon.ascensionLevel >= 15) {
+                this.curseObtainChance = 2;
+            }
+            this.imageEventText.setDialogOption(OPTIONS[0] + this.curseObtainChance + OPTIONS[3], new Malfunctioning());
         } else {
             this.imageEventText.setDialogOption(OPTIONS[2], true);
         }
@@ -116,17 +122,23 @@ public class ShiningLight_Evil extends AbstractImageEvent {
             } else {
                 upgradableCards.get(0).upgrade();
                 upgradableCards.get(1).upgrade();
-                upgradableCards.get(2).upgrade();
+                if (AbstractDungeon.ascensionLevel < 15) {
+                    upgradableCards.get(2).upgrade();
+                }
                 cardMetrics.add(upgradableCards.get(0).cardID);
                 cardMetrics.add(upgradableCards.get(1).cardID);
-                cardMetrics.add(upgradableCards.get(2).cardID);
-                AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
+                if (AbstractDungeon.ascensionLevel < 15) {
+                    cardMetrics.add(upgradableCards.get(2).cardID);
+                }
+                    AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
                 AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(1));
-                AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(2));
+                if (AbstractDungeon.ascensionLevel < 15) {
+                    AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(2));
+                }
                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(0).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
-                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(1).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(2).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F + 300.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
-
+                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(1).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F + 300.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                if (AbstractDungeon.ascensionLevel < 15) {
+                    AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(2).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));}
             }
         }
 

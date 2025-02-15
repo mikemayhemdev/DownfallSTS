@@ -1,4 +1,4 @@
-/*
+package collector.cards;/*
 package collector.cards;
 
 import collector.powers.DoMayhemPower;

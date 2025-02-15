@@ -26,7 +26,7 @@ public class BurlyBlow extends AbstractGremlinCard {
 
     private static final int COST = 2;
     private static final int POWER = 4;
-    private static final int UPGRADE_BONUS = 1;
+    private static final int UPGRADE_BONUS = 2;
 
     public BurlyBlow()
     {
@@ -44,7 +44,7 @@ public class BurlyBlow extends AbstractGremlinCard {
         if(m.hasPower(WeakPower.POWER_ID)){
             count = m.getPower(WeakPower.POWER_ID).amount;
         }
-        for(int i=0; i<count-1; i++){
+        for(int i=0; i<count; i++){
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                     this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }

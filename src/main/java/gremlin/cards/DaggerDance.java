@@ -13,6 +13,7 @@ import gremlin.GremlinMod;
 import com.megacrit.cardcrawl.vfx.combat.DaggerSprayEffect;
 
 import static gremlin.GremlinMod.MAD_GREMLIN;
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
 
 public class DaggerDance extends AbstractGremlinCard {
     public static final String ID = getID("DaggerDance");
@@ -21,7 +22,7 @@ public class DaggerDance extends AbstractGremlinCard {
     private static final String IMG_PATH = "cards/dagger_dance.png";
 
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.ATTACK;
-    private static final AbstractCard.CardRarity RARITY = CardRarity.COMMON;
+    private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final int COST = 1;
@@ -38,7 +39,7 @@ public class DaggerDance extends AbstractGremlinCard {
         this.magicNumber = MAGIC;
 
         this.isMultiDamage = true;
-        this.tags.add(MAD_GREMLIN);
+        this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "DaggerDance.png");
     }
@@ -59,6 +60,7 @@ public class DaggerDance extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
+            //upgradeDamage(2);
             upgradeMagicNumber(UPGRADE_MAGIC);
         }
     }

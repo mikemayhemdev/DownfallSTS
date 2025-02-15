@@ -17,22 +17,26 @@ import guardian.patches.AbstractCardEnum;
 import guardian.powers.ArmoredProtocolPower;
 import guardian.powers.DontLeaveDefensiveModePower;
 
+@Deprecated
 public class ArmoredProtocol extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("ArmoredProtocol");
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/Metallicize.png";
+    public static final String IMG_PATH = "cards/armoredScales.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
 
-    private static final int METALLICIZE = 4;
+    //TUNING CONSTANTS
+    private static final int METALLICIZE = 5;
     private static final int SOCKETS = 0;
     private static final int BRACE_PER_TURN = 3;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
+
+    //END TUNING CONSTANTS
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -54,6 +58,7 @@ public class ArmoredProtocol extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArmoredProtocolPower(p, magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BracePerTurnPower(p, this.secondaryM)));
     }
 
     public AbstractCard makeCopy() {
@@ -63,20 +68,19 @@ public class ArmoredProtocol extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
-//            upgradeMagicNumber(3);
+            upgradeMagicNumber(3);
         }
     }
 
     public void updateDescription() {
-//
-//        if (this.socketCount > 0) {
-//            if (upgraded && UPGRADED_DESCRIPTION != null) {
-//                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
-//            } else {
-//                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
-//            }
-//        }
+
+        if (this.socketCount > 0) {
+            if (upgraded && UPGRADED_DESCRIPTION != null) {
+                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
+            } else {
+                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
+            }
+        }
         this.initializeDescription();
     }
 }

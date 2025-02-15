@@ -16,7 +16,7 @@ import guardian.ui.FindGemsOption;
 import javassist.CtBehavior;
 import sneckomod.TheSnecko;
 import sneckomod.relics.UnknownEgg;
-import sneckomod.ui.LockInCampfireOption;
+
 
 import java.util.ArrayList;
 
@@ -26,22 +26,20 @@ public class AddEnhanceButtonPatch {
         @SpireInsertPatch(locator = Locator.class)
         public static void patch(CampfireUI __instance, ArrayList<AbstractCampfireOption> ___buttons) {
             Boolean active = true;
-
             if (GuardianMod.getSocketableCards().size() == 0) {
                 active = false;
             }
-
             if (GuardianMod.getGemCards().size() == 0) {
                 active = false;
             }
-
             if (AbstractDungeon.player instanceof GuardianCharacter || active) {
                 GuardianMod.socketBonfireOption = new EnhanceBonfireOption(active);
                 ___buttons.add(GuardianMod.socketBonfireOption);
             }
-
-            if (AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player.hasRelic(UnknownEgg.ID)) {
-                ___buttons.add(new LockInCampfireOption());
+            if (AbstractDungeon.player.hasRelic(PickAxe.ID)) {
+                boolean relicActive;
+                relicActive = AbstractDungeon.player.getRelic(PickAxe.ID).counter != -2;
+                ___buttons.add(new FindGemsOption(relicActive));
             }
 
             if (AbstractDungeon.player instanceof CollectorChar || !CollectorCollection.collection.isEmpty()) {

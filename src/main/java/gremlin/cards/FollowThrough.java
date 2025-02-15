@@ -23,7 +23,7 @@ public class FollowThrough extends AbstractGremlinCard {
     private static final String IMG_PATH = "cards/follow_through.png";
 
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.ATTACK;
-    private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final AbstractCard.CardRarity RARITY = CardRarity.COMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
     private static final int COST = 1;

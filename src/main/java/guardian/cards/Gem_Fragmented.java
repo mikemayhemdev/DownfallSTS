@@ -21,7 +21,7 @@ public class Gem_Fragmented extends AbstractGemCard {
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemFrag.png";
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
@@ -48,7 +48,7 @@ public class Gem_Fragmented extends AbstractGemCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = FRAGMENTED;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
         this.cardsToPreview = new CrystalShiv();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Fragmented_Gem.png"));

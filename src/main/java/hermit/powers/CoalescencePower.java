@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.EstablishmentPower;
 import hermit.HermitMod;
 import hermit.util.TextureLoader;
 
@@ -49,7 +50,7 @@ public class CoalescencePower extends AbstractPower implements CloneablePowerInt
     public void atEndOfTurn(boolean isPlayer) {
         this.flash();
 
-        if (isPlayer && !AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.player.hasRelic("Runic Pyramid") && !AbstractDungeon.player.hasPower("Equilibrium")) {
+        if ((isPlayer && !AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.player.hasPower("Equilibrium"))) {
             this.addToBot(new RetainCardsAction(this.owner, this.amount));
         }
 

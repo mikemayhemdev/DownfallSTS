@@ -16,7 +16,7 @@ public class MurderStrike extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 6;
 
     public MurderStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
@@ -48,6 +48,7 @@ public class MurderStrike extends AbstractChampCard {
     }
 
     public void upp() {
+        upgradeDamage(3);
         upgradeMagicNumber(1);
     }
 }

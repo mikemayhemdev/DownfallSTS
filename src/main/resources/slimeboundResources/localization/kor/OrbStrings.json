@@ -17,7 +17,7 @@
     "NAME": "싸움꾼 슬라임",
     "DESCRIPTION": [
       "내 턴 시작 시 피해를 #b",
-      " 줍니다."
+      " 만큼 2번 줍니다."
     ]
   },
   "Slimebound:ScrapOozeSlime": {
@@ -108,7 +108,7 @@
     "DESCRIPTION": [
       "내 턴 시작 시 피해를 #b",
       " 주고 카드를 #b",
-      " 장 뽑아줍니다."
+      " 장 뽑아줍니다. 카드를 뽑아주는 효과는 잠재력으로 증가하지 않습니다."
     ]
   },
   "Slimebound:DarklingSlime": {

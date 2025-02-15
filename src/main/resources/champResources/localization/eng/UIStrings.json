@@ -11,7 +11,7 @@
   },
   "champ:TechniqueMod": {
     "TEXT": [
-      " NL Trigger *Stance *Skill *Bonus."
+      " NL Trigger *Stance *Skill champ:Bonus."
     ]
   },
   "champ:OpenerMod": {

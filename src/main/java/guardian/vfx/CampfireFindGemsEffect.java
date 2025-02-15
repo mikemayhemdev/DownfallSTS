@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package guardian.vfx;
 
 import com.badlogic.gdx.Gdx;
@@ -9,16 +14,17 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.GuardianMod;
+import guardian.rewards.GemReward;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class CampfireFindGemsEffect extends AbstractGameEffect {
     private static final float DUR = 2.0F;
-    private boolean got = false;
 
     private Color screenColor;
 
@@ -33,25 +39,19 @@ public class CampfireFindGemsEffect extends AbstractGameEffect {
         this.duration -= Gdx.graphics.getDeltaTime();
         this.updateBlackScreenColor();
 
-        if (this.duration < 1.0F) {
-            if(!got) {
-                got = true;
-                CardCrawlGame.sound.play("SHOVEL");
-                ArrayList<AbstractCard> gems = new ArrayList<>(Arrays.asList(GuardianMod.getSingleRewardGemWithWeight())) ;
-                if (gems != null && !gems.isEmpty()) {
-                    AbstractDungeon.cardRewardScreen.open(gems, null, "");
-                }
-
-//                AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(gems.get(0), (float) (Settings.WIDTH * 0.35), (float) (Settings.HEIGHT / 2)));
-//                AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(gems.get(1), (float) (Settings.WIDTH * 0.7), (float) (Settings.HEIGHT / 2)));
-            }
-        }
-
         if (this.duration < 0.0F) {
+            CardCrawlGame.sound.play("SHOVEL");
+            for (int i = 0; i < 2; i++) {
+                AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
+            }
+ //           AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
+            AbstractDungeon.combatRewardScreen.open("Shiny...");
+            AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
+
+
             this.isDone = true;
             ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
-            ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI.reopen();
-//            AbstractDungeon.getCurrRoom().phase = RoomPhase.COMPLETE;
+            AbstractDungeon.getCurrRoom().phase = RoomPhase.COMPLETE;
         }
 
     }

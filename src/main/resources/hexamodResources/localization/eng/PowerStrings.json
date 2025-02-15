@@ -170,7 +170,7 @@
     "NAME": "Radiant Flame",
     "DESCRIPTIONS": [
       "Whenever you #yIgnite a Ghostflame, gain #b",
-      " #yBlock."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "hexamod:SealPostCombatPower": {
@@ -233,8 +233,8 @@
   "hexamod:InfernoPotionPower": {
     "NAME": "Hexaburn",
     "DESCRIPTIONS": [
-      "Your Ghostflame effects affect All enemies this combat.",
-      "Your Ghostflame effects affect All enemies #b",
+      "Your Ghostflame effects affect ALL enemies this combat.",
+      "Your Ghostflame effects affect ALL enemies #b",
       " times this combat."
     ]
   },

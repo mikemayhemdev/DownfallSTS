@@ -37,11 +37,17 @@ public class SoulConsumer extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
+    public void onEquip() {
+        this.counter = 0;
+    }
+
     @Override
     public void onExhaust(AbstractCard card) {
+        this.img = TextureLoader.getTexture(makeRelicPath("SoulStone.png"));
         ++this.counter;
         if (this.counter % 3 == 0) {
             this.counter = 0;
+            this.img = TextureLoader.getTexture(makeRelicPath("SoulConsumerOn.png"));
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             GhostflameHelper.activeGhostFlame.charged = true; // for some special logic for end turn advance
@@ -54,9 +60,9 @@ public class SoulConsumer extends CustomRelic {
         }
     }
 
-    public void onVictory() {
-        this.counter = -1;
-    }
+   // public void onVictory() {
+   //     this.counter = 0;
+  // }
 
     //    @Override
 //    public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {

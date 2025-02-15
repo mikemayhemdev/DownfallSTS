@@ -12,8 +12,9 @@ public class CrystallizedMud extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("CrystallizedMud.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("CrystallizedMud.png"));
 
+    //sorry mesmerizing pendant but the people hate you and champ needs a third boss relic
     public CrystallizedMud() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.DEPRECATED, LandingSound.MAGICAL);
     }
 
     public void onEquip() {
@@ -23,6 +24,8 @@ public class CrystallizedMud extends CustomRelic {
     public void onUnequip() {
         --AbstractDungeon.player.energy.energyMaster;// 42
     }// 43
+
+    public void onTrigger() {this.flash();}
 
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];

@@ -169,6 +169,7 @@ public class GremlinCharacter extends CustomPlayer {
         retVal.add("Gremlin:Defend");
         retVal.add("Gremlin:Defend");
         retVal.add("Gremlin:Defend");
+        retVal.add("Gremlin:Defend");
         retVal.add("Gremlin:TagTeam");
         retVal.add("Gremlin:GremlinDance");
         return retVal;
