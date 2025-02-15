@@ -1255,7 +1255,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addMonster(CharBossDefect.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[3], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster(CharBossWatcher.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[4], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
         BaseMod.addMonster(CharBossHermit.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[6], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
-        BaseMod.addMonster(CharBossMerchant.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[5], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
+        BaseMod.addMonster(CharBossMerchant.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[5], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossMerchant()}));
 
 
         BaseMod.addMonster(NeowBoss.ID, () -> new MonsterGroup(new AbstractMonster[]{new NeowBoss()}));
