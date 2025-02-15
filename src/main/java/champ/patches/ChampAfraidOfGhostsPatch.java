@@ -5,6 +5,7 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.Ghosts;
 import com.megacrit.cardcrawl.random.Random;
+import downfall.events.CouncilOfGhosts_Evil;
 import gremlin.characters.GremlinCharacter;
 import javassist.CtBehavior;
 
@@ -28,6 +29,7 @@ public class ChampAfraidOfGhostsPatch {
                 //to-do: figure out why this is here
                 //I've decided this is actually really funny so I'm keeping it lol, also Gremlins but because of the 50% hp thing not working
                 tmp.remove(Ghosts.ID);
+                tmp.remove(CouncilOfGhosts_Evil.ID);
             }
         }
 

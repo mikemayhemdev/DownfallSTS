@@ -103,7 +103,7 @@
   "champ:TornadoPunch": {
     "NAME": "Tornado Punch",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !B! Block for each enemy hit.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !B! Block for each enemy hit."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Defensive champ:Combo: Gain !B! Block for each enemy hit."
   },
   "champ:EnGarde": {
     "NAME": "En Garde",

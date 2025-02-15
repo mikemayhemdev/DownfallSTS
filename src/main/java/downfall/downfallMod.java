@@ -1250,11 +1250,13 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 //new Hermit(),
         }));
 
-        BaseMod.addMonster(CharBossIronclad.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
-        BaseMod.addMonster(CharBossSilent.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
-        BaseMod.addMonster(CharBossDefect.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
-        BaseMod.addMonster(CharBossWatcher.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
-        BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
+        BaseMod.addMonster(CharBossIronclad.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[1], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
+        BaseMod.addMonster(CharBossSilent.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[2], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
+        BaseMod.addMonster(CharBossDefect.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[3], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
+        BaseMod.addMonster(CharBossWatcher.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[4], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
+        BaseMod.addMonster(CharBossHermit.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[6], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
+        BaseMod.addMonster(CharBossMerchant.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[5], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
+
 
         BaseMod.addMonster(NeowBoss.ID, () -> new MonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));

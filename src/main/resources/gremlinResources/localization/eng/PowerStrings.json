@@ -167,9 +167,9 @@
   "Gremlin:SneakyGremlin": {
     "NAME": "Sneaky Gremlin",
     "DESCRIPTIONS": [
-      "Whenever you play an attack, deal #b",
-      " damage to a random enemy. 0 cost attacks have their damage increased by #b",
-      " ."
+      "0 cost attacks have their damage increased by #b",
+      " [REMOVE_SPACE]. Whenever you play an attack, deal #b",
+      " damage to a random enemy."
     ]
   },
   "Gremlin:TargetWeakness": {
