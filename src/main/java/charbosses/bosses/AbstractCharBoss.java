@@ -150,6 +150,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         super.init();
         this.preBattlePrep();
         AbstractCharBoss.finishedSetup = true;
+        this.type = EnemyType.BOSS;
     }
 
     @Override

@@ -391,9 +391,9 @@ public class SneckoMod implements
                 Restock.ID,
                 PureSnecko.ID,
 
-                BlunderGuard.ID,
-                Blunderbus.ID,
-                WideAngle.ID,
+                LatchOn.ID,
+                SerpentineSleuth.ID,
+                SerpentsNest.ID,
 
                 TrashCan.ID,
                 TrashToTreasure.ID,
