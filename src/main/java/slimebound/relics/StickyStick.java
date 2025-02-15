@@ -32,20 +32,21 @@ public class StickyStick extends CustomRelic {
     }
 
     public void onCardDraw(AbstractCard card) {
-       if (this.counter == 2) {
-           this.grayscale = true;
-           return;
-       }
+        if (this.counter == 2) {
+            this.grayscale = true;
+            return;
+        }
 
-        if (this.counter < 3)
-        if (card.type == AbstractCard.CardType.STATUS || card.type == AbstractCard.CardType.CURSE) {
-            this.flash();
-            ++this.counter;
-            //this.addToTop(new ExhaustSpecificCardAction(card,AbstractDungeon.player.hand));
-            this.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
-            if (card.cardID.equals(VoidCard.ID) || card.cardID.equals(IntoTheVoid.ID)) {
+        if (this.counter < 3) {
+            if (card.type == AbstractCard.CardType.STATUS || card.type == AbstractCard.CardType.CURSE) {
                 this.flash();
-                this.addToTop(new GainEnergyAction(1));
+                ++this.counter;
+                //this.addToTop(new ExhaustSpecificCardAction(card,AbstractDungeon.player.hand));
+                this.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
+                if (card.cardID.equals(VoidCard.ID) || card.cardID.equals(IntoTheVoid.ID)) {
+                    this.flash();
+                    this.addToTop(new GainEnergyAction(1));
+                }
             }
         }
     }
