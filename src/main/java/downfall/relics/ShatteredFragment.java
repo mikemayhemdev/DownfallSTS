@@ -18,6 +18,8 @@ import downfall.downfallMod;
 import expansioncontent.actions.EchoACardAction;
 import expansioncontent.cards.AwakenDeath;
 
+import java.util.Iterator;
+
 public class ShatteredFragment extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("ShatteredFragment");
@@ -46,20 +48,23 @@ public class ShatteredFragment extends CustomRelic {
 //        this.addToBot(new MakeTempCardInHandAction(new BloodySacrifice()));// 25
 //    }
 
-    @Override
     public void atBattleStart() {
-        if (AbstractDungeon.getCurrRoom().monsters.monsters.stream().anyMatch(q -> q.type == AbstractMonster.EnemyType.ELITE)) {
-            flash();
-            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RitualPower(AbstractDungeon.player, 1, true), 1));
+        boolean isEliteOrBoss = AbstractDungeon.getCurrRoom().eliteTrigger;
+        Iterator var2 = AbstractDungeon.getMonsters().monsters.iterator();
+
+        while(var2.hasNext()) {
+            AbstractMonster m = (AbstractMonster)var2.next();
+            if (m.type == AbstractMonster.EnemyType.BOSS) {
+                isEliteOrBoss = true;
+            }
         }
 
-        if (AbstractDungeon.getCurrRoom().monsters.monsters.stream().anyMatch(q -> q.type == AbstractMonster.EnemyType.BOSS)) {
-            flash();
+        if (isEliteOrBoss) {
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractCard q = new AwakenDeath();
             addToTop(new EchoACardAction(q, true));
         }
+
     }
 
 
