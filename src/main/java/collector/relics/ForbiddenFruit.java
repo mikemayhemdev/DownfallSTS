@@ -1,6 +1,7 @@
 package collector.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.CardPowerTip;
 import collector.CollectorMod;
 import com.megacrit.cardcrawl.cards.curses.Necronomicurse;
 import downfall.cards.curses.Sapped;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.util.TextureLoader;
+import expansioncontent.cards.AwakenDeath;
 
 import java.util.stream.Collectors;
 
@@ -27,6 +29,7 @@ public class ForbiddenFruit extends CustomRelic {
 
     public ForbiddenFruit() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
+        tips.add(new CardPowerTip( new Sapped() ) );
     }
 
     public void onEquip() {
