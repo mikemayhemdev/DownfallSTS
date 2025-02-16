@@ -416,7 +416,7 @@
     "NAME": "Sharpened Fragment",
     "FLAVOR": "Once a broken statue - now a makeshift weapon.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain a #yBloody #ySacrifice."
+      "At the start of Elite and Boss combats, add an #ygremlin:Echo of #yCuriosity to your hand, it costs #b0 [REMOVE_SPACE]."
     ]
   },
   "downfall:RedIOU": {
