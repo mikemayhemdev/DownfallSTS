@@ -36,11 +36,15 @@ public class Virus extends AbstractBronzeCard {
         if (upgraded) {
             AbstractCard s = (new MinorBeam()).makeCopy();
             s.upgrade();
-            this.addToTop(new MakeTempCardInHandAction(s, theSize));
+            if (theSize>0) {
+                this.addToTop(new MakeTempCardInHandAction(s, theSize));
+            }
         } else {
-            this.addToTop(new MakeTempCardInHandAction(new MinorBeam(), theSize));
+            if (theSize>0) {
+                this.addToTop(new MakeTempCardInHandAction(new MinorBeam(), theSize - 1));
+            }
         }
-        this.addToTop(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, theSize, false));
+        this.addToTop(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, theSize-1, false));
 
     }
 
