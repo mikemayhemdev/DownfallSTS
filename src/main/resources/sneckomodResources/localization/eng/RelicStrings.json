@@ -77,10 +77,10 @@
     ]
   },
   "sneckomod:BlankCard": {
-    "NAME": "Creased Card",
-    "FLAVOR": "I've got a five of a kind.",
+    "NAME": "Blank Card",
+    "FLAVOR": "Card Mimic.",
     "DESCRIPTIONS": [
-      "The first time you draw a card that costs 3+ each combat, #ysneckomod:Muddle it."
+      "At the start of each combat, add an #ygremlin:Echo of a random #pnon-Curse, #rnon-Status card from your deck to your hand. It costs #b0 [REMOVE_SPACE]."
     ]
   },
   "sneckomod:D8": {
