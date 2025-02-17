@@ -23,7 +23,7 @@ public class IgnorePain extends AbstractChampCard {
         tags.add(ChampMod.FINISHER);
        // tags.add(ChampMod.TECHNIQUE);
       //  myHpLossCost = 5;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         postInit();
         loadJokeCardImage(this, "IgnorePain.png");
 
