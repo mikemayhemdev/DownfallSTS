@@ -258,7 +258,6 @@
   "champ:RecklessLeap": {
     "NAME": "Reckless Strike",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Enter champ:Berserker. NL Exhaust.",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Enter champ:Berserker. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Enter champ:Berserker.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
