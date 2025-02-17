@@ -42,6 +42,10 @@ public class WingStatue_Evil extends AbstractImageEvent {
             this.goldLoss = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.25F);
         }
 
+        if (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
+            this.goldLoss = this.goldLoss*5;
+        }
+
 //        if (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
 //        }
 //        if (this.goldLoss >= AbstractDungeon.player.maxHealth) {

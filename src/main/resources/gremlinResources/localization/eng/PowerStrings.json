@@ -167,8 +167,8 @@
   "Gremlin:SneakyGremlin": {
     "NAME": "Sneaky Gremlin",
     "DESCRIPTIONS": [
-      "0 cost attacks have their damage increased by #b",
-      " [REMOVE_SPACE]. Whenever you play an attack, deal #b",
+      "0 cost Attacks have their damage increased by #b",
+      " [REMOVE_SPACE]. Whenever you play an Attack, deal #b",
       " damage to a random enemy."
     ]
   },

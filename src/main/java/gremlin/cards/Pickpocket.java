@@ -48,13 +48,28 @@ public class Pickpocket extends AbstractGremlinCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        AbstractDungeon.actionManager.addToBottom(new ShackleAction(m, magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ShackleAction(m, magicNumber));
-        AbstractDungeon.player.gainGold(blamage);
 
-        for (int i = 0; i < blamage; ++i) {
-            AbstractDungeon.effectList.add(new GainPennyEffect(p, p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, true));
+        AbstractDungeon.actionManager.addToBottom(new ShackleAction(m, magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ShackleAction(m, magicNumber));
+
+        if (!this.upgraded) {
+            {
+                AbstractDungeon.player.gainGold(5);
+                for (int i = 0; i < 5; ++i) {
+                    AbstractDungeon.effectList.add(new GainPennyEffect(p, p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, true));
+                }
+            }
         }
+
+        if (this.upgraded) {
+            {
+                AbstractDungeon.player.gainGold(10);
+                for (int i = 0; i < 10; ++i) {
+                    AbstractDungeon.effectList.add(new GainPennyEffect(p, p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, true));
+                }
+            }
+        }
+
         }
 
     @Override
