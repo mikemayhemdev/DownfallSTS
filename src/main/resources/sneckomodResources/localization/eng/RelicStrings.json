@@ -80,7 +80,7 @@
     "NAME": "Blank Card",
     "FLAVOR": "Card Mimic.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add an #ygremlin:Echo of a random #pnon-Curse, #rnon-Status card from your deck to your hand. It costs #b0 [REMOVE_SPACE]."
+      "At the start of each combat, add an #ygremlin:Echo of a random #rnon-Curse [REMOVE_SPACE], #rnon-Status card from your deck to your hand. It costs #b0 [REMOVE_SPACE]."
     ]
   },
   "sneckomod:D8": {
