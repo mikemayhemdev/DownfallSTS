@@ -38,7 +38,7 @@ public class PandemoniumPower extends AbstractPower {
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
+    public void atStartOfTurn() {
         this.flash();
         for (int i = 0; i < this.amount; ++i) {
             if (!AbstractDungeon.player.discardPile.isEmpty()) {
