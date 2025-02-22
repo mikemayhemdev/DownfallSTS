@@ -34,7 +34,7 @@ public class ShatteredFragment extends CustomRelic {
 
     public ShatteredFragment() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
-        tips.add(new CardPowerTip( new AwakenDeath() ) );
+        //tips.add(new CardPowerTip( new AwakenDeath() ) );
     }
 
     @Override
