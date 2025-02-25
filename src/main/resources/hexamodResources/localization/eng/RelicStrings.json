@@ -88,7 +88,7 @@
     "NAME": "Six-Point Brand",
     "FLAVOR": "Fire, fire, fire, fire, fire, FIRE!",
     "DESCRIPTIONS": [
-      "Whenever you play #b6 cards, deal #b6 damage to a random enemy."
+      "Whenever you play #b6 cards, gain an #ygremlin:Echo of a #yStrike. It costs #b0."
     ]
   },
   "hexamod:Libra": {
