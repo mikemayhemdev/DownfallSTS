@@ -29,7 +29,7 @@ public class ScorchingRayAction extends AbstractGameAction {
         if (q != null) {
             card.applyPowers();
             card.calculateCardDamage(q);
-            att(new DamageAction(q, new DamageInfo(AbstractDungeon.player, card.damage, card.damageTypeForTurn), AttackEffect.NONE));
+            //att(new DamageAction(q, new DamageInfo(AbstractDungeon.player, card.damage, card.damageTypeForTurn), AttackEffect.NONE));
             att(new VFXAction(new ColoredVerticalAttackEffect(q.hb.x + MathUtils.random(q.hb.width / 3, ((q.hb.width / 3) * 2)), q.hb.cY, true, new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1))));
         }
     }

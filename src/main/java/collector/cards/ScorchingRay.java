@@ -3,6 +3,7 @@ package collector.cards;
 import automaton.actions.EasyXCostAction;
 import collector.actions.ScorchingRayAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -22,6 +23,7 @@ public class ScorchingRay extends AbstractCollectorCard {
         atb(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect; i++) {
                 atb(new ScorchingRayAction(this));
+                this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
             }
             return true;
         }));
