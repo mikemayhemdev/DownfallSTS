@@ -125,6 +125,7 @@ public class Libra extends CustomRelic {
 
 
     public boolean canSpawn() {
+    //requires at least 1 strike or defend to spawn
         hasbasics = false;
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {

@@ -40,5 +40,4 @@ public class BloodyTooth extends CustomRelic {
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }
-
 }

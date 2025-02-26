@@ -82,7 +82,7 @@ public class UnknownEgg extends CustomRelic {
 
     public boolean canSpawn() {
         return Settings.isEndless || AbstractDungeon.floorNum <= 48;
-    }
+    } //cannot appear in act 4
 
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];

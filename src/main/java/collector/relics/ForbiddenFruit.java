@@ -94,7 +94,7 @@ public class ForbiddenFruit extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return ((AbstractDungeon.floorNum > 1));
+        return ((AbstractDungeon.floorNum > 1)); // you cannot boss swap into forbidden fruit
     }
 
     @Override
