@@ -20,7 +20,7 @@ public class Forgery extends AbstractCollectorCard {
     // intellij stuff attack, enemy, common, 9, 3, , , , 
 
     public Forgery() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 2;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);

@@ -15,7 +15,7 @@ public class ShadowDaggers extends AbstractCollectorCard {
 
     public ShadowDaggers() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 4;
+        baseDamage = 3;
         exhaust = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }

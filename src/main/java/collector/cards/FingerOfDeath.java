@@ -17,7 +17,7 @@ public class FingerOfDeath extends AbstractCollectorCard {
 
     public FingerOfDeath() {
         super(ID, 4, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 50;
+        baseMagicNumber = magicNumber = 60;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
