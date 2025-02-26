@@ -26,6 +26,7 @@ public class PandemoniumPower extends AbstractPower {
         this.isTurnBased = false;
         this.updateDescription();
         this.loadRegion("mayhem");
+        priority = -999;
     }
 
     @Override
@@ -38,7 +39,7 @@ public class PandemoniumPower extends AbstractPower {
     }
 
     @Override
-    public void atStartOfTurn() {
+    public void atStartOfTurnPostDraw() {
         this.flash();
         for (int i = 0; i < this.amount; ++i) {
             if (!AbstractDungeon.player.discardPile.isEmpty()) {
