@@ -47,7 +47,7 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
             this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.15F);
         }
         if (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
-            this.hpAmt = this.hpAmt*5;
+            //this.hpAmt = this.hpAmt*5;
         }
         this.imageEventText.setDialogOption(OPTIONSALT[1] + hpAmt + OPTIONSALT[2]);
         this.imageEventText.setDialogOption(OPTIONS[0]);
