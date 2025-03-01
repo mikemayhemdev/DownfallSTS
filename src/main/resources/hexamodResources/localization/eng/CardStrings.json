@@ -166,7 +166,7 @@
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain 1 Blur. NL ",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain 1 expansioncontent:Blur. NL ",
     "EXTENDED_DESCRIPTION": [
       "Gain !B! Block."
     ]
