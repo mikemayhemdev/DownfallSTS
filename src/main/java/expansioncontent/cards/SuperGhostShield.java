@@ -2,6 +2,7 @@ package expansioncontent.cards;
 
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -28,7 +29,7 @@ public class SuperGhostShield extends AbstractExpansionCard {
         isEthereal = true;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(HexaMod.AFTERLIFE);
-        HexaMod.loadJokeCardImage(this, "GhostShield.png");
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "GhostShield.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
