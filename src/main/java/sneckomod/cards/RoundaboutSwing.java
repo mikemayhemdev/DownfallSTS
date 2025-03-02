@@ -19,6 +19,7 @@ public class RoundaboutSwing extends AbstractSneckoCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = MAGIC;
+        SneckoMod.loadJokeCardImage(this, "RoundaboutSwing.png");
     }
 
     @Override

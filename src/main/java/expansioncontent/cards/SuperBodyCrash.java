@@ -10,7 +10,10 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
+import guardian.GuardianMod;
 import guardian.cards.BodySlam;
+
+import static guardian.GuardianMod.makeBetaCardPath;
 
 public class SuperBodyCrash extends AbstractExpansionCard {
     public static final String ID = makeID("SuperBodyCrash");
@@ -33,6 +36,7 @@ public class SuperBodyCrash extends AbstractExpansionCard {
         addToBot((AbstractGameAction)new DamageAction((AbstractCreature)m, new DamageInfo((AbstractCreature)p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         this.rawDescription = this.DESCRIPTION;
         initializeDescription();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("BodySlam.png"));
     }
 
     public void applyPowers() {

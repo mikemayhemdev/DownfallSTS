@@ -7,7 +7,10 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
+import guardian.GuardianMod;
 import hermit.actions.ReduceDebuffsAction;
+
+import static guardian.GuardianMod.makeBetaCardPath;
 
 public class ChargeUp extends AbstractExpansionCard {
     public static final String ID = makeID("ChargeUp");
@@ -25,6 +28,8 @@ public class ChargeUp extends AbstractExpansionCard {
         this.tags.add(expansionContentMod.STUDY);
         this.baseMagicNumber = this.magicNumber = 2;
         this.exhaust = true;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("ChargeUp.png"));
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

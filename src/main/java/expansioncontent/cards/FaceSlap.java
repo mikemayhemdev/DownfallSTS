@@ -42,6 +42,7 @@ public class FaceSlap extends AbstractExpansionCard {
 
         baseDownfallMagic = downfallMagic;
         baseMagicNumber = magicNumber = MAGIC;
+        ChampMod.loadJokeCardImage(this, "ViciousMockery.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

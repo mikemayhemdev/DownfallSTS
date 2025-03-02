@@ -3,6 +3,7 @@ package expansioncontent.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
@@ -18,7 +19,7 @@ public class Flail extends AbstractExpansionCard {
     public Flail() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_automaton.png", "expansioncontentResources/images/1024/bg_boss_automaton.png");
-
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "Flail.png");
         tags.add(expansionContentMod.STUDY_AUTOMATON);
         tags.add(expansionContentMod.STUDY);
 

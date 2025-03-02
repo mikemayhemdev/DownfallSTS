@@ -28,6 +28,7 @@ public class SuperGhostShield extends AbstractExpansionCard {
         isEthereal = true;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(HexaMod.AFTERLIFE);
+        HexaMod.loadJokeCardImage(this, "GhostShield.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
