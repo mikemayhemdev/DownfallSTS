@@ -1,9 +1,6 @@
 package collector.cards.collectibles;
 
-import basemod.helpers.CardModifierManager;
-import collector.cardmods.CollectedCardMod;
 import collector.powers.AddCopyNextTurnPower;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -20,9 +17,7 @@ public class GiantHeadCardStageTwo extends AbstractCollectibleCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard tar = new GiantHeadCardStageThree();
-        CardModifierManager.addModifier(tar, new CollectedCardMod());
-        applyToSelf(new AddCopyNextTurnPower(tar));
+        applyToSelf(new AddCopyNextTurnPower(new GiantHeadCardStageThree()));
     }
 
     public void upp() {
