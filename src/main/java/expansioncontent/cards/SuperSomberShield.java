@@ -51,7 +51,7 @@ public class SuperSomberShield extends AbstractExpansionCard implements OnPyreCa
         tags.add(expansionContentMod.STUDY);
 
         isPyre();
-        loadJokeCardImage(this, "SuperSomberShield.png");
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "SuperSomberShield.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
