@@ -25,7 +25,7 @@ import downfall.util.LocalizeHelper;
 
 public class CharBossWatcher extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Watcher");
-    public static final String NAME = LocalizeHelper.RunHistoryMonsterNames.TEXT[4];
+    public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[4];
 
     private Bone eyeBone;
     protected TextureAtlas eyeAtlas = null;

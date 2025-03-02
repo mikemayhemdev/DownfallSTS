@@ -33,7 +33,7 @@ import static hermit.HermitMod.THE_DEFAULT_SKELETON_JSON;
 
 public class CharBossHermit extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Hermit");
-    public static final String NAME = LocalizeHelper.RunHistoryMonsterNames.TEXT[6];
+    public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[6];
 
     public Slot eye;
     private float fireTimer = 0.0F;

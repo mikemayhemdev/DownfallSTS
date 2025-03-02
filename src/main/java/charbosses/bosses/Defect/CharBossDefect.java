@@ -24,7 +24,7 @@ import downfall.util.LocalizeHelper;
 
 public class CharBossDefect extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Defect");
-    public static final String NAME = LocalizeHelper.RunHistoryMonsterNames.TEXT[3];
+    public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[3];
 
     public int clawsPlayed = 0;
 

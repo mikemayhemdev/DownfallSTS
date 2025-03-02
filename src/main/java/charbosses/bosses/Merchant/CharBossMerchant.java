@@ -54,7 +54,7 @@ public class CharBossMerchant extends AbstractCharBoss {
     private boolean neowSpoke = false;
 
     public static final String ID = downfallMod.makeID("CharBossMerchant");
-    public static final String NAME = LocalizeHelper.RunHistoryMonsterNames.TEXT[5];
+    public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[5];
 
     public CharBossMerchant() {
         super(NAME, ID, 300, 0f, -40f, 200.0f, 190.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);

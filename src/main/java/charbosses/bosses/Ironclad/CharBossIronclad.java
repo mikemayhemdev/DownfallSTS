@@ -42,7 +42,7 @@ import slimebound.SlimeboundMod;
 
 public class CharBossIronclad extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Ironclad");
-    public static final String NAME = LocalizeHelper.RunHistoryMonsterNames.TEXT[1];
+    public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[1];
 
     private Texture fgImg = TextureLoader.getTexture("downfallResources/images/fgShrooms.png");
     private Texture bgImg = TextureLoader.getTexture("downfallResources/images/bgShrooms.png");

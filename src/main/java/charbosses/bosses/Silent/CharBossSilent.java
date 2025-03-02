@@ -34,7 +34,7 @@ import downfall.util.LocalizeHelper;
 
 public class CharBossSilent extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Silent");
-    public static final String NAME = LocalizeHelper.RunHistoryMonsterNames.TEXT[2];
+    public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[2];
 
     public static boolean posStorage = false;
 
