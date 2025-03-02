@@ -17,6 +17,7 @@ public class GiantHeadCardStageOne extends AbstractCollectibleCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         applyToSelf(new AddCopyNextTurnPower(new GiantHeadCardStageTwo()));
     }
 
