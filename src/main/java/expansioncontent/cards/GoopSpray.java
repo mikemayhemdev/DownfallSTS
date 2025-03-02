@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import expansioncontent.expansionContentMod;
+import slimebound.SlimeboundMod;
 import slimebound.powers.SlimedPower;
 import slimebound.vfx.SlimeProjectileEffect;
 
@@ -36,6 +37,7 @@ public class GoopSpray extends AbstractExpansionCard {
         this.tags.add(expansionContentMod.STUDY);
         this.baseDownfallMagic = 2;
         this.baseMagicNumber = this.magicNumber = 8;
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "GoopSpray.png");
     }
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!this.upgraded) {

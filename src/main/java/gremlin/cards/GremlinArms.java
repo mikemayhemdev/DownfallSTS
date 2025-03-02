@@ -149,6 +149,12 @@ public class GremlinArms extends AbstractGremlinCard {
         return new ArrayList<>();
     }
 
+    @Override
+    public void applyPowers() {
+        updateModal();
+        super.applyPowers();
+    }
+
     public void upgrade()
     {
         if (!this.upgraded)

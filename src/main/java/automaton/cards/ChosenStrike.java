@@ -20,7 +20,7 @@ public class ChosenStrike extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 3;
 
     public ChosenStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE + misc;
         baseMagicNumber = magicNumber = 1;
         this.tags.add(CardTags.STRIKE);

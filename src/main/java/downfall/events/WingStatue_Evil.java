@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import downfall.relics.BrokenWingStatue;
 import downfall.relics.ShatteredFragment;
+import gremlin.patches.GremlinEnum;
 
 public class WingStatue_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:WingStatue";
@@ -34,17 +35,37 @@ public class WingStatue_Evil extends AbstractImageEvent {
         super(NAME, DESCRIPTIONS[0], "images/events/goldenWing.jpg");
         this.screen = CurScreen.INTRO;
 
-        if (AbstractDungeon.ascensionLevel >= 15) {
-            this.goldLoss = AbstractDungeon.miscRng.random(100, 125);
-        } else {
-            this.goldLoss = AbstractDungeon.miscRng.random(75, 100);
+
+
+        this.goldLoss = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.5F);
+        if (AbstractDungeon.ascensionLevel >= 15){
+            this.goldLoss = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.25F);
         }
 
-        if (this.goldLoss > AbstractDungeon.player.gold) {
-            this.goldLoss = AbstractDungeon.player.gold;
+        if (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
+            this.goldLoss = this.goldLoss*5;
         }
 
+//        if (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
+//        }
+//        if (this.goldLoss >= AbstractDungeon.player.maxHealth) {
+//            this.goldLoss = AbstractDungeon.player.maxHealth - 1;
+//        }
+
+//        if (AbstractDungeon.ascensionLevel >= 15) {
+//            this.goldLoss = AbstractDungeon.miscRng.random(100, 125);
+//        } else {
+//            this.goldLoss = AbstractDungeon.miscRng.random(75, 100);
+//        }
+
+//        if (this.goldLoss > AbstractDungeon.player.gold) {
+//            this.goldLoss = AbstractDungeon.player.gold;
+//        }
+
+
+        // lose 20 (25)% hp as damage, obtain relic
         this.imageEventText.setDialogOption(OPTIONS [0] + goldLoss + OPTIONS[1], new ShatteredFragment());
+        //
         this.imageEventText.setDialogOption(OPTIONS[2] + ((AbstractDungeon.ascensionLevel >= 15)?7:5) + OPTIONS[4], new BrokenWingStatue());
         this.imageEventText.setDialogOption(OPTIONS[3]);
     }
@@ -61,7 +82,7 @@ public class WingStatue_Evil extends AbstractImageEvent {
 //                        AbstractDungeon.player.decreaseMaxHealth(this.damage);
                       //  AbstractDungeon.player.damage(new DamageInfo(null, this.damage));
                        // AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AttackEffect.FIRE));
-                        AbstractDungeon.player.loseGold(this.goldLoss);
+                        AbstractDungeon.player.damage(new DamageInfo(null, this.goldLoss));
                         this.screen = CurScreen.RESULT;
                         logMetricObtainRelicAndDamage(ID, "Destroyed Statue", new ShatteredFragment(), goldLoss);
                         return;

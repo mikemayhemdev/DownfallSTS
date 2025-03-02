@@ -416,7 +416,7 @@
     "NAME": "Sharpened Fragment",
     "FLAVOR": "Once a broken statue - now a makeshift weapon.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain a #yBloody #ySacrifice."
+      "During Elite and Boss combats, whenever you play a #yPower card, gain #b1 #yStrength [REMOVE_SPACE]."
     ]
   },
   "downfall:RedIOU": {

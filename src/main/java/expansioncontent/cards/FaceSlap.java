@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -42,6 +43,7 @@ public class FaceSlap extends AbstractExpansionCard {
 
         baseDownfallMagic = downfallMagic;
         baseMagicNumber = magicNumber = MAGIC;
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "ViciousMockery.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

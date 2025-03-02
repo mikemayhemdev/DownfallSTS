@@ -30,10 +30,11 @@ import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
 import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import downfall.util.LocalizeHelper;
 
 public class CharBossSilent extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Silent");
-    public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Silent").NAMES[0];
+    public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[2];
 
     public static boolean posStorage = false;
 

@@ -32,7 +32,7 @@ public class StraightRazor extends CustomRelic implements OnRemoveCardFromMaster
     }
 
     public boolean canSpawn() {
-        return Settings.isEndless || (AbstractDungeon.floorNum <= 54 && AbstractDungeon.ascensionLevel >= 20) || (AbstractDungeon.floorNum <= 53 && AbstractDungeon.ascensionLevel <= 19);
+        return Settings.isEndless || (AbstractDungeon.floorNum <= 48); // cannot appear in act 4
     }
 
     @Override

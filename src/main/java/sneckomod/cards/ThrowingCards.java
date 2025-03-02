@@ -20,6 +20,7 @@ public class ThrowingCards extends AbstractSneckoCard {
         cardsToPreview = new FTL();
         exhaust = true;
         baseMagicNumber = magicNumber = 0;
+        SneckoMod.loadJokeCardImage(this, "ThrowingCards.png");
     }
 
     @Override

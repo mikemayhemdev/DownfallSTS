@@ -35,7 +35,7 @@
       "You spend much time searching through the halls of tomes and guides, until finally finding the book you seek. NL NL Settling into the comfy chair, you take some time to brush up on forgotten stances and styles. Even a perfect fighting specimen such as yourself knows that the mind is just as important as the body, and must also be exercised."
     ],
     "OPTIONS": [
-      "[Seek] Locate a #gBook on Fighting.",
+      "[Seek] #gLocate #ga #gBook #gon #gFighting.",
       "[Locked] Already have all Fighting tomes."
     ]
   },

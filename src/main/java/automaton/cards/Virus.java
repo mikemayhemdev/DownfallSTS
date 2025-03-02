@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.FrailPower;
+import gremlin.cards.Ward;
 
 import static com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.FIRE;
 import static com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.LIGHTNING;
@@ -31,14 +32,20 @@ public class Virus extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, LIGHTNING);
-        int handSize = p.hand.size();
-        if (handSize > 0) {
-            addToBot(new DiscardAction(p, p, handSize, false));
+        int theSize = AbstractDungeon.player.hand.size();
+        if (upgraded) {
+            AbstractCard s = (new MinorBeam()).makeCopy();
+            s.upgrade();
+            if (theSize>0) {
+                this.addToTop(new MakeTempCardInHandAction(s, theSize-1));
+            }
+        } else {
+            if (theSize>0) {
+                this.addToTop(new MakeTempCardInHandAction(new MinorBeam(), theSize - 1));
+            }
         }
-        if (handSize > 1) {
-            addToBot(new MakeTempCardInHandAction(new MinorBeam(), handSize - 1));
+        this.addToTop(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, theSize-1, false));
 
-        }
     }
 
         public void upp () {

@@ -23,6 +23,7 @@ import guardian.vfx.SmallLaserEffectColored;
 import java.util.Arrays;
 
 import static expansioncontent.cards.AbstractExpansionCard.makeID;
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
 
 public class MajorBeam extends AbstractDownfallCard {
 
@@ -36,6 +37,7 @@ public class MajorBeam extends AbstractDownfallCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 1;
         //exhaust = true;
+        loadJokeCardImage(this, "MajorBeam.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

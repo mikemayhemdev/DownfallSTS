@@ -39,6 +39,7 @@ import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
+import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import collector.CollectorChar;
@@ -1165,7 +1166,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addMonster(FleeingMerchant.ID, FleeingMerchant::new);
 
-        BaseMod.addMonster("downfall:CharBossMerchant", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossMerchant()}));
+        //BaseMod.addMonster("downfall:CharBossMerchant", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossMerchant()})); moved to boss section
 
         BaseMod.addMonster(downfall.monsters.FaceTrader.ID, downfall.monsters.FaceTrader::new);
 
@@ -1250,12 +1251,14 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 //new Hermit(),
         }));
 
-        BaseMod.addMonster(CharBossIronclad.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[1], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
-        BaseMod.addMonster(CharBossSilent.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[2], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
-        BaseMod.addMonster(CharBossDefect.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[3], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
-        BaseMod.addMonster(CharBossWatcher.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[4], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
-        BaseMod.addMonster(CharBossHermit.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[6], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
-        BaseMod.addMonster(CharBossMerchant.ID, LocalizeHelper.RunHistoryMonsterNames.TEXT[5], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
+
+        //RUN HISTORY WORKS NOW!!! You can now actually see what bosses you fought in a run.
+        BaseMod.addMonster(CharBossIronclad.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[1], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
+        BaseMod.addMonster(CharBossSilent.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[2], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
+        BaseMod.addMonster(CharBossDefect.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[3], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
+        BaseMod.addMonster(CharBossWatcher.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[4], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
+        BaseMod.addMonster(CharBossHermit.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[6], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
+        BaseMod.addMonster(CharBossMerchant.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[5], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossMerchant()}));
 
 
         BaseMod.addMonster(NeowBoss.ID, () -> new MonsterGroup(new AbstractMonster[]{new NeowBoss()}));

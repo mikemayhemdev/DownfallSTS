@@ -42,7 +42,7 @@ public class DoomedDagger extends AbstractMonster{
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(0.3F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
                 AbstractCard q = new ImpendingDoom();
-                CardModifierManager.addModifier(q, new RetainCardMod());
+                //CardModifierManager.addModifier(q, new RetainCardMod());
                 addToBot(new MakeTempCardInDrawPileAction((q), 1, false, true));
                 break;
             case 2:

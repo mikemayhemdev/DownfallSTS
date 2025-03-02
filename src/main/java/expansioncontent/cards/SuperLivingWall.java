@@ -72,7 +72,7 @@ public class SuperLivingWall extends AbstractExpansionCard {
     public SuperLivingWall() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_slime.png", "expansioncontentResources/images/1024/bg_boss_slime.png");
-        loadJokeCardImage(this, "slimewave.png");
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "LivingWall.png");
         tags.add(expansionContentMod.STUDY_SLIMEBOSS);
         tags.add(expansionContentMod.STUDY);
 

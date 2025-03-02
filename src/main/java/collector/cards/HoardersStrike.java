@@ -19,7 +19,7 @@ public class HoardersStrike extends AbstractCollectorCard {
 
     public HoardersStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 15;
+        baseDamage = 16;
         tags.add(CardTags.STRIKE);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
@@ -41,6 +41,6 @@ public class HoardersStrike extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(4);
     }
 }

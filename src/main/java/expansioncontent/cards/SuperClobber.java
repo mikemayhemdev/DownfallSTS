@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.watcher.WallopAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -42,7 +43,7 @@ public class SuperClobber extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY_CHAMP);
         tags.add(expansionContentMod.STUDY);
 
-        loadJokeCardImage(this, "SuperClobber.png");
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "SuperClobber.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

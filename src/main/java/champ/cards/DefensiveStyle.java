@@ -19,7 +19,7 @@ public class DefensiveStyle extends AbstractChampCard {
     //stupid intellij stuff power, self, uncommon
 
     public DefensiveStyle() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         //myHpLossCost = 5;
         postInit();
@@ -32,6 +32,7 @@ public class DefensiveStyle extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        //upgradeMagicNumber(1);
+        upgradeBaseCost(1);
     }
 }

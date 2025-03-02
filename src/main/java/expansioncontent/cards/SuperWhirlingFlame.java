@@ -52,7 +52,7 @@ public class SuperWhirlingFlame extends AbstractExpansionCard {
 
         tags.add(expansionContentMod.STUDY_COLLECTOR);
         tags.add(expansionContentMod.STUDY);
-
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "SuperWhirlingFlame.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

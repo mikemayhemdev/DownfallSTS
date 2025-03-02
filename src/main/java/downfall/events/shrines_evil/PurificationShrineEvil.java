@@ -42,12 +42,12 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.20F);
-        } else {
             this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.15F);
+        } else {
+            this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.10F);
         }
         if (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
-            this.hpAmt = this.hpAmt*5;
+            //this.hpAmt = this.hpAmt*5;
         }
         this.imageEventText.setDialogOption(OPTIONSALT[1] + hpAmt + OPTIONSALT[2]);
         this.imageEventText.setDialogOption(OPTIONS[0]);

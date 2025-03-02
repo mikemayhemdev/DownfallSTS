@@ -26,6 +26,7 @@ public class PandemoniumPower extends AbstractPower {
         this.isTurnBased = false;
         this.updateDescription();
         this.loadRegion("mayhem");
+        priority = -999;
     }
 
     @Override

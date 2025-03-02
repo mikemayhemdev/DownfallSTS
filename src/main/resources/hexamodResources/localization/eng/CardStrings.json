@@ -166,7 +166,7 @@
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain 1 Blur. NL ",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain 1 expansioncontent:Blur. NL ",
     "EXTENDED_DESCRIPTION": [
       "Gain !B! Block."
     ]
@@ -466,7 +466,7 @@
   },
   "hexamod:FlameDevourer": {
     "NAME": "Devour Flame",
-    "DESCRIPTION": "If the previous Ghostflame is Ignited, hexamod:Retract and gain !B! Block."
+    "DESCRIPTION": "If the previous Ghostflame is *Ignited, hexamod:Retract and gain !B! Block."
   },
   "hexamod:SpectralGrace": {
     "NAME": "Spectral Grace",

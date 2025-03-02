@@ -60,7 +60,7 @@
     "NAME": "Charred Glove",
     "FLAVOR": "Parts of the glove still glow with otherworldly cinders.",
     "DESCRIPTIONS": [
-      "Whenever you draw a #rCurse, your next attack deals #b3 more damage."
+      "Whenever you draw a #rCurse [REMOVE_SPACE], your next attack deals #b3 more damage."
     ]
   },
   "hermit:ClaspedLocket": {
@@ -82,7 +82,7 @@
     "NAME": "Brass Tacks",
     "FLAVOR": "The luster on these tacks never seems to fade.",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain #b2 Block."
+      "At the end of your turn, gain #b2 #yBlock [REMOVE_SPACE]."
     ]
   },
   "hermit:BlackPowder": {
@@ -96,7 +96,7 @@
     "NAME": "Broken Tooth",
     "FLAVOR": "Appears too large to have come from a human jaw...",
     "DESCRIPTIONS": [
-      "Whenever you defeat an Elite encounter, heal #b7 HP and gain #b35 gold."
+      "Whenever you defeat an Elite encounter, heal #b7 HP and gain #b35 Gold."
     ]
   }
 }

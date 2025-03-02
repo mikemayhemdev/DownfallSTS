@@ -4,13 +4,17 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.curses.AscendersBane;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.util.TextureLoader;
+import hermit.relics.Memento;
 import theHexaghost.HexaMod;
+import theHexaghost.cards.Defend;
+import theHexaghost.cards.Strike;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -32,6 +36,7 @@ public class Libra extends CustomRelic {
     public int number_of_cards_to_transform;
     private boolean no_cards_to_select = false;
     private boolean calledTransform = true;
+    private boolean hasbasics = false;
 
     @Override
     public void updateDescription(AbstractPlayer.PlayerClass c) {
@@ -116,5 +121,20 @@ public class Libra extends CustomRelic {
         AbstractDungeon.gridSelectScreen.openConfirmationGrid(new_cards, this.DESCRIPTIONS[1]);
         AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
+    }
+
+
+    public boolean canSpawn() {
+    //requires at least 1 strike or defend to spawn
+        hasbasics = false;
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
+                hasbasics = true;
+            }
+            if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+                hasbasics = true;
+            }
+        }
+        return hasbasics;
     }
 }

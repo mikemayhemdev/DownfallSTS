@@ -3,6 +3,7 @@ package sneckomod.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import expansioncontent.expansionContentMod;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ public class BabySneckoMuddleAction extends AbstractGameAction {
             // filter valid cards based on cost and tags
             for (AbstractCard card : AbstractDungeon.player.hand.group) {
                 System.out.println("DEBUG: Baby Snecko checking card: " + card);
-                if ((card.costForTurn <= 0 || card.hasTag(SneckoMod.SNEKPROOF) || card.cost != card.costForTurn) && !card.freeToPlay() && !card.freeToPlayOnce) {
+                if ((card.costForTurn <= 0 || card.hasTag(SneckoMod.SNEKPROOF) || card.cost != card.costForTurn) || card.freeToPlay() || card.freeToPlayOnce) {
                     System.out.println("DEBUG: Card found invalid, costs: " + card.costForTurn);
                     continue; // Skip invalid cards
                 }

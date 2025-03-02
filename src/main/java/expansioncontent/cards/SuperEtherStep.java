@@ -4,6 +4,7 @@ package expansioncontent.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -37,7 +38,7 @@ public class SuperEtherStep extends AbstractExpansionCard {
         baseMagicNumber = magicNumber = 1;
         //isEthereal = true;
         //tags.add(HexaMod.AFTERLIFE);
-        HexaMod.loadJokeCardImage(this, "EtherStep.png");
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "EtherStep.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

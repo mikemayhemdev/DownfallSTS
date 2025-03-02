@@ -10,7 +10,10 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
+import guardian.GuardianMod;
 import guardian.cards.BodySlam;
+
+import static guardian.GuardianMod.makeBetaCardPath;
 
 public class SuperBodyCrash extends AbstractExpansionCard {
     public static final String ID = makeID("SuperBodyCrash");
@@ -20,6 +23,7 @@ public class SuperBodyCrash extends AbstractExpansionCard {
     public SuperBodyCrash() {
         super(ID, 1, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
         setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "SuperBodyCrash.png");
         this.baseBlock = 6;
         this.tags.add(expansionContentMod.STUDY_GUARDIAN);
         this.tags.add(expansionContentMod.STUDY);
@@ -33,6 +37,7 @@ public class SuperBodyCrash extends AbstractExpansionCard {
         addToBot((AbstractGameAction)new DamageAction((AbstractCreature)m, new DamageInfo((AbstractCreature)p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         this.rawDescription = this.DESCRIPTION;
         initializeDescription();
+
     }
 
     public void applyPowers() {

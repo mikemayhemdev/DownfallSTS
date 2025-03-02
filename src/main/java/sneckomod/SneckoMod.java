@@ -320,7 +320,7 @@ public class SneckoMod implements
         }
         if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
             possList.removeIf(c -> !validColors.contains(c.color));
-        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
+        return possList.get(AbstractDungeon.miscRng.random(possList.size() - 1)).makeCopy();
     }
 
     public static AbstractCard getSpecificClassCard(AbstractCard.CardColor color) {
@@ -329,7 +329,7 @@ public class SneckoMod implements
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
         }
-        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
+        return possList.get(AbstractDungeon.miscRng.random(possList.size() - 1)).makeCopy();
     }
 
     @Deprecated
@@ -391,9 +391,9 @@ public class SneckoMod implements
                 Restock.ID,
                 PureSnecko.ID,
 
-                BlunderGuard.ID,
-                Blunderbus.ID,
-                WideAngle.ID,
+                LatchOn.ID,
+                SerpentineSleuth.ID,
+                SerpentsNest.ID,
 
                 TrashCan.ID,
                 TrashToTreasure.ID,

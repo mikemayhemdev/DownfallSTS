@@ -85,14 +85,14 @@ public class NeowBoss extends AbstractMonster {
         type = EnemyType.ELITE;
         this.baseDrawX = drawX;
 
-
+        StrGain = 1;
         if (AbstractDungeon.ascensionLevel >= 9) {
             StrGain = 2;
         } else {
             setHp(600);
         }
         if (AbstractDungeon.ascensionLevel >= 18) {
-            StrGain = 2;
+            StrGain = 3;
         }
 
 

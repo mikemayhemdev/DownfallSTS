@@ -22,6 +22,7 @@ public class Behold extends AbstractSneckoCard {
         baseDamage = BASE_DAMAGE;
         baseMagicNumber = magicNumber = EXTRA_DAMAGE;
         this.tags.add(SneckoMod.OVERFLOW);
+        SneckoMod.loadJokeCardImage(this, "Behold.png");
     }
 
     @Override
