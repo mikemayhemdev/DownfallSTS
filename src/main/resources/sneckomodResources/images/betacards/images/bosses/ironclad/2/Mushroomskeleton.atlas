@@ -1,0 +1,160 @@
+
+Mushroomskeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shadow
+  rotate: false
+  xy: 1, 116
+  size: 367, 79
+  orig: 367, 79
+  offset: 0, 0
+  index: -1
+Red mushroom
+  rotate: false
+  xy: 1, 197
+  size: 183, 136
+  orig: 183, 136
+  offset: 0, 0
+  index: -1
+neck
+  rotate: false
+  xy: 403, 346
+  size: 98, 92
+  orig: 98, 92
+  offset: 0, 0
+  index: -1
+pants
+  rotate: false
+  xy: 1, 335
+  size: 153, 113
+  orig: 153, 113
+  offset: 0, 0
+  index: -1
+shirt
+  rotate: false
+  xy: 370, 116
+  size: 127, 113
+  orig: 127, 113
+  offset: 0, 0
+  index: -1
+pauldron_low_left
+  rotate: false
+  xy: 115, 491
+  size: 26, 16
+  orig: 48, 45
+  offset: 8, 18
+  index: -1
+pauldron_left
+  rotate: false
+  xy: 186, 197
+  size: 123, 113
+  orig: 123, 113
+  offset: 0, 0
+  index: -1
+pauldron_low_right
+  rotate: false
+  xy: 374, 461
+  size: 26, 16
+  orig: 122, 113
+  offset: 51, 52
+  index: -1
+pauldron_right
+  rotate: false
+  xy: 311, 231
+  size: 123, 113
+  orig: 123, 113
+  offset: 0, 0
+  index: -1
+boot_right
+  rotate: false
+  xy: 186, 312
+  size: 122, 113
+  orig: 122, 113
+  offset: 0, 0
+  index: -1
+boot_left
+  rotate: false
+  xy: 310, 346
+  size: 91, 113
+  orig: 91, 113
+  offset: 0, 0
+  index: -1
+glove_right
+  rotate: false
+  xy: 115, 450
+  size: 35, 39
+  orig: 122, 113
+  offset: 45, 34
+  index: -1
+glove_left
+  rotate: false
+  xy: 374, 479
+  size: 24, 15
+  orig: 77, 45
+  offset: 27, 15
+  index: -1
+sword
+  rotate: false
+  xy: 1, 1
+  size: 303, 113
+  orig: 303, 113
+  offset: 0, 0
+  index: -1
+hand_right
+  rotate: false
+  xy: 327, 461
+  size: 45, 45
+  orig: 45, 45
+  offset: 0, 0
+  index: -1
+hand_left
+  rotate: false
+  xy: 248, 461
+  size: 77, 45
+  orig: 77, 45
+  offset: 0, 0
+  index: -1
+white mushroom
+  rotate: false
+  xy: 156, 427
+  size: 90, 67
+  orig: 90, 67
+  offset: 0, 0
+  index: -1
+Yellow mushroom
+  rotate: false
+  xy: 403, 440
+  size: 90, 67
+  orig: 90, 67
+  offset: 0, 0
+  index: -1
+mushroom vine
+  rotate: false
+  xy: 436, 231
+  size: 55, 61
+  orig: 55, 61
+  offset: 0, 0
+  index: -1
+mushroom vine2
+  rotate: false
+  xy: 1, 450
+  size: 55, 61
+  orig: 55, 61
+  offset: 0, 0
+  index: -1
+helmet
+  rotate: false
+  xy: 306, 1
+  size: 183, 113
+  orig: 183, 113
+  offset: 0, 0
+  index: -1
+mushroom purple
+  rotate: false
+  xy: 58, 450
+  size: 55, 61
+  orig: 55, 61
+  offset: 0, 0
+  index: -1

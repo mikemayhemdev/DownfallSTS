@@ -248,10 +248,10 @@
   },
   "sneckomod:ToothAndClaw": {
     "NAME": "Tooth And Claw",
-    "DESCRIPTION": "Deal !D! damage. Gain a Shiv for each unique color in your hand. NL sneckomod:Gift: Uncommon.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain an Upgraded Shiv for each unique color in your hand. NL sneckomod:Gift: Uncommon.",
-    "DESCRIPTION_BATTLE": "Deal !D! damage. Gain a Shiv for each unique color in your hand.",
-    "UPGRADE_DESCRIPTION_BATTLE": "Deal !D! damage. Gain an Upgraded Shiv for each unique color in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a Shiv for each unique color in your hand. NL sneckomod:Gift: Uncommon.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain an Upgraded Shiv for each unique color in your hand. NL sneckomod:Gift: Uncommon.",
+    "DESCRIPTION_BATTLE": "Deal !D! damage. NL Gain a Shiv for each unique color in your hand.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Deal !D! damage. NL Gain an Upgraded Shiv for each unique color in your hand."
   },
   "sneckomod:TyphoonFang": {
     "NAME": "Typhoon Fang",

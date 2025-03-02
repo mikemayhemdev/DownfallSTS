@@ -1,0 +1,62 @@
+
+Hermit_Sharp.png
+size: 256,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Shadow
+  rotate: false
+  xy: 1, 345
+  size: 196, 31
+  orig: 196, 31
+  offset: 0, 0
+  index: -1
+Leg_r
+  rotate: false
+  xy: 199, 334
+  size: 40, 52
+  orig: 40, 52
+  offset: 0, 0
+  index: -1
+Leg_L
+  rotate: false
+  xy: 183, 276
+  size: 40, 56
+  orig: 40, 56
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 1, 1
+  size: 188, 197
+  orig: 188, 197
+  offset: 0, 0
+  index: -1
+Eye
+  rotate: false
+  xy: 115, 313
+  size: 32, 21
+  orig: 32, 21
+  offset: 0, 0
+  index: -1
+Hat
+  rotate: false
+  xy: 1, 276
+  size: 112, 67
+  orig: 112, 67
+  offset: 0, 0
+  index: -1
+gun
+  rotate: false
+  xy: 1, 200
+  size: 224, 74
+  orig: 224, 74
+  offset: 0, 0
+  index: -1
+arm_L
+  rotate: false
+  xy: 115, 276
+  size: 66, 35
+  orig: 66, 35
+  offset: 0, 0
+  index: -1
