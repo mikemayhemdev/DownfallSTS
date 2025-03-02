@@ -139,6 +139,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.stance = new EnNeutralStance();
         this.orbs = new ArrayList<AbstractOrb>();
         this.relics = new ArrayList<AbstractCharbossRelic>();
+        type = EnemyType.BOSS;
     }
 
     @Override

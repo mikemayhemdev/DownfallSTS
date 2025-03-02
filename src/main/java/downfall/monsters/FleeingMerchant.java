@@ -101,11 +101,11 @@ public class FleeingMerchant extends AbstractMonster {
         e.setTime(e.getEndTime() * MathUtils.random());
         e.setTimeScale(1.0F);
 
-        if (AbstractDungeon.floorNum > 49) {
+        if (AbstractDungeon.floorNum >= 50) {
             type = EnemyType.BOSS;
         }
 
-        if (!(AbstractDungeon.floorNum > 49)) {
+        if (!(AbstractDungeon.floorNum < 50)) {
             type = EnemyType.NORMAL;
         }
 
