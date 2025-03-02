@@ -16,7 +16,9 @@ public class GiantHeadCardStageOne extends AbstractCollectibleCard {
 
     public GiantHeadCardStageOne() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        cardsToPreview = new GiantHeadCardStageTwo();
+        AbstractCard tar = new GiantHeadCardStageTwo();
+        CardModifierManager.addModifier(tar, new CollectedCardMod());
+        cardsToPreview = tar;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
