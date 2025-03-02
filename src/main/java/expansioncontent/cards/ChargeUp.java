@@ -28,7 +28,7 @@ public class ChargeUp extends AbstractExpansionCard {
         this.tags.add(expansionContentMod.STUDY);
         this.baseMagicNumber = this.magicNumber = 2;
         this.exhaust = true;
-        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("ChargeUp.png"));
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "BronzeArmor.png");
 
     }
 

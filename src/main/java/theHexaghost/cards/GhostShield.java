@@ -1,10 +1,12 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import downfall.downfallMod;
+import expansioncontent.expansionContentMod;
 import theHexaghost.HexaMod;
 import theHexaghost.util.HexaPurpleTextInterface;
 
@@ -22,7 +24,7 @@ public class GhostShield extends AbstractHexaCard implements HexaPurpleTextInter
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
-        HexaMod.loadJokeCardImage(this, "GhostShield.png");
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "GhostShield.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

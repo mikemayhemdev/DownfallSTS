@@ -37,7 +37,7 @@ public class GoopSpray extends AbstractExpansionCard {
         this.tags.add(expansionContentMod.STUDY);
         this.baseDownfallMagic = 2;
         this.baseMagicNumber = this.magicNumber = 8;
-        SlimeboundMod.loadJokeCardImage(this, "GoopSpray.png");
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "GoopSpray.png");
     }
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!this.upgraded) {
