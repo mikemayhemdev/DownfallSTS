@@ -1253,6 +1253,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
 
         //RUN HISTORY WORKS NOW!!! You can now actually see what bosses you fought in a run.
+        //it doesn't work :(
         BaseMod.addMonster(CharBossIronclad.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[1], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
         BaseMod.addMonster(CharBossSilent.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[2], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
         BaseMod.addMonster(CharBossDefect.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[3], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
