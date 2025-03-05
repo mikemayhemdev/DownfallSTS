@@ -22,8 +22,12 @@ public class SpireShieldPatch {
     public static SpireReturn<Void> Insert(SpireShield __instance) {
         if ((AbstractDungeon.player instanceof SlimeboundCharacter || AbstractDungeon.player instanceof TheHexaghost || AbstractDungeon.player instanceof TheSnecko) && AbstractDungeon.aiRng.randomBoolean()) {
 
-            if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+            if (AbstractDungeon.player instanceof SlimeboundCharacter && AbstractDungeon.player.maxOrbs > 0) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, __instance, new PotencyPower(AbstractDungeon.player, __instance, -1)));
+            }
+
+            if (AbstractDungeon.player instanceof SlimeboundCharacter && !(AbstractDungeon.player.maxOrbs > 0)) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, __instance, new StrengthPower(AbstractDungeon.player, -1)));
             }
 
             if (AbstractDungeon.player instanceof TheHexaghost) {
