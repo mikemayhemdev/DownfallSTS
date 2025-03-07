@@ -32,7 +32,7 @@ public class ChosenStrike extends AbstractBronzeCard {
     public void applyPowers() {
         super.applyPowers();
         baseDamage = DAMAGE + misc;
-        if (upgraded) baseDamage += UPG_DAMAGE;
+       // if (upgraded) baseDamage += UPG_DAMAGE;
     }
 
     @Override
@@ -62,8 +62,9 @@ public class ChosenStrike extends AbstractBronzeCard {
     }
 
     public void upp() {
-        misc += 3;
-        upgradedDamage = true;
-        baseDamage = DAMAGE + misc;
+      //  misc += 3;
+        //        upgradedDamage = true;
+        //        baseDamage = DAMAGE + misc;
+        upgradeBaseCost(1);
     }
 }
