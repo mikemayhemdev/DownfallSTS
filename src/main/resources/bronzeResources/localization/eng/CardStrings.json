@@ -38,8 +38,8 @@
   },
   "bronze:BitShift": {
     "NAME": "Bit Shift",
-    "DESCRIPTION": "Choose an Encoded card to return to your hand. It gains Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose an Encoded card to return to your hand. It gains Retain. NL Exhaust."
+    "DESCRIPTION": "Choose an Encoded card to return to your hand. NL It gains Retain. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose an Encoded card to return to your hand. NL It gains Retain. NL Exhaust."
   },
   "bronze:Boost": {
     "NAME": "Boost",
@@ -409,7 +409,7 @@
   },
   "bronze:Replicate": {
     "NAME": "Replicate",
-    "DESCRIPTION": "Deal !D! damage. \u202F When *Encoded, add a copy to your discard pile.",
+    "DESCRIPTION": "Deal !D! damage. \u202F NL When *Encoded, add a copy to your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "copying",
       "Copy"

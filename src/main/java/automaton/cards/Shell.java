@@ -19,7 +19,7 @@ public class Shell extends AbstractBronzeCard {
     private static final int UPG_BLOCK = 5;
 
     public Shell() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         thisEncodes();
         baseMagicNumber = magicNumber = 1;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Shell.png"));
@@ -29,15 +29,16 @@ public class Shell extends AbstractBronzeCard {
         applyToSelf(new BlurPower(p, magicNumber));
     }
 
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay && upgraded) {
-            applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
-        }
-    }
+//    @Override
+//    public void onCompile(AbstractCard function, boolean forGameplay) {
+//        if (forGameplay && upgraded) {
+//                    applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
+//                }
+//    }
 
     public void upp() {
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeBaseCost(1);
+       // rawDescription = UPGRADE_DESCRIPTION;
+       // initializeDescription();
     }
 }

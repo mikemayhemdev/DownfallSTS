@@ -18,7 +18,7 @@ public class InfiniteLoop extends AbstractBronzeCard {
     private boolean showCard;
 
     public InfiniteLoop(boolean showCard) {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 2;
         thisEncodes();
