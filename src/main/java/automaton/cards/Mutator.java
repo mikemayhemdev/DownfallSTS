@@ -20,10 +20,11 @@ public class Mutator extends AbstractBronzeCard {
     public Mutator() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Mutator.png"));
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new StrengthPower(p, 1));
+        applyToSelf(new StrengthPower(p, magicNumber));
         AbstractCard q = this;
         atb(new SelectCardsInHandAction(1, masterUI.TEXT[6], c -> c.type == CardType.STATUS, (cards) -> {
             att(new MakeTempCardInHandAction(q.makeStatEquivalentCopy(), true));
