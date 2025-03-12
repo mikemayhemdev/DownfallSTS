@@ -20,7 +20,7 @@ public class FastForward extends AbstractGuardianCard {
     private static final CardStrings cardStrings;
 
     public FastForward() {
-        super(ID, cardStrings.NAME, IMG_PATH, 0, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.GUARDIAN, CardRarity.RARE, CardTarget.NONE);
+        super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.GUARDIAN, CardRarity.RARE, CardTarget.NONE);
         this.magicNumber = this.baseMagicNumber = 3;
         this.socketCount = 0;
         updateDescription();
@@ -46,9 +46,10 @@ public class FastForward extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            selfRetain = true;
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+//            selfRetain = true;
+//            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+//            this.initializeDescription();
+            upgradeBaseCost(0);
         }
     }
 
