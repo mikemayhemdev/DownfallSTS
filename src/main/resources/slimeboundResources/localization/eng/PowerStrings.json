@@ -484,8 +484,8 @@
   "Slimebound:BuffSecondarySlimeEffectsPower": {
     "NAME": "Minion Master",
     "DESCRIPTIONS": [
-      "Whenever you play a card with Command, Command again.",
-      "Whenever you play a card with Command, Command #b",
+      "Whenever you play a card with #yCommand [REMOVE_SPACE], #yCommand again.",
+      "Whenever you play a card with #yCommand [REMOVE_SPACE], Command #b",
       " additional times."
     ]
   },

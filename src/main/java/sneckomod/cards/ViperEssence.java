@@ -17,7 +17,7 @@ public class ViperEssence extends AbstractSneckoCard {
 
     public ViperEssence() {
         super(ID, 0, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        SneckoMod.loadJokeCardImage(this, "SoulRoll.png");
+        SneckoMod.loadJokeCardImage(this, "ViperEssence.png");
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
     }

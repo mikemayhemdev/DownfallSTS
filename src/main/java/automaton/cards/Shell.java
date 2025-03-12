@@ -29,15 +29,16 @@ public class Shell extends AbstractBronzeCard {
         applyToSelf(new BlurPower(p, magicNumber));
     }
 
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay && upgraded) {
-            applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
-        }
+   @Override
+   public void onCompile(AbstractCard function, boolean forGameplay) {
+       if (forGameplay && upgraded) {
+                    applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
+               }
     }
 
     public void upp() {
+       // upgradeBaseCost(1);
         rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+       initializeDescription();
     }
 }

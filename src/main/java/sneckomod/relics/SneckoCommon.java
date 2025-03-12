@@ -36,11 +36,8 @@ public class SneckoCommon extends CustomRelic {
             AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c ->
                     c.type == AbstractCard.CardType.POWER && c.rarity == AbstractCard.CardRarity.UNCOMMON);
 
-            if (((newCard.type == AbstractCard.CardType.SKILL) && (AbstractDungeon.player.hasRelic(ToxicEgg2.ID)) ||
-                    ((newCard.type == AbstractCard.CardType.ATTACK) && (AbstractDungeon.player.hasRelic(MoltenEgg2.ID)) ||
-                            (newCard.type == AbstractCard.CardType.POWER) && (AbstractDungeon.player.hasRelic(FrozenEgg2.ID)) ||
-                            AbstractDungeon.player.hasRelic(UnknownEgg.ID)))) {
-                newCard.upgrade();
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                r.onPreviewObtainCard(newCard);
             }
 
             //newCard.upgrade();

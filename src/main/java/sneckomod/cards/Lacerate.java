@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.FrozenEgg2;
 import com.megacrit.cardcrawl.relics.MoltenEgg2;
 import com.megacrit.cardcrawl.relics.ToxicEgg2;
@@ -47,6 +48,11 @@ public class Lacerate extends AbstractSneckoCard {
         public void onObtainCard() {
             ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
             AbstractCard r = new CripplingPoison();
+
+            for (AbstractRelic relic : AbstractDungeon.player.relics) {
+                relic.onPreviewObtainCard(r);
+            }
+
             cardsToReward.add(r.makeCopy());
             SneckoMod.addGift(cardsToReward);
         }

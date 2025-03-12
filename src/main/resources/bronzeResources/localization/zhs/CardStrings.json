@@ -360,8 +360,8 @@
   },
   "bronze:Mutator": {
     "NAME": "赋值",
-    "DESCRIPTION": "获得 1 点 力量 。 NL 将手中一张 状态牌 变为本牌的复制品。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 1 点 力量 。 NL 将手中一张 状态牌 变为本牌的复制品。"
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 将手中一张 状态牌 变为本牌的复制品。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 !M! 点 力量 。 NL 将手中一张 状态牌 变为本牌的复制品。"
   },
   "bronze:Allocate": {
     "NAME": "分配",

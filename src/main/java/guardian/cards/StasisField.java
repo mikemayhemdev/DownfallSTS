@@ -24,7 +24,7 @@ public class StasisField extends AbstractGuardianCard implements InStasisCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -36,7 +36,7 @@ public class StasisField extends AbstractGuardianCard implements InStasisCard {
 
     public StasisField() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        this.baseBlock = 4;
+        this.baseBlock = 6;
         this.socketCount = 0;
         this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
@@ -47,14 +47,13 @@ public class StasisField extends AbstractGuardianCard implements InStasisCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         this.useGems(p, m);
     }
 
-    @Override
-    public void onEvoke(StasisOrb orb) {
-    }
+//    @Override
+//    public void onEvoke(StasisOrb orb) {
+//        addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
+//    }
 
 
     public AbstractCard makeCopy() {
@@ -64,7 +63,7 @@ public class StasisField extends AbstractGuardianCard implements InStasisCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(1);
+            upgradeBlock(2);
         }
     }
 
@@ -85,5 +84,3 @@ public class StasisField extends AbstractGuardianCard implements InStasisCard {
 
     }
 }
-
-

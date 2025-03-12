@@ -48,9 +48,4 @@ public class Serpentscale extends AbstractSneckoCard {
         }
     }
 
-@Override
-public void initializeDescription() {
-    super.initializeDescription();
-    this.keywords.add(downfallMod.keywords_and_proper_names.get("plated"));
-}
 }

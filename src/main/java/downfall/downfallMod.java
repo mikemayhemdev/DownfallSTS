@@ -1253,6 +1253,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
 
         //RUN HISTORY WORKS NOW!!! You can now actually see what bosses you fought in a run.
+        //it doesn't work :(
         BaseMod.addMonster(CharBossIronclad.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[1], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
         BaseMod.addMonster(CharBossSilent.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[2], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
         BaseMod.addMonster(CharBossDefect.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[3], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
@@ -1269,15 +1270,15 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     }
 
     public void addPotions() {
-         BaseMod.addPotion(BossPotion.class, Color.MAROON, Color.MAROON, new Color(0x470000ff), BossPotion.POTION_ID);
+            BaseMod.addPotion(BossPotion.class, Color.MAROON, Color.MAROON, new Color(0x470000ff), BossPotion.POTION_ID);
             BaseMod.addPotion(BlockOnCardUsePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, BlockOnCardUsePotion.POTION_ID);
             BaseMod.addPotion(MuddlingPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, MuddlingPotion.POTION_ID);
             BaseMod.addPotion(ThreeZeroPotion.class, Color.FOREST, Color.BLACK, Color.BLACK, ThreeZeroPotion.POTION_ID);
-            BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID);
+           // BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID);
             BaseMod.addPotion(CounterstrikePotion.class, Color.GRAY, Color.GRAY, Color.BLACK, CounterstrikePotion.POTION_ID);
             BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
             BaseMod.addPotion(WizPotion.class, Color.PURPLE, Color.PINK, Color.PURPLE, WizPotion.POTION_ID);
-        BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+        // BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
 
 
         if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_events){
