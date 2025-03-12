@@ -173,7 +173,6 @@ public class SlimeAutoAttack extends AbstractGameAction {
 
             if (this.hitsAll) {
                 AbstractDungeon.actionManager.addToTop(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(this.damage, true, true), DamageInfo.DamageType.THORNS, AttackEffect.POISON));
-
             } else {
                 AbstractDungeon.actionManager.addToTop(new DamageAction(mo,
                         new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.THORNS),
