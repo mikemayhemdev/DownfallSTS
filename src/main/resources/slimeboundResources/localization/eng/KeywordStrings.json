@@ -45,7 +45,7 @@
       "torchhead_slime"
     ],
     "PROPER_NAME": "Torch Head Slime",
-    "DESCRIPTION": "Attacks for #b6 each turn. Gains damage from your #yStrength [REMOVE_SPACE]."
+    "DESCRIPTION": "Attacks for #b6 each turn. Gains damage from your #yStrength."
   },
   {
     "NAMES": [
@@ -64,7 +64,7 @@
       "cultist_slime"
     ],
     "PROPER_NAME": "Cultist Slime",
-    "DESCRIPTION": "Attacks for #b6 each turn, then increases its damage by #b1 [REMOVE_SPACE]."
+    "DESCRIPTION": "Attacks for #b6 each turn, then increases its damage by #b1."
   },
   {
     "NAMES": [
