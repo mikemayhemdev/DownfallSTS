@@ -27,9 +27,9 @@
       "You decide that something this powerful is probably here for good reason. Though your instinct says that you should do something with such a powerful object, you reason that whoever left this here did so with purpose.  You close the lid, and move on."
     ],
     "OPTIONS": [
-      "[Use] #gGain #gQuantum #gChamber [REMOVE_SPACE]. #rBecome #rCursed #r- #rAged [REMOVE_SPACE].",
+      "[Use] #gGain #gQuantum #gChamber. #rBecome #rCursed #r- #rAged.",
       "[Smash] #gGain #g",
-      " #gMax #gHP [REMOVE_SPACE]. #rBecome #rCursed #r- #rPain [REMOVE_SPACE].",
+      " #gMax #gHP. #rBecome #rCursed #r- #rPain.",
       "[Leave]"
     ]
   },
