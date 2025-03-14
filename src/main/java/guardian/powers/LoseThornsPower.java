@@ -66,7 +66,7 @@ public class LoseThornsPower extends AbstractGuardianPower {
             }
             ObsidianScales OScalesInstance = new ObsidianScales();
             if (AbstractDungeon.player.hasRelic(ObsidianScales.ID)) {
-                this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, 3), 3));
+                this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, 1), 1));
                 OScalesInstance.flash();
             }
         }
