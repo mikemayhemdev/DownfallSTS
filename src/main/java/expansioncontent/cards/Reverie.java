@@ -33,7 +33,8 @@ public class Reverie extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            //upgradeMagicNumber(2);
+            upgradeBaseCost(2);
         }
     }
 
