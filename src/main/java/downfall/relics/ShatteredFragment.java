@@ -54,6 +54,27 @@ public class ShatteredFragment extends CustomRelic {
 //        this.addToBot(new MakeTempCardInHandAction(new BloodySacrifice()));// 25
 //    }
 
+    //    public void onUseCard(AbstractCard card, UseCardAction action) {
+    //        if (card.type == AbstractCard.CardType.POWER) {
+    //            boolean isEliteOrBoss = AbstractDungeon.getCurrRoom().eliteTrigger;
+    //            Iterator var2 = AbstractDungeon.getMonsters().monsters.iterator();
+    //
+    //            while(var2.hasNext()) {
+    //                AbstractMonster m = (AbstractMonster)var2.next();
+    //                if (m.type == AbstractMonster.EnemyType.BOSS) {
+    //                    isEliteOrBoss = true;
+    //                }
+    //            }
+    //
+    //            if (isEliteOrBoss) {
+    //                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+    //                atb((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new StrengthPower((AbstractCreature)AbstractDungeon.player, 1), 1));
+    //            }
+    //        }
+    //    }
+
+
+
     public void atBattleStart() {
         boolean isEliteOrBoss = AbstractDungeon.getCurrRoom().eliteTrigger;
         Iterator var2 = AbstractDungeon.getMonsters().monsters.iterator();
