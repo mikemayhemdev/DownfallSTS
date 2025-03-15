@@ -39,13 +39,6 @@ public class Lariat extends AbstractChampCard {
 
     }
 
-    @Override
-    public void initializeDescription() {
-        super.initializeDescription();
-        String afterlife_name = downfallMod.keywords_and_proper_names.get("Stance");
-        this.keywords.add(afterlife_name);
-    }
-
     public void upp() {
         upgradeBlock(2);
     }

@@ -10,12 +10,12 @@
       "Using the mining pick, you hammer away at the wall and carve out a gem. The pick takes some wear and tear in the process, but better to damage it than your claws."
     ],
     "OPTIONS": [
-      "[Dig with Claws] #gGain #grandom #gGem [REMOVE_SPACE]. #rLose #r",
-      " #rHP [REMOVE_SPACE].",
+      "[Dig with Claws] #gGain #grandom #gGem. #rLose #r",
+      " #rHP.",
       "[Leave]",
-      "[Rob] #rFight #rGremlins [REMOVE_SPACE]. #gGain #gPick #gof #gRhapsody [REMOVE_SPACE].",
-      "[Mine with Pick] #gGain #grandom #gGem [REMOVE_SPACE]. #rLose #rPick #rcharge [REMOVE_SPACE].",
-      "[Locked] Pick #rBroken [REMOVE_SPACE]."
+      "[Rob] #rFight #rGremlins. #gGain #gPick #gof #gRhapsody.",
+      "[Mine with Pick] #gGain #grandom #gGem. #rLose #rPick #rcharge.",
+      "[Locked] Pick #rBroken."
     ]
   },
   "Guardian:StasisEgg": {

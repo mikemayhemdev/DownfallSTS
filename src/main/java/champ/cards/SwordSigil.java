@@ -29,11 +29,4 @@ public class SwordSigil extends AbstractChampCard {
        // upgradeCool(2);
     }
 
-    @Override
-    public void initializeDescription() {
-        super.initializeDescription();
-        String afterlife_name = downfallMod.keywords_and_proper_names.get("Stance");
-        this.keywords.add(afterlife_name);
-    }
-
 }
