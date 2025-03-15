@@ -32,6 +32,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -49,6 +50,7 @@ import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
+import guardian.relics.ObsidianScales;
 import guardian.stances.DefensiveMode;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -564,6 +566,9 @@ public class ChampMod implements
                 int x = begone;
                 if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
                     if (x + AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
+                        PowerArmor PowerArmorInstance = new PowerArmor();
+                        PowerArmorInstance.flash();
+                        addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, PowerArmorInstance));
                         x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
                     }
                 }
