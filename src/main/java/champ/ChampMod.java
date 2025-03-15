@@ -527,9 +527,11 @@ public class ChampMod implements
 
     @Override
     public int receiveOnPlayerLoseBlock(int i) {
-        if(AbstractDungeon.player.stance instanceof DefensiveMode){
-            return i;
-        }
+
+        //This only seems to create a bug with Deflecting Bracers?
+        //if(AbstractDungeon.player.stance instanceof DefensiveMode){
+        //return i;
+        //}
         if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
             int counter = Math.min(i, AbstractDungeon.player.currentBlock / 2);
             if (counter > 0) {

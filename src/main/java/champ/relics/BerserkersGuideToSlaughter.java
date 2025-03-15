@@ -8,8 +8,7 @@ import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import static champ.ChampMod.makeRelicOutlinePath;
-import static champ.ChampMod.makeRelicPath;
+import static champ.ChampMod.*;
 
 public class BerserkersGuideToSlaughter extends CustomRelic {
 
@@ -24,8 +23,8 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
     @Override
     public void atTurnStart() {
         super.atTurnStart();
-
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, 3), 3));
+        vigor(3);
+        //addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, 3), 3));
     }
 
     @Override
