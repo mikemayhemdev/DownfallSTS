@@ -45,6 +45,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.Calipers;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.downfallMod;
@@ -537,7 +538,13 @@ public class ChampMod implements
         }
 
         if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
+
             int counter = Math.min(i, AbstractDungeon.player.currentBlock / 2);
+
+            if (AbstractDungeon.player.hasRelic(Calipers.ID)) {
+            counter = Math.min(7, AbstractDungeon.player.currentBlock / 2);
+            }
+
             if (counter > 0) {
                 AbstractDungeon.player.getRelic(DeflectingBracers.ID).flash();
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(counter), counter));
