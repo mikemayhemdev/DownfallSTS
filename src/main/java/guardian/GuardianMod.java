@@ -9,6 +9,8 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.powers.CounterPower;
+import champ.relics.DeflectingBracers;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -16,6 +18,7 @@ import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -450,6 +453,13 @@ public class GuardianMod implements PostDrawSubscriber,
         if (AbstractDungeon.player.stance instanceof DefensiveMode) {
             return 0;
         } else {
+            if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
+                int counter = Math.min(i, AbstractDungeon.player.currentBlock / 2);
+                if (counter > 0) {
+                    AbstractDungeon.player.getRelic(DeflectingBracers.ID).flash();
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(counter), counter));
+                }
+            }
             return i;
         }
     }
