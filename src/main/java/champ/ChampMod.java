@@ -541,6 +541,7 @@ public class ChampMod implements
 
             int counter = Math.min(i, AbstractDungeon.player.currentBlock / 2);
 
+            //Calipers would be good here.
             if (AbstractDungeon.player.hasRelic(Calipers.ID)) {
             counter = Math.min(7, AbstractDungeon.player.currentBlock / 2);
             }
