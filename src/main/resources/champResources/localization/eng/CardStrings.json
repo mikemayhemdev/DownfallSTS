@@ -37,7 +37,7 @@
   },
   "champ:SwordSigil": {
     "NAME": "Sigil of Victory",
-    "DESCRIPTION": "Trigger your current Stance's *Skill champ:Bonus !M! times."
+    "DESCRIPTION": "Trigger your current *Stance's *Skill champ:Bonus !M! times."
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
@@ -146,7 +146,7 @@
   },
   "champ:Lariat": {
     "NAME": "Lariat",
-    "DESCRIPTION": "Gain !B! Block X times. NL Trigger your Stance's *Skill champ:Bonus X times."
+    "DESCRIPTION": "Gain !B! Block X times. NL Trigger your *Stance's *Skill champ:Bonus X times."
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import downfall.downfallMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 import static collector.util.Wiz.applyToSelf;
@@ -36,6 +37,13 @@ public class Lariat extends AbstractChampCard {
             return true;
         }, 0));
 
+    }
+
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        String afterlife_name = downfallMod.keywords_and_proper_names.get("Stance");
+        this.keywords.add(afterlife_name);
     }
 
     public void upp() {
