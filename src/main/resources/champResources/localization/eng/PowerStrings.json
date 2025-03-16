@@ -103,7 +103,7 @@
   "champ:DefensiveStylePower": {
     "NAME": "Defensive Style",
     "DESCRIPTIONS": [
-      "#yDefensive #ySkill Bonuses grant #b",
+      "#bDefensive #ySkill #yBonuses grant #b",
       " additional #yCounter [REMOVE_SPACE]."
     ]
   },
@@ -117,7 +117,7 @@
   "champ:BerserkerStylePower": {
     "NAME": "Berserker Style",
     "DESCRIPTIONS": [
-      "#yBerserker #ySkill Bonuses grant #b",
+      "#rBerserker #ySkill #yBonuses grant #b",
       " more #yVigor."
     ]
   },
@@ -141,14 +141,14 @@
   "champ:IronFortressPower": {
     "NAME": "Technical Jig",
     "DESCRIPTIONS": [
-      "Whenever you enter a Stance, gain #b",
+      "Whenever you enter a #yStance, gain #b",
       " #yBlock."
     ]
   },
   "champ:IronFortressVigorPower": {
     "NAME": "Technical Jig: Berserker",
     "DESCRIPTIONS": [
-      "Whenever you enter a Stance, trigger Berserker Stance's #ySkill Bonus",
+      "Whenever you enter a Stance, trigger #rBerserker #rStance's #ySkill Bonus",
       " #b",
       " times."
     ]
