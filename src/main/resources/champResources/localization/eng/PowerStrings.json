@@ -157,7 +157,7 @@
     "NAME": "Last Stand",
     "DESCRIPTIONS": [
       "At the start of turn, if HP is at or below 50%, cleanse all debuffs and gain ",
-      " Strength."
+      " #yStrength."
     ]
   },
   "champ:GladiatorFormPower": {
