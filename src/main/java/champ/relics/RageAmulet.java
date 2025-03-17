@@ -33,7 +33,7 @@ public class RageAmulet extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("CrystallizedMud.png"));
     private boolean triggeredThisTurn = false;
     int remainingVigor = 0;
-    private static final int VIGREQ = 12;
+    private static final int VIGREQ = 8;
     public RageAmulet() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.HEAVY);
     }
