@@ -66,7 +66,7 @@
       "[Prize?] #rCurse #r- #rDecay.",
       "[Prize!] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
       "[Prize?] #rLose #r",
-      " #rHP [REMOVE_SPACE].",
+      " #rHP.",
       "[Leave]",
       "Select a Card to Remove.",
       "[Again!]",
@@ -87,7 +87,7 @@
   "downfall:LivingWall": {
     "NAME": "Living Wall",
     "OPTIONS": [
-      "[Punch] #rFight. #gUse #gall #g3 #gHeads [REMOVE_SPACE]."
+      "[Punch] #rFight. #gUse #gall #g3 #gHeads."
     ]
   },
   "downfall:Augmenter": {
@@ -360,7 +360,7 @@
       "Deciding this bottom-feeder of a creature does not belong in the Spire, you deliver a swift and powerful blow directly to N'loths chest. NL NL As the creature recoils in agony, its tentacles @lash@ @out@ at you in reflex, leaving a #rpainful sting! NL NL When the creature's lifeless form hits the ground, you hear the rattling of charms and trinkets. Scouring through his body, just as it once scoured through the trash pile, you uncover a potent magical item."
     ],
     "OPTIONS": [
-      "[Punch] #gGain #gRandom #gRelic [REMOVE_SPACE]. #rBecome #rCursed #r- #rPain [REMOVE_SPACE]."
+      "[Punch] #gGain #gRandom #gRelic. #rBecome #rCursed #r- #rPain."
     ]
   },
   "downfall:KnowingSkull": {
