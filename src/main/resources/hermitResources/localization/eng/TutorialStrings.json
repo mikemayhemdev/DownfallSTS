@@ -119,7 +119,7 @@
   "HermitMod:CollectorTutorials": {
     "TEXT": [
       "Collector takes Essences from foes. You can spend Essences to add their spirits into your Collection.",
-      "The Collection is a separate deck. You draw one of your five cards each turn from it."
+      "The Collection is a separate deck. You draw one card from it each turn."
     ],
     "LABEL": [
       "Next",

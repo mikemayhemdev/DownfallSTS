@@ -39,7 +39,7 @@
       "You decide to put the forge to use and... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...make some room in your arsenal for new gemstones."
     ],
     "OPTIONS": [
-      "[Tinker] #gAdd #ga #gsocket #gto #gany #gsocketed #gcard [REMOVE_SPACE].",
+      "[Tinker] #gAdd #ga #gsocket #gto #gany #gsocketed #gcard.",
       "Add a socket to a card.",
       "[Locked] Requires a card with sockets."
     ]
@@ -77,13 +77,13 @@
       "Taking advantage of this break in the climb, you place a gemstone into your equipment, instantly feeling your power grow."
     ],
     "OPTIONS": [
-      "[Dismantle] #rRemove Socketed Card. Gain its #gGems [REMOVE_SPACE].",
+      "[Dismantle] #rRemove Socketed Card. Gain its #gGems.",
       "[Locked] Requires Socketed Card with a Gem installed.",
       "[Pry] #rDestroy all #gGems in a Socketed Card.",
-      "[Transmute] #rRemove a Card. Gain a random #gGem [REMOVE_SPACE].",
+      "[Transmute] #rRemove a Card. Gain a random #gGem.",
       "[Locked] Already used.",
       "[Leave]",
-      "[Enhance] Add a #gGem to a #gSocket [REMOVE_SPACE].",
+      "[Enhance] Add a #gGem to a #gSocket.",
       "[Locked] Requires a Gem and an open Socket."
     ]
   },
@@ -120,7 +120,7 @@
       "If you are a peg, endure the knocking; if you are a mallet, strike."
     ],
     "OPTIONS": [
-      "[Endurance] #gAdd #gBrace #g2 to all #gStrikes and #gDefends [REMOVE_SPACE].",
+      "[Endurance] #gAdd #gBrace #g2 to all #gStrikes and #gDefends.",
       "[Locked] Requires a Strike or Defend."
     ]
   }
