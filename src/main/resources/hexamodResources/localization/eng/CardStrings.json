@@ -392,7 +392,7 @@
   "hexamod:UnleashSpirits": {
     "NAME": "Unleash Spirits",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each card *Exhausted last turn.",
-    "UPGRADE_DESCRIPTION": " NL (Hits !M! times.)"
+    "UPGRADE_DESCRIPTION": " NL (Hits !M! time(s).)"
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",
