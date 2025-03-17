@@ -53,7 +53,7 @@
     "NAME": "Gremlin Leader's Voucher",
     "FLAVOR": "IOU 1 Gremlin",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Upon pickup, #rpermanently #rlose #ra #rGremlin [REMOVE_SPACE].",
+      "Gain [E] at the start of your turn. NL Upon pickup, #rpermanently #rlose #ra #rGremlin.",
       " NL #r( #rFat #rGremlin #r)",
       " NL #r( #rGremlin #rWizard #r)",
       " NL #r( #rMad #rGremlin #r)",
