@@ -279,8 +279,8 @@
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "Pile On!",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes twice."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL Slimes.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL Slimes twice."
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "Slime Brawl",
