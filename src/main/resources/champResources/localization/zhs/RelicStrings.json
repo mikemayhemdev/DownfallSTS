@@ -28,10 +28,19 @@
     ]
   },
   "champ:ChampionCrownUpgraded": {
-    "NAME": "终极王冠",
-    "FLAVOR": "恭喜！！你是最大的赢家。",
+    "NAME": "Victorious Crown",
+    "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
-      "替换 #r冠军金冠 。 NL 战斗开始时，进入 #ychamp:终极 并持续 #b1 回合 。"
+      "Replaces ",
+      " [REMOVE_SPACE].[] NL Start each combat in #ychamp:Ultimate #yStance [REMOVE_SPACE], which lasts for #b3 turns."
+    ]
+  },
+  "champ:RageAmulet": {
+    "NAME": "Amulet of Unyielding",
+    "FLAVOR": "Strength once thought fleeting flows through you as if it had always been there.",
+    "DESCRIPTIONS": [
+      "Whenever you spend #yVigor [REMOVE_SPACE], gain #b1 #yStrength for every #b",
+      " #yVigor spent."
     ]
   },
   "champ:DefensiveTrainingManual": {

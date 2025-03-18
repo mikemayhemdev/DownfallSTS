@@ -138,7 +138,13 @@
   },
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
-      "活墙壁"
+      "活墙壁",
+      "The Ironclad",
+      "The Silent",
+      "The Defect",
+      "The Watcher",
+      "Merchant",
+      "The Hermit"
     ]
   },
     "downfall:WhaleHunter": {
