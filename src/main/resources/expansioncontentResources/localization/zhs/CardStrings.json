@@ -1,95 +1,217 @@
 {
   "expansioncontent:GuardianWhirl": {
-    "NAME": "守护者旋风",
-    "DESCRIPTION": "有10点 格挡 才能打出。 NL 对所有敌人造成 !D! 点伤害四次。 NL 消耗 。",
+    "NAME": "Guardian Whirl",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL If you have at least !DM! Block, hits !M! more times.",
     "EXTENDED_DESCRIPTION": [
-      "我的格挡不够。"
+      "More Block required."
     ]
   },
   "expansioncontent:Hexaburn": {
-    "NAME": "幽灵地狱",
-    "DESCRIPTION": "!M! 回合后，随机对敌人造成 !D! 点伤害六次。"
+    "NAME": "Hexaburn",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
   },
   "expansioncontent:InvincibleStrength": {
-    "NAME": "坚不可摧",
-    "DESCRIPTION": "获得1层 expansioncontent:坚不可摧 。"
+    "NAME": "Invincible",
+    "DESCRIPTION": "Gain !M! expansioncontent:Invincible. NL If you already had expansioncontent:Invincible, it lasts another turn instead."
   },
   "expansioncontent:HyperBeam": {
-    "NAME": "超能射线",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 下回合失去 [E] 。 NL 消耗 。"
+    "NAME": "Automa-Beam",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Place a *Void on top of your draw pile. NL Exhaust."
   },
   "expansioncontent:LastStand": {
-    "NAME": "背水一战",
-    "DESCRIPTION": "失去所有负面效果。 NL 获得1点 力量 。 NL 若半血以下： NL 获得2点 力量 。",
-    "UPGRADE_DESCRIPTION": "失去所有负面效果。 NL 获得1点 力量 。 NL 若半血以下： NL 回复 !M! 点生命。 NL 获得2点 力量 。"
+    "NAME": "Last Stand",
+    "DESCRIPTION": "Remove all Debuffs. NL Gain !M! Strength."
   },
   "expansioncontent:YouAreMine": {
-    "NAME": "你是我的了！",
-    "DESCRIPTION": "移除所有敌人的 格挡 。 NL 给予所有敌人 !M! 层 虚弱 与 易伤 。 NL 消耗 。"
+    "NAME": "YOU ARE MINE!",
+    "DESCRIPTION": "Apply !M! Weak, !M! Vulnerable, and !DM! expansioncontent:Doom to ALL enemies. NL Exhaust."
   },
   "expansioncontent:AwakenDeath": {
-    "NAME": "觉醒",
-    "DESCRIPTION": "下次将死或战胜时， NL 回复 !M! 点生命。"
+    "NAME": "Curiosity",
+    "DESCRIPTION": "Whenever you play a Power, gain !M! Strength."
   },
   "expansioncontent:Chronoboost": {
-    "NAME": "时空加速",
-    "DESCRIPTION": "每打出12张牌， NL 获得2点 力量 。",
-    "UPGRADE_DESCRIPTION": "获得2点 力量 。 NL 每打出12张牌， NL 获得2点 力量 。"
+    "NAME": "Chrono-Boost",
+    "DESCRIPTION": "Gain !M! Strength for every 12th card you play."
   },
   "expansioncontent:PolyBeam": {
-    "NAME": "甜圈爆破",
-    "DESCRIPTION": "获得 !M! 点 力量 。"
+    "NAME": "Donu Blast",
+    "DESCRIPTION": "Gain !M! Strength."
   },
   "expansioncontent:DecaShield": {
-    "NAME": "八体护盾",
-    "DESCRIPTION": "获得 !B! 层 *多层护甲 。"
+    "NAME": "Deca Shield",
+    "DESCRIPTION": "Gain !B! Plated Armor."
   },
   "expansioncontent:ShapePower": {
-    "NAME": "先古塑形",
-    "DESCRIPTION": "选择获得 !M! 点 力量 ， NL 或 !DM! 层 *多层护甲 。",
+    "NAME": "Shaper's Blessing",
+    "DESCRIPTION": "Gain !M! Strength and !DM! expansioncontent:Plated *Armor.",
     "EXTENDED_DESCRIPTION": [
-      "甜圈之力",
-      "获得 !M! 点 力量 。",
-      "八体护盾",
-      "获得 !M! 层 *多层护甲 。"
+      "Donu's Power",
+      "Gain !M! Strength.",
+      "Deca's Shield",
+      "Gain !M! Plated Armor."
     ]
   },
-  "expansioncontent:PrepareCrush": {
-    "NAME": "准备：猛击",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] ， NL 与一张 *史莱姆猛击 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] ， NL 与一张 *史莱姆猛击+ 。 NL 消耗 。"
+  "expansioncontent:SuperPrepareCrush": {
+    "NAME": "Prepare Crush",
+    "DESCRIPTION": "Next turn, gain *SLIME *CRUSH, [E] [E] [E] and !M! Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain *SLIME *CRUSH+, [E] [E] [E] [E] and !M! Strength. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "~Slime...~ NL #r~CRUSH!!!~"
+    ]
   },
+  "expansioncontent:SuperLivingWall": {
+    "NAME": "Living Wall",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! expansioncontent:Goop to attackers this turn."
+  },
+
   "expansioncontent:StudyTheSpire": {
-    "NAME": "研究尖塔",
-    "DESCRIPTION": "接下来 !M! 回合开始时， NL 随机获得1张 *首领 牌。 NL 其首次耗能为0。",
-    "UPGRADE_DESCRIPTION": "接下来 !M! 回合开始时， NL 随机获得1张 *首领 牌+。 NL 其首次耗能为0。"
+    "NAME": "Study the Spire",
+    "DESCRIPTION": "Gain a random *Boss card at the start of your next !M! turns. They cost 0.",
+    "UPGRADE_DESCRIPTION": "Gain a random Upgraded *Boss at the start of your next !M! turns. They cost 0."
   },
   "expansioncontent:QuickStudy": {
-    "NAME": "快速学习",
-    "DESCRIPTION": "从三张随机 *首领 牌中选择获得一张。 NL 其首次耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "从三张随机 *首领 牌+中选择获得一张。 NL 其首次耗能为0。 NL 消耗 。",
+    "NAME": "Quick Study",
+    "DESCRIPTION": "Choose 1 of 3 *Boss cards to gain. NL It costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Upgraded *Boss cards to gain. NL It costs 0 until played. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "选择一张首领牌。"
+      "Choose a Boss card."
     ]
   },
   "expansioncontent:DashGenerateEvil": {
-    "NAME": "恶灵附身",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得1张 *首领 牌。 NL 其首次耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得1张 *首领 牌+。 NL 其首次耗能为0。 NL 消耗 。"
+    "NAME": "The Evil Within",
+    "DESCRIPTION": "Whenever you apply !DM! debuffs, deal !M! damage to ALL enemies."
   },
   "expansioncontent:KnowingSkullWish": {
-    "NAME": "全知头骨",
-    "DESCRIPTION": "虚无 。 NL 支付生命以许愿灵魂、药水，或一张随机无色牌。 NL 消耗 。"
+    "NAME": "Knowing Skull",
+    "DESCRIPTION": "Ethereal. NL Spend HP to *Wish *for *Souls, *Potions, or a *Colorless card. NL Exhaust."
   },
   "expansioncontent:Antidote": {
-    "NAME": "解毒剂",
-    "DESCRIPTION": "保留 。 NL 失去 !M! 层 中毒 。"
+    "NAME": "Antidote",
+    "DESCRIPTION": "Retain. NL Lose !M! Poison."
+  },
+  "expansioncontent:SuperGhostShield": {
+    "NAME": "Ghost Shield",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Gain[] [#e087a4]!B![] [#e087a4]Block.[] NL [#e087a4]Gain[] [#e087a4]!M![] [#e087a4]Blur.[]",
+    "EXTENDED_DESCRIPTION": [
+      "Gain !B! Block."
+    ]
+  },
+  "expansioncontent:SuperGoopSpray": {
+    "NAME": "Goop Spray",
+    "DESCRIPTION": "Apply !M! expansioncontent:Goop and !DM! Weak.",
+    "UPGRADE_DESCRIPTION": "Apply !M! expansioncontent:Goop and !DM! Weak to ALL enemies."
+  },
+  "expansioncontent:ChargeUp": {
+    "NAME": "Resilient Plate",
+    "DESCRIPTION": "Reduce each of your debuffs by !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Reduce each of your debuffs by !M!."
+  },
+  "expansioncontent:SuperTaunt": {
+    "NAME": "Taunt",
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies."
+  },
+  "expansioncontent:Torchfire": {
+    "NAME": "Wildfire",
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique debuff on the enemy."
+  },
+
+  "expansioncontent:TakeFlight": {
+    "NAME": "Revitalize",
+    "DESCRIPTION": "Gain !M! expansioncontent:Regen. NL expansioncontent:Chant: Gain !DM! *Regen instead."
+  },
+  "expansioncontent:BeatOfDeath": {
+    "NAME": "Beat Of Death",
+    "DESCRIPTION": "Whenever you play a card, deal !M! damage to ALL enemies."
+  },
+  "expansioncontent:SuperViciousMockery": {
+    "NAME": "Vicious Mockery",
+    "DESCRIPTION": "Gain !M! Vigor. NL Apply !DM! Weak."
+  },
+  "expansioncontent:SuperClobber": {
+    "NAME": "Clobbering Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to unblocked damage dealt."
+  },
+
+  "expansioncontent:SuperSomberShield": {
+    "NAME": "Somber Shield",
+    "DESCRIPTION": "expansioncontent:Pyre. NL Gain !B! Block. NL Next turn, gain a copy of the *Exhausted card."
+  },
+
+  "expansioncontent:SuperWhirlingFlame": {
+    "NAME": "Whirling Flame",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a card from your discard pile on top of your draw pile."
+  },
+  "expansioncontent:Flail": {
+    "NAME": "Flail",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !DM! times. NL Gain !M! Artifact. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "flailing",
+      "Flail"
+    ]
+  },
+  "expansioncontent:SuperBloodthirst": {
+    "NAME": "Bloodthirst",
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal, obtain a random potion and Exhaust this card."
+  },
+  "expansioncontent:SuperBodyCrash": {
+    "NAME": "Body Crash",
+    "DESCRIPTION": "Gain !B! Block. NL Deal damage equal to your Block.",
+    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
+  },
+  "expansioncontent:SuperEtherStep": {
+    "NAME": "Ether Step",
+    "DESCRIPTION": "Exhaust 1 card. NL Draw !M! card. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Exhaust 1 card. NL Draw !M! cards. NL Deal !D! damage."
+  },
+
+  "expansioncontent:Virus": {
+    "NAME": "Virus",
+    "DESCRIPTION": "Exhaust up to !M! cards, shuffle a *Major *Beam into the draw pile for each card exhausted. NL Exhaust."
+  },
+
+  "expansioncontent:MajorBeam": {
+    "NAME": "Major Beam",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
+  },
+
+  "expansioncontent:ManipulateTime": {
+    "NAME": "Afterthought",
+    "DESCRIPTION": "Put a card from your discard pile to the bottom of your draw pile. It costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "Put a card from your discard pile to the bottom of your draw pile. It costs 0 this combat."
+  },
+  "expansioncontent:Pandemonium": {
+    "NAME": "Pandemonium",
+    "DESCRIPTION": "At the start of your turn, play a random card in your discard pile."
+  },
+  "expansioncontent:Reverie": {
+    "NAME": "Reverie",
+    "DESCRIPTION": "At the start of your turn, put one of the top !M! cards of your discard pile into your hand."
+  },
+  "expansioncontent:ExploitVulnerability": {
+    "NAME": "Donu Beam",
+    "DESCRIPTION": "Remove all Block from the enemy, then gain that much Block. NL Deal !D! damage twice."
+  },
+  "expansioncontent:PeekPages": {
+    "NAME": "Peek Pages",
+    "DESCRIPTION": "Shuffle !M! *Insights into your draw pile. NL Exhaust."
+  },
+  "expansioncontent:BloodBarrage": {
+    "NAME": "Blood Barrage",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Exhaust."
+  },
+  "expansioncontent:DoubleAct": {
+    "NAME": "Double Act",
+    "DESCRIPTION": "At the start of your next turn, draw cards and gain [E] an additional time. NL Exhaust."
   },
   "expansioncontent:BloodySacrifice": {
-    "NAME": "染血牺牲",
-    "DESCRIPTION": "虚无 。 NL 失去 !M! % 最大生命点生命。 NL 获得1层 仪式 。 NL 消耗 。",
+    "NAME": "Bloody Sacrifice",
+    "DESCRIPTION": "Ethereal. NL Lose !M! % of your Max HP. NL Gain 1 Ritual. Exhaust.",
     "EXTENDED_DESCRIPTION":[
-      " NL (失去 {amount} 点)"
+      " NL (Lose {amount} Max HP. )"
     ]
   }
 }
