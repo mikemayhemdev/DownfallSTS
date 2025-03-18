@@ -19,6 +19,14 @@
       " NL 不能够休息，Boss的最大生命变少。"
     ]
   },
+  "downfall:BlackCandle": {
+    "NAME": "Black Candle",
+    "FLAVOR": "The flame shines even brighter from within the darkness.",
+    "DESCRIPTIONS": [
+      "#yUnplayable #rCurse cards can now be played. Whenever you play an #yUnplayable #rCurse card, #yExhaust it and lose #b1 HP.",
+      "Black Candle"
+    ]
+  },
   "downfall:BustedCrown": {
     "DESCRIPTIONS": [
       " NL 不能获得其他牌，Boss的牌组配合比正常时少。"
