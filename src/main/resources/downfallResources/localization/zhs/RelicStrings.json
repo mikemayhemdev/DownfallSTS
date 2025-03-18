@@ -27,6 +27,13 @@
       "Black Candle"
     ]
   },
+  "downfall:BurdenOfKnowledge": {
+    "NAME": "Burden of Knowledge",
+    "FLAVOR": "The truth hurts.",
+    "DESCRIPTIONS": [
+      "Upon pickup, #rlose #rALL #rHeart #rBlessings and #b20 Max HP. Permanently #yUpgrade #rALL cards #rEVERYWHERE [REMOVE_SPACE]. Start combats with #b2 less #yStrength and #yDexterity [REMOVE_SPACE]."
+    ]
+  },
   "downfall:BustedCrown": {
     "DESCRIPTIONS": [
       " NL 不能获得其他牌，Boss的牌组配合比正常时少。"
