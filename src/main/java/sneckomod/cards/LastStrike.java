@@ -1,6 +1,7 @@
 package sneckomod.cards;
 
 import automaton.cards.goodstatus.IntoTheVoid;
+import collector.cards.BramblesparKindling;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.watcher.ExpungeVFXAction;
@@ -116,7 +117,7 @@ public class LastStrike extends AbstractSneckoCard {
 
         while (cardsToReward.size() < 3) {
             AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(
-                    c -> c.rarity != CardRarity.BASIC && (c.hasTag(CardTags.STRIKE) || c.cardID.equals(HighCaliber.ID))
+                    c -> c.rarity != CardRarity.BASIC && (c.hasTag(CardTags.STRIKE) || c.cardID.equals(HighCaliber.ID) || c.cardID.equals(BramblesparKindling.ID))
             );
 
             for (AbstractRelic r : AbstractDungeon.player.relics) {
