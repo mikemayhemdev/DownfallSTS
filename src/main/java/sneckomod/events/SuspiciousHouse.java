@@ -50,7 +50,9 @@ public class SuspiciousHouse extends AbstractImageEvent {
                         this.screen = CurScreen.COMBAT;
 
                         AbstractMonster m = new Centurion(0, 0);
-                        m.powers.add(new StrengthPower(m, 3));
+                        if (AbstractDungeon.ascensionLevel >= 15) {
+                            m.powers.add(new StrengthPower(m, 3));
+                        }
                         AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
 
                         AbstractDungeon.getCurrRoom().rewards.clear();
