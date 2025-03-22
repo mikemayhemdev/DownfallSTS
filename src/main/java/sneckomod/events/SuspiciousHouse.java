@@ -5,8 +5,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.city.Centurion;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.cards.curses.Bewildered;
 import sneckomod.relics.BabySnecko;
 
@@ -46,8 +48,11 @@ public class SuspiciousHouse extends AbstractImageEvent {
                         BabySnecko relic = new BabySnecko();
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), relic);
                         this.screen = CurScreen.COMBAT;
-                        MonsterGroup monsters = new MonsterGroup(new Centurion(0F, 0F));
-                        AbstractDungeon.getCurrRoom().monsters = monsters;
+
+                        AbstractMonster m = new Centurion(0, 0);
+                        m.powers.add(new StrengthPower(m, 3));
+                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
+
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().rewardAllowed = false;
                         AbstractDungeon.lastCombatMetricKey = "Angry Centurion";
