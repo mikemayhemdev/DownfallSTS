@@ -148,7 +148,7 @@
     "DESCRIPTION": "进入不同 姿态 时， NL 获得 !M! 点 格挡 。"
   },
   "champ:Lariat": {
-    "NAME": "身强体健",
+    "NAME": "套索臂",
     "DESCRIPTION": "获得 !B! 点 格挡 X次。 NL 获得 champ:技术 奖励X次 。"
   },
   "champ:HoldFirm": {
