@@ -40,7 +40,7 @@
     "FLAVOR": "那些转瞬即逝的力量再次涌入身躯，彷佛它不曾离开过。",
     "DESCRIPTIONS": [
       "你每消耗 #b",
-      " 层 #活力 時，获得 #b1 点 #y力量 。"
+      " 层 #y活力 時，获得 #b1 点 #y力量 。"
     ]
   },
   "champ:DefensiveTrainingManual": {
