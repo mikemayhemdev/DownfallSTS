@@ -444,8 +444,8 @@
   },
   "hexamod:OpposingAction": {
     "NAME": "反骨",
-    "DESCRIPTION": "hexamod:回退 。 NL 获得 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 获得 [E] [E] 。 NL 消耗 。"
+    "DESCRIPTION": "hexamod:回退 。 NL 获得 [E] [E] [E]。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 获得 [E] [E] [E] 。 NL 消耗 。"
   },
   "hexamod:SeventhEye": {
     "NAME": "第七感",

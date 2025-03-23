@@ -42,7 +42,7 @@ public class OpposingAction extends AbstractHexaCard{
 //        if (!this.freeToPlayOnce) {
 //            p.energy.use(EnergyPanel.totalCount);
 //        }
-        atb(new GainEnergyAction(1));
+        atb(new GainEnergyAction(2));
         if(upgraded) atb(new GainEnergyAction(1));
     }
 
