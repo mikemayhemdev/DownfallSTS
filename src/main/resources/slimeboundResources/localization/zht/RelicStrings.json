@@ -19,7 +19,7 @@
     "FLAVOR": "一條完全由黏液包裹的斷尾，戰鬥時可以迷惑敵人。",
     "DESCRIPTIONS": [
       "#yslimeboundmod:分裂 時，獲得 #b",
-      " 点 #y格擋 。"
+      " 點 #y格擋 。"
     ]
   },
   "Slimebound:PotencyRelic": {
@@ -40,7 +40,7 @@
     "NAME": "破爛黏液",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "戰鬥開始時， #yslimeboundmod:分裂 一隻可重生的 #y破爛史萊姆 。在休息處，你可以向其棄予一張牌來改變它的傷害。 NL #r詛咒牌 ： #r-2 點。 NL 普通牌 ： #r-1 點。 NL #b罕見牌 ： #g+1 點。 NL #y稀有牌 ： #g+2 點。",
+      "戰鬥開始時， #yslimeboundmod:分裂 一只可重生的 #y破爛史萊姆 。在休息處，你可以向其棄予一張牌來改變它的傷害。 NL #r詛咒牌 ： #r-2 點。 NL 普通牌 ： #r-1 點。 NL #b罕見牌 ： #g+1 點。 NL #y稀有牌 ： #g+2 點。",
       "棄予破爛史萊姆一張牌，改變它的傷害。",
       "沒有可以棄予破爛史萊姆的牌了。",
       "廢棄"
@@ -50,7 +50,7 @@
     "NAME": "貪婪黏液",
     "FLAVOR": "尖塔裏找到的囤金子的朋友。",
     "DESCRIPTIONS": [
-      "戰鬥開始時， #y分裂 一隻可重生的 #y貪婪史萊姆 。 NL 在休息處， #y貪婪史萊姆 會吞食 #b50 金幣並提高它造成的傷害 #g1 點。"
+      "戰鬥開始時， #y分裂 一只可重生的 #y貪婪史萊姆 。 NL 在休息處， #y貪婪史萊姆 會吞食 #b50 金幣並提高它造成的傷害 #g1 點。"
     ]
   },
   "Slimebound:PreparedRelic": {
@@ -64,7 +64,7 @@
     "NAME": "黏液居者",
     "FLAVOR": "是它跟著我回家的。我能收養它嗎？",
     "DESCRIPTIONS": [
-      "戰鬥開始時， #yslimeboundmod:分裂 一隻 #yslimeboundmod:好鬥史萊姆 。"
+      "戰鬥開始時， #yslimeboundmod:分裂 一只 #yslimeboundmod:好鬥史萊姆 。"
     ]
   },
   "Slimebound:SlimedSkullRelic": {
@@ -79,14 +79,14 @@
     "NAME": "陸軍旗",
     "FLAVOR": "你和你的黏黏軍團。",
     "DESCRIPTIONS": [
-      "戰鬥開始時，獲得 #b1 個史萊姆欄位並隨機 #yslimeboundmod:分裂 #b1 隻 #y史萊姆 。"
+      "戰鬥開始時，獲得 #b1 個史萊姆欄位並隨機 #yslimeboundmod:分裂 #b1 只 #y史萊姆 。"
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
     "NAME": "碰撞護具",
     "FLAVOR": "進攻是最好的防守！",
     "DESCRIPTIONS": [
-      " #yslimeboundmod:衝撞 牌造成的自我傷害減少 #b3 點。"
+      " #yslimeboundmod:沖撞 牌造成的自我傷害減少 #b3 點。"
     ]
   },
     "Slimebound:TarBlob": {
@@ -100,7 +100,7 @@
     "NAME": "粘膠立方體",
     "FLAVOR": "嘿，它粘到你身上了。",
     "DESCRIPTIONS": [
-      "抽到 #y狀態 牌時再抽 #b1 張牌。"
+      "每回合前 #b2 次抽到 #y狀態 或 #y詛咒 牌時再抽 #b1 張牌。若是 #y虛空 觸發抽牌，再獲得 [E] 。"
     ]
   }
 }

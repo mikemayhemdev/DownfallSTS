@@ -16,7 +16,7 @@
     "NAME": "好鬥史萊姆",
     "DESCRIPTION": [
       "回合開始時造成 #b",
-      " 點傷害"
+      " 點傷害2次"
     ]
   },
   "Slimebound:ScrapOozeSlime": {
@@ -107,7 +107,7 @@
     "DESCRIPTION": [
       "造成 #b",
       " 點傷害並使你抽 #b",
-      " 張牌。"
+      " 張牌。抽牌量不受潛能影響"
     ]
   },
   "Slimebound:DarklingSlime": {

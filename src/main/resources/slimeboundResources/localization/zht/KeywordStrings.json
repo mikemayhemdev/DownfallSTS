@@ -8,6 +8,7 @@
   },
   {
     "NAMES": [
+      "split",
       "分裂"
     ],
     "PROPERNAME": "分裂",
@@ -19,14 +20,14 @@
       "goop"
     ],
     "PROPERNAME": "黏液",
-    "DESCRIPTION": "每層 #y黏液 為下次攻擊提供 #b1 點額外傷害，移除所有 #y黏液 並觸發 #y消耗黏液 的效果。"
+    "DESCRIPTION": "每層 #y黏液 為下次攻擊提供 #b1 點額外傷害，移除所有 #y黏液 並觸發 #y吞食黏液 的效果。"
   },
   {
     "NAMES": [
       "潛力"
     ],
     "PROPERNAME": "潛力",
-    "DESCRIPTION": "強化 #y分裂 的 #y史萊姆 的攻擊傷害和附加效果。附加效果只有 #b50% 強化效率。"
+    "DESCRIPTION": "強化 #y分裂 的 #y史萊姆 的攻擊傷害與附加效果。附加效果只有 #b50% 強化效率。"
   },
   { "NAMES": [
       "命令"
@@ -53,7 +54,7 @@
       "bruiser"
     ],
     "PROPERNAME": "好鬥史萊姆",
-    "DESCRIPTION": "攻擊時隨機造成 #b5 點傷害。"
+    "DESCRIPTION": "攻擊時隨機造成 #b3 點傷害兩次。"
   },
   {
     "NAMES": [
@@ -136,12 +137,11 @@
   },
   {
     "NAMES": [
-      "衝撞",
+      "沖撞",
       "tackle",
-      "tackles",
-      "沖撞"
+      "tackles"
     ],
-    "PROPERNAME": "衝撞",
+    "PROPERNAME": "沖撞",
     "DESCRIPTION": "一類高傷害 #y攻擊 牌，會對自己造成少量傷害。"
   },
   {
