@@ -8,7 +8,6 @@
   },
   {
     "NAMES": [
-      "stasis",
       "凝滞"
     ],
     "PROPER_NAME": "凝滞",
@@ -16,9 +15,7 @@
   },
   {
     "NAMES": [
-      "宝石",
-      "gem",
-      "gems"
+      "宝石"
     ],
     "PROPER_NAME": "宝石",
     "DESCRIPTION": " #y宝石 能在 #y休息处 被 #y镶嵌 至有 #y孔位 的牌上。不能被 #y升级 。"
@@ -26,15 +23,12 @@
   {
     "PROPER_NAME": "防御模式",
     "NAMES": [
-      "defensive mode",
-      "defensive_mode",
       "防御模式"
     ],
-    "DESCRIPTION": "#y姿态 。 NL #y防御模式 持续 #b1 回合。 NL 处于 #y防御模式 时：拥有 #b3 层 #y荆棘 ，每回合开始时获得 #b10 点 #y格挡 且在回合结束时 #y格挡 不会消失。"
+    "DESCRIPTION": "#y姿态 。 NL 当你进入 #y防御模式 ，获得 #b16 点 #y格挡 。 NL 处于 #y防御模式 时：拥有 #b3 层 #y荆棘，在回合结束时 #y格挡 不会消失。"
   },
   {
     "NAMES": [
-      "accelerate",
       "加速"
     ],
     "PROPER_NAME": "加速",

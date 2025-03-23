@@ -39,8 +39,8 @@
   "Guardian:GemFinderPower": {
     "NAME": "开采宝石",
     "DESCRIPTIONS": [
-      "战斗结束后，选择一颗普通 #y宝石 加入牌组。",
-      "战斗结束后，选择 #b",
+      "战斗结束后，你可以将1颗普通 #y宝石 加入牌组。",
+      "战斗结束后，你可以将 #b",
       " 颗普通 #y宝石 加入牌组。"
     ]
   },
@@ -63,7 +63,8 @@
   "Guardian:ConstructModePower": {
     "NAME": "造物形态",
     "DESCRIPTIONS": [
-      "回合开始时，若你有 #y缓冲 ，获得 #b",
+      "回合开始时，若你有至少 #b",
+      " 层 #y缓冲, 获得 #b",
       " 点 #y力量 。"
     ]
   },
@@ -144,8 +145,8 @@
   "Guardian:RevengePower": {
     "NAME": "复仇协议",
     "DESCRIPTIONS": [
-      "处于 #y防御模式 时，临时拥有 #b",
-      " 层 #y力量 。"
+      "当你进入 #y防御模式 时，获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "Guardian:StasisEnginePower": {
@@ -177,14 +178,14 @@
   "Guardian:EvasiveProtocolPower": {
     "NAME": "闪避协议",
     "DESCRIPTIONS": [
-      "处于 #y防御模式 时，临时拥有 #b",
-      " 层 #y敏捷 。"
+      "当你进入 #y防御模式 时，降低所有负面效果 #b",
+      " 层。"
     ]
   },
   "Guardian:SpikerProtocolPower": {
     "NAME": "荆棘协议",
     "DESCRIPTIONS": [
-      "处于 #y防御模式 时，临时拥有 #b",
+      "当你进入 #y防御模式 时，获得 #b",
       " 层 #y荆棘 。"
     ]
   },

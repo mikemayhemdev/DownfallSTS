@@ -24,21 +24,21 @@
     "NAME": "異蛇戒指",
     "FLAVOR": "無法辨認，難以閱讀，周四到期。",
     "DESCRIPTIONS": [
-      "每觸發 #b3 次 #ysneckomod:盈溢，給予隨機敵人 #b1 層 #y虛弱 與 #y易傷 。"
+      "觸發 #b3 次 #ysneckomod:盈溢時，給予隨機敵人 #b1 層 #y虛弱 與 #y易傷 。"
     ]
   },
   "sneckomod:CrystallizedMud": {
     "NAME": "催眠吊墜",
     "FLAVOR": "晃眼的土塊。",
     "DESCRIPTIONS": [
-      "回合開始時獲得 [E] 。 #ysneckomod:混淆 數值不為 #b0 。"
+      "回合開始時獲得 [E] 。 #ysneckomod:混淆 後耗能不為 #b0 。"
     ]
   },
   "sneckomod:LoadedDie": {
     "NAME": "註料骰子",
     "FLAVOR": "灌了奶酪。",
     "DESCRIPTIONS": [
-      "每當1張牌被 #ysneckomod:混淆 ，獲得 #b1 點 #y格擋 。"
+      "當1張牌被 #ysneckomod:混淆 時，獲得 #b1 點 #y格擋 。"
     ]
   },
   "sneckomod:RareBoosterPack": {
@@ -59,7 +59,7 @@
     "NAME": "未知之蛋",
     "FLAVOR": "想知道孵出什麽？ 交 $1000 再說。",
     "DESCRIPTIONS": [
-      "每當你獲得 #y異色 牌時，將其 #y升級 。 NL 撿起時，隨機 #y升級 #b2 張#ysneckomod:異色 牌。 "
+      "每當你獲得 #y異色 牌時，將其 #y升級 。 NL 撿起時，隨機 #y升級 #b2 張 #ysneckomod:異色 牌。 "
     ]
   },
   "sneckomod:SuperSneckoEye": {
@@ -87,9 +87,9 @@
     "NAME": "神秘八面體",
     "FLAVOR": "它似乎灌鉛的。",
     "DESCRIPTIONS": [
-      "拾起時，選擇牌組中 #b1 張 #ysneckomod:盈溢 牌。每當你打出它，獲得#b4 點 #y格擋 並觸發其 #y盈溢 效果，與手牌數無關。",
-      "選擇一張牌 ",
-      " 每當 ",
+      "拾起時，選擇牌組中 #b1 張 #ysneckomod:盈溢 牌。每當你打出它，獲得 #b4 點 #y格擋 並觸發其 #y盈溢 效果，與手牌數無關。",
+      "選擇1張牌 ",
+      " 當 ",
       " 被打出時，獲得 #b4 點 #y格擋 並觸發其 #ysneckomod:盈溢 效果，與手牌數無關。"
     ]
   },
@@ -111,9 +111,9 @@
     "NAME": "幸運馬蹄",
     "FLAVOR": "一路順風。",
     "DESCRIPTIONS": [
-      "拾起時，從 #b3 個 #y角色 選擇 #b1 個。選擇張罕見 #ysneckomod:異色 #y能力 牌中選擇 #b1 張獲得之。",
-      "拾起時，獲得 #b5 張 #y未知 ",
-      " 牌。所有戰鬥卡牌獎勵都將有 ",
+      "拾起時，從 #b3 個 #y角色 選擇 #b1 個。獲得 #b3 組已 #y升級 罕見牌獎勵和 #b2 組稀有牌獎勵（來自所選角色）。所有戰鬥都會額外掉落所選角色的卡牌獎勵。",
+      "拾起時，獲得來自 ",
+      " 的 #b3 組 已 #y升級 罕見牌獎勵和 #b2 組稀有牌獎勵。所有戰鬥卡牌獎勵都將額外掉落 ",
       " 牌。"
     ]
   }
