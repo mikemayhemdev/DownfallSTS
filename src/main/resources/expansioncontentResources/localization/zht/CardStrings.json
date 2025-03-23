@@ -16,7 +16,7 @@
     "DESCRIPTION": "獲得 !M! 層 expansioncontent:堅不可摧。 NL 若你已有本牌效果，打出本牌 expansioncontent:堅不可摧 再多持續1回合"
   },
   "expansioncontent:HyperBeam": {
-    "NAME": "Automa-Beam",
+    "NAME": "超能射线",
     "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 NL 將 1 張 *虛空 放入你的抽牌堆頂部。 NL 消耗 。"
   },
   "expansioncontent:LastStand": {
