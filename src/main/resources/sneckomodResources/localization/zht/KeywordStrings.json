@@ -4,7 +4,7 @@
     "NAMES": [
       "snekproof"
     ],
-    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled. NOTE FOR LOC: 不用翻譯。"
   },
   {
   "PROPER_NAME": "Suit",
@@ -12,42 +12,42 @@
   "suit",
   "suits"
 ],
-  "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+  "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits. NOTE FOR LOC: 不用翻譯。"
   },
   {
     "PROPER_NAME": "盈溢",
     "NAMES": [
       "盈溢"
     ],
-    "DESCRIPTION": "手牌超過 #b5 張時，盈溢效果激活。"
+    "DESCRIPTION": "手牌超過 #b5 張時，盈溢牌被打出觸發盈溢效果。"
   },
   {
     "PROPER_NAME": "混淆",
     "NAMES": [
       "混淆"
     ],
-    "DESCRIPTION": "將1張牌的耗能（本回合第1次打出）隨機變為 #b0 ~ #b3 點。"
+    "DESCRIPTION": "將1張牌本回合第1次打出的耗能隨機變為 #b0 ~ #b3 點。混淆後牌的耗能一定會改變。"
   },
   {
     "PROPER_NAME": "異色",
     "NAMES": [
       "異色"
     ],
-    "DESCRIPTION": "異蛇牌以外的所有可獲得牌。（包括 #y詛咒 和 #y狀態 牌 等）"
+    "DESCRIPTION": "異蛇牌以外的所有可獲得牌。（包括 #y詛咒 和 #y狀態 牌）"
   },
   {
     "PROPER_NAME": "贈禮",
     "NAMES": [
       "贈禮"
     ],
-    "DESCRIPTION": "當你獲得這張牌，可獲得以下 異色 牌獎勵。"
+    "DESCRIPTION": "當你獲得這張牌，可獲得以下 異色 牌獎勵（甚至金幣）。"
   },
   {
     "PROPER_NAME": "Identify",
     "NAMES": [
       "identify"
     ],
-    "DESCRIPTION": "Replace an #yUnidentified card with its current random card permanently. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+    "DESCRIPTION": "Replace an #yUnidentified card with its current random card permanently. NOTE FOR LOC: 不用翻譯"
   },
   {
     "PROPER_NAME": "劇毒",
@@ -61,6 +61,6 @@
     "NAMES": [
       "幸運"
     ],
-    "DESCRIPTION": "盈溢效果總是觸發，與手牌大小無關。"
+    "DESCRIPTION": "盈溢效果一定觸發，與手牌大小無關。"
   }
 ]

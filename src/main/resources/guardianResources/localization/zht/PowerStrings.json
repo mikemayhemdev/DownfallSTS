@@ -29,18 +29,18 @@
     ]
   },
   "Guardian:ClonePower": {
-    "NAME": "重連",
+    "NAME": "重分配",
     "DESCRIPTIONS": [
-      "將本回合打出的下張牌 #y凝滯 。",
+      "將本回合打出的下張打出後會進入棄牌堆的牌 #y凝滯 。",
       "將本回合打出的下 #b",
-      " 張牌 #y凝滯 。"
+      " 張牌打出後會進入棄牌堆的牌 #y凝滯 。"
     ]
   },
   "Guardian:GemFinderPower": {
     "NAME": "開采寶石",
     "DESCRIPTIONS": [
-      "戰鬥結束後，選擇一顆普通 #y寶石 加入牌組。",
-      "戰鬥結束後，選擇 #b",
+      "戰鬥結束後，你可以將1顆普通 #y寶石 加入牌組。",
+      "戰鬥結束後，你可以將 #b",
       " 顆普通 #y寶石 加入牌組。"
     ]
   },
@@ -63,7 +63,8 @@
   "Guardian:ConstructModePower": {
     "NAME": "造物形態",
     "DESCRIPTIONS": [
-      "回合開始時，若你有 #y緩沖 ，獲得 #b",
+      "回合開始時，若你有至少 #b",
+      " 層 #y緩沖, 獲得 #b",
       " 點 #y力量 。"
     ]
   },
@@ -113,7 +114,7 @@
   "Guardian:AutomayhemPower": {
     "NAME": "時間沙漏",
     "DESCRIPTIONS": [
-      "回合開始時， #y加速 。",
+      "回合開始時， #y加速 #b1 次。",
       "回合開始時， #y加速 #b",
       " 次。"
     ]
@@ -121,7 +122,7 @@
   "Guardian:ConstructPower": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "若回合開始時你沒有 #y人工制品 ，獲得 #b",
+      "若回合開始時你沒有 #y人工製品 ，獲得 #b",
       " 層",
       "。"
     ]
@@ -144,8 +145,8 @@
   "Guardian:RevengePower": {
     "NAME": "復仇協議",
     "DESCRIPTIONS": [
-      "處於 #y防禦模式 時，臨時擁有 #b",
-      " 層 #y力量 。"
+      "當你進入 #y防禦模式 時，獲得 #b",
+      " 點 #y力量 。"
     ]
   },
   "Guardian:StasisEnginePower": {
@@ -177,14 +178,14 @@
   "Guardian:EvasiveProtocolPower": {
     "NAME": "閃避協議",
     "DESCRIPTIONS": [
-      "處於 #y防禦模式 時，臨時擁有 #b",
-      " 層 #y敏捷 。"
+      "當你進入 #y防禦模式 時，降低所有負面效果 #b",
+      " 層。"
     ]
   },
   "Guardian:SpikerProtocolPower": {
     "NAME": "荊棘協議",
     "DESCRIPTIONS": [
-      "處於 #y防禦模式 時，臨時擁有 #b",
+      "當你進入 #y防禦模式 時，獲得 #b",
       " 層 #y荊棘 。"
     ]
   },
