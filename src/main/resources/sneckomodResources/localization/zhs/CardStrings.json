@@ -1,28 +1,28 @@
 {
   "sneckomod:Blunderbus": {
     "NAME": "火枪乱射",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 手牌中每有1张3+牌重复1次。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 手牌中每有1张3+耗能的牌重复1次。"
   },
   "sneckomod:Tsunami": {
     "NAME": "巨浪",
-    "DESCRIPTION": "sneckomod:盈溢 效果额外获得 !M! 点 格挡 。"
+    "DESCRIPTION": "sneckomod:盈溢 触发额外获得 !M! 点 格挡 。"
   },
   "sneckomod:CheapStock": {
     "NAME": "廉价存货",
-    "DESCRIPTION": "回合开始时，sneckomod:混淆 你手牌中费用最高的牌。",
-    "UPGRADE_DESCRIPTION": "回合开始时，sneckomod:混淆 你手牌中费用最高的 !M! 张牌。"
+    "DESCRIPTION": "回合开始时， sneckomod:混淆 手牌中耗能最高的1张牌。",
+    "UPGRADE_DESCRIPTION": "回合开始时， sneckomod:混淆 手牌中耗能最高的 !M! 张牌。"
   },
   "sneckomod:Cheat": {
     "NAME": "纯粹的幸运？",
     "DESCRIPTION": "这张卡不该出现在游戏中。 NL 如果你读到这里，说明你可能遇到了bug。 NL 请报告给开发者。",
     "UPGRADE_DESCRIPTION": "这张卡不该出现在游戏中。 NL 如果你读到这里，说明你可能遇到了bug。 NL 请报告给开发者。",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards。"
+      "本地化须知：废弃的牌只需要复制以上的话即可。"
     ]
   },
   "sneckomod:DangerNoodle": {
     "NAME": "贪吃蛇",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:混淆 1张牌 NL sneckomod:赠礼 ：3+ 费牌。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:混淆 1张牌 NL sneckomod:赠礼 ：3+耗能牌。",
     "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL sneckomod:混淆 1张牌。"
   },
   "sneckomod:Deception": {
@@ -44,7 +44,7 @@
   },
   "sneckomod:DiceBoulder": {
     "NAME": "巨型骰子",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 这张牌在本场战斗中增加获得 格挡 !M! 点，增加耗能 !qqq! 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 该牌在本场战斗中增加获得 格挡 !M! 点，增加耗能 !qqq! 点。"
   },
   "sneckomod:DiceCrush": {
     "NAME": "骰子撞击",
@@ -60,13 +60,13 @@
     "DESCRIPTION": "这张卡不该出现在游戏中。 NL 如果你读到这里，说明你可能遇到了bug。 NL 请报告给开发者。",
     "UPGRADE_DESCRIPTION": "这张卡不该出现在游戏中。 NL 如果你读到这里，说明你可能遇到了bug。 NL 请报告给开发者。",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards。"
+      "本地化须知：废弃的牌只需要复制以上的话即可。"
     ]
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "豪赌",
-    "DESCRIPTION": "无法被打出。 NL 不能从牌组中移除。 NL sneckomod:赠礼 ：升级过的稀有牌和 !M! 金币。",
-    "UPGRADE_DESCRIPTION": "无法被打出。 NL 虚无 。 NL 不能从牌组中移除。 NL sneckomod:赠礼 ：升级过的稀有牌和 !M! 金币。",
+    "DESCRIPTION": "无法被打出。 NL 无法被移除。 NL sneckomod:赠礼 ：已升级的稀有牌和 !M! 金币。",
+    "UPGRADE_DESCRIPTION": "无法被打出。 NL 虚无 。 NL 无法被移除。 NL sneckomod:赠礼 ：已升级的稀有牌和 !M! 金币。",
     "DESCRIPTION_BATTLE": "无法被打出。",
     "UPGRADE_DESCRIPTION_BATTLE": "无法被打出。 NL 虚无 。"
   },
@@ -74,12 +74,12 @@
     "NAME": "Immovable Object",
     "DESCRIPTION": "这张卡不该出现在游戏中。 NL 如果你读到这里，说明你可能遇到了bug。 NL 请报告给开发者。",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards。"
+      "本地化须知：废弃的牌只需要复制以上的话即可。"
     ]
   },
   "sneckomod:IronFang": {
     "NAME": "钢牙",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害并给予 !M! 层 虚弱 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予所有敌人 !M! 层 虚弱 。"
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Improvised Attack",
@@ -97,20 +97,20 @@
   },
   "sneckomod:LuckyBreak": {
     "NAME": "好运降临",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 手牌中每有1张2+费用的牌，抽 !M! 张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 手牌中每有1张耗能2+的牌，抽 !M! 张牌。"
   },
   "sneckomod:Nope": {
     "NAME": "不行",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 1张牌。若它是 异色 牌，将随机1张相同角色的牌加入手牌。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 1张牌。若它是 异色 牌，将随机1张相同角色的牌加入手牌。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 1张牌。 NL 若它是某职业的 sneckomod:异色 牌，将随机1张该职业的牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 1张牌。 NL 若它是某职业的 sneckomod:异色 牌，将随机1张该职业的牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
       "消耗 。"
     ]
   },
   "sneckomod:SnakeEyes": {
-    "NAME": "蛇之眼",
-    "DESCRIPTION": "本回合下1张打出的 sneckomod:异色 牌将被打出2次。 NL sneckomod:赠礼 : 稀有技能牌。",
-    "UPGRADE_DESCRIPTION": "本回合下2张打出的 sneckomod:异色 牌将被打出2次。 NL sneckomod:赠礼 : 稀有技能牌。",
+    "NAME": "邪眼毒眸",
+    "DESCRIPTION": "本回合下1张打出的 sneckomod:异色 牌将被打出2次。 NL sneckomod:赠礼 ：稀有技能牌。",
+    "UPGRADE_DESCRIPTION": "本回合下2张打出的 sneckomod:异色 牌将被打出2次。 NL sneckomod:赠礼 ：稀有技能牌。",
     "DESCRIPTION_BATTLE": "本回合下1张打出的 sneckomod:异色 牌将被打出2次。",
     "UPGRADE_DESCRIPTION_BATTLE": "本回合下2张打出的 sneckomod:异色 牌将被打出2次。"
   },
@@ -143,11 +143,11 @@
   },
   "sneckomod:Mudshield": {
     "NAME": "泥浆屏障",
-    "DESCRIPTION": "sneckomod:混淆 1张牌，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "每当你sneckomod:混淆 1张牌，获得 !M! 点 格挡 。"
   },
   "sneckomod:OverwhelmingPresence": {
     "NAME": "威压",
-    "DESCRIPTION": "每回合第1次洗牌时，获得 [E] 并抽 !M! 张牌。"
+    "DESCRIPTION": "回合的第1次洗牌时，获得 [E] 并抽 !M! 张牌。"
   },
   "sneckomod:RiskySword": {
     "NAME": "险刃",
@@ -159,24 +159,24 @@
   },
   "sneckomod:PureSnecko": {
     "NAME": "变幻",
-    "DESCRIPTION": "抽 !M! 张牌并 sneckomod:混淆 它们。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL sneckomod:混淆 这几张牌。"
   },
   "sneckomod:QuickBite": {
     "NAME": "蛇耙",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:混淆 手牌中的最高费牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:混淆 手牌中的耗能最高的1张牌。"
   },
   "sneckomod:QuickMove": {
     "NAME": "迅捷步伐",
-    "DESCRIPTION": "获得 !B! 点 格挡 NL sneckomod:盈溢 ：给予所有敌人 !M! 层 易伤 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL sneckomod:盈溢 ：给予所有敌人 !M! 层 易伤 。"
   },
   "sneckomod:RainOfDice": {
     "NAME": "骰子雨",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:混淆 1张牌。 NL 在手牌中加入1张 *骰子风暴 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 伤害。 NL sneckomod:混淆 1张牌。 NL 在手牌中加入1张 *骰子风暴+ 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:混淆 1张牌。 NL 在手牌中加入1张 *骰子雨 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 伤害。 NL sneckomod:混淆 1张牌。 NL 在手牌中加入1张 *骰子雨+ 。 NL 消耗 。"
   },
   "sneckomod:Restock": {
     "NAME": "换牌",
-    "DESCRIPTION": "丢弃手牌。 NL 抽 !M! 张牌。 NL sneckomod:混淆 你的手牌。 NL 消耗 。"
+    "DESCRIPTION": "丢弃手牌。 NL 抽 !M! 张牌。 NL sneckomod:混淆 全部手牌。 NL 消耗 。"
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
@@ -193,18 +193,18 @@
   },
   "sneckomod:SerpentIdol": {
     "NAME": "蛇像",
-    "DESCRIPTION": "从 !M! 张随机 sneckomod:异色 牌中选择1张获得。 本回合它的耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "从 !M! 张随机 sneckomod:异色 牌中选择1张获得。 NL 本回合它第一次被打出的耗能为0。 NL 消耗 。"
   },
   "sneckomod:SerpentMind": {
     "NAME": "异色形态",
-    "DESCRIPTION": "虚无。 回合结束时，每打出1种颜色的牌，获得 !M! 点 力量 。 NL sneckomod:赠礼 ：稀有牌。",
-    "UPGRADE_DESCRIPTION": "回合结束时，每打出1种颜色的牌，获得 !M! 点 力量 。 NL sneckomod:赠礼 ：稀有牌。",
-    "DESCRIPTION_BATTLE": "回合结束时，每打出1种颜色的牌，获得 !M! 点 力量 。"
+    "DESCRIPTION": "虚无 。 NL 回合结束时，你在本回合每打出1种颜色的牌，获得 !M! 点 力量 。 NL sneckomod:赠礼 ：稀有牌。",
+    "UPGRADE_DESCRIPTION": "回合结束时，你在本回合每打出1种颜色的牌，获得 !M! 点 力量 。 NL sneckomod:赠礼 ：稀有牌。",
+    "DESCRIPTION_BATTLE": "回合结束时，你再本回合每打出1种颜色的牌，获得 !M! 点 力量 。"
   },
   "sneckomod:SlitherThrough": {
     "NAME": "游蛇穿行",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合降低手牌中 sneckomod:异色 牌的耗能 !M! 。 NL sneckomod:赠礼 ：罕见。",
-    "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 本回合降低手牌中 sneckomod:异色 牌的耗能 !M!。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合降低手牌中 sneckomod:异色 牌的耗能 !M! 点1次。 NL sneckomod:赠礼 ：罕见牌。",
+    "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 本回合降低手牌中 sneckomod:异色 牌的耗能 !M! 点1次。"
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
@@ -232,15 +232,15 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "灵魂抽取",
-    "DESCRIPTION": "获得 !M! 张随机 sneckomod:异色 牌。 NL 其获得 保留 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !M! 张随机 sneckomod:异色 牌。 NL 这2张牌获得 保留 。 NL 消耗 。"
   },
   "sneckomod:SoulExchange": {
     "NAME": "灵魂交换",
-    "DESCRIPTION": "保留。 NL sneckomod:混淆 你的手牌。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL sneckomod:混淆 所有手牌。 NL 消耗 。"
   },
   "sneckomod:SoulRoll": {
     "NAME": "灵魂骰掷",
-    "DESCRIPTION": "保留。 NL 获得 !B! 点 格挡 。 NL sneckomod:混淆 1张牌。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL sneckomod:混淆 1张牌。 NL 消耗 。"
   },
   "sneckomod:Strike": {
     "NAME": "打击",
@@ -255,7 +255,7 @@
   },
   "sneckomod:TyphoonFang": {
     "NAME": "台风之牙",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:盈溢: 在本回合，每当你触发 sneckomod:盈溢 ，打出这张牌的复制。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:盈溢 ：在本回合，每当你触发 sneckomod:盈溢 ，打出这张牌的复制。"
   },
   "sneckomod:Yearn": {
     "NAME": "Yearn",
@@ -266,7 +266,7 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "扫尾",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:盈溢: 给予 !M! 层 虚弱 和 易伤。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:盈溢 ：给予 !M! 层 虚弱 和 易伤 。"
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
@@ -289,8 +289,8 @@
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "变废为宝",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗  1张牌。 NL 获得等同于该牌的 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗  1张牌。 NL 获得等同于该牌的 [E] 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗  1张牌。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗  1张牌。 NL 获获得与其耗能相等的 [E] 。"
   },
   "sneckomod:UnendingSupply": {
     "NAME": "无尽供给",
@@ -436,9 +436,9 @@
     ]
   },
   "sneckomod:Behold": {
-    "NAME": "看吧!",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:盈溢: 获得 !M! 张 *小刀 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:盈溢: 获得 !M! 张 *小刀 。"
+    "NAME": "见证吧!",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:盈溢 ：将 !M! 张 *小刀 加入手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:盈溢 ：将 !M! 张 *小刀 加入手牌。"
   },
   "sneckomod:SaveForLater": {
     "NAME": "保留待用",
@@ -447,24 +447,24 @@
   },
   "sneckomod:PowerShot": {
     "NAME": "能力射击",
-    "DESCRIPTION": "造成 !D! 点伤害。 每当你打出1张 能力 牌，该牌从弃牌堆回到手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 当你打出1张能力牌，该牌从弃牌堆回到手牌。"
   },
   "sneckomod:LilGuardian": {
     "NAME": "小小守护者",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 当你打出1张2+费牌时，从你的手牌打出该牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 当你打出1张耗能2+的牌时，从你的手牌中打出该牌。"
   },
   "sneckomod:CrystalBoomerang": {
     "NAME": "水晶回旋镖",
     "DESCRIPTION": "从弃牌堆选择1张牌放入你的手牌。 NL 如果它是 sneckomod:异色 牌，获得 !B! 点 格挡 。"
   },
   "sneckomod:ViperEssence": {
-    "NAME": "毒蛇精髓",
-    "DESCRIPTION": "虚无。 NL sneckomod:异色。 NL 获得 !M! 点 力量 。"
+    "NAME": "蛇之精髓",
+    "DESCRIPTION": "虚无 。 NL 获得 !M! 点 力量 。"
   },
   "sneckomod:Amass": {
     "NAME": "积聚",
-    "DESCRIPTION": "获得 !B! 点 格挡。 NL 获得等同于手牌中耗 [E] 之和的 格挡 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡。 NL 获得等同于手牌中耗 [E] 之和的 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡。 NL 获得等同于手牌耗能之和的 格挡 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡。 NL 获得等同于手牌耗能之和的 格挡 。"
   },
   "sneckomod:Medusa": {
     "NAME": "美杜莎",
@@ -473,11 +473,11 @@
   },
   "sneckomod:Cower": {
     "NAME": "蜷缩",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将1张 *‘洞’起来 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将1张 *‘洞’起来+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将1张 *'洞'起来 加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将1张 *'洞'起来+ 加入手牌。 NL 消耗 。"
   },
   "sneckomod:WideSting": {
-    "NAME": "广域刺击",
+    "NAME": "宽刺",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 升级手牌中所有 sneckomod:异色 牌。 NL sneckomod:赠礼 ：普通牌。",
     "DESCRIPTION_BATTLE": "对所有敌人造成 !D! 点伤害。 NL 升级手牌中所有 sneckomod:异色 牌。"
   },
@@ -491,7 +491,7 @@
   },
   "sneckomod:Serpentscale": {
     "NAME": "蛇鳞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 1 expansioncontent:*多层护甲。 NL sneckomod:盈溢: 转而获得 !M! expansioncontent:*多层护甲 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 1 *expansioncontent:多层护甲。 NL sneckomod:盈溢: 转而获得 !M! *expansioncontent:多层护甲 。"
   },
   "sneckomod:OtherworldlySlash": {
     "NAME": "异界斩击",
@@ -505,59 +505,59 @@
   },
   "sneckomod:BlunderGuard": {
     "NAME": "枪火掩护",
-    "DESCRIPTION": "每当你打出耗能3+的牌，获得 !qqq! 点 格挡 和 !M! 点 力量 。",
-    "UPGRADE_DESCRIPTION": "每当你打出耗能3+的牌，获得 !qqq! 点 格挡 和 !M! 点 力量 。"
+    "DESCRIPTION": "当你打出耗能3+的牌时，获得 !qqq! 点 格挡 和 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "当你打出耗能3+的牌时，获得 !qqq! 点 格挡 和 !M! 点 力量 。"
   },
   "sneckomod:WideAngle": {
-    "NAME": "广域攻击",
-    "DESCRIPTION": "保留。 NL 对所有敌人造成 !D! 点伤害。"
+    "NAME": "横扫",
+    "DESCRIPTION": "保留 。 NL 对所有敌人造成 !D! 点伤害。"
   },
   "sneckomod:SerpentsNest": {
     "NAME": "蛇巢",
     "DESCRIPTION": "每当你打出一张能力牌，对所有敌人造成 !M! 点伤害。 NL sneckomod:赠礼 ：罕见能力牌。",
-    "DESCRIPTION_BATTLE": "Whenever you play a Power, deal !M! damage to ALL enemies。"
+    "DESCRIPTION_BATTLE": "每当你打出一张能力牌，对所有敌人造成 !M! 点伤害。"
   },
   "sneckomod:Whack": {
-    "NAME": "晨钟暮敲",
-    "DESCRIPTION": "造成 !D! 点伤害damage。 NL 将1张 *当头棒喝 加入手牌 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害damage。 NL 将1张 *当头棒喝+ 加入手牌 。 NL 消耗 。"
+    "NAME": "晨钟暮鼓",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将1张 *当头棒喝 加入手牌 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将1张 *当头棒喝+ 加入手牌 。 NL 消耗 。"
   },
   "sneckomod:CobraCoil": {
     "NAME": "眼镜蛇盘蜷",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 *缠绕 。 NL sneckomod:赠礼 ：稀有攻击牌。"
   },
   "sneckomod:Belittle": {
-    "NAME": "看轻",
+    "NAME": "看扁",
     "DESCRIPTION": "敌人每有1种不同的负面效果，失去 !M! 生命。 NL sneckomod:赠礼 ：罕见负面效果牌。",
     "DESCRIPTION_BATTLE": "敌人每有1种不同的负面效果，失去 !M! 生命。"
   },
   "sneckomod:Jackpot": {
     "NAME": "头奖",
-    "DESCRIPTION": "保留。 NL 获得 [E] [E]。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留。 NL 获得 [E] [E] [E]。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 获得 [E] [E]。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 [E] [E] [E] 。 NL 消耗 。"
   },
   "sneckomod:MakeshiftBlade": {
-    "NAME": "权宜刀刃 ",
+    "NAME": "权宜之刃 ",
     "DESCRIPTION": "造成 !D! 点伤害。 若目标有至少 !M! 种负面效果，抽 !qqq! 张牌。 NL sneckomod:赠礼 ：负面效果牌。",
     "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 若目标有至少 !M! 种负面效果，抽 !qqq! 张牌。"
   },
   "sneckomod:LatchOn": {
     "NAME": "紧咬不放",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 将1张 *毒蛇精髓 加入手牌。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 将1张 *蛇之精髓 加入手牌。"
   },
   "sneckomod:ComboString": {
-    "NAME": "连击",
-    "DESCRIPTION": "本回合每打出 sneckomod:异色 牌，造成 !D! 点伤害。 NL sneckomod:赠礼 ：罕见牌。",
+    "NAME": "异色连击",
+    "DESCRIPTION": "本回合每打出1张 sneckomod:异色 牌，造成 !D! 点伤害1次。 NL sneckomod:赠礼 ：罕见牌。",
     "EXTENDED_DESCRIPTION": [
-      " NL (造成 ",
-      " 次伤害。)"
+      " NL （本回合打出过 ",
+      " 张 异色 牌。）"
     ],
-    "DESCRIPTION_BATTLE": "本回合每打出 sneckomod:异色 牌，造成 !D! 点伤害。"
+    "DESCRIPTION_BATTLE": "本回合每打出1张 sneckomod:异色 牌，造成 !D! 点伤害1次。"
   },
   "sneckomod:ThrowingCards": {
     "NAME": "投掷卡牌",
-    "DESCRIPTION": "将 X 张 *超越光速 加入手牌。 NL 获得 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将 X 张 *超越光速+ 加入手牌。 NL 获得 [E] 。 NL 消耗 。"
+    "DESCRIPTION": "将X张 *超越光速 加入手牌。 NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将X张 *超越光速+ 加入手牌。 NL 获得 [E] 。 NL 消耗 。"
   },
   "sneckomod:RoundaboutSwing": {
     "NAME": "回旋挥击",
@@ -565,53 +565,53 @@
   },
   "sneckomod:MarkedCard": {
     "NAME": "记号牌",
-    "DESCRIPTION": "保留。 NL sneckomod:混淆 1张牌。 NL 本牌改变的费用总是会更低。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留。 NL sneckomod:混淆 !M! 张牌。 NL 本牌改变的费用总是会更低。 NL 消耗 。"
+    "DESCRIPTION": "保留。 NL sneckomod:混淆 1张牌。 NL 本牌改变的费用一定会更低。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留。 NL sneckomod:混淆 !M! 张牌。 NL 本牌改变的费用一定会更低。 NL 消耗 。"
   },
   "sneckomod:InertBlade": {
     "NAME": "钝藏刀刃",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若其耗能为： NL 1+：抽 !M! 张牌。 NL 2+：获得 !M! 点 力量 。 NL 3+：获得 [E]。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 若其耗能为： NL 1+：抽 !M! 张牌。 NL 2+：获得 !M! 点 力量 。 NL 3+：获得 [E] [E]。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若其耗能： NL 1+：抽 !M! 张牌。 NL 2+：获得 !M! 点 力量 。 NL 3+：获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 若其耗能： NL 1+：抽 !M! 张牌。 NL 2+：获得 !M! 点 力量 。 NL 3+：获得 [E] [E] 。"
   },
   "sneckomod:PerpetualSerpent": {
     "NAME": "永恒之蛇",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:盈溢: 获得 [E] [E]。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:盈溢 ：获得 [E] [E] 。"
   },
   "sneckomod:LastStrike": {
     "NAME": "最终打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗中每打出1种打击牌重复1次。 NL sneckomod:赠礼 ：打击牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗中每打出1种打击牌重复1次。 NL sneckomod:赠礼 ：打击牌。",
-    "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 本场战斗中每打出1种打击牌重复1次。",
-    "UPGRADE_DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 本场战斗中每打出1种打击牌重复1次。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗中每打出1种打击牌，多造成1次伤害。 NL sneckomod:赠礼 ：打击牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗中每打出1种打击牌，多造成1次伤害。 NL sneckomod:赠礼 ：打击牌。",
+    "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 本场战斗中每打出1种打击牌，多造成1次伤害。",
+    "UPGRADE_DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 本场战斗中每打出1种打击牌，多造成1次伤害。",
     "EXTENDED_DESCRIPTION": [
-      " NL (多造成 ",
-      " 次伤害。)"
+      " NL （本场战斗中打出过 ",
+      " 种打击牌。）"
     ]
   },
   "sneckomod:AceOfWands": {
     "NAME": "五角星皇后",
-    "DESCRIPTION": "虚无。 NL 每当你给予敌人1种负面效果，获得 !M! 点 格挡 。 NL sneckomod:赠礼 ：负面效果牌。",
-    "UPGRADE_DESCRIPTION": "每当你给予敌人1种负面效果，获得 !M! 点 格挡 。 NL sneckomod:赠礼 ：负面效果牌。"
+    "DESCRIPTION": "虚无 。 NL 每当你给予敌人1种负面效果时，获得 !M! 点 格挡 。 NL sneckomod:赠礼 ：负面效果牌。",
+    "UPGRADE_DESCRIPTION": "每当你给予敌人1种负面效果时，获得 !M! 点 格挡 。 NL sneckomod:赠礼 ：负面效果牌。"
   },
   "sneckomod:FlashInThePan": {
     "NAME": "昙花一现",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃你的手牌。 NL 下回合多抽等量的牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃全部手牌。 NL 下回合多抽等量的牌。"
   },
   "sneckomod:TrashCan": {
     "NAME": "垃圾桶",
     "DESCRIPTION": "回合开始时，你可以 消耗 1张牌。",
-    "UPGRADE_DESCRIPTION": "固有。 NL 回合开始时，你可以 消耗 1张牌。"
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，你可以 消耗 1张牌。"
   },
   "sneckomod:Lacerate": {
     "NAME": "割裂",
-    "DESCRIPTION": "造成 !D! 点伤害。 本回合每当这个敌人被给予负面效果，其额外获得 !M! 层 sneckomod:剧毒 。 sneckomod:赠礼 ： *致残毒云 。",
-    "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 本回合每当这个敌人被给予负面效果，其额外获得 !M! sneckomod:剧毒 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 本回合当你给予相同敌人负面效果时，额外给予 !M! 层 sneckomod:剧毒 。 sneckomod:赠礼 ： *致残毒云 。",
+    "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 本回合当你给予相同敌人负面效果时，额外给予 !M! sneckomod:剧毒 。"
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "蛇侦探",
-    "DESCRIPTION": "虚无。 NL 每当你打出一张能力牌，获得 [E]。 NL sneckomod:赠礼 ：稀有能力牌。",
-    "UPGRADE_DESCRIPTION": "虚无。 NL 每当你打出一张能力牌，获得 [E] [E]。 NL sneckomod:赠礼 ：稀有能力牌。",
-    "DESCRIPTION_BATTLE": "虚无。 NL 每当你打出一张能力牌，获得 [E]。",
-    "UPGRADE_DESCRIPTION_BATTLE": "虚无。 NL 每当你打出一张能力牌，获得 [E] [E]。"
+    "DESCRIPTION": "虚无 。 NL 每当你打出一张能力牌，获得 [E] 。 NL sneckomod:赠礼 ：稀有能力牌。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 每当你打出一张能力牌，获得 [E] [E] 。 NL sneckomod:赠礼 ：稀有能力牌。",
+    "DESCRIPTION_BATTLE": "虚无 。 NL 每当你打出一张能力牌，获得 [E] 。",
+    "UPGRADE_DESCRIPTION_BATTLE": "虚无 。 NL 每当你打出一张能力牌，获得 [E] [E] 。"
   }
 }

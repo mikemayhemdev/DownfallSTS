@@ -10,32 +10,32 @@
   "sneckomod:CheapStockPower": {
     "NAME": "廉價存貨",
     "DESCRIPTIONS": [
-      "回合開始時，#y混淆 手牌中的最高費的1張牌。",
-      "回合開始時，#y混淆 手牌中的最高費的1張牌 #b",
+      "回合開始時，#y混淆 手牌中耗能最高的1張牌。",
+      "回合開始時，#y混淆 手牌中耗能最高的1張牌 #b",
       " 次。"
     ]
   },
   "sneckomod:CheatPower": {
-    "NAME": "作弊",
+    "NAME": "幸運",
     "DESCRIPTIONS": [
-      "在本回合， #y盈溢 效果總是觸發，與手牌數無關。",
+      "在本回合， #y盈溢 效果一定觸發，與手牌數無關。",
       "在接下來 #b",
-      " 個回合， #y盈溢 效果總是觸發，與手牌數無關。"
+      " 個回合， #y盈溢 效果一定觸發，與手牌數無關。"
     ]
   },
   "sneckomod:MuddleDrawnCardsPower": {
     "NAME": "混淆抽牌",
     "DESCRIPTIONS": [
       "#y混淆 下1張抽到的牌。",
-      "#y混淆 前 #b",
-      " 張抽到的牌。 (",
-      " remaining)"
+      "#y混淆 下 #b",
+      " 張抽到的牌。（剩",
+      " ）"
     ]
   },
   "sneckomod:MudshieldPower": {
     "NAME": "泥漿屏障",
     "DESCRIPTIONS": [
-      "每當你 #y混淆 1張牌，獲得 #b",
+      "當你 #y混淆 1張牌，獲得 #b",
       " 點 #y格擋 。"
     ]
   },
@@ -44,7 +44,7 @@
     "DESCRIPTIONS": [
       "每回合你第一次洗牌，獲得 [E] 並抽 #b1 張牌。",
       "每回合你第一次洗牌，獲得 ",
-      " [E] 並抽 #b",
+      " 點 [E] 並抽 #b",
       " 張牌。"
     ]
   },
@@ -52,24 +52,24 @@
     "NAME": "蛇巢",
     "DESCRIPTIONS": [
       "每當你打出1張 #y能力 牌，對所有敵人造成 1 點傷害。",
-      "每當你打出1張 #yy能力 牌，對所有敵人造成 #b",
+      "每當你打出1張 #y能力 牌，對所有敵人造成 #b",
       " 傷害。"
     ]
   },
   "sneckomod:SerpentMindPower": {
     "NAME": "異色形態",
     "DESCRIPTIONS": [
-      "你每在本回合打出一種顏色的牌，在回合結束時獲得 #b",
-      " 點 #y力量。",
-      " 點 #y力量。"
+      "你在本回合每打出1種顏色的牌，在回合結束時獲得 #b",
+      " 點 #y力量 。",
+      " 點 #y力量 。"
     ]
   },
   "sneckomod:SnakeEyesPower": {
-    "NAME": "蛇之眼",
+    "NAME": "邪眼毒眸",
     "DESCRIPTIONS": [
       "在本回合，下1張打出的 #y異色 牌被打出2次。",
       "在本回合，下 #b",
-      " 張打出的#y異色 牌被打出兩次。"
+      " 張打出的 #y異色 牌被打出2次。"
     ]
   },
   "sneckomod:UnendingSupplyPower": {
@@ -77,7 +77,7 @@
     "DESCRIPTIONS": [
       "回合開始時，將 #b",
       "回合開始時，將1張隨機 #y異色 牌的 #y回響 加入手牌。",
-      " 張隨機 #y異色 牌的 #y回響加入手牌。"
+      " 張隨機 #y異色 牌的 #y回響 加入手牌。"
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {
@@ -86,7 +86,7 @@
       "At the end of combat, obtain #b",
       " additional #yUpgraded #yUnidentified cards.",
       " additional #yUpgraded #yUnidentified card.",
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+      "NOTE FOR LOC: 不需要翻譯。"
 
     ]
   },
@@ -101,7 +101,7 @@
     "DESCRIPTIONS": [
       " is being transformed into another ",
       " relic.",
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+      "NOTE FOR LOC: 不需要翻譯。"
     ]
   },
   "sneckomod:ToxicPersonalityPower": {
@@ -109,11 +109,11 @@
     "DESCRIPTIONS": [
       "Whenever you apply a debuff to an enemy, apply #b",
       " #yVenom .",
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+      "NOTE FOR LOC: 不需要翻譯。"
     ]
   },
   "sneckomod:TyphoonPower": {
-    "NAME": "臺風",
+    "NAME": "臺風之牙",
     "DESCRIPTIONS": [
       "本回合每當 #b盈溢 觸發，打出1張 #y臺風之牙 的復製。",
       "本回合每當 #b盈溢 觸發，打出 #b",
@@ -121,7 +121,7 @@
     ]
   },
   "sneckomod:TyphoonPlusPower": {
-    "NAME": "臺風+",
+    "NAME": "臺風之牙+",
     "DESCRIPTIONS": [
       "本回合每當 #b盈溢 觸發，打出1張 #y臺風之牙+ 的復製。",
       "本回合每當 #b盈溢 觸發，打出 #b",
@@ -132,12 +132,12 @@
     "NAME": "蛇偵探",
     "DESCRIPTIONS": [
       "每當你打出1張 #y能力 牌，獲得 #b",
-      " [E] 。",
-      " [E] 。"
+      " 點 [E] 。",
+      " 點 [E] 。"
     ]
   },
   "sneckomod:BigGunsStrengthPower": {
-    "NAME": "大火槍",
+    "NAME": "槍火",
     "DESCRIPTIONS": [
       "每當你打出一張費用3+的牌，獲得 #b",
       " 點 #y力量。",
@@ -145,7 +145,7 @@
     ]
   },
       "sneckomod:BigGunsBlockPower": {
-        "NAME": "小火槍",
+        "NAME": "掩護",
         "DESCRIPTIONS": [
           "每當你打出一張費用3+的牌，獲得 #b",
           " 點 #y格擋 。",
@@ -155,7 +155,7 @@
   "sneckomod:AceOfWandsPower": {
     "NAME": "五角星皇後",
     "DESCRIPTIONS": [
-      "每當你給予敵人1種負面效果，獲得 #b",
+      "當你給予敵人1種負面效果，獲得 #b",
       " 點 #y格擋 。",
       " 點 #y格擋 。"
     ]
@@ -163,7 +163,7 @@
   "sneckomod:LacerateDebuff": {
     "NAME": "割裂",
     "DESCRIPTIONS": [
-      "在本回合，每當你給予這個敵人1種負面效果，額外給予其 #b",
+      "在本回合，當你給予這個敵人1種負面效果，額外給予其 #b",
       " 層 #y劇毒 。",
       " 層 #y劇毒 。"
     ]
@@ -192,4 +192,3 @@
           ]
         }
       }
-
