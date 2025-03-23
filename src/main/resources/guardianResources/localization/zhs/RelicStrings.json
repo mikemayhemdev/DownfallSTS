@@ -3,14 +3,22 @@
     "NAME": "铜制齿轮",
     "FLAVOR": "在你最需要的时候保护你。",
     "DESCRIPTIONS": [
-      "战斗开始时，获得一张 #y预防 。 NL 游戏开始时，将 #b1 张普通 #yguardianmod:宝石 牌加入牌组。 "
+      "战斗开始时，获得1张 #y预防 。 NL 游戏开始时，将 #b1 张普通 #yguardianmod:宝石 牌加入牌组。 "
     ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "守护者齿轮",
-    "FLAVOR": "每3000层更换一次",
+    "FLAVOR": "每过3000层替换1次",
     "DESCRIPTIONS": [
-      "替换 #r铜制齿轮 。 NL 战斗开始时，进入 #yguardianmod:防御模式 并持续 #b3 回合。"
+      "替换 ",
+      " 。 NL 战斗开始时，获得1张 #y预防 。 NL 每当你进入 #y防御模式 ，获得 [E] 并抽 #b2 张牌。"
+    ]
+  },
+  "Guardian:ObsidianScales": {
+    "NAME": "黑曜鳞",
+    "FLAVOR": "用鲜血将天空染成漆黑，向所有出手者展开反击。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b3 点 #y荆棘 。每当你获得负面效果，获得 #b1 层 #y荆棘 。"
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
@@ -38,14 +46,14 @@
     "NAME": "宝石袋",
     "FLAVOR": "噢……闪闪发光！",
     "DESCRIPTIONS": [
-      "拾起时，向牌组中加入 #b5 张随机 #yguardianmod:宝石 。"
+      "拾起时，你可以将至多 #b5 张随机 #yguardianmod:宝石 牌加入牌组。"
     ]
   },
   "Guardian:StasisCodex": {
     "NAME": "机械宝典",
     "FLAVOR": "尖塔最早原型的设计和图表。",
     "DESCRIPTIONS": [
-      "回合结束时若无被 #y凝滞 的牌，从 #b3 张随机牌中选择 #b1 张牌 #yguardianmod:凝滞 。"
+      "前3个回合结束时，若 #y凝滞 栏位未满，从 #b3 张随机牌中选择 #b1 张牌 #yguardianmod:凝滞 。"
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
@@ -101,7 +109,7 @@
     "NAME": "星光采矿镐",
     "FLAVOR": "有那么多宝石散落在尖塔中，很难想象有这么不幸的人需要这把镐来帮助他们。",
     "DESCRIPTIONS": [
-	"你能在 #b3 个休息处各 #y挖掘 #b2 颗 #yguardianmod:宝石 #b1 次。"
+	"你能在休息处 #y挖掘 #b2 颗 #yguardianmod:宝石 ，你可以选择将它们加入牌组中。（至多使用 #b3 次）"
     ]
   },
     "Guardian:GemstoneGun": {
@@ -116,7 +124,7 @@
     "NAME": "瓶装异常",
     "FLAVOR": "旋转，旋转，最后破碎。",
     "DESCRIPTIONS": [
-      "拾起时，选择牌组 #b1 张牌。 NL 战斗开始时，将其移出牌组。第 #b3 回合开始时，再将其加入手牌并且本场战斗耗能变为 #b0 。",
+      "拾起时，选择牌组 #b1 张牌。 NL 战斗开始时，将其移出牌组。第 #b3 回合开始时，再将其加入手牌并且本场战斗第1次打出的耗能变为 #b0 。",
       "选择一张牌 ",
       "战斗开始时，将 ",
       " 移出牌组。第 #b3 回合开始时，再将其加入手牌并且本场战斗耗能变为 #b0 。",
