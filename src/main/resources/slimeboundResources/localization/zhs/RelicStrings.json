@@ -26,7 +26,7 @@
     "NAME": "黏黏石",
     "FLAVOR": "据说它能根据你的情绪获得力量",
     "DESCRIPTIONS": [
-      "战斗开始时，获得 #b2 点 #yslimeboundmod:潜力 。"
+      "战斗开始时，获得 #b1 点 #yslimeboundmod:潜力 。"
     ]
   },
   "Slimebound:DailySplitRelic": {
@@ -100,7 +100,7 @@
     "NAME": "粘胶立方体",
     "FLAVOR": "嘿，它粘到你身上了。",
     "DESCRIPTIONS": [
-      "抽到 #y状态 牌时再抽 #b1 张牌。"
+      "每回合前 #b2 次抽到 #y状态 或 #y诅咒 牌时再抽 #b1 张牌。若是 #y虚空 触发抽牌，再获得 [E] 。"
     ]
   }
 }
