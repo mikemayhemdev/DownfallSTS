@@ -246,12 +246,12 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             // Insert other languages here
             // DONT FORGET TO TOGGLE AT reskinContent.getLanguageString() TOO
             Settings.GameLanguage.ENG, Settings.GameLanguage.ZHS,
-             Settings.GameLanguage.JPN,
-            Settings.GameLanguage.KOR,
-            Settings.GameLanguage.FRA,
+         //    Settings.GameLanguage.JPN,
+         //   Settings.GameLanguage.KOR,
+       //     Settings.GameLanguage.FRA,
 //            Settings.GameLanguage.ZHT,
-            Settings.GameLanguage.RUS,
-            Settings.GameLanguage.PTB
+      //      Settings.GameLanguage.RUS,
+        //    Settings.GameLanguage.PTB
     };
 
     public static ReplaceData[] wordReplacements;
