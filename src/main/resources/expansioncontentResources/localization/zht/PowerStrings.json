@@ -27,8 +27,8 @@
   "expansioncontent:ChronoBoostPower": {
     "NAME": "時間加速",
     "DESCRIPTIONS": [
-      "每當你打出 #b",
-      " 張牌時，獲得 #b",
+      "再打出 #b",
+      " 張牌後，獲得 #b",
       " 點 #y力量 。"
     ]
   },
@@ -91,6 +91,39 @@
       " 回合後，隨機對敵人造成 #b",
       "本回合結束時，隨機對敵人造成 #b",
       " 點傷害 #b6 次。"
+    ]
+  },  
+  "expansioncontent:BeatOfDeathP": {
+    "NAME": "死亡律動",
+    "DESCRIPTIONS": [
+      "每當你打出 1 張牌，對所有敵人造成 #b",
+      " 點傷害。"
+    ]
+  },
+  "expansioncontent:PandemoniumPower":{
+    "NAME": "亂舞",
+    "DESCRIPTIONS": [
+      "回合開始時，從棄牌堆隨機選擇 1 張牌打出。",
+      "回合開始時，從棄牌堆隨機選擇 #b",
+      " 張牌打出。"
+    ]
+  },
+  "expansioncontent:EvilWithinPower":{
+    "NAME": "惡靈附身",
+    "DESCRIPTIONS": [
+      "對所有敵人造成 #b",
+      " 點傷害，在給予 #b",
+      " 次負面效果後。",
+      " 次負面效果後。"
+    ]
+  },
+  "expansioncontent:ReveriePower":{
+    "NAME": "幻象",
+    "DESCRIPTIONS": [
+      "回合開始時，看棄牌堆頂部 1 張牌並將其加入手牌。",
+      "回合開始時，看棄牌堆頂部 #b",
+      " 張牌並選擇 1 張加入手牌。",
+      "選擇 1 張牌加入手牌"
     ]
   },
   "expansioncontent:VexVinciblePower": {
