@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -54,47 +55,46 @@ public class ShatteredFragment extends CustomRelic {
 //        this.addToBot(new MakeTempCardInHandAction(new BloodySacrifice()));// 25
 //    }
 
-    //    public void onUseCard(AbstractCard card, UseCardAction action) {
-    //        if (card.type == AbstractCard.CardType.POWER) {
-    //            boolean isEliteOrBoss = AbstractDungeon.getCurrRoom().eliteTrigger;
-    //            Iterator var2 = AbstractDungeon.getMonsters().monsters.iterator();
-    //
-    //            while(var2.hasNext()) {
-    //                AbstractMonster m = (AbstractMonster)var2.next();
-    //                if (m.type == AbstractMonster.EnemyType.BOSS) {
-    //                    isEliteOrBoss = true;
-    //                }
-    //            }
-    //
-    //            if (isEliteOrBoss) {
-    //                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-    //                atb((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new StrengthPower((AbstractCreature)AbstractDungeon.player, 1), 1));
-    //            }
-    //        }
-    //    }
+        public void onUseCard(AbstractCard card, UseCardAction action) {
+            if (card.type == AbstractCard.CardType.POWER) {
+                boolean isEliteOrBoss = AbstractDungeon.getCurrRoom().eliteTrigger;
+                Iterator var2 = AbstractDungeon.getMonsters().monsters.iterator();
+                while(var2.hasNext()) {
+                   AbstractMonster m = (AbstractMonster)var2.next();
+                   if (m.type == AbstractMonster.EnemyType.BOSS) {
+                       isEliteOrBoss = true;
+                    }
+                }
 
-
-
-    public void atBattleStart() {
-        boolean isEliteOrBoss = AbstractDungeon.getCurrRoom().eliteTrigger;
-        Iterator var2 = AbstractDungeon.getMonsters().monsters.iterator();
-
-        while(var2.hasNext()) {
-            AbstractMonster m = (AbstractMonster)var2.next();
-            if (m.type == AbstractMonster.EnemyType.BOSS) {
-                isEliteOrBoss = true;
+               if (isEliteOrBoss) {
+                    this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                    atb((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new StrengthPower((AbstractCreature)AbstractDungeon.player, 1), 1));
+                }
             }
         }
 
-        if (isEliteOrBoss) {
-            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-           // AbstractCard q = new AwakenDeath();
-            //            addToTop(new EchoACardAction(q, true));
-            atb((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new CuriosityPower((AbstractCreature)AbstractDungeon.player, 1), 1));
 
-        }
 
-    }
+//    public void atBattleStart() {
+//        boolean isEliteOrBoss = AbstractDungeon.getCurrRoom().eliteTrigger;
+//        Iterator var2 = AbstractDungeon.getMonsters().monsters.iterator();
+//
+//        while(var2.hasNext()) {
+//            AbstractMonster m = (AbstractMonster)var2.next();
+//            if (m.type == AbstractMonster.EnemyType.BOSS) {
+//                isEliteOrBoss = true;
+//            }
+//        }
+//
+//        if (isEliteOrBoss) {
+//            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+//           // AbstractCard q = new AwakenDeath();
+//            //            addToTop(new EchoACardAction(q, true));
+//            atb((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new CuriosityPower((AbstractCreature)AbstractDungeon.player, 1), 1));
+//
+//        }
+//
+//    }
 
 
 }
