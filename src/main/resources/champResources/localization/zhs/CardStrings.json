@@ -291,7 +291,7 @@
   },
   "champ:Improvising": {
     "NAME": "触类旁通",
-    "DESCRIPTION": "回合开始时若未处于 姿态 ，随机进入 #y战狂 或 #y防守 。 NL 每次进入 姿态时，获得其 champ:技术 奖励 !M! 次 。"
+    "DESCRIPTION": "回合开始时若未处于 姿态 ，随机进入 champ:战狂 或 champ:防守 。 NL 每次进入 姿态 时，获得其 champ:技术 奖励 !M! 次 。"
   },
   "champ:CalledShot": {
     "NAME": "畅饮",
