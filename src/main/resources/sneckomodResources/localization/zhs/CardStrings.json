@@ -491,7 +491,7 @@
   },
   "sneckomod:Serpentscale": {
     "NAME": "蛇鳞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 1 *expansioncontent:多层护甲。 NL sneckomod:盈溢: 转而获得 !M! *expansioncontent:多层护甲 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 1 expansioncontent:多层护甲。 NL sneckomod:盈溢: 转而获得 !M! expansioncontent:多层护甲 。"
   },
   "sneckomod:OtherworldlySlash": {
     "NAME": "异界斩击",
