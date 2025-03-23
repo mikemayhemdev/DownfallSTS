@@ -226,7 +226,7 @@
     ]
   },
   "champ:VampiricStrike": {
-    "NAME": "重击",
+    "NAME": "猛烈打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得未被 格挡 伤害 点 格挡 。"
   },
   "champ:AdrenalArmor": {

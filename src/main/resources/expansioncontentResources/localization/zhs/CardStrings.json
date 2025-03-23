@@ -45,7 +45,7 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "先古塑形",
-    "DESCRIPTION": "获得 !M! 点 力量 和 !DM! 层 expansioncontent:*多重护甲 。",
+    "DESCRIPTION": "获得 !M! 点 力量 和 !DM! 层 expansioncontent:多重护甲 。",
     "EXTENDED_DESCRIPTION": [
       "甜圈能量",
       "获得 !M! 点 力量",
@@ -98,7 +98,7 @@
       "获得 !B! 点 格挡"
     ]
   },
-  "Slimebound:GoopSpray": {
+  "expansioncontent:SuperGoopSpray": {
     "NAME": "黏液喷射",
     "DESCRIPTION": "给予 !M! 层 expansioncontent:黏液 与 !DM! 层 虚弱 。",
     "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 expansioncontent:黏液 与 !DM! 层 虚弱 。"
@@ -120,7 +120,7 @@
 
   "expansioncontent:TakeFlight": {
     "NAME": "复苏",
-    "DESCRIPTION": "获得 !M! 层 expansioncontent:*再生 。 NL expansioncontent:吟唱 ：转而获得 !DM! 层 *再生 。"
+    "DESCRIPTION": "获得 !M! 层 expansioncontent:再生 。 NL expansioncontent:吟唱 ：转而获得 !DM! 层 *再生 。"
   },
   "expansioncontent:BeatOfDeath": {
     "NAME": "死亡律动",
@@ -135,7 +135,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得未被 格挡 伤害点 格挡 。"
   },
 
-  "collector:SomberShield": {
+  "expansioncontent:SuperSomberShield": {
     "NAME": "阴沉护盾",
     "DESCRIPTION": "expansioncontent:焰葬 。 NL 获得 !B! 点 格挡 。 NL 下回合， NL 获得所葬牌的复制品。"
   },
@@ -144,7 +144,7 @@
     "NAME": "回环之火",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 将 1 张牌从弃牌堆放入抽牌堆顶部。"
   },
-  "bronze:Flail": {
+  "expansioncontent:Flail": {
     "NAME": "乱击",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !DM! 次。 NL 获得 !M! 层 人工制品 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [

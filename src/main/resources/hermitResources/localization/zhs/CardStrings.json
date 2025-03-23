@@ -99,7 +99,7 @@
   },
   "hermit:Dive": {
     "NAME": "深潜",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL hermit:精准 ： NL 获得 !M! 层 *expansioncontent多层护甲 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL hermit:精准 ： NL 获得 !M! 层 expansioncontent:多层护甲 。"
   },
   "hermit:FlashPowder": {
     "NAME": "闪光粉末",
@@ -133,7 +133,7 @@
   },
   "hermit:Scavenge": {
     "NAME": "战利品",
-    "DESCRIPTION": "获得 !M! 层 *expansioncontent:多层护甲 。 NL hermit:精准 ：获得 !hermit:SecondMagic! 金币。 NL 消耗 。"
+    "DESCRIPTION": "获得 !M! 层 expansioncontent:多层护甲 。 NL hermit:精准 ：获得 !hermit:SecondMagic! 金币。 NL 消耗 。"
   },
   "hermit:ImpendingDoom": {
     "NAME": "末日将临",

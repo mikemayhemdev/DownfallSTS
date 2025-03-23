@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
@@ -54,7 +55,13 @@ public class GhostShield extends AbstractHexaCard implements HexaPurpleTextInter
         super.initializeDescription();
         String afterlife_name = downfallMod.keywords_and_proper_names.get("afterlife");
         this.keywords.add(afterlife_name);
-        this.keywords.add("block");
+        if (Settings.language == Settings.GameLanguage.ZHS){
+            this.keywords.add("格挡");
+        }else if (Settings.language == Settings.GameLanguage.RUS){
+            //this.keywords.add("ловкость");
+        }else{
+            this.keywords.add("block");
+        }
     }
 
 }
