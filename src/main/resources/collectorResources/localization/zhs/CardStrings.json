@@ -693,6 +693,6 @@
   },
   "collector:Sapped": {
     "NAME": "虚脱",
-    "DESCRIPTION": "collector:焰葬 。 NL 消耗 。 NL 本牌无法从牌组移除。"
+    "DESCRIPTION": "collector:焰葬 。 NL 抽到时失去 [E] 。 NL 消耗 。 NL 本牌无法从牌组移除。"
   }
 }

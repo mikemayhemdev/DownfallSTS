@@ -24,7 +24,7 @@ public class CrystalShiv extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 3;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 2;

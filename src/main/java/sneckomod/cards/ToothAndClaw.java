@@ -4,10 +4,12 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.green.CripplingPoison;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.FrozenEgg2;
 import com.megacrit.cardcrawl.relics.MoltenEgg2;
 import com.megacrit.cardcrawl.relics.ToxicEgg2;
@@ -27,6 +29,7 @@ public class ToothAndClaw extends AbstractSneckoCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 6;
         SneckoMod.loadJokeCardImage(this, "ToothAndClaw.png");
+        this.cardsToPreview = new Shiv();
     }
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
@@ -56,11 +59,8 @@ public class ToothAndClaw extends AbstractSneckoCard {
         while (cardsToReward.size() < 3) {
             AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == AbstractCard.CardRarity.UNCOMMON);
 
-            if (((newCard.type == AbstractCard.CardType.SKILL) && (AbstractDungeon.player.hasRelic(ToxicEgg2.ID)) ||
-                    ((newCard.type == AbstractCard.CardType.ATTACK) && (AbstractDungeon.player.hasRelic(MoltenEgg2.ID)) ||
-                            (newCard.type == AbstractCard.CardType.POWER) && (AbstractDungeon.player.hasRelic(FrozenEgg2.ID)) ||
-                            AbstractDungeon.player.hasRelic(UnknownEgg.ID)))) {
-                newCard.upgrade();
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                r.onPreviewObtainCard(newCard);
             }
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
@@ -78,6 +78,7 @@ public class ToothAndClaw extends AbstractSneckoCard {
             upgradeDamage(3);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
+            this.cardsToPreview.upgrade();
         }
     }
 }

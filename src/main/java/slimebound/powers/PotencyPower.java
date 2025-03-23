@@ -49,8 +49,12 @@ public class PotencyPower extends AbstractPower {
 
 
     public void updateDescription() {
+        if(this.amount<0){
+            this.type = PowerType.DEBUFF;
+        }else{
+            this.type = PowerType.BUFF;
+        }
         this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]+ (int) Math.ceil((this.amount / 2.0)) + DESCRIPTIONS[2]);
-
     }
 
 }

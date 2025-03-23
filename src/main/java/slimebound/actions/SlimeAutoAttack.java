@@ -166,7 +166,6 @@ public class SlimeAutoAttack extends AbstractGameAction {
             if (this.CultistBuff) {
                 CardCrawlGame.sound.playA("VO_CULTIST_1A", .3f);
                 AbstractDungeon.actionManager.addToTop(new SlimeAutoCultistBuff(1, this.slime));
-
             }
 
             if (slime instanceof ShieldSlime)
@@ -174,7 +173,6 @@ public class SlimeAutoAttack extends AbstractGameAction {
 
             if (this.hitsAll) {
                 AbstractDungeon.actionManager.addToTop(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(this.damage, true, true), DamageInfo.DamageType.THORNS, AttackEffect.POISON));
-
             } else {
                 AbstractDungeon.actionManager.addToTop(new DamageAction(mo,
                         new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.THORNS),

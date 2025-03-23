@@ -2,8 +2,8 @@
   "champ:CounterPower": {
     "NAME": "反击",
     "DESCRIPTIONS": [
-      "下次你被 #y攻击 时，给予攻击者 #b",
-      " 点伤害并移除所有 #y反击 层数。"
+      "下次被 #y攻击 时，失去所有 #y反击，并获得一张造成 #b",
+      " 点伤害的 *弹反打击 。"
     ]
   },
   "champ:FocusedBerPower": {
@@ -32,7 +32,8 @@
   "champ:ImprovisingPower": {
     "NAME": "触类旁通",
     "DESCRIPTIONS": [
-      "你的回合开始时，若未处于 #y姿态 ，随机进入 #y战狂 或 #y防守 。 "
+      "你的回合开始时，若未处于 #y姿态 ，随机进入 #y战狂 或 #y防守 。 每当你进入 #y姿态 时，获得其 champ:技术 奖励 #b",
+      " 次 。"
     ]
   },
   "champ:CalledShotPower": {
@@ -116,6 +117,13 @@
       " 次。"
     ]
   },
+  "champ:LastStandMod": {
+    "NAME": "最后一战",
+    "DESCRIPTIONS": [
+      "你的回合开始时，若生命低于 #b50% ，清除所有 #r负面效果 并获得 #b",
+      " 点 #y力量 。"
+    ]
+  },
     "champ:GladiatorFormPower": {
     "NAME": "角斗形态",
     "DESCRIPTIONS": [
@@ -157,7 +165,8 @@
   "champ:ParryPower": {
     "NAME": "招架",
     "DESCRIPTIONS": [
-      "如果本回合触发 #y反击 ，将 #b1 张 #y弹反 加入手牌。"
+      "如果本回合触发 #y反击 ，额外获得 #b",
+      " 张 #y弹反打击 。"
     ]
   },
   "champ:BoomerangPower": {
@@ -176,9 +185,9 @@
   "champ:DualPlaySrikePower": {
     "NAME": "乱舞打击",
     "DESCRIPTIONS": [
-      "本回合你打出的下张 #y打击牌 将打出两次。",
+      "本回合你打出的下张 #y打击 牌 将打出两次。",
       "本回合你打出的下 #b",
-      " 张 #y打击牌 将打出两次。"
+      " 张 #y打击 牌 将打出两次。"
     ]
   },
   "champ:LastStandPower": {
@@ -190,11 +199,18 @@
       "@失败？？@ NL @不可能！！@"
     ]
   },
-  "champ:LastStandMod": {
-    "NAME": "最后一战",
+  "champ:HonePower": {
+    "NAME": "砥砺",
     "DESCRIPTIONS": [
-      "你的回合开始时，若生命低于 #b50% ，清除所有 #r负面效果 并获得 #b",
-      " 点 #y力量 。"
+      "*打击 牌额外造成 #b",
+      " 点伤害 。"
+    ]
+  },
+  "champ:DoubleStyleThisTurnPower": {
+    "NAME": "铁链鞭击",
+    "DESCRIPTIONS": [
+      "本回合 #y技术 奖励额外提供 #b",
+      " 层 。"
     ]
   },
   "champ:FocusedDefPower": {

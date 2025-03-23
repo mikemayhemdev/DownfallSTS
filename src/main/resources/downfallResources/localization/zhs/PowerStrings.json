@@ -40,6 +40,19 @@
       "你的回合结束时，选择 #y消耗 #b1 张手牌。"
     ]
   },
+  "downfall:SpotWeakness": {
+    "NAME": "观察弱点",
+    "DESCRIPTIONS": [
+      "每当你每打出一张攻击牌，这名敌人将获得 #b"," 点 #y力量 。目前将获得 #b", " 点 #y力量 。"
+    ]
+  },
+  "downfall:FearNoEvil": {
+    "NAME": "不惧妖邪",
+    "DESCRIPTIONS": [
+      "若本回合你打出一张攻击牌， #y观者 在打出不惧妖邪后将会进入 #y平静 。",
+      "本回合 #y观者 在打出不惧妖邪后将会进入 #y平静 。"
+    ]
+  },
   "downfall:PoisonResist": {
     "NAME": "抗毒",
     "DESCRIPTIONS": [
@@ -72,6 +85,20 @@
       "本回合 #y观者 已经失去了 #b3  点 #y力量 。"
     ]
   },
+  "downfall:WatcherSkillPower": {
+    "NAME": "失谐掠夺者",
+    "DESCRIPTIONS": [
+      "每当你打出技能牌时，观者将获得 #b",
+      " 点 #y临时 #y力量 。",
+      "每当你打出技能牌时，观者将获得 #y临时 #y力量 。"
+    ]
+  },
+  "downfall:WrathNextTurnPower": {
+    "NAME": "怒火中烧",
+    "DESCRIPTIONS": [
+      "#y观者 的回合开始时，她将进入 #y愤怒 。"
+    ]
+  },
   "downfall:NeowBlasphemersDemise": {
     "NAME": "渎神者",
     "DESCRIPTIONS": [
@@ -83,7 +110,7 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "消逝的信仰",
     "DESCRIPTIONS": [
-      "每当你打出 #b1 张牌时， #y观者 获得 #b1 层 #p真言 ，你的回合开始时其失去 #b5 层 。 NL 她将不会自动退出 #y神格 。"
+      "每当你打出 #b1 张牌时， #y观者 获得 #b1 层 #p真言 ，你的回合开始时其失去 #b4 层 。 NL 当 #y观者 进入 #y神格 时，她将获得 #b3 点 #y力量 ，而且不会自动退出 #y神格 。"
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -131,7 +158,7 @@
   "downfall:DefectVoidPower": {
     "NAME": "能量窃取",
     "DESCRIPTIONS": [
-      "每当 #y故障机器人 生成 #y虚空 时，反而将其加入你的抽牌堆顶部。"
+      "每当 #y故障机器人 生成 #y虚空 时，反而将其加入你的弃牌堆。"
     ]
   },
   "downfall:NeowEnergyThief": {
@@ -143,7 +170,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "战斗开始时， #y故障机器人 将召唤 #b2 个 #y铜制圆球 。 NL 敌方回合结束时，若其无 #y人工制品 ，获得 #b1 层。"
+      "战斗开始时， #y故障机器人 将召唤 #b2 个 #y铜制圆球 。 NL #y故障机器人 的 #y核心电涌 不会消耗。"
     ]
   },
   "downfall:NeowAncientConstruct": {
@@ -153,14 +180,30 @@
     ]
   },
   "downfall:DefectCuriosity": {
-    "NAME": "偏差认知",
+    "NAME": "無偏认知",
     "DESCRIPTIONS": [
       "每当你打出 #b1 张 #y能力牌 时， #y故障机器人 获得 #b",
       " 点 #y集中 。"
     ]
   },
+  "downfall:DefectBiasCuriosity": {
+    "NAME": "正确认知",
+    "DESCRIPTIONS": [
+      "战斗开始时， #y故障机器人 将打出一张 #y无偏认知。 NL 每当你打出 #b1 张 #y能力牌 时， #y故障机器人 的 #y偏差 在本回合失效。",
+      "每当你打出 #b1 张 #y能力牌 时， #y故障机器人 的 #y偏差 在本回合失效。",
+      "#y故障机器人 的 #y偏差 在本回合失效",
+      "偏差"
+    ]
+  },
+  "downfall:DefectCuriosityLighning": {
+    "NAME": "無偏认知",
+    "DESCRIPTIONS": [
+      "每当你打出 #b1 张 #y能力牌 时， #y故障机器人 #y生成 #b",
+      " 个 #y闪电 充能球。"
+    ]
+  },
   "downfall:NeowUnbiasedCognition": {
-    "NAME": "偏差认知",
+    "NAME": "無偏认知",
     "DESCRIPTIONS": [
       "每当你打出一张 #y能力牌 ， #y涅奥 获得 #b2 点 #y力量 。"
     ]
@@ -205,7 +248,7 @@
   "downfall:MerchantStrengthPower": {
     "NAME": "灵魂窃取",
     "DESCRIPTIONS": [
-      " #y商人 仍留有本局灵魂窃取获得的 #y力量 。同时还获得了等量的 #y敏捷 。"
+      " #y商人 加倍了本局灵魂窃取获得的 #y力量 。同时还获得了等量的 #y敏捷 。"
     ]
   },
   "downfall:NeowMantra": {
@@ -214,17 +257,17 @@
       "每当 #y涅奥 拥有 #b10 层 #y真言 时，它进入 #p神格 。"
     ]
   },
+  "downfall:NeowSeeingDoubleProduct": {
+    "NAME": "???",
+    "DESCRIPTIONS": [
+      "本回合你的下一张攻击牌对 #y涅奥 造成 #b0 点伤害。"
+    ]
+  },
   "downfall:CrowbotRitualPower": {
     "NAME": "重编程：邪教",
     "DESCRIPTIONS": [
       "当 #y乌鸦机器人 的生命不高于 #b50% 时，其回合结束时失去 #b3 点生命并获得 #b",
       " 点 #y力量 。"
-    ]
-  },
-  "downfall:NeowSeeingDoubleProduct": {
-    "NAME": "???",
-    "DESCRIPTIONS": [
-      "本回合你的下一张攻击牌对 #y涅奥 造成 #b0 点伤害。"
     ]
   },
   "downfall:DamageMultiplier": {
@@ -317,16 +360,6 @@
       "#y亡命之徒 以 #b1 层 #y仪式 的状态开始战斗。每当其打出 #y炼狱 时，召唤一只 #r末日匕首 。"
     ]
   },
-  "downfall:NextTurnPowerPower": {
-    "NAME": "Next Turn ",
-    "DESCRIPTIONS": [
-      "BUG! You should not see this",
-      "Next turn, gain #b",
-      " ",
-      ".",
-      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field."
-    ]
-  },
   "downfall:NeowEclipse": {
     "NAME": "月蚀",
     "DESCRIPTIONS": [
@@ -345,6 +378,16 @@
     "NAME": "侵扰",
     "DESCRIPTIONS": [
       "对 #y涅奥 造成攻击伤害后，下回合少获得 [E] 。"
+    ]
+  },
+  "downfall:NextTurnPowerPower": {
+    "NAME": "Next Turn ",
+    "DESCRIPTIONS": [
+      "BUG! You should not see this",
+      "Next turn, gain #b",
+      " ",
+      ".",
+      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field."
     ]
   },
   "downfall:NeowStayAt1Hp": {
@@ -368,13 +411,6 @@
       " NL 获得 #b2 层 #y缓冲 。",
       " NL 获得 #b5 层 #y真言 。",
       " NL 将 #b1 张 #r腐朽 加入你的抽牌堆。"
-    ]
-  },
-  "downfall:FearNoEvil": {
-    "NAME": "不惧妖邪",
-    "DESCRIPTIONS": [
-      "若本回合你打出一张攻击牌， #y观者 在打出不惧妖邪后将会进入 #y平静 。",
-      "本回合 #y观者 在打出不惧妖邪后将会进入 #y平静 。"
     ]
   },
   "downfall:HeartsFavorPower": {

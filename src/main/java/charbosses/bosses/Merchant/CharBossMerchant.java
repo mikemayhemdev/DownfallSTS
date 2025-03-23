@@ -115,13 +115,13 @@ public class CharBossMerchant extends AbstractCharBoss {
         this.atlasGlow = new TextureAtlas(Gdx.files.internal(downfallMod.assetPath("images/monsters/merchant/noShadow/skeletonGlow.atlas")));
         SkeletonJson json = new SkeletonJson(this.atlasGlow);
         if (CardCrawlGame.dungeon != null && AbstractDungeon.player != null) {
-            if (AbstractDungeon.player.hasRelic("PreservedInsect") && !this.isPlayer && AbstractDungeon.getCurrRoom().eliteTrigger) {
-                glowscale += 0.3F;
-            }
-
-            if (ModHelper.isModEnabled("MonsterHunter") && !this.isPlayer) {
-                glowscale -= 0.3F;
-            }
+  //          if (AbstractDungeon.player.hasRelic("PreservedInsect") && !this.isPlayer && AbstractDungeon.getCurrRoom().eliteTrigger) {
+            //                glowscale += 0.3F;
+            //            }
+            //
+            //            if (ModHelper.isModEnabled("MonsterHunter") && !this.isPlayer) {
+            //                glowscale -= 0.3F;
+            //            }
         }
 
         json.setScale(Settings.scale / glowscale);

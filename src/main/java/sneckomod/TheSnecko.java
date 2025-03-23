@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -32,6 +33,7 @@ import sneckomod.relics.SneckoSoul;
 import sneckomod.vfx.SneckoVictoryNumberEffect;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static sneckomod.SneckoMod.*;
 import static sneckomod.TheSnecko.Enums.SNECKO_CYAN;
@@ -208,6 +210,17 @@ public class TheSnecko extends CustomPlayer {
     }
     */
 
+
+
+    //this is a total meme ending lol
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList();
+        panels.add(new CutscenePanel("sneckomodResources/images/ending/snecko1.png", "ATTACK_MAGIC_BEAM_SHORT"));
+        panels.add(new CutscenePanel("sneckomodResources/images/ending/snecko2.png"));
+        panels.add(new CutscenePanel("sneckomodResources/images/ending/snecko3.png"));
+        return panels;
+    }
 
     @Override
     public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {

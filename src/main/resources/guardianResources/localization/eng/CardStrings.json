@@ -208,7 +208,7 @@
   },
   "Guardian:StasisField": {
     "NAME": "Stasis Field",
-    "DESCRIPTION": "Gain !B! Block 3 times. NL Place this card into *Stasis."
+    "DESCRIPTION": "Gain !B! Block. NL Place this card into *Stasis."
   },
   "Guardian:Metallicize": {
     "NAME": "Harden",

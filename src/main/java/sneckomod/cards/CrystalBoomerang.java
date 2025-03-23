@@ -3,6 +3,7 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
 import sneckomod.SneckoMod;
@@ -13,6 +14,8 @@ public class CrystalBoomerang extends AbstractSneckoCard {
     private static final int COST = 1;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BLOCK = 3;
+
+    public static final String[] TEXT;
 
     public CrystalBoomerang() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
@@ -27,7 +30,7 @@ public class CrystalBoomerang extends AbstractSneckoCard {
 
                     p.discardPile.group,
                     1,
-                    "Choose.",
+                    TEXT[0],
 
                     (selectedCards) -> {
 
@@ -53,4 +56,9 @@ public class CrystalBoomerang extends AbstractSneckoCard {
             upgradeBlock(UPGRADE_BLOCK);
         }
     }
+
+    static {
+        TEXT = CardCrawlGame.languagePack.getUIString("BetterToHandAction").TEXT;
+    }
+
 }

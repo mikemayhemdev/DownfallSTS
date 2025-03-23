@@ -52,7 +52,7 @@ public class GoopSpray extends AbstractExpansionCard {
                 AbstractMonster mo = (AbstractMonster)var3.next();
                 atb((AbstractGameAction)new VFXAction((AbstractGameEffect)new SlimeProjectileEffect(p.hb.cX, p.hb.cY, mo.hb.cX, mo.hb.cY, 3.0F, false, 0.6F), 0.01F));
                 atb((AbstractGameAction)new ApplyPowerAction((AbstractCreature)mo, (AbstractCreature)p, (AbstractPower)new SlimedPower((AbstractCreature)mo, (AbstractCreature)p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-                this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), downfallMagic, true, AbstractGameAction.AttackEffect.NONE));
+                this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, downfallMagic, false), downfallMagic, true, AbstractGameAction.AttackEffect.NONE));
             }
         }
 

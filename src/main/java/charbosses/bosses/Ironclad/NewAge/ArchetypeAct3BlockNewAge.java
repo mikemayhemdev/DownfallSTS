@@ -77,7 +77,7 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                 case 0:
                     addToList(cardsList, new EnFeelNoPain());
                     addToList(cardsList, new EnImpervious());
-                    addToList(cardsList, new EnIntimidate());
+                    addToList(cardsList, new EnIntimidate(), true);
                     turn++;
                     break;
                 case 1:
@@ -88,7 +88,7 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 2:
                     addToList(cardsList, new EnImpervious());
-                    addToList(cardsList, new EnIntimidate());
+                    addToList(cardsList, new EnIntimidate(), true);
                     addToList(cardsList, new EnEntrench());
                     turn++;
                     break;

@@ -13,7 +13,7 @@ public class FlashInThePan extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("FlashInThePan");
 
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 10;
     private static final int COST = 2;
     private static final int UPG_BLOCK = 3;
 
@@ -25,7 +25,7 @@ public class FlashInThePan extends AbstractSneckoCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, block));
+        blck();
 
         int handSize = p.hand.size();
         if (handSize > 0) {

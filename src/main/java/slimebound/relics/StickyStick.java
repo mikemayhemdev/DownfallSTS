@@ -21,7 +21,7 @@ public class StickyStick extends CustomRelic {
     //Gelatinous Cube
     public StickyStick() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.UNCOMMON, LandingSound.SOLID);
+                RelicTier.RARE, LandingSound.SOLID);
         this.largeImg = TextureLoader.getTexture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
 
     }

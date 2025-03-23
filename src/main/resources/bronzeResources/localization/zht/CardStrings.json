@@ -362,8 +362,8 @@
   },
   "bronze:Mutator": {
     "NAME": "賦值",
-    "DESCRIPTION": "獲得 1 點 力量 。 NL 將手中一張 狀態牌 變為本牌的復製品。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 獲得 1 點 力量 。 NL 將手中一張 狀態牌 變為本牌的復製品。"
+    "DESCRIPTION": "獲得 !M! 點 力量 。 NL 將手中一張 狀態牌 變為本牌的復製品。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 獲得 !M! 點 力量 。 NL 將手中一張 狀態牌 變為本牌的復製品。"
   },
   "bronze:Allocate": {
     "NAME": "分配",

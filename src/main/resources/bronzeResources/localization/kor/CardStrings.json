@@ -369,8 +369,8 @@
   },
   "bronze:Mutator": {
     "NAME": "돌연변이",
-    "DESCRIPTION": "힘을 1 얻습니다. NL 손에 있는 상태이상을 이 카드로 sneckomod:변화시킵니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 힘을 1 얻습니다. NL 손에 있는 상태이상을 이 카드로 sneckomod:변화시킵니다."
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 손에 있는 상태이상을 이 카드로 sneckomod:변화시킵니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 힘을 !M! 얻습니다. NL 손에 있는 상태이상을 이 카드로 sneckomod:변화시킵니다."
   },
   "bronze:Allocate": {
     "NAME": "배정",

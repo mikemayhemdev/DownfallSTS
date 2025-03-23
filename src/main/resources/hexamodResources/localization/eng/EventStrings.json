@@ -34,18 +34,18 @@
     ],
     "OPTIONS": [
       "[Offer] #rLose ",
-      " HP. #gGain #gFirst #gSeal [REMOVE_SPACE].",
-      " #ySouls. #gGain #gSecond #gSeal [REMOVE_SPACE].",
-      ". #gGain #gThird #gSeal [REMOVE_SPACE].",
-      ". #gGain #gFourth #gSeal [REMOVE_SPACE].",
-      "[Locked] Requires more Gold [REMOVE_SPACE].",
+      " HP. #gGain #gFirst #gSeal.",
+      " #ySouls. #gGain #gSecond #gSeal.",
+      ". #gGain #gThird #gSeal.",
+      ". #gGain #gFourth #gSeal.",
+      "[Locked] Requires more Gold.",
       "[Locked] Requires a Common Card.",
       "[Locked] Requires a Potion.",
       "[Leave]",
       "[Locked] Offering made.",
-      ". #gGain #gFifth #gSeal [REMOVE_SPACE].",
+      ". #gGain #gFifth #gSeal.",
       "[Locked] Requires an Upgraded Card.",
-      " Max HP. #gGain #gSixth #gSeal [REMOVE_SPACE].",
+      " Max HP. #gGain #gSixth #gSeal.",
       "[Locked] Requires 2 Max HP."
     ]
   },
@@ -75,8 +75,8 @@
     "OPTIONS": [
       "[Accept] #rLose #r",
       " #rMax #rHP [REMOVE_SPACE]. Unlock Study and Learn options.",
-      "[Study] #rLose #rall #rStrikes [REMOVE_SPACE]. #gGain #g3 #gCouncil's #gJustice [REMOVE_SPACE].",
-      "[Learn] #rLose #rall #rDefends [REMOVE_SPACE]. #gGain #g",
+      "[Study] #rLose #rall #rStrikes. #gGain #g3 #gCouncil's #gJustice [REMOVE_SPACE].",
+      "[Learn] #rLose #rall #rDefends. #gGain #g",
       "[Complete]",
       "[Leave]",
       "[Locked] Cannot leave yet.",
@@ -89,7 +89,7 @@
       "Spirit is the sword - and experience, the sharpening stone."
     ],
     "OPTIONS": [
-      "[Wistfulness] #gAdd #gEthereal to all #gStrikes and #gDefends [REMOVE_SPACE].",
+      "[Wistfulness] #gAdd #gEthereal to all #gStrikes and #gDefends.",
       "[Locked] Requires a Strike or Defend."
     ]
   }

@@ -10,12 +10,12 @@
       "Using the mining pick, you hammer away at the wall and carve out a gem. The pick takes some wear and tear in the process, but better to damage it than your claws."
     ],
     "OPTIONS": [
-      "[Dig with Claws] #gGain #grandom #gGem [REMOVE_SPACE]. #rLose #r",
-      " #rHP [REMOVE_SPACE].",
+      "[Dig with Claws] #gGain #grandom #gGem. #rLose #r",
+      " #rHP.",
       "[Leave]",
-      "[Rob] #rFight #rGremlins [REMOVE_SPACE]. #gGain #gPick #gof #gRhapsody [REMOVE_SPACE].",
-      "[Mine with Pick] #gGain #grandom #gGem [REMOVE_SPACE]. #rLose #rPick #rcharge [REMOVE_SPACE].",
-      "[Locked] Pick #rBroken [REMOVE_SPACE]."
+      "[Rob] #rFight #rGremlins. #gGain #gPick #gof #gRhapsody.",
+      "[Mine with Pick] #gGain #grandom #gGem. #rLose #rPick #rcharge.",
+      "[Locked] Pick #rBroken."
     ]
   },
   "Guardian:StasisEgg": {
@@ -27,9 +27,9 @@
       "You decide that something this powerful is probably here for good reason. Though your instinct says that you should do something with such a powerful object, you reason that whoever left this here did so with purpose.  You close the lid, and move on."
     ],
     "OPTIONS": [
-      "[Use] #gGain #gQuantum #gChamber [REMOVE_SPACE]. #rBecome #rCursed #r- #rAged [REMOVE_SPACE].",
+      "[Use] #gGain #gQuantum #gChamber. #rBecome #rCursed #r- #rAged.",
       "[Smash] #gGain #g",
-      " #gMax #gHP [REMOVE_SPACE]. #rBecome #rCursed #r- #rPain [REMOVE_SPACE].",
+      " #gMax #gHP. #rBecome #rCursed #r- #rPain.",
       "[Leave]"
     ]
   },
@@ -39,7 +39,7 @@
       "You decide to put the forge to use and... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...make some room in your arsenal for new gemstones."
     ],
     "OPTIONS": [
-      "[Tinker] #gAdd #ga #gsocket #gto #gany #gsocketed #gcard [REMOVE_SPACE].",
+      "[Tinker] #gAdd #ga #gsocket #gto #gany #gsocketed #gcard.",
       "Add a socket to a card.",
       "[Locked] Requires a card with sockets."
     ]
@@ -77,13 +77,13 @@
       "Taking advantage of this break in the climb, you place a gemstone into your equipment, instantly feeling your power grow."
     ],
     "OPTIONS": [
-      "[Dismantle] #rRemove Socketed Card. Gain its #gGems [REMOVE_SPACE].",
+      "[Dismantle] #rRemove Socketed Card. Gain its #gGems.",
       "[Locked] Requires Socketed Card with a Gem installed.",
       "[Pry] #rDestroy all #gGems in a Socketed Card.",
-      "[Transmute] #rRemove a Card. Gain a random #gGem [REMOVE_SPACE].",
+      "[Transmute] #rRemove a Card. Gain a random #gGem.",
       "[Locked] Already used.",
       "[Leave]",
-      "[Enhance] Add a #gGem to a #gSocket [REMOVE_SPACE].",
+      "[Enhance] Add a #gGem to a #gSocket.",
       "[Locked] Requires a Gem and an open Socket."
     ]
   },
@@ -120,7 +120,7 @@
       "If you are a peg, endure the knocking; if you are a mallet, strike."
     ],
     "OPTIONS": [
-      "[Endurance] #gAdd #gBrace #g2 to all #gStrikes and #gDefends [REMOVE_SPACE].",
+      "[Endurance] #gAdd #gBrace #g2 to all #gStrikes and #gDefends.",
       "[Locked] Requires a Strike or Defend."
     ]
   }

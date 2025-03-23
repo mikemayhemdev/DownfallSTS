@@ -82,8 +82,12 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
     @Override
     public void stackPower(int stackAmount) {
         if (AbstractDungeon.player.hasRelic(PowerArmor.ID))
-            if (amount + stackAmount > PowerArmor.CAP_RESOLVE_ETC)
+            if (amount + stackAmount > PowerArmor.CAP_RESOLVE_ETC) {
+                PowerArmor PowerArmorInstance = new PowerArmor();
+                PowerArmorInstance.flash();
+                addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, PowerArmorInstance));
                 stackAmount = (PowerArmor.CAP_RESOLVE_ETC - amount);
+            }
         super.stackPower(stackAmount);
     }
 

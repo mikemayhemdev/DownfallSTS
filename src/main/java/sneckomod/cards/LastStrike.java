@@ -1,6 +1,7 @@
 package sneckomod.cards;
 
 import automaton.cards.goodstatus.IntoTheVoid;
+import collector.cards.BramblesparKindling;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.watcher.ExpungeVFXAction;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.FrozenEgg2;
 import com.megacrit.cardcrawl.relics.MoltenEgg2;
 import com.megacrit.cardcrawl.relics.ToxicEgg2;
@@ -115,14 +117,11 @@ public class LastStrike extends AbstractSneckoCard {
 
         while (cardsToReward.size() < 3) {
             AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(
-                    c -> c.rarity != CardRarity.BASIC && (c.hasTag(CardTags.STRIKE) || c.cardID.equals(HighCaliber.ID))
+                    c -> c.rarity != CardRarity.BASIC && (c.hasTag(CardTags.STRIKE) || c.cardID.equals(HighCaliber.ID) || c.cardID.equals(BramblesparKindling.ID))
             );
 
-            if (((newCard.type == AbstractCard.CardType.SKILL) && (AbstractDungeon.player.hasRelic(ToxicEgg2.ID)) ||
-                    ((newCard.type == AbstractCard.CardType.ATTACK) && (AbstractDungeon.player.hasRelic(MoltenEgg2.ID)) ||
-                            (newCard.type == AbstractCard.CardType.POWER) && (AbstractDungeon.player.hasRelic(FrozenEgg2.ID)) ||
-                            AbstractDungeon.player.hasRelic(UnknownEgg.ID)))) {
-                newCard.upgrade();
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                r.onPreviewObtainCard(newCard);
             }
 
             if (!cardListDuplicate(cardsToReward, newCard)) {

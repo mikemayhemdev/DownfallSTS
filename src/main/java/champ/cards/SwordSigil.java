@@ -3,6 +3,7 @@ package champ.cards;
 import champ.ChampMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 
@@ -27,4 +28,5 @@ public class SwordSigil extends AbstractChampCard {
         upgradeMagicNumber(1);
        // upgradeCool(2);
     }
+
 }
