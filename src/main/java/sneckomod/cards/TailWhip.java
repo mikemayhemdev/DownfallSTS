@@ -9,8 +9,6 @@ public class TailWhip extends AbstractSneckoCard {
 
     public final static String ID = makeID("TailWhip");
 
-    //stupid intellij stuff ATTACK, ENEMY, BASIC
-
     private static final int DAMAGE = 10;
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
