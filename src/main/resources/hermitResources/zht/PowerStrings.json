@@ -1,0 +1,94 @@
+{
+"hermit:Concentration": {
+        "NAME": "專註",
+        "DESCRIPTIONS": ["本回合你的下一張 #y精準 牌必定觸發 #y精準 效果。"]
+},
+"hermit:HighNoonPower": {
+        "NAME": "午時已到",
+        "DESCRIPTIONS": ["每當你打出 #y打擊 或 #y防禦 時，抽 #b", " 張牌。", " 張牌。"]
+},
+"hermit:FatalDesirePower": {
+        "NAME": "自弒之欲",
+        "DESCRIPTIONS": ["你的回合開始時，額外抽 #b", " 張牌並將 #b", " 張 #y受傷 加入手牌。", " 張 #y受傷 加入手牌。"]
+},
+"hermit:ShadowCloakPower": {
+        "NAME": "暗影鬥篷",
+        "DESCRIPTIONS": ["每當你抽到 #y詛咒 時，獲得 #b", " 點 #y格擋 。"]
+},
+"hermit:TakeAimPower": {
+        "NAME": "舉槍瞄準",
+        "DESCRIPTIONS": ["你的回合開始時， #y專註 。"]
+},
+"hermit:AdaptPower": {
+        "NAME": "適應",
+        "DESCRIPTIONS": ["你的回合開始時，可 #y消耗 #b", " 張手牌來獲得 #b8 點 #y格擋 。", " 張手牌，每張提供 #b8 點 #y格擋 。"]
+},
+"hermit:Bruise": {
+        "NAME": "瘀傷",
+        "DESCRIPTIONS": ["本回合目標額外受到 #b", " 點攻擊傷害。"]
+},
+"hermit:HorrorPower": {
+        "NAME": "恐懼",
+        "DESCRIPTIONS": ["#y瘀傷 在 #b", " 回合內不會消失。", " 回合內不會消失。"]
+},
+"hermit:ComboPower": {
+        "NAME": "連擊",
+        "DESCRIPTIONS": ["每回合前 #b", " 次觸發 #y精準 時，將該牌返回手牌最右端。", " 次觸發 #y精準 時，將該牌返回手牌最右端。"]
+},
+"hermit:BigShotPower": {
+        "NAME": "冒煙槍管",
+        "DESCRIPTIONS": ["每當你觸發 #y精準 效果時，獲得 #b", " 層 #y活力 。"]
+},
+"hermit:BrawlPower": {
+        "NAME": "鬥毆",
+        "DESCRIPTIONS": ["你的回合開始時，給予所有敵人 #b", " 層 #y瘀傷 。"]
+},
+"hermit:Rugged": {
+        "NAME": "堅固",
+        "DESCRIPTIONS": ["下 #b", " 次受到攻擊傷害時，將生命損失降至 #b2 點。", " 次受到攻擊傷害時，將生命損失降至 #b2 點。"]
+},
+"hermit:EternalPower": {
+        "NAME": "永恒形態",
+        "DESCRIPTIONS": ["每回合抽到的前 #b4 張牌該回合首次耗能減 #b", " 。"]
+},
+"hermit:OverwhelmingPowerPower": {
+        "NAME": "壓倒性力量",
+        "DESCRIPTIONS": ["若回合結束時你的 #y能量 為 #b0 ，失去 #b"," 點生命。"]
+},
+"hermit:Bounty": {
+        "NAME": "賞金",
+        "DESCRIPTIONS": ["當前賞金: "]
+},
+"hermit:Drained": {
+        "NAME": "力盡",
+        "DESCRIPTIONS": ["下回合少獲得 #b", " 點能量。"]
+},
+"hermit:DeterminationPower": {
+        "NAME": "決心",
+        "DESCRIPTIONS": ["每當你獲得負面狀態時，獲得 #b", " 點 #y力量 。"]
+},
+"hermit:RyeStalkPower": {
+        "NAME": "黑麥莖",
+        "DESCRIPTIONS": ["本回合結束時， #y保留 任意數量的手牌。"]
+},
+"hermit:PetGhostPower": {
+        "NAME": "寵物幽靈",
+        "DESCRIPTIONS": ["你無法死亡。在 ", " 你的下回合結束時死亡。", " 本回合結束時死亡。"]
+},
+"hermit:SnipePower": {
+        "NAME": "狙擊",
+        "DESCRIPTIONS": ["本回合下 #b", " 次 #y精準 效果觸發 #b2 次。", " 次 #y精準 效果觸發 #b2 次。"]
+},
+"hermit:CoalescencePower": {
+        "NAME": "愈合",
+        "DESCRIPTIONS": ["你的回合結束時，可 #y保留 #b", " 張牌。", " 張牌。"]
+},
+"hermit:ReprievePower": {
+        "NAME": "延緩死刑",
+        "DESCRIPTIONS": ["額外獲得 #b", " 回合。", " 回合。"]
+},
+"hermit:MaintenanceStrikePower": {
+        "NAME": "維護",
+        "DESCRIPTIONS": ["#y打擊 額外造成 #b", " 點傷害。"]
+}
+}
