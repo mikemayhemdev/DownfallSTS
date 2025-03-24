@@ -1,12 +1,13 @@
 [
   {
     "PROPER_NAME": "残影",
-    "ID": "残影",
+    "ID": "blur",
     "NAMES": [
-      "残影"
+      "残影",
+      "blur"
     ],
     "DESCRIPTION": "#y格挡 在回合结束时不被移除。"
-  },  
+  },
 
 
 

@@ -459,7 +459,7 @@
       "张)，每张随机造成 !D! 点伤害。 NL 消耗 。"
     ]
   },
-  "bronze:rt": {
+  "bronze:ShipIt": {
     "NAME": "废能转换",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗堆中每有一张 状态牌 ， NL 重复造成一次 。",
     "EXTENDED_DESCRIPTION": [

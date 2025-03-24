@@ -143,7 +143,7 @@
   },
   "sneckomod:Mudshield": {
     "NAME": "泥浆屏障",
-    "DESCRIPTION": "每当你sneckomod:混淆 1张牌，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "每当你 sneckomod:混淆 1张牌，获得 !M! 点 格挡 。"
   },
   "sneckomod:OverwhelmingPresence": {
     "NAME": "威压",

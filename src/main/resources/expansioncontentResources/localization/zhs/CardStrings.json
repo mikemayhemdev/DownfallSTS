@@ -13,7 +13,7 @@
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "坚不可摧",
-    "DESCRIPTION": "获得 !M! 层 expansioncontent:坚不可摧。 NL 若你已有本牌效果，打出本牌 expansioncontent:坚不可摧 再多持续1回合"
+    "DESCRIPTION": "获得 !M! 层 expansioncontent:坚不可摧 。 NL 若你已有本牌效果，打出本牌 expansioncontent:坚不可摧 再多持续1回合"
   },
   "expansioncontent:HyperBeam": {
     "NAME": "超能射线",
@@ -45,7 +45,7 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "先古塑形",
-    "DESCRIPTION": "获得 !M! 点 力量 和 !DM! 层 expansioncontent:多重护甲 。",
+    "DESCRIPTION": "获得 !M! 点 力量 和 !DM! 层 expansioncontent:多层护甲 。",
     "EXTENDED_DESCRIPTION": [
       "甜圈能量",
       "获得 !M! 点 力量",

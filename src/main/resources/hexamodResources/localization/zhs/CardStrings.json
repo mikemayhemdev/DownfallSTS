@@ -535,9 +535,9 @@
     ]
   },
   "hexamod:HexaLevel": {
-    "NAME": "Infernal Form",
-    "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! hexamod:Intensity. NL At the start of your turn, gain !M! hexamod:Intensity."
+    "NAME": "地狱形态",
+    "DESCRIPTION": "回合开始时， NL 获得 !M! 点 hexamod:热烈 .",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 hexamod:热烈 。 NL 回合开始时， NL 获得 !M! 点 hexamod:热烈 。"
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",
