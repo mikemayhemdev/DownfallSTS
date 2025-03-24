@@ -34,7 +34,7 @@
   "Slimebound:Overexert": {
     "NAME": "超負荷",
     "DESCRIPTION": "獲得 5 點 slimeboundmod:潛力 。 NL !M! 回合後， NL slimeboundmod:吸收 所有史萊姆。",
-    "UPGRADE_DESCRIPTION": "獲得 5 點 slimeboundmod:潛力 。 NL slimeboundmod:命令 兩次。 NL !M! 兩回合後， NL slimeboundmod:吸收 所有史萊姆。"
+    "UPGRADE_DESCRIPTION": "獲得 5 點 slimeboundmod:潛力 。 NL slimeboundmod:命令 2次。 NL !M! 兩回合後， NL slimeboundmod:吸收 所有史萊姆。"
   },
   "Slimebound:Split": {
     "NAME": "分裂",
