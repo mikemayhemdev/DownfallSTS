@@ -323,12 +323,12 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
-    "DESCRIPTION": "回合开始时， NL 随机获得 消耗 *打击 牌。 NL 其首次耗能为0。",
-    "UPGRADE_DESCRIPTION": "回合开始时， NL 随机获得 消耗 *打击 牌+。 NL 其首次耗能为0。"
+    "DESCRIPTION": "回合开始时， NL 随机获得*打击 牌的 gremlin:回响。 NL 其首次耗能为0。",
+    "UPGRADE_DESCRIPTION": "回合开始时， NL 随机获得*打击 牌+的 gremlin:回响。 NL 其首次耗能为0。"
   },
   "champ:DefensiveStyle": {
-    "NAME": "防守战法",
-    "DESCRIPTION": "champ:防守 champ:技术 奖励额外提供 !M! 层 活力 与 champ:反击 。"
+    "NAME": "双重战法",
+    "DESCRIPTION": "champ:技术 奖励额外提供 !M! 层 活力 与 champ:反击 。"
   },
   "champ:GladiatorStyle": {
     "NAME": "利落",
@@ -385,8 +385,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "三重打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击 ， NL 其耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击+ ， NL 其耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击的 gremlin:回响， NL 其耗能为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击+ 的 gremlin:回响， NL 其耗能为0。"
   },
   "champ:WindUp": {
     "NAME": "挑衅",
