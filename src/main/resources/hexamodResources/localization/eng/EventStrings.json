@@ -75,12 +75,12 @@
     "OPTIONS": [
       "[Accept] #rLose #r",
       " #rMax #rHP [REMOVE_SPACE]. Unlock Study and Learn options.",
-      "[Study] #rLose #rall #rStrikes. #gGain #g3 #gCouncil's #gJustice [REMOVE_SPACE].",
+      "[Study] #rLose #rall #rStrikes. #gGain #g3 #gCouncil's #gJustice.",
       "[Learn] #rLose #rall #rDefends. #gGain #g",
       "[Complete]",
       "[Leave]",
       "[Locked] Cannot leave yet.",
-      " #gApparition [REMOVE_SPACE]."
+      " #gApparition."
     ]
   },
   "hexamod:BackToBasics": {
