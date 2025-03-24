@@ -249,7 +249,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
          //    Settings.GameLanguage.JPN,
          //   Settings.GameLanguage.KOR,
        //     Settings.GameLanguage.FRA,
-//            Settings.GameLanguage.ZHT,
+            Settings.GameLanguage.ZHT,
       //      Settings.GameLanguage.RUS,
         //    Settings.GameLanguage.PTB
     };
