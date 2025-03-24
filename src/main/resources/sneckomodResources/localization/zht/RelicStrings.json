@@ -3,14 +3,14 @@
     "NAME": "異蛇之魂",
     "FLAVOR": "0……3……2……2……1",
     "DESCRIPTIONS": [
-      "戰鬥開始時，將1張 #y靈魂骰擲 加入手牌。"
+      "戰鬥開始時，獲得 1 張 #y靈魂骰擲 。"
     ]
   },
   "sneckomod:SuperSneckoSoul": {
     "NAME": "超級蛇魂",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
-      "替換 [#407B93]異蛇之魂[] 。 NL 奇數回合開始時，將1張 #y靈魂骰擲 加入手牌；偶數回合開始時，多抽1張牌並 混淆 之。"
+      "替換 [#407B93]異蛇之魂[] 。 NL 奇數回合開始時，獲得 1 張 #y靈魂骰擲 ；偶數回合開始時，多抽1張牌並 #ysneckomod:混淆 之。"
     ]
   },
   "sneckomod:CleanMud": {
@@ -24,7 +24,7 @@
     "NAME": "異蛇戒指",
     "FLAVOR": "無法辨認，難以閱讀，周四到期。",
     "DESCRIPTIONS": [
-      "觸發 #b3 次 #ysneckomod:盈溢時，給予隨機敵人 #b1 層 #y虛弱 與 #y易傷 。"
+      "觸發 #b3 次 #ysneckomod:溢出時，給予隨機敵人 #b1 層 #y虛弱 與 #y易傷 。"
     ]
   },
   "sneckomod:CrystallizedMud": {
@@ -49,7 +49,7 @@
     ]
   },
   "sneckomod:SleevedAce": {
-    "NAME": "袖中藏牌",
+    "NAME": "袖中王牌",
     "FLAVOR": "我也出A。",
     "DESCRIPTIONS": [
       "戰鬥開始時，獲得1張 #y記號牌 。"
@@ -59,7 +59,7 @@
     "NAME": "未知之蛋",
     "FLAVOR": "想知道孵出什麽？ 交 $1000 再說。",
     "DESCRIPTIONS": [
-      "每當你獲得 #y異色 牌時，將其 #y升級 。 NL 撿起時，隨機 #y升級 #b2 張 #ysneckomod:異色 牌。 "
+      "每當你獲得 #y異色 牌時，將其 #y升級 。 NL 拾起時，隨機 #y升級 #b2 張 #ysneckomod:異色 牌。 "
     ]
   },
   "sneckomod:SuperSneckoEye": {
@@ -87,10 +87,10 @@
     "NAME": "神秘八面體",
     "FLAVOR": "它似乎灌鉛的。",
     "DESCRIPTIONS": [
-      "拾起時，選擇牌組中 #b1 張 #ysneckomod:盈溢 牌。每當你打出它，獲得 #b4 點 #y格擋 並觸發其 #y盈溢 效果，與手牌數無關。",
+      "拾起時，選擇牌組中 #b1 張 #ysneckomod:溢出 牌。每當你打出它，獲得 #b4 點 #y格擋 並觸發其 #y溢出 效果，即使你的手牌數不夠。",
       "選擇1張牌 ",
       " 當 ",
-      " 被打出時，獲得 #b4 點 #y格擋 並觸發其 #ysneckomod:盈溢 效果，與手牌數無關。"
+      " 被打出時，獲得 #b4 點 #y格擋 並觸發其 #ysneckomod:溢出 效果，與手牌數無關。"
     ]
   },
   "sneckomod:BabySnecko": {
@@ -104,7 +104,7 @@
     "NAME": "徽章",
     "FLAVOR": "我系戰系鍋，介系我最喜歡滴遺物。——商店小廣告",
     "DESCRIPTIONS": [
-      "拾起時，從 #b5 張罕見 #ysneckomod:異色 #y能力 牌中選擇 #b1 張獲得之。"
+      "拾起時，從 #b5 張罕見 #ysneckomod:異色 能力牌中選擇 #b1 張加入牌組。"
     ]
   },
   "sneckomod:SneckoBoss": {

@@ -2,7 +2,7 @@
   "sneckomod:BlunderGuardPower": {
     "NAME": "巨浪",
     "DESCRIPTIONS": [
-      "#y盈溢 效果額外獲得 #b",
+      "#y溢出 效果額外獲得 #b",
       " 點 #y格擋 。",
       " 點 #y格擋 。"
     ]
@@ -18,9 +18,9 @@
   "sneckomod:CheatPower": {
     "NAME": "幸運",
     "DESCRIPTIONS": [
-      "在本回合， #y盈溢 效果一定觸發，與手牌數無關。",
+      "在本回合， #y溢出 效果一定觸發，與手牌數無關。",
       "在接下來 #b",
-      " 個回合， #y盈溢 效果一定觸發，與手牌數無關。"
+      " 個回合， #y溢出 效果一定觸發，與手牌數無關。"
     ]
   },
   "sneckomod:MuddleDrawnCardsPower": {
@@ -115,16 +115,16 @@
   "sneckomod:TyphoonPower": {
     "NAME": "臺風之牙",
     "DESCRIPTIONS": [
-      "本回合每當 #b盈溢 觸發，打出1張 #y臺風之牙 的復製。",
-      "本回合每當 #b盈溢 觸發，打出 #b",
+      "本回合每當 #b溢出 觸發，打出1張 #y臺風之牙 的復製。",
+      "本回合每當 #b溢出 觸發，打出 #b",
       " 張 #y臺風之牙 的復製。"
     ]
   },
   "sneckomod:TyphoonPlusPower": {
     "NAME": "臺風之牙+",
     "DESCRIPTIONS": [
-      "本回合每當 #b盈溢 觸發，打出1張 #y臺風之牙+ 的復製。",
-      "本回合每當 #b盈溢 觸發，打出 #b",
+      "本回合每當 #b溢出 觸發，打出1張 #y臺風之牙+ 的復製。",
+      "本回合每當 #b溢出 觸發，打出 #b",
       " 張 #y臺風之牙+ 的復製。"
     ]
   },
@@ -171,7 +171,7 @@
   "sneckomod:FountainPower": {
     "NAME": "毒泉",
     "DESCRIPTIONS": [
-      "#y盈溢 效果額外給予隨機敵人 #b",
+      "#y溢出 效果額外給予隨機敵人 #b",
       " 層 #y劇毒 。",
       " 層 #y劇毒 。"
     ]

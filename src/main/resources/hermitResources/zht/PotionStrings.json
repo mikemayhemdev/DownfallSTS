@@ -1,0 +1,14 @@
+{
+"hermit:Tonic": {
+        "NAME": "奎寧水",
+        "DESCRIPTIONS": ["獲得 #b", " 層 #y堅固 。"]
+},
+"hermit:BlackBile": {
+        "NAME": "黑膽汁",
+        "DESCRIPTIONS": ["給予 #b", " 層 #y瘀傷 。"]
+},
+"hermit:Eclipse": {
+        "NAME": "蝕刻藥水",
+        "DESCRIPTIONS": ["將 #b", " 張 #y消耗堆 的牌加入手牌，其耗能本回合為 #b0 。"," 張 #y消耗堆 中的牌加入手牌。其耗能本回合為 #b0 。"]
+}
+}
