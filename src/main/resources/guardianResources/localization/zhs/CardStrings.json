@@ -283,7 +283,7 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "折射射线",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 能被多次升级。 NL 每次升级多造成1次伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 能被多次升级。 NL 每次升级+1:"
   },
   "Guardian:MultiBeam": {
     "NAME": "多重射线",

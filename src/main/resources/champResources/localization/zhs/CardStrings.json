@@ -243,7 +243,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "投掷金冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL champ:战狂 champ:连段 ： NL 抽 !M! 张 *攻击 牌。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL champ:战狂 champ:连段 ： NL 抽 !M! 张牌。"
   },
   "champ:Encircle": {
     "NAME": "包围",
