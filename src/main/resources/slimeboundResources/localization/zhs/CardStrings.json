@@ -34,7 +34,7 @@
   "Slimebound:Overexert": {
     "NAME": "超负荷",
     "DESCRIPTION": "获得 5 点 slimeboundmod:潜力 。 NL !M! 回合后， NL slimeboundmod:吸收 所有史莱姆。",
-    "UPGRADE_DESCRIPTION": "获得 5 点 slimeboundmod:潜力 。 NL slimeboundmod:命令 两次。 NL !M! 两回合后， NL slimeboundmod:吸收 所有史莱姆。"
+    "UPGRADE_DESCRIPTION": "获得 5 点 slimeboundmod:潜力 。 NL slimeboundmod:命令 2次。 NL !M! 两回合后， NL slimeboundmod:吸收 所有史莱姆。"
   },
   "Slimebound:Split": {
     "NAME": "分裂",
@@ -77,8 +77,8 @@
   },
   "Slimebound:OozeBath": {
     "NAME": "黏液浴",
-    "DESCRIPTION": "敌方回合开始时， NL 给予目标 !slime! 层 slimeboundmod:黏液 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将一名敌人的 slimeboundmod:黏液 变为三倍。 NL 消耗 。"
+    "DESCRIPTION": "目标敌人回合开始时， NL 获得 !slime! 层 slimeboundmod:黏液 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将敌人的 slimeboundmod:黏液 变为三倍。 NL 消耗 。"
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "黏性尖刺",
