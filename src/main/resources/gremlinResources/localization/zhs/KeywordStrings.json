@@ -1,90 +1,90 @@
 [
   {
     "NAMES": [
-      "劇痛"
+      "剧痛"
     ],
-    "PROPER_NAME": "劇痛",
-    "DESCRIPTION": "處於 #y劇痛 中的單位 造成的傷害減少 #b80% 。"
+    "PROPER_NAME": "剧痛",
+    "DESCRIPTION": "处于 #y剧痛 中的单位 造成的伤害减少 #b80% 。"
   },
   {
     "NAMES": [
-      "致殘"
+      "致残"
     ],
-    "PROPER_NAME": "致殘",
-    "DESCRIPTION": "被 #y致殘 的單位 #y虛弱 層數不再減少。 NL 敵方回合結束時，其失去 #y虛 #y弱 層數點生命。"
+    "PROPER_NAME": "致残",
+    "DESCRIPTION": "被 #y致残 的单位 #y虚弱 层数不再减少。 NL 敌方回合结束时，其失去 #y虚 #y弱 层数点生命。"
   },
   {
     "NAMES": [
-      "回響"
-      
+      "回响"
+
     ],
-    "PROPER_NAME": "回響",
-    "DESCRIPTION": "獲得一張帶有 #y消耗 與 #y虛無 的復製品， #y回響 牌自身無法再被 #y回響 。"
+    "PROPER_NAME": "回响",
+    "DESCRIPTION": "获得一张带有 #y消耗 与 #y虚无 的复制品， #y回响 牌自身无法再被 #y回响 。"
   },
   {
     "NAMES": [
       "胖地精"
     ],
     "PROPER_NAME": "胖地精",
-    "DESCRIPTION": "每當你打出一張 #y攻擊 牌時，給予目標 #b1 層 #y虛弱 。"
+    "DESCRIPTION": "每当你打出一张 #y攻击 牌时，给予目标 #b1 层 #y虚弱 。"
   },
   {
     "NAMES": [
-      "地精法師"
+      "地精法师"
     ],
-    "PROPER_NAME": "地精法師",
-    "DESCRIPTION": "每當你打出一張 #y技能 牌時，獲得 #b1 層 #y法力 。"
+    "PROPER_NAME": "地精法师",
+    "DESCRIPTION": "每当你打出一张 #y技能 牌时，获得 #b1 层 #y法力 。"
   },
   {
     "NAMES": [
       "火大地精"
     ],
     "PROPER_NAME": "火大地精",
-    "DESCRIPTION": "每當你被攻擊時，獲得 #b2 層 #y臨時力量 。"
+    "DESCRIPTION": "每当你被攻击时，获得 #b2 层 #y临时力量 。"
   },
   {
     "NAMES": [
       "持盾地精"
     ],
     "PROPER_NAME": "持盾地精",
-    "DESCRIPTION": "每當你打出一張 #y技能 牌時，獲得 #b2 點 #y格擋 。"
+    "DESCRIPTION": "每当你打出一张 #y技能 牌时，获得 #b2 点 #y格挡 。"
   },
   {
     "NAMES": [
       "卑鄙地精"
     ],
     "PROPER_NAME": "卑鄙地精",
-    "DESCRIPTION": "每當你打出一張 #y攻擊 牌時，隨機對一名敵人造成 #b3 點傷害。"
+    "DESCRIPTION": "每当你打出一张 #y攻击 牌时，随机对一名敌人造成 #b3 点伤害。"
   },
   {
     "NAMES": [
       "swap",
-      "切換",
-      "領隊"
+      "切换",
+      "领队"
     ],
-    "PROPER_NAME": "切換",
-    "DESCRIPTION": "改變 #y領隊 的地精，地精 #y領隊 時擁有其特定的的被動效果。沒有其他地精存活時 #y切換 不執行任何操作。"
+    "PROPER_NAME": "切换",
+    "DESCRIPTION": "改变 #y领队 的地精，地精 #y领队 时拥有其特定的的被动效果。没有其他地精存活时 #y切换 不执行任何操作。"
   },
   {
     "NAMES": [
       "法力"
     ],
     "PROPER_NAME": "法力",
-    "DESCRIPTION": "當你至少有 #b3 層 #y法力 時， 攻擊會使用所有 #y法力 並額外造成 #b7 點傷害。"
+    "DESCRIPTION": "当你至少有 #b3 层 #y法力 时， 攻击会使用所有 #y法力 并额外造成 #b7 点伤害。"
   },
   {
     "NAMES": [
-      "竊取"
+      "窃取"
     ],
-    "PROPER_NAME": "竊取",
-    "DESCRIPTION": "目標失去相應層數效果。你獲得相應層數效果。"
+    "PROPER_NAME": "窃取",
+    "DESCRIPTION": "目标失去相应层数效果。你获得相应层数效果。"
   },
   {
     "NAMES": [
-      "地精大塊頭",
-      "大塊頭"
+      "地精大块头",
+      "大块头"
     ],
-    "PROPER_NAME": "地精大塊頭",
-    "DESCRIPTION": "你的回合開始時，獲得 #y怒吼 、 #y顱骨重擊 與 #y沖鋒 各 #b1 張。"
+    "PROPER_NAME": "地精大块头",
+    "DESCRIPTION": "你的回合开始时，获得 #y怒吼 、 #y颅骨重击 与 #y冲锋 各 #b1 张。"
   }
 ]
