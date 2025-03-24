@@ -8,36 +8,36 @@
   },
   "expansioncontent:Hexaburn": {
     "NAME": "幽靈地獄",
-    "DESCRIPTION": "對隨機敵人造成 !D! 點傷害 !M! 次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "對隨機敵人造成 !D! 點傷害 !M! 次。"
+    "DESCRIPTION": "隨機造成 !D! 點傷害 !M! 次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "隨機造成 !D! 點傷害 !M! 次。"
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "堅不可摧",
-    "DESCRIPTION": "獲得 !M! 層 expansioncontent:堅不可摧。 NL 若你已有本牌效果，打出本牌 expansioncontent:堅不可摧 再多持續1回合"
+    "DESCRIPTION": "獲得 !M! 層 expansioncontent:堅不可摧 。 NL 若你已有本牌效果，打出本牌 expansioncontent:堅不可摧 再多持續1回合"
   },
   "expansioncontent:HyperBeam": {
-    "NAME": "超能射线",
+    "NAME": "超能射線",
     "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 NL 將 1 張 *虛空 放入你的抽牌堆頂部。 NL 消耗 。"
   },
   "expansioncontent:LastStand": {
     "NAME": "背水一戰",
-    "DESCRIPTION": "移除所有負面效果。 NL 獲得 !M! 點 力量 。"
+    "DESCRIPTION": "移除所有負面效果。 NL 獲得 !M! 層 力量 。"
   },
   "expansioncontent:YouAreMine": {
     "NAME": "你是我的了！",
-    "DESCRIPTION": "給與所有敵人 !M! 層 虛弱 與 易傷 。 NL 給與所有敵人 !DM! 層 expansioncontent:魂劫 。 NL 消耗 。"
+    "DESCRIPTION": "給予所有敵人 !M! 層 虛弱 與 易傷 。 NL 給與所有敵人 !DM! 層 expansioncontent:魂劫 。 NL 消耗 。"
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "好奇",
-    "DESCRIPTION": "當你打出1張能力牌，獲得 !M! 點 力量 。"
+    "DESCRIPTION": "當你打出1張能力牌，獲得 !M! 層 力量 。"
   },
   "expansioncontent:Chronoboost": {
     "NAME": "時空加速",
-    "DESCRIPTION": "每打出12張牌，獲得 !M! 點 力量 。"
+    "DESCRIPTION": "每打出12張牌，獲得 !M! 層 力量 。"
   },
   "expansioncontent:PolyBeam": {
     "NAME": "環能爆",
-    "DESCRIPTION": "獲得 !M! 點 力量 。"
+    "DESCRIPTION": "獲得 !M! 層 力量 。"
   },
   "expansioncontent:DecaShield": {
     "NAME": "八面盾",
@@ -45,18 +45,18 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "先古塑形",
-    "DESCRIPTION": "獲得 !M! 點 力量 和 !DM! 層 expansioncontent:*多重護甲 。",
+    "DESCRIPTION": "獲得 !M! 層 力量 和 !DM! 層 expansioncontent:多層護甲 。",
     "EXTENDED_DESCRIPTION": [
       "甜圈能量",
-      "獲得 !M! 點 力量",
+      "獲得 !M! 層 力量",
       "八體守護",
       "獲得 !M! 層 *多層護甲 。"
     ]
   },
   "expansioncontent:SuperPrepareCrush": {
     "NAME": "準備：猛擊",
-    "DESCRIPTION": "下回合開始時，將1張 *史萊姆猛擊 加入手牌，並獲得 [E] [E] [E] 和 !M! 點 力量 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "下回合開始時，將1張 *史萊姆猛擊+ 加入手牌，並獲得 [E] [E] [E] [E] 和 !M! 點 力量 。 NL 消耗 。",
+    "DESCRIPTION": "下回合開始時，將1張 *史萊姆猛擊 加入手牌，並獲得 [E] [E] [E] 和 !M! 層 力量 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "下回合開始時，將1張 *史萊姆猛擊+ 加入手牌，並獲得 [E] [E] [E] [E] 和 !M! 層 力量 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "~史萊姆……~ NL #r~撞擊！！！~"
     ]
@@ -68,13 +68,13 @@
 
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",
-    "DESCRIPTION": "接下來 !M! 個回合開始時，獲得 1 張隨機 *首領 牌。 NL 其耗能為0。",
-    "UPGRADE_DESCRIPTION": "接下來 !M! 個回合開始時，獲得 1 張隨機 *首領 牌。 NL 其耗能為0。"
+    "DESCRIPTION": "接下來 !M! 個回合開始時，獲得 1 張隨機 *首領 牌。 NL 其第1次打出為0耗能。",
+    "UPGRADE_DESCRIPTION": "接下來 !M! 個回合開始時，獲得 1 張隨機 *首領 牌。 NL 其第1次打出為0耗能。"
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速學習",
-    "DESCRIPTION": "從 3 張 *首領 牌選擇 1 張獲得之。 NL 該牌耗能為0直到被打出。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "從 3 張已升級的 *首領 牌選擇 1 張獲得之。 NL 該牌耗能為0直到被打出。 NL 消耗 。",
+    "DESCRIPTION": "從 3 張 *首領 牌選擇 1 張獲得之。 NL 該牌下 1次 打出為0耗能。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "從 3 張已升級的 *首領 牌選擇 1 張獲得之。 NL 該牌下 1次 打出為0耗能。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "選擇 1 張 首領 牌。"
     ]
@@ -93,12 +93,12 @@
   },
   "expansioncontent:SuperGhostShield": {
     "NAME": "幽靈護盾",
-    "DESCRIPTION": "虛無 。 [#e087a4]陰世 。[] NL [#e087a4]獲得[] [#e087a4]!B![] [#e087a4]點 格擋 。[] NL [#e087a4]獲得[] [#e087a4]!M![] [#e087a4]層 殘影 。[]",
+    "DESCRIPTION": "虛無 。 [#e087a4]陰世 。[] NL [#e087a4]獲得[] [#e087a4]!B![] [#e087a4]點格擋。[] NL [#e087a4]獲得[] [#e087a4]!M![] [#e087a4]層殘影 。[]",
     "EXTENDED_DESCRIPTION": [
       "獲得 !B! 點 格擋"
     ]
   },
-  "Slimebound:GoopSpray": {
+  "expansioncontent:SuperGoopSpray": {
     "NAME": "黏液噴射",
     "DESCRIPTION": "給予 !M! 層 expansioncontent:黏液 與 !DM! 層 虛弱 。",
     "UPGRADE_DESCRIPTION": "給予所有敵人 !M! 層 expansioncontent:黏液 與 !DM! 層 虛弱 。"
@@ -120,7 +120,7 @@
 
   "expansioncontent:TakeFlight": {
     "NAME": "復蘇",
-    "DESCRIPTION": "獲得 !M! 層 expansioncontent:*再生 。 NL expansioncontent:吟唱 ：轉而獲得 !DM! 層 *再生 。"
+    "DESCRIPTION": "獲得 !M! 層 expansioncontent:再生 。 NL expansioncontent:吟唱 ：轉而獲得 !DM! 層 *再生 。"
   },
   "expansioncontent:BeatOfDeath": {
     "NAME": "死亡律動",
@@ -128,14 +128,14 @@
   },
   "expansioncontent:SuperViciousMockery": {
     "NAME": "毒舌",
-    "DESCRIPTION": "獲得 !M! 層 *活力 。 NL 給予 !DM! 層 虛弱。"
+    "DESCRIPTION": "獲得 !M! 層 活力 。 NL 給予 !DM! 層 虛弱 。"
   },
   "expansioncontent:SuperClobber": {
     "NAME": "猛烈打擊",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 獲得未被 格擋 傷害點 格擋 。"
   },
 
-  "collector:SomberShield": {
+  "expansioncontent:SuperSomberShield": {
     "NAME": "陰沈護盾",
     "DESCRIPTION": "expansioncontent:焰葬 。 NL 獲得 !B! 點 格擋 。 NL 下回合， NL 獲得所葬牌的復製品。"
   },
@@ -144,7 +144,7 @@
     "NAME": "回環之火",
     "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 NL 將 1 張牌從棄牌堆放入抽牌堆頂部。"
   },
-  "bronze:Flail": {
+  "expansioncontent:Flail": {
     "NAME": "亂擊",
     "DESCRIPTION": "對所有敵人造成 !D! 點傷害 !DM! 次。 NL 獲得 !M! 層 人工製品 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
@@ -157,14 +157,14 @@
     "DESCRIPTION": "造成 !D! 點傷害。 NL 斬殺 時，獲得 1 瓶隨機藥水並 消耗 。"
   },
   "expansioncontent:SuperBodyCrash": {
-    "NAME": "全身撞擊",
+    "NAME": "全身猛撞",
     "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 造成等同於你 格擋 值的傷害。",
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 點傷害。）)"
   },
   "expansioncontent:SuperEtherStep": {
     "NAME": "太虛之躍",
-    "DESCRIPTION": "消耗 1 張牌。 NL 抽 !M! 張牌。 NL 造成 !D! 點傷害。",
-    "UPGRADE_DESCRIPTION": "消耗 1 張牌。 NL 抽 !M! 張牌。 NL 造成 !D! 點傷害。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 消耗 1 張牌。 NL 抽 !M! 張牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 消耗 1 張牌。 NL 抽 !M! 張牌。"
   },
 
   "expansioncontent:Virus": {
@@ -180,11 +180,11 @@
 
   "expansioncontent:ManipulateTime": {
     "NAME": "深思熟慮",
-    "DESCRIPTION": "將 1 張牌從你的棄牌堆放入抽牌堆底部。 NL 該牌下一次打出時耗能為 0 。",
+    "DESCRIPTION": "將 1 張牌從你的棄牌堆放入抽牌堆底部。 NL 該牌下 1 次打出時耗能為 0 。",
     "UPGRADE_DESCRIPTION": "將 1 張牌從你的棄牌堆放入抽牌堆底部。 NL 該牌在本場戰鬥中耗能為 0 。"
   },
   "expansioncontent:Pandemonium": {
-    "NAME": "亂舞",
+    "NAME": "狂舞",
     "DESCRIPTION": "回合開始時，打出棄牌堆中隨機 1 張牌。"
   },
   "expansioncontent:Reverie": {
@@ -193,7 +193,7 @@
   },
   "expansioncontent:ExploitVulnerability": {
     "NAME": "甜圈光束",
-    "DESCRIPTION": "移除敵人所有 格擋 。 NL 獲得等同於被移除 格擋 的 格擋。 NL 造成 !D! 點傷害 2 次。"
+    "DESCRIPTION": "造成 !D! 點傷害 2 次。 NL 在造成傷害之前移除敵人所有 格擋 並獲得等同於被移除 格擋 的 格擋。"
   },
   "expansioncontent:PeekPages": {
     "NAME": "洞察篇章",
@@ -211,7 +211,7 @@
     "NAME": "血祭",
     "DESCRIPTION": "虛無 。 NL 失去最大生命值的 !M! % 。 NL 獲得 1 層 *儀式 。 消耗 。",
     "EXTENDED_DESCRIPTION":[
-      " NL （失去 {amount} 生命。）"
+      " NL （失去 {amount} 最大生命值。）"
     ]
   }
 }
