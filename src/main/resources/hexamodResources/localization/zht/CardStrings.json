@@ -106,7 +106,7 @@
   },
   "hexamod:BrightRitual": {
     "NAME": "鮮焰儀式",
-    "DESCRIPTION": "切換至首枚鬼火。 NL hexamod:熄滅 hexamod:點燃 的鬼火， NL 每熄滅一枚， NL 獲得 [E] 並抽一張牌 。 NL 消耗 。"
+    "DESCRIPTION": "切換至首枚鬼火。 NL hexamod:熄滅 hexamod:點燃 的鬼火， NL 每 hexamod:熄滅 1枚， NL 獲得 [E] 並抽1張牌 。 NL 消耗 。"
   },
   "hexamod:StepThrough": {
     "NAME": "焰影迷步",
