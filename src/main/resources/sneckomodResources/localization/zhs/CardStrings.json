@@ -65,8 +65,8 @@
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "豪赌",
-    "DESCRIPTION": "不能被打出 。 NL 不能被移除。 NL sneckomod:赠礼 ：已升级的稀有牌和 !M! 金币。",
-    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 。 NL 不能被移除。 NL sneckomod:赠礼 ：已升级的稀有牌和 !M! 金币。",
+    "DESCRIPTION": "不能被打出 。 NL 不能被移除。 NL sneckomod:赠礼 ：已升级的稀有牌和 !M! 灵魂。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 。 NL 不能被移除。 NL sneckomod:赠礼 ：已升级的稀有牌和 !M! 灵魂。",
     "DESCRIPTION_BATTLE": "不能被打出 。",
     "UPGRADE_DESCRIPTION_BATTLE": "不能被打出 。 NL 虚无 。"
   },
