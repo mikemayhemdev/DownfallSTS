@@ -407,7 +407,7 @@
     "DESCRIPTION": "目标每有一种负面效果， NL 造成 !D! 点伤害。"
   },
   "collector:YouAreMine": {
-    "NAME": "你是我的了",
+    "NAME": "你是我的了!",
     "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL 给予 !clm2! 层 collector:魂劫 。"
   },
   "collector:Whomp": {
