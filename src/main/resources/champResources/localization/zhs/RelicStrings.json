@@ -3,7 +3,7 @@
     "NAME": "冠军金冠",
     "FLAVOR": "你是冠军！",
     "DESCRIPTIONS": [
-      "战斗开始时，随机进入 #r战狂 或 #b防守 。"
+      "战斗开始时，选择进入 #r战狂 或 #b防守 。"
     ]
   },
   "champ:BlackKnightHelmet": {
