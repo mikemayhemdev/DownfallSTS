@@ -52,7 +52,7 @@
   },
   "Gremlin:CounterStrike": {
     "NAME": "破招打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标意图攻击， NL 领队地精造成额外效果 !M! 次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标意图攻击， NL 触发 gremlin:领队 地精额外效果 !M! 次。"
   },
   "Gremlin:CowerChoice": {
     "NAME": "上贡",
@@ -88,11 +88,11 @@
   },
   "Gremlin:EdibleArmor": {
     "NAME": "食用护甲",
-    "DESCRIPTION": "将你的 格挡 转换为等量 expansioncontent:临时生命 。 消耗 。"
+    "DESCRIPTION": "将你的 格挡 转换为等量 expansioncontent:临时生命 。 NL 消耗 。"
   },
   "Gremlin:Encore": {
     "NAME": "喝彩",
-    "DESCRIPTION": "获得 3 层 gremlin:法力 。 NL gremlin:法力 造成 !M! 点额外伤害。"
+    "DESCRIPTION": "获得 3 层 gremlin:法力 。 NL gremlin:法力 造成的额外伤害增加 !M! 点。"
   },
   "Gremlin:Enthusiasm": {
     "NAME": "狂热",
@@ -104,7 +104,7 @@
   },
   "Gremlin:Exacerbate": {
     "NAME": "恶化",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 当你给予目标虚弱时，目标失去 !M! 点生命。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 当你给予目标 虚弱 时，目标失去 !M! 点生命。 NL 消耗 。"
   },
   "Gremlin:FairyDust": {
     "NAME": "仙尘",
@@ -164,8 +164,8 @@
   },
   "Gremlin:GremlinArms": {
     "NAME": "地精武器",
-    "DESCRIPTION": "触发领队地精额外效果。 NL 选择 gremlin:切换 地精。",
-    "UPGRADE_DESCRIPTION": "触发领队地精额外效果2次。 NL 选择 gremlin:切换 地精。"
+    "DESCRIPTION": "触发 gremlin:领队 地精额外效果。 NL 选择 gremlin:切换 地精。",
+    "UPGRADE_DESCRIPTION": "触发 gremlin:领队 地精额外效果2次。 NL 选择 gremlin:切换 地精。"
 
   },
   "Gremlin:GremlinMeal": {
@@ -192,7 +192,7 @@
   },
   "Gremlin:GremlinToss": {
     "NAME": "地精投掷",
-    "DESCRIPTION": "获得 !M! 点 expansioncontent:临时生命 。造成你当前 格挡 值加上 临时生命 值点伤害。",
+    "DESCRIPTION": "获得 !M! 点 expansioncontent:临时生命 。 NL 造成你当前 格挡 值加上 临时生命 值点伤害。",
     "UPGRADE_DESCRIPTION": "获得 !M! 点 expansioncontent:临时生命 。 NL 造成你当前 格挡 值加上 临时生命 值点伤害。",
     "EXTENDED_DESCRIPTION": [" NL （造成 !D! 点伤害。）"]
   },
@@ -300,7 +300,7 @@
   },
   "Gremlin:Pretaliation": {
     "NAME": "预审",
-    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 收到攻击伤害 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 受到目标攻击伤害 !M! 点。"
   },
   "Gremlin:ProperTools": {
     "NAME": "恰当工具",
@@ -334,8 +334,8 @@
   },
   "Gremlin:SecondVolley": {
     "NAME": "余波",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过一张牌，获得一张 *小刀 。 NL 溢出手牌的 *小刀 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过一张牌，获得一张 *小刀+ 。 NL 溢出手牌的 *小刀+ 消耗 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过1张牌，获得1张 *小刀 。 NL 溢出手牌的 *小刀 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过1张牌，获得1张 *小刀+ 。 NL 溢出手牌的 *小刀+ 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL （本回合打出过",
       " 张牌。）",

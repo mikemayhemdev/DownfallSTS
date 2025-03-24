@@ -46,8 +46,8 @@
   "Gremlin:Encore": {
     "NAME": "喝彩",
     "DESCRIPTIONS": [
-      "#y法力 造成 #b",
-      " 点额外伤害。"
+      "#y法力 造成的额外伤害提高 #b",
+      " 点。"
     ]
   },
   "Gremlin:Enthusiasm": {
