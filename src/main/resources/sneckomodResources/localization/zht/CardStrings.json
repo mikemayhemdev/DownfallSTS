@@ -565,8 +565,8 @@
   },
   "sneckomod:MarkedCard": {
     "NAME": "記號牌",
-    "DESCRIPTION": "保留。 NL sneckomod:混淆 1張牌。 NL 本牌改變的費用1 定會更低。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留。 NL sneckomod:混淆 !M! 張牌。 NL 本牌改變的費用1 定會更低。 NL 消耗 。"
+    "DESCRIPTION": "保留。 NL sneckomod:混淆 1張牌。 NL 本牌改變的費用一定會更低。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留。 NL sneckomod:混淆 !M! 張牌。 NL 本牌改變的費用一定會更低。 NL 消耗 。"
   },
   "sneckomod:InertBlade": {
     "NAME": "鈍藏刀刃",
@@ -594,7 +594,7 @@
     "UPGRADE_DESCRIPTION": "每當你給予敵人1種負面效果時，獲得 !M! 點 格擋 。 NL sneckomod:贈禮 ：負面效果牌。"
   },
   "sneckomod:FlashInThePan": {
-    "NAME": "曇花1 現",
+    "NAME": "曇花一現",
     "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 丟棄全部手牌。 NL 下回合多抽等量的牌。"
   },
   "sneckomod:TrashCan": {
