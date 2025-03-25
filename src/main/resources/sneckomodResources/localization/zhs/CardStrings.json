@@ -48,7 +48,7 @@
   },
   "sneckomod:DiceCrush": {
     "NAME": "骰子撞击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:溢出 ：抽2张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:溢出 ：抽 2 张牌。"
   },
   "sneckomod:DragonsHoard": {
     "NAME": "龙之秘藏",
@@ -176,7 +176,7 @@
   },
   "sneckomod:Restock": {
     "NAME": "换牌",
-    "DESCRIPTION": "丢弃手牌。 NL 抽 !M! 张牌。 NL sneckomod:混淆 全部手牌。 NL 消耗 。"
+    "DESCRIPTION": "丢弃所有手牌。 NL 抽 !M! 张牌。 NL sneckomod:混淆 全部手牌。 NL 消耗 。"
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
@@ -232,7 +232,7 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "灵魂抽取",
-    "DESCRIPTION": "获得 !M! 张随机 sneckomod:异色 牌。 NL 这2张牌获得 保留 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !M! 张随机 sneckomod:异色 牌。 NL 这 2 张牌获得 保留 。 NL 消耗 。"
   },
   "sneckomod:SoulExchange": {
     "NAME": "灵魂交换",
@@ -478,8 +478,8 @@
   },
   "sneckomod:WideSting": {
     "NAME": "宽刺",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 升级 手牌中所有 sneckomod:异色 牌。 NL sneckomod:赠礼 ：普通牌。",
-    "DESCRIPTION_BATTLE": "对所有敌人造成 !D! 点伤害。 NL 升级 手牌中所有 sneckomod:异色 牌。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 在本场战斗中 升级 手牌中所有 sneckomod:异色 牌。 NL sneckomod:赠礼 ：普通牌。",
+    "DESCRIPTION_BATTLE": "对所有敌人造成 !D! 点伤害。 NL 在本场战斗中 升级 手牌中所有 sneckomod:异色 牌。"
   },
   "sneckomod:GildedShield": {
     "NAME": "镀金盾牌",
@@ -491,12 +491,12 @@
   },
   "sneckomod:Serpentscale": {
     "NAME": "蛇鳞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 1 expansioncontent:多层护甲 。 NL sneckomod:溢出 : 转而获得 !M! expansioncontent:多层护甲 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 1 层 expansioncontent:多层护甲 。 NL sneckomod:溢出 : 转而获得 !M! 层 expansioncontent:多层护甲 。"
   },
   "sneckomod:OtherworldlySlash": {
     "NAME": "异界斩击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合打出过 sneckomod:异色 牌，再造成 !D! 点伤害。 NL sneckomod:赠礼 ：普通牌。",
-    "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 若本回合打出过1张 sneckomod:异色 牌，再造成 !D! 点伤害。"
+    "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 若本回合打出过 sneckomod:异色 牌，再造成 !D! 点伤害。"
   },
   "sneckomod:BeyondArmor": {
     "NAME": "超越护甲",
@@ -528,8 +528,8 @@
   },
   "sneckomod:Belittle": {
     "NAME": "看扁",
-    "DESCRIPTION": "敌人每有 1 种负面效果，失去 !M! 生命。 NL sneckomod:赠礼 ：罕见负面效果牌。",
-    "DESCRIPTION_BATTLE": "敌人每有 1 种负面效果，失去 !M! 生命。"
+    "DESCRIPTION": "敌人每有 1 种负面效果，失去 !M! 点生命。 NL sneckomod:赠礼 ：罕见负面效果牌。",
+    "DESCRIPTION_BATTLE": "敌人每有 1 种负面效果，失去 !M! 点生命。"
   },
   "sneckomod:Jackpot": {
     "NAME": "头奖",
@@ -547,12 +547,12 @@
   },
   "sneckomod:ComboString": {
     "NAME": "异色连击",
-    "DESCRIPTION": "造成 !D! 点伤害X次。 X为你本回合打出的 sneckomod:异色 牌数。 NL sneckomod:赠礼 ：罕见牌。",
+    "DESCRIPTION": "造成 !D! 点伤害 X 次。 X 为你本回合打出的 sneckomod:异色 牌数。 NL sneckomod:赠礼 ：罕见牌。",
     "EXTENDED_DESCRIPTION": [
       " NL （本回合打出过 ",
       " 张 异色 牌。）"
     ],
-    "DESCRIPTION_BATTLE": "本回合每打出1张 sneckomod:异色 牌，造成 !D! 点伤害1次。"
+    "DESCRIPTION_BATTLE": "造成 !D! 点伤害 X 次。 X 为你本回合打出的 sneckomod:异色 牌数。"
   },
   "sneckomod:ThrowingCards": {
     "NAME": "投掷卡牌",
@@ -565,8 +565,8 @@
   },
   "sneckomod:MarkedCard": {
     "NAME": "记号牌",
-    "DESCRIPTION": "保留。 NL sneckomod:混淆 1 张牌。 NL 本牌改变的费用一定会更低。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留。 NL sneckomod:混淆 !M! 张牌。 NL 本牌改变的费用一定会更低。 NL 消耗 。"
+    "DESCRIPTION": "保留。 NL sneckomod:混淆 1 张牌。 NL 本牌不会增加耗能。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留。 NL sneckomod:混淆 !M! 张牌。 NL 本牌不会增加耗能。 NL 消耗 。"
   },
   "sneckomod:InertBlade": {
     "NAME": "钝藏刀刃",
@@ -580,12 +580,12 @@
   "sneckomod:LastStrike": {
     "NAME": "最终打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗中每打出 1 种 打击 牌，多造成 1 次伤害。 NL sneckomod:赠礼 ：打击 牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗中每打出 1 种 打击 牌，多造成 1 次伤害。 NL sneckomod:赠礼 ：打击牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗中每打出 1 种 打击 牌，多造成 1 次伤害。 NL sneckomod:赠礼 ：打击 牌。",
     "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 本场战斗中每打出 1 种 打击 牌，多造成 1 次伤害。",
     "UPGRADE_DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 本场战斗中每打出 1 种 打击 牌，多造成 1 次伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （本场战斗中打出过 ",
-      " 种打击 牌。）"
+      " 种 打击 牌。）"
     ]
   },
   "sneckomod:AceOfWands": {
@@ -595,7 +595,7 @@
   },
   "sneckomod:FlashInThePan": {
     "NAME": "昙花一现",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃全部手牌。 NL 下回合多抽等量的牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃所有手牌。 NL 下回合开始时，抽等量的牌。"
   },
   "sneckomod:TrashCan": {
     "NAME": "垃圾桶",
