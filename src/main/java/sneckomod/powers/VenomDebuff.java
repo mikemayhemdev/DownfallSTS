@@ -36,8 +36,8 @@ import sneckomod.SneckoMod;
 public class VenomDebuff extends AbstractPower implements CloneablePowerInterface, OnReceivePowerPower {
     public static final String POWER_ID = SneckoMod.makeID("VenomDebuff");
 
-    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/MudShield84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/MudShield32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/PoisonResist84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/PoisonResist32.png");
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
