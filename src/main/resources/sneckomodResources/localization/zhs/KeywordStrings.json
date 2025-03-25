@@ -17,6 +17,8 @@
   {
     "PROPER_NAME": "溢出",
     "NAMES": [
+      "Overflow",
+      "overflow",
       "溢出"
     ],
     "DESCRIPTION": "手牌超过 #b5 张时，溢出牌被打出触发溢出效果。"
@@ -24,6 +26,9 @@
   {
     "PROPER_NAME": "混淆",
     "NAMES": [
+      "muddle",
+      "muddled",
+      "muddles",
       "混淆"
     ],
     "DESCRIPTION": "将1张牌本回合第1次打出的耗能随机变为 #b0 ~ #b3 点。混淆后牌的耗能一定会改变。"
@@ -31,6 +36,7 @@
   {
     "PROPER_NAME": "异色",
     "NAMES": [
+      "offclass",
       "异色"
     ],
     "DESCRIPTION": "异蛇牌以外的所有可获得牌。（包括 #y诅咒 和 #y状态 牌）"
@@ -38,6 +44,7 @@
   {
     "PROPER_NAME": "赠礼",
     "NAMES": [
+      "gift",
       "赠礼"
     ],
     "DESCRIPTION": "当你获得这张牌，可获得以下 异色 牌奖励（甚至金币）。"
@@ -52,6 +59,7 @@
   {
     "PROPER_NAME": "剧毒",
     "NAMES": [
+      "venom",
       "剧毒"
     ],
     "DESCRIPTION": "拥有 #y剧毒 的敌人获得非 #y剧毒 的负面效果时，失去对应生命。"
@@ -59,6 +67,7 @@
   {
     "PROPER_NAME": "幸运",
     "NAMES": [
+      "lucky",
       "幸运"
     ],
     "DESCRIPTION": "溢出效果一定触发，与手牌大小无关。"
