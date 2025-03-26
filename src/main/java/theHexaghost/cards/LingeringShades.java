@@ -17,7 +17,7 @@ public class LingeringShades extends AbstractHexaCard{
         baseBurn = burn = 11;
         HexaMod.loadJokeCardImage(this, "LingeringShades.png");
         tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

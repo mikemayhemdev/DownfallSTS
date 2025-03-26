@@ -17,7 +17,7 @@ public class RecurringNightmare extends AbstractHexaCard {
         exhaust = true;
         baseMagicNumber = magicNumber = 1;
         tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
 //         tags.add(CardTags.HEALING);
         HexaMod.loadJokeCardImage(this, "RecurringNightmare.png");
     }

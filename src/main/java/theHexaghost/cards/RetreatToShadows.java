@@ -20,7 +20,7 @@ public class RetreatToShadows extends AbstractHexaCard {
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "RetreatToShadows.png");
     }
 

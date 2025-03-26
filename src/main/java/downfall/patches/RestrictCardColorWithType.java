@@ -25,7 +25,7 @@ public class RestrictCardColorWithType {
       if (card.color == AbstractDungeon.player.getCardColor()) {
         available = true;
       }
-      else if (!card.hasTag(SneckoMod.BANNEDFORSNECKO) && !card.hasTag(HexaMod.GHOSTWHEELCARD)) {
+      else if (!card.hasTag(SneckoMod.BANNEDFORSNECKO)) {
         available = true;
       }
       if (!available) {

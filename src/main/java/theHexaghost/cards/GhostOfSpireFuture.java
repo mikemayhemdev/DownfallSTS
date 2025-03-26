@@ -13,7 +13,7 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = 1;
         this.isEthereal = true;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "IntoShadow.png");
     }
 
