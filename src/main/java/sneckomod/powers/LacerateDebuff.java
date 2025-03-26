@@ -56,8 +56,13 @@ public class LacerateDebuff extends AbstractPower implements CloneablePowerInter
                 additionalAmount += toxicPersonality.amount;
             }
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, this.owner, new VenomDebuff(target, this.amount), this.amount));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, this.owner, new VenomDebuff(target, additionalAmount), additionalAmount));
+            if (AbstractDungeon.player.hasPower(ToxicPersonalityPower.POWER_ID)) {
+                AbstractPower toxicPersonality = AbstractDungeon.player.getPower(ToxicPersonalityPower.POWER_ID);
+                additionalAmount += toxicPersonality.amount;
+            }
+
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new VenomDebuff(target, this.amount), this.amount));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new VenomDebuff(target, additionalAmount), additionalAmount));
         }
         return true;
     }
