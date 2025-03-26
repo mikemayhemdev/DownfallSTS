@@ -62,7 +62,7 @@ public class LacerateDebuff extends AbstractPower implements CloneablePowerInter
             }
 
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new VenomDebuff(target, this.amount), this.amount));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new VenomDebuff(target, additionalAmount), additionalAmount));
+            //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new VenomDebuff(target, additionalAmount), additionalAmount));
         }
         return true;
     }
