@@ -95,8 +95,13 @@ public class HexaMod implements
     private static final String CHARSELECT_PORTRAIT = "hexamodResources/images/charSelect/charBG.png";
     public static boolean renderFlames = false;
     public static boolean unsealed = false;
+
+    //prismatic shard check
+    private static int ghostwheelcards = 0;
+
     public static Color placeholderColor = new Color(114F / 255F, 62F / 255F, 109F / 255F, 1);
     private static String modID;
+
 
     public static int[] seal_weight = new int[7];
     public static int[] new_seal_weight = new int[7];
@@ -290,6 +295,12 @@ public class HexaMod implements
         GhostflameHelper.init();
 //        ExhaustCardTickPatch.exhaustedLastTurn = false;
 //        ExhaustCardTickPatch.exhaustedThisTurn = false;
+        ghostwheelcards = 0;
+//        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+//            if (c.hasTag(GHOSTWHEELCARD)) {
+//                ghostwheelcards++;
+//            }
+//    }
 
         if (AbstractDungeon.player instanceof TheHexaghost) {
             renderFlames = true;

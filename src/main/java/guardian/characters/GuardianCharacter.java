@@ -117,8 +117,6 @@ public class GuardianCharacter extends CustomPlayer {
 
     }
 
-    //TODO - Victory screens
-
     public CharSelectInfo getInfo() {
         return getLoadout();
     }

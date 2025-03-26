@@ -19,6 +19,10 @@ public class LacerateDebuff extends AbstractPower implements CloneablePowerInter
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/BurnPerTurn84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/BurnPerTurn32.png");
+
+
     public LacerateDebuff(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -27,7 +31,11 @@ public class LacerateDebuff extends AbstractPower implements CloneablePowerInter
         this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
         this.canGoNegative = false;
-        this.loadRegion("envenom");
+
+
+        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+
         this.updateDescription();
     }
 
@@ -48,8 +56,13 @@ public class LacerateDebuff extends AbstractPower implements CloneablePowerInter
                 additionalAmount += toxicPersonality.amount;
             }
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, this.owner, new VenomDebuff(target, this.amount), this.amount));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, this.owner, new VenomDebuff(target, additionalAmount), additionalAmount));
+            if (AbstractDungeon.player.hasPower(ToxicPersonalityPower.POWER_ID)) {
+                AbstractPower toxicPersonality = AbstractDungeon.player.getPower(ToxicPersonalityPower.POWER_ID);
+                additionalAmount += toxicPersonality.amount;
+            }
+
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new VenomDebuff(target, this.amount), this.amount));
+            //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new VenomDebuff(target, additionalAmount), additionalAmount));
         }
         return true;
     }

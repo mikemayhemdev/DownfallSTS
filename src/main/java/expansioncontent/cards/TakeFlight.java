@@ -51,10 +51,9 @@ public class TakeFlight extends AbstractExpansionCard {
             this.chant = true;
     }
 
-    public void triggerOnEndOfTurnForPlayingCard() {
-        AbstractRelic runicpyramid = AbstractDungeon.player.getRelic("Runic Pyramid");
-        if (runicpyramid == null && !this.retain && !this.selfRetain)
-            this.chant = false;
+    @Override
+    public void onMoveToDiscard() {
+        this.chant = false;
     }
 
     public void triggerOnGlowCheck() {

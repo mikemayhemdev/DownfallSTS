@@ -28,13 +28,23 @@ public class GhostflameHelper {
 
     public static void init() {
         hexaGhostFlames.clear();
-        hexaGhostFlames.add(new SearingGhostflame(globalX + AbstractDungeon.player.drawX - (120.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
-        hexaGhostFlames.add(new CrushingGhostflame(globalX + AbstractDungeon.player.drawX + (60.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
-        hexaGhostFlames.add(new BolsteringGhostflame(globalX + AbstractDungeon.player.drawX + (140.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (230.0F * Settings.scale)));
-        hexaGhostFlames.add(new SearingGhostflame(globalX + AbstractDungeon.player.drawX + (60.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (90.0F * Settings.scale)));
-        hexaGhostFlames.add(new CrushingGhostflame(globalX + AbstractDungeon.player.drawX - (120.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (90.0F * Settings.scale)));
-        hexaGhostFlames.add(new InfernoGhostflame(globalX + AbstractDungeon.player.drawX - (200.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (230.0F * Settings.scale)));
-        hexaGhostFlames.get(0).activate();
+        if (AbstractDungeon.player instanceof TheHexaghost) {
+            hexaGhostFlames.add(new SearingGhostflame(globalX + AbstractDungeon.player.drawX - (120.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
+            hexaGhostFlames.add(new CrushingGhostflame(globalX + AbstractDungeon.player.drawX + (60.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
+            hexaGhostFlames.add(new BolsteringGhostflame(globalX + AbstractDungeon.player.drawX + (140.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (230.0F * Settings.scale)));
+            hexaGhostFlames.add(new SearingGhostflame(globalX + AbstractDungeon.player.drawX + (60.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (90.0F * Settings.scale)));
+            hexaGhostFlames.add(new CrushingGhostflame(globalX + AbstractDungeon.player.drawX - (120.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (90.0F * Settings.scale)));
+            hexaGhostFlames.add(new InfernoGhostflame(globalX + AbstractDungeon.player.drawX - (200.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (230.0F * Settings.scale)));
+            hexaGhostFlames.get(0).activate();
+        }
+
+//        if (!(AbstractDungeon.player instanceof TheHexaghost)) {
+//            hexaGhostFlames.add(new SearingGhostflame(globalX + AbstractDungeon.player.drawX - (120.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
+//            hexaGhostFlames.add(new CrushingGhostflame(globalX + AbstractDungeon.player.drawX + (60.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
+//            hexaGhostFlames.add(new BolsteringGhostflame(globalX + AbstractDungeon.player.drawX + (90.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (90.0F * Settings.scale)));
+//            hexaGhostFlames.get(0).activate();
+//        }
+
     }
 
     public static AbstractGhostflame getNextGhostFlame() {

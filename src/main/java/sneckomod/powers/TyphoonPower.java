@@ -24,8 +24,8 @@ public class TyphoonPower extends AbstractPower implements CloneablePowerInterfa
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Rolls84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Rolls32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Demise84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Demise32.png");
 
     //coding this SUCKED, was butchered code and even after I decided to use gpt it was still insanely broken for hours
     //making both versions of the power stack and chain properly, not fizzle randomly, not softlock etc.

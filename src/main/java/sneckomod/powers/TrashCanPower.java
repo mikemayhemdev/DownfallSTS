@@ -10,9 +10,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.util.TextureLoader;
 import hermit.HermitMod;
 import hermit.actions.HandSelectAction;
-import hermit.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -38,8 +38,8 @@ public class TrashCanPower extends AbstractPower implements CloneablePowerInterf
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
 
-    private static final Texture tex84 = TextureLoader.getTexture("hermitResources/images/powers/adapt_p.png");
-    private static final Texture tex32 = TextureLoader.getTexture("hermitResources/images/powers/adapt.png");
+    private static final Texture tex84 = downfall.util.TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/MoreBlockWithTempHP84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/MoreBlockWithTempHP32.png");
 
     public TrashCanPower(final AbstractCreature _owner, final AbstractCreature _source, final int _amount) {
         name = NAME;

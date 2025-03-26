@@ -24,6 +24,9 @@ public class FountainPower extends AbstractPower implements CloneablePowerInterf
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/ApplyBurnAtStartOfTurn84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/ApplyBurnAtStartOfTurn32.png");
+
     public FountainPower(int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -32,7 +35,8 @@ public class FountainPower extends AbstractPower implements CloneablePowerInterf
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
 
-        this.loadRegion("envenom");
+        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         this.updateDescription();
     }

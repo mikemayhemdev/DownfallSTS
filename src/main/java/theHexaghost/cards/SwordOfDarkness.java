@@ -24,7 +24,7 @@ public class SwordOfDarkness extends AbstractHexaCard {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 3;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "SwordOfDarkness.png");
     }
 
