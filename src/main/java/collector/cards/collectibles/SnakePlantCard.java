@@ -16,6 +16,9 @@ public class SnakePlantCard extends AbstractCollectibleCard {
     public final static String ID = makeID(SnakePlantCard.class.getSimpleName());
     // intellij stuff attack, enemy, common, 7, 2, , , , 
 
+
+    //TODO: Rework into Skill: 1e, Apply 2 Weak and Vulnerable.
+
     public SnakePlantCard() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;

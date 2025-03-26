@@ -14,6 +14,8 @@ import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 
+import static sneckomod.util.ColorfulCardReward.TEXT;
+
 public class RareBoosterPack extends CustomRelic {
 
     public static final String ID = SneckoMod.makeID("RareBoosterPack");
@@ -39,7 +41,7 @@ public class RareBoosterPack extends CustomRelic {
                 cardsToReward.add(newCard.makeCopy());
             }
         }
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, TEXT[2]);
     }
 
     private boolean isDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {

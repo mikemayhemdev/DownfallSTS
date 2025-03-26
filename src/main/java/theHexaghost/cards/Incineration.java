@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import gremlin.actions.PseudoDamageRandomEnemyAction;
 import theHexaghost.powers.BurnPower;
+import theHexaghost.relics.CandleOfCauterizing;
 
 public class Incineration extends AbstractHexaCard {
 

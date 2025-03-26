@@ -38,7 +38,7 @@ public class TakeFlight extends AbstractExpansionCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!this.chant)
             addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new RegenPower((AbstractCreature)AbstractDungeon.player, this.magicNumber), this.magicNumber));
-        if (this.chant == true)
+        if (this.chant)
             addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new RegenPower((AbstractCreature)AbstractDungeon.player, this.downfallMagic), this.downfallMagic));
     }
 

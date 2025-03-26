@@ -15,6 +15,8 @@ import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
+import static sneckomod.util.ColorfulCardReward.TEXT;
+
 public class D8 extends AbstractImageEvent {
     public static final String ID = "sneckomod:D8";
     public static final String NAME;
@@ -84,7 +86,7 @@ public class D8 extends AbstractImageEvent {
                 cardsToReward.add(newCard.makeCopy());
             }
         }
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, TEXT[2]);
 
         CardCrawlGame.sound.play("EVENT_TOME");
         this.imageEventText.clearAllDialogs();
