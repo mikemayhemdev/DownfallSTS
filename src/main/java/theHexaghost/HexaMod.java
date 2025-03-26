@@ -97,7 +97,7 @@ public class HexaMod implements
     public static boolean unsealed = false;
 
     //prismatic shard check
-    private boolean ghostwheelcards = false;
+    private static int ghostwheelcards = 0;
 
     public static Color placeholderColor = new Color(114F / 255F, 62F / 255F, 109F / 255F, 1);
     private static String modID;
@@ -295,15 +295,14 @@ public class HexaMod implements
         GhostflameHelper.init();
 //        ExhaustCardTickPatch.exhaustedLastTurn = false;
 //        ExhaustCardTickPatch.exhaustedThisTurn = false;
-        ghostwheelcards = false;
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(GHOSTWHEELCARD)) {
-                ghostwheelcards = true;
-            }
-    }
+        ghostwheelcards = 0;
+//        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+//            if (c.hasTag(GHOSTWHEELCARD)) {
+//                ghostwheelcards++;
+//            }
+//    }
 
-
-        if (AbstractDungeon.player instanceof TheHexaghost || ghostwheelcards) {
+        if (AbstractDungeon.player instanceof TheHexaghost) {
             renderFlames = true;
             if (AbstractDungeon.scene instanceof TheBottomScene) {
                 ArrayList<InteractableTorchEffect> torches = ReflectionHacks.getPrivate(AbstractDungeon.scene, TheBottomScene.class, "torches");

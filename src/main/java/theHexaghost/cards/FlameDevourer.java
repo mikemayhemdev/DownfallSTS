@@ -15,7 +15,7 @@ public class FlameDevourer extends AbstractHexaCard{
         super(ID, 0, CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
         baseBlock = 9;
         tags.add(HexaMod.GHOSTWHEELCARD);
-        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "FlameDevourer.png");
     }
 

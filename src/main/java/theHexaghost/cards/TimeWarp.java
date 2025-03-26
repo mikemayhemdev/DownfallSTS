@@ -20,7 +20,7 @@ public class TimeWarp extends AbstractHexaCard implements OnAdvanceOrRetractSubs
     public TimeWarp() {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "TimeWarp.png");
     }
 

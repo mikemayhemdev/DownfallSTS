@@ -19,7 +19,7 @@ public class SpectralSpark extends AbstractHexaCard {
     public SpectralSpark() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = MAGIC;
-        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "NaughtySpirit.png");
     }
 

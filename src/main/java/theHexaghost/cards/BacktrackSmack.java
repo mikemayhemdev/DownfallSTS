@@ -14,7 +14,7 @@ public class BacktrackSmack extends AbstractHexaCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
         tags.add(HexaMod.GHOSTWHEELCARD);
-       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
         HexaMod.loadJokeCardImage(this, "BacktrackSmack.png");
     }

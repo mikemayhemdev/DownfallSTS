@@ -21,7 +21,7 @@ public class GhostOfSpirePast extends AbstractHexaCard {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         tags.add(HexaMod.GHOSTWHEELCARD);
-        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "GhostOfSpirePast.png");
     }
 

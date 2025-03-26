@@ -21,7 +21,7 @@ public class AdvancingGuard extends AbstractHexaCard {
         baseBlock = BLOCK;
 
         tags.add(HexaMod.GHOSTWHEELCARD);
-        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
         HexaMod.loadJokeCardImage(this, "AdvancingGuard.png");
     }

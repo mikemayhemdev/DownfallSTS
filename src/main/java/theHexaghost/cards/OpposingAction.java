@@ -17,7 +17,7 @@ public class OpposingAction extends AbstractHexaCard{
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         HexaMod.loadJokeCardImage(this, "OpposingAction.png");
         tags.add(HexaMod.GHOSTWHEELCARD);
-        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.exhaust = true;
     }
 

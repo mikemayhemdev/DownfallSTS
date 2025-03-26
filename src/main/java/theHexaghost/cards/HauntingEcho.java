@@ -25,7 +25,7 @@ public class HauntingEcho extends AbstractHexaCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         baseDamage = DAMAGE;
         tags.add(HexaMod.GHOSTWHEELCARD);
-        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "HauntingEcho.png");
     }
 

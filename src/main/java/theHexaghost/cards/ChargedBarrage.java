@@ -29,6 +29,7 @@ public class ChargedBarrage extends AbstractHexaCard {
     public ChargedBarrage() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = MAGIC;
+        tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "ChargedBarrage.png");
     }
