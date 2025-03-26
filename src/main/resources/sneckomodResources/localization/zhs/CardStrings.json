@@ -565,7 +565,7 @@
   },
   "sneckomod:MarkedCard": {
     "NAME": "记号牌",
-    "DESCRIPTION": "保留。 NL sneckomod:混淆 1张牌。 NL 本牌改变的费用1 定会更低。 NL 消耗 。",
+    "DESCRIPTION": "保留。 NL sneckomod:混淆 1张牌。 NL 本牌改变的费用一定会更低。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "保留。 NL sneckomod:混淆 !M! 张牌。 NL 本牌改变的费用1 定会更低。 NL 消耗 。"
   },
   "sneckomod:InertBlade": {
@@ -594,7 +594,7 @@
     "UPGRADE_DESCRIPTION": "每当你给予敌人1种负面效果时，获得 !M! 点 格挡 。 NL sneckomod:赠礼 ：负面效果牌。"
   },
   "sneckomod:FlashInThePan": {
-    "NAME": "昙花1 现",
+    "NAME": "昙花一现",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃全部手牌。 NL 下回合多抽等量的牌。"
   },
   "sneckomod:TrashCan": {
