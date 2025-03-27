@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.blue.Reprogram;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
@@ -29,6 +30,9 @@ public class EnReprogram extends AbstractBossCard {
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         strengthGeneratedIfPlayed = 1;
+        if (AbstractDungeon.ascensionLevel >= 4) {
+            strengthGeneratedIfPlayed = 2;
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
