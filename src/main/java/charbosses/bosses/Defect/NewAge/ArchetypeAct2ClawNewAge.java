@@ -1,6 +1,7 @@
 package charbosses.bosses.Defect.NewAge;
 
 import basemod.ReflectionHacks;
+import charbosses.actions.common.EnemyGainEnergyAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.bosses.Defect.CharBossDefect;
@@ -86,6 +87,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
 
         if (!looped) {
+            new EnemyGainEnergyAction(1);
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnChill(), true);
@@ -131,6 +133,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
             }
         } else {
             //perfect 12 for a loop
+            new EnemyGainEnergyAction(1);
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false); //1
