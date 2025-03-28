@@ -66,7 +66,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                     //turn 2
                     //25~ damage
                     addToList(cardsList, new EnWaveOfTheHand());
-                    addToList(cardsList, new EnBrilliance(), true);  // This is probably a terrible idea. This is where the Blind was, which was moved to where the Strike was.
+                    addToList(cardsList, new EnBrilliance(), extraUpgrades);  // This is probably a terrible idea. This is where the Blind was, which was moved to where the Strike was.
                     addToList(cardsList, new EnSwivel());
                     turn++;
                     break;
