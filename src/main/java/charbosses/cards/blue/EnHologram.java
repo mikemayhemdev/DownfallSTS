@@ -29,6 +29,8 @@ public class EnHologram extends AbstractBossCard {
             this.upgradeName();
             this.exhaust=false;
             this.upgradeBlock(2);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
 
     }
