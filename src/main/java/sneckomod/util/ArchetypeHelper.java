@@ -30,6 +30,9 @@ import javassist.expr.NewExpr;
 
 import java.util.Arrays;
 
+
+//This code is Mistress Autumn's, not mine!
+
 public class ArchetypeHelper {
     public static Class<?>[] energyShenaniganCards = {Sentinel.class, Tactician.class, DeusExMachina.class};
     public static Class<?>[] energyClasses = {GainEnergyAction.class, EnergizedPower.class, EnergizedBluePower.class, Plasma.class, BerserkPower.class, DropkickAction.class, DoppelgangerAction.class, HeelHookAction.class, GainEnergyIfDiscardAction.class, AggregateEnergyAction.class, DoubleEnergyAction.class, FissionAction.class, RecycleAction.class, SunderAction.class, CollectAction.class, CollectPower.class, FollowUpAction.class, DevaPower.class};
