@@ -1,5 +1,6 @@
 package slimebound.actions;
 
+import basemod.BaseMod;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -61,9 +62,9 @@ public class MakeTempCardInHandActionReduceCost extends com.megacrit.cardcrawl.a
         int handAmount = this.amount;
 
 
-        if (this.amount + AbstractDungeon.player.hand.size() > 10) {
+        if (this.amount + AbstractDungeon.player.hand.size() > BaseMod.MAX_HAND_SIZE) {
             AbstractDungeon.player.createHandIsFullDialog();
-            discardAmount = this.amount + AbstractDungeon.player.hand.size() - 10;
+            discardAmount = this.amount + AbstractDungeon.player.hand.size() - BaseMod.MAX_HAND_SIZE;
             handAmount -= discardAmount;
         }
 
