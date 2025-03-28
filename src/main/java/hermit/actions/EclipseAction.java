@@ -1,6 +1,8 @@
 package hermit.actions;
 
 import java.util.Iterator;
+
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -40,7 +42,7 @@ public class EclipseAction extends AbstractGameAction {
                 this.isDone = true;
             } else if (tmp.size() == 1) {
                 card = tmp.getTopCard();
-                if (this.p.hand.size() == 10) {
+                if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                     this.p.exhaustPile.moveToDiscardPile(card);
                     this.p.exhaustPile.removeCard(card);
                     this.p.createHandIsFullDialog();
@@ -64,7 +66,7 @@ public class EclipseAction extends AbstractGameAction {
             } else if (tmp.size() <= this.amount) {
                 for(int i = 0; i < tmp.size(); ++i) {
                     card = tmp.getNCardFromTop(i);
-                    if (this.p.hand.size() == 10) {
+                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                         this.p.exhaustPile.moveToDiscardPile(card);
                         this.p.createHandIsFullDialog();
                     } else {
@@ -101,7 +103,7 @@ public class EclipseAction extends AbstractGameAction {
                 while(var1.hasNext()) {
                     card = (AbstractCard)var1.next();
                     card.unhover();
-                    if (this.p.hand.size() == 10) {
+                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                         this.p.exhaustPile.moveToDiscardPile(card);
                         this.p.exhaustPile.removeCard(card);
                         card.setCostForTurn(0);
