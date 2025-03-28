@@ -42,7 +42,7 @@ public class EnIntimidate extends AbstractBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new SFXAction("INTIMIDATE"));
         this.addToBot(new VFXAction(p, new IntimidateEffect(m.hb.cX, m.hb.cY), 1.0F));
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber, true), this.magicNumber));
  }
 
     @Override
