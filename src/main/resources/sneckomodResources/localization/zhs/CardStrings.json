@@ -289,8 +289,8 @@
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "变废为宝",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗  1 张牌。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗  1 张牌。 NL 获获得与其耗能相等的 [E] 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗  1张牌。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗  1张牌。 NL 获得与其耗能相等的 [E] 。"
   },
   "sneckomod:UnendingSupply": {
     "NAME": "无尽供给",
