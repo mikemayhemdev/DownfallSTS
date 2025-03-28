@@ -58,7 +58,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
     public void initialize() {
 
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_ClockworkSouvenir());
+        addRelic(new CBR_IceCream());
         addRelic(new CBR_BagOfPreparation());
         addRelic(new CBR_NuclearBattery());
 
@@ -161,6 +161,6 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Vajra());
+        addRelic(new CBR_ClockworkSouvenir());
     }
 }

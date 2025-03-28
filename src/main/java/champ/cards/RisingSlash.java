@@ -12,6 +12,7 @@ import static champ.ChampMod.loadJokeCardImage;
 public class RisingSlash extends AbstractChampCard {
     public final static String ID = makeID("RisingSlash");
 
+    //Todo: rework to be more consistent.
     public RisingSlash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;

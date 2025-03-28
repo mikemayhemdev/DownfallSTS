@@ -58,8 +58,7 @@ public class AceOfWands extends AbstractSneckoCard {
     public void onObtainCard() {
         ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
         while (cardsToReward.size() < 3) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> (!c.cardID.equals(IllTakeThat.ID) && !c.cardID.equals(TongueLash.ID) && (c.rawDescription.contains("Apply") || c.rawDescription.contains("apply") || c.rawDescription.contains("applies") || c.rawDescription.contains("Lick") || c.rawDescription.contains("Debuff") || c.rawDescription.contains("Steal") || c.cardID.equals(Disarm.ID) || c.cardID.equals(Choke.ID) || c.cardID.equals(TalkToTheHand.ID) || c.cardID.equals(PiercingWail.ID) || c.cardID.equals(DarkLordForm.ID) || c.cardID.equals(CursedWail.ID) || c.cardID.equals(Undervolt.ID) || c.cardID.equals(Billow.ID))));
-
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicateDebuff(c -> (!c.hasTag(SneckoMod.BANNEDFORSNECKO)));
             for (AbstractRelic r : AbstractDungeon.player.relics) {
                 r.onPreviewObtainCard(newCard);
             }

@@ -19,6 +19,8 @@ import sneckomod.util.ColorfulPowersReward;
 
 import java.util.ArrayList;
 
+import static sneckomod.util.ColorfulCardReward.TEXT;
+
 public class SneckoCommon extends CustomRelic {
     public static final String ID = SneckoMod.makeID("SneckoCommon");
 
@@ -48,7 +50,7 @@ public class SneckoCommon extends CustomRelic {
                     cardsToReward.add(newCard.makeCopy());
                 }
               }
-            AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "Special Bonus Card!");
+            AbstractDungeon.cardRewardScreen.open(cardsToReward, null, TEXT[2]);
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         }
 

@@ -212,7 +212,7 @@
   "hexamod:SoulburnOnExhaustPower": {
     "NAME": "Soulburn Infestation",
     "DESCRIPTIONS": [
-      "Whenver you #yExhaust a card this turn, apply #b",
+      "Whenever you #yExhaust a card this turn, apply #b",
       " #ySoulburn to this enemy."
     ]
   },

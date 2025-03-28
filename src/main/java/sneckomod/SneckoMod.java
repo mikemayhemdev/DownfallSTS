@@ -1,6 +1,10 @@
 package sneckomod;
 
+import automaton.AutomatonChar;
 import automaton.AutomatonMod;
+import automaton.cards.Deprecate;
+import automaton.cards.Invalidate;
+import automaton.cards.Undervolt;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
@@ -9,6 +13,10 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.ChampChar;
+import champ.cards.*;
+import collector.CollectorChar;
+import collector.cards.*;
 import collector.patches.CollectiblesPatches.CollectibleCardColorEnumPatch;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -19,7 +27,16 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.blue.BiasedCognition;
+import com.megacrit.cardcrawl.cards.blue.GoForTheEyes;
+import com.megacrit.cardcrawl.cards.blue.Hyperbeam;
+import com.megacrit.cardcrawl.cards.blue.MachineLearning;
+import com.megacrit.cardcrawl.cards.colorless.DarkShackles;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
+import com.megacrit.cardcrawl.cards.colorless.SadisticNature;
+import com.megacrit.cardcrawl.cards.green.*;
+import com.megacrit.cardcrawl.cards.purple.*;
+import com.megacrit.cardcrawl.cards.red.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -37,13 +54,22 @@ import downfall.events.Serpent_Evil;
 import downfall.relics.BrokenWingStatue;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
+import expansioncontent.cards.DashGenerateEvil;
+import expansioncontent.cards.SuperLivingWall;
 import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.patches.CenterGridCardSelectScreen;
+import gremlin.cards.*;
+import guardian.cards.*;
+import hermit.cards.*;
+import hermit.characters.hermit;
 import hermit.util.Wiz;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.cards.*;
+import slimebound.cards.Dissolve;
+import slimebound.patches.AbstractCardEnum;
 import sneckomod.cards.*;
 import sneckomod.cards.unknowns.*;
 import sneckomod.events.BackToBasicsSnecko;
@@ -56,7 +82,10 @@ import sneckomod.potions.DiceRollPotion;
 import sneckomod.potions.MuddlingPotion;
 import sneckomod.potions.OffclassReductionPotion;
 import sneckomod.relics.*;
+import sneckomod.util.ArchetypeHelper;
 import sneckomod.util.SneckoSilly;
+import theHexaghost.TheHexaghost;
+import theHexaghost.cards.*;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -67,6 +96,7 @@ import java.util.function.Predicate;
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.*;
 import static downfall.downfallMod.sneckoNoModCharacters;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
+import static sneckomod.util.ColorfulCardReward.TEXT;
 import static theHexaghost.HexaMod.GHOSTWHEELCARD;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
@@ -188,7 +218,7 @@ public class SneckoMod implements
             ((AbstractSneckoCard) card).betaArtPath = img;
         }
         Texture cardTexture;
-        cardTexture = hermit.util.TextureLoader.getTexture(getModID() + "Resources/images/betacards/" + img);
+        cardTexture = downfall.util.TextureLoader.getTexture("sneckomodResources/images/betacards/" + img);
         cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         int tw = cardTexture.getWidth();
         int th = cardTexture.getHeight();
@@ -323,6 +353,174 @@ public class SneckoMod implements
             possList.removeIf(c -> !validColors.contains(c.color));
         return possList.get(AbstractDungeon.miscRng.random(possList.size() - 1)).makeCopy();
     }
+
+
+    //may God forgive me for this great sin.
+    public static AbstractCard getOffClassCardMatchingPredicateDebuff(Predicate<AbstractCard> q) {
+        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
+        possList.removeIf(c -> (!(ArchetypeHelper.appliesDebuff(c) ||
+                // Ironclad Cards
+                (c.cardID.equals(Disarm.ID) ||
+                 // Silent Cards
+                c.cardID.equals(PiercingWail.ID) ||
+                c.cardID.equals(Catalyst.ID) ||
+                c.cardID.equals(NoxiousFumes.ID) ||
+                c.cardID.equals(Envenom.ID) ||
+                c.cardID.equals(Malaise.ID) ||
+                //Defect Cards
+                c.cardID.equals(GoForTheEyes.ID) ||
+                // Watcher Cards
+                c.cardID.equals(CrushJoints.ID) ||
+                c.cardID.equals(SashWhip.ID) ||
+                c.cardID.equals(Indignation.ID) ||
+                c.cardID.equals(WaveOfTheHand.ID) ||
+                //Colorless Cards
+                c.cardID.equals(DarkShackles.ID) ||
+                c.cardID.equals(SadisticNature.ID) ||
+                //Gremlins Cards
+                c.cardID.equals(Jeer.ID) ||
+                c.cardID.equals(Pickpocket.ID) ||
+                c.cardID.equals(Heckle.ID) ||
+                c.cardID.equals(ToeStub.ID) ||
+                //Champ Cards
+                c.cardID.equals(ViciousMockery.ID) ||
+                c.cardID.equals(Taunt.ID) ||
+                c.cardID.equals(FaceSlap.ID) ||
+                c.cardID.equals(SetATrap.ID) ||
+                c.cardID.equals(CheapShot.ID) ||
+                //Slime Boss Cards
+                c.cardID.equals(LivingWall.ID) ||
+                c.cardID.equals(ItLooksTasty.ID) ||
+                c.cardID.equals(SplitLicking.ID) ||
+                c.cardID.equals(Gluttony.ID) ||
+                c.cardID.equals(HungryTackle.ID) ||
+                c.cardID.equals(DisruptingSlam.ID) ||
+                c.cardID.equals(Nibble.ID) ||
+                c.cardID.equals(Dissolve.ID) ||
+                c.cardID.equals(Recollect.ID) ||
+                c.cardID.equals(Recycling.ID) ||
+                c.cardID.equals(WasteNot.ID) ||
+                //Boss Card Pool
+                c.cardID.equals(SuperLivingWall.ID) ||
+                c.cardID.equals(DashGenerateEvil.ID) ||
+                c.cardID.equals(expansioncontent.cards.GoopSpray.ID) ||
+                c.cardID.equals(expansioncontent.cards.YouAreMine.ID) ||
+                c.cardID.equals(expansioncontent.cards.FaceSlap.ID) ||
+                //Collector Cards
+                c.cardID.equals(YouAreMine.ID) ||
+                c.cardID.equals(SapStrength.ID) ||
+                c.cardID.equals(CursedWail.ID) ||
+                c.cardID.equals(SeedOfDoubt.ID) ||
+                c.cardID.equals(ThornWhip.ID) ||
+                c.cardID.equals(Arrogance.ID) ||
+                c.cardID.equals(Invigorate.ID) ||
+                c.cardID.equals(ItMattersNot.ID) ||
+                c.cardID.equals(Billow.ID) ||
+                c.cardID.equals(BindingCall.ID) ||
+                c.cardID.equals(CantTouchThis.ID) ||
+                c.cardID.equals(RotwoodKindling.ID) ||
+                c.cardID.equals(Suffering.ID) ||
+                c.cardID.equals(DarkLordForm.ID) ||
+                c.cardID.equals(Darkstorm.ID) ||
+                c.cardID.equals(Goodbye.ID) ||
+                c.cardID.equals(Condemn.ID) ||
+                c.cardID.equals(InevitableDemise.ID) ||
+                c.cardID.equals(BlackBindings.ID) ||
+                c.cardID.equals(MiniCurse.ID) ||
+                c.cardID.equals(Finalize.ID) ||
+                c.cardID.equals(InflictAgony.ID) ||
+                c.cardID.equals(LanternFlare.ID) ||
+                //Hexa Cards
+                c.cardID.equals(Sear.ID) ||
+                c.cardID.equals(HeatMetal.ID) ||
+                c.cardID.equals(BurningTouch.ID) ||
+                c.cardID.equals(Firestarter.ID) ||
+                c.cardID.equals(FlamesFromBeyond.ID) ||
+                c.cardID.equals(SpectralSpark.ID) ||
+                c.cardID.equals(GhostflameInferno.ID) ||
+                c.cardID.equals(Incineration.ID) ||
+                c.cardID.equals(LingeringShades.ID) ||
+                c.cardID.equals(VolcanoVisage.ID) ||
+                //Guardian Cards
+                c.cardID.equals(SentryBeam.ID) ||
+                c.cardID.equals(Gem_Purple.ID) ||
+                c.cardID.equals(Gem_Crimson.ID) ||
+                //Hermit Cards
+                c.cardID.equals(Brawl.ID) ||
+                c.cardID.equals(RoundhouseKick.ID) ||
+                //Automaton Cards
+                 c.cardID.equals(Deprecate.ID) ||
+                 c.cardID.equals(Invalidate.ID) ||
+                 c.cardID.equals(Undervolt.ID) ||
+                //Snecko Cards
+                c.cardID.equals(Deception.ID) ||
+                c.cardID.equals(MakeshiftBlade.ID) ||
+                c.cardID.equals(Belittle.ID) ||
+                c.cardID.equals(PoisonParadise.ID) ||
+                c.cardID.equals(AceOfWands.ID))
+
+        ) || (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.rarity == AbstractCard.CardRarity.BASIC || c.type == STATUS || !q.test(c)  || c.hasTag(BANNEDFORSNECKO) || c.hasTag(GHOSTWHEELCARD))
+        || (
+                //False Positives
+                c.cardID.equals(SwordThrow.ID) ||
+                        c.cardID.equals(HyperBeam_Guardian.ID) ||
+                        c.cardID.equals(HoleUp.ID) ||
+                        c.cardID.equals(Quickdraw.ID) ||
+                        c.cardID.equals(Gestalt.ID) ||
+                        c.cardID.equals(OverwhelmingPower.ID) ||
+                        c.cardID.equals(RadiantFlame.ID) ||
+                        c.cardID.equals(DecasProtection.ID) ||
+                        c.cardID.equals(BulletTime.ID) ||
+                        c.cardID.equals(WraithForm.ID) ||
+                        c.cardID.equals(AdrenalArmor.ID) ||
+                        c.cardID.equals(BattleTrance.ID) ||
+                        c.cardID.equals(Berserk.ID) ||
+                        c.cardID.equals(Flex.ID) ||
+                        c.cardID.equals(BiasedCognition.ID) ||
+                        c.cardID.equals(Hyperbeam.ID) ||
+                        c.cardID.equals(Fasting.ID) ||
+                        c.cardID.equals(Erupt.ID) ||
+                        c.cardID.equals(MachineLearning.ID) ||
+                        c.cardID.equals(GremlinMeal.ID) ||
+                        c.cardID.equals(FollowThrough.ID) ||
+                        //Really Bad Offclass cards
+                        c.cardID.equals(ChargedBarrage.ID)
+        ))
+                &&
+                //Only allow cards that target enemies if not a vanilla or downfall color
+                !(c.color != AbstractCard.CardColor.RED &&
+                        c.color != AbstractCard.CardColor.GREEN &&
+                        c.color != AbstractCard.CardColor.BLUE &&
+                        c.color != AbstractCard.CardColor.PURPLE &&
+                        c.color != AbstractCard.CardColor.COLORLESS &&
+                        //Downfall Characters
+                        c.color != hermit.Enums.COLOR_YELLOW &&
+                        //Act 1 Bosses
+                        c.color != AbstractCardEnum.SLIMEBOUND &&
+                        c.color != guardian.patches.AbstractCardEnum.GUARDIAN &&
+                        c.color != TheHexaghost.Enums.GHOST_GREEN &&
+                        //Act 2 Bosses
+                        c.color != ChampChar.Enums.CHAMP_GRAY &&
+                        c.color != AutomatonChar.Enums.BRONZE_AUTOMATON &&
+                        c.color != CollectorChar.Enums.COLLECTOR &&
+                        //Bonus Characters
+                        c.color != TheSnecko.Enums.SNECKO_CYAN &&
+                        c.color != gremlin.patches.AbstractCardEnum.GREMLIN &&
+                        //Targeting
+                        c.target != AbstractCard.CardTarget.ENEMY &&
+                        c.target != AbstractCard.CardTarget.SELF_AND_ENEMY &&
+                        c.target != AbstractCard.CardTarget.ALL_ENEMY
+                )
+        );
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
+        }
+        if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
+        possList.removeIf(c -> !validColors.contains(c.color));
+        return possList.get(AbstractDungeon.miscRng.random(possList.size() - 1)).makeCopy();
+    }
+
+
 
     public static AbstractCard getSpecificClassCard(AbstractCard.CardColor color) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
@@ -661,7 +859,7 @@ public class SneckoMod implements
         if (incomingPicks.size() > 0 && !gifted) {
             gifted = true;
             System.out.println(incomingPicks.get(0));
-            AbstractDungeon.cardRewardScreen.open(incomingPicks.remove(0), null, "Choose a card to add to your deck.");
+            AbstractDungeon.cardRewardScreen.open(incomingPicks.remove(0), null, TEXT[2]);
         }
     }
 }
