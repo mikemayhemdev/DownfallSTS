@@ -7,6 +7,7 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.colorless.EnGoodInstincts;
+import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnShame;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.bossmechanicpowers.DefectBiasCuriosityPower;
@@ -133,7 +134,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnColdSnap(),extraUpgrades);
                     //Lightning Frost 0e
 
-                    addToList(cardsList, new EnShame());
+                    addToList(cardsList, new EnInjury());
                     turn++;
                     break;
                 case 3:
@@ -180,7 +181,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     cB.orbsAsEn().get(2).evokeOverride = true;
                     cB.orbsAsEn().get(2).evokeMult = 1;
                     //Frost Lightning Lightning Lightning 5e
-                    addToList(cardsList, new EnShame());
+                    addToList(cardsList, new EnInjury());
                     addToList(cardsList, new EnDualcast());
                     //Evokes Frost 4e
                     cB.orbsAsEn().get(3).evokeOverride = true;
