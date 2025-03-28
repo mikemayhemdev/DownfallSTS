@@ -5,6 +5,7 @@ import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.colorless.EnGoodInstincts;
+import charbosses.cards.colorless.EnSwiftStrike;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnNormality;
 import charbosses.cards.purple.*;
@@ -73,9 +74,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                 case 2:
                     //turn 3
                     //off turn
-                    AbstractBossCard c = new EnWallop();
-                    c.freeToPlayOnce = true;
-                    addToList(cardsList, c, false, 2);
+                    addToList(cardsList, new EnSwiftStrike());
                     addToList(cardsList, new EnConjurBlade(), false);
                     addToList(cardsList, new EnSanctity());    //Not played
                     turn++;
@@ -128,7 +127,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                     break;
                 case 3:
                     //off turn
-                    addToList(cardsList, new EnWallop(), false); // signature move replaced with wallop
+                    addToList(cardsList, new EnSwiftStrike(), false); // signature move replaced with wallop
                     addToList(cardsList, new EnGoodInstincts());
                     addToList(cardsList, new EnNormality());
                     turn = 0;
