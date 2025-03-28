@@ -29,7 +29,7 @@ public class EnFusion extends AbstractBossCard {
     }
 
     public EnFusion() {
-        super(ID, cardStrings.NAME, "blue/skill/fusion", 2, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+        super(ID, cardStrings.NAME, "blue/skill/fusion", 2, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.showEvokeValue = true;
         this.showEvokeOrbCount = 1;
         this.baseMagicNumber = 1;
@@ -37,7 +37,7 @@ public class EnFusion extends AbstractBossCard {
         alwaysDisplayText = true;
     }
     public EnFusion(boolean upgraded,boolean text) {
-        super(ID, cardStrings.NAME, "blue/skill/fusion", 2, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+        super(ID, cardStrings.NAME, "blue/skill/fusion", 2, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.showEvokeValue = true;
         this.showEvokeOrbCount = 1;
         this.baseMagicNumber = 1;

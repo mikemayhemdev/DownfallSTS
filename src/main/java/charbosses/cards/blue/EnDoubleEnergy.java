@@ -22,7 +22,7 @@ public class EnDoubleEnergy extends AbstractBossCard {
     }
 
     public EnDoubleEnergy(int eGain) {
-        super(ID, cardStrings.NAME, "blue/skill/double_energy", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+        super(ID, cardStrings.NAME, "blue/skill/double_energy", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
 
         this.baseMagicNumber = eGain;
         this.magicNumber = this.baseMagicNumber;
