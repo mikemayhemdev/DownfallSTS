@@ -68,13 +68,13 @@
 
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",
-    "DESCRIPTION": "接下来 !M! 个回合开始时，获得 1 张随机 *首领 牌。 NL 其第1次打出为0耗能。",
-    "UPGRADE_DESCRIPTION": "接下来 !M! 个回合开始时，获得 1 张随机 *首领 牌。 NL 其第1次打出为0耗能。"
+    "DESCRIPTION": "接下来 !M! 个回合开始时，获得 1 张随机 *首领 牌。 NL 其第 1 次打出为0耗能。",
+    "UPGRADE_DESCRIPTION": "接下来 !M! 个回合开始时，获得 1 张随机已 升级 的 *首领 牌。 NL 其第 1 次打出为0耗能。"
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
     "DESCRIPTION": "从 3 张 *首领 牌选择 1 张获得之。 NL 该牌下 1次 打出为0耗能。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "从 3 张已升级的 *首领 牌选择 1 张获得之。 NL 该牌下 1次 打出为0耗能。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从 3 张已 升级 的 *首领 牌选择 1 张获得之。 NL 该牌下 1次 打出为0耗能。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择 1 张 首领 牌。"
     ]
