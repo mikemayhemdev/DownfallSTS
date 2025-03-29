@@ -5,10 +5,9 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
-
-import static sneckomod.cards.SnekBite.muddle_name;
 
 public class SerpentBottle extends AbstractSneckoCard {
 
@@ -34,7 +33,7 @@ public class SerpentBottle extends AbstractSneckoCard {
 
         addToBot(new DrawCardAction(p, this.silly));
 
-        addToBot(new SelectCardsInHandAction(magicNumber, muddle_name,
+        addToBot(new SelectCardsInHandAction(magicNumber, downfallMod.keywords_and_proper_names.get("Muddle"),
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {

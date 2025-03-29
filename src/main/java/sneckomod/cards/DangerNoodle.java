@@ -11,13 +11,12 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.FrozenEgg2;
 import com.megacrit.cardcrawl.relics.MoltenEgg2;
 import com.megacrit.cardcrawl.relics.ToxicEgg2;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 import sneckomod.relics.UnknownEgg;
 
 import java.util.ArrayList;
-
-import static sneckomod.cards.SnekBite.muddle_name;
 
 public class DangerNoodle extends AbstractSneckoCard implements OnObtainCard {
 
@@ -45,7 +44,7 @@ public class DangerNoodle extends AbstractSneckoCard implements OnObtainCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_HEAVY);
 
-        addToBot(new SelectCardsInHandAction(1, muddle_name,
+        addToBot(new SelectCardsInHandAction(1, downfallMod.keywords_and_proper_names.get("Muddle"),
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {

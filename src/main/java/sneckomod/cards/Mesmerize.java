@@ -9,11 +9,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.IntimidateEffect;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 
 import static collector.util.Wiz.forAllMonstersLiving;
-import static sneckomod.cards.SnekBite.muddle_name;
 
 public class Mesmerize extends AbstractSneckoCard {
 
@@ -31,7 +31,7 @@ public class Mesmerize extends AbstractSneckoCard {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_SNECKO_GLARE"));
         this.addToBot(new VFXAction(p, new IntimidateEffect(p.hb.cX, p.hb.cY), 1.0F));
         forAllMonstersLiving(q -> applyToEnemy(q, new StrengthPower(q, -magicNumber)));
-        addToBot(new SelectCardsInHandAction(1, muddle_name,
+        addToBot(new SelectCardsInHandAction(1, downfallMod.keywords_and_proper_names.get("Muddle"),
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {

@@ -4,10 +4,9 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandActio
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleMarkedAction;
-
-import static sneckomod.cards.SnekBite.muddle_name;
 
 public class MarkedCard extends AbstractSneckoCard {
 
@@ -26,7 +25,7 @@ public class MarkedCard extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsInHandAction(magicNumber, muddle_name,
+        addToBot(new SelectCardsInHandAction(magicNumber, downfallMod.keywords_and_proper_names.get("Muddle"),
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {

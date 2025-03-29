@@ -21,10 +21,7 @@ public class SnekBite extends AbstractSneckoCard {
     private static final int MAGIC = 1;
     private static final int UPGRADE_DAMAGE = 1;
     private static final int UPGRADE_MAGIC = 1;
-    public static String muddle_name;
-    static {
-        muddle_name = downfallMod.keywords_and_proper_names.get("Muddle");
-    }
+
 
     public SnekBite() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
@@ -38,7 +35,7 @@ public class SnekBite extends AbstractSneckoCard {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
 
         // muddle is no longer random here
-        addToBot(new SelectCardsInHandAction(magicNumber, muddle_name,
+        addToBot(new SelectCardsInHandAction(magicNumber, downfallMod.keywords_and_proper_names.get("Muddle"),
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {
