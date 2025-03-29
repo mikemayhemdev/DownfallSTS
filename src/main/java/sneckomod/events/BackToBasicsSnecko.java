@@ -1,8 +1,15 @@
 package sneckomod.events;
 
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
+import com.megacrit.cardcrawl.cards.blue.Strike_Blue;
+import com.megacrit.cardcrawl.cards.green.Defend_Green;
+import com.megacrit.cardcrawl.cards.green.Strike_Green;
+import com.megacrit.cardcrawl.cards.purple.Defend_Watcher;
+import com.megacrit.cardcrawl.cards.purple.Strike_Purple;
 import com.megacrit.cardcrawl.cards.red.Defend_Red;
 import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,9 +20,14 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import downfall.cards.curses.*;
+import hermit.cards.Defend_Hermit;
+import hermit.cards.Strike_Hermit;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 public class BackToBasicsSnecko extends AbstractImageEvent {
     public static final String ID = "sneckomod:BackToBasics";
@@ -106,7 +118,17 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
 
                     for (AbstractCard c : strikesToRemove) {
                         cardsRemoved.add(c.cardID);
-                        AbstractCard newCard = new Strike_Red();
+                        int choice;
+                            choice = cardRandomRng.random(0,4);
+                            AbstractCard newCard = new Strike_Red();
+                            switch (choice) {
+                                case 0: newCard = new Strike_Red(); break;
+                                case 1: newCard = new Strike_Green(); break;
+                                case 2: newCard = new Strike_Blue(); break;
+                                case 3: newCard = new Strike_Purple(); break;
+                                case 4: newCard = new Strike_Hermit(); break;
+                            }
+
                         if (c.upgraded) {
                             newCard.upgrade();
                         }
@@ -117,7 +139,18 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
 
                     for (AbstractCard c : defendsToRemove) {
                         cardsRemoved.add(c.cardID);
-                        AbstractCard newCard = new Defend_Red();
+
+                        int choice;
+                        choice = cardRandomRng.random(0,4);
+                        AbstractCard newCard = new Strike_Red();
+                        switch (choice) {
+                            case 0: newCard = new Defend_Red(); break;
+                            case 1: newCard = new Defend_Green(); break;
+                            case 2: newCard = new Defend_Blue(); break;
+                            case 3: newCard = new Defend_Watcher(); break;
+                            case 4: newCard = new Defend_Hermit(); break;
+                        }
+
                         if (c.upgraded) {
                             newCard.upgrade();
                         }

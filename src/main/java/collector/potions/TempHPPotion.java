@@ -57,7 +57,7 @@ public class TempHPPotion extends CustomPotion {
         float    OFFSET_Y = -50.0F * Settings.scale;
 
         for(int i = 0; i < 18; ++i) {
-            AbstractDungeon.effectsQueue.add(new HealVerticalLineEffect((target.hb.cX - target.animX) + MathUtils.random(-X_JITTER * 1.5F, X_JITTER * 1.5F),  target.hb.cY + OFFSET_Y + MathUtils.random(-Y_JITTER, Y_JITTER)));
+            AbstractDungeon.effectsQueue.add(new HealVerticalLineEffect((AbstractDungeon.player.hb.cX + MathUtils.random(-X_JITTER * 1.5F, X_JITTER * 1.5F)),  target.hb.cY + OFFSET_Y + MathUtils.random(-Y_JITTER, Y_JITTER)));
         }
         atb(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, potency));
     }
