@@ -1,5 +1,6 @@
 package sneckomod.cards;
 
+import basemod.BaseMod;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -29,7 +30,7 @@ public class SoulRoll extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
-        addToBot(new SelectCardsInHandAction(magicNumber, downfallMod.keywords_and_proper_names.get("Muddle"),
+        addToBot(new SelectCardsInHandAction(magicNumber, BaseMod.getKeywordProper("sneckomod:muddle"),
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {

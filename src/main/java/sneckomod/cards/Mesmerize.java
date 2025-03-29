@@ -1,5 +1,6 @@
 package sneckomod.cards;
 
+import basemod.BaseMod;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -31,7 +32,7 @@ public class Mesmerize extends AbstractSneckoCard {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_SNECKO_GLARE"));
         this.addToBot(new VFXAction(p, new IntimidateEffect(p.hb.cX, p.hb.cY), 1.0F));
         forAllMonstersLiving(q -> applyToEnemy(q, new StrengthPower(q, -magicNumber)));
-        addToBot(new SelectCardsInHandAction(1, downfallMod.keywords_and_proper_names.get("Muddle"),
+        addToBot(new SelectCardsInHandAction(1, BaseMod.getKeywordProper("sneckomod:muddle"),
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {

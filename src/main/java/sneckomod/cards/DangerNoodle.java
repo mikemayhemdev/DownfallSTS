@@ -1,5 +1,6 @@
 package sneckomod.cards;
 
+import basemod.BaseMod;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -44,7 +45,7 @@ public class DangerNoodle extends AbstractSneckoCard implements OnObtainCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_HEAVY);
 
-        addToBot(new SelectCardsInHandAction(1, downfallMod.keywords_and_proper_names.get("Muddle"),
+        addToBot(new SelectCardsInHandAction(1, BaseMod.getKeywordProper("sneckomod:muddle"),
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {
