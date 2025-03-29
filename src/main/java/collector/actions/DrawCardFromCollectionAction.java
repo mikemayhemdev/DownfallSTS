@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.FrozenEye;
+import theHexaghost.relics.CandleOfCauterizing;
 
 import static collector.util.Wiz.att;
 
@@ -20,7 +22,10 @@ public class DrawCardFromCollectionAction extends AbstractGameAction {
     @Override
     public void update() {
         if (!CollectorCollection.combatCollection.isEmpty()) {
-            AbstractCard tar = CollectorCollection.combatCollection.getTopCard();
+            AbstractCard tar = CollectorCollection.combatCollection.getRandomCard(AbstractDungeon.cardRandomRng);
+            if(AbstractDungeon.player.hasRelic(FrozenEye.ID)) {
+                tar = CollectorCollection.combatCollection.getTopCard();
+            }
             CollectorCollection.combatCollection.removeCard(tar);
             AbstractDungeon.player.drawPile.addToTop(tar);
             att(new DrawCardAction(1));
