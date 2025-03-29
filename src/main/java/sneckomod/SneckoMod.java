@@ -530,12 +530,14 @@ public class SneckoMod implements
         }
 
         if (color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE) {
-            possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color != color || c.type == CURSE || c.type == STATUS || c.rarity == AbstractCard.CardRarity.SPECIAL || c.hasTag(GHOSTWHEELCARD));
+            ArrayList<AbstractCard> allCollecteds = Wiz.getCardsMatchingPredicate(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE && c.rarity != AbstractCard.CardRarity.SPECIAL && !c.hasTag(AbstractCard.CardTags.HEALING), true);
+            return (allCollecteds.remove(AbstractDungeon.cardRandomRng.random(allCollecteds.size() - 1)));
         }
 
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
         }
+
         return possList.get(AbstractDungeon.miscRng.random(possList.size() - 1)).makeCopy();
     }
 
