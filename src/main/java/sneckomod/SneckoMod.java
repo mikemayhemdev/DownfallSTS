@@ -538,7 +538,7 @@ public class SneckoMod implements
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
         }
 
-        return possList.get(AbstractDungeon.miscRng.random(possList.size() - 1)).makeCopy();
+        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 
     @Deprecated
