@@ -51,10 +51,16 @@ public class Beggar_Evil extends AbstractImageEvent {
         super(NAME, DESCRIPTIONS[0], "images/events/beggar.jpg");
         this.noCardsInRewards = true;
 
+
+
         if (AbstractDungeon.ascensionLevel >= 15) {
             this.gold = 50;
         } else {
             this.gold = 75;
+        }
+
+        if (Cleric_Evil.encountered) {
+            this.gold = this.gold*2;
         }
 
         this.imageEventText.setDialogOption(OPTIONS[4]);

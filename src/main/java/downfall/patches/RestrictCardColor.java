@@ -28,9 +28,15 @@ public class RestrictCardColor {
             if (card.color == AbstractDungeon.player.getCardColor()) {
                 available = true;
             }
-            else if (!card.hasTag(SneckoMod.BANNEDFORSNECKO) && !card.hasTag(HexaMod.GHOSTWHEELCARD) && card.color != CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE) {
+            else if (!card.hasTag(SneckoMod.BANNEDFORSNECKO) && !card.hasTag(HexaMod.GHOSTWHEELCARD)) {
                 available = true;
             }
+
+            //PLEASE WORK
+            if (card.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE){
+                available = false;
+            }
+
             if (!available) {
                 cardsToRemove.addToBottom(card);
             }

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.*;
@@ -16,6 +17,7 @@ public class WomanInBlueCard extends AbstractCollectibleCard {
     public WomanInBlueCard() {
         super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         tags.add(CardTags.HEALING);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
