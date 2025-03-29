@@ -193,7 +193,7 @@
   },
   "sneckomod:SerpentIdol": {
     "NAME": "蛇像",
-    "DESCRIPTION": "从 !M! 张随机 sneckomod:异色 牌中选择 1 张获得。 NL 本回合第 1 次打出为0耗能。 NL 消耗 。"
+    "DESCRIPTION": "从随机 !M! 张其他职业牌牌中选择 1 张获得。 NL 本回合第 1 次打出为0耗能。 NL 消耗 。"
   },
   "sneckomod:SerpentMind": {
     "NAME": "异色形态",
@@ -232,7 +232,7 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "灵魂抽取",
-    "DESCRIPTION": "获得 !M! 张随机 sneckomod:异色 牌。 NL 这 2 张牌获得 保留 。 NL 消耗 。"
+    "DESCRIPTION": "获得随机 !M! 张其他职业牌。 NL 这 2 张牌获得 保留 。 NL 消耗 。"
   },
   "sneckomod:SoulExchange": {
     "NAME": "灵魂交换",
