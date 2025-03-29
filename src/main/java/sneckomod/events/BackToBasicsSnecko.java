@@ -21,8 +21,14 @@ import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.cards.curses.*;
+import guardian.cards.Defend_Guardian;
+import guardian.cards.Strike_Guardian;
 import hermit.cards.Defend_Hermit;
 import hermit.cards.Strike_Hermit;
+import slimebound.cards.Defend_Slimebound;
+import slimebound.cards.Strike_Slimebound;
+import theHexaghost.cards.Defend;
+import theHexaghost.cards.Strike;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -119,7 +125,7 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                     for (AbstractCard c : strikesToRemove) {
                         cardsRemoved.add(c.cardID);
                         int choice;
-                            choice = cardRandomRng.random(0,4);
+                            choice = cardRandomRng.random(0,11);
                             AbstractCard newCard = new Strike_Red();
                             switch (choice) {
                                 case 0: newCard = new Strike_Red(); break;
@@ -127,6 +133,16 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                                 case 2: newCard = new Strike_Blue(); break;
                                 case 3: newCard = new Strike_Purple(); break;
                                 case 4: newCard = new Strike_Hermit(); break;
+
+                                case 5: newCard = new Strike_Slimebound(); break;
+                                case 6: newCard = new Strike_Guardian(); break;
+                                case 7: newCard = new Strike(); break;
+
+                                case 8: newCard = new champ.cards.Strike(); break;
+                                case 9: newCard = new automaton.cards.Strike(); break;
+                                case 10: newCard = new collector.cards.Strike(); break;
+
+                                case 11: newCard = new gremlin.cards.Strike(); break;
                             }
 
                         if (c.upgraded) {
@@ -141,7 +157,7 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                         cardsRemoved.add(c.cardID);
 
                         int choice;
-                        choice = cardRandomRng.random(0,4);
+                        choice = cardRandomRng.random(0,11);
                         AbstractCard newCard = new Strike_Red();
                         switch (choice) {
                             case 0: newCard = new Defend_Red(); break;
@@ -149,6 +165,16 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                             case 2: newCard = new Defend_Blue(); break;
                             case 3: newCard = new Defend_Watcher(); break;
                             case 4: newCard = new Defend_Hermit(); break;
+
+                            case 5: newCard = new Defend_Slimebound(); break;
+                            case 6: newCard = new Defend_Guardian(); break;
+                            case 7: newCard = new Defend(); break;
+
+                            case 8: newCard = new champ.cards.Defend(); break;
+                            case 9: newCard = new automaton.cards.Defend(); break;
+                            case 10: newCard = new collector.cards.Defend(); break;
+
+                            case 11: newCard = new gremlin.cards.Defend(); break;
                         }
 
                         if (c.upgraded) {
@@ -159,7 +185,7 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(newCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     }
 
-                    logMetric(ID, "Caprice", cardsAdded, cardsRemoved, null, null, null, null, null, 0, 0, 0, 0, 0, 0);
+                    logMetric(ID, "Creativity", cardsAdded, cardsRemoved, null, null, null, null, null, 0, 0, 0, 0, 0, 0);
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
