@@ -7,18 +7,25 @@ import charbosses.cards.curses.EnInjury;
 import charbosses.cards.hermit.*;
 import charbosses.powers.bossmechanicpowers.HermitDoomsday;
 import charbosses.relics.*;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.animations.ShoutAction;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.city.Byrd;
 import com.megacrit.cardcrawl.powers.RitualPower;
 import downfall.monsters.DoomedDagger;
 import downfall.vfx.PotionThrowEffect;
 
 import java.util.ArrayList;
+
+import static com.megacrit.cardcrawl.monsters.city.Byrd.DIALOG;
 
 public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
     public boolean froegg = false;
@@ -41,8 +48,22 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(getDoomedSnake(), true));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitDoomsday(p), 1));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new PotionThrowEffect("downfallResources/images/vfx/CultistPotion.png", 0, 0, 0, 0, 2F, 0.6F, false, true), 0.6F));
+
+        //Cultist Potion!!!
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new PotionThrowEffect("downfallResources/images/vfx/CultistPotion.png", p.hb.cX-240, p.hb.cY-150, p.hb.cX-240, p.hb.cY-150, 2F, 0.6F, false, true), 0.6F));
+            int roll = MathUtils.random(2);
+            if (roll == 0) {
+                AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1A"));
+            } else if (roll == 1) {
+                AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1B"));
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1C"));
+            }
+
+        AbstractDungeon.actionManager.addToBottom(new TalkAction(p, Byrd.DIALOG[0], 1.2F, 1.2F));
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RitualPower(p, 1, false), 1));
+
     }
 
     public void initialize() {

@@ -524,7 +524,15 @@ public class SneckoMod implements
 
     public static AbstractCard getSpecificClassCard(AbstractCard.CardColor color) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color != color || c.type == CURSE || c.type == STATUS || c.rarity == AbstractCard.CardRarity.SPECIAL || c.hasTag(BANNEDFORSNECKO) || c.hasTag(GHOSTWHEELCARD));
+
+        if (color != CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE) {
+            possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color != color || c.type == CURSE || c.type == STATUS || c.rarity == AbstractCard.CardRarity.SPECIAL || c.hasTag(BANNEDFORSNECKO) || c.hasTag(GHOSTWHEELCARD));
+        }
+
+        if (color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE) {
+            possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color != color || c.type == CURSE || c.type == STATUS || c.rarity == AbstractCard.CardRarity.SPECIAL || c.hasTag(GHOSTWHEELCARD));
+        }
+
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
         }
