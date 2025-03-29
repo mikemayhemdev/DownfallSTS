@@ -9,8 +9,6 @@ import downfall.downfallMod;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 
-import static sneckomod.cards.SnekBite.muddle_name;
-
 public class SoulRoll extends AbstractSneckoCard {
 
     public final static String ID = makeID("SoulRoll");
