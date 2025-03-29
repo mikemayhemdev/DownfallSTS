@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleMarkedAction;
 
+import static sneckomod.cards.SnekBite.muddle_name;
+
 public class MarkedCard extends AbstractSneckoCard {
 
     public final static String ID = makeID("MarkedCard");
@@ -24,7 +26,7 @@ public class MarkedCard extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsInHandAction(magicNumber, "Muddle",
+        addToBot(new SelectCardsInHandAction(magicNumber, muddle_name,
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {

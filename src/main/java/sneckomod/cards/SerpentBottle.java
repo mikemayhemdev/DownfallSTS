@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 
+import static sneckomod.cards.SnekBite.muddle_name;
+
 public class SerpentBottle extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("SerpentBottle");
@@ -32,7 +34,7 @@ public class SerpentBottle extends AbstractSneckoCard {
 
         addToBot(new DrawCardAction(p, this.silly));
 
-        addToBot(new SelectCardsInHandAction(magicNumber, "Muddle",
+        addToBot(new SelectCardsInHandAction(magicNumber, muddle_name,
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {

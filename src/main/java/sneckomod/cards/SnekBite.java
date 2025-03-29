@@ -5,8 +5,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 
@@ -19,6 +21,7 @@ public class SnekBite extends AbstractSneckoCard {
     private static final int MAGIC = 1;
     private static final int UPGRADE_DAMAGE = 1;
     private static final int UPGRADE_MAGIC = 1;
+    public static String muddle_name;
 
     public SnekBite() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
@@ -32,7 +35,7 @@ public class SnekBite extends AbstractSneckoCard {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
 
         // muddle is no longer random here
-        addToBot(new SelectCardsInHandAction(magicNumber, "Muddle",
+        addToBot(new SelectCardsInHandAction(magicNumber, muddle_name,
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {
@@ -51,4 +54,9 @@ public class SnekBite extends AbstractSneckoCard {
             initializeDescription();
         }
     }
+
+    static {
+        String muddle_name = downfallMod.keywords_and_proper_names.get("Muddle");
+    }
+
 }

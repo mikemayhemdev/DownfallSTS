@@ -17,6 +17,8 @@ import sneckomod.relics.UnknownEgg;
 
 import java.util.ArrayList;
 
+import static sneckomod.cards.SnekBite.muddle_name;
+
 public class DangerNoodle extends AbstractSneckoCard implements OnObtainCard {
 
     public static final String ID = makeID("DangerNoodle");
@@ -43,7 +45,7 @@ public class DangerNoodle extends AbstractSneckoCard implements OnObtainCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_HEAVY);
 
-        addToBot(new SelectCardsInHandAction(1, "Muddle",
+        addToBot(new SelectCardsInHandAction(1, muddle_name,
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {

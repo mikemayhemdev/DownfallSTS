@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 
+import static sneckomod.cards.SnekBite.muddle_name;
+
 public class RainOfDice extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("RainOfDice");
@@ -42,7 +44,7 @@ public class RainOfDice extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
-        addToBot(new SelectCardsInHandAction(1, "Muddle",
+        addToBot(new SelectCardsInHandAction(1, muddle_name,
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {
