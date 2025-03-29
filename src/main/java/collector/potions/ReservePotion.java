@@ -48,7 +48,7 @@ public class ReservePotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        atb(new VFXAction(new ColoredSanctityEffect(target.hb.cX, target.hb.cY, Color.CHARTREUSE.cpy())));
+        atb(new VFXAction(new ColoredSanctityEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.CHARTREUSE.cpy())));
         this.addToTop(new SFXAction("HEAL_1"));
         this.addToTop(new VFXAction(new BorderFlashEffect(Color.CHARTREUSE, true), 0.1F));
         atb(new GainReservesAction(potency));
