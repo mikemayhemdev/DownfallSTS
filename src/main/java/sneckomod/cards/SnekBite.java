@@ -22,6 +22,9 @@ public class SnekBite extends AbstractSneckoCard {
     private static final int UPGRADE_DAMAGE = 1;
     private static final int UPGRADE_MAGIC = 1;
     public static String muddle_name;
+    static {
+        muddle_name = downfallMod.keywords_and_proper_names.get("Muddle");
+    }
 
     public SnekBite() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
@@ -53,10 +56,6 @@ public class SnekBite extends AbstractSneckoCard {
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
-    }
-
-    static {
-        String muddle_name = downfallMod.keywords_and_proper_names.get("Muddle");
     }
 
 }
