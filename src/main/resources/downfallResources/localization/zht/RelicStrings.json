@@ -519,6 +519,13 @@
       "#pRight #pClick: Play the next card."
     ]
   },
+  "downfall:BurdenOfKnowledge": {
+    "NAME": "智慧的重担",
+    "FLAVOR": "真相是伤人的。",
+    "DESCRIPTIONS": [
+      "拾起时， #r失去所有腐化之心的祝福 及 #b10 点最大生命。升级所有牌（包含藏品牌）。战斗开始时失去 #b1 点 #y力量 和 #y敏捷 。"
+    ]
+  },
   "downfall:ExtraCursedBell": {
     "NAME": "召喚鈴鐺",
     "FLAVOR": "這個黑鐵鈴鐺在你找到它時作響了3次，但現在它已經不再響了。",

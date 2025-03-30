@@ -160,7 +160,7 @@ public class RareCardReward extends RewardItem {
             sb.setBlendFunction(770, 771);
         }
 
-        Texture cardImg = ImageMaster.REWARD_CARD_NORMAL;
+        Texture cardImg = ImageMaster.REWARD_CARD_BOSS;
 
         sb.setColor(Color.WHITE);
         sb.draw(cardImg, REWARD_ITEM_X - 32.0F, this.y - 32.0F - 2.0F * Settings.scale, 32.0F, 32.0F, 64.0F, 64.0F, Settings.scale, Settings.scale, 0.0F, 0, 0, 64, 64, false, false);

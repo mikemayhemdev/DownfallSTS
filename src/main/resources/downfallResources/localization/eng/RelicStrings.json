@@ -470,7 +470,7 @@
     "NAME": "Burden of Knowledge",
     "FLAVOR": "The truth hurts.",
     "DESCRIPTIONS": [
-      "Upon pickup, #rlose #rALL #rHeart #rBlessings and #b20 Max HP. Permanently #yUpgrade #rALL cards #rEVERYWHERE [REMOVE_SPACE]. Start combats with #b2 less #yStrength and #yDexterity [REMOVE_SPACE]."
+      "Upon pickup, #rlose #rALL #rHeart #rBlessings and #b10 Max HP. Permanently #yUpgrade #rALL cards #rEVERYWHERE [REMOVE_SPACE]. Start combats with #b1 less #yStrength and #yDexterity [REMOVE_SPACE]."
     ]
   },
   "downfall:TeleportStone": {

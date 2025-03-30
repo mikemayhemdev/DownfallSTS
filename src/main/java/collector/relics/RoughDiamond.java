@@ -9,7 +9,12 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
+import com.megacrit.cardcrawl.relics.Orrery;
+import downfall.util.RareCardReward;
 import downfall.util.TextureLoader;
+import downfall.util.ThirdSealReward;
+import org.apache.logging.log4j.core.pattern.AbstractStyleNameConverter;
+import sneckomod.util.ColorfulRareReward;
 
 public class RoughDiamond extends CustomRelic {
     public static final String ID = CollectorMod.makeID(RoughDiamond.class.getSimpleName());
@@ -21,6 +26,14 @@ public class RoughDiamond extends CustomRelic {
     public RoughDiamond() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
     }
+
+    public void onEquip() {
+        AbstractDungeon.getCurrRoom().rewards.add(new RareCardReward(AbstractDungeon.player.getCardColor()));
+        AbstractDungeon.combatRewardScreen.open(this.DESCRIPTIONS[1]);
+        AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
+        AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
+    }
+
 
     @Override
     public void onVictory() {
@@ -44,12 +57,7 @@ public class RoughDiamond extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.rarity == AbstractCard.CardRarity.RARE) {
-                return true;
-            }
-        }
-        return false;
+        return ((AbstractDungeon.floorNum > 1)); // you cannot boss swap into this relic
     }
 
     @Override
