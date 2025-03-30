@@ -15,6 +15,7 @@ import expansioncontent.actions.EchoACardAction;
 import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.orbs.GremlinWizard;
+import sneckomod.SneckoMod;
 
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
 
@@ -35,6 +36,7 @@ public class Tadah extends AbstractGremlinCard {
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
         this.cardsToPreview = new Ward();
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         GremlinMod.loadJokeCardImage(this, "Tadah.png");
     }
 

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.orbs.ShieldGremlin;
+import sneckomod.SneckoMod;
 
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
@@ -34,6 +35,7 @@ public class GlitterGuard extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
         this.cardsToPreview = new Ward();
         this.tags.add(SHIELD_GREMLIN);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "GlitterGuard.png");
     }

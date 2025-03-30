@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.vfx.FlameAnimationEffect;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.orbs.MadGremlin;
 import guardian.powers.LoseThornsPower;
+import sneckomod.SneckoMod;
 
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
@@ -42,6 +43,7 @@ public class Irritability extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
         this.baseBlock = BLOCK;
         this.tags.add(MAD_GREMLIN);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "Irritability.png");
     }

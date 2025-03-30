@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
+import sneckomod.SneckoMod;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -31,6 +32,7 @@ public class Rhythm extends AbstractGremlinCard {
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         GremlinMod.loadJokeCardImage(this, "Rhythm.png");
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
