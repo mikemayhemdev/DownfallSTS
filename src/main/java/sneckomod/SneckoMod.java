@@ -31,9 +31,7 @@ import com.megacrit.cardcrawl.cards.blue.BiasedCognition;
 import com.megacrit.cardcrawl.cards.blue.GoForTheEyes;
 import com.megacrit.cardcrawl.cards.blue.Hyperbeam;
 import com.megacrit.cardcrawl.cards.blue.MachineLearning;
-import com.megacrit.cardcrawl.cards.colorless.DarkShackles;
-import com.megacrit.cardcrawl.cards.colorless.Madness;
-import com.megacrit.cardcrawl.cards.colorless.SadisticNature;
+import com.megacrit.cardcrawl.cards.colorless.*;
 import com.megacrit.cardcrawl.cards.green.*;
 import com.megacrit.cardcrawl.cards.purple.*;
 import com.megacrit.cardcrawl.cards.red.*;
@@ -380,6 +378,8 @@ public class SneckoMod implements
                 c.cardID.equals(Indignation.ID) ||
                 c.cardID.equals(WaveOfTheHand.ID) ||
                 //Colorless Cards
+                c.cardID.equals(Trip.ID) ||
+                c.cardID.equals(Blind.ID) ||
                 c.cardID.equals(DarkShackles.ID) ||
                 c.cardID.equals(SadisticNature.ID) ||
                 //Gremlins Cards
