@@ -13,7 +13,7 @@ public class RetreatToShadows extends AbstractHexaCard {
     public final static String ID = makeID("Incorporeal");
 
     private static final int MAGIC = 6;
-    private static final int UPG_MAGIC = -2;
+    private static final int UPG_MAGIC = -3;
 
     public RetreatToShadows() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);

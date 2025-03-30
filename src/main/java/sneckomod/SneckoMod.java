@@ -491,33 +491,6 @@ public class SneckoMod implements
                         //Really Bad Offclass cards
                         c.cardID.equals(ChargedBarrage.ID)
         ))
-                &&
-                //Only allow cards that target enemies if not a vanilla or downfall color
-                !(c.color != AbstractCard.CardColor.RED &&
-                        c.color != AbstractCard.CardColor.GREEN &&
-                        c.color != AbstractCard.CardColor.BLUE &&
-                        c.color != AbstractCard.CardColor.PURPLE &&
-                        c.color != AbstractCard.CardColor.COLORLESS &&
-                        c.color != CardColorEnumPatch.CardColorPatch.BOSS &&
-                        //Downfall Characters
-                        c.color != hermit.Enums.COLOR_YELLOW &&
-                        //Act 1 Bosses
-                        c.color != AbstractCardEnum.SLIMEBOUND &&
-                        c.color != guardian.patches.AbstractCardEnum.GUARDIAN &&
-                        c.color != TheHexaghost.Enums.GHOST_GREEN &&
-                        //Act 2 Bosses
-                        c.color != ChampChar.Enums.CHAMP_GRAY &&
-                        c.color != AutomatonChar.Enums.BRONZE_AUTOMATON &&
-                        c.color != CollectorChar.Enums.COLLECTOR &&
-                        //Bonus Characters
-                        c.color != TheSnecko.Enums.SNECKO_CYAN &&
-                        c.color != gremlin.patches.AbstractCardEnum.GREMLIN &&
-
-                        //Targeting
-                        c.target != AbstractCard.CardTarget.ENEMY &&
-                        c.target != AbstractCard.CardTarget.SELF_AND_ENEMY &&
-                        c.target != AbstractCard.CardTarget.ALL_ENEMY
-                )
         );
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
@@ -525,10 +498,43 @@ public class SneckoMod implements
         if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
         possList.removeIf(c -> !validColors.contains(c.color));
 
+        possList.removeIf(c -> (
+                //crossmod restriction pls work
+                c.color != AbstractCard.CardColor.RED &&
+                c.color != AbstractCard.CardColor.GREEN &&
+                c.color != AbstractCard.CardColor.BLUE &&
+                c.color != AbstractCard.CardColor.PURPLE &&
+                c.color != AbstractCard.CardColor.COLORLESS &&
+                c.color != CardColorEnumPatch.CardColorPatch.BOSS &&
+                //Downfall Characters
+                c.color != hermit.Enums.COLOR_YELLOW &&
+                //Act 1 Bosses
+                c.color != AbstractCardEnum.SLIMEBOUND &&
+                c.color != guardian.patches.AbstractCardEnum.GUARDIAN &&
+                c.color != TheHexaghost.Enums.GHOST_GREEN &&
+                //Act 2 Bosses
+                c.color != ChampChar.Enums.CHAMP_GRAY &&
+                c.color != AutomatonChar.Enums.BRONZE_AUTOMATON &&
+                c.color != CollectorChar.Enums.COLLECTOR &&
+                //Bonus Characters
+                c.color != TheSnecko.Enums.SNECKO_CYAN &&
+                c.color != gremlin.patches.AbstractCardEnum.GREMLIN)
+
+        &&
+                //doesn't detect debuff application
+                (!ArchetypeHelper.appliesDebuff(c) ||
+                //detects debuff application, BUT is not targeted at an enemy
+                (ArchetypeHelper.appliesDebuff(c) &&
+                c.target != AbstractCard.CardTarget.ENEMY &&
+                c.target != AbstractCard.CardTarget.SELF_AND_ENEMY &&
+                c.target != AbstractCard.CardTarget.ALL_ENEMY)
+        ));
+
+
         //PLEASE WORK
         possList.removeIf(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE);
 
-        possList.removeIf(c -> c.color ==CardColorEnumPatch.CardColorPatch.BOSS && (
+        possList.removeIf(c -> c.color == CardColorEnumPatch.CardColorPatch.BOSS && (
                 !c.cardID.equals(SuperLivingWall.ID) &&
                 !c.cardID.equals(DashGenerateEvil.ID) &&
                 !c.cardID.equals(expansioncontent.cards.GoopSpray.ID) &&

@@ -43,6 +43,15 @@ public class RoughDiamond extends CustomRelic {
         }
     }
 
+    public boolean canSpawn() {
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.rarity == AbstractCard.CardRarity.RARE) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
