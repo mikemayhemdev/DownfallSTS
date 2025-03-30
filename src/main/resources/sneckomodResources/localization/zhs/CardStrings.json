@@ -101,8 +101,8 @@
   },
   "sneckomod:Nope": {
     "NAME": "不行",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 1 张牌。 NL 若它是某色牌，获得 1 张随机该色牌。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 1 张牌。 NL 若它是某色牌，获得 1 张随机该色牌。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 1 张牌。 NL 若它是某职业牌，获得 1 张随机该职业牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 1 张牌。 NL 若它是某职业牌，获得 1 张随机该职业牌。",
     "EXTENDED_DESCRIPTION": [
       "消耗 。"
     ]
@@ -193,13 +193,13 @@
   },
   "sneckomod:SerpentIdol": {
     "NAME": "蛇像",
-    "DESCRIPTION": "从 !M! 张随机 sneckomod:异色 牌中选择 1 张获得。 NL 本回合第 1 次打出为0耗能。 NL 消耗 。"
+    "DESCRIPTION": "从随机 !M! 张其他职业牌牌中选择 1 张获得。 NL 本回合第 1 次打出为0耗能。 NL 消耗 。"
   },
   "sneckomod:SerpentMind": {
     "NAME": "异色形态",
-    "DESCRIPTION": "虚无 。 NL 回合结束时，你在本回合每打出 1 种颜色的牌，获得 !M! 层 力量 。 NL sneckomod:赠礼 ：稀有牌。",
-    "UPGRADE_DESCRIPTION": "回合结束时，你在本回合每打出 1 种颜色的牌，获得 !M! 层 力量 。 NL sneckomod:赠礼 ：稀有牌。",
-    "DESCRIPTION_BATTLE": "回合结束时，你再本回合每打出 1 种颜色的牌，获得 !M! 层 力量 。"
+    "DESCRIPTION": "虚无 。 NL 回合结束时，你在本回合每打出 1 种职业的牌，获得 !M! 层 力量 。 NL sneckomod:赠礼 ：稀有牌。",
+    "UPGRADE_DESCRIPTION": "回合结束时，你在本回合每打出 1 种职业的牌，获得 !M! 层 力量 。 NL sneckomod:赠礼 ：稀有牌。",
+    "DESCRIPTION_BATTLE": "回合结束时，你再本回合每打出 1 种职业的牌，获得 !M! 层 力量 。"
   },
   "sneckomod:SlitherThrough": {
     "NAME": "游蛇穿行",
@@ -232,7 +232,7 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "灵魂抽取",
-    "DESCRIPTION": "获得 !M! 张随机 sneckomod:异色 牌。 NL 这 2 张牌获得 保留 。 NL 消耗 。"
+    "DESCRIPTION": "获得随机 !M! 张其他职业牌。 NL 这 2 张牌获得 保留 。 NL 消耗 。"
   },
   "sneckomod:SoulExchange": {
     "NAME": "灵魂交换",
@@ -248,10 +248,10 @@
   },
   "sneckomod:ToothAndClaw": {
     "NAME": "尖牙利爪",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有 1 种异色牌 获得 1 张 *小刀 。 NL sneckomod:赠礼 ：罕见牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有 1 种异色牌 获得 1 张 *小刀+ 。 NL sneckomod:赠礼 ：罕见牌。",
-    "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 手牌中每有 1 种异色牌 获得 1 张 *小刀 。",
-    "UPGRADE_DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 手牌中每有 1 种异色牌 获得 1 张 *小刀+ 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有 1 种职业牌 获得 1 张 *小刀 。 NL sneckomod:赠礼 ：罕见牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有 1 种职业牌 获得 1 张 *小刀+ 。 NL sneckomod:赠礼 ：罕见牌。",
+    "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 手牌中每有 1 种职业牌 获得 1 张 *小刀 。",
+    "UPGRADE_DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 手牌中每有 1 种职业牌 获得 1 张 *小刀+ 。"
   },
   "sneckomod:TyphoonFang": {
     "NAME": "台风之牙",
@@ -547,7 +547,7 @@
   },
   "sneckomod:ComboString": {
     "NAME": "异色连击",
-    "DESCRIPTION": "造成 !D! 点伤害 X 次。 X 为你本回合打出的 sneckomod:异色 牌数。 NL sneckomod:赠礼 ：罕见牌。",
+    "DESCRIPTION": "造成 !D! 点伤害 X 次。 NL X 为你本回合打出的 sneckomod:异色 牌数。 NL sneckomod:赠礼 ：罕见牌。",
     "EXTENDED_DESCRIPTION": [
       " NL （本回合打出过 ",
       " 张 异色 牌。）"
@@ -565,8 +565,8 @@
   },
   "sneckomod:MarkedCard": {
     "NAME": "记号牌",
-    "DESCRIPTION": "保留。 NL sneckomod:混淆 1 张牌。 NL 本牌不会增加耗能。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留。 NL sneckomod:混淆 !M! 张牌。 NL 本牌不会增加耗能。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL sneckomod:混淆 1 张牌。 NL 不增加其耗能。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL sneckomod:混淆 !M! 张牌。 NL 不增加其耗能。 NL 消耗 。"
   },
   "sneckomod:InertBlade": {
     "NAME": "钝藏刀刃",
