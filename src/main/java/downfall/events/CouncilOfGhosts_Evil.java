@@ -47,7 +47,7 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
 
     private int screenNum = 0;
     private int hpLoss = 0;
-    private int goldCost = 150;
+    private int goldCost = 100;
 
     public CouncilOfGhosts_Evil() {
         super(NAME, DESCRIPTIONSALT[0], "images/events/ghost.jpg");
@@ -60,7 +60,7 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
         }
 
         if (AbstractDungeon.ascensionLevel >= 15){
-            goldCost = 200;
+            goldCost = 150;
         }
 
         if (AbstractDungeon.player.gold >= goldCost) {

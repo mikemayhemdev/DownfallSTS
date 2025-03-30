@@ -13,7 +13,7 @@ public class FlashInThePan extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("FlashInThePan");
 
-    private static final int BLOCK = 10;
+    private static final int BLOCK = 13;
     private static final int COST = 2;
     private static final int UPG_BLOCK = 3;
 

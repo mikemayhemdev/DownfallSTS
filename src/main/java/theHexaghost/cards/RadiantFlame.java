@@ -21,7 +21,7 @@ public class RadiantFlame extends AbstractHexaCard {
 
     public RadiantFlame() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = damage = 10;
+        baseDamage = damage = 11;
         baseMagicNumber = magicNumber = 2;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "RadiantFlame.png");
@@ -57,7 +57,7 @@ public class RadiantFlame extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(3);
             upgradeMagicNumber(1);
         }
     }
