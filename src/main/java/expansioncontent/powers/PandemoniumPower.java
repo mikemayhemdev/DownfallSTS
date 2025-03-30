@@ -1,6 +1,7 @@
 package expansioncontent.powers;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.UnlimboAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -63,6 +64,7 @@ public class PandemoniumPower extends AbstractPower {
 
                         // Add the card to the action manager's card queue, targeting the selected monster
                         AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(cardToPlay, randomMonster, cardToPlay.energyOnUse));
+                        this.addToTop(new UnlimboAction(cardToPlay));
                         this.isDone = true;
                     }
                 });

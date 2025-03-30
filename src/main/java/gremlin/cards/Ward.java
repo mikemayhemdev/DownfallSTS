@@ -22,7 +22,7 @@ public class Ward extends CustomCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
     private static final int COST = 0;
-    public static final int BLOCK = 2;
+    public static final int BLOCK = 3;
     public static final int UPGRADE_BONUS = 2;
 
     public Ward()

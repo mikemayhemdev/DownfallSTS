@@ -39,7 +39,7 @@ public class GremlinArms extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.COMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int MAGIC = 1;
     private static final int UPGRADE_BONUS = 1;
     private boolean hasOptions = true;

@@ -54,7 +54,9 @@ import downfall.events.Serpent_Evil;
 import downfall.relics.BrokenWingStatue;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
+import expansioncontent.cards.Chronoboost;
 import expansioncontent.cards.DashGenerateEvil;
+import expansioncontent.cards.PeekPages;
 import expansioncontent.cards.SuperLivingWall;
 import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.patches.CenterGridCardSelectScreen;
@@ -459,7 +461,7 @@ public class SneckoMod implements
                 c.cardID.equals(PoisonParadise.ID) ||
                 c.cardID.equals(AceOfWands.ID))
 
-        ) || (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == AbstractCard.CardColor.CURSE || c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.rarity == AbstractCard.CardRarity.BASIC || c.type == STATUS || !q.test(c)  || c.hasTag(BANNEDFORSNECKO) || c.hasTag(GHOSTWHEELCARD))
+        ) || (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.rarity == AbstractCard.CardRarity.BASIC || c.type == STATUS || !q.test(c)  || c.hasTag(BANNEDFORSNECKO) || c.hasTag(GHOSTWHEELCARD))
         || (
                 //False Positives
                 c.cardID.equals(SwordThrow.ID) ||
@@ -493,6 +495,7 @@ public class SneckoMod implements
                         c.color != AbstractCard.CardColor.BLUE &&
                         c.color != AbstractCard.CardColor.PURPLE &&
                         c.color != AbstractCard.CardColor.COLORLESS &&
+                        c.color != CardColorEnumPatch.CardColorPatch.BOSS &&
                         //Downfall Characters
                         c.color != hermit.Enums.COLOR_YELLOW &&
                         //Act 1 Bosses
@@ -506,6 +509,7 @@ public class SneckoMod implements
                         //Bonus Characters
                         c.color != TheSnecko.Enums.SNECKO_CYAN &&
                         c.color != gremlin.patches.AbstractCardEnum.GREMLIN &&
+
                         //Targeting
                         c.target != AbstractCard.CardTarget.ENEMY &&
                         c.target != AbstractCard.CardTarget.SELF_AND_ENEMY &&
@@ -517,6 +521,17 @@ public class SneckoMod implements
         }
         if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
         possList.removeIf(c -> !validColors.contains(c.color));
+
+        //PLEASE WORK
+        possList.removeIf(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE);
+
+        possList.removeIf(c -> c.color ==CardColorEnumPatch.CardColorPatch.BOSS && (
+                !c.cardID.equals(SuperLivingWall.ID) &&
+                !c.cardID.equals(DashGenerateEvil.ID) &&
+                !c.cardID.equals(expansioncontent.cards.GoopSpray.ID) &&
+                !c.cardID.equals(expansioncontent.cards.YouAreMine.ID) &&
+                !c.cardID.equals(expansioncontent.cards.FaceSlap.ID)));
+
         return possList.get(AbstractDungeon.miscRng.random(possList.size() - 1)).makeCopy();
     }
 
