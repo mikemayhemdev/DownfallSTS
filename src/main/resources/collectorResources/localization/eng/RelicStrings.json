@@ -111,7 +111,7 @@
     "NAME": "Rough Diamond",
     "FLAVOR": "With the mines demolished, even this tarnished stone is valuable.",
     "DESCRIPTIONS": [
-      "The first time you play a Rare card each turn, gain [E] . Upon pickup, obtain a #yRare card reward.",
+      "The first time you play a #yRare card each turn, gain [E] . Upon pickup, obtain a #yRare card reward.",
       "Knowledge!"
     ]
   },
