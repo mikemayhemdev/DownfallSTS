@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.RollMoveAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.ending.SpireShield;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import guardian.characters.GuardianCharacter;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.PotencyPower;
 import sneckomod.TheSnecko;
@@ -34,7 +35,7 @@ public class SpireShieldPatch {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, __instance, new EnhancePower(-1), -1));
             }
 
-            if (AbstractDungeon.player instanceof TheSnecko) {
+            if (AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player instanceof GuardianCharacter) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, __instance, new StrengthPower(AbstractDungeon.player, -1)));
             }
 
