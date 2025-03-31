@@ -365,7 +365,7 @@
   },
   "bronze:Allocate": {
     "NAME": "分配",
-    "DESCRIPTION": "抽牌堆每有1张 状态牌 ， NL 获得 [E] 。",
+    "DESCRIPTION": "抽牌堆每有一张 状态牌 ， NL 获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
       " NL （获得 ",
       " [E] ）"
