@@ -10,7 +10,7 @@
     "NAME": "護目鏡",
     "FLAVOR": "仔細觀察。",
     "DESCRIPTIONS": [
-      "回合結束時若 #ybronze:隊列 為空，獲得 #b4 點 #y格擋 。"
+      "回合結束時若 #ybronze:佇列 為空，獲得 #b4 點 #y格擋 。"
     ]
   },
   "bronze:DecasWashers": {
@@ -22,21 +22,21 @@
   },
   "bronze:Timepiece": {
     "NAME": "冷凝漆",
-    "FLAVOR": "據說海豹的女兒由此制成。",
+    "FLAVOR": "據說海豹的女兒由此製成。",
     "DESCRIPTIONS": [
-      " #ybronze:編譯 的 #ybronze:方法 附帶 #y保留 。"
+      " #ybronze:編譯 的 #ybronze:方法 都附帶 #y保留 。"
     ]
   },
   "bronze:Mallet": {
     "NAME": "鐵錘",
-    "FLAVOR": "就是這麽炫! 舉起我的小鐵錘!",
+    "FLAVOR": "就是這麼炫! 舉起我的小鐵錘!",
     "DESCRIPTIONS": [
       "戰鬥開始時，將 #b2 張 #y性能調整+ 加入手牌。"
     ]
   },
   "bronze:SilverBullet": {
     "NAME": "銀色子彈",
-    "FLAVOR": "尖塔裏的狼都絕跡了。",
+    "FLAVOR": "尖塔裡的狼都絕跡了。",
     "DESCRIPTIONS": [
       "戰鬥開始時，將 #b1 張 #y穿透射擊 加入手牌，其耗能為 #b0 。"
     ]
@@ -74,10 +74,10 @@
     "NAME": "瓶裝代碼",
     "FLAVOR": "實際上,這確實是我編碼的。。。",
     "DESCRIPTIONS": [
-      "拾起時，選擇牌組中的 #b1 張 #ybronze:編碼 牌。 戰鬥開始時，它直接進入 #ybronze:隊列 。",
+      "拾起時，選擇牌組中的 #b1 張 #ybronze:編碼 牌。 戰鬥開始時，它直接進入 #ybronze:佇列 。",
       "選擇一張牌 ",
       "戰鬥開始時， ",
-      " 直接進入 #ybronze:隊列 。"
+      " 直接進入 #ybronze:佇列 。"
     ]
   },
   "bronze:DonusWashers": {
@@ -89,14 +89,14 @@
   },
   "bronze:BronzeIdol": {
     "NAME": "銅制神像",
-    "FLAVOR": "一種古老的，武器化的抗病毒程序 - 無人知曉其生成者和目的",
+    "FLAVOR": "一種古老的，武器化的抗病毒程式 - 無人知曉其生成者和目的",
     "DESCRIPTIONS": [
       "#y狀態牌 可打出且附帶 #g正面效果 。"
     ]
   },
   "bronze:AnalyticalCore": {
-    "NAME": "悖論制品",
-    "FLAVOR": "你從未見過如此意義不明的人工制品。",
+    "NAME": "悖論製品",
+    "FLAVOR": "你從未見過如此意義不明的人工製品。",
     "DESCRIPTIONS": [
       "回合開始時，隨機將 #b1 張 #y虛無 #ybronze:編碼 牌加入手牌。"
     ]
