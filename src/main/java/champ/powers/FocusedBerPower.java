@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import downfall.monsters.NeowBoss;
 import downfall.util.TextureLoader;
 
 public class FocusedBerPower extends AbstractPower implements CloneablePowerInterface {
@@ -52,7 +53,9 @@ public class FocusedBerPower extends AbstractPower implements CloneablePowerInte
         if (card.hasTag(ChampMod.FINISHER)) {
             flash();
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                addToBot(new DamageAction(m, new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                if (!m.isDead && !m.isDying && !(m instanceof NeowBoss)) {
+                    addToBot(new DamageAction(m, new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                }
             }
             addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }
