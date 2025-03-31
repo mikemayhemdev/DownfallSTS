@@ -22,7 +22,7 @@ public class InfiniteBlocks extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     public InfiniteBlocks()
     {
