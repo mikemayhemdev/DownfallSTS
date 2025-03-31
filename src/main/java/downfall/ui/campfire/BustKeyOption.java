@@ -161,6 +161,19 @@ public class BustKeyOption extends AbstractCampfireOption {
             AbstractDungeon.effectList.add(new BustKeyEffect());
             AbstractPlayer p = AbstractDungeon.player;
             p.loseGold(soulToCost);
+            if (soulToCost == 0) {
+
+                if (AbstractDungeon.player.hasRelic(Hecktoplasm.ID)) {
+                    AbstractDungeon.player.getRelic(Hecktoplasm.ID).flash();
+                    System.out.println("Saved Souls with Hecktoplasm.");
+                }
+
+                if (AbstractDungeon.player.hasRelic(Ectoplasm.ID)) {
+                    AbstractDungeon.player.getRelic(Ectoplasm.ID).flash();
+                    System.out.println("Saved Souls with Ectoplasm.");
+                }
+
+            }
             this.used = true;
             this.usable = false;
             switch (key) {
