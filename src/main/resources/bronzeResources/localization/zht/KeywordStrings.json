@@ -1,146 +1,46 @@
-{
-  "bronze:Cloning": {
-    "NAME": "合併",
-    "DESCRIPTIONS": [
-      "下次 #y編碼 時，再 #y編碼 它 #b1 次。",
-      "下次 #y編碼 時，再 #y編碼 它 #b",
-      " 次。"
-    ]
+[
+  {
+    "PROPER_NAME": "編碼",
+    "NAMES": [
+      "encode",
+      "encoded",
+      "編碼",
+      "佇列",
+      "方法"
+    ],
+    "DESCRIPTION": "將牌移入銅球 #y佇列 。 NL 當 #y佇列 中有 #b3 張牌時, 它們的效果被融合， #y編譯 成一張新的 #y方法 牌移入手牌，其耗能為 #b1 點。"
   },
-  "bronze:Default": {
-    "NAME": "默認類",
-    "DESCRIPTIONS": [
-      "將當前 #y佇列 首張牌加入下個 #y佇列 。",
-      "將當前 #y佇列 首張牌加入下 #b",
-      " 個 #y佇列 。"
-    ]
+  {
+    "PROPER_NAME": "編譯",
+    "NAMES": [
+      "編譯",
+      "compile",
+      "compiled"
+    ],
+    "DESCRIPTION": "當被 #y編碼 的牌融合成 #y方法 時觸發其中所有 #y編譯 效果。 NL 對自身的 #r負面 #y編譯 效果被稱為 #y編譯錯誤 。"
   },
-  "bronze:Feature": {
-    "NAME": "此為特性",
-    "DESCRIPTIONS": [
-      "每當你抽到 或 #y消耗 #y狀態牌 時，獲得 #b",
-      " 點 格擋 。"
-    ]
+  {
+    "PROPER_NAME": "殘影",
+    "NAMES": [
+      "殘影",
+      "blur"
+    ],
+    "DESCRIPTION": " #y格擋 不會在回合結束時消失。"
   },
-  "bronze:InfiniteBeams": {
-    "NAME": "無盡射線",
-    "DESCRIPTIONS": [
-      "你的回合開始時，將 #b1 張 #y微光射線 加入手牌。",
-      "你的回合開始時，將 #b1 張 #y微光射線+ 加入手牌。",
-      "你的回合開始時，將 #b",
-      " 張 #y微光射線 加入手牌。",
-      "你的回合開始時，將 #b",
-      " 張 #y微光射線+ 加入手牌。"
-    ]
+  {
+    "PROPER_NAME": "插入",
+    "NAMES": [
+      "插入",
+      "insert"
+    ],
+    "DESCRIPTION": "將 #b1 張牌加入抽牌堆。"
   },
-  "bronze:Optimize": {
-    "NAME": "最佳化",
-    "DESCRIPTIONS": [
-      "#y升級 下張 #y編碼 的牌。",
-      "#y升級 下 #b",
-      " 張 #y編碼 的牌。"
-    ]
-  },
-  "bronze:MaxOutput": {
-    "NAME": "極限功率",
-    "DESCRIPTIONS": [
-      "你的回合開始時抽 #b1 張牌並將 #b1 張 #y暈眩 加入抽牌堆。",
-      "你的回合開始時抽 #b",
-      " 張牌並將 #b",
-      " 張 #y暈眩 加入抽牌堆。"
-    ]
-  },
-  "bronze:Return": {
-    "NAME": "數據整合",
-    "DESCRIPTIONS": [
-      "下回合開始時，獲得 [E] 並抽 #b1 張牌。",
-      "下 #b",
-      " 個回合開始時，獲得 [E] 並抽 #b1 張牌。"
-    ]
-  },
-  "bronze:Library": {
-    "NAME": "資料庫",
-    "DESCRIPTIONS": [
-      "你的回合開始時，隨機將 #b1 張 #y編碼 牌加入手牌，其耗能為 #b0 。",
-      "你的回合開始時，隨機將 #b",
-      " 張 #y編碼 牌加入手牌，其耗能為 #b0 。"
-    ]
-  },
-  "bronze:LibraryMod": {
-    "NAME": "外部資料庫",
-    "DESCRIPTIONS": [
-      "你的回合開始時，將一張帶有 #y編碼 的隨機牌加入手牌，使其獲得 #y虛無 。"
-    ]
-  },
-  "bronze:BronzeHeatsink": {
-    "NAME": "銅制散熱器",
-    "DESCRIPTIONS": [
-      "打出 #y方法 時，抽 #b1 張牌。",
-      "打出 #y方法 時，抽 #b",
-      " 張牌。"
-    ]
-  },
-  "bronze:HardenedForm": {
-    "NAME": "召喚銅球",
-    "DESCRIPTIONS": [
-      "每當你生成或打出 #y方法 時，獲得 #b",
-      " 點 #y格擋 並對隨機敵人造成 #b",
-      " 點傷害。"
-    ]
-  },
-  "bronze:Hardcode": {
-    "NAME": "硬編碼",
-    "DESCRIPTIONS": [
-      "下次你生成 #y方法 時將其加入牌組而非加入手牌，並將構成 #y方法 的牌從牌組中移除。",
-      "下 #b",
-      " 次你生成 #y方法 時將其加入牌組而非加入手牌，並將構成 #y方法 的牌從牌組中移除。"
-    ]
-  },
-  "bronze:Verify": {
-    "NAME": "感知形態",
-    "DESCRIPTIONS": [
-      "每回合首次抽到 #y方法 時，提高其數值 #b1 點。",
-      "每回合前 #b",
-      " 次抽到 #y方法 時，提高其數值 #b1 點。",
-      "耗能除外。"
-    ]
-  },
-  "bronze:FreeFunction": {
-    "NAME": "自由方法",
-    "DESCRIPTIONS": [
-      "下一張你生成的 #y方法 耗能為 #b0 。",
-      "下 #b",
-      " 張你生成的 #y方法 耗能為 #b0 。"
-    ]
-  },
-  "bronze:CleanCode": {
-    "NAME": "簡明代碼",
-    "DESCRIPTIONS": [
-      "下次 #y編譯 #y方法 時，移除其中的 #y編譯錯誤 。",
-      "下 #b",
-      " 次 #y編譯 #y方法 時，移除其中的 #y編譯錯誤 。"
-    ]
-  },
-  "bronze:CopyPaste": {
-    "NAME": "複製貼上",
-    "DESCRIPTIONS": [
-      "本回合下一張 #y方法 打出兩次。",
-      "本回合下 #b",
-      " 張 #y方法 打出兩次。"
-    ]
-  },
-  "bronze:FullRelease": {
-    "NAME": "完全公開",
-    "DESCRIPTIONS": [
-      "你的回合開始時， NL "
-    ]
-  },
-  "bronze:RemoveNextError": {
-    "NAME": "移除錯誤",
-    "DESCRIPTIONS": [
-      "移除下張 #y編碼 中的 #y編譯錯誤 。",
-      "移除下 #b",
-      " 張 #y編碼 中的 #y編譯錯誤 。"
-    ]
+  {
+    "PROPER_NAME": "循環",
+    "NAMES": [
+      "循環",
+      "cycle"
+    ],
+    "DESCRIPTION": "丟棄 #b1 張牌，抽 #b1 張牌替換其原來的位置。"
   }
-}
+]
