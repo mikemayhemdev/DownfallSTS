@@ -301,7 +301,7 @@
   },
   "bronze:Virus": {
     "NAME": "病毒",
-    "DESCRIPTION": "造成 !D! 点伤害。NL 丢弃所有手牌 。 NL 获得相同数量张 *微光射线 。 NL 消耗 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃所有手牌 。 NL 获得相同数量张 *微光射线 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃所有手牌 。 NL 获得相同数量张 *微光射线+ 。 NL 消耗 。"
   },
   "bronze:Backtrace": {
