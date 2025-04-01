@@ -537,7 +537,7 @@
     "UPGRADE_DESCRIPTION": "保留 。 NL 获得 [E] [E] [E] 。 NL 消耗 。"
   },
   "sneckomod:MakeshiftBlade": {
-    "NAME": "权宜之刃 ",
+    "NAME": "权宜之刃",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标敌人有至少 !M! 种负面效果，抽 !qqq! 张牌。 NL sneckomod:赠礼 ：负面效果牌。",
     "DESCRIPTION_BATTLE": "造成 !D! 点伤害。 NL 若目标敌人有至少 !M! 种负面效果，抽 !qqq! 张牌。"
   },

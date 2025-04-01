@@ -10,8 +10,8 @@
   "sneckomod:CheapStockPower": {
     "NAME": "廉价存货",
     "DESCRIPTIONS": [
-      "回合开始时，#y混淆 手牌中耗能最高的1张牌。",
-      "回合开始时，#y混淆 手牌中耗能最高的1张牌 #b",
+      "回合开始时， #y混淆 手牌中耗能最高的1张牌。",
+      "回合开始时， #y混淆 手牌中耗能最高的1张牌 #b",
       " 次。"
     ]
   },
@@ -26,7 +26,7 @@
   "sneckomod:MuddleDrawnCardsPower": {
     "NAME": "混淆抽牌",
     "DESCRIPTIONS": [
-      "#y混淆 下1张抽到的牌。",
+      "#y混淆 下 1 张抽到的牌。",
       "#y混淆 下 #b",
       " 张抽到的牌。（剩",
       " ）"
@@ -35,15 +35,15 @@
   "sneckomod:MudshieldPower": {
     "NAME": "泥浆屏障",
     "DESCRIPTIONS": [
-      "当你 #y混淆 1张牌，获得 #b",
+      "当你 #y混淆 1 张牌，获得 #b",
       " 点 #y格挡 。"
     ]
   },
   "sneckomod:OverwhelmingPresencePower": {
     "NAME": "威压",
     "DESCRIPTIONS": [
-      "每回合你第一次洗牌，获得 [E] 并抽 #b1 张牌。",
-      "每回合你第一次洗牌，获得 ",
+      "每回合你第 1 次洗牌，获得 [E] 并抽 #b1 张牌。",
+      "每回合你第 1 次洗牌，获得 ",
       " 点 [E] 并抽 #b",
       " 张牌。"
     ]
@@ -51,8 +51,8 @@
   "sneckomod:SerpentsNestPower": {
     "NAME": "蛇巢",
     "DESCRIPTIONS": [
-      "每当你打出1张 #y能力 牌，对所有敌人造成 1 点伤害。",
-      "每当你打出1张 #y能力 牌，对所有敌人造成 #b",
+      "每当你打出 1 张 #y能力 牌，对所有敌人造成 1 点伤害。",
+      "每当你打出 1 张 #y能力 牌，对所有敌人造成 #b",
       " 伤害。"
     ]
   },
@@ -60,16 +60,16 @@
     "NAME": "异色形态",
     "DESCRIPTIONS": [
       "你在本回合每打出1种颜色的牌，在回合结束时获得 #b",
-      " 点 #y力量 。",
-      " 点 #y力量 。"
+      " 层 #y力量 。",
+      " 层 #y力量 。"
     ]
   },
   "sneckomod:SnakeEyesPower": {
     "NAME": "邪眼毒眸",
     "DESCRIPTIONS": [
-      "在本回合，下1张打出的 #y异色 牌被打出2次。",
+      "在本回合，下1张打出的 #y异色 牌被打出 2 次。",
       "在本回合，下 #b",
-      " 张打出的 #y异色 牌被打出2次。"
+      " 张打出的 #y异色 牌被打出 2 次。"
     ]
   },
   "sneckomod:UnendingSupplyPower": {
@@ -93,7 +93,7 @@
   "sneckomod:UnlimitedRollsPower": {
     "NAME": "无尽投掷",
     "DESCRIPTIONS": [
-      "回合开始时，获得 #y灵魂骰掷+ 。"
+      "回合开始时，获得 #y灵魂骰掷 。"
     ]
   },
   "sneckomod:Transmogrifying": {
@@ -115,16 +115,16 @@
   "sneckomod:TyphoonPower": {
     "NAME": "台风之牙",
     "DESCRIPTIONS": [
-      "本回合每当 #b溢出 触发，打出1张 #y台风之牙 的复制。",
-      "本回合每当 #b溢出 触发，打出 #b",
+      "本回合每当 #y溢出 触发，打出 1 张 #y台风之牙 的复制。",
+      "本回合每当 #y溢出 触发，打出 #b",
       " 张 #y台风之牙 的复制。"
     ]
   },
   "sneckomod:TyphoonPlusPower": {
     "NAME": "台风之牙+",
     "DESCRIPTIONS": [
-      "本回合每当 #b溢出 触发，打出1张 #y台风之牙+ 的复制。",
-      "本回合每当 #b溢出 触发，打出 #b",
+      "本回合每当 #y溢出 触发，打出 1 张 #y台风之牙+ 的复制。",
+      "本回合每当 #y溢出 触发，打出 #b",
       " 张 #y台风之牙+ 的复制。"
     ]
   },
@@ -139,23 +139,23 @@
   "sneckomod:BigGunsStrengthPower": {
     "NAME": "枪火",
     "DESCRIPTIONS": [
-      "每当你打出一张费用3+的牌，获得 #b",
-      " 点 #y力量。",
-      " 点 #y力量。"
+      "每当你打出 1 张耗能3+的牌，获得 #b",
+      " 层 #y力量。",
+      " 层 #y力量。"
     ]
   },
-      "sneckomod:BigGunsBlockPower": {
-        "NAME": "掩护",
-        "DESCRIPTIONS": [
-          "每当你打出一张费用3+的牌，获得 #b",
-          " 点 #y格挡 。",
-          " 点 #y格挡 。"
-        ]
-      },
+  "sneckomod:BigGunsBlockPower": {
+    "NAME": "掩护",
+    "DESCRIPTIONS": [
+      "每当你打出一张费用3+的牌，获得 #b",
+      " 点 #y格挡 。",
+      " 点 #y格挡 。"
+      ]
+  },
   "sneckomod:AceOfWandsPower": {
     "NAME": "五角星皇后",
     "DESCRIPTIONS": [
-      "当你给予敌人1种负面效果，获得 #b",
+      "当你给予敌人 1 种负面效果，获得 #b",
       " 点 #y格挡 。",
       " 点 #y格挡 。"
     ]
@@ -163,7 +163,7 @@
   "sneckomod:LacerateDebuff": {
     "NAME": "割裂",
     "DESCRIPTIONS": [
-      "在本回合，当你给予这个敌人1种负面效果，额外给予其 #b",
+      "在本回合，当你给予这个敌人 1 种负面效果，额外给予其 #b",
       " 层 #y剧毒 。",
       " 层 #y剧毒 。"
     ]
@@ -187,8 +187,8 @@
         "sneckomod:VenomDebuff": {
           "NAME": "剧毒",
           "DESCRIPTIONS": [
-            "获得 #y非剧毒 负面效果时，失去 #b",
-            " 生命。"
+            "获得非 #y剧毒 负面效果时，失去 #b",
+            " 点生命。"
           ]
         }
       }
