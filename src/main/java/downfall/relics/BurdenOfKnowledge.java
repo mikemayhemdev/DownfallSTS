@@ -1,6 +1,7 @@
 package downfall.relics;
 
 import basemod.abstracts.CustomRelic;
+import champ.relics.Barbells;
 import champ.relics.PowerArmor;
 import collector.CollectorCollection;
 import com.badlogic.gdx.graphics.Texture;
@@ -18,13 +19,13 @@ import java.util.function.Predicate;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.Enchiridion;
+import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.actions.WaitForEscapeAction;
 import downfall.downfallMod;
 import gremlin.characters.GremlinCharacter;
+import hermit.relics.Horseshoe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,12 @@ public class BurdenOfKnowledge extends CustomRelic {
     }
 
     public void onEquip() {
+
+        downfallMod.removeAnyRelicFromPools(ToxicEgg2.ID);
+        downfallMod.removeAnyRelicFromPools(FrozenEgg2.ID);
+        downfallMod.removeAnyRelicFromPools(MoltenEgg2.ID);
+        downfallMod.removeAnyRelicFromPools(Barbells.ID);
+
         AbstractDungeon.player.decreaseMaxHealth(20);
         List<String> upgradedCards = new ArrayList();
 
