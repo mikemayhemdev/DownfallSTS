@@ -25,7 +25,9 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.actions.WaitForEscapeAction;
 import downfall.downfallMod;
 import gremlin.characters.GremlinCharacter;
+import guardian.relics.StasisUpgradeRelic;
 import hermit.relics.Horseshoe;
+import sneckomod.relics.UnknownEgg;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +52,8 @@ public class BurdenOfKnowledge extends CustomRelic {
         downfallMod.removeAnyRelicFromPools(ToxicEgg2.ID);
         downfallMod.removeAnyRelicFromPools(FrozenEgg2.ID);
         downfallMod.removeAnyRelicFromPools(MoltenEgg2.ID);
+        downfallMod.removeAnyRelicFromPools(UnknownEgg.ID);
+        downfallMod.removeAnyRelicFromPools(StasisUpgradeRelic.ID);
         downfallMod.removeAnyRelicFromPools(Barbells.ID);
 
         AbstractDungeon.player.decreaseMaxHealth(20);
