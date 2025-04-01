@@ -165,7 +165,7 @@
   "Gremlin:GremlinArms": {
     "NAME": "地精武器",
     "DESCRIPTION": "触发 gremlin:领队 地精额外效果。 NL 选择 gremlin:切换 地精。",
-    "UPGRADE_DESCRIPTION": "触发 gremlin:领队 地精额外效果2次。 NL 选择 gremlin:切换 地精。"
+    "UPGRADE_DESCRIPTION": "触发 gremlin:领队 地精额外效果 2 次。 NL 选择 gremlin:切换 地精。"
 
   },
   "Gremlin:GremlinMeal": {
