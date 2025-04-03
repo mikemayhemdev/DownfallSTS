@@ -27,6 +27,7 @@ public class LastStrike extends AbstractSneckoCard {
     // Constants
     private static final int BASE_DAMAGE = 9;
     private static final int UPGRADE_DAMAGE = 3;
+    private static int SOFTLOCK = 0;
 
     // Strike tracking
     private HashSet<String> uniqueStrikeIDs;
@@ -125,6 +126,7 @@ public class LastStrike extends AbstractSneckoCard {
             }
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
                 cardsToReward.add(newCard.makeCopy());
             }
         }
@@ -135,9 +137,13 @@ public class LastStrike extends AbstractSneckoCard {
 
     private boolean cardListDuplicate(ArrayList<AbstractCard> cardsToReward, AbstractCard newCard) {
         for (AbstractCard card : cardsToReward) {
-            if (card.cardID.equals(newCard.cardID)) {
+            if (card.cardID.equals(newCard.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
+        }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
         }
         return false;
     }

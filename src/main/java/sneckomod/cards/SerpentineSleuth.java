@@ -20,6 +20,7 @@ public class SerpentineSleuth extends AbstractSneckoCard implements OnObtainCard
     public final static String ID = makeID("SerpentineSleuth");
 
     //stupid intellij stuff POWER, SELF, RARE
+    private static int SOFTLOCK = 0;
 
     public SerpentineSleuth() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
@@ -30,10 +31,15 @@ public class SerpentineSleuth extends AbstractSneckoCard implements OnObtainCard
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
         }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
+        }
+        SOFTLOCK = 0;
         return false;
     }
 

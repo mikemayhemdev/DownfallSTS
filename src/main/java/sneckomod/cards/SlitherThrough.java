@@ -24,6 +24,7 @@ public class SlitherThrough extends AbstractSneckoCard {
     private static final int DAMAGE = 14;
     private static final int UPG_DAMAGE = 4;
     private static final int MAGIC = 1;
+    private static int SOFTLOCK = 0;
 
     public SlitherThrough() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -34,9 +35,13 @@ public class SlitherThrough extends AbstractSneckoCard {
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
+        }
+        if (SOFTLOCK >= 20) {
+            System.out.println("SOFTLOCK DETECTED!!!");
         }
         return false;
     }
@@ -68,6 +73,7 @@ public class SlitherThrough extends AbstractSneckoCard {
             }
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
                 cardsToReward.add(newCard.makeCopy());
             }
         }

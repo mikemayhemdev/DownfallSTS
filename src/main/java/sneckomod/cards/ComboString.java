@@ -25,6 +25,8 @@ public class ComboString extends AbstractSneckoCard {
     private static final int UPGRADE_DAMAGE = 2;
     private static final int COST = 1;
 
+    private static int SOFTLOCK = 0;
+
     public ComboString() {
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
@@ -33,9 +35,13 @@ public class ComboString extends AbstractSneckoCard {
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
+        }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
         }
         return false;
     }

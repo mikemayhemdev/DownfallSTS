@@ -38,6 +38,7 @@ public class MakeshiftBlade extends AbstractSneckoCard {
     private static final int COST = 1;
     private static final int MAGIC = 3; // Initial debuff requirement
     private static final int UPGRADE_MAGIC = -1; // Reduces debuff requirement by 1
+    private static int SOFTLOCK = 0;
 
 
     public MakeshiftBlade() {
@@ -51,10 +52,14 @@ public class MakeshiftBlade extends AbstractSneckoCard {
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         System.out.println("DEBUG: Checking for duplicate: " + card.name);
         for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 System.out.println("DEBUG: Duplicate detected: " + card.name);
                 return true;
             }
+        }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
         }
         System.out.println("DEBUG: No Duplicate detected: " + card.name);
         return false;
@@ -82,6 +87,7 @@ public class MakeshiftBlade extends AbstractSneckoCard {
 
             System.out.println("DEBUG: Card generated: " + newCard.name);
             if (!cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
                 cardsToReward.add(newCard.makeCopy());
                 System.out.println("DEBUG: Card added: " + newCard.name);
             }

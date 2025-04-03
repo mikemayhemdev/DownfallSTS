@@ -23,6 +23,7 @@ public class SerpentMind extends AbstractSneckoCard implements OnObtainCard {
     //stupid intellij stuff POWER, SELF, RARE
 
     private static final int MAGIC = 1;
+    private static int SOFTLOCK = 0;
 
     public SerpentMind() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
@@ -34,9 +35,13 @@ public class SerpentMind extends AbstractSneckoCard implements OnObtainCard {
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
+        }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
         }
         return false;
     }
@@ -56,6 +61,7 @@ public class SerpentMind extends AbstractSneckoCard implements OnObtainCard {
             }
 
             if (newCard != null && !cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
                 AbstractCard cardCopy = newCard.makeCopy();
                 cardsToReward.add(cardCopy);
             }

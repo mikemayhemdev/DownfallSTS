@@ -329,7 +329,7 @@ public class SneckoMod implements
         if (simplePossibilities == null) {
             simplePossibilities = new ArrayList<>();
             for (AbstractCard q : CardLibrary.getAllCards()) {
-                if (!q.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !q.hasTag(AbstractCard.CardTags.STARTER_DEFEND) &&
+                if (!q.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !q.hasTag(AbstractCard.CardTags.STARTER_DEFEND) && !q.hasTag(BANNEDFORSNECKO) &&
                         q.color != AbstractCard.CardColor.CURSE && q.type != CURSE && q.type != STATUS &&
                         !q.hasTag(AbstractCard.CardTags.HEALING) && q.rarity != AbstractCard.CardRarity.SPECIAL) {
                     simplePossibilities.add(q.cardID);
@@ -353,6 +353,10 @@ public class SneckoMod implements
             possList.removeIf(c -> !validColors.contains(c.color));
 
         possList.removeIf(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE);
+
+        if (possList.size() == 0) {
+            possList.add(new Madness());
+        }
 
         return possList.get(AbstractDungeon.miscRng.random(possList.size() - 1)).makeCopy();
     }
@@ -541,6 +545,10 @@ public class SneckoMod implements
                 !c.cardID.equals(expansioncontent.cards.YouAreMine.ID) &&
                 !c.cardID.equals(expansioncontent.cards.FaceSlap.ID)));
 
+        if (possList.size() == 0) {
+            possList.add(new Madness());
+        }
+
         return possList.get(AbstractDungeon.miscRng.random(possList.size() - 1)).makeCopy();
     }
 
@@ -560,6 +568,10 @@ public class SneckoMod implements
 
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
+        }
+
+        if (possList.size() == 0) {
+            possList.add(new Madness());
         }
 
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();

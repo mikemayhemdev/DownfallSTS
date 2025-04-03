@@ -19,6 +19,7 @@ public class SerpentsNest extends AbstractSneckoCard implements OnObtainCard {
 
     public final static String ID = makeID("SerpentsNest");
 
+    private static int SOFTLOCK = 0;
     //stupid intellij stuff POWER, SELF, RARE
 
     public SerpentsNest() {
@@ -30,9 +31,13 @@ public class SerpentsNest extends AbstractSneckoCard implements OnObtainCard {
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
+        }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
         }
         return false;
     }
@@ -52,6 +57,7 @@ public class SerpentsNest extends AbstractSneckoCard implements OnObtainCard {
             }
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
                 cardsToReward.add(newCard.makeCopy());
             }
         }

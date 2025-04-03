@@ -27,6 +27,7 @@ public class BeyondArmor extends AbstractSneckoCard {
     private static final int BLOCK = 5;
     private static final int UPG_BLOCK = 3;
     private static final int MAGIC = 2;
+    private static int SOFTLOCK = 0;
 
     public BeyondArmor() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
@@ -37,9 +38,13 @@ public class BeyondArmor extends AbstractSneckoCard {
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
+        }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
         }
         return false;
     }
@@ -78,6 +83,7 @@ public class BeyondArmor extends AbstractSneckoCard {
             }
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
                 cardsToReward.add(newCard.makeCopy()); // Use makeCopy() to ensure a new instance
             }
         }

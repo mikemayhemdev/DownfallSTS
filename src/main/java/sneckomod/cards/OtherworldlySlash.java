@@ -22,6 +22,7 @@ public class OtherworldlySlash extends AbstractSneckoCard implements OnObtainCar
 
     private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 2;
+    private static int SOFTLOCK = 0;
 
     public OtherworldlySlash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
@@ -31,11 +32,15 @@ public class OtherworldlySlash extends AbstractSneckoCard implements OnObtainCar
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
         }
-        return false;
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
+        }
+            return false;
     }
 
     @Override
@@ -72,6 +77,7 @@ public class OtherworldlySlash extends AbstractSneckoCard implements OnObtainCar
             }
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
                 cardsToReward.add(newCard.makeCopy());
             }
         }

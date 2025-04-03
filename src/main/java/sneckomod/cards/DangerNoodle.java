@@ -25,6 +25,7 @@ public class DangerNoodle extends AbstractSneckoCard implements OnObtainCard {
 
     private static final int DAMAGE = 14;
     private static final int UPG_DAMAGE = 4;
+    private static int SOFTLOCK = 0;
 
     public DangerNoodle() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
@@ -34,9 +35,13 @@ public class DangerNoodle extends AbstractSneckoCard implements OnObtainCard {
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
+        }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
         }
         return false;
     }
@@ -66,6 +71,7 @@ public class DangerNoodle extends AbstractSneckoCard implements OnObtainCard {
             }
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
                 cardsToReward.add(newCard.makeCopy());
             }
         }

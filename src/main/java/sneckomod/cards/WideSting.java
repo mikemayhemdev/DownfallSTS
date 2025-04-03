@@ -26,6 +26,8 @@ public class WideSting extends AbstractSneckoCard {
     private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 3;
 
+    private static int SOFTLOCK = 0;
+
     public WideSting() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
         baseDamage = DAMAGE;
@@ -34,9 +36,13 @@ public class WideSting extends AbstractSneckoCard {
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
+        }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
         }
         return false;
     }
@@ -67,6 +73,7 @@ public class WideSting extends AbstractSneckoCard {
             }
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
                 cardsToReward.add(newCard.makeCopy()); // Use makeCopy() to ensure a new instance
             }
         }

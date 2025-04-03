@@ -24,6 +24,8 @@ public class DefensiveFlair extends AbstractSneckoCard {
 
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
+    private static int SOFTLOCK = 0;
+
 
     public DefensiveFlair() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -34,9 +36,13 @@ public class DefensiveFlair extends AbstractSneckoCard {
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
+        }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
         }
         return false;
     }
@@ -64,6 +70,7 @@ public class DefensiveFlair extends AbstractSneckoCard {
             }
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
                 cardsToReward.add(newCard.makeCopy());
             }
         }

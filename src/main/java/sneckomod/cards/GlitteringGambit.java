@@ -14,6 +14,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
     public final static String ID = makeID("GlitteringGambit");
 
     private static final int MAGIC = 150;
+    private static int SOFTLOCK = 0;
 
     public GlitteringGambit() {
         super(ID, -2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
@@ -27,9 +28,13 @@ public class GlitteringGambit extends AbstractSneckoCard {
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         for (AbstractCard existingCard : cardsList) {
-            if (existingCard.cardID.equals(card.cardID)) {
+            if (existingCard.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
+        }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
         }
         return false;
     }
@@ -51,6 +56,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
         while (cardsToReward.size() < 3) {
             AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == rarity);
             if (newCard != null && !cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
                 AbstractCard cardCopy = newCard.makeCopy();
                 cardCopy.upgrade();
                 cardsToReward.add(cardCopy);

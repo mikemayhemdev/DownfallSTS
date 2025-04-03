@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class ToothAndClaw extends AbstractSneckoCard {
 
     public final static String ID = makeID("ToothAndClaw");
-
+    private static int SOFTLOCK = 0;
     // this card exists
 
     public ToothAndClaw() {
@@ -34,9 +34,13 @@ public class ToothAndClaw extends AbstractSneckoCard {
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
         for (AbstractCard alreadyHave : cardsList) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
                 return true;
             }
+        }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
         }
         return false;
     }
@@ -64,6 +68,7 @@ public class ToothAndClaw extends AbstractSneckoCard {
             }
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
                 cardsToReward.add(newCard.makeCopy());
             }
         }
