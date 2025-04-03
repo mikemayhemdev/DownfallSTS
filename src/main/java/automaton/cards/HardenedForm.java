@@ -13,8 +13,8 @@ public class HardenedForm extends AbstractBronzeCard {
 
     //stupid intellij stuff power, self, rare
 
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 3;
+    private static final int UPG_MAGIC = 1;
 
     public HardenedForm() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
