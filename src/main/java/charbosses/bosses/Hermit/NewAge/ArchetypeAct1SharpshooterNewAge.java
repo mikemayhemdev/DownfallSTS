@@ -115,6 +115,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
         } else {
             switch (turn) {
                 case 0:
+                    AbstractCharBoss.boss.getRelic(CBR_Abacus.ID).onTrigger();
                     addToList(cardsList, new EnHeadshot());
                     addToList(cardsList, new EnDefendHermit());
                     addToList(cardsList, new EnInjury());
