@@ -1188,13 +1188,10 @@ public void damage(final DamageInfo info) {
             BossMechanicDisplayPanel.resetBossPanel();
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
+            //CharBoss Merchant is a boss!
             if (!(this instanceof CharBossMerchant)) {
                 if (hasPower(MinionPower.POWER_ID)) {
-                    if (Settings.FAST_MODE) {
-                        this.deathTimer += 0.7F;
-                    } else {
-                        ++this.deathTimer;
-                    }
+                    onBossVictoryLogic();
                 } else {
                     //SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
                     onBossVictoryLogic();
