@@ -278,8 +278,7 @@
   },
   "Guardian:ExploitGems": {
     "NAME": "寶石利用",
-    "DESCRIPTION": "抽1張牌。 guardianmod:消散 。 NL guardianmod:滴答 ：打出這張牌。",
-    "UPGRADE_DESCRIPTION": "獲得 [E] 。 NL 抽1張牌。"
+    "DESCRIPTION": "抽一張牌。"
   },
   "Guardian:RefractedBeam": {
     "NAME": "折射射線",

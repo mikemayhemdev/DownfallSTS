@@ -287,8 +287,7 @@
   },
   "Guardian:ExploitGems": {
     "NAME": "Exploit Gems",
-    "DESCRIPTION": "Draw a card. guardianmod:Volatile. NL guardianmod:Tick: Play this card.",
-    "UPGRADE_DESCRIPTION": "Gain [E]. NL Draw a card."
+    "DESCRIPTION": "Draw a card."
   },
   "Guardian:RefractedBeam": {
     "NAME": "Refracted Beam",
