@@ -42,7 +42,7 @@ public class GemFire extends AbstractGuardianCard {
         this.exhaust = true;
         this.baseDamage = DAMAGE;
         this.socketCount = SOCKETS;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, GuardianMod.makeBetaCardPath("GemFire.png"));
