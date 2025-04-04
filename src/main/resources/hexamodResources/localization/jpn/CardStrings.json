@@ -105,8 +105,14 @@
   "hexamod:Float": {
     "NAME": "浮遊",
     "DESCRIPTION": "カードを 1 枚引く。 NL hexamod:前進",
-    "UPGRADE_DESCRIPTION": "カードを 1 枚引く。 NL hexamod:後退 または hexamod:前進 を選択し行う。",
+    "UPGRADE_DESCRIPTION": "カードを 1 枚引く。 NL  hexamod:後退 または hexamod:前進 を選択し行う。",
     "EXTENDED_DESCRIPTION": ["hexamod:前進","hexamod:後退", "留まる"]
+  },
+  "hexamod:MatchstickFloat": {
+    "NAME": "Sneaky Teakwood Match",
+    "DESCRIPTION": "このカードは実行中に遭遇するべきではありません。NL これを読んでいるなら、おそらくバグに遭遇しています。NL これを mod 開発者に報告してください。",
+    "UPGRADE_DESCRIPTION": "このカードは実行中に遭遇するべきではありません。NL これを読んでいるなら、おそらくバグに遭遇しています。 NL これを mod 開発者に報告してください。",
+    "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "何もしない。"]
   },
   "hexamod:Floatwork": {
     "NAME": "浮遊移動",
@@ -541,9 +547,9 @@
       ]
       },
   "hexamod:HexaLevel": {
-    "NAME": "Infernal Form",
-    "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! hexamod:Intensity. NL At the start of your turn, gain !M! hexamod:Intensity."
+    "NAME": "地獄化",
+    "DESCRIPTION": "ターン開始時、 hexamod:火力 !M! を得る。",
+    "UPGRADE_DESCRIPTION": "hexamod:火力 !M! を得る。 NL ターン開始時、 !M! hexamod:火力 !M! を得る。"
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",
