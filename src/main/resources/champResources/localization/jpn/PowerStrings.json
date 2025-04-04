@@ -236,6 +236,13 @@
       "@敗北??@ NL @認めんぞ!!@"
     ]
   },
+  "champ:HonePower": {
+    "NAME": "Honed Blade",
+    "DESCRIPTIONS": [
+      " #y\"ストライク\" カードは #b",
+      " ダメージ増加する。"
+    ]
+  },
   "champ:DoubleStyleThisTurnPower": {
     "NAME": "チェインラッシュ",
     "DESCRIPTIONS": [
