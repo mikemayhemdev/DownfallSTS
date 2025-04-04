@@ -1,20 +1,37 @@
 [
   {
-    "PROPER_NAME": "蛇避け",
+    "PROPER_NAME": "Snekproof",
     "NAMES": [
-      "snekproof",
-      "蛇避け"
+      "snekproof"
     ],
-    "DESCRIPTION": "蛇避けを持つカードは #y混乱 や #y泥まみれ の影響を受けない。"
+    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+  },
+  {
+    "PROPER_NAME": "Suit",
+    "NAMES": [
+      "suit",
+      "suits"
+    ],
+    "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+  },
+  {
+    "PROPER_NAME": "オーバーフロー",
+    "NAMES": [
+      "Overflow",
+      "overflow",
+      "オーバーフロー"
+    ],
+    "DESCRIPTION": "オーバーフロー は、手札に #b5 以上カードがある場合に発動する。"
   },
   {
     "PROPER_NAME": "泥まみれ",
     "NAMES": [
       "muddle",
       "muddled",
+      "muddles",
       "泥まみれ"
     ],
-    "DESCRIPTION": "このターンの間、カードを泥まみれにしてコストをランダムで #b0 ～ #b3 に変化させる。"
+    "DESCRIPTION": "カードを泥まみれにすると、そのターンのコストがランダムに #b0 から #b3 の間で変更される"
   },
   {
     "PROPER_NAME": "オフクラス",
@@ -22,29 +39,30 @@
       "offclass",
       "オフクラス"
     ],
-    "DESCRIPTION": "オフクラス カードは自分以外のキャラクターのカード。 (無色、呪い、状態異常カードを含む)"
+    "DESCRIPTION": "オフクラスカードとは、自分のクラス以外のクラスから取得可能なカード。（無色カード、呪い、状態異常を含む）"
   },
   {
-    "PROPER_NAME": "識別",
+    "PROPER_NAME": "ギフト",
     "NAMES": [
-      "identify",
-      "識別"
+      "gift",
+      "ギフト"
     ],
-    "DESCRIPTION": " #y未識別 のカードを、永久にランダムな現在のカードと交換する。"
+    "DESCRIPTION": "このカードを取得すると、次のカードタイプのカード報酬を獲得。"
   },
   {
-    "PROPER_NAME": "抹消",
+    "PROPER_NAME": "Identify",
     "NAMES": [
-      "抹消"
+      "identify"
     ],
-    "DESCRIPTION": "使用後デッキから削除される。"
+    "DESCRIPTION": "Replace an #yUnidentified card with its current random card permanently. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
   },
-    {
-    "PROPER_NAME": "変身",
+  {
+    "PROPER_NAME": "蛇毒",
     "NAMES": [
-      "変身"
+      "venom",
+      "蛇毒"
     ],
-    "DESCRIPTION": "カードやポーションを別の物に変化させる。"
+    "DESCRIPTION": " #y蛇毒 を持つ敵は、 #y蛇毒 以外のデバフを獲得するたびに HP を失う。"
   },
   {
     "PROPER_NAME": "ラッキー",
@@ -52,6 +70,6 @@
       "lucky",
       "ラッキー"
     ],
-    "DESCRIPTION": "ランダムに値が決まるカードは可能な限り最大の値が使われるようになる。( 泥まみれ には影響しない。)"
+    "DESCRIPTION": "オーバーフローは、手札のサイズに関係なく、常にこのターン発動する。"
   }
 ]
