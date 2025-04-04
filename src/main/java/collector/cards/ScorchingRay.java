@@ -15,14 +15,19 @@ import static collector.util.Wiz.atb;
 public class ScorchingRay extends AbstractCollectorCard {
     public final static String ID = makeID(ScorchingRay.class.getSimpleName());
     // intellij stuff attack, enemy, common, 4, 1, , , 4, 
+    int cool = 0;
 
     public ScorchingRay() {
         super(ID, -1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 8;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int cool = 0 + AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
+        cool = 0;
+        if (AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
+            cool = AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
+        }
         atb(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect; i++) {
                 atb(new ScorchingRayAction(this, cool));
