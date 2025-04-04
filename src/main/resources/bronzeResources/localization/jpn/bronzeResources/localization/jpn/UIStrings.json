@@ -1,0 +1,56 @@
+{
+  "bronze:SpecificCardReward": {
+    "TEXT": [
+      "デッキに ",
+      " を追加する",
+      "カードを1枚選択"
+    ]
+  },
+  "bronze:UnplayableMod": {
+    "TEXT": [
+      "使用不可 NL ",
+      "ERR_NULL_PTR",
+      "これはヌル・ポインターの為だけに保持される"
+    ]
+  },
+  "bronze:EncodeAndShuffleMod": {
+    "TEXT": [
+      " NL bronze:エンコード した後このコピーを捨て札に加える。"
+    ]
+  },
+  "bronze:DoublePlayModifier": {
+    "TEXT": [
+      " NL もう一度プレイされる。"
+    ]
+  },
+  "bronze:MiscStrings": {
+    "TEXT": [
+      "手札に戻すカードを1枚選ぶ。それは 保留 を得る。",
+      " - #yカルティストストライク のダメージを永続的に #b",
+      " 増加させる。",
+      "ERR: シークエンスが見つかりません。",
+      " - #y無限ループ のコピーを得る。それは追加で #b",
+      " ダメージを与える。",
+      " を変異させる。",
+      " をエンコードする。",
+      ""
+    ]
+  },
+  "bronze:AutoTextHelper": {
+    "TEXT": [
+      " NL bronze:コンパイル",
+      "bronze:コンパイル",
+      " NL bronze:エンコード",
+      "bronze:エンコード NL ",
+      " は bronze:エンコード 済み。",
+      "LOCALIZATION NOTE: The text above must be equal to the start of Replicate's extra description line.",
+      "ERR - NO_DUPE_FULL_RELEASES"
+    ]
+  },
+  "bronze:CompileDisplayPanel": {
+    "TEXT": [
+      "コンパイル完了時:",
+      "bronze:コンパイル"
+    ]
+  }
+}
