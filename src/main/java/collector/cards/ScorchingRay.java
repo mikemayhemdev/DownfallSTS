@@ -22,9 +22,10 @@ public class ScorchingRay extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int cool = 0 + AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
         atb(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect; i++) {
-                atb(new ScorchingRayAction(this, AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount));
+                atb(new ScorchingRayAction(this, cool));
             }
             return true;
         }));
