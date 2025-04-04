@@ -68,7 +68,7 @@
   },
   "Slimebound:FirmFortitude": {
     "NAME": "液状化",
-    "DESCRIPTION": "筋力 が マイナス以下の場合 使用不可 NL 筋力 2 を失う。 NL slimeboundmod:効力 !M! を得る。"
+    "DESCRIPTION": " 筋力 2 を失う。 NL slimeboundmod:効力 !M! を得る。"
   },
   "Slimebound:FlameTackle": {
     "NAME": "フレイムタックル",
@@ -76,7 +76,7 @@
   },
   "Slimebound:FormOfPuddle": {
     "NAME": "形を変える",
-    "DESCRIPTION": " 無形 1 を得る。 NL 廃棄"
+    "DESCRIPTION": "エセリアル NL 無形 1 を得る。 NL 廃棄"
   },
   "Slimebound:ForwardTackle": {
     "NAME": "前進タックル",
@@ -183,13 +183,13 @@
   },
   "Slimebound:OozeBath": {
     "NAME": "ヘドロ風呂",
-    "DESCRIPTION": "対象の各ターン開始時に slimeboundmod:汚泥 !M! を与える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "3体の敵に slimeboundmod:汚泥 を与える。 NL 廃棄"
+    "DESCRIPTION": "対象の各ターン開始時に slimeboundmod:汚泥 !slime! を与える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "敵の slimeboundmod:汚泥 を 3 倍にする。 NL 廃棄"
   },
   "Slimebound:Overexert": {
     "NAME": "過剰行使",
-    "DESCRIPTION": " slimeboundmod:効力 4 を得る。 NL !M! ターン後、全てのスライムを slimeboundmod:吸収 する。",
-    "UPGRADE_DESCRIPTION": " slimeboundmod:効力 4 を得る。 NL slimeboundmod:命令 を2回行う。 NL !M! ターン後、全てのスライムを slimeboundmod:吸収 する。"
+    "DESCRIPTION": " slimeboundmod:効力 5 を得る。 NL !M! ターン後、全てのスライムを slimeboundmod:吸収 する。",
+    "UPGRADE_DESCRIPTION": " slimeboundmod:効力 5 を得る。 NL slimeboundmod:命令 を2回行う。 NL !M! ターン後、全てのスライムを slimeboundmod:吸収 する。"
   },
   "Slimebound:Prepare": {
     "NAME": "準備行動",
@@ -206,8 +206,8 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "押し潰せ",
-    "DESCRIPTION": " !D! ダメージを与える。 slimeboundmod:泥食い - slimeboundmod:命令 する。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 slimeboundmod:泥食い - 2回 slimeboundmod:命令 する。"
+    "DESCRIPTION": " !D! ダメージを与える。  slimeboundmod:命令 する。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 2回 slimeboundmod:命令 する。"
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "主人を守れ",
@@ -284,7 +284,7 @@
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "スライム大騒動",
-    "DESCRIPTION": "スライムの数だけ山札の一番上のカードをプレイする。 NL 廃棄"
+    "DESCRIPTION": "産み出したスライムの数だけ山札の一番上のカードをプレイする。 NL 廃棄"
   },
   "Slimebound:SlimeCrush": {
     "NAME": "スライムクラッシュ!!!",
@@ -313,17 +313,17 @@
   },
   "Slimebound:Split": {
     "NAME": "分裂",
-    "DESCRIPTION": "ランダムな スライム に slimeboundmod:分裂 する。"
+    "DESCRIPTION": "ランダムな スライム に slimeboundmod:分裂 する。 slimeboundmod:命令 する。"
   },
   "Slimebound:SplitAcid": {
     "NAME": "分裂：ゲリラ",
-    "DESCRIPTION": "slimeboundmod:ゲリラスライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:ゲリラスライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。 NL 廃棄"
+    "DESCRIPTION": "slimeboundmod:ゲリラスライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:ゲリラスライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。"
   },
   "Slimebound:SplitBruiser": {
     "NAME": "分裂：ブルーザー",
-    "DESCRIPTION": "slimeboundmod:ブルーザースライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:ブルーザースライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。 NL 廃棄"
+    "DESCRIPTION": "slimeboundmod:ブルーザースライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。 ",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:ブルーザースライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。"
   },
   "Slimebound:SplitGreed": {
     "NAME": "復活：グリード",
@@ -331,13 +331,13 @@
   },
   "Slimebound:SplitLeeching": {
     "NAME": "分裂：リーチング",
-    "DESCRIPTION": "slimeboundmod:リーチングスライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:リーチングスライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。 NL 廃棄"
+    "DESCRIPTION": "slimeboundmod:リーチングスライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:リーチングスライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。"
   },
   "Slimebound:SplitMire": {
     "NAME": "分裂：マイア",
-    "DESCRIPTION": "slimeboundmod:マイアスライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:マイアスライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。 NL 廃棄"
+    "DESCRIPTION": "slimeboundmod:マイアスライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。 ",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:マイアスライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。 "
   },
   "Slimebound:SplitScrap": {
     "NAME": "復活：スクラップ",
