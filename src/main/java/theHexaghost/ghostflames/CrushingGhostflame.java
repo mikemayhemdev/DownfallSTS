@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.AnimatedSlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 import downfall.util.TextureLoader;
+import gremlin.actions.PseudoDamageRandomEnemyAction;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
@@ -111,7 +112,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
                 } else {
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
                     if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                        addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                        AbstractDungeon.actionManager.addToTop(new PseudoDamageRandomEnemyAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
                         addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
                     }
                 }

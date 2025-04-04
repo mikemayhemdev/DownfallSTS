@@ -52,7 +52,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCar
                 selectionGroup.addToTop(card.makeCopy());
             }
         }
-        AbstractDungeon.gridSelectScreen.open(selectionGroup, 1, false, "Choose a class color for rewards.");
+        AbstractDungeon.gridSelectScreen.open(selectionGroup, 1, false, "");
     }
 
 
@@ -83,7 +83,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCar
             AbstractDungeon.getCurrRoom().rewards.add(new ColorfulRareReward(myColor));
         }
 
-        AbstractDungeon.combatRewardScreen.open("Rewards!");
+        AbstractDungeon.combatRewardScreen.open();
         AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
         (AbstractDungeon.getCurrRoom()).rewardPopOutTimer = 0.05F;
     }

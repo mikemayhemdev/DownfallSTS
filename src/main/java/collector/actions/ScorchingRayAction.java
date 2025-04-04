@@ -10,17 +10,22 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import gremlin.actions.PseudoDamageRandomEnemyAction;
+import gremlin.relics.FragmentationGrenade;
 
 import static collector.util.Wiz.att;
 
 public class ScorchingRayAction extends AbstractGameAction {
     private final AbstractCard card;
+    private static int stuff;
 
-    public ScorchingRayAction(AbstractCard card) {
+    public ScorchingRayAction(AbstractCard card, int cool) {
         this.card = card;
         this.actionType = ActionType.DAMAGE;
         this.startDuration = 0.1F;
         this.duration = this.startDuration;
+        stuff = cool;
     }
 
     public void update() {
@@ -29,7 +34,8 @@ public class ScorchingRayAction extends AbstractGameAction {
         if (q != null) {
             card.applyPowers();
             card.calculateCardDamage(q);
-            //att(new DamageAction(q, new DamageInfo(AbstractDungeon.player, card.damage, card.damageTypeForTurn), AttackEffect.NONE));
+            att(new PseudoDamageRandomEnemyAction(q, new DamageInfo(AbstractDungeon.player, card.damage + stuff, DamageInfo.DamageType.NORMAL), AttackEffect.FIRE));
+
             att(new VFXAction(new ColoredVerticalAttackEffect(q.hb.x + MathUtils.random(q.hb.width / 3, ((q.hb.width / 3) * 2)), q.hb.cY, true, new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1))));
         }
     }

@@ -35,7 +35,7 @@ public class SackOfGems extends CustomRelic {
             AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
         }
         AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
-        AbstractDungeon.combatRewardScreen.open("Shiny...");
+        AbstractDungeon.combatRewardScreen.open();
         AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
 
     }
