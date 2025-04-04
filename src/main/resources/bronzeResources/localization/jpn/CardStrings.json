@@ -334,8 +334,7 @@
   },
   "bronze:ItsAFeature": {
     "NAME": "機能の一つ",
-    "DESCRIPTION": "呪い または 状態異常 カードを引いた時、一時的な 筋力 と 敏捷性 を1得る。",
-    "UPGRADE_DESCRIPTION": "天賦 NL 呪い または 状態異常 カードを引いた時、一時的な 筋力 と 敏捷性 を1得る。"
+    "DESCRIPTION": " 状態異常 カードを引くか 廃棄 するたびに、!M! ブロックを得る。"
   },
   "bronze:Library": {
     "NAME": "ライブラリ",
@@ -461,7 +460,11 @@
   },
   "bronze:ShipIt": {
     "NAME": "出荷",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 全ての 状態異常 の数 * !M! の追加ダメージ。"
+    "DESCRIPTION": " !D! ダメージを与える。 NL 廃棄 した 状態異常 の数だけ繰り返す。",
+    "EXTENDED_DESCRIPTION": [
+    " !D! ダメージを与える。 NL 廃棄 した 状態異常 の数だけ繰り返す。 (",
+      ")."
+]
   },
   "bronze:SpaghettiCode": {
     "NAME": "スパゲティコード",
