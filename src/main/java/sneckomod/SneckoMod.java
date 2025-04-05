@@ -352,6 +352,8 @@ public class SneckoMod implements
         if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
             possList.removeIf(c -> !validColors.contains(c.color));
 
+        possList.removeIf(c -> c.color == AbstractDungeon.player.getCardColor());
+
         possList.removeIf(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE);
 
         if (possList.size() == 0) {
@@ -536,6 +538,7 @@ public class SneckoMod implements
 
 
         //PLEASE WORK
+        possList.removeIf(c -> c.color == AbstractDungeon.player.getCardColor());
         possList.removeIf(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE);
 
         possList.removeIf(c -> c.color == CardColorEnumPatch.CardColorPatch.BOSS && (
