@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import gremlin.actions.PseudoDamageRandomEnemyAction;
 import gremlin.relics.FragmentationGrenade;
@@ -34,6 +35,9 @@ public class ScorchingRayAction extends AbstractGameAction {
         if (q != null) {
             card.applyPowers();
             card.calculateCardDamage(q);
+            if (q.hasPower(VulnerablePower.POWER_ID)) {
+                stuff = (stuff + (stuff/2));
+            }
             att(new PseudoDamageRandomEnemyAction(q, new DamageInfo(AbstractDungeon.player, card.damage + stuff, DamageInfo.DamageType.NORMAL), AttackEffect.FIRE));
 
             att(new VFXAction(new ColoredVerticalAttackEffect(q.hb.x + MathUtils.random(q.hb.width / 3, ((q.hb.width / 3) * 2)), q.hb.cY, true, new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1))));

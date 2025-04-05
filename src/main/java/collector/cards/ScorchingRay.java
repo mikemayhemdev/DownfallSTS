@@ -29,9 +29,6 @@ public class ScorchingRay extends AbstractCollectorCard {
         if (AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
             cool = AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
         }
-        if (m.hasPower(VulnerablePower.POWER_ID)) {
-            cool = (cool + (cool/2));
-        }
         atb(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect; i++) {
                 atb(new ScorchingRayAction(this, cool));
