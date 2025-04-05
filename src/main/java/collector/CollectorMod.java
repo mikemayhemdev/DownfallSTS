@@ -186,25 +186,25 @@ public class CollectorMod implements
     public void receiveSetUnlocks() {
 
         downfallMod.registerUnlockSuite(
-                BrainDrain.ID,
+                Forgery.ID,
                 DarkApotheosis.ID,
+                ShadowDaggers.ID,
+
+                CursedWail.ID,
+                InflictAgony.ID,
+                Karma.ID,
+
                 GreenpyreLocus.ID,
-
                 Omen.ID,
-                RotwoodKindling.ID,
-                BlackBindings.ID,
-
-                ReceiveTribute.ID,
                 DoubleTrouble.ID,
-                Extricate.ID,
 
-                JadeRing.ID,
+                Suffering.ID,
                 ThimbleHelm.ID,
-                BlockedChakra.ID,
+                MiniCurse.ID,
 
+                StashAway.ID,
                 ForbiddenFruit.ID,
-                Incense.ID,
-                RoughDiamond.ID,
+                FingerOfDeath.ID,
 
                 CollectorChar.Enums.THE_COLLECTOR
         );
