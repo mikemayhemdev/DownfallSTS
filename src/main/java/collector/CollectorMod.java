@@ -199,7 +199,7 @@ public class CollectorMod implements
                 DoubleTrouble.ID,
 
                 Suffering.ID,
-                ThimbleHelm.ID,
+                JadeRing.ID,
                 MiniCurse.ID,
 
                 StashAway.ID,
