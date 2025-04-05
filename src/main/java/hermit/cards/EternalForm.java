@@ -1,5 +1,6 @@
 package hermit.cards;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -35,6 +36,7 @@ public class EternalForm extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = 1;
         this.isEthereal = true;
         loadJokeCardImage(this, "eternal_form.png");
+        tags.add(BaseModCardTags.FORM);
     }
 
     @Override
