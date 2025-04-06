@@ -43,8 +43,8 @@
   },
   "Guardian:DonusPower": {
     "NAME": "オーバーロード",
-    "DESCRIPTION": "カードを !M! 枚引く。 NL 次のターン、ドロー枚数が 2 減る。",
-    "UPGRADE_DESCRIPTION": "カードを !M! 枚引く。 NL 次のターン、ドロー枚数が 2 減る。 NL 自分のデバフの数値を 1 減らす。"
+    "DESCRIPTION": "カードを !M! 枚引く。 NL 自分のデバフの数値を 1 減らす。",
+    "UPGRADE_DESCRIPTION": "カードを !M! 枚引く。 NL 自分のデバフの数値を 1 減らす。"
   },
   "Guardian:DecasProtection": {
     "NAME": "エンシェントパワー",
