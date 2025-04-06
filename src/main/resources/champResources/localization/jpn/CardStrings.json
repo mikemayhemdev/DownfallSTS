@@ -224,7 +224,7 @@
     ]
   },
   "champ:VampiricStrike": {
-    "NAME": "クラバー",
+    "NAME": "クラバーストライク",
     "DESCRIPTION": " !D! ダメージを与える。 NL 防御されなかったダメージ分のブロックを得る。"
   },
   "champ:AdrenalArmor": {
@@ -245,7 +245,7 @@
   },
   "champ:Encircle": {
     "NAME": "包囲",
-    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 攻撃が当たった敵の数だけ * champ:スキルボーナス を得る。"
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 攻撃が当たった敵の数だけカードを !M! 枚引く。"
   },
   "champ:LastStand": {
     "NAME": "ラストスタンド",
@@ -334,20 +334,20 @@
   },
   "champ:BerserkerStyle": {
     "NAME": "狂化の構え",
-    "DESCRIPTION": " \"ストライク\" カードのダメージが !M! 増加する。"
+    "DESCRIPTION": " 戦闘中、全ての「ストライク」カードのダメージが !M! 増加する。"
   },
   "champ:Riposte": {
-    "NAME": "応酬",
+    "NAME": "リポストストライク",
     "DESCRIPTION": "エセリアル NL !D! ダメージを与える。 NL 廃棄"
   },
   "champ:Endure": {
     "NAME": "耐える",
-    "DESCRIPTION": " champ:守護 のスタンスに入る。 NL  !B! ブロックを得る。 NL このカードは *敏捷性 ではなく *筋力 の影響を受ける。",
-    "UPGRADE_DESCRIPTION": " champ:守護 のスタンスに入る。 NL  !B! ブロックを得る。 NL このカードは *筋力 の影響も受ける。"
+    "DESCRIPTION": " champ:守護 のスタンスに入る。 NL  !B! ブロックを得る。 NL このカードは *筋力 の影響を受ける。",
+    "UPGRADE_DESCRIPTION": " champ:守護 のスタンスに入る。 NL  !B! ブロックを得る。 NL このカードは *筋力 の影響を受ける。"
   },
   "champ:PreemptiveStrike": {
     "NAME": "プリムストライク",
-    "DESCRIPTION": "全ての敵に champ:カウンター に等しいダメージ。 NL champ:カウンター を半分失う。",
+    "DESCRIPTION": "全ての敵に champ:カウンター に等しいダメージ。 NL champ:カウンター を半分失う。 NL *守護 champ:コンボ: カウンターを失わない。",
     "EXTENDED_DESCRIPTION": [
       " NL ( !D! ダメージ)",
       "今はこれを行えない"
@@ -383,8 +383,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "トリプルストライク",
-    "DESCRIPTION": " !D! ダメージを与える。 NL コストが0で * champ:スキルボーナス が付いた *ストライク を2枚手札に加える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL コストが0で * champ:スキルボーナス が付いた *ストライク+ を2枚手札に加える。 NL 廃棄"
+    "DESCRIPTION": " !D! ダメージを与える。 NL コストが0で * champ:スキルボーナス が付いた *ストライク を2枚手札に加える。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL コストが0で * champ:スキルボーナス が付いた *ストライク+ を2枚手札に加える。"
   },
   "champ:WindUp": {
     "NAME": "ワインドアップ",
