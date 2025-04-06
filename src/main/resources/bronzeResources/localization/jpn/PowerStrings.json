@@ -18,9 +18,8 @@
   "bronze:Feature": {
     "NAME": "機能の一つ",
     "DESCRIPTIONS": [
-      " #r呪い または #y状態異常 をドローした時、一時的な #y筋力 #b",
-      " と一時的な #y敏捷性 #b",
-      " を得る。"
+      " #y状態異常 をドローまた #y廃棄 した時、 #b ",
+      " #yブロック を得る。"
     ]
   },
   "bronze:InfiniteBeams": {

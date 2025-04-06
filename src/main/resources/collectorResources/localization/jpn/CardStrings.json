@@ -607,7 +607,7 @@
   },
   "collector:ShelledParasiteCard": {
     "NAME": "ヤドカリパラサイト",
-    "DESCRIPTION": "プレートアーマー !M! を得る。"
+    "DESCRIPTION": " expansioncontent:プレートアーマー !M! を得る。"
   },
   "collector:ShieldGremlinCard": {
     "NAME": "シールドグレムリン",

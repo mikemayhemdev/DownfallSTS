@@ -135,15 +135,55 @@
       "カードを取る"
     ]
   },
+  "downfall:ColorfulUncommonCardReward": {
+    "TEXT": [
+      "デッキに ",
+      " カードを追加。",
+      "カードを取る"
+    ]
+  },
+  "downfall:ColorfulRareCardReward": {
+    "TEXT": [
+      "デッキに ",
+      " カードを追加。",
+      "カードを取る"
+    ]
+  },
+  "downfall:DiceRollPotionReward": {
+    "TEXT": [
+      "デッキに ",
+      " アップグレードされたカードを追加。",
+      "カードを取る"
+    ]
+  },
+  "downfall:ColorfulPowersCardReward": {
+    "TEXT": [
+      "デッキに ",
+      " アップグレードされたパワーを追加。",
+      "カードを取る"
+    ]
+  },
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
-      "リビングウォールヘッド"
+      "リビングウォールヘッド",
+      "アイアンクラッド",
+      "サイレント",
+      "ディフェクト",
+      "ウォッチャー",
+      "商人",
+      "ハーミット"
     ]
   },
   "downfall:WhaleHunter": {
     "TEXT": [
       "ホエールハンター",
       "サイクルを終了させた。"
+    ]
+  },
+  "downfall:Unfettered": {
+    "TEXT": [
+      "束縛から解放された",
+      "壊れた封印を手に入れた"
     ]
   },
   "downfall:SingleCardViewPopup": {

@@ -19,8 +19,17 @@
   },
   "champ:StanceDance": {
     "NAME": "スタンスダンス",
-    "DESCRIPTION": "入るスタンスを選択。 NL 現在のスタンスを選んだ場合ランダムな champ:コンボ カードを1枚手札に加える。",
-    "UPGRADE_DESCRIPTION": "入るスタンスを選択。 NL ランダムな champ:コンボ カードを1枚手札に加える。",
+    "DESCRIPTION": "入るスタンスを選択。 NL * champ:スキルボーナス を得る。",
+    "UPGRADE_DESCRIPTION": "入るスタンスを選択。 NL * champ:スキルボーナス を 2 回得る。",
+    "EXTENDED_DESCRIPTION": [
+      "champ:狂化 に入る。",
+      "champ:守護 に入る。"
+    ]
+  },
+  "champ:StanceDanceCrown": {
+    "NAME": "チャンピオンの王冠",
+    "DESCRIPTION": "入るスタンスを選択。 NL  * champ:スキルボーナス を得る。",
+    "UPGRADE_DESCRIPTION": "入るスタンスを選択。 NL  * champ:スキルボーナス を 2 回得る。",
     "EXTENDED_DESCRIPTION": [
       "champ:狂化 に入る。",
       "champ:守護 に入る。"
@@ -28,7 +37,7 @@
   },
   "champ:SwordSigil": {
     "NAME": "勝利の紋章",
-    "DESCRIPTION": "現在のスタンスの *スキルボーナス を !M! 回得る。 NL 廃棄"
+    "DESCRIPTION": "現在のスタンスの * champ:スキルボーナス を !M! 回得る。 NL 廃棄"
   },
   "champ:FaceSlap": {
     "NAME": "平手打ち",
@@ -44,7 +53,7 @@
   },
   "champ:ShieldSigil": {
     "NAME": "チェインラッシュ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL このターン スキルボーナスの効果が !M! 上昇。"
+    "DESCRIPTION": " !D! ダメージを与える。 NL このターン  champ:スキルボーナス の効果が !M! 上昇。"
   },
   "champ:FocusedDefense": {
     "NAME": "回避行動",
@@ -121,9 +130,9 @@
   },
   "champ:ShieldThrow": {
     "NAME": "シールドスロー",
-    "DESCRIPTION": "現在のブロックと同等のダメージを2回与える。 NL 脆弱化 2 を受ける。 NL *守護 champ:コンボ: 脆弱化 にならない。",
+    "DESCRIPTION": "現在のブロックと同等のダメージを2回与える。",
     "EXTENDED_DESCRIPTION": [
-      "現在のブロックと同等のダメージ( !D! )を2回与える。 NL 脆弱化 2 を受ける。 NL *守護 champ:コンボ: 脆弱化 を2減らす。"
+      "現在のブロックと同等のダメージ( !D! )を2回与える。"
     ]
   },
   "champ:FalseCounter": {
@@ -137,7 +146,7 @@
   },
   "champ:Lariat": {
     "NAME": "強化ボディ",
-    "DESCRIPTION": " !B! ブロックを X 回得る。"
+    "DESCRIPTION": " !B! ブロックを X 回得る。 NL  * champ:スキルボーナス を X 回得る。"
   },
   "champ:HoldFirm": {
     "NAME": "鋼鉄の意思",
@@ -153,7 +162,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "悪意ある嘲笑",
-    "DESCRIPTION": "気力 !M! を得る。 NL 脱力 !DM! を与える。",
+    "DESCRIPTION": "気力 !M! を得る。 NL 脱力 !DM! を与える。 NL  * champ:スキルボーナス を得る。",
     "EXTENDED_DESCRIPTION": [
       "狂化 champ:コンボ: 一時的な 筋力 !M! を得る。 NL ",
       "守護 champ:コンボ: 一時的な 敏捷性 !M! を得る。"
@@ -205,8 +214,7 @@
   },
   "champ:Shatter": {
     "NAME": "シャッター",
-    "DESCRIPTION": "敵の ブロック を解除する。 NL !D! ダメージを与える。",
-    "UPGRADE_DESCRIPTION": "敵の ブロック と アーティファクト を解除する。 NL !D! ダメージを与える。"
+    "DESCRIPTION": " !D! ダメージを与える。 NL *全スタンス champ:コンボ: 脱力 と 弱体  !M! を与える。"
   },
   "champ:EnragedBash": {
     "NAME": "怒りの一撃",
@@ -216,7 +224,7 @@
     ]
   },
   "champ:VampiricStrike": {
-    "NAME": "クラバー",
+    "NAME": "クラバーストライク",
     "DESCRIPTION": " !D! ダメージを与える。 NL 防御されなかったダメージ分のブロックを得る。"
   },
   "champ:AdrenalArmor": {
@@ -237,7 +245,7 @@
   },
   "champ:Encircle": {
     "NAME": "包囲",
-    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 攻撃が当たった敵の数だけ *スキルボーナス を得る。"
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 攻撃が当たった敵の数だけカードを !M! 枚引く。"
   },
   "champ:LastStand": {
     "NAME": "ラストスタンド",
@@ -285,12 +293,12 @@
   },
   "champ:CalledShot": {
     "NAME": "リフレッシュ",
-    "DESCRIPTION": "*狂化 champ:コンボ: [E] [E] を得て、これを廃棄する。 NL *守護 champ:コンボ: カードを !M! 枚引く。",
-    "UPGRADE_DESCRIPTION": "*狂化 champ:コンボ: [E] [E] [E] を得て、これを廃棄する。 NL *守護 champ:コンボ: カードを !M! 枚引く。",
+    "DESCRIPTION": "*狂化 champ:コンボ : [E] [E] を得て、このカードを廃棄する。 NL *守護 champ:コンボ : カードを !M! 枚引く。",
+    "UPGRADE_DESCRIPTION": "*狂化 champ:コンボ : [E] [E] [E] を得て、このカードを廃棄する。 NL *守護 champ:コンボ : カードを !M! 枚引く。",
     "EXTENDED_DESCRIPTION": [
-      "狂化 champ:コンボ: [E] [E] を得て、これを廃棄する。 NL ",
-      "狂化 champ:コンボ: [E] [E] [E] を得て、これを廃棄する。 NL ",
-      "守護 champ:コンボ: カードを !M! 枚引く。",
+      "狂化 champ:コンボ : [E] [E] を得て、このカードを廃棄する。 NL ",
+      "狂化 champ:コンボ : [E] [E] [E] を得て、このカードを廃棄する。 NL ",
+      "守護 champ:コンボ : カードを !M! 枚引く。",
       "今はこれを行う時期じゃない"
     ]
   },
@@ -313,35 +321,33 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "ストライクジーニアス",
-    "DESCRIPTION": "ターン開始時ランダムな「ストライク」を得る。 NL そのカードはコストが0になり、 廃棄 が付く。",
-    "UPGRADE_DESCRIPTION": "ターン開始時ランダムな「ストライク+」を得る。 NL そのカードはコストが0になり、 廃棄 が付く。"
+    "DESCRIPTION": "ターン開始時ランダムな \"ストライク\" の gremlin:エコー を得る。 NL そのカードはコストが0。",
+    "UPGRADE_DESCRIPTION": "ターン開始時ランダムなアップグレードされた \"ストライク\" の gremlin:エコー を得る。 NL そのカードはコストが0。"
   },
   "champ:DefensiveStyle": {
     "NAME": "防御の構え",
-    "DESCRIPTION": "champ:守護 のスタンスに入る。 NL champ:守護 *スキルボーナス が追加で !M! champ:カウンター を得る",
-    "UPGRADE_DESCRIPTION": "天賦 NL champ:守護 のスタンスに入る。 NL champ:守護 *スキルボーナス が追加で !M! champ:カウンター を得る"
+    "DESCRIPTION": " * champ:スキルボーナス が追加で !M! の 気力 と champ:カウンター を得る。"
   },
   "champ:GladiatorStyle": {
     "NAME": "正々堂々",
-    "DESCRIPTION": "筋力 と 敏捷性 !M! を得る。"
+    "DESCRIPTION": " *狂化 champ:コンボ: 筋力  !M! を得る。 NL *守護 champ:コンボ: 敏捷性 !M! を得る。"
   },
   "champ:BerserkerStyle": {
     "NAME": "狂化の構え",
-    "DESCRIPTION": "champ:狂化 のスタンスに入る。 NL champ:狂化 *スキルボーナス 追加で !M! 気力を得る。",
-    "UPGRADE_DESCRIPTION": "天賦 NL champ:狂化 のスタンスに入る。 NL champ:狂化 *スキルボーナス 追加で !M! 気力を得る。"
+    "DESCRIPTION": " 戦闘中、全ての「ストライク」カードのダメージが !M! 増加する。"
   },
   "champ:Riposte": {
-    "NAME": "応酬",
+    "NAME": "リポストストライク",
     "DESCRIPTION": "エセリアル NL !D! ダメージを与える。 NL 廃棄"
   },
   "champ:Endure": {
     "NAME": "耐える",
-    "DESCRIPTION": " !B! ブロックを得る。 NL このカードは *敏捷性 ではなく *筋力 の影響を受ける。",
-    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL このカードは *筋力 の影響も受ける。"
+    "DESCRIPTION": " champ:守護 のスタンスに入る。 NL  !B! ブロックを得る。 NL このカードは *筋力 の影響を受ける。",
+    "UPGRADE_DESCRIPTION": " champ:守護 のスタンスに入る。 NL  !B! ブロックを得る。 NL このカードは *筋力 の影響を受ける。"
   },
   "champ:PreemptiveStrike": {
     "NAME": "プリムストライク",
-    "DESCRIPTION": "全ての敵に champ:カウンター に等しいダメージ。 NL champ:カウンター を半分失う。",
+    "DESCRIPTION": "全ての敵に champ:カウンター に等しいダメージ。 NL champ:カウンター を半分失う。 NL *守護 champ:コンボ: カウンターを失わない。",
     "EXTENDED_DESCRIPTION": [
       " NL ( !D! ダメージ)",
       "今はこれを行えない"
@@ -377,8 +383,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "トリプルストライク",
-    "DESCRIPTION": " !D! ダメージを与える。 NL コストが0で *スキルボーナス が付いた *ストライク を2枚手札に加える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL コストが0で *スキルボーナス が付いた *ストライク+ を2枚手札に加える。 NL 廃棄"
+    "DESCRIPTION": " !D! ダメージを与える。 NL コストが0で * champ:スキルボーナス が付いた *ストライク の gremlin:エコー を2枚手札に加える。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL コストが0で * champ:スキルボーナス が付いた *ストライク+ の gremlin:エコー を2枚手札に加える。"
   },
   "champ:WindUp": {
     "NAME": "ワインドアップ",

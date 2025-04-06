@@ -236,6 +236,13 @@
       "@敗北??@ NL @認めんぞ!!@"
     ]
   },
+  "champ:HonePower": {
+    "NAME": "研ぎ澄まされた刃",
+    "DESCRIPTIONS": [
+      "戦闘中、全ての #y「ストライク」 カードのダメージは #b",
+      " ダメージ増加する。"
+    ]
+  },
   "champ:DoubleStyleThisTurnPower": {
     "NAME": "チェインラッシュ",
     "DESCRIPTIONS": [
