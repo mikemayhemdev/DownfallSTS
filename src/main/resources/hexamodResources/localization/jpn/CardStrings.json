@@ -109,10 +109,10 @@
     "EXTENDED_DESCRIPTION": ["hexamod:前進","hexamod:後退", "留まる"]
   },
   "hexamod:MatchstickFloat": {
-    "NAME": "Sneaky Teakwood Match",
+    "NAME": "こっそりチーク材マッチ",
    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
-    "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
+    "EXTENDED_DESCRIPTION": ["hexamod:前進","hexamod:後退", "留まる"]
   },
   "hexamod:Floatwork": {
     "NAME": "浮遊移動",
