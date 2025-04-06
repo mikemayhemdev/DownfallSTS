@@ -1,15 +1,19 @@
 [
   {
     "NAMES": [
-      "吸收"
+      "吸收",
+      "absorb",
+      "absorbing",
+      "absorbed"
     ],
     "PROPERNAME": "吸收",
     "DESCRIPTION": "融合最前面的的 #y史莱姆 并获得 #b1 点 #y力量 。"
   },
   {
     "NAMES": [
+      "分裂",
       "split",
-      "分裂"
+      "splitting"
     ],
     "PROPERNAME": "分裂",
     "DESCRIPTION": "在最前面生成每回合开始时攻击的 #y史莱姆 爪牙。如果栏位不足，融合最后面的 #y史莱姆 再 #y分裂 并获得 #b1 点 #y力量 。"
@@ -17,20 +21,24 @@
   {
     "NAMES": [
       "黏液",
-      "goop"
+      "goop",
+      "gooped"
     ],
     "PROPERNAME": "黏液",
     "DESCRIPTION": "每层 #y黏液 为下次攻击提供 #b1 点额外伤害，移除所有 #y黏液 并触发 #y吞食黏液 的效果。"
   },
   {
     "NAMES": [
-      "潜力"
+      "潜力",
+      "potency"
     ],
     "PROPERNAME": "潜力",
     "DESCRIPTION": "强化 #y分裂 的 #y史莱姆 的攻击伤害与附加效果。附加效果只有 #b50% 强化效率。"
   },
   { "NAMES": [
-      "命令"
+      "命令",
+      "command",
+      "commands"
     ],
     "PROPER_NAME": "命令",
     "DESCRIPTION": "最前面的 #y史莱姆 将会攻击。"
@@ -54,7 +62,7 @@
       "bruiser"
     ],
     "PROPERNAME": "好斗史莱姆",
-    "DESCRIPTION": "攻击时随机造成 #b5 点伤害。"
+    "DESCRIPTION": "攻击时随机造成 #b3 点伤害两次。"
   },
   {
     "NAMES": [
@@ -130,7 +138,8 @@
   },
   {
     "NAMES": [
-      "缓慢"
+      "缓慢",
+      "slow"
     ],
     "PROPERNAME": "缓慢",
     "DESCRIPTION": "一回合内每打出一张牌额外受到 10% 的伤害。"
@@ -146,7 +155,9 @@
   },
   {
     "NAMES": [
-      "尖塔首领"
+      "尖塔首领",
+      "spire boss",
+      "spire_boss"
     ],
     "PROPERNAME": "尖塔首领",
     "DESCRIPTION": "强力的0费牌，受尖塔中的首领启发而学会的新东西。"
@@ -198,7 +209,8 @@
   },
     {
     "NAMES": [
-      "吞食黏液"
+      "吞食黏液",
+      "consume"
     ],
     "PROPER_NAME": "吞食黏液",
     "DESCRIPTION": "当 #y攻击 带有 #y黏液 的敌人时可触发的额外效果。"
@@ -214,16 +226,10 @@
   },
   {
     "NAMES": [
-      "深埋"
+      "深埋",
+      "buried"
     ],
     "PROPER_NAME": "深埋",
     "DESCRIPTION": "被 #y发掘 的优先级最低。"
-  },
-  {
-    "NAMES": [
-      "重铸 以下为弃用文本"
-    ],
-    "PROPERNAME": "重铸",
-    "DESCRIPTION": "在本场战斗中，将卡牌替换为本职业的一张随机卡牌，其耗能减少 1 点。"
   }
 ]

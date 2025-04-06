@@ -33,7 +33,7 @@ public class Wildfire extends AbstractCollectorCard {
                 isDone = true;
                 for (AbstractPower q : m.powers) {
                     if (q.type == AbstractPower.PowerType.DEBUFF) {
-                        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+                        dmg(m, AttackEffect.FIRE);
                     }
                 }
             }

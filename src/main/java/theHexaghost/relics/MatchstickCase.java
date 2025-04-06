@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import downfall.actions.OctoChoiceAction;
 import downfall.util.TextureLoader;
 import theHexaghost.HexaMod;
+import theHexaghost.cards.MatchstickFloat;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.util.OnChargeSubscriber;
 import theHexaghost.cards.Float;
@@ -33,7 +34,7 @@ public class MatchstickCase extends CustomRelic implements OnChargeSubscriber {
     @Override
     public void onCharge(AbstractGhostflame chargedFlame) {
         if(!triggered) {
-            Float fl = new Float();
+            MatchstickFloat fl = new MatchstickFloat();
             fl.upgrade();
             addToBot(new OctoChoiceAction(null, fl));
             triggered = true;

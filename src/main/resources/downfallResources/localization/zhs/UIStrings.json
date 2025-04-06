@@ -68,13 +68,13 @@
     ]
   },
   "downfall:EnergyPanelTip": {
-  "TEXT": [
+    "TEXT": [
     "敌人当前的能量。打出卡牌需要能量。"
-  ],
-  "EXTRA_TEXT": [
+    ],
+    "EXTRA_TEXT": [
     "能量"
-  ]
-},
+    ]
+  },
   "downfall:RemoveCardReward": {
     "TEXT": [
       "移除牌组中的一张牌。",
@@ -119,32 +119,71 @@
   "downfall:OctoChoiceAction": {
   "TEXT": [
     "许个愿",
-    "你不应该看见这个的",
-    "选择一种史莱姆。"
-  ]
-},
+    "你不应该看见这个的"
+    ]
+  },
   "downfall:BossCardReward": {
     "TEXT": [
       "将一张首领牌加入牌组",
       "选择一张牌"
     ]
   },
-    "downfall:ColorfulCardReward": {
+  "downfall:ColorfulCardReward": {
     "TEXT": [
       "将一张 ",
       " 牌加入牌组",
       "选择一张牌"
     ]
   },
+  "downfall:ColorfulUncommonCardReward": {
+    "TEXT": [
+      "将一张 ",
+      " 牌加入牌组",
+      "选择一张牌"
+    ]
+  },
+  "downfall:ColorfulRareCardReward": {
+    "TEXT": [
+      "将一张 ",
+      " 牌加入牌组",
+      "选择一张牌"
+    ]
+  },
+  "downfall:DiceRollPotionReward": {
+    "TEXT": [
+      "将一张升级过的牌 ",
+      " 加入牌组",
+      "选择一张牌"
+    ]
+  },
+  "downfall:ColorfulPowersCardReward": {
+    "TEXT": [
+      "将一张升级过的能力牌 ",
+      " 加入牌组",
+      "选择一张牌"
+    ]
+  },
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
-      "活墙壁"
+      "活墙壁",
+      "铁甲战士",
+      "静默猎手",
+      "故障机器人",
+      "观者",
+      "商人",
+      "亡命之徒"
     ]
   },
     "downfall:WhaleHunter": {
     "TEXT": [
       "捕鲸者",
       "终结轮回。"
+    ]
+  },
+  "downfall:Unfettered": {
+    "TEXT": [
+      "挣脱束缚",
+      "获得挣破的封印。"
     ]
   },
   "downfall:SingleCardViewPopup": {

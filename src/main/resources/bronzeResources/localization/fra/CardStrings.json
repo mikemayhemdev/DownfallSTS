@@ -347,8 +347,8 @@
   },
   "bronze:Mutator": {
     "NAME": "Mutateur",
-    "DESCRIPTION": "Gagnez 1 de Force. NL Transformez un Statut de votre main en une copie de ceci.",
-    "UPGRADE_DESCRIPTION": "Retenue. NL Gagnez 1 de Force. NL Transformez un Statut de votre main en une copie de ceci."
+    "DESCRIPTION": "Gagnez !M! de Force. NL Transformez un Statut de votre main en une copie de ceci.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Gagnez !M! de Force. NL Transformez un Statut de votre main en une copie de ceci."
   },
   "bronze:NullPointer": {
     "NAME": "Pointeur zéro",

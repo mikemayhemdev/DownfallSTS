@@ -21,10 +21,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbPurple;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import downfall.util.LocalizeHelper;
 
 public class CharBossWatcher extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Watcher");
-    public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Watcher").NAMES[0];
+    public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[4];
 
     private Bone eyeBone;
     protected TextureAtlas eyeAtlas = null;

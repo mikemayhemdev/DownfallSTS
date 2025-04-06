@@ -3,13 +3,16 @@ package collector.potions;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.vfx.combat.HealVerticalLineEffect;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.atb;
@@ -22,7 +25,7 @@ public class TempHPPotion extends CustomPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public TempHPPotion() {
-        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.H, PotionColor.ELIXIR); //TODO: Potion visual stuff
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.H, PotionColor.ELIXIR);
         this.isThrown = false;
         this.targetRequired = false;
     }
@@ -40,6 +43,22 @@ public class TempHPPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
+        int roll = MathUtils.random(0, 2);
+        if (roll == 0) {
+            CardCrawlGame.sound.play("HEAL_1");
+        } else if (roll == 1) {
+            CardCrawlGame.sound.play("HEAL_2");
+        } else {
+            CardCrawlGame.sound.play("HEAL_3");
+        }
+
+        float    X_JITTER = 120.0F * Settings.scale;
+        float    Y_JITTER = 120.0F * Settings.scale;
+        float    OFFSET_Y = -50.0F * Settings.scale;
+
+        for(int i = 0; i < 18; ++i) {
+            AbstractDungeon.effectsQueue.add(new HealVerticalLineEffect((AbstractDungeon.player.hb.cX + MathUtils.random(-X_JITTER * 1.5F, X_JITTER * 1.5F)),  target.hb.cY + OFFSET_Y + MathUtils.random(-Y_JITTER, Y_JITTER)));
+        }
         atb(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, potency));
     }
 

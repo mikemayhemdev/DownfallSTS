@@ -13,8 +13,8 @@ public class CantTouchThis extends AbstractCollectorCard {
     // intellij stuff power, self, uncommon, , , , , 1, 1
 
     public CantTouchThis() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
         baseSecondMagic = secondMagic = 2;
     }
 

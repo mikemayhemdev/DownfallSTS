@@ -2,29 +2,44 @@
   {
     "PROPER_NAME": "技术",
     "NAMES": [
+      "bonus",
+      "bonuses",
       "technique",
-      "技术",
+      "techniques",
       "champ:[crown_icon]",
-      "[crown_icon]"
+      "[crown_icon]",
+      "奖励",
+      "技术"
     ],
     "DESCRIPTION": "处于 #y姿态 时，打出 #y技能 牌就获得 该 #y姿态 的 #y技术 奖励。每次进入 #y姿态 后最多触发 #b3 次(牌面 #y技术 效果不受限制)。"
   },
   {
     "PROPER_NAME": "连段",
     "NAMES": [
-      "连段",
-      "combo"
+      "combo",
+      "连段"
     ],
     "DESCRIPTION": "处于特定 #y姿态 才触发效果。"
   },
   {
+    "PROPER_NAME": "打击",
+    "NAMES": [
+      "strike",
+      "strikes",
+      "打击"
+    ],
+    "DESCRIPTION": "在卡牌名称中含有打击的牌。"
+  },
+  {
     "PROPER_NAME": "终结技",
     "NAMES": [
-      "终结技",
+      "finisher",
+      "finishers",
       "[fist_icon]",
-      "champ:[fist_icon]"
+      "champ:[fist_icon]",
+      "终结技"
     ],
-    "DESCRIPTION": "打出 #y终结技 后，退出当前 #y姿态 并触发其 #y终结技 效果 。"
+    "DESCRIPTION": "处于姿态时才能打出。 NL 打出 #y终结技 后，退出当前 #y姿态 并触发其 #y终结技 效果 。 NL #r战狂 #y终结技 -获得 #b1 点 #y力量 。 NL #b防守 #y终结技-获得 #b8 点 #y格挡 。"
   },
   {
     "PROPER_NAME": "反击",
@@ -32,21 +47,23 @@
       "counter",
       "反击"
     ],
-    "DESCRIPTION": "下次被 #y攻击 时，失去所有 #y反击 并对攻击者造成层数点伤害。"
+    "DESCRIPTION": "下次被 #y攻击 时，失去所有 #y反击 ，并获得一张造成等量层数点伤害的 #y弹反打击 。"
   },
   {
     "PROPER_NAME": "防守",
     "NAMES": [
-      "防守",
-      "defensive"
+      "defensive",
+      "defensive.",
+      "防守"
     ],
     "DESCRIPTION": "#y姿态 ： NL #y技术 -获得 #b3 层 #y反击 。 NL #y终结技 -获得 #b8 点 #y格挡 。"
   },
   {
     "PROPER_NAME": "战狂",
     "NAMES": [
-      "战狂",
-      "berserker"
+      "berserker",
+      "berserker.",
+      "战狂"
     ],
     "DESCRIPTION": "#y姿态 ： NL #y技术 -获得 #b2 层 #y活力 。 NL #y终结技 -获得 #b1 点 #y力量 。"
   },
@@ -64,7 +81,7 @@
       "ultimate",
       "终极"
     ],
-    "DESCRIPTION": "#y姿态 。 NL 视为同时处于 #y战狂 和 #y防守 。持续时间内打出 #y终结技 将重新进入 #y终极 。"
+    "DESCRIPTION": "#y姿态 。 NL 视为同时处于 #r战狂 和 #b防守 。持续时间内打出 #y终结技 将重新进入 #y终极 。"
   },
   {
     "PROPER_NAME": "疲劳",

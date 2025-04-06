@@ -28,26 +28,55 @@ public class ColorfulCardReward extends CustomReward {
     public ArrayList<AbstractCard> getCards() {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         ArrayList<AbstractCard> listOfColoredCards = new ArrayList<>();
-        for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.color == myColor && q.rarity != AbstractCard.CardRarity.SPECIAL && !q.tags.contains(SneckoMod.BANNEDFORSNECKO)) {
-                listOfColoredCards.add(q);
+
+        for (AbstractCard card : CardLibrary.getAllCards()) {
+            if (card.color == myColor && card.rarity != AbstractCard.CardRarity.SPECIAL && !card.tags.contains(SneckoMod.BANNEDFORSNECKO)) {
+                listOfColoredCards.add(card);
             }
         }
+
         if (!listOfColoredCards.isEmpty()) {
             while (cardsList.size() < 3) {
-                AbstractCard q = listOfColoredCards.get(AbstractDungeon.cardRandomRng.random(0, listOfColoredCards.size() - 1));
-                if (!cardListDuplicate(cardsList, q)) {
-                    cardsList.add(q.makeCopy());
+                AbstractCard card = getRandomCardByRarity(listOfColoredCards);
+                if (!cardListDuplicate(cardsList, card)) {
+                    cardsList.add(card.makeCopy());
                 }
             }
             return cardsList;
         } else {
+
             ArrayList<AbstractCard> debug = new ArrayList<>();
-            for (AbstractCard q : CardLibrary.getAllCards()) {
-                debug.add(q.makeCopy());
+            for (AbstractCard card : CardLibrary.getAllCards()) {
+                debug.add(card.makeCopy());
             }
             return debug;
         }
+    }
+
+    private AbstractCard getRandomCardByRarity(ArrayList<AbstractCard> cardPool) {
+        int roll = AbstractDungeon.cardRandomRng.random(0, 99); // 0-99 random number
+        AbstractCard.CardRarity rarity;
+
+        if (roll < 50) {
+            rarity = AbstractCard.CardRarity.COMMON; // 50%
+        } else if (roll < 90) {
+            rarity = AbstractCard.CardRarity.UNCOMMON; // 40%
+        } else {
+            rarity = AbstractCard.CardRarity.RARE; // 10%
+        }
+
+        ArrayList<AbstractCard> filteredPool = new ArrayList<>();
+        for (AbstractCard card : cardPool) {
+            if (card.rarity == rarity) {
+                filteredPool.add(card);
+            }
+        }
+
+        if (filteredPool.isEmpty()) {
+            return cardPool.get(AbstractDungeon.cardRandomRng.random(0, cardPool.size() - 1));
+        }
+
+        return filteredPool.get(AbstractDungeon.cardRandomRng.random(0, filteredPool.size() - 1));
     }
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {

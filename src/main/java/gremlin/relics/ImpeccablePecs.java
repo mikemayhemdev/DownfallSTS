@@ -22,7 +22,10 @@ public class ImpeccablePecs extends AbstractGremlinRelic {
         super(ID, IMG, TIER, SOUND);
     }
 
-    //TODO Rework this Relic at some point
+    // Rework this Relic at some point
+    // I mean I also want to rework this, it's very weird
+    // Removed to-do, made grems exclusive instead. Not worth the effort.
+
 
     @Override
     public String getUpdatedDescription() {

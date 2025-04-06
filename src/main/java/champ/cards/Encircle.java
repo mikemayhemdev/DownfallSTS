@@ -3,6 +3,7 @@ package champ.cards;
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,7 +17,7 @@ public class Encircle extends AbstractChampCard {
 
     //stupid intellij stuff attack, all_enemy, uncommon
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 5;
 
     public Encircle() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
@@ -24,6 +25,7 @@ public class Encircle extends AbstractChampCard {
         isMultiDamage = true;
         // tags.add(ChampMod.COMBO);
         // tags.add(ChampMod.COMBOBERSERKER);
+        baseMagicNumber = magicNumber = 1;
         postInit();
         loadJokeCardImage(this, "Encircle.png");
     }
@@ -36,7 +38,7 @@ public class Encircle extends AbstractChampCard {
         allDmg(AbstractGameAction.AttackEffect.NONE);
 
         for (AbstractMonster q : monsterList()) {
-            techique();
+            atb(new DrawCardAction(magicNumber));
         }
 
     }

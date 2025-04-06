@@ -22,7 +22,7 @@ public class StasisStrike extends AbstractGuardianCard {
 
     public StasisStrike() {
         super(ID, cardStrings.NAME, IMG_PATH, 2, cardStrings.DESCRIPTION, CardType.ATTACK, AbstractCardEnum.GUARDIAN, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = 15;
+        this.baseDamage = 16;
         this.socketCount = 0;
         this.tags.add(CardTags.STRIKE);
         updateDescription();
@@ -44,7 +44,7 @@ public class StasisStrike extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(5);
+            upgradeDamage(4);
         }
     }
 

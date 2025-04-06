@@ -18,7 +18,7 @@
     "FLAVOR": "Voyons voir si je peux faire... mieux.",
     "DESCRIPTIONS": [
       "Remplace ",
-      ".[] NL La première fois que vous #yEnflammez un Feu Follet chaque tour, gagnez [E] ."
+      ".[] NL A chaque fois que vous #yEnflammez un Feu Follet , gagnez #b4 #yd'Armure ."
     ]
   },
   "hexamod:IceCube": {
@@ -32,7 +32,7 @@
     "NAME": "Pierre thermale",
     "FLAVOR": "Un feu animerait cette chose!",
     "DESCRIPTIONS": [
-      "Si la #yhexamod:Brûlure s'active, soignez-vous de #b4 PV à la fin du combat."
+      "A chaque fois que vous #yEpuiser #b3 cartes, #yhexamod:Enflammez le Feu Follet actuel."
     ]
   },
   "hexamod:RecyclingMachine": {
@@ -60,14 +60,14 @@
     "NAME": "Âme chaotique",
     "FLAVOR": "Le chaos, rendu manifeste.",
     "DESCRIPTIONS": [
-      "Le quatrième Feu Follet devient un #yFeu #yFollet #yChaotique. NL Le #yFeu #yFollet #yChaotique s'active lorsque vous terminez votre tour sur celui-ci. NL #yInflammation: Jouez la carte du haut de votre pioche."
+      "Le deuxieme Feu Follet devient un #yFeu #yFollet #yChaotique. NL Le #yFeu #yFollet #yChaotique s'active lorsque vous terminez votre tour sur celui-ci. NL #yInflammation: Jouez la carte du haut de votre pioche."
     ]
   },
   "hexamod:JarOfFuel": {
     "NAME": "Bouclier d'Olexa",
     "FLAVOR": "Protection sur demande.",
     "DESCRIPTIONS": [
-      "Échangez les positions du #yFeu #yFollet #yRenforceur et du premier #yFeu #yFollet #yArdent."
+      "Les cartes #yPouvoir compte pour la progression du #yFeu #yFollet #yIncinérateur et #yÉcrasent."
     ]
   },
   "hexamod:BolsterEngine": {
@@ -81,7 +81,7 @@
     "NAME": "Bougie rouge",
     "FLAVOR": "Le feu, ça BRÛLE...",
     "DESCRIPTIONS": [
-      "Lorsqu'une #yAttaque inflige des dégâts non-bloqués, appliquez #b2 de #yhexamod:Brûlure."
+      "A chaque fois que vous appliqué #yhexamod:Brûlure, appliqué #b3 #yhexamod:Brûlure supplémentaire."
     ]
   },
   "hexamod:Sixitude": {
@@ -90,5 +90,14 @@
     "DESCRIPTIONS": [
       "Lorsque vous jouez #b6 cartes, infligez #b6 dégâts à un ennemi aléatoire."
     ]
+  },
+  "hexamod:Libra": {
+    "NAME": "Balance",
+    "FLAVOR": "Équilibre en toutes choses.",
+    "DESCRIPTIONS": [
+      "Choisissez n'importe quel nombre de vos frappes et défenses a #yTransformer en leur type opposer.",
+      "la balance de la justice a agit.",
+      "Choisissez n'importe quel nombre de carte a transformer en leur type opposer."
+    ]
   }
-}
+}	

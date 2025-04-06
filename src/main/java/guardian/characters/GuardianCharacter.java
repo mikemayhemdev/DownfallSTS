@@ -1,9 +1,12 @@
 package guardian.characters;
 
+import automaton.vfx.CompileVictoryEffect;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.scene.DefectVictoryNumberEffect;
 import downfall.util.TextureLoader;
 import guardian.modules.EnergyOrbGuardian;
 import guardian.powers.ModeShiftPower;
@@ -113,8 +116,6 @@ public class GuardianCharacter extends CustomPlayer {
 
 
     }
-
-    //TODO - Victory screens
 
     public CharSelectInfo getInfo() {
         return getLoadout();
@@ -331,6 +332,14 @@ public class GuardianCharacter extends CustomPlayer {
     public String getVampireText() {
         return charStrings.TEXT[3];
     }
+
+
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+            if (effects.stream().filter(e -> e instanceof DefectVictoryNumberEffect).count() < 8)
+                effects.add(new DefectVictoryNumberEffect());
+    }
+
 
     @Override
     public void onVictory() {

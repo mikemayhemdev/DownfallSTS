@@ -1,4 +1,4 @@
-/*package automaton.patches;
+package automaton.patches;/*package automaton.patches;
 
 import automaton.cards.FunctionCard;
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.EverythingFix;

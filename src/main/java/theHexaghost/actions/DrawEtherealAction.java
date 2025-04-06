@@ -1,5 +1,6 @@
 package theHexaghost.actions;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -53,7 +54,7 @@ public class DrawEtherealAction extends AbstractGameAction{
                     tmp.shuffle();
                     card = tmp.getBottomCard();
                     tmp.removeCard(card);
-                    if (this.p.hand.size() == 10) {
+                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                         this.p.createHandIsFullDialog();
                     } else {
                         p.drawPile.group.remove(card);

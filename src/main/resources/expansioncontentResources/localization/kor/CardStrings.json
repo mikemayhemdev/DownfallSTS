@@ -1,40 +1,39 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "회오리 바람",
-    "DESCRIPTION": "방어도가 10 이상 필요합니다. NL 적 전체에게 피해를 !D! 만큼 4번 줍니다. NL 소멸.",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 4번 줍니다. NL 방어도가 !DM! 이상이면 피해를 !M! 번 추가로 줍니다.",
     "EXTENDED_DESCRIPTION": [
       "방어도가 더 필요하다."
     ]
   },
   "expansioncontent:Hexaburn": {
     "NAME": "지옥염",
-    "DESCRIPTION": " !M! 턴 후 무작위 적들에게 피해를 !D! 만큼 6번 줍니다. NL 힘 만큼 피해량이 증가합니다."
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 만큼 !M! 번 줍니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "무작위 적에게 피해를 !D! 만큼 !M! 번 줍니다."
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "천하무적",
-    "DESCRIPTION": "expansioncontent:천하무적을 10 얻습니다. NL expansioncontent:천하무적을 이미 보유하고 있다면 보유한 천하무적이 끝나면 바로 적용됩니다."
+    "DESCRIPTION": "expansioncontent:천하무적을 !M! 얻습니다. NL expansioncontent:천하무적을 이미 보유하고 있다면 보유한 천하무적이 끝나면 바로 적용됩니다."
   },
   "expansioncontent:HyperBeam": {
     "NAME": "자동 광선",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 다음 내 턴 시작 시 [E] 를 잃습니다. NL 소멸."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL *공허를 뽑을 카드 더미 맨 위에 놓습니다. NL 소멸."
   },
   "expansioncontent:LastStand": {
     "NAME": "최후의 저항",
-    "DESCRIPTION": "모든 해로운 효과를 제거합니다. NL 힘을 1 얻습니다. NL 체력이 절반 이하라면 힘을 2 얻습니다.",
-    "UPGRADE_DESCRIPTION": "모든 해로운 효과를 제거합니다. NL 힘을 1 얻습니다. NL 체력이 절반 이하라면 체력을 !M! 회복하고 힘을 2 얻습니다."
+    "DESCRIPTION": "모든 해로운 효과를 제거합니다. NL 힘을 !M! 얻습니다."
   },
   "expansioncontent:YouAreMine": {
     "NAME": "넌 나의 것이다!",
-    "DESCRIPTION": "적 전체의 방어도를 없앱니다. NL 적 전체에게 약화 와 취약을 !M! 부여합니다. NL 소멸."
+    "DESCRIPTION": "적 전체에게 약화를 !M!, 취약을 !M!, expansioncontent:파멸을 !DM! 부여합니다. NL 소멸."
   },
   "expansioncontent:AwakenDeath": {
-    "NAME": "각성",
-    "DESCRIPTION": "죽거나 전투 종료 시 체력을 !M! 회복하고 이 효과를 제거합니다."
+    "NAME": "호기심",
+    "DESCRIPTION": "파워 카드를 사용할 때마다 힘을 !M! 얻습니다."
   },
   "expansioncontent:Chronoboost": {
     "NAME": "시간-가속",
-    "DESCRIPTION": "카드를 12번 사용할 때마다 힘을 2 얻습니다.",
-    "UPGRADE_DESCRIPTION": "힘을 2 얻습니다. NL 카드를 12번 사용할 때마다 힘을 2 얻습니다."
+    "DESCRIPTION": "카드를 12번 사용할 때마다 힘을 !M! 얻습니다."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "도누의 폭발",
@@ -42,11 +41,11 @@
   },
   "expansioncontent:DecaShield": {
     "NAME": "데카의 방패",
-    "DESCRIPTION": "*판금 *갑옷을 !M! 얻습니다."
+    "DESCRIPTION": "expansioncontent:판금_갑옷을 !DM! 얻습니다. NL 힘을 !M! 얻습니다."
   },
   "expansioncontent:ShapePower": {
     "NAME": "모양기의 축복",
-    "DESCRIPTION": "선택 - 힘을 !M! 얻습니다. 또는 *판금 *갑옷을 !DM! 얻습니다.",
+    "DESCRIPTION": "힘을 !M! 얻습니다. 또는 expansioncontent:판금_갑옷을 !DM! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "도누의 힘",
       "힘을 !M! 얻습니다.",
@@ -54,10 +53,17 @@
       "*판금 *갑옷을 !M! 얻습니다."
     ]
   },
-  "expansioncontent:PrepareCrush": {
+  "expansioncontent:SuperPrepareCrush": {
     "NAME": "으깨기 준비",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] [E] [E] 을 얻고 *슬라임 *으깬다를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] [E] [E] 을 얻고 *슬라임 *으깬다 *+를 얻습니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] [E] [E] 을 얻고 *슬라임 *으깬다 *+를 얻습니다. 힘을 !M! 얻습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "~슬라임...~ NL #r~으깬다!!!~"
+    ]
+  },
+  "expansioncontent:SuperLivingWall": {
+    "NAME": "살아있는 벽",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 공격한 대상에게 expansioncontent:점액을 !M! 부여합니다."
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "첨탑 학습",
@@ -74,8 +80,7 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "내면의 악",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 *보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 강화된 *보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다. NL 소멸."
+    "DESCRIPTION": "해로운 효과를 !DM! 부여할 때마다 적 전체에게 피해를 !D! 줍니다."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "뭐든지 아는 해골",
@@ -84,6 +89,122 @@
   "expansioncontent:Antidote": {
     "NAME": "해독제",
     "DESCRIPTION": "보존. NL 중독을 !M! 잃습니다."
+  },
+  "expansioncontent:SuperhostShieldG": {
+    "NAME": "유령 보호막",
+    "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL [#e087a4]방어도를[] [#e087a4]!B![] [#e087a4]얻습니다.[] NL [#e087a4]흐릿함을[] [#e087a4]!M![] [#e087a4]얻습니다.[]",
+    "EXTENDED_DESCRIPTION": [
+      "방어도를 !B! 얻습니다."
+    ]
+  },
+  "expansioncontent:SuperGoopSpray": {
+    "NAME": "점액 분사",
+    "DESCRIPTION": "expansioncontent:점액을 !M! 부여하고 약화를 !DM! 부여합니다.",
+    "UPGRADE_DESCRIPTION": "적 전체에게 expansioncontent:점액을 !M! 부여하고 약화를 !DM! 부여합니다."
+  },
+  "expansioncontent:ChargeUp": {
+    "NAME": "탄성 갑옷",
+    "DESCRIPTION": "보유한 해로운 효과를 각각 !M! 만큼 감소시킵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보유한 해로운 효과를 각각 !M! 만큼 감소시킵니다."
+  },
+  "expansioncontent:SuperTaunt": {
+    "NAME": "도발",
+    "DESCRIPTION": "약화 와 취약을 !M! 부여합니다.",
+    "UPGRADE_DESCRIPTION": "적 전체에게 약화 와 취약을 !M! 부여합니다."
+  },
+  "expansioncontent:Torchfire": {
+    "NAME": "들불",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 보유한 해로운 효과 종류 하나당 반복합니다."
+  },
+
+  "expansioncontent:TakeFlight": {
+    "NAME": "재활성화",
+    "DESCRIPTION": "시전하지 않으면 expansioncontent:재생을 !M! 얻습니다. NL expansioncontent:시전하면 *재생을 !DM! 얻습니다."
+  },
+  "expansioncontent:BeatOfDeath": {
+    "NAME": "죽음의 비트",
+    "DESCRIPTION": "카드를 사용할 때마다 적 전체에게 피해를 !M! 줍니다."
+  },
+  "expansioncontent:SuperViciousMockery": {
+    "NAME": "악랄한 조롱",
+    "DESCRIPTION": "활력 을 !M! 얻습니다. NL 약화를 !DM! 부여합니다."
+  },
+  "expansioncontent:SuperClobber": {
+    "NAME": "구타 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 막히지 않은 피해만큼 방어도를 얻습니다."
+  },
+
+  "expansioncontent:SuperSomberShield": {
+    "NAME": "거무스름한 방패",
+    "DESCRIPTION": "collector:장작. NL 방어도를 !B! 얻습니다. NL 다음 턴에 이 카드로 소멸시킨 카드를 복사해 얻습니다."
+  },
+
+  "expansioncontent:SuperWhirlingFlame": {
+    "NAME": "회오리 불",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 버린 카드 더미 카드를 1장 뽑을 카드 더미 맨 위에 놓습니다."
+  },
+  "expansioncontent:Flail": {
+    "NAME": "손상",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 !DM! 번 줍니다. NL 인공물을 !M! 얻습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "손상된",
+      "손상"
+    ]
+  },
+  "expansioncontent:SuperBloodthirst": {
+    "NAME": "피의 갈망",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 공격으로 적이 죽으면 무작위 포션을 얻고 이 카드를 소멸시킵니다."
+  },
+  "expansioncontent:SuperBodyCrash": {
+    "NAME": "몸체 충돌",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 현재 방어도만큼 피해를 줍니다.",
+    "UPGRADE_DESCRIPTION": " NL (피해를 !D! 줍니다.)"
+  },
+  "expansioncontent:SuperEtherStep": {
+    "NAME": "에테르 걸음",
+    "DESCRIPTION": "카드를 1장 소멸시킵니다. NL 카드를 !M! 장 뽑습니다. NL 피해를 !D! 줍니다.",
+    "UPGRADE_DESCRIPTION": "카드를 1장 소멸시킵니다. NL 카드를 !M! 장 뽑습니다. NL 피해를 !D! 줍니다."
+  },
+
+  "expansioncontent:Virus": {
+    "NAME": "바이러스",
+    "DESCRIPTION": "카드를 !M! 장까지 소멸시킵니다. 소멸시킨 카드당 *주력 *광선을 뽑을 카드 더미에 섞어 넣습니다. NL 소멸."
+  },
+
+  "expansioncontent:MajorBeam": {
+    "NAME": "주력 광선",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 장 뽑습니다."
+  },
+
+  "expansioncontent:ManipulateTime": {
+    "NAME": "토막 생각",
+    "DESCRIPTION": "버린 카드 더미에서 카드를 1 장 선택해 뽑을 카드 더미 맨 위에 놓습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다.",
+    "UPGRADE_DESCRIPTION": "버린 카드 더미에서 카드를 1 장 선택해 뽑을 카드 더미 맨 위에 놓습니다. 이번 전투에서 그 카드의 비용은 0이 됩니다."
+  },
+  "expansioncontent:Pandemonium": {
+    "NAME": "대혼란",
+    "DESCRIPTION": "내 턴 시작 시 버린 카드 더미에서 무작위 카드를 1장 사용합니다."
+  },
+  "expansioncontent:Reverie": {
+    "NAME": "공상",
+    "DESCRIPTION": "내 턴 시작 시 버린 카드 더미 맨 위의 카드를 !M! 장 봅니다. 그 카드를 선택해 가져옵니다."
+  },
+  "expansioncontent:ExploitVulnerability": {
+    "NAME": "도누 광선",
+    "DESCRIPTION": "적의 모든 방어도를 없앱니다. NL 피해를 !D! 만큼 2번 줍니다."
+  },
+  "expansioncontent:PeekPages": {
+    "NAME": "염탐",
+    "DESCRIPTION": "뽑을 카드 더미에 통찰을 !M! 장 섞어 넣습니다. NL 소멸."
+  },
+  "expansioncontent:BloodBarrage": {
+    "NAME": "피의 장벽",
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 줍니다. NL 소멸."
+  },
+  "expansioncontent:DoubleAct": {
+    "NAME": "합 맞추기",
+    "DESCRIPTION": "내 다음 턴 시작 시 카드를 뽑고 [E] 얻습니다. NL 소멸."
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "피로 물든 희생",

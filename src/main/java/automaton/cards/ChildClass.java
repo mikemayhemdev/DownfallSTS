@@ -1,4 +1,4 @@
-/*
+package automaton.cards;/*
 package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;

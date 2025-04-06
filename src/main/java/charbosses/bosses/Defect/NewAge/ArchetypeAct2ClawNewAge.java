@@ -21,10 +21,13 @@ import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.NoBlockPower;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+
+import static charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge.increasePretendFocus;
 
 public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
 
@@ -55,9 +58,10 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
     public void initialize() {
 
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_Kunai());
-        addRelic(new CBR_RedMask());
-        addRelic(new CBR_Turnip());
+        addRelic(new CBR_IceCream());
+        addRelic(new CBR_BagOfPreparation());
+        addRelic(new CBR_NuclearBattery());
+
 
         // animation
         try {
@@ -84,104 +88,72 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
         if (!looped) {
             switch (turn) {
                 case 0:
-                    // NO Orbs
-                    addToList(cardsList, new EnBootSequence(), false);  // removed
-                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);
+                    addToList(cardsList, new EnChill(), true);
+                    frostOrbsChanneled += 1;
+                    addToList(cardsList, new EnChill(), true);
+                    frostOrbsChanneled += 1;
+                    addToList(cardsList, new EnBootSequence(), true);  // removed
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false); //1
                     addToList(cardsList, new EnMachineLearning(), true);  // removed
                     turn++;
-                    // No Orbs
                     break;
                 case 1:
-                    //Turn 2
-                    // No Orbs
-                    addToList(cardsList, new EnLeap());
-                    addToList(cardsList, new EnColdSnap(), true);
-                    frostOrbsChanneled += 1;
-                    addToList(cardsList, new EnPanicButton());  // removed
-                    addToList(cardsList, new EnStrikeBlue(), true);
-                    // Frost
+                    addToList(cardsList, new EnDefragment(), true);
+                    increasePretendFocus(2);
+                    addToList(cardsList, new EnChargeBattery());//2
+                    addToList(cardsList, new EnDefendBlue(), false);//4
+                    addToList(cardsList, new EnStrikeBlue(), true);//4
                     turn++;
                     break;
                 case 2:
                     //Turn 3
-                    // Frost
-                    addToList(cardsList, new EnReprogram(), false);
-                    ArchetypeAct3OrbsNewAge.increasePretendFocus(-1);
-                    addToList(cardsList, new EnSwiftStrike(), false);
-                    addToList(cardsList, new EnRebound(), false);
-                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2));
-                    // Frost
-                    //Kunai Proc
+                    addToList(cardsList, new EnCoreSurge(), false);//5
+                    addToList(cardsList, new EnReprogram(), extraUpgrades);//6
+                    addToList(cardsList, new EnRebound(), false);//7
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);//8
                     turn++;
                     break;
                 case 3:
-                    //Turn 4
-                    // Frost
-                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2));
-                    addToList(cardsList, new EnChargeBattery(), false);
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);//8th
+                    addToList(cardsList, new EnChargeBattery(), false);//9th
                     addToList(cardsList, new EnGeneticAlgorithm(14), true);  //removed
-                    addToList(cardsList, new EnShame(), false);
-                    // Frost
+                    addToList(cardsList, new EnClumsy(), true);//removed
                     turn++;
                     break;
                 case 4:
-                    //Turn 5
-                    // Frost
-                    addToList(cardsList, new EnHyperbeam(), extraUpgrades);
-                    ArchetypeAct3OrbsNewAge.increasePretendFocus(-3);
-                    addToList(cardsList, new EnMalfunctioning(), false);
-                    addToList(cardsList, new EnDefendBlue(), false);
-                    addToList(cardsList, new EnClumsy(), false);  //removed
-                    //Frost, but it's useless
+                    addToList(cardsList, new EnCoreSurge(), false);//10
+                    addToList(cardsList, new EnHyperbeam(), true);//11
+                    addToList(cardsList, new EnClumsy(), false);
+                    addToList(cardsList, new EnDefendBlue(), false);//12
                     turn = 0;
                     looped = true;
                     break;
             }
         } else {
+            //perfect 12 for a loop
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);
-                    //Play Leap if Block can be gained, otherwise play Stirike
-                    if (AbstractCharBoss.boss.hasPower(NoBlockPower.POWER_ID)){
-                        addToList(cardsList, new EnColdSnap(), true);
-                        frostOrbsChanneled += 1;
-                        if (frostOrbsChanneled > 3 && AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb) {
-                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true;
-                        }
-                        addToList(cardsList, new EnStrikeBlue(), true);
-                        addToList(cardsList, new EnLeap());
-                    } else {
-                        addToList(cardsList, new EnColdSnap(), true);
-                        frostOrbsChanneled += 1;
-                        if (frostOrbsChanneled > 3 && AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb) {
-                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true;
-                        }
-                        addToList(cardsList, new EnLeap());
-                        addToList(cardsList, new EnStrikeBlue(), true);
-                    }
-                    //Kunai Proc
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false); //1
+                    addToList(cardsList, new EnChargeBattery(), false); //2
+                    addToList(cardsList, new EnDefendBlue(), false);//4
+                    addToList(cardsList, new EnStrikeBlue(), true);//4
                     turn++;
                     break;
                 case 1:
-                    //Turn 3
-                    addToList(cardsList, new EnHyperbeam(), extraUpgrades);
-                    ArchetypeAct3OrbsNewAge.increasePretendFocus(-3);
-                    addToList(cardsList, new EnChargeBattery(), false);
-                    addToList(cardsList, new EnShame(), false);
-                    addToList(cardsList,  new EnRebound(), false);
+                    addToList(cardsList, new EnCoreSurge(), false);//5
+                    addToList(cardsList, new EnHyperbeam(), true);//6
+                    addToList(cardsList, new EnChargeBattery(), false);//7
+                    addToList(cardsList,  new EnRebound(), false);//8
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnReprogram(), false);
-                    ArchetypeAct3OrbsNewAge.increasePretendFocus(-1);
-                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);
-                    addToList(cardsList,  new EnDefendBlue(), false);
-                    addToList(cardsList, new EnSwiftStrike(), false);
-                    //Kunai Proc
+                    addToList(cardsList, new EnCoreSurge(), false);//9
+                    addToList(cardsList, new EnReprogram(), extraUpgrades);//10
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);//11
+                    addToList(cardsList,  new EnDefendBlue(), false);//12
                     turn = 0;
                     break;
             }
-
         }
 
         return cardsList;
@@ -189,6 +161,6 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Vajra());
+        addRelic(new CBR_ClockworkSouvenir());
     }
 }

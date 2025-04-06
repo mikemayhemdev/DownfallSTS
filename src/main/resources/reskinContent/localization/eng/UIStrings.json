@@ -24,7 +24,9 @@
       "Hexaghost Alternative Art Unlocked!",
       "Snecko Alternative Art Unlocked!",
       "Champ Alternative Art Unlocked!",
-      "Automaton Alternative Art Unlocked!"
+      "Automaton Alternative Art Unlocked!",
+      "Gremlins Alternative Art Unlocked!",
+      "Collector Alternative Art Unlocked!"
     ]
   },
 
@@ -78,6 +80,14 @@
     "EXTRA_TEXT": [
       "Her sword looks impossible for her to wield, NL but she's actually the only one strong enough to lift it.",
       "It's laundry day."
+    ]
+  },
+  "reskinContent:ReSkinGremlin": {
+    "TEXT": [
+      "Cats"
+    ],
+    "EXTRA_TEXT": [
+      "Ummmm.... Meow?"
     ]
   },
   "reskinContent:ReSkinBronze": {

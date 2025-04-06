@@ -39,7 +39,6 @@ public abstract class GauntletBoss extends AbstractMonster {
     public void usePreBattleAction() {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new DexterityPower(this, 3), 3));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 3), 3));
-
     }
 
     @Override

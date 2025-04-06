@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
@@ -50,5 +51,12 @@ public class Hexaguard extends AbstractHexaCard implements HexaPurpleTextInterfa
         super.initializeDescription();
         String afterlife_name = downfallMod.keywords_and_proper_names.get("afterlife");
         this.keywords.add(afterlife_name);
+        if (Settings.language == Settings.GameLanguage.ZHS){
+            this.keywords.add("格挡");
+        }else if (Settings.language == Settings.GameLanguage.RUS){
+            //this.keywords.add("ловкость");
+        }else{
+            this.keywords.add("block");
+        }
     }
 }

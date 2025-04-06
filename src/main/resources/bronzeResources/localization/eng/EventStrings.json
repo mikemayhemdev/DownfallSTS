@@ -35,7 +35,7 @@
       "There is no strength without unity."
     ],
     "OPTIONS": [
-      "[Unification] All #gStrikes and #gDefends gain #gEncode.",
+      "[Unification] All #gStrikes and #gDefends gain #gEncode [REMOVE_SPACE].",
       "[Locked] Requires a Strike or Defend."
     ]
   },
@@ -61,7 +61,7 @@
     ],
     "OPTIONS": [
       "[Craft] #gGain #gBottled #gCode. #rLose #r10 #rMax #rHP.",
-      "[Transmute] #rRemove a Card. Gain a random #gCard #gwith #gEncode.",
+      "[Transmute] #gRemove #ga #gCard. #gGain #ga #grandom #gCard #gwith #gEncode.",
       "[Reforge] #rRemove a #yRare Card. #gGain #g10 #gMax #gHP #gand #gHeal #gto #gfull.",
       "[Locked] Already used.",
       "[Leave]",

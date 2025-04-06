@@ -22,7 +22,15 @@ public class GremlinPostBossHealPatch {
             }
 
             // Only rez 1
+            // a4 and under, full rez
+            // a5 and up, rez 2
             if (((GremlinCharacter) AbstractDungeon.player).canRez()) {
+                if (AbstractDungeon.ascensionLevel < 5) {
+                    ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
+                    ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
+                    ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
+                }
+                ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
                 ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
             }
 

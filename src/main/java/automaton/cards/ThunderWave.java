@@ -21,11 +21,11 @@ public class ThunderWave extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all_enemy, rare
 
-    private static final int DAMAGE = 18;
-    private static final int UPG_DAMAGE = 6;
+    private static final int DAMAGE = 12;
+    private static final int UPG_DAMAGE = 4;
 
     public ThunderWave() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
         exhaust = true;

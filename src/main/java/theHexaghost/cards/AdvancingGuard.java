@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 
@@ -20,6 +21,8 @@ public class AdvancingGuard extends AbstractHexaCard {
         baseBlock = BLOCK;
 
         tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+
         HexaMod.loadJokeCardImage(this, "AdvancingGuard.png");
     }
 

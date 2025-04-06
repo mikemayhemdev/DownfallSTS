@@ -10,22 +10,24 @@ public class TrashToTreasure extends AbstractSneckoCard {
     public final static String ID = makeID("TrashToTreasure");
 
     //stupid intellij stuff SKILL, SELF, UNCOMMON
+    private static final int BASE_BLOCK = 9;
 
     public TrashToTreasure() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
-        this.exhaust = true;
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         SneckoMod.loadJokeCardImage(this, "TrashToTreasure.png");
+        baseBlock = BASE_BLOCK;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         atb(new RecycleAction());
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.exhaust = false;
+            exhaust = false;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

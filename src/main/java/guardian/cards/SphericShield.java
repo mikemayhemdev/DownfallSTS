@@ -2,7 +2,9 @@ package guardian.cards;
 
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,9 +13,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
-import guardian.powers.DontLeaveDefensiveModePower;
+import guardian.powers.*;
+import guardian.relics.ModeShifterPlus;
 import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.powers.ToxicPersonalityPower;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -38,7 +42,7 @@ public class SphericShield extends AbstractGuardianCard {
 
     public SphericShield() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        this.baseBlock = 20;
+        this.baseBlock = 10;
         this.socketCount = 0;
         exhaust = true;
         updateDescription();
@@ -52,6 +56,49 @@ public class SphericShield extends AbstractGuardianCard {
         addToBot(new GainBlockAction(p, p, this.block));
         addToBot(new ChangeStanceAction(new DefensiveMode()));
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, 1), 1));
+
+        ModeShifterPlus modeShifterPlusInstance = new ModeShifterPlus();
+        if (AbstractDungeon.player.hasRelic(ModeShifterPlus.ID)) {
+            if (!AbstractDungeon.actionManager.turnHasEnded) {
+                addToTop(new GainEnergyAction(1));
+            }
+            if (AbstractDungeon.actionManager.turnHasEnded) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedGuardianPower(p, 1)));
+            }
+            addToTop(new DrawCardAction(AbstractDungeon.player, 2));
+            modeShifterPlusInstance.flash();
+        }
+
+        if (AbstractDungeon.player.hasPower(RevengePower.POWER_ID)) {
+            RevengePower revengePower =
+                    (RevengePower) AbstractDungeon.player.getPower(RevengePower.POWER_ID);
+
+            if (revengePower != null) {
+                revengePower.onActivateCallR(p);
+            }
+        }
+
+        if (AbstractDungeon.player.hasPower(SpikerProtocolPower.POWER_ID)) {
+            SpikerProtocolPower spikerProtocolPower =
+                    (SpikerProtocolPower) AbstractDungeon.player.getPower(SpikerProtocolPower.POWER_ID);
+
+            if (spikerProtocolPower != null) {
+                spikerProtocolPower.onActivateCallS(p);
+            }
+        }
+
+
+        if (AbstractDungeon.player.hasPower(EvasiveProtocolPower.POWER_ID)) {
+            EvasiveProtocolPower evasiveProtocolPower =
+                    (EvasiveProtocolPower) AbstractDungeon.player.getPower(EvasiveProtocolPower.POWER_ID);
+
+            if (evasiveProtocolPower != null) {
+                evasiveProtocolPower.onActivateCallE(p);
+            }
+
+
+        }
+
     }
 
     public AbstractCard makeCopy() {
@@ -61,7 +108,7 @@ public class SphericShield extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(5);
+            upgradeBlock(4);
         }
     }
 

@@ -55,6 +55,7 @@ public class FutureUpgradePower extends AbstractPower implements CloneablePowerI
             ArrayList<AbstractCard> possibleCards = new ArrayList<>();
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                 if (c.canUpgrade()) {
+                    //&& !(c.color == AbstractCard.CardColor.CURSE)) {
                     possibleCards.add(c);
                 }
             }

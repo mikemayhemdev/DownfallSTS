@@ -1,36 +1,36 @@
 {
   "sneckomod:Unknown": {
     "TEXT": [
-      "未知",
-      "已 升级 的",
-      "每场战斗 #y未知 牌都将随机呈现为其牌池内的一张牌，持续整场战斗。 NL (一些角色专属性较强的牌，即机制相对独立、单牌效果较弱的牌，已被刻意从 #y未知 牌池剔除)",
-      " NL 本局未知牌角色池：",
-      "每场战斗 #y未知 牌都将随机呈现为其牌池内的一张牌，持续整场战斗。 NL (一些角色专属性较强的牌，即机制相对独立、单牌效果较弱的牌，已被刻意从 #y未知 牌池剔除)",
-      "每场战斗 #y未知 牌都将随机呈现为其牌池内的一张牌，持续整场战斗。 NL (一些角色专属性较强的牌，即机制相对独立、单牌效果较弱的牌，已被刻意从 #y未知 牌池剔除)"
+      "Unidentified",
+      " Upgraded ",
+      "At the start of combat, Unidentified cards transform into other random cards from the chosen classes that satisfy certain constraints.",
+      " NL Chosen classes:",
+      "At the start of combat, Unidentified cards transform into other random cards from ANY other class that satisfy certain constraints.",
+      "At the start of combat, Unidentified cards transform into other random cards from other classes that satisfy certain constraints."
     ]
   },
   "sneckomod:UnknownNames": {
     "TEXT": [
-      "未知"
+      "Unidentified"
     ]
   },
   "sneckomod:UnknownClass": {
     "TEXT": [
-      "？？？",
-      " *未知 ",
-      " 牌。",
-      "角色",
-      " ",
-      "你应该看不到这个的。请报告给Vex",
-      "已 升级 的 "
+      "???",
+      "*Unidentified ",
+      " Card.",
+      "Character",
+      "The ",
+      "You should never see this. Report to Vex",
+      "Upgraded "
     ]
   },
   "sneckomod:UpgradedUnknownReward": {
-  "TEXT": [
-    "将一张已升级的未知牌加入牌组",
-    "选择一张牌"
-  ]
-},
+    "TEXT": [
+      "Add an Unidentified+ card to your deck",
+      "Pick a Card."
+    ]
+  },
   "sneckomod:FreeRetainMod": {
     "TEXT": [
       "保留 。 NL "
@@ -41,30 +41,46 @@
       " NL 消耗 。"
     ]
   },
-  
   "sneckomod:ChallengeMode": {
     "TEXT": [
-      "挑战模式 - 混乱无序",
-      "未知牌池扩大到所有角色。适合异蛇高玩享用。"
+      "挑战模式—异蛇·包罗万象",
+      "礼物将来自所有角色，推荐异蛇高玩尝试。"
     ]
   },
   "sneckomod:LockInBonfireOptions": {
     "TEXT": [
-      "明晰",
-      "将未知牌变为特定的牌，可选牌为上场战斗呈现的牌",
-      "需要一张未知牌",
-      "选择一张牌加入你的牌组并移除未知",
-      "[自由行动] 选择一张牌加入你的牌组并移除未知"
+      "Identify",
+      "Lock an Unidentified into a permanent card.",
+      "Requires an Unidentified card.",
+      "Select a card to add to your deck, removing its Unidentified.",
+      "[Free Action] Lock an Unidentified into a permanent card."
+    ]
+  },
+  "sneckomod:CommonAttackReward": {
+    "TEXT": [
+      "将1张异色牌加入你的卡组中。",
+      "选择1张牌。"
+    ]
+  },
+  "sneckomod:DiceRollPotionReward": {
+    "TEXT": [
+      "将1张已升级的牌加入你的卡组中。",
+      "选择1张牌。"
+    ]
+  },
+  "sneckomod:ColorfulPowersCardReward": {
+    "TEXT": [
+      "将1张已升级的能力牌加入你的卡组中。",
+      "选择1张牌。"
     ]
   },
   "sneckomod:AtGameStart": {
     "TEXT": [
       "",
       "牌",
-      "本局游戏 *未知 牌将会变为 ",
-      " 牌。",
-      "选择本局游戏未知牌"
+      "礼物 将包括",
+      " 牌",
+      "选择本局游戏礼物牌"
     ]
   }
 }
-

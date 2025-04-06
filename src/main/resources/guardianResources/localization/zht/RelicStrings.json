@@ -1,20 +1,28 @@
 {
   "Guardian:ModeShifter": {
-    "NAME": "銅制齒輪",
+    "NAME": "銅製齒輪",
     "FLAVOR": "在你最需要的時候保護你。",
     "DESCRIPTIONS": [
-      "戰鬥開始時，獲得一張 #y預防 。 NL 遊戲開始時將 #b1 張普通 #yguardianmod:寶石 牌加入牌組。 "
+      "戰鬥開始時，獲得1張 #y預防 。 NL 遊戲開始時，將 #b1 張普通 #yguardianmod:寶石 牌加入牌組。 "
     ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "守護者齒輪",
-    "FLAVOR": "每3000層更換一次",
+    "FLAVOR": "每過3000層替換1次",
     "DESCRIPTIONS": [
-      "替換 #r銅制齒輪 。 NL 戰鬥開始時，進入 #yguardianmod:防禦模式 並持續 #b3 回合。"
+      "替換 ",
+      " 。 NL 戰鬥開始時，獲得1張 #y預防 。 NL 每當你進入 #y防禦模式 ，獲得 [E] 並抽 #b2 張牌。"
+    ]
+  },
+  "Guardian:ObsidianScales": {
+    "NAME": "黑曜鱗",
+    "FLAVOR": "用鮮血將天空染成漆黑，向所有出手者展開反擊。",
+    "DESCRIPTIONS": [
+      "戰鬥開始時，獲得 #b3 點 #y荊棘 。每當你獲得負面效果，獲得 #b1 層 #y荊棘 。"
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
-    "NAME": "銅制裝甲板",
+    "NAME": "銅製裝甲板",
     "FLAVOR": "裝甲再多也不為過。",
     "DESCRIPTIONS": [
       " #yguardianmod:提防 時額外 #y提防 #b1 。"
@@ -31,21 +39,21 @@
     "NAME": "便攜哨兵",
     "FLAVOR": "哨兵模式啟動。獲取目標成功。無慈悲。",
     "DESCRIPTIONS": [
-      "每 #3 個回合，給予所有敵人 #b1 層 #y虛弱 。"
+      "每 #b3 個回合，給予所有敵人 #b1 層 #y虛弱 。"
     ]
   },
   "Guardian:SackOfGems": {
     "NAME": "寶石袋",
     "FLAVOR": "噢……閃閃發光！",
     "DESCRIPTIONS": [
-      "拾起時，向牌組中加入5張隨機 #yguardianmod:寶石 。"
+      "拾起時，你可以將至多 #b5 張隨機 #yguardianmod:寶石 牌加入牌組。"
     ]
   },
   "Guardian:StasisCodex": {
     "NAME": "機械寶典",
     "FLAVOR": "尖塔最早原型的設計和圖表。",
     "DESCRIPTIONS": [
-      "回合結束時若無被 #y凝滯 的牌，從 #b3 張隨機牌中選擇 #b1 張牌 #yguardianmod:凝滯 。"
+      "前3個回合結束時，若 #y凝滯 欄位未滿，從 #b3 張隨機牌中選擇 #b1 張牌 #yguardianmod:凝滯 。"
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
@@ -66,7 +74,7 @@
     "NAME": "低溫瓶",
     "FLAVOR": "出來的東西總是比進去的好。",
     "DESCRIPTIONS": [
-      "戰鬥開始時，獲得 #b1 個 #yguardianmod:凝滯 欄位。當牌被 #yguardianmod:凝滯 時， #y升級 這張牌。"
+      "戰鬥開始時，獲得 #b1 個 #yguardianmod:凝滯 欄位。 #yguardianmod:凝滯 一張牌時，將其 #y升級 。"
     ]
   },
   "Guardian:BottledStasis": {
@@ -84,10 +92,10 @@
     "NAME": "量子容器",
     "FLAVOR": "你通過孵化雞蛋而不是砸碎雞蛋來獲得雞。",
     "DESCRIPTIONS": [
-      "拾起時，選擇 #b1 張牌。 NL 戰鬥開始時，將其移出牌組。第 #b4 回合開始時，將其 #b2 張復制品加入手牌。",
+      "拾起時，選擇牌組 #b1 張牌。 NL 戰鬥開始時，將其移出牌組。第 #b4 回合開始時，將其 #b2 張復製品加入手牌。",
       "選擇一張牌 ",
       "戰鬥開始時，將 ",
-      " 移出牌組。 第 #b4 回合開始時，將其 #b2 張復制品加入手牌。"
+      " 移出牌組。 第 #b4 回合開始時，將其 #b2 張復製品加入手牌。"
     ]
   },
     "Guardian:TickHelperRelic": {
@@ -101,14 +109,14 @@
     "NAME": "星光采礦鎬",
     "FLAVOR": "有那麽多寶石散落在尖塔中，很難想象有這麽不幸的人需要這把鎬來幫助他們。",
     "DESCRIPTIONS": [
-	"你能在 #b3 個休息處各 #y挖掘 #b2 顆 #yguardianmod:寶石 #b1 次。"
+	"你能在休息處 #y挖掘 #b2 顆 #yguardianmod:寶石 ，你可以選擇將它們加入牌組中。（至多使用 #b3 次）"
     ]
   },
     "Guardian:GemstoneGun": {
     "NAME": "寶石槍",
     "FLAVOR": "砰！砰！砰！嘿，我打中了三個！",
     "DESCRIPTIONS": [
-      "拾起時，選擇 #b3 張 #yguardianmod:寶石 牌。 NL 戰鬥開始時，獲得 #b1 張 #y鑲嵌 有它們的 #b0 耗能 #y保留 #y消耗 牌。",
+      "拾起時，可從 #b3 張隨機 #yguardianmod:寶石 牌中選擇 #b1 張，重復三次。 NL 戰鬥開始時，獲得 #b1 張 #y鑲嵌 有它們的 #b0 耗能 #y保留 #y消耗 牌。",
       "選擇寶石裝入寶石槍"
     ]
   },
@@ -116,7 +124,7 @@
     "NAME": "瓶裝異常",
     "FLAVOR": "旋轉，旋轉，最後破碎。",
     "DESCRIPTIONS": [
-      "拾起時，選擇 #b1 張牌。 NL 戰鬥開始時，將其移出牌組。第 #b3 回合開始時，再將其加入手牌並且本場戰鬥耗能變為 #b0 。",
+      "拾起時，選擇牌組 #b1 張牌。 NL 戰鬥開始時，將其移出牌組。第 #b3 回合開始時，再將其加入手牌並且本場戰鬥第1次打出的耗能變為 #b0 。",
       "選擇一張牌 ",
       "戰鬥開始時，將 ",
       " 移出牌組。第 #b3 回合開始時，再將其加入手牌並且本場戰鬥耗能變為 #b0 。",

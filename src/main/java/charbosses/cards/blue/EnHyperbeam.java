@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.powers.LockOnPower;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
@@ -38,6 +39,7 @@ public class EnHyperbeam extends AbstractBossCard {
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
+
                 ArchetypeAct3OrbsNewAge.resetPretendFocus();
                 isDone = true;
             }

@@ -102,12 +102,14 @@
   "downfall:BonfireSpirits": {
     "NAME": "Esprits du feu de camp",
     "DESCRIPTIONS": [
-      "Les esprits affamés consomment votre offrande ! Ils se régalent des âmes, brûlant intensément alors que le feu @double@ de force. NL Les esprits dansent autour de vous, excités avant ~de~ ~fusionner~ ~avec~ ~vous,~ vous réchauffant et vous renforçant. NL Vos PV max augmentent de 10 et vous êtes #gsoigné totalement."
+      "Les esprits affamés consomment votre offrande ! Ils se régalent des âmes, brûlant intensément alors que le feu @double@ de force. NL Les esprits dansent autour de vous, excités avant ~de~ ~fusionner~ ~avec~ ~vous,~ vous réchauffant et vous renforçant. NL Vos PV max augmentent de 10 et vous êtes #gsoigné totalement.",
+	  "Vous tendez la main pour #ptake... NL Les esprits @shriek,@ ~tourbillonne~ autour du vortex qui émerge de ta paume dans des tentatives inutiles de fuite. NL Bientôt, leurs esprits eux-mêmes ne sont rien de plus qu'un objet de votre collection."																																												  
     ],
     "OPTIONS": [
       "[Offrir] #rPerdez #r150 #rÂmes. #gGagnez #g10 #gPV #gMax.",
       "[Verrouillé] Requiert 150 Âmes.",
-      "[Offrir] #rPerdez #r150 #rÂmes. #gChaque #gDiablotin #gGagne #g2 #gPV #gMax."
+      "[Offrir] #rPerdez #r150 #rÂmes. #gChaque #gDiablotin #gGagne #g2 #gPV #gMax.",
+      "[Prendre]"
     ]
   },
   "downfall:FaceTrader": {
@@ -168,7 +170,8 @@
       "Vous ne voyez aucune raison d'être impliqué dans ça. Il y a des meurtres plus importants à faire.",
       "\"Oh non, vous êtes épouvantable!! Ça ne va pas, non non non. C'est quoi ce style? Vous devez être @menaçant!@ Un #rseigneur de la Tour intimidant et effrayant! Vous ~devez~ me laisser faire un relooking.\" NL NL Vous n'êtes pas sûr si vous devez faire confiance en cet homme et accepter ses services, ou si vous devriez vous sentir insulté par son dégoût de votre style.",
       "\"Ok, à bientôt ! Dites à vos #ramis de me payer une visite !\" NL NL Même si vous étiez perplexe de la technique de cette homme, vous vous sentez définitivement plus intimidant à présent.",
-      "Vous le frappez. NL \"Mon @VISAGE!!@ Maintenant je vais devoir-\" NL NL Il s'est évanoui. La prochaine fois il devrait faire attention à ce qu'il dit avant d'insulter une créature de votre rang."
+      "Vous le frappez. NL \"Mon @VISAGE!!@ Maintenant je vais devoir-\" NL NL Il s'est évanoui. La prochaine fois il devrait faire attention à ce qu'il dit avant d'insulter une créature de votre rang.",
+	  "Vous mettez le voleur de côté – votre ~vraie~ ~proie~ est ce pitoyable designer. Il recule à votre approche, mais vous étendez votre #glantern, et désormais son âme et votre..."																															 
     ],
     "OPTIONS": [
       "[Ajustements] ",
@@ -239,7 +242,8 @@
       "Vous pénétrez dans une salle et remarquez un grand trou dans le sol. Tandis que vous approchez du trou, une énorme créature serpentine en émerge. NL NL ~\"Oh~ ~oooh!~ ~Bonjour~ ~bonjour!~ ~Qu'avons-nous~ ~là?~ Pour vous, mon seigneur, je vais vous poser une simple question. NL Il n'est pas de vie plus satifaisante que celle où l'on peut #r~tout~ #r~frapper!~ NL Êtes-vous d'accord?\"",
       "~\"Ssssssssssss..~ ~..ssSSs.....~ ~ss...~ ~sssss....\"~",
       "Le serpent vous fixe du regard et semble extrêmement déçu.",
-      " NL NL Le serpent lève sa tête et lâche un affrux cri. Alors que son corps se relâche et tombe dans la fosse, la force vitale de la créature devient disponible pour la récolte. NL NL C'est impressionnant, mais vous ne vous pouvez pas vous empêcher de vous demander si le serpent ne parlait pas métaphoriquement. Peut-être avait-il l'intention de vous aider et de vous encourager à faire violence aux autres, mais pas à lui-même..."
+      " NL NL Le serpent lève sa tête et lâche un affrux cri. Alors que son corps se relâche et tombe dans la fosse, la force vitale de la créature devient disponible pour la récolte. NL NL C'est impressionnant, mais vous ne vous pouvez pas vous empêcher de vous demander si le serpent ne parlait pas métaphoriquement. Peut-être avait-il l'intention de vous aider et de vous encourager à faire violence aux autres, mais pas à lui-même...",
+      "Tandis que tu tends la main, le serpent @rears@ @back,@ hurlant de peur. ~\"Hssss - le collecteur!\"~ NL NL ~\"Ta cupidité surpasse la mienne. Laisssssez moi partir...\"~ NL Vous ne faites pas attention au serpent. Son esprit est le vôtre, vous continuez."																																																													  
     ],
     "OPTIONS": [
       "[D'accord] [Frapper] #gGagnez #g",
@@ -373,7 +377,8 @@
     "NAME": "Vagabond implorant",
     "DESCRIPTIONS": [
       "Vous tuez l'homme et récoltez son âme. Des ~exclamations~ viennent de la foule derrière vous. NL \"Il vient de tuer Burgundy!\" dit une personne, alors que plus de mendiants commme celui que vous avez rencontré commencent à s'approcher de vous. NL NL Vous vous échappez, mais pas sans quelques #rgriffures et #rmorsures qu'ils vous ont infligé.",
-      "Vous prenez la précieuse #yrelique de ses mains et repartez. NL Venant de derrière vous entendez, NL \"N'avez vous pas honte? ~N'AVEZ~ ~VOUS~ ~PAS~ ~HOOOOONTE?!\"~ NL Vous n'avez #pabsolument #ppas #pde #phonte. C'est un honneur d'être volé par un seigneur de la Tour!"
+      "Vous prenez la précieuse #yrelique de ses mains et repartez. NL Venant de derrière vous entendez, NL \"N'avez vous pas honte? ~N'AVEZ~ ~VOUS~ ~PAS~ ~HOOOOONTE?!\"~ NL Vous n'avez #pabsolument #ppas #pde #phonte. C'est un honneur d'être volé par un seigneur de la Tour!",
+      "Vous ne vous souciez pas des jouets de l'homme - son ~esprit~ est ce qui sera le plus utile. Le pauvre homme gémit pendant que tu @outstretch@ @your@ @arm...@"																																			 
     ],
     "OPTIONS": [
       "[Frapper] #gGagnez #g85 #gÂmes. #rPerdez #r",

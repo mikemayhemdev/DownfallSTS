@@ -11,7 +11,7 @@
   },
   "champ:TechniqueMod": {
     "TEXT": [
-      " NL 스킬 카드 보너스 효과를 얻습니다."
+      " NL *스킬 *카드 champ:보너스 효과를 얻습니다."
     ]
   },
   "champ:OpenerMod": {

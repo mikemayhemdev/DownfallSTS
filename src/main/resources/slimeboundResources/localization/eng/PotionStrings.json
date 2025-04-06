@@ -3,7 +3,7 @@
     "NAME": "Jar of Slime",
     "DESCRIPTIONS": [
       "Apply #b",
-      " #yGoop."
+      " #yGoop [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SlimyTonguePotion": {

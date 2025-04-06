@@ -358,7 +358,8 @@ public class PropertiesMod extends AbstractCardModifier {
     }
 
     //Retain Override - do not remove - even if it is technically different from how the game usually works, I will do what I am allowed to force the mechanics to work as they are described - Stanek
-    @Override
+    //sorry - blue
+   @Override
     public void onRetained(AbstractCard card) {
         if (card.isEthereal)
             AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand, true));

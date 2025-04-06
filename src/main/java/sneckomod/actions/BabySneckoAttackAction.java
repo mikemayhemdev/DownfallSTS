@@ -21,7 +21,7 @@ public class BabySneckoAttackAction extends AbstractGameAction {
     public void update() {
         this.b.baby.state.setAnimation(0, "boop", false);
         this.b.baby.state.addAnimation(0, "idle", true, 0.0f);
-        AbstractDungeon.actionManager.addToBottom(new PseudoDamageRandomEnemyAction(m, new DamageInfo(AbstractDungeon.player, 5, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        AbstractDungeon.actionManager.addToBottom(new PseudoDamageRandomEnemyAction(m, new DamageInfo(AbstractDungeon.player, 9, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
         this.isDone = true;
     }

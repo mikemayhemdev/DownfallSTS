@@ -15,7 +15,8 @@
       "PV",
       "Mort!",
       "de Force",
-      "Âmes volées"
+      "Âmes volées",
+      "Perte"			
     ]
   },
   "downfall:BustKeyButton": {
@@ -63,7 +64,7 @@
       "Prevent Snecko from using card pools from other mods.",
       "Désactive le remplacement de la musique (requiert un restart du jeu)",
       "Débloque tous les déguisements alternatifs des personnages Downfall",
-      "Allow display card's subtype next to main type."
+      "Utilisez des icônes au lieu de texte pour les propriétés appliquées."
     ]
   },
   "downfall:EnergyPanelTip": {
@@ -159,5 +160,11 @@
       "le Steam Workshop.",
       "Cliquez ici pour savoir comment !"
     ]
+  },
+  "downfall:CantEscapeGauntlet": {
+    "TEXT": [
+      "Je suis dépassé."
+    ],
+    "Translator note": "This pops up when you try to escape the gauntlet fight, where there are more than 1 hero alive yet, so you are overwhelmed by number thus cant escape."
   }
 }

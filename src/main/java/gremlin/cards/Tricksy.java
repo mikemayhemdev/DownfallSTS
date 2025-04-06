@@ -12,6 +12,7 @@ import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.actions.TricksyFollowUpAction;
 import gremlin.orbs.SneakyGremlin;
+import sneckomod.SneckoMod;
 
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 
@@ -32,7 +33,7 @@ public class Tricksy extends AbstractGremlinCard {
     public Tricksy()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
-
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         this.tags.add(SNEAKY_GREMLIN);

@@ -3,28 +3,28 @@
     "NAME": "Snecko Soul",
     "FLAVOR": "0...3...2...2...1",
     "DESCRIPTIONS": [
-      "The first time you play an #ysneckomod:Offclass card in a combat, gain [E] and draw a card."
+      "At the start of each combat, add #ySoul #yRoll to your hand."
     ]
   },
   "sneckomod:SuperSneckoSoul": {
     "NAME": "Super Snecko Soul",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
-      "Replaces [#407B93]Snecko Soul[]. NL The first time you play an #ysneckomod:Offclass each turn, gain [E] ."
+      "Replaces [#407B93]Snecko [#407B93]Soul[]. NL At the start of each combat and every other turn, gain a #ySoul #yRoll [REMOVE_SPACE]. NL On other turns, draws an additional card at the start of your turn and #ysneckomod:Muddles it."
     ]
   },
   "sneckomod:CleanMud": {
     "NAME": "Snake-Charmer's Flute",
     "FLAVOR": "Sssssss...",
     "DESCRIPTIONS": [
-      "#ysneckomod:Muddled cards can't cost #b3."
+      "#ysneckomod:Muddled cards can't cost #b3 [REMOVE_SPACE]."
     ]
   },
   "sneckomod:ConfusingCodex": {
     "NAME": "Ring of the Snek",
     "FLAVOR": "Illegible, unreadable, due by Thursday.",
     "DESCRIPTIONS": [
-      "At the start of combat, apply #b0-2 #yWeak and #yVulnerable to ALL enemies."
+      "Whenever you activate #b3 #ysneckomod:Overflow effects, apply #b1 #yWeak and #yVulnerable to a random enemy."
     ]
   },
   "sneckomod:CrystallizedMud": {
@@ -38,83 +38,81 @@
     "NAME": "Loaded Die",
     "FLAVOR": "Cheese-stuffed.",
     "DESCRIPTIONS": [
-      "Cards that choose random numbers have +1 minimum."
+      "Whenever a card is #ysneckomod:Muddled, gain #b1 #yBlock [REMOVE_SPACE]."
     ]
   },
   "sneckomod:RareBoosterPack": {
     "NAME": "Rare Booster Box",
     "FLAVOR": "Mint condition.",
     "DESCRIPTIONS": [
-      "Upon pickup, obtain a #yUnidentified #yRare card of each card type."
+      "Upon pickup, obtain an #ysneckomod:Offclass #yRare card."
     ]
   },
   "sneckomod:SleevedAce": {
     "NAME": "Sleeved Ace",
     "FLAVOR": "We're all aces.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain a #yPure #yLuck with #yRetain."
+      "At the start of each combat, gain a #yMarked #yCard [REMOVE_SPACE]."
     ]
   },
   "sneckomod:UnknownEgg": {
     "NAME": "Unidentified Egg",
     "FLAVOR": "What will hatch? Pay $1000 to see.",
     "DESCRIPTIONS": [
-      "#yIdentifying becomes a free action. NL #yUnidentified cards in card rewards are #yUpgraded."
+      "Whenever you add an #ysneckomod:Offclass card to your deck, #yUpgrade it. Upon pickup, #yUpgrade #b2 random #ysneckomod:Offclass cards."
     ]
   },
   "sneckomod:SuperSneckoEye": {
     "NAME": "Super Snecko Eye",
     "FLAVOR": "0121012",
     "DESCRIPTIONS": [
-      "Replaces #ySnecko #yEye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0."
+      "Replaces #ySnecko #yEye. At the start of your turn, draw #b4 additional cards. Start each combat #yConfused."
     ]
   },
   "sneckomod:SneckoTalon": {
     "NAME": "Idol of Retromation",
     "FLAVOR": "Often called the Idol of Reto for short.",
     "DESCRIPTIONS": [
-      "At the start of your turn, reduce the cost of the most expensive card in your hand by #b1 for this turn."
+      "At the start of your turn, reduce the cost of a random card that costs at least #b1 in your hand by #b1 for this turn."
     ]
   },
   "sneckomod:BlankCard": {
     "NAME": "Blank Card",
     "FLAVOR": "Card Mimic.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add an #ygremlin:Echo of a random card from your deck to your hand. It costs #b0 ."
+      "At the start of each combat, add an #ygremlin:Echo of a random #rnon-Curse [REMOVE_SPACE], #ynon-Status card from your deck to your hand. It costs #b0 [REMOVE_SPACE]."
     ]
   },
   "sneckomod:D8": {
     "NAME": "Mystical Octahedron",
     "FLAVOR": "It appears weighted toward one side.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card that selects a random number for its effects. This card always selects its maximum possible number.",
+      "Upon pickup, choose a card that has an #ysneckomod:Overflow effect. Whenever you play it, gain #b4 #yBlock and activate its #yOverflow effect, even if you don't have more than #b5 cards in hand.",
       "Choose a card for ",
       "Whenever ",
-      " is played, it chooses its maximum possible number for its effect."
+      " is played, gain #b4 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than #b5 cards in hand."
     ]
   },
   "sneckomod:BabySnecko": {
     "NAME": "Young Snecko",
     "FLAVOR": "Bewilderingly adorable.",
     "DESCRIPTIONS": [
-      "Deals #b5 damage to a random enemy at the start of your turn."
+      "Deals #b9 damage to a random enemy and #ysneckomod:Muddles #b2 random (not #b0 cost, #bX [REMOVE_SPACE], or #yUnplayable [REMOVE_SPACE]) cards in your hand at the start of your turn."
     ]
   },
   "sneckomod:SneckoCommon": {
     "NAME": "Seal of Approval",
     "FLAVOR": "I'm The Ironclad and this is my favorite Relic in the Spire.  -Merchant Advertising Pamphlet",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b1 of #b3 #yUnidentified #yCharacter cards to add to your deck. All future #yUnidentified #yCharacter cards found will be of this character.",
-      "All Unidentified Character cards found will be ",
-      " cards."
+      "Upon pickup, choose #b1 of #b5 Uncommon #ysneckomod:Offclass #yPowers to obtain."
     ]
   },
   "sneckomod:SneckoBoss": {
     "NAME": "Lucky Horseshoe",
     "FLAVOR": "Make your own luck.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b1 of #b3 #yUnidentified #yCharacter cards. Add #b5 copies of it to your deck. All combats drop an additional card reward of the chosen character's cards.",
-      "Upon pickup, obtain #b5 #yUnidentified ",
+      "Upon pickup, choose #b1 of #b3 #yCharacters [REMOVE_SPACE]. Choose #b3 #yUpgraded Uncommon cards and #b2 Rare cards to add to your deck. All combats drop an additional card reward of the chosen character's cards.",
+      "Upon pickup, obtain #b3 Upgraded Uncommon and #b2 Rare ",
       " cards. All combats drop an additional ",
       " card reward."
     ]

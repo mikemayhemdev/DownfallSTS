@@ -21,6 +21,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.Random;
 
+import static champ.ChampMod.vigor;
 import static hermit.HermitMod.makeRelicOutlinePath;
 import static hermit.HermitMod.makeRelicPath;
 
@@ -39,7 +40,11 @@ public class CharredGlove extends CustomRelic {
     public void onCardDraw(AbstractCard card) {
         if (card.color == AbstractCard.CardColor.CURSE) {
             this.flash();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, 3), 3));
+            //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, 3), 3));
+
+            //This should NEVER happen but maybe there's some cross-mod nonsense that allows it to happen.
+            //Mechanically speaking, this is so basically identical.
+            vigor(3);
         }
 
     }

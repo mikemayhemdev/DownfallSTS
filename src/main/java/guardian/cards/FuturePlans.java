@@ -19,7 +19,7 @@ public class FuturePlans extends AbstractGuardianCard {
     private static final CardStrings cardStrings;
 
     public FuturePlans() {
-        super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.POWER, AbstractCardEnum.GUARDIAN, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.POWER, AbstractCardEnum.GUARDIAN, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 1;
         this.socketCount = 0;
         updateDescription();

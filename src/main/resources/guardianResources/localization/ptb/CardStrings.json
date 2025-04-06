@@ -409,11 +409,6 @@
     "DESCRIPTION": "Ganhe uma Martelada, Canhão Omega e Mudança de Modo. NL Exaurir.",
     "UPGRADE_DESCRIPTION": "Ganhe uma Martelada+, Canhão Omega+ e Mudança de Modo+. NL Exaurir."
   },
-  "Guardian:PackageMass": {
-    "NAME": "Pacote: Massa",
-    "DESCRIPTION": "Ganhe uma Massa de Espinhos, Massa de Bombas e Golpe em Grupo. NL Exaurir.",
-    "UPGRADE_DESCRIPTION": "Ganhe uma Massa de Espinhos+, Massa de Bombas+ e Golpe em Grupo+. NL Exaurir."
-  },
   "Guardian:MassOfThorns": {
     "NAME": "Massa de Espinhos",
     "DESCRIPTION": "Ganhe !M! Espinhos temporários. NL Exaurir se você tiver Artefato."

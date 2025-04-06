@@ -39,14 +39,15 @@
   "Gremlin:Crippled": {
     "NAME": "致殘",
     "DESCRIPTIONS": [
-      "其 #y虛弱 不會消失。敵方回合結束時，其失去 #y虛弱 層數點生命。"
+      "獲得 #y虛弱 時，失去",
+      " 點生命"
     ]
   },
   "Gremlin:Encore": {
     "NAME": "喝彩",
     "DESCRIPTIONS": [
-      "每當你使用 #y法力 時，對所有敵人造成 #b",
-      " 點傷害。"
+      "#y法力 造成 #b",
+      " 點額外傷害。"
     ]
   },
   "Gremlin:Enthusiasm": {
@@ -170,6 +171,7 @@
   "Gremlin:SneakyGremlin": {
     "NAME": "卑鄙地精",
     "DESCRIPTIONS": [
+      "0 耗能牌額外造成傷害 #b",
       "每當你打出 #y攻擊牌 時，隨機對一名敵人造成 #b",
       " 點傷害。"
     ]

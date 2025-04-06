@@ -32,7 +32,7 @@ public class QuickStudy extends AbstractExpansionCard {
             if (q.rarity != CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
 
                 if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-                    if(q.cardID.equals(PrepareCrush.ID)){continue;}
+                    if(q.cardID.equals(SuperPrepareCrush.ID)){continue;}
                 }
                 if (AbstractDungeon.player instanceof TheHexaghost ) {
                     if(q.cardID.equals(Hexaburn.ID)){continue;}
@@ -54,7 +54,7 @@ public class QuickStudy extends AbstractExpansionCard {
                 if (upgraded) {
                     r.upgrade();
                 }
-                r.modifyCostForCombat(-99);
+                r.freeToPlayOnce = true;
                 myList.add(r);
             }
         }
@@ -70,6 +70,7 @@ public class QuickStudy extends AbstractExpansionCard {
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_skill.png", "expansioncontentResources/images/1024/bg_boss_skill.png");
         this.exhaust = true;
         loadJokeCardImage(this, "QuickStudy.png");
+        //this.tags.add(expansionContentMod.STUDY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

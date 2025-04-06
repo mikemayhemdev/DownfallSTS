@@ -25,7 +25,7 @@ public class BronzeIdol extends CustomRelic {
     private CardPowerTip card_tip = new CardPowerTip(null);
 
     public BronzeIdol() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
         card_list.add(new Daze());
         card_list.add(new UsefulSlime());
         card_list.add(new Ignite());

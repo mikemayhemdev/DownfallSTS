@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.MonsterRoom;
+import com.megacrit.cardcrawl.rooms.ShopRoom;
 import downfall.actions.WaitForEscapeAction;
 import downfall.downfallMod;
 import gremlin.characters.GremlinCharacter;
@@ -28,31 +30,32 @@ public class HeartsMalice extends CustomRelic {
     }
 
     public void atBattleStart() {
-        if (this.counter > 0) {
-            --this.counter;
-            if (this.counter == 0) {
-                this.setCounter(-2);
-                this.description = this.DESCRIPTIONS[1];
-                this.tips.clear();
-                this.tips.add(new PowerTip(this.name, this.description));
-                this.initializeTips();
-            }
+        if (!(AbstractDungeon.getCurrRoom() instanceof ShopRoom)) {
+            if (this.counter > 0) {
+                --this.counter;
+                if (this.counter == 0) {
+                    this.setCounter(-2);
+                    this.description = this.DESCRIPTIONS[1];
+                    this.tips.clear();
+                    this.tips.add(new PowerTip(this.name, this.description));
+                    this.initializeTips();
+                }
 
-            this.flash();
+                this.flash();
 
-            //AbstractDungeon.actionManager.actions.removeIf((act)->act instanceof DrawCardAction); Works, but may cause issues if somehow not all enemies flee.
-            AbstractDungeon.actionManager.addToTop(new WaitForEscapeAction()); //This works better.
-            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                AbstractDungeon.actionManager.addToTop(new EscapeAction(m));
-            }
+                //AbstractDungeon.actionManager.actions.removeIf((act)->act instanceof DrawCardAction); Works, but may cause issues if somehow not all enemies flee.
+                AbstractDungeon.actionManager.addToTop(new WaitForEscapeAction()); //This works better.
+                for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                    AbstractDungeon.actionManager.addToTop(new EscapeAction(m));
+                }
 
-            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
-            if(AbstractDungeon.player instanceof GremlinCharacter) {
-                ((GremlinCharacter) AbstractDungeon.player).mobState.startOfBattle((GremlinCharacter)AbstractDungeon.player);
+                if (AbstractDungeon.player instanceof GremlinCharacter) {
+                    ((GremlinCharacter) AbstractDungeon.player).mobState.startOfBattle((GremlinCharacter) AbstractDungeon.player);
+                }
             }
         }
-
     }
 
     public void setCounter(int setCounter) {

@@ -1,6 +1,7 @@
 package theHexaghost.relics;
 
 import basemod.abstracts.CustomRelic;
+import champ.cards.Strike;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
@@ -9,6 +10,8 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import expansioncontent.actions.EchoACardAction;
+import hermit.cards.Strike_Hermit;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
@@ -22,7 +25,7 @@ public class Sixitude extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Sixitude.png"));
 
     public Sixitude() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
         this.counter = 0;
     }
 
@@ -33,7 +36,9 @@ public class Sixitude extends CustomRelic {
             this.flash();
             this.counter = 0;
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.addToBot(new DamageRandomEnemyAction(new DamageInfo(null, 6, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+           // this.addToBot(new DamageRandomEnemyAction(new DamageInfo(null, 6, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+            AbstractCard c2 = new Strike_Hermit();
+            addToBot(new EchoACardAction(c2, true));
         }
     }
 

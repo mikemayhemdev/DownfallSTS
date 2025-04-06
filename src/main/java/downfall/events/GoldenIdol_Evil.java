@@ -36,6 +36,10 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
         super(NAME, "", "images/events/goldenIdol.jpg");
         this.screen = CurScreen.INTRO;
 
+        if (AbstractDungeon.ascensionLevel >= 15){
+            gold = 75;
+        }
+
         if (!trapAlreadySet) {
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                 if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {

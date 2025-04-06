@@ -2,7 +2,6 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.city.Snecko;
 import sneckomod.SneckoMod;
 import sneckomod.actions.NopeAction;
 
@@ -12,19 +11,24 @@ public class Nope extends AbstractSneckoCard {
 
     //stupid intellij stuff SKILL, SELF, COMMON
 
+    private static final int BLOCK = 7;
+    private static final int UPG_BLOCK = 3;
+
     public Nope() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = BLOCK;
         SneckoMod.loadJokeCardImage(this, "Nope.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new NopeAction(upgraded));
+        blck();
+        atb(new NopeAction());
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeBlock(UPG_BLOCK);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

@@ -3,7 +3,7 @@
     "NAME": "翠绿火炬",
     "FLAVOR": "贪婪之火永不灭。",
     "DESCRIPTIONS": [
-      "战斗开始时，获得 #b1 #ycollector:储能 。"
+      "战斗开始时，获得一张 #y余烬 。每场战斗首次 #y消耗 一张 #y余烬 时，获得 #b1 #ycollector:储能 。"
     ]
   },
   "collector:PrismaticTorch": {
@@ -11,7 +11,7 @@
     "FLAVOR": "各色斑斓的火焰昭示着命运的偏袒。",
     "DESCRIPTIONS": [
       "替换 ",
-      " 。战斗开始时，获得一张 #y余烬 与 #b1 #ycollector:储能 。每回合首次 #y消耗 一张 #y余烬 时，获得 #b1 #ycollector:储能 。"
+      " 。战斗开始时，获得两张 #y余烬 。每回合首次 #y消耗 一张 #y余烬 时，获得 #b1 #ycollector:储能 。"
     ]
   },
   "collector:HolidayCoal": {
@@ -33,8 +33,8 @@
     "NAME": "玉戒指",
     "FLAVOR": "玉象征着诚实。",
     "DESCRIPTIONS": [
-      "每当一名 #ycollector:魂劫 中的非爪牙敌人死亡时，获得 #b",
-      " 灵魂。"
+      "#ycollector:魂劫 额外造成 #b",
+      " 点伤害。"
     ]
   },
   "collector:SoullitLamp": {
@@ -63,7 +63,7 @@
     "NAME": "液罐",
     "FLAVOR": "真恶心。",
     "DESCRIPTIONS": [
-      "回合结束时， #y保留 耗能最高的手牌。"
+      "回合结束时， #y保留 耗能最低的手牌。"
     ]
   },
   "collector:AutoCurser": {
@@ -77,7 +77,7 @@
     "NAME": "风笛",
     "FLAVOR": "这种可怕的乐器据说曾惊扰到元世祖。",
     "DESCRIPTIONS": [
-      "每当你给予 #y虚弱 或 #y易伤 时，额外给予 #b1 层。"
+      "每当你给予 #y虚弱 或 #y易伤 时，若目标没有该 #r负面效果，额外给予 #b1 层。"
     ]
   },
   "collector:BottledCollectible": {
@@ -102,7 +102,7 @@
     "NAME": "禁忌之果",
     "FLAVOR": "这种水果看起来真陌生。",
     "DESCRIPTIONS": [
-      "拾起时，从所有可获得的牌中各选择 #b1 张普通、 #b罕见 ，及 #y稀有 牌。 NL 获得一张 #r死灵诅咒 。",
+      "拾起时，从所有可获得的牌中各选择 #b1 张普通、 #b罕见 ，及 #y稀有牌。 NL 获得一张 #r虚脱 。",
       "选择一张稀有牌加入牌组。",
       "选择一张罕见牌加入牌组。",
       "选择一张普通牌加入牌组。"
@@ -112,7 +112,8 @@
     "NAME": "粗糙钻石",
     "FLAVOR": "矿藏耗尽后，哪怕这般暗淡的石头也变得值钱起来。",
     "DESCRIPTIONS": [
-      "每当你打出一张 #b2 耗能及以上的 #y稀有 牌， 获得 [E] 。"
+      "每回合首次打出一张 #y稀有牌， 获得 [E] 。将一张稀有牌加入牌组。",
+      "选择一张普通牌加入牌组。"
     ]
   },
   "collector:BlockedChakra": {

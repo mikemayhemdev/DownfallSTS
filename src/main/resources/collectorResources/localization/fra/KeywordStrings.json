@@ -1,0 +1,49 @@
+[
+  {
+    "PROPER_NAME": "Affligé",
+    "NAMES": [
+      "affligé",
+	  "afflicted"
+    ],
+    "DESCRIPTION": "Les créature sont affligé quand elle sont #yVulnérable et #yAffaiblis."
+  },
+  {
+    "PROPER_NAME": "Malédiction",
+    "NAMES": [
+      "malédiction",
+      "maudite",
+	  "doom",
+      "doomed"
+    ],
+    "DESCRIPTION": "Les créatures maudites perdent des PV au début de leur tour, ensuite la malédiction est retirez #bsauf_si la créature est #yAffligé (#yAffaiblis et #yVulnérable [REMOVE_SPACE])."
+  },
+  {
+    "PROPER_NAME": "Bûcher",
+    "NAMES": [
+      "bûcher"
+    ],
+    "DESCRIPTION": "Nécessite d'épuiser une carte en main en plus de payer son coût en énergie."
+  },
+  {
+    "PROPER_NAME": "Réserve",
+    "NAMES": [
+      "réserve",
+      "réserves"
+    ],
+    "DESCRIPTION": "Un type alternatif d'énergie stockée au fil des tours."
+  },
+  {
+    "PROPER_NAME": "MegaÉthérée",
+    "NAMES": [
+      "megaÉthérée"
+    ],
+    "DESCRIPTION": "Les cartes MegaÉthérée vont dans la défausse quand jouez ou a la fin du tour, peu importe ou elle sont."
+  },
+  {
+    "PROPER_NAME": "Tête de torche",
+    "NAMES": [
+      "têtedetorche"
+    ],
+    "DESCRIPTION": "Quand vous avez des #yPV #yTemporaire, chaque attaque que vous jouez déclenche Tête de torche."
+  }
+]

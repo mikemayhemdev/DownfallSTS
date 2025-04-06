@@ -12,7 +12,7 @@ public class HolidayCoal extends CustomRelic {
     private static final String OUTLINE_IMG_PATH = HolidayCoal.class.getSimpleName() + ".png";
 
     public HolidayCoal() {
-        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.SHOP, LandingSound.MAGICAL);
         tips.add(new CardPowerTip(new LuckyWick()));
     }
 

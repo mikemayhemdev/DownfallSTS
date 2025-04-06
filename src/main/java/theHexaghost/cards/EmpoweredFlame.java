@@ -10,7 +10,7 @@ public class EmpoweredFlame extends AbstractHexaCard {
 
     public final static String ID = makeID("EmpoweredFlame");
 
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
 
     public EmpoweredFlame() {

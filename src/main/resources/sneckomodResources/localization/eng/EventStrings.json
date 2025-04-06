@@ -2,17 +2,17 @@
   "sneckomod:D8": {
     "NAME": "Mystical Octahedron",
     "DESCRIPTIONS": [
-      "Approach the mystical octahedron.",
+      "Through the mist, you arrive at a tranquil space. In the center of the ruins, a #gmysterious #goctahedron silently floats. It slowly rotates, its surface #b~glowing~ #b~faintly,~ as if some kind of #y~primordial~ #y~artifact.~ NL As you reach out, about to touch its surface, the octahedron #b~suddenly~ #b~lights~ #b~up,~ and intricate runes flash by in a stream of light. You feel a #r@slight@ #r@tremor@ rising from the ground, the surrounding air grows #pheavier, and the entire space seems to hold its breath, awaiting your next move. You decide...",
       "Relic go boom.",
       "Got relic.",
       "Decided to leave."
     ],
     "OPTIONS": [
       "[Shatter] #rLose #r",
-      " #r HP. #gGain #g5 #gUnidentified #gCards",
+      " #r HP. #gChoose #b1 of #b3 Rare #yOffclass Cards to Obtain.",
       "[Take] #gGain #gMystical #gOctahedron. #rCursed #r- #rPain.",
       "[Leave]",
-      "[Locked] Requires a card that uses a randomly chosen number."
+      "[Locked] Requires an Overflow card."
     ]
   },
   "sneckomod:BackToBasics": {
@@ -21,7 +21,7 @@
       "Creativity triumphs over planning every time."
     ],
     "OPTIONS": [
-      "[Improvisation] #gReplace all #gStrikes and #gDefends with random #gUnidentified cards.",
+      "[Improvisation] #gReplace all #gStrikes and #gDefends with #rOffclass ones.",
       "[Locked] Requires a Strike or Defend."
     ]
   },
@@ -33,7 +33,7 @@
       "The serpent stares at you with a look of extreme disappointment, but ultimately smiles and wishes you well on your journey."
     ],
     "OPTIONS": [
-      "[Agree] #gGain #ga #grandom #gRelic. #rBecome #rCursed #r- #rBewildered.",
+      "[Agree] #gGain #ga #gSnecko #gRelic. #rBecome #rCursed #r- #rBewildered.",
       "[Disagree]",
       "[Leave]"
     ]
@@ -46,7 +46,7 @@
       "The serpent stares at you with a look of extreme disappointment, but ultimately smiles and wishes you well on your journey."
     ],
     "OPTIONS": [
-      "[Rescue] #gGain #gYoung #gSnecko. #rBecome #rCursed #r- #rBewildered.",
+      "[Rescue] #gGain #gYoung #gSnecko. #rFight #ran #rAngry #rCenturion.",
       "[Leave]"
     ]
   }

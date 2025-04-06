@@ -88,7 +88,7 @@
         "DESCRIPTIONS": ["额外获得 #b", " 回合。", " 回合。"]
 },
 "hermit:MaintenanceStrikePower": {
-        "NAME": "维护",
+        "NAME": "保养",
         "DESCRIPTIONS": ["#y打击 额外造成 #b", " 点伤害。"]
 }
 }

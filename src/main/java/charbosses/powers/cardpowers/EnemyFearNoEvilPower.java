@@ -34,7 +34,7 @@ public class EnemyFearNoEvilPower extends AbstractPower {
         this.owner = owner;
         isActive = false;
         this.updateDescription();
-//        this.loadRegion("curiosity"); // TODO: Region
+//        this.loadRegion("curiosity"); //
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);

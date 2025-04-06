@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.atb;
@@ -21,6 +22,7 @@ public class BonfireSpiritsCard extends AbstractCollectibleCard implements OnPyr
         baseMagicNumber = magicNumber = 4;
         isPyre();
         tags.add(CardTags.HEALING);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     private boolean wasRare = false;

@@ -26,8 +26,8 @@ public class TwistTheKnife extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
     private static final int COST = 1;
-    private static final int POWER = 6;
-    private static final int UPGRADE_BONUS = 1;
+    private static final int POWER = 5;
+    private static final int UPGRADE_BONUS = 2;
 
     public TwistTheKnife()
     {

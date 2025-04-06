@@ -21,8 +21,8 @@ public class LockVillainsPatch {
         UnlockTracker.addCharacter("Hexaghost");
         UnlockTracker.addCharacter("Champ");
         UnlockTracker.addCharacter("Automaton");
+        UnlockTracker.addCharacter("Collector");
         UnlockTracker.addCharacter("Gremlin");
         UnlockTracker.addCharacter("Snecko");
-        UnlockTracker.addCharacter("Collector");
     }
 }

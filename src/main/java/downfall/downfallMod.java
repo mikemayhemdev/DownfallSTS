@@ -39,11 +39,14 @@ import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
+import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import collector.CollectorChar;
 import collector.CollectorMod;
 import collector.potions.TempHPPotion;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
+import downfall.cards.MajorBeam;
 import downfall.cards.curses.Sapped;
 import collector.util.CollectibleCardReward;
 import collector.util.EssenceReward;
@@ -139,6 +142,7 @@ import sneckomod.TheSnecko;
 import sneckomod.cards.unknowns.*;
 import sneckomod.potions.MuddlingPotion;
 import sneckomod.util.ColorfulCardReward;
+
 import sneckomod.util.UpgradedUnknownReward;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
@@ -158,7 +162,7 @@ import static reskinContent.reskinContent.unlockAllReskin;
 public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, AddAudioSubscriber, RenderSubscriber, PostDeathSubscriber {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = true;
+    public static final boolean STEAM_MODE = false;
 
     public static boolean neowtextoverride = false;
 
@@ -210,11 +214,20 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static String Act3BossFaced = "";
 
     public static boolean[] unseenTutorials = new boolean[]{true, // Hermit
-            true, // Guardian
-            true, // Hexa
-            true, // Charboss Info
-            true, // COLLECTOR info. Wow, it's hard to believe how much has gone on since the last tutorial was made
-            true // THE T&T ADVERTISEMENT!!! ADVERTISING!! To be fair we worked really hard both on T&T and this project
+
+            true, // Guardian 1
+            true, // Hexa 2
+            true, // Charboss Info 3
+            true, // COLLECTOR info. Wow, it's hard to believe how much has gone on since the last tutorial was made 4
+            true, // t&t advert 5
+            true, // Slime Boss 6
+            true, // Champ 7
+            true, // Auto 8
+            true, // Gremlins 9
+            true // Snecko 10
+            // true, //act3 boss 11
+         // true, //act3 boss 12
+         // true //act3 boss 13
     };
 
     public static Properties tutorialSaves = new Properties();
@@ -234,11 +247,11 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             // DONT FORGET TO TOGGLE AT reskinContent.getLanguageString() TOO
             Settings.GameLanguage.ENG, Settings.GameLanguage.ZHS,
              Settings.GameLanguage.JPN,
-            Settings.GameLanguage.KOR,
-//            Settings.GameLanguage.FRA,
-//            Settings.GameLanguage.ZHT,
-            Settings.GameLanguage.RUS,
-//            Settings.GameLanguage.PTB
+         //   Settings.GameLanguage.KOR,
+       //     Settings.GameLanguage.FRA,
+            Settings.GameLanguage.ZHT,
+      //      Settings.GameLanguage.RUS,
+        //    Settings.GameLanguage.PTB
     };
 
     public static ReplaceData[] wordReplacements;
@@ -452,6 +465,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         // BaseMod.addCard(new ShieldSmash());
         // BaseMod.addCard(new Debug());
         //BaseMod.addCard(new PeaceOut());
+        BaseMod.addCard(new MajorBeam());
         BaseMod.addCard(new Malfunctioning());
         BaseMod.addCard(new Bewildered());
         BaseMod.addCard(new Haunted());
@@ -546,13 +560,14 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     }
 
     public void receivePostInitialize() {
+        addPotions();
         UnlockTracker.betaCardPref = new IndividualBetaArtEnablerPref(UnlockTracker.betaCardPref);
         soulsImage = TextureLoader.getTexture(downfallMod.assetPath("images/ui/Souls.png"));
 
         loadOtherData();
 
         this.initializeMonsters();
-//        this.addPotions();
+        this.addPotions(); // sorry
         this.initializeEvents();
         this.initializeConfig();
 
@@ -923,7 +938,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addEvent(new AddEventParams.Builder(Serpent_Evil.ID, Serpent_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && !(AbstractDungeon.player instanceof TheSnecko))
                 //Event ID to Override//
                 .overrideEvent(Sssserpent.ID)
                 //Event Type//
@@ -959,6 +974,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 //Event ID to Override//
                 .overrideEvent(Ghosts.ID)
                 //Event Type//
+
                 .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(CursedTome_Evil.ID, CursedTome_Evil.class) //Event ID//
@@ -1112,7 +1128,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Duplicator.ID).eventType(EventUtils.EventType.FULL_REPLACE)
-                // .bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
+                .bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(PurificationShrineEvil.ID, PurificationShrineEvil.class) //Event ID//
@@ -1120,7 +1136,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(PurificationShrine.ID).eventType(EventUtils.EventType.FULL_REPLACE)
-                //.bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
+                .bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(TransmogrifierEvil.ID, TransmogrifierEvil.class) //Event ID//
@@ -1128,7 +1144,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Transmogrifier.ID).eventType(EventUtils.EventType.FULL_REPLACE)
-                //.bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
+                .bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(UpgradeShrineEvil.ID, UpgradeShrineEvil.class) //Event ID//
@@ -1136,7 +1152,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(UpgradeShrine.ID).eventType(EventUtils.EventType.FULL_REPLACE)
-                //.bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
+                .bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
     }
 
@@ -1150,7 +1166,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addMonster(FleeingMerchant.ID, FleeingMerchant::new);
 
-        BaseMod.addMonster("downfall:CharBossMerchant", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossMerchant()}));
+        //BaseMod.addMonster("downfall:CharBossMerchant", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossMerchant()})); moved to boss section
 
         BaseMod.addMonster(downfall.monsters.FaceTrader.ID, downfall.monsters.FaceTrader::new);
 
@@ -1235,11 +1251,16 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 //new Hermit(),
         }));
 
-        BaseMod.addMonster(CharBossIronclad.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
-        BaseMod.addMonster(CharBossSilent.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
-        BaseMod.addMonster(CharBossDefect.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
-        BaseMod.addMonster(CharBossWatcher.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
-        BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
+
+        //RUN HISTORY WORKS NOW!!! You can now actually see what bosses you fought in a run.
+        //it doesn't work :(
+        BaseMod.addMonster(CharBossIronclad.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[1], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
+        BaseMod.addMonster(CharBossSilent.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[2], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
+        BaseMod.addMonster(CharBossDefect.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[3], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
+        BaseMod.addMonster(CharBossWatcher.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[4], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
+        BaseMod.addMonster(CharBossHermit.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[6], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
+        BaseMod.addMonster(CharBossMerchant.ID, LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[5], () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossMerchant()}));
+
 
         BaseMod.addMonster(NeowBoss.ID, () -> new MonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
@@ -1249,17 +1270,16 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     }
 
     public void addPotions() {
-        if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_potions){
             BaseMod.addPotion(BossPotion.class, Color.MAROON, Color.MAROON, new Color(0x470000ff), BossPotion.POTION_ID);
             BaseMod.addPotion(BlockOnCardUsePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, BlockOnCardUsePotion.POTION_ID);
-            BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID);
             BaseMod.addPotion(MuddlingPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, MuddlingPotion.POTION_ID);
             BaseMod.addPotion(ThreeZeroPotion.class, Color.FOREST, Color.BLACK, Color.BLACK, ThreeZeroPotion.POTION_ID);
-            BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID);
+           // BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID);
             BaseMod.addPotion(CounterstrikePotion.class, Color.GRAY, Color.GRAY, Color.BLACK, CounterstrikePotion.POTION_ID);
             BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
             BaseMod.addPotion(WizPotion.class, Color.PURPLE, Color.PINK, Color.PURPLE, WizPotion.POTION_ID);
-        }
+        // BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+
 
         if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_events){
             BaseMod.addPotion(CursedFountainPotion.class, Color.PURPLE, Color.MAROON, Color.BLACK, CursedFountainPotion.POTION_ID);
@@ -1274,8 +1294,11 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelic(new ShatteredFragment(), RelicType.SHARED);
+        BaseMod.addRelic(new BlackCandle(), RelicType.SHARED);
+        BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
         BaseMod.addRelic(new BrokenWingStatue(), RelicType.SHARED);
         BaseMod.addRelic(new CloakOfManyFaces(), RelicType.SHARED);
+        BaseMod.addRelic(new BurdenOfKnowledge(), RelicType.SHARED);
         BaseMod.addRelic(new GremlinSack(), RelicType.SHARED);
         BaseMod.addRelic(new GremlinWheel(), RelicType.SHARED);
         BaseMod.addRelic(new RedIOU(), RelicType.SHARED);
@@ -1289,6 +1312,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addRelic(new NeowBlessing(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedBell(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedKey(), RelicType.SHARED);
+        addPotions();
     }
 
     public static boolean readyToDoThing = false;
@@ -1378,7 +1402,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 //SlimeboundMod.logger.info("ERROR! Had to reset the bosses mid-run!");
             }
             if (AbstractDungeon.actNum <= 3) {
-                Method setBoss = null;
+                Method setBoss;
                 try {
                     AbstractDungeon.bossKey = possEncounterList.remove(AbstractDungeon.cardRandomRng.random(possEncounterList.size() - 1));
                     setBoss = AbstractDungeon.class.getDeclaredMethod("setBoss", String.class);
@@ -1442,7 +1466,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
     @Override
     public void receivePostDungeonInitialize() {
-
         addPotions();
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID) || ModHelper.isModEnabled(Jewelcrafting.ID)) {
@@ -1656,25 +1679,36 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
         }
 
+        // Code 0 is Hermit's Tutorial and already within his own mod.
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID)) || ModHelper.isModEnabled(ChampStances.ID)) {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new ModFinisher()));
+        }
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Enraging.ID)) || ModHelper.isModEnabled(Enraging.ID)) {
+            for (AbstractMonster m : abstractRoom.monsters.monsters)
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
+        }
+
+        //guardian tutorial 1
         if (AbstractDungeon.player instanceof GuardianCharacter) {
             if (downfallMod.unseenTutorials[1]) {
                 AbstractDungeon.actionManager.addToBottom(new MessageCaller(1));
             }
         }
-
+        //hexa tutorial 2
         if (AbstractDungeon.player instanceof TheHexaghost) {
             if (downfallMod.unseenTutorials[2]) {
                 AbstractDungeon.actionManager.addToBottom(new MessageCaller(2));
             }
         }
-
+        //collector tutorial 4
         if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR)) {
             if (downfallMod.unseenTutorials[4]) {
                 AbstractDungeon.actionManager.addToTop(new MessageCaller(4));
             }
         }
-
-        /*
+        //charboss tutorial 3
         if (abstractRoom instanceof MonsterRoomBoss) {
             if (evilMode) {
                 if (downfallMod.unseenTutorials[3]) {
@@ -1682,7 +1716,36 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 }
             }
         }
-         */
+        //slime boss tutorial 6
+        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+            if (downfallMod.unseenTutorials[6]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(6));
+            }
+        }
+        //champ tutorial 7
+        if (AbstractDungeon.player instanceof ChampChar) {
+            if (downfallMod.unseenTutorials[7]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(7));
+            }
+        }
+        //auto tutorial 8
+        if (AbstractDungeon.player instanceof AutomatonChar) {
+            if (downfallMod.unseenTutorials[8]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(8));
+            }
+        }
+        //grems tutorial 9
+        if (AbstractDungeon.player instanceof GremlinCharacter) {
+            if (downfallMod.unseenTutorials[9]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(9));
+            }
+        }
+        //snecko tutorial 10
+        if (AbstractDungeon.player instanceof TheSnecko) {
+            if (downfallMod.unseenTutorials[10]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(10));
+            }
+        }
     }
 
 

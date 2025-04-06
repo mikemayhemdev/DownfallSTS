@@ -1,14 +1,19 @@
 [
   {
     "NAMES": [
-      "吸收"
+      "吸收",
+      "absorb",
+      "absorbing",
+      "absorbed"
     ],
     "PROPERNAME": "吸收",
     "DESCRIPTION": "融合最前面的的 #y史萊姆 並獲得 #b1 點 #y力量 。"
   },
   {
     "NAMES": [
-      "分裂"
+      "分裂",
+      "split",
+      "splitting"
     ],
     "PROPERNAME": "分裂",
     "DESCRIPTION": "在最前面生成每回合開始時攻擊的 #y史萊姆 爪牙。如果欄位不足，融合最後面的 #y史萊姆 再 #y分裂 並獲得 #b1 點 #y力量 。"
@@ -16,20 +21,24 @@
   {
     "NAMES": [
       "黏液",
-      "goop"
+      "goop",
+      "gooped"
     ],
     "PROPERNAME": "黏液",
-    "DESCRIPTION": "每層 #y黏液 為下次攻擊提供 #b1 點額外傷害，移除所有 #y黏液 並觸發 #y消耗黏液 的效果。"
+    "DESCRIPTION": "每層 #y黏液 為下次攻擊提供 #b1 點額外傷害，移除所有 #y黏液 並觸發 #y吞食黏液 的效果。"
   },
   {
     "NAMES": [
-      "潛力"
+      "潛力",
+      "potency"
     ],
     "PROPERNAME": "潛力",
-    "DESCRIPTION": "強化 #y分裂 的 #y史萊姆 的攻擊傷害和附加效果。附加效果只有 #b50% 強化效率。"
+    "DESCRIPTION": "強化 #y分裂 的 #y史萊姆 的攻擊傷害與附加效果。附加效果只有 #b50% 強化效率。"
   },
   { "NAMES": [
-      "命令"
+      "命令",
+      "command",
+      "commands"
     ],
     "PROPER_NAME": "命令",
     "DESCRIPTION": "最前面的 #y史萊姆 將會攻擊。"
@@ -53,7 +62,7 @@
       "bruiser"
     ],
     "PROPERNAME": "好鬥史萊姆",
-    "DESCRIPTION": "攻擊時隨機造成 #b5 點傷害。"
+    "DESCRIPTION": "攻擊時隨機造成 #b3 點傷害兩次。"
   },
   {
     "NAMES": [
@@ -129,24 +138,26 @@
   },
   {
     "NAMES": [
-      "緩慢"
+      "緩慢",
+      "slow"
     ],
     "PROPERNAME": "緩慢",
     "DESCRIPTION": "一回合內每打出一張牌額外受到 10% 的傷害。"
   },
   {
     "NAMES": [
-      "衝撞",
+      "沖撞",
       "tackle",
-      "tackles",
-      "沖撞"
+      "tackles"
     ],
-    "PROPERNAME": "衝撞",
+    "PROPERNAME": "沖撞",
     "DESCRIPTION": "一類高傷害 #y攻擊 牌，會對自己造成少量傷害。"
   },
   {
     "NAMES": [
-      "尖塔首領"
+      "尖塔首領",
+      "spire boss",
+      "spire_boss"
     ],
     "PROPERNAME": "尖塔首領",
     "DESCRIPTION": "強力的0費牌，受尖塔中的首領啟發而學會的新東西。"
@@ -198,7 +209,8 @@
   },
     {
     "NAMES": [
-      "吞食黏液"
+      "吞食黏液",
+      "consume"
     ],
     "PROPER_NAME": "吞食黏液",
     "DESCRIPTION": "當 #y攻擊 帶有 #y黏液 的敵人時可觸發的額外效果。"
@@ -214,16 +226,10 @@
   },
   {
     "NAMES": [
-      "深埋"
+      "深埋",
+      "buried"
     ],
     "PROPER_NAME": "深埋",
     "DESCRIPTION": "被 #y發掘 的優先級最低。"
-  },
-  {
-    "NAMES": [
-      "重鑄 以下為棄用文本"
-    ],
-    "PROPERNAME": "重鑄",
-    "DESCRIPTION": "在本場戰鬥中，將卡牌替換為本職業的一張隨機卡牌，其耗能減少 1 點。"
   }
 ]

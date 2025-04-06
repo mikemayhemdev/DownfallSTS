@@ -8,17 +8,14 @@
   },
   {
     "NAMES": [
-      "stasis",
       "凝滯"
     ],
     "PROPER_NAME": "凝滯",
-    "DESCRIPTION": "一張牌被 #y凝滯 時其獲得一個計數器。倒計點數等於其耗能加 #b1 點，每回合開始時減少 #b1 點。 NL 歸零時，將其返回手牌且下次耗能為 #b0 。"
+    "DESCRIPTION": "省流：過幾回合免費打出。 NL 一張牌被 #y凝滯 時其獲得一個計數器。倒計點數等於其耗能加 #b1 點，每回合開始時減少 #b1 點。 NL 歸零時，將其返回手牌且單次耗能為 #b0 。"
   },
   {
     "NAMES": [
-      "寶石",
-      "gem",
-      "gems"
+      "寶石"
     ],
     "PROPER_NAME": "寶石",
     "DESCRIPTION": " #y寶石 能在 #y休息處 被 #y鑲嵌 至有 #y孔位 的牌上。不能被 #y升級 。"
@@ -26,19 +23,16 @@
   {
     "PROPER_NAME": "防禦模式",
     "NAMES": [
-      "defensive mode",
-      "defensive_mode",
       "防禦模式"
     ],
-    "DESCRIPTION": "#y姿態 。 NL #y防禦模式 持續 #b2 回合。 NL 處於 #y防禦模式 時：擁有 #b3 層 #y荊棘 ，每回合開始時獲得 #b10 點 #y格擋 且在回合結束時 #y格擋 不會消失。"
+    "DESCRIPTION": "#y姿態 。 NL 當你進入 #y防禦模式 ，獲得 #b16 點 #y格擋 。 NL 處於 #y防禦模式 時：擁有 #b3 層 #y荊棘，在回合結束時 #y格擋 不會消失。"
   },
   {
     "NAMES": [
-      "accelerate",
       "加速"
     ],
     "PROPER_NAME": "加速",
-    "DESCRIPTION": "降低最右端被 #y凝滯 牌的倒計點數 #b1 點。若歸零, 將其返回手牌且下次耗能為 #b0 。"
+    "DESCRIPTION": "降低最右端被 #y凝滯 牌的倒計點數 #b1 點。若歸零, 將其返回手牌且單次耗能為 #b0 。"
   },
   {
     "NAMES": [

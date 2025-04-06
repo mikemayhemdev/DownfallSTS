@@ -30,7 +30,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import downfall.downfallMod;
-import downfall.patches.BanSharedContentPatch;
+//import downfall.patches.BanSharedContentPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
@@ -95,8 +95,13 @@ public class HexaMod implements
     private static final String CHARSELECT_PORTRAIT = "hexamodResources/images/charSelect/charBG.png";
     public static boolean renderFlames = false;
     public static boolean unsealed = false;
+
+    //prismatic shard check
+    private static int ghostwheelcards = 0;
+
     public static Color placeholderColor = new Color(114F / 255F, 62F / 255F, 109F / 255F, 1);
     private static String modID;
+
 
     public static int[] seal_weight = new int[7];
     public static int[] new_seal_weight = new int[7];
@@ -181,6 +186,7 @@ public class HexaMod implements
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
     }
+
 
     private static void autoAddCards()
             throws URISyntaxException, IllegalAccessException, InstantiationException, NotFoundException, ClassNotFoundException {
@@ -270,7 +276,7 @@ public class HexaMod implements
 
 
     public void addPotions() {
-
+        BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
         BaseMod.addPotion(EctoCoolerPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, EctoCoolerPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
         BaseMod.addPotion(DoubleChargePotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, DoubleChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
         BaseMod.addPotion(InfernoChargePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, InfernoChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
@@ -289,6 +295,12 @@ public class HexaMod implements
         GhostflameHelper.init();
 //        ExhaustCardTickPatch.exhaustedLastTurn = false;
 //        ExhaustCardTickPatch.exhaustedThisTurn = false;
+        ghostwheelcards = 0;
+//        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+//            if (c.hasTag(GHOSTWHEELCARD)) {
+//                ghostwheelcards++;
+//            }
+//    }
 
         if (AbstractDungeon.player instanceof TheHexaghost) {
             renderFlames = true;

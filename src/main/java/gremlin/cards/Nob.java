@@ -75,10 +75,10 @@ public class Nob extends AbstractGremlinCard implements SpawnModificationCard {
         }
     }
 
-    @Override
-    public boolean canSpawn(ArrayList<AbstractCard> currentRewardCards) {
-        return AbstractDungeon.cardRandomRng.randomBoolean();
-    }
+//    @Override
+//    public boolean canSpawn(ArrayList<AbstractCard> currentRewardCards) {
+//        return AbstractDungeon.cardRandomRng.randomBoolean();
+//    }
 
     @Override
     public void update() {

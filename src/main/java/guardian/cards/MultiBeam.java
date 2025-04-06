@@ -29,11 +29,11 @@ public class MultiBeam extends AbstractGuardianCard implements InStasisCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = -1;
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_DAMAGE = 2;
-    private static final int BEAMBUFF = 1;
+    private static final int BEAMBUFF = 2;
     private static final int UPGRADE_BEAMBUFF = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;

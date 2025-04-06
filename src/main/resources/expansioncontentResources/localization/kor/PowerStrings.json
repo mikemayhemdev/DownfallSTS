@@ -93,6 +93,39 @@
       " 만큼 #b6 번 줍니다."
     ]
   },
+  "expansioncontent:BeatOfDeathP": {
+    "NAME": "죽음의 비트",
+    "DESCRIPTIONS": [
+      "카드를 사용할 때마다 적 전체에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "expansioncontent:PandemoniumPower":{
+    "NAME": "대혼란",
+    "DESCRIPTIONS": [
+      "내 턴 시작 시 버린 카드 더미에서 무작위 카드를 #b1 장 사용합니다.",
+      "내 턴 시작 시 버린 카드 더미에서 무작위 카드를 #b",
+      " 장 사용합니다."
+    ]
+  },
+  "expansioncontent:EvilWithinPower":{
+    "NAME": "내면의 악",
+    "DESCRIPTIONS": [
+      "적 전체에게 피해를 #b",
+      " 주기까지 부여해야 할 해로운 효과가 #b",
+      " 남았습니다.",
+      " 남았습니다."
+    ]
+  },
+  "expansioncontent:ReveriePower":{
+  "NAME": "공상",
+  "DESCRIPTIONS": [
+    "내 턴 시작 시 버린 카드 더미 위에서 카드를 봅니다. 그 카드를 가져옵니다.",
+    "내 턴 시작 시 버린 카드 더미 위에서 카드를 #b",
+    " 장 봅니다. 그 카드 중 1장 선택해 가져옵니다.",
+    "가져올 카드를 선택하십시오."
+  ]
+},
   "expansioncontent:VexVinciblePower": {
     "NAME": "천하무적",
     "DESCRIPTIONS": [

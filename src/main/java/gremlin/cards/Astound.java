@@ -24,7 +24,7 @@ public class Astound extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
     private static final int COST = 0;
-    private static final int BLOCK = 3;
+    private static final int BLOCK = 5;
     private static final int MAGIC = 2;
     private static final int UPGRADE_BONUS = 2;
 

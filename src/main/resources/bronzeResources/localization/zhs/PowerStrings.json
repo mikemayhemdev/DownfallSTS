@@ -18,9 +18,8 @@
   "bronze:Feature": {
     "NAME": "此为特性",
     "DESCRIPTIONS": [
-      "每当你抽到 #y诅咒 或 #y状态牌 时，获得 #b",
-      " 点 #y临时 #y力量 与 #b",
-      " 点 #y临时 #y敏捷 。"
+      "每当你抽到 或 #y消耗 #y状态牌 时，获得 #b",
+      " 点 格挡 。"
     ]
   },
   "bronze:InfiniteBeams": {

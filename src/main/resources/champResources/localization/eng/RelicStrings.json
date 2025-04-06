@@ -3,14 +3,14 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "At the start of combat, enter #bDefensive or #rBerserker #yStance."
+      "At the start of combat, choose to enter #bchamp:Defensive or #rchamp:Berserker #yStance [REMOVE_SPACE]."
     ]
   },
   "champ:BlackKnightHelmet": {
     "NAME": "Black Knight's Helm",
     "FLAVOR": "Only a flesh wound.",
     "DESCRIPTIONS": [
-      "The first time you enter each #yStance each combat: NL #bDefensive: Gain #b2 #yDexterity and lose #b1 #yStrength. NL #rBerserker: Gain #b2 #yStrength and lose #b1 #yDexterity."
+      "The first time you enter each #yStance each combat: NL #bchamp:Defensive : Gain #b2 #yDexterity and lose #b1 #yStrength [REMOVE_SPACE]. NL #rchamp:Berserker : Gain #b2 #yStrength and lose #b1 #yDexterity [REMOVE_SPACE]."
     ]
   },
   "champ:Barbells": {
@@ -24,72 +24,81 @@
     "NAME": "Berserker's Guide",
     "FLAVOR": "The text is illegible.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b3 #yVigor."
+      "At the start of your turn, gain #b3 #yVigor [REMOVE_SPACE]."
     ]
   },
   "champ:ChampionCrownUpgraded": {
     "NAME": "Victorious Crown",
     "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
-      "Replaces #rChampion's #rCrown. NL Start each combat in #ychamp:Ultimate #yStance, which lasts for #b1 turn."
+      "Replaces ",
+      " [REMOVE_SPACE].[] NL Start each combat in #ychamp:Ultimate #yStance [REMOVE_SPACE], which lasts for #b3 turns."
     ]
   },
   "champ:DefensiveTrainingManual": {
     "NAME": "Defensive Thesis",
     "FLAVOR": "Pro tip: Don't get hit.",
     "DESCRIPTIONS": [
-      "Defensive Stance's #yFinisher #yBonus grants #b5 more #yBlock."
+      "#bchamp:Defensive #bStance's #ychamp:Finisher #yBonus grants #b3 more #yBlock [REMOVE_SPACE]."
     ]
   },
   "champ:DeflectingBracers": {
     "NAME": "Deflecting Bracers",
     "FLAVOR": "If you thought blocking was good then...",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #ychamp:Counter equal to half the amount of expired #yBlock."
+      "At the start of your turn, gain #ychamp:Counter equal to half the amount of expired #yBlock [REMOVE_SPACE]."
     ]
   },
   "champ:DuelingGlove": {
     "NAME": "Dueling Glove",
     "FLAVOR": "Count from ten...",
     "DESCRIPTIONS": [
-      "After using a single-target #yAttack, if the target has no #yVulnerable, apply #b1 #yVulnerable."
+      "After using a single-target #yAttack [REMOVE_SPACE], if the target has no #yVulnerable [REMOVE_SPACE], apply #b1 #yVulnerable [REMOVE_SPACE]."
     ]
   },
   "champ:FightingForDummies": {
     "NAME": "Dolphin's Style Guide",
     "FLAVOR": "Author: Renowned explorer and pugilist Dolphin K. Mist.",
     "DESCRIPTIONS": [
-      "If you end your turn while in no #yStance, draw #b1 additional card next turn."
+      "If you end your turn while in no #yStance [REMOVE_SPACE], draw #b1 additional card next turn."
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
     "NAME": "Gladiators Manual",
     "FLAVOR": "Try everything - something will stick.",
     "DESCRIPTIONS": [
-      "Whenever you play a #yCombo, a #yFinisher, and enter a #yStance in the same turn, gain #b1 #yStrength and #yDexterity."
+      "Whenever you play a #ychamp:Combo [REMOVE_SPACE], a #ychamp:Finisher [REMOVE_SPACE], and enter a #yStance in the same turn, gain #b1 #yStrength and #yDexterity [REMOVE_SPACE]."
     ]
   },
   "champ:PowerArmor": {
     "NAME": "Power Armor",
     "FLAVOR": "Bought used.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b10."
+      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b10 [REMOVE_SPACE]."
+    ]
+  },
+  "champ:RageAmulet": {
+    "NAME": "Amulet of Unyielding",
+    "FLAVOR": "Strength once thought fleeting flows through you as if it had always been there.",
+    "DESCRIPTIONS": [
+      "Whenever you spend #yVigor [REMOVE_SPACE], gain #b1 #yStrength for every #b",
+      " #yVigor spent."
     ]
   },
   "champ:SignatureFinisher": {
     "NAME": "Signature Finisher",
     "FLAVOR": "And now, it's time for my ULTIMATE MOVE!",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a #yFinisher. This #yFinisher costs #b0, can be used without a #yStance, and never causes your #yStance to be exited.",
+      "Upon pickup, choose a #ychamp:Finisher [REMOVE_SPACE]. This #yFinisher costs #b0 [REMOVE_SPACE], can be used without a #yStance [REMOVE_SPACE], and never causes your #yStance to be exited.",
       "Choose a card for ",
-      " costs 0, can be used without a #yStance, and never causes your #yStance to be exited."
+      " costs #b0 [REMOVE_SPACE], can be used without a #yStance [REMOVE_SPACE], and never causes your #yStance to be exited."
     ]
   },
   "champ:SpectersHand": {
     "NAME": "Spectre's Hand",
     "FLAVOR": "Some victories stay with you.",
     "DESCRIPTIONS": [
-      "Whenever you enter a #yStance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust."
+      "Whenever you enter a #yStance [REMOVE_SPACE], gain an #ygremlin:Echo of a basic #yStrike or #yDefend [REMOVE_SPACE]. It costs #b0 [REMOVE_SPACE]."
     ]
   },
   "champ:LiftRelic": {
@@ -97,14 +106,21 @@
     "FLAVOR": "It's about the gigantic sword in your heart.",
     "DESCRIPTIONS": [
       "Start each combat with #b",
-      " #yStrength."
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "champ:ChampStancesModRelic": {
     "NAME": "New Challenger",
     "FLAVOR": "Can you take the crown?",
     "DESCRIPTIONS": [
-      "Start each combat in a random Champ #yStance."
+      "Start each combat in a random Champ #yStance [REMOVE_SPACE]."
+    ]
+  },
+  "champ:BustedCrownGagText": {
+    "NAME": "Busted Crown",
+    "FLAVOR": "Imitation is the most sincere form of flattery... or is it? It doesn't even look that much like your crown. It's actually kind of insulting.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. Future card rewards have 2 less cards to choose from."
     ]
   }
 }

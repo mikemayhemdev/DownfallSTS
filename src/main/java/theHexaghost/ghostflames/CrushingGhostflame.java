@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,6 +19,7 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.AnimatedSlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 import downfall.util.TextureLoader;
+import gremlin.actions.PseudoDamageRandomEnemyAction;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
@@ -103,16 +105,14 @@ public class CrushingGhostflame extends AbstractGhostflame {
                                         public void dispose() {}
                                     }
                             ));
-//                                if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-//                                    addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
-//                                    addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
-//                                }
-                            att(new DamageAllEnemiesAction(AbstractDungeon.player, damage, DamageInfo.DamageType.THORNS, AttackEffect.NONE));
+
+                        att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(x, true), DamageInfo.DamageType.THORNS, AttackEffect.NONE));
+//                        att(new DamageAllEnemiesAction(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS, AttackEffect.NONE));
                     }
                 } else {
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
                     if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                        addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                        AbstractDungeon.actionManager.addToTop(new PseudoDamageRandomEnemyAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
                         addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
                     }
                 }

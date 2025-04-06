@@ -15,6 +15,7 @@ import theHexaghost.util.OnChargeSubscriber;
 
 public class RadiantPower extends AbstractPower implements CloneablePowerInterface, OnChargeSubscriber {
 
+    //Radiant Flame. Not used! Effect moved to UnbrokenSoul / Mark of the Ether (Starter Upgrade).
     public static final String POWER_ID = HexaMod.makeID("RadiantPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Radiant84.png");

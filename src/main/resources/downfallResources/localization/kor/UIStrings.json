@@ -135,15 +135,54 @@
       "카드를 선택하십시오."
     ]
   },
+  "downfall:ColorfulUncommonCardReward": {
+    "TEXT": [
+      "덱에 ",
+      " 카드를 추가",
+      "카드를 선택하십시오."
+    ]
+  },
+  "downfall:ColorfulRareCardReward": {
+    "TEXT": [
+      "덱에 ",
+      " 카드를 추가",
+      "카드를 선택하십시오."
+    ]
+  },
+  "downfall:DiceRollPotionReward": {
+    "TEXT": [
+      "덱에 강화된 ",
+      " 카드를 추가",
+      "카드를 선택하십시오."
+    ]
+  },
+  "downfall:ColorfulPowersCardReward": {
+    "TEXT": [
+      "덱에 강화된 ",
+      " 파워 카드를 추가",
+      "카드를 선택하십시오."
+    ]
+  },
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
-      "살아있는 벽 머리들"
+      "살아있는 벽 머리들",
+      "아이언클래드",
+      "사일런트",
+      "디펙트",
+      "와쳐",
+      "상인"
     ]
   },
   "downfall:WhaleHunter": {
     "TEXT": [
       "고래 사냥꾼",
       "순환은 끝났다."
+    ]
+  },
+  "downfall:Unfettered": {
+    "TEXT": [
+      "봉인 해제",
+      "파괴된 봉인을 얻었습니다."
     ]
   },
   "downfall:SingleCardViewPopup": {

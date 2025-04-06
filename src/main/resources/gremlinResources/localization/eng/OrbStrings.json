@@ -11,7 +11,7 @@
     "NAME": "Gremlin Wizard",
     "DESCRIPTION": [
       "After you play a skill, gain #b",
-      " #yWiz."
+      " #yWiz [REMOVE_SPACE]."
     ]
   },
 
@@ -27,14 +27,15 @@
     "NAME": "Shield Gremlin",
     "DESCRIPTION": [
       "After you play a skill, gain #b",
-      " #yBlock."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
 
   "Gremlin:SneakyGremlin": {
     "NAME": "Sneaky Gremlin",
     "DESCRIPTION": [
-      "After you play an attack, deal #b",
+      "0 cost Attacks deal #b",
+      " extra damage. Whenever you play an Attack, deal #b",
       " damage to a random enemy."
     ]
   }

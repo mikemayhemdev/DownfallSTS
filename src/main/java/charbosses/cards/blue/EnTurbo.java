@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -33,7 +34,7 @@ public class EnTurbo extends AbstractBossCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new EnemyGainEnergyAction(this.magicNumber));
-        addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
+        addToBot(new MakeTempCardInDiscardAction(new VoidCard(),1));
     }
 
     public void upgrade() {

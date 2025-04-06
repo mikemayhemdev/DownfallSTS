@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.cards.blue.BeamCell;
 import com.megacrit.cardcrawl.cards.blue.CoreSurge;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
@@ -23,7 +25,12 @@ public class EnCoreSurge extends AbstractBossCard {
 
     public EnCoreSurge() {
         super(ID, cardStrings.NAME, "blue/attack/core_surge", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_BUFF);
-        this.exhaust = true;
+        if (AbstractDungeon.floorNum < 25) {
+            this.exhaust = true;
+        }
+        if (AbstractDungeon.floorNum > 25) {
+            this.exhaust = false;
+        }
         this.baseDamage = 11;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;

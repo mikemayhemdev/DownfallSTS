@@ -51,6 +51,71 @@
       ")"
     ]
   },
+  "HermitMod:ChampTutorials": {
+    "TEXT": [
+      "The Champ can switch between the two Gladiatorial Stances, Berserker Stance and Defensive Stance. Playing Skills while in these Stances will activate their Skill Bonuses, up to three times.",
+      "He can also use powerful Finisher cards while in these stances at the cost of exiting them."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "The Champ",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:AutomatonTutorials": {
+    "TEXT": [
+      "The Automaton can use Encode cards to add up to three cards to a Sequence and combine them into a singular Function Card.",
+      "Some cards have special Compile Effects which activate when they are combined into a Function, which can be either positive or negative (referred to as a Compile Error)."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "The Automaton",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:SneckoTutorials": {
+    "TEXT": [
+      "The Snecko can Muddle cards to temporarily change their cost to a number between 0 and 3. Muddle will always change the cost of a card and will never reroll the cost to the same number.",
+      "They can also find Gift cards that grant them cards from other characters when they take them."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "The Snecko",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:GremlinsTutorials": {
+    "TEXT": [
+      "The Gremlins are five characters at once and all have their own unique effects and HP.",
+      "You can Swap between them using certain cards."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "The Gremlins",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:SlimeBossTutorials": {
+    "TEXT": [
+      "The Slime Boss can apply Goop to enemies to increase the damage they take the next time they are attacked, removing all Goop and triggering any Consume effects.",
+      "He can also Split into Slime minions that attack at the start of his turn and whenever he Commands."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "The Slime Boss",
+      "(Page: ",
+      ")"
+    ]
+  },
   "HermitMod:CollectorTutorials": {
     "TEXT": [
       "Collector takes Essences from foes. You can spend Essences to add their spirits into your Collection.",

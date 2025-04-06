@@ -554,7 +554,7 @@
   },
   "collector:MushroomCard": {
     "NAME": "버섯",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화 또는 손상을 !M! 부여합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화 또는 취약을 !M! 부여합니다."
   },
   "collector:MysticCard": {
     "NAME": "신비주의자",
@@ -607,7 +607,7 @@
   },
   "collector:ShelledParasiteCard": {
     "NAME": "갑각 기생충",
-    "DESCRIPTION": "*판금 *갑옷을 !M! 얻습니다."
+    "DESCRIPTION": "expansioncontent:판금_갑옷을 !M! 얻습니다."
   },
   "collector:ShieldGremlinCard": {
     "NAME": "방패 그렘린",
@@ -695,6 +695,6 @@
   },
   "collector:Sapped": {
     "NAME": "쇠락화",
-    "DESCRIPTION": "collector:장작. NL 소멸. NL 덱에서 제거할 수 없습니다."
+    "DESCRIPTION": "collector:장작. NL 이 카드를 뽑으면 [E] 를 잃습니다. NL 소멸. NL 덱에서 제거할 수 없습니다."
   }
 }

@@ -3,21 +3,17 @@
     "NAME": "岁月",
     "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 回合结束时， NL 将 *虚空 加入抽牌堆顶。"
   },
-  "downfall:BossMaintenance": {
-    "NAME": "维护",
-    "DESCRIPTION": "*打击 额外造成 !M! 点伤害。 NL 获得 !B! 点 敏捷 。 NL 本场战斗耗能加1。"
-  },
   "downfall:Bewildered": {
     "NAME": "困惑",
     "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 抽到时  ， NL  sneckomod:混淆 其他手牌 。"
   },
-  "downfall:Haunted": {
-    "NAME": "闹鬼",
-    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 抽到时， NL 将所有手牌附加 虚无 。"
-  },
   "downfall:Icky": {
     "NAME": "黏液缠身",
     "DESCRIPTION": "获得一张 *黏液 。 NL 消耗 。"
+  },
+  "downfall:Haunted": {
+    "NAME": "闹鬼",
+    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 消耗 牌时若本牌在手， NL 受到2点伤害。"
   },
   "downfall:Malfunctioning": {
     "NAME": "纰漏",
@@ -30,5 +26,9 @@
   "downfall:SummonMushrooms": {
     "NAME": "真菌环绕",
     "DESCRIPTION": "击杀所有蘑菇， NL 回复其剩余血量点生命。 NL 召唤两个蘑菇。"
+  },
+  "downfall:BossMaintenance": {
+    "NAME": "维护",
+    "DESCRIPTION": "*打击 额外造成 !M! 点伤害。 NL 获得 !B! 点 敏捷 。 NL 本场战斗耗能加1。"
   }
 }

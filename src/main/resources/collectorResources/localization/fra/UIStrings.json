@@ -1,0 +1,110 @@
+{
+  "collector:CollectionReward": {
+    "TEXT": [
+      "Choisissez une carte à collectez."
+    ]
+  },
+  "collector:CollectibleCardTab": {
+    "TEXT": [
+      "Objet de collection"
+    ]
+  },
+  "collector:CollectionScreen": {
+    "TEXT": [
+      "Cacher",
+      "Votre collection commence le combat avec toutes les cartes ici."
+    ]
+  },
+  "collector:CollectionUITopPanel": {
+    "TEXT": [
+      "Collection",
+      "Voir toutes les cartes de votre collection.",
+      "Ces cartes commencent dans votre pile de Collection à chaque combat."
+    ]
+  },
+  "collector:CombatCollectionPileButton": {
+    "TEXT": [
+      "Pile de collection",
+      "Contient les cartes collectées que vous n'avez pas encore piochées pour ce combat.. Vous piochez une carte au début de chaque tour.",
+      "Je n'ai aucune carte collectée!"
+    ]
+  },
+  "collector:EssenceCount": {
+    "TEXT": [
+      "Essences",
+      "Dépensez des essences pour ajouter des cartes à votre collection. Les salle de combat donne #b1 #yEssence. Les Élites donne #b2 #yEssence, les boss en donne #b3! NL Vous avez #b",
+      " Essences."
+    ]
+  },
+  "collector:CombatCollectionViewScreen": {
+    "TEXT": [
+      "Écran de la collection de combat"
+    ]
+  },
+  "collector:PyreInfo": {
+    "TEXT": [
+      "Bûcher",
+      "Pour jouer cette carte, payez le coût supplémentaire des cartes a Épuisement de votre main.."
+    ]
+  },
+  "collector:CollectedCardMod": {
+    "TEXT": [
+      "collecteur:MegaÉthérée. NL ",
+      "Collecté"
+    ]
+  },
+  "collector:CollectibleCardReward": {
+    "TEXT": [
+      "Collecté: ",
+      "Vous pouvez obtenir ceci"
+    ]
+  },
+  "collector:HoardedMod": {
+    "TEXT": [
+      "Injouable. Retenue. NL ",
+      "Injouable. NL ",
+      "Retenue. NL "
+    ]
+  },
+  "collector:SecondEnergyOrb": {
+    "TEXT": [
+      "Réserves",
+      "Un type spécial d'énergie qui persiste à travers les tours."
+    ]
+  },
+  "collector:PyreCostSpendScreen": {
+    "TEXT": [
+      "Epuiser pour le Bûcher."
+    ]
+  },
+  "collector:PyreModText": {
+    "TEXT": [
+      "Je n'ai pas de carte à Épuiser!"
+    ]
+  },
+  "collector:StashAwayCampfireOption": {
+    "TEXT": [
+      "Libérer",
+      "Enlevez une carte collecté. Gagnez ",
+      " Ames.",
+      "Nécessite une carte collectée.",
+      "Sélectionnez une carte collectée à enlevez."
+    ]
+  },
+  "collector:BonusEventOption": {
+    "TEXT": [
+      "[Prendre]"
+    ]
+  },
+  "collector:EssenceReward": {
+    "TEXT": [
+      "Gagnez ",
+      " Essence."
+    ]
+  },
+  "collector:CharacterOption": {
+    "TEXT": [
+      "Essences: "
+    ]
+  }
+}

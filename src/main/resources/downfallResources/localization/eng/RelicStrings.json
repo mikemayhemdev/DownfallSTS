@@ -416,7 +416,7 @@
     "NAME": "Sharpened Fragment",
     "FLAVOR": "Once a broken statue - now a makeshift weapon.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain a #yBloody #ySacrifice."
+      "During Elite and Boss combats, whenever you play a #yPower card, gain #b1 #yStrength [REMOVE_SPACE]."
     ]
   },
   "downfall:RedIOU": {
@@ -442,28 +442,35 @@
     "NAME": "Knowing Skull",
     "FLAVOR": "Put me down!",
     "DESCRIPTIONS": [
-      "At the start of each combat, you may wish for Souls, Potions , or a Colorless card at the price of HP."
+      "At the start of each combat, you may wish for Souls, Potions, or a Colorless card at the price of HP."
     ]
   },
   "downfall:HeartBlessingRed": {
     "NAME": "Ruby Heart Blessing",
     "FLAVOR": "The heart is strong.",
     "DESCRIPTIONS": [
-      "Start Boss combats with #b1 #yStrength."
+      "Start Boss combats with #b1 #yStrength [REMOVE_SPACE]."
     ]
   },
   "downfall:HeartBlessingBlue": {
     "NAME": "Sapphire Heart Blessing",
     "FLAVOR": "The heart is pleased.",
     "DESCRIPTIONS": [
-      "Start Boss combats with #b10 #yTemporary #yHP."
+      "Start Boss combats with #b10 #yTemporary #yHP [REMOVE_SPACE]."
     ]
   },
   "downfall:HeartBlessingGreen": {
     "NAME": "Emerald Heart Blessing",
     "FLAVOR": "The heart is everything.",
     "DESCRIPTIONS": [
-      "Start Boss combats with #b1 #yDexterity."
+      "Start Boss combats with #b1 #yDexterity [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:BurdenOfKnowledge": {
+    "NAME": "Burden of Knowledge",
+    "FLAVOR": "The truth hurts.",
+    "DESCRIPTIONS": [
+      "Upon pickup, #rlose #rALL #rHeart #rBlessings and #b20 Max HP. Permanently #yUpgrade #rALL cards #rEVERYWHERE [REMOVE_SPACE]. Start combats with #b2 less #yStrength and #yDexterity [REMOVE_SPACE]."
     ]
   },
   "downfall:TeleportStone": {
@@ -487,7 +494,16 @@
     "NAME": "Hecktoplasm",
     "FLAVOR": "This blob of slime seems to pulse with the energy of hundreds of souls. No wonder no one wanted it.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. You can no longer gain #ySouls. Breaking Keys costs no #ySouls."
+      "Gain [E] at the start of your turn. You can no longer gain #ySouls. Breaking Keys costs no #ySouls.",
+      "Hecktoplasm"
+    ]
+  },
+  "downfall:BlackCandle": {
+    "NAME": "Black Candle",
+    "FLAVOR": "The flame shines even brighter from within the darkness.",
+    "DESCRIPTIONS": [
+      "#yUnplayable #rCurse cards can now be played. Whenever you play an #yUnplayable #rCurse card, #yExhaust it and lose #b1 HP.",
+      "Black Candle"
     ]
   },
   "downfall:replacements": {
@@ -524,17 +540,24 @@
     "NAME": "Extra Cursed Key",
     "FLAVOR": "Locked away for good reason.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Whenever you open a non-Boss chest, obtain #b2 random #rCurses."
+      "Gain [E] the first time you draw a #rCurse each turn. NL Whenever you open a non-Boss chest, obtain an #rInjury [REMOVE_SPACE]."
     ]
   },
   "downfall:ExtraCursedBell": {
     "NAME": "Extra Cursed Bell",
     "FLAVOR": "You think you hear it echoing, but can never confirm it.",
     "DESCRIPTIONS": [
-      "Upon pickup, obtain #b2 of a unique #rCurse and #b3 relics.",
+      "Upon pickup, obtain a unique #rCurse and #b3 Common relics.",
       "The Bell Tolls Twice...",
       "Skip Rewards",
       "Close"
+    ]
+  },
+  "downfall:BustedCrownGagText": {
+    "NAME": "Busted Crown",
+    "FLAVOR": "Imitation is the most sincere form of flattery... or is it? It doesn't even look that much like your crown. It's actually very insulting.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. Future card rewards have 2 less cards to choose from."
     ]
   }
 }

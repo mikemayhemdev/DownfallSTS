@@ -13,7 +13,7 @@ public class IronbarkKindling extends AbstractCollectorCard {
 
     public IronbarkKindling() {
         super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-        baseBlock = 8;
+        baseBlock = 9;
         tags.add(expansionContentMod.UNPLAYABLE);
     }
 

@@ -9,15 +9,16 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import gremlin.actions.PseudoDamageRandomEnemyAction;
 import theHexaghost.powers.BurnPower;
+import theHexaghost.relics.CandleOfCauterizing;
 
 public class Incineration extends AbstractHexaCard {
 
     public final static String ID = makeID("Incineration");
 
     public Incineration() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 5;
-        baseBurn = burn = 5;
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 4;
+        baseBurn = burn = 4;
         baseMagicNumber = magicNumber = 3;
         HexaMod.loadJokeCardImage(this, "Incineration.png");
     }

@@ -44,7 +44,7 @@
   "sneckomod:ChallengeMode": {
     "TEXT": [
       "도전 모드 - 태초의 스네코",
-      "Unknown 카드가 모든 직업을 포함한 카드가 됩니다. 스네코 전문가라면 추천합니다."
+      "모든 직업 카드에 선물을 얻을 수 있습니다. 스네코 전문가라면 추천합니다."
     ]
   },
   "sneckomod:LockInBonfireOptions": {
@@ -56,12 +56,30 @@
       "[자유 행동] Unknown 카드를 영구적인 카드로 고정합니다."
     ]
   },
+  "sneckomod:CommonAttackReward": {
+    "TEXT": [
+      "덱에 다른 직업 카드를 추가",
+      "카드를 선택하십시오."
+    ]
+  },
+  "sneckomod:DiceRollPotionReward": {
+    "TEXT": [
+      "덱에 강화된 카드를 추가",
+      "카드를 선택하십시오."
+    ]
+  },
+  "sneckomod:ColorfulPowersCardReward": {
+    "TEXT": [
+      "덱에 강화된 파워 카드를 추가.",
+      "카드를 선택하십시오."
+    ]
+  },
   "sneckomod:AtGameStart": {
     "TEXT": [
       "",
       " 카드",
-      "이번 도전에서 Unknown 카드는 ",
-      "의 카드로 등장하게 됩니다.",
+      "이번 도전에서 ",
+      "의 카드에 선물이 추가됩니다.",
       "선택하십시오."
     ]
   }

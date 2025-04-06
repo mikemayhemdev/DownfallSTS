@@ -33,9 +33,7 @@ import downfall.downfallMod;
 import downfall.monsters.GremlinMirror;
 import downfall.monsters.SneckoMirror;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
-import downfall.relics.HeartBlessingBlue;
-import downfall.relics.HeartBlessingGreen;
-import downfall.relics.HeartBlessingRed;
+import downfall.relics.*;
 import gremlin.characters.GremlinCharacter;
 import guardian.characters.GuardianCharacter;
 import slimebound.characters.SlimeboundCharacter;
@@ -78,9 +76,18 @@ public class MindBloom_Evil extends AbstractImageEvent {
                 this.imageEventText.setDialogOption(OPTIONSALT[5]);
             } else {
                 this.imageEventText.setDialogOption(OPTIONSALT[2]);
+                //if ruining the surprise is important use this instead
+                // this.imageEventText.setDialogOption(OPTIONSALT[2], new BurdenOfKnowledge());
             }
         } else {
-            this.imageEventText.setDialogOption(OPTIONSALT[3], true);
+            if (AbstractDungeon.player instanceof GremlinCharacter) {
+                this.imageEventText.setDialogOption(OPTIONSALT[5]);
+            } else {
+                this.imageEventText.setDialogOption(OPTIONSALT[2]);
+                //if ruining the surprise is important use this instead
+                // this.imageEventText.setDialogOption(OPTIONSALT[2], new BurdenOfKnowledge());
+            }
+            //this.imageEventText.setDialogOption(OPTIONSALT[3], true);
         }
 
         if (AbstractDungeon.floorNum % 50 <= 40) {
@@ -171,28 +178,16 @@ public class MindBloom_Evil extends AbstractImageEvent {
                     case 1:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
                         this.screen = CurScreen.LEAVE;
-                        int effectCount = 0;
                         List<String> upgradedCards = new ArrayList();
-
-                        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-                            if (c.canUpgrade()) {
-                                ++effectCount;
-                                if (effectCount <= 20) {
-                                    float x = MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH;
-                                    float y = MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT;
-                                    AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), x, y));
-                                    AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(x, y));
-                                }
-
-                                upgradedCards.add(c.cardID);
-                                c.upgrade();
-                                AbstractDungeon.player.bottledCardUpgradeCheck(c);
-                            }
-                        }
-
                         AbstractDungeon.player.loseRelic(HeartBlessingRed.ID);
                         AbstractDungeon.player.loseRelic(HeartBlessingBlue.ID);
                         AbstractDungeon.player.loseRelic(HeartBlessingGreen.ID);
+
+                      // if (AbstractDungeon.ascensionLevel >= 15) {
+                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new BurdenOfKnowledge());
+                            logMetricObtainRelic(ID, "BurdenOfKnowledge", new BurdenOfKnowledge());
+                      //  }
+
 
                         logMetricUpgradeCards(ID, "Upgrade", upgradedCards);
 

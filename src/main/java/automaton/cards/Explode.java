@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import theHexaghost.powers.BurnPower;
+import theHexaghost.relics.CandleOfCauterizing;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 
@@ -25,6 +26,14 @@ public class Explode extends AbstractBronzeCard {
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Explode.png"));
+    }
+
+    @Override
+    public void applyPowers() {
+        if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
+            this.magicNumber = this.baseMagicNumber + CandleOfCauterizing.SOULBURN_BONUS_AMOUNT;
+        }
+        this.isMagicNumberModified = this.magicNumber != this.baseMagicNumber;
     }
 
     @Override

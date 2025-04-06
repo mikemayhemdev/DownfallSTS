@@ -23,7 +23,7 @@ public class DigitalCarnage extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 5;
 
     public DigitalCarnage() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         // isEthereal = true;
         baseDamage = DAMAGE;
         thisEncodes();

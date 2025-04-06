@@ -1,4 +1,4 @@
-/*
+package expansioncontent.cards.deprecated;/*
 package expansioncontent.cards;
 
 

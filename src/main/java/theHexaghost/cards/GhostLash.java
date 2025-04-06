@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
+import gremlin.relics.FragmentationGrenade;
 import theHexaghost.HexaMod;
 import theHexaghost.util.HexaPurpleTextInterface;
 
@@ -76,6 +77,12 @@ public class GhostLash extends AbstractHexaCard implements HexaPurpleTextInterfa
         AbstractMonster m = AbstractDungeon.getRandomMonster();
         if (m == null) return;
         this.calculateCardDamage(m);
+
+        if (AbstractDungeon.player.hasRelic(FragmentationGrenade.ID)) {
+            AbstractDungeon.player.getRelic(FragmentationGrenade.ID).flash();
+            this.damage = this.damage + FragmentationGrenade.OOMPH;
+        }
+
         if(AbstractDungeon.player.hasPower("Pen Nib") ){
             this.damage /= 2;
             dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
@@ -84,6 +91,11 @@ public class GhostLash extends AbstractHexaCard implements HexaPurpleTextInterfa
             dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
         }
         this.can_show = false;
+
+        if (AbstractDungeon.player.hasRelic(FragmentationGrenade.ID)) {
+            AbstractDungeon.player.getRelic(FragmentationGrenade.ID).flash();
+            this.damage = this.damage - FragmentationGrenade.OOMPH;
+        }
     }
 
     public void upgrade() {
