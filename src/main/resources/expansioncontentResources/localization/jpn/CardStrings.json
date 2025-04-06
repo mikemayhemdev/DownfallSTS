@@ -93,10 +93,7 @@
   },
   "expansioncontent:SuperGhostShield": {
     "NAME": "ゴーストシールド",
-    "DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL 1 ブラー を得る。 NL ",
-    "EXTENDED_DESCRIPTION": [
-      " !B! ブロック を得る。"
-    ]
+    "DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL 1 [#e087a4]ブラー[] [#e087a4]を得る。[] NL !B! [#e087a4]ブロック[] [#e087a4]を得る。[]"
   },
   "expansioncontent:SuperGoopSpray": {
     "NAME": "ヘドロ噴射",
