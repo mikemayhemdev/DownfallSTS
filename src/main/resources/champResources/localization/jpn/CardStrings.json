@@ -383,8 +383,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "トリプルストライク",
-    "DESCRIPTION": " !D! ダメージを与える。 NL コストが0で * champ:スキルボーナス が付いた *ストライク を2枚手札に加える。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL コストが0で * champ:スキルボーナス が付いた *ストライク+ を2枚手札に加える。"
+    "DESCRIPTION": " !D! ダメージを与える。 NL コストが0で * champ:スキルボーナス が付いた *ストライク の gremlin:エコー を2枚手札に加える。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL コストが0で * champ:スキルボーナス が付いた *ストライク+ の gremlin:エコー を2枚手札に加える。"
   },
   "champ:WindUp": {
     "NAME": "ワインドアップ",
