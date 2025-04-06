@@ -342,7 +342,7 @@
   },
   "hexamod:NaughtySpirit": {
     "NAME": "イタズラな魂",
-    "DESCRIPTION": "!burny! hexamod:ソウルバーン を与える NL 現在のゴーストフレイムが hexamod:点火 状態の場合、このカードを手札に戻す。 NL hexamod:後退"
+    "DESCRIPTION": "!burny! hexamod:ソウルバーン を与える NL 現在のゴーストフレイムが hexamod:点火 状態の場合、このカードを手札に戻し、 hexamod:後退 する。"
   },
   "hexamod:StepThrough": {
     "NAME": "ステップスルー",
@@ -466,7 +466,7 @@
   },
   "hexamod:FlameDevourer": {
     "NAME": "炎を貪るもの",
-    "DESCRIPTION": "hexamod:後退 NL hexamod:点火 されたゴーストフレイムの上に hexamod:後退 した場合、 !B! ブロックを得る。"
+    "DESCRIPTION": "一つ前のゴーストフレイムが *点火 していた場合、 hexamod:後退 して !B! ブロックを得る。"
   },
   "hexamod:SpectralGrace": {
     "NAME": "魂の恩寵",
