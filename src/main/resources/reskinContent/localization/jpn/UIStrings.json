@@ -80,6 +80,14 @@
       "今日は洗濯日和だ。"
     ]
   },
+  "reskinContent:ReSkinGremlin": {
+    "TEXT": [
+      "Cats"
+    ],
+    "EXTRA_TEXT": [
+      "うーん... ニャー？"
+    ]
+  },
   "reskinContent:ReSkinBronze": {
     "TEXT": [
       "オートマトン",
