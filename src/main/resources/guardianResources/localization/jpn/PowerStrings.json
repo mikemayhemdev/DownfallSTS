@@ -177,8 +177,8 @@
   "Guardian:EvasiveProtocolPower": {
     "NAME": "回避プロトコル",
     "DESCRIPTIONS": [
-      "#yディフェンシブモード の間 #y敏捷性 #b",
-      " を得る。"
+      "#yディフェンシブモード の間デバフを #b",
+      " 軽減する。"
     ]
   },
   "Guardian:SpikerProtocolPower": {

@@ -10,7 +10,15 @@
     "NAME": "ガーディアンギア",
     "FLAVOR": "3,000フロア毎に交換してください",
     "DESCRIPTIONS": [
-      "#rブロンズギア と置き換える。 NL 戦闘が #yguardianmod:ディフェンシブモード で開始される。それは #b3 ターンの間継続する。"
+      " ",
+      " [] と置き換える。 NL 戦闘の開始時に、 #yギアアップ を得る。 NL #yディフェンシブモード  に入るたびに、 [E] を得て #b2 枚のカードをドローする。"
+    ]
+  },
+  "Guardian:ObsidianScales": {
+	  "NAME": "Obsidian Scales",
+    "FAVOR": "血で空を黒く染めろ。攻撃してきた者すべてに報復せよ。",
+    "DESCRIPTIONS": [
+  	  "戦闘開始時に、 #yトゲ  #b3 を獲得する。デバフを受けたりデバフを獲得したりするたびに、 #yトゲ  #b1 を獲得する。"
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
@@ -45,7 +53,7 @@
     "NAME": "パイロットのコーデックス",
     "FLAVOR": "尖塔の初期手動駆動プロトタイプの設計図とダイアグラム。 by - マスター パイロット デビッド",
     "DESCRIPTIONS": [
-      "ターン終了時、 #yguardianmod:停滞 されているカードが無かった場合、 #b3 枚のカードから #b1 枚を選択し、 #yguardianmod:停滞 スロットに置く。"
+      "戦闘開始から3ターン後、 #yguardianmod:停滞 スロットがいっぱいで無い場合、 #b3 枚のカードから #b1 枚を選択し、 #yguardianmod:停滞 スロットに置く。"
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {

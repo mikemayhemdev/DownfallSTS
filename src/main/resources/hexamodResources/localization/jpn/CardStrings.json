@@ -105,7 +105,13 @@
   "hexamod:Float": {
     "NAME": "浮遊",
     "DESCRIPTION": "カードを 1 枚引く。 NL hexamod:前進",
-    "UPGRADE_DESCRIPTION": "カードを 1 枚引く。 NL hexamod:後退 または hexamod:前進 を選択し行う。",
+    "UPGRADE_DESCRIPTION": "カードを 1 枚引く。 NL  hexamod:後退 または hexamod:前進 を選択し行う。",
+    "EXTENDED_DESCRIPTION": ["hexamod:前進","hexamod:後退", "留まる"]
+  },
+  "hexamod:MatchstickFloat": {
+    "NAME": "こっそりチーク材マッチ",
+   "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": ["hexamod:前進","hexamod:後退", "留まる"]
   },
   "hexamod:Floatwork": {
@@ -336,7 +342,7 @@
   },
   "hexamod:NaughtySpirit": {
     "NAME": "イタズラな魂",
-    "DESCRIPTION": "!burny! hexamod:ソウルバーン を与える NL 現在のゴーストフレイムが hexamod:点火 状態の場合、このカードを手札に戻す。 NL hexamod:後退"
+    "DESCRIPTION": "!burny! hexamod:ソウルバーン を与える NL 現在のゴーストフレイムが hexamod:点火 状態の場合、このカードを手札に戻し、 hexamod:後退 する。"
   },
   "hexamod:StepThrough": {
     "NAME": "ステップスルー",
@@ -450,8 +456,8 @@
   },
   "hexamod:OpposingAction": {
     "NAME": "反抗",
-    "DESCRIPTION": "hexamod:後退 NL [E] を得る。",
-    "UPGRADE_DESCRIPTION": "hexamod:後退 NL [E] [E] を得る。"
+    "DESCRIPTION": "hexamod:後退 NL [E] [E] を得る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "hexamod:後退 NL [E] [E] [E] を得る。 NL 廃棄"
   },
   "hexamod:SeventhEye": {
     "NAME": "七ツの眼",
@@ -460,7 +466,7 @@
   },
   "hexamod:FlameDevourer": {
     "NAME": "炎を貪るもの",
-    "DESCRIPTION": "hexamod:後退 NL hexamod:点火 されたゴーストフレイムの上に hexamod:後退 した場合、 !B! ブロックを得る。"
+    "DESCRIPTION": "一つ前のゴーストフレイムが *点火 していた場合、 hexamod:後退 して !B! ブロックを得る。"
   },
   "hexamod:SpectralGrace": {
     "NAME": "魂の恩寵",
@@ -541,9 +547,9 @@
       ]
       },
   "hexamod:HexaLevel": {
-    "NAME": "Infernal Form",
-    "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! hexamod:Intensity. NL At the start of your turn, gain !M! hexamod:Intensity."
+    "NAME": "地獄化",
+    "DESCRIPTION": "ターン開始時、 hexamod:火力 !M! を得る。",
+    "UPGRADE_DESCRIPTION": "hexamod:火力 !M! を得る。 NL ターン開始時、 !M! hexamod:火力 !M! を得る。"
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",

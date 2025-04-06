@@ -64,8 +64,7 @@
 
   "Gremlin:CounterStrike": {
     "NAME": "カウンターストライク",
-    "DESCRIPTION": " !D! ダメージを与える。敵が攻撃を予定している場合、 !M! *ガード を手札に加える。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。敵が攻撃を予定している場合、 !M! *ガード+ を手札に加える。"
+    "DESCRIPTION": " !D! ダメージを与える。最前列のグレムリンのグレムリンのボーナスを !M! 回発動する。"
   },
 
   "Gremlin:CowerChoice": {
@@ -97,13 +96,13 @@
 
   "Gremlin:Duplicate": {
     "NAME": "複製",
-    "DESCRIPTION": "手札の アタック 1 枚の gremlin:エコー を !M! 枚得る。それらはコストが 1 少ない。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "手札の アタック 1 枚の gremlin:エコー を !M! 枚得る。それらはコストが 1 少ない。"
+    "DESCRIPTION": "手札から選んだ アタック 1 枚の gremlin:エコー を !M! 枚得る。それらはコストが 1 少ない。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "手札から選んだ アタック 1 枚の gremlin:エコー を !M! 枚得る。それらはコストが 1 少ない。"
   },
 
   "Gremlin:EdibleArmor": {
     "NAME": "食用アーマー",
-    "DESCRIPTION": "ブロックを expansioncontent:一時的な体力 に変換する。"
+    "DESCRIPTION": "ブロックを expansioncontent:一時的な体力 に変換する。 NL 廃棄 "
   },
 
   "Gremlin:Encore": {
@@ -123,7 +122,7 @@
 
   "Gremlin:Exacerbate": {
     "NAME": "悪化させる",
-    "DESCRIPTION": " !D! ダメージを与えて gremlin:廃人 にする。 NL 廃棄"
+    "DESCRIPTION": " !D! ダメージを与える。 NL この敵に 脱力 を与えるたびに、敵は !M! HPを失う。 NL 廃棄"
   },
 
   "Gremlin:FairyDust": {
@@ -192,7 +191,8 @@
 
   "Gremlin:GremlinArms": {
     "NAME": "グレムリンアームズ",
-    "DESCRIPTION": "合計 !M! 枚の ナイフ または *ガード を手札に加える。"
+    "DESCRIPTION": "現在のグレムリンのボーナスを発動し、生きているグレムリンと gremlin:交代 する。",
+    "UPGRADE_DESCRIPTION": "現在のグレムリンのボーナスを 2 回発動し、生きているグレムリンと gremlin:交代 する。"
   },
 
   "Gremlin:GremlinMeal": {
@@ -308,7 +308,7 @@
 
   "Gremlin:Pickpocket": {
     "NAME": "ピックポケット",
-    "DESCRIPTION": "gremlin:スティール 全 アーティファクト NL !D! ダメージを与える。 NL 廃棄"
+    "DESCRIPTION": " !D! ダメージを与える。 NL  敵はこのターンに 筋力 !M! を 2 回失う。 NL !blamage! ゴールドを獲得。 NL 廃棄"
   },
 
   "Gremlin:PinNeedle": {
@@ -340,7 +340,7 @@
 
   "Gremlin:Pretaliation": {
     "NAME": "事前報復",
-    "DESCRIPTION": "敵が攻撃を予定している場合 !D! ダメージを与える。 NL それ以外の場合 !blamage! ダメージを与える。"
+    "DESCRIPTION": " !D! ダメージを 2 回与える。 NL 敵から !M! ダメージを受ける。"
   },
 
   "Gremlin:ProperTools": {
@@ -382,8 +382,8 @@
 
   "Gremlin:SecondVolley": {
     "NAME": "第二弾",
-    "DESCRIPTION": " !D! ダメージを与える。 NL このターンにプレイしたカード1枚につき ナイフ を手札に加える。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL このターンにプレイしたカード1枚につき ナイフ+ を手札に加える。",
+    "DESCRIPTION": " !D! ダメージを与える。 NL このターンにプレイしたカード1枚につき、または手札がいっぱいになるまで、 ナイフ を手札に加える。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL このターンにプレイしたカード1枚につき、または手札がいっぱいになるまで、 ナイフ+ を手札に加える。",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " 枚プレイした)",
@@ -421,7 +421,7 @@
 
   "Gremlin:ShowStopper": {
     "NAME": "ショーは終わりだ",
-    "DESCRIPTION": " gremlin:魔力 が 7 丁度の時のみ使用可能。 NL 敵全体に !D! ダメージを 5 回与える。",
+    "DESCRIPTION": " gremlin:魔力 が 7 丁度の時のみ使用可能。 NL 敵全体に !D! ダメージを !M! 回与える。",
     "EXTENDED_DESCRIPTION": ["緊張感が足りない。", "このタイミングじゃ台無しだ。"]
   },
 
@@ -452,7 +452,8 @@
 
   "Gremlin:Tadah": {
     "NAME": "じゃじゃーん！",
-    "DESCRIPTION": "ランダムなスキルの gremlin:エコー を手札に加える。それはプレイするまでコストが0。 NL gremlin:交代 ： gremlin:グレムリンウィザード"
+    "DESCRIPTION": " *ガード を手札に加える。 NL gremlin:交代 ： gremlin:グレムリンウィザード",
+    "UPGRADE_DESCRIPTION": "アップグレードされた *ガード を手札に加える。 NL gremlin:交代 ： gremlin:グレムリンウィザード"
   },
 
   "Gremlin:TagTeam": {

@@ -1,14 +1,17 @@
 [
   {
-    "PROPER_NAME": "テクニック",
+    "PROPER_NAME": "スキルボーナス",
     "NAMES": [
+      "bonus",
+      "bonuses",
+      "スキルボーナス",
       "technique",
       "techniques",
+      "テクニック",
       "champ:[crown_icon]",
-      "[crown_icon]",
-      "テクニック"
+      "[crown_icon]"
     ],
-    "DESCRIPTION": "#yスタンス では スキル にボーナスが付く。"
+    "DESCRIPTION": "#yスタンス  中の場合、そのスキルボーナスを発動する。 NL #r狂化 #yスキルボーナス : #b2 #y気力  を得る。 NL #b守護 #yスキルボーナス : #b3 #yカウンター  を得る。"
   },
   {
     "PROPER_NAME": "コンボ",
