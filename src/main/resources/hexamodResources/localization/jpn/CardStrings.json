@@ -110,9 +110,9 @@
   },
   "hexamod:MatchstickFloat": {
     "NAME": "Sneaky Teakwood Match",
-    "DESCRIPTION": "このカードは実行中に遭遇するべきではありません。NL これを読んでいるなら、おそらくバグに遭遇しています。NL これを mod 開発者に報告してください。",
-    "UPGRADE_DESCRIPTION": "このカードは実行中に遭遇するべきではありません。NL これを読んでいるなら、おそらくバグに遭遇しています。 NL これを mod 開発者に報告してください。",
-    "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "何もしない。"]
+   "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
   },
   "hexamod:Floatwork": {
     "NAME": "浮遊移動",
