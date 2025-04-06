@@ -456,8 +456,8 @@
   },
   "hexamod:OpposingAction": {
     "NAME": "反抗",
-    "DESCRIPTION": "hexamod:後退 NL [E] を得る。",
-    "UPGRADE_DESCRIPTION": "hexamod:後退 NL [E] [E] を得る。"
+    "DESCRIPTION": "hexamod:後退 NL [E] [E] を得る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "hexamod:後退 NL [E] [E] [E] を得る。 NL 廃棄"
   },
   "hexamod:SeventhEye": {
     "NAME": "七ツの眼",
