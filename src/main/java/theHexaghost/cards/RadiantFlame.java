@@ -22,7 +22,7 @@ public class RadiantFlame extends AbstractHexaCard {
     public RadiantFlame() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = damage = 11;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "RadiantFlame.png");
     }
