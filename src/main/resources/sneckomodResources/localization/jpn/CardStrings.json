@@ -109,10 +109,10 @@
   },
   "sneckomod:SnakeEyes": {
     "NAME": "スネッコアイ",
-    "DESCRIPTION": "このターン、次の sneckomod:オフクラス カードは 2 回プレイされます。  NL sneckomod:ギフト : レア スキル ",
-    "UPGRADE_DESCRIPTION": "このターン、次の2枚の sneckomod:オフクラス カードは 2 回プレイされます。  NL sneckomod:ギフト : レア スキル ",
-    "DESCRIPTION_BATTLE": "このターン、次の sneckomod:オフクラス カードは 2 回プレイされます。 ",
-    "UPGRADE_DESCRIPTION_BATTLE": "このターン、次の2枚の sneckomod:オフクラス カードは 2 回プレイされます。 "
+    "DESCRIPTION": "このターン、次の sneckomod:オフクラス カードは 2 回プレイされる。  NL sneckomod:ギフト : レア スキル ",
+    "UPGRADE_DESCRIPTION": "このターン、次の2枚の sneckomod:オフクラス カードは 2 回プレイされる。  NL sneckomod:ギフト : レア スキル ",
+    "DESCRIPTION_BATTLE": "このターン、次の sneckomod:オフクラス カードは 2 回プレイされる。 ",
+    "UPGRADE_DESCRIPTION_BATTLE": "このターン、次の2枚の sneckomod:オフクラス カードは 2 回プレイされる。 "
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
@@ -159,7 +159,7 @@
   },
   "sneckomod:PureSnecko": {
     "NAME": "シフト",
-    "DESCRIPTION": " !M! カードを引き、カードを 1 枚選んで sneckomod:泥まみれ にする。"
+    "DESCRIPTION": " !M! カードを引き、それらのカードを sneckomod:泥まみれ にする。"
   },
   "sneckomod:QuickBite": {
     "NAME": "スネークレーキ",
