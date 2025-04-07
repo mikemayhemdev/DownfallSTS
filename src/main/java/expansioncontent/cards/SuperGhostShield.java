@@ -58,18 +58,27 @@ public class SuperGhostShield extends AbstractExpansionCard {
     @Override
     public void initializeDescription() {
         super.initializeDescription();
-        String afterlife_name = downfallMod.keywords_and_proper_names.get("afterlife");
-        this.keywords.add(afterlife_name);
-        String blur_name = downfallMod.keywords_and_proper_names.get("blur");
-        this.keywords.add(blur_name);
-        if (Settings.language == Settings.GameLanguage.ZHS){
-            this.keywords.add("格挡");
-        }else if (Settings.language == Settings.GameLanguage.RUS){
-            //this.keywords.add("ловкость");
-        }else{
-            this.keywords.add("block");
+            String afterlife_name = downfallMod.keywords_and_proper_names.get("afterlife");
+            this.keywords.add(afterlife_name);
+
+        if (Settings.language == Settings.GameLanguage.JPN) {
+            this.keywords.add("ブラー");
+        }
+
+        if (Settings.language != Settings.GameLanguage.JPN) {
+            String blur_name = downfallMod.keywords_and_proper_names.get("blur");
+            this.keywords.add(blur_name);
+        }
+            if (Settings.language == Settings.GameLanguage.ZHS) {
+                this.keywords.add("格挡");
+            } else if (Settings.language == Settings.GameLanguage.RUS) {
+                //this.keywords.add("ловкость");
+            } else {
+                if (Settings.language != Settings.GameLanguage.JPN) {
+                    this.keywords.add("block");
+                }
+            }
         }
     }
-}
 
 

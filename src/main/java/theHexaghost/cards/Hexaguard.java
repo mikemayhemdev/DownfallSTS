@@ -56,7 +56,9 @@ public class Hexaguard extends AbstractHexaCard implements HexaPurpleTextInterfa
         }else if (Settings.language == Settings.GameLanguage.RUS){
             //this.keywords.add("ловкость");
         }else{
-            this.keywords.add("block");
+            if (Settings.language != Settings.GameLanguage.JPN) {
+                this.keywords.add("block");
+            }
         }
     }
 }

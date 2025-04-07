@@ -60,7 +60,9 @@ public class GhostShield extends AbstractHexaCard implements HexaPurpleTextInter
         }else if (Settings.language == Settings.GameLanguage.RUS){
             //this.keywords.add("ловкость");
         }else{
-            this.keywords.add("block");
+            if (Settings.language != Settings.GameLanguage.JPN) {
+                this.keywords.add("block");
+            }
         }
     }
 

@@ -118,7 +118,7 @@
     "NAME": "浮遊移動",
     "DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL *敏捷性 1 を得る。 NL ",
     "EXTENDED_DESCRIPTION": [
-      "*プレートアーマー !M! を得る。"
+      "プレートアーマー !M! を得る。"
     ]
   },
   "hexamod:ForkedFlame": {
@@ -168,7 +168,7 @@
     "NAME": "ゴーストシールド",
     "DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL 1 ブラー を得る。 NL ",
     "EXTENDED_DESCRIPTION": [
-      " !B! ブロックを得る"
+      " !B! ブロックを得る。"
     ]
   },
   "hexamod:GiftsFromBeyond": {
