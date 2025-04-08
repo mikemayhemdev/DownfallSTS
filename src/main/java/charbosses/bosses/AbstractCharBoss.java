@@ -1189,7 +1189,7 @@ public void damage(final DamageInfo info) {
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
             onBossVictoryLogic();
-                }
+        }
 
 
 

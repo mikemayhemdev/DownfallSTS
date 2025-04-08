@@ -228,6 +228,7 @@ public class CharBossMerchant extends AbstractCharBoss {
     @Override
     public void die() {
         super.die();
+        onBossVictoryLogic();
         FleeingMerchant.DEAD = true;
     }
 }
