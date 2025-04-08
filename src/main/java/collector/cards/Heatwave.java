@@ -18,7 +18,7 @@ public class Heatwave extends AbstractCollectorCard {
 
     public Heatwave() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 4;
+        baseDamage = 5;
         cardsToPreview = new Ember();
         isMultiDamage = true;
     }
