@@ -25,8 +25,8 @@
   "sneckomod:OffclassReductionPotion": {
     "NAME": "エキゾチックな飲み物",
     "DESCRIPTIONS": [
-      "手札の #yオフクラス カードのコストを #b",
-      " 軽減する。"
+      "手札にある #yオフクラス カードのコストを #b",
+      " 減らす。"
     ]
   }
 }
