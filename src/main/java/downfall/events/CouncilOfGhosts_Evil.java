@@ -7,12 +7,14 @@ import collector.cardmods.CollectedCardMod;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Apparition;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import gremlin.patches.GremlinEnum;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -45,15 +47,21 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
 
     private int screenNum = 0;
     private int hpLoss = 0;
-    private int goldCost = 150;
+    private int goldCost = 100;
 
     public CouncilOfGhosts_Evil() {
         super(NAME, DESCRIPTIONSALT[0], "images/events/ghost.jpg");
         this.hpLoss = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.5F);
+        if (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
+            this.hpLoss = this.hpLoss*5;
+        }
         if (this.hpLoss >= AbstractDungeon.player.maxHealth) {
             this.hpLoss = AbstractDungeon.player.maxHealth - 1;
         }
 
+        if (AbstractDungeon.ascensionLevel >= 15){
+            goldCost = 150;
+        }
 
         if (AbstractDungeon.player.gold >= goldCost) {
             this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldCost + OPTIONSALT[1], new Apparition());

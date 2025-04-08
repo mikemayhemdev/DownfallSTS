@@ -6,7 +6,7 @@
       "absorbed"
     ],
     "PROPER_NAME": "Absorb",
-    "DESCRIPTION": "Manually recombine with your leading Slime, granting you 1 #yStrength."
+    "DESCRIPTION": "Manually recombine with your leading Slime, granting you #b1 #yStrength [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -14,7 +14,7 @@
       "splitting"
     ],
     "PROPER_NAME": "Split",
-    "DESCRIPTION": "Spawn a Slime minion, who attacks at the start of each turn. NL If you have no empty slots, your oldest Slime is automatically #yAbsorbed to make room, granting you 1 #yStrength."
+    "DESCRIPTION": "Spawn a Slime minion, who attacks at the start of each turn. NL If you have no empty slots, your oldest Slime is automatically #yAbsorbed to make room, granting you #b1 #yStrength [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -22,14 +22,14 @@
       "gooped"
     ],
     "PROPER_NAME": "Goop",
-    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, removing all #yGoop and triggering any #yConsume effects."
+    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop [REMOVE_SPACE], removing all #yGoop and triggering any #yConsume effects."
   },
   {
     "NAMES": [
       "potency"
     ],
     "PROPER_NAME": "Potency",
-    "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes. Secondary effects increase by 1 for every 2 Potency."
+    "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes. Secondary effects increase by #b1 for every #b2 Potency (rounding up)."
   },
   {
     "NAMES": [
@@ -56,7 +56,7 @@
       "bruiser"
     ],
     "PROPER_NAME": "Bruiser Slime",
-    "DESCRIPTION": "Attacks for #b5 each turn."
+    "DESCRIPTION": "Attacks for #b3 twice each turn."
   },
   {
     "NAMES": [
@@ -190,7 +190,7 @@
       "consume"
     ],
     "PROPER_NAME": "Consume",
-    "DESCRIPTION": "Bonus effect which activates when an #yAttack is used on an enemy who has #yGoop."
+    "DESCRIPTION": "Bonus effect which activates when an #yAttack is used on an enemy who has #yGoop [REMOVE_SPACE]."
   },
   {
     "NAMES": [

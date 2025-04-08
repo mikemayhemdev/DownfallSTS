@@ -20,9 +20,14 @@ public class EnBuffer extends AbstractBossCard {
         super(ID, cardStrings.NAME, "blue/power/buffer", 2, cardStrings.DESCRIPTION, CardType.POWER, CardColor.BLUE, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-       // alwaysDisplayText = true;
-    }
 
+    }
+    public EnBuffer(boolean text) {
+        super(ID, cardStrings.NAME, "blue/power/buffer", 2, cardStrings.DESCRIPTION, CardType.POWER, CardColor.BLUE, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+        this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber;
+        alwaysDisplayText = text;
+    }
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         this.addToBot(new ApplyPowerAction(m, m, new BufferPower(m, this.magicNumber), this.magicNumber));

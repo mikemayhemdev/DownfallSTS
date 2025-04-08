@@ -1,0 +1,124 @@
+{
+  "collector:EmeraldTorch": {
+    "NAME": "Torche emeraude",
+    "FLAVOR": "Les feux de la cupidité ne s'éteignent jamais.",
+    "DESCRIPTIONS": [
+      "Commencez chaque combat avec #b1 #ycollector:Réserve."
+    ]
+  },
+  "collector:PrismaticTorch": {
+    "NAME": "Torche prismatique",
+    "FLAVOR": "Les flammes en constante évolution reflètent la faveur de la fortune.",
+    "DESCRIPTIONS": [
+      "Remplace ",
+      ".[] Au début de chaque combat, ajouter un #yCharbon dans votre main et gagnez #b1 #ycollector:Réserve. La première fois que vous #yÉpuisez un #yCharbon chaque tour, gagnez #b1 #ycollector:Réserve."
+    ]
+  },
+  "collector:HolidayCoal": {
+    "NAME": "Charbon Krampien",
+    "FLAVOR": "\"Intrigant! Mais pourquoi seulement des cheminées spécifiques?\" - Ranwid",
+    "DESCRIPTIONS": [
+      "Quand vous piochiez dans une pile de collection vide, vous piochez a la place un #yMèche #yChanceuse."
+    ]
+  },
+  "collector:BagOfTricks": {
+    "NAME": "Sac à malice",
+    "FLAVOR": "Scabreux.",
+    "DESCRIPTIONS": [
+      "Au début de chaque combat, piochez #b",
+      " carte collecté."
+    ]
+  },
+  "collector:JadeRing": {
+    "NAME": "Bague en jade",
+    "FLAVOR": "le jade est le symbole de l'honnêteté.",
+    "DESCRIPTIONS": [
+      "Chaque fois qu'un ennemie non-sbire #ycollector:Maudit meurt, gagnez #b",
+      " Ames."
+    ]
+  },
+  "collector:SoullitLamp": {
+    "NAME": "Lampe éclairée par des âme",
+    "FLAVOR": "Une décoration macabre. Les crépitements du feu sont remplacés par des gémissements bourdonnants.",
+    "DESCRIPTIONS": [
+      "A l'obtention, gagnez #b3 #yEssence. Au début du combat, ajoutez un #yCharbon dans votre main."
+    ]
+  },
+  "collector:ThimbleHelm": {
+    "NAME": "Heaume à dé à coudre",
+    "FLAVOR": "Porté par les plus petits héros du Spire.",
+    "DESCRIPTIONS": [
+      "Commencez chaque combat avec #b",
+      " #yPV_temporaire. Pendant que vous avez des #yPV_temporaire, les cartes donne #b1 #yd'Armure additionnel."
+    ]
+  },
+  "collector:Incense": {
+    "NAME": "Encens",
+    "FLAVOR": "Une forme désuète de clarification mentale.",
+    "DESCRIPTIONS": [
+      "Vous ne pouvez pas gagner #yFaiblesse, #yVulnérable ou #yFragilité pendant que vous êtes #yAffaiblis, #yVulnérable ou #yFragilisé."
+    ]
+  },
+  "collector:FuelCanister": {
+    "NAME": "Bidon de carburant",
+    "FLAVOR": "Dégoûtant.",
+    "DESCRIPTIONS": [
+      "A la fin de votre tour, #yRetenez la carte la plus coûteuse de votre en main."
+    ]
+  },
+  "collector:AutoCurser": {
+    "NAME": "Talisman maléfique",
+    "FLAVOR": "\"Quand je met ça, mon taux de coups aux orteils a considérablement augmenté. je pense que ça marche!\" - Ranwid",
+    "DESCRIPTIONS": [
+      "Au début du combat, appliquez #b1 #yFaiblesse et #yVulnérable a un ennemie aléatoire."
+    ]
+  },
+  "collector:Bagpipes": {
+    "NAME": "Cornemuses",
+    "FLAVOR": "On dit que cet instrument redouté a rendu Kublai complétement fou..",
+    "DESCRIPTIONS": [
+      "Quand vous appliquez #yFaiblesse ou #yVulnérable, augmente le montent appliquez de #b1."
+    ]
+  },
+  "collector:BottledCollectible": {
+    "NAME": "Cerveau en bouteille",
+    "FLAVOR": "Récupéré dans le laboratoire d'un sorcier.",
+    "DESCRIPTIONS": [
+      "A l'obtention, #yAméliorer une carte de votre collection. Commencez le combat avec cette carte au sommet de la pile de collection.",
+      "Commencez le combat avec ",
+      " au sommet de la pile de collection.",
+      "Sélectionnez une carte a mettre en bouteille "
+    ]
+  },
+  "collector:TheContract": {
+    "NAME": "Le contrat",
+    "FLAVOR": "Signez avec votre sang.",
+    "DESCRIPTIONS": [
+      "A l'obtention, gagnez #b10 #yEssence."
+    ]
+  },
+  "collector:ForbiddenFruit": {
+    "NAME": "Fruit défendu",
+    "FLAVOR": "Cette espèce de fruit semble complètement inconnue.",
+    "DESCRIPTIONS": [
+      "A l'obtention, Choissisez et obtenez une carte commune, peu commune, et rare parmis toutes celle disponible. ensuite, obtenez la #yNécrodiction.",
+      "Choisissez une carte rare à ajouter à votre deck.",
+      "Choisissez une carte peu commune à ajouter à votre deck.",
+      "Choisissez une carte commune à ajouter à votre deck."
+    ]
+  },
+  "collector:RoughDiamond": {
+    "NAME": "Diamant brut",
+    "FLAVOR": "Avec la démolition des mines, même cette pierre ternie a de la valeur.",
+    "DESCRIPTIONS": [
+      "Chaque fois que vous jouez une carte rare coûtent #b2 ou plus, gagnez [E] ."
+    ]
+  },
+  "collector:BlockedChakra": {
+    "NAME": "Chakra bloqué",
+    "FLAVOR": "Une élongation musculaire suffit.",
+    "DESCRIPTIONS": [
+      "Gagnez [E] au début de votre tour. Vous ne piochez pas dans votre pile de collection avant le 4eme tour."
+    ]
+  }
+}

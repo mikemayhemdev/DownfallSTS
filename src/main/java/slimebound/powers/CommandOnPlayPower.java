@@ -16,6 +16,8 @@ import slimebound.orbs.SpawnedSlime;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
+import static downfall.cardmods.CommandMod.checkMinionMaster;
+
 public class CommandOnPlayPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = "Slimebound:CommandOnPlayPower";
@@ -46,6 +48,7 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
         if (o != null) {
             addToBot(new TrigggerSpecificSlimeAttackAction(o));
         }
+        checkMinionMaster(); // maybe this crashes idk lol
         addToBot(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, this, 1));
     }
 

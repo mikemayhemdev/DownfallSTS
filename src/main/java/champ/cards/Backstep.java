@@ -13,11 +13,11 @@ public class Backstep extends AbstractChampCard {
     public final static String ID = makeID("Backstep");
 
     public Backstep() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        tags.add(ChampMod.OPENER);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+       // tags.add(ChampMod.OPENER);
 
-        baseBlock = 6;
-        this.tags.add(ChampMod.OPENERDEFENSIVE);
+        baseBlock = 7;
+        //this.tags.add(ChampMod.OPENERDEFENSIVE);
         //tags.add(ChampMod.COMBO);
         //tags.add(ChampMod.COMBOBERSERKER);
         postInit();
@@ -25,7 +25,7 @@ public class Backstep extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        defenseOpen();
+      //  defenseOpen();
         blck();
     }
 

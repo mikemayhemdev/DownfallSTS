@@ -25,7 +25,7 @@ public class EnForceField extends AbstractBossCard {
     private static final CardStrings cardStrings;
 
     public EnForceField() {
-        super("Force Field", cardStrings.NAME, "blue/skill/forcefield", 4, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
+        super("Force Field", cardStrings.NAME, "blue/skill/forcefield", 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 12;
 
     }

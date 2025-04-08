@@ -1,32 +1,32 @@
 {
   "sneckomod:DiceRollPotion": {
-    "NAME": "Potentially Potent Potion",
+    "NAME": "Card in a Bottle",
     "DESCRIPTIONS": [
-      "Deal #b",
-      "-",
-      " damage."
+      "Use in combat to add #b",
+      " card reward with #b3 #yUpgraded Uncommon #yOffclass cards to the room's rewards.",
+      " card rewards with #b3 #yUpgraded Uncommon #yOffclass cards to the room's rewards."
     ]
   },
   "sneckomod:CheatPotion": {
     "NAME": "Liquid Luck",
     "DESCRIPTIONS": [
-      "Gain #yLucky for 1 turn.",
-      "Gain #yLucky for #b",
-      " turns."
+      "Overflow effects always activate this turn regardless of hand size.",
+      "Overflow effects always activate for #b",
+      " turns regardless of hand size."
     ]
   },
   "sneckomod:MuddlingPotion": {
     "NAME": "Spiked Energy Drink",
     "DESCRIPTIONS": [
       "#yMuddle the #b",
-      " highest-cost cards in your hand. Cards #yMuddled this way cannot cost 3."
+      " highest-cost cards in your hand. Cards #yMuddled this way can't cost #b3 [REMOVE_SPACE]."
     ]
   },
   "sneckomod:OffclassReductionPotion": {
     "NAME": "Exotic Beverage",
     "DESCRIPTIONS": [
       "Reduce the cost of #yOffclass cards in your hand by #b",
-      "."
+      " [REMOVE_SPACE]."
     ]
   }
 }

@@ -31,6 +31,7 @@ public class EnBrilliance extends AbstractBossCard {
         this.magicNumber = this.baseMagicNumber;
     }
 
+
     public void applyPowers() {
         int realBaseDamage = this.baseDamage;
         this.baseMagicNumber = AbstractCharBoss.boss.mantraGained;
@@ -38,6 +39,7 @@ public class EnBrilliance extends AbstractBossCard {
         super.applyPowers();
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
+        super.applyPowers();
     }
 
     public void calculateCardDamage(AbstractMonster mo) {

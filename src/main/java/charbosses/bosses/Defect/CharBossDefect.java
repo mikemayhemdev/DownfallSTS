@@ -20,10 +20,11 @@ import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import com.megacrit.cardcrawl.core.Settings;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import downfall.util.LocalizeHelper;
 
 public class CharBossDefect extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Defect");
-    public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Defect").NAMES[0];
+    public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[3];
 
     public int clawsPlayed = 0;
 

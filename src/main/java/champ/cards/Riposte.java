@@ -13,9 +13,10 @@ public class Riposte extends AbstractChampCard {
     public final static String ID = makeID("Riposte");
 
     public Riposte() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = 0;
         isEthereal = true;
+        tags.add(CardTags.STRIKE);
         exhaust = true;
         postInit();
         loadJokeCardImage(this, "Riposte.png");
@@ -26,6 +27,6 @@ public class Riposte extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeDamage(3);
     }
 }

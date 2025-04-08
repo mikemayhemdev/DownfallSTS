@@ -1,36 +1,36 @@
 {
   "sneckomod:Unknown": {
     "TEXT": [
-      "未知",
-      "已 升級 的",
-	  "戰鬥開始時未知牌將根據情況變化成其他隨機牌。",
-      " NL 選擇角色：",
-      "戰鬥開始時未知牌將根據情況變化成任何其他角色的牌（基礎打擊防禦除外）。",
-      "戰鬥開始時未知牌將根據情況變化成其他角色的牌（基礎打擊防禦除外）。"
+      "Unidentified",
+      " Upgraded ",
+      "At the start of combat, Unidentified cards transform into other random cards from the chosen classes that satisfy certain constraints.",
+      " NL Chosen classes:",
+      "At the start of combat, Unidentified cards transform into other random cards from ANY other class that satisfy certain constraints.",
+      "At the start of combat, Unidentified cards transform into other random cards from other classes that satisfy certain constraints."
     ]
   },
   "sneckomod:UnknownNames": {
     "TEXT": [
-      "未知"
+      "Unidentified"
     ]
   },
   "sneckomod:UnknownClass": {
     "TEXT": [
-      "？？？",
-      " *未知 ",
-      " 牌。",
-      "角色",
-      " ",
-      "你應該看不到這個的。請報告給Vex",
-      "已 升級 的 "
+      "???",
+      "*Unidentified ",
+      " Card.",
+      "Character",
+      "The ",
+      "You should never see this. Report to Vex",
+      "Upgraded "
     ]
   },
   "sneckomod:UpgradedUnknownReward": {
-  "TEXT": [
-    "將一張已升級的未知牌加入牌組",
-    "選擇一張牌"
-  ]
-},
+    "TEXT": [
+      "Add an Unidentified+ card to your deck",
+      "Pick a Card."
+    ]
+  },
   "sneckomod:FreeRetainMod": {
     "TEXT": [
       "保留 。 NL "
@@ -41,29 +41,46 @@
       " NL 消耗 。"
     ]
   },
-  
   "sneckomod:ChallengeMode": {
     "TEXT": [
-      "挑戰模式 - 混亂無序",
-      "未知牌池擴大到所有角色。適合異蛇高玩享用。"
+      "挑戰模式—異蛇·包羅萬象",
+      "禮物將來自所有角色，推薦異蛇高玩嘗試。"
     ]
   },
   "sneckomod:LockInBonfireOptions": {
     "TEXT": [
-      "明晰",
-      "將未知牌變為特定的牌，可選牌為上場戰鬥呈現的牌",
-      "需要一張未知牌",
-      "選擇一張牌加入你的牌組並移除未知",
-	  "[自由行動] 選擇一張牌加入你的牌組並移除未知"
+      "Identify",
+      "Lock an Unidentified into a permanent card.",
+      "Requires an Unidentified card.",
+      "Select a card to add to your deck, removing its Unidentified.",
+      "[Free Action] Lock an Unidentified into a permanent card."
+    ]
+  },
+  "sneckomod:CommonAttackReward": {
+    "TEXT": [
+      "將1張異色牌加入你的卡組中。",
+      "選擇1張牌。"
+    ]
+  },
+  "sneckomod:DiceRollPotionReward": {
+    "TEXT": [
+      "將1張已升級的牌加入你的卡組中。",
+      "選擇1張牌。"
+    ]
+  },
+  "sneckomod:ColorfulPowersCardReward": {
+    "TEXT": [
+      "將1張已升級的能力牌加入你的卡組中。",
+      "選擇1張牌。"
     ]
   },
   "sneckomod:AtGameStart": {
     "TEXT": [
       "",
       "牌",
-      "本局遊戲 *未知 牌將會變為 ",
-      " 牌。",
-      "選擇本局遊戲未知牌"
+      "禮物 將包括",
+      " 牌",
+      "選擇本局遊戲禮物牌"
     ]
   }
 }

@@ -1,6 +1,6 @@
 package sneckomod.cards.unknowns;
 
-import com.badlogic.gdx.graphics.Texture;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import sneckomod.SneckoMod;
@@ -8,11 +8,12 @@ import sneckomod.SneckoMod;
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
+@NoCompendium
 public class UnknownRareAttack extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownRareAttack");
 
     public UnknownRareAttack() {
-        super(ID, CardType.ATTACK, CardRarity.RARE);
+        super(ID, CardType.ATTACK, CardRarity.SPECIAL);
         SneckoMod.loadJokeCardImage(this, "UnknownRareAttack.png");
     }
 

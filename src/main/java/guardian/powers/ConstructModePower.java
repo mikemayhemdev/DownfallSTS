@@ -33,14 +33,19 @@ public class ConstructModePower extends AbstractGuardianPower {
     }
 
     public void updateDescription() {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];;
     }
 
     public void atStartOfTurn() {
-        if (AbstractDungeon.player.hasPower(BufferPower.POWER_ID)){
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, amount), amount));
+        ;
+        if (AbstractDungeon.player.hasPower(BufferPower.POWER_ID)) {
+            if (AbstractDungeon.player.hasPower("Buffer")) {
+                int buf = AbstractDungeon.player.getPower("Buffer").amount;
+                if (buf >= amount) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, amount), amount));
+                }
+            }
         }
 
     }
-
 }

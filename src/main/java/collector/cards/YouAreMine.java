@@ -23,7 +23,7 @@ public class YouAreMine extends AbstractCollectorCard {
     public YouAreMine() {
         super(ID, 2, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 5;
+        baseSecondMagic = secondMagic = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,6 +34,6 @@ public class YouAreMine extends AbstractCollectorCard {
     }
 
     public void upp() {
-        upgradeSecondMagic(3);
+        upgradeSecondMagic(2);
     }
 }

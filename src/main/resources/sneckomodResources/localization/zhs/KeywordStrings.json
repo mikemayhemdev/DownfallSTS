@@ -1,34 +1,68 @@
 [
   {
-    "PROPER_NAME": "蛇证",
+    "PROPER_NAME": "Snekproof",
     "NAMES": [
-      "蛇证"
+      "snekproof"
     ],
-    "DESCRIPTION": "不受 #y混乱 和 #y混淆 影响。"
+    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled. NOTE FOR LOC: 不用翻译。"
+  },
+  {
+  "PROPER_NAME": "Suit",
+  "NAMES": [
+  "suit",
+  "suits"
+],
+  "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits. NOTE FOR LOC: 不用翻译。"
+  },
+  {
+    "PROPER_NAME": "溢出",
+    "NAMES": [
+      "Overflow",
+      "overflow",
+      "溢出"
+    ],
+    "DESCRIPTION": "手牌超过 #b5 张时，溢出牌被打出触发溢出效果。"
   },
   {
     "PROPER_NAME": "混淆",
     "NAMES": [
-      "混淆",
       "muddle",
-      "muddled"
+      "muddled",
+      "muddles",
+      "混淆"
     ],
-    "DESCRIPTION": "将一张牌的耗能本回合变为 #b0 ~ #b3 点。"
+    "DESCRIPTION": "将1张牌本回合第1次打出的耗能随机变为 #b0 ~ #b3 点。混淆后牌的耗能一定会改变。"
   },
   {
-    "PROPER_NAME": "异色牌",
+    "PROPER_NAME": "异色",
     "NAMES": [
-      "异色",
-      "offclass"
+      "offclass",
+      "异色"
     ],
-    "DESCRIPTION": "异蛇牌池以外的所有可获得牌。（包括 #y诅咒 和 #y状态牌 等）"
+    "DESCRIPTION": "异蛇牌以外的所有可获得牌。（包括 #y诅咒 和 #y状态 牌）"
   },
   {
-    "PROPER_NAME": "明晰",
+    "PROPER_NAME": "赠礼",
     "NAMES": [
-      "明晰"
+      "gift",
+      "赠礼"
     ],
-    "DESCRIPTION": "Replace an Unknown card with its current random card permanently."
+    "DESCRIPTION": "当你获得这张牌，可获得以下 异色 牌奖励（甚至金币）。"
+  },
+  {
+    "PROPER_NAME": "Identify",
+    "NAMES": [
+      "identify"
+    ],
+    "DESCRIPTION": "Replace an #yUnidentified card with its current random card permanently. NOTE FOR LOC: 不用翻译"
+  },
+  {
+    "PROPER_NAME": "剧毒",
+    "NAMES": [
+      "venom",
+      "剧毒"
+    ],
+    "DESCRIPTION": "拥有 #y剧毒 的敌人获得非 #y剧毒 的负面效果时，失去对应生命。"
   },
   {
     "PROPER_NAME": "幸运",
@@ -36,13 +70,6 @@
       "lucky",
       "幸运"
     ],
-    "DESCRIPTION": "牌面与药水效果的随机值取最大值。"
-  },
-  {
-    "PROPER_NAME": "即逝",
-    "NAMES": [
-      "即逝"
-    ],
-    "DESCRIPTION": "打出后从牌组中移除。"
+    "DESCRIPTION": "溢出效果一定触发，与手牌大小无关。"
   }
 ]

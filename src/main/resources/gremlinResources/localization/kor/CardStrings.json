@@ -43,7 +43,7 @@
 
   "Gremlin:BurlyBlow": {
     "NAME": "굵직한 강타",
-    "DESCRIPTION": "피해를 !D! 줍니다. 적이 보유한 약화 하나당 피해를 !D! 줍니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 보유한 약화 하나당 피해를 !D! 줍니다."
   },
 
   "Gremlin:CatScratch": {
@@ -64,8 +64,8 @@
 
   "Gremlin:CounterStrike": {
     "NAME": "반사 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. 적이 공격할 의도가 있다면 *수호를 !M! 장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 적이 공격할 의도가 있다면 *수호+를 !M! 장 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 공격할 의도가 있다면 *수호를 !M! 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 적이 공격할 의도가 있다면 *수호+를 !M! 장 얻습니다."
   },
 
   "Gremlin:CowerChoice": {
@@ -103,7 +103,7 @@
 
   "Gremlin:EdibleArmor": {
     "NAME": "식용 갑옷",
-    "DESCRIPTION": "방어도를 변환해서 expansioncontent:임시 *체력을 얻습니다."
+    "DESCRIPTION": "방어도를 변환해서 expansioncontent:임시 *체력을 얻습니다. NL 소멸."
   },
 
   "Gremlin:Encore": {
@@ -123,7 +123,7 @@
 
   "Gremlin:Exacerbate": {
     "NAME": "악화",
-    "DESCRIPTION": "피해를 !D! 줍니다. gremlin:무력화를 부여합니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL gremlin:무력화를 부여합니다. NL 소멸."
   },
 
   "Gremlin:FairyDust": {
@@ -382,8 +382,8 @@
 
   "Gremlin:SecondVolley": {
     "NAME": "다음 일제 사격",
-    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 카드 한 장당 단도를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 카드 한 장당 강화된 단도를 얻습니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 카드 한 장당 단도를 손이 가득찰 때까지 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 카드 한 장당 강화된 단도를 가득찰 때까지 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (카드를 ",
       " 장 사용했습니다.)",
@@ -421,7 +421,7 @@
 
   "Gremlin:ShowStopper": {
     "NAME": "명연기",
-    "DESCRIPTION": "gremlin:마법을 7 보유하고 있을 때만 사용가능합니다. NL 적 전체에게 피해를 !D! 만큼 5번 줍니다.",
+    "DESCRIPTION": "gremlin:마법을 7 보유하고 있을 때만 사용가능합니다. NL 적 전체에게 피해를 !D! 만큼 !M! 번 줍니다.",
     "EXTENDED_DESCRIPTION": ["긴장감이 부족해.", "타이밍을 놓쳤어."]
   },
 
@@ -452,7 +452,8 @@
 
   "Gremlin:Tadah": {
     "NAME": "이제 간다!",
-    "DESCRIPTION": "무작위 스킬 카드의 gremlin:메아리를 1장 얻습니다. 사용하기 전까지 그 카드의 비용이 0이 됩니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다."
+    "DESCRIPTION": "무작위 스킬 카드의 gremlin:메아리를 1장 얻습니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다.",
+    "UPGRADE_DESCRIPTION": "무작위 강화된 스킬 카드의 gremlin:메아리를 1장 얻습니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:TagTeam": {

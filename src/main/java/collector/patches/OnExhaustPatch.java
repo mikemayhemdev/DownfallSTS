@@ -17,7 +17,7 @@ import javassist.CtBehavior;
 )
 
 public class OnExhaustPatch {
-    @SpireInsertPatch(locator = OnExhaustPatch.Locator.class)
+    @SpireInsertPatch(locator = Locator.class)
     public static void TriggerOnExhaust(CardGroup instance, AbstractCard c) {
         for (AbstractCard other : AbstractDungeon.player.hand.group) {
             if (other instanceof OnOtherCardExhaustInHand) {

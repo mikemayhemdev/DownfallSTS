@@ -39,13 +39,7 @@ public class CompilePackageAction extends AbstractGameAction {
                     disCard.current_x = -1000.0F * Settings.scale;
                     AbstractGuardianCard disG = (AbstractGuardianCard) disCard;
                     disG.flipPreviewMode = true;
-                    if (AbstractDungeon.player.hand.size() < 10) {
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-                    } else {
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-                    }
-
-
+                    AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(disCard));
                     AbstractDungeon.cardRewardScreen.discoveryCard = null;
                 }
 

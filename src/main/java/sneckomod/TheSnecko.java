@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -19,6 +20,8 @@ import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.scene.DefectVictoryNumberEffect;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import sneckomod.cards.Defend;
@@ -27,8 +30,10 @@ import sneckomod.cards.Strike;
 import sneckomod.cards.TailWhip;
 import sneckomod.cards.unknowns.*;
 import sneckomod.relics.SneckoSoul;
+import sneckomod.vfx.SneckoVictoryNumberEffect;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static sneckomod.SneckoMod.*;
 import static sneckomod.TheSnecko.Enums.SNECKO_CYAN;
@@ -112,14 +117,13 @@ public class TheSnecko extends CustomPlayer {
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(TailWhip.ID);
         retVal.add(SnekBite.ID);
-        retVal.add(Unknown.ID);
-        retVal.add(Unknown.ID);
         return retVal;
     }
 
@@ -205,6 +209,24 @@ public class TheSnecko extends CustomPlayer {
         return ImageMaster.loadImage(SneckoMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
     */
+
+
+
+    //this is a total meme ending lol
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList();
+        panels.add(new CutscenePanel("sneckomodResources/images/ending/snecko1.png", "ATTACK_MAGIC_BEAM_SHORT"));
+        panels.add(new CutscenePanel("sneckomodResources/images/ending/snecko2.png"));
+        panels.add(new CutscenePanel("sneckomodResources/images/ending/snecko3.png"));
+        return panels;
+    }
+
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+        if (effects.stream().filter(e -> e instanceof SneckoVictoryNumberEffect).count() < 8)
+            effects.add(new SneckoVictoryNumberEffect());
+    }
 
 
     @Override

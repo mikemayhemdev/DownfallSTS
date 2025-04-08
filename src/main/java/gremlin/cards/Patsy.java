@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
+import sneckomod.SneckoMod;
 
 public class Patsy extends AbstractGremlinCard {
     public static final String ID = getID("Patsy");
@@ -27,7 +28,7 @@ public class Patsy extends AbstractGremlinCard {
     public Patsy()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
-
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.baseBlock = BLOCK;
         GremlinMod.loadJokeCardImage(this, "Patsy.png");
     }

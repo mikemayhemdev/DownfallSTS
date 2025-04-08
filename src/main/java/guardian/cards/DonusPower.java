@@ -49,7 +49,7 @@ public class DonusPower extends AbstractGuardianCard {
     public DonusPower() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 2;
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("DonusPower.png"));
 
     }
@@ -57,10 +57,7 @@ public class DonusPower extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawLessNextTurnPower(2), 2));
-        if (upgraded){
-            AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, 1));
-        }
+        AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, 1));
     }
 
     public AbstractCard makeCopy() {
@@ -70,8 +67,7 @@ public class DonusPower extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 

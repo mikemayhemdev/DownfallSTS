@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.RetractAction;
@@ -13,6 +14,8 @@ public class FlameDevourer extends AbstractHexaCard{
     public FlameDevourer() {
         super(ID, 0, CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
         baseBlock = 9;
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "FlameDevourer.png");
     }
 
@@ -45,8 +48,8 @@ public class FlameDevourer extends AbstractHexaCard{
     public void use(AbstractPlayer p, AbstractMonster m) {
         if((GhostflameHelper.getPreviousGhostFlame()).charged) {
             blck();
+            atb(new RetractAction());
         }
-        atb(new RetractAction());
     }
 
     public void triggerOnGlowCheck() {

@@ -6,16 +6,17 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.relics.PrismaticShard;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.util.ColorfulCardReward;
+import sneckomod.util.ColorfulRareReward;
+import sneckomod.util.ColorfulUncommonUpgradedReward;
 
 public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCard.CardColor> {
 
@@ -23,81 +24,77 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCar
     private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("LuckyHorseshoe.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("LuckyHorseshoe.png"));
 
+    public static AbstractCard.CardColor myColor = null;
+    private boolean chosenInGeneral = false;
+
     public SneckoBoss() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
-    public static AbstractCard.CardColor myColor = null; // shared between SneckoCommon and SneckoBoss
-    private boolean chosenInGeneral = true;
-
     @Override
     public void onEquip() {
-        if (myColor != null && AbstractDungeon.player.hasRelic(SneckoCommon.ID)) { // Already got Seal of Approval
-            for (AbstractCard c : CardLibrary.getAllCards()) {
-                if (c instanceof UnknownClass) {
-                    if (myColor == ((UnknownClass) c).myColor) {
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.2F, Settings.HEIGHT / 2F));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.35F, Settings.HEIGHT / 2F));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.5F, Settings.HEIGHT / 2F));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.65F, Settings.HEIGHT / 2F));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.8F, Settings.HEIGHT / 2F));
-                    }
-                }
-            }
-        } else {
-            chosenInGeneral = false;
-            if (AbstractDungeon.isScreenUp) {
-                AbstractDungeon.dynamicBanner.hide();
-                AbstractDungeon.overlayMenu.cancelButton.hide();
-                AbstractDungeon.previousScreen = AbstractDungeon.screen;
-            }
+        myColor = null;
+        chosenInGeneral = false;
+        openColorSelection();
+    }
 
-            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
-            CardGroup c = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-            for (AbstractCard q : CardLibrary.getAllCards()) {
-                if (q instanceof UnknownClass) {
-                    if (SneckoMod.validColors.contains(((UnknownClass) q).myColor) || SneckoMod.pureSneckoMode) {
-                        c.addToTop(q.makeCopy());
-                    }
-                }
-            }
-            if (SneckoMod.pureSneckoMode) {
-                c.shuffle();
-                CardGroup r = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-                for (int i = 0; i < 3; i++) {
-                    r.addToTop(c.group.get(i));
-                }
-                AbstractDungeon.gridSelectScreen.open(r, 1, false, CardCrawlGame.languagePack.getUIString("bronze:MiscStrings").TEXT[8]);
-            } else
-                AbstractDungeon.gridSelectScreen.open(c, 1, false, CardCrawlGame.languagePack.getUIString("bronze:MiscStrings").TEXT[8]);
+    private void openColorSelection() {
+        if (AbstractDungeon.isScreenUp) {
+            AbstractDungeon.dynamicBanner.hide();
+            AbstractDungeon.overlayMenu.cancelButton.hide();
+            AbstractDungeon.previousScreen = AbstractDungeon.screen;
         }
+        AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
+
+        CardGroup selectionGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        for (AbstractCard card : CardLibrary.getAllCards()) {
+            if (card instanceof UnknownClass && (SneckoMod.validColors.contains(((UnknownClass) card).myColor) || SneckoMod.pureSneckoMode || AbstractDungeon.player.hasRelic(PrismaticShard.ID))) {
+                selectionGroup.addToTop(card.makeCopy());
+            }
+        }
+        AbstractDungeon.gridSelectScreen.open(selectionGroup, 1, false, "");
     }
 
-    public static void updateCardPools() {
-        AbstractDungeon.commonCardPool.group.removeIf(q -> q instanceof UnknownClass && ((UnknownClass) q).myColor != myColor);
-    }
 
     @Override
     public void update() {
         super.update();
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && !chosenInGeneral) {
             chosenInGeneral = true;
-            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            myColor = ((UnknownClass) c).myColor;
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.2F, Settings.HEIGHT / 2F));
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.35F, Settings.HEIGHT / 2F));
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.5F, Settings.HEIGHT / 2F));
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.65F, Settings.HEIGHT / 2F));
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.8F, Settings.HEIGHT / 2F));
-            updateCardPools();
-            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-            AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            this.description = getUpdatedDescription();
-            this.tips.clear();
-            this.tips.add(new PowerTip(this.name, this.description));
+            AbstractCard selectedCardsnek = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            if (selectedCardsnek instanceof UnknownClass) {
+                myColor = ((UnknownClass) selectedCardsnek).myColor;
+                createColorSpecificRewards();
+                AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+                AbstractDungeon.gridSelectScreen.selectedCards.clear();
+                updateDescriptionAndTips();
+            }
         }
     }
 
+    private void createColorSpecificRewards() {
+        // Add 3 upgraded uncommon rewards
+        for (int i = 0; i < 3; i++) {
+            AbstractDungeon.getCurrRoom().rewards.add(new ColorfulUncommonUpgradedReward(myColor));
+        }
+
+        // Add 2 rare rewards
+        for (int i = 0; i < 2; i++) {
+            AbstractDungeon.getCurrRoom().rewards.add(new ColorfulRareReward(myColor));
+        }
+
+        AbstractDungeon.combatRewardScreen.open();
+        AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
+        (AbstractDungeon.getCurrRoom()).rewardPopOutTimer = 0.05F;
+    }
+
+    private void updateDescriptionAndTips() {
+        this.description = getUpdatedDescription();
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+    }
+
+    @Override
     public String getUpdatedDescription() {
         if (myColor != null) {
             return DESCRIPTIONS[1] + SneckoMod.getClassFromColor(myColor) + DESCRIPTIONS[2] + SneckoMod.getClassFromColor(myColor) + DESCRIPTIONS[3];
@@ -111,11 +108,9 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCar
     }
 
     @Override
-    public void onLoad(AbstractCard.CardColor s) {
-        myColor = s;
-        this.description = getUpdatedDescription();
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
+    public void onLoad(AbstractCard.CardColor color) {
+        myColor = color;
+        updateDescriptionAndTips();
     }
 
     @Override

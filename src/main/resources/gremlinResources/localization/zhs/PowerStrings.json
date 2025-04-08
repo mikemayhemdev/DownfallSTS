@@ -39,14 +39,15 @@
   "Gremlin:Crippled": {
     "NAME": "致残",
     "DESCRIPTIONS": [
-      "该单位的 #y虚弱 层数不随回合结束降低。敌方回合结束时，其失去 #y虚弱 层数点生命。"
+      "获得 #y虚弱 时，失去",
+      " 点生命"
     ]
   },
   "Gremlin:Encore": {
     "NAME": "喝彩",
     "DESCRIPTIONS": [
-      "每当你使用 #y法力 时，对所有敌人造成 #b",
-      " 点伤害。"
+      "#y法力 造成的额外伤害提高 #b",
+      " 点。"
     ]
   },
   "Gremlin:Enthusiasm": {
@@ -170,6 +171,7 @@
   "Gremlin:SneakyGremlin": {
     "NAME": "卑鄙地精",
     "DESCRIPTIONS": [
+      "0 耗能牌额外造成伤害 #b",
       "每当你打出 #y攻击牌 时，随机对一名敌人造成 #b",
       " 点伤害。"
     ]

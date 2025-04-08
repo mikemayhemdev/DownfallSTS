@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
+import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.EnergizedSlimeboundPower;
@@ -70,7 +71,7 @@ public class PrepareCrush extends AbstractSlimeboundCard {
             AbstractCard q = new SlimeCrush();
             q.upgrade();
             cardsToPreview = q;
-
+            upgradeMagicNumber(2);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }

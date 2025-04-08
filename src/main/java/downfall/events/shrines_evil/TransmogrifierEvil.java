@@ -2,6 +2,8 @@
 package downfall.events.shrines_evil;
 
 
+import com.megacrit.cardcrawl.cards.curses.Pain;
+import downfall.cards.curses.Malfunctioning;
 import downfall.cards.curses.Sapped;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -42,7 +44,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
 
-        this.imageEventText.setDialogOption(OPTIONSALT[2], new Sapped());
+        this.imageEventText.setDialogOption(OPTIONSALT[3], new Malfunctioning());
         this.imageEventText.setDialogOption(OPTIONS[0]);
 
         this.imageEventText.setDialogOption(OPTIONS[1]);
@@ -73,7 +75,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             if (bonusShrine3){
-                AbstractCard curse = new Sapped();
+                AbstractCard curse = new Malfunctioning();
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
                 obtainedCards.add(curse.cardID);
 

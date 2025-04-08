@@ -1,12 +1,14 @@
 package sneckomod.events;
 
-
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.city.Centurion;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.cards.curses.Bewildered;
 import sneckomod.relics.BabySnecko;
 
@@ -25,33 +27,40 @@ public class SuspiciousHouse extends AbstractImageEvent {
     }
 
     private CurScreen screen;
+    private boolean postFightTriggered = false;
 
     public SuspiciousHouse() {
         super(NAME, DESCRIPTIONS[0], "sneckomodResources/images/events/cityStreet.png");
         this.screen = CurScreen.INTRO;
         this.noCardsInRewards = true;
 
-        this.imageEventText.setDialogOption(OPTIONS[0], new Bewildered(), new BabySnecko());
+        this.imageEventText.setDialogOption(OPTIONS[0], new BabySnecko());
         this.imageEventText.setDialogOption(OPTIONS[1]);
     }
 
+    @Override
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case INTRO:
                 this.imageEventText.clearAllDialogs();
                 switch (buttonPressed) {
                     case 0:
-                        Bewildered curse = new Bewildered();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         BabySnecko relic = new BabySnecko();
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), relic);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[1]);
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.screen = CurScreen.END;
-                        logMetricObtainCardAndRelic(ID, "Rescued", curse, relic);
-                        return;
-                    case 2:
+                        this.screen = CurScreen.COMBAT;
+
+                        AbstractMonster m = new Centurion(0, 0);
+                        if (AbstractDungeon.ascensionLevel >= 15) {
+                            m.powers.add(new StrengthPower(m, 3));
+                        }
+                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
+
+                        AbstractDungeon.getCurrRoom().rewards.clear();
+                        AbstractDungeon.getCurrRoom().rewardAllowed = false;
+                        AbstractDungeon.lastCombatMetricKey = "Angry Centurion";
+                        this.enterCombatFromImage();
+                        break;
+                    case 1:
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[1]);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
@@ -59,18 +68,60 @@ public class SuspiciousHouse extends AbstractImageEvent {
                         logMetricIgnored(ID);
                         return;
                 }
+                break;
+
+            case POSTFIGHT:
+                this.imageEventText.clearAllDialogs();
+              //  this.imageEventText.setDialogOption(OPTIONS[1]);
+              //  this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
+              //   this.screen = CurScreen.END;
+                return;
 
             case END:
                 this.openMap();
+                break;
         }
+    }
 
+    @Override
+    public void update() {
+        super.update();
+        if (this.screen == CurScreen.COMBAT && AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead() && !postFightTriggered) {
+            postFightTriggered = true;
+            this.screen = CurScreen.POSTFIGHT;
+            this.imageEventText.clearAllDialogs();
+            AbstractDungeon.getCurrRoom().rewards.clear();
+            AbstractDungeon.getCurrRoom().rewardAllowed = false;
+            AbstractDungeon.resetPlayer();
+            AbstractDungeon.player.drawX = (float) Settings.WIDTH * 0.25F;
+            AbstractDungeon.player.preBattlePrep();
+            this.imageEventText.clearAllDialogs();
+            this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
+            this.imageEventText.setDialogOption(OPTIONS[1]);
+            this.enterImageFromCombat();
+            this.screen = CurScreen.END;
+        }
+    }
+
+    @Override
+    public void reopen() {
+        if (this.screen == CurScreen.POSTFIGHT) {
+            AbstractDungeon.getCurrRoom().rewards.clear();
+            AbstractDungeon.getCurrRoom().rewardAllowed = false;
+            AbstractDungeon.resetPlayer();
+            AbstractDungeon.player.drawX = (float) Settings.WIDTH * 0.25F;
+            AbstractDungeon.player.preBattlePrep();
+            this.imageEventText.clearAllDialogs();
+            //this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
+            //this.imageEventText.setDialogOption(OPTIONS[1]);
+            this.enterImageFromCombat();
+        }
     }
 
     private enum CurScreen {
         INTRO,
+        COMBAT,
+        POSTFIGHT,
         END;
-
-        CurScreen() {
-        }
     }
 }

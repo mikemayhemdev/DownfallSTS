@@ -11,7 +11,7 @@
       "cripple"
     ],
     "PROPER_NAME": "Cripple",
-    "DESCRIPTION": "Crippled enemies can no longer lose #yWeak. At the end of their turn, they lose HP equal to their #yWeak."
+      "DESCRIPTION": "Crippled enemies can no longer lose #yWeak [REMOVE_SPACE]. At the end of their turn, they lose HP equal to their #yWeak [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -19,7 +19,7 @@
       "echoes"
     ],
     "PROPER_NAME": "Echo",
-    "DESCRIPTION": "Echoes are copies of cards with #yEthereal and #yExhaust."
+    "DESCRIPTION": "Echoes are copies of cards with #yEthereal and #yExhaust [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -33,7 +33,7 @@
       "gremlin wizard", "gremlin_wizard"
     ],
     "PROPER_NAME": "Gremlin Wizard",
-    "DESCRIPTION": "After you play a skill, gain #b1 #yWiz."
+    "DESCRIPTION": "After you play a skill, gain #b1 #yWiz [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -47,14 +47,14 @@
       "shield gremlin", "shield_gremlin"
     ],
     "PROPER_NAME": "Shield Gremlin",
-    "DESCRIPTION": "After you play a skill, gain #b2 #yBlock."
+    "DESCRIPTION": "After you play a skill, gain #b2 #yBlock [REMOVE_SPACE]."
   },
   {
     "NAMES": [
       "sneaky gremlin", "sneaky_gremlin"
     ],
     "PROPER_NAME": "Sneaky Gremlin",
-    "DESCRIPTION": "After you play an attack, deal #b3 damage to a random enemy."
+    "DESCRIPTION": "0 cost Attacks deal #b2 additional damage. After you play an Attack, deal #b2 damage to a random enemy."
   },
   {
     "NAMES": [
@@ -68,7 +68,7 @@
       "wiz"
     ],
     "PROPER_NAME": "Wiz",
-    "DESCRIPTION": "When you have at least three stacks of Wiz, Attacks will consume all stacks to deal #b10 additional damage."
+    "DESCRIPTION": "When you have at least three stacks of Wiz, Attacks will consume all stacks to deal #b7 additional damage."
   },
   {
     "NAMES": [

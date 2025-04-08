@@ -3,7 +3,7 @@
     "NAME": "Heart of Goo",
     "FLAVOR": "I feel so funky.",
     "DESCRIPTIONS": [
-      "Whenever you #yslimeboundmod:Consume, heal #b2 HP, up to #b8 each combat."
+      "Whenever you #yslimeboundmod:Consume [REMOVE_SPACE], heal #b2 HP, up to #b8 each combat."
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
@@ -11,22 +11,22 @@
     "FLAVOR": "The Secret of the Ooze.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL Whenever you #yslimeboundmod:Consume, heal #b3 HP, up to #b15 each combat."
+      " [REMOVE_SPACE].[] NL Whenever you #yslimeboundmod:Consume [REMOVE_SPACE], heal #b3 HP, up to #b15 each combat."
     ]
   },
   "Slimebound:SlimedTailRelic": {
     "NAME": "Slimed Tail",
     "FLAVOR": "A fake tail to trick enemies during combat, completely covered in slime.",
     "DESCRIPTIONS": [
-      "Whenever you #ySplit, gain #b",
-      " #yBlock."
+      "Whenever you #ySplit [REMOVE_SPACE], gain #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "Slimebound:PotencyRelic": {
     "NAME": "Stone of Nomakk",
     "FLAVOR": "When presented to one of your Goop Gang, it seems to make the blob dance.",
     "DESCRIPTIONS": [
-      "At the start of combat, gain #b2 #yslimeboundmod:Potency."
+      "At the start of combat, gain #b1 #yslimeboundmod:Potency [REMOVE_SPACE]."
     ]
   },
   "Slimebound:DailySplitRelic": {
@@ -40,7 +40,7 @@
     "NAME": "Scrap Ooze",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn #yScrap #yOoze (can be revived if #yAbsorbed). NL At Rest Sites, you can donate a card to the #yScrap #yOoze, modifying its damage: NL #b+1 damage for #gUncommons NL #b+2 damage for #yRares NL #b-1 damage for Commons NL #b-2 damage for #rCurses",
+      "At the start of combat, spawn #yScrap #yOoze (can be revived if #yAbsorbed [REMOVE_SPACE]). NL At Rest Sites, you can donate a card to the #yScrap #yOoze, modifying its damage: NL #b+1 damage for #gUncommons NL #b+2 damage for #yRares NL #b-1 damage for Commons NL #b-2 damage for #rCurses",
       "Remove a card from your deck and modify Scrap Ooze's damage.",
       "Nothing to give to the Scrap Ooze.",
       "Scrap"
@@ -50,21 +50,21 @@
     "NAME": "Greed Ooze",
     "FLAVOR": "A friend found in the Spire who devours souls.",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn #yGreed #yOoze (can be revived if #yAbsorbed). NL At Rest Sites, #yGreed #yOoze will take #b50 of your souls, increasing its damage by #b1."
+      "At the start of combat, spawn #yGreed #yOoze (can be revived if #yAbsorbed [REMOVE_SPACE]). NL At Rest Sites, #yGreed #yOoze will take #b50 of your souls, increasing its damage by #b1."
     ]
   },
   "Slimebound:PreparedRelic": {
     "NAME": "Slime Soup",
     "FLAVOR": "Tastes awful, but incredibly healthy.",
     "DESCRIPTIONS": [
-      "When you enter a Rest Site, begin the next combat with a #yPrepare card that costs #b0."
+      "When you enter a Rest Site, begin the next combat with a #yPrepare card that costs #b0 [REMOVE_SPACE]."
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {
     "NAME": "Goop Dweller",
     "FLAVOR": "He followed me home. Can I keep it?",
     "DESCRIPTIONS": [
-      "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Bruiser #ySlime."
+      "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Bruiser #ySlime [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SlimedSkullRelic": {
@@ -72,7 +72,7 @@
     "FLAVOR": "A Snecko skull in absolutely awful condition. Unclean and slimy, dirt and grime stick to it like glue.",
     "DESCRIPTIONS": [
       "Whenever you apply #yslimeboundmod:Goop, apply an additional #b",
-      " #yslimeboundmod:Goop."
+      " #yslimeboundmod:Goop [REMOVE_SPACE]."
     ]
   },
   "Slimebound:MaxSlimesRelic": {
@@ -86,7 +86,7 @@
     "NAME": "Protective Gear",
     "FLAVOR": "The best defense is a good offense.",
     "DESCRIPTIONS": [
-      "Reduce the damage you take from #yslimeboundmod:Tackles by #b3."
+      "Reduce the damage you take from #yslimeboundmod:Tackles by #b3 [REMOVE_SPACE]."
     ]
   },
   "Slimebound:TarBlob": {
@@ -100,7 +100,7 @@
     "NAME": "Gelatinous Cube",
     "FLAVOR": "Hey, it stuck to your body.",
     "DESCRIPTIONS": [
-      "Whenever you draw a #yStatus card, draw #b1 card."
+      "The first #b2 times you draw a #yStatus or #rCurse each turn, draw #b1 card. If the card was a #yVoid [REMOVE_SPACE], gain [E] [REMOVE_SPACE]."
     ]
   }
 }

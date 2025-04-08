@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.AllEtherealToHandAction;
 import theHexaghost.actions.RetractAction;
@@ -15,6 +16,8 @@ public class LingeringShades extends AbstractHexaCard{
         super(ID, 1, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
         baseBurn = burn = 11;
         HexaMod.loadJokeCardImage(this, "LingeringShades.png");
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

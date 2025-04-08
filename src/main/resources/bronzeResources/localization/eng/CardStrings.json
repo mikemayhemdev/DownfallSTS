@@ -38,8 +38,8 @@
   },
   "bronze:BitShift": {
     "NAME": "Bit Shift",
-    "DESCRIPTION": "Choose an Encoded card to return to your hand. It gains Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose an Encoded card to return to your hand. It gains Retain. NL Exhaust."
+    "DESCRIPTION": "Choose an Encoded card to return to your hand. NL It gains Retain. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose an Encoded card to return to your hand. NL It gains Retain. NL Exhaust."
   },
   "bronze:Boost": {
     "NAME": "Boost",
@@ -61,7 +61,7 @@
   },
   "bronze:Break": {
     "NAME": "Break",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile *Error - bronze:Insert a *Burn, a *Wound, and a *Slimed.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile *Error - Gain a *Dazed, *Slimed, *Wound, *Burn, *Void.",
     "EXTENDED_DESCRIPTION": [
       "broken",
       "Smash"
@@ -81,7 +81,7 @@
   },
   "bronze:BugBarrage": {
     "NAME": "Bug Barrage",
-    "DESCRIPTION": "Gain 1 *Wound. NL bronze:Cycle each Status, dealing !D! damage for each.",
+    "DESCRIPTION": "Gain !M! *Wounds. NL bronze:Cycle each Status, dealing !D! damage for each.",
     "UPGRADE_DESCRIPTION": "Gain !M! *Wounds. NL bronze:Cycle each Status, dealing !D! damage for each.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
@@ -334,8 +334,7 @@
   },
   "bronze:ItsAFeature": {
     "NAME": "It's a Feature",
-    "DESCRIPTION": "Whenever you draw a Curse or Status card, gain 1 temporary Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Curse or Status card, gain 1 temporary Strength and Dexterity."
+    "DESCRIPTION": "Whenever you draw or Exhaust a Status card, gain !M! Block."
   },
   "bronze:Library": {
     "NAME": "Library",
@@ -347,8 +346,8 @@
   },
   "bronze:Mutator": {
     "NAME": "Mutator",
-    "DESCRIPTION": "Gain 1 Strength. NL *Transform a Status into a copy of this.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain 1 Strength. NL *Transform a Status into a copy of this."
+    "DESCRIPTION": "Gain !M! Strength. NL *Transform a Status into a copy of this.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Strength. NL *Transform a Status into a copy of this."
   },
   "bronze:NullPointer": {
     "NAME": "Null Pointer",
@@ -398,7 +397,7 @@
   },
   "bronze:Refactor": {
     "NAME": "Refactor",
-    "DESCRIPTION": "Scry !M!. NL Exhaust all cards discarded. NL Gain !B! Block for each Status card exhausted."
+    "DESCRIPTION": "Scry !M!. NL Exhaust all Status cards discarded. NL Gain !B! Block for each Status card exhausted."
   },
   "bronze:Repair": {
     "NAME": "Repair",
@@ -410,7 +409,7 @@
   },
   "bronze:Replicate": {
     "NAME": "Replicate",
-    "DESCRIPTION": "Deal !D! damage. \u202F When *Encoded, add a copy to your discard pile.",
+    "DESCRIPTION": "Deal !D! damage. \u202F NL When *Encoded, add a copy to your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "copying",
       "Copy"
@@ -453,7 +452,7 @@
   },
   "bronze:Shield": {
     "NAME": "Sticky Shield",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert 1 *Slimed.",
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL bronze:Insert 1 *Slimed.",
     "EXTENDED_DESCRIPTION": [
       "sticky",
       "Shield"
@@ -461,7 +460,11 @@
   },
   "bronze:ShipIt": {
     "NAME": "Ship It",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL of your Status cards."
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for every Status card in your exhaust pile.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage. NL Repeat for every Status card in your exhaust pile (",
+      ")."
+    ]
   },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetti Code",
@@ -513,8 +516,8 @@
   },
   "bronze:Virus": {
     "NAME": "Virus",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL *Transform all cards in hand into *Minor *Beam. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL *Transform all cards in hand into *Minor *Beam+. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Discard your hand and gain a *Minor *Beam for each card discarded. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Discard your hand and gain a *Minor *Beam+ for each card discarded. NL Exhaust."
   },
   "bronze:WhirlingStrike": {
     "NAME": "Piercing Shot",
@@ -581,7 +584,7 @@
   },
   "bronze:DecaBeam": {
     "NAME": "Proto-Shield",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Plated Armor and bronze:Insert !bauto! *Dazed.",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! expansioncontent:Plated *Armor and bronze:Insert !bauto! *Dazed.",
     "EXTENDED_DESCRIPTION": [
       "jagged",
       "Barrier"

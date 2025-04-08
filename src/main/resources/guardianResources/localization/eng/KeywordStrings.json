@@ -13,7 +13,7 @@
       "stasis"
     ],
     "PROPER_NAME": "Stasis",
-    "DESCRIPTION": "A card in Stasis stays there for amount of turns equal to its cost plus #b1. NL When it exits, it is returned to your hand and costs #b0 until played."
+    "DESCRIPTION": "A card in Stasis stays there for amount of turns equal to its cost plus #b1 [REMOVE_SPACE]. NL When it exits, it is returned to your hand and costs #b0 until played."
   },
   {
     "NAMES": [
@@ -21,7 +21,7 @@
       "gems"
     ],
     "PROPER_NAME": "Gem",
-    "DESCRIPTION": "Gems can be placed into #ySockets in cards at a Rest Site. Cannot be #yUpgraded."
+    "DESCRIPTION": "Gems can be placed into #ySockets in cards at a Rest Site. Cannot be #yUpgraded [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Defensive Mode",
@@ -30,14 +30,14 @@
       "defensive_mode",
       "defensive"
     ],
-    "DESCRIPTION": "#yStance. NL While in Defensive Mode, you have #b3 #yThorns, gain #b10 #yBlock at the start of your turn, and your #yBlock does not expire."
+    "DESCRIPTION": "#yStance. NL Gain #b16 #yBlock when you enter Defensive Mode. While in it, you have #b3 #yThorns and your #yBlock does not expire."
   },
   {
     "NAMES": [
       "accelerate"
     ],
     "PROPER_NAME": "Accelerate",
-    "DESCRIPTION": "Reduce the turn counter of the right-most card in #yStasis by #b1."
+    "DESCRIPTION": "Reduce the turn counter of the right-most card in #yStasis by #b1 [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -52,7 +52,7 @@
       "volatile"
     ],
     "PROPER_NAME": "Volatile",
-    "DESCRIPTION": "When this card leaves #yStasis, it #yExhausts."
+    "DESCRIPTION": "When this card leaves #yStasis, it #yExhausts [REMOVE_SPACE]."
   },
   {
     "NAMES": [

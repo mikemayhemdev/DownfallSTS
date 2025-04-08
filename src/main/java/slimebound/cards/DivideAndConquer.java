@@ -24,6 +24,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.TendrilFlailAction;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
@@ -56,6 +57,7 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
         this.exhaust = true;
         this.isMultiDamage = true;
         baseDamage = 10;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         SlimeboundMod.loadJokeCardImage(this, "DivideAndConquer.png");
     }
 

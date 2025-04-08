@@ -22,7 +22,12 @@ public class SneakyGremlinPower extends GremlinPower {
     }
 
     public void updateDescription() {
-        this.description = (strings.DESCRIPTIONS[0] + this.pot + strings.DESCRIPTIONS[1]);
+        this.description = (strings.DESCRIPTIONS[0] + this.pot + strings.DESCRIPTIONS[1] + this.pot + strings.DESCRIPTIONS[2]);
+    }
+
+    @Override
+    public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
+        return super.atDamageGive(card.costForTurn == 0 ? damage + this.pot : damage, type, card);
     }
 
     @Override
@@ -33,4 +38,5 @@ public class SneakyGremlinPower extends GremlinPower {
                             AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
     }
+
 }

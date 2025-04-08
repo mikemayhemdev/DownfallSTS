@@ -36,12 +36,12 @@ public class Bandits_Evil extends AbstractEvent {
         OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
     }
 
-    private CUR_SCREEN screen;
+    private Bandits_Evil.CUR_SCREEN screen;
     private AbstractRelic wantThisOne = null;
 
     public Bandits_Evil() {
-        this.screen = CUR_SCREEN.INTRO;
-        this.body = DESCRIPTIONSALT[0];// 35
+        this.screen = Bandits_Evil.CUR_SCREEN.INTRO;
+        this.body = DESCRIPTIONSALT[0];
         AbstractRelic.RelicTier t = AbstractRelic.RelicTier.RARE;
         wantThisOne = null;
         for (AbstractRelic r : AbstractDungeon.player.relics) {
@@ -76,54 +76,54 @@ public class Bandits_Evil extends AbstractEvent {
             this.roomEventText.addDialogOption(OPTIONSALT[2], true);
         }
         this.roomEventText.addDialogOption(OPTIONS[1]);
-        this.hasDialog = true;// 40
-        this.hasFocus = true;// 41
-        AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Masked Bandits");// 42
+        this.hasDialog = true;
+        this.hasFocus = true;
+        AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Masked Bandits");
     }
 
     public void update() {
         super.update();
-        if (!RoomEventDialog.waitForInput) {// 48
-            this.buttonEffect(this.roomEventText.getSelectedOption());// 49
+        if (!RoomEventDialog.waitForInput) {
+            this.buttonEffect(this.roomEventText.getSelectedOption());
         }
     }
 
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case INTRO:
-                switch (buttonPressed) {// 57
+                switch (buttonPressed) {
                     case 0:
                         AbstractMonster q = AbstractDungeon.getCurrRoom().monsters.getMonster("BanditLeader");
                         AbstractDungeon.effectList.add(new StealRelicEffect(AbstractDungeon.player.getRelic(wantThisOne.relicId), q));
                         AbstractDungeon.player.loseRelic(wantThisOne.relicId);
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, new RedIOU());
-                        this.roomEventText.updateBodyText(DESCRIPTIONSALT[1]);// 61
-                        this.roomEventText.updateDialogOption(0, OPTIONS[3]);// 62
-                        this.roomEventText.clearRemainingOptions();// 63
-                        this.screen = CUR_SCREEN.COMPLETE;
+                        this.roomEventText.updateBodyText(DESCRIPTIONSALT[1]);
+                        this.roomEventText.updateDialogOption(0, OPTIONS[3]);
+                        this.roomEventText.clearRemainingOptions();
+                        this.screen = Bandits_Evil.CUR_SCREEN.COMPLETE;
                         logMetric(ID, "Hired Bandits",
                                 null, null, null, null,
-                                Collections.singletonList(RedIOU.ID), null, Collections.singletonList(wantThisOne.relicId), 0, 0, 0, 0, 0, 0);// 68
-                        return;// 65
+                                Collections.singletonList(RedIOU.ID), null, Collections.singletonList(wantThisOne.relicId), 0, 0, 0, 0, 0, 0);
+                        return;
                     case 1:
-                        logMetric(ID, "Fought Bandits");// 68
-                        if (Settings.isDailyRun) {// 70
-                            AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(30));// 71
+                        logMetric(ID, "Fought Bandits");
+                        if (Settings.isDailyRun) {
+                            AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(30));
                         } else {
-                            AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(25, 35));// 73
+                            AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(25, 35));
                         }
 
-                        if (AbstractDungeon.player.hasRelic(RedMask.ID)) {// 75
-                            AbstractDungeon.getCurrRoom().addRelicToRewards(new Circlet());// 76
+                        if (AbstractDungeon.player.hasRelic(RedMask.ID)) {
+                            AbstractDungeon.getCurrRoom().addRelicToRewards(new Circlet());
                         } else {
-                            AbstractDungeon.getCurrRoom().addRelicToRewards(new RedMask());// 78
+                            AbstractDungeon.getCurrRoom().addRelicToRewards(new RedMask());
                         }
 
-                        this.enterCombat();// 81
-                        AbstractDungeon.lastCombatMetricKey = "Masked Bandits";// 82
-                        return;// 83
+                        this.enterCombat();
+                        AbstractDungeon.lastCombatMetricKey = "Masked Bandits";
+                        return;
                     default:
-                        return;// 106
+                        return;
                 }
             case COMPLETE:
                 this.openMap();
@@ -131,7 +131,7 @@ public class Bandits_Evil extends AbstractEvent {
 
     }
 
-    private enum CUR_SCREEN {
+    private static enum CUR_SCREEN {
         INTRO,
         COMPLETE;
 

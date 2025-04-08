@@ -43,8 +43,8 @@
   },
   "Guardian:DonusPower": {
     "NAME": "과적",
-    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 다음 턴에 카드를 2장 덜 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 다음 턴에 카드를 2장 덜 뽑습니다. NL 보유한 모든 해로운 효과를 1 감소시킵니다."
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 보유한 모든 해로운 효과를 1 감소시킵니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 보유한 모든 해로운 효과를 1 감소시킵니다."
   },
   "Guardian:DecasProtection": {
     "NAME": "고대의 파워",
@@ -65,7 +65,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "회오리 바람",
-    "DESCRIPTION": "방어도 가 20 이상 필요합니다. NL 적 전체에게 피해를 !D! 만큼 !M! 번 줍니다.",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 2번 줍니다. NL 방어도가 16 이상이면 피해를 !M! 번 추가로 줍니다.",
     "EXTENDED_DESCRIPTION": [
       "방어도 더 필요."
     ]
@@ -139,8 +139,8 @@
   },
   "Guardian:CompilePackage": {
     "NAME": "컴파일 패키지",
-    "DESCRIPTION": "3종류 중 1가지 guardianmod:패키지를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "3종류 중 1가지 강화된 guardianmod:패키지를 얻습니다. NL 소멸.",
+    "DESCRIPTION": "guardianmod:패키지를 선택해 guardianmod:정지장에 넣습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "강화된 guardianmod:패키지를 선택해 guardianmod:정지장에 넣습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "패키지를 선택하십시오."
     ]
@@ -157,8 +157,8 @@
   },
   "Guardian:PackageSphere": {
     "NAME": "패키지: 구체",
-    "DESCRIPTION": "*구체 *방어, *금속화, *부유 *구체를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "*구체 *방어+, *금속화+, *부유 *구체+를 얻습니다. NL 소멸."
+    "DESCRIPTION": "*구체 *방어, *경화, *부유 *구체를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "*구체 *방어+, *경화+, *부유 *구체+를 얻습니다. NL 소멸."
   },
   "Guardian:PackageSentry": {
     "NAME": "패키지: 보초기",
@@ -190,8 +190,8 @@
   },
   "Guardian:Emergency": {
     "NAME": "긴급 상황",
-    "DESCRIPTION": "guardianmod:정지장에 있는 카드 1장이 벗어날 때까지 guardianmod:가속합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "guardianmod:정지장에 있는 카드 1장이 벗어날 때까지 guardianmod:가속합니다."
+    "DESCRIPTION": "guardianmod:정지장에 있는 모든 카드를 guardianmod:가속합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "guardianmod:정지장에 있는 모든 카드를 2번 guardianmod:가속합니다. NL 소멸."
   },
   "Guardian:Clone": {
     "NAME": "복제",
@@ -204,11 +204,15 @@
   },
   "Guardian:GemFinder": {
     "NAME": "보석 채취",
-    "DESCRIPTION": "전투 종료 시 *일반 guardianmod:보석 카드 보상을 추가로 얻습니다."
+    "DESCRIPTION": "휘발성. NL 전투 종료 시 덱에 무작위 guardianmod:보석을 얻습니다."
   },
   "Guardian:StasisField": {
     "NAME": "정지장 방어막",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL guardianmod:정지장에 넣습니다. NL 이 카드가 guardianmod:정지장에서 벗어날 때 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 만큼 3번 얻습니다. NL 이 카드를 guardianmod:정지장에 넣습니다."
+  },
+  "Guardian:Metallicize": {
+    "NAME": "경화",
+    "DESCRIPTION": "expansioncontent:판금_갑옷을 !M! 얻습니다."
   },
   "Guardian:StasisStrike": {
     "NAME": "정지장 타격",
@@ -222,7 +226,7 @@
   "Guardian:Suspension": {
     "NAME": "완충장치",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1장 guardianmod:정지장에 넣습니다.",
-    "UPGRADE_DESCRIPTION": "카드를 1장 뽑습니다. NL 카드를 1장 guardianmod:정지장에 넣습니다."
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1장 guardianmod:정지장에 넣습니다."
   },
   "Guardian:FastForward": {
     "NAME": "속력 가속",
@@ -244,8 +248,8 @@
   },
   "Guardian:GemFire": {
     "NAME": "보석 대포",
-    "DESCRIPTION": "bronze:소유하거나 장착된 guardianmod:보석을 모두 소멸시킵니다. 소멸된 guardianmod:보석 하나당 무작위 적에게 피해를 !D! 줍니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": " NL ( !M! 번 피해를 입힙니다.)"
+    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:소유하거나 장착된 guardianmod:보석의 효과를 모두 발동합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": " NL ( *보석이 !M! 장 있습니다.)"
   },
   "Guardian:ChargeCore": {
     "NAME": "코어 충전",
@@ -257,11 +261,12 @@
   },
   "Guardian:PiercingHide": {
     "NAME": "가시 외골격",
-    "DESCRIPTION": "방어도를 !B! 얻고 가시를 !M! 얻습니다. 이번 턴이 끝날 때 가시를 !M! 잃습니다. NL guardianmod:대비를 3 합니다."
+    "DESCRIPTION": "방어도를 !B! 얻고 가시를 !M! 얻습니다. 이번 턴이 끝날 때 가시를 !M! 잃습니다. NL guardianmod:대비를 3 합니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻고 가시를 !M! 얻습니다. 이번 턴이 끝날 때 가시를 !M! 잃습니다. NL guardianmod:대비를 4 합니다."
   },
   "Guardian:ShieldSpikes": {
     "NAME": "가시 방패",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL guardianmod:수비_모드라면 가시를 !M! 얻습니다. 아니라면 guardianmod:대비를 8 합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL guardianmod:대비를 8 합니다. NL guardianmod:수비_모드라면 가시를 !M! 얻습니다."
   },
   "Guardian:PrismaticBeam": {
     "NAME": "프리즘 광선",
@@ -282,7 +287,7 @@
   },
   "Guardian:ExploitGems": {
     "NAME": "보석 활용",
-    "DESCRIPTION": "카드를 1장 뽑습니다.",
+    "DESCRIPTION": "카드를 1장 뽑습니다. NL guardianmod:째깍할 때 이 카드를 사용합니다. NL guardianmod:불안정.",
     "UPGRADE_DESCRIPTION": " [E] 를 얻습니다. NL 카드를 1장 뽑습니다."
   },
   "Guardian:RefractedBeam": {
@@ -303,11 +308,13 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "회피 규약",
-    "DESCRIPTION": "guardianmod:수비_모드 동안 민첩을 !M! 증가시킵니다. NL 내 턴 시작 시 guardianmod:대비를 3 합니다."
+    "DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 모든 해로운 효과를 !M! 감소시킵니다. NL 내 턴 시작 시 guardianmod:대비를 6 합니다.",
+    "UPGRADE_DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 모든 해로운 효과를 !M! 감소시킵니다. NL 내 턴 시작 시 guardianmod:대비를 9 합니다."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "가시 돋친 규약",
-    "DESCRIPTION": "guardianmod:수비_모드 동안 가시를 !M! 얻습니다. NL 내 턴 시작 시 guardianmod:대비를 3 합니다."
+    "DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 가시를 !M! 얻습니다. NL guardianmod:대비를 6 합니다.",
+    "UPGRADE_DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 가시를 !M! 얻습니다. NL guardianmod:대비를 9 합니다."
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "무장 규약",
@@ -320,7 +327,7 @@
   },
   "Guardian:AncientConstruct": {
     "NAME": "고대의 구조",
-    "DESCRIPTION": "내 턴 시작 시 인공물이 없다면 인공물을 !M! 얻습니다.",
+    "DESCRIPTION": "인공물을 1 얻습니다. NL 내 턴 시작 시 인공물이 없다면 인공물을 !M! 얻습니다.",
     "UPGRADE_DESCRIPTION": "인공물을 2 얻습니다. NL 내 턴 시작 시 인공물이 없다면 인공물을 !M! 얻습니다."
   },
   "Guardian:CrystalBeam": {
@@ -372,11 +379,11 @@
   },
   "Guardian:BronzeOrb": {
     "NAME": "구체 보조기",
-    "DESCRIPTION": "선천성. NL 피해를 !D! 줍니다. 뽑을 카드 더미에서 무작위 카드를 1장 guardianmod:정지장에 넣습니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 막히지 않은 피해를 받은만큼  guardianmod:대비합니다. NL 소멸."
   },
   "Guardian:RevengeProtocol": {
     "NAME": "복수 규약",
-    "DESCRIPTION": "guardianmod:수비_모드 동안 힘을 !M! 증가시킵니다. NL 내 턴 시작 시 guardianmod:대비를 !GuardianSecondM! 합니다."
+    "DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 힘을 !M! 얻습니다. NL 내 턴 시작 시 guardianmod:대비를 !GuardianSecondM! 합니다."
   },
   "Guardian:GatlingBeam": {
     "NAME": "광선 포탑",

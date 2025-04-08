@@ -52,7 +52,7 @@ public class CrownThrow extends AbstractChampCard {
                 .rotate(-300F)
                 .build());
 
-        if (bcombo()) atb(new DrawPileToHandAction(this.magicNumber, CardType.ATTACK));
+        if (bcombo()) atb(new DrawCardAction(magicNumber));
     }
 
     @Override

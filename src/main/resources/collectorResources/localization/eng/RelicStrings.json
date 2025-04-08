@@ -3,7 +3,7 @@
     "NAME": "Emerald Torch",
     "FLAVOR": "The fires of greed never fade.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #ycollector:Reserve."
+      "At the start of each combat, add an #yEmber into your hand. The first time you #yExhaust an #yEmber each combat, gain #b1 #ycollector:Reserve [REMOVE_SPACE]."
     ]
   },
   "collector:PrismaticTorch": {
@@ -11,14 +11,14 @@
     "FLAVOR": "The ever-changing flames reflect fortune's favor.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] At the start of each combat, add an #yEmber into your hand and gain #b1 #ycollector:Reserve. The first time you #yExhaust an #yEmber each turn, gain #b1 #ycollector:Reserve."
+      " [REMOVE_SPACE].[] At the start of each combat, add #b2 #yEmbers into your hand. The first time you #yExhaust an #yEmber each turn, gain #b1 #ycollector:Reserve [REMOVE_SPACE]."
     ]
   },
   "collector:HolidayCoal": {
     "NAME": "Krampian Coal",
     "FLAVOR": "\"Intriguing! But why only specific chimneys?\" - Ranwid",
     "DESCRIPTIONS": [
-      "When you would draw from an empty Collected pile, you instead draw a #yLucky #yWick."
+      "When you would draw from an empty Collected pile, add a #yLucky #yWick to your hand."
     ]
   },
   "collector:BagOfTricks": {
@@ -33,15 +33,15 @@
     "NAME": "Jade Ring",
     "FLAVOR": "Jade is the symbol of honesty.",
     "DESCRIPTIONS": [
-      "Whenever a #ycollector:Doomed non-Minion enemy dies, gain #b",
-      " Souls."
+      "Enemies take #b",
+      " more damage from #ycollector:Doom [REMOVE_SPACE]."
     ]
   },
   "collector:SoullitLamp": {
     "NAME": "Soul-lit Lamp",
     "FLAVOR": "A ghoulish decoration. The crackles of fire are replaced by buzzing wails.",
     "DESCRIPTIONS": [
-      "Upon pickup, gain #b3 #yEssence. At the start of combat, add an #yEmber into your hand."
+      "Upon pickup, gain #b3 #yEssence [REMOVE_SPACE]. At the start of combat, add an #yEmber into your hand."
     ]
   },
   "collector:ThimbleHelm": {
@@ -49,21 +49,21 @@
     "FLAVOR": "Worn by the Spire's miniest heroes.",
     "DESCRIPTIONS": [
       "Start each combat with #b",
-      " #yTemporary_HP. While you have #yTemporary_HP, cards grant #b1 additional #yBlock."
+      " #yTemporary_HP [REMOVE_SPACE]. While you have #yTemporary_HP [REMOVE_SPACE], cards grant #b1 additional #yBlock [REMOVE_SPACE]."
     ]
   },
   "collector:Incense": {
     "NAME": "Incense",
     "FLAVOR": "An antiquated form of mental clarification.",
     "DESCRIPTIONS": [
-      "You cannot gain #yWeak, #yVulnerable or #yFrail while you are #yWeak, #yVulnerable or #yFrail."
+      "You cannot gain #yWeak [REMOVE_SPACE], #yVulnerable or #yFrail while you are #yWeak [REMOVE_SPACE], #yVulnerable or #yFrail [REMOVE_SPACE]."
     ]
   },
   "collector:FuelCanister": {
     "NAME": "Fuel Canister",
     "FLAVOR": "Disgusting.",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yRetain the highest-cost card in your hand."
+      "At the end of your turn, #yRetain the lowest-cost card in your hand."
     ]
   },
   "collector:AutoCurser": {
@@ -77,7 +77,7 @@
     "NAME": "The Bagpipes",
     "FLAVOR": "This dreaded instrument is said to have driven Kublai the Great mad.",
     "DESCRIPTIONS": [
-      "Whenever you apply #yWeak or #yVulnerable, increase the amount applied by #b1."
+      "Whenever you apply new #yWeak or #yVulnerable to an enemy, increase the amount applied by #b1 [REMOVE_SPACE]."
     ]
   },
   "collector:BottledCollectible": {
@@ -94,14 +94,14 @@
     "NAME": "The Contract",
     "FLAVOR": "Sign in blood.",
     "DESCRIPTIONS": [
-      "Upon pickup, gain #b10 #yEssence."
+      "Upon pickup, gain #b10 #yEssence [REMOVE_SPACE]."
     ]
   },
   "collector:ForbiddenFruit": {
     "NAME": "Forbidden Fruit",
     "FLAVOR": "This species of fruit looks completely unfamiliar.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. Then, obtain a #yNecronomicurse.",
+      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. Then, obtain a #ySapped [REMOVE_SPACE].",
       "Choose a Rare card to add to your deck.",
       "Choose an Uncommon card to add to your deck.",
       "Choose a Common card to add to your deck."
@@ -111,7 +111,8 @@
     "NAME": "Rough Diamond",
     "FLAVOR": "With the mines demolished, even this tarnished stone is valuable.",
     "DESCRIPTIONS": [
-      "Whenever you play a Rare card that cost #b2 or more, gain [E] ."
+      "The first time you play a #yRare card each turn, gain [E] . Upon pickup, obtain a #yRare card reward.",
+      "Knowledge!"
     ]
   },
   "collector:BlockedChakra": {

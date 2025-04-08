@@ -5,10 +5,10 @@ import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.colorless.EnGoodInstincts;
+import charbosses.cards.colorless.EnSwiftStrike;
+import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnNormality;
-import charbosses.cards.curses.EnShame;
 import charbosses.cards.purple.*;
-import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.WatcherDivinityPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -44,7 +44,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_ThreadAndNeedle());
-        addRelic(new CBR_CaptainsWheel());
+        addRelic(new CBR_DuvuDoll(2));
         addRelic(new CBR_Torii());
         addRelic(new CBR_VelvetChoker());
     }
@@ -56,37 +56,42 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
         if (!looped) {
             switch (turn) {
                 case 0:
-                    //Turn 2
-                    addToList(cardsList, new EnWishPlated());
+                    //turn 1
+                    //nothing
+                    addToList(cardsList, new EnWishPlated(), true);
                     addToList(cardsList, new EnGoodInstincts());
-                    addToList(cardsList, new EnShame());
+                    addToList(cardsList, new EnInjury());
                     turn++;
                     break;
                 case 1:
-                    //Turn 2
+                    //turn 2
+                    //25~ damage
                     addToList(cardsList, new EnWaveOfTheHand());
-                    addToList(cardsList, new EnBlind());
+                    addToList(cardsList, new EnBrilliance(), extraUpgrades);  // This is probably a terrible idea. This is where the Blind was, which was moved to where the Strike was.
                     addToList(cardsList, new EnSwivel());
                     turn++;
                     break;
                 case 2:
-                    //Turn 3
-                    AbstractBossCard c = new EnSignatureMove(); //Big attack
-                    c.freeToPlayOnce = true;
-                    addToList(cardsList, c, extraUpgrades, 2);
-                    addToList(cardsList, new EnConjurBlade());
+                    //turn 3
+                    //off turn
+                    addToList(cardsList, new EnSwiftStrike());
+                    addToList(cardsList, new EnConjurBlade(), false);
                     addToList(cardsList, new EnSanctity());    //Not played
                     turn++;
                     break;
                 case 3:
+                    //turn 4
+                    //off turn / mercy
                     addToList(cardsList, new EnProtect(), true);
                     addToList(cardsList, new EnEmptyFist(), true);    //Exit Divinity
                     addToList(cardsList, new EnNormality());
                     turn++;
                     break;
                 case 4:
-                    addToList(cardsList, new EnExpunger());     //Big Attack
-                    addToList(cardsList, new EnStrikePurple());
+                    //turn 5
+                    //big attack
+                    addToList(cardsList, new EnExpunger());     //Big Attack // I mean, not really that big compared to what time eater hits for.
+                    addToList(cardsList, new EnBlind()); // blind moved here to replace the strike
                     addToList(cardsList, new EnDevotion());
                     turn = 0;
                     looped = true;
@@ -95,6 +100,8 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
         } else {
             switch (turn) {
                 case 0:
+                    //loop starts here
+                    //mercy turn / strength scaling if so
                     addToList(cardsList, new EnWaveOfTheHand());
                     AbstractBossCard c = new EnSwivel();
                     c.energyGeneratedIfPlayed = 1;
@@ -105,19 +112,22 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                     turn++;
                     break;
                 case 1:
+                    //big attack turn
                     addToList(cardsList, new EnExpunger());     //Big Attack
                     addToList(cardsList, new EnSanctity());    //Exit Divinity
-                    addToList(cardsList, new EnShame());
+                    addToList(cardsList, new EnInjury());
                     turn++;
                     break;
                 case 2:
+                    //spam punish turn
                     addToList(cardsList, new EnProtect(), true);
-                    addToList(cardsList, new EnStrikePurple());
+                    addToList(cardsList, new EnBrilliance(), true); // this might be too difficult to block for but uhhhhhhhhhh
                     addToList(cardsList, new EnBlind());
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnSignatureMove(), extraUpgrades); //Big Attack
+                    //off turn
+                    addToList(cardsList, new EnSwiftStrike(), false); // signature move replaced with wallop
                     addToList(cardsList, new EnGoodInstincts());
                     addToList(cardsList, new EnNormality());
                     turn = 0;

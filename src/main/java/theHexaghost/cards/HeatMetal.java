@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
-import theHexaghost.powers.BurnPerTurnPower;
 
 public class HeatMetal extends AbstractHexaCard {
     public final static String ID = makeID("HeatMetal");

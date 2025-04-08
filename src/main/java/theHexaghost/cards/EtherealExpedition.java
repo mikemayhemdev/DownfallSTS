@@ -49,7 +49,21 @@ public class EtherealExpedition extends AbstractHexaCard implements HexaPurpleTe
             }
         }
         if (list.isEmpty()) {
+            //Since this card can show up on Snecko, and Snecko obviously doesn't have any afterlife
+            //cards in their pool, ALL of these cards need to be added here, and not just Power from Beyond.
+            list.add(new Hexaguard());
+            list.add(new NightmareGuise());
+            list.add(new NightmareStrike());
+            list.add(new SpectersWail());
+            list.add(new BurningQuestion());
+            list.add(new EtherealExpedition());
+            list.add(new FlamesFromBeyond());
+            list.add(new Floatwork());
+            list.add(new GhostLash());
+            list.add(new GhostShield());
+            list.add(new Haunt());
             list.add(new PowerFromBeyond());
+            list.add(new EtherStep());
         }
         return list.get(cardRandomRng.random(list.size() - 1));
     }

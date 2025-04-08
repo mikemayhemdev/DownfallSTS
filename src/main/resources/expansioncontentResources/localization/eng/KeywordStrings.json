@@ -8,6 +8,34 @@
     "DESCRIPTION": "#yBlock is not removed at the start of your turn."
   },
   {
+    "PROPER_NAME": "Vibrancy",
+    "NAMES": [
+      "vibrancy"
+    ],
+    "DESCRIPTION": "NOT USED DO NOT TL"
+  },
+  {
+    "PROPER_NAME": "Opulence",
+    "NAMES": [
+      "opulence"
+    ],
+    "DESCRIPTION": "NOT USED DO NOT TL"
+  },
+  {
+    "PROPER_NAME": "Regen",
+    "NAMES": [
+      "regen"
+    ],
+    "DESCRIPTION": "At the end of your turn, heal HP equal to your #yRegen then reduce #yRegen by #b1 [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Plated Armor",
+    "NAMES": [
+      "plated"
+    ],
+    "DESCRIPTION": "At the end of your turn, gain Block equal to your #yPlated #yArmor [REMOVE_SPACE]. Taking unblocked attack damage reduces #yPlated #yArmor by #b1 [REMOVE_SPACE]."
+  },
+  {
     "PROPER_NAME": "Boss",
     "NAMES": [
       "boss"
@@ -20,7 +48,7 @@
     "NAMES": [
       "echo"
     ],
-    "DESCRIPTION": "Add a copy of a card to you hand, it is #yEthereal and #yExhausts. NL Echoes cannot be Echoed."
+    "DESCRIPTION": "Add a copy of a card to you hand, it is #yEthereal and #yExhausts [REMOVE_SPACE]. NL Echoes cannot be Echoed."
   },
   {
     "PROPER_NAME": "Exhume",
@@ -45,6 +73,13 @@
     "DESCRIPTION": "Put a card from your exhaust pile into your discard pile."
   },
   {
+    "PROPER_NAME": "Goop",
+    "NAMES": [
+      "goop"
+    ],
+    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop [REMOVE_SPACE], removing all #yGoop and triggering any #yConsume effects."
+  },
+  {
     "PROPER_NAME": "Shackled",
     "NAMES": [
       "shackled"
@@ -60,6 +95,39 @@
     ],
     "DESCRIPTION": "Until end of combat, prevents damage to HP."
   },
+  {
+    "PROPER_NAME": "Pyre",
+    "NAMES": [
+      "pyre"
+    ],
+    "DESCRIPTION": "Requires exhausting a card in hand in addition to paying its energy cost."
+  },
+  {
+    "PROPER_NAME": "Doom",
+    "NAMES": [
+      "doom",
+      "doomed"
+    ],
+    "DESCRIPTION": "Doomed creatures lose HP at the start of their turn, then Doom is removed #bunless the creature is #yAfflicted (has both #yWeak and #yVulnerable [REMOVE_SPACE])."
+  },
+
+  {
+    "NAMES": [
+      "goop",
+      "gooped"
+    ],
+    "PROPER_NAME": "Goop",
+    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop [REMOVE_SPACE], removing all #yGoop and triggering any #yConsume effects."
+  },
+
+  {
+    "PROPER_NAME": "Chant",
+    "NAMES": [
+      "chant",
+      "Chant",
+      "Chants"
+    ],
+    "DESCRIPTION": "Chant effects on a card activate during play if you played a Power while it was in hand."},
   {
     "PROPER_NAME": "Transform",
     "ID": "transform",

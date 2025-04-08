@@ -208,7 +208,7 @@
   },
   "Guardian:StasisField": {
     "NAME": "停滞フィールド",
-    "DESCRIPTION": " !B! ブロックを得る。 NL このカードを *停滞 させる。 NL このカードが *停滞 から離れた時、 !B! ブロックを得る。"
+    "DESCRIPTION": " !B! ブロックを得る。 NL このカードを *停滞 させる。"
   },
   "Guardian:Metallicize": {	
    "NAME": "ハーデン",	
@@ -287,7 +287,7 @@
   },
   "Guardian:ExploitGems": {
     "NAME": "ジェム発掘",
-    "DESCRIPTION": "カードを 1 枚引く。 guardianmod:チック : このカードをプレイする。 NL guardianmod:揮発性 ",
+    "DESCRIPTION": "カードを 1 枚引く。",
     "UPGRADE_DESCRIPTION": " [E] を得る。 NL カードを 1 枚引く。"
   },
   "Guardian:RefractedBeam": {

@@ -23,7 +23,7 @@
   "Gremlin:BubbleBarrier": {
     "NAME": "Bubble Barrier",
     "DESCRIPTIONS": [
-      "Whenever you play a card this turn, gain #b", " #yBlock."
+      "Whenever you play a card this turn, gain #b", " #yBlock [REMOVE_SPACE]."
     ]
   },
   "Gremlin:CongaLine": {
@@ -36,13 +36,14 @@
   "Gremlin:Crippled": {
     "NAME": "Crippled",
     "DESCRIPTIONS": [
-      "#yWeak does not wear off. At the end of its turn, it loses HP equal to its #bWeak."
+      "Whenever this enemy gains #yWeak [REMOVE_SPACE], they lose #b",
+      " HP."
     ]
   },
   "Gremlin:Encore": {
     "NAME": "Encore",
     "DESCRIPTIONS": [
-      "Whenever you consume #yWiz, deal #b", " damage to ALL enemies."
+      "#yWiz deals #b", " additional damage."
     ]
   },
   "Gremlin:Enthusiasm": {
@@ -64,7 +65,7 @@
     "NAME": "Strength Down",
     "DESCRIPTIONS": [
       "At the end of this turn, lose #b",
-      " #yStrength."
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "Gremlin:Furious": {
@@ -76,29 +77,29 @@
   "Gremlin:GremlinNob": {
     "NAME": "Gremlin Nob",
     "DESCRIPTIONS": [
-      "At the start of each turn, gain #b3 Gremlin Nob cards. You can no longer #ySwap. When you would lose all #yTemporary #yHP, prevent further damage and revert back."
+      "At the start of each turn, gain #b3 Gremlin Nob cards. You can no longer #ySwap [REMOVE_SPACE]. When you would lose all #yTemporary #yHP [REMOVE_SPACE], prevent further damage and revert back."
     ]
   },
   "Gremlin:GremlinWizard": {
     "NAME": "Gremlin Wizard",
     "DESCRIPTIONS": [
       "Whenever you play a Skill, gain #b",
-      " #yWiz."
+      " #yWiz [REMOVE_SPACE]."
     ]
   },
   "Gremlin:Heckle": {
     "NAME": "Heckle",
     "DESCRIPTIONS": [
       "Whenever you apply a debuff to an enemy, gain #b",
-      " #yTemporary #yHP."
+      " #yTemporary #yHP [REMOVE_SPACE]."
     ]
   },
   "Gremlin:InfiniteBlocks": {
     "NAME": "Infinite Blocks",
     "DESCRIPTIONS": [
       "At the start of your turn, gain  #b",
-      " #yWard.",
-      " #yWards."
+      " #yWard [REMOVE_SPACE].",
+      " #yWards [REMOVE_SPACE]."
     ]
   },
   "Gremlin:MadGremlin": {
@@ -114,30 +115,30 @@
       "Play #b",
       " more attack to gain #b",
       " more attacks to gain #b",
-      " #yArtifact."
+      " #yArtifact [REMOVE_SPACE]."
     ]
   },
   "Gremlin:MakingMagic": {
     "NAME": "Making Magic",
     "DESCRIPTIONS": [
       "At the start of your next turn, gain #b",
-      " copy of #yBang.",
-      " copies of #yBang."
+      " copy of #yBang [REMOVE_SPACE].",
+      " copies of #yBang [REMOVE_SPACE]."
     ]
   },
   "Gremlin:MakingMoreMagic": {
     "NAME": "Making Magic+",
     "DESCRIPTIONS": [
       "At the start of your next turn, gain #b",
-      " #yUpgraded copy of #yBang.",
-      " #yUpgraded copies of #yBang."
+      " #yUpgraded copy of #yBang [REMOVE_SPACE].",
+      " #yUpgraded copies of #yBang [REMOVE_SPACE]."
     ]
   },
   "Gremlin:Polish": {
     "NAME": "Polish",
     "DESCRIPTIONS": [
       "#yWards grant #b",
-      " additional #yBlock."
+      " additional #yBlock [REMOVE_SPACE]."
     ]
   },
   "Gremlin:Scatter": {
@@ -152,21 +153,22 @@
     "NAME": "Shadow Shiv",
     "DESCRIPTIONS": [
       "Whenever you play an Attack that doesn't #yExhaust, gain #b",
-      " #yShiv.",
-      " #yShivs."
+      " #yShiv [REMOVE_SPACE].",
+      " #yShivs [REMOVE_SPACE]."
     ]
   },
   "Gremlin:ShieldGremlin": {
     "NAME": "Shield Gremlin",
     "DESCRIPTIONS": [
       "Whenever you play a Skill, gain #b",
-      " #yBlock."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "Gremlin:SneakyGremlin": {
     "NAME": "Sneaky Gremlin",
     "DESCRIPTIONS": [
-      "Whenever you play an attack, deal #b",
+      "0 cost Attacks have their damage increased by #b",
+      " [REMOVE_SPACE]. Whenever you play an Attack, deal #b",
       " damage to a random enemy."
     ]
   },
@@ -180,7 +182,7 @@
   "Gremlin:Unforgiving": {
     "NAME": "Unforgiving",
     "DESCRIPTIONS": [
-      "You cannot lose #yStrength."
+      "You cannot lose #yStrength [REMOVE_SPACE]."
     ]
   },
   "Gremlin:Wiz": {
@@ -194,7 +196,7 @@
     "NAME": "Wizardry",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
-      " #yWiz."
+      " #yWiz [REMOVE_SPACE]."
     ]
   }
 }

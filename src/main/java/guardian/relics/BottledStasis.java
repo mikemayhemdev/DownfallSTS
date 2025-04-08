@@ -30,7 +30,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
 
     public BottledStasis() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.SHOP, LandingSound.FLAT);
+                RelicTier.UNCOMMON, LandingSound.CLINK);
     }
 
     @Override

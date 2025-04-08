@@ -75,7 +75,7 @@
   },
   "hermit:Gambit": {
     "NAME": "책략",
-    "DESCRIPTION": "버린 카드 더미에서 무작위 공격 카드를 !M! 장 가져옵니다. NL 이번 턴 동안 그 카드의 비용을 1 낮춥니다. NL 소멸."
+    "DESCRIPTION": "버린 카드 더미에서 무작위 공격 카드를 !M! 장 가져옵니다. NL 이번 턴에 그 카드의 비용을 1 낮춥니다. NL 소멸."
   },
   "hermit:Roughhouse": {
     "NAME": "난장판",
@@ -99,7 +99,7 @@
   },
   "hermit:Dive": {
     "NAME": "급하강",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준\: NL *판금 *갑옷을 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준\: NL expansioncontent:판금_갑옷을 !M! 얻습니다."
   },
   "hermit:FlashPowder": {
     "NAME": "섬광탄",
@@ -134,7 +134,7 @@
   },
   "hermit:Scavenge": {
     "NAME": "청소부",
-    "DESCRIPTION": "*판금 *갑옷을 !M! 얻습니다. NL hermit:정조준: NL 골드를 !hermit:SecondMagic! 얻습니다. NL 소멸."
+    "DESCRIPTION": "expansioncontent:판금_갑옷을 !M! 얻습니다. NL hermit:정조준: NL 골드를 !hermit:SecondMagic! 얻습니다. NL 소멸."
   },
   "hermit:ImpendingDoom": {
     "NAME": "임박한 종말",
@@ -305,7 +305,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "태풍의 눈",
-    "DESCRIPTION": "최대  [E] 보다 모자란 만큼  [E] 를 얻습니다. NL 소멸."
+    "DESCRIPTION": "hermit:집중합니다. NL 최대  [E] 보다 모자란 만큼  [E] 를 얻습니다. NL 소멸."
   },
   "hermit:FinalCanter": {
     "NAME": "최후의 위선",

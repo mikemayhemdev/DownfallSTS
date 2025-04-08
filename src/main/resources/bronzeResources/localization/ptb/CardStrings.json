@@ -347,8 +347,8 @@
   },
   "bronze:Mutator": {
     "NAME": "Mutador",
-    "DESCRIPTION": "Ganhe 1 Força. NL Transforme um Estado em uma cópia disso.",
-    "UPGRADE_DESCRIPTION": "Mantenha. NL Ganhe 1 Força. NL Transforme um Estado em uma cópia disso."
+    "DESCRIPTION": "Ganhe !M! Força. NL Transforme um Estado em uma cópia disso.",
+    "UPGRADE_DESCRIPTION": "Mantenha. NL Ganhe !M! Força. NL Transforme um Estado em uma cópia disso."
   },
   "bronze:NullPointer": {
     "NAME": "Ponteiro Nulo",

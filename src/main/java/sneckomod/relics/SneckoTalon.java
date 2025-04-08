@@ -26,16 +26,18 @@ public class SneckoTalon extends CustomRelic {
             @Override
             public void update() {
                 isDone = true;
-                int x = 0;
-                for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (!q.freeToPlay())
-                        if (q.costForTurn > x)
-                            x = q.costForTurn;
-                }
+                //old code when it hit highest cost card
+                //int x = 0;
+                //for (AbstractCard q : AbstractDungeon.player.hand.group) {
+                //    if (!q.freeToPlay() && !q.freeToPlayOnce)
+                //        if (q.costForTurn > 0)
+                //            x = q.costForTurn;
+                //}
+
                 ArrayList<AbstractCard> possCardsList = new ArrayList<>();
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (!q.freeToPlay())
-                        if (q.costForTurn == x)
+                    if (!q.freeToPlay() && !q.freeToPlayOnce)
+                        if (q.costForTurn > 0)
                             possCardsList.add(q);
                 }
                 if (!possCardsList.isEmpty()) {

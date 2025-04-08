@@ -1,41 +1,47 @@
 package sneckomod.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import sneckomod.SneckoMod;
-import sneckomod.actions.MuddleRandomCardAction;
 
 public class QuickMove extends AbstractSneckoCard {
 
-    public final static String ID = makeID("QuickMove");
+    public static final String ID = SneckoMod.makeID("QuickMove");
 
-    //stupid intellij stuff SKILL, SELF, COMMON
-
-    private static final int BLOCK = 8;
-    private static final int UPG_BLOCK = 2;
-
+    private static final int BASE_BLOCK = 7;
+    private static final int UPG_BLOCK = 3;
     private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
+    //private static final int UPG_MAGIC = 1;
 
     public QuickMove() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
+        baseBlock = BASE_BLOCK;
+        tags.add(SneckoMod.OVERFLOW);
         SneckoMod.loadJokeCardImage(this, "QuickMove.png");
     }
 
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new MuddleRandomCardAction(magicNumber, true));
+        if (isOverflowActive(this)) {
+            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
+                    atb(new ApplyPowerAction(monster, p, new VulnerablePower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                }
+            }
+        }
     }
 
+    @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPG_BLOCK);
-            upgradeMagicNumber(UPG_MAGIC);
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
         }
     }
 }

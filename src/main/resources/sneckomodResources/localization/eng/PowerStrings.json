@@ -1,18 +1,26 @@
 {
+  "sneckomod:BlunderGuardPower": {
+    "NAME": "Tsunami",
+    "DESCRIPTIONS": [
+      "#yOverflow effects also grant #b",
+      " #yBlock [REMOVE_SPACE].",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
   "sneckomod:CheapStockPower": {
     "NAME": "Cheap Stock",
     "DESCRIPTIONS": [
-      "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1.",
-      "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b",
+      "At the start of your turn, #yMuddle the highest cost card in your hand.",
+      "At the start of your turn, #yMuddle the highest cost card in your hand #b",
       " times."
     ]
   },
   "sneckomod:CheatPower": {
     "NAME": "Cheating",
     "DESCRIPTIONS": [
-      "This turn, cards that choose a random number for their effect choose the maximum possible number.",
+      "This turn, cards that have an #yOverflow effect always activate it when played.",
       "For the next #b",
-      " turns, cards that choose a random number for their effect choose the maximum possible number."
+      " turns, cards that have an #yOverflow effect always activate it when played."
     ]
   },
   "sneckomod:MuddleDrawnCardsPower": {
@@ -28,22 +36,48 @@
     "NAME": "Mudshield",
     "DESCRIPTIONS": [
       "Whenever you #yMuddle a card, gain #b",
-      " #yBlock."
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:OverwhelmingPresencePower": {
+    "NAME": "Overwhelming Presence",
+    "DESCRIPTIONS": [
+      "The first time you shuffle your deck each turn, gain [E] and draw #b1 card.",
+      "The first time you shuffle your deck each turn, gain ",
+      " [E] and draw #b",
+      " cards."
+    ]
+  },
+  "sneckomod:SerpentsNestPower": {
+    "NAME": "Serpent's Nest",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower card, deal 1 damage to ALL enemies.",
+      "Whenever you play a #yPower card, deal #b",
+      " damage to ALL enemies."
     ]
   },
   "sneckomod:SerpentMindPower": {
-    "NAME": "Serpent Mind",
+    "NAME": "Exotic Form",
     "DESCRIPTIONS": [
-      "Whenever you play an #yOffclass card, draw #b",
-      " card.",
-      " cards."
+      "At the end of your turn, gain #b",
+      " #yStrength for each unique color played this turn.",
+      " #yStrength for each unique color played this turn."
+    ]
+  },
+  "sneckomod:SnakeEyesPower": {
+    "NAME": "Snake Eyes",
+    "DESCRIPTIONS": [
+      "Your next #yOffclass #yCard is played twice this turn.",
+      "Your next #b",
+      " #yOffclass #yCards are played twice this turn."
     ]
   },
   "sneckomod:UnendingSupplyPower": {
     "NAME": "Unending Supply",
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
-      " random #yOffclass cards into your hand."
+      "At the start of your turn, add an #yEcho of a random #yOffclass card into your hand.",
+      " #yEchoes of a random #yOffclass cards into your hand."
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {
@@ -51,20 +85,110 @@
     "DESCRIPTIONS": [
       "At the end of combat, obtain #b",
       " additional #yUpgraded #yUnidentified cards.",
-      " additional #yUpgraded #yUnidentified card."
+      " additional #yUpgraded #yUnidentified card.",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+
     ]
   },
   "sneckomod:UnlimitedRollsPower": {
     "NAME": "Unlimited Rolls",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a #ySoul #yRoll+ with #yExhaust."
+      "At the start of your turn, gain a #ySoul #yRoll+ with #yExhaust [REMOVE_SPACE]."
     ]
   },
   "sneckomod:Transmogrifying": {
     "NAME": "Transmogrifying",
     "DESCRIPTIONS": [
       " is being transformed into another ",
-      " relic."
+      " relic.",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
     ]
-  }
-}
+  },
+  "sneckomod:ToxicPersonalityPower": {
+    "NAME": "Toxic Personality",
+    "DESCRIPTIONS": [
+      "Whenever you apply a debuff to an enemy, apply #b",
+      " #yVenom [REMOVE_SPACE].",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+    ]
+  },
+  "sneckomod:TyphoonPower": {
+    "NAME": "Typhoon",
+    "DESCRIPTIONS": [
+      "This turn, whenever you #bOverflow [REMOVE_SPACE], play a copy of #yTyphoon #yFang [REMOVE_SPACE].",
+      "This turn, whenever you #bOverflow [REMOVE_SPACE], play #b",
+      " copies of #yTyphoon #yFang [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:TyphoonPlusPower": {
+    "NAME": "Typhoon+",
+    "DESCRIPTIONS": [
+      "This turn, whenever you #bOverflow [REMOVE_SPACE], play a copy of #yTyphoon #yFang+ [REMOVE_SPACE].",
+      "This turn, whenever you #bOverflow [REMOVE_SPACE], play #b",
+      " copies of #yTyphoon #yFang+ [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:SerpentineSleuthPower": {
+    "NAME": "Serpentine Sleuth",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower card, gain #b",
+      " [E] .",
+      " [E] ."
+    ]
+  },
+  "sneckomod:BigGunsStrengthPower": {
+    "NAME": "Big Guns",
+    "DESCRIPTIONS": [
+      "Whenever you play a card that costs 3+, gain #b",
+      " #yStrength [REMOVE_SPACE].",
+      " #yStrength [REMOVE_SPACE]."
+    ]
+  },
+      "sneckomod:BigGunsBlockPower": {
+        "NAME": "Blunder Guard",
+        "DESCRIPTIONS": [
+          "Whenever you play a card that costs 3+, gain #b",
+          " #yBlock [REMOVE_SPACE].",
+          " #yBlock [REMOVE_SPACE]."
+        ]
+      },
+  "sneckomod:AceOfWandsPower": {
+    "NAME": "Queen of Pentacles",
+    "DESCRIPTIONS": [
+      "Whenever you apply a debuff to an enemy, gain #b",
+      " #yBlock [REMOVE_SPACE].",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:LacerateDebuff": {
+    "NAME": "Lacerate",
+    "DESCRIPTIONS": [
+      "Whenever you apply a debuff to this enemy this turn, apply #b",
+      " #yVenom to them.",
+      " #yVenom to them."
+    ]
+  },
+  "sneckomod:FountainPower": {
+    "NAME": "Fountain",
+    "DESCRIPTIONS": [
+      "#yOverflow effects also apply #b",
+      " #yVenom to a random enemy.",
+      " #yVenom to a random enemy."
+    ]
+  },
+  "sneckomod:TrashCanPower": {
+    "NAME": "Trash Can",
+    "DESCRIPTIONS": ["At the start of your turn, you may #yExhaust a card.",
+      "At the start of your turn, you may #yExhaust up to #b",
+      " cards."
+  ]
+      },
+
+        "sneckomod:VenomDebuff": {
+          "NAME": "Venom",
+          "DESCRIPTIONS": [
+            "Whenever this creature gains a #ynon-Venom debuff, they lose #b",
+            " HP."
+          ]
+        }
+      }

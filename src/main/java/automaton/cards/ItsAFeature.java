@@ -15,16 +15,15 @@ public class ItsAFeature extends AbstractBronzeCard {
 
     public ItsAFeature() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.baseMagicNumber = this.magicNumber = 3;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("ItsAFeature.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new FeaturePower(1));
+        applyToSelf(new FeaturePower(magicNumber));
     }
 
     public void upp() {
-        isInnate = true;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeMagicNumber(1);
     }
 }

@@ -67,9 +67,9 @@
   "hexamod:EnhancePower": {
     "NAME": "Intensity",
     "DESCRIPTIONS": [
-      "Increase the amount of damage, #ySoulburn [REMOVE_SPACE], and #yBlock applied by Ghostflames when Ignited by #b",
+      "Increase the amount of damage, #ySoulburn [REMOVE_SPACE], and #yBlock applied by Ghostflames when #yIgnited by #b",
       " [REMOVE_SPACE].",
-      "Decrease the amount of damage, #ySoulburn [REMOVE_SPACE], and #yBlock applied by Ghostflames when Ignited by #b",
+      "Decrease the amount of damage, #ySoulburn [REMOVE_SPACE], and #yBlock applied by Ghostflames when #yIgnited by #b",
       "Has double effectiveness for #ySearing #yGhostflames."
     ]
   },
@@ -170,7 +170,7 @@
     "NAME": "Radiant Flame",
     "DESCRIPTIONS": [
       "Whenever you #yIgnite a Ghostflame, gain #b",
-      " #yBlock."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "hexamod:SealPostCombatPower": {
@@ -212,7 +212,7 @@
   "hexamod:SoulburnOnExhaustPower": {
     "NAME": "Soulburn Infestation",
     "DESCRIPTIONS": [
-      "Whenver you #yExhaust a card this turn, apply #b",
+      "Whenever you #yExhaust a card this turn, apply #b",
       " #ySoulburn to this enemy."
     ]
   },
@@ -233,8 +233,8 @@
   "hexamod:InfernoPotionPower": {
     "NAME": "Hexaburn",
     "DESCRIPTIONS": [
-      "Your Ghostflame effect affects all enemy this combat.",
-      "Your Ghostflame effect affects all enemy #b",
+      "Your Ghostflame effects affect ALL enemies this combat.",
+      "Your Ghostflame effects affect ALL enemies #b",
       " times this combat."
     ]
   },

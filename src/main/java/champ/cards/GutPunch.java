@@ -29,7 +29,7 @@ public class GutPunch extends AbstractChampCard {
         //berserkOpen();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         //  fatigue(2);
-        if (bcombo() || dcombo()) {
+        if (bcombo() || dcombo() || !AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
             ultimateStance();
             applyToSelf(new UltimateFormPower(1));
@@ -43,6 +43,6 @@ public class GutPunch extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = dcombo() || bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = dcombo() || bcombo() || !AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 }

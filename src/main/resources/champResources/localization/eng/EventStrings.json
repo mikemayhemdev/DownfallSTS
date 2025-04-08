@@ -12,7 +12,7 @@
   "champ:Colosseum": {
     "NAME": "The Colosseum",
     "DESCRIPTIONS": [
-      "As you continue down the spire, you notice a group of humanoids waiting in ambush nearby a large auditorium. When approached, the Slavers are startled, but quickly explain themselves. NL NL \"CHAMPION! You grave us with your presence! Are you here to take on the new challenger?\"",
+      "As you continue down the spire, you notice a group of humanoids waiting in ambush nearby a large auditorium. When approached, the Slavers are startled, but quickly explain themselves. NL NL \"CHAMPION! You grace us with your presence! Are you here to take on the new challenger?\"",
       "A new challenger? How delightful! NL NL However, the challenge may have to wait. The audience always likes seeing the Champion slaughter the latest capture...",
       "You enter the massive stadium to find an overflowing audience of #bSlavers, #pCultists, and other denizens of the City. NL NL ",
       "@\"WHO@ @DARES@ @CHALLENGE@ @ME?!\"@ you boom into the crowd, beckoning this new 'challenger'. NL A knight approaches, clad in strikingly similar armor to your own, only drenched in black ink. The crowd cheers more than this pretender deserves. NL NL There can only be one Champion!",
@@ -21,8 +21,8 @@
       "Black Knight"
     ],
     "OPTIONS": [
-      "[Defend Title] #rFight Black Knight. #gGain #gmany #grewards.",
-      "[Participate] #rFight Captive Hero. #gGain #gmany #grewards.",
+      "[Defend Title] #rFight #rBlack #rKnight. #gGain #gmany #grewards.",
+      "[Participate] #rFight #rCaptive #rHero. #gGain #gmany #grewards.",
       "[Leave]",
       "[FIGHT!]",
       "[Continue]"
@@ -35,7 +35,7 @@
       "You spend much time searching through the halls of tomes and guides, until finally finding the book you seek. NL NL Settling into the comfy chair, you take some time to brush up on forgotten stances and styles. Even a perfect fighting specimen such as yourself knows that the mind is just as important as the body, and must also be exercised."
     ],
     "OPTIONS": [
-      "[Seek] Locate a #gBook on Fighting.",
+      "[Seek] #gLocate #ga #gBook #gon #gFighting.",
       "[Locked] Already have all Fighting tomes."
     ]
   },
@@ -53,7 +53,7 @@
       " #rHP.",
       "[Leave]",
       "[Locked] Requires an Attack Card.",
-      "Choose a card to gain #y'trigger #ySkill #yBonus.'",
+      "Choose a card to gain #y'trigger #ySkill #yBonus.'.",
       "[Read] Choose an Attack to gain #y'trigger #ySkill #yBonus.'. #rCursed #r- #rPride."
     ]
   },
@@ -84,9 +84,9 @@
       "Deciding your time is better spent elsewhere, you leave the Arena. You can hear a sigh of relief from the fighters as you depart - clearly, nobody was looking forward to dying at your hand today."
    ],
     "OPTIONS": [
-      "[Fight Centurion & Mystic] #gGain #gCloak #gClasp",
-      "[Fight Gremlin Nob] #gGain #gChampion #gBelt",
-      "[Fight Slaver Duo] #gGain #gWrist #gBlade",
+      "[Fight Centurion & Mystic] #gGain #gCloak #gClasp.",
+      "[Fight Gremlin Nob] #gGain #gChampion #gBelt.",
+      "[Fight Slaver Duo] #gGain #gHorseshoe.",
       "[Leave]"
     ]
   },

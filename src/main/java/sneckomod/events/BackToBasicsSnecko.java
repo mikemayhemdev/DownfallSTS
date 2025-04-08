@@ -1,34 +1,39 @@
 package sneckomod.events;
 
-import basemod.helpers.BaseModCardTags;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
 import com.megacrit.cardcrawl.cards.blue.Strike_Blue;
 import com.megacrit.cardcrawl.cards.green.Defend_Green;
 import com.megacrit.cardcrawl.cards.green.Strike_Green;
+import com.megacrit.cardcrawl.cards.purple.Defend_Watcher;
+import com.megacrit.cardcrawl.cards.purple.Strike_Purple;
 import com.megacrit.cardcrawl.cards.red.Defend_Red;
 import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import sneckomod.SneckoMod;
-import sneckomod.cards.Defend;
-import sneckomod.cards.Strike;
-import sneckomod.cards.unknowns.AbstractUnknownCard;
-import sneckomod.cards.unknowns.UnknownClass;
+import downfall.cards.curses.*;
+import guardian.cards.Defend_Guardian;
+import guardian.cards.Strike_Guardian;
+import hermit.cards.Defend_Hermit;
+import hermit.cards.Strike_Hermit;
+import slimebound.cards.Defend_Slimebound;
+import slimebound.cards.Strike_Slimebound;
+import theHexaghost.cards.Defend;
+import theHexaghost.cards.Strike;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 public class BackToBasicsSnecko extends AbstractImageEvent {
     public static final String ID = "sneckomod:BackToBasics";
@@ -43,44 +48,42 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
     private static final String DIALOG_2;
     private static final String DIALOG_3;
 
+
     static {
         eventStrings = CardCrawlGame.languagePack.getEventString("Back to Basics");
         NAME = eventStrings.NAME;
+        eventStringsGuardian = CardCrawlGame.languagePack.getEventString("sneckomod:BackToBasics");
+        DESCRIPTIONSGUARDIAN = eventStringsGuardian.DESCRIPTIONS;
+        OPTIONSGUARDIAN = eventStringsGuardian.OPTIONS;
         DESCRIPTIONS = eventStrings.DESCRIPTIONS;
         OPTIONS = eventStrings.OPTIONS;
         DIALOG_1 = DESCRIPTIONS[0];
         DIALOG_2 = DESCRIPTIONS[1];
         DIALOG_3 = DESCRIPTIONS[2];
-        eventStringsGuardian = CardCrawlGame.languagePack.getEventString("sneckomod:BackToBasics");
-        DESCRIPTIONSGUARDIAN = eventStringsGuardian.DESCRIPTIONS;
-        OPTIONSGUARDIAN = eventStringsGuardian.OPTIONS;
     }
 
-    private BackToBasicsSnecko.CUR_SCREEN screen;
+    private CUR_SCREEN screen;
     private List<String> cardsUpgraded;
-    private ArrayList<AbstractCard> cardsToRemove;
+    private ArrayList<AbstractCard> strikesToRemove;
+    private ArrayList<AbstractCard> defendsToRemove;
 
     public BackToBasicsSnecko() {
         super(NAME, DIALOG_1, "images/events/backToBasics.jpg");
-        this.screen = BackToBasicsSnecko.CUR_SCREEN.INTRO;
-        this.cardsUpgraded = new ArrayList();
+        this.screen = CUR_SCREEN.INTRO;
+        this.cardsUpgraded = new ArrayList<>();
+        this.strikesToRemove = new ArrayList<>();
+        this.defendsToRemove = new ArrayList<>();
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            c.update();
-        }
-
-        cardsToRemove = new ArrayList<>();
-
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
-                cardsToRemove.add(c);
-            }
             if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
-                cardsToRemove.add(c);
+                strikesToRemove.add(c);
+            }
+            if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+                defendsToRemove.add(c);
             }
         }
 
-        if (cardsToRemove.size() >= 1) {
+        if (strikesToRemove.size()+defendsToRemove.size() >= 1) {
             this.imageEventText.setDialogOption(OPTIONSGUARDIAN[0]);
 
         } else {
@@ -94,12 +97,10 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
 
 
     }
-
     public void onEnterRoom() {
         if (Settings.AMBIANCE_ON) {
             CardCrawlGame.sound.play("EVENT_ANCIENT");
         }
-
         this.cardsUpgraded.clear();
     }
 
@@ -112,42 +113,79 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
             AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
             logMetricCardRemoval(ID, "Elegance", c);
         }
-
     }
 
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case INTRO:
                 if (buttonPressed == 0) {
-                    ArrayList<AbstractCard> list = new ArrayList<>();
-
-                    for (AbstractCard c : CardLibrary.getAllCards()) {
-                        if (c instanceof AbstractUnknownCard) {
-                            if (c instanceof UnknownClass) {
-                                UnknownClass cU = (UnknownClass) c;
-                                if (SneckoMod.validColors.contains(cU.myColor)) {
-                                    list.add(c);
-                                }
-                            } else {
-                                list.add(c);
-                            }
-                        }
-                    }
                     ArrayList<String> cardsRemoved = new ArrayList<>();
                     ArrayList<String> cardsAdded = new ArrayList<>();
 
-                    for (AbstractCard c : cardsToRemove) {
-                        Collections.shuffle(list);
-                        AbstractCard cU = list.get(0);
-                        cardsAdded.add(cU.cardID);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(cU.makeStatEquivalentCopy(), (Settings.WIDTH / 2F), (float) (Settings.HEIGHT / 2)));
+                    for (AbstractCard c : strikesToRemove) {
+                        cardsRemoved.add(c.cardID);
+                        int choice;
+                            choice = cardRandomRng.random(0,11);
+                            AbstractCard newCard = new Strike_Red();
+                            switch (choice) {
+                                case 0: newCard = new Strike_Red(); break;
+                                case 1: newCard = new Strike_Green(); break;
+                                case 2: newCard = new Strike_Blue(); break;
+                                case 3: newCard = new Strike_Purple(); break;
+                                case 4: newCard = new Strike_Hermit(); break;
+
+                                case 5: newCard = new Strike_Slimebound(); break;
+                                case 6: newCard = new Strike_Guardian(); break;
+                                case 7: newCard = new Strike(); break;
+
+                                case 8: newCard = new champ.cards.Strike(); break;
+                                case 9: newCard = new automaton.cards.Strike(); break;
+                                case 10: newCard = new collector.cards.Strike(); break;
+
+                                case 11: newCard = new gremlin.cards.Strike(); break;
+                            }
+
+                        if (c.upgraded) {
+                            newCard.upgrade();
+                        }
+                        cardsAdded.add(newCard.cardID);
+                        AbstractDungeon.player.masterDeck.removeCard(c);
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(newCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     }
 
-                    for (AbstractCard c : cardsToRemove) {
-                        AbstractDungeon.player.masterDeck.removeCard(c);
+                    for (AbstractCard c : defendsToRemove) {
                         cardsRemoved.add(c.cardID);
+
+                        int choice;
+                        choice = cardRandomRng.random(0,11);
+                        AbstractCard newCard = new Strike_Red();
+                        switch (choice) {
+                            case 0: newCard = new Defend_Red(); break;
+                            case 1: newCard = new Defend_Green(); break;
+                            case 2: newCard = new Defend_Blue(); break;
+                            case 3: newCard = new Defend_Watcher(); break;
+                            case 4: newCard = new Defend_Hermit(); break;
+
+                            case 5: newCard = new Defend_Slimebound(); break;
+                            case 6: newCard = new Defend_Guardian(); break;
+                            case 7: newCard = new Defend(); break;
+
+                            case 8: newCard = new champ.cards.Defend(); break;
+                            case 9: newCard = new automaton.cards.Defend(); break;
+                            case 10: newCard = new collector.cards.Defend(); break;
+
+                            case 11: newCard = new gremlin.cards.Defend(); break;
+                        }
+
+                        if (c.upgraded) {
+                            newCard.upgrade();
+                        }
+                        cardsAdded.add(newCard.cardID);
+                        AbstractDungeon.player.masterDeck.removeCard(c);
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(newCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     }
-                    logMetricTransformCards(ID, "Improvisation", cardsAdded, cardsRemoved);
+
+                    logMetric(ID, "Creativity", cardsAdded, cardsRemoved, null, null, null, null, null, 0, 0, 0, 0, 0, 0);
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
@@ -167,17 +205,17 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                     this.imageEventText.clearRemainingOptions();
                 }
 
-                this.screen = BackToBasicsSnecko.CUR_SCREEN.COMPLETE;
+                this.screen = CUR_SCREEN.COMPLETE;
                 break;
+
             case COMPLETE:
                 this.openMap();
         }
-
     }
 
     private void upgradeStrikeAndDefends() {
-        for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
-            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) ) {
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE))) {
                 c.upgrade();
                 this.cardsUpgraded.add(c.cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);
@@ -189,9 +227,6 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
 
     private enum CUR_SCREEN {
         INTRO,
-        COMPLETE;
-
-        CUR_SCREEN() {
-        }
+        COMPLETE
     }
 }

@@ -47,6 +47,7 @@ public class JadedJabs extends AbstractCollectorCard implements OnPyreCard {
     }
 
     public void upp() {
+        upgradeDamage(2);
         upgradeMagicNumber(1);
     }
 }

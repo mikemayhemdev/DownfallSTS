@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
@@ -46,7 +47,7 @@ public class Floatwork extends AbstractHexaCard implements HexaPurpleTextInterfa
         if (!upgraded) {
             upgradeName();
           //  upgradeBlock(2);
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 
@@ -60,5 +61,15 @@ public class Floatwork extends AbstractHexaCard implements HexaPurpleTextInterfa
         super.initializeDescription();
         String afterlife_name = downfallMod.keywords_and_proper_names.get("afterlife");
         this.keywords.add(afterlife_name);
+
+        if (Settings.language == Settings.GameLanguage.ZHS){
+            this.keywords.add("多层护甲");
+        }else if (Settings.language == Settings.GameLanguage.RUS){
+            this.keywords.add("plated");
+        }else{
+            this.keywords.add("plated");
+        }
+
+
     }
 }

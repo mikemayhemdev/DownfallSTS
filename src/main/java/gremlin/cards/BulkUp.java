@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.orbs.FatGremlin;
+import sneckomod.SneckoMod;
 
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
@@ -24,7 +25,7 @@ public class BulkUp extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
     private static final int COST = 1;
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 4;
     private static final int UPGRADE_BONUS = 2;
 
     public BulkUp()
@@ -36,6 +37,7 @@ public class BulkUp extends AbstractGremlinCard {
         this.tags.add(FAT_GREMLIN);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "BulkUp.png");
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

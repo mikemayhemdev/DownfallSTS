@@ -1,40 +1,39 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Requires 10 Block. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL If you have at least !DM! Block, hits !M! more times.",
     "EXTENDED_DESCRIPTION": [
       "More Block required."
     ]
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Hexaburn",
-    "DESCRIPTION": "In !M! turns, deal !D! damage to a random enemy 6 times. NL Scales with Strength."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Invincible",
-    "DESCRIPTION": "Gain 10 expansioncontent:Invincible. NL If you already had expansioncontent:Invincible, it lasts another turn instead."
+    "DESCRIPTION": "Gain !M! expansioncontent:Invincible. NL If you already had expansioncontent:Invincible, it lasts another turn instead."
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Next turn, lose [E]. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Place a *Void on top of your draw pile. NL Exhaust."
   },
   "expansioncontent:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Gain 2 Strength.",
-    "UPGRADE_DESCRIPTION": "Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Heal !M! and gain 2 Strength."
+    "DESCRIPTION": "Remove all Debuffs. NL Gain !M! Strength."
   },
   "expansioncontent:YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "Remove Block from, and apply !M! Weak and Vulnerable to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak, !M! Vulnerable, and !DM! expansioncontent:Doom to ALL enemies. NL Exhaust."
   },
   "expansioncontent:AwakenDeath": {
-    "NAME": "Awaken",
-    "DESCRIPTION": "When you would die, or at the end of combat, heal !M! HP instead and lose this buff."
+    "NAME": "Curiosity",
+    "DESCRIPTION": "Whenever you play a Power, gain !M! Strength."
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Chrono-Boost",
-    "DESCRIPTION": "Gain 2 Strength for every 12th card you play.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Strength. NL Gain 2 Strength for every 12th card you play."
+    "DESCRIPTION": "Gain !M! Strength for every 12th card you play."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Donu Blast",
@@ -46,7 +45,7 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "Shaper's Blessing",
-    "DESCRIPTION": "Choose - Gain !M! Strength or !DM! Plated Armor.",
+    "DESCRIPTION": "Gain !M! Strength and !DM! expansioncontent:Plated *Armor.",
     "EXTENDED_DESCRIPTION": [
       "Donu's Power",
       "Gain !M! Strength.",
@@ -54,11 +53,19 @@
       "Gain !M! Plated Armor."
     ]
   },
-  "expansioncontent:PrepareCrush": {
+  "expansioncontent:SuperPrepareCrush": {
     "NAME": "Prepare Crush",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] [E] and *SLIME *CRUSH. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] [E] and *SLIME *CRUSH+. NL Exhaust."
+    "DESCRIPTION": "Next turn, gain *SLIME *CRUSH, [E] [E] [E] and !M! Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain *SLIME *CRUSH+, [E] [E] [E] [E] and !M! Strength. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "~Slime...~ NL #r~CRUSH!!!~"
+    ]
   },
+  "expansioncontent:SuperLivingWall": {
+    "NAME": "Living Wall",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! expansioncontent:Goop to attackers this turn."
+  },
+
   "expansioncontent:StudyTheSpire": {
     "NAME": "Study the Spire",
     "DESCRIPTION": "Gain a random *Boss card at the start of your next !M! turns. They cost 0.",
@@ -74,8 +81,7 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "The Evil Within",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a random *Boss card. It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a random Upgraded *Boss card. It costs 0 until played. NL Exhaust."
+    "DESCRIPTION": "Whenever you apply !DM! debuffs, deal !M! damage to ALL enemies."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Knowing Skull",
@@ -85,11 +91,127 @@
     "NAME": "Antidote",
     "DESCRIPTION": "Retain. NL Lose !M! Poison."
   },
+  "expansioncontent:SuperGhostShield": {
+    "NAME": "Ghost Shield",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Gain[] [#e087a4]!B![] [#e087a4]Block.[] NL [#e087a4]Gain[] [#e087a4]!M![] [#e087a4]Blur.[]",
+    "EXTENDED_DESCRIPTION": [
+      "Gain !B! Block."
+    ]
+  },
+  "expansioncontent:SuperGoopSpray": {
+    "NAME": "Goop Spray",
+    "DESCRIPTION": "Apply !M! expansioncontent:Goop and !DM! Weak.",
+    "UPGRADE_DESCRIPTION": "Apply !M! expansioncontent:Goop and !DM! Weak to ALL enemies."
+  },
+  "expansioncontent:ChargeUp": {
+    "NAME": "Resilient Plate",
+    "DESCRIPTION": "Reduce each of your debuffs by !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Reduce each of your debuffs by !M!."
+  },
+  "expansioncontent:SuperTaunt": {
+    "NAME": "Taunt",
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies."
+  },
+  "expansioncontent:Torchfire": {
+    "NAME": "Wildfire",
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique debuff on the enemy."
+  },
+
+  "expansioncontent:TakeFlight": {
+    "NAME": "Revitalize",
+    "DESCRIPTION": "Gain !M! expansioncontent:Regen. NL expansioncontent:Chant: Gain !DM! *Regen instead."
+  },
+  "expansioncontent:BeatOfDeath": {
+    "NAME": "Beat Of Death",
+    "DESCRIPTION": "Whenever you play a card, deal !M! damage to ALL enemies."
+  },
+  "expansioncontent:SuperViciousMockery": {
+    "NAME": "Vicious Mockery",
+    "DESCRIPTION": "Gain !M! Vigor. NL Apply !DM! Weak."
+  },
+  "expansioncontent:SuperClobber": {
+    "NAME": "Clobbering Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to unblocked damage dealt."
+  },
+
+  "expansioncontent:SuperSomberShield": {
+    "NAME": "Somber Shield",
+    "DESCRIPTION": "expansioncontent:Pyre. NL Gain !B! Block. NL Next turn, gain a copy of the *Exhausted card."
+  },
+
+  "expansioncontent:SuperWhirlingFlame": {
+    "NAME": "Whirling Flame",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a card from your discard pile on top of your draw pile."
+  },
+  "expansioncontent:Flail": {
+    "NAME": "Flail",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !DM! times. NL Gain !M! Artifact. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "flailing",
+      "Flail"
+    ]
+  },
+  "expansioncontent:SuperBloodthirst": {
+    "NAME": "Bloodthirst",
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal, obtain a random potion and Exhaust this card."
+  },
+  "expansioncontent:SuperBodyCrash": {
+    "NAME": "Body Crash",
+    "DESCRIPTION": "Gain !B! Block. NL Deal damage equal to your Block.",
+    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
+  },
+  "expansioncontent:SuperEtherStep": {
+    "NAME": "Ether Step",
+    "DESCRIPTION": "Exhaust 1 card. NL Draw !M! card. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Exhaust 1 card. NL Draw !M! cards. NL Deal !D! damage."
+  },
+
+  "expansioncontent:Virus": {
+    "NAME": "Virus",
+    "DESCRIPTION": "Exhaust up to !M! cards, shuffle a *Major *Beam into the draw pile for each card exhausted. NL Exhaust."
+  },
+
+  "expansioncontent:MajorBeam": {
+    "NAME": "Major Beam",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
+  },
+
+  "expansioncontent:ManipulateTime": {
+    "NAME": "Afterthought",
+    "DESCRIPTION": "Put a card from your discard pile to the bottom of your draw pile. It costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "Put a card from your discard pile to the bottom of your draw pile. It costs 0 this combat."
+  },
+  "expansioncontent:Pandemonium": {
+    "NAME": "Pandemonium",
+    "DESCRIPTION": "At the start of your turn, play a random card in your discard pile."
+  },
+  "expansioncontent:Reverie": {
+    "NAME": "Reverie",
+    "DESCRIPTION": "At the start of your turn, put one of the top !M! cards of your discard pile into your hand."
+  },
+  "expansioncontent:ExploitVulnerability": {
+    "NAME": "Donu Beam",
+    "DESCRIPTION": "Remove all Block from the enemy, then gain that much Block. NL Deal !D! damage twice."
+  },
+  "expansioncontent:PeekPages": {
+    "NAME": "Peek Pages",
+    "DESCRIPTION": "Shuffle !M! *Insights into your draw pile. NL Exhaust."
+  },
+  "expansioncontent:BloodBarrage": {
+    "NAME": "Blood Barrage",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Exhaust."
+  },
+  "expansioncontent:DoubleAct": {
+    "NAME": "Double Act",
+    "DESCRIPTION": "At the start of your next turn, draw cards and gain [E] an additional time. NL Exhaust."
+  },
   "expansioncontent:BloodySacrifice": {
     "NAME": "Bloody Sacrifice",
-    "DESCRIPTION": "Ethereal. NL Lose HP equal to !M! % of your max HP. NL Gain 1 Ritual. Exhaust.",
+    "DESCRIPTION": "Ethereal. NL Lose !M! % of your Max HP. NL Gain 1 Ritual. Exhaust.",
     "EXTENDED_DESCRIPTION":[
-      " NL (Lose {amount} HP. )"
+      " NL (Lose {amount} Max HP. )"
     ]
   }
 }

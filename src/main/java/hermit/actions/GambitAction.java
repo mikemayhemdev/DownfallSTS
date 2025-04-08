@@ -1,5 +1,6 @@
 package hermit.actions;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
@@ -53,7 +54,7 @@ public class GambitAction extends AbstractGameAction {
                     tmp.shuffle();
                     card = tmp.getBottomCard();
                     tmp.removeCard(card);
-                    if (this.p.hand.size() == 10) {
+                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                         this.p.createHandIsFullDialog();
                     } else {
                         card.unhover();

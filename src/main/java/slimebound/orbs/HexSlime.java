@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.vfx.BobEffect;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
+import theHexaghost.relics.CandleOfCauterizing;
 
 
 public class HexSlime
@@ -34,14 +35,20 @@ public class HexSlime
 
 
     public HexSlime() {
-        super(ID, new Color(.65F, .65F, 1.0F, 100F), atlasString, skeletonString, true, false, 3, 5, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
+        super(ID, new Color(.65F, .65F, 1.0F, 100F), atlasString, skeletonString, true, false, 4, 6, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
         this.x = (x * Settings.scale + (5F + MathUtils.random(-10.0F, 10.0F) * Settings.scale));
         this.y = (y * Settings.scale + (-30F + MathUtils.random(-10.0F, 10.0F) * Settings.scale));
         this.color = Color.CHARTREUSE.cpy();
         this.extraFontColor = new Color(.5F, 1F, .5F, 1F);
         this.color.a = 0.0F;
         this.activated = true;
-        this.debuffAmount = 5;
+        this.debuffAmount = 6;
+
+        //prismatic shard is a relic of all time
+        if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
+            debuffAmount = debuffAmount + CandleOfCauterizing.SOULBURN_BONUS_AMOUNT;
+        }
+
         spawnVFX();
 
     }

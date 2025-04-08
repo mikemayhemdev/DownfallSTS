@@ -13,7 +13,7 @@ public class MysteryWeaving extends AbstractCollectorCard {
     // intellij stuff skill, self, uncommon, , , 10, 3, , 
 
     public MysteryWeaving() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
     }
 

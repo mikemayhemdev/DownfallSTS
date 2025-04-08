@@ -6,6 +6,11 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.actions.EchoACardAction;
+import expansioncontent.cardmods.EtherealMod;
+import expansioncontent.cardmods.ExhaustMod;
+import expansioncontent.cardmods.PropertiesMod;
+import expansioncontent.expansionContentMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 
@@ -21,9 +26,13 @@ public class TripleStrike extends AbstractChampCard {
     public TripleStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        exhaust = true;
+      //  exhaust = true;
         AbstractCard r = new Strike();
         r.updateCost(-999);
+        PropertiesMod mod = new PropertiesMod(PropertiesMod.supportedProperties.ECHO, false);
+        CardModifierManager.addModifier(r, mod);
+        CardModifierManager.addModifier(r, new EtherealMod());
+        CardModifierManager.addModifier(r, new ExhaustMod());
         CardModifierManager.addModifier(r, new TechniqueMod());
         cardsToPreview = r;
       //  CardModifierManager.addModifier(this, new TechniqueMod());
@@ -42,7 +51,8 @@ public class TripleStrike extends AbstractChampCard {
         }
         r.updateCost(-999);
         CardModifierManager.addModifier(r, new TechniqueMod());
-        makeInHand(r, 2);
+        addToBot(new EchoACardAction(r, true));
+        addToBot(new EchoACardAction(r, true));
     }
 
     public void upp() {

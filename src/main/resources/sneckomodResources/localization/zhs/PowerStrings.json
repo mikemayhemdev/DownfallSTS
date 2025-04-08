@@ -1,70 +1,194 @@
 {
-  "sneckomod:CheapStockPower": {
-    "NAME": "廉价股票",
+  "sneckomod:BlunderGuardPower": {
+    "NAME": "巨浪",
     "DESCRIPTIONS": [
-      "你的回合开始时，将手中耗能最高的 #y异色 牌耗能降低 #b1 点。",
-      "你的回合开始时，将手中耗能最高的 #y异色 牌耗能降低 #b1 点。重复 #b",
-	  " 次。"
+      "#y溢出 效果额外获得 #b",
+      " 点 #y格挡 。",
+      " 点 #y格挡 。"
+    ]
+  },
+  "sneckomod:CheapStockPower": {
+    "NAME": "廉价存货",
+    "DESCRIPTIONS": [
+      "回合开始时， #y混淆 手牌中耗能最高的1张牌。",
+      "回合开始时， #y混淆 手牌中耗能最高的1张牌 #b",
+      " 次。"
     ]
   },
   "sneckomod:CheatPower": {
     "NAME": "幸运",
     "DESCRIPTIONS": [
-      "本回合内，卡牌上的随机数值取上限值。",
-      " #b",
-      " 回合内，卡牌上的随机数值取上限值。"
+      "在本回合， #y溢出 效果一定触发，与手牌数无关。",
+      "在接下来 #b",
+      " 个回合， #y溢出 效果一定触发，与手牌数无关。"
     ]
   },
   "sneckomod:MuddleDrawnCardsPower": {
     "NAME": "混淆抽牌",
     "DESCRIPTIONS": [
-      "#y混淆 本回合抽到的下一张牌。",
-      "#y混淆 本回合抽到的下 #b",
-      " 张牌。（还剩 #b",
-      " 张)"
+      "#y混淆 下 1 张抽到的牌。",
+      "#y混淆 下 #b",
+      " 张抽到的牌。（剩",
+      " ）"
     ]
   },
   "sneckomod:MudshieldPower": {
-    "NAME": "混乱护盾",
+    "NAME": "泥浆屏障",
     "DESCRIPTIONS": [
-      "每当你 #y混淆 一张牌时，获得 #b",
+      "当你 #y混淆 1 张牌，获得 #b",
       " 点 #y格挡 。"
+    ]
+  },
+  "sneckomod:OverwhelmingPresencePower": {
+    "NAME": "威压",
+    "DESCRIPTIONS": [
+      "每回合你第 1 次洗牌，获得 [E] 并抽 #b1 张牌。",
+      "每回合你第 1 次洗牌，获得 ",
+      " 点 [E] 并抽 #b",
+      " 张牌。"
+    ]
+  },
+  "sneckomod:SerpentsNestPower": {
+    "NAME": "蛇巢",
+    "DESCRIPTIONS": [
+      "每当你打出 1 张 #y能力 牌，对所有敌人造成 1 点伤害。",
+      "每当你打出 1 张 #y能力 牌，对所有敌人造成 #b",
+      " 伤害。"
     ]
   },
   "sneckomod:SerpentMindPower": {
     "NAME": "异色形态",
     "DESCRIPTIONS": [
-      "每当你打出一张 #y异色 牌时，抽 #b",
-      " 张牌。",
-      " 张牌。"
+      "你在本回合每打出1种颜色的牌，在回合结束时获得 #b",
+      " 层 #y力量 。",
+      " 层 #y力量 。"
+    ]
+  },
+  "sneckomod:SnakeEyesPower": {
+    "NAME": "邪眼毒眸",
+    "DESCRIPTIONS": [
+      "在本回合，下1张打出的 #y异色 牌被打出 2 次。",
+      "在本回合，下 #b",
+      " 张打出的 #y异色 牌被打出 2 次。"
     ]
   },
   "sneckomod:UnendingSupplyPower": {
-    "NAME": "延绵不绝",
+    "NAME": "无尽供给",
     "DESCRIPTIONS": [
-      "你的回合开始时，随机将 #b",
-      " 张 #y异色 牌加入你的手牌。"
+      "回合开始时，将 #b",
+      "回合开始时，将1张随机 #y异色 牌的 #y回响 加入手牌。",
+      " 张随机 #y异色 牌的 #y回响 加入手牌。"
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {
-    "NAME": "渴望力量",
+    "NAME": "Post-Combat Upgraded Unidentified",
     "DESCRIPTIONS": [
-      "战斗结束时，额外获得 #b",
-      " 张已 #y升级 的 #y未知 牌。",
-      " 张已 #y升级 的 #y未知 牌。"
+      "At the end of combat, obtain #b",
+      " additional #yUpgraded #yUnidentified cards.",
+      " additional #yUpgraded #yUnidentified card.",
+      "NOTE FOR LOC: 不需要翻译。"
+
     ]
   },
   "sneckomod:UnlimitedRollsPower": {
-    "NAME": "无限随机",
+    "NAME": "无尽投掷",
     "DESCRIPTIONS": [
-      "你的回合开始时，将一张带有 #y消耗 的 #y灵魂随机 加入你的手牌。"
+      "回合开始时，获得 #y灵魂骰掷 。"
     ]
   },
   "sneckomod:Transmogrifying": {
-    "NAME": "惊变",
+    "NAME": "Transmogrifying",
     "DESCRIPTIONS": [
-      " 将要变为另一件",
-      " 遗物。"
+      " is being transformed into another ",
+      " relic.",
+      "NOTE FOR LOC: 不需要翻译。"
     ]
-  }
-}
+  },
+  "sneckomod:ToxicPersonalityPower": {
+    "NAME": "Toxic Personality",
+    "DESCRIPTIONS": [
+      "Whenever you apply a debuff to an enemy, apply #b",
+      " #yVenom .",
+      "NOTE FOR LOC: 不需要翻译。"
+    ]
+  },
+  "sneckomod:TyphoonPower": {
+    "NAME": "台风之牙",
+    "DESCRIPTIONS": [
+      "本回合每当 #y溢出 触发，打出 1 张 #y台风之牙 的复制。",
+      "本回合每当 #y溢出 触发，打出 #b",
+      " 张 #y台风之牙 的复制。"
+    ]
+  },
+  "sneckomod:TyphoonPlusPower": {
+    "NAME": "台风之牙+",
+    "DESCRIPTIONS": [
+      "本回合每当 #y溢出 触发，打出 1 张 #y台风之牙+ 的复制。",
+      "本回合每当 #y溢出 触发，打出 #b",
+      " 张 #y台风之牙+ 的复制。"
+    ]
+  },
+  "sneckomod:SerpentineSleuthPower": {
+    "NAME": "蛇侦探",
+    "DESCRIPTIONS": [
+      "每当你打出1张 #y能力 牌，获得 #b",
+      " 点 [E] 。",
+      " 点 [E] 。"
+    ]
+  },
+  "sneckomod:BigGunsStrengthPower": {
+    "NAME": "枪火",
+    "DESCRIPTIONS": [
+      "每当你打出 1 张耗能3+的牌，获得 #b",
+      " 层 #y力量。",
+      " 层 #y力量。"
+    ]
+  },
+  "sneckomod:BigGunsBlockPower": {
+    "NAME": "掩护",
+    "DESCRIPTIONS": [
+      "每当你打出一张费用3+的牌，获得 #b",
+      " 点 #y格挡 。",
+      " 点 #y格挡 。"
+      ]
+  },
+  "sneckomod:AceOfWandsPower": {
+    "NAME": "五角星皇后",
+    "DESCRIPTIONS": [
+      "当你给予敌人 1 种负面效果，获得 #b",
+      " 点 #y格挡 。",
+      " 点 #y格挡 。"
+    ]
+  },
+  "sneckomod:LacerateDebuff": {
+    "NAME": "割裂",
+    "DESCRIPTIONS": [
+      "在本回合，当你给予这个敌人 1 种负面效果，额外给予其 #b",
+      " 层 #y剧毒 。",
+      " 层 #y剧毒 。"
+    ]
+  },
+  "sneckomod:FountainPower": {
+    "NAME": "毒泉",
+    "DESCRIPTIONS": [
+      "#y溢出 效果额外给予随机敌人 #b",
+      " 层 #y剧毒 。",
+      " 层 #y剧毒 。"
+    ]
+  },
+  "sneckomod:TrashCanPower": {
+    "NAME": "垃圾桶",
+    "DESCRIPTIONS": ["回合开始时，你可以 #y消耗 1张牌。",
+      "回合开始时，你可以至多 #y消耗 #b",
+      " 张牌。"
+  ]
+      },
+
+        "sneckomod:VenomDebuff": {
+          "NAME": "剧毒",
+          "DESCRIPTIONS": [
+            "获得非 #y剧毒 负面效果时，失去 #b",
+            " 点生命。"
+          ]
+        }
+      }

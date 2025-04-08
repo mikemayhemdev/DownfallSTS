@@ -30,6 +30,7 @@ import downfall.powers.NeowInvulnerablePower;
 import downfall.powers.neowpowers.*;
 import downfall.vfx.combat.FakeDeathScene;
 import guardian.vfx.SmallLaserEffectColored;
+import hermit.cards.ImpendingDoom;
 
 import java.util.ArrayList;
 
@@ -69,7 +70,7 @@ public class NeowBossFinal extends AbstractMonster {
     private int buffCount = 0;
 
     public NeowBossFinal() {
-        super(NAME, ID, 500, HB_X, HB_Y, HB_W, HB_H, "images/npcs/neow/skeleton.png");
+        super(NAME, ID, 600, HB_X, HB_Y, HB_W, HB_H, "images/npcs/neow/skeleton.png");
 
         this.loadAnimation("images/npcs/neow/skeleton.atlas", "images/npcs/neow/skeleton.json", 1.0F);
 
@@ -80,20 +81,30 @@ public class NeowBossFinal extends AbstractMonster {
         this.baseDrawX = drawX;
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            setHp(600);
+            setHp(650);
         } else {
-            setHp(550);
+            setHp(600);
         }
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
 
+
+        //When adjusting these numbers, remember to keep the Heart Blessings in mind.
+        //The player has +1 dexterity and +10 temp hp, so they will be blocking for 4/5 extra than typically, and that they have a
+        //good buffer of Temp HP to get through the first cycle much easier.
+        //Not to mention the lack of Beat of Death, which makes Block much more permanent throughout this fight.
+        //This fight should test consistency and overall scaling to surpass the God of Life scaling that Neow has.
+        //Her buffs should reflect this fact and test consistency by increasing God of Life and
+        //gaining buffs like Artifact. (To test strategies that rely on a debuff like Goop, Soulburn, or Doom)
+
+
         if (AbstractDungeon.ascensionLevel >= 4) {
-            this.damage.add(new DamageInfo(this, 9)); //Eye Beam Damage
-            this.damage.add(new DamageInfo(this, 25));  //Scream Damage
+            this.damage.add(new DamageInfo(this, 12)); //Eye Beam Damage - 54 damage first cycle
+            this.damage.add(new DamageInfo(this, 44));  //Scream Damage - 66 damage first cycle
         } else {
-            this.damage.add(new DamageInfo(this, 7)); //Eye Beam Damage
-            this.damage.add(new DamageInfo(this, 20));  //Scream Damage
+            this.damage.add(new DamageInfo(this, 9)); //Eye Beam Damage - 42 damage first cycle
+            this.damage.add(new DamageInfo(this, 33));  //Scream Damage - 50 damage first cycle
         }
 
         this.strAmt = 2; //Strength Scaling for growth ability
@@ -114,11 +125,12 @@ public class NeowBossFinal extends AbstractMonster {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 3, true), 3));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, 3, true), 3));
 
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Aged(), 1, true, false, false, (float) Settings.WIDTH * 0.18F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Bewildered(), 1, true, false, false, (float) Settings.WIDTH * 0.34F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Scatterbrained(), 1, true, false, false, (float) Settings.WIDTH * 0.5F, (float) Settings.HEIGHT / 2.0F));
+
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Haunted(), 1, true, false, false, (float) Settings.WIDTH * 0.18F, (float) Settings.HEIGHT / 2.0F));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Scatterbrained(), 1, true, false, false, (float) Settings.WIDTH * 0.34F, (float) Settings.HEIGHT / 2.0F));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new ImpendingDoom(), 1, true, false, false, (float) Settings.WIDTH * 0.5F, (float) Settings.HEIGHT / 2.0F));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Icky(), 1, true, false, false, (float) Settings.WIDTH * 0.66F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Malfunctioning(), 1, true, false, false, (float) Settings.WIDTH * 0.82F, (float) Settings.HEIGHT / 2.0F));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Bewildered(), 1, true, false, false, (float) Settings.WIDTH * 0.82F, (float) Settings.HEIGHT / 2.0F));
 
 
 //        ArrayList<AbstractCard> ac = downfallMod.getRandomDownfallCurse(4);
@@ -141,17 +153,23 @@ public class NeowBossFinal extends AbstractMonster {
         // halfDead = true;
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
 
-        int beatAmount = 3;
+        int beatAmount = 3; //a19 healing, a18 healing is this -1
 //        if (AbstractDungeon.ascensionLevel >= 19) {
 //            beatAmount += 1;
 //        }
 
         int invincibleAmt = 250;
-//        if (AbstractDungeon.ascensionLevel >= 19) {
-//            invincibleAmt -= 50;
-//        } a19 difficulty setting is changed from god of life 2(3), invincible 300(250) , to,  you (dont) get heart's favor
+        if (AbstractDungeon.ascensionLevel >= 19) {
+           // invincibleAmt -= 50;
+        }// a19 difficulty setting is changed from god of life 2(3), invincible 300(250) , to,  you (dont) get heart's favor
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, beatAmount)));
+        if (AbstractDungeon.ascensionLevel >= 19) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, beatAmount)));
+        }
+
+        if (AbstractDungeon.ascensionLevel < 19) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, beatAmount-1)));
+        }
 
         for (int i = 0; i < 3; i++) {
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
@@ -224,30 +242,90 @@ public class NeowBossFinal extends AbstractMonster {
                 //   nukeDebuffs();
                 //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
 
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 6), 6));
+
+                // god of life maxes out at 6 (7 on a19 because of the higher starting healing) now
+                    if (this.hasPower(NeowInvulnerablePower.POWER_ID)) {
+                        int buf = this.getPower(NeowInvulnerablePower.POWER_ID).amount;
+                        if (buf < 6) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
+                        }
+                    }
+
+                if (!this.hasPower(NeowInvulnerablePower.POWER_ID)) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
+                }
+
+                if (AbstractDungeon.ascensionLevel >= 19) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 9), 9));
+                    // this is +27 damage for the multi hit, +36 total, 8 damage over the a19- version
+                }
+                if (AbstractDungeon.ascensionLevel < 19) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 7), 7));
+                    //this is +21 damage for the multi hit, +28 total
+                }
 
                 switch(this.buffCount) {
                     case 0:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 3), 3));
+                     if (AbstractDungeon.ascensionLevel >= 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 3), 3));
+                            //3 artifact prevents weak + vuln + doom and should make Collector's life harder - and test her artifact piercing and consistency,
+                            //but should act as a minor annoyance for other characters, even for Hexa or Slime Boss.
+                     }
+                        if (AbstractDungeon.ascensionLevel < 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 2), 3));
+                            //easier pre a19 version of artifact, still blocks an instance of weak + vuln
+                        }
                         break;
                     case 1:
-                        AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 100));
+                        if (AbstractDungeon.ascensionLevel >= 19) {
+                            AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 100));
+                            //this effectively makes her HP 700 - Not factoring in God of Life.
+                        }
+                        if (AbstractDungeon.ascensionLevel < 19) {
+                            AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 75));
+                            //this pre a19 version effectively makes her hp 675, and 625 pre a4 - Not factoring in God of Life.
+                        }
+
                        //                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BeatOfDeathPower(this, 1), 1));
                         break;
                     case 2:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new RegenerateMonsterPower(this, 50)));
+                        if (AbstractDungeon.ascensionLevel >= 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new RegenerateMonsterPower(this, 50)));
+                            //this is the part where it becomes significantly harder. If you factor in the God of Life Neow already has much more total HP than
+                            //the corrupt heart, and she can easily reach 1000~ HP total depending on the rate that the player uses cards.
+                        }
+                        if (AbstractDungeon.ascensionLevel < 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new RegenerateMonsterPower(this, 30)));
+                            //this lessened Regenerate should be significantly easier to deal with
+                        }
                         break;
                     case 3:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 10), 10));
+                        if (AbstractDungeon.ascensionLevel >= 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 15), 10));
+                            //this is +45 damage on the multihit, +60 damage total.
+                        }
+                        if (AbstractDungeon.ascensionLevel < 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 12), 8));
+                            //this is +36 damage on the multihit, +48 damage total.
+                        }
                         break;
                     default:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 30), 30));
+                        if (AbstractDungeon.ascensionLevel >= 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 30), 30));
+                            //this is +90 damage on the multihit, +120 damage total
+                            //basically a slightly kinder version of the heart getting +50 strength, especially since Neow always does the big hit before the multihit
+                            //not a total "now die" buff but pretty close
+                        }
+                        if (AbstractDungeon.ascensionLevel < 19) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 20), 20));
+                            //this is +60 damage on the multihit, +80 damage total
+                            //I could see a player living through the multihit on this one
+                        }
                 }
 
                 ++this.buffCount;
 
-//                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.blockAmt));
+                this.addToBot(new GainBlockAction(this, this, 20));
 //                if (hasPower(TrueNeowPower.POWER_ID)){
 //                    getPower(TrueNeowPower.POWER_ID).onSpecificTrigger();
 //                }

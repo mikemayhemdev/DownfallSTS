@@ -5,6 +5,8 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.blue.*;
 import charbosses.cards.curses.EnAged;
+import charbosses.cards.curses.EnClumsy;
+import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnShame;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.bossmechanicpowers.DefectVoidPower;
@@ -78,14 +80,14 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
                 case 0:
                     addToList(cardsList, new EnBuffer(), false);
                     addToList(cardsList, new EnDoomAndGloom(), extraUpgrades);
-                    addToList(cardsList, new EnShame(), false);
+                    addToList(cardsList, new EnInjury(), false);
                     turn++;
                     break;
                 case 1:
                     //Turn 2
                     addToList(cardsList, new EnSteamBarrier(), false);
                     addToList(cardsList, new EnDefendBlue(), false);
-                    addToList(cardsList, new EnAged(), false);
+                    addToList(cardsList, new EnClumsy(), false);
                     turn++;
                     steamBarrierCasts++;
                     break;
@@ -114,7 +116,7 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
                         ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true;
                     }
                     addToList(cardsList, new EnDefendBlue());
-                    addToList(cardsList, new EnShame(), false);
+                    addToList(cardsList, new EnInjury(), false);
                     turn++;
                     break;
                 case 1:

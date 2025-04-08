@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import hermit.HermitMod;
 import hermit.powers.Concentration;
 import hermit.powers.SnipePower;
@@ -27,7 +28,7 @@ public class ImpendingDoom extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardRarity RARITY = CardRarity.CURSE; //Change from Special Rarity: Impending Doom can now show up as a Curse during Downfall Mode runs.
     private static final CardTarget TARGET = CardTarget.ALL;
     private static final CardType TYPE = CardType.CURSE;
     public static final CardColor COLOR = CardColor.CURSE;
@@ -45,6 +46,10 @@ public class ImpendingDoom extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         this.isMultiDamage = true;
         loadJokeCardImage(this, "impending_doom.png");
+
+        //Impending Doom can now show up as a Curse during Downfall Mode runs.
+        tags.add(downfallMod.DOWNFALL_CURSE);
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

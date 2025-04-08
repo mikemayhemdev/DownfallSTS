@@ -49,8 +49,8 @@
   "downfall:FearNoEvil": {
     "NAME": "Fear No Evil",
     "DESCRIPTIONS": [
-      "If you play an attack card this turn, this enemy will change stance to #yCalm once it plays its #yFear #yNo #yEvil card.",
-      "This enemy will change stance to #yCalm once it plays its #yFear #yNo #yEvil card."
+      "If you play an attack card this turn, Watcher will change her stance to #yCalm once she plays her #yFear #yNo #yEvil card.",
+      "Watcher will change her stance to #yCalm once she plays her #yFear #yNo #yEvil card."
     ]
   },
   "downfall:PoisonResist": {
@@ -110,7 +110,7 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Fleeting Faith",
     "DESCRIPTIONS": [
-      "Watcher gains #b1 #yMantra whenever you play a card. NL Watcher loses #b5 #yMantra at the start of her turn. NL Watcher does not exit #yDivinity at the end of her turn."
+      "Watcher gains #b1 #yMantra whenever you play a card. NL Whenever Watcher enters #yDivinity, she gains #b3 #yStrength. NL Watcher loses #b4 #yMantra at the start of her turn. NL Watcher does not exit #yDivinity at the end of her turn."
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -158,7 +158,7 @@
   "downfall:DefectVoidPower": {
     "NAME": "Energy Thief",
     "DESCRIPTIONS": [
-      "Whenever Defect generates a #yVoid, it goes to the top of your draw pile."
+      "Whenever Defect generates a #yVoid, it goes into YOUR discard pile."
     ]
   },
   "downfall:NeowEnergyThief": {
@@ -170,7 +170,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
-      "Begins the fight with 2 #yBronze #yOrb minions. NL Gains 1 #yArtifact at the end of its turn if it did not already have #yArtifact [REMOVE_SPACE]."
+      "Begins the fight with 2 #yBronze #yOrb minions. NL Defect's #yCore #ySurges do not #yExhaust."
     ]
   },
   "downfall:NeowAncientConstruct": {
@@ -184,6 +184,15 @@
     "DESCRIPTIONS": [
       "Whenever you play a #yPower card, Defect gains #b",
       " #yFocus."
+    ]
+  },
+  "downfall:DefectBiasCuriosity": {
+    "NAME": "Corrected Cognitive",
+    "DESCRIPTIONS": [
+      "Defect plays an #yUnbiased #yCognition at the start of combat. NL Whenever you play a #yPower card, Defect's #yBias loses efficacy this turn.",
+      "Whenever you play a #yPower card, Defect's #yBias loses efficacy this turn.",
+      "Defect's #yBias loses efficacy this turn.",
+      "Bias"
     ]
   },
   "downfall:DefectCuriosityLighning": {
@@ -239,7 +248,7 @@
   "downfall:MerchantStrengthPower": {
     "NAME": "Soul Stealer",
     "DESCRIPTIONS": [
-      "Merchant still has the #yStrength it earned from Soul Steal this run, and gains an equal amount of #yDexterity [REMOVE_SPACE]."
+      "Merchant has double the #yStrength it earned from Soul Steal this run, and gains an equal amount of #yDexterity [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowMantra": {

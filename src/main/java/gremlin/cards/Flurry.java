@@ -20,7 +20,7 @@ public class Flurry extends AbstractGremlinCard {
     private static final String IMG_PATH = "cards/flurry.png";
 
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.ATTACK;
-    private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
     private static final int COST = 1;
@@ -71,7 +71,7 @@ public class Flurry extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            upgradeBaseCost(0);
         }
     }
 }

@@ -5,7 +5,7 @@
   },
   "Gremlin:ArmsTheft": {
     "NAME": "力量窃取",
-    "DESCRIPTION": "窃取 !M! 点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL gremlin:窃取 !M! 点 力量 。 NL 消耗 。"
   },
   "Gremlin:Astound": {
     "NAME": "惊愕",
@@ -52,12 +52,11 @@
   },
   "Gremlin:CounterStrike": {
     "NAME": "破招打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标意图攻击， NL 获得 !M! 张 *守卫 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 若目标意图攻击， NL 获得 !M! 张 *守卫+ 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标意图攻击， NL 触发 gremlin:领队 地精额外效果 !M! 次。"
   },
   "Gremlin:CowerChoice": {
     "NAME": "上贡",
-    "DESCRIPTION": "失去所有金币。",
+    "DESCRIPTION": "失去所有灵魂。",
     "EXTENDED_DESCRIPTION": [
       "弱小的地精们并不愚蠢。"
     ]
@@ -89,11 +88,11 @@
   },
   "Gremlin:EdibleArmor": {
     "NAME": "食用护甲",
-    "DESCRIPTION": "将你的 格挡 转换为等量 临时生命 。"
+    "DESCRIPTION": "将你的 格挡 转换为等量 expansioncontent:临时生命 。 NL 消耗 。"
   },
   "Gremlin:Encore": {
     "NAME": "喝彩",
-    "DESCRIPTION": "获得 3 层 gremlin:法力 。 NL 使用 gremlin:法力 时，对所有敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "获得 3 层 gremlin:法力 。 NL gremlin:法力 造成的额外伤害增加 !M! 点。"
   },
   "Gremlin:Enthusiasm": {
     "NAME": "狂热",
@@ -105,7 +104,7 @@
   },
   "Gremlin:Exacerbate": {
     "NAME": "恶化",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL gremlin:致残 目标。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 当你给予目标 虚弱 时，目标失去 !M! 点生命。 NL 消耗 。"
   },
   "Gremlin:FairyDust": {
     "NAME": "仙尘",
@@ -165,7 +164,9 @@
   },
   "Gremlin:GremlinArms": {
     "NAME": "地精武器",
-    "DESCRIPTION": "随机获得一张 *小刀 或 *守卫 !M! 次。"
+    "DESCRIPTION": "触发 gremlin:领队 地精额外效果。 NL 选择 gremlin:切换 地精。",
+    "UPGRADE_DESCRIPTION": "触发 gremlin:领队 地精额外效果 2 次。 NL 选择 gremlin:切换 地精。"
+
   },
   "Gremlin:GremlinMeal": {
     "NAME": "活动肌肉",
@@ -173,7 +174,7 @@
   },
   "Gremlin:GremlinDance": {
     "NAME": "地精之舞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL gremlin:领队 的地精造成额外效果。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL gremlin:领队 地精造成额外效果。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 点伤害",
       " （全体攻击）。",
@@ -191,12 +192,11 @@
   },
   "Gremlin:GremlinToss": {
     "NAME": "地精投掷",
-    "DESCRIPTION": "造成你当前 格挡 值加上 临时生命 值点伤害。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层 临时生命 。 NL 造成你当前 格挡 值加上 临时生命 值点伤害。",
-    "EXTENDED_DESCRIPTION": [
-      " NL （造成 !D! 点伤害。)"
-    ]
+    "DESCRIPTION": "获得 !M! 点 expansioncontent:临时生命 。 NL 造成你当前 格挡 值加上 临时生命 值点伤害。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 expansioncontent:临时生命 。 NL 造成你当前 格挡 值加上 临时生命 值点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL （造成 !D! 点伤害。）"]
   },
+
   "Gremlin:GremlinWizard": {
     "NAME": "地精法师",
     "DESCRIPTION": " gremlin:切换 至 gremlin:地精法师 。"
@@ -224,7 +224,7 @@
   },
   "Gremlin:Kablamo": {
     "NAME": "轰天响",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 本牌不移除 gremlin:法力 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 2 次。 NL 本牌不移除 gremlin:法力 。"
   },
   "Gremlin:LeaderChoice": {
     "NAME": "取舍",
@@ -258,7 +258,7 @@
   },
   "Gremlin:NobChoice": {
     "NAME": "做选择",
-    "DESCRIPTION": "弱小的地精交出金币？"
+    "DESCRIPTION": "弱小的地精交出灵魂？"
   },
   "Gremlin:PartyStick": {
     "NAME": "荧光棒",
@@ -274,7 +274,7 @@
   },
   "Gremlin:Pickpocket": {
     "NAME": "扒手",
-    "DESCRIPTION": "窃取所有 人工制品 。 NL 造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标失去 !M! 点 力量 2 次。 NL 获得 !blamage! 灵魂。 NL 消耗 。"
   },
   "Gremlin:PinNeedle": {
     "NAME": "缝衣针",
@@ -300,7 +300,7 @@
   },
   "Gremlin:Pretaliation": {
     "NAME": "预审",
-    "DESCRIPTION": "若目标意图攻击， NL 造成 !D! 点伤害。 NL 否则造成 !blamage! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害 2 次。 NL 受到目标攻击伤害 !M! 点。"
   },
   "Gremlin:ProperTools": {
     "NAME": "恰当工具",
@@ -334,12 +334,12 @@
   },
   "Gremlin:SecondVolley": {
     "NAME": "余波",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过一张牌，获得一张 *小刀 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过一张牌，获得一张 *小刀+ 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过1张牌，获得1张 *小刀 。 NL 溢出手牌的 *小刀 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过1张牌，获得1张 *小刀+ 。 NL 溢出手牌的 *小刀+ 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      " NL （",
-      " 张牌。)",
-      " 张牌。)"
+      " NL （本回合打出过",
+      " 张牌。）",
+      " 张牌。）"
     ]
   },
   "Gremlin:ShadowShiv": {
@@ -369,12 +369,10 @@
   },
   "Gremlin:ShowStopper": {
     "NAME": "炫耀",
-    "DESCRIPTION": "恰有7层 gremlin:法力 才能打出。 NL 对所有敌人造成 !D! 点伤害五次。",
-    "EXTENDED_DESCRIPTION": [
-      "时机未到。",
-      "时机已过。"
-    ]
+    "DESCRIPTION": "恰有 7 层 gremlin:法力 才能打出。 NL 对所有敌人造成 !D! 点伤害 !M! 次。",
+    "EXTENDED_DESCRIPTION": ["时机未到。","时机已过。"]
   },
+  
   "Gremlin:SkullBash": {
     "NAME": "颅骨重击",
     "DESCRIPTION": " 虚无 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 消耗 。"
@@ -397,7 +395,8 @@
   },
   "Gremlin:Tadah": {
     "NAME": "嗒哒",
-    "DESCRIPTION": "随机 gremlin:回响 一张技能牌 ， NL 其首次耗能为0。 NL gremlin:切换 至 gremlin:地精法师 。"
+    "DESCRIPTION": "获得 1 张 *守卫 。 NL gremlin:切换 至 gremlin:地精法师 。",
+    "UPGRADE_DESCRIPTION": "获得 1 张 *守卫+ NL gremlin:切换 至 gremlin:地精法师 。"
   },
   "Gremlin:TagTeam": {
     "NAME": "配合",

@@ -2,14 +2,19 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.FrozenEgg2;
+import com.megacrit.cardcrawl.relics.MoltenEgg2;
+import com.megacrit.cardcrawl.relics.ToxicEgg2;
 import sneckomod.SneckoMod;
-import sneckomod.cards.unknowns.UnknownRareAttack;
-import sneckomod.cards.unknowns.UnknownRarePower;
-import sneckomod.cards.unknowns.UnknownRareSkill;
 import downfall.util.TextureLoader;
+
+import java.util.ArrayList;
+
+import static sneckomod.util.ColorfulCardReward.TEXT;
 
 public class RareBoosterPack extends CustomRelic {
 
@@ -23,14 +28,27 @@ public class RareBoosterPack extends CustomRelic {
 
     @Override
     public void onEquip() {
-        float displayCount = 0.0F;
-        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(new UnknownRareAttack(), (float) Settings.WIDTH / 3.0F + displayCount, (float) Settings.HEIGHT / 2.0F, false));// 87 89
-        displayCount += (float) Settings.WIDTH / 6.0F;// 93
-        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(new UnknownRareSkill(), (float) Settings.WIDTH / 3.0F + displayCount, (float) Settings.HEIGHT / 2.0F, false));// 87 89
-        displayCount += (float) Settings.WIDTH / 6.0F;// 93
-        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(new UnknownRarePower(), (float) Settings.WIDTH / 3.0F + displayCount, (float) Settings.HEIGHT / 2.0F, false));// 87 89
+        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+        while (cardsToReward.size() < 3) {
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c ->
+                    c.rarity == AbstractCard.CardRarity.RARE);
+
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                r.onPreviewObtainCard(newCard);
+            }
+
+            if (!isDuplicate(cardsToReward, newCard)) {
+                cardsToReward.add(newCard.makeCopy());
+            }
+        }
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, TEXT[2]);
     }
 
+    private boolean isDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        return cardsList.stream().anyMatch(c -> c.cardID.equals(card.cardID));
+    }
+
+    @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

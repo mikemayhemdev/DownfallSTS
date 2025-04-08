@@ -1,6 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.powers.BerserkerStylePower;
 import champ.powers.DefensiveStylePower;
 import champ.powers.FocusedDefPower;
 import champ.powers.ResolvePower;
@@ -18,24 +19,20 @@ public class DefensiveStyle extends AbstractChampCard {
     //stupid intellij stuff power, self, uncommon
 
     public DefensiveStyle() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.tags.add(ChampMod.OPENER);
-        this.tags.add(ChampMod.OPENERDEFENSIVE);
-        baseMagicNumber = magicNumber = 1;
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
         //myHpLossCost = 5;
         postInit();
         loadJokeCardImage(this, "DefensiveStyle.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        defenseOpen();
-      //  fatigue(5);
+        applyToSelf(new BerserkerStylePower(magicNumber));
         applyToSelf(new DefensiveStylePower(magicNumber));
     }
 
     public void upp() {
-        isInnate = true;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        //upgradeMagicNumber(1);
+        upgradeBaseCost(1);
     }
 }

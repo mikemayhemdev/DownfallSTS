@@ -1,10 +1,12 @@
 package guardian.cards;
 
 
+import automaton.FunctionHelper;
 import automaton.cards.Batch;
 import automaton.cards.Debug;
 import automaton.cards.Decompile;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -86,7 +88,7 @@ public class CompilePackage extends AbstractGuardianCard {
             this.initializeDescription();
             for(AbstractCard c:cardsList){
                 c.upgrade();
-            }    
+            }
         }
     }
 
@@ -101,7 +103,6 @@ public class CompilePackage extends AbstractGuardianCard {
         }
         this.initializeDescription();
     }
-
 
     @Override
     public void update() {
@@ -125,5 +126,3 @@ public class CompilePackage extends AbstractGuardianCard {
         }
     }
 }
-
-

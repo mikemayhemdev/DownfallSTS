@@ -6,7 +6,7 @@
 
   "Gremlin:ArmsTheft": {
     "NAME": "Arms Theft",
-    "DESCRIPTION": "gremlin:Steal !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak. NL gremlin:Steal !M! Strength. NL Exhaust."
   },
 
   "Gremlin:Astound": {
@@ -43,7 +43,7 @@
 
   "Gremlin:BurlyBlow": {
     "NAME": "Burly Blow",
-    "DESCRIPTION": "Deal !D! damage.  Repeat for each stack of Weak."
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each stack of Weak."
   },
 
   "Gremlin:CatScratch": {
@@ -64,8 +64,7 @@
 
   "Gremlin:CounterStrike": {
     "NAME": "Counter Strike",
-    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, gain !M! Wards.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, gain !M! Upgraded Wards."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, trigger your current Gremlin's Bonus !M! times."
   },
 
   "Gremlin:CowerChoice": {
@@ -103,12 +102,12 @@
 
   "Gremlin:EdibleArmor": {
     "NAME": "Edible Armor",
-    "DESCRIPTION": "Convert your Block into expansioncontent:Temp_HP."
+    "DESCRIPTION": "Convert your Block into expansioncontent:Temp_HP. NL Exhaust."
   },
 
   "Gremlin:Encore": {
     "NAME": "Encore",
-    "DESCRIPTION": "Gain 3 gremlin:Wiz. NL Whenever you consume gremlin:Wiz, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Gain 3 gremlin:Wiz. NL gremlin:Wiz deals !M! more damage."
   },
 
   "Gremlin:Enthusiasm": {
@@ -123,7 +122,7 @@
 
   "Gremlin:Exacerbate": {
     "NAME": "Exacerbate",
-    "DESCRIPTION": "Deal !D! damage. gremlin:Cripple the enemy. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you apply Weak to this enemy, they lose !M! HP. NL Exhaust."
   },
 
   "Gremlin:FairyDust": {
@@ -192,7 +191,8 @@
 
   "Gremlin:GremlinArms": {
     "NAME": "Gremlin Arms",
-    "DESCRIPTION": "Gain a random assortment of !M! Shivs and *Wards."
+    "DESCRIPTION": "Trigger your current Gremlin's Bonus, then gremlin:Swap to a living Gremlin of your choice.",
+    "UPGRADE_DESCRIPTION": "Trigger your current Gremlin's Bonus twice, then gremlin:Swap to a living Gremlin of your choice."
   },
 
   "Gremlin:GremlinMeal": {
@@ -216,7 +216,7 @@
 
   "Gremlin:GremlinToss": {
     "NAME": "Gremlin Toss",
-    "DESCRIPTION": "Deal damage equal to your current Block and *Temp *HP.",
+    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL Deal damage equal to your current Block and *Temp *HP.",
     "UPGRADE_DESCRIPTION": "Gain !M! expansioncontent:Temp_HP. NL Deal damage equal to your current Block and *Temp *HP.",
     "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
   },
@@ -254,7 +254,7 @@
 
   "Gremlin:Kablamo": {
     "NAME": "Kablamo!",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL This attack does not consume gremlin:Wiz."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL This attack does not consume gremlin:Wiz."
   },
 
   "Gremlin:LeaderChoice": {
@@ -308,7 +308,7 @@
 
   "Gremlin:Pickpocket": {
     "NAME": "Pickpocket",
-    "DESCRIPTION": "gremlin:Steal all Artifact. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Target loses !M! Strength this turn, twice. NL Gain !blamage! Gold. NL Exhaust."
   },
 
   "Gremlin:PinNeedle": {
@@ -340,7 +340,7 @@
 
   "Gremlin:Pretaliation": {
     "NAME": "Pretaliation",
-    "DESCRIPTION": "Deal !D! damage if the enemy intends to attack. NL Deal !blamage! damage otherwise."
+    "DESCRIPTION": "Deal !D! damage twice. NL Enemy attacks you for !M! damage."
   },
 
   "Gremlin:ProperTools": {
@@ -382,8 +382,8 @@
 
   "Gremlin:SecondVolley": {
     "NAME": "Second Volley",
-    "DESCRIPTION": "Deal !D! damage. Gain a Shiv for each card played this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain an Upgraded Shiv for each card played this turn.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain a Shiv for each card played this turn, or until your hand is full.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain an Upgraded Shiv for each card played this turn, or until your hand is full.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " card played.)",
@@ -421,7 +421,7 @@
 
   "Gremlin:ShowStopper": {
     "NAME": "Show Stopper",
-    "DESCRIPTION": "Can only be played if you have exactly 7 gremlin:Wiz. NL Deal !D! damage to ALL enemies 5 times.",
+    "DESCRIPTION": "Can only be played if you have exactly 7 gremlin:Wiz. NL Deal !D! damage to ALL enemies !M! times.",
     "EXTENDED_DESCRIPTION": ["Not enough suspense.", "The timing is ruined."]
   },
 
@@ -452,7 +452,8 @@
 
   "Gremlin:Tadah": {
     "NAME": "Tadah!",
-    "DESCRIPTION": "expansioncontent:Echo a random Skill. NL It costs 0 until played. NL gremlin:Swap to gremlin:Gremlin_Wizard."
+    "DESCRIPTION": "Gain a *Ward. NL gremlin:Swap to gremlin:Gremlin_Wizard.",
+    "UPGRADE_DESCRIPTION": "Gain an Upgraded *Ward. NL gremlin:Swap to gremlin:Gremlin_Wizard."
   },
 
   "Gremlin:TagTeam": {

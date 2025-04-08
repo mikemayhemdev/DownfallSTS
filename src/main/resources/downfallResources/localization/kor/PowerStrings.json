@@ -110,7 +110,7 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "속절없는 믿음",
     "DESCRIPTIONS": [
-      "내 카드를 1장 사용할 때마다 와쳐가 #y만트라를 #b1 얻습니다. 와쳐의 턴 시작 시 #y만트라를 #b5 잃습니다. NL 와쳐의 턴 종료 시 #y강림에서 벗어나지 않습니다."
+      "내 카드를 1장 사용할 때마다 와쳐가 #y만트라를 #b1 얻습니다. NL 와쳐가 #y강림한다면 힘을 #b3 얻습니다. NL 와쳐의 턴 시작 시 #y만트라를 #b4 잃습니다. NL 와쳐의 턴 종료 시 #y강림에서 벗어나지 않습니다."
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -158,7 +158,7 @@
   "downfall:DefectVoidPower": {
     "NAME": "에너지 도둑",
     "DESCRIPTIONS": [
-      "디펙트가 #y공허를 생성할 때마다 내 뽑을 카드 더미 맨 위에 #y공허를 놓습니다."
+      "디펙트가 #y공허를 생성할 때마다 내 버린 카드 더미에 #y공허를 섞어 넣습니다."
     ]
   },
   "downfall:NeowEnergyThief": {
@@ -170,7 +170,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "고대의 구성",
     "DESCRIPTIONS": [
-      "#y청동 #y구체 하수인 2체와 싸웁니다. NL 턴 종료 시 청동 구체가 #y인공물이 없다면 #y인공물을 #b1 얻습니다."
+      "#y청동 #y구체 하수인 2체와 싸웁니다. NL 디펙트의 #y코어 #y서지가 #y소멸하지 않습니다."
     ]
   },
   "downfall:NeowAncientConstruct": {
@@ -186,8 +186,17 @@
       " 얻습니다."
     ]
   },
+  "downfall:DefectBiasCuriosity": {
+    "NAME": "수정된 인지",
+    "DESCRIPTIONS": [
+      "전투 시작 시 디펙트가 #y인지 #y비편향을 사용합니다. NL 내 #y파워 카드를 사용할 때마다 그 턴 동안 디펙트가 #y편향의 효과를 받지 않습니다.",
+      "내 #y파워 카드를 사용할 때마다 그 턴 동안 디펙트가 #y편향의 효과를 받지 않습니다.",
+      "이번 턴 동안 디펙트가 #y편향의 효과를 받지 않게 됩니다.",
+      "편향"
+    ]
+  },
   "downfall:DefectCuriosityLighning": {
-    "NAME": "Unbiased Cognition",
+    "NAME": "인지 비편향",
     "DESCRIPTIONS": [
       "내 #y파워 카드를 사용할 때마다 디펙트가 #y번개 #y구체를 #b",
       " 영창합니다."
@@ -239,7 +248,7 @@
   "downfall:MerchantStrengthPower": {
     "NAME": "영혼 도둑",
     "DESCRIPTIONS": [
-      "상인은 이번 도전에서 영혼 강탈로 벌은 #y힘을 유지하며 벌은 #y힘만큼 #y민첩을 얻습니다."
+      "상인은 이번 도전에서 영혼 강탈로 벌은 #y힘을 두 배로 늘립니다. 벌은 #y힘만큼 #y민첩을 얻습니다."
     ]
   },
   "downfall:NeowMantra": {

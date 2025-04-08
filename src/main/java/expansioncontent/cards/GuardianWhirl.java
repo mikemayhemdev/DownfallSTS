@@ -1,62 +1,58 @@
 package expansioncontent.cards;
 
-
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import expansioncontent.expansionContentMod;
 
-import static expansioncontent.expansionContentMod.loadJokeCardImage;
-
 public class GuardianWhirl extends AbstractExpansionCard {
-    public final static String ID = makeID("GuardianWhirl");
+    public static final String ID = makeID("GuardianWhirl");
 
-    private static final int DAMAGE = 4;
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int DAMAGE = 5;
+
+    private static final int MAGIC = 2;
+
+    private static final int downfallMagic = 10;
 
     public GuardianWhirl() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
-
-        tags.add(expansionContentMod.STUDY_GUARDIAN);
-        tags.add(expansionContentMod.STUDY);
-
-        baseDamage = DAMAGE;
+        super(ID, 1, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
+        setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
+        this.tags.add(expansionContentMod.STUDY_GUARDIAN);
+        this.tags.add(expansionContentMod.STUDY);
+        this.baseDamage = 5;
         this.isMultiDamage = true;
-        this.exhaust = true;
-        loadJokeCardImage(this, "GuardianWhirl.png");
+        this.baseDownfallMagic = 10;
+        this.magicNumber = this.baseMagicNumber = 2;
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "GuardianWhirl.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        atb(new SFXAction("ATTACK_WHIRLWIND"));
-
-        for (int i = 0; i < 4; i++) {
-            atb(new SFXAction("ATTACK_HEAVY"));
-
-            atb(new VFXAction(p, new CleaveEffect(), 0.1F));
-            atb(new com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.NONE));
-            //atb(new WaitAction(0.1f));
+        atb((AbstractGameAction)new SFXAction("ATTACK_WHIRLWIND"));
+        int i;
+        for (i = 0; i < this.magicNumber; i++) {
+            atb((AbstractGameAction)new SFXAction("ATTACK_HEAVY"));
+            atb((AbstractGameAction)new VFXAction((AbstractCreature)p, (AbstractGameEffect)new CleaveEffect(), 0.1F));
+            atb((AbstractGameAction)new DamageAllEnemiesAction((AbstractCreature)p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         }
-
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (p.currentBlock < 10) {
-            cantUseMessage = EXTENDED_DESCRIPTION[0];
-            return false;
-        }
-        return super.canUse(p, m);
+        if (p.currentBlock >= 10)
+            for (i = 0; i < this.magicNumber; i++) {
+                atb((AbstractGameAction)new SFXAction("ATTACK_HEAVY"));
+                atb((AbstractGameAction)new VFXAction((AbstractCreature)p, (AbstractGameEffect)new CleaveEffect(), 0.1F));
+                atb((AbstractGameAction)new DamageAllEnemiesAction((AbstractCreature)p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+            }
     }
 
     public void upgrade() {
-        if (!upgraded) {
+        if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_DAMAGE);
+            upgradeDamage(1);
         }
     }
-
 }

@@ -106,8 +106,7 @@
   },
   "hexamod:BrightRitual": {
     "NAME": "鲜焰仪式",
-    "DESCRIPTION": "切换至首枚鬼火。 NL hexamod:熄灭 hexamod:点燃 的鬼火， NL 每熄灭一枚， NL 获得 [E] 并抽一张牌 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "切换至首枚鬼火。 NL hexamod:熄灭 hexamod:点燃 的鬼火， NL 每熄灭一枚， NL 获得 [E] 并抽一张牌 。 NL 消耗 。"
+    "DESCRIPTION": "切换至首枚鬼火。 NL hexamod:熄灭 hexamod:点燃 的鬼火， NL 每 hexamod:熄灭 1枚， NL 获得 [E] 并抽1张牌 。 NL 消耗 。"
   },
   "hexamod:StepThrough": {
     "NAME": "焰影迷步",
@@ -137,7 +136,7 @@
   },
   "hexamod:GhostShield": {
     "NAME": "幽灵护盾",
-    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 !M! 层 bronze:残影 。 NL ",
+    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 !M! 层 expansioncontent:残影 。 NL ",
     "EXTENDED_DESCRIPTION": [
       "获得 !B! 点格挡。"
     ]
@@ -291,7 +290,7 @@
   },
   "hexamod:NaughtySpirit": {
     "NAME": "淘气精灵",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 若当前鬼火已 hexamod:点燃 ， NL 本牌从弃牌堆返回手牌。 NL hexamod:回退 。 "
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 若当前鬼火已 hexamod:点燃 ， NL 本牌从弃牌堆返回手牌并 hexamod:回退 。 "
   },
   "hexamod:InstantInferno": {
     "NAME": "此即地狱",
@@ -399,7 +398,7 @@
     "NAME": "飘忽不定",
     "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 获得 1 点 敏捷 。 NL ",
     "EXTENDED_DESCRIPTION": [
-      "获得 !M! 层多层护甲。"
+      "获得 !M! 多层护甲 。"
     ]
   },
   "hexamod:Premonition": {
@@ -445,8 +444,8 @@
   },
   "hexamod:OpposingAction": {
     "NAME": "反骨",
-    "DESCRIPTION": "hexamod:回退 。 NL 获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 获得 [E] [E] 。"
+    "DESCRIPTION": "hexamod:回退 。 NL 获得 [E] [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 获得 [E] [E] [E] 。 NL 消耗 。"
   },
   "hexamod:SeventhEye": {
     "NAME": "第七感",
@@ -455,7 +454,7 @@
   },
   "hexamod:FlameDevourer": {
     "NAME": "噬火",
-    "DESCRIPTION": "hexamod:回退 ， NL 若 *回退 至 hexamod:点燃 的鬼火， NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "若当前鬼火已 *点燃 ， hexamod:回退 ， NL 并获得 !B! 点 格挡 。"
   },
   "hexamod:SpectralGrace": {
     "NAME": "幽雅",
@@ -536,9 +535,9 @@
     ]
   },
   "hexamod:HexaLevel": {
-    "NAME": "Infernal Form",
-    "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! hexamod:Intensity. NL At the start of your turn, gain !M! hexamod:Intensity."
+    "NAME": "地狱形态",
+    "DESCRIPTION": "回合开始时， NL 获得 !M! 点 hexamod:热烈 .",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 hexamod:热烈 。 NL 回合开始时， NL 获得 !M! 点 hexamod:热烈 。"
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",
@@ -555,5 +554,11 @@
       "Replace the current Ghostflame with a hexamod:Searing Ghostflame",
       "Don't replace."
     ]
+  },
+  "hexamod:MatchstickFloat": {
+    "NAME": "Sneaky Teakwood Match",
+   "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
   }
 }

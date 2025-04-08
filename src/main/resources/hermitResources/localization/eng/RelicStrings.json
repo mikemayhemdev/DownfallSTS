@@ -25,28 +25,28 @@
     "NAME": "Horseshoe",
     "FLAVOR": "Lucky charm. Somebody is gonna be missing this.",
     "DESCRIPTIONS": [
-      "Whenever you gain #yWeak, #yFrail or #yVulnerable, gain #b1 less."
+      "Whenever you gain #yWeak [REMOVE_SPACE], #yFrail or #yVulnerable [REMOVE_SPACE], gain #b1 less."
     ]
   },
   "hermit:Spyglass": {
     "NAME": "Spyglass",
     "FLAVOR": "Property of Kestin Highfin.",
     "DESCRIPTIONS": [
-      "If you end your turn #yhermit:Concentrated, gain an additional [E] next turn ."
+      "If you end your turn #yhermit:Concentrated [REMOVE_SPACE], gain an additional [E] next turn ."
     ]
   },
   "hermit:RedScarf": {
     "NAME": "Red Scarf",
     "FLAVOR": "It's warm and fuzzy.",
     "DESCRIPTIONS": [
-      "Whenever you apply a new debuff to an enemy, gain #b3 #yBlock."
+      "Whenever you apply a new debuff to an enemy, gain #b3 #yBlock [REMOVE_SPACE]."
     ]
   },
   "hermit:DentedPlate": {
     "NAME": "Dented Plate",
     "FLAVOR": "Several bullets are still lodged inside.",
     "DESCRIPTIONS": [
-      "While your HP is at or below #b50%, gain [E] and draw #b1 card at the start of your turn."
+      "While your HP is at or below #b50% [REMOVE_SPACE], gain [E] and draw #b1 card at the start of your turn."
     ]
   },
   "hermit:PetGhost": {
@@ -60,14 +60,14 @@
     "NAME": "Charred Glove",
     "FLAVOR": "Parts of the glove still glow with otherworldly cinders.",
     "DESCRIPTIONS": [
-      "Whenever you draw a #rCurse, your next attack deals #b3 more damage."
+      "Whenever you draw a #rCurse [REMOVE_SPACE], your next attack deals #b3 more damage."
     ]
   },
   "hermit:ClaspedLocket": {
     "NAME": "Clasped Locket",
     "FLAVOR": "It won't open anymore.",
     "DESCRIPTIONS": [
-      "Replaces #yOld #yLocket. First time you draw a curse each turn, #yExhaust it and draw #b2 cards. Upon pickup, obtain #b2 #rInjuries.",
+      "Replaces #yOld #yLocket [REMOVE_SPACE]. First time you draw a #rCurse each turn, #yExhaust it and draw #b2 cards. Upon pickup, obtain #b2 #rInjuries [REMOVE_SPACE].",
       "Never again..."
     ]
   },
@@ -82,7 +82,7 @@
     "NAME": "Brass Tacks",
     "FLAVOR": "The luster on these tacks never seems to fade.",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain #b2 Block."
+      "At the end of your turn, gain #b2 #yBlock [REMOVE_SPACE]."
     ]
   },
   "hermit:BlackPowder": {
@@ -96,7 +96,7 @@
     "NAME": "Broken Tooth",
     "FLAVOR": "Appears too large to have come from a human jaw...",
     "DESCRIPTIONS": [
-      "Whenever you defeat an Elite encounter, heal #b7 HP and gain #b35 gold."
+      "Whenever you defeat an Elite encounter, heal #b7 HP and gain #b35 Gold."
     ]
   }
 }

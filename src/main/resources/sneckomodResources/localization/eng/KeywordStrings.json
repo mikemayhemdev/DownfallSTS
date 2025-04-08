@@ -4,13 +4,29 @@
     "NAMES": [
       "snekproof"
     ],
-    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled."
+    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+  },
+  {
+  "PROPER_NAME": "Suit",
+  "NAMES": [
+  "suit",
+  "suits"
+],
+  "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+  },
+  {
+    "PROPER_NAME": "Overflow",
+    "NAMES": [
+      "Overflow", "overflow"
+    ],
+    "DESCRIPTION": "Overflow effects activate if you have more than #b5 cards in hand."
   },
   {
     "PROPER_NAME": "Muddle",
     "NAMES": [
       "muddle",
-      "muddled"
+      "muddled",
+      "muddles"
     ],
     "DESCRIPTION": "Muddling a card changes its cost this turn to between #b0 and #b3 at random."
   },
@@ -22,17 +38,31 @@
     "DESCRIPTION": "An Offclass card is any obtainable card from a class other than your own (including Colorless cards, Curses, and Statuses)."
   },
   {
+    "PROPER_NAME": "Gift",
+    "NAMES": [
+      "gift"
+    ],
+    "DESCRIPTION": "When you obtain this card, get a card reward with the following card type."
+  },
+  {
     "PROPER_NAME": "Identify",
     "NAMES": [
       "identify"
     ],
-    "DESCRIPTION": "Replace an #yUnidentified card with its current random card permanently."
+    "DESCRIPTION": "Replace an #yUnidentified card with its current random card permanently. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+  },
+  {
+    "PROPER_NAME": "Venom",
+    "NAMES": [
+      "venom"
+    ],
+    "DESCRIPTION": "Creatures with #yVenom lose HP whenever they gain a debuff that isn't #yVenom."
   },
   {
     "PROPER_NAME": "Lucky",
     "NAMES": [
       "lucky"
     ],
-    "DESCRIPTION": "Cards that choose a random number as part of their card text choose the maximum possible number. (Does not affect Muddle)"
+    "DESCRIPTION": "Overflow effects always activate this turn regardless of hand size."
   }
 ]

@@ -1,53 +1,86 @@
 package sneckomod.cards;
 
+import basemod.BaseMod;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.FrozenEgg2;
+import com.megacrit.cardcrawl.relics.MoltenEgg2;
+import com.megacrit.cardcrawl.relics.ToxicEgg2;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
+import sneckomod.actions.MuddleAction;
+import sneckomod.relics.UnknownEgg;
 
 import java.util.ArrayList;
 
-public class DangerNoodle extends AbstractSneckoCard {
+public class DangerNoodle extends AbstractSneckoCard implements OnObtainCard {
 
-    public final static String ID = makeID("DangerNoodle");
+    public static final String ID = makeID("DangerNoodle");
 
-    //stupid intellij stuff ATTACK, ENEMY, RARE
-
-    private static final int DAMAGE = 9;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 14;
+    private static final int UPG_DAMAGE = 4;
+    private static int SOFTLOCK = 0;
 
     public DangerNoodle() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         SneckoMod.loadJokeCardImage(this, "DangerNoodle.png");
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                ArrayList<AbstractCard> myList = new ArrayList<>();
-                for (AbstractCard q : p.hand.group) {
-                    if (q.color != AbstractDungeon.player.getCardColor()) {
-                        myList.add(q);
-                    }
-                }
-                for (AbstractCard q : myList) {
-                    att(new ExhaustSpecificCardAction(q, p.hand));
-                }
-                for (AbstractCard q : myList) {
-                    att(new DamageAction(m, makeInfo(), AttackEffect.BLUNT_HEAVY));
-                }
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID) && (SOFTLOCK < 100)) {
+                SOFTLOCK++;
+                return true;
             }
-        });
+        }
+        if (SOFTLOCK >= 100) {
+            System.out.println("SOFTLOCK DETECTED!!!");
+        }
+        return false;
     }
 
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+
+        addToBot(new SelectCardsInHandAction(1, BaseMod.getKeywordProper("sneckomod:muddle"),
+                (AbstractCard c) -> true,
+                (cards) -> {
+                    for (AbstractCard card : cards) {
+                        addToBot(new MuddleAction(card));
+                    }
+                }
+        ));
+    }
+
+    @Override
+    public void onObtainCard() {
+        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+        while (cardsToReward.size() < 3) {
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c -> c.cost >= 3);
+
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                r.onPreviewObtainCard(newCard);
+            }
+
+            if (!cardListDuplicate(cardsToReward, newCard)) {
+                SOFTLOCK = 0;
+                cardsToReward.add(newCard.makeCopy());
+            }
+        }
+
+        SneckoMod.addGift(cardsToReward);
+        ;
+    }
+
+    @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();

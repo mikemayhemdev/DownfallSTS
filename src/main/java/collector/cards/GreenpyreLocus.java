@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
 import hermit.util.Wiz;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
@@ -21,8 +22,9 @@ public class GreenpyreLocus extends AbstractCollectorCard {
     // intellij stuff skill, self, uncommon, , , , , 1, 1
 
     public GreenpyreLocus() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

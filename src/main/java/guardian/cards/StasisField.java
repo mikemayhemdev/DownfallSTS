@@ -50,10 +50,10 @@ public class StasisField extends AbstractGuardianCard implements InStasisCard {
         this.useGems(p, m);
     }
 
-    @Override
-    public void onEvoke(StasisOrb orb) {
-        addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
-    }
+//    @Override
+//    public void onEvoke(StasisOrb orb) {
+//        addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
+//    }
 
 
     public AbstractCard makeCopy() {
@@ -84,5 +84,3 @@ public class StasisField extends AbstractGuardianCard implements InStasisCard {
 
     }
 }
-
-
