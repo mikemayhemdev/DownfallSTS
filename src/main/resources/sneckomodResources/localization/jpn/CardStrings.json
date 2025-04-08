@@ -109,10 +109,10 @@
   },
   "sneckomod:SnakeEyes": {
     "NAME": "スネッコアイ",
-    "DESCRIPTION": "このターン、次の sneckomod:オフクラス カードは 2 回プレイされます。  NL sneckomod:ギフト : レア スキル ",
-    "UPGRADE_DESCRIPTION": "このターン、次の2枚の sneckomod:オフクラス カードは 2 回プレイされます。  NL sneckomod:ギフト : レア スキル ",
-    "DESCRIPTION_BATTLE": "このターン、次の sneckomod:オフクラス カードは 2 回プレイされます。 ",
-    "UPGRADE_DESCRIPTION_BATTLE": "このターン、次の2枚の sneckomod:オフクラス カードは 2 回プレイされます。 "
+    "DESCRIPTION": "このターン、次の sneckomod:オフクラス カードは 2 回プレイされる。  NL sneckomod:ギフト : レア スキル ",
+    "UPGRADE_DESCRIPTION": "このターン、次の2枚の sneckomod:オフクラス カードは 2 回プレイされる。  NL sneckomod:ギフト : レア スキル ",
+    "DESCRIPTION_BATTLE": "このターン、次の sneckomod:オフクラス カードは 2 回プレイされる。 ",
+    "UPGRADE_DESCRIPTION_BATTLE": "このターン、次の2枚の sneckomod:オフクラス カードは 2 回プレイされる。 "
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
@@ -143,7 +143,7 @@
   },
   "sneckomod:Mudshield": {
     "NAME": "マッドシールド",
-    "DESCRIPTION": "カードを sneckomod:泥まみれ する度に、 !M! ブロックを得る。"
+    "DESCRIPTION": "カードを sneckomod:泥まみれ にする度に、 !M! ブロックを得る。"
   },
   "sneckomod:OverwhelmingPresence": {
     "NAME": "圧倒的",
@@ -155,11 +155,11 @@
   },
   "sneckomod:PoisonParadise": {
     "NAME": "噴水",
-    "DESCRIPTION": " sneckomod:オーバーフロー すると sneckomod:蛇毒 !M! を与える。"
+    "DESCRIPTION": " sneckomod:オーバーフロー する度、ランダムな敵に sneckomod:蛇毒 !M! を与える。"
   },
   "sneckomod:PureSnecko": {
     "NAME": "シフト",
-    "DESCRIPTION": " !M! カードを引き、カードを 1 枚選んで sneckomod:泥まみれ にする。"
+    "DESCRIPTION": " !M! 枚カードを引き、それらのカードを sneckomod:泥まみれ にする。"
   },
   "sneckomod:QuickBite": {
     "NAME": "スネークレーキ",
@@ -176,7 +176,7 @@
   },
   "sneckomod:Restock": {
     "NAME": "再ストック",
-    "DESCRIPTION": "手札を捨てる。 NL !M! 枚のカードを引いて、手札を sneckomod:泥まみれ にする。 NL 廃棄 "
+    "DESCRIPTION": "手札を捨てる。 NL !M! 枚のカードを引いて、手札のカードを sneckomod:泥まみれ にする。 NL 廃棄 "
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
@@ -240,7 +240,7 @@
   },
   "sneckomod:SoulRoll": {
     "NAME": "ソウルロール",
-    "DESCRIPTION": " 保留 NL  !B! ブロックを得る。 NL  sneckomod:泥まみれ  NL 廃棄 "
+    "DESCRIPTION": " 保留 NL  !B! ブロックを得る。 NL 手札のカードを1枚 sneckomod:泥まみれ にする。 NL 廃棄 "
   },
   "sneckomod:Strike": {
     "NAME": "ストライク",
@@ -487,7 +487,7 @@
   },
   "sneckomod:Mesmerize": {
     "NAME": "魅了する",
-    "DESCRIPTION": "全ての敵が !M! 筋力 を失う。 NL カードを sneckomod:泥まみれ にする。 NL 廃棄 "
+    "DESCRIPTION": "全ての敵が !M! 筋力 を失う。 NL カードを1枚選び sneckomod:泥まみれ にする。 NL 廃棄 "
   },
   "sneckomod:Serpentscale": {
     "NAME": "蛇鱗",

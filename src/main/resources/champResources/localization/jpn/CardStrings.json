@@ -278,7 +278,7 @@
   },
   "champ:SteelEdge": {
     "NAME": "鋼鉄の刃",
-    "DESCRIPTION": " !D! ダメージを X 回与える。 NL るのを X 回繰り:",
+    "DESCRIPTION": " !D! ダメージを X 回与える。 NL 以下の効果を X 回発動する。 NL （少なくとも 1 回は発動する）: ",
     "EXTENDED_DESCRIPTION": [
       "狂化 champ:コンボ: !D! ダメージを X 回与える。 NL ",
       "守護 champ:コンボ: !B! ブロックを X 回得る。",
