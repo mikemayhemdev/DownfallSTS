@@ -240,7 +240,7 @@
   },
   "sneckomod:SoulRoll": {
     "NAME": "ソウルロール",
-    "DESCRIPTION": " 保留 NL  !B! ブロックを得る。 NL 手札のカードを1枚選び、 sneckomod:泥まみれ にする。 NL 廃棄 "
+    "DESCRIPTION": " 保留 NL  !B! ブロックを得る。 NL 手札のカードを1枚 sneckomod:泥まみれ にする。 NL 廃棄 "
   },
   "sneckomod:Strike": {
     "NAME": "ストライク",
