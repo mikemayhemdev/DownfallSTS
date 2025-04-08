@@ -17,7 +17,7 @@
     "NAME": "ブルーザースライム",
     "DESCRIPTION": [
       "ターン開始時 #b",
-      " ダメージを与える。"
+      " ダメージを2回与える。"
     ]
   },
   "Slimebound:ScrapOozeSlime": {
