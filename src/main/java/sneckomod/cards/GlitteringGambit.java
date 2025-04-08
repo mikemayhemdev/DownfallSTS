@@ -17,7 +17,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
     private static int SOFTLOCK = 0;
 
     public GlitteringGambit() {
-        super(ID, -2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, -2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = false;
         tags.add(CardTags.HEALING);

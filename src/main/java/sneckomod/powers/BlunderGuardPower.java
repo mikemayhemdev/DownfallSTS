@@ -42,8 +42,7 @@ public class BlunderGuardPower extends AbstractPower implements CloneablePowerIn
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
 
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+        this.loadRegion("deva");
 
         this.updateDescription();
     }

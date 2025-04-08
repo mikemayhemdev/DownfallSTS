@@ -43,7 +43,7 @@ public class ReveriePower extends AbstractPower {
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
+    public void atStartOfTurn() {
         this.flash();
 
         if (!AbstractDungeon.player.discardPile.isEmpty()) {
