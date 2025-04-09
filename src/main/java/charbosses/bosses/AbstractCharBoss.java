@@ -32,6 +32,9 @@ import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.patches.BindingPatches;
+import com.evacipated.cardcrawl.mod.stslib.patches.BlockModifierPatches;
+import com.evacipated.cardcrawl.mod.stslib.patches.DamageModifierPatches;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -41,6 +44,7 @@ import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -135,6 +139,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.stance = new EnNeutralStance();
         this.orbs = new ArrayList<AbstractOrb>();
         this.relics = new ArrayList<AbstractCharbossRelic>();
+        type = EnemyType.BOSS;
     }
 
     @Override
@@ -146,6 +151,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         super.init();
         this.preBattlePrep();
         AbstractCharBoss.finishedSetup = true;
+        this.type = EnemyType.BOSS;
     }
 
     @Override
@@ -1005,74 +1011,89 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void onPlayAttackCardSound() {
     }
 
-
-    @Override
-    public void damage(final DamageInfo info) {
-        int damageAmount = info.output;
-        boolean hadBlock = true;
-        if (this.currentBlock == 0) {
-            hadBlock = false;
-        }
-        if (damageAmount < 0) {
-            damageAmount = 0;
-        }
-        if (damageAmount > 1 && this.hasPower(IntangiblePower.POWER_ID)) {
-            damageAmount = 1;
-        }
-        final boolean weakenedToZero = damageAmount == 0;
-        damageAmount = this.decrementBlock(info, damageAmount);
-        ////SlimeboundMod.logger.info(info.owner + " pre damage about to apply relics");
-        if (info.owner == this) {
-            for (final AbstractRelic r : this.relics) {
-                ////SlimeboundMod.logger.info(r.name + " onAttackToChange firing");
-                damageAmount = r.onAttackToChangeDamage(info, damageAmount);
-
-
-            }
-        }
-        if (info.owner == AbstractDungeon.player) {
-            for (final AbstractRelic r : AbstractDungeon.player.relics) {
-                damageAmount = r.onAttackToChangeDamage(info, damageAmount);
-            }
-        }
-        if (info.owner != null) {
-            for (final AbstractPower p : info.owner.powers) {
-                damageAmount = p.onAttackToChangeDamage(info, damageAmount);
-            }
-        }
+//start paste here
+@Override
+public void damage(final DamageInfo info) {
+    BindingPatches.DisableReactionaryActionBinding.disableBefore((AbstractCreature) this);
+    int damageAmount = info.output;
+    boolean hadBlock = true;
+    if (this.currentBlock == 0) {
+        hadBlock = false;
+    }
+    if (damageAmount < 0) {
+        damageAmount = 0;
+    }
+    if (damageAmount > 1 && this.hasPower(IntangiblePower.POWER_ID)) {
+        damageAmount = 1;
+    }
+    final boolean weakenedToZero = damageAmount == 0;
+    damageAmount = this.decrementBlock(info, damageAmount);
+    ////SlimeboundMod.logger.info(info.owner + " pre damage about to apply relics");
+    if (info.owner == this) {
         for (final AbstractRelic r : this.relics) {
-            damageAmount = r.onAttackedToChangeDamage(info, damageAmount);
+            ////SlimeboundMod.logger.info(r.name + " onAttackToChange firing");
+            damageAmount = r.onAttackToChangeDamage(info, damageAmount);
+
+
+        }
+    }
+    if (info.owner == AbstractDungeon.player) {
+        for (final AbstractRelic r : AbstractDungeon.player.relics) {
+            damageAmount = r.onAttackToChangeDamage(info, damageAmount);
+        }
+    }
+    if (info.owner != null) {
+        for (final AbstractPower p : info.owner.powers) {
+            damageAmount = p.onAttackToChangeDamage(info, damageAmount);
+        }
+    }
+
+    int[] arrayOfInt2 = new int[1];
+    arrayOfInt2[0] = damageAmount;
+    DamageModifierPatches.OnAttackMonster.toChangeDamage(this, info, arrayOfInt2);
+    damageAmount = arrayOfInt2[0];
+
+    for (final AbstractRelic r : this.relics) {
+        damageAmount = r.onAttackedToChangeDamage(info, damageAmount);
+    }
+    for (final AbstractPower p : this.powers) {
+        damageAmount = p.onAttackedToChangeDamage(info, damageAmount);
+    }
+    if (info.owner == this) {
+        for (final AbstractRelic r : this.relics) {
+            r.onAttack(info, damageAmount, this);
+        }
+    }
+
+        //paste section 2
+
+    if (info.owner == AbstractDungeon.player) {
+        for (final AbstractRelic r : AbstractDungeon.player.relics) {
+            r.onAttack(info, damageAmount, this);
+        }
+    }
+    DamageModifierPatches.OnAttackMonster.onAttack(this, info, damageAmount);
+
+    if (info.owner != null) {
+        BlockModifierPatches.OnAttackMonster.onAttack(this, info, damageAmount);
+        for (final AbstractPower p : info.owner.powers) {
+            p.onAttack(info, damageAmount, this);
         }
         for (final AbstractPower p : this.powers) {
-            damageAmount = p.onAttackedToChangeDamage(info, damageAmount);
-        }
-        if (info.owner == this) {
-            for (final AbstractRelic r : this.relics) {
-                r.onAttack(info, damageAmount, this);
-            }
-        }
-        if (info.owner == AbstractDungeon.player) {
-            for (final AbstractRelic r : AbstractDungeon.player.relics) {
-                r.onAttack(info, damageAmount, this);
-            }
-        }
-        if (info.owner != null) {
-            for (final AbstractPower p : info.owner.powers) {
-                p.onAttack(info, damageAmount, this);
-            }
-            for (final AbstractPower p : this.powers) {
-                damageAmount = p.onAttacked(info, damageAmount);
-            }
-            for (final AbstractRelic r : this.relics) {
-                damageAmount = r.onAttacked(info, damageAmount);
-            }
+            damageAmount = p.onAttacked(info, damageAmount);
         }
         for (final AbstractRelic r : this.relics) {
-            damageAmount = r.onLoseHpLast(damageAmount);
+            damageAmount = r.onAttacked(info, damageAmount);
         }
-        this.lastDamageTaken = Math.min(damageAmount, this.currentHealth);
-        final boolean probablyInstantKill = this.currentHealth == 0;
-        if (damageAmount > 0 || probablyInstantKill) {
+    }
+    for (final AbstractRelic r : this.relics) {
+        damageAmount = r.onLoseHpLast(damageAmount);
+    }
+    this.lastDamageTaken = Math.min(damageAmount, this.currentHealth);
+    DamageModifierPatches.OnAttackMonster.onLastDamageTakenUpdate(this, info, damageAmount);
+    final boolean probablyInstantKill = this.currentHealth == 0;
+    if (damageAmount > 0 || probablyInstantKill) { //here!
+
             for (final AbstractPower p : this.powers) {
                 damageAmount = p.onLoseHp(damageAmount);
             }
@@ -1134,6 +1155,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     AbstractDungeon.overlayMenu.hideCombatPanels();
                 }
                 if (this.currentBlock > 0) {
+                    BlockModifierPatches.ClearContainerOnDeath.byeByeContainers(this);
                     this.loseBlock();
                     AbstractDungeon.effectList.add(new HbBlockBrokenEffect(this.hb.cX - this.hb.width / 2.0f + AbstractMonster.BLOCK_ICON_X, this.hb.cY - this.hb.height / 2.0f + AbstractMonster.BLOCK_ICON_Y));
                 }
@@ -1156,6 +1178,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 AbstractDungeon.effectList.add(new BlockedWordEffect(this, this.hb.cX, this.hb.cY, AbstractMonster.TEXT[30]));
             }
         }
+    BindingPatches.DisableReactionaryActionBinding.enableAfter((AbstractCreature)this);
+    DamageModifierPatches.OnAttackMonster.removeModsAfterUse(this, info);
     }
 
     @Override
@@ -1164,20 +1188,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             BossMechanicDisplayPanel.resetBossPanel();
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
-            if (!(this instanceof CharBossMerchant)) {
-                if (hasPower(MinionPower.POWER_ID)) {
-                    if (Settings.FAST_MODE) {
-                        this.deathTimer += 0.7F;
-                    } else {
-                        ++this.deathTimer;
-                    }
-                } else {
-                    //SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
-                    onBossVictoryLogic();
-                }
-            }
-
+            onBossVictoryLogic();
         }
+
 
 
         AbstractCharBoss.boss = null;

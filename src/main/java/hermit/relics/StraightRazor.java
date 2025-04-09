@@ -5,10 +5,12 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import hermit.HermitMod;
 import hermit.util.TextureLoader;
 
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static hermit.HermitMod.makeRelicOutlinePath;
 import static hermit.HermitMod.makeRelicPath;
 
@@ -29,9 +31,12 @@ public class StraightRazor extends CustomRelic implements OnRemoveCardFromMaster
         AbstractDungeon.player.heal(15);
     }
 
+    public boolean canSpawn() {
+        return Settings.isEndless || (AbstractDungeon.floorNum <= 48); // cannot appear in act 4
+    }
+
     @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }
-
 }

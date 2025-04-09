@@ -1,4 +1,4 @@
-/*
+package expansioncontent.cards;/*
 package expansioncontent.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;

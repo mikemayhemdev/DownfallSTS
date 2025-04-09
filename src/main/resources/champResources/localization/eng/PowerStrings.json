@@ -2,15 +2,15 @@
   "champ:CounterPower": {
     "NAME": "Counter",
     "DESCRIPTIONS": [
-      "The next time you receive #yAttack damage, deal #b",
-      " damage back."
+      "The next time you receive #yAttack damage, gain a #yRiposte #yStrike that deals #b",
+      " damage."
     ]
   },
   "champ:FocusedDefPower": {
     "NAME": "Focused: Defensive",
     "DESCRIPTIONS": [
       "The next time you use a #yFinisher this turn, gain #b",
-      " #yBlock."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "champ:FocusedBerPower": {
@@ -24,7 +24,7 @@
     "NAME": "Shield Wall",
     "DESCRIPTIONS": [
       "At the end of your turn, gain #b",
-      " #yCounter."
+      " #yCounter [REMOVE_SPACE]."
     ]
   },
   "champ:EntangleNextTurnPower": {
@@ -47,7 +47,7 @@
     "NAME": "Ignoring Pain",
     "DESCRIPTIONS": [
       "You cannot lose HP this turn.",
-      "You cannot lose HP this and the next #b",
+      "You cannot lose HP for the next #b",
       " turns."
     ]
   },
@@ -55,21 +55,22 @@
     "NAME": "Endless Rage",
     "DESCRIPTIONS": [
       "Whenever you lose HP on your turn, gain #b",
-      " temporary #yStrength."
+      " temporary #yStrength [REMOVE_SPACE]."
     ]
   },
   "champ:ImprovisingPower": {
     "NAME": "Improvising",
     "DESCRIPTIONS": [
-      "At the start of your turn, if you are not in a Stance, enter a random Stance."
+      "At the start of your turn, if you are not in a #yStance [REMOVE_SPACE], enter a random #yStance [REMOVE_SPACE]. Whenever you enter a #yStance [REMOVE_SPACE], trigger its #ySkill #yBonus #b",
+      " times."
     ]
   },
   "champ:CalledShotPower": {
     "NAME": "Called Shot",
     "DESCRIPTIONS": [
-      "The next time you play a #yFinisher, do not leave your #yStance.",
+      "The next time you play a #yFinisher [REMOVE_SPACE], do not leave your #yStance [REMOVE_SPACE].",
       "The next #b",
-      " times you play a #yFinisher, do not leave your #yStance."
+      " times you play a #yFinisher [REMOVE_SPACE], do not leave your #yStance [REMOVE_SPACE]."
     ]
   },
   "champ:DancingMasterPower": {
@@ -86,24 +87,24 @@
   "champ:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, gain a random \"Strike\" #yEcho [REMOVE_SPACE]. It costs #b0 until played.",
       "At the start of your turn, gain #b",
-      " random \"Strike\"s. They cost #b0 until played and Exhaust."
+      " random \"Strike\" #yEchoes [REMOVE_SPACE]. They cost #b0 until played."
     ]
   },
   "champ:StrikeOfGeniusUpgradedPower": {
     "NAME": "Strike of Genius+",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random #yupgraded \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, gain a random #yupgraded \"Strike\" #yEcho [REMOVE_SPACE]. It costs #b0 until played.",
       "At the start of your turn, gain #b",
-      " random #yupgraded \"Strike\"s. They cost #b0 until played and Exhaust."
+      " random #yupgraded \"Strike\" #yEchoes [REMOVE_SPACE]. They cost #b0 until played."
     ]
   },
   "champ:DefensiveStylePower": {
     "NAME": "Defensive Style",
     "DESCRIPTIONS": [
-      "#yDefensive #ySkill Bonuses grant #b",
-      " additional #yCounter."
+      "#bDefensive #ySkill #yBonuses grant #b",
+      " additional #yCounter [REMOVE_SPACE]."
     ]
   },
   "champ:GladiatorStylePower": {
@@ -116,7 +117,7 @@
   "champ:BerserkerStylePower": {
     "NAME": "Berserker Style",
     "DESCRIPTIONS": [
-      "#yBerserker #ySkill Bonuses grant #b",
+      "#rBerserker #ySkill #yBonuses grant #b",
       " more #yVigor."
     ]
   },
@@ -140,14 +141,14 @@
   "champ:IronFortressPower": {
     "NAME": "Technical Jig",
     "DESCRIPTIONS": [
-      "Whenever you enter a Stance, gain #b",
+      "Whenever you enter a #yStance, gain #b",
       " #yBlock."
     ]
   },
   "champ:IronFortressVigorPower": {
     "NAME": "Technical Jig: Berserker",
     "DESCRIPTIONS": [
-      "Whenever you enter a Stance, trigger Berserker Stance's #ySkill Bonus",
+      "Whenever you enter a Stance, trigger #rBerserker #rStance's #ySkill Bonus",
       " #b",
       " times."
     ]
@@ -156,7 +157,7 @@
     "NAME": "Last Stand",
     "DESCRIPTIONS": [
       "At the start of turn, if HP is at or below 50%, cleanse all debuffs and gain ",
-      " Strength."
+      " #yStrength."
     ]
   },
   "champ:GladiatorFormPower": {
@@ -200,7 +201,7 @@
   "champ:ParryPower": {
     "NAME": "Parrying",
     "DESCRIPTIONS": [
-      "If your Counter is used this turn, gain Riposte."
+      "If your #yCounter is used this turn, gain an additional #yRiposte #yStrike."
     ]
   },
   "champ:BoomerangPower": {
@@ -219,18 +220,25 @@
   "champ:DualPlaySrikePower": {
     "NAME": "Flurry of Strikes",
     "DESCRIPTIONS": [
-      "Your next #yStrike is played twice this turn.",
+      "Your next #y\"Strike\" is played twice this turn.",
       "Your next ",
-      " #yStrikes are played twice this turn."
+      " #y\"Strikes\" are played twice this turn."
     ]
   },
   "champ:LastStandPower": {
     "NAME": "Last Stand",
     "DESCRIPTIONS": [
-      "Once you get below #b50% Hp, remove all debuffs and gain #b",
+      "Once you get below #b50% HP, remove all debuffs and gain #b",
       " Strength.",
       "~You've~ ~done~ ~it~ ~now...~",
       "@DEFEAT??@ NL @IMPOSSIBLE!!@"
+    ]
+  },
+  "champ:HonePower": {
+    "NAME": "Honed Blade",
+    "DESCRIPTIONS": [
+      "Your #y\"Strike\" cards deal #b",
+      " more damage."
     ]
   },
   "champ:DoubleStyleThisTurnPower": {

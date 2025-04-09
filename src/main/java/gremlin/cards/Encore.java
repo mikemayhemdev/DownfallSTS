@@ -8,10 +8,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
+import gremlin.powers.BangPower;
 import gremlin.powers.EncorePower;
 import gremlin.powers.WizPower;
 
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
+import static hermit.util.Wiz.removePower;
 
 public class Encore extends AbstractGremlinCard {
     public static final String ID = getID("Encore");
@@ -27,7 +29,7 @@ public class Encore extends AbstractGremlinCard {
 
     private static final int WIZ = 3;
 
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 4;
     private static final int UPGRADE_BONUS = 2;
 
     public Encore()
@@ -43,10 +45,11 @@ public class Encore extends AbstractGremlinCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        this.addToTop(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(p, p, BangPower.POWER_ID));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
+                new EncorePower(p, magicNumber), magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new WizPower(p, WIZ), WIZ));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new EncorePower(p, magicNumber), magicNumber));
     }
 
     public void upgrade()

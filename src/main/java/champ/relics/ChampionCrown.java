@@ -3,6 +3,8 @@ package champ.relics;
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
 import champ.actions.OpenerReduceCostAction;
+import champ.cards.StanceDance;
+import champ.cards.StanceDanceCrown;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
@@ -16,8 +18,10 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
+import downfall.actions.OctoChoiceAction;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
+import theHexaghost.cards.MatchstickFloat;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
@@ -45,20 +49,8 @@ public class ChampionCrown extends CustomRelic  {
     @Override
     public void atBattleStart() {
         super.atBattleStart();
-       // AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-            int x = AbstractDungeon.cardRandomRng.random(1);
-            switch (x) {
-                case 0:
-                    //SlimeboundMod.logger.info("Switching to Berserker (Mod Relic)");
-                    addToBot(new ChangeStanceAction(BerserkerStance.STANCE_ID));
-                    break;
-                case 1:
-                    //SlimeboundMod.logger.info("Switching to Defensive (Mod Relic)");
-                    addToBot(new ChangeStanceAction(DefensiveStance.STANCE_ID));
-                    break;
-            }
-        }
+        StanceDanceCrown stance = new StanceDanceCrown();
+        addToBot(new OctoChoiceAction(null, stance));
     }
 
     @Override

@@ -1,5 +1,6 @@
 package collector.cards;
 
+import basemod.helpers.BaseModCardTags;
 import collector.effects.GreenThirdEyeEffect;
 import collector.powers.DarkLordFormPower;
 import collector.powers.DarkLordFormPowerPlus;
@@ -18,6 +19,7 @@ public class DarkLordForm extends AbstractCollectorCard {
     public DarkLordForm() {
         super(ID, 4, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         cardsToPreview = new YouAreMine();
+        tags.add(BaseModCardTags.FORM);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

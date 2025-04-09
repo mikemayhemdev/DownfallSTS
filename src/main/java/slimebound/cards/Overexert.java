@@ -55,7 +55,7 @@ public class Overexert extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
 
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, 4), 4));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, 5), 5));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseSlimesPower(p, p, this.magicNumber), this.magicNumber));
 
         if (upgraded) addToBot(new CommandAction());

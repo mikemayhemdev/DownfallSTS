@@ -5,9 +5,11 @@
 
 package charbosses.powers.bossmechanicpowers;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.powers.cardpowers.EnemyAccuracyPower;
 import charbosses.powers.cardpowers.EnemyMantraPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -33,11 +35,6 @@ public class WatcherDivinityPower extends AbstractBossMechanicPower {
         this.updateDescription();
         loadRegion("curiosity");
         this.type = PowerType.BUFF;
-    }
-
-    @Override
-    public void atStartOfTurn() {
-        addToBot(new ReducePowerAction(this.owner, this.owner, EnemyMantraPower.POWER_ID, 5));
     }
 
     public void updateDescription() {

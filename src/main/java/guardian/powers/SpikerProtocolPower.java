@@ -6,10 +6,11 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
 
-public class SpikerProtocolPower extends AbstractGuardianPower implements DefensiveModeBooster {
+public class SpikerProtocolPower extends AbstractGuardianPower {
     public static final String POWER_ID = "Guardian:SpikerProtocolPower";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
@@ -28,16 +29,9 @@ public class SpikerProtocolPower extends AbstractGuardianPower implements Defens
         updateDescription();
     }
 
-    @Override
-    public void onEnter() {
+    public void onActivateCallS(AbstractCreature target) {
         flash();
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, amount), amount));
-    }
-
-    @Override
-    public void onLeave() {
-        flash();
-        addToBot(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, ThornsPower.POWER_ID, amount));
     }
 
     public void updateDescription() {

@@ -35,8 +35,8 @@ public class StatusReplacePatch {
 
                             AbstractCard newStatus = AutomatonMod.getGoodStatus(abstractCard);
                             if(AbstractDungeon.player.hasRelic(MedicalKit.ID)&&!(newStatus instanceof UsefulSlime)){
-                                newStatus.cost=-2;
-                                newStatus.costForTurn=-2;
+                                newStatus.cost=0;
+                                newStatus.costForTurn=0;
                                 newStatus.isCostModified=true;
                                 newStatus.isCostModifiedForTurn=true;
                             }

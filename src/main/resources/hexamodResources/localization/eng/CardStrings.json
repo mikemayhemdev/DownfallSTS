@@ -108,6 +108,12 @@
     "UPGRADE_DESCRIPTION": "Draw a card. NL You may choose to NL hexamod:Retract or hexamod:Advance.",
     "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
   },
+  "hexamod:MatchstickFloat": {
+    "NAME": "Sneaky Teakwood Match",
+   "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
+  },
   "hexamod:Floatwork": {
     "NAME": "Floatwork",
     "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain 1 Dexterity. NL ",
@@ -131,7 +137,7 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[]  NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Deal !M! additional damage for each other Ethereal card in hand.",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Deal !M! additional damage for each other Ethereal card in hand.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -160,7 +166,7 @@
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain 1 Blur. NL ",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain 1 expansioncontent:Blur. NL ",
     "EXTENDED_DESCRIPTION": [
       "Gain !B! Block."
     ]
@@ -202,7 +208,7 @@
   },
   "hexamod:Hexaguard": {
     "NAME": "Hexaguard",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[]  NL Draw !M! cards. NL ",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Draw !M! cards. NL ",
     "EXTENDED_DESCRIPTION": [
       "Gain !B! Block."
     ]
@@ -263,7 +269,7 @@
   "hexamod:Premonition": {
     "NAME": "Premonition",
     "DESCRIPTION": "Choose a card type, then play a random card of that type in your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card type then, play a random card of that type in your draw pile.",
+    "UPGRADE_DESCRIPTION": "Choose a card type, then play a random card of that type in your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "to play and Exhaust."
     ]
@@ -298,7 +304,7 @@
   },
   "hexamod:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.  NL Deal !D! damage. NL [#e087a4]Apply[] !burny! [#e087a4]Soulburn.[]"
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife. NL Deal !D! damage. NL [#e087a4]Apply[] !burny! [#e087a4]Soulburn.[]"
   },
   "hexamod:SearingWound": {
     "NAME": "Searing Wound",
@@ -332,11 +338,11 @@
   },
   "hexamod:BrightRitual": {
     "NAME": "Bright Ritual",
-    "DESCRIPTION": "Gain [E] and draw 1 card for each *Ignited Ghostflame, then hexamod:Extinguish them. NL Exhaust."
+    "DESCRIPTION": "Reset the Wheel. NL Gain [E] and draw 1 for each Ghostflame hexamod:Extinguished. NL Exhaust."
   },
   "hexamod:NaughtySpirit": {
     "NAME": "Naughty Spirit",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the current Ghostflame is hexamod:Ignited, return this card to your hand. hexamod:Retract."
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the current Ghostflame is hexamod:Ignited, return this card to your hand and hexamod:Retract."
   },
   "hexamod:StepThrough": {
     "NAME": "Step Through",
@@ -348,7 +354,7 @@
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "Strike from Beyond",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 Ethereal card from your draw pile.",
+    "DESCRIPTION": "Deal !D! damage. NL Draw an Ethereal card from your draw pile.",
     "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
   },
   "hexamod:SuperheatedStrike": {
@@ -386,7 +392,7 @@
   "hexamod:UnleashSpirits": {
     "NAME": "Unleash Spirits",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each card *Exhausted last turn.",
-    "UPGRADE_DESCRIPTION": " NL (Hit !M! time(s).)"
+    "UPGRADE_DESCRIPTION": " NL (Hits !M! time(s).)"
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",
@@ -450,8 +456,8 @@
   },
   "hexamod:OpposingAction": {
     "NAME": "Opposing Action",
-    "DESCRIPTION": "hexamod:Retract. NL Gain [E].",
-    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] [E]."
+    "DESCRIPTION": "hexamod:Retract. NL Gain [E] [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] [E] [E]. NL Exhaust."
   },
   "hexamod:SeventhEye": {
     "NAME": "Seventh Eye",
@@ -460,7 +466,7 @@
   },
   "hexamod:FlameDevourer": {
     "NAME": "Devour Flame",
-    "DESCRIPTION": "hexamod:Retract. NL If you hexamod:Retracted onto an hexamod:Ignited Ghostflame, gain !B! Block."
+    "DESCRIPTION": "If the previous Ghostflame is *Ignited, hexamod:Retract and gain !B! Block."
   },
   "hexamod:SpectralGrace": {
     "NAME": "Spectral Grace",

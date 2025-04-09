@@ -191,7 +191,7 @@
   },
   "bronze:Shield": {
     "NAME": "끈적이 방패",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *점액투성이를 1장 bronze:투입합니다.",
+    "DESCRIPTION": "보존. NL 방어도를 !B! 얻습니다. NL *점액투성이를 1장 bronze:투입합니다.",
     "EXTENDED_DESCRIPTION": [
       "끈적이",
       "방패"
@@ -301,8 +301,8 @@
   },
   "bronze:Virus": {
     "NAME": "바이러스",
-    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 손에 있는 모든 카드를 *소형 *광선으로 sneckomod:변화시킵니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 손에 있는 모든 카드를 *소형 *광선+으로 sneckomod:변화시킵니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 전부 버립니다. NL 버린 카드 한 장당 *소형 *광선을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 전부 버립니다. NL 버린 카드 한 장당 *소형 *광선+을 얻습니다. NL 소멸."
   },
   "bronze:Backtrace": {
     "NAME": "역추적",
@@ -344,8 +344,7 @@
   },
   "bronze:ItsAFeature": {
     "NAME": "특징",
-    "DESCRIPTION": "상태이상 또는 저주를 뽑을 때마다 힘 과 민첩을 1 얻습니다. 이번 턴 종료 시 이 효과로 얻은 힘 과 민첩을 잃습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 상태이상 또는 저주를 뽑을 때마다 힘 과 민첩을 1 얻습니다. 이번 턴 종료 시 이 효과로 얻은 힘 과 민첩을 잃습니다."
+    "DESCRIPTION": "상태이상을 뽑거나 소멸시킬 때마다 방어도를 !M! 얻습니다."
   },
   "bronze:MinorBeam": {
     "NAME": "소형 광선",
@@ -370,8 +369,8 @@
   },
   "bronze:Mutator": {
     "NAME": "돌연변이",
-    "DESCRIPTION": "힘을 1 얻습니다. NL 손에 있는 상태이상을 이 카드로 sneckomod:변화시킵니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 힘을 1 얻습니다. NL 손에 있는 상태이상을 이 카드로 sneckomod:변화시킵니다."
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 손에 있는 상태이상을 이 카드로 sneckomod:변화시킵니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 힘을 !M! 얻습니다. NL 손에 있는 상태이상을 이 카드로 sneckomod:변화시킵니다."
   },
   "bronze:Allocate": {
     "NAME": "배정",
@@ -462,11 +461,15 @@
   },
   "bronze:ShipIt": {
     "NAME": "출하",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:소유한 상태이상 한 장당 이 카드의 피해량이 !M! 증가합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 소멸된 카드 더미에 있는 상태이상 한 장당 반복합니다.",
+    "EXTENDED_DESCRIPTION": [
+      "피해를 !D! 줍니다. NL 소멸된 카드 더미에 있는 상태이상 한 장당 반복합니다. (",
+      ")."
+    ]
   },
   "bronze:Break": {
     "NAME": "일시 정지",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:컴파일 *오류 - *부상, *화상, *점액투성이를 bronze:투입합니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:컴파일 *오류 - *어지러움, *부상, *화상, *점액투성이, *공허를 bronze:투입합니다.",
     "EXTENDED_DESCRIPTION": [
       "고장난",
       "주먹"
@@ -583,7 +586,7 @@
   },
   "bronze:Refactor": {
     "NAME": "리팩터",
-    "DESCRIPTION": "예지 !M!. NL *예지로 버린 카드를 모두 소멸시킵니다. NL 소멸시킨 상태이상 한 장당 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "예지 !M!. NL *예지로 버린 상태이상을 모두 소멸시킵니다. NL 소멸시킨 상태이상 한 장당 방어도를 !B! 얻습니다."
   },
   "bronze:Turbo": {
     "NAME": "터보",
@@ -592,7 +595,7 @@
   },
   "bronze:BugBarrage": {
     "NAME": "버그 방벽",
-    "DESCRIPTION": "*부상을 1장 얻습니다. NL 손에 있는 상태이상을 모두 bronze:순환하고 bronze:순환된 카드 한 장당 피해를 !D! 줍니다.",
+    "DESCRIPTION": "*부상을 !M! 장 얻습니다. NL 손에 있는 상태이상을 모두 bronze:순환하고 bronze:순환된 카드 한 장당 피해를 !D! 줍니다.",
     "UPGRADE_DESCRIPTION": "*부상을 !M! 장 얻습니다. NL 손에 있는 상태이상을 모두 bronze:순환하고 bronze:순환된 카드 한 장당 피해를 !D! 줍니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (피해를 ",

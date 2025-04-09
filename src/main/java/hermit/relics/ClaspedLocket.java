@@ -49,7 +49,10 @@ public class ClaspedLocket extends CustomRelic {
 
         if (card.type == AbstractCard.CardType.CURSE) {
             this.flash();
+            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             this.canTrigger = false;
+            // visual feedback so the player can tell if it triggered that turn
+            stopPulse();
             this.addToTop(new DrawCardAction(AbstractDungeon.player, 2));
             this.addToTop(new ExhaustSpecificCardAction(card,AbstractDungeon.player.hand));
         }
@@ -62,7 +65,14 @@ public class ClaspedLocket extends CustomRelic {
 
     public void atTurnStart() {
         this.canTrigger = true;
+        beginLongPulse(); //visual feedback
     }
+
+    @Override
+    public void onVictory() {
+        stopPulse();
+    }
+
 
     public void update() {
         super.update();

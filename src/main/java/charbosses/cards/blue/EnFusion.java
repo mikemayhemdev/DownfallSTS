@@ -29,14 +29,23 @@ public class EnFusion extends AbstractBossCard {
     }
 
     public EnFusion() {
-        super(ID, cardStrings.NAME, "blue/skill/fusion", 2, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+        super(ID, cardStrings.NAME, "blue/skill/fusion", 2, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.showEvokeValue = true;
         this.showEvokeOrbCount = 1;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         alwaysDisplayText = true;
     }
-
+    public EnFusion(boolean upgraded,boolean text) {
+        super(ID, cardStrings.NAME, "blue/skill/fusion", 2, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
+        this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber;
+        alwaysDisplayText = text;
+        if (upgraded)
+            upgrade();
+    }
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new EnemyChannelAction(new EnemyPlasma()));

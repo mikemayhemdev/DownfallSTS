@@ -5,12 +5,12 @@
   },
   "Gremlin:ArmsTheft": {
     "NAME": "力量竊取",
-    "DESCRIPTION": "竊取 !M! 點 力量 。 NL 消耗 。"
+    "DESCRIPTION": "給予 !M! 層 虛弱 。 NL gremlin:竊取 !M! 點 力量 。 NL 消耗 。"
   },
   "Gremlin:Astound": {
     "NAME": "驚愕",
-    "DESCRIPTION": "獲得 !B! 格擋 。 NL 若至少有 3 層 gremlin:法力 ， NL 獲得 !M! 張 *守衛 。",
-    "UPGRADE_DESCRIPTION": "獲得 !B! 格擋 。 NL 若至少有 3 層 gremlin:法力 ， NL 獲得 !M! 張 *守衛+ 。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 若至少有 3 層 gremlin:法力 ， NL 獲得 !M! 張 *守衛 。",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 。 NL 若至少有 3 層 gremlin:法力 ， NL 獲得 !M! 張 *守衛+ 。"
   },
   "Gremlin:Bang": {
     "NAME": "砰",
@@ -52,12 +52,11 @@
   },
   "Gremlin:CounterStrike": {
     "NAME": "破招打擊",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 若目標意圖攻擊， NL 獲得 !M! 張 *守衛 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 若目標意圖攻擊， NL 獲得 !M! 張 *守衛+ 。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 若目標意圖攻擊， NL 觸發 gremlin:領隊 地精額外效果 !M! 次。"
   },
   "Gremlin:CowerChoice": {
     "NAME": "上貢",
-    "DESCRIPTION": "失去所有金幣。",
+    "DESCRIPTION": "失去所有靈魂。",
     "EXTENDED_DESCRIPTION": [
       "弱小的地精們並不愚蠢。"
     ]
@@ -84,16 +83,16 @@
   },
   "Gremlin:Duplicate": {
     "NAME": "復刻",
-    "DESCRIPTION": "獲得手中一張攻擊牌的 !M! 張 gremlin:回響 。 NL 其耗能減1。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "獲得手中一張攻擊牌的 !M! 張 gremlin:回響 。 NL 其耗能減1。"
+    "DESCRIPTION": "選擇手中一張攻擊牌， NL 將其 gremlin:回響 !M! 次， NL 且所獲牌耗能減1。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "選擇手中一張攻擊牌， NL 將其 gremlin:回響 !M! 次， NL 且所獲牌耗能減1。"
   },
   "Gremlin:EdibleArmor": {
     "NAME": "食用護甲",
-    "DESCRIPTION": "將你的 格擋 轉換為等量 臨時生命 。"
+    "DESCRIPTION": "將你的 格擋 轉換為等量 expansioncontent:臨時生命 。 NL 消耗 。"
   },
   "Gremlin:Encore": {
     "NAME": "喝彩",
-    "DESCRIPTION": "獲得 3 層 gremlin:法力 。 NL 使用 gremlin:法力 時，對所有敵人造成 !M! 點傷害。"
+    "DESCRIPTION": "獲得 3 層 gremlin:法力 。 NL gremlin:法力 造成的額外傷害增加 !M! 點。"
   },
   "Gremlin:Enthusiasm": {
     "NAME": "狂熱",
@@ -105,7 +104,7 @@
   },
   "Gremlin:Exacerbate": {
     "NAME": "惡化",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL gremlin:致殘 目標。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 當你給予目標 虛弱 時，目標失去 !M! 點生命。 NL 消耗 。"
   },
   "Gremlin:FairyDust": {
     "NAME": "仙塵",
@@ -134,7 +133,7 @@
   },
   "Gremlin:FlipOut": {
     "NAME": "發瘋",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 本回合每獲得 格擋 ， NL 變為造成等量群體傷害。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 本回合每獲得 格擋 ， NL 改為造成等量群體傷害。"
   },
   "Gremlin:Flurry": {
     "NAME": "亂舞",
@@ -165,7 +164,9 @@
   },
   "Gremlin:GremlinArms": {
     "NAME": "地精武器",
-    "DESCRIPTION": "隨機獲得一張 *小刀 或 *守衛 !M! 次。"
+    "DESCRIPTION": "觸發 gremlin:領隊 地精額外效果。 NL 選擇 gremlin:切換 地精。",
+    "UPGRADE_DESCRIPTION": "觸發 gremlin:領隊 地精額外效果2次。 NL 選擇 gremlin:切換 地精。"
+
   },
   "Gremlin:GremlinMeal": {
     "NAME": "活動肌肉",
@@ -173,7 +174,7 @@
   },
   "Gremlin:GremlinDance": {
     "NAME": "地精之舞",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL gremlin:領隊 的地精造成額外效果。",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL gremlin:領隊 地精造成額外效果。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 點傷害",
       " （全體攻擊）。",
@@ -191,12 +192,11 @@
   },
   "Gremlin:GremlinToss": {
     "NAME": "地精投擲",
-    "DESCRIPTION": "造成你當前 格擋 值加上 臨時生命 值點傷害。",
-    "UPGRADE_DESCRIPTION": "獲得 !M! 層 臨時生命 。 NL 造成你當前 格擋 值加上 臨時生命 值點傷害。",
-    "EXTENDED_DESCRIPTION": [
-      " NL （造成 !D! 點傷害。)"
-    ]
+    "DESCRIPTION": "獲得 !M! 點 expansioncontent:臨時生命 。 NL 造成你當前 格擋 值加上 臨時生命 值點傷害。",
+    "UPGRADE_DESCRIPTION": "獲得 !M! 點 expansioncontent:臨時生命 。 NL 造成你當前 格擋 值加上 臨時生命 值點傷害。",
+    "EXTENDED_DESCRIPTION": [" NL （造成 !D! 點傷害。）"]
   },
+
   "Gremlin:GremlinWizard": {
     "NAME": "地精法師",
     "DESCRIPTION": " gremlin:切換 至 gremlin:地精法師 。"
@@ -224,7 +224,7 @@
   },
   "Gremlin:Kablamo": {
     "NAME": "轟天響",
-    "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 NL 本牌不移除 gremlin:法力 。"
+    "DESCRIPTION": "對所有敵人造成 !D! 點傷害 2 次。 NL 本牌不移除 gremlin:法力 。"
   },
   "Gremlin:LeaderChoice": {
     "NAME": "取舍",
@@ -236,8 +236,8 @@
   },
   "Gremlin:MakeshiftArmor": {
     "NAME": "臨時裝甲",
-    "DESCRIPTION": "每打出7張攻擊牌， NL 獲得 1 層 人工制品 。",
-    "UPGRADE_DESCRIPTION": "獲得 !M! 層 人工制品 。 NL 每打出7張攻擊牌， NL 獲得 1 層 人工制品 。"
+    "DESCRIPTION": "每打出7張攻擊牌， NL 獲得 1 層 人工製品 。",
+    "UPGRADE_DESCRIPTION": "獲得 !M! 層 人工製品 。 NL 每打出7張攻擊牌， NL 獲得 1 層 人工製品 。"
   },
   "Gremlin:Mockery": {
     "NAME": "蔑視",
@@ -254,11 +254,11 @@
   },
   "Gremlin:Nob": {
     "NAME": "大塊頭",
-    "DESCRIPTION": "獲得 !M! 層 臨時生命 。 NL 臨時生命 耗盡之前， NL gremlin:大塊頭 強制 gremlin:領隊 。"
+    "DESCRIPTION": "獲得 !M! 層 臨時生命 。 NL 臨時生命 耗盡之前， NL gremlin:大塊頭 強製 gremlin:領隊 。"
   },
   "Gremlin:NobChoice": {
     "NAME": "做選擇",
-    "DESCRIPTION": "弱小的地精交出金幣？"
+    "DESCRIPTION": "弱小的地精交出靈魂？"
   },
   "Gremlin:PartyStick": {
     "NAME": "熒光棒",
@@ -274,17 +274,17 @@
   },
   "Gremlin:Pickpocket": {
     "NAME": "扒手",
-    "DESCRIPTION": "竊取所有 人工制品 。 NL 造成 !D! 點傷害。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 目標失去 !M! 點 力量 2 次。 NL 獲得 !blamage! 靈魂。 NL 消耗 。"
   },
   "Gremlin:PinNeedle": {
     "NAME": "縫衣針",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 抽牌堆加入 !M! 張 *針刺 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 抽牌堆加入 !M! 張 *針刺+ 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 抽牌堆加入 !M! 張 *針刺 +。 NL 消耗 。"
   },
   "Gremlin:Pinprick": {
     "NAME": "針刺",
     "DESCRIPTION": "造成 !D! 點傷害。 NL 抽一張牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽到時獲得本牌 gremlin:回響 。 NL 造成 !D! 點傷害。 NL 抽一張牌。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "抽到時， NL gremlin:回響 本牌 。 NL 造成 !D! 點傷害。 NL 抽一張牌。 NL 消耗 。"
   },
   "Gremlin:Polish": {
     "NAME": "磨亮",
@@ -300,7 +300,7 @@
   },
   "Gremlin:Pretaliation": {
     "NAME": "預審",
-    "DESCRIPTION": "若目標意圖攻擊， NL 造成 !D! 點傷害。 NL 否則造成 !blamage! 點傷害。"
+    "DESCRIPTION": "造成 !D! 點傷害 2 次。 NL 受到目標攻擊傷害 !M! 點。"
   },
   "Gremlin:ProperTools": {
     "NAME": "恰當工具",
@@ -322,7 +322,7 @@
   },
   "Gremlin:Rhythm": {
     "NAME": "節奏",
-    "DESCRIPTION": "gremlin:切換 至下只地精。 NL 從抽牌堆 檢索 一張基礎牌，本回合其耗能為0。"
+    "DESCRIPTION": "gremlin:切換 至下只地精。 NL 檢索 抽牌堆一張基礎牌，本回合其單次耗能為0。"
   },
   "Gremlin:Rush": {
     "NAME": "沖鋒",
@@ -334,12 +334,12 @@
   },
   "Gremlin:SecondVolley": {
     "NAME": "余波",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 本回合每用過一張牌，獲得一張 *小刀 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 本回合每用過一張牌，獲得一張 *小刀+ 。",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 本回合每用過1張牌，獲得1張 *小刀 。 NL 溢出手牌的 *小刀 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 本回合每用過1張牌，獲得1張 *小刀+ 。 NL 溢出手牌的 *小刀+ 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      " NL （",
-      " 張牌。)",
-      " 張牌。)"
+      " NL （本回合打出過",
+      " 張牌。）",
+      " 張牌。）"
     ]
   },
   "Gremlin:ShadowShiv": {
@@ -355,8 +355,8 @@
   },
   "Gremlin:SharpenBlades": {
     "NAME": "銳化刀片",
-    "DESCRIPTION": "手中 *攻擊 牌本回合下次耗能變為0。",
-    "UPGRADE_DESCRIPTION": "抽一張牌。 NL 手中 *攻擊 牌本回合下次耗能變為0。"
+    "DESCRIPTION": "手中 *攻擊 牌本回合單次耗能變為0。",
+    "UPGRADE_DESCRIPTION": "抽一張牌。 NL 手中 *攻擊 牌本回合單次耗能變為0。"
   },
   "Gremlin:ShieldGremlin": {
     "NAME": "持盾地精",
@@ -369,12 +369,10 @@
   },
   "Gremlin:ShowStopper": {
     "NAME": "炫耀",
-    "DESCRIPTION": "恰有7層 gremlin:法力 才能打出。 NL 對所有敵人造成 !D! 點傷害五次。",
-    "EXTENDED_DESCRIPTION": [
-      "時機未到。",
-      "時機已過。"
-    ]
+    "DESCRIPTION": "恰有 7 層 gremlin:法力 才能打出。 NL 對所有敵人造成 !D! 點傷害 !M! 次。",
+    "EXTENDED_DESCRIPTION": ["時機未到。","時機已過。"]
   },
+  
   "Gremlin:SkullBash": {
     "NAME": "顱骨重擊",
     "DESCRIPTION": " 虛無 。 NL 造成 !D! 點傷害。 NL 給予 !M! 層 易傷 。 NL 消耗 。"
@@ -397,8 +395,8 @@
   },
   "Gremlin:Tadah": {
     "NAME": "嗒噠",
-    "DESCRIPTION": "隨機獲得一張技能牌的 gremlin:回響 。 NL gremlin:切換 至 gremlin:地精法師 。",
-    "UPGRADE_DESCRIPTION": "隨機獲得一張技能牌的 gremlin:回響 ，其能耗減1。 NL gremlin:切換 至 gremlin:地精法師 。"
+    "DESCRIPTION": "獲得 1 張 *守衛 。 NL gremlin:切換 至 gremlin:地精法師 。",
+    "UPGRADE_DESCRIPTION": "獲得 1 張 *守衛+ NL gremlin:切換 至 gremlin:地精法師 。"
   },
   "Gremlin:TagTeam": {
     "NAME": "配合",
@@ -407,7 +405,7 @@
   },
   "Gremlin:TargetWeakness": {
     "NAME": "瞄準傷口",
-    "DESCRIPTION": "攻擊已被 虛弱 的目標時， NL 額外造成 !M! 點傷害。"
+    "DESCRIPTION": "攻擊被 虛弱 的目標時， NL 額外造成 !M! 點傷害。"
   },
   "Gremlin:Tricksy": {
     "NAME": "狡猾",

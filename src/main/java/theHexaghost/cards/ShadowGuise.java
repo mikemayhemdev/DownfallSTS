@@ -20,9 +20,10 @@ public class ShadowGuise extends AbstractHexaCard {
 
     private AbstractCard parent;
 
+    //Shadow Guise
     public ShadowGuise(AbstractCard parent) {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseBlock = 6;
+        baseBlock = 5;
         selfRetain = true;
         exhaust = true;
 //        setParent(parent);

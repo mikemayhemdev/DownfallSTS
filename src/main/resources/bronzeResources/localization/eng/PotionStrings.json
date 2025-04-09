@@ -19,14 +19,14 @@
     "DESCRIPTIONS": [
       "Gain #b",
       " #yStrength and #b",
-      " #yDexterity. NL Add two #yBurn+ cards into your discard pile."
+      " #yDexterity [REMOVE_SPACE]. NL Add two #yBurn+ cards into your discard pile."
     ]
   },
   "bronze:BuildAFunctionPotion": {
     "NAME": "Kio's Clever Concoction",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b3 random cards to #yEncode, repeat until you create a #yFunction.",
-      "Choose #b1 of #b3 random cards to #yEncode, repeat until you create a #yFunction and gain #b",
+      "Choose #b1 of #b3 random cards to #yEncode [REMOVE_SPACE], repeat until you create a #yFunction [REMOVE_SPACE].",
+      "Choose #b1 of #b3 random cards to #yEncode [REMOVE_SPACE], repeat until you create a #yFunction and gain #b",
       " copy of it.",
       " copies of it."
     ]

@@ -40,12 +40,11 @@ public class SplitBruiser extends AbstractSlimeboundCard {
 
         this.baseDamage = 9;
         this.magicNumber = this.baseMagicNumber = 2;
-        this.exhaust = true;
+       // this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "SplitBruiser.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         int bonus = 0;
         //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 

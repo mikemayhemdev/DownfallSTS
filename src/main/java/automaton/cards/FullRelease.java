@@ -19,7 +19,7 @@ public class FullRelease extends AbstractBronzeCard {
 
 
     public FullRelease() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         thisEncodes();
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("FullRelease.png"));
     }
@@ -53,6 +53,6 @@ public class FullRelease extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }

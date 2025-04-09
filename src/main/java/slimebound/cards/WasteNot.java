@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.OverexertionAction;
 import slimebound.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 
 public class WasteNot extends AbstractSlimeboundCard {
@@ -39,7 +40,7 @@ public class WasteNot extends AbstractSlimeboundCard {
     public WasteNot() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 1;
         SlimeboundMod.loadJokeCardImage(this, "WasteNot.png");

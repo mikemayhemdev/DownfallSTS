@@ -1,65 +1,41 @@
 package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
-import sneckomod.actions.NoApplyRandomDamageAction;
 
 public class DiceCrush extends AbstractSneckoCard {
 
     public final static String ID = makeID("DiceCrush");
 
+    //stupid intellij stuff ATTACK, ENEMY, BASIC
+
+    private static final int DAMAGE = 18;
+    private static final int MAGIC = 2;
+    private static final int UPG_DAMAGE = 4;
+
     public DiceCrush() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 12; // Min Damage
-        baseDamage = 18; //Max Damage
-        tags.add(SneckoMod.RNG);
+        baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "DiceCrush.png");
+        this.tags.add(SneckoMod.OVERFLOW);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new NoApplyRandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.SMASH, this, DamageInfo.DamageType.NORMAL));
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        if (isOverflowActive(this)) {
+            atb(new DrawCardAction(magicNumber));
+        }
     }
 
-    @Override
-    public void applyPowers() {
-        int CURRENT_MAGIC_NUMBER = baseMagicNumber;
-        int CURRENT_DMG = baseDamage;
-        baseDamage = CURRENT_MAGIC_NUMBER;
-        super.applyPowers(); // takes baseDamage and applies things like Strength or Pen Nib to set damage
-
-        magicNumber = damage; // magic number holds the first condition's modified damage, so !M! will work
-        isMagicNumberModified = magicNumber != baseMagicNumber;
-
-        // repeat so damage holds the second condition's damage
-        baseDamage = CURRENT_DMG;
-        super.applyPowers();
-        isDamageModified = baseDamage != damage;
-    }
-
-    @Override
-    public void calculateCardDamage(final AbstractMonster mo) {
-        int CURRENT_MAGIC_NUMBER = baseMagicNumber;
-        int CURRENT_DMG = baseDamage;
-        baseDamage = CURRENT_MAGIC_NUMBER;
-        super.calculateCardDamage(mo); // takes baseDamage and applies things like Strength or Pen Nib to set damage
-
-        magicNumber = damage; // magic number holds the first condition's modified damage, so !M! will work
-        isMagicNumberModified = magicNumber != baseMagicNumber;
-
-        // repeat so damage holds the second condition's damage
-        baseDamage = CURRENT_DMG;
-        super.calculateCardDamage(mo);
-        isDamageModified = baseDamage != damage;
-    }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(4);
-            upgradeDamage(4);
+            upgradeDamage(UPG_DAMAGE);
         }
     }
 }

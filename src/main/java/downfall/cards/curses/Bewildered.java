@@ -59,17 +59,6 @@ public class Bewildered extends CustomCard {
         this.flash();
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        return false;
-    }
-
-    //    public void triggerOnOtherCardPlayed(AbstractCard c) {
-//        AbstractDungeon.actionManager.addToBottom(new MuddleHandAction());
-//        this.flash();
-//        AbstractDungeon.actionManager.addToBottom(new DiscardSpecificCardAction(this));
-//    }
-
     public AbstractCard makeCopy() {
         return new Bewildered();
     }

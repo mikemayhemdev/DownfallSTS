@@ -2,6 +2,7 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.CounterPower;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 

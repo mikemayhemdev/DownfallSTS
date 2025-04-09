@@ -51,7 +51,7 @@
       "lucky",
       "행운"
     ],
-    "DESCRIPTION": "무작위 수치 범위가 있는 카드를 사용하면 최대 수치로 사용됩니다. 뒤엉킴에는 적용되지 않습니다."
+    "DESCRIPTION": "손에 있는 카드 장수와 관계없이 과중 효과를 발동시킵니다."
   },
   {
     "PROPER_NAME": "변화",
@@ -60,5 +60,40 @@
       "변화시킵니다"
     ],
     "DESCRIPTION": "무작위로 정해진 카드로 교체됩니다."
+  },
+  {
+  "PROPER_NAME": "Suit",
+  "NAMES": [
+  "suit",
+  "suits"
+],
+  "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+  },
+  {
+    "PROPER_NAME": "과중",
+    "NAMES": [
+      "과중",
+      "과중하지",
+      "Overflow",
+      "overflow"
+    ],
+    "DESCRIPTION": "손에 있는 카드가 5장 초과한다면 발동하는 효과입니다."
+  },
+  {
+    "PROPER_NAME": "선물",
+    "NAMES": [
+      "선물",
+      "gift"
+    ],
+    "DESCRIPTION": "설명에 적힌 카드 보상을 추가해 줍니다."
+  },
+  {
+    "PROPER_NAME": "뱀독",
+    "NAMES": [
+      "뱀독",
+      "뱀독을",
+      "venom"
+    ],
+    "DESCRIPTION": "적에게 해로운 효과를 부여할 때마다 체력을 잃게 만듭니다."
   }
 ]

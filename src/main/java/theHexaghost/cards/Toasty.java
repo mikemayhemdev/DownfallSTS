@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
+import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.*;
@@ -24,11 +25,13 @@ public class Toasty extends AbstractHexaCard implements OctopusCard {
 
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 4;
-
+    //Flare Flick
     public Toasty() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         HexaMod.loadJokeCardImage(this, "Toasty.png");
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {

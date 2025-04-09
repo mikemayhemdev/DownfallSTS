@@ -64,5 +64,86 @@
       "임시_체력만큼"
     ],
     "DESCRIPTION": "전투가 끝날 때까지 체력을 잃는 것을 막아줍니다."
-  }
+  },
+  {
+    "PROPER_NAME": "Vibrancy",
+    "NAMES": [
+      "vibrancy"
+    ],
+    "DESCRIPTION": "NOT USED DO NOT TL"
+  },
+  {
+    "PROPER_NAME": "Opulence",
+    "NAMES": [
+      "opulence"
+    ],
+    "DESCRIPTION": "NOT USED DO NOT TL"
+  },
+  {
+    "PROPER_NAME": "재생",
+    "NAMES": [
+      "재생",
+      "재생을",
+      "regen"
+    ],
+    "DESCRIPTION": "내 턴 종료 시 #y재생만큼 체력을 회복하고 재생을 #b1 감소시킵니다."
+  },
+  {
+    "PROPER_NAME": "판금 갑옷",
+    "NAMES": [
+      "판금",
+      "판금_갑옷",
+      "판금_갑옷을",
+      "판금_갑옷과",
+      "plated"
+    ],
+    "DESCRIPTION": "내 턴 종료 시 #y판금 #y갑옷만큼 방어도를 얻습니다. 막히지 않은 공격 피해를 받으면 #y판금 #y갑옷이 #b1 감소합니다."
+  },
+  {
+    "PROPER_NAME": "장작",
+    "NAMES": [
+      "pyre",
+      "장작",
+      "장작으로"
+    ],
+    "DESCRIPTION": "사용 시 에너지 소모 이외에 추가로 카드를 #b1 장 #y소멸시켜야하는 카드입니다."
+  },
+  {
+    "PROPER_NAME": "파멸",
+    "NAMES": [
+      "doom",
+      "doomed",
+      "파멸",
+      "파멸을",
+      "파멸의",
+      "파멸이"
+    ],
+    "DESCRIPTION": "파멸을 보유한 적의 턴 시작 시 체력을 잃습니다. 이후 적이 #y약화와 #y취약을 모두 가지고 있지 않다면 파멸을 제거합니다."
+  },
+
+  {
+    "NAMES": [
+      "점액",
+      "점액을",
+      "점액의",
+      "점액만큼",
+      "goop",
+      "gooped"
+    ],
+    "PROPER_NAME": "점액",
+    "DESCRIPTION": "#y점액을 보유한 적 공격 시 모든 #y점액을 제거하고 #y점액당 피해량이 #b1 증가합니다. NL 모든 #y소비 효과를 발동시킵니다."
+  },
+
+  {
+    "PROPER_NAME": "시전",
+    "NAMES": [
+      "chant",
+      "Chant",
+      "Chants",
+      "시전",
+      "시전하면",
+      "시전합니다",
+      "시전을"
+    ],
+    "DESCRIPTION": "손에 있는 동안 파워 카드를 사용하면 활성화되는 효과입니다."}
 ]

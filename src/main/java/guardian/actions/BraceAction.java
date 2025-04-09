@@ -56,6 +56,3 @@ public class BraceAction extends AbstractGameAction {
         this.isDone = true;
     }
 }
-
-
-

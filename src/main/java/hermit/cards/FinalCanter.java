@@ -11,6 +11,7 @@ import hermit.HermitMod;
 import hermit.actions.FinalCanterAction;
 import hermit.characters.hermit;
 import hermit.util.Wiz;
+import sneckomod.SneckoMod;
 
 
 import java.util.Iterator;
@@ -46,6 +47,7 @@ public class FinalCanter extends AbstractDynamicCard {
         this.selfRetain = true;
         exhaust=true;
         loadJokeCardImage(this, "final_canter.png");
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     // Actions the card should do.

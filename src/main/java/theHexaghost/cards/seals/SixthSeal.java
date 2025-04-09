@@ -18,6 +18,7 @@ public class SixthSeal extends AbstractSealCard {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 0;
         baseBurn = burn = 13;
+        tags.add(AbstractCard.CardTags.HEALING);
         HexaMod.loadJokeCardImage(this, "SixthSeal.png");
     }
 

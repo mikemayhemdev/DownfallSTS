@@ -1,5 +1,6 @@
 package theHexaghost.actions;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -27,7 +28,7 @@ public class RecurringNightmareAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            if (AbstractDungeon.player.hand.size() == 10) {
+            if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
                 AbstractDungeon.player.createHandIsFullDialog();
                 this.isDone = true;
             } else if (this.p.exhaustPile.isEmpty()) {

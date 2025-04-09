@@ -51,6 +51,11 @@ public class Barbells extends CustomRelic {
         }
     }
 
+
+    public boolean canSpawn() {
+        return Settings.isEndless || (AbstractDungeon.floorNum <= 40); // cannot appear past early act 3
+    }
+
     @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];

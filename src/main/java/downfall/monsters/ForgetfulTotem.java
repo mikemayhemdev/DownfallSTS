@@ -50,7 +50,7 @@ public class ForgetfulTotem extends AbstractTotemMonster {
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
 
-        if (AbstractDungeon.ascensionLevel >= 19) {
+        if (AbstractDungeon.ascensionLevel >= 18) {
             this.attackDmg = 6;
             this.secondaryEffect = 2;
         } else if (AbstractDungeon.ascensionLevel >= 4) {

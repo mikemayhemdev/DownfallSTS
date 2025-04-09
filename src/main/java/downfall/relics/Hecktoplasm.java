@@ -13,7 +13,8 @@ import downfall.actions.WaitForEscapeAction;
 import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
 
-@Deprecated
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
+
 public class Hecktoplasm extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("Hecktoplasm");
@@ -38,7 +39,7 @@ public class Hecktoplasm extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return (AbstractDungeon.actNum <= 1 && EvilModeCharacterSelect.evilMode);
+        return (AbstractDungeon.actNum <= 1 && evilMode);
     }
 
     public AbstractRelic makeCopy() {

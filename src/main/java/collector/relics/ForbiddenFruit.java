@@ -1,6 +1,7 @@
 package collector.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.CardPowerTip;
 import collector.CollectorMod;
 import com.megacrit.cardcrawl.cards.curses.Necronomicurse;
 import downfall.cards.curses.Sapped;
@@ -12,8 +13,11 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.util.TextureLoader;
+import expansioncontent.cards.AwakenDeath;
 
 import java.util.stream.Collectors;
+
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 public class ForbiddenFruit extends CustomRelic {
     public static final String ID = CollectorMod.makeID(ForbiddenFruit.class.getSimpleName());
@@ -25,6 +29,7 @@ public class ForbiddenFruit extends CustomRelic {
 
     public ForbiddenFruit() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
+        tips.add(new CardPowerTip( new Sapped() ) );
     }
 
     public void onEquip() {
@@ -58,7 +63,7 @@ public class ForbiddenFruit extends CustomRelic {
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
             if (stage == 2) {
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Necronomicurse(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Sapped(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                 AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             }
             else if (stage == 0) {
@@ -86,6 +91,10 @@ public class ForbiddenFruit extends CustomRelic {
                 stage++;
             }
         }
+    }
+
+    public boolean canSpawn() {
+        return ((AbstractDungeon.floorNum > 1)); // you cannot boss swap into forbidden fruit
     }
 
     @Override

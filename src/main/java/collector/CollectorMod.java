@@ -171,7 +171,7 @@ public class CollectorMod implements
         BaseMod.addPotion(MiniCursePotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, MiniCursePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
         BaseMod.addPotion(ReservePotion.class, Color.RED, Color.GREEN, Color.CLEAR, ReservePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
         BaseMod.addPotion(DebuffDoublePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, DebuffDoublePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
-
+        BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
 //        BanSharedContentPatch.registerRunLockedPotion(CollectorChar.Enums.THE_COLLECTOR, TempHPPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
@@ -186,25 +186,25 @@ public class CollectorMod implements
     public void receiveSetUnlocks() {
 
         downfallMod.registerUnlockSuite(
-                BrainDrain.ID,
+                Forgery.ID,
                 DarkApotheosis.ID,
+                ShadowDaggers.ID,
+
+                CursedWail.ID,
+                InflictAgony.ID,
+                Karma.ID,
+
                 GreenpyreLocus.ID,
-
                 Omen.ID,
-                RotwoodKindling.ID,
-                BlackBindings.ID,
-
-                ReceiveTribute.ID,
                 DoubleTrouble.ID,
-                Extricate.ID,
 
+                Suffering.ID,
                 JadeRing.ID,
-                ThimbleHelm.ID,
-                BlockedChakra.ID,
+                MiniCurse.ID,
 
+                StashAway.ID,
                 ForbiddenFruit.ID,
-                Incense.ID,
-                RoughDiamond.ID,
+                FingerOfDeath.ID,
 
                 CollectorChar.Enums.THE_COLLECTOR
         );

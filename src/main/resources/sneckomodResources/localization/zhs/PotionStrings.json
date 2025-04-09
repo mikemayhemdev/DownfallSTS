@@ -1,32 +1,32 @@
 {
   "sneckomod:DiceRollPotion": {
-    "NAME": "可能很强药剂",
+    "NAME": "瓶装卡牌",
     "DESCRIPTIONS": [
-      "造成 #b",
-      " - #b",
-      " 点伤害。"
+      "在战斗中使用，增加 #b",
+      " 个卡牌奖励，可在 #b3 张 已 #y升级 罕见 #y异色 牌中选择1张获得。",
+      " 个卡牌奖励，可在 #b3 张 已 #y升级 罕见 #y异色 牌中选择1张获得。"
     ]
   },
   "sneckomod:CheatPotion": {
-    "NAME": "流动幸运",
+    "NAME": "液态幸运",
     "DESCRIPTIONS": [
-      "本回合内，获得 #y幸运 。",
-      " #b",
-      " 回合内，获得 #y幸运 。"
+      "本回合 #y溢出 效果一定触发，与手牌数无关。",
+      "#y溢出 效果一定触发，持续 #b",
+      " 个回合，与手牌数无关。"
     ]
   },
   "sneckomod:MuddlingPotion": {
     "NAME": "尖峰苏打",
     "DESCRIPTIONS": [
-      " #y混淆 手牌中耗能最高的 #b",
+      "#y混淆 手牌中耗能最高的 #b",
       " 张牌。 #y混淆 后耗能不为 #b3 点。"
     ]
   },
   "sneckomod:OffclassReductionPotion": {
     "NAME": "奇异饮料",
     "DESCRIPTIONS": [
-      "将手牌中所有 #y异色 牌的耗能降低 #b",
-      " 点。"
+      "降低手牌中 #y异色 牌的耗能 #b",
+      " 点"
     ]
   }
 }

@@ -1,37 +1,59 @@
 package sneckomod.cards;
 
+import basemod.BaseMod;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import sneckomod.actions.MuddleRandomCardAction;
+import downfall.downfallMod;
+import sneckomod.SneckoMod;
+import sneckomod.actions.MuddleAction;
 
 public class SnekBite extends AbstractSneckoCard {
 
     public final static String ID = makeID("SnekBite");
 
+    // Card constants
+    private static final int DAMAGE = 8;
+    private static final int MAGIC = 1;
+    private static final int UPGRADE_DAMAGE = 1;
+    private static final int UPGRADE_MAGIC = 1;
+
+
     public SnekBite() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = 7;
-        baseMagicNumber = magicNumber = 1;
+        baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC;
         SneckoMod.loadJokeCardImage(this, "SnekBite.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// 117
+        atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
-        atb(new MuddleRandomCardAction(magicNumber, true));
+
+        // muddle is no longer random here
+        addToBot(new SelectCardsInHandAction(magicNumber, BaseMod.getKeywordProper("sneckomod:muddle"),
+                (AbstractCard c) -> true,
+                (cards) -> {
+                    for (AbstractCard card : cards) {
+                        addToBot(new MuddleAction(card));
+                    }
+                }
+        ));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
-            upgradeMagicNumber(1);
+            upgradeDamage(UPGRADE_DAMAGE);
+            upgradeMagicNumber(UPGRADE_MAGIC);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }
+
 }

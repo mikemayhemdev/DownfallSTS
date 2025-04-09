@@ -11,7 +11,7 @@
     "NAME": "Goop",
     "DESCRIPTIONS": [
       "The next #yAttack against this enemy deals #b",
-      " more damage, consuming all #yGoop."
+      " more damage, consuming all #yGoop [REMOVE_SPACE]."
     ]
   },
   "Slimebound:PreventTackleDamagePower": {
@@ -45,14 +45,14 @@
     "NAME": "Upgrade: Acid",
     "DESCRIPTIONS": [
       "#yPoisoning Slimes apply #b",
-      " more #yPoison."
+      " more #yPoison [REMOVE_SPACE]."
     ]
   },
   "Slimebound:BuffSlimingSlimesPower": {
     "NAME": "Upgrade: Mire",
     "DESCRIPTIONS": [
       "#ySliming Slimes apply #b",
-      " more #yGoop."
+      " more #yGoop [REMOVE_SPACE]."
     ]
   },
   "Slimebound:BuffShieldSlimesPower": {
@@ -120,14 +120,14 @@
     "NAME": "Reformation",
     "DESCRIPTIONS": [
       "Whenever you Absorb a Slime, gain #b",
-      " Strength."
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SelfFormingGooPowerPlus": {
     "NAME": "Reformation+",
     "DESCRIPTIONS": [
       "Whenever you Absorb a Slime, gain #b",
-      " Dexterity."
+      " #yDexterity [REMOVE_SPACE]."
     ]
   },
   "Slimebound:LoseSlimesPower": {
@@ -161,9 +161,9 @@
   "Slimebound:PreventSlimeDecayPower": {
     "NAME": "Doused in Slime",
     "DESCRIPTIONS": [
-      "The next time an #yAttack is used on this enemy, #yGoop benefits will apply without consuming #yGoop.",
+      "The next time an #yAttack is used on this enemy, #yGoop benefits will apply without consuming #yGoop [REMOVE_SPACE].",
       "The next #b",
-      " times an #yAttack is used on this enemy, #yGoop benefits will apply without consuming #yGoop."
+      " times an #yAttack is used on this enemy, #yGoop benefits will apply without consuming #yGoop [REMOVE_SPACE]."
     ]
   },
   "Slimebound:DuplicatedFormPower": {
@@ -212,7 +212,7 @@
     "NAME": "Acidic Goop",
     "DESCRIPTIONS": [
       "Apply #b",
-      " #yPoison when you #yAttack an enemy who has #yGoop."
+      " #yPoison when you #yAttack an enemy who has #yGoop [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SlimeRitualPower": {
@@ -241,7 +241,7 @@
     "NAME": "Acid Tongue",
     "DESCRIPTIONS": [
       "Apply #b",
-      " #yPoison whenever you apply #yGoop."
+      " #yPoison whenever you apply #yGoop [REMOVE_SPACE]."
     ]
   },
   "Slimebound:AcidTonguePowerUpgraded": {
@@ -484,8 +484,8 @@
   "Slimebound:BuffSecondarySlimeEffectsPower": {
     "NAME": "Minion Master",
     "DESCRIPTIONS": [
-      "Whenever you play a card with Command, Command again.",
-      "Whenever you play a card with Command, Command #b",
+      "Whenever you play a card with #yCommand, #yCommand again.",
+      "Whenever you play a card with #yCommand, Command #b",
       " additional times."
     ]
   },
@@ -515,7 +515,7 @@
     "NAME": "Ooze Bath",
     "DESCRIPTIONS": [
       "Adds ",
-      " Goop at the start of this enemy's turn."
+      " #yGoop at the start of this enemy's turn."
     ]
   }
 }

@@ -3,6 +3,8 @@ package downfall.events.shrines_evil;
 /*    */
 /*    */
 
+import com.megacrit.cardcrawl.cards.curses.Pain;
+import downfall.cards.curses.Aged;
 import downfall.cards.curses.Sapped;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 /*    */ import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -39,7 +41,7 @@ import downfall.downfallMod;
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
 
-        this.imageEventText.setDialogOption(OPTIONSALT[0], new Sapped());
+        this.imageEventText.setDialogOption(OPTIONSALT[0], new Aged());
         this.imageEventText.setDialogOption(OPTIONS[0]);
         this.imageEventText.setDialogOption(OPTIONS[1]);
     }
@@ -68,7 +70,7 @@ import downfall.downfallMod;
                 AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect(c, com.megacrit.cardcrawl.core.Settings.WIDTH * 0.75F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
                 cards.add(c.cardID);
 
-                AbstractCard curse = new Sapped();
+                AbstractCard curse = new Aged();
                 cards.add(curse.cardID);
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
 

@@ -1,12 +1,16 @@
 package guardian.powers;
 
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
+import guardian.relics.ObsidianScales;
+import sneckomod.relics.LoadedDie;
 
 
 public class LoseThornsPower extends AbstractGuardianPower {
@@ -59,6 +63,11 @@ public class LoseThornsPower extends AbstractGuardianPower {
                 }
             } else {
                 this.owner.getPower(ArtifactPower.POWER_ID).onSpecificTrigger();
+            }
+            ObsidianScales OScalesInstance = new ObsidianScales();
+            if (AbstractDungeon.player.hasRelic(ObsidianScales.ID)) {
+                this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, 1), 1));
+                OScalesInstance.flash();
             }
         }
     }

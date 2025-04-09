@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.GuardianMod;
+import guardian.rewards.GemReward;
 
 import java.util.ArrayList;
 
@@ -40,11 +41,12 @@ public class CampfireFindGemsEffect extends AbstractGameEffect {
 
         if (this.duration < 0.0F) {
             CardCrawlGame.sound.play("SHOVEL");
-            ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 2);
-
-
-            AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(gems.get(0), (float) (Settings.WIDTH * 0.35), (float) (Settings.HEIGHT / 2)));
-            AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(gems.get(1), (float) (Settings.WIDTH * 0.7), (float) (Settings.HEIGHT / 2)));
+            for (int i = 0; i < 2; i++) {
+                AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
+            }
+ //           AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
+            AbstractDungeon.combatRewardScreen.open();
+            AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
 
 
             this.isDone = true;

@@ -17,6 +17,7 @@ public class FaceTraderCard extends AbstractCollectibleCard {
     public FaceTraderCard() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

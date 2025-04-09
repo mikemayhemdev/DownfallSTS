@@ -21,14 +21,14 @@ public class BugBarrage extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 7;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 5;
+    private static final int UPG_DAMAGE = 2;
 
     public BugBarrage() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         // exhaust = true;
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("BugBarrage.png"));
     }
 

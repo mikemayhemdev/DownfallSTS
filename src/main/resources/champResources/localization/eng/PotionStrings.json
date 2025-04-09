@@ -26,7 +26,7 @@
     "NAME": "Brew of Sharpness",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yCounter."
+      " #yCounter [REMOVE_SPACE]."
     ]
   }
 }

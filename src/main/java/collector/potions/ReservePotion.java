@@ -5,12 +5,18 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import collector.CollectorMod;
 import collector.actions.GainReservesAction;
+import collector.effects.ColoredSanctityEffect;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
+import com.megacrit.cardcrawl.vfx.combat.SanctityEffect;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.atb;
@@ -23,7 +29,7 @@ public class ReservePotion extends CustomPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public ReservePotion() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.H, PotionColor.ELIXIR); //TODO: Potion visual stuff
+        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.H, PotionColor.ELIXIR);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor= CollectorMod.potionLabColor;
@@ -42,6 +48,9 @@ public class ReservePotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
+        atb(new VFXAction(new ColoredSanctityEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.CHARTREUSE.cpy())));
+        this.addToTop(new SFXAction("HEAL_1"));
+        this.addToTop(new VFXAction(new BorderFlashEffect(Color.CHARTREUSE, true), 0.1F));
         atb(new GainReservesAction(potency));
     }
 

@@ -1,6 +1,7 @@
 package guardian.cards;
 
-
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,134 +11,182 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.powers.*;
+import downfall.actions.ForceWaitAction;
 import guardian.GuardianMod;
-import guardian.actions.GemFireAction;
+import guardian.actions.ReduceRightMostStasisAction;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
+import guardian.powers.LoseThornsPower;
+import hermit.actions.ReduceDebuffsAction;
 import sneckomod.SneckoMod;
 
-import static guardian.GuardianMod.makeBetaCardPath;
+import java.util.ArrayList;
 
+import static collector.util.Wiz.applyToEnemy;
 
 public class GemFire extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("GemFire");
-    public static final String NAME;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG_PATH = "cards/gemFire.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.RARE;
-    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
-    private static final CardStrings cardStrings;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 2;
-    private static final int DAMAGE = 10;
-    private static int gem_count=0;
+    private static final int DAMAGE = 16;
 
-    //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 5;
     private static final int SOCKETS = 0;
-    private static final boolean SOCKETSAREAFTER = true;
-    public static String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
-
-    //END TUNING CONSTANTS
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    }
-
 
     public GemFire() {
-        super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-
+        super(ID, cardStrings.NAME, GuardianMod.getResourcePath(IMG_PATH), COST, cardStrings.DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
         this.exhaust = true;
         this.baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = 0;
         this.socketCount = SOCKETS;
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         updateDescription();
         loadGemMisc();
-        //this.sockets.add(GuardianMod.socketTypes.RED);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("GemFire.png"));
+        GuardianMod.loadJokeCardImage(this, GuardianMod.makeBetaCardPath("GemFire.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p, m);
-        AbstractDungeon.actionManager.addToBottom(new GemFireAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
+        // SECOND ARRAY TO AVOID CRASHING
+        ArrayList<GuardianMod.socketTypes> tempSockets = new ArrayList<>();
+
+        // Collect sockets from piles and stasis
+        collectSocketsFromGroup(p.hand, tempSockets);
+        collectSocketsFromGroup(p.drawPile, tempSockets);
+        collectSocketsFromGroup(p.discardPile, tempSockets);
+        collectSocketsFromStasis(p, tempSockets);
+
+        // Process sockets (non-SYNTHETIC first, then SYNTHETIC)
+        ArrayList<GuardianMod.socketTypes> nonSyntheticSockets = new ArrayList<>();
+        ArrayList<GuardianMod.socketTypes> syntheticSockets = new ArrayList<>();
+        for (GuardianMod.socketTypes socket : tempSockets) {
+            if (socket == GuardianMod.socketTypes.SYNTHETIC) {
+                syntheticSockets.add(socket);
+            } else {
+                nonSyntheticSockets.add(socket);
+            }
+        }
+        nonSyntheticSockets.addAll(syntheticSockets); // Combine lists
+
+        for (GuardianMod.socketTypes socket : nonSyntheticSockets) {
+            processSocket(p, m, socket);
+            AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(0.1F));
+        }
     }
 
-    public void applyPowers() {
-        this.countCards();
-        baseMagicNumber = magicNumber = GemFire.gem_count;
-        super.applyPowers();
-        this.rawDescription = cardStrings.DESCRIPTION+cardStrings.UPGRADE_DESCRIPTION;
-        this.initializeDescription();
-    }
-
-    public void countCards(){
-        GemFire.gem_count=0;
-        count_gems_from_group(AbstractDungeon.player.hand);
-        count_gems_from_group(AbstractDungeon.player.drawPile);
-        count_gems_from_group(AbstractDungeon.player.discardPile);
-        count_gems_from_group(this.gatherStasisCards());
-    }
-
-    public void count_gems_from_group(CardGroup group) {
+    private void collectSocketsFromGroup(CardGroup group, ArrayList<GuardianMod.socketTypes> tempSockets) {
         for (AbstractCard c : group.group) {
-            if (c instanceof AbstractGuardianCard) {
+            if (c instanceof AbstractGuardianCard && !c.hasTag(GuardianMod.GEM)) {
                 AbstractGuardianCard gc = (AbstractGuardianCard) c;
-                if (gc.socketCount > 0 || c.hasTag(GuardianMod.GEM)) {
-                    if (gc.sockets.size() > 0) {
-                        for (GuardianMod.socketTypes socket : gc.sockets) {
-                            if (socket != null) GemFire.gem_count++;
-                        }
-
-                    }
-                    if (gc.hasTag(GuardianMod.GEM)) {
-                        GemFire.gem_count++;
+                tempSockets.addAll(gc.sockets);
+            } else if (c.hasTag(GuardianMod.GEM)) {
+                if (c instanceof AbstractGuardianCard) {
+                    GuardianMod.socketTypes gemType = ((AbstractGuardianCard) c).thisGemsType;
+                    if (gemType != null) {
+                        tempSockets.add(gemType);
                     }
                 }
             }
         }
     }
 
-    public CardGroup gatherStasisCards(){
-        CardGroup stasiscards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o instanceof StasisOrb) {
-                stasiscards.group.add( ((StasisOrb) o).stasisCard );
+    private void collectSocketsFromStasis(AbstractPlayer p, ArrayList<GuardianMod.socketTypes> tempSockets) {
+        for (AbstractOrb orb : p.orbs) {
+            if (orb instanceof StasisOrb) {
+                AbstractCard stasisCard = ((StasisOrb) orb).stasisCard;
+                if (stasisCard instanceof AbstractGuardianCard) {
+                    AbstractGuardianCard gc = (AbstractGuardianCard) stasisCard;
+                    tempSockets.addAll(gc.sockets);
+                } else if (stasisCard != null && stasisCard.hasTag(GuardianMod.GEM)) {
+                    if (stasisCard instanceof AbstractGuardianCard) {
+                        GuardianMod.socketTypes gemType = ((AbstractGuardianCard) stasisCard).thisGemsType;
+                        if (gemType != null) {
+                            tempSockets.add(gemType);
+                        }
+                    }
+                }
             }
         }
-        return stasiscards;
     }
 
+    private void processSocket(AbstractPlayer p, AbstractMonster m, GuardianMod.socketTypes socketType) {
+        switch (socketType) {
+            case RED:
+                applyTemporaryPower(new StrengthPower(p, 2), new LoseStrengthPower(p, 2));
+                break;
+            case GREEN:
+                applyTemporaryPower(new DexterityPower(p, 2), new LoseDexterityPower(p, 2));
+                break;
+            case LIGHTBLUE:
+                applyTemporaryPower(new ThornsPower(p, 4), new LoseThornsPower(p, 4));
+                break;
+            case ORANGE:
+                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+                break;
+            case WHITE:
+                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+                break;
+            case CYAN:
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new CrystalWard(), 1));
+                break;
+            case BLUE:
+                brace(4);
+                break;
+            case CRIMSON:
+                applyVulnerableToAllEnemies(p, 1);
+                break;
+            case FRAGMENTED:
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new CrystalShiv(), 1));
+                break;
+            case PURPLE:
+                weakenAllEnemies(p, 2);
+                break;
+            case SYNTHETIC:
+                AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(p, 1));
+                break;
+            case YELLOW:
+                AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(0.1F));
+                AbstractDungeon.actionManager.addToBottom(new ReduceRightMostStasisAction());
+                break;
+        }
+    }
+
+    private void applyTemporaryPower(AbstractPower power, AbstractPower lossPower) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, power, power.amount));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, lossPower, lossPower.amount));
+    }
+
+    private void weakenAllEnemies(AbstractPlayer p, int amount) {
+        for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            applyToEnemy(monster, new StrengthPower(monster, -amount));
+            if (!monster.hasPower(ArtifactPower.POWER_ID)) {
+                applyToEnemy(monster, new GainStrengthPower(monster, amount));
+            }
+        }
+    }
+
+    private void applyVulnerableToAllEnemies(AbstractPlayer p, int amount) {
+        for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!monster.isDeadOrEscaped()) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new VulnerablePower(monster, amount, false), amount));
+            }
+        }
+    }
+
+    @Override
     public AbstractCard makeCopy() {
         return new GemFire();
     }
 
+    @Override
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
-
             upgradeBaseCost(1);
         }
-
-
-    }
-
-    public void updateDescription() {
-
-        if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
-            } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
-            }
-        }
-        this.initializeDescription();
     }
 }
-
-

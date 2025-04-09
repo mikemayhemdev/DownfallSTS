@@ -61,6 +61,7 @@ public class LastStand extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(3);
+        //upgradeBaseCost(0);
     }
 }

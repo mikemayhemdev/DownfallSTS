@@ -4,15 +4,19 @@ import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import sneckomod.SneckoMod;
+import sneckomod.cards.TyphoonFang;
 import sneckomod.patches.BottledD8Patch;
 import downfall.util.TextureLoader;
+import sneckomod.powers.CheatPower;
 
 import java.util.function.Predicate;
 
@@ -58,13 +62,28 @@ public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
-            if (c.hasTag(SneckoMod.RNG)) {
+            if (c.hasTag(SneckoMod.OVERFLOW)) {
                 tmp.addToTop(c);
             }
         }
         AbstractDungeon.gridSelectScreen.open(tmp,
                 1, DESCRIPTIONS[1] + name + ".",
                 false, false, false, false);
+    }
+
+    @Override
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        if (this.card != null && card.uuid.equals(this.card.uuid)) {
+            if (!(card instanceof TyphoonFang && card.purgeOnUse)) {
+                addToBot(new GainBlockAction(AbstractDungeon.player, 4));
+                this.flash(); //block tracking
+            }
+        }
+        if (this.card != null && card.uuid.equals(this.card.uuid) && AbstractDungeon.player.hand.size() <= 5 && !(AbstractDungeon.player.hasPower(CheatPower.POWER_ID))) {
+            if (!(card instanceof TyphoonFang && card.purgeOnUse)) {
+                this.flash(); //overflow tracking
+            }
+        }
     }
 
     @Override

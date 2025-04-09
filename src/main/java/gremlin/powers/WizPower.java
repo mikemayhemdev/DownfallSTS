@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.BufferPower;
 import gremlin.GremlinMod;
 import gremlin.relics.WizardHat;
 import gremlin.relics.WizardStaff;
@@ -43,14 +44,24 @@ public class WizPower extends AbstractGremlinPower {
 
     @Override
     public void onInitialApplication() {
-        if(amount >= 3){
-            if(AbstractDungeon.player.hasRelic(WizardStaff.ID))
-            {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
-                        new BangPower(this.owner, 10 + WizardStaff.OOMPH), 1));
-            } else {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
-                        new BangPower(this.owner, 10), 1));
+        if(amount >= 3) {
+            if(!this.owner.hasPower(BangPower.POWER_ID)) {
+                if(AbstractDungeon.player.hasRelic(WizardStaff.ID))
+                {
+                    int buf = 0;
+                    if (AbstractDungeon.player.hasPower(EncorePower.POWER_ID)) {
+                        buf = AbstractDungeon.player.getPower(EncorePower.POWER_ID).amount;
+                    }
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
+                            new BangPower(this.owner, 7 + WizardStaff.OOMPH + buf), 1));
+                } else {
+                    int buf = 0;
+                    if (AbstractDungeon.player.hasPower(EncorePower.POWER_ID)) {
+                        buf = AbstractDungeon.player.getPower(EncorePower.POWER_ID).amount;
+                    }
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
+                            new BangPower(this.owner, 7 + buf), 1));
+                }
             }
         }
     }
@@ -58,15 +69,23 @@ public class WizPower extends AbstractGremlinPower {
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
-        if(amount >= 3){
+        if(amount >= 3) {
             if(!this.owner.hasPower(BangPower.POWER_ID)) {
                 if(AbstractDungeon.player.hasRelic(WizardStaff.ID))
                 {
+                    int buf = 0;
+                    if (AbstractDungeon.player.hasPower(EncorePower.POWER_ID)) {
+                        buf = AbstractDungeon.player.getPower(EncorePower.POWER_ID).amount;
+                    }
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
-                            new BangPower(this.owner, 10 + WizardStaff.OOMPH), 1));
+                            new BangPower(this.owner, 7 + WizardStaff.OOMPH + buf), 1));
                 } else {
+                    int buf = 0;
+                    if (AbstractDungeon.player.hasPower(EncorePower.POWER_ID)) {
+                        buf = AbstractDungeon.player.getPower(EncorePower.POWER_ID).amount;
+                    }
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
-                            new BangPower(this.owner, 10), 1));
+                            new BangPower(this.owner, 7 + buf), 1));
                 }
             }
         }
@@ -74,9 +93,9 @@ public class WizPower extends AbstractGremlinPower {
 
     @Override
     public void onRemove() {
-        if(this.owner.hasPower(EncorePower.POWER_ID)){
-            this.owner.getPower(EncorePower.POWER_ID).onSpecificTrigger();
-        }
+       // if(this.owner.hasPower(EncorePower.POWER_ID)){
+      //      this.owner.getPower(EncorePower.POWER_ID).onSpecificTrigger();
+      //  }
         if(AbstractDungeon.player.hasRelic(WizardHat.ID)) {
             AbstractDungeon.player.getRelic(WizardHat.ID).onTrigger();
         }

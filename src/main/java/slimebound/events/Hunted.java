@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import expansioncontent.relics.StudyCardRelic;
 import slimebound.SlimeboundMod;
 
+@Deprecated // unused
 public class Hunted extends MindBloom {
     public static final String ID = "Slimebound:Hunted";
     public static final String NAME;

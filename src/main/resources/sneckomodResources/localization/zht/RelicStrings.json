@@ -3,14 +3,14 @@
     "NAME": "異蛇之魂",
     "FLAVOR": "0……3……2……2……1",
     "DESCRIPTIONS": [
-      "每場戰鬥首次打出 #y異色 牌時，獲得 [E] 並抽 #b1 張牌。"
+      "戰鬥開始時，獲得 1 張 #y靈魂骰擲 。"
     ]
   },
   "sneckomod:SuperSneckoSoul": {
     "NAME": "超級蛇魂",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
-      "替換 [#407B93]異蛇之魂[] 。 NL 每回合首次打出 #y異色 牌時，獲得 [E] 。"
+      "替換 [#407B93]異蛇之魂[] 。 NL 奇數回合開始時，獲得 1 張 #y靈魂骰擲 ；偶數回合開始時，多抽1張牌並 #ysneckomod:混淆 之。"
     ]
   },
   "sneckomod:CleanMud": {
@@ -24,98 +24,96 @@
     "NAME": "異蛇戒指",
     "FLAVOR": "無法辨認，難以閱讀，周四到期。",
     "DESCRIPTIONS": [
-      "戰鬥開始時，給予所有敵人 #b0-2 層 #y虛弱 與 #y易傷 。"
+      "觸發 #b3 次 #ysneckomod:溢出時，給予隨機敵人 #b1 層 #y虛弱 與 #y易傷 。"
     ]
   },
   "sneckomod:CrystallizedMud": {
     "NAME": "催眠吊墜",
     "FLAVOR": "晃眼的土塊。",
     "DESCRIPTIONS": [
-      "回合開始時獲得 [E] 。 #ysneckomod:混淆 數值不為 #b0 。"
+      "回合開始時獲得 [E] 。 #ysneckomod:混淆 後耗能不為 #b0 。"
     ]
   },
   "sneckomod:LoadedDie": {
     "NAME": "註料骰子",
     "FLAVOR": "灌了奶酪。",
     "DESCRIPTIONS": [
-      "卡牌隨機值下限提高 #b1 點。"
+      "當1張牌被 #ysneckomod:混淆 時，獲得 #b1 點 #y格擋 。"
     ]
   },
   "sneckomod:RareBoosterPack": {
     "NAME": "稀有增強箱",
     "FLAVOR": "新品。",
     "DESCRIPTIONS": [
-      "拾起時，獲得不同類型的 #y未知稀有牌 各 #b1 張。"
+      "拾起時，獲得1張 #y稀有 #ysneckomod:異色 牌。"
     ]
   },
   "sneckomod:SleevedAce": {
-    "NAME": "袖中妄牌",
+    "NAME": "袖中王牌",
     "FLAVOR": "我也出A。",
     "DESCRIPTIONS": [
-      "戰鬥開始時，將 #b1 張 #y作弊 加入手牌並 #y保留 。"
+      "戰鬥開始時，獲得1張 #y記號牌 。"
     ]
   },
   "sneckomod:UnknownEgg": {
     "NAME": "未知之蛋",
     "FLAVOR": "想知道孵出什麽？ 交 $1000 再說。",
     "DESCRIPTIONS": [
-      " #y明晰 變為自由行動。 NL 卡牌獎勵中的 #y未知 牌將被 #y升級 。"
+      "每當你獲得 #y異色 牌時，將其 #y升級 。 NL 拾起時，隨機 #y升級 #b2 張 #ysneckomod:異色 牌。 "
     ]
   },
   "sneckomod:SuperSneckoEye": {
     "NAME": "超級蛇眼",
     "FLAVOR": "0121012",
     "DESCRIPTIONS": [
-      "替換 #r異蛇之眼 。 NL 回合開始時，額外抽 #b2 張牌。 NL 每場戰鬥開始時，獲得 #y混亂 。 NL 每場戰鬥首次抽到耗能為 #b3 的牌時，將其耗能變為 #b0 。"
+      "替換 #y異蛇之眼 。 NL 回合開始時，額外抽 #b4 張牌。 NL 戰鬥開始時，獲得 #y混亂 。"
     ]
   },
   "sneckomod:SneckoTalon": {
     "NAME": "陳家掛墜",
     "FLAVOR": "見證了異蛇之眼與符文金字塔的輝煌。",
     "DESCRIPTIONS": [
-      "回合開始時，將手牌中耗能最高的牌的本回合耗能降低 #b1 點。"
+      "回合開始時，耗能不為0的隨機手牌本回合首次耗能減 #b1 。"
     ]
   },
   "sneckomod:BlankCard": {
     "NAME": "空牌",
-    "FLAVOR": "擬牌妖。",
+    "FLAVOR": "卡牌模仿者。",
     "DESCRIPTIONS": [
-      "每場戰鬥開始時，隨機打出牌組中的 #b1 張牌的復製。"
+      "戰鬥開始時，隨機將牌組中 #b1 張 #r非詛咒 #y非狀態 牌的 #ygremlin:回響 加入手牌，其耗能為 #b0 。"
     ]
   },
   "sneckomod:D8": {
     "NAME": "神秘八面體",
     "FLAVOR": "它似乎灌鉛的。",
     "DESCRIPTIONS": [
-      "拾起時，選擇牌組中 #b1 張數值為隨機值的牌。其總是觸發最大值。",
-      "選擇一張牌 ",
-      " 每當 ",
-      " 被打出時，隨機值為其最大值。"
+      "拾起時，選擇牌組中 #b1 張 #ysneckomod:溢出 牌。每當你打出它，獲得 #b4 點 #y格擋 並觸發其 #y溢出 效果，即使你的手牌數不夠。",
+      "選擇1張牌 ",
+      " 當 ",
+      " 被打出時，獲得 #b4 點 #y格擋 並觸發其 #ysneckomod:溢出 效果，與手牌數無關。"
     ]
   },
   "sneckomod:BabySnecko": {
-    "NAME": "年輕異蛇",
+    "NAME": "幼年異蛇",
     "FLAVOR": "令人困惑的可愛。",
     "DESCRIPTIONS": [
-      "回合開始時，隨機造成 #b5 點傷害。"
+      "回合開始時，對隨機敵人造成 #b9 點傷害並 #ysneckomod:混淆 隨機 #b2 張非 #b0 手牌。"
     ]
   },
     "sneckomod:SneckoCommon": {
     "NAME": "徽章",
-    "FLAVOR": "我系戰系鍋，介系我最喜歡滴遺物-商店小廣告",
+    "FLAVOR": "我系戰系鍋，介系我最喜歡滴遺物。——商店小廣告",
     "DESCRIPTIONS": [
-      "拾起時，從 #b3 張 #y未知角色牌 中選擇 #b1 張加入牌組。不再出現其他角色的 #y未知角色牌 。",
-      "接下來的 #y未知角色牌 都將是 #y未知 #y",
-      "牌 。"
+      "拾起時，從 #b5 張罕見 #ysneckomod:異色 能力牌中選擇 #b1 張加入牌組。"
     ]
   },
   "sneckomod:SneckoBoss": {
     "NAME": "幸運馬蹄",
     "FLAVOR": "一路順風。",
     "DESCRIPTIONS": [
-      "拾起時，從 #b3 張 #y未知 角色牌中選擇 #b1 張。將其 #b5 張復製品加入牌組。所有戰鬥卡牌獎勵都將有這名角色的牌。",
-      "拾起時，獲得 #b5 張 #y未知 ",
-      " 牌。所有戰鬥卡牌獎勵都將有 ",
+      "拾起時，從 #b3 個 #y角色 選擇 #b1 個。獲得 #b3 組已 #y升級 罕見牌獎勵和 #b2 組稀有牌獎勵（來自所選角色）。所有戰鬥都會額外掉落所選角色的卡牌獎勵。",
+      "拾起時，獲得來自 ",
+      " 的 #b3 組 已 #y升級 罕見牌獎勵和 #b2 組稀有牌獎勵。所有戰鬥卡牌獎勵都將額外掉落 ",
       " 牌。"
     ]
   }

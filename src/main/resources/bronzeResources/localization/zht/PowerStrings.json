@@ -1,6 +1,6 @@
 {
   "bronze:Cloning": {
-    "NAME": "合並",
+    "NAME": "合併",
     "DESCRIPTIONS": [
       "下次 #y編碼 時，再 #y編碼 它 #b1 次。",
       "下次 #y編碼 時，再 #y編碼 它 #b",
@@ -10,17 +10,16 @@
   "bronze:Default": {
     "NAME": "默認類",
     "DESCRIPTIONS": [
-      "將當前 #y隊列 首張牌加入下個 #y隊列 。",
-      "將當前 #y隊列 首張牌加入下 #b",
-      " 個 #y隊列 。"
+      "將當前 #y佇列 首張牌加入下個 #y佇列 。",
+      "將當前 #y佇列 首張牌加入下 #b",
+      " 個 #y佇列 。"
     ]
   },
   "bronze:Feature": {
     "NAME": "此為特性",
     "DESCRIPTIONS": [
-      "每當你抽到 #y詛咒 或 #y狀態牌 時，獲得 #b",
-      " 點 #y臨時 #y力量 與 #b",
-      " 點 #y臨時 #y敏捷 。"
+      "每當你抽到 或 #y消耗 #y狀態牌 時，獲得 #b",
+      " 點 格擋 。"
     ]
   },
   "bronze:InfiniteBeams": {
@@ -35,7 +34,7 @@
     ]
   },
   "bronze:Optimize": {
-    "NAME": "優化",
+    "NAME": "最佳化",
     "DESCRIPTIONS": [
       "#y升級 下張 #y編碼 的牌。",
       "#y升級 下 #b",
@@ -60,7 +59,7 @@
     ]
   },
   "bronze:Library": {
-    "NAME": "數據庫",
+    "NAME": "資料庫",
     "DESCRIPTIONS": [
       "你的回合開始時，隨機將 #b1 張 #y編碼 牌加入手牌，其耗能為 #b0 。",
       "你的回合開始時，隨機將 #b",
@@ -68,7 +67,7 @@
     ]
   },
   "bronze:LibraryMod": {
-    "NAME": "外部數據庫",
+    "NAME": "外部資料庫",
     "DESCRIPTIONS": [
       "你的回合開始時，將一張帶有 #y編碼 的隨機牌加入手牌，使其獲得 #y虛無 。"
     ]
@@ -123,7 +122,7 @@
     ]
   },
   "bronze:CopyPaste": {
-    "NAME": "復製粘貼",
+    "NAME": "複製貼上",
     "DESCRIPTIONS": [
       "本回合下一張 #y方法 打出兩次。",
       "本回合下 #b",

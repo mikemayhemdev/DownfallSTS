@@ -35,13 +35,14 @@ import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import downfall.util.LocalizeHelper;
 import guardian.powers.ConstructPower;
 import hermit.util.TextureLoader;
 import slimebound.SlimeboundMod;
 
 public class CharBossIronclad extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Ironclad");
-    public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Ironclad").NAMES[0];
+    public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[1];
 
     private Texture fgImg = TextureLoader.getTexture("downfallResources/images/fgShrooms.png");
     private Texture bgImg = TextureLoader.getTexture("downfallResources/images/bgShrooms.png");

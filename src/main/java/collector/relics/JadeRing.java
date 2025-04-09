@@ -13,24 +13,23 @@ public class JadeRing extends CustomRelic {
     private static final String IMG_PATH = JadeRing.class.getSimpleName() + ".png";
     private static final String OUTLINE_IMG_PATH = JadeRing.class.getSimpleName() + ".png";
 
-    private static final int EXTRA_SOULS = 5;
+    private static final int EXTRA_SOULS = 6;
 
     public JadeRing() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
-    @Override
-    public void onMonsterDeath(AbstractMonster m) {
-        if (m.hasPower(DoomPower.POWER_ID) && !m.hasPower(MinionPower.POWER_ID) && !m.halfDead) {
-            flash();
-            AbstractDungeon.player.gainGold(EXTRA_SOULS);
-        }
-    }
+    //logic moved to DoomPower.java
+    //but basically the way it works is that DoomPower has +6 added to it when dealing damage and
+    //rendering health bars, and returning the amount of damage in the description
 
-    @Override
-    public boolean canSpawn() {
-        return !(AbstractDungeon.getCurrRoom() instanceof com.megacrit.cardcrawl.rooms.ShopRoom);
-    }
+  //  @Override
+  //  public void onMonsterDeath(AbstractMonster m) {
+   //     if (m.hasPower(DoomPower.POWER_ID) && !m.hasPower(MinionPower.POWER_ID) && !m.halfDead) {
+   //         flash();
+  //          AbstractDungeon.player.gainGold(EXTRA_SOULS);
+ //       }
+//    }
 
     @Override
     public String getUpdatedDescription() {

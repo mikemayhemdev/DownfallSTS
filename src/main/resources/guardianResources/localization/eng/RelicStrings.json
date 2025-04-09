@@ -3,21 +3,29 @@
     "NAME": "Bronze Gear",
     "FLAVOR": "Protection where you need it most.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain #yGear #yUp. NL Guardian starts the run with a random common #yGem."
+      "At the start of each combat, gain #yGear #yUp [REMOVE_SPACE]. NL Guardian starts the run with a random common #yGem [REMOVE_SPACE]."
     ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "Guardian Gear",
     "FLAVOR": "Replace every 3,000 floors.",
     "DESCRIPTIONS": [
-      "Replaces #rBronze #rGear. NL Begin each combat in #yguardianmod:Defensive_Mode, which persists for #b3 turns."
+      "Replaces ",
+      " [REMOVE_SPACE].[] NL At the start of combat, gain #yGear #yUp [REMOVE_SPACE]. NL Whenever you enter #yDefensive #yMode [REMOVE_SPACE], gain [E] and draw #b2 cards."
+    ]
+  },
+  "Guardian:ObsidianScales": {
+    "NAME": "Obsidian Scales",
+    "FLAVOR": "Stain the sky black with your blood. Retaliate against all who struck out at you.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b3 #yThorns [REMOVE_SPACE]. Whenever you are debuffed or gain a debuff, gain #b1 #yThorns [REMOVE_SPACE]."
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
     "NAME": "Baalor's Lordly Plate",
     "FLAVOR": "One can never have enough armor.",
     "DESCRIPTIONS": [
-      "Whenever you #yguardianmod:Brace, #yBrace 1 more."
+      "Whenever you #yguardianmod:Brace [REMOVE_SPACE], #yBrace 1 more."
     ]
   },
   "Guardian:guardianmod:GemCopier": {
@@ -38,14 +46,14 @@
     "NAME": "Sack of Gems",
     "FLAVOR": "Ooh... shiny!",
     "DESCRIPTIONS": [
-      "Upon pickup, add #b5 random #yguardianmod:Gems to your deck."
+      "Upon pickup, you may choose up to #b5 random #yguardianmod:Gems to add to your deck."
     ]
   },
   "Guardian:StasisCodex": {
     "NAME": "Pilot's Codex",
     "FLAVOR": "Designs and diagrams of the Spire's earliest manually-driven prototypes, by Master Pilot David.",
     "DESCRIPTIONS": [
-      "If you end your turn with no cards in #yguardianmod:Stasis, choose #b1 of #b3 cards to place into #yguardianmod:Stasis."
+      "At the end of your first 3 turns, if your #yguardianmod:Stasis slots aren't full, choose #b1 of #b3 cards to place into #yguardianmod:Stasis [REMOVE_SPACE]."
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
@@ -66,17 +74,17 @@
     "NAME": "Cryo Chamber",
     "FLAVOR": "Things always seem better coming out than they did going in.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain #b1 Stasis slot. Whenever a card enters #yguardianmod:Stasis, #yUpgrade it."
+      "At the start of each combat, gain #b1 Stasis slot. Whenever a card enters #yguardianmod:Stasis [REMOVE_SPACE], #yUpgrade it."
     ]
   },
   "Guardian:BottledStasis": {
     "NAME": "Bottled Black Hole",
     "FLAVOR": "Somewhere, something incredible is waiting to be known.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card. Start each combat with this card in #yguardianmod:Stasis.",
+      "Upon pickup, choose a card. Start each combat with this card in #yguardianmod:Stasis [REMOVE_SPACE].",
       "Choose a card for ",
       "Start each combat with ",
-      " in #yguardianmod:Stasis.",
+      " in #yguardianmod:Stasis [REMOVE_SPACE].",
       "The bottled card has been #rremoved from your deck, the relic no longer functions."
     ]
   },
@@ -101,7 +109,7 @@
     "NAME": "Pick of Rhapsody",
     "FLAVOR": "With as many gemstones that litter the Spire, it is hard to imagine anyone so unlucky to have needed this Pick to aid them.",
     "DESCRIPTIONS": [
-      "You can now #gMine for #b2 #yguardianmod:Gems at Rest Sites (up to #b3 times)."
+      "You can now #gMine for #b2 #yguardianmod:Gems at Rest Sites, you may choose to add them to your deck. (up to #b3 times)."
     ]
   },
   "Guardian:GemstoneGun": {
@@ -116,10 +124,10 @@
     "NAME": "Bottled Anomaly",
     "FLAVOR": "Swirling and swirling and finally breaking.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card. At the start of each combat, remove it from your draw pile. At the start of turn #b3, add it into your hand. It costs #b0.",
+      "Upon pickup, choose a card. At the start of each combat, remove it from your draw pile. At the start of turn #b3 [REMOVE_SPACE], add it into your hand. It costs #b0 for the turn.",
       "Choose a card for ",
       "Start each combat with ",
-      " removed from your draw pile. At the start of turn #b3, add it into your hand. NL It costs #b0.",
+      " removed from your draw pile. At the start of turn #b3, add it into your hand. NL It costs #b0 for the turn.",
       "The bottled card has been #rremoved from your deck, the relic no longer functions."
     ]
   }

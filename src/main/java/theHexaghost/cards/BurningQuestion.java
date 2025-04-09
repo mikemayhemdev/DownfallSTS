@@ -40,7 +40,7 @@ public class BurningQuestion extends AbstractHexaCard implements HexaPurpleTextI
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 

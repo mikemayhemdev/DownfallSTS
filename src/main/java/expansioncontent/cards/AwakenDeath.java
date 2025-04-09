@@ -1,44 +1,37 @@
 package expansioncontent.cards;
 
-
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.CuriosityPower;
 import expansioncontent.expansionContentMod;
-import expansioncontent.powers.AwakenDeathPower;
-
-import static expansioncontent.expansionContentMod.loadJokeCardImage;
-
 
 public class AwakenDeath extends AbstractExpansionCard {
-    public final static String ID = makeID("AwakenDeath");
+    public static final String ID = makeID("AwakenDeath");
 
-    private static final int MAGIC = 8;
-    private static final int UPGRADE_MAGIC = 4;
+    private static final int MAGIC = 1;
 
     public AwakenDeath() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        tags.add(expansionContentMod.STUDY_AWAKENEDONE);
-        tags.add(expansionContentMod.STUDY);
-        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_awakenedone.png", "expansioncontentResources/images/1024/bg_boss_awakenedone.png");
-        baseMagicNumber = magicNumber = MAGIC;
-        tags.add(CardTags.HEALING);
-        loadJokeCardImage(this, "AwakenDeath.png");
+        super(ID, 2, AbstractCard.CardType.POWER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        this.tags.add(expansionContentMod.STUDY_AWAKENEDONE);
+        this.tags.add(expansionContentMod.STUDY);
+        setBackgroundTexture("expansioncontentResources/images/512/bg_boss_awakenedone.png", "expansioncontentResources/images/1024/bg_boss_awakenedone.png");
+        this.baseMagicNumber = this.magicNumber = 1;
+        expansionContentMod.loadJokeCardImage((AbstractCard)this, "AwakenDeath.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       // atb(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
-        atb(new ApplyPowerAction(p, p, new AwakenDeathPower(p, p, this.magicNumber), this.magicNumber));
-
+        atb((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new CuriosityPower((AbstractCreature)p, this.magicNumber), this.magicNumber));
     }
 
     public void upgrade() {
-        if (!upgraded) {
+        if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
+            upgradeMagicNumber(1);
         }
     }
-
 }
-
-

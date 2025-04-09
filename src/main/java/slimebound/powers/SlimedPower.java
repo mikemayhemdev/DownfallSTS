@@ -67,8 +67,12 @@ public class SlimedPower extends AbstractPower {
     }
 
 
-    public float atDamageFinalReceive(float damage, DamageInfo.DamageType damageType) {
-        return damageType == DamageInfo.DamageType.NORMAL ? damage + this.amount : damage;
+    public float atDamageReceive(float damage, DamageInfo.DamageType type) {
+        if (type == DamageInfo.DamageType.NORMAL) {
+            return damage +this.amount;
+        } else {
+            return damage;
+        }
     }
 
 

@@ -50,7 +50,7 @@ public class Gem_Crimson extends AbstractGemCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = CRIMSON;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Garnet.png"));
     }

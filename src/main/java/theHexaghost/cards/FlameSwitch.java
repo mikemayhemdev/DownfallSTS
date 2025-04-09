@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
+import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
@@ -24,6 +25,8 @@ public class FlameSwitch extends AbstractHexaCard implements OctopusCard{
 //        baseBurn = burn = 16;
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "FlameSwitch.png");
     }
 

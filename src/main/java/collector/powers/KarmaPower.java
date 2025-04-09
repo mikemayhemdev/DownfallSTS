@@ -3,6 +3,8 @@ package collector.powers;
 import collector.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 
 import static collector.util.Wiz.isAfflicted;
 
@@ -24,8 +26,17 @@ public class KarmaPower extends AbstractCollectorPower {
             }
             return false;
         })) {
+
             flash();
-            addToBot(new GainBlockAction(owner, amount));
+            for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (!mo.isDeadOrEscaped()) {
+                    if (isAfflicted(mo)) {
+                        addToBot(new GainBlockAction(owner, amount));
+                    }
+                }
+            }
+
+            //addToBot(new GainBlockAction(owner, amount));
         }
     }
 

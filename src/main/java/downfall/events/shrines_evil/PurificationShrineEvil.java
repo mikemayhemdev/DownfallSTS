@@ -1,5 +1,7 @@
 package downfall.events.shrines_evil;
 
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.cards.curses.Pain;
 import downfall.cards.curses.Sapped;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -8,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
+import gremlin.patches.GremlinEnum;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -26,7 +29,7 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
     private static final String DIALOG_2 = DESCRIPTIONS[1];
     private static final String IGNORE = DESCRIPTIONS[2];
     private CUR_SCREEN screen = CUR_SCREEN.INTRO;
-
+    private int hpAmt = 0;
     private static enum CUR_SCREEN {
         INTRO, COMPLETE;
 
@@ -38,7 +41,15 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
         super(NAME, DIALOG_1, "images/events/shrine3.jpg");
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
-        this.imageEventText.setDialogOption(OPTIONSALT[1], new Sapped());
+        if (AbstractDungeon.ascensionLevel >= 15) {
+            this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.15F);
+        } else {
+            this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.10F);
+        }
+        if (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
+            //this.hpAmt = this.hpAmt*5;
+        }
+        this.imageEventText.setDialogOption(OPTIONSALT[1] + hpAmt + OPTIONSALT[2]);
         this.imageEventText.setDialogOption(OPTIONS[0]);
         this.imageEventText.setDialogOption(OPTIONS[1]);
     }
@@ -73,17 +84,19 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
                 logMetricCardRemoval(ID, "Purged", (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0));
             }
 
-            if (AbstractDungeon.gridSelectScreen.selectedCards.size() > 2){
+            if (AbstractDungeon.gridSelectScreen.selectedCards.size() > 1){
                 AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(
 
-                        (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(2), com.megacrit.cardcrawl.core.Settings.WIDTH * 0.75F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2));
+                        (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(1), com.megacrit.cardcrawl.core.Settings.WIDTH * 0.75F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2));
 
-                AbstractCard curse = new Sapped();
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT * .75F)));// 66
-                AbstractDungeon.player.masterDeck.removeCard((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(2));
-                cards.add(AbstractDungeon.gridSelectScreen.selectedCards.get(2).cardID);
-
-                logMetric(ID, "Desecrated", Collections.singletonList(curse.cardID), cards, null, null, null, null, null, 0, 0, 0, 0, 0, 0);
+                AbstractDungeon.player.maxHealth -= this.hpAmt;
+                if (AbstractDungeon.player.currentHealth > AbstractDungeon.player.maxHealth) {
+                    AbstractDungeon.player.currentHealth = AbstractDungeon.player.maxHealth;
+                }
+                AbstractDungeon.player.masterDeck.removeCard((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(1));
+                cards.add(AbstractDungeon.gridSelectScreen.selectedCards.get(1).cardID);
+                //todo: write a better metric tracker
+                logMetric(ID, "Desecrated and lost" + hpAmt + "Max HP.");
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
@@ -99,7 +112,7 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
                         AbstractDungeon.gridSelectScreen.open(
                                 com.megacrit.cardcrawl.cards.CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck
-                                        .getPurgeableCards()), 3, OPTIONS[2], false, false, false, true);
+                                        .getPurgeableCards()), 2, OPTIONS[2], false, false, false, true);
 
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);

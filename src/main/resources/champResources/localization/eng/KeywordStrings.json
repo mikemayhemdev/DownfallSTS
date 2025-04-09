@@ -1,20 +1,30 @@
 [
   {
-    "PROPER_NAME": "Technique",
+    "PROPER_NAME": "Skill Bonus",
     "NAMES": [
+      "bonus",
+      "bonuses",
       "technique",
       "techniques",
       "champ:[crown_icon]",
       "[crown_icon]"
     ],
-    "DESCRIPTION": "If you are in a #yStance, trigger its Skill Bonus."
+    "DESCRIPTION": "If you are in a #yStance [REMOVE_SPACE], trigger its Skill Bonus. NL #rBerserker #ySkill #yBonus: Gain #b2 #yVigor [REMOVE_SPACE]. NL #bDefensive #ySkill #yBonus: Gain #b3 #yCounter [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Combo",
     "NAMES": [
       "combo"
     ],
-    "DESCRIPTION": "Extra effect when played in the listed #yStance."
+    "DESCRIPTION": "Extra effect when played in the listed #yStance [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Strike",
+    "NAMES": [
+      "strike",
+      "strikes"
+    ],
+    "DESCRIPTION": "Any card containing \"Strike\" in their name. Not to be confused with #yStrikes, which refers exclusively to Basic Strike cards."
   },
   {
     "PROPER_NAME": "Finisher",
@@ -24,14 +34,14 @@
       "[fist_icon]",
       "champ:[fist_icon]"
     ],
-    "DESCRIPTION": "Requires being in a Stance. NL After playing a Finisher, exit your Stance and trigger its Finisher bonus."
+    "DESCRIPTION": "Requires being in a Stance. NL After playing a Finisher, exit your Stance and trigger its Finisher bonus. NL #rBerserker #yFinisher #yBonus: Gain #b1 #yStrength [REMOVE_SPACE]. NL #bDefensive #yFinisher #yBonus: Gain #b8 #yBlock [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Counter",
     "NAMES": [
       "counter"
     ],
-    "DESCRIPTION": "The next time you take #yAttack damage, deal damage back."
+    "DESCRIPTION": "The next time you take #yAttack damage, gain a #yRiposte #yStrike that deals that much damage."
   },
   {
     "PROPER_NAME": "Defensive",
@@ -39,7 +49,7 @@
       "defensive",
       "defensive."
     ],
-    "DESCRIPTION": "#yStance. NL #ySkill Bonus: Gain #b3 #yCounter. NL #yFinisher Effect: Gain #b8 #yBlock."
+    "DESCRIPTION": "#yStance. NL #ySkill Bonus: Gain #b3 #yCounter [REMOVE_SPACE]. NL #yFinisher Effect: Gain #b8 #yBlock [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Berserker",
@@ -47,7 +57,7 @@
       "berserker",
       "berserker."
     ],
-    "DESCRIPTION": "#yStance.  NL #ySkill Bonus: Gain #b2 #yVigor. NL #yFinisher Effect: Gain #b1 #yStrength."
+    "DESCRIPTION": "#yStance.  NL #ySkill Bonus: Gain #b2 #yVigor [REMOVE_SPACE]. NL #yFinisher Effect: Gain #b1 #yStrength [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Gladiator",
@@ -63,7 +73,7 @@
       "ultimate",
       "ultimate."
     ],
-    "DESCRIPTION": "#yStance. Counts as both #yDefensive and #yBerserker #yStances. NL If you leave this #yStance before it expires, immediately re-enter it."
+    "DESCRIPTION": "#yStance [REMOVE_SPACE]. Counts as both #bDefensive and #rBerserker #yStances [REMOVE_SPACE]. NL If you leave this #yStance before it expires, immediately re-enter it."
   },
   {
     "PROPER_NAME": "Fatigue",

@@ -92,6 +92,39 @@
       "本回合结束时，随机对敌人造成 #b",
       " 点伤害 #b6 次。"
     ]
+  },  
+  "expansioncontent:BeatOfDeathP": {
+    "NAME": "死亡律动",
+    "DESCRIPTIONS": [
+      "每当你打出 1 张牌，对所有敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "expansioncontent:PandemoniumPower":{
+    "NAME": "乱舞",
+    "DESCRIPTIONS": [
+      "回合开始时，从弃牌堆随机选择 1 张牌打出。",
+      "回合开始时，从弃牌堆随机选择 #b",
+      " 张牌打出。"
+    ]
+  },
+  "expansioncontent:EvilWithinPower":{
+    "NAME": "恶灵附身",
+    "DESCRIPTIONS": [
+      "对所有敌人造成 #b",
+      " 点伤害，在给予 #b",
+      " 次负面效果后。",
+      " 次负面效果后。"
+    ]
+  },
+  "expansioncontent:ReveriePower":{
+    "NAME": "幻象",
+    "DESCRIPTIONS": [
+      "回合开始时，看弃牌堆顶部 1 张牌并将其加入手牌。",
+      "回合开始时，看弃牌堆顶部 #b",
+      " 张牌并选择 1 张加入手牌。",
+      "选择 1 张牌加入手牌"
+    ]
   },
   "expansioncontent:VexVinciblePower": {
     "NAME": "坚不可摧",

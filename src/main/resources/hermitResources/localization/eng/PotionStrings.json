@@ -1,11 +1,11 @@
 {
 "hermit:Tonic": {
         "NAME": "Tonic",
-        "DESCRIPTIONS": ["Gain #b", " #yRugged."]
+        "DESCRIPTIONS": ["Gain #b", " #yRugged [REMOVE_SPACE]."]
 },
 "hermit:BlackBile": {
         "NAME": "Black Bile",
-        "DESCRIPTIONS": ["Apply #b", " #yBruise."]
+        "DESCRIPTIONS": ["Apply #b", " #yBruise [REMOVE_SPACE]."]
 },
 "hermit:Eclipse": {
         "NAME": "Liquid Void",

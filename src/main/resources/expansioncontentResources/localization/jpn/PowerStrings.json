@@ -63,13 +63,6 @@
       " ターン開始時に発動する。"
     ]
   },
-  "expansioncontent:AddCopyPower": {
-    "NAME": "Delayed Card",
-    "DESCRIPTIONS": [
-      "Add ",
-      " into your hand at the start of your next turn."
-    ]
-  },
   "expansioncontent:AddSameInstancePower": {
     "NAME": "遅延カード",
     "DESCRIPTIONS": [
@@ -89,8 +82,41 @@
     "DESCRIPTIONS": [
       "あと #b",
       " ターン後、 #b",
-      "あなたのターン終了時 #b",
+      "ターン終了時 #b",
       " ダメージをランダムな敵に #b6 回与える。"
+    ]
+  },
+  "expansioncontent:BeatOfDeathP": {
+    "NAME": "死の鼓動",
+    "DESCRIPTIONS": [
+      "カードをプレイするたびに、敵全体に #b",
+      " ダメージを与える。"
+    ]
+  },
+  "expansioncontent:PandemoniumPower":{
+    "NAME": "パンデモニウム",
+    "DESCRIPTIONS": [
+      "ターン開始時に、捨て札からランダムなカードをプレイする。",
+      "ターン開始時に、捨て札から #b 枚",
+      " ランダムなカードをプレイする。"
+    ]
+  },
+  "expansioncontent:EvilWithinPower":{
+    "NAME": "悪意の中で",
+    "DESCRIPTIONS": [
+      "#b を与えた後、敵全体に #b",
+      " ダメージを与える。",
+      " より多くのデバフ。",
+      " より多くのデバフ。"
+    ]
+  },
+  "expansioncontent:ReveriePower":{
+  "NAME": "空想",
+  "DESCRIPTIONS": [
+    "ターンの開始時に、捨て札の一番上のカードを見て、それを手札に加える。",
+    "ターンの開始時に、捨て札の一番上の #b",
+    " カードを見て、その中から 1 枚を選んで手札に加える。",
+    "手札に加えるカードを 1 枚選ぶ。"
     ]
   },
   "expansioncontent:VexVinciblePower": {
@@ -100,7 +126,7 @@
       " までに制限する。",
       "1ターンに受けるダメージとHPの損失を #b",
       " までに制限する。あと #b",
-      " 回発動すると効果を失う。"
+      " 発動すると効果を失う。"
     ]
   }
 }

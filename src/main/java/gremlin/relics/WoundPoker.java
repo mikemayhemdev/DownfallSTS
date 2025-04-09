@@ -13,11 +13,11 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 public class WoundPoker extends AbstractGremlinRelic {
     public static final String ID = getID("WoundPoker");
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
-    private static final AbstractRelic.RelicTier TIER = RelicTier.UNCOMMON;
+    private static final AbstractRelic.RelicTier TIER = RelicTier.COMMON;
     private static final String IMG = "relics/wound_poker.png";
     private static final AbstractRelic.LandingSound SOUND = LandingSound.CLINK;
 
-    public static final int OOMPH = 6;
+    public static final int OOMPH = 4;
 
     public WoundPoker() {
         super(ID, IMG, TIER, SOUND);

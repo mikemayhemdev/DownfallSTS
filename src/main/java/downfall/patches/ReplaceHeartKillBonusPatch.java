@@ -3,13 +3,17 @@ package downfall.patches;
 import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.GameOverScreen;
 import com.megacrit.cardcrawl.screens.GameOverStat;
 import com.megacrit.cardcrawl.screens.VictoryScreen;
 import downfall.downfallMod;
+import theHexaghost.relics.TheBrokenSeal;
 
 import java.util.ArrayList;
+
+import static downfall.patches.DeathScreenScoreBonusesPatch.uiStrings2;
 
 public class ReplaceHeartKillBonusPatch {
 
@@ -35,6 +39,11 @@ public class ReplaceHeartKillBonusPatch {
                 stats.remove(idx);
                 stats.add(idx, new GameOverStat(uiStrings.TEXT[0], uiStrings.TEXT[1], Integer.toString(250)));
             }
-        }
-    }
-}
+                     //   ArrayList<GameOverStat> stats2 = ReflectionHacks.getPrivate(__instance, GameOverScreen.class, "stats");
+                     //   if (AbstractDungeon.player.hasRelic(TheBrokenSeal.ID)) {
+                      //      stats2.add(stats2.size()-2, new GameOverStat(uiStrings2.TEXT[0], uiStrings2.TEXT[1], Integer.toString(333)));
+                    //    }
+
+                    }
+                }
+            }

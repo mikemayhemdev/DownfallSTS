@@ -1,10 +1,64 @@
 [
   {
+    "PROPER_NAME": "残影",
+    "ID": "blur",
+    "NAMES": [
+      "残影",
+      "blur"
+    ],
+    "DESCRIPTION": "#y格挡 在回合结束时不被移除。"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "PROPER_NAME": "再生",
+    "NAMES": [
+      "再生"
+    ],
+    "DESCRIPTION": "回合开始时，回复相应生命，失去 1 层 #y再生 。"
+  },
+  {
+    "PROPER_NAME": "多层护甲",
+    "NAMES": [
+      "多层护甲",
+      "plated"
+    ],
+    "DESCRIPTION": "回合结束时，获得相应 #y格挡 。每受到未被格挡的伤害，失去 1 层 #y多层护甲 。"
+  },
+  {
     "PROPER_NAME": "首领",
     "NAMES": [
       "首领"
     ],
     "DESCRIPTION": "每回合只能打出 #b1 张 #y首领 牌。"
+  },
+  {
+    "PROPER_NAME": "回响",
+    "ID": "回响",
+    "NAMES": [
+      "回响"
+    ],
+    "DESCRIPTION": "将 1 张牌的复制加入手牌，它有 #y虚无 和 #y消耗 。 NL #y回响 牌不能被 #y回响 。"
+  },
+  {
+    "PROPER_NAME": "发掘",
+    "ID": "发掘",
+    "NAMES": [
+      "发掘"
+    ],
+    "DESCRIPTION": "将 #b1 张 #y消耗 堆的牌移回手牌。"
   },
   {
     "PROPER_NAME": "坚不可摧",
@@ -14,18 +68,18 @@
     "DESCRIPTION": "任意 #b1 回合内你最多失去 #b10 点生命。承伤达到上限后移除本效果。叠加时，额外生效 #b1 回合。"
   },
   {
-    "PROPER_NAME": "发掘",
-    "NAMES": [
-      "发掘"
-    ],
-    "DESCRIPTION": "将 #b1 张 #y消耗 堆的牌移回手牌。"
-  },
-  {
     "PROPER_NAME": "取回",
     "NAMES": [
       "取回"
     ],
     "DESCRIPTION": "将 #b1 张 #y消耗 堆的牌移入弃牌堆。"
+  },  
+  {
+    "PROPER_NAME": "黏液",
+    "NAMES": [
+      "黏液"
+    ],
+    "DESCRIPTION": "下 1 次攻击移除所有 #y黏液  ，造成相应额外伤害并触发 #y吞食粘液 效果。"
   },
   {
     "PROPER_NAME": "镣铐",
@@ -35,19 +89,53 @@
     "DESCRIPTION": "带有 #y镣铐 的单位本回合失去 #y力量 。"
   },
   {
-    "PROPER_NAME": "取",
-    "NAMES": [
-      "取"
-    ],
-    "DESCRIPTION": "抽牌，但若抽牌堆无可抽之牌，不触发弃牌堆洗入抽牌堆效果。"
-  },
-  {
     "PROPER_NAME": "临时生命",
+    "ID": "临时生命",
     "NAMES": [
-      "temp hp",
-      "temp_hp",
       "临时生命"
+
     ],
     "DESCRIPTION": "视为生命值，但战斗结束后，失去所有临时生命。"
-  }
+  },
+  {
+    "PROPER_NAME": "焰葬",
+    "NAMES": [
+      "焰葬"
+    ],
+    "DESCRIPTION": "除支付耗能外，还需要 消耗 1 张手牌。"
+  },
+  {
+    "PROPER_NAME": "魂劫",
+    "NAMES": [
+      "魂劫"
+
+    ],
+    "DESCRIPTION": "拥有 #y魂劫 的敌人在其回合开始时失去相应生命，若其没有 #y折磨 （同时有 #y虚弱 与 #y易伤 。），则移除所有 #y魂劫 。"
+  },  
+
+
+
+
+
+
+
+
+
+
+  {
+    "PROPER_NAME": "吟唱",
+    "NAMES": [
+      "吟唱"
+
+
+    ],
+    "DESCRIPTION": "当 #y吟唱 牌在手牌中，打出1张能力牌再打出 #y吟唱 牌触发 #y吟唱 效果。"},
+  {    
+  "PROPER_NAME": "转化",
+  "ID": "转化",
+  "NAMES": [
+    "转化"
+  ],
+  "DESCRIPTION": "#消耗 1 张牌，用 1 张不同的牌替代之。"
+}
 ]

@@ -1,64 +1,71 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "旋風刃",
-    "DESCRIPTION": "必要 10 ブロック NL 敵全体に !D! ダメージを 4 回与える。 NL 廃棄",
+    "DESCRIPTION": "敵全体に !D! ダメージを !M! 回与える。 NL  !DM! ブロック以上もっている場合、 攻撃回数が !M! 回増加。",
     "EXTENDED_DESCRIPTION": [
       "もっとブロックが必要だ"
     ]
   },
   "expansioncontent:Hexaburn": {
     "NAME": "ヘクサバーン",
-    "DESCRIPTION": " !M! ターン後、ランダムな敵に 6 回 !D! ダメージを与える。 NL 筋力 で強化される。"
+    "DESCRIPTION": "ランダムな敵に !D! ダメージを !M! 回与える。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "ランダムな敵に !D! ダメージを !M! 回与える。 "
   },
-  "expansioncontent:Invincible筋力": {
+  "expansioncontent:InvincibleStrength": {
     "NAME": "インビンシブル",
-    "DESCRIPTION": "expansioncontent:無敵 10 を得る。 NL 既に expansioncontent:無敵 を持っていた場合、発動回数を 1 増やす"
+    "DESCRIPTION": " expansioncontent:無敵  !M! を得る。 NL すでに expansioncontent:無敵 を持っていた場合、もう1ターン持続する。"
   },
   "expansioncontent:HyperBeam": {
     "NAME": "オートマ-ビーム",
-    "DESCRIPTION": "敵全体に !D! ダメージ。 NL 次のターン開始時、 [E] を失う。 NL 廃棄"
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL  1枚の *空虚 が山札の一番上に置かれる。 NL 廃棄 "
   },
   "expansioncontent:LastStand": {
     "NAME": "ラストスタンド",
-    "DESCRIPTION": "全てのデバフを解除。 NL 筋力 1 を得る NL もし HP が半分以下なら 筋力 2 を得る。",
-    "UPGRADE_DESCRIPTION": "全てのデバフを解除。 NL 筋力 1 を得る NL もし HP が半分以下なら HPを !M! 回復し、 筋力 2 を得る。"
+    "DESCRIPTION": "全てのデバフを解除。 NL  筋力 !M! を得る。"
   },
   "expansioncontent:YouAreMine": {
     "NAME": "お前はわたしの物だ！！",
-    "DESCRIPTION": "敵全体の ブロック をすべて除去し、 脱力 と 弱体 !M! を与える。 NL 廃棄"
+    "DESCRIPTION": "敵全体に 脱力 !M! 、 弱体 !M!  と expansioncontent:破滅 !DM! を与える。 NL 廃棄 "
   },
   "expansioncontent:AwakenDeath": {
-    "NAME": "目覚め",
-    "DESCRIPTION": "この戦闘中あなたが死亡した時または戦闘終了時、HPを !M! 回復しこのバフを失う。"
+    "NAME": "好奇心",
+    "DESCRIPTION": " 「パワー」 をプレイするたび、 筋力 !M! を得る。"
   },
   "expansioncontent:Chronoboost": {
-    "NAME": "クロノ-ブースト",
-    "DESCRIPTION": "カードを12枚プレイする毎に 筋力 2 を得る。",
-    "UPGRADE_DESCRIPTION": "筋力 2 を得る。 NL カードを12枚プレイする毎に 筋力 2 を得る。"
+    "NAME": "クロノ・ブースト",
+    "DESCRIPTION": "カードを12枚プレイする毎に 筋力 !M! を得る。"
   },
   "expansioncontent:PolyBeam": {
-    "NAME": "ドヌーブースト",
-    "DESCRIPTION": "筋力 !M! を得る。"
+    "NAME": "ドヌーブラスト",
+    "DESCRIPTION": " 筋力 !M! を得る。"
   },
   "expansioncontent:DecaShield": {
     "NAME": "デカシールド",
-    "DESCRIPTION": "プレートアーマー !B! を得る。"
+    "DESCRIPTION": " プレートアーマー !B! を得る。"
   },
   "expansioncontent:ShapePower": {
     "NAME": "シェイプ達の祝福",
-    "DESCRIPTION": "選択 NL 筋力 !M! NL または NL プレートアーマー !DM! ",
+    "DESCRIPTION": " 筋力 !M! と expansioncontent:プレートアーマー !DM! を得る。",
     "EXTENDED_DESCRIPTION": [
       "ドヌーパワー",
-      "筋力 !M! を得る。",
+      " 筋力 !M! を得る。",
       "デカシールド",
-      "プレートアーマー !M! を得る。"
+      " プレートアーマー !M! を得る。"
     ]
   },
-  "expansioncontent:PrepareCrush": {
+  "expansioncontent:SuperPrepareCrush": {
     "NAME": "クラッシュ準備",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 次のターン [E] [E] [E] を得て *スライムクラッシュ を手札に加える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL 次のターン [E] [E] [E] を得て *スライムクラッシュ を手札に加える。 NL 廃棄"
+    "DESCRIPTION": "次のターン、 [E] [E] [E] と 筋力 !M! を得て、 *スライムクラッシュ!!! を手札に加える。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "次のターン、 [E] [E] [E] [E] と 筋力 !M! を得て、 *スライムクラッシュ!!!+ を手札に加える。 NL 廃棄 ",
+    "EXTENDED_DESCRIPTION": [
+      "~スライム...~ NL #r~クラッシュ!!!~"
+    ]
   },
+  "expansioncontent:SuperLivingWall": {
+    "NAME": "リビングウォール",
+    "DESCRIPTION": " !B! ブロックを得る。 NL このターン攻撃してきた相手に expansioncontent:汚泥 !M! を与える。"
+  },
+
   "expansioncontent:StudyTheSpire": {
     "NAME": "スパイアの研究",
     "DESCRIPTION": "あと !M! ターン開始時、ランダムな *ボス カードを手札に加える。 NL プレイするまでそのコストは 0",
@@ -74,8 +81,7 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "悪意の中で",
-    "DESCRIPTION": " !D! ダメージを与える。 NL ランダムな *ボス カードを手札に加える。 NL プレイするまでそのコストは 0 NL 廃棄",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL アップグレード された ランダムな *ボス カードを手札に加える。 NL プレイするまでそのコストは 0 NL 廃棄"
+    "DESCRIPTION": "敵にデバフを !DM! 与えるたび、敵全体に !M! ダメージを与える。 "
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "しゃれこうべ",
@@ -84,6 +90,120 @@
   "expansioncontent:Antidote": {
     "NAME": "アンチドーテ",
     "DESCRIPTION": "保留 NL 毒 を !M! 軽減する。"
+  },
+  "expansioncontent:SuperGhostShield": {
+    "NAME": "ゴーストシールド",
+    "DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL 1 [#e087a4]ブラー[] [#e087a4]を得る。[] NL !B! [#e087a4]ブロックを得る。[]"
+  },
+  "expansioncontent:SuperGoopSpray": {
+    "NAME": "ヘドロ噴射",
+    "DESCRIPTION": " expansioncontent:汚泥 !M! と 脱力 !DM! を与える。",
+    "UPGRADE_DESCRIPTION": "敵全体に expansioncontent:汚泥 !M! と 脱力 !DM! を与える。"
+  },
+  "expansioncontent:ChargeUp": {
+    "NAME": "弾力性プレート",
+    "DESCRIPTION": "自分のデバフの数値を !M! 減少させる。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "自分のデバフの数値を !M! 減少させる。"
+  },
+  "expansioncontent:SuperTaunt": {
+    "NAME": "誘い",
+    "DESCRIPTION": "脱力 !M! と 弱体 !M! を与える。",
+    "UPGRADE_DESCRIPTION": "敵全体に 脱力 !M! と 弱体 !M! を与える。"
+  },
+  "expansioncontent:Torchfire": {
+    "NAME": "ワイルドファイア",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 敵の持つデバフの種類の数だけ繰り返す。"
+  },
+
+  "expansioncontent:TakeFlight": {
+    "NAME": "活性化",
+    "DESCRIPTION": "expansioncontent:再生 !M! を得る。 NL expansioncontent:詠唱 : *再生 !DM! を得る。"
+  },
+  "expansioncontent:BeatOfDeath": {
+    "NAME": "死の鼓動",
+    "DESCRIPTION": "カードをプレイするたび、 敵全体に !M! ダメージを与える。"
+  },
+  "expansioncontent:SuperViciousMockery": {
+    "NAME": "悪意ある嘲笑",
+    "DESCRIPTION": "気力 !M! を得る。 NL 脱力 !DM! を与える。"
+  },
+  "expansioncontent:SuperClobber": {
+    "NAME": "強打の一撃",
+    "DESCRIPTION": " !D! ダメージを与える。 NL ブロックされなかったダメージに等しいブロックを得る。"
+  },
+
+  "expansioncontent:SuperSomberShield": {
+    "NAME": "暗澹たる盾",
+    "DESCRIPTION": "expansioncontent:葬火  NL  !B! ブロックを得る。 NL 次のターン、このカードによって *廃棄 したカードのコピーを得る。"
+  },
+
+  "expansioncontent:SuperWhirlingFlame": {
+    "NAME": "渦巻く焔",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 捨て札からカードを1枚、山札の上に置く。"
+  },
+  "expansioncontent:Flail": {
+    "NAME": "フレイル",
+    "DESCRIPTION": "敵全体に !D! ダメージを !DM! 回与える。 NL !M! アーティファクト を得る。 NL 廃棄 ",
+    "EXTENDED_DESCRIPTION": [
+      "flailing",
+      "Flail",
+      "フレイル"
+    ]
+  },
+  "expansioncontent:SuperBloodthirst": {
+    "NAME": "血の渇き",
+    "DESCRIPTION": " !D! ダメージを与える。 NL 致命 時、ランダムなポーションを獲得し、このカードを 廃棄 する。"
+  },
+  "expansioncontent:SuperBodyCrash": {
+    "NAME": "ボディクラッシュ",
+    "DESCRIPTION": " !B! ブロックを得る。 NL ブロックと同じ値のダメージを与える",
+    "UPGRADE_DESCRIPTION": " NL ( !D! ダメージ。)"
+  },
+  "expansioncontent:SuperEtherStep": {
+    "NAME": "エーテルステップ",
+    "DESCRIPTION": " 手札を1枚廃棄する。 NL カードを !M! 枚引く。 NL  !D! ダメージを与える。",
+    "UPGRADE_DESCRIPTION": " 手札を1枚廃棄する。 NL カードを !M! 枚引く。 NL  !D! ダメージを与える。"
+  },
+
+  "expansioncontent:Virus": {
+    "NAME": "ウイルス",
+    "DESCRIPTION": "手札を !M! 枚 廃棄 し、 *メジャービーム に変換する。 NL 廃棄 "
+  },
+
+  "expansioncontent:MajorBeam": {
+    "NAME": "メジャービーム",
+    "DESCRIPTION": " !D! ダメージを与える。 NL カードを !M! 枚引く。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL カードを !M! 枚引く。"
+  },
+
+  "expansioncontent:ManipulateTime": {
+    "NAME": "再考",
+    "DESCRIPTION": "捨て札からカードを1枚山札の底に置く。プレイされるまでそのコストは0。",
+    "UPGRADE_DESCRIPTION": "捨て札からカードを1枚山札の底に置く。戦闘終了までそのコストは0。"
+  },
+  "expansioncontent:Pandemonium": {
+    "NAME": "パンデモニウム",
+    "DESCRIPTION": "ターン開始時、捨て札にあるカードをランダムに1枚プレイする。"
+  },
+  "expansioncontent:Reverie": {
+    "NAME": "空想",
+    "DESCRIPTION": "ターン開始時に、捨て札の一番上から !M! 枚のカードのうち1枚を手札に加える。"
+  },
+  "expansioncontent:ExploitVulnerability": {
+    "NAME": "ドヌービーム",
+    "DESCRIPTION": "敵の持つブロックを全て盗む。 NL 2回 !D! ダメージを与える。"
+  },
+  "expansioncontent:PeekPages": {
+    "NAME": "ページをのぞく",
+    "DESCRIPTION": " !M! 枚の *洞察 を山札に混ぜる。 NL 廃棄 "
+  },
+  "expansioncontent:BloodBarrage": {
+    "NAME": "ブラッド・バレージ",
+    "DESCRIPTION": " !D! ダメージを !M! 回与える。 NL 廃棄 "
+  },
+  "expansioncontent:DoubleAct": {
+    "NAME": "ダブルボス",
+    "DESCRIPTION": "次のターン、２倍のカード枚数 と [E] を得る。 NL 廃棄 "
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "血塗れの生贄",

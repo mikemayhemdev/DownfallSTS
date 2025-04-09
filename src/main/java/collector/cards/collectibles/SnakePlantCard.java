@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
 
@@ -16,9 +17,13 @@ public class SnakePlantCard extends AbstractCollectibleCard {
     public final static String ID = makeID(SnakePlantCard.class.getSimpleName());
     // intellij stuff attack, enemy, common, 7, 2, , , , 
 
+
+    //TODO: Rework into Skill: 1e, Apply 2 Weak and Vulnerable.
+
     public SnakePlantCard() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

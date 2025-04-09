@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -41,8 +42,8 @@ public class DoomedDagger extends AbstractMonster{
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(0.3F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
                 AbstractCard q = new ImpendingDoom();
-                CardModifierManager.addModifier(q, new RetainCardMod());
-                addToBot(new MakeTempCardInHandAction(q));
+                //CardModifierManager.addModifier(q, new RetainCardMod());
+                addToBot(new MakeTempCardInDrawPileAction((q), 1, false, true));
                 break;
             case 2:
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "SUICIDE"));

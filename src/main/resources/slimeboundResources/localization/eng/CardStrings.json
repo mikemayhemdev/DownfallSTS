@@ -68,7 +68,7 @@
   },
   "Slimebound:FirmFortitude": {
     "NAME": "Liquidate",
-    "DESCRIPTION": "Unplayable if you have negative Strength. NL Lose 2 Strength. NL Gain !M! slimeboundmod:Potency."
+    "DESCRIPTION": "Lose 2 Strength. NL Gain !M! slimeboundmod:Potency."
   },
   "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
@@ -76,7 +76,7 @@
   },
   "Slimebound:FormOfPuddle": {
     "NAME": "Shape of Puddle",
-    "DESCRIPTION": "Gain 1 Intangible. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain 1 Intangible. NL Exhaust."
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Forward Tackle",
@@ -178,18 +178,18 @@
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "One-Two Combo",
-    "DESCRIPTION": "Deal !D! damage. NL When you slimeboundmod:Split, return this from the discard pile to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command. NL When you slimeboundmod:Split, return this from the discard pile to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command. NL When you slimeboundmod:Split, return this from the discard pile to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command twice. NL When you slimeboundmod:Split, return this from the discard pile to your hand."
   },
   "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",
-    "DESCRIPTION": "Apply !M! slimeboundmod:Goop to target enemy at the start of each of its turns. NL Exhaust.",
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop to target enemy at the start of each of its turns. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple the enemy's slimeboundmod:Goop. NL Exhaust."
   },
   "Slimebound:Overexert": {
     "NAME": "Overexert",
-    "DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL !M! turns from now, slimeboundmod:Absorb all Slimes.",
-    "UPGRADE_DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all Slimes."
+    "DESCRIPTION": "Gain 5 slimeboundmod:Potency. NL !M! turns from now, slimeboundmod:Absorb all Slimes.",
+    "UPGRADE_DESCRIPTION": "Gain 5 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all Slimes."
   },
   "Slimebound:Prepare": {
     "NAME": "Prepare",
@@ -206,8 +206,8 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - slimeboundmod:Command.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - slimeboundmod:Command twice."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Command twice."
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "Protect the Boss",
@@ -279,8 +279,8 @@
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "Pile On!",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes twice."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL Slimes.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL Slimes twice."
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "Slime Brawl",
@@ -313,17 +313,17 @@
   },
   "Slimebound:Split": {
     "NAME": "Split",
-    "DESCRIPTION": "slimeboundmod:Split into a random Slime."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Split: Guerilla",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command three times. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command !M! times.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command three times."
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command three times. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command !M! times.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command three times."
   },
   "Slimebound:SplitGreed": {
     "NAME": "Revive Greed",
@@ -331,13 +331,13 @@
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Split: Leeching",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command three times. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command !M! times.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command three times."
   },
   "Slimebound:SplitMire": {
     "NAME": "Split: Mire",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command three times. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command !M! times.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command three times."
   },
   "Slimebound:SplitScrap": {
     "NAME": "Revive Scrap",

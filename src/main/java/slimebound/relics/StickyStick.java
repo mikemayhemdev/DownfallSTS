@@ -1,9 +1,11 @@
 package slimebound.relics;
 
+import automaton.cards.goodstatus.IntoTheVoid;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.EvolvePower;
@@ -19,7 +21,7 @@ public class StickyStick extends CustomRelic {
     //Gelatinous Cube
     public StickyStick() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.UNCOMMON, LandingSound.SOLID);
+                RelicTier.RARE, LandingSound.SOLID);
         this.largeImg = TextureLoader.getTexture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
 
     }
@@ -29,10 +31,34 @@ public class StickyStick extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    public void atBattleStartPreDraw() {
-        this.flash();
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EvolvePower(AbstractDungeon.player, 1), 1));
-        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+    public void onCardDraw(AbstractCard card) {
+        if (this.counter == 2) {
+            this.grayscale = true;
+            return;
+        }
+
+        if (this.counter < 3) {
+            if (card.type == AbstractCard.CardType.STATUS || card.type == AbstractCard.CardType.CURSE) {
+                this.flash();
+                ++this.counter;
+                //this.addToTop(new ExhaustSpecificCardAction(card,AbstractDungeon.player.hand));
+                this.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
+                if (card.cardID.equals(VoidCard.ID) || card.cardID.equals(IntoTheVoid.ID)) {
+                    this.flash();
+                    this.addToTop(new GainEnergyAction(1));
+                }
+            }
+        }
+    }
+
+    public void atTurnStart() {
+        this.counter = 0;
+        this.grayscale = false;
+    }
+
+    public void onVictory() {
+        this.counter = -1;
+        this.grayscale = false;
     }
 
     @Override

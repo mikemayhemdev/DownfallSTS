@@ -407,7 +407,7 @@
     "DESCRIPTION": "目标每有一种负面效果， NL 造成 !D! 点伤害。"
   },
   "collector:YouAreMine": {
-    "NAME": "你是我的了",
+    "NAME": "你是我的了!",
     "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL 给予 !clm2! 层 collector:魂劫 。"
   },
   "collector:Whomp": {
@@ -609,7 +609,7 @@
   },
   "collector:ShelledParasiteCard": {
     "NAME": "带壳寄生怪",
-    "DESCRIPTION": "获得 !M! 层 *多层护甲 。"
+    "DESCRIPTION": "获得 !M! 层 expansioncontent:多层护甲 。"
   },
   "collector:ShieldGremlinCard": {
     "NAME": "持盾地精",
@@ -693,6 +693,6 @@
   },
   "collector:Sapped": {
     "NAME": "虚脱",
-    "DESCRIPTION": "collector:焰葬 。 NL 消耗 。 NL 本牌无法从牌组移除。"
+    "DESCRIPTION": "collector:焰葬 。 NL 抽到时失去 [E] 。 NL 消耗 。 NL 本牌无法从牌组移除。"
   }
 }

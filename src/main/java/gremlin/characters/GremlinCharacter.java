@@ -169,6 +169,8 @@ public class GremlinCharacter extends CustomPlayer {
         retVal.add("Gremlin:Defend");
         retVal.add("Gremlin:Defend");
         retVal.add("Gremlin:Defend");
+        //welp, rip "draw relic means additional cards in starter deck"
+        //retVal.add("Gremlin:Defend");
         retVal.add("Gremlin:TagTeam");
         retVal.add("Gremlin:GremlinDance");
         return retVal;

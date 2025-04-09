@@ -24,7 +24,7 @@ public class EnTantrum extends AbstractStanceChangeCard {
     boolean realWrath = false;
 
     public EnTantrum() {
-        super(ID, cardStrings.NAME, "purple/attack/tantrum", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.PURPLE, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_BUFF);
+        super(ID, cardStrings.NAME, "purple/attack/tantrum", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.PURPLE, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_BUFF);
         this.baseDamage = 3;
         this.baseMagicNumber = 3;
         this.magicNumber = 3;

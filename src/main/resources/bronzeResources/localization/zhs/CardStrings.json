@@ -301,12 +301,12 @@
   },
   "bronze:Virus": {
     "NAME": "病毒",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 手牌全变 *微 *光 *射 *线 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 手牌全变 *微 *光 *射 *线 *+ 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃所有手牌 。 NL 获得相同数量张 *微光射线 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃所有手牌 。 NL 获得相同数量张 *微光射线+ 。 NL 消耗 。"
   },
   "bronze:Backtrace": {
     "NAME": "回溯",
-    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 ： NL bronze:方法 附带 消耗 。",
+    "DESCRIPTION": " 固有 。 NL \u00A0 造成 !D! 点伤害。 NL bronze:编译 *错误 ： NL bronze:方法 附带 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "暗中",
       "追溯"
@@ -331,13 +331,11 @@
   },
   "bronze:ClassDefault": {
     "NAME": "默认类",
-    "DESCRIPTION": "将 bronze:队列 首张牌加入下 !M! 个 *队列 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 将 bronze:队列 首张牌加入下 !M! 个 *队列 。"
+    "DESCRIPTION": "将 bronze:队列 首张牌加入下 !M! 个 *队列 。"
   },
   "bronze:ItsAFeature": {
     "NAME": "此为特性",
-    "DESCRIPTION": "抽到 诅咒 或 状态牌 时： NL 获得 1 层 guardianmod:临时 力量 。 NL 获得 1 层 guardianmod:临时 敏捷 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 抽到 诅咒 或 状态牌 时： NL 获得 1 层 guardianmod:临时 力量 。 NL 获得 1 层 guardianmod:临时 敏捷 。"
+    "DESCRIPTION": "抽到 或 消耗 状态牌 时： NL 获得 !M! 点 格挡 。"
   },
   "bronze:MinorBeam": {
     "NAME": "微光射线",
@@ -362,12 +360,12 @@
   },
   "bronze:Mutator": {
     "NAME": "赋值",
-    "DESCRIPTION": "获得 1 点 力量 。 NL 将手中一张 状态牌 变为本牌的复制品。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 1 点 力量 。 NL 将手中一张 状态牌 变为本牌的复制品。"
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 将手中一张 状态牌 变为本牌的复制品。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 !M! 点 力量 。 NL 将手中一张 状态牌 变为本牌的复制品。"
   },
   "bronze:Allocate": {
     "NAME": "分配",
-    "DESCRIPTION": "抽牌堆每有 状态牌 ， NL 获得 [E] 。",
+    "DESCRIPTION": "抽牌堆每有一张 状态牌 ， NL 获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
       " NL （获得 ",
       " [E] ）"
@@ -463,11 +461,15 @@
   },
   "bronze:ShipIt": {
     "NAME": "废能转换",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 状态牌 ， NL 额外造成 !M! 点。 NL (包括 消耗 堆)"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗堆中每有一张 状态牌 ， NL 重复造成一次 。",
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害。 NL 消耗堆中每有一张 状态牌 ， NL 重复造成一次 。 （",
+      "次）"
+    ]
   },
   "bronze:Break": {
     "NAME": "打断",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 ： bronze:插入 *灼伤 、 *伤口 与 *黏液 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 ： bronze:插入 *灼伤 、 *伤口 、 *黏液 、 *晕眩 与 *虚空 。",
     "EXTENDED_DESCRIPTION": [
       "打断",
       "粉碎"
@@ -491,24 +493,14 @@
     "DESCRIPTION": "虚无 。 NL 抽到 bronze:方法 时， NL 其各项数值加1。",
     "UPGRADE_DESCRIPTION": "抽到 bronze:方法 时， NL 其各项数值加1。"
   },
-  "bronze:BronzeHeatsink": {
-    "NAME": "铜制散热器",
-    "DESCRIPTION": "打出 bronze:方法 时，抽1张牌。",
-    "UPGRADE_DESCRIPTION": "打出 bronze:方法 时，抽2张牌。"
-  },
   "bronze:HardenedForm": {
     "NAME": "铜球召唤",
     "DESCRIPTION": " bronze:编译 或打出 bronze:方法 时： NL 获得 !M! 点 格挡 。 NL 随机造成 !M! 点伤害。"
   },
-  "bronze:LegacyCode": {
-    "NAME": "历史代码",
-    "DESCRIPTION": " 保留 。 NL 将 !M! 张牌从弃牌堆加入手牌。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 将 !M! 张牌从弃牌堆加入手牌。"
-  },
   "bronze:Repulsor": {
     "NAME": "反冲器",
     "DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时，将其 消耗 并抽一张牌。",
-    "UPGRADE_DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时， 消耗 其并抽一张牌。"
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 每回合首次抽到 NL 状态牌 或 诅咒 时，将其 消耗 并抽一张牌。"
   },
   "bronze:Debug": {
     "NAME": "错误调试",
@@ -598,7 +590,7 @@
   },
   "bronze:BugBarrage": {
     "NAME": "错误齐射",
-    "DESCRIPTION": "获得1张 *伤口 。 NL bronze:循环 手中 状态牌 ， NL 每张造成 !D! 点伤害。",
+    "DESCRIPTION": "获得 !M! 张 *伤口 。 NL bronze:循环 手中 状态牌 ， NL 每张造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "获得 !M! 张 *伤口 。 NL bronze:循环 手中 状态牌 ， NL 每张造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
@@ -657,6 +649,6 @@
   },
   "bronze:Undervolt": {
     "NAME": "低压",
-    "DESCRIPTION": "所有敌人失去 !M! 点 力量。 NL 获得两张 灼伤 。 NL 消耗 。"
+    "DESCRIPTION": "所有敌人失去 !M! 点 力量。 NL 获得两张 *灼伤 。 NL 消耗 。"
   }
 }

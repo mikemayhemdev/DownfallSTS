@@ -13,7 +13,7 @@ public class Billow extends AbstractCollectorCard {
 
     public Billow() {
         super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 20;
+        baseBlock = 18;
         cardsToPreview = new Bellow();
     }
 

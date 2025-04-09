@@ -4,9 +4,12 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 
+@Deprecated
+@CardIgnore
 public class ImprovisedGuard extends AbstractSneckoCard {
     public final static String ID = makeID("ImprovisedGuard");
 

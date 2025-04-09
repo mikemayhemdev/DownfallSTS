@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
+import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,6 +29,7 @@ import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import downfall.downfallMod;
 import downfall.monsters.FleeingMerchant;
+import downfall.util.LocalizeHelper;
 import downfall.vfx.NeowBossRezEffect;
 
 public class CharBossMerchant extends AbstractCharBoss {
@@ -52,16 +54,16 @@ public class CharBossMerchant extends AbstractCharBoss {
     private boolean neowSpoke = false;
 
     public static final String ID = downfallMod.makeID("CharBossMerchant");
-    public static final String NAME = CardCrawlGame.languagePack.getCharacterString(ID).NAMES[0];
+    public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[5];
 
     public CharBossMerchant() {
         super(NAME, ID, 300, 0f, -40f, 200.0f, 190.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);
 
-        if (downfallMod.tempAscensionHack) {
-            downfallMod.tempAscensionHack = false;
-            AbstractDungeon.ascensionLevel = downfallMod.tempAscensionOriginalValue;
-            downfallMod.tempAscensionOriginalValue = 0;
-        }
+//        if (downfallMod.tempAscensionHack) {
+//            downfallMod.tempAscensionHack = false;
+//            AbstractDungeon.ascensionLevel = downfallMod.tempAscensionOriginalValue;
+//            downfallMod.tempAscensionOriginalValue = 0;
+//        }
 
         this.energyOrb = new EnergyOrbRed();
         this.energy = new EnemyEnergyManager(3);
@@ -82,7 +84,7 @@ public class CharBossMerchant extends AbstractCharBoss {
 
         this.tint.color = new Color(.5F, .5F, 1F, 0F);
 
-        this.type = EnemyType.BOSS;
+        type = EnemyType.BOSS;
     }
 
     @Override
@@ -95,6 +97,8 @@ public class CharBossMerchant extends AbstractCharBoss {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new BorderFlashEffect(Color.CYAN, true), 2F));
 
         if (FleeingMerchant.CURRENT_STRENGTH > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, FleeingMerchant.CURRENT_STRENGTH), FleeingMerchant.CURRENT_STRENGTH));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new DexterityPower(this, FleeingMerchant.CURRENT_STRENGTH), FleeingMerchant.CURRENT_STRENGTH));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, FleeingMerchant.CURRENT_STRENGTH), FleeingMerchant.CURRENT_STRENGTH));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new DexterityPower(this, FleeingMerchant.CURRENT_STRENGTH), FleeingMerchant.CURRENT_STRENGTH));
         }
@@ -111,13 +115,13 @@ public class CharBossMerchant extends AbstractCharBoss {
         this.atlasGlow = new TextureAtlas(Gdx.files.internal(downfallMod.assetPath("images/monsters/merchant/noShadow/skeletonGlow.atlas")));
         SkeletonJson json = new SkeletonJson(this.atlasGlow);
         if (CardCrawlGame.dungeon != null && AbstractDungeon.player != null) {
-            if (AbstractDungeon.player.hasRelic("PreservedInsect") && !this.isPlayer && AbstractDungeon.getCurrRoom().eliteTrigger) {
-                glowscale += 0.3F;
-            }
-
-            if (ModHelper.isModEnabled("MonsterHunter") && !this.isPlayer) {
-                glowscale -= 0.3F;
-            }
+  //          if (AbstractDungeon.player.hasRelic("PreservedInsect") && !this.isPlayer && AbstractDungeon.getCurrRoom().eliteTrigger) {
+            //                glowscale += 0.3F;
+            //            }
+            //
+            //            if (ModHelper.isModEnabled("MonsterHunter") && !this.isPlayer) {
+            //                glowscale -= 0.3F;
+            //            }
         }
 
         json.setScale(Settings.scale / glowscale);

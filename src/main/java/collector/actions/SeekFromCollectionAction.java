@@ -1,5 +1,6 @@
 package collector.actions;
 
+import basemod.BaseMod;
 import collector.CollectorCollection;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -38,7 +39,7 @@ public class SeekFromCollectionAction extends AbstractGameAction {
                 this.isDone = true;
             } else if (tmp.size() == 1) {
                 card = tmp.getTopCard();
-                if (this.p.hand.size() == 10) {
+                if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                     CollectorCollection.combatCollection.moveToDiscardPile(card);
                     this.p.createHandIsFullDialog();
                 } else {
@@ -59,7 +60,7 @@ public class SeekFromCollectionAction extends AbstractGameAction {
             } else if (tmp.size() <= this.amount) {
                 for(int i = 0; i < tmp.size(); ++i) {
                     card = tmp.getNCardFromTop(i);
-                    if (this.p.hand.size() == 10) {
+                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                         CollectorCollection.combatCollection.moveToDiscardPile(card);
                         this.p.createHandIsFullDialog();
                     } else {
@@ -93,7 +94,7 @@ public class SeekFromCollectionAction extends AbstractGameAction {
                 for (AbstractCard abstractCard : AbstractDungeon.gridSelectScreen.selectedCards) {
                     card = abstractCard;
                     card.unhover();
-                    if (this.p.hand.size() == 10) {
+                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                         CollectorCollection.combatCollection.moveToDiscardPile(card);
                         this.p.createHandIsFullDialog();
                     } else {

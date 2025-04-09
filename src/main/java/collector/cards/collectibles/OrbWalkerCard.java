@@ -4,6 +4,7 @@ import collector.cards.Ember;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.makeInHand;
@@ -17,6 +18,7 @@ public class OrbWalkerCard extends AbstractCollectibleCard {
         baseDamage = 14;
         baseMagicNumber = magicNumber = 2;
         cardsToPreview = new Ember();
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

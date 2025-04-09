@@ -1,4 +1,12 @@
 {
+  "sneckomod:BlunderGuardPower": {
+    "NAME": "津波",
+    "DESCRIPTIONS": [
+      "#yオーバーフロー をする度、 #b を得る。",
+      " #yブロック ",
+      " #yブロック "
+    ]
+  },
   "sneckomod:CheapStockPower": {
     "NAME": "チープスタック",
     "DESCRIPTIONS": [
@@ -30,6 +38,116 @@
       "カードを #y泥まみれ にする度 #b",
       " #yブロック を得る。"
     ]
+  },
+  "sneckomod:OverwhelmingPresencePower": {
+    "NAME": "圧倒的な存在感",
+    "DESCRIPTIONS": [
+      "各ターンにデッキを初めてシャッフルすると、[E] を得て、#b1 枚のカードを引く。",
+      "各ターンにデッキを初めてシャッフルすると、[E] を得て、#b",
+      " 枚のカードを引く。"
+    ]
+  },
+  "sneckomod:SerpentsNestPower": {
+    "NAME": "蛇の巣",
+    "DESCRIPTIONS": [
+      "#yパワー カードをプレイするたび、敵全体に 1 ダメージを与える。",
+      "#yパワー カードをプレイするたび、敵全体に #b",
+      " ダメージを与える。"
+    ]
+  },
+  "sneckomod:SnakeEyesPower": {
+    "NAME": "スネッコアイ",
+    "DESCRIPTIONS": [
+      "このターン、次の #yオフクラス #yカード は 2 回プレイされる。",
+      "このターン、次の #b",
+      " #yオフクラス #yカード は 2 回プレイされる。"
+    ]
+  },
+  "sneckomod:ToxicPersonalityPower": {
+    "NAME": "Toxic Personality",
+    "DESCRIPTIONS": [
+      "Whenever you apply a debuff to an enemy, apply #b",
+      " #y蛇毒 .",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+    ]
+  },
+  "sneckomod:TyphoonPower": {
+    "NAME": "タイフーン",
+    "DESCRIPTIONS": [
+      "このターン、#bオーバーフロー  するたび、#yタイフーンファング  のコピーをプレイする。",
+      "このターン、#bオーバーフロー  するたび、#b",
+      " コピーの #yタイフーンファング  をプレイする。"
+    ]
+  },
+  "sneckomod:TyphoonPlusPower": {
+    "NAME": "タイフーン+",
+    "DESCRIPTIONS": [
+      "このターン #bオーバーフロー , するたび、 #yタイフーンファング+ のコピーをプレイする。",
+      "このターン #bオーバーフロー , するたび、 #b",
+      " コピーの #yタイフーンファング+ をプレイする。"
+    ]
+  },
+  "sneckomod:SerpentineSleuthPower": {
+    "NAME": "蛇の探偵",
+    "DESCRIPTIONS": [
+      "#yパワー カードをプレイするたび、 #b を得る。",
+      " [E] .",
+      " [E] ."
+    ]
+  },
+  "sneckomod:BigGunsStrengthPower": {
+    "NAME": "大砲",
+    "DESCRIPTIONS": [
+      "コストが 3 以上のカードをプレイするたびに、 #b を得る。",
+      " #y筋力 ",
+      " #y筋力 "
+    ]
+  },
+      "sneckomod:BigGunsBlockPower": {
+        "NAME": "ブランダーガード",
+        "DESCRIPTIONS": [
+          "敵にデバフを適用するたびに、 #b を得る。",
+          " #yブロック ",
+          " #yブロック "
+        ]
+      },
+  "sneckomod:AceOfWandsPower": {
+    "NAME": "ペンタクルの女王",
+    "DESCRIPTIONS": [
+      "このターンにこの敵にデバフを与えるたびに、 #b を得る。",
+      " #yブロック ",
+      " #yブロック "
+    ]
+  },
+  "sneckomod:LacerateDebuff": {
+    "NAME": "裂傷",
+    "DESCRIPTIONS": [
+      "#yオーバーフロー すると #b 与える。",
+      " #y蛇毒 をランダムな敵に",
+      " #y蛇毒 をランダムな敵に"
+    ]
+  },
+  "sneckomod:FountainPower": {
+    "NAME": "噴水",
+    "DESCRIPTIONS": [
+      "#yオーバーフロー すると #b 与える。",
+      " #y蛇毒 をランダムな敵に",
+      " #y蛇毒 をランダムな敵に"
+    ]
+  },
+  "sneckomod:TrashCanPower": {
+    "NAME": "ごみ箱",
+    "DESCRIPTIONS": ["ターン開始時に、カードを #y廃棄 しても良い。",
+        "ターン開始時に、カードを最大 #b 枚まで #y廃棄 しても良い。"
+  ]
+      },
+
+        "sneckomod:VenomDebuff": {
+          "NAME": "蛇毒",
+          "DESCRIPTIONS": [
+            " #y蛇毒 以外のデバフを受ける度、 #b を失う。",
+            " HP"
+          ]
   },
   "sneckomod:SerpentMindPower": {
     "NAME": "蛇心",

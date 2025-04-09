@@ -334,8 +334,7 @@
   },
   "bronze:ItsAFeature": {
     "NAME": "機能の一つ",
-    "DESCRIPTION": "呪い または 状態異常 カードを引いた時、一時的な 筋力 と 敏捷性 を1得る。",
-    "UPGRADE_DESCRIPTION": "天賦 NL 呪い または 状態異常 カードを引いた時、一時的な 筋力 と 敏捷性 を1得る。"
+    "DESCRIPTION": " 状態異常 カードを引くか 廃棄 するたびに、!M! ブロックを得る。"
   },
   "bronze:Library": {
     "NAME": "ライブラリ",
@@ -347,8 +346,8 @@
   },
   "bronze:Mutator": {
     "NAME": "変異体",
-    "DESCRIPTION": "筋力 1 を得る。 NL 状態異常 をこのカードのコピーに変身させる。",
-    "UPGRADE_DESCRIPTION": "保留 NL 筋力 1 を得る。 NL 状態異常 をこのカードのコピーに変身させる。"
+    "DESCRIPTION": "筋力 !M! を得る。 NL 状態異常 をこのカードのコピーに変身させる。",
+    "UPGRADE_DESCRIPTION": "保留 NL 筋力 !M! を得る。 NL 状態異常 をこのカードのコピーに変身させる。"
   },
   "bronze:NullPointer": {
     "NAME": "Null Pointer",
@@ -461,7 +460,11 @@
   },
   "bronze:ShipIt": {
     "NAME": "出荷",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 全ての 状態異常 の数 * !M! の追加ダメージ。"
+    "DESCRIPTION": " !D! ダメージを与える。 NL 廃棄 した 状態異常 の数だけ繰り返す。",
+    "EXTENDED_DESCRIPTION": [
+    " !D! ダメージを与える。 NL 廃棄 した 状態異常 の数だけ繰り返す。 (",
+      ")."
+]
   },
   "bronze:SpaghettiCode": {
     "NAME": "スパゲティコード",
@@ -513,8 +516,8 @@
   },
   "bronze:Virus": {
     "NAME": "ウィルス",
-    "DESCRIPTION": "保留 NL !D! ダメージを与える。 NL 手札のカードを全て *マイナービーム に *変換 する。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "保留 NL !D! ダメージを与える。 NL 手札のカードを全て *マイナービーム+ に *変換 する。 NL 廃棄"
+    "DESCRIPTION": "保留 NL !D! ダメージを与える。 NL 手札のカードを全て捨て、捨てた枚数と同じだけ *マイナービーム を手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "保留 NL !D! ダメージを与える。 NL 手札のカードを全て捨て、捨てた枚数と同じだけ *マイナービーム+ を手札に加える。 NL 廃棄"
   },
   "bronze:WhirlingStrike": {
     "NAME": "ピアッシングショット",

@@ -35,8 +35,8 @@ public class Antidote extends AbstractDownfallCard {
     }
 
     public void upp () {
-        upgradeMagicNumber(3);
-//        upgradeBaseCost(0);
+        //upgradeMagicNumber(3);
+        upgradeBaseCost(0);
     }
 
     static {

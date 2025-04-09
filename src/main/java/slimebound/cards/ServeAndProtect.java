@@ -21,6 +21,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.TendrilFlailAction;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
@@ -55,6 +56,7 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
         baseMagicNumber = magicNumber = 1;
         baseBlock = block = 10;
         this.exhaust = true;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         SlimeboundMod.loadJokeCardImage(this, "ServeAndProtect.png");
 
     }

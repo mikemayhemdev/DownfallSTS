@@ -416,7 +416,7 @@
     "NAME": "尖锐碎片",
     "FLAVOR": "曾经破碎的雕像 - 如今打造成了武器。",
     "DESCRIPTIONS": [
-      "战斗开始时，将一张 #y染血牺牲 加入手牌。"
+      "在Boss战与精英战中，每当你打出 #b1 张 #y能力牌 时，获得 #b1 点 #y力量 。."
     ]
   },
   "downfall:RedIOU": {
@@ -466,6 +466,13 @@
       "首领战斗开始时，获得 #b1 点 #y敏捷 。"
     ]
   },
+  "downfall:BurdenOfKnowledge": {
+    "NAME": "智慧的重担",
+    "FLAVOR": "真相是伤人的。",
+    "DESCRIPTIONS": [
+      "拾起时， #r失去所有腐化之心的祝福 及 #b10 点最大生命。升级所有牌（包含藏品牌）。战斗开始时失去 #b1 点 #y力量 和 #y敏捷 。"
+    ]
+  },
   "downfall:TeleportStone": {
     "NAME": "传送石",
     "FLAVOR": "出门必备。",
@@ -483,11 +490,19 @@
       "这个遗物的效果已经耗尽。"
     ]
   },
-    "downfall:Hecktoplasm": {
+  "downfall:Hecktoplasm": {
     "NAME": "幽魂外质",
     "FLAVOR": "这团黏液似乎伴随着数百簇灵魂的能量潮动，难怪没人想要。",
     "DESCRIPTIONS": [
       "回合开始时获得 [E] 。你不再能获得 #y灵魂 ，但打碎钥匙碎片将不消耗 #y灵魂 。"
+    ]
+  },
+  "downfall:BlackCandle": {
+    "NAME": "黑蜡烛",
+    "FLAVOR": "火焰在黑暗中闪烁得更加耀眼。",
+    "DESCRIPTIONS": [
+      "#y不能被打出 的 #r诅咒牌 现在可以被打出。打出 #y不能被打出 的 #r诅咒牌 会让你失去 #b1 点生命并将其 #y消耗 。",
+      "黑蜡烛"
     ]
   },
   "downfall:replacements": {
@@ -520,22 +535,28 @@
       "#pRight #pClick: Play the next card."
     ]
   },
-  "downfall:ExtraCursedBell": {
-    "NAME": "召唤铃铛",
-    "FLAVOR": "这个黑铁铃铛在你找到它时作响了3次，但现在它已经不再响了。",
+  "downfall:ExtraCursedKey": {
+    "NAME": "恶咒钥匙",
+    "FLAVOR": "还是别探究它锁上了什么。",
     "DESCRIPTIONS": [
-      "拾起时，获得 #b2 张独特的 #r诅咒 与 #b3 件 #y遗物 。",
+      "每回合首次抽到 #r诅咒牌 时获得 [E] 。 打开非首领宝箱时，获得 #b1 张 #r受伤 。"
+    ]
+  },
+  "downfall:ExtraCursedBell": {
+    "NAME": "厉鬼铃铛",
+    "FLAVOR": "你感觉听到了铃铛的回响，但你无从确认。",
+    "DESCRIPTIONS": [
+      "拾起时，获得一个独特的 #r诅咒 和 #b3 件 #y普通遗物 。",
       "铃铛再次鸣响……",
       "跳过奖励",
       "关闭"
     ]
   },
-  "downfall:ExtraCursedKey": {
-    "NAME": "恶咒钥匙",
-    "FLAVOR": "你能感到这把钥匙上散发出邪恶的能量。力量总是需要付出代价的。",
+  "champ:BustedCrownGagText": {
+    "NAME": "破碎金冠",
+    "FLAVOR": "仿制是最真挚的奉承……吗？这看起来不像你的金冠，更像对你的羞辱。",
     "DESCRIPTIONS": [
-      "回合开始时获得 [E] 。 NL 打开非首领宝箱时，随机获得 #b2 张 #r诅咒 。",
-      ""
+      "在每回合开始时获得 [E] 。在卡牌奖励画面，可供选择的牌数减少 #b2 张。"
     ]
   }
 }

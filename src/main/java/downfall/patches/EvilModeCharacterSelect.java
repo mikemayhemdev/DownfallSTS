@@ -101,25 +101,25 @@ public class EvilModeCharacterSelect {
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
                                 villainOptions[4] = o;
-                            } else if (o.c.chosenClass == GremlinEnum.GREMLIN) {
-                                if (UnlockTracker.isCharacterLocked("Gremlin")) {
-                                    o.locked = true;
-                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                                }
-                                villainOptions[5] = o;
-                            } else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
-                                if (UnlockTracker.isCharacterLocked("Snecko")) {
-                                    o.locked = true;
-                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                                }
-                                villainOptions[6] = o;
                             } else if (o.c.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
                                 if (UnlockTracker.isCharacterLocked("Collector")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
+                                villainOptions[5] = o;
+                            } else if (o.c.chosenClass == GremlinEnum.GREMLIN) {
+                                if (UnlockTracker.isCharacterLocked("Gremlin")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[6] = o;
+                            } else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
+                                if (UnlockTracker.isCharacterLocked("Snecko")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
                                 villainOptions[7] = o;
-                            } else {
+                            }  else {
                                 isVillain = false;
                                 moddedOptions.add(o);
                             }

@@ -33,12 +33,12 @@
   },
   "Slimebound:Overexert": {
     "NAME": "超负荷",
-    "DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL 两回合后， NL slimeboundmod:吸收 所有史莱姆。",
-    "UPGRADE_DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL slimeboundmod:命令 两次。 NL 两回合后， NL slimeboundmod:吸收 所有史莱姆。"
+    "DESCRIPTION": "获得 5 点 slimeboundmod:潜力 。 NL !M! 回合后， NL slimeboundmod:吸收 所有史莱姆。",
+    "UPGRADE_DESCRIPTION": "获得 5 点 slimeboundmod:潜力 。 NL slimeboundmod:命令 2次。 NL !M! 两回合后， NL slimeboundmod:吸收 所有史莱姆。"
   },
   "Slimebound:Split": {
     "NAME": "分裂",
-    "DESCRIPTION": "随机 slimeboundmod:分裂 一只史莱姆。"
+    "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:游击史莱姆 。 NL slimeboundmod:命令 。"
   },
   "Slimebound:LeadByExample": {
     "NAME": "身先士卒",
@@ -77,8 +77,8 @@
   },
   "Slimebound:OozeBath": {
     "NAME": "黏液浴",
-    "DESCRIPTION": "敌方回合开始时， NL 给予目标 !M! 层 slimeboundmod:黏液 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将一名敌人的 slimeboundmod:黏液 变为三倍。 NL 消耗 。"
+    "DESCRIPTION": "目标敌人回合开始时， NL 获得 !slime! 层 slimeboundmod:黏液 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将敌人的 slimeboundmod:黏液 变为三倍。 NL 消耗 。"
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "黏性尖刺",
@@ -110,8 +110,8 @@
     ]
   },
   "Slimebound:FormOfPuddle": {
-    "NAME": "化为泥淖",
-    "DESCRIPTION": "获得1层 无实体 。 NL 消耗 。"
+    "NAME": "黏池之影",
+    "DESCRIPTION": "虚无 。 NL 获得1层 无实体 。 NL 消耗 。"
   },
   "Slimebound:GrowthPunch": {
     "NAME": "成长拳",
@@ -167,8 +167,8 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "强攻",
-    "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ： slimeboundmod:命令 1次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ： slimeboundmod:命令 2次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:命令 1次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:命令 2次。"
   },
   "Slimebound:TongueLash": {
     "NAME": "舌鞭",
@@ -184,8 +184,8 @@
     "DESCRIPTION": "给予 slimeboundmod:黏液 时， NL 额外给予 !M! 层 。"
   },
   "Slimebound:FirmFortitude": {
-    "NAME": "软化",
-    "DESCRIPTION": "力量 小于0时 不能被打出 。 NL 失去 2 点 力量 。 NL 获得 !M! 点 slimeboundmod:潜力 。"
+    "NAME": "清算",
+    "DESCRIPTION": "失去 2 点 力量 。 NL 获得 !M! 点 slimeboundmod:潜力 。"
   },
   "Slimebound:WasteNot": {
     "NAME": "别浪费",
@@ -305,23 +305,23 @@
   },
   "Slimebound:SplitBruiser": {
     "NAME": "分裂：好斗",
-    "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:好斗史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:好斗史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。"
+    "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:好斗史莱姆 。 NL slimeboundmod:命令 !M! 次。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:好斗史莱姆 。 NL slimeboundmod:命令 3次。"
   },
   "Slimebound:SplitLeeching": {
     "NAME": "分裂：水蛭",
-    "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:水蛭史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:水蛭史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。"
+    "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:水蛭史莱姆 。 NL slimeboundmod:命令 !M! 次。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:水蛭史莱姆 。 NL slimeboundmod:命令 3次。"
   },
   "Slimebound:SplitAcid": {
     "NAME": "分裂：游击",
-    "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:游击史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:游击史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。"
+    "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:游击史莱姆 。 NL slimeboundmod:命令 !M! 次。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:游击史莱姆 。 NL slimeboundmod:命令 3次。"
   },
   "Slimebound:SplitMire": {
     "NAME": "分裂：污泥",
-    "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:污泥史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:污泥史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。"
+    "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:污泥史莱姆 。 NL slimeboundmod:命令 !M! 次。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:污泥史莱姆 。 NL slimeboundmod:命令 3 次。"
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "分裂：专家",
@@ -348,8 +348,8 @@
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "一二连击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:分裂 时， NL 本牌从弃牌堆返回手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:命令 。 NL slimeboundmod:分裂 时， NL 本牌从弃牌堆返回手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:命令 。 NL slimeboundmod:分裂 时， NL 本牌从弃牌堆返回手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:命令 2次。 NL slimeboundmod:分裂 时， NL 本牌从弃牌堆返回手牌。"
   },
   "Slimebound:ForwardTackle": {
     "NAME": "进军冲撞",

@@ -40,7 +40,7 @@ public class ShadowShivPower extends AbstractGremlinPower {
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK && !card.exhaust) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Shiv(), this.amount));
+            AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(new Shiv(), this.amount));
             this.flash();
         }
     }

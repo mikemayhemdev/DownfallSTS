@@ -51,7 +51,7 @@ public class SealSealReward extends CustomReward {
         dic.put(6, new FifthSeal());
         while(true) {
             int roll = cardRng.random(sum);
-            System.out.println("Rolled on seal geenration: " + roll);
+            System.out.println("Rolled on seal generation: " + roll);
             for (int i = 1; i <= 6; i++) {
                 progress += HexaMod.seal_weight[i];
                 if (roll <= progress) {

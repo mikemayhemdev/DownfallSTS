@@ -46,9 +46,10 @@ public class FastForward extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            selfRetain = true;
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+//            selfRetain = true;
+//            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+//            this.initializeDescription();
+            upgradeBaseCost(0);
         }
     }
 

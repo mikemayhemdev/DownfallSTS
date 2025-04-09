@@ -1,6 +1,7 @@
 package downfall.ui.campfire;
 
 import basemod.ReflectionHacks;
+import champ.relics.DeflectingBracers;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -14,16 +15,13 @@ import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import downfall.downfallMod;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
-import downfall.relics.HeartBlessingBlue;
-import downfall.relics.HeartBlessingGreen;
-import downfall.relics.HeartBlessingRed;
+import downfall.relics.*;
 import downfall.util.TextureLoader;
 import downfall.vfx.campfire.BustKeyEffect;
 
 public class BustKeyOption extends AbstractCampfireOption {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("BustKeyButton"));
     public static final String[] TEXT = uiStrings.TEXT;
-    private static final int MAXHP_INC = 10;
     private Keys key;
     private boolean used;
     private boolean hacked;
@@ -36,7 +34,7 @@ public class BustKeyOption extends AbstractCampfireOption {
 
     public BustKeyOption(Keys key) {
         this.key = key;
-        if (AbstractDungeon.player.hasRelic(Ectoplasm.ID)) soulToCost = 0;
+        if (AbstractDungeon.player.hasRelic(Ectoplasm.ID) || AbstractDungeon.player.hasRelic(Hecktoplasm.ID)) soulToCost = 0;
         if (AbstractDungeon.player.gold < soulToCost) {
             this.usable = false;
             updateImage(key);
@@ -48,7 +46,7 @@ public class BustKeyOption extends AbstractCampfireOption {
 
 
     public void updateImage(Keys key) {
-        if (AbstractDungeon.player.hasRelic(Ectoplasm.ID)) {
+        if (AbstractDungeon.player.hasRelic(Ectoplasm.ID) || AbstractDungeon.player.hasRelic(Hecktoplasm.ID)) {
             this.description = TEXT[10];
         } else {
             this.description = TEXT[3];
@@ -163,21 +161,40 @@ public class BustKeyOption extends AbstractCampfireOption {
             AbstractDungeon.effectList.add(new BustKeyEffect());
             AbstractPlayer p = AbstractDungeon.player;
             p.loseGold(soulToCost);
+            if (soulToCost == 0) {
+
+                if (AbstractDungeon.player.hasRelic(Hecktoplasm.ID)) {
+                    AbstractDungeon.player.getRelic(Hecktoplasm.ID).flash();
+                    System.out.println("Saved Souls with Hecktoplasm.");
+                }
+
+                if (AbstractDungeon.player.hasRelic(Ectoplasm.ID)) {
+                    AbstractDungeon.player.getRelic(Ectoplasm.ID).flash();
+                    System.out.println("Saved Souls with Ectoplasm.");
+                }
+
+            }
             this.used = true;
             this.usable = false;
             switch (key) {
                 case SAPPHIRE:
                     AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(p, true);
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingBlue());
+                    if (!AbstractDungeon.player.hasRelic(BurdenOfKnowledge.ID)) {
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingBlue());
+                    }
                     break;
                 case EMERALD:
                     AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(p, true);
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingGreen());
+                    if (!AbstractDungeon.player.hasRelic(BurdenOfKnowledge.ID)) {
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingGreen());
+                    }
                     break;
                 default:
                     AddBustKeyButtonPatches.KeyFields.bustedRuby.set(p, true);
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingRed());
-            }
+                    if (!AbstractDungeon.player.hasRelic(BurdenOfKnowledge.ID)) {
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingRed());
+                    }
+                    }
             updateImage(key);
         }
 

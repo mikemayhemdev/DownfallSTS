@@ -46,6 +46,7 @@ public class Repurpose extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.baseMagicNumber = magicNumber = 2;
         exhaust = true;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         SlimeboundMod.loadJokeCardImage(this, "Repurpose.png");
 
       //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
