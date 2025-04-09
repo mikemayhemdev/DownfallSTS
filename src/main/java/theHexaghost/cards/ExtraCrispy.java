@@ -13,7 +13,7 @@ public class ExtraCrispy extends AbstractHexaCard {
 
     public ExtraCrispy() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 12;
         HexaMod.loadJokeCardImage(this, "ExtraCrispy.png");
     }
 

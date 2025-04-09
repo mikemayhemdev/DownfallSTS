@@ -3,7 +3,7 @@
     "NAME": "Emerald Torch",
     "FLAVOR": "The fires of greed never fade.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add an #yEmber into your hand. The first time you #yExhaust an #yEmber each combat, gain #b1 #ycollector:Reserve [REMOVE_SPACE]."
+      "Start each combat with #b1 #ycollector:Reserve."
     ]
   },
   "collector:PrismaticTorch": {
