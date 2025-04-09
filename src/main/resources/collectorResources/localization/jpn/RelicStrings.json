@@ -1,17 +1,17 @@
 {
   "collector:EmeraldTorch": {
-    "NAME": "エメラルドトーチ",
-    "FLAVOR": "欲望の火が消える事は無い",
+    "NAME": "翠绿火炬",
+    "FLAVOR": "贪婪之火永不灭。",
     "DESCRIPTIONS": [
-      "戦闘開始時、 #y燃え殻 を手札に追加する。各戦闘で初めて #y燃え殻 を #y廃棄 すると、 #b1 #ycollector:リザーブ を得る。"
+      "战斗开始时，获得 #b1 #ycollector:储能 。"
     ]
   },
   "collector:PrismaticTorch": {
-    "NAME": "プリズマティックトーチ",
-    "FLAVOR": "絶え間なく変化する炎は幸運の恵みを映し出す",
+    "NAME": "多彩火炬",
+    "FLAVOR": "各色斑斓的火焰昭示着命运的偏袒。",
     "DESCRIPTIONS": [
-      " ",
-      " [] と置き換える。戦闘開始時、 #y燃え殻 を 2 枚手札に追加する。各ターンで初めて #y燃え殻 を #y廃棄 すると、 #b1 #ycollector:リザーブ を得る。"
+      "替换 ",
+      " 。战斗开始时，获得一张 #y余烬 与 #b1 #ycollector:储能 。每当你 #y消耗 一张 #y余烬 时，获得 #b1 #ycollector:储能 。"
     ]
   },
   "collector:HolidayCoal": {
