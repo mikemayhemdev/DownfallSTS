@@ -3,7 +3,7 @@
     "NAME": "翠绿火炬",
     "FLAVOR": "贪婪之火永不灭。",
     "DESCRIPTIONS": [
-      "战斗开始时，获得一张 #y余烬 。每场战斗首次 #y消耗 一张 #y余烬 时，获得 #b1 #ycollector:储能 。"
+      "战斗开始时，获得 #b1 #ycollector:储能 。"
     ]
   },
   "collector:PrismaticTorch": {
