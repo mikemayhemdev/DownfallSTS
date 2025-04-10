@@ -1,0 +1,110 @@
+{
+  "collector:CollectionReward": {
+    "TEXT": [
+      "Choose a card to Collect."
+    ]
+  },
+  "collector:CollectibleCardTab": {
+    "TEXT": [
+      "Collectible"
+    ]
+  },
+  "collector:CollectionScreen": {
+    "TEXT": [
+      "Hide",
+      "Your Collection starts combat with all cards here."
+    ]
+  },
+  "collector:CollectionUITopPanel": {
+    "TEXT": [
+      "Collection",
+      "View all cards in your Collection.",
+      "These cards start in your Collected pile each combat."
+    ]
+  },
+  "collector:CombatCollectionPileButton": {
+    "TEXT": [
+      "Collected Pile",
+      "This contains the Collected cards you have yet to draw this combat. You draw one card from this at the start of each turn.",
+      "I don't have any Collected cards!"
+    ]
+  },
+  "collector:EssenceCount": {
+    "TEXT": [
+      "Essences",
+      "Spend Essences on adding cards to your Collection. Combat rooms grant #b1 #yEssence. Elites give #b2 #yEssence, Bosses give #b3! NL You have #b",
+      " Essences."
+    ]
+  },
+  "collector:CombatCollectionViewScreen": {
+    "TEXT": [
+      "Combat collection view screen"
+    ]
+  },
+  "collector:PyreInfo": {
+    "TEXT": [
+      "Pyre",
+      "To play this card, pay the additional cost of Exhausting cards from your hand."
+    ]
+  },
+  "collector:CollectedCardMod": {
+    "TEXT": [
+      "collector:Megathereal. NL ",
+      "Collected"
+    ]
+  },
+  "collector:CollectibleCardReward": {
+    "TEXT": [
+      "Collected: ",
+      "You may obtain this"
+    ]
+  },
+  "collector:HoardedMod": {
+    "TEXT": [
+      "Unplayable. Retain. NL ",
+      "Unplayable. NL ",
+      "Retain. NL "
+    ]
+  },
+  "collector:SecondEnergyOrb": {
+    "TEXT": [
+      "Reserves",
+      "A special kind of Energy that persists across turns."
+    ]
+  },
+  "collector:PyreCostSpendScreen": {
+    "TEXT": [
+      "Exhaust for Pyre."
+    ]
+  },
+  "collector:PyreModText": {
+    "TEXT": [
+      "I don't have a card to Exhaust!"
+    ]
+  },
+  "collector:StashAwayCampfireOption": {
+    "TEXT": [
+      "Release",
+      "Remove a Collected Card. Gain ",
+      " Souls.",
+      "Requires a Collected card.",
+      "Select a Collected card to remove."
+    ]
+  },
+  "collector:BonusEventOption": {
+    "TEXT": [
+      "[Take]"
+    ]
+  },
+  "collector:EssenceReward": {
+    "TEXT": [
+      "Gain ",
+      " Essence."
+    ]
+  },
+  "collector:CharacterOption": {
+    "TEXT": [
+      "Essences: "
+    ]
+  }
+}

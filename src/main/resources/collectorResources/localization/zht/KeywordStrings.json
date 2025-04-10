@@ -1,0 +1,46 @@
+[
+  {
+    "PROPER_NAME": "Afflicted",
+    "NAMES": [
+      "afflicted"
+    ],
+    "DESCRIPTION": "Creatures are Afflicted when they are both #yVulnerable and #yWeak."
+  },
+  {
+    "PROPER_NAME": "Doom",
+    "NAMES": [
+      "doom",
+      "doomed"
+    ],
+    "DESCRIPTION": "Doomed creatures lose HP at the start of their turn, then Doom is removed #bunless the creature is #yAfflicted (has both #yWeak and #yVulnerable [REMOVE_SPACE])."
+  },
+  {
+    "PROPER_NAME": "Pyre",
+    "NAMES": [
+      "pyre"
+    ],
+    "DESCRIPTION": "Requires exhausting a card in hand in addition to paying its energy cost."
+  },
+  {
+    "PROPER_NAME": "Reserve",
+    "NAMES": [
+      "reserve",
+      "reserves"
+    ],
+    "DESCRIPTION": "An alternate type of Energy that is stored across turns."
+  },
+  {
+    "PROPER_NAME": "Megathereal",
+    "NAMES": [
+      "megathereal"
+    ],
+    "DESCRIPTION": "Megathereal cards move to the exhaust pile when played and at the end of your turn, no matter where they are."
+  },
+  {
+    "PROPER_NAME": "Torch Head",
+    "NAMES": [
+      "torchhead"
+    ],
+    "DESCRIPTION": "While you have #yTemporary #yHP, each Attack you play triggers Torchhead."
+  }
+]

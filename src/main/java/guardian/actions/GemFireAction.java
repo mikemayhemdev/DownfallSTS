@@ -38,34 +38,34 @@ public class GemFireAction extends AbstractGameAction {
     private int exhaustCount;
     private ArrayList<GuardianMod.socketTypes> shots = new ArrayList<>();
 
-    public GemFireAction(AbstractCreature target, DamageInfo info) {
+    public GemFireAction(AbstractCreature target) {
         this.info = info;
         this.setValues(target, info);
         this.actionType = ActionType.WAIT;
         this.attackEffect = AttackEffect.FIRE;
         this.startingDuration = Settings.ACTION_DUR_FAST;
         this.duration = this.startingDuration;
+        this.target = target;
     }
 
-    public class GemShootEffect extends AbstractGameEffect {
+    public static class GemShootEffect extends AbstractGameEffect {
 
         private GuardianMod.socketTypes gem;
         private float x1, y1, x2, y2, x3, y3, sX, sY, scaleX, scaleY;
         private Color glowColor;
         
-        public GemShootEffect(GuardianMod.socketTypes gem, int hitNo) {
+        public GemShootEffect(GuardianMod.socketTypes gem, int hitNo, AbstractCreature target, int total) {
             this.gem = gem;
             this.color = Color.WHITE.cpy();
             this.duration = this.startingDuration = Settings.FAST_MODE
-                    ? (1.0f + Settings.ACTION_DUR_XFAST * exhaustCount)
-                    : (1.0f + Settings.ACTION_DUR_FAST * exhaustCount);
+                    ? (1.0f + Settings.ACTION_DUR_XFAST * total)
+                    : (1.0f + Settings.ACTION_DUR_FAST * total);
             this.duration += hitNo * (Settings.FAST_MODE ? 0.1 : 0.2);
             sX = x1 = AbstractDungeon.player.hb.cX - AbstractDungeon.player.animX;
             sY = y1 = AbstractDungeon.player.hb.cY - AbstractDungeon.player.animY;
             float theta = MathUtils.random(-1.0f, 1.0f);
             x2 = x1 + MathUtils.sin(theta) * 200 * Settings.xScale;
             y2 = y1 + MathUtils.cos(theta) * 200 * Settings.yScale;
-            AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
             if (target == null) {
                 x3 = Settings.WIDTH * 2;
                 y3 = Settings.HEIGHT / 2f + MathUtils.random(-100f, 100f) * Settings.yScale;
@@ -110,7 +110,7 @@ public class GemFireAction extends AbstractGameAction {
 
         @Override
         public void update() {
-            float deployed = this.startingDuration - 0.25f;
+            float deployed = this.startingDuration - 0.05f;
 
             this.duration -= Gdx.graphics.getDeltaTime();
             this.rotation = this.duration * 1080.0f;
@@ -148,9 +148,7 @@ public class GemFireAction extends AbstractGameAction {
         @Override
         public void update() {
             if (this.duration == this.startDuration) {
-                for (GuardianMod.socketTypes socket : shots) {
-                    addToTop(new DamageRandomEnemyAction(info, AttackEffect.SLASH_DIAGONAL));
-                }
+                //addToTop(new DamageRandomEnemyAction(info, AttackEffect.SLASH_DIAGONAL));
                 this.duration = 0.0f;
                 this.isDone = true;
             }
@@ -168,9 +166,9 @@ public class GemFireAction extends AbstractGameAction {
     public void update() {
 
         if (this.duration == this.startingDuration) {
-            addToTop(new GemFireDamageAction());
+            //addToTop(new GemFireDamageAction());
             addToTop(new AbstractGameAction() {
-                { duration = 0.5f; }
+                { duration = 0.1f; }
                 @Override
                 public void update() {
                     tickDuration();
@@ -179,7 +177,7 @@ public class GemFireAction extends AbstractGameAction {
             this.get_cards();
             int i = 0;
             for (GuardianMod.socketTypes socket : shots) {
-                AbstractDungeon.effectsQueue.add(new GemShootEffect(socket, i++));
+             //   AbstractDungeon.effectsQueue.add(new GemShootEffect(socket, i++, target));
             }
 
         }
@@ -226,7 +224,7 @@ public class GemFireAction extends AbstractGameAction {
     }
 
     private void exhaustCard(CardGroup group, AbstractCard c) {
-        addToTop(new ExhaustGemAction(c, group, exhaustCount));
+       // addToTop(new ExhaustGemAction(c, group, exhaustCount));
     }
 
     public class ExhaustGemAction extends AbstractGameAction {
