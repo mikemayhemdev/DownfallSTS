@@ -1,7 +1,10 @@
 package guardian.cards;
 
+import collector.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -14,6 +17,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.*;
 import downfall.actions.ForceWaitAction;
 import guardian.GuardianMod;
+import guardian.actions.GemFireAction;
 import guardian.actions.ReduceRightMostStasisAction;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
@@ -24,6 +28,7 @@ import sneckomod.SneckoMod;
 import java.util.ArrayList;
 
 import static collector.util.Wiz.applyToEnemy;
+import static collector.util.Wiz.atb;
 
 public class GemFire extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("GemFire");
@@ -49,8 +54,6 @@ public class GemFire extends AbstractGuardianCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-
         // SECOND ARRAY TO AVOID CRASHING
         ArrayList<GuardianMod.socketTypes> tempSockets = new ArrayList<>();
 
@@ -59,6 +62,21 @@ public class GemFire extends AbstractGuardianCard {
         collectSocketsFromGroup(p.drawPile, tempSockets);
         collectSocketsFromGroup(p.discardPile, tempSockets);
         collectSocketsFromStasis(p, tempSockets);
+
+        for (GuardianMod.socketTypes socket : tempSockets) {
+
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new GemFireAction.GemShootEffect(socket,tempSockets.indexOf(socket),m, tempSockets.size()),0.00F));
+
+            //Wiz.atb(new ForceWaitAction(.1F));
+        }
+
+        if (tempSockets.size() > 0){
+            Wiz.atb(new ForceWaitAction(1.25F + 0.05F*tempSockets.size()));
+        }
+
+
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+
 
         // Process sockets (non-SYNTHETIC first, then SYNTHETIC)
         ArrayList<GuardianMod.socketTypes> nonSyntheticSockets = new ArrayList<>();
@@ -74,7 +92,7 @@ public class GemFire extends AbstractGuardianCard {
 
         for (GuardianMod.socketTypes socket : nonSyntheticSockets) {
             processSocket(p, m, socket);
-            AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(0.1F));
+            AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(0.02F));
         }
     }
 

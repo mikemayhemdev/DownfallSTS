@@ -18,6 +18,8 @@ public class Metallicize extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Metallicize");
     private static final CardStrings cardStrings;
 
+
+    //Harden
     public Metallicize() {
         super(ID, cardStrings.NAME, GuardianMod.getResourcePath("cards/Metallicize.png"), 1, cardStrings.DESCRIPTION, CardType.POWER, AbstractCardEnum.GUARDIAN, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = magicNumber = 4;
@@ -31,7 +33,7 @@ public class Metallicize extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            this.upgradeMagicNumber(2);
         }
     }
 
