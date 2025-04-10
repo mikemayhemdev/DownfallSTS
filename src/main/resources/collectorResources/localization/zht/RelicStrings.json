@@ -1,0 +1,125 @@
+{
+  "collector:EmeraldTorch": {
+    "NAME": "Emerald Torch",
+    "FLAVOR": "The fires of greed never fade.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b1 #ycollector:Reserve."
+    ]
+  },
+  "collector:PrismaticTorch": {
+    "NAME": "Prismatic Torch",
+    "FLAVOR": "The ever-changing flames reflect fortune's favor.",
+    "DESCRIPTIONS": [
+      "Replaces ",
+      " [REMOVE_SPACE].[] At the start of each combat, add #b2 #yEmbers into your hand. The first time you #yExhaust an #yEmber each turn, gain #b1 #ycollector:Reserve [REMOVE_SPACE]."
+    ]
+  },
+  "collector:HolidayCoal": {
+    "NAME": "Krampian Coal",
+    "FLAVOR": "\"Intriguing! But why only specific chimneys?\" - Ranwid",
+    "DESCRIPTIONS": [
+      "When you would draw from an empty Collected pile, add a #yLucky #yWick to your hand."
+    ]
+  },
+  "collector:BagOfTricks": {
+    "NAME": "Bag of Tricks",
+    "FLAVOR": "Tricky.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, draw #b",
+      " Collected cards."
+    ]
+  },
+  "collector:JadeRing": {
+    "NAME": "Jade Ring",
+    "FLAVOR": "Jade is the symbol of honesty.",
+    "DESCRIPTIONS": [
+      "Enemies take #b",
+      " more damage from #ycollector:Doom [REMOVE_SPACE]."
+    ]
+  },
+  "collector:SoullitLamp": {
+    "NAME": "Soul-lit Lamp",
+    "FLAVOR": "A ghoulish decoration. The crackles of fire are replaced by buzzing wails.",
+    "DESCRIPTIONS": [
+      "Upon pickup, gain #b3 #yEssence [REMOVE_SPACE]. At the start of combat, add an #yEmber into your hand."
+    ]
+  },
+  "collector:ThimbleHelm": {
+    "NAME": "Thimble Helm",
+    "FLAVOR": "Worn by the Spire's miniest heroes.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b",
+      " #yTemporary_HP [REMOVE_SPACE]. While you have #yTemporary_HP [REMOVE_SPACE], cards grant #b1 additional #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "collector:Incense": {
+    "NAME": "Incense",
+    "FLAVOR": "An antiquated form of mental clarification.",
+    "DESCRIPTIONS": [
+      "You cannot gain #yWeak [REMOVE_SPACE], #yVulnerable or #yFrail while you are #yWeak [REMOVE_SPACE], #yVulnerable or #yFrail [REMOVE_SPACE]."
+    ]
+  },
+  "collector:FuelCanister": {
+    "NAME": "Fuel Canister",
+    "FLAVOR": "Disgusting.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yRetain the lowest-cost card in your hand."
+    ]
+  },
+  "collector:AutoCurser": {
+    "NAME": "Hexx Talisman",
+    "FLAVOR": "\"When I put this on, my rate of toe-stubbing increased drastically. I think it works!\" - Ranwid",
+    "DESCRIPTIONS": [
+      "At the start of combat, apply #b1 #yWeak and #yVulnerable to a random enemy."
+    ]
+  },
+  "collector:Bagpipes": {
+    "NAME": "The Bagpipes",
+    "FLAVOR": "This dreaded instrument is said to have driven Kublai the Great mad.",
+    "DESCRIPTIONS": [
+      "Whenever you apply new #yWeak or #yVulnerable to an enemy, increase the amount applied by #b1 [REMOVE_SPACE]."
+    ]
+  },
+  "collector:BottledCollectible": {
+    "NAME": "Bottled Brain",
+    "FLAVOR": "Collected from a wizard's laboratory.",
+    "DESCRIPTIONS": [
+      "Upon pickup, #yUpgrade a card in your Collection. Start combats with it on top of your Collected pile.",
+      "Start combat with ",
+      " on top of your Collected pile.",
+      "Select a card to bottle for "
+    ]
+  },
+  "collector:TheContract": {
+    "NAME": "The Contract",
+    "FLAVOR": "Sign in blood.",
+    "DESCRIPTIONS": [
+      "Upon pickup, gain #b10 #yEssence [REMOVE_SPACE]."
+    ]
+  },
+  "collector:ForbiddenFruit": {
+    "NAME": "Forbidden Fruit",
+    "FLAVOR": "This species of fruit looks completely unfamiliar.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. Then, obtain a #ySapped [REMOVE_SPACE].",
+      "Choose a Rare card to add to your deck.",
+      "Choose an Uncommon card to add to your deck.",
+      "Choose a Common card to add to your deck."
+    ]
+  },
+  "collector:RoughDiamond": {
+    "NAME": "Rough Diamond",
+    "FLAVOR": "With the mines demolished, even this tarnished stone is valuable.",
+    "DESCRIPTIONS": [
+      "The first time you play a #yRare card each turn, gain [E] . Upon pickup, obtain a #yRare card reward.",
+      "Knowledge!"
+    ]
+  },
+  "collector:BlockedChakra": {
+    "NAME": "Blocked Chakra",
+    "FLAVOR": "One pulled muscle is all it takes.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. You don't draw from your Collected pile until your 4th turn."
+    ]
+  }
+}

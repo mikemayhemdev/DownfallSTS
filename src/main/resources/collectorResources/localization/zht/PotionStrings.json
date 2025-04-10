@@ -1,0 +1,36 @@
+{
+  "collector:MiniCursePotion": {
+    "NAME": "Soul Extract",
+    "DESCRIPTIONS": [
+      "Apply #b1 #yWeak, #b1 #yVulnerable, and #b6 #yDoom.",
+      "Apply #b",
+      " #yWeak, #b",
+      " #yVulnerable, and #b",
+      " #yDoom [REMOVE_SPACE]."
+    ]
+  },
+  "collector:ReservePotion": {
+    "NAME": "Reserve Potion",
+    "DESCRIPTIONS": [
+      "Gain #b2 #yReserve.",
+      "Gain #b",
+      " #yReserve [REMOVE_SPACE]."
+    ]
+  },
+  "collector:DebuffDoublePotion": {
+    "NAME": "Embalming Oils",
+    "DESCRIPTIONS": [
+      "Double the target's debuffs.",
+      "Multiply the target's debuffs by #b",
+      "."
+    ]
+  },
+  "collector:TempHPPotion": {
+    "NAME": "Felwater",
+    "DESCRIPTIONS": [
+      "Gain #b8 #yTemp. #yHP.",
+      "Gain #b",
+      " #yTemp. #yHP [REMOVE_SPACE]."
+    ]
+  }
+}
