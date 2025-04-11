@@ -208,7 +208,7 @@
   },
   "Guardian:StasisField": {
     "NAME": "정지장 방어막",
-    "DESCRIPTION": "방어도를 !B! 만큼 3번 얻습니다. NL 이 카드를 guardianmod:정지장에 넣습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이 카드를 guardianmod:정지장에 넣습니다."
   },
   "Guardian:Metallicize": {
     "NAME": "경화",
@@ -287,8 +287,7 @@
   },
   "Guardian:ExploitGems": {
     "NAME": "보석 활용",
-    "DESCRIPTION": "카드를 1장 뽑습니다. NL guardianmod:째깍할 때 이 카드를 사용합니다. NL guardianmod:불안정.",
-    "UPGRADE_DESCRIPTION": " [E] 를 얻습니다. NL 카드를 1장 뽑습니다."
+    "DESCRIPTION": "카드를 1장 뽑습니다."
   },
   "Guardian:RefractedBeam": {
     "NAME": "굴절 광선",

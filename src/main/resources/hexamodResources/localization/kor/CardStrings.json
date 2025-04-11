@@ -456,8 +456,8 @@
   },
   "hexamod:OpposingAction": {
     "NAME": "반발",
-    "DESCRIPTION": "hexamod:수축합니다. NL [E] 를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "hexamod:수축합니다. NL [E] [E] 를 얻습니다. NL 소멸."
+    "DESCRIPTION": "hexamod:수축합니다. NL [E] [E] 를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "hexamod:수축합니다. NL [E] [E] [E] 를 얻습니다. NL 소멸."
   },
   "hexamod:SeventhEye": {
     "NAME": "일곱 번째 눈",

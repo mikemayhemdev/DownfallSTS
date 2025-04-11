@@ -1,7 +1,7 @@
 {
   "sneckomod:Blunderbus": {
     "NAME": "어쩌다 한 탕",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 손에 비용이 3 이상인 카드가 있다면 피해를 1번 추가로 줍니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 손에 비용이 3 이상인 카드 하나당 반복합니다."
   },
   "sneckomod:Tsunami": {
     "NAME": "해일",
@@ -248,10 +248,10 @@
   },
   "sneckomod:ToothAndClaw": {
     "NAME": "사력",
-    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 손에 있는 무색, 직업 카드 종류 하나당 단도 를 얻습니다. NL sneckomod:선물: 특별 카드.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 손에 있는 무색, 직업 카드 종류 하나당 강화된 단도 를 얻습니다. NL sneckomod:선물: 특별 카드.",
-    "DESCRIPTION_BATTLE": "피해를 !D! 줍니다. 이번 턴에 손에 있는 무색, 직업 카드 종류 하나당 단도 를 얻습니다.",
-    "UPGRADE_DESCRIPTION_BATTLE": "피해를 !D! 줍니다. 이번 턴에 손에 있는 무색, 직업 카드 종류 하나당 강화된 단도 를 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 손에 있는 무색, 직업 카드 종류 하나당 단도 를 얻습니다. NL sneckomod:선물: 특별 카드.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 손에 있는 무색, 직업 카드 종류 하나당 강화된 단도 를 얻습니다. NL sneckomod:선물: 특별 카드.",
+    "DESCRIPTION_BATTLE": "피해를 !D! 줍니다. NL 이번 턴에 손에 있는 무색, 직업 카드 종류 하나당 단도 를 얻습니다.",
+    "UPGRADE_DESCRIPTION_BATTLE": "피해를 !D! 줍니다. NL 이번 턴에 손에 있는 무색, 직업 카드 종류 하나당 강화된 단도 를 얻습니다."
   },
   "sneckomod:TyphoonFang": {
     "NAME": "태풍의 송곳니",
