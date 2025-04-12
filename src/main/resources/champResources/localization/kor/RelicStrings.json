@@ -39,7 +39,7 @@
     "NAME": "수비 논문",
     "FLAVOR": "전문가의 조언: 안 맞으면 됩니다.",
     "DESCRIPTIONS": [
-      "#bchamp수비 자세의 #ychamp:마무리 #y추가 #y효과의 #y방어도가 #b4 증가합니다."
+      "#bchamp수비 자세의 #ychamp:마무리 #y추가 #y효과의 #y방어도가 #b3 증가합니다."
     ]
   },
   "champ:DeflectingBracers": {
@@ -98,7 +98,7 @@
     "NAME": "불안한 귀신의 손",
     "FLAVOR": "승리했다면 무언가가 함께하고 있을지도 모릅니다.",
     "DESCRIPTIONS": [
-      "자세를 취할 때마다 #y타격 또는 #y수비 카드를 얻습니다. 그 카드의 비용은 #b0 입니다."
+      "자세를 취할 때마다 #y타격 또는 #y수비의 #ygremlin:메아리를 얻습니다. 그 카드의 비용은 #b0 입니다."
     ]
   },
   "champ:LiftRelic": {
