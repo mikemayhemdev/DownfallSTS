@@ -307,13 +307,13 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "Evasive Protocol",
-    "DESCRIPTION": "Whenever you enter *Defensive *Mode, reduce each of your debuffs by !M!. NL guardianmod:Brace 6.",
-    "UPGRADE_DESCRIPTION": "Whenever you enter *Defensive *Mode, reduce each of your debuffs by !M!. NL guardianmod:Brace 9."
+    "DESCRIPTION": "Whenever you enter *Defensive *Mode, reduce each of your debuffs by !M!. NL guardianmod:Brace !GuardianSecondM!.",
+    "UPGRADE_DESCRIPTION": "Whenever you enter *Defensive *Mode, reduce each of your debuffs by !M!. NL guardianmod:Brace !GuardianSecondM!."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "Spiker Protocol",
-    "DESCRIPTION": "Whenever you enter *Defensive *Mode, gain !M! Thorns. NL guardianmod:Brace 6.",
-    "UPGRADE_DESCRIPTION": "Whenever you enter *Defensive *Mode, gain !M! Thorns. NL guardianmod:Brace 9."
+    "DESCRIPTION": "Whenever you enter *Defensive *Mode, gain !M! Thorns. NL guardianmod:Brace !GuardianSecondM!.",
+    "UPGRADE_DESCRIPTION": "Whenever you enter *Defensive *Mode, gain !M! Thorns. NL guardianmod:Brace !GuardianSecondM!."
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "Armored Protocol (Deprecated card do not TL!)",

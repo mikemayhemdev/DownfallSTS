@@ -298,13 +298,13 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "閃避協議",
-    "DESCRIPTION": "當你進入 guardianmod:防禦模式 時， NL 失去所有負面效果 !M! 層。 NL guardianmod:提防 6。",
-    "UPGRADE_DESCRIPTION": "當你進入 guardianmod:防禦模式 時， NL 失去所有負面效果 !M! 層。 NL guardianmod:提防 9。"
+    "DESCRIPTION": "當你進入 guardianmod:防禦模式 時， NL 失去所有負面效果 !M! 層。 NL guardianmod:提防 !GuardianSecondM!。",
+    "UPGRADE_DESCRIPTION": "當你進入 guardianmod:防禦模式 時， NL 失去所有負面效果 !M! 層。 NL guardianmod:提防 !GuardianSecondM!。"
   },
   "Guardian:SpikerProtocol": {
     "NAME": "荊棘協議",
-    "DESCRIPTION": "當你進入 guardianmod:防禦模式 時， NL 獲得 !M! 層 荊棘 。 NL guardianmod:提防 6。",
-    "UPGRADE_DESCRIPTION": "當你進入 guardianmod:防禦模式 時， NL 獲得 !M! 層 荊棘 。 NL guardianmod:提防 9。"
+    "DESCRIPTION": "當你進入 guardianmod:防禦模式 時， NL 獲得 !M! 層 荊棘 。 NL guardianmod:提防 !GuardianSecondM!。",
+    "UPGRADE_DESCRIPTION": "當你進入 guardianmod:防禦模式 時， NL 獲得 !M! 層 荊棘 。 NL guardianmod:提防 !GuardianSecondM!。"
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "裝甲協議",

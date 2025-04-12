@@ -6,7 +6,7 @@
 
   "Gremlin:ArmsTheft": {
     "NAME": "소매 치기",
-    "DESCRIPTION": "적의 힘을 !M! gremlin:강탈합니다. NL 소멸."
+    "DESCRIPTION": "약화를 !M! 부여합니다. NL 적의 힘을 !M! gremlin:강탈합니다. NL 소멸."
   },
 
   "Gremlin:Astound": {
@@ -64,8 +64,7 @@
 
   "Gremlin:CounterStrike": {
     "NAME": "반사 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 공격할 의도가 있다면 *수호를 !M! 장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 적이 공격할 의도가 있다면 *수호+를 !M! 장 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 공격할 의도가 있다면 선두에 있는 그렘린의 고유 효과를 !M! 번 발동시킵니다."
   },
 
   "Gremlin:CowerChoice": {
@@ -108,7 +107,7 @@
 
   "Gremlin:Encore": {
     "NAME": "앙코르",
-    "DESCRIPTION": "gremlin:마법을 3 얻습니다. NL gremlin:마법을 소모할 때마다 적 전체에게 피해를 !M! 줍니다."
+    "DESCRIPTION": "gremlin:마법을 3 얻습니다. NL gremlin:마법을 소모할 때 피해량을 !M! 증가시킵니다."
   },
 
   "Gremlin:Enthusiasm": {
@@ -123,7 +122,7 @@
 
   "Gremlin:Exacerbate": {
     "NAME": "악화",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL gremlin:무력화를 부여합니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 공격한 대상에게 약화를 부여할 때마다 대상은 체력을 !M! 잃습니다. NL 소멸."
   },
 
   "Gremlin:FairyDust": {
@@ -192,7 +191,8 @@
 
   "Gremlin:GremlinArms": {
     "NAME": "그렘린 무기",
-    "DESCRIPTION": "무작위 단도 또는 *수호를 !M! 장 얻습니다."
+    "DESCRIPTION": "선두에 있는 그렘린의 효과를 발동시킵니다. 살아있는 그렘린 중 선택해 gremlin:교체합니다.",
+    "UPGRADE_DESCRIPTION": "선두에 있는 그렘린의 효과를 2번 발동시킵니다. 살아있는 그렘린 중 선택해 gremlin:교체합니다."
   },
 
   "Gremlin:GremlinMeal": {
@@ -216,7 +216,7 @@
 
   "Gremlin:GremlinToss": {
     "NAME": "그렘린 던지기",
-    "DESCRIPTION": "현재 방어도 와 gremlin:임시_체력만큼 피해를 줍니다.",
+    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL 현재 방어도 와 gremlin:임시_체력만큼 피해를 줍니다.",
     "UPGRADE_DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL 현재 방어도와 gremlin:임시_체력만큼 피해를 줍니다.",
     "EXTENDED_DESCRIPTION": [" NL (피해를 !D! 줍니다.)"]
   },
@@ -254,7 +254,7 @@
 
   "Gremlin:Kablamo": {
     "NAME": "멋져!",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 이 공격은 gremlin:마법을 소모하지 않습니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 2번 줍니다. NL 이 공격은 gremlin:마법을 소모하지 않습니다."
   },
 
   "Gremlin:LeaderChoice": {
@@ -308,7 +308,7 @@
 
   "Gremlin:Pickpocket": {
     "NAME": "슬쩍하기",
-    "DESCRIPTION": "모든 인공물을 gremlin:강탈합니다. NL 피해를 !D! 줍니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상의 힘을 이번 턴 동안 !M! 만큼 2번 감소시킵니다. NL 골드를 !blamage! 얻습니다. NL 소멸."
   },
 
   "Gremlin:PinNeedle": {
@@ -340,7 +340,7 @@
 
   "Gremlin:Pretaliation": {
     "NAME": "선제 공격",
-    "DESCRIPTION": "적이 공격할 의도가 있다면 피해를 !D! 줍니다. NL 적이 공격할 의도가 없다면 피해를 !blamage! 줍니다."
+    "DESCRIPTION": "피해를 !D! 만큼 2번 줍니다. NL 적이 공격할 의도가 있다면 피해를 !D! 줍니다."
   },
 
   "Gremlin:ProperTools": {
@@ -382,8 +382,8 @@
 
   "Gremlin:SecondVolley": {
     "NAME": "다음 일제 사격",
-    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 카드 한 장당 단도를 손이 가득찰 때까지 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 카드 한 장당 강화된 단도를 가득찰 때까지 얻습니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 카드 한 장당 단도를 손이 가득찰 때까지 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 카드 한 장당 강화된 단도를 가득찰 때까지 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (카드를 ",
       " 장 사용했습니다.)",
@@ -452,8 +452,8 @@
 
   "Gremlin:Tadah": {
     "NAME": "이제 간다!",
-    "DESCRIPTION": "무작위 스킬 카드의 gremlin:메아리를 1장 얻습니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다.",
-    "UPGRADE_DESCRIPTION": "무작위 강화된 스킬 카드의 gremlin:메아리를 1장 얻습니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다."
+    "DESCRIPTION": "*수호를 얻습니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다.",
+    "UPGRADE_DESCRIPTION": "강화된 *수호를 얻습니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:TagTeam": {
