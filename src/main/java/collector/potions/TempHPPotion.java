@@ -52,13 +52,6 @@ public class TempHPPotion extends CustomPotion {
             CardCrawlGame.sound.play("HEAL_3");
         }
 
-        float    X_JITTER = 120.0F * Settings.scale;
-        float    Y_JITTER = 120.0F * Settings.scale;
-        float    OFFSET_Y = -50.0F * Settings.scale;
-
-        for(int i = 0; i < 18; ++i) {
-            AbstractDungeon.effectsQueue.add(new HealVerticalLineEffect((AbstractDungeon.player.hb.cX + MathUtils.random(-X_JITTER * 1.5F, X_JITTER * 1.5F)),  target.hb.cY + OFFSET_Y + MathUtils.random(-Y_JITTER, Y_JITTER)));
-        }
         atb(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, potency));
     }
 
