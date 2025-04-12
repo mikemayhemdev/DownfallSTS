@@ -308,13 +308,13 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "回避プロトコル",
-    "DESCRIPTION": " *ディフェンシブモード に入るたびに、 各デバフが !M! 減少する。 NL  guardianmod:制動 6",
-    "UPGRADE_DESCRIPTION": " *ディフェンシブモード に入るたびに、 各デバフが !M! 減少する。 NL  guardianmod:制動 9"
+    "DESCRIPTION": " *ディフェンシブモード に入るたびに、 各デバフが !M! 減少する。 NL  guardianmod:制動 !GuardianSecondM!",
+    "UPGRADE_DESCRIPTION": " *ディフェンシブモード に入るたびに、 各デバフが !M! 減少する。 NL  guardianmod:制動 !GuardianSecondM!"
   },
   "Guardian:SpikerProtocol": {
     "NAME": "反撃プロトコル",
-    "DESCRIPTION": " *ディフェンシブモード に入るたびに、 トゲ !M! を得る。 NL ターン開始時 guardianmod:制動 6",
-    "UPGRADE_DESCRIPTION":" *ディフェンシブモード に入るたびに、 トゲ !M! を得る。 NL ターン開始時 guardianmod:制動 9"
+    "DESCRIPTION": " *ディフェンシブモード に入るたびに、 トゲ !M! を得る。 NL ターン開始時 guardianmod:制動 !GuardianSecondM!",
+    "UPGRADE_DESCRIPTION":" *ディフェンシブモード に入るたびに、 トゲ !M! を得る。 NL ターン開始時 guardianmod:制動 !GuardianSecondM!"
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "防御プロトコル",

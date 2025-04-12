@@ -34,7 +34,7 @@ public class EvasiveProtocol extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int DEX = 1;
-    private static final int BRACE_PER_TURN = 3;
+    private static final int BRACE_PER_TURN = 6;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -69,13 +69,13 @@ public class EvasiveProtocol extends AbstractGuardianCard {
         }
 
         if (!this.upgraded) {
-            brace(6);
-            mods = 6;
+            brace(secondaryM);
+            mods = secondaryM;
         }
 
         if (this.upgraded) {
-            brace(9);
-            mods = 9;
+            brace(secondaryM);
+            mods = secondaryM;
         }
 
 
@@ -86,8 +86,8 @@ public class EvasiveProtocol extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EvasiveProtocolPower(p, magicNumber)));
 
         //  if (((moda - mods) <= 0)) {
-       //     AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));
-      //  }
+        //     AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));
+        //  }
 
         //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BracePerTurnPower(p, this.secondaryM)));
     }
@@ -100,20 +100,8 @@ public class EvasiveProtocol extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            updateDescription();
+            upgradeSecondaryM(3);
         }
-    }
-
-    public void updateDescription() {
-        if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
-            } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
-            }
-        }
-        this.initializeDescription();
     }
 }
 

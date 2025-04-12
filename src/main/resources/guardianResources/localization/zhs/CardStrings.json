@@ -298,8 +298,8 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "闪避协议",
-    "DESCRIPTION": "当你进入 guardianmod:防御模式 时， NL 失去所有负面效果 !M! 层。 NL guardianmod:提防 6。",
-    "UPGRADE_DESCRIPTION": "当你进入 guardianmod:防御模式 时， NL 失去所有负面效果 !M! 层。 NL guardianmod:提防 9。"
+    "DESCRIPTION": "当你进入 guardianmod:防御模式 时， NL 失去所有负面效果 !M! 层。 NL guardianmod:提防 !GuardianSecondM!。",
+    "UPGRADE_DESCRIPTION": "当你进入 guardianmod:防御模式 时， NL 失去所有负面效果 !M! 层。 NL guardianmod:提防 !GuardianSecondM!。"
   },
   "Guardian:SpikerProtocol": {
     "NAME": "荆棘协议",
