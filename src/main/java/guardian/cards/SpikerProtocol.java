@@ -101,6 +101,7 @@ public class SpikerProtocol extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_THORNS);
+            upgradeSecondaryM(3);
         }
     }
 
