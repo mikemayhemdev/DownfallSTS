@@ -162,7 +162,7 @@ import static reskinContent.reskinContent.unlockAllReskin;
 public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, AddAudioSubscriber, RenderSubscriber, PostDeathSubscriber {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = false;
+    public static final boolean STEAM_MODE = true;
 
     public static boolean neowtextoverride = false;
 
@@ -249,7 +249,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
              Settings.GameLanguage.JPN,
          //   Settings.GameLanguage.KOR,
        //     Settings.GameLanguage.FRA,
-            Settings.GameLanguage.ZHT,
+//            Settings.GameLanguage.ZHT,
       //      Settings.GameLanguage.RUS,
         //    Settings.GameLanguage.PTB
     };

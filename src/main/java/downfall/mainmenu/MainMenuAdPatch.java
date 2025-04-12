@@ -59,6 +59,9 @@ public class MainMenuAdPatch {
     private static ArrayList<MainMenuAdInfo> ads = new ArrayList<>();
 
     static {
+        // Star of Providence Info
+        ads.add(new MainMenuAdInfo("", "", "", "", "", "", "https://store.steampowered.com/app/603960/Star_of_Providence/", TextureLoader.getTexture("downfallResources/images/menustuff/"+ TalesAndTacticsPopup.langFolder() +"/menuSOP.png")));
+
         // T9 Game Info
         ads.add(new MainMenuAdInfo("", "", "", "", "", "", "https://store.steampowered.com/app/1652250/Tales__Tactics/", TextureLoader.getTexture("downfallResources/images/menustuff/" + TalesAndTacticsPopup.langFolder() + "/menuTNT.png")));
         // STS Modding Info
@@ -223,10 +226,10 @@ public class MainMenuAdPatch {
                 btnTint.a = 0.25F;
                 if (InputHelper.justClickedLeft) {
                     CardCrawlGame.sound.play("UI_CLICK_1");
-                    if (advert.current == ads.get(0)) {
-                        advert.current = ads.get(1);
-                    } else {
+                    if (advert.current == ads.get(2)) {
                         advert.current = ads.get(0);
+                    } else {
+                        advert.current = ads.get(ads.indexOf(advert.current) + 1);
                     }
                 }
             } else {

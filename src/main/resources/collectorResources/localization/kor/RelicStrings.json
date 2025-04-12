@@ -11,7 +11,7 @@
     "FLAVOR": "행운의 은총처럼 타오르는 변화무쌍한 불꽃입니다.",
     "DESCRIPTIONS": [
       "",
-      "과 교체합니다.[] 전투 시작 시 #y불씨를 얻고 #ycollector:비축을 #b1 얻습니다. 매 턴 처음으로 #y불씨를 #y소멸시킬 때마다 #ycollector:비축을 #b1 얻습니다."
+      "과 교체합니다.[] 전투 시작 시 #y불씨를 얻고 #ycollector:비축을 #b1 얻습니다. #y불씨를 #y소멸시킬 때마다 #ycollector:비축을 #b1 얻습니다."
     ]
   },
   "collector:HolidayCoal": {

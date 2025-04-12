@@ -46,14 +46,14 @@ public class EndTurnAdvance {
     }
 
     @SpirePatch(
-            clz = GameActionManager.class,
-            method = "callEndOfTurnActions"
+            clz = AbstractRoom.class,
+            method = "endTurn"
     )
     public static class AutoAdvance {
-//        @SpireInsertPatch(
-//                locator = Locator.class
-//        )
-        public static void Postfix(GameActionManager __instance) {
+        @SpireInsertPatch(
+                locator = Locator.class
+        )
+        public static void Insert(AbstractRoom __instance) {
             if (HexaMod.renderFlames) {
                 if (GhostflameHelper.activeGhostFlame instanceof MayhemGhostflame)
                     GhostflameHelper.activeGhostFlame.advanceTrigger(null);
@@ -76,11 +76,11 @@ public class EndTurnAdvance {
         }
     }
 
-//    public static class Locator extends SpireInsertLocator {
-//        public int[] Locate(CtBehavior ctMethodToPatch) throws CannotCompileException, PatchingException {
-//            Matcher finalMatcher = new Matcher.MethodCallMatcher(GameActionManager.class, "addToBottom");
-//
-//            return new int[] {LineFinder.findAllInOrder(ctMethodToPatch, new ArrayList<>(), finalMatcher)[1]+1};
-//        }
-//    }
+    public static class Locator extends SpireInsertLocator {
+        public int[] Locate(CtBehavior ctMethodToPatch) throws CannotCompileException, PatchingException {
+            Matcher finalMatcher = new Matcher.MethodCallMatcher(GameActionManager.class, "addToBottom");
+
+            return new int[] {LineFinder.findAllInOrder(ctMethodToPatch, new ArrayList<>(), finalMatcher)[1]+1};
+        }
+    }
 }
