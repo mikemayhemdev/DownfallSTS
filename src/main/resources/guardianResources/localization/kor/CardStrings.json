@@ -307,13 +307,13 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "회피 규약",
-    "DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 모든 해로운 효과를 !M! 감소시킵니다. NL 내 턴 시작 시 guardianmod:대비를 6 합니다.",
-    "UPGRADE_DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 모든 해로운 효과를 !M! 감소시킵니다. NL 내 턴 시작 시 guardianmod:대비를 9 합니다."
+    "DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 모든 해로운 효과를 !M! 감소시킵니다. NL 내 턴 시작 시 guardianmod:대비를 !GuardianSecondM! 합니다.",
+    "UPGRADE_DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 모든 해로운 효과를 !M! 감소시킵니다. NL 내 턴 시작 시 guardianmod:대비를 !GuardianSecondM! 합니다."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "가시 돋친 규약",
-    "DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 가시를 !M! 얻습니다. NL guardianmod:대비를 6 합니다.",
-    "UPGRADE_DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 가시를 !M! 얻습니다. NL guardianmod:대비를 9 합니다."
+    "DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 가시를 !M! 얻습니다. NL guardianmod:대비를 !GuardianSecondM! 합니다.",
+    "UPGRADE_DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 가시를 !M! 얻습니다. NL guardianmod:대비를 !GuardianSecondM! 합니다."
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "무장 규약",
