@@ -3,8 +3,11 @@ package collector.potions;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
+import collector.effects.ColoredSanctityEffect;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -43,6 +46,7 @@ public class TempHPPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
+        atb(new VFXAction(new ColoredSanctityEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.CHARTREUSE.cpy())));
         int roll = MathUtils.random(0, 2);
         if (roll == 0) {
             CardCrawlGame.sound.play("HEAL_1");
