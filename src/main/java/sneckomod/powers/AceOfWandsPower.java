@@ -1,6 +1,7 @@
 package sneckomod.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
+import charbosses.bosses.Merchant.CharBossMerchant;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,7 +9,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.beyond.Transient;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.ShiftingPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.WaveOfTheHandPower;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
@@ -42,8 +46,10 @@ public class AceOfWandsPower extends AbstractPower implements CloneablePowerInte
         if (power.type == PowerType.DEBUFF && !power.ID.equals("Shackled") && source == this.owner && target != this.owner && !target.hasPower("Artifact")) {
             this.flash();
             //patched in old hermit code to prevent wave of the hand softlock
-            addToTop(new AceOfWandsAction(amount));
+            if (!((power.ID.equals(StrengthPower.POWER_ID) && target.hasPower(ShiftingPower.POWER_ID)))) {
+                addToTop(new AceOfWandsAction(amount));
             }
+        }
         }
 
     @Override

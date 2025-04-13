@@ -157,6 +157,7 @@ import java.util.*;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static reskinContent.reskinContent.unlockAllReskin;
+import static sneckomod.OffclassHelper.getARandomOffclass;
 
 @SpireInitializer
 public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, AddAudioSubscriber, RenderSubscriber, PostDeathSubscriber {
@@ -1543,16 +1544,11 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Improvised.ID) || ModHelper.isModEnabled(Improvised.ID)) {
 
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonSkill());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonSkill());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonSkill());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonAttack());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonSkill());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonPower());
-            AbstractDungeon.player.masterDeck.addToTop(new Unknown());
+            for (int i = 0; i < 10; i++) {
+                AbstractCard newCard = getARandomOffclass();
+                AbstractDungeon.player.masterDeck.addToTop(newCard);
+            }
+
         }
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(TooManyShivs.ID) || ModHelper.isModEnabled(TooManyShivs.ID)) {
