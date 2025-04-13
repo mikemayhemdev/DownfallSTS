@@ -24,14 +24,14 @@
     "NAME": "スクラップウーズ",
     "DESCRIPTION": [
       "ターン開始時 #b",
-      " ダメージを与える。 NL 吸収されると復活することがある。"
+      " ダメージを与える。 NL 吸収しても復活させることが出来る。"
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "グリードウーズ",
     "DESCRIPTION": [
       "ターン開始時 #b",
-      " ダメージを与える。 NL 吸収されると復活することがある。"
+      " ダメージを与える。 NL 吸収しても復活させることが出来る。"
     ]
   },
   "Slimebound:TorchHeadSlime": {
@@ -108,7 +108,7 @@
     "DESCRIPTION": [
       "ターン開始時 #b",
       " ダメージを与え、カードを #b",
-      " 枚ドローする。"
+      " 枚ドローする。 この効果は #y効力 で増加しない。"
     ]
   },
   "Slimebound:DarklingSlime": {

@@ -15,7 +15,7 @@
       "advancing",
       "前進"
     ],
-    "DESCRIPTION": "次の ゴーストフレイム に移動する。 ゴーストフレイム の上に移動すると #y消火 される。"
+    "DESCRIPTION": "次の ゴーストフレイム に移動する。 #y点火 状態の ゴーストフレイム の上に移動した場合 #y滅却 される。"
   },
   {
     "PROPER_NAME": "後退",
@@ -25,7 +25,7 @@
       "retracting",
       "後退"
     ],
-    "DESCRIPTION": "前の ゴーストフレイム に移動する。 ゴーストフレイム の上に移動すると #y消火 される。"
+    "DESCRIPTION": "前の ゴーストフレイム に移動する。 #y点火 状態の ゴーストフレイム の上に移動した場合 #y滅却 される。"
   },
   {
     "PROPER_NAME": "火力",
@@ -89,7 +89,7 @@
       "crushing",
       "クラッシング"
     ],
-    "DESCRIPTION": "#yゴーストフレイム 。 #y活性 時にスキルを #b2 回プレイされると、 #y発火 する。 #y発火: ランダムな敵1体に #b3 ダメージを2回与える。",
+    "DESCRIPTION": "#yゴーストフレイム 。 #y活性 時にスキルを #b2 回プレイされると、 #y発火 する。 #y発火: ランダムな敵1体に #b6 ダメージを与える。",
     "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
 
   },
@@ -99,9 +99,17 @@
       "bolstering",
       "ボルスタリング"
     ],
-    "DESCRIPTION": "#yゴーストフレイム 。 #y活性 時にパワーがプレイされると、 #y発火 する。 #y発火: #b4 #yブロック と #y筋力 #b1 を得る。",
+    "DESCRIPTION": "#yゴーストフレイム 。 #y活性 時にパワーがプレイされると、 #y発火 する。 #y発火: #b5 #yブロック と #y筋力 #b1 を得る。",
     "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
-
+  },
+  {
+    "ID": "plated",
+    "PROPER_NAME": "プレートアーマー",
+    "NAMES": [
+      "plated",
+      "プレート"
+    ],
+    "DESCRIPTION": "ターン終了時、自分の #yプレートアーマー と同じ量のブロックを得る。防御しきれなかったダメージを受けると、 #yプレートアーマー が #b1 減少する。"
   },
   {
     "PROPER_NAME": "シーリング",

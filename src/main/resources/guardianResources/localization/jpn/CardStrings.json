@@ -1,11 +1,11 @@
 {
   "Guardian:Strike_Guardian": {
     "NAME": "ストライク",
-    "DESCRIPTION": " !D! ダメージを与える。"
+    "DESCRIPTION": "!D! ダメージを与える。"
   },
   "Guardian:Defend_Guardian": {
     "NAME": "防御",
-    "DESCRIPTION": " !B! ブロックを得る。"
+    "DESCRIPTION": "!B! ブロックを得る。"
   },
   "Guardian:Gem_Red": {
     "NAME": "ルビー",
@@ -52,7 +52,7 @@
   },
   "Guardian:FierceBash": {
     "NAME": "フィアスバッシュ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL guardianmod:停滞 スロットに配置する。 NL guardianmod:チック - このカードのダメージを !M! 増加させる。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL guardianmod:停滞 スロットに配置する。 NL guardianmod:チック - このカードのダメージを !M! 増加させる。"
   },
   "Guardian:PolyBeam": {
     "NAME": "ポリービーム",
@@ -60,12 +60,12 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "ツインスラム",
-    "DESCRIPTION": " !D! ダメージを与える。 NL *セカンドスラム を手札に加える。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL *セカンドスラム+ を手札に加える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL *セカンドスラム を手札に加える。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL *セカンドスラム+ を手札に加える。"
   },
   "Guardian:GuardianWhirl": {
     "NAME": "旋風刃",
-    "DESCRIPTION": "敵全体に !D! ダメージを 2 回与える。 NL 16ブロック以上ある場合、 !M! 回追加する。",
+    "DESCRIPTION": "敵全体に !D! ダメージを 2 回与える。 NL あなたのブロックが16以上なら、更に !M! 回ダメージを与える。",
     "EXTENDED_DESCRIPTION": [
       "もっと ブロック が必要だ。"
     ]
@@ -99,12 +99,12 @@
   },
   "Guardian:OrbSlam": {
     "NAME": "オーブスラム",
-    "DESCRIPTION": " !D! ダメージを !GuardianMulti! 回与える。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを !GuardianMulti! 回与える。 NL 廃棄"
   },
   "Guardian:Incinerate": {
     "NAME": "焼却",
-    "DESCRIPTION": " !D! ダメージを与える。 NL guardianmod:アクセラレート",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL guardianmod:アクセラレート を2回行う"
+    "DESCRIPTION": "!D! ダメージを与える。 NL guardianmod:アクセラレート",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL guardianmod:アクセラレート を2回行う"
   },
   "Guardian:Orbwalk": {
     "NAME": "オーブウォーク",
@@ -113,12 +113,12 @@
   },
   "Guardian:WalkerClaw": {
     "NAME": "ウォーカークロー",
-    "DESCRIPTION": " !D! ダメージを !M! 回与える。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを !M! 回与える。"
+    "DESCRIPTION": "!D! ダメージを !M! 回与える。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを !M! 回与える。"
   },
   "Guardian:SphericShield": {
     "NAME": "球状シールド",
-    "DESCRIPTION": " !B! ブロックを得る。 NL guardianmod:ディフェンシブモード を発動。 NL 廃棄"
+    "DESCRIPTION": "!B! ブロックを得る。 NL guardianmod:ディフェンシブモード を発動。 NL 廃棄"
   },
   "Guardian:Harden": {
     "NAME": "硬化",
@@ -129,8 +129,8 @@
   },
   "Guardian:SentryBeam": {
     "NAME": "セントリーブラスト",
-    "DESCRIPTION": " !D! ダメージを与える。 NL *セントリーウェーブ を guardianmod:停滞 スロットに加える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL *セントリーウェーブ+ を guardianmod:停滞 スロットに加える。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを与える。 NL *セントリーウェーブ を guardianmod:停滞 スロットに加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL *セントリーウェーブ+ を guardianmod:停滞 スロットに加える。 NL 廃棄"
   },
   "Guardian:SentryWave": {
     "NAME": "セントリーウェーブ",
@@ -139,8 +139,8 @@
   },
   "Guardian:CompilePackage": {
     "NAME": "コンパイルパッケージ",
-    "DESCRIPTION": "3枚の guardianmod:パッケージ から 1 枚を得て、 guardianmod:停滞 スロットに加える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "3枚の 強化済み guardianmod:パッケージ から 1 枚を得て、 guardianmod:停滞 スロットに加える。 NL 廃棄",
+    "DESCRIPTION": "guardianmod:パッケージ を選択し、それらを guardianmod:停滞 スロットに置く。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "強化済み guardianmod:パッケージ を選択し、それらを guardianmod:停滞 スロットに置く。 NL 廃棄",
     "EXTENDED_DESCRIPTION": [
       "パッケージを選択"
     ]
@@ -157,8 +157,8 @@
   },
   "Guardian:PackageSphere": {
     "NAME": "Pack: スフィア",
-    "DESCRIPTION": " *球状シールド NL *金属化 NL *漂うオーブ NL 廃棄",
-    "UPGRADE_DESCRIPTION": "強化済み NL *球状シールド NL *金属化 NL *漂うオーブ NL 廃棄"
+    "DESCRIPTION": " *球状シールド NL *硬化 NL *漂うオーブ NL 廃棄",
+    "UPGRADE_DESCRIPTION": "強化済み NL *球状シールド NL *硬化 NL *漂うオーブ NL 廃棄"
   },
   "Guardian:PackageSentry": {
     "NAME": "Pack: セントリー",
@@ -186,12 +186,12 @@
   },
   "Guardian:Recover": {
     "NAME": "リカバー",
-    "DESCRIPTION": " !B! ブロックを得る。 NL guardianmod:制動 !M! NL 捨て札のカードを1枚 guardianmod:停滞 させる。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL guardianmod:制動 !M! NL 捨て札のカードを1枚 guardianmod:停滞 させる。"
   },
   "Guardian:Emergency": {
     "NAME": "エマージェンシー",
-    "DESCRIPTION": "guardianmod:アクセラレート を guardianmod:停滞 が終わるまで繰り返す。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "guardianmod:アクセラレート を guardianmod:停滞 が終わるまで繰り返す。"
+    "DESCRIPTION": "guardianmod:アクセラレート を全ての guardianmod:停滞 スロットに対して行う。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "guardianmod:アクセラレート を全ての guardianmod:停滞 スロットに対して2回行う。 NL 廃棄"
   },
   "Guardian:Clone": {
     "NAME": "クローン",
@@ -204,19 +204,19 @@
   },
   "Guardian:GemFinder": {
     "NAME": "ジェム探査",
-    "DESCRIPTION": "エセリアル NL 戦闘終了時に、ランダムな guardianmod:ジェム をデッキに加える。"
+    "DESCRIPTION": "エセリアル NL 戦闘終了後、ランダムな guardianmod:ジェム をデッキに加える。"
   },
   "Guardian:StasisField": {
     "NAME": "停滞フィールド",
-    "DESCRIPTION": " !B! ブロックを得る。 NL このカードを *停滞 させる。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL このカードを *停滞 させる。"
   },
-  "Guardian:Metallicize": {	
-   "NAME": "ハーデン",	
-   "DESCRIPTION": " !M! expansioncontent:プレートアーマー を得る。"	
+  "Guardian:Metallicize": {
+    "NAME": "硬化",
+    "DESCRIPTION": "*プレートアーマー !M! を得る。"
   },
   "Guardian:StasisStrike": {
     "NAME": "ステイシスストライク",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 停滞 スロットを1得る。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 停滞 スロットを1得る。"
   },
   "Guardian:FuturePlans": {
     "NAME": "未来のプラン",
@@ -226,7 +226,7 @@
   "Guardian:Suspension": {
     "NAME": "サスペンション",
     "DESCRIPTION": "!B! ブロックを得る。 NL 手札のカードを1枚 guardianmod:停滞 させる。",
-    "UPGRADE_DESCRIPTION": "カードを 1 枚引く。 NL 手札のカードを1枚 guardianmod:停滞 させる。"
+    "UPGRADE_DESCRIPTION": "!B! ブロックを得る。 NL 手札のカードを1枚 guardianmod:停滞 させる。"
   },
   "Guardian:FastForward": {
     "NAME": "スピードブースト",
@@ -239,60 +239,59 @@
   },
   "Guardian:ConstructionForm": {
     "NAME": "構造化",
-    "DESCRIPTION": "エセリアル NL guardianmod:バッファー !M! を得る。 NL ターン開始時、 guardianmod:バッファー を維持していた場合 筋力 1 を得る。",
-    "UPGRADE_DESCRIPTION": "guardianmod:バッファー !M! を得る。 NL ターン開始時、 guardianmod:バッファー を維持していた場合 筋力 1 を得る。"
+    "DESCRIPTION": "エセリアル NL guardianmod:バッファー !M! を得る。 NL ターン開始時、 guardianmod:バッファー が 1以上なら 筋力 1 を得る。",
+    "UPGRADE_DESCRIPTION": "guardianmod:バッファー !M! を得る。 NL ターン開始時、 guardianmod:バッファー が 1以上なら 筋力 1 を得る。"
   },
   "Guardian:RollAttack": {
     "NAME": "ロールアタック",
-    "DESCRIPTION": " !D! ダメージを与える。 NL *ディフェンシブモード の時は敵全体に拡大する。 NL それ以外の場合 guardianmod:制動 8 を行う。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL *ディフェンシブモード の時は敵全体に拡大する。 NL それ以外の場合 guardianmod:制動 8 を行う。"
   },
   "Guardian:GemFire": {
     "NAME": "ジェムキャノン",
-    "DESCRIPTION": " !D! ダメージを与える。 ソケットにある物を含め全ての guardianmod:ジェム を発動する。 NL 廃棄 ",
-    "UPGRADE_DESCRIPTION": " NL ( !M! 個のジェム)"
+    "DESCRIPTION": "!D! ダメージを与える。 NL デッキ内のソケットに装着された全ての guardianmod:ジェム の効果を発動する。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": " NL (全 !M! 枚)"
   },
   "Guardian:ChargeCore": {
     "NAME": "チャージコア",
-    "DESCRIPTION": " !D! ダメージを与える。 NL guardianmod:停滞 させる。 NL guardianmod:チック - カードを 1 枚引く。 NL guardianmod:揮発性"
+    "DESCRIPTION": "!D! ダメージを与える。 NL guardianmod:停滞 させる。 NL guardianmod:チック - カードを 1 枚引く。 NL guardianmod:揮発性"
   },
   "Guardian:Reroute": {
     "NAME": "経路変更",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 次にカードをプレイした時そのカードを guardianmod:停滞 させる"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 次にカードをプレイした時そのカードを guardianmod:停滞 させる"
   },
   "Guardian:PiercingHide": {
     "NAME": "ピアッシングハイド",
-    "DESCRIPTION": " !B! ブロックと一時的な トゲ !M! を得る。 NL guardianmod:制動 3",
-    "UPGRADE_DESCRIPTION":" !B! ブロックと一時的な トゲ !M! を得る。 NL guardianmod:制動 4"
+    "DESCRIPTION": "!B! ブロックと一時的な トゲ !M! を得る。 NL guardianmod:制動 3",
+    "UPGRADE_DESCRIPTION": "!B! ブロックと一時的な トゲ !M! を得る。 NL guardianmod:制動 4"
   },
   "Guardian:ShieldSpikes": {
     "NAME": "シールドスパイク",
-    "DESCRIPTION": " !B! ブロックを得る。 NL *ディフェンシブモード の場合、 トゲ !M! を得る。 NL それ以外の場合 guardianmod:制動 8 を行う。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL *ディフェンシブモード の場合、 トゲ !M! を得る。 NL guardianmod:制動 8"
   },
   "Guardian:PrismaticBeam": {
     "NAME": "プリズムスプレー",
-    "DESCRIPTION": " !D! ダメージを装着されている guardianmod:ジェム の数だけ与える。"
+    "DESCRIPTION": "!D! ダメージを装着されている guardianmod:ジェム の数だけ与える。"
   },
   "Guardian:PrismaticBarrier": {
     "NAME": "プリズムバリア",
-    "DESCRIPTION": " !B! ブロックを装着されている guardianmod:ジェム の数だけ得る。"
+    "DESCRIPTION": "!B! ブロックを装着されている guardianmod:ジェム の数だけ得る。"
   },
   "Guardian:TemporalStrike": {
     "NAME": "テンポラリストライク",
-    "DESCRIPTION": " !D! ダメージを与える。 NL guardianmod:停滞 させているカードがある場合 [E] を得る。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL guardianmod:停滞 させているカードがある場合 [E] を得る。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL guardianmod:停滞 させているカードがある場合 [E] を得る。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL guardianmod:停滞 させているカードがある場合 [E] を得る。"
   },
   "Guardian:TemporalShield": {
     "NAME": "テンポラリシールド",
-    "DESCRIPTION": " !B! ブロックを得る。 NL guardianmod:アクセラレート"
+    "DESCRIPTION": "!B! ブロックを得る。 NL guardianmod:アクセラレート"
   },
   "Guardian:ExploitGems": {
     "NAME": "ジェム発掘",
-    "DESCRIPTION": "カードを 1 枚引く。",
-    "UPGRADE_DESCRIPTION": " [E] を得る。 NL カードを 1 枚引く。"
+    "DESCRIPTION": "カードを 1 枚引く。"
   },
   "Guardian:RefractedBeam": {
     "NAME": "リフレクトビーム",
-    "DESCRIPTION": " !D! ダメージを !M! 回与える。 NL 何度でもアップグレード出来る。 NL アップグレードごとに +1:"
+    "DESCRIPTION": "!D! ダメージを !M! 回与える。 NL 何度でもアップグレード出来る。 NL アップグレードする度ジェムの発動回数が増加する。"
   },
   "Guardian:MultiBeam": {
     "NAME": "マルチ-ビーム",
@@ -300,21 +299,21 @@
   },
   "Guardian:BaubleBeam": {
     "NAME": "バブルビーム",
-    "DESCRIPTION": " !D! ダメージを与える。 NL *ジェム の効果を !M! 回 実行する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL *ジェム の効果を !M! 回 実行する。"
   },
   "Guardian:PrimingBeam": {
     "NAME": "プライミングショット",
-    "DESCRIPTION": " !D! ダメージを与える。 NL guardianmod:制動 !M!"
+    "DESCRIPTION": "!D! ダメージを与える。 NL guardianmod:制動 !M!"
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "回避プロトコル",
-    "DESCRIPTION": " *ディフェンシブモード に入るたびに、 各デバフが !M! 減少する。 NL  guardianmod:制動 !GuardianSecondM!",
-    "UPGRADE_DESCRIPTION": " *ディフェンシブモード に入るたびに、 各デバフが !M! 減少する。 NL  guardianmod:制動 !GuardianSecondM!"
+    "DESCRIPTION": " *ディフェンシブモード に入った時、自分のデバフを !M! 減少させる。 NL guardianmod:制動 !GuardianSecondM!",
+    "UPGRADE_DESCRIPTION": "*ディフェンシブモード に入った時、自分のデバフを !M! 減少させる。 NL guardianmod:制動 !GuardianSecondM!"
   },
   "Guardian:SpikerProtocol": {
     "NAME": "反撃プロトコル",
-    "DESCRIPTION": " *ディフェンシブモード に入るたびに、 トゲ !M! を得る。 NL ターン開始時 guardianmod:制動 !GuardianSecondM!",
-    "UPGRADE_DESCRIPTION":" *ディフェンシブモード に入るたびに、 トゲ !M! を得る。 NL ターン開始時 guardianmod:制動 !GuardianSecondM!"
+    "DESCRIPTION": " *ディフェンシブモード に入った時、 トゲ !M! を得る。 NL guardianmod:制動 !GuardianSecondM!",
+    "UPGRADE_DESCRIPTION": " *ディフェンシブモード に入った時、 トゲ !M! を得る。 NL guardianmod:制動 !GuardianSecondM!"
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "防御プロトコル",
@@ -327,12 +326,12 @@
   },
   "Guardian:AncientConstruct": {
     "NAME": "古代の構築物",
-    "DESCRIPTION": " 1 アーティファクト を得る。 NL ターン開始時、 アーティファクト を所持していなければ !M! アーティファクト を得る。",
+    "DESCRIPTION": "1 アーティファクト を得る。 NL ターン開始時、 アーティファクト を所持していなければ !M! アーティファクト を得る。",
     "UPGRADE_DESCRIPTION": " 1 アーティファクト を得る。 NL ターン開始時、 アーティファクト を所持していなければ !M! アーティファクト を得る。"
   },
   "Guardian:CrystalBeam": {
     "NAME": "クリスタルレイ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL デッキ内の guardianmod:ジェム 1枚につき、 !M! のダメージが追加される。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL デッキ内の guardianmod:ジェム 1枚につき、 !M! のダメージが追加される。"
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "オニキス",
@@ -366,11 +365,11 @@
   },
   "Guardian:CrystalShiv": {
     "NAME": "クリスタルナイフ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 廃棄"
   },
   "Guardian:CrystalWard": {
     "NAME": "水晶の護り",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 廃棄"
+    "DESCRIPTION": "!B! ブロックを得る。 NL 廃棄"
   },
   "Guardian:Repulse": {
     "NAME": "リパルサー",
@@ -379,15 +378,15 @@
   },
   "Guardian:BronzeOrb": {
     "NAME": "オーブサポート",
-    "DESCRIPTION": " !D! ダメージを与える。 NL ブロックされていないダメージを与えるには、 guardianmod:制動 を使用する。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを与える。 NL ブロックされなかったダメージに等しい guardianmod:制動 を行う。 NL 廃棄"
   },
   "Guardian:RevengeProtocol": {
     "NAME": "復讐プロトコル",
-    "DESCRIPTION": "*ディフェンシブモード に入るたびに、 筋力 !M! を得る。 NL ターン開始時 guardianmod:制動 !GuardianSecondM!"
+    "DESCRIPTION": "*ディフェンシブモード に入った時 筋力 !M! を得る。 NL ターン開始時 guardianmod:制動 !GuardianSecondM!"
   },
   "Guardian:GatlingBeam": {
     "NAME": "レーザータレット",
-    "DESCRIPTION": " !D! ダメージを与える。 NL !M! ターンの間 guardianmod:停滞 する。 NL guardianmod:チック - ランダムな敵に !D! ダメージを与える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL !M! ターンの間 guardianmod:停滞 する。 NL guardianmod:チック - ランダムな敵に !D! ダメージを与える。"
   },
   "Guardian:ShieldCharger": {
     "NAME": "シールドチャージャー",
@@ -400,11 +399,11 @@
   },
   "Guardian:HammerDown": {
     "NAME": "ハンマーダウン",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 筋力 と 敏捷性 を2倍にする。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 筋力 と 敏捷性 を2倍にする。 NL 廃棄"
   },
   "Guardian:OmegaCannon": {
     "NAME": "オメガキャノン",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 筋力 1 毎にこのカードのコストが [E] 減少する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 筋力 1 毎にこのカードのコストが [E] 減少する。"
   },
   "Guardian:ModeShift": {
     "NAME": "モードシフト",
@@ -441,7 +440,7 @@
   },
   "Guardian:BodySlam": {
     "NAME": "ボディクラッシュ",
-    "DESCRIPTION": " !B! ブロックを得る。 NL ブロックと同じ値のダメージを与える。",
+    "DESCRIPTION": "!B! ブロックを得る。 NL ブロックと同じ値のダメージを与える。",
     "UPGRADE_DESCRIPTION": " NL ( !D! ダメージ)"
   },
   "Guardian:SecondStrike": {
@@ -454,7 +453,7 @@
   },
   "Guardian:StrikeForStrike": {
     "NAME": "ストライク合戦",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 敵から !M! ダメージを受ける。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 敵から !M! ダメージを受ける。"
   },
   "Guardian:GearUp": {
     "NAME": "ギアアップ",

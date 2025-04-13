@@ -1,7 +1,7 @@
 {
   "hexamod:AdvancingGuard": {
     "NAME": "前進防御",
-    "DESCRIPTION": " !B! ブロックを得る。 NL hexamod:前進"
+    "DESCRIPTION": "!B! ブロックを得る。 NL hexamod:前進"
   },
   "hexamod:FleetingFlash": {
     "NAME": "瞬間の閃光",
@@ -20,7 +20,7 @@
   },
   "hexamod:BacktrackSmack": {
     "NAME": "バックトラック",
-    "DESCRIPTION": " !D! ダメージを2回与える。 NL hexamod:後退"
+    "DESCRIPTION": "!D! ダメージを2回与える。 NL hexamod:後退"
   },
   "hexamod:BurningQuestion": {
     "NAME": "火急的問題",
@@ -38,7 +38,7 @@
   },
   "hexamod:BurningTouch": {
     "NAME": "バーニングタッチ",
-    "DESCRIPTION": " !burny! hexamod:ソウルバーン を与える。 NL 対象が hexamod:ソウルバーン 状態なら更にもう1回与える。"
+    "DESCRIPTION": "!burny! hexamod:ソウルバーン を与える。 NL 対象が hexamod:ソウルバーン 状態なら更にもう1回与える。"
   },
   "hexamod:CatchUp": {
     "NAME": "挽回",
@@ -47,19 +47,19 @@
   },
   "hexamod:ChargedBarrage": {
     "NAME": "弾幕発射",
-    "DESCRIPTION": " !burny! hexamod:ソウルバーン を与える。 NL *発火 状態のゴーストフレイムの数だけ繰り返す。"
+    "DESCRIPTION": "!burny! hexamod:ソウルバーン を与える。 NL *発火 状態のゴーストフレイムの数だけ繰り返す。"
   },
   "hexamod:CouncilsJustice": {
     "NAME": "議会の正義",
-    "DESCRIPTION": " !D! ダメージを与える。廃棄された *幻姿 の分、ダメージが !M! 増加する。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを与える。廃棄された *幻姿 の分、ダメージが !M! 増加する。 NL 廃棄"
   },
   "hexamod:Defend": {
     "NAME": "防御",
-    "DESCRIPTION": " !B! ブロックを得る。"
+    "DESCRIPTION": "!B! ブロックを得る。"
   },
   "hexamod:Divider": {
     "NAME": "分離",
-    "DESCRIPTION": " !D! ダメージを与える。 NL *発火 状態のゴーストフレイムの数だけ繰り返す。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL *発火 状態のゴーストフレイムの数だけ繰り返す。"
   },
   "hexamod:DynamicBlow": {
     "NAME": "ダイナミックブロー",
@@ -72,7 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "不気味な探索行",
-    "DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL !M! [#e087a4]枚のランダムな死後カードを山札に、[] 1 [#e087a4]枚を手札に加える。[]"
+    "DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL !M! [#e087a4]枚のランダムな死後カードを山札に、[] 1 枚を手札に加える。"
   },
   "hexamod:ExtraCrispy": {
     "NAME": "カリッカリ",
@@ -105,14 +105,14 @@
   "hexamod:Float": {
     "NAME": "浮遊",
     "DESCRIPTION": "カードを 1 枚引く。 NL hexamod:前進",
-    "UPGRADE_DESCRIPTION": "カードを 1 枚引く。 NL  hexamod:後退 または hexamod:前進 を選択し行う。",
+    "UPGRADE_DESCRIPTION": "カードを 1 枚引く。 NL hexamod:後退 または hexamod:前進 を選択し行う。",
     "EXTENDED_DESCRIPTION": ["hexamod:前進","hexamod:後退", "留まる"]
   },
   "hexamod:MatchstickFloat": {
-    "NAME": "こっそりチーク材マッチ",
+    "NAME": "Sneaky Teakwood Match",
    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
-    "EXTENDED_DESCRIPTION": ["hexamod:前進","hexamod:後退", "留まる"]
+    "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
   },
   "hexamod:Floatwork": {
     "NAME": "浮遊移動",
@@ -123,12 +123,12 @@
   },
   "hexamod:ForkedFlame": {
     "NAME": "二又の火",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 前後の炎を hexamod:点火 する。 ",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 前後の炎を hexamod:点火 する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 前後の炎を hexamod:点火 する。 ",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 前後の炎を hexamod:点火 する。"
   },
   "hexamod:WhisperFromBeyond": {
     "NAME": "彼方の囁き",
-    "DESCRIPTION": " !D! ダメージを与える。 NL このターンにカードが廃棄される度、対象に !burny! hexamod:ソウルバーン を与える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL このターンにカードが廃棄される度、対象に !burny! hexamod:ソウルバーン を与える。"
   },
   "hexamod:InstantInferno": {
     "NAME": "即席インフェルノ",
@@ -144,8 +144,8 @@
   },
   "hexamod:IntoShadow": {
     "NAME": "潜影",
-    "DESCRIPTION": "エセリアル NL あなたが hexamod:後退 を行う度、あなたは次のカードを自由にプレイし、廃棄する。",
-    "UPGRADE_DESCRIPTION": "あなたが hexamod:後退 を行う度、あなたは次のカードを自由にプレイし、廃棄する。",
+    "DESCRIPTION": "エセリアル NL hexamod:後退 を行う度、次のカードはコストが0になりプレイ後に廃棄される。",
+    "UPGRADE_DESCRIPTION": "hexamod:後退 を行う度、次のカードはコストが0になりプレイ後に廃棄される。",
     "EXTENDED_DESCRIPTION": [
       "プレイして廃棄する"
     ],
@@ -157,8 +157,8 @@
   },
   "hexamod:DevilsDance": {
     "NAME": "デビルズダンス",
-    "DESCRIPTION": " *後退 を行う度、 カードを1枚引く。 NL hexamod:後退",
-    "UPGRADE_DESCRIPTION": "天賦 NL *後退 を行う度、 [E] を得てカードを1枚引く。 NL hexamod:後退"
+    "DESCRIPTION": " *後退 を行う度、 カードを1枚引く。",
+    "UPGRADE_DESCRIPTION": "天賦 NL *後退 を行う度、 [E] を得てカードを1枚引く。"
   },
   "hexamod:HereAndNow": {
     "NAME": "今ここで",
@@ -168,7 +168,7 @@
     "NAME": "ゴーストシールド",
     "DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL 1 ブラー を得る。 NL ",
     "EXTENDED_DESCRIPTION": [
-      " !B! ブロックを得る。"
+      "!B! ブロックを得る"
     ]
   },
   "hexamod:GiftsFromBeyond": {
@@ -188,19 +188,19 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "呪いの反響",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 現在の ゴーストフレイムが *発火 状態ならそれを hexamod:点火 しなおす。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 現在の ゴーストフレイムが *発火 状態ならそれを hexamod:点火 しなおす。"
   },
   "hexamod:HeatCrush": {
     "NAME": "ヒートクラッシュ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 敵の *ソウルバーン でダメージが上昇する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 敵の *ソウルバーン でダメージが上昇する。"
   },
   "hexamod:HeatMetal": {
     "NAME": "ヒートメタル",
-    "DESCRIPTION": " !D! ダメージを与える。 NL !burny! hexamod:ソウルバーン と、弱体 !M! を与える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL !burny! hexamod:ソウルバーン と、弱体 !M! を与える。"
   },
   "hexamod:HeatShield": {
     "NAME": "ヒートシールド",
-    "DESCRIPTION": "対象の *ソウルバーン の合計に等しいブロックを得る。 NL その後 *ソウルバーン を解除する。",
+    "DESCRIPTION": "対象の *ソウルバーン の合計に等しいブロックを得る。 NL その後 *ソウルバーン の猶予を1ターン増加する。 NL 廃棄",
     "UPGRADE_DESCRIPTION": "対象の *ソウルバーン の合計に等しいブロックを得る。 NL その後 *ソウルバーン の猶予を1ターン増加する。",
     "EXTENDED_DESCRIPTION": [
       " NL (現在値: !B! ブロック。)"
@@ -216,15 +216,15 @@
   "hexamod:InfernalForm": {
     "NAME": "地獄化",
     "DESCRIPTION": "ターン開始時、 hexamod:火力 !M! を得る。",
-    "UPGRADE_DESCRIPTION": "hexamod:火力 !M! を得る。 NL ターン開始時、 !M! hexamod:火力 !M! を得る。"
+    "UPGRADE_DESCRIPTION": "hexamod:火力 !M! を得る。 NL ターン開始時、 hexamod:火力 !M! を得る。"
   },
   "hexamod:Incineration": {
     "NAME": "焼却",
-    "DESCRIPTION": " !D! ダメージと !burny! hexamod:ソウルバーン を !M! 回与える。"
+    "DESCRIPTION": "!D! ダメージと !burny! hexamod:ソウルバーン を !M! 回与える。"
   },
   "hexamod:StokeTheFire": {
     "NAME": "撹拌される炎",
-    "DESCRIPTION": " !B! ブロックを得る。 NL *発火 状態の ゴーストフレイム の数だけ、手札のカードをランダムにアップグレードする。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL *発火 状態の ゴーストフレイム の数だけ、手札のカードをランダムにアップグレードする。"
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "価値ある犠牲",
@@ -255,8 +255,8 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "幻影の火球",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 敵が *ソウルバーン 状態なら、それを炸裂させる。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 敵が *ソウルバーン 状態なら、それを1だけ残して炸裂させる。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 敵が *ソウルバーン 状態なら、それを炸裂させる。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 敵が *ソウルバーン 状態なら、それを1だけ残して炸裂させる。"
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "彼方からの力",
@@ -330,7 +330,7 @@
   },
   "hexamod:LivingBomb": {
     "NAME": "リビングボム",
-    "DESCRIPTION": " !burny! hexamod:ソウルバーン を与える。この敵に炸裂した時、敵全体にダメージを与える。"
+    "DESCRIPTION": "!burny! hexamod:ソウルバーン を与える。この敵に炸裂した時、敵全体にダメージを与える。"
   },
   "hexamod:SpectersWail": {
     "NAME": "幽霊の泣き声",
@@ -338,23 +338,24 @@
   },
   "hexamod:BrightRitual": {
     "NAME": "輝きの儀式",
-    "DESCRIPTION": "[E] を得てカードを1枚引く。これを *発火 しているゴーストフレイムの数だけ繰り返し、それらを hexamod:滅却 する。 NL 廃棄"
+    "DESCRIPTION": "一番目のゴーストフレイムに移動する。 NL [E] を得てカードを1枚引く。これを *発火 している数だけ繰り返し、それらを hexamod:滅却 する。 NL 廃棄"
+    
   },
   "hexamod:NaughtySpirit": {
     "NAME": "イタズラな魂",
-    "DESCRIPTION": "!burny! hexamod:ソウルバーン を与える NL 現在のゴーストフレイムが hexamod:点火 状態の場合、このカードを手札に戻し、 hexamod:後退 する。"
+    "DESCRIPTION": "!burny! hexamod:ソウルバーン を与える NL 現在のゴーストフレイムが hexamod:点火 状態の場合、このカードを手札に戻す。 NL hexamod:後退"
   },
   "hexamod:StepThrough": {
     "NAME": "ステップスルー",
-    "DESCRIPTION": " !D! ダメージを与える。 NL カードを1枚引くのを *発火 状態の ゴーストフレイム の数だけ繰り返す。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL カードを1枚引くのを *発火 状態の ゴーストフレイム の数だけ繰り返す。"
   },
   "hexamod:Strike": {
     "NAME": "ストライク",
-    "DESCRIPTION": " !D! ダメージを与える。"
+    "DESCRIPTION": "!D! ダメージを与える。"
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "ビヨンドストライク",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 山札から エセリアル カードを1枚手札に加える。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 山札から エセリアル カードを1枚手札に加える。",
     "EXTENDED_DESCRIPTION": ["エセリアル","エセリアル NL "]
   },
   "hexamod:SuperheatedStrike": {
@@ -368,7 +369,7 @@
   },
   "hexamod:ThermalTransfer": {
     "NAME": "熱転送",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 対象が *ソウルバーン 状態なら、 !B! ブロックを得る。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 対象が *ソウルバーン 状態なら、 !B! ブロックを得る。"
   },
   "hexamod:TimeOfNeed": {
     "NAME": "必要な時",
@@ -376,12 +377,12 @@
   },
   "hexamod:TimeWarp": {
     "NAME": "タイムワープ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL *前進 または *後退 した時、このカードを捨て札から手札に戻す。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL *前進 または *後退 した時、このカードを捨て札から手札に戻す。"
   },
   "hexamod:FlareFlick": {
     "NAME": "弾ける火",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 現在のゴーストフレイムを hexamod:点火 し、 hexamod:前進 を行う。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 現在のゴーストフレイムを hexamod:点火 し、 hexamod:前進 か hexamod:後退 を選んで行う。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 現在のゴーストフレイムを hexamod:点火 し、 hexamod:前進 を行う。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 現在のゴーストフレイムを hexamod:点火 し、 hexamod:前進 か hexamod:後退 を選んで行う。",
     "EXTENDED_DESCRIPTION": ["hexamod:前進","hexamod:後退", "何もしない"]
   },
   "hexamod:TurnItUp": {
@@ -391,7 +392,7 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "解き放たれる霊",
-    "DESCRIPTION": "ランダムな敵に !D! ダメージを与える。 NL これを *廃棄 された *エセリアル の数だけ繰り返す。 NL 廃棄",
+    "DESCRIPTION": "ランダムな敵に !D! ダメージを与える。 NL これを 前のターンに *廃棄 された *エセリアル の数だけ繰り返す。",
     "UPGRADE_DESCRIPTION": " NL ( !M! 回)"
   },
   "hexamod:UnlimitedPower": {
@@ -444,7 +445,7 @@
   },
   "hexamod:LingeringShades": {
     "NAME": "残影",
-    "DESCRIPTION": "hexamod:後退 NL !burny! hexamod:ソウルバーン を与える。 NL 捨て札にあるエセリアルカード全てを山札に戻す。"
+    "DESCRIPTION": "hexamod:後退 NL !burny! hexamod:ソウルバーン を与える。 NL 捨て札にあるエセリアルカードを全て手札に戻す。"
   },
   "hexamod:EtherStep": {
     "NAME": "エーテルステップ",
@@ -460,13 +461,13 @@
     "UPGRADE_DESCRIPTION": "hexamod:後退 NL [E] [E] [E] を得る。 NL 廃棄"
   },
   "hexamod:SeventhEye": {
-    "NAME": "七ツの眼",
-    "DESCRIPTION": "山札からカードを1枚取り出す。 NL ランダムなゴーストフレイムに移動する。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "山札からカードを1枚取り出す。 NL ランダムなゴーストフレイムに移動する。 NL 廃棄"
+    "NAME": "七つの眼",
+    "DESCRIPTION": "山札から 1 枚のカードを選び、手札に加える。 NL ランダムなゴーストフレイムに移動する。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "山札から 1 枚のカードを選び、手札に加える。 NL ランダムなゴーストフレイムに移動する。 NL 廃棄"
   },
   "hexamod:FlameDevourer": {
     "NAME": "炎を貪るもの",
-    "DESCRIPTION": "一つ前のゴーストフレイムが *点火 していた場合、 hexamod:後退 して !B! ブロックを得る。"
+    "DESCRIPTION": "直前のゴーストフレイムが hexamod:点火 されていた場合、 hexamod:後退 し、 !B! ブロックを得る。"
   },
   "hexamod:SpectralGrace": {
     "NAME": "魂の恩寵",
@@ -549,7 +550,7 @@
   "hexamod:HexaLevel": {
     "NAME": "地獄化",
     "DESCRIPTION": "ターン開始時、 hexamod:火力 !M! を得る。",
-    "UPGRADE_DESCRIPTION": "hexamod:火力 !M! を得る。 NL ターン開始時、 !M! hexamod:火力 !M! を得る。"
+    "UPGRADE_DESCRIPTION": "hexamod:火力 !M! を得る。 NL ターン開始時、 hexamod:火力 !M! を得る。"
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",
