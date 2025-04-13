@@ -44,7 +44,7 @@
   },
   "collector:Bonfire": {
     "NAME": "篝火",
-    "DESCRIPTION": "collector:葬火 NL !B! ブロックを得る。 NL 次のターン、 collector:リザーブ 1 を得る。"
+    "DESCRIPTION": "collector:葬火 NL !B! ブロックを得る。 NL 次のターン、 1 collector:リザーブ を得る。"
   },
   "collector:BrainDrain": {
     "NAME": "ブレインドレイン",
@@ -95,8 +95,8 @@
   },
   "collector:DarkwoodKindling": {
     "NAME": "ダークウィローの薪",
-    "DESCRIPTION": "使用不可 NL このカードが *廃棄 された時、次のターン collector:リザーブ !M! を得る。",
-    "UPGRADE_DESCRIPTION": "使用不可 NL 保留 NL このカードが *廃棄 された時、次のターン collector:リザーブ !M! を得る。",
+    "DESCRIPTION": "使用不可 NL このカードが *廃棄 された時、次のターン !M! collector:リザーブ を得る。",
+    "UPGRADE_DESCRIPTION": "使用不可 NL 保留 NL このカードが *廃棄 された時、次のターン !M! collector:リザーブ を得る。",
     "EXTENDED_DESCRIPTION": [
       "この薪は火をつけて使う必要がある。"
     ]
@@ -114,8 +114,8 @@
     "DESCRIPTION": "ターン開始時、敵の持つ collector:破滅 が25以上ある場合、あなたの山札の一番上のカードをプレイする。"
   },
   "collector:DragonsTrove": {
-    "NAME": "龍の宝庫",
-    "DESCRIPTION": "collector:葬火 NL 収集札からカードを 2 枚引く。 NL collector:リザーブ !M! を得る。 NL 廃棄"
+    "NAME": "龍の秘宝",
+    "DESCRIPTION": "collector:葬火 NL 収集札からカードを 2 枚引く。 NL !M! collector:リザーブ を得る。 NL 廃棄"
   },
   "collector:Ember": {
     "NAME": "燃え殻",
@@ -126,7 +126,7 @@
   },
   "collector:Empower": {
     "NAME": "エンパワー",
-    "DESCRIPTION": " !M! ターンの間、ターン開始時に 筋力 X を得る。"
+    "DESCRIPTION": "!M! ターンの間、ターン開始時に 筋力 X を得る。"
   },
   "collector:Extricate": {
     "NAME": "魂の断絶",
@@ -137,7 +137,7 @@
     "DESCRIPTION": "カードを *廃棄 する度に、ランダムな敵がHPを !M! 失う。"
   },
   "collector:FiendFire": {
-    "NAME": "悪霊の火",
+    "NAME": "グリーンバースト",
     "DESCRIPTION": "手札を 廃棄 する。 NL 廃棄されたカードの数だけ !D! ダメージを与える。 NL 廃棄"
   },
   "collector:Finalize": {
@@ -167,7 +167,7 @@
   },
   "collector:FuelTheFire": {
     "NAME": "焔の糧",
-    "DESCRIPTION": "collector:葬火 NL 次のターン、 collector:リザーブ !M! を得る。",
+    "DESCRIPTION": "collector:葬火 NL 次のターン、 !M! collector:リザーブ を得る。",
     "UPGRADE_DESCRIPTION": "collector:葬火 NL 次のターン、 collector:リザーブ !M! を得て、カードを1枚引く。"
   },
   "collector:Goodbye": {
@@ -190,7 +190,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "緑炎の軌跡",
-    "DESCRIPTION": "3 枚の コレクトカード から 1 枚を選び手札に加える。 NL 更に収集札に選択されたカードのコピーを !M! 枚加える。",
+    "DESCRIPTION": "3 枚の コレクトカード から 1 枚を選び手札に加え、収集札にそのコピーを !M! 枚加える。 NL 廃棄。",
     "EXTENDED_DESCRIPTION": [
       "選択したカードを手札と収集札に加える"
     ]
@@ -201,7 +201,7 @@
   },
   "collector:Hoard": {
     "NAME": "蓄える",
-    "DESCRIPTION": "collector:葬火 NL カードを !M! 枚引く。 NL このターン、それらを 保留 する。"
+    "DESCRIPTION": "collector:葬火 NL カードを !M! 枚引く。 NL このターン、それらを保留する。"
   },
   "collector:HoardersStrike": {
     "NAME": "ホーダーズストライク",
@@ -222,12 +222,12 @@
   },
   "collector:InflictAgony": {
     "NAME": "与えられし苦痛",
-    "DESCRIPTION": "!D! ダメージを与える。 NL 敵が collector:苦悶 状態でなければ、 脱力 と 弱体 2を与える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 敵が collector:苦悶 状態でなければ、 脱力 と 弱体 2 を与える。"
   },
   "collector:Invigorate": {
     "NAME": "閃光",
-    "DESCRIPTION": "collector:葬火 NL *つまづき または *目くらまし を選び手札に加える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "collector:葬火 NL *つまづき+ または *目くらまし+ を選び手札に加える。 NL 廃棄",
+    "DESCRIPTION": "collector:葬火 NL *つまずき または *目くらまし を選び手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "collector:葬火 NL *つまずき+ または *目くらまし+ を選び手札に加える。 NL 廃棄",
     "EXTENDED_DESCRIPTION": [
       "選択したカードを手札に加える"
     ]
@@ -267,12 +267,12 @@
   },
   "collector:MiniCurse": {
     "NAME": "微かな呪い",
-    "DESCRIPTION": "collector:葬火 NL 脱力 と 弱体 1 を与える。 ",
-    "UPGRADE_DESCRIPTION": "collector:葬火 NL 敵全体に 脱力 と 弱体 1 を与える。 "
+    "DESCRIPTION": "collector:葬火 NL 脱力 と 弱体 1 を与える。",
+    "UPGRADE_DESCRIPTION": "collector:葬火 NL 敵全体に 脱力 と 弱体 1 を与える。"
   },
   "collector:Misdirect": {
     "NAME": "ミスディレクト",
-    "DESCRIPTION": "!B! ブロックを得る。 NL 次のターン、 collector:リザーブ 1 を得る。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL 次のターン、 1 collector:リザーブ を得る。"
   },
   "collector:MysteryWeaving": {
     "NAME": "幽玄の織",
@@ -296,8 +296,8 @@
   },
   "collector:Pyromancy": {
     "NAME": "パイロマンシー",
-    "DESCRIPTION": "collector:葬火 NL ターン開始時、 collector:リザーブ 1 を得る。",
-    "UPGRADE_DESCRIPTION": "天賦 NL collector:葬火 NL ターン開始時、 collector:リザーブ 1 を得る。"
+    "DESCRIPTION": "collector:葬火 NL ターン開始時、 1 collector:リザーブ を得る。",
+    "UPGRADE_DESCRIPTION": "天賦 NL collector:葬火 NL ターン開始時、 1 collector:リザーブ を得る。"
   },
   "collector:RagingCall": {
     "NAME": "レイジングコール",
@@ -352,13 +352,14 @@
   },
   "collector:Soulforge": {
     "NAME": "ソウルフォージ",
-    "DESCRIPTION": "収集札 からカードを 1枚引く。 NL そのカードのアップグレードされたコピーを !M! 枚手札に加える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "収集札 からカードを 1枚引く。 NL そのカードのアップグレードされたコピーを !M! 枚手札に加える。 NL 廃棄"
+    "DESCRIPTION": "収集札 からカードを 1枚引く。 NL 引いたカードのアップグレードされたコピーを !M! 枚手札に加える。 NL 廃棄",
+        "UPGRADE_DESCRIPTION": "収集札 からカードを 1枚引く。 NL 引いたカードのアップグレードされたコピーを !M! 枚手札に加える。 NL 廃棄"
+
   },
   "collector:Spark": {
     "NAME": "スパーク",
-    "DESCRIPTION": "collector:リザーブ 1 を得る。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "collector:リザーブ 1 を得る。 NL カードを 1 枚引く。 NL 廃棄"
+    "DESCRIPTION": "1 collector:リザーブ を得る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "1 collector:リザーブ を得る。 NL カードを 1 枚引く。 NL 廃棄"
   },
   "collector:SpiritLeech": {
     "NAME": "スピリットリーチ",
@@ -389,7 +390,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "ソーンウィップ",
-    "DESCRIPTION": "敵全体に !D! ダメージと !M! hermit:傷 を与える。 NL ナイフを1枚手札に加える。"
+    "DESCRIPTION": "敵全体に !D! ダメージ と !M! hermit:傷 を与える。 NL *ナイフ を手札に加える。"
   },
   "collector:Torchbearer": {
     "NAME": "トーチベアラー",
@@ -607,7 +608,7 @@
   },
   "collector:ShelledParasiteCard": {
     "NAME": "ヤドカリパラサイト",
-    "DESCRIPTION": " expansioncontent:プレートアーマー !M! を得る。"
+    "DESCRIPTION": "プレートアーマー !M! を得る。"
   },
   "collector:ShieldGremlinCard": {
     "NAME": "シールドグレムリン",
@@ -671,7 +672,7 @@
   },
   "collector:VagrantCard": {
     "NAME": "浮浪者",
-    "DESCRIPTION": "collector:リザーブ !M! を得る。 NL 手札に *羞恥 を加える。"
+    "DESCRIPTION": "!M! collector:リザーブ を得る。 NL 手札に *羞恥 を加える。"
   },
   "collector:WomanInBlueCard": {
     "NAME": "青い服の女",
@@ -687,7 +688,7 @@
   },
   "collector:ShootingStar": {
     "NAME": "流星",
-    "DESCRIPTION": "エセリアル NL 各ターン最初に アタック を collector:葬火 した時、葬火したカードのコピーを手札に加える。 NL それはプレイするまでコストが0になる。"
+    "DESCRIPTION": "各ターン最初に アタック を collector:葬火 した時、葬火したカードのコピーを手札に加える。 NL それはプレイするまでコストが0になる。"
   },
   "collector:CollectorCard": {
     "NAME": "ウロボロス",
@@ -695,6 +696,6 @@
   },
   "collector:Sapped": {
     "NAME": "消耗",
-    "DESCRIPTION": "collector:葬火 NL このカードはデッキから削除出来ない。 NL 廃棄"
+    "DESCRIPTION": "collector:葬火 NL このカードを引いた時、 [E] を失う。 NL このカードはデッキから削除出来ない。 NL 廃棄"
   }
 }

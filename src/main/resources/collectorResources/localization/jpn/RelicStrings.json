@@ -1,17 +1,17 @@
 {
   "collector:EmeraldTorch": {
-    "NAME": "翠绿火炬",
-    "FLAVOR": "贪婪之火永不灭。",
+    "NAME": "エメラルドトーチ",
+    "FLAVOR": "欲望の火が消える事は無い",
     "DESCRIPTIONS": [
-      "战斗开始时，获得 #b1 #ycollector:储能 。"
+      "戦闘開始時、 #y燃え殻 を手札に加える。 各戦闘で初めて #y燃え殻 を廃棄した時、 #ycollector:リザーブ #b1を得る"
     ]
   },
   "collector:PrismaticTorch": {
-    "NAME": "多彩火炬",
-    "FLAVOR": "各色斑斓的火焰昭示着命运的偏袒。",
+    "NAME": "プリズマティックトーチ",
+    "FLAVOR": "絶え間なく変化する炎は幸運の恵みを映し出す",
     "DESCRIPTIONS": [
-      "替换 ",
-      " []。战斗开始时，获得一张 #y余烬 与 #b1 #ycollector:储能 。每当你 #y消耗 一张 #y余烬 时，获得 #b1 #ycollector:储能 。"
+      " ",
+      " [] と置き換える。戦闘開始時、 #b2 枚の #y燃え殻 を手札に加える。 各ターン毎に初めて #y燃え殻 を廃棄した時、 #ycollector:リザーブ #b1を得る"
     ]
   },
   "collector:HolidayCoal": {
@@ -33,8 +33,8 @@
     "NAME": "翡翠の指輪",
     "FLAVOR": "翡翠は誠実さの象徴である",
     "DESCRIPTIONS": [
-      "#ycollector:破滅 の効果で ミニオン以外の敵を倒した時、 #b",
-      " ソウル を得る。"
+      "敵は #ycollector:破滅 の効果で追加で #b",
+      " ダメージを受ける。"
     ]
   },
   "collector:SoullitLamp": {
@@ -63,7 +63,7 @@
     "NAME": "燃料容器",
     "FLAVOR": "気分がむかむかする",
     "DESCRIPTIONS": [
-      "ターン終了時、手札で最もコストの高いカードを #y保留 する。"
+      "ターン終了時、手札で最もコストの低いカードを #y保留 する。"
     ]
   },
   "collector:AutoCurser": {
@@ -111,7 +111,8 @@
     "NAME": "ラフダイヤモンド",
     "FLAVOR": "鉱山が取り壊され、この変色した石ですら価値がある。",
     "DESCRIPTIONS": [
-      "各ターンに初めてレアカードをプレイした時、 [E] を得る。入手時、レアカードを1枚入手する。"
+      "各ターン、初めて #yレアカード をプレイした時 [E] を得る。 レリック入手時に #yレアカード 報酬を得る。",
+      "知識!"
     ]
   },
   "collector:BlockedChakra": {

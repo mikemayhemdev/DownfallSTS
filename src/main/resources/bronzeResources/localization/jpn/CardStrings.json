@@ -9,8 +9,8 @@
   },
   "bronze:AlphaBuild": {
     "NAME": "アーリーアクセス",
-    "DESCRIPTION": " !D! ダメージを与える。 NL ランダムな *状態異常 をbronze:インサート :する。 NL bronze:コンパイル - bronze:インサート : *ベータビルド",
-    "UPGRADE_DESCRIPTION": "天賦 NL !D! ダメージを与える。 NL ランダムな *状態異常 をbronze:インサート :する。 NL bronze:コンパイル - bronze:インサート : *ベータビルド",
+    "DESCRIPTION": "!D! ダメージを与える。 NL ランダムな *状態異常 を bronze:インサート :する。 NL bronze:コンパイル - bronze:インサート : *ベータビルド",
+    "UPGRADE_DESCRIPTION": "天賦 NL !D! ダメージを与える。 NL ランダムな *状態異常 を bronze:インサート :する。 NL bronze:コンパイル - bronze:インサート : *ベータビルド",
     "EXTENDED_DESCRIPTION": [
       "ラフ",
       "α"
@@ -30,7 +30,7 @@
   },
   "bronze:BetaBuild": {
     "NAME": "ベータビルド",
-    "DESCRIPTION": " !B! ブロックを得る。 NL ランダムな *状態異常 をbronze:インサート :する。 NL bronze:コンパイル - bronze:インサート : *フルリリース",
+    "DESCRIPTION": "!B! ブロックを得る。 NL ランダムな *状態異常 を bronze:インサート :する。 NL bronze:コンパイル - bronze:インサート : *フルリリース",
     "EXTENDED_DESCRIPTION": [
       "早期",
       "β"
@@ -38,12 +38,12 @@
   },
   "bronze:BitShift": {
     "NAME": "ビットシフト",
-    "DESCRIPTION": "エンコード中 のカードを手札に戻し、 保留 を付ける。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "保留 NL エンコード中 のカードを手札に戻し、 保留 を付ける。 NL 廃棄"
+    "DESCRIPTION": "エンコード中 のカードを手札に戻し、 保留 を付与する。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "保留 NL エンコード中 のカードを手札に戻し、 保留 を付与する。 NL 廃棄"
   },
   "bronze:Boost": {
     "NAME": "ブースト",
-    "DESCRIPTION": " !B! ブロックを得る。 NL bronze:コンパイル - 筋力 !M! を得る。",
+    "DESCRIPTION": "!B! ブロックを得る。 NL bronze:コンパイル - 筋力 !M! を得る。",
     "EXTENDED_DESCRIPTION": [
       "燃料",
       "加速"
@@ -51,17 +51,17 @@
   },
   "bronze:Branch": {
     "NAME": "ブランチ",
-    "DESCRIPTION": " !D! ダメージ または !B! ブロックを得る。 NL 選ばれなかった効果を bronze:エンコード する。 NL 廃棄",
+    "DESCRIPTION": "!D! ダメージ または !B! ブロックを得る。 NL 選ばれなかった効果を bronze:エンコード する。 NL 廃棄",
     "EXTENDED_DESCRIPTION": [
       "ブランチ: アタック",
-      " !D! ダメージを与える。",
+      "!D! ダメージを与える。",
       "ブランチ: ブロック",
-      " !B! ブロックを得る。"
+      "!B! ブロックを得る。"
     ]
   },
   "bronze:Break": {
     "NAME": "ブレーク",
-    "DESCRIPTION": " !D! ダメージを与える。 NL bronze:コンパイル *エラー NL bronze:インサート : *火傷 と *負傷 と *粘液",
+    "DESCRIPTION": "!D! ダメージを与える。 NL bronze:コンパイル *エラー NL 手札に *眩暈、 *粘液 、 *負傷 、 *火傷 、 *空虚 を加える。",
     "EXTENDED_DESCRIPTION": [
       "ブロークン",
       "スマッシュ"
@@ -69,7 +69,7 @@
   },
   "bronze:BronzeArmor": {
     "NAME": "ブロンズアーマー",
-    "DESCRIPTION": " !bauto! アーティファクト を得る。 NL bronze:コンパイル *エラー NL 敵全体に !M! ブロック を付与。",
+    "DESCRIPTION": "!bauto! アーティファクト を得る。 NL bronze:コンパイル *エラー NL 敵全体に !M! ブロック を付与。",
     "EXTENDED_DESCRIPTION": [
       "ブロンズ",
       "アーマー"
@@ -81,8 +81,8 @@
   },
   "bronze:BugBarrage": {
     "NAME": "バグ弾幕",
-    "DESCRIPTION": "*負傷 を手札に加える。 NL 手札の 状態異常 を bronze:循環 させて、1枚につき !D! ダメージを与える。",
-    "UPGRADE_DESCRIPTION": "!M! *負傷 を手札に加える。 NL 手札の 状態異常 を bronze:循環 させて、1枚につき !D! ダメージを与える。",
+    "DESCRIPTION": "!M! 枚の *負傷 を手札に加える。 NL 手札の 状態異常 を bronze:循環 させて、1枚につき !D! ダメージを与える。",
+    "UPGRADE_DESCRIPTION": "!M! 枚の *負傷 を手札に加える。 NL 手札の 状態異常 を bronze:循環 させて、1枚につき !D! ダメージを与える。",
     "EXTENDED_DESCRIPTION": [
       " NL ( ",
       " 回)"
@@ -106,7 +106,7 @@
   },
   "bronze:ChildClass": {
     "NAME": "呼出",
-    "DESCRIPTION": " !B! ブロックを得る。 NL bronze:コンパイル - エンコードに使用する全てのカードの合計コストと同量の [E] を得る。",
+    "DESCRIPTION": "!B! ブロックを得る。 NL bronze:コンパイル - エンコードに使用する全てのカードの合計コストと同量の [E] を得る。",
     "EXTENDED_DESCRIPTION": [
       "呼出",
       "エナ"
@@ -114,7 +114,7 @@
   },
   "bronze:ChosenStrike": {
     "NAME": "カルティストストライク",
-    "DESCRIPTION": " !D! ダメージを与える。 NL bronze:コンパイル - このカードのダメージが永久的に !M! 上昇。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL bronze:コンパイル - このカードのダメージが永久的に !M! 上昇。",
     "EXTENDED_DESCRIPTION": [
       "カルト",
       "カー"
@@ -127,16 +127,16 @@
   "bronze:CleanCode": {
     "NAME": "コード清書",
     "DESCRIPTION": "*エンコード 時 、 *コンパイルエラー を !M! 回 取り除く。",
-    "UPGRADE_DESCRIPTION": "天賦 NL  *エンコード 時 、 *コンパイルエラー を !M! 回 取り除く。"
+    "UPGRADE_DESCRIPTION": "天賦 NL *エンコード 時 、 *コンパイルエラー を !M! 回 取り除く。"
   },
   "bronze:CloningBeam": {
     "NAME": "競合をマージ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 次にカードを bronze:エンコード する時そのコピーを bronze:エンコード する。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 次にカードを bronze:エンコード する時そのコピーを bronze:エンコード する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 次にカードを bronze:エンコード する時そのコピーを bronze:エンコード する。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 次にカードを bronze:エンコード する時そのコピーを bronze:エンコード する。"
   },
   "bronze:Constructor": {
     "NAME": "コンストラクター",
-    "DESCRIPTION": " !B! ブロックを得る。 \u202F もし1枚目の *エンコード カードだったらそのブロックを !M! 上昇させる。",
+    "DESCRIPTION": "!B! ブロックを得る。 \u202F もし1枚目の *エンコード カードだったらそのブロックを !M! 上昇させる。",
     "EXTENDED_DESCRIPTION": [
       "ビルド",
       "悲しい",
@@ -150,7 +150,7 @@
   },
   "bronze:CutThrough": {
     "NAME": "カットスルー",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 占術 !M! NL bronze:コンパイル - カードを !bauto! 引く。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 占術 !M! NL bronze:コンパイル - カードを !bauto! 引く。",
     "EXTENDED_DESCRIPTION": [
       "スルー",
       "カット"
@@ -158,7 +158,7 @@
   },
   "bronze:DarkDash": {
     "NAME": "ダークダッシュ",
-    "DESCRIPTION": " !B! ブロックを得る。 NL !D! ダメージを与える。 NL bronze:コンパイル *エラー NL bronze:インサート : *空虚",
+    "DESCRIPTION": "!B! ブロックを得る。 NL !D! ダメージを与える。 NL bronze:コンパイル *エラー NL bronze:インサート : *空虚",
     "EXTENDED_DESCRIPTION": [
       "ダーク",
       "走"
@@ -166,7 +166,7 @@
   },
   "bronze:Defend": {
     "NAME": "防御",
-    "DESCRIPTION": " !B! ブロックを得る。",
+    "DESCRIPTION": "!B! ブロックを得る。",
     "EXTENDED_DESCRIPTION": [
       "防ぐ",
       "防御"
@@ -182,8 +182,8 @@
   },
   "bronze:DelayedSlice": {
     "NAME": "ロボチョップ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 次のターン追加で !M! 枚のカードを引く。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 次のターン追加で !M! 枚のカードを引く。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 次のターン追加で !M! 枚のカードを引く。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 次のターン追加で !M! 枚のカードを引く。",
     "EXTENDED_DESCRIPTION": [
       "ロボ",
       "手刀"
@@ -199,7 +199,7 @@
   },
   "bronze:DigitalCarnage": {
     "NAME": "デジタル大虐殺",
-    "DESCRIPTION": " !D! ダメージを与える。 NL bronze:コンパイル *エラー NL ファンクションに エセリアル が付く。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL bronze:コンパイル *エラー NL ファンクションに エセリアル が付く。",
     "EXTENDED_DESCRIPTION": [
       "デジタル",
       "虐殺"
@@ -207,8 +207,8 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "見つけて置換",
-    "DESCRIPTION": "あなたの山札か捨て札からカードを選んで1枚引く。 NL 元の場所に *めまい を加える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "あなたの山札か捨て札からカードを選んで1枚引く。 NL 廃棄",
+    "DESCRIPTION": "あなたの山札か捨て札から 1 枚のカードを選び、手札に加える。 NL 元の場所に *めまい を加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "あなたの山札か捨て札から 1 枚のカードを選び、手札に加える。 NL 廃棄",
     "EXTENDED_DESCRIPTION": [
       "選択"
     ]
@@ -228,7 +228,7 @@
   },
   "bronze:FollowUp": {
     "NAME": "フォロースルー",
-    "DESCRIPTION": " !B! ブロックを得る。 NL !D! ダメージを与える。 NL 最後にプレイしたカードが ファンクション だった場合、もう一度繰り返す。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL !D! ダメージを与える。 NL 最後にプレイしたカードが ファンクション だった場合、もう一度繰り返す。"
   },
   "bronze:ForceShield": {
     "NAME": "フォースシールド",
@@ -246,7 +246,7 @@
   },
   "bronze:FormatEncoded": {
     "NAME": "フラグメント",
-    "DESCRIPTION": " !B! ブロックを得る。 NL !D! ダメージを与える。",
+    "DESCRIPTION": "!B! ブロックを得る。 NL !D! ダメージを与える。",
     "EXTENDED_DESCRIPTION": [
       "清浄",
       "欠片"
@@ -254,7 +254,7 @@
   },
   "bronze:Fortify": {
     "NAME": "要塞化",
-    "DESCRIPTION": " !D! ダメージを与える。 NL bronze:コンパイル - 敏捷性 !M! を得る。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL bronze:コンパイル - 敏捷性 !M! を得る。",
     "EXTENDED_DESCRIPTION": [
       "要塞",
       "化"
@@ -262,7 +262,7 @@
   },
   "bronze:Frontload": {
     "NAME": "フロントロード",
-    "DESCRIPTION": " !B! ブロックを得る。 NL bronze:コンパイル - ファンクションが 保留 を得る。",
+    "DESCRIPTION": "!B! ブロックを得る。 NL bronze:コンパイル - ファンクションが 保留 を得る。",
     "EXTENDED_DESCRIPTION": [
       "頑丈",
       "壁"
@@ -309,7 +309,7 @@
   },
   "bronze:InfiniteLoop": {
     "NAME": "無限ループ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL bronze:コンパイル - これのコピーを1枚獲得してダメージを !M! 増加させる。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL bronze:コンパイル - これのコピーを1枚獲得してダメージを !M! 増加させる。",
     "UPGRADE_DESCRIPTION": "保留 NL !D! ダメージを与える。 NL bronze:コンパイル - これのコピーを1枚獲得してダメージを !M! 増加させる。",
     "EXTENDED_DESCRIPTION": [
       "無限",
@@ -334,7 +334,7 @@
   },
   "bronze:ItsAFeature": {
     "NAME": "機能の一つ",
-    "DESCRIPTION": " 状態異常 カードを引くか 廃棄 するたびに、!M! ブロックを得る。"
+    "DESCRIPTION": "状態異常 カードを引いた時、または *廃棄 した時 !M! ブロックを得る。"
   },
   "bronze:Library": {
     "NAME": "ライブラリ",
@@ -346,12 +346,12 @@
   },
   "bronze:Mutator": {
     "NAME": "変異体",
-    "DESCRIPTION": "筋力 !M! を得る。 NL 状態異常 をこのカードのコピーに変身させる。",
-    "UPGRADE_DESCRIPTION": "保留 NL 筋力 !M! を得る。 NL 状態異常 をこのカードのコピーに変身させる。"
+    "DESCRIPTION": "筋力 !M! を得る。 NL 手札の *状態異常 をこのカードのコピーに *変身 させる。",
+    "UPGRADE_DESCRIPTION": "保留 NL 筋力 !M! を得る。 NL 手札の *状態異常 をこのカードのコピーに *変身 させる。"
   },
   "bronze:NullPointer": {
     "NAME": "Null Pointer",
-    "DESCRIPTION": " !B! ブロックを得る。 NL !D! ダメージを与える。 NL bronze:コンパイル *エラー NL ファンクションに 使用不可 が付く。",
+    "DESCRIPTION": "!B! ブロックを得る。 NL !D! ダメージを与える。 NL bronze:コンパイル *エラー NL ファンクションに 使用不可 が付く。",
     "EXTENDED_DESCRIPTION": [
       "null",
       "ポ"
@@ -359,7 +359,7 @@
   },
   "bronze:OilSpill": {
     "NAME": "オイル漏れ",
-    "DESCRIPTION": " !D! ダメージと 毒 !M! を与える。 NL bronze:コンパイル *エラー NL bronze:インサート : *粘液",
+    "DESCRIPTION": "!D! ダメージと 毒 !M! を与える。 NL bronze:コンパイル *エラー NL bronze:インサート : *粘液",
     "EXTENDED_DESCRIPTION": [
       "油塗れ",
       "漏れた"
@@ -371,7 +371,7 @@
   },
   "bronze:Overheat": {
     "NAME": "熱暴走",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 次の *コンパイルエラー を *エンコード から削除する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 次の *コンパイルエラー を *エンコード から削除する。"
   },
   "bronze:Overload": {
     "NAME": "コピーペースト",
@@ -388,8 +388,8 @@
   },
   "bronze:RecursiveStrike": {
     "NAME": "リ・ストライク",
-    "DESCRIPTION": " !D! ダメージを !M! 回与える。 NL !M! 枚の *ストライク のコピーを bronze:エンコード する。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを !M! 回与える。 NL !M! 枚の *ストライク+ のコピーを bronze:エンコード する。",
+    "DESCRIPTION": "!D! ダメージを !M! 回与える。 NL !M! 枚の *ストライク のコピーを bronze:エンコード する。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを !M! 回与える。 NL !M! 枚の *ストライク+ のコピーを bronze:エンコード する。",
     "EXTENDED_DESCRIPTION": [
       "回帰",
       "スト"
@@ -397,11 +397,11 @@
   },
   "bronze:Refactor": {
     "NAME": "リファクタ",
-    "DESCRIPTION": "占術 !M! NL 占術で捨てたカードを全て *廃棄 する NL 状態異常カード1枚につき !B! ブロックを得る。"
+    "DESCRIPTION": "占術 !M! NL 占術で捨てた 状態異常 カードを全て *廃棄 する。 NL 廃棄した状態異常カード1枚につき !B! ブロックを得る。"
   },
   "bronze:Repair": {
     "NAME": "リペア",
-    "DESCRIPTION": " !B! ブロックを得る。 NL bronze:コンパイル - HPを !M! 回復。",
+    "DESCRIPTION": "!B! ブロックを得る。 NL bronze:コンパイル - HPを !M! 回復。",
     "EXTENDED_DESCRIPTION": [
       "鍛冶屋",
       "レンチ"
@@ -409,7 +409,7 @@
   },
   "bronze:Replicate": {
     "NAME": "レプリケート",
-    "DESCRIPTION": " !D! ダメージを与える。 \u202F *エンコード したらこれのコピーを捨て札に加える。",
+    "DESCRIPTION": "!D! ダメージを与える。 \u202F NL *エンコード したらこれのコピーを捨て札に加える。",
     "EXTENDED_DESCRIPTION": [
       "複製",
       "コピー"
@@ -427,7 +427,7 @@
   },
   "bronze:Safeguard": {
     "NAME": "セーフガード",
-    "DESCRIPTION": " !B! ブロックを得る。",
+    "DESCRIPTION": "!B! ブロックを得る。",
     "EXTENDED_DESCRIPTION": [
       "セーフ",
       "ガード"
@@ -435,7 +435,7 @@
   },
   "bronze:Separator": {
     "NAME": "セパレータ",
-    "DESCRIPTION": " !D! ダメージを与える。 \u202F bronze:エンコード の中央に使用された時、そのダメージを !M! 上昇させる。",
+    "DESCRIPTION": "!D! ダメージを与える。 \u202F bronze:エンコード の中央に使用された時、そのダメージを !M! 上昇させる。",
     "EXTENDED_DESCRIPTION": [
       "分離",
       "チルド"
@@ -443,8 +443,8 @@
   },
   "bronze:Shell": {
     "NAME": "ブロックチェーン",
-    "DESCRIPTION": " !M! bronze:ブラー を得る。",
-    "UPGRADE_DESCRIPTION": " !M! bronze:ブラー を得る。 NL bronze:コンパイル - !M! bronze:ブラー を得る。",
+    "DESCRIPTION": "!M! bronze:ブラー を得る。",
+    "UPGRADE_DESCRIPTION": "!M! bronze:ブラー を得る。 NL bronze:コンパイル - !M! bronze:ブラー を得る。",
     "EXTENDED_DESCRIPTION": [
       "ブロック",
       "チェーン"
@@ -452,7 +452,7 @@
   },
   "bronze:Shield": {
     "NAME": "粘着シールド",
-    "DESCRIPTION": " !B! ブロックを得る。 NL bronze:インサート : *粘液",
+    "DESCRIPTION": "保留 NL !B! ブロックを得る。 NL bronze:インサート : *粘液",
     "EXTENDED_DESCRIPTION": [
       "粘着質",
       "シールド"
@@ -460,11 +460,11 @@
   },
   "bronze:ShipIt": {
     "NAME": "出荷",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 廃棄 した 状態異常 の数だけ繰り返す。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 廃棄札にある 状態異常 カードの枚数だけ繰り返す。",
     "EXTENDED_DESCRIPTION": [
-    " !D! ダメージを与える。 NL 廃棄 した 状態異常 の数だけ繰り返す。 (",
-      ")."
-]
+      "!D! ダメージを与える。 NL 廃棄札にある 状態異常 カードの枚数だけ繰り返す。 (",
+      " 枚)"
+    ]
   },
   "bronze:SpaghettiCode": {
     "NAME": "スパゲティコード",
@@ -473,7 +473,7 @@
   },
   "bronze:Strike": {
     "NAME": "ストライク",
-    "DESCRIPTION": " !D! ダメージを与える。",
+    "DESCRIPTION": "!D! ダメージを与える。",
     "EXTENDED_DESCRIPTION": [
       "シンプル",
       "ストライク"
@@ -516,8 +516,8 @@
   },
   "bronze:Virus": {
     "NAME": "ウィルス",
-    "DESCRIPTION": "保留 NL !D! ダメージを与える。 NL 手札のカードを全て捨て、捨てた枚数と同じだけ *マイナービーム を手札に加える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "保留 NL !D! ダメージを与える。 NL 手札のカードを全て捨て、捨てた枚数と同じだけ *マイナービーム+ を手札に加える。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札を全て捨て、同数の *マイナービーム を手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 手札を全て捨て、同数の *マイナービーム+ を手札に加える。 NL 廃棄"
   },
   "bronze:WhirlingStrike": {
     "NAME": "ピアッシングショット",
@@ -529,7 +529,7 @@
   },
   "bronze:WildBeam": {
     "NAME": "浄化",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 山札のランダムな 状態異常 カードを廃棄する。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 山札のランダムな 状態異常 カードを廃棄する。",
     "EXTENDED_DESCRIPTION": [
       "野生",
       "ビーム"
@@ -537,7 +537,7 @@
   },
   "bronze:WildStrike": {
     "NAME": "ワイルドストライク",
-    "DESCRIPTION": " !D! ダメージを与える。 NL bronze:インサート : *負傷"
+    "DESCRIPTION": "!D! ダメージを与える。 NL bronze:インサート : *負傷"
   },
 
 
@@ -551,7 +551,7 @@
   },
   "bronze:BranchBlock": {
     "NAME": "ブランチ:ブロック",
-    "DESCRIPTION": " !B! ブロックを得る。",
+    "DESCRIPTION": "!B! ブロックを得る。",
     "EXTENDED_DESCRIPTION": [
       "フォーク",
       "ブランチ"
@@ -559,7 +559,7 @@
   },
   "bronze:BranchHit": {
     "NAME": "ブランチ:アタック",
-    "DESCRIPTION": " !D! ダメージを与える。",
+    "DESCRIPTION": "!D! ダメージを与える。",
     "EXTENDED_DESCRIPTION": [
       "フォーク",
       "ブランチ"
@@ -572,7 +572,7 @@
   },
   "bronze:DazingPulse": {
     "NAME": "眩暈する波動",
-    "DESCRIPTION": " !B! ブロックを得る。 NL !D! ダメージを与える。 NL bronze:コンパイル *エラー NL bronze:インサート : !M! *めまい",
+    "DESCRIPTION": "!B! ブロックを得る。 NL !D! ダメージを与える。 NL bronze:コンパイル *エラー NL bronze:インサート : !M! *めまい",
     "EXTENDED_DESCRIPTION": [
       "眩暈がする",
       "パルス"
@@ -584,7 +584,7 @@
   },
   "bronze:DecaBeam": {
     "NAME": "プロトシールド",
-    "DESCRIPTION": " !B! ブロックを得る。 NL bronze:コンパイル - *プレートアーマー !M! 。 bronze:インサート : !bauto! *めまい",
+    "DESCRIPTION": "!B! ブロックを得る。 NL bronze:コンパイル - *プレートアーマー !M! 。 bronze:インサート : !bauto! *めまい",
     "EXTENDED_DESCRIPTION": [
       "ジャギー",
       "バリア"
@@ -597,7 +597,7 @@
   },
   "bronze:DonuBeam": {
     "NAME": "プロトビーム",
-    "DESCRIPTION": " !D! ダメージを !M! 回与える。 NL bronze:コンパイル - 筋力 !M! を得る。",
+    "DESCRIPTION": "!D! ダメージを !M! 回与える。 NL bronze:コンパイル - 筋力 !M! を得る。",
     "EXTENDED_DESCRIPTION": [
       "スムーズな",
       "ブラスト"
@@ -622,7 +622,7 @@
   },
   "bronze:MinorBeam": {
     "NAME": "マイナービーム",
-    "DESCRIPTION": " !D! ダメージを与える。",
+    "DESCRIPTION": "!D! ダメージを与える。",
     "EXTENDED_DESCRIPTION": [
       "マイナー",
       "傷付"
@@ -630,7 +630,7 @@
   },
   "bronze:Spike": {
     "NAME": "スパイク",
-    "DESCRIPTION": " !D! ダメージを与える。 NL bronze:コンパイル - トゲ !M! を得る。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL bronze:コンパイル - トゲ !M! を得る。",
     "EXTENDED_DESCRIPTION": [
       "刺々",
       "刺さる"
@@ -638,12 +638,12 @@
   },
   "bronze:Ignite": {
     "NAME": "発火",
-    "DESCRIPTION": " !M! hexamod:ソウルバーン を与える。 NL ターン終了時に手札にある場合、 2 ダメージを受ける。",
-    "UPGRADE_DESCRIPTION": " !M! hexamod:ソウルバーン を与える。 NL ターン終了時に手札にある場合、 4 ダメージを受ける。"
+    "DESCRIPTION": "!M! hexamod:ソウルバーン を与える。 NL ターン終了時に手札にある場合、 2 ダメージを受ける。",
+    "UPGRADE_DESCRIPTION": "!M! hexamod:ソウルバーン を与える。 NL ターン終了時に手札にある場合、 4 ダメージを受ける。"
   },
   "bronze:IntoTheVoid": {
     "NAME": "虚空へ",
-    "DESCRIPTION": "エセリアル NL 敵はこのターン 筋力 !M! を失う。 NL ドローした時 1 [E] を失う。 NL 廃棄"
+    "DESCRIPTION": "エセリアル NL 敵はこのターン 筋力 !M! を失う。 NL このカードをドローした時、 [E] を失う。 NL 廃棄"
   },
   "bronze:Lubricant": {
     "NAME": "潤滑油",
@@ -659,6 +659,6 @@
   },
   "bronze:UnknownStatus": {
     "NAME": "幻惑",
-    "DESCRIPTION": " !B! ブロックを得る。"
+    "DESCRIPTION": "!B! ブロックを得る。"
   }
 }

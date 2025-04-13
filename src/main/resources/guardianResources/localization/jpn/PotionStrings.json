@@ -1,6 +1,6 @@
 {
   "Guardian:AcceleratePotion": {
-    "NAME": "テンポラルポーション",
+    "NAME": "緊急ポーション",
     "DESCRIPTIONS": [
       " #y停滞 中のカード全てに #yアクセラレート を #b",
       " 回行う。"
