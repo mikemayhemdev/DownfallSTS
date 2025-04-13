@@ -524,7 +524,7 @@
   },
   "sneckomod:CobraCoil": {
     "NAME": "Cobra Coil",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Constricted. NL sneckomod:Gift: Rare Attack."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! expansioncontent:Constricted. NL sneckomod:Gift: Rare Attack."
   },
   "sneckomod:Belittle": {
     "NAME": "Belittle",
