@@ -18,7 +18,7 @@ public class ModHelperPatch {
         HashMap<String, AbstractDailyMod> myMapG = (HashMap) ReflectionHacks.getPrivateStatic(ModHelper.class, "genericMods");
         HashMap<String, AbstractDailyMod> myMapD = (HashMap) ReflectionHacks.getPrivateStatic(ModHelper.class, "difficultyMods");
         myMapD.put(Hexed.ID, new Hexed());
-        myMapS.put(Improvised.ID, new Improvised());
+        //myMapS.put(Improvised.ID, new Improvised());
         myMapG.put(Jewelcrafting.ID, new Jewelcrafting());
         myMapD.put(WorldOfGoo.ID, new WorldOfGoo());
         myMapD.put(ExchangeController.ID, new ExchangeController());

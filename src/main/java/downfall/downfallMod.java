@@ -1441,7 +1441,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         l.add(new CustomMod(Jewelcrafting.ID, "g", true));
         l.add(new CustomMod(ChampStances.ID, "g", true));
         l.add(new CustomMod(Enraging.ID, "r", true));
-        l.add(new CustomMod(Improvised.ID, "g", true));
+        //l.add(new CustomMod(Improvised.ID, "g", true));
         l.add(evilWithinSingleton);
         l.add(new CustomMod(ExchangeController.ID, "r", true));
         l.add(new CustomMod(Analytical.ID, "g", true));
