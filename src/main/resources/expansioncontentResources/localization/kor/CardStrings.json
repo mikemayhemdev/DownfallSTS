@@ -90,7 +90,7 @@
     "NAME": "해독제",
     "DESCRIPTION": "보존. NL 중독을 !M! 잃습니다."
   },
-  "expansioncontent:SuperhostShieldG": {
+  "expansioncontent:SuperGhostShield": {
     "NAME": "유령 보호막",
     "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL [#e087a4]방어도를[] [#e087a4]!B![] [#e087a4]얻습니다.[] NL [#e087a4]흐릿함을[] [#e087a4]!M![] [#e087a4]얻습니다.[]",
     "EXTENDED_DESCRIPTION": [
