@@ -36,7 +36,7 @@ public class ShowStopper extends AbstractGremlinCard {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
-        this.baseMagicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 5;
         this.isMultiDamage = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(WIZARD_GREMLIN);
@@ -49,8 +49,7 @@ public class ShowStopper extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new GrandFinalEffect(), 1.0F));
         for(int i=0;i<this.magicNumber;i++) {
             AbstractDungeon.actionManager.addToBottom(
-                    new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn,
-                            AbstractGameAction.AttackEffect.FIRE));
+                    new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
         }
     }
 
