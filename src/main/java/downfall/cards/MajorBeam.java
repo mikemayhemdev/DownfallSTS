@@ -34,7 +34,7 @@ public class MajorBeam extends AbstractExpansionCard {
     private static final CardStrings cardStrings;
 
     public MajorBeam() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
         loadJokeCardImage(this,"MajorBeam.png");
         baseMagicNumber = magicNumber = 1;
