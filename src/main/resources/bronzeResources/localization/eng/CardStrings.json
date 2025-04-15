@@ -516,8 +516,8 @@
   },
   "bronze:Virus": {
     "NAME": "Virus",
-    "DESCRIPTION": "Deal !D! damage. NL Discard your hand and gain a *Minor *Beam for each card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Discard your hand and gain a *Minor *Beam+ for each card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Discard your hand and gain a *Minor *Beam for each card discarded. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Discard your hand and gain a *Minor *Beam+ for each card discarded. NL Exhaust."
   },
   "bronze:WhirlingStrike": {
     "NAME": "Piercing Shot",
