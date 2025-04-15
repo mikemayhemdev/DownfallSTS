@@ -22,7 +22,7 @@
   },
   "sneckomod:DangerNoodle": {
     "NAME": "위험한 머리",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 sneckomod:뒤엉키게 합니다. NL sneckomod:선물: 3+ cost.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 sneckomod:뒤엉키게 합니다. NL sneckomod:선물: 비용 3+ 카드.",
     "DESCRIPTION_BATTLE": "피해를 !D! 줍니다. NL 카드를 sneckomod:뒤엉키게 합니다."
   },
   "sneckomod:Deception": {
@@ -172,7 +172,7 @@
   "sneckomod:RainOfDice": {
     "NAME": "주사위 비",
     "DESCRIPTION": "피해를 !D! 줍니다. NL sneckomod:뒤엉키게 했다면 *주사위 *비를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NLsneckomod:뒤엉키게 했다면 *주사위 *비+를 얻습니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL sneckomod:뒤엉키게 했다면 *주사위 *비+를 얻습니다. NL 소멸."
   },
   "sneckomod:Restock": {
     "NAME": "재보급",
