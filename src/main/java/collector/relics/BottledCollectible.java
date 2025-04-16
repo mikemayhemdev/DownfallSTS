@@ -7,6 +7,8 @@ import collector.CollectorCollection;
 import collector.CollectorMod;
 import collector.actions.DrawCardFromCollectionAction;
 import collector.patches.CollectorBottleField;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -31,6 +33,16 @@ public class BottledCollectible extends CustomRelic implements CustomBottleRelic
 
     public BottledCollectible() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.RARE, LandingSound.MAGICAL);
+    }
+
+    public void atBattleStart() {
+        this.counter = 0;
+    }
+
+    @Override
+    public void onTrigger() {
+        this.flash();
+        this.counter = -1;
     }
 
     @Override
