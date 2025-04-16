@@ -49,7 +49,8 @@ public class BlackCandle extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return (evilMode || (AbstractDungeon.player instanceof hermit));
+        return false;
+        //(evilMode || (AbstractDungeon.player instanceof hermit));
     }
 
     public AbstractRelic makeCopy() {
