@@ -28,9 +28,6 @@ public class BagOfTricks extends CustomRelic {
         flash();
         for (int i = 0; i < EXTRA_CARDS; i++) {
             atb(new DrawCardFromCollectionAction());
-            if (!CollectorCollection.combatCollection.isEmpty() || AbstractDungeon.player.hasRelic(HolidayCoal.ID)) {
-                att(new DrawCardAction(1));
-            }
         }
     }
 

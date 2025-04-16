@@ -1,5 +1,6 @@
 package hermit.actions;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
@@ -26,7 +27,7 @@ public class LuckDrawAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
-            if (tracker >= energy || (p.drawPile.isEmpty() && p.discardPile.isEmpty()) || p.hand.size() >= 10) {
+            if (tracker >= energy || (p.drawPile.isEmpty() && p.discardPile.isEmpty()) || p.hand.size() >= BaseMod.MAX_HAND_SIZE) {
                 this.isDone = true;
                 return;
             }
