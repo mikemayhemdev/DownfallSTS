@@ -384,7 +384,7 @@
   "champ:TripleStrike": {
     "NAME": "Triple Strike",
     "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strike gremlin:Echoes. They cost 0 and trigger *Skill champ:Bonuses.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strike gremlin:Echoes. They cost 0 and trigger *Skill champ:Bonuses."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strike+ gremlin:Echoes. They cost 0 and trigger *Skill champ:Bonuses."
   },
   "champ:WindUp": {
     "NAME": "Wind Up",
