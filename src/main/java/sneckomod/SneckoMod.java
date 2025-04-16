@@ -356,7 +356,7 @@ public class SneckoMod implements
 
         possList.removeIf(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE);
 
-        if (possList.size() == 0) {
+        if (possList.size() == 0 && ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) || !(AbstractDungeon.player instanceof TheSnecko)))) {
             possList.add(new Madness());
         }
 
@@ -548,7 +548,13 @@ public class SneckoMod implements
                 !c.cardID.equals(expansioncontent.cards.YouAreMine.ID) &&
                 !c.cardID.equals(expansioncontent.cards.FaceSlap.ID)));
 
-        if (possList.size() == 0) {
+        possList.removeIf(c -> c.color == AbstractCard.CardColor.COLORLESS && (
+                !c.cardID.equals(Trip.ID) &&
+                        !c.cardID.equals(Blind.ID) &&
+                        !c.cardID.equals(DarkShackles.ID) &&
+                        !c.cardID.equals(SadisticNature.ID)));
+
+        if (possList.size() == 0 && ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) || !(AbstractDungeon.player instanceof TheSnecko)))) {
             possList.add(new Madness());
         }
 
@@ -789,7 +795,7 @@ public class SneckoMod implements
         }
         validColors.clear();
         for (AbstractCard.CardColor c : AbstractCard.CardColor.values()) {
-            if (c != AbstractCard.CardColor.CURSE && c != AbstractCard.CardColor.COLORLESS)
+            if (c != AbstractCard.CardColor.CURSE && c != AbstractCard.CardColor.COLORLESS && c != CardColorEnumPatch.CardColorPatch.BOSS && c != CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE)
                 validColors.add(c);
         }
         OffclassHelper.updateAllUnknownReplacements();
