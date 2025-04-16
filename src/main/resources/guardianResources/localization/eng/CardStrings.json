@@ -43,8 +43,8 @@
   },
   "Guardian:DonusPower": {
     "NAME": "Overload",
-    "DESCRIPTION": "Draw !M! Cards. NL Reduce each of your debuffs by 1.",
-    "UPGRADE_DESCRIPTION": "Draw !M! Cards. NL Reduce each of your debuffs by 1."
+    "DESCRIPTION": "Draw !M! cards. NL Reduce each of your debuffs by 1.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Reduce each of your debuffs by 1."
   },
   "Guardian:DecasProtection": {
     "NAME": "Ancient Power",
