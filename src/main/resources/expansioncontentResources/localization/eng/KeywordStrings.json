@@ -121,6 +121,14 @@
   },
 
   {
+    "NAMES": [
+      "constricted"
+    ],
+    "PROPER_NAME": "Constricted",
+    "DESCRIPTION": "Creatures with Constricted take damage at the end of their turn."
+  },
+
+  {
     "PROPER_NAME": "Chant",
     "NAMES": [
       "chant",

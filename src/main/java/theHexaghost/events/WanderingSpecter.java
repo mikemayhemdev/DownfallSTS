@@ -143,11 +143,12 @@ public class WanderingSpecter extends AbstractImageEvent {
 //                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new BlueCandle());// 83
                             AbstractDungeon.player.damage(new DamageInfo(null, 5, DamageInfo.DamageType.HP_LOSS));
                             AbstractDungeon.getCurrRoom().rewards.clear();
-                            if (!EvilModeCharacterSelect.evilMode) {
+                            if (!EvilModeCharacterSelect.evilMode && !(AbstractDungeon.player instanceof hermit)) {
                                 AbstractDungeon.getCurrRoom().addRelicToRewards(new BlueCandle());
                             }
-                            if (EvilModeCharacterSelect.evilMode) {
-                                AbstractDungeon.getCurrRoom().addRelicToRewards(new BlackCandle());
+                            if (EvilModeCharacterSelect.evilMode || (AbstractDungeon.player instanceof hermit)) {
+                                AbstractDungeon.getCurrRoom().addRelicToRewards(new BlueCandle());
+                                //AbstractDungeon.getCurrRoom().addRelicToRewards(new BlackCandle());
                             }
                             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
                             AbstractDungeon.combatRewardScreen.open();
@@ -157,10 +158,10 @@ public class WanderingSpecter extends AbstractImageEvent {
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[9]);
                         this.screen = CurScreen.END;
-                        if (!EvilModeCharacterSelect.evilMode) {
+                        if (!EvilModeCharacterSelect.evilMode && !(AbstractDungeon.player instanceof hermit)) {
                             logMetricObtainRelicAndDamage(ID, "Chased Away", new BlueCandle(), 5);
                         }
-                        if (EvilModeCharacterSelect.evilMode) {
+                        if (EvilModeCharacterSelect.evilMode || (AbstractDungeon.player instanceof hermit)) {
                             logMetricObtainRelicAndDamage(ID, "Chased Away", new BlackCandle(), 5);
                         }
                         return;
