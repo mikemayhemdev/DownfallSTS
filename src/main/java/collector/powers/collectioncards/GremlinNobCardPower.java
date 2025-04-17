@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
+import static champ.ChampMod.vigor;
+
 public class GremlinNobCardPower extends AbstractCollectorPower {
     public static final String NAME = "GremlinNobCard";
     public static final String POWER_ID = makeID(NAME);
@@ -22,7 +24,7 @@ public class GremlinNobCardPower extends AbstractCollectorPower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.SKILL) {
-            this.addToTop(new ApplyPowerAction(this.owner, this.owner, new VigorPower(this.owner, this.amount), this.amount));
+            vigor(this.amount);
             this.flash();
         }
     }
