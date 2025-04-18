@@ -26,8 +26,8 @@ public class StasisCodex extends CustomRelic {
 
     @Override
     public void atBattleStart() {
-        this.counter = 1;
-        marker = 1;
+        this.counter = 0;
+        marker = 0;
         this.grayscale = false;
     }
 
