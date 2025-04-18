@@ -92,6 +92,11 @@ public class CompilePackage extends AbstractGuardianCard {
         }
     }
 
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return AbstractDungeon.player.hasEmptyOrb();
+    }
+
     public void updateDescription() {
 
         if (this.socketCount > 0) {
