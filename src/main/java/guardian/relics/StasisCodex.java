@@ -34,14 +34,15 @@ public class StasisCodex extends CustomRelic {
     @Override
     public void onPlayerEndTurn() {
         super.onPlayerEndTurn();
-        if (marker < MAX_MARKER) {
+        if (marker < 3) {
             ++this.counter;
             marker++;
             if (AbstractDungeon.player.hasEmptyOrb()) {
                 AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 AbstractDungeon.actionManager.addToBottom(new StasisCodexAction());
             }
-            if (marker == MAX_MARKER) {
+            if (marker == 3) {
+                this.flash();
                 this.grayscale = true;
             }
         }
