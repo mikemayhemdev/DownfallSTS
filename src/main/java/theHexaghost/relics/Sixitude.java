@@ -33,7 +33,7 @@ public class Sixitude extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
-        if (targetCard.hasTag(expansionContentMod.ECHO)) {
+        if (!targetCard.hasTag(expansionContentMod.ECHO)) {
             ++this.counter;
             if (this.counter % 6 == 0) {
                 this.flash();
