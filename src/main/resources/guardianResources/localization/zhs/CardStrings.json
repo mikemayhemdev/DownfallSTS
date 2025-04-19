@@ -104,7 +104,7 @@
   "Guardian:Incinerate": {
     "NAME": "焚烧",
     "DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:加速 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:加速 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:加速 2 次。。"
   },
   "Guardian:Orbwalk": {
     "NAME": "行者圆球",

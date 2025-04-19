@@ -26,22 +26,23 @@ public class StasisCodex extends CustomRelic {
 
     @Override
     public void atBattleStart() {
-        this.counter = 1;
-        marker = 1;
+        this.counter = 0;
+        marker = 0;
         this.grayscale = false;
     }
 
     @Override
     public void onPlayerEndTurn() {
         super.onPlayerEndTurn();
-        if (marker < MAX_MARKER) {
+        if (marker < 3) {
             ++this.counter;
             marker++;
-            if (AbstractDungeon.player.hasEmptyOrb()) {
+            if (AbstractDungeon.player.hasEmptyOrb() || !GuardianMod.isStasisOrbInPlay()) {
                 AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 AbstractDungeon.actionManager.addToBottom(new StasisCodexAction());
             }
-            if (marker == MAX_MARKER) {
+            if (marker == 3) {
+                this.flash();
                 this.grayscale = true;
             }
         }
