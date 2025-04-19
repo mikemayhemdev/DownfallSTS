@@ -45,7 +45,7 @@ public class GhostflameHelper {
 //            hexaGhostFlames.add(new BolsteringGhostflame(globalX + AbstractDungeon.player.drawX + (90.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (90.0F * Settings.scale)));
 //            hexaGhostFlames.get(0).activate();
 //        }
-
+        }
     }
 
     public static AbstractGhostflame getNextGhostFlame() {
