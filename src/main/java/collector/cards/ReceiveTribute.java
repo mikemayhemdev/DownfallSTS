@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.cardmods.PropertiesMod;
 import expansioncontent.expansionContentMod;
 import guardian.characters.GuardianCharacter;
 import slimebound.characters.SlimeboundCharacter;
@@ -66,7 +67,9 @@ public class ReceiveTribute extends AbstractCollectorCard {
         ArrayList<AbstractCard> choices = new ArrayList<>();
         for (int i = 0; i < magicNumber; i++) {
             AbstractCard toAdd = remaining.remove(AbstractDungeon.cardRandomRng.random(remaining.size() - 1)).makeCopy();
-            CardModifierManager.addModifier(toAdd, new RetainMod());
+            if (!toAdd.selfRetain) {
+                CardModifierManager.addModifier(toAdd, new PropertiesMod(PropertiesMod.supportedProperties.RETAIN, false));
+            }
             choices.add(toAdd);
         }
         addToBot(new SelectCardsCenteredAction(choices, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
