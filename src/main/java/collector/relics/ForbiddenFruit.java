@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.util.TextureLoader;
 import expansioncontent.cards.AwakenDeath;
+import slimebound.characters.SlimeboundCharacter;
+import sneckomod.TheSnecko;
 
 import java.util.stream.Collectors;
 
@@ -94,6 +96,10 @@ public class ForbiddenFruit extends CustomRelic {
     }
 
     public boolean canSpawn() {
+        if (AbstractDungeon.player instanceof TheSnecko) {
+            return false;
+        }
+
         return ((AbstractDungeon.floorNum > 1)); // you cannot boss swap into forbidden fruit
     }
 
