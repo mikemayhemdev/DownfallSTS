@@ -236,6 +236,7 @@ public class CollectorMod implements
     @Override
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new CollectorSecondMagic());
+        BaseMod.addDynamicVariable(new CollectorDecay());
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException |

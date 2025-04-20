@@ -2,6 +2,7 @@ package collector.ui;
 
 import basemod.ReflectionHacks;
 import collector.CollectorCollection;
+import collector.util.EssenceSystem;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,9 +27,9 @@ public class StashAwayCampfireOption extends AbstractCampfireOption {
     //private ArrayList<String> idleMessages;
     public StashAwayCampfireOption() {
         this.label = DESCRIPTIONS[0];
-        this.description = DESCRIPTIONS[1] + GOLD_GRANTED + DESCRIPTIONS[2];
+        this.description = DESCRIPTIONS[1];
         boolean active = false;
-        if (CollectorCollection.collection.size() > 0) {
+        if (EssenceSystem.essenceCount() >= 10 && CollectorCollection.collection.size() > 0) {
             active = true;
         }
 

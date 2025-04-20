@@ -16,14 +16,14 @@ public class CollectedCardMod extends AbstractCardModifier {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        hadExhaust = card.exhaust;
-        card.exhaust = true;
+        //hadExhaust = card.exhaust;
+        //card.exhaust = true;
         CardModifierManager.addModifier(card, new ActuallyCollectedCardMod());
     }
 
     @Override
     public void onRemove(AbstractCard card) {
-        card.exhaust = hadExhaust;
+       // card.exhaust = hadExhaust;
     }
 
     @Override
@@ -38,6 +38,15 @@ public class CollectedCardMod extends AbstractCardModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
+        /*
+        if (card.type == AbstractCard.CardType.POWER){
+            return uiStrings.TEXT[0] + rawDescription;
+        } else if (hadExhaust) {
+            return uiStrings.TEXT[0] + rawDescription;
+        }
+        return uiStrings.TEXT[0] + rawDescription + uiStrings.TEXT[2];
+
+         */
         return uiStrings.TEXT[0] + rawDescription;
     }
 

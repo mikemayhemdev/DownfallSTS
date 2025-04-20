@@ -64,13 +64,9 @@ public class CollectibleCardReward extends CustomReward {
 
     @Override
     public boolean claimReward() {
-        if (EssenceSystem.essenceCount() >= 3) {
-            AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(card, InputHelper.mX, InputHelper.mY));
-            EssenceSystem.changeEssence(-3);
-            return true;
-        } else {
-            return false;
-        }
+        AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(card, InputHelper.mX, InputHelper.mY));
+        EssenceSystem.changeEssence(3);
+        return true;
     }
 
     @Override

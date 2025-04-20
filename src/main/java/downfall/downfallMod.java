@@ -163,7 +163,7 @@ import static sneckomod.OffclassHelper.getARandomOffclass;
 public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, AddAudioSubscriber, RenderSubscriber, PostDeathSubscriber {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = true;
+    public static final boolean STEAM_MODE = false;
 
     public static boolean neowtextoverride = false;
 
@@ -192,7 +192,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean crossoverModCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = false;
+    public static boolean normalMapLayout = true;
     public static boolean sneckoNoModCharacters = false;
     public static boolean useIconsForAppliedProperties = false;
 

@@ -42,5 +42,12 @@
       "torchhead"
     ],
     "DESCRIPTION": "While you have #yTemporary #yHP, each Attack you play triggers Torchhead."
+  },
+  {
+    "PROPER_NAME": "Collectible",
+    "NAMES": [
+      "collectible"
+    ],
+    "DESCRIPTION": "Collectible cards will become unavailable for use in combats after a certain number of combats completed."
   }
 ]

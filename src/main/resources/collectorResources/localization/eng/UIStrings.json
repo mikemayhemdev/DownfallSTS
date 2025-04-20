@@ -32,7 +32,7 @@
   "collector:EssenceCount": {
     "TEXT": [
       "Essences",
-      "Spend Essences on adding cards to your Collection. Combat rooms grant #b1 #yEssence. Elites give #b2 #yEssence, Bosses give #b3! NL You have #b",
+      "Earn Essences by adding more cards to your Collection. Spend them at Bonfires to recharge your Collected cards! NL You have #b",
       " Essences."
     ]
   },
@@ -49,8 +49,9 @@
   },
   "collector:CollectedCardMod": {
     "TEXT": [
-      "collector:Megathereal. NL ",
-      "Collected"
+      "collector:Collectible - !clDecay! NL ",
+      "Collected",
+      " NL Exhaust."
     ]
   },
   "collector:CollectibleCardReward": {
@@ -84,11 +85,11 @@
   },
   "collector:StashAwayCampfireOption": {
     "TEXT": [
-      "Release",
-      "Remove a Collected Card. Gain ",
+      "Infuse",
+      "(Free Action) Spend 10 Essence: Recharge Collected card.",
       " Souls.",
       "Requires a Collected card.",
-      "Select a Collected card to remove."
+      "Select a Collected card. It lasts for 5 more combats."
     ]
   },
   "collector:BonusEventOption": {

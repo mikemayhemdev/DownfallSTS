@@ -9,6 +9,7 @@ import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.monsters.*;
 import collector.cardmods.CollectedCardMod;
+import collector.cards.AbstractCollectorCard;
 import collector.cards.collectibles.*;
 import collector.patches.CollectorBottleField;
 import collector.util.CollectibleCardReward;
@@ -237,7 +238,12 @@ public class CollectorCollection {
     public static void atBattleStart() {
         combatCollection.clear();
         for (AbstractCard q : collection.group) {
-            combatCollection.addToTop(q.makeSameInstanceOf());
+            if (q instanceof AbstractCollectorCard){
+                if (((AbstractCollectorCard)q).combatChargesRemaining > 0){
+                    combatCollection.addToTop(q.makeSameInstanceOf());
+                    ((AbstractCollectorCard) q).combatChargesRemaining --;
+                }
+            }
         }
         combatCollection.shuffle(AbstractDungeon.shuffleRng);
         ArrayList<AbstractCard> toTopdeck = new ArrayList<>();
@@ -258,10 +264,12 @@ public class CollectorCollection {
 
     public static void collect(AbstractMonster m) {
         if (!collectedAlready.contains(m) && !m.id.equals(NeowBoss.ID)) {
+            /*
             if (AbstractDungeon.getCurrRoom().rewards.stream().noneMatch(q -> q instanceof EssenceReward)) {
                 AbstractDungeon.getCurrRoom().rewards.add(new EssenceReward(getEssenceAmount(AbstractDungeon.getCurrRoom())));
-            }
 
+            }
+             */
             AbstractDungeon.getCurrRoom().rewards.add(new CollectibleCardReward(getCollectedCard(m)));
             collectedAlready.add(m);
         }

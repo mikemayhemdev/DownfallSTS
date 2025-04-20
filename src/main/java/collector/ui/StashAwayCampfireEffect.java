@@ -1,6 +1,9 @@
 package collector.ui;
 
 import collector.CollectorCollection;
+import collector.CollectorMod;
+import collector.cards.AbstractCollectorCard;
+import collector.util.EssenceSystem;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -16,6 +19,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
+import guardian.GuardianMod;
 
 public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("collector:StashAwayCampfireOption");
@@ -41,9 +45,15 @@ public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.Abstract
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && AbstractDungeon.gridSelectScreen.forPurge) {
 
                 AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                ((AbstractCollectorCard)c).combatChargesRemaining += 5;
+                /*
                 AbstractDungeon.effectsQueue.add(new PurgeCardEffect(c));
                 CollectorCollection.collection.removeCard(c);
                 AbstractDungeon.player.gainGold(StashAwayCampfireOption.GOLD_GRANTED);
+
+                 */
+
+                EssenceSystem.changeEssence(-10);
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
             }
@@ -60,9 +70,16 @@ public class StashAwayCampfireEffect extends com.megacrit.cardcrawl.vfx.Abstract
             this.isDone = true;
             if (CampfireUI.hidden) {
                 AbstractRoom.waitTimer = 0.0F;
-                AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-                ((RestRoom) AbstractDungeon.getCurrRoom()).cutFireSound();
+                if (AbstractDungeon.getCurrRoom() instanceof RestRoom) {
+                    GuardianMod.socketBonfireOption.reCheck();
+                    ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI.reopen();
+                    // there was a bug with the fire sound persisting and I'm not sure why,
+                    // so this is basically a randomly thrown out preventative measure.
+                    ((RestRoom) AbstractDungeon.getCurrRoom()).cutFireSound();
+
+                }
             }
+
         }
 
     }

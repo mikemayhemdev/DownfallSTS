@@ -33,6 +33,9 @@ public abstract class AbstractCollectorCard extends CustomCard {
     public int baseSecondMagic;
     public boolean upgradedsecondMagic;
     public boolean issecondMagicModified;
+    public int combatChargesRemaining;
+
+    public int baseCombatCharges = 5;
 
     public AbstractCollectorCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, CollectorChar.Enums.COLLECTOR);
@@ -46,6 +49,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
         name = originalName = cardStrings.NAME;
         initializeTitle();
         initializeDescription();
+        combatChargesRemaining = baseCombatCharges;
     }
 
 
