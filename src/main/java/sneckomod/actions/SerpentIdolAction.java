@@ -1,5 +1,6 @@
 package sneckomod.actions;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
@@ -32,7 +33,7 @@ public class SerpentIdolAction extends AbstractGameAction {
                     disCard.setCostForTurn(0);// 36
 
                     disCard.current_x = -1000.0F * Settings.scale;// 38
-                    if (AbstractDungeon.player.hand.size() < 10) {// 39
+                    if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {// 39
                         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 40
                     } else {
                         AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 44
