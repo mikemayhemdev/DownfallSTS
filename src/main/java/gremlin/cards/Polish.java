@@ -1,5 +1,6 @@
 package gremlin.cards;
 
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -35,15 +36,12 @@ public class Polish extends AbstractGremlinCard {
     public Polish()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
-
-        cardsList.add(new Shiv());
-        cardsList.add(new Ward());
-
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         this.tags.add(SHIELD_GREMLIN);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "Polish.png");
+        MultiCardPreview.add(new Shiv(), new Ward());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
@@ -60,28 +58,6 @@ public class Polish extends AbstractGremlinCard {
         {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
-        }
-    }
-
-    @Override
-    public void update() {
-        super.update();
-        if (hb.hovered) {
-            if (rotationTimer <= 0F) {
-                rotationTimer = 2F;
-                if (cardsList.size() == 0) {
-                    cardsToPreview = CardLibrary.cards.get("Madness");
-                } else {
-                    cardsToPreview = cardsList.get(previewIndex);
-                }
-                if (previewIndex == cardsList.size() - 1) {
-                    previewIndex = 0;
-                } else {
-                    previewIndex++;
-                }
-            } else {
-                rotationTimer -= Gdx.graphics.getDeltaTime();
-            }
         }
     }
 

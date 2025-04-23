@@ -1,6 +1,7 @@
 package gremlin.cards;
 
 import basemod.helpers.BaseModCardTags;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
@@ -8,6 +9,7 @@ import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCar
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -59,6 +61,7 @@ public class Nob extends AbstractGremlinCard implements SpawnModificationCard {
         this.tags.add(NOB_GREMLIN);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "Nob.png");
+        MultiCardPreview.add(new Bellow(), new SkullBash(), new Rush());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -80,27 +83,6 @@ public class Nob extends AbstractGremlinCard implements SpawnModificationCard {
 //        return AbstractDungeon.cardRandomRng.randomBoolean();
 //    }
 
-    @Override
-    public void update() {
-        super.update();
-        if (hb.hovered) {
-            if (rotationTimer <= 0F) {
-                rotationTimer = 2F;
-                if (cardsList.size() == 0) {
-                    cardsToPreview = CardLibrary.cards.get("Madness");
-                } else {
-                    cardsToPreview = cardsList.get(previewIndex);
-                }
-                if (previewIndex == cardsList.size() - 1) {
-                    previewIndex = 0;
-                } else {
-                    previewIndex++;
-                }
-            } else {
-                rotationTimer -= Gdx.graphics.getDeltaTime();
-            }
-        }
-    }
 
     private void playSfx() {
         int roll = MathUtils.random(2);
