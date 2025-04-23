@@ -26,7 +26,7 @@
     "NAME": "ストーンオブノマック",
     "FLAVOR": "ヘドロギャングの一人に見せるとたちまち踊りだす。",
     "DESCRIPTIONS": [
-      "戦闘開始時、 #yslimeboundmod:効力 #b2 を得る。"
+      "戦闘開始時、 #yslimeboundmod:効力 #b1 を得る。"
     ]
   },
   "Slimebound:DailySplitRelic": {
