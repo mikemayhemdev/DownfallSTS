@@ -26,7 +26,7 @@ public class Shatter extends AbstractChampCard {
 
     public Shatter() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 15;
+        baseDamage = 14;
         baseMagicNumber = magicNumber = 1;
         postInit();
         //tags.add(CardTags.STRIKE);
@@ -57,6 +57,6 @@ public class Shatter extends AbstractChampCard {
     public void upgrade() {
         upgradeName();
        //upgradeDamage(3);
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }
