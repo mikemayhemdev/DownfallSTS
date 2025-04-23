@@ -21,7 +21,6 @@ public class Sapped extends AbstractCollectorCard {
         isPyre();
         exhaust = true;
         SoulboundField.soulbound.set(this, true);
-        tags.add(downfallMod.DOWNFALL_CURSE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

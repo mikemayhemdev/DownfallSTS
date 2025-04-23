@@ -80,7 +80,7 @@ public class ToothAndClaw extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            //upgradeDamage(2);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
             this.cardsToPreview.upgrade();

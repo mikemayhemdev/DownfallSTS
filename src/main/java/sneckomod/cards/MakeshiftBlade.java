@@ -34,7 +34,7 @@ public class MakeshiftBlade extends AbstractSneckoCard {
     public static final String ID = SneckoMod.makeID("MakeshiftBlade");
 
     // Card constants
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 9;
     private static final int COST = 1;
     private static final int MAGIC = 3; // Initial debuff requirement
     private static final int UPGRADE_MAGIC = -1; // Reduces debuff requirement by 1

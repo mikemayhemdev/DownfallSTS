@@ -40,6 +40,7 @@ public class Pickpocket extends AbstractGremlinCard {
         this.baseBlamage = 5;
         this.exhaust = true;
         this.tags.add(MAD_GREMLIN);
+        this.tags.add(CardTags.HEALING);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "Pickpocket.png");
     }

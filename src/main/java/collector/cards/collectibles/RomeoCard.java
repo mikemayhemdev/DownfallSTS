@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.powers.watcher.FreeAttackPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import sneckomod.SneckoMod;
 
+import static champ.ChampMod.vigor;
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.applyToSelf;
 
@@ -21,7 +22,7 @@ public class RomeoCard extends AbstractCollectibleCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new FreeAttackPower(p, 1));
-        applyToSelf(new VigorPower(p, magicNumber));
+        vigor(magicNumber);
     }
 
     public void upp() {

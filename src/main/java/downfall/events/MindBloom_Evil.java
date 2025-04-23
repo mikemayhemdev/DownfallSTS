@@ -75,9 +75,9 @@ public class MindBloom_Evil extends AbstractImageEvent {
             if (AbstractDungeon.player instanceof GremlinCharacter) {
                 this.imageEventText.setDialogOption(OPTIONSALT[5]);
             } else {
-                this.imageEventText.setDialogOption(OPTIONSALT[2]);
+                //this.imageEventText.setDialogOption(OPTIONSALT[2]);
                 //if ruining the surprise is important use this instead
-                // this.imageEventText.setDialogOption(OPTIONSALT[2], new BurdenOfKnowledge());
+                this.imageEventText.setDialogOption(OPTIONSALT[2], new BurdenOfKnowledge());
             }
         } else {
             if (AbstractDungeon.player instanceof GremlinCharacter) {

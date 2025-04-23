@@ -14,7 +14,7 @@ public class QuickBite extends AbstractSneckoCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 9;
     private static final int UPG_DAMAGE = 3;
 
     public QuickBite() {
