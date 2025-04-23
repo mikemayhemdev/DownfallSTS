@@ -44,12 +44,14 @@ public class CompilePackage extends AbstractGuardianCard {
     private float rotationTimer;
     private int previewIndex;
     private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    public static final String[] TEXT;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
     }
 
     public CompilePackage() {
@@ -89,6 +91,7 @@ public class CompilePackage extends AbstractGuardianCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        this.cantUseMessage = TEXT[5];
         return AbstractDungeon.player.hasEmptyOrb();
     }
 
