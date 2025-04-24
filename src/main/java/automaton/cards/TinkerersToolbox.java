@@ -39,7 +39,7 @@ public class TinkerersToolbox extends AbstractBronzeCard {
         cardsList.add(new Batch());
         cardsList.add(new Decompile());
         cardsList.add(new ByteShift());
-        MultiCardPreview.add(new Debug(), new Batch(), new Decompile(), new ByteShift());
+        MultiCardPreview.add(this, new Debug(), new Batch(), new Decompile(), new ByteShift());
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("TinkerersToolbox.png"));
     }
 

@@ -41,7 +41,7 @@ public class Polish extends AbstractGremlinCard {
         this.tags.add(SHIELD_GREMLIN);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "Polish.png");
-        MultiCardPreview.add(new Shiv(), new Ward());
+        MultiCardPreview.add(this, new Shiv(), new Ward());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

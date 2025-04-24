@@ -47,7 +47,7 @@ public class ProperTools extends AbstractGremlinCard {
         this.baseDamage = POWER;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
-        MultiCardPreview.add(new Shiv(), new Ward());
+        MultiCardPreview.add(this, new Shiv(), new Ward());
         this.tags.add(SNEAKY_GREMLIN);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "ProperTools.png");
