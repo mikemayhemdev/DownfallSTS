@@ -1,6 +1,7 @@
 package expansioncontent.actions;
 
 import automaton.AutomatonChar;
+import basemod.BaseMod;
 import champ.ChampChar;
 import collector.CollectorChar;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -44,7 +45,7 @@ public class DiscoverBossAction extends AbstractGameAction {
                         disCard.setCostForTurn(0);
 
                         disCard.current_x = -1000.0F * Settings.scale;
-                        if (AbstractDungeon.player.hand.size() < 10) {
+                        if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
                             AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         } else {
                             AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
