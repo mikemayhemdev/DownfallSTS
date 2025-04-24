@@ -115,24 +115,25 @@ public class CompilePackage extends AbstractGuardianCard {
     }
 
 
-@Override
-public void update() {
-    super.update();
-    if (hb.hovered) {
-        if (rotationTimer <= 0F) {
-            rotationTimer = 2F;
-            if (cardsList.size() == 0) {
-                cardsToPreview = CardLibrary.cards.get("Madness");
+    @Override
+    public void update() {
+        super.update();
+        if (hb.hovered) {
+            if (rotationTimer <= 0F) {
+                rotationTimer = 2F;
+                if (cardsList.size() == 0) {
+                    cardsToPreview = CardLibrary.cards.get("Madness");
+                } else {
+                    cardsToPreview = cardsList.get(previewIndex);
+                }
+                if (previewIndex == cardsList.size() - 1) {
+                    previewIndex = 0;
+                } else {
+                    previewIndex++;
+                }
             } else {
-                cardsToPreview = cardsList.get(previewIndex);
+                rotationTimer -= Gdx.graphics.getDeltaTime();
             }
-            if (previewIndex == cardsList.size() - 1) {
-                previewIndex = 0;
-            } else {
-                previewIndex++;
-            }
-        } else {
-            rotationTimer -= Gdx.graphics.getDeltaTime();
         }
     }
 }
