@@ -1,5 +1,6 @@
 package theHexaghost.actions;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -38,7 +39,7 @@ public class DiscoverEtherealAction extends AbstractGameAction {
                         disCard.setCostForTurn(0);
 
                         disCard.current_x = -1000.0F * Settings.scale;
-                        if (AbstractDungeon.player.hand.size() < 10) {
+                        if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
                             AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         } else {
                             AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));

@@ -1,5 +1,6 @@
 package champ.actions;
 
+import basemod.BaseMod;
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -44,15 +45,15 @@ public class DiscoverOpenerAction extends AbstractGameAction {
                     disCard.current_x = -1000.0F * Settings.scale;// 70
                     disCard2.current_x = -1000.0F * Settings.scale + AbstractCard.IMG_HEIGHT_S;// 71
                     if (this.amount == 1) {// 73
-                        if (AbstractDungeon.player.hand.size() < 10) {// 74
+                        if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {// 74
                             AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 75
                         } else {
                             AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 78
                         }
-                    } else if (AbstractDungeon.player.hand.size() + this.amount <= 10) {// 83
+                    } else if (AbstractDungeon.player.hand.size() + this.amount <= BaseMod.MAX_HAND_SIZE) {// 83
                         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 84
                         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard2, (float) Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 89
-                    } else if (AbstractDungeon.player.hand.size() == 9) {// 95
+                    } else if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE-1) {// 95
                         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 96
                         AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard2, (float) Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 101
                     } else {
