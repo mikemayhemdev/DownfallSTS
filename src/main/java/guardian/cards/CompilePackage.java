@@ -64,7 +64,14 @@ public class CompilePackage extends AbstractGuardianCard {
 
         //cardsList.add(new PackageDefect());
 
-        MultiCardPreview.add(this, new PackageDefect(), new PackageWalker(), new PackageSphere(), new PackageShapes(), new PackageSentry(), new PackageDonuDeca(), new PackageAutomaton());
+        cardsList.add(new PackageDefect());
+        cardsList.add(new PackageWalker());
+        cardsList.add(new PackageSphere());
+        cardsList.add(new PackageShapes());
+        cardsList.add(new PackageSentry());
+        cardsList.add(new PackageDonuDeca());
+        cardsList.add(new PackageAutomaton());
+        //MultiCardPreview.add(this, new PackageDefect(), new PackageWalker(), new PackageSphere(), new PackageShapes(), new PackageSentry(), new PackageDonuDeca(), new PackageAutomaton());
 
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("CompilePackage.png"));
     }
@@ -105,5 +112,27 @@ public class CompilePackage extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
+    }
+
+
+@Override
+public void update() {
+    super.update();
+    if (hb.hovered) {
+        if (rotationTimer <= 0F) {
+            rotationTimer = 2F;
+            if (cardsList.size() == 0) {
+                cardsToPreview = CardLibrary.cards.get("Madness");
+            } else {
+                cardsToPreview = cardsList.get(previewIndex);
+            }
+            if (previewIndex == cardsList.size() - 1) {
+                previewIndex = 0;
+            } else {
+                previewIndex++;
+            }
+        } else {
+            rotationTimer -= Gdx.graphics.getDeltaTime();
+        }
     }
 }
