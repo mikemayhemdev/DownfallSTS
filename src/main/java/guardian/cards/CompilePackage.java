@@ -44,12 +44,14 @@ public class CompilePackage extends AbstractGuardianCard {
     private float rotationTimer;
     private int previewIndex;
     private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    public static final String[] TEXT;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
     }
 
     public CompilePackage() {
@@ -62,7 +64,14 @@ public class CompilePackage extends AbstractGuardianCard {
 
         //cardsList.add(new PackageDefect());
 
-        MultiCardPreview.add(new PackageDefect(), new PackageWalker(), new PackageSphere(), new PackageShapes(), new PackageSentry(), new PackageDonuDeca(), new PackageAutomaton());
+        cardsList.add(new PackageDefect());
+        cardsList.add(new PackageWalker());
+        cardsList.add(new PackageSphere());
+        cardsList.add(new PackageShapes());
+        cardsList.add(new PackageSentry());
+        cardsList.add(new PackageDonuDeca());
+        cardsList.add(new PackageAutomaton());
+        //MultiCardPreview.add(this, new PackageDefect(), new PackageWalker(), new PackageSphere(), new PackageShapes(), new PackageSentry(), new PackageDonuDeca(), new PackageAutomaton());
 
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("CompilePackage.png"));
     }
@@ -89,6 +98,7 @@ public class CompilePackage extends AbstractGuardianCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        this.cantUseMessage = TEXT[5];
         return AbstractDungeon.player.hasEmptyOrb();
     }
 
@@ -102,5 +112,28 @@ public class CompilePackage extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
+    }
+
+
+    @Override
+    public void update() {
+        super.update();
+        if (hb.hovered) {
+            if (rotationTimer <= 0F) {
+                rotationTimer = 2F;
+                if (cardsList.size() == 0) {
+                    cardsToPreview = CardLibrary.cards.get("Madness");
+                } else {
+                    cardsToPreview = cardsList.get(previewIndex);
+                }
+                if (previewIndex == cardsList.size() - 1) {
+                    previewIndex = 0;
+                } else {
+                    previewIndex++;
+                }
+            } else {
+                rotationTimer -= Gdx.graphics.getDeltaTime();
+            }
+        }
     }
 }

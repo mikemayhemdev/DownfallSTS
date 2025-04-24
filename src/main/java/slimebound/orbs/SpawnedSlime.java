@@ -465,7 +465,7 @@ public abstract class SpawnedSlime
 
 
     public void renderText(SpriteBatch sb) {
-        if (this.extraFontColor != null) {
+        if (this.extraFontColor != null){
 
 
             float fontOffset = 26 * Settings.scale;

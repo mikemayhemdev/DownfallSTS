@@ -22,7 +22,7 @@ public class DrawingSlime
 
         super(ID, new Color(1.0F, 100F / 255F, 100F / 255F, 100F), atlasString, skeletonString, true, false, 3, 0, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackBuff.png"));
         //this.debuffAmount = 1;
-        this.extraFontColor = new Color(.75F, .75F, .75F, 1F);
+        //this.extraFontColor = new Color(.75F, .75F, .75F, 1F);
         spawnVFX();
 
     }
