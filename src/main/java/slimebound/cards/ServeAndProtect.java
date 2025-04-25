@@ -18,6 +18,8 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import downfall.util.SelectCardsCenteredAction;
 import slimebound.SlimeboundMod;
+import slimebound.actions.EnergyToCidAction;
+import slimebound.actions.EnergyToPikeAction;
 import slimebound.actions.TendrilFlailAction;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
@@ -66,22 +68,12 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int slimecount = 0;
 
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof SpawnedSlime) {
-                slimecount++;
-            }
-        }
+        //TODO - get energy level from Pike
 
-        if (slimecount > 0) {
-            addToBot(new GainBlockAction(p, slimecount * block));
-            addToBot(new ApplyPowerAction(p,p,new BlurPower(p, slimecount)));
-        }
+        addToBot(new GainBlockAction(p, slimecount * block));
+        addToBot(new ApplyPowerAction(p,p,new BlurPower(p, slimecount)));
 
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof SpawnedSlime) {
-                addToBot(new EvokeSpecificOrbAction(o));
-            }
-        }
+        addToBot(new EnergyToPikeAction(slimecount * -1));
 
     }
 

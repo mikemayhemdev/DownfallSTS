@@ -46,7 +46,7 @@ public class MinionMaster extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffSecondarySlimeEffectsPower(p, p, 1), 1));
+        //TODO two-choice effect, adds enchantment
 
     }
 

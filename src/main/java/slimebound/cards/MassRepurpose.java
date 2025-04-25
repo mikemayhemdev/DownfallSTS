@@ -47,7 +47,7 @@ public class MassRepurpose extends AbstractSlimeboundCard {
 
     public MassRepurpose() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.baseMagicNumber = magicNumber = 2;
+        this.baseMagicNumber = magicNumber = 5;
         this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "MassRepurpose.png");
 
@@ -58,23 +58,13 @@ public class MassRepurpose extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractOrb o : p.orbs){
-            if (o instanceof SpawnedSlime) {
-                AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
-                SlimeboundMod.spawnSpecialistSlime();
-            }
-        }
-        if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
-            checkMinionMaster();
-        }
+        //TODO with two card choice
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(3);
         }
     }
 }

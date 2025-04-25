@@ -29,7 +29,7 @@ public class Teamwork extends AbstractSlimeboundCard {
         }
         AbstractDungeon.actionManager.addToBottom(new CoordinateAction(p, m, this.magicNumber, this.freeToPlayOnce, this.energyOnUse, block, false));
 
-        checkMinionMaster();
+       // checkMinionMaster();
     }
 
     public void upgrade() {

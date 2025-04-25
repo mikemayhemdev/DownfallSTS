@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
+import slimebound.actions.CommandCidAction;
+import slimebound.actions.CommandPikeAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
@@ -28,8 +30,6 @@ public class SplitLicking extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -43,23 +43,16 @@ public class SplitLicking extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.magicNumber = this.baseMagicNumber = 2;
-        this.slimed = this.baseSlimed = 8;
+        //this.slimed = this.baseSlimed = 8;
         //this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "SplitMire.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int bonus = 0;
-        // AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY, 2F, false, 0.6F), 0.3F));
 
-        // AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
+        //TODO - Pike applies Goop equal to damage dealt. Buff power to track count?
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true, 0, bonus));
-        for (int i = 0; i < this.magicNumber; i++) {
-            addToBot(new CommandAction());
-        }
-
-        checkMinionMaster();
+        addToBot(new CommandPikeAction());
 
     }
 
@@ -70,7 +63,7 @@ public class SplitLicking extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
 
 
         }

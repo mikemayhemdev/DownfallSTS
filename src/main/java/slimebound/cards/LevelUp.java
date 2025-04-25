@@ -1,6 +1,7 @@
 package slimebound.cards;
 
 
+import collector.powers.StrengthOverTurnsPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,7 +9,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import slimebound.SlimeboundMod;
+import slimebound.actions.BuffCidStrengthAction;
+import slimebound.actions.BuffPikeStrengthAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
 import sneckomod.SneckoMod;
@@ -25,7 +29,6 @@ public class LevelUp extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
-    private static int upgradedamount = 1;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -44,7 +47,10 @@ public class LevelUp extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
+        addToBot(new BuffCidStrengthAction(magicNumber));
+        addToBot(new BuffPikeStrengthAction(magicNumber));
+
 
     }
 
@@ -55,7 +61,7 @@ public class LevelUp extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(1);
+            this.upgradeMagicNumber(2);
 
 
         }

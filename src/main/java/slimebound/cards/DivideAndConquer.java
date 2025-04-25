@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import downfall.util.SelectCardsCenteredAction;
 import slimebound.SlimeboundMod;
+import slimebound.actions.EnergyToCidAction;
 import slimebound.actions.TendrilFlailAction;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
@@ -63,13 +64,8 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
+        //TODO get Cid's energy
         int slimecount = 0;
-
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof SpawnedSlime) {
-                slimecount++;
-            }
-        }
 
         if (slimecount > 0) {
             for (int i = 0; i < slimecount; i++) {
@@ -78,11 +74,9 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
             }
         }
 
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof SpawnedSlime) {
-                AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
-            }
-        }
+
+        addToBot(new EnergyToCidAction(slimecount * -1));
+
 
     }
 

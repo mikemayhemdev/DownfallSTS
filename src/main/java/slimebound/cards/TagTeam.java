@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
+import slimebound.actions.CommandPikeAction;
+import slimebound.actions.EnergyToPikeAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.AttackSlime;
 import slimebound.orbs.PoisonSlime;
@@ -54,20 +56,12 @@ public class TagTeam extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
-        if (upgraded){
-            SlimeboundMod.spawnSpecialistSlime();
-        } else {
-            SlimeboundMod.spawnNormalSlime();
-        }
-        addToBot(new WaitAction(0.1F));
-        addToBot(new WaitAction(0.1F));
-        addToBot(new WaitAction(0.1F));
+        addToBot(new EnergyToPikeAction(magicNumber));
 
         for (int i = 0; i < this.magicNumber; i++) {
-            addToBot(new CommandAction());
+            addToBot(new CommandPikeAction());
         }
 
-        checkMinionMaster();
     }
 
     public AbstractCard makeCopy() {
@@ -77,10 +71,7 @@ public class TagTeam extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            //upgradeDamage(2);
             upgradeMagicNumber(1);
-            rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
         }
     }
 }

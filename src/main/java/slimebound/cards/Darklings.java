@@ -16,7 +16,7 @@ public class Darklings extends AbstractSlimeboundCard {
     public static String DESCRIPTION;
     public static String IMG_PATH = "cards/darkling.png";
     public static CardStrings cardStrings;
-    public static CardType TYPE = CardType.SKILL;
+    public static CardType TYPE = CardType.POWER;
     public static CardRarity RARITY = CardRarity.SPECIAL;
     public static CardTarget TARGET = CardTarget.SELF;
     public static int COST = 1;
@@ -32,24 +32,19 @@ public class Darklings extends AbstractSlimeboundCard {
 
     public Darklings() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-        exhaust = true;
-        baseMagicNumber = magicNumber = 2;
+
         SlimeboundMod.loadJokeCardImage(this, "Darklings.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++) {
-            addToBot(new SlimeSpawnAction(new DarklingSlime(), false, true));
-
-        }
+      //TODO new power *Pike and *Cid's attacks increase the other's damage by 1 for the rest of combat."
     }
 
 
     public void upgrade() {
         if (!this.upgraded) {
-            this.name = UPGRADED_DESCRIPTION;
             upgradeName();
-            upgradeMagicNumber(1);
+            this.isInnate = true;
         }
     }
 }

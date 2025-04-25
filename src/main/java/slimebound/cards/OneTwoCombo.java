@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
+import slimebound.actions.CommandCidAction;
 import slimebound.actions.ExhaustToHandDirectlyAction;
 import slimebound.patches.AbstractCardEnum;
 
@@ -47,17 +48,13 @@ public class OneTwoCombo extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new CommandAction());
-       // if (upgraded) addToBot(new CommandAction());
-        checkMinionMaster();
+        addToBot(new CommandCidAction());
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(3);
-            //this.rawDescription = UPGRADED_DESCRIPTION;
-           // this.initializeDescription();
         }
     }
 }

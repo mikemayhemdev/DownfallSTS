@@ -10,6 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
+import slimebound.actions.CommandPikeAction;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 
 import static downfall.cardmods.CommandMod.checkMinionMaster;
@@ -76,14 +77,8 @@ public class ComboAttackPower extends TwoAmountPower {
         super.onAfterCardPlayed(usedCard);
         if (usedCard.target == AbstractCard.CardTarget.ENEMY || usedCard.target == AbstractCard.CardTarget.ALL_ENEMY || usedCard.target == AbstractCard.CardTarget.SELF_AND_ENEMY) {
             if (this.amount2 > 0) {
-                if (SlimeboundMod.getLeadingSlime() != null)
-                {
-                    flash();
-                    com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new CommandAction());
-                    checkMinionMaster(); // maybe this crashes idk lol
-                    this.amount2--;
-                    updateDescription();
-                }
+
+                com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new CommandPikeAction());
             }
         }
     }

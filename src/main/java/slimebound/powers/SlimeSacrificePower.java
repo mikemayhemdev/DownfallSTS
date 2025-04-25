@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
 import slimebound.SlimeboundMod;
+import slimebound.actions.EnergyToPikeAction;
 import slimebound.orbs.SpawnedSlime;
 
 
@@ -48,15 +49,17 @@ public class SlimeSacrificePower extends AbstractPower {
         if (info.type == DamageInfo.DamageType.NORMAL) {
             if (info.owner != AbstractDungeon.player) {
                 if (damageAmount > AbstractDungeon.player.currentBlock) {
-                    AbstractOrb o = SlimeboundMod.getLeadingSlime();
-                    if (o != null) {
 
-                        SpawnedSlime s = (SpawnedSlime) o;
+                    if (true) { //TODO - If Pike has energy
+
                         //s.noEvokeBonus = true;
                         this.flash();
-                        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShieldParticleEffect(o.cX, o.cY)));
+
+                        //TODO get Pike's render cX and cY for below
+                        //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShieldParticleEffect(o.cX, o.cY)));
                         com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, this.ID, 1));
-                        AbstractDungeon.actionManager.addToTop(new EvokeSpecificOrbAction(o));
+                        addToBot(new EnergyToPikeAction(-1));
+
                         return AbstractDungeon.player.currentBlock;
 
                     }

@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandCidAction;
+import slimebound.actions.CommandPikeAction;
 import slimebound.actions.TriggerSlimeAttacksAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.BuffSecondarySlimeEffectsPower;
@@ -45,12 +47,9 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
 
 
         this.baseDamage = 8;
-        this.magicNumber = this.baseMagicNumber = 2;
         SlimeboundMod.loadJokeCardImage(this, "SlimeBarrage.png");
 
-        //this.exhaust = true;
-
-        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 
@@ -58,11 +57,13 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.3F));
-        AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
+        AbstractDungeon.actionManager.addToBottom(new CommandCidAction());
         if (upgraded)
-            AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
+            AbstractDungeon.actionManager.addToBottom(new CommandCidAction());
+        AbstractDungeon.actionManager.addToBottom(new CommandPikeAction());
+        if (upgraded)
+            AbstractDungeon.actionManager.addToBottom(new CommandPikeAction());
 
-        checkMinionMaster();
     }
 
     public AbstractCard makeCopy() {

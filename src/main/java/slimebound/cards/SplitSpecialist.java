@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 
-public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCard {
+public class SplitSpecialist extends AbstractSlimeboundCard {
     public static String ID = "Slimebound:SplitSpecialist";
     public static String NAME;
     public static String DESCRIPTION;
@@ -32,15 +32,10 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
     public static CardType TYPE = CardType.SKILL;
     public static CardRarity RARITY = CardRarity.UNCOMMON;
     public static CardTarget TARGET = CardTarget.SELF;
-    public static int COST = 1;
+    public static int COST = 2;
     public static String UPGRADED_DESCRIPTION;
     private static int upgradedamount = 1;
-    public String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;
-    public String[] TEXT = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").TEXT;
 
-    private float rotationTimer;
-    private int previewIndex;
-    private ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -54,6 +49,7 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
         exhaust = true;
 
 
+/*
         cardList.add(new OctoChoiceCard("Slimebound:SplotBronze",
                 NAMES[12],
                 expansionContentMod.makeCardPath("QuickAutomaton.png"),
@@ -88,12 +84,17 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
                 TEXT[19] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:time_slime").replaceAll("#b","").replaceAll("#y","")));
         SlimeboundMod.loadJokeCardImage(this, "SplitSpecialist.png");
 
+ */
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        choice(m);
+
+
+        //TODO - pick one of three screen
     }
 
+    /*
     public void choice(AbstractMonster m) {
         addToBot(new OctoChoiceAction(m, this));
     }
@@ -108,7 +109,10 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
 
     }
 
+     */
+
     public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
+        /*
         switch (card.cardID) {
             case "Slimebound:SplotBronze": {
                 addToBot(new SlimeSpawnAction(new BronzeSlime(), false, true));
@@ -155,36 +159,14 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
         if (upgraded) {
             checkMinionMaster();
         }
+
+         */
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-
-            rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
-        }
-    }
-
-    @Override
-    public void update() {
-        super.update();
-        if (hb.hovered) {
-            if (rotationTimer <= 0F) {
-                rotationTimer = 2F;
-                if (cardList.size() == 0) {
-                    cardsToPreview = CardLibrary.cards.get("Madness");
-                } else {
-                    cardsToPreview = cardList.get(previewIndex);
-                }
-                if (previewIndex == cardList.size() - 1) {
-                    previewIndex = 0;
-                } else {
-                    previewIndex++;
-                }
-            } else {
-                rotationTimer -= Gdx.graphics.getDeltaTime();
-            }
+            upgradeBaseCost(1);
         }
     }
 

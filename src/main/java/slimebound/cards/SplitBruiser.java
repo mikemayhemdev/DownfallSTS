@@ -9,7 +9,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
+import slimebound.actions.BuffCidStrengthAction;
 import slimebound.actions.CommandAction;
+import slimebound.actions.EnergyToCidAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
 
@@ -39,22 +41,15 @@ public class SplitBruiser extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.baseDamage = 9;
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 1;
        // this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "SplitBruiser.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int bonus = 0;
-        //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true, bonus, 0));
-
-        for (int i = 0; i < this.magicNumber; i++) {
-            addToBot(new CommandAction());
-        }
-
-        checkMinionMaster();
+        addToBot(new EnergyToCidAction(2));
+        addToBot(new BuffCidStrengthAction(magicNumber));
     }
 
     public AbstractCard makeCopy() {
@@ -64,7 +59,7 @@ public class SplitBruiser extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
 
 
         }

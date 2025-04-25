@@ -52,15 +52,7 @@ public class Overexert extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
-
-
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, 5), 5));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseSlimesPower(p, p, this.magicNumber), this.magicNumber));
-
-        if (upgraded) addToBot(new CommandAction());
-        if (upgraded) addToBot(new CommandAction());
-        checkMinionMaster();
+        //TODO choose one of two, actual effects
     }
 
     public AbstractCard makeCopy() {
@@ -70,7 +62,6 @@ public class Overexert extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
 
         }

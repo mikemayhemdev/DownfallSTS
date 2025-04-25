@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
+import slimebound.actions.CommandCidAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
 
@@ -40,7 +41,7 @@ public class SplitAcid extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 7;
+        //this.baseDamage = 7;
        // this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
         this.isMultiDamage = true;
@@ -48,14 +49,20 @@ public class SplitAcid extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        //TODO - AOE stacks on Cid. Buff power to track count?
+
+        addToBot(new CommandCidAction());
+
+        /*
         int bonus = 0;
         //AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true, 0, bonus));
         for (int i = 0; i < this.magicNumber; i++) {
-            addToBot(new CommandAction());
         }
 
         checkMinionMaster();
+
+         */
 
     }
 
@@ -66,7 +73,7 @@ public class SplitAcid extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
 
 
         }

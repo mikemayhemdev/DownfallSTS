@@ -23,9 +23,7 @@ public class SlimeBrawl extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
-    private static final int COST = 3;
-    private static final int POWER = 6;
-    private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -40,11 +38,6 @@ public class SlimeBrawl extends AbstractSlimeboundCard {
     public SlimeBrawl() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
-
-        this.baseDamage = 4;
-        this.magicNumber = this.baseMagicNumber = 2;
-
         this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "SlimeBrawl.png");
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
@@ -53,18 +46,7 @@ public class SlimeBrawl extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRng),  false));
-        {
-
-            for (AbstractOrb o : p.orbs) {
-                if (o instanceof SpawnedSlime) {
-                    AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.PlayTopCardAction(
-
-                            AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRng), false));
-
-                }
-            }
-        }
+        //TODO - pick one of three screen
     }
 
     public AbstractCard makeCopy() {
@@ -78,8 +60,7 @@ public class SlimeBrawl extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-
-            upgradeBaseCost(2);
+            upgradeBaseCost(1);
 
         }
 

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
+import slimebound.actions.CommandCidAction;
 import slimebound.actions.TackleSelfDamageAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PreventTackleDamagePower;
@@ -57,9 +58,9 @@ public class ForwardTackle extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         if (!AbstractDungeon.player.hasPower(PreventTackleDamagePower.POWER_ID))
             addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
-        addToBot(new CommandAction());
-        addToBot(new CommandAction());
-        if (upgraded) addToBot(new CommandAction());
+        addToBot(new CommandCidAction());
+        addToBot(new CommandCidAction());
+        if (upgraded) addToBot(new CommandCidAction());
 
 
         checkMinionMaster();

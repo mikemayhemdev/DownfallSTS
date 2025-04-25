@@ -15,6 +15,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
+import slimebound.actions.EnergyToCidAction;
+import slimebound.actions.EnergyToPikeAction;
 import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
@@ -44,8 +46,8 @@ public class Repurpose extends AbstractSlimeboundCard {
 
     public Repurpose() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.baseMagicNumber = magicNumber = 2;
-        exhaust = true;
+        this.baseMagicNumber = magicNumber = 1;
+        //exhaust = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         SlimeboundMod.loadJokeCardImage(this, "Repurpose.png");
 
@@ -55,12 +57,9 @@ public class Repurpose extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractOrb o = SlimeboundMod.getLeadingSlime();
-        if (o != null) {
-            AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
-            SlimeboundMod.spawnSpecialistSlime();
-            if (upgraded) addToBot(new CommandAction());
-            }
+
+        AbstractDungeon.actionManager.addToBottom(new EnergyToPikeAction(magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new EnergyToCidAction(magicNumber));
         }
 
 
@@ -72,8 +71,7 @@ public class Repurpose extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 }

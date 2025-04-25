@@ -73,9 +73,9 @@
   "Slimebound:ProtectTheBoss": {
     "NAME": "Protect the Boss",
     "DESCRIPTIONS": [
-      "Prevent the next time you would be damaged by an enemy attack, #yAbsorbing your leading Slime instead.",
+      "Prevent the next time you would be damaged by an enemy attack, draining 1 energy from #yPike instead.",
       "Prevent the next #b",
-      " times you would be damaged by an enemy attack, #yAbsorbing your leading Slime instead."
+      " times you would be damaged by an enemy attack, draining 1 energy from #yPike instead."
     ]
   },
   "Slimebound:SplitForLessPower": {

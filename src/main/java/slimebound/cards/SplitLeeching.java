@@ -8,8 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CommandAction;
-import slimebound.actions.SlimeSpawnAction;
+import slimebound.actions.*;
 import slimebound.orbs.ShieldSlime;
 import slimebound.patches.AbstractCardEnum;
 
@@ -24,8 +23,6 @@ public class SplitLeeching extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -38,21 +35,15 @@ public class SplitLeeching extends AbstractSlimeboundCard {
     public SplitLeeching() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.baseBlock = 8;
-        this.magicNumber = this.baseMagicNumber = 2;
+       // this.baseBlock = 8;
+        this.magicNumber = this.baseMagicNumber = 1;
         //this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "SplitLeeching.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int bonus = 0;
-        //AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true, 0, bonus));
-        for (int i = 0; i < this.magicNumber; i++) {
-            addToBot(new CommandAction());
-        }
-
-        checkMinionMaster();
+        addToBot(new EnergyToPikeAction(2));
+        addToBot(new BuffPikeStrengthAction(magicNumber));
 
     }
 
@@ -63,7 +54,7 @@ public class SplitLeeching extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
 
         }
     }
