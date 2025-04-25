@@ -30,7 +30,7 @@ public abstract class AbstractSlime {
     public String name;
     public String description;
     public String ID;
-    protected ArrayList<PowerTip> tips = new ArrayList();
+    protected ArrayList<PowerTip> tips = new ArrayList<>();
     public int attackAmount = 0;
     protected int baseAttackAmount = 3;
     public float cX = 0.0F;
@@ -125,6 +125,9 @@ public abstract class AbstractSlime {
         this.showEvokeValue = false;
         this.channelAnimTimer = 0.5F;
 
+        //TODO - Review, reskin unlock stuff might have to die.
+        //Decide what models to use - small or medium sized, and original colors or "Classic Boss" colors for Bruiser Slime and Leeching Slime
+
         if (CharacterSelectScreenPatches.characters[1].reskinCount == 1 && CharacterSelectScreenPatches.characters[1].reskinUnlock) {
             this.modelColor = modelColorMap.get(ID);
             this.atlas = new TextureAtlas(Gdx.files.internal(skeletonMap.get(ID) + ".atlas"));
@@ -181,6 +184,14 @@ public abstract class AbstractSlime {
     }
 
     public abstract void updateDescription();
+
+
+    public void addEnchantment(){
+        //TODO enchantment visuals
+        //Looks like most of them used attachments or VFX, should be easy to transfer over.
+        //Maybe use Enum?
+        //Make steal Greed ooze's shine visuals for the "no energy to attack" enchantment appearance
+    }
 
 
     public void onEndOfTurn() {
