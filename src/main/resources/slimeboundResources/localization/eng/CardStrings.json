@@ -296,11 +296,11 @@
     "DESCRIPTION": "Choose an slimeboundmod:Enchantment for slimeboundmod:Pike to gain. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Time Eater",
-      "slimeboundmod: Enchantment. NL Pike's attacks apply 1 Weak.",
+      "slimeboundmod:Enchantment. NL slimeboundmod:Pike's attacks apply 1 Weak.",
       "Guardian",
-      "slimeboundmod: Enchantment. NL slimeboundmod:Pike's attacks grant 4 Temporary Thorns.",
+      "slimeboundmod:Enchantment. NL slimeboundmod:Pike's attacks grant you 4 Temporary Thorns.",
       "Hexaghost",
-      "Torchhead: Enchantment. NL slimeboundmod:Pike's attacks grant you 1 Strength",
+      "slimeboundmod:Enchantment. NL slimeboundmod:Pike's attacks grant you 1 Strength",
       " NL (Enchant already active)."
     ]
   },
@@ -366,12 +366,12 @@
     "NAME": "Enchant Cid",
     "DESCRIPTION": "Choose an slimeboundmod:Enchantment for slimeboundmod:Cid to gain. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Cultist",
-      "slimeboundmod: Enchantment. NL After slimeboundmod:Cid attacks, increase his damage by 1 this combat.",
       "Champ",
-      "slimeboundmod: Enchantment. NL slimeboundmod:Cid's attacks apply 1 Vulnerable.",
+      "slimeboundmod:Enchantment. NL slimeboundmod:Cid's attacks apply 1 Vulnerable.",
       "Cultist",
-      "Torchhead: Enchantment. NL After slimeboundmod:Cid attacks benefit from your Strength.",
+      "slimeboundmod:Enchantment. NL After slimeboundmod:Cid attacks, increase his damage by 1 this combat.",
+      "Torchhead",
+      "slimeboundmod:Enchantment. NL After slimeboundmod:Cid attacks benefit from your Strength.",
       " NL (Enchant already active)."
     ]
   },
