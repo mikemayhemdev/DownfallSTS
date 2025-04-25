@@ -63,6 +63,8 @@ public abstract class AbstractSlime {
     public AbstractPlayer p;
     private Color modelColor;
 
+    public int currentEnergy;
+
     private AbstractCreature.CreatureAnimation animation;
     private float animationTimer;
     private float animationTimerStart;
