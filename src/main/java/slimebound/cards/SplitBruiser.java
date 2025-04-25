@@ -40,7 +40,6 @@ public class SplitBruiser extends AbstractSlimeboundCard {
     public SplitBruiser() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.baseDamage = 9;
         this.magicNumber = this.baseMagicNumber = 1;
        // this.exhaust = true;
         SlimeboundMod.loadJokeCardImage(this, "SplitBruiser.png");

@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.actions.EnergyToCidAction;
+import slimebound.actions.EnergyToPikeAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
 
@@ -50,10 +52,10 @@ public class Equalize extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 8;
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.baseDamage = 14;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
-        tags.add(CardTags.HEALING);
+        //tags.add(CardTags.HEALING);
         SlimeboundMod.loadJokeCardImage(this, "Equalize.png");
 
     }
@@ -61,30 +63,10 @@ public class Equalize extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        logger.info("max health: " + p.maxHealth + ", current health: " + p.currentHealth);
-        if (m.hasPower(SlimedPower.POWER_ID) && !this.isACopy) {
-            //this.isACopy = true;
-            AbstractCard tmp = this.makeStatEquivalentCopy();
-            Equalize tmpEq = (Equalize) tmp;
-
-            tmpEq.isACopy = true;
-            AbstractDungeon.player.limbo.addToBottom(tmpEq);
-            tmpEq.current_x = this.current_x;
-            tmpEq.current_y = this.current_y;
-            tmpEq.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
-            tmpEq.target_y = (Settings.HEIGHT / 2.0F);
-            tmpEq.freeToPlayOnce = true;
-
-            //if (m != null) {
-            tmpEq.calculateCardDamage(m);
-
-
-            tmpEq.purgeOnUse = true;
-            AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmpEq, m, this.energyOnUse));
-
-        }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
+        //AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
+        addToBot(new EnergyToCidAction(magicNumber));
+        addToBot(new EnergyToPikeAction(magicNumber));
     }
 
     public AbstractCard makeCopy() {
@@ -93,17 +75,13 @@ public class Equalize extends AbstractSlimeboundCard {
 
     }
 
-    public void triggerOnGlowCheck() {
-        slimedGlowCheck();
-    }// 68
-
     public void upgrade() {
 
         if (!this.upgraded) {
 
             upgradeName();
             upgradeDamage(4);
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
 
 
         }

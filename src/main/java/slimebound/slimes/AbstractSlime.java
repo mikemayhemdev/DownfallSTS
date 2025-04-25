@@ -192,7 +192,9 @@ public abstract class AbstractSlime {
         //TODO enchantment visuals
         //Looks like most of them used attachments or VFX, should be easy to transfer over.
         //Maybe use Enum?
-        //Make steal Greed ooze's shine visuals for the "no energy to attack" enchantment appearance
+        //Maybe steal Greed ooze's shine visuals for the "no energy to attack" enchantment appearance
+        //Find another visuals for "commands trigger twice" enchantment
+
     }
 
 

@@ -60,7 +60,7 @@
   },
   "Slimebound:Equalize": {
     "NAME": "Equalize",
-    "DESCRIPTION": "Deal !D! damage. NL Heal !M! HP. NL slimeboundmod:Consume - Play this twice. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Grant 2 energy to both slimeboundmod:Pike and slimeboundmod:Cid. NL Exhaust."
   },
   "Slimebound:FinishingTackle": {
     "NAME": "Opening Tackle",
@@ -262,7 +262,7 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "Invigorate",
-    "DESCRIPTION": "Add !M! energy to both slimeboundmod:Pike and slimeboundmod:Cid."
+    "DESCRIPTION": "Grant !M! energy to both slimeboundmod:Pike and slimeboundmod:Cid."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
@@ -330,7 +330,7 @@
   },
   "Slimebound:Split": {
     "NAME": "Split",
-    "DESCRIPTION": "Choose slimeboundmod:Pike or slimeboundmod:Cid. NL Give the chosen slime !M! energy and slimeboundmod:Command them.",
+    "DESCRIPTION": "Choose slimeboundmod:Pike or slimeboundmod:Cid. NL Grant the chosen slime !M! energy and slimeboundmod:Command them.",
     "EXTENDED_DESCRIPTION": [
       "Choose Cid",
       "Grant slimeboundmod:Cid !M! energy and slimeboundmod:Command him.",
@@ -398,8 +398,8 @@
   },
   "Slimebound:ViciousTackle": {
     "NAME": "Vicious Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. This gains twice the damage bonus from slimeboundmod:Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. This gains twice the damage bonus AND healing from slimeboundmod:Goop."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL This gains twice the damage bonus from slimeboundmod:Goop.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL This gains twice the damage bonus AND healing from slimeboundmod:Goop."
   },
   "Slimebound:WasteNot": {
     "NAME": "Waste Not",
