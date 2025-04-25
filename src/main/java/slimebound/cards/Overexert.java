@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CommandAction;
+
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.LoseSlimesPower;
 import slimebound.powers.PotencyPower;

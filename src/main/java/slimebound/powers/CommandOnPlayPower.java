@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandCidAction;
+import slimebound.actions.CommandPikeAction;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 import slimebound.orbs.SpawnedSlime;
 import theHexaghost.HexaMod;
@@ -44,11 +46,12 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
     @Override
     public void onAfterCardPlayed(AbstractCard usedCard) {
         flash();
-        AbstractOrb o = SlimeboundMod.getLeadingSlime();
-        if (o != null) {
-            addToBot(new TrigggerSpecificSlimeAttackAction(o));
+        //TODO if Cid's energy is higher...
+        if (true){
+            addToBot(new CommandCidAction());
+        } else {
+            addToBot(new CommandPikeAction());
         }
-        checkMinionMaster(); // maybe this crashes idk lol
         addToBot(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, this, 1));
     }
 

@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CommandAction;
+
 import slimebound.actions.CommandCidAction;
 import slimebound.actions.ExhaustToHandDirectlyAction;
 import slimebound.patches.AbstractCardEnum;
@@ -37,13 +37,9 @@ public class OneTwoCombo extends AbstractSlimeboundCard {
 
     public OneTwoCombo() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        baseDamage = 4;
+        baseDamage = 3;
         SlimeboundMod.loadJokeCardImage(this, "OneTwoCombo.png");
 //        exhaust = true;
-    }
-
-    public void onSplit() {
-        addToBot(new ExhaustToHandDirectlyAction(this));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

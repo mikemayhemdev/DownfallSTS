@@ -34,7 +34,7 @@ import downfall.downfallMod;
 import expansioncontent.relics.StudyCardRelic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.actions.SlimeSpawnAction;
+
 import slimebound.cards.*;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.events.*;
@@ -65,7 +65,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         basemod.interfaces.EditCharactersSubscriber,
         basemod.interfaces.EditRelicsSubscriber,
         basemod.interfaces.EditCardsSubscriber,
-        OnPowersModifiedSubscriber,
         //EditStringsSubscriber,
         //basemod.interfaces.PostDrawSubscriber,
         basemod.interfaces.OnStartBattleSubscriber {
@@ -118,15 +117,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     @SpireEnum
     public static AbstractCard.CardTags TACKLE;
-//    public static Properties slimeboundDefault = new Properties();
-//    public static boolean contentSharing_relics = true;
-//    public static boolean contentSharing_potions = true;
-//    public static boolean contentSharing_events = true;
-//    public static boolean unlockEverything = false;
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static boolean goopGlow = false;
-
-    private static ArrayList<String> specialistSlimes = new ArrayList<>();
 
     static {
         hasHubris = Loader.isModLoaded("Hubris");
@@ -134,13 +126,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
             logger.info("Detected Hubris");
         }
     }
-
-    private ModPanel settingsPanel;
-    private CustomUnlockBundle unlocks0;
-    private CustomUnlockBundle unlocks1;
-    private CustomUnlockBundle unlocks2;
-    private CustomUnlockBundle unlocks3;
-    private CustomUnlockBundle unlocks4;
 
     private static String modID;
 
@@ -164,15 +149,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         loadConfigData();
 
-
-        specialistSlimes.add("Bronze");
-        specialistSlimes.add("Ghostflame");
-        specialistSlimes.add("Torchhead");
-        specialistSlimes.add("Cultist");
-        specialistSlimes.add("Protector");
-        specialistSlimes.add("Insulting");
-        specialistSlimes.add("Ancient");
-        specialistSlimes.add("Slowing");
     }
 
     public static String getResourcePath(String resource) {
@@ -295,22 +271,11 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     }
 
-    public static AbstractOrb getLeadingSlime() {
-        AbstractOrb oldestOrb = null;
-
-        if (AbstractDungeon.player.maxOrbs > 0) {
-            for (AbstractOrb o : AbstractDungeon.player.orbs) {
-                if (o instanceof SpawnedSlime) {
-                    oldestOrb = o;
-                }
-            }
-        }
-        return oldestOrb;
-    }
 
     @Override
     public void receiveSetUnlocks() {
 
+        //TODO - Review unlocks post-Cid/Pike
         downfallMod.registerUnlockSuite(
                 DivideAndConquer.ID,
                 ServeAndProtect.ID,
@@ -484,32 +449,15 @@ public class SlimeboundMod implements OnCardUseSubscriber,
             spritealtered = false;
         }
 
-        ArrayList<AbstractOrb> slimes = new ArrayList<>();
 
+        //TODO - this may still be relevant to move to Cid when the Cultist enchantment is active
         for (AbstractOrb o : AbstractDungeon.player.orbs) {
             if (o instanceof CultistSlime) {
                 ((CultistSlime) o).cleanUpVFX();
             }
-            if (o instanceof SpawnedSlime) {
-                slimes.add(o);
-            }
-        }
-        boolean soundPlayed = false;
-        for (AbstractOrb slime : slimes) {
-            SpawnedSlime s = (SpawnedSlime) slime;
-            s.noEvokeBonus = true;
-            if (soundPlayed) {
-                s.noEvokeSound = true;
-            } else {
-                soundPlayed = true;
-            }
-            s.triggerEvokeAnimation();
-            if (AbstractDungeon.player.hasPower(DuplicatedFormNoHealPower.POWER_ID)) {
-                AbstractDungeon.player.getPower(DuplicatedFormNoHealPower.POWER_ID).onVictory();
-            }
 
-            s.noRender = true;
         }
+
     }
 
     public void receivePostInitialize() {
@@ -633,70 +581,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         attacksPlayedThisTurn = 0;
     }
 
-    public static void spawnNormalSlime() {
-        int o = AbstractDungeon.cardRng.random(0, 3);
 
-        switch (o) {
-            case 0:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
-                break;
-            case 1:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
-                break;
-            case 2:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
-                break;
-            case 3:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
-                break;
-        }
-    }
 
-    public static void spawnSpecialistSlime() {
-        Collections.shuffle(specialistSlimes, AbstractDungeon.cardRng.random);
-
-        switch (specialistSlimes.get(0)) {
-            case "Bronze": {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new BronzeSlime(), false, true));
-                break;
-            }
-            case "Ghostflame": {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new HexSlime(), false, true));
-                break;
-            }
-            case "Torchhead": {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new TorchHeadSlime(), false, true));
-                break;
-            }
-            case "Cultist": {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new CultistSlime(), false, true));
-                break;
-            }
-            case "Protector": {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ProtectorSlime(), false, true));
-                break;
-            }
-            case "Insulting": {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ChampSlime(), false, true));
-                break;
-            }
-            case "Ancient": {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DrawingSlime(), false, true));
-                break;
-            }
-            case "Slowing": {
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlowingSlime(), false, true));
-                break;
-            }
-        }
-    }
-
-    @Override
-    public void receivePowersModified() {
-        for (AbstractOrb o:AbstractDungeon.player.orbs){
-            if (o instanceof SpawnedSlime){
-                o.applyFocus();
-            }
-        }
-    }
 }

@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.SlimeboundMod;
-import slimebound.actions.SlimeSpawnAction;
+
 import slimebound.orbs.AttackSlime;
 import slimebound.orbs.PoisonSlime;
 import slimebound.orbs.ShieldSlime;

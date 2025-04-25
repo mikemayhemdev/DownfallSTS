@@ -30,7 +30,9 @@ public class TarBlob extends CustomRelic {
 
     public void atBattleStartPreDraw() {
         this.flash();
-        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.DecreaseMaxOrbAction(1));
+
+        //TODO - check against this relic when having Cid or Pike rest. Should skip energy generation.
+        //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.DecreaseMaxOrbAction(1));
     }
 
 

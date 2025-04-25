@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.util.TextureLoader;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CommandAction;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 import slimebound.powers.*;
 import slimebound.relics.SelfDamagePreventRelic;
@@ -116,11 +115,14 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
     }
 
     public void checkMinionMaster(){
+        /*
         if (AbstractDungeon.player.hasPower(BuffSecondarySlimeEffectsPower.POWER_ID)) {
             for (int i = 0; i < AbstractDungeon.player.getPower(BuffSecondarySlimeEffectsPower.POWER_ID).amount; i++) {
                 addToBot(new CommandAction());
             }
         }
+
+         */
     }
 
     @Override

@@ -16,8 +16,8 @@
   "Slimebound:SpawnSlimePotion": {
     "NAME": "Army in a Bottle",
     "DESCRIPTIONS": [
-      "#ySplit into #b",
-      " random Slimes (Normal or #ySpecialist [REMOVE_SPACE])."
+      "Gain #b",
+      " copies of #yEnchant #yCid and #Enchant #Pike. They cost 0."
     ]
   },
   "Slimebound:ThreeZeroPotion": {

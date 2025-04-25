@@ -26,8 +26,8 @@
   },
   "Slimebound:Darklings": {
     "NAME": "Darkling Duo",
-    "DESCRIPTION": "*Pike and *Cid's attacks increase the other's damage by 1 for the rest of combat.",
-    "UPGRADE_DESCRIPTION": "Innate. *Pike and *Cid's attacks increase the other's damage by 1 for the rest of combat."
+    "DESCRIPTION": "slimeboundmod:Pike and slimeboundmod:Cid's attacks increase the other's damage by 1 for the rest of combat.",
+    "UPGRADE_DESCRIPTION": "Innate. slimeboundmod:Pike and slimeboundmod:Cid's attacks increase the other's damage by 1 for the rest of combat."
   },
   "Slimebound:Defend_Slimebound": {
     "NAME": "Defend",
@@ -44,7 +44,7 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each energy on *Cid, then remove his energy. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each energy on slimeboundmod:Cid, then remove his energy. NL Exhaust."
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
@@ -68,7 +68,8 @@
   },
   "Slimebound:FirmFortitude": {
     "NAME": "Liquidate",
-    "DESCRIPTION": "Lose 2 Strength. NL Gain !M! slimeboundmod:Potency."
+    "DESCRIPTION": "Drain all of slimeboundmod:Cid and slimeboundmod:Pike's current energy. Gain that much Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Drain all of slimeboundmod:Cid and slimeboundmod:Pike's current energy. Gain that much Strength."
   },
   "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
@@ -80,8 +81,8 @@
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Forward Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL slimeboundmod:Command *Cid twice.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL slimeboundmod:Command *Cid three times."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL slimeboundmod:Command slimeboundmod:Cid twice.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL slimeboundmod:Command slimeboundmod:Cid three times."
   },
   "Slimebound:Gluttony": {
     "NAME": "Gluttony",
@@ -99,7 +100,7 @@
   },
   "Slimebound:Grow": {
     "NAME": "Grow",
-    "DESCRIPTION": "Lose 1 Slime slot in exchange for !M! Strength and !M! Dexterity."
+    "DESCRIPTION": "Gain !M! Dexterity. NL Increase your Max HP by 8 this combat."
   },
   "Slimebound:GrowthPunch": {
     "NAME": "Growth Punch",
@@ -122,8 +123,8 @@
   },
   "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",
-    "DESCRIPTION": "The first card you play each turn that targets enemies also slimeboundmod:Commands *Pike.",
-    "UPGRADE_DESCRIPTION": "The first !M! cards you play each turn that targets enemies also slimeboundmod:Command *Pike."
+    "DESCRIPTION": "The first card you play each turn that targets enemies also slimeboundmod:Commands slimeboundmod:Pike.",
+    "UPGRADE_DESCRIPTION": "The first !M! cards you play each turn that targets enemies also slimeboundmod:Command slimeboundmod:Pike."
   },
   "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",
@@ -140,7 +141,7 @@
   },
   "Slimebound:LevelUp": {
     "NAME": "Level Up",
-    "DESCRIPTION": "Gain 1 Strength. NL Increase *Cid and *Pike's damage by !M! this combat."
+    "DESCRIPTION": "Gain 1 Strength. NL Increase slimeboundmod:Cid and slimeboundmod:Pike's damage by !M! this combat."
   },
   "Slimebound:Lick": {
     "NAME": "Lick",
@@ -157,10 +158,10 @@
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Favorite Child",
-    "DESCRIPTION": "Choose *Pike or *Cid. Increase the chosen slime's damage by !M! this combat. Exhaust.",
+    "DESCRIPTION": "Choose slimeboundmod:Pike or slimeboundmod:Cid. Increase the chosen slime's damage by !M! this combat. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Increase *Pike's damage by !M! this combat.",
-      "Increase *Cid's damage by !M! this combat."
+      "Increase slimeboundmod:Pike's damage by !M! this combat.",
+      "Increase slimeboundmod:Cid's damage by !M! this combat."
     ]
   },
   "Slimebound:MegaLick": {
@@ -170,10 +171,10 @@
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
-    "DESCRIPTION": "Choose *Pike or *Cid. slimeboundmod:Enchant them with 'When slimeboundmod:Commanded, performs an additional turn'.",
+    "DESCRIPTION": "Choose slimeboundmod:Pike or slimeboundmod:Cid. slimeboundmod:Enchant them with 'When slimeboundmod:Commanded, performs an additional turn'.",
     "EXTENDED_DESCRIPTION": [
-      "slimeboundmod:Enchantment. NL When slimeboundmod:Commanded, *Pike performs an additional action.",
-      "slimeboundmod:Enchantment. NL When slimeboundmod:Commanded, *Cid performs an additional action.",
+      "slimeboundmod:Enchantment. NL When slimeboundmod:Commanded, slimeboundmod:Pike performs an additional action.",
+      "slimeboundmod:Enchantment. NL When slimeboundmod:Commanded, slimeboundmod:Cid performs an additional action.",
       " NL (Enchant already active)."
     ]
   },
@@ -184,7 +185,7 @@
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "One-Two Combo",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command *Cid. NL When you slimeboundmod:Split, return this from the discard pile to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command slimeboundmod:Cid. NL When you slimeboundmod:Consume, return this from the discard pile."
   },
   "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",
@@ -193,10 +194,10 @@
   },
   "Slimebound:Overexert": {
     "NAME": "Hyperactive",
-    "DESCRIPTION": "Choose *Pike or *Cid. slimeboundmod:Enchant them with 'No longer spends energy to attack'.",
+    "DESCRIPTION": "Choose slimeboundmod:Pike or slimeboundmod:Cid. slimeboundmod:Enchant them with 'No longer spends energy to attack'.",
     "EXTENDED_DESCRIPTION": [
-      "slimeboundmod:Enchantment. NL *Pike no longer spends energy to attack.",
-      "slimeboundmod:Enchantment. NL *Cid no longer spends energy to attack.",
+      "slimeboundmod:Enchantment. NL slimeboundmod:Pike no longer spends energy to attack.",
+      "slimeboundmod:Enchantment. NL slimeboundmod:Cid no longer spends energy to attack.",
       " NL (Enchant already active)."
       ]
   },
@@ -215,13 +216,13 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Command twice."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command the slime with the highest energy.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Command the slime with the highest energy twice."
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "Protect the Boss",
-    "DESCRIPTION": "Prevent the next time you would be damaged by an enemy attack, draining 1 energy from *Pike instead.",
-    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would be damaged by an enemy attack, draining 1 energy from *Pike instead."
+    "DESCRIPTION": "Prevent the next time you would be damaged by an enemy attack, draining 1 energy from slimeboundmod:Pike instead.",
+    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would be damaged by an enemy attack, draining 1 energy from slimeboundmod:Pike instead."
   },
   "Slimebound:RainOfGoop": {
     "NAME": "Rain of Goop",
@@ -230,7 +231,7 @@
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "Rally the Troops",
-    "DESCRIPTION": "Deal !D! damage. NL The next !M! cards played this turn trigger a slimeboundmod:Command."
+    "DESCRIPTION": "Deal !D! damage. NL The next !M! cards played this turn slimeboundmod:Command the slime with the highest energy."
   },
   "Slimebound:Recollect": {
     "NAME": "Recollect",
@@ -261,7 +262,7 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "Invigorate",
-    "DESCRIPTION": "Add !M! energy to both *Pike and *Cid."
+    "DESCRIPTION": "Add !M! energy to both slimeboundmod:Pike and slimeboundmod:Cid."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
@@ -283,23 +284,23 @@
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",
-    "DESCRIPTION": "Gain 10 Block for each energy on *Pike, then remove her energy. NL Gain 1 Blur. NL Exhaust."
+    "DESCRIPTION": "Gain 10 Block for each energy on slimeboundmod:Pike, then remove her energy. NL Gain 1 Blur. NL Exhaust."
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "Pile On!",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command *Cid. NL slimeboundmod:Command *Pike.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command *Cid twice. NL slimeboundmod:Command *Pike twice."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command slimeboundmod:Cid. NL slimeboundmod:Command slimeboundmod:Pike.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command slimeboundmod:Cid twice. NL slimeboundmod:Command slimeboundmod:Pike twice."
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "Enchant Pike",
-    "DESCRIPTION": "Choose an slimeboundmod:Enchantment for *Pike to gain. NL Exhaust.",
+    "DESCRIPTION": "Choose an slimeboundmod:Enchantment for slimeboundmod:Pike to gain. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Time Eater",
-      "slimeboundmod: Enchantment. NL After *Cid attacks, increase his damage by 1 this combat.",
+      "slimeboundmod: Enchantment. NL Pike's attacks apply 1 Weak.",
       "Guardian",
-      "slimeboundmod: Enchantment. NL *Pike's attacks grant 4 Temporary Thorns.",
+      "slimeboundmod: Enchantment. NL slimeboundmod:Pike's attacks grant 4 Temporary Thorns.",
       "Hexaghost",
-      "Torchhead: Enchantment. NL Pike's attacks grant you 1 Strength",
+      "Torchhead: Enchantment. NL slimeboundmod:Pike's attacks grant you 1 Strength",
       " NL (Enchant already active)."
     ]
   },
@@ -318,7 +319,7 @@
   },
   "Slimebound:SlimeTap": {
     "NAME": "Slime Tap",
-    "DESCRIPTION": "Remove 1 energy from both *Cid and *Pike. NL Gain [E] and draw !M! cards.",
+    "DESCRIPTION": "Remove 1 energy from both slimeboundmod:Cid and slimeboundmod:Pike. NL Gain [E] and draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
       "Not enough... slime energy..."
     ]
@@ -329,21 +330,21 @@
   },
   "Slimebound:Split": {
     "NAME": "Split",
-    "DESCRIPTION": "Choose *Pike or *Cid. NL Give the chosen slime !M! energy and slimeboundmod:Command them.",
+    "DESCRIPTION": "Choose slimeboundmod:Pike or slimeboundmod:Cid. NL Give the chosen slime !M! energy and slimeboundmod:Command them.",
     "EXTENDED_DESCRIPTION": [
       "Choose Cid",
-      "Grant *Cid !M! energy and slimeboundmod:Command him.",
+      "Grant slimeboundmod:Cid !M! energy and slimeboundmod:Command him.",
       "Choose Pike",
-      "Grant *Pike !M! energy and slimeboundmod:Command her."
+      "Grant slimeboundmod:Pike !M! energy and slimeboundmod:Command her."
     ]
   },
   "Slimebound:SplitAcid": {
     "NAME": "Guerilla War",
-    "DESCRIPTION": "*Cid's next !M! attacks hit ALL enemies. NL slimeboundmod:Command *Cid."
+    "DESCRIPTION": "slimeboundmod:Cid's next !M! attacks hit ALL enemies. NL slimeboundmod:Command slimeboundmod:Cid."
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Bruiser Buddy",
-    "DESCRIPTION": "Give *Cid 2 energy and increase his damage dealt by !M! this combat."
+    "DESCRIPTION": "Give slimeboundmod:Cid 2 energy and increase his damage dealt by !M! this combat."
   },
   "Slimebound:SplitGreed": {
     "NAME": "Revive Greed",
@@ -351,11 +352,11 @@
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Leeching Lady",
-    "DESCRIPTION": "Give *Pike 2 energy and increase her damage dealt by !M! this combat."
+    "DESCRIPTION": "Give slimeboundmod:Pike 2 energy and increase her damage dealt by !M! this combat."
   },
   "Slimebound:SplitMire": {
     "NAME": "Mire Time",
-    "DESCRIPTION": "*Pike's next !M! attacks apply slimeboundmod:Goop equal to damage dealt. NL slimeboundmod:Command *Pike."
+    "DESCRIPTION": "slimeboundmod:Pike's next !M! attacks apply slimeboundmod:Goop equal to damage dealt. NL slimeboundmod:Command slimeboundmod:Pike."
   },
   "Slimebound:SplitScrap": {
     "NAME": "Revive Scrap",
@@ -363,14 +364,14 @@
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "Enchant Cid",
-    "DESCRIPTION": "Choose an slimeboundmod:Enchantment for *Cid to gain. NL Exhaust.",
+    "DESCRIPTION": "Choose an slimeboundmod:Enchantment for slimeboundmod:Cid to gain. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Cultist",
-      "slimeboundmod: Enchantment. NL After *Cid attacks, increase his damage by 1 this combat.",
+      "slimeboundmod: Enchantment. NL After slimeboundmod:Cid attacks, increase his damage by 1 this combat.",
       "Champ",
-      "slimeboundmod: Enchantment. NL *Cid's attacks apply 1 Vulnerable.",
+      "slimeboundmod: Enchantment. NL slimeboundmod:Cid's attacks apply 1 Vulnerable.",
       "Cultist",
-      "Torchhead: Enchantment. NL After *Cid attacks benefit from your Strength.",
+      "Torchhead: Enchantment. NL After slimeboundmod:Cid attacks benefit from your Strength.",
       " NL (Enchant already active)."
     ]
   },
@@ -384,12 +385,12 @@
   },
   "Slimebound:TagTeam": {
     "NAME": "Glop Chop",
-    "DESCRIPTION": "Deal !D! damage. NL Grant *Pike !M! energy. NL slimeboundmod:Command Pike !M! times."
+    "DESCRIPTION": "Deal !D! damage. NL Grant slimeboundmod:Pike !M! energy. NL slimeboundmod:Command Pike !M! times."
   },
   "Slimebound:Teamwork": {
     "NAME": "Teamwork",
-    "DESCRIPTION": "Grant 1 energy to *Cid and *Pike X times. NL Gain !B! Block X times.",
-    "UPGRADE_DESCRIPTION": "Grant 1 energy to *Cid and *Pike X times. NL Gain !B! Block X+1 times."
+    "DESCRIPTION": "Grant 1 energy to slimeboundmod:Cid and slimeboundmod:Pike X times. NL Gain !B! Block X times.",
+    "UPGRADE_DESCRIPTION": "Grant 1 energy to slimeboundmod:Cid and slimeboundmod:Pike X times. NL Gain !B! Block X+1 times."
   },
   "Slimebound:TongueLash": {
     "NAME": "Tongue Lash",

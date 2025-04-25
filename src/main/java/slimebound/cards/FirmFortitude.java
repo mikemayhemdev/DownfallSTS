@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import expansioncontent.expansionContentMod;
+import org.xml.sax.ext.LexicalHandler;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
@@ -40,16 +41,19 @@ public class FirmFortitude extends AbstractSlimeboundCard {
     public FirmFortitude() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        baseMagicNumber = magicNumber = 2;
+        //baseMagicNumber = magicNumber = 0;
         SlimeboundMod.loadJokeCardImage(this, "FirmFortitude.png");
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+
+        exhaust = true;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int total = 0;
+        //TODO - get Pike and Cid's combined energy
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, -2), -2));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, total), total));
 
     }
 
@@ -73,7 +77,10 @@ public class FirmFortitude extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            this.exhaust = false;
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
+
         }
     }
 }

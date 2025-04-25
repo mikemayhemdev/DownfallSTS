@@ -1,3 +1,4 @@
+
 package slimebound.cards;
 
 
@@ -53,4 +54,6 @@ public class RallyTheTroops extends AbstractSlimeboundCard {
         }
     }
 }
+
+
 

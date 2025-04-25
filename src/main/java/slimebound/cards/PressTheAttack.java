@@ -1,3 +1,4 @@
+
 package slimebound.cards;
 
 
@@ -10,7 +11,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CommandAction;
+
+import slimebound.actions.CommandCidAction;
+import slimebound.actions.CommandPikeAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
 
@@ -50,8 +53,12 @@ public class PressTheAttack extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-            addToBot(new CommandAction());
-            if (upgraded) addToBot(new CommandAction());
+        //TODO if Cid's energy is higher...
+        if (true){
+            addToBot(new CommandCidAction());
+        } else {
+            addToBot(new CommandPikeAction());
+        }
 
         checkMinionMaster();
     }
@@ -65,9 +72,8 @@ public class PressTheAttack extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            //upgradeDamage(1);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeDamage(3);
         }
     }
 }
+

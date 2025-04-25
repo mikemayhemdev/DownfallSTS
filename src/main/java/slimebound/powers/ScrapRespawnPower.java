@@ -1,3 +1,4 @@
+/*
 package slimebound.powers;
 
 
@@ -9,7 +10,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.actions.SlimeSpawnAction;
+
 
 
 public class ScrapRespawnPower extends AbstractPower {
@@ -66,3 +67,5 @@ public class ScrapRespawnPower extends AbstractPower {
 
 
 
+
+ */

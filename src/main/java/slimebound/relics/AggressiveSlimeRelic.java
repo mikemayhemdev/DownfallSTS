@@ -2,11 +2,15 @@ package slimebound.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.util.TextureLoader;
-import slimebound.actions.SlimeSpawnAction;
+
+import slimebound.cards.SlimeBrawl;
+import slimebound.cards.SplitSpecialist;
 import slimebound.characters.SlimeboundCharacter;
 
 public class AggressiveSlimeRelic extends CustomRelic {
@@ -30,7 +34,16 @@ public class AggressiveSlimeRelic extends CustomRelic {
 
     public void atBattleStartPreDraw() {
         this.flash();
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
+        AbstractCard c;
+        if (AbstractDungeon.cardRandomRng.randomBoolean()){
+            c = new SlimeBrawl();
+        } else {
+            c = new SplitSpecialist();
+        }
+        c.upgrade();
+        addToBot(new MakeTempCardInHandAction(c));
+
+       // AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
 
     }
 

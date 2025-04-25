@@ -8,7 +8,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.util.TextureLoader;
-import slimebound.actions.SlimeSpawnAction;
+import slimebound.actions.BuffCidStrengthAction;
+import slimebound.actions.BuffPikeStrengthAction;
+
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.PotencyPower;
 
@@ -33,7 +35,10 @@ public class PotencyRelic extends CustomRelic {
     public void atBattleStartPreDraw() {
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+        addToBot(new BuffCidStrengthAction(1));
+        addToBot(new BuffPikeStrengthAction(1));
+
+        //addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
     }
 
     public boolean canSpawn() {

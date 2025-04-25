@@ -1,16 +1,22 @@
 package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
+import slimebound.relics.SlimedTailRelic;
 
 public class CommandPikeAction extends AbstractGameAction {
 
     public void update() {
         isDone = true;
-        AbstractOrb oldestOrb = SlimeboundMod.getLeadingSlime();
+       // AbstractOrb oldestOrb = SlimeboundMod.getLeadingSlime();
        //TODO
         //TODO minion master enchantment
+
+        if (AbstractDungeon.player.hasRelic(SlimedTailRelic.ID)){
+            AbstractDungeon.player.getRelic(SlimedTailRelic.ID).onTrigger();
+        }
     }
 }
 

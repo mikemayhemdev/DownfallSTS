@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CommandAction;
-import slimebound.actions.SlimeSpawnAction;
+
+
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -20,6 +20,7 @@ public class Split extends AbstractSlimeboundCard {
     public Split() {
         super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.SLIMEBOUND, CardRarity.BASIC, CardTarget.NONE);
         SlimeboundMod.loadJokeCardImage(this, "Split.png");
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

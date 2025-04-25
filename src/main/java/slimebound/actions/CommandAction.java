@@ -1,3 +1,4 @@
+/*
 package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,11 +12,14 @@ public class CommandAction extends AbstractGameAction {
 
     public void update() {
         isDone = true;
-        AbstractOrb oldestOrb = SlimeboundMod.getLeadingSlime();
+       // AbstractOrb oldestOrb = SlimeboundMod.getLeadingSlime();
         if (oldestOrb != null) {
             addToTop(new TrigggerSpecificSlimeAttackAction(oldestOrb));
 
         }
     }
 }
+
+ */
+
 

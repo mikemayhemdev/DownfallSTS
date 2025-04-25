@@ -32,8 +32,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import slimebound.SlimeboundMod;
-import slimebound.cards.SplitGreed;
-import slimebound.cards.SplitScrap;
 import slimebound.powers.*;
 import slimebound.vfx.*;
 import reskinContent.reskinContent;
@@ -307,6 +305,7 @@ public abstract class SpawnedSlime
 
 
     public void onEvoke() {
+        /*
         if (!noEvokeBonus) {
             if (this instanceof ScrapOozeSlime) {
                 //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ScrapRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
@@ -320,6 +319,8 @@ public abstract class SpawnedSlime
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
 
         triggerEvokeAnimation();
+
+         */
     }
 
 

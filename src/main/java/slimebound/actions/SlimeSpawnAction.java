@@ -1,3 +1,4 @@
+/*
 package slimebound.actions;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
@@ -114,7 +115,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
                 }
 
             }
-            */
+
             // AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
 
             ////SlimeboundMod.logger.info("Channeling slime orb");
@@ -129,21 +130,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
                 }
 
                 AbstractDungeon.player.channelOrb(this.orbType);
-                for (AbstractCard q : AbstractDungeon.player.exhaustPile.group) {
-                    if (q instanceof OneTwoCombo) {
-                        ((OneTwoCombo) q).onSplit();
-                    }
-                }
-                for (AbstractCard q : AbstractDungeon.player.drawPile.group) {
-                    if (q instanceof OneTwoCombo) {
-                        ((OneTwoCombo) q).onSplit();
-                    }
-                }
-                for (AbstractCard q : AbstractDungeon.player.discardPile.group) {
-                    if (q instanceof OneTwoCombo) {
-                        ((OneTwoCombo) q).onSplit();
-                    }
-                }
+
             }
 
 
@@ -163,6 +150,8 @@ public class SlimeSpawnAction extends AbstractGameAction {
     }
 
 }
+*/
+
 
 
 

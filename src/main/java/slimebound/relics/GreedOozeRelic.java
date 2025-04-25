@@ -10,7 +10,9 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.vfx.GainPennyEffect;
-import slimebound.actions.SlimeSpawnAction;
+import slimebound.actions.BuffCidStrengthAction;
+import slimebound.actions.BuffPikeStrengthAction;
+
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.orbs.GreedOozeSlime;
 
@@ -35,23 +37,14 @@ public class GreedOozeRelic extends CustomRelic {
 
     public void atBattleStartPreDraw() {
         this.flash();
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.GreedOozeSlime(), false, false));
+        addToBot(new BuffCidStrengthAction(counter));
+        //AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.GreedOozeSlime(), false, false));
     }
 
     @Override
     public void onEnterRoom(AbstractRoom room) {
         if (!(room instanceof RestRoom)){
             used = false;
-        }
-    }
-
-
-    public void onVictory() {
-        AbstractPlayer p = AbstractDungeon.player;
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof GreedOozeSlime) {
-                ((GreedOozeSlime) o).stopShiny = true;
-            }
         }
     }
 

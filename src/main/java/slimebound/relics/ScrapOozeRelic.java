@@ -7,7 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
-import slimebound.actions.SlimeSpawnAction;
+import slimebound.actions.BuffPikeStrengthAction;
+
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.ui.ScrapBonfireOption;
 
@@ -17,7 +18,6 @@ public class ScrapOozeRelic extends CustomRelic {
     public static final String ID = "Slimebound:ScrapOozeRelic";
     public static final String IMG_PATH = "relics/scrapOoze.png";
     public static final String OUTLINE_IMG_PATH = "relics/scrapOozeOutline.png";
-    public int scrapAmount = 0;
 
     public ScrapOozeRelic() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
@@ -36,7 +36,8 @@ public class ScrapOozeRelic extends CustomRelic {
 
     public void atBattleStartPreDraw() {
         this.flash();
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.ScrapOozeSlime(), false, false));
+        addToBot(new BuffPikeStrengthAction(counter));
+       // AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.ScrapOozeSlime(), false, false));
 
     }
 

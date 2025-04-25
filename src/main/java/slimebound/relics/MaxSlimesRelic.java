@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.util.TextureLoader;
 import slimebound.SlimeboundMod;
+import slimebound.actions.EnergyToCidAction;
+import slimebound.actions.EnergyToPikeAction;
 import slimebound.characters.SlimeboundCharacter;
 
 public class MaxSlimesRelic extends CustomRelic {
@@ -30,8 +32,8 @@ public class MaxSlimesRelic extends CustomRelic {
 
     public void atBattleStartPreDraw() {
         this.flash();
-        addToBot(new IncreaseMaxOrbAction(1));
-        SlimeboundMod.spawnNormalSlime();
+        addToBot(new EnergyToCidAction(1));
+        addToBot(new EnergyToPikeAction(2));
     }
 
     public boolean canSpawn() {

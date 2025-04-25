@@ -15,8 +15,6 @@ import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CommandAction;
-import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.AttackSlime;
 import slimebound.orbs.PoisonSlime;
 import slimebound.orbs.SpawnedSlime;

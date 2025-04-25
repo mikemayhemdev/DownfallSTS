@@ -3,7 +3,9 @@ package slimebound.potions;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,7 +13,8 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import slimebound.SlimeboundMod;
-import slimebound.actions.SlimeSpawnAction;
+import slimebound.cards.SlimeBarrage;
+import slimebound.cards.SplitSpecialist;
 import slimebound.orbs.PoisonSlime;
 import slimebound.orbs.ShieldSlime;
 import slimebound.orbs.SlimingSlime;
@@ -40,18 +43,22 @@ public class SpawnSlimePotion extends CustomPotion {
 
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("slimeboundmod:split")), BaseMod.getKeywordDescription("slimeboundmod:split")));
     }
 
     public void use(AbstractCreature target) {
+        //TODO - Figure out new effect for this potion
 
         for (int i = 0; i < this.potency; i++) {
-            if (AbstractDungeon.cardRng.randomBoolean()) {
-                SlimeboundMod.spawnSpecialistSlime();
-            } else {
-                SlimeboundMod.spawnNormalSlime();
-            }
+
+            AbstractCard c = new SplitSpecialist();
+            c.freeToPlay();
+           addToBot(new MakeTempCardInHandAction(c));
+            c = new SlimeBarrage();
+            c.freeToPlay();
+            addToBot(new MakeTempCardInHandAction(c));
         }
+
+
     }
 
 
