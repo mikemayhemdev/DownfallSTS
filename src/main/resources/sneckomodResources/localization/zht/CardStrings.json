@@ -163,7 +163,8 @@
   },
   "sneckomod:QuickBite": {
     "NAME": "蛇耙",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL sneckomod:混淆 手牌中最高耗能的 1 張牌。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 抽 !M! 張牌。 NL sneckomod:混淆 這幾張牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 抽 !M! 張牌。 NL sneckomod:混淆 這幾張牌。"
   },
   "sneckomod:QuickMove": {
     "NAME": "迅捷步伐",

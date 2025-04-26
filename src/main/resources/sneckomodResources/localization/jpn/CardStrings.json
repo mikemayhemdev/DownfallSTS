@@ -163,7 +163,8 @@
   },
   "sneckomod:QuickBite": {
     "NAME": "スネークレーキ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 手札にある最もコストの高いカードを sneckomod:泥まみれ にする。"
+    "DESCRIPTION": " !D! ダメージを与える。 NL !M! 枚カードを引き、それらのカードを sneckomod:泥まみれ にする。",
+    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL !M! 枚カードを引き、それらのカードを sneckomod:泥まみれ にする。"
   },
   "sneckomod:QuickMove": {
     "NAME": "素早い動き",
