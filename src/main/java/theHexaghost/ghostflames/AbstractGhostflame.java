@@ -309,10 +309,11 @@ public abstract class AbstractGhostflame {
     public void activate() {
         GhostflameHelper.activeGhostFlame = this;
         int trigger = getActiveFlamesTriggerCount();
-        for (int i = 0; i < 3; i++) {
-            animAlphaBySlot[i] = 0F;
-            useBrightTexture[i] = trigger > i;
-            update();
-        }
+        if (HexaMod.renderFlames)
+            for (int i = 0; i < 3; i++) {
+                animAlphaBySlot[i] = 0F;
+                useBrightTexture[i] = trigger > i;
+                update();
+            }
     }
 }

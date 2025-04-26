@@ -1,80 +1,80 @@
 {
   "sneckomod:Blunderbus": {
     "NAME": "ブランダーバス",
-    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 手札にあるコスト3以上のカードの数だけこれを繰り返す。"
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 手札の3コスト以上のカード1枚につきもう一度ダメージを与える。"
   },
   "sneckomod:Tsunami": {
-    "NAME": "津波",
-    "DESCRIPTION": "sneckomod:オーバーフロー を起こすたび、 !M! ブロックを得る。"
+    "NAME": "ツナミ",
+    "DESCRIPTION": "sneckomod:オーバーフロー が発動した時、 !M! ブロック を得る。"
   },
   "sneckomod:CheapStock": {
     "NAME": "チープストック",
-    "DESCRIPTION": "ターン開始時、手札の中で最もコストの高いカードを sneckomod:泥まみれ にする。",
-    "UPGRADE_DESCRIPTION": "ターン開始時、手札の中でコストの高いカードを !M! 枚 sneckomod:泥まみれ にする。"
+    "DESCRIPTION": "ターン開始時、手札の最もコストの高いカードを sneckomod:泥まみれ にする。",
+    "UPGRADE_DESCRIPTION": "ターン開始時、手札の最もコストの高いカードを !M! 枚 sneckomod:泥まみれ にする。"
   },
   "sneckomod:Cheat": {
-    "NAME": "Pure Luck",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "NAME": "純粋な運",
+    "DESCRIPTION": "sneckomod:蛇避け NL ターン終了まで sneckomod:幸運 状態になる。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL ターン終了まで sneckomod:幸運 状態になる。",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      "NOTE FOR LOC: NOT USED DO NOT  TRANSLATE  "
     ]
   },
   "sneckomod:DangerNoodle": {
     "NAME": "デンジャーヌードル",
-    "DESCRIPTION": " !D! ダメージを与える。 NL カードを 1 枚 sneckomod:泥まみれ にする。 NL sneckomod:ギフト : 3 コスト",
-    "DESCRIPTION_BATTLE": " !D! ダメージを与える。 NL カードを 1 枚 sneckomod:泥まみれ にする。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札を1枚 sneckomod:泥まみれ にする。 NL sneckomod:ギフト : 3+ コスト",
+    "DESCRIPTION_BATTLE": "!D! ダメージを与える。 NL 手札を1枚 sneckomod:泥まみれ にする。"
   },
   "sneckomod:Deception": {
-    "NAME": "欺瞞",
-    "DESCRIPTION": " !B! ブロックを得る。 NL *衝撃波 を手札に加える。 NL 廃棄 "
+    "NAME": "誤魔化し",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 手札に *ショックウェーブ を加える。 NL 廃棄 "
   },
   "sneckomod:Defend": {
     "NAME": "防御",
-    "DESCRIPTION": " !B! ブロックを得る。"
+    "DESCRIPTION": "!B! ブロックを得る。"
   },
   "sneckomod:DefensiveFlair": {
-    "NAME": "ディフェンシブフレア",
-    "DESCRIPTION": " !B! ブロックを得る。 追加で !M! ブロックを手札の sneckomod:オフクラス の数だけ得る。 NL sneckomod:ギフト : アンコモン ",
-    "DESCRIPTION_BATTLE": " !B! ブロックを得る。 追加で !M! ブロックを手札の sneckomod:オフクラス の数だけ得る。"
+    "NAME": "防衛センス",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 追加で手札の sneckomod:オフクラス カード1枚につき !M! ブロックを得る。 NL sneckomod:ギフト : アンコモン",
+    "DESCRIPTION_BATTLE": "!B! ブロックを得る。 NL 追加で手札の sneckomod:オフクラス カード1枚につき !M! ブロックを得る。"
   },
   "sneckomod:DiceBlock": {
-    "NAME": "ダイスブロック",
-    "DESCRIPTION": " !B! ブロックを得る。 NL sneckomod:オーバーフロー :追加で !B! ブロックを得る。"
+    "NAME": "ブロックダイス",
+    "DESCRIPTION": "!B! ブロックを得る。 NL sneckomod:オーバーフロー : !B! ブロックをもう一度得る。"
   },
   "sneckomod:DiceBoulder": {
-    "NAME": "ダイスボルダー",
-    "DESCRIPTION": " !B! ブロックを得る。 NL この戦闘中、このカードのブロックを !M! 増加し、コストを !qqq! 増加させる。"
+    "NAME": "落石ダイス",
+    "DESCRIPTION": "!B! ブロックを得る。 NL この戦闘中、このカードの効果が !M! 増加し、コストが !qqq! 増加する。"
   },
   "sneckomod:DiceCrush": {
-    "NAME": "ダイスクラッシュ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL sneckomod:オーバーフロー :2枚カードを引く。"
+    "NAME": "クラッシュダイス",
+    "DESCRIPTION": "!D! ダメージを与える。 NL sneckomod:オーバーフロー : カードを 2 枚引く。"
   },
   "sneckomod:DragonsHoard": {
     "NAME": "ドラゴンの財宝",
-    "DESCRIPTION": "エセリアル NL 筋力 !M! を得る。 NL 敏捷性 !M! を得る。",
-    "UPGRADE_DESCRIPTION": " 筋力 !M! を得る。 NL 敏捷性 !M! を得る。"
+    "DESCRIPTION": "エセリアル NL 筋力 と 敏捷性 !M! を得る。",
+    "UPGRADE_DESCRIPTION": "筋力 と 敏捷性 !M! を得る。"
   },
   "sneckomod:FourOfAKind": {
     "NAME": "Four Of A Kind",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "キラキラのまなざし",
-    "DESCRIPTION": "使用不可 NL デッキから削除できない。 NL sneckomod:ギフト : アップグレードされた レア と !M! ゴールド ",
-    "UPGRADE_DESCRIPTION": "使用不可 エセリアル NL デッキから削除できない。 NL sneckomod:ギフト : アップグレードされた レア と !M! ゴールド  ",
+    "DESCRIPTION": "使用不可 NL デッキから削除することが出来ない。 NL sneckomod:ギフト : アップグレードレア + !M! ゴールド",
+    "UPGRADE_DESCRIPTION": "使用不可 NL エセリアル NL デッキから削除することが出来ない。 NL sneckomod:ギフト : アップグレードレア + !M! ゴールド",
     "DESCRIPTION_BATTLE": "使用不可",
     "UPGRADE_DESCRIPTION_BATTLE": "使用不可 NL エセリアル"
   },
   "sneckomod:ImmovableObject": {
-    "NAME": "動かせない物体",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "NAME": "Immovable Object",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:IronFang": {
@@ -83,83 +83,83 @@
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Improvised Attack",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:ImprovisedGuard": {
     "NAME": "Improvised Guard",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:LuckyBreak": {
-    "NAME": "ラッキーブレイク",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 手札の2コスト以上のカード 1 枚につき !M! 枚カードを引く。"
+    "NAME": "幸運のチャンス",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 手札のコスト2以上のカード1枚につき カードを !M! 枚引く。"
   },
   "sneckomod:Nope": {
     "NAME": "これじゃない",
-    "DESCRIPTION": " !B! ブロックを得る。 NL カードを 1 枚 廃棄 して、ランダムな同じクラスのカードを得る。",
-    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL カードを 1 枚 廃棄 して、ランダムな同じクラスのカードを得る。",
+    "DESCRIPTION": "!B! ブロックを得る。 NL カードを1枚廃棄する。無色以外の場合、そのカードと同じ色のカードを手札に加える。",
+    "UPGRADE_DESCRIPTION": "!B! ブロックを得る。 NL カードを1枚廃棄する。無色以外の場合、そのカードと同じ色のカードを手札に加える。",
     "EXTENDED_DESCRIPTION": [
-      " NL 廃棄"
+      "これじゃないので廃棄する。"
     ]
   },
   "sneckomod:SnakeEyes": {
-    "NAME": "スネッコアイ",
-    "DESCRIPTION": "このターン、次の sneckomod:オフクラス カードは 2 回プレイされる。  NL sneckomod:ギフト : レア スキル ",
-    "UPGRADE_DESCRIPTION": "このターン、次の2枚の sneckomod:オフクラス カードは 2 回プレイされる。  NL sneckomod:ギフト : レア スキル ",
-    "DESCRIPTION_BATTLE": "このターン、次の sneckomod:オフクラス カードは 2 回プレイされる。 ",
-    "UPGRADE_DESCRIPTION_BATTLE": "このターン、次の2枚の sneckomod:オフクラス カードは 2 回プレイされる。 "
+    "NAME": "スネークアイ",
+    "DESCRIPTION": "このターン、次の sneckomod:オフクラス カードは2回プレイされる。 NL sneckomod:ギフト : レアスキル",
+    "UPGRADE_DESCRIPTION": "このターン、次の2枚の sneckomod:オフクラス カードは2回プレイされる。 NL sneckomod:ギフト : レアスキル",
+    "DESCRIPTION_BATTLE": "このターン、次の sneckomod:オフクラス カードは2回プレイされる。",
+    "UPGRADE_DESCRIPTION_BATTLE": "このターン、次の2枚の sneckomod:オフクラス カードは2回プレイされる。"
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "DESCRIPTION": "sneckomod:蛇避け Fleeting NL Choose a card which started *Unidentified sneckomod:Identify it",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け Fleeting 保留 NL Choose a card which started *Unidentified sneckomod:Identify it",
     "EXTENDED_DESCRIPTION": [
-      " to Identify ",
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      " to Identify",
+        "NOTE FOR LOC: NOT USED DO NOT  TRANSLATE  "
     ]
   },
   "sneckomod:MintCondition": {
-    "NAME": "ミントコンディション",
+    "NAME": "良好品質",
     "DESCRIPTION": "sneckomod:オーバーフロー : 筋力 !M! を得る。"
   },
   "sneckomod:MixItUp": {
-    "NAME": "ミックス開始！",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "NAME": "Mix It Up!",
+    "DESCRIPTION": "*Transform your Potions NL !D! ダメージを与える。 !M! times NL 廃棄 ",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      "NOTE FOR LOC: NOT USED DO NOT  TRANSLATE  "
     ]
   },
   "sneckomod:MorePower": {
-    "NAME": "もっと力を！",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "NAME": "More Power!",
+    "DESCRIPTION": "Obtain an additional Upgraded *Unidentified card reward at the end of combat",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      "NOTE FOR LOC: NOT USED DO NOT  TRANSLATE  "
     ]
   },
   "sneckomod:Mudshield": {
     "NAME": "マッドシールド",
-    "DESCRIPTION": "カードを sneckomod:泥まみれ にする度に、 !M! ブロックを得る。"
+    "DESCRIPTION": "手札を1枚 sneckomod:泥まみれ にする毎に !M! ブロックを得る。"
   },
   "sneckomod:OverwhelmingPresence": {
-    "NAME": "圧倒的",
-    "DESCRIPTION": "各ターンに初めてデッキをシャッフルした時、 [E] を得て、!M! 枚カードを引く。"
+    "NAME": "圧倒",
+    "DESCRIPTION": "各ターン、初めてシャッフルした時に [E] を得て カードを !M! 枚引く。"
   },
   "sneckomod:RiskySword": {
     "NAME": "リスキーソード",
-    "DESCRIPTION": " !D! ダメージを与える。 NL このカードが sneckomod:泥まみれ だった場合、この戦闘中、 !M! ダメージ増加する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL sneckomod:泥まみれ になると、この戦闘中ダメージが !M! 増加する。"
   },
   "sneckomod:PoisonParadise": {
-    "NAME": "噴水",
-    "DESCRIPTION": " sneckomod:オーバーフロー する度、ランダムな敵に sneckomod:蛇毒 !M! を与える。"
+    "NAME": "泉",
+    "DESCRIPTION": "sneckomod:オーバーフロー が発動する度、ランダムな敵に sneckomod:猛毒 !M! を与える。"
   },
   "sneckomod:PureSnecko": {
     "NAME": "シフト",
-    "DESCRIPTION": " !M! 枚カードを引き、それらのカードを sneckomod:泥まみれ にする。"
+    "DESCRIPTION": "カードを !M! 枚引き、それらを sneckomod:泥まみれ にする。"
   },
   "sneckomod:QuickBite": {
     "NAME": "スネークレーキ",
@@ -168,451 +168,451 @@
   },
   "sneckomod:QuickMove": {
     "NAME": "素早い動き",
-    "DESCRIPTION": " !B! ブロックを得る。 NL sneckomod:オーバーフロー : 敵全体に 弱体 !M! を与える。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL sneckomod:オーバーフロー : 敵全体に 弱体 !M! を与える。"
   },
   "sneckomod:RainOfDice": {
     "NAME": "ダイスの雨",
-    "DESCRIPTION": " !D! ダメージを与える。 NL sneckomod:泥まみれ にしたこのカードを手札に加える。 NL 廃棄 ",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL sneckomod:泥まみれ にしたこのカードを手札に加える。 NL 廃棄 "
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札を1枚 sneckomod:泥まみれ にし、 その後 *ダイスの雨 を手札に加える。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 手札を1枚 sneckomod:泥まみれ にし、 その後 *ダイスの雨+ を手札に加える。 NL 廃棄 "
   },
   "sneckomod:Restock": {
-    "NAME": "再ストック",
-    "DESCRIPTION": "手札を捨てる。 NL !M! 枚のカードを引いて、手札のカードを sneckomod:泥まみれ にする。 NL 廃棄 "
+    "NAME": "リストック",
+    "DESCRIPTION": "手札を捨てる。 NL カードを !M! 枚引き、それらを sneckomod:泥まみれ にする。 NL 廃棄 "
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "DESCRIPTION": "sneckomod:蛇避け NL Discard all sneckomod:オフクラス cards NL Draw that many cards NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL Discard all sneckomod:オフクラス cards NL Draw that many cards plus !M! NL 廃棄 ",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      "NOTE FOR LOC: NOT USED DO NOT  TRANSLATE  "
     ]
   },
   "sneckomod:SerpentBottle": {
-    "NAME": "割引セール",
-    "DESCRIPTION": " !qqq! 枚のカードを引く。 NL カードを sneckomod:泥まみれ にする。 NL 廃棄 ",
-    "UPGRADE_DESCRIPTION": " !qqq! 枚のカードを引く。 NL カードを !M! 枚 sneckomod:泥まみれ にする。 NL 廃棄 "
+    "NAME": "大安売り",
+    "DESCRIPTION": "カードを !qqq! 枚引く。 NL 手札を1枚 sneckomod:泥まみれ にする。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "カードを !qqq! 枚引く。 NL 手札を !M! 枚 sneckomod:泥まみれ にする。 NL 廃棄 "
   },
   "sneckomod:SerpentIdol": {
-    "NAME": "蛇の像",
-    "DESCRIPTION": " !M! 枚のランダムな sneckomod:オフクラス から 1 枚手札に加える。このターンそのコストは 0 NL 廃棄 "
+    "NAME": "蛇の彫像",
+    "DESCRIPTION": "ランダムな !M! 枚の中から1枚の sneckomod:オフクラス カードを手札に加える。このターン、そのコストは0になる。 NL 廃棄 "
   },
   "sneckomod:SerpentMind": {
-    "NAME": "エキゾチックフォーム",
-    "DESCRIPTION": "エセリアル NL ターン終了時に、プレイした 他色 ごとに 筋力 !M! を得る。 NL sneckomod:ギフト : レア ",
-    "UPGRADE_DESCRIPTION": "ターン終了時に、プレイした 他色 ごとに 筋力 !M! を得る。 NL sneckomod:ギフト : レア ",
-    "DESCRIPTION_BATTLE": "ターン終了時に、プレイした 他色 ごとに 筋力 !M! を得る。"
+    "NAME": "異邦化",
+    "DESCRIPTION": "エセリアル NL ターン中にプレイされたカードカラー毎に、ターン終了時 筋力 !M! を得る。 NL sneckomod:ギフト : レア",
+    "UPGRADE_DESCRIPTION": "ターン中にプレイされたカードカラー毎に、ターン終了時 筋力 !M! を得る。 NL sneckomod:ギフト : レア",
+    "DESCRIPTION_BATTLE": "ターン中にプレイされたカードカラー毎に、ターン終了時 筋力 !M! を得る。"
   },
   "sneckomod:SlitherThrough": {
-    "NAME": "すり抜け",
-    "DESCRIPTION": " !D! ダメージを与える。 NL このターン、手札にある  sneckomod:オフクラス カードのコストを !M! 減らす。 NL sneckomod:ギフト : アンコモン ",
-    "DESCRIPTION_BATTLE": " !D! ダメージを与える。 NL このターン、手札にある  sneckomod:オフクラス カードのコストを !M! 減らす。"
+    "NAME": "するするー",
+    "DESCRIPTION": "!D! ダメージを与える。 NL このターン、手札にある sneckomod:オフクラス カードのコストを !M! 減少させる。 NL sneckomod:ギフト : アンコモン",
+    "DESCRIPTION_BATTLE": "!D! ダメージを与える。 NL このターン、手札にある sneckomod:オフクラス カードのコストを !M! 減少させる。"
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "DESCRIPTION": "sneckomod:蛇避け NL !qqq! - !D! ダメージを与える。 NL - 1 を得る。 !M! [E] NL 廃棄 ",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      "NOTE FOR LOC: NOT USED DO NOT  TRANSLATE  "
     ]
   },
   "sneckomod:SnekBeam": {
-    "NAME": "スネッコビーム",
-    "DESCRIPTION": " !D! ダメージを与える。 NL  [E] を得る。"
+    "NAME": "レーザーアイズ",
+    "DESCRIPTION": "!D! ダメージを与える。 NL [E] を得る。"
   },
   "sneckomod:SnekBite": {
-    "NAME": "スネッコバイト",
-    "DESCRIPTION": " !D! ダメージを与える。 NL カードを sneckomod:泥まみれ にする。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL カードを !M! 枚 sneckomod:泥まみれ にする。"
+    "NAME": "スネークバイト",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札を1枚 sneckomod:泥まみれ にする。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 手札を !M! 枚 sneckomod:泥まみれ にする。"
   },
   "sneckomod:SoulCleanse": {
     "NAME": "Soul Cleanse",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "DESCRIPTION": "sneckomod:蛇避け NL sneckomod:泥まみれ your hand Cards sneckomod:Muddled this way cannot cost 3 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇避け NL sneckomod:泥まみれ your hand Cards sneckomod:Muddled this way cannot cost 3",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      "NOTE FOR LOC: NOT USED DO NOT  TRANSLATE  "
     ]
   },
   "sneckomod:SoulDraw": {
     "NAME": "ソウルドロー",
-    "DESCRIPTION": "ランダムで !M! 枚の sneckomod:オフクラス カードを得る。 NL それらは 保留 を得る。 NL 廃棄 "
+    "DESCRIPTION": "ランダムに sneckomod:オフクラス カードを !M! 枚得る。 NL それらに 保留 が付く。 NL 廃棄 "
   },
   "sneckomod:SoulExchange": {
-    "NAME": "ソウル・エクスチェンジ",
-    "DESCRIPTION": " 保留 NL 手札を sneckomod:泥まみれ にする。 NL 廃棄 "
+    "NAME": "ソウルエクスチェンジ",
+    "DESCRIPTION": "保留 NL 手札を sneckomod:泥まみれ にする。 NL 廃棄 "
   },
   "sneckomod:SoulRoll": {
     "NAME": "ソウルロール",
-    "DESCRIPTION": " 保留 NL  !B! ブロックを得る。 NL 手札のカードを1枚 sneckomod:泥まみれ にする。 NL 廃棄 "
+    "DESCRIPTION": "保留 NL !B! ブロックを得る。 NL 手札を1枚 sneckomod:泥まみれ にする。 NL 廃棄 "
   },
   "sneckomod:Strike": {
     "NAME": "ストライク",
-    "DESCRIPTION": " !D! ダメージを与える。"
+    "DESCRIPTION": "!D! ダメージを与える。"
   },
   "sneckomod:ToothAndClaw": {
-    "NAME": "トーチアンドクロー",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 得る。 手札の固有色ごとに ナイフ を得る。 NL sneckomod:ギフト : アンコモン ",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 得る。 手札の固有色ごとに アップグレードされた ナイフ を得る。 NL sneckomod:ギフト : アンコモン ",
-    "DESCRIPTION_BATTLE": " !D! ダメージを与える。 NL 得る。 手札の固有色ごとに ナイフ を得る。",
-    "UPGRADE_DESCRIPTION_BATTLE": " !D! ダメージを与える。 NL 得る。 手札の固有色ごとに アップグレードされた ナイフ を得る。"
+    "NAME": "爪と牙",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札のカラー1種毎に *ナイフ を手札に加える。 NL sneckomod:ギフト : アンコモン",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 手札のカラー1種毎に *ナイフ+ を手札に加える。 NL sneckomod:ギフト : アンコモン",
+    "DESCRIPTION_BATTLE": "!D! ダメージを与える。 NL 手札のカラー1種毎に *ナイフ を手札に加える。",
+    "UPGRADE_DESCRIPTION_BATTLE": "!D! ダメージを与える。 NL 手札のカラー1種毎に *ナイフ+ を手札に加える。"
   },
   "sneckomod:TyphoonFang": {
-    "NAME": "タイフーンファング",
-    "DESCRIPTION": " !D! ダメージを与える。 NL sneckomod:オーバーフロー : このターン、 sneckomod:オーバーフロー するたびに、このカードのコピーを 1 枚プレイする。"
+    "NAME": "暴風牙",
+    "DESCRIPTION": "!D! ダメージを与える。 NL sneckomod:オーバーフロー : このターン、 sneckomod:オーバーフロー が発動する度にこのカードのコピーをプレイする。"
   },
   "sneckomod:Yearn": {
     "NAME": "Yearn",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "DESCRIPTION": "カードを !M! 枚引く。 NL Give them 保留 NL 廃棄 ",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      "NOTE FOR LOC: NOT USED DO NOT  TRANSLATE  "
     ]
   },
   "sneckomod:TailWhip": {
     "NAME": "テイルウィップ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL sneckomod:オーバーフロー : 脱力 !M! と 弱体 !M! を与える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL sneckomod:オーバーフロー : 脱力 と 弱体 !M! を与える。"
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "DESCRIPTION": "Choose 1 of 2 Relics to lose NL Obtain a random Relic of the same rarity NL 廃棄 ",
     "EXTENDED_DESCRIPTION": [
-      "I have no Relicsss to ssswap ",
-      "Choose a Relic to lose ",
+      "I have no Relicsss to ssswap",
+      "Choose a Relic to lose",
       "Lose ",
-      " と obtain another ",
-      " Relic ",
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
-    ]
+      " and obtain another ",
+      " Relic",
+        "NOTE FOR LOC: NOT USED DO NOT  TRANSLATE  "
+      ]
   },
   "sneckomod:ToxicPersonality": {
     "NAME": "Toxic Personality",
-    "DESCRIPTION": "This カード shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "DESCRIPTION": "Whenever you apply a debuff to an enemy, also sneckomod:猛毒 !M! を与える。 NL sneckomod:ギフト : アンコモン+ Debuff",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed カード "
+      "NOTE FOR LOC: NOT USED DO NOT  TRANSLATE  "
     ]
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "ガラクタを宝物に",
-    "DESCRIPTION": " !B! ブロックを得る。 NL  カードを1枚廃棄する。 NL コストに等しい [E] を得る。 NL 廃棄 ",
-    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL  カードを1枚廃棄する。 NL コストに等しい [E] を得る。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL カードを1枚廃棄し、そのカードコストに等しい [E] を得る。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "!B! ブロックを得る。 NL カードを1枚廃棄し、そのカードコストに等しい [E] を得る。"
   },
   "sneckomod:UnendingSupply": {
-    "NAME": "無限サプライ",
-    "DESCRIPTION": "ターン開始時に、ランダムな sneckomod:オフクラス カードの gremlin:エコー を得る。",
-    "UPGRADE_DESCRIPTION": "天賦 NL ターン開始時に、ランダムな sneckomod:オフクラス カードの gremlin:エコー を得る。"
+    "NAME": "無尽蔵の供給",
+    "DESCRIPTION": "各ターン開始時、ランダムな sneckomod:オフクラス カード の gremlin:エコー を手札に加える。",
+    "UPGRADE_DESCRIPTION": "天賦 NL 各ターン開始時、ランダムな sneckomod:オフクラス カードの gremlin:エコー を手札に加える。"
   },
   "sneckomod:Unknown": {
-    "NAME": "??? Basic",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? 基本",
+    "DESCRIPTION": "*未識別 NL 基本カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 基本カード"
   },
   "sneckomod:Unknown0Cost": {
-    "NAME": "??? 0-Cost",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? 0-コスト",
+    "DESCRIPTION": "*未識別 NL 0 コストカード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 0 コストカード"
   },
   "sneckomod:Unknown1Cost": {
-    "NAME": "???  1 -Cost",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? 1-コスト",
+    "DESCRIPTION": "*未識別 NL 1 コストカード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 1 コストカード"
   },
   "sneckomod:Unknown2Cost": {
-    "NAME": "??? 2-Cost",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? 2-コスト",
+    "DESCRIPTION": "*未識別 NL 2 コストカード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 2 コストカード"
   },
   "sneckomod:Unknown3Cost": {
-    "NAME": "??? 3-Cost",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? 3-コスト",
+    "DESCRIPTION": "*未識別 NL 3 コストカード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 3 コストカード"
   },
   "sneckomod:UnknownBlock": {
-    "NAME": "??? Block",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? ブロック",
+    "DESCRIPTION": "*未識別 NL ブロックカード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL ブロックカード"
   },
   "sneckomod:UnknownBoss": {
-    "NAME": "??? Boss",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? ボス",
+    "DESCRIPTION": "*未識別 NL 無色のボスカード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 無色のボスカード"
   },
   "sneckomod:UnknownClass": {
-    "NAME": "??? Class",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? クラス",
+    "DESCRIPTION": "*未識別 NL 有り得ないカードだから開発者に報告して",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 有り得ないカードだから開発者に報告して"
   },
   "sneckomod:UnknownColorless": {
-    "NAME": "??? Colorless",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? 無色",
+    "DESCRIPTION": "*未識別 NL 無色 カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 無色 カード"
   },
   "sneckomod:UnknownCommonAttack": {
-    "NAME": "??? C Attack",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? C アタック",
+    "DESCRIPTION": "*未識別 NL コモン アタック カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL コモン アタック カード"
   },
   "sneckomod:UnknownCommonSkill": {
-    "NAME": "??? C Skill",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? C スキル",
+    "DESCRIPTION": "*未識別 NL コモン スキル カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL コモン スキル カード"
   },
   "sneckomod:UnknownDexterity": {
-    "NAME": "??? Dexterity",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? 敏捷性",
+    "DESCRIPTION": "*未識別 NL 敏捷性 カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 敏捷性 カード"
   },
   "sneckomod:UnknownDraw": {
-    "NAME": "??? Draw",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? ドロー",
+    "DESCRIPTION": "*未識別 NL ドロー カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL ドロー カード"
   },
   "sneckomod:UnknownEthereal": {
-    "NAME": "??? Ethereal",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? エセリアル",
+    "DESCRIPTION": "*未識別 NL エセリアル カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL エセリアル カード"
   },
   "sneckomod:UnknownExhaust": {
-    "NAME": "??? Exhaust",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? 廃棄 ",
+    "DESCRIPTION": "*未識別 NL 廃棄 カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 廃棄 カード"
   },
   "sneckomod:UnknownRareAttack": {
-    "NAME": "??? R Attack",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? R アタック",
+    "DESCRIPTION": "*未識別 NL レア アタック カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL レア アタック カード"
   },
   "sneckomod:UnknownRarePower": {
-    "NAME": "??? R Power",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? R パワー",
+    "DESCRIPTION": "*未識別 NL レア パワー カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL レア パワー カード"
   },
   "sneckomod:UnknownRareSkill": {
-    "NAME": "??? R Skill",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? R スキル",
+    "DESCRIPTION": "*未識別 NL レア スキル カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL レア スキル カード"
   },
   "sneckomod:UnknownStrength": {
-    "NAME": "??? Strength",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? 筋力",
+    "DESCRIPTION": "*未識別 NL 筋力 カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 筋力 カード"
   },
   "sneckomod:UnknownStrike": {
-    "NAME": "??? Strike",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? ストライク",
+    "DESCRIPTION": "*未識別 NL ストライク カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL ストライク カード"
   },
   "sneckomod:UnknownUncommonAttack": {
-    "NAME": "??? U Attack",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? U アタック",
+    "DESCRIPTION": "*未識別 NL アンコモン アタック カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL アンコモン アタック カード"
   },
   "sneckomod:UnknownUncommonPower": {
-    "NAME": "??? U Power",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? U パワー",
+    "DESCRIPTION": "*未識別 NL アンコモン パワー カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL アンコモン パワー カード"
   },
   "sneckomod:UnknownUncommonSkill": {
-    "NAME": "??? U Skill",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? U スキル",
+    "DESCRIPTION": "*未識別 NL アンコモン スキル カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL アンコモン スキル カード"
   },
   "sneckomod:UnknownVulnerable": {
     "NAME": "??? 弱体",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "DESCRIPTION": "*未識別 NL 弱体 カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 弱体 カード"
   },
   "sneckomod:UnknownWeak": {
     "NAME": "??? 脱力",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "DESCRIPTION": "*未識別 NL 脱力 カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 脱力 カード"
   },
   "sneckomod:UnknownX": {
-    "NAME": "??? X-Cost",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev "
+    "NAME": "??? X-コスト",
+    "DESCRIPTION": "*未識別 NL X コスト カード",
+    "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL X コスト カード"
   },
   "sneckomod:UnlimitedRolls": {
-    "NAME": "Unlimited Rolls",
-    "DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run  NL If you're reading this, you've probably encountered a bug  NL Please report this to a mod dev ",
+    "NAME": "無限ロール",
+    "DESCRIPTION": "ターン開始時、 *廃棄 の付いた *ソウルロール を手札に加える。",
+    "UPGRADE_DESCRIPTION": "天賦 NL ターン開始時、 *廃棄 の付いた *ソウルロール を手札に加える。",
     "EXTENDED_DESCRIPTION": [
-      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards "
+      "NOTE FOR LOC: NOT USED DO NOT  TRANSLATE  "
     ]
   },
   "sneckomod:Behold": {
     "NAME": "見よ！",
-    "DESCRIPTION": " !D! ダメージを与える。 NL sneckomod:オーバーフロー : ナイフ を !M! 枚得る。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL sneckomod:オーバーフロー : ナイフ を !M! 枚得る。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL sneckomod:オーバーフロー : ナイフを !M! 枚手札に加える。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL sneckomod:オーバーフロー : ナイフを !M! 枚手札に加える。"
   },
   "sneckomod:SaveForLater": {
-    "NAME": "後回し",
-    "DESCRIPTION": " !D! ダメージを与える。 NL ターン終了時、カードを !M! 枚 保留 する。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL ターン終了時、カードを !M! 枚 保留 する。"
+    "NAME": "また後で",
+    "DESCRIPTION": "!D! ダメージを与える。 NL このターン、 !M! 枚のカードを 保留 出来る。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL このターン、 !M! 枚のカードを 保留 出来る。"
   },
   "sneckomod:PowerShot": {
     "NAME": "パワーショット",
-    "DESCRIPTION": " !D! ダメージを与える。パワーをプレイする度、これを捨て札から手札に戻す。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL パワーをプレイする度、このカードを捨て札から手札に戻す。"
   },
   "sneckomod:LilGuardian": {
-    "NAME": "リトルガーディアン",
-    "DESCRIPTION": " !B! ブロックを得る。 コストが 2 以上のカードをプレイするたび、これを手札からプレイする。"
+    "NAME": "小さな用心棒",
+    "DESCRIPTION": "!B! ブロックを得る。 NL このカードが手札にある時、2コスト以上のカードをプレイした場合このカードをプレイする。"
   },
   "sneckomod:CrystalBoomerang": {
-    "NAME": "クリスタルブーメラン",
-    "DESCRIPTION": "捨て札からカードを 1 枚手札に入れる。 NL それが sneckomod:オフクラス の場合、 !B! ブロックを得る。"
+    "NAME": "水晶ブーメラン",
+    "DESCRIPTION": "捨て札からカードを1枚手札に加える。 NL それが sneckomod:オフクラス なら !B! ブロックを得る。"
   },
   "sneckomod:ViperEssence": {
-    "NAME": "ヴァイパーエッセンス",
-    "DESCRIPTION": "エセリアル NL sneckomod:オフクラス  NL  筋力 !M! を得る。"
+    "NAME": "毒蛇エキス",
+    "DESCRIPTION": "エセリアル NL sneckomod:オフクラス NL 筋力 !M! を得る。"
   },
   "sneckomod:Amass": {
     "NAME": "蓄積",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 手札の合計 [E] に等しい追加のブロックを得る。",
-    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL  手札の合計 [E] の 2 倍に等しい追加のブロックを得る。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL 追加で手札の [E] コスト合計に等しいブロックを得る。",
+    "UPGRADE_DESCRIPTION": "!B! ブロックを得る。 NL 追加で手札の [E] コスト合計の2倍に等しいブロックを得る。"
   },
   "sneckomod:Medusa": {
     "NAME": "メデューサ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL  sneckomod:蛇毒 !M! を与える。 NL sneckomod:ギフト : コモン デバフ ",
-    "DESCRIPTION_BATTLE": " !D! ダメージを与える。 NL  sneckomod:蛇毒 !M! を与える。" 
+    "DESCRIPTION": "!D! ダメージを与える。 NL sneckomod:猛毒 !M! を与える。 NL sneckomod:ギフト : コモンデバフ",
+    "DESCRIPTION_BATTLE": "!D! ダメージを与える。 NL sneckomod:猛毒 !M! を与える。"
   },
   "sneckomod:Cower": {
-    "NAME": "怯える",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 手札に *隠れる を加える。 NL 廃棄 ",
-    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL 手札に *隠れる+ を加える。 NL 廃棄 "
+    "NAME": "縮み上がる",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 手札に *隠れる を加える。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "!B! ブロックを得る。 NL 手札に *隠れる+ を加える。 NL 廃棄 "
   },
   "sneckomod:WideSting": {
-    "NAME": "ワイルドストリング",
-    "DESCRIPTION": "敵に !D! ダメージを与える。 NL 手札にある sneckomod:オフクラス カードを全て アップグレードする。 NL sneckomod:ギフト : コモン ",
-    "DESCRIPTION_BATTLE": "敵に !D! ダメージを与える。 NL 手札にある sneckomod:オフクラス カードを全て アップグレードする。"
+    "NAME": "ワイドスティング",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 手札の全 sneckomod:オフクラス カードをアップグレードする。 NL sneckomod:ギフト :コモン",
+    "DESCRIPTION_BATTLE": "敵全体に !D! ダメージを与える。 NL 手札の全 sneckomod:オフクラス カードをアップグレードする。"
   },
   "sneckomod:GildedShield": {
-    "NAME": "金箔の盾",
-    "DESCRIPTION": " !B! ブロックを得る。 NL このカードを sneckomod:泥まみれ にして手札に戻す。"
+    "NAME": "金ぴかの盾",
+    "DESCRIPTION": "!B! ブロックを得る。 NL このカードを sneckomod:泥まみれ にして手札に戻す。"
   },
   "sneckomod:Mesmerize": {
-    "NAME": "魅了する",
-    "DESCRIPTION": "全ての敵が !M! 筋力 を失う。 NL カードを1枚選び sneckomod:泥まみれ にする。 NL 廃棄 "
+    "NAME": "魅惑",
+    "DESCRIPTION": "敵全体が筋力 !M! を失う。 NL 手札を1枚 sneckomod:泥まみれ にする。 NL 廃棄 "
   },
   "sneckomod:Serpentscale": {
-    "NAME": "蛇鱗",
-    "DESCRIPTION": " !D! ダメージを与える。 NL   1  expansioncontent:プレートアーマー を得る。 NL sneckomod:オーバーフロー : 代わりに !M! *プレートアーマー を得る。"
+    "NAME": "蛇の鱗",
+    "DESCRIPTION": "!D! ダメージを与える。 NL *プレートアーマー 1 を得る。 NL sneckomod:オーバーフロー : 代わりに *プレートアーマー !M! を得る。"
   },
   "sneckomod:OtherworldlySlash": {
-    "NAME": "オーバーワールドスラッシュ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL このターンに sneckomod:オフクラス カードをプレイした場合、再度 !D! ダメージを与える。 NL sneckomod:ギフト : コモン ",
-    "DESCRIPTION_BATTLE": " !D! ダメージを与える。 NL このターンに sneckomod:オフクラス カードをプレイした場合、再度 !D! ダメージを与える。"
+    "NAME": "異次元スラッシュ",
+    "DESCRIPTION": "!D! ダメージを与える。 NL このターン sneckomod:オフクラス カードをプレイしていた時、もう一度 !D! ダメージを与える。 NL sneckomod:ギフト : コモン",
+    "DESCRIPTION_BATTLE": "!D! ダメージを与える。 NL このターン sneckomod:オフクラス カードをプレイしていた時、もう一度 !D! ダメージを与える。"
   },
   "sneckomod:BeyondArmor": {
     "NAME": "ビヨンドアーマー",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 山札から !M! 枚のランダムな sneckomod:オフクラス カードを手札に加える。 NL sneckomod:ギフト : コモン ",
-    "DESCRIPTION_BATTLE": " !B! ブロックを得る。 NL 山札から !M! 枚のランダムな sneckomod:オフクラス カードを手札に加える。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL 山札からランダムな sneckomod:オフクラス カードを !M! 枚手札に加える。 NL sneckomod:ギフト : コモン",
+    "DESCRIPTION_BATTLE": "!B! ブロックを得る。 NL 山札からランダムな sneckomod:オフクラス カードを !M! 枚手札に加える。"
   },
   "sneckomod:BlunderGuard": {
-    "NAME": "ブランダーガード",
-    "DESCRIPTION": "コスト 3 以上のカードをプレイするたびに、 !qqq! ブロック と !M! 筋力 を得る。",
-    "UPGRADE_DESCRIPTION": "コスト 3 以上のカードをプレイするたびに、 !qqq! ブロック と !M! 筋力 を得る。"
+    "NAME": "失敗保険",
+    "DESCRIPTION": "コスト3以上のカードをプレイする度、 !qqq! ブロックと 筋力 !M! を得る。",
+    "UPGRADE_DESCRIPTION": "コスト3以上のカードをプレイする度、 !qqq! ブロックと 筋力 !M! を得る。"
   },
   "sneckomod:WideAngle": {
     "NAME": "ワイドアングル",
-    "DESCRIPTION": " 保留 NL 敵に !D! ダメージを与える。"
+    "DESCRIPTION": "保留 NL 敵全体に !D! ダメージを与える。"
   },
   "sneckomod:SerpentsNest": {
-    "NAME": "蛇の巣",
-    "DESCRIPTION": "パワーをプレイするたびに、敵全体に !M! ダメージを与える。 NL sneckomod:ギフト : アンコモン パワー ",
-    "DESCRIPTION_BATTLE": "パワーをプレイするたびに、敵全体に !M! ダメージを与える。"
+    "NAME": "蛇の巣窟",
+    "DESCRIPTION": "パワーをプレイする度、敵全体に !M! ダメージを与える。 NL sneckomod:ギフト : アンコモン パワー",
+    "DESCRIPTION_BATTLE": "パワーをプレイする度、敵全体に !M! ダメージを与える。"
   },
   "sneckomod:Whack": {
-    "NAME": "バシッ！",
+    "NAME": "ぺちんっ！",
     "DESCRIPTION": " !D! ダメージを与える。 NL 手札に *ぶん殴り を加える。 NL 廃棄 ",
     "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 手札に *ぶん殴り+ を加える。 NL 廃棄 "
   },
   "sneckomod:CobraCoil": {
     "NAME": "コブラコイル",
-    "DESCRIPTION": " !D! ダメージを与える。 NL  *締め付け !M! を与える。 NL sneckomod:ギフト : レア アタック "
+    "DESCRIPTION": "!D! ダメージを与える。 NL *締め付け !M! を与える。 NL sneckomod:ギフト : レアアタック"
   },
   "sneckomod:Belittle": {
-    "NAME": "軽蔑する",
-    "DESCRIPTION": "敵は、持っているデバフの種類の数だけ !M! HP を失う。 NL sneckomod:ギフト : アンコモン デバフ ",
-    "DESCRIPTION_BATTLE": "敵は、持っているデバフの種類の数だけ !M! HP を失う。"
+    "NAME": "軽視",
+    "DESCRIPTION": "対象が持つデバフ1種につき、HPを !M! 失わせる。 NL sneckomod:ギフト : アンコモン デバフ",
+    "DESCRIPTION_BATTLE": "対象が持つデバフ1種につき、HPを !M! 失わせる。"
   },
   "sneckomod:Jackpot": {
     "NAME": "ジャックポット",
-    "DESCRIPTION": " 保留 NL  [E] [E] を得る。 NL 廃棄 ",
-    "UPGRADE_DESCRIPTION": " 保留 NL  [E] [E] [E] を得る。 NL 廃棄 "
+    "DESCRIPTION": "保留 NL [E] [E] を得る。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "保留 NL [E] [E] [E] を得る。 NL 廃棄 "
   },
   "sneckomod:MakeshiftBlade": {
-    "NAME": "間に合わせの刃",
-    "DESCRIPTION": " !D! ダメージを与える。 ターゲットに !M! 個以上のデバフがある場合、 !qqq! 枚のカードを引く。 NL sneckomod:ギフト : デバフ ",
-    "DESCRIPTION_BATTLE": " !D! ダメージを与える。 ターゲットに !M! 個以上のデバフがある場合、 !qqq! 枚のカードを引く。"
+    "NAME": "即席ブレード",
+    "DESCRIPTION": "!D! ダメージを与える。 対象がデバフを !qqq! 種以上受けていた場合、 カードを 3 枚引く。 NL sneckomod:ギフト : デバフ",
+    "DESCRIPTION_BATTLE": "!D! ダメージを与える。 対象がデバフを !qqq! 種以上受けていた場合、 カードを 3 枚引く。"
   },
   "sneckomod:LatchOn": {
-    "NAME": "ラッチオン",
-    "DESCRIPTION": "敵に !D! ダメージを与える。 NL 手札に *ヴァイパーエッセンス を加える。"
+    "NAME": "しっかり掴む",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 手札に *毒蛇エキス を加える。"
   },
   "sneckomod:ComboString": {
     "NAME": "コンボストリング",
-    "DESCRIPTION": " !D! ダメージを与える。このターンにプレイされた sneckomod:オフクラス カードの数だけ繰り返す。 NL sneckomod:ギフト : アンコモン ",
+    "DESCRIPTION": "このターンにプレイされた sneckomod:オフクラス カード1枚につき !D! ダメージを与える。 NL sneckomod:ギフト : アンコモン",
     "EXTENDED_DESCRIPTION": [
       " NL ( ",
-      " x 回 )"
+      " x 回)"
     ],
-    "DESCRIPTION_BATTLE": " !D! ダメージを与える。このターンにプレイされた sneckomod:オフクラス カードの数だけ繰り返す。"
+    "DESCRIPTION_BATTLE": "このターンにプレイされた sneckomod:オフクラス カード1枚につき !D! ダメージを与える。"
   },
   "sneckomod:ThrowingCards": {
-    "NAME": "カードを投げる",
-    "DESCRIPTION": " *FTL  のコピーを X 枚手札に加える。 NL  [E] を得る。 NL 廃棄 ",
-    "UPGRADE_DESCRIPTION": " *FTL+ のコピーを X 枚手札に加える。 NL  [E] を得る。 NL 廃棄 "
+    "NAME": "カードスロー",
+    "DESCRIPTION": "手札に X枚の *FTL を加える。 NL [E] を得る。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "手札に X枚の *FTL+ を加える。 NL [E] を得る。 NL 廃棄 "
   },
   "sneckomod:RoundaboutSwing": {
-    "NAME": "ラウンドアバウトスイング",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 手札のカードを 1 枚、山札の一番上に置く。 NL 次のターンに !M! 枚のカードを追加で引く。"
+    "NAME": "回転スイング",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札を1枚山札の一番上に置く。 NL 次のターン、 カードを !M! 枚引く。"
   },
   "sneckomod:MarkedCard": {
-    "NAME": "カードにマーク",
-    "DESCRIPTION": " 保留 NL カードを sneckomod:泥まみれ にする。 NL そのカードはコストが必ず減少する。 NL 廃棄 ",
-    "UPGRADE_DESCRIPTION": " 保留 NL  !M! 枚のカードを sneckomod:泥まみれ にする。 NL それらはコストが必ず減少する。 NL 廃棄 "
+    "NAME": "目印付きカード",
+    "DESCRIPTION": "保留 NL 手札を1枚 sneckomod:泥まみれ にする。 NL それは常にコストが下がる。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "保留 NL 手札を !M! 枚 sneckomod:泥まみれ にする。 NL それらは常にコストが下がる。 NL 廃棄 "
   },
   "sneckomod:InertBlade": {
-    "NAME": "イナートブレード",
-    "DESCRIPTION": " !D! ダメージを与える。 NL もしこのカードのコストが  NL  1の場合: !M! 枚カードを引く NL 2の場合: 筋力 !M! を得る。 NL 3の場合: [E] を得る。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL もしこのカードのコストが  NL 1の場合: !M! 枚カードを引く NL 2の場合: 筋力 !M! を得る。 NL 3の場合: [E] [E] を得る。"
+    "NAME": "不活性ブレード",
+    "DESCRIPTION": "!D! ダメージを与える。 NL このカードのコストが NL 1+: カードを !M! 枚引く。 NL 2+: 筋力 !M! を得る。 NL 3+: [E] を得る。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL このカードのコストが NL 1+: カードを !M! 枚引く。 NL 2+: 筋力 !M! を得る。 NL 3+: [E] [E] を得る。"
   },
   "sneckomod:PerpetualSerpent": {
-    "NAME": "永遠の蛇",
-    "DESCRIPTION": " !D! ダメージを与える。 NL sneckomod:オーバーフロー : [E] [E] を得る。"
+    "NAME": "不滅の蛇",
+    "DESCRIPTION": "!D! ダメージを与える。 NL sneckomod:オーバーフロー : [E] [E] を得る。"
   },
   "sneckomod:LastStrike": {
     "NAME": "ファイナルストライク",
-    "DESCRIPTION": " !D! ダメージを与える。 NL この戦闘でプレイした各ユニーク ストライクごとに繰り返す。 NL sneckomod:ギフト : ストライク ",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL この戦闘でプレイした各ユニーク ストライクごとに繰り返す。 NL sneckomod:ギフト : ストライク ",
-    "DESCRIPTION_BATTLE": " !D! ダメージを与える。 NL この戦闘でプレイした各ユニーク ストライクごとに繰り返す。",
-    "UPGRADE_DESCRIPTION_BATTLE": " !D! ダメージを与える。 NL この戦闘でプレイした各ユニーク ストライクごとに繰り返す。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL この戦闘でプレイしたストライク1種毎に繰り返す。 NL sneckomod:ギフト : ストライク",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL この戦闘でプレイしたストライク1種毎に繰り返す。 NL sneckomod:ギフト : ストライク",
+    "DESCRIPTION_BATTLE": "!D! ダメージを与える。 NL この戦闘でプレイしたストライク1種毎に繰り返す。",
+    "UPGRADE_DESCRIPTION_BATTLE": "!D! ダメージを与える。 NL この戦闘でプレイしたストライク1種毎に繰り返す。",
     "EXTENDED_DESCRIPTION": [
       " NL ( ",
-      " x 回 )"
+      " 回追加)"
     ]
   },
   "sneckomod:AceOfWands": {
-    "NAME": "ペンタクルの女王",
-    "DESCRIPTION": "エセリアル NL 敵にデバフを与えるたびに得る。 !M! ブロックを得る。 NL sneckomod:ギフト : デバフ ",
-    "UPGRADE_DESCRIPTION": "敵にデバフを与えるたびに得る。 !M! ブロックを得る。 NL sneckomod:ギフト : デバフ "
+    "NAME": "五芒星の女王",
+    "DESCRIPTION": "エセリアル NL 敵にデバフをかける度、 !M! ブロックを得る。 NL sneckomod:ギフト : デバフ",
+    "UPGRADE_DESCRIPTION": "敵にデバフをかける度、 !M! ブロックを得る。 NL sneckomod:ギフト : デバフ"
   },
   "sneckomod:FlashInThePan": {
-    "NAME": "一瞬の輝き",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 次のターン、手札のカードを捨て、  NL より多くのカードを引く。 "
+    "NAME": "閃光の中で",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 手札を捨てる。 NL 次のターン、同じ枚数のカードを引く。"
   },
   "sneckomod:TrashCan": {
-    "NAME": "ごみ箱",
-    "DESCRIPTION": "ターン開始時に、カードを 1 枚 廃棄 できる。",
-    "UPGRADE_DESCRIPTION": "天賦 NL ターン開始時に、カードを 1 枚 廃棄 できる。"
+    "NAME": "ゴミ箱",
+    "DESCRIPTION": "ターン開始時、 手札を1枚 廃棄 出来る。",
+    "UPGRADE_DESCRIPTION": "天賦 NL 手札を1枚 廃棄 出来る。"
   },
   "sneckomod:Lacerate": {
-    "NAME": "裂傷",
-    "DESCRIPTION": " !D! ダメージを与える。 このターンにこの敵がデバフを受けるたびに、 sneckomod:蛇毒 !M! を得る。 sneckomod:ギフト : *毒霧 ",
-    "DESCRIPTION_BATTLE": " !D! ダメージを与える。 このターンにこの敵がデバフを受けるたびに、 sneckomod:蛇毒 !M! を得る。"
+    "NAME": "切り傷",
+    "DESCRIPTION": "!D! ダメージを与える。 このターン、敵がデバフを受ける度に sneckomod:猛毒 !M! を受ける。 sneckomod:ギフト : *劇毒",
+    "DESCRIPTION_BATTLE": "!D! ダメージを与える。 Wこのターン、敵がデバフを受ける度に sneckomod:猛毒 !M! を受ける。"
   },
   "sneckomod:SerpentineSleuth": {
-    "NAME": "蛇の探偵",
-    "DESCRIPTION": "エセリアル NL パワーをプレイするたびに、 [E] を得る。 NL sneckomod:ギフト : レア パワー ",
-    "UPGRADE_DESCRIPTION": "エセリアル NL パワーをプレイするたびに、 [E] [E] を得る。 NL sneckomod:ギフト : レア パワー ",
-    "DESCRIPTION_BATTLE": "エセリアル NL パワーをプレイするたびに、 [E] を得る。",
-    "UPGRADE_DESCRIPTION_BATTLE": "エセリアル NL パワーをプレイするたびに、 [E] [E] を得る。"
+    "NAME": "蛇探偵",
+    "DESCRIPTION": "エセリアル NL パワーをプレイする度、 [E] を得る。 NL sneckomod:ギフト : レアパワー",
+    "UPGRADE_DESCRIPTION": "エセリアル NL パワーをプレイする度、 [E] [E] を得る。 NL sneckomod:ギフト : レアパワー",
+    "DESCRIPTION_BATTLE": "エセリアル NL パワーをプレイする度、 [E] を得る。",
+    "UPGRADE_DESCRIPTION_BATTLE": "エセリアル NL パワーをプレイする度、 [E] [E] を得る。"
   }
 }

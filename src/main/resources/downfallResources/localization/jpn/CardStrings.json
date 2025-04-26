@@ -13,7 +13,7 @@
   },
   "downfall:Haunted": {
     "NAME": "幽霊",
-    "DESCRIPTION": "使用不可 NL エセリアル NL このカードが手札にあるとき、他のカードが *廃棄 されるたび、2ダメージを受ける。"
+    "DESCRIPTION": "使用不可 NL エセリアル NL このカードが手札にある時、カードを *廃棄 する度に 2 ダメージを受ける。"
   },
   "downfall:Malfunctioning": {
     "NAME": "不調",

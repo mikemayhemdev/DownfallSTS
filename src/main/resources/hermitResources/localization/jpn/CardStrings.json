@@ -1,31 +1,31 @@
 {
   "hermit:Strike_Hermit": {
     "NAME": "ストライク",
-    "DESCRIPTION": " !D! ダメージを与える。"
+    "DESCRIPTION": "!D! ダメージを与える。"
   },
   "hermit:Defend_Hermit": {
     "NAME": "防御",
-    "DESCRIPTION": " !B! ブロックを得る。"
+    "DESCRIPTION": "!B! ブロックを得る。"
   },
   "hermit:Snapshot": {
     "NAME": "速射",
-    "DESCRIPTION": " !D! ダメージを与える。 NL hermit:デッド-オン : 防御されなかったダメージ分の ブロック を得る。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL hermit:デッド-オン : 防御されなかったダメージ分の ブロック を得る。"
   },
   "hermit:Desperado": {
     "NAME": "デスペラード",
-    "DESCRIPTION": " !D! ダメージを与える。 NL このカードのダメージを2倍にし、コストを1増やす。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL このカードのダメージを2倍にし、コストを1増やす。"
   },
   "hermit:Headshot": {
     "NAME": "ヘッドショット",
-    "DESCRIPTION": " !D! ダメージを与える。 NL hermit:デッド-オン : 2倍のダメージを与える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL hermit:デッド-オン : 2倍のダメージを与える。"
   },
   "hermit:Quickdraw": {
     "NAME": "クイックドロー",
-    "DESCRIPTION": " !D! ダメージを与える。 NL カードを !M! 枚引く。 NL 次のターン、ドロー枚数が1減る。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL カードを !M! 枚引く。 NL 次のターン、ドロー枚数が1減る。"
   },
   "hermit:WideOpen": {
     "NAME": "風穴を開ける",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 弱体 !M! を与える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 弱体 !M! を与える。"
   },
   "hermit:Covet": {
     "NAME": "コベット",
@@ -34,8 +34,8 @@
   },
   "hermit:HighCaliber": {
     "NAME": "ハイ-キャリバー",
-    "DESCRIPTION": " !D! ダメージを与える。 NL *ストライク+2 を手札に加える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL *ストライク+3 を手札に加える。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを与える。 NL *ストライク+2 を手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL *ストライク+3 を手札に加える。 NL 廃棄"
   },
   "hermit:BodyArmor": {
     "NAME": "ボディアーマー",
@@ -48,12 +48,12 @@
   },
   "hermit:CalledShot": {
     "NAME": "コールドショット",
-    "DESCRIPTION": " !D! ダメージを与える。 NL このターン最後にプレイしたカードが *デッド-オン を発動した場合カードを1枚引く。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL このターン最後にプレイしたカードが *デッド-オン を発動した場合カードを1枚引く。",
     "UPGRADE_DESCRIPTION": "保留 NL !D! ダメージを与える。 NL このターン最後にプレイしたカードが *デッド-オン を発動した場合カードを1枚引く。"
   },
   "hermit:Dissolve": {
     "NAME": "ディゾルブ",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 2ターンの間余ったブロックが解除されない。 NL 廃棄"
+    "DESCRIPTION": "!B! ブロックを得る。 NL 2ターンの間余ったブロックが解除されない。 NL 廃棄"
   },
   "hermit:BlackWind": {
     "NAME": "ブラックウィンド",
@@ -79,7 +79,7 @@
   },
   "hermit:Roughhouse": {
     "NAME": "乱闘",
-    "DESCRIPTION": " !D! ダメージを与える。 hermit:デッド-オン : NL !B! ブロックを得る。"
+    "DESCRIPTION": "!D! ダメージを与える。 hermit:デッド-オン : NL !B! ブロックを得る。"
   },
   "hermit:Malice": {
     "NAME": "悪意",
@@ -87,11 +87,11 @@
   },
   "hermit:Deadeye": {
     "NAME": "デッド-アイ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL hermit:デッド-オン : NL 筋力 !M! を得る。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL hermit:デッド-オン : NL 筋力 !M! を得る。"
   },
   "hermit:GhostlyPresence": {
     "NAME": "幽霊の様な存在",
-    "DESCRIPTION": " !B! ブロックを得る。 NL hermit:デッド-オン : NL 敵全体に 脱力 !M! を与える。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL hermit:デッド-オン : NL 敵全体に 脱力 !M! を与える。"
   },
   "hermit:Adapt": {
     "NAME": "アダプト",
@@ -99,20 +99,20 @@
   },
   "hermit:Dive": {
     "NAME": "ダイブ",
-    "DESCRIPTION": " !B! ブロックを得る。 NL hermit:デッド-オン : NL *プレートアーマー !M! を得る。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL hermit:デッド-オン : NL *プレートアーマー !M! を得る。"
   },
   "hermit:FlashPowder": {
     "NAME": "フラッシュパウダー",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 敵全体が 筋力 !M! を失う。 NL 廃棄"
+    "DESCRIPTION": "!B! ブロックを得る。 NL 敵全体が 筋力 !M! を失う。 NL 廃棄"
   },
   "hermit:Roulette": {
     "NAME": "ルーレット",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 手札を捨て同じ数のカードを引く。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札を捨て同じ数のカードを引く。"
   },
   "hermit:Midnight": {
     "NAME": "ミッドナイト",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 手札に *迫りくる破滅 を加える。",
-    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL 手札に *迫りくる破滅 を加える。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL 手札に *迫りくる破滅 を加える。",
+    "UPGRADE_DESCRIPTION": "!B! ブロックを得る。 NL 手札に *迫りくる破滅 を加える。"
   },
   "hermit:Glare": {
     "NAME": "グレア",
@@ -126,7 +126,7 @@
   },
   "hermit:Misfire": {
     "NAME": "ミスファイア",
-    "DESCRIPTION": " !D! ダメージを与える。 NL *不器用 を山札に加える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL *不器用 を山札に加える。"
   },
   "hermit:SprayPray": {
     "NAME": "乱射",
@@ -146,7 +146,7 @@
   },
   "hermit:Shortfuse": {
     "NAME": "ショートヒューズ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL このターンにプレイされた *ストライク と *防御 1回につきコストが [E] 減少する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL このターンにプレイされた *ストライク と *防御 1回につきコストが [E] 減少する。"
   },
   "hermit:Grudge": {
     "NAME": "グラッジ",
@@ -158,15 +158,15 @@
   },
   "hermit:Manifest": {
     "NAME": "マニフェスト",
-    "DESCRIPTION": " !B! ブロックを得る。 NL *腐敗 を手札に加える。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL *腐敗 を手札に加える。"
   },
   "hermit:Feint": {
     "NAME": "フェイント",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 敵全体に !M! hermit:傷 を与える。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL 敵全体に !M! hermit:傷 を与える。"
   },
   "hermit:LowProfile": {
     "NAME": "気配を消す",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 受けているデバフの数 x !M! ブロックを追加で得る。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL 受けているデバフの数 x !M! ブロックを追加で得る。"
   },
   "hermit:Horror": {
     "NAME": "ホラー",
@@ -182,8 +182,8 @@
   },
   "hermit:Vantage": {
     "NAME": "バンテージ",
-    "DESCRIPTION": " !B! ブロックを得る。 NL hermit:デッド-オン : NL カードを !M! 枚引き、アップグレードする。",
-    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL hermit:デッド-オン : NL カードを !M! 枚引き、アップグレードする。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL hermit:デッド-オン : NL カードを !M! 枚引き、アップグレードする。",
+    "UPGRADE_DESCRIPTION": "!B! ブロックを得る。 NL hermit:デッド-オン : NL カードを !M! 枚引き、アップグレードする。"
   },
   "hermit:Brawl": {
     "NAME": "大喧嘩",
@@ -230,11 +230,11 @@
   },
   "hermit:Enervate": {
     "NAME": "エネルベート",
-    "DESCRIPTION": " !D! ダメージを与える。 NL hermit:デッド-オン : NL [E] を得て カードを 1 枚引く。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL hermit:デッド-オン : NL [E] を得て カードを 1 枚引く。"
   },
   "hermit:Ricochet": {
     "NAME": "跳弾",
-    "DESCRIPTION": " !D! ダメージを与える。 このターンに発動した hermit:デッド-オン の数だけ繰り返す。",
+    "DESCRIPTION": "!D! ダメージを与える。 このターンに発動した hermit:デッド-オン の数だけ繰り返す。",
     "EXTENDED_DESCRIPTION": [" NL ( !M! ", "回)","回)"]
   },
   "hermit:TrackingShot": {
@@ -277,11 +277,11 @@
   },
   "hermit:Coalescence": {
     "NAME": "融合",
-    "DESCRIPTION": " !B! ブロックを得る。 NL このターン !M! 枚のカードを 保留 する。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL このターン !M! 枚のカードを 保留 する。"
   },
   "hermit:PistolWhip": {
     "NAME": "銃で殴る",
-    "DESCRIPTION": " !D! ダメージを与える。 NL !M! hermit:傷 を与える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL !M! hermit:傷 を与える。"
   },
   "hermit:DeadMansHand": {
     "NAME": "死人の手札",
@@ -289,24 +289,23 @@
   },
   "hermit:DeadOrAlive": {
     "NAME": "Dead Or Alive",
-    "DESCRIPTION": " !D! ダメージを X 回与える。 NL 致命 時、 hermit:バウンティ を得る。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを X 回与える。 NL 致命 時、 hermit:バウンティ を得る。 NL 廃棄"
   },
   "hermit:GoldenBullet": {
     "NAME": "黄金の銃弾",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 致命 時、このカードのコストを永続的に1下げる。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 致命 時、このカードのコストを永続的に1下げる。 NL 廃棄"
   },
   "hermit:HoleUp": {
     "NAME": "隠れる",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 脱力 !M! を受ける。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL 脱力 !M! を受ける。"
   },
   "hermit:ItchyTrigger": {
     "NAME": "軽い引き金",
-    "DESCRIPTION": " !D! ダメージを与える。 NL hermit:デッド-オン : 手札のランダムなカードのコストを !M! 軽減する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL hermit:デッド-オン : 手札のランダムなカードのコストを !M! 軽減する。"
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "Eye Of The Storm",
-    "DESCRIPTION": "hermit:集中 NL エナジーを最大にする。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "カードを 1 枚引く。 NL hermit:デッド-オン : NL エナジーを最大にする。 NL 廃棄"
+    "DESCRIPTION": "hermit:集中 NL エナジーを最大にする。 NL 廃棄"
   },
   "hermit:FinalCanter": {
     "NAME": "最後の仕上げ",

@@ -113,7 +113,7 @@
   },
   "downfall:RareCardReward": {
     "TEXT": [
-      "レアカードをデッキに加えた。"
+      "レアカードをデッキに加える。"
     ]
   },
   "downfall:OctoChoiceAction": {
@@ -125,42 +125,42 @@
   "downfall:BossCardReward": {
     "TEXT": [
       "デッキにボスカードを追加。",
-      "カードを取れ"
+      "カードを選ぶ。"
     ]
   },
   "downfall:ColorfulCardReward": {
     "TEXT": [
       "デッキに ",
       " カードを追加。",
-      "カードを取る"
+      "カードを選ぶ。"
     ]
   },
   "downfall:ColorfulUncommonCardReward": {
     "TEXT": [
       "デッキに ",
       " カードを追加。",
-      "カードを取る"
+      "カードを選ぶ。"
     ]
   },
   "downfall:ColorfulRareCardReward": {
     "TEXT": [
       "デッキに ",
       " カードを追加。",
-      "カードを取る"
+      "カードを選ぶ。"
     ]
   },
   "downfall:DiceRollPotionReward": {
     "TEXT": [
-      "デッキに ",
-      " アップグレードされたカードを追加。",
-      "カードを取る"
+      "デッキに",
+      "アップグレードされたカードを追加。",
+      "カードを選ぶ。"
     ]
   },
   "downfall:ColorfulPowersCardReward": {
     "TEXT": [
-      "デッキに ",
-      " アップグレードされたパワーを追加。",
-      "カードを取る"
+      "デッキに",
+      "アップグレードされたパワーカードを追加。",
+      "カードを選ぶ。"
     ]
   },
   "downfall:RunHistoryMonsterNames": {
@@ -182,8 +182,8 @@
   },
   "downfall:Unfettered": {
     "TEXT": [
-      "束縛から解放された",
-      "壊れた封印を手に入れた"
+      "自由だ",
+      "壊れた封印を入手した。"
     ]
   },
   "downfall:SingleCardViewPopup": {
