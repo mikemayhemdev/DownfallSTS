@@ -64,7 +64,7 @@ public class BeyondArmor extends AbstractSneckoCard {
                 .collect(Collectors.toList()));
 
         for (AbstractCard c : tmp.group) {
-            if (Wiz.hand().size() < BaseMod.MAX_HAND_SIZE) {
+            if (Wiz.hand().size() < BaseMod.MAX_HAND_SIZE+1) {
                 addToBot(new FetchAction(Wiz.p().drawPile, card -> card == c));
                 count++;
                 if (count >= magicNumber) break;
