@@ -40,5 +40,6 @@ public class DrawOffclassAction extends AbstractGameAction {
                 if (count >= draw) break;
             }
         }
+        isDone = true;
     }
 }
