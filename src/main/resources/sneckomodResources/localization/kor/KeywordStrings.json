@@ -10,14 +10,15 @@
   {
     "PROPER_NAME": "뒤엉킴",
     "NAMES": [
+      "muddle",
+      "muddled",
+      "muddles",
       "뒤엉킴",
       "뒤엉킨",
       "뒤엉킬",
       "뒤엉키게",
       "뒤엉키고",
-      "뒤엉킵니다",
-      "muddle",
-      "muddled"
+      "뒤엉킵니다"
     ],
     "DESCRIPTION": "카드 비용이 뒤엉켜서 이번 턴 동안 #b0 에서 #b3 까지 무작위로 변경됩니다."
   },

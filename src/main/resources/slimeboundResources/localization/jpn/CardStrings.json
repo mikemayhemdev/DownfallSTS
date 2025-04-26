@@ -13,12 +13,12 @@
   },
   "Slimebound:Chomp": {
     "NAME": "むしゃり",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 手札のランダムな slimeboundmod:タックル のコストがこのターン 0 になる。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 手札のランダムな slimeboundmod:タックル のコストがこの戦闘中 0 になる。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札のランダムな slimeboundmod:タックル のコストがこのターン 0 になる。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 手札のランダムな slimeboundmod:タックル のコストがこの戦闘中 0 になる。"
   },
   "Slimebound:ComboTackle": {
     "NAME": "スピアタックル",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL カードを !M! 枚引く。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージを与える。 NL カードを !M! 枚引く。"
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "腐食性の唾",
@@ -31,11 +31,11 @@
   },
   "Slimebound:Defend_Slimebound": {
     "NAME": "防御",
-    "DESCRIPTION": " !B! ブロックを得る。"
+    "DESCRIPTION": "!B! ブロックを得る。"
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "因果応報",
-    "DESCRIPTION": "敵全体に !D! ダメージ。 NL ランダムな *舐める カードを !M! 枚 expansioncontent:発掘 する。"
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL ランダムな *舐める カードを !M! 枚 expansioncontent:発掘 する。"
   },
   "Slimebound:Dissolve": {
     "NAME": "手頃なおやつ",
@@ -60,19 +60,19 @@
   },
   "Slimebound:Equalize": {
     "NAME": "イコライズ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL HPを !M! 回復する。 NL slimeboundmod:泥食い - 2回プレイされる。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを与える。 NL HPを !M! 回復する。 NL slimeboundmod:泥食い - 2回プレイされる。 NL 廃棄"
   },
   "Slimebound:FinishingTackle": {
     "NAME": "開幕タックル",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL slimeboundmod:泥食い - 弱体 !M! を与える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージを与える。 NL slimeboundmod:泥食い - 弱体 !M! を与える。"
   },
   "Slimebound:FirmFortitude": {
     "NAME": "液状化",
-    "DESCRIPTION": " 筋力 2 を失う。 NL slimeboundmod:効力 !M! を得る。"
+    "DESCRIPTION": "筋力 2 を失う。 NL slimeboundmod:効力 !M! を得る。"
   },
   "Slimebound:FlameTackle": {
     "NAME": "フレイムタックル",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL この戦闘中 slimeboundmod:タックル のダメージが !M! 増加。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージを与える。 NL この戦闘中 slimeboundmod:タックル のダメージが !M! 増加。"
   },
   "Slimebound:FormOfPuddle": {
     "NAME": "形を変える",
@@ -80,8 +80,8 @@
   },
   "Slimebound:ForwardTackle": {
     "NAME": "前進タックル",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL 2回 slimeboundmod:命令 する。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL 3回 slimeboundmod:命令 する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージを与える。 NL 2回 slimeboundmod:命令 する。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージを与える。 NL 3回 slimeboundmod:命令 する。"
   },
   "Slimebound:Gluttony": {
     "NAME": "暴食",
@@ -94,8 +94,8 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "コンボタックル",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL ランダムな slimeboundmod:タックル を手札に加える。このターンコストは0",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL ランダムなアップグレード済み slimeboundmod:タックル を手札に加える。このターンコストは0"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージを与える。 NL ランダムな slimeboundmod:タックル を手札に加える。このターンコストは0",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージを与える。 NL ランダムなアップグレード済み slimeboundmod:タックル を手札に加える。このターンコストは0"
   },
   "Slimebound:Grow": {
     "NAME": "成長",
@@ -103,7 +103,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "成長するパンチ",
-    "DESCRIPTION": " !B! ブロックを得る。 NL !D! ダメージを与える。 NL slimeboundmod:泥食い - この戦闘中このカードの効果が !M! 上昇。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL !D! ダメージを与える。 NL slimeboundmod:泥食い - この戦闘中このカードの効果が !M! 上昇。"
   },
   "Slimebound:HauntingLick": {
     "NAME": "舐められるトラウマ",
@@ -112,13 +112,13 @@
   },
   "Slimebound:HungryTackle": {
     "NAME": "ハングリータックル",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL ランダムな *舐める カードを expansioncontent:発掘 する。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL ランダムな *舐める カードを 2 枚 expansioncontent:発掘 する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージを与える。 NL ランダムな *舐める カードを expansioncontent:発掘 する。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージを与える。 NL ランダムな *舐める カードを 2 枚 expansioncontent:発掘 する。"
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "美味しそう...",
-    "DESCRIPTION": " !D! ダメージを与える。 NL slimeboundmod:泥食い - *舐める を手札に加える。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL slimeboundmod:泥食い - *舐める+ を手札に加える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL slimeboundmod:泥食い - *舐める を手札に加える。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL slimeboundmod:泥食い - *舐める+ を手札に加える。"
   },
   "Slimebound:LeadByExample": {
     "NAME": "お手本を見せる",
@@ -127,8 +127,8 @@
   },
   "Slimebound:LeechEnergy": {
     "NAME": "リーチエナジー",
-    "DESCRIPTION": " !D! ダメージを与える。 slimeboundmod:泥食い - [E] を得て カードを !M! 枚引く。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 slimeboundmod:泥食い - [E] を得て カードを !M! 枚引く。"
+    "DESCRIPTION": "!D! ダメージを与える。 slimeboundmod:泥食い - [E] を得て カードを !M! 枚引く。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 slimeboundmod:泥食い - [E] を得て カードを !M! 枚引く。"
   },
   "Slimebound:LeechLife": {
     "NAME": "リーチライフ",
@@ -136,7 +136,7 @@
   },
   "Slimebound:LeechingTouch": {
     "NAME": "リーチングストライク",
-    "DESCRIPTION": " !D! ダメージを与える。 NL slimeboundmod:泥食い - 敵に付与されている slimeboundmod:汚泥 に等しい ブロック を得る。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL slimeboundmod:泥食い - 敵に付与されている slimeboundmod:汚泥 に等しい ブロック を得る。"
   },
   "Slimebound:LevelUp": {
     "NAME": "レベルアップ！",
@@ -150,11 +150,11 @@
   },
   "Slimebound:LivingWall": {
     "NAME": "リビングウォール",
-    "DESCRIPTION": " !B! ブロックを得る。 NL このターン攻撃してきた相手に slimeboundmod:汚泥 !slime! を与える。"
+    "DESCRIPTION": "!B! ブロックを得る。 NL このターン攻撃してきた相手に slimeboundmod:汚泥 !slime! を与える。"
   },
   "Slimebound:MassFeed": {
     "NAME": "大量供給",
-    "DESCRIPTION": "敵全体に !D! ダメージ。 致命 時、最大HP + !M! NL 廃棄"
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 致命 時、最大HP + !M! NL 廃棄"
   },
   "Slimebound:MassRepurpose": {
     "NAME": "大量に使いまわす",
@@ -162,7 +162,7 @@
     "UPGRADE_DESCRIPTION": "全ての スライム を slimeboundmod:吸収 し、同量のランダムな slimeboundmod:上級スライム を産み出し、 slimeboundmod:命令 する。 NL 廃棄"
   },
   "Slimebound:MegaLick": {
-    "NAME": "巨大なベロベロ",
+    "NAME": "巨大な舌で舐める",
     "DESCRIPTION": "敵全体に 脱力 !M! と slimeboundmod:汚泥 !slime! を与える。 NL 廃棄",
     "UPGRADE_DESCRIPTION": "敵全体に 脱力 !M! と slimeboundmod:汚泥 !slime! を与える。 NL カードを 1 枚引く。 NL 廃棄"
   },
@@ -173,18 +173,18 @@
   },
   "Slimebound:Nibble": {
     "NAME": "齧って舐める",
-    "DESCRIPTION": " !D! ダメージを与える。 NL *舐める を手札に加える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL *舐める を手札に加える。 NL カードを 1 枚引く。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを与える。 NL *舐める を手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL *舐める を手札に加える。 NL カードを 1 枚引く。 NL 廃棄"
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "ワン、ツー、コンボ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL slimeboundmod:分裂 した時、これを捨て札から手札に戻す。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL slimeboundmod:命令 NL slimeboundmod:分裂 した時、これを捨て札から手札に戻す。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL slimeboundmod:命令 NL slimeboundmod:分裂 した時、これを捨て札から手札に戻す。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL slimeboundmod:命令 2回 NL slimeboundmod:分裂 した時、これを捨て札から手札に戻す。"
   },
   "Slimebound:OozeBath": {
     "NAME": "ヘドロ風呂",
     "DESCRIPTION": "対象の各ターン開始時に slimeboundmod:汚泥 !slime! を与える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "敵の slimeboundmod:汚泥 を 3 倍にする。 NL 廃棄"
+    "UPGRADE_DESCRIPTION": "3体の敵に slimeboundmod:汚泥 を与える。 NL 廃棄"
   },
   "Slimebound:Overexert": {
     "NAME": "過剰行使",
@@ -193,7 +193,7 @@
   },
   "Slimebound:Prepare": {
     "NAME": "準備行動",
-    "DESCRIPTION": " !B! ブロックを得る。 NL 次のターン [E] を得て カードを !M! 枚引く。 NL 廃棄",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 次のターン [E] を得て カードを !M! 枚引く。 NL 廃棄",
     "UPGRADE_DESCRIPTION": "次のターン [E] を得て カードを !M! 枚引く。 NL このターン !M! 枚のカードを 保留 する。 NL 廃棄"
   },
   "Slimebound:PrepareCrush": {
@@ -206,8 +206,8 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "押し潰せ",
-    "DESCRIPTION": " !D! ダメージを与える。  slimeboundmod:命令 する。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 2回 slimeboundmod:命令 する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL slimeboundmod:命令",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 2回 slimeboundmod:命令 する。"
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "主人を守れ",
@@ -221,12 +221,12 @@
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "スライム軍",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 次の !M! 枚のカードはこのターン slimeboundmod:命令 を得る。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 次の !M! 枚のカードはこのターン slimeboundmod:命令 を得る。"
   },
   "Slimebound:Recollect": {
     "NAME": "忘れられない味",
-    "DESCRIPTION": " !B! ブロックを得る。 NL ランダムな *舐める を expansioncontent:発掘 する。",
-    "UPGRADE_DESCRIPTION": " !B! ブロックを得る。 NL ランダムな *舐める を2枚 expansioncontent:発掘 する。",
+    "DESCRIPTION": "!B! ブロックを得る。 NL ランダムな *舐める を expansioncontent:発掘 する。",
+    "UPGRADE_DESCRIPTION": "!B! ブロックを得る。 NL ランダムな *舐める を2枚 expansioncontent:発掘 する。",
     "EXTENDED_DESCRIPTION": [
       "廃棄... されてない..."
     ]
@@ -257,10 +257,10 @@
   },
   "Slimebound:RollThrough": {
     "NAME": "ロールスルー",
-    "DESCRIPTION": "敵全体に !D! ダメージ。あなたは次の !M! 回分、 slimeboundmod:タックル による反動を受けない。"
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL あなたは次の !M! 回分、 slimeboundmod:タックル による反動を受けない。"
   },
   "Slimebound:SamplingLick": {
-    "NAME": "味見",
+    "NAME": "味見で舐める",
     "DESCRIPTION": "slimeboundmod:汚泥 !slime! を与える。 NL !B! ブロックを得る。 NL 廃棄",
     "UPGRADE_DESCRIPTION": "slimeboundmod:汚泥 !slime! を与える。 NL !B! ブロックを得る。 NL カードを 1 枚引く。 NL 廃棄"
   },
@@ -271,33 +271,33 @@
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "再統合",
-    "DESCRIPTION": " !B! ブロックを得る。 捨て札からカードを1枚山札の上に置く。"
+    "DESCRIPTION": "!B! ブロックを得る。 捨て札からカードを1枚山札の上に置く。"
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "奉仕 & プロテクト",
-    "DESCRIPTION": " !B! ブロックと 1 bronze:ブラー を スライム の数だけ 得る。 NL 全てのスライムを slimeboundmod:吸収 する。 NL 廃棄"
+    "DESCRIPTION": "!B! ブロックと 1 bronze:ブラー を スライム の数だけ 得る。 NL 全てのスライムを slimeboundmod:吸収 する。 NL 廃棄"
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "パイル・オン!",
-    "DESCRIPTION": " !D! ダメージを与える。全てのスライムに slimeboundmod:命令 する",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 全てのスライムに 2 回 slimeboundmod:命令 する"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 全てのスライムに slimeboundmod:命令 する",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 全てのスライムに 2 回 slimeboundmod:命令 する"
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "スライム大騒動",
-    "DESCRIPTION": "産み出したスライムの数だけ山札の一番上のカードをプレイする。 NL 廃棄"
+    "DESCRIPTION": "スライムの数だけ山札の一番上のカードをプレイする。 NL 廃棄"
   },
   "Slimebound:SlimeCrush": {
     "NAME": "スライムクラッシュ!!!",
     "DESCRIPTION": "エセリアル NL !D! ダメージを与える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "エセリアル NL 敵全体に !D! ダメージ。 廃棄"
+    "UPGRADE_DESCRIPTION": "エセリアル NL 敵全体に !D! ダメージを与える。 廃棄"
   },
   "Slimebound:SlimeSlap": {
     "NAME": "スライムビンタ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL slimeboundmod:汚泥 を消費しない。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL slimeboundmod:汚泥 を消費しない。"
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "スライムスパイク",
-    "DESCRIPTION": " !B! ブロック と 一時的な トゲ !M! を得る。"
+    "DESCRIPTION": "!B! ブロック と 一時的な トゲ !M! を得る。"
   },
   "Slimebound:SlimeTap": {
     "NAME": "スライムタップ",
@@ -313,7 +313,7 @@
   },
   "Slimebound:Split": {
     "NAME": "分裂",
-    "DESCRIPTION": "ランダムな スライム に slimeboundmod:分裂 する。 slimeboundmod:命令 する。"
+    "DESCRIPTION": "slimeboundmod:ゲリラスライム に slimeboundmod:分裂 する。 NL slimeboundmod:命令"
   },
   "Slimebound:SplitAcid": {
     "NAME": "分裂：ゲリラ",
@@ -322,7 +322,7 @@
   },
   "Slimebound:SplitBruiser": {
     "NAME": "分裂：ブルーザー",
-    "DESCRIPTION": "slimeboundmod:ブルーザースライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。 ",
+    "DESCRIPTION": "slimeboundmod:ブルーザースライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。",
     "UPGRADE_DESCRIPTION": "slimeboundmod:ブルーザースライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。"
   },
   "Slimebound:SplitGreed": {
@@ -336,8 +336,8 @@
   },
   "Slimebound:SplitMire": {
     "NAME": "分裂：マイア",
-    "DESCRIPTION": "slimeboundmod:マイアスライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。 ",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:マイアスライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。 "
+    "DESCRIPTION": "slimeboundmod:マイアスライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:マイアスライム に slimeboundmod:分裂 する。 NL 3 回 slimeboundmod:命令 する。"
   },
   "Slimebound:SplitScrap": {
     "NAME": "復活：スクラップ",
@@ -350,16 +350,16 @@
   },
   "Slimebound:Strike_Slimebound": {
     "NAME": "ストライク",
-    "DESCRIPTION": " !D! ダメージを与える。"
+    "DESCRIPTION": "!D! ダメージを与える。"
   },
   "Slimebound:Tackle": {
     "NAME": "タックル",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ を与える。"
   },
   "Slimebound:TagTeam": {
     "NAME": "ベトベト分離",
-    "DESCRIPTION": " !D! ダメージを与える。 NL ランダムな スライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL ランダムな slimeboundmod:上級スライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL ランダムなスライムに slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL ランダムな slimeboundmod:上級スライム に slimeboundmod:分裂 する。 NL !M! 回 slimeboundmod:命令 する。"
   },
   "Slimebound:Teamwork": {
     "NAME": "チームワーク",
@@ -368,12 +368,12 @@
   },
   "Slimebound:TongueLash": {
     "NAME": "乱れ舌さばき",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 廃棄山にある「舐める」カードの枚数x !M! のダメージが追加される。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 廃棄山にある「舐める」カードの枚数x !M! のダメージが追加される。"
   },
   "Slimebound:ViciousTackle": {
     "NAME": "凶悪なタックル",
-    "DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL slimeboundmod:汚泥 の影響を2倍受ける。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージ。 NL slimeboundmod:汚泥 の影響を2倍受け、HPを slimeboundmod:汚泥 分回復する。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージを与える。 NL slimeboundmod:汚泥 の影響を2倍受ける。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 自分に !SlimeboundSelfharm! ダメージを与える。 NL slimeboundmod:汚泥 の影響を2倍受け、HPを slimeboundmod:汚泥 分回復する。"
   },
   "Slimebound:WasteNot": {
     "NAME": "無駄のない動き",
