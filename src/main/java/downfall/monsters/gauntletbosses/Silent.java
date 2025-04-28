@@ -92,7 +92,7 @@ public class Silent extends GauntletBoss {
                 addToBot(new GainBlockAction(this, 11));
                 break;
             case 5:
-                addToBot(new ApplyPowerAction(this, this, new BossIntangiblePower(this, 3), 3));
+                addToBot(new ApplyPowerAction(this, this, new IntangiblePower(this, 2), 2));
                 addToBot(new ApplyPowerAction(this, this, new EnemyWraithFormPower(this, -1), -1));
                 break;
         }
