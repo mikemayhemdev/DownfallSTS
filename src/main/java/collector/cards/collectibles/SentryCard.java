@@ -1,7 +1,9 @@
 package collector.cards.collectibles;
 
+import collector.powers.collectioncards.SentryPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,8 +13,7 @@ import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
-import static collector.util.Wiz.applyToEnemy;
-import static collector.util.Wiz.forAllMonstersLiving;
+import static collector.util.Wiz.*;
 
 public class SentryCard extends AbstractCollectibleCard {
     public final static String ID = makeID(SentryCard.class.getSimpleName());
@@ -31,14 +32,15 @@ public class SentryCard extends AbstractCollectibleCard {
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         applyToEnemy(m, new WeakPower(m, magicNumber, false));
 
-        if (AbstractDungeon.player.exhaustPile.group.stream().anyMatch(q -> q instanceof SentryCard)) {
+        if (AbstractDungeon.player.hasPower(SentryPower.POWER_ID)) {
             dmg(m, AbstractGameAction.AttackEffect.NONE);
             applyToEnemy(m, new WeakPower(m, magicNumber, false));
+            atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(SentryPower.POWER_ID)));
         }
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
+        //upgradeMagicNumber(1);
     }
 }

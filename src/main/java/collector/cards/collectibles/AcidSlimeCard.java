@@ -1,5 +1,6 @@
 package collector.cards.collectibles;
 
+import collector.actions.DrawCardFromCollectionAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -19,26 +20,13 @@ public class AcidSlimeCard extends AbstractCollectibleCard {
     // intellij stuff skill, enemy, common, , , , , , 
 
     public AcidSlimeCard() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> list = new ArrayList();
-
-        for (CardGroup cardGroup : Arrays.asList(srcCommonCardPool, srcUncommonCardPool, srcRareCardPool)) {
-            for (AbstractCard c3 : cardGroup.group) {
-                if (c3.cost == 0) {
-                    list.add(c3);
-                }
-            }
-
-        }
-
-        for (int i = 0; i < magicNumber; i++)
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(list.get(cardRandomRng.random(list.size() - 1))));
-
+        addToBot(new DrawCardFromCollectionAction(magicNumber));
     }
 
 

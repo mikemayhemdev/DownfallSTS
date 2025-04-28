@@ -418,24 +418,24 @@
   },
   "collector:AcidSlimeCard": {
     "NAME": "Acid Slime",
-    "DESCRIPTION": "Add !M! random 0 cost card into your hand.",
-    "UPGRADE_DESCRIPTION": "Add !M! random 0 cost cards into your hand."
+    "DESCRIPTION": "Draw a collectible, then add a copy of it to your hand.",
+    "UPGRADE_DESCRIPTION": "Draw a collectible, then add !M! copies of it to your hand."
   },
   "collector:AugmenterCard": {
     "NAME": "Augmenter",
-    "DESCRIPTION": "Lose 3 HP. NL Gain !M! Strength."
+    "DESCRIPTION": "Now, and at the start of each turn, add *JAX to your hand."
   },
   "collector:BearCard": {
     "NAME": "Bear",
-    "DESCRIPTION": "Gain !B! Block. NL Remove the enemy's Block. NL Deal !D! damage."
+    "DESCRIPTION": "Gain !B! Block. NL Deal damage equal to your Block. NL collector:Bandit_Boost - Gain [E]."
   },
   "collector:BlueSlaverCard": {
     "NAME": "Blue Slaver",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Weak. NL Double the enemy's Weak."
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Weak. NL Double the enemy's Weak. NL collector:Slaver_Trio."
   },
   "collector:BonfireSpiritsCard": {
     "NAME": "Bonfire Spirits",
-    "DESCRIPTION": "collector:Pyre. NL Heal !M! HP. NL If the Exhausted card was Rare, raise your Max HP by 1."
+    "DESCRIPTION": "collector:Pyre. NL If the Exhausted card was Rare, raise your Max HP by !M!. NL Exhaust."
   },
   "collector:BookOfStabbingCard": {
     "NAME": "Book of Stabbing",
@@ -443,7 +443,7 @@
   },
   "collector:BronzeOrbCard": {
     "NAME": "Bronze Orb",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL The top card of your draw pile costs 0 until played."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Reduce the cost of your next *Hyperbeam by 1."
   },
   "collector:ByrdCard": {
     "NAME": "Byrd",
@@ -453,13 +453,17 @@
     "NAME": "Centurion",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Dexterity."
   },
+  "collector:EnragedCenturion": {
+    "NAME": "Enraged Centurion",
+    "DESCRIPTION": "Deal !D! damage !M! times."
+  },
   "collector:ChosenCard": {
     "NAME": "Chosen",
     "DESCRIPTION": "Apply !M! Weak. NL If the enemy does not intend to attack, apply !clm2! Vulnerable."
   },
   "collector:ClericCard": {
     "NAME": "Cleric",
-    "DESCRIPTION": "collector:Pyre. NL Gain !M! expansioncontent:Temp_HP."
+    "DESCRIPTION": "collector:Pyre. NL Gain !M! expansioncontent:Temp_HP. NL If you already had expansioncontent:Temp_HP, Exhaust this."
   },
   "collector:CultistCard": {
     "NAME": "Cultist",
@@ -467,11 +471,16 @@
   },
   "collector:DaggerCard": {
     "NAME": "Dagger",
-    "DESCRIPTION": "Lose !M! HP. NL Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Lethal *Plunge to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Lethal *Plunge+ to your hand. NL Exhaust."
+  },
+  "collector:LethalPlunge": {
+    "NAME": "Lethal Plunge",
+    "DESCRIPTION": "Ethereal. NL Lose !M! HP. NL Deal !D! damage. NL Insert a *Dagger. NL Exhaust."
   },
   "collector:DarklingsCard": {
     "NAME": "Darklings",
-    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. expansioncontent:Exhume a Collected card.",
+    "DESCRIPTION": "collector:Pyre. NL Deal !D! damage. NL expansioncontent:Exhume a Collected card. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "to create 2 copies of."
     ]
@@ -490,7 +499,7 @@
   },
   "collector:FatGremlinCard": {
     "NAME": "Fat Gremlin",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL collector:Gremlin_Gang."
   },
   "collector:FungiBeastCard": {
     "NAME": "Fungi Beast",
@@ -498,11 +507,11 @@
   },
   "collector:GiantHeadCardStageOne": {
     "NAME": "Tick",
-    "DESCRIPTION": "Next turn, gain a *Tock."
+    "DESCRIPTION": "Next turn, gain a *Tock. NL Exhaust."
   },
   "collector:GiantHeadCardStageTwo": {
     "NAME": "Tock",
-    "DESCRIPTION": "Next turn, gain a *Headcrush."
+    "DESCRIPTION": "Next turn, gain a *Headcrush. NL Exhaust."
   },
   "collector:GiantHeadCardStageThree": {
     "NAME": "Headcrush",
@@ -518,7 +527,7 @@
   },
   "collector:GremlinWizardCard": {
     "NAME": "Gremlin Wizard",
-    "DESCRIPTION": "Next turn, NL gain !M! Vigor and 1 collector:Reserve."
+    "DESCRIPTION": "Next turn, NL gain !M! Vigor and 1 collector:Reserve. NL collector:Gremlin_Gang."
   },
   "collector:JawWormCard": {
     "NAME": "Jaw Worm",
@@ -526,11 +535,11 @@
   },
   "collector:JousterCard": {
     "NAME": "Jouster",
-    "DESCRIPTION": "Deal !D! damage. NL If there's only one foe, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL If you have expansioncontent:Temp_HP, gain !B! Block."
   },
   "collector:LagavulinCard": {
     "NAME": "Lagavulin",
-    "DESCRIPTION": "ALL enemies lose !M! Strength."
+    "DESCRIPTION": "ALL enemies lose !M! Strength. NL Exhaust."
   },
   "collector:LivingWallCard": {
     "NAME": "Living Wall",
@@ -542,7 +551,7 @@
   },
   "collector:MadGremlinCard": {
     "NAME": "Mad Gremlin",
-    "DESCRIPTION": "Gain !M! Temporary Strength."
+    "DESCRIPTION": "Gain !M! Temporary Strength. NL collector:Gremlin_Gang."
   },
   "collector:MawCard": {
     "NAME": "The Maw",
@@ -550,19 +559,23 @@
   },
   "collector:MerchantCard": {
     "NAME": "Merchant",
-    "DESCRIPTION": "Add !M! random Colorless cards into your hand. NL They cost 0 this turn."
+    "DESCRIPTION": "Add !M! random Colorless cards into your hand. NL They cost 0 this turn. NL Exhaust."
   },
   "collector:MushroomCard": {
     "NAME": "Mushroom",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak or Vulnerable at random."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak or Vulnerable at random. NL Gain !M! collector:Fungal_Bloom."
   },
   "collector:MysticCard": {
-    "NAME": "Mystic",
-    "DESCRIPTION": "Gain !M! expansioncontent:Temp_HP."
+    "NAME": "Mystic's Kindling",
+    "DESCRIPTION": "Unplayable. NL When exhausted, Heal !M! HP, then *Enrage all *Centurion cards this combat.",
+    "EXTENDED_DESCRIPTION": [
+      "I must light this kindling to use it."
+    ]
   },
   "collector:NemesisCard": {
     "NAME": "Nemesis",
-    "DESCRIPTION": "Gain 1 Intangible."
+    "DESCRIPTION": "Gain 1 Intangible. NL Insert 2 *Burns. NL Exhaust.",
+    "DESCRIPTION": "Gain 1 Intangible. NL Insert 1 *Burn. NL Exhaust."
   },
   "collector:NlothCard": {
     "NAME": "N'Loth",
@@ -571,11 +584,11 @@
   },
   "collector:OrbWalkerCard": {
     "NAME": "Orb Walker",
-    "DESCRIPTION": "Deal !D! damage. NL Add !M! *Embers into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! *Embers and a *Burn into your hand."
   },
   "collector:PointyCard": {
     "NAME": "Pointy",
-    "DESCRIPTION": "Deal !D! damage twice. NL Draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Shivs. NL collector:Bandit_Boost - Gain a *Shiv."
   },
   "collector:RanwidCard": {
     "NAME": "Ranwid",
@@ -583,7 +596,7 @@
   },
   "collector:RedSlaverCard": {
     "NAME": "Red Slaver",
-    "DESCRIPTION": "Enemy loses !M! Strength this turn."
+    "DESCRIPTION": "Enemy loses !M! Strength this turn. NL collector:Slaver_Trio. NL Exhaust."
   },
   "collector:ReptomancerCard": {
     "NAME": "Reptomancer",
@@ -591,19 +604,19 @@
   },
   "collector:RepulsorCard": {
     "NAME": "Repulsor",
-    "DESCRIPTION": "collector:Pyre. NL Draw !M! cards."
+    "DESCRIPTION": "collector:Pyre. NL Draw !M! cards. NL collector:Shape_Swarm. NL Exhaust."
   },
   "collector:RomeoCard": {
     "NAME": "Romeo",
-    "DESCRIPTION": "Your next Attack costs 0 and deals !M! additional damage."
+    "DESCRIPTION": "Your next Attack costs 0 and deals !M! additional damage. NL collector:Bandit_Boost - Draw a card."
   },
   "collector:ScrapOozeCard": {
     "NAME": "Scrap Ooze",
-    "DESCRIPTION": "collector:Pyre. NL Lose 3 HP. NL Add !M! random Attacks into your hand. NL They cost 0 this turn."
+    "DESCRIPTION": "Ethereal. NL Draw an Attack. NL Take !M! damage. NL Return this to your hand."
   },
   "collector:SentryCard": {
     "NAME": "Sentry",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Repeat if there is a *Sentry in your exhaust pile."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Your next *Sentry is played twice (and does not trigger this buff)."
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Shelled Parasite",
@@ -611,7 +624,7 @@
   },
   "collector:ShieldGremlinCard": {
     "NAME": "Shield Gremlin",
-    "DESCRIPTION": "Gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block. NL collector:Gremlin_Gang."
   },
   "collector:SnakePlantCard": {
     "NAME": "Snake Plant",
@@ -619,7 +632,7 @@
   },
   "collector:SneakyGremlinCard": {
     "NAME": "Sneaky Gremlin",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL collector:Gremlin_Gang."
   },
   "collector:SneckoCard": {
     "NAME": "Snecko",
@@ -627,19 +640,26 @@
   },
   "collector:SphericGuardianCard": {
     "NAME": "Spheric Guardian",
-    "DESCRIPTION": "Gain !M! expansioncontent:Blur."
+    "DESCRIPTION": "Gain !M! expansioncontent:Blur. NL Exhaust."
   },
   "collector:SpikerCard": {
     "NAME": "Spiker",
-    "DESCRIPTION": "Gain !M! Thorns."
+    "DESCRIPTION": "Gain 1 Thorns for each card in your hand. NL collector:Shape_Swarm."
+  },
+  "collector:ExploderCard": {
+    "NAME": "Exploder's Kindling",
+    "DESCRIPTION": "Unplayable. NL When exhausted, deal 10 damage to ALL enemies. NL collector:Shape_Swarm.",
+    "EXTENDED_DESCRIPTION": [
+      "I must light this kindling to use it."
+    ]
   },
   "collector:SpikeSlimeCard": {
     "NAME": "Spike Slime",
-    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, deal !M! damage back."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Thorns. This is Temporary if you have no expansioncontent:Temp_HP."
   },
   "collector:SpireGrowthCard": {
     "NAME": "Spire Growth",
-    "DESCRIPTION": "Enemy takes !M! damage at the end of each of its turns."
+    "DESCRIPTION": "Enemy takes !M! damage at the end of each of its turns. NL Exhaust."
   },
   "collector:SpireShieldCard": {
     "NAME": "Spire Shield",
@@ -651,15 +671,15 @@
   },
   "collector:SsserpentCard": {
     "NAME": "Ssserpent",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Doubt into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Doom. NL Insert a *Doubt."
   },
   "collector:TaskmasterCard": {
     "NAME": "Taskmaster",
-    "DESCRIPTION": "Apply !clm2! collector:Doom. NL Deal !D! damage. NL Gain !M! Strength."
+    "DESCRIPTION": "Apply !M! collector:Doom. NL Deal !D! damage. NL collector:Slaver_Trio."
   },
   "collector:ThievesCard": {
     "NAME": "Thieves",
-    "DESCRIPTION": "Take !M! less damage from attacks this turn."
+    "DESCRIPTION": "Take !M! less damage from attacks this turn. NL Exhaust."
   },
   "collector:TorchHeadCard": {
     "NAME": "Torch Head",
@@ -671,7 +691,7 @@
   },
   "collector:VagrantCard": {
     "NAME": "Vagrant",
-    "DESCRIPTION": "Gain !M! collector:Reserve. NL Add a *Shame into your hand."
+    "DESCRIPTION": "Gain !M! collector:Reserve. NL Add a *Shame to the top of your draw pile."
   },
   "collector:WomanInBlueCard": {
     "NAME": "Woman in Blue",
@@ -679,7 +699,7 @@
   },
   "collector:WrithingMassCard": {
     "NAME": "Writhing Mass",
-    "DESCRIPTION": "Scry !M!. NL Play the top card of your draw pile."
+    "DESCRIPTION": "Scry !M!. NL Play the top card of your draw pile. NL Exhaust."
   },
   "collector:DefaultCollectibleCard": {
     "NAME": "Soulless Husk",
@@ -696,5 +716,9 @@
   "collector:Sapped": {
     "NAME": "Sapped",
     "DESCRIPTION": "collector:Pyre. NL When drawn, lose [E]. NL Exhaust. NL Cannot be removed from your deck."
+  },
+  "collector:MinorSoul": {
+    "NAME": "Minor Soul",
+    "DESCRIPTION": "Apply !M! Weak. NL Draw a card."
   }
 }

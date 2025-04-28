@@ -1,12 +1,17 @@
 package collector.cards.collectibles;
 
+import collector.CollectorMod;
+import collector.powers.collectioncards.GremlinGangPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
+import static collector.CollectorMod.slaverTrioCheck;
 import static collector.util.Wiz.*;
 
 public class BlueSlaverCard extends AbstractCollectibleCard {
@@ -32,9 +37,23 @@ public class BlueSlaverCard extends AbstractCollectibleCard {
                 }
             }
         });
+
+        CollectorMod.bluePlayedThisCombat = true;
+        slaverTrioCheck();
     }
 
     public void upp() {
         upgradeDamage(4);
+    }
+
+
+
+    @Override
+    public void triggerOnGlowCheck() {
+        if (CollectorMod.redPlayedThisCombat && CollectorMod.taskPlayedThisCombat && !CollectorMod.bluePlayedThisCombat) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+            return;
+        }
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 }

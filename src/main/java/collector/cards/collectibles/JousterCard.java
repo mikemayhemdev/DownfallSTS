@@ -1,7 +1,9 @@
 package collector.cards.collectibles;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.util.Wiz;
 import sneckomod.SneckoMod;
@@ -21,14 +23,15 @@ public class JousterCard extends AbstractCollectibleCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        if (Wiz.getEnemies().size() == 1) {
+
+        if (TempHPField.tempHp.get(p) > 0) {
             blck();
         }
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = Wiz.getEnemies().size() == 1 ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = TempHPField.tempHp.get(AbstractDungeon.player) > 0 ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

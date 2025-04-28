@@ -323,5 +323,32 @@
       "At the end of its turn, loses #b",
       " HP."
     ]
+  },
+  "collector:AugmenterPower": {
+    "NAME": "Augmenter",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " Ethereal copies of JAX to your hand."
+    ]
+  },
+  "collector:SentryPower": {
+    "NAME": "Sentry Boost",
+    "DESCRIPTIONS": [
+      "Your next #bSentry is played twice, consuming this effect."
+    ]
+  },
+  "collector:GremlinGangPower": {
+    "NAME": "Gremlin Gang",
+    "DESCRIPTIONS": [
+      "When you next play a Gremlin Gang card other than #b",
+      ", play a copy of it."
+    ]
+  },
+  "collector:MushroomDamagePower": {
+    "NAME": "Fungal Bloom",
+    "DESCRIPTIONS": [
+      "Increases damage dealt by Mushroom cards by #b",
+      "."
+    ]
   }
 }

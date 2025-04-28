@@ -7,39 +7,46 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import guardian.cards.SentryWave;
 import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
 import static collector.util.Wiz.atb;
 
-public class DaggerCard extends AbstractCollectibleCard {
-    public final static String ID = makeID(DaggerCard.class.getSimpleName());
+public class LethalPlunge extends AbstractCollectibleCard {
+    public final static String ID = makeID(LethalPlunge.class.getSimpleName());
     // intellij stuff attack, enemy, uncommon, 20, 4, , , 3, -1
 
     private boolean noHover = false;
-    public DaggerCard(boolean noHover) {
+    public LethalPlunge(boolean noHover) {
+        //TODO - does this need to be a Colorless, not a collectible?
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 9;
-       // baseMagicNumber = magicNumber = 3;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        baseDamage = 20;
+        isEthereal = true;
         exhaust = true;
+        baseMagicNumber = magicNumber = 3;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.noHover = noHover;
-        if (!this.noHover) cardsToPreview = new LethalPlunge(true);
+        if (!this.noHover) cardsToPreview = new DaggerCard(true);
     }
 
-    public DaggerCard(){
+
+    public LethalPlunge(){
         this(false);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        AbstractCard c = new LethalPlunge();
+        atb(new LoseHPAction(p, p, magicNumber));
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        AbstractCard c = new DaggerCard();
         if (upgraded) c.upgrade();
-        atb(new MakeTempCardInHandAction(c));
+        atb(new MakeTempCardInDrawPileAction(c, 1, true, true));
+
+
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(5);
         cardsToPreview.upgrade();
     }
 }

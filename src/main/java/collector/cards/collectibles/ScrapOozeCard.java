@@ -1,11 +1,16 @@
 package collector.cards.collectibles;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
+import com.megacrit.cardcrawl.actions.utility.DrawPileToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.actions.SelfDamageAction;
 import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
@@ -16,22 +21,20 @@ public class ScrapOozeCard extends AbstractCollectibleCard {
     // intellij stuff skill, self, uncommon, , , , , 2, 1
 
     public ScrapOozeCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
-        isPyre();
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new LoseHPAction(p, p, 3));
-        for (int i = 0; i < magicNumber; i++) {
-            AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
-            c.setCostForTurn(0);
-            this.addToBot(new MakeTempCardInHandAction(c, true));
-        }
+        this.addToBot(new DrawPileToHandAction(1, CardType.ATTACK));
+        addToBot(new SelfDamageAction(new DamageInfo(p, magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+        atb(new DiscardToHandAction(this));
+
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(-1);
     }
 }

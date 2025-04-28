@@ -18,6 +18,7 @@ public class DrawFromCollection {
             clz = AbstractPlayer.class,
             method = "applyStartOfTurnPostDrawRelics"
     )
+    //TODO - if collector has card, reduce draw by 1. This can't happen here.
     public static class AbstractPlayerApplyStartOfTurnPostDrawRelicsPatch {
         public static void Prefix(AbstractPlayer __instance) {
             if (AbstractDungeon.player.chosenClass.equals(CollectorChar.Enums.THE_COLLECTOR) || !CollectorCollection.collection.isEmpty()) {

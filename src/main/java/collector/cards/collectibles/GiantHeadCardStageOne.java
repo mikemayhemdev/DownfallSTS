@@ -21,6 +21,7 @@ public class GiantHeadCardStageOne extends AbstractCollectibleCard {
         CardModifierManager.addModifier(tar, new CollectedCardMod());
         cardsToPreview = tar;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,6 +1,7 @@
 package collector.cards.collectibles;
 
 import collector.actions.GainReservesAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.curses.Shame;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,7 +23,7 @@ public class VagrantCard extends AbstractCollectibleCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new GainReservesAction(magicNumber));
-        makeInHand(new Shame());
+        atb(new MakeTempCardInDrawPileAction(new Shame(), 1, false, true, false));
     }
 
     public void upp() {

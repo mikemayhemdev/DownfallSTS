@@ -93,7 +93,7 @@ public class CollectorCollection {
         collectionPool.put(OrbWalker.ID, OrbWalkerCard.ID);
         collectionPool.put(Spiker.ID, SpikerCard.ID);
         collectionPool.put(Repulsor.ID, RepulsorCard.ID);
-        collectionPool.put(Exploder.ID, TheBomb.ID);
+        collectionPool.put(Exploder.ID, ExploderCard.ID);
         collectionPool.put(Maw.ID, MawCard.ID);
         collectionPool.put(WrithingMass.ID, WrithingMassCard.ID);
         collectionPool.put(SpireGrowth.ID, SpireGrowthCard.ID);

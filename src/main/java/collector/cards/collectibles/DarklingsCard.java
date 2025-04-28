@@ -22,6 +22,7 @@ public class DarklingsCard extends AbstractCollectibleCard {
         isPyre();
         baseDamage = 8;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

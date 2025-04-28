@@ -22,6 +22,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardSave;
@@ -29,6 +30,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
@@ -82,6 +85,21 @@ public class CollectorMod implements
     public static Color COLLECTIBLE_CARD_COLOR = CardHelper.getColor(13, 158, 153);
     public static TopPanelExtraDeck extraDeckPanel;
     public static TopPanelEssence essencePanel;
+
+
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags SHAPESWARM;
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags GREMLINGANG;
+
+
+    public static boolean redPlayedThisCombat;
+    public static boolean taskPlayedThisCombat;
+    public static boolean bluePlayedThisCombat;
+    public static boolean slaversActivated;
+    public static boolean bearPlayedThisCombat;
+    public static boolean romeoPlayedThisCombat;
+    public static boolean pointyPlayedThisCombat;
 
 
 
@@ -231,6 +249,13 @@ public class CollectorMod implements
             if (((CollectorChar) AbstractDungeon.player).torchHead == null)
                 ((CollectorChar) AbstractDungeon.player).torchHead = new RenderOnlyTorchHead();
         }
+        redPlayedThisCombat = false;
+        taskPlayedThisCombat = false;
+        bluePlayedThisCombat = false;
+        bearPlayedThisCombat = false;
+        romeoPlayedThisCombat = false;
+        pointyPlayedThisCombat = false;
+        slaversActivated = false;
     }
 
     @Override
@@ -382,6 +407,31 @@ public class CollectorMod implements
         if (hoverRewardWorkaround != null) {
             hoverRewardWorkaround.renderCardOnHover(sb);
             hoverRewardWorkaround = null;
+        }
+    }
+
+    public static boolean banditBoost(int whichBandit){
+        switch (whichBandit) {
+            case 0:
+                bearPlayedThisCombat = true;
+                return (romeoPlayedThisCombat || pointyPlayedThisCombat);
+            case 1:
+                romeoPlayedThisCombat = true;
+                return (bearPlayedThisCombat || pointyPlayedThisCombat);
+            case 2:
+                pointyPlayedThisCombat = true;
+                return (romeoPlayedThisCombat || bearPlayedThisCombat);
+        }
+        return false;
+    }
+
+    public static void slaverTrioCheck() {
+        if (!slaversActivated) {
+            if (redPlayedThisCombat && bluePlayedThisCombat && taskPlayedThisCombat) {
+                slaversActivated = true;
+                Wiz.applyToSelf(new StrengthPower(AbstractDungeon.player, 2));
+                Wiz.applyToSelf(new DexterityPower(AbstractDungeon.player, 2));
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ public class BonfireSpiritsCard extends AbstractCollectibleCard implements OnPyr
 
     public BonfireSpiritsCard() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
         isPyre();
         tags.add(CardTags.HEALING);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
@@ -28,7 +28,7 @@ public class BonfireSpiritsCard extends AbstractCollectibleCard implements OnPyr
     private boolean wasRare = false;
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new HealAction(p, p, magicNumber));
+      //  atb(new HealAction(p, p, magicNumber));
         atb(new AbstractGameAction() {
             @Override
             public void update() {
@@ -38,7 +38,7 @@ public class BonfireSpiritsCard extends AbstractCollectibleCard implements OnPyr
                         @Override
                         public void update() {
                             isDone = true;
-                            AbstractDungeon.player.increaseMaxHp(1, true);
+                            AbstractDungeon.player.increaseMaxHp(magicNumber, true);
                         }
                     });
                 }
@@ -54,6 +54,6 @@ public class BonfireSpiritsCard extends AbstractCollectibleCard implements OnPyr
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

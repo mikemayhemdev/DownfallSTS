@@ -13,13 +13,14 @@ import sneckomod.SneckoMod;
 
 import static collector.CollectorMod.makeID;
 
-public class SnakePlantCard extends AbstractCollectibleCard {
-    public final static String ID = makeID(SnakePlantCard.class.getSimpleName());
+public class EnragedCenturion extends AbstractCollectibleCard {
+    public final static String ID = makeID(EnragedCenturion.class.getSimpleName());
     // intellij stuff attack, enemy, common, 7, 2, , , ,
 
-    public SnakePlantCard() {
+    public EnragedCenturion() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 10;
+        baseMagicNumber = magicNumber = 3;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
@@ -31,6 +32,6 @@ public class SnakePlantCard extends AbstractCollectibleCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 }

@@ -7,7 +7,6 @@ public class EssenceSystem {
 
     public static void changeEssence(int amount) {
         curEssence += amount;
-        //TODO: If positive, play vfx on top panel item
     }
 
     public static int essenceCount() {

@@ -13,9 +13,11 @@ public class GiantHeadCardStageTwo extends AbstractCollectibleCard {
     // intellij stuff skill, self, uncommon, , , , , , 
 
     public GiantHeadCardStageTwo() {
+        //TODO - does this need to be a Colorless, not a collectible?
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         cardsToPreview = new GiantHeadCardStageThree();
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -14,24 +14,16 @@ public class BronzeOrbCard extends AbstractCollectibleCard {
     // intellij stuff attack, enemy, uncommon, 5, 2, 5, 2, , 
 
     public BronzeOrbCard() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 5;
-        baseBlock = 5;
+        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 4;
+        baseBlock = 4;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (!AbstractDungeon.player.drawPile.isEmpty())
-                    AbstractDungeon.player.drawPile.getTopCard().freeToPlayOnce = true;
-                //Note: this technically lets you figure out what your top card is by checking draw pile before/after
-            }
-        });
+        //TODO - Reduce cost of next hyperbeam. Does this really need a patch?
     }
 
     public void upp() {

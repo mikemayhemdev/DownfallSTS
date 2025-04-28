@@ -49,6 +49,10 @@ public abstract class AbstractCollectorCard extends CustomCard {
         name = originalName = cardStrings.NAME;
         initializeTitle();
         initializeDescription();
+
+        //TODO - Combat charges remaining needs to end up somewhere else entirely because we steal base game character cards that are not in this Abstract. Those cards still need to have charges. CardMod to the rescue?
+        //TODO - Save and load the combat charges
+        //TODO - Maybe do a render for the number of charges left instead of text? Show the remaining charges in the keyword display?
         combatChargesRemaining = baseCombatCharges;
     }
 
