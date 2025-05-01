@@ -23,6 +23,7 @@ import slimebound.actions.EnergyToPikeAction;
 import slimebound.actions.TendrilFlailAction;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.slimes.SlimeHelper;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -66,9 +67,7 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int slimecount = 0;
-
-        //TODO - get energy level from Pike
+        int slimecount = SlimeHelper.getPikeEnergy();
 
         addToBot(new GainBlockAction(p, slimecount * block));
         addToBot(new ApplyPowerAction(p,p,new BlurPower(p, slimecount)));

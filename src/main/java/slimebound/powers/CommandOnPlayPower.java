@@ -15,6 +15,7 @@ import slimebound.actions.CommandCidAction;
 import slimebound.actions.CommandPikeAction;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 import slimebound.orbs.SpawnedSlime;
+import slimebound.slimes.SlimeHelper;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
@@ -47,7 +48,7 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
     public void onAfterCardPlayed(AbstractCard usedCard) {
         flash();
         //TODO if Cid's energy is higher...
-        if (true){
+        if (SlimeHelper.getCidEnergy() >= SlimeHelper.getPikeEnergy()){
             addToBot(new CommandCidAction());
         } else {
             addToBot(new CommandPikeAction());

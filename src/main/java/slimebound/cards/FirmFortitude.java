@@ -14,6 +14,7 @@ import org.xml.sax.ext.LexicalHandler;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
+import slimebound.slimes.SlimeHelper;
 import sneckomod.SneckoMod;
 
 
@@ -50,8 +51,7 @@ public class FirmFortitude extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int total = 0;
-        //TODO - get Pike and Cid's combined energy
+        int total = SlimeHelper.getCidEnergy() + SlimeHelper.getPikeEnergy();
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, total), total));
 

@@ -1,21 +1,33 @@
 package slimebound.cards;
 
 
+import collector.util.Wiz;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.actions.OctoChoiceAction;
+import downfall.cards.OctoChoiceCard;
+import downfall.util.OctopusCard;
 import slimebound.SlimeboundMod;
 
 
+import slimebound.actions.CommandCidAction;
+import slimebound.actions.CommandPikeAction;
+import slimebound.actions.EnergyToCidAction;
+import slimebound.actions.EnergyToPikeAction;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.slimes.SlimeHelper;
+
+import java.util.ArrayList;
 
 
-public class Split extends AbstractSlimeboundCard {
+public class Split extends AbstractSlimeboundCard implements OctopusCard {
     public static final String ID = "Slimebound:Split";
     public static final String IMG_PATH = SlimeboundMod.getResourcePath("cards/split.png");
     private static final CardStrings cardStrings;
+    public static final String[] EXTENDED_DESCRIPTION;
 
     public Split() {
         super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.SLIMEBOUND, CardRarity.BASIC, CardTarget.NONE);
@@ -24,42 +36,35 @@ public class Split extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO - choose a slime, grant energy, command
-
-
-        //SlimeboundMod.spawnNormalSlime();
-        /*
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true, 0, 0));
-        addToBot(new CommandAction());
-        checkMinionMaster();
-
-         */
-
-
-        //Forever shall this code remain commented here.  A legacy to the origins of how bad Mayhem was at coding when this all began.
-        /*        for (int i = 0; i < magicNumber; i++) {
-            ArrayList<Integer> orbs = new ArrayList<>();
-            orbs.add(1);
-            orbs.add(2);
-            orbs.add(3);
-            orbs.add(4);
-            Integer o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
-
-                    switch (o) {
-                case 1:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
-                    break;
-                case 2:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
-                    break;
-                case 3:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
-                    break;
-                case 4:
-                    AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
-                    break;
-         */
+        Wiz.atb(new OctoChoiceAction(m, this));
     }
+
+    public ArrayList<OctoChoiceCard> choiceList() {
+        ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
+        String imagePath = "slimeboundResources/images/cards/alltogether.png";
+
+        cardList.add(new OctoChoiceCard("Slimebound:SplitPike", EXTENDED_DESCRIPTION[0], imagePath, EXTENDED_DESCRIPTION[1], -1, -1, magicNumber, CardType.SKILL));
+        cardList.add(new OctoChoiceCard("Slimebound:SplitCid", EXTENDED_DESCRIPTION[2], imagePath, EXTENDED_DESCRIPTION[3], -1, -1, magicNumber, CardType.SKILL));
+
+        return cardList;
+    }
+
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
+        switch (card.cardID) {
+            case "Slimebound:SplitPike": {
+                addToBot(new EnergyToPikeAction(magicNumber));
+                addToBot(new CommandPikeAction());
+                break;
+            }
+            case "Slimebound:SplitCid": {
+                addToBot(new EnergyToCidAction(magicNumber));
+                addToBot(new CommandCidAction());
+
+                break;
+            }
+        }
+    }
+
 
     public void upgrade() {
         if (!this.upgraded) {
@@ -70,6 +75,7 @@ public class Split extends AbstractSlimeboundCard {
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
 }
 

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.slimes.SlimeHelper;
 import sneckomod.SneckoMod;
 
 
@@ -54,7 +55,7 @@ public class SlimeTap extends AbstractSlimeboundCard {
         if (canUse) {
 
             canUse = false;
-            //TODO - check energy levels
+            if (SlimeHelper.getPikeEnergy() >= 1 && SlimeHelper.getCidEnergy() >= 1) canUse = true;
 
             if (!canUse) this.cantUseMessage = EXTENDED_DESCRIPTION[0];
         }

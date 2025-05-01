@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
 import slimebound.SlimeboundMod;
 import slimebound.actions.EnergyToPikeAction;
 import slimebound.orbs.SpawnedSlime;
+import slimebound.slimes.SlimeHelper;
 
 
 public class SlimeSacrificePower extends AbstractPower {
@@ -50,7 +51,7 @@ public class SlimeSacrificePower extends AbstractPower {
             if (info.owner != AbstractDungeon.player) {
                 if (damageAmount > AbstractDungeon.player.currentBlock) {
 
-                    if (true) { //TODO - If Pike has energy
+                    if (SlimeHelper.getPikeEnergy() > 0) {
 
                         //s.noEvokeBonus = true;
                         this.flash();

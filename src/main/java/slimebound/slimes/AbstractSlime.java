@@ -27,6 +27,9 @@ import slimebound.orbs.*;
 
 
 public abstract class AbstractSlime {
+    //TODO - Pretty much everything involved here. This is all just prelim copy paste.
+
+
     public String name;
     public String description;
     public String ID;
@@ -41,6 +44,8 @@ public abstract class AbstractSlime {
     protected static final int W = 96;
     public Hitbox hb;
     protected Texture img;
+
+    public int energy;
 
 
     private float delayTime;
@@ -76,6 +81,8 @@ public abstract class AbstractSlime {
     private float yOffset;
 
     private String animString = "idle";
+
+    private ArrayList<SlimeHelper.enchantment> activeEnchants = new ArrayList<>();
 
 
     static {
@@ -233,6 +240,15 @@ public abstract class AbstractSlime {
         FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.attackAmount), this.cX + NUM_X_OFFSET, this.cY + NUM_Y_OFFSET, new Color(0.2F, 1.0F, 1.0F, this.c.a), this.fontScale);
 //TODO render stuff
 
+    }
+
+    public int getEnergy(){
+        return energy;
+    }
+
+    public boolean isEnchanted(SlimeHelper.enchantment enchantToCheck){
+       //TODO: best way to track this. Map or array list?
+        return false;
     }
 
 

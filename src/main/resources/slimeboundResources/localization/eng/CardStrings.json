@@ -160,8 +160,10 @@
     "NAME": "Favorite Child",
     "DESCRIPTION": "Choose slimeboundmod:Pike or slimeboundmod:Cid. Increase the chosen slime's damage by !M! this combat. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
+      "Increase slimeboundmod:Cid's damage by !M! this combat.",
       "Increase slimeboundmod:Pike's damage by !M! this combat.",
-      "Increase slimeboundmod:Cid's damage by !M! this combat."
+      "Choose Cid.",
+      "Choose Pike."
     ]
   },
   "Slimebound:MegaLick": {
@@ -173,8 +175,10 @@
     "NAME": "Minion Master",
     "DESCRIPTION": "Choose slimeboundmod:Pike or slimeboundmod:Cid. slimeboundmod:Enchant them with 'When slimeboundmod:Commanded, performs an additional turn'.",
     "EXTENDED_DESCRIPTION": [
-      "slimeboundmod:Enchantment. NL When slimeboundmod:Commanded, slimeboundmod:Pike performs an additional action.",
       "slimeboundmod:Enchantment. NL When slimeboundmod:Commanded, slimeboundmod:Cid performs an additional action.",
+      "slimeboundmod:Enchantment. NL When slimeboundmod:Commanded, slimeboundmod:Pike performs an additional action.",
+      "Choose Cid.",
+      "Choose Pike.",
       " NL (Enchant already active)."
     ]
   },
@@ -196,9 +200,11 @@
     "NAME": "Hyperactive",
     "DESCRIPTION": "Choose slimeboundmod:Pike or slimeboundmod:Cid. slimeboundmod:Enchant them with 'No longer spends energy to attack'.",
     "EXTENDED_DESCRIPTION": [
-      "slimeboundmod:Enchantment. NL slimeboundmod:Pike no longer spends energy to attack.",
       "slimeboundmod:Enchantment. NL slimeboundmod:Cid no longer spends energy to attack.",
-      " NL (Enchant already active)."
+      "slimeboundmod:Enchantment. NL slimeboundmod:Pike no longer spends energy to attack.",
+      " NL (Enchant already active).",
+      "Choose Cid.",
+      "Choose Pike."
       ]
   },
   "Slimebound:Prepare": {

@@ -25,6 +25,7 @@ import slimebound.actions.EnergyToCidAction;
 import slimebound.actions.TendrilFlailAction;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.slimes.SlimeHelper;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -64,8 +65,7 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        //TODO get Cid's energy
-        int slimecount = 0;
+        int slimecount = SlimeHelper.getCidEnergy();
 
         if (slimecount > 0) {
             for (int i = 0; i < slimecount; i++) {
