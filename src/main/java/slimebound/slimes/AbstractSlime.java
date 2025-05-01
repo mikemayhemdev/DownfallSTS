@@ -28,6 +28,8 @@ import slimebound.orbs.*;
 
 public abstract class AbstractSlime {
     //TODO - Pretty much everything involved here. This is all just prelim copy paste.
+    //TODO - Should have a hitbox which explains the next turn attack like an orb, and also include active enchantments if any are present.
+    //TODO - Should have renders for both energy (maybe a smaller version of the Slime Boss energy render), and an orb-like text. Maybe more flavorful to use intent imagery?
 
 
     public String name;

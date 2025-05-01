@@ -45,6 +45,7 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
 
         cardList.add(new OctoChoiceCard("Slimebound:SplitPike", EXTENDED_DESCRIPTION[0], imagePath, EXTENDED_DESCRIPTION[1], -1, -1, magicNumber, CardType.SKILL));
         cardList.add(new OctoChoiceCard("Slimebound:SplitCid", EXTENDED_DESCRIPTION[2], imagePath, EXTENDED_DESCRIPTION[3], -1, -1, magicNumber, CardType.SKILL));
+        //TODO - Given this is a starter card, maybe we do the MTG method of spell out what Command is going to do exactly on the text.
 
         return cardList;
     }
