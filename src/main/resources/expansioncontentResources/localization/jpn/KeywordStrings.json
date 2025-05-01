@@ -114,6 +114,15 @@
     "PROPER_NAME": "汚泥",
     "DESCRIPTION": "次の攻撃時 #y汚泥 分ダメージを増加させる。全ての #y汚泥 を除去し、 #y泥食い の効果を発動する。"
   },
+  
+  {
+    "NAMES": [
+      "constricted",
+      "締め付け"
+    ],
+    "PROPER_NAME": "締め付け",
+    "DESCRIPTION": "締め付け状態のモンスターはターン終了時、ダメージを受ける。"
+  },
 
   {
     "PROPER_NAME": "詠唱",
