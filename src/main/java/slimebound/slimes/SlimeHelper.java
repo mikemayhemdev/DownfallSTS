@@ -51,6 +51,8 @@ public class SlimeHelper {
         return Cid.isEnchanted(enchantToCheck);
     }
 
+    //TODO - render / update probably lives here?
+    //TODO - build in such a way that we might remove a slime. Could be a fun event.
 
     public enum enchantment {
         NOENEERGYCOST,
