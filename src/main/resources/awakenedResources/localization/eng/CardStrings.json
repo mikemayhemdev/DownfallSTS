@@ -9,7 +9,7 @@
   },
   "awakened:Cryostasis": {
     "NAME": "Cryostasis",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Apply !M! Weak. NL Exhaust."
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",

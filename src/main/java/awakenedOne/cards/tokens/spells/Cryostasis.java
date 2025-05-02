@@ -1,7 +1,9 @@
 package awakenedOne.cards.tokens.spells;
 
+import awakenedOne.relics.KTRibbon;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,11 +13,13 @@ import com.megacrit.cardcrawl.vfx.combat.FrostOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 
 import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.atb;
 
 public class Cryostasis extends AbstractSpellCard {
     public final static String ID = makeID(Cryostasis.class.getSimpleName());
     // intellij stuff skill, self, , , 7, 1, 1, 1
+    boolean chant = false;
 
     public Cryostasis() {
         super(ID, CardType.SKILL, CardTarget.ENEMY);
@@ -27,8 +31,44 @@ public class Cryostasis extends AbstractSpellCard {
         CardCrawlGame.sound.play("ORB_FROST_CHANNEL", 0.1F);
         AbstractDungeon.effectsQueue.add(new FrostOrbActivateEffect(p.hb.cX, p.hb.cY));
         blck();
-        atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
-    }
+        if (this.chant) {
+            atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+            checkOnChant();
+        }
+
+        if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+            if (!AbstractDungeon.player.getRelic(KTRibbon.ID).grayscale) {
+                atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+                checkOnChant();
+                awaken(1);
+            }
+        }
+        }
+
+        @Override
+        public void chant() {
+            AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
+            atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+            checkOnChant();
+        }
+
+        public void triggerWhenDrawn() {
+            this.chant = false;
+        }
+
+        public void triggerOnCardPlayed(AbstractCard card) {
+            if (card.type == CardType.POWER && AbstractDungeon.player.hand.contains((AbstractCard)this))
+                this.chant = true;
+        }
+
+        @Override
+        public void onMoveToDiscard() {
+            this.chant = false;
+        }
+
+        public void triggerOnGlowCheck() {
+            this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        }
 
     public void upp() {
         upgradeBlock(2);
