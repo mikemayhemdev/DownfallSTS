@@ -62,7 +62,7 @@ public class Lacerate extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(1);
+            upgradeDamage(3);
             upgradeMagicNumber(UPGRADE_MAGIC);
         }
     }
