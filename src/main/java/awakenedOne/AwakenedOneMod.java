@@ -7,10 +7,7 @@ import awakenedOne.cards.cardvars.SecondMagicNumber;
 import awakenedOne.cards.cardvars.ThirdMagicNumber;
 import awakenedOne.powers.EnemyHexedPower;
 import awakenedOne.powers.UltimateHexDebuff;
-import awakenedOne.relics.KTRibbon;
-import awakenedOne.relics.RippedDoll;
-import awakenedOne.relics.ShreddedDoll;
-import awakenedOne.relics.TomeOfPortalmancy;
+import awakenedOne.relics.*;
 import awakenedOne.ui.AwakenedIcon;
 import awakenedOne.ui.OrbitingSpells;
 import awakenedOne.util.CardFilter;
@@ -193,7 +190,7 @@ public class AwakenedOneMod implements
         BaseMod.addRelicToCustomPool(new ShreddedDoll(), AwakenedOneChar.Enums.AWAKENED_BLUE);
         BaseMod.addRelicToCustomPool(new KTRibbon(), AwakenedOneChar.Enums.AWAKENED_BLUE);
         BaseMod.addRelicToCustomPool(new TomeOfPortalmancy(), AwakenedOneChar.Enums.AWAKENED_BLUE);
-
+        BaseMod.addRelicToCustomPool(new EyeOfTheOccult(), AwakenedOneChar.Enums.AWAKENED_BLUE);
     }
 
 

@@ -1,5 +1,6 @@
 package awakenedOne.cards.tokens.spells;
 
+import awakenedOne.relics.EyeOfTheOccult;
 import awakenedOne.relics.KTRibbon;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -10,7 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.FrostOrbActivateEffect;
-import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.ui.AwakenButton.awaken;
@@ -27,28 +27,79 @@ public class Cryostasis extends AbstractSpellCard {
         baseMagicNumber = magicNumber = 1;
     }
 
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        if(AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)){
+            target = CardTarget.ALL_ENEMY;
+        }
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardCrawlGame.sound.play("ORB_FROST_CHANNEL", 0.1F);
         AbstractDungeon.effectsQueue.add(new FrostOrbActivateEffect(p.hb.cX, p.hb.cY));
         blck();
+
+        if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+            AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
+        }
+
         if (this.chant) {
-            atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+
+            if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+                atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+            }
+
+            if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+                for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                    if (!monster.isDead && !monster.isDying) {
+                        addToBot(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+                    }
+                }
+            }
+
             checkOnChant();
         }
 
         if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if (!AbstractDungeon.player.getRelic(KTRibbon.ID).grayscale) {
-                atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+
+                if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+                    atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+                }
+
+                if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+                    for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                        if (!monster.isDead && !monster.isDying) {
+                            addToBot(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+                        }
+                    }
+                }
+
                 checkOnChant();
                 awaken(1);
             }
         }
+
         }
 
         @Override
         public void chant() {
             AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
-            atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+
+            if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+                atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+            }
+
+            if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+                AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
+                for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                    if (!monster.isDead && !monster.isDying) {
+                        addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+                    }
+                }
+            }
+
             checkOnChant();
         }
 

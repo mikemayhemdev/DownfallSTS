@@ -1,5 +1,6 @@
 package awakenedOne.cards.tokens.spells;
 
+import awakenedOne.relics.EyeOfTheOccult;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -7,6 +8,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
+import theHexaghost.relics.CandleOfCauterizing;
 
 import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
@@ -20,12 +22,21 @@ public class Darkleech extends AbstractSpellCard {
         baseMagicNumber = magicNumber = 1;
     }
 
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        if(AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)){
+            target = CardTarget.ALL_ENEMY;
+        }
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!upgraded) {
+        if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)){
             this.addToBot(new VFXAction(new GiantEyeEffect(m.hb.cX, m.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
             HexCurse(magicNumber, m, p);
         }
         else {
+            AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
             AbstractDungeon.getMonsters().monsters.stream().filter(m2 -> !m2.isDead && !m2.isDying).forEach(m2 -> {
                 this.addToBot(new VFXAction(new GiantEyeEffect(m2.hb.cX, m2.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
                 HexCurse(magicNumber, m2, p);
@@ -34,6 +45,6 @@ public class Darkleech extends AbstractSpellCard {
     }
 
     public void upp() {
-        target = CardTarget.ALL_ENEMY;
+        upgradeMagicNumber(1);
     }
 }

@@ -1,12 +1,15 @@
 package awakenedOne.relics;
 
+import automaton.cards.FineTuning;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.tokens.Ceremony;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
@@ -20,6 +23,9 @@ public class RippedDoll extends CustomRelic {
 
     public RippedDoll() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
+        AbstractCard q = new Ceremony();
+        //q.upgrade();
+        tips.add(new CardPowerTip(q));
     }
 
     @Override

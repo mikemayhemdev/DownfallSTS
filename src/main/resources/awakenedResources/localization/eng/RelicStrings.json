@@ -36,5 +36,12 @@
       "Whenever a *Void is Exhausted, apply #b",
       " #yawakened:Hex to ALL enemies."
     ]
+  },
+  "awakened:EyeOfTheOccult": {
+    "NAME": "Eye of the Occult",
+    "FLAVOR": "This gruesome carving imparts magical knowledge to its owner.",
+    "DESCRIPTIONS": [
+      "Spells hit ALL enemies."
+    ]
   }
 }
