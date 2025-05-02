@@ -1,6 +1,7 @@
 package expansioncontent.patches;
 
 import automaton.AutomatonChar;
+import awakenedOne.AwakenedOneChar;
 import basemod.ReflectionHacks;
 import champ.ChampChar;
 import collector.CollectorChar;
@@ -91,7 +92,14 @@ public class ShopBossPatch {
             if (q.hasTag(expansionContentMod.STUDY_COLLECTOR)){
                 return false;
             }
+
+        if (AbstractDungeon.player instanceof AwakenedOneChar || RandomCardWithTagAction.awakenedLocked()) {
+            if (q.hasTag(expansionContentMod.STUDY_AWAKENEDONE)){
+                return false;
             }
+        }
+
+        }
 
         return true;
     }

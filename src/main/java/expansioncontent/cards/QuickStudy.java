@@ -1,6 +1,7 @@
 package expansioncontent.cards;
 
 import automaton.AutomatonChar;
+import awakenedOne.AwakenedOneChar;
 import champ.ChampChar;
 import collector.CollectorChar;
 import com.badlogic.gdx.Gdx;
@@ -20,7 +21,7 @@ import theHexaghost.TheHexaghost;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import static expansioncontent.expansionContentMod.loadJokeCardImage;
+import static expansioncontent.expansionContentMod.*;
 
 public class QuickStudy extends AbstractExpansionCard {
 
@@ -32,22 +33,31 @@ public class QuickStudy extends AbstractExpansionCard {
             if (q.rarity != CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
 
                 if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-                    if(q.cardID.equals(SuperPrepareCrush.ID)){continue;}
+                    if(q.hasTag(STUDY_SLIMEBOSS)){continue;}
                 }
+
                 if (AbstractDungeon.player instanceof TheHexaghost ) {
-                    if(q.cardID.equals(Hexaburn.ID)){continue;}
+                    if(q.hasTag(STUDY_HEXAGHOST)){continue;}
                 }
+
                 if (AbstractDungeon.player instanceof GuardianCharacter ) {
-                    if(q.cardID.equals(GuardianWhirl.ID)){continue;}
+                    if(q.hasTag(STUDY_GUARDIAN)){continue;}
                 }
+
                 if (AbstractDungeon.player instanceof ChampChar ) {
-                    if(q.cardID.equals(LastStand.ID)){continue;}
+                    if(q.hasTag(STUDY_CHAMP)){continue;}
                 }
+
                 if (AbstractDungeon.player instanceof AutomatonChar ) {
-                    if(q.cardID.equals(HyperBeam.ID)){continue;}
+                    if(q.hasTag(STUDY_AUTOMATON)){continue;}
                 }
+
                 if (AbstractDungeon.player instanceof CollectorChar ) {
-                    if(q.cardID.equals(YouAreMine.ID)){continue;}
+                    if(q.hasTag(STUDY_COLLECTOR)){continue;}
+                }
+
+                if (AbstractDungeon.player instanceof AwakenedOneChar) {
+                    if(q.hasTag(STUDY_AWAKENEDONE)){continue;}
                 }
 
                 AbstractCard r = q.makeCopy();

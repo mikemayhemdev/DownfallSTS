@@ -1,0 +1,73 @@
+{
+  "bronze:ShapeFactory": {
+    "NAME": "Usine de drones",
+    "DESCRIPTIONS": [
+      "Vous tombez face à une usine de drones de l'Exorde en ruines - surprenamment, les machines fonctionnent toujours. Si vous améliorez et démontez ces drones, vous pourriez hériter de certaines de leur armes.",
+      "Aucun de ces drones n'a ce que vous désirez."
+    ],
+    "OPTIONS": [
+      "[Combattre un Épineux] #gGagnez #gPicots en tant que récompense de combat.",
+      "[Combattre un Répugnant] #gGagnez #gOnde #gÉtrange en tant que récompense de combat.",
+      "[Combattre un Explosif] #gGagnez #gExplosion en tant que récompense de combat.",
+      "[Partir]",
+      "[Commencer le combat]",
+      "[Combattre aussi un Épineux] #gGagnez #gPicots en tant que récompense.",
+      "[Combattre aussi un Répugnant] #gGagnez #gOnde #gÉtrange en tant que récompense.",
+      "[Combattre aussi un Explosif] #gGagnez #gExplosion en tant que récompense."
+    ]
+  },
+  "bronze:AncientFactory": {
+    "NAME": "Usine antique",
+    "DESCRIPTIONS": [
+      "Alors que vous continuez votre descente, infatiguable, vous faites face à l'usine ~originelle~. Vous vous souvenez d'être ici pour votre assemblage, quand vous avez rencontré votre ~Créateur~ pour la première fois. NL Chacun des anciens robots qu'ils ont créé sont aussi #yparfaits que vous. Il y a des parties d'anciens prototypes qui pourraient vous être utiles, mais cela requiert que vous les activiez.",
+      "Même pour des projets non-terminés, ils sont tout de même redoutables - pas besoin de prendre des risques qui ne sont pas nécessaires."
+    ],
+    "OPTIONS": [
+      "[Combattre un prototype de Donu] #gGagnez #gProto-laser.",
+      "[Combattre un prototype de Deca] #gGagnez #gProto-Bouclier.",
+      "[Combattre les deux] #gGagnez les deux #gCartes.",
+      "[Partir]"
+    ]
+  },
+  "bronze:BackToBasics": {
+    "NAME": "Retour aux bases",
+    "DESCRIPTIONS": [
+      "Il n'y a pas de force sans unité."
+    ],
+    "OPTIONS": [
+      "[Unification] Toutes les #gFrappes et #gDéfenses gagnent #gEncode.",
+      "[Verrouillé] Requiert une Frappe ou une Défense."
+    ]
+  },
+  "bronze:AccursedBlacksmith": {
+    "NAME": "Forge maudite",
+    "DESCRIPTIONS": [
+      "Vous décidez d'utiliser la forge et... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...d'améliorer votre arsenal avec des nouvelles mises à jour et servos."
+    ],
+    "OPTIONS": [
+      "[Bricoler] #gAméliorez #g3 #gCartes #gAléatoires #gavec #gEncode.",
+      "[Verrouillé] Requiert une carte non-améliorée avec Encode."
+    ]
+  },
+  "bronze:CrystalForge": {
+    "NAME": "Forge sombre",
+    "DESCRIPTIONS": [
+      "À travers des passages connus seulement des sentinelles de la Tour, vous entrez dans une chambre faite pour la maintenance et la réparation des Automates. Les outils disponibles ici pourraient vous être utiles.",
+      "Avec les pinces magiques, vous intégrez délicatement une arme dans votre propre noyau. #y@Bzzzt!@ On dirait que se coder soi-même n'est pas si facile que ça en a l'air...",
+      "Utilisant l'enclume enchantée, vous détruisez une pièce d'équipement précieuse, pour ensuite la forger en une explosion d'énergie pure. Elle ~se~  ~fond~ ~en~ ~vous~ , vous remplissant de chaleur et de force.",
+      "La capacité de la Forge à transmettre la matière est utilisée immédiatement alors que vous jetez une pièce d'équipement inutile. Quelques instants plus tard, le matériel se dissout et se compresse en une nouvelle amélioration pour votre armure.",
+      "Vous vous échappez à travers le même passage par lequel vous êtes entré, laissant la Forge Sombre derrière vous. Votre voyage continue, vous dirigeant vers le haut de la Tour.",
+      "Choisissez une carte à Retirer."
+    ],
+    "OPTIONS": [
+      "[Fabriquer] #gGagnez #gCode #gEmbouteillé. #rPerdez #r10 #rPV #rMax.",
+      "[Transmettre] #rRetirez une Carte. Gagnez une #gCarte aléatoire #gavec #gEncode.",
+      "[Reforger] #rRetirez une Carte #yRare. #gGagnez #g10 #gPV #gMax #get #gSoignez-vous #gentièrement.",
+      "[Verrouillé] Déjà utilisé.",
+      "[Quitter]",
+      "[Verrouillé] Requiert une carte avec Encodez.",
+      "[Verrouillé] Requiert une carte Rare.",
+      "Choisissez une carte à Retirer."
+    ]
+  }
+}

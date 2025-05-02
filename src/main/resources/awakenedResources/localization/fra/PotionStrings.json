@@ -1,0 +1,34 @@
+{
+  "bronze:FreeFunctionsPotion": {
+    "NAME": "Huile de Machine",
+    "DESCRIPTIONS": [
+      "Augmentez tous les nombres des cartes de la Séquence de #b",
+      "."
+    ]
+  },
+  "bronze:CleanCodePotion": {
+    "NAME": "Élixir alchylique",
+    "DESCRIPTIONS": [
+      "Retirez tous les effets des *Erreurs de Compilation de la prochaine Fonction qur vous créez. Réduisez son coût à #b0 jusqu'à ce qu'elle soit jouée",
+      "Retirez tous les effets des *Erreurs de Compilation pour les #b",
+      "prochaines Fonctions que vous créez.  Réduisez leur coût à #b0 jusqu'à ce qu'elles soient jouées ."
+    ]
+  },
+  "bronze:BurnAndBuffPotion": {
+    "NAME": "Préparation Épuisante",
+    "DESCRIPTIONS": [
+      "Gagnez #b",
+      " de Force et #b",
+      " de Dexterité. NL Ajoutez deux #yBrûlures+ à votre défausse ."
+    ]
+  },
+  "bronze:BuildAFunctionPotion": {
+    "NAME": "Savant mélange de Kio",
+    "DESCRIPTIONS": [
+      "Jusqu'à ce que la séquence soit complète, choisissez #b1 parmi #b3 cartes aléatoires à #yEncoder.",
+      "Jusqu'à ce que la séquence soit complète, choisissez #b1 parmi #b3 cartes aléatoires à #yEncoder. Ajoutez #b",
+      " copies de la Fonction créée à votre main .",
+      " copies de la Fonction créée à votre main."
+    ]
+  }
+}

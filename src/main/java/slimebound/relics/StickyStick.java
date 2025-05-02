@@ -21,7 +21,7 @@ public class StickyStick extends CustomRelic {
     //Gelatinous Cube
     public StickyStick() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.RARE, LandingSound.SOLID);
+                RelicTier.UNCOMMON, LandingSound.SOLID);
         this.largeImg = TextureLoader.getTexture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
 
     }
@@ -32,22 +32,9 @@ public class StickyStick extends CustomRelic {
     }
 
     public void onCardDraw(AbstractCard card) {
-        if (this.counter == 2) {
-            this.grayscale = true;
-            return;
-        }
-
-        if (this.counter < 3) {
-            if (card.type == AbstractCard.CardType.STATUS || card.type == AbstractCard.CardType.CURSE) {
-                this.flash();
-                ++this.counter;
-                //this.addToTop(new ExhaustSpecificCardAction(card,AbstractDungeon.player.hand));
-                this.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
-                if (card.cardID.equals(VoidCard.ID) || card.cardID.equals(IntoTheVoid.ID)) {
-                    this.flash();
-                    this.addToTop(new GainEnergyAction(1));
-                }
-            }
+        if (card.type == AbstractCard.CardType.STATUS || card.type == AbstractCard.CardType.CURSE) {
+            flash();
+            addToBot(new GainBlockAction(AbstractDungeon.player, 3));
         }
     }
 

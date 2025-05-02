@@ -2,6 +2,7 @@ package expansioncontent.cards;
 
 
 import automaton.AutomatonChar;
+import awakenedOne.AwakenedOneChar;
 import champ.ChampChar;
 import collector.CollectorChar;
 import com.badlogic.gdx.Gdx;
@@ -45,6 +46,8 @@ public class StudyTheSpire extends AbstractExpansionCard {
                     if(q.hasTag(expansionContentMod.STUDY_AUTOMATON)){continue;}
                 } else if (AbstractDungeon.player instanceof CollectorChar) {
                     if(q.hasTag(expansionContentMod.STUDY_COLLECTOR)){continue;}
+                } else if (AbstractDungeon.player instanceof AwakenedOneChar) {
+                    if(q.hasTag(expansionContentMod.STUDY_AWAKENEDONE)){continue;}
                 }
 
                 AbstractCard r = q.makeCopy();

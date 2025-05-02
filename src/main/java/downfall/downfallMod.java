@@ -16,6 +16,8 @@ import automaton.cards.Strike;
 import automaton.potions.BurnAndBuffPotion;
 import automaton.relics.*;
 import automaton.util.*;
+import awakenedOne.AwakenedOneChar;
+import awakenedOne.AwakenedOneMod;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -225,8 +227,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             true, // Champ 7
             true, // Auto 8
             true, // Gremlins 9
-            true // Snecko 10
-            // true, //act3 boss 11
+            true, // Snecko 10
+            true  // Awakened 11
          // true, //act3 boss 12
          // true //act3 boss 13
     };
@@ -340,6 +342,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 return "hermitResources/" + path;
             case PACKAGE_COLLECTOR:
                 return "collectorResources/" + path;
+            case PACKAGE_AWAKENED:
+                return "awakenedResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -435,6 +439,9 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
 
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_COLLECTOR));
+
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_AWAKENED));
+
         } else {
 
             //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
@@ -541,6 +548,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
         loadModKeywords(HermitMod.getModID(), otherPackagePaths.PACKAGE_HERMIT);
         loadModKeywords(CollectorMod.getModID(), otherPackagePaths.PACKAGE_COLLECTOR);
+        loadModKeywords(AwakenedOneMod.getModID(), otherPackagePaths.PACKAGE_AWAKENED);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
     }
 
@@ -1428,7 +1436,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
 
     public static boolean isDownfallCharacter(AbstractPlayer p) {
-        if (p instanceof SlimeboundCharacter || p instanceof TheHexaghost || p instanceof GuardianCharacter || p instanceof TheSnecko || p instanceof ChampChar || p instanceof AutomatonChar || p instanceof GremlinCharacter || p instanceof hermit.characters.hermit || p instanceof CollectorChar) {
+        if (p instanceof SlimeboundCharacter || p instanceof TheHexaghost || p instanceof GuardianCharacter || p instanceof TheSnecko || p instanceof ChampChar || p instanceof AutomatonChar || p instanceof GremlinCharacter || p instanceof hermit.characters.hermit || p instanceof CollectorChar || p instanceof AwakenedOneChar) {
             return true;
         }
         return false;
@@ -1640,7 +1648,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
 
     public enum otherPackagePaths {
-        PACKAGE_SLIME, PACKAGE_GUARDIAN, PACKAGE_HEXAGHOST, PACKAGE_SNECKO, PACKAGE_EXPANSION, PACKAGE_CHAMP, PACKAGE_AUTOMATON, PACKAGE_GREMLIN, PACKAGE_HERMIT, PACKAGE_COLLECTOR, PACKAGE_DOWNFALL;
+        PACKAGE_SLIME, PACKAGE_GUARDIAN, PACKAGE_HEXAGHOST, PACKAGE_SNECKO, PACKAGE_EXPANSION, PACKAGE_CHAMP, PACKAGE_AUTOMATON, PACKAGE_GREMLIN, PACKAGE_HERMIT, PACKAGE_COLLECTOR, PACKAGE_DOWNFALL, PACKAGE_AWAKENED;;
 
         otherPackagePaths() {
         }
@@ -1742,6 +1750,13 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 AbstractDungeon.actionManager.addToTop(new MessageCaller(10));
             }
         }
+
+        //awakened tutorial 11
+//        if (AbstractDungeon.player instanceof AwakenedOneChar) {
+//            if (downfallMod.unseenTutorials[11]) {
+//                AbstractDungeon.actionManager.addToBottom(new MessageCaller(11));
+//            }
+//        }
     }
 
 

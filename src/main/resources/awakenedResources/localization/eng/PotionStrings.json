@@ -1,0 +1,34 @@
+{
+  "bronze:FreeFunctionsPotion": {
+    "NAME": "Machine Oil",
+    "DESCRIPTIONS": [
+      "Increase all numbers on Encoded cards by #b",
+      " except cost."
+    ]
+  },
+  "bronze:CleanCodePotion": {
+    "NAME": "Alchyrical Elixir",
+    "DESCRIPTIONS": [
+      "Remove all #yCompile #yError effects from the next #yFunction you create, it costs #b0 until played.",
+      "Remove all #yCompile #yError effects from the next #b",
+      " #yFunctions you create, they cost #b0 until played."
+    ]
+  },
+  "bronze:BurnAndBuffPotion": {
+    "NAME": "Vexing Draught",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yStrength and #b",
+      " #yDexterity. NL Add two #yBurn+ cards into your discard pile."
+    ]
+  },
+  "bronze:BuildAFunctionPotion": {
+    "NAME": "Kio's Clever Concoction",
+    "DESCRIPTIONS": [
+      "Choose #b1 of #b3 random cards to #yEncode, repeat until you create a #yFunction.",
+      "Choose #b1 of #b3 random cards to #yEncode, repeat until you create a #yFunction and gain #b",
+      " copy of it.",
+      " copies of it."
+    ]
+  }
+}

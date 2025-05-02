@@ -1,0 +1,147 @@
+{
+  "bronze:Cloning": {
+    "NAME": "Fusion",
+    "DESCRIPTIONS": [
+      "La prochaine fois que vous ajoutez une carte dans la Séquence, ajoutez-en une copie supplémentaire de celle-ci.",
+      "La prochaine fois que vous ajoutez une carte dans la Séquence, ajoutez-en #b",
+      " copies supplémentaires de celle-ci."
+    ]
+  },
+  "bronze:Default": {
+    "NAME": "Classe par défaut",
+    "DESCRIPTIONS": [
+      "Ajoutez une copie de ",
+      " à la prochaine Séquence.",
+      " aux #b",
+      " prochaines Séquences."
+    ]
+  },
+  "bronze:Feature": {
+    "NAME": "C'est une Feature",
+    "DESCRIPTIONS": [
+      "Lorsque vous piochez une #rMalédiction ou une carte #yStatut, gagnez #b",
+      " de #yForce temporaire et #b",
+      " de #yDextérité temporaire."
+    ]
+  },
+  "bronze:InfiniteBeams": {
+    "NAME": "Lasers infinis",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, add #b1 #yMinilaser dans votre main.",
+      "Au début de votre tour, add #b1 #yMinilaser+ dans votre main.",
+      "Au début de votre tour, add #b",
+      " #yMinilaser dans votre main.",
+      "Au début de votre tour, ajoutez #b",
+      " #yMinilaser+ dans votre main."
+    ]
+  },
+  "bronze:Optimize": {
+    "NAME": "Optimisation",
+    "DESCRIPTIONS": [
+      "#yAméliorez la prochaine carte que vous #yEncodez et qui peut être #yAméliorée.",
+      "#yAméliorez les #b",
+      " prochaines cartes que vous #yEncodez et qui peuvent être #yAméliorées."
+    ]
+  },
+  "bronze:MaxOutput": {
+    "NAME": "Rendement max",
+    "DESCRIPTIONS": [
+      "Piochez #b1 carte additionnelle et ajoutez #b1 #yHébétement dans votre pioche chaque tour.",
+      "Piochez #b",
+      " cartes additionnelles et ajoutez #b",
+      " #yHébétement dans votre pioche chaque tour."
+    ]
+  },
+  "bronze:Return": {
+    "NAME": "Retour",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, gagnez [E] et piochez #b1 carte.",
+      "Au début de vos #b",
+      " prochains tours, gagnez [E] et piochez #b1 carte."
+    ]
+  },
+  "bronze:Library": {
+    "NAME": "Bibliothèque",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, ajoutez une carte aléatoire avec #yEncode dans votre main. NL Elle coûte #b0.",
+      "Au début de votre tour, ajoutez #b",
+      " cartes aléatoires avec #yEncode dans votre main. NL Elles coûtent #b0."
+    ]
+  },
+  "bronze:LibraryMod": {
+    "NAME": "Bibliothèque externe",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, ajoutez une carte aléatoire avec #yEncode dans votre main. Celle-ci est Ethérée."
+    ]
+  },
+  "bronze:BronzeHeatsink": {
+    "NAME": "Dissipateur de bronze",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une #yFonction, piochez #b1 carte.",
+      "Lorsque vous jouez une #yFonction, piochez #b",
+      " cartes."
+    ]
+  },
+  "bronze:HardenedForm": {
+    "NAME": "Invocation d'orbe",
+    "DESCRIPTIONS": [
+      "Lorque vous créez ou jouez une Fonction, gagnez #b",
+      " d'#yArmure et infligez #b",
+      " dégâts à un ennemi aléatoire."
+    ]
+  },
+  "bronze:Hardcode": {
+    "NAME": "Hardcoding",
+    "DESCRIPTIONS": [
+      "La prochaine fois que vous créez une Fonction, elle va directement dans votre deck au lieu de votre main, retirant toutes les cartes utilisées pour celle-ci.",
+      "Les #b",
+      " prochaines fois que vous créez une Fonction, elle va directement dans votre deck au lieu de votre main, retirant toutes les cartes utilisées pour celle-ci."
+    ]
+  },
+  "bronze:Verify": {
+    "NAME": "Forme sentinelle",
+    "DESCRIPTIONS": [
+      "La prochaine fois que vous piochez ou créez une Fonction, augmentez tous les nombres dessus de #b1.",
+      "Les #b",
+      " prochaines fois que vous piochez ou créez une Fonction, augmentez tous les nombres dessus de #b1."
+    ]
+  },
+  "bronze:FreeFunction": {
+    "NAME": "Fonction gratuite",
+    "DESCRIPTIONS": [
+      "La prochaine Fonction que vous créez coûte #b0.",
+      "Les #b",
+      " prochaines Fonctions que vous créez coûtent #b0."
+    ]
+  },
+  "bronze:CleanCode": {
+    "NAME": "Clean Code",
+    "DESCRIPTIONS": [
+      "Retirez tous les effets des Erreurs de #yCompilation des cartes de la Séquence. Dure pour #b1 Fonction de plus.",
+      "Retirez tous les effets des Erreurs de #yCompilation des cartes de la Séquence. Dure pour #b",
+      " Fonctions."
+    ]
+  },
+  "bronze:CopyPaste": {
+    "NAME": "Copier-coller",
+    "DESCRIPTIONS": [
+      "Votre prochaine Fonction est jouée 2 fois ce tour.",
+      "Vos #b",
+      " prochaines Fonctions sont jouées 2 fois ce tour."
+    ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "Sortie complète",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, NL "
+    ]
+  },
+  "bronze:RemoveNextError": {
+    "NAME": "Retrait des Erreurs",
+    "DESCRIPTIONS": [
+      "Retirez la prochaine #yErreur de #yCompilation #yEncodée.",
+      "Retirez les #b",
+      "prochaines #yErreurs de #yCompilation #yEncodées."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+package awakenedOne.powers;
+
+
+import basemod.interfaces.OnPowersModifiedSubscriber;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
+import downfall.util.TextureLoader;
+import expansioncontent.expansionContentMod;
+
+import static awakenedOne.powers.AbstractAwakenedPower.makeID;
+
+
+public class DarkEchoPower extends TwoAmountPower implements OnPowersModifiedSubscriber {
+    // intellij stuff buff
+    public static final String NAME = DarkEchoPower.class.getSimpleName();
+    public static final String POWER_ID = makeID(NAME);
+
+    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyHexaghost84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyHexaghost32.png");
+
+    public DarkEchoPower(int amount) {
+        this.name = NAME;
+        this.ID = POWER_ID;
+        this.owner = AbstractDungeon.player;
+        this.amount = amount;
+        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID))
+            this.amount2 = 4 + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+        else this.amount2 = 4;
+        this.type = PowerType.BUFF;
+        this.isTurnBased = true;
+        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+
+        this.updateDescription();
+    }
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+            for (int i = 0; i < amount; i++) {
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.1F, 0.0F, 0.2F, 1.0F), ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
+                this.addToBot(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(amount2, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SMASH, true));
+            }
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.3F, 0.2F, 0.4F, 1.0F), ShockWaveEffect.ShockWaveType.CHAOTIC), 1.0F));
+    }
+
+    @Override
+    public void receivePowersModified() {
+        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID))
+            this.amount2 = 4 + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+        else this.amount2 = 4;
+        updateDescription();
+    }
+
+    @Override
+    public void updateDescription() {
+            this.description = "At the end of your turn, deal #b" + amount2 + "damage to ALL enemies #b" + amount + "times.";
+        }
+    }
+
+
+
+

@@ -1,0 +1,40 @@
+{
+  "awakened:RippedDoll": {
+    "NAME": "Ripped Doll",
+    "FLAVOR": "The last reminder of your prior self. It still holds latent magicks.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #yCeremony [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:ShreddedDoll": {
+    "NAME": "Shredded Doll",
+    "FLAVOR": "A reminder of your weakness, and yet you still can't let go.",
+    "DESCRIPTIONS": [
+      "Replaces ",
+      " [REMOVE_SPACE].[] NL At the start of combat, gain #yCeremony+ [REMOVE_SPACE], and #b1 Ritual."
+    ]
+  },
+  "awakened:KTRibbon": {
+    "NAME": "Daemon's Ribbon",
+    "FLAVOR": "A conduit that grants power to spoken words.",
+    "DESCRIPTIONS": [
+      "Whenever you activate a #yawakened:Chant effect, gain #b",
+      " Block [REMOVE_SPACE]. Activates one #yawakened:Chant effect for free each turn."
+    ]
+  },
+  "awakened:HexxBomb": {
+    "NAME": "Hexx Bomb",
+    "FLAVOR": "Countdown to absolute Oblivion.",
+    "DESCRIPTIONS": [
+      "At the start of combat and whenever an enemy with #yawakened:Ultimate #yawakened:Hex is attacked, apply #b1 #yawakened:Hex to a random enemy."
+    ]
+  },
+  "awakened:TomeOfPortalmancy": {
+    "NAME": "Tome of Portalmancy",
+    "FLAVOR": "A grimoire detailing the construction and maintenance of interplanar gates.",
+    "DESCRIPTIONS": [
+      "Whenever a *Void is Exhausted, apply #b",
+      " #yawakened:Hex to ALL enemies."
+    ]
+  }
+}

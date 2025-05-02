@@ -100,7 +100,7 @@
     "NAME": "Gelatinous Cube",
     "FLAVOR": "Hey, it stuck to your body.",
     "DESCRIPTIONS": [
-      "The first #b2 times you draw a #yStatus or #rCurse each turn, draw #b1 card. If the card was a #yVoid [REMOVE_SPACE], gain [E] [REMOVE_SPACE]."
+      "Whenever you draw a #yStatus or #rCurse, gain #b3 Block [REMOVE_SPACE]."
     ]
   }
 }

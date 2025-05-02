@@ -1,0 +1,104 @@
+{
+  "bronze:BronzeCore": {
+    "NAME": "銅製核心",
+    "FLAVOR": "每50,000年一換。",
+    "DESCRIPTIONS": [
+      "每場戰鬥 #ybronze:編譯 首張 #ybronze:方法 時，獲得 [E] 。"
+    ]
+  },
+  "bronze:ProtectiveGoggles": {
+    "NAME": "護目鏡",
+    "FLAVOR": "仔細觀察。",
+    "DESCRIPTIONS": [
+      "回合結束時如果 #ybronze:隊列 中沒有牌，獲得 #b4 點 #y格擋 。"
+    ]
+  },
+  "bronze:DecasWashers": {
+    "NAME": "八體墊片",
+    "FLAVOR": "真不知道八體為何收藏這些。",
+    "DESCRIPTIONS": [
+      "每場戰鬥開始時，抽 #b3 張牌並將 #b1 張 #y暈眩 加入抽牌堆。"
+    ]
+  },
+  "bronze:Timepiece": {
+    "NAME": "懷表",
+    "FLAVOR": "他的眾多鐘表收藏之一。",
+    "DESCRIPTIONS": [
+      "你 #ybronze:編譯 的 #ybronze:方法 附帶 #y保留 。"
+    ]
+  },
+  "bronze:Mallet": {
+    "NAME": "鐵錘",
+    "FLAVOR": "就是這麽炫! 舉起我的小鐵錘!",
+    "DESCRIPTIONS": [
+      "每場戰鬥開始時，將 #b2 張 #y性能調整+ 加入手牌。"
+    ]
+  },
+  "bronze:SilverBullet": {
+    "NAME": "銀色子彈",
+    "FLAVOR": "尖塔裏的狼都絕跡了。",
+    "DESCRIPTIONS": [
+      "每場戰鬥開始時， #ybronze:編碼 #b1 張 #y穿透射擊 。"
+    ]
+  },
+  "bronze:MakeshiftBattery": {
+    "NAME": "備用電池",
+    "FLAVOR": "足足有8.9伏特。",
+    "DESCRIPTIONS": [
+      "你的回合開始時，獲得 [E] 並將 #b1 張 #y黏液 加入棄牌堆。"
+    ]
+  },
+  "bronze:CableSpool": {
+    "NAME": "電纜線軸",
+    "FLAVOR": "纏繞起來的一團……",
+    "DESCRIPTIONS": [
+      "每場戰鬥首張 #ybronze:編碼 牌 #y編碼 #b2 次。"
+    ]
+  },
+  "bronze:ElectromagneticCoil": {
+    "NAME": "電磁線圈",
+    "FLAVOR": "效率低下但有趣的能源裝置。",
+    "DESCRIPTIONS": [
+      " #ybronze:方法 現在由 #b4 張牌組成。"
+    ]
+  },
+  "bronze:PlatinumCore": {
+    "NAME": "鉑金核心",
+    "FLAVOR": "更新日誌: 提升用戶體驗。",
+    "DESCRIPTIONS": [
+      "替換 ",
+      "。[] NL 每場戰鬥 #ybronze:編譯 的前 #b3 張 #ybronze:方法 首次耗能為 #b0 。"
+    ]
+  },
+  "bronze:BottledCode": {
+    "NAME": "瓶裝代碼",
+    "FLAVOR": "實際上,這確實是我編碼的。。。",
+    "DESCRIPTIONS": [
+      "拾起時，選擇牌組中的 #b1 張 #ybronze:編碼 牌。 戰鬥開始時它直接進入 #ybronze:隊列。",
+      "選擇一張牌 ",
+      "每場戰鬥開始時， ",
+      " 直接進入 #ybronze:隊列 。"
+    ]
+  },
+  "bronze:DonusWashers": {
+    "NAME": "甜圈墊片",
+    "FLAVOR": "這顯然是甜甜圈的藏品。",
+    "DESCRIPTIONS": [
+      "每場戰鬥開始時，獲得 [E] [E] 並將 #b1 張 #y虛空 加入抽牌堆。"
+    ]
+  },
+  "bronze:BronzeIdol": {
+    "NAME": "銅製神像",
+    "FLAVOR": "一種古老的，武器化的抗病毒程序 - 無人知曉其生成者和目的",
+    "DESCRIPTIONS": [
+      "#y狀態牌 可打出且附帶 #g正面效果 。"
+    ]
+  },
+  "bronze:AnalyticalCore": {
+    "NAME": "悖論製品",
+    "FLAVOR": "你從未見過如此意義不明的人工製品。",
+    "DESCRIPTIONS": [
+      "每回合開始時，隨機將 #b1 張 #y虛無 #ybronze:編碼 牌加入手牌。"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "PROPER_NAME": "Flying",
+    "NAMES": [
+      "flying"
+    ],
+    "DESCRIPTION": "At the end of your turn, if this is in your hand, it flies back into your draw pile and leaves a #yFeather in your hand."
+  },
+  {
+    "PROPER_NAME": "Conjure",
+    "NAMES": [
+      "conjure",
+      "conjured"
+    ],
+    "DESCRIPTION": "Move a card from your Spell pile into your hand. If your Spell pile is empty, immediately refresh it."
+  },
+  {
+    "PROPER_NAME": "Chant",
+    "NAMES": [
+      "chant"
+    ],
+    "DESCRIPTION": "Chant effects activate during play if you played a Power while this card was in hand."
+  },
+
+  {
+    "PROPER_NAME": "Hex",
+    "NAMES": [
+      "hex",
+      "hexxed",
+      "hexx",
+      "ultimate"
+    ],
+    "DESCRIPTION": "Hexxed creatures gain additional #yHex whenever you play a non-Attack card. Powers increase #yHex by #b3 [REMOVE_SPACE]. Creatures with #b10 #yHex take #rdouble #rdamage from the next Attack. Additional #yHex can't be stacked during this time."
+  }
+]

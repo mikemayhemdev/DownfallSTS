@@ -1,6 +1,7 @@
 package collector.cards;
 
 import automaton.AutomatonChar;
+import awakenedOne.AwakenedOneChar;
 import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import champ.ChampChar;
@@ -55,6 +56,8 @@ public class ReceiveTribute extends AbstractCollectorCard {
                         if(q.hasTag(expansionContentMod.STUDY_AUTOMATON)){continue;}
                     } else if (AbstractDungeon.player instanceof CollectorChar) {
                         if(q.hasTag(expansionContentMod.STUDY_COLLECTOR)){continue;}
+                    } else if (AbstractDungeon.player instanceof AwakenedOneChar) {
+                        if(q.hasTag(expansionContentMod.STUDY_AWAKENEDONE)){continue;}
                     }
 
                     AbstractCard r = q.makeCopy();

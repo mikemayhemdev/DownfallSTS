@@ -1,0 +1,228 @@
+{
+  "awakened:AwakenedPower": {
+    "NAME": "Awakened",
+    "DESCRIPTIONS": [
+      "You are currently at #yAwakened #b",
+      "."
+    ]
+  },
+  "awakened:IntensifyPower": {
+    "NAME": "Intensify",
+    "DESCRIPTIONS": [
+      "The next Spell card you play this turn is played twice.",
+      "The next #b",
+      " Spell cards you play this turn are played twice."
+    ]
+  },
+  "awakened:InResponsePower": {
+    "NAME": "Spellshield",
+    "DESCRIPTIONS": [
+      "Whenever you play a Spell, gain #b",
+      " #yBlock."
+    ]
+  },
+  "awakened:RisingChantPower": {
+    "NAME": "Rising Chant",
+    "DESCRIPTIONS": [
+      "Whenever you activate a #yChant effect, gain #b",
+      " #yStrength."
+    ]
+  },
+  "awakened:ThaumaturgyPower": {
+    "NAME": "Thaumaturgy",
+    "DESCRIPTIONS": [
+      "Whenever you play a Power, gain #b",
+      " #yBlock."
+    ]
+  },
+  "awakened:DogmaPower": {
+    "NAME": "Dogma",
+    "DESCRIPTIONS": [
+      "Whenever you play a Power, apply #b",
+      " #yHex to ALL enemies."
+    ]
+  },
+  "awakened:ToxinWingPower": {
+    "NAME": "Toxin Wing",
+    "DESCRIPTIONS": [
+      "#yFeathers apply #b",
+      " #yPoison."
+    ]
+  },
+  "awakened:AboveItAllPower": {
+    "NAME": "Above It All",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yAwakened, also gain #b",
+      " #yBlock."
+    ]
+  },
+  "awakened:CrowsCallPower": {
+    "NAME": "Crow's Call",
+    "DESCRIPTIONS": [
+      "At the end of your turn, ALL enemies lose #b",
+      " HP for each #rCurse or #yStatus card in your hand."
+    ]
+  },
+  "awakened:FromNothingPower": {
+    "NAME": "From Nothing",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " random cost #b0 card into your hand.",
+      " random cost #b0 cards into your hand."
+    ]
+  },
+  "awakened:BigSpenderPower": {
+    "NAME": "Big Spender",
+    "DESCRIPTIONS": [
+      "The first time you play a card that costs more than #b1 each turn, gain [E] . NL ",
+      "The first #b",
+      " times you play a card that costs more than #b1 each turn, gain [E] . NL ",
+      " Activations left this turn: #b",
+      "."
+    ]
+  },
+  "awakened:ThoughthsieldPower": {
+    "NAME": "Thoughtshield",
+    "DESCRIPTIONS": [
+      "Enemies can't create cards this turn.",
+      "Enemies can't create cards for the next #b",
+      " turns."
+    ]
+  },
+  "awakened:StrengthOverTurns": {
+    "NAME": "Empower",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, gain #b",
+      " #yStrength.",
+      "At the start of your next #b",
+      " turns, gain #b"
+    ]
+  },
+  "awakened:EnemyHexedPower": {
+    "NAME": "Hexed",
+    "DESCRIPTIONS": [
+      "This creature has #b",
+      " #yHex. Play non-attack cards to increase it."
+    ]
+  },
+  "awakened:UltimateHexDebuff": {
+    "NAME": "Ultimate Hex",
+    "DESCRIPTIONS": [
+      "This creature takes #rdouble #rdamage from the next Attack.",
+      "This creature takes #rdouble #rdamage from the next #b",
+      " Attacks."
+    ]
+  },
+  "awakened:HemorrhageDebuff": {
+    "NAME": "Hemorrhage",
+    "DESCRIPTIONS": [
+      "In #b2 turns, take #b",
+      " damage."
+    ]
+  },
+  "awakened:BleedDebuff": {
+    "NAME": "Bleeding",
+    "DESCRIPTIONS": [
+      "At the end of your turn, take #b",
+      " damage."
+    ]
+  },
+  "awakened:FlarePower": {
+    "NAME": "Flare Shot",
+    "DESCRIPTIONS": [
+      "Whenever you play a non-Attack card this turn, deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "awakened:FlightOfFancyPower": {
+    "NAME": "Flight of Fancy",
+    "DESCRIPTIONS": [
+      "Give the first #b",
+      " cards you draw each turn #yFlying."
+    ]
+  },
+  "awakened:MazalethsMadnessPower": {
+    "NAME": "Mazaleth's Madness",
+    "DESCRIPTIONS": [
+      "Whenever you play a Spell, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "awakened:ZeroToHeroPower": {
+    "NAME": "Zero to Hero",
+    "DESCRIPTIONS": [
+      "Cost #b0 cards are played twice.",
+      "Cost #b0 cards are played #b",
+      " times."
+    ]
+  },
+  "awakened:TowerOfEndingsPower": {
+    "NAME": "Tower of Endings",
+    "DESCRIPTIONS": [
+      "When you reach #yAwakened #b",
+      " #rkill #rALL #renemies."
+    ]
+  },
+  "awakened:BlotOutPower": {
+    "NAME": "Blotted Out",
+    "DESCRIPTIONS": [
+      "Can't buff itself or debuff you this turn.",
+      "Can't buff itself or debuff you for the next #b",
+      " turns."
+    ]
+  },
+  "awakened:FeatherPower": {
+    "NAME": "Feathersinks",
+    "DESCRIPTIONS": [
+      "Whenever you refresh your Spells, draw #b",
+      " card.",
+      " cards."
+    ]
+  },
+  "awakened:PrimacyPower": {
+  "NAME": "Primacy",
+  "DESCRIPTIONS": [
+    "Whenever you gain #yStrength, draw #b",
+    " card.",
+    " cards."
+  ]
+},
+  "awakened:LibrarianPower": {
+    "NAME": "Librarian",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yConjure at random.",
+      "At the start of your turn, #yConjure at random #b",
+      " times."
+    ]
+  },
+  "awakened:DarkEchoPower": {
+    "NAME": "Dark Echo",
+    "DESCRIPTIONS": [
+      "At the end of your turn, deal #b",
+      " damage to ALL enemies #b",
+      " time(s)."
+    ]
+  },
+  "awakened:EmpressPower": {
+    "NAME": "The Empress",
+    "DESCRIPTIONS": [
+      "#yConjured Spells are #yUpgraded."
+    ]
+  },
+  "awakened:MazalethFormPower": {
+    "NAME": "Mazaleth Form",
+    "DESCRIPTIONS": [
+      "The first Power you play each turn costs #b0 [REMOVE_SPACE].",
+      "The first #b",
+      " Powers you play each turn cost #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:MazalethFormChantPower": {
+    "NAME": "Mercy",
+    "DESCRIPTIONS": [
+      "The first Power you play each turn draws a card.",
+      "The first #b",
+      " Powers you play each turn draw a card."
+    ]
+  }
+}

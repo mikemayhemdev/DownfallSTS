@@ -1,0 +1,55 @@
+{
+  "bronze:SpecificCardReward": {
+    "TEXT": [
+      "Добавьте карту «",
+      "» в колоду",
+      "Добавьте карту."
+    ]
+  },
+  "bronze:UnplayableMod": {
+    "TEXT": [
+      "Неиграбельная. NL ",
+      "ERR_NULL_PTR"
+    ]
+  },
+  "bronze:EncodeAndShuffleMod": {
+    "TEXT": [
+      " NL bronze:Записывается, затем добавляет свою копию в стопку сброса."
+    ]
+  },
+  "bronze:DoublePlayModifier": {
+    "TEXT": [
+      " NL Разыгрывается дважды."
+    ]
+  },
+  "bronze:MiscStrings": {
+    "TEXT": [
+      "Выберите карту, которую хотите вернуть в руку. Она #yОставляется.",
+      " - навсегда повышает урон от #yУдара #yкультиста на #b",
+      ".",
+      "ERR: SEQUENCE_EMPTY",
+      " - добавляет копию #yБесконечного #yцикла в руку с уроном на #b",
+      " больше.",
+      "преобразовать.",
+      " Записать.",
+      ""
+    ]
+  },
+  "bronze:AutoTextHelper": {
+    "TEXT": [
+      " NL bronze:Компиляция",
+      "bronze:Компиляция",
+      " NL bronze:Записывается в код.",
+      "bronze:Записывается в код. NL ",
+      "\u202F Когда bronze:Записывается",
+      "LOCALIZATION NOTE: The text above must be equal to the start of Replicate's extra description line.",
+      "ERR - NO_DUPE_FULL_RELEASES"
+    ]
+  },
+  "bronze:CompileDisplayPanel": {
+    "TEXT": [
+      "При компиляции:",
+      "bronze:Компиляция"
+    ]
+  }
+}

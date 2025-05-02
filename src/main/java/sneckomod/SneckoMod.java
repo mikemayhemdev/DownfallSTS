@@ -141,7 +141,7 @@ public class SneckoMod implements
     public static Random identifyRng;
 
     public static ArrayList<AbstractCard.CardColor> validColors = new ArrayList<>();
-    public static ArrayList<String> allowedColors = new ArrayList<>(Arrays.asList("RED", "BLUE", "GREEN", "PURPLE", "GUARDIAN", "SLIMEBOUND", "HEXA_GHOST_PURPLE", "THE_CHAMP_GRAY", "THE_BRONZE_AUTOMATON", "GREMLIN", "HERMIT_YELLOW", "THE_COLLECTOR"));
+    public static ArrayList<String> allowedColors = new ArrayList<>(Arrays.asList("RED", "BLUE", "GREEN", "PURPLE", "GUARDIAN", "SLIMEBOUND", "HEXA_GHOST_PURPLE", "THE_CHAMP_GRAY", "THE_BRONZE_AUTOMATON", "GREMLIN", "HERMIT_YELLOW", "THE_COLLECTOR", "AWAKENED_BLUE"));
     public static ArrayList<UnknownClass> unknownClasses = new ArrayList<>();
     public static boolean pureSneckoMode = false;
 

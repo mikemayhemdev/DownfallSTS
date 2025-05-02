@@ -1,0 +1,49 @@
+[
+  {
+    "PROPER_NAME": "Encode",
+    "NAMES": [
+      "encodé",
+      "encodée",
+      "encodées",
+      "encodez",
+      "encoder",
+      "encode",
+      "encoded"
+    ],
+    "DESCRIPTION": "Ajoutez la carte à la Séquence. NL Quand 3 cartes sont dans la Séquence, leurs effets (autre que Encode) sont fusionnés en une Fonction dont le coût est égal au coût de la carte la plus chère."
+  },
+  {
+    "PROPER_NAME": "Compilation",
+    "NAMES": [
+      "compilation",
+      "compilé",
+      "compile",
+      "compiled"
+    ],
+    "DESCRIPTION": "Un effet additionnel qui se déclenche lorsque cette carte, alors qu'elle est dans cette Séquence, est combinée dans une Fonction. NL Peut être un effet négatif, qui est référré en tant qu''Erreur'."
+  },
+  {
+    "PROPER_NAME": "Flou",
+    "NAMES": [
+      "flou",
+      "blur"
+    ],
+    "DESCRIPTION": "Ne perdez pas d'Armure au début du prochain tour."
+  },
+  {
+    "PROPER_NAME": "Insertion",
+    "NAMES": [
+      "insérez",
+      "insert"
+    ],
+    "DESCRIPTION": "Placez et mélangez une carte dans votre pioche."
+  },
+  {
+    "PROPER_NAME": "Cycle",
+    "NAMES": [
+      "cyclez",
+      "cycle"
+    ],
+    "DESCRIPTION": "Défaussez une carte et piochez en une pour la remplacer."
+  }
+]

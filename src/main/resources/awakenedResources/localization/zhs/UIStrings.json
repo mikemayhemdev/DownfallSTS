@@ -1,0 +1,54 @@
+{
+  "bronze:SpecificCardReward": {
+    "TEXT": [
+      "将 ",
+      " 加入牌组",
+      "选择一张牌"
+    ]
+  },
+  "bronze:UnplayableMod": {
+    "TEXT": [
+      " 不能被打出 。 NL ",
+      " ERR_NULL_PTR "
+    ]
+  },
+  "bronze:EncodeAndShuffleMod": {
+    "TEXT": [
+      " NL bronze:编码 。 NL 将这张牌的复制品加入你的弃牌堆"
+    ]
+  },
+  "bronze:DoublePlayModifier": {
+    "TEXT": [
+      " NL 再打出一次。"
+    ]
+  },
+  "bronze:MiscStrings": {
+    "TEXT": [
+      "选择一张牌返回手牌，其获得保留",
+      " - 本局游戏提高 #y邪教打击 的伤害 #b",
+      " 点。",
+      "错误：队列为空",
+      " - 将提高 #b",
+      " 点伤害的 #y无限循环 加入手牌。",
+      "选择一张牌变化",
+      "选择一张牌编码",
+      "选择一张牌"
+    ]
+  },
+  "bronze:AutoTextHelper": {
+    "TEXT": [
+      " NL bronze:编译 ",
+      " bronze:编译 ",
+      " NL bronze:编码 。",
+      " bronze:编码 。 NL ",
+      "\u202F bronze:编码 时",
+      "LOCALIZATION NOTE: 上方文本疑似弃用。"
+    ]
+  },
+  "bronze:CompileDisplayPanel": {
+    "TEXT": [
+      "编译时：",
+      " bronze:编译 "
+    ]
+  }
+}

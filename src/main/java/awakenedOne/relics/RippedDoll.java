@@ -1,0 +1,36 @@
+package awakenedOne.relics;
+
+import awakenedOne.AwakenedOneMod;
+import awakenedOne.cards.tokens.Ceremony;
+import awakenedOne.util.TexLoader;
+import basemod.abstracts.CustomRelic;
+import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
+import static awakenedOne.AwakenedOneMod.makeRelicPath;
+
+public class RippedDoll extends CustomRelic {
+
+    public static final String ID = AwakenedOneMod.makeID("RippedDoll");
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("RippedDoll.png")); //TODO: Images
+    private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("RippedDoll.png"));
+
+    public RippedDoll() {
+        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
+    }
+
+    @Override
+    public void atBattleStart() {
+        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        this.addToTop(new MakeTempCardInHandAction(new Ceremony(), 1, false));
+    }
+
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
+    }
+
+}

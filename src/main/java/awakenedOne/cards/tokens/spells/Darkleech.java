@@ -1,0 +1,39 @@
+package awakenedOne.cards.tokens.spells;
+
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
+
+import static awakenedOne.AwakenedOneMod.HexCurse;
+import static awakenedOne.AwakenedOneMod.makeID;
+
+public class Darkleech extends AbstractSpellCard {
+    public final static String ID = makeID(Darkleech.class.getSimpleName());
+    // intellij stuff skill, all_enemy, , , , , 7, 2
+
+    public Darkleech() {
+        super(ID, CardType.SKILL, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 1;
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        if (!upgraded) {
+            this.addToBot(new VFXAction(new GiantEyeEffect(m.hb.cX, m.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
+            HexCurse(magicNumber, m, p);
+        }
+        else {
+            AbstractDungeon.getMonsters().monsters.stream().filter(m2 -> !m2.isDead && !m2.isDying).forEach(m2 -> {
+                this.addToBot(new VFXAction(new GiantEyeEffect(m2.hb.cX, m2.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
+                HexCurse(magicNumber, m2, p);
+            });
+        }
+    }
+
+    public void upp() {
+        target = CardTarget.ALL_ENEMY;
+    }
+}
