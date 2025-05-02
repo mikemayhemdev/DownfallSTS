@@ -40,10 +40,6 @@ public class Cryostasis extends AbstractSpellCard {
         AbstractDungeon.effectsQueue.add(new FrostOrbActivateEffect(p.hb.cX, p.hb.cY));
         blck();
 
-        if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
-            AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
-        }
-
         if (this.chant) {
 
             if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
@@ -51,6 +47,7 @@ public class Cryostasis extends AbstractSpellCard {
             }
 
             if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+                AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
                 for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                     if (!monster.isDead && !monster.isDying) {
                         addToBot(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
@@ -69,6 +66,7 @@ public class Cryostasis extends AbstractSpellCard {
                 }
 
                 if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+                    AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
                     for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                         if (!monster.isDead && !monster.isDying) {
                             addToBot(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
