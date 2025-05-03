@@ -332,7 +332,6 @@
   },
   "awakened:DarkPortal": {
     "NAME": "Dark Portal",
-    "DESCRIPTION": "Put a card from your discard pile into your hand. NL It costs 0 this turn. NL Place a *Void on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put a card from your discard pile into your hand. NL It costs 0 this turn. NL Put a *Void into your discard pile. NL Exhaust."
+    "DESCRIPTION": "Fetch a card from your discard pile, it costs 0 this turn. NL Put a *Void into your discard pile. NL Exhaust."
   }
 }

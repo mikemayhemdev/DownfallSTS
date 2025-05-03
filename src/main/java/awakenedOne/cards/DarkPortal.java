@@ -21,7 +21,7 @@ public class DarkPortal extends AbstractAwakenedCard {
     public static final String[] TEXT;
 
     public DarkPortal() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
         cardsToPreview = new VoidCard();
     }
@@ -57,6 +57,7 @@ public class DarkPortal extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
+        upgradeBaseCost(0);
     }
 
     static {
