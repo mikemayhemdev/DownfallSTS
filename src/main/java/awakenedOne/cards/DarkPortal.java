@@ -23,6 +23,7 @@ public class DarkPortal extends AbstractAwakenedCard {
     public DarkPortal() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
+        cardsToPreview = new VoidCard();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -17,6 +17,7 @@ public class SingularityShield extends AbstractAwakenedCard {
     public SingularityShield() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 9;
+        cardsToPreview = new VoidCard();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
