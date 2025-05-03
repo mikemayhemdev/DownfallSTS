@@ -296,5 +296,9 @@
   "awakened:Spew": {
     "NAME": "Spew",
     "DESCRIPTION": "Deal !D! damage. NL Costs 0 if a *Void is in hand."
+  },
+  "awakened:DarknessFalls": {
+    "NAME": "Darkness Falls",
+    "DESCRIPTION": "Whenever you lose [E] , gain !M! Block and !awakened:m2! Strength."
   }
 }

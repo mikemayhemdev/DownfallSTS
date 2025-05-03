@@ -224,5 +224,13 @@
       "The first #b",
       " Powers you play each turn draw a card."
     ]
+  },
+  "awakened:DarknessFallsPower": {
+    "NAME": "Darkness Falls",
+    "DESCRIPTIONS": [
+      "Whenever you lose [E], gain #b",
+      " #yStrength and #b",
+      " #yBlock."
+    ]
   }
 }
