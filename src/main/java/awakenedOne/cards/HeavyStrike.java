@@ -16,9 +16,9 @@ public class HeavyStrike extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
 
     public HeavyStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 13;
-        secondDamage = 10;
+        baseSecondDamage = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
