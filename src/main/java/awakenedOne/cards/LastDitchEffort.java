@@ -2,6 +2,8 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,15 +16,34 @@ public class LastDitchEffort extends AbstractAwakenedCard {
 
     public LastDitchEffort() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 8;
+        baseBlock = 7;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (AbstractDungeon.player.currentHealth <= AbstractDungeon.player.maxHealth*0.5)
+        if (checkVoid());
         atb(new DrawCardAction(p, this.magicNumber));
+    }
+
+    public static boolean checkVoid() {
+        boolean hasVoid = false;
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c instanceof VoidCard) {
+                hasVoid = true;
+            }
+        }
+        return hasVoid;
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        if (checkVoid()) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        }
     }
 
     @Override

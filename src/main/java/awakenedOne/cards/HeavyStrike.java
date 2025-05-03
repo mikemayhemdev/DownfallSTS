@@ -19,6 +19,7 @@ public class HeavyStrike extends AbstractAwakenedCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 13;
         baseSecondDamage = 10;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

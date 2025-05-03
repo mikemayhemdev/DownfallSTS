@@ -19,8 +19,8 @@ public class KnifesEdge extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToTop(new LoseHPAction(p, p, secondMagic));
         applyToSelf(new StrengthPower(p, magicNumber));
-        this.addToBot(new LoseHPAction(p, p, secondMagic));
     }
 
     public void upp() {

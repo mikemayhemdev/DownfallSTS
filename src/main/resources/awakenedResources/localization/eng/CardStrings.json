@@ -129,7 +129,7 @@
   },
   "awakened:LastDitchEffort": {
     "NAME": "Last Ditch Effort",
-    "DESCRIPTION": "Gain !B! Block. NL If under 50% HP, draw !M! cards."
+    "DESCRIPTION": "Gain !B! Block. NL If a *Void is in hand, draw !M! cards."
   },
   "awakened:Willpower": {
     "NAME": "Willpower",
@@ -188,7 +188,7 @@
   },
   "awakened:KnifesEdge": {
     "NAME": "Knife's Edge",
-    "DESCRIPTION": "Gain !M! Strength. NL Lose !awakened:m2! HP."
+    "DESCRIPTION": "Lose !awakened:m2! HP. NL Gain !M! Strength."
   },
   "awakened:Haemomancy": {
     "NAME": "Haemomancy",
@@ -204,7 +204,7 @@
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
-    "DESCRIPTION": "Double your Strength for the turn."
+    "DESCRIPTION": "Retain. NL Double your Strength for the turn. NL Exhaust."
   },
   "awakened:DesperatePrayer": {
   "NAME": "Desperate Prayer",
@@ -218,7 +218,7 @@
   },
   "awakened:DarkPower": {
     "NAME": "Dark Power",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Temporary Strength."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Strength."
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelate",

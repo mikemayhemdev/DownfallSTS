@@ -15,6 +15,8 @@ public class Unleash extends AbstractAwakenedCard {
 
     public Unleash() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.selfRetain = true;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -13,8 +13,8 @@ public class FadeOut extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public FadeOut() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 7;
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        baseBlock = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -35,6 +35,6 @@ public class FadeOut extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBlock(2);
+        //upgradeBlock(2);
     }
 }
