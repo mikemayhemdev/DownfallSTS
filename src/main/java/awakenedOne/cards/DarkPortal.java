@@ -57,7 +57,6 @@ public class DarkPortal extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(3);
     }
 
     static {
