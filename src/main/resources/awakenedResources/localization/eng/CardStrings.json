@@ -299,6 +299,40 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
-    "DESCRIPTION": "Whenever you lose [E] , gain !M! Block and !awakened:m2! Strength."
+    "DESCRIPTION": "Whenever [E] is awakened:Drained, gain !M! Block and !awakened:m2! Strength."
+  },
+  "awakened:Brainshock": {
+    "NAME": "Brainshock",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each [E] awakened:Drained this combat."
+  },
+  "awakened:Invasion": {
+    "NAME": "Invasion",
+    "DESCRIPTION": "Whenever you Exhaust a *Void, gain a Shiv."
+  },
+  "awakened:Baptism": {
+    "NAME": "Baptism",
+    "DESCRIPTION": "Heal !M! HP. NL Place a *Void on top of your draw pile. NL Exhaust."
+  },
+  "awakened:IntoNothing": {
+    "NAME": "Into Nothing",
+    "DESCRIPTION": "Ethereal. NL The first 0 cost card you play each turn is played twice.",
+    "UPGRADE_DESCRIPTION": "The first 0 cost card you play each turn is played twice."
+  },
+  "awakened:HeavyStrike": {
+    "NAME": "Heavy Strike",
+    "DESCRIPTION": "Deal !D! damage, then deal !awakened:sd! to a random enemy. NL Lose [E] at the start of your next turn."
+  },
+  "awakened:MirePit": {
+    "NAME": "Mire Pit",
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Lose [E] at the start of your next turn. NL Exhaust."
+  },
+  "awakened:SingularityShield": {
+    "NAME": "Singularity Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Put a *Void into your discard pile."
+  },
+  "awakened:DarkPortal": {
+    "NAME": "Dark Portal",
+    "DESCRIPTION": "Put a card from your discard pile into your hand. NL It costs 0 this turn. NL Place a *Void on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put a card from your discard pile into your hand. NL It costs 0 this turn. NL Put a *Void into your discard pile. NL Exhaust."
   }
 }

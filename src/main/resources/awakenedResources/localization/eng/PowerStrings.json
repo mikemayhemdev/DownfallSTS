@@ -148,12 +148,16 @@
       " damage to a random enemy."
     ]
   },
-  "awakened:ZeroToHeroPower": {
-    "NAME": "Zero to Hero",
+  "awakened:IntoNothingPower": {
+    "NAME": "Into Nothing",
     "DESCRIPTIONS": [
-      "Cost #b0 cards are played twice.",
-      "Cost #b0 cards are played #b",
-      " times."
+      "The first 0 cost card you play each turn is played twice.",
+      "The first #b",
+      " 0 cost cards you play each turn are played twice.",
+      " NL This effect can be triggered #b",
+      " more times this turn.",
+      " more time this turn.",
+      " NL This effect cannot be triggered again this turn."
     ]
   },
   "awakened:TowerOfEndingsPower": {
@@ -231,6 +235,14 @@
       "Whenever you lose [E], gain #b",
       " #yStrength and #b",
       " #yBlock."
+    ]
+  },
+  "awakened:InvasionPower": {
+    "NAME": "Invasion",
+    "DESCRIPTIONS": [
+      "Whenever you #yExhaust a card, gain a #yShiv [REMOVE_SPACE].",
+      "Whenever you #yExhaust a card, gain #b",
+      " #yShivs [REMOVE_SPACE]."
     ]
   }
 }

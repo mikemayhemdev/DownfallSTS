@@ -13,8 +13,10 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 )
 public class OnLoseEnergyPowerPatch {
 
+    public static int EnergyLostThisCombat = 0;
+
     public static void Postfix(AbstractPlayer __instance, int e) {
-        if (EnergyPanel.totalCount > 0) {
+        EnergyLostThisCombat = EnergyLostThisCombat + e;
             for (AbstractPower p : AbstractDungeon.player.powers) {
                 if (p instanceof OnLoseEnergyPower) {
                     ((OnLoseEnergyPower) p).LoseEnergyAction(e);
@@ -22,4 +24,3 @@ public class OnLoseEnergyPowerPatch {
             }
         }
     }
-}

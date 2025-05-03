@@ -5,6 +5,7 @@ import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.cards.cardvars.SecondDamage;
 import awakenedOne.cards.cardvars.SecondMagicNumber;
 import awakenedOne.cards.cardvars.ThirdMagicNumber;
+import awakenedOne.patches.OnLoseEnergyPowerPatch;
 import awakenedOne.powers.EnemyHexedPower;
 import awakenedOne.powers.UltimateHexDebuff;
 import awakenedOne.relics.*;
@@ -229,6 +230,7 @@ public class AwakenedOneMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         OrbitingSpells.atBattleStart();
         ConjureAction.conjuresThisCombat = 0;
+        OnLoseEnergyPowerPatch.EnergyLostThisCombat = 0;
     }
 
     @Override

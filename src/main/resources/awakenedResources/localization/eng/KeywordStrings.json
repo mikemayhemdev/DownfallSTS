@@ -31,5 +31,13 @@
       "ultimate"
     ],
     "DESCRIPTION": "Hexxed creatures gain additional #yHex whenever you play a non-Attack card. Powers increase #yHex by #b3 [REMOVE_SPACE]. Creatures with #b10 #yHex take #rdouble #rdamage from the next Attack. Additional #yHex can't be stacked during this time."
+  },
+  {
+    "PROPER_NAME": "Drained",
+    "NAMES": [
+      "drain",
+      "drained"
+    ],
+    "DESCRIPTION": "Any effect that causes you to lose [E] , even if you had none to lose."
   }
 ]

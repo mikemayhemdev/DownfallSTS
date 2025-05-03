@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import gremlin.actions.PseudoDamageRandomEnemyAction;
 
 import static awakenedOne.util.Wiz.*;
 
@@ -197,7 +198,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     }
 
     protected void altDmg(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
-        atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, secondDamage, damageTypeForTurn), fx));
+        atb(new PseudoDamageRandomEnemyAction(m, new DamageInfo(AbstractDungeon.player, secondDamage, damageTypeForTurn), fx));
     }
 
     protected void blck() {
