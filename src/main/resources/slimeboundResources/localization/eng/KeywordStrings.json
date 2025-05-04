@@ -59,7 +59,8 @@
       "cid",
       "pike",
       "cid's",
-      "pike's"
+      "pike's",
+      "slime"
     ],
     "PROPER_NAME": "Slimes",
     "DESCRIPTION": "Your minions #yCid and #yPike have their own energy, and spend it at the end of your turn to attack a random enemy. If they have none, they will instead gain 1 energy."

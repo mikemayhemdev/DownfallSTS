@@ -23,7 +23,7 @@ import slimebound.slimes.SlimeHelper;
 import java.util.ArrayList;
 
 
-public class Split extends AbstractSlimeboundCard implements OctopusCard {
+public class Split extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:Split";
     public static final String IMG_PATH = SlimeboundMod.getResourcePath("cards/split.png");
     private static final CardStrings cardStrings;
@@ -36,30 +36,21 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new OctoChoiceAction(m, this));
+
+        if (SlimeHelper.getCidEnergy() >= SlimeHelper.getPikeEnergy()){
+            addToBot(new EnergyToCidAction(magicNumber));
+            addToBot(new CommandCidAction());
+        } else {
+            addToBot(new EnergyToPikeAction(magicNumber));
+            addToBot(new CommandPikeAction());
+        }
+
     }
 
-    public ArrayList<OctoChoiceCard> choiceList() {
-        ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        String imagePath = "slimeboundResources/images/cards/alltogether.png";
-
-        cardList.add(new OctoChoiceCard("Slimebound:SplitPike", EXTENDED_DESCRIPTION[0], imagePath, EXTENDED_DESCRIPTION[1], -1, -1, magicNumber, CardType.SKILL));
-        cardList.add(new OctoChoiceCard("Slimebound:SplitCid", EXTENDED_DESCRIPTION[2], imagePath, EXTENDED_DESCRIPTION[3], -1, -1, magicNumber, CardType.SKILL));
-        //TODO - Given this is a starter card, maybe we do the MTG method of spell out what Command is going to do exactly on the text.
-
-        return cardList;
-    }
 
     public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "Slimebound:SplitPike": {
-                addToBot(new EnergyToPikeAction(magicNumber));
-                addToBot(new CommandPikeAction());
-                break;
-            }
-            case "Slimebound:SplitCid": {
-                addToBot(new EnergyToCidAction(magicNumber));
-                addToBot(new CommandCidAction());
 
                 break;
             }

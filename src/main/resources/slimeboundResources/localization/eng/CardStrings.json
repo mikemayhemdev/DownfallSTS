@@ -336,13 +336,7 @@
   },
   "Slimebound:Split": {
     "NAME": "Split",
-    "DESCRIPTION": "Choose slimeboundmod:Pike or slimeboundmod:Cid. NL Grant the chosen slime !M! energy and slimeboundmod:Command them.",
-    "EXTENDED_DESCRIPTION": [
-      "Choose Cid",
-      "Grant slimeboundmod:Cid !M! energy and slimeboundmod:Command him.",
-      "Choose Pike",
-      "Grant slimeboundmod:Pike !M! energy and slimeboundmod:Command her."
-    ]
+    "DESCRIPTION": "Grant the lowest-energy slimeboundmod:Slime !M! energy, then slimeboundmod:Command them. NL (Cid wins ties)"
   },
   "Slimebound:SplitAcid": {
     "NAME": "Guerilla War",
