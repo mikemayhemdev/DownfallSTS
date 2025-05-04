@@ -346,10 +346,6 @@
     "NAME": "Bruiser Buddy",
     "DESCRIPTION": "Give slimeboundmod:Cid 2 energy and increase his damage dealt by !M! this combat."
   },
-  "Slimebound:SplitGreed": {
-    "NAME": "Revive Greed",
-    "DESCRIPTION": "Retain. NL Summon Greed Ooze. NL Exhaust."
-  },
   "Slimebound:SplitLeeching": {
     "NAME": "Leeching Lady",
     "DESCRIPTION": "Give slimeboundmod:Pike 2 energy and increase her damage dealt by !M! this combat."
@@ -357,10 +353,6 @@
   "Slimebound:SplitMire": {
     "NAME": "Mire Time",
     "DESCRIPTION": "slimeboundmod:Pike's next !M! attacks apply slimeboundmod:Goop equal to damage dealt. NL slimeboundmod:Command slimeboundmod:Pike."
-  },
-  "Slimebound:SplitScrap": {
-    "NAME": "Revive Scrap",
-    "DESCRIPTION": "Retain. NL Summon Scrap Ooze. NL Exhaust."
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "Enchant Cid",
