@@ -336,7 +336,7 @@
   },
   "Slimebound:Split": {
     "NAME": "Split",
-    "DESCRIPTION": "Grant the lowest-energy slimeboundmod:Slime !M! energy, then slimeboundmod:Command them. NL (Cid wins ties)"
+    "DESCRIPTION": "Grant the lowest energy slimeboundmod:Slime !M! energy, then slimeboundmod:Command them. (Cid wins ties)"
   },
   "Slimebound:SplitAcid": {
     "NAME": "Guerilla War",

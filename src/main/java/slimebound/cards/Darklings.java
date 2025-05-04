@@ -43,6 +43,8 @@ public class Darklings extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
             this.isInnate = true;
         }
     }
