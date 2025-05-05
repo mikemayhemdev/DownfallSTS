@@ -24,8 +24,9 @@ public class LastDitchEffort extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (checkVoid());
-        atb(new DrawCardAction(p, this.magicNumber));
+        if (checkVoid()) {
+            atb(new DrawCardAction(p, this.magicNumber));
+        }
     }
 
     public static boolean checkVoid() {

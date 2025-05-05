@@ -29,7 +29,7 @@ public class Caw extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        CardCrawlGame.sound.playA("VO_CULTIST_1A", -.1f);
+        CardCrawlGame.sound.playA("VO_CULTIST_1A", .3f);
         if (m != null) {
             this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.CYAN, Color.WHITE), 0.1F));
         }

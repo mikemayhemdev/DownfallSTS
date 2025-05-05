@@ -19,7 +19,7 @@
     "FLAVOR": "A conduit that grants power to spoken words.",
     "DESCRIPTIONS": [
       "Whenever you activate a #yawakened:Chant effect, gain #b",
-      " Block [REMOVE_SPACE]. Activates one #yawakened:Chant effect for free each turn."
+      " #yBlock [REMOVE_SPACE]. Activates one #yawakened:Chant effect for free each turn."
     ]
   },
   "awakened:HexxBomb": {

@@ -27,10 +27,10 @@ public class Nihilism extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        if (checkVoid());
+        if (checkVoid()) {
         applyToSelf(new StrengthPower(p, magicNumber));
     }
-
+    }
     public static boolean checkVoid() {
         boolean hasVoid = false;
         for (AbstractCard c : AbstractDungeon.player.hand.group) {

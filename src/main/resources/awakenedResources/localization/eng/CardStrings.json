@@ -374,8 +374,8 @@
     "DESCRIPTION": "Gain !B! Block X times, +1 for each Spell played this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
-      " card played.)",
-      " cards played.)"
+      " Spells played.)",
+      " Spells played.)"
     ]
   },
   "awakened:Middens": {
@@ -389,5 +389,19 @@
   "awakened:Retaliation": {
     "NAME": "Ravenous Retaliation",
     "DESCRIPTION": "Gain !B! Block. NL If under 50% HP, whenever you are attacked this turn, deal !M! damage back."
+  },
+  "awakened:Hatchery": {
+    "NAME": "Hatchery",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you awakened:Chant, return this from the discard pile to your hand."
+  },
+  "awakened:Manastorm": {
+    "NAME": "Manastorm",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure at random for each enemy hit."
+  },
+  "awakened:Grimoire": {
+    "NAME": "Grimoire",
+    "DESCRIPTION": "awakened:Conjure at random X+1 times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "awakened:Conjure at random X+1 times."
+
   }
 }
