@@ -32,7 +32,7 @@ public class SerpentMindPower extends AbstractPower implements CloneablePowerInt
         Set<AbstractCard.CardColor> uniqueColors = new HashSet<>(); // another one of these
 
         for (AbstractCard card : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
-            // they still don't count because I said so. Sandtag convinced me that status and curse should count.
+            // Sandtag convinced me that status and curse should count.
             if (
                 //(card.type != AbstractCard.CardType.STATUS &&
                 //        card.type != AbstractCard.CardType.CURSE &&
@@ -61,7 +61,9 @@ public class SerpentMindPower extends AbstractPower implements CloneablePowerInt
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        applyToSelf(new StrengthPower(owner, amount*getUniqueSuitsPlayedThisTurn())); // wow boring nerf really cool (it's not cool)
+        if (getUniqueSuitsPlayedThisTurn() > 0) {
+            applyToSelf(new StrengthPower(owner, amount * getUniqueSuitsPlayedThisTurn())); // wow boring nerf really cool (it's not cool)
+        }
     }
 
 
