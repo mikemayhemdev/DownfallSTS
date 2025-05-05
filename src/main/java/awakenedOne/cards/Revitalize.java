@@ -12,7 +12,8 @@ import com.megacrit.cardcrawl.powers.RegenPower;
 import downfall.util.CardIgnore;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-
+@Deprecated
+@CardIgnore
 public class Revitalize extends AbstractAwakenedCard {
     public final static String ID = makeID(Revitalize.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,

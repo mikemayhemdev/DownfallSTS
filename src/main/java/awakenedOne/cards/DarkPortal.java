@@ -43,16 +43,13 @@ public class DarkPortal extends AbstractAwakenedCard {
                         selecteda.unhover();
                         selecteda.applyPowers();
 
-                        selecteda.costForTurn = 0;
+                        selecteda.freeToPlayOnce = true;
                     }
             ));
         }
 
-        if (upgraded)
         addToBot(new MakeTempCardInDiscardAction(new VoidCard(), 1));
 
-        if (!upgraded)
-        addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
     }
 
     @Override

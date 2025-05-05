@@ -18,6 +18,7 @@ public class Hymn extends AbstractAwakenedCard {
     public Hymn() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseBlock = 3;
+        this.selfRetain = false;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,7 +29,7 @@ public class Hymn extends AbstractAwakenedCard {
         }
 
         if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if (!AbstractDungeon.player.getRelic(KTRibbon.ID).grayscale) {
+            if (!(AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);
             }
@@ -61,6 +62,7 @@ public class Hymn extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
+        this.selfRetain = true;
         upgradeBlock(1);
     }
 }

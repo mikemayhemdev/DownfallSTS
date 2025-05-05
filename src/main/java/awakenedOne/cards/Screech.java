@@ -4,9 +4,11 @@ import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import downfall.util.CardIgnore;
 
 import static awakenedOne.util.Wiz.applyToEnemy;
-
+@Deprecated
+@CardIgnore
 public class Screech extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Screech.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,

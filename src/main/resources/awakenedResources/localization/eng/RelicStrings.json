@@ -26,14 +26,14 @@
     "NAME": "Hexx Bomb",
     "FLAVOR": "Countdown to absolute Oblivion.",
     "DESCRIPTIONS": [
-      "At the start of combat and whenever an enemy with #yawakened:Ultimate #yawakened:Hex is attacked, apply #b1 #yawakened:Hex to a random enemy."
+      "NOT USED"
     ]
   },
   "awakened:TomeOfPortalmancy": {
     "NAME": "Tome of Portalmancy",
     "FLAVOR": "A grimoire detailing the construction and maintenance of interplanar gates.",
     "DESCRIPTIONS": [
-      "Whenever a *Void is Exhausted, apply #b",
+      "Whenever a #yVoid is #yExhausted [REMOVE_SPACE], apply #b",
       " #yawakened:Hex to ALL enemies."
     ]
   },

@@ -231,6 +231,14 @@ public class AwakenedOneMod implements
         OrbitingSpells.atBattleStart();
         ConjureAction.conjuresThisCombat = 0;
         OnLoseEnergyPowerPatch.EnergyLostThisCombat = 0;
+        ConjureAction.refreshedthisturn = false;
+    }
+
+
+    public void atStartOfTurn() {
+        {
+            ConjureAction.refreshedthisturn = false;
+        }
     }
 
     @Override

@@ -25,7 +25,7 @@ public class TheEmpress extends AbstractAwakenedCard {
     boolean chant = false;
 
     public TheEmpress() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
 
         AbstractCard a = new Thunderbolt();
         a.upgrade();

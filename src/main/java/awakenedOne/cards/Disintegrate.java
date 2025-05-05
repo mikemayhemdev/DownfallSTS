@@ -2,10 +2,12 @@ package awakenedOne.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 
 import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
-
+@Deprecated
+@CardIgnore
 public class Disintegrate extends AbstractAwakenedCard {
     public final static String ID = makeID(Disintegrate.class.getSimpleName());
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
@@ -17,7 +19,7 @@ public class Disintegrate extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        HexCurse(secondMagic, m, p);
+        //HexCurse(secondMagic, m, p);
     }
 
     public void upp() {

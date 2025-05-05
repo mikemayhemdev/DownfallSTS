@@ -244,5 +244,14 @@
       "Whenever you #yExhaust a card, gain #b",
       " #yShivs [REMOVE_SPACE]."
     ]
+  },
+  "awakened:SongOfSorrowPower": {
+    "NAME": "Song of Sorrow",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain #b",
+      " [E] and put #b",
+      " #yVoid into your discard pile.",
+      " #yVoids into your discard pile."
+    ]
   }
 }

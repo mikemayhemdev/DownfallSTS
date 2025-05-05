@@ -21,7 +21,7 @@ public class Recitation extends AbstractAwakenedCard {
 
     public Recitation() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -31,7 +31,7 @@ public class Recitation extends AbstractAwakenedCard {
         }
 
         if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if (!AbstractDungeon.player.getRelic(KTRibbon.ID).grayscale) {
+            if (!(AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);
             }

@@ -18,6 +18,7 @@ public class ConjureAction extends AbstractGameAction {
     public static ArrayList<AbstractCard> conjuredCards = new ArrayList();
 
     public static int conjuresThisCombat = 0;
+    public static boolean refreshedthisturn = false;
     private boolean choose;
 
     public ConjureAction(boolean choose) {
@@ -36,6 +37,7 @@ public class ConjureAction extends AbstractGameAction {
         conjuredCards.clear();
         if (OrbitingSpells.spellCards.size() == 1) {
             addToTop(new RefreshSpellsAction());
+            refreshedthisturn = true;
             //On Refresh...
             if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
                 for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {

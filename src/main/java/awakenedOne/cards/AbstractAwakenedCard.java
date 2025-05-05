@@ -198,7 +198,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     }
 
     protected void altDmg(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
-        atb(new PseudoDamageRandomEnemyAction(m, new DamageInfo(AbstractDungeon.player, secondDamage, damageTypeForTurn), fx));
+        atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, secondDamage, damageTypeForTurn), fx));
     }
 
     protected void blck() {

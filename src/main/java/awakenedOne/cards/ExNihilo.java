@@ -24,7 +24,7 @@ public class ExNihilo extends AbstractAwakenedCard {
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
-        cardsToPreview = new VoidCard();
+        //cardsToPreview = new VoidCard();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,7 +37,7 @@ public class ExNihilo extends AbstractAwakenedCard {
         }
 
         if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if (!AbstractDungeon.player.getRelic(KTRibbon.ID).grayscale) {
+            if (!(AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 this.exhaust = false;
                 awaken(1);

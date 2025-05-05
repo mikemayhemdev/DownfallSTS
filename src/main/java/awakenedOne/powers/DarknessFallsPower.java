@@ -1,29 +1,17 @@
 package awakenedOne.powers;
 
 
-import basemod.interfaces.OnPowersModifiedSubscriber;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import downfall.util.TextureLoader;
 import expansioncontent.expansionContentMod;
 
 import static awakenedOne.powers.AbstractAwakenedPower.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
-import static com.megacrit.cardcrawl.ui.panels.EnergyPanel.getCurrentEnergy;
 
 
 public class DarknessFallsPower extends TwoAmountPower implements OnLoseEnergyPower {
@@ -34,7 +22,7 @@ public class DarknessFallsPower extends TwoAmountPower implements OnLoseEnergyPo
     private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyHexaghost84.png");
     private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyHexaghost32.png");
 
-    public DarknessFallsPower(int amount, int amount2) {
+    public DarknessFallsPower(final int amount, final int amount2) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
@@ -51,8 +39,8 @@ public class DarknessFallsPower extends TwoAmountPower implements OnLoseEnergyPo
     @Override
     public void LoseEnergyAction(int gained) {
             flash();
-            addToBot(new GainBlockAction(owner, amount));
-            applyToSelf(new StrengthPower(AbstractDungeon.player, amount2));
+            addToBot(new GainBlockAction(owner, gained*amount));
+            applyToSelf(new StrengthPower(AbstractDungeon.player, gained*amount2));
     }
 
     @Override

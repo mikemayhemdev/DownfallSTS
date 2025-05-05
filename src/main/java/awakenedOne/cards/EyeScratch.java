@@ -8,11 +8,13 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 
 import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-
+@Deprecated
+@CardIgnore
 public class EyeScratch extends AbstractAwakenedCard {
     public final static String ID = makeID(EyeScratch.class.getSimpleName());
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1

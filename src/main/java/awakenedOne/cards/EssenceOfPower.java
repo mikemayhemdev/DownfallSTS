@@ -5,9 +5,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PowerPotion;
+import downfall.util.CardIgnore;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-
+@Deprecated
+@CardIgnore
 public class EssenceOfPower extends AbstractAwakenedCard {
     public final static String ID = makeID(EssenceOfPower.class.getSimpleName());
     // intellij stuff skill, enemy, rare, , , , , 6, 2

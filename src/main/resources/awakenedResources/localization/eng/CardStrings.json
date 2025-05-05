@@ -13,8 +13,7 @@
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "Apply !M! awakened:Hex. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! awakened:Hex to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Apply !M! awakened:Hex. NL Exhaust."
   },
   "awakened:Strike": {
     "NAME": "Strike",
@@ -26,7 +25,7 @@
   },
   "awakened:MagicStrike": {
     "NAME": "Magic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure at random."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure a Spell."
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
@@ -47,7 +46,7 @@
   },
   "awakened:Hex": {
     "NAME": "Hex",
-    "DESCRIPTION": "Apply !M! Weak. NL Apply !awakened:m2! awakened:Hex."
+    "DESCRIPTION": "not used"
   },
   "awakened:DarkEcho": {
     "NAME": "Dark Echo",
@@ -69,11 +68,13 @@
   },
   "awakened:TalonRake": {
     "NAME": "Talon Rake",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure a Spell."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure at random.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL awakened:Conjure a Spell."
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !B! Block again."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !B! Block again.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL awakened:Chant: Gain !B! Block again."
   },
 
   "awakened:Psalm": {
@@ -103,7 +104,7 @@
   },
   "awakened:EyeScratch": {
     "NAME": "Scratch Out",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, apply !M! awakened:Hex."
+    "DESCRIPTION": "not used."
   },
   "awakened:Extension": {
     "NAME": "Extension",
@@ -163,12 +164,12 @@
   },
   "awakened:Screech": {
     "NAME": "Screech",
-    "DESCRIPTION": "Apply !M! Vulnerable.",
+    "DESCRIPTION": "not used",
     "UPGRADE_DESCRIPTION": "Retain. NL Apply !M! Vulnerable."
   },
   "awakened:Revitalize": {
     "NAME": "Revitalize",
-    "DESCRIPTION": "Gain !M! *Regen. NL awakened:Chant: Gain !awakened:m2! *Regen instead."
+    "DESCRIPTION": "not used"
   },
   "awakened:SoulStrike": {
     "NAME": "Soul Strike",
@@ -176,7 +177,7 @@
   },
   "awakened:Disintegrate": {
     "NAME": "Disintegrate",
-    "DESCRIPTION": "Apply !awakened:m2! awakened:Hex. NL Exhaust."
+    "DESCRIPTION": "not used."
   },
   "awakened:Feathersinks": {
     "NAME": "Feathersinks",
@@ -192,7 +193,7 @@
   },
   "awakened:Haemomancy": {
     "NAME": "Haemomancy",
-    "DESCRIPTION": "Lose !M! HP. Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "not used."
   },
   "awakened:Vision": {
     "NAME": "Vision",
@@ -200,7 +201,7 @@
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Apply !M! awakened:Hex and draw !awakened:m2! cards."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Draw !awakened:m2! cards."
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
@@ -217,7 +218,7 @@
     "UPGRADE_DESCRIPTION": "Fetch a Power from your draw pile."
   },
   "awakened:DarkPower": {
-    "NAME": "Dark Power",
+    "NAME": "Initiation",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Strength."
   },
   "awakened:Ensorcelate": {
@@ -226,8 +227,7 @@
   },
   "awakened:Primacy": {
     "NAME": "Primacy",
-    "DESCRIPTION": "Ethereal. NL Whenever you gain Strength, draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Whenever you gain Strength, draw !M! card."
+    "DESCRIPTION": "Whenever you gain Strength, draw !M! card."
   },
   "awakened:Inspiration": {
     "NAME": "Inspiration",
@@ -240,11 +240,11 @@
   },
   "awakened:Eclipse": {
     "NAME": "Eclipse",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Hex."
+    "DESCRIPTION": "not used."
   },
   "awakened:Debilitate": {
     "NAME": "Debilitate",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Chant: Apply !M! Weak and Vulnerable to ALL enemies."
+    "DESCRIPTION": "not used."
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chant",
@@ -252,16 +252,16 @@
   },
   "awakened:Dogma": {
     "NAME": "Dogma",
-    "DESCRIPTION": "Whenever you play a Power, apply !M! awakened:Hex to ALL enemies."
+    "DESCRIPTION": "not used."
   },
   "awakened:EssenceOfPower": {
     "NAME": "Essence of Power",
-    "DESCRIPTION": "Ethereal. NL Obtain a Power Potion. NL Exhaust.",
+    "DESCRIPTION": "not used",
     "UPGRADE_DESCRIPTION": "Obtain a Power Potion. NL Exhaust."
   },
   "awakened:ChimeraBlessing": {
     "NAME": "Chimera Blessing",
-    "DESCRIPTION": "Choose 1 of 3 random sneckomod:Offclass Powers to gain. NL Exhaust.",
+    "DESCRIPTION": "not used.",
     "UPGRADE_DESCRIPTION": "Choose 1 of 3 random sneckomod:Offclass Powers to gain."
   },
   "awakened:FeatherWhirl": {
@@ -286,7 +286,7 @@
   },
   "awakened:MazalethForm": {
     "NAME": "Mazaleth Form",
-    "DESCRIPTION": "Ethereal. NL The first Power you play each turn costs 0. awakened:Chant: ... and draws a card.",
+    "DESCRIPTION": "not used",
     "UPGRADE_DESCRIPTION": "The first Power you play each turn costs 0. awakened:Chant: ... and draws a card."
   },
   "awakened:Planeswalk": {
@@ -319,8 +319,8 @@
     "UPGRADE_DESCRIPTION": "The first 0 cost card you play each turn is played twice."
   },
   "awakened:HeavyStrike": {
-    "NAME": "Heavy Strike",
-    "DESCRIPTION": "Deal !D! damage, then deal !awakened:sd! to a random enemy. NL Lose [E] at the start of your next turn."
+    "NAME": "Carrionmaker",
+    "DESCRIPTION": "Deal !awakened:sd! damage, then deal !D! damage to a random enemy. NL Lose [E] at the start of your next turn."
   },
   "awakened:MirePit": {
     "NAME": "Mire Pit",
@@ -332,6 +332,62 @@
   },
   "awakened:DarkPortal": {
     "NAME": "Dark Portal",
-    "DESCRIPTION": "Fetch a card from your discard pile, it costs 0 this turn. NL Put a *Void into your discard pile. NL Exhaust."
+    "DESCRIPTION": "Fetch a card from your discard pile and put a *Void there. NL It costs 0 this turn. NL Exhaust."
+  },
+  "awakened:Nihilism": {
+    "NAME": "Nihilism",
+    "DESCRIPTION": "Deal !D! damage. NL If a *Void is in hand, gain !M! Strength."
+  },
+  "awakened:Slaughter": {
+    "NAME": "To the Slaughter",
+    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony+."
+  },
+  "awakened:SongOfSorrow": {
+    "NAME": "Song of Sorrow",
+    "DESCRIPTION": "At the start of your turn, gain [E] and put a *Void into your discard pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain [E] and put a *Void into your discard pile."
+  },
+  "awakened:MysticOrder": {
+    "NAME": "Mystic Order",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Ritual. NL Exhaust."
+  },
+  "awakened:SacrilegiousStrike": {
+    "NAME": "Sacrilegious Strike",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL awakened:Chant: Gain !M! Frail and Exhaust."
+  },
+  "awakened:ToTheLimit": {
+    "NAME": "To the Limit",
+    "DESCRIPTION": "Gain !M! Strength. NL If under 50% HP, gain !awakened:m2! Ritual instead."
+  },
+  "awakened:Victuals": {
+    "NAME": "Victuals",
+    "DESCRIPTION": "Lose !M! HP. NL Gain [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Heal !M! HP.",
+    "UPGRADE_DESCRIPTION": "Lose !M! HP. NL Gain [E] [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Heal !M! HP."
+  },
+  "awakened:TheTower": {
+    "NAME": "The Tower",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you refreshed your Spell Pile this turn, repeat twice."
+  },
+  "awakened:ArcaneNesting": {
+    "NAME": "Arcane Nesting",
+    "DESCRIPTION": "Gain !B! Block X times, +1 for each Spell played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " card played.)",
+      " cards played.)"
+    ]
+  },
+  "awakened:Middens": {
+    "NAME": "Middens",
+    "DESCRIPTION": "Gain !B! Block. NL Put a Status card from your discard pile into your hand."
+  },
+  "awakened:Caw": {
+    "NAME": "Caw",
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Increase the damage of all *Caw cards by !M! this combat."
+  },
+  "awakened:Retaliation": {
+    "NAME": "Ravenous Retaliation",
+    "DESCRIPTION": "Gain !B! Block. NL If under 50% HP, whenever you are attacked this turn, deal !M! damage back."
   }
 }

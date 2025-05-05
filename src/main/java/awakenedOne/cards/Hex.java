@@ -3,11 +3,13 @@ package awakenedOne.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.util.CardIgnore;
 
 import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToEnemy;
-
+@Deprecated
+@CardIgnore
 public class Hex extends AbstractAwakenedCard {
     public final static String ID = makeID(Hex.class.getSimpleName());
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
@@ -24,7 +26,7 @@ public class Hex extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToEnemy(m, new WeakPower(m, magicNumber, false));
-        HexCurse(secondMagic, m, p);
+        //HexCurse(secondMagic, m, p);
     }
 
     public void upp() {

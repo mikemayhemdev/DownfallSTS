@@ -16,7 +16,7 @@ public class TalonRake extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public TalonRake() {
-        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = 4;
     }
 
@@ -25,10 +25,16 @@ public class TalonRake extends AbstractAwakenedCard {
             this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.CYAN, Color.WHITE), 0.1F));
         }
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        atb(new ConjureAction(true));
+
+        if (!upgraded) {
+            atb(new ConjureAction(false));
+        }
+
+        if (upgraded) {
+            atb(new ConjureAction(true));
+        }
     }
 
     public void upp() {
-        upgradeBaseCost(0);
     }
 }

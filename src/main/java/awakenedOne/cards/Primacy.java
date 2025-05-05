@@ -13,7 +13,7 @@ public class Primacy extends AbstractAwakenedCard {
 
     public Primacy() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        this.isEthereal = true;
+        //this.isEthereal = true;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }
@@ -23,6 +23,6 @@ public class Primacy extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        this.isEthereal = false;
+        upgradeBaseCost(1);
     }
 }

@@ -1,47 +1,47 @@
 package awakenedOne.cards;
 
+import awakenedOne.actions.GashCawAction;
 import awakenedOne.relics.KTRibbon;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
 
-import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.ui.AwakenButton.awaken;
-import static awakenedOne.util.Wiz.atb;
 
-public class RavenStrike extends AbstractAwakenedCard {
-    public final static String ID = makeID(RavenStrike.class.getSimpleName());
+public class Caw extends AbstractAwakenedCard {
+    public final static String ID = makeID(Caw.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
     boolean chant = false;
 
-    public RavenStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 10;
-        this.baseMagicNumber = 1;
+    public Caw() {
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 3;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
-        this.baseSecondMagic = 3;
-        this.secondMagic = this.baseSecondMagic;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        CardCrawlGame.sound.playA("VO_CULTIST_1A", -.1f);
+        if (m != null) {
+            this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.CYAN, Color.WHITE), 0.1F));
+        }
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
 
         if (this.chant) {
-            atb(new DrawCardAction(secondMagic));
-            //HexCurse(magicNumber, m, p);
-            checkOnChant();
+           chant();
         }
 
         if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if (!(AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                atb(new DrawCardAction(secondMagic));
-               // HexCurse(magicNumber, m, AbstractDungeon.player);
-                checkOnChant();
+                chant();
                 awaken(1);
             }
         }
@@ -50,9 +50,7 @@ public class RavenStrike extends AbstractAwakenedCard {
 
     @Override
     public void chant() {
-        AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
-        atb(new DrawCardAction(secondMagic));
-       // HexCurse(magicNumber, m, AbstractDungeon.player);
+        this.addToBot(new GashCawAction(this, this.magicNumber));
         checkOnChant();
     }
 
@@ -76,7 +74,7 @@ public class RavenStrike extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(3);
-        upgradeSecondMagic(1);
+        upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 }

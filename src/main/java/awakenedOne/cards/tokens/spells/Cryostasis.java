@@ -59,7 +59,7 @@ public class Cryostasis extends AbstractSpellCard {
         }
 
         if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if (!AbstractDungeon.player.getRelic(KTRibbon.ID).grayscale) {
+            if (!(AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
 
                 if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
                     atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));

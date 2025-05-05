@@ -35,6 +35,6 @@ public class FadeOut extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        //upgradeBlock(2);
+        upgradeBlock(4);
     }
 }

@@ -9,11 +9,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.util.CardIgnore;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.atb;
-
+@Deprecated
+@CardIgnore
 public class Debilitate extends AbstractAwakenedCard {
     public final static String ID = makeID(Debilitate.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
@@ -34,7 +36,7 @@ public class Debilitate extends AbstractAwakenedCard {
         }
 
         if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if (!AbstractDungeon.player.getRelic(KTRibbon.ID).grayscale) {
+            if (!(AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);
             }

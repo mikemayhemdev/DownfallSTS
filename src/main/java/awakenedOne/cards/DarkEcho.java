@@ -12,7 +12,7 @@ public class DarkEcho extends AbstractAwakenedCard {
     // intellij stuff attack, all_enemy, rare, 18, 4, , , 2, 1
 
     public DarkEcho() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseDamage = 4;
     }
 
