@@ -22,33 +22,45 @@ public class Victuals extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 5;
         baseSecondMagic = secondMagic = 2;
-        this.tags.add(CardTags.HEALING);
+        //this.tags.add(CardTags.HEALING);
         this.exhaust = true;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToTop(new LoseHPAction(p, p, magicNumber));
-        if (!upgraded)
-            this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 1), 1));
-        if (upgraded)
-            this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 2), 2));
-        this.addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, secondMagic), secondMagic));
-        if (this.chant) {
-            chant();
-        }
+        if (!this.chant) {
 
-        if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if (!(AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                chant();
-                awaken(1);
+            if (!AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+                this.addToTop(new LoseHPAction(p, p, magicNumber));
+            }
+
+            if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+                if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == 1)) {
+                    this.addToTop(new LoseHPAction(p, p, magicNumber));
+                }
             }
         }
-    }
+
+                if (!upgraded)
+                    this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 1), 1));
+                if (upgraded)
+                    this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 2), 2));
+                this.addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, secondMagic), secondMagic));
+                if (this.chant) {
+                    chant();
+                }
+
+                if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+                    if (!(AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
+                        chant();
+                        awaken(1);
+                    }
+                }
+            }
 
     @Override
     public void chant() {
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RepairPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+        //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RepairPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
         checkOnChant();
     }
 

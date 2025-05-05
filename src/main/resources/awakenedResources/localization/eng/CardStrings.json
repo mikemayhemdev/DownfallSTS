@@ -362,8 +362,8 @@
   },
   "awakened:Victuals": {
     "NAME": "Victuals",
-    "DESCRIPTION": "Lose !M! HP. NL Gain [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Heal !M! HP.",
-    "UPGRADE_DESCRIPTION": "Lose !M! HP. NL Gain [E] [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Heal !M! HP."
+    "DESCRIPTION": "Lose !M! HP. NL Gain [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Don't lose HP.",
+    "UPGRADE_DESCRIPTION": "Lose !M! HP. NL Gain [E] [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Don't lose HP."
   },
   "awakened:TheTower": {
     "NAME": "The Tower",
@@ -402,6 +402,13 @@
     "NAME": "Grimoire",
     "DESCRIPTION": "awakened:Conjure at random X+1 times. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "awakened:Conjure at random X+1 times."
-
+  },
+  "awakened:AphoticShield": {
+    "NAME": "Aphotic Shield",
+    "DESCRIPTION": "awakened:Chant: Gain !M! expansioncontent:Plated *Armor."
+  },
+  "awakened:Bloodthirst": {
+    "NAME": "Bloodthirst",
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal, gain a Power Potion and Exhaust this card."
   }
 }
