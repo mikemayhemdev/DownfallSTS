@@ -11,7 +11,7 @@
     "FLAVOR": "A reminder of your weakness, and yet you still can't let go.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL At the start of combat, gain #yCeremony+ [REMOVE_SPACE], and #b1 Ritual."
+      " [REMOVE_SPACE].[] NL At the start of combat, gain #yCeremony+ [REMOVE_SPACE], and #b1 Ritual [REMOVE_SPACE]."
     ]
   },
   "awakened:KTRibbon": {
@@ -42,6 +42,42 @@
     "FLAVOR": "This gruesome carving imparts magical knowledge to its owner.",
     "DESCRIPTIONS": [
       "Spells hit ALL enemies."
+    ]
+  },
+  "awakened:BirdFacedTapestry": {
+    "NAME": "Bird-Faced Tapestry",
+    "FLAVOR": "This tapestry depicts the crow god Mazaleth demanding sacrifice.",
+    "DESCRIPTIONS": [
+      "Whenever you play a Power card, apply #b1 Weak to ALL enemies."
+    ]
+  },
+  "awakened:MomsKnife": {
+    "NAME": "Sacrifice's Blade",
+    "FLAVOR": "Prove you lose me above all else!",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain [E]. Whenever you play a Power card, lose #b",
+      " HP."
+    ]
+  },
+  "awakened:CultistStick": {
+    "NAME": "Stick",
+    "FLAVOR": "A simple weapon used by the lowest ranking members of the Cult.",
+    "DESCRIPTIONS": [
+      ""
+    ]
+  },
+  "awakened:ForbiddenKnowledge": {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "The first Power card you play each combat costs #b0 and draws a card."
+    ]
+  },
+  "awakened:MagicalCodex": {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Whenever you #yawakened:Conjure, ."
     ]
   }
 }
