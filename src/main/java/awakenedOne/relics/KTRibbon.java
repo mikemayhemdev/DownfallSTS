@@ -43,6 +43,7 @@ public class KTRibbon extends CustomRelic implements OnAwakenRelic {
     @Override
     public void onVictory(){
         this.counter = -1;
+        stopPulse();
     }
 
     public void onTrigger() {
@@ -51,7 +52,7 @@ public class KTRibbon extends CustomRelic implements OnAwakenRelic {
         addToBot(new GainBlockAction(AbstractDungeon.player, 4));
     }
 
-    //Check AwakenButton.java. I'm just using this override for convience.
+    //Check AwakenButton.java. I'm just using this override for convenience.
     //basically, the grayscale check awaken(1) triggers this.
     @Override
     public void onAwaken(int amount) {
