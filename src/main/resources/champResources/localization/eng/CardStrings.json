@@ -289,7 +289,7 @@
   },
   "champ:Improvising": {
     "NAME": "Improvising",
-      "DESCRIPTION": "Enter a random Stance at the start of your turn if not in a Stance. NL Trigger *Skill champ:Bonus !M! times entering Stances."
+      "DESCRIPTION": "Whenever you enter a Stance, trigger its *Skill champ:Bonus !M! times."
   },
   "champ:CalledShot": {
     "NAME": "Refreshment",

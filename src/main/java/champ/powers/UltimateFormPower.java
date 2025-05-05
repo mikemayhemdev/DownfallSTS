@@ -55,13 +55,6 @@ public class UltimateFormPower extends AbstractPower implements CloneablePowerIn
         if (amount == 1) {
             flash();
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
-            if (AbstractDungeon.player.hasPower(ImprovisingPower.POWER_ID)) {
-                if (AbstractDungeon.cardRandomRng.randomBoolean()) {
-                    addToBot(new ChangeStanceAction(new BerserkerStance()));
-                } else {
-                    addToBot(new ChangeStanceAction(new DefensiveStance()));
-                }
-            }
         }
     }
 
