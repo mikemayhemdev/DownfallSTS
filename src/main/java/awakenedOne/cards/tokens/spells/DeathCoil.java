@@ -30,7 +30,7 @@ public class DeathCoil extends AbstractSpellCard {
 
     public DeathCoil() {
         super(ID, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 10;
+        baseDamage = 8;
         baseMagicNumber = magicNumber = 2;
     }
 
@@ -65,7 +65,7 @@ public class DeathCoil extends AbstractSpellCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(-1);
-        upgradeDamage(4);
+       // upgradeMagicNumber(-1);
+        upgradeDamage(3);
     }
 }

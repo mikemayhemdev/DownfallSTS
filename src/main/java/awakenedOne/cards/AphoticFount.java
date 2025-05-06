@@ -20,7 +20,7 @@ public class AphoticFount extends AbstractAwakenedCard {
     boolean chant = false;
 
     public AphoticFount() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
         cardsToPreview = new AphoticShield();
     }
