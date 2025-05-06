@@ -21,6 +21,11 @@
     "DESCRIPTION": "Lose !M! HP. NL Deal !D! damage. NL Exhaust."
   },
 
+  "awakened:AphoticShield": {
+    "NAME": "Aphotic Shield",
+    "DESCRIPTION": "Gain !M! expansioncontent:Plated *Armor."
+  },
+
   "awakened:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -409,9 +414,10 @@
     "DESCRIPTION": "awakened:Conjure at random X+1 times. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "awakened:Conjure at random X+1 times."
   },
-  "awakened:AphoticShield": {
+  "awakened:AphoticFount": {
     "NAME": "Aphotic Shield",
-    "DESCRIPTION": "awakened:Chant: Gain !M! expansioncontent:Plated *Armor."
+    "DESCRIPTION": "Add *Aphotic *Shield to the Spell Pile. NL Conjure. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to the Spell Pile. NL Conjure. NL Exhaust."
   },
   "awakened:Bloodthirst": {
     "NAME": "Bloodthirst",

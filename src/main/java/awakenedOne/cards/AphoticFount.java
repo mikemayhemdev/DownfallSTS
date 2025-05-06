@@ -1,0 +1,37 @@
+package awakenedOne.cards;
+
+import awakenedOne.AwakenedOneMod;
+import awakenedOne.actions.AddSpellCardAction;
+import awakenedOne.actions.ConjureAction;
+import awakenedOne.cards.tokens.spells.AphoticShield;
+import awakenedOne.cards.tokens.spells.DeathCoil;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+
+import static awakenedOne.util.Wiz.atb;
+
+public class AphoticFount extends AbstractAwakenedCard {
+
+    public final static String ID = AwakenedOneMod.makeID(AphoticFount.class.getSimpleName());
+    // intellij stuff skill, self, basic, , ,  5, 3, ,
+    boolean chant = false;
+
+    public AphoticFount() {
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.exhaust = true;
+        cardsToPreview = new AphoticShield();
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        addToTop(new AddSpellCardAction(new AphoticShield()));
+        atb(new ConjureAction(true));
+    }
+
+    @Override
+    public void upp() {
+        this.isInnate = true;
+    }
+}

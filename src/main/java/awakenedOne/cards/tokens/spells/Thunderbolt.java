@@ -7,11 +7,13 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
+import com.megacrit.cardcrawl.vfx.combat.ReaperEffect;
 
 import java.util.Iterator;
 
@@ -39,21 +41,14 @@ public class Thunderbolt extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        att(new SFXAction("ORB_LIGHTNING_EVOKE", 0.1F));
-        Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
         if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)){
+            CardCrawlGame.sound.playA("ORB_LIGHTNING_EVOKE", 0.9F);
+            CardCrawlGame.sound.playA("ORB_LIGHTNING_PASSIVE", -0.3F);
             vfx(new LightningEffect(m.hb.cX, m.hb.cY));
             dmg(m, AbstractGameAction.AttackEffect.NONE);}
         else {
             AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
-            AbstractMonster mo;
-            while(var3.hasNext()) {
-                mo = (AbstractMonster)var3.next();
-                if (!mo.isDeadOrEscaped()) {
-                    this.addToBot(new VFXAction(new LightningEffect(mo.drawX, mo.drawY), 0.05F));
-                }
-            }
+            this.addToBot(new VFXAction(new ReaperEffect()));
             this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         }
 

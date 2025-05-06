@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.util.Wiz.atb;
 import static awakenedOne.util.Wiz.att;
 
 public class Grimoire extends AbstractAwakenedCard {
@@ -23,11 +24,11 @@ public class Grimoire extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         att(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect; i++) {
-                new ConjureAction(false);
+                atb(new ConjureAction(true));
             }
             return true;
         }));
-        new ConjureAction(false);
+        atb(new ConjureAction(true));
     }
 
 

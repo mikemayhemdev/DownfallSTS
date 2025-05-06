@@ -26,6 +26,10 @@ public class IntensifyPower extends AbstractAwakenedPower {
                 m = (AbstractMonster) action.target;
             }
 
+            if (m == null){
+                m = AbstractDungeon.getMonsters().getRandomMonster(true);
+            }
+
             AbstractCard tmp = card.makeSameInstanceOf();
             AbstractDungeon.player.limbo.addToBottom(tmp);
             tmp.current_x = card.current_x;

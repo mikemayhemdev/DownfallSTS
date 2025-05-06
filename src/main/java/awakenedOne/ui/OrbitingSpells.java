@@ -1,6 +1,7 @@
 package awakenedOne.ui;
 
 import awakenedOne.actions.AddSpellCardAction;
+import awakenedOne.cards.AphoticFount;
 import awakenedOne.cards.Deathwish;
 import awakenedOne.cards.tokens.spells.*;
 import awakenedOne.powers.EmpressPower;
@@ -46,6 +47,12 @@ public class OrbitingSpells {
         for(int i=0; i<count; i++) {
             addSpellCard(CardLibrary.getCard(DeathCoil.ID).makeCopy());
         }
+
+        int count2 = (int) AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(q -> q instanceof AphoticFount).count();
+        for(int i=0; i<count2; i++) {
+            addSpellCard(CardLibrary.getCard(AphoticShield.ID).makeCopy());
+        }
+
     }
 
     public static void addSpellCard(AbstractCard card) {

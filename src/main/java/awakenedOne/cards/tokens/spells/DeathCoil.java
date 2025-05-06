@@ -54,12 +54,13 @@ public class DeathCoil extends AbstractSpellCard {
 
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if (!monster.isDead && !monster.isDying) {
-                    if (m != null) {
+                    if (monster != null) {
                         this.addToBot(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, monster.hb.cX, monster.hb.cY), 0.5F));
                     }
                 }
-                this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
-            }
+              }
+            this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+
         }
     }
 
