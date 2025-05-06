@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
@@ -26,8 +27,10 @@ public class Manastorm extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
 
-        for (AbstractMonster q : monsterList()) {
-            atb(new ConjureAction(false));
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if ((!monster.isDead)) {
+                atb(new ConjureAction(false));
+            }
         }
 
     }

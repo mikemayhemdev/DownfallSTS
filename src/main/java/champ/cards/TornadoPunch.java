@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 
@@ -44,9 +45,11 @@ public class TornadoPunch extends AbstractChampCard {
         //if (upgraded) techique();
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         if (dcombo())
-            for (AbstractMonster q : monsterList()) {
-                //atb(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
-                atb(new GainBlockAction(p, block));
+            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                if ((!monster.isDead)) {
+                    //atb(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
+                    atb(new GainBlockAction(p, block));
+                }
             }
     }
 
