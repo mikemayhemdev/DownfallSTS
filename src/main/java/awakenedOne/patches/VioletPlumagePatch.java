@@ -6,7 +6,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import hermit.relics.BartenderGlass;
 
 //This is code from the Aspiration mod!
 //https://github.com/erasels/Aspiration-StS/blob/564c18fce53f30b105fc401fd22445aed018d178/src/main/java/aspiration/patches/cards/CardCostModificationPatches.java#L3

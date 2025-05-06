@@ -38,7 +38,7 @@ public class RavenStrike extends AbstractAwakenedCard {
         }
 
         if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if (!(AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
+            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 atb(new DrawCardAction(secondMagic));
                // HexCurse(magicNumber, m, AbstractDungeon.player);
                 checkOnChant();

@@ -39,7 +39,7 @@ public class ClarionCall extends AbstractAwakenedCard {
         }
 
         if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if (!(AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
+            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);
             }

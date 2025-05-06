@@ -54,7 +54,7 @@ public class SplitWide extends AbstractAwakenedCard {
         }
 
         if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if (!(AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
+            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 checkOnChant();
                 awaken(1);
             }
@@ -99,7 +99,7 @@ public class SplitWide extends AbstractAwakenedCard {
 
         if (!this.chant) {
             if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-                if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == 1)) {
+                if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                     ischanting = true;
                 }
             }
@@ -144,7 +144,7 @@ public class SplitWide extends AbstractAwakenedCard {
 
         if (!this.chant) {
             if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-                if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == 1)) {
+                if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                     ischanting = true;
                 }
             }
