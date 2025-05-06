@@ -1,6 +1,7 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.MazalethFormPower;
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -25,6 +26,7 @@ public class MazalethForm extends AbstractAwakenedCard {
     public MazalethForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         isEthereal = true;
+        tags.add(BaseModCardTags.FORM);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
