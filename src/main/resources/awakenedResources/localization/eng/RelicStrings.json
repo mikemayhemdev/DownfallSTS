@@ -24,7 +24,7 @@
   },
   "awakened:HexxBomb": {
     "NAME": "Hexx Bomb",
-    "FLAVOR": "Countdown to absolute Oblivion.",
+    "FLAVOR": "NOT USED",
     "DESCRIPTIONS": [
       "NOT USED"
     ]
@@ -48,7 +48,7 @@
     "NAME": "Bird-Faced Tapestry",
     "FLAVOR": "This tapestry depicts the crow god Mazaleth demanding sacrifice.",
     "DESCRIPTIONS": [
-      "Whenever you play a Power card, apply #b1 Weak to ALL enemies."
+      "Whenever you play a Power card, apply #b1 Weak to ALL enemies. NOT USED"
     ]
   },
   "awakened:MomsKnife": {
@@ -66,11 +66,11 @@
       ""
     ]
   },
-  "awakened:ForbiddenKnowledge": {
-    "NAME": "",
-    "FLAVOR": "",
+  "awakened:VioletPlumage": {
+    "NAME": "Violet Plumage",
+    "FLAVOR": "Tinged by the unending darkness of oblivion.",
     "DESCRIPTIONS": [
-      "The first Power card you play each combat costs #b0 and draws a card."
+      "The first Power card you play each combat is free but places a #yVoid on top of your draw pile."
     ]
   },
   "awakened:MagicalCodex": {
@@ -78,6 +78,14 @@
     "FLAVOR": "",
     "DESCRIPTIONS": [
       "Whenever you #yawakened:Conjure, ."
+    ]
+  },
+  "awakened:CawingCask": {
+    "NAME": "Cawing Cask",
+    "FLAVOR": "A ceremonially carved barrel depicting the crow god Mazaleth, its contents smell questionable...",
+    "DESCRIPTIONS": [
+      "Whenever you use a potion, gain #b",
+      " #yRitual [REMOVE_SPACE]."
     ]
   }
 }

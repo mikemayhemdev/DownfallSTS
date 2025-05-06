@@ -89,16 +89,13 @@ public class ShopBossPatch {
             }
         }
         if (AbstractDungeon.player instanceof CollectorChar || RandomCardWithTagAction.collectorLocked()) {
-            if (q.hasTag(expansionContentMod.STUDY_COLLECTOR)){
-                return false;
-            }
-
-        if (AbstractDungeon.player instanceof AwakenedOneChar || RandomCardWithTagAction.awakenedLocked()) {
-            if (q.hasTag(expansionContentMod.STUDY_AWAKENEDONE)){
+            if (q.hasTag(expansionContentMod.STUDY_COLLECTOR)) {
                 return false;
             }
         }
 
+        if (AbstractDungeon.player instanceof AwakenedOneChar || RandomCardWithTagAction.awakenedLocked()) {
+            return !q.hasTag(expansionContentMod.STUDY_AWAKENEDONE);
         }
 
         return true;

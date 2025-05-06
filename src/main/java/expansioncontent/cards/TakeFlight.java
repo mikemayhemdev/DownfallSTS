@@ -25,8 +25,8 @@ public class TakeFlight extends AbstractExpansionCard {
 
     public TakeFlight() {
         super(ID, 1, AbstractCard.CardType.POWER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-        this.tags.add(expansionContentMod.STUDY_AWAKENEDONE);
         this.tags.add(expansionContentMod.STUDY);
+        this.tags.add(expansionContentMod.STUDY_AWAKENEDONE);
         setBackgroundTexture("expansioncontentResources/images/512/bg_boss_awakenedone.png", "expansioncontentResources/images/1024/bg_boss_awakenedone.png");
         this.baseMagicNumber = this.magicNumber = 3;
         this.baseDownfallMagic = this.downfallMagic = 4;

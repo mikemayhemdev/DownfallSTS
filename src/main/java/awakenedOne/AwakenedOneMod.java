@@ -15,6 +15,7 @@ import awakenedOne.util.CardFilter;
 import awakenedOne.util.Wiz;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -32,6 +33,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.util.CardIgnore;
+import hermit.relics.BrassTacks;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -187,11 +189,16 @@ public class AwakenedOneMod implements
 
     @Override
     public void receiveEditRelics() {
+        //add awakened one relics here
         BaseMod.addRelicToCustomPool(new RippedDoll(), AwakenedOneChar.Enums.AWAKENED_BLUE);
         BaseMod.addRelicToCustomPool(new ShreddedDoll(), AwakenedOneChar.Enums.AWAKENED_BLUE);
         BaseMod.addRelicToCustomPool(new KTRibbon(), AwakenedOneChar.Enums.AWAKENED_BLUE);
         BaseMod.addRelicToCustomPool(new TomeOfPortalmancy(), AwakenedOneChar.Enums.AWAKENED_BLUE);
         BaseMod.addRelicToCustomPool(new EyeOfTheOccult(), AwakenedOneChar.Enums.AWAKENED_BLUE);
+
+        //shared relics
+        BaseMod.addRelic(new CawingCask(), RelicType.SHARED);
+        BaseMod.addRelic(new VioletPlumage(), RelicType.SHARED);
     }
 
 
