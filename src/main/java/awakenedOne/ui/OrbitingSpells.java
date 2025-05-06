@@ -1,10 +1,10 @@
 package awakenedOne.ui;
 
-import awakenedOne.cards.tokens.spells.BurningStudy;
-import awakenedOne.cards.tokens.spells.Cryostasis;
-import awakenedOne.cards.tokens.spells.Darkleech;
-import awakenedOne.cards.tokens.spells.Thunderbolt;
+import awakenedOne.actions.AddSpellCardAction;
+import awakenedOne.cards.Deathwish;
+import awakenedOne.cards.tokens.spells.*;
 import awakenedOne.powers.EmpressPower;
+import collector.cards.collectibles.AbstractCollectibleCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -40,6 +40,11 @@ public class OrbitingSpells {
         spellCards.clear();
         for (int i = 0; i < spells.size(); i++) {
             addSpellCard(CardLibrary.getCard(spells.get(i)).makeCopy());
+        }
+
+        int count = (int) AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(q -> q instanceof Deathwish).count();
+        for(int i=0; i<count; i++) {
+            addSpellCard(CardLibrary.getCard(DeathCoil.ID).makeCopy());
         }
     }
 

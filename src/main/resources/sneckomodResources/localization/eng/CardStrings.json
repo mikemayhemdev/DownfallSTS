@@ -605,8 +605,8 @@
   },
   "sneckomod:Lacerate": {
     "NAME": "Lacerate",
-    "DESCRIPTION": "Deal !D! damage. Whenever this enemy is debuffed this turn they gain !M! sneckomod:Venom. sneckomod:Gift: *Crippling *Cloud.",
-    "DESCRIPTION_BATTLE": "Deal !D! damage. Whenever this enemy is debuffed this turn they gain !M! sneckomod:Venom."
+    "DESCRIPTION": "Apply !M! sneckomod:Venom to ALL enemies. NL Gain a *Poisoned *Stab. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! sneckomod:Venom to ALL enemies. NL Gain a *Poisoned *Stab+. NL Exhaust."
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Serpentine Sleuth",

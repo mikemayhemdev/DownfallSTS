@@ -13,8 +13,6 @@ import downfall.util.CardIgnore;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 
-@Deprecated
-@CardIgnore
 public class MazalethForm extends AbstractAwakenedCard {
     public final static String ID = makeID(MazalethForm.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
@@ -23,47 +21,15 @@ public class MazalethForm extends AbstractAwakenedCard {
 
     public MazalethForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 3;
-        this.magicNumber = this.baseMagicNumber;
-        this.baseSecondMagic = 4;
-        this.secondMagic = this.baseSecondMagic;
-        tags.add(CardTags.HEALING);
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!this.chant)
             addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new RegenPower((AbstractCreature)AbstractDungeon.player, this.magicNumber), this.magicNumber));
-        if (this.chant)
-            chant();
-    }
-
-    @Override
-    public void chant() {
-        addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new RegenPower((AbstractCreature)AbstractDungeon.player, this.secondMagic), this.secondMagic));
-        checkOnChant();
-    }
-
-    public void triggerWhenDrawn() {
-        this.chant = false;
-    }
-
-    public void triggerOnCardPlayed(AbstractCard card) {
-        if (card.type == CardType.POWER && AbstractDungeon.player.hand.contains((AbstractCard)this))
-            this.chant = true;
-    }
-
-    @Override
-    public void onMoveToDiscard() {
-        this.chant = false;
-    }
-
-    public void triggerOnGlowCheck() {
-        this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
+        isEthereal = false;
     }
 }

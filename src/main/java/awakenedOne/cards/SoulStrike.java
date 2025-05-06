@@ -4,7 +4,10 @@ import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 
+@Deprecated
+@CardIgnore
 public class SoulStrike extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(SoulStrike.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,

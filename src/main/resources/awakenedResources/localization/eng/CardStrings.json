@@ -15,6 +15,12 @@
     "NAME": "Darkleech",
     "DESCRIPTION": "Apply !M! awakened:Hex. NL Exhaust."
   },
+
+  "awakened:DeathCoil": {
+    "NAME": "Deathcoil",
+    "DESCRIPTION": "Lose !M! HP. NL Deal !D! damage. NL Exhaust."
+  },
+
   "awakened:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -285,9 +291,9 @@
     "DESCRIPTION": "When you would die or at the end of combat, remove all debuffs and heal !M! HP instead."
   },
   "awakened:MazalethForm": {
-    "NAME": "Mazaleth Form",
-    "DESCRIPTION": "not used",
-    "UPGRADE_DESCRIPTION": "The first Power you play each turn costs 0. awakened:Chant: ... and draws a card."
+    "NAME": "Awakened Form",
+    "DESCRIPTION": "Ethereal. NL The first Attack you play each turn deals double damage. NL Costs 1 less [E] for every 25% HP missing.",
+    "UPGRADE_DESCRIPTION": "The first Attack you play each turn deals double damage. NL Costs 1 less [E] for every 25% HP missing."
   },
   "awakened:Planeswalk": {
     "NAME": "Planeswalk",
@@ -410,5 +416,18 @@
   "awakened:Bloodthirst": {
     "NAME": "Bloodthirst",
     "DESCRIPTION": "Deal !D! damage. NL If Fatal, gain a Power Potion and Exhaust this card."
+  },
+  "awakened:Procession": {
+    "NAME": "Procession",
+    "DESCRIPTION": "Shuffle ALL your cards and !M! *Voids into your draw pile. NL Draw !awakened:m2! cards. NL Exhaust."
+  },
+  "awakened:SplitWide": {
+    "NAME": "Split Wide",
+    "DESCRIPTION": "Deal !D! damage. NL Strength affects this card !M! times. NL Chant: Strength affects this card !awakened:m2! more times."
+  },
+  "awakened:Deathwish": {
+    "NAME": "Deathwish",
+    "DESCRIPTION": "Add *Deathcoil to the Spell Pile for the rest of combat. NL awakened:Conjure. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Deathcoil to the Spell Pile for the rest of combat. NL awakened:Conjure. NL Exhaust."
   }
 }
