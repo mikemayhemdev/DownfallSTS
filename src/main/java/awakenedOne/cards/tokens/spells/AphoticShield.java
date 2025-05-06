@@ -22,7 +22,7 @@ public class AphoticShield extends AbstractSpellCard {
     // intellij stuff skill, self, , , , , 2, 1
 
     public AphoticShield() {
-        super(ID, CardType.POWER, CardTarget.SELF);
+        super(ID, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
     }
 
