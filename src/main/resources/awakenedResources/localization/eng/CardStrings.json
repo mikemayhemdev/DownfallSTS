@@ -415,7 +415,7 @@
     "UPGRADE_DESCRIPTION": "awakened:Conjure at random X+1 times."
   },
   "awakened:AphoticFount": {
-    "NAME": "Aphotic Shield",
+    "NAME": "Aphotic Fount",
     "DESCRIPTION": "Add *Aphotic *Shield to the Spell Pile. NL Conjure. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to the Spell Pile. NL Conjure. NL Exhaust."
   },
