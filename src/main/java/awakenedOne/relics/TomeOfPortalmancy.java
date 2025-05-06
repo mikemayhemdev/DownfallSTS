@@ -3,6 +3,7 @@ package awakenedOne.relics;
 import automaton.cards.FineTuning;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.tokens.Ceremony;
+import awakenedOne.powers.UltimateHexDebuff;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardPowerTip;
@@ -48,9 +49,11 @@ public class TomeOfPortalmancy extends CustomRelic {
             while (var2.hasNext()) {
                 AbstractMonster mo = (AbstractMonster) var2.next();
                 if (!mo.isDead) {
-                    HexCurse(AMOUNT, mo, AbstractDungeon.player);
-                    this.addToBot(new VFXAction(new GiantEyeEffect(mo.hb.cX, mo.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
-                    this.addToTop(new RelicAboveCreatureAction(mo, this));
+                    if (!mo.hasPower(UltimateHexDebuff.POWER_ID)) {
+                        HexCurse(AMOUNT, mo, AbstractDungeon.player);
+                        this.addToBot(new VFXAction(new GiantEyeEffect(mo.hb.cX, mo.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
+                        this.addToTop(new RelicAboveCreatureAction(mo, this));
+                    }
                 }
             }
 
