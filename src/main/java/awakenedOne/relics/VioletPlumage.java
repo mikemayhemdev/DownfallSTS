@@ -28,7 +28,7 @@ public class VioletPlumage extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard c, UseCardAction action) {
-        if (c.type == AbstractCard.CardType.POWER && this.grayscale == false);
+        if ((c.type == AbstractCard.CardType.POWER)  && !this.grayscale);
         flash();
         addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
         this.grayscale = true;

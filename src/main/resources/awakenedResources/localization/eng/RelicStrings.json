@@ -11,7 +11,7 @@
     "FLAVOR": "A reminder of your weakness, and yet you still can't let go.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL At the start of combat, gain #yCeremony+ [REMOVE_SPACE], and #b1 Ritual [REMOVE_SPACE]."
+      " [REMOVE_SPACE].[] NL At the start of combat, gain #yCeremony+ [REMOVE_SPACE], and #b1 #yRitual [REMOVE_SPACE]."
     ]
   },
   "awakened:KTRibbon": {
