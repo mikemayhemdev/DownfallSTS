@@ -24,7 +24,7 @@ public class VioletPlumagePatch {
                 if(r != null) {
                     return r.shouldMakePowersFree();
                 }*/
-                return (!AbstractDungeon.player.getRelic(BartenderGlass.ID).grayscale);
+                return (!AbstractDungeon.player.getRelic(VioletPlumage.ID).grayscale);
             }
 
             return __result;
