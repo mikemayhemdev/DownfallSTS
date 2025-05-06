@@ -1,6 +1,5 @@
 package awakenedOne.relics;
 
-import automaton.cards.FineTuning;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.tokens.Ceremony;
 import awakenedOne.util.TexLoader;
