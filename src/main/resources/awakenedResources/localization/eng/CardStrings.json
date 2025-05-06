@@ -416,8 +416,8 @@
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",
-    "DESCRIPTION": "Add *Aphotic *Shield to the Spell Pile. NL Conjure. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to the Spell Pile. NL Conjure. NL Exhaust."
+    "DESCRIPTION": "Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure. NL Exhaust."
   },
   "awakened:Bloodthirst": {
     "NAME": "Bloodthirst",
