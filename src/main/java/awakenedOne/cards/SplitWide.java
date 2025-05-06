@@ -121,12 +121,12 @@ public class SplitWide extends AbstractAwakenedCard {
         if (ischanting == true) {
             AbstractPower strength = AbstractDungeon.player.getPower("Strength");
             if (strength != null) {
-                strength.amount *= this.magicNumber+secondMagic;
+                strength.amount *= (this.magicNumber+secondMagic);
             }
 
             super.applyPowers();
             if (strength != null) {
-                strength.amount /= this.magicNumber+secondMagic;
+                strength.amount /= (this.magicNumber+secondMagic);
             }
         }
 
