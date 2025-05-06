@@ -216,17 +216,17 @@
   "awakened:MazalethFormPower": {
     "NAME": "Mazaleth Form",
     "DESCRIPTIONS": [
-      "The first Power you play each turn costs #b0 [REMOVE_SPACE].",
+      "The first Attack you play each turn deals double damage.",
       "The first #b",
-      " Powers you play each turn cost #b0 [REMOVE_SPACE]."
+      " Attacks you play each turn deal double damage."
     ]
   },
-  "awakened:MazalethFormChantPower": {
-    "NAME": "Mercy",
+  "awakened:DoubleDamageOncePower": {
+    "NAME": "Doubled Damage",
     "DESCRIPTIONS": [
-      "The first Power you play each turn draws a card.",
-      "The first #b",
-      " Powers you play each turn draw a card."
+      "The next Attack you play this turn deals double damage.",
+      "The next #b",
+      " Attacks you play this turn deal double damage."
     ]
   },
   "awakened:DarknessFallsPower": {

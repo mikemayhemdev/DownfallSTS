@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import awakenedOne.powers.MazalethFormPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,8 +11,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.RegenPower;
 import downfall.util.CardIgnore;
+import sneckomod.powers.SerpentMindPower;
 
 import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.util.Wiz.applyToSelf;
 
 public class MazalethForm extends AbstractAwakenedCard {
     public final static String ID = makeID(MazalethForm.class.getSimpleName());
@@ -25,7 +28,7 @@ public class MazalethForm extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-            addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new RegenPower((AbstractCreature)AbstractDungeon.player, this.magicNumber), this.magicNumber));
+        applyToSelf(new MazalethFormPower(1));
     }
 
     @Override

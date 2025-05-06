@@ -47,7 +47,7 @@ public class SplitWide extends AbstractAwakenedCard {
             }
         }
 
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
 
         if (this.chant) {
             checkOnChant();
