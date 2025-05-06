@@ -67,6 +67,9 @@ public class EnemyHexedPower extends AbstractAwakenedPower implements HealthBarR
 
     @Override
     public void updateDescription() {
+        if (this.owner.hasPower(UltimateHexDebuff.POWER_ID)) {
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
+        }
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }
