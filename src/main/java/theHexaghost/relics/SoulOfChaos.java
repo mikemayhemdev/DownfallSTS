@@ -11,6 +11,8 @@ import theHexaghost.cards.RandomFlameAction;
 import theHexaghost.ghostflames.*;
 import downfall.util.TextureLoader;
 
+import static hermit.util.Wiz.atb;
+import static hermit.util.Wiz.att;
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;
 
@@ -27,10 +29,12 @@ public class SoulOfChaos extends CustomRelic {
     @Override
     public void onPlayerEndTurn() {
         flash();
+        int newghostflame = AbstractDungeon.relicRng.random(0, 5);
         this.addToTop(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng), false));
+        att(new RandomFlameAction());
             int chosen = AbstractDungeon.relicRng.random(0, 2);
 
-            AbstractGhostflame gf = new SearingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
+            AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(newghostflame);
 
             if (chosen == 0) {
                 gf = new SearingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
@@ -44,7 +48,11 @@ public class SoulOfChaos extends CustomRelic {
                 gf = new BolsteringGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
             }
 
-        GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);
+
+        GhostflameHelper.hexaGhostFlames.set(newghostflame, gf);
+        if (gf.charged) {
+            gf.extinguish();
+        }
         gf.activate();
     }
 
