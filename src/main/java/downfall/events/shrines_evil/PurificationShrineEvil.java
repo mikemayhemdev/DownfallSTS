@@ -95,7 +95,6 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
                 }
                 AbstractDungeon.player.masterDeck.removeCard((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(1));
                 cards.add(AbstractDungeon.gridSelectScreen.selectedCards.get(1).cardID);
-                //todo: write a better metric tracker
                 logMetric(ID, "Desecrated and lost" + hpAmt + "Max HP.");
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();

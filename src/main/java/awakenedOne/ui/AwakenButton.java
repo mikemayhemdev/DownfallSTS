@@ -24,11 +24,13 @@ public class AwakenButton extends ClickableUIElement {
         super(tex, 750, 750, 150 * Settings.scale, 150 * Settings.scale);
     }
 
+    //What button? A button? A button that steals all of your energy when you click it? Never heard of it.
+
     @Override
     public void update() {
         super.update();
         if (hitbox.hovered) {
-            ImageHelper.tipBoxAtMousePos("#yAwaken", "Click this to spend all your [E] and gain that much Awakened."); //TODO: Loc
+            ImageHelper.tipBoxAtMousePos("#yAwaken", "Click this to spend all your [E] and gain that much Awakened.");
         }
     }
 

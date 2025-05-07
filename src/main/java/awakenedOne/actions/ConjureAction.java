@@ -72,7 +72,7 @@ public class ConjureAction extends AbstractGameAction {
                     }
                     addToTop(new MakeTempCardInHandAction(q));
                     addToTop(new RemoveSpellCardAction(q));
-                })); // TODO: Loc
+                }));
             }
         }
 

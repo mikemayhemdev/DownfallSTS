@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+//unused
+
 public class MazalethsMadnessPower extends AbstractAwakenedPower {
     // intellij stuff buff
     public static final String NAME = MazalethsMadnessPower.class.getSimpleName();
@@ -20,7 +22,7 @@ public class MazalethsMadnessPower extends AbstractAwakenedPower {
     public void onAfterCardPlayed(AbstractCard card) {
         if (card instanceof AbstractSpellCard) {
             flash();
-            addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT)); //TODO: Lightning
+            addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
     }
 

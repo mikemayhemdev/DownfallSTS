@@ -10,7 +10,7 @@ import java.util.List;
 import static awakenedOne.AwakenedOneMod.makeID;
 
 public abstract class AbstractSpellCard extends AbstractAwakenedCard {
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("SpellDescriptor")); // TODO: Loc
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("SpellDescriptor"));
 
     public AbstractSpellCard(String cardID, CardType type, CardTarget target) {
         super(cardID, 0, type, CardRarity.SPECIAL, target, CardColor.COLORLESS);

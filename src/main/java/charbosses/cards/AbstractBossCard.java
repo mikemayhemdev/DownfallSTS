@@ -95,7 +95,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     public boolean manualCustomVulnModifier = false;
     public static boolean fakeStormPower = false;
     //TODO - Does Vuln get actually calculated anywhere?  this variable does not appear to be referenced
-
+    //paper phrog?
 
     private static final float INTENT_HB_W = 64.0F * Settings.scale;
     public Hitbox intentHb = new Hitbox(INTENT_HB_W, INTENT_HB_W);

@@ -9,7 +9,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.FutureUpgradePower;
 
-// this is actually fifth seal, FifthSeal.java is sixth seal, TODO: after the loc is finished, swap the id name for clearer info in metric
+// this is actually fifth seal, FifthSeal.java is sixth seal, TO-DO: after the loc is finished, swap the id name for clearer info in metric
+// removing this to-do because changing the ids of cards causes immense issues, and it's not worth bothering with
 @NoCompendium
 public class SixthSeal extends AbstractSealCard {
     public final static String ID = makeID("SixthSeal");
