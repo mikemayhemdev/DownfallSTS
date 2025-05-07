@@ -8,7 +8,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
+import theHexaghost.actions.RandomizeFlameAction;
 import theHexaghost.cards.RandomFlameAction;
+
 import theHexaghost.ghostflames.*;
 import downfall.util.TextureLoader;
 
@@ -33,28 +35,14 @@ public class SoulOfChaos extends CustomRelic {
         super.atTurnStart();
         flash();
 
-        att(new RandomFlameAction());
-        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-
         int chosen = AbstractDungeon.relicRng.random(0, 2);
 
-        AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(0);
+        att(new RandomFlameAction());
 
-        if (chosen == 0) {
-            gf = new SearingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
-        }
+        atb(new RandomizeFlameAction(chosen));
 
-        if (chosen == 1) {
-            gf = new CrushingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
-        }
+        att(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
-        if (chosen == 2) {
-            gf = new BolsteringGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
-        }
-
-
-        GhostflameHelper.hexaGhostFlames.set((GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame)), gf);
-        gf.activate();
     }
 
 
