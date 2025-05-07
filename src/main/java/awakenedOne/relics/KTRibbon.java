@@ -20,6 +20,8 @@ public class KTRibbon extends CustomRelic implements OnAwakenRelic {
 
     //Daemon's Ribbon
 
+    //yes this is a teto relic
+
     public static final String ID = AwakenedOneMod.makeID("KTRibbon");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("KTRibbon.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("KTRibbon.png"));

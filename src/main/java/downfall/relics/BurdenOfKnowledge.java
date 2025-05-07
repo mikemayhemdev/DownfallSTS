@@ -56,7 +56,7 @@ public class BurdenOfKnowledge extends CustomRelic {
         downfallMod.removeAnyRelicFromPools(StasisUpgradeRelic.ID);
         downfallMod.removeAnyRelicFromPools(Barbells.ID);
 
-        AbstractDungeon.player.decreaseMaxHealth(10);
+        AbstractDungeon.player.decreaseMaxHealth(20);
         List<String> upgradedCards = new ArrayList();
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
@@ -112,8 +112,8 @@ public class BurdenOfKnowledge extends CustomRelic {
     public void atBattleStart() {
         this.flash();
         this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new MasterRealityPower(AbstractDungeon.player)));
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -1), -1));
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -1), -1));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -2), -2));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -2), -2));
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         AbstractDungeon.player.hasRelic(Enchiridion.ID);
         {

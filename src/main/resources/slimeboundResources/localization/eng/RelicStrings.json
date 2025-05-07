@@ -100,7 +100,7 @@
     "NAME": "Gelatinous Cube",
     "FLAVOR": "Hey, it stuck to your body.",
     "DESCRIPTIONS": [
-      "Whenever you draw a #yStatus or #rCurse, gain #b3 Block [REMOVE_SPACE]."
+      "Whenever you draw a #yStatus or #rCurse [REMOVE_SPACE], gain #b3 Block [REMOVE_SPACE]."
     ]
   }
 }

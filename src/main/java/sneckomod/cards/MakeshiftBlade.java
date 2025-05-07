@@ -101,7 +101,7 @@ public class MakeshiftBlade extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
+            //upgradeMagicNumber(UPGRADE_MAGIC);
             upgradeDamage(4);
         }
     }

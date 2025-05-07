@@ -35,7 +35,7 @@ public class EyeOfTheOccult extends CustomRelic {
     private static int AMOUNT = 3;
 
     public EyeOfTheOccult() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
     @Override
     public String getUpdatedDescription() {

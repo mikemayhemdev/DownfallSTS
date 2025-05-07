@@ -60,7 +60,7 @@
     "NAME": "Soul of Chaos",
     "FLAVOR": "Mayhem, made manifest.",
     "DESCRIPTIONS": [
-      "The second #ySearing #yGhostflame becomes a #yMayhem #yGhostflame [REMOVE_SPACE]. NL #yMayhem #yGhostflame activates when you end your turn on it. NL #yIgnition [REMOVE_SPACE]: #yScry #bn and then play the top card of your draw pile, #bn is modified by #yIntensity [REMOVE_SPACE]."
+      "At the end of your turn, play the top card of your draw pile. Then, randomize ALL Ghostflames and move to a random spot on the Ghostflame Wheel."
     ]
   },
   "hexamod:JarOfFuel": {
@@ -88,7 +88,7 @@
     "NAME": "Six-Point Brand",
     "FLAVOR": "Fire, fire, fire, fire, fire, FIRE!",
     "DESCRIPTIONS": [
-      "Whenever you play #b6 cards, gain an #ygremlin:Echo of a basic #yStrike [REMOVE_SPACE]. It costs #b0 [REMOVE_SPACE]."
+      "Whenever you play #b6 #ynon-Echo cards, gain an #ygremlin:Echo of a basic #yStrike [REMOVE_SPACE]. It costs #b0 [REMOVE_SPACE]."
     ]
   },
   "hexamod:Libra": {

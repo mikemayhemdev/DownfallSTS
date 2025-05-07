@@ -46,6 +46,9 @@ public class CawingCask extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.SOLID);
     }
 
+    //Cawing Cask
+
+    //or, the cask of amontillado
 
     public void onUsePotion() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {

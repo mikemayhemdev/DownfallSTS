@@ -22,8 +22,6 @@ public class VioletPlumage extends CustomRelic {
 
     public VioletPlumage() {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
-        AbstractCard q = new VoidCard();
-        tips.add(new CardPowerTip(q));
     }
 
     @Override
