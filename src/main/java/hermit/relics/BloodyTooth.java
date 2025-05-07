@@ -17,8 +17,6 @@ public class BloodyTooth extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("bloody_tooth.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("bloody_tooth_outline.png"));
 
-
-
     public BloodyTooth() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.FLAT);
     }
