@@ -20,7 +20,7 @@ public class RandomizeFlameAction extends AbstractGameAction {
     public void update() {
 
                 AbstractGhostflame newgf = GhostflameHelper.activeGhostFlame;
-
+                System.out.println("DEBUG: Old Ghostflame: " + newgf.getName());
                 //this is only called by a relic, so it'll use relic rng here
                 bruh = AbstractDungeon.relicRng.random(0, 2);
 
@@ -36,10 +36,13 @@ public class RandomizeFlameAction extends AbstractGameAction {
                     newgf = new BolsteringGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
                 }
 
+                System.out.println("DEBUG: Found Ghostflame: " + newgf.getName());
+
                 // randomize until it's different
 
-                if (newgf == GhostflameHelper.activeGhostFlame) {
-                    while (newgf == GhostflameHelper.activeGhostFlame) {
+                if (newgf.getName() == GhostflameHelper.activeGhostFlame.getName()) {
+                    System.out.println("DEBUG: Both Ghostflames are identical: " + newgf);
+                    while (newgf.getName() == GhostflameHelper.activeGhostFlame.getName()) {
                         bruh = AbstractDungeon.relicRng.random(0, 2);
 
                         if (bruh == 0) {
@@ -53,8 +56,12 @@ public class RandomizeFlameAction extends AbstractGameAction {
                         if (bruh == 2) {
                             newgf = new BolsteringGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
                         }
+
+                        System.out.println("DEBUG: Found Ghostflame: " + newgf.getName());
                     }
                 }
+
+                 System.out.println("DEBUG: Decided on Ghostflame: " + newgf.getName());
 
                 GhostflameHelper.hexaGhostFlames.set((GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame)), newgf);
                 newgf.activate();
