@@ -35,11 +35,9 @@ public class SoulOfChaos extends CustomRelic {
         super.atTurnStart();
         flash();
 
-        int chosen = AbstractDungeon.relicRng.random(0, 2);
-
         att(new RandomFlameAction());
 
-        atb(new RandomizeFlameAction(chosen));
+        atb(new RandomizeFlameAction());
 
         att(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
