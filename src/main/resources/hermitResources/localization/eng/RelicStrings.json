@@ -18,9 +18,9 @@
     "FLAVOR": "Any liquid placed inside changes into something else.",
     "DESCRIPTIONS": [
       "First #b",
+      "You cannot use any more potions this combat.",
       " times you use a potion each combat, gain a random potion. You can only use #b",
-      " potions each combat.",
-      "You cannot use any more potions this combat."
+      " potions each combat."
     ]
   },
   "hermit:Horseshoe": {
@@ -41,7 +41,8 @@
     "NAME": "Red Scarf",
     "FLAVOR": "It's warm and fuzzy.",
     "DESCRIPTIONS": [
-      "Whenever you apply a new debuff to an enemy, gain #b3 #yBlock [REMOVE_SPACE]."
+      "Whenever you apply a new debuff to an enemy, gain #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "hermit:DentedPlate": {

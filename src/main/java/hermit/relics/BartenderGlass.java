@@ -63,7 +63,7 @@ public class BartenderGlass extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + POTION_LIMIT + DESCRIPTIONS[1] + POTION_LIMIT + DESCRIPTIONS[2];
+        return DESCRIPTIONS[0] + POTION_LIMIT + DESCRIPTIONS[2] + POTION_LIMIT + DESCRIPTIONS[3];
     }
 
 }
