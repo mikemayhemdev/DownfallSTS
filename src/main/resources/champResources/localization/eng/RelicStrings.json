@@ -42,7 +42,8 @@
     "NAME": "Defensive Thesis",
     "FLAVOR": "Pro tip: Don't get hit.",
     "DESCRIPTIONS": [
-      "#bchamp:Defensive #bStance's #ychamp:Finisher #yBonus grants #b3 more #yBlock [REMOVE_SPACE]."
+      "#bchamp:Defensive #bStance's #ychamp:Finisher #yBonus grants #b",
+      " more #yBlock [REMOVE_SPACE]."
     ]
   },
   "champ:DeflectingBracers": {

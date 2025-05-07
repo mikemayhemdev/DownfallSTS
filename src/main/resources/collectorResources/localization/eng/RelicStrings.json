@@ -11,7 +11,7 @@
     "FLAVOR": "The ever-changing flames reflect fortune's favor.",
     "DESCRIPTIONS": [
       "Replaces ",
-      "[] [REMOVE_SPACE]. At the start of each combat, add an #yEmber into your hand and gain #b1 #ycollector:Reserve. The first time you #yExhaust an #yEmber each turn, gain #b1 #ycollector:Reserve [REMOVE_SPACE]."
+      "[] [REMOVE_SPACE]. At the start of each combat, add an #yEmber into your hand and gain #b1 #ycollector:Reserve [REMOVE_SPACE]. The first time you #yExhaust an #yEmber each turn, gain #b1 #ycollector:Reserve [REMOVE_SPACE]."
     ]
   },
   "collector:HolidayCoal": {

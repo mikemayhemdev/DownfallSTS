@@ -33,6 +33,9 @@ public class ConfusingCodex extends CustomRelic {
     }
 
 
+    //Variables
+    public static final int AMOUNT = 3;
+
     @Override
     public void onEquip() {
         this.counter = 0;
@@ -77,7 +80,7 @@ public class ConfusingCodex extends CustomRelic {
             return;
         }
         ++this.counter;
-        if (this.counter % 3 == 0) {
+        if (this.counter % AMOUNT == 0) {
             this.counter = 0;
             AbstractMonster q = AbstractDungeon.getRandomMonster();
             if (q != null) {
@@ -90,6 +93,6 @@ public class ConfusingCodex extends CustomRelic {
     }
 
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + AMOUNT + DESCRIPTIONS[1];
     }
 }

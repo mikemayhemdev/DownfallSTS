@@ -24,7 +24,8 @@
     "NAME": "Ring of the Snek",
     "FLAVOR": "Illegible, unreadable, due by Thursday.",
     "DESCRIPTIONS": [
-      "Whenever you activate #b3 #ysneckomod:Overflow effects, apply #b1 #yWeak and #yVulnerable to a random enemy."
+      "Whenever you activate #b",
+      " #ysneckomod:Overflow effects, apply #b1 #yWeak and #yVulnerable to a random enemy."
     ]
   },
   "sneckomod:CrystallizedMud": {
@@ -38,7 +39,7 @@
     "NAME": "Loaded Die",
     "FLAVOR": "Cheese-stuffed.",
     "DESCRIPTIONS": [
-      "Whenever a card is #ysneckomod:Muddled, gain #b",
+      "Whenever a card is #ysneckomod:Muddled [REMOVE_SPACE], gain #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },

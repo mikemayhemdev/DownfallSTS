@@ -70,7 +70,7 @@
     "NAME": "Violet Plumage",
     "FLAVOR": "Tinged by the unending darkness of oblivion.",
     "DESCRIPTIONS": [
-      "The first Power card you play each combat is free but places a #yVoid on top of your draw pile."
+      "The first #yPower card you play each combat is free but places a #yVoid on top of your draw pile."
     ]
   },
   "awakened:MagicalCodex": {

@@ -30,8 +30,6 @@ public class TomeOfPortalmancy extends CustomRelic {
 
     public TomeOfPortalmancy() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
-        AbstractCard q = new VoidCard();
-        tips.add(new CardPowerTip(q));
     }
 
     public void onExhaust(AbstractCard card) {

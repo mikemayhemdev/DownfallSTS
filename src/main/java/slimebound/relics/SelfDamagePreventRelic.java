@@ -4,7 +4,6 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.SlimeboundMod;
-import sun.security.krb5.internal.crypto.Des;
 
 public class SelfDamagePreventRelic extends CustomRelic {
     public static final String ID = "Slimebound:SelfDamagePreventRelic";
