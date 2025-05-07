@@ -19,9 +19,7 @@ public class RandomizeFlameAction extends AbstractGameAction {
 
     public void update() {
 
-                AbstractGhostflame gf = GhostflameHelper.activeGhostFlame;
-
-                AbstractGhostflame newgf = GhostflameHelper.hexaGhostFlames.get(0);
+                AbstractGhostflame newgf = GhostflameHelper.activeGhostFlame;
 
                 //this is only called by a relic, so it'll use relic rng here
                 bruh = AbstractDungeon.relicRng.random(0, 2);
@@ -32,7 +30,7 @@ public class RandomizeFlameAction extends AbstractGameAction {
 
                 if (bruh == 1) {
                     newgf = new CrushingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
-                           }
+                }
 
                 if (bruh == 2) {
                     newgf = new BolsteringGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
@@ -40,8 +38,8 @@ public class RandomizeFlameAction extends AbstractGameAction {
 
                 // randomize until it's different
 
-                if (newgf == gf) {
-                    while (newgf == gf) {
+                if (newgf == GhostflameHelper.activeGhostFlame) {
+                    while (newgf == GhostflameHelper.activeGhostFlame) {
                         bruh = AbstractDungeon.relicRng.random(0, 2);
 
                         if (bruh == 0) {
