@@ -24,7 +24,8 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
     public boolean activated = false;
     // mark of the ether
 
-    //todo: set variable for Block gain
+    //variables
+    public static final int BLOCK = 4;
 
     public UnbrokenSoul() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
@@ -66,7 +67,7 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
 
         }
 
-        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1] + BLOCK + DESCRIPTIONS[2];
     }
 
 //    @Override
@@ -79,7 +80,7 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
     public void onCharge(AbstractGhostflame g) {
 //        if (!activated) {
             flash();
-            addToBot(new GainBlockAction(AbstractDungeon.player, 4));
+            addToBot(new GainBlockAction(AbstractDungeon.player, BLOCK));
 //            addToBot(new DrawCardAction(1));
 //            addToBot(new GainEnergyAction(1));
 //            activated = true;

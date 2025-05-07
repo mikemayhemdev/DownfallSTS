@@ -22,7 +22,9 @@ public class ProtectiveGoggles extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
-    //todo: set a variable for BLOCK
+    //How much Block does this Relic give?
+    private static final int BLOCK = 4;
+
     @Override
     public void onPlayerEndTurn() {
         if (FunctionHelper.doStuff) {

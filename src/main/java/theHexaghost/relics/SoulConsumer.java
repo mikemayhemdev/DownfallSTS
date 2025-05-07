@@ -37,7 +37,8 @@ public class SoulConsumer extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
-    //todo: set variable for number of required exhausts
+    //variables
+    public static final int EXHAUST_REQUIREMENT = 3;
 
     public void onEquip() {
         this.counter = 0;
@@ -47,7 +48,7 @@ public class SoulConsumer extends CustomRelic {
     public void onExhaust(AbstractCard card) {
         this.img = TextureLoader.getTexture(makeRelicPath("SoulStone.png"));
         ++this.counter;
-        if (this.counter % 3 == 0) {
+        if (this.counter % EXHAUST_REQUIREMENT == 0) {
             this.counter = 0;
             this.img = TextureLoader.getTexture(makeRelicPath("SoulConsumerOn.png"));
             this.flash();
@@ -94,6 +95,6 @@ public class SoulConsumer extends CustomRelic {
 //    }
 
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + EXHAUST_REQUIREMENT + DESCRIPTIONS[1];
     }
 }

@@ -28,6 +28,8 @@ import static champ.ChampMod.makeRelicPath;
 
 public class ChampionCrown extends CustomRelic  {
 
+    //todo: rework this relic
+
     public static final String ID = ChampMod.makeID("ChampionCrown");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ChampionCrown.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("ChampionCrown.png"));

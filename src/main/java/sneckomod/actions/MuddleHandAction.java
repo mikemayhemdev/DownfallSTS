@@ -16,22 +16,22 @@ public class MuddleHandAction extends AbstractGameAction {
     }
 
     public MuddleHandAction(boolean maxRangeMod) {
-        this.actionType = ActionType.CARD_MANIPULATION;// 14
-        this.p = AbstractDungeon.player;// 15
-        this.duration = Settings.ACTION_DUR_FAST;// 16
+        this.actionType = ActionType.CARD_MANIPULATION;
+        this.p = AbstractDungeon.player;
+        this.duration = Settings.ACTION_DUR_FAST;
         this.maxRangeModifier = maxRangeMod;
-    }// 17
+    }
 
     public void update() {
-        if (this.duration == Settings.ACTION_DUR_FAST) {// 21
+        if (this.duration == Settings.ACTION_DUR_FAST) {
 
             for (AbstractCard card : this.p.hand.group) {
                 addToTop(new MuddleAction(card, maxRangeModifier));
             }
 
-            this.isDone = true;// 33
+            this.isDone = true;
         } else {
-            this.tickDuration();// 38
+            this.tickDuration();
         }
-    }// 34 39
+    }
 }

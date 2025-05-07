@@ -1,11 +1,11 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import downfall.util.TextureLoader;
 
 import static automaton.AutomatonMod.makeRelicOutlinePath;
 import static automaton.AutomatonMod.makeRelicPath;

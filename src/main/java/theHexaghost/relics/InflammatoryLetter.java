@@ -22,17 +22,18 @@ public class InflammatoryLetter extends CustomRelic {
     }
     //Jar of TOBSCo
 
-    //todo: set variable for intensity gain
+    //variables
+    public static final int INTENSITY = 1;
 
     @Override
     public void atBattleStart() {
         flash();
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(INTENSITY), INTENSITY));
         //grayscale = true;
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + INTENSITY + DESCRIPTIONS[1];
     }
 }

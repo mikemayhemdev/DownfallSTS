@@ -17,12 +17,11 @@ public class StickyStick extends CustomRelic {
     public static final String IMG_PATH = "relics/StickyStick.png";
     public static final String IMG_PATH_LARGE = "relics/StickyStickLarge.png";
     public static final String OUTLINE_IMG_PATH = "relics/StickyStickOutline.png";
-    private static final int HP_PER_CARD = 1;
-
 
     //Gelatinous Cube
 
-    //todo: set variable for block gain
+    //Variables
+    private static final int BLOCK_GAIN = 3;
 
     public StickyStick() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
@@ -33,13 +32,13 @@ public class StickyStick extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0] + BLOCK_GAIN + DESCRIPTIONS[1];
     }
 
     public void onCardDraw(AbstractCard card) {
         if (card.type == AbstractCard.CardType.STATUS || card.type == AbstractCard.CardType.CURSE) {
             flash();
-            addToBot(new GainBlockAction(AbstractDungeon.player, 3));
+            addToBot(new GainBlockAction(AbstractDungeon.player, BLOCK_GAIN));
         }
     }
 

@@ -111,9 +111,6 @@ public class MuddleAction extends AbstractGameAction {
 
             LoadedDie loadedDieInstance = new LoadedDie();
             if (AbstractDungeon.player.hasRelic(LoadedDie.ID)) {
-                addToBot(new GainBlockAction(AbstractDungeon.player, 1));
-                loadedDieInstance.flash();
-                this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, loadedDieInstance));
                 AbstractDungeon.player.getRelic(LoadedDie.ID).onTrigger();
             }
 

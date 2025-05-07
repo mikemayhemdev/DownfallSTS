@@ -17,7 +17,8 @@
     "NAME": "Deca's Washers",
     "FLAVOR": "It is unclear why Deca collects these.",
     "DESCRIPTIONS": [
-      "At the start of the first #b3 turns of each combat, draw an additional card."
+      "At the start of the first #b",
+      " turns of each combat, draw an additional card."
     ]
   },
   "bronze:Timepiece": {
@@ -67,7 +68,8 @@
     "FLAVOR": "Changelog: Improved user experience.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL The first #b3 Functions you create each combat cost #b0 until played."
+      " [REMOVE_SPACE].[] NL The first #b",
+      " Functions you create each combat cost #b0 until played."
     ]
   },
   "bronze:BottledCode": {

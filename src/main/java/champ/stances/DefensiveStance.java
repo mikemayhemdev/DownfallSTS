@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
+import gremlin.relics.WizardStaff;
 import guardian.vfx.DefensiveModeStanceParticleEffect;
 
 public class DefensiveStance extends AbstractChampStance {
@@ -81,7 +82,7 @@ public class DefensiveStance extends AbstractChampStance {
     public static int finisherAmount() {
         int x = 8;
         if (AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID)) {
-            x += 3;
+            x += DefensiveTrainingManual.OOMPH;
         }
         return x;
     }

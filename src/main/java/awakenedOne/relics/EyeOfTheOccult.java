@@ -32,11 +32,11 @@ public class EyeOfTheOccult extends CustomRelic {
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("EyeOfTheOccult.png")); //TODO: Images
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("EyeOfTheOccult.png"));
 
-    private static int AMOUNT = 3;
-
+    //Yeah... you need to go look at the Spell cards for this one.
     public EyeOfTheOccult() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
+
     @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];

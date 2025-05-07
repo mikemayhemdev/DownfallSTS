@@ -17,14 +17,16 @@
     "NAME": "Barbell",
     "FLAVOR": "1000 reps? Psh. I can do 1001.",
     "DESCRIPTIONS": [
-      "Whenever you enter a Rest Site, if you have at least #b10 Upgradable cards in your deck, #yUpgrade one at random."
+      "Whenever you enter a Rest Site, if you have at least #b",
+      " #yUpgradable cards in your deck, #yUpgrade one at random."
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
     "NAME": "Berserker's Guide",
     "FLAVOR": "The text is illegible.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b3 #yVigor [REMOVE_SPACE]."
+      "At the start of your turn, gain #b",
+      " #yVigor [REMOVE_SPACE]."
     ]
   },
   "champ:ChampionCrownUpgraded": {
@@ -32,7 +34,8 @@
     "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL Start each combat in #ychamp:Ultimate #yStance [REMOVE_SPACE], which lasts for #b3 turns."
+      " [REMOVE_SPACE].[] NL Start each combat in #ychamp:Ultimate #yStance [REMOVE_SPACE], which lasts for #b",
+      " turns."
     ]
   },
   "champ:DefensiveTrainingManual": {
@@ -74,7 +77,8 @@
     "NAME": "Power Armor",
     "FLAVOR": "Bought used.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b10 [REMOVE_SPACE]."
+      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b",
+      " [REMOVE_SPACE]."
     ]
   },
   "champ:RageAmulet": {

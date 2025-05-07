@@ -3,7 +3,9 @@
     "NAME": "Heart of Goo",
     "FLAVOR": "I feel so funky.",
     "DESCRIPTIONS": [
-      "Whenever you #yslimeboundmod:Consume [REMOVE_SPACE], heal #b2 HP, up to #b8 each combat."
+      "Whenever you #yslimeboundmod:Consume [REMOVE_SPACE], heal #b",
+      " HP, up to #b",
+      " each combat."
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
@@ -11,7 +13,9 @@
     "FLAVOR": "The Secret of the Ooze.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL Whenever you #yslimeboundmod:Consume [REMOVE_SPACE], heal #b3 HP, up to #b15 each combat."
+      " [REMOVE_SPACE].[] NL Whenever you #yslimeboundmod:Consume [REMOVE_SPACE], heal #b",
+      " HP, up to #b",
+      " each combat."
     ]
   },
   "Slimebound:SlimedTailRelic": {
@@ -71,7 +75,7 @@
     "NAME": "Slimy Skull",
     "FLAVOR": "A Snecko skull in absolutely awful condition. Unclean and slimy, dirt and grime stick to it like glue.",
     "DESCRIPTIONS": [
-      "Whenever you apply #yslimeboundmod:Goop, apply an additional #b",
+      "Whenever you apply #yslimeboundmod:Goop [REMOVE_SPACE], apply an additional #b",
       " #yslimeboundmod:Goop [REMOVE_SPACE]."
     ]
   },
@@ -86,7 +90,8 @@
     "NAME": "Protective Gear",
     "FLAVOR": "The best defense is a good offense.",
     "DESCRIPTIONS": [
-      "Reduce the damage you take from #yslimeboundmod:Tackles by #b3 [REMOVE_SPACE]."
+      "Reduce the damage you take from #yslimeboundmod:Tackles by #b",
+      " [REMOVE_SPACE]."
     ]
   },
   "Slimebound:TarBlob": {
@@ -100,7 +105,8 @@
     "NAME": "Gelatinous Cube",
     "FLAVOR": "Hey, it stuck to your body.",
     "DESCRIPTIONS": [
-      "Whenever you draw a #yStatus or #rCurse [REMOVE_SPACE], gain #b3 Block [REMOVE_SPACE]."
+      "Whenever you draw a #yStatus or #rCurse [REMOVE_SPACE], gain #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   }
 }

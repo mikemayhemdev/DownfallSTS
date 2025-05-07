@@ -47,6 +47,8 @@ public class BurdenOfKnowledge extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
+    //todo: variables
+
     public void onEquip() {
 
         downfallMod.removeAnyRelicFromPools(ToxicEgg2.ID);

@@ -4,7 +4,6 @@ import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.powers.ExhaustStatusesPower;
-import sneckomod.SneckoMod;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 

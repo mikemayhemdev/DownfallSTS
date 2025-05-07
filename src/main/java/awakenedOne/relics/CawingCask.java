@@ -1,46 +1,30 @@
 package awakenedOne.relics;
 
-import automaton.cards.FineTuning;
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.cards.tokens.Ceremony;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
-import basemod.helpers.CardPowerTip;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.city.Byrd;
 import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
-import hermit.actions.ObtainPotionNotBlockedByCombatEndAction;
-
-import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.*;
 
 public class CawingCask extends CustomRelic {
 
     public static final String ID = AwakenedOneMod.makeID("CawingCask");
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("CawingCask.png")); //TODO: Images
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("CawingCask.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("CawingCask.png"));
 
-    private static int AMOUNT = 1;
+    //How much Ritual does drinking a potion give?
+
+    private static final int AMOUNT = 1;
 
     public CawingCask() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.SOLID);

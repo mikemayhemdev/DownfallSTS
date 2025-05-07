@@ -94,7 +94,8 @@
     "NAME": "The Contract",
     "FLAVOR": "Sign in blood.",
     "DESCRIPTIONS": [
-      "Upon pickup, gain #b10 #yEssence [REMOVE_SPACE]."
+      "Upon pickup, gain #b",
+      " #yEssence [REMOVE_SPACE]."
     ]
   },
   "collector:ForbiddenFruit": {

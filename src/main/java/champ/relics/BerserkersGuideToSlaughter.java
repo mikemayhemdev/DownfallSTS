@@ -20,18 +20,19 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
-    //todo: set a variable for vigor (3)
+    //vigor gain per turn
+    private static final int AMOUNT = 3;
 
     @Override
     public void atTurnStart() {
         super.atTurnStart();
-        vigor(3);
+        vigor(AMOUNT);
         //addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, 3), 3));
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + AMOUNT + DESCRIPTIONS[1];
     }
 
 }

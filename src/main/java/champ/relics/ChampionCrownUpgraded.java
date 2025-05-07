@@ -31,12 +31,15 @@ public class ChampionCrownUpgraded extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
-    //todo: set a variable for # of turns (3)
+    //todo: rework this relic
+
+    //# of turns that ultimate stance lasts for
+    private static final int AMOUNT = 3;
 
     @Override
     public void atBattleStart() {
         addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(3), 3));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(AMOUNT), AMOUNT));
     }
 
     @Override
@@ -73,7 +76,7 @@ public class ChampionCrownUpgraded extends CustomRelic {
             sb.append("[#").append(ChampMod.placeholderColor.toString()).append("]");
         }
 
-        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1] + AMOUNT + DESCRIPTIONS[2];
     }
 
 }

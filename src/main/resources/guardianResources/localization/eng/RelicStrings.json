@@ -18,7 +18,9 @@
     "NAME": "Obsidian Scales",
     "FLAVOR": "Stain the sky black with your blood. Retaliate against all who struck out at you.",
     "DESCRIPTIONS": [
-      "At the start of combat, gain #b3 #yThorns [REMOVE_SPACE]. Whenever you are debuffed or gain a debuff, gain #b1 #yThorns [REMOVE_SPACE]."
+      "At the start of combat, gain #b",
+      " #yThorns [REMOVE_SPACE]. Whenever you are debuffed or gain a debuff, gain #b",
+      " #yThorns [REMOVE_SPACE]."
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {

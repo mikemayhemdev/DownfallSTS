@@ -32,7 +32,9 @@ public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
     }
 
+    //mystical octahedron
     //todo: set variable for block gain
+    //oh god this will be annoying, do later
 
     @Override
     public Integer onSave() {

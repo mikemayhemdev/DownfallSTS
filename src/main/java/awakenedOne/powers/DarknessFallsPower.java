@@ -44,9 +44,8 @@ public class DarknessFallsPower extends TwoAmountPower implements OnLoseEnergyPo
     }
 
     @Override
-    //todo: ACTUALLY PUT THIS INTO EXPANSIONCONTENT POWERSTRINGS IMPORTANT
     public void updateDescription() {
-        this.description = "Whenever you lose [E] , gain #b" + amount + " #yBlock and #b" + amount2 + " #yStrength.";
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount2 + DESCRIPTIONS[2];
     }
 }
 

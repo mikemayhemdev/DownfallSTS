@@ -27,7 +27,8 @@ public class Barbells extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
-    //todo: set a variable for # of cards required (10)
+    //# of required cards to perform an upgrade
+    private static final int AMOUNT = 10;
 
     @Override
     public void onEnterRoom(AbstractRoom room) {
@@ -41,7 +42,7 @@ public class Barbells extends CustomRelic {
                 }
             }
 
-            if (possibleCards.size() >= 10) {// 45
+            if (possibleCards.size() >= AMOUNT) {// 45
                 AbstractCard card = possibleCards.get(AbstractDungeon.miscRng.random(0, possibleCards.size() - 1));// 46
                 card.upgrade();// 47
                 AbstractDungeon.player.bottledCardUpgradeCheck(card);// 48
@@ -60,6 +61,6 @@ public class Barbells extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + AMOUNT + DESCRIPTIONS[1];
     }
 }

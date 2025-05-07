@@ -229,14 +229,6 @@
       " Attacks you play this turn deal double damage."
     ]
   },
-  "awakened:DarknessFallsPower": {
-    "NAME": "Darkness Falls",
-    "DESCRIPTIONS": [
-      "Whenever you lose [E], gain #b",
-      " #yStrength and #b",
-      " #yBlock."
-    ]
-  },
   "awakened:InvasionPower": {
     "NAME": "Invasion",
     "DESCRIPTIONS": [
@@ -252,6 +244,13 @@
       " [E] and put #b",
       " #yVoid into your discard pile.",
       " #yVoids into your discard pile."
+    ]
+  },
+  "awakened:FeathersinksPower": {
+    "NAME": "Feathersinks",
+    "DESCRIPTIONS": [
+      "Whenever you refresh your Spells, draw #b",
+      " cards."
     ]
   }
 }

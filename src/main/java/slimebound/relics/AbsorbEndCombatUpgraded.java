@@ -22,10 +22,10 @@ public class AbsorbEndCombatUpgraded extends CustomRelic {
     public static final String ID = "Slimebound:AbsorbEndCombatUpgraded";
     public static final String IMG_PATH = "relics/heartofgooblack.png";
     public static final String OUTLINE_IMG_PATH = "relics/heartofgooOutline.png";
+
+    //variables
     private static final int HP_PER_SLURP = 3;
     private static final int HP_PER_COMBAT = 15;
-
-    //todo: change description to use the two above variables
 
     public AbsorbEndCombatUpgraded() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
@@ -90,7 +90,7 @@ public class AbsorbEndCombatUpgraded extends CustomRelic {
             sb.append("[#").append(SlimeboundMod.placeholderColor.toString()).append("]");
         }
 
-        return DESCRIPTIONS[0] + sb.toString() + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + sb.toString() + DESCRIPTIONS[1] + HP_PER_SLURP + DESCRIPTIONS[2] + HP_PER_COMBAT + DESCRIPTIONS[3];
     }
 
 

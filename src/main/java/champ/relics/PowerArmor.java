@@ -17,7 +17,9 @@ public class PowerArmor extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("PowerArmor.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("PowerArmor.png"));
 
-    //todo: change description to use CAP_RESOLVE_ETC
+    //Power Armor
+
+    //Vigor / Counter Cap
 
     public static final int CAP_RESOLVE_ETC = 10;
 
@@ -35,7 +37,7 @@ public class PowerArmor extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + CAP_RESOLVE_ETC + DESCRIPTIONS[1];
     }
 
 }

@@ -25,8 +25,9 @@ public class DecasWashers extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
+    //How many turns does this relic work for?
+    private static final int TURNS = 3;
 
-    //Todo: Use a variable for this.
     public void atBattleStart() {
         this.counter = 0;
         this.grayscale = false;
@@ -40,7 +41,7 @@ public class DecasWashers extends CustomRelic {
             ++this.counter;
         }
 
-        if (this.counter == 3) {
+        if (this.counter == TURNS) {
             this.counter = -1;
             this.grayscale = true;
         }
@@ -53,7 +54,7 @@ public class DecasWashers extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + TURNS + DESCRIPTIONS[1];
     }
 
 }

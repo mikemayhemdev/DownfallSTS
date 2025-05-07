@@ -18,7 +18,9 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BronzeCore.png"));
 
 
-    //todo: set a variable for this
+    //How many free functions does this relic grant?
+    private static final int FUNCTIONS = 3;
+
     public PlatinumCore() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
         counter = 0;
@@ -27,7 +29,7 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
 
     @Override
     public void atBattleStart() {
-        counter = 3;
+        counter = FUNCTIONS;
         grayscale = false;
     }
 
@@ -80,7 +82,7 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
             sb.append("[#").append(AutomatonMod.placeholderColor.toString()).append("]");
         }
 
-        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1] + FUNCTIONS + DESCRIPTIONS[2];
     }
 
 }

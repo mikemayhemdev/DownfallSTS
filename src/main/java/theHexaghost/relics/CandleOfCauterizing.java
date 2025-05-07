@@ -2,12 +2,7 @@ package theHexaghost.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHexaghost.HexaMod;
-import theHexaghost.powers.BurnPower;
 import downfall.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
@@ -18,9 +13,9 @@ public class CandleOfCauterizing extends CustomRelic {
     public static final String ID = HexaMod.makeID("CandleOfCauterizing");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("CandleOfCauterizing.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("CandleOfCauterizing.png"));
-    public static final int SOULBURN_BONUS_AMOUNT = 3;
 
-    //todo: change description to use SOULBURN_BONUS_AMOUNT
+    //variables
+    public static final int SOULBURN_BONUS_AMOUNT = 3;
 
     public CandleOfCauterizing() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
@@ -34,6 +29,6 @@ public class CandleOfCauterizing extends CustomRelic {
 //    }
 
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + SOULBURN_BONUS_AMOUNT + DESCRIPTIONS[1];
     }
 }

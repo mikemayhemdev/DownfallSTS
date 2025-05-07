@@ -22,7 +22,8 @@ public class IceCube extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
-    //TODO: set variable for intensity loss at start of combat
+    //variables
+    public static final int INTENSITY_LOSS = 1;
 
     public void onEquip() {
         ++AbstractDungeon.player.energy.energyMaster;// 37
@@ -34,10 +35,10 @@ public class IceCube extends CustomRelic {
 
     @Override
     public void atBattleStart() {
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(-1), -1));
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(-INTENSITY_LOSS), -INTENSITY_LOSS));
     }
 
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + INTENSITY_LOSS + DESCRIPTIONS[1];
     }
 }
