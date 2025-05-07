@@ -22,6 +22,8 @@ public class KTRibbon extends CustomRelic implements OnAwakenRelic {
 
     //yes this is a teto relic
 
+    private static final int AMOUNT = 4;
+
     public static final String ID = AwakenedOneMod.makeID("KTRibbon");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("KTRibbon.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("KTRibbon.png"));
@@ -51,7 +53,7 @@ public class KTRibbon extends CustomRelic implements OnAwakenRelic {
     public void onTrigger() {
         flash();
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToBot(new GainBlockAction(AbstractDungeon.player, 4));
+        addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));
         this.counter = 1;
     }
 
@@ -69,7 +71,7 @@ public class KTRibbon extends CustomRelic implements OnAwakenRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + 4 + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + AMOUNT + DESCRIPTIONS[1];
     }
 
 }
