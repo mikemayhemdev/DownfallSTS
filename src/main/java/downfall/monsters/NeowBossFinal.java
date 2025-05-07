@@ -81,9 +81,9 @@ public class NeowBossFinal extends AbstractMonster {
         this.baseDrawX = drawX;
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            setHp(650);
+            setHp(700);
         } else {
-            setHp(600);
+            setHp(650);
         }
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
