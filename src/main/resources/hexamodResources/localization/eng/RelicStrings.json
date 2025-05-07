@@ -60,7 +60,7 @@
     "NAME": "Soul of Chaos",
     "FLAVOR": "Mayhem, made manifest.",
     "DESCRIPTIONS": [
-      "At the end of your turn, play the top card of your draw pile. Then, randomize ALL Ghostflames and move to a random spot on the Ghostflame Wheel."
+      "At the end of your turn, play the top card of your draw pile. Then, randomize your current Ghostflame."
     ]
   },
   "hexamod:JarOfFuel": {

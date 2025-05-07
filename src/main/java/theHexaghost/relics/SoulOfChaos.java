@@ -28,7 +28,6 @@ public class SoulOfChaos extends CustomRelic {
     public void onPlayerEndTurn() {
         flash();
         this.addToTop(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng), false));
-        for (int i = 0; i < 5; i++) {
             int chosen = AbstractDungeon.relicRng.random(0, 2);
 
             AbstractGhostflame gf = new SearingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
@@ -45,10 +44,8 @@ public class SoulOfChaos extends CustomRelic {
                 gf = new BolsteringGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
             }
 
-            GhostflameHelper.hexaGhostFlames.set(i, gf);
-            gf.activate();
-        }
-        this.addToTop(new RandomFlameAction());
+        GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);
+        gf.activate();
     }
 
     public String getUpdatedDescription() {
