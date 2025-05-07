@@ -25,7 +25,7 @@ public class SpiritBrand extends CustomRelic implements OnChargeSubscriber {
     }
 
     //variables
-    public static final int BLOCK = 4;
+    private static final int BLOCK = 4;
 
     @Override
     public String getUpdatedDescription() {
