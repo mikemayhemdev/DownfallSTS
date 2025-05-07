@@ -26,6 +26,8 @@ public class Sixitude extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Sixitude.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Sixitude.png"));
 
+    //todo: set variable for # of required cards to play
+
     public Sixitude() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
         this.counter = 0;

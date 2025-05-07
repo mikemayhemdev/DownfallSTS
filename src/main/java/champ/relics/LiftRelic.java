@@ -30,6 +30,8 @@ public class LiftRelic extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.CLINK);
     }
 
+    //todo: set a variable for strength gain (1)
+
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0] + 1 + this.DESCRIPTIONS[1];
     }

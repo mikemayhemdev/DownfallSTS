@@ -11,6 +11,8 @@ public class LoadedDie extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("LoadedDie.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("LoadedDie.png"));
 
+    //todo: set variable for block gain (use in muddleaction / muddlemarkedaction)
+
     public LoadedDie() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }

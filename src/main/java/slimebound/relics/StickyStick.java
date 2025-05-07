@@ -18,7 +18,12 @@ public class StickyStick extends CustomRelic {
     public static final String IMG_PATH_LARGE = "relics/StickyStickLarge.png";
     public static final String OUTLINE_IMG_PATH = "relics/StickyStickOutline.png";
     private static final int HP_PER_CARD = 1;
+
+
     //Gelatinous Cube
+
+    //todo: set variable for block gain
+
     public StickyStick() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.UNCOMMON, LandingSound.SOLID);

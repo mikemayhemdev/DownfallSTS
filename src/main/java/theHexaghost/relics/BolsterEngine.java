@@ -25,6 +25,9 @@ public class BolsterEngine extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
     //Tricky's Bolster-Rod 高热之杖
+
+    //todo: set variables for block and strength gain
+
     @Override
     public void atBattleStart() {
         grayscale = false;

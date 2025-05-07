@@ -17,6 +17,8 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("PlatinumCore.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BronzeCore.png"));
 
+
+    //todo: set a variable for this
     public PlatinumCore() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
         counter = 0;

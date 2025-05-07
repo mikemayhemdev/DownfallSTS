@@ -27,6 +27,8 @@ public class Barbells extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
+    //todo: set a variable for # of cards required (10)
+
     @Override
     public void onEnterRoom(AbstractRoom room) {
         if (room instanceof RestRoom) {

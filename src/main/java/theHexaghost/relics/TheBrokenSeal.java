@@ -31,6 +31,8 @@ public class TheBrokenSeal extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
     }
 
+    //todo: set variables for max HP, strength, dexterity, and intensity
+
     @Override
     public void onEquip() {
         AbstractDungeon.player.increaseMaxHp(10, true);

@@ -21,6 +21,9 @@ public class InflammatoryLetter extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
     }
     //Jar of TOBSCo
+
+    //todo: set variable for intensity gain
+
     @Override
     public void atBattleStart() {
         flash();

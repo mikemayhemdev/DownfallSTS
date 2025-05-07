@@ -25,6 +25,8 @@ public class DecasWashers extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
+
+    //Todo: Use a variable for this.
     public void atBattleStart() {
         this.counter = 0;
         this.grayscale = false;

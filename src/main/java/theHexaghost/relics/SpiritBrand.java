@@ -25,6 +25,8 @@ public class SpiritBrand extends CustomRelic implements OnChargeSubscriber {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
+    //todo: set variable for Block gain
+
     @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];

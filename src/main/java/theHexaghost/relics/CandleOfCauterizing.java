@@ -20,6 +20,8 @@ public class CandleOfCauterizing extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("CandleOfCauterizing.png"));
     public static final int SOULBURN_BONUS_AMOUNT = 3;
 
+    //todo: change description to use SOULBURN_BONUS_AMOUNT
+
     public CandleOfCauterizing() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }

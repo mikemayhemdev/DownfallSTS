@@ -20,6 +20,8 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
+    //todo: set a variable for vigor (3)
+
     @Override
     public void atTurnStart() {
         super.atTurnStart();

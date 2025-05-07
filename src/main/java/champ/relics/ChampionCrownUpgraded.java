@@ -31,6 +31,8 @@ public class ChampionCrownUpgraded extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
+    //todo: set a variable for # of turns (3)
+
     @Override
     public void atBattleStart() {
         addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));

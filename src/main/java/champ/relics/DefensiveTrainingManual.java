@@ -17,6 +17,8 @@ public class DefensiveTrainingManual extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("DefensiveManual.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("DefensiveManual.png"));
 
+    //todo: set a variable for amount of Block (3)
+
     public DefensiveTrainingManual() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }

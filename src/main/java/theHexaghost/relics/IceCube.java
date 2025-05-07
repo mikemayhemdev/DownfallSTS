@@ -22,6 +22,8 @@ public class IceCube extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
+    //TODO: set variable for intensity loss at start of combat
+
     public void onEquip() {
         ++AbstractDungeon.player.energy.energyMaster;// 37
     }// 38

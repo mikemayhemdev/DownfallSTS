@@ -23,6 +23,9 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
 
     public boolean activated = false;
     // mark of the ether
+
+    //todo: set variable for Block gain
+
     public UnbrokenSoul() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }

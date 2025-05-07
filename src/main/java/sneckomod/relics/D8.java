@@ -32,6 +32,8 @@ public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
     }
 
+    //todo: set variable for block gain
+
     @Override
     public Integer onSave() {
         return AbstractDungeon.player.masterDeck.group.indexOf(card);

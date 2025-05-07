@@ -14,6 +14,7 @@ public class ObsidianScales extends CustomRelic implements OnReceivePowerRelic{
     public static final String IMG_PATH = "relics/obsidianscales.png";
     public static final String OUTLINE_IMG_PATH = "relics/obsidianscalesOutline.png";
 
+    //todo: make a variable for thorns gain
 
     public ObsidianScales() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)),

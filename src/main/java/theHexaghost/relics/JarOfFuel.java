@@ -22,17 +22,19 @@ public class JarOfFuel extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
     //Olexa's Shield
-    @Override
-    public void atBattleStart() {
-//        flash();
-//        AbstractGhostflame q = GhostflameHelper.hexaGhostFlames.get(0);
-//        AbstractGhostflame bruh = GhostflameHelper.hexaGhostFlames.get(2);
-//        AbstractGhostflame gf = new BolsteringGhostflame(q.lx, q.ly);
-//        AbstractGhostflame r = new SearingGhostflame(bruh.lx, bruh.ly);
-//        GhostflameHelper.hexaGhostFlames.set(0, gf);
-//        GhostflameHelper.hexaGhostFlames.set(2, r);
-//        GhostflameHelper.hexaGhostFlames.get(0).activate();
-    }
+
+    //    @Override
+    //    public void atBattleStart() {
+    ////        flash();
+    ////        AbstractGhostflame q = GhostflameHelper.hexaGhostFlames.get(0);
+    ////        AbstractGhostflame bruh = GhostflameHelper.hexaGhostFlames.get(2);
+    ////        AbstractGhostflame gf = new BolsteringGhostflame(q.lx, q.ly);
+    ////        AbstractGhostflame r = new SearingGhostflame(bruh.lx, bruh.ly);
+    ////        GhostflameHelper.hexaGhostFlames.set(0, gf);
+    ////        GhostflameHelper.hexaGhostFlames.set(2, r);
+    ////        GhostflameHelper.hexaGhostFlames.get(0).activate();
+    //    }
+
 
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];

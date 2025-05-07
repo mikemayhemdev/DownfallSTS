@@ -25,6 +25,8 @@ public class AbsorbEndCombatUpgraded extends CustomRelic {
     private static final int HP_PER_SLURP = 3;
     private static final int HP_PER_COMBAT = 15;
 
+    //todo: change description to use the two above variables
+
     public AbsorbEndCombatUpgraded() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.BOSS, LandingSound.MAGICAL);

@@ -17,6 +17,8 @@ public class TheContract extends CustomRelic {
     private static final String IMG_PATH = TheContract.class.getSimpleName() + ".png";
     private static final String OUTLINE_IMG_PATH = TheContract.class.getSimpleName() + ".png";
 
+    //TODO: Set a variable for granted Essence (10)
+
     public TheContract() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.SHOP, LandingSound.MAGICAL);
     }

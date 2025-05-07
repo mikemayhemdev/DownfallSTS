@@ -37,6 +37,8 @@ public class SoulConsumer extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
+    //todo: set variable for number of required exhausts
+
     public void onEquip() {
         this.counter = 0;
     }
