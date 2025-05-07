@@ -41,7 +41,7 @@ public class RandomizeFlameAction extends AbstractGameAction {
                 // randomize until it's different
 
                 if (newgf.getName() == GhostflameHelper.activeGhostFlame.getName()) {
-                    System.out.println("DEBUG: Both Ghostflames are identical: " + newgf);
+                    System.out.println("DEBUG: Both Ghostflames are identical: " + newgf.getName());
                     while (newgf.getName() == GhostflameHelper.activeGhostFlame.getName()) {
                         bruh = AbstractDungeon.relicRng.random(0, 2);
 
