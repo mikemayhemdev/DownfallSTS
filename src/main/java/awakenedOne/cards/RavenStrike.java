@@ -24,7 +24,7 @@ public class RavenStrike extends AbstractAwakenedCard {
         baseDamage = 10;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        this.baseSecondMagic = 3;
+        this.baseSecondMagic = 2;
         this.secondMagic = this.baseSecondMagic;
     }
 
@@ -32,16 +32,13 @@ public class RavenStrike extends AbstractAwakenedCard {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
 
         if (this.chant) {
-            atb(new DrawCardAction(secondMagic));
-            //HexCurse(magicNumber, m, p);
+            chant();
             checkOnChant();
         }
 
         if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                atb(new DrawCardAction(secondMagic));
-               // HexCurse(magicNumber, m, AbstractDungeon.player);
-                checkOnChant();
+                chant();
                 awaken(1);
             }
         }
