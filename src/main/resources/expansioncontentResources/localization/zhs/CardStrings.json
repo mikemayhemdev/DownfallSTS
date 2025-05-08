@@ -74,7 +74,7 @@
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
     "DESCRIPTION": "从随机 3 张 *首领 牌选择 1 张获得之。 NL 该牌下 1次 打出为0耗能。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "从随机 3 张已 升级 的 *首领 牌选择 1 张获得之。 NL 该牌下 1次 打出为0耗能。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从随机 3 张已 升级 *首领 牌选择 1 张获得之。 NL 该牌下 1次 打出为0耗能。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择 1 张 首领 牌。"
     ]

@@ -25,7 +25,7 @@ public class Lacerate extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("Lacerate");
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 8;
     private static final int COST = 1;
     private static final int UPGRADE_MAGIC = 1;
     private static final int MAGIC = 3;
