@@ -28,7 +28,7 @@ public class SplitWide extends AbstractAwakenedCard {
     public SplitWide() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 6;
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -55,6 +55,6 @@ public class SplitWide extends AbstractAwakenedCard {
     @Override
     public void upp() {
         upgradeDamage(2);
-        upgradeSecondMagic(1);
+        upgradeMagicNumber(1);
     }
 }
