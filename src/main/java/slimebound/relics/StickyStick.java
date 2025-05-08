@@ -42,16 +42,6 @@ public class StickyStick extends CustomRelic {
         }
     }
 
-    public void atTurnStart() {
-        this.counter = 0;
-        this.grayscale = false;
-    }
-
-    public void onVictory() {
-        this.counter = -1;
-        this.grayscale = false;
-    }
-
     @Override
     public AbstractRelic makeCopy() {
         return new StickyStick();

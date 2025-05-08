@@ -2,16 +2,16 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.relics.KTRibbon;
+import collector.powers.AddCopyNextTurnPower;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.atb;
+import static collector.util.Wiz.applyToSelfTop;
 
 
 public class ExNihilo extends AbstractAwakenedCard {
@@ -24,7 +24,6 @@ public class ExNihilo extends AbstractAwakenedCard {
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
-        //cardsToPreview = new VoidCard();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,21 +32,19 @@ public class ExNihilo extends AbstractAwakenedCard {
 
         if (this.chant) {
             chant();
-            this.exhaust = false;
         }
 
         if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
-                this.exhaust = false;
                 awaken(1);
             }
         }
-        //addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
     }
 
     @Override
     public void chant() {
+        applyToSelfTop(new AddCopyNextTurnPower(this));
         checkOnChant();
     }
 

@@ -252,5 +252,12 @@
       "Whenever you refresh your Spells, draw #b",
       " cards."
     ]
+  },
+  "awakened:StrengthReturnPower": {
+    "NAME": "Split Wide",
+    "DESCRIPTIONS": [
+      "Whenever you attack this enemy, gain #b",
+      " temporary #yStrength."
+    ]
   }
 }

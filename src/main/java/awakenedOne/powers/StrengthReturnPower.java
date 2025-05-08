@@ -1,0 +1,52 @@
+package awakenedOne.powers;
+
+import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import hermit.powers.SnipePower;
+
+import static awakenedOne.AwakenedOneMod.HexCurse;
+
+public class StrengthReturnPower extends AbstractAwakenedPower {
+    // intellij stuff buff
+    public static final String NAME = EnemyHexedPower.class.getSimpleName();
+    public static final String POWER_ID = "awakened:StrengthReturnPower";
+
+    public StrengthReturnPower(final AbstractCreature owner, int amount) {
+        super(NAME, PowerType.DEBUFF, false, owner, null, amount);
+        updateDescription();
+    }
+
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+        this.updateDescription();
+    }
+
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.amount), this.amount));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, this.amount), this.amount));
+        }
+
+        return damageAmount;
+    }
+
+
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+    }
+}

@@ -285,7 +285,7 @@
   },
   "awakened:ExNihilo": {
     "NAME": "Ex Nihilo",
-    "DESCRIPTION": "Draw !M! cards. NL Exhaust. NL awakened:Chant: Don't Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL Exhaust. NL awakened:Chant: Next turn, gain a copy of this card."
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",
@@ -429,7 +429,7 @@
   },
   "awakened:SplitWide": {
     "NAME": "Split Wide",
-    "DESCRIPTION": "Deal !D! damage. NL Strength affects this card !M! times. NL awakened:Chant: Strength affects this card !awakened:m2! more times."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy, gain !M! temporary Strength. NL Exhaust."
   },
   "awakened:Deathwish": {
     "NAME": "Deathwish",

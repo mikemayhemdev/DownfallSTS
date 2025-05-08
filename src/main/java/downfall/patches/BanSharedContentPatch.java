@@ -281,7 +281,7 @@ public class BanSharedContentPatch {
             // edit: this patch doesn't work somehow, the function is moved to downfallMod.receivePostDungeonInitialize()
             // by checking the condition before adding them all together
             //todo: I'm thinking of just making all these potions character exclusive which fixes the compendium problem
-            //todo: and people don't like these potions anyways
+            // and people don't like these potions anyways
             if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
               //  PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
              //  PotionHelper.potions.remove(MuddlingPotion.POTION_ID);

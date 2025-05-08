@@ -15,11 +15,12 @@ import static awakenedOne.util.Wiz.atb;
 public class HeavyStrike extends AbstractAwakenedCard {
     public final static String ID = makeID(HeavyStrike.class.getSimpleName());
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
+
     //carrionmaker
     public HeavyStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 10;//10
-        baseSecondDamage = 13;//13
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        baseDamage = 11;
+        baseSecondDamage = 14;
         //tags.add(CardTags.STRIKE);
     }
 
@@ -30,7 +31,7 @@ public class HeavyStrike extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(3);//3
-        upgradeSecondDamage(2);//2
+        upgradeDamage(3);
+        upgradeSecondDamage(2);
     }
 }
