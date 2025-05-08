@@ -77,5 +77,6 @@ public class ClarionCall extends AbstractAwakenedCard {
     @Override
     public void upp() {
         upgradeDamage(3);
+        cardsToPreview.upgrade();
     }
 }
