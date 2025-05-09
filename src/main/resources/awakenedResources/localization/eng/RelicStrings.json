@@ -24,7 +24,7 @@
   },
   "awakened:HexxBomb": {
     "NAME": "Hexx Bomb",
-    "FLAVOR": "NOT USED",
+    "FLAVOR": "",
     "DESCRIPTIONS": [
       "NOT USED"
     ]
@@ -45,18 +45,18 @@
     ]
   },
   "awakened:BirdFacedTapestry": {
-    "NAME": "Bird-Faced Tapestry",
-    "FLAVOR": "This tapestry depicts the crow god Mazaleth demanding sacrifice.",
+    "NAME": "",
+    "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Whenever you play a Power card, apply #b1 Weak to ALL enemies. NOT USED"
+      ""
     ]
   },
   "awakened:MomsKnife": {
-    "NAME": "Sacrifice's Blade",
-    "FLAVOR": "Prove you lose me above all else!",
+    "NAME": "",
+    "FLAVOR": ".",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain [E]. Whenever you play a Power card, lose #b",
-      " HP."
+      "At the start of your turn, gain [E]. Whenever you CONDITION, NEGATIVE EFFECT HERE #b",
+      " NEGATIVE EFFECT PART 2."
     ]
   },
   "awakened:CultistStick": {

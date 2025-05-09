@@ -13,7 +13,7 @@ public class Ensorcelate extends AbstractAwakenedCard {
 
     public Ensorcelate() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 4;
         baseMagicNumber = magicNumber = 2;
     }
 
