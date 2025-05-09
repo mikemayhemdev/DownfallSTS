@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 
+import java.util.Iterator;
+
 public class TheTower extends AbstractAwakenedCard {
 
     public final static String ID = AwakenedOneMod.makeID(TheTower.class.getSimpleName());
@@ -23,12 +25,15 @@ public class TheTower extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        Iterator var2 = AbstractDungeon.getMonsters().monsters.iterator();
 
-        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(monster.hb.cX, monster.hb.cY), 0.1F));
+        while(var2.hasNext()) {
+            AbstractMonster mo = (AbstractMonster)var2.next();
+            if (!mo.isDeadOrEscaped()) {
+                this.addToBot(new VFXAction(new ExplosionSmallEffect(mo.hb.cX, mo.hb.cY), 0.1F));
             }
         }
+
         this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
 
         if (ConjureAction.refreshedthisturn == true) {
