@@ -37,7 +37,6 @@ public class Deception extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPG_BLOCK);
-            upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

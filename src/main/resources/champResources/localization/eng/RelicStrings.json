@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "At the start of combat, choose to enter #bchamp:Defensive or #rchamp:Berserker #yStance [REMOVE_SPACE]."
+      "At the start of combat, enter #bchamp:Defensive or #rchamp:Berserker #yStance [REMOVE_SPACE]."
     ]
   },
   "champ:BlackKnightHelmet": {
@@ -34,8 +34,8 @@
     "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL Start each combat in #ychamp:Ultimate #yStance [REMOVE_SPACE], which lasts for #b",
-      " turns."
+      " [REMOVE_SPACE].[] NL The first time you play a #ychamp:Finisher each turn, draw #b",
+      " cards."
     ]
   },
   "champ:DefensiveTrainingManual": {

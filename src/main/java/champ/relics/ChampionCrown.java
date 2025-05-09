@@ -48,11 +48,30 @@ public class ChampionCrown extends CustomRelic  {
     }
 
      */
+
+//    @Override
+//    public void atBattleStart() {
+//        super.atBattleStart();
+//        StanceDanceCrown stance = new StanceDanceCrown();
+//        addToBot(new OctoChoiceAction(null, stance));
+//    }
+
     @Override
     public void atBattleStart() {
         super.atBattleStart();
-        StanceDanceCrown stance = new StanceDanceCrown();
-        addToBot(new OctoChoiceAction(null, stance));
+        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
+            int x = AbstractDungeon.cardRandomRng.random(1);
+            switch (x) {
+                case 0:
+                    //SlimeboundMod.logger.info("Switching to Berserker (Mod Relic)");
+                    addToBot(new ChangeStanceAction(BerserkerStance.STANCE_ID));
+                    break;
+                case 1:
+                    //SlimeboundMod.logger.info("Switching to Defensive (Mod Relic)");
+                    addToBot(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+                    break;
+            }
+        }
     }
 
     @Override

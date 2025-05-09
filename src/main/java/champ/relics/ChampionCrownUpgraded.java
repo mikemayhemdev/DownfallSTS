@@ -5,20 +5,31 @@ import automaton.relics.BronzeCore;
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
 import champ.actions.OpenerReduceCostAction;
+import champ.cards.Defend;
+import champ.cards.Strike;
 import champ.powers.UltimateFormPower;
 import champ.stances.UltimateStance;
 import champ.util.OnOpenerSubscriber;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.stances.AbstractStance;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import expansioncontent.actions.EchoACardAction;
 import slimebound.relics.AbsorbEndCombat;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
+import static collector.util.Wiz.atb;
 
 public class ChampionCrownUpgraded extends CustomRelic {
 
@@ -33,14 +44,45 @@ public class ChampionCrownUpgraded extends CustomRelic {
 
     //todo: rework this relic
 
-    //# of turns that ultimate stance lasts for
-    private static final int AMOUNT = 3;
+    //# of cards drawn
+    private static final int AMOUNT = 2;
+
+//    @Override
+//    public void atBattleStart() {
+//        addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
+//        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(AMOUNT), AMOUNT));
+//    }
+//
+//
+//    @Override
+//    public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
+//        if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
+//            flash();
+//            atb(new DrawCardAction(AMOUNT));
+//        }
+//    }
+
+
+    public void atTurnStart() {
+        this.counter = 0;
+    }
 
     @Override
-    public void atBattleStart() {
-        addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(AMOUNT), AMOUNT));
+    public void onVictory() {
+        this.counter = 0;
     }
+
+    @Override
+    public void onPlayCard(AbstractCard c, AbstractMonster m) {
+        if (c.hasTag(ChampMod.FINISHER) && this.counter == 0) {
+            flash();
+            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            atb(new DrawCardAction(AMOUNT));
+            this.counter = 1;
+        }
+    }
+
+
 
     @Override
     public void obtain() {
