@@ -17,7 +17,7 @@ public class BerserkersShout extends AbstractChampCard {
     //stupid intellij stuff skill, self, uncommon
 
     private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 4;
+    private static final int UPG_MAGIC = 2;
 
     public BerserkersShout() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
