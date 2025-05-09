@@ -14,14 +14,14 @@ public class Deception extends AbstractSneckoCard {
 
     //this is definitely one of the cards of all time - blue
 
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 11;
     private static final int UPG_BLOCK = 4;
 
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
     public Deception() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         SneckoMod.loadJokeCardImage(this, "Deception.png");
         this.cardsToPreview = new Shockwave();
