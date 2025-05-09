@@ -36,7 +36,7 @@ public class Lacerate extends AbstractSneckoCard {
     private static final int DAMAGE = 8;
     private static final int COST = 1;
     private static final int UPGRADE_MAGIC = 1;
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 4;
 
     public Lacerate() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
@@ -68,6 +68,8 @@ public class Lacerate extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }
