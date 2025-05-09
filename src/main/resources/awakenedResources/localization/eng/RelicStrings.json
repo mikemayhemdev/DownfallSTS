@@ -72,11 +72,11 @@
       "The first #yPower card you play each combat is free but places a #yVoid on top of your draw pile."
     ]
   },
-  "awakened:MagicalCodex": {
-    "NAME": "",
-    "FLAVOR": "",
+  "awakened:ZenerDeck": {
+    "NAME": "Zener Deck",
+    "FLAVOR": "“One, two, three, all eyes should be on me.”",
     "DESCRIPTIONS": [
-      "Whenever you #yawakened:Conjure, ."
+      "At the start of combat, add *ESP to the Spell Pile."
     ]
   },
   "awakened:CawingCask": {

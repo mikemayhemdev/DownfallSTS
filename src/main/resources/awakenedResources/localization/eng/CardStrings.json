@@ -26,6 +26,12 @@
     "DESCRIPTION": "Gain !M! expansioncontent:Plated *Armor. NL Exhaust."
   },
 
+  "awakened:ESPSpell": {
+    "NAME": "ESP",
+    "DESCRIPTION": "Draw !M! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust."
+  },
+
   "awakened:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -99,7 +105,7 @@
   },
   "awakened:Accumulate": {
     "NAME": "Accumulate",
-    "DESCRIPTION": "Gain !B! Block. NL At the start of your next !awakened:m2! turns, gain !M! Strength."
+    "DESCRIPTION": "not used."
   },
   "awakened:TakeFlight": {
     "NAME": "Take Flight",

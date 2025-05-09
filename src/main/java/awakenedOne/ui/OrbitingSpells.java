@@ -5,6 +5,8 @@ import awakenedOne.cards.AphoticFount;
 import awakenedOne.cards.Deathwish;
 import awakenedOne.cards.tokens.spells.*;
 import awakenedOne.powers.EmpressPower;
+import awakenedOne.relics.ZenerDeck;
+import champ.relics.PowerArmor;
 import collector.cards.collectibles.AbstractCollectibleCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -35,6 +37,9 @@ public class OrbitingSpells {
         spells.add(Thunderbolt.ID);
         spells.add(Darkleech.ID);
         spells.add(Cryostasis.ID);
+        if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
+        spells.add(ESPSpell.ID);
+        }
     }
 
     public static void refreshSpells() {
