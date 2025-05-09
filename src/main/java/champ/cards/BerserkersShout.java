@@ -16,11 +16,11 @@ public class BerserkersShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 3;;
-    private static final int UPG_MAGIC = 3;
+    private static final int MAGIC = 2;
+    private static final int UPG_MAGIC = 4;
 
     public BerserkersShout() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         //tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);

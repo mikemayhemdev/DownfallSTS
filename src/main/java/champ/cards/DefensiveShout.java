@@ -13,8 +13,8 @@ public class DefensiveShout extends AbstractChampCard {
     public final static String ID = makeID("DefensiveShout");
 
     public DefensiveShout() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 3;
         //tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERDEFENSIVE);
@@ -38,6 +38,6 @@ public class DefensiveShout extends AbstractChampCard {
      //   tags.add(ChampMod.TECHNIQUE);
     //    postInit();
      //   initializeDescription();
-        upgradeMagicNumber(4);
+        upgradeMagicNumber(2);
     }
 }

@@ -210,7 +210,7 @@
   },
   "champ:RisingSlash": {
     "NAME": "Rising Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If the last played card this combat was a champ:Finisher, deal !D! damage again."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If the last card played was a champ:Finisher, deal !D! damage again."
   },
   "champ:Shatter": {
     "NAME": "Shatter",
