@@ -43,11 +43,15 @@ public class EnemyHexedPower extends AbstractAwakenedPower implements HealthBarR
             this.flash();
 
             if (card.type != AbstractCard.CardType.POWER) {
-                HexCurse(1, owner, owner);
+               // HexCurse(1, owner, owner);
+                this.amount++;
             }
 
             if (card.type == AbstractCard.CardType.POWER) {
-                HexCurse(3, this.owner, owner);
+                //HexCurse(3, this.owner, owner);
+                this.amount++;
+                this.amount++;
+                this.amount++;
             }
         }
     }
