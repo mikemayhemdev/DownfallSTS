@@ -90,8 +90,7 @@
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !B! Block again.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL awakened:Chant: Gain !B! Block again."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !B! Block again."
   },
 
   "awakened:Psalm": {

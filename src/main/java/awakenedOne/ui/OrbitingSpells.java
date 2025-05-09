@@ -37,9 +37,6 @@ public class OrbitingSpells {
         spells.add(Thunderbolt.ID);
         spells.add(Darkleech.ID);
         spells.add(Cryostasis.ID);
-        if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
-        spells.add(ESPSpell.ID);
-        }
     }
 
     public static void refreshSpells() {
@@ -56,6 +53,10 @@ public class OrbitingSpells {
         int count2 = (int) AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(q -> q instanceof AphoticFount).count();
         for(int i=0; i<count2; i++) {
             addSpellCard(CardLibrary.getCard(AphoticShield.ID).makeCopy());
+        }
+
+        if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
+            addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
         }
 
     }
