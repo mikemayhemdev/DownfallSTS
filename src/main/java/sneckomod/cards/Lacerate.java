@@ -41,7 +41,7 @@ public class Lacerate extends AbstractSneckoCard {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         //baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        this.cardsToPreview = new PoisonedStab();
+        this.cardsToPreview = new CripplingPoison();
         SneckoMod.loadJokeCardImage(this, "Lacerate.png");
     }
 
