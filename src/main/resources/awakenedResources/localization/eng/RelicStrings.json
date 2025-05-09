@@ -52,11 +52,10 @@
     ]
   },
   "awakened:MomsKnife": {
-    "NAME": "",
-    "FLAVOR": ".",
+    "NAME": "Butcher Knife",
+    "FLAVOR": "Prove you love me above all else!",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain [E]. Whenever you CONDITION, NEGATIVE EFFECT HERE #b",
-      " NEGATIVE EFFECT PART 2."
+      "The first time you would lose [E] each turn, gain [E]."
     ]
   },
   "awakened:CultistStick": {

@@ -1,6 +1,7 @@
 package awakenedOne.patches;
 
 import awakenedOne.powers.OnLoseEnergyPower;
+import awakenedOne.relics.OnLoseEnergyRelic;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,6 +21,9 @@ public class OnLoseEnergyPowerPatch {
             for (AbstractPower p : AbstractDungeon.player.powers) {
                 if (p instanceof OnLoseEnergyPower) {
                     ((OnLoseEnergyPower) p).LoseEnergyAction(e);
+                }
+                if (p instanceof OnLoseEnergyRelic) {
+                    ((OnLoseEnergyRelic) p).LoseEnergyAction(e);
                 }
             }
         }
