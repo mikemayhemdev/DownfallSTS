@@ -44,6 +44,6 @@ public class BerserkersShout extends AbstractChampCard {
        // tags.add(ChampMod.TECHNIQUE);
         //postInit();
       //  initializeDescription();
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(1);
     }
 }
