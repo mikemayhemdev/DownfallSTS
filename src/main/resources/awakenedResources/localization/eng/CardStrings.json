@@ -339,7 +339,7 @@
   },
   "awakened:SingularityShield": {
     "NAME": "Singularity Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Put a *Void into your discard pile."
+    "DESCRIPTION": "Gain !B! Block. NL Add a *Void into your discard pile."
   },
   "awakened:DarkPortal": {
     "NAME": "Reality Rift",
