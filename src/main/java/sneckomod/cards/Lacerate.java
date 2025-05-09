@@ -33,10 +33,9 @@ public class Lacerate extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("Lacerate");
 
-    private static final int DAMAGE = 8;
-    private static final int COST = 1;
-    private static final int UPGRADE_MAGIC = 1;
-    private static final int MAGIC = 4;
+    private static final int COST = 2;
+    private static final int UPGRADE_MAGIC = 2;
+    private static final int MAGIC = 3;
 
     public Lacerate() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
@@ -56,10 +55,7 @@ public class Lacerate extends AbstractSneckoCard {
                 }
             }
         }
-        AbstractCard g = new PoisonedStab();
-        if (this.upgraded) {
-            g.upgrade();
-        }
+        AbstractCard g = new CripplingPoison();
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(g));
     }
 
@@ -68,8 +64,6 @@ public class Lacerate extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_MAGIC);
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
         }
     }
 }

@@ -605,8 +605,7 @@
   },
   "sneckomod:Lacerate": {
     "NAME": "Lacerate",
-    "DESCRIPTION": "Apply !M! sneckomod:Venom to ALL enemies. NL Gain a *Poisoned *Stab. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! sneckomod:Venom to ALL enemies. NL Gain a *Poisoned *Stab+. NL Exhaust."
+    "DESCRIPTION": "Apply !M! sneckomod:Venom to ALL enemies. NL Gain a *Crippling *Cloud. NL Exhaust."
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Serpentine Sleuth",
