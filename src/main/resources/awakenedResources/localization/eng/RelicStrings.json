@@ -63,7 +63,7 @@
     "FLAVOR": "Focus.",
     "DESCRIPTIONS": [
       "At the start of combat, gain #b",
-      " #yStrength [REMOVE_SPACE]. Whenever you lose ANY HP, lose that #yStrength [REMOVE_SPACE]."
+      " #yStrength [REMOVE_SPACE]. Whenever you take unblocked attack damage, lose that #yStrength for the rest of combat."
     ]
   },
   "awakened:VioletPlumage": {
