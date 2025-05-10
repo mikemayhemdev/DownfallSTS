@@ -63,7 +63,7 @@
     "FLAVOR": "Focus.",
     "DESCRIPTIONS": [
       "At the start of combat, gain #b",
-      " #yStrength [REMOVE_SPACE]. Whenever you lose ANY HP, lose that #yStrength [REMOVE_SPACE]. Killing an enemy will reactivate this relic."
+      " #yStrength [REMOVE_SPACE]. Whenever you lose ANY HP, lose that #yStrength [REMOVE_SPACE]."
     ]
   },
   "awakened:VioletPlumage": {

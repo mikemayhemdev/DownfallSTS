@@ -29,12 +29,12 @@ public class ShardOfNowak extends CustomRelic implements OnLoseTempHpRelic {
 
     //Brutal Orchestra mentioned!!! this is so brutal
 
-    private static final int FOCUS = 2;
+    private static final int FOCUS = 3;
 
     private boolean isActive = false;
 
     public ShardOfNowak() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.CLINK);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class ShardOfNowak extends CustomRelic implements OnLoseTempHpRelic {
                     this.grayscale = true;
                     AbstractPlayer p = AbstractDungeon.player;
                     this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                    this.addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, -2), -2));
+                    this.addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, -FOCUS), -FOCUS));
                 }
             }
             this.stopPulse();
@@ -63,16 +63,16 @@ public class ShardOfNowak extends CustomRelic implements OnLoseTempHpRelic {
      }
 
 
-    public void onMonsterDeath(AbstractMonster m) {
-        if (m.currentHealth == 0 && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            if (this.grayscale) {
-            this.flash();
-            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, FOCUS), FOCUS));
-                this.grayscale = false;
-            }
-        }
-    }
+//    public void onMonsterDeath(AbstractMonster m) {
+//        if (m.currentHealth == 0 && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+//            if (this.grayscale) {
+//            this.flash();
+//            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+//                this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, FOCUS), FOCUS));
+//                this.grayscale = false;
+//            }
+//        }
+//    }
 
     @Override
     public void onVictory() {
