@@ -58,11 +58,12 @@
       "The first time you would lose [E] each turn, gain [E]."
     ]
   },
-  "awakened:CultistStick": {
-    "NAME": "Stick",
-    "FLAVOR": "A simple weapon used by the lowest ranking members of the Cult.",
+  "awakened:ShardOfNowak": {
+    "NAME": "Gilded Bone Shard",
+    "FLAVOR": "Focus.",
     "DESCRIPTIONS": [
-      ""
+      "At the start of combat, gain #b",
+      " #yStrength [REMOVE_SPACE]. Whenever you lose ANY HP, lose that #yStrength [REMOVE_SPACE]. Killing an enemy will reactivate this relic."
     ]
   },
   "awakened:VioletPlumage": {

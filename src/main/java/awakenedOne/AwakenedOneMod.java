@@ -190,16 +190,22 @@ public class AwakenedOneMod implements
     @Override
     public void receiveEditRelics() {
         //add awakened one relics here
-        BaseMod.addRelicToCustomPool(new RippedDoll(), AwakenedOneChar.Enums.AWAKENED_BLUE);
-        BaseMod.addRelicToCustomPool(new ShreddedDoll(), AwakenedOneChar.Enums.AWAKENED_BLUE);
-        BaseMod.addRelicToCustomPool(new KTRibbon(), AwakenedOneChar.Enums.AWAKENED_BLUE);
-        BaseMod.addRelicToCustomPool(new TomeOfPortalmancy(), AwakenedOneChar.Enums.AWAKENED_BLUE);
-        BaseMod.addRelicToCustomPool(new EyeOfTheOccult(), AwakenedOneChar.Enums.AWAKENED_BLUE);
-        BaseMod.addRelicToCustomPool(new ZenerDeck(), AwakenedOneChar.Enums.AWAKENED_BLUE);
+        BaseMod.addRelicToCustomPool(new RippedDoll(), AwakenedOneChar.Enums.AWAKENED_BLUE); //starter
+        BaseMod.addRelicToCustomPool(new ShreddedDoll(), AwakenedOneChar.Enums.AWAKENED_BLUE); //starter+
+        BaseMod.addRelicToCustomPool(new KTRibbon(), AwakenedOneChar.Enums.AWAKENED_BLUE); //boss misc
+        BaseMod.addRelicToCustomPool(new TomeOfPortalmancy(), AwakenedOneChar.Enums.AWAKENED_BLUE); //common
+        BaseMod.addRelicToCustomPool(new EyeOfTheOccult(), AwakenedOneChar.Enums.AWAKENED_BLUE); //rare
+        BaseMod.addRelicToCustomPool(new ZenerDeck(), AwakenedOneChar.Enums.AWAKENED_BLUE); //uncommon
+        //boss energy
+        //shop
+        //rare 2
+
 
         //shared relics
-        BaseMod.addRelic(new CawingCask(), RelicType.SHARED);
-        BaseMod.addRelic(new VioletPlumage(), RelicType.SHARED);
+        BaseMod.addRelic(new CawingCask(), RelicType.SHARED); //rare shared
+        BaseMod.addRelic(new VioletPlumage(), RelicType.SHARED); //shop shared
+        BaseMod.addRelic(new ShardOfNowak(), RelicType.SHARED); //uncommon shared
+        //common shared
     }
 
 
