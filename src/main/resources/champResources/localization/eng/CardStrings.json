@@ -201,8 +201,7 @@
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
-    "DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, gain Vigor equal to unblocked damage dealt.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a random Upgraded Skill. NL It costs 0."
+    "DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, gain Vigor equal to unblocked damage dealt."
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
