@@ -13,17 +13,22 @@ public class MagicStrike extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
 
     public MagicStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 7;
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 4;
         tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        atb(new ConjureAction(true));
+        if (!upgraded) {
+            atb(new ConjureAction(false));
+        }
+
+        if (upgraded) {
+            atb(new ConjureAction(true));
+        }
     }
 
     public void upp() {
-        upgradeDamage(3);
     }
 }

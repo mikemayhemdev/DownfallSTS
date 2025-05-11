@@ -51,7 +51,6 @@ public class RoundhouseKick extends AbstractDynamicCard {
         baseDamage=13;
         exhaust=true;
         loadJokeCardImage(this, "roundhouse_kick.png");
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     // Actions the card should do.

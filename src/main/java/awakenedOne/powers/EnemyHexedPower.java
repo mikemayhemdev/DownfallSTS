@@ -58,6 +58,7 @@ public class EnemyHexedPower extends AbstractAwakenedPower implements HealthBarR
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
             this.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new UltimateHexDebuff(this.owner, 1), 1));
         }
+        updateDescription();
     }
 
     public void stackPower(int stackAmount) {

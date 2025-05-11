@@ -21,7 +21,7 @@ public class Retaliation extends AbstractAwakenedCard {
 
     public Retaliation() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 7;
         baseBlock = 6;
     }
 
@@ -44,6 +44,6 @@ public class Retaliation extends AbstractAwakenedCard {
 
     public void upp() {
         upgradeMagicNumber(2);
-        upgradeBlock(2);
+        upgradeBlock(3);
     }
 }

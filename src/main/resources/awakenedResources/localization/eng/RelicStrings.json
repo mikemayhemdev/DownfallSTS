@@ -51,11 +51,11 @@
       ""
     ]
   },
-  "awakened:MomsKnife": {
-    "NAME": "Butcher Knife",
-    "FLAVOR": "Prove you love me above all else!",
+  "awakened:AbyssBlade": {
+    "NAME": "Void Blade",
+    "FLAVOR": "Void Refund.",
     "DESCRIPTIONS": [
-      "The first time you would lose [E] each turn, gain [E]."
+      "The first time you are #yawakened:Drained each turn, gain [E] and draw a card."
     ]
   },
   "awakened:ShardOfNowak": {

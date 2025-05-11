@@ -17,15 +17,17 @@ public class ToTheLimit extends AbstractAwakenedCard {
     public ToTheLimit() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 2;
+        baseSecondMagic = secondMagic = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.currentHealth * 2 < p.maxHealth) {
+        if (p.currentHealth * 2 > p.maxHealth) {
             applyToSelf(new StrengthPower(p, magicNumber));
+            this.exhaust = false;
         }
         else {
             applyToSelf(new RitualPower(p, secondMagic, true));
+            this.exhaust = true;
         }
     }
 

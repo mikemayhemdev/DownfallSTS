@@ -1,7 +1,6 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.DarkEchoPower;
-import awakenedOne.powers.DarknessFallsPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.RegenPower;
 import downfall.util.CardIgnore;
+import expansioncontent.powers.DarknessFallsPower;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;

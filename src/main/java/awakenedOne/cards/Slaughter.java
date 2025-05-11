@@ -23,15 +23,11 @@ public class Slaughter extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         AbstractCard c = new Ceremony();
-        if (upgraded) {
-        c.upgrade();
-        }
         Wiz.atb(new MakeTempCardInHandAction(c, 1));
     }
 
     @Override
     public void upp() {
-        this.cardsToPreview.upgrade();
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 }

@@ -13,10 +13,6 @@ public class FeathersinksPower extends AbstractAwakenedPower {
 
     @Override
     public void updateDescription() {
-        if (amount == 1) {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-        } else {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
-        }
     }
 }

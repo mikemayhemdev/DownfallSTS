@@ -9,7 +9,7 @@
   },
   "awakened:Cryostasis": {
     "NAME": "Cryostasis",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Apply !M! Weak. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Exhaust."
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
@@ -42,7 +42,8 @@
   },
   "awakened:MagicStrike": {
     "NAME": "Magic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure a Spell."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure at random.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL awakened:Conjure a Spell."
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
@@ -85,8 +86,7 @@
   },
   "awakened:TalonRake": {
     "NAME": "Talon Rake",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure at random.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL awakened:Conjure a Spell."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure at random."
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
@@ -356,8 +356,7 @@
   },
   "awakened:Slaughter": {
     "NAME": "To the Slaughter",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony+."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony."
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
@@ -374,7 +373,7 @@
   },
   "awakened:ToTheLimit": {
     "NAME": "To the Limit",
-    "DESCRIPTION": "Gain !M! Strength. NL If under 50% HP, gain !awakened:m2! Ritual instead."
+    "DESCRIPTION": "Gain !M! Strength. NL If under 50% HP, gain !awakened:m2! Ritual and Exhaust this card instead."
   },
   "awakened:Victuals": {
     "NAME": "Victuals",
@@ -390,7 +389,7 @@
     "DESCRIPTION": "Gain !B! Block X times, +1 for each Spell played this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
-      " Spells played.)",
+      " Spell played.)",
       " Spells played.)"
     ]
   },

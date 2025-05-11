@@ -457,7 +457,7 @@
     "NAME": "Sapphire Heart Blessing",
     "FLAVOR": "The heart is pleased.",
     "DESCRIPTIONS": [
-      "Start Boss combats with #b10 #yTemporary #yHP [REMOVE_SPACE]."
+      "At the start of Boss combats, heal #b10 HP."
     ]
   },
   "downfall:HeartBlessingGreen": {
