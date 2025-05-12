@@ -1,0 +1,32 @@
+{
+  "champ:OpenerPotion": {
+    "NAME": "Poción de Estrategia",
+    "DESCRIPTIONS": [
+      "Elige #b1 de #b2 cartas que te hagan entrar en una #yPostura para añadir a tu mano (una por cada #yPostura [REMOVE_SPACE]); cuesta #b0 este turno.",
+      " Gana #b",
+      " copia de ella.",
+      " copias de ella."
+    ]
+  },
+  "champ:TechniquePotion": {
+    "NAME": "Técnica Embotellada",
+    "DESCRIPTIONS": [
+      "Activa el #yBono tu #yPostura actual #b",
+      " veces."
+    ]
+  },
+  "champ:UltimateStancePotion": {
+    "NAME": "Estimulante",
+    "DESCRIPTIONS": [
+      "Entra en la #yPostura #yDefinitiva por #b",
+      " turnos."
+    ]
+  },
+  "champ:CounterPotion": {
+    "NAME": "Brebaje de Agudeza",
+    "DESCRIPTIONS": [
+      "Gana #b",
+      " de #yContraataque [REMOVE_SPACE]."
+    ]
+  }
+}
