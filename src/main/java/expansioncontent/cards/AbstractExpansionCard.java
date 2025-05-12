@@ -108,21 +108,6 @@ public abstract class AbstractExpansionCard extends AbstractDownfallCard {
         return super.canUse(p, m);
     }
 
-
-
-//HEXAGHOST AFTERLIFE CODE
-protected DamageInfo makeInfo() {
-    return makeInfo(damageTypeForTurn);
-}
-
-    private DamageInfo makeInfo(DamageInfo.DamageType type) {
-        return new DamageInfo(AbstractDungeon.player, damage, type);
-    }
-
-    public void dmg(AbstractMonster m, DamageInfo info, AbstractGameAction.AttackEffect fx) {
-        atb(new DamageAction(m, makeInfo(), fx));
-    }
-
     @Override
     public void triggerOnExhaust() {
         int bonus = 0;
@@ -161,16 +146,6 @@ protected DamageInfo makeInfo() {
     }
 
     public void afterlife() {}
-
-
-
-
-
-
-
-
-
-
 
     //collector pyre code
     protected void isPyre() {

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
+import theHexaghost.actions.RandomFlameAction;
 
 public class SeventhEye extends AbstractHexaCard {
 

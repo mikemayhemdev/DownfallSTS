@@ -1,4 +1,4 @@
-package theHexaghost.cards;
+package theHexaghost.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import theHexaghost.GhostflameHelper;
