@@ -110,7 +110,7 @@
   },
   "hexamod:MatchstickFloat": {
     "NAME": "Sneaky Teakwood Match",
-   "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
   },
@@ -250,8 +250,7 @@
   },
   "hexamod:PhantomCloak": {
     "NAME": "Phantom Cloak",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity and lose 1 Strength.",
-    "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
+    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity and lose 1 Strength."
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
@@ -260,10 +259,10 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain [E] next turn. NL ",
-    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Gain [E] [E] next turn. NL ",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Next[] [#e087a4]turn,[] [#e087a4]draw[] !M! [#e087a4]cards[] and gain [E] . NL ",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Next[] [#e087a4]turn,[] [#e087a4]draw[] !M! [#e087a4]cards[] and gain [E] [E] . NL ",
     "EXTENDED_DESCRIPTION": [
-      "Draw !M! cards next turn."
+      ""
     ]
   },
   "hexamod:Premonition": {
@@ -280,7 +279,7 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Weak X times.",
+    "DESCRIPTION": "Deal !D! damage X times. NL Apply !M! Weak X times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Weak X+1 times."
   },
   "hexamod:NightmareVision": {
@@ -321,7 +320,7 @@
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Shield of Night",
-    "DESCRIPTION": "Gain !B! Block. NL Scry !M!. NL Exhaust discarded Ethereal cards."
+    "DESCRIPTION": "Gain !B! Block. NL Scry !M!. NL Exhaust discarded *Ethereal cards."
   },
   "hexamod:Kindle": {
     "NAME": "Kindle",
@@ -364,7 +363,7 @@
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "Sword of Night",
-    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL Exhaust discarded Ethereal cards."
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL Exhaust discarded *Ethereal cards."
   },
   "hexamod:ThermalTransfer": {
     "NAME": "Thermal Transfer",
@@ -372,7 +371,7 @@
   },
   "hexamod:TimeOfNeed": {
     "NAME": "Time of Need",
-    "DESCRIPTION": "Retain. NL Gain a random Power card. It costs 1 less until played. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain a random Power card. It costs 1 less. NL Exhaust."
   },
   "hexamod:TimeWarp": {
     "NAME": "Time Warp",
@@ -381,13 +380,13 @@
   "hexamod:FlareFlick": {
     "NAME": "Flare Flick",
     "DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame and hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame. NL Choose to hexamod:Retract or hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame. NL You may choose to hexamod:Retract or hexamod:Advance.",
     "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
-    "DESCRIPTION": "Gain !M! temp. hexamod:Intensity. NL Gain !M! temp. Strength. NL Gain !M! temp. Dexterity.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! temp. hexamod:Intensity. NL Gain !M! temp. Strength. NL Gain !M! temp. Dexterity."
+    "DESCRIPTION": "Gain !M! temporary hexamod:Intensity, Strength, and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! temporary hexamod:Intensity, Strength, and Dexterity."
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Unleash Spirits",

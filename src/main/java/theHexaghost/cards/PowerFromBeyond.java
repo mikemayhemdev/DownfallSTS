@@ -27,7 +27,6 @@ public class PowerFromBeyond extends AbstractHexaCard implements HexaPurpleTextI
 
     @Override
     public void afterlife() {
-//        applyToSelf(new EnergizedBluePower(AbstractDungeon.player, 1));
         applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, magicNumber));
     }
 
