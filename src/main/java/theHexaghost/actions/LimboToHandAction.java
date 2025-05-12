@@ -1,5 +1,6 @@
 package theHexaghost.actions;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -17,7 +18,7 @@ public class LimboToHandAction extends AbstractGameAction {
     public void update() {
         if (duration == Settings.ACTION_DUR_FAST) {
             if (AbstractDungeon.player.limbo.contains(card) &&
-                    AbstractDungeon.player.hand.size() < 10) {
+                    AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
                 AbstractDungeon.player.hand.addToHand(card);
                 card.unhover();
                 card.setAngle(0.0F, true);
