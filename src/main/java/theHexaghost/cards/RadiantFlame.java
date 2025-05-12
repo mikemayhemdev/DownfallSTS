@@ -7,36 +7,33 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.powers.gauntletpowers.MonsterVigor;
-import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import sneckomod.SneckoMod;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.EnhancePower;
-import theHexaghost.powers.HexalevelPower;
 
 public class RadiantFlame extends AbstractHexaCard {
 
     public final static String ID = makeID("RadiantFlame");
 
     public RadiantFlame() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = damage = 11;
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = damage = 4;
+        baseMagicNumber = magicNumber = 2;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "RadiantFlame.png");
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
-
         if (AbstractDungeon.getCurrRoom().monsters != null)
-            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                 if (!m.isDeadOrEscaped() && m.hasPower(BurnPower.POWER_ID)) {
                     this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
-                    break;
+                    return;
                 }
             }
+
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -51,13 +48,12 @@ public class RadiantFlame extends AbstractHexaCard {
                 this.isDone = true;
             }
         });
-//        applyToSelf(new RadiantPower(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(2);
             upgradeMagicNumber(1);
         }
     }

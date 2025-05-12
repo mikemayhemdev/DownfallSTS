@@ -6,46 +6,41 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.actions.DrawSpecificAction;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.DrawEtherealAction;
 
 public class StrikeFromBeyond extends AbstractHexaCard {
-
     public final static String ID = makeID("StrikeFromBeyond");
-
-    private static final int DAMAGE = 4;
-    private static final int MAGIC = 2;
-    private static final int UPG_DAMAGE = 3;
 
     public StrikeFromBeyond() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
-        baseDamage = DAMAGE;
+        baseDamage = 4;
         this.tags.add(CardTags.STRIKE);
         HexaMod.loadJokeCardImage(this, "StrikeFromBeyond.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        atb(new DrawEtherealAction(1));
+        atb(new DrawSpecificAction(1, c -> c.isEthereal));
     }
 
 
     public void triggerOnGlowCheck() {
-        boolean has_ethereal_in_draw_pile = false;
         for(AbstractCard c : AbstractDungeon.player.drawPile.group){
             if(c.isEthereal){
-                has_ethereal_in_draw_pile = true;
-                break;
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+                return;
             }
         }
-        this.glowColor = has_ethereal_in_draw_pile ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
+            upgradeDamage(3);
         }
     }
 

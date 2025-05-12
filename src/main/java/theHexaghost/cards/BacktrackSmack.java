@@ -12,7 +12,7 @@ public class BacktrackSmack extends AbstractHexaCard {
 
     public BacktrackSmack() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 6;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
