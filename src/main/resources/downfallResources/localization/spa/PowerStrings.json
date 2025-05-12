@@ -1,0 +1,425 @@
+{
+  "downfall:FairyPotion": {
+    "NAME": "Poción de Hada",
+    "DESCRIPTIONS": [
+      "Cura al #b30% de la PV máxima en vez de morir, eliminando este efecto.",
+      "¡Ja! ¡Poción de Hada, idiota!"
+    ]
+  },
+  "downfall:SoulSteal": {
+    "NAME": "Robo de Almas",
+    "DESCRIPTIONS": [
+      "Ha robado #b",
+      " de tus Almas."
+    ]
+  },
+  "downfall:NeowInvulnerable": {
+    "NAME": "Dios de la Vida",
+    "DESCRIPTIONS": [
+      "Te cura #b",
+      " PV cada vez que juegues una carta."
+    ]
+  },
+  "downfall:TransformDrawnCardsPower": {
+    "NAME": "Transformar Cartas Robadas",
+    "DESCRIPTIONS": [
+      "#yTransforma las primeras #b",
+      " cartas robadas este turno. (",
+      " restantes)"
+    ]
+  },
+  "downfall:TotemInvulnerable": {
+    "NAME": "Murallas Vivientes",
+    "DESCRIPTIONS": [
+      "No puede morir a menos que todas las demás Cabezas estén a #b1 PV. Muere si cualquiera de las otras Cabezas muere."
+    ]
+  },
+  "downfall:ExhaustCardsPower": {
+    "NAME": "Olvidadizo",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, elige una carta para #yAgotar [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:SpotWeakness": {
+    "NAME": "Ver Debilidades",
+    "DESCRIPTIONS": [
+      "Cada turno en el que juegues una carta de ataque con este poder activo, este enemigo ganará #b",
+      " #yFuerza. Actualmente ha ganado #b",
+      " #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:FearNoEvil": {
+    "NAME": "No Temas al Mal",
+    "DESCRIPTIONS": [
+      "Si juegas una carta de ataque este turno, La Vigilante cambiará su postura a #yCalma cuando juegue su carta #yNo #yTemer #ya #yNada.",
+	  "La Vigilante cambiará su postura a #yCalma cuando juegue su carta #yNo #yTemer #ya #yNada."
+    ]
+  },
+  "downfall:PoisonResist": {
+    "NAME": "Resistencia al Veneno",
+    "DESCRIPTIONS": [
+      "#yEl veneno se activa al final de tu turno. NL Al final de tu turno, gasta todo [E] restante para eliminar 10 #yVeneno por cada [E] gastado."
+    ]
+  },
+  "downfall:NeowBuff": {
+    "NAME": "Vigor de Neow",
+    "DESCRIPTIONS": [
+      "Gana #b2 #yFuerza al final de su turno."
+    ]
+  },
+  "downfall:WatcherAngryPower": {
+    "NAME": "Rabia Descontrolada",
+    "DESCRIPTIONS": [
+      "Al final de su turno, si La Vigilante tiene el #b50% o menos de PV, entra en #yIra. NL La #yIra de La Vigilante aumenta el daño hecho y recibido en #b50% en lugar de #b100% [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowUnbridledRage": {
+    "NAME": "Rabia Descontrolada",
+    "DESCRIPTIONS": [
+      "Al final de la ronda, si Neow tiene el #b50% o menos de PV, gana #b6 #yFuerza. NL Solo puede activarse una vez por combate."
+    ]
+  },
+  "downfall:WatcherCripplePower": {
+    "NAME": "Retribución Divina",
+    "DESCRIPTIONS": [
+      "Cada vez que La Vigilante pierda #b",
+      " PV, pierde #b1 #yFuerza [REMOVE_SPACE], hasta #b3 veces por turno. NL Puedes #yBloquear el daño de #yPuntos #yde #yPresión [REMOVE_SPACE].",
+      "La Vigilante ya ha perdido #b3 #yFuerza este turno."
+    ]
+  },
+  "downfall:WatcherSkillPower": {
+    "NAME": "Cazar en Desarmonía",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una habilidad, La Vigilante gana #b",
+      " #yFuerza temporal.",
+      "Cada vez que juegues una habilidad, La Vigilante gana #yFuerza temporal [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:WrathNextTurnPower": {
+    "NAME": "Ira para el Próximo Turno",
+    "DESCRIPTIONS": [
+      "Al inicio de su turno, La Vigilante entrará en #yIra [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowBlasphemersDemise": {
+    "NAME": "La Caída de los Blasfemos",
+    "DESCRIPTIONS": [
+      "A menos que Neow pierda #b",
+      " más de PV, la próxima vez que use una ventaja, ganará #b10 de #yFuerza adicional [REMOVE_SPACE].",
+      "Neow está lisiada y no ganará #yFuerza adicional durante su próxima ventaja del turno ."
+    ]
+  },
+  "downfall:WatcherDivinityPower": {
+    "NAME": "Fe Fugaz",
+    "DESCRIPTIONS": [
+      "La Vigilante gana #b1 #yMantra cada vez que juegues una carta. NL Cada vez que La Vigilante entre en #yDivinidad, ganará #b3 #yFuerza. NL La Vigilante pierde #b4 #yMantra al inicio de su turno. NL La Vigilante no sale de #yDivinidad al final de su turno."
+    ]
+  },
+  "downfall:NeowFleetingFaith": {
+    "NAME": "Fe Fugaz",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta, Neow gana #b1 #yMantra. Neow pierde #b5 #yMantra al inicio de su turno."
+    ]
+  },
+  "downfall:SilentShivTimeEaterPower": {
+    "NAME": "Bolsa de Cuchillos",
+    "DESCRIPTIONS": [
+      "La primera vez que juegues una carta que cueste #b2 o más cada turno, La Silenciosa gana 2 #yNavajas [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowBagOfKnives": {
+    "NAME": "Bolsa de Cuchillos",
+    "DESCRIPTIONS": [
+      "La primera vez que juegues una carta que cueste #b2 o más cada turno, recibe #b4 de daño dos veces."
+    ]
+  },
+  "downfall:SilentMirrorImagePower": {
+    "NAME": "Ver Doble",
+    "DESCRIPTIONS": [
+      "Al inicio de cada turno, una imagen reflejada de La Silenciosa esconderá su ubicación real. Atacar a La Silenciosa o la imagen la elimina del combate por el turno."
+    ]
+  },
+  "downfall:NeowSeeingDouble": {
+    "NAME": "Ver Doble",
+    "DESCRIPTIONS": [
+      "El primer #yAtaque usado contra Neow cada turno inflige #b0 de daño."
+    ]
+  },
+  "downfall:SilentPoisonPower": {
+    "NAME": "Advertencia: Altamente Tóxico",
+    "DESCRIPTIONS": [
+      "#yVeneno es bloqueable y causa daño al final del turno. NL Recibe un #yAntídoto al inicio del combate."
+    ]
+  },
+  "downfall:NeowHighlyToxic": {
+    "NAME": "Advertencia: Altamente Tóxico",
+    "DESCRIPTIONS": [
+      "Neow aplica #b5 #yVeneno a ti por turno. El veneno es bloqueable y causa daño al final del turno. NL Mezcla 2 #yAntídotos en tu mazo al inicio del combate."
+    ]
+  },
+  "downfall:DefectVoidPower": {
+    "NAME": "Ladrón de Energía",
+    "DESCRIPTIONS": [
+      "Cada vez que El Defectuoso genera un #yVacío, va a tu pila de descarte."
+    ]
+  },
+  "downfall:NeowEnergyThief": {
+    "NAME": "Ladrón de Energía",
+    "DESCRIPTIONS": [
+      "Cuando Neow añade #rMaldiciones a tu pila de robo, también añade 1 carta de #yVacío a ella."
+    ]
+  },
+  "downfall:DefectAncientConstructPower": {
+    "NAME": "Constructo Antiguo",
+    "DESCRIPTIONS": [
+      "Comienza la pelea con 2 esbirros #yOrbe de #yBronce . NL Las #yAgitación #ydel #yNúcleo de El Defectuoso no se #yAgotan."
+    ]
+  },
+  "downfall:NeowAncientConstruct": {
+    "NAME": "Constructo Antiguo",
+    "DESCRIPTIONS": [
+      "Neow gana #b2 #yArtefacto al final de su turno si no tiene #yArtefacto [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:DefectCuriosity": {
+    "NAME": "Cognición Imparcial",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta #yPoder, El Defectuoso gana #b",
+      " #yConcentración."
+    ]
+  },
+  "downfall:DefectBiasCuriosity": {
+    "NAME": "Cognición Corregida",
+    "DESCRIPTIONS": [
+      "El Defectuoso juega una #yCognición #yImparcial al inicio del combate. NL Cada vez que juegues una carta #yPoder, el #ySesgo de El Defectuoso pierde eficacia este turno.",
+      "Cada vez que juegues una carta #yPoder, el #ySesgo de El Defectuoso pierde eficacia este turno.",
+      "El #ySesgo de Defect pierde eficacia este turno.",
+      "Sesgo"
+    ]
+  },
+  "downfall:DefectCuriosityLighning": {
+    "NAME": "Cognición Imparcial",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta #yPoder, El Defectuoso canaliza #b",
+      " #yOrbe #yRelampago  [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowUnbiasedCognition": {
+    "NAME": "Cognición Imparcial",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta #yPoder, Neow gana #b2 #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:IroncladStatusPower": {
+    "NAME": "Sincronizar",
+    "DESCRIPTIONS": [
+      "Cada vez que El Blindado genere una carta #yEstado, se agrega una duplicada a tu pila de descarte."
+    ]
+  },
+  "downfall:NeowSyncronize": {
+    "NAME": "Sincronizar",
+    "DESCRIPTIONS": [
+      "Neow agrega una carta aleatoria de #yEstado a tu pila de descarte cada turno."
+    ]
+  },
+  "downfall:IroncladMushroomPower": {
+    "NAME": "Frenesí Alimentario",
+    "DESCRIPTIONS": [
+      "La #yParca de El Blindado no se #yAgota y apunta a TODOS los Hongos. NL Cuando El Blindado mata un Hongo, gana #b1 #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowFeedingFrenzy": {
+    "NAME": "Frenesí Alimentario",
+    "DESCRIPTIONS": [
+      "Neow se cura PV siempre que inflige daño no bloqueado."
+    ]
+  },
+  "downfall:IroncladFortificationPower": {
+    "NAME": "Baluarte",
+    "DESCRIPTIONS": [
+      "El Blindado comienza la pelea con un #yFortificación, que le otorgará #b",
+      " #yBloqueo cada turno. NL Cuando la #yFortificación haya sido destruida, El Blindado pierde #yBarrera, pero gana #b5 #yFuerza al inicio de cada turno."
+    ]
+  },
+  "downfall:NeowBastion": {
+    "NAME": "Baluarte",
+    "DESCRIPTIONS": [
+      "Neow tiene #yBarrera y gana #b10 #yBloqueo al inicio de cada turno."
+    ]
+  },
+  "downfall:MerchantStrengthPower": {
+    "NAME": "Ladrón de Almas",
+    "DESCRIPTIONS": [
+      "El Comerciante tiene el doble de #yFuerza que obtuvo de Robo de Almas en esta carrera, y gana la misma cantidad de #yDestreza [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowMantra": {
+    "NAME": "Mantra",
+    "DESCRIPTIONS": [
+      "Cuando Neow tenga #b10 #yMantra, entra en Divinidad, infligiendo triple daño en el siguiente turno."
+    ]
+  },
+  "downfall:NeowSeeingDoubleProduct": {
+    "NAME": "???",
+    "DESCRIPTIONS": [
+      "Tu siguiente #yAtaque usado contra Neow inflige #b0 de daño este turno."
+    ]
+  },
+  "downfall:CrowbotRitualPower": {
+    "NAME": "Reprogramar:Ritual",
+    "DESCRIPTIONS": [
+      "Cuando #yCrowBot tiene #b50% o menos de PV, pierde #b3 PV y gana #b",
+      " #yFuerza al final de su turno."
+    ]
+  },
+  "downfall:DamageMultiplier": {
+    "NAME": "Multiplicador de Daño",
+    "DESCRIPTIONS": [
+      "Los #yAtaques infligen #b",
+      " veces más daño."
+    ]
+  },
+  "downfall:CompressionMold": {
+    "NAME": "Molde de Compresión",
+    "DESCRIPTIONS": [
+      "La munición #yDisparada se mejora posteriormente."
+    ]
+  },
+  "downfall:OnDeathEveryoneStr": {
+    "NAME": "Último Suspiro: Inflamar+",
+    "DESCRIPTIONS": [
+      "Cuando este personaje muere, TODOS los personajes (incluyéndote a ti) ganan #b",
+      " #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:OnDeathEveryoneThorns": {
+    "NAME": "Último Suspiro: Caltrops+",
+    "DESCRIPTIONS": [
+      "Cuando este personaje muere, TODOS los personajes (incluyéndote a ti) ganan #b",
+      " #yEspinas [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:OnDeathEveryoneBuffer": {
+    "NAME": "Último Suspiro: Buffer+",
+    "DESCRIPTIONS": [
+      "Cuando este personaje muere, TODOS los personajes (incluyéndote a ti) ganan #b",
+      " #yBuffer. (Buffer: Previene la próxima vez que perderías PV)"
+    ]
+  },
+  "downfall:OnDeathEveryoneVigor": {
+    "NAME": "Último Suspiro: Guirnalda de Llama+",
+    "DESCRIPTIONS": [
+      "Cuando este personaje muere, TODOS los personajes (incluyéndote a ti) ganan #b",
+      " #yVigor. (Vigor: Aumenta el daño de un solo Ataque)"
+    ]
+  },
+  "downfall:OnDeathEveryoneRuggedVuln": {
+    "NAME": "Último Suspiro: Gestalt",
+    "DESCRIPTIONS": [
+      "Cuando este personaje muere, TODOS los personajes (incluyéndote a ti) ganan #b",
+      " #yResistente y #b",
+      " #yVulnerable. (Resistente: Reduce el daño no bloqueado recibido a #b2 )"
+    ]
+  },
+  "downfall:MonsterVigor": {
+    "NAME": "Vigor",
+    "DESCRIPTIONS": [
+      "El siguiente ataque de este personaje inflige #b",
+      " daño adicional."
+    ]
+  },
+  "downfall:HermitConcentrateAdder": {
+    "NAME": "Enfoque Mortal",
+    "DESCRIPTIONS": [
+      "Las cartas de El Hermitaño obtienen efectos adicionales de #yPreciso mientras está #yConcentrado. Después de recibir #b10 de daño, la #yConcentración se rompe por el turno."
+    ]
+  },
+  "downfall:HermitConcentrationPower": {
+    "NAME": "Concentrado",
+    "DESCRIPTIONS": [
+      "Las cartas de El Hermitaño obtienen efectos adicionales #yPreciso mientras está concentrado. Después de recibir #b",
+      " más daño, la #yConcentración de El Hermitaño se rompe por este turno.",
+      "La #yConcentración de El Hermitaño se rompe y los efectos #yPreciso no se activan este turno."
+    ]
+  },
+  "downfall:TangerinePower": {
+    "NAME": "Deputado",
+    "DESCRIPTIONS": [
+      "Cuando Mandarina muere, la #yConcentración de El Hermitaño se rompe y gana #b",
+      " #yFuerza."
+    ]
+  },
+  "downfall:HermitWheelOfFortune": {
+    "NAME": "Rueda de la Fortuna",
+    "DESCRIPTIONS": [
+      "Después de jugar un #yAtaque, El Hermitaño #yCicla su primera carta. El costo de las cartas de El Hermitaño no puede cambiar."
+    ]
+  },
+  "downfall:HermitDoomsday": {
+    "NAME": "Día del Juicio",
+    "DESCRIPTIONS": [
+      "El Hermitaño comienza con #b1 #yRitual [REMOVE_SPACE]. Siempre que El Hermitaño juegue #yPurgatorio [REMOVE_SPACE], invoca una #rDaga #rCondenada [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowEclipse": {
+    "NAME": "Eclipse",
+    "DESCRIPTIONS": [
+      "Neow agrega un #yPerdición #yInminente #yEtérea a tu mano cada turno."
+    ]
+  },
+  "downfall:NeowWheelOfDeath": {
+    "NAME": "Rueda de la Muerte",
+    "DESCRIPTIONS": [
+      "Cada #b",
+      " cartas que juegues, Neow gana #b",
+      " #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowDistracting": {
+    "NAME": "Distracción",
+    "DESCRIPTIONS": [
+      "La primera vez que inflijas #yDaño de Ataque a Neow en un turno, gana #b1 menos [E] el siguiente turno."
+    ]
+  },
+  "downfall:NextTurnPowerPower": {
+    "NAME": "Next Turn",
+    "DESCRIPTIONS": [
+      "¡ERROR! No deberías ver esto",
+      "El siguiente turno, gana #b",
+      " ",
+      ".",
+      "NOTA DE LOCALIZACIÓN: Por favor, mantén el espacio después de 'Siguiente Turno' en el campo de NOMBRE."
+    ]
+  },
+  "downfall:NeowStayAt1Hp": {
+    "NAME": "Imposible de Matar",
+    "DESCRIPTIONS": [
+      "El daño no puede reducir a Neow por debajo de #b1 PV. Neow sanará completamente y entrará en una nueva fase en su lugar."
+    ]
+  },
+  "downfall:NeowDivinity": {
+    "NAME": "Divinidad",
+    "DESCRIPTIONS": [
+      "Neow inflige triple daño este turno."
+    ]
+  },
+  "downfall:NeowSpirit": {
+    "NAME": "Espíritu del Héroe",
+    "DESCRIPTIONS": [
+      "Cuando Neow usa una intención de Buff, ella gana #b6 #yFuerza y... ",
+      " NL Gana #b1 Forma Demoníaca. #y(Blindado)",
+      " NL Gana #b2 Espinas. #y(Silenciosa)",
+      " NL Gana #b2 Búfer. #y(Defectuoso)",
+      " NL Gana #b5 Mantra. #y(Vigilante)",
+      " NL Añade un #yDescomposición a tu mazo de robo. #y(Hermitaño)"
+    ]
+  },
+  "downfall:HeartsFavorPower": {
+    "NAME": "Favor del Corazón",
+    "DESCRIPTIONS": [
+      "Cuando la #yInvencibilidad de Neow llegue a #b0 [REMOVE_SPACE], reduce su #yDios #yde #yVida en #b",
+      " [REMOVE_SPACE]."
+    ]
+  }
+}
+
