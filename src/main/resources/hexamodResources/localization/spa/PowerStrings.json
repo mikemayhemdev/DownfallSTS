@@ -1,0 +1,241 @@
+{
+  "hexamod:AgainPower": {
+    "NAME": "¡Otra vez!",
+    "DESCRIPTIONS": [
+      "No #yAvanzas al final del siguiente turno.",
+      "No #yAvanzas al final de los próximos #b",
+      " turnos."
+    ]
+  },
+  "hexamod:ApocalypticArmorPower": {
+    "NAME": "Juicio Final",
+    "DESCRIPTIONS": [
+      "La próxima vez que #yIncendies #b",
+      " llamas fantasmales, obtén un turno adicional.",
+      "La próxima vez que #yIncendies al menos #b"
+    ]
+  },
+  "hexamod:ApplyBurnAtTurnStartOncePower": {
+    "NAME": "Llama Retrasada",
+    "DESCRIPTIONS": [
+      "Al inicio de tu próximo turno, aplica #b",
+      " de #yQuemarAlma a TODOS los enemigos."
+    ]
+  },
+  "hexamod:BurnPerTurnPower": {
+    "NAME": "Metal Fundido",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " #yQuemarAlma después de que se detone #yQuemarAlma sobre este enemigo."
+    ]
+  },
+  "hexamod:BurnPower": {
+    "NAME": "QuemarAlma",
+    "DESCRIPTIONS": [
+      "En #b",
+      " turnos, pierde #b",
+      " turno, pierde #b",
+      " PV, luego se elimina el efecto de #yQuemarAlma."
+    ]
+  },
+  "hexamod:BurnvenomPower": {
+    "NAME": "Arma Ígnea",
+    "DESCRIPTIONS": [
+      "Cada vez que infliges daño de ataque sin bloquear, aplica #b",
+      " #yQuemarAlma [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:CommonPostCombatPower": {
+    "NAME": "Recompensa Sellada: Carta",
+    "DESCRIPTIONS": [
+      "Al final del combate, obtén #b",
+      " cartas comunes adicionales.",
+      " carta común adicional."
+    ]
+  },
+  "hexamod:CrispyPower_new": {
+    "NAME": "Bien Tostado",
+    "DESCRIPTIONS": [
+      "Cuando se detone #yQuemarAlma sobre un enemigo, aplica #b",
+      " de #yQuemarAlma adicional tras la detonación."
+    ]
+  },
+  "hexamod:EnhancePower": {
+    "NAME": "Intensidad",
+    "DESCRIPTIONS": [
+      "Aumenta el daño, #yQuemarAlma [REMOVE_SPACE], y el #yBloqueo aplicados por las llamas fantasmales al #yIncendiarse en #b",
+      " [REMOVE_SPACE].",
+      "Reduce el daño, #yQuemarAlma [REMOVE_SPACE], y el #yBloqueo aplicados por las llamas fantasmales al #yIncendiarse en #b",
+      "Tiene doble efecto con #yLlamas #yFantasmas #yAbrasadora."
+    ]
+  },
+  "hexamod:EtherealRefundPower": {
+    "NAME": "Reembolso Etéreo",
+    "DESCRIPTIONS": [
+      "Cuando juegues una carta #yEtérea este turno, gana ",
+      " ."
+    ]
+  },
+  "hexamod:FuturePower": {
+    "NAME": "Hacia las Sombras",
+    "DESCRIPTIONS": [
+      "Cada vez que #yRetrocede [REMOVE_SPACE], tu próxima carta #b",
+      " será gratuita y se #yAgota [REMOVE_SPACE].",
+      " cartas serán gratuitas y se #yAgotan [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:FutureUpgradePower": {
+    "NAME": "Recompensa Sellada: Mejora",
+    "DESCRIPTIONS": [
+      "Al final del combate, #yMejora #b",
+      " carta aleatoria en tu mazo.",
+      " cartas aleatorias en tu mazo."
+    ]
+  },
+  "hexamod:StopFromAdvancingPower": {
+    "NAME": "Aquí y Ahora",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, #yExtingue la llama fantasmal actual."
+    ]
+  },
+  "hexamod:GhostFlameBarrierPower": {
+    "NAME": "Barrera Fantasmal",
+    "DESCRIPTIONS": [
+      "Cuando recibas un ataque este turno, aplica #b",
+      " de #yQuemarAlma al atacante."
+    ]
+  },
+  "hexamod:GiftsFromBeyondPower": {
+    "NAME": "Cartas Regaladas",
+    "DESCRIPTIONS": [
+      "Al inicio de tu turno, agrega #b",
+      " carta #yUltratumba aleatoria a tu mano.",
+      " cartas #yUltratumba aleatorias a tu mano."
+    ]
+  },
+  "hexamod:GoldPostCombatPower": {
+    "NAME": "Recompensa Sellada: Oro",
+    "DESCRIPTIONS": [
+      "La recompensa en oro de este combate se incrementa en #b",
+      " ."
+    ]
+  },
+  "hexamod:HexalevelPower": {
+    "NAME": "Forma Infernal",
+    "DESCRIPTIONS": [
+      "Al inicio de tu turno, gana #b",
+      " de #yIntensidad [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:LoseEnhanceInTurnsPower": {
+    "NAME": "Calor Acumulado",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, pierde #b",
+      "En #b",
+      " turnos, pierde #b",
+      " de #yIntensidad [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:ParanormalFormPower": {
+    "NAME": "Poltergeist",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta #yEtérea, un enemigo aleatorio pierde #b",
+      " PV."
+    ]
+  },
+  "hexamod:PastPower": {
+    "NAME": "Danza del Diablo",
+    "DESCRIPTIONS": [
+      "Cada vez que #yRetrocedas, roba #b",
+      " carta.",
+      " cartas."
+    ]
+  },
+  "hexamod:PotionPostCombatPower": {
+    "NAME": "Recompensa Sellada: Poción",
+    "DESCRIPTIONS": [
+      "Al final del combate, obtén #b",
+      " pociones adicionales.",
+      " poción adicional."
+    ]
+  },
+  "hexamod:RadiantPower": {
+    "NAME": "Llama Radiante",
+    "DESCRIPTIONS": [
+      "Cada vez que #yIncendies una llama fantasmal, gana #b",
+      " de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:SealPostCombatPower": {
+    "NAME": "Recompensa Sellada: Sello",
+    "DESCRIPTIONS": [
+      "Al final del combate, obtén #b",
+      " cartas #ySello adicionales.",
+      " carta #ySello adicional."
+    ]
+  },
+  "hexamod:TimeStopPower": {
+    "NAME": "Llegada del Destino",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, comienza inmediatamente otro turno.",
+      "Al final de tu turno, comienza inmediatamente otros #b",
+      " turnos."
+    ]
+  },
+  "hexamod:VolcanoVisagePower": {
+    "NAME": "Visaje Volcánico",
+    "DESCRIPTIONS": [
+      "Cada vez que #yIncendies una llama fantasmal, aplica #b",
+      " de #yQuemarAlma a todos los enemigos."
+    ]
+  },
+  "hexamod:LivingBombPower": {
+    "NAME": "Bomba Viviente",
+    "DESCRIPTIONS": [
+      "La próxima vez que se detone el #yQuemarAlma de esta criatura, afectará a TODOS los enemigos."
+    ]
+  },
+  "hexamod:GainEnergyAtStartOfTurnPower": {
+    "NAME": "Energía Adicional",
+    "DESCRIPTIONS": [
+      "Al inicio de tu turno, gana "
+    ]
+  },
+  "hexamod:SoulburnOnExhaustPower": {
+    "NAME": "Infestación Ígnea",
+    "DESCRIPTIONS": [
+      "Cada vez que #yAgotes una carta este turno, aplica #b",
+      " de #yQuemarAlma a este enemigo."
+    ]
+  },
+  "hexamod:LoseIntensityPower": {
+    "NAME": "Pérdida de Intensidad",
+    "DESCRIPTIONS": [
+      "Al final de este turno, pierde #b",
+      " de #yIntensidad [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:MaxHPPostCombatPower": {
+    "NAME": "Recompensa Sellada: PV Máx.",
+    "DESCRIPTIONS": [
+      "Al final del combate, gana #b",
+      " de PV Máx."
+    ]
+  },
+  "hexamod:InfernoPotionPower": {
+    "NAME": "Quemadura Hexa",
+    "DESCRIPTIONS": [
+      "Los efectos de tus llamas fantasmales afectan a TODOS los enemigos en este combate.",
+      "Los efectos de tus llamas fantasmales afectan a TODOS los enemigos #b",
+      " veces en este combate."
+    ]
+  },
+  "hexamod:PlayCardAndExhaustPower": {
+    "NAME": "Cambio Sombrío",
+    "DESCRIPTIONS": [
+      "Tu próxima carta es gratuita y luego se #yAgota [REMOVE_SPACE].",
+      "Tus próximas #b",
+      " cartas son gratuitas y luego se #yAgotan [REMOVE_SPACE]."
+    ]
+  }
+}

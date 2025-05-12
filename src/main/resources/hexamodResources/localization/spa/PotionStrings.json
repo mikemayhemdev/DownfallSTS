@@ -1,0 +1,32 @@
+{
+  "hexamod:SoulburnPotion": {
+    "NAME": "Molotov",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " de #yQuemarAlma [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:DoubleChargePotion": {
+    "NAME": "Fluido Combustivo",
+    "DESCRIPTIONS": [
+      "#yIncendia la llama fantasmal actual #b",
+      " veces."
+    ]
+  },
+  "hexamod:EctoCoolerPotion": {
+    "NAME": "Ecto-Refrigerante",
+    "DESCRIPTIONS": [
+      "Elige #b1 de #b3 cartas #yEtéreas aleatorias de cualquier clase. Cuesta #b0 este turno.",
+      "Elige #b1 de #b3 cartas #yEtéreas aleatorias de cualquier clase y obtén #b",
+      " copias. Cuestan #b0 este turno."
+    ]
+  },
+  "hexamod:InfernoChargePotion": {
+    "NAME": "Poción de Infierno",
+    "DESCRIPTIONS": [
+      "Los efectos de tus llamas fantasmales afectan a TODOS los enemigos en este combate.",
+      "Los efectos de tus llamas fantasmales afectan a TODOS los enemigos #b",
+      " veces en este combate."
+    ]
+  }
+}
