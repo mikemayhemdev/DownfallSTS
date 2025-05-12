@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.util.TextureLoader;
 import expansioncontent.expansionContentMod;
@@ -43,7 +44,7 @@ public class DarknessFallsPower extends TwoAmountPower implements OnLoseEnergyPo
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount2 + DESCRIPTIONS[2];
+        description = "THIS IS A TEMP SOLUTION SO THE GAME DOESN'T CRASH #b" + amount + " #yStrength gained and #b" + amount2 + " #yBlock [REMOVE_SPACE].";
     }
 }
 
