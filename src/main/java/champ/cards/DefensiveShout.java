@@ -38,6 +38,6 @@ public class DefensiveShout extends AbstractChampCard {
      //   tags.add(ChampMod.TECHNIQUE);
     //    postInit();
      //   initializeDescription();
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(3);
     }
 }

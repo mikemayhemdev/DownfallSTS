@@ -28,12 +28,9 @@
   },
   "champ:StanceDanceCrown": {
     "NAME": "Champion's Crown",
-    "DESCRIPTION": "Choose a Stance to Enter. NL Trigger its *Skill champ:Bonus.",
-    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Trigger its *Skill champ:Bonus twice.",
-    "EXTENDED_DESCRIPTION": [
-      "Enter champ:Berserker.",
-      "Enter champ:Defensive."
-    ]
+    "DESCRIPTION": "Retain. NL Enter a Stance you aren't in. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Enter a Stance you aren't in."
+
   },
   "champ:SwordSigil": {
     "NAME": "Sigil of Victory",
