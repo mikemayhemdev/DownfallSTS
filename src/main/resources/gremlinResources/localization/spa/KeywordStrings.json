@@ -1,0 +1,64 @@
+[
+  {
+    "NAMES": ["agony","agonía"],
+    "PROPER_NAME": "Agonía",
+    "DESCRIPTION": "Las criaturas en Agonía infligen #b80% menos daño con Ataques."
+  },
+  {
+    "NAMES": ["lisiado", "cripple"],
+    "PROPER_NAME": "Lisiado",
+    "DESCRIPTION": "Los enemigos Lisiados ya no pueden perder #yDébil [REMOVE_SPACE]. Al final de su turno, pierden PV igual a su #yDébil [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": ["echo","echo",
+      "echoes", "eco"],
+    "PROPER_NAME": "Eco",
+    "DESCRIPTION": "Los Ecos son copias de cartas con #yEtérea y que se #yAgotan [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": ["fat gremlin","fat_gremlin","gremlin obeso","gremlin_obeso"],
+    "PROPER_NAME": "Gremlin Obeso",
+    "DESCRIPTION": "Después de jugar un Ataque, aplica #b1 de #yDébil a todos los objetivos."
+  },
+  {
+    "NAMES": ["gremlin wizard","gremlin_wizard","gremlin mago", "gremlin_mago"],
+    "PROPER_NAME": "Gremlin Mago",
+    "DESCRIPTION": "Después de jugar una Habilidad, gana #b1 de #yMagia [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": ["mad gremlin","mad_gremlin","gremlin guerrero", "gremlin_guerrero"],
+    "PROPER_NAME": "Gremlin Guerrero",
+    "DESCRIPTION": "Gana #b2 de #yFuerza #yTemporal cuando recibes un ataque."
+  },
+  {
+    "NAMES": ["shield gremlin","shield_gremlin","gremlin reservado","gremlin_reservado"],
+    "PROPER_NAME": "Gremlin Reservado",
+    "DESCRIPTION": "Después de jugar una Habilidad, gana #b2 de #yBloqueo [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": ["sneaky gremlin","sneaky_gremlin","gremlin ladrón","gremlin_ladrón"],
+    "PROPER_NAME": "Gremlin Ladrón",
+    "DESCRIPTION": "Los Ataques de coste 0 infligen #b2 de daño adicional. Después de jugar un Ataque, inflige #b2 de daño a un enemigo aleatorio."
+  },
+  {
+    "NAMES": ["swap","cambia", "cambies"],
+    "PROPER_NAME": "Cambia",
+    "DESCRIPTION": "Cambia de lugar con otro personaje. No hace nada si no hay un objetivo válido."
+  },
+  {
+    "NAMES": ["wiz","magia"],
+    "PROPER_NAME": "Magia",
+    "DESCRIPTION": "Cuando tengas al menos tres acumulaciones de Magia, los Ataques consumirán todas las acumulaciones para infligir #b7 de daño adicional."
+  },
+  {
+    "NAMES": ["steal","roba"],
+    "PROPER_NAME": "Roba",
+    "DESCRIPTION": "El objetivo pierde la cantidad indicada de un recurso. Tú ganas la misma cantidad perdida."
+  },
+  {
+    "NAMES": ["nob"],
+    "PROPER_NAME": "Gremlin Idiota(Nob)",
+    "DESCRIPTION": "Al comienzo de tu turno, añade #b1 #yGrito, #yTajo #yCraneal y #yArremetida a tu mano."
+  }
+]
+
