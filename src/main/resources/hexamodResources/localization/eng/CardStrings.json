@@ -275,7 +275,7 @@
   },
   "hexamod:RadiantFlame": {
     "NAME": "Radiant Reverb",
-    "DESCRIPTION": "Deal !D! damage. NL Remove the target's hexamod:Soulburn to gain !M! hexamod:Intensity."
+    "DESCRIPTION": "Deal !D! damage. NL Remove the target's *Soulburn to gain !M! hexamod:Intensity."
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",

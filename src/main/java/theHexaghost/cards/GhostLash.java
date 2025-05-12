@@ -14,15 +14,13 @@ public class GhostLash extends AbstractHexaCard implements HexaPurpleTextInterfa
 
     public final static String ID = makeID("GhostLash");
 
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 2;
     private static int ethereal_inhand = 0;
     private boolean can_show = false;
     private boolean trigger_by_afterlife = false;
 
     public GhostLash() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
+        baseDamage = 8;
         baseMagicNumber = magicNumber = 3;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
@@ -101,7 +99,7 @@ public class GhostLash extends AbstractHexaCard implements HexaPurpleTextInterfa
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
+            upgradeDamage(2);
             upgradeMagicNumber(1);
         }
     }

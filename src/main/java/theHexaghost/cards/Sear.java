@@ -16,8 +16,8 @@ public class Sear extends AbstractHexaCard implements HexaPurpleTextInterface {
 
     public Sear() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = damage = 6;
-        baseBurn = burn = 6;
+        baseDamage = damage = 5;
+        baseBurn = burn = 5;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         HexaMod.loadJokeCardImage(this, "Sear.png");
