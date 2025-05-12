@@ -1,0 +1,127 @@
+[
+  {
+    "NAMES": ["absorb", "absorbing", "absorbed", "absorber", "absorbiendo", "absorbido", "absorbe","absorbelas"],
+    "PROPER_NAME": "Absorber",
+    "DESCRIPTION": "Recombínate manualmente con tu Baba principal, obteniendo #b1 de #yFuerza [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": ["split", "splitting", "dividir","dividirte","dividiendo", "divídete", "divide","divididas"],
+    "PROPER_NAME": "Dividir",
+    "DESCRIPTION": "Invoca un esbirro de Baba, que ataca al inicio de cada turno. NL Si no tienes espacios vacíos, tu Baba más antigua será automáticamente #yAbsorbida para dejar espacio, otorgándote #b1 de #yFuerza [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": ["goop", "gooped", "baba", "babado","babas"],
+    "PROPER_NAME": "Baba",
+    "DESCRIPTION": "El próximo ataque inflige #b1 de daño adicional por cada acumulación de #yBaba [REMOVE_SPACE], eliminando todas las acumulaciones y activando cualquier efecto de #yConsumir."
+  },
+  {
+    "NAMES": ["potency", "potencia"],
+    "PROPER_NAME": "Potencia",
+    "DESCRIPTION": "Aumenta el daño de TODAS tus Babas invocadas. Los efectos secundarios aumentan en #b1 por cada #b2 de Potencia (redondeado hacia arriba)."
+  },
+  {
+    "NAMES": ["command", "commands", "ordenar", "ordena","ordenan","ordenalas"],
+    "PROPER_NAME": "Ordenar",
+    "DESCRIPTION": "Tu Baba principal ataca."
+  },
+  {
+    "NAMES": ["torchhead slime", "torchhead_slime", "baba antorcha", "baba_antorcha","antorcha"],
+    "PROPER_NAME": "Baba Antorcha",
+    "DESCRIPTION": "Ataca con #b6 de daño cada turno. Aumenta su daño con tu #yFuerza."
+  },
+  {
+    "NAMES": ["bruiser slime", "bruiser_slime", "bruiser slimes", "bruiser_slimes", "bruiser", "baba bruta", "baba_bruta","bruta"],
+    "PROPER_NAME": "Baba Bruta",
+    "DESCRIPTION": "Ataca con #b3 de daño dos veces cada turno."
+  },
+  {
+    "NAMES": ["cultist slime", "cultist_slime", "baba cultista", "baba_cultista"],
+    "PROPER_NAME": "Baba Cultista",
+    "DESCRIPTION": "Ataca con #b6 de daño cada turno y luego aumenta su daño en #b1."
+  },
+  {
+    "NAMES": ["leeching slime", "leeching_slime", "leeching slimes", "leeching_slimes", "leeching", "baba absorbente", "baba_absorbente","absorbente"],
+    "PROPER_NAME": "Baba Absorbente",
+    "DESCRIPTION": "Ataca con #b1 de daño y te otorga #b3 de #yBloqueo cada turno."
+  },
+  {
+    "NAMES": ["guerilla slime", "guerilla_slime", "guerilla slimes", "guerilla_slimes", "guerilla", "baba guerrilla","baba_guerrilla"],
+    "PROPER_NAME": "Baba Guerrilla",
+    "DESCRIPTION": "Ataca con #b3 de daño a TODOS los enemigos cada turno."
+  },
+  {
+    "NAMES": ["mire slime", "mire_slime", "mire slimes", "mire_slimes", "mire", "baba_lodosa", "baba lodosa","lodosa"],
+    "PROPER_NAME": "Baba Lodosa",
+    "DESCRIPTION": "Ataca con #b2 de daño y aplica #b2 de #yBaba cada turno."
+  },
+  {
+    "NAMES": ["bronze slime", "bronze_slime", "baba bronce", "baba_bronce"],
+    "PROPER_NAME": "Baba de Bronce",
+    "DESCRIPTION": "Ataca con #b10 de daño a TODOS los enemigos cada turno, pero se salta cada otro turno."
+  },
+  {
+    "NAMES": ["lick", "lamida"],
+    "PROPER_NAME": "Lamida",
+    "DESCRIPTION": "Cartas de coste 0 que aplican #yBaba con una variedad de efectos secundarios."
+  },
+  {
+    "NAMES": ["ghostflame slime", "ghostflame_slime", "baba fantasmal", "baba_fantasmal"],
+    "PROPER_NAME": "Baba Fantasmal",
+    "DESCRIPTION": "Ataca con #b3 de daño y aplica #b6 de #yQuemarAlma cada turno."
+  },
+  {
+    "NAMES": ["slow", "lento"],
+    "PROPER_NAME": "Lento",
+    "DESCRIPTION": "Recibe #b10% más de daño por cada carta jugada durante el turno."
+  },
+  {
+    "NAMES": ["tackle", "tackles", "embestida", "embestidas"],
+    "PROPER_NAME": "Embestida",
+    "DESCRIPTION": "#yAtaques de alto daño que también infligen una pequeña cantidad de daño a ti mismo."
+  },
+  {
+    "NAMES": ["spire boss", "spire_boss", "jefe aguja", "jefe aguja"],
+    "PROPER_NAME": "Jefe de la Aguja",
+    "DESCRIPTION": "Cartas poderosas de coste 0, inspiradas en los jefes de la Aguja."
+  },
+  {
+    "NAMES": ["protector slime", "protector_slime", "baba protectora", "baba_protectora"],
+    "PROPER_NAME": "Baba Protectora",
+    "DESCRIPTION": "Ataca con #b4 de daño y te otorga #b4 de #yEspinas temporales cada turno."
+  },
+  {
+    "NAMES": ["insulting slime", "insulting_slime", "baba insultante", "baba_insultante"],
+    "PROPER_NAME": "Baba Insultante",
+    "DESCRIPTION": "Ataca con #b4 de daño y aplica #b1 de #yVulnerable cada turno."
+  },
+  {
+    "NAMES": ["darkling slime", "darkling_slime", "baba obscura", "baba_obscura","obscura"],
+    "PROPER_NAME": "Baba Obscura",
+    "DESCRIPTION": "Ataca con #b3 de daño cada turno. Cuando es Ordenada, otras Babas Obscuras también atacan."
+  },
+  {
+    "NAMES": ["ancient slime", "ancient_slime", "baba ancestral", "baba_ancestral"],
+    "PROPER_NAME": "Baba Ancestral",
+    "DESCRIPTION": "Ataca con #b3 de daño y hace que robes #b1 carta cada turno."
+  },
+  {
+    "NAMES": ["time slime", "time_slime","baba temporal","baba_temporal"],
+    "PROPER_NAME": "Baba Temporal",
+    "DESCRIPTION": "Ataca con #b4 de daño y aplica #b1 de #yDébil cada turno."
+  },
+  {
+    "NAMES": ["consume", "consumir"],
+    "PROPER_NAME": "Consumir",
+    "DESCRIPTION": "Efecto adicional que se activa cuando se usa un #yAtaque sobre un enemigo con #yBaba [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": ["specialist", "especialista","especialistas"],
+    "PROPER_NAME": "Especialista",
+    "DESCRIPTION": "Una baba única con un efecto más poderoso que las babas normales."
+  },
+  {
+    "NAMES": ["buried", "enterrada"],
+    "PROPER_NAME": "Enterrada",
+    "DESCRIPTION": "Las cartas enterradas siempre serán las últimas elegidas para efectos aleatorios de #yExhumar."
+  }
+]

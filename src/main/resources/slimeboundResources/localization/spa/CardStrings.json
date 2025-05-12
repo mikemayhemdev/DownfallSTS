@@ -1,0 +1,388 @@
+{
+  "Slimebound:AcidTongue": {
+    "NAME": "Baba Expansiva",
+    "DESCRIPTION": "Los efectos que aplican slimeboundmod:Baba aplican !M! más."
+  },
+  "Slimebound:BestDefense": {
+    "NAME": "Temeridad",
+    "DESCRIPTION": "Tus cartas de \"Embestida\" Hacen !M! más de daño a los enemigos, y 1 más de daño a ti."
+  },
+  "Slimebound:CheckThePlaybook": {
+    "NAME": "Consultar Estrategia",
+    "DESCRIPTION": "Obtén 3 cartas aleatorias de \"Embestida\". Cuestan 1 menos este combate. NL Agota."
+  },
+  "Slimebound:Chomp": {
+    "NAME": "Mordisco",
+    "DESCRIPTION": "Haz !D! de daño. NL Reduce el coste de una \"Embestida\" aleatoria de tu mano a 0 este turno.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Reduce el coste de una \"Embestida\" aleatoria de tu mano a 0 este combate."
+  },
+  "Slimebound:ComboTackle": {
+    "NAME": "Embestida con Impulso",
+    "DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. NL Roba !M! cartas."
+  },
+  "Slimebound:CorrosiveSpit": {
+    "NAME": "Escupitajo Corrosivo",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba."
+  },
+  "Slimebound:Darklings": {
+    "NAME": "Dúo Oscuro",
+    "DESCRIPTION": "slimeboundmod:Divídete en slimeboundmod:baba_obscura !M! veces. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Trío Obscuro"
+  },
+  "Slimebound:Defend_Slimebound": {
+    "NAME": "Defender",
+    "DESCRIPTION": "Obtén !B! de Bloqueo."
+  },
+  "Slimebound:DisruptingSlam": {
+    "NAME": "Merecido",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL expansioncontent:Exhuma !M! cartas de \"Lamida\" aleatorias."
+  },
+  "Slimebound:Dissolve": {
+    "NAME": "Bocado Rápido",
+    "DESCRIPTION": "Roba !M! carta. NL Agota una carta. Obtén *Lamidas igual a su coste. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Roba !M! cartas. NL Agota una carta. Obtén *Lamidas igual a su coste. NL Agota."
+  },
+  "Slimebound:DivideAndConquer": {
+    "NAME": "Dividir y Vencer",
+    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio por cada Baba. NL slimeboundmod:Absorbelas. NL Agota."
+  },
+  "Slimebound:DouseInSlime": {
+    "NAME": "Empapar en Baba",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba. NL El siguiente Ataque usado contra este enemigo no elimina slimeboundmod:Baba."
+  },
+  "Slimebound:DuplicatedForm": {
+    "NAME": "Forma Duplicada",
+    "DESCRIPTION": "La primera carta que apunte a enemigos que juegues en cada turno se juega dos veces.",
+    "UPGRADE_DESCRIPTION": "Gana [E] por turno. NL La primera carta que apunte a enemigos que juegues en cada turno se juega dos veces.",
+    "EXTENDED_DESCRIPTION": [
+      "Necesito... salud..."
+    ]
+  },
+  "Slimebound:Equalize": {
+    "NAME": "Igualar",
+    "DESCRIPTION": "Haz !D! de daño. NL Cura !M! PV. NL slimeboundmod:Consume - Juega esta carta dos veces. NL Agota."
+  },
+  "Slimebound:FinishingTackle": {
+    "NAME": "Embestida Inicial",
+    "DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. slimeboundmod:Consume - Aplica !M! Vulnerable."
+  },
+  "Slimebound:FirmFortitude": {
+    "NAME": "Liquidar",
+    "DESCRIPTION": "Pierde 2 de Fuerza. NL Gana !M! de slimeboundmod:Potencia."
+  },
+  "Slimebound:FlameTackle": {
+    "NAME": "Embestida Ígnea",
+    "DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. NL Tus cartas \"Embestida\" Hacen !M! más de daño este combate."
+  },
+  "Slimebound:FormOfPuddle": {
+    "NAME": "Forma de Charco",
+    "DESCRIPTION": "Etérea. NL Obtén 1 de Intangible. NL Agota."
+  },
+  "Slimebound:ForwardTackle": {
+    "NAME": "Embestida Avanzada",
+    "DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. NL slimeboundmod:Ordenar dos veces.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. NL slimeboundmod:Ordenar tres veces."
+  },
+  "Slimebound:Gluttony": {
+    "NAME": "Glotonería",
+    "DESCRIPTION": "La primera vez que slimeboundmod:Consume cada turno, obtén una *Lamida.",
+    "UPGRADE_DESCRIPTION": "Innata. NL La primera vez que slimeboundmod:Consume cada turno, obtén una *Lamida."
+  },
+  "Slimebound:GoopSpray": {
+    "NAME": "Rociada de Baba",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba y !M! de Débil a TODOS los enemigos."
+  },
+  "Slimebound:GoopTackle": {
+    "NAME": "Embestida Encadenada",
+    "DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. NL Gana una carta de \"Embestida\" aleatoria. Cuesta 0 este turno.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. NL Gana una carta mejorada de \"Embestida\" aleatoria. Cuesta 0 este turno."
+  },
+  "Slimebound:Grow": {
+    "NAME": "Crecer",
+    "DESCRIPTION": "Pierde 1 espacio de Baba a cambio de !M! de Fuerza y !M! de Destreza."
+  },
+  "Slimebound:GrowthPunch": {
+    "NAME": "Puño Creciente",
+    "DESCRIPTION": "Obtén !B! de Bloqueo. NL Haz !D! de daño. NL slimeboundmod:Consume - Aumenta los efectos de esta carta en !M! durante este combate."
+  },
+  "Slimebound:HauntingLick": {
+    "NAME": "Lamida Fantasmal",
+    "DESCRIPTION": "Aplica !M! de Vulnerable y !slime! slimeboundmod:Baba. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! de Vulnerable y !slime! slimeboundmod:Baba. NL Roba una carta. NL Agota."
+  },
+  "Slimebound:HungryTackle": {
+    "NAME": "Embestida Hambrienta",
+    "DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. NL expansioncontent:Exhuma una carta de \"Lamida\" aleatoria.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. NL expansioncontent:Exhuma 2 cartas de \"Lamida\" aleatorias."
+  },
+  "Slimebound:ItLooksTasty": {
+    "NAME": "Se Ve Delicioso",
+    "DESCRIPTION": "Haz !D! de daño. slimeboundmod:Consume - Obtén una *Lamida.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. slimeboundmod:Consume - Obtén una *Lamida+."
+  },
+  "Slimebound:LeadByExample": {
+    "NAME": "Dar el Ejemplo",
+    "DESCRIPTION": "La primera carta que juegues cada turno que apunte a enemigos también slimeboundmod:Ordena.",
+    "UPGRADE_DESCRIPTION": "Las primeras !M! cartas que juegues cada turno que apunten a enemigos también slimeboundmod:Ordenan."
+  },
+  "Slimebound:LeechEnergy": {
+    "NAME": "Drenar Energía",
+    "DESCRIPTION": "Haz !D! de daño. slimeboundmod:Consume - Gana [E] y roba !M! carta.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. slimeboundmod:Consume - Gana [E] y roba !M! cartas."
+  },
+  "Slimebound:LeechLife": {
+    "NAME": "Drenar Vida",
+    "DESCRIPTION": "Etérea. NL Haz !D! de daño. Cura PV igual al daño no bloqueado. NL Agota."
+  },
+  "Slimebound:LeechingTouch": {
+    "NAME": "Golpe Drenante",
+    "DESCRIPTION": "Haz !D! de daño. NL slimeboundmod:Consume - Gana Bloqueo igual a la slimeboundmod:Baba del enemigo."
+  },
+  "Slimebound:LevelUp": {
+    "NAME": "Subir de Nivel",
+    "DESCRIPTION": "Obtén !M! de slimeboundmod:Potencia.",
+    "UPGRADE_DESCRIPTION": "Obtén !M! de slimeboundmod:Potencia y 1 espacio de Baba adicional."
+  },
+  "Slimebound:Lick": {
+    "NAME": "Lamida",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba. NL Agota - slimeboundmod:Enterrada.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! de Débil y !slime! slimeboundmod:Baba. NL Roba una carta. NL Agota - slimeboundmod:Enterrada."
+  },
+  "Slimebound:LivingWall": {
+    "NAME": "Muro Vivo",
+    "DESCRIPTION": "Obtén !B! de Bloqueo. NL Aplica !slime! slimeboundmod:Baba a los atacantes este turno."
+  },
+  "Slimebound:MassFeed": {
+    "NAME": "Alimentación Masiva",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Si es Fatal, aumenta tu PV máximo en !M!. NL Agota."
+  },
+  "Slimebound:MassRepurpose": {
+    "NAME": "Reutilización Masiva",
+    "DESCRIPTION": "slimeboundmod:Absorbe TODAS las Babas. Divídete en un slimeboundmod:Especialista aleatorio por cada una. NL Agota.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorbe TODAS las Babas. Divídete en un slimeboundmod:Especialista aleatorio por cada una. slimeboundmod:Ordenalas. NL Agota."
+  },
+  "Slimebound:MegaLick": {
+    "NAME": "Mega-Lamida",
+    "DESCRIPTION": "Aplica !M! de Débil y !slime! slimeboundmod:Baba a TODOS los enemigos. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! de Débil y !slime! slimeboundmod:Baba a TODOS los enemigos. NL Roba una carta. NL Agota."
+  },
+  "Slimebound:MinionMaster": {
+    "NAME": "Amo de los Esbirros",
+    "DESCRIPTION": "Cada vez que juegues una carta con slimeboundmod:Ordenar, slimeboundmod:Ordena de nuevo.",
+    "UPGRADE_DESCRIPTION": "Innata. NL Cada vez que juegues una carta con slimeboundmod:Ordenar, slimeboundmod:Ordena de nuevo."
+  },
+  "Slimebound:Nibble": {
+    "NAME": "Mordisquito y Lamida",
+    "DESCRIPTION": "Haz !D! de daño. NL Obtén una *Lamida. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Obtén una *Lamida. NL Roba una carta. NL Agota."
+  },
+  "Slimebound:OneTwoCombo": {
+    "NAME": "Combo Uno-Dos",
+    "DESCRIPTION": "Haz !D! de daño. NL slimeboundmod:Ordena. NL Cuando slimeboundmod:Divide, esta carta vuelve de la pila de descartes a tu mano.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL slimeboundmod:Ordena dos veces. NL Cuando slimeboundmod:Divide, esta carta vuelve de la pila de descartes a tu mano."
+  },
+  "Slimebound:OozeBath": {
+    "NAME": "Baño de Baba",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba al enemigo objetivo al inicio de cada uno de sus turnos. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Triplica la slimeboundmod:Baba del enemigo. NL Agota."
+  },
+  "Slimebound:Overexert": {
+    "NAME": "Sobreesfuerzo",
+    "DESCRIPTION": "Obtén 5 de slimeboundmod:Potencia. NL En !M! turnos, slimeboundmod:Absorbe todas las Babas.",
+    "UPGRADE_DESCRIPTION": "Obtén 5 de slimeboundmod:Potencia. NL slimeboundmod:Ordena dos veces. NL En !M! turnos, slimeboundmod:Absorbe todas las Babas."
+  },
+  "Slimebound:Prepare": {
+    "NAME": "Prepararse",
+    "DESCRIPTION": "Obtén !B! de Bloqueo. NL En el siguiente turno, gana [E] y roba !M! cartas. NL Agota.",
+    "UPGRADE_DESCRIPTION": "En el siguiente turno, gana [E] y roba !M! cartas. NL Conserva hasta !M! cartas este turno. Agota."
+  },
+  "Slimebound:PrepareCrush": {
+    "NAME": "Preparar: Aplastamiento",
+    "DESCRIPTION": "En el siguiente turno, obtén *¡TRITURABABA!, [E] [E] [E] y !M! de Fuerza. NL Agota.",
+    "UPGRADE_DESCRIPTION": "En el siguiente turno, obtén *¡TRITURABABA!+, [E] [E] [E] [E] y !M! de Fuerza. NL Agota.",
+    "EXTENDED_DESCRIPTION": [
+      "~Baba...~ NL #r~¡APLASTAR!~"
+    ]
+  },
+  "Slimebound:PressTheAttack": {
+    "NAME": "Presionar el Ataque",
+    "DESCRIPTION": "Haz !D! de daño. slimeboundmod:Ordena.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. slimeboundmod:Ordena dos veces."
+  },
+
+  "Slimebound:ProtectTheBoss": {
+    "NAME": "Proteger al Jefe",
+    "DESCRIPTION": "Evita la próxima vez que recibirías daño de un ataque enemigo, slimeboundmod:Absorbiendo a tu Baba líder en su lugar.",
+    "UPGRADE_DESCRIPTION": "Evita las próximas 2 veces que recibirías daño de un ataque enemigo, slimeboundmod:Absorbiendo a tu Baba líder en su lugar."
+  },
+  "Slimebound:RainOfGoop": {
+    "NAME": "Lluvia de Baba",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba a un enemigo aleatorio !M! veces.",
+    "UPGRADE_DESCRIPTION": "Aplica !slime! slimeboundmod:Baba a un enemigo aleatorio !M! veces."
+  },
+  "Slimebound:RallyTheTroops": {
+    "NAME": "Reunir al Escuadrón",
+    "DESCRIPTION": "Haz !D! de daño. NL Las siguientes !M! cartas que juegues este turno activarán slimeboundmod:Ordenar."
+  },
+  "Slimebound:Recollect": {
+    "NAME": "Recuperar",
+    "DESCRIPTION": "Obtén !B! de Bloqueo. NL expansioncontent:Exhuma una carta \"Lamida\" aleatoria.",
+    "UPGRADE_DESCRIPTION": "Obtén !B! de Bloqueo. NL expansioncontent:Exhuma 2 cartas \"Lamida\" aleatorias.",
+    "EXTENDED_DESCRIPTION": [
+      "No... agotada..."
+    ]
+  },
+  "Slimebound:Recycling": {
+    "NAME": "Reciclaje",
+    "DESCRIPTION": "Al inicio de tu turno, expansioncontent:Exhuma una carta \"Lamida\" aleatoria.",
+    "UPGRADE_DESCRIPTION": "Innata. NL Al inicio de tu turno, expansioncontent:Exhuma una carta \"Lamida\" aleatoria."
+  },
+  "Slimebound:RejuvenatingLick": {
+    "NAME": "Lamida Revitalizante",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba 2 veces. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Aplica !slime! slimeboundmod:Baba 2 veces. NL Roba una carta. NL Agota."
+  },
+  "Slimebound:Replication": {
+    "NAME": "Replicación",
+    "DESCRIPTION": "Elige una carta. NL Pon una copia encima de tu pila de robo. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Elige una carta. NL Obtén una copia de ella. NL Agota.",
+    "EXTENDED_DESCRIPTION": [
+      " para agregar una copia a tu mano.",
+      " para poner una copia encima de tu pila de robo."
+    ]
+  },
+  "Slimebound:Repurpose": {
+    "NAME": "Reutilizar",
+    "DESCRIPTION": "slimeboundmod:Absorber - Divídete en un slimeboundmod:Especialista aleatorio. NL Agota.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorber - Divídete en un slimeboundmod:Especialista aleatorio. NL slimeboundmod:Ordena. NL Agota."
+  },
+  "Slimebound:RollThrough": {
+    "NAME": "Rodar a Través",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL No recibes daño de las próximas !M! cartas \"Embestida\"."
+  },
+  "Slimebound:SamplingLick": {
+    "NAME": "Lamida de Prueba",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba. NL Obtén !B! de Bloqueo. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Aplica !slime! slimeboundmod:Baba. NL Obtén !B! de Bloqueo. NL Roba una carta. NL Agota."
+  },
+  "Slimebound:Schlurp": {
+    "NAME": "Schlurp",
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba. NL Obtén !M! *Lamida.",
+    "UPGRADE_DESCRIPTION": "Aplica !slime! slimeboundmod:Baba. NL Obtén !M! *Lamidas."
+  },
+  "Slimebound:SelfFormingGoo": {
+    "NAME": "Baba Reformante",
+    "DESCRIPTION": "Obtén !B! de Bloqueo. NL Coloca una carta de tu pila de descarte encima de tu pila de robo."
+  },
+  "Slimebound:ServeAndProtect": {
+    "NAME": "Servir y Proteger",
+    "DESCRIPTION": "Obtén !B! de Bloqueo y 1 de bronze:Desenfoque por cada Baba. NL slimeboundmod:Absorbelas todas. NL Agota."
+  },
+  "Slimebound:SlimeBarrage": {
+    "NAME": "¡Ataque Baboso!",
+    "DESCRIPTION": "Haz !D! de daño. slimeboundmod:Ordena a TODAS las Babas.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. slimeboundmod:Ordena a TODAS las Babas dos veces."
+  },
+  "Slimebound:SlimeBrawl": {
+    "NAME": "Pelea Babosa",
+    "DESCRIPTION": "Juega la primera carta de tu pila de robo. Repite por cada una de tus Babas invocadas. NL Agota."
+  },
+  "Slimebound:SlimeCrush": {
+    "NAME": "¡TRITURABABA!",
+    "DESCRIPTION": "Etérea. NL Haz !D! de daño. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Etérea. NL Haz !D! de daño a TODOS los enemigos. NL Agota."
+  },
+  "Slimebound:SlimeSlap": {
+    "NAME": "Bofetada Babosa",
+    "DESCRIPTION": "Haz !D! de daño. NL No elimina slimeboundmod:Baba."
+  },
+  "Slimebound:SlimeSpikes": {
+    "NAME": "Púas de Baba",
+    "DESCRIPTION": "Obtén !B! de Bloqueo y !M! de Espinas temporales."
+  },
+  "Slimebound:SlimeTap": {
+    "NAME": "Toque Baboso",
+    "DESCRIPTION": "slimeboundmod:Absorber - Obtén [E] y roba !M! cartas. NL Agota.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorber - Obtén [E] [E] y roba !M! cartas. NL Agota.",
+    "EXTENDED_DESCRIPTION": [
+      "Necesito... babas..."
+    ]
+  },
+  "Slimebound:SpikyOuterGoop": {
+    "NAME": "Armadura de Baba",
+    "DESCRIPTION": "Obtén !M! de Bloqueo cada vez que slimeboundmod:Consume."
+  },
+  "Slimebound:Split": {
+    "NAME": "Dividir",
+    "DESCRIPTION": "slimeboundmod:Divídete en una slimeboundmod:Baba_Guerrilla. NL slimeboundmod:Ordena."
+  },
+  "Slimebound:SplitAcid": {
+    "NAME": "Dividir: Guerrilla",
+    "DESCRIPTION": "slimeboundmod:Divídete en un slimeboundmod:Baba_Guerrilla. NL slimeboundmod:Ordena !M! veces.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Divídete en un slimeboundmod:Baba_Guerrilla. NL slimeboundmod:Ordena tres veces."
+  },
+  "Slimebound:SplitBruiser": {
+    "NAME": "Dividir: Bruto",
+    "DESCRIPTION": "slimeboundmod:Divídete en un slimeboundmod:Baba_Bruta. NL slimeboundmod:Ordena !M! veces.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Divídete en un slimeboundmod:Baba_Bruta. NL slimeboundmod:Ordena tres veces."
+  },
+  "Slimebound:SplitGreed": {
+    "NAME": "Revivir: Codicia",
+    "DESCRIPTION": "Conservar. NL Invoca una Baba Codiciosa. NL Agota."
+  },
+  "Slimebound:SplitLeeching": {
+    "NAME": "Dividir: Absorbente",
+    "DESCRIPTION": "slimeboundmod:Divídete en un slimeboundmod:Baba_Absorbente. NL slimeboundmod:Ordena !M! veces.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Divídete en un slimeboundmod:Baba_Absorbente. NL slimeboundmod:Ordena tres veces."
+  },
+  "Slimebound:SplitMire": {
+    "NAME": "Dividir: Lodosa",
+    "DESCRIPTION": "slimeboundmod:Divídete en un slimeboundmod:Baba_Lodosa. NL slimeboundmod:Ordena !M! veces.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Divídete en un slimeboundmod:Baba_Lodosa. NL slimeboundmod:Ordena tres veces."
+  },
+  "Slimebound:SplitScrap": {
+    "NAME": "Revivir Chatarra",
+    "DESCRIPTION": "Conservar. NL Invoca una Baba de Chatarra. NL Agota."
+  },
+  "Slimebound:SplitSpecialist": {
+    "NAME": "Dividir: Especialista",
+    "DESCRIPTION": "Elige 1 de 3 slimeboundmod:Especialistas para slimeboundmod:Dividirte. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Elige 1 de 3 slimeboundmod:Especialistas para slimeboundmod:Dividirte. NL slimeboundmod:Ordena. NL Agota."
+  },
+  "Slimebound:Strike_Slimebound": {
+    "NAME": "Golpe",
+    "DESCRIPTION": "Haz !D! de daño."
+  },
+  "Slimebound:Tackle": {
+    "NAME": "Embestida",
+    "DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño."
+  },
+  "Slimebound:TagTeam": {
+    "NAME": "Golpe Glop",
+    "DESCRIPTION": "Haz !D! de daño. NL slimeboundmod:Divídete en una Baba aleatoria. NL slimeboundmod:Ordena !M! veces.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL slimeboundmod:Divídete en una slimeboundmod:Especialista aleatoria. NL slimeboundmod:Ordena !M! veces."
+  },
+  "Slimebound:Teamwork": {
+    "NAME": "Trabajo en Equipo",
+    "DESCRIPTION": "slimeboundmod:Ordena X veces. NL Obtén !B! de Bloqueo X veces.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Ordena X+1 veces. NL Obtén !B! de Bloqueo X+1 veces."
+  },
+  "Slimebound:TongueLash": {
+    "NAME": "Latigazo de Lengua",
+    "DESCRIPTION": "Haz !D! de daño. Hace !M! de daño adicional por cada carta \"Lamer\" agotada."
+  },
+  "Slimebound:ViciousTackle": {
+    "NAME": "Embestida Viciosa",
+    "DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. Hace el doble del bono de daño de slimeboundmod:Baba.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. Hace el doble del bono de daño Y curación de slimeboundmod:Baba."
+  },
+  "Slimebound:WasteNot": {
+    "NAME": "Nada se Desperdicia",
+    "DESCRIPTION": "expansioncontent:Exhuma todas las cartas \"Lamer\". NL Agota.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Exhuma todas las cartas \"Lamer\".",
+    "EXTENDED_DESCRIPTION": [
+      "No... están agotadas..."
+    ]
+  }
+
+}
