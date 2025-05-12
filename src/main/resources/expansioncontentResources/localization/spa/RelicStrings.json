@@ -1,0 +1,9 @@
+{
+  "expansioncontent:StudyCardRelic": {
+    "NAME": "Pequeño Sombrero Hongo",
+    "FLAVOR": "Quien controle el sombrero, controla la Aguja.",
+    "DESCRIPTIONS": [
+      "Al inicio del combate, agrega una carta #yEstudiar #yla #yAguja a tu mano. Cuesta #b0 [REMOVE_SPACE]."
+    ]
+  }
+}
