@@ -1,0 +1,25 @@
+{
+  "Guardian:EmptyStasisSlot": {
+    "NAME": "Ranura de Estasis",
+    "DESCRIPTION": [
+      "Las cartas pueden colocarse en esta ranura mediante #yEstasis [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:StasisOrb": {
+    "NAME": "Estasis: ",
+    "DESCRIPTION": [
+      " regresará a tu mano a coste 0 al inicio de tu próximo turno.",
+      " regresará a tu mano a coste 0 en #b",
+      " turnos.",
+      " se #yAgotará al inicio de tu próximo turno.",
+      " se #yAgotará en #b",
+      " turnos."
+    ]
+  }
+}
+
+
+
+
+
+

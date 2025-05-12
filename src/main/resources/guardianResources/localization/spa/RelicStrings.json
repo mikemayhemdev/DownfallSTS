@@ -1,0 +1,135 @@
+{
+  "Guardian:ModeShifter": {
+    "NAME": "Engranaje de Bronce",
+    "FLAVOR": "Protección donde más la necesitas.",
+    "DESCRIPTIONS": [
+      "Al inicio de cada combate, obtén #yOptimizar [REMOVE_SPACE]. NL El Guardian comienza la partida con una #yGema común aleatoria [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:ModeShifterPlus": {
+    "NAME": "Engranaje del Guardián",
+    "FLAVOR": "Reemplazar cada 3,000 pisos.",
+    "DESCRIPTIONS": [
+      "Reemplaza ",
+      " [REMOVE_SPACE].[] NL Al inicio del combate, obtén #yOptimizar [REMOVE_SPACE]. NL Cada vez que entres en #yModo #yDefensivo, obtén [E] y roba #b2 cartas."
+    ]
+  },
+  "Guardian:ObsidianScales": {
+    "NAME": "Escamas de Obsidiana",
+    "FLAVOR": "Mancha el cielo con tu sangre. Represalia contra todos los que te han atacado.",
+    "DESCRIPTIONS": [
+      "Al inicio del combate, obtén #b3 de #yEspinas [REMOVE_SPACE]. Cada vez que recibas una desventaja o se te aplique uno, obtén #b1 de #yEspinas [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:DefensiveModeMoreBlock": {
+    "NAME": "Coraza Noble de Baalor",
+    "FLAVOR": "Nunca hay suficiente armadura.",
+    "DESCRIPTIONS": [
+      "Cada vez que #yEnsambles, #yEnsambla 1 adicional."
+    ]
+  },
+  "Guardian:guardianmod:GemCopier":  {
+    "NAME": "Tambor de Gemas",
+    "FLAVOR": "Solo lo más puro es suficiente.",
+    "DESCRIPTIONS": [
+      "Cuando juegues una carta #yGema, juega una copia de ella."
+    ]
+  },
+  "Guardian:PocketSentry": {
+    "NAME": "Centinela de Bolsillo de Arumba",
+    "FLAVOR": "Modo Centinela activado. Objetivo adquirido. Nada personal.",
+    "DESCRIPTIONS": [
+      "Cada 3 turnos, aplica #b1 de #yDébil a TODOS los enemigos."
+    ]
+  },
+  "Guardian:SackOfGems": {
+    "NAME": "Saco de Gemas",
+    "FLAVOR": "¡Ooh... brillante!",
+    "DESCRIPTIONS": [
+      "Al obtenerla, puedes elegir hasta #b5 #yGemas aleatorias para añadir a tu mazo."
+    ]
+  },
+  "Guardian:StasisCodex": {
+    "NAME": "Códice del Piloto",
+    "FLAVOR": "Diseños y esquemas de los primeros prototipos manuales de la Aguja, por el Maestro Piloto David.",
+    "DESCRIPTIONS": [
+      "Al final de tus primeros 3 turnos, si tus ranuras de #yEstasis no están llenas, elige #b1 de #b3 cartas para colocar en #yEstasis [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:StasisSlotIncreaseRelic": {
+    "NAME": "Pequeña Caja Policial",
+    "FLAVOR": "Es más grande por dentro...",
+    "DESCRIPTIONS": [
+      "Comienza cada combate con #b2 ranuras de Estasis adicionales."
+    ]
+  },
+  "Guardian:StasisSlotReductionRelic": {
+    "NAME": "Drones Exploradores",
+    "FLAVOR": "Estos drones encuentran el mejor chatarreo, pero requieren potencia para mantenerse.",
+    "DESCRIPTIONS": [
+      "Al inicio de cada combate, pierdes #b1 ranura de Estasis. NL Al inicio de tu turno, obtén [E]."
+    ]
+  },
+  "Guardian:StasisUpgradeRelic": {
+    "NAME": "Cámara Criogénica",
+    "FLAVOR": "Todo parece mejor al salir que al entrar.",
+    "DESCRIPTIONS": [
+      "Al inicio de cada combate, gana #b1 ranura de Estasis. Cada vez que una carta entre en #yEstasis [REMOVE_SPACE], #yMejórela."
+    ]
+  },
+  "Guardian:BottledStasis": {
+    "NAME": "Agujero Negro Embotellado",
+    "FLAVOR": "En algún lugar, algo increíble espera ser descubierto.",
+    "DESCRIPTIONS": [
+      "Al obtenerla, elige una carta. Comienza cada combate con esta carta en #yEstasis [REMOVE_SPACE].",
+      "Elige una carta para ",
+      "Comienza cada combate con ",
+      " en #yEstasis [REMOVE_SPACE].",
+      "La carta embotellada ha sido #reliminada de tu mazo, el efecto de la reliquia ya no funciona."
+    ]
+  },
+  "Guardian:StasisEgg": {
+    "NAME": "Cámara Cuántica",
+    "FLAVOR": "Obtienes el pollo incubando el huevo, no rompiéndolo.",
+    "DESCRIPTIONS": [
+      "Al obtenerla, elige una carta. Comienza cada combate con esta carta removida de tu mazo. Al inicio de tu turno #b4, vuelve a tu mano con #b2 copias.",
+      "Elige una carta para ",
+      "Comienza cada combate con ",
+      " removida de tu mazo. Al inicio del turno #b4, vuelve a tu mano con #b2 copias."
+    ]
+  },
+  "Guardian:TickHelperRelic": {
+    "NAME": "Fluido Refrigerante",
+    "FLAVOR": "Peligroso. No ingerir.",
+    "DESCRIPTIONS": [
+      "Comienza cada combate con #b2 ranuras de Estasis adicionales. NL Cuando una carta entre en #yEstasis, incrementa su contador de turnos en #b2."
+    ]
+  },
+  "Guardian:PickAxe": {
+    "NAME": "Pico de Rapsodia",
+    "FLAVOR": "Con tantas gemas que hay por toda la Aguja, es difícil imaginar a alguien tan desafortunado como para necesitar este pico.",
+    "DESCRIPTIONS": [
+      "Ahora puedes #gExcavar para obtener #b2 #yGemas en las zonas de descanso. Puedes elegir añadirlas a tu mazo (hasta #b3 veces)."
+    ]
+  },
+  "Guardian:GemstoneGun": {
+    "NAME": "Cañón de Gemas",
+    "FLAVOR": "¡Bang! ¡Bang! ¡Bang! ¡Eh, hice combinación de tres!",
+    "DESCRIPTIONS": [
+      "Al obtenerla, elige #b3 #yGemas. Al inicio de cada combate, obtén una carta con #yRetiene, #yAgota, y esas #yGemas incrustadas.",
+      "Elige una Gema para cargar el Cañón de Gemas."
+    ]
+  },
+  "Guardian:BottledAnomaly": {
+    "NAME": "Anomalía Embotellada",
+    "FLAVOR": "Girando y girando... y finalmente quebrándose.",
+    "DESCRIPTIONS": [
+      "Al obtenerla, elige una carta. Al inicio de cada combate, remuévela de tu pila de robo. Al inicio del turno #b3 [REMOVE_SPACE], añádela a tu mano. Cuesta #b0 ese turno.",
+      "Elige una carta para ",
+      "Comienza cada combate con ",
+      " removida de tu mazo. Al inicio del turno #b3, añádela a tu mano. NL Cuesta #b0 ese turno.",
+      "La carta embotellada ha sido #reliminada de tu mazo, el efecto de la reliquia ya no funciona."
+    ]
+  }
+}
+
