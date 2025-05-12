@@ -32,6 +32,7 @@ public class StanceDanceCrown extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
         tags.add(ChampMod.OPENERNOTIN);
         loadJokeCardImage(this, "StanceDance.png");
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
