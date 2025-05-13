@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.Iterator;
 
+@Deprecated
 public class DrawEtherealAction extends AbstractGameAction{
 
     public AbstractPlayer p;
