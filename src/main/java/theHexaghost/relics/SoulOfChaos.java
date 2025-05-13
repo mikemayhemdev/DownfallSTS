@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
+import theHexaghost.actions.RandomFlameAction;
 import theHexaghost.actions.RandomizeFlameAction;
-import theHexaghost.cards.RandomFlameAction;
 
 import theHexaghost.ghostflames.*;
 import downfall.util.TextureLoader;
