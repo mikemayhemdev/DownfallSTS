@@ -46,7 +46,7 @@ public class StrengthBooster extends CustomRelic {
         if (amount > 0) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            vigor(amount * AMOUNT);
+            vigor(AMOUNT);
         }
     }
 

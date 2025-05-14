@@ -102,7 +102,7 @@
     "FLAVOR": "But what if we had MORE?",
     "DESCRIPTIONS": [
       "Whenever you gain #yStrength, gain #b",
-      " #yVigor for each point gained."
+      " #yVigor [REMOVE_SPACE]."
     ]
   }
 }
