@@ -26,7 +26,7 @@
     "NAME": "Hexx Bomb",
     "FLAVOR": "3... 2...",
     "DESCRIPTIONS": [
-      "At the start of combat and whenever you activate #yawakened:Ultimate #yawakened:Hex, apply #b",
+      "Whenever you activate #yawakened:Ultimate #yawakened:Hex, apply #b",
       " #yawakened:Hex to a random enemy."
     ]
   },

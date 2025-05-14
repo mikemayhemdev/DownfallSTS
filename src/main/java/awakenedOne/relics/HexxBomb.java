@@ -40,10 +40,10 @@ public class HexxBomb extends CustomRelic{
     }
 
 
-    @Override
-    public void atBattleStart() {
-        onTrigger();
-    }
+//    @Override
+//    public void atBattleStart() {
+//        onTrigger();
+//    }
 
     @Override
     public void onTrigger() {
