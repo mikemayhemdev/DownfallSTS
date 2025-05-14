@@ -16,7 +16,6 @@ public class Ceremony extends AbstractAwakenedCard {
 
     public Ceremony() {
         super(ID, 0, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         selfRetain = true;
