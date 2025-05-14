@@ -24,9 +24,10 @@
   },
   "awakened:HexxBomb": {
     "NAME": "Hexx Bomb",
-    "FLAVOR": "",
+    "FLAVOR": "3... 2...",
     "DESCRIPTIONS": [
-      "NOT USED"
+      "At the start of combat and whenever you activate #yawakened:Ultimate #yawakened:Hex, apply #b",
+      " #yawakened:Hex to a random enemy."
     ]
   },
   "awakened:TomeOfPortalmancy": {
@@ -64,7 +65,7 @@
     "FLAVOR": "Focus.",
     "DESCRIPTIONS": [
       "At the start of combat, gain #b",
-      " #yStrength [REMOVE_SPACE]. Whenever you take unblocked attack damage, lose that #yStrength for the rest of combat."
+      " #yStrength [REMOVE_SPACE]. After losing any type of HP, lose that #yStrength for the rest of combat."
     ]
   },
   "awakened:VioletPlumage": {

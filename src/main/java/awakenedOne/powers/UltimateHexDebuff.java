@@ -1,9 +1,9 @@
 package awakenedOne.powers;
 
+import awakenedOne.relics.HexxBomb;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import sneckomod.powers.ToxicPersonalityPower;
-import sneckomod.powers.VenomDebuff;
 
 public class UltimateHexDebuff extends AbstractAwakenedPower implements HealthBarRenderPower, OnReceivePowerPower {
     // intellij stuff buff
@@ -52,6 +50,10 @@ public class UltimateHexDebuff extends AbstractAwakenedPower implements HealthBa
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if (0 >= this.amount) {
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+            //Hexx Bomb trigger
+            if(AbstractDungeon.player.hasRelic(HexxBomb.ID)) {
+                AbstractDungeon.player.getRelic(HexxBomb.ID).onTrigger();
+            }
         }
     }
 
