@@ -1,6 +1,7 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.actions.DelayedCurseAction;
 import awakenedOne.cards.tokens.Ceremony;
 import awakenedOne.powers.UltimateHexDebuff;
 import awakenedOne.util.TexLoader;
@@ -36,7 +37,7 @@ public class HexxBomb extends CustomRelic{
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("HexxBomb.png"));
 
     public HexxBomb() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
 
@@ -49,10 +50,9 @@ public class HexxBomb extends CustomRelic{
     public void onTrigger() {
         super.onTrigger();
         this.flash();
+        //this.addToBot(new DelayedCurseAction);
         AbstractMonster mo = AbstractDungeon.getRandomMonster();
-        if (!mo.hasPower(UltimateHexDebuff.POWER_ID)) {
-            HexCurse(AMOUNT, mo, AbstractDungeon.player);
-        }
+        HexCurse(AMOUNT, mo, AbstractDungeon.player);
         this.addToBot(new VFXAction(new GiantEyeEffect(mo.hb.cX, mo.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
         this.addToTop(new RelicAboveCreatureAction(mo, this));
     }

@@ -197,16 +197,16 @@ public class AwakenedOneMod implements
         BaseMod.addRelicToCustomPool(new EyeOfTheOccult(), AwakenedOneChar.Enums.AWAKENED_BLUE); //rare
         BaseMod.addRelicToCustomPool(new ZenerDeck(), AwakenedOneChar.Enums.AWAKENED_BLUE); //uncommon
         BaseMod.addRelicToCustomPool(new AbyssBlade(), AwakenedOneChar.Enums.AWAKENED_BLUE); //boss energy lose [e] refund
-        //shop
-        BaseMod.addRelicToCustomPool(new DeadBird(), AwakenedOneChar.Enums.AWAKENED_BLUE);
-        BaseMod.addRelicToCustomPool(new HexxBomb(), AwakenedOneChar.Enums.AWAKENED_BLUE);
+        //uncommon
+        BaseMod.addRelicToCustomPool(new DeadBird(), AwakenedOneChar.Enums.AWAKENED_BLUE); //rare
+        BaseMod.addRelicToCustomPool(new HexxBomb(), AwakenedOneChar.Enums.AWAKENED_BLUE); //shop
 
 
         //shared relics
         BaseMod.addRelic(new CawingCask(), RelicType.SHARED); //rare shared
         BaseMod.addRelic(new VioletPlumage(), RelicType.SHARED); //shop shared
         BaseMod.addRelic(new ShardOfNowak(), RelicType.SHARED); //uncommon shared
-        //common shared
+        BaseMod.addRelic(new MiniBlackHole(), RelicType.SHARED);//common shared
     }
 
 
@@ -235,9 +235,9 @@ public class AwakenedOneMod implements
     //source of the Hex/ This tells me if it's Hex made by the creature whenever you play a non-Attack card,
     //or if it's the player directly applying Hex. This is helpful for mostly Snecko relevant things.
     public static void HexCurse(int begone, AbstractCreature m, AbstractCreature source) {
-        if (!(m.hasPower(UltimateHexDebuff.POWER_ID))) {
+        //if (!(m.hasPower(UltimateHexDebuff.POWER_ID))) {
             atb(new ApplyPowerAction(m, source, new EnemyHexedPower(m, begone), begone));
-        }
+       // }
     }
 
 

@@ -2,6 +2,7 @@ package downfall.events;
 
 
 import automaton.AutomatonChar;
+import awakenedOne.AwakenedOneChar;
 import basemod.ReflectionHacks;
 import champ.ChampChar;
 import collector.CollectorChar;
@@ -19,6 +20,7 @@ import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.beyond.AwakenedOne;
 import com.megacrit.cardcrawl.monsters.city.BronzeAutomaton;
 import com.megacrit.cardcrawl.monsters.city.Champ;
 import com.megacrit.cardcrawl.monsters.city.GremlinLeader;
@@ -147,6 +149,13 @@ public class MindBloom_Evil extends AbstractImageEvent {
                             m.maxHealth = Math.round(m.maxHealth * .6F);
                             m.currentHealth = m.maxHealth;
                             m.powers.add(new StrengthPower(m, -3));
+                            AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
+                        }
+                        else if (AbstractDungeon.player instanceof AwakenedOneChar) {
+                            AbstractMonster m = new AwakenedOne(0,0);
+                            m.maxHealth = Math.round(m.maxHealth * .6F);
+                            m.currentHealth = m.maxHealth;
+                            m.powers.add(new StrengthPower(m, -4));
                             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
                         } else {
                             ArrayList<String> list = new ArrayList();

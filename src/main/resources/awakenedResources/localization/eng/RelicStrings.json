@@ -26,7 +26,7 @@
     "NAME": "Hexx Bomb",
     "FLAVOR": "3... 2...",
     "DESCRIPTIONS": [
-      "Whenever you activate #yawakened:Ultimate #yawakened:Hex, apply #b",
+      "Whenever you activate #yawakened:Ultimate #yawakened:Hex [REMOVE_SPACE], apply #b",
       " #yawakened:Hex to a random enemy."
     ]
   },
@@ -46,7 +46,7 @@
     ]
   },
   "awakened:DeadBird": {
-    "NAME": "Corvid Sprit",
+    "NAME": "Corvid Spirit",
     "FLAVOR": "This spectre closely follows behind the damned and cursed.",
     "DESCRIPTIONS": [
       "At the end of your turn, deal #b",
@@ -88,6 +88,13 @@
     "DESCRIPTIONS": [
       "Whenever you use a potion, gain #b",
       " #yRitual [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:MiniBlackHole": {
+    "NAME": "Alethea",
+    "FLAVOR": "From the abyss.",
+    "DESCRIPTIONS": [
+      "If you do not play any #yPower cards during your turn, draw an additional card next turn."
     ]
   }
 }

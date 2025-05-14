@@ -25,6 +25,8 @@ public class FightingForDummies extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
+    //Dolphin's Style Guide
+
     @Override
     public void onPlayerEndTurn() {
         if (AbstractDungeon.player.stance instanceof NeutralStance){
