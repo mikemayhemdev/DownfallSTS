@@ -579,7 +579,7 @@
   },
   "bronze:DecaBeam": {
     "NAME": "Protoescudo",
-    "DESCRIPTION": "Gana !B! de Bloqueo. NL bronze:Compilar - Gana !M! expansioncontent:Armadura *Reforzada y bronze:Inserta !bauto! *Desorientado.",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL bronze:Compilar - Gana !M! Armadura de expansioncontent:Placas e bronze:Inserta !bauto! *Desorientado.",
     "EXTENDED_DESCRIPTION": [
       "afilado",
       "Barrera"
