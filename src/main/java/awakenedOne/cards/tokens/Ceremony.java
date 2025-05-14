@@ -32,6 +32,6 @@ public class Ceremony extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(0);
+        upgradeMagicNumber(1);
     }
 }
