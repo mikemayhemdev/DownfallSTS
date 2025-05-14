@@ -42,8 +42,6 @@ public class ChampionCrownUpgraded extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
-    //todo: rework this relic
-
     //# of cards drawn
     private static final int AMOUNT = 2;
 

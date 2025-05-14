@@ -39,8 +39,9 @@ public class StrengthBooster extends CustomRelic {
 
     //Hyperdrive
 
-    private static final int AMOUNT = 3;
+    private static final int AMOUNT = 4;
 
+    //Look at ApplyPowerPatch
     public void onTrigger(int amount) {
         if (amount > 0) {
             this.flash();
