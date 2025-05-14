@@ -105,7 +105,7 @@
     "NAME": "Trabajo en Equipo",
     "FLAVOR": "El trabajo en equipo convierte los sueños en realidad.",
     "DESCRIPTIONS": [
-      "Cada vez que robes #yTag #yTeam [REMOVE_SPACE], roba otra carta. NL Al obtenerla, añade dos copias de #yTag #yTeam a tu mazo."
+      "Cada vez que robes #yRelevo [REMOVE_SPACE], roba otra carta. NL Al obtenerla, añade dos copias de #yRelevo a tu mazo."
     ]
   },
   "Gremlin:WizardHat": {
