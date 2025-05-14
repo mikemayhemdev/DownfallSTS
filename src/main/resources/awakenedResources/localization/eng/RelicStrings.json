@@ -44,11 +44,12 @@
       "Spells hit ALL enemies."
     ]
   },
-  "awakened:BirdFacedTapestry": {
-    "NAME": "",
-    "FLAVOR": "",
+  "awakened:DeadBird": {
+    "NAME": "Corvid Sprit",
+    "FLAVOR": "This spectre closely follows behind the damned and cursed.",
     "DESCRIPTIONS": [
-      ""
+      "At the end of your turn, deal #b",
+      " damage to the lowest HP enemy, increased by #yStrength [REMOVE_SPACE]."
     ]
   },
   "awakened:AbyssBlade": {

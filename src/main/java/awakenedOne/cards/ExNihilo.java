@@ -23,12 +23,9 @@ public class ExNihilo extends AbstractAwakenedCard {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.exhaust = true;
-        atb(new DrawCardAction(p, this.magicNumber));
 
         if (this.chant) {
             chant();
@@ -44,7 +41,7 @@ public class ExNihilo extends AbstractAwakenedCard {
 
     @Override
     public void chant() {
-        applyToSelfTop(new AddCopyNextTurnPower(this));
+        atb(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
         checkOnChant();
     }
 
@@ -57,10 +54,10 @@ public class ExNihilo extends AbstractAwakenedCard {
             this.chant = true;
     }
 
-    @Override
-    public void onMoveToDiscard() {
-        this.chant = false;
-    }
+//    @Override
+//    public void onMoveToDiscard() {
+//        this.chant = false;
+//    }
 
     public void triggerOnGlowCheck() {
         this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;

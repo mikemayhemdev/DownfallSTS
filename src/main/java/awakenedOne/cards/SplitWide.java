@@ -27,21 +27,6 @@ public class SplitWide extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int i;
-        if (Settings.FAST_MODE) {
-            this.addToTop(new VFXAction(new ViolentAttackEffect(m.hb.cX, m.hb.cY, Color.RED)));
-
-            for(i = 0; i < 5; ++i) {
-                this.addToTop(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY)));
-            }
-        } else {
-            this.addToTop(new VFXAction(new ViolentAttackEffect(m.hb.cX, m.hb.cY, Color.RED), 0.4F));
-
-            for(i = 0; i < 5; ++i) {
-                this.addToTop(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY)));
-            }
-        }
-
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         this.addToBot(new ApplyPowerAction(m, p, new StrengthReturnPower(m, this.magicNumber), this.magicNumber));
     }

@@ -198,7 +198,7 @@ public class AwakenedOneMod implements
         BaseMod.addRelicToCustomPool(new ZenerDeck(), AwakenedOneChar.Enums.AWAKENED_BLUE); //uncommon
         BaseMod.addRelicToCustomPool(new AbyssBlade(), AwakenedOneChar.Enums.AWAKENED_BLUE); //boss energy lose [e] refund
         //shop
-        //rare 2
+        BaseMod.addRelicToCustomPool(new DeadBird(), AwakenedOneChar.Enums.AWAKENED_BLUE);
         //common/uncommon 2
 
 

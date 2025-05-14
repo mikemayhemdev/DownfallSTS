@@ -20,15 +20,10 @@ public class MagicStrike extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        if (!upgraded) {
             atb(new ConjureAction(false));
-        }
-
-        if (upgraded) {
-            atb(new ConjureAction(true));
-        }
     }
 
     public void upp() {
+        upgradeDamage(3);
     }
 }

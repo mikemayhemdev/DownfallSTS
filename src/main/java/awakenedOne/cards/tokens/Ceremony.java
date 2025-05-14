@@ -15,9 +15,9 @@ public class Ceremony extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, special, 3, 2, , , ,
 
     public Ceremony() {
-        super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 0, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
 
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         selfRetain = true;
         this.baseSecondMagic = 2;
@@ -27,11 +27,11 @@ public class Ceremony extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new VFXAction(p, new InflameEffect(p), .1F));
         this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        //applyToSelf(new StrengthOverTurnsPower(this.secondMagic, this.magicNumber));
+       // applyToSelf(new StrengthOverTurnsPower(1, this.magicNumber));
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(0);
     }
 }

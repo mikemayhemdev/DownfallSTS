@@ -24,23 +24,11 @@ public class Pluck extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        if (!upgraded)
         atb(new DrawCardAction(p, this.magicNumber));
-
-        if (upgraded) {
-            atb(new DrawCardAction(magicNumber, new AbstractGameAction() {
-                @Override
-                public void update() {
-                    for (AbstractCard c: DrawCardAction.drawnCards)
-                        att(new UpgradeSpecificCardAction(c));
-                    isDone = true;
-                }
-            }));
-        }
-
     }
 
     @Override
     public void upp() {
+        upgradeMagicNumber(1);
     }
 }

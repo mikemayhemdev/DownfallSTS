@@ -65,10 +65,10 @@ public class ClarionCall extends AbstractAwakenedCard {
             this.chant = true;
     }
 
-    @Override
-    public void onMoveToDiscard() {
-        this.chant = false;
-    }
+//    @Override
+//    public void onMoveToDiscard() {
+//        this.chant = false;
+//    }
 
     public void triggerOnGlowCheck() {
         this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
