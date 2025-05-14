@@ -6,6 +6,10 @@ import automaton.relics.BronzeIdol;
 import automaton.relics.DecasWashers;
 import automaton.relics.DonusWashers;
 import automaton.relics.MakeshiftBattery;
+import awakenedOne.relics.CawingCask;
+import awakenedOne.relics.MiniBlackHole;
+import awakenedOne.relics.ShardOfNowak;
+import awakenedOne.relics.VioletPlumage;
 import champ.ChampChar;
 import champ.relics.Barbells;
 import champ.relics.DeflectingBracers;
@@ -234,7 +238,7 @@ public class BanSharedContentPatch {
 
         public static void Prefix(AbstractDungeon __instance) {
             if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_relics) {
-                //TODO: last checked in 5.12 ver in 2024.2.23 by Mwalls
+                //last checked during awakened one dev, 5/14/25
                 AbstractDungeon.relicsToRemoveOnStart.add(AutoCurser.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Bagpipes.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Barbells.ID);
@@ -252,7 +256,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(ForbiddenFruit.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(FuelCanister.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(GemstoneGun.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(ImpeccablePecs.ID);
+                //AbstractDungeon.relicsToRemoveOnStart.add(ImpeccablePecs.ID); impeccable pecs moved to gremlins exclusive
                 AbstractDungeon.relicsToRemoveOnStart.add(Incense.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(MakeshiftBattery.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(PocketSentry.ID);
@@ -266,6 +270,11 @@ public class BanSharedContentPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(SneckoTalon.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Sixitude.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(SupplyScroll.ID);
+
+                AbstractDungeon.relicsToRemoveOnStart.add(CawingCask.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(VioletPlumage.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(ShardOfNowak.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(MiniBlackHole.ID);
 
             }
         }

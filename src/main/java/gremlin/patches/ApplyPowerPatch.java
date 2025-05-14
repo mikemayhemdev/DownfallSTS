@@ -1,5 +1,6 @@
 package gremlin.patches;
 
+import awakenedOne.relics.StrengthBooster;
 import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -31,6 +32,14 @@ public class ApplyPowerPatch {
                 ((ImpeccablePecs)(AbstractDungeon.player.getRelic(ImpeccablePecs.ID))).onTrigger(powerToApply.amount);
             }
         }
+
+        if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
+            AbstractPower powerToApply = ReflectionHacks.getPrivate(__instance, ApplyPowerAction.class, "powerToApply");
+            if (__instance.target != null && __instance.target.isPlayer && powerToApply.ID.equals(StrengthPower.POWER_ID)) {
+                ((ImpeccablePecs)(AbstractDungeon.player.getRelic(StrengthBooster.ID))).onTrigger(powerToApply.amount);
+            }
+        }
+
     }
 
     public static class Locator extends SpireInsertLocator {

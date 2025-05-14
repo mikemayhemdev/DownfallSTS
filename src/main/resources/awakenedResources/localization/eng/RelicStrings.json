@@ -96,5 +96,13 @@
     "DESCRIPTIONS": [
       "If you do not play any #yPower cards during your turn, draw an additional card next turn."
     ]
+  },
+  "awakened:StrengthBooster": {
+    "NAME": "Hyperdrive",
+    "FLAVOR": "But what if we had MORE?",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yStrength, gain #b",
+      " #yVigor for each point gained."
+    ]
   }
 }
