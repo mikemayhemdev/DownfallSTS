@@ -6,6 +6,7 @@ import automaton.powers.CleanCodePower;
 import automaton.powers.FreeFunctionPower;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.SerpentIdolPowerAction;
+import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import champ.actions.DiscoverOpenerAction;
 import champ.potions.OpenerPotion;
@@ -17,11 +18,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.powers.CuriosityPower;
 import com.megacrit.cardcrawl.vfx.combat.LightBulbEffect;
 import expansioncontent.actions.DiscoverBossAction;
 import expansioncontent.potions.BossPotion;
+import sneckomod.SneckoMod;
 import sneckomod.actions.SerpentIdolAction;
 
 import static awakenedOne.util.Wiz.atb;
@@ -50,6 +53,7 @@ public class SneckoPowersPotion extends CustomPotion {
         }
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(SneckoMod.makeID("offclass"))), BaseMod.getKeywordDescription(SneckoMod.makeID("offclass"))));
     }
 
     public void use(AbstractCreature target) {
