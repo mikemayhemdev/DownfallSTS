@@ -35,7 +35,7 @@ public class SneckoPowersPotion extends CustomPotion {
 
 
     public SneckoPowersPotion() {
-        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.SNECKO, PotionColor.SNECKO);
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.SNECKO, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = AwakenedOneMod.potionLabColor;

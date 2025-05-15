@@ -16,8 +16,8 @@
   "awakened:SneckoPowersPotion": {
     "NAME": "Snecko Essence",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b3 random #ysneckomod:Offclass #Power cards to add to your hand, it costs #b0 this turn.",
-      "Choose #b1 of #b3 random #ysneckomod:Offclass #Power cards and add #b",
+      "Choose #b1 of #b3 random #yOffclass #yPower cards to add to your hand, it costs #b0 this turn.",
+      "Choose #b1 of #b3 random #yOffclass #yPower cards and add #b",
       " copies to your hand, they cost #b0 this turn."
     ]
   }
