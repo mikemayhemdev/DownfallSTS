@@ -5,6 +5,7 @@ import automaton.AutomatonMod;
 import automaton.powers.CleanCodePower;
 import automaton.powers.FreeFunctionPower;
 import awakenedOne.AwakenedOneMod;
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomPotion;
 import champ.actions.DiscoverOpenerAction;
 import champ.potions.OpenerPotion;
@@ -17,8 +18,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.CuriosityPower;
 import com.megacrit.cardcrawl.vfx.combat.LightBulbEffect;
+import hermit.util.TextureLoader;
 
 
 public class CultistsDelight extends CustomPotion {
@@ -28,7 +31,13 @@ public class CultistsDelight extends CustomPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public CultistsDelight() {
-        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.HEART, PotionColor.ANCIENT);
+        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.FAIRY, PotionColor.ANCIENT);
+        ReflectionHacks.setPrivate(this, AbstractPotion.class, "containerImg", TextureLoader.getTexture("hermitResources/images/potion/potion_eclipse_glass.png"));
+        ReflectionHacks.setPrivate(this, AbstractPotion.class, "liquidImg", TextureLoader.getTexture("hermitResources/images/potion/potion_eclipse_liquid.png"));
+        ReflectionHacks.setPrivate(this, AbstractPotion.class, "hybridImg", TextureLoader.getTexture("hermitResources/images/potion/potion_eclipse_hybrid.png"));
+        ReflectionHacks.setPrivate(this, AbstractPotion.class, "spotsImg", TextureLoader.getTexture("hermitResources/images/potion/potion_eclipse_spots.png"));
+        ReflectionHacks.setPrivate(this, AbstractPotion.class, "outlineImg", TextureLoader.getTexture("hermitResources/images/potion/potion_eclipse_outline.png"));
+
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = AwakenedOneMod.potionLabColor;
