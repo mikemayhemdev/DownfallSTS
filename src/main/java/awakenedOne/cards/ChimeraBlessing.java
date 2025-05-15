@@ -19,7 +19,7 @@ public class ChimeraBlessing extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SerpentIdolPowerAction());
+        atb(new SerpentIdolPowerAction(1));
     }
 
     public void upp() {

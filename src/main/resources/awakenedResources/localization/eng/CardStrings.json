@@ -379,7 +379,7 @@
   "awakened:Victuals": {
     "NAME": "Victuals",
     "DESCRIPTION": "Lose !M! HP. NL Gain [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Don't lose HP.",
-    "UPGRADE_DESCRIPTION": "Lose !M! HP. NL Gain [E] [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Don't lose HP."
+    "UPGRADE_DESCRIPTION": "Lose !M! HP. NL Gain [E] [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Heal !M! HP instead."
   },
   "awakened:TheTower": {
     "NAME": "The Tower",

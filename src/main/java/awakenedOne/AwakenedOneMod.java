@@ -1,13 +1,16 @@
 package awakenedOne;
 
+import automaton.AutomatonMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.cards.cardvars.SecondDamage;
 import awakenedOne.cards.cardvars.SecondMagicNumber;
 import awakenedOne.cards.cardvars.ThirdMagicNumber;
 import awakenedOne.patches.OnLoseEnergyPowerPatch;
+import awakenedOne.potions.CultistsDelight;
+import awakenedOne.potions.SacramentalWine;
+import awakenedOne.potions.SneckoPowersPotion;
 import awakenedOne.powers.EnemyHexedPower;
-import awakenedOne.powers.UltimateHexDebuff;
 import awakenedOne.relics.*;
 import awakenedOne.ui.AwakenedIcon;
 import awakenedOne.ui.OrbitingSpells;
@@ -15,6 +18,8 @@ import awakenedOne.util.CardFilter;
 import awakenedOne.util.Wiz;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
+import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
@@ -22,22 +27,35 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
+import com.megacrit.cardcrawl.events.exordium.Sssserpent;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.downfallMod;
+import downfall.events.Serpent_Evil;
 import downfall.util.CardIgnore;
-import hermit.relics.BrassTacks;
+import downfall.util.TextureLoader;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import sneckomod.OffclassHelper;
+import sneckomod.SneckoMod;
+import sneckomod.TheSnecko;
+import sneckomod.cards.unknowns.AbstractUnknownCard;
+import sneckomod.events.BackToBasicsSnecko;
+import sneckomod.events.D8;
+import sneckomod.events.Serpent_Snecko;
+import sneckomod.events.SuspiciousHouse;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -45,8 +63,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import static awakenedOne.util.Wiz.applyToEnemy;
 import static awakenedOne.util.Wiz.atb;
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -54,9 +72,12 @@ public class AwakenedOneMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
         EditCharactersSubscriber,
+        PostInitializeSubscriber,
         OnStartBattleSubscriber,
         StartGameSubscriber,
         PostDungeonUpdateSubscriber, PostPlayerUpdateSubscriber {
+
+
     public static final String SHOULDER1 = "awakenedResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "awakenedResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "awakenedResources/images/char/mainChar/corpse.png";
@@ -86,6 +107,10 @@ public class AwakenedOneMod implements
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
                 CARD_ENERGY_L, TEXT_ENERGY);
+    }
+
+
+    public void receivePostInitialize() {
     }
 
 
@@ -185,6 +210,7 @@ public class AwakenedOneMod implements
     @Override
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new AwakenedOneChar("The Awakened One", AwakenedOneChar.Enums.AWAKENED_ONE), CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, AwakenedOneChar.Enums.AWAKENED_ONE);
+        addPotions();
     }
 
     @Override
@@ -207,6 +233,20 @@ public class AwakenedOneMod implements
         BaseMod.addRelic(new VioletPlumage(), RelicType.SHARED); //shop shared
         BaseMod.addRelic(new ShardOfNowak(), RelicType.SHARED); //uncommon shared
         BaseMod.addRelic(new MiniBlackHole(), RelicType.SHARED);//common shared
+    }
+
+    public void addPotions() {
+        BaseMod.addPotion(CultistsDelight.class, Color.BLUE, Color.YELLOW, Color.NAVY, CultistsDelight.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
+        BaseMod.addPotion(SacramentalWine.class, Color.PURPLE, Color.VIOLET, Color.CHARTREUSE, SacramentalWine.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
+        BaseMod.addPotion(SneckoPowersPotion.class, Color.YELLOW, Color.CYAN, Color.WHITE, CultistsDelight.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
+
+
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(CultistsDelight.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(SacramentalWine.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(SneckoPowersPotion.POTION_ID);
+        }
     }
 
 

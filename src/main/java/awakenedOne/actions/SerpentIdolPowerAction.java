@@ -16,10 +16,12 @@ import java.util.ArrayList;
 
 public class SerpentIdolPowerAction extends AbstractGameAction {
     private boolean retrieveCard = false;
+    private int count;
 
-    public SerpentIdolPowerAction() {
+    public SerpentIdolPowerAction(int count) {
         this.actionType = ActionType.CARD_MANIPULATION;// 19
         this.duration = Settings.ACTION_DUR_FAST;// 20
+        this.count = count;
     }// 22
 
     public void update() {
@@ -29,19 +31,19 @@ public class SerpentIdolPowerAction extends AbstractGameAction {
         } else {
             if (!this.retrieveCard) {// 32
                 if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {// 33
-                    AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();// 34
-                    //disCard.setCostForTurn(0);// 36
+                    for (int i = 0; i < this.count; i++) {
+                        AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();// 34
+                        disCard.setCostForTurn(0);// 36
 
-                    disCard.current_x = -1000.0F * Settings.scale;// 38
-                    if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {// 39
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 40
-                    } else {
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 44
+                        disCard.current_x = -1000.0F * Settings.scale;// 38
+                        if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {// 39
+                            AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 40
+                        } else {
+                            AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 44
+                        }
+                        AbstractDungeon.cardRewardScreen.discoveryCard = null;// 48
                     }
-
-                    AbstractDungeon.cardRewardScreen.discoveryCard = null;// 48
                 }
-
                 this.retrieveCard = true;// 50
             }
 

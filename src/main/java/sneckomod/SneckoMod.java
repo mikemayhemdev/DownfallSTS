@@ -43,18 +43,14 @@ import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.random.Random;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.PrismaticShard;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
-import downfall.relics.BrokenWingStatue;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
-import expansioncontent.cards.Chronoboost;
 import expansioncontent.cards.DashGenerateEvil;
-import expansioncontent.cards.PeekPages;
 import expansioncontent.cards.SuperLivingWall;
 import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.patches.CenterGridCardSelectScreen;
@@ -668,7 +664,6 @@ public class SneckoMod implements
     }
 
     public void addPotions() {
-
         BaseMod.addPotion(CheatPotion.class, Color.GRAY, Color.WHITE, Color.BLACK, CheatPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
         BaseMod.addPotion(DiceRollPotion.class, Color.CYAN, Color.WHITE, Color.BLACK, DiceRollPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
         BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);

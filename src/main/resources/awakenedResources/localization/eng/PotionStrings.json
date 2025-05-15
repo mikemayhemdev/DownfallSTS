@@ -1,34 +1,24 @@
 {
-  "bronze:FreeFunctionsPotion": {
-    "NAME": "Machine Oil",
+  "awakened:CultistsDelight": {
+    "NAME": "Cultist's Delight",
     "DESCRIPTIONS": [
-      "Increase all numbers on Encoded cards by #b",
-      " except cost."
+      "Whenever you play a #yPower card this combat, gain #b",
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
-  "bronze:CleanCodePotion": {
-    "NAME": "Alchyrical Elixir",
+  "awakened:SacramentalWine": {
+    "NAME": "Sacramental Wine",
     "DESCRIPTIONS": [
-      "Remove all #yCompile #yError effects from the next #yFunction you create, it costs #b0 until played.",
-      "Remove all #yCompile #yError effects from the next #b",
-      " #yFunctions you create, they cost #b0 until played."
+      "Whenever you play a #yPower card this combat, gain #b",
+      " #yBlock [REMOVE_SPACE]. Add a random #yPower to your hand."
     ]
   },
-  "bronze:BurnAndBuffPotion": {
-    "NAME": "Vexing Draught",
+  "awakened:SneckoPowersPotion": {
+    "NAME": "Snecko Essence",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yStrength and #b",
-      " #yDexterity. NL Add two #yBurn+ cards into your discard pile."
-    ]
-  },
-  "bronze:BuildAFunctionPotion": {
-    "NAME": "Kio's Clever Concoction",
-    "DESCRIPTIONS": [
-      "Choose #b1 of #b3 random cards to #yEncode, repeat until you create a #yFunction.",
-      "Choose #b1 of #b3 random cards to #yEncode, repeat until you create a #yFunction and gain #b",
-      " copy of it.",
-      " copies of it."
+      "Choose #b1 of #b3 random #ysneckomod:Offclass #Power cards to add to your hand, it costs #b0 this turn.",
+      "Choose #b1 of #b3 random #ysneckomod:Offclass #Power cards and add #b",
+      " copies to your hand, they cost #b0 this turn."
     ]
   }
 }
