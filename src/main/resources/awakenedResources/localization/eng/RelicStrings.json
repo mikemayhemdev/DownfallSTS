@@ -101,7 +101,7 @@
     "NAME": "Hyperdrive",
     "FLAVOR": "But what if we had MORE?",
     "DESCRIPTIONS": [
-      "Whenever you gain #yStrength, gain #b",
+      "Whenever you gain #yStrength [REMOVE_SPACE], also gain #b",
       " #yVigor [REMOVE_SPACE]."
     ]
   }

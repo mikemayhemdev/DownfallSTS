@@ -128,8 +128,7 @@
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards and Upgrade them."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
   },
   "awakened:FlareShot": {
     "NAME": "Flare Shot",

@@ -29,7 +29,7 @@ public class Procession extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ShuffleAllAction());
         this.addToBot(new ShuffleAction(AbstractDungeon.player.drawPile, false));
-        addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), magicNumber, true, true));
+        addToTop(new MakeTempCardInDrawPileAction(new VoidCard(), magicNumber, true, true));
         this.addToBot(new DrawCardAction(p, secondMagic));
     }
 

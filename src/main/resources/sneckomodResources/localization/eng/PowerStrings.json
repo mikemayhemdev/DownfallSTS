@@ -77,7 +77,7 @@
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
       "At the start of your turn, add an #yEcho of a random #yOffclass card into your hand.",
-      " #yEchoes of a random #yOffclass cards into your hand."
+      " #yEchoes of random #yOffclass cards into your hand."
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {
