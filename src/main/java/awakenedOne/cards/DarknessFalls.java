@@ -1,7 +1,6 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.DarkEchoPower;
-import awakenedOne.powers.DarknessFallsPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,6 +9,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import expansioncontent.powers.DarknessFallsPower2;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
@@ -28,7 +28,7 @@ public class DarknessFalls extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new DarknessFallsPower(magicNumber, secondMagic));
+        applyToSelf(new DarknessFallsPower2(magicNumber, secondMagic));
     }
 
     @Override
