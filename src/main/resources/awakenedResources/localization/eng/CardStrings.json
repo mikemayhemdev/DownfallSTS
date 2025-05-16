@@ -137,8 +137,8 @@
   },
   "awakened:ClarionCall": {
     "NAME": "Clarion Call",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Chant: bronze:Insert an *Insight.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Chant: bronze:Insert an *Insight+."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Chant: Shuffle an *Insight into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Chant: Shuffle an *Insight+ into your draw pile."
   },
   "awakened:Recitation": {
     "NAME": "Recitation",

@@ -36,7 +36,7 @@ public class ApplyPowerPatch {
         if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
             AbstractPower powerToApply = ReflectionHacks.getPrivate(__instance, ApplyPowerAction.class, "powerToApply");
             if (__instance.target != null && __instance.target.isPlayer && powerToApply.ID.equals(StrengthPower.POWER_ID)) {
-                ((ImpeccablePecs)(AbstractDungeon.player.getRelic(StrengthBooster.ID))).onTrigger(powerToApply.amount);
+                ((StrengthBooster)(AbstractDungeon.player.getRelic(StrengthBooster.ID))).onTrigger(powerToApply.amount);
             }
         }
 
