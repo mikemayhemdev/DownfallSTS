@@ -208,7 +208,8 @@
     "DESCRIPTIONS": [
       "At the end of your turn, deal #b",
       " damage to ALL enemies #b",
-      " time(s)."
+      " times.",
+      " damage to ALL enemies."
     ]
   },
   "awakened:EmpressPower": {

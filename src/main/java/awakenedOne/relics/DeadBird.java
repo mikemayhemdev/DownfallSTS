@@ -31,7 +31,7 @@ import static awakenedOne.AwakenedOneMod.makeRelicPath;
 import static collector.util.Wiz.atb;
 import static hermit.util.Wiz.getLowestHealthEnemy;
 
-public class DeadBird extends CustomRelic implements OnReceivePowerRelic {
+public class  DeadBird extends CustomRelic implements OnReceivePowerRelic {
 
     public static final String ID = AwakenedOneMod.makeID("DeadBird");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("DeadBird.png")); //TODO: Images
@@ -56,8 +56,8 @@ public class DeadBird extends CustomRelic implements OnReceivePowerRelic {
             temp += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
         }
 
-        if (temp > 0) {
-            this.counter = AMOUNT + temp;
+        if (temp < AMOUNT) {
+            temp = AMOUNT;
         }
 
         return true;
@@ -74,6 +74,10 @@ public class DeadBird extends CustomRelic implements OnReceivePowerRelic {
         this.counter = AMOUNT;
     }
 
+    @Override
+    public void onVictory(){
+        this.counter = AMOUNT;
+    }
 
 
 
@@ -86,6 +90,10 @@ public class DeadBird extends CustomRelic implements OnReceivePowerRelic {
 
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
             temp += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+        }
+
+        if (temp < AMOUNT) {
+            temp = AMOUNT;
         }
 
         this.addToTop(new RelicAboveCreatureAction(getLowestHealthEnemy(), this));

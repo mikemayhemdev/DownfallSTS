@@ -1,11 +1,15 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.DarknessFallsPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.CuriosityPower;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
+import static awakenedOne.util.Wiz.atb;
 
 public class DarknessFalls extends AbstractAwakenedCard {
     public final static String ID = makeID(DarknessFalls.class.getSimpleName());
@@ -21,7 +25,7 @@ public class DarknessFalls extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new DarknessFallsPower(magicNumber, secondMagic));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DarknessFallsPower(AbstractDungeon.player, magicNumber, secondMagic)));
     }
 
     @Override
