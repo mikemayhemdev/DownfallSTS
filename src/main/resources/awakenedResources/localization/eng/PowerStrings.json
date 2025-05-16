@@ -263,5 +263,13 @@
       "Whenever you attack this enemy, gain #b",
       " temporary #yStrength."
     ]
+  },
+  "awakened:DarknessFallsPower": {
+    "NAME": "Darkness Falls",
+    "DESCRIPTIONS": [
+      "Whenever you are #yDrained, gain #b",
+      " #yBlock and #b",
+      " #yStrength [REMOVE_SPACE]."
+    ]
   }
 }

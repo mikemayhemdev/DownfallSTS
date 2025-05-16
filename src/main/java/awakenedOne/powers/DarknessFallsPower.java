@@ -1,31 +1,46 @@
-package expansioncontent.powers;
+package awakenedOne.powers;
 
 
+import awakenedOne.powers.AbstractAwakenedPower;
 import awakenedOne.powers.OnLoseEnergyPower;
+import awakenedOne.powers.PrimacyPower;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.util.TextureLoader;
+import expansioncontent.expansionContentMod;
 
+import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
 
-public class DarknessFallsPower2 extends TwoAmountPower implements OnLoseEnergyPower {
+public class DarknessFallsPower extends TwoAmountPower implements OnLoseEnergyPower {
     // intellij stuff buff
-    public static final String POWER_ID = "expansioncontent:DarknessFallsPower";
+
+    public static final String POWER_ID = "awakened:DarknessFallsPower";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public DarknessFallsPower2(int amount, int amount2) {
+    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyHexaghost84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyHexaghost32.png");
+
+
+    public DarknessFallsPower(int amount, int amount2) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.amount = amount;
         this.amount2 = amount2;
         this.type = PowerType.BUFF;
-        this.loadRegion("hex");
-        updateDescription();
+
+        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+
+        this.updateDescription();
     }
 
     @Override
