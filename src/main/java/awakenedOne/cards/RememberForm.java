@@ -14,7 +14,6 @@ import downfall.util.CardIgnore;
 public class RememberForm extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(RememberForm.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
 
     public RememberForm() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

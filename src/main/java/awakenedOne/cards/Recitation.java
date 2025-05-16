@@ -17,7 +17,6 @@ public class Recitation extends AbstractAwakenedCard {
 
     public final static String ID = AwakenedOneMod.makeID(Recitation.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
 
     public Recitation() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
@@ -44,20 +43,6 @@ public class Recitation extends AbstractAwakenedCard {
         applyToSelf((new StrengthPower(AbstractDungeon.player, magicNumber)));
         checkOnChant();
     }
-
-    public void triggerWhenDrawn() {
-        this.chant = false;
-    }
-
-    public void triggerOnCardPlayed(AbstractCard card) {
-        if (card.type == CardType.POWER && AbstractDungeon.player.hand.contains((AbstractCard)this))
-            this.chant = true;
-    }
-
-//    @Override
-//    public void onMoveToDiscard() {
-//        this.chant = false;
-//    }
 
     public void triggerOnGlowCheck() {
         this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;

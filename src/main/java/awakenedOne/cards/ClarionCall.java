@@ -21,7 +21,6 @@ public class ClarionCall extends AbstractAwakenedCard {
 
     public final static String ID = AwakenedOneMod.makeID(ClarionCall.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
 
     public ClarionCall() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
@@ -54,21 +53,6 @@ public class ClarionCall extends AbstractAwakenedCard {
         shuffleIn(q);
         checkOnChant();
     }
-
-
-    public void triggerWhenDrawn() {
-        this.chant = false;
-    }
-
-    public void triggerOnCardPlayed(AbstractCard card) {
-        if (card.type == CardType.POWER && AbstractDungeon.player.hand.contains((AbstractCard)this))
-            this.chant = true;
-    }
-
-//    @Override
-//    public void onMoveToDiscard() {
-//        this.chant = false;
-//    }
 
     public void triggerOnGlowCheck() {
         this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;

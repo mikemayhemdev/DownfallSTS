@@ -13,7 +13,6 @@ import static awakenedOne.util.Wiz.applyToSelf;
 public class Fortitude extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Fortitude.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
 
     public Fortitude() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

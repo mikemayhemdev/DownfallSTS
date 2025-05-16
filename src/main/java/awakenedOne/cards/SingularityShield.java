@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 public class SingularityShield extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(SingularityShield.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
 
     public SingularityShield() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);

@@ -22,8 +22,6 @@ public class TheEmpress extends AbstractAwakenedCard {
     public final static String ID = makeID(TheEmpress.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
-    boolean chant = false;
-
     public TheEmpress() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
 

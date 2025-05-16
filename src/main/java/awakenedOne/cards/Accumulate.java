@@ -14,7 +14,6 @@ import static awakenedOne.util.Wiz.applyToSelf;
 public class Accumulate extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Accumulate.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
 
     public Accumulate() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);

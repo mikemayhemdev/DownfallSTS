@@ -20,8 +20,6 @@ public class Debilitate extends AbstractAwakenedCard {
     public final static String ID = makeID(Debilitate.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
-    boolean chant = false;
-
     public Debilitate() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 10;
@@ -54,20 +52,6 @@ public class Debilitate extends AbstractAwakenedCard {
             }
         }
         checkOnChant();
-    }
-
-    public void triggerWhenDrawn() {
-        this.chant = false;
-    }
-
-    public void triggerOnCardPlayed(AbstractCard card) {
-        if (card.type == CardType.POWER && AbstractDungeon.player.hand.contains((AbstractCard)this))
-            this.chant = true;
-    }
-
-    @Override
-    public void onMoveToDiscard() {
-        this.chant = false;
     }
 
     public void triggerOnGlowCheck() {

@@ -1,8 +1,10 @@
 package awakenedOne.cards;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
@@ -13,28 +15,35 @@ public class FadeOut extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public FadeOut() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseBlock = 8;
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber;
+        this.baseSecondMagic = 3;
+        this.secondMagic = this.baseSecondMagic;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
-    }
+        int temp = 0;
 
-    public void applyPowersToBlock() {
-        int realBaseBlock = this.baseBlock;
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            baseBlock += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+            temp += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
         }
-        if (!upgraded && AbstractDungeon.player.hasPower(DexterityPower.POWER_ID)) {
-            baseBlock -= AbstractDungeon.player.getPower(DexterityPower.POWER_ID).amount;
+
+        if (temp > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, -temp), -temp));
         }
-        super.applyPowersToBlock();
-        baseBlock = realBaseBlock;
-        isBlockModified = block != baseBlock;
+
+        if (!p.hasPower(ArtifactPower.POWER_ID)) {
+            if (temp > 3) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, (magicNumber * temp) / secondMagic), (magicNumber * temp) / secondMagic));
+            }
+        }
+
     }
 
     public void upp() {
-        upgradeBlock(4);
+        upgradeBaseCost(1);
     }
+
 }

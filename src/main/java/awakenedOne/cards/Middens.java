@@ -26,7 +26,7 @@ import java.util.Collections;
 public class Middens extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Middens.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
+
     public static final String[] TEXT;
 
     public Middens() {

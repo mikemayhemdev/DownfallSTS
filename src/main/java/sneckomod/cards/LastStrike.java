@@ -25,7 +25,7 @@ public class LastStrike extends AbstractSneckoCard {
     public static final String ID = SneckoMod.makeID("LastStrike");
 
     // Constants
-    private static final int BASE_DAMAGE = 9;
+    private static final int BASE_DAMAGE = 6;
     private static final int UPGRADE_DAMAGE = 3;
     private static int SOFTLOCK = 0;
 

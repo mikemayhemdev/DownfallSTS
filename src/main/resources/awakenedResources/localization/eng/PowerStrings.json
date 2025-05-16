@@ -184,13 +184,17 @@
     ]
   },
   "awakened:PrimacyPower": {
-  "NAME": "Primacy",
-  "DESCRIPTIONS": [
-    "Whenever you gain #yStrength, draw #b",
-    " card.",
-    " cards."
-  ]
-},
+    "NAME": "Primacy",
+    "DESCRIPTIONS": [
+      "The first time you gain #yStrength each turn, draw a card.",
+      "The first #b",
+      " times you gain #yStrength each turn, draw a card.",
+      " NL This effect can be triggered #b",
+      " more times this turn.",
+      " more time this turn.",
+      " NL This effect cannot be triggered again this turn."
+    ]
+  },
   "awakened:LibrarianPower": {
     "NAME": "Librarian",
     "DESCRIPTIONS": [

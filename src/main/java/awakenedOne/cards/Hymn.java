@@ -14,8 +14,6 @@ import static awakenedOne.ui.AwakenButton.awaken;
 
 public class Hymn extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Hymn.class.getSimpleName());
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
 
     public Hymn() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
@@ -44,19 +42,6 @@ public class Hymn extends AbstractAwakenedCard {
         checkOnChant();
     }
 
-    public void triggerWhenDrawn() {
-        this.chant = false;
-    }
-
-    public void triggerOnCardPlayed(AbstractCard card) {
-        if (card.type == CardType.POWER && AbstractDungeon.player.hand.contains((AbstractCard)this))
-            this.chant = true;
-    }
-
-//    @Override
-//    public void onMoveToDiscard() {
-//        this.chant = false;
-//    }
 
     public void triggerOnGlowCheck() {
         this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;

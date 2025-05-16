@@ -1,5 +1,6 @@
 package expansioncontent.cards;
 
+import awakenedOne.cards.AbstractAwakenedCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,7 +22,7 @@ public class TakeFlight extends AbstractExpansionCard {
 
     private static final int MAGIC = 1;
 
-    boolean chant = false;
+    private boolean chant = false;
 
     public TakeFlight() {
         super(ID, 1, AbstractCard.CardType.POWER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
@@ -37,9 +38,11 @@ public class TakeFlight extends AbstractExpansionCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!this.chant)
-            addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new RegenPower((AbstractCreature)AbstractDungeon.player, this.magicNumber), this.magicNumber));
-        if (this.chant)
-            addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new RegenPower((AbstractCreature)AbstractDungeon.player, this.downfallMagic), this.downfallMagic));
+            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) AbstractDungeon.player, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new RegenPower((AbstractCreature) AbstractDungeon.player, this.magicNumber), this.magicNumber));
+        if (this.chant) {
+            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) AbstractDungeon.player, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new RegenPower((AbstractCreature) AbstractDungeon.player, this.downfallMagic), this.downfallMagic));
+            AbstractAwakenedCard.checkOnChant();
+        }
     }
 
     public void triggerWhenDrawn() {

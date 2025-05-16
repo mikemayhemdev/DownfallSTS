@@ -17,7 +17,7 @@ import downfall.util.SelectCardsCenteredAction;
 public class DarkPortal extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(DarkPortal.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
+
     public static final String[] TEXT;
 
     public DarkPortal() {

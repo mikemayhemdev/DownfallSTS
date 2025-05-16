@@ -49,6 +49,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     public int baseSecondDamage = -1;
     public boolean upgradedSecondDamage;
     public boolean isSecondDamageModified;
+    public boolean chant = false;
 
     public AbstractAwakenedCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, AwakenedOneChar.Enums.AWAKENED_BLUE);
@@ -209,8 +210,24 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
     }
 
+    //Chant Stuff
     public void chant() {
     }
+
+    public void triggerWhenDrawn() {
+        this.chant = false;
+    }
+
+    public void triggerOnCardPlayed(AbstractCard card) {
+        if (card.type == CardType.POWER && AbstractDungeon.player.hand.contains((AbstractCard)this))
+            this.chant = true;
+    }
+
+    public void onMoveToDiscard() {
+        this.chant = false;
+    }
+
+    //
 
     public ArrayList<AbstractMonster> monsterList() {
         return AbstractDungeon.getMonsters().monsters;
@@ -231,7 +248,6 @@ public abstract class AbstractAwakenedCard extends CustomCard {
                 ((AbstractAwakenedCard) c).onChant();
             }
         }
-
 
     }
 

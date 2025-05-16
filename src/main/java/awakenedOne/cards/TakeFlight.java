@@ -15,7 +15,6 @@ public class TakeFlight extends AbstractAwakenedCard {
 
     public final static String ID = AwakenedOneMod.makeID(TakeFlight.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
 
     public TakeFlight() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
@@ -43,21 +42,6 @@ public class TakeFlight extends AbstractAwakenedCard {
         applyToSelf((new BlurPower(AbstractDungeon.player, magicNumber)));
         checkOnChant();
     }
-
-
-    public void triggerWhenDrawn() {
-        this.chant = false;
-    }
-
-    public void triggerOnCardPlayed(AbstractCard card) {
-        if (card.type == CardType.POWER && AbstractDungeon.player.hand.contains((AbstractCard)this))
-            this.chant = true;
-    }
-
-//    @Override
-//    public void onMoveToDiscard() {
-//        this.chant = false;
-//    }
 
     public void triggerOnGlowCheck() {
         this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;

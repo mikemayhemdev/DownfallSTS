@@ -15,7 +15,6 @@ public class Inspiration extends AbstractAwakenedCard {
 
     public final static String ID = AwakenedOneMod.makeID(Inspiration.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
 
     public Inspiration() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

@@ -17,8 +17,6 @@ public class SplitWide extends AbstractAwakenedCard {
     public final static String ID = makeID(SplitWide.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
-    boolean chant = false;
-
     public SplitWide() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 6;

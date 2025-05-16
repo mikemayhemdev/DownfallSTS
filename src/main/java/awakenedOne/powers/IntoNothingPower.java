@@ -68,10 +68,10 @@ public class IntoNothingPower extends AbstractAwakenedPower {
 
         if (cardsDoubledThisTurn == this.amount) {
             this.description += DESCRIPTIONS[6];
-        } else if ((this.amount - cardsDoubledThisTurn) > 1) {
-            this.description += DESCRIPTIONS[3] + (this.amount - cardsDoubledThisTurn) + DESCRIPTIONS[5];
+        } else if ((3 - cardsDoubledThisTurn) > 1) {
+            this.description += DESCRIPTIONS[3] + (3 - cardsDoubledThisTurn) + DESCRIPTIONS[5];
         } else {
-            this.description += DESCRIPTIONS[3] + (this.amount - cardsDoubledThisTurn) + DESCRIPTIONS[4];
+            this.description += DESCRIPTIONS[3] + (3 - cardsDoubledThisTurn) + DESCRIPTIONS[4];
         }
     }
 

@@ -17,7 +17,6 @@ public class AphoticFount extends AbstractAwakenedCard {
 
     public final static String ID = AwakenedOneMod.makeID(AphoticFount.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
 
     public AphoticFount() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);

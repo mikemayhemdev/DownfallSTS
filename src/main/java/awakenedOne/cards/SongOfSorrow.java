@@ -24,8 +24,6 @@ public class SongOfSorrow extends AbstractAwakenedCard {
     public final static String ID = makeID(SongOfSorrow.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
-    boolean chant = false;
-
     public SongOfSorrow() {
         super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         cardsToPreview = new VoidCard();

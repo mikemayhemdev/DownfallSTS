@@ -14,7 +14,6 @@ import static awakenedOne.util.Wiz.applyToSelf;
 public class MysticOrder extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(MysticOrder.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
-    boolean chant = false;
 
     public MysticOrder() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

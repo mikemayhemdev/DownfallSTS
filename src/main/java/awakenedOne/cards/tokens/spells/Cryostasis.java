@@ -19,7 +19,6 @@ import static awakenedOne.util.Wiz.atb;
 public class Cryostasis extends AbstractSpellCard {
     public final static String ID = makeID(Cryostasis.class.getSimpleName());
     // intellij stuff skill, self, , , 7, 1, 1, 1
-    boolean chant = false;
 
     public Cryostasis() {
         super(ID, CardType.SKILL, CardTarget.ENEMY);

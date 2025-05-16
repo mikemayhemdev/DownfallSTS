@@ -18,10 +18,9 @@ import static awakenedOne.util.Wiz.atb;
 public class Victuals extends AbstractAwakenedCard {
     public final static String ID = makeID(Victuals.class.getSimpleName());
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
-    boolean chant = false;
 
     public Victuals() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 5;
         baseSecondMagic = secondMagic = 2;
         //this.tags.add(CardTags.HEALING);
@@ -62,7 +61,6 @@ public class Victuals extends AbstractAwakenedCard {
 
     @Override
     public void chant() {
-        atb(new HealAction(AbstractDungeon.player, AbstractDungeon.player, magicNumber));
         //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RepairPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
         checkOnChant();
     }

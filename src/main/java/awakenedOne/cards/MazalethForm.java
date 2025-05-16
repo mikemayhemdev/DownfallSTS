@@ -21,8 +21,6 @@ public class MazalethForm extends AbstractAwakenedCard {
     public final static String ID = makeID(MazalethForm.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
-    boolean chant = false;
-
     public MazalethForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         isEthereal = true;

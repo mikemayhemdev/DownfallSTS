@@ -99,8 +99,7 @@
   },
   "awakened:FadeOut": {
     "NAME": "Fade Out",
-    "DESCRIPTION": "Gain !B! Block. NL This card's Block is increased by Strength instead of Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL This card's Block is increased by Strength."
+    "DESCRIPTION": "Lose ALL Strength. NL Gain !M! Dexterity for every !awakened:m2! Strength lost. NL Exhaust."
   },
   "awakened:Accumulate": {
     "NAME": "Accumulate",
@@ -242,11 +241,11 @@
   },
   "awakened:Primacy": {
     "NAME": "Primacy",
-    "DESCRIPTION": "Whenever you gain Strength, draw !M! card."
+    "DESCRIPTION": "The first !M! times you gain Strength each turn, draw a card."
   },
   "awakened:Inspiration": {
     "NAME": "Inspiration",
-    "DESCRIPTION": "Gain !B! Block. NL If the last card you played was a Power, gain an *Insight.",
+    "DESCRIPTION": "not used not used not used",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If the last card you played was a Power, gain an *Insight+."
   },
   "awakened:Fortitude": {
@@ -314,7 +313,8 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
-    "DESCRIPTION": "Whenever [E] is awakened:Drained, gain !M! Block and !awakened:m2! Strength."
+    "DESCRIPTION": "Whenever [E] is awakened:Drained, gain !M! Block and !awakened:m2! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever [E] is awakened:Drained, gain !M! Block and !awakened:m2! Strength."
   },
   "awakened:Brainshock": {
     "NAME": "Brainshock",
@@ -378,7 +378,7 @@
   "awakened:Victuals": {
     "NAME": "Victuals",
     "DESCRIPTION": "Lose !M! HP. NL Gain [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Don't lose HP.",
-    "UPGRADE_DESCRIPTION": "Lose !M! HP. NL Gain [E] [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Heal !M! HP instead."
+    "UPGRADE_DESCRIPTION": "Lose !M! HP. NL Gain [E] [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Don't lose HP."
   },
   "awakened:TheTower": {
     "NAME": "The Tower",

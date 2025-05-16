@@ -135,13 +135,5 @@
       " in a turn. Removed after #b",
       " activations."
     ]
-  },
-  "expansioncontent:DarknessFallsPower": {
-    "NAME": "Darkness Falls",
-    "DESCRIPTIONS": [
-      "Whenever you are #yDrained, gain #b",
-      " #yBlock and #b",
-      " #yStrength [REMOVE_SPACE]."
-    ]
   }
 }

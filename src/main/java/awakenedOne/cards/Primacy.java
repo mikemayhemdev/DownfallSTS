@@ -12,9 +12,9 @@ public class Primacy extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public Primacy() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         //this.isEthereal = true;
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -23,6 +23,6 @@ public class Primacy extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(2);
     }
 }
