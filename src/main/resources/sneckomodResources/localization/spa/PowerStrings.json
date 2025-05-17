@@ -1,0 +1,194 @@
+{
+  "sneckomod:BlunderGuardPower": {
+    "NAME": "Tsunami",
+    "DESCRIPTIONS": [
+      "Los efectos de #yExceso también otorgan #b",
+      " de #yBloqueo [REMOVE_SPACE].",
+      " de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:CheapStockPower": {
+    "NAME": "Acciones Baratas",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, #yConfunde la carta de mayor costo en tu mano.",
+      "Al comienzo de tu turno, #yConfunde la carta de mayor costo en tu mano #b",
+      " veces."
+    ]
+  },
+  "sneckomod:CheatPower": {
+    "NAME": "Trampa",
+    "DESCRIPTIONS": [
+      "Este turno, las cartas con efecto de #yExceso siempre lo activan al jugarse.",
+      "Durante los próximos #b",
+      " turnos, las cartas con efecto de #yExceso siempre lo activan al jugarse."
+    ]
+  },
+  "sneckomod:MuddleDrawnCardsPower": {
+    "NAME": "Confundir Robadas",
+    "DESCRIPTIONS": [
+      "#yConfunde la próxima carta que robes.",
+      "#yConfunde las primeras #b",
+      " cartas robadas este turno. (quedan ",
+      ")"
+    ]
+  },
+  "sneckomod:MudshieldPower": {
+    "NAME": "Escudo de Lodo",
+    "DESCRIPTIONS": [
+      "Cada vez que #yConfundas una carta, obtén #b",
+      " de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:OverwhelmingPresencePower": {
+    "NAME": "Presencia Abrumadora",
+    "DESCRIPTIONS": [
+      "La primera vez que barajes tu mazo en cada turno, gana [E] y roba #b1 carta.",
+      "La primera vez que barajes tu mazo en cada turno, gana ",
+      " [E] y roba #b",
+      " cartas."
+    ]
+  },
+  "sneckomod:SerpentsNestPower": {
+    "NAME": "Nido de Serpientes",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta de #yPoder, inflige 1 de daño a TODOS los enemigos.",
+      "Cada vez que juegues una carta de #yPoder, inflige #b",
+      " de daño a TODOS los enemigos."
+    ]
+  },
+  "sneckomod:SerpentMindPower": {
+    "NAME": "Forma Exótica",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, gana #b",
+      " de #yFuerza por cada color único jugado este turno.",
+      " de #yFuerza por cada color único jugado este turno."
+    ]
+  },
+  "sneckomod:SnakeEyesPower": {
+    "NAME": "Ojos de Serpiente",
+    "DESCRIPTIONS": [
+      "Tu próxima carta #yAjena se juega dos veces este turno.",
+      "Tus próximas #b",
+      " cartas #yAjenas se juegan dos veces este turno."
+    ]
+  },
+  "sneckomod:UnendingSupplyPower": {
+    "NAME": "Suministro Infinito",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, añade #b",
+      "Al comienzo de tu turno, añade un #yEco de una carta #yAjena aleatoria a tu mano.",
+      " #yEcos de cartas #yAjenas aleatorias a tu mano."
+    ]
+  },
+  "sneckomod:UnknownUpgradedPostCombatPower": {
+    "NAME": "Post-Combat Upgraded Unidentified",
+    "DESCRIPTIONS": [
+      "At the end of combat, obtain #b",
+      " additional #yUpgraded #yUnidentified cards.",
+      " additional #yUpgraded #yUnidentified card.",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+
+    ]
+  },
+  "sneckomod:UnlimitedRollsPower": {
+    "NAME": "Tiradas Ilimitadas",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, obtén un #yGiro #yEspiritual+ con #yAgotar [REMOVE_SPACE]."
+    ]
+  },
+    "sneckomod:Transmogrifying": {
+    "NAME": "Transmogrifying",
+    "DESCRIPTIONS": [
+      " is being transformed into another ",
+      " relic.",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+    ]
+  },
+  "sneckomod:ToxicPersonalityPower": {
+    "NAME": "Toxic Personality",
+    "DESCRIPTIONS": [
+      "Whenever you apply a debuff to an enemy, apply #b",
+      " #yVenom [REMOVE_SPACE].",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+    ]
+  },
+  "sneckomod:TyphoonPower": {
+    "NAME": "Tifón",
+    "DESCRIPTIONS": [
+      "Este turno, cada vez que actives #yExceso [REMOVE_SPACE], juega una copia de #yColmillo #yTifón [REMOVE_SPACE].",
+      "Este turno, cada vez que actives #yExceso [REMOVE_SPACE], juega #b",
+      " copias de #yColmillo #yTifón [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:TyphoonPlusPower": {
+    "NAME": "Tifón+",
+    "DESCRIPTIONS": [
+      "Este turno, cada vez que actives #yExceso [REMOVE_SPACE], juega una copia de #yColmillo #yTifón+ [REMOVE_SPACE].",
+      "Este turno, cada vez que actives #yExceso [REMOVE_SPACE], juega #b",
+      " copias de #yColmillo #yTifón+ [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:SerpentineSleuthPower": {
+    "NAME": "Sabuesa Serpentina",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta de #yPoder, gana #b",
+      " [E] .",
+      " [E] ."
+    ]
+  },
+  "sneckomod:BigGunsStrengthPower": {
+    "NAME": "Armas Pesadas",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta que cueste 3 o más, gana #b",
+      " de #yFuerza [REMOVE_SPACE].",
+      " de #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:BigGunsBlockPower": {
+    "NAME": "Guardia Torpe",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta que cueste 3 o más, gana #b",
+      " de #yBloqueo [REMOVE_SPACE].",
+      " de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:AceOfWandsPower": {
+    "NAME": "Reina de Pentáculos",
+    "DESCRIPTIONS": [
+      "Cada vez que apliques una Desventaja a un enemigo, gana #b",
+      " de #yBloqueo [REMOVE_SPACE].",
+      " de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:LacerateDebuff": {
+    "NAME": "Lacerar",
+    "DESCRIPTIONS": [
+      "Cada vez que apliques una Desventaja a este enemigo este turno, aplícale #b",
+      " de #yTóxico.",
+      " de #yTóxico."
+    ]
+  },
+  "sneckomod:FountainPower": {
+    "NAME": "Fuente",
+    "DESCRIPTIONS": [
+      "Los efectos de #yExceso también aplican #b",
+      " de #yTóxico a un enemigo aleatorio.",
+      " de #yTóxico a un enemigo aleatorio."
+    ]
+  },
+  "sneckomod:TrashCanPower": {
+    "NAME": "Bote de Basura",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, puedes #yAgotar una carta.",
+      "Al comienzo de tu turno, puedes #yAgotar hasta #b",
+      " cartas."
+    ]
+  },
+  "sneckomod:VenomDebuff": {
+    "NAME": "Tóxico",
+    "DESCRIPTIONS": [
+      "Cada vez que esta criatura reciba una Desventaja que no sea #yTóxico, pierde #b",
+      " de PV."
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "downfall:Aged": {
+    "NAME": "Envejecido",
+    "DESCRIPTION": "Injugable. Etérea. NL Al final de tu turno, añade un *Vacío a la parte superior de tu pila de robo."
+  },
+  "downfall:Bewildered": {
+    "NAME": "Desconcertado",
+    "DESCRIPTION": "Injugable. Etérea. NL Al ser robada, sneckomod:Confunde tu mano."
+  },
+  "downfall:Icky": {
+    "NAME": "Pegajoso",
+    "DESCRIPTION": "Gana un *Viscoso. NL Agota."
+  },
+  "downfall:Haunted": {
+    "NAME": "Embrujado",
+    "DESCRIPTION": "Etérea. Injugable. NL Siempre que otra carta se *Agote mientras esta esté en tu mano, recibes 2 de daño."
+  },
+  "downfall:Malfunctioning": {
+    "NAME": "Defectuosa",
+    "DESCRIPTION": "Al final de tu turno, transforma todas las cartas en tu mano en cartas de Estado aleatorias. NL Agota."
+  },
+  "downfall:Scatterbrained": {
+    "NAME": "Disperso",
+    "DESCRIPTION": "Al final de tu turno, si esta carta está en tu mano, añade una copia de ella a tu pila de descarte. NL Agota."
+  },
+  "downfall:SummonMushrooms": {
+    "NAME": "Hongos Entre Nosotros",
+    "DESCRIPTION": "Mata todos los Hongos. Cura PV igual a sus PV restantes. NL Invoca dos Hongos."
+  },
+  "downfall:BossMaintenance": {
+    "NAME": "Mantenimiento",
+    "DESCRIPTION": "Los *Golpes Hacen !M! más de daño este combate. NL Gana !B! de Destreza. NL Esta carta cuesta 1 más durante este combate."
+  }
+}

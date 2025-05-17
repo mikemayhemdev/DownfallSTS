@@ -1,0 +1,94 @@
+{
+  "hermit:Concentration": {
+    "NAME": "Concentración",
+    "DESCRIPTIONS": ["La siguiente carta con #yPreciso que juegues este turno activará su efecto sin importar su posición."]
+  },
+  "hermit:HighNoonPower": {
+    "NAME": "Mediodía",
+    "DESCRIPTIONS": ["Cada vez que juegues una carta #yGolpe o #yDefender, roba #b", " carta.", " cartas."]
+  },
+  "hermit:FatalDesirePower": {
+    "NAME": "Deseo Fatal",
+    "DESCRIPTIONS": ["Al inicio de tu turno, roba #b", " cartas y añade #b", " #yLesión a tu mano.", " #yLesiónes a tu mano."]
+  },
+  "hermit:ShadowCloakPower": {
+    "NAME": "Manto Sombrío",
+    "DESCRIPTIONS": ["Cada vez que robes o #yAgotes una maldición, gana #b", " Bloqueo."]
+  },
+  "hermit:TakeAimPower": {
+    "NAME": "Apuntar",
+    "DESCRIPTIONS": ["Al inicio de tu turno, #yConcéntrate [REMOVE_SPACE]."]
+  },
+  "hermit:AdaptPower": {
+    "NAME": "Adaptarse",
+    "DESCRIPTIONS": ["Al inicio de tu turno, #yAgota hasta #b", " carta para ganar #b8 de Bloqueo.", " cartas. Gana #b8 de Bloqueo por cada una."]
+  },
+  "hermit:Bruise": {
+    "NAME": "Contusión",
+    "DESCRIPTIONS": ["Este turno, el objetivo recibe #b", " más daño de ataques."]
+  },
+  "hermit:HorrorPower": {
+    "NAME": "Horror",
+    "DESCRIPTIONS": ["Contusión no se eliminará durante #b", " turno.", " turnos."]
+  },
+  "hermit:ComboPower": {
+    "NAME": "Combo",
+    "DESCRIPTIONS": ["La primera carta con #yPreciso activada este turno será devuelta a tu mano.", " Las primeras #b", " cartas con #yPreciso activadas este turno serán devueltas a tu mano."]
+  },
+  "hermit:BigShotPower": {
+    "NAME": "Cañón Humeante",
+    "DESCRIPTIONS": ["Cada vez que actives un efecto #yPreciso, tu siguiente ataque inflige #b", " de daño adicional."]
+  },
+  "hermit:BrawlPower": {
+    "NAME": "Pelea",
+    "DESCRIPTIONS": ["Al inicio de tu turno, aplica #b", " Contusión a TODOS los enemigos."]
+  },
+  "hermit:Rugged": {
+    "NAME": "Resistente",
+    "DESCRIPTIONS": ["Las siguientes", " veces que recibirías daño de ataque sin bloquear, se reduce a #b2 [REMOVE_SPACE].", " vez que recibirías daño de ataque sin bloquear, se reduce a #b2 [REMOVE_SPACE]."]
+  },
+  "hermit:EternalPower": {
+    "NAME": "Poder Eterno",
+    "DESCRIPTIONS": ["Las primeras #b4 cartas jugables que robes al inicio de cada turno cuestan #b", " menos ese turno."]
+  },
+  "hermit:OverwhelmingPowerPower": {
+    "NAME": "Poder Abrumador",
+    "DESCRIPTIONS": ["Pierdes #b", " de vida si terminas tu turno con #b0 Energía."]
+  },
+  "hermit:Bounty": {
+    "NAME": "Recompensa",
+    "DESCRIPTIONS": ["Recompensa actual: #b"]
+  },
+  "hermit:Drained": {
+    "NAME": "Drenado",
+    "DESCRIPTIONS": ["Ganas #b", " menos energía el próximo turno."]
+  },
+  "hermit:DeterminationPower": {
+    "NAME": "Determinación",
+    "DESCRIPTIONS": ["Cada vez que recibas un perjuicio, gana #b", " de Fuerza."]
+  },
+  "hermit:RyeStalkPower": {
+    "NAME": "Tallo de Centeno",
+    "DESCRIPTIONS": ["Al final de este turno, #yRetiene cualquier cantidad de cartas."]
+  },
+  "hermit:PetGhostPower": {
+    "NAME": "Fantasma Compañero",
+    "DESCRIPTIONS": ["No puedes morir. Mueres al final de", " tu siguiente turno.", " este turno."]
+  },
+  "hermit:SnipePower": {
+    "NAME": "Disparo Certero",
+    "DESCRIPTIONS": ["El siguiente efecto de #yPreciso se activa dos veces este turno.", " Los siguientes #b", " efectos de #yPreciso se activan dos veces este turno."]
+  },
+  "hermit:CoalescencePower": {
+    "NAME": "Coalescencia",
+    "DESCRIPTIONS": ["Al final de tu turno, #yRetiene hasta #b", " carta.", " cartas."]
+  },
+  "hermit:ReprievePower": {
+    "NAME": "Reprieve",
+    "DESCRIPTIONS": ["Toma #b", " turno adicional después de este.", " turnos adicionales después de este."]
+  },
+  "hermit:MaintenanceStrikePower": {
+    "NAME": "Mantenimiento",
+    "DESCRIPTIONS": ["Tus cartas #yGolpe infligen #b", " de daño adicional."]
+  }
+}

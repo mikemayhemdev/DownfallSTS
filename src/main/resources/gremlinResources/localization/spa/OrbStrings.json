@@ -1,0 +1,42 @@
+{
+  "Gremlin:FatGremlin": {
+    "NAME": "Gremlin Obeso",
+    "DESCRIPTION": [
+      "Después de jugar un Ataque, aplica #b",
+      " de #yDébil a todos los objetivos."
+    ]
+  },
+
+  "Gremlin:GremlinWizard": {
+    "NAME": "Gremlin Mago",
+    "DESCRIPTION": [
+      "Después de jugar una Habilidad, gana #b",
+      " de #yMagia [REMOVE_SPACE]."
+    ]
+  },
+
+  "Gremlin:MadGremlin": {
+    "NAME": "Gremlin Guerrero",
+    "DESCRIPTION": [
+      "Gana #b",
+      " de #yFuerza #yTemporal al ser atacado."
+    ]
+  },
+
+  "Gremlin:ShieldGremlin": {
+    "NAME": "Gremlin Reservado",
+    "DESCRIPTION": [
+      "Después de jugar una Habilidad, gana #b",
+      " de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+
+  "Gremlin:SneakyGremlin": {
+    "NAME": "Gremlin Ladrón",
+    "DESCRIPTION": [
+      "Los Ataques de coste 0 infligen #b",
+      " de daño adicional. Siempre que juegues un Ataque, inflige #b",
+      " de daño a un enemigo aleatorio."
+    ]
+  }
+}

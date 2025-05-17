@@ -1,0 +1,105 @@
+[
+  {
+    "PROPER_NAME": "Bono",
+    "NAMES": [
+	  "bonus",
+      "bonuses",
+      "technique",
+      "techniques",
+      "champ:[crown_icon]",
+      "[crown_icon]",
+	   "bono",
+      "bonos",
+      "técnica",
+      "técnicas"
+    ],
+    "DESCRIPTION": "Si estás en una #yPostura [REMOVE_SPACE], activa su Bono usando una Habilidad. NL #yBono #rBerserker: Gana #b2 de #yVigor [REMOVE_SPACE]. NL #yBono #bDefensivo: Gana #b3 de #yContraataque [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Combo",
+    "NAMES": [
+      "combo"
+    ],
+    "DESCRIPTION": "Efecto adicional al jugarse en la #yPostura indicada [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Golpe",
+    "NAMES": [
+	 "strike",
+      "strikes",
+      "golpe",
+      "golpes"
+    ],
+    "DESCRIPTION": "Cualquier carta que contenga \"Golpe\" en su nombre. No debe confundirse con #yGolpes, que se refiere exclusivamente a las cartas básicas de Golpe."
+  },
+  {
+    "PROPER_NAME": "Final",
+    "NAMES": [
+	  "finisher",
+      "finishers",
+      "[fist_icon]",
+      "champ:[fist_icon]",
+      "final",
+      "finales"
+    ],
+    "DESCRIPTION": "Requiere estar en una Postura. NL Después de jugar un Final, sales de tu Postura y activas su bono de Final. NL #rBerserker #yBono de #yFinal: Gana #b1 de #yFuerza [REMOVE_SPACE]. NL #bDefensivo #yBono de #yFinal: Gana #b8 de #yBloqueo [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Contraataque",
+    "NAMES": [
+	  "counter",
+      "contraataque"
+    ],
+    "DESCRIPTION": "La próxima vez que recibas daño de un #yAtaque, gana un #yGolpe de #yEstocada que inflige esa misma cantidad de daño."
+  },
+  {
+    "PROPER_NAME": "Defensivo",
+    "NAMES": [
+	 "defensive",
+      "defensive.",
+      "defensivo",
+      "defensivo."
+    ],
+    "DESCRIPTION": "#yPostura. NL #yBono de Habilidad: Gana #b3 de #yContraataque [REMOVE_SPACE]. NL #yEfecto de Final: Gana #b8 de #yBloqueo [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Berserker",
+    "NAMES": [
+      "berserker",
+      "berserker."
+    ],
+    "DESCRIPTION": "#yPostura.  NL #yBono de Habilidad: Gana #b2 de #yVigor [REMOVE_SPACE]. NL #yEfecto de Final: Gana #b1 de #yFuerza [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Gladiador",
+    "NAMES": [
+	 "gladiator",
+      "gladiator.",
+      "gladiador",
+      "gladiador."
+    ],
+    "DESCRIPTION": "#yPostura. NL #yBono de Habilidad: Roba una carta. NL #yBono de Final: En el próximo turno, roba #b1 carta y gana [E] . Termina tu turno."
+  },
+  {
+    "PROPER_NAME": "Definitiva",
+    "NAMES": [
+	 "ultimate",
+      "ultimate.",
+      "definitiva",
+      "definitiva."
+    ],
+    "DESCRIPTION": "#yPostura [REMOVE_SPACE]. Cuenta como ambas Posturas: #bDefensivo y #rBerserker [REMOVE_SPACE]. NL Si sales de esta #yPostura antes de que expire, vuelves a entrar inmediatamente."
+  },
+  {
+    "PROPER_NAME": "Fatiga",
+    "NAMES": [
+	  "fatigue",
+      "fatigued",
+      "fatigue.",
+      "fatiga",
+      "fatigado",
+      "fatiga."
+    ],
+    "DESCRIPTION": "Pierdes PV. Recuperas los PV #yFatigados al final del combate. No puedes morir por #yFatiga."
+  }
+]

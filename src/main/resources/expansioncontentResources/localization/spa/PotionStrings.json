@@ -1,0 +1,10 @@
+{
+  "expansioncontent:BossPotion": {
+    "NAME": "Poción de Jefe",
+    "DESCRIPTIONS": [
+      "Elige #b1 de #b3 cartas de #yJefe aleatorias para agregar a tu mano. Cuesta #b0 este turno.",
+      "Elige #b1 de #b3 cartas de #yJefe aleatorias y agrega #b",
+      " copias a tu mano. Cuestan #b0 este turno."
+    ]
+  }
+}

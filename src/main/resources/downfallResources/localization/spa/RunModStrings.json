@@ -1,0 +1,58 @@
+{
+  "downfall:WorldOfGoo": {
+    "NAME": "Mundo de Moco",
+    "DESCRIPTION": "Cada vez que recibes daño sin bloquear, añade un estado de Moco a tu pila de descarte."
+  },
+  "downfall:Hexed": {
+    "NAME": "Hechizado",
+    "DESCRIPTION": "Empiezas con un Collar de Terciopelo. Cuando robas una carta, se vuelve Etérea."
+  },
+  "downfall:Improvised": {
+    "NAME": "Improvisado",
+    "DESCRIPTION": "Empiezas con 10 cartas Desconocidas."
+  },
+  "downfall:Jewelcrafting": {
+    "NAME": "Joyería",
+    "DESCRIPTION": "Empiezas con dos copias de Explotar Gema y un Pico de Rapsodia."
+  },
+  "downfall:EvilRun": {
+    "NAME": "Recorrido Maligno",
+    "DESCRIPTION": "Activa el contenido del Recorrido Maligno."
+  },
+  "downfall:ExchangeController": {
+    "NAME": "Bendecido Sea",
+    "DESCRIPTION": "Empiezas con una Bendición de Neow."
+  },
+  "downfall:Lament": {
+    "NAME": "Lamento",
+    "DESCRIPTION": "Empiezas con un Lamento de Neow."
+  },
+  "downfall:ChampStances": {
+    "NAME": "Nuevo Retador",
+    "DESCRIPTION": "Empiezas cada combate en una postura aleatoria de Campeón y obtienes un Golpe Final. Todas las cartas iniciales ganan Técnica."
+  },
+  "downfall:Enraging": {
+    "NAME": "Última Defensa",
+    "DESCRIPTION": "Todos los enemigos ganan Fuerza y limpian sus desventajas en su próximo turno al ser reducidos al 50% de HP."
+  },
+  "downfall:Analytical": {
+    "NAME": "Analítico",
+    "DESCRIPTION": "Al inicio de cada turno, obtén una carta aleatoria con Codificar y hazla Etérea. Los Golpes y Defensas básicos Codifican."
+  },
+  "downfall:StatusAbuse": {
+    "NAME": "Afligido",
+    "DESCRIPTION": "Empiezas con una Batería Improvisada, Lavadoras de Donu, Lavadoras de Deca, un Botiquín Médico y un Ídolo de Bronce. Todas las demás Reliquias se reemplazan con Circlets."
+  },
+  "downfall:TooManyShivs": {
+    "NAME": "Demasiadas Dagas",
+    "DESCRIPTION": "Empiezas con un Collar de Terciopelo, Esencia del Vacío y 10 Dagas."
+  },
+  "downfall:Wizzardry": {
+    "NAME": "Hechicería",
+    "DESCRIPTION": "Empiezas con un Sombrero de Mago, un Bastón de Mago y una copia Mejorada de Hechicería."
+  },
+  "downfall:TransformRewards": {
+    "NAME": "Transformado",
+    "DESCRIPTION": "Todas las recompensas de cartas se convierten en \"Transformar una carta\"."
+  }
+}

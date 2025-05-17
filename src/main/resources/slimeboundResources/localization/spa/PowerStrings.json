@@ -1,0 +1,522 @@
+{
+  "Slimebound:PotencyPower": {
+    "NAME": "Potencia",
+    "DESCRIPTIONS": [
+      "Incrementa el daño de tus Babas generadas en #b",
+      ". Incrementa los efectos secundarios en #b",
+      "."
+    ]
+  },
+  "Slimebound:SlimedPower": {
+    "NAME": "Babeado",
+    "DESCRIPTIONS": [
+      "El siguiente #yAtaque contra este enemigo inflige #b",
+      " de daño adicional, consumiendo toda la #yBaba [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:PreventTackleDamagePower": {
+    "NAME": "Protegido",
+    "DESCRIPTIONS": [
+      "No recibes daño de los siguientes #b",
+      " #yEmbestidas que juegues."
+    ]
+  },
+  "Slimebound:SplitDailyTriggerPower": {
+    "NAME": "División de Baba",
+    "DESCRIPTIONS": [
+      "Cuando sus PV estén al #b50% o menos, se dividirá en #b2 enemigos Baba con los PV actuales de ",
+      "."
+    ]
+  },
+  "Slimebound:SplitDailyPower": {
+    "NAME": "Dividiéndose",
+    "DESCRIPTIONS": [
+      "Este enemigo se dividirá este turno."
+    ]
+  },
+  "Slimebound:BuffAttackSlimesPower": {
+    "NAME": "Mejora: Bruta",
+    "DESCRIPTIONS": [
+      "La Baba #yBruta inflige #b",
+      " de daño adicional."
+    ]
+  },
+  "Slimebound:BuffPoisonSlimesPower": {
+    "NAME": "Mejora: Ácida",
+    "DESCRIPTIONS": [
+      "La Baba #yVenenosa aplica #b",
+      " más de #yVeneno [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:BuffSlimingSlimesPower": {
+    "NAME": "Mejora: Lodosa",
+    "DESCRIPTIONS": [
+      "La Baba #yLodosa aplican #b",
+      " más de #yBaba [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:BuffShieldSlimesPower": {
+    "NAME": "Mejora: Absorbente",
+    "DESCRIPTIONS": [
+      "La Baba #yAbsorbente inflige #b",
+      " de daño adicional."
+    ]
+  },
+  "Slimebound:HexSlimePerTurnPower": {
+    "NAME": "Maleficio",
+    "DESCRIPTIONS": [
+      "Invoca una #yBaba Fantasmal al inicio de tu siguiente turno.",
+      "Invoca una #yBaba Fantasmal al inicio de tus siguientes #b",
+      " turnos."
+    ]
+  },
+  "Slimebound:ProtectTheBoss": {
+    "NAME": "Proteger al Jefe",
+    "DESCRIPTIONS": [
+      "Evita que recibas daño la próxima vez que un enemigo te ataque, #yAbsorbiendo a tu Baba líder en su lugar.",
+      "Evita que recibas daño las próximas #b",
+      " veces que un enemigo te ataque, #yAbsorbiendo a tu Baba líder en su lugar."
+    ]
+  },
+  "Slimebound:SplitForLessPower": {
+    "NAME": "Baba Eficiente",
+    "DESCRIPTIONS": [
+      "#yDividir cuesta #b",
+      " PV menos. Agrega #b",
+      " carta(s) #yDivididas aleatorias a tu mano cada turno."
+    ]
+  },
+  "Slimebound:ComboAttackPower": {
+    "NAME": "Dar el Ejemplo",
+    "DESCRIPTIONS": [
+      "La primera carta que apunte a enemigos que juegues cada turno, hace que tu Baba líder también ataque.",
+      "Las primeras #b",
+      " cartas que apunten a enemigos cada turno hacen que tu Baba líder también ataque.",
+      " NL Este efecto puede activarse #b",
+      " veces más este turno.",
+	  " vez más este turno.",
+      " NL Este efecto no puede volver a activarse este turno."
+    ]
+  },
+  "Slimebound:RetainCardsOneTurnPower": {
+    "NAME": "Cartas Preparadas",
+    "DESCRIPTIONS": [
+      "Retiene #b",
+	  " carta este turno.",
+      " cartas este turno."
+    ]
+  },
+  "Slimebound:EnergizedSlimeboundPower": {
+    "NAME": "Energizado",
+    "DESCRIPTIONS": [
+      "Obtén #b",
+      " [E] adicional en el próximo turno.",
+	  " [E] adicionales en el próximo turno."
+    ]
+  },
+  "Slimebound:SelfFormingGooPower": {
+    "NAME": "Reformación",
+    "DESCRIPTIONS": [
+      "Cada vez que Absorbas una Baba, gana #b",
+      " de #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:SelfFormingGooPowerPlus": {
+    "NAME": "Reformación+",
+    "DESCRIPTIONS": [
+      "Cada vez que Absorbas una Baba, gana #b",
+      " de #yDestreza [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:LoseSlimesPower": {
+    "NAME": "Exceso de esfuerzo",
+    "DESCRIPTIONS": [
+      "En el próximo turno, #yAbsorbe todas tus Babas generadas.",
+      " En #b",
+      " turnos, #yAbsorbe todas tus Babas generadas."
+    ]
+  },
+  "Slimebound:TackleModifyDamagePower": {
+    "NAME": "Golpeado",
+    "DESCRIPTIONS": [
+      "Recibe #b",
+      " más daño de cartas que contengan \"Embestida\"."
+    ]
+  },
+  "Slimebound:LoseThornsPower": {
+    "NAME": "Espinas Retraídas",
+    "DESCRIPTIONS": [
+      "Pierde #b",
+      " de #yEspinas al inicio de tu siguiente turno."
+    ]
+  },
+  "Slimebound:SlimedThornsPower": {
+    "NAME": "Muro Viviente",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " de #yBaba a los atacantes este turno."
+    ]
+  },
+  "Slimebound:PreventSlimeDecayPower": {
+    "NAME": "Empapado en Baba",
+    "DESCRIPTIONS": [
+      "La siguiente vez que se use un #yAtaque contra este enemigo, los beneficios de #yBaba se aplican sin consumirla.",
+      "Las siguientes #b",
+      " veces que se use un #yAtaque contra este enemigo, los beneficios de #yBaba se aplican sin consumirla."
+    ]
+  },
+  "Slimebound:DuplicatedFormPower": {
+    "NAME": "Forma Duplicada",
+    "DESCRIPTIONS": [
+      "La primera carta que juegues cada turno que apunte a enemigos se juega dos veces.",
+      "Las primeras #b",
+      " cartas que juegues cada turno que apunten a enemigos se juegan dos veces."
+    ]
+  },
+  "Slimebound:DuplicatedFormNoHealPower": {
+    "NAME": "Dividir",
+    "DESCRIPTIONS": [
+      "La vida máxima se reduce temporalmente en #b",
+      "."
+    ]
+  },
+  "Slimebound:DuplicatedFormEnergyPower": {
+    "NAME": "Trabajo en Equipo",
+    "DESCRIPTIONS": [
+      "Obtén #b",
+      " [E] cada turno."
+    ]
+  },
+  "Slimebound:GluttonyPower": {
+    "NAME": "Glotonería",
+    "DESCRIPTIONS": [
+      "La primera vez que #yConsume cada turno, agrega una carta #yLamer a tu mano.",
+      "Las primeras ",
+      " veces que #yConsume cada turno, agrega una carta #yLamer a tu mano.",
+      " NL Este efecto puede activarse #b",
+      " veces más este turno.",
+	  " vez más este turno.",
+      " NL Este efecto no puede volver a activarse este turno."
+    ]
+  },
+  "Slimebound:GluttonyPowerUpgraded": {
+    "NAME": "Glotonería+",
+    "DESCRIPTIONS": [
+      "Agrega #b",
+	  " carta #yLamer #yMejorada aleatoria a tu mano cada turno.",
+      " cartas #yLamer #yMejorada aleatoria a tu mano cada turno."
+    ]
+  },
+  "Slimebound:PoisonThornsPower": {
+    "NAME": "Baba Ácida",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " de #yVeneno cuando ataques a un enemigo que tenga #yBaba [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:SlimeRitualPower": {
+    "NAME": "Ritual",
+    "DESCRIPTIONS": [
+      "Obtén #b",
+      " de #yFuerza al inicio de cada turno."
+    ]
+  },
+  "Slimebound:RecyclingPower": {
+    "NAME": "Reciclaje",
+    "DESCRIPTIONS": [
+      "Al inicio de tu turno, recupera #b",
+      " carta de #yLamer aleatoria de tu pila de #yAgotadas a tu mano.",
+	  " cartas de #yLamer aleatorias de tu pila de #yAgotadas a tu mano."
+    ]
+  },
+  "Slimebound:RecyclingPowerUpgraded": {
+    "NAME": "Reciclaje+",
+    "DESCRIPTIONS": [
+      "Sana #b",
+      " PV y roba una carta cuando #yAgotes una carta de coste 0."
+    ]
+  },
+  "Slimebound:AcidTonguePower": {
+    "NAME": "Lengua Ácida",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " de #yVeneno cada vez que apliques #yBaba [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:AcidTonguePowerUpgraded": {
+    "NAME": "Lengua Babosa",
+    "DESCRIPTIONS": [
+      "Los efectos que apliquen #yBaba aplican #b",
+      " más."
+    ]
+  },
+  "Slimebound:SelfDamageSlimedPower": {
+    "NAME": "Baba Residual",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " de #yBaba a un enemigo aleatorio cada vez que pierdas PV."
+    ]
+  },
+  "Slimebound:TackleBuffPower": {
+    "NAME": "Embestida Ofensiva",
+    "DESCRIPTIONS": [
+      "Las cartas que contienen \"Embestida\" infligen #b",
+      " más de daño a los enemigos."
+    ]
+  },
+  "Slimebound:PolyBeamAgainPower": {
+    "NAME": "Rayo Alterno",
+    "DESCRIPTIONS": [
+      "#yRayo #yPoli se jugará al inicio de tu siguiente turno.",
+      "#yRayo #yPoli se jugará al inicio de tus siguientes #b",
+      " turnos."
+    ]
+  },
+  "Slimebound:PolyBeamAgainPowerUpgraded": {
+    "NAME": "Rayo Alterno+",
+    "DESCRIPTIONS": [
+      "#yRayo #yPoli+ se jugará al inicio de tu siguiente turno.",
+      "#yRayo #yPoli+ se jugará al inicio de tus siguientes #b",
+      " turnos."
+    ]
+  },
+  "Slimebound:FirmFortitudePower": {
+    "NAME": "Siente Nuestro Dolor",
+    "DESCRIPTIONS": [
+      "La próxima vez que recibirías daño o perderías PV en tu turno, un enemigo recibirá esa cantidad de daño en su lugar.",
+      "Las próximas #b",
+      " veces que recibirías daño o perderías PV en tu turno, un enemigo recibirá esa cantidad de daño en su lugar.",
+      " NL Este efecto puede activarse #b",
+      " veces más este turno.",
+	  " vez más este turno.",
+      " NL Este efecto no puede volver a activarse este turno."
+    ]
+  },
+  "Slimebound:NextTurnGainStrengthPower": {
+    "NAME": "Cargando Energía",
+    "DESCRIPTIONS": [
+      "Obtén #b",
+      " de #yFuerza en tu siguiente turno."
+    ]
+  },
+  "Slimebound:NextTurnGainSlimeCrush": {
+    "NAME": "Preparándose para APLASTAR",
+    "DESCRIPTIONS": [
+      "Obtén un #g¡TRITURABABA! en tu siguiente turno.",
+      "Obtén un #g¡TRITURABABA!+ en tu siguiente turno.",
+      "Obtén #b",
+      " copias de #g¡TRITURABABA! en tu siguiente turno.",
+      " copias de #g¡TRITURABABA!+ en tu siguiente turno."
+    ]
+  },
+  "Slimebound:StunnedPower": {
+    "NAME": "Completamente Exhausto",
+    "DESCRIPTIONS": [
+      "Pierde tu siguiente turno.",
+      "Pierde tus siguientes #b",
+      " turnos."
+    ]
+  },
+  "Slimebound:NextTurnGainHyperBeam": {
+    "NAME": "Preparándose para el Rayo",
+    "DESCRIPTIONS": [
+      "Obtén un #yHiper #yRayo en tu siguiente turno.",
+      "Obtén #b",
+      " copias de #yHiper #yRayo en tu siguiente turno."
+    ]
+  },
+  "Slimebound:NextTurnGainDivider": {
+    "NAME": "Preparándose para Dividir",
+    "DESCRIPTIONS": [
+      "Obtén una carta de #yDividir en tu siguiente turno.",
+      "Obtén #b",
+      " copias de #yDividir en tu siguiente turno."
+    ]
+  },
+  "Slimebound:StudyAutomatonPower": {
+    "NAME": "Estudiar Autómata",
+    "DESCRIPTIONS": [
+      "Obtén una carta aleatoria de Autómata al inicio del siguiente turno.",
+      "Obtén una carta aleatoria de Autómata al inicio de tus siguientes ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyAutomatonPowerUpgraded": {
+    "NAME": "Estudiar Autómata+",
+    "DESCRIPTIONS": [
+      "Obtén una carta de Autómata Mejorada al inicio del siguiente turno.",
+      "Obtén una carta de Autómata Mejorada al inicio de tus siguientes ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyAwakenedPower": {
+    "NAME": "Estudiar al Despertado",
+    "DESCRIPTIONS": [
+      "Obtén una carta aleatoria del Despertado al comienzo del siguiente turno.",
+      "Obtén una carta aleatoria del Despertado al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyAwakenedPowerUpgraded": {
+    "NAME": "Estudiar al Despertado+",
+    "DESCRIPTIONS": [
+      "Obtén una carta mejorada aleatoria del Despertado al comienzo del siguiente turno.",
+      "Obtén una carta mejorada aleatoria del Despertado al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+  "Slimebound:AwakenedOnePower": {
+    "NAME": "Ritual Oscuro",
+    "DESCRIPTIONS": [
+      "Gana ",
+      " de Fuerza si este enemigo no ataca en su turno."
+    ]
+  },  
+  "Slimebound:StudyChampPower": {
+    "NAME": "Estudiar al Campeón",
+    "DESCRIPTIONS": [
+      "Obtén una carta aleatoria del Campeón al comienzo del siguiente turno.",
+      "Obtén una carta aleatoria del Campeón al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+    "Slimebound:StudyChampPowerUpgraded": {
+    "NAME": "Estudiar al Campeón+",
+    "DESCRIPTIONS": [
+      "Obtén una carta mejorada aleatoria del Campeón al comienzo del siguiente turno.",
+      "Obtén una carta mejorada aleatoria del Campeón al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+   "Slimebound:StudyCollectorPower": {
+    "NAME": "Estudiar al Coleccionista",
+    "DESCRIPTIONS": [
+      "Obtén una carta aleatoria del Coleccionista al comienzo del siguiente turno.",
+      "Obtén una carta aleatoria del Coleccionista al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+    "Slimebound:StudyCollectorPowerUpgraded": {
+    "NAME": "Estudiar al Coleccionista+",
+    "DESCRIPTIONS": [
+      "Obtén una carta mejorada aleatoria del Coleccionista al comienzo del siguiente turno.",
+      "Obtén una carta mejorada aleatoria del Coleccionista al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+    "Slimebound:StudyGuardianPower": {
+    "NAME": "Estudiar al Guardián",
+    "DESCRIPTIONS": [
+      "Obtén una carta aleatoria del Guardián al comienzo del siguiente turno.",
+      "Obtén una carta aleatoria del Guardián al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+    "Slimebound:StudyGuardianPowerUpgraded": {
+    "NAME": "Estudiar al Guardián+",
+    "DESCRIPTIONS": [
+      "Obtén una carta mejorada aleatoria del Guardián al comienzo del siguiente turno.",
+      "Obtén una carta mejorada aleatoria del Guardián al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+    "Slimebound:StudyHexaghostPower": {
+    "NAME": "Estudiar al Hexafantasma",
+    "DESCRIPTIONS": [
+      "Obtén una carta aleatoria del Hexafantasma al comienzo del siguiente turno.",
+      "Obtén una carta aleatoria del Hexafantasma al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyHexaghostPowerUpgraded": {
+    "NAME": "Estudiar al Hexafantasma+",
+    "DESCRIPTIONS": [
+      "Obtén una carta mejorada aleatoria del Hexafantasma al comienzo del siguiente turno.",
+      "Obtén una carta mejorada aleatoria del Hexafantasma al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyShapesPower": {
+    "NAME": "Estudiar a Donu y Deca",
+    "DESCRIPTIONS": [
+      "Obtén una carta aleatoria de Donu y Deca al comienzo del siguiente turno.",
+      "Obtén una carta aleatoria de Donu y Deca al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyShapesPowerUpgraded": {
+    "NAME": "Estudiar a Donu y Deca+",
+    "DESCRIPTIONS": [
+      "Obtén una carta mejorada aleatoria de Donu y Deca al comienzo del siguiente turno.",
+      "Obtén una carta mejorada aleatoria de Donu y Deca al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyTimeEaterPower": {
+    "NAME": "Estudiar al Devorador de Tiempo",
+    "DESCRIPTIONS": [
+      "Obtén una carta aleatoria del Devorador de Tiempo al comienzo del siguiente turno.",
+      "Obtén una carta aleatoria del Devorador de Tiempo al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+  "Slimebound:StudyTimeEaterPowerUpgraded": {
+    "NAME": "Estudiar al Devorador de Tiempo+",
+    "DESCRIPTIONS": [
+      "Obtén una carta mejorada aleatoria del Devorador de Tiempo al comienzo del siguiente turno.",
+      "Obtén una carta mejorada aleatoria del Devorador de Tiempo al comienzo de tus siguientes ",
+      " turnos."
+    ]
+  },
+  "Slimebound:GreedRespawnPower": {
+    "NAME": "Reaparición de Codiciosa",
+    "DESCRIPTIONS": [
+      "#yBaba #yCodiciosa reaparecerá al final de tu turno."
+    ]
+  },
+  "Slimebound:ScrapRespawnPower": {
+    "NAME": "Reaparición de Chatarra",
+    "DESCRIPTIONS": [
+      "#yBaba #yde #yChatarra reaparecerá al final de tu turno."
+    ]
+  },
+  "Slimebound:BuffSecondarySlimeEffectsPower": {
+    "NAME": "Maestro de Esbirros",
+    "DESCRIPTIONS": [
+      "Cada vez que juegas una carta con #yOrdenar, #yOrdena nuevamente.",
+      "Cada vez que juegas una carta con #yOrdenar, Ordena #b",
+      " veces adicionales."
+    ]
+  },
+  "Slimebound:TackleSelfDamagePreventPower": {
+    "NAME": "Temerario",
+    "DESCRIPTIONS": [
+      "Las cartas que contienen \"Embestida\" te infligen #b",
+      " más de daño."
+    ]
+  },
+  "Slimebound:GoopArmorPower": {
+    "NAME": "Armadura de Baba",
+    "DESCRIPTIONS": [
+      "Cada vez que #yAtacas a un enemigo que tenga #yBaba, obtienes #b",
+      " de #yBloqueo."
+    ]
+  },
+  "Slimebound:CommandOnPlayPower": {
+    "NAME": "Alzamiento",
+    "DESCRIPTIONS": [
+      "La próxima vez que juegues una carta este turno, #yOrdena.",
+      "Las próximas ",
+      " veces que juegues una carta este turno, #yOrdena."
+    ]
+  },
+  "Slimebound:GoopPerTurnPower": {
+    "NAME": "Baño de Baba",
+    "DESCRIPTIONS": [
+      "Agrega ",
+      " de #yBaba al inicio del turno de este enemigo."
+    ]
+  }
+}
+
+

@@ -1,0 +1,53 @@
+{
+  "sneckomod:D8": {
+    "NAME": "Octaedro Místico",
+    "DESCRIPTIONS": [
+      "A través de la niebla, llegas a un espacio tranquilo. En el centro de las ruinas, un #goctaedro #gmisterioso flota en silencio. Gira lentamente, con su superficie #b~brillando~ #b~débilmente,~ como si fuera algún tipo de #y~artefacto~ #y~primordial.~ NL Mientras extiendes la mano para tocarlo, el octaedro #b~de pronto~ #b~se~ #b~ilumina,~ y unos intrincados símbolos recorren su superficie en una corriente de luz. Sientes un #r@leve@ #r@temblor@ emergiendo del suelo, el aire se vuelve más #pdenso, y todo parece contener el aliento, esperando tu decisión. Decides...",
+      "La reliquia explotó.",
+      "Obtuviste la reliquia.",
+      "Decidiste marcharte."
+    ],
+    "OPTIONS": [
+      "[Romper] #rPierdes #r",
+      " #rPV. #gElige #b1 de #b3 Cartas #yAjena Raras para obtener.",
+      "[Tomar] #gObtén el #gOctaedro #gMístico. #rMaldito #r- #rDolor.",
+      "[Marcharte]",
+      "[Bloqueado] Requiere una carta con Exceso."
+    ]
+  },
+  "sneckomod:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "La creatividad triunfa sobre la planificación siempre."
+    ],
+    "OPTIONS": [
+      "[Improvisar] #gReemplaza todos los #gGolpes y #gDefensas por versiones #rAjenas.",
+      "[Bloqueado] Requiere un Golpe o Defensa."
+    ]
+  },
+  "sneckomod:Serpent": {
+    "NAME": "La Ssssserpiente",
+    "DESCRIPTIONS": [
+      "Entras a una sala y encuentras un gran agujero en el suelo. Al acercarte, una enorme criatura escamosa, no muy distinta a ti, emerge del interior. NL NL ~\"¡Hooooo!~ ¡Hola, amig@ serpiente!~ Déjame preguntarte algo... NL NL Escuchas que la serpiente dice palabras, pero no entiendes nada. Tu mente se confunde por completo. NL NL \"¿Estás de acuerdo?\"",
+      "~\"¡Excelente!\"~ NL NL Aún sin tener idea de qué fue la pregunta, parece que alegraste el día de la serpiente. Te entrega una baratija para ayudarte en tu misión y se desliza de vuelta al agujero.",
+      "La serpiente te observa con gran decepción... pero finalmente sonríe y te desea suerte en tu travesía."
+    ],
+    "OPTIONS": [
+      "[Aceptar] #gObtén una #gReliquia #gde #gSerpentija. #rMaldito #r- #rConfusión.",
+      "[Rechazar]",
+      "[Marcharte]"
+    ]
+  },
+  "sneckomod:SuspiciousHouse": {
+    "NAME": "Casa Sospechosa",
+    "DESCRIPTIONS": [
+      "Mientras atraviesas la ciudad, un chillido agudo e inhumano atrae tu atención hacia una casa cercana. Dentro, encuentras a un habitante de la Ciudad intentando silenciar a una criatura serpentina atrapada en una jaula. NL NL ~\"¡¿TÚ QUÉ HACES AQUÍ?! @¡FUERA@ @DE@ @MI@ @CASA!\"@ NL NL La criatura salta al fondo de la jaula, visiblemente asustada.",
+      "\"¿La quieres? @¡Está@ @bien!@ No vale la pena el problema.\" NL NL Con un ~suspiro~ frustrado, el sujeto abre la jaula. La criatura le muerde el dedo en un instante. Antes de que reaccione, le das un buen #rgolpe y lo dejas inconsciente. La criatura se sube felizmente a tu mano. A partir de ahora, te acompaña en la travesía. La llamarás... #y'Clementina'.",
+      "La serpiente te observa con una mezcla de decepción y resignación... pero finalmente te desea suerte."
+    ],
+    "OPTIONS": [
+      "[Rescatar] #gObtén a la #gSerpentija #gJoven. #rPelea contra un #rCenturión #rEnojado.",
+      "[Marcharte]"
+    ]
+  }
+}

@@ -1,0 +1,563 @@
+{
+  "downfall:NeowBlessing": {
+    "NAME": "Bendición de Neow",
+    "FLAVOR": "Calma tu furia. Sé tan resistente e inquebrantable como la propia Aguja.",
+    "DESCRIPTIONS": [
+      "El Jefe tiene más vida máxima, no tiene reliquia inicial, roba #b2 cartas menos y tiene #b1 menos de ",
+      " . NL Al inicio de cada combate, el Jefe obtiene un efecto de Mejora único. No puede ser #yAturdido."
+    ]
+  },
+  "downfall:NeowBlessing_Player": {
+    "NAME": "Bendición de Neow",
+    "FLAVOR": "Calma tu furia. Sé tan resistente e inquebrantable como la propia Aguja.",
+    "DESCRIPTIONS": [
+      "Al obtenerla, aumenta tu Vida Máxima en #b100. NL Aumenta tu Vida Máxima en #b100 al inicio de cada Acto. NL Pierde todos tus espacios de Pociones. NL Roba #b1 carta menos y pierde [E] al inicio de tu turno."
+    ]
+  },
+  "downfall:CoffeeDripper": {
+    "DESCRIPTIONS": [
+      " NL Al no poder Descansar, el Jefe comenzó con menos salud que la máxima."
+    ]
+  },
+  "downfall:BustedCrown": {
+    "DESCRIPTIONS": [
+      " NL Al no poder elegir cartas óptimas, el Jefe tiene menos cartas sinérgicas de lo normal."
+    ]
+  },
+  "downfall:Girya": {
+    "DESCRIPTIONS": [
+      " NL Al optar por Levantar en lugar de Descansar, el Jefe comenzó con menos salud que la máxima."
+    ]
+  },
+  "downfall:Matroyshka": {
+    "DESCRIPTIONS": [
+      " NL El Jefe obtuvo ",
+      " reliquias adicionales."
+    ]
+  },
+  "downfall:Ectoplasm": {
+    "DESCRIPTIONS": [
+      " NL Al no poder obtener oro, el Jefe tiene ",
+      " menos eliminaciones de cartas que lo usual."
+    ]
+  },
+  "downfall:BlackStar": {
+    "DESCRIPTIONS": [
+      " NL El Jefe obtuvo ",
+      " reliquias adicionales, pero comenzó con menos salud que la máxima."
+    ]
+  },
+  "downfall:MoltenEgg": {
+    "DESCRIPTIONS": [
+      " NL El Jefe mejoró ",
+      " Ataques gracias a esta reliquia."
+    ]
+  },
+  "downfall:ToxicEgg": {
+    "DESCRIPTIONS": [
+      " NL El Jefe mejoró ",
+      " Habilidades gracias a esta reliquia."
+    ]
+  },
+  "downfall:FrozenEgg": {
+    "DESCRIPTIONS": [
+      "El Jefe tiene muchos Poderes Mejorados."
+    ]
+  }, 
+"downfall:Shovel": {
+  "DESCRIPTIONS": [
+    " NL El Jefe obtuvo ",
+    " reliquias adicionales, pero comienza con menos salud máxima por no haber descansado."
+  ]
+},
+"downfall:CBRSerpentHead": {
+  "DESCRIPTIONS": [
+    " NL El Jefe usó este oro para eliminar 2 cartas de su mazo."
+  ]
+},
+"downfall:CursedKey": {
+  "DESCRIPTIONS": [
+    " NL El Jefe obtuvo ",
+    " Maldiciones gracias a esta reliquia."
+  ]
+},
+"downfall:DreamCatcher": {
+  "DESCRIPTIONS": [
+    " NL El Jefe obtuvo cartas adicionales al descansar."
+  ]
+},
+"downfall:PrayerWheel": {
+  "DESCRIPTIONS": [
+    " NL El Jefe obtuvo ",
+    " cartas extra gracias a esta reliquia."
+  ]
+},
+"downfall:PeacePipe": {
+  "DESCRIPTIONS": [
+    " NL El Jefe eliminó ",
+    " cartas adicionales, pero comienza con menos salud máxima."
+  ]
+},
+"downfall:RunicDome": {
+  "DESCRIPTIONS": [
+    " NL El Jefe puede elegir el orden de las cartas de forma desfavorable."
+  ]
+},
+"downfall:CentennialPuzzle": {
+  "DESCRIPTIONS": [
+    " NL No puede activarse durante el turno del Jefe."
+  ]
+},
+"downfall:CBRFaceOfCleric": {
+  "DESCRIPTIONS": [
+    " La Vida Máxima se incrementó gracias a esta reliquia."
+  ]
+},
+"downfall:Omamori": {
+  "DESCRIPTIONS": [
+    " NL Evitó que el Jefe obtuviera una "
+  ]
+},
+"downfall:DollysMirror": {
+  "DESCRIPTIONS": [
+    " NL El espejo duplicó "
+  ]
+},
+"downfall:Vampires": {
+  "NAME": "Evento: Vampiros",
+  "FLAVOR": "¡La sangre del amo... la sangre del amo! ¡LA SANGRE DEL AMO!",
+  "DESCRIPTIONS": [
+    "Los Golpes han sido reemplazados por Mordidas. NL -",
+    " de Vida Máxima."
+  ]
+},
+"downfall:BonfireSpirits": {
+  "NAME": "Evento: Espíritus de la Hoguera",
+  "FLAVOR": "Los espíritus arrojan pequeños huesos y fragmentos al fuego, que estalla brillantemente cada vez...",
+  "DESCRIPTIONS": [
+    "El Jefe eliminó una carta de su mazo para obtener 10 de Vida Máxima."
+  ]
+},
+"downfall:DesignerInSpire": {
+  "NAME": "Evento: Diseñador Inspirado",
+  "FLAVOR": "Esto no sirve, no no. ¿Qué clase de estilo es este? ¡Asqueroso! ¿Estás sangrando? Qué... ¡asqueroso!",
+  "DESCRIPTIONS": [
+    "Se eliminó una carta del mazo y se mejoró otra."
+  ]
+},
+"downfall:DivineFountain": {
+  "NAME": "Evento: Fuente Divina",
+  "FLAVOR": "Te topas con agua brillante que fluye eternamente desde una fuente en una pared cercana.",
+  "DESCRIPTIONS": [
+    " Se eliminaron Maldiciones del mazo."
+  ]
+},
+"downfall:Duplicator": {
+  "NAME": "Evento: Duplicador",
+  "FLAVOR": "Frente a ti hay un altar decorado para alguna entidad antigua.",
+  "DESCRIPTIONS": [
+    "El Jefe duplicó una carta poderosa."
+  ]
+},
+"downfall:BigFish": {
+  "NAME": "Evento: Gran Pescado",
+  "FLAVOR": "Mientras avanzas por un largo corredor, ves un plátano, una dona y una caja flotando cerca.",
+  "DESCRIPTIONS": [
+    "Se eligió la Dona. NL +5 de Vida Máxima.",
+    "Se eligió la Caja. NL Se añadió una maldición de Arrepentimiento y una reliquia."
+  ]
+},
+"downfall:LivingWall": {
+  "NAME": "Evento: Muro Viviente",
+  "FLAVOR": "Olvida lo que sabes, y te dejaré ir.",
+  "DESCRIPTIONS": [
+    "El Jefe eliminó una ",
+    "El Jefe mejoró una ",
+    "El Jefe transformó una ",
+    " en una "
+  ]
+},
+"downfall:WheelOfChange": {
+  "NAME": "Evento: Rueda del Cambio",
+  "FLAVOR": "¡Es hora de girar la rueda! ¿ESTÁS LISTO? ¡Claro que sí!",
+  "DESCRIPTIONS": [
+    "La Rueda le dio al Jefe una ",
+    "El Jefe fue curado a Vida Máxima.",
+    "La Rueda eliminó una ",
+    " del mazo del Jefe.",
+    "La Rueda causó daño al Jefe."
+  ]
+},
+"downfall:Falling": {
+  "NAME": "Evento: Caída",
+  "FLAVOR": "Mientras caes en picada, consideras tus opciones...",
+  "DESCRIPTIONS": [
+    "Se eliminó un Golpe del mazo."
+  ]
+},
+"downfall:Augmenter": {
+  "NAME": "Evento: Aumentador",
+  "FLAVOR": "Hola, forastero. ¿Interesado en avanzar la ciencia?",
+  "DESCRIPTIONS": [
+    "El Jefe transformó 2 cartas",
+    "El Jefe obtuvo J.A.X.",
+    "El Jefe obtuvo Fuerza Mutágena."
+  ]
+},
+"downfall:AncientWriting": {
+  "NAME": "Evento: Escritura Antigua",
+  "FLAVOR": "De repente, el mensaje se vuelve claro...",
+  "DESCRIPTIONS": [
+    "El Jefe mejoró todos los Golpes y Defender."
+  ]
+},
+"downfall:Bandits": {
+  "NAME": "Evento: Bandidos de la Máscara Roja",
+  "FLAVOR": "¡Atrápenlos, Oso!",
+  "DESCRIPTIONS": [
+    "El Jefe derrotó a los Bandidos, obteniendo la Máscara Roja, pero comienza con menos salud máxima."
+  ]
+},
+"downfall:WingStatue": {
+  "NAME": "Evento: Estatua Alada",
+  "FLAVOR": "Entre las piedras y rocas, notas una gran estatua azul intrincada con forma de ala.",
+  "DESCRIPTIONS": [
+    " fue eliminada del mazo."
+  ]
+},
+"downfall:Serpent": {
+  "NAME": "Evento: La Ssssserpiente",
+  "FLAVOR": "¡La vida más plena es aquella en la que puedes comprar cualquier cosa! ¿Estás de acuerdo?",
+  "DESCRIPTIONS": [
+    "El Jefe obtuvo una maldición de Duda para conseguir oro, el cual usó para comprar una reliquia."
+  ]
+},
+"downfall:Cleric": {
+  "NAME": "Evento: Clérigo",
+  "FLAVOR": "¡Hola amigo! ¡Soy Clérigo! ¿Interesado en mis servicios?",
+  "DESCRIPTIONS": [
+    "El Jefe eliminó una carta de su mazo."
+  ]
+},
+"downfall:OldBeggar": {
+  "NAME": "Evento: Mendigo Viejo",
+  "FLAVOR": "¿Una moneda, hijo?",
+  "DESCRIPTIONS": [
+    "Se eliminó una carta del mazo."
+  ]
+},
+"downfall:Library": {
+  "NAME": "Evento: Biblioteca",
+  "FLAVOR": "Te encuentras con un edificio ornamentado que parece abandonado.",
+  "DESCRIPTIONS": [
+    "El Jefe obtuvo una carta adicional sinérgica."
+  ]
+},
+"downfall:Mausoleum": {
+  "NAME": "Evento: Mausoleo",
+  "FLAVOR": "No puedes descifrar la escritura del ataúd, pero notas una niebla negra filtrándose por los costados.",
+  "DESCRIPTIONS": [
+    "El Jefe obtuvo una maldición de Retorcimiento y una reliquia adicional."
+  ]
+},
+"downfall:Nest": {
+  "NAME": "Evento: Nido",
+  "FLAVOR": "¡CAW CAW CAAAAAWWW!",
+  "DESCRIPTIONS": [
+    "El Jefe obtuvo una Daga del Ritual."
+  ]
+},
+"downfall:Colosseum": {
+  "NAME": "Evento: Coliseo",
+  "FLAVOR": "¡AHORA DAMOS INICIO AL COMBATE!",
+  "DESCRIPTIONS": [
+    "El Jefe completó el evento del Coliseo, obteniendo dos reliquias adicionales."
+  ]
+},
+"downfall:PleadingVagrant": {
+  "NAME": "Evento: Vagabundo Suplicante",
+  "FLAVOR": "¿Tienes algo para mí, amigo? Por favor... ¿quizá unas #yMonedas?",
+  "DESCRIPTIONS": [
+    "El Jefe robó a los Vagabundos, obteniendo una maldición de Vergüenza y "
+  ]
+},
+"downfall:Mushroom": {
+  "NAME": "Evento: Hongos",
+  "FLAVOR": "Entras a un pasillo lleno de hipnóticos hongos de colores.",
+  "DESCRIPTIONS": [
+    "El Jefe se curó completamente y obtuvo una maldición de Parásito.",
+    "El Jefe obtuvo la reliquia Hongo Extraño, pero comienza con menos salud máxima."
+  ]
+},
+"downfall:ShiningLight": {
+  "NAME": "Evento: Luz Brillante",
+  "FLAVOR": "Encuentras una masa brillante de luz en el centro de la habitación.",
+  "DESCRIPTIONS": [
+    "El Jefe mejoró ",
+    " y ",
+    ", pero comienza con menos salud máxima."
+  ]
+},
+"downfall:ScrapOoze": {
+  "NAME": "Evento: Baba Chatarruda",
+  "FLAVOR": "Frente a ti hay una criatura parecida a una baba que comió demasiada chatarra para su propio bien.",
+  "DESCRIPTIONS": [
+    "El Jefe obtuvo una reliquia adicional."
+  ]
+},
+"downfall:GoldenIdolEvent": {
+  "NAME": "Evento: Ídolo Dorado",
+  "FLAVOR": "En lo alto del altar descansa una estatua femenina ornamentada con los brazos extendidos. NL Te llama, exigiendo un sacrificio.",
+  "DESCRIPTIONS": [
+    "El Jefe tomó el Ídolo Dorado, obtuvo una maldición de Lesión y usó el oro extra para comprar "
+  ]
+},
+"downfall:FaceTrader": {
+  "NAME": "Evento: Vendedor de Rostros",
+  "FLAVOR": "Rostro. ¿Puedo tocar? ¿Quizá intercambiar?",
+  "DESCRIPTIONS": [
+    "El Jefe obtuvo una reliquia de rostro aleatoria."
+  ]
+},
+"downfall:OminousForge": {
+  "NAME": "Evento: Forja Inquietante",
+  "FLAVOR": "¡CLANG! ¡CLAAANG! ¡CLANG!",
+  "DESCRIPTIONS": [
+    "El Jefe obtuvo Tenazas Deformadas y una maldición de Dolor."
+  ]
+},
+"downfall:Purifier": {
+  "NAME": "Evento: Purificador",
+  "FLAVOR": "Frente a ti hay un santuario elaborado dedicado a un espíritu olvidado.",
+  "DESCRIPTIONS": [
+    " fue eliminada del mazo."
+  ]
+},
+"downfall:MatchAndKeep": {
+  "NAME": "Evento: Empareja y Conserva",
+  "FLAVOR": "¡Doce cartas! ¡Empájalas para conservarlas! Cinco intentos, sin repeticiones. ¿Estás listo? ¡Comencemos!",
+  "DESCRIPTIONS": [
+    "El Jefe emparejó con éxito y obtuvo una carta poderosa."
+  ]
+},
+"downfall:Transmogrifier": {
+  "NAME": "Evento: Transfigurador",
+  "FLAVOR": "Frente a ti hay un santuario elaborado dedicado a un espíritu olvidado.",
+  "DESCRIPTIONS": [
+    "El Jefe transformó una carta inicial en una nueva carta."
+  ]
+},
+"downfall:TombRedMask": {
+  "NAME": "Evento: Tumba del Señor de la Máscara Roja",
+  "FLAVOR": "Puede verse una tumba altamente ornamentada al otro lado de un camino flotante.",
+  "DESCRIPTIONS": [
+    "El Jefe obtuvo la reliquia Máscara Roja."
+  ]
+},
+"downfall:UpgradeShrine": {
+  "NAME": "Evento: Santuario de Mejora",
+  "FLAVOR": "Frente a ti hay un santuario elaborado dedicado a un espíritu olvidado.",
+  "DESCRIPTIONS": [
+    "El Jefe #yMejoró una carta con el Santuario de Mejora."
+  ]
+},
+"downfall:WeMeetAgain": {
+  "NAME": "Evento: ¡Nos Volvemos a Encontrar!",
+  "FLAVOR": "¡Soy yo, #yRanwid! ¿Tienes algo para mí hoy? ¿Lo de siempre? Un tipo como yo no puede sobrevivir solo, ¿sabes?",
+  "DESCRIPTIONS": [
+    "Se intercambió oro con Ranwid a cambio de una reliquia adicional."
+  ]
+},
+"downfall:GoldenShrine": {
+  "NAME": "Evento: Santuario Dorado",
+  "FLAVOR": "Frente a ti hay un santuario elaborado dedicado a un espíritu antiguo.",
+  "DESCRIPTIONS": [
+    "El Jefe obtuvo una maldición de Arrepentimiento a cambio de oro, y usó este oro para comprar "
+  ]
+},
+"downfall:GremlinSack": {
+  "NAME": "Saco del Gremlin",
+  "FLAVOR": "El Gremlin y su guardaespaldas no fueron rival para ti.",
+  "DESCRIPTIONS": [
+    "Al obtenerlo, añade las siguientes cartas a tu mazo: NL ",
+    "Al obtenerlo, añade #b6 cartas a tu mazo del Juego de cada tipo.",
+    "#g(Inicial) ",
+    "#g(Común) ",
+    "#b(Poco Común) ",
+    "#y(Rara) ",
+    "#b(Incolora) ",
+    "#r(Maldición) "
+  ]
+},
+"downfall:GremlinWheel": {
+  "NAME": "Rueda del Cambio",
+  "FLAVOR": "Nadie obtiene dos giros, dice él.",
+  "DESCRIPTIONS": [
+    "En cada Punto de Descanso, puedes girar la rueda una vez. Elegir recoger su recompensa consume esta reliquia.",
+    "Esta reliquia ha sido usada."
+  ]
+},
+"downfall:CloakOfManyFaces": {
+  "NAME": "Abrigo de Muchos Rostros",
+  "FLAVOR": "Era Steve, y Bill, e Ian, y Fred, y John...",
+  "DESCRIPTIONS": [
+    "Al obtenerla, obtén Máscara de Cultista, Cara del Clérigo, Cara Hambrienta de N'loth, Máscara Pequeña de Gremlin, y Cabeza de Ssserpiente."
+  ]
+},
+"downfall:BrokenWingStatue": {
+  "NAME": "Estatua de Ala Rota",
+  "FLAVOR": "Un fragmento roto de una estatua que alguna vez fue magnífica.",
+  "DESCRIPTIONS": [
+    "Los cultistas que adoran al Despierto estarán interesados en esto...",
+    "Al comienzo de cada combate, si los enemigos son del grupo de Cultistas, tomarán esta reliquia de ti y escaparán del combate."
+  ]
+},
+"downfall:ShatteredFragment": {
+  "NAME": "Fragmento Afilado",
+  "FLAVOR": "Alguna vez una estatua rota – ahora un arma improvisada.",
+  "DESCRIPTIONS": [
+    "Durante combates contra Élites y Jefes, cada vez que juegues una carta de tipo #yPoder, gana #b1 de #yFuerza [REMOVE_SPACE]."
+  ]
+},
+"downfall:RedIOU": {
+  "NAME": "Contrato de Bandidos",
+  "FLAVOR": "Un acuerdo del trío de Bandidos – en parte a cambio de un baratija, pero sobre todo por sus vidas.",
+  "DESCRIPTIONS": [
+    "Al comienzo del #b3er combate contra jefes, los Bandidos de la Máscara Roja te ayudarán.",
+    "¡Es hora de trabajar, muchachos!",
+    "¡Dale Oso!",
+    "Un trato es un trato. NL Hemos terminado aquí.",
+    "Todos saluden al nuevo NL ~Señor~ ~Máscara~ ~Roja!~",
+    "¡Buena suerte, jefe!"
+  ]
+},
+"downfall:RedIOUUpgrade": {
+  "NAME": "Contrato de Bandidos+",
+  "FLAVOR": "Un acuerdo del trío de Bandidos – en parte a cambio de un baratija, pero sobre todo por sus vidas.",
+  "DESCRIPTIONS": [
+    "Al comienzo del #b3er combate contra jefes, los Bandidos de la Máscara Roja te ayudarán."
+  ]
+},
+"downfall:KnowingSkull": {
+  "NAME": "Calavera Sabia",
+  "FLAVOR": "¡Suéltame!",
+  "DESCRIPTIONS": [
+    "Al comienzo de cada combate, puedes desear Almas, Pociones o una carta Incolora a cambio de vida."
+  ]
+},
+"downfall:HeartBlessingRed": {
+  "NAME": "Bendición de Corazón Rubí",
+  "FLAVOR": "El corazón es fuerte.",
+  "DESCRIPTIONS": [
+    "Comienza combates contra jefes con #b1 de #yFuerza [REMOVE_SPACE]."
+  ]
+},
+"downfall:HeartBlessingBlue": {
+  "NAME": "Bendición de Corazón Zafiro",
+  "FLAVOR": "El corazón está complacido.",
+  "DESCRIPTIONS": [
+    "Comienza combates contra jefes con #b10 de #yPV #yTemporal [REMOVE_SPACE]."
+  ]
+},
+"downfall:HeartBlessingGreen": {
+  "NAME": "Bendición de Corazón Esmeralda",
+  "FLAVOR": "El corazón lo es todo.",
+  "DESCRIPTIONS": [
+    "Comienza combates contra jefes con #b1 de #yDestreza [REMOVE_SPACE]."
+  ]
+},
+"downfall:BurdenOfKnowledge": {
+  "NAME": "Carga del Conocimiento",
+  "FLAVOR": "La verdad duele.",
+  "DESCRIPTIONS": [
+    "Al obtenerla, #rpierdes #rTODAS #rlas #rBendiciones #rdel #rCorazón y #b10 de Vida Máxima. Mejora #yPERMANENTEMENTE #rtodas las cartas #ren #rtodas #rpartes [REMOVE_SPACE]. Comienza los combates con #b1 menos de #yFuerza y #yDestreza [REMOVE_SPACE]."
+  ]
+},
+"downfall:TeleportStone": {
+  "NAME": "Piedra de Teletransporte",
+  "FLAVOR": "Nunca salgas de casa sin ella.",
+  "DESCRIPTIONS": [
+    "Puedes saltarte cualquier cantidad de salas la próxima vez que avances, pero no puedes entrar a una Sala de Jefe.",
+    "",
+    "Esta reliquia ha sido usada."
+  ]
+},
+"downfall:HeartsMalice": {
+  "NAME": "La Maldad del Corazón",
+  "FLAVOR": "La malicia de la corrupción otorgada por el Corazón.",
+  "DESCRIPTIONS": [
+    "Los enemigos en tus primeros #b3 combates huirán aterrorizados.",
+    "Esta reliquia ha sido usada."
+  ]
+},
+"downfall:Hecktoplasm": {
+  "NAME": "Hecktoplasma",
+  "FLAVOR": "Esta masa de baba parece pulsar con la energía de cientos de almas. Con razón nadie la quería.",
+  "DESCRIPTIONS": [
+    "Gana [E] al inicio de tu turno. Ya no puedes obtener #yAlmas. Romper Llaves no cuesta #yAlmas.",
+    "Hecktoplasma"
+  ]
+},
+"downfall:BlackCandle": {
+  "NAME": "Vela Negra",
+  "FLAVOR": "La llama brilla aún más intensamente desde dentro de la oscuridad.",
+  "DESCRIPTIONS": [
+    "Las cartas de #rMaldición #yInjugables ahora se pueden jugar. Cada vez que juegues una carta de #rMaldición #yInjugable, se #yAgota y pierdes #b1 de HP.",
+    "Vela Negra"
+  ]
+},
+"downfall:replacements": {
+  "NAME": "",
+  "FLAVOR": "",
+  "DESCRIPTIONS": [
+    "Durante los combates contra Mercaderes, Élites y Jefes, gana [E] al inicio de tu turno.",
+    "Moneda Maldita",
+    "Pocos que aún viven conocen el verdadero precio de esta vieja moneda...",
+    "Carta MVB",
+    "En verdad, eres el MVB del Corazón: Jefe Más Valioso.",
+    "La corrupción del Corazón no conoce límites – ni siquiera con mascotas adorables.",
+    "Mensajero Corrupto",
+    "El Corazón reabastece cartas, reliquias y pociones. Todos los precios se reducen un #b20%.",
+    "Las pantallas de recompensa de combate ahora incluyen cartas Incoloras y de colores de Héroes.",
+    "Gana [E] al inicio de tu turno. Ya no puedes obtener #yAlmas. Romper Llaves no cuesta #yAlmas."
+  ]
+},
+"downfall:LizardTail": {
+  "NAME": "Cola de Lagarto Súper",
+  "FLAVOR": "Una cola falsa para engañar a los enemigos durante el combate.",
+  "DESCRIPTIONS": [
+    "Cuando vayas a morir, recuperas el #b100% de tu Vida Máxima en su lugar (funciona una vez)."
+  ]
+},
+"downfall:TestRelic": {
+  "NAME": "Probador de VFX",
+  "FLAVOR": "Cuando se sale del índice, lo lograste.",
+  "DESCRIPTIONS": [
+    "#pClic #pDerecho: Reproduce la siguiente carta."
+  ]
+},
+"downfall:ExtraCursedKey": {
+  "NAME": "Llave Maldita Extra",
+  "FLAVOR": "Encerrada por una buena razón.",
+  "DESCRIPTIONS": [
+    "Gana [E] la primera vez que robes una #rMaldición cada turno. NL Cada vez que abras un cofre que no sea de Jefe, obtén una #rHerida [REMOVE_SPACE]."
+  ]
+},
+"downfall:ExtraCursedBell": {
+  "NAME": "Campana Maldita Extra",
+  "FLAVOR": "Crees oír su eco, pero nunca puedes confirmarlo.",
+  "DESCRIPTIONS": [
+    "Al obtenerla, obtén una #rMaldición única y #b3 reliquias Comunes.",
+    "La Campana Suena Dos Veces...",
+    "Omitir Recompensas",
+    "Cerrar"
+  ]
+},
+"downfall:BustedCrownGagText": {
+  "NAME": "Corona Rota",
+  "FLAVOR": "La imitación es la forma más sincera de adulación... ¿o no? Ni siquiera se parece tanto a tu corona. De hecho, es muy insultante.",
+  "DESCRIPTIONS": [
+    "Gana [E] al inicio de tu turno. Las recompensas de cartas futuras tienen 2 cartas menos entre las cuales elegir."
+  ]
+}
+}

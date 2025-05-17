@@ -1,0 +1,214 @@
+{
+  "Guardian:NextTurnGainTemporaryStrengthPower": {
+    "NAME": "Cargar Potencia",
+    "DESCRIPTIONS": [
+      "Obtén #b",
+      " de Fuerza temporal en tu próximo turno."
+    ]
+  },
+  "Guardian:StunnedPower": {
+    "NAME": "Aturdido",
+    "DESCRIPTIONS": [
+      "Pierde tu próximo turno.",
+      "Pierde tus próximos #b",
+      " turnos."
+    ]
+  },
+  "Guardian:FloatingOrbsPower": {
+    "NAME": "Orbes Flotantes",
+    "DESCRIPTIONS": [
+      "Cada vez que juegas una carta de coste #y0, inflige #b",
+      " de daño a un enemigo aleatorio."
+    ]
+  },
+  "Guardian:OrbwalkPower": {
+    "NAME": "Marcha Orbital",
+    "DESCRIPTIONS": [
+      "Obtén #b",
+      " de Fuerza al inicio de cada turno."
+    ]
+  },
+  "Guardian:ClonePower": {
+    "NAME": "Redirigir",
+    "DESCRIPTIONS": [
+      "La siguiente carta que juegues este turno entra en #yEstasis.",
+      "Las próximas #b",
+      " cartas que juegues este turno entran en #yEstasis."
+    ]
+  },
+  "Guardian:GemFinderPower": {
+    "NAME": "Buscador de Gemas",
+    "DESCRIPTIONS": [
+      "Al final del combate, puedes añadir una #yGema aleatoria a tu mazo.",
+      "Al final del combate, puedes añadir #b",
+      " #yGemas aleatorias a tu mazo."
+    ]
+  },
+  "Guardian:FuturePlansPower": {
+    "NAME": "Planes Futuros",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, puedes colocar #b",
+      " carta en #yEstasis [REMOVE_SPACE].",
+      " cartas en #yEstasis [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:DefenseModePower": {
+    "NAME": "Modo Defensivo",
+    "DESCRIPTIONS": [
+      "#yModo #yDefensivo permanecerá activo por #b",
+      " turnos. Otorga #b",
+      " de #yEspinas, reduce el daño infligido en un #b25%, y otorga #b2 de #yBloqueo al jugar una carta."
+    ]
+  },
+  "Guardian:ConstructModePower": {
+    "NAME": "Modo Construcción",
+    "DESCRIPTIONS": [
+      "Al inicio de cada turno, si tienes al menos #b",
+      " de #yBúfer, obtén #b",
+      " de #yFuerza."
+    ]
+  },
+  "Guardian:MultiBoostPower": {
+    "NAME": "Multiplicador",
+    "DESCRIPTIONS": [
+      "Los ataques que infligen daño múltiple lo hacen una vez adicional.",
+      "Los ataques que infligen daño múltiple lo hacen #b",
+      " veces adicionales."
+    ]
+  },
+  "Guardian:TargetedPower": {
+    "NAME": "Fijado",
+    "DESCRIPTIONS": [
+      "Cada vez que este enemigo reciba daño, obtén #b",
+      " de #yFuerza por este turno."
+    ]
+  },
+  "Guardian:LoseThornsPower": {
+    "NAME": "Espinas Perdidas",
+    "DESCRIPTIONS": [
+      "Pierde #b",
+      " de #yEspinas al inicio de tu próximo turno."
+    ]
+  },
+  "Guardian:BeamBuffPower": {
+    "NAME": "Preparado",
+    "DESCRIPTIONS": [
+      "Las cartas tipo Rayo infligen #b",
+      " de daño adicional."
+    ]
+  },
+  "Guardian:DefensiveModeBuffsPower": {
+    "NAME": "Modo Defensivo+",
+    "DESCRIPTIONS": [
+      "Además de sus efectos normales, #yModo #yDefensivo aplicará: NL #b",
+      " de #yEspinas.",
+      " de #yDestreza.",
+      " de #yBloqueo al final de cada turno.",
+      "#yAgota la primera carta de #yEstado o #yMaldición robada cada turno.",
+      "#yAgota las primeras #b",
+      " cartas de #yEstado o #yMaldición robadas cada turno.",
+      "Obtén #b",
+      " de #yFuerza por cada turno que estuvo activo #yModo #yDefensivo."
+    ]
+  },
+  "Guardian:AutomayhemPower": {
+    "NAME": "Tamiz Temporal",
+    "DESCRIPTIONS": [
+      "Al inicio de tu turno, #yAcelera.",
+      "Al inicio de tu turno, #yAcelera ",
+      " veces."
+    ]
+  },
+  "Guardian:ConstructPower": {
+    "NAME": "Constructo Ancestral",
+    "DESCRIPTIONS": [
+      "Obtén #b",
+      " de #yArtefacto",
+      " al inicio de tu turno si no tienes ningún #yArtefacto [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:ModeShiftPower": {
+    "NAME": "Cambio de Modo",
+    "DESCRIPTIONS": [
+      "Cuando pierdas #b",
+      " PV, obtén #b16 de #yBloqueo, entra en #yModo #yDefensivo hasta el próximo turno, y aumenta el umbral requerido para activar este efecto en #b10 (máximo #b50 [REMOVE_SPACE])."
+    ]
+  },
+  "Guardian:ExhaustStatusesPower": {
+    "NAME": "Repulsor",
+    "DESCRIPTIONS": [
+      "Cuando robes la primera carta de #yEstado o #yMaldición en un turno, #yAgótala y roba una carta.",
+      "Cuando robes las primeras #b",
+      " cartas de #yEstado o #yMaldición en un turno, #yAgótalas y roba una carta."
+    ]
+  },
+  "Guardian:RevengePower": {
+    "NAME": "Protocolo de Venganza",
+    "DESCRIPTIONS": [
+      "Cada vez que entres en #yModo #yDefensivo obtén #b",
+      " de #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:StasisEnginePower": {
+    "NAME": "Motor de Estasis",
+    "DESCRIPTIONS": [
+      "Obtén #b",
+      " [E] y roba #b",
+      " carta",
+      " cartas",
+      " al jugar la tercera carta de coste 0 en un solo turno."
+    ]
+  },
+  "Guardian:EnergizedGuardianPower": {
+    "NAME": "Energizado",
+    "DESCRIPTIONS": [
+      "Obtén #b",
+      " [E] adicional en el siguiente turno.",
+      " [E] adicionales en el siguiente turno.",
+      "- NOTA DEL TRADUCTOR: Esta línea es para distinguir singular/plural si es necesario."
+    ]
+  },
+  "Guardian:BlockOnCardUsePower": {
+    "NAME": "Aceite de Blindaje",
+    "DESCRIPTIONS": [
+      "Obtén #b",
+      " de #yBloqueo cada vez que juegas una carta este turno."
+    ]
+  },
+  "Guardian:EvasiveProtocolPower": {
+    "NAME": "Protocolo Evasivo",
+    "DESCRIPTIONS": [
+      "Reduce tus desventajas en #b",
+      " al entrar en #yModo #yDefensivo [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:SpikerProtocolPower": {
+    "NAME": "Protocolo de Espinas",
+    "DESCRIPTIONS": [
+      "Obtén #b",
+      " de #yEspinas al entrar en #yModo #yDefensivo [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:ArmoredProtocolPower": {
+    "NAME": "Protocolo Reforzado",
+    "DESCRIPTIONS": [
+      "Obtén #b",
+      " de #yBloqueo al finalizar tu turno mientras estás en #yModo #yDefensivo [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:DontLeaveDefensiveModePower": {
+    "NAME": "Modo Defensivo",
+    "DESCRIPTIONS": [
+      "Saldrás de #yModo #yDefensivo al final de este turno.",
+      "#yModo #yDefensivo permanecerá activo por #b",
+      " rondas más."
+    ]
+  },
+  "Guardian:BracePerTurnPower": {
+    "NAME": "Ensambles por Turno",
+    "DESCRIPTIONS": [
+      "Al inicio de tu turno, #yEnsamblar #b",
+      " [REMOVE_SPACE]."
+    ]
+  }
+}

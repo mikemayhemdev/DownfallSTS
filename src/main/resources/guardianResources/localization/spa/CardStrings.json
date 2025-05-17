@@ -1,0 +1,466 @@
+{
+  "Guardian:Strike_Guardian": {
+    "NAME": "Golpe",
+    "DESCRIPTION": "Haz !D! de daño."
+  },
+  "Guardian:Defend_Guardian": {
+    "NAME": "Defensa",
+    "DESCRIPTION": "Gana !B! de Bloqueo."
+  },
+  "Guardian:Gem_Red": {
+    "NAME": "Rubí",
+    "DESCRIPTION": "guardianmod:Gema. NL Gana 2 de Fuerza temporal.",
+    "UPGRADE_DESCRIPTION": "Gana 2 de Fuerza temporal."
+  },
+  "Guardian:Gem_Green": {
+    "NAME": "Esmeralda",
+    "DESCRIPTION": "guardianmod:Gema. NL Gana 2 de Destreza temporal.",
+    "UPGRADE_DESCRIPTION": "Gana 2 de Destreza temporal."
+  },
+  "Guardian:Gem_Lightblue": {
+    "NAME": "Turmalina",
+    "DESCRIPTION": "guardianmod:Gema. NL Gana 4 de Espinas temporales.",
+    "UPGRADE_DESCRIPTION": "Gana 4 de Espinas temporales."
+  },
+  "Guardian:Gem_White": {
+    "NAME": "Ópalo",
+    "DESCRIPTION": "guardianmod:Gema. NL Roba una carta.",
+    "UPGRADE_DESCRIPTION": "Roba una carta."
+  },
+  "Guardian:Gem_Orange": {
+    "NAME": "Citrino",
+    "DESCRIPTION": "guardianmod:Gema. NL Gana [E].",
+    "UPGRADE_DESCRIPTION": "Gana [E]."
+  },
+  "Guardian:Gem_Cyan": {
+    "NAME": "Aguamarina",
+    "DESCRIPTION": "guardianmod:Gema. NL Gana un *Escudo *Cristalino.",
+    "UPGRADE_DESCRIPTION": "Gana un *Escudo *Cristalino."
+  },
+  "Guardian:ChargeUp": {
+    "NAME": "Cargar Núcleo",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL En el siguiente turno, gana !M! de Fuerza temporal."
+  },
+  "Guardian:DonusPower": {
+    "NAME": "Sobrecarga",
+    "DESCRIPTION": "Roba !M! cartas. NL Reduce cada uno de tus desventajas en 1.",
+    "UPGRADE_DESCRIPTION": "Roba !M! cartas. NL Reduce cada uno de tus desventajas en 1."
+  },
+  "Guardian:DecasProtection": {
+    "NAME": "Poder Ancestral",
+    "DESCRIPTION": "Gana !M! de Fuerza y Destreza temporal."
+  },
+  "Guardian:FierceBash": {
+    "NAME": "Golpe Férreo",
+    "DESCRIPTION": "Haz !D! de daño. NL Coloca esta carta en guardianmod:Estasis. NL guardianmod:Tic - Aumenta el daño de esta carta en !M!."
+  },
+  "Guardian:PolyBeam": {
+    "NAME": "Rayo Poli",
+    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio !M! veces."
+  },
+  "Guardian:TwinSlam": {
+    "NAME": "Golpe Gemelo",
+    "DESCRIPTION": "Haz !D! de daño. NL Gana un *Segundo *Impacto.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Gana un *Segundo *Impacto+."
+  },
+  "Guardian:GuardianWhirl": {
+    "NAME": "Torbellino Guardián",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos 2 veces. NL Si tienes 16 o más de Bloqueo, haz daño !M! veces adicionales.",
+    "EXTENDED_DESCRIPTION": [
+      "Se requiere más Bloqueo."
+    ]
+  },
+  "Guardian:VentSteam": {
+    "NAME": "Liberar Vapor",
+    "DESCRIPTION": "Aplica !M! de Vulnerable a TODOS los enemigos.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! de Vulnerable a TODOS los enemigos."
+  },
+  "Guardian:CurlUp": {
+    "NAME": "Replegarse",
+    "DESCRIPTION": "Coloca una carta aleatoria de tu mano en guardianmod:Estasis. NL guardianmod:Ensamblar !M!.",
+    "UPGRADE_DESCRIPTION": "Coloca una carta de tu mano en guardianmod:Estasis. NL guardianmod:Ensamblar !M!."
+  },
+  "Guardian:TimeBomb": {
+    "NAME": "Bomba Temporal",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL guardianmod:Acelera TODAS las cartas en *Estasis. NL Agota."
+  },
+  "Guardian:HyperBeam_Guardian": {
+    "NAME": "Rayo Giga",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL La Fuerza afecta esta carta !M! veces. NL Pierdes tu siguiente turno."
+  },
+"Guardian:BronzeArmor": {
+  "NAME": "Placa Reforzada",
+  "DESCRIPTION": "Reduce cada uno de tus desventajas en !M!. NL guardianmod:Ensamblar 8. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Reduce cada uno de tus desventajas en !M!. NL guardianmod:Ensamblar 8."
+},
+"Guardian:FloatingOrbs": {
+  "NAME": "Orbes Flotantes",
+  "DESCRIPTION": "Cada vez que juegas una carta de coste 0, haz !M! de daño a un enemigo aleatorio."
+},
+"Guardian:OrbSlam": {
+  "NAME": "Golpe Orbital",
+  "DESCRIPTION": "Haz !D! de daño !GuardianMulti! veces. NL Agota."
+},
+"Guardian:Incinerate": {
+  "NAME": "Incinerar",
+  "DESCRIPTION": "Haz !D! de daño. NL guardianmod:Acelerar.",
+  "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL guardianmod:Acelerar dos veces."
+},
+"Guardian:Orbwalk": {
+  "NAME": "Marcha Orbital",
+  "DESCRIPTION": "Gana !M! de Fuerza. NL guardianmod:Tic - Gana 1 de Fuerza. NL guardianmod:Volátil.",
+  "UPGRADE_DESCRIPTION": "Gana !M! de Fuerza. NL guardianmod:Tic - Gana 1 de Fuerza."
+},
+"Guardian:WalkerClaw": {
+  "NAME": "Garra Andante",
+  "DESCRIPTION": "Haz !D! de daño !M! veces.",
+  "UPGRADE_DESCRIPTION": "Haz !D! de daño !M! veces."
+},
+"Guardian:SphericShield": {
+  "NAME": "Escudo Esférico",
+  "DESCRIPTION": "Gana !B! de Bloqueo. NL Entra en *Modo *Defensivo. NL Agota."
+},
+"Guardian:Harden": {
+  "NAME": "Endurecer",
+  "DESCRIPTION": "Requiere al menos 20 de Bloqueo. NL guardianmod:Ensamblar !GuardianSecondM! y gana !M! de Espinas.",
+  "EXTENDED_DESCRIPTION": [
+    "Se requiere más Bloqueo."
+  ]
+},
+"Guardian:SentryBeam": {
+  "NAME": "Rayo Centinela",
+  "DESCRIPTION": "Haz !D! de daño. NL Coloca una *Ola *Centinela en guardianmod:Estasis. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Coloca una *Ola *Centinela+ en guardianmod:Estasis. NL Agota."
+},
+"Guardian:SentryWave": {
+  "NAME": "Ola Centinela",
+  "DESCRIPTION": "Aplica !M! de Débil. NL Coloca una *Explosión *Centinela en guardianmod:Estasis. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Aplica !M! de Débil. NL guardianmod:Ensamblar 2. NL Coloca una *Explosión *Centinela+ en guardianmod:Estasis. NL Agota."
+},
+"Guardian:CompilePackage": {
+  "NAME": "Compilar Paquete",
+  "DESCRIPTION": "Elige un guardianmod:Paquete para colocar en guardianmod:Estasis. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Elige un guardianmod:Paquete Mejorado para colocar en guardianmod:Estasis. NL Agota.",
+  "EXTENDED_DESCRIPTION": [
+    "Elige un Paquete."
+  ]
+},
+"Guardian:PackageShapes": {
+  "NAME": "Paquete: Formas",
+  "DESCRIPTION": "Obtén una *Bomba *Temporal, *Protocolo *Espinas y *Repulsor. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Obtén una *Bomba *Temporal+, *Protocolo *Espinas+ y *Repulsor+. NL Agota."
+},
+"Guardian:PackageDonuDeca": {
+  "NAME": "Paquete: Ancestros",
+  "DESCRIPTION": "Obtén una *Sobrecarga, *Poder *Ancestral y *Construcción *Ancestral. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Obtén una *Sobrecarga+, *Poder *Ancestral+ y *Construcción *Ancestral+. NL Agota."
+},
+"Guardian:PackageSphere": {
+  "NAME": "Paquete: Esférico",
+  "DESCRIPTION": "Obtén un *Escudo *Esférico, *Orbes *Flotantes y *Endurecer. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Obtén un *Escudo *Esférico+, *Orbes *Flotantes+ y *Endurecer+. NL Agota."
+},
+"Guardian:PackageSentry": {
+  "NAME": "Paquete: Centinela",
+  "DESCRIPTION": "Obtén una *Explosión *Centinela y dos *Olas *Centinelas. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Obtén una *Explosión *Centinela+ y dos *Olas *Centinelas+. NL Agota."
+},
+"Guardian:PackageWalker": {
+  "NAME": "Paquete: Caminante",
+  "DESCRIPTION": "Obtén una *Marcha *Orbital, *Garra *Andante y *Incinerar. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Obtén una *Marcha *Orbital+, *Garra *Andante+ y *Incinerar+. NL Agota."
+},
+"Guardian:PackageAutomaton": {
+  "NAME": "Paquete: Bronce",
+  "DESCRIPTION": "Obtén un *Giga *Rayo, *Soporte *Orbital y *Placa *Reforzada. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Obtén un *Giga *Rayo+, *Soporte *Orbital+ y *Placa *Reforzada+. NL Agota."
+},
+"Guardian:PackageDefect": {
+  "NAME": "Paquete: Defecto",
+  "DESCRIPTION": "Obtén un *Redirigir, *Preprogramar y *Capacitor *Temporal. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Obtén un *Redirigir+, *Preprogramar+ y *Capacitor *Temporal+. NL Agota."
+},
+"Guardian:Planning": {
+  "NAME": "Planificación",
+  "DESCRIPTION": "Coloca las primeras !M! cartas de tu pila de robo en guardianmod:Estasis."
+},
+"Guardian:Recover": {
+  "NAME": "Recuperación",
+  "DESCRIPTION": "Gana !B! de Bloqueo. NL guardianmod:Ensamblar !M!. NL Coloca una carta de tu pila de descarte en guardianmod:Estasis."
+},
+"Guardian:Emergency": {
+  "NAME": "Emergencia",
+  "DESCRIPTION": "guardianmod:Acelera TODAS las cartas en guardianmod:Estasis. NL Agota.",
+  "UPGRADE_DESCRIPTION": "guardianmod:Acelera TODAS las cartas en guardianmod:Estasis dos veces. NL Agota."
+},
+"Guardian:Clone": {
+  "NAME": "Clonar",
+  "DESCRIPTION": "Elige una carta. NL Coloca una copia de esa carta en guardianmod:Estasis. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Elige una carta. NL Coloca una copia de esa carta en guardianmod:Estasis. NL guardianmod:Acelerar. NL Agota."
+},
+"Guardian:Preprogram": {
+  "NAME": "Preprogramar",
+  "DESCRIPTION": "Mira las primeras !M! cartas de tu pila de robo. Elige una y colócala en guardianmod:Estasis."
+},
+"Guardian:GemFinder": {
+  "NAME": "Detector de Gemas",
+  "DESCRIPTION": "Etérea. NL Al final del combate, puedes añadir una guardianmod:Gema aleatoria a tu mazo."
+},
+"Guardian:StasisField": {
+  "NAME": "Campo de Estasis",
+  "DESCRIPTION": "Gana !B! de Bloqueo. NL Coloca esta carta en *Estasis."
+},
+"Guardian:Metallicize": {
+  "NAME": "Endurecer",
+  "DESCRIPTION": "Gana !M! de expansioncontent:placas."
+},
+"Guardian:StasisStrike": {
+  "NAME": "Golpe de estasis",
+  "DESCRIPTION": "Haz !D! de daño. NL Gana 1 Espacio de Estasis."
+},
+"Guardian:FuturePlans": {
+  "NAME": "Planes Futuros",
+  "DESCRIPTION": "Al final de tu turno, coloca hasta !M! carta de tu mano en guardianmod:Estasis.",
+  "UPGRADE_DESCRIPTION": "Innata. NL Al final de tu turno, coloca hasta !M! carta de tu mano en guardianmod:Estasis."
+},
+"Guardian:Suspension": {
+  "NAME": "Suspensión",
+  "DESCRIPTION": "Gana !B! de Bloqueo. NL Coloca una carta de tu mano en guardianmod:Estasis.",
+  "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL Coloca una carta de tu mano en guardianmod:Estasis."
+},
+"Guardian:FastForward": {
+  "NAME": "Impulso Rápido",
+  "DESCRIPTION": "guardianmod:Acelera !M! veces.",
+  "UPGRADE_DESCRIPTION": "Retiene. NL guardianmod:Acelera !M! veces."
+},
+"Guardian:TimeCapacitor": {
+  "NAME": "Capacitador Temporal",
+  "DESCRIPTION": "Gana !M! Espacio de Estasis."
+},
+"Guardian:ConstructionForm": {
+  "NAME": "Modo de Construcción",
+  "DESCRIPTION": "Etérea. NL Gana !M! guardianmod:Búfer. NL Al comienzo de cada turno, si tienes 1 o más guardianmod:Búfer, gana 1 de Fuerza.",
+  "UPGRADE_DESCRIPTION": "Gana !M! guardianmod:Búfer. NL Al comienzo de cada turno, si tienes 1 o más guardianmod:Búfer, gana 1 de Fuerza."
+},
+"Guardian:RollAttack": {
+  "NAME": "Ataque Giratorio",
+  "DESCRIPTION": "Haz !D! de daño. NL Si estás en *Modo *Defensivo, afecta a TODOS los enemigos. De lo contrario, guardianmod:Ensambla 8."
+},
+"Guardian:GemFire": {
+  "NAME": "Cañón de Gemas",
+  "DESCRIPTION": "Haz !D! de daño. NL Activa TODAS tus guardianmod:Gemas. NL Agota.",
+  "UPGRADE_DESCRIPTION": " NL (Tienes !M! Gema(s).)"
+},
+"Guardian:ChargeCore": {
+  "NAME": "Núcleo de Carga",
+  "DESCRIPTION": "Haz !D! de daño. NL Coloca esta carta en guardianmod:Estasis. NL guardianmod:Tic - Roba una carta. NL guardianmod:Volátil."
+},
+"Guardian:Reroute": {
+  "NAME": "Redireccionar",
+  "DESCRIPTION": "Haz !D! de daño. NL La siguiente carta que juegues este turno será colocada en guardianmod:Estasis."
+},
+"Guardian:PiercingHide": {
+  "NAME": "Blindaje Perforante",
+  "DESCRIPTION": "Gana !B! de Bloqueo y !M! de Espinas temporales. NL guardianmod:Ensamblar 3.",
+  "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo y !M! de Espinas temporales. NL guardianmod:Ensamblar 4."
+},
+"Guardian:ShieldSpikes": {
+  "NAME": "Púas de Escudo",
+  "DESCRIPTION": "Gana !B! de Bloqueo. NL Gana !M! de Espinas si estás en *Modo *Defensivo. guardianmod:Ensamblar 8."
+},
+"Guardian:PrismaticBeam": {
+  "NAME": "Rayo Prismático",
+  "DESCRIPTION": "Haz !D! de daño por cada guardianmod:Gema en esta carta."
+},
+"Guardian:PrismaticBarrier": {
+  "NAME": "Barrera Prismática",
+  "DESCRIPTION": "Gana !B! de Bloqueo por cada guardianmod:Gema en esta carta."
+},
+"Guardian:TemporalStrike": {
+  "NAME": "Golpe Temporal",
+  "DESCRIPTION": "Haz !D! de daño. NL Gana [E] si tienes una carta en guardianmod:Estasis.",
+  "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Gana [E] si tienes una carta en guardianmod:Estasis."
+},
+"Guardian:TemporalShield": {
+  "NAME": "Escudo Temporal",
+  "DESCRIPTION": "Gana !B! de Bloqueo. NL guardianmod:Acelerar."
+},
+"Guardian:ExploitGems": {
+  "NAME": "Explotar Gemas",
+  "DESCRIPTION": "Roba una carta."
+},
+"Guardian:RefractedBeam": {
+  "NAME": "Rayo Refractado",
+  "DESCRIPTION": "Haz !D! de daño !M! veces. NL Puede mejorarse múltiples veces. NL Por cada mejora +1:"
+},
+"Guardian:MultiBeam": {
+  "NAME": "Multirrayo",
+  "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos X veces. NL guardianmod:Tic - Aumenta el daño de esta carta en !M!."
+},
+"Guardian:BaubleBeam": {
+  "NAME": "Estallido de Esferas",
+  "DESCRIPTION": "Haz !D! de daño. NL Realiza !M! veces:"
+},
+"Guardian:PrimingBeam": {
+  "NAME": "Disparo de Cebado",
+  "DESCRIPTION": "Haz !D! de daño. NL guardianmod:Ensamblar !M!."
+},
+"Guardian:EvasiveProtocol": {
+  "NAME": "Protocolo Evasivo",
+  "DESCRIPTION": "Cada vez que entres en *Modo *Defensivo, reduce cada uno de tus desventajas en !M!. NL guardianmod:Ensamblar !GuardianSecondM!.",
+  "UPGRADE_DESCRIPTION": "Cada vez que entres en *Modo *Defensivo, reduce cada uno de tus desventajas en !M!. NL guardianmod:Ensamblar !GuardianSecondM!."
+},
+"Guardian:SpikerProtocol": {
+  "NAME": "Protocolo de Espinas",
+  "DESCRIPTION": "Cada vez que entres en *Modo *Defensivo, gana !M! de Espinas. NL guardianmod:Ensamblar !GuardianSecondM!.",
+  "UPGRADE_DESCRIPTION": "Cada vez que entres en *Modo *Defensivo, gana !M! de Espinas. NL guardianmod:Ensamblar !GuardianSecondM!."
+},
+"Guardian:ArmoredProtocol": {
+  "NAME": "Protocolo Blindado",
+  "DESCRIPTION": "Gana !M! de Bloqueo al final de cada turno mientras estés en *Modo *Defensivo. NL Al comienzo de tu turno, guardianmod:Ensamblar 3."
+},
+"Guardian:TimeSifter": {
+  "NAME": "Tamizador Temporal",
+  "DESCRIPTION": "Al comienzo de tu turno, guardianmod:Acelera.",
+  "UPGRADE_DESCRIPTION": "Innata. NL Al comienzo de tu turno, guardianmod:Acelera."
+},
+"Guardian:AncientConstruct": {
+  "NAME": "Constructo Ancestral",
+  "DESCRIPTION": "Gana 1 Artefacto. NL Al comienzo de tu turno, si no tienes Artefacto, gana !M! de Artefacto.",
+  "UPGRADE_DESCRIPTION": "Gana 1 Artefacto. NL Al comienzo de tu turno, si no tienes Artefacto, gana !M! de Artefacto."
+},
+"Guardian:CrystalBeam": {
+  "NAME": "Rayo de Cristal",
+  "DESCRIPTION": "Haz !D! de daño. NL Hace !M! de daño adicional por cada guardianmod:Gema en tu mazo."
+},
+"Guardian:Gem_Synthetic": {
+  "NAME": "Ónix",
+  "DESCRIPTION": "guardianmod:Gema. NL Reduce cada uno de tus desventajas en 1.",
+  "UPGRADE_DESCRIPTION": "Reduce cada uno de tus desventajas en 1."
+},
+"Guardian:Gem_Yellow": {
+  "NAME": "Ámbar",
+  "DESCRIPTION": "guardianmod:Gema. NL guardianmod:Acelera.",
+  "UPGRADE_DESCRIPTION": "guardianmod:Acelera."
+},
+"Guardian:Gem_Purple": {
+  "NAME": "Amatista",
+  "DESCRIPTION": "guardianmod:Gema. NL TODOS los enemigos pierden 2 de Fuerza este turno.",
+  "UPGRADE_DESCRIPTION": "TODOS los enemigos pierden 2 de Fuerza este turno."
+},
+"Guardian:Gem_Crimson": {
+  "NAME": "Granate",
+  "DESCRIPTION": "guardianmod:Gema. NL Aplica 1 de Vulnerable a TODOS los enemigos.",
+  "UPGRADE_DESCRIPTION": "Aplica 1 de Vulnerable a TODOS los enemigos."
+},
+"Guardian:Gem_Blue": {
+  "NAME": "Zafiro",
+  "DESCRIPTION": "guardianmod:Gema. NL guardianmod:Ensamblar 4.",
+  "UPGRADE_DESCRIPTION": "guardianmod:Ensamblar 4."
+},
+"Guardian:Gem_Fragmented": {
+  "NAME": "Gema Fragmentada",
+  "DESCRIPTION": "guardianmod:Gema. NL Gana una *Daga *Cristalina.",
+  "UPGRADE_DESCRIPTION": "Gana una *Daga *Cristalina."
+},
+"Guardian:CrystalShiv": {
+  "NAME": "Daga Cristalina",
+  "DESCRIPTION": "Haz !D! de daño. NL Agota."
+},
+"Guardian:CrystalWard": {
+  "NAME": "Escudo Cristalino",
+  "DESCRIPTION": "Gana !B! de Bloqueo. NL Agota."
+},
+"Guardian:Repulse": {
+  "NAME": "Repulsor",
+  "DESCRIPTION": "Cuando robes la primera carta de Estado o Maldición cada turno, Agótala y roba una carta.",
+  "UPGRADE_DESCRIPTION": "Cuando robes la primera carta de Estado o Maldición cada turno, Agótala y roba una carta."
+},
+"Guardian:BronzeOrb": {
+  "NAME": "Soporte de Orbe",
+  "DESCRIPTION": "Haz !D! de daño. NL guardianmod:Ensambla igual al daño no bloqueado infligido. NL Agota."
+},
+"Guardian:RevengeProtocol": {
+  "NAME": "Protocolo de Venganza",
+  "DESCRIPTION": "Cada vez que entres en *Modo *Defensivo, gana !M! de Fuerza. NL Al comienzo de tu turno, guardianmod:Ensamblar !GuardianSecondM!."
+},
+"Guardian:GatlingBeam": {
+  "NAME": "Torreta Láser",
+  "DESCRIPTION": "Haz !D! de daño. NL Coloca esta carta en guardianmod:Estasis. NL guardianmod:Estasis dura !M! turnos. NL guardianmod:Tic - Haz !D! de daño a un enemigo aleatorio."
+},
+"Guardian:ShieldCharger": {
+  "NAME": "Cargador de Escudo",
+  "DESCRIPTION": "Coloca esta carta en guardianmod:Estasis. NL guardianmod:Tic - guardianmod:Ensambla !M! y gana !B! de Bloqueo. NL guardianmod:Volátil."
+},
+"Guardian:StasisEngine": {
+  "NAME": "Motor de Estasis",
+  "DESCRIPTION": "Cuando juegues la tercera carta de coste 0 en un turno, gana [E] y roba una carta.",
+  "UPGRADE_DESCRIPTION": "Innata. NL Cuando juegues la tercera carta de coste 0 en un turno, gana [E] y roba una carta."
+},
+"Guardian:HammerDown": {
+  "NAME": "Martillo Descendente",
+  "DESCRIPTION": "Haz !D! de daño. NL Duplica tu Fuerza y tu Destreza. NL Agota."
+},
+"Guardian:OmegaCannon": {
+  "NAME": "Cañón Omega",
+  "DESCRIPTION": "Haz !D! de daño. NL Cuesta 1 menos [E] por cada punto de Fuerza que tengas."
+},
+"Guardian:ModeShift": {
+  "NAME": "Cambio de Modo",
+  "DESCRIPTION": "Intercambia tu Fuerza y Destreza. NL Roba una carta.",
+  "UPGRADE_DESCRIPTION": "Retiene. NL Intercambia tu Fuerza y Destreza. NL Roba una carta."
+},
+"Guardian:PackageConstruct": {
+  "NAME": "Paquete: Constructo",
+  "DESCRIPTION": "Obtén un Martillo Descendente, un Cañón Omega y un Cambio de Modo. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Obtén un Martillo Descendente+, un Cañón Omega+ y un Cambio de Modo+. NL Agota."
+},
+"Guardian:PackageMass": {
+  "NAME": "Paquete: Masa",
+  "DESCRIPTION": "Obtén una Masa de Pinchos, una Masa de Bombas y un Impacto Grupal. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Obtén una Masa de Pinchos+, una Masa de Bombas+ y un Impacto Grupal+. NL Agota."
+},
+"Guardian:MassOfThorns": {
+  "NAME": "Masa de Pinchos",
+  "DESCRIPTION": "Gana !M! de Espinas temporales. NL Agota si tienes Artefacto."
+},
+"Guardian:MassTimeBomb": {
+  "NAME": "Masa de Bombas",
+  "DESCRIPTION": "Coloca una Bomba Temporal en cada ranura vacía de guardianmod:Estasis. NL Agota si crea 2 o más Bombas Temporales.",
+  "UPGRADE_DESCRIPTION": "Coloca una Bomba Temporal Mejorada en cada ranura vacía de guardianmod:Estasis. NL Agota si crea 2 o más Bombas Temporales."
+},
+"Guardian:MassSlam": {
+  "NAME": "Impacto Grupal",
+  "DESCRIPTION": "Haz !D! de daño !M! veces. NL Agota si tienes 3 o más de Fuerza."
+},
+"Guardian:GemstoneGunCard": {
+  "NAME": "Cañón de Gemas",
+  "DESCRIPTION": "Retiene.",
+  "UPGRADE_DESCRIPTION": " NL Agota."
+},
+"Guardian:BodySlam": {
+  "NAME": "Embate Corporal",
+  "DESCRIPTION": "Gana !B! de Bloqueo. NL Haz daño igual a tu Bloqueo.",
+  "UPGRADE_DESCRIPTION": " NL (Haz !D! de daño.)"
+},
+"Guardian:SecondStrike": {
+  "NAME": "Segundo Impacto",
+  "DESCRIPTION": "Etérea. NL Haz !D! de daño. NL Agota."
+},
+"Guardian:SecondStrikePreviewCard": {
+  "NAME": "Segundo Impacto",
+  "DESCRIPTION": "Etérea. NL Haz !D! de daño. NL Copia las *Gemas de *Golpe Gemelo. NL Agota."
+},
+"Guardian:StrikeForStrike": {
+  "NAME": "Golpe por Golpe",
+  "DESCRIPTION": "Haz !D! de daño. NL El enemigo te ataca con !M! de daño."
+},
+"Guardian:GearUp": {
+  "NAME": "Optimizar",
+  "DESCRIPTION": "Retiene. NL guardianmod:Ensambla !M!. NL Agota."
+}
+}
+
+
+
+

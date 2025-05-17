@@ -1,0 +1,32 @@
+{
+  "sneckomod:DiceRollPotion": {
+    "NAME": "Carta Embotellada",
+    "DESCRIPTIONS": [
+      "Úsala en combate para añadir #b",
+      " recompensa de carta con #b3 cartas #yAjenas #yPoco #yComunes #yMejoradas a las recompensas de la sala.",
+      " recompensas de carta con #b3 cartas #yAjenas #yPoco #yComunes #yMejoradas a las recompensas de la sala."
+    ]
+  },
+  "sneckomod:CheatPotion": {
+    "NAME": "Suerte Líquida",
+    "DESCRIPTIONS": [
+      "Los efectos de #yExceso se activan este turno sin importar el tamaño de tu mano.",
+      "Los efectos de #yExceso se activan durante #b",
+      " turnos sin importar el tamaño de tu mano."
+    ]
+  },
+  "sneckomod:MuddlingPotion": {
+    "NAME": "Bebida Energética Picante",
+    "DESCRIPTIONS": [
+      "#yConfunde las #b",
+      " cartas de mayor coste en tu mano. Estas cartas #yConfundidas no podrán costar #b3 [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:OffclassReductionPotion": {
+    "NAME": "Bebida Exótica",
+    "DESCRIPTIONS": [
+      "Reduce el coste de las cartas #yAjenas en tu mano en #b",
+      " [REMOVE_SPACE]."
+    ]
+  }
+}

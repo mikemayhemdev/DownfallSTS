@@ -1,0 +1,252 @@
+{
+  "champ:CounterPower": {
+    "NAME": "Contraataque",
+    "DESCRIPTIONS": [
+      "La próxima vez que recibas daño de un #yAtaque, obtén un #yEstocada #yde #yContraataque que inflige #b",
+      " de daño."
+    ]
+  },
+  "champ:FocusedDefPower": {
+    "NAME": "Foco: Defensivo",
+    "DESCRIPTIONS": [
+      "La próxima vez que uses un #yFinal este turno, gana #b",
+      " de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "champ:FocusedBerPower": {
+    "NAME": "Juego de Pies",
+    "DESCRIPTIONS": [
+      "La próxima vez que uses un #yFinal este turno, TODOS los enemigos pierden #b",
+      " de vida."
+    ]
+  },
+  "champ:ShieldWallPower": {
+    "NAME": "Muro de Escudos",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, gana #b",
+      " de #yContraataque [REMOVE_SPACE]."
+    ]
+  },
+  "champ:EntangleNextTurnPower": {
+    "NAME": "Espada Lanzada",
+    "DESCRIPTIONS": [
+      "No puedes jugar #yAtaques en tu próximo turno.",
+      "No puedes jugar #yAtaques durante los próximos #b",
+      " turnos."
+    ]
+  },
+  "champ:DrawLessNextTurnPower": {
+    "NAME": "Reducción de Robo",
+    "DESCRIPTIONS": [
+      "Roba #b",
+      " carta menos en tu próximo turno.",
+      " cartas menos en tu próximo turno."
+    ]
+  },
+  "champ:PushThroughPower": {
+    "NAME": "Ignorar Dolor",
+    "DESCRIPTIONS": [
+      "No puedes perder vida este turno.",
+      "No puedes perder vida durante los próximos #b",
+      " turnos."
+    ]
+  },
+  "champ:WorseRupturePower": {
+    "NAME": "Ira Infinita",
+    "DESCRIPTIONS": [
+      "Siempre que pierdas vida en tu turno, gana #b",
+      " de #yFuerza temporal [REMOVE_SPACE]."
+    ]
+  },
+  "champ:ImprovisingPower": {
+    "NAME": "Improvisar",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, si no estás en una #yPostura [REMOVE_SPACE], entra en una #yPostura aleatoria [REMOVE_SPACE]. Cada vez que entres en una #yPostura [REMOVE_SPACE], activa su #yBono #b",
+      " veces."
+    ]
+  },
+  "champ:CalledShotPower": {
+    "NAME": "Refuerzo Oportuno",
+    "DESCRIPTIONS": [
+      "La próxima vez que juegues un #yFinal [REMOVE_SPACE], no saldrás de tu #yPostura [REMOVE_SPACE].",
+      "Las próximas #b",
+      " veces que juegues un #yFinal [REMOVE_SPACE], no saldrás de tu #yPostura [REMOVE_SPACE]."
+    ]
+  },
+  "champ:DancingMasterPower": {
+    "NAME": "Maestro de la Danza",
+    "DESCRIPTIONS": [
+      "La primera vez que uses un #yFinal en cada turno, gana #b",
+      " [E] y roba #b",
+      " cartas. ",
+      "",
+      "Usado este turno.",
+      ""
+    ]
+  },
+  "champ:StrikeOfGeniusPower": {
+    "NAME": "Golpe Genial",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, obtén un \"Golpe\" #yEco aleatorio. Cuesta #b0 hasta que se juegue.",
+      "Al comienzo de tu turno, obtén #b",
+      " \"Golpes\" #yEco aleatorios. Cuestan #b0 hasta que se jueguen."
+    ]
+  },
+  "champ:StrikeOfGeniusUpgradedPower": {
+    "NAME": "Golpe Genial+",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, obtén un \"Golpe\" #yMejorado #yEco aleatorio. Cuesta #b0 hasta que se juegue.",
+      "Al comienzo de tu turno, obtén #b",
+      " \"Golpes\" #yMejorados #yEco aleatorios. Cuestan #b0 hasta que se jueguen."
+    ]
+  },
+  "champ:DefensiveStylePower": {
+    "NAME": "Estilo Defensivo",
+    "DESCRIPTIONS": [
+      "Los #bBonos #yDefensivo otorgan #b",
+      " adicional de #yContraataque [REMOVE_SPACE]."
+    ]
+  },
+  "champ:GladiatorStylePower": {
+    "NAME": "Combate Limpio",
+    "DESCRIPTIONS": [
+      "Si comienzas tu turno sin Postura, gana #b",
+      " de #yFuerza temporal y #yDestreza."
+    ]
+  },
+  "champ:BerserkerStylePower": {
+    "NAME": "Afilar la Espada",
+    "DESCRIPTIONS": [
+      "Los #rBonos de #rBerserker otorgan #b",
+      " más de #yVigor."
+    ]
+  },
+  "champ:FalseCounterPower": {
+    "NAME": "Contraataque Fingido",
+    "DESCRIPTIONS": [
+      "La próxima vez que se active #yContraataque, solo pierdes la mitad de tu #yContraataque.",
+      "Las próximas #b",
+      " veces que se active #yContraataque, solo pierdes la mitad de tu #yContraataque."
+    ]
+  },
+  "champ:EnergizedDurationPower": {
+    "NAME": "Energizado",
+    "DESCRIPTIONS": [
+      "Gana #b",
+      " de [E] adicionales el próximo turno.",
+      " de [E] adicional el próximo turno.",
+      " - NOTA DEL TRADUCTOR: la línea superior es para plural si es necesario distinguirla del singular."
+    ]
+  },
+  "champ:IronFortressPower": {
+    "NAME": "Paso Técnico",
+    "DESCRIPTIONS": [
+      "Cada vez que entres en una #yPostura, gana #b",
+      " de #yBloqueo."
+    ]
+  },
+   "champ:IronFortressVigorPower": {
+    "NAME": "Jiga Técnica: Berserker",
+    "DESCRIPTIONS": [
+      "Cada vez que entras en una postura, activa la bonificación de la #rPostura #rBerserker",
+      " #b",
+      " veces."
+    ]
+  },
+  "champ:LastStandMod": {
+    "NAME": "Última Resistencia",
+    "DESCRIPTIONS": [
+      "Al comienzo del turno, si tu vida está al 50% o menos, elimina todas las desventajas y gana ",
+      " de #yFuerza."
+    ]
+  },
+  "champ:GladiatorFormPower": {
+    "NAME": "Forma de Gladiador",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, gana #b",
+      " de #yVigor por cada #b3 gastado este turno, haz lo mismo con #yContraataque."
+    ]
+  },
+  "champ:NoBlockNextTurnPower": {
+    "NAME": "Escudo Lanzado",
+    "DESCRIPTIONS": [
+      "No puedes ganar Bloqueo en tu próximo turno.",
+      "No puedes ganar Bloqueo durante los próximos #b",
+      " turnos."
+    ]
+  },
+  "champ:UltimateStancePower": {
+    "NAME": "Drenado Definitivo",
+    "DESCRIPTIONS": [
+      "La Postura Definitiva expirará este turno.",
+      "La Postura Definitiva durará #b",
+      " turnos más."
+    ]
+  },
+  "champ:UltimateFormNextTurnPower": {
+    "NAME": "Preparando lo Definitivo",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu próximo turno, entra en #yPostura #yDefinitiva.",
+      " NL Permanecerá por #b",
+      " turnos."
+    ]
+  },
+  "champ:EnGardePower": {
+    "NAME": "¡En Guardia!",
+    "DESCRIPTIONS": [
+      "Si tu Bloqueo se rompe este turno, gana #b",
+      " de Bloqueo en el próximo turno."
+    ]
+  },
+  "champ:ParryPower": {
+    "NAME": "Desvío",
+    "DESCRIPTIONS": [
+      "Si usas #yContraataque este turno, gana una #yEstocada #yde #yContraataque adicional."
+    ]
+  },
+  "champ:BoomerangPower": {
+    "NAME": "Bumerán",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu próximo turno, regresa ",
+      " a tu mano. Cuesta #b0 y ya no regresará nuevamente."
+    ]
+  },
+  "champ:ResolvePower": {
+    "NAME": "Fatiga",
+    "DESCRIPTIONS": [
+      "Al final del combate, recupera los PV fatigados."
+    ]
+  },
+  "champ:DualPlaySrikePower": {
+    "NAME": "Tormenta de Golpes",
+    "DESCRIPTIONS": [
+      "Tu próximo #y\"Golpe\" se jugará dos veces este turno.",
+      "Tus próximos ",
+      " #y\"Golpes\" se jugarán dos veces este turno."
+    ]
+  },
+  "champ:LastStandPower": {
+    "NAME": "Última Resistencia",
+    "DESCRIPTIONS": [
+      "Una vez que bajes del #b50% de vida, elimina todas las desventajas y gana #b",
+      " de Fuerza.",
+      "~Ahora~ ~sí~ ~lo~ ~has~ ~hecho...~",
+      "@¿DERROTADO??@ NL @¡IMPOSIBLE!@"
+    ]
+  },
+  "champ:HonePower": {
+    "NAME": "Hoja Pulida",
+    "DESCRIPTIONS": [
+      "Tus cartas #y\"Golpe\" infligen #b",
+      " de daño adicional."
+    ]
+  },
+  "champ:DoubleStyleThisTurnPower": {
+    "NAME": "Latigazo Encadenado",
+    "DESCRIPTIONS": [
+      "Este turno, los #yBonos otorgan #b",
+      " de efecto adicional."
+    ]
+  }
+}
+

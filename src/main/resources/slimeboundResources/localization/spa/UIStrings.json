@@ -1,0 +1,27 @@
+{
+  "slimeboundConfigMenuText": {
+    "TEXT": [
+      "Permitir que otros personajes encuentren algunas reliquias de Rey Babosa.",
+      "Permitir que otros personajes encuentren algunas pociones de Rey Babosa.",
+      "Permitir que otros personajes encuentren algunos eventos de Rey Babosa.",
+      "Desbloquear todo (No recomendado)"
+    ]
+  },
+  "slimeboundmod:CommandMod": {
+    "TEXT": [
+      " NL slimeboundmod:Ordenar."
+    ]
+  },
+  "slimeboundmod:lickDescriptor": {
+    "TEXT": [
+      "Lamer",
+      "slimeboundmod:Lamer. NL "
+    ]
+  },
+  "slimeboundmod:tackleDescriptor": {
+    "TEXT": [
+      "Embestida",
+      "slimeboundmod:Embestida. NL "
+    ]
+  }
+}

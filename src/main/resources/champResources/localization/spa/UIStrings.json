@@ -1,0 +1,44 @@
+{
+  "champ:SealCommonReward": {
+    "TEXT": [
+      "Añade una carta Común a tu mazo"
+    ]
+  },
+  "champ:SealSealReward": {
+    "TEXT": [
+      "Añade un Sello a tu mazo"
+    ]
+  },
+  "champ:TechniqueMod": {
+    "TEXT": [
+      " NL Activa el *Bono de *Habilidad de la *Postura."
+    ]
+  },
+  "champ:OpenerMod": {
+    "TEXT": [
+      " NL Entra en champ:Berserker.",
+      " NL Entra en champ:Defensiva.",
+      "Entra en champ:Gladiador NL "
+    ]
+  },
+  "champ:RetainCardMod": {
+    "TEXT": [
+      "Retiene. NL "
+    ]
+  },
+  "champ:EnchantUI": {
+    "TEXT": [
+      "cuesta 0.",
+      "aumenta el daño.",
+      "aumenta el Bloqueo."
+    ]
+  },
+  "champ:highlightCombos": {
+    "TEXT": [
+      "champ:Combo *Berserker:",
+      "champ:Combo [#5ebf2a]Berserker:",
+      "champ:Combo *Defensivo:",
+      "champ:Combo [#5ebf2a]Defensivo:"
+    ]
+  }
+}

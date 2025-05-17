@@ -1,0 +1,121 @@
+{
+  "Slimebound:EmptySlimeSlot": {
+    "NAME": "Ranura de Baba",
+    "DESCRIPTION": [
+      "Los secuaces baba pueden colocarse en estas ranuras mediante #yDivisión. [REMOVE_SPACE]"
+    ]
+  },
+  "Slimebound:BronzeSlime": {
+    "NAME": "Baba de Bronce",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño a TODOS los enemigos al inicio de tu turno y salta su siguiente ataque.",
+      ""
+    ]
+  },
+  "Slimebound:AttackSlime": {
+    "NAME": "Baba Bruta",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño dos veces al inicio de tu turno."
+    ]
+  },
+  "Slimebound:ScrapOozeSlime": {
+    "NAME": "Baba de Chatarra",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño al inicio de tu turno. NL Puede revivir si es #yAbsorbida. [REMOVE_SPACE]"
+    ]
+  },
+  "Slimebound:GreedOozeSlime": {
+    "NAME": "Baba Codiciosa",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño al inicio de tu turno. NL Puede revivir si es #yAbsorbida. [REMOVE_SPACE]"
+    ]
+  },
+  "Slimebound:TorchHeadSlime": {
+    "NAME": "Baba Antorcha",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño al inicio de tu turno. Aumenta su daño con tu #yFuerza. [REMOVE_SPACE]"
+    ]
+  },
+  "Slimebound:CultistSlime": {
+    "NAME": "Baba Cultista",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño al inicio de tu turno. Luego del ataque, incrementa su daño en #b1. [REMOVE_SPACE]"
+    ]
+  },
+  "Slimebound:ShieldSlime": {
+    "NAME": "Baba Absorbente",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño al inicio de tu turno y te otorga #b",
+      " de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:PoisonSlime": {
+    "NAME": "Baba Guerrillera",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño a TODOS los enemigos al inicio de tu turno."
+    ]
+  },
+  "Slimebound:SlimingSlime": {
+    "NAME": "Baba Lodosa",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño y aplica #b",
+      " de #yBaba al inicio de tu turno."
+    ]
+  },
+  "Slimebound:HexSlime": {
+    "NAME": "Baba de Llama Fantasmal",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño y aplica #b",
+      " de #yQuemarAlma al inicio de tu turno."
+    ]
+  },
+  "Slimebound:ChampSlime": {
+    "NAME": "Baba Insultante",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño y aplica #b",
+      " de #yVulnerable al inicio de tu turno."
+    ]
+  },
+  "Slimebound:SlowingSlime": {
+    "NAME": "Baba Temporal",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño y aplica #b",
+      " de #yDébil al inicio de tu turno."
+    ]
+  },
+  "Slimebound:ProtectorSlime": {
+    "NAME": "Baba Protectora",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño al inicio de tu turno y te otorga #b",
+      " de #yEspinas Temporales [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:DrawingSlime": {
+    "NAME": "Baba Ancestral",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño al inicio de tu turno y te hace robar #b",
+      " carta. El robo no escala con Potencia."
+    ]
+  },
+  "Slimebound:DarklingSlime": {
+    "NAME": "Baba Obscura",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " de daño al inicio de tu turno. Cuando haces un Comando, todas las Obscuras atacan (sin importar la posición)."
+    ]
+  }
+}

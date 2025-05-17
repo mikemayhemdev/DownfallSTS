@@ -1,0 +1,81 @@
+[
+  {
+    "PROPER_NAME": "Snekproof",
+    "NAMES": [
+      "snekproof"
+    ],
+    "DESCRIPTION": "Las cartas Snekproof no se ven afectadas por #yConfusión y no pueden ser #yMezcladas. NOTA: No se utiliza. NO TRADUCIR."
+  },
+  {
+    "PROPER_NAME": "Suit",
+    "NAMES": [
+      "suit",
+      "suits"
+    ],
+    "DESCRIPTION": "Los Palos se refieren al color de la carta. Las cartas de tipo token no cuentan como Palos. NOTA: No se utiliza. NO TRADUCIR."
+  },
+  {
+    "PROPER_NAME": "Exceso",
+    "NAMES": [
+      "overflow",
+      "exceso"
+    ],
+    "DESCRIPTION": "Los efectos de Exceso se activan si tienes más de #b5 cartas en la mano."
+  },
+  {
+    "PROPER_NAME": "Confusión",
+    "NAMES": [
+      "muddle",
+      "muddled",
+      "muddles",
+      "confusión",
+      "confundida",
+      "confundidas",
+	  "confunde",
+	  "confundelas"
+    ],
+    "DESCRIPTION": "Confundir una carta cambia su coste este turno a un valor aleatorio entre #b0 y #b3."
+  },
+  {
+    "PROPER_NAME": "Ajena",
+    "NAMES": [
+      "offclass",
+      "ajena",
+	  "ajenos",
+	  "ajeno",
+	  "ajenas"
+    ],
+    "DESCRIPTION": "Una carta Ajena es cualquier carta obtenible de otra clase distinta a la tuya (incluyendo cartas Incoloras, Maldiciones y Estados)."
+  },
+  {
+    "PROPER_NAME": "Regalo",
+    "NAMES": [
+      "gift",
+      "regalo"
+    ],
+    "DESCRIPTION": "Cuando obtienes esta carta, recibes una recompensa con una carta del tipo especificado."
+  },
+  {
+    "PROPER_NAME": "Identify",
+    "NAMES": [
+      "identify"
+    ],
+    "DESCRIPTION": "Reemplaza una carta #yNo Identificada con su carta actual aleatoria de forma permanente. NOTA: No se utiliza. NO TRADUCIR."
+  },
+  {
+    "PROPER_NAME": "Tóxico",
+    "NAMES": [
+      "venom",
+      "tóxico"
+    ],
+    "DESCRIPTION": "Las criaturas con #yTóxico pierden PV siempre que reciben una desventaja que no sea #yTóxico."
+  },
+  {
+    "PROPER_NAME": "Suertudo",
+    "NAMES": [
+      "lucky",
+      "suertudo"
+    ],
+    "DESCRIPTION": "Los efectos de Exceso se activan este turno sin importar la cantidad de cartas en mano."
+  }
+]

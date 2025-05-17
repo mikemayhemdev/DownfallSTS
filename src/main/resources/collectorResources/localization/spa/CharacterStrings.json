@@ -1,0 +1,13 @@
+{
+  "collector:theCollector": {
+    "NAMES": [
+      "El Coleccionista",
+      "el Coleccionista"
+    ],
+    "TEXT": [
+      "El infame Hechicero de la Ciudad. NL Reclama tanto almas como baratijas.",
+      "NL Tu bastón brilla con la llama verde de la pira...",
+      "Al avanzar por una calle oscura, te topas con varias figuras encapuchadas en medio de un ritual oscuro. Al acercarte, se giran hacia ti al unísono con inquietante sincronía. La más alta muestra colmillos y extiende una larga mano pálida hacia ti. NL ~\"Únete~ ~a~ ~nosotros,~ ~espectral,~ ~y~ ~siente~ ~el~ ~calor~ ~de~ ~la~ ~Aguja.\"~"
+    ]
+  }
+}

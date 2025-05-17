@@ -1,0 +1,389 @@
+{
+  "champ:Strike": {
+    "NAME": "Golpe",
+    "DESCRIPTION": "Haz !D! de daño."
+  },
+  "champ:Defend": {
+    "NAME": "Defensa",
+    "DESCRIPTION": "Gana !B! de Bloqueo."
+  },
+  "champ:Taunt": {
+    "NAME": "Provocación",
+    "DESCRIPTION": "Aplica !M! de Débil y 1 de Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Aplica 1 de Débil y 1 de Vulnerable a TODOS los enemigos."
+  },
+  "champ:Execute": {
+    "NAME": "Ejecutar",
+    "DESCRIPTION": "Haz !D! de daño !cool! veces.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño !cool! veces."
+  },
+  "champ:StanceDance": {
+    "NAME": "Danza de Posturas",
+    "DESCRIPTION": "Elige una Postura para entrar. NL Activa su champ:Bono.",
+    "UPGRADE_DESCRIPTION": "Elige una Postura para entrar. NL Activa su champ:Bono dos veces.",
+    "EXTENDED_DESCRIPTION": [
+      "Entra en champ:Berserker.",
+      "Entra en champ:Defensivo."
+    ]
+  },
+  "champ:StanceDanceCrown": {
+    "NAME": "Corona del Campeón",
+    "DESCRIPTION": "Elige una Postura para entrar. NL Activa su champ:Bono.",
+    "UPGRADE_DESCRIPTION": "Elige una Postura para entrar. NL Activa su champ:Bono dos veces.",
+    "EXTENDED_DESCRIPTION": [
+      "Entra en champ:Berserker.",
+      "Entra en champ:Defensivo."
+    ]
+  },
+  "champ:SwordSigil": {
+    "NAME": "Sello de la Victoria",
+    "DESCRIPTION": "Activa el champ:Bono de tu Postura actual !M! veces."
+  },
+  "champ:FaceSlap": {
+    "NAME": "Bofetón",
+    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Berserker: Aplica !M! de Vulnerable."
+  },
+  "champ:FlashCut": {
+    "NAME": "Golpe Relámpago",
+    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Defensivo: Gana !M! de champ:Contraataque y !B! de Bloqueo."
+  },
+  "champ:DefensiveShout": {
+    "NAME": "Grito Defensivo",
+    "DESCRIPTION": "Gana !M! de champ:Contraataque. NL Entra en champ:Defensivo."
+  },
+  "champ:ShieldSigil": {
+    "NAME": "Látigo de Cadena",
+    "DESCRIPTION": "Haz !D! de daño. NL Este turno, tus efectos champ:Bono aumentan en !M!."
+  },
+  "champ:FocusedDefense": {
+    "NAME": "Esquivar y Contraatacar",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Gana !M! de Vigor. NL Entra en champ:Berserker."
+  },
+  "champ:FocusedBerserking": {
+    "NAME": "Todo o Nada",
+    "DESCRIPTION": "Agota. NL Ejecuta !M! veces sin salir de tu Postura: "
+  },
+  "champ:SetATrap": {
+    "NAME": "Poner una Trampa",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL champ:Combo *Defensivo: Aplica !M! de Débil a TODOS los enemigos."
+  },
+  "champ:Backstep": {
+    "NAME": "Paso Atrás",
+    "DESCRIPTION": "Gana !B! de Bloqueo, aumentado por *Vigor."
+  },
+  "champ:BerserkersShout": {
+    "NAME": "Grito del Berserker",
+    "DESCRIPTION": "Gana !M! de Vigor. NL Entra en champ:Berserker."
+  },
+  "champ:RageSigil": {
+    "NAME": "Plan de Batalla",
+    "DESCRIPTION": "Entra en champ:Defensivo. NL Gana !B! de Bloqueo. NL Observar !M!."
+  },
+  "champ:GutPunch": {
+    "NAME": "Golpe al Abdomen",
+    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Cualquier *Postura: Entra en champ:Definitiva por 1 turno. NL Agota."
+  },
+  "champ:FanOfKnives": {
+    "NAME": "Lluvia de Cuchillos",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL champ:Combo *Berserker: Haz daño dos veces.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL champ:Combo *Berserker: Haz daño tres veces."
+  },
+  "champ:Devastate": {
+    "NAME": "Devastar",
+    "DESCRIPTION": "Haz !D! de daño !M! veces. NL Cuesta 1 menos [E] por cada *Final ejecutado este combate."
+  },
+  "champ:Circumvent": {
+    "NAME": "Eludir",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Roba !M! cartas. NL Descarta !M! cartas. NL champ:Combo *Defensivo: No descartes cartas."
+  },
+  "champ:SkillfulDodge": {
+    "NAME": "Esquivar con Estilo",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Gana !M! de champ:Contraataque. NL champ:Combo *Defensivo: Aumenta estos efectos en !cool! durante este combate."
+  },
+  "champ:TornadoPunch": {
+    "NAME": "Puño Tornado",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL champ:Combo *Defensivo: Gana !B! de Bloqueo por cada enemigo golpeado.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL champ:Combo *Defensivo: Gana !B! de Bloqueo por cada enemigo golpeado."
+  },
+  "champ:EnGarde": {
+    "NAME": "¡En Guardia!",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Si tu Bloqueo se rompe este turno, gana !B! de Bloqueo en el próximo turno."
+  },
+  "champ:ShieldSlam": {
+    "NAME": "Momento de la Verdad",
+    "DESCRIPTION": "Retiene. NL Roba !M! carta.",
+    "UPGRADE_DESCRIPTION": "Retiene. NL Roba !M! cartas."
+  },
+  "champ:EnchantShield": {
+    "NAME": "Encantar Escudo",
+    "DESCRIPTION": "Elige una carta. NL Aumenta su Bloqueo en !M! durante este combate. NL Agota.",
+    "EXTENDED_DESCRIPTION": ["Mal momento para esa jugada."]
+  },
+  "champ:BringItOn": {
+    "NAME": "¡Vamos!",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Gana !M! de champ:Contraataque.",
+    "EXTENDED_DESCRIPTION": ["No estoy en una Postura."]
+  },
+  "champ:ShieldThrow": {
+    "NAME": "Lanzamiento de Escudo",
+    "DESCRIPTION": "Haz daño igual a tu Bloqueo, dos veces.",
+    "EXTENDED_DESCRIPTION": ["Haz daño igual a tu Bloqueo ( !D! ) dos veces."]
+  },
+  "champ:FalseCounter": {
+    "NAME": "Contraataque Fingido",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL En el próximo turno, gana [E] y roba 2 cartas.",
+    "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL En el próximo turno, gana [E] [E] y roba 2 cartas."
+  },
+  "champ:IronFortress": {
+    "NAME": "Paso Técnico",
+    "DESCRIPTION": "Cada vez que entres en una Postura, gana !M! de Bloqueo."
+  },
+  "champ:Lariat": {
+    "NAME": "Lazo Giratorio",
+    "DESCRIPTION": "Gana !B! de Bloqueo X veces. NL Activa el champ:Bono de tu Postura X veces."
+  },
+  "champ:HoldFirm": {
+    "NAME": "Mantente Firme",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Gana !M! de champ:Contraataque. NL Gana 1 de bronze:Desenfoque."
+  },
+  "champ:ShieldWall": {
+    "NAME": "Fortaleza de Hierro",
+    "DESCRIPTION": "Gana 2 de Destreza. NL Al final de cada turno, gana !M! de Bloqueo."
+  },
+  "champ:Haymaker": {
+    "NAME": "Golpe Demoledor",
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica 2 de Vulnerable. NL Aplica 2 de Débil."
+  },
+  "champ:ViciousMockery": {
+    "NAME": "Burlas Crueles",
+    "DESCRIPTION": "Gana !M! de Vigor. NL Aplica !DM! de Débil. NL Activa el champ:Bono de tu Postura.",
+    "EXTENDED_DESCRIPTION": [
+      "champ:Combo *Berserker: Gana !M! de Fuerza temporal. NL ",
+      "champ:Combo *Defensivo: Gana !M! de Destreza temporal."
+    ]
+  },
+  "champ:PreciseThrust": {
+    "NAME": "Estocada Precisa",
+    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Berserker: Haz !D! de daño. NL champ:Combo *Defensivo: Gana !B! de Bloqueo."
+  },
+  "champ:CrookedStrike": {
+    "NAME": "Golpe Sesgado",
+    "DESCRIPTION": "Haz !D! de daño. NL No consume Vigor."
+  },
+  "champ:RapidStrikes": {
+    "NAME": "Golpes Rápidos",
+    "DESCRIPTION": "Haz !D! de daño !M! veces. NL Una carta \"Golpe\" aleatoria en tu mano cuesta 0 este turno."
+  },
+  "champ:EnchantSword": {
+    "NAME": "Encantar Espada",
+    "DESCRIPTION": "Elige una carta. NL Aumenta su daño en !M! durante este combate. Agota.",
+    "EXTENDED_DESCRIPTION": ["Mal momento para esa jugada."]
+  },
+  "champ:BladeFlurry": {
+    "NAME": "Tormenta de Golpes",
+    "DESCRIPTION": "Haz !D! de daño. NL La próxima carta \"Golpe\" que juegues este turno se jugará dos veces."
+  },
+  "champ:SwordThrow": {
+    "NAME": "Lanzamiento de Espada",
+    "DESCRIPTION": "Haz !D! de daño !M! veces. NL Gana 2 de Débil. NL champ:Combo *Berserker: No ganas Débil."
+  },
+  "champ:MurderStrike": {
+    "NAME": "Golpe Asesino",
+    "DESCRIPTION": "Retiene. NL Haz !D! de daño. NL Cuando uses una Habilidad, esta carta hace !M! de daño adicional durante este combate."
+  },
+  "champ:HeavySlash": {
+    "NAME": "Tajo Magistral",
+    "DESCRIPTION": "Haz !D! de daño. NL Al comienzo de tu próximo turno, gana Vigor igual al daño no bloqueado.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Obtén una Habilidad aleatoria Mejorada. NL Cuesta 0."
+  },
+  "champ:CheapShot": {
+    "NAME": "Golpe Bajo",
+    "DESCRIPTION": "Haz !D! de daño. NL Si el enemigo es un Jefe, Haz daño dos veces más. Si no, hermit:Atúrdelo. NL Agota."
+  },
+  "champ:RisingSlash": {
+    "NAME": "Tajo Ascendente",
+    "DESCRIPTION": "Haz !D! de daño. NL Si la última carta jugada en este combate fue un champ:Final, haz !D! de daño de nuevo."
+  },
+  "champ:Shatter": {
+    "NAME": "Quebrar",
+    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Cualquier *Postura: Aplica !M! de Débil y Vulnerable."
+  },
+  "champ:EnragedBash": {
+    "NAME": "Embate Enfurecido",
+    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Berserker: Esta carta golpea una vez adicional este combate.",
+    "EXTENDED_DESCRIPTION": ["Haz !D! de daño !M! veces. NL champ:Combo *Berserker: Esta carta golpea una vez adicional este combate."]
+  },
+  "champ:VampiricStrike": {
+    "NAME": "Golpe Vampírico",
+    "DESCRIPTION": "Haz !D! de daño. NL Gana Bloqueo igual al daño no bloqueado infligido."
+  },
+  "champ:AdrenalArmor": {
+    "NAME": "Coraza Ígnea",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Gana !M! de Fuerza temporal."
+  },
+  "champ:HeartStrike": {
+    "NAME": "Golpe al Corazón",
+    "DESCRIPTION": "Haz !D! de daño, dos veces si el enemigo está por debajo del !M! % de vida.",
+    "EXTENDED_DESCRIPTION": [
+      "Mal momento para esa jugada.",
+      "Ese enemigo aún no está listo para ser terminado."
+    ]
+  },
+  "champ:CrownThrow": {
+    "NAME": "Lanzamiento de Corona",
+    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Berserker: Roba !M! cartas."
+  },
+  "champ:Encircle": {
+    "NAME": "Rodear",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Roba !M! carta por cada enemigo golpeado."
+  },
+  "champ:LastStand": {
+    "NAME": "Última Resistencia",
+    "DESCRIPTION": "Cuando bajes del 50% de vida, elimina todas las desventajas y gana !M! de Fuerza.",
+    "EXTENDED_DESCRIPTION": [
+      "~Ahora~ ~sí~ ~lo~ ~has~ ~hecho...~",
+      "@¿DERROTADO??@ NL @¡IMPOSIBLE!@"
+    ]
+  },
+  "champ:RecklessLeap": {
+    "NAME": "Salto Temerario",
+    "DESCRIPTION": "Haz !D! de daño. NL Gana !M! de Fuerza. NL Entra en champ:Berserker. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Gana !M! de Fuerza. NL Entra en champ:Berserker.",
+    "EXTENDED_DESCRIPTION": ["Mal momento para esa jugada."]
+  },
+  "champ:IgnorePain": {
+    "NAME": "Ignorar Dolor",
+    "DESCRIPTION": "Tu vida no puede reducirse hasta tu próximo turno. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Tu vida no puede reducirse hasta tu próximo turno. NL Agota."
+  },
+  "champ:DeathBlow": {
+    "NAME": "Golpe Mortal",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Gana !M! de Vigor. NL Agota."
+  },
+  "champ:ArenaPreparation": {
+    "NAME": "Preparación de Arena",
+    "DESCRIPTION": "Obtén !M! Habilidades aleatorias. NL Ganan Retiene. NL Agota."
+  },
+  "champ:SteelEdge": {
+    "NAME": "Filo de Acero",
+    "DESCRIPTION": "Haz !D! de daño X veces. NL Ejecuta X veces, al menos una vez:",
+    "EXTENDED_DESCRIPTION": [
+      "champ:Combo *Berserker: Haz !D! de daño X veces. NL ",
+      "champ:Combo *Defensivo: Gana !B! de Bloqueo X veces.",
+      "Gladiador: Roba una carta y gana [E] .",
+      "Gladiador: Roba 2 cartas y gana [E] .",
+      "champ:Combo NL "
+    ]
+  },
+  "champ:Improvising": {
+    "NAME": "Improvisar",
+    "DESCRIPTION": "Entra en una Postura aleatoria al comienzo de tu turno si no estás en ninguna. NL Activa champ:Bono !M! veces al entrar en Posturas."
+  },
+  "champ:CalledShot": {
+    "NAME": "Refuerzo Oportuno",
+    "DESCRIPTION": "champ:Combo *Berserker: Gana [E] [E] , Agota esta carta. NL champ:Combo *Defensivo: Roba !M! cartas.",
+    "UPGRADE_DESCRIPTION": "champ:Combo *Berserker: Gana [E] [E] [E] , Agota esta carta. NL champ:Combo *Defensivo: Roba !M! cartas.",
+    "EXTENDED_DESCRIPTION": [
+      "champ:Combo *Berserker: Gana [E] [E] , Agota esta carta. NL ",
+      "champ:Combo *Berserker: Gana [E] [E] [E] , Agota esta carta. NL ",
+      "champ:Combo *Defensivo: Roba !M! cartas.",
+      "Mal momento para esa jugada."
+    ]
+  },
+  "champ:PerfectedStrike": {
+    "NAME": "Golpe Perfeccionado",
+    "DESCRIPTION": "Haz !D! de daño. NL Haz !M! de daño adicional por cada carta \"Golpe\" que tengas."
+  },
+  "champ:GladiatorForm": {
+    "NAME": "Forma de Gladiador",
+    "DESCRIPTION": "Al comienzo de cada turno, gana !M! de Vigor por cada 3 de Vigor gastado en el turno anterior. haz lo mismo con champ:Contraataque."
+  },
+  "champ:Duel": {
+    "NAME": "Duelo",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Haz !D! de daño. NL Si el objetivo tiene Fuerza, repite estos efectos una vez.",
+    "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL Haz !D! de daño. NL Si el objetivo tiene Fuerza, repite estos efectos una vez."
+  },
+  "champ:DancingMaster": {
+    "NAME": "Maestro de la Danza",
+    "DESCRIPTION": "La primera vez que uses un champ:Final en cada turno, gana [E] y roba 1 carta."
+  },
+  "champ:StrikeOfGenius": {
+    "NAME": "Golpe Genial",
+    "DESCRIPTION": "Al comienzo de tu turno, gana un \"Golpe\" gremlin:Eco aleatorio. NL Cuesta 0 hasta que se juegue.",
+    "UPGRADE_DESCRIPTION": "Al comienzo de tu turno, gana un \"Golpe\" Mejorado gremlin:Eco aleatorio. NL Cuesta 0 hasta que se juegue."
+  },
+  "champ:DefensiveStyle": {
+    "NAME": "Estilo Doble",
+    "DESCRIPTION": "Los *Bonos de *Habilidad otorgan !M! más de Vigor y champ:Contraataque."
+  },
+  "champ:GladiatorStyle": {
+    "NAME": "Combate Limpio",
+    "DESCRIPTION": "champ:Combo *Berserker: NL Gana !M! de Fuerza. NL champ:Combo *Defensivo: NL Gana !M! de Destreza."
+  },
+  "champ:BerserkerStyle": {
+    "NAME": "Afilar la Espada",
+    "DESCRIPTION": "Tus cartas \"Golpe\" Hacen !M! más de daño."
+  },
+  "champ:Riposte": {
+    "NAME": "Estocada de Contraataque",
+    "DESCRIPTION": "Etérea. NL Haz !D! de daño. NL Agota."
+  },
+  "champ:Endure": {
+    "NAME": "Resistir",
+    "DESCRIPTION": "Entra en champ:Defensivo. NL Gana !B! de Bloqueo, aumentado por *Fuerza.",
+    "UPGRADE_DESCRIPTION": "Entra en champ:Defensivo. NL Gana !B! de Bloqueo, aumentado por *Fuerza."
+  },
+  "champ:PreemptiveStrike": {
+    "NAME": "Golpe Preventivo",
+    "DESCRIPTION": "Haz daño igual a tu champ:Contraataque a TODOS los enemigos. Pierdes la mitad. NL champ:Combo *Defensivo: No lo pierdes.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Haz !D! de daño)",
+      "Mal momento para esa jugada."
+    ]
+  },
+  "champ:Parry": {
+    "NAME": "Desvío",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Gana !M! de champ:Contraataque. NL Si usas champ:Contraataque este turno, gana otra *Estocada de *Contraataque.",
+    "UPGRADE_DESCRIPTION": "Etérea. NL Haz daño igual a la cantidad de champ:Contraataque usada. NL Agota."
+  },
+  "champ:EnchantCrown": {
+    "NAME": "Encantar Corona",
+    "DESCRIPTION": "Elige una carta. NL Cuesta 0 durante este combate. NL Agota.",
+    "EXTENDED_DESCRIPTION": ["Mal momento para esa jugada."]
+  },
+  "champ:ModFinisherStrike": {
+    "NAME": "Golpe Final",
+    "DESCRIPTION": "Retiene. NL Haz !D! de daño."
+  },
+  "champ:UltimateStance": {
+    "NAME": "Postura Definitiva",
+    "DESCRIPTION": "Durante tu próximo turno, entras en *Postura champ:Definitiva. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Requiere champ:Combo *Defensivo o *Berserker. NL Entra en Postura Definitiva por !M! turnos.",
+    "EXTENDED_DESCRIPTION": ["No estoy en una Postura."]
+  },
+  "champ:FancyFootwork": {
+    "NAME": "Juego de Pies",
+    "DESCRIPTION": "Entra en una Postura en la que no estés. NL El próximo champ:Final este turno haz !M! de daño a TODOS los enemigos."
+  },
+  "champ:TripleStrike": {
+    "NAME": "Triple Golpe",
+    "DESCRIPTION": "Haz !D! de daño. NL Obtén 2 *Golpes gremlin:Eco. Cuestan 0 y activan *Bonos de *Habilidad.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Obtén 2 *Golpes+ gremlin:Eco. Cuestan 0 y activan *Bonos de *Habilidad."
+  },
+  "champ:WindUp": {
+    "NAME": "Preparación",
+    "DESCRIPTION": "Elige una Postura para entrar. NL Busca un champ:Final en tu pila de robo. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Elige una Postura para entrar. NL Busca un champ:Final en tu pila de robo.",
+    "EXTENDED_DESCRIPTION": [
+      "Entra en champ:Berserker.",
+      "Entra en champ:Defensivo."
+    ]
+  },
+  "champ:Headbutt": {
+    "NAME": "Cabezazo",
+    "DESCRIPTION": "Haz !D! de daño. NL Coloca una carta de tu pila de descarte en la parte superior de tu pila de robo."
+  }
+}
+
+
+

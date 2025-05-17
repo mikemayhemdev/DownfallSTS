@@ -1,0 +1,17 @@
+{
+  "hermit:bountygold": {
+    "TEXT": [
+      " Oro (Recompensa)"
+    ]
+  },
+  "hermit:LoneWolfAction": {
+    "TEXT": [
+      "guardar."
+    ]
+  },
+  "hermit:SpecialFriend": {
+    "TEXT": [
+      "Mandarina"
+    ]
+  }
+}

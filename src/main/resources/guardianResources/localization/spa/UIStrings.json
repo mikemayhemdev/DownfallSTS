@@ -1,0 +1,41 @@
+{
+  "Guardian:EnhanceBonfireOptions": {
+    "TEXT": [
+      "Mejorar",
+      "(Acción gratuita) Inserta una Gema en una Ranura libre.",
+      "Requiere una Gema y una Ranura libre.",
+      "Selecciona una Gema.",
+      "Selecciona una carta para recibir la Gema."
+    ]
+  },
+  "Guardian:UIOptions": {
+    "TEXT": [
+      "Elige una carta para colocar en Estasis.",
+      "Selecciona una Gema.",
+      "Agrega una Gema a tu mazo",
+      "colocar en Estasis.",
+      "~ERROR:~ No puedes #rAtacar en Modo de Construcción.",
+      "~ERROR:~ #rEstasis en curso.",
+      "Agrega una Gema a tu mazo",
+      ""
+    ]
+  },
+  "Guardian:FindGemsOption": {
+    "TEXT": [
+      "Minar.",
+      "Obtén 2 Gemas aleatorias.",
+      "Recogida rota."
+    ]
+  },
+  "Guardian:BraceMod": {
+    "TEXT": [
+      " NL guardianmod:Ensamblar 2."
+    ]
+  },
+  "Guardian:gemDescriptor": {
+    "TEXT": [
+      "Gema",
+      "guardianmod:Gema. NL "
+    ]
+  }
+}

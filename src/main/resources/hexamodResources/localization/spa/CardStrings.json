@@ -1,0 +1,531 @@
+{
+  "hexamod:AdvancingGuard": {
+    "NAME": "Guardia Avanzada",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL hexamod:Avanzar."
+  },
+  "hexamod:FleetingFlash": {
+    "NAME": "Destello Fugaz",
+    "DESCRIPTION": "hexamod:Incendia la llama fantasmal actual, despues la hexamod:Extingue."
+  },
+  "hexamod:ApocalypseNow": {
+    "NAME": "Apocalipsis Ya",
+    "DESCRIPTION": "Etérea. NL Gana [E] [E]. NL Cambia a la Llama Fantasmal *Infernal. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Etérea. NL Gana [E] [E] [E]. NL Cambia a la Llama Fantasmal *Infernal. NL Agota."
+  },
+  "hexamod:Doomsday": {
+    "NAME": "Juicio Final",
+    "DESCRIPTION": "La próxima vez que todas las !M! llamas fantasmales estén *Incendiadas, juega un turno adicional.",
+    "UPGRADE_DESCRIPTION": "La próxima vez que al menos !M! llamas fantasmales estén *Incendiadas, juega un turno adicional."
+  },
+  "hexamod:BacktrackSmack": {
+    "NAME": "Golpe Retrospectivo",
+    "DESCRIPTION": "Haz !D! de daño dos veces. NL hexamod:Retroceder."
+  },
+  "hexamod:BurningQuestion": {
+    "NAME": "Pregunta Ardiente",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Gana !M! de Fuerza. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Gana 1 de Destreza."
+    ]
+  },
+  "hexamod:BurningTouch": {
+    "NAME": "Toque Abrasador",
+    "DESCRIPTION": "Aplica !burny! hexamod:QuemarAlma, dos veces si el enemigo ya tiene hexamod:QuemarAlma."
+  },
+  "hexamod:CatchUp": {
+    "NAME": "Alcanzar el Fuego",
+    "DESCRIPTION": "hexamod:Incendia la llama fantasmal anterior !M! veces. NL Agota.",
+    "UPGRADE_DESCRIPTION": "hexamod:Incendia la llama fantasmal anterior !M! veces."
+  },
+  "hexamod:ChargedBarrage": {
+    "NAME": "Descarga Abrasadora",
+    "DESCRIPTION": "Aplica !burny! hexamod:QuemarAlma. NL Repite por cada llama fantasmal *Incendiada."
+  },
+  "hexamod:CouncilsJustice": {
+    "NAME": "Justicia del Consejo",
+    "DESCRIPTION": "Haz !D! de daño, aumentado en !M! por cada *Aparición *Agotada. NL Agota."
+  },
+  "hexamod:Defend": {
+    "NAME": "Defensa",
+    "DESCRIPTION": "Gana !B! de Bloqueo."
+  },
+  "hexamod:Divider": {
+    "NAME": "Divisor",
+    "DESCRIPTION": "Haz !D! de daño. NL Repite por cada llama fantasmal *Incendiada."
+  },
+  "hexamod:DynamicBlow": {
+    "NAME": "Golpe Dinámico",
+    "DESCRIPTION": "Etérea. NL Si la llama fantasmal actual está hexamod:Incendiada, aplica !burny! hexamod:QuemarAlma. Si no, hace !D! de daño."
+  },
+  "hexamod:EmpoweredFlame": {
+    "NAME": "Llama Potenciada",
+    "DESCRIPTION": "Gana !M! de hexamod:Intensidad."
+  },
+  "hexamod:EtherealExpedition": {
+    "NAME": "Expedición Fantasmal",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL [#e087a4]Agrega[] !M! [#e087a4]cartas[] [#e087a4]aleatorias[] [#e087a4]de[] [#e087a4]Ultratumba[] [#e087a4]a[] [#e087a4]tu[] [#e087a4]mazo[] y otra a tu mano."
+  },
+  "hexamod:ExtraCrispy": {
+    "NAME": "Bien Tostado",
+    "DESCRIPTION": "Cuando hexamod:QuemarAlma detone en un enemigo, aplica !M! de hexamod:QuemarAlma después de la detonación."
+  },
+  "hexamod:FastForward": {
+    "NAME": "Avance Rápido",
+    "DESCRIPTION": "Roba !M! cartas. NL hexamod:Avanzar.",
+    "UPGRADE_DESCRIPTION": "hexamod:Incendia la llama fantasmal actual. NL hexamod:Avanzar."
+  },
+  "hexamod:Firestarter": {
+    "NAME": "Iniciador de Fuego",
+    "DESCRIPTION": "Haz !D! de daño y aplica !burny! hexamod:QuemarAlma a TODOS los enemigos."
+  },
+  "hexamod:FlamesFromBeyond": {
+    "NAME": "Llamas del Más Allá",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL [#e087a4]Aplica[] !burny! [#e087a4]QuemarAlma[] [#e087a4]a[] [#e087a4]TODOS[] [#e087a4]los[] [#e087a4]enemigos[], dos veces."
+  },
+  "hexamod:BadOmen": {
+    "NAME": "Mal Presagio",
+    "DESCRIPTION": "Elige un tipo de llama fantasmal para reemplazar la actual. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Retiene. NL Elige un tipo de llama fantasmal para reemplazar la actual. NL Agota.",
+    "EXTENDED_DESCRIPTION": [
+      "Reemplaza con una Llama Fantasmal hexamod:Fortalecedora.",
+      "Reemplaza con una Llama Fantasmal hexamod:Aplastante.",
+      "Reemplaza con una Llama Fantasmal hexamod:Abrasadora.",
+      "No reemplazar."
+    ]
+  },
+  "hexamod:Float": {
+    "NAME": "Flotar",
+    "DESCRIPTION": "Roba una carta. NL hexamod:Avanzar.",
+    "UPGRADE_DESCRIPTION": "Roba una carta. NL Puedes elegir hexamod:Retroceder o hexamod:Avanzar.",
+    "EXTENDED_DESCRIPTION": ["hexamod:Avanzar.","hexamod:Retroceder.", "No hacer nada."]
+  },
+  "hexamod:MatchstickFloat": {
+    "NAME": "Cerillo Furtivo",
+    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si la estás viendo, probablemente haya un error. NL Por favor, repórtalo a un desarrollador del mod.",
+    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si la estás viendo, probablemente haya un error. NL Por favor, repórtalo a un desarrollador del mod.",
+    "EXTENDED_DESCRIPTION": ["hexamod:Avanzar.","hexamod:Retroceder.", "No hacer nada."]
+  },
+  "hexamod:Floatwork": {
+    "NAME": "Trabajo Etéreo",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Gana 1 de Destreza. NL ",
+    "EXTENDED_DESCRIPTION": ["Gana !M! de Armadura de Placas."]
+  },
+  "hexamod:ForkedFlame": {
+    "NAME": "Llama Bifurcada",
+    "DESCRIPTION": "Haz !D! de daño. NL hexamod:Incendia la llama fantasmal anterior y la siguiente.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL hexamod:Incendia la llama fantasmal anterior, la actual y la siguiente."
+  },
+  "hexamod:WhisperFromBeyond": {
+    "NAME": "Susurro del Más Allá",
+    "DESCRIPTION": "Haz !D! de daño. NL Cuando una carta se Agote este turno, aplica !burny! hexamod:QuemarAlma al enemigo."
+  },
+  "hexamod:InstantInferno": {
+    "NAME": "Infierno Instantáneo",
+    "DESCRIPTION": "Retiene. NL Aplica !burny! hexamod:QuemarAlma. NL Cambia e hexamod:Incendia la llama fantasmal *Infernal. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Retiene. NL Aplica !burny! hexamod:QuemarAlma. NL hexamod:Incendia la llama fantasmal *Infernal. NL Agota."
+  },
+  "hexamod:GhostLash": {
+    "NAME": "Latigazo Fantasma",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL [#e087a4]Haz[] !D! [#e087a4]de[] [#e087a4]daño.[] NL Hace !M! daño adicional por cada otra carta Etérea en la mano.",
+  "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "hexamod:IntoShadow": {
+    "NAME": "En la Sombra",
+    "DESCRIPTION": "Etérea. NL Siempre que hexamod:Retrocedas, tu próxima carta cuesta 0 y se Agota.",
+    "UPGRADE_DESCRIPTION": "Siempre que hexamod:Retrocedas, tu próxima carta cuesta 0 y se Agota.",
+    "EXTENDED_DESCRIPTION": ["juega y se Agota."]
+  },
+  "hexamod:DevilsDance": {
+    "NAME": "Danza del Diablo",
+    "DESCRIPTION": "Siempre que hexamod:Retrocedas, roba una carta.",
+    "UPGRADE_DESCRIPTION": "Innato. NL La primera vez que *Retrocedas cada turno, gana [E] y roba 1 carta. NL hexamod:Retroceder."
+  },
+  "hexamod:HereAndNow": {
+    "NAME": "Aquí y Ahora",
+    "DESCRIPTION": "Al inicio de tu turno, gana [E]. NL Al final de tu turno, hexamod:Extingue la llama fantasmal actual."
+  },
+  "hexamod:GhostShield": {
+    "NAME": "Escudo Fantasmal",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Gana 1 de expansioncontent:Desenfoque. NL ",
+    "EXTENDED_DESCRIPTION": ["Gana !B! de Bloqueo."]
+  },
+  "hexamod:GiftsFromBeyond": {
+    "NAME": "Regalos del Más Allá",
+    "DESCRIPTION": "Al inicio de tu turno, añade !M! cartas aleatorias hexamod:Ultratumba a tu mano.",
+    "EXTENDED_DESCRIPTION": ["Estos espíritus son demasiado poderosos para invocarlos directamente."]
+  },
+  "hexamod:HauntedHand": {
+    "NAME": "Mano Embrujada",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Roba !M! carta. NL ",
+    "UPGRADE_DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Roba !M! cartas. NL ",
+    "EXTENDED_DESCRIPTION": ["Roba cartas hasta que robes una que no sea Etérea."]
+  },
+  "hexamod:HauntingEcho": {
+    "NAME": "Eco Embrujado",
+    "DESCRIPTION": "Haz !D! de daño. NL Si la llama fantasmal actual está *Incendiada, hexamod:Incendiala de nuevo."
+  },
+  "hexamod:HeatCrush": {
+    "NAME": "Aplastamiento Ardiente",
+    "DESCRIPTION": "Haz !D! de daño. NL El daño aumenta según el hexamod:QuemarAlma del enemigo."
+  },
+  "hexamod:HeatMetal": {
+    "NAME": "Metal Ardiente",
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !burny! hexamod:QuemarAlma. NL Aplica !M! de Vulnerable."
+  },
+  "hexamod:HeatShield": {
+    "NAME": "Escudo de Calor",
+    "DESCRIPTION": "Gana Bloqueo igual al hexamod:QuemarAlma en el enemigo, retrasa su hexamod:QuemarAlma 1 turno. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Gana Bloqueo igual al hexamod:QuemarAlma en el enemigo, retrasa su hexamod:QuemarAlma 1 turno.",
+    "EXTENDED_DESCRIPTION": [" NL (Gana !B! de Bloqueo.)"]
+  },
+  "hexamod:Hexaguard": {
+    "NAME": "Hexaguardia",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Roba !M! cartas. NL ",
+    "EXTENDED_DESCRIPTION": ["Gana !B! de Bloqueo."]
+  },
+  "hexamod:InfernalForm": {
+    "NAME": "Forma Infernal",
+    "DESCRIPTION": "Al inicio de tu turno, gana !M! de hexamod:Intensidad.",
+    "UPGRADE_DESCRIPTION": "Gana !M! de hexamod:Intensidad. NL Al inicio de tu turno, gana !M! de hexamod:Intensidad."
+  },
+  "hexamod:Incineration": {
+    "NAME": "Incineración",
+    "DESCRIPTION": "Haz !D! de daño y aplica !burny! hexamod:QuemarAlma !M! veces."
+  },
+  "hexamod:StokeTheFire": {
+    "NAME": "Avivar la Llama",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Por cada llama fantasmal *Incendiada, mejora una carta aleatoria en tu mano."
+  },
+  "hexamod:NecessarySacrifice": {
+    "NAME": "Sacrificio Digno",
+    "DESCRIPTION": "Agota 2 cartas. NL Si son de tipo Ataque o Habilidad, transfórmalas al tipo opuesto.",
+    "UPGRADE_DESCRIPTION": "Agota 2 cartas. NL Si son de tipo Ataque o Habilidad, transfórmalas al tipo opuesto y Mejóralas.",
+    "EXTENDED_DESCRIPTION": ["Agotar para Sacrificio Digno."]
+  },
+  "hexamod:NightmareGuise": {
+    "NAME": "Apariencia de Pesadilla",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Gana !B! de Bloqueo. NL [#e087a4]Obtén[] [#e087a4]una[] [#e087a4]Forma[] [#e087a4]Sombría.[]",
+    "UPGRADE_DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Gana !B! de Bloqueo. NL [#e087a4]Obtén[] [#e087a4]una[] [#e087a4]Forma[] [#e087a4]Sombría+.[]"
+  },
+  "hexamod:NightmareStrike": {
+    "NAME": "Golpe de Pesadilla",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Haz !D! de daño. NL [#e087a4]Obtén[] [#e087a4]un[] [#e087a4]Golpe[] [#e087a4]Sombrío.[]",
+    "UPGRADE_DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Haz !D! de daño. NL [#e087a4]Obtén[] [#e087a4]un[] [#e087a4]Golpe[] [#e087a4]Sombrío+.[]"
+  },
+  "hexamod:Poltergeist": {
+    "NAME": "Poltergeist",
+    "DESCRIPTION": "Siempre que juegues una carta Etérea, un enemigo aleatorio pierde !M! PV."
+  },
+  "hexamod:PhantomCloak": {
+    "NAME": "Capa Fantasmal",
+    "DESCRIPTION": "Etérea. NL Gana !M! de Destreza y pierde 1 de Fuerza."
+  },
+  "hexamod:PhantomFireball": {
+    "NAME": "Bola de Fuego Fantasmal",
+    "DESCRIPTION": "Haz !D! de daño. NL Si el enemigo tiene hexamod:QuemarAlma, detónalo.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Si el enemigo tiene hexamod:QuemarAlma, detona todos menos 1."
+  },
+  "hexamod:PowerFromBeyond": {
+    "NAME": "Poder del Más Allá",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Gana [E] el siguiente turno. NL ",
+    "UPGRADE_DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Gana [E] [E] el siguiente turno. NL ",
+    "EXTENDED_DESCRIPTION": ["Roba !M! cartas el próximo turno."]
+  },
+  "hexamod:Premonition": {
+    "NAME": "Premonición",
+    "DESCRIPTION": "Elige un tipo de carta, juega una carta aleatoria de ese tipo de tu mazo. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Elige un tipo de carta, juega una carta aleatoria de ese tipo de tu mazo.",
+    "EXTENDED_DESCRIPTION": ["para jugar y Agotar."]
+  },
+  "hexamod:RadiantFlame": {
+    "NAME": "Llama Radiante",
+    "DESCRIPTION": "Haz !D! de daño. NL Elimina el hexamod:QuemarAlma del objetivo para ganar !M! de hexamod:Intensidad."
+  },
+  "hexamod:RainOfEmbers": {
+    "NAME": "Lluvia de Ascuas",
+    "DESCRIPTION": "Haz !D! de daño y aplica !M! de Débil X veces.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño y aplica !M! de Débil X+1 veces."
+  },
+  "hexamod:NightmareVision": {
+    "NAME": "Visión de Pesadilla",
+    "DESCRIPTION": "hexamod:Retroceder. NL expansioncontent:Exhuma una carta *Etérea. NL Agota.",
+    "UPGRADE_DESCRIPTION": "hexamod:Retroceder. NL expansioncontent:Exhuma !M! cartas *Etéreas. NL Agota.",
+    "EXTENDED_DESCRIPTION": [
+      "Elige una carta Etérea para devolver a tu mano.",
+      "Elige ",
+      " cartas Etéreas para devolver a tu mano."
+    ]
+  },
+  "hexamod:Incorporeal": {
+    "NAME": "Incorpóreo",
+    "DESCRIPTION": "hexamod:Retroceder. NL Pierde !M! PV. NL Gana 1 Intangible. NL Agota."
+  },
+  "hexamod:Rewind": {
+    "NAME": "Rebobinar",
+    "DESCRIPTION": "hexamod:Retroceder. NL Recupera una carta de tu pila de descarte. NL Agota.",
+    "UPGRADE_DESCRIPTION": "hexamod:Retroceder. NL Recupera !M! cartas de tu pila de descarte. NL Agota."
+  },
+  "hexamod:Sear": {
+    "NAME": "Quemar",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba. NL Haz !D! de daño. NL [#e087a4]Aplica[] !burny! [#e087a4]QuemarAlma.[]"
+  },
+  "hexamod:SearingWound": {
+    "NAME": "Herida Abrasadora",
+    "DESCRIPTION": "Todos los enemigos pierden PV igual a su *QuemarAlma. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Todos los enemigos pierden PV igual a su *QuemarAlma."
+  },
+  "hexamod:ShadowGuise": {
+    "NAME": "Forma Sombría",
+    "DESCRIPTION": "Retiene. NL Gana !B! de Bloqueo. NL Agota."
+  },
+  "hexamod:ShadowStrike": {
+    "NAME": "Golpe Sombrío",
+    "DESCRIPTION": "Retiene. NL Haz !D! de daño. NL Agota."
+  },
+  
+  "hexamod:ShieldOfDarkness": {
+    "NAME": "Escudo de la Noche",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Adivina !M!. NL Agota las cartas Etéreas descartadas."
+  },
+  "hexamod:Kindle": {
+    "NAME": "Avivar",
+    "DESCRIPTION": "Si la llama fantasmal actual no está *Incendiada, hexamod:Incendiala.",
+    "UPGRADE_DESCRIPTION": "hexamod:Incendia la llama fantasmal actual."
+  },
+  "hexamod:LivingBomb": {
+    "NAME": "Bomba Viva",
+    "DESCRIPTION": "Aplica !burny! hexamod:QuemarAlma. Al detonar, afecta a TODOS los enemigos."
+  },
+  "hexamod:SpectersWail": {
+    "NAME": "Lamento del Espectro",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL [#e087a4]Haz[] !D! [#e087a4]de[] [#e087a4]daño[] [#e087a4]a[] [#e087a4]TODOS[] [#e087a4]los[] [#e087a4]enemigos[] dos veces."
+  },
+  "hexamod:BrightRitual": {
+    "NAME": "Ritual Radiante",
+    "DESCRIPTION": "Reinicia la Rueda. NL Gana [E] y roba 1 por cada llama fantasmal hexamod:Extinguida. NL Agota."
+  },
+  "hexamod:NaughtySpirit": {
+    "NAME": "Espíritu Travieso",
+    "DESCRIPTION": "Aplica !burny! hexamod:QuemarAlma. NL Si la llama fantasmal actual está hexamod:Incendiada, regresa esta carta a tu mano y hexamod:Retrocede."
+  },
+  "hexamod:StepThrough": {
+    "NAME": "Atravesar",
+    "DESCRIPTION": "Haz !D! de daño. NL Roba 1 carta por cada llama fantasmal *Incendiada."
+  },
+  "hexamod:Strike": {
+    "NAME": "Golpe",
+    "DESCRIPTION": "Haz !D! de daño."
+  },
+  "hexamod:StrikeFromBeyond": {
+    "NAME": "Golpe del Más Allá",
+    "DESCRIPTION": "Haz !D! de daño. NL Roba una carta Etérea de tu mazo.",
+    "EXTENDED_DESCRIPTION": ["Etérea", "Etérea. NL "]
+  },
+  "hexamod:SuperheatedStrike": {
+    "NAME": "Golpe Abrasador",
+    "DESCRIPTION": "Etérea. NL Haz !D! de daño. NL Aplica !burny! hexamod:QuemarAlma. NL Si esta carta se *Agota, recibe !M! de daño."
+  },
+  "hexamod:SwordOfDarkness": {
+    "NAME": "Espada de la Noche",
+    "DESCRIPTION": "Haz !D! de daño. NL Adivina !M!. NL Agota las cartas Etéreas descartadas."
+  },
+  "hexamod:ThermalTransfer": {
+    "NAME": "Transferencia Térmica",
+    "DESCRIPTION": "Haz !D! de daño. NL Si el enemigo tiene *QuemarAlma, gana !B! de Bloqueo."
+  },
+  "hexamod:TimeOfNeed": {
+    "NAME": "Hora Crítica",
+    "DESCRIPTION": "Retiene. NL Gana una carta de Poder aleatoria. Cuesta 1 menos hasta ser jugada. NL Agota."
+  },
+  "hexamod:TimeWarp": {
+    "NAME": "Distorsión Temporal",
+    "DESCRIPTION": "Haz !D! de daño. NL Siempre que *Avances o *Retrocedas, regresa esta carta desde la pila de descarte."
+  },
+  "hexamod:FlareFlick": {
+    "NAME": "Chispa Flamígera",
+    "DESCRIPTION": "Haz !D! de daño. NL hexamod:Incendia la llama actual y hexamod:avanza.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL hexamod:Incendia la llama actual. NL Elige entre hexamod:Retroceder o hexamod:Avanzar.",
+    "EXTENDED_DESCRIPTION": ["hexamod:Avanzar.", "hexamod:Retroceder.", "No hacer nada."]
+  },
+  "hexamod:TurnItUp": {
+    "NAME": "Sube la Intensidad",
+    "DESCRIPTION": "Gana !M! de hexamod:Intensidad temporal. NL Gana !M! de Fuerza temporal. NL Gana !M! de Destreza temporal.",
+    "UPGRADE_DESCRIPTION": "Retiene. NL Gana !M! de hexamod:Intensidad temporal. NL Gana !M! de Fuerza temporal. NL Gana !M! de Destreza temporal."
+  },
+  "hexamod:UnleashSpirits": {
+    "NAME": "Liberar Espíritus",
+    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio. NL Repite por cada carta *Agotada en el turno anterior.",
+    "UPGRADE_DESCRIPTION": " NL (Golpea !M! vez/veces.)"
+  },
+  "hexamod:UnlimitedPower": {
+    "NAME": "Poder Ilimitado",
+    "DESCRIPTION": "hexamod:Incendia todas las llamas fantasmales en orden. NL Agota."
+  },
+  "hexamod:VolcanoVisage": {
+    "NAME": "Rostro Volcánico",
+    "DESCRIPTION": "Cada vez que *Incendies una llama fantasmal, aplica !M! hexamod:QuemarAlma a TODOS los enemigos."
+  },
+  "hexamod:WildfireWeapon": {
+    "NAME": "Arma Incendiaria",
+    "DESCRIPTION": "Cuando un Ataque hace daño no bloqueado, aplica !M! hexamod:QuemarAlma."
+  },
+  "hexamod:FirstSeal": {
+    "NAME": "Primer Sello",
+    "DESCRIPTION": "Etérea. hexamod:Sellar. NL Al final del combate, cura !M! PV.",
+    "UPGRADE_DESCRIPTION": "hexamod:Sellar. NL Al final del combate, cura !M! PV."
+  },
+  "hexamod:SecondSeal": {
+    "NAME": "Segundo Sello",
+    "DESCRIPTION": "Etérea. hexamod:Sellar. NL Al final del combate, gana !M! de Oro adicional.",
+    "UPGRADE_DESCRIPTION": "hexamod:Sellar. NL Al final del combate, gana !M! de Oro adicional."
+  },
+  "hexamod:ThirdSeal": {
+    "NAME": "Tercer Sello",
+    "DESCRIPTION": "Etérea. hexamod:Sellar. NL Al final del combate, gana una recompensa de carta adicional.",
+    "UPGRADE_DESCRIPTION": "hexamod:Sellar. NL Al final del combate, gana una recompensa de carta adicional."
+  },
+  "hexamod:FourthSeal": {
+    "NAME": "Cuarto Sello",
+    "DESCRIPTION": "Etérea. hexamod:Sellar. NL Al final del combate, gana una Poción adicional.",
+    "UPGRADE_DESCRIPTION": "hexamod:Sellar. NL Al final del combate, gana una Poción adicional."
+  },
+  "hexamod:FifthSeal": {
+    "NAME": "Quinto Sello",
+    "DESCRIPTION": "Etérea. hexamod:Sellar. NL Al final del combate, aumenta tu PV Máximo en !M! .",
+    "UPGRADE_DESCRIPTION": "hexamod:Sellar. NL Al final del combate, aumenta tu PV Máximo en !M! ."
+  },
+  "hexamod:SixthSeal": {
+    "NAME": "Sexto Sello",
+    "DESCRIPTION": "Etérea. hexamod:Sellar. NL Al final del combate, mejora una carta aleatoria por cada 13 sin mejorar en el mazo.",
+    "UPGRADE_DESCRIPTION": "hexamod:Sellar. NL Al final del combate, mejora una carta aleatoria por cada 13 sin mejorar en el mazo.",
+    "EXTENDED_DESCRIPTION": [
+      "( Mejora ",
+      " carta. ) NL ",
+      " cartas. ) NL "
+    ]
+  },
+  "hexamod:LingeringShades": {
+    "NAME": "Sombras Persistentes",
+    "DESCRIPTION": "hexamod:Retroceder. NL Aplica !burny! hexamod:QuemarAlma. Devuelve todas las cartas Etéreas de tu pila de descarte a tu mano."
+  },
+  "hexamod:EtherStep": {
+    "NAME": "Paso Etéreo",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Agota 1 carta. NL Roba !M! carta(s). NL ",
+    "UPGRADE_DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Agota 1 carta. NL Roba !M! carta(s). NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Haz !D! de daño."
+    ]
+  },
+  "hexamod:OpposingAction": {
+    "NAME": "Acción Opuesta",
+    "DESCRIPTION": "hexamod:Retroceder. NL Gana [E] [E]. NL Agota.",
+    "UPGRADE_DESCRIPTION": "hexamod:Retroceder. NL Gana [E] [E] [E]. NL Agota."
+  },
+  "hexamod:SeventhEye": {
+    "NAME": "Séptimo Ojo",
+    "DESCRIPTION": "Busca una carta de tu mazo. NL Cambia a una llama fantasmal aleatoria. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Busca una carta de tu mazo. NL Cambia a una llama fantasmal aleatoria. NL Agota."
+  },
+  "hexamod:FlameDevourer": {
+    "NAME": "Devorallamas",
+    "DESCRIPTION": "Si la llama anterior está *Incendiada, hexamod:Retrocede y gana !B! de Bloqueo."
+  },
+  "hexamod:SpectralGrace": {
+    "NAME": "Gracia Espectral",
+    "DESCRIPTION": "Descarta !M! cartas. NL Haz !D! de daño.",
+    "UPGRADE_DESCRIPTION": "Descarta !M! cartas. NL Haz !D! de daño."
+  },
+  "hexamod:SoulSteal": {
+    "NAME": "Living Bomb",
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. When it detonates, it affects ALL enemies."
+  },
+  "hexamod:ApocalypticArmor": {
+    "NAME": "Doomsday",
+    "DESCRIPTION": "The next time all !M! Ghostflames are *Ignited, take an extra turn.",
+    "UPGRADE_DESCRIPTION": "The next time at least !M! Ghostflames are *Ignited, take an extra turn."
+  },
+  "hexamod:RetreatToShadows": {
+    "NAME": "Incorporeal",
+    "DESCRIPTION": "hexamod:Retract. NL Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
+  },
+  "hexamod:SpectralSpark": {
+    "NAME": "Naughty Spirit",
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the current Ghostflame is hexamod:Ignited, return this card to your hand. hexamod:Retract."
+  },
+  "hexamod:Toasty": {
+    "NAME": "Flare Flick",
+    "DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame and hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame. NL Choose to hexamod:Retract or hexamod:Advance."
+    },
+  "hexamod:ParanormalForm": {
+    "NAME": "Poltergeist",
+    "DESCRIPTION": "Whenever you play an Ethereal card, a random enemy loses !M! HP."
+    },
+  "hexamod:RecurringNightmare": {
+    "NAME": "Nightmare Vision",
+    "DESCRIPTION": "Hexamod:Retract. NL expansioncontent:Exhume an *Ethereal card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Hexamod:Retract. NL expansioncontent:Exhume !M! *Ethereal cards. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose an Ethereal card to return to your hand.",
+      "Choose ",
+      " Ethereal cards to return to your hand."
+    ]
+    },
+  "hexamod:Haunt": {
+    "NAME": "Haunted Hand",
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Draw !M! card. NL ",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Draw !M! cards. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Draw cards until you draw a non-Ethereal card."
+    ]
+  },
+  "hexamod:InspiringFlames": {
+    "NAME": "Stoke the Fire",
+    "DESCRIPTION": "Gain !B! Block. NL For each *Ignited Ghostflame, Upgrade a random card in your hand."
+    },
+  "hexamod:SpectralAdrenaline": {
+    "NAME": "Bright Ritual",
+    "DESCRIPTION": "Gain [E] and draw 1 card for each *Ignited Ghostflame, then hexamod:Extinguish them. NL Exhaust."
+  },
+  "hexamod:GhostOfSpirePresent": {
+    "NAME": "Here and Now",
+    "DESCRIPTION": "At the start of your turn, gain [E] . NL At the end of your turn, hexamod:Extinguish the current Ghostflame."
+  },
+  "hexamod:GhostOfSpirePast": {
+    "NAME": "Devil's Dance",
+    "DESCRIPTION": "Whenever you hexamod:Retract, draw a card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you *Retract each turn, gain [E] and draw 1 card. NL hexamod:Retract."
+    },
+    "hexamod:GhostOfSpireFuture": {
+      "NAME": "Into Shadow",
+      "DESCRIPTION": "Ethereal. NL Whenever you hexamod:Retract, choose a card in your hand to play and Exhaust.",
+      "UPGRADE_DESCRIPTION": "Whenever you hexamod:Retract, choose a card in your hand to play and Exhaust.",
+      "EXTENDED_DESCRIPTION": [
+        "play and Exhaust."
+      ]
+      },
+  "hexamod:HexaLevel": {
+    "NAME": "Forma Infernal",
+    "DESCRIPTION": "Al comienzo de tu turno, gana !M! de hexamod:Intensidad.",
+    "UPGRADE_DESCRIPTION": "Gana !M! de hexamod:Intensidad. NL Al comienzo de tu turno, gana !M! de hexamod:Intensidad."
+  },
+  "hexamod:SkipABeat": {
+    "NAME": "Kindle",
+    "DESCRIPTION": "If the current Ghostflame is not *Ignited, hexamod:Ignite it.",
+    "UPGRADE_DESCRIPTION": "hexamod:Ignite the current Ghostflame."
+  },
+  "hexamod:FlameSwitch": {
+      "NAME": "Bad Omen",
+      "DESCRIPTION": "Choose a Ghostflame type to change the current one into. NL Exhaust.",
+      "UPGRADE_DESCRIPTION": "Retain. NL Choose a Ghostflame type to change the current one into. NL Exhaust.",
+      "EXTENDED_DESCRIPTION": [
+        "Replace the current Ghostflame with a hexamod:Bolstering Ghostflame",
+        "Replace the current Ghostflame with a hexamod:Crushing Ghostflame",
+        "Replace the current Ghostflame with a hexamod:Searing Ghostflame",
+        "Don't replace."
+      ]
+  }
+}
+

@@ -1,0 +1,55 @@
+[
+  {
+    "PROPER_NAME": "Afligido",
+    "NAMES": [
+      "afligido",
+      "afligidos",
+	  "afflicted"
+    ],
+    "DESCRIPTION": "Las criaturas están Afligidas cuando tienen tanto #yVulnerable como #yDébil."
+  },
+  {
+    "PROPER_NAME": "Condena",
+    "NAMES": [
+      "condena",
+      "condenado",
+	  "doom",
+      "doomed"
+    ],
+    "DESCRIPTION": "Las criaturas Condenadas pierden PV al comienzo de su turno, la Condena se elimina #bsalvo que la criatura esté #yAfligida (tenga tanto #yDébil como #yVulnerable [REMOVE_SPACE])."
+  },
+  {
+    "PROPER_NAME": "Pira",
+    "NAMES": [
+      "pira",
+	  "pyre"
+    ],
+    "DESCRIPTION": "Requiere Agotar una carta en la mano además de pagar su coste de energía."
+  },
+  {
+    "PROPER_NAME": "Reserva",
+    "NAMES": [
+      "reserva",
+      "reservas",
+	  "reserve",
+      "reserves"
+    ],
+    "DESCRIPTION": "Un tipo alternativo de Energía que se almacena entre turnos."
+  },
+  {
+    "PROPER_NAME": "Megatereal",
+    "NAMES": [
+      "megatereal",
+	  "megathereal"
+    ],
+    "DESCRIPTION": "Las cartas Megatereales se mueven a la pila de agotadas al jugarse y también al final del turno, sin importar en qué zona estén."
+  },
+  {
+    "PROPER_NAME": "Cabeza de antorcha",
+    "NAMES": [
+      "cabezadeantorcha",
+	  "torchhead"
+    ],
+    "DESCRIPTION": "Mientras tengas #yPV #yTemporales, cada Ataque que juegues activa CabezaDeAntorcha."
+  }
+]

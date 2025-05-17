@@ -1,0 +1,97 @@
+[
+  {
+    "NAMES": [
+	  "socket",
+      "sockets",
+      "socketed",
+      "ranura",
+      "ranuras",
+      "insertado"
+    ],
+    "PROPER_NAME": "Ranura",
+    "DESCRIPTION": "Las #yGemas pueden insertarse en esta ranura en las zonas de descanso."
+  },
+  {
+    "NAMES": [
+	  "stasis",
+      "estasis"
+    ],
+    "PROPER_NAME": "Estasis",
+    "DESCRIPTION": "Una carta en estasis permanece ahí una cantidad de turnos igual a su coste + #b1 [REMOVE_SPACE]. NL Al salir, regresa a tu mano y cuesta #b0 hasta ser jugada."
+  },
+  {
+    "NAMES": [
+	  "gem",
+      "gems",
+	  "gema",
+      "gemas"
+    ],
+    "PROPER_NAME": "Gema",
+    "DESCRIPTION": "Las gemas se pueden colocar en #yRanuras de cartas en las zonas de descanso. No se pueden #yMejorar [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": [
+	  "defensive mode",
+      "defensive_mode",
+      "defensive",
+      "modo defensivo",
+      "modo_defensivo",
+	  "defensivo"
+    ],
+    "PROPER_NAME": "Modo Defensivo",
+    "DESCRIPTION": "#yPostura. NL Gana #b16 de #yBloqueo al entrar en Modo Defensivo. Mientras permanezcas en esta postura, tienes #b3 de #yEspinas y tu #yBloqueo no expira."
+  },
+  {
+    "NAMES": [
+      "accelerate",
+	  "acelerar",
+      "acelera"
+    ],
+    "PROPER_NAME": "Acelerar",
+    "DESCRIPTION": "Reduce en #b1 [REMOVE_SPACE] el contador de turnos de la carta más a la derecha en #yEstasis."
+  },
+  {
+    "NAMES": [
+	  "package",
+      "packages",
+      "paquete",
+      "paquetes"
+    ],
+    "PROPER_NAME": "Paquete",
+    "DESCRIPTION": "Habilidad de coste 0 que se #yAgota y genera tres cartas inspiradas en un Constructo de la Aguja."
+  },
+  {
+    "NAMES": [
+	  "volatile",
+      "volátil"
+    ],
+    "PROPER_NAME": "Volátil",
+    "DESCRIPTION": "Cuando esta carta sale de la #yEstasis, se #yAgota [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": [
+      "tics",
+	  "tick",
+	  "tic"
+    ],
+    "PROPER_NAME": "Tic",
+    "DESCRIPTION": "Se activa cuando esta carta se encuentra en #yEstasis y el contador de turnos se reduce..."
+  },
+  {
+    "NAMES": [
+	  "buffer",
+      "búfer"
+    ],
+    "PROPER_NAME": "Búfer",
+    "DESCRIPTION": "Previene la siguiente vez que perderías PV."
+  },
+  {
+    "NAMES": [
+	  "brace",
+      "ensamblar",
+      "ensambla"
+    ],
+    "PROPER_NAME": "Ensamblar X",
+    "DESCRIPTION": "Reduce el daño necesario para activar #yCambio #yde #yModo en X."
+  }
+]

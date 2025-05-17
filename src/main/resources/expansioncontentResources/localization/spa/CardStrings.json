@@ -1,0 +1,210 @@
+{
+  "expansioncontent:GuardianWhirl": {
+    "NAME": "Giro Guardián",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos !M! veces. NL Si tienes al menos !DM! de Bloqueo, golpea !M! veces más.",
+    "EXTENDED_DESCRIPTION": [
+      "Se requiere más Bloqueo."
+    ]
+  },
+  "expansioncontent:Hexaburn": {
+    "NAME": "Hexaquema",
+    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio !M! veces. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio !M! veces."
+  },
+  "expansioncontent:InvincibleStrength": {
+    "NAME": "Invencible",
+    "DESCRIPTION": "Obtén !M! expansioncontent:Invencible. NL Si ya tenías expansioncontent:Invencible, dura un turno adicional."
+  },
+  "expansioncontent:HyperBeam": {
+    "NAME": "Automa-Rayo",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Coloca un *Vacío en la parte superior de tu pila de robo. NL Agota."
+  },
+  "expansioncontent:LastStand": {
+    "NAME": "Última Resistencia",
+    "DESCRIPTION": "Elimina todas las desventajas. NL Obtén !M! de Fuerza."
+  },
+  "expansioncontent:YouAreMine": {
+    "NAME": "¡ERES MÍO!",
+    "DESCRIPTION": "Aplica !M! de Débil, !M! de Vulnerable y !DM! de expansioncontent:Condena a TODOS los enemigos. NL Agota."
+  },
+  "expansioncontent:AwakenDeath": {
+    "NAME": "Curiosidad",
+    "DESCRIPTION": "Cada vez que juegas un Poder, obtén !M! de Fuerza."
+  },
+  "expansioncontent:Chronoboost": {
+    "NAME": "Crono-Impulso",
+    "DESCRIPTION": "Obtén !M! de Fuerza por cada 12 cartas que juegues."
+  },
+  "expansioncontent:PolyBeam": {
+    "NAME": "Ráfaga Donu",
+    "DESCRIPTION": "Obtén !M! de Fuerza."
+  },
+  "expansioncontent:DecaShield": {
+    "NAME": "Escudo Deca",
+    "DESCRIPTION": "Obtén !B! de Armadura de Placas."
+  },
+  "expansioncontent:ShapePower": {
+    "NAME": "Bendición del Modelador",
+    "DESCRIPTION": "Obtén !M! de Fuerza y !DM! de *Armadura *de expansioncontent:placas.",
+    "EXTENDED_DESCRIPTION": [
+      "Poder de Donu",
+      "Obtén !M! de Fuerza.",
+      "Escudo de Deca",
+      "Obtén !M! de Armadura de Placas."
+    ]
+  },
+  "expansioncontent:SuperPrepareCrush": {
+    "NAME": "Preparar: Aplastamiento",
+    "DESCRIPTION": "En el siguiente turno, obtén *¡TRITURABABA!, [E] [E] [E] y !M! de Fuerza. NL Agota.",
+    "UPGRADE_DESCRIPTION": "En el siguiente turno, *¡TRITURABABA!+, [E] [E] [E] [E] y !M! de Fuerza. NL Agota.",
+    "EXTENDED_DESCRIPTION": [
+      "~Baba...~ NL #r~¡APLASTAR!~"
+    ]
+  },
+  "expansioncontent:SuperLivingWall": {
+    "NAME": "Muro Viviente",
+    "DESCRIPTION": "Obtén !B! de Bloqueo. NL Aplica !M! de expansioncontent:Baba a los atacantes este turno."
+  },
+  "expansioncontent:StudyTheSpire": {
+    "NAME": "Estudiar la Aguja",
+    "DESCRIPTION": "Obtén una carta *Jefe aleatoria al inicio de tus siguientes !M! turnos. Cuesta 0.",
+    "UPGRADE_DESCRIPTION": "Obtén una carta *Jefe mejorada aleatoria al inicio de tus siguientes !M! turnos. Cuesta 0."
+  },
+  "expansioncontent:QuickStudy": {
+    "NAME": "Estudio Rápido",
+    "DESCRIPTION": "Elige 1 de 3 cartas *Jefe para obtener. NL Cuesta 0 hasta que se juegue. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Elige 1 de 3 cartas *Jefe mejoradas para obtener. NL Cuesta 0 hasta que se juegue. NL Agota.",
+    "EXTENDED_DESCRIPTION": [
+      "Elige una carta de Jefe."
+    ]
+  },
+  "expansioncontent:DashGenerateEvil": {
+    "NAME": "El Mal Interno",
+    "DESCRIPTION": "Cada vez que aplicas !DM! desventajas, haz !M! de daño a TODOS los enemigos."
+  },
+  "expansioncontent:KnowingSkullWish": {
+    "NAME": "Calavera Sabia",
+    "DESCRIPTION": "Etérea. NL Gasta PV para *Desear *Almas, *Pociones o una carta *Incolora. NL Agota."
+  },
+  "expansioncontent:Antidote": {
+    "NAME": "Antídoto",
+    "DESCRIPTION": "Retén. NL Pierde !M! de Veneno."
+  },
+ "expansioncontent:SuperGhostShield": {
+    "NAME": "Escudo Fantasma",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL [#e087a4]Obtén[] [#e087a4]!B![] [#e087a4]de[] [#e087a4]Bloqueo.[] NL [#e087a4]Obtén[] [#e087a4]!M![] [#e087a4]de[] [#e087a4]Desenfoque.[]",
+    "EXTENDED_DESCRIPTION": [
+      "Obtén !B! de Bloqueo."
+    ]
+  },
+  "expansioncontent:SuperGoopSpray": {
+    "NAME": "Rociada de Baba",
+    "DESCRIPTION": "Aplica !M! de expansioncontent:Baba y !DM! de Débil.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! de expansioncontent:Baba y !DM! de Débil a TODOS los enemigos."
+  },
+  "expansioncontent:ChargeUp": {
+    "NAME": "Placa Resistente",
+    "DESCRIPTION": "Reduce cada una de tus desventajas en !M!. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Reduce cada una de tus desventajas en !M!."
+  },
+  "expansioncontent:SuperTaunt": {
+    "NAME": "Provocación",
+    "DESCRIPTION": "Aplica !M! de Débil y de Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! de Débil y de Vulnerable a TODOS los enemigos."
+  },
+  "expansioncontent:Torchfire": {
+    "NAME": "Fuego Salvaje",
+    "DESCRIPTION": "Haz !D! de daño. NL Repítelo por cada desventaja única en el enemigo."
+  },
+  "expansioncontent:TakeFlight": {
+    "NAME": "Revitalizar",
+    "DESCRIPTION": "Obtén !M! de expansioncontent:Regeneración. NL expansioncontent:Cantico Obtén !DM! *Regeneración en su lugar."
+  },
+  "expansioncontent:BeatOfDeath": {
+    "NAME": "Latido de la Muerte",
+    "DESCRIPTION": "Cada vez que juegas una carta, haz !M! de daño a TODOS los enemigos."
+  },
+  "expansioncontent:SuperViciousMockery": {
+    "NAME": "Mofa Cruel",
+    "DESCRIPTION": "Obtén !M! de Vigor. NL Aplica !DM! de Débil."
+  },
+  "expansioncontent:SuperClobber": {
+    "NAME": "Golpe Demoledor",
+    "DESCRIPTION": "Haz !D! de daño. NL Obtén Bloqueo igual al daño sin bloquear infligido."
+  },
+  "expansioncontent:SuperSomberShield": {
+    "NAME": "Escudo Melancólico",
+    "DESCRIPTION": "expansioncontent:Pira. NL Obtén !B! de Bloqueo. NL En el siguiente turno, obtén una copia de la carta *Agotada."
+  },
+  "expansioncontent:SuperWhirlingFlame": {
+    "NAME": "Llama Giratoria",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Coloca una carta de tu pila de descarte en la parte superior de tu pila de robo."
+  },
+  "expansioncontent:Flail": {
+    "NAME": "Azote",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos !DM! veces. NL Obtén !M! de Artefacto. NL Agota.",
+    "EXTENDED_DESCRIPTION": [
+      "azotando",
+      "Azote"
+    ]
+  },
+  "expansioncontent:SuperBloodthirst": {
+    "NAME": "Sed de Sangre",
+    "DESCRIPTION": "Haz !D! de daño. NL Si es Fatal, obtén una poción aleatoria y Agota esta carta."
+  },
+  "expansioncontent:SuperBodyCrash": {
+    "NAME": "Impacto Corporal",
+    "DESCRIPTION": "Obtén !B! de Bloqueo. NL Haz daño igual a tu Bloqueo.",
+    "UPGRADE_DESCRIPTION": " NL (Haz !D! de daño.)"
+  },
+  "expansioncontent:SuperEtherStep": {
+    "NAME": "Paso Etéreo",
+    "DESCRIPTION": "Agota 1 carta. NL Roba !M! carta. NL Haz !D! de daño.",
+    "UPGRADE_DESCRIPTION": "Agota 1 carta. NL Roba !M! cartas. NL Haz !D! de daño."
+  },
+  "expansioncontent:Virus": {
+    "NAME": "Virus",
+    "DESCRIPTION": "Agota hasta !M! cartas, baraja un *Rayo *Mayor en tu pila de robo por cada carta agotada. NL Agota."
+  },
+  "expansioncontent:MajorBeam": {
+    "NAME": "Rayo Mayor",
+    "DESCRIPTION": "Haz !D! de daño. NL Roba !M! carta.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Roba !M! cartas."
+  },
+  "expansioncontent:ManipulateTime": {
+    "NAME": "Reflexión Tardía",
+    "DESCRIPTION": "Coloca una carta de tu pila de descarte al fondo de tu pila de robo. Cuesta 0 hasta ser jugada.",
+    "UPGRADE_DESCRIPTION": "Coloca una carta de tu pila de descarte al fondo de tu pila de robo. Cuesta 0 durante este combate."
+  },
+  "expansioncontent:Pandemonium": {
+    "NAME": "Pandemonio",
+    "DESCRIPTION": "Al inicio de tu turno, juega una carta aleatoria de tu pila de descarte."
+  },
+  "expansioncontent:Reverie": {
+    "NAME": "Ensueño",
+    "DESCRIPTION": "Al inicio de tu turno, coloca una de las primeras !M! cartas de tu pila de descarte en tu mano."
+  },
+  "expansioncontent:ExploitVulnerability": {
+    "NAME": "Rayo Donu",
+    "DESCRIPTION": "Elimina todo el Bloqueo del enemigo, luego obtén esa cantidad de Bloqueo. NL Haz !D! de daño dos veces."
+  },
+  "expansioncontent:PeekPages": {
+    "NAME": "Hojear Páginas",
+    "DESCRIPTION": "Baraja !M! *Revelación en tu pila de robo. NL Agota."
+  },
+  "expansioncontent:BloodBarrage": {
+    "NAME": "Barrido Sangriento",
+    "DESCRIPTION": "Haz !D! de daño !M! veces. NL Agota."
+  },
+  "expansioncontent:DoubleAct": {
+    "NAME": "Doble Acto",
+    "DESCRIPTION": "Al inicio de tu próximo turno, roba cartas y gana [E] una vez adicional. NL Agota."
+  },
+  "expansioncontent:BloodySacrifice": {
+    "NAME": "Sacrificio Sangriento",
+    "DESCRIPTION": "Etérea. NL Pierde !M! % de tu Vida Máxima. NL Obtén 1 Ritual. Agota.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Pierde {amount} de Vida Máxima.)"
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "Gremlin:CursedTome": {
+    "OPTIONS": [
+      "[Tomar] #gObtén #gel #gLibro. #rTodos #rlos #rGremlins #rpierden #r"
+    ]
+  },
+  "Gremlin:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Una mente flexible no se ve agobiada por la duda."
+    ],
+    "OPTIONS": [
+      "[Capricho] #gReemplaza todos los #gGolpes y #gDefensas por #gShivs y #gBarreras.",
+      "[Bloqueado] Requiere un Golpe o Defensa."
+    ]
+  },
+  "Gremlin:KnowingSkull": {
+    "OPTIONS": [
+      "[¿Información?] #gRevela #gal #gJefe. #rTodos #rlos #rGremlins #rpierden #r",
+      "[¿Suerte?] #gObtén #guna #gCarta #gIncolora. #rTodos #rlos #rGremlins #rpierden #r",
+      "[¿Un Respiro?] #gObtén #guna #gPoción. #rTodos #rlos #rGremlins #rpierden #r",
+      " #gOro. #rTodos #rlos #rGremlins #rpierden #r",
+      "[¿Cómo salgo de aquí?] #rTodos #rlos #rGremlins #rpierden #r"
+    ]
+  },
+  "Gremlin:MatchingGame": {
+    "DESCRIPTIONS": [
+      "\" #b¡Doce cartas! ¡Empárcalas para quedártelas! #bCinco intentos...\" NL NL \" #b¡Diez intentos!\" interrumpes. NL NL El gremlin frunce el ceño. \" #b¡Cinco intentos!\" NL NL \" #bOcho.\" NL NL \" #bSeis,\" escupe. \"Y espero que te #pMaldecido.\" NL NL Tú esperas que él también lo sea.",
+      "Terminas el juego del gremlin y miras hacia arriba. NL Se escapó antes de que pudieras conseguir más #y~cosas~ #y~gratis!~",
+      "Un gremlin baraja frenéticamente unas cartas sobre la mesa. Parece estar ofreciendo #y~cosas~ #y~gratis.~ Y tú quieres #y~cosas~ #y~gratis.~"
+    ]
+  },
+  "Gremlin:Nest": {
+    "OPTIONS": [
+      "[Esperar en la fila] #gObtén Daga Ritual. #rTodos #rlos #rGremlins #rpierden #r"
+    ]
+  },
+  "Gremlin:ScrapOoze": {
+    "OPTIONS": [
+      "[Meter la mano] #rTodos #rlos #rGremlins #rpierden #r",
+      "[Más profundo] #rTodos #rlos #rGremlins #rpierden #r"
+    ]
+  },
+  "Gremlin:ScrapOozeReplacement": {
+    "NAME": "Baba Chatarra",
+    "DESCRIPTIONS": [
+      "Al entrar en la habitación, escuchas un ~gorgoteo~ y el @rechinar@ de metales. ¡Es una #yBaba #yChatarra! Estas graciosas babas siempre encuentran #ycosas #yútiles. Mejor aún, son tan lentas y débiles que no pueden detenerte. Sabes cómo evitar su ácido puntiagudo, pero requiere #rconcentración.",
+      "Con cuidado, con cuidado. Evitas las partes filosas y cortantes. Ojalá no fuera tan #r@aburrido.@ NL Pero si sigues intentándolo, sabes que encontrarás una #yreliquia brillante...",
+      "#g¡Éxito! NL Tras hurgar entre metales y ácido ardiente, por fin tomas una #yreliquia y la arrancas. NL Sales de la baba aferrado a tu nuevo juguete.",
+      "Esto es demasiado #raburrido. ¿Qué estabas haciendo, siquiera?",
+      "Decides dejar el área. NL La baba no presta atención, satisfecha con su comida."
+    ],
+    "OPTIONS": [
+      "[Buscar con cuidado] #r",
+      "%: #rObtén #rMaldición #r- #rDisperso. #g",
+      "%: #gEncuentra #guna #gReliquia.",
+      "[Irse]",
+      "[Ser cuidadoso] #r"
+    ]
+  },
+  "Gremlin:SensoryStone": {
+    "OPTIONS": [
+      "[Recordar] #gAgrega #g2 #gCartas #gIncoloras #ga #gtu #gmazo. #rTodos #rlos #rGremlins #rpierden #r",
+      "[Recordar] #gAgrega #g3 #gCartas #gIncoloras #ga #gtu #gmazo. #rTodos #rlos #rGremlins #rpierden #r"
+    ]
+  },
+  "Gremlin:Trenchcoat": {
+    "NAME": "Mercader Sospechoso",
+    "DESCRIPTIONS": [
+      "Te topas con una figura extraña que claramente parecen ser cinco gremlins en una gabardina. NL \"Hola, viajero,\" dice una voz chillona. NL \"Soy el #yamable #yMercader, definitivamente no cinco gremlins disfrazados. ¿Te interesan mis ~finos~ ~productos~ que ciertamente no fueron robados?\"",
+      "No puedes resistirte a una ganga, ni siquiera de un tipo tan sospechoso. NL Haces tu compra, pero en cuanto terminas, el vendedor huye. NL NL A lo lejos, casi puedes escuchar un grito de frustración: #r\"¡Malditos #rgremlins #rladrones!\"",
+      "No tienes intención de enriquecer al despreciable mercader. Guardas tu dinero. El Mercader huye al notar que no comprarás."
+    ],
+    "OPTIONS": [
+      "[Comprar] #rPierde #r",
+      " #rOro",
+      ". #gObtén #g1 #gCarta #gIncolora #galeatoria.",
+      ". #gObtén #g2 #gCartas #gIncoloras #galeatorias.",
+      ". #gObtén #g3 #gCartas #gIncoloras #galeatorias.",
+      "[Irse]",
+      "[Bloqueado] Requiere al menos ",
+      " de Oro.",
+      "[Rechazar]"
+    ]
+  },
+  "Gremlin:Vampires": {
+    "DESCRIPTIONS": [
+      "Caminando por una calle oscura, te encuentras con varias figuras encapuchadas realizando un ritual. Al acercarte, se giran al unísono. El más alto muestra colmillos y extiende una mano pálida. NL ~\"Únete~ ~a~ ~nosotros,~ ~codicioso~ ~Gremlin,~ ~y~ ~siente~ ~el~ ~calor~ ~de~ ~la~ ~Aguja.\"~"
+    ]
+  },
+  "Gremlin:WheelGame": {
+    "DESCRIPTIONS": [
+      "Se lanza sobre ti, pero estás preparado. NL Lo cortas antes de que te apuñale. NL Te quedas con tu premio, pero lamentablemente la Rueda desaparece antes de poder saquearla."
+    ],
+    "OPTIONS": [
+      "[¡Premio!] #g¡ATAQUE #gPREVENTIVO!",
+      "[Saqueo]"
+    ]
+  },
+  "Gremlin:WingStatue": {
+    "OPTIONS": [
+      "[Rezar] #gElimina #guna #gcarta #gde #gtu #gmazo. #rTodos #rlos #rGremlins #rpierden #r"
+    ]
+  },
+  "Gremlin:WorldOfGoop": {
+    "OPTIONS": [
+      " #gOro. #rTodos #rlos #rGremlins #rpierden #r"
+    ]
+  }
+}

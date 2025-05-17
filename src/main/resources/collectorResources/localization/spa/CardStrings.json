@@ -1,0 +1,673 @@
+{
+  "collector:ActOfAggression": {
+    "NAME": "Acto de Agresión",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Aplica !M! de Vulnerable a TODOS los enemigos."
+  },
+  "collector:AlwaysMore": {
+    "NAME": "Siempre Más",
+    "DESCRIPTION": "collector:Pira. NL Gana !M! de Oro."
+  },
+  "collector:AshenStrike": {
+    "NAME": "Golpe de Cenizas",
+    "DESCRIPTION": "Haz !D! de daño. NL Gana una *Brasa."
+  },
+  "collector:Arrogance": {
+    "NAME": "Arrogancia",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Tu próximo Ataque este turno también aplica !M! de collector:Condena."
+  },
+  "collector:AshesAndDust": {
+    "NAME": "Cenizas y Polvo",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos X veces. NL Si X es 5 o más, golpea dos veces adicionales."
+  },
+  "collector:BindingCall": {
+    "NAME": "Llamado de Atadura",
+    "DESCRIPTION": "Gana !M! de expansioncontent:PV_Temp. NL collector:CabezaDeAntorcha obtiene \"Aplica !clm2! de collector:Condena a un enemigo aleatorio.\""
+  },
+  "collector:Billow": {
+    "NAME": "Humo Ondulante",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL En el próximo turno, añade *Rugido a tu mano."
+  },
+  "collector:Bellow": {
+    "NAME": "Rugido",
+    "DESCRIPTION": "Etérea. NL Aplica collector:Condena igual al Bloqueo no utilizado del turno anterior. NL Agota.",
+    "EXTENDED_DESCRIPTION": [" NL ( Aplica !M! de collector:Condena )"]
+  },
+  "collector:BlackBindings": {
+    "NAME": "Ataduras Negras",
+    "DESCRIPTION": "Aplica !M! de Débil, aplica !clm2! de collector:Condena por cada desventaja distinto en el enemigo."
+  },
+  "collector:Blightning": {
+    "NAME": "Relámpago Marchito",
+    "DESCRIPTION": "Aplica !M! de collector:Condena. NL Haz !D! de daño. NL Roba 1 carta de tu pila Coleccionada. NL Agota."
+  },
+  "collector:Bonfire": {
+    "NAME": "Hoguera",
+    "DESCRIPTION": "collector:Pira. NL Gana !B! de Bloqueo. NL En el próximo turno, gana 1 de collector:Reserva."
+  },
+  "collector:BrainDrain": {
+    "NAME": "Drenaje Mental",
+    "DESCRIPTION": "El enemigo pierde !M! PV. NL Añade su carta Coleccionada a tu mano. NL Agota.",
+    "UPGRADE_DESCRIPTION": "El enemigo pierde !M! PV. NL Añade su carta Coleccionada a tu mano y Mejórala. NL Agota."
+  },
+  "collector:BramblesparKindling": {
+    "NAME": "Astillas de Zarza Ardiente",
+    "DESCRIPTION": "Injugable. NL Al *Agotarse, añade un *Golpe *Ardiente a tu mano.",
+    "UPGRADE_DESCRIPTION": "Injugable. NL Al *Agotarse, añade un *Golpe *Ardiente+ a tu mano.",
+    "EXTENDED_DESCRIPTION": ["Debo encender esta astilla para usarla."]
+  },
+  "collector:BurningStrike": {
+    "NAME": "Golpe Ardiente",
+    "DESCRIPTION": "Haz !D! de daño. NL Roba una carta.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Roba !M! cartas."
+  },
+  "collector:CantTouchThis": {
+    "NAME": "Intocable",
+    "DESCRIPTION": "Gana !M! de Destreza. NL Cuando bloquees completamente un ataque, aplica !clm2! de collector:Condena al atacante."
+  },
+  "collector:CoffinNail": {
+    "NAME": "Clavo de Ataúd",
+    "DESCRIPTION": "Haz !D! de daño. NL Al *Agotarse, vuelve a tu mano el próximo turno con !M! de daño adicional."
+  },
+  "collector:Condemn": {
+    "NAME": "Condenar",
+    "DESCRIPTION": "Aplica !M! de Vulnerable. NL Aplica !clm2! de collector:Condena."
+  },
+  "collector:CursedWail": {
+    "NAME": "Lamento Maldito",
+    "DESCRIPTION": "TODOS los enemigos pierden !M! de Fuerza este turno. NL Los enemigos collector:Afligidos pierden !clm2! de Fuerza. NL Agota."
+  },
+  "collector:DarkApotheosis": {
+    "NAME": "Oscura Apoteosis",
+    "DESCRIPTION": "Mejora la pila Coleccionada por el resto del combate. NL Agota."
+  },
+  "collector:DarkLordForm": {
+    "NAME": "Forma del Señor Oscuro",
+    "DESCRIPTION": "Al comienzo de tu turno, juega *¡Eres *Mío! contra un enemigo aleatorio.",
+    "UPGRADE_DESCRIPTION": "Al comienzo de tu turno, juega *¡Eres *Mío!+ contra un enemigo aleatorio."
+  },
+  "collector:Darkstorm": {
+    "NAME": "Tormenta Oscura",
+    "DESCRIPTION": "Obtén un *Relámpago *Marchito. NL Baraja !M! más en tu pila de robo. NL Agota."
+  },
+  "collector:DarkwoodKindling": {
+    "NAME": "Leña de Sauce Oscuro",
+    "DESCRIPTION": "Injugable. NL Al *Agotarse, gana !M! de collector:Reserva en el próximo turno.",
+    "UPGRADE_DESCRIPTION": "Injugable. NL Retiene. NL Al *Agotarse, gana !M! de collector:Reserva en el próximo turno.",
+    "EXTENDED_DESCRIPTION": ["Debo encender esta leña para usarla."]
+  },
+  "collector:Defend": {
+    "NAME": "Defensa",
+    "DESCRIPTION": "Gana !B! de Bloqueo."
+  },
+  "collector:DoubleTrouble": {
+    "NAME": "Problemas Dobles",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL La próxima carta Coleccionada que juegues este turno se juega dos veces."
+  },
+  "collector:DoMayhem": {
+    "NAME": "Causar Caos",
+    "DESCRIPTION": "Al comienzo de tu turno, si algún enemigo tiene 25 o más de collector:Condena, juega la carta superior de tu pila de robo."
+  },
+  "collector:DragonsTrove": {
+    "NAME": "Tesoro del Dragón",
+    "DESCRIPTION": "collector:Pira. NL Roba 2 cartas de tu pila Coleccionada. NL Gana !M! de collector:Reserva. NL Agota."
+  },
+  "collector:Ember": {
+    "NAME": "Brasa",
+    "DESCRIPTION": "Retiene. NL Agota. NL Al *Agotarse, gana !M! de Fuerza.",
+    "EXTENDED_DESCRIPTION": ["Estas brasas deben encenderse, no jugarse."]
+  },
+  "collector:Empower": {
+    "NAME": "Potenciar",
+    "DESCRIPTION": "Gana X de Fuerza al comienzo de tus próximos !M! turnos."
+  },
+  "collector:Extricate": {
+    "NAME": "Arrancar el Alma",
+    "DESCRIPTION": "Agota todas las cartas que no sean Ataques en tu mano. NL Haz !D! de daño."
+  },
+  "collector:FeelMyPain": {
+    "NAME": "Siente Mi Dolor",
+    "DESCRIPTION": "Siempre que *Agotes una carta, un enemigo aleatorio pierde !M! PV."
+  },
+  "collector:FiendFire": {
+    "NAME": "Fuego Demoníaco",
+    "DESCRIPTION": "Agota tu mano. NL Haz !D! de daño por cada carta *Agotada. NL Agota."
+  },
+  "collector:Finalize": {
+    "NAME": "Finalizar",
+    "DESCRIPTION": "Cuando el enemigo muera, cura !clm2! PV. NL Aplica !M! de collector:Condena. NL Agota."
+  },
+  "collector:FingerOfDeath": {
+    "NAME": "Dedo de la Muerte",
+    "DESCRIPTION": "Solo se puede pagar con collector:Reserva. NL Aplica !M! de collector:Condena.",
+    "UPGRADE_DESCRIPTION": "Solo se puede pagar con collector:Reserva. NL Aplica !M! de collector:Condena a TODOS los enemigos."
+  },
+  "collector:FlameLash": {
+    "NAME": "Latigazo de Llamas",
+    "DESCRIPTION": "collector:Pira. NL Haz !D! de daño, suma el daño de la carta *Agotada.",
+    "UPGRADE_DESCRIPTION": "collector:Pira. NL Haz !D! de daño, suma el daño de la carta *Agotada más !M! a este."
+  },
+  "collector:FleetingEmbers": {
+    "NAME": "Brasas Fugaces",
+    "DESCRIPTION": "collector:Pira. NL Gana !B! de Bloqueo. NL Añade !M! *Brasas a tu mano."
+  },
+  "collector:Forgery": {
+    "NAME": "Falsificación",
+    "DESCRIPTION": "Haz !D! de daño. NL Elige 1 de !M! cartas de tu pila Coleccionada para obtener una copia.",
+    "EXTENDED_DESCRIPTION": ["para añadirla a tu mano."]
+  },
+  "collector:FuelTheFire": {
+    "NAME": "Alimenta el Fuego",
+    "DESCRIPTION": "collector:Pira. NL En el próximo turno, gana !M! de collector:Reserva.",
+    "UPGRADE_DESCRIPTION": "collector:Pira. NL En el próximo turno, gana !M! de collector:Reserva y roba una carta."
+  },
+  "collector:Goodbye": {
+    "NAME": "Despedida",
+    "DESCRIPTION": "Duplica la collector:Condena del enemigo. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Triplica la collector:Condena del enemigo. NL Agota."
+  },
+  "collector:GourmandsGaze": {
+    "NAME": "Mirada del Glotón",
+    "DESCRIPTION": "Haz !D! de daño. NL Si jugaste una carta Coleccionada este turno, gana !B! de Bloqueo."
+  },
+  "collector:GreaterHurting": {
+    "NAME": "Dolor Mayor",
+    "DESCRIPTION": "Etérea. NL Haz !D! de daño. NL Si esta carta se *Agota, obtén un *Dolor *Máximo.",
+    "UPGRADE_DESCRIPTION": "Etérea. NL Haz !D! de daño. NL Si esta carta se *Agota, obtén un *Dolor *Máximo+."
+  },
+  "collector:GreatestHurting": {
+    "NAME": "Dolor Supremo",
+    "DESCRIPTION": "Etérea. NL Haz !D! de daño. NL Si esta carta se *Agota, obtén una *Brasa."
+  },
+  "collector:GreenpyreLocus": {
+    "NAME": "Centro de la Pira Verde",
+    "DESCRIPTION": "Elige 1 de 3 cartas Coleccionadas para añadir a tu mano. Añade !M! copias a tu pila Coleccionada.",
+    "EXTENDED_DESCRIPTION": ["Elige una carta para añadir a tu mano."]
+  },
+  "collector:Heatwave": {
+    "NAME": "Ola de Calor",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Gana una *Brasa."
+  },
+  "collector:Hoard": {
+    "NAME": "Acaparar",
+    "DESCRIPTION": "collector:Pira. NL Roba !M! cartas. NL Retenlas."
+  },
+  "collector:HoardersStrike": {
+    "NAME": "Golpe Acaparador",
+    "DESCRIPTION": "Haz !D! de daño. NL Juega la carta superior de tu pila Coleccionada."
+  },
+  "collector:Hurting": {
+    "NAME": "Dolor",
+    "DESCRIPTION": "Etérea. NL Haz !D! de daño. NL Si esta carta se *Agota, obtén un *Dolor *Mayor.",
+    "UPGRADE_DESCRIPTION": "Etérea. NL Haz !D! de daño. NL Si esta carta se *Agota, obtén un *Dolor *Mayor+."
+  },
+  "collector:IllTakeThat": {
+    "NAME": "Eso Es Mío",
+    "DESCRIPTION": "Roba hasta !M! del Bloqueo del enemigo. NL Haz !D! de daño."
+  },
+  "collector:InevitableDemise": {
+    "NAME": "Destino Inevitable",
+    "DESCRIPTION": "Haz !D! de daño. NL Previene que collector:Condena sea eliminada del objetivo una vez."
+  },
+  "collector:InflictAgony": {
+    "NAME": "Infligir Agonía",
+    "DESCRIPTION": "Haz !D! de daño. NL Si el enemigo no está collector:Afligido, aplica 2 de Débil y Vulnerable."
+  },
+  "collector:Invigorate": {
+    "NAME": "Destello",
+    "DESCRIPTION": "collector:Pira. NL Elige entre *Zancadilla o *Cegar para obtenerla. NL Agota.",
+    "UPGRADE_DESCRIPTION": "collector:Pira. NL Elige entre *Zancadilla+ o *Cegar+ para obtenerla. NL Agota.",
+    "EXTENDED_DESCRIPTION": ["Elige una carta para añadir a tu mano."]
+  },
+  "collector:IronbarkKindling": {
+    "NAME": "Astilla de Corteza de Hierro",
+    "DESCRIPTION": "Injugable. NL Al *Agotarse, gana !B! de Bloqueo.",
+    "UPGRADE_DESCRIPTION": "Injugable. Retiene. NL Al *Agotarse, gana !B! de Bloqueo.",
+    "EXTENDED_DESCRIPTION": ["Debo encender esta astilla para usarla."]
+  },
+  "collector:ItMattersNot": {
+    "NAME": "No Importa",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Aumenta en !M! lo Débil y Vulnerable de los enemigos."
+  },
+  "collector:JadedJabs": {
+    "NAME": "Golpes Apáticos",
+    "DESCRIPTION": "collector:Pira. NL Haz !D! de daño. NL Gana *Navajas igual al costo de la carta *Agotada !M!."
+  },
+  "collector:Karma": {
+    "NAME": "Karma",
+    "DESCRIPTION": "Al final de tu turno, gana !M! de Bloqueo. NL Si un enemigo está collector:Afligido, gana !clm2! más.",
+    "UPGRADE_DESCRIPTION": "Innata. NL Al final de tu turno, gana !M! de Bloqueo. NL Si un enemigo está collector:Afligido, gana !clm2! más."
+  },
+  "collector:LanternFlare": {
+    "NAME": "Destello de Linterna",
+    "DESCRIPTION": "collector:Pira. NL Aplica !M! de collector:Condena. NL El enemigo gana !clm2! más al final de cada uno de sus turnos."
+  },
+  "collector:LuckyWick": {
+    "NAME": "Mecha Afortunada",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Haz !D! de daño."
+  },
+  "collector:MastersCall": {
+    "NAME": "Llamado del Amo",
+    "DESCRIPTION": "¡No utilizada!"
+  },
+  "collector:MiniCurse": {
+    "NAME": "Mini-Maldición",
+    "DESCRIPTION": "collector:Pira. NL Aplica 1 de Débil y Vulnerable.",
+    "UPGRADE_DESCRIPTION": "collector:Pira. NL Aplica 1 de Débil y Vulnerable a TODOS los enemigos."
+  },
+  "collector:Misdirect": {
+    "NAME": "Desviar",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL En el próximo turno, gana 1 de collector:Reserva."
+  },
+  "collector:MysteryWeaving": {
+    "NAME": "Tejido Misterioso",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Otorga 2 menos de Bloqueo por cada otra carta en tu mano."
+  },
+  "collector:OakbrimKindling": {
+    "NAME": "Astilla de Roble Resinoso",
+    "DESCRIPTION": "Injugable. NL Al *Agotarse, roba !M! cartas.",
+    "EXTENDED_DESCRIPTION": ["Debo encender esta astilla para usarla."]
+  },
+  "collector:Omen": {
+    "NAME": "Augurio",
+    "DESCRIPTION": "Cada vez que juegues una carta Coleccionada, gana 1 de Fuerza.",
+    "UPGRADE_DESCRIPTION": "Innata. NL Cada vez que juegues una carta Coleccionada, gana 1 de Fuerza."
+  },
+  "collector:ProtectingCall": {
+    "NAME": "Llamado Protector",
+    "DESCRIPTION": "Gana !M! de expansioncontent:PV_Temp. NL collector:CabezaDeAntorcha gana \"Gana !clm2! de Bloqueo.\""
+  },
+  "collector:Pyromancy": {
+    "NAME": "Piromancia",
+    "DESCRIPTION": "collector:Pira. NL Al comienzo de tu turno, gana 1 de collector:Reserva.",
+    "UPGRADE_DESCRIPTION": "Innata. collector:Pira. NL Al comienzo de tu turno, gana 1 de collector:Reserva."
+  },
+  "collector:RagingCall": {
+    "NAME": "Llamado Furioso",
+    "DESCRIPTION": "Gana !M! de expansioncontent:PV_Temp. NL collector:CabezaDeAntorcha gana \"Haz !clm2! de daño a TODOS los enemigos.\""
+  },
+  "collector:ReceiveTribute": {
+    "NAME": "Recibir Tributo",
+    "DESCRIPTION": "collector:Pira. NL Elige 1 de !M! cartas de Jefe para obtener. Gana Retiene. NL Agota.",
+    "EXTENDED_DESCRIPTION": ["Elige una carta para añadirla a tu mano."]
+  },
+  "collector:Roast": {
+    "NAME": "Rostizar",
+    "DESCRIPTION": "collector:Pira. NL Haz !D! de daño."
+  },
+  "collector:RotwoodKindling": {
+    "NAME": "Astilla de Madera Podrida",
+    "DESCRIPTION": "Injugable. NL Al *Agotarse, aplica !M! de Vulnerable y !clm2! de collector:Condena a TODOS los enemigos.",
+    "EXTENDED_DESCRIPTION": ["Debo encender esta astilla para usarla."]
+  },
+  "collector:SapStrength": {
+    "NAME": "Marca Mortal",
+    "DESCRIPTION": "Haz !D! de daño. NL En el próximo turno, el enemigo pierde PV igual al doble del daño no bloqueado."
+  },
+  "collector:ScorchingRay": {
+    "NAME": "Rayo Abrasador",
+    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio X veces."
+  },
+  "collector:SeedOfDoubt": {
+    "NAME": "Semilla de Duda",
+    "DESCRIPTION": "Aplica !M! de collector:Condena. NL Cuando se *Agote una carta mientras esté en tu mano, aumenta su *Condena en !clm2!."
+  },
+  "collector:ShadowDaggers": {
+    "NAME": "Dagas Sombrías",
+    "DESCRIPTION": "Haz !D! de daño por cada carta Coleccionada jugada en este combate. NL Agota.",
+    "EXTENDED_DESCRIPTION": [" NL (Golpea ", " vez.)", " veces.)"]
+  },
+  "collector:SomberShield": {
+    "NAME": "Escudo Sombrío",
+    "DESCRIPTION": "collector:Pira. NL Gana !B! de Bloqueo. NL En el próximo turno, gana una copia de la carta *Agotada."
+  },
+  "collector:SoulSnare": {
+    "NAME": "Trampa de Almas",
+    "DESCRIPTION": "Aplica !M! de collector:Condena. NL Agota."
+  },
+  "collector:Soulforge": {
+    "NAME": "Forja de Almas",
+    "DESCRIPTION": "Roba una carta de tu pila Coleccionada. Gana !M! copia Mejorada de ella. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Roba una carta de tu pila Coleccionada. Gana !M! copia Mejorada de ella. NL Agota."
+  },
+  "collector:Spark": {
+    "NAME": "Chispa",
+    "DESCRIPTION": "Gana 1 de collector:Reserva. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Gana 1 de collector:Reserva. NL Roba 1 carta. NL Agota."
+  },
+  "collector:SpiritLeech": {
+    "NAME": "Sanguijuela Espiritual",
+    "DESCRIPTION": "Haz !D! de daño. NL Si el enemigo está collector:Afligido, gana !B! de Bloqueo."
+  },
+  "collector:StashAway": {
+    "NAME": "Guardar Para Después",
+    "DESCRIPTION": "Gana !B! de Bloqueo X veces. NL En el próximo turno, gana X de collector:Reserva. NL Agota."
+  },
+  "collector:Strike": {
+    "NAME": "Golpe",
+    "DESCRIPTION": "Haz !D! de daño."
+  },
+  "collector:SuckerPunch": {
+    "NAME": "Golpe Bajo",
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! de Débil."
+  },
+  "collector:Suffering": {
+    "NAME": "Sufrimiento",
+    "DESCRIPTION": "Siempre que apliques *Débil o *Vulnerable a un enemigo, también aplica !M! de collector:Condena."
+  },
+  "collector:SunbloomKindling": {
+    "NAME": "Astilla de Flor Solar",
+    "DESCRIPTION": "Injugable. NL Al *Agotarse, gana !M! de Fuerza y añade 2 *Brasas a tu mano.",
+    "EXTENDED_DESCRIPTION": ["Debo encender esta astilla para usarla."]
+  },
+  "collector:ThornWhip": {
+    "NAME": "Látigo de Espinas",
+    "DESCRIPTION": "Haz !D! de daño y aplica !M! de hermit:Contusión a TODOS los enemigos. NL Gana una *Navaja."
+  },
+  "collector:Torchbearer": {
+    "NAME": "Portador de la Llama",
+    "DESCRIPTION": "Gana !M! de expansioncontent:PV_Temp. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Si tienes expansioncontent:PV_Temp, Agota. NL Gana !M! de expansioncontent:PV_Temp."
+  },
+  "collector:WhirlingFlame": {
+    "NAME": "Llama Giratoria",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Coloca una carta de tu pila de descarte en la parte superior de tu pila de robo."
+  },
+  "collector:VoidArmor": {
+    "NAME": "Armadura del Vacío",
+    "DESCRIPTION": "TODOS ganan !B! de Bloqueo y 1 de bronze:desenfoque."
+  },
+  "collector:Wildfire": {
+    "NAME": "Fuego Salvaje",
+    "DESCRIPTION": "Haz !D! de daño por cada desventaja distinto en el enemigo."
+  },
+  "collector:YouAreMine": {
+    "NAME": "¡Eres Mío!",
+    "DESCRIPTION": "Aplica !M! de Débil. NL Aplica !M! de Vulnerable. Aplica !clm2! de collector:Condena."
+  },
+  "collector:Whomp": {
+    "NAME": "Sopapo",
+    "DESCRIPTION": "Haz !D! de daño. NL Gana !M! de expansioncontent:PV_Temp. NL Agota."
+  },
+  "collector:AcidSlimeCard": {
+    "NAME": "Babosa Ácida",
+    "DESCRIPTION": "Añade !M! carta aleatoria de coste 0 a tu mano.",
+    "UPGRADE_DESCRIPTION": "Añade !M! cartas aleatorias de coste 0 a tu mano."
+  },
+  "collector:AugmenterCard": {
+    "NAME": "Aumentador",
+    "DESCRIPTION": "Pierde 3 PV. NL Gana !M! de Fuerza."
+  },
+  "collector:BearCard": {
+    "NAME": "Oso",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Elimina el Bloqueo del enemigo. NL Haz !D! de daño."
+  },
+  "collector:BlueSlaverCard": {
+    "NAME": "Esclavista Azul",
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica 1 de Débil. NL Duplica la Débil del enemigo."
+  },
+  "collector:BonfireSpiritsCard": {
+    "NAME": "Espíritus de la Hoguera",
+    "DESCRIPTION": "collector:Pira. NL Cura !M! PV. NL Si la carta *Agotada era Rara, aumenta tus PV máximos en 1."
+  },
+  "collector:BookOfStabbingCard": {
+    "NAME": "Libro de las Puñaladas",
+    "DESCRIPTION": "Siempre que inflijas daño de Ataque no bloqueado, aplica !M! de collector:Condena."
+  },
+  "collector:BronzeOrbCard": {
+    "NAME": "Orbe de Bronce",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Haz !D! de daño. NL La carta superior de tu pila de robo cuesta 0 hasta ser jugada."
+  },
+  "collector:ByrdCard": {
+    "NAME": "Jáparo",
+    "DESCRIPTION": "Haz !D! de daño 5 veces."
+  },
+  "collector:CenturionCard": {
+    "NAME": "Centurión",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Gana !M! de Destreza."
+  },
+  "collector:ChosenCard": {
+    "NAME": "Elegido",
+    "DESCRIPTION": "Aplica !M! de Débil. NL Si el enemigo no piensa atacar, aplica !clm2! de Vulnerable."
+  },
+  "collector:ClericCard": {
+    "NAME": "Clérigo",
+    "DESCRIPTION": "collector:Pira. NL Gana !M! de expansioncontent:PV_Temp."
+  },
+  "collector:CultistCard": {
+    "NAME": "Cultista",
+    "DESCRIPTION": "collector:Pira. NL Gana 1 de Fuerza al inicio de tus siguientes 3 turnos."
+  },
+  "collector:DaggerCard": {
+    "NAME": "Dagger",
+    "DESCRIPTION": "Pierde !M! de HP. NL Haz !D! de daño."
+  },
+  "collector:DarklingsCard": {
+    "NAME": "Prole Oscura",
+    "DESCRIPTION": "collector:Pira. NL Haz !D! de daño. expansioncontent:Exhuma una carta Coleccionada.",
+    "EXTENDED_DESCRIPTION": [
+      "para crear 2 copias de ella."
+    ]
+  },
+  "collector:DesignerInSpireCard": {
+    "NAME": "Diseñador Inspirado",
+    "DESCRIPTION": "Gana !M! expansioncontent:PV_Temp. NL collector:CabezaDeAntorcha gana \"Roba 1 carta.\""
+  },
+  "collector:FinalBossCard": {
+    "NAME": "Fin del Juego",
+    "DESCRIPTION": "Elimina el efecto de Invencible del enemigo y lo Aturde. NL Agota."
+  },
+  "collector:FaceTraderCard": {
+    "NAME": "Vendedor de Rostros",
+    "DESCRIPTION": "Agrega !M! cartas aleatorias de cualquier color a tu mano. NL Se vuelven Etéreas."
+  },
+  "collector:FatGremlinCard": {
+    "NAME": "Gremlin Obeso",
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! de Débil."
+  },
+  "collector:FungiBeastCard": {
+    "NAME": "Bestia Hongo",
+    "DESCRIPTION": "Aplica !M! de Vulnerable. NL Aplica 1 de Vulnerable a TODOS los enemigos."
+  },
+  "collector:GiantHeadCardStageOne": {
+    "NAME": "Tic",
+    "DESCRIPTION": "En el próximo turno, gana un *Tac."
+  },
+  "collector:GiantHeadCardStageTwo": {
+    "NAME": "Tac",
+    "DESCRIPTION": "En el próximo turno, gana un *Aplastacabezas."
+  },
+  "collector:GiantHeadCardStageThree": {
+    "NAME": "Aplastacabezas",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos."
+  },
+  "collector:GremlinLeaderCard": {
+    "NAME": "Gremlin Líder",
+    "DESCRIPTION": "Agrega !M! Gremlins Coleccionables aleatorios a tu mano."
+  },
+  "collector:GremlinNobCard": {
+    "NAME": "Gremlin Nob",
+    "DESCRIPTION": "Cada vez que juegas una Habilidad, gana !M! de Vigor."
+  },
+  "collector:GremlinWizardCard": {
+    "NAME": "Gremlin Mago",
+    "DESCRIPTION": "En el siguiente turno, NL gana !M! de Vigor y 1 de collector:Reserva."
+  },
+  "collector:JawWormCard": {
+    "NAME": "Gusano Dentudo",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Gana !M! de Fuerza."
+  },
+  "collector:JousterCard": {
+    "NAME": "Justador",
+    "DESCRIPTION": "Haz !D! de daño. NL Si solo hay un enemigo, gana !B! de Bloqueo."
+  },
+  "collector:LagavulinCard": {
+    "NAME": "Lagavulin",
+    "DESCRIPTION": "TODOS los enemigos pierden !M! de Fuerza."
+  },
+  "collector:LivingWallCard": {
+    "NAME": "Muro Viviente",
+    "DESCRIPTION": "collector:Pira. NL Gana una carta aleatoria Mejorada. NL Cuesta 0 hasta ser jugada."
+  },
+  "collector:LouseCard": {
+    "NAME": "Piojo",
+    "DESCRIPTION": "Gana 1 de bronze:desenfoque. NL La próxima vez que recibas daño de ataque sin bloqueo, gana !B! de Bloqueo."
+  },
+  "collector:MadGremlinCard": {
+    "NAME": "Gremlin Guerrero",
+    "DESCRIPTION": "Gana !M! de Fuerza Temporal."
+  },
+  "collector:MawCard": {
+    "NAME": "Las Fauces",
+    "DESCRIPTION": "Haz !D! de daño."
+  },
+  "collector:MerchantCard": {
+    "NAME": "Comerciante",
+    "DESCRIPTION": "Agrega !M! cartas Incoloras aleatorias a tu mano. NL Cuestan 0 este turno."
+  },
+  "collector:MushroomCard": {
+    "NAME": "Hongo",
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! de Débil o Vulnerable al azar."
+  },
+  "collector:MysticCard": {
+    "NAME": "Místico",
+    "DESCRIPTION": "Gana !M! expansioncontent:PV_Temp."
+  },
+  "collector:NemesisCard": {
+    "NAME": "Némesis",
+    "DESCRIPTION": "Gana 1 de Intangible."
+  },
+  "collector:NlothCard": {
+    "NAME": "N'Loth",
+    "DESCRIPTION": "collector:Pira. NL Agrega una carta Rara aleatoria a tu mano. NL Cuesta 1 menos.",
+    "UPGRADE_DESCRIPTION": "collector:Pira. NL Agrega una carta Rara aleatoria a tu mano. NL Cuesta 0."
+  },
+  "collector:OrbWalkerCard": {
+    "NAME": "Orbe Andante",
+    "DESCRIPTION": "Haz !D! de daño. NL Agrega !M! *Brazas a tu mano."
+  },
+  "collector:PointyCard": {
+    "NAME": "Puntiagudo",
+    "DESCRIPTION": "Haz !D! de daño dos veces. NL Roba 1 carta."
+  },
+  "collector:RanwidCard": {
+    "NAME": "Ranwid",
+    "DESCRIPTION": "Gana una recompensa adicional de Poción y Carta al final del combate."
+  },
+  "collector:RedSlaverCard": {
+    "NAME": "Esclavista Rojo",
+    "DESCRIPTION": "El enemigo pierde !M! de Fuerza este turno."
+  },
+  "collector:ReptomancerCard": {
+    "NAME": "Vibora Vidente",
+    "DESCRIPTION": "Gana !M! expansioncontent:PV_Temp. NL collector:CabezaDeAntorcha gana \"Aplica !clm2! de Veneno a un enemigo aleatorio.\""
+  },
+  "collector:RepulsorCard": {
+    "NAME": "Repulsor",
+    "DESCRIPTION": "collector:Pira. NL Roba !M! cartas."
+  },
+  "collector:RomeoCard": {
+    "NAME": "Romeo",
+    "DESCRIPTION": "Tu próximo Ataque cuesta 0 y hace !M! de daño adicional."
+  },
+  "collector:ScrapOozeCard": {
+    "NAME": "Babosa de Chatarra",
+    "DESCRIPTION": "collector:Pira. NL Pierde 3 de HP. NL Agrega !M! Ataques aleatorios a tu mano. NL Cuestan 0 este turno."
+  },
+  "collector:SentryCard": {
+    "NAME": "Centinela",
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! de Débil. NL Repite si hay un *Centinela en tu pila de agotadas."
+  },
+  "collector:ShelledParasiteCard": {
+    "NAME": "Parásito con Caparazón",
+    "DESCRIPTION": "Gana !M! expansioncontent:placas"
+  },
+  "collector:ShieldGremlinCard": {
+    "NAME": "Gremlin Reservado",
+    "DESCRIPTION": "Gana !B! de Bloqueo."
+  },
+  "collector:SnakePlantCard": {
+    "NAME": "Lengua de Tigre",
+    "DESCRIPTION": "Haz !D! de daño 3 veces."
+  },
+  "collector:SneakyGremlinCard": {
+    "NAME": "Gremlin Ladrón",
+    "DESCRIPTION": "Haz !D! de daño. NL Roba 1 carta."
+  },
+  "collector:SneckoCard": {
+    "NAME": "Serpentija",
+    "DESCRIPTION": "Roba !M! cartas. NL sneckomod:Confunde tu mano."
+  },
+  "collector:SphericGuardianCard": {
+    "NAME": "Guardián Esférico",
+    "DESCRIPTION": "Gana !M! expansioncontent:desenfoque."
+  },
+  "collector:SpikerCard": {
+    "NAME": "Punzante",
+    "DESCRIPTION": "Gana !M! de Espinas."
+  },
+  "collector:SpikeSlimeCard": {
+    "NAME": "Babosa Puntiaguda",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Cada vez que seas atacado este turno, hace !M! de daño de regreso."
+  },
+  "collector:SpireGrowthCard": {
+    "NAME": "Crecimiento de la Aguja",
+    "DESCRIPTION": "El enemigo recibe !M! de daño al final de cada uno de sus turnos."
+  },
+  "collector:SpireShieldCard": {
+    "NAME": "Escudo de la Aguja",
+    "DESCRIPTION": "Gana !M! de Destreza."
+  },
+  "collector:SpireSpearCard": {
+    "NAME": "Lanza de la Aguja",
+    "DESCRIPTION": "Gana !M! de Fuerza."
+  },
+  "collector:SsserpentCard": {
+    "NAME": "Ssserpiente",
+    "DESCRIPTION": "Haz !D! de daño. NL Agrega una *Duda a tu mano."
+  },
+  "collector:TaskmasterCard": {
+    "NAME": "Capataz",
+    "DESCRIPTION": "Aplica !clm2! collector:Condena. NL Haz !D! de daño. NL Gana !M! de Fuerza."
+  },
+  "collector:ThievesCard": {
+    "NAME": "Ladrones",
+    "DESCRIPTION": "Recibe !M! menos de daño de ataques este turno."
+  },
+  "collector:TorchHeadCard": {
+    "NAME": "Cabeza De Antorcha",
+    "DESCRIPTION": "Agrega un Llamado de Cabeza de Antorcha aleatorio a tu mano. NL Cuesta 0 este turno."
+  },
+  "collector:TransientCard": {
+    "NAME": "Transeúnte",
+    "DESCRIPTION": "Gana !M! de Fuerza. NL Muere en 6 turnos."
+  },
+  "collector:VagrantCard": {
+    "NAME": "Vagabundo",
+    "DESCRIPTION": "Gana !M! de collector:Reserva. NL Agrega una *Vergüenza a tu mano."
+  },
+  "collector:WomanInBlueCard": {
+    "NAME": "Mujer de Azul",
+    "DESCRIPTION": "Gana una Poción aleatoria. NL Pierdes TODAS tus Pociones al final del combate."
+  },
+  "collector:WrithingMassCard": {
+    "NAME": "Masa Inquieta",
+    "DESCRIPTION": "Adivina !M!. NL Juega la carta superior de tu mazo de robo."
+  },
+  "collector:DefaultCollectibleCard": {
+    "NAME": "Cáscara Sin Alma",
+    "DESCRIPTION": "¡Este enemigo aún no tiene Coleccionable! NL Gana !M! de Fuerza y Destreza."
+  },
+  "collector:ShootingStar": {
+    "NAME": "Estrella Fugaz",
+    "DESCRIPTION": "La primera vez que un Ataque arda en la collector:Pira cada turno, gana una copia de este. NL Cuesta 0 hasta ser jugado."
+  },
+  "collector:CollectorCard": {
+    "NAME": "Ouroboros",
+    "DESCRIPTION": "collector:Pira. NL Aplica !M! de Débil. NL Aplica !M! de Vulnerable. NL Gana !clm2! de expansioncontent:PV_Temp."
+  },
+  "collector:Sapped": {
+    "NAME": "Agotado",
+    "DESCRIPTION": "collector:Pira. NL Al robarla, pierde [E]. NL Agota. NL No puede ser removida de tu mazo."
+  }
+}
+

@@ -1,0 +1,145 @@
+{
+  "bronze:Cloning": {
+    "NAME": "Fusión",
+    "DESCRIPTIONS": [
+      "La próxima vez que #yCodifiques una carta, #yCodifica una copia adicional de ella.",
+      "La próxima vez que #yCodifiques una carta, #yCodifica #b",
+      " copias adicionales de ella."
+    ]
+  },
+  "bronze:Default": {
+    "NAME": "Clase por Defecto",
+    "DESCRIPTIONS": [
+      "La próxima vez que crees una Función, #yCodifica una copia de la carta actual en la primera ranura.",
+      "Las próximas #b",
+      " veces que crees una Función, #yCodifica una copia de la carta actual en la primera ranura."
+    ]
+  },
+  "bronze:Feature": {
+    "NAME": "Es una Funcionalidad",
+    "DESCRIPTIONS": [
+      "Siempre que robes o #yAgotes una carta de #yEstado, gana #b",
+      " de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "bronze:InfiniteBeams": {
+    "NAME": "Rayos Infinitos",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, gana #b1 #yRayo #yMenor [REMOVE_SPACE].",
+      "Al comienzo de tu turno, gana #b1 #yRayo #yMenor+ [REMOVE_SPACE].",
+      "Al comienzo de tu turno, gana #b",
+      " #yRayos #yMenores [REMOVE_SPACE].",
+      "Al comienzo de tu turno, gana #b",
+      " #yRayos #yMenor+s [REMOVE_SPACE]."
+    ]
+  },
+  "bronze:Optimize": {
+    "NAME": "Optimizado",
+    "DESCRIPTIONS": [
+      "#yMejora la siguiente carta #yMejorable que #yCodifiques [REMOVE_SPACE].",
+      "#yMejora las próximas #b",
+      " cartas #yMejorables que #yCodifiques [REMOVE_SPACE]."
+    ]
+  },
+  "bronze:MaxOutput": {
+    "NAME": "Rendimiento Máximo",
+    "DESCRIPTIONS": [
+      "Roba #b1 carta adicional y añade #b1 carta #yAturdido a tu pila de robo cada turno.",
+      "Roba #b",
+      " cartas adicionales y añade #b",
+      " cartas #yAturdido a tu pila de robo cada turno."
+    ]
+  },
+  "bronze:Return": {
+    "NAME": "Retorno",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu próximo turno, gana [E] y roba #b1 carta.",
+      "Al comienzo de tus próximos #b",
+      " turnos, gana [E] y roba #b1 carta."
+    ]
+  },
+  "bronze:Library": {
+    "NAME": "Biblioteca",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, gana una carta aleatoria con #yCodificar. Cuesta #b0 hasta que se juegue.",
+      "Al comienzo de tu turno, gana #b",
+      " cartas aleatorias con #yCodificar. Cuestan #b0 hasta que se jueguen."
+    ]
+  },
+  "bronze:LibraryMod": {
+    "NAME": "Biblioteca Externa",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, gana una carta aleatoria con #yCodificar y dale #yEtérea [REMOVE_SPACE]."
+    ]
+  },
+  "bronze:BronzeHeatsink": {
+    "NAME": "Disipador de Calor de Bronce",
+    "DESCRIPTIONS": [
+      "Siempre que juegues una #yFunción [REMOVE_SPACE], roba #b1 carta.",
+      "Siempre que juegues una #yFunción [REMOVE_SPACE], roba #b",
+      " cartas."
+    ]
+  },
+  "bronze:HardenedForm": {
+    "NAME": "Orbe Invocado",
+    "DESCRIPTIONS": [
+      "Siempre que crees o juegues una Función, gana #b",
+      " de #yBloqueo e inflige #b",
+      " de daño a un enemigo aleatorio."
+    ]
+  },
+  "bronze:Hardcode": {
+    "NAME": "Codificación Fija",
+    "DESCRIPTIONS": [
+      "La próxima vez que crees una Función, irá a tu mazo en lugar de tu mano, eliminando todas las cartas usadas.",
+      "Las próximas #b",
+      " veces que crees una Función, irá a tu mazo en lugar de tu mano, eliminando todas las cartas usadas."
+    ]
+  },
+  "bronze:Verify": {
+    "NAME": "Forma Consciente",
+    "DESCRIPTIONS": [
+      "Siempre que robes una Función, aumenta todos sus valores numéricos en #b1 [REMOVE_SPACE].",
+      "Siempre que robes una Función, aumenta todos sus valores numéricos en #b",
+      " excepto el costo."
+    ]
+  },
+  "bronze:FreeFunction": {
+    "NAME": "Función Gratis",
+    "DESCRIPTIONS": [
+      "La próxima Función que crees cuesta #b0 [REMOVE_SPACE].",
+      "Las próximas #b",
+      " Funciones que crees cuestan #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "bronze:CleanCode": {
+    "NAME": "Código Limpio",
+    "DESCRIPTIONS": [
+      "Elimina todos los efectos de #yError de #yCompilación de las cartas Codificadas. Dura por #b1 Función más.",
+      "Elimina todos los efectos de #yError de #yCompilación de las cartas Codificadas. Dura por #b",
+      " Funciones."
+    ]
+  },
+  "bronze:CopyPaste": {
+    "NAME": "Copiar y Pegar",
+    "DESCRIPTIONS": [
+      "Tu próxima Función se juega dos veces este turno.",
+      "Tus próximas #b",
+      " Funciones se juegan dos veces este turno."
+    ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "Lanzamiento Completo",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, NL "
+    ]
+  },
+  "bronze:RemoveNextError": {
+    "NAME": "Eliminar Errores",
+    "DESCRIPTIONS": [
+      "Elimina el siguiente #yError de #yCompilación #yCodificado [REMOVE_SPACE].",
+      "Elimina los siguientes #b",
+      " #yErrores de #yCompilación #yCodificados [REMOVE_SPACE]."
+    ]
+  }
+}

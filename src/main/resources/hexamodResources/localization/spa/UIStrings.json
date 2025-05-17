@@ -1,0 +1,19 @@
+{
+  "hexamod:SealCommonReward": {
+    "TEXT": [
+      "Agrega una carta Común a tu mazo"
+    ]
+  },
+  "hexamod:SealSealReward": {
+    "TEXT": [
+      "Agrega un Sello a tu mazo",
+      "Elige una carta."
+    ]
+  },
+  "hexamod:SealDescriptor": {
+    "TEXT": [
+      "Sello",
+      "hexamod:Sello. NL "
+    ]
+  }
+}

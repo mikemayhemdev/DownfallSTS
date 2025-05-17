@@ -1,0 +1,86 @@
+{
+  "sneckomod:Unknown": {
+    "TEXT": [
+      "No Identificada",
+      " Mejorada ",
+      "Al comienzo del combate, las cartas No Identificadas se transforman en otras cartas aleatorias de las clases elegidas que cumplen ciertos criterios.",
+      " NL Clases elegidas:",
+      "Al comienzo del combate, las cartas No Identificadas se transforman en otras cartas aleatorias de CUALQUIER otra clase que cumpla ciertos criterios.",
+      "Al comienzo del combate, las cartas No Identificadas se transforman en otras cartas aleatorias de otras clases que cumplan ciertos criterios."
+    ]
+  },
+  "sneckomod:UnknownNames": {
+    "TEXT": [
+      "No Identificada"
+    ]
+  },
+  "sneckomod:UnknownClass": {
+    "TEXT": [
+      "???",
+      "*No Identificada ",
+      " Carta.",
+      "Personaje",
+      "La ",
+      "Esto no debería verse. Reporta a Vex.",
+      "Mejorada "
+    ]
+  },
+  "sneckomod:UpgradedUnknownReward": {
+    "TEXT": [
+      "Agrega una carta No Identificada+ a tu mazo.",
+      "Elige una carta."
+    ]
+  },
+  "sneckomod:FreeRetainMod": {
+    "TEXT": [
+      "Conservar. NL "
+    ]
+  },
+  "sneckomod:ExhaustMod": {
+    "TEXT": [
+      " NL Agotar."
+    ]
+  },
+  "sneckomod:ChallengeMode": {
+    "TEXT": [
+      "Modo Desafío - Serpentija Pura",
+      "Los Regalos pueden ser de cualquier clase. Recomendado para jugadores experimentados de Serpentija."
+    ]
+  },
+  "sneckomod:LockInBonfireOptions": {
+    "TEXT": [
+      "Identificar",
+      "Fijar una carta No Identificada como una carta permanente.",
+      "Requiere una carta No Identificada.",
+      "Selecciona una carta para agregar a tu mazo, eliminando su estado de No Identificada.",
+      "[Acción gratuita] Fijar una carta No Identificada como permanente."
+    ]
+  },
+  "sneckomod:CommonAttackReward": {
+    "TEXT": [
+      "Agrega una carta Ajena a tu mazo.",
+      "Elige una carta."
+    ]
+  },
+  "sneckomod:DiceRollPotionReward": {
+    "TEXT": [
+      "Agrega una carta Mejorada a tu mazo.",
+      "Elige una carta."
+    ]
+  },
+  "sneckomod:ColorfulPowersCardReward": {
+    "TEXT": [
+      "Agrega un Poder Mejorado a tu mazo.",
+      "Elige una carta."
+    ]
+  },
+  "sneckomod:AtGameStart": {
+    "TEXT": [
+      "Cartas de ",
+	  "",
+      "Los Regalos incluirán cartas de ",
+      " en esta partida.",
+      "Elige."
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "bronze:SpecificCardReward": {
+    "TEXT": [
+      "Añade ",
+      " a tu mazo",
+      "Elige una carta."
+    ]
+  },
+  "bronze:UnplayableMod": {
+    "TEXT": [
+      "No se puede jugar. NL ",
+      "ERR_NULL_PTR",
+      "Esto se conserva únicamente para el Puntero Nulo."
+    ]
+  },
+  "bronze:EncodeAndShuffleMod": {
+    "TEXT": [
+      " NL bronze:Codifica, añade una copia de esta a tu pila de descarte."
+    ]
+  },
+  "bronze:DoublePlayModifier": {
+    "TEXT": [
+      " NL Juega esta carta de nuevo."
+    ]
+  },
+  "bronze:MiscStrings": {
+    "TEXT": [
+      "Elige una carta para devolver a tu mano. Gana Retiene.",
+      " - Aumenta el daño de #yGolpe #yCultista en #b",
+      " permanentemente.",
+      "ERR: SEQUENCE_EMPTY",
+      " - Obtén una copia de #yBucle #yInfinito con #b",
+      " de daño adicional.",
+      " para Mutar.",
+      " para Codificar.",
+      ""
+    ]
+  },
+  "bronze:AutoTextHelper": {
+    "TEXT": [
+      " NL bronze:Compilar",
+      "bronze:Compilar",
+      " NL bronze:Codificar.",
+      "bronze:Codificar. NL ",
+      "\u202F Cuando esté bronze:Codificada,",
+      "NOTA DE LOCALIZACIÓN: El texto anterior debe coincidir exactamente con el inicio de la línea extra de descripción de Replicar.",
+      "ERR - NO_DUPE_FULL_RELEASES"
+    ]
+  },
+  "bronze:CompileDisplayPanel": {
+    "TEXT": [
+      "Al ser Compilada:",
+      "bronze:Compilar"
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "Slimebound:Hunted": {
+    "NAME": "El Jefe se Acerca",
+    "DESCRIPTIONS": [
+      "Una voz retumba en la Aguja... NL NL #r~¡PLASTA APLASTANTE!~ NL NL La enorme baba rápidamente te alcanza, bloqueando tu camino. Parece que ha crecido desde el Exordio, consumiendo y fortaleciéndose mientras seguía tu rastro.",
+      "¿Puede ser realmente tan fácil?",
+      "Despachas al Jefe Baba con facilidad, reclamando sus posesiones como recompensa. Después de todo, ¡es un sombrero muy elegante!"
+    ],
+    "OPTIONS": [
+      "[Enfrentar] #rLucha contra el #rJefe #rBaba. Recompensa: #gSombrerito #gElegante.",
+      "[Huir aterrorizado] #rMaldición #r- #rVergüenza."
+    ]
+  },
+  "Slimebound:WorldofGoop": {
+    "NAME": "Mundo de Baba",
+    "DESCRIPTIONS": [
+      "Caes en un charco. NL @¡ESTÁ@ @HECHO@ @DE@ #g@BABA@ #g@GOOP!@ NL Tranquilamente, te bañas mientras te conectas con la baba, disfrutando de un momento de respiro. NL NL Al salir, notas en el charco las #yalmas de algunos desafortunados aventureros, siendo lentamente consumidas por una criatura glotona.",
+      "Sales del vigorizante baño de baba, absorbiendo las #yalmas, dejando a la criatura con una triste expresión en su forma amorfa.",
+      "Logras negociar con la criatura para darle más sabrosas #yalmas si te ayuda en tu viaje. NL Tú y tu nuevo #gamigo salen del baño de baba juntos."
+    ],
+    "OPTIONS": [
+      "[Reunir almas] #gGana #g75 #gAlmas.",
+      "[Reclutar] #rPierde #r75 #rAlmas. #gObtén #yBaba #yCodiciosa.",
+      "[Marcharse]",
+      "[Bloqueado] Requiere 75 Almas."
+    ]
+  },
+  "Slimebound:SlimeTalk": {
+    "NAME": "Conversaciones Babosas",
+    "DESCRIPTIONS": [
+      "~¡No~ ~me~ ~absorbas!~",
+      "~¿Te~ ~llevas~ ~nuestras~ ~almas?~",
+      "~Se~ ~alimentará~ ~de~ ~nosotros...~",
+      "~¡El~ ~Jefe!~",
+      "Ese sombrero... NL #r~¡Debo~ #r~tenerlo!~",
+      "~¿Por~ ~qué~",
+      "~no~ ~nos~",
+      "~deja~ ~jugar?~",
+      "~Nos~ ~consumirá...~",
+      "~Es~ ~tan~ ~fuerte...~",
+      "~Es~ ~como~ ~nosotros...~",
+      "~¡QUÉ~ #r~SOMBRERO!~"
+    ]
+  },
+  "Slimebound:ScrapOoze": {
+    "NAME": "Baba de Chatarra",
+    "DESCRIPTIONS": [
+      "Cualquier baba es un aliado en tu causa. Con ofrendas de nueva chatarra y tesoros, la Baba de Chatarra se une a tu misión."
+    ],
+    "OPTIONS": [
+      "[Reclutar] #rPierde ",
+      ". Obtén #gBaba #gde #gChatarra [REMOVE_SPACE]. #rBloqueado si has hurgado.",
+      "[Reclutar] Bloqueado (Has enfadado a la Baba de Chatarra)",
+      "[Marcharse]",
+      "[Reclutar] Bloqueado (Requiere una Reliquia Común o Poco Común)"
+    ]
+  },
+  "Slimebound:ArtOfSlimeWar": {
+    "NAME": "El Arte de la Guerra Babosa",
+    "DESCRIPTIONS": [
+      "Te topas con un pedestal asqueroso con un #glibro #gbrillante en la cima. Parece contener las técnicas de combate avanzadas del #gJefe #gBaba y sus secuaces.",
+      "Al acercarte al libro, oyes varias trampas activarse. No podrás esquivarlas todas.",
+      "Robas el libro y evitas las trampas, pero caes en un horrible charco de baba.",
+      "Al tomar el libro, se activa una trampa de pinchos en el suelo. Escapas por poco, pero sufres un corte profundo.",
+      "Apenas el libro deja el pedestal, sientes cómo drena tu esencia vital. Más vale que valga la pena.",
+      "Decides dejar el libro en su sitio y continuar tu camino.",
+      "No logras entender cómo los secuaces Babas son una amenaza: su única táctica parece ser lanzarse violentamente contra sus enemigos. Bueno, si les funciona..."
+    ],
+    "OPTIONS": [
+      "[Leer] #gElimina #gtodos #glos #gGolpes. #gObtén #g3 #gEmbestidas #gMejoradas.",
+      "[Tomar] #gObtén #gConsultar #gManual. #rActiva #runa #rtrampa.",
+      "[Marcharse]",
+      "[Zambullirse] #rObtén #rMaldición #r- #rPegajosa.",
+      "[Ser Paciente] #rRecibe #r",
+      " #rde #rdaño.",
+      "[Tomar y Correr] #rPierde #r",
+      " #rde #rPV #rMáximos."
+    ]
+  },
+  "Slimebound:Darklings": {
+    "NAME": "Babillas Oscuras",
+    "DESCRIPTIONS": [
+      "Tres babas de aspecto extraño se interponen en tu camino. Parecen hostiles, pero al acercarte, notan que tienes una consistencia similar y te observan con curiosidad.",
+      "Mientras ~te~ ~preparas~ ~para~ ~pelear,~ ¡las babas negras también lo hacen!",
+      "Tras una breve conversación, estas babas deciden unirse a ti — vigilaban contra intrusos, pero pueden dejar su puesto por un rato para ayudarte."
+    ],
+    "OPTIONS": [
+      "[Reclutar] #gObtén #gBabillas #gOscuras. #rPierde ",
+      "[Luchar]",
+      "[Marcharse]",
+      ".",
+      "[Bloqueado] Requiere una carta Rara."
+    ]
+  },
+  "Slimebound:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Cuando una oveja toma la delantera, todas las demás la siguen."
+    ],
+    "OPTIONS": [
+      "[Inspiración] #gAgrega #gOrdenar a todos los #gGolpes y #gDefensas.",
+      "[Bloqueado] Requiere un Golpe o Defensa."
+    ]
+  }
+}

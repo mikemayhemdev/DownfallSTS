@@ -1,0 +1,126 @@
+{
+  "champ:ChampionCrown": {
+    "NAME": "Corona del Campeón",
+    "FLAVOR": "¡ERES EL GANADOR!",
+    "DESCRIPTIONS": [
+      "Al comienzo del combate, elige entrar en #yPostura #bchamp:Defensivo o #rchamp:Berserker [REMOVE_SPACE]."
+    ]
+  },
+  "champ:BlackKnightHelmet": {
+    "NAME": "Yelmo del Caballero Negro",
+    "FLAVOR": "Solo un rasguño.",
+    "DESCRIPTIONS": [
+      "La primera vez que entres en cada #yPostura en cada combate: NL #bchamp:Defensivo : Gana #b2 de #yDestreza y pierde #b1 de #yFuerza [REMOVE_SPACE]. NL #rchamp:Berserker : Gana #b2 de #yFuerza y pierde #b1 de #yDestreza [REMOVE_SPACE]."
+    ]
+  },
+  "champ:Barbells": {
+    "NAME": "Mancuernas",
+    "FLAVOR": "¿1000 repeticiones? Pff. Yo puedo hacer 1001.",
+    "DESCRIPTIONS": [
+      "Siempre que entres a una Zona de Descanso, si tienes al menos #b10 cartas mejorables en tu mazo, #yMejora una al azar."
+    ]
+  },
+  "champ:BerserkersGuideToSlaughter": {
+    "NAME": "Guía del Berserker",
+    "FLAVOR": "El texto es ilegible.",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, gana #b3 de #yVigor [REMOVE_SPACE]."
+    ]
+  },
+  "champ:ChampionCrownUpgraded": {
+    "NAME": "Corona Victoriosa",
+    "FLAVOR": "¡Felicidaciones! Eres el mejor ganador.",
+    "DESCRIPTIONS": [
+      "Reemplaza ",
+      " [REMOVE_SPACE].[] NL Comienza cada combate en la #yPostura #ychamp:Definitiva [REMOVE_SPACE], que dura #b3 turnos."
+    ]
+  },
+  "champ:DefensiveTrainingManual": {
+    "NAME": "Tesis Defensiva",
+    "FLAVOR": "Consejo profesional: no te dejes golpear.",
+    "DESCRIPTIONS": [
+      "El #bBono de #yFinal de la #yPostura #bchamp:Defensivo otorga #b3 más de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "champ:DeflectingBracers": {
+    "NAME": "Brazales Desviadores",
+    "FLAVOR": "Si creías que bloquear ya era bueno...",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, gana #ychamp:Contraataque igual a la mitad del #yBloqueo expirado [REMOVE_SPACE]."
+    ]
+  },
+  "champ:DuelingGlove": {
+    "NAME": "Guante de Duelo",
+    "FLAVOR": "Cuenta hasta diez...",
+    "DESCRIPTIONS": [
+      "Después de usar un #yAtaque de un solo objetivo [REMOVE_SPACE], si el objetivo no tiene #yVulnerable [REMOVE_SPACE], aplícale #b1 de #yVulnerable [REMOVE_SPACE]."
+    ]
+  },
+  "champ:FightingForDummies": {
+    "NAME": "Guía de Estilo del Delfín",
+    "FLAVOR": "Autor: El renombrado explorador y luchador Dolphin K. Mist.",
+    "DESCRIPTIONS": [
+      "Si terminas tu turno sin estar en una #yPostura [REMOVE_SPACE], roba #b1 carta adicional en el siguiente turno."
+    ]
+  },
+  "champ:GladiatorsBookOfMartialProwess": {
+    "NAME": "Manual del Gladiador",
+    "FLAVOR": "Prueba de todo: algo funcionará.",
+    "DESCRIPTIONS": [
+      "Siempre que juegues un #ychamp:Combo [REMOVE_SPACE], un #ychamp:Final [REMOVE_SPACE] y entres en una #yPostura en el mismo turno, gana #b1 de #yFuerza y #yDestreza [REMOVE_SPACE]."
+    ]
+  },
+  "champ:PowerArmor": {
+    "NAME": "Armadura Potenciada",
+    "FLAVOR": "Comprada de segunda mano.",
+    "DESCRIPTIONS": [
+      "Gana [E] al comienzo de tu turno. NL Tu máximo de #yVigor y #ychamp:Contraataque es #b10 [REMOVE_SPACE]."
+    ]
+  },
+  "champ:RageAmulet": {
+    "NAME": "Amuleto de Voluntad Inquebrantable",
+    "FLAVOR": "Una fuerza que antes era fugaz ahora fluye como si siempre hubiera estado en ti.",
+    "DESCRIPTIONS": [
+      "Siempre que gastes #yVigor [REMOVE_SPACE], gana #b1 de #yFuerza por cada #b",
+      " de #yVigor gastado."
+    ]
+  },
+  "champ:SignatureFinisher": {
+    "NAME": "Remate Insignia",
+    "FLAVOR": "¡Y ahora, es hora de mi MOVIMIENTO FINAL!",
+    "DESCRIPTIONS": [
+      "Al obtenerla, elige un #ychamp:Final [REMOVE_SPACE]. Este #yFinal cuesta #b0 [REMOVE_SPACE], puede usarse sin una #yPostura [REMOVE_SPACE] y nunca te hará salir de tu #yPostura.",
+      "Elige una carta para ",
+      " cuesta #b0 [REMOVE_SPACE], puede usarse sin una #yPostura [REMOVE_SPACE], y nunca te hará salir de tu #yPostura."
+    ]
+  },
+  "champ:SpectersHand": {
+    "NAME": "Mano del Espectro",
+    "FLAVOR": "Algunas victorias se quedan contigo.",
+    "DESCRIPTIONS": [
+      "Siempre que entres en una #yPostura [REMOVE_SPACE], gana un #ygremlin:Eco de un #yGolpe o #yDefensa básico [REMOVE_SPACE]. Cuesta #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "champ:LiftRelic": {
+    "NAME": "Fuerza Interior",
+    "FLAVOR": "Se trata de la espada gigante en tu corazón.",
+    "DESCRIPTIONS": [
+      "Comienza cada combate con #b",
+      " de #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "champ:ChampStancesModRelic": {
+    "NAME": "Nuevo Retador",
+    "FLAVOR": "¿Puedes tomar la corona?",
+    "DESCRIPTIONS": [
+      "Comienza cada combate en una #yPostura aleatoria de Campeón [REMOVE_SPACE]."
+    ]
+  },
+  "champ:BustedCrownGagText": {
+    "NAME": "Corona Falsa",
+    "FLAVOR": "La imitación es la forma más sincera de adulación... ¿o no? Ni siquiera se parece tanto a tu corona. En realidad, es un poco insultante.",
+    "DESCRIPTIONS": [
+      "Gana [E] al comienzo de tu turno. Las recompensas de cartas futuras tienen 2 opciones menos para elegir."
+    ]
+  }
+}

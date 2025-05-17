@@ -1,0 +1,64 @@
+{
+  "hexamod:SearingGhostflame": {
+    "NAME": "Llama Fantasmal Abrasadora",
+    "DESCRIPTION": [
+      "#yIncendiada [REMOVE_SPACE]. ",
+      "Se #yincendia cuando #b",
+      " #yAtaque es jugado.",
+      " #yAtaques son jugados.",
+      "Se #yincendia al jugar #b2 #yAtaques mientras estás sobre ella.",
+      " NL NL #yIncendiada [REMOVE_SPACE]: Aplica #b",
+      " #yQuemarAlma a un enemigo aleatorio.",
+      " NL NL Al final de tu turno, si está #yIncendiada [REMOVE_SPACE], #yAvanza a la siguiente llama fantasmal."
+    ]
+  },
+  "hexamod:CrushingGhostflame": {
+    "NAME": "Llama Fantasmal Aplastante",
+    "DESCRIPTION": [
+      "#yIncendiada [REMOVE_SPACE]. ",
+      "Se #yincendia al jugar #b",
+      " #yHabilidad.",
+      " #yHabilidades.",
+      "Se #yincendia al jugar #b2 #yHabilidades mientras estás sobre ella.",
+      " NL NL #yIncendiada [REMOVE_SPACE]: Inflige #b",
+      " de daño a un enemigo aleatorio.",
+      " NL NL Al final de tu turno, si está #yIncendiada [REMOVE_SPACE], #yAvanza a la siguiente llama fantasmal."
+    ]
+  },
+  "hexamod:BolsteringGhostflame": {
+    "NAME": "Llama Fantasmal Fortalecedora",
+    "DESCRIPTION": [
+      "#yIncendiada [REMOVE_SPACE]. ",
+      "Se #yincendia al jugar un #yPoder.",
+      "Se #yincendia al jugar un #yPoder mientras estás sobre ella.",
+      " NL NL #yIncendiada [REMOVE_SPACE]: Obtén #b",
+      " de #yBloqueo y #b1 de #yFuerza.",
+      " NL NL Al final de tu turno, si está #yIncendiada [REMOVE_SPACE], #yAvanza a la siguiente llama fantasmal."
+    ]
+  },
+  "hexamod:InfernoGhostflame": {
+    "NAME": "Llama Fantasmal Infernal",
+    "DESCRIPTION": [
+      "#yIncendiada [REMOVE_SPACE]. Se #yextingue al final de cualquier turno.",
+      "Se #yincendia al gastar [E] [E] [E] .",
+      "Se #yincendia al gastar [E] [E] .",
+      "Se #yincendia al gastar [E] .",
+      "Error. Por favor informa al desarrollador del mod: ",
+      "Se #yincendia al gastar [E] [E] [E] mientras estás sobre ella. Se #yextingue al final de cualquier turno.",
+      " NL NL #yIncendiada: Inflige #b",
+      " de daño a un enemigo aleatorio por cada llama fantasmal #yIncendiada [REMOVE_SPACE], despues #yextingue las demás. Si todas las llamas están #yIncendiadas [REMOVE_SPACE], obtén #b2 de #yIntensidad [REMOVE_SPACE].",
+      " NL NL Al final de tu turno, si está #yIncendiada [REMOVE_SPACE], #yAvanza a la siguiente llama fantasmal."
+    ]
+  },
+  "hexamod:MayhemGhostflame": {
+    "NAME": "Llama Fantasmal del Caos",
+    "DESCRIPTION": [
+      "#yIncendiada [REMOVE_SPACE]. ",
+      "Se #yincendia al terminar tu turno.",
+      "Se #yincendia al terminar tu turno mientras estás sobre ella.",
+      " NL NL #yIncendiada [REMOVE_SPACE]: #yAdivina #b",
+      " y juega la primera carta de tu pila de robo, modificada por la #yIntensidad [REMOVE_SPACE]. ",
+      " NL NL Al final de tu turno, si está #yIncendiada [REMOVE_SPACE], #yAvanza a la siguiente llama fantasmal."
+    ]
+  }
+}
