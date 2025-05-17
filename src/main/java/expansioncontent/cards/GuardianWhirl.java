@@ -22,7 +22,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
     private static final int downfallMagic = 10;
 
     public GuardianWhirl() {
-        super(ID, 1, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
+        super(ID, 2, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
         setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
         this.tags.add(expansionContentMod.STUDY_GUARDIAN);
         this.tags.add(expansionContentMod.STUDY);

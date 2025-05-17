@@ -31,7 +31,7 @@ import static awakenedOne.AwakenedOneMod.makeRelicPath;
 import static collector.util.Wiz.atb;
 import static hermit.util.Wiz.getLowestHealthEnemy;
 
-public class  DeadBird extends CustomRelic implements OnReceivePowerRelic {
+public class DeadBird extends CustomRelic implements OnReceivePowerRelic {
 
     public static final String ID = AwakenedOneMod.makeID("DeadBird");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("DeadBird.png")); //TODO: Images

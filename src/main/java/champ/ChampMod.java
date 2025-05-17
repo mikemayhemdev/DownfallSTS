@@ -401,7 +401,7 @@ public class ChampMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil_Champ.ID, Colosseum_Evil_Champ.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && AbstractDungeon.player instanceof ChampChar)
+                .spawnCondition(() -> AbstractDungeon.player instanceof ChampChar)
                 //Event ID to Override//
                 .overrideEvent(Colosseum.ID)
                 //Event Type//

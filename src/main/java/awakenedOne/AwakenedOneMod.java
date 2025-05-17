@@ -6,6 +6,8 @@ import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.cards.cardvars.SecondDamage;
 import awakenedOne.cards.cardvars.SecondMagicNumber;
 import awakenedOne.cards.cardvars.ThirdMagicNumber;
+import awakenedOne.events.TheNestAwakened;
+import awakenedOne.events.WingStatueAwakened;
 import awakenedOne.patches.OnLoseEnergyPowerPatch;
 import awakenedOne.potions.CultistsDelight;
 import awakenedOne.potions.SacramentalWine;
@@ -22,6 +24,8 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.ChampChar;
+import champ.events.Colosseum_Evil_Champ;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -36,12 +40,16 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
+import com.megacrit.cardcrawl.events.city.Colosseum;
+import com.megacrit.cardcrawl.events.city.Nest;
+import com.megacrit.cardcrawl.events.exordium.GoldenWing;
 import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
+import downfall.events.TheNest_Evil;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
 import javassist.CtClass;
@@ -111,6 +119,24 @@ public class AwakenedOneMod implements
 
 
     public void receivePostInitialize() {
+
+        BaseMod.addEvent(new AddEventParams.Builder(TheNestAwakened.ID, TheNestAwakened.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
+                //Event ID to Override//
+                .overrideEvent(Nest.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(WingStatueAwakened.ID, WingStatueAwakened.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
+                //Event ID to Override//
+                .overrideEvent(GoldenWing.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
     }
 
 

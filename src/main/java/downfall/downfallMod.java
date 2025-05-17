@@ -955,7 +955,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addEvent(new AddEventParams.Builder(WingStatue_Evil.ID, WingStatue_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && !(AbstractDungeon.player instanceof AwakenedOneChar))
                 //Event ID to Override//
                 .overrideEvent(GoldenWing.ID)
                 //Event Type//
@@ -1045,7 +1045,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addEvent(new AddEventParams.Builder(TheNest_Evil.ID, TheNest_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && !(AbstractDungeon.player instanceof AwakenedOneChar))
                 //Event ID to Override//
                 .overrideEvent(Nest.ID)
                 //Event Type//

@@ -8,6 +8,8 @@ import champ.actions.OpenerReduceCostAction;
 import champ.cards.Defend;
 import champ.cards.Strike;
 import champ.powers.UltimateFormPower;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
 import champ.util.OnOpenerSubscriber;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -76,6 +78,15 @@ public class ChampionCrownUpgraded extends CustomRelic {
             flash();
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             atb(new DrawCardAction(AMOUNT));
+            int x = AbstractDungeon.relicRng.random(1);
+            switch (x) {
+                case 0:
+                    addToBot(new ChangeStanceAction(BerserkerStance.STANCE_ID));
+                    break;
+                case 1:
+                    addToBot(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+                    break;
+            }
             this.counter = 1;
         }
     }
