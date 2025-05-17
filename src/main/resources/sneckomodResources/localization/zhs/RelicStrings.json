@@ -24,7 +24,7 @@
     "NAME": "异蛇戒指",
     "FLAVOR": "无法辨认，难以阅读，周四到期。",
     "DESCRIPTIONS": [
-      "触发 #b3 次 #ysneckomod:溢出时，给予随机敌人 #b1 层 #y虚弱 与 #y易伤 。"
+      "触发 #b3 次 #ysneckomod:溢出 时，给予随机敌人 #b1 层 #y虚弱 与 #y易伤 。"
     ]
   },
   "sneckomod:CrystallizedMud": {

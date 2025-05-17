@@ -66,7 +66,10 @@ public class HeartsFavorPower extends AbstractPower {
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (m != null && !m.isDead && !m.isDying && !m.halfDead && m.id == NeowBossFinal.ID) {
                 if (m.hasPower(NeowInvulnerablePower.POWER_ID)) {
-                    addToBot(new ApplyPowerAction(m, p, new NeowInvulnerablePower(m, -this.amount), -this.amount));
+                    int buf = m.getPower(NeowInvulnerablePower.POWER_ID).amount;
+                    if (buf > 0) {
+                        addToBot(new ApplyPowerAction(m, p, new NeowInvulnerablePower(m, -this.amount), -this.amount));
+                    }
                 }
             }
         }
