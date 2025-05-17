@@ -163,7 +163,8 @@
   },
   "sneckomod:QuickBite": {
     "NAME": "뱀 갈퀴",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 카드 중 비용이 가장 높은 카드를 sneckomod:뒤엉키게 합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 뽑습니다. NL 그 카드를 sneckomod:뒤엉키게 합니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 뽑습니다. NL 그 카드를 sneckomod:뒤엉키게 합니다."
   },
   "sneckomod:QuickMove": {
     "NAME": "날랜 움직임",

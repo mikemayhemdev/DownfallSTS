@@ -25,8 +25,7 @@ public class RiskySword extends AbstractSneckoCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
     }
 
     @Override

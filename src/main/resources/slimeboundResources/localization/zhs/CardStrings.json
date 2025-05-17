@@ -366,7 +366,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合接下来的 !M! 张牌将 slimeboundmod:命令 。"
   },
   "Slimebound:Nibble": {
-    "NAME": "轻咬舔抵",
+    "NAME": "轻咬舔舐",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 *掠舔 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 *掠舔 。 NL 抽一张牌。 NL 消耗 。"
   },

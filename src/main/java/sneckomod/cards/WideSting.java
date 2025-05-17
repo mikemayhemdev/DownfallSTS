@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.UpgradeSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -29,7 +30,7 @@ public class WideSting extends AbstractSneckoCard {
     private static int SOFTLOCK = 0;
 
     public WideSting() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         SneckoMod.loadJokeCardImage(this, "WideSting.png");
     }
@@ -48,19 +49,15 @@ public class WideSting extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            if (!monster.isDead && !monster.isDying) {
-                addToBot(new DamageAction(monster, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-            }
+        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 
-            for (AbstractCard q : p.hand.group) {
+        for (AbstractCard q : p.hand.group) {
                 if (q.color != AbstractDungeon.player.getCardColor()) {
                     atb(new UpgradeSpecificCardAction(q));
                     //  atb(new MuddleAction(q));
                 }
             }
         }
-    }
 
     @Override
     public void onObtainCard() {
