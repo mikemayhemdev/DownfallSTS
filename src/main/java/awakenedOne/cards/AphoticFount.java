@@ -1,16 +1,14 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.actions.AddSpellCardAction;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.AphoticShield;
-import awakenedOne.cards.tokens.spells.DeathCoil;
 import awakenedOne.ui.OrbitingSpells;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static awakenedOne.ui.OrbitingSpells.spellCards;
 import static awakenedOne.ui.OrbitingSpells.updateTimeOffsets;
@@ -28,7 +26,18 @@ public class AphoticFount extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        spellCards.add(new OrbitingSpells.CardRenderInfo(new AphoticShield()));
+        AbstractCard card = new AphoticShield();
+        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+            double buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+            if (buf > 5) {
+                buf = buf / 5;
+                buf = Math.floor(buf);
+                for (int i = 0; i < buf; ++i) {
+                    card.upgrade();
+                }
+            }
+        }
+        spellCards.add(new OrbitingSpells.CardRenderInfo(card));
         updateTimeOffsets();
         atb(new ConjureAction(false));
     }
