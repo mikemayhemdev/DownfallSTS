@@ -12,7 +12,7 @@
       "conjure",
       "conjured"
     ],
-    "DESCRIPTION": "Draw a card from your Spell Pile. If your Spell Pile is empty, immediately refresh it and #yUpgrade each Spell for every #b5 #yStrength you have."
+    "DESCRIPTION": "Draw a card from your Spell Pile. If your Spell Pile is empty, immediately refresh it and #yUpgrade each Spell for every #b10 #yStrength you have, up to a maximum of #b3 times."
   },
   {
     "PROPER_NAME": "Chant",
