@@ -1,8 +1,10 @@
 package theHexaghost.cards;
 
+import awakenedOne.powers.DoubleDamageOncePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -56,6 +58,11 @@ public class EtherStep extends AbstractHexaCard implements HexaPurpleTextInterfa
             AbstractDungeon.player.getRelic(FragmentationGrenade.ID).flash();
             this.damage = this.damage - FragmentationGrenade.OOMPH;
         }
+
+        if (AbstractDungeon.player.hasPower(DoubleDamageOncePower.POWER_ID)) {
+            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DoubleDamageOncePower.POWER_ID, 1));
+        }
+
         atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VigorPower.POWER_ID));
     }
 

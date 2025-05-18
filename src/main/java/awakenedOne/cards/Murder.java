@@ -16,7 +16,7 @@ public class Murder extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
 
     public Murder() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 3;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
@@ -25,9 +25,8 @@ public class Murder extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for(int i = 0; i < this.magicNumber; ++i) {
             AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1A"));
-            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         }
-        atb(new ConjureAction(false));
     }
 
 

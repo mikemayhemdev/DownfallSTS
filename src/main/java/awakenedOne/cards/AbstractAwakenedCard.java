@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.powers.RisingChantPower;
 import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.CardArtRoller;
@@ -173,8 +174,15 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     }
 
     public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
+        if (!upgraded || (this instanceof AbstractSpellCard)) {
+            this.timesUpgraded++;
+            if (this instanceof AbstractSpellCard) {
+                this.name = this.name + "+" + this.timesUpgraded;
+                this.initializeTitle();
+            }
+            if (!(this instanceof AbstractSpellCard)) {
+                upgradeName();
+            }
             upp();
             if (cardStrings.UPGRADE_DESCRIPTION != null) {
                 rawDescription = cardStrings.UPGRADE_DESCRIPTION;

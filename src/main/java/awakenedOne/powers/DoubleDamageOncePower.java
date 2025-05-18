@@ -22,6 +22,15 @@ public class DoubleDamageOncePower extends AbstractAwakenedPower {
         updateDescription();
     }
 
+    public void onTrigger(){
+        this.amount--;
+        if (this.amount <= 0) {
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
+        updateDescription();
+    }
+
+
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK) {
             this.amount--;

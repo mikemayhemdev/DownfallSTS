@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;
 
@@ -49,8 +50,17 @@ public class ConjureAction extends AbstractGameAction {
                 AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
                 conjuredCards.add(tar);
                 endActionWithFollowUp();
-                if (AbstractDungeon.player.hasPower(EmpressPower.POWER_ID)) {
-                    tar.upgrade();
+                if (!tar.upgraded) {
+                    if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+                        double buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+                        if (buf > 5) {
+                            buf = buf / 5;
+                            buf = Math.floor(buf);
+                            for (int i = 0; i < buf; ++i) {
+                                tar.upgrade();
+                            }
+                        }
+                    }
                 }
                 addToTop(new MakeTempCardInHandAction(tar));
                 addToTop(new RemoveSpellCardAction(tar));

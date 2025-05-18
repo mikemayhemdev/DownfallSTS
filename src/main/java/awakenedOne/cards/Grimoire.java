@@ -24,11 +24,11 @@ public class Grimoire extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         att(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect; i++) {
-                atb(new ConjureAction(true));
+                atb(new ConjureAction(false));
             }
             return true;
         }));
-        atb(new ConjureAction(true));
+        atb(new ConjureAction(false));
     }
 
 
