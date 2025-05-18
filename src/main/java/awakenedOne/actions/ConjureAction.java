@@ -50,18 +50,6 @@ public class ConjureAction extends AbstractGameAction {
                 AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
                 conjuredCards.add(tar);
                 endActionWithFollowUp();
-                if (!tar.upgraded) {
-                    if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-                        double buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-                        if (buf > 5) {
-                            buf = buf / 5;
-                            buf = Math.floor(buf);
-                            for (int i = 0; i < buf; ++i) {
-                                tar.upgrade();
-                            }
-                        }
-                    }
-                }
                 addToTop(new MakeTempCardInHandAction(tar));
                 addToTop(new RemoveSpellCardAction(tar));
             } else {
