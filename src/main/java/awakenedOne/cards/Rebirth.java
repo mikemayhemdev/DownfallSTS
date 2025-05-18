@@ -13,8 +13,8 @@ public class Rebirth extends AbstractAwakenedCard {
     // intellij stuff skill, self, rare, , , , , 4, 2
 
     public Rebirth() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 9;
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 7;
         tags.add(CardTags.HEALING);
     }
 
