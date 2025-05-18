@@ -23,7 +23,7 @@ public class ToTheLimit extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (p.currentHealth * 2 > p.maxHealth) {
             applyToSelf(new StrengthPower(p, magicNumber));
-            this.exhaust = false;
+            //this.exhaust = false;
         }
         else {
             applyToSelf(new RitualPower(p, secondMagic, true));

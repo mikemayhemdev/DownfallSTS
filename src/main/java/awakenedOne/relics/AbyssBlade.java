@@ -40,7 +40,7 @@ public class AbyssBlade extends CustomRelic implements OnLoseEnergyRelic {
 
     @Override
     public void LoseEnergyAction(int e) {
-        if (this.counter == -1) {
+        if (this.counter != 1) {
             flash();
             stopPulse();
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
