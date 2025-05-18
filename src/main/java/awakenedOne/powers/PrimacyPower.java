@@ -28,7 +28,7 @@ public class PrimacyPower extends AbstractAwakenedPower implements OnReceivePowe
 
     @Override
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (cardsDoubledThisTurn > this.amount) {
+        if (cardsDoubledThisTurn < this.amount) {
             if ((power instanceof StrengthPower) && (power.amount > 0)) {
                 flash();
                 this.cardsDoubledThisTurn += 1;
