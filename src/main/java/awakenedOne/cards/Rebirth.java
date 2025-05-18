@@ -14,7 +14,7 @@ public class Rebirth extends AbstractAwakenedCard {
 
     public Rebirth() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 9;
         tags.add(CardTags.HEALING);
     }
 

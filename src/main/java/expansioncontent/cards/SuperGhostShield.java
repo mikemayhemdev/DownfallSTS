@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import downfall.downfallMod;
@@ -61,6 +62,8 @@ public class SuperGhostShield extends AbstractExpansionCard {
             String afterlife_name = downfallMod.keywords_and_proper_names.get("afterlife");
             this.keywords.add(afterlife_name);
 
+        this.keywords.add(GameDictionary.BLOCK.NAMES[0].toLowerCase());
+
         if (Settings.language == Settings.GameLanguage.JPN) {
             this.keywords.add("ブラー");
         }
@@ -69,15 +72,7 @@ public class SuperGhostShield extends AbstractExpansionCard {
             String blur_name = downfallMod.keywords_and_proper_names.get("blur");
             this.keywords.add(blur_name);
         }
-            if (Settings.language == Settings.GameLanguage.ZHS) {
-                this.keywords.add("格挡");
-            } else if (Settings.language == Settings.GameLanguage.RUS) {
-                //this.keywords.add("ловкость");
-            } else {
-                if (Settings.language != Settings.GameLanguage.JPN) {
-                    this.keywords.add("block");
-                }
-            }
+
         }
     }
 
