@@ -22,6 +22,7 @@ public class SplitWide extends AbstractAwakenedCard {
         baseDamage = 6;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

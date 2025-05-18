@@ -19,7 +19,7 @@ import static awakenedOne.AwakenedOneMod.HexCurse;
 
 public class StrengthReturnPower extends AbstractAwakenedPower {
     // intellij stuff buff
-    public static final String NAME = EnemyHexedPower.class.getSimpleName();
+    public static final String NAME = StrengthReturnPower.class.getSimpleName();
     public static final String POWER_ID = "awakened:StrengthReturnPower";
 
     public StrengthReturnPower(final AbstractCreature owner, int amount) {

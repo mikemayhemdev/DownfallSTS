@@ -44,8 +44,8 @@ public class AbyssBlade extends CustomRelic implements OnLoseEnergyRelic {
             flash();
             stopPulse();
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToTop(new GainEnergyAction(1));
-            addToTop(new DrawCardAction(AbstractDungeon.player, 1));
+            addToBot(new GainEnergyAction(1));
+            addToBot(new DrawCardAction(AbstractDungeon.player, 1));
             this.counter = 1;
         }
     }
