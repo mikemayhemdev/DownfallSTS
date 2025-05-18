@@ -23,7 +23,7 @@ public class Envision extends AbstractAwakenedCard {
         }
 
         if (upgraded) {
-        atb(new ConjureAction(true));
+        atb(new ConjureAction(false));
         }
     }
 

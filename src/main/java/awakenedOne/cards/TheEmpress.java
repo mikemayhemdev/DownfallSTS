@@ -55,7 +55,7 @@ public class TheEmpress extends AbstractAwakenedCard {
         if (!powerExists) {
             applyToSelfTop(new EmpressPower(p));
         }
-        atb(new ConjureAction(true));
+        atb(new ConjureAction(false));
     }
 
     @Override

@@ -26,7 +26,7 @@ public class AphoticFount extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToTop(new AddSpellCardAction(new AphoticShield()));
-        atb(new ConjureAction(true));
+        atb(new ConjureAction(false));
     }
 
     @Override

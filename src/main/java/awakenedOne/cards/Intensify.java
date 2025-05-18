@@ -25,7 +25,7 @@ public class Intensify extends AbstractAwakenedCard {
         }
 
         if (upgraded) {
-            atb(new ConjureAction(true));
+            atb(new ConjureAction(false));
         }
         applyToSelf(new IntensifyPower(1));
     }

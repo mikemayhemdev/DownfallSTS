@@ -9,7 +9,7 @@
   },
   "awakened:Cryostasis": {
     "NAME": "Cryostasis",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
@@ -42,12 +42,11 @@
   },
   "awakened:MagicStrike": {
     "NAME": "Magic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure at random."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure."
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure at random. NL Your next Spell this turn is played twice.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL awakened:Conjure a Spell. NL Your next Spell this turn is played twice."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Your next Spell this turn is played twice."
   },
   "awakened:QuickMove": {
     "NAME": "Peck",
@@ -55,7 +54,7 @@
   },
   "awakened:InResponse": {
     "NAME": "Spellshield",
-    "DESCRIPTION": "awakened:Conjure a Spell. NL Whenever you play a Spell, gain !awakened:m2! Block."
+    "DESCRIPTION": "awakened:Conjure. NL Whenever you play a Spell, gain !awakened:m2! Block."
   },
   "awakened:Curiosity": {
     "NAME": "Curiosity",
@@ -75,8 +74,8 @@
   },
   "awakened:Librarian": {
     "NAME": "The Magician",
-    "DESCRIPTION": "At the start of your turn, awakened:Conjure at random.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, awakened:Conjure at random."
+    "DESCRIPTION": "At the start of your turn, awakened:Conjure.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, awakened:Conjure."
   },
 
   "awakened:Ceremony": {
@@ -85,8 +84,8 @@
   },
   "awakened:TalonRake": {
     "NAME": "Talon Rake",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure at random.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL awakened:Conjure a Spell."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL awakened:Conjure."
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
@@ -169,8 +168,8 @@
   },
   "awakened:Envision": {
     "NAME": "Envision",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure at random.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL awakened:Conjure a Spell."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL awakened:Conjure."
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
@@ -237,7 +236,7 @@
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelate",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure !M! random Spells."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure !M! times."
   },
   "awakened:Primacy": {
     "NAME": "Primacy",
@@ -284,7 +283,7 @@
   },
   "awakened:Murder": {
     "NAME": "Murder",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL awakened:Conjure at random."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "awakened:ExNihilo": {
     "NAME": "Ex Nihilo",
@@ -292,7 +291,7 @@
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",
-    "DESCRIPTION": "awakened:Conjured Spells are Upgraded. NL awakened:Conjure a Spell."
+    "DESCRIPTION": "awakened:Conjured Spells are Upgraded (Does nothing this version!!!). NL awakened:Conjure."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
@@ -411,12 +410,12 @@
   },
   "awakened:Manastorm": {
     "NAME": "Manastorm",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure at random for each enemy hit."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure for each enemy hit."
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "awakened:Conjure at random X+1 times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "awakened:Conjure at random X+1 times."
+    "DESCRIPTION": "awakened:Conjure X+1 times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "awakened:Conjure X+1 times."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",
