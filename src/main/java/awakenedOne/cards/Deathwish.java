@@ -31,11 +31,7 @@ public class Deathwish extends AbstractAwakenedCard {
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
             double buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
             if (buf > 10) {
-                buf = buf / 10;
-                buf = Math.floor(buf);
-                for (int i = 0; i < buf; ++i) {
                     card.upgrade();
-                }
             }
         }
         spellCards.add(new OrbitingSpells.CardRenderInfo(card));

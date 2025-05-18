@@ -174,16 +174,8 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     }
 
     public void upgrade() {
-        if (!upgraded || (this instanceof AbstractSpellCard)) {
-            if (this instanceof AbstractSpellCard && (this.timesUpgraded < 3)) {
-                this.timesUpgraded++;
-                this.upgraded = true;
-                this.name = cardStrings.NAME + "+" + this.timesUpgraded;
-                this.initializeTitle();
-            }
-            if (!(this instanceof AbstractSpellCard)) {
-                upgradeName();
-            }
+        if (!upgraded) {
+            upgradeName();
             upp();
             if (cardStrings.UPGRADE_DESCRIPTION != null) {
                 rawDescription = cardStrings.UPGRADE_DESCRIPTION;
