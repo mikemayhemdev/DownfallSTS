@@ -36,7 +36,7 @@ public class Sixitude extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
-        if (!targetCard.hasTag(expansionContentMod.ECHO)) {
+        if ((targetCard.costForTurn != 0) && !(targetCard.freeToPlay())) {
             ++this.counter;
             if (this.counter % SIX_SHOOTER == 0) {
                 this.flash();

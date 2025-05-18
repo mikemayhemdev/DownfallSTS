@@ -23,10 +23,9 @@ public class LibrarianPower extends AbstractAwakenedPower {
     }
 
     public void updateDescription() {
-        if (amount == 0) {
+        if (amount == 1) {
             description = DESCRIPTIONS[0];
-        }
-        else {
+        } else {
             description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         }
     }

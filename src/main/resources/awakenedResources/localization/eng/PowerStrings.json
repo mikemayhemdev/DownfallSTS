@@ -196,9 +196,9 @@
     ]
   },
   "awakened:LibrarianPower": {
-    "NAME": "Librarian",
+    "NAME": "The Magician",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yConjure at random.",
+      "At the start of your turn, #yConjure.",
       "At the start of your turn, #yConjure at random #b",
       " times."
     ]

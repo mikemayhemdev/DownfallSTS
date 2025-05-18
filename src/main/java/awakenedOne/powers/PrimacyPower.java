@@ -52,9 +52,9 @@ public class PrimacyPower extends AbstractAwakenedPower implements OnReceivePowe
         if (cardsDoubledThisTurn >= 3) {
             this.description += DESCRIPTIONS[6];
         } else if ((this.amount - cardsDoubledThisTurn) > 1) {
-            this.description += DESCRIPTIONS[3] + (this.amount - cardsDoubledThisTurn) + DESCRIPTIONS[5];
-        } else {
             this.description += DESCRIPTIONS[3] + (this.amount - cardsDoubledThisTurn) + DESCRIPTIONS[4];
+        } else {
+            this.description += DESCRIPTIONS[3] + (this.amount - cardsDoubledThisTurn) + DESCRIPTIONS[5];
         }
     }
 }
