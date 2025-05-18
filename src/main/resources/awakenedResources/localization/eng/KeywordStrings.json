@@ -12,7 +12,7 @@
       "conjure",
       "conjured"
     ],
-    "DESCRIPTION": "Draw a card from your Spell Pile. If you have at least #b10 #yStrength, #yUpgrade it. If your Spell Pile is empty, immediately refresh it."
+    "DESCRIPTION": "Draw a card from your Spell Pile. If you have at least #b10 #yStrength [REMOVE_SPACE], #yUpgrade it."
   },
   {
     "PROPER_NAME": "Chant",

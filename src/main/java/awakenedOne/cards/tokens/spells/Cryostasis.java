@@ -22,7 +22,7 @@ public class Cryostasis extends AbstractSpellCard {
 
     public Cryostasis() {
         super(ID, CardType.SKILL, CardTarget.SELF);
-        baseBlock = 4;
+        baseBlock = 3;
         baseMagicNumber = magicNumber = 1;
     }
 

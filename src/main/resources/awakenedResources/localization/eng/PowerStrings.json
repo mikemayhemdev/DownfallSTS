@@ -151,7 +151,7 @@
   "awakened:IntoNothingPower": {
     "NAME": "Into Nothing",
     "DESCRIPTIONS": [
-      "The first 0 cost card you play each turn is played twice.",
+      "The first #b0 cost card you play each turn is played twice.",
       "The first #b",
       " 0 cost cards you play each turn are played twice.",
       " NL This effect can be triggered #b",
