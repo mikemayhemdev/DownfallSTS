@@ -27,12 +27,6 @@ public class AphoticFount extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard card = new AphoticShield();
-        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            double buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-            if (buf > 10) {
-                    card.upgrade();
-                }
-        }
         spellCards.add(new OrbitingSpells.CardRenderInfo(card));
         updateTimeOffsets();
         atb(new ConjureAction(false));

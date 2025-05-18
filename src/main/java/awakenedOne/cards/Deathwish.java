@@ -27,13 +27,8 @@ public class Deathwish extends AbstractAwakenedCard {
         this.exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {        AbstractCard card = new AphoticShield();
-        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            double buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-            if (buf > 10) {
-                    card.upgrade();
-            }
-        }
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractCard card = new DeathCoil();
         spellCards.add(new OrbitingSpells.CardRenderInfo(card));
         updateTimeOffsets();
         atb(new ConjureAction(false));
