@@ -8,9 +8,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import hermit.powers.SnipePower;
-
-import static awakenedOne.AwakenedOneMod.HexCurse;
 
 public class EnemyHexedPower extends AbstractAwakenedPower implements HealthBarRenderPower {
     // intellij stuff buff
@@ -23,7 +20,19 @@ public class EnemyHexedPower extends AbstractAwakenedPower implements HealthBarR
         if (owner.hasPower(UltimateHexDebuff.POWER_ID)) {
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
         }
+        if (this.amount >= 10) {
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
+            this.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new UltimateHexDebuff(this.owner, 1), 1));
+        }
         updateDescription();
+    }
+
+    @Override
+    public void onInitialApplication() {
+        if (this.amount >= 10) {
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
+            this.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new UltimateHexDebuff(this.owner, 1), 1));
+        }
     }
 
     @Override
