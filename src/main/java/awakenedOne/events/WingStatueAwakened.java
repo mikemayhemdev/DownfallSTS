@@ -27,6 +27,7 @@ public class WingStatueAwakened extends AbstractImageEvent {
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     private static final EventStrings eventStrings;
+    private int damage;
 
     static {
         eventStrings = CardCrawlGame.languagePack.getEventString(ID);
@@ -46,14 +47,14 @@ public class WingStatueAwakened extends AbstractImageEvent {
         if (AbstractDungeon.ascensionLevel >= 15){
             this.goldLoss = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.35F);
         }
-
-        if (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
-            this.goldLoss = this.goldLoss*5;
+        if (AbstractDungeon.ascensionLevel >= 15) {
+            this.damage = (int)((float)AbstractDungeon.player.maxHealth * 0.35F);
+        } else {
+            this.damage = (int)((float)AbstractDungeon.player.maxHealth * 0.25F);
         }
 
-        // lose 20 (25)% hp as damage, obtain relic
         this.imageEventText.setDialogOption(OPTIONS [0], new ShatteredFragment());
-        this.imageEventText.setDialogOption(OPTIONS[2] + ((AbstractDungeon.ascensionLevel >= 15)?7:5) + OPTIONS[4], new BrokenWingStatue());
+        this.imageEventText.setDialogOption(OPTIONS[2] + this.damage + OPTIONS[4], new BrokenWingStatue());
         this.imageEventText.setDialogOption(OPTIONS[3]);
     }
 
