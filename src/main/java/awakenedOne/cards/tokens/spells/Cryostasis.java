@@ -21,7 +21,7 @@ public class Cryostasis extends AbstractSpellCard {
     // intellij stuff skill, self, , , 7, 1, 1, 1
 
     public Cryostasis() {
-        super(ID, CardType.SKILL, CardTarget.ENEMY);
+        super(ID, CardType.SKILL, CardTarget.SELF);
         baseBlock = 4;
         baseMagicNumber = magicNumber = 1;
     }
