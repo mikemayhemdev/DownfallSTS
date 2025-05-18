@@ -43,7 +43,7 @@ public class DeathCoil extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToTop(new LoseHPAction(p, p, magicNumber));
+       // this.addToTop(new LoseHPAction(p, p, magicNumber));
         if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
             if (m != null) {
                 this.addToBot(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
