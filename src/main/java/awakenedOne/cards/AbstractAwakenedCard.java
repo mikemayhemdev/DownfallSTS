@@ -177,7 +177,8 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         if (!upgraded || (this instanceof AbstractSpellCard)) {
             this.timesUpgraded++;
             if (this instanceof AbstractSpellCard) {
-                this.name = this.name + "+" + this.timesUpgraded;
+                this.upgraded = true;
+                this.name = cardStrings.NAME + "+" + this.timesUpgraded;
                 this.initializeTitle();
             }
             if (!(this instanceof AbstractSpellCard)) {
