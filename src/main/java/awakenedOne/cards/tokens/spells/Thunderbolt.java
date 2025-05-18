@@ -28,7 +28,7 @@ public class Thunderbolt extends AbstractSpellCard {
 
     public Thunderbolt() {
         super(ID, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 4;
+        baseDamage = 3;
         baseSecondDamage = 2;
     }
 
@@ -55,6 +55,6 @@ public class Thunderbolt extends AbstractSpellCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 }

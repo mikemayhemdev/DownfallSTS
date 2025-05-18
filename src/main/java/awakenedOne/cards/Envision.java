@@ -14,20 +14,16 @@ public class Envision extends AbstractAwakenedCard {
     public Envision() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 2;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (!upgraded) {
         atb(new ConjureAction(false));
-        }
 
-        if (upgraded) {
-        atb(new ConjureAction(false));
-        }
     }
 
     public void upp() {
-        upgradeBlock(1);
+        this.exhaust = false;
     }
 }

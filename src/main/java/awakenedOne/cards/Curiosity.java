@@ -13,7 +13,7 @@ public class Curiosity extends AbstractAwakenedCard {
 
     public Curiosity() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,7 +21,7 @@ public class Curiosity extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBaseCost(2);
-        //upgradeMagicNumber(1);
+        //upgradeBaseCost(2);
+        upgradeMagicNumber(1);
     }
 }

@@ -18,7 +18,7 @@
 
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
-    "DESCRIPTION": "Lose !M! HP. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
   },
 
   "awakened:AphoticShield": {
@@ -168,7 +168,7 @@
   },
   "awakened:Envision": {
     "NAME": "Envision",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure.",
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL awakened:Conjure."
   },
   "awakened:Thaumaturgy": {

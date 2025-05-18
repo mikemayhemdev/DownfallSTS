@@ -18,7 +18,7 @@ public class InResponse extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ConjureAction(true));
+        addToBot(new ConjureAction(false));
         applyToSelf(new InResponsePower(secondMagic));
     }
 
