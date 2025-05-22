@@ -23,15 +23,13 @@ public class ClarionCall extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public ClarionCall() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseBlock = 5;
         baseDamage = 6;
-        cardsToPreview = new Insight();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new SFXAction("ATTACK_HEAVY"));
-        this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+
 
         if (this.chant) {
             chant();
@@ -48,10 +46,7 @@ public class ClarionCall extends AbstractAwakenedCard {
 
     @Override
     public void chant() {
-        AbstractCard q = new Insight();
-        if (upgraded) q.upgrade();
-        shuffleIn(q);
-        checkOnChant();
+    blck();
     }
 
     public void triggerOnGlowCheck() {
@@ -60,7 +55,7 @@ public class ClarionCall extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(3);
-        cardsToPreview.upgrade();
+        upgradeBlock(2);
+        upgradeDamage(2);
     }
 }

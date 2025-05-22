@@ -23,11 +23,10 @@
     ]
   },
   "awakened:HexxBomb": {
-    "NAME": "Hexx Bomb",
+    "NAME": "Manabomb",
     "FLAVOR": "3... 2...",
     "DESCRIPTIONS": [
-      "Whenever you activate #yawakened:Ultimate #yawakened:Hex [REMOVE_SPACE], apply #b",
-      " #yawakened:Hex to a random enemy."
+     "Whenever an enemy dies, transfer any #yawakened:Manaburn it has to a random enemy."
     ]
   },
   "awakened:TomeOfPortalmancy": {
@@ -98,10 +97,10 @@
     ]
   },
   "awakened:StrengthBooster": {
-    "NAME": "Paper Krow",
+    "NAME": "Paper Crow",
     "FLAVOR": "Arbiter of doubt and curses folded one thousand times...",
     "DESCRIPTIONS": [
-      "Enemies with #yawakened:Ultimate #yawakened:Hex take #b75% more damage rather than #b50% [REMOVE_SPACE]."
+      "Enemies with #yawakened:Hex take #b10% more damage for each stack."
     ]
   }
 }

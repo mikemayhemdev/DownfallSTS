@@ -14,7 +14,7 @@ public class Invasion extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public Invasion() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         cardsToPreview = new VoidCard();
     }
 
@@ -23,6 +23,6 @@ public class Invasion extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBaseCost(2);
     }
 }

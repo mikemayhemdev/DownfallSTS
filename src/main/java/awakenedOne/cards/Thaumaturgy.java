@@ -13,7 +13,7 @@ public class Thaumaturgy extends AbstractAwakenedCard {
 
     public Thaumaturgy() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 4;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -22,6 +22,6 @@ public class Thaumaturgy extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

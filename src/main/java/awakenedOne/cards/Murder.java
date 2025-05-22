@@ -25,7 +25,7 @@ public class Murder extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for(int i = 0; i < this.magicNumber; ++i) {
             AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1A"));
-            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         }
     }
 

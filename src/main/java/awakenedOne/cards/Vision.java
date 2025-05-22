@@ -1,9 +1,9 @@
 package awakenedOne.cards;
 
-import awakenedOne.actions.DuplicatePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.actions.DuplicatePowerAction;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 

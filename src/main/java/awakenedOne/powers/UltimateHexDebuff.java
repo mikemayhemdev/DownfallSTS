@@ -14,6 +14,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.relics.CandleOfCauterizing;
 
+
+//unused
+
 public class UltimateHexDebuff extends AbstractAwakenedPower implements HealthBarRenderPower, OnReceivePowerPower {
     // intellij stuff buff
     public static final String NAME = UltimateHexDebuff.class.getSimpleName();

@@ -27,10 +27,9 @@
     "NAMES": [
       "hex",
       "hexxed",
-      "hexx",
-      "ultimate"
+      "hexx"
     ],
-    "DESCRIPTION": "Creatures with #b4 #yHex take #y50% more damage from the next Attack. Additional #yHex can't be stacked during this time."
+    "DESCRIPTION": "Creatures with #yHex take #b20% more damage from the next Attack for each stack. #yHex is removed all at once after being attacked."
   },
   {
     "PROPER_NAME": "Drained",

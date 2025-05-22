@@ -1,93 +1,83 @@
 package awakenedOne.powers;
 
+import awakenedOne.relics.HexxBomb;
+import awakenedOne.relics.StrengthBooster;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-public class EnemyHexedPower extends AbstractAwakenedPower implements HealthBarRenderPower {
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import theHexaghost.relics.CandleOfCauterizing;
+//unused
+public class EnemyHexedPower extends AbstractAwakenedPower {
     // intellij stuff buff
-    public static final String NAME = EnemyHexedPower.class.getSimpleName();
-    public static final String POWER_ID = "awakened:EnemyHexedPower";
+    public static final String NAME = UltimateHexDebuff.class.getSimpleName();
+    public static final String POWER_ID = makeID(NAME);
 
     public EnemyHexedPower(final AbstractCreature owner, int amount) {
         super(NAME, PowerType.DEBUFF, false, owner, null, amount);
         this.loadRegion("hex");
-        if (owner.hasPower(UltimateHexDebuff.POWER_ID)) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
-        }
-        if (this.amount >= 4) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
-            this.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new UltimateHexDebuff(this.owner, 1), 1));
-        }
-        updateDescription();
-    }
-
-    @Override
-    public void onInitialApplication() {
-        if (this.amount >= 4) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
-            this.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new UltimateHexDebuff(this.owner, 1), 1));
-        }
-    }
-
-    @Override
-    public int getHealthBarAmount() {
-        return (owner.currentHealth/4)*this.amount;
-    }
-
-    @Override
-    public Color getColor() {
-        return Color.PURPLE.cpy();
     }
 
 
-    //@Override
-    //    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-    //        if (card.type != AbstractCard.CardType.ATTACK) {
-    //            this.flash();
-    //
-    //            if (card.type != AbstractCard.CardType.POWER) {
-    //               // HexCurse(1, owner, owner);
-    //                this.amount++;
-    //            }
-    //
-    //            if (card.type == AbstractCard.CardType.POWER) {
-    //                //HexCurse(3, this.owner, owner);
-    //                this.amount++;
-    //                this.amount++;
-    //                this.amount++;
-    //            }
-    //        }
-    //        if (this.amount >= 10) {
-    //            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
-    //            this.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new UltimateHexDebuff(this.owner, 1), 1));
-    //        }
-    //        updateDescription();
-    //    }
+    public float atDamageReceive(float damage, DamageInfo.DamageType type) {
 
-    public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
-        if (this.owner.hasPower(UltimateHexDebuff.POWER_ID)) {
-        this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
+        float damagereturn = 1.0f;
+        damagereturn = (damagereturn + (0.2f * amount * damagereturn));
+
+
+        if(AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
+            damagereturn = (damagereturn + (0.3f * amount * damagereturn));
         }
 
-
-        if (this.amount >= 4) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
-            this.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new UltimateHexDebuff(this.owner, 1), 1));
+        if (type == DamageInfo.DamageType.NORMAL) {
+            return damage * damagereturn;
         }
+
+        return damage;
     }
 
+//    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+//        if (0 >= this.amount) {
+//            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+//            //Hexx Bomb trigger
+//            if(AbstractDungeon.player.hasRelic(HexxBomb.ID)) {
+//                AbstractDungeon.player.getRelic(HexxBomb.ID).onTrigger();
+//            }
+//        }
+//    }
+
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        if (info.type == DamageInfo.DamageType.NORMAL) {
+            this.flashWithoutSound();
+            if (this.amount != 0) {
+//                //Hexx Bomb trigger
+//                if(AbstractDungeon.player.hasRelic(HexxBomb.ID)) {
+//                    AbstractDungeon.player.getRelic(HexxBomb.ID).onTrigger();
+//                }
+            }
+            this.amount = 0;
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+        }
+        return damageAmount;
+    }
+
+    // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        if (this.owner.hasPower(UltimateHexDebuff.POWER_ID)) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
+        this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
+        int num = 20*amount;
+
+        if(AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
+            num = 30*amount;
         }
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+
+        description = DESCRIPTIONS[0] + num + DESCRIPTIONS[1];
     }
+
 }

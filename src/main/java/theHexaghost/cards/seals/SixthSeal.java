@@ -55,7 +55,8 @@ public class SixthSeal extends AbstractSealCard {
     }
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new FutureUpgradePower(magicNumber));
+        int upgrades = (count_cards / 13);
+        applyToSelf(new FutureUpgradePower(upgrades));
     }
 
     public void upgrade() {

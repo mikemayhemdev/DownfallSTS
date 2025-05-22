@@ -24,7 +24,7 @@ public class TheEmpress extends AbstractAwakenedCard {
 
     public TheEmpress() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,6 +33,6 @@ public class TheEmpress extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(1);
     }
 }

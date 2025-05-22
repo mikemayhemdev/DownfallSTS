@@ -16,38 +16,34 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.util.TextureLoader;
 import expansioncontent.expansionContentMod;
 import hermit.patches.EnumPatch;
+import slimebound.powers.SlimedPower;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
 
-public class ManaburnPower extends AbstractAwakenedPower  implements OnLoseEnergyPower {
+public class NihilPower extends AbstractAwakenedPower {
     // intellij stuff buff
 
 
-    public static final String NAME = ManaburnPower.class.getSimpleName();
+    public static final String NAME = NihilPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
 
 
-    public ManaburnPower(final AbstractCreature owner, int amount) {
+    public NihilPower(final AbstractCreature owner, int amount) {
         super(NAME, PowerType.DEBUFF, false, owner, null, amount);
         updateDescription();
     }
 
-
     @Override
-    public void LoseEnergyAction(int gained) {
-        this.flash();
-        this.addToBot(new DamageAction(owner, new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
-    }
-
-    @Override
-    public void triggerMarks(AbstractCard card) {
-        if (card.cardID.equals(Retaliation.ID)) {
-            this.addToBot(new LoseHPAction(this.owner, (AbstractCreature)null, this.amount, EnumPatch.HERMIT_GHOSTFIRE));
+    public void atStartOfTurn() {
+        if (owner instanceof AbstractMonster) {
+            flash();
+            addToBot(new ApplyPowerAction(owner, owner, new ManaburnPower(owner, amount), amount));
         }
     }
 

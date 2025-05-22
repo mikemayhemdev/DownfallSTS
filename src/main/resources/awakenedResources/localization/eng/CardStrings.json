@@ -98,8 +98,8 @@
   },
   "awakened:FadeOut": {
     "NAME": "Hexx Master",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a non-Attack card, apply !M! awakened:Hex to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a non-Attack card, apply !M! awakened:Hex to ALL enemies."
+    "DESCRIPTION": "Ethereal. NL Whenever you play a Power card, apply !M! awakened:Hex to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a Power card, apply !M! awakened:Hex to ALL enemies."
   },
   "awakened:Accumulate": {
     "NAME": "Accumulate",
@@ -135,8 +135,7 @@
   },
   "awakened:ClarionCall": {
     "NAME": "Clarion Call",
-    "DESCRIPTION": "rework later Deal !D! damage to ALL enemies. NL awakened:Chant: Shuffle an *Insight into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Chant: Shuffle an *Insight+ into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Gain !B! Block."
   },
   "awakened:Recitation": {
     "NAME": "Recitation",
@@ -164,8 +163,8 @@
   },
   "awakened:DrawingDead": {
     "NAME": "Drawing Dead",
-    "DESCRIPTION": "rework later Draw !M! card. NL Gain !awakened:m2! Strength.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain !awakened:m2! Strength."
+    "DESCRIPTION": "Draw !M! card. NL Apply !M! awakened:Hex.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Apply !M! awakened:Hex."
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -174,7 +173,7 @@
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
-    "DESCRIPTION": "rework too splashable Whenever you play a Power, gain !M! Block."
+    "DESCRIPTION": "Whenever you play a Power, gain !M! Block."
   },
   "awakened:Screech": {
     "NAME": "Screech",
@@ -211,7 +210,7 @@
   },
   "awakened:Vision": {
     "NAME": "Vision",
-    "DESCRIPTION": "gremlin:Echo a Power card in your hand. NL Exhaust."
+    "DESCRIPTION": "Gain an gremlin:Echo of a Power card in your hand next turn. NL Exhaust."
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
@@ -233,7 +232,7 @@
   },
   "awakened:DarkPower": {
     "NAME": "Initiation",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Strength."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !M! temporary Strength."
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelate",
@@ -284,12 +283,12 @@
   },
   "awakened:Murder": {
     "NAME": "Murder",
-    "DESCRIPTION": "make interesting Deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "awakened:ExNihilo": {
-    "NAME": "Ex Nihilo",
-    "DESCRIPTION": "rework later Deal !D! damage. NL Apply !M! awakened:Hex and awakened:Manaburn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Hex and awakened:Manaburn."
+    "NAME": "Nihil",
+    "DESCRIPTION": "awakened:Chant: Deal !D! damage. NL Enemy gains awakened:Manaburn at the start of its turn equal to unblocked damage dealt. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "awakened:Chant: Deal !D! damage. NL Enemy gains awakened:Manaburn at the start of its turn equal to unblocked damage dealt."
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",
@@ -323,7 +322,7 @@
   },
   "awakened:Invasion": {
     "NAME": "Invasion",
-    "DESCRIPTION": "rework later Whenever you Exhaust a *Void, gain a card next turn."
+    "DESCRIPTION": "Whenever you Exhaust a *Void, gain [E] and draw a card next turn."
   },
   "awakened:Baptism": {
     "NAME": "Baptism",
@@ -345,7 +344,7 @@
   },
   "awakened:SingularityShield": {
     "NAME": "Singularity Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! awakened:Hex."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Apply !M! awakened:Hex."
   },
   "awakened:DarkPortal": {
     "NAME": "Reality Rift",
@@ -361,8 +360,7 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
-    "DESCRIPTION": "rework later At the start of your turn, gain [E] and put a *Void into your discard pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain [E] and put a *Void into your discard pile."
+    "DESCRIPTION": "Whenever you are awakened:Drained, apply !M! awakened:Manaburn to a random enemy."
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",
@@ -374,7 +372,8 @@
   },
   "awakened:ToTheLimit": {
     "NAME": "To the Limit",
-    "DESCRIPTION": "rework later Gain !M! Strength. NL If under 50% HP, gain !awakened:m2! Ritual and Exhaust this card instead."
+    "DESCRIPTION": "awakened:Chant: Gain [E] [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "awakened:Chant: Gain [E] [E] [E] . NL Exhaust."
   },
   "awakened:Victuals": {
     "NAME": "Victuals",
@@ -387,7 +386,12 @@
   },
   "awakened:ArcaneNesting": {
     "NAME": "Arcane Nesting",
-    "DESCRIPTION": "Gain !B! Block X times. NL awakened:Conjure X+1 times."
+    "DESCRIPTION": "Gain !B! Block X times, +1 for each Spell played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " card played.)",
+      " cards played.)"
+    ]
   },
   "awakened:Middens": {
     "NAME": "Middens",
@@ -412,7 +416,7 @@
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "rework later awakened:Conjure X+1 times. NL Exhaust."
+    "DESCRIPTION": "awakened:Conjure X+1 times. NL Exhaust."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",

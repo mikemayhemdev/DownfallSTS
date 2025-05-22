@@ -39,6 +39,8 @@ public class StrengthBooster extends CustomRelic {
 
     //Hyperdrive
 
+    //Paper Crow / Paper Krow
+
 //    private static final int AMOUNT = 4;
 //
 //    //Look at ApplyPowerPatch

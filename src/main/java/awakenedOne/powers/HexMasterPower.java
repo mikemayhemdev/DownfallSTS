@@ -29,7 +29,7 @@ public class HexMasterPower extends AbstractAwakenedPower {
 
     @Override
     public void onAfterCardPlayed(AbstractCard usedCard) {
-        if (usedCard.type != AbstractCard.CardType.ATTACK) {
+        if (usedCard.type == AbstractCard.CardType.POWER) {
             this.flash();
             Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 

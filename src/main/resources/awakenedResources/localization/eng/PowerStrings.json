@@ -38,13 +38,6 @@
   "awakened:EnemyHexedPower": {
     "NAME": "Hexed",
     "DESCRIPTIONS": [
-      "This creature has #b",
-      " #yHex [REMOVE_SPACE]."
-    ]
-  },
-  "awakened:UltimateHexDebuff": {
-    "NAME": "Ultimate Hex",
-    "DESCRIPTIONS": [
       "This creature takes #b",
       "% more damage from the next #yAttack [REMOVE_SPACE]."
     ]
@@ -108,8 +101,8 @@
   "awakened:EmpressPower": {
     "NAME": "The Empress",
     "DESCRIPTIONS": [
-      "Whenever you play #b0 cost card, apply #b",
-      " #yManaburn to a random enemy."
+      "Whenever you #yConjure [REMOVE_SPACE], apply #b",
+      " #yHex to a random enemy."
     ]
   },
   "awakened:MazalethFormPower": {
@@ -131,18 +124,17 @@
   "awakened:InvasionPower": {
     "NAME": "Invasion",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain a #yShiv [REMOVE_SPACE].",
+      "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain [E] and draw a card next turn.",
       "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain #b",
-      " #yShivs [REMOVE_SPACE]."
+      " [E] and draw #b",
+      " cards next turn."
     ]
   },
   "awakened:SongOfSorrowPower": {
     "NAME": "Song of Sorrow",
     "DESCRIPTIONS": [
-      "At the start of your turn gain #b",
-      " [E] and put #b",
-      " #yVoid into your discard pile.",
-      " #yVoids into your discard pile."
+      "Whenever you are #yDrained, apply #b",
+      " #yManaburn to a random enemy."
     ]
   },
   "awakened:FeathersinksPower": {
@@ -169,7 +161,7 @@
   "awakened:HexMasterPower": {
     "NAME": "Hexx Master",
     "DESCRIPTIONS": [
-      "Whenever you play a #ynon-Attack card, apply #b",
+      "Whenever you play a #yPower, apply #b",
       " #yHex to ALL enemies."
     ]
   },
@@ -179,6 +171,13 @@
       "Whenever you are #yDrained, gain #b",
       " #yBlock and #b",
       " #yStrength [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:NihilPower": {
+    "NAME": "Nihil",
+    "DESCRIPTIONS": [
+      "Gains #b",
+      " #yManaburn at the start of its turn."
     ]
   }
 }

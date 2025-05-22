@@ -1,30 +1,16 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.actions.DelayedCurseAction;
-import awakenedOne.cards.tokens.Ceremony;
-import awakenedOne.powers.UltimateHexDebuff;
+import awakenedOne.powers.EnemyHexedPower;
+import awakenedOne.powers.ManaburnPower;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
-import collector.actions.DrawCardFromCollectionAction;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.RitualPower;
-import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
-
-import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static collector.util.Wiz.atb;
 
 public class HexxBomb extends CustomRelic{
 
@@ -46,20 +32,36 @@ public class HexxBomb extends CustomRelic{
 //        onTrigger();
 //    }
 
-    @Override
-    public void onTrigger() {
-        super.onTrigger();
-        this.flash();
-        //this.addToBot(new DelayedCurseAction);
-        AbstractMonster mo = AbstractDungeon.getRandomMonster();
-        HexCurse(AMOUNT, mo, AbstractDungeon.player);
-        this.addToBot(new VFXAction(new GiantEyeEffect(mo.hb.cX, mo.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
-        this.addToTop(new RelicAboveCreatureAction(mo, this));
+//    @Override
+//    public void onTrigger() {
+//        super.onTrigger();
+//        this.flash();
+//        //this.addToBot(new DelayedCurseAction);
+//        AbstractMonster mo = AbstractDungeon.getRandomMonster();
+//        HexCurse(AMOUNT, mo, AbstractDungeon.player);
+//        this.addToBot(new VFXAction(new GiantEyeEffect(mo.hb.cX, mo.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
+//        this.addToTop(new RelicAboveCreatureAction(mo, this));
+//    }
+
+
+    public void onMonsterDeath(AbstractMonster m) {
+        if (m.hasPower(ManaburnPower.POWER_ID)) {
+            int amount = m.getPower(ManaburnPower.POWER_ID).amount;
+            if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                this.flash();
+                this.addToBot(new RelicAboveCreatureAction(m, this));
+                AbstractMonster mo = AbstractDungeon.getRandomMonster();
+                HexCurse(AMOUNT, mo, AbstractDungeon.player);
+                this.addToTop(new RelicAboveCreatureAction(mo, this));
+            }
+        }
+
     }
+
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + AMOUNT + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0];
     }
 
 }

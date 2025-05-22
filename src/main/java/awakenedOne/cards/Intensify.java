@@ -15,18 +15,12 @@ public class Intensify extends AbstractAwakenedCard {
 
     public Intensify() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (!upgraded) {
-            atb(new ConjureAction(false));
-        }
-
-        if (upgraded) {
-            atb(new ConjureAction(false));
-        }
+        atb(new ConjureAction(false));
         applyToSelf(new IntensifyPower(1));
     }
 

@@ -6,6 +6,7 @@ import awakenedOne.cards.tokens.spells.Cryostasis;
 import awakenedOne.cards.tokens.spells.Darkleech;
 import awakenedOne.cards.tokens.spells.Thunderbolt;
 import awakenedOne.powers.EmpressPower;
+import awakenedOne.powers.InResponsePower;
 import awakenedOne.powers.SongOfSorrowPower;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,24 +18,24 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.applyToSelfTop;
-import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.*;
 
 public class SongOfSorrow extends AbstractAwakenedCard {
     public final static String ID = makeID(SongOfSorrow.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
     public SongOfSorrow() {
-        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        cardsToPreview = new VoidCard();
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-    applyToSelfTop(new SongOfSorrowPower(1));
+        applyToSelf(new SongOfSorrowPower(magicNumber));
     }
 
     @Override
     public void upp() {
-        this.isInnate = true;
+        upgradeMagicNumber(1);
     }
 }
