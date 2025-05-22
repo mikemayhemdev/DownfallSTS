@@ -20,7 +20,7 @@ public class EnemyHexedPower extends AbstractAwakenedPower implements HealthBarR
         if (owner.hasPower(UltimateHexDebuff.POWER_ID)) {
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
         }
-        if (this.amount >= 10) {
+        if (this.amount >= 4) {
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
             this.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new UltimateHexDebuff(this.owner, 1), 1));
         }
@@ -29,7 +29,7 @@ public class EnemyHexedPower extends AbstractAwakenedPower implements HealthBarR
 
     @Override
     public void onInitialApplication() {
-        if (this.amount >= 10) {
+        if (this.amount >= 4) {
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
             this.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new UltimateHexDebuff(this.owner, 1), 1));
         }
@@ -37,7 +37,7 @@ public class EnemyHexedPower extends AbstractAwakenedPower implements HealthBarR
 
     @Override
     public int getHealthBarAmount() {
-        return (owner.currentHealth/10)*this.amount;
+        return (owner.currentHealth/4)*this.amount;
     }
 
     @Override
@@ -46,29 +46,29 @@ public class EnemyHexedPower extends AbstractAwakenedPower implements HealthBarR
     }
 
 
-    @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (card.type != AbstractCard.CardType.ATTACK) {
-            this.flash();
-
-            if (card.type != AbstractCard.CardType.POWER) {
-               // HexCurse(1, owner, owner);
-                this.amount++;
-            }
-
-            if (card.type == AbstractCard.CardType.POWER) {
-                //HexCurse(3, this.owner, owner);
-                this.amount++;
-                this.amount++;
-                this.amount++;
-            }
-        }
-        if (this.amount >= 10) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
-            this.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new UltimateHexDebuff(this.owner, 1), 1));
-        }
-        updateDescription();
-    }
+    //@Override
+    //    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+    //        if (card.type != AbstractCard.CardType.ATTACK) {
+    //            this.flash();
+    //
+    //            if (card.type != AbstractCard.CardType.POWER) {
+    //               // HexCurse(1, owner, owner);
+    //                this.amount++;
+    //            }
+    //
+    //            if (card.type == AbstractCard.CardType.POWER) {
+    //                //HexCurse(3, this.owner, owner);
+    //                this.amount++;
+    //                this.amount++;
+    //                this.amount++;
+    //            }
+    //        }
+    //        if (this.amount >= 10) {
+    //            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
+    //            this.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new UltimateHexDebuff(this.owner, 1), 1));
+    //        }
+    //        updateDescription();
+    //    }
 
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
@@ -77,7 +77,7 @@ public class EnemyHexedPower extends AbstractAwakenedPower implements HealthBarR
         }
 
 
-        if (this.amount >= 10) {
+        if (this.amount >= 4) {
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
             this.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new UltimateHexDebuff(this.owner, 1), 1));
         }

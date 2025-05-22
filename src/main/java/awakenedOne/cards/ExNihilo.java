@@ -1,14 +1,24 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.powers.ManaburnPower;
 import awakenedOne.relics.KTRibbon;
 import collector.powers.AddCopyNextTurnPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 
+import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.atb;
 import static collector.util.Wiz.applyToSelfTop;
@@ -19,37 +29,21 @@ public class ExNihilo extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public ExNihilo() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 2;
+        super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        baseDamage = 4;
+        this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        if (this.chant) {
-            chant();
-        }
-
-        if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                chant();
-                awaken(1);
-            }
-        }
-    }
-
-    @Override
-    public void chant() {
-        atb(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
-        checkOnChant();
-    }
-
-    public void triggerOnGlowCheck() {
-        this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        HexCurse(magicNumber, m, p);
+        this.addToBot(new ApplyPowerAction(m, p, new ManaburnPower(m, this.magicNumber), this.magicNumber));
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+    this.exhaust = false;
     }
 }

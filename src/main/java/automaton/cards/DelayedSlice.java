@@ -14,6 +14,8 @@ public class DelayedSlice extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all_enemy, common
 
+    //Robo-Chop
+
     public DelayedSlice() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;

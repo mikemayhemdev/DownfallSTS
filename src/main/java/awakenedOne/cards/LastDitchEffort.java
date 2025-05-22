@@ -7,8 +7,10 @@ import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 
-import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.applyToSelf;
+
 
 public class LastDitchEffort extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(LastDitchEffort.class.getSimpleName());
@@ -25,7 +27,7 @@ public class LastDitchEffort extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         if (checkVoid()) {
-            atb(new DrawCardAction(p, this.magicNumber));
+            applyToSelf(new DrawCardNextTurnPower(p, magicNumber));
         }
     }
 

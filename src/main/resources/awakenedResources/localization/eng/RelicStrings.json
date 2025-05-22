@@ -98,11 +98,10 @@
     ]
   },
   "awakened:StrengthBooster": {
-    "NAME": "Hyperdrive",
-    "FLAVOR": "But what if we had MORE?",
+    "NAME": "Paper Krow",
+    "FLAVOR": "Arbiter of doubt and curses folded one thousand times...",
     "DESCRIPTIONS": [
-      "Whenever you gain #yStrength [REMOVE_SPACE], also gain #b",
-      " #yVigor [REMOVE_SPACE]."
+      "Enemies with #yawakened:Ultimate #yawakened:Hex take #b75% more damage rather than #b50% [REMOVE_SPACE]."
     ]
   }
 }

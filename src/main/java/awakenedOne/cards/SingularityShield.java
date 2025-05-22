@@ -9,24 +9,27 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import static awakenedOne.AwakenedOneMod.HexCurse;
+
 public class SingularityShield extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(SingularityShield.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public SingularityShield() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 9;
-        cardsToPreview = new VoidCard();
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        baseBlock = 6;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        addToBot(new MakeTempCardInDiscardAction(new VoidCard(), 1));
+        HexCurse(magicNumber, m, p);
     }
 
 
     @Override
     public void upp() {
         upgradeBlock(3);
+        upgradeMagicNumber(1);
     }
 }

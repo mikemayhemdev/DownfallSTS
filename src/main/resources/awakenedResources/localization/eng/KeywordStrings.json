@@ -30,7 +30,7 @@
       "hexx",
       "ultimate"
     ],
-    "DESCRIPTION": "Hexxed creatures gain additional #yHex whenever you play a non-Attack card. Powers increase #yHex by #b3 [REMOVE_SPACE]. Creatures with #b10 #yHex take #rdouble #rdamage from the next Attack. Additional #yHex can't be stacked during this time."
+    "DESCRIPTION": "Creatures with #b4 #yHex take #y50% more damage from the next Attack. Additional #yHex can't be stacked during this time."
   },
   {
     "PROPER_NAME": "Drained",
@@ -39,5 +39,12 @@
       "drained"
     ],
     "DESCRIPTION": "Any effect that causes you to lose [E] , even if you had none to lose."
+  },
+  {
+    "PROPER_NAME": "Manaburn",
+    "NAMES": [
+      "manaburn"
+    ],
+    "DESCRIPTION": "Whenever you lose [E] , even if you had none to lose, loses HP equal to it's #yManaburn [REMOVE_SPACE]."
   }
 ]

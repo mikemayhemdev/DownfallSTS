@@ -1,11 +1,4 @@
 {
-  "awakened:AwakenedPower": {
-    "NAME": "Awakened",
-    "DESCRIPTIONS": [
-      "You are currently at #yAwakened #b",
-      "."
-    ]
-  },
   "awakened:IntensifyPower": {
     "NAME": "Intensify",
     "DESCRIPTIONS": [
@@ -42,89 +35,18 @@
       " #yHex to ALL enemies."
     ]
   },
-  "awakened:ToxinWingPower": {
-    "NAME": "Toxin Wing",
-    "DESCRIPTIONS": [
-      "#yFeathers apply #b",
-      " #yPoison."
-    ]
-  },
-  "awakened:AboveItAllPower": {
-    "NAME": "Above It All",
-    "DESCRIPTIONS": [
-      "Whenever you gain #yAwakened, also gain #b",
-      " #yBlock."
-    ]
-  },
-  "awakened:CrowsCallPower": {
-    "NAME": "Crow's Call",
-    "DESCRIPTIONS": [
-      "At the end of your turn, ALL enemies lose #b",
-      " HP for each #rCurse or #yStatus card in your hand."
-    ]
-  },
-  "awakened:FromNothingPower": {
-    "NAME": "From Nothing",
-    "DESCRIPTIONS": [
-      "At the start of your turn, add #b",
-      " random cost #b0 card into your hand.",
-      " random cost #b0 cards into your hand."
-    ]
-  },
-  "awakened:BigSpenderPower": {
-    "NAME": "Big Spender",
-    "DESCRIPTIONS": [
-      "The first time you play a card that costs more than #b1 each turn, gain [E] . NL ",
-      "The first #b",
-      " times you play a card that costs more than #b1 each turn, gain [E] . NL ",
-      " Activations left this turn: #b",
-      "."
-    ]
-  },
-  "awakened:ThoughthsieldPower": {
-    "NAME": "Thoughtshield",
-    "DESCRIPTIONS": [
-      "Enemies can't create cards this turn.",
-      "Enemies can't create cards for the next #b",
-      " turns."
-    ]
-  },
-  "awakened:StrengthOverTurns": {
-    "NAME": "Empower",
-    "DESCRIPTIONS": [
-      "At the start of your next turn, gain #b",
-      " #yStrength.",
-      "At the start of your next #b",
-      " turns, gain #b"
-    ]
-  },
   "awakened:EnemyHexedPower": {
     "NAME": "Hexed",
     "DESCRIPTIONS": [
       "This creature has #b",
-      " #yHex. Play non-attack cards to increase it."
+      " #yHex [REMOVE_SPACE]."
     ]
   },
   "awakened:UltimateHexDebuff": {
     "NAME": "Ultimate Hex",
     "DESCRIPTIONS": [
-      "This creature takes #rdouble #rdamage from the next Attack.",
-      "This creature takes #rdouble #rdamage from the next #b",
-      " Attacks."
-    ]
-  },
-  "awakened:HemorrhageDebuff": {
-    "NAME": "Hemorrhage",
-    "DESCRIPTIONS": [
-      "In #b2 turns, take #b",
-      " damage."
-    ]
-  },
-  "awakened:BleedDebuff": {
-    "NAME": "Bleeding",
-    "DESCRIPTIONS": [
-      "At the end of your turn, take #b",
-      " damage."
+      "This creature takes #b",
+      "% more damage from the next #yAttack [REMOVE_SPACE]."
     ]
   },
   "awakened:FlarePower": {
@@ -132,20 +54,6 @@
     "DESCRIPTIONS": [
       "Whenever you play a non-Attack card this turn, deal #b",
       " damage to ALL enemies."
-    ]
-  },
-  "awakened:FlightOfFancyPower": {
-    "NAME": "Flight of Fancy",
-    "DESCRIPTIONS": [
-      "Give the first #b",
-      " cards you draw each turn #yFlying."
-    ]
-  },
-  "awakened:MazalethsMadnessPower": {
-    "NAME": "Mazaleth's Madness",
-    "DESCRIPTIONS": [
-      "Whenever you play a Spell, deal #b",
-      " damage to a random enemy."
     ]
   },
   "awakened:IntoNothingPower": {
@@ -158,21 +66,6 @@
       " more times this turn.",
       " more time this turn.",
       " NL This effect cannot be triggered again this turn."
-    ]
-  },
-  "awakened:TowerOfEndingsPower": {
-    "NAME": "Tower of Endings",
-    "DESCRIPTIONS": [
-      "When you reach #yAwakened #b",
-      " #rkill #rALL #renemies."
-    ]
-  },
-  "awakened:BlotOutPower": {
-    "NAME": "Blotted Out",
-    "DESCRIPTIONS": [
-      "Can't buff itself or debuff you this turn.",
-      "Can't buff itself or debuff you for the next #b",
-      " turns."
     ]
   },
   "awakened:FeatherPower": {
@@ -215,7 +108,8 @@
   "awakened:EmpressPower": {
     "NAME": "The Empress",
     "DESCRIPTIONS": [
-      "#yConjured Spells are #yUpgraded."
+      "Whenever you play #b0 cost card, apply #b",
+      " #yManaburn to a random enemy."
     ]
   },
   "awakened:MazalethFormPower": {
@@ -237,8 +131,8 @@
   "awakened:InvasionPower": {
     "NAME": "Invasion",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a card, gain a #yShiv [REMOVE_SPACE].",
-      "Whenever you #yExhaust a card, gain #b",
+      "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain a #yShiv [REMOVE_SPACE].",
+      "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain #b",
       " #yShivs [REMOVE_SPACE]."
     ]
   },
@@ -263,6 +157,20 @@
     "DESCRIPTIONS": [
       "Whenever you attack this enemy, gain #b",
       " temporary #yStrength."
+    ]
+  },
+  "awakened:ManaburnPower": {
+    "NAME": "Manaburn",
+    "DESCRIPTIONS": [
+      "Whenever you are #yDrained [REMOVE_SPACE], loses #b",
+      " HP."
+    ]
+  },
+  "awakened:HexMasterPower": {
+    "NAME": "Hexx Master",
+    "DESCRIPTIONS": [
+      "Whenever you play a #ynon-Attack card, apply #b",
+      " #yHex to ALL enemies."
     ]
   },
   "awakened:DarknessFallsPower": {

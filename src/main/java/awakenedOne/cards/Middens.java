@@ -32,6 +32,8 @@ public class Middens extends AbstractAwakenedCard {
     public Middens() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 3;
+        this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -52,7 +54,7 @@ public class Middens extends AbstractAwakenedCard {
                 this.addToTop(new SelectCardsCenteredAction(
 
                         syntheticSockets,
-                        1,
+                        magicNumber,
                         TEXT[0],
                         (selectedCards) -> {
                             if (!syntheticSockets.isEmpty()) {
@@ -70,7 +72,8 @@ public class Middens extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
+        upgradeMagicNumber(1);
     }
 
     static {

@@ -23,43 +23,16 @@ public class TheEmpress extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public TheEmpress() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-
-        AbstractCard a = new Thunderbolt();
-        a.upgrade();
-
-        AbstractCard b = new Darkleech();
-        b.upgrade();
-
-        AbstractCard c = new BurningStudy();
-        c.upgrade();
-
-        AbstractCard d = new Cryostasis();
-        d.upgrade();
-
-        MultiCardPreview.add(this, a, b, c, d);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        boolean powerExists = false;
-        Iterator var4 = p.powers.iterator();
-
-        while(var4.hasNext()) {
-            AbstractPower pow = (AbstractPower)var4.next();
-            if (pow.ID.equals(EmpressPower.POWER_ID)) {
-                powerExists = true;
-                break;
-            }
-        }
-
-        if (!powerExists) {
-            applyToSelfTop(new EmpressPower(p));
-        }
-        atb(new ConjureAction(false));
+            applyToSelfTop(new EmpressPower(p, magicNumber));
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(1);
     }
 }

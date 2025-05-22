@@ -63,6 +63,7 @@ public class SpectersWail extends AbstractHexaCard implements HexaPurpleTextInte
         }else {
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.baseDamage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
         }
+
         if (AbstractDungeon.player.hasPower(DoubleDamageOncePower.POWER_ID)) {
             this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DoubleDamageOncePower.POWER_ID, 1));
         }

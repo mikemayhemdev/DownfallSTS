@@ -17,7 +17,7 @@ public class TalonRake extends AbstractAwakenedCard {
 
     public TalonRake() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
