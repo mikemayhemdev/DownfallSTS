@@ -294,7 +294,7 @@
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",
-    "DESCRIPTION": "Whenever you play a 0 cost card, apply !M! awakened:Manaburn to a random enemy."
+    "DESCRIPTION": "Whenever you play a 0 cost card, apply !M! awakened:Hex to a random enemy."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",

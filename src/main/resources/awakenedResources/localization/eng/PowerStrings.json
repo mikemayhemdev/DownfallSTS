@@ -148,7 +148,7 @@
     "NAME": "Split Wide",
     "DESCRIPTIONS": [
       "Whenever you attack this enemy, gain #b",
-      " temporary #yStrength."
+      " temporary #yStrength [REMOVE_SPACE]."
     ]
   },
   "awakened:ManaburnPower": {
