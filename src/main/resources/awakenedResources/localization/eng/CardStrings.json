@@ -1,7 +1,8 @@
 {
   "awakened:Thunderbolt": {
     "NAME": "Thunderbolt",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
   },
   "awakened:BurningStudy": {
     "NAME": "Burning Study",
@@ -16,17 +17,14 @@
     "NAME": "Darkleech",
     "DESCRIPTION": "Apply !M! awakened:Hex. NL Exhaust."
   },
-
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Manaburn. NL Lose [E] next turn. NL Exhaust."
   },
-
   "awakened:AphoticShield": {
     "NAME": "Aphotic Shield",
     "DESCRIPTION": "Gain !M! expansioncontent:Plated *Armor."
   },
-
   "awakened:ESPSpell": {
     "NAME": "ESP",
     "DESCRIPTION": "Draw !M! card. NL Exhaust.",
@@ -332,7 +330,7 @@
   },
   "awakened:IntoNothing": {
     "NAME": "Into Nothing",
-    "DESCRIPTION": "Apply !M! awakened:Hex and awakened:Manaburn."
+    "DESCRIPTION": "Apply !M! awakened:Hex and awakened:Manaburn to ALL enemies. NL awakened:Conjure."
   },
   "awakened:HeavyStrike": {
     "NAME": "Carrionmaker",
@@ -361,7 +359,7 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
-    "DESCRIPTION": "Whenever you are awakened:Drained, apply !M! awakened:Manaburn to a random enemy."
+    "DESCRIPTION": "Whenever you are awakened:Drained, apply !M! awakened:Manaburn to ALL enemies."
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",
@@ -416,8 +414,7 @@
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "awakened:Conjure X+1 times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "awakened:Conjure X+1 times."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure. NL Deals !M! additional damage for each time you awakened:Conjured this combat."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",

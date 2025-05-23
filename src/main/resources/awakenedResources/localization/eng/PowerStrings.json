@@ -134,7 +134,7 @@
     "NAME": "Song of Sorrow",
     "DESCRIPTIONS": [
       "Whenever you are #yDrained, apply #b",
-      " #yManaburn to a random enemy."
+      " #yManaburn to ALL enemies."
     ]
   },
   "awakened:FeathersinksPower": {

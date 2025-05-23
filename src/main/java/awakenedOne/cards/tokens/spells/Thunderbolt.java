@@ -52,9 +52,21 @@ public class Thunderbolt extends AbstractSpellCard {
             this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         }
 
+        if (upgraded) {
+            if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)){
+                CardCrawlGame.sound.playA("ORB_LIGHTNING_EVOKE", 0.9F);
+                CardCrawlGame.sound.playA("ORB_LIGHTNING_PASSIVE", -0.3F);
+                vfx(new LightningEffect(m.hb.cX, m.hb.cY));
+                dmg(m, AbstractGameAction.AttackEffect.NONE);}
+            else {
+                AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
+                this.addToBot(new VFXAction(new ReaperEffect()));
+                this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+            }
+        }
+
     }
 
     public void upp() {
-        upgradeDamage(2);
     }
 }
