@@ -25,14 +25,14 @@
     "NAME": "Thaumaturgy",
     "DESCRIPTIONS": [
       "Whenever you gain #yStrength [REMOVE_SPACE], gain #b",
-      " #yBlock."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
-  "awakened:DogmaPower": {
-    "NAME": "Dogma",
+  "awakened:SacramentPower": {
+    "NAME": "Sacraments",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower, apply #b",
-      " #yHex to ALL enemies."
+      "Whenever you play a #yPower, gain #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "awakened:EnemyHexedPower": {
@@ -84,7 +84,7 @@
   "awakened:LibrarianPower": {
     "NAME": "The Magician",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yConjure.",
+      "At the start of your turn, #yConjure [REMOVE_SPACE].",
       "At the start of your turn, #yConjure at random #b",
       " times."
     ]
@@ -133,7 +133,7 @@
   "awakened:SongOfSorrowPower": {
     "NAME": "Song of Sorrow",
     "DESCRIPTIONS": [
-      "Whenever you are #yDrained, apply #b",
+      "Whenever you are #yDrained [REMOVE_SPACE], apply #b",
       " #yManaburn to ALL enemies."
     ]
   },

@@ -30,7 +30,6 @@ public class UltimateHexDebuff extends AbstractAwakenedPower implements HealthBa
 
     @Override
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
         if (power.ID == EnemyHexedPower.POWER_ID) {
             return false;
         }
@@ -74,7 +73,6 @@ public class UltimateHexDebuff extends AbstractAwakenedPower implements HealthBa
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, EnemyHexedPower.POWER_ID));
         int num = 50;
 
         if(AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {

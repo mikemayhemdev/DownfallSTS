@@ -22,7 +22,7 @@ public class SingularityShield extends AbstractAwakenedCard {
     public SingularityShield() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseBlock = 7;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

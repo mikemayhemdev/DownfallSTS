@@ -17,16 +17,16 @@ public class DrawingDead extends AbstractAwakenedCard {
 
     public DrawingDead() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         baseSecondMagic = secondMagic = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DrawCardAction(p, this.magicNumber));
-        HexCurse(this.magicNumber, m, p);
+        HexCurse(secondMagic, m, p);
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }

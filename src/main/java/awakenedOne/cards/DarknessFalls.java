@@ -25,7 +25,7 @@ public class DarknessFalls extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DarknessFallsPower(AbstractDungeon.player, magicNumber, secondMagic)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DarknessFallsPower(magicNumber)));
     }
 
     @Override

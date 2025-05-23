@@ -24,7 +24,7 @@ import hermit.patches.EnumPatch;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
 
-public class ManaburnPower extends AbstractAwakenedPower  implements OnLoseEnergyPower {
+public class ManaburnPower extends AbstractAwakenedPower implements OnLoseEnergyPower {
     // intellij stuff buff
 
 

@@ -5,6 +5,7 @@ import automaton.AutomatonMod;
 import automaton.powers.CleanCodePower;
 import automaton.powers.FreeFunctionPower;
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.powers.SacramentPower;
 import awakenedOne.powers.ThaumaturgyPower;
 import basemod.abstracts.CustomPotion;
 import champ.actions.DiscoverOpenerAction;
@@ -50,7 +51,7 @@ public class SacramentalWine extends CustomPotion {
         } else {
             this.addToBot(new VFXAction(new LightBulbEffect(AbstractDungeon.player.hb), 0.2F));
         }
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThaumaturgyPower(potency)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SacramentPower(potency)));
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.POWER).makeCopy();
         c.setCostForTurn(0);
         this.addToBot(new MakeTempCardInHandAction(c, true));

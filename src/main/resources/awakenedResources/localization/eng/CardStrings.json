@@ -162,8 +162,7 @@
   },
   "awakened:DrawingDead": {
     "NAME": "Drawing Dead",
-    "DESCRIPTION": "Draw !M! card. NL Apply !M! awakened:Hex.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Apply !M! awakened:Hex."
+    "DESCRIPTION": "Draw !M! cards. NL Apply !awakened:m2! awakened:Hex."
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -414,7 +413,7 @@
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure. NL Deals !M! additional damage for each time you awakened:Conjured this combat."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure. NL Deals !M! additional damage for each awakened:Conjure this combat."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",

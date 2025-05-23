@@ -29,7 +29,7 @@ public class ClarionCall extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
 
         if (this.chant) {
             chant();

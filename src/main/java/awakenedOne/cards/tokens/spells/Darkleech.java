@@ -19,7 +19,7 @@ public class Darkleech extends AbstractSpellCard {
 
     public Darkleech() {
         super(ID, CardType.SKILL, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override
