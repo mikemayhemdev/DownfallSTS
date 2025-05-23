@@ -11,14 +11,14 @@ public class SpectralGrace extends AbstractHexaCard{
 
     public final static String ID = makeID("SpectralGrace");
 
-    private static final int DAMAGE = 14;
-    private static final int UPG_DAMAGE = 4;
+    private static final int BLOCK = 12;
+    private static final int UPG_BLOCK = 4;
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = -1;
 
     public SpectralGrace() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         HexaMod.loadJokeCardImage(this, "SpectralGrace.png");
     }
@@ -30,13 +30,13 @@ public class SpectralGrace extends AbstractHexaCard{
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DiscardAction(p, p, this.magicNumber, false));
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+        blck();
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            upgradeDamage(UPG_DAMAGE);
+            upgradeBlock(UPG_BLOCK);
 //            this.upgradeMagicNumber(UPG_MAGIC);
             rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
