@@ -97,8 +97,8 @@
   },
   "awakened:FadeOut": {
     "NAME": "Hexx Master",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a Power card, apply !M! awakened:Hex to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a Power card, apply !M! awakened:Hex to ALL enemies."
+    "DESCRIPTION": "Ethereal. NL Whenever you play a non-Attack card, apply !M! awakened:Hex to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a non-Attack card, apply !M! awakened:Hex to ALL enemies."
   },
   "awakened:Accumulate": {
     "NAME": "Accumulate",

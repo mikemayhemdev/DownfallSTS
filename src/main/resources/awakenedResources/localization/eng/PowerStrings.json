@@ -161,7 +161,7 @@
   "awakened:HexMasterPower": {
     "NAME": "Hexx Master",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, apply #b",
+      "Whenever you play a non-Attack card, apply #b",
       " #yHex to ALL enemies."
     ]
   },
