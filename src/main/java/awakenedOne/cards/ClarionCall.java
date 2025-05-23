@@ -47,6 +47,7 @@ public class ClarionCall extends AbstractAwakenedCard {
     @Override
     public void chant() {
     blck();
+    checkOnChant();
     }
 
     public void triggerOnGlowCheck() {

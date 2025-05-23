@@ -23,7 +23,7 @@ public class TheEmpress extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public TheEmpress() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -33,6 +33,6 @@ public class TheEmpress extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }

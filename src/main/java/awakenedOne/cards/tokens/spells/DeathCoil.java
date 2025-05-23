@@ -32,8 +32,8 @@ public class DeathCoil extends AbstractSpellCard {
 
     public DeathCoil() {
         super(ID, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 7;
-        baseMagicNumber = magicNumber = 2;
+        baseDamage = 8;
+        baseMagicNumber = magicNumber = 4;
     }
 
     @Override
@@ -69,6 +69,6 @@ public class DeathCoil extends AbstractSpellCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 }

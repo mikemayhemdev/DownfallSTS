@@ -13,7 +13,7 @@ public class InResponse extends AbstractAwakenedCard {
     // intellij stuff power, self, uncommon, , , , , 3, 1
 
     public InResponse() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseSecondMagic = secondMagic = 2;
     }
 

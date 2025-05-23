@@ -1,15 +1,10 @@
 package awakenedOne.powers;
 
-import awakenedOne.cards.tokens.spells.AbstractSpellCard;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class DoubleDamageOncePower extends AbstractAwakenedPower {
     // intellij stuff buff
@@ -20,6 +15,7 @@ public class DoubleDamageOncePower extends AbstractAwakenedPower {
     public DoubleDamageOncePower(int amount) {
         super(NAME, PowerType.BUFF, true, AbstractDungeon.player, null, amount);
         updateDescription();
+        this.isTurnBased = true;
     }
 
     public void onTrigger(){
@@ -30,8 +26,7 @@ public class DoubleDamageOncePower extends AbstractAwakenedPower {
         updateDescription();
     }
 
-
-    public void onUseCard(AbstractCard card, UseCardAction action) {
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK) {
             this.amount--;
             if (this.amount <= 0) {

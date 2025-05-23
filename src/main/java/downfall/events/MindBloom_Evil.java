@@ -153,9 +153,9 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         }
                         else if (AbstractDungeon.player instanceof AwakenedOneChar) {
                             AbstractMonster m = new AwakenedOne(0,0);
-                            m.maxHealth = Math.round(m.maxHealth * .6F);
+                            m.maxHealth = Math.round(m.maxHealth * .5F);
                             m.currentHealth = m.maxHealth;
-                            m.powers.add(new StrengthPower(m, -4));
+                            m.powers.add(new StrengthPower(m, -5));
                             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
                         } else {
                             ArrayList<String> list = new ArrayList();

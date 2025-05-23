@@ -45,7 +45,7 @@
   "awakened:FlarePower": {
     "NAME": "Flare Shot",
     "DESCRIPTIONS": [
-      "Whenever you play a non-Attack card this turn, deal #b",
+      "Whenever you play a #ynon-Attack card this turn, deal #b",
       " damage to ALL enemies."
     ]
   },
@@ -161,14 +161,14 @@
   "awakened:HexMasterPower": {
     "NAME": "Hexx Master",
     "DESCRIPTIONS": [
-      "Whenever you play a non-Attack card, apply #b",
+      "Whenever you play a #ynon-Attack card, apply #b",
       " #yHex to ALL enemies."
     ]
   },
   "awakened:DarknessFallsPower": {
     "NAME": "Darkness Falls",
     "DESCRIPTIONS": [
-      "Whenever you are #yDrained, gain #b",
+      "Whenever you are #yDrained [REMOVE_SPACE], gain #b",
       " #yBlock and #b",
       " #yStrength [REMOVE_SPACE]."
     ]

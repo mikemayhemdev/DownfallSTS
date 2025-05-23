@@ -13,6 +13,7 @@ import static awakenedOne.util.Wiz.atb;
 
 public class DarknessFalls extends AbstractAwakenedCard {
     public final static String ID = makeID(DarknessFalls.class.getSimpleName());
+
     // intellij stuff power, self, rare, , , , , ,
 
     public DarknessFalls() {
@@ -25,7 +26,7 @@ public class DarknessFalls extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DarknessFallsPower(magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DarknessFallsPower(secondMagic)));
     }
 
     @Override

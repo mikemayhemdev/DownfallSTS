@@ -21,7 +21,7 @@ public class Victuals extends AbstractAwakenedCard {
 
     public Victuals() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 7;
+        baseBlock = 8;
         magicNumber = baseMagicNumber = 1;
     }
 
