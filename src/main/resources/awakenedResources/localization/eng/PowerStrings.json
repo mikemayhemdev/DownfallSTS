@@ -24,14 +24,14 @@
   "awakened:ThaumaturgyPower": {
     "NAME": "Thaumaturgy",
     "DESCRIPTIONS": [
-      "Whenever you play a Power, gain #b",
+      "Whenever you gain #yStrength [REMOVE_SPACE], gain #b",
       " #yBlock."
     ]
   },
   "awakened:DogmaPower": {
     "NAME": "Dogma",
     "DESCRIPTIONS": [
-      "Whenever you play a Power, apply #b",
+      "Whenever you play a #yPower, apply #b",
       " #yHex to ALL enemies."
     ]
   },
@@ -101,12 +101,12 @@
   "awakened:EmpressPower": {
     "NAME": "The Empress",
     "DESCRIPTIONS": [
-      "Whenever you #yConjure [REMOVE_SPACE], apply #b",
+      "Whenever you play a #b0 cost card, apply #b",
       " #yHex to a random enemy."
     ]
   },
   "awakened:MazalethFormPower": {
-    "NAME": "Mazaleth Form",
+    "NAME": "Awakened Form",
     "DESCRIPTIONS": [
       "The first Attack you play each turn deals double damage.",
       "The first #b",
@@ -161,7 +161,7 @@
   "awakened:HexMasterPower": {
     "NAME": "Hexx Master",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower, apply #b",
+      "Whenever you play a #yPower card, apply #b",
       " #yHex to ALL enemies."
     ]
   },

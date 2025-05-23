@@ -27,8 +27,6 @@ import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
 
 public class NihilPower extends AbstractAwakenedPower {
-    // intellij stuff buff
-
 
     public static final String NAME = NihilPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
@@ -43,7 +41,7 @@ public class NihilPower extends AbstractAwakenedPower {
     public void atStartOfTurn() {
         if (owner instanceof AbstractMonster) {
             flash();
-            addToBot(new ApplyPowerAction(owner, owner, new ManaburnPower(owner, amount), amount));
+            addToBot(new ApplyPowerAction(owner, AbstractDungeon.player, new ManaburnPower(owner, amount), amount));
         }
     }
 

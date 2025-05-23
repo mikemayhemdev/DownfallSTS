@@ -9,7 +9,8 @@
   },
   "awakened:Cryostasis": {
     "NAME": "Cryostasis",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Exhaust."
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
@@ -58,7 +59,7 @@
   },
   "awakened:Curiosity": {
     "NAME": "Curiosity",
-    "DESCRIPTION": "Whenever you play a Power, gain !M! Strength."
+    "DESCRIPTION": "Whenever you play a Power card, gain !M! Strength."
   },
   "awakened:Hex": {
     "NAME": "Hex",
@@ -127,7 +128,7 @@
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "rework Deal !D! damage. NL Draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
   },
   "awakened:FlareShot": {
     "NAME": "Flare Shot",
@@ -139,7 +140,7 @@
   },
   "awakened:Recitation": {
     "NAME": "Recitation",
-    "DESCRIPTION": "rework later awakened:Chant: Gain !M! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL If the last card you played was a Power, gain [E]."
   },
   "awakened:LastDitchEffort": {
     "NAME": "Last Ditch Effort",
@@ -173,7 +174,7 @@
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
-    "DESCRIPTION": "Whenever you play a Power, gain !M! Block."
+    "DESCRIPTION": "Whenever you gain Strength, gain !M! Block."
   },
   "awakened:Screech": {
     "NAME": "Screech",
@@ -194,7 +195,7 @@
   },
   "awakened:Feathersinks": {
     "NAME": "Feathersinks",
-    "DESCRIPTION": "rework later Whenever you refresh your Spells, draw !M! cards."
+    "DESCRIPTION": "Whenever you refresh your Spells, draw !M! cards."
   },
   "awakened:Sludge": {
     "NAME": "Sludge",
@@ -261,7 +262,7 @@
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chant",
-    "DESCRIPTION": "rework later Whenever you activate a awakened:Chant effect, gain !M! Strength."
+    "DESCRIPTION": "Whenever you activate a awakened:Chant effect, gain !M! Strength."
   },
   "awakened:Dogma": {
     "NAME": "Dogma",
@@ -283,12 +284,13 @@
   },
   "awakened:Murder": {
     "NAME": "Murder",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+    "DESCRIPTION": "Deal !D! damage. NL Strength affects this card !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Strength affects this card !M! times."
   },
   "awakened:ExNihilo": {
     "NAME": "Nihil",
-    "DESCRIPTION": "awakened:Chant: Deal !D! damage. NL Enemy gains awakened:Manaburn at the start of its turn equal to unblocked damage dealt. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "awakened:Chant: Deal !D! damage. NL Enemy gains awakened:Manaburn at the start of its turn equal to unblocked damage dealt."
+    "DESCRIPTION": "awakened:Chant: Deal !D! damage. NL Apply awakened:Manaburn equal to unblocked damage dealt every turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "awakened:Chant: Deal !D! damage. NL Apply awakened:Manaburn equal to unblocked damage dealt every turn."
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",
@@ -330,12 +332,11 @@
   },
   "awakened:IntoNothing": {
     "NAME": "Into Nothing",
-    "DESCRIPTION": "Ethereal. NL The first 0 cost card you play each turn is played twice.",
-    "UPGRADE_DESCRIPTION": "The first 0 cost card you play each turn is played twice."
+    "DESCRIPTION": "Apply !M! awakened:Hex and awakened:Manaburn."
   },
   "awakened:HeavyStrike": {
     "NAME": "Carrionmaker",
-    "DESCRIPTION": "Rework later NL Deal !awakened:sd! damage, then deal !D! damage to a random enemy. NL Add a *Void into your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you awakened:Conjure, return this from the discard pile to your hand."
 
   },
   "awakened:MirePit": {
@@ -377,8 +378,7 @@
   },
   "awakened:Victuals": {
     "NAME": "Victuals",
-    "DESCRIPTION": "rework later Lose !M! HP. NL Gain [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Don't lose HP.",
-    "UPGRADE_DESCRIPTION": "Lose !M! HP. NL Gain [E] [E] and draw !awakened:m2! cards next turn. NL Exhaust. NL awakened:Chant: Don't lose HP."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !M! expansioncontent:Plated *Armor."
   },
   "awakened:TheTower": {
     "NAME": "The Tower",
@@ -416,7 +416,8 @@
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "awakened:Conjure X+1 times. NL Exhaust."
+    "DESCRIPTION": "awakened:Conjure X+1 times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "awakened:Conjure X+1 times."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",

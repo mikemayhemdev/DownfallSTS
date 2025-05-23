@@ -1,22 +1,14 @@
 package awakenedOne.powers;
 
-import awakenedOne.relics.HexxBomb;
 import awakenedOne.relics.StrengthBooster;
-import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import theHexaghost.relics.CandleOfCauterizing;
-//unused
+
 public class EnemyHexedPower extends AbstractAwakenedPower {
     // intellij stuff buff
-    public static final String NAME = UltimateHexDebuff.class.getSimpleName();
+    public static final String NAME = EnemyHexedPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
 
     public EnemyHexedPower(final AbstractCreature owner, int amount) {

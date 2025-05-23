@@ -25,7 +25,7 @@ public class SongOfSorrow extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public SongOfSorrow() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }

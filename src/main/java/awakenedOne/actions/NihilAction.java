@@ -1,5 +1,6 @@
 package awakenedOne.actions;
 
+import awakenedOne.powers.EnemyHexedPower;
 import awakenedOne.powers.NihilPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -18,6 +19,8 @@ import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import com.megacrit.cardcrawl.vfx.combat.WaterDropEffect;
 
+import static awakenedOne.util.Wiz.atb;
+
 public class NihilAction extends AbstractGameAction {
     private int damage;
 
@@ -31,7 +34,7 @@ public class NihilAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == 0.5F)
-            AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, this.attackEffect));
+            AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.SLASH_HEAVY));
         tickDuration();
         if (this.isDone) {
             vigorattack();
@@ -48,7 +51,7 @@ public class NihilAction extends AbstractGameAction {
         if (tmp > this.target.currentHealth)
             tmp = this.target.currentHealth;
         if (tmp > 0) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new NihilPower(this.target, tmp), tmp, true, AbstractGameAction.AttackEffect.NONE));
+            atb(new ApplyPowerAction(target, source, new NihilPower(target, tmp), tmp));
             if (Settings.FAST_MODE) {
                 this.addToBot(new VFXAction(this.source, new OfferingEnemyEffect(target), 0.2F));
             } else {

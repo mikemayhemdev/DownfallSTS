@@ -1,8 +1,10 @@
 package awakenedOne.actions;
 
+import awakenedOne.cards.HeavyStrike;
 import awakenedOne.powers.EmpressPower;
 import awakenedOne.powers.FeathersinksPower;
 import awakenedOne.ui.OrbitingSpells;
+import awakenedOne.util.OnConjureSubscriber;
 import awakenedOne.util.Wiz;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,6 +13,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import theHexaghost.util.OnAdvanceOrRetractSubscriber;
 
 import java.util.ArrayList;
 
@@ -78,6 +81,9 @@ public class ConjureAction extends AbstractGameAction {
                     addToTop(new RemoveSpellCardAction(q));
                 }));
             }
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+            if (c instanceof HeavyStrike) ((OnConjureSubscriber) c).OnConjure();
+        }
         }
 
     private void endActionWithFollowUp() {

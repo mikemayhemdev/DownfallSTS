@@ -38,7 +38,8 @@ public class EmpressPower extends AbstractAwakenedPower {
 //                }
 //            }
             AbstractMonster m = AbstractDungeon.getRandomMonster();
-            this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new ManaburnPower(m, amount), amount));
+            //this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new ManaburnPower(m, amount), amount));
+            HexCurse(amount, m, AbstractDungeon.player);
         }
     }
 

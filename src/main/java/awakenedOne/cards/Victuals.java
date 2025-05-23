@@ -20,71 +20,40 @@ public class Victuals extends AbstractAwakenedCard {
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
     public Victuals() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 5;
-        baseSecondMagic = secondMagic = 2;
-        //this.tags.add(CardTags.HEALING);
-        this.exhaust = true;
-
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseBlock = 7;
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!this.chant) {
+        blck();
 
-            if (!AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-                this.addToTop(new LoseHPAction(p, p, magicNumber));
-            }
-
-            if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-                if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                    this.addToTop(new LoseHPAction(p, p, magicNumber));
-                }
-            }
+        if (this.chant) {
+            chant();
         }
 
-                if (!upgraded)
-                    this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 1), 1));
-                if (upgraded)
-                    this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 2), 2));
-                this.addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, secondMagic), secondMagic));
-                if (this.chant) {
-                    chant();
-                }
-
-                if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-                    if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                        chant();
-                        awaken(1);
-                    }
-                }
+        if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
+                chant();
+                awaken(1);
             }
+        }
+    }
 
     @Override
     public void chant() {
-        //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RepairPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, magicNumber), magicNumber));
         checkOnChant();
     }
 
-    public void triggerWhenDrawn() {
-        this.chant = false;
-    }
-
-    public void triggerOnCardPlayed(AbstractCard card) {
-        if (card.type == CardType.POWER && AbstractDungeon.player.hand.contains((AbstractCard)this))
-            this.chant = true;
-    }
-
-//    @Override
-//    public void onMoveToDiscard() {
-//        this.chant = false;
-//    }
 
     public void triggerOnGlowCheck() {
         this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
-
-
+    @Override
     public void upp() {
+        upgradeBlock(2);
+        upgradeMagicNumber(1);
     }
 }
