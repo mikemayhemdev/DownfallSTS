@@ -18,8 +18,8 @@ public class FadeOut extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public FadeOut() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 1;
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
         this.isEthereal = true;
     }
 

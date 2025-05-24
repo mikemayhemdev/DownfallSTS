@@ -1,6 +1,7 @@
 package downfall.monsters.gauntletbosses;
 
 import charbosses.core.EnemyEnergyManager;
+import charbosses.powers.cardpowers.EnemyWraithFormPower;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -104,8 +105,12 @@ public class Ironclad extends GauntletBoss {
 
     private void bossMove() {
         int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
-        if (turnNum > 5) {
-            rnd = AbstractDungeon.cardRandomRng.random(0, 4);
+        if (hasPower(EnemyDemonFormPower.POWER_ID)) {
+            if (rnd == 2) {
+                while (rnd == 2) {
+                    rnd = AbstractDungeon.cardRandomRng.random(0, 3);
+                }
+            }
         }
         switch (rnd) {
             case 0:
@@ -121,10 +126,6 @@ public class Ironclad extends GauntletBoss {
                 setMove(moveName(Defend_Red.ID, Defend_Red.ID), (byte) 3, Intent.DEFEND);
                 break;
             case 3:
-                isAttacking = true;
-                setMove(moveName(Bash.ID), (byte) 4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
-                break;
-            case 4:
                 isAttacking = true;
                 setMove(moveName(Bash.ID), (byte) 4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
                 break;

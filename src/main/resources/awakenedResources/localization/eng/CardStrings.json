@@ -96,9 +96,9 @@
     "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies."
   },
   "awakened:FadeOut": {
-    "NAME": "Hexx Master",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a non-Attack card, apply !M! awakened:Hex to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a non-Attack card, apply !M! awakened:Hex to ALL enemies."
+    "NAME": "Hex Master",
+    "DESCRIPTION": "Ethereal. NL Whenever you play a Power card, apply !M! awakened:Hex to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a Power card, apply !M! awakened:Hex to ALL enemies."
   },
   "awakened:Accumulate": {
     "NAME": "Accumulate",
@@ -413,7 +413,7 @@
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure. NL Deals !M! additional damage for each awakened:Conjure this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each awakened:Conjure this combat."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",

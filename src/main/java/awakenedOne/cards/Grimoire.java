@@ -15,7 +15,7 @@ public class Grimoire extends AbstractAwakenedCard {
     public Grimoire() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 9;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
