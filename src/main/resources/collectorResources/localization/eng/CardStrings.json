@@ -152,7 +152,7 @@
   "collector:FlameLash": {
     "NAME": "Flame Lash",
     "DESCRIPTION": "collector:Pyre. NL Deal !D! damage, then add *Pyred card's damage to this.",
-    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage, then add *Pyred card's damage plus !M! to this."
+    "UPGRADE_DESCRIPTION": "collector:Pyre. NL Deal !D! damage, then add *Pyred card's damage + !M! to this."
   },
   "collector:FleetingEmbers": {
     "NAME": "Fleeting Embers",
@@ -518,7 +518,7 @@
   },
   "collector:GremlinWizardCard": {
     "NAME": "Gremlin Wizard",
-    "DESCRIPTION": "Next turn, NL gain !M! Vigor and 1 collector:Reserve."
+    "DESCRIPTION": "Next turn, gain !M! Vigor and 1 collector:Reserve."
   },
   "collector:JawWormCard": {
     "NAME": "Jaw Worm",
@@ -695,6 +695,6 @@
   },
   "collector:Sapped": {
     "NAME": "Sapped",
-    "DESCRIPTION": "collector:Pyre. NL When drawn, lose [E]. NL Exhaust. NL Cannot be removed from your deck."
+    "DESCRIPTION": "collector:Pyre. NL When drawn, lose [E] . NL Exhaust. NL Cannot be removed from your deck."
   }
 }

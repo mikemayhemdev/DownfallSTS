@@ -565,7 +565,7 @@
     ],
     "OPTIONS": [
       "[Left] #r50%: #rLose #r",
-      " HP.",
+      " #rHP.",
       " #g50%: #gGain #g200 #gSouls.",
       "[Right] #r25%: #rLose #r",
       " #g75%: #gGain #g100 #gSouls."
@@ -615,7 +615,8 @@
   "downfall:EvilShrines": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "Only you should hold this power. You shatter the shrine into pieces. NL A dark wail echoes all around you, and you can feel the Shrine's #p~cursed~ #p~magic~ seep into your bones."    ],
+      "Only you should hold this power. You shatter the shrine into pieces. NL A dark wail echoes all around you, and you can feel the Shrine's #p~cursed~ #p~magic~ seep into your bones."
+    ],
     "OPTIONS": [
       "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rAged.",
       "[Desecrate] #gRemove #g2 #gcards. #rLose #r",

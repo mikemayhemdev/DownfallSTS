@@ -29,8 +29,8 @@
   },
   "Guardian:Gem_Orange": {
     "NAME": "Citrine",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain [E].",
-    "UPGRADE_DESCRIPTION": "Gain [E]."
+    "DESCRIPTION": "guardianmod:Gem. NL Gain [E] .",
+    "UPGRADE_DESCRIPTION": "Gain [E] ."
   },
   "Guardian:Gem_Cyan": {
     "NAME": "Aquamarine",

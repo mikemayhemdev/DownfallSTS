@@ -72,7 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Add[] !M! [#e087a4]random[] [#e087a4]Afterlife [#e087a4]card[] [#e087a4]to[] [#e087a4]your[] [#e087a4]drawpile[] and another to your hand."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Add[] !M! [#e087a4]random[] [#e087a4]Afterlife[] [#e087a4]card[] [#e087a4]to[] [#e087a4]your[] [#e087a4]drawpile[] and another to your hand."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
@@ -275,7 +275,7 @@
   },
   "hexamod:RadiantFlame": {
     "NAME": "Radiant Reverb",
-    "DESCRIPTION": "Deal !D! damage. NL Remove the target's *Soulburn to gain !M! hexamod:Intensity."
+    "DESCRIPTION": "Deal !D! damage. NL Remove the target's hexamod:Soulburn to gain !M! hexamod:Intensity."
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
@@ -284,8 +284,8 @@
   },
   "hexamod:NightmareVision": {
     "NAME": "Nightmare Vision",
-    "DESCRIPTION": "Hexamod:Retract. NL expansioncontent:Exhume an *Ethereal card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Hexamod:Retract. NL expansioncontent:Exhume !M! *Ethereal cards. NL Exhaust.",
+    "DESCRIPTION": "hexamod:Retract. NL expansioncontent:Exhume an *Ethereal card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL expansioncontent:Exhume !M! *Ethereal cards. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose an Ethereal card to return to your hand.",
       "Choose ",
@@ -303,7 +303,7 @@
   },
   "hexamod:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife. NL Deal !D! damage. NL [#e087a4]Apply[] !burny! [#e087a4]Soulburn.[]"
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Deal !D! damage. NL [#e087a4]Apply[] !burny! [#e087a4]Soulburn.[]"
   },
   "hexamod:SearingWound": {
     "NAME": "Searing Wound",
@@ -404,7 +404,7 @@
   "hexamod:WildfireWeapon": {
     "NAME": "Wildfire Weapon",
     "DESCRIPTION": "Whenever an Attack deals unblocked damage, apply !M! hexamod:Soulburn.",
-    "Translate_note": "not used not used not used not used not used not used not used not used not used not used not used not used "
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used not used not used not used not used "
   },
   "hexamod:FirstSeal": {
     "NAME": "First Seal",
@@ -455,8 +455,8 @@
   },
   "hexamod:OpposingAction": {
     "NAME": "Opposing Action",
-    "DESCRIPTION": "hexamod:Retract. NL Gain [E] [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] [E] [E]. NL Exhaust."
+    "DESCRIPTION": "hexamod:Retract. NL Gain [E] [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] [E] [E] . NL Exhaust."
   },
   "hexamod:SeventhEye": {
     "NAME": "Seventh Eye",

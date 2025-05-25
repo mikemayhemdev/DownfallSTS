@@ -135,7 +135,8 @@
       "Chant",
       "Chants"
     ],
-    "DESCRIPTION": "Chant effects on a card activate during play if you played a Power while it was in hand."},
+    "DESCRIPTION": "Chant effects on a card activate during play if you played a Power while it was in hand."
+  },
   {
     "PROPER_NAME": "Transform",
     "ID": "transform",

@@ -1,14 +1,24 @@
 {
-"hermit:Tonic": {
-        "NAME": "Tonic",
-        "DESCRIPTIONS": ["Gain #b", " #yRugged [REMOVE_SPACE]."]
-},
-"hermit:BlackBile": {
-        "NAME": "Black Bile",
-        "DESCRIPTIONS": ["Apply #b", " #yBruise [REMOVE_SPACE]."]
-},
-"hermit:Eclipse": {
-        "NAME": "Liquid Void",
-        "DESCRIPTIONS": ["Put #b", " card from your #yexhaust pile into your hand. It costs #b0 this turn."," cards from your #yexhaust pile into your hand. They cost #b0 this turn."]
-}
+  "hermit:Tonic": {
+    "NAME": "Tonic",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yRugged [REMOVE_SPACE]."
+    ]
+  },
+  "hermit:BlackBile": {
+    "NAME": "Black Bile",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yBruise [REMOVE_SPACE]."
+    ]
+  },
+  "hermit:Eclipse": {
+    "NAME": "Liquid Void",
+    "DESCRIPTIONS": [
+      "Put #b",
+      " card from your #yexhaust pile into your hand. It costs #b0 this turn.",
+      " cards from your #yexhaust pile into your hand. They cost #b0 this turn."
+    ]
+  }
 }

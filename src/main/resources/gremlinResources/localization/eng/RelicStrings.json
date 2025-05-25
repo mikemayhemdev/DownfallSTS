@@ -10,14 +10,16 @@
     "NAME": "Fragmentation Grenade",
     "FLAVOR": "Nobody dares to ask where the Gremlin got it from.",
     "DESCRIPTIONS": [
-      "Damage dealt to random enemies is increased by #b", " [REMOVE_SPACE]."
+      "Damage dealt to random enemies is increased by #b",
+      " [REMOVE_SPACE]."
     ]
   },
   "Gremlin:GremlinBomb": {
     "NAME": "Gremlin Bomb",
     "FLAVOR": "Gremlins have an uncanny knack for finding dangerous things. Sometimes, they even survive looting them.",
     "DESCRIPTIONS": [
-      "Whenever a Gremlin dies, deal #b", " damage to ALL enemies."
+      "Whenever a Gremlin dies, deal #b",
+      " damage to ALL enemies."
     ]
   },
   "Gremlin:GremlinGravestone": {
@@ -72,7 +74,8 @@
     "NAME": "Prickly Shields",
     "FLAVOR": "Gremlins use whatever scraps they can find as weapons or armor. Some serve as both.",
     "DESCRIPTIONS": [
-      "Whenever you gain #yBlock [REMOVE_SPACE], deal #b", " damage to a random enemy."
+      "Whenever you gain #yBlock [REMOVE_SPACE], deal #b",
+      " damage to a random enemy."
     ]
   },
   "Gremlin:ShortStature": {
@@ -126,7 +129,8 @@
     "NAME": "Wound Poker",
     "FLAVOR": "Does it hurt when I do this?",
     "DESCRIPTIONS": [
-      "At the end of each turn, deal #b", " damage to each #yWeakened enemy."
+      "At the end of each turn, deal #b",
+      " damage to each #yWeakened enemy."
     ]
   },
   "Gremlin:PatchFixes": {

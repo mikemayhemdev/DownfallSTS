@@ -87,7 +87,6 @@
       " additional #yUpgraded #yUnidentified cards.",
       " additional #yUpgraded #yUnidentified card.",
       "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
-
     ]
   },
   "sneckomod:UnlimitedRollsPower": {
@@ -144,14 +143,14 @@
       " #yStrength [REMOVE_SPACE]."
     ]
   },
-      "sneckomod:BigGunsBlockPower": {
-        "NAME": "Blunder Guard",
-        "DESCRIPTIONS": [
-          "Whenever you play a card that costs 3+, gain #b",
-          " #yBlock [REMOVE_SPACE].",
-          " #yBlock [REMOVE_SPACE]."
-        ]
-      },
+  "sneckomod:BigGunsBlockPower": {
+    "NAME": "Blunder Guard",
+    "DESCRIPTIONS": [
+      "Whenever you play a card that costs 3+, gain #b",
+      " #yBlock [REMOVE_SPACE].",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
   "sneckomod:AceOfWandsPower": {
     "NAME": "Queen of Pentacles",
     "DESCRIPTIONS": [
@@ -178,17 +177,17 @@
   },
   "sneckomod:TrashCanPower": {
     "NAME": "Trash Can",
-    "DESCRIPTIONS": ["At the start of your turn, you may #yExhaust a card.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, you may #yExhaust a card.",
       "At the start of your turn, you may #yExhaust up to #b",
       " cards."
-  ]
-      },
-
-        "sneckomod:VenomDebuff": {
-          "NAME": "Venom",
-          "DESCRIPTIONS": [
-            "Whenever this creature gains a #ynon-Venom debuff, they lose #b",
-            " HP."
-          ]
-        }
-      }
+    ]
+  },
+  "sneckomod:VenomDebuff": {
+    "NAME": "Venom",
+    "DESCRIPTIONS": [
+      "Whenever this creature gains a #ynon-Venom debuff, they lose #b",
+      " HP."
+    ]
+  }
+}

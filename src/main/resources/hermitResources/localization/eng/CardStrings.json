@@ -34,8 +34,8 @@
   },
   "hermit:HighCaliber": {
     "NAME": "High-Caliber",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Strike+2　 to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Strike+3　 to your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Strike+2 to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Strike+3 to your hand. NL Exhaust."
   },
   "hermit:BodyArmor": {
     "NAME": "Body Armor",
@@ -79,7 +79,7 @@
   },
   "hermit:Roughhouse": {
     "NAME": "Roughhouse",
-    "DESCRIPTION": "Deal !D! damage. hermit:Dead_On\: NL Gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. hermit:Dead_On: NL Gain !B! Block."
   },
   "hermit:Malice": {
     "NAME": "Malice",
@@ -87,11 +87,11 @@
   },
   "hermit:Deadeye": {
     "NAME": "Deadeye",
-    "DESCRIPTION": "Deal !D! damage. NL hermit:Dead_On\: NL Gain !M! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL hermit:Dead_On: NL Gain !M! Strength."
   },
   "hermit:GhostlyPresence": {
     "NAME": "Ghostly Presence",
-    "DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On\: NL Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On: NL Apply !M! Weak to ALL enemies."
   },
   "hermit:Adapt": {
     "NAME": "Adapt",
@@ -99,7 +99,7 @@
   },
   "hermit:Dive": {
     "NAME": "Dive",
-    "DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On\: NL Gain !M! expansioncontent:Plated *Armor."
+    "DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On: NL Gain !M! expansioncontent:Plated *Armor."
   },
   "hermit:FlashPowder": {
     "NAME": "Flash Powder",
@@ -200,7 +200,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "Overwhelming Power",
-    "DESCRIPTION": "Gain [E] [E] [E]. NL Draw !hermit:SecondMagic! cards. NL Whenever you end your turn with 0 Energy, lose !M! HP."
+    "DESCRIPTION": "Gain [E] [E] [E] . NL Draw !hermit:SecondMagic! cards. NL Whenever you end your turn with 0 Energy, lose !M! HP."
   },
   "hermit:Maintenance": {
     "NAME": "Maintenance",
@@ -256,7 +256,7 @@
   "hermit:TakeAim": {
     "NAME": "Take Aim",
     "DESCRIPTION": "At the start of your turn, hermit:Concentrate.",
-	"UPGRADE_DESCRIPTION": "hermit:Concentrate. NL At the start of your turn, hermit:Concentrate."
+    "UPGRADE_DESCRIPTION": "hermit:Concentrate. NL At the start of your turn, hermit:Concentrate."
   },
   "hermit:Magnum": {
     "NAME": "Magnum",
