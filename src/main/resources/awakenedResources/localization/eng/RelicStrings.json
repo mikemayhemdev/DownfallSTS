@@ -15,8 +15,8 @@
     ]
   },
   "awakened:KTRibbon": {
-    "NAME": "Daemon's Ribbon",
-    "FLAVOR": "A conduit that grants power to spoken words.",
+    "NAME": "White Ribbon",
+    "FLAVOR": "Gives power to spoken words even without proper ritual.",
     "DESCRIPTIONS": [
       "Whenever you activate a #yawakened:Chant effect, gain #b",
       " #yBlock [REMOVE_SPACE]. Activates one #yawakened:Chant effect for free each turn."
@@ -53,7 +53,7 @@
     ]
   },
   "awakened:AbyssBlade": {
-    "NAME": "Void Blade",
+    "NAME": "Abyss Blade",
     "FLAVOR": "Void Refund.",
     "DESCRIPTIONS": [
       "The first time you are #yawakened:Drained each turn, gain [E] and draw a card."
@@ -61,7 +61,7 @@
   },
   "awakened:ShardOfNowak": {
     "NAME": "Gilded Bone Shard",
-    "FLAVOR": "Focus.",
+    "FLAVOR": "...No, not that kind of focus.",
     "DESCRIPTIONS": [
       "At the start of combat, gain #b",
       " #yStrength [REMOVE_SPACE]. After losing any type of HP, lose that #yStrength for the rest of combat."

@@ -111,7 +111,7 @@
     "NAME": "Pick of Rhapsody",
     "FLAVOR": "With as many gemstones that litter the Spire, it is hard to imagine anyone so unlucky to have needed this Pick to aid them.",
     "DESCRIPTIONS": [
-      "You can now #gMine for #b2 #yguardianmod:Gems at Rest Sites, you may choose to add them to your deck. (up to #b3 times)."
+      "Whenever you defeat an Elite encounter, add a random #yguardianmod:Gem to the rewards."
     ]
   },
   "Guardian:GemstoneGun": {

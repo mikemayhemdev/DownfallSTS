@@ -5,6 +5,8 @@ import automaton.AutomatonMod;
 import automaton.cards.Deprecate;
 import automaton.cards.Invalidate;
 import automaton.cards.Undervolt;
+import awakenedOne.AwakenedOneChar;
+import awakenedOne.cards.*;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
@@ -468,12 +470,28 @@ public class SneckoMod implements
                 c.cardID.equals(MakeshiftBlade.ID) ||
                 c.cardID.equals(Belittle.ID) ||
                 c.cardID.equals(PoisonParadise.ID) ||
-                c.cardID.equals(AceOfWands.ID))
+                c.cardID.equals(AceOfWands.ID) ||
+
+                //Awakened One Cards
+
+                c.cardID.equals(DrawingDead.ID) ||
+                c.cardID.equals(MagicStrike.ID) ||
+                c.cardID.equals(SingularityShield.ID) ||
+                c.cardID.equals(Deathwish.ID) ||
+                c.cardID.equals(IntoNothing.ID) ||
+                c.cardID.equals(MirePit.ID) ||
+                c.cardID.equals(Sludge.ID) ||
+                c.cardID.equals(SongOfSorrow.ID) ||
+                c.cardID.equals(SplitWide.ID) ||
+                c.cardID.equals(FadeOut.ID) ||
+                c.cardID.equals(TheEmpress.ID) ||
+                c.cardID.equals(ExNihilo.ID)
+                )
 
         ) || (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.rarity == AbstractCard.CardRarity.BASIC || c.type == STATUS || !q.test(c)  || c.hasTag(BANNEDFORSNECKO) || c.hasTag(GHOSTWHEELCARD))
         || (
                 //False Positives
-                c.cardID.equals(SwordThrow.ID) ||
+                        c.cardID.equals(SwordThrow.ID) ||
                         c.cardID.equals(HyperBeam_Guardian.ID) ||
                         c.cardID.equals(HoleUp.ID) ||
                         c.cardID.equals(Quickdraw.ID) ||
@@ -494,6 +512,11 @@ public class SneckoMod implements
                         c.cardID.equals(MachineLearning.ID) ||
                         c.cardID.equals(GremlinMeal.ID) ||
                         c.cardID.equals(FollowThrough.ID) ||
+                        c.cardID.equals(FeatherVeil.ID) ||
+                        c.cardID.equals(DarkPower.ID) ||
+                        c.cardID.equals(SacrilegiousStrike.ID) ||
+
+
                         //Really Bad Offclass cards
                         c.cardID.equals(ChargedBarrage.ID)
         ))
@@ -522,6 +545,9 @@ public class SneckoMod implements
                 c.color != ChampChar.Enums.CHAMP_GRAY &&
                 c.color != AutomatonChar.Enums.BRONZE_AUTOMATON &&
                 c.color != CollectorChar.Enums.COLLECTOR &&
+                //Act 3 Bosses
+                c.color != AwakenedOneChar.Enums.AWAKENED_BLUE &&
+
                 //Bonus Characters
                 c.color != TheSnecko.Enums.SNECKO_CYAN &&
                 c.color != gremlin.patches.AbstractCardEnum.GREMLIN)

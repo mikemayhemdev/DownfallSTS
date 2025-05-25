@@ -60,6 +60,8 @@ public class DeadBird extends CustomRelic implements OnReceivePowerRelic {
             temp = AMOUNT;
         }
 
+        this.counter = temp;
+
         return true;
     }
 

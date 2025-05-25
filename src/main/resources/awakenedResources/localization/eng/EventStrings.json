@@ -32,7 +32,7 @@
     "DESCRIPTIONS": [
       "Among the stone and boulders, you notice an intricate large blue statue depicting Mazaleth, God of Crows. NL NL You feel a sudden, intense anger and desire to destroy it. NL NL However, you know doing so will draw the ire of your benefactor.",
       "You decide that it isn't worth the danger of destroying the statue, and instead decide to take the statue with you. NL You temporarily strain under its weight, but quickly get a handle of it and move on.",
-      "You lash out at the statue, shattering it into pieces! NL From the rubble, you find a sharp fragment of the statue which still possesses lingering magic. NL You leave, feeling a #pdark #penergy seep into your soul.",
+      "You lash out at the statue, shattering it into pieces! NL From the rubble, you find a sharp fragment of the statue which still possesses lingering magic. NL You leave, feeling a #pdark #penergy seep into your blood.",
       "You walk past and continue onward.",
       "CA...Caw?! Gift for BIRD GOD?",
       "CA-CAAAW!!",
@@ -40,7 +40,7 @@
       "The cult will be pleased."
     ],
     "OPTIONS": [
-      "[Destroy] #gGain #gSharpened #gFragment. #rBecome #rCursed #rTwice #r- #rInjury.",
+      "[Destroy] #gGain #gSharpened #gFragment. #rBecome #rCursed #rTwice #r- #rHaemophilia.",
       "[Collect] #rLose #r",
       "[Leave]",
       " #rHP. #gGain #gBroken #gWing #gStatue."

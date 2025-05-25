@@ -41,10 +41,8 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FocusPower(p,4)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FocusPower(p, 4)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectBiasCuriosityPower(p)));
-        if(AbstractDungeon.ascensionLevel >= 19)
-        AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, 2));
     }
 
     public void initialize() {

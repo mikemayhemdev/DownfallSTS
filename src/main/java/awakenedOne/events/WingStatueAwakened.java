@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.cards.curses.CurseOfBlood;
 import downfall.relics.BrokenWingStatue;
 import downfall.relics.ShatteredFragment;
 
@@ -50,7 +51,7 @@ public class WingStatueAwakened extends AbstractImageEvent {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
-                        AbstractCard curse = new Injury();
+                        AbstractCard curse = new CurseOfBlood();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .35F), (float) (Settings.HEIGHT / 2)));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .65F), (float) (Settings.HEIGHT / 2)));
 

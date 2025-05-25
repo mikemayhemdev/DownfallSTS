@@ -328,13 +328,12 @@
     "DESCRIPTION": "Heal !M! HP. NL Place a *Void on top of your draw pile. NL Exhaust."
   },
   "awakened:IntoNothing": {
-    "NAME": "Into Nothing",
-    "DESCRIPTION": "Apply !M! awakened:Hex and awakened:Manaburn to ALL enemies. NL awakened:Conjure."
+    "NAME": "From the Abyss",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! awakened:Hex and Weak to ALL enemies. NL awakened:Conjure."
   },
   "awakened:HeavyStrike": {
     "NAME": "Carrionmaker",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you awakened:Conjure, return this from the discard pile to your hand."
-
+    "DESCRIPTION": "Deal !awakened:sd! damage, then deal !D! damage to a random enemy."
   },
   "awakened:MirePit": {
     "NAME": "Mire Pit",

@@ -39,6 +39,6 @@ public class DarknessFallsPower extends AbstractAwakenedPower implements OnLoseE
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount*2 + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + amount*2 + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 }

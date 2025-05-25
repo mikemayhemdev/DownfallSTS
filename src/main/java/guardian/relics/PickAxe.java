@@ -2,10 +2,13 @@ package guardian.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.util.TextureLoader;
 import guardian.GuardianMod;
+import guardian.rewards.GemReward;
 
 public class PickAxe extends CustomRelic {
     public static final String ID = "Guardian:PickAxe";
@@ -16,8 +19,7 @@ public class PickAxe extends CustomRelic {
     public PickAxe() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.COMMON, LandingSound.FLAT);
-
-        this.counter = 3;
+//        this.counter = 3;
     }
 
     @Override
@@ -25,23 +27,40 @@ public class PickAxe extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    @Override
-    public void onTrigger() {
-        super.onTrigger();
-        this.counter--;
-        setCounter(this.counter);
+
+    public void onEquip() {
+        if ((AbstractDungeon.getCurrRoom()).eliteTrigger) {
+            AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
+        }
+    }
+//    @Override
+//    public void onTrigger() {
+//        super.onTrigger();
+//        this.counter--;
+//        setCounter(this.counter);
+//    }
+//
+//    public void setCounter(int counter) {
+//        this.counter = counter;
+//        if (counter == 0) {
+//            this.counter = -2;
+//            this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("relics/pickUsed.png"));
+//            this.usedUp();
+//        } else {
+//
+//        }
+//
+//    }
+
+    public void onVictory(){
+        if ((AbstractDungeon.getCurrRoom()).eliteTrigger)
+        {
+            AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
+        }
     }
 
-    public void setCounter(int counter) {
-        this.counter = counter;
-        if (counter == 0) {
-            this.counter = -2;
-            this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("relics/pickUsed.png"));
-            this.usedUp();
-        } else {
-
-        }
-
+    public boolean canSpawn() {
+        return Settings.isEndless || AbstractDungeon.floorNum <= 48; // cannot appear in act 4
     }
 
     @Override

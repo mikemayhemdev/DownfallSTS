@@ -18,9 +18,9 @@ import static awakenedOne.AwakenedOneMod.makeRelicPath;
 
 public class KTRibbon extends CustomRelic implements OnAwakenRelic {
 
-    //Daemon's Ribbon
+    //White Ribbon
 
-    //yes this is a teto relic
+    //what is this, some kind of "daemon doll"????? a "constant companion"?
 
     private static final int AMOUNT = 4;
 
@@ -58,7 +58,6 @@ public class KTRibbon extends CustomRelic implements OnAwakenRelic {
     }
 
     //Check AwakenButton.java. I'm just using this override for convenience.
-    //basically, the grayscale check awaken(1) triggers this.
     @Override
     public void onAwaken(int amount) {
         if (this.counter == -1) {

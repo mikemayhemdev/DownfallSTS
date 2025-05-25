@@ -482,6 +482,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addCard(new Pride());
         BaseMod.addCard(new Scatterbrained());
         BaseMod.addCard(new Sapped());
+        BaseMod.addCard(new CurseOfBlood());
 /*
         BaseMod.addCard(new Slug());
         BaseMod.addCard(new Defend_Crowbot());

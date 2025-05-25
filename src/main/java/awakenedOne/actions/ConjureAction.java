@@ -81,9 +81,6 @@ public class ConjureAction extends AbstractGameAction {
                     addToTop(new RemoveSpellCardAction(q));
                 }));
             }
-        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if (c instanceof HeavyStrike) ((OnConjureSubscriber) c).OnConjure();
-        }
         }
 
     private void endActionWithFollowUp() {

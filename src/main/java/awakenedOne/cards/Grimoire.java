@@ -20,7 +20,6 @@ public class Grimoire extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        atb(new ConjureAction(false));
     }
 
     public void calculateCardDamage(AbstractMonster mo) {

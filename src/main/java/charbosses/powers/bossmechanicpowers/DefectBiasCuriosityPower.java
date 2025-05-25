@@ -28,34 +28,29 @@ public class DefectBiasCuriosityPower extends AbstractBossMechanicPower {
         this.amount = 1;
         updateDescription();
         loadRegion("bias");
-        this.type = AbstractPower.PowerType.BUFF;
+        this.type = AbstractPower.PowerType.DEBUFF;
     }
 
     public void updateDescription() {
-        if (triggered==false) {
-            this.name = (DESCRIPTIONS[3]);
-                    this.description = (DESCRIPTIONS[1]);
-        }
-        else {
-            this.name = NAME;
-            this.description = (DESCRIPTIONS[2]);
-        }
+        this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3]);
     }
-    @Override
-    public void atEndOfRound() {
-        super.atEndOfRound();
-         triggered=false;
-        updateDescription();
-    }
+
+//    @Override
+//    public void atEndOfRound() {
+//        super.atEndOfRound();
+//       //  triggered=false;
+//        updateDescription();
+//    }
+
     public void atEndOfTurn(boolean isPlayer) {
-        if(triggered==false)
+       // if(triggered==false)
         addToBot(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, -this.amount), -this.amount));
     }
+
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.POWER && !(card instanceof AbstractBossCard)) {
+        if (card.type == AbstractCard.CardType.POWER) {
             flash();
-            this.triggered=true;
-            updateDescription();
+            addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, this.amount), this.amount));
         }
     }
 }

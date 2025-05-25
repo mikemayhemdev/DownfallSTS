@@ -187,12 +187,12 @@
     ]
   },
   "downfall:DefectBiasCuriosity": {
-    "NAME": "Corrected Cognitive",
+    "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
-      "Defect plays an #yUnbiased #yCognition at the start of combat. NL Whenever you play a #yPower card, Defect's #yBias loses efficacy this turn.",
-      "Whenever you play a #yPower card, Defect's #yBias loses efficacy this turn.",
-      "Defect's #yBias loses efficacy this turn.",
-      "Bias"
+      "Defect starts combat with #b4 #yFocus and gains #b1 more whenever you play a #yPower card, but also loses #b1 #yFocus at the end of their turn.",
+      "Defect gains #b",
+      " #yFocus whenever you play a #yPower card, but also loses #b",
+      " #yFocus at the end of their turn."
     ]
   },
   "downfall:DefectCuriosityLighning": {

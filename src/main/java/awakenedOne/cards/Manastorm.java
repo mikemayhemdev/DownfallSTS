@@ -21,7 +21,7 @@ public class Manastorm extends AbstractAwakenedCard {
 
     public Manastorm() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 7;
+        baseDamage = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

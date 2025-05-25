@@ -1,19 +1,16 @@
 package awakenedOne.cards;
 
 import awakenedOne.actions.ConjureAction;
-import awakenedOne.powers.IntoNothingPower;
-import awakenedOne.powers.ManaburnPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
-import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.applyToSelf;
-import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.*;
+import static collector.util.Wiz.applyToEnemy;
 
 public class IntoNothing extends AbstractAwakenedCard {
     public final static String ID = makeID(IntoNothing.class.getSimpleName());
@@ -21,22 +18,23 @@ public class IntoNothing extends AbstractAwakenedCard {
 
     public IntoNothing() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
+        baseBlock = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        blck();
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             if ((!monster.isDead) && (!monster.isDying)) {
                 HexCurse(magicNumber, monster, p);
-                this.addToBot(new ApplyPowerAction(monster, p, new ManaburnPower(monster, this.magicNumber), this.magicNumber));
+                applyToEnemy(monster, new WeakPower(monster, magicNumber, false));
             }
         }
-
         atb(new ConjureAction(false));
     }
 
     public void upp() {
+        upgradeBlock(2);
         upgradeMagicNumber(1);
     }
 }
