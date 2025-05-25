@@ -54,7 +54,6 @@ public class KTRibbon extends CustomRelic implements OnAwakenRelic {
         flash();
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));
-        this.counter = 1;
     }
 
     //Check AwakenButton.java. I'm just using this override for convenience.

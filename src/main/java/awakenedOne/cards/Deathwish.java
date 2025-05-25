@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.AddSpellCardAction;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.AphoticShield;
@@ -25,6 +26,7 @@ public class Deathwish extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         cardsToPreview = new DeathCoil();
         this.exhaust = true;
+        this.tags.add(AwakenedOneMod.DELVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

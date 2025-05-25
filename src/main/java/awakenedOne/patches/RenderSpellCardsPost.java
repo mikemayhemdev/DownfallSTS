@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 @SpirePatch(clz = AbstractPlayer.class, method = "render")
 public class RenderSpellCardsPost {
     public static void Postfix(AbstractPlayer obj, SpriteBatch sb) {
-        if (Wiz.isInCombat() && AbstractDungeon.player.chosenClass.equals(AwakenedOneChar.Enums.AWAKENED_ONE)) {
+        if (Wiz.isInCombat() && ((AbstractDungeon.player.chosenClass.equals(AwakenedOneChar.Enums.AWAKENED_ONE)) || Wiz.hasConjure())) {
             OrbitingSpells.postPlayerRender(sb);
         }
     }

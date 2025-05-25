@@ -33,6 +33,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -103,6 +104,10 @@ public class AwakenedOneMod implements
 
     public static Color placeholderColor = new Color(18F / 255F, 250F / 255F, 240F / 255F, 1);
     public static Color potionLabColor = new Color(18F / 255F, 250F / 255F, 240F / 255F, 1);
+
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags DELVE;
+
     private static String modID = "awakened";
 
     public AwakenedOneMod() {

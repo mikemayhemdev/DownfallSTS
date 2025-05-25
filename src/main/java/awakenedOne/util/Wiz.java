@@ -1,5 +1,6 @@
 package awakenedOne.util;
 
+import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.powers.AwakenedPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -23,9 +24,10 @@ import java.util.ArrayList;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import static awakenedOne.AwakenedOneMod.DELVE;
+
 public class Wiz {
     //The wonderful Wizard of Oz allows access to most easy compilations of data, or functions.
-
     public static AbstractPlayer adp() {
         return AbstractDungeon.player;
     }
@@ -110,6 +112,16 @@ public class Wiz {
 
     public static boolean isInCombat() {
         return CardCrawlGame.isInARun() && AbstractDungeon.currMapNode != null && AbstractDungeon.getCurrRoom() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT;
+    }
+
+    public static boolean hasConjure() {
+        boolean hasbasics = false;
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.hasTag(DELVE)) {
+                hasbasics = true;
+            }
+        }
+        return hasbasics;
     }
 
     public static void atb(AbstractGameAction action) {
