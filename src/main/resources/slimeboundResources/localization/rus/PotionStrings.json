@@ -3,7 +3,7 @@
     "NAME": "Банка со слизью",
     "DESCRIPTIONS": [
       "Накладывает #b",
-      " #yЛипкости."
+      " #yЛипкости [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SlimyTonguePotion": {
@@ -17,7 +17,7 @@
     "NAME": "Армия в бутылке",
     "DESCRIPTIONS": [
       "#yПризывает #b",
-      " случ. Слизня(-ей) (Обычных или Специалистов)."
+      " случ. Слизня(-ей) (Обычных или #yСпециалистов [REMOVE_SPACE])."
     ]
   },
   "Slimebound:ThreeZeroPotion": {

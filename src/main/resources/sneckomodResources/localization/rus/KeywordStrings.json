@@ -2,34 +2,62 @@
   {
     "PROPER_NAME": "Анти-змекко",
     "NAMES": [
+      "snekproof",
       "анти-змекко"
     ],
-    "DESCRIPTION": "На карты #yАнти-змекко не влияет #yЗамешательство и #yСпутывание."
+    "DESCRIPTION": "На карты #yАнти-змекко не влияет #yЗамешательство и #yСпутывание.",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+  },
+  {
+    "PROPER_NAME": "Рубашка",
+    "NAMES": [
+      "suit",
+      "suits",
+      "рубашка",
+      "рубашке",
+      "рубашки",
+      "рубашек"
+    ],
+    "DESCRIPTION": "Рубашка говорит про цвет карты. Карты-жетоны не учитываются.",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+  },
+  {
+    "PROPER_NAME": "Переполнение",
+    "NAMES": [
+      "Overflow",
+      "overflow",
+      "переполнение",
+      "переполнения"
+    ],
+    "DESCRIPTION": "Эффект Переполнения активируется, если у вас более #b5 карт в руке."
   },
   {
     "PROPER_NAME": "Спутывание",
     "NAMES": [
-	  "muddle",
-	  "muddled",
+      "muddle",
+      "muddled",
       "спутывание",
       "спутывает",
       "спутанная",
       "спутанные",
       "спутанную",
       "спутаны",
+      "спутана",
+      "спутан",
       "спутываете",
       "спутает",
-      "спутыванию"
+      "спутыванию",
+      "спутывания"
     ],
     "DESCRIPTION": "Меняет стоимость карты до конца хода на случайную, от #b0 до #b3."
   },
   {
     "PROPER_NAME": "Внеклассовые карты",
     "NAMES": [
-      "внеклассовые карты",
-	  "внеклассовые",
-	  "внеклассовой",
-	  "внеклассовых",
+      "offclass",
+      "внеклассовые",
+      "внеклассовой",
+      "внеклассовых",
       "внеклассовая",
       "внеклассовую",
       "внеклассовый"
@@ -37,22 +65,45 @@
     "DESCRIPTION": "Любые получаемые карты, отличные от вашего класса (включая #yБесцветные, #yПроклятия и #yСтатусы)."
   },
   {
+    "PROPER_NAME": "Подарок",
+    "NAMES": [
+      "gift",
+      "подарок",
+      "подарка",
+      "подарки",
+      "подарков"
+    ],
+    "DESCRIPTION": "При получении этой карты, вы берёте в награду карту с указанным типом."
+  },
+  {
     "PROPER_NAME": "Опознание",
     "NAMES": [
+      "identify",
       "опознание",
       "опознаёт",
       "опознаёте",
       "опознайте"
     ],
-    "DESCRIPTION": "Навсегда фиксирует #yНеопределённые карты на те, которыми они являются на данный момент."
+    "DESCRIPTION": "Навсегда фиксирует #yНеопределённые карты на те, которыми они являются на данный момент.",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+  },
+  {
+    "PROPER_NAME": "Яд",
+    "NAMES": [
+      "venom",
+      "яд",
+      "яда",
+      "ядом"
+    ],
+    "DESCRIPTION": "Существа, поражённые #yЯдом, теряют ОЗ при получении других негативных эффектов."
   },
   {
     "PROPER_NAME": "Везение",
     "NAMES": [
-	  "lucky",
+	    "lucky",
       "везение",
       "везения"
     ],
-    "DESCRIPTION": "Карты, которые выбирают случ. число, выбирают максимальное значение (не влияет на #yСпутывание)."
+    "DESCRIPTION": "Эффект #yПереполнения срабатывает независимо от количества карт в руке."
   }
 ]

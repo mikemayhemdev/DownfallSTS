@@ -1,40 +1,39 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "Вихрь Стража",
-    "DESCRIPTION": "Требует не менее 10 Защиты. NL Наносит !D! урона ВСЕМ врагам 4 раза. NL Сжигается.",
+    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам !M! раз(а). NL Если у вас не менее !DM! Защиты, повторяет атаку ещё !M! раз(а).",
     "EXTENDED_DESCRIPTION": [
       "Требуется больше Защиты."
     ]
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Гекс-огонь",
-    "DESCRIPTION": "Наносит !D! урона случ. врагу 6 раз через !M! хода. NL Сила влияет на эту карту."
+    "DESCRIPTION": "Наносит !D! урона случ. врагу !M! раз(а). NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона случ. врагу !M! раз(а)."
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Непобедимость",
-    "DESCRIPTION": "Даёт 10 expansioncontent:Непобедимости. NL Если уже имеется expansioncontent:Непобедимость, эффект действует в вашем след. ходу."
+    "DESCRIPTION": "Даёт !M! expansioncontent:Непобедимости. NL Если уже имеется expansioncontent:Непобедимость, эффект действует в вашем след. ходу."
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Автома-луч",
-    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. NL Вы получите на 1 [E] меньше в след. ходу. NL Сжигается."
+    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. NL Добавляет *Бездну на верх стопки добора. NL Сжигается."
   },
   "expansioncontent:LastStand": {
     "NAME": "Последний шанс",
-    "DESCRIPTION": "Снимает все ваши отриц. эффекты. NL Даёт 1 Силы. NL Даёт 2 Силы, если у вас меньше 50% ОЗ.",
-    "UPGRADE_DESCRIPTION": "Снимает все ваши отриц. эффекты. NL Даёт 1 Силы. NL Восполняет !M! ОЗ и даёт 2 Силы, если у вас меньше 50% ОЗ."
+    "DESCRIPTION": "Снимает все ваши отриц. эффекты. NL Даёт !M! Силы."
   },
   "expansioncontent:YouAreMine": {
-    "NAME": "Вы принадлежите МНЕ!",
-    "DESCRIPTION": "Накладывает !M! Слабости и Уязвимости на ВСЕХ врагов. Также отнимает их Защиту. NL Сжигается."
+    "NAME": "ТЫ МОЙ!",
+    "DESCRIPTION": "Накладывает !M! Слабости, !M! Уязвимости и !DM! expansioncontent:Порчи на ВСЕХ врагов. NL Сжигается."
   },
   "expansioncontent:AwakenDeath": {
-    "NAME": "Пробуждение",
-    "DESCRIPTION": "Вместо того, чтобы умереть, вы Восполняете !M! ОЗ и снимаете этот эффект."
+    "NAME": "Любопытство",
+    "DESCRIPTION": "Разыгрывая Талант, вы получаете !M! Силы."
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Хроно-ускорение",
-    "DESCRIPTION": "Даёт 2 Силы, когда вы разыгрываете *12-ую карту.",
-    "UPGRADE_DESCRIPTION": "Даёт 2 Силы. NL Даёт 2 Силы, когда вы разыгрываете *12-ую карту."
+    "DESCRIPTION": "Даёт !M! Силы, за каждую 12-ю разыгранную карту."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Взрыв Дону",
@@ -42,23 +41,31 @@
   },
   "expansioncontent:DecaShield": {
     "NAME": "Щит Деки",
-    "DESCRIPTION": "Даёт !B! Панциря."
+    "DESCRIPTION": "Даёт !B! expansioncontent:Брони_из_пластин."
   },
   "expansioncontent:ShapePower": {
-    "NAME": "Благословение Создателя",
-    "DESCRIPTION": "Выберите 1: Даёт !M! Силы или !DM! Панциря.",
+    "NAME": "Помощь Создателя",
+    "DESCRIPTION": "Даёт !M! Силы и !DM! expansioncontent:Брони_из_пластин.",
     "EXTENDED_DESCRIPTION": [
       "Сила Дону",
       "Даёт !M! Силы.",
       "Щит Деки",
-      "Даёт !M! Панциря."
+      "Даёт !M! Брони из пластин."
     ]
   },
-  "expansioncontent:PrepareCrush": {
-    "NAME": "Приготовиться: Крушить",
-    "DESCRIPTION": "Даёт !B! Защиты. NL В след. ходу, даёт [E] [E] [E] и добавляет в руку *СЛИЗЕНЬ: *КРУШИТЬ!!!. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL В след. ходу, даёт [E] [E] [E] и добавляет в руку *СЛИЗЕНЬ: *КРУШИТЬ!!!. NL Сжигается."
+  "expansioncontent:SuperPrepareCrush": {
+    "NAME": "Подготовка слизня",
+    "DESCRIPTION": "Вы получите *СЛИЗЕНЬ: *КРУШИТЬ!!!, [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Вы получите *СЛИЗЕНЬ: *КРУШИТЬ!!!+, [E] [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается.",
+    "EXTENDED_DESCRIPTION": [
+        "~Слизь...~ NL #r~КРУШИТЬ!!!~"
+    ]
   },
+  "expansioncontent:SuperLivingWall": {
+    "NAME": "Живая стена",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Накладывает !M! expansioncontent:Липкости в ответ на каждую атаку в этом ходу."
+  },
+
   "expansioncontent:StudyTheSpire": {
     "NAME": "Изучение Шпиля",
     "DESCRIPTION": "Добавляет в руку случ. карту *Босса, в начале ваших след. !M! ходов. Она стоит 0.",
@@ -73,21 +80,136 @@
     ]
   },
   "expansioncontent:DashGenerateEvil": {
-    "NAME": "Зло внутри",
-    "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку случ. карту *Босса. Она стоит 0, пока не разыграна. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку случ. Улучшенную карту *Босса. Она стоит 0, пока не разыграна. NL Сжигается."
+    "NAME": "Внутреннее зло",
+    "DESCRIPTION": "Если вы накладываете !DM! отриц. эффектов, наносит !M! урона ВСЕМ врагам."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Всеведущий череп",
-    "DESCRIPTION": "Эфирная. NL Отнимает ОЗ, выберите 1: *Запросить *души, *Зелье или *Бесцветную карту. NL Сжигается."
+    "DESCRIPTION": "Эфирная. NL Отнимает ОЗ, выберите одно: *Запросить *души, *Зелья или *Бесцветную карту. NL Сжигается."
   },
   "expansioncontent:Antidote": {
     "NAME": "Антидот",
     "DESCRIPTION": "Оставляется. NL Снимает !M! Яда."
   },
+  "expansioncontent:SuperGhostShield": {
+    "NAME": "Призрачный щит",
+    "DESCRIPTION": "Эфирная. hexamod:Посмертная. NL [#e087a4]Даёт[] [#e087a4]!B![] [#e087a4]Защиты.[] NL [#e087a4]Даёт[] [#e087a4]!M![] [#e087a4]Неуловимости.[]",
+    "EXTENDED_DESCRIPTION": [
+      "Даёт !B! Защиты."
+    ]
+  },
+  "expansioncontent:SuperGoopSpray": {
+    "NAME": "Липкий спрэй",
+    "DESCRIPTION": "Накладывает !M! expansioncontent:Липкости и !DM! Слабости.",
+    "UPGRADE_DESCRIPTION": "Накладывает !M! expansioncontent:Липкости и !DM! Слабости на ВСЕХ врагов."
+  },
+  "expansioncontent:ChargeUp": {
+    "NAME": "Гибкая пластина",
+    "DESCRIPTION": "Уменьшает каждый из ваших отриц. эффектов на !M!. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Уменьшает каждый из ваших отриц. эффектов на !M!."
+  },
+  "expansioncontent:SuperTaunt": {
+    "NAME": "Насмешка",
+    "DESCRIPTION": "Накладывает !M! Слабости и Уязвимости.",
+    "UPGRADE_DESCRIPTION": "Накладывает !M! Слабости и Уязвимости на ВСЕХ врагов."
+  },
+  "expansioncontent:Torchfire": {
+    "NAME": "Дикое пламя",
+    "DESCRIPTION": "Наносит !D! урона за каждый уникальный отриц. эффект на враге"
+  },
+
+  "expansioncontent:TakeFlight": {
+    "NAME": "Оживить",
+    "DESCRIPTION": "Даёт !M! expansioncontent:Регенерации. NL expansioncontent:Песнь: вместо этого, даёт !DM! *Регенерации."
+  },
+  "expansioncontent:BeatOfDeath": {
+    "NAME": "Удар Смерти",
+    "DESCRIPTION": "Когда вы разыгрываете карту, наносит !M! урона по ВСЕМ врагам."
+  },
+  "expansioncontent:SuperViciousMockery": {
+    "NAME": "Жестокая насмешка",
+    "DESCRIPTION": "Даёт !M! champ:Бодрости. NL Накладывает !DM! Слабости."
+  },
+  "expansioncontent:SuperClobber": {
+    "NAME": "Расшибить",
+    "DESCRIPTION": "Наносит !D! урона. NL Даёт Защиту, равную нанесённому урону по ОЗ врага."
+  },
+
+  "expansioncontent:SuperSomberShield": {
+    "NAME": "Щит мрака",
+    "DESCRIPTION": "expansioncontent:Пиромант. NL Даёт !B! Защиты. NL Добавляет в руку копию *Сожжённой карты в след. ходу."
+  },
+
+  "expansioncontent:SuperWhirlingFlame": {
+    "NAME": "Пламенный вихрь",
+    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. NL Вы кладёте карту из стопки сброса на верх стопки добора."
+  },
+  "expansioncontent:Flail": {
+    "NAME": "Раскрутиться",
+    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам !DM! раз(а). NL Даёт !M! Артефакт. NL Сжигается.",
+    "EXTENDED_DESCRIPTION": [
+      "крутящий",
+      "Крутить"
+    ]
+  },
+  "expansioncontent:SuperBloodthirst": {
+    "NAME": "Кровожадность",
+    "DESCRIPTION": "Наносит !D! урона. NL Если Казнит врага, вы получаете случ. зелье и Сжигается."
+  },
+  "expansioncontent:SuperBodyCrash": {
+    "NAME": "Бросок",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Наносит урон, равный кол-ву вашей Защиты.",
+    "UPGRADE_DESCRIPTION": " NL (Наносит !D! урона.)"
+  },
+  "expansioncontent:SuperEtherStep": {
+    "NAME": "Эфирный шаг",
+    "DESCRIPTION": "Вы Сжигаете 1 карту и берёте !M! карту. NL Наносит !D! урона.",
+    "UPGRADE_DESCRIPTION": "Вы Сжигаете 1 карту и берёте !M! карт(ы). NL Наносит !D! урона."
+  },
+
+  "expansioncontent:Virus": {
+    "NAME": "Вирус",
+    "DESCRIPTION": "Вы Сжигаете до !M! карт(ы), замешивает *Большой *луч в стопку добора за каждую *Сожжёную карту. NL Сжигается."
+  },
+
+  "expansioncontent:MajorBeam": {
+    "NAME": "Большой луч",
+    "DESCRIPTION": "Наносит !D! урона. NL Возьмите !M! карту.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Возьмите !M! карт(ы)."
+  },
+
+  "expansioncontent:ManipulateTime": {
+    "NAME": "Раздумье",
+    "DESCRIPTION": "Кладёт карту из стопки сброса вниз стопки добора. Она стоит 0 *пока *не *сыграна.",
+    "UPGRADE_DESCRIPTION": "Кладёт карту из стопки сброса вниз стопки добора. Она стоит 0 *в *этом *бою."
+  },
+  "expansioncontent:Pandemonium": {
+    "NAME": "Столпотворение",
+    "DESCRIPTION": "В начале вашего хода, сыграйте случайную карту из стопки сброса."
+  },
+  "expansioncontent:Reverie": {
+    "NAME": "Грёзы",
+    "DESCRIPTION": "В начале вашего хода, положите одну из верхних !M! карт стопки сброса в руку."
+  },
+  "expansioncontent:ExploitVulnerability": {
+    "NAME": "Луч Дону",
+    "DESCRIPTION": "Снимает всю Защиту врага и даёт вам. NL Наносит !D! урона дважды."
+  },
+  "expansioncontent:PeekPages": {
+    "NAME": "Прочесть судьбу",
+    "DESCRIPTION": "Замешивает !M! *Предсказаний в колоду добора. NL Сжигается."
+  },
+  "expansioncontent:BloodBarrage": {
+    "NAME": "Кровавый шквал",
+    "DESCRIPTION": "Наносит !D! урона !M! раз(а). NL Сжигается."
+  },
+  "expansioncontent:DoubleAct": {
+    "NAME": "Двойное действие",
+    "DESCRIPTION": "В начале след. хода, возьмите 5 карт и получите [E]  ещё раз. NL Сжигается."
+  },
   "expansioncontent:BloodySacrifice": {
     "NAME": "Кровавая жертва",
-    "DESCRIPTION": "Эфирная. NL Отнимает ОЗ, равное !M! % от Макс. ОЗ. NL Даёт 1 Ритуала. NL Сжигается.",
+    "DESCRIPTION": "Эфирная. NL Отнимает ОЗ, равное !M! % от макс. ОЗ. NL Даёт 1 Ритуал. NL Сжигается.",
     "EXTENDED_DESCRIPTION":[
       " NL (Отнимает {amount} ОЗ. )"
     ]

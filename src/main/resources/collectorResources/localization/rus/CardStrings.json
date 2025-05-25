@@ -4,73 +4,73 @@
     "DESCRIPTION": "Даёт !B! Защиты. NL Накладывает !M! Уязвимости на ВСЕХ врагов."
   },
   "collector:AlwaysMore": {
-    "NAME": "Always More", //unfinished
+    "NAME": "Всегда мало",
     "DESCRIPTION": "collector:Пиромант. NL Даёт !M! золота."
   },
   "collector:AshenStrike": {
-    "NAME": "Пепельный удар", //unfinished
+    "NAME": "Пепельный удар",
     "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Уголёк."
   },
   "collector:Arrogance": {
-    "NAME": "Высокомерие", //unfinished
-    "DESCRIPTION": "Даёт !B! Защиты. NL Ваша след. Атака в этом ходу также накладывает !M! collector:Порчи." //unfinished
+    "NAME": "Высокомерие",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Ваша след. Атака в этом ходу также накладывает !M! collector:Порчу."
   },
   "collector:AshesAndDust": {
     "NAME": "Прах и пепел",
-    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам X раз. NL Если X больше или равно 5, наносит урон ещё 2 раза." //unfinished
+    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам X раз(а). NL Если X больше или равно 5, наносит урон ещё 2 раза."
   },
   "collector:BindingCall": {
-    "NAME": "Binding Call", //unfinished
-    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ. NL collector:Пламяголовый получает: \"Накладывает !clm2! collector:Порчи на случ. врага.\""
+    "NAME": "Связующий зов",
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временных_ОЗ. NL collector:Пламяголовый получает: «Накладывает !clm2! collector:Порчи на случ. врага.»"
   },
   "collector:Billow": {
-    "NAME": "Billow", //unfinished
-    "DESCRIPTION": "Даёт !B! Защиты. NL Добавляет в руку *Bellow в след. ходу."
+    "NAME": "Лавина",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Добавляет в руку *Рёв в след. ходу."
   },
   "collector:Bellow": {
-    "NAME": "Bellow", //unfinished
+    "NAME": "Рёв",
     "DESCRIPTION": "Эфирная. NL Накладывает collector:Порчу, равную кол-ву неиспользованной Защиты в пред. ходу. NL Сжигается.",
     "EXTENDED_DESCRIPTION": [
       " NL ( Накладывает !M! collector:Порчи )"
     ]
   },
   "collector:BlackBindings": {
-    "NAME": "Black Bindings", //unfinished
-    "DESCRIPTION": "Накладывает !M! Слабости, затем накладывает !clm2! collector:Порчи за каждый отриц. эффект у врага." //unfinished
+    "NAME": "Чёрные сплетения",
+    "DESCRIPTION": "Накладывает !M! Слабости, затем накладывает !clm2! collector:Порчи за каждый вид отриц. эффекта у врага."
   },
   "collector:Blightning": {
-    "NAME": "Blightning",
-    "DESCRIPTION": "Накладывает !M! collector:Порчи. NL Наносит !D! урона. NL Вы берёте карту из стопки Коллекции. NL Сжигается."
+    "NAME": "Осквернение",
+    "DESCRIPTION": "Накладывает !M! collector:Порчи. NL Наносит !D! урона. NL Вы берёте 1 карту из стопки Коллекции. NL Сжигается."
   },
   "collector:Bonfire": {
-    "NAME": "Кострище", //unfinished
-    "DESCRIPTION": "collector:Пиромант. NL Даёт !B! Защиты. NL Даёт 1 collector:Резерва на след. ход."
+    "NAME": "Кострище",
+    "DESCRIPTION": "collector:Пиромант. NL Даёт !B! Защиты. NL Даёт 1 collector:Резерва в след. ходу."
   },
   "collector:BrainDrain": {
-    "NAME": "Brain Drain",
-    "DESCRIPTION": "Враг теряет !M! ОЗ. NL Добавляет в руку его Коллекционную карту. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Враг теряет !M! ОЗ. NL Добавляет в руку его Коллекционную карту, затем улучшает её. NL Сжигается."
+    "NAME": "Утечка мозгов",
+    "DESCRIPTION": "Враг теряет !M! ОЗ. NL Добавляет его Коллекционную карту в руку. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Враг теряет !M! ОЗ. NL Добавляет его Коллекционную карту в руку, и Улучшает её. NL Сжигается."
   },
   "collector:BramblesparKindling": {
-    "NAME": "Лучина ежевичного куста", //unfinished
-    "DESCRIPTION": "Неиграбельная. NL Добавляет в руку *Обжигающий *удар, когда Сжигается.",
-    "UPGRADE_DESCRIPTION": "Неиграбельная. NL Добавляет в руку *Обжигающий *удар+, когда Сжигается.",
+    "NAME": "Лучина ежевичного куста",
+    "DESCRIPTION": "Неиграбельная. NL Добавляет в руку *Обжигающий *удар, когда *Сжигается.",
+    "UPGRADE_DESCRIPTION": "Неиграбельная. NL Добавляет в руку *Обжигающий *удар+, когда *Сжигается.",
     "EXTENDED_DESCRIPTION": [
-      "Сначала нужно зажечь эту лучину." //unfinished
+      "Сначала нужно зажечь эту лучину."
     ]
   },
   "collector:BurningStrike": {
     "NAME": "Обжигающий удар",
     "DESCRIPTION": "Наносит !D! урона. NL Вы берёте карту.",
-    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Вы берёте !M! карты."
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Вы берёте !M! карт(ы)."
   },
   "collector:CantTouchThis": {
-    "NAME": "Не прикасайся", //unfinished
-    "DESCRIPTION": "Даёт !M! Ловкости. NL Накладывает !clm2! collector:Порчи, когда вы полностью блокируете урон от Атак арага." //unfinished
+    "NAME": "Не прикасайся",
+    "DESCRIPTION": "Даёт !M! Ловкости. NL Когда вы полностью блокируете урон от Атаки, накладывает !clm2! collector:Порчи на атакующего."
   },
   "collector:CoffinNail": {
-    "NAME": "Гвоздь в крышку гроба", //unfinished
-    "DESCRIPTION": "Наносит !D! урона. NL Возвращается в руку в след. ходу и увеличивает свой урон на !M!, когда Сжигается."
+    "NAME": "Гвоздь в крышку гроба",
+    "DESCRIPTION": "Наносит !D! урона. NL Возвращается в руку в след. ходу и увеличивает свой урон на !M!, когда *Сжигается."
   },
   "collector:Condemn": {
     "NAME": "Порицание",
@@ -81,22 +81,22 @@
     "DESCRIPTION": "ВСЕ враги теряют !M! Силы в этом ходу. NL collector:Сокрушённые враги теряют !clm2! Силы. NL Сжигается."
   },
   "collector:DarkApotheosis": {
-    "NAME": "Тёмный апофеоз", //unfinished
+    "NAME": "Тёмный апофеоз",
     "DESCRIPTION": "Улучшает карты в стопке Коллекции до конца боя. NL Сжигается."
   },
   "collector:DarkLordForm": {
     "NAME": "Облик Тёмной владычицы",
-    "DESCRIPTION": "Вы разыгрываете карту *Ты *принадлежишь *мне! на случ. врага в начале каждого хода.", //unfinished
-    "UPGRADE_DESCRIPTION": "Вы разыгрываете карту *Ты *принадлежишь *мне!+ на случ. врага в начале каждого хода." //unfinished
+    "DESCRIPTION": "Вы разыгрываете карту *ТЫ *МОЙ! на случ. врага в начале каждого хода.",
+    "UPGRADE_DESCRIPTION": "Вы разыгрываете карту *ТЫ *МОЙ!+ на случ. врага в начале каждого хода."
   },
   "collector:Darkstorm": {
     "NAME": "Тёмная буря",
-    "DESCRIPTION": "Добавляет в руку *Blightning. NL Добавляет ещё !M! её копии в стопку добора. NL Сжигается." //unfinished
+    "DESCRIPTION": "Добавляет в руку *Осквернение. NL Замешивает !M! её копии в стопку добора. NL Сжигается."
   },
   "collector:DarkwoodKindling": {
-    "NAME": "Брусок тёмной ивы", //unfinished
-    "DESCRIPTION": "Неиграбельная. NL Даёт !M! collector:Резерва на след. ход, когда Сжигается.",
-    "UPGRADE_DESCRIPTION": "Неиграбельная. NL Оставляется. NL Даёт !M! collector:Резерва на след. ход, когда Сжигается.",
+    "NAME": "Брусок тёмной ивы",
+    "DESCRIPTION": "Неиграбельная. NL Даёт !M! collector:Резерва в след. ходу, когда *Сжигается.",
+    "UPGRADE_DESCRIPTION": "Неиграбельная. NL Оставляется. NL Даёт !M! collector:Резерва в след. ходу, когда *Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Сначала нужно зажечь этот брусок."
     ]
@@ -110,26 +110,26 @@
     "DESCRIPTION": "Даёт !B! Защиты. NL След. Коллекционная карта разыгрывается дважды в этом ходу."
   },
   "collector:DoMayhem": {
-    "NAME": "Да будет хаос", //unfinished
-    "DESCRIPTION": "Вы разыгрываете карту с верха стопки добора, в начале вашего хода, если у любого врага есть 25 или больше collector:Порчи." //unfinished
+    "NAME": "Да будет хаос",
+    "DESCRIPTION": "Вы разыгрываете карту с верха стопки добора, в начале вашего хода, если у любого врага есть 25 или больше collector:Порчи."
   },
   "collector:DragonsTrove": {
-    "NAME": "Драконья находка", //unfinished
+    "NAME": "Драконья находка",
     "DESCRIPTION": "collector:Пиромант. NL Вы берёте 2 карты из стопки Коллекции. NL Даёт !M! collector:Резерва. NL Сжигается."
   },
   "collector:Ember": {
     "NAME": "Уголёк",
-    "DESCRIPTION": "Оставляется. NL Даёт !M! Силы, когда Сжигается. NL Сжигается.",
+    "DESCRIPTION": "Оставляется. NL Сжигается. NL Даёт !M! Силы, когда *Сжигается.",
     "EXTENDED_DESCRIPTION": [
-      "Угольки нужно зажигать, а не разыгрывать." //unfinished
+      "Угольки нужно зажигать, а не разыгрывать."
     ]
   },
   "collector:Empower": {
-    "NAME": "Усилить", //unfinished
+    "NAME": "Усилить",
     "DESCRIPTION": "Даёт X Силы в начале след. !M! ходов."
   },
   "collector:Extricate": {
-    "NAME": "Вызволить", //unfinished
+    "NAME": "Вызволить",
     "DESCRIPTION": "Сжигает все карты в руке, кроме Атак. NL Наносит !D! урона."
   },
   "collector:FeelMyPain": {
@@ -141,8 +141,8 @@
     "DESCRIPTION": "Сжигает все карты в руке. NL Наносит !D! урона за каждую. NL *Сжигается."
   },
   "collector:Finalize": {
-    "NAME": "Прикончить", //unfinished
-    "DESCRIPTION": "Восполняет !clm2! ОЗ, когда враг погибнет. NL Накладывает !M! collector:Порчи. NL Сжигается."
+    "NAME": "Прикончить",
+    "DESCRIPTION": "Восполняет !clm2! ОЗ, когда враг погибает. NL Накладывает !M! collector:Порчи. NL Сжигается."
   },
   "collector:FingerOfDeath": {
     "NAME": "Касание смерти",
@@ -151,66 +151,66 @@
   },
   "collector:FlameLash": {
     "NAME": "Пламенная плеть",
-    "DESCRIPTION": "collector:Пиромант. NL Наносит !D! урона. NL Урон, наносимый этой картой, увеличивается на урон *Сожжённой карты.", //unfinished
-    "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Наносит !D! урона. NL Урон, наносимый этой картой, увеличивается на !M! и урон *Сожжённой карты." //unfinished
+    "DESCRIPTION": "collector:Пиромант. NL Наносит !D! урона. NL Урон, наносимый этой картой, увеличивается на урон *Сожжённой карты.",
+    "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Наносит !D! урона. NL Урон, наносимый этой картой, увеличивается на !M! + урон *Сожжённой карты."
   },
   "collector:FleetingEmbers": {
-    "NAME": "Fleeting Embers",
-    "DESCRIPTION": "collector:Пиромант. NL Даёт !B! Защиты. NL Добавляет в руку !M! *Уголька." //unfinished
+    "NAME": "Мимолётные угольки",
+    "DESCRIPTION": "collector:Пиромант. NL Даёт !B! Защиты. NL Добавляет в руку !M! *Уголька."
   },
   "collector:Forgery": {
     "NAME": "Подделка",
     "DESCRIPTION": "Наносит !D! урона. NL Выберите 1 из !M! карт из стопки Коллекции, добавляет в руку её копию.",
     "EXTENDED_DESCRIPTION": [
-      "добавить в руку." //unfinished
+      "добавить в руку."
     ]
   },
   "collector:FuelTheFire": {
-    "NAME": "Fuel the Fire", //unfinished
+    "NAME": "Масло в огонь",
     "DESCRIPTION": "collector:Пиромант. NL Даёт !M! collector:Резерва в след. ходу.",
     "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Даёт !M! collector:Резерва в след. ходу и вы берёте карту."
   },
   "collector:Goodbye": {
-    "NAME": "Goodbye", //unfinished
+    "NAME": "Прощание",
     "DESCRIPTION": "Удваивает наложенную на врага collector:Порчу. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Утраивает наложенную на врага collector:Порчу. NL Сжигается."
   },
   "collector:GourmandsGaze": {
-    "NAME": "Gourmand's Gaze", //unfinished
+    "NAME": "Взгляд гурмана",
     "DESCRIPTION": "Наносит !D! урона. NL Даёт !B! Защиты, если вы разыгрывали collector:Коллекционные карты в этом ходу."
   },
   "collector:GreaterHurting": {
-    "NAME": "Greater Hurting", //unfinished
-    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Добавляет в руку *Greatest *Hurting, когда Сжигается.",
-    "UPGRADE_DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Добавляет в руку *Greatest *Hurting+, когда Сжигается."
+    "NAME": "Великая Боль",
+    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Добавляет в руку *Величайшую *боль, когда *Сжигается.",
+    "UPGRADE_DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Добавляет в руку *Величайшую *боль+, когда *Сжигается."
   },
   "collector:GreatestHurting": {
-    "NAME": "Greatest Hurting", //unfinished
-    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Добавляет в руку *Уголёк, когда Сжигается."
+    "NAME": "Величайшая боль",
+    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Добавляет в руку *Уголёк, когда *Сжигается."
   },
   "collector:GreenpyreLocus": {
-    "NAME": "Greenpyre Locus", //unfinished
-    "DESCRIPTION": "Выберите 1 из 3 собранных карт и добавьте !M! её копии в стопку Коллекции. NL Сжигается.",
+    "NAME": "Гринпайр Локус",
+    "DESCRIPTION": "Выберите и добавьте в руку 1 из 3 карт из Коллекции. Добавьте !M! её копии в стопку Коллекции.",
     "EXTENDED_DESCRIPTION": [
       "Выберите карту, которую хотите добавить в руку."
     ]
   },
   "collector:Heatwave": {
-    "NAME": "Heat Wave", //unfinished
+    "NAME": "Тепловая волна",
     "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. NL Добавляет в руку *Уголёк."
   },
   "collector:Hoard": {
-    "NAME": "Hoard", //unfinished
-    "DESCRIPTION": "collector:Пиромант. NL Вы берёте !M! карты. NL Они Оставляются в этом ходу." //unfinished
+    "NAME": "Клад",
+    "DESCRIPTION": "collector:Пиромант. NL Вы берёте !M! карт(ы). NL Каждая Оставляется в этом ходу."
   },
   "collector:HoardersStrike": {
-    "NAME": "Hoarder's Strike", //unfinished
+    "NAME": "Удар коллекционера",
     "DESCRIPTION": "Наносит !D! урона. NL Вы разыгрываете карту с верха стопки Коллекции."
   },
   "collector:Hurting": {
-    "NAME": "Hurting", //unfinished
-    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Добавляет в руку *Greater *Hurting, когда Сжигается.",
-    "UPGRADE_DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Добавляет в руку *Greater *Hurting+, когда Сжигается."
+    "NAME": "Боль",
+    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Добавляет в руку *Великую *боль, когда *Сжигается.",
+    "UPGRADE_DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Добавляет в руку *Великую *боль+, когда *Сжигается."
   },
   "collector:IllTakeThat": {
     "NAME": "Заберу это себе",
@@ -218,10 +218,10 @@
   },
   "collector:InevitableDemise": {
     "NAME": "Неминуемая гибель",
-    "DESCRIPTION": "Наносит !D! урона. NL Предотвращает след. снятие collector:Порчи у врага." //unfinished
+    "DESCRIPTION": "Наносит !D! урона. NL Предотвращает след. снятие collector:Порчи с врага."
   },
   "collector:InflictAgony": {
-    "NAME": "Inflict Agony", //unfinished
+    "NAME": "Причинить страдания",
     "DESCRIPTION": "Наносит !D! урона. NL Накладывает 2 Слабости и Уязвимости, если враг не collector:Сокрушён."
   },
   "collector:Invigorate": {
@@ -233,20 +233,20 @@
     ]
   },
   "collector:IronbarkKindling": {
-    "NAME": "Брусок железного дерева", //unfinished
-    "DESCRIPTION": "Неиграбельная. NL Даёт !B! Защиты, когда Сжигается.",
-    "UPGRADE_DESCRIPTION": "Неиграбельная. Оставляется. NL Даёт !B! Защиты, когда Сжигается.",
+    "NAME": "Брусок железного дерева",
+    "DESCRIPTION": "Неиграбельная. NL Даёт !B! Защиты, когда *Сжигается.",
+    "UPGRADE_DESCRIPTION": "Неиграбельная. Оставляется. NL Даёт !B! Защиты, когда *Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Сначала нужно зажечь этот брусок."
     ]
   },
   "collector:ItMattersNot": {
-    "NAME": "Не имеет значения", //unfinished
+    "NAME": "Не имеет значения",
     "DESCRIPTION": "Даёт !B! Защиты. NL Увеличивает Уязвимость и Слабость ВСЕХ врагов на !M!."
   },
   "collector:JadedJabs": {
-    "NAME": "Jaded Jabs", //unfinished
-    "DESCRIPTION": "collector:Пиромант. NL Наносит !D! урона. NL Добавляет в руку *Заточки, их кол-во равно стоимости Сожжённой карты + !M!." //unfinished
+    "NAME": "Измученные Удары",
+    "DESCRIPTION": "collector:Пиромант. NL Наносит !D! урона. NL Добавляет в руку *Заточки, в количестве стоимости *Сожжённой карты + !M!."
   },
   "collector:Karma": {
     "NAME": "Карма",
@@ -254,84 +254,84 @@
     "UPGRADE_DESCRIPTION": "Начальная. NL Даёт !M! Защиты в конце вашего хода. NL Даёт ещё !clm2! Защиты, если враг collector:Сокрушён."
   },
   "collector:LanternFlare": {
-    "NAME": "Lantern Flare", //unfinished
-    "DESCRIPTION": "collector:Пиромант. NL Накладывает !M! collector:Порчи. NL Враг получает ещё !clm2! collector:Порчи в конце каждого своего хода." //unfinished
+    "NAME": "Свет фонаря",
+    "DESCRIPTION": "collector:Пиромант. NL Накладывает !M! collector:Порчи. NL Враг получает ещё !clm2! collector:Порчи в конце каждого своего хода."
   },
   "collector:LuckyWick": {
-    "NAME": "Lucky Wick", //unfinished
+    "NAME": "Счастливый фитиль",
     "DESCRIPTION": "Даёт !B! Защиты. NL Наносит !D! урона."
   },
   "collector:MastersCall": {
-    "NAME": "Master's Call", //unfinished
+    "NAME": "Зов Хозяина",
     "DESCRIPTION": "Не используется!"
   },
   "collector:MiniCurse": {
     "NAME": "Малое проклятие",
-    "DESCRIPTION": "collector:Пиромант. NL Накладывает 1 Слабости и Уязвимости.",
-    "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Накладывает 1 Слабости и Уязвимости на ВСЕХ врагов."
+    "DESCRIPTION": "collector:Пиромант. NL Накладывает 1 Слабость и Уязвимость.",
+    "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Накладывает 1 Слабость и Уязвимость на ВСЕХ врагов."
   },
   "collector:Misdirect": {
     "NAME": "Запутать",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Даёт 1 collector:Резерва в след. ходу."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Даёт 1 collector:Резерв в след. ходу."
   },
   "collector:MysteryWeaving": {
-    "NAME": "Mystery Weaving", //unfinished
-    "DESCRIPTION": "Даёт !B! Защиты. NL Даёт на 2 Защиты меньше за каждую карту в руке."
+    "NAME": "Таинственное плетение",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Даёт на 2 Защиты меньше за каждую карту в руке, кроме этой."
   },
   "collector:OakbrimKindling": {
-    "NAME": "Oakbrim Kindling", //unfinished
-    "DESCRIPTION": "Неиграбельная. NL Вы берёте !M! карты, когда Сжигается.",
+    "NAME": "Брусок дубового дерева",
+    "DESCRIPTION": "Неиграбельная. NL Вы берёте !M! карт(ы), когда *Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Сначала нужно зажечь этот брусок."
     ]
   },
   "collector:Omen": {
     "NAME": "Предзнаменование",
-    "DESCRIPTION": "Даёт !M! Силы, когда вы разыгрываете Коллекционные карты.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Даёт !M! Силы, когда вы разыгрываете Коллекционные карты."
+    "DESCRIPTION": "Даёт 1 Силу, когда вы разыгрываете Коллекционные карты.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL Даёт 1 Силу, когда вы разыгрываете Коллекционные карты."
   },
   "collector:ProtectingCall": {
-    "NAME": "Protecting Call", //unfinished
-    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ. NL collector:Пламяголовый получает: \"Даёт !clm2! Защиты\"."
+    "NAME": "Защитный зов",
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временных_ОЗ. NL collector:Пламяголовый получает: «Даёт !clm2! Защиты»."
   },
   "collector:Pyromancy": {
     "NAME": "Пиромантия",
-    "DESCRIPTION": "collector:Пиромант. NL Даёт 1 collector:Резерва в начале вашего хода.",
-    "UPGRADE_DESCRIPTION": "Начальная. collector:Пиромант. NL Даёт 1 collector:Резерва в начале вашего хода."
+    "DESCRIPTION": "collector:Пиромант. NL Даёт 1 collector:Резерв в начале вашего хода.",
+    "UPGRADE_DESCRIPTION": "Начальная. collector:Пиромант. NL Даёт 1 collector:Резерв в начале вашего хода."
   },
   "collector:RagingCall": {
-    "NAME": "Raging Call", //unfinished
-    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ. NL collector:Пламяголовый получает: \"Наносит !clm2! урона ВСЕМ врагам\"."
+    "NAME": "Яростный зов",
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временных_ОЗ. NL collector:Пламяголовый получает: «Наносит !clm2! урона ВСЕМ врагам»."
   },
   "collector:ReceiveTribute": {
-    "NAME": "Receive Tribute", //unfinished
+    "NAME": "Получить должное",
     "DESCRIPTION": "collector:Пиромант. NL Выберите 1 из !M! карт Боссов и добавьте её в руку, она Оставляется. NL Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Выберите карту, которую хотите добавить в руку."
     ]
   },
   "collector:Roast": {
-    "NAME": "Прожарить", //unfinished
+    "NAME": "Прожарить",
     "DESCRIPTION": "collector:Пиромант. NL Наносит !D! урона."
   },
   "collector:RotwoodKindling": {
-    "NAME": "Rotwood Kindling", //unfinished
-    "DESCRIPTION": "Неиграбельная. NL Накладывает !M! Уязвимости и collector:Порчи на ВСЕХ врагов, когда Сжигается.",
+    "NAME": "Брусок гнилого дерева",
+    "DESCRIPTION": "Неиграбельная. NL Накладывает !M! Уязвимости и !clm2! collector:Порчи на ВСЕХ врагов, когда *Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Сначала нужно зажечь этот брусок."
     ]
   },
   "collector:SapStrength": {
-    "NAME": "Смертельная метка", //unfinished
-    "DESCRIPTION": "Наносит !D! урона. NL Враг теряет ОЗ равное удвоенному урона по ОЗ в конце своего хода."
+    "NAME": "Смертельная метка",
+    "DESCRIPTION": "Наносит !D! урона. NL Враг теряет ОЗ равное удвоенному урону по ОЗ в след. ходу."
   },
   "collector:ScorchingRay": {
     "NAME": "Палящие лучи",
-    "DESCRIPTION": "Наносит !D! урона случ. врагу X раз."
+    "DESCRIPTION": "Наносит !D! урона случ. врагу X раз(а)."
   },
   "collector:SeedOfDoubt": {
-    "NAME": "Зерно сомнения",
-    "DESCRIPTION": "Накладывает !M! collector:Порчи. NL Увеличивает свой эффект на !clm2!, если находится в руке, когда Сжигается карта." //unfinished
+    "NAME": "Семя сомнения",
+    "DESCRIPTION": "Накладывает !M! collector:Порчи. NL Увеличивает кол-во *Порчи на !clm2!, если находится в руке, когда *Сжигается карта."
   },
   "collector:ShadowDaggers": {
     "NAME": "Теневые кинжалы",
@@ -339,7 +339,7 @@
     "EXTENDED_DESCRIPTION": [
       " NL (Наносит урон ",
       " раз.)",
-      " раз(а).)" //unfinished
+      " раз(а).)"
     ]
   },
   "collector:SomberShield": {
@@ -347,26 +347,26 @@
     "DESCRIPTION": "collector:Пиромант. NL Даёт !B! Защиты. NL Добавляет в руку копию *Сожжённой карты в след. ходу."
   },
   "collector:SoulSnare": {
-    "NAME": "Soul Snare", //unfinished
-    "DESCRIPTION": "Накладывает !M! collector:Doom. NL Сжигается."
+    "NAME": "Ловец душ",
+    "DESCRIPTION": "Накладывает !M! collector:Порчи. NL Сжигается."
   },
   "collector:Soulforge": {
-    "NAME": "Soulforge",
-    "DESCRIPTION": "Вы берёте Коллекционную карту и добавляете в руку !М! её Улучшеннную копию. NL Сжигается.", //unfinished
-    "UPGRADE_DESCRIPTION": "Вы берёте Коллекционную карту и добавляете в руку !М! её Улучшеннных копии. NL Сжигается." //unfinished
+    "NAME": "Кузница душ",
+    "DESCRIPTION": "Вы берёте Коллекционную карту и добавляете в руку !М! её Улучшеннную копию. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Вы берёте Коллекционную карту и добавляете в руку !М! её Улучшеннных копии. NL Сжигается."
   },
   "collector:Spark": {
     "NAME": "Искра",
-    "DESCRIPTION": "Даёт 1 collector:Резерва. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Даёт 1 collector:Резерва. NL Вы берёте карту. NL Сжигается."
+    "DESCRIPTION": "Даёт 1 collector:Резерв. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Даёт 1 collector:Резерв. NL Вы берёте 1 карту. NL Сжигается."
   },
   "collector:SpiritLeech": {
-    "NAME": "Spirit Leech", //unfinished
+    "NAME": "Духовный вампир",
     "DESCRIPTION": "Наносит !D! урона. NL Даёт !B! Защиты, если враг collector:Сокрушён."
   },
   "collector:StashAway": {
     "NAME": "В дальний ящик",
-    "DESCRIPTION": "Даёт !B! Защиты X раз. NL Даёт X collector:Резерва в след. ходу. NL Сжигается."
+    "DESCRIPTION": "Даёт !B! Защиты X раз(а). NL Даёт X collector:Резерва в след. ходу. NL Сжигается."
   },
   "collector:Strike": {
     "NAME": "Удар",
@@ -381,45 +381,45 @@
     "DESCRIPTION": "Накладывает !M! collector:Порчи, когда вы накладываете Слабость или Уязвимость на врага."
   },
   "collector:SunbloomKindling": {
-    "NAME": "Sunbloom Kindling", //unfinished
-    "DESCRIPTION": "Неиграбельная. NL Даёт !M! Силы и добавляет в руку 2 *Уголька, когда Сжигается.",
+    "NAME": "Брусок древа подсолнуха",
+    "DESCRIPTION": "Неиграбельная. NL Даёт !M! Силы и добавляет в руку 2 *Уголька, когда *Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Сначала нужно зажечь этот брусок."
     ]
   },
   "collector:ThornWhip": {
-    "NAME": "Thorn Whip", //unfinished
-    "DESCRIPTION": "Наносит !D! урона и накладывает !M! hermit:Травмы на ВСЕХ врагов. NL Добавляет в руку *Заточку." //unfinished
+    "NAME": "Терновый кнут",
+    "DESCRIPTION": "Наносит !D! урона и накладывает !M! hermit:Травмы на ВСЕХ врагов. NL Добавляет в руку *Заточку."
   },
   "collector:Torchbearer": {
-    "NAME": "Torchbearer", //unfinished
-    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Сжигается, если у вас есть expansioncontent:Временное_ОЗ. NL Даёт !M! expansioncontent:Временного_ОЗ."
-  },
-  "collector:VoidArmor": {
-    "NAME": "Броня бездны",
-    "DESCRIPTION": "Даёт ВСЕМ !B! Защиты и 1 expansioncontent:Неуловимости." //unfinished
+    "NAME": "Факелоносец",
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временных_ОЗ. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Сжигается, если у вас есть expansioncontent:Временные_ОЗ. NL Даёт !M! expansioncontent:Временных_ОЗ."
   },
   "collector:WhirlingFlame": {
     "NAME": "Пламенный вихрь",
     "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. NL Вы кладёте карту из стопки сброса на верх стопки добора."
   },
-  "collector:Whomp": {
-    "NAME": "Хлёст",
-    "DESCRIPTION": "Наносит !D! урона. NL Даёт !M! expansioncontent:Временного_ОЗ. NL Сжигается."
+  "collector:VoidArmor": {
+    "NAME": "Броня бездны",
+    "DESCRIPTION": "Даёт ВСЕМ !B! Защиты и 1 expansioncontent:Неуловимость."
   },
   "collector:Wildfire": {
     "NAME": "Дикое пламя",
-    "DESCRIPTION": "Наносит !D! урона за каждый отриц. эффект на враге." //unfinished
+    "DESCRIPTION": "Наносит !D! урона за каждый вид отриц. эффекта на враге."
   },
   "collector:YouAreMine": {
-    "NAME": "Ты принадлежишь мне!",
+    "NAME": "ТЫ МОЙ!",
     "DESCRIPTION": "Накладывает !M! Слабости. NL Накладывает !M! Уязвимости. Накладывает !clm2! collector:Порчи."
-  }, //COLLECTIBLES BELOW
+  },
+  "collector:Whomp": {
+    "NAME": "Хлёст",
+    "DESCRIPTION": "Наносит !D! урона. NL Даёт !M! expansioncontent:Временных_ОЗ. NL Сжигается."
+  },
   "collector:AcidSlimeCard": {
     "NAME": "Едкий слизень",
     "DESCRIPTION": "Добавляет в руку !M! случ. карту стоимостью 0.",
-    "UPGRADE_DESCRIPTION": "Добавляет в руку !M! случ. карты стоимостью 0."
+    "UPGRADE_DESCRIPTION": "Добавляет в руку !M! случ. карт(ы) стоимостью 0."
   },
   "collector:AugmenterCard": {
     "NAME": "Усилитель",
@@ -427,19 +427,19 @@
   },
   "collector:BearCard": {
     "NAME": "Медведь",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Сбивает всю Защиту врага. NL Наносит !D! урона."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Снимает всю Защиту врага. NL Наносит !D! урона."
   },
   "collector:BlueSlaverCard": {
-    "NAME": "Работорговец (в синем)",
-    "DESCRIPTION": "Наносит !D! урона. NL Накладывает 1 Силы. NL Удваивает наложенную на врага Слабость."
+    "NAME": "Работорговец в синем",
+    "DESCRIPTION": "Наносит !D! урона. NL Накладывает 1 Слабость. NL Удваивает наложенную на врага Слабость."
   },
   "collector:BonfireSpiritsCard": {
     "NAME": "Духи костра",
-    "DESCRIPTION": "collector:Пиромант. NL Восполняет !M! ОЗ. NL Увеличивает Макс. ОЗ на 1, когда Сжигает Редкую карту." //unfinished
+    "DESCRIPTION": "collector:Пиромант. NL Восполняет !M! ОЗ. NL Увеличивает макс. ОЗ на 1, когда *Сжигает Редкую карту."
   },
   "collector:BookOfStabbingCard": {
     "NAME": "Истыклопедия",
-    "DESCRIPTION": "Накладывает !M! collector:Порчи, когда вы наносите урон по ОЗ."
+    "DESCRIPTION": "Накладывает !M! collector:Порчи, когда вы наносите урон по ОЗ врага."
   },
   "collector:BronzeOrbCard": {
     "NAME": "Сфера",
@@ -459,11 +459,11 @@
   },
   "collector:ClericCard": {
     "NAME": "Клирик",
-    "DESCRIPTION": "collector:Пиромант. NL Даёт !M! expansioncontent:Временного_ОЗ."
+    "DESCRIPTION": "collector:Пиромант. NL Даёт !M! expansioncontent:Временных_ОЗ."
   },
   "collector:CultistCard": {
     "NAME": "Культист",
-    "DESCRIPTION": "collector:Пиромант. NL Даёт 1 Силы в начале след. 3 ходов."
+    "DESCRIPTION": "collector:Пиромант. NL Даёт 1 Силу в начале след. 3 ходов."
   },
   "collector:DaggerCard": {
     "NAME": "Кинжал",
@@ -473,20 +473,20 @@
     "NAME": "Темныши",
     "DESCRIPTION": "collector:Пиромант. NL Наносит !D! урона. expansioncontent:Воскрешает Коллекционную карту.",
     "EXTENDED_DESCRIPTION": [
-      "Воскресить и получить 2 её копии." //unfinished
+      "Воскресить и получить 2 её копии."
     ]
   },
   "collector:DesignerInSpireCard": {
     "NAME": "Дизайнер Шпиль-ка",
-    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ. NL collector:Пламяголовый получает: \"Вы берёте 1 карту.\""
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временных_ОЗ. NL collector:Пламяголовый получает: «Вы берёте 1 карту.»"
   },
   "collector:FinalBossCard": {
-    "NAME": "Эндшпиль", //extra pun here xD
-    "DESCRIPTION": "Сбивает Непобедимость и hermit:Оглушает врага. NL Сжигается."
+    "NAME": "Эндшпиль",
+    "DESCRIPTION": "Снимает Непобедимость и hermit:Оглушает врага. NL Сжигается."
   },
   "collector:FaceTraderCard": {
     "NAME": "Торговец лицами",
-    "DESCRIPTION": "Добавляет в руку !M! карты случ. цвета. NL Они становятся Эфирными." //unfinished
+    "DESCRIPTION": "Добавляет в руку !M! случ. цветных карт(ы). NL Они становятся Эфирными."
   },
   "collector:FatGremlinCard": {
     "NAME": "Толстый гремлин",
@@ -494,7 +494,7 @@
   },
   "collector:FungiBeastCard": {
     "NAME": "Грибной паразит",
-    "DESCRIPTION": "Накладывает !M! Уязвимости. NL Накладывает 1 Уязвимости на ВСЕХ врагов."
+    "DESCRIPTION": "Накладывает !M! Уязвимости. NL Накладывает 1 Уязвимость на ВСЕХ врагов."
   },
   "collector:GiantHeadCardStageOne": {
     "NAME": "Тик",
@@ -502,15 +502,15 @@
   },
   "collector:GiantHeadCardStageTwo": {
     "NAME": "Так",
-    "DESCRIPTION": "Добавляет в руку *Огромную *голову в след. ходу." //unfinished
+    "DESCRIPTION": "Добавляет в руку *Огромную *голову в след. ходу."
   },
   "collector:GiantHeadCardStageThree": {
-    "NAME": "Огромная голова", //unfinished
+    "NAME": "Огромная голова",
     "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам."
   },
   "collector:GremlinLeaderCard": {
-    "NAME": "Предводитель гремлинов",
-    "DESCRIPTION": "Добавляет в руку !M! случ. Коллекционных карт Гремлинов." //unfinished
+    "NAME": "Лидер гремлинов",
+    "DESCRIPTION": "Добавляет в руку !M! случ. Коллекционных карт(ы) Гремлинов."
   },
   "collector:GremlinNobCard": {
     "NAME": "Гремлин-верзила",
@@ -518,31 +518,31 @@
   },
   "collector:GremlinWizardCard": {
     "NAME": "Гремлин-маг",
-    "DESCRIPTION": "Даёт !M! Бодрости и 1 collector:Резерва в след. ходу."
+    "DESCRIPTION": "Даёт !M! Бодрости и 1 collector:Резерв в след. ходу."
   },
   "collector:JawWormCard": {
     "NAME": "Зубастый червь",
     "DESCRIPTION": "Даёт !B! Защиты. NL Даёт !M! Силы."
   },
   "collector:JousterCard": {
-    "NAME": "Рыцарь с копьём", //unfinished
-    "DESCRIPTION": "Наносит !D! урона. NL Даёт !B! Защиты, если вы сражаетесь с одним врагом." //unfinished
+    "NAME": "Рыцарь с копьём",
+    "DESCRIPTION": "Наносит !D! урона. NL Даёт !B! Защиты, если вы сражаетесь с одним врагом."
   },
   "collector:LagavulinCard": {
     "NAME": "Лагавулин",
     "DESCRIPTION": "ВСЕ враги теряют !M! Силы."
   },
   "collector:LivingWallCard": {
-    "NAME": "Живая изгородь", //unfinished
+    "NAME": "Живая стена",
     "DESCRIPTION": "collector:Пиромант. NL Добавляет в руку случ. Улучшенную карту. NL Она стоит 0, пока не разыграна."
   },
   "collector:LouseCard": {
     "NAME": "Вошь",
-    "DESCRIPTION": "Даёт 1 bronze:Неуловимости. NL Даёт !B! Защиты при след. потере ОЗ от атак."
+    "DESCRIPTION": "Даёт 1 bronze:Неуловимость. NL Даёт !B! Защиты при след. потере ОЗ от атак."
   },
   "collector:MadGremlinCard": {
-    "NAME": "Безумный гремлин", //unfinished
-    "DESCRIPTION": "Даёт !M! временной Силы."
+    "NAME": "Безумный гремлин",
+    "DESCRIPTION": "Даёт !M! Временной Силы."
   },
   "collector:MawCard": {
     "NAME": "Пасть",
@@ -550,24 +550,24 @@
   },
   "collector:MerchantCard": {
     "NAME": "Торговец",
-    "DESCRIPTION": "Добавляет в руку !M! случ. Бесцветных карт. NL Они стоят 0 в этом ходу."
+    "DESCRIPTION": "Добавляет в руку !M! случ. Бесцветных карт(ы). NL Они стоят 0 в этом ходу."
   },
   "collector:MushroomCard": {
     "NAME": "Гриб",
-    "DESCRIPTION": "Наносит !D! урона. NL Накладывает !M! Слабости или Уязвимости." //unfinished
+    "DESCRIPTION": "Наносит !D! урона. NL Накладывает !M! Слабости или Уязвимости случ. образом."
   },
   "collector:MysticCard": {
     "NAME": "Жрица",
-    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ."
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временных_ОЗ."
+  },
+  "collector:NemesisCard": {
+    "NAME": "Немезис",
+    "DESCRIPTION": "Даёт 1 Неосязаемость."
   },
   "collector:NlothCard": {
     "NAME": "Н'лот",
     "DESCRIPTION": "collector:Пиромант. NL Добавляет в руку случ. Редкую карту. NL Она стоит на 1 меньше.",
     "UPGRADE_DESCRIPTION": "collector:Пиромант. NL Добавляет в руку случ. Редкую карту. NL Она стоит 0."
-  },
-  "collector:NemesisCard": {
-    "NAME": "Немезис",
-    "DESCRIPTION": "Даёт 1 Неосязаемости."
   },
   "collector:OrbWalkerCard": {
     "NAME": "Сфероход",
@@ -579,19 +579,19 @@
   },
   "collector:RanwidCard": {
     "NAME": "Ранвид",
-    "DESCRIPTION": "Вы получаете зелье и *доп. *карту в награду, в конце боя."
+    "DESCRIPTION": "Вы получаете зелье и доп. карту в награду, в конце боя."
   },
   "collector:RedSlaverCard": {
-    "NAME": "Работорговец (в красном)",
-    "DESCRIPTION": "Враг теряет !M! Силы до конца своего хода."
+    "NAME": "Работорговец в красном",
+    "DESCRIPTION": "Враг теряет !M! Силы в этом ходу."
   },
   "collector:ReptomancerCard": {
     "NAME": "Жрица змеи",
-    "DESCRIPTION": "Даёт !M! expansioncontent:Временного_ОЗ. NL collector:Пламяголовый получает: \"Накладывает !clm2! Яда на случ. врага\"."
+    "DESCRIPTION": "Даёт !M! expansioncontent:Временных_ОЗ. NL collector:Пламяголовый получает «Накладывает !clm2! Яда на случ. врага»."
   },
   "collector:RepulsorCard": {
     "NAME": "Отвратник",
-    "DESCRIPTION": "collector:Пиромант. NL Вы берёте !M! карты."
+    "DESCRIPTION": "collector:Пиромант. NL Вы берёте !M! карт(ы)."
   },
   "collector:RomeoCard": {
     "NAME": "Ромео",
@@ -599,15 +599,15 @@
   },
   "collector:ScrapOozeCard": {
     "NAME": "Слизень-барахольщик",
-    "DESCRIPTION": "collector:Пиромант. NL Отнимает 3 ОЗ. NL Добавляет в руку !M! случ. Атаки. NL Они стоят 0 в этом ходу."
+    "DESCRIPTION": "collector:Пиромант. NL Отнимает 3 ОЗ. NL Добавляет в руку !M! случ. Атак(и). NL Они стоят 0 в этом ходу."
   },
   "collector:SentryCard": {
     "NAME": "Часовой",
-    "DESCRIPTION": "Наносит !D! урона. NL Накладывает !M! Слабости. NL Дважды, если среди Сожжённых карт есть *Часовой." //unfinished
+    "DESCRIPTION": "Наносит !D! урона. NL Накладывает !M! Слабости. NL Если среди Сожжённых карт есть *Часовой, эффект удваивается."
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Панцирный паразит",
-    "DESCRIPTION": "Даёт !M! Панциря."
+    "DESCRIPTION": "Даёт !M! expansioncontent:Брони_из_пластин."
   },
   "collector:ShieldGremlinCard": {
     "NAME": "Гремлин-щитоносец",
@@ -623,7 +623,7 @@
   },
   "collector:SneckoCard": {
     "NAME": "Змекко",
-    "DESCRIPTION": "Вы берёте !M! карты. NL sneckomod:Спутывает все карты в руке."
+    "DESCRIPTION": "Вы берёте !M! карт(ы). NL sneckomod:Спутывает все карты в руке."
   },
   "collector:SphericGuardianCard": {
     "NAME": "Сферический страж",
@@ -658,7 +658,7 @@
     "DESCRIPTION": "Накладывает !clm2! collector:Порчи. NL Наносит !D! урона. NL Даёт !M! Силы."
   },
   "collector:ThievesCard": {
-    "NAME": "Грабители", //unfinished
+    "NAME": "Грабители",
     "DESCRIPTION": "Вы получаете на !M! урона меньше от атак в этом ходу."
   },
   "collector:TorchHeadCard": {
@@ -679,22 +679,22 @@
   },
   "collector:WrithingMassCard": {
     "NAME": "Извивающаяся масса",
-    "DESCRIPTION": "Вы Предсказываете !M! карты. NL Вы разыгрываете карту с верха стопки добора."
+    "DESCRIPTION": "Вы Предсказываете !M! карт(ы). NL Вы разыгрываете карту с верха стопки добора."
   },
   "collector:DefaultCollectibleCard": {
-    "NAME": "Бездушная оболочка", //unfinished
-    "DESCRIPTION": "Эта сущность ещё не является частью Коллекции! NL Даёт !M! Силы и Ловкости." //unfinished
+    "NAME": "Бездушная оболочка", 
+    "DESCRIPTION": "Эта сущность ещё не является частью Коллекции! NL Даёт !M! Силы и Ловкости."
   },
   "collector:ShootingStar": {
     "NAME": "Падающая звезда",
-    "DESCRIPTION": "При первом разыгрывании Атаки collector:Пироманта за ход, добавляет в руку её копию. NL Она стоит 0, пока не разыграна." //unfinished
+    "DESCRIPTION": "При первом разыгрывании Атаки collector:Пироманта за ход, добавляет в руку её копию. NL Она стоит 0, пока не разыграна."
   },
   "collector:CollectorCard": {
     "NAME": "Уроборос",
-    "DESCRIPTION": "collector:Пиромант. NL Накладывает !M! Слабости. NL Накладывает !M! Уязвимости. NL Даёт !clm2! expansioncontent:Временного_ОЗ."
+    "DESCRIPTION": "collector:Пиромант. NL Накладывает !M! Слабости. NL Накладывает !M! Уязвимости. NL Даёт !clm2! expansioncontent:Временных_ОЗ."
   },
   "collector:Sapped": {
     "NAME": "Истощение",
-    "DESCRIPTION": "collector:Пиромант. NL Не может быть удалена из колоды. NL Сжигается."
+    "DESCRIPTION": "collector:Пиромант. NL При получении, вы теряете [E] . NL Сжигается. NL Не может быть удалена из колоды."
   }
 }

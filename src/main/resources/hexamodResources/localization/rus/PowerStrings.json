@@ -6,13 +6,13 @@
       "Вы не #yПродвигаетесь в конце следующих #b",
       " ходов."
     ],
-    "TRANSLATOR_NOTE": "DEPRECATED"
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:ApocalypticArmorPower": {
     "NAME": "Судный день",
     "DESCRIPTIONS": [
       "В след. раз, когда вы #yЗажжёте #b",
-      " Огоньков, вы получите дополнительный ход.",
+      " Огонька(ов), вы получите дополнительный ход.",
       "В след. раз, когда вы #yЗажжёте не менее #b"
     ]
   },
@@ -20,56 +20,56 @@
     "NAME": "Пламя с задержкой",
     "DESCRIPTIONS": [
       "Накладывает #b",
-      " #yОжога души на ВСЕХ врагов, в начале вашего след. хода."
+      " #yОжога #yдуши на ВСЕХ врагов, в начале вашего след. хода."
     ],
-    "TRANSLATOR_NOTE": "DEPRECATED"
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:BurnPerTurnPower": {
     "NAME": "Раскалённый металл",
     "DESCRIPTIONS": [
       "Накладывает #b",
-      " #yОжога #yдуши на этого врага, когда #yОжог #yдуши срабатывает."
+      " #yОжога #yдуши на этого врага, когда #yОжог #yдуши срабатывает на нём."
     ],
-    "TRANSLATOR_NOTE": "DEPRECATED"
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:BurnPower": {
     "NAME": "Ожог души",
     "DESCRIPTIONS": [
       "Через #b",
-      " хода, потеряет #b",
+      " хода(-ов), потеряет #b",
       " ход, потеряет #b",
       " ОЗ, затем снимет этот эффект."
-    ],
-    "TRANSLATOR_NOTE": "DEPRECATED"
+    ]
   },
   "hexamod:BurnvenomPower": {
     "NAME": "Стихийный огонь",
     "DESCRIPTIONS": [
       "Накладывает #b",
-      " #yОжога #yдуши, когда вы наносите урон по ОЗ врага."
-    ]
+      " #yОжога #yдуши, когда вы наносите урон по ОЗ врага [REMOVE_SPACE]."
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:CommonPostCombatPower": {
     "NAME": "Награда за печать: Карта",
     "DESCRIPTIONS": [
       "Вы получите #b",
-      " доп. карт(ы) в конце боя.",
-      " доп. карту в конце боя."
+      " доп. обычные(-ых) карт(ы) в конце боя.",
+      " доп. обычную карту в конце боя."
     ]
   },
   "hexamod:CrispyPower_new": {
     "NAME": "Хрустящая корочка",
     "DESCRIPTIONS": [
       "Накладывает #b",
-      " #yОжога #yдуши, после его срабатывания на враге."
+      " #yОжога #yдуши на этого врага, когда #yОжог #yдуши срабатывает на нём."
     ]
   },
   "hexamod:EnhancePower": {
     "NAME": "Интенсивность",
     "DESCRIPTIONS": [
-      "Увеличивает кол-во урона, #yОжога #yдуши и #yЗащиты, накладываемых Огоньками при #yЗажигании на #b",
-      ".",
-      "Уменьшает кол-во урона, #yОжога #yдуши и #yЗащиты, накладываемых Огоньками при #yЗажигании на #b",
+      "Увеличивает кол-во урона, #yОжога #yдуши и #yЗащиты [REMOVE_SPACE], накладываемых Огоньками при #yЗажигании на #b",
+      " [REMOVE_SPACE].",
+      "Уменьшает кол-во урона, #yОжога #yдуши и #yЗащиты [REMOVE_SPACE], накладываемых Огоньками при #yЗажигании на #b",
       "Имеет двойную эффективность для Жгучих Привидений Пламени."
     ]
   },
@@ -79,20 +79,20 @@
       "Даёт ",
       ", когда вы разыгрываете #yЭфирную карту в этом ходу."
     ],
-    "TRANSLATOR_NOTE": "DEPRECATED"
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:FuturePower": {
     "NAME": "В тенях",
     "DESCRIPTIONS": [
       "След. #b",
-      " разыгрываемая карта стоит #b0 и #yСжигается, когда вы #yОткатываете Огонёк.",
-      " разыгрываемые карты стоят #b0 и #yСжигаются, когда вы #yОткатываете Огонёк."
+      " разыгрываемая карта стоит #b0 и #yСжигается [REMOVE_SPACE], когда вы #yОткатываете Огонёк [REMOVE_SPACE].",
+      " разыгрываемые карты стоят #b0 и #yСжигаются [REMOVE_SPACE], когда вы #yОткатываете Огонёк [REMOVE_SPACE]."
     ]
   },
   "hexamod:FutureUpgradePower": {
     "NAME": "Награда за печать: Улучшение",
     "DESCRIPTIONS": [
-      "Вы улучшите #b",
+      "Вы #yУлучшите #b",
       " случ. карту в вашей колоде, в конце боя.",
       " случ. карты в вашей колоде, в конце боя."
     ]
@@ -109,10 +109,10 @@
       "Накладывает #b",
       " #yОжога #yдуши в ответ на каждую атаку в этом ходу."
     ],
-    "TRANSLATOR_NOTE": "DEPRECATED"
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:GiftsFromBeyondPower": {
-    "NAME": "Дары извне",
+    "NAME": "Подарочные карты",
     "DESCRIPTIONS": [
       "В начале вашего хода добавляет в руку #b",
       " случ. карту с #yПосмертием.",
@@ -123,25 +123,25 @@
     "NAME": "Награда за печать: Золото",
     "DESCRIPTIONS": [
       "Вы получите на #b",
-      " доп. золота больше, в качестве награды, в конце боя."
+      " золота больше в качестве награды в конце боя."
     ]
   },
   "hexamod:HexalevelPower": {
     "NAME": "Адская Форма",
     "DESCRIPTIONS": [
       "Даёт #b",
-      " #yИнтенсивности в начале вашего хода."
+      " #yИнтенсивности в начале вашего хода [REMOVE_SPACE]."
     ]
   },
   "hexamod:LoseEnhanceInTurnsPower": {
     "NAME": "Перегрев",
     "DESCRIPTIONS": [
-      "Отнимает #b",
+      "В конце вашего хода, отнимает #b",
       "Через #b",
       " хода(-ов), отнимает #b",
-      " #yИнтенсивности в конце вашего хода."
+      " #yИнтенсивности [REMOVE_SPACE]."
     ],
-    "TRANSLATOR_NOTE": "DEPRECATED"
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:ParanormalFormPower": {
     "NAME": "Полтергейст",
@@ -162,16 +162,15 @@
     "NAME": "Награда за печать: Зелье",
     "DESCRIPTIONS": [
       "Вы получите #b",
-      " доп. Зелья в конце боя.",
-      " доп. Зелье в конце боя."
-    ],
-    "TRANSLATOR_NOTE": "DEPRECATED"
+      " зелья в конце боя.",
+      " зелье в конце боя."
+    ]
   },
   "hexamod:RadiantPower": {
     "NAME": "Сияющее пламя",
     "DESCRIPTIONS": [
       "Даёт #b",
-      " #yЗащиты, когда вы #yЗажигаете Огонёк."
+      " #yЗащиты, когда вы #yЗажигаете Огонёк [REMOVE_SPACE]."
     ]
   },
   "hexamod:SealPostCombatPower": {
@@ -180,14 +179,15 @@
       "Вы получите #b",
       " доп. #yПечати в конце боя.",
       " доп. #yПечать в конце боя."
-    ]
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:TimeStopPower": {
     "NAME": "Судный день",
     "DESCRIPTIONS": [
-      "Вы начинаете доп. ход, когда заканчивается текущий.",
-      "Вы начинаете доп. #b",
-      " хода, когда заканчивается текущий."
+      "Вы начинаете след. ход сразу как заканчивается текущий.",
+      "Вы начинаете след. #b",
+      " хода(-ов) сразу как заканчивается текущий."
     ]
   },
   "hexamod:VolcanoVisagePower": {
@@ -206,44 +206,44 @@
   "hexamod:GainEnergyAtStartOfTurnPower": {
     "NAME": "Больше энергии",
     "DESCRIPTIONS": [
-      "В начале вашего хода, вы получите доп. "
+      "В начале вашего хода, вы получите "
     ]
   },
   "hexamod:SoulburnOnExhaustPower": {
     "NAME": "Заражение души",
     "DESCRIPTIONS": [
       "Накладывает #b",
-      " #yОжога #yдуши на данного врага, когда вы #yСжигаете карту в этом ходу."
+      " #yОжога #yдуши на этого врага, когда вы #yСжигаете карту в этом ходу."
     ]
   },
   "hexamod:LoseIntensityPower": {
-    "NAME": "Снижение Интенсивности",
+    "NAME": "Снижение интенсивности",
     "DESCRIPTIONS": [
       "Отнимает #b",
-      " #yИнтенсивности в конце этого хода."
+      " #yИнтенсивности в конце этого хода [REMOVE_SPACE]."
     ]
   },
   "hexamod:MaxHPPostCombatPower": {
-    "NAME": "Награда за печать: Макс. ОЗ",
+    "NAME": "Награда за печать: макс. ОЗ",
     "DESCRIPTIONS": [
       "Вы получите #b",
-      " Макс. ОЗ в конце боя."
+      " макс. ОЗ в конце боя."
     ]
   },
   "hexamod:InfernoPotionPower": {
-    "NAME": "Адское зелье",
+    "NAME": "Гекс-огонь",
     "DESCRIPTIONS": [
       "Огоньки действуют на ВСЕХ врагов до конца боя.",
       "Огоньки действуют на ВСЕХ врагов #b",
-      " раза до конца боя."
+      " раз(а) до конца боя."
     ]
   },
   "hexamod:PlayCardAndExhaustPower": {
     "NAME": "Теневой Сдвиг",
     "DESCRIPTIONS": [
-      "Ваша следующая карта разыгрывается бесплатно, затем Сжигается.",
+      "Ваша следующая карта разыгрывается бесплатно, затем Сжигается [REMOVE_SPACE].",
       "Ваши следующие #b",
-      "карт разыгрываются бесплатно, затем Сжигаются."
+      " карт(ы) разыгрываются бесплатно, затем Сжигаются [REMOVE_SPACE]."
     ]
   }
 }

@@ -29,8 +29,8 @@
   },
   "Guardian:Gem_Orange": {
     "NAME": "Цитрин",
-    "DESCRIPTION": "guardianmod:Самоцвет. NL Даёт [E].",
-    "UPGRADE_DESCRIPTION": "Даёт [E]."
+    "DESCRIPTION": "guardianmod:Самоцвет. NL Даёт [E] .",
+    "UPGRADE_DESCRIPTION": "Даёт [E] ."
   },
   "Guardian:Gem_Cyan": {
     "NAME": "Аквамарин",
@@ -43,8 +43,8 @@
   },
   "Guardian:DonusPower": {
     "NAME": "Перегрузка",
-    "DESCRIPTION": "Вы берёте !M! карты. NL Вы возьмёте на 2 карты меньше в след. ходу.",
-    "UPGRADE_DESCRIPTION": "Вы берёте !M! карты. NL Вы возьмёте на 2 карты меньше в след. ходу. NL Уменьшает каждый из ваших отриц. эффектов на 1."
+    "DESCRIPTION": "Вы берёте !M! карт(ы). NL Уменьшает каждый отриц. эффект на 1.",
+    "UPGRADE_DESCRIPTION": "Вы берёте !M! карт(ы). NL Уменьшает каждый отриц. эффект на 1."
   },
   "Guardian:DecasProtection": {
     "NAME": "Древняя сила",
@@ -52,11 +52,11 @@
   },
   "Guardian:FierceBash": {
     "NAME": "Яростный удар",
-    "DESCRIPTION": "Наносит !D! урона. NL Помещается в guardianmod:Стазис. NL guardianmod:Тик - Увеличивает свой урон на !M! в этом бою."
+    "DESCRIPTION": "Наносит !D! урона. NL Помещается в guardianmod:Стазис. NL guardianmod:Тик - Увеличивает свой урон на !M!."
   },
   "Guardian:PolyBeam": {
     "NAME": "Рассеивающий луч",
-    "DESCRIPTION": "{@@}Наносит !D! урона случ. врагу !M! раз{!M!|&4=а.|&5=.}"
+    "DESCRIPTION": "Наносит !D! урона случ. врагу !M! раз(а)."
   },
   "Guardian:TwinSlam": {
     "NAME": "Первый бросок",
@@ -65,7 +65,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Вихрь",
-    "DESCRIPTION": "{@@}Требует не менее 20 Защиты. NL Наносит !D! урона ВСЕМ врагам !M! раз{!M!|&4=а|&5=}.",
+    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам 2 раза. NL Если у вас 16 или больше Защиты, наносит урон ещё !M! раз(а).",
     "EXTENDED_DESCRIPTION": [
       "Требуется больше Защиты."
     ]
@@ -86,10 +86,10 @@
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "Гига-луч",
-    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. Сила влияет на эту карту !M! раза. NL Вы пропускаете след. ход."
+    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. Сила влияет на эту карту !M! раз(а). NL Вы пропускаете след. ход."
   },
   "Guardian:BronzeArmor": {
-    "NAME": "Эластичная пластина",
+    "NAME": "Гибкая пластина",
     "DESCRIPTION": "Уменьшает каждый из ваших отриц. эффектов на !M!. NL guardianmod:Подготовка 8. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Уменьшает каждый из ваших отриц. эффектов на !M!. NL guardianmod:Подготовка 8."
   },
@@ -99,7 +99,7 @@
   },
   "Guardian:OrbSlam": {
     "NAME": "Залп сфер",
-    "DESCRIPTION": "Наносит !D! урона !GuardianMulti! раза. NL Сжигается."
+    "DESCRIPTION": "Наносит !D! урона !GuardianMulti! раз(а). NL Сжигается."
   },
   "Guardian:Incinerate": {
     "NAME": "Поджечь",
@@ -113,8 +113,8 @@
   },
   "Guardian:WalkerClaw": {
     "NAME": "Исполосовать",
-    "DESCRIPTION": "Наносит !D! урона !M! раза.",
-    "UPGRADE_DESCRIPTION": "Наносит !D! урона !M! раза."
+    "DESCRIPTION": "Наносит !D! урона !M! раз(а).",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона !M! раз(а)."
   },
   "Guardian:SphericShield": {
     "NAME": "Сферический щит",
@@ -122,7 +122,7 @@
   },
   "Guardian:Harden": {
     "NAME": "Укрепить",
-    "DESCRIPTION": "Требует не менее 20 Защиты. NL guardianmod:Подготовка !GuardianSecondM!. NL Даёт !M! Шипов.",
+    "DESCRIPTION": "Требует не менее 20 Защиты. NL guardianmod:Подготовка !GuardianSecondM! и даёт !M! Шипов.",
     "EXTENDED_DESCRIPTION": [
       "Требуется больше Защиты."
     ]
@@ -138,17 +138,17 @@
     "UPGRADE_DESCRIPTION": "Накладывает !M! Слабости. NL guardianmod:Подготовка 2. NL Помещает *Взрыв *Часового+ в guardianmod:Стазис. NL Сжигается."
   },
   "Guardian:CompilePackage": {
-    "NAME": "Скомпилировать",
-    "DESCRIPTION": "Выберите и получите 1 из 3 guardianmod:Паков. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Выберите и получите 1 из 3 Улучшенных guardianmod:Паков. NL Сжигается.",
+    "NAME": "Скомпилировать пак",
+    "DESCRIPTION": "Выберите guardianmod:Пак чтобы поместить в guardianmod:Стазис. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Выберите Улучшенный guardianmod:Пак чтобы поместить в guardianmod:Стазис. NL Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Выберите Пак."
     ]
   },
   "Guardian:PackageShapes": {
     "NAME": "Пак: Формы",
-    "DESCRIPTION": "Добавляет в руку *Часовую *бомбу, *Протокол *нападения и *Репульсор. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Добавляет в руку *Часовую *бомбу+, *Протокол *нападения+ и *Репульсор+. NL Сжигается."
+    "DESCRIPTION": "Добавляет в руку *Часовую *бомбу, *Протокол *ШИП и *Отвратник. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Добавляет в руку *Часовую *бомбу+, *Протокол *ШИП+ и *Отвратник+. NL Сжигается."
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "Пак: Древность",
@@ -172,8 +172,8 @@
   },
   "Guardian:PackageAutomaton": {
     "NAME": "Пак: Бронза",
-    "DESCRIPTION": "Добавляет в руку *Гига-луч, *Сферу *поддержки и *Эластичную *пластину. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Добавляет в руку *Гига-луч+, *Сферу *поддержки+ и *Эластичную *пластину+. NL Сжигается."
+    "DESCRIPTION": "Добавляет в руку *Гига-луч, *Сферу *поддержки и *Гибкую *пластину. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Добавляет в руку *Гига-луч+, *Сферу *поддержки+ и *Гибкую *пластину+. NL Сжигается."
   },
   "Guardian:PackageDefect": {
     "NAME": "Пак: Дефект",
@@ -190,8 +190,8 @@
   },
   "Guardian:Emergency": {
     "NAME": "Форс-мажор",
-    "DESCRIPTION": "Даёт guardianmod:Разгон, пока карта не выйдет из guardianmod:Стазиса. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Даёт guardianmod:Разгон, пока карта не выйдет из guardianmod:Стазиса."
+    "DESCRIPTION": "Даёт guardianmod:Разгон ВСЕМ картам в guardianmod:Стазисе. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Даёт guardianmod:Разгон ВСЕМ картам в guardianmod:Стазисе дважды. NL Сжигается."
   },
   "Guardian:Clone": {
     "NAME": "Клонировать",
@@ -200,43 +200,47 @@
   },
   "Guardian:Preprogram": {
     "NAME": "Предпрограмма",
-    "DESCRIPTION": "{@@}Показывает !M! карт{!M!|&4=ы|&7=} с верха стопки добора. Выберите одну из них и поместите в guardianmod:Стазис."
+    "DESCRIPTION": "Показывает !M! карт(ы) с верха стопки добора. Выберите одну из них и поместите в guardianmod:Стазис."
   },
   "Guardian:GemFinder": {
     "NAME": "Искатель cамоцветов",
-    "DESCRIPTION": "Вы сможете выбрать и добавить случ. Обычный guardianmod:Самоцвет в колоду, в конце боя."
+    "DESCRIPTION": "Эфирная. NL Вы сможете добавить случ. guardianmod:Самоцвет в колоду, в конце боя."
   },
   "Guardian:StasisField": {
     "NAME": "Стазисное поле",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Помещается в guardianmod:Стазис. NL Даёт !B! Защиты при выходе из guardianmod:Стазиса."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Помещается в guardianmod:Стазис."
+  },
+  "Guardian:Metallicize": {
+    "NAME": "Металлизация",
+    "DESCRIPTION": "Даёт !M! expansioncontent:Брони_из_пластин."
   },
   "Guardian:StasisStrike": {
     "NAME": "Стазисный удар",
-    "DESCRIPTION": "Наносит !D! урона. NL Даёт 1 слот для Стазиса."
+    "DESCRIPTION": "Наносит !D! урона. NL Даёт 1 слот для guardianmod:Стазиса."
   },
   "Guardian:FuturePlans": {
     "NAME": "Планы на будущее",
-    "DESCRIPTION": "Вы можете поместить !M! карту из руки в guardianmod:Стазис в конце каждого вашего хода.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Вы можете поместить !M! карту из руки в guardianmod:Стазис в конце каждого вашего хода."
+    "DESCRIPTION": "Вы можете поместить до !M! карт(ы) из руки в guardianmod:Стазис в конце каждого вашего хода.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL Вы можете поместить до !M! карт(ы) из руки в guardianmod:Стазис в конце каждого вашего хода."
   },
   "Guardian:Suspension": {
     "NAME": "Приостановить",
     "DESCRIPTION": "Даёт !B! Защиты. NL Помещает карту из руки в guardianmod:Стазис.",
-    "UPGRADE_DESCRIPTION": "Вы берёте карту. NL Помещает карту из руки в guardianmod:Стазис."
+    "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL Помещает карту из руки в guardianmod:Стазис."
   },
   "Guardian:FastForward": {
     "NAME": "Разогнаться",
-    "DESCRIPTION": "Даёт guardianmod:Разгон !M! раза.",
-    "UPGRADE_DESCRIPTION": "Оставляется. NL Даёт guardianmod:Разгон !M! раза."
+    "DESCRIPTION": "Даёт guardianmod:Разгон !M! раз(а).",
+    "UPGRADE_DESCRIPTION": "Оставляется. NL Даёт guardianmod:Разгон !M! раз(а)."
   },
   "Guardian:TimeCapacitor": {
     "NAME": "Конденсатор времени",
-    "DESCRIPTION": "Даёт !M! слот для Стазиса."
+    "DESCRIPTION": "Даёт !M! слот(а) для Стазиса."
   },
   "Guardian:ConstructionForm": {
     "NAME": "Облик конструкта",
-    "DESCRIPTION": "Эфирная. NL Даёт !M! Буфера. NL Даёт 1 Силы в начале каждого вашего хода, если у вас есть Буфер.",
-    "UPGRADE_DESCRIPTION": "Даёт !M! Буфера. NL Даёт 1 Силы в начале каждого вашего хода, если у вас есть Буфер."
+    "DESCRIPTION": "Эфирная. NL Даёт !M! guardianmod:Буфера. NL Даёт 1 Силу в начале каждого вашего хода, если у вас есть 1+ guardianmod:Буфер.",
+    "UPGRADE_DESCRIPTION": "Даёт !M! guardianmod:Буфера. NL Даёт 1 Силу в начале каждого вашего хода, если у вас есть 1+ guardianmod:Буфер."
   },
   "Guardian:RollAttack": {
     "NAME": "Круговая атака",
@@ -244,8 +248,8 @@
   },
   "Guardian:GemFire": {
     "NAME": "Самоцветная пушка",
-    "DESCRIPTION": "{@@}Вы сжигаете ВСЕ guardianmod:Самоцветы, включая guardianmod:Инкрустированные. Наносит !D! урона за каждый из них. Сжигается.",
-    "UPGRADE_DESCRIPTION": " NL (Наносит урон !M! раз{!M!|@=|&2,&3,&4=а|&12,&13,&14=}.)"
+    "DESCRIPTION": "Наносит !D! урона. NL Активирует ВСЕ ваши guardianmod:Самоцветы. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": " NL (У вас !M! Самоцвет(а).)"
   },
   "Guardian:ChargeCore": {
     "NAME": "Зарядка ядра",
@@ -257,11 +261,12 @@
   },
   "Guardian:PiercingHide": {
     "NAME": "Пластина с шипами",
-    "DESCRIPTION": "Даёт !B! Защиты и !M! временных Шипов. NL guardianmod:Подготовка 3."
+    "DESCRIPTION": "Даёт !B! Защиты и !M! временных Шипов. NL guardianmod:Подготовка 3.",
+    "UPGRADE_DESCRIPTION": "Даёт !B! Защиты и !M! временных Шипов. NL guardianmod:Подготовка 4."
   },
   "Guardian:ShieldSpikes": {
     "NAME": "Уйти в оборону",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Даёт !M! временных Шипов, если в guardianmod:Оборонительном_режиме. Если нет: guardianmod:Подготовка 8."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Даёт !M! временных Шипов, если в guardianmod:Оборонительном_режиме. guardianmod:Подготовка 8."
   },
   "Guardian:PrismaticBeam": {
     "NAME": "Призматический всплеск",
@@ -282,35 +287,36 @@
   },
   "Guardian:ExploitGems": {
     "NAME": "Разрядить самоцветы",
-    "DESCRIPTION": "Вы берёте карту.",
-    "UPGRADE_DESCRIPTION": "Даёт [E]. NL Вы берёте карту."
+    "DESCRIPTION": "Вы берёте карту."
   },
   "Guardian:RefractedBeam": {
     "NAME": "Преломляющий луч",
-    "DESCRIPTION": "{@@}Наносит !D! урона !M! раз{!M!|@=|&2,&3,&4=а|&12,&13,&14=}. NL Может быть улучшена любое кол-во раз."
+    "DESCRIPTION": "Наносит !D! урона !M! раз(а). NL Может быть улучшена любое кол-во раз. NL За каждое Улучшение +1:"
   },
   "Guardian:MultiBeam": {
     "NAME": "Мульти-луч",
-    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам X раз. NL guardianmod:Тик - Повышает свой урон на !M!."
+    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам X раз(а). NL guardianmod:Тик - Повышает свой урон на !M!."
   },
   "Guardian:BaubleBeam": {
     "NAME": "Сияющий взрыв",
-    "DESCRIPTION": "Наносит !D! урона. NL Повторяет !M! раза:"
+    "DESCRIPTION": "Наносит !D! урона. NL Выполняет !M! раз(а):"
   },
   "Guardian:PrimingBeam": {
-    "NAME": "Предупредительный выстрел",
+    "NAME": "Демонстрация силы",
     "DESCRIPTION": "Наносит !D! урона. NL guardianmod:Подготовка !M!."
   },
   "Guardian:EvasiveProtocol": {
-    "NAME": "Протокол неуловимости",
-    "DESCRIPTION": "Даёт !M! Ловкости, пока в guardianmod:Оборонительном_режиме. NL guardianmod:Подготовка 3 в начале каждого вашего хода."
+    "NAME": "Протокол уклонения",
+    "DESCRIPTION": "При переходе в guardianmod:Оборонительный_режим, уменьшает количество отриц. эффектов на !M!. NL guardianmod:Подготовка !GuardianSecondM!.",
+    "UPGRADE_DESCRIPTION": "При переходе в guardianmod:Оборонительный_режим, уменьшает количество отриц. эффектов на !M!. NL guardianmod:Подготовка !GuardianSecondM!."
   },
   "Guardian:SpikerProtocol": {
-    "NAME": "Протокол самозащиты",
-    "DESCRIPTION": "Даёт !M! Шипов, пока в guardianmod:Оборонительном_режиме. NL guardianmod:Подготовка 3 в начале каждого вашего хода."
+    "NAME": "Протокол ШИП",
+    "DESCRIPTION": "При переходе в guardianmod:Оборонительный_режим, даёт !M! Шип(ов). NL guardianmod:Подготовка !GuardianSecondM!.",
+    "UPGRADE_DESCRIPTION": "При переходе в guardianmod:Оборонительный_режим, даёт !M! Шип(ов). NL guardianmod:Подготовка !GuardianSecondM!."
   },
   "Guardian:ArmoredProtocol": {
-    "NAME": "Протокол непробиваемости",
+    "NAME": "Протокол защиты (Deprecated card do not TL!)",
     "DESCRIPTION": "Даёт !M! Защиты в конце вашего хода, пока в guardianmod:Оборонительном_режиме. NL guardianmod:Подготовка 3 в начале каждого вашего хода."
   },
   "Guardian:TimeSifter": {
@@ -320,8 +326,8 @@
   },
   "Guardian:AncientConstruct": {
     "NAME": "Древний конструкт",
-    "DESCRIPTION": "Если у вас нет Артефакта, даёт !M! Артефакт в начале каждого вашего хода.",
-    "UPGRADE_DESCRIPTION": "Даёт 2 Артефакт. NL Если у вас нет Артефакта, даёт !M! Артефакт в начале каждого вашего хода."
+    "DESCRIPTION": "Даёт 1 Артефакт. NL Если у вас нет Артефакта, даёт !M! Артефакт(а) в начале вашего хода.",
+    "UPGRADE_DESCRIPTION": "Даёт 1 Артефакт. NL Если у вас нет Артефакта, даёт !M! Артефакт(а) в начале вашего хода."
   },
   "Guardian:CrystalBeam": {
     "NAME": "Кристаллический луч",
@@ -366,21 +372,21 @@
     "DESCRIPTION": "Даёт !B! Защиты. NL Сжигается."
   },
   "Guardian:Repulse": {
-    "NAME": "Репульсор",
+    "NAME": "Отвратить",
     "DESCRIPTION": "Когда вы впервые за ход берёте карту Статуса или Проклятия, она Сжигается и вы берёте карту.",
     "UPGRADE_DESCRIPTION": "Когда вы впервые за ход берёте карту Статуса или Проклятия, она Сжигается и вы берёте карту."
   },
   "Guardian:BronzeOrb": {
     "NAME": "Сфера поддержки",
-    "DESCRIPTION": "Начальная. NL Наносит !D! урона. Помещает случ. карту из стопки добора в guardianmod:Стазис. NL Сжигается."
+    "DESCRIPTION": "Наносит !D! урона. NL guardianmod:Подготовка на количество нанесённого урона по ОЗ врага. NL Сжигается."
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Протокол мести",
-    "DESCRIPTION": "Даёт !M! Силы, пока в guardianmod:Оборонительном_режиме. NL guardianmod:Подготовка !GuardianSecondM! в начале каждого вашего хода."
+    "DESCRIPTION": "Даёт !M! Силы при переходе в guardianmod:Оборонительный_режим. NL guardianmod:Подготовка !GuardianSecondM! в начале вашего хода."
   },
   "Guardian:GatlingBeam": {
     "NAME": "Лазерная турель",
-    "DESCRIPTION": "{@@}Наносит !D! урона. NL Помещается в guardianmod:Стазис на !M! ход{!M!|&4=а|&5=ов}. NL guardianmod:Тик - Наносит !D! урона случ. врагу."
+    "DESCRIPTION": "Наносит !D! урона. NL Помещается в guardianmod:Стазис на !M! хода(-ов). NL guardianmod:Тик - Наносит !D! урона случ. врагу."
   },
   "Guardian:ShieldCharger": {
     "NAME": "Зарядить щиты",
@@ -388,8 +394,8 @@
   },
   "Guardian:StasisEngine": {
     "NAME": "Стазисный движок",
-    "DESCRIPTION": "Вы получаете [E] и берёте карту, когда разыгрываете *3-ью карту стоимостью 0 за ход.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Вы получаете [E] и берёте карту, когда разыгрываете *3-ью карту стоимостью 0 за ход."
+    "DESCRIPTION": "Вы получаете [E] и берёте карту, когда разыгрываете *3-ю карту стоимостью 0 за один ход.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL Вы получаете [E] и берёте карту, когда разыгрываете *3-ю карту стоимостью 0 за один ход."
   },
   "Guardian:HammerDown": {
     "NAME": "Сокрушающий удар",
@@ -397,7 +403,7 @@
   },
   "Guardian:OmegaCannon": {
     "NAME": "Омега-пушка",
-    "DESCRIPTION": "Наносит !D! урона. NL Стоит на 1 [E] меньше за каждые 1 Силы."
+    "DESCRIPTION": "Наносит !D! урона. NL Стоит на 1 [E] меньше за каждую 1 Силу у вас."
   },
   "Guardian:ModeShift": {
     "NAME": "Сменить режим",
@@ -414,7 +420,7 @@
     "DESCRIPTION": "Добавляет в руку *Массу *шипов, *Массу *бомб и *Град *ударов. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Добавляет в руку *Массу *шипов+, *Массу *бомб+ и *Град *ударов+. NL Сжигается."
   },
-  "Guardian:MassOfШипа": {
+  "Guardian:MassOfThorns": {
     "NAME": "Масса шипов",
     "DESCRIPTION": "Даёт !M! временных Шипов. NL Сжигается, если у вас есть Артефакт."
   },
@@ -425,7 +431,7 @@
   },
   "Guardian:MassSlam": {
     "NAME": "Град ударов",
-    "DESCRIPTION": "Наносит !D! урона !M! раза. NL Сжигается, если у вас 3 или более Силы."
+    "DESCRIPTION": "Наносит !D! урона !M! раз(а). NL Сжигается, если у вас 3 или более Силы."
   },
   "Guardian:GemstoneGunCard": {
     "NAME": "Самоцветная пушка",
@@ -447,7 +453,7 @@
   },
   "Guardian:StrikeForStrike": {
     "NAME": "Удар за удар",
-    "DESCRIPTION": "Наносит !D! урона. NL Заставляет врага атаковать вас на !M! урона."
+    "DESCRIPTION": "Наносит !D! урона. NL Враг атакует вас и наносит !M! урона."
   },
   "Guardian:GearUp": {
     "NAME": "Ускориться",
