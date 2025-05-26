@@ -27,10 +27,9 @@
     ]
   },
   "champ:StanceDanceCrown": {
-    "NAME": "Champion's Crown",
+    "NAME": "Inspiration",
     "DESCRIPTION": "Retain. NL Enter a Stance you aren't in. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Enter a Stance you aren't in."
-
   },
   "champ:SwordSigil": {
     "NAME": "Sigil of Victory",
