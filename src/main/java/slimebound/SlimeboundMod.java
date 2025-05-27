@@ -580,6 +580,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     public void receiveOnBattleStart(AbstractRoom room) {
         attacksPlayedThisTurn = 0;
+        SlimeHelper.AtBattleStart();
     }
 
 
