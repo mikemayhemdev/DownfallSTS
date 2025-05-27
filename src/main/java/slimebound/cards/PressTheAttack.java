@@ -15,7 +15,6 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.CommandCidAction;
 import slimebound.actions.CommandPikeAction;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.SlimedPower;
 import slimebound.slimes.SlimeHelper;
 
 
@@ -55,7 +54,7 @@ public class PressTheAttack extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
-        if (SlimeHelper.getCidEnergy() >= SlimeHelper.getPikeEnergy()){
+        if (SlimeHelper.GetCidEnergy() >= SlimeHelper.GetPikeEnergy()){
             addToBot(new CommandCidAction());
         } else {
             addToBot(new CommandPikeAction());

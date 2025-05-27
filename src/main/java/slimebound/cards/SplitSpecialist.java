@@ -1,28 +1,22 @@
 package slimebound.cards;
 
 
-import basemod.BaseMod;
 import collector.util.Wiz;
-import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
-import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
 
 
-import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.slimes.AbstractSlime;
 import slimebound.slimes.SlimeHelper;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 
 public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCard {
@@ -61,19 +55,19 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
         String imagePath = "slimeboundResources/images/cards/splitspecialist.png";
-        if (SlimeHelper.doesPikeHaveEnchantment(SlimeHelper.enchantment.CHAMP)) {
+        if (SlimeHelper.DoesPikeHaveEnchantment(AbstractSlime.SlimeEnchantmentType.CHAMP)) {
             cardList.add(new OctoChoiceCard("Slimebound:EnchantCidChamp", EXTENDED_DESCRIPTION[0], imagePath, EXTENDED_DESCRIPTION[1] + EXTENDED_DESCRIPTION[7], -1, -1, CardType.SKILL));
         } else {
             cardList.add(new OctoChoiceCard("Slimebound:EnchantCidChamp", EXTENDED_DESCRIPTION[0], imagePath, EXTENDED_DESCRIPTION[1], -1, -1, CardType.SKILL));
         }
 
-        if (SlimeHelper.doesPikeHaveEnchantment(SlimeHelper.enchantment.CULTIST)) {
+        if (SlimeHelper.DoesPikeHaveEnchantment(AbstractSlime.SlimeEnchantmentType.CULTIST)) {
             cardList.add(new OctoChoiceCard("Slimebound:EnchantCidCultist", EXTENDED_DESCRIPTION[2], imagePath, EXTENDED_DESCRIPTION[3] + EXTENDED_DESCRIPTION[7], -1, -1, CardType.SKILL));
         } else {
             cardList.add(new OctoChoiceCard("Slimebound:EnchantCidCultist", EXTENDED_DESCRIPTION[2], imagePath, EXTENDED_DESCRIPTION[3], -1, -1, CardType.SKILL));
         }
 
-        if (SlimeHelper.doesPikeHaveEnchantment(SlimeHelper.enchantment.TORCHHEAD)) {
+        if (SlimeHelper.DoesPikeHaveEnchantment(AbstractSlime.SlimeEnchantmentType.TORCHHEAD)) {
             cardList.add(new OctoChoiceCard("Slimebound:EnchantCidTorchhead", EXTENDED_DESCRIPTION[4], imagePath, EXTENDED_DESCRIPTION[5] + EXTENDED_DESCRIPTION[7], -1, -1, CardType.SKILL));
         } else {
             cardList.add(new OctoChoiceCard("Slimebound:EnchantCidTorchhead", EXTENDED_DESCRIPTION[4], imagePath, EXTENDED_DESCRIPTION[5], -1, -1, CardType.SKILL));

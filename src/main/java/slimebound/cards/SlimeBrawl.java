@@ -5,16 +5,14 @@ import collector.util.Wiz;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
 import slimebound.SlimeboundMod;
-import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.slimes.AbstractSlime;
 import slimebound.slimes.SlimeHelper;
 import sneckomod.SneckoMod;
 
@@ -59,19 +57,19 @@ public class SlimeBrawl extends AbstractSlimeboundCard implements OctopusCard {
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
         String imagePath = "slimeboundResources/images/cards/alltogether.png";
-        if (SlimeHelper.doesPikeHaveEnchantment(SlimeHelper.enchantment.TIMEEATER)) {
+        if (SlimeHelper.DoesPikeHaveEnchantment(AbstractSlime.SlimeEnchantmentType.TIMEEATER)) {
             cardList.add(new OctoChoiceCard("Slimebound:EnchantPikeTimeEater", EXTENDED_DESCRIPTION[0], imagePath, EXTENDED_DESCRIPTION[1] + EXTENDED_DESCRIPTION[7], -1, -1, CardType.SKILL));
         } else {
             cardList.add(new OctoChoiceCard("Slimebound:EnchantPikeTimeEater", EXTENDED_DESCRIPTION[0], imagePath, EXTENDED_DESCRIPTION[1], -1, -1, CardType.SKILL));
         }
 
-        if (SlimeHelper.doesPikeHaveEnchantment(SlimeHelper.enchantment.GUARDOIAN)) {
+        if (SlimeHelper.DoesPikeHaveEnchantment(AbstractSlime.SlimeEnchantmentType.GUARDOIAN)) {
             cardList.add(new OctoChoiceCard("Slimebound:EnchantPikeGuardian", EXTENDED_DESCRIPTION[2], imagePath, EXTENDED_DESCRIPTION[3] + EXTENDED_DESCRIPTION[7], -1, -1, CardType.SKILL));
         } else {
             cardList.add(new OctoChoiceCard("Slimebound:EnchantPikeGuardian", EXTENDED_DESCRIPTION[2], imagePath, EXTENDED_DESCRIPTION[3], -1, -1, CardType.SKILL));
         }
 
-        if (SlimeHelper.doesPikeHaveEnchantment(SlimeHelper.enchantment.HEXAGHOST)) {
+        if (SlimeHelper.DoesPikeHaveEnchantment(AbstractSlime.SlimeEnchantmentType.HEXAGHOST)) {
             cardList.add(new OctoChoiceCard("Slimebound:EnchantPikeHexaghost", EXTENDED_DESCRIPTION[4], imagePath, EXTENDED_DESCRIPTION[5] + EXTENDED_DESCRIPTION[7], -1, -1, CardType.SKILL));
         } else {
             cardList.add(new OctoChoiceCard("Slimebound:EnchantPikeHexaghost", EXTENDED_DESCRIPTION[4], imagePath, EXTENDED_DESCRIPTION[5], -1, -1, CardType.SKILL));

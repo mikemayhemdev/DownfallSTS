@@ -1,15 +1,11 @@
 package slimebound.cards;
 
 
-import collector.util.Wiz;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
-import downfall.util.OctopusCard;
 import slimebound.SlimeboundMod;
 
 
@@ -19,8 +15,6 @@ import slimebound.actions.EnergyToCidAction;
 import slimebound.actions.EnergyToPikeAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.slimes.SlimeHelper;
-
-import java.util.ArrayList;
 
 
 public class Split extends AbstractSlimeboundCard {
@@ -37,7 +31,7 @@ public class Split extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        if (SlimeHelper.getCidEnergy() >= SlimeHelper.getPikeEnergy()){
+        if (SlimeHelper.GetCidEnergy() >= SlimeHelper.GetPikeEnergy()){
             addToBot(new EnergyToCidAction(magicNumber));
             addToBot(new CommandCidAction());
         } else {

@@ -8,18 +8,11 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import slimebound.SlimeboundMod;
 import slimebound.actions.CommandCidAction;
 import slimebound.actions.CommandPikeAction;
-import slimebound.actions.TrigggerSpecificSlimeAttackAction;
-import slimebound.orbs.SpawnedSlime;
 import slimebound.slimes.SlimeHelper;
-import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
-
-import static downfall.cardmods.CommandMod.checkMinionMaster;
 
 public class CommandOnPlayPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -48,7 +41,7 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
     public void onAfterCardPlayed(AbstractCard usedCard) {
         flash();
         //TODO if Cid's energy is higher...
-        if (SlimeHelper.getCidEnergy() >= SlimeHelper.getPikeEnergy()){
+        if (SlimeHelper.GetCidEnergy() >= SlimeHelper.GetPikeEnergy()){
             addToBot(new CommandCidAction());
         } else {
             addToBot(new CommandPikeAction());

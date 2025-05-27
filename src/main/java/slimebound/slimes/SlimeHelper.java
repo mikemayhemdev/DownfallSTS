@@ -1,72 +1,55 @@
 package slimebound.slimes;
 
-import automaton.AutomatonChar;
-import automaton.AutomatonMod;
-import automaton.AutomatonTextHelper;
-import automaton.cardmods.CardEffectsCardMod;
-import automaton.cards.AbstractBronzeCard;
-import automaton.cards.ForceShield;
-import automaton.cards.FullRelease;
-import automaton.cards.FunctionCard;
-import automaton.powers.*;
-import automaton.relics.ElectromagneticCoil;
-import automaton.relics.OnCompileRelic;
-import basemod.helpers.CardModifierManager;
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Vector2;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.vfx.BobEffect;
-import downfall.util.TextureLoader;
-
-import java.util.HashMap;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class SlimeHelper {
-    static AbstractSlime Pike;
-    static AbstractSlime Cid;
+    public static AbstractSlime Pike;
+    public static AbstractSlime Cid;
 
-    public static int getPikeEnergy(){
-        return Pike.getEnergy();
+    public static void AtBattleStart() {
+        Pike = new Pike();
+        Cid = new Cid();
     }
 
-    public static int getCidEnergy(){
-        return Cid.getEnergy();
+    public static void Update() {
+        Pike.update();
+        Cid.update();
     }
 
-    public static boolean doesPikeHaveEnchantment(enchantment enchantToCheck){
+    public static void Render(SpriteBatch sb) {
+        Pike.render(sb);
+        Cid.render(sb);
+    }
+
+    public static void AtEndOfTurn() {
+        Pike.onEndOfTurn();
+        Cid.onEndOfTurn();
+    }
+
+    public static int GetPikeEnergy(){
+        return Pike.energy;
+    }
+
+    public static int GetCidEnergy(){
+        return Cid.energy;
+    }
+
+    public static boolean DoesPikeHaveEnchantment(AbstractSlime.SlimeEnchantmentType enchantToCheck){
         return Pike.isEnchanted(enchantToCheck);
     }
 
-    public static boolean doesCidHaveEnchantment(enchantment enchantToCheck){
+    public static boolean DoesCidHaveEnchantment(AbstractSlime.SlimeEnchantmentType enchantToCheck){
         return Cid.isEnchanted(enchantToCheck);
     }
 
-    //TODO - render / update probably lives here?
+    public static boolean InCombat() {
+        return CardCrawlGame.isInARun() && AbstractDungeon.currMapNode != null && AbstractDungeon.getCurrRoom() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT;
+    }
+
     //TODO - build in such a way that we might remove a slime. Could be a fun event.
-
-    public enum enchantment {
-        NOENEERGYCOST,
-        DOUBLECOMMAND,
-        CULTIST,
-        CHAMP,
-        TORCHHEAD,
-        TIMEEATER,
-        GUARDOIAN,
-        HEXAGHOST;
-
-        enchantment() {
-        }
-    }
-
-    }
+    // unsure if we want to do this with all the cards built out, that'd break literally everything
+}
 

@@ -9,11 +9,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import expansioncontent.expansionContentMod;
-import org.xml.sax.ext.LexicalHandler;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.PotencyPower;
 import slimebound.slimes.SlimeHelper;
 import sneckomod.SneckoMod;
 
@@ -51,7 +48,7 @@ public class FirmFortitude extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int total = SlimeHelper.getCidEnergy() + SlimeHelper.getPikeEnergy();
+        int total = SlimeHelper.GetCidEnergy() + SlimeHelper.GetPikeEnergy();
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, total), total));
 

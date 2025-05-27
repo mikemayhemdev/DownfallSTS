@@ -1,16 +1,13 @@
 package slimebound.cards;
 
 
-import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
-import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.slimes.SlimeHelper;
 import sneckomod.SneckoMod;
@@ -55,7 +52,7 @@ public class SlimeTap extends AbstractSlimeboundCard {
         if (canUse) {
 
             canUse = false;
-            if (SlimeHelper.getPikeEnergy() >= 1 && SlimeHelper.getCidEnergy() >= 1) canUse = true;
+            if (SlimeHelper.GetPikeEnergy() >= 1 && SlimeHelper.GetCidEnergy() >= 1) canUse = true;
 
             if (!canUse) this.cantUseMessage = EXTENDED_DESCRIPTION[0];
         }

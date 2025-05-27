@@ -1,17 +1,11 @@
 package slimebound.powers;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
-import slimebound.SlimeboundMod;
 import slimebound.actions.EnergyToPikeAction;
-import slimebound.orbs.SpawnedSlime;
 import slimebound.slimes.SlimeHelper;
 
 
@@ -51,7 +45,7 @@ public class SlimeSacrificePower extends AbstractPower {
             if (info.owner != AbstractDungeon.player) {
                 if (damageAmount > AbstractDungeon.player.currentBlock) {
 
-                    if (SlimeHelper.getPikeEnergy() > 0) {
+                    if (SlimeHelper.GetPikeEnergy() > 0) {
 
                         //s.noEvokeBonus = true;
                         this.flash();

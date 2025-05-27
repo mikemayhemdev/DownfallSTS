@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
@@ -50,6 +51,7 @@ import slimebound.potions.ThreeZeroPotion;
 import slimebound.powers.AcidTonguePowerUpgraded;
 import slimebound.powers.DuplicatedFormNoHealPower;
 import slimebound.relics.*;
+import slimebound.slimes.SlimeHelper;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -62,12 +64,11 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         SetUnlocksSubscriber,
         PostDungeonInitializeSubscriber, PostBattleSubscriber,
         PostInitializeSubscriber, PreMonsterTurnSubscriber,
-        basemod.interfaces.EditCharactersSubscriber,
-        basemod.interfaces.EditRelicsSubscriber,
-        basemod.interfaces.EditCardsSubscriber,
-        //EditStringsSubscriber,
-        //basemod.interfaces.PostDrawSubscriber,
-        basemod.interfaces.OnStartBattleSubscriber {
+        EditCharactersSubscriber,
+        EditRelicsSubscriber,
+        EditCardsSubscriber,
+        OnStartBattleSubscriber,
+        PostPlayerUpdateSubscriber {
     public static final boolean hasHubris;
 //    public static final String PROP_RELIC_SHARING = "contentSharing_relics";
 //    public static final String PROP_POTION_SHARING = "contentSharing_potions";
@@ -582,5 +583,10 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     }
 
 
-
+    @Override
+    public void receivePostPlayerUpdate() {
+        if (CardCrawlGame.chosenCharacter == SlimeboundEnum.SLIMEBOUND && SlimeHelper.InCombat()) {
+            SlimeHelper.Update();
+        }
+    }
 }

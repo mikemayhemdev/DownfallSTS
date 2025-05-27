@@ -2,26 +2,19 @@ package slimebound.cards;
 
 
 import collector.util.Wiz;
-import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
 import slimebound.SlimeboundMod;
 
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.LoseSlimesPower;
-import slimebound.powers.PotencyPower;
+import slimebound.slimes.AbstractSlime;
 import slimebound.slimes.SlimeHelper;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
@@ -66,13 +59,13 @@ public class Overexert extends AbstractSlimeboundCard implements OctopusCard {
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
         String imagePath = "slimeboundResources/images/cards/knowledgepool.png";
-        if (SlimeHelper.doesCidHaveEnchantment(SlimeHelper.enchantment.NOENEERGYCOST)) {
+        if (SlimeHelper.DoesCidHaveEnchantment(AbstractSlime.SlimeEnchantmentType.NOENEERGYCOST)) {
             cardList.add(new OctoChoiceCard("Slimebound:MinionMasterCid", EXTENDED_DESCRIPTION[2], imagePath, EXTENDED_DESCRIPTION[0] + EXTENDED_DESCRIPTION[5], -1, -1, CardType.SKILL));
         } else {
             cardList.add(new OctoChoiceCard("Slimebound:MinionMasterCid", EXTENDED_DESCRIPTION[2], imagePath, EXTENDED_DESCRIPTION[0], -1, -1, CardType.SKILL));
         }
 
-        if (SlimeHelper.doesPikeHaveEnchantment(SlimeHelper.enchantment.NOENEERGYCOST)) {
+        if (SlimeHelper.DoesPikeHaveEnchantment(AbstractSlime.SlimeEnchantmentType.NOENEERGYCOST)) {
             cardList.add(new OctoChoiceCard("Slimebound:MinionMasterPike", EXTENDED_DESCRIPTION[3], imagePath, EXTENDED_DESCRIPTION[1] + EXTENDED_DESCRIPTION[5], -1, -1, CardType.SKILL));
         } else {
             cardList.add(new OctoChoiceCard("Slimebound:MinionMasterPike", EXTENDED_DESCRIPTION[3], imagePath, EXTENDED_DESCRIPTION[0], -1, -1, CardType.SKILL));

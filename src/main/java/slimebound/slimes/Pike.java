@@ -5,6 +5,8 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
@@ -13,27 +15,25 @@ import slimebound.orbs.SpawnedSlime;
 import slimebound.vfx.SlimeFlareEffect;
 
 
-public class Pike
-        extends AbstractSlime {
+public class Pike extends AbstractSlime {
     public static final String ID = "Slimebound:Pike";
-    public static final String atlasString = SlimeboundMod.getResourcePath("orbs/attack.atlas");
-    public static final String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
+//    public static final String atlasString = SlimeboundMod.getResourcePath("orbs/attack.atlas");
+//    public static final String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
 
     public Pike() {
-
-        super(atlasString, skeletonString);
-
+        super();
     }
 
     public void updateDescription() {
-        this.description = this.descriptions[0] + this.attackAmount + this.descriptions[1];
-    }
-
-
-    public void activateEffectUnique() {
 
     }
 
+
+    public void activateEffect() {
+        for (int i = 0; i < 2; i++) {
+            atb(new DamageRandomEnemyAction(new DamageInfo(null, attackAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        }
+    }
 }
 
 

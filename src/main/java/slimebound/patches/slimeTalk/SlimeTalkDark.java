@@ -1,4 +1,4 @@
-package slimebound.patches;
+package slimebound.patches.slimeTalk;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
