@@ -518,7 +518,7 @@
   },
   "collector:GremlinWizardCard": {
     "NAME": "Gremlin Wizard",
-    "DESCRIPTION": "Next turn, gain !M! Vigor and 1 collector:Reserve."
+    "DESCRIPTION": "Next turn, NL gain !M! Vigor and 1 collector:Reserve."
   },
   "collector:JawWormCard": {
     "NAME": "Jaw Worm",

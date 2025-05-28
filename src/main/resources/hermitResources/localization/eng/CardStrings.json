@@ -34,8 +34,8 @@
   },
   "hermit:HighCaliber": {
     "NAME": "High-Caliber",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Strike+2 to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Strike+3 to your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Strike+2　 to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Strike+3　 to your hand. NL Exhaust."
   },
   "hermit:BodyArmor": {
     "NAME": "Body Armor",
