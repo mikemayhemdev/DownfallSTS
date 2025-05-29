@@ -19,7 +19,7 @@
     "DESCRIPTIONS": [
       "Даёт #b",
       " #yСилы и #b",
-      " #yЛовкости [REMOVE_SPACE]. NL Добавляет #b2 карты #yОжог+ в стопку сброса."
+      " #yЛовкости [REMOVE_SPACE]. NL Добавляет #b2 #yОжога+ в стопку сброса."
     ]
   },
   "bronze:BuildAFunctionPotion": {

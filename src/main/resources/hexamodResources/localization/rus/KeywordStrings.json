@@ -66,7 +66,7 @@
       "ожоги",
       "ожога_души"
     ],
-    "DESCRIPTION": "Через #b3 хода цель теряет указанное количество ОЗ, снимая эффект #yОжога #yдуши."
+    "DESCRIPTION": "Через #b3 хода враг теряет указанное количество ОЗ, снимая эффект #yОжога #yдуши."
   },
   {
     "PROPER_NAME": "Тушение",
@@ -139,22 +139,6 @@
     ],
     "DESCRIPTION": "#yОгонёк. #yЗажигается, когда #yТалант был сыгран, пока #yОгонёк #yАктивен. #yЗажигание [REMOVE_SPACE]: даёт #b4 #yЗащиты и #b1 #yСилы [REMOVE_SPACE].",
     "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
-  },
-  {
-    "ID": "plated",
-    "PROPER_NAME": "Броня из пластин",
-    "NAMES": [
-      "plated",
-      "броня из пластин",
-      "броне из пластин",
-      "броню из пластин",
-      "брони из пластин",
-      "броня_из_пластин",
-      "броне_из_пластин",
-      "броню_из_пластин",
-      "брони_из_пластин"
-    ],
-    "DESCRIPTION": "В конце вашего хода вы получаете #yЗащиту равную #yБроне #yиз #yпластин [REMOVE_SPACE]. Получение урона по ОЗ снижает #yБроню #yиз #yпластин на #b1 [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Обжигающий",

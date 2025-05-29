@@ -26,7 +26,7 @@
     "NAME": "Жгучий вопрос",
     "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Даёт !M! Силы. NL ",
     "EXTENDED_DESCRIPTION": [
-      "Даёт 1 Ловкость."
+      "Даёт 1 Ловкости."
     ],
     "Translator Note":[
       "For card text simplicity, we have designed a new text system for afterlife cards. Now if an Afterlife card has EXTENDED_DESCRIPTION, it means",
@@ -42,8 +42,8 @@
   },
   "hexamod:CatchUp": {
     "NAME": "Наверстать упущенное",
-    "DESCRIPTION": "hexamod:Зажигает предыдущий Огонёк !M! раз(а). NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "hexamod:Зажигает предыдущий Огонёк !M! раз(а)."
+    "DESCRIPTION": "{@@}hexamod:Зажигает предыдущий Огонёк !M! раз{!M!|@=|&12,&13,&14=|&2,&3,&4=а}. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "{@@}hexamod:Зажигает предыдущий Огонёк !M! раз{!M!|@=|&12,&13,&14=|&2,&3,&4=а}."
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Заряженный залп",
@@ -51,7 +51,7 @@
   },
   "hexamod:CouncilsJustice": {
     "NAME": "Правосудие совета",
-    "DESCRIPTION": "Наносит !D! урона. NL Наносит по !M! доп. урона за каждую *сожжёную *Призрачность. NL Сжигается."
+    "DESCRIPTION": "Наносит !D! урона. NL Наносит на !M! урона больше за каждую *сожжёную *Призрачность. NL Сжигается."
   },
   "hexamod:Defend": {
     "NAME": "Оборона",
@@ -72,7 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Жуткая экспедиция",
-    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL [#e087a4]Добавляет[] !M! [#e087a4]случ.[] [#e087a4]Посмертную[] [#e087a4]карту[] [#e087a4]в[] [#e087a4]стопку[] [#e087a4]добора[] и ещё 1 в руку."
+    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL [#e087a4]Добавляет[] [#e087a4]случ.[] [#e087a4]Посмертную[] [#e087a4]карту[] [#e087a4]в[] [#e087a4]стопку[] [#e087a4]добора[] и ещё 1 в руку."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Хрустящая корочка",
@@ -80,7 +80,7 @@
   },
   "hexamod:FastForward": {
     "NAME": "Перемотать вперёд",
-    "DESCRIPTION": "Вы берёте !M! карт(ы). NL Даёт hexamod:Продвижение.",
+    "DESCRIPTION": "{@@}Вы берёте !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}. NL Даёт hexamod:Продвижение.",
     "UPGRADE_DESCRIPTION": "hexamod:Зажигает hexamod:активный Огонёк. NL Даёт hexamod:Продвижение."
   },
   "hexamod:Firestarter": {
@@ -116,9 +116,9 @@
   },
   "hexamod:Floatwork": {
     "NAME": "Залатать дыры",
-    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Даёт 1 Ловкость. NL ",
+    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Даёт 1 Ловкости. NL ",
     "EXTENDED_DESCRIPTION": [
-      "Даёт !M! Брони из пластин."
+      "Даёт !M! Панциря."
     ]
   },
   "hexamod:ForkedFlame": {
@@ -173,15 +173,15 @@
   },
   "hexamod:GiftsFromBeyond": {
     "NAME": "Дары извне",
-    "DESCRIPTION": "Добавляет в руку !M! случ. карт(ы) с hexamod:Посмертием в начале каждого вашего хода.",
+    "DESCRIPTION": "{@@}Добавляет в руку !M! случ. карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы} с hexamod:Посмертием в начале каждого вашего хода.",
     "EXTENDED_DESCRIPTION": [
       "Эти духи слишком сильны, чтобы обращаться к ним напрямую."
     ]
   },
   "hexamod:HauntedHand": {
     "NAME": "Призрачная рука",
-    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Вы берёте !M! карту. NL ",
-    "UPGRADE_DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Вы берёте !M! карт(ы). NL ",
+    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Вы берёте карту. NL ",
+    "UPGRADE_DESCRIPTION": "{@@}Эфирная. [#e087a4]Посмертная.[] NL Вы берёте !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}. NL ",
     "EXTENDED_DESCRIPTION": [
       "Вы берёте карты, пока не возьмёте не-Эфирную карту."
     ]
@@ -192,7 +192,7 @@
   },
   "hexamod:HeatCrush": {
     "NAME": "Адская жара",
-    "DESCRIPTION": "Наносит !D! урона. NL Урон увеличивается от hexamod:Ожога_души врага."
+    "DESCRIPTION": "Наносит !D! урона. NL hexamod:Ожог_души врага влияет на эту карту."
   },
   "hexamod:HeatMetal": {
     "NAME": "Раскалённый металл",
@@ -208,7 +208,7 @@
   },
   "hexamod:Hexaguard": {
     "NAME": "Гекса-щит",
-    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Вы берёте !M! карт(ы). NL ",
+    "DESCRIPTION": "{@@}Эфирная. [#e087a4]Посмертная.[] NL Вы берёте !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}. NL ",
     "EXTENDED_DESCRIPTION": [
       "Даёт !B! Защиты."
     ]
@@ -220,7 +220,7 @@
   },
   "hexamod:Incineration": {
     "NAME": "Испепелить",
-    "DESCRIPTION": "Наносит !D! урона и накладывает !burny! hexamod:Ожога_души !M! раз(а)."
+    "DESCRIPTION": "{@@}Наносит !D! урона и накладывает !burny! hexamod:Ожога_души !M! раз{!M!|@=|&12,&13,&14=|&2,&3,&4=а}."
   },
   "hexamod:StokeTheFire": {
     "NAME": "Согреться",
@@ -228,8 +228,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Достойная жертва",
-    "DESCRIPTION": "Сожгите 2 карты. NL Если вы сожгли: NL Атаку - даёт Навык. NL Навык - даёт Атаку.",
-    "UPGRADE_DESCRIPTION": "Сожгите 2 карты. NL Если вы сожгли: NL Атаку - даёт Улучшеный Навык. NL Навык - даёт Улучшеную Атаку.",
+    "DESCRIPTION": "Сжигает 2 карты в руке. NL Если вы сожгли: NL Атаку - даёт Навык. NL Навык - даёт Атаку.",
+    "UPGRADE_DESCRIPTION": "Сжигает 2 карты в руке. NL Если вы сожгли: NL Атаку - даёт Улучшеный Навык. NL Навык - даёт Улучшеную Атаку.",
     "EXTENDED_DESCRIPTION": [
       "Сжечь для Достойной жертвы."
     ]
@@ -250,7 +250,7 @@
   },
   "hexamod:PhantomCloak": {
     "NAME": "Призрачный плащ",
-    "DESCRIPTION": "Эфирная. NL Даёт !M! Ловкости и отнимает 1 Силу."
+    "DESCRIPTION": "Эфирная. NL Даёт !M! Ловкости и отнимает 1 Силы."
   },
   "hexamod:PhantomFireball": {
     "NAME": "Призрачный уголёк",
@@ -259,8 +259,8 @@
   },
   "hexamod:PowerFromBeyond" : {
     "NAME": "Сила извне",
-    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL [#e087a4]В[] [#e087a4]след.[] [#e087a4]ходу,[] [#e087a4]возьмите[] !M! [#e087a4]карт(ы)[] и получите [E] . NL ",
-    "UPGRADE_DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL [#e087a4]В[] [#e087a4]след.[] [#e087a4]ходу,[] [#e087a4]возьмите[] !M! [#e087a4]карт(ы)[] и получите [E] [E] . NL ",
+    "DESCRIPTION": "{@@}Эфирная. [#e087a4]Посмертная.[] NL [#e087a4]В[] [#e087a4]след.[] [#e087a4]ходу,[] [#e087a4]возьмите[] !M! [#e087a4]карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}[] и получите [E] . NL ",
+    "UPGRADE_DESCRIPTION": "{@@}Эфирная. [#e087a4]Посмертная.[] NL [#e087a4]В[] [#e087a4]след.[] [#e087a4]ходу,[] [#e087a4]возьмите[] !M! [#e087a4]карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}[] и получите [E] [E] . NL ",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -279,8 +279,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Град углей",
-    "DESCRIPTION": "Наносит !D! урона X раз(а). NL Накладывает !M! Слабости X раз(а).",
-    "UPGRADE_DESCRIPTION": "Наносит !D! урона X+1 раз(а). NL Накладывает !M! Слабости X+1 раз(а)."
+    "DESCRIPTION": "Наносит !D! урона X раз. NL Накладывает !M! Слабости X раз.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона X+1 раз. NL Накладывает !M! Слабости X+1 раз."
   },
   "hexamod:NightmareVision": {
     "NAME": "Кошмарное видение",
@@ -294,12 +294,12 @@
   },
   "hexamod:Incorporeal": {
     "NAME": "Бестелесность",
-    "DESCRIPTION": "Даёт hexamod:Откат. NL Отнимает !M! ОЗ. NL Даёт 1 Неосязаемость. NL Сжигается."
+    "DESCRIPTION": "Даёт hexamod:Откат. NL Отнимает !M! ОЗ. NL Даёт 1 Неосязаемости. NL Сжигается."
   },
   "hexamod:Rewind": {
     "NAME": "Перемотка назад",
-    "DESCRIPTION": "Даёт hexamod:Откат. NL Вы кладёте 1 выбранную карту из стопки сброса в руку. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Даёт hexamod:Откат. NL Вы кладёте !M! выбранных карт(ы) из стопки сброса в руку. NL Сжигается."
+    "DESCRIPTION": "Даёт hexamod:Откат. NL Вы кладёте выбранную карту из стопки сброса в руку. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "{@@}Даёт hexamod:Откат. NL Вы кладёте в руку !M! выбранных карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы} из стопки сброса. NL Сжигается."
   },
   "hexamod:Sear": {
     "NAME": "Прижечь",
@@ -320,7 +320,7 @@
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Щит Ночи",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Вы Предсказываете !M! карты. NL Сброшенные *Эфирные карты Сжигаются."
+    "DESCRIPTION": "{@@}Даёт !B! Защиты. NL Вы Предсказываете !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}. NL Сброшенные *Эфирные карты Сжигаются."
   },
   "hexamod:Kindle": {
     "NAME": "Разжечь",
@@ -337,7 +337,7 @@
   },
   "hexamod:BrightRitual": {
     "NAME": "Яркий ритуал",
-    "DESCRIPTION": "Сбрасывает колесо. NL Вы получаете [E] и берёте 1 карту за каждый hexamod:Потушенный Огонёк. NL Сжигается."
+    "DESCRIPTION": "Сбрасывает колесо. NL Даёт [E] , и вы берёте карту за каждый hexamod:Потушенный Огонёк. NL Сжигается."
   },
   "hexamod:NaughtySpirit": {
     "NAME": "Озорной призрак",
@@ -345,7 +345,7 @@
   },
   "hexamod:StepThrough": {
     "NAME": "Пройти насквозь",
-    "DESCRIPTION": "Наносит !D! урона. NL Вы берёте 1 карту за каждый hexamod:Зажжёный Огонёк."
+    "DESCRIPTION": "Наносит !D! урона. NL Вы берёте карту за каждый hexamod:Зажжёный Огонёк."
   },
   "hexamod:Strike": {
     "NAME": "Удар",
@@ -353,7 +353,7 @@
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "Удар извне",
-    "DESCRIPTION": "Наносит !D! урона. NL Вы кладёте в руку 1 Эфирную карту из стопки добора.",
+    "DESCRIPTION": "Наносит !D! урона. NL Вы кладёте в руку Эфирную карту из стопки добора.",
     "EXTENDED_DESCRIPTION": ["Эфирная", "Эфирная. NL "]
   },
   "hexamod:SuperheatedStrike": {
@@ -363,7 +363,7 @@
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "Меч Ночи",
-    "DESCRIPTION": "Наносит !D! урона. NL Вы Предсказываете !M! карты. NL Сброшенные *Эфирные карты Сжигаются."
+    "DESCRIPTION": "{@@}Наносит !D! урона. NL Вы Предсказываете !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}. NL Сброшенные *Эфирные карты Сжигаются."
   },
   "hexamod:ThermalTransfer": {
     "NAME": "Теплопередача",
@@ -371,7 +371,7 @@
   },
   "hexamod:TimeOfNeed": {
     "NAME": "Час нужды",
-    "DESCRIPTION": "Оставляется. NL Добавляет случайный Талант. Он стоит на 1 меньше. NL Сжигается."
+    "DESCRIPTION": "Оставляется. NL Добавляет в руку случайный Талант. Он стоит на 1 меньше. NL Сжигается."
   },
   "hexamod:TimeWarp": {
     "NAME": "Искривление времени",
@@ -385,13 +385,13 @@
   },
   "hexamod:TurnItUp": {
     "NAME": "Навалить",
-    "DESCRIPTION": "Даёт по !M! временной(-ых) hexamod:Интенсивности, Силы и Ловкости.",
-    "UPGRADE_DESCRIPTION": "Оставляется. NL Даёт по !M! временной(-ых) hexamod:Интенсивности, Силы и Ловкости."
+    "DESCRIPTION": "Даёт по !M! временной hexamod:Интенсивности, Силы и Ловкости.",
+    "UPGRADE_DESCRIPTION": "Оставляется. NL Даёт по !M! временной hexamod:Интенсивности, Силы и Ловкости."
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Натравить духов",
-    "DESCRIPTION": "Наносит !D! урона случ. врагу. Наносит урон ещё раз за каждую *Сожжёную карту в прошлом ходу.",
-    "UPGRADE_DESCRIPTION": " NL (Наносит урон !M! раз(а).)"
+    "DESCRIPTION": "{@@}Наносит !D! урона случ. врагу. Наносит урон ещё раз за каждую *Сожжёную карту в прошлом ходу.",
+    "UPGRADE_DESCRIPTION": " NL (Наносит урон !M! раз{!M!|@=|&12,&13,&14=|&2,&3,&4=а}.)"
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Безграничная мощь",
@@ -403,7 +403,7 @@
   },
   "hexamod:WildfireWeapon": {
     "NAME": "Стихийный огонь",
-    "DESCRIPTION": "Накладывает !M! hexamod:Ожога_души, когда атака наносит урон по ОЗ врага.",
+    "DESCRIPTION": "Накладывает !M! hexamod:Ожога_души, когда Атака наносит урон по ОЗ.",
     "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used not used not used not used not used "
   },
   "hexamod:FirstSeal": {
@@ -413,42 +413,42 @@
   },
   "hexamod:SecondSeal": {
     "NAME": "Вторая печать",
-    "DESCRIPTION": "Эфирная hexamod:Печать. NL Вы получаете !M! *доп. *золота в конце боя.",
-    "UPGRADE_DESCRIPTION": "hexamod:Печать. NL Вы получаете !M! *доп. *золота в конце боя."
+    "DESCRIPTION": "Эфирная hexamod:Печать. NL Вы получаете на !M! *золота больше в конце боя.",
+    "UPGRADE_DESCRIPTION": "hexamod:Печать. NL Вы получаете на !M! *золота больше в конце боя."
   },
   "hexamod:ThirdSeal": {
     "NAME": "Третья печать",
-    "DESCRIPTION": "Эфирная hexamod:Печать. NL Вы получаете *доп. *обычную *карту в награду, в конце боя.",
-    "UPGRADE_DESCRIPTION": "hexamod:Печать. NL Вы получаете *доп. *обычную *карту в награду, в конце боя."
+    "DESCRIPTION": "Эфирная hexamod:Печать. NL Вы получаете *доп. *обычную *карту в награду в конце боя.",
+    "UPGRADE_DESCRIPTION": "hexamod:Печать. NL Вы получаете *доп. *обычную *карту в награду в конце боя."
   },
   "hexamod:FourthSeal": {
     "NAME": "Четвёртая печать",
-    "DESCRIPTION": "Эфирная hexamod:Печать. NL Вы получаете *зелье в награду, в конце боя.",
-    "UPGRADE_DESCRIPTION": "hexamod:Печать. NL Вы получаете *зелье в награду, в конце боя."
+    "DESCRIPTION": "Эфирная hexamod:Печать. NL Вы получаете *зелье в награду в конце боя.",
+    "UPGRADE_DESCRIPTION": "hexamod:Печать. NL Вы получаете *зелье в награду в конце боя."
   },
   "hexamod:FifthSeal": {
     "NAME": "Шестая Печать",
-    "DESCRIPTION": "Эфирная hexamod:Печать. NL Вы увеличиваете макс. ОЗ на !M! в конце боя.",
-    "UPGRADE_DESCRIPTION": "hexamod:Печать. NL Вы увеличиваете макс. ОЗ на !M! в конце боя."
+    "DESCRIPTION": "Эфирная hexamod:Печать. NL Вы увеличиваете Макс. ОЗ на !M! в конце боя.",
+    "UPGRADE_DESCRIPTION": "hexamod:Печать. NL Вы увеличиваете Макс. ОЗ на !M! в конце боя."
   },
   "hexamod:SixthSeal": {
     "NAME": "Пятая Печать",
-    "DESCRIPTION": "Эфирная hexamod:Печать. NL *Улучшает случ. карту в колоде за каждые 13 не улучшенных, в конце боя.",
-    "UPGRADE_DESCRIPTION": "hexamod:Печать. NL *Улучшает случ. карту в колоде за каждые 13 не улучшенных, в конце боя.",
+    "DESCRIPTION": "Эфирная hexamod:Печать. NL *Улучшает случ. карту в колоде за каждые 13 не улучшенных в конце боя.",
+    "UPGRADE_DESCRIPTION": "hexamod:Печать. NL *Улучшает случ. карту в колоде за каждые 13 не улучшенных в конце боя.",
     "EXTENDED_DESCRIPTION": [
-      "( Улучшает ",
-      " карту. ) NL ",
-      " карт(ы). ) NL "
+      "( Улучшит карт: ",
+      ". ) NL ",
+      ". ) NL "
     ]
   },
   "hexamod:LingeringShades": {
     "NAME": "Витающие тени",
-    "DESCRIPTION": "Даёт hexamod:Откат. NL Накладывает !burny! hexamod:Ожога_души. Возвращает все Эфирные карты из стопки сброса в руку."
+    "DESCRIPTION": "Даёт hexamod:Откат. NL Накладывает !burny! hexamod:Ожога_души. Возвращает в руку все Эфирные карты из стопки сброса."
   },
   "hexamod:EtherStep": {
     "NAME": "Эфирный шаг",
-    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Вы сжигаете 1 карту и берёте !M! карту. NL ",
-    "UPGRADE_DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Вы сжигаете 1 карту и берёте !M! карт(ы). NL ",
+    "DESCRIPTION": "Эфирная. [#e087a4]Посмертная.[] NL Вы сжигаете карту и берёте карту. NL ",
+    "UPGRADE_DESCRIPTION": "{@@}Эфирная. [#e087a4]Посмертная.[] NL Вы сжигаете карту и берёте !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}. NL ",
     "EXTENDED_DESCRIPTION": [
       "Наносит !D! урона."
     ]
@@ -460,8 +460,8 @@
   },
   "hexamod:SeventhEye": {
     "NAME": "Седьмой глаз",
-    "DESCRIPTION": "Вы кладёте карту из стопки добора в руку. NL Переключает на случ. Огонёк. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Вы кладёте карту из стопки добора в руку. NL Переключает на случ. Огонёк. NL Сжигается."
+    "DESCRIPTION": "Вы кладёте в руку карту из стопки добора. NL Переключает на случ. Огонёк. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Вы кладёте в руку карту из стопки добора. NL Переключает на случ. Огонёк. NL Сжигается."
   },
   "hexamod:FlameDevourer": {
     "NAME": "Всепоглощающее пламя",
@@ -469,8 +469,8 @@
   },
   "hexamod:SpectralGrace": {
     "NAME": "Грация призрака",
-    "DESCRIPTION": "Сбрасывает !M! карт(ы). NL Наносит !D! урона.",
-    "UPGRADE_DESCRIPTION": "Сбрасывает !M! карт(ы). NL Наносит !D! урона."
+    "DESCRIPTION": "{@@}Вы сбрасываете !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}. NL Наносит !D! урона.",
+    "UPGRADE_DESCRIPTION": "{@@}Вы сбрасываете !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}. NL Наносит !D! урона."
   },
   "Translator note Translator note Translator note Translator note Translator note Translator note Translator note Translator note ": {
     "text": "text below here are used as an attempt to fix an issue that you cant open the game, you dont need to do anything about them.",
@@ -546,9 +546,9 @@
     ]
   },
   "hexamod:HexaLevel": {
-    "NAME": "Адская Форма",
-    "DESCRIPTION": "В начале вашего хода, даёт !M! hexamod:Интенсивности.",
-    "UPGRADE_DESCRIPTION": "Даёт !M! hexamod:Интенсивности. NL В начале вашего хода, даёт !M! hexamod:Интенсивности."
+    "NAME": "Адский облик",
+    "DESCRIPTION": "Даёт !M! hexamod:Интенсивности в начале каждого вашего хода.",
+    "UPGRADE_DESCRIPTION": "Даёт !M! hexamod:Интенсивности. NL Даёт !M! hexamod:Интенсивности в начале каждого вашего хода."
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",
