@@ -22,9 +22,7 @@ public class FeatherWhirl extends AbstractAwakenedCard {
 
  public void use(AbstractPlayer p, AbstractMonster m) {
         att(new EasyXCostAction(this, (effect, params) -> {
-            for (int i = 0; i < effect; i++) {
-                AbstractMonster q = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-               this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
+            for (int i = 0; i < effect*2; i++) {
                this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
             }
             return true;

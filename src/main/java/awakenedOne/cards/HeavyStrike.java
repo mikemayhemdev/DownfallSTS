@@ -16,8 +16,8 @@ public class HeavyStrike extends AbstractAwakenedCard {
     //carrionmaker
     public HeavyStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
-        baseSecondDamage = 8;
+        baseDamage = 9;
+        baseSecondDamage = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -26,7 +26,7 @@ public class HeavyStrike extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeSecondDamage(2);
+        upgradeDamage(3);
+        upgradeSecondDamage(3);
     }
 }

@@ -99,7 +99,7 @@
     "NAME": "Young Snecko",
     "FLAVOR": "Bewilderingly adorable.",
     "DESCRIPTIONS": [
-      "Deals #b9 damage to a random enemy and #ysneckomod:Muddles #b2 random (not #b0 cost, #bX [REMOVE_SPACE], or #yUnplayable [REMOVE_SPACE]) cards in your hand at the start of your turn."
+      "Deals #b9 damage to a random enemy and #ysneckomod:Muddles #b2 random (at least #b1 cost) cards in your hand at the start of your turn."
     ]
   },
   "sneckomod:SneckoCommon": {

@@ -14,8 +14,8 @@
       " #rHP.",
       "[Leave]",
       "[Rob] #rFight #rGremlins. #gGain #gPick #gof #gRhapsody.",
-      "[Mine with Pick] #gGain #g3 #grandom #gGem #gRewards. #rLose #rPick #rof #rRhapsody.",
-      "[Locked] Pick #rBroken."
+      "[Mine with Pick] #gGain #g3 #grandom #gGems. #rLose #rPick #rof #rRhapsody.",
+      "[Locked] Pick Broken."
     ]
   },
   "Guardian:StasisEgg": {
@@ -93,7 +93,7 @@
       "With a swift crushing blow, you shatter the Shrine into pieces in order to uncover the treasures within. Within the rubble, you find two pristine and usable gemstones, patiently awaiting their place in your weaponry. NL NL You leave the remains of the Shrine and continue the climb."
     ],
     "OPTIONS": [
-      "[Smash] #gGain #g2 #gRandom #gGems [REMOVE_SPACE]."
+      "[Smash] #gGain #g2 #gRandom #gGems."
     ]
   },
   "Guardian:Transmorgrifier": {
