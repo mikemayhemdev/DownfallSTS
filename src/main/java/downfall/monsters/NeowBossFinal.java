@@ -81,9 +81,9 @@ public class NeowBossFinal extends AbstractMonster {
         this.baseDrawX = drawX;
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            setHp(700);
+            setHp(800);
         } else {
-            setHp(650);
+            setHp(750);
         }
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
@@ -160,7 +160,7 @@ public class NeowBossFinal extends AbstractMonster {
 
         int invincibleAmt = 250;
         if (AbstractDungeon.ascensionLevel >= 19) {
-           // invincibleAmt -= 50;
+            invincibleAmt -= 50;
         }// a19 difficulty setting is changed from god of life 2(3), invincible 300(250) , to,  you (dont) get heart's favor
 
         if (AbstractDungeon.ascensionLevel >= 19) {
@@ -249,7 +249,7 @@ public class NeowBossFinal extends AbstractMonster {
                         buf = this.getPower(NeowInvulnerablePower.POWER_ID).amount;
                     }
                         if (buf < 6) {
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 1)));
                         }
 
 
