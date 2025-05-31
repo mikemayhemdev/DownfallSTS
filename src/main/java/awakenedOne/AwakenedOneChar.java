@@ -1,22 +1,28 @@
 package awakenedOne;
 
-import automaton.cards.Goto;
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.Defend;
 import awakenedOne.cards.Hymn;
 import awakenedOne.cards.Strike;
 import awakenedOne.cards.TalonRake;
+import awakenedOne.effects.ReverseAwakenedWingParticle;
+import awakenedOne.patches.OnLoseEnergyPowerPatch;
 import awakenedOne.relics.RippedDoll;
+import awakenedOne.ui.OrbitingSpells;
+import awakenedOne.util.Wiz;
 import basemod.abstracts.CustomPlayer;
-import collector.util.Wiz;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
+import com.esotericsoftware.spine.AnimationState;
+import com.esotericsoftware.spine.Bone;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -26,10 +32,21 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.monsters.beyond.AwakenedOne;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.AwakenedEyeParticle;
+import com.megacrit.cardcrawl.vfx.AwakenedWingParticle;
+import gremlin.powers.EncorePower;
+import hermit.effects.HermitEyeParticle;
+import hermit.powers.Concentration;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.AwakenedOneMod.placeholderColor;
@@ -54,8 +71,25 @@ public class AwakenedOneChar extends CustomPlayer {
 
     public float renderscale = 1.2F;
 
+    private float fireTimer = 0.0F;
+
     private final String atlasURL = "awakenedResources/images/mainChar/awakened.atlas";
     private final String jsonURL = "awakenedResources/images/mainChar/awakened.json";
+
+
+
+    private static final Logger logger = LogManager.getLogger(AwakenedOne.class.getName());
+
+    private boolean form1 = true;
+
+
+    private boolean revived = false;
+
+    private Bone eye;
+    private Bone back;
+    public boolean animateParticles = false;
+    private ArrayList<ReverseAwakenedWingParticle> wParticles = new ArrayList();
+
 
     public AwakenedOneChar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "awakenedResources/images/mainChar/orb/vfx.png", null, (String) null);
@@ -67,22 +101,110 @@ public class AwakenedOneChar extends CustomPlayer {
 
         this.reloadAnimation();
 
-        flipHorizontal = true;
-    }
-
-    @Override
-    public void combatUpdate() {
-        super.combatUpdate();
-        if (flipHorizontal == false) {
-            flipHorizontal = true;
-        }
     }
 
     public void reloadAnimation() {
-        this.loadAnimation(
-                "images/monsters/theForest/awakenedOne/skeleton.atlas", "images/monsters/theForest/awakenedOne/skeleton.json", 1.4F);
+        this.loadAnimation(atlasURL, jsonURL, 1.4F);
+
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle_1", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
+        this.stateData.setMix("Hit", "Idle_1", 0.3F);
+        this.stateData.setMix("Hit", "Idle_2", 0.2F);
+        this.stateData.setMix("Attack_1", "Idle_1", 0.2F);
+        this.stateData.setMix("Attack_2", "Idle_2", 0.2F);
+        this.state.getData().setMix("Idle_1", "Idle_2", 1.0F);
+        this.eye = this.skeleton.findBone("Eye");
+        Iterator var4 = this.skeleton.getBones().iterator();
+
+        while(var4.hasNext()) {
+            Bone b = (Bone)var4.next();
+            logger.info(b.getData().getName());
+        }
+
+        this.back = this.skeleton.findBone("Hips");
+
         this.state.setAnimation(0, "Idle_1", true);
-        flipHorizontal = true;
+
+        flipHorizontal = !flipHorizontal;
+    }
+
+
+    //not used
+    public void revival() {
+        revived = true;
+        animateParticles = true;
+    }
+
+    public void update() {
+
+        super.update();
+
+        animateParticles = false;
+
+        int buf = 0;
+        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+            buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+        }
+
+        if (!this.isDying && buf > 9) {
+        animateParticles = true;
+        }
+
+        if (this.animateParticles) {
+                    this.fireTimer -= Gdx.graphics.getDeltaTime();
+                    if (this.fireTimer < 0.0F) {
+                        this.fireTimer = 0.1F;
+                        AbstractDungeon.effectList.add(new AwakenedEyeParticle(this.skeleton.getX() + this.eye.getWorldX(), this.skeleton.getY() + this.eye.getWorldY()));
+                        this.wParticles.add(new ReverseAwakenedWingParticle());
+            }
+        }
+
+        Iterator<ReverseAwakenedWingParticle> p = this.wParticles.iterator();
+
+        while(p.hasNext()) {
+            ReverseAwakenedWingParticle e = (ReverseAwakenedWingParticle)p.next();
+            e.update();
+            if (e.isDone) {
+                p.remove();
+            }
+        }
+
+    }
+
+    public void render(SpriteBatch sb) {
+        Iterator var2 = this.wParticles.iterator();
+
+        ReverseAwakenedWingParticle p;
+        while(var2.hasNext()) {
+            p = (ReverseAwakenedWingParticle)var2.next();
+            if (p.renderBehind) {
+                p.render(sb, (this.skeleton.getX() - this.back.getWorldX()), this.skeleton.getY() + this.back.getWorldY());
+            }
+        }
+
+        super.render(sb);
+        var2 = this.wParticles.iterator();
+
+        while(var2.hasNext()) {
+            p = (ReverseAwakenedWingParticle)var2.next();
+            if (!p.renderBehind) {
+                p.render(sb, this.skeleton.getX() - this.back.getWorldX(), this.skeleton.getY() + this.back.getWorldY());
+            }
+        }
+
+    }
+
+
+    public void damage(DamageInfo info) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0 && skeleton.getData().findAnimation("Hit") != null) {
+            this.state.setAnimation(0, "Hit", false);
+            if (this.form1) {
+                this.state.addAnimation(0, "Idle_1", true, 0.0F);
+            } else {
+                this.state.addAnimation(0, "Idle_2", true, 0.0F);
+            }
+        }
+        super.damage(info);
     }
 
 

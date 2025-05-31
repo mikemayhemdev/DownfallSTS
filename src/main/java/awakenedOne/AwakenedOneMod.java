@@ -36,7 +36,9 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheCity;
@@ -301,10 +303,8 @@ public class AwakenedOneMod implements
     // CONTENT STUFF
 
     //Hex Stuff
-    //Check EnemyHexedPower for the playing cards bit.
     //the int begone is the amount of Hex being applied, m is the creature being Hexxed, and source is the
-    //source of the Hex/ This tells me if it's Hex made by the creature whenever you play a non-Attack card,
-    //or if it's the player directly applying Hex. This is helpful for mostly Snecko relevant things.
+    //source of the Hex or if it's the player directly applying Hex. This is helpful for mostly Snecko relevant things.
     public static void HexCurse(int begone, AbstractCreature m, AbstractCreature source) {
         //if (!(m.hasPower(UltimateHexDebuff.POWER_ID))) {
             atb(new ApplyPowerAction(m, source, new EnemyHexedPower(m, begone), begone));
@@ -318,8 +318,12 @@ public class AwakenedOneMod implements
         ConjureAction.conjuresThisCombat = 0;
         OnLoseEnergyPowerPatch.EnergyLostThisCombat = 0;
         ConjureAction.refreshedthisturn = false;
+
     }
 
+    public void onVictory() {
+        OrbitingSpells.empty();
+    }
 
     public void atStartOfTurn() {
         {

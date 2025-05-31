@@ -62,6 +62,12 @@ public class OrbitingSpells {
 
     }
 
+
+    public static void empty() {
+        spellCards.clear();
+    }
+
+
     public static void addSpellCard(AbstractCard card) {
 //        if (AbstractDungeon.player.hasPower(EmpressPower.POWER_ID)) {
 //            card.upgrade();
