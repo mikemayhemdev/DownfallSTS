@@ -211,8 +211,8 @@
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "Защищать босса",
-    "DESCRIPTION": "Предотвращает получение урона от след. атаки врага, slimeboundmod:Поглощая ведущего слизня.",
-    "UPGRADE_DESCRIPTION": "Предотвращает получение урона от 2 след. атак врага, slimeboundmod:Поглощая ведущих слизней."
+    "DESCRIPTION": "Предотвращает получение урона от след. атаки врага, slimeboundmod:Поглощая первого слизня.",
+    "UPGRADE_DESCRIPTION": "Предотвращает получение урона от 2 след. атак врага, slimeboundmod:Поглощая первых слизней."
   },
   "Slimebound:RainOfGoop": {
     "NAME": "Дождь из слизи",
