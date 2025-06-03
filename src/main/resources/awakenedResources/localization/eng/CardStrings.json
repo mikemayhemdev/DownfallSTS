@@ -209,7 +209,7 @@
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Place a card from your discard pile into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Put a card from your discard pile into your hand."
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
