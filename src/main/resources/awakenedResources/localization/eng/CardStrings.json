@@ -1,34 +1,32 @@
 {
   "awakened:Thunderbolt": {
     "NAME": "Thunderbolt",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
   },
   "awakened:BurningStudy": {
     "NAME": "Burning Study",
-    "DESCRIPTION": "Gain !M! Strength."
+    "DESCRIPTION": "Retain. NL Gain !M! Strength."
   },
   "awakened:Cryostasis": {
     "NAME": "Cryostasis",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Apply !M! Weak. NL Exhaust."
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "Apply !M! awakened:Hex. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Exhaust."
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Manaburn. NL Lose [E] next turn. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Apply !M! awakened:Manaburn. NL Lose [E] next turn. NL Exhaust."
   },
   "awakened:AphoticShield": {
     "NAME": "Aphotic Shield",
-    "DESCRIPTION": "Gain !M! expansioncontent:Plated *Armor."
+    "DESCRIPTION": "Retain. NL Gain !M! expansioncontent:Plated *Armor."
   },
   "awakened:ESPSpell": {
     "NAME": "ESP",
-    "DESCRIPTION": "Draw !M! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Draw !M! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
   },
 
   "awakened:Strike": {
