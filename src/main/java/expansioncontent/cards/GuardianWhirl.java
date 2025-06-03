@@ -15,7 +15,7 @@ import expansioncontent.expansionContentMod;
 public class GuardianWhirl extends AbstractExpansionCard {
     public static final String ID = makeID("GuardianWhirl");
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 4;
 
     private static final int MAGIC = 2;
 

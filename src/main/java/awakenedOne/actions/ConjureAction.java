@@ -1,5 +1,6 @@
 package awakenedOne.actions;
 
+import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.HeavyStrike;
 import awakenedOne.powers.DarkIncantationRitualPower;
 import awakenedOne.powers.EmpressPower;
@@ -46,7 +47,7 @@ public class ConjureAction extends AbstractGameAction {
         conjuredCards.clear();
         if (OrbitingSpells.spellCards.size() == 1) {
             addToTop(new RefreshSpellsAction());
-            if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID) && refreshedthisturn == false) {
+            if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
                     applyToSelf(new RitualPower(AbstractDungeon.player, AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount, true));
             }
             refreshedthisturn = true;
@@ -56,17 +57,16 @@ public class ConjureAction extends AbstractGameAction {
                     AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
                 }
             }
+
+            for (OrbitingSpells.CardRenderInfo c : (OrbitingSpells.spellCards)) {
+                c.card.upgrade();
+            }
+
         }
             if (!choose) {
                 AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
                 conjuredCards.add(tar);
                 endActionWithFollowUp();
-                if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-                    double buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-                    if (buf > 10) {
-                        tar.upgrade();
-                    }
-                }
                 addToTop(new MakeTempCardInHandAction(tar));
                 addToTop(new RemoveSpellCardAction(tar));
             } else {
@@ -82,9 +82,6 @@ public class ConjureAction extends AbstractGameAction {
                     AbstractCard q = cards.get(0);
                     conjuredCards.add(q);
                     endActionWithFollowUp();
-                    if (AbstractDungeon.player.hasPower(EmpressPower.POWER_ID)) {
-                        q.upgrade();
-                    }
                     addToTop(new MakeTempCardInHandAction(q));
                     addToTop(new RemoveSpellCardAction(q));
                 }));

@@ -62,23 +62,12 @@ public class OrbitingSpells {
 
     }
 
-
     public static void empty() {
         spellCards.clear();
     }
 
 
     public static void addSpellCard(AbstractCard card) {
-//        if (AbstractDungeon.player.hasPower(EmpressPower.POWER_ID)) {
-//            card.upgrade();
-//        }
-            if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-                double buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-                if (buf > 10) {
-                    card.upgrade();
-            }
-        }
-
         spellCards.add(new CardRenderInfo(card));
         updateTimeOffsets();
     }
@@ -92,7 +81,6 @@ public class OrbitingSpells {
         }
         return false;
     }
-
 
     public static void updateTimeOffsets() {
         for (int i = 0; i < spellCards.size(); i++) {

@@ -1,5 +1,6 @@
 package awakenedOne.powers;
 
+import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 
 import static awakenedOne.AwakenedOneMod.HexCurse;
@@ -27,25 +29,20 @@ public class EmpressPower extends AbstractAwakenedPower {
 
     @Override
     public void onAfterCardPlayed(AbstractCard card) {
-        if (card.cost == 0 || card.freeToPlayOnce || card.costForTurn == 0) {
+        if (card instanceof AbstractSpellCard) {
             flash();
-//            AbstractMonster mo = AbstractDungeon.getRandomMonster();
-//            if (mo.hasPower(UltimateHexDebuff.POWER_ID)) {
-//                int softlock = 0;
-//                while ((softlock < 15) && (mo.hasPower(UltimateHexDebuff.POWER_ID))) {
-//                    mo = AbstractDungeon.getRandomMonster();
-//                    softlock++;
-//                }
-//            }
-            AbstractMonster m = AbstractDungeon.getRandomMonster();
-            //this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new ManaburnPower(m, amount), amount));
-            HexCurse(amount, m, AbstractDungeon.player);
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, this.amount), this.amount));
         }
     }
 
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        }
+        else {
+            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+        }
     }
 
 }

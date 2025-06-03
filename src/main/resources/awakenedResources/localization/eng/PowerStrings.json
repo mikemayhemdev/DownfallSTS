@@ -101,8 +101,9 @@
   "awakened:EmpressPower": {
     "NAME": "The Empress",
     "DESCRIPTIONS": [
-      "Whenever you play a #b0 cost card, apply #b",
-      " #yHex to a random enemy."
+      "Whenever you play a Spell, draw #b",
+      " card next turn.",
+      " cards next turn."
     ]
   },
   "awakened:MazalethFormPower": {

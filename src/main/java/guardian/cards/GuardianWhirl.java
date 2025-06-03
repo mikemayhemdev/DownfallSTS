@@ -77,7 +77,8 @@ public class GuardianWhirl extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeDamage(2);
+            //upgradeMagicNumber(1);
             updateDescription();
         }
     }

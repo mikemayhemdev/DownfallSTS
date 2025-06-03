@@ -29,6 +29,6 @@ public class CawCaw extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

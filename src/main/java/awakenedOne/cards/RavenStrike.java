@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.relics.KTRibbon;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,44 +21,16 @@ public class RavenStrike extends AbstractAwakenedCard {
     public RavenStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 10;
-        this.baseMagicNumber = 1;
-        this.magicNumber = this.baseMagicNumber;
-        this.baseSecondMagic = 2;
-        this.secondMagic = this.baseSecondMagic;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-
-        if (this.chant) {
-            chant();
-            checkOnChant();
-        }
-
-        if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                chant();
-                awaken(1);
-            }
-        }
-
+        this.addToBot(new BetterDiscardPileToHandAction(1));
     }
 
-    @Override
-    public void chant() {
-        AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
-        atb(new DrawCardAction(secondMagic));
-       // HexCurse(magicNumber, m, AbstractDungeon.player);
-        checkOnChant();
-    }
-
-    public void triggerOnGlowCheck() {
-        this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
 
     @Override
     public void upp() {
         upgradeDamage(3);
-        upgradeSecondMagic(1);
     }
 }

@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.watcher.WaveOfTheHandPower;
 import sneckomod.patches.WaveOfTheHandPatch;
+import sneckomod.powers.AceOfWandsPower;
+
 import java.util.Iterator;
 
 public class AceOfWandsAction extends AbstractGameAction {
@@ -31,7 +33,9 @@ public AceOfWandsAction(int amount) {
         if (AbstractDungeon.player.hasPower(WaveOfTheHandPower.POWER_ID)) {
             WaveOfTheHandPatch.isActive = 1;
         }
-        this.addToTop(new GainBlockAction(p, p, amount));
+        if (AbstractDungeon.player.hasPower(AceOfWandsPower.POWER_ID)) {
+            this.addToTop(new GainBlockAction(p, p, amount));
+        }
         this.isDone = true;
         this.tickDuration();
 }

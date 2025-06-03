@@ -21,7 +21,8 @@ public class ArcaneNesting extends AbstractAwakenedCard {
 
     public ArcaneNesting() {
         super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 6;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

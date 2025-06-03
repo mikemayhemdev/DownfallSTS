@@ -67,7 +67,7 @@
   },
   "awakened:CawCaw": {
     "NAME": "Dark Incantation",
-    "DESCRIPTION": "Gain !M! Ritual."
+    "DESCRIPTION": "The first time you Refresh your Spells each turn, gain !M! Ritual."
   },
   "awakened:Librarian": {
     "NAME": "The Magician",
@@ -132,7 +132,7 @@
   },
   "awakened:ClarionCall": {
     "NAME": "Clarion Call",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL If a *Void is in hand, gain [E] and draw a card, then Exhaust it."
   },
   "awakened:Recitation": {
     "NAME": "Recitation",
@@ -164,8 +164,7 @@
   },
   "awakened:Envision": {
     "NAME": "Envision",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL awakened:Conjure."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure."
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
@@ -210,7 +209,7 @@
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Draw !awakened:m2! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Place a card from your discard pile into your hand."
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
@@ -289,7 +288,7 @@
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",
-    "DESCRIPTION": "Whenever you play a 0 cost card, apply !M! awakened:Hex to a random enemy."
+    "DESCRIPTION": "Whenever you play a Spell, draw a card next turn."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
@@ -385,7 +384,7 @@
   },
   "awakened:ArcaneNesting": {
     "NAME": "Arcane Nesting",
-    "DESCRIPTION": "Gain !B! Block X times. NL awakened:Conjure X times. NL Gain [E]."
+    "DESCRIPTION": "Gain !B! Block X times. NL awakened:Conjure X times. NL Gain [E]. NL Exhaust."
   },
   "awakened:Middens": {
     "NAME": "Middens",
