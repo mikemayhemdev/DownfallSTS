@@ -52,20 +52,18 @@ public class Middens extends AbstractAwakenedCard {
 
             if (!syntheticSockets.isEmpty()) {
                 this.addToTop(new SelectCardsCenteredAction(
-
                         syntheticSockets,
                         magicNumber,
                         TEXT[0],
                         (selectedCards) -> {
                             if (!syntheticSockets.isEmpty()) {
-                                for (int i = 0; i < this.magicNumber-1; i++) {
+                                for (int i = 0; i < this.magicNumber; i++) {
                                     AbstractCard selecteda = selectedCards.get(i);
                                     p.discardPile.removeCard(selecteda);
                                     p.hand.addToHand(selecteda);
                                     selecteda.lighten(false);
                                     selecteda.unhover();
                                     selecteda.applyPowers();
-
                                 }
                             }
                         }

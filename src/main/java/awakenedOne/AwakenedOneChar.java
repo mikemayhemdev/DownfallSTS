@@ -140,6 +140,10 @@ public class AwakenedOneChar extends CustomPlayer {
         animateParticles = true;
         }
 
+        if (this.isDying) {
+            animateParticles = false;
+        }
+
         if (this.animateParticles) {
                     this.fireTimer -= Gdx.graphics.getDeltaTime();
                     if (this.fireTimer < 0.0F) {

@@ -1,28 +1,18 @@
 package awakenedOne.actions;
 
-import awakenedOne.AwakenedOneMod;
-import awakenedOne.cards.HeavyStrike;
 import awakenedOne.powers.DarkIncantationRitualPower;
-import awakenedOne.powers.EmpressPower;
 import awakenedOne.powers.FeathersinksPower;
 import awakenedOne.ui.OrbitingSpells;
-import awakenedOne.util.OnConjureSubscriber;
 import awakenedOne.util.Wiz;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.RitualPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import theHexaghost.util.OnAdvanceOrRetractSubscriber;
 
 import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 import static awakenedOne.util.Wiz.*;
 
@@ -48,29 +38,35 @@ public class ConjureAction extends AbstractGameAction {
         conjuresThisCombat += 1;
         isDone = true;
         conjuredCards.clear();
+        isDone = true;
+
         if (OrbitingSpells.spellCards.size() == 1) {
-            addToTop(new RefreshSpellsAction());
-            if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
-                    applyToSelf(new RitualPower(AbstractDungeon.player, AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount, true));
+
+            addToTop(new AbstractGameAction() {
+                @Override
+                public void update() {
+                        isDone = true;
+                        for (OrbitingSpells.CardRenderInfo c : (OrbitingSpells.spellCards)) {
+                            c.card.upgrade();
+                        }
+                    }
+                });
             }
+
+            if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
+                for (int i = 0; i < AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount; i++) {
+                    applyToSelf(new RitualPower(AbstractDungeon.player, 1, true));
+                }
+            }
+
             refreshedthisturn = true;
+
             //On Refresh...
             if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
                 for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {
                     AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
                 }
             }
-
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    for (OrbitingSpells.CardRenderInfo c : (OrbitingSpells.spellCards)) {
-                        c.card.upgrade();
-                    }
-                }
-            });
-        }
 
             if (!choose) {
                 AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
