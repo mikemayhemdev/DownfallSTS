@@ -46,11 +46,4 @@ public class DefectBiasCuriosityPower extends AbstractBossMechanicPower {
        // if(triggered==false)
         addToBot(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, -this.amount), -this.amount));
     }
-
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.POWER) {
-            flash();
-            addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, this.amount), this.amount));
-        }
     }
-}

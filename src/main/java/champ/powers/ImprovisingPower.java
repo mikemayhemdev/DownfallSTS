@@ -47,16 +47,16 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
         }
     }
 
-    @Override
-    public void atStartOfTurn() {
-            if (AbstractDungeon.player.stance instanceof NeutralStance) {
-                if (AbstractDungeon.cardRandomRng.randomBoolean()) {
-                    addToBot(new ChangeStanceAction(new BerserkerStance()));
-                } else {
-                    addToBot(new ChangeStanceAction(new DefensiveStance()));
-                }
-            }
-        }
+//    @Override
+//    public void atStartOfTurn() {
+//            if (AbstractDungeon.player.stance instanceof NeutralStance) {
+//                if (AbstractDungeon.cardRandomRng.randomBoolean()) {
+//                    addToBot(new ChangeStanceAction(new BerserkerStance()));
+//                } else {
+//                    addToBot(new ChangeStanceAction(new DefensiveStance()));
+//                }
+//            }
+//        }
 
     @Override
     public void updateDescription() {

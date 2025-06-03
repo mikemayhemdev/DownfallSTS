@@ -15,7 +15,7 @@ public class InResponse extends AbstractAwakenedCard {
 
     public InResponse() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseSecondMagic = secondMagic = 2;
+        baseSecondMagic = secondMagic = 3;
         this.tags.add(AwakenedOneMod.DELVE);
     }
 

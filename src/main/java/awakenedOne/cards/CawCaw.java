@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import awakenedOne.powers.DarkIncantationRitualPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,15 +17,15 @@ public class CawCaw extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , 2, 1
 
     public CawCaw() {
-        super(ID, 4, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardCrawlGame.sound.playA("VO_CULTIST_1A", -.1f);
 
         AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, Byrd.DIALOG[0], true));
-        applyToSelf(new RitualPower(p, magicNumber, true));
+        applyToSelf(new DarkIncantationRitualPower(magicNumber));
     }
 
     public void upp() {

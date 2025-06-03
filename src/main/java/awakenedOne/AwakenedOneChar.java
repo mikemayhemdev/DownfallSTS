@@ -1,15 +1,11 @@
 package awakenedOne;
 
-import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.Defend;
 import awakenedOne.cards.Hymn;
 import awakenedOne.cards.Strike;
 import awakenedOne.cards.TalonRake;
 import awakenedOne.effects.ReverseAwakenedWingParticle;
-import awakenedOne.patches.OnLoseEnergyPowerPatch;
 import awakenedOne.relics.RippedDoll;
-import awakenedOne.ui.OrbitingSpells;
-import awakenedOne.util.Wiz;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -34,13 +30,8 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.monsters.beyond.AwakenedOne;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AwakenedEyeParticle;
-import com.megacrit.cardcrawl.vfx.AwakenedWingParticle;
-import gremlin.powers.EncorePower;
-import hermit.effects.HermitEyeParticle;
-import hermit.powers.Concentration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import reskinContent.patches.CharacterSelectScreenPatches;
@@ -125,7 +116,6 @@ public class AwakenedOneChar extends CustomPlayer {
 
         this.state.setAnimation(0, "Idle_1", true);
 
-        flipHorizontal = !flipHorizontal;
     }
 
 
@@ -154,6 +144,7 @@ public class AwakenedOneChar extends CustomPlayer {
                     this.fireTimer -= Gdx.graphics.getDeltaTime();
                     if (this.fireTimer < 0.0F) {
                         this.fireTimer = 0.1F;
+                        //todo: replace with non-leaky animation
                         AbstractDungeon.effectList.add(new AwakenedEyeParticle(this.skeleton.getX() + this.eye.getWorldX(), this.skeleton.getY() + this.eye.getWorldY()));
                         this.wParticles.add(new ReverseAwakenedWingParticle());
             }

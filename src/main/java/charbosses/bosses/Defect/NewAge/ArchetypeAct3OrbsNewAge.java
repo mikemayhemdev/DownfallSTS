@@ -11,6 +11,7 @@ import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnShame;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.bossmechanicpowers.DefectBiasCuriosityPower;
+import charbosses.powers.bossmechanicpowers.DefectCuriosityPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
@@ -43,6 +44,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FocusPower(p, 4)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectBiasCuriosityPower(p)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectCuriosityPower(p)));
     }
 
     public void initialize() {

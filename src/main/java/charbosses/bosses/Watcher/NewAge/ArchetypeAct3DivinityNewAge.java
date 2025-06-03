@@ -2,6 +2,7 @@ package charbosses.bosses.Watcher.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
+import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.colorless.EnGoodInstincts;
@@ -18,7 +19,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
-public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
+public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
 
     private AbstractBossCard theVeryImportantSandsOfTime = null;
     private AbstractBossCard theVeryImportantPerseverence = null;

@@ -140,8 +140,8 @@
   "awakened:FeathersinksPower": {
     "NAME": "Feathersinks",
     "DESCRIPTIONS": [
-      "Whenever you refresh your Spells, draw #b",
-      " cards."
+      "Whenever you refresh your Spells, gain #b",
+      " [E] ."
     ]
   },
   "awakened:StrengthReturnPower": {
@@ -163,6 +163,13 @@
     "DESCRIPTIONS": [
       "Whenever you play a #yPower card, apply #b",
       " #yHex to ALL enemies."
+    ]
+  },
+  "awakened:DarkIncantationRitualPower": {
+    "NAME": "Dark Incantation",
+    "DESCRIPTIONS": [
+      "The first time you refresh your Spells each turn, gain #b",
+      " #yRitual [REMOVE_SPACE]."
     ]
   },
   "awakened:DarknessFallsPower": {

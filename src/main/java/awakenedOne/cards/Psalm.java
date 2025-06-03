@@ -17,7 +17,7 @@ public class Psalm extends AbstractAwakenedCard {
 
     public Psalm() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 3;
+        baseDamage = 4;
         selfRetain = true;
     }
 
@@ -29,6 +29,6 @@ public class Psalm extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 }

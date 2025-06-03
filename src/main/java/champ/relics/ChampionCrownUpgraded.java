@@ -12,8 +12,10 @@ import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
 import champ.util.OnOpenerSubscriber;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnAfterUseCardRelic;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -29,11 +31,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import expansioncontent.actions.EchoACardAction;
 import slimebound.relics.AbsorbEndCombat;
 
-import static champ.ChampMod.makeRelicOutlinePath;
-import static champ.ChampMod.makeRelicPath;
+import static champ.ChampMod.*;
 import static collector.util.Wiz.atb;
 
-public class ChampionCrownUpgraded extends CustomRelic {
+public class ChampionCrownUpgraded extends CustomRelic implements OnAfterUseCardRelic {
 
     public static final String ID = ChampMod.makeID("ChampionCrownUpgraded");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("UltimateChampionCrown.png"));
@@ -73,7 +74,7 @@ public class ChampionCrownUpgraded extends CustomRelic {
     }
 
     @Override
-    public void onPlayCard(AbstractCard c, AbstractMonster m) {
+    public void onAfterUseCard(AbstractCard c, UseCardAction var2) {
         if (c.hasTag(ChampMod.FINISHER) && this.counter == 0) {
             flash();
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
@@ -81,10 +82,10 @@ public class ChampionCrownUpgraded extends CustomRelic {
             int x = AbstractDungeon.relicRng.random(1);
             switch (x) {
                 case 0:
-                    addToBot(new ChangeStanceAction(BerserkerStance.STANCE_ID));
+                    berserkOpen();
                     break;
                 case 1:
-                    addToBot(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+                    defenseOpen();
                     break;
             }
             this.counter = 1;

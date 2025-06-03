@@ -41,7 +41,7 @@
   },
   "awakened:MagicStrike": {
     "NAME": "Magic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, apply !M! awakened:Hex."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Hex. NL If the enemy intends to attack, apply !awakened:m2! additional awakened:Hex."
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
@@ -192,7 +192,7 @@
   },
   "awakened:Feathersinks": {
     "NAME": "Feathersinks",
-    "DESCRIPTION": "Whenever you refresh your Spells, draw !M! cards."
+    "DESCRIPTION": "Whenever you refresh your Spells, gain [E]."
   },
   "awakened:Sludge": {
     "NAME": "Sludge",
@@ -200,7 +200,7 @@
   },
   "awakened:KnifesEdge": {
     "NAME": "Knife's Edge",
-    "DESCRIPTION": "Lose !awakened:m2! HP. NL Gain !M! Strength."
+    "DESCRIPTION": "Gain !M! Strength. NL Place a *Void into your discard pile."
   },
   "awakened:Haemomancy": {
     "NAME": "Haemomancy",
@@ -333,7 +333,12 @@
   },
   "awakened:HeavyStrike": {
     "NAME": "Carrionmaker",
-    "DESCRIPTION": "Deal !awakened:sd! damage, then deal !D! damage to a random enemy."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each Spell played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " Spell played.)",
+      " Spells played.)"
+    ]
   },
   "awakened:MirePit": {
     "NAME": "Mire Pit",
@@ -382,12 +387,7 @@
   },
   "awakened:ArcaneNesting": {
     "NAME": "Arcane Nesting",
-    "DESCRIPTION": "Gain !B! Block X times, +1 for each Spell played this turn.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (",
-      " card played.)",
-      " cards played.)"
-    ]
+    "DESCRIPTION": "Gain !B! Block X times. NL awakened:Conjure X times. NL Gain [E]."
   },
   "awakened:Middens": {
     "NAME": "Middens",

@@ -20,7 +20,7 @@ public class ESPSpell extends AbstractSpellCard {
     // intellij stuff skill, all_enemy, , , , , 7, 2
 
     public ESPSpell() {
-        super(ID, CardType.SKILL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 

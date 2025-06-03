@@ -88,9 +88,14 @@
   "downfall:WatcherSkillPower": {
     "NAME": "Prey on Disharmony",
     "DESCRIPTIONS": [
-      "Whenever you play a skill, Watcher gains #b",
-      " temporary #yStrength.",
-      "Whenever you play a skill, Watcher gains #yTemporary #yStrength [REMOVE_SPACE]."
+      "Whenever you play an #yAttack, Watcher gains #b",
+      " temp. #yDexterity, #b",
+      " temp. #yStrength when you play a #ySkill, and #b",
+      " of both when you play a #yPower.",
+      "If you play more than #b",
+      " cards in a turn, Watcher removes ALL of her debuffs.",
+      "You have played #b",
+      " cards this turn."
     ]
   },
   "downfall:WrathNextTurnPower": {
@@ -187,12 +192,12 @@
     ]
   },
   "downfall:DefectBiasCuriosity": {
-    "NAME": "Unbiased Cognition",
+    "NAME": "Bias",
     "DESCRIPTIONS": [
       "Defect starts combat with #b4 #yFocus and gains #b1 more whenever you play a #yPower card, but also loses #b1 #yFocus at the end of their turn.",
-      "Defect gains #b",
-      " #yFocus whenever you play a #yPower card, but also loses #b",
-      " #yFocus at the end of their turn."
+      "Defect loses #b",
+      " #yFocus",
+      " at the end of their turn."
     ]
   },
   "downfall:DefectCuriosityLighning": {

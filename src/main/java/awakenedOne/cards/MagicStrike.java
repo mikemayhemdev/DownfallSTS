@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.Iterator;
 
+import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.atb;
 
@@ -22,10 +23,12 @@ public class MagicStrike extends AbstractAwakenedCard {
         baseDamage = 4;
         tags.add(CardTags.STRIKE);
         baseMagicNumber = magicNumber = 1;
+        baseSecondMagic = secondMagic = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        HexCurse(magicNumber, m, p);
         this.addToBot(new ForTheHexAction(this.magicNumber, m));
     }
 
@@ -45,6 +48,6 @@ public class MagicStrike extends AbstractAwakenedCard {
 
     public void upp() {
         upgradeDamage(2);
-        upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }

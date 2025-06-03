@@ -100,7 +100,7 @@
     "NAME": "Paper Crow",
     "FLAVOR": "Arbiter of doubt and curses folded one thousand times...",
     "DESCRIPTIONS": [
-      "Enemies with #yawakened:Hex take #b10% more damage for each stack."
+      "Enemies with #yawakened:Hex take #b12.5% more damage for each stack."
     ]
   }
 }

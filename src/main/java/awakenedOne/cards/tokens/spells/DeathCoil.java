@@ -31,7 +31,7 @@ public class DeathCoil extends AbstractSpellCard {
     // intellij stuff attack, enemy, 13, 6, , , ,
 
     public DeathCoil() {
-        super(ID, CardType.ATTACK, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 4;
     }
