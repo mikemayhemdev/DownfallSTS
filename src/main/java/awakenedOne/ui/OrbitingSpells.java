@@ -1,6 +1,7 @@
 package awakenedOne.ui;
 
 import awakenedOne.actions.AddSpellCardAction;
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.AphoticFount;
 import awakenedOne.cards.Deathwish;
 import awakenedOne.cards.tokens.spells.*;
@@ -64,10 +65,14 @@ public class OrbitingSpells {
 
     public static void empty() {
         spellCards.clear();
+        update();
     }
 
 
     public static void addSpellCard(AbstractCard card) {
+        if (ConjureAction.refreshedthisturn = true) {
+            card.upgrade();
+        }
         spellCards.add(new CardRenderInfo(card));
         updateTimeOffsets();
     }
