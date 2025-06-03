@@ -32,6 +32,6 @@ public class TalonRake extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 }

@@ -13,12 +13,10 @@ public class Feathersinks extends AbstractAwakenedCard {
 
     public Feathersinks() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 2;
-        this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new FeathersinksPower(magicNumber));
+        applyToSelf(new FeathersinksPower(1));
     }
 
     public void upp() {

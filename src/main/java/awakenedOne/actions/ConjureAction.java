@@ -11,17 +11,20 @@ import awakenedOne.util.Wiz;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.util.OnAdvanceOrRetractSubscriber;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
-import static awakenedOne.util.Wiz.applyToSelf;
+import static awakenedOne.util.Wiz.*;
 
 public class ConjureAction extends AbstractGameAction {
     private final AbstractGameAction followUpAction;
@@ -58,11 +61,17 @@ public class ConjureAction extends AbstractGameAction {
                 }
             }
 
-            for (OrbitingSpells.CardRenderInfo c : (OrbitingSpells.spellCards)) {
-                c.card.upgrade();
-            }
-
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    for (OrbitingSpells.CardRenderInfo c : (OrbitingSpells.spellCards)) {
+                        c.card.upgrade();
+                    }
+                }
+            });
         }
+
             if (!choose) {
                 AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
                 conjuredCards.add(tar);

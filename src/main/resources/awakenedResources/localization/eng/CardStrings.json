@@ -67,7 +67,7 @@
   },
   "awakened:CawCaw": {
     "NAME": "Dark Incantation",
-    "DESCRIPTION": "The first time you Refresh your Spells each turn, gain !M! Ritual."
+    "DESCRIPTION": "The first time you refresh your Spells each turn, gain !M! Ritual."
   },
   "awakened:Librarian": {
     "NAME": "The Magician",

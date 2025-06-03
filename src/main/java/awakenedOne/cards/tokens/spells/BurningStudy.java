@@ -25,15 +25,15 @@ public class BurningStudy extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int roll = MathUtils.random(2);
-        if (roll == 0) {
-            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1A"));
-        } else if (roll == 1) {
-            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1B"));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1C"));
-        }
-        this.addToBot(new VFXAction(p, new InflameEffect(p), .25F));
+//        int roll = MathUtils.random(2);
+//        if (roll == 0) {
+//            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1A"));
+//        } else if (roll == 1) {
+//            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1B"));
+//        } else {
+//            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1C"));
+//        }
+        this.addToBot(new VFXAction(p, new InflameEffect(p), 1.0F));
         applyToSelf(new StrengthPower(p, magicNumber));
     }
 
