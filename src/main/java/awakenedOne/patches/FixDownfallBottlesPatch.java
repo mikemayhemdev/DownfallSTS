@@ -36,38 +36,38 @@ public class FixDownfallBottlesPatch {
     public static CardGroup Postfix(CardGroup __result, CardGroup group) {
 
         if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
-            SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
-            __result.group.remove(s.card);
+            SignatureFinisher a = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
+            __result.group.remove(a.card);
         }
 
         if (AbstractDungeon.player.hasRelic(BottledStasis.ID)) {
-            BottledStasis s = (BottledStasis) AbstractDungeon.player.getRelic(BottledStasis.ID);
-            __result.group.remove(s.card);
+            BottledStasis b = (BottledStasis) AbstractDungeon.player.getRelic(BottledStasis.ID);
+            __result.group.remove(b.card);
         }
 
         if (AbstractDungeon.player.hasRelic(BottledAnomaly.ID)) {
-            BottledAnomaly s = (BottledAnomaly) AbstractDungeon.player.getRelic(BottledAnomaly.ID);
-            __result.group.remove(s.card);
+            BottledAnomaly crelic = (BottledAnomaly) AbstractDungeon.player.getRelic(BottledAnomaly.ID);
+            __result.group.remove(crelic.card);
         }
 
         if (AbstractDungeon.player.hasRelic(MoonTalisman.ID)) {
-            MoonTalisman s = (MoonTalisman) AbstractDungeon.player.getRelic(MoonTalisman.ID);
-            __result.group.remove(s.card);
+            MoonTalisman d = (MoonTalisman) AbstractDungeon.player.getRelic(MoonTalisman.ID);
+            __result.group.remove(d.card);
         }
 
         if (AbstractDungeon.player.hasRelic(BottledCollectible.ID)) {
-            BottledCollectible s = (BottledCollectible) AbstractDungeon.player.getRelic(BottledCollectible.ID);
-            __result.group.remove(s.card);
+            BottledCollectible e = (BottledCollectible) AbstractDungeon.player.getRelic(BottledCollectible.ID);
+            __result.group.remove(e.card);
         }
 
         if (AbstractDungeon.player.hasRelic(D8.ID)) {
-            D8 s = (D8) AbstractDungeon.player.getRelic(D8.ID);
-            __result.group.remove(s.card);
+            D8 f = (D8) AbstractDungeon.player.getRelic(D8.ID);
+            __result.group.remove(f.card);
         }
 
         if (AbstractDungeon.player.hasRelic(BottledCode.ID)) {
-            BottledCode s = (BottledCode) AbstractDungeon.player.getRelic(BottledCode.ID);
-                __result.group.remove(s.card);
+            BottledCode g = (BottledCode) AbstractDungeon.player.getRelic(BottledCode.ID);
+                __result.group.remove(g.card);
         }
 
         if (AbstractDungeon.player.hasRelic(StasisEgg.ID)) {

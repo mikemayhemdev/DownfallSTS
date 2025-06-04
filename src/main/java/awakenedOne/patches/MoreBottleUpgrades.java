@@ -20,57 +20,57 @@ public class MoreBottleUpgrades {
             public static void Postfix(AbstractCard c) {
 
             if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
-                SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
-                if (s.card.uuid == c.uuid) {
+                SignatureFinisher a = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
+                if (a.card.uuid == c.uuid) {
                     ((SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID)).setDescriptionAfterLoading();
                 }
             }
 
             if (AbstractDungeon.player.hasRelic(BottledStasis.ID)) {
-                BottledStasis s = (BottledStasis) AbstractDungeon.player.getRelic(BottledStasis.ID);
-                if (s.card.uuid == c.uuid) {
+                BottledStasis b = (BottledStasis) AbstractDungeon.player.getRelic(BottledStasis.ID);
+                if (b.card.uuid == c.uuid) {
                     ((BottledStasis) AbstractDungeon.player.getRelic(BottledStasis.ID)).setDescriptionAfterLoading();
                 }
             }
 
             if (AbstractDungeon.player.hasRelic(BottledAnomaly.ID)) {
-                BottledAnomaly s = (BottledAnomaly) AbstractDungeon.player.getRelic(BottledAnomaly.ID);
-                if (s.card.uuid == c.uuid) {
+                BottledAnomaly crelic = (BottledAnomaly) AbstractDungeon.player.getRelic(BottledAnomaly.ID);
+                if (crelic.card.uuid == c.uuid) {
                     ((BottledAnomaly) AbstractDungeon.player.getRelic(BottledAnomaly.ID)).setDescriptionAfterLoading();
                 }
             }
 
             if (AbstractDungeon.player.hasRelic(MoonTalisman.ID)) {
-                MoonTalisman s = (MoonTalisman) AbstractDungeon.player.getRelic(MoonTalisman.ID);
-                if (s.card.uuid == c.uuid) {
+                MoonTalisman e = (MoonTalisman) AbstractDungeon.player.getRelic(MoonTalisman.ID);
+                if (e.card.uuid == c.uuid) {
                     ((MoonTalisman) AbstractDungeon.player.getRelic(MoonTalisman.ID)).setDescriptionAfterLoading();
                 }
             }
 
             if (AbstractDungeon.player.hasRelic(BottledCollectible.ID)) {
-                BottledCollectible s = (BottledCollectible) AbstractDungeon.player.getRelic(BottledCollectible.ID);
-                if (s.card.uuid == c.uuid) {
+                BottledCollectible f = (BottledCollectible) AbstractDungeon.player.getRelic(BottledCollectible.ID);
+                if (f.card.uuid == c.uuid) {
                     ((BottledCollectible) AbstractDungeon.player.getRelic(BottledCollectible.ID)).setDescriptionAfterLoading();
                 }
             }
 
             if (AbstractDungeon.player.hasRelic(D8.ID)) {
-                D8 s = (D8) AbstractDungeon.player.getRelic(D8.ID);
-                if (s.card.uuid == c.uuid) {
+                D8 g = (D8) AbstractDungeon.player.getRelic(D8.ID);
+                if (g.card.uuid == c.uuid) {
                     ((D8) AbstractDungeon.player.getRelic(D8.ID)).setDescriptionAfterLoading();
                 }
             }
 
             if (AbstractDungeon.player.hasRelic(BottledCode.ID)) {
-                BottledCode s = (BottledCode) AbstractDungeon.player.getRelic(BottledCode.ID);
-                if (s.card.uuid == c.uuid) {
+                BottledCode h = (BottledCode) AbstractDungeon.player.getRelic(BottledCode.ID);
+                if (h.card.uuid == c.uuid) {
                     ((BottledCode) AbstractDungeon.player.getRelic(BottledCode.ID)).setDescriptionAfterLoading();
                 }
             }
 
             if (AbstractDungeon.player.hasRelic(StasisEgg.ID)) {
-                StasisEgg s = (StasisEgg) AbstractDungeon.player.getRelic(StasisEgg.ID);
-                if (s.card.uuid == c.uuid) {
+                StasisEgg i = (StasisEgg) AbstractDungeon.player.getRelic(StasisEgg.ID);
+                if (i.card.uuid == c.uuid) {
                     ((BottledCode) AbstractDungeon.player.getRelic(BottledCode.ID)).setDescriptionAfterLoading();
                 }
             }
