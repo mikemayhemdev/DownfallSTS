@@ -107,7 +107,7 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
 
     }
 
-    private void setDescriptionAfterLoading() {
+    public void setDescriptionAfterLoading() {
         if(cardRemoved){
             tips.clear();
             this.description = this.DESCRIPTIONS[4];

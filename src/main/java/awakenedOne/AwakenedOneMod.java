@@ -258,15 +258,18 @@ public class AwakenedOneMod implements
         BaseMod.addRelicToCustomPool(new ZenerDeck(), AwakenedOneChar.Enums.AWAKENED_BLUE); //uncommon
         BaseMod.addRelicToCustomPool(new AbyssBlade(), AwakenedOneChar.Enums.AWAKENED_BLUE); //boss energy lose [e] refund
         BaseMod.addRelicToCustomPool(new StrengthBooster(), AwakenedOneChar.Enums.AWAKENED_BLUE); //uncommon
-        BaseMod.addRelicToCustomPool(new DeadBird(), AwakenedOneChar.Enums.AWAKENED_BLUE); //rare
+        //BaseMod.addRelicToCustomPool(new DeadBird(), AwakenedOneChar.Enums.AWAKENED_BLUE); //rare
         BaseMod.addRelicToCustomPool(new HexxBomb(), AwakenedOneChar.Enums.AWAKENED_BLUE); //shop
 
+        BaseMod.addRelicToCustomPool(new MoonTalisman(), AwakenedOneChar.Enums.AWAKENED_BLUE); //rare relic to replace dead bird's rare #2 slot
 
         //shared relics
         BaseMod.addRelic(new CawingCask(), RelicType.SHARED); //rare shared
         BaseMod.addRelic(new VioletPlumage(), RelicType.SHARED); //shop shared
         BaseMod.addRelic(new ShardOfNowak(), RelicType.SHARED); //uncommon shared
         BaseMod.addRelic(new MiniBlackHole(), RelicType.SHARED);//common shared
+
+        BaseMod.addRelic(new DeadBird(), RelicType.SHARED); //decided this was useful enough to be shared
     }
 
     public void addPotions() {

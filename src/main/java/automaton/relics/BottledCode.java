@@ -106,7 +106,7 @@ public class BottledCode extends CustomRelic implements CustomBottleRelic, Custo
         }
     }
 
-    private void setDescriptionAfterLoading() {
+    public void setDescriptionAfterLoading() {
         this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
         tips.clear();
         tips.add(new PowerTip(name, description));

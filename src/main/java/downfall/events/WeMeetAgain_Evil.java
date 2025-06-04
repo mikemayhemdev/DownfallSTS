@@ -1,5 +1,6 @@
 package downfall.events;
 
+import awakenedOne.relics.MoonTalisman;
 import champ.relics.SignatureFinisher;
 import collector.CollectorChar;
 import collector.relics.BottledCollectible;
@@ -84,6 +85,7 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
                     (r.relicId != Mango.ID) &&
                     (r.relicId != SignatureFinisher.ID) &&
                     (r.relicId != WingBoots.ID) &&
+                    (r.relicId != MoonTalisman.ID) &&
                     //Boss
                     (r.relicId != Astrolabe.ID) &&
                     (r.relicId != ForbiddenFruit.ID) &&

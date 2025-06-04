@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.RitualPower;
 
 import java.util.ArrayList;
 
+import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.applyToSelf;
 
 public class ConjureAction extends AbstractGameAction {
@@ -40,6 +41,7 @@ public class ConjureAction extends AbstractGameAction {
                 public void update() {
                     isDone = true;
                     if ((OrbitingSpells.spellCards.isEmpty())) {
+                        awaken(5);
                         OrbitingSpells.refreshSpells();
                         for (OrbitingSpells.CardRenderInfo c : OrbitingSpells.spellCards) {
                             c.card.upgrade();

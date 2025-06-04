@@ -110,7 +110,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
         }
     }
 
-    private void setDescriptionAfterLoading() {
+    public void setDescriptionAfterLoading() {
         if(cardRemoved){
             tips.clear();
             this.description = this.DESCRIPTIONS[4];

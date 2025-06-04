@@ -1,42 +1,71 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.Ceremony;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.RitualPower;
+import sneckomod.cards.SoulRoll;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
+import static awakenedOne.util.Wiz.applyToSelf;
+import static awakenedOne.util.Wiz.atb;
 
-public class ShreddedDoll extends CustomRelic {
+public class ShreddedDoll extends CustomRelic implements OnAwakenRelic {
 
     public static final String ID = AwakenedOneMod.makeID("ShreddedDoll");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("ShreddedDoll.png")); //TODO: Images
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("ShreddedDoll.png"));
+    private boolean activatedthiscombat = false;
 
     public ShreddedDoll() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
-        AbstractCard q = new Ceremony();
-        q.upgrade();
-        tips.add(new CardPowerTip(q));
+    //    AbstractCard q = new Ceremony();
+//        q.upgrade();
+      //  tips.add(new CardPowerTip(q));
     }
+
+//    @Override
+//    public void atBattleStart() {
+//        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+//        flash();
+//        AbstractCard c = new Ceremony();
+////        c.upgrade();
+//        this.addToTop(new MakeTempCardInHandAction(c, 1, false));
+//  //      this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RitualPower(AbstractDungeon.player, 1, true)));
+//    }
+
 
     @Override
     public void atBattleStart() {
-        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        AbstractCard c = new Ceremony();
-        c.upgrade();
-        this.addToTop(new MakeTempCardInHandAction(c, 1, false));
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RitualPower(AbstractDungeon.player, 1, true)));
+        activatedthiscombat = false;
+    }
+
+    //Check AwakenButton.java. I'm just using this override for convenience.
+    @Override
+    public void onAwaken(int amount) {
+        if (amount == 5 && activatedthiscombat == false) {
+            activatedthiscombat = true;
+            flash();
+            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            applyToSelf(new RitualPower(AbstractDungeon.player, 1, true));
+        }
+    }
+
+    @Override
+    public void atTurnStart() {
+        super.atTurnStart();
+        flash();
+        atb(new ConjureAction(false));
     }
 
     @Override

@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -46,9 +47,9 @@ public class OverwhelmingPresencePower extends AbstractPower implements Cloneabl
         hasTriggeredThisTurn = false;
     }
 
+
     @Override
-    public void update(int slot) {
-        super.update(slot);
+    public void onCardDraw(AbstractCard card) {
 
         // Detect shuffle by checking if the draw pile size has increased (refilled from discard)
         int currentDrawPileSize = AbstractDungeon.player.drawPile.size();

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.util.TextureLoader;
@@ -27,9 +28,17 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
 
     public AbstractCard card = null;
     private boolean cardSelected = true;
+    private boolean hasfinisher = false;
 
     public SignatureFinisher() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+    }
+
+    @Override
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        if (this.card != null && card.uuid.equals(this.card.uuid)) {
+            this.flash();
+        }
     }
 
     @Override
@@ -113,12 +122,23 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
         }
     }
 
-    private void setDescriptionAfterLoading() {
+    public void setDescriptionAfterLoading() {
         this.description = FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[2];
         tips.clear();
         tips.add(new PowerTip(name, description));
         initializeTips();
     }
+
+
+    public boolean canSpawn() {
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.hasTag(FINISHER)) {
+                hasfinisher = true;
+            }
+        }
+        return hasfinisher;
+    }
+
 
     @Override
     public AbstractRelic makeCopy() {

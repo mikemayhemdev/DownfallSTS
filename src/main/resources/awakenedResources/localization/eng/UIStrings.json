@@ -3,5 +3,10 @@
     "TEXT": [
       "Spell"
     ]
+  },
+  "awakened:ConjureMod": {
+    "TEXT": [
+      " NL awakened:Conjure."
+    ]
   }
 }
