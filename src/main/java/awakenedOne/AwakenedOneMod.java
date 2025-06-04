@@ -86,6 +86,7 @@ public class AwakenedOneMod implements
         PostInitializeSubscriber,
         OnStartBattleSubscriber,
         StartGameSubscriber,
+        OnPlayerTurnStartSubscriber,
         PostDungeonUpdateSubscriber, PostPlayerUpdateSubscriber {
 
 
@@ -325,7 +326,8 @@ public class AwakenedOneMod implements
         OrbitingSpells.empty();
     }
 
-    public void atStartOfTurn() {
+    @Override
+    public void receiveOnPlayerTurnStart() {
         ConjureAction.refreshedthisturn = false;
     }
 
