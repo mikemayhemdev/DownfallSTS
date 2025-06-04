@@ -39,6 +39,7 @@ public class NoGlitteringFalling {
                 }
             }
 
+            //out of sight, out of mind?
             if (hasSoulboundNotCurse) {
                tmp.remove(Falling.ID);
                tmp.remove(HexaFalling.ID);
