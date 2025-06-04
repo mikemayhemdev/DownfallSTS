@@ -6,6 +6,7 @@ import awakenedOne.cards.Strike;
 import awakenedOne.cards.TalonRake;
 import awakenedOne.effects.ReverseAwakenedWingParticle;
 import awakenedOne.relics.RippedDoll;
+import awakenedOne.util.Wiz;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -95,7 +96,7 @@ public class AwakenedOneChar extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        this.loadAnimation(atlasURL, jsonURL, 1.4F);
+        this.loadAnimation(atlasURL, jsonURL, 1.2F);
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle_1", true);
         e.setTime(e.getEndTime() * MathUtils.random());
@@ -136,11 +137,11 @@ public class AwakenedOneChar extends CustomPlayer {
             buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
         }
 
-        if (!this.isDying && buf > 9) {
+        if (!this.isDying && buf > 9 && Wiz.isInCombat()) {
         animateParticles = true;
         }
 
-        if (this.isDying) {
+        if (this.isDying || !Wiz.isInCombat()) {
             animateParticles = false;
         }
 

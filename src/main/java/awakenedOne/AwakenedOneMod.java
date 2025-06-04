@@ -326,9 +326,7 @@ public class AwakenedOneMod implements
     }
 
     public void atStartOfTurn() {
-        {
-            ConjureAction.refreshedthisturn = false;
-        }
+        ConjureAction.refreshedthisturn = false;
     }
 
     @Override

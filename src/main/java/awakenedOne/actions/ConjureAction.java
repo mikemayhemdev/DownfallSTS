@@ -35,29 +35,28 @@ public class ConjureAction extends AbstractGameAction {
         conjuresThisCombat += 1;
         isDone = true;
         conjuredCards.clear();
-        isDone = true;
             addToTop(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
-                    if ((OrbitingSpells.spellCards.isEmpty())){
-                        refreshedthisturn = true;
+                    if ((OrbitingSpells.spellCards.isEmpty())) {
                         OrbitingSpells.refreshSpells();
                         for (OrbitingSpells.CardRenderInfo c : OrbitingSpells.spellCards) {
                             c.card.upgrade();
                         }
-                    }
-                    if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
-                        for (int i = 0; i < AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount; i++) {
-                            applyToSelf(new RitualPower(AbstractDungeon.player, 1, true));
+                        if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
+                            for (int i = 0; i < AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount; i++) {
+                                applyToSelf(new RitualPower(AbstractDungeon.player, 1, true));
+                            }
                         }
-                    }
 
-                    //On Refresh...
-                    if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
-                        for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {
-                            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+                        //On Refresh...
+                        if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
+                            for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {
+                                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+                            }
                         }
+                        refreshedthisturn = true;
                     }
                 }
             });

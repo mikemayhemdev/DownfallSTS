@@ -17,7 +17,7 @@ public class CawCaw extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , 2, 1
 
     public CawCaw() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 4, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -29,6 +29,6 @@ public class CawCaw extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(3);
     }
 }

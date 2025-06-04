@@ -13,7 +13,7 @@
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Gain [E]. Exhaust."
+    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Gain [E]. NL Exhaust."
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
@@ -39,7 +39,7 @@
   },
   "awakened:MagicStrike": {
     "NAME": "Magic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Hex. NL If the enemy intends to attack, apply !awakened:m2! additional awakened:Hex."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, apply !M! awakened:Hex."
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
@@ -326,7 +326,7 @@
   },
   "awakened:IntoNothing": {
     "NAME": "From the Abyss",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! awakened:Hex and Weak to ALL enemies. NL awakened:Conjure."
+    "DESCRIPTION": "Apply !M! awakened:Hex and Weak. NL awakened:Conjure."
   },
   "awakened:HeavyStrike": {
     "NAME": "Carrionmaker",
@@ -384,7 +384,7 @@
   },
   "awakened:ArcaneNesting": {
     "NAME": "Arcane Nesting",
-    "DESCRIPTION": "Gain !B! Block X times. NL awakened:Conjure X times. NL Gain [E]. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block X times. NL awakened:Conjure X times. NL Exhaust."
   },
   "awakened:Middens": {
     "NAME": "Middens",

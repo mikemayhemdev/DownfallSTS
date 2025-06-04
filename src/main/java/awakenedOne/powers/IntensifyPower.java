@@ -39,6 +39,7 @@ public class IntensifyPower extends AbstractAwakenedPower {
             tmp.purgeOnUse = true;
             AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
             --this.amount;
+            updateDescription();
             if (this.amount == 0) {
                 this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, ID));
             }

@@ -62,10 +62,10 @@ public class EnemyHexedPower extends AbstractAwakenedPower {
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        double num = 25*amount;
+        float num = 25*amount;
 
         if(AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
-            num = (25*1.5)*amount;
+            num = 25*1.5F*amount;
         }
 
         description = DESCRIPTIONS[0] + num + DESCRIPTIONS[1];

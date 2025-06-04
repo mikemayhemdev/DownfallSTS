@@ -2,6 +2,8 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -18,20 +20,22 @@ public class IntoNothing extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public IntoNothing() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
-        baseBlock = 5;
+       // baseBlock = 5;
         this.tags.add(AwakenedOneMod.DELVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
-        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            if ((!monster.isDead) && (!monster.isDying)) {
-                HexCurse(magicNumber, monster, p);
-                applyToEnemy(monster, new WeakPower(monster, magicNumber, false));
-            }
-        }
+        HexCurse(magicNumber, m, p);
+        atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+//        blck();
+//        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+//            if ((!monster.isDead) && (!monster.isDying)) {
+//                HexCurse(magicNumber, monster, p);
+//                applyToEnemy(monster, new WeakPower(monster, magicNumber, false));
+//            }
+//        }
         atb(new ConjureAction(false));
     }
 

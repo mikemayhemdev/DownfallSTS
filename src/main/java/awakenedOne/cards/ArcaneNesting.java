@@ -33,7 +33,7 @@ public class ArcaneNesting extends AbstractAwakenedCard {
             }
             return true;
         }));
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+       // AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
     }
 
 
