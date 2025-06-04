@@ -70,9 +70,6 @@ public class OrbitingSpells {
 
 
     public static void addSpellCard(AbstractCard card) {
-        if (ConjureAction.refreshedthisturn = true) {
-            card.upgrade();
-        }
         spellCards.add(new CardRenderInfo(card));
         updateTimeOffsets();
     }

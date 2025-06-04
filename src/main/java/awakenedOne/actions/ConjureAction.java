@@ -14,23 +14,22 @@ import com.megacrit.cardcrawl.powers.RitualPower;
 
 import java.util.ArrayList;
 
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.applyToSelf;
 
 public class ConjureAction extends AbstractGameAction {
-    private final AbstractGameAction followUpAction;
+
+
+    private boolean choose;
+    private boolean free;
+    public static boolean refreshedthisturn = false;
     public static ArrayList<AbstractCard> conjuredCards = new ArrayList();
 
     public static int conjuresThisCombat = 0;
-    public static boolean refreshedthisturn = false;
-    private boolean choose;
 
-    public ConjureAction(boolean choose) {
-        this(choose, null);
-    }
 
-    public ConjureAction(boolean choose, AbstractGameAction action) {
+    public ConjureAction(boolean choose, boolean free) {
         this.choose = choose;
-        followUpAction = action;
+        this.free = free;
     }
 
     @Override
@@ -39,36 +38,34 @@ public class ConjureAction extends AbstractGameAction {
         isDone = true;
         conjuredCards.clear();
         isDone = true;
-
-        if (OrbitingSpells.spellCards.size() == 1) {
             addToTop(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
-                    for (OrbitingSpells.CardRenderInfo c : (OrbitingSpells.spellCards)) {
-                        c.card.upgrade();
+                    if ((OrbitingSpells.spellCards.isEmpty())){
                         refreshedthisturn = true;
+                        OrbitingSpells.refreshSpells();
+                        for (OrbitingSpells.CardRenderInfo c : OrbitingSpells.spellCards) {
+                            c.card.upgrade();
+                        }
+                    }
+                    if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
+                        for (int i = 0; i < AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount; i++) {
+                            applyToSelf(new RitualPower(AbstractDungeon.player, 1, true));
+                        }
+                    }
+
+                    //On Refresh...
+                    if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
+                        for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {
+                            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+                        }
                     }
                 }
             });
-
-            if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
-                for (int i = 0; i < AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount; i++) {
-                    applyToSelf(new RitualPower(AbstractDungeon.player, 1, true));
-                }
-            }
-
-            //On Refresh...
-            if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
-                for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {
-                    AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-                }
-            }
-        }
             if (!choose) {
                 AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
-                conjuredCards.add(tar);
-                endActionWithFollowUp();
+                if (free) tar.updateCost(-999);
                 addToTop(new MakeTempCardInHandAction(tar));
                 addToTop(new RemoveSpellCardAction(tar));
             } else {
@@ -82,17 +79,10 @@ public class ConjureAction extends AbstractGameAction {
                 availableCards.forEach(q -> actualChoices.add(q.card.makeStatEquivalentCopy()));
                 addToTop(new SelectCardsCenteredAction(actualChoices, "Choose a Spell to add into your hand.", (cards) -> {
                     AbstractCard q = cards.get(0);
-                    conjuredCards.add(q);
-                    endActionWithFollowUp();
+                    if (free) q.updateCost(-999);
                     addToTop(new MakeTempCardInHandAction(q));
                     addToTop(new RemoveSpellCardAction(q));
                 }));
             }
-        }
-
-    private void endActionWithFollowUp() {
-        if (this.followUpAction != null) {
-            this.addToTop(this.followUpAction);
-        }
     }
 }
