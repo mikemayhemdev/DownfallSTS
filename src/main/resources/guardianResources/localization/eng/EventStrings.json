@@ -30,7 +30,8 @@
       "[Use] #gGain #gQuantum #gChamber. #rBecome #rCursed #r- #rAged.",
       "[Smash] #gGain #g",
       " #gMax #gHP. #rBecome #rCursed #r- #rPain.",
-      "[Leave]"
+      "[Leave]",
+      "[Locked] Requires an unbottled card."
     ]
   },
   "Guardian:AccursedBlacksmith": {

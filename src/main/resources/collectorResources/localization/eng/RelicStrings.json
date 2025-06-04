@@ -87,7 +87,8 @@
       "Upon pickup, #yUpgrade a card in your Collection. Start combats with it on top of your Collected pile.",
       "Start combat with ",
       " on top of your Collected pile.",
-      "Select a card to bottle for "
+      "Select a card to bottle for ",
+      "The bottled card has been #rremoved from your deck, the relic no longer functions."
     ]
   },
   "collector:TheContract": {

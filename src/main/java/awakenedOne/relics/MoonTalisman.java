@@ -9,6 +9,7 @@ import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,11 +20,9 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
-import java.util.Iterator;
 import java.util.function.Predicate;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static champ.ChampMod.FINISHER;
 
 public class MoonTalisman extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
 
@@ -34,15 +33,17 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
     private boolean cardSelected = true;
     private boolean cardRemoved = false;
 
-    //Don't forget me.    @Override
-    //    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-    //        if (this.card != null && card.uuid.equals(this.card.uuid)) {
-    //           // atb(new ConjureAction(false));
-    //            this.flash();
-    //        }
-    //    }
+    //Don't forget me.
+
     public MoonTalisman() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+    }
+
+    @Override
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        if (this.card != null && card.uuid.equals(this.card.uuid)) {
+            this.flash();
+        }
     }
 
     @Override
@@ -63,10 +64,6 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
     public Integer onSave() {
         return AbstractDungeon.player.masterDeck.group.indexOf(card);
     }
-
-
-
-
 
     @Override
     public void onLoad(Integer cardIndex) {
@@ -133,6 +130,8 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
 
             CardModifierManager.addModifier(cardInDeck, new ConjureMod());
 
+            cardRemoved = false;
+
             MoonTalismanPatch.inBottleTalisman.set(card, true);
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
 
@@ -141,20 +140,43 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
         }
     }
 
+//    @Override
+//    public void onRemoveCardFromMasterDeck(AbstractCard var1){
+//        if (var1.uuid == card.uuid) {
+//            setDescriptionAfterLoading();
+//        }
+//    }
+
     public void setDescriptionAfterLoading() {
-        if(cardRemoved){
-            tips.clear();
-            this.description = this.DESCRIPTIONS[4];
-            tips.add(new PowerTip(name, description));
-            initializeTips();
-            this.grayscale = true;
-            return ;
+
+        boolean cardExists = false;
+
+        if (cardSelected) {
+            if (card != null) {
+                for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                    if (c.uuid == card.uuid) {
+                        cardExists = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!cardExists) {
+                cardRemoved = true;
+                tips.clear();
+                this.description = this.DESCRIPTIONS[4];
+                this.grayscale = true;
+                initializeTips();
+            }
+
+            if (cardExists) {
+                this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
+                this.grayscale = false;
+                tips.clear();
+                tips.add(new PowerTip(name, description));
+                initializeTips();
+            }
         }
-        this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
-        this.grayscale = false;
-        tips.clear();
-        tips.add(new PowerTip(name, description));
-        initializeTips();
     }
 
     @Override

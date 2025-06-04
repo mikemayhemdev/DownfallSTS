@@ -20,6 +20,8 @@ import sneckomod.powers.CheatPower;
 
 import java.util.function.Predicate;
 
+import static champ.ChampMod.FINISHER;
+
 public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
 
     public static final String ID = SneckoMod.makeID("D8");
@@ -117,15 +119,46 @@ public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<
 
     @Override
     public Predicate<AbstractCard> isOnCard() {
-
         return BottledD8Patch.inD8::get;
     }
 
     public void setDescriptionAfterLoading() {
-        this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
-        tips.clear();
-        tips.add(new PowerTip(name, description));
-        initializeTips();
+        boolean cardExists = false;
+
+        if (card != null) {
+            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                if (c.uuid == card.uuid) {
+                    cardExists = true;
+                    break;
+                }
+            }
+        }
+
+        if (!cardExists) {
+            tips.clear();
+            this.description = this.DESCRIPTIONS[4];
+            this.grayscale = true;
+            initializeTips();
+        }
+
+        if (cardExists) {
+            this.description = FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[2];
+            tips.clear();
+            tips.add(new PowerTip(name, description));
+            initializeTips();
+            this.grayscale = false;
+        }
+    }
+
+    public boolean canSpawn() {
+
+        for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
+            if (c.hasTag(SneckoMod.OVERFLOW)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public String getUpdatedDescription() {

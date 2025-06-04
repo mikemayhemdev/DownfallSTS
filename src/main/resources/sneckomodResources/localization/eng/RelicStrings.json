@@ -92,7 +92,8 @@
       "Upon pickup, choose a card that has an #ysneckomod:Overflow effect. Whenever you play it, gain #b4 #yBlock and activate its #yOverflow effect, even if you don't have more than #b5 cards in hand.",
       "Choose a card for ",
       "Whenever ",
-      " is played, gain #b4 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than #b5 cards in hand."
+      " is played, gain #b4 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than #b5 cards in hand.",
+      "The card attached to this relic has been #rremoved from your deck, the relic no longer functions."
     ]
   },
   "sneckomod:BabySnecko": {

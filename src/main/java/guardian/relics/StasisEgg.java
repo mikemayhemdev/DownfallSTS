@@ -16,6 +16,8 @@ import guardian.patches.BottledStasisPatch;
 
 import java.util.function.Predicate;
 
+import static awakenedOne.AwakenedOneMod.DELVE;
+
 public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
     public static final String ID = "Guardian:StasisEgg";
     public static final String IMG_PATH = "relics/stasisEgg.png";
@@ -107,10 +109,31 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
     }
 
     private void setDescriptionAfterLoading() {
-        this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
-        tips.clear();
-        tips.add(new PowerTip(name, description));
-        initializeTips();
+        boolean cardExists = false;
+
+            if (card != null) {
+                for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                    if (c.uuid == card.uuid) {
+                        cardExists = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!cardExists) {
+                tips.clear();
+                this.description = this.DESCRIPTIONS[4];
+                this.grayscale = true;
+                initializeTips();
+            }
+
+            if (cardExists) {
+                this.description = FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[2];
+                tips.clear();
+                tips.add(new PowerTip(name, description));
+                initializeTips();
+                this.grayscale = false;
+            }
     }
 
     @Override
@@ -158,4 +181,20 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
         }
 
     }
+
+    public boolean canSpawn() {
+
+        CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
+                tmp.addToTop(c);
+        }
+
+        if (tmp.size() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
 }

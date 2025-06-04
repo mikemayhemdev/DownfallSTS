@@ -471,7 +471,7 @@ public class HexaMod implements
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
-                .spawnCondition(() -> !AbstractDungeon.player.hasRelic(TheBrokenSeal.ID))
+                .spawnCondition(() -> !AbstractDungeon.player.hasRelic(TheBrokenSeal.ID) && !hasAllSeals())
                 //Event Character//
                 .playerClass(TheHexaghost.Enums.THE_SPIRIT)
                 .create());
@@ -502,6 +502,48 @@ public class HexaMod implements
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
+    }
+
+    public boolean hasAllSeals(){
+        int variable = 0;
+        int hasone = 0;
+        int hastwo = 0;
+        int hasthree = 0;
+        int hasfour = 0;
+        int hasfive = 0;
+        int hassix = 0;
+
+        if (AbstractDungeon.player.hasRelic(TheBrokenSeal.ID)) {
+            return false;
+        }
+
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c instanceof FirstSeal && hasone == 0) {
+                variable++;
+                hasone++;
+            } else if (c instanceof SecondSeal && hastwo == 0) {
+                variable++;
+                hastwo++;
+            } else if (c instanceof ThirdSeal && hasthree == 0) {
+                variable++;
+                hasthree++;
+            } else if (c instanceof FourthSeal && hasfour == 0) {
+                variable++;
+                hasfour++;
+            } else if (c instanceof SixthSeal && hasfive == 0) {
+                variable++;
+                hasfive++;
+            } else if (c instanceof FifthSeal && hassix == 0) {
+                variable++;
+                hassix++;
+            }
+        }
+
+        if (variable == 6) {
+            return false;
+        }
+
+        return true;
     }
 
 

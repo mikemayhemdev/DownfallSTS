@@ -33,29 +33,26 @@ public class PickAxe extends CustomRelic {
             AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
         }
     }
-//    @Override
-//    public void onTrigger() {
-//        super.onTrigger();
-//        this.counter--;
-//        setCounter(this.counter);
-//    }
-//
-//    public void setCounter(int counter) {
-//        this.counter = counter;
-//        if (counter == 0) {
-//            this.counter = -2;
-//            this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("relics/pickUsed.png"));
-//            this.usedUp();
-//        } else {
-//
-//        }
-//
-//    }
+
+    @Override
+    public void onTrigger() {
+        super.onTrigger();
+        this.counter = -2;
+        setCounter(this.counter);
+    }
+
+    public void setCounter(int counter) {
+        this.counter = -2;
+        this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("relics/pickUsed.png"));
+        this.usedUp();
+    }
 
     public void onVictory(){
-        if ((AbstractDungeon.getCurrRoom()).eliteTrigger)
-        {
-            AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
+        if ((AbstractDungeon.getCurrRoom()).eliteTrigger) {
+            if (this.counter != -2) {
+                this.flash();
+                AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
+            }
         }
     }
 

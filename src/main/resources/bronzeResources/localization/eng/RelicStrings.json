@@ -79,7 +79,8 @@
       "Upon pickup, choose a card with #yEncode [REMOVE_SPACE]. Start each combat with this card #yEncoded [REMOVE_SPACE].",
       "Choose a card for ",
       "Start each combat with #yEncoded ",
-      " [REMOVE_SPACE]."
+      " [REMOVE_SPACE].",
+      "The bottled card has been #rremoved from your deck, the relic no longer functions."
     ]
   },
   "bronze:DonusWashers": {

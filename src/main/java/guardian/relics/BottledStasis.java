@@ -4,6 +4,7 @@ import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -97,6 +98,13 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
         }
     }
 
+//    @Override
+//    public void onRemoveCardFromMasterDeck(AbstractCard var1){
+//        if (var1.uuid == card.uuid) {
+//            setDescriptionAfterLoading();
+//        }
+//    }
+
     @Override
     public void update() {
         super.update();
@@ -113,17 +121,33 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
     }
 
     public void setDescriptionAfterLoading() {
-        if(cardRemoved){
+
+        boolean cardExists = false;
+
+        if (cardSelected) {
+            if (card != null) {
+                for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                    if (c.uuid == card.uuid) {
+                        cardExists = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (!cardExists) {
+            cardRemoved = true;
             tips.clear();
             this.description = this.DESCRIPTIONS[4];
-            tips.add(new PowerTip(name, description));
             initializeTips();
-            return ;
         }
+
+        if (cardExists) {
         this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
         tips.clear();
         tips.add(new PowerTip(name, description));
         initializeTips();
+        }
     }
 
     @Override

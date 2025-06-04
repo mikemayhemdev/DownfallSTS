@@ -1,5 +1,6 @@
 package collector.relics;
 
+import automaton.AutomatonMod;
 import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
@@ -28,6 +29,8 @@ public class BottledCollectible extends CustomRelic implements CustomBottleRelic
 
     public AbstractCard card;
     private boolean cardSelected = true;
+
+    private boolean cardRemoved = false;
 
     private int idxToLoad = -1;
 
@@ -127,10 +130,32 @@ public class BottledCollectible extends CustomRelic implements CustomBottleRelic
     }
 
     public void setDescriptionAfterLoading() {
-        this.description = DESCRIPTIONS[1] + FontHelper.colorString(card.name, "y") + DESCRIPTIONS[2];
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.initializeTips();
+        //todo: better card removal detection code!!!!
+        if (cardSelected) {
+            boolean cardExists = false;
+
+            CardGroup tmp = CollectorCollection.collection;
+            for (AbstractCard c : tmp.group) {
+                if (c.uuid == card.uuid) {
+                    cardExists = true;
+                    break;
+                }
+            }
+
+
+            if (!cardExists) {
+                tips.clear();
+                this.description = this.DESCRIPTIONS[4];
+                initializeTips();
+                this.grayscale = true;
+            } else {
+                this.description = DESCRIPTIONS[1] + FontHelper.colorString(card.name, "y") + DESCRIPTIONS[2];
+                this.tips.clear();
+                this.tips.add(new PowerTip(this.name, this.description));
+                this.initializeTips();
+            }
+
+        }
     }
 
     @Override

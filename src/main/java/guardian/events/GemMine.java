@@ -113,12 +113,12 @@ public class GemMine extends AbstractImageEvent {
 
                             AbstractDungeon.combatRewardScreen.open();
 
-//                            AbstractDungeon.player.getRelic(PickAxe.ID).onTrigger();
-//                            if (AbstractDungeon.player.getRelic(PickAxe.ID).counter == -2) {
+                            AbstractDungeon.player.getRelic(PickAxe.ID).onTrigger();
+                            if (AbstractDungeon.player.getRelic(PickAxe.ID).counter == -2) {
                                 this.imageEventText.updateDialogOption(0, OPTIONS[5], true);
 
                             AbstractDungeon.player.loseRelic(PickAxe.ID);
-   //                         }
+                            }
                             this.tookGems = true;
                         } else {
 

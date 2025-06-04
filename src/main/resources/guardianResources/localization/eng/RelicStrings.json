@@ -97,7 +97,8 @@
       "Upon pickup, choose a card. Start each combat with this card removed from your deck. At the start of your #b4th turn, return it and #b2 copies of it to your hand.",
       "Choose a card for ",
       "Start each combat with ",
-      " removed from your deck. At the start of your #b4th turn, return it and #b2 copies of it to your hand."
+      " removed from your deck. At the start of your #b4th turn, return it and #b2 copies of it to your hand.",
+      "The card attached to this relic has been #rremoved from your deck, the relic no longer functions."
     ]
   },
   "Guardian:TickHelperRelic": {

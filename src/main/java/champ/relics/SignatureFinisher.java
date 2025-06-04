@@ -6,6 +6,9 @@ import basemod.abstracts.CustomSavable;
 import champ.ChampMod;
 import champ.patches.SignatureMovePatch;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,6 +18,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.util.TextureLoader;
+import guardian.orbs.StasisOrb;
+import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.function.Predicate;
 
@@ -29,6 +34,8 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
     public AbstractCard card = null;
     private boolean cardSelected = true;
     private boolean hasfinisher = false;
+
+    private boolean cardRemoved = false;
 
     public SignatureFinisher() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
@@ -65,12 +72,48 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
             if (card != null) {
                 SignatureMovePatch.inSignatureMove.set(card, true);
                 setDescriptionAfterLoading();
-                card.cost = 0;
-                card.costForTurn = 0;
-                card.isCostModified = true;
+                //card.cost = 0;
+                //card.costForTurn = 0;
+                //card.isCostModified = true;
             }
         }
     }
+
+    @Override
+    public void atBattleStartPreDraw() {
+        if (!cardRemoved && cardSelected){
+            boolean cardExists = false;
+            if(card!=null){
+                for(AbstractCard c :AbstractDungeon.player.masterDeck.group){
+                    if (c.uuid==card.uuid){
+                        cardExists = true;
+                        break;
+                    }
+                }
+            }
+            if (!cardExists){
+                cardRemoved = true;
+                tips.clear();
+                this.description = this.DESCRIPTIONS[4];
+                tips.add(new PowerTip(name, description));
+                initializeTips();
+            }
+        }
+        if (cardRemoved) {
+            return;
+        }
+        super.atBattleStartPreDraw();
+        counter = 0;
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+            if (c.uuid == card.uuid) {
+                c.cost = 0;
+                c.costForTurn = 0;
+                c.isCostModified = true;
+                break;
+            }
+        }
+    }
+
 
     @Override
     public void onEquip() {
@@ -122,16 +165,48 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
         }
     }
 
+
+//    @Override
+//    public void onRemoveCardFromMasterDeck(AbstractCard var1){
+//        if (var1.uuid == card.uuid){
+//            setDescriptionAfterLoading();
+//        }
+//    }
+
+
     public void setDescriptionAfterLoading() {
-        this.description = FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[2];
-        tips.clear();
-        tips.add(new PowerTip(name, description));
-        initializeTips();
+        boolean cardExists = false;
+
+        if (cardSelected) {
+            if (card != null) {
+                for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                    if (c.uuid == card.uuid) {
+                        cardExists = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!cardExists) {
+                tips.clear();
+                this.description = this.DESCRIPTIONS[3];
+                this.grayscale = true;
+                initializeTips();
+            }
+
+            if (cardExists) {
+                this.description = FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[2];
+                tips.clear();
+                tips.add(new PowerTip(name, description));
+                initializeTips();
+                this.grayscale = false;
+            }
+        }
     }
 
 
     public boolean canSpawn() {
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+        for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
             if (c.hasTag(FINISHER)) {
                 hasfinisher = true;
             }

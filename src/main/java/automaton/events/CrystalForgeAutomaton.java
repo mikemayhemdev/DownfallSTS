@@ -19,6 +19,8 @@ import guardian.cards.*;
 
 import java.util.ArrayList;
 
+import static awakenedOne.AwakenedOneMod.DELVE;
+
 public class CrystalForgeAutomaton extends AbstractImageEvent {
     public static final String ID = "bronze:CrystalForge";
     public static final String NAME;
@@ -56,10 +58,14 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
         validCards = new ArrayList<>();
         rareCards = new ArrayList<>();
 
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+
+        for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
             if (c.hasTag(AutomatonMod.ENCODES)) {
                 validCards.add(c);
             }
+        }
+
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.rarity == AbstractCard.CardRarity.RARE) rareCards.add(c);
         }
         if (validCards.size() == 0) {

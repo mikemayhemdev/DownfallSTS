@@ -96,7 +96,8 @@
     "DESCRIPTIONS": [
       "Upon pickup, choose a #ychamp:Finisher [REMOVE_SPACE]. This #yFinisher costs #b0 [REMOVE_SPACE], can be used without a #yStance [REMOVE_SPACE], and never causes your #yStance to be exited.",
       "Choose a card for ",
-      " costs #b0 [REMOVE_SPACE], can be used without a #yStance [REMOVE_SPACE], and never causes your #yStance to be exited."
+      " costs #b0 [REMOVE_SPACE], can be used without a #yStance [REMOVE_SPACE], and never causes your #yStance to be exited.",
+      "The card attached to this relic has been #rremoved from your deck, the relic no longer functions."
     ]
   },
   "champ:SpectersHand": {
