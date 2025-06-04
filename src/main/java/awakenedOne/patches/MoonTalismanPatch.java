@@ -6,7 +6,10 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertLocator;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import guardian.cards.AbstractGuardianCard;
 import javassist.CtBehavior;
+
+import java.util.ArrayList;
 
 @SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method = "<class>")
 public class MoonTalismanPatch {
@@ -16,6 +19,16 @@ public class MoonTalismanPatch {
     public static class MakeStatEquivalentCopy {
         public static AbstractCard Postfix(AbstractCard __result, AbstractCard __instance) {
             MoonTalismanPatch.inBottleTalisman.set(__result, MoonTalismanPatch.inBottleTalisman.get(__instance));
+
+            if (__instance instanceof AbstractGuardianCard) {
+
+                ((AbstractGuardianCard) __result).socketCount = ((AbstractGuardianCard) __instance).socketCount;
+
+                ((AbstractGuardianCard) __result).sockets = new ArrayList<>(((AbstractGuardianCard) __instance).sockets);
+
+                ((AbstractGuardianCard) __result).updateDescription();
+            }
+
             return __result;
         }
     }
