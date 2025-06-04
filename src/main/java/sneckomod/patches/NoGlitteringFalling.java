@@ -12,6 +12,7 @@ import downfall.events.CouncilOfGhosts_Evil;
 import gremlin.characters.GremlinCharacter;
 import javassist.CtBehavior;
 import sneckomod.cards.GlitteringGambit;
+import theHexaghost.events.HexaFalling;
 
 import java.util.ArrayList;
 
@@ -40,6 +41,7 @@ public class NoGlitteringFalling {
 
             if (hasSoulboundNotCurse) {
                tmp.remove(Falling.ID);
+               tmp.remove(HexaFalling.ID);
             }
         }
 
