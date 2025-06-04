@@ -3,6 +3,7 @@ package awakenedOne.cards.tokens.spells;
 import awakenedOne.relics.EyeOfTheOccult;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,14 +13,15 @@ import theHexaghost.relics.CandleOfCauterizing;
 
 import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.util.Wiz.atb;
 
 public class Darkleech extends AbstractSpellCard {
     public final static String ID = makeID(Darkleech.class.getSimpleName());
     // intellij stuff skill, all_enemy, , , , , 7, 2
 
     public Darkleech() {
-        super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 2;
+        super(ID, 0, CardType.SKILL, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
@@ -42,6 +44,7 @@ public class Darkleech extends AbstractSpellCard {
                 HexCurse(magicNumber, m2, p);
             });
         }
+        atb(new GainEnergyAction(1));
     }
 
     public void upp() {

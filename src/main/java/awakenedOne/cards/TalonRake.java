@@ -17,8 +17,8 @@ public class TalonRake extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public TalonRake() {
-        super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = 3;
+        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
+        baseDamage = 7;
         this.tags.add(AwakenedOneMod.DELVE);
     }
 

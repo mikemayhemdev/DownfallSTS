@@ -41,17 +41,16 @@ public class ConjureAction extends AbstractGameAction {
         isDone = true;
 
         if (OrbitingSpells.spellCards.size() == 1) {
-
             addToTop(new AbstractGameAction() {
                 @Override
                 public void update() {
-                        isDone = true;
-                        for (OrbitingSpells.CardRenderInfo c : (OrbitingSpells.spellCards)) {
-                            c.card.upgrade();
-                        }
+                    isDone = true;
+                    for (OrbitingSpells.CardRenderInfo c : (OrbitingSpells.spellCards)) {
+                        c.card.upgrade();
+                        refreshedthisturn = true;
                     }
-                });
-            }
+                }
+            });
 
             if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
                 for (int i = 0; i < AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount; i++) {
@@ -59,15 +58,13 @@ public class ConjureAction extends AbstractGameAction {
                 }
             }
 
-            refreshedthisturn = true;
-
             //On Refresh...
             if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
                 for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {
                     AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
                 }
             }
-
+        }
             if (!choose) {
                 AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
                 conjuredCards.add(tar);

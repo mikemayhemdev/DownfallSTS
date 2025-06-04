@@ -13,7 +13,7 @@
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Gain [E]. Exhaust."
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
@@ -409,7 +409,7 @@
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each awakened:Conjure this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each time you awakened:Conjured this combat."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",

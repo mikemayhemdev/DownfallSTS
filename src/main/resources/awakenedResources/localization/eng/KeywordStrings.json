@@ -12,7 +12,7 @@
       "conjure",
       "conjured"
     ],
-    "DESCRIPTION": "Draw a card from your Spell Pile. If the Spell Pile is empty, Refresh it and #yUpgrade all Spells."
+    "DESCRIPTION": "Draw a card from your Spell Pile. If the Spell Pile is empty, refresh it and #yUpgrade all Spells."
   },
   {
     "PROPER_NAME": "Chant",
