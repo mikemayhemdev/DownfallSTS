@@ -13,7 +13,7 @@
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Gain [E]. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Next turn, gain [E]. NL Exhaust."
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",

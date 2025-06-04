@@ -79,7 +79,7 @@ public class EvasiveProtocol extends AbstractGuardianCard {
         }
 
 
-        if (p.stance instanceof DefensiveMode) {
+        if (p.stance instanceof DefensiveMode || mods >= moda) {
             AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));
         }
 
