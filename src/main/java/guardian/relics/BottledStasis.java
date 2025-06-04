@@ -80,6 +80,8 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
         for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
             tmp.addToTop(c);
         }
+
+
         AbstractDungeon.gridSelectScreen.open(tmp,
                 1, DESCRIPTIONS[1] + name + ".",
                 false, false, false, false);

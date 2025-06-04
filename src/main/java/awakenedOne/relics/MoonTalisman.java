@@ -23,6 +23,7 @@ import java.util.Iterator;
 import java.util.function.Predicate;
 
 import static awakenedOne.AwakenedOneMod.*;
+import static champ.ChampMod.FINISHER;
 
 public class MoonTalisman extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
 
@@ -162,18 +163,20 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
     }
 
     public boolean canSpawn() {
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
 
-        AbstractCard c;
-        do {
-            if (!var1.hasNext()) {
-                return false;
+        CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
+            if (!c.hasTag(DELVE) && c.cost != -2) {
+                tmp.addToTop(c);
             }
+        }
 
-            c = (AbstractCard)var1.next();
-        } while (!c.hasTag(DELVE) || c.cost == -2);
+        if (tmp.size() > 0) {
+            return true;
+        } else {
+            return false;
+        }
 
-        return true;
     }
 
 }
