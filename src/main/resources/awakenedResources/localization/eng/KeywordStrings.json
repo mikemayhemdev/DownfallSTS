@@ -29,7 +29,7 @@
       "hexxed",
       "hexx"
     ],
-    "DESCRIPTION": "Creatures with #yHex take #b25% more damage from the next Attack for each stack. #yHex is removed all at once after being attacked."
+    "DESCRIPTION": "Creatures with #yHex take #b20% more damage from the next Attack for each stack. #yHex is removed all at once after being attacked."
   },
   {
     "PROPER_NAME": "Drained",

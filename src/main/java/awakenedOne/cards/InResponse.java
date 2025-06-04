@@ -16,11 +16,11 @@ public class InResponse extends AbstractAwakenedCard {
     public InResponse() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseSecondMagic = secondMagic = 2;
-        this.tags.add(AwakenedOneMod.DELVE);
+        //this.tags.add(AwakenedOneMod.DELVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ConjureAction(false));
+     //   addToBot(new ConjureAction(false));
         applyToSelf(new InResponsePower(secondMagic));
     }
 

@@ -20,11 +20,11 @@ public class EnemyHexedPower extends AbstractAwakenedPower {
     public float atDamageReceive(float damage, DamageInfo.DamageType type) {
 
         float damagereturn = 1.0F;
-        damagereturn = (damagereturn + (0.25F * amount * damagereturn));
+        damagereturn = (damagereturn + (0.20F * amount * damagereturn));
 
 
         if(AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
-            damagereturn = (damagereturn + ((0.25F * 1.5F) * amount * damagereturn));
+            damagereturn = (damagereturn + ((0.30F) * amount * damagereturn));
         }
 
         if (type == DamageInfo.DamageType.NORMAL) {
@@ -62,10 +62,10 @@ public class EnemyHexedPower extends AbstractAwakenedPower {
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        float num = 25*amount;
+        int num = 20*amount;
 
         if(AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
-            num = 25*1.5F*amount;
+            num = 30*amount;
         }
 
         description = DESCRIPTIONS[0] + num + DESCRIPTIONS[1];

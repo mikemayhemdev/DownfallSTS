@@ -29,7 +29,7 @@ public class Spew extends AbstractAwakenedCard {
 
     public Spew() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 16;
+        baseDamage = 14;
         this.cardsToPreview = new VoidCard();
     }
 

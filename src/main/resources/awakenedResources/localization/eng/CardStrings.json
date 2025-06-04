@@ -51,7 +51,7 @@
   },
   "awakened:InResponse": {
     "NAME": "Spellshield",
-    "DESCRIPTION": "awakened:Conjure. NL Whenever you play a Spell, gain !awakened:m2! Block."
+    "DESCRIPTION": "Whenever you play a Spell, gain !awakened:m2! Block."
   },
   "awakened:Curiosity": {
     "NAME": "Curiosity",
