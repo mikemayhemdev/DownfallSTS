@@ -20,16 +20,14 @@ public class ConjureAction extends AbstractGameAction {
 
 
     private boolean choose;
-    private boolean free;
     public static boolean refreshedthisturn = false;
     public static ArrayList<AbstractCard> conjuredCards = new ArrayList();
 
     public static int conjuresThisCombat = 0;
 
 
-    public ConjureAction(boolean choose, boolean free) {
+    public ConjureAction(boolean choose) {
         this.choose = choose;
-        this.free = free;
     }
 
     @Override
@@ -65,7 +63,6 @@ public class ConjureAction extends AbstractGameAction {
             });
             if (!choose) {
                 AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
-                if (free) tar.updateCost(-999);
                 addToTop(new MakeTempCardInHandAction(tar));
                 addToTop(new RemoveSpellCardAction(tar));
             } else {
@@ -79,7 +76,6 @@ public class ConjureAction extends AbstractGameAction {
                 availableCards.forEach(q -> actualChoices.add(q.card.makeStatEquivalentCopy()));
                 addToTop(new SelectCardsCenteredAction(actualChoices, "Choose a Spell to add into your hand.", (cards) -> {
                     AbstractCard q = cards.get(0);
-                    if (free) q.updateCost(-999);
                     addToTop(new MakeTempCardInHandAction(q));
                     addToTop(new RemoveSpellCardAction(q));
                 }));
