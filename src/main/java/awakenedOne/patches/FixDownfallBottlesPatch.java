@@ -37,42 +37,74 @@ public class FixDownfallBottlesPatch {
 
         if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
             SignatureFinisher a = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
-            __result.group.remove(a.card);
+            for (AbstractCard card : __result.group) {
+                if (card.uuid == a.card.uuid) {
+                    __result.group.remove(card);
+                }
+            }
         }
 
         if (AbstractDungeon.player.hasRelic(BottledStasis.ID)) {
             BottledStasis b = (BottledStasis) AbstractDungeon.player.getRelic(BottledStasis.ID);
-            __result.group.remove(b.card);
+            for (AbstractCard card : __result.group) {
+                if (card.uuid == b.card.uuid) {
+                    __result.group.remove(card);
+                }
+            }
         }
 
         if (AbstractDungeon.player.hasRelic(BottledAnomaly.ID)) {
             BottledAnomaly crelic = (BottledAnomaly) AbstractDungeon.player.getRelic(BottledAnomaly.ID);
-            __result.group.remove(crelic.card);
+            for (AbstractCard card : __result.group) {
+                if (card.uuid == crelic.card.uuid) {
+                    __result.group.remove(card);
+                }
+            }
         }
 
         if (AbstractDungeon.player.hasRelic(MoonTalisman.ID)) {
             MoonTalisman d = (MoonTalisman) AbstractDungeon.player.getRelic(MoonTalisman.ID);
-            __result.group.remove(d.card);
+            for (AbstractCard card : __result.group) {
+                if (card.uuid == d.card.uuid) {
+                    __result.group.remove(card);
+                }
+            }
         }
 
         if (AbstractDungeon.player.hasRelic(BottledCollectible.ID)) {
             BottledCollectible e = (BottledCollectible) AbstractDungeon.player.getRelic(BottledCollectible.ID);
-            __result.group.remove(e.card);
+            for (AbstractCard card : __result.group) {
+                if (card.uuid == e.card.uuid) {
+                    __result.group.remove(card);
+                }
+            }
         }
 
         if (AbstractDungeon.player.hasRelic(D8.ID)) {
             D8 f = (D8) AbstractDungeon.player.getRelic(D8.ID);
-            __result.group.remove(f.card);
+            for (AbstractCard card : __result.group) {
+                if (card.uuid == f.card.uuid) {
+                    __result.group.remove(card);
+                }
+            }
         }
 
         if (AbstractDungeon.player.hasRelic(BottledCode.ID)) {
             BottledCode g = (BottledCode) AbstractDungeon.player.getRelic(BottledCode.ID);
-                __result.group.remove(g.card);
+            for (AbstractCard card : __result.group) {
+                if (card.uuid == g.card.uuid) {
+                    __result.group.remove(card);
+                }
+            }
         }
 
         if (AbstractDungeon.player.hasRelic(StasisEgg.ID)) {
             StasisEgg s = (StasisEgg) AbstractDungeon.player.getRelic(StasisEgg.ID);
-            __result.group.remove(s.card);
+            for (AbstractCard card : __result.group) {
+                if (card.uuid == s.card.uuid) {
+                    __result.group.remove(card);
+                }
+            }
         }
 
         return __result;
