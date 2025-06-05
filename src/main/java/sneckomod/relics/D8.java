@@ -5,6 +5,7 @@ import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -22,7 +23,7 @@ import sneckomod.powers.CheatPower;
 
 import java.util.function.Predicate;
 
-public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
+public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer>, OnRemoveCardFromMasterDeckRelic {
 
     public static final String ID = SneckoMod.makeID("D8");
     private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("D8.png"));
@@ -37,6 +38,17 @@ public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<
     //mystical octahedron
     //todo: set variable for block gain
     //oh god this will be annoying, do later
+
+    @Override
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
+        if (this.card != null) {
+            if (var1.uuid == card.uuid) {
+                this.flash();
+                this.grayscale = true;
+                setDescriptionAfterLoading();
+            }
+        }
+    }
 
     @Override
     public Integer onSave() {

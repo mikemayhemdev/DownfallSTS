@@ -23,7 +23,7 @@ import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.function.Predicate;
 
-public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
+public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer>, OnRemoveCardFromMasterDeckRelic {
     public static final String ID = "Guardian:BottledAnomaly";
     public static final String IMG_PATH = "relics/bottledAnomaly.png";
     public static final String OUTLINE_IMG_PATH = "relics/bottledAnomalyOutline.png";
@@ -34,6 +34,17 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
     public BottledAnomaly() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.SHOP, LandingSound.CLINK);
+    }
+
+    @Override
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
+        if (this.card != null) {
+            if (var1.uuid == card.uuid) {
+                this.flash();
+                this.grayscale = true;
+                setDescriptionAfterLoading();
+            }
+        }
     }
 
     @Override

@@ -19,7 +19,7 @@ import guardian.patches.BottledStasisPatch;
 
 import java.util.function.Predicate;
 
-public class BottledCode extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
+public class BottledCode extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer>, OnRemoveCardFromMasterDeckRelic {
     public static final String ID = "bronze:BottledCode";
     public static final String IMG_PATH = "bottledCode.png";
     public static final String OUTLINE_IMG_PATH = "bottledCode.png";
@@ -29,6 +29,17 @@ public class BottledCode extends CustomRelic implements CustomBottleRelic, Custo
     public BottledCode() {
         super(ID, new Texture(AutomatonMod.makeRelicPath(IMG_PATH)), new Texture(AutomatonMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)),
                 RelicTier.SPECIAL, LandingSound.CLINK);
+    }
+
+    @Override
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
+        if (this.card != null) {
+            if (var1.uuid == card.uuid) {
+                this.flash();
+                this.grayscale = true;
+                setDescriptionAfterLoading();
+            }
+        }
     }
 
     @Override

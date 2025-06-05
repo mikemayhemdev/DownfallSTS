@@ -6,6 +6,7 @@ import basemod.abstracts.CustomSavable;
 import champ.ChampMod;
 import champ.patches.SignatureMovePatch;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -22,7 +23,7 @@ import java.util.function.Predicate;
 
 import static champ.ChampMod.*;
 
-public class SignatureFinisher extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
+public class SignatureFinisher extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer>, OnRemoveCardFromMasterDeckRelic {
 
     public static final String ID = ChampMod.makeID("SignatureFinisher");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SignatureMove.png"));
@@ -42,6 +43,17 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         if (this.card != null && card.uuid.equals(this.card.uuid)) {
             this.flash();
+        }
+    }
+
+    @Override
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
+        if (this.card != null) {
+            if (var1.uuid == card.uuid) {
+                this.flash();
+                this.grayscale = true;
+                setDescriptionAfterLoading();
+            }
         }
     }
 

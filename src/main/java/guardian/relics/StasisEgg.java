@@ -4,6 +4,7 @@ import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,7 +20,7 @@ import java.util.function.Predicate;
 
 import static awakenedOne.AwakenedOneMod.DELVE;
 
-public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
+public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer>, OnRemoveCardFromMasterDeckRelic {
     public static final String ID = "Guardian:StasisEgg";
     public static final String IMG_PATH = "relics/stasisEgg.png";
     public static final String OUTLINE_IMG_PATH = "relics/stasisEggOutline.png";
@@ -31,6 +32,16 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
                 RelicTier.SPECIAL, LandingSound.FLAT);
     }
 
+    @Override
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
+        if (this.card != null) {
+            if (var1.uuid == card.uuid) {
+                this.flash();
+                this.grayscale = true;
+                setDescriptionAfterLoading();
+            }
+        }
+    }
 
     @Override
     public Predicate<AbstractCard> isOnCard() {

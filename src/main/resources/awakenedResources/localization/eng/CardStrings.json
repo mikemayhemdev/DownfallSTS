@@ -164,7 +164,7 @@
   },
   "awakened:Envision": {
     "NAME": "Envision",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. todo rework"
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
@@ -384,7 +384,7 @@
   },
   "awakened:ArcaneNesting": {
     "NAME": "Arcane Nesting",
-    "DESCRIPTION": "Gain !B! Block X times. NL awakened:Conjure X times. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block X times. NL awakened:Conjure X times. NL Exhaust. todo: rework"
   },
   "awakened:Middens": {
     "NAME": "Middens",

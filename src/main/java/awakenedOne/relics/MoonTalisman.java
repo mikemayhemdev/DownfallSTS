@@ -9,6 +9,7 @@ import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -26,7 +27,7 @@ import java.util.function.Predicate;
 
 import static awakenedOne.AwakenedOneMod.*;
 
-public class MoonTalisman extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
+public class MoonTalisman extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer>, OnRemoveCardFromMasterDeckRelic {
 
     public static final String ID = AwakenedOneMod.makeID("MoonTalisman");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("MoonTalisman.png"));
@@ -39,6 +40,17 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
 
     public MoonTalisman() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+    }
+
+    @Override
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
+        if (this.card != null) {
+            if (var1.uuid == card.uuid) {
+                this.flash();
+                this.grayscale = true;
+                setDescriptionAfterLoading();
+            }
+        }
     }
 
     @Override
