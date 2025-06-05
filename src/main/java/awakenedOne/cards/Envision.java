@@ -12,6 +12,7 @@ public class Envision extends AbstractAwakenedCard {
     public final static String ID = makeID(Envision.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
+    //todo: rework
     public Envision() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 4;
