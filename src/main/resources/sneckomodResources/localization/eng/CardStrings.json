@@ -611,8 +611,6 @@
   "sneckomod:SerpentineSleuth": {
     "NAME": "Serpentine Sleuth",
     "DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E]. NL sneckomod:Gift: Rare Power.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E] [E]. NL sneckomod:Gift: Rare Power.",
-    "DESCRIPTION_BATTLE": "Ethereal. NL Whenever you play a Power, gain [E].",
-    "UPGRADE_DESCRIPTION_BATTLE": "Ethereal. NL Whenever you play a Power, gain [E] [E]."
+    "DESCRIPTION_BATTLE": "Ethereal. NL Whenever you play a Power, gain [E]."
   }
 }

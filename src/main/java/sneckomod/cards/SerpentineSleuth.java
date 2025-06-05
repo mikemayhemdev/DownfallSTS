@@ -24,7 +24,7 @@ public class SerpentineSleuth extends AbstractSneckoCard implements OnObtainCard
 
     public SerpentineSleuth() {
         super(ID, 4, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        //baseMagicNumber = magicNumber = 1;
         isEthereal = true;
         SneckoMod.loadJokeCardImage(this, "SerpentineSleuth.png");
     }
@@ -44,7 +44,7 @@ public class SerpentineSleuth extends AbstractSneckoCard implements OnObtainCard
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new SerpentineSleuthPower(this.magicNumber));
+        applyToSelf(new SerpentineSleuthPower(1));
     }
 
     @Override
@@ -70,7 +70,8 @@ public class SerpentineSleuth extends AbstractSneckoCard implements OnObtainCard
         if (!upgraded) {
             upgradeName();
             //isEthereal = false;
-            upgradeMagicNumber(1);
+            //upgradeMagicNumber(1);
+            upgradeBaseCost(3);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
