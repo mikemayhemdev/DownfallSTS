@@ -27,7 +27,7 @@ public class Accumulate extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         this.addToBot(new VFXAction(p, new InflameEffect(p), 1.0F));
-        applyToSelf(new StrengthOverTurnsPower(this.secondMagic, this.magicNumber));
+       // applyToSelf(new StrengthOverTurnsPower(this.secondMagic, this.magicNumber));
     }
 
 
