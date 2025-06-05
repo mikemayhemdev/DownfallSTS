@@ -159,7 +159,7 @@ public class RelicOverrides {
         public static CardGroup Postfix(CardGroup __result, CardGroup __instance) {
             if (UnbottledBottles()) {
                 __result.group.removeIf((c) -> {
-                    return isDownfallBottle(c) && (__result.size() > 1);
+                    return (isDownfallBottle(c) && (__result.size() > 1));
                 });
             }
 
