@@ -4,6 +4,7 @@ import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.ChampMod;
 import champ.ChampTextHelper;
+import champ.patches.SignatureMovePatch;
 import champ.powers.CalledShotPower;
 import champ.powers.DancingMasterPower;
 import champ.relics.SignatureFinisher;
@@ -211,7 +212,7 @@ public abstract class AbstractChampCard extends AbstractDownfallCard {
             }
             if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
                 SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
-                if (s.card.uuid == this.uuid) {
+                if (SignatureMovePatch.inSignatureMove.get(this)) {
                     leaveStance = false;
                 }
             }

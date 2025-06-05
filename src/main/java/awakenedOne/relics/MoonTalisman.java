@@ -43,7 +43,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if ((CardModifierManager.hasModifier(card, ConjureMod.ID))) {
+        if (MoonTalismanPatch.inBottleTalisman.get(card)) {
             this.flash();
             //atb(new ConjureAction(false));
         }

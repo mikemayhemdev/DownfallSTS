@@ -1,5 +1,6 @@
 package sneckomod.relics;
 
+import awakenedOne.patches.MoonTalismanPatch;
 import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
@@ -78,13 +79,13 @@ public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (this.card != null && card.uuid.equals(this.card.uuid)) {
+        if (BottledD8Patch.inD8.get(card)) {
             if (!(card instanceof TyphoonFang && card.purgeOnUse)) {
                 addToBot(new GainBlockAction(AbstractDungeon.player, 4));
                 this.flash(); //block tracking
             }
         }
-        if (this.card != null && card.uuid.equals(this.card.uuid) && AbstractDungeon.player.hand.size() <= 5 && !(AbstractDungeon.player.hasPower(CheatPower.POWER_ID))) {
+        if (BottledD8Patch.inD8.get(card) && AbstractDungeon.player.hand.size() <= 5 && !(AbstractDungeon.player.hasPower(CheatPower.POWER_ID))) {
             if (!(card instanceof TyphoonFang && card.purgeOnUse)) {
                 this.flash(); //overflow tracking
             }
