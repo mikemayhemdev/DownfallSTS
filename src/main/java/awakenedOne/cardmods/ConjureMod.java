@@ -2,6 +2,7 @@ package awakenedOne.cardmods;
 
 import awakenedOne.actions.ConjureAction;
 import basemod.abstracts.AbstractCardModifier;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -35,6 +36,16 @@ public class ConjureMod extends AbstractCardModifier {
     public void onRemove(AbstractCard card) {
         card.tags.remove(DELVE);
         card.initializeDescription();
+    }
+
+    @Override
+    public String identifier(AbstractCard card) {
+        return ID;
+    }
+
+    @Override
+    public boolean shouldApply(AbstractCard card) {
+        return !CardModifierManager.hasModifier(card, ID);
     }
 
     @Override
