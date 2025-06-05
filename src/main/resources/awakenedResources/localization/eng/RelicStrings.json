@@ -11,7 +11,7 @@
     "FLAVOR": "A reminder of your weakness, and yet you still can't let go.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL At the start of your turn, #yawakened:Conjure [REMOVE_SPACE]. NL The first time you refresh your Spells each combat, gain #b1 #yRitual [REMOVE_SPACE]"
+      " [REMOVE_SPACE].[] NL At the start of your turn, #yawakened:Conjure [REMOVE_SPACE]. NL The first time you refresh your Spells each combat, gain #b1 #yRitual [REMOVE_SPACE]."
     ]
   },
   "awakened:KTRibbon": {

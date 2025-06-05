@@ -43,7 +43,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (this.card != null && card.uuid.equals(this.card.uuid) && (CardModifierManager.hasModifier(card, ConjureMod.ID))) {
+        if ((CardModifierManager.hasModifier(card, ConjureMod.ID))) {
             this.flash();
             //atb(new ConjureAction(false));
         }
@@ -109,14 +109,18 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
             if (cardInDeck != null) {
                 AbstractCard copy = cardInDeck.makeStatEquivalentCopy();
 
-                CardModifierManager.removeModifiersById(cardInDeck, ConjureMod.ID, true);
+                        CardModifierManager.removeModifiersById(cardInDeck, ConjureMod.ID, true);
+                        MoonTalismanPatch.inBottleTalisman.set(cardInDeck, false);
 
+//                for (AbstractRelic r : AbstractDungeon.player.relics) {
+//                    if (r instanceof MoonTalisman) {
+//                        AbstractDungeon.player.loseRelic(r.relicId);
+//                    }
+//                }
                 AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(copy));
 
                 CardCrawlGame.sound.play("CARD_EXHAUST");
                 AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(copy, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
-
-                MoonTalismanPatch.inBottleTalisman.set(cardInDeck, false);
             }
         }
     }

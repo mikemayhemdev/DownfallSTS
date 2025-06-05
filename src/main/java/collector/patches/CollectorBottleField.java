@@ -1,5 +1,6 @@
 package collector.patches;
 
+import awakenedOne.util.Wiz;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,7 +11,12 @@ public class CollectorBottleField {
     @SpirePatch(clz = AbstractCard.class, method = "makeStatEquivalentCopy")
     public static class MakeStatEquivalentCopy {
         public static AbstractCard Postfix(AbstractCard result, AbstractCard self) {
-            inCollectionBottle.set(result, inCollectionBottle.get(self)); // Read:
+            if (Wiz.isInCombat()) {
+                inCollectionBottle.set(result, inCollectionBottle.get(self));
+            }
+            if (!Wiz.isInCombat()) {
+                inCollectionBottle.set(result, Boolean.FALSE);
+            }
             return result;
         }
     }

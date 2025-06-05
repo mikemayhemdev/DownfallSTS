@@ -1,5 +1,6 @@
 package guardian.patches;
 
+import awakenedOne.util.Wiz;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -23,10 +24,20 @@ public class BottledStasisPatch {
     )
     public static class MakeStatEquivalentCopy {
         public static AbstractCard Postfix(AbstractCard __result, AbstractCard __instance) {
-            inBottledStasis.set(__result, inBottledStasis.get(__instance));
-            inStasisEgg.set(__result, inStasisEgg.get(__instance));
-            inBottledAnomaly.set(__result, inBottledAnomaly.get(__instance));
-            inBottledCode.set(__result, inBottledCode.get(__instance));
+            if (Wiz.isInCombat()) {
+                inBottledStasis.set(__result, inBottledStasis.get(__instance));
+                inStasisEgg.set(__result, inStasisEgg.get(__instance));
+                inBottledAnomaly.set(__result, inBottledAnomaly.get(__instance));
+                inBottledCode.set(__result, inBottledCode.get(__instance));
+            }
+
+            if (!Wiz.isInCombat()) {
+                inBottledStasis.set(__result, Boolean.FALSE);
+                inStasisEgg.set(__result, Boolean.FALSE);
+                inBottledAnomaly.set(__result, Boolean.FALSE);
+                inBottledCode.set(__result, Boolean.FALSE);
+            }
+
             if (__instance instanceof AbstractGuardianCard) {
 
                 ((AbstractGuardianCard) __result).socketCount = ((AbstractGuardianCard) __instance).socketCount;

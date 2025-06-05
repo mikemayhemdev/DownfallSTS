@@ -21,8 +21,6 @@ import sneckomod.powers.CheatPower;
 
 import java.util.function.Predicate;
 
-import static champ.ChampMod.FINISHER;
-
 public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
 
     public static final String ID = SneckoMod.makeID("D8");

@@ -1,5 +1,7 @@
 package champ.patches;
 
+import awakenedOne.patches.MoonTalismanPatch;
+import awakenedOne.util.Wiz;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,7 +22,14 @@ public class SignatureMovePatch {
     )
     public static class MakeStatEquivalentCopy {
         public static AbstractCard Postfix(AbstractCard __result, AbstractCard __instance) {
-            inSignatureMove.set(__result, inSignatureMove.get(__instance));
+
+            if (Wiz.isInCombat()) {
+                inSignatureMove.set(__result, inSignatureMove.get(__instance));
+            }
+
+            if (!Wiz.isInCombat()) {
+                inSignatureMove.set(__result, Boolean.FALSE);
+            }
 
             return __result;
         }

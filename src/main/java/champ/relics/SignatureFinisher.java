@@ -1,12 +1,17 @@
 package champ.relics;
 
+import awakenedOne.cardmods.ConjureMod;
+import awakenedOne.patches.MoonTalismanPatch;
+import awakenedOne.relics.MoonTalisman;
 import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
+import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
 import champ.patches.SignatureMovePatch;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -106,6 +111,7 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
         counter = 0;
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c.uuid == card.uuid) {
+                addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 c.cost = 0;
                 c.costForTurn = 0;
                 c.isCostModified = true;
@@ -141,9 +147,11 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
     public void onUnequip() {
         if (card != null) {
             AbstractCard cardInDeck = AbstractDungeon.player.masterDeck.getSpecificCard(card);
+
             if (cardInDeck != null) {
                 SignatureMovePatch.inSignatureMove.set(cardInDeck, false);
             }
+
         }
     }
 

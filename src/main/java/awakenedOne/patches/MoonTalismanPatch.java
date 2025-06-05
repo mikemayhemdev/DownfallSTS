@@ -1,5 +1,6 @@
 package awakenedOne.patches;
 
+import awakenedOne.util.Wiz;
 import com.evacipated.cardcrawl.modthespire.lib.LineFinder;
 import com.evacipated.cardcrawl.modthespire.lib.Matcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
@@ -18,7 +19,14 @@ public class MoonTalismanPatch {
     @SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method = "makeStatEquivalentCopy")
     public static class MakeStatEquivalentCopy {
         public static AbstractCard Postfix(AbstractCard __result, AbstractCard __instance) {
-            MoonTalismanPatch.inBottleTalisman.set(__result, MoonTalismanPatch.inBottleTalisman.get(__instance));
+
+            if (Wiz.isInCombat()) {
+                MoonTalismanPatch.inBottleTalisman.set(__result, MoonTalismanPatch.inBottleTalisman.get(__instance));
+            }
+
+            if (!Wiz.isInCombat()) {
+                MoonTalismanPatch.inBottleTalisman.set(__result, Boolean.FALSE);
+            }
 
             if (__instance instanceof AbstractGuardianCard) {
 
