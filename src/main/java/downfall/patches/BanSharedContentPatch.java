@@ -6,10 +6,7 @@ import automaton.relics.BronzeIdol;
 import automaton.relics.DecasWashers;
 import automaton.relics.DonusWashers;
 import automaton.relics.MakeshiftBattery;
-import awakenedOne.relics.CawingCask;
-import awakenedOne.relics.MiniBlackHole;
-import awakenedOne.relics.ShardOfNowak;
-import awakenedOne.relics.VioletPlumage;
+import awakenedOne.relics.*;
 import champ.ChampChar;
 import champ.relics.Barbells;
 import champ.relics.DeflectingBracers;
@@ -275,6 +272,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(VioletPlumage.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(ShardOfNowak.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(MiniBlackHole.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(DeadBird.ID);
 
             }
         }

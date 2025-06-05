@@ -71,7 +71,6 @@ public class VictoryScreenUnlockPatch {
             } else if ((UnlockTracker.isCharacterLocked("Gremlin")) && (AbstractDungeon.player.chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE)) {
                 AbstractDungeon.unlocks.add(new GremlinUnlock());
                 AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
-                ////SlimeboundMod.logger.info("Triggered Snecko Unlock screen!");
                 return SpireReturn.Return(null);
             } else if ((UnlockTracker.isCharacterLocked("Snecko") && (AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN))) {
                 AbstractDungeon.unlocks.add(new SneckoUnlock());

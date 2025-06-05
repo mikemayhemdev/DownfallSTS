@@ -30,6 +30,8 @@ import java.util.function.Predicate;
         clz = CardGroup.class,
         method = "getGroupWithoutBottledCards"
 )
+
+//todo: VERY VERY BAD CODE
 public class FixDownfallBottlesPatch {
     public FixDownfallBottlesPatch() {
     }

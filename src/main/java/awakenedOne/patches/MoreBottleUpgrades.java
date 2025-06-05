@@ -13,6 +13,8 @@ import guardian.relics.BottledStasis;
 import guardian.relics.StasisEgg;
 import sneckomod.relics.D8;
 
+
+//todo: make not jank
 public class MoreBottleUpgrades {
     @SpirePatch(clz = AbstractPlayer.class, method = "bottledCardUpgradeCheck")
     public static class BottledCardUpgradeCheckPatch {
