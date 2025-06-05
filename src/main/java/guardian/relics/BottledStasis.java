@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import guardian.GuardianMod;
 import guardian.orbs.StasisOrb;
 import guardian.patches.BottledStasisPatch;
@@ -26,7 +27,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
     public static final String IMG_PATH = "relics/bottledStasis.png";
     public static final String OUTLINE_IMG_PATH = "relics/bottledStasisOutline.png";
     public AbstractCard card = null;
-    private boolean cardSelected = true;
+    public boolean cardSelected = false;
     private boolean cardRemoved = false;
 
     public BottledStasis() {
@@ -114,8 +115,10 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             BottledStasisPatch.inBottledStasis.set(card, true);
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+
             setDescriptionAfterLoading();
         }
     }

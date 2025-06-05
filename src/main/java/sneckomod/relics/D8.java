@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import sneckomod.SneckoMod;
 import sneckomod.cards.TyphoonFang;
 import sneckomod.patches.BottledD8Patch;
@@ -111,8 +112,10 @@ public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             BottledD8Patch.inD8.set(card, true);
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+
             setDescriptionAfterLoading();
         }
     }

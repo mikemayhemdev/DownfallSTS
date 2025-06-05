@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.util.TextureLoader;
 import guardian.orbs.StasisOrb;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
@@ -32,7 +33,7 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SignatureMove.png"));
 
     public AbstractCard card = null;
-    private boolean cardSelected = true;
+    public boolean cardSelected = false;
     private boolean hasfinisher = false;
 
     private boolean cardRemoved = false;
@@ -83,7 +84,7 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
     public void atBattleStartPreDraw() {
         if (!cardRemoved && cardSelected){
             boolean cardExists = false;
-            if(card!=null){
+            if (card!=null) {
                 for(AbstractCard c :AbstractDungeon.player.masterDeck.group){
                     if (c.uuid==card.uuid){
                         cardExists = true;
@@ -91,11 +92,10 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
                     }
                 }
             }
-            if (!cardExists){
+            if (!cardExists) {
                 cardRemoved = true;
                 tips.clear();
                 this.description = this.DESCRIPTIONS[4];
-                tips.add(new PowerTip(name, description));
                 initializeTips();
             }
         }
@@ -154,13 +154,15 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
         if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             cardSelected = true;
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            card.cost = 0;
-            card.costForTurn = 0;
-            card.isCostModified = true;
+//            card.cost = 0;
+//            card.costForTurn = 0;
+//            card.isCostModified = true;
             SignatureMovePatch.inSignatureMove.set(card, true);
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+
             setDescriptionAfterLoading();
         }
     }

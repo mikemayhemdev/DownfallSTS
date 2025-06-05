@@ -1,17 +1,17 @@
 package awakenedOne.cardmods;
 
+import awakenedOne.actions.ConjureAction;
 import basemod.abstracts.AbstractCardModifier;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import slimebound.actions.CommandAction;
 
+import static awakenedOne.util.Wiz.atb;
 
 public class ConjureMod extends AbstractCardModifier {
+
+    public static String ID = "awakened:ConjureMod";
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
@@ -21,7 +21,7 @@ public class ConjureMod extends AbstractCardModifier {
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         super.onUse(card, target, action);
-
+        atb(new ConjureAction(false));
     }
 
     @Override

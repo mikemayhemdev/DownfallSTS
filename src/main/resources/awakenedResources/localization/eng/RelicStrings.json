@@ -100,14 +100,14 @@
     "NAME": "Paper Crow",
     "FLAVOR": "Arbiter of doubt and curses folded one thousand times...",
     "DESCRIPTIONS": [
-      "Enemies with #yawakened:Hex take #b30% more damage rather than #b20% [REMOVE_SPACE]."
+      "Enemies with #yawakened:Hex take #b30% more damage per stack rather than #b20% [REMOVE_SPACE]."
     ]
   },
   "awakened:MoonTalisman": {
     "NAME": "Crescent Talisman",
     "FLAVOR": "“Please, just... don't forget me. Even after I die.”",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card that does NOT have #yawakened:Conjure. Add #yawakened:Conjure to it.",
+      "Upon pickup, choose a card that does #rNOT have #yawakened:Conjure [REMOVE_SPACE]. Add #yawakened:Conjure to it.",
       "Choose a card for ",
       "The Talisman has curled around ",
       " and added #yawakened:Conjure to it.",

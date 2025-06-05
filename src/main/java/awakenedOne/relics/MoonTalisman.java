@@ -1,6 +1,7 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.cardmods.ConjureMod;
 import awakenedOne.patches.MoonTalismanPatch;
 import awakenedOne.util.TexLoader;
@@ -9,20 +10,23 @@ import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Texture;
-import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
 import java.util.function.Predicate;
 
 import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.util.Wiz.atb;
 
 public class MoonTalisman extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
 
@@ -30,7 +34,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("MoonTalisman.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("MoonTalisman.png"));
     public AbstractCard card = null;
-    private boolean cardSelected = true;
+    public boolean cardSelected = false;
     private boolean cardRemoved = false;
 
     //Don't forget me.
@@ -41,8 +45,9 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (this.card != null && card.uuid.equals(this.card.uuid)) {
+        if (this.card != null && card.uuid.equals(this.card.uuid) && (CardModifierManager.hasModifier(card, ConjureMod.ID))) {
             this.flash();
+            //atb(new ConjureAction(false));
         }
     }
 
@@ -103,14 +108,18 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
     public void onUnequip() {
         if (card != null) {
             AbstractCard cardInDeck = AbstractDungeon.player.masterDeck.getSpecificCard(card);
-
-            cardInDeck.tags.remove(DELVE);
-
-            CardModifierManager.removeSpecificModifier(cardInDeck, new ConjureMod(), false);
-
-            AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(cardInDeck.makeStatEquivalentCopy()));
-
             if (cardInDeck != null) {
+                AbstractCard copy = cardInDeck.makeStatEquivalentCopy();
+
+                cardInDeck.tags.remove(DELVE);
+
+                CardModifierManager.removeSpecificModifier(cardInDeck, new ConjureMod(), false);
+
+                AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(copy));
+
+                CardCrawlGame.sound.play("CARD_EXHAUST");
+                AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(copy, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
+
                 MoonTalismanPatch.inBottleTalisman.set(cardInDeck, false);
             }
         }
@@ -128,6 +137,9 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
 
             cardInDeck.tags.add(DELVE);
 
+            //Note: This is the only source of this modifier on the entire character.
+            //If you want to check whenever the player plays the bottled card for whatever reason, do this:
+            //if (CardModifierManager.hasModifier(c, ConjureMod.ID))
             CardModifierManager.addModifier(cardInDeck, new ConjureMod());
 
             cardRemoved = false;
@@ -136,6 +148,9 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+
             setDescriptionAfterLoading();
         }
     }
@@ -188,7 +203,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
 
         CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
-            if (!c.hasTag(DELVE) && c.cost != -2) {
+            if (!c.hasTag(DELVE) && c.cost != -2 && c.rarity != AbstractCard.CardRarity.BASIC) {
                 tmp.addToTop(c);
             }
         }
