@@ -7,6 +7,7 @@ import awakenedOne.util.Wiz;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,6 +22,7 @@ public class ConjureAction extends AbstractGameAction {
 
 
     private boolean choose;
+    private boolean ontop;
     public static boolean refreshedthisturn = false;
     public static ArrayList<AbstractCard> conjuredCards = new ArrayList();
 
@@ -29,6 +31,12 @@ public class ConjureAction extends AbstractGameAction {
 
     public ConjureAction(boolean choose) {
         this.choose = choose;
+        ontop = false;
+    }
+
+    public ConjureAction(boolean choose, boolean drawpile) {
+        this.choose = choose;
+        ontop = drawpile;
     }
 
     @Override
@@ -64,7 +72,12 @@ public class ConjureAction extends AbstractGameAction {
             });
             if (!choose) {
                 AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
-                addToTop(new MakeTempCardInHandAction(tar));
+                if (ontop == false) {
+                    addToTop(new MakeTempCardInHandAction(tar));
+                }
+                if (ontop == true) {
+                    addToBot(new MakeTempCardInDrawPileAction(tar, 1, false, true));
+                }
                 addToTop(new RemoveSpellCardAction(tar));
             } else {
                 ArrayList<OrbitingSpells.CardRenderInfo> possCards = new ArrayList<>();

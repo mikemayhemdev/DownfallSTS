@@ -101,9 +101,8 @@
   "awakened:EmpressPower": {
     "NAME": "The Empress",
     "DESCRIPTIONS": [
-      "Whenever you play a Spell, draw #b",
-      " card next turn.",
-      " cards next turn."
+      "Whenever you play a Spell, gain #b",
+      " temporary #yStrength [REMOVE_SPACE]."
     ]
   },
   "awakened:MazalethFormPower": {

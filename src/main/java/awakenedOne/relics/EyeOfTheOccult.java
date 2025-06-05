@@ -15,7 +15,7 @@ public class EyeOfTheOccult extends CustomRelic {
 
     //Yeah... you need to go look at the Spell cards for this one.
     public EyeOfTheOccult() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
     }
 
     @Override

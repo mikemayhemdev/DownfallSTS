@@ -266,13 +266,16 @@ public class AwakenedOneMod implements
         BaseMod.addRelicToCustomPool(new ShreddedDoll(), AwakenedOneChar.Enums.AWAKENED_BLUE); //starter+
         BaseMod.addRelicToCustomPool(new KTRibbon(), AwakenedOneChar.Enums.AWAKENED_BLUE); //boss misc
         BaseMod.addRelicToCustomPool(new TomeOfPortalmancy(), AwakenedOneChar.Enums.AWAKENED_BLUE); //common
-        BaseMod.addRelicToCustomPool(new EyeOfTheOccult(), AwakenedOneChar.Enums.AWAKENED_BLUE); //rare
         BaseMod.addRelicToCustomPool(new ZenerDeck(), AwakenedOneChar.Enums.AWAKENED_BLUE); //uncommon
         BaseMod.addRelicToCustomPool(new AbyssBlade(), AwakenedOneChar.Enums.AWAKENED_BLUE); //boss energy lose [e] refund
         BaseMod.addRelicToCustomPool(new StrengthBooster(), AwakenedOneChar.Enums.AWAKENED_BLUE); //uncommon
         BaseMod.addRelicToCustomPool(new HexxBomb(), AwakenedOneChar.Enums.AWAKENED_BLUE); //shop
 
         BaseMod.addRelicToCustomPool(new MoonTalisman(), AwakenedOneChar.Enums.AWAKENED_BLUE); //rare relic to replace dead bird's rare #2 slot
+
+        BaseMod.addRelicToCustomPool(new EyeOfTheOccult(), AwakenedOneChar.Enums.AWAKENED_BLUE); //moved from rare to event
+
+        BaseMod.addRelicToCustomPool(new RazorBlade(), AwakenedOneChar.Enums.AWAKENED_BLUE); //new relic to fill Eye of the Occult's spot
 
         //shared relics
         BaseMod.addRelic(new CawingCask(), RelicType.SHARED); //rare shared

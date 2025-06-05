@@ -13,7 +13,7 @@ import static awakenedOne.AwakenedOneMod.*;
 
 public class HexxBomb extends CustomRelic{
 
-    //Hexx Bomb
+    //Manabomb
 
     private static final int AMOUNT = 1;
 
@@ -48,10 +48,11 @@ public class HexxBomb extends CustomRelic{
             int amount = m.getPower(ManaburnPower.POWER_ID).amount;
             if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 this.flash();
-                this.addToBot(new RelicAboveCreatureAction(m, this));
+                this.addToTop(new RelicAboveCreatureAction(m, this));
                 AbstractMonster mo = AbstractDungeon.getRandomMonster();
-                HexCurse(AMOUNT, mo, AbstractDungeon.player);
-                this.addToTop(new RelicAboveCreatureAction(mo, this));
+                this.addToBot(new RelicAboveCreatureAction(mo, this));
+                this.addToBot(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, AMOUNT), AMOUNT, true));
+                //HexCurse(AMOUNT, mo, AbstractDungeon.player);
             }
         }
 

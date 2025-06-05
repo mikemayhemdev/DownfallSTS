@@ -2,8 +2,12 @@ package awakenedOne.cards;
 
 import automaton.actions.EasyXCostAction;
 import awakenedOne.actions.ConjureAction;
+import com.megacrit.cardcrawl.actions.defect.ReinforcedBodyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -18,23 +22,23 @@ public class ArcaneNesting extends AbstractAwakenedCard {
 
     public ArcaneNesting() {
         super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseBlock = 6;
-        this.exhaust = true;
+        baseBlock = 5;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new EasyXCostAction(this, (effect, params) -> {
-            for (int i = 0; i < effect; i++) {
-                blck();
-                atb(new ConjureAction(false));
-            }
-            return true;
-        }));
-       // AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+        addToBot(new com.megacrit.cardcrawl.actions.defect.ReinforcedBodyAction(p, this.block, this.freeToPlayOnce, this.energyOnUse));
+    }
+
+    @Override
+    public void triggerOnCardPlayed(AbstractCard card) {
+        if (card.type == CardType.POWER && AbstractDungeon.player.hand.contains(this)) {
+            AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, false));
+        }
     }
 
 
     public void upp() {
-        upgradeBlock(2);
+        upgradeMagicNumber(1);
     }
 }

@@ -2,47 +2,28 @@ package downfall.patches;
 
 import automaton.relics.BottledCode;
 import awakenedOne.relics.MoonTalisman;
-import basemod.BaseMod;
 import basemod.ReflectionHacks;
-import basemod.abstracts.DynamicVariable;
-import basemod.helpers.dynamicvariables.BlockVariable;
-import basemod.helpers.dynamicvariables.DamageVariable;
-import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardModifierPatches;
-import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.RenderCustomDynamicVariableCN;
 import champ.ChampChar;
 import champ.relics.SignatureFinisher;
 import collector.relics.BottledCollectible;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.SoulboundField;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.*;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
-import gremlin.characters.GremlinCharacter;
 import guardian.relics.BottledAnomaly;
 import guardian.relics.BottledStasis;
 import guardian.relics.StasisEgg;
 import javassist.*;
-import javassist.bytecode.DuplicateMemberException;
-import sneckomod.cards.GlitteringGambit;
 import sneckomod.relics.D8;
 
-import javax.smartcardio.Card;
 import java.util.Objects;
-import java.util.regex.Pattern;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 

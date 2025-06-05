@@ -19,15 +19,15 @@ public class IntoNothing extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public IntoNothing() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 1;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 2;
        // baseBlock = 5;
         this.tags.add(AwakenedOneMod.DELVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         HexCurse(magicNumber, m, p);
-        atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+       // atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
 //        blck();
 //        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
 //            if ((!monster.isDead) && (!monster.isDying)) {

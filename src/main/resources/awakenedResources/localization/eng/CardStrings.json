@@ -164,7 +164,7 @@
   },
   "awakened:Envision": {
     "NAME": "Envision",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. todo rework"
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Place the Spell on top of the draw pile instead of in your hand."
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
@@ -209,7 +209,7 @@
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Put a card from your discard pile into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Fetch a card from your discard pile."
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
@@ -288,7 +288,7 @@
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",
-    "DESCRIPTION": "Whenever you play a Spell, draw a card next turn."
+    "DESCRIPTION": "Whenever you play a Spell, gain !M! temporary Strength."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
@@ -326,7 +326,7 @@
   },
   "awakened:IntoNothing": {
     "NAME": "From the Abyss",
-    "DESCRIPTION": "Apply !M! awakened:Hex and Weak. NL awakened:Conjure."
+    "DESCRIPTION": "Apply !M! awakened:Hex. NL awakened:Conjure."
   },
   "awakened:HeavyStrike": {
     "NAME": "Carrionmaker",
@@ -384,12 +384,12 @@
   },
   "awakened:ArcaneNesting": {
     "NAME": "Arcane Nesting",
-    "DESCRIPTION": "Gain !B! Block X times. NL awakened:Conjure X times. NL Exhaust. todo: rework"
+    "DESCRIPTION": "Gain !B! Block X times. NL Whenever you play a Power card while this is in hand, increase this card's Block by !M!."
   },
   "awakened:Middens": {
     "NAME": "Middens",
-    "DESCRIPTION": "Gain !B! Block. NL Put !M! Status card from your discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put !M! Status cards from your discard pile into your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Fetch !M! Status card from your discard pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Fetch !M! Status cards from your discard pile."
   },
   "awakened:Caw": {
     "NAME": "Caw",

@@ -2,6 +2,7 @@ package awakenedOne.events;
 
 
 import awakenedOne.potions.CultistsDelight;
+import awakenedOne.relics.EyeOfTheOccult;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
@@ -47,12 +48,12 @@ public class TheNestAwakened extends AbstractImageEvent {
         }
 
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.15F);
+            this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.35F);
         } else {
-            this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.10F);
+            this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.25F);
         }
 
-        this.imageEventText.setDialogOption(OPTIONS[3] + hpAmt + OPTIONS[4]);
+        this.imageEventText.setDialogOption(OPTIONS[3] + hpAmt + OPTIONS[4], new EyeOfTheOccult());
 
         this.imageEventText.setDialogOption(OPTIONS[2]);
 
@@ -81,7 +82,7 @@ public class TheNestAwakened extends AbstractImageEvent {
                         return;
                     case 1:
                         this.screen = CUR_SCREEN.COMPLETE;
-                        logMetric(ID, "Took a rare card reward for " + hpAmt + " Max HP.");
+                        logMetric(ID, "Took Eye of the Occult for " + hpAmt + " Max HP.");
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         CardCrawlGame.sound.play("ATTACK_DAGGER_6");
                         CardCrawlGame.sound.play("BLOOD_SPLAT");
@@ -91,8 +92,8 @@ public class TheNestAwakened extends AbstractImageEvent {
                             AbstractDungeon.player.currentHealth = AbstractDungeon.player.maxHealth;
                         }
 
-                        AbstractDungeon.getCurrRoom().rewards.add(new RareCardReward(AbstractDungeon.player.getCardColor()));
-                        AbstractDungeon.combatRewardScreen.open();
+                        AbstractRelic eye = new EyeOfTheOccult();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), eye);
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[7]);
                         this.imageEventText.clearRemainingOptions();

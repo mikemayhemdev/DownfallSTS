@@ -31,6 +31,8 @@ public class TomeOfPortalmancy extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
+    //tome of portalmancy
+
     public void onExhaust(AbstractCard card) {
         if (card.cardID == VoidCard.ID) {
             this.flash();

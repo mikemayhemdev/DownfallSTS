@@ -14,17 +14,17 @@ public class Envision extends AbstractAwakenedCard {
 
     //todo: rework
     public Envision() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 4;
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 2;
         this.tags.add(AwakenedOneMod.DELVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new ConjureAction(false));
+        atb(new ConjureAction(false, true));
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
     }
 }
