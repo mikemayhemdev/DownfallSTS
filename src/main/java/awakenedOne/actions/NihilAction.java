@@ -1,6 +1,5 @@
 package awakenedOne.actions;
 
-import awakenedOne.powers.EnemyHexedPower;
 import awakenedOne.powers.NihilPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;

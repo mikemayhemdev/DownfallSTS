@@ -3,13 +3,10 @@ package awakenedOne.cards;
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.UpgradeSpecificCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.util.Wiz.atb;
-import static awakenedOne.util.Wiz.att;
 
 public class Pluck extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Pluck.class.getSimpleName());

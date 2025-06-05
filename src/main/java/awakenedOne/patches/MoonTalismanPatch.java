@@ -1,8 +1,6 @@
 package awakenedOne.patches;
 
-import awakenedOne.cardmods.ConjureMod;
 import awakenedOne.util.Wiz;
-import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.LineFinder;
 import com.evacipated.cardcrawl.modthespire.lib.Matcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;

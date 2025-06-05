@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 
-import static awakenedOne.AwakenedOneMod.HexCurse;
 @Deprecated
 @CardIgnore
 public class Eclipse extends AbstractAwakenedCard {

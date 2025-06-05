@@ -7,24 +7,16 @@ package awakenedOne.patches;
 
 import automaton.relics.BottledCode;
 import awakenedOne.relics.MoonTalisman;
-import basemod.BaseMod;
-import basemod.Pair;
 import champ.relics.SignatureFinisher;
 import collector.relics.BottledCollectible;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import downfall.downfallMod;
-import guardian.GuardianMod;
 import guardian.relics.BottledAnomaly;
 import guardian.relics.BottledStasis;
 import guardian.relics.StasisEgg;
 import sneckomod.relics.D8;
-
-import java.util.Iterator;
-import java.util.function.Predicate;
 
 @SpirePatch(
         clz = CardGroup.class,

@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.*;
-import static collector.util.Wiz.applyToEnemy;
 
 public class IntoNothing extends AbstractAwakenedCard {
     public final static String ID = makeID(IntoNothing.class.getSimpleName());

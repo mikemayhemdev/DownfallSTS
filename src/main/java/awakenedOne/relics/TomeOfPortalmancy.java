@@ -4,7 +4,6 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.powers.UltimateHexDebuff;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
-import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;

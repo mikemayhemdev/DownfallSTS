@@ -1,6 +1,5 @@
 package awakenedOne.cards;
 
-import awakenedOne.actions.ConjureAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;

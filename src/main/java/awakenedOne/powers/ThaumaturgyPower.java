@@ -1,17 +1,11 @@
 package awakenedOne.powers;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-
-import static awakenedOne.util.Wiz.atb;
 
 public class ThaumaturgyPower extends AbstractAwakenedPower implements OnReceivePowerPower {
     // intellij stuff buff
@@ -21,7 +15,6 @@ public class ThaumaturgyPower extends AbstractAwakenedPower implements OnReceive
     public ThaumaturgyPower(int amount) {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
     }
-
 
 //    @Override
 //    public void onAfterCardPlayed(AbstractCard card) {

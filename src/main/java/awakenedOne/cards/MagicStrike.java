@@ -1,6 +1,5 @@
 package awakenedOne.cards;
 
-import awakenedOne.actions.ConjureAction;
 import awakenedOne.actions.ForTheHexAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,9 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.Iterator;
 
-import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.atb;
 
 public class MagicStrike extends AbstractAwakenedCard {
     public final static String ID = makeID(MagicStrike.class.getSimpleName());

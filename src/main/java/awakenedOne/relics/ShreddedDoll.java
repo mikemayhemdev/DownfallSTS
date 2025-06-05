@@ -2,18 +2,13 @@ package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
-import awakenedOne.cards.tokens.Ceremony;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
-import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.RitualPower;
-import sneckomod.cards.SoulRoll;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
@@ -29,6 +24,9 @@ public class ShreddedDoll extends CustomRelic implements OnAwakenRelic {
 
     public ShreddedDoll() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+
+        //Shredded Doll
+
     //    AbstractCard q = new Ceremony();
 //        q.upgrade();
       //  tips.add(new CardPowerTip(q));
@@ -47,13 +45,20 @@ public class ShreddedDoll extends CustomRelic implements OnAwakenRelic {
 
     @Override
     public void atBattleStart() {
+        this.beginLongPulse();
         activatedthiscombat = false;
+    }
+
+    @Override
+    public void onVictory() {
+        stopPulse();
     }
 
     //Check AwakenButton.java. I'm just using this override for convenience.
     @Override
     public void onAwaken(int amount) {
         if (amount == 5 && activatedthiscombat == false) {
+            stopPulse();
             activatedthiscombat = true;
             flash();
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));

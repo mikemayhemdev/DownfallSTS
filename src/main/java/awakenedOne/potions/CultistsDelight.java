@@ -1,15 +1,8 @@
 package awakenedOne.potions;
 
-
-import automaton.AutomatonMod;
-import automaton.powers.CleanCodePower;
-import automaton.powers.FreeFunctionPower;
 import awakenedOne.AwakenedOneMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomPotion;
-import champ.actions.DiscoverOpenerAction;
-import champ.potions.OpenerPotion;
-import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;

@@ -84,10 +84,6 @@ public class DuplicatePowerAction extends AbstractGameAction {
 
     private void createEchoes(AbstractCard card) {
         AbstractCard c = card.makeStatEquivalentCopy();
-
-        if(c.cost >= 0)
-            c.updateCost(-1);
-
         addToTop(new EchoACardNextTurnAction(c, dupeAmount));
     }
 }

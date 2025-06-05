@@ -1,8 +1,6 @@
 package awakenedOne.cards;
 
-import awakenedOne.actions.ConjureAction;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,7 +11,6 @@ import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
 import expansioncontent.actions.BloodthirstAction;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.atb;
 
 public class Bloodthirst extends AbstractAwakenedCard {
     public final static String ID = makeID(Bloodthirst.class.getSimpleName());

@@ -11,6 +11,8 @@ import static awakenedOne.AwakenedOneMod.*;
 
 public class ZenerDeck extends CustomRelic {
 
+    //Zener Deck
+
     public static final String ID = AwakenedOneMod.makeID("ZenerDeck");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("ZenerDeck.png")); //TODO: Images
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("ZenerDeck.png"));

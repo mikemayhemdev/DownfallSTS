@@ -7,7 +7,6 @@ import collector.relics.BottledCollectible;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import guardian.relics.BottledAnomaly;
 import guardian.relics.BottledStasis;
 import guardian.relics.StasisEgg;

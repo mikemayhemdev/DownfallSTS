@@ -1,6 +1,5 @@
 package awakenedOne.actions;
 
-import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 
 public class DelayedCurseAction extends AbstractGameAction {

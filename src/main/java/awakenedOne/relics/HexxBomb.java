@@ -1,7 +1,6 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.powers.EnemyHexedPower;
 import awakenedOne.powers.ManaburnPower;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;

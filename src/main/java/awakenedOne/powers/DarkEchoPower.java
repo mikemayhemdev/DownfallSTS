@@ -5,7 +5,6 @@ import basemod.interfaces.OnPowersModifiedSubscriber;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -21,12 +20,9 @@ import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import downfall.util.TextureLoader;
 import expansioncontent.expansionContentMod;
 
-import static awakenedOne.powers.AbstractAwakenedPower.makeID;
-
 
 public class DarkEchoPower extends TwoAmountPower implements OnPowersModifiedSubscriber {
     // intellij stuff buff
-
 
     public static final String POWER_ID = "awakened:DarkEchoPower";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);

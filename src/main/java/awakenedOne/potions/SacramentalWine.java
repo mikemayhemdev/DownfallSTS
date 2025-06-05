@@ -1,16 +1,8 @@
 package awakenedOne.potions;
 
-
-import automaton.AutomatonMod;
-import automaton.powers.CleanCodePower;
-import automaton.powers.FreeFunctionPower;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.powers.SacramentPower;
-import awakenedOne.powers.ThaumaturgyPower;
 import basemod.abstracts.CustomPotion;
-import champ.actions.DiscoverOpenerAction;
-import champ.potions.OpenerPotion;
-import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -21,9 +13,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import com.megacrit.cardcrawl.powers.CuriosityPower;
 import com.megacrit.cardcrawl.vfx.combat.LightBulbEffect;
-
 
 public class SacramentalWine extends CustomPotion {
     public static final String POTION_ID = "awakened:SacramentalWine";

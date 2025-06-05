@@ -1,6 +1,5 @@
 package awakenedOne.ui;
 
-import awakenedOne.powers.AwakenedPower;
 import awakenedOne.powers.OnAwakenPower;
 import awakenedOne.relics.OnAwakenRelic;
 import awakenedOne.util.ImageHelper;
@@ -12,8 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-
-import static awakenedOne.util.Wiz.applyToSelf;
 
 public class AwakenButton extends ClickableUIElement {
 

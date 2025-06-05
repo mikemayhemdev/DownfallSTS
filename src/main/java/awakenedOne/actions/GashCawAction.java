@@ -1,10 +1,13 @@
 package awakenedOne.actions;
 
 
+import automaton.FunctionHelper;
 import awakenedOne.cards.Caw;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import guardian.orbs.StasisOrb;
 
 import java.util.Iterator;
 
@@ -60,6 +63,24 @@ public class GashCawAction extends AbstractGameAction {
                 c.baseDamage += this.amount;
                 c.applyPowers();
             }
+        }
+
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (o instanceof StasisOrb) {
+                if (((StasisOrb) o).stasisCard instanceof Caw) {
+                    ((StasisOrb) o).stasisCard.baseDamage += this.amount;
+                    ((StasisOrb) o).stasisCard.applyPowers();
+                }
+            }
+        }
+
+        if (FunctionHelper.doStuff) {
+            for (AbstractCard q : FunctionHelper.held.group) {
+                if (q instanceof Caw) {
+                    q.baseDamage += this.amount;
+                }
+            }
+            FunctionHelper.genPreview();
         }
 
         this.isDone = true;

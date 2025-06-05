@@ -1,13 +1,7 @@
 package awakenedOne.powers;
 
-import awakenedOne.actions.ConjureAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.DoubleDamagePower;
-import com.megacrit.cardcrawl.powers.DoubleTapPower;
-import com.megacrit.cardcrawl.powers.PenNibPower;
-
-import static awakenedOne.util.Wiz.atb;
 
 public class MazalethFormPower extends AbstractAwakenedPower {
     // intellij stuff buff

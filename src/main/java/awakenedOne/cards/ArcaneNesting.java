@@ -2,11 +2,8 @@ package awakenedOne.cards;
 
 import automaton.actions.EasyXCostAction;
 import awakenedOne.actions.ConjureAction;
-import awakenedOne.util.Wiz;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 

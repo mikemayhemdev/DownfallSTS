@@ -1,10 +1,8 @@
 package awakenedOne.cards;
 
-import awakenedOne.actions.ConjureAction;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -18,7 +16,6 @@ import com.megacrit.cardcrawl.vfx.combat.VerticalImpactEffect;
 import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.atb;
 
 public class Murder extends AbstractAwakenedCard {
     public final static String ID = makeID(Murder.class.getSimpleName());

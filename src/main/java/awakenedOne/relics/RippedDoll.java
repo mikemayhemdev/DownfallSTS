@@ -20,6 +20,8 @@ public class RippedDoll extends CustomRelic {
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("RippedDoll.png")); //TODO: Images
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("RippedDoll.png"));
 
+    //Ripped Doll
+
     public RippedDoll() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         AbstractCard q = new Ceremony();

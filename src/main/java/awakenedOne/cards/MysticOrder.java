@@ -1,13 +1,11 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.powers.StrengthOverTurnsPower;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
-import downfall.util.CardIgnore;
 
 import static awakenedOne.util.Wiz.applyToSelf;
 

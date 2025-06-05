@@ -6,9 +6,7 @@ import awakenedOne.cards.tokens.spells.AphoticShield;
 import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static awakenedOne.ui.OrbitingSpells.spellCards;
 import static awakenedOne.ui.OrbitingSpells.updateTimeOffsets;

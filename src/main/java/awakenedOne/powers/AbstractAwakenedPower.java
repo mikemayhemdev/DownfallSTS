@@ -15,7 +15,6 @@ import java.util.Map;
 
 import static awakenedOne.AwakenedOneMod.getModID;
 
-
 public abstract class AbstractAwakenedPower extends AbstractPower {
     private static PowerStrings getPowerStrings(String ID) {
         return CardCrawlGame.languagePack.getPowerStrings(ID);

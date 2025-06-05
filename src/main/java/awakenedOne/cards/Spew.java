@@ -2,24 +2,11 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
-import gremlin.powers.WizPower;
-import guardian.GuardianMod;
-import guardian.actions.StasisEvokeIfRoomInHandAction;
-import guardian.cards.AbstractGuardianCard;
-
-import java.util.Iterator;
-
-import static awakenedOne.AwakenedOneMod.HexCurse;
 
 public class Spew extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Spew.class.getSimpleName());

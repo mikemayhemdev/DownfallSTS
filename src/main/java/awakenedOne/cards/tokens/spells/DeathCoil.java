@@ -2,29 +2,17 @@ package awakenedOne.cards.tokens.spells;
 
 import awakenedOne.powers.ManaburnPower;
 import awakenedOne.relics.EyeOfTheOccult;
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
-import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
-import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import hermit.powers.Drained;
 
-import java.util.Iterator;
-
-import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.att;
-import static awakenedOne.util.Wiz.vfx;
 
 public class DeathCoil extends AbstractSpellCard {
     public final static String ID = makeID(DeathCoil.class.getSimpleName());

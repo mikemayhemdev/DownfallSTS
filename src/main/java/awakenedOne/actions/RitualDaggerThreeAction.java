@@ -11,6 +11,10 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import java.util.Iterator;
 import java.util.UUID;
 
+
+//unused
+//turn out that a ritual dagger that hits three times is stupid and even if it wasn't the code is annoying
+
 public class RitualDaggerThreeAction extends AbstractGameAction {
     private int increaseAmount;
     private DamageInfo info;

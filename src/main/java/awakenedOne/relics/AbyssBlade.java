@@ -12,6 +12,8 @@ import static awakenedOne.AwakenedOneMod.makeRelicPath;
 
 public class AbyssBlade extends CustomRelic implements OnLoseEnergyRelic {
 
+    //Prove you love ME above all else!
+
     public static final String ID = AwakenedOneMod.makeID("AbyssBlade");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("AbyssBlade.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("AbyssBlade.png"));

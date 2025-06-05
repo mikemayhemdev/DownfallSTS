@@ -3,7 +3,6 @@ package awakenedOne.relics;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
-import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -23,6 +22,8 @@ public class VioletPlumage extends CustomRelic {
     public VioletPlumage() {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
+
+    //violet plumage
 
     @Override
     public void onUseCard(AbstractCard c, UseCardAction action) {
