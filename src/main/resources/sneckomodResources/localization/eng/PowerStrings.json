@@ -42,10 +42,9 @@
   "sneckomod:OverwhelmingPresencePower": {
     "NAME": "Overwhelming Presence",
     "DESCRIPTIONS": [
-      "The first time you shuffle your deck each turn, gain [E] and draw #b1 card.",
-      "The first time you shuffle your deck each turn, gain ",
-      " [E] and draw #b",
-      " cards."
+      "The first time you play an #yOffclass card each turn, draw #b1 card next turn.",
+      "The first time you play an #yOffclass card each turn, draw #b ",
+      " cards next turn."
     ]
   },
   "sneckomod:SerpentsNestPower": {
