@@ -147,7 +147,6 @@ public class RelicOverrides {
     //    }
 
 
-    //behold, war crime coding
     //todo: make not a war crime
     @SpirePatch(
             clz = CardGroup.class,
@@ -174,6 +173,7 @@ public class RelicOverrides {
         }
     }
 
+        //todo: some of the worst code I've ever written, fix before release IMPORTANT
         public static boolean UnbottledBottles() {
             boolean result = false;
             RelicStrings strings;
