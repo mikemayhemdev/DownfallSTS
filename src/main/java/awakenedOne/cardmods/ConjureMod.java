@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 
+import static awakenedOne.AwakenedOneMod.DELVE;
 import static awakenedOne.util.Wiz.atb;
 
 public class ConjureMod extends AbstractCardModifier {
@@ -22,6 +23,18 @@ public class ConjureMod extends AbstractCardModifier {
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         super.onUse(card, target, action);
         atb(new ConjureAction(false));
+    }
+
+    @Override
+    public void onInitialApplication(AbstractCard card) {
+        card.tags.add(DELVE);
+        card.initializeDescription();
+    }
+
+    @Override
+    public void onRemove(AbstractCard card) {
+        card.tags.remove(DELVE);
+        card.initializeDescription();
     }
 
     @Override

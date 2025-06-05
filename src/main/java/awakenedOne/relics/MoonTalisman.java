@@ -1,7 +1,6 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.actions.ConjureAction;
 import awakenedOne.cardmods.ConjureMod;
 import awakenedOne.patches.MoonTalismanPatch;
 import awakenedOne.util.TexLoader;
@@ -26,7 +25,6 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import java.util.function.Predicate;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.atb;
 
 public class MoonTalisman extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
 
@@ -111,9 +109,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
             if (cardInDeck != null) {
                 AbstractCard copy = cardInDeck.makeStatEquivalentCopy();
 
-                cardInDeck.tags.remove(DELVE);
-
-                CardModifierManager.removeSpecificModifier(cardInDeck, new ConjureMod(), false);
+                CardModifierManager.removeModifiersById(cardInDeck, ConjureMod.ID, true);
 
                 AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(copy));
 
@@ -134,8 +130,6 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
 
             AbstractCard cardInDeck = AbstractDungeon.player.masterDeck.getSpecificCard(card);
-
-            cardInDeck.tags.add(DELVE);
 
             //Note: This is the only source of this modifier on the entire character.
             //If you want to check whenever the player plays the bottled card for whatever reason, do this:
@@ -203,7 +197,8 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
 
         CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
-            if (!c.hasTag(DELVE) && c.cost != -2 && c.rarity != AbstractCard.CardRarity.BASIC) {
+            //considered && c.rarity != CardRarity.BASIC); but decided against it
+            if (!c.hasTag(DELVE) && c.cost != -2) {
                 tmp.addToTop(c);
             }
         }
