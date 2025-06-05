@@ -45,5 +45,15 @@
       "[Leave]",
       " #rHP. #gGain #gBroken #gWing #gStatue."
     ]
+  },
+  "awakened:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Nothing matters except the struggle for life. The here and now."
+    ],
+    "OPTIONS": [
+      "[Desperation] #gYour #gStrikes #gand #gDefends #gcost #g1 #gless, #rbut #rlose #renergy #rnext #rturn.",
+      "[Locked] Requires a Strike or Defend."
+    ]
   }
 }

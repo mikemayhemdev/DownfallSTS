@@ -17,7 +17,7 @@
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Apply !M! awakened:Manaburn. NL Lose [E] next turn. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Apply !M! awakened:Manaburn. NL Next turn, lose [E]. NL Exhaust."
   },
   "awakened:AphoticShield": {
     "NAME": "Aphotic Shield",
@@ -339,7 +339,7 @@
   },
   "awakened:MirePit": {
     "NAME": "Mire Pit",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Lose [E] at the start of your next turn. NL Exhaust."
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Next turn, lose [E]. NL Exhaust."
   },
   "awakened:SingularityShield": {
     "NAME": "Singularity Shield",

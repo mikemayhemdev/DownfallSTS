@@ -8,5 +8,10 @@
     "TEXT": [
       " NL awakened:Conjure."
     ]
+  },
+  "awakened:DrainingMod": {
+    "TEXT": [
+      " NL Next turn, lose [E]."
+    ]
   }
 }

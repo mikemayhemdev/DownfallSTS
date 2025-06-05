@@ -6,6 +6,7 @@ import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.cards.cardvars.SecondDamage;
 import awakenedOne.cards.cardvars.SecondMagicNumber;
 import awakenedOne.cards.cardvars.ThirdMagicNumber;
+import awakenedOne.events.BackToBasicsAwakened;
 import awakenedOne.events.TheNestAwakened;
 import awakenedOne.events.WingStatueAwakened;
 import awakenedOne.patches.OnLoseEnergyPowerPatch;
@@ -25,6 +26,7 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import champ.ChampChar;
+import champ.events.BackToBasicsChamp;
 import champ.events.Colosseum_Evil_Champ;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -145,6 +147,16 @@ public class AwakenedOneMod implements
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsAwakened.ID, BackToBasicsAwakened.class) //Event ID//
+                //Event Character//
+                .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
     }
 
 
