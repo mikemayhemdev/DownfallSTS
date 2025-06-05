@@ -275,7 +275,7 @@ public class AwakenedOneMod implements
 
         BaseMod.addRelicToCustomPool(new EyeOfTheOccult(), AwakenedOneChar.Enums.AWAKENED_BLUE); //moved from rare to event
 
-        BaseMod.addRelicToCustomPool(new CursedBlessing(), AwakenedOneChar.Enums.AWAKENED_BLUE); //new relic to fill Eye of the Occult's spot
+        BaseMod.addRelicToCustomPool(new CursedBlessing(), AwakenedOneChar.Enums.AWAKENED_BLUE); //new rare relic to fill Eye of the Occult's spot
 
         //shared relics
         BaseMod.addRelic(new CawingCask(), RelicType.SHARED); //rare shared
