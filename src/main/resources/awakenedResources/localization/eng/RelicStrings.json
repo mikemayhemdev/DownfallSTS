@@ -96,8 +96,8 @@
       "If you do not play any #yPower cards during your turn, draw an additional card next turn."
     ]
   },
-  "awakened:RazorBlade": {
-    "NAME": "Accursed Bloodletter",
+  "awakened:CursedBlessing": {
+    "NAME": "Condemned Necklace",
     "FLAVOR": "What a horrible night to have a #rCurse [REMOVE_SPACE]...",
     "DESCRIPTIONS": [
       "Whenever you #yExhaust a #rCurse [REMOVE_SPACE], apply #b",

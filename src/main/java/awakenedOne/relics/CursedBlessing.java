@@ -3,42 +3,51 @@ package awakenedOne.relics;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.powers.ManaburnPower;
 import awakenedOne.powers.OnLoseEnergyPower;
-import awakenedOne.powers.UltimateHexDebuff;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 
 import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
 
-public class RazorBlade extends CustomRelic {
+public class CursedBlessing extends CustomRelic {
 
-    public static final String ID = AwakenedOneMod.makeID("RazorBlade");
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("RazorBlade.png")); //TODO: Images
-    private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("RazorBlade.png"));
+    public static final String ID = AwakenedOneMod.makeID("CursedBlessing");
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("CursedBlessing.png")); //TODO: Images
+    private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("CursedBlessing.png"));
 
     private static final int AMOUNT = 4;
 
-    public RazorBlade() {
+    public CursedBlessing() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.CLINK);
     }
 
-    //Razor Blade
+    //Condemned Necklace
+
+    public boolean canSpawn() {
+        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+
+        AbstractCard c;
+        do {
+            if (!var1.hasNext()) {
+                return false;
+            }
+
+            c = (AbstractCard)var1.next();
+        } while(c.type != AbstractCard.CardType.CURSE);
+
+        return true;
+    }
 
     public void onExhaust(AbstractCard card) {
         if (card.type == AbstractCard.CardType.CURSE) {

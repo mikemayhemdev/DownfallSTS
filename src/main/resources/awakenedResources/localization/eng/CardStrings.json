@@ -164,7 +164,7 @@
   },
   "awakened:Envision": {
     "NAME": "Envision",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Place the Spell on top of the draw pile instead of in your hand."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure and put the Spell on top of your draw pile."
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
