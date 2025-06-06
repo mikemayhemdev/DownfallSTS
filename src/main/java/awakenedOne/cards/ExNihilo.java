@@ -18,7 +18,7 @@ public class ExNihilo extends AbstractAwakenedCard {
 
     public ExNihilo() {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 0;
+        baseDamage = 3;
         this.exhaust = true;
     }
 
