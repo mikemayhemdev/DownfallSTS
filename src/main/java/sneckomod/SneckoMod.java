@@ -7,6 +7,7 @@ import automaton.cards.Invalidate;
 import automaton.cards.Undervolt;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.cards.*;
+import awakenedOne.powers.FeathersinksPower;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
@@ -484,7 +485,7 @@ public class SneckoMod implements
                 c.cardID.equals(SongOfSorrow.ID) ||
                 c.cardID.equals(SplitWide.ID) ||
                 c.cardID.equals(FadeOut.ID) ||
-                c.cardID.equals(TheEmpress.ID) ||
+                c.cardID.equals(Feathersinks.ID) ||
                 c.cardID.equals(ExNihilo.ID)
                 )
 

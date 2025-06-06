@@ -9,6 +9,8 @@ import static awakenedOne.AwakenedOneMod.*;
 
 public class EyeOfTheOccult extends CustomRelic {
 
+    //Eye of the Occult
+
     public static final String ID = AwakenedOneMod.makeID("EyeOfTheOccult");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("EyeOfTheOccult.png")); //TODO: Images
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("EyeOfTheOccult.png"));

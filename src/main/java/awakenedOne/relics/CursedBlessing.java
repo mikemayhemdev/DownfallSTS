@@ -10,10 +10,16 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.BottledFlame;
+import com.megacrit.cardcrawl.relics.DuVuDoll;
 
 import java.util.Iterator;
 
@@ -27,12 +33,19 @@ public class CursedBlessing extends CustomRelic {
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("CursedBlessing.png"));
 
     private static final int AMOUNT = 4;
+   // RelicStrings DuvuStrings;
 
     public CursedBlessing() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.CLINK);
+     //   DuvuStrings = CardCrawlGame.languagePack.getRelicStrings(DuVuDoll.ID);
     }
 
     //Condemned Necklace
+
+    @Override
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0] + AMOUNT + DESCRIPTIONS[1];
+    }
 
     public boolean canSpawn() {
         Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
@@ -49,48 +62,129 @@ public class CursedBlessing extends CustomRelic {
         return true;
     }
 
-    public void onExhaust(AbstractCard card) {
-        if (card.type == AbstractCard.CardType.CURSE) {
-            this.flash();
-            Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
-            while (var2.hasNext()) {
-                AbstractMonster mo = (AbstractMonster) var2.next();
-                if (!mo.isDead) {
+    public void atBattleStart() {
+        this.flash();
+
+        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+
+        while(var1.hasNext()) {
+            AbstractCard c = (AbstractCard)var1.next();
+            if (c.type == AbstractCard.CardType.CURSE) {
+
+                Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+                while(var2.hasNext()) {
+                    AbstractMonster mo = (AbstractMonster)var2.next();
                     this.addToTop(new RelicAboveCreatureAction(mo, this));
                     this.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, AMOUNT), AMOUNT, true));
                 }
+
             }
-
-
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        if (p instanceof OnLoseEnergyPower) {
-                            ((OnLoseEnergyPower) p).LoseEnergyAction(1);
-                        }
-                    }
-
-                    for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
-                        if (!m2.isDead && !m2.isDying) {
-                            for (AbstractPower p : m2.powers) {
-                                if (p instanceof OnLoseEnergyPower) {
-                                    ((OnLoseEnergyPower) p).LoseEnergyAction(1);
-                                }
-                            }
-                        }
-
-                        for (AbstractRelic p : AbstractDungeon.player.relics) {
-                            if (p instanceof OnLoseEnergyRelic) {
-                                ((OnLoseEnergyRelic) p).LoseEnergyAction(1);
-                            }
-                        }
-                    }
-                }
-            });
         }
     }
+
+
+    public void setCounter(int c) {
+        this.counter = c;
+        if (this.counter == 0) {
+            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[2];
+        } else {
+            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[3] + this.counter + this.DESCRIPTIONS[4];
+        }
+
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+        this.initializeTips();
+    }
+
+    public void onMasterDeckChange() {
+        this.counter = 0;
+        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+
+        while(var1.hasNext()) {
+            AbstractCard c = (AbstractCard)var1.next();
+            if (c.type == AbstractCard.CardType.CURSE) {
+                ++this.counter;
+            }
+        }
+
+        if (this.counter == 0) {
+            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[2];
+        } else {
+            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[3] + this.counter + this.DESCRIPTIONS[4];
+        }
+
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+        this.initializeTips();
+    }
+
+    public void onEquip() {
+        this.counter = 0;
+        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+
+        while(var1.hasNext()) {
+            AbstractCard c = (AbstractCard)var1.next();
+            if (c.type == AbstractCard.CardType.CURSE) {
+                ++this.counter;
+            }
+        }
+
+        if (this.counter == 0) {
+            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[2];
+        } else {
+            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[3] + this.counter + this.DESCRIPTIONS[4];
+        }
+
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+        this.initializeTips();
+    }
+
+
+    //public void onExhaust(AbstractCard card) {
+    //        if (card.type == AbstractCard.CardType.CURSE) {
+    //            this.flash();
+    //            Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+    //
+    //            while (var2.hasNext()) {
+    //                AbstractMonster mo = (AbstractMonster) var2.next();
+    //                if (!mo.isDead) {
+    //                    this.addToTop(new RelicAboveCreatureAction(mo, this));
+    //                    this.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, AMOUNT), AMOUNT, true));
+    //                }
+    //            }
+    //
+    //
+    //            atb(new AbstractGameAction() {
+    //                @Override
+    //                public void update() {
+    //                    isDone = true;
+    //
+    //                    for (AbstractPower p : AbstractDungeon.player.powers) {
+    //                        if (p instanceof OnLoseEnergyPower) {
+    //                            ((OnLoseEnergyPower) p).LoseEnergyAction(1);
+    //                        }
+    //                    }
+    //
+    //                    for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
+    //                        if (!m2.isDead && !m2.isDying) {
+    //                            for (AbstractPower p : m2.powers) {
+    //                                if (p instanceof OnLoseEnergyPower) {
+    //                                    ((OnLoseEnergyPower) p).LoseEnergyAction(1);
+    //                                }
+    //                            }
+    //                        }
+    //
+    //                        for (AbstractRelic p : AbstractDungeon.player.relics) {
+    //                            if (p instanceof OnLoseEnergyRelic) {
+    //                                ((OnLoseEnergyRelic) p).LoseEnergyAction(1);
+    //                            }
+    //                        }
+    //                    }
+    //                }
+    //            });
+    //        }
+    //    }
 }

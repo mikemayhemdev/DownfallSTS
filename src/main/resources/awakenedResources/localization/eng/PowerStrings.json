@@ -61,14 +61,6 @@
       " NL This effect cannot be triggered again this turn."
     ]
   },
-  "awakened:FeatherPower": {
-    "NAME": "Feathersinks",
-    "DESCRIPTIONS": [
-      "Whenever you refresh your Spells, draw #b",
-      " card.",
-      " cards."
-    ]
-  },
   "awakened:PrimacyPower": {
     "NAME": "Primacy",
     "DESCRIPTIONS": [
@@ -138,10 +130,10 @@
     ]
   },
   "awakened:FeathersinksPower": {
-    "NAME": "Feathersinks",
+    "NAME": "Shroud of Miasma",
     "DESCRIPTIONS": [
-      "Whenever you refresh your Spells, gain #b",
-      " [E] ."
+      "Whenever you apply #yHex to an enemy, gain #b",
+      " #Block."
     ]
   },
   "awakened:StrengthReturnPower": {
@@ -161,8 +153,8 @@
   "awakened:HexMasterPower": {
     "NAME": "Hex Master",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, apply #b",
-      " #yHex to ALL enemies."
+      "Whenever you attack an enemy with #yHex [REMOVE_SPACE], apply #b",
+      " #yHex to them."
     ]
   },
   "awakened:DarkIncantationRitualPower": {

@@ -61,11 +61,11 @@ public class ConjureAction extends AbstractGameAction {
                         }
 
                         //On Refresh...
-                        if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
-                            for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {
-                                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-                            }
-                        }
+//                        if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
+//                            for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {
+//                                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+//                            }
+//                        }
                         refreshedthisturn = true;
                     }
                 }

@@ -31,6 +31,7 @@ public class DeadBird extends CustomRelic implements OnReceivePowerRelic {
 
     //or, Eve's Dead Bird
 
+    //damage
     private static final int AMOUNT = 4;
 
     @Override

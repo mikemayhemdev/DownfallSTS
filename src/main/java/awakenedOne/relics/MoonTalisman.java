@@ -57,6 +57,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         if (MoonTalismanPatch.inBottleTalisman.get(card)) {
             this.flash();
+            //added a modifier instead
             //atb(new ConjureAction(false));
         }
     }
@@ -148,8 +149,6 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
             AbstractCard cardInDeck = AbstractDungeon.player.masterDeck.getSpecificCard(card);
 
             //Note: This is the only source of this modifier on the entire character.
-            //If you want to check whenever the player plays the bottled card for whatever reason, do this:
-            //if (CardModifierManager.hasModifier(c, ConjureMod.ID))
             CardModifierManager.addModifier(cardInDeck, new ConjureMod());
 
             cardRemoved = false;
@@ -164,13 +163,6 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
             setDescriptionAfterLoading();
         }
     }
-
-//    @Override
-//    public void onRemoveCardFromMasterDeck(AbstractCard var1){
-//        if (var1.uuid == card.uuid) {
-//            setDescriptionAfterLoading();
-//        }
-//    }
 
     public void setDescriptionAfterLoading() {
 

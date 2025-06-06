@@ -69,11 +69,7 @@ public class SerpentineSleuth extends AbstractSneckoCard implements OnObtainCard
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            //isEthereal = false;
-            //upgradeMagicNumber(1);
             upgradeBaseCost(3);
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
         }
     }
 }

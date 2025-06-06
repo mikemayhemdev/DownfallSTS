@@ -15,8 +15,6 @@ public class HexxBomb extends CustomRelic{
 
     //Manabomb
 
-    private static final int AMOUNT = 1;
-
     public static final String ID = AwakenedOneMod.makeID("HexxBomb");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("HexxBomb.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("HexxBomb.png"));
@@ -51,7 +49,7 @@ public class HexxBomb extends CustomRelic{
                 this.addToTop(new RelicAboveCreatureAction(m, this));
                 AbstractMonster mo = AbstractDungeon.getRandomMonster();
                 this.addToBot(new RelicAboveCreatureAction(mo, this));
-                this.addToBot(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, AMOUNT), AMOUNT, true));
+                this.addToBot(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, amount), amount, true));
                 //HexCurse(AMOUNT, mo, AbstractDungeon.player);
             }
         }

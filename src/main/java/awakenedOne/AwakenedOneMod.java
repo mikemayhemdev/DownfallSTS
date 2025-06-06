@@ -291,8 +291,6 @@ public class AwakenedOneMod implements
         BaseMod.addPotion(SacramentalWine.class, Color.PURPLE, Color.VIOLET, Color.MAROON, SacramentalWine.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
         BaseMod.addPotion(SneckoPowersPotion.class, Color.CYAN, Color.TAN, Color.BLUE, SneckoPowersPotion.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
 
-
-
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(CultistsDelight.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(SacramentalWine.POTION_ID);

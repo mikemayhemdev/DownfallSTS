@@ -43,7 +43,7 @@
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Your next Spell this turn is played twice."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL This turn, your next Spell is played twice."
   },
   "awakened:QuickMove": {
     "NAME": "Peck",
@@ -95,8 +95,8 @@
   },
   "awakened:FadeOut": {
     "NAME": "Hex Master",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a Power card, apply !M! awakened:Hex to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a Power card, apply !M! awakened:Hex to ALL enemies."
+    "DESCRIPTION": "Ethereal. NL Whenever you attack an enemy with awakened:Hex, apply !M! awakened:Hex to them.",
+    "UPGRADE_DESCRIPTION": "Whenever you attack an enemy with awakened:Hex, apply !M! awakened:Hex to them."
   },
   "awakened:Accumulate": {
     "NAME": "Accumulate",
@@ -188,8 +188,8 @@
     "DESCRIPTION": "not used."
   },
   "awakened:Feathersinks": {
-    "NAME": "Feathersinks",
-    "DESCRIPTION": "Whenever you refresh your Spells, gain [E]."
+    "NAME": "Shroud of Miasma",
+    "DESCRIPTION": "Whenever you apply awakened:Hex to an enemy, gain !M! Block."
   },
   "awakened:Sludge": {
     "NAME": "Sludge",
@@ -384,7 +384,10 @@
   },
   "awakened:ArcaneNesting": {
     "NAME": "Arcane Nesting",
-    "DESCRIPTION": "Gain !B! Block X times. NL Whenever you play a Power card while this is in hand, increase this card's Block by !M!."
+    "DESCRIPTION": "Unplayable. NL Whenever you play a Power card while this is in hand, gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "I must play Power cards to gain Block from this."
+    ]
   },
   "awakened:Middens": {
     "NAME": "Middens",

@@ -11,15 +11,18 @@ public class Feathersinks extends AbstractAwakenedCard {
     public final static String ID = makeID(Feathersinks.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
+    //Shroud of Miasma
+
     public Feathersinks() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new FeathersinksPower(1));
+        applyToSelf(new FeathersinksPower(magicNumber));
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeMagicNumber(1);
     }
 }

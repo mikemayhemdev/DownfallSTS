@@ -15,7 +15,7 @@ public class KTRibbon extends CustomRelic implements OnAwakenRelic {
 
     //White Ribbon
 
-    //what is this, some kind of "daemon doll"????? a "constant companion"?
+    //ummmm, what is this, some kind of a "daemon doll"????? a "constant companion"?
 
     private static final int AMOUNT = 4;
 

@@ -93,15 +93,18 @@
     "NAME": "Alethea",
     "FLAVOR": "From the Abyss.",
     "DESCRIPTIONS": [
-      "If you do not play any #yPower cards during your turn, draw an additional card next turn."
+      "If you do not play any #yPowers during your turn, draw an additional card next turn."
     ]
   },
   "awakened:CursedBlessing": {
     "NAME": "Condemned Necklace",
-    "FLAVOR": "What a horrible night to have a #rCurse [REMOVE_SPACE]...",
+    "FLAVOR": "What a horrible night to have a Curse...",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a #rCurse [REMOVE_SPACE], apply #b",
-      " #yawakened:Manaburn to ALL enemies and trigger #yawakened:Drain effects."
+      "At the start of each combat, apply #b",
+      " #yawakened:Manaburn to ALL enemies for each #rCurse in your deck.",
+      " You have no #rCurses [REMOVE_SPACE].",
+      " You have #b",
+      " #rCurses [REMOVE_SPACE]."
     ]
   },
   "awakened:StrengthBooster": {
