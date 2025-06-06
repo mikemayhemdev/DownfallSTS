@@ -197,7 +197,7 @@
   },
   "expansioncontent:PeekPages": {
     "NAME": "Peek Pages",
-    "DESCRIPTION": "Shuffle !M! *Insights into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Place !M! *Insights on top of your draw pile. NL Exhaust."
   },
   "expansioncontent:BloodBarrage": {
     "NAME": "Blood Barrage",
