@@ -18,7 +18,7 @@ public class Cryostasis extends AbstractSpellCard {
     // intellij stuff skill, self, , , 7, 1, 1, 1
 
     public Cryostasis() {
-        super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardTarget.SELF);
         baseBlock = 7;
         baseMagicNumber = magicNumber = 1;
     }
@@ -26,7 +26,7 @@ public class Cryostasis extends AbstractSpellCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+        if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID) && (upgraded)) {
             target = CardTarget.ALL_ENEMY;
         }
     }
@@ -36,23 +36,25 @@ public class Cryostasis extends AbstractSpellCard {
         AbstractDungeon.effectsQueue.add(new FrostOrbActivateEffect(p.hb.cX, p.hb.cY));
         blck();
 
-                  if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
-                            atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
-                        }
+        if (upgraded) {
+            if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+                atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+            }
 
-                        if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
-                            AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
-                            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                                if (!monster.isDead && !monster.isDying) {
-                                    addToBot(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
-                              }
-                            }
+            if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+                AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
+                for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                    if (!monster.isDead && !monster.isDying) {
+                        addToBot(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+                    }
+                }
+            }
         }
     }
 
 
     public void upp() {
         upgradeBlock(1);
-        upgradeMagicNumber(1);
+        //upgradeMagicNumber(1);
     }
 }

@@ -9,7 +9,8 @@
   },
   "awakened:Cryostasis": {
     "NAME": "Cryostasis",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Apply !M! Weak. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL Apply !M! Weak. NL Exhaust."
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
@@ -51,7 +52,7 @@
   },
   "awakened:InResponse": {
     "NAME": "Spellshield",
-    "DESCRIPTION": "Whenever you play a Spell, gain !awakened:m2! Block."
+    "DESCRIPTION": "Whenever you play a Spell, gain !M! Block."
   },
   "awakened:Curiosity": {
     "NAME": "Curiosity",
@@ -95,7 +96,7 @@
   },
   "awakened:FadeOut": {
     "NAME": "Demon Glyph",
-    "DESCRIPTION": "Gain !M! Dexterity. NL At the start of your turn, gain !M! awakened:Manaburn."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity. NL At the start of your turn, gain !M! awakened:Manaburn."
   },
   "awakened:Accumulate": {
     "NAME": "Accumulate",

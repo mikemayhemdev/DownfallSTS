@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.FastingEffect;
 
 import static awakenedOne.AwakenedOneMod.makeID;
@@ -20,7 +19,8 @@ public class FadeOut extends AbstractAwakenedCard {
     public FadeOut() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
-        //this.isEthereal = true;
+        //baseSecondMagic = secondMagic = 6;
+        this.isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,11 +33,13 @@ public class FadeOut extends AbstractAwakenedCard {
         this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
 
         this.addToBot(new ApplyPowerAction(p, p, new NihilPower(p, this.magicNumber), this.magicNumber));
+        //this.addToBot(new ApplyPowerAction(p, p, new ManaburnPower(p, this.magicNumber*2), this.magicNumber*2));
     }
 
     public void upp() {
         //this.isEthereal = false;
         upgradeMagicNumber(1);
+     //   upgradeSecondMagic(2);
     }
 
 }
