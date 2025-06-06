@@ -3,6 +3,7 @@ package awakenedOne.cards;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.powers.RisingChantPower;
+import awakenedOne.relics.CursedBlessing;
 import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.CardArtRoller;
 import basemod.abstracts.CustomCard;
@@ -20,6 +21,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;
@@ -233,11 +235,15 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     //Whenever a Chant effect activates, do this!!!
     public static void checkOnChant() {
         if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
-            applyToSelf(new StrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
+            applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
         }
 
         if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
            AbstractDungeon.player.getRelic(KTRibbon.ID).onTrigger();
+        }
+
+        if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
+            AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
         }
 
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {

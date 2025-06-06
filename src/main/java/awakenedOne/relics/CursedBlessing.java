@@ -8,6 +8,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -16,6 +17,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.BottledFlame;
@@ -32,116 +34,146 @@ public class CursedBlessing extends CustomRelic {
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("CursedBlessing.png")); //TODO: Images
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("CursedBlessing.png"));
 
-    private static final int AMOUNT = 4;
-   // RelicStrings DuvuStrings;
+
+    //required triggers
+    private static final int AMOUNT1 = 2;
+    //strength gain
+    private static final int AMOUNT2 = 1;
 
     public CursedBlessing() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.CLINK);
      //   DuvuStrings = CardCrawlGame.languagePack.getRelicStrings(DuVuDoll.ID);
+        this.counter = -1;
     }
 
-    //Condemned Necklace
+    //Last Rites
+
+    //anti stalling tech
+
+    public void onEquip() {
+        this.counter = -1;
+    }
+
+     public void onVictory() {
+         this.counter = -1;
+     }
+
+    @Override
+    public void atBattleStart() {
+        this.counter = 0;
+    }
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + AMOUNT + DESCRIPTIONS[1];
+        return this.DESCRIPTIONS[0] + AMOUNT1 + DESCRIPTIONS[1] + AMOUNT2 + DESCRIPTIONS[2];
     }
 
-    public boolean canSpawn() {
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
-
-        AbstractCard c;
-        do {
-            if (!var1.hasNext()) {
-                return false;
-            }
-
-            c = (AbstractCard)var1.next();
-        } while(c.type != AbstractCard.CardType.CURSE);
-
-        return true;
-    }
-
-
-    public void atBattleStart() {
-        this.flash();
-
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
-
-        while(var1.hasNext()) {
-            AbstractCard c = (AbstractCard)var1.next();
-            if (c.type == AbstractCard.CardType.CURSE) {
-
-                Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-                while(var2.hasNext()) {
-                    AbstractMonster mo = (AbstractMonster)var2.next();
-                    this.addToTop(new RelicAboveCreatureAction(mo, this));
-                    this.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, AMOUNT), AMOUNT, true));
-                }
-
-            }
+    public void onTrigger() {
+        this.counter++;
+        if (this.counter == AMOUNT2) {
+            this.counter = 0;
+            flash();
+            this.flash();
+            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, AMOUNT2), AMOUNT2));
         }
     }
 
 
-    public void setCounter(int c) {
-        this.counter = c;
-        if (this.counter == 0) {
-            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[2];
-        } else {
-            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[3] + this.counter + this.DESCRIPTIONS[4];
-        }
-
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.initializeTips();
-    }
-
-    public void onMasterDeckChange() {
-        this.counter = 0;
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
-
-        while(var1.hasNext()) {
-            AbstractCard c = (AbstractCard)var1.next();
-            if (c.type == AbstractCard.CardType.CURSE) {
-                ++this.counter;
-            }
-        }
-
-        if (this.counter == 0) {
-            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[2];
-        } else {
-            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[3] + this.counter + this.DESCRIPTIONS[4];
-        }
-
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.initializeTips();
-    }
-
-    public void onEquip() {
-        this.counter = 0;
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
-
-        while(var1.hasNext()) {
-            AbstractCard c = (AbstractCard)var1.next();
-            if (c.type == AbstractCard.CardType.CURSE) {
-                ++this.counter;
-            }
-        }
-
-        if (this.counter == 0) {
-            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[2];
-        } else {
-            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[3] + this.counter + this.DESCRIPTIONS[4];
-        }
-
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.initializeTips();
-    }
-
+   // public boolean canSpawn() {
+    //        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+    //
+    //        AbstractCard c;
+    //        do {
+    //            if (!var1.hasNext()) {
+    //                return false;
+    //            }
+    //
+    //            c = (AbstractCard)var1.next();
+    //        } while(c.type != AbstractCard.CardType.CURSE);
+    //
+    //        return true;
+    //    }
+    //
+    //
+    //    public void atBattleStart() {
+    //        this.flash();
+    //
+    //        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+    //
+    //        while(var1.hasNext()) {
+    //            AbstractCard c = (AbstractCard)var1.next();
+    //            if (c.type == AbstractCard.CardType.CURSE) {
+    //
+    //                Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+    //
+    //                while(var2.hasNext()) {
+    //                    AbstractMonster mo = (AbstractMonster)var2.next();
+    //                    this.addToTop(new RelicAboveCreatureAction(mo, this));
+    //                    this.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, AMOUNT), AMOUNT, true));
+    //                }
+    //
+    //            }
+    //        }
+    //    }
+    //
+    //
+    //    public void setCounter(int c) {
+    //        this.counter = c;
+    //        if (this.counter == 0) {
+    //            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[2];
+    //        } else {
+    //            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[3] + this.counter + this.DESCRIPTIONS[4];
+    //        }
+    //
+    //        this.tips.clear();
+    //        this.tips.add(new PowerTip(this.name, this.description));
+    //        this.initializeTips();
+    //    }
+    //
+    //    public void onMasterDeckChange() {
+    //        this.counter = 0;
+    //        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+    //
+    //        while(var1.hasNext()) {
+    //            AbstractCard c = (AbstractCard)var1.next();
+    //            if (c.type == AbstractCard.CardType.CURSE) {
+    //                ++this.counter;
+    //            }
+    //        }
+    //
+    //        if (this.counter == 0) {
+    //            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[2];
+    //        } else {
+    //            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[3] + this.counter + this.DESCRIPTIONS[4];
+    //        }
+    //
+    //        this.tips.clear();
+    //        this.tips.add(new PowerTip(this.name, this.description));
+    //        this.initializeTips();
+    //    }
+    //
+    //    public void onEquip() {
+    //        this.counter = 0;
+    //        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+    //
+    //        while(var1.hasNext()) {
+    //            AbstractCard c = (AbstractCard)var1.next();
+    //            if (c.type == AbstractCard.CardType.CURSE) {
+    //                ++this.counter;
+    //            }
+    //        }
+    //
+    //        if (this.counter == 0) {
+    //            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[2];
+    //        } else {
+    //            this.description = this.DESCRIPTIONS[0] + AMOUNT + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[3] + this.counter + this.DESCRIPTIONS[4];
+    //        }
+    //
+    //        this.tips.clear();
+    //        this.tips.add(new PowerTip(this.name, this.description));
+    //        this.initializeTips();
+    //    }
 
     //public void onExhaust(AbstractCard card) {
     //        if (card.type == AbstractCard.CardType.CURSE) {

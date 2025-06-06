@@ -96,22 +96,20 @@
       "If you do not play any #yPowers during your turn, draw an additional card next turn."
     ]
   },
-  "awakened:CursedBlessing": {
-    "NAME": "Condemned Necklace",
-    "FLAVOR": "What a horrible night to have a Curse...",
-    "DESCRIPTIONS": [
-      "At the start of each combat, apply #b",
-      " #yawakened:Manaburn to ALL enemies for each #rCurse in your deck.",
-      " You have no #rCurses [REMOVE_SPACE].",
-      " You have #b",
-      " #rCurses [REMOVE_SPACE]."
-    ]
-  },
   "awakened:StrengthBooster": {
     "NAME": "Paper Crow",
     "FLAVOR": "Arbiter of doubt and curses folded one thousand times...",
     "DESCRIPTIONS": [
       "Enemies with #yawakened:Hex take #b30% more damage per stack rather than #b20% [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CursedBlessing": {
+    "NAME": "Final Rites",
+    "FLAVOR": "Die on this hill.",
+    "DESCRIPTIONS": [
+      "Whenever you activate #b",
+      " #yawakened:Chant effects in a single combat, gain #b",
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "awakened:MoonTalisman": {

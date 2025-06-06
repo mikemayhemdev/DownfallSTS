@@ -57,10 +57,12 @@ public class EnemyHexedPower extends AbstractAwakenedPower {
 //                    AbstractDungeon.player.getRelic(HexxBomb.ID).onTrigger();
 //                }
             }
-            this.amount = 0;
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
-            if (AbstractDungeon.player.hasPower(HexMasterPower.POWER_ID)) {
-                HexCurse(AbstractDungeon.player.getPower(HexMasterPower.POWER_ID).amount, this.owner, AbstractDungeon.player);
+            if (!owner.hasPower(SheerTerrorPower.POWER_ID)) {
+                this.amount = 0;
+                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+                //       if (AbstractDungeon.player.hasPower(HexMasterPower.POWER_ID)) {
+                //                HexCurse(AbstractDungeon.player.getPower(HexMasterPower.POWER_ID).amount, this.owner, AbstractDungeon.player);
+                //            }
             }
         }
         return damageAmount;

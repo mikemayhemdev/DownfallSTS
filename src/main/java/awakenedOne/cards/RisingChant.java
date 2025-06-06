@@ -13,15 +13,16 @@ public class RisingChant extends AbstractAwakenedCard {
 
     public RisingChant() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 1;
-        this.magicNumber = this.baseMagicNumber;
+//        this.baseMagicNumber = 1;
+//        this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new RisingChantPower(magicNumber));
+        applyToSelf(new RisingChantPower(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        //upgradeMagicNumber(1);
+        upgradeBaseCost(1);
     }
 }

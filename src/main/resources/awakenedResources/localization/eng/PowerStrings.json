@@ -17,8 +17,9 @@
   "awakened:RisingChantPower": {
     "NAME": "Rising Chant",
     "DESCRIPTIONS": [
-      "Whenever you activate a #yChant effect, gain #b",
-      " #yStrength."
+      "Whenever you activate a #yChant effect, draw #b",
+      " card next turn.",
+      " cards next turn."
     ]
   },
   "awakened:ThaumaturgyPower": {
@@ -114,7 +115,7 @@
     ]
   },
   "awakened:InvasionPower": {
-    "NAME": "Invasion",
+    "NAME": "Eclipse Embrace",
     "DESCRIPTIONS": [
       "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain [E] and draw a card next turn.",
       "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain #b",
@@ -132,7 +133,7 @@
   "awakened:FeathersinksPower": {
     "NAME": "Shroud of Miasma",
     "DESCRIPTIONS": [
-      "Whenever you apply #yHex to an enemy, gain #b",
+      "Whenever you apply #yManaburn or #yHex to an enemy, gain #b",
       " #Block."
     ]
   },
@@ -158,7 +159,7 @@
     ]
   },
   "awakened:DarkIncantationRitualPower": {
-    "NAME": "Dark Incantation",
+    "NAME": "Magus Incantation",
     "DESCRIPTIONS": [
       "The first time you refresh your Spells each turn, gain #b",
       " #yRitual [REMOVE_SPACE]."
@@ -177,6 +178,21 @@
     "DESCRIPTIONS": [
       "Gains #b",
       " #yManaburn at the start of its turn."
-    ]
+    ],
+    "awakened:ReverseRitualPower": {
+      "NAME": "Awakened Form",
+      "DESCRIPTIONS": [
+        "At the end of your turn, lose #b",
+        " #yStrength [REMOVE_SPACE]."
+      ]
+    },
+    "awakened:SheerTerrorPower": {
+      "NAME": "Sheer Terror",
+      "DESCRIPTIONS": [
+        "#yHex cannot be removed from this enemy for the rest of this turn.",
+        "#yHex cannot be removed from this enemy for the next #b",
+        " turns."
+      ]
+    }
   }
 }

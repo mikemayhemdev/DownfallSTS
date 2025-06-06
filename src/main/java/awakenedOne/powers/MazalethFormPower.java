@@ -2,6 +2,7 @@ package awakenedOne.powers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.DoubleTapPower;
 
 public class MazalethFormPower extends AbstractAwakenedPower {
     // intellij stuff buff
@@ -15,7 +16,9 @@ public class MazalethFormPower extends AbstractAwakenedPower {
     @Override
     public void atStartOfTurnPostDraw() {
         flash();
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DoubleDamageOncePower( amount), amount, true));
+        //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DoubleDamageOncePower( amount), amount, true));
+        this.addToBot(new ApplyPowerAction(owner, owner, new DoubleTapPower(owner, amount), amount, true));
+
     }
 
     public void updateDescription() {

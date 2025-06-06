@@ -56,7 +56,7 @@
   },
   "awakened:Curiosity": {
     "NAME": "Curiosity",
-    "DESCRIPTION": "Whenever you play a Power card, gain !M! Strength."
+    "DESCRIPTION": "not used."
   },
   "awakened:Hex": {
     "NAME": "Hex",
@@ -67,7 +67,7 @@
     "DESCRIPTION": "At the end of your turn, deal !D! damage to ALL enemies, increased by Strength."
   },
   "awakened:CawCaw": {
-    "NAME": "Dark Incantation",
+    "NAME": "Magus Incantation",
     "DESCRIPTION": "The first time you refresh your Spells each turn, gain !M! Ritual."
   },
   "awakened:Librarian": {
@@ -187,9 +187,9 @@
     "NAME": "Disintegrate",
     "DESCRIPTION": "not used."
   },
-  "awakened:Feathersinks": {
+  "awakened:ShroudOfMiasma": {
     "NAME": "Shroud of Miasma",
-    "DESCRIPTION": "Whenever you apply awakened:Hex to an enemy, gain !M! Block."
+    "DESCRIPTION": "Whenever you apply awakened:Manaburn or awakened:Hex to an enemy, gain !M! Block."
   },
   "awakened:Sludge": {
     "NAME": "Sludge",
@@ -244,10 +244,10 @@
   },
   "awakened:Fortitude": {
     "NAME": "Fortitude",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! *Plated *Armor for each of your debuffs. NL Exhaust."
+    "DESCRIPTION": "not used not used not used"
   },
   "awakened:Eclipse": {
-    "NAME": "Eclipse",
+    "NAME": "",
     "DESCRIPTION": "not used."
   },
   "awakened:Debilitate": {
@@ -256,7 +256,7 @@
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chant",
-    "DESCRIPTION": "Whenever you activate a awakened:Chant effect, gain !M! Strength."
+    "DESCRIPTION": "Whenever you activate a awakened:Chant effect, draw a card next turn."
   },
   "awakened:Dogma": {
     "NAME": "Dogma",
@@ -296,8 +296,7 @@
   },
   "awakened:MazalethForm": {
     "NAME": "Awakened Form",
-    "DESCRIPTION": "Ethereal. NL The first Attack you play each turn deals double damage.",
-    "UPGRADE_DESCRIPTION": "The first Attack you play each turn deals double damage."
+    "DESCRIPTION": "Whenever you play a Power card, gain !awakened:m2! Strength. NL At the end of your turn, lose !M! Strength."
   },
   "awakened:Planeswalk": {
     "NAME": "Planeswalk",
@@ -317,7 +316,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each [E] awakened:Drained this combat."
   },
   "awakened:Invasion": {
-    "NAME": "Invasion",
+    "NAME": "Eclipse Embrace",
     "DESCRIPTION": "Whenever you Exhaust a *Void, gain [E] and draw a card next turn."
   },
   "awakened:Baptism": {
@@ -425,11 +424,19 @@
   },
   "awakened:Procession": {
     "NAME": "Procession",
-    "DESCRIPTION": "Shuffle ALL your cards and !M! *Voids into your draw pile. NL Draw !awakened:m2! cards. NL Exhaust."
+    "DESCRIPTION":  "Shuffle ALL your cards and !M! *Voids into your draw pile. NL Draw !awakened:m2! cards. NL Exhaust."
   },
   "awakened:SplitWide": {
     "NAME": "Split Wide",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy, gain !M! temporary Strength. NL Exhaust."
+  },
+  "awakened:PhoenixFlame": {
+    "NAME": "Phoenix Flame",
+    "DESCRIPTION": "not used"
+  },
+  "awakened:SheerTerror": {
+    "NAME": "Sheer Terror",
+    "DESCRIPTION": "Apply !M! awakened:Hex. NL awakened:Hex cannot be removed from this enemy for the rest of the turn."
   },
   "awakened:Deathwish": {
     "NAME": "Deathwish",

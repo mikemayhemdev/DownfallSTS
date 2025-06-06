@@ -7,13 +7,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
 
-public class Feathersinks extends AbstractAwakenedCard {
-    public final static String ID = makeID(Feathersinks.class.getSimpleName());
+public class ShroudOfMiasma extends AbstractAwakenedCard {
+    public final static String ID = makeID(ShroudOfMiasma.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
     //Shroud of Miasma
 
-    public Feathersinks() {
+    public ShroudOfMiasma() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
     }
