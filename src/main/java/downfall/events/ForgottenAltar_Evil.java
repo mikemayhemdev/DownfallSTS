@@ -41,6 +41,13 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
             this.hpLoss = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.2F);
         }
 
+
+        if (AbstractDungeon.ascensionLevel >= 15) {
+            this.goldCost = 100;
+        } else {
+            this.goldCost = 50;
+        }
+
         if (AbstractDungeon.player.gold >= goldCost) {
             this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldCost + OPTIONSALT[1] + (this.hpLoss + 10) + OPTIONSALT[2]);
         } else {
@@ -49,7 +56,10 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
         }
 
         this.imageEventText.setDialogOption(OPTIONS[2] + 5 + OPTIONS[3] + this.hpLoss + OPTIONS[4]);
-        this.imageEventText.setDialogOption(OPTIONSALT[5]);
+
+        if (15 > AbstractDungeon.ascensionLevel) {
+            this.imageEventText.setDialogOption(OPTIONSALT[5]);
+        }
     }
 
     protected void buttonEffect(int buttonPressed) {

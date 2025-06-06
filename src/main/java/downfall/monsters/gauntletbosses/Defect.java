@@ -6,10 +6,7 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.blue.Buffer;
-import com.megacrit.cardcrawl.cards.blue.CoreSurge;
-import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
-import com.megacrit.cardcrawl.cards.blue.Strike_Blue;
+import com.megacrit.cardcrawl.cards.blue.*;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.cards.green.Strike_Green;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,6 +20,7 @@ import downfall.downfallMod;
 import downfall.powers.DrawReductionPowerPlus;
 import downfall.powers.gauntletpowers.MonsterVigor;
 import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
+import hermit.cards.Maintenance;
 
 public class Defect extends GauntletBoss {
 
@@ -88,11 +86,15 @@ public class Defect extends GauntletBoss {
                 addToBot(new GainBlockAction(this, 10 + (dex * 2)));
                 break;
             case 4:
-                addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                addToBot(new ApplyPowerAction(this, this, new ArtifactPower(this, 1), 1));
-
-                if (hasPower(MonsterVigor.POWER_ID)) {
-                    addToBot(new RemoveSpecificPowerAction(this, this, MonsterVigor.POWER_ID));
+                if (AbstractDungeon.ascensionLevel < 18) {
+                    this.addToBot(new ApplyPowerAction(this, this, new FocusPower(this, -1), -1));
+                    this.addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
+                    this.addToBot(new ApplyPowerAction(this, this, new DexterityPower(this, 1), 1));
+                }
+                if (AbstractDungeon.ascensionLevel >= 18) {
+                    this.addToBot(new ApplyPowerAction(this, this, new FocusPower(this, -2), -2));
+                    this.addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 2), 2));
+                    this.addToBot(new ApplyPowerAction(this, this, new DexterityPower(this, 2), 2));
                 }
                 break;
             case 5:
@@ -121,8 +123,13 @@ public class Defect extends GauntletBoss {
                 setMove(moveName(Defend_Blue.ID, Defend_Blue.ID), (byte) 3, Intent.DEFEND);
                 break;
             case 3:
-                isAttacking = true;
-                setMove(moveName(CoreSurge.ID), (byte) 4, Intent.ATTACK_BUFF, this.damage.get(2).base);
+                isAttacking = false;
+                if (AbstractDungeon.ascensionLevel < 18) {
+                    setMove(moveName(Reprogram.ID), (byte) 4, Intent.BUFF);
+                }
+                if (AbstractDungeon.ascensionLevel >= 18) {
+                    setMove(moveName(Reprogram.ID) + "+", (byte) 4, Intent.BUFF);
+                }
                 break;
         }
     }

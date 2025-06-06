@@ -94,9 +94,8 @@
     "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies."
   },
   "awakened:FadeOut": {
-    "NAME": "Hex Master",
-    "DESCRIPTION": "Ethereal. NL Whenever you attack an enemy with awakened:Hex, apply !M! awakened:Hex to them.",
-    "UPGRADE_DESCRIPTION": "Whenever you attack an enemy with awakened:Hex, apply !M! awakened:Hex to them."
+    "NAME": "Demon Glyph",
+    "DESCRIPTION": "Gain !M! Dexterity. NL At the start of your turn, gain !M! awakened:Manaburn."
   },
   "awakened:Accumulate": {
     "NAME": "Accumulate",
@@ -309,8 +308,8 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
-    "DESCRIPTION": "Whenever [E] is awakened:Drained, gain !M! Block and !awakened:m2! Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever [E] is awakened:Drained, gain !M! Block and !awakened:m2! Strength."
+    "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
   },
   "awakened:Brainshock": {
     "NAME": "Brainshock",

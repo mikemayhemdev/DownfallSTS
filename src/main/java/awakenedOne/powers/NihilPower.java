@@ -18,10 +18,8 @@ public class NihilPower extends AbstractAwakenedPower {
 
     @Override
     public void atStartOfTurn() {
-        if (owner instanceof AbstractMonster) {
             flash();
             addToBot(new ApplyPowerAction(owner, AbstractDungeon.player, new ManaburnPower(owner, amount), amount));
-        }
     }
 
     @Override

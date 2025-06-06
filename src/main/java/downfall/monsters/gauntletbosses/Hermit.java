@@ -84,8 +84,17 @@ public class Hermit extends GauntletBoss {
                 addToBot(new ApplyPowerAction(this, this, new PlatedArmorPower(this, 4), 4));
                 break;
             case 5:
-                addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 3), 3));
-                addToBot(new ApplyPowerAction(this, this, new DexterityPower(this, 3), 3));
+
+                if (AbstractDungeon.ascensionLevel >= 18) {
+                    addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 4), 4));
+                    addToBot(new ApplyPowerAction(this, this, new DexterityPower(this, 2), 2));
+                }
+
+                if (AbstractDungeon.ascensionLevel < 18) {
+                    addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 3), 3));
+                    addToBot(new ApplyPowerAction(this, this, new DexterityPower(this, 1), 1));
+                }
+
                 break;
         }
 
@@ -118,7 +127,13 @@ public class Hermit extends GauntletBoss {
         turnNum++;
         if (turnNum == 5) {
             isAttacking = false;
-            setMove(moveName(Maintenance.ID), (byte) 5, Intent.BUFF);
+            if (AbstractDungeon.ascensionLevel < 18) {
+                setMove(moveName(Maintenance.ID), (byte) 5, Intent.BUFF);
+            }
+
+            if (AbstractDungeon.ascensionLevel >= 18) {
+                setMove(moveName(Maintenance.ID) + "+", (byte) 5, Intent.BUFF);
+            }
         } else {
             if (isThird && turnNum > 1 && ally1 != null && ally2 != null) {
 

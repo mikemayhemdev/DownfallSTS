@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.cards.green.Defend_Green;
 import com.megacrit.cardcrawl.cards.green.LegSweep;
 import com.megacrit.cardcrawl.cards.green.Strike_Green;
 import com.megacrit.cardcrawl.cards.green.WraithForm;
+import com.megacrit.cardcrawl.cards.red.DemonForm;
 import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -92,7 +93,15 @@ public class Silent extends GauntletBoss {
                 addToBot(new GainBlockAction(this, 11));
                 break;
             case 5:
-                addToBot(new ApplyPowerAction(this, this, new IntangiblePower(this, 3), 3));
+
+                if (AbstractDungeon.ascensionLevel >= 18) {
+                    addToBot(new ApplyPowerAction(this, this, new IntangiblePower(this, 3), 3));
+                }
+
+                if (AbstractDungeon.ascensionLevel < 18) {
+                    addToBot(new ApplyPowerAction(this, this, new IntangiblePower(this, 2), 2));
+                }
+
                 addToBot(new ApplyPowerAction(this, this, new EnemyWraithFormPower(this, -1), -1));
                 break;
         }
@@ -130,7 +139,16 @@ public class Silent extends GauntletBoss {
         turnNum++;
         if (turnNum == 5) {
             isAttacking = false;
-            setMove(moveName(WraithForm.ID), (byte) 5, Intent.BUFF);
+
+            if (AbstractDungeon.ascensionLevel < 18) {
+                setMove(moveName(WraithForm.ID), (byte) 5, Intent.BUFF);
+            }
+
+            if (AbstractDungeon.ascensionLevel >= 18) {
+                setMove(moveName(WraithForm.ID) + "+", (byte) 5, Intent.BUFF);
+            }
+
+
         } else {
             if (isThird && turnNum > 1 && ally1 != null && ally2 != null) {
 
