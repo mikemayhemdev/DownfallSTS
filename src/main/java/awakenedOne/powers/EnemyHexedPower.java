@@ -5,6 +5,9 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.powers.NeowInvulnerablePower;
+
+import static awakenedOne.AwakenedOneMod.HexCurse;
 
 public class EnemyHexedPower extends AbstractAwakenedPower {
     // intellij stuff buff
@@ -55,6 +58,9 @@ public class EnemyHexedPower extends AbstractAwakenedPower {
             }
             this.amount = 0;
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+            if (AbstractDungeon.player.hasPower(HexMasterPower.POWER_ID)) {
+                HexCurse(AbstractDungeon.player.getPower(HexMasterPower.POWER_ID).amount, this.owner, AbstractDungeon.player);
+            }
         }
         return damageAmount;
     }

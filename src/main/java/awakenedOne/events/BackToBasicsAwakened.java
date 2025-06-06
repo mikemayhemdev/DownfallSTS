@@ -1,9 +1,10 @@
 package awakenedOne.events;
 
+import automaton.cardmods.EncodeMod;
 import awakenedOne.cardmods.DrainingMod;
+import awakenedOne.cards.Strike;
 import basemod.helpers.BaseModCardTags;
 import basemod.helpers.CardModifierManager;
-import collector.cards.Strike;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -68,19 +69,20 @@ public class BackToBasicsAwakened extends AbstractImageEvent {
             }
         }
 
+        AbstractCard card = new Strike();
+
+        CardModifierManager.addModifier(card, new DrainingMod());
+
         if (cardsToRemove.size() >= 1) {
-            this.imageEventText.setDialogOption(OPTIONSGUARDIAN[0]);
+            this.imageEventText.setDialogOption(OPTIONSGUARDIAN[0], card);
 
         } else {
             this.imageEventText.setDialogOption(OPTIONSGUARDIAN[1], true);
 
         }
 
-        AbstractCard card = new Strike();
 
-        CardModifierManager.addModifier(card, new DrainingMod());
-
-        this.imageEventText.setDialogOption(OPTIONS[0], card);
+        this.imageEventText.setDialogOption(OPTIONS[0]);
         this.imageEventText.setDialogOption(OPTIONS[1]);
 
 
@@ -111,7 +113,15 @@ public class BackToBasicsAwakened extends AbstractImageEvent {
                 if (buttonPressed == 0) {
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
-                    this.techStrikeAndDefends();
+
+                    ArrayList<String> cardsDrained = new ArrayList<>();
+                    for (AbstractCard c : cardsToRemove){
+                        CardModifierManager.addModifier(c, new DrainingMod());
+                        cardsDrained.add(c.cardID);
+                    }
+                    logMetricUpgradeCards(ID, "Desperation", cardsDrained);
+
+
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                     this.imageEventText.clearRemainingOptions();
                 } else if (buttonPressed == 1) {
@@ -137,21 +147,6 @@ public class BackToBasicsAwakened extends AbstractImageEvent {
 
     }
 
-
-    private void techStrikeAndDefends() {
-        ArrayList<String> cardsTeched = new ArrayList<>();
-
-        for(AbstractCard c: AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
-                if (CardModifierManager.hasModifier(c, DrainingMod.ID)) {
-                    CardModifierManager.addModifier(c, new DrainingMod());
-                    c.initializeDescription();
-                    cardsTeched.add(c.cardID);
-                }
-            }
-        }
-        logMetricUpgradeCards(ID, "Desperation", cardsTeched);
-    }
 
     private void upgradeStrikeAndDefends() {
         for (AbstractCard c: AbstractDungeon.player.masterDeck.group){

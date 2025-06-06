@@ -10,7 +10,7 @@
     "NAME": "Sacramental Wine",
     "DESCRIPTIONS": [
       "Whenever you play a #yPower card this combat, gain #b",
-      " #yBlock [REMOVE_SPACE]. Add a random #yPower to your hand."
+      " #yBlock [REMOVE_SPACE]. Add a random #yPower card to your hand."
     ]
   },
   "awakened:SneckoPowersPotion": {

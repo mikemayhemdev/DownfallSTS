@@ -31,7 +31,7 @@
   "awakened:SacramentPower": {
     "NAME": "Sacraments",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower, gain #b",
+      "Whenever you play a #yPower card, gain #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -100,9 +100,9 @@
   "awakened:MazalethFormPower": {
     "NAME": "Awakened Form",
     "DESCRIPTIONS": [
-      "The first Attack you play each turn deals double damage.",
+      "The first #yAttack you play each turn deals double damage.",
       "The first #b",
-      " Attacks you play each turn deal double damage."
+      " #yAttacks you play each turn deal double damage."
     ]
   },
   "awakened:DoubleDamageOncePower": {

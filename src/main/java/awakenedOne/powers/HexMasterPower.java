@@ -1,15 +1,18 @@
 package awakenedOne.powers;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import static awakenedOne.AwakenedOneMod.HexCurse;
+import static awakenedOne.util.Wiz.atb;
 
 public class HexMasterPower extends AbstractAwakenedPower {
     // intellij stuff buff
@@ -22,25 +25,30 @@ public class HexMasterPower extends AbstractAwakenedPower {
 
     private Set<AbstractCreature> alreadyHit;
 
-    public void onUseCard(final AbstractCard card, final UseCardAction action) {
-        this.alreadyHit = new HashSet<>(); // New card. Reset limits.
-    }
-
-    @Override
-    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        if(target.equals(AbstractDungeon.player)){
-            return;
-        }
-        if(alreadyHit.contains(target)){
-            return;
-        }
-        if(info.type == DamageInfo.DamageType.NORMAL) {
-            //alreadyHit.add(target);
-            if (target.hasPower(EnemyHexedPower.POWER_ID)) {
-                HexCurse(amount, target, AbstractDungeon.player);
-            }
-        }
-    }
+    //public void onUseCard(final AbstractCard card, final UseCardAction action) {
+//        this.alreadyHit = new HashSet<>(); // New card. Reset limits.
+//    }
+//
+//    @Override
+//    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+//        if(target.equals(AbstractDungeon.player)){
+//            return;
+//        }
+////        if(alreadyHit.contains(target)){
+////            return;
+////        }
+//        if(info.type == DamageInfo.DamageType.NORMAL) {
+//            //alreadyHit.add(target);
+//            if (target.hasPower(EnemyHexedPower.POWER_ID)) {
+//                atb(new AbstractGameAction() {
+//                    @Override
+//                    public void update() {
+//                        isDone = true;
+//                        HexCurse(amount, target, AbstractDungeon.player);}
+//                });
+//            }
+//        }
+//    }
 
 
     //@Override
