@@ -37,19 +37,27 @@ public class Middens extends AbstractAwakenedCard {
             syntheticSockets.addAll(qCardList);
 
             if (!syntheticSockets.isEmpty()) {
+                int vibe = magicNumber;
+                if (vibe > syntheticSockets.size()) {
+                    vibe = syntheticSockets.size();
+                }
+
                 this.addToTop(new SelectCardsCenteredAction(
                         syntheticSockets,
-                        magicNumber,
+                        vibe,
                         TEXT[0],
                         (selectedCards) -> {
                             if (!syntheticSockets.isEmpty()) {
                                 for (int i = 0; i < this.magicNumber; i++) {
-                                    AbstractCard selecteda = selectedCards.get(i);
-                                    p.discardPile.removeCard(selecteda);
-                                    p.hand.addToHand(selecteda);
-                                    selecteda.lighten(false);
-                                    selecteda.unhover();
-                                    selecteda.applyPowers();
+                                    if (!syntheticSockets.isEmpty()) {
+                                        AbstractCard selecteda = selectedCards.get(i);
+                                        p.discardPile.removeCard(selecteda);
+                                        p.hand.addToHand(selecteda);
+                                        selecteda.lighten(false);
+                                        selecteda.unhover();
+                                        selecteda.applyPowers();
+                                        syntheticSockets.remove(selecteda);
+                                    }
                                 }
                             }
                         }

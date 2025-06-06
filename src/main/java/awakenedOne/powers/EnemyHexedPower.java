@@ -23,8 +23,9 @@ public class EnemyHexedPower extends AbstractAwakenedPower {
     public float atDamageReceive(float damage, DamageInfo.DamageType type) {
 
         float damagereturn = 1.0F;
-        damagereturn = (damagereturn + (0.20F * amount * damagereturn));
-
+        if (!AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
+            damagereturn = (damagereturn + (0.20F * amount * damagereturn));
+        }
 
         if(AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
             damagereturn = (damagereturn + ((0.30F) * amount * damagereturn));
