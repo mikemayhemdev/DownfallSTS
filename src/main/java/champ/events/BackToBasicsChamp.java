@@ -73,10 +73,10 @@ public class BackToBasicsChamp extends AbstractImageEvent {
         cardsToRemove = new ArrayList<>();
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(BaseModCardTags.BASIC_STRIKE)) {
+            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
                 cardsToRemove.add(c);
             }
-            if (c.hasTag(BaseModCardTags.BASIC_DEFEND)) {
+            if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
                 cardsToRemove.add(c);
             }
         }

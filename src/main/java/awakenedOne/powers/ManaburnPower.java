@@ -23,7 +23,7 @@ public class ManaburnPower extends AbstractAwakenedPower implements OnLoseEnergy
     @Override
     public void LoseEnergyAction(int gained) {
         this.flash();
-        this.addToBot(new DamageAction(owner, new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
+        this.addToBot(new DamageAction(owner, new DamageInfo(owner, amount*gained, DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
     }
 
     @Override

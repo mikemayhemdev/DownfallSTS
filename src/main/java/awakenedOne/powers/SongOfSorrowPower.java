@@ -19,7 +19,7 @@ public class SongOfSorrowPower extends AbstractAwakenedPower implements OnLoseEn
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
-                    this.addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new ManaburnPower(monster, amount), amount));
+                    this.addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new ManaburnPower(monster, amount*gained), amount*gained));
                 }
             }
         }

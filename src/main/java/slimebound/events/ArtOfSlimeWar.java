@@ -191,7 +191,7 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
 
                 e = (AbstractCard) i.next();
                 cardsRemoved.add(e.cardID);
-            } while (!(e.hasTag(BaseModCardTags.BASIC_STRIKE)));
+            } while (!(e.hasTag(AbstractCard.CardTags.STARTER_STRIKE)));
 
             i.remove();
         }
