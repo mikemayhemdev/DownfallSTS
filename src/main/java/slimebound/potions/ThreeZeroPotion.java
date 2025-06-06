@@ -70,7 +70,7 @@ public class ThreeZeroPotion extends CustomPotion {
                 }
             }
 
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(list.get(cardRandomRng.random(list.size() - 1))));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(list.get(potionRng.random(list.size() - 1))));
 
         }
     }
