@@ -107,9 +107,9 @@
     "NAME": "Final Rites",
     "FLAVOR": "Die on this hill.",
     "DESCRIPTIONS": [
-      "Whenever you activate #b",
-      " #yawakened:Chant effects in a single combat, gain #b",
-      " #yStrength [REMOVE_SPACE]."
+      "The first time you activate #b",
+      " #yawakened:Chant effects in a combat, gain #b",
+      " #yRitual [REMOVE_SPACE]."
     ]
   },
   "awakened:MoonTalisman": {

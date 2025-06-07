@@ -96,7 +96,7 @@
   },
   "awakened:FadeOut": {
     "NAME": "Demon Glyph",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity. NL At the start of your turn, gain !M! awakened:Manaburn."
+    "DESCRIPTION": "Ethereal. NL Gain !awakened:m2! Dexterity. NL At the start of your turn, gain !M! awakened:Manaburn."
   },
   "awakened:Accumulate": {
     "NAME": "Accumulate",

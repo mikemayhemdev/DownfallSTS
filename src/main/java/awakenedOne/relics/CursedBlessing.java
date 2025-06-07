@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -36,7 +37,7 @@ public class CursedBlessing extends CustomRelic {
 
 
     //required triggers
-    private static final int AMOUNT1 = 2;
+    private static final int AMOUNT1 = 4;
     //strength gain
     private static final int AMOUNT2 = 1;
 
@@ -48,7 +49,12 @@ public class CursedBlessing extends CustomRelic {
 
     //Last Rites
 
-    //anti stalling tech
+
+//    public void onEquip() {
+//        this.counter = 0;
+//    }
+
+    //optional anti stalling tech
 
     public void onEquip() {
         this.counter = -1;
@@ -69,13 +75,16 @@ public class CursedBlessing extends CustomRelic {
     }
 
     public void onTrigger() {
+        if (this.counter != -1) {
         this.counter++;
         if (this.counter == AMOUNT2) {
-            this.counter = 0;
+            this.counter = -1;
             flash();
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, AMOUNT2), AMOUNT2));
+            //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, AMOUNT2), AMOUNT2));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RitualPower(AbstractDungeon.player, AMOUNT2, true), AMOUNT2));
+            }
         }
     }
 

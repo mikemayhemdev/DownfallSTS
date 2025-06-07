@@ -30,10 +30,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.blue.BiasedCognition;
-import com.megacrit.cardcrawl.cards.blue.GoForTheEyes;
-import com.megacrit.cardcrawl.cards.blue.Hyperbeam;
-import com.megacrit.cardcrawl.cards.blue.MachineLearning;
+import com.megacrit.cardcrawl.cards.blue.*;
 import com.megacrit.cardcrawl.cards.colorless.*;
 import com.megacrit.cardcrawl.cards.green.*;
 import com.megacrit.cardcrawl.cards.purple.*;
@@ -381,6 +378,8 @@ public class SneckoMod implements
                 c.cardID.equals(Malaise.ID) ||
                 //Defect Cards
                 c.cardID.equals(GoForTheEyes.ID) ||
+                c.cardID.equals(BeamCell.ID) ||
+                c.cardID.equals(LockOn.ID) ||
                 // Watcher Cards
                 c.cardID.equals(CrushJoints.ID) ||
                 c.cardID.equals(SashWhip.ID) ||

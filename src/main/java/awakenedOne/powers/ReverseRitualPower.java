@@ -4,15 +4,9 @@
 //
 package awakenedOne.powers;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-
-import static awakenedOne.util.Wiz.atb;
 
 public class ReverseRitualPower extends AbstractAwakenedPower {
     // intellij stuff buff
@@ -22,6 +16,8 @@ public class ReverseRitualPower extends AbstractAwakenedPower {
 
     public ReverseRitualPower(int amount) {
         super(NAME, PowerType.DEBUFF, false, AbstractDungeon.player, null, amount);
+        updateDescription();
+        this.canGoNegative = false;
     }
 
 
@@ -32,7 +28,7 @@ public class ReverseRitualPower extends AbstractAwakenedPower {
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
             this.flash();
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -this.amount), -this.amount));
         }
     }
 

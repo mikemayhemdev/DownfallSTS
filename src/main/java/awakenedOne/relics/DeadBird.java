@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
@@ -37,17 +38,13 @@ public class DeadBird extends CustomRelic implements OnReceivePowerRelic {
     @Override
     public boolean onReceivePower(AbstractPower var1, AbstractCreature var2) {
 
-        int temp = AMOUNT;
-
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            temp += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+            this.counter = AMOUNT + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
         }
 
-        if (temp < AMOUNT) {
-            temp = AMOUNT;
+        if (this.counter < AMOUNT) {
+            this.counter = AMOUNT;
         }
-
-        this.counter = temp;
 
         return true;
     }
@@ -85,9 +82,20 @@ public class DeadBird extends CustomRelic implements OnReceivePowerRelic {
             temp = AMOUNT;
         }
 
-        this.addToTop(new RelicAboveCreatureAction(getLowestHealthEnemy(), this));
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(getLowestHealthEnemy(), new DamageInfo(AbstractDungeon.player, temp, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        int nocrashpls = 0;
+
+        for (final AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            if (!m.isDying && m.currentHealth > 0) {
+                nocrashpls++;
+            }
+        }
+
+
+        if (nocrashpls > 0) {
+            this.addToTop(new RelicAboveCreatureAction(getLowestHealthEnemy(), this));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(getLowestHealthEnemy(), new DamageInfo(AbstractDungeon.player, temp, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        }
     }
 
     @Override

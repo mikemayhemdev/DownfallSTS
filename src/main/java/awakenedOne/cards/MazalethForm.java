@@ -30,7 +30,7 @@ public class MazalethForm extends AbstractAwakenedCard {
     @Override
     public void upp() {
         //isEthereal = false;
-        //upgradeSecondMagic(1);
+       // upgradeSecondMagic(1);
         upgradeMagicNumber(-1);
     }
 }
