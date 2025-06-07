@@ -9,8 +9,7 @@
   },
   "awakened:Cryostasis": {
     "NAME": "Cryostasis",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL Apply !M! Weak. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Apply !M! Weak. NL Exhaust."
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",

@@ -19,14 +19,14 @@ public class Cryostasis extends AbstractSpellCard {
 
     public Cryostasis() {
         super(ID, 1, CardType.SKILL, CardTarget.SELF);
-        baseBlock = 7;
+        baseBlock = 6;
         baseMagicNumber = magicNumber = 1;
     }
 
     @Override
     public void applyPowers() {
         super.applyPowers();
-        if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID) && (upgraded)) {
+        if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
             target = CardTarget.ALL_ENEMY;
         }
     }
@@ -36,7 +36,7 @@ public class Cryostasis extends AbstractSpellCard {
         AbstractDungeon.effectsQueue.add(new FrostOrbActivateEffect(p.hb.cX, p.hb.cY));
         blck();
 
-        if (upgraded) {
+       // if (upgraded) {
             if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
                 atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
             }
@@ -46,7 +46,7 @@ public class Cryostasis extends AbstractSpellCard {
                 for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                     if (!monster.isDead && !monster.isDying) {
                         addToBot(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
-                    }
+                //    }
                 }
             }
         }
@@ -54,7 +54,7 @@ public class Cryostasis extends AbstractSpellCard {
 
 
     public void upp() {
-        upgradeBlock(1);
-        //upgradeMagicNumber(1);
+        upgradeBlock(2);
+        upgradeMagicNumber(1);
     }
 }
