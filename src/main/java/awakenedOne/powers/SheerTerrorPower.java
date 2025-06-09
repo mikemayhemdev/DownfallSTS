@@ -1,14 +1,9 @@
 package awakenedOne.powers;
 
-import awakenedOne.cards.tokens.Feather;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 
 public class SheerTerrorPower extends AbstractAwakenedPower {
     // intellij stuff buff
@@ -21,11 +16,8 @@ public class SheerTerrorPower extends AbstractAwakenedPower {
         if (this.amount <= 0) {
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
         }
-
         updateDescription();
-
     }
-
 
     public void atStartOfTurn() {
         if (this.amount <= 0) {
